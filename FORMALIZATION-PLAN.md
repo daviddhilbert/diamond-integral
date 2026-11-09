@@ -33,13 +33,11 @@ polynomial preparation target can be compared directly with Yin's
 
 ## Reuse and compatibility
 
-- Use the existing two-sorted ACVF language. The neighboring *Special
-  Transformations* checkout pins
+- Use the existing two-sorted ACVF language. This project pins Lean `v4.35.0`,
+  Mathlib `56a005855ea17e0b0958f73ec801ae140b0a1679`, and
   [ACVF-QE](https://github.com/daviddhilbert/ACVF-QE) at
-  `f3ef4ee679f921079aa8f742a2807a9cc724d2d6`, Lean `v4.33.1`, and
-  Mathlib `0df444a360eaa60ab8c11dca51a86af692955474`. Start the compatibility
-  check with this combination. Pin the versions used after checking the actual
-  target repo and the integration development.
+  `939346b0a99899e22a873479364e3cc5d142731c`. Check companion developments
+  against these versions before importing their modules.
 - In [*Special Transformations*](https://github.com/daviddhilbert/special-transformations),
   inspect the section libraries and their verification records. Start with
   `Section3.BallGeometry`, `Section3.GeneralBallCenters`, `Section3.VFAlgebraicity`
