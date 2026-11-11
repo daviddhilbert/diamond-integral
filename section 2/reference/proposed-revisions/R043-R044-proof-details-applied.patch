@@ -1,0 +1,88 @@
+--- a/section 2/reference/diamond_integral_revision_annotated.tex
++++ b/section 2/reference/diamond_integral_revision_annotated.tex
+@@ -1516,21 +1516,37 @@
+ Note that, compared to Lemma~\ref{open:pro}, the assumption of this lemma is stronger and its conclusion weaker, but the point is that we do not need a partition to achieve it.
+ 
+ \begin{proof}
+-By Lemma~\ref{lim:exists}, for any $a \in A$, $\lim_{ A \rightarrow a} f$ exists in the closure  of $B$, which we denote by $b_a$. By \cmin-minimality and \omin-minimality in the $\Gamma$-sort, $\gc(b_a, \delta) \mi \go(b_a, \delta) \sub B$ for all sufficiently large $\delta \in \Gamma$. Also,  for all sufficiently large $\gamma \in \Gamma$ there is a $\delta \in \Gamma$ such that
+-\[
+-f(\gc(a, \gamma) \mi \go(a, \gamma)) = \gc(b_a, \delta) \mi \go(b_a, \delta)
+-\]
+-The lemma follows.
++Fix $a\in A$. After translating the input and restricting to a small punctured disc about $a$, Lemma~\ref{lim:exists}, applied with the closed bounded target $\overline B$, gives a finite minimal limit. Its cardinality is at most one by \cite[Lemma~9.4]{Yin:special:trans}. It is nonempty because the function has a value at every point of the punctured disc. Write this limit as $\{b\}$.
++
++By shrinking the punctured disc, exclude the at most one input for which $f(x)=b$. The valuation calculation in the proof of \cite[Lemma~8.3]{Yin:special:trans}, applied to the translated germ $f(x)-b$, gives a rational-affine law
++\[
++\vv(f(x)-b)=\rho(\vv(x-a)),\qquad \rho(\gamma)=q\gamma+c,
++\]
++for all sufficiently small nonzero $x-a$, where $q\in\mathbb Q_{>0}$ and $c\in\Gamma$. Indeed, unary polynomials have eventually monomial valuation, the definable germ selects one of the finitely many resulting valuation laws, and convergence to $b$ forces positive slope.
++
++By $C$-minimality, $B$ contains a punctured neighborhood of $b$. On this neighborhood the inverse of $f$ has a unique projective limit, using the projective finite-limit theorem and the same cardinality bound. That limit must be $a$, since $x\to a$ implies $f(x)\to b$ and the image avoids $b$ on a sufficiently small punctured disc. Apply the same valuation calculation to the inverse to obtain a positive rational-affine law $\sigma$ for its tail radii. Substituting $y=f(x)$ shows that $\sigma\circ\rho$ is the identity on a tail of $\Gamma$, so the two affine laws are inverse there.
++
++Consequently, for every sufficiently large $\gamma$, with $\delta=\rho(\gamma)$, the image of the whole source thin annulus is exactly the whole target thin annulus:
++\[
++f\bigl(\gc(a,\gamma)\setminus\go(a,\gamma)\bigr)
++ =\gc(b,\delta)\setminus\go(b,\delta).
++\]
++The forward inclusion is the law for $f$; the reverse inclusion follows by applying the inverse law to every point of the target annulus. Taking the unions over all radii greater than $\gamma$ proves
++\[
++f\bigl(\go(a,\gamma)\setminus\{a\}\bigr)
++ =\go(b,\rho(\gamma))\setminus\{b\},
++\]
++as required. No assertion that $q=1$ is needed.
+ \end{proof}
+ 
+ % BEGIN REFEREE INSERTION R043
+-\PartlyResolvedRefereeRemark{043}{Gap; revised}{The annulus equality needs a proof}{%
++\ResolvedRefereeRemark{043}{Gap; revised}{The annulus equality needs a proof}{%
+ \textit{Original source line 1132.}\quad Specify that $A$ and $B$ each have one $\VF$-coordinate. The finite limit is a singleton $\{b\}$ by \cite[Lemma~9.4]{Yin:special:trans}; nonemptiness follows because the values are nonempty on a punctured neighborhood. The equality of whole thin annuli needs more explanation. Here is a repair. The valuation calculation in the proof of \cite[Lemma~8.3]{Yin:special:trans}, applied to $x\mapsto\vv(f(x)-b)$, gives
+ \[
+  \vv(f(x)-b)=q\vv(x-a)+c\qquad(q\in\mathbb Q_{>0})
+ \]
+ on a sufficiently small punctured neighborhood: each unary polynomial has eventually monomial valuation, and the limit forces positive slope. Remove the at most one exceptional input with $f(x)=b$. By $C$-minimality, $B$ contains a punctured neighborhood of $b$. The inverse has a unique projective limit there, necessarily $a$, since points $x\to a$ give $f(x)\to b$. Apply the same valuation calculation to the inverse. The resulting two affine maps of tail radii are inverse, so every sufficiently small target shell consists exactly of images of its corresponding source shell. Taking their unions proves the asserted punctured-disc equality. Thus the lemma is repairable; an additional assertion that $q=1$ is unnecessary.
+-}{The arity objection is withdrawn: the statement already says that $A$ and $B$ are subsets of $\VF$, so both are unary. The general tuple convention does not alter that explicit scope, as the author confirms. No arity amendment or change to the statement is needed. The separate proof-detail comments are being assessed against the paper's own argument; no proposed proof replacement has been approved or applied.}
++}{The arity objection is withdrawn: the explicit subsets $A,B\subseteq\VF$ are already unary, and no amendment is needed. The author agrees that the original proof is quick and that the remaining comments spell out details. The expanded proof makes the singleton limit and the inverse tail-radius laws explicit, giving equality of whole thin annuli. The statement and proof strategy are retained; this is an expository expansion, not a correction of a false claim.}
+ % END REFEREE INSERTION R043
+ 
+ \begin{defn}
+@@ -1544,19 +1560,31 @@
+ Let $p$ be an $\go$-partition of $A$. Suppose that $A_{\RV}$ is doubly bounded and $A_t$ is closed and bounded for every $t \in A_{\RV}$. Then $p(A)$ is doubly bounded.
+ \end{lem}
+ \begin{proof}
+-We first handle the case that $A$ has no $\RV$-coordinates. Since $A$ is closed and bounded, $p(A)$ must be bounded from below. Suppose for contradiction that $p(A)$ is not bounded from above. For each $\gamma \in \Gamma$, let $A_{\gamma} = \set{a \in A \given p(a) > \gamma }$. Choose a definable continuous finitary function, that is, a curve
+-\[
+-f : \MM \mi 0 \fun \mdl P \bigg( \bigcup_{c \in \MM \mi 0} c \times A_{\vv(c)} \bigg)
+-\]
+-such that $f(c)_1 = c$. Write $A_c = f(c)_{>1}$. So $p(A_c) > \vv(c)$ for all $c \in \MM \mi 0$. Since  $A$ is closed, the limit points of $f$ are all of the form $(0,e)$ with $e \in A$. So there is a $c \in \MM \mi 0$ with $\vv(c) > p( e)$ such that $A_c \cap \go(e, p( e)) \neq \0$. Since $p(a) > \vv(c)$ for all $a \in A_c$, this contradicts the assumption that $p$ is an $\go$-partition of $A$. So $p(A)$ is bounded from above.
+-
+-It is easy to see that the general case follows from this special case and Lemma~\ref{db:to:db}.
++First suppose that $A$ has no $\RV$-coordinates. The empty set is immediate. Choose $\eta\in\Gamma$ such that $A\subseteq\OO_\eta^n$. If $p(a)<\eta$ for some $a\in A$, then $A\subseteq\go(a,p(a))$, so the partition property makes $p$ constant on $A$. Otherwise $p(A)\subseteq[\eta,\infty)$. In either case $p(A)$ is bounded below.
++
++Suppose for contradiction that $p(A)$ is unbounded above. We may temporarily enlarge the parameter base to a small $\VF$-generated base, as in Lemma~\ref{cb:to:cb}; the desired bound is a geometric conclusion. For every $c\in\MM\setminus\{0\}$ the definable set
++\[
++A_{\vv(c)}=\{x\in A:p(x)>\vv(c)\}
++\]
++is nonempty. Elementarity of the algebraic-closure model over this base together with $c$, followed by compactness, supplies a definable finitary function $F:\MM\setminus\{0\}\fun\mdl P(A)$ with finite nonempty values $F(c)\subseteq A_{\vv(c)}$. Continuity of this choice is not needed.
++
++By Lemma~\ref{lim:exists}, $F$ has a finite minimal limit set $L\subseteq A$, nonempty because its values are nonempty arbitrarily close to $0$. Choose $e\in L$. Minimality implies that, for arbitrarily small nonzero $c$, $F(c)$ meets $\go(e,p(e))$. Choose such a $c$ with $\vv(c)>p(e)$ and $x\in F(c)\cap\go(e,p(e))$. The partition property at $e$ gives $p(x)=p(e)$, whereas the choice gives $p(x)>\vv(c)>p(e)$, a contradiction. This proves the upper bound.
++
++For the general case, each nonempty fiber image $p(A_t)$ is bounded above and below by the case just proved, with $t$ temporarily named. Definable completeness in $\Gamma$ gives finite endpoints
++\[
++\alpha_t=\inf p(A_t),\qquad \beta_t=\sup p(A_t).
++\]
++Their defining greatest-lower-bound and least-upper-bound formulas make these functions definable over the original parameter base. Thus
++\[
++t\efun\gamma_t=\max\{|\alpha_t|,|\beta_t|,0\}
++\]
++is a definable $\Gamma$-valued function on $A_{\RV}$. By Lemma~\ref{db:to:db}, its image is doubly bounded. A common upper bound for the $\gamma_t$ bounds $p(A)$ in both directions, proving the lemma.
+ \end{proof}
+ 
+ % BEGIN REFEREE INSERTION R044
+-\RefereeRemark{044}{Gap}{Bounds for an open-disc partition}{%
++\ResolvedRefereeRemark{044}{Gap}{Bounds for an open-disc partition}{%
+ \textit{Original source line 1152.}\quad The lower bound has a short direct proof: choose $\eta$ with $A\subseteq\OO_\eta^n$. If $p(a)<\eta$ for some $a$, then $A\subseteq\go(a,p(a))$, forcing $p$ to be constant; otherwise $p(A)\subseteq[\eta,\infty)$. For the upper-bound argument, justify the nonempty finite choices in $A_{\vv(c)}$ using the corrected curve-selection/model argument, and use the nonempty finite limit supplied by the limit lemma. In the general case, take a definable bound for each fiber image $p(A_t)$ by its definable endpoints in $\Gamma$, then apply Lemma~\ref{db:to:db}; fiberwise boundedness by itself is not the uniform conclusion.
+-}
++}{The author agrees that the original proof is quick and the comments spell out details. The expansion retains its lower-bound, limit-point contradiction and uniform-fiber-bound strategy. It gives the direct lower-bound calculation, justifies finite nonempty choices over a temporary base, and writes out the definable endpoint bound used with Lemma~\ref{db:to:db}. The statement is unchanged.}
+ % END REFEREE INSERTION R044
+ 
+ This lemma, in its various incarnations, is crucial for the good behavior of motivic Fourier transform (see \cite[\S~11]{hrushovski:kazhdan:integration:vf} and \cite{yin:hk:part:3}). For essentially the same reason, the  main construction of this paper depends heavily on  it (often in combination with Lemma~\ref{db:to:db}).

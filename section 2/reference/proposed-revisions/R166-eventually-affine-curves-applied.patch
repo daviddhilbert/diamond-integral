@@ -1,0 +1,19 @@
+--- a/section 2/reference/diamond_integral_revision_annotated.tex
++++ b/section 2/reference/diamond_integral_revision_annotated.tex
+@@ -1444,13 +1444,13 @@
+ This is an analogue of the highly useful \omin-minimal curve selection.
+ 
+ \begin{rem}
+-Although the $\Gamma$-sort is essentially an \omin-minimal group, curve selection fails due to the presence of the top element $\infty$. For example, the set $\Gamma \times (0, \infty) \sub  \Gamma^2_\infty$ contains curves approaching the boundary point $(0, 0)$ or $(\infty, \infty)$ but no curves approaching the boundary point $(\infty, 0)$, because all curves  are lines.
++Although the $\Gamma$-sort is essentially an \omin-minimal group, curve selection fails due to the presence of the top element $\infty$. For example, the set $\Gamma \times (0, \infty) \sub  \Gamma^2_\infty$ contains curves approaching the boundary point $(0, 0)$ or $(\infty, \infty)$ but no curves approaching the boundary point $(\infty, 0)$, because every definable one-parameter curve is piecewise rational-affine. Near a one-sided endpoint, one affine piece remains, and a positive affine coordinate cannot tend to $0$ while another coordinate tends to $\infty$.
+ \end{rem}
+ 
+ % BEGIN REFEREE INSERTION R166
+-\RefereeRemark{166}{Typo; new}{Eventually affine curves in the value group}{%
++\ResolvedRefereeRemark{166}{Typo; new}{Eventually affine curves in the value group}{%
+ \textit{Original source line 1094.}\quad Replace ``all curves are lines'' by ``every definable one-parameter curve is piecewise rational-affine''. Near a one-sided endpoint, one affine piece remains; a positive affine coordinate cannot tend to $0$ while another coordinate tends to $\infty$. This is the precise reason the stated boundary point cannot be approached.
+-}
++}{The author approves the precise piecewise rational-affine formulation. An eventual affine piece gives the stated obstruction to approaching $(\infty,0)$; the example and the conclusion are unchanged.}
+ % END REFEREE INSERTION R166
+ 
+ %In addition, we can make this ``curve'' $f \circ g$ approach $b$ as fast as we wish. More precisely, if $l : \Gamma^+ \fun \Gamma^+$ is a definable increasing function then $g$ can be so constructed that $\vv(f(g(c))) > l(\vv(c))$ for all $c \in \MM \mi 0$.

@@ -1,0 +1,38 @@
+--- a/section 2/reference/diamond_integral_revision_annotated.tex
++++ b/section 2/reference/diamond_integral_revision_annotated.tex
+@@ -1200,7 +1200,7 @@
+ % END REFEREE INSERTION R164
+ 
+ \begin{defn}
+-Let $A$ be a subset of $\VF^n$. The \memph{$\RV$-boundary} of $A$, denoted by $\partial_{\RV}A$, is the definable subset of $\rv(A)$ such that $t \in \partial_{\RV} A$ if and only if $t^\sharp \cap A$ is a proper nonempty subset of $t^\sharp$. The definable set $\rv(A) \mi \partial_{\RV}A$, denoted by $\ito_{\RV}(A)$, is called the \memph{$\RV$-interior} of $A$.
++Let $A$ be a definable subset of $\VF^n$. The \memph{$\RV$-boundary} of $A$, denoted by $\partial_{\RV}A$, is the definable subset of $\rv(A)$ such that $t \in \partial_{\RV} A$ if and only if $t^\sharp \cap A$ is a proper nonempty subset of $t^\sharp$. The definable set $\rv(A) \mi \partial_{\RV}A$, denoted by $\ito_{\RV}(A)$, is called the \memph{$\RV$-interior} of $A$.
+ \end{defn}
+ 
+ % BEGIN REFEREE INSERTION R032
+@@ -1216,14 +1216,18 @@
+ Let $A$ be a definable subset of $\VF^n$. Then $\dim_{\RV}(\partial_{\RV} A) < n$.
+ \end{lem}
+ \begin{proof}
+-We proceed by induction on $n$. The base case $n=1$  follows immediately from \cmin-minimality since $t^\sharp$ contains a $t$-definable proper subdisc for every $t \in \partial_{\RV} A$.
+-
+-For the inductive step, since $\partial_{\RV} A_a$ is finite for every $i \in [n]$ and every $a \in \pr_{\tilde i}(A)$, by Corollary~\ref{open:disc:def:point} and compactness, there are a definable finite partition $(A_{ij})_j$ of $\pr_{\tilde i}(A)$ and, for each $A_{ij}$, a definable finitary function $f_{ij} : A_{ij} \fun \mdl P(\VF)$ such that for all $a \in A_{ij}$, $\rv(f_{ij}(a)) = \partial_{\RV} A_a$ if $A_a$ is not an $\RV$-pullback or $f_{ij}(a) = \{0\}$ otherwise. By Corollary~\ref{part:rv:cons}, we may assume that if $t^\sharp \sub A_{ij}$ then the restriction $\rv \rest f_{ij}(t^\sharp)$ is constant. Hence each $f_{ij}$ induces a definable finitary function $C_{ij} : \ito_{\RV}(A_{ij}) \fun \mdl P(\RV_\infty)$.
+-Let
+-\[
+- C = \bigcup_{i, j} C_{ij} \dand B = \bigcup_{i,j} \bigcup_{t \in \partial_{\RV} A_{ij}} \rv(A)_t.
+-\]
+-Obviously $\dim_{\RV}(C) < n$. By the inductive hypothesis, for all $A_{ij}$ we have $\dim_{\RV}(\partial_{\RV} A_{ij}) < n-1$. Thus $\dim_{\RV}(B) < n$. Since $\partial_{\RV} A \sub B \cup C$, the claim follows.
++For $n=0$, the boundary is empty and has dimension $-\infty$. For $n=1$, take a finite Boolean disc decomposition of $A$. A disc containing $0$ is an $\RV$-pullback, whereas a disc avoiding $0$ lies in one $\RV$-disc. A partially met $\RV$-fiber therefore contains a member of this finite disc family that avoids $0$, so there are only finitely many such fibers.
++
++For the inductive step, fix $i\in[n]$ and put $X_i=\pr_{\tilde i}(A)$ and $T_a=\partial_{\RV}A_a$ for $a\in X_i$. Each $T_a$ is finite. For each $t\in T_a$, Corollary~\ref{open:disc:def:point}, over the parameters $(a,t)$, gives a definable point in $t^\sharp$. By compactness there are finitely many definable partial choice functions covering all such pairs $(a,t)$; order this list and use the first available choice to obtain a definable function $c(a,t)\in t^\sharp$. Set $f_i(a)=\{c(a,t):t\in T_a\}$ if $T_a\ne\varnothing$, and $f_i(a)=\{0\}$ otherwise. Thus every fiber is finite and contains exactly one representative of each boundary tag when that boundary is nonempty; in particular $\rv\rest f_i(a)$ is injective.
++
++First split $X_i$ by the pattern of its zero coordinates, and apply Corollary~\ref{part:rv:cons} on the remaining coordinates of each piece. This gives a definable finite partition $(A_{ij})_j$ of $X_i$ such that, whenever $t^\sharp\sub A_{ij}$, the finite set $\rv(f_i(a))$ is independent of $a\in t^\sharp$. The zero-pattern split allows $t$ to have $\infty$ coordinates: after deleting them, $t^\sharp$ is an open polydisc in the remaining coordinates. Write $f_{ij}=f_i\rest A_{ij}$ and let $C_{ij}(t)$ be this common finite set for $t\in\ito_{\RV}(A_{ij})$.
++
++Regard each $C_{ij}$ as its graph in $\RV_\infty^n$, retaining the input tags and placing its output tag in coordinate $i$. Put
++\[
++ C=\bigcup_{i,j}C_{ij},\qquad
++ B=\bigcup_{i,j}\{s\in\rv(A):\pr_{\tilde i}(s)\in\partial_{\RV}A_{ij}\}.
++\]
++Each graph $C_{ij}$ is finite over its $n-1$ input coordinates, so $\dim_{\RV}(C)<n$. By induction, $\dim_{\RV}(\partial_{\RV}A_{ij})<n-1$; with only one remaining coordinate, this gives $\dim_{\RV}(B)<n$. Finally, for a partially met $\RV$-polydisc, start in $A$ and change coordinates one at a time to reach a point outside $A$. The first exit identifies a boundary tag of a unary section. Its other tags either lie in some $\partial_{\RV}A_{ij}$, placing the full tuple in $B$, or in $\ito_{\RV}(A_{ij})$, placing it in $C$. Hence $\partial_{\RV}A\sub B\cup C$, as required.
+ \end{proof}
+ 
+ % BEGIN REFEREE INSERTION R033

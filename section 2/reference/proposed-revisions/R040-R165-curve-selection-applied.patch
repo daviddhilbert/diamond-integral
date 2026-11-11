@@ -1,0 +1,53 @@
+--- a/section 2/reference/diamond_integral_revision_annotated.tex
++++ b/section 2/reference/diamond_integral_revision_annotated.tex
+@@ -1405,26 +1405,40 @@
+ \yimu{revision of the next few lemmas}
+ 
+ \begin{lem}[Curve selection]\label{curve:select}
+-Let $A$ be a set in $\VF$ and $b$ a point in the closure of $A$ (some coordinates of $b$ could be the ``point at infinity''). Then there is a $b$-definable continuous finitary function $g : \MM \mi 0 \fun \mdl P(A)$, understood as a ``curve'' in $A$, such that  $b \in \lim_{\MM \mi 0 \rightarrow 0}  g$.
++Suppose that $\mathbb S$ is $\VF$-generated. Let $A\sub\VF^n$ be definable and let $b$ be a point in its closure in the coordinatewise projective line $(\mathbb P^1(\VF))^n$, with the valuation topology. Then there is a $b$-definable continuous finitary function $g:\MM\setminus\{0\}\fun\mdl P(A)$ whose values are nonempty and such that
++\[
++\lim_{\MM\setminus\{0\}\to0}g=\{b\}.
++\]
+ \end{lem}
+ 
+ % BEGIN REFEREE INSERTION R165
+-\RefereeRemark{165}{Clarification; new}{Definability and nonempty values in curve selection}{%
++\ResolvedRefereeRemark{165}{Clarification; new}{Definability and nonempty values in curve selection}{%
+ \textit{Original source line 1081.}\quad State that $A$ is definable. In the proof require $g(c)\ne\varnothing$ for every $c$ (or at least on a punctured neighborhood of $0$): ``finitary'' in the earlier definition allows empty values, and $g(c)\subseteq\go(b,\vv(c))$ alone is also satisfied by the identically empty correspondence. The algebraic-closure construction, once its base hypothesis is corrected below, supplies finite nonempty values and hence the stronger conclusion $\lim g=\{b\}$.
+-}
++}{The author approves explicitly taking $A\subseteq\VF^n$ definable and requiring finite nonempty values at every input. The construction gives the stronger singleton limit $\{b\}$. Projective charts handle infinite coordinates without changing the affine target set of the curve.}
+ % END REFEREE INSERTION R165
+ \begin{proof}
+-Since $\acl(b, c)$ is a model of $\ACVF(\mathbb{S})$ for every $c \in \MM \mi 0$, we have that the intersection
+-\[
+-\set{a \in A \given \vv(a - b) > \vv(c)} \cap \acl(b, c)
+-\]
+-is nonempty. It follows from compactness that there is a $b$-definable finitary function $g : \MM \mi 0 \fun \mdl P(A)$ such that $g(c) \sub \go(b, \vv(c))$ for every $c \in \MM \mi 0$; here, if the $i$th coordinate of $b$ is the ``point at infinity'' then we use the ``open disc'' $\go(b_i, -\vv(c))$ in that coordinate. By Lemma~\ref{lim:exists}, $\lim_{\MM \mi 0 \rightarrow 0} g$ exists in the  closure of $A$, which clearly contains $b$. By Lemma~\ref{fini:conti}, $g \rest (\gb \mi 0)$ is continuous for some $b$-definable open disc $\gb$ around $0$. Dilating with a $b$-definable factor, we may assume $\gb  = \MM$, and  the claim follows.
++Use a coordinatewise projective chart around $b$ to reduce to the case $b\in\VF^n$: at an infinite coordinate use inversion and restrict $A$ to the chart. These changes are definable over $b$ and preserve convergence and continuity locally.
++
++Naming the finite tuple $b$ and a nonzero $c\in\MM$ preserves $\VF$-generation and the standing nontriviality of the ground valuation. Hence $\acl(\mathbb S,b,c)$ is a model of $\ACVF(0,0)$. Since $b\in\overline A$, the definable set $A\cap\go(b,\vv(c))$ is nonempty, so elementarity gives a point of that intersection algebraic over $(\mathbb S,b,c)$. Compactness supplies a $b$-definable finitary function $g_0$ on $\MM\setminus\{0\}$ such that
++\[
++\varnothing\ne g_0(c)\sub A\cap\go(b,\vv(c))
++\]
++for every $c$. Thus $g_0$ converges to $\{b\}$, and nonempty values make this limit minimal.
++
++By Lemma~\ref{fini:conti}, with its one-dimensional source, $g_0$ is continuous outside a finite set. Choose a $b$-definable clopen disc $D\sub\MM$ around $0$ such that $g_0$ is continuous on $D\setminus\{0\}$. Also $\acl(\mathbb S,b)$ is a model, so $A$ contains a finite nonempty $b$-definable set $E$. Define
++\[
++g(c)=\begin{cases}
++g_0(c),&c\in D\setminus\{0\},\\
++E,&c\in\MM\setminus D.
++\end{cases}
++\]
++The two pieces are relatively clopen in $\MM\setminus\{0\}$, so $g$ is continuous, finite-valued and nonempty everywhere. Its limit at $0$ is still $\{b\}$. Finally transport the construction back through the projective chart. This avoids assuming that a definable value-group radius is the valuation of a definable scalar.
+ \end{proof}
+ 
+ % BEGIN REFEREE INSERTION R040
+-\RefereeRemark{040}{Error}{Curve selection requires a restriction on the base}{%
++\ResolvedRefereeRemark{040}{Error}{Curve selection requires a restriction on the base}{%
+ \textit{Original source line 1088.}\quad The assertion is false for the arbitrary $\mathbb S$ allowed so far. Let $K$ be a nontrivially valued algebraically closed base field, add an $\RV$ parameter $t$ with $\vrv(t)=0$ transcendental over its residue field, and put $A=\{(x,y):y\ne0,\rv(x/y)=t\}$. Then $(0,0)\in\overline A$. A nonempty finite $\mathbb S$-definable choice in $A$ at an input $c\in K\cap(\MM\setminus\{0\})$ would have coordinates algebraic over $K,t,c$, hence in $K$ by Lemma~\ref{dcl:to:ac}; their ratio cannot have leading term $t$. Even though finitary values may be empty, $b\in\lim g$ forces their support to accumulate at $0$; by $C$-minimality that support contains a punctured neighborhood, whose defining radius lies in $\Gamma(K)$ since adjoining the residue parameter $t$ does not enlarge definable values. It therefore contains such an input $c\in K$. Thus the claimed curve does not exist over that base. Impose $\VF$-generation before this lemma (as already suggested in the human report), or allow explicitly specified extra $\VF$ representatives. Under $\VF$-generation, the added nonzero $c\in\MM$ makes the algebraic closure a model, and the displayed construction yields nonempty finite values converging to $b$ itself. For the last rescaling step, first shrink to a disc whose radius is the valuation of a definable scalar; the original definable radius need not be realized by such a scalar.
+-}
++}{The author approves $\VF$-generation as a local hypothesis of this lemma, validating the algebraic-closure model argument. The continuous germ is extended by a constant finite nonempty set on a clopen complement, so no definable scalar realizing an arbitrary definable radius is assumed. Later geometric uses may temporarily enlarge the base; no global $\VF$-generation assumption is imposed here.}
+ % END REFEREE INSERTION R040
+ 
+ This is an analogue of the highly useful \omin-minimal curve selection.

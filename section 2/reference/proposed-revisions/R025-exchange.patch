@@ -1,0 +1,11 @@
+--- a/section 2/reference/diamond_integral_revision_annotated.tex
++++ b/section 2/reference/diamond_integral_revision_annotated.tex
+@@ -999,7 +999,7 @@
+ \end{lem}
+ 
+ \begin{lem}[{\cite[Lemma~4.3]{Yin:QE:ACVF:min}}]\label{exchange}
+-The exchange principle holds in both sorts:
++The exchange principle holds for single elements in both sorts, with all algebraic closures taken over the same fixed parameter base:
+ \begin{itemize}
+  \item For any $a$, $b \in \VF$, if $a \in \acl(b) \mi \acl(\0)$ then $b \in \acl(a)$.
+  \item For any $t$, $s \in \RV$, if $t \in \acl(s) \mi \acl(\0)$ then $s \in \acl(t)$.

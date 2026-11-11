@@ -1,0 +1,15 @@
+--- a/section 2/reference/diamond_integral_revision_annotated.tex
++++ b/section 2/reference/diamond_integral_revision_annotated.tex
+@@ -1285,9 +1285,9 @@
+ \begin{ter}\label{bounded}
+ We say that a set $I \sub \Gamma_{\infty}^n$ is \memph{$\gamma$-bounded}, where $\gamma \in \Gamma$, if it is contained in the box $[\gamma, \infty]^n$, and is \memph{doubly $\gamma$-bounded} if it is contained in the box $[-\gamma, \gamma]^n$. More generally, let $A$ be a subset of $\VF^n \times \RV_\infty^m \times \Gamma_\infty^l$ and
+ \[
+-A_{\Gamma} = \set{(\vv(a), \vrv(t), \gamma) \given (a, t, \gamma) \in A} \sub \Gamma_{\infty}^{n+m+l};
+-\]
+-then we say that $A$ is \memph{$\gamma$-bounded} if $A_{\Gamma}$ is, and so on.
++\operatorname{valim}(A) = \set{(\vv(a), \vrv(t), \gamma) \given (a, t, \gamma) \in A} \sub \Gamma_{\infty}^{n+m+l},
++\]
++where $\vv(a)$ and $\vrv(t)$ are taken coordinatewise. We say that $A$ is \memph{$\gamma$-bounded} if $\operatorname{valim}(A)$ is, and likewise for \memph{doubly $\gamma$-bounded}. A set is \memph{bounded} if it is $\gamma$-bounded for some $\gamma\in\Gamma$, and \memph{doubly bounded} if it is doubly $\gamma$-bounded for some $\gamma\in\Gamma$. The notation $A_{\Gamma}$ continues to mean projection to existing $\Gamma$-coordinates.
+ \end{ter}
+ 
+ % BEGIN REFEREE INSERTION R036

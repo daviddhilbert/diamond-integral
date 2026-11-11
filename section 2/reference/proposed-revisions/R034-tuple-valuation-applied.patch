@@ -1,0 +1,29 @@
+--- a/section 2/reference/diamond_integral_revision_annotated.tex
++++ b/section 2/reference/diamond_integral_revision_annotated.tex
+@@ -1245,19 +1245,22 @@
+ Per the usual terminology, this lemma says that $f$ is continuous \memph{almost everywhere}.
+ 
+ \begin{defn}\label{defn:diff}
+-For any $a \in \VF^n$, we say that $f$ is \memph{differentiable at $a$} if there is a linear map $\lambda : \VF^n \fun \VF^m$ (of $\VF$-vector spaces) such that, for any $\epsilon \in \Gamma$, if $b \in \VF^n$ and $\vv(b)$ is sufficiently large then
++In this definition, for a nonzero tuple $x\in\VF^k$ we set $\vv(x)=\min_i\vv(x_i)$, and we set $\vv(0)=\infty$. This minimum convention is separate from the coordinatewise valuation image used in Terminology~\ref{bounded}.
++
++
++For any $a \in \VF^n$, we say that $f$ is \memph{differentiable at $a$} if there is a linear map $\lambda : \VF^n \fun \VF^m$ (of $\VF$-vector spaces) such that, for any $\epsilon \in \Gamma$, if $b \in \VF^n\setminus\{0\}$ and $\vv(b)$ is sufficiently large then
+ \[
+ \vv(f(a + b) - f(a) - \lambda(b)) - \vv(b) > \epsilon.
+ \]
+ It is straightforward to check that if such a linear function $\lambda$ (represented by a matrix with entries in $\VF$) exists then it is unique and hence is called the \memph{derivative of $f$ at $a$}.
+ 
+-Write $f = (f_1, \ldots, f_m)$. For $a = (a_i, a_{\tilde i}) \in \VF^n$, if the derivative of the function $f_j \rest (\VF \times a_{\tilde i})$ at $a_i$ exists then we call it the \memph{$ij$th partial derivative of $f$ at $a$}.
++Write $f = (f_1, \ldots, f_m)$. For $a = (a_i, a_{\tilde i}) \in \VF^n$, if the derivative of the function $f_j \rest (\VF \times a_{\tilde i})$ at $a_i$ exists then we call it the \memph{$ij$th partial derivative of $f$ at $a$}. Whenever $f$ is differentiable at $a$, the $(j,i)$-entry of its derivative matrix is this $ij$th partial derivative.
+ \end{defn}
+ 
+ % BEGIN REFEREE INSERTION R034
+-\RefereeRemark{034}{Clarification; revised}{Valuation of a tuple and the zero increment}{%
++\ResolvedRefereeRemark{034}{Clarification; revised}{Valuation of a tuple and the zero increment}{%
+ \textit{Original source line 980.}\quad Define $\vv(b)=\min_i\vv(b_i)$ for a nonzero tuple, with $\vv(0)=\infty$, and require $b\ne0$ in the difference quotient. Otherwise the display includes the undefined expression $\infty-\infty$ at $b=0$. Later, where valuations of tuples are taken coordinatewise (Terminology~\ref{bounded}), distinguish that use from this minimum convention. The input-first indexing of partial derivatives is legitimate, but please keep the corresponding matrix convention explicit.
+-}
++}{The author approves the minimum coordinate valuation for differentiability, with $\vv(0)=\infty$, and excludes the zero increment from the difference quotient. This avoids $\infty-\infty$. The input-first $ij$th partial-derivative convention is retained and its derivative-matrix position $(j,i)$ is explicit. The separate boundedness convention remains coordinatewise.}
+ % END REFEREE INSERTION R034
+ 
+ We differentiate functions between arbitrary definable sets by ``forgetting'' the $\RV$-coordinates. More precisely, let

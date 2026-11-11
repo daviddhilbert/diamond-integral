@@ -32,5 +32,11 @@ jobs:
           lint: 'false'
           use-mathlib-cache: 'true'
 
+      - name: Prepare approved library correction
+        run: python3 'section 2/prepare-reuse.py'
+
       - name: Build the Lean project
         run: lake -R build
+
+      - name: Audit section 2 exports
+        run: lake env python3 'section 2/verify.py'

@@ -1,0 +1,36 @@
+--- a/section 2/reference/diamond_integral_revision_annotated.tex
++++ b/section 2/reference/diamond_integral_revision_annotated.tex
+@@ -1654,10 +1654,29 @@
+ $\bigcup_{a\in A_1 \mi A'} a \times A_a$.
+ \end{prop}
+ 
+-Here if $f(A)$ is unbounded then the codomain of $f$ is taken to be the one-point compactification of $\VF$.
+-
+-\begin{proof}
+-By the  closed graph criterion for continuity (Lemma~\ref{closed:gra}), this is an immediate consequence  of    Lemma \ref{lem:open:fiberwise}.
++For the closed-graph argument, the projective line $\mathbb P^1(\VF)$ is understood with the valuation topology, as in Lemma~\ref{closed:gra}.
++
++\begin{proof}
++Put $I=A_1$ and write $H_a$ for the graph of $f_a$. Let
++\[
++G_a=\Cl_{\VF^{n-1}\times\mathbb P^1(\VF)}(H_a),\qquad
++G=\bigcup_{a\in I}\{a\}\times G_a.
++\]
++This family is definable: fiberwise closure is expressed uniformly by the valuative neighborhood formula in each affine chart. Every $G_a$ is closed in $\VF^{n-1}\times\mathbb P^1(\VF)$.
++
++Apply the fixed-base version proved in Lemma~\ref{lem:open:fiberwise}, with empty fibers allowed, to $G$ in each of the two standard affine charts of $\mathbb P^1(\VF)$. Outside the union $I'$ of the resulting two finite definable exceptional sets, $G$ is closed in
++\[
++(I\setminus I')\times\VF^{n-1}\times\mathbb P^1(\VF),
++\]
++since closedness is local on this open chart cover. Fiberwise continuity gives
++\[
++H_a=G_a\cap\bigl(A_a\times\mathbb P^1(\VF)\bigr).
++\]
++Consequently, the graph of the restricted function is closed relative to
++\[
++\bigl(A\cap((I\setminus I')\times\VF^{n-1})\bigr)\times\mathbb P^1(\VF).
++\]
++The closed-graph criterion (Lemma~\ref{closed:gra}) proves the asserted continuity. This spells out the relative-closure step in the original implication.
+ \end{proof}
+ 
+ % BEGIN REFEREE INSERTION R046

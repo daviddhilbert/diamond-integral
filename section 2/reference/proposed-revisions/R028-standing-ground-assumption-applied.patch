@@ -1,0 +1,38 @@
+--- a/section 2/reference/diamond_integral_revision_annotated.tex
++++ b/section 2/reference/diamond_integral_revision_annotated.tex
+@@ -895,7 +895,7 @@
+ }
+ % END REFEREE INSERTION R021
+ 
+-From here on we work in a sufficiently saturated model $\bb U$ of $\ACVF(0,0)$, together with a parameter  set $\mathbb{S}$, which is supposed to be a substructure of $\bb U$. So by a definable set  we shall mean an $\bb S$-definable set, unless indicated otherwise.
++From here on we work in a sufficiently saturated model $\bb U$ of $\ACVF(0,0)$, together with a parameter  set $\mathbb{S}$, which is supposed to be a substructure of $\bb U$. So by a definable set  we shall mean an $\bb S$-definable set, unless indicated otherwise. For the rest of this paper, we assume that $\Gamma(\mathbb S)$ is nontrivial.
+ 
+ \begin{nota}
+ There is a special element $\infty = \rv(0)$ in the $\RV$-sort. For simplicity, we shall write $\RV$ to mean the $\RV$-sort without the element $\infty$, and $\RV_\infty$ otherwise --- that is, $\RV = \rv(\VF^\times)$ and $\RV_\infty = \rv(\VF)$ --- although the difference rarely matters (when it does we will of course provide further clarification).
+@@ -983,7 +983,7 @@
+ 
+ 
+ \subsection{Of points, discs, and atoms}
+-The substructure $\bb S$ is \memph{$\VF$-generated} if it is generated solely by elements in $\VF$, similarly for being $(\VF, \RV)$-generated, and so on. If $\bb S$ is $\VF$-generated then the map $\rv$ is surjective in $\bb S$, but its value group $\Gamma(\bb S)$ could still be trivial. If $\Gamma(\mathbb{S})$ is indeed nontrivial then the model-theoretic algebraic closure $\acl \mathbb{S}$ of $\mathbb{S}$ is a model of $\ACVF(0,0)$; see, for instance, \cite[Corollary~4.18]{Yin:QE:ACVF:min}. In that case, we also know what the definable closure $\dcl \mathbb{S}$ of $\mathbb{S}$ is:
++The substructure $\bb S$ is \memph{$\VF$-generated} if it is generated solely by elements in $\VF$, similarly for being $(\VF, \RV)$-generated, and so on. If $\bb S$ is $\VF$-generated then the map $\rv$ is surjective in $\bb S$, and the standing assumption makes $\Gamma(\mathbb S)$ nontrivial. Then the model-theoretic algebraic closure $\acl \mathbb{S}$ of $\mathbb{S}$ is a model of $\ACVF(0,0)$; see, for instance, \cite[Corollary~4.18]{Yin:QE:ACVF:min}. In that case, we also know what the definable closure $\dcl \mathbb{S}$ of $\mathbb{S}$ is:
+ 
+ \begin{lem}\label{cut:to:hensel:substru}
+ Suppose that $\mathbb{S}$ is $\VF$-generated and $\Gamma(\mathbb{S})$ is nontrivial. Then $\dcl \mathbb{S} = \mathbb{S}$ if and only if the underlying valued field $(\VF(\mathbb{S}), \OO(\mathbb{S}))$ of $\mathbb{S}$ is henselian.
+@@ -1089,7 +1089,7 @@
+ % BEGIN REFEREE INSERTION R028
+ \ResolvedRefereeRemark{028}{Error}{Atomic base change needs a nontrivial base value group}{%
+ \textit{Original source line 879.}\quad The unrestricted statement remains false over a trivially valued base, as the human referee observed. Over a trivially valued algebraically closed field, $A=\MM\setminus\{0\}$ is atomic; a parameter $\gamma>0$ cuts it into the nonempty proper subset $\{x:0<\vv(x)<\gamma\}$. Impose a nontrivial base value group here and propagate that assumption through uses of this lemma. In the cited proof, the essential step is that a nonempty definable subset of $\Gamma$ contains a definable point; this fails for $(0,\infty)$ over the trivial base.
+-}{The author restricts this lemma and Lemma~\ref{atom:self}, which invokes it, to nontrivial $\Gamma(\mathbb S)$. Nontriviality persists after adjoining the point and the tail-disc code, so that invocation has the required hypothesis. These are local hypotheses, not a standing assumption for the paper.}
++}{The author adopts nontrivial $\Gamma(\mathbb S)$ as a standing assumption throughout the paper, matching the blanket hypothesis in [18]. It persists under parameter extension and supplies the required hypothesis here and in subsequent uses, including Lemma~\ref{atom:self} and Corollary~\ref{part:rv:cons}. The contrary permission at the opening of Section~\ref{sec-pscb} is removed.}
+ % END REFEREE INSERTION R028
+ 
+ \begin{lem}\label{at:ball:t}
+@@ -2647,7 +2647,7 @@
+ \section{Special covariant bijections}\label{sec-pscb}
+ 
+ 
+-From here on, we assume that the substructure $\mathbb{S}$ of parameters is $\VF$-generated (but $\Gamma(\mathbb{S})$ could be trivial, in which case the only definable element in $\Gamma$ is $0$, and hence $A_\Gamma = 0$ for any doubly bounded definable set $A$). So every definable disc contains a definable point (Lemma~\ref{algebraic:balls:definable:centers}). Another simple fact we shall occasionally use is that if $\gamma \in \Gamma$ is definable then there is a $\gamma' \geq \gamma$ such that $\gamma'^\sharp$ contains a definable point.
++From here on, we also assume that the substructure $\mathbb{S}$ of parameters is $\VF$-generated. So every definable disc contains a definable point (Lemma~\ref{algebraic:balls:definable:centers}). Another simple fact we shall occasionally use is that if $\gamma \in \Gamma$ is definable then there is a $\gamma' \geq \gamma$ such that $\gamma'^\sharp$ contains a definable point.
+ 
+ \subsection{Invariance and covariance}\label{sec:inv:cov}
+ 

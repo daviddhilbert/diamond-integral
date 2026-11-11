@@ -1,0 +1,42 @@
+--- a/section 2/reference/diamond_integral_revision_annotated.tex
++++ b/section 2/reference/diamond_integral_revision_annotated.tex
+@@ -1405,7 +1405,10 @@
+ \yimu{revision of the next few lemmas}
+ 
+ \begin{lem}[Curve selection]\label{curve:select}
+-Let $A$ be a set in $\VF$ and $b$ a point in the closure of $A$ (some coordinates of $b$ could be the ``point at infinity''). Then there is a $b$-definable continuous finitary function $g : \MM \mi 0 \fun \mdl P(A)$, understood as a ``curve'' in $A$, such that  $b \in \lim_{\MM \mi 0 \rightarrow 0}  g$.
++Suppose that $\mathbb S$ is $\VF$-generated. Let $A\sub\VF^n$ be definable and let $b$ be a point in its closure in the coordinatewise projective line $(\mathbb P^1(\VF))^n$, with the valuation topology. Then there is a $b$-definable continuous finitary function $g:\MM\setminus\{0\}\fun\mdl P(A)$ whose values are nonempty and such that
++\[
++\lim_{\MM\setminus\{0\}\to0}g=\{b\}.
++\]
+ \end{lem}
+ 
+ % BEGIN REFEREE INSERTION R165
+@@ -1414,11 +1417,22 @@
+ }
+ % END REFEREE INSERTION R165
+ \begin{proof}
+-Since $\acl(b, c)$ is a model of $\ACVF(\mathbb{S})$ for every $c \in \MM \mi 0$, we have that the intersection
+-\[
+-\set{a \in A \given \vv(a - b) > \vv(c)} \cap \acl(b, c)
+-\]
+-is nonempty. It follows from compactness that there is a $b$-definable finitary function $g : \MM \mi 0 \fun \mdl P(A)$ such that $g(c) \sub \go(b, \vv(c))$ for every $c \in \MM \mi 0$; here, if the $i$th coordinate of $b$ is the ``point at infinity'' then we use the ``open disc'' $\go(b_i, -\vv(c))$ in that coordinate. By Lemma~\ref{lim:exists}, $\lim_{\MM \mi 0 \rightarrow 0} g$ exists in the  closure of $A$, which clearly contains $b$. By Lemma~\ref{fini:conti}, $g \rest (\gb \mi 0)$ is continuous for some $b$-definable open disc $\gb$ around $0$. Dilating with a $b$-definable factor, we may assume $\gb  = \MM$, and  the claim follows.
++Use a coordinatewise projective chart around $b$ to reduce to the case $b\in\VF^n$: at an infinite coordinate use inversion and restrict $A$ to the chart. These changes are definable over $b$ and preserve convergence and continuity locally.
++
++Naming the finite tuple $b$ and a nonzero $c\in\MM$ preserves $\VF$-generation and the standing nontriviality of the ground valuation. Hence $\acl(\mathbb S,b,c)$ is a model of $\ACVF(0,0)$. Since $b\in\overline A$, the definable set $A\cap\go(b,\vv(c))$ is nonempty, so elementarity gives a point of that intersection algebraic over $(\mathbb S,b,c)$. Compactness supplies a $b$-definable finitary function $g_0$ on $\MM\setminus\{0\}$ such that
++\[
++\varnothing\ne g_0(c)\sub A\cap\go(b,\vv(c))
++\]
++for every $c$. Thus $g_0$ converges to $\{b\}$, and nonempty values make this limit minimal.
++
++By Lemma~\ref{fini:conti}, with its one-dimensional source, $g_0$ is continuous outside a finite set. Choose a $b$-definable clopen disc $D\sub\MM$ around $0$ such that $g_0$ is continuous on $D\setminus\{0\}$. Also $\acl(\mathbb S,b)$ is a model, so $A$ contains a finite nonempty $b$-definable set $E$. Define
++\[
++g(c)=\begin{cases}
++g_0(c),&c\in D\setminus\{0\},\\
++E,&c\in\MM\setminus D.
++\end{cases}
++\]
++The two pieces are relatively clopen in $\MM\setminus\{0\}$, so $g$ is continuous, finite-valued and nonempty everywhere. Its limit at $0$ is still $\{b\}$. Finally transport the construction back through the projective chart. This avoids assuming that a definable value-group radius is the valuation of a definable scalar.
+ \end{proof}
+ 
+ % BEGIN REFEREE INSERTION R040

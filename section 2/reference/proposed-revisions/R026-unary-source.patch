@@ -1,0 +1,17 @@
+--- a/section 2/reference/diamond_integral_revision_annotated.tex
++++ b/section 2/reference/diamond_integral_revision_annotated.tex
+@@ -1013,10 +1013,10 @@
+ % END REFEREE INSERTION R025
+ 
+ \begin{lem}\label{finite:fib:def}
+-Let $f : A \fun \mdl P(B)$ be a definable finitary function, where $A$, $B$ are subsets of $\VF$. Then there is a finite definable subset $B' \sub B$ such that, for every $b \in B$, the fiber $A_b = \set{a \in A \given b \in f(a)}$ is infinite if and only if  $b \in B'$. The same holds if $A$, $B$ are subsets of $\RV$.
+-\end{lem}
+-\begin{proof}
+-Let $b \in B$ such that $A_b$ is infinite. Then, by compactness, there is an element $a \in A_b \mi \acl(b)$. Since $f$ is finitary, which means $b \in \acl(a)$, we must have, by Lemma~\ref{exchange},  $b \notin \acl(a) \mi \acl(\0)$ and hence $b \in \acl(\0)$. It follows that there is an algebraic subset $B' \sub B$ such that if $A_b$ is infinite then $b \in B'$, for otherwise, by compactness again, there would be a $b \in B$ that lies outside every algebraic subset of $B$ and yet the size of $A_b$ is not bounded by any natural number. Clearly we can adjust $B'$ so that it contains exactly those $b \in  B$ with $A_b$ infinite. The second case is similar.
++Let $f : A \fun \mdl P(B)$ be a definable finitary function, where $A\subseteq\VF$ has one source coordinate and $B\subseteq\VF^m$ for some $m\in\N$. Then there is a finite definable subset $B' \sub B$ such that, for every $b \in B$, the fiber $A_b = \set{a \in A \given b \in f(a)}$ is infinite if and only if  $b \in B'$. The same holds for $A\subseteq\RV$ with one source coordinate and $B\subseteq\RV^m$.
++\end{lem}
++\begin{proof}
++Let $b \in B$ such that $A_b$ is infinite. Then, by compactness, there is an element $a \in A_b \mi \acl(b)$. All algebraic closures here are over the fixed base $\mathbb S$. Since $f$ is finitary, each coordinate $b_i$ belongs to $\acl(a)$. If some $b_i$ did not belong to $\acl(\0)$, scalar exchange would imply $a\in\acl(b_i)\subseteq\acl(b)$, a contradiction. Hence $b\in\acl(\0)$. It follows that there is an algebraic subset $B' \sub B$ such that if $A_b$ is infinite then $b \in B'$, for otherwise, by compactness again, there would be a $b \in B$ that lies outside every algebraic subset of $B$ and yet the size of $A_b$ is not bounded by any natural number. Clearly we can adjust $B'$ so that it contains exactly those $b \in  B$ with $A_b$ infinite. The second case is similar.
+ \end{proof}
+ 
+ % BEGIN REFEREE INSERTION R026

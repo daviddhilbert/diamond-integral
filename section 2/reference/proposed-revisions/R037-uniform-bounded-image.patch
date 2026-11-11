@@ -1,0 +1,18 @@
+--- a/section 2/reference/diamond_integral_revision_annotated.tex
++++ b/section 2/reference/diamond_integral_revision_annotated.tex
+@@ -1309,7 +1309,14 @@
+ Let $U \sub \RV^k$ be a doubly bounded set and $f: U \fun \RV$ a definable function. Then $f(U)$ is also doubly bounded. The same holds if the codomain of $f$ is $\Gamma$.
+ \end{lem}
+ \begin{proof}
+-By induction on $k$, both claims are immediately reduced to showing that if $k=1$  and $g : U \fun \Gamma$ is a definable function then $g(U)$ is doubly bounded. Then, by \cmin-minimality, we may assume that $g$  $\vrv$-contracts to a function $g_{\downarrow} : \vrv(U) \fun \Gamma$. Since definable functions in $\Gamma$ are piecewise $\Q$-linear, the range of $g_{\downarrow}$ must be doubly bounded.
++For $f:U\fun\RV$, set $h=\vrv\circ f$; for $f:U\fun\Gamma$, set $h=f$. Consider the definable relation
++\[
++R=\set{(\alpha,\beta)\in\Gamma^k\times\Gamma\given
++  \exists u\in U\ (\vrv(u)=\alpha\ \text{and}\ h(u)=\beta)},
++\]
++where $\vrv(u)$ is coordinatewise. For a fixed $\alpha$, after choosing representatives of its coordinates, the corresponding $\RV$-fiber is identified with a subset of a product of residue-field multiplicative groups. Orthogonality of the residue field and value group implies that its image under $h$ is finite. By compactness these finite fibers have a uniform bound.
++
++By stable embeddedness, $R$ is definable in the pure divisible ordered abelian group $\Gamma$. Its finite fibers therefore lie on finitely many graphs of rational-affine functions of $\alpha$, on definable pieces of its projection. Since $U$ is doubly bounded, this projection lies in a bounded box in $\Gamma^k$. Each of the finitely many rational-affine functions is bounded on that box, and a common finite bound works for all branches. Thus $h(U)$ is doubly bounded. This proves the claim for a $\Gamma$-valued $f$ and, by definition of double boundedness, for an $\RV$-valued $f$ as well. The empty set and the case $k=0$ are included.
+ \end{proof}
+ 
+ % BEGIN REFEREE INSERTION R037

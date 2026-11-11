@@ -1,0 +1,23 @@
+--- a/section 2/reference/diamond_integral_revision_annotated.tex
++++ b/section 2/reference/diamond_integral_revision_annotated.tex
+@@ -1309,13 +1309,17 @@
+ Let $U \sub \RV^k$ be a doubly bounded set and $f: U \fun \RV$ a definable function. Then $f(U)$ is also doubly bounded. The same holds if the codomain of $f$ is $\Gamma$.
+ \end{lem}
+ \begin{proof}
+-By induction on $k$, both claims are immediately reduced to showing that if $k=1$  and $g : U \fun \Gamma$ is a definable function then $g(U)$ is doubly bounded. Then, by \cmin-minimality, we may assume that $g$  $\vrv$-contracts to a function $g_{\downarrow} : \vrv(U) \fun \Gamma$. Since definable functions in $\Gamma$ are piecewise $\Q$-linear, the range of $g_{\downarrow}$ must be doubly bounded.
++For an $\RV$-valued $f$, put $h=\vrv\circ f$; for a $\Gamma$-valued $f$, put $h=f$. We retain the induction on $k$, with the case $k=0$ immediate. For $k>1$ and $t\in\pr_1(U)$, the inductive hypothesis makes $h(U_t)$ doubly bounded. Its finite bound
++\[
++\gamma_t=\sup\set{|h(t,x)|\given x\in U_t}
++\]
++exists by definable completeness of $\Gamma$, and the least-upper-bound formula makes $t\efun\gamma_t$ definable. The projection $\pr_1(U)$ is doubly bounded, so the unary $\Gamma$-valued case bounds all $\gamma_t$ and hence bounds $h(U)$. Thus both claims reduce to the case $k=1$ and a definable function $g:U\fun\Gamma$. Then, by \cmin-minimality, we may assume that $g$  $\vrv$-contracts to a function $g_{\downarrow} : \vrv(U) \fun \Gamma$. Since definable functions in $\Gamma$ are piecewise $\Q$-linear, the range of $g_{\downarrow}$ must be doubly bounded.
+ \end{proof}
+ 
+ % BEGIN REFEREE INSERTION R037
+-\RefereeRemark{037}{Gap}{Uniformity in the bounded RV-image lemma}{%
++\ResolvedRefereeRemark{037}{Gap}{Uniformity in the bounded RV-image lemma}{%
+ \textit{Original source line 1017.}\quad The induction on $k$ must control the bounds uniformly in the remaining coordinates; boundedness on each fiber alone does not give a bound on their union. A precise route is to consider the relation of possible values $\vrv(f(u))$ over $\vrv(u)\in\Gamma^k$. Residue-field/value-group orthogonality makes each such fiber finite, uniformly; stable embeddedness and elimination in divisible ordered abelian groups then give finitely many piecewise rational-affine branches. These have bounded images on a bounded box. Include this justification, or an equivalent explicit uniform induction.
+-}
++}{The author retains the original induction. Its fiber bounds are chosen definably as finite suprema of the absolute output values; the unary $\Gamma$-valued case then bounds this definable bound function uniformly. The proof now spells out that step, without replacing the induction by a relation of all input and output values.}
+ % END REFEREE INSERTION R037
+ 
+ 

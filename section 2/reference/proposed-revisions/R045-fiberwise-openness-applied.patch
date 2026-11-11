@@ -1,0 +1,68 @@
+--- a/section 2/reference/diamond_integral_revision_annotated.tex
++++ b/section 2/reference/diamond_integral_revision_annotated.tex
+@@ -1595,21 +1595,44 @@
+ Let $A\subseteq \VF^n$ be a definable set. Suppose that, for each $a \in A_1$, the fiber $A_a \sub \VF^{n-1}$ is open (respectively, closed). Then there is a finite definable set $A' \subseteq A_1$ such that $A\cap ((A_1 \mi A')\times \VF^{n-1})$ is open (respectively, closed) in $(A_1 \mi A')\times \VF^{n-1}$.
+ \end{lem}
+ \begin{proof}
+-Since either one of the two cases implies the other, we shall just concentrate on the open case. Consider the  definable set
+-\[
+-S=A\cap \Cl((A_1\times \VF^{n-1}) \mi A),
+-\]
+-where $\Cl$ is the closure operator in $A_1\times \VF^{n-1}$; in other words, $S$ is the boundary of $A$ minus the frontier of $A$. It is enough to show that $S_1$ is finite. To that end, suppose for contradiction that $S_1$  contains a disc.
+-
+-Since $S$ cannot contain an open subset of $\VF^n$, we have $\dim_{\VF}(S)<n$; for ease of notation, we may as well take $\dim_{\VF}(S) = n-1$. Then, up to a definable finite partition of $S$ and possibly after a reordering of the last $n-1$ coordinates, we may assume that $S$ is the graph of a definable continuous finitary function $\gp \fun \mdl P(\VF)$, where $\gp$ is an open polydisc and continuity is by Lemma~\ref{fini:conti}. So, for all $\epsilon \in \Gamma$, if $\rad(\gp)$ is sufficiently large, then $S_n$ is clustered inside finitely many discs of radius $\epsilon$. Now, for each $a \in S_1$, consider the function $\alpha(a, -): S \fun \Gamma$ given by
+-\[
+-\alpha(a,x) = \min \set{\beta\in \Gamma \given  \go(x, \beta)\subseteq A_a},
+-\]
+-which exists because $A_a$ is open. By dimension theory, $\dim_{\VF}(\alpha^{-1}(\epsilon)) = n-1$ for some $\epsilon$. Without loss of generality, we may assume that $\alpha(a,x) = \epsilon$ for all $(a,x)\in S$ and $\rad(\gp)$ is sufficiently large in the sense described above. It follows that $S$ contains an open polydisc of radius $\rad(\gp)$, which contradicts the choice of $S$.
++We prove the open case over an arbitrary definable unary base $I\subseteq\VF$, allowing empty fibers, with $A\subseteq I\times\VF^{n-1}$. The closed case then follows by taking the relative complement in $I\times\VF^{n-1}$. In the statement take $I=A_1$.
++
++Put $X=I\times\VF^{n-1}$ and let
++\[
++S=A\cap\Cl_X(X\setminus A).
++\]
++Thus no point of $S$ is interior to $A$ relative to $X$. It is enough to show that $S_1$ is finite. For each $\gamma\in\Gamma$, set
++\[
++T_\gamma=\{(a,x)\in S:\go(x,\gamma)\subseteq A_a\}.
++\]
++Openness of every fiber gives
++\[
++S_1=\bigcup_{\gamma\in\Gamma}(T_\gamma)_1.
++\]
++If every $(T_\gamma)_1$ were finite, this definable $\Gamma$-indexed union would be finite as well: lift the index to $\RV$ and use the $\RV$-indexed $\VF$-dimension bound \cite[Lemma~4.3]{Yin:special:trans}. Consequently, if $S_1$ is infinite, some $(T_\gamma)_1$ contains an open disc $D$.
++
++For this geometric argument we may temporarily enlarge the parameter base to a small $\VF$-generated base containing the data, as in Lemma~\ref{cb:to:cb}. For every $a\in D$, the nonempty definable fiber $(T_\gamma)_a$ has an algebraic point by elementarity of the algebraic-closure model over this base together with $a$. Compactness therefore gives a definable finitary function
++\[
++F:D\fun\mdl P(\VF^{n-1}),\qquad
++\varnothing\ne F(a)\subseteq(T_\gamma)_a.
++\]
++By Lemma~\ref{fini:conti}, choose $a_0\in D$ at which $F$ is continuous, and put $E=F(a_0)$. After shrinking $D$ around $a_0$, continuity gives
++\[
++F(a)\subseteq\bigcup_{e\in E}\go(e,\gamma)\qquad(a\in D).
++\]
++Here $E$ is finite and nonempty. The finitely many definable sets
++\[
++D_e=\{a\in D:F(a)\cap\go(e,\gamma)\ne\varnothing\},\qquad e\in E,
++\]
++cover $D$. Hence one of them contains an open subdisc $D'$. Fix its index $e$. For each $a\in D'$, choose $x\in F(a)\cap\go(e,\gamma)$. Since $(a,x)\in T_\gamma$ and intersecting open polydiscs of the same radius are equal,
++\[
++\go(e,\gamma)=\go(x,\gamma)\subseteq A_a.
++\]
++Thus $D'\times\go(e,\gamma)$ is an open subset of $X$ contained in $A$ and meeting $S$, a contradiction. Therefore $S_1$ is finite. Away from $S_1$, every point of $A$ is interior relative to $X$, which proves the open case and, by relative complementation, the closed case.
+ \end{proof}
+ 
+ % BEGIN REFEREE INSERTION R045
+-\RefereeRemark{045}{Gap; revised}{The fiberwise openness proof needs reconstruction}{%
++\ResolvedRefereeRemark{045}{Gap; revised}{The fiberwise openness proof needs reconstruction}{%
+ \textit{Original source line 1173.}\quad The displayed proof contains genuine mistakes, but the conclusion has a repair. Retain $d=\dim_{\VF}(S)<n$ instead of replacing it by $n-1$. Define
+ \[
+  \alpha(a,x)=\min\{\beta\geq0:\go(x,\beta)\subseteq A_a\}\quad ((a,x)\in S).
+@@ -1619,7 +1642,7 @@
+  D\times\go(s(a_0),\epsilon)\subseteq A,
+ \]
+ contradicting $(a_0,s(a_0))\in S$. This proves that $S_1$ is finite, including when $d<n-1$. The contradiction concerns interior points of $A$, not an open polydisc inside $S$. For the closed case and the next proposition, formulate the lemma over a fixed definable base $I\subseteq\VF$, allowing empty fibers; passage between $I$ and the actual projection costs only its finite unary boundary.
+-}
++}{The author approves the independently reconstructed bad-locus proof. A definable family of valid radii and the $\RV$-indexed union principle supply one radius on a whole disc of base points. Finite nonempty choices and unary generic continuity give an open subset of $A$ meeting $S$, the required contradiction. No codimension-one assumption or minimum-radius choice is needed. The statement is retained, and working over a fixed unary base with empty fibers allowed justifies the closed case by relative complement.}
+ % END REFEREE INSERTION R045
+ 
+ 

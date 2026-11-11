@@ -1,0 +1,1125 @@
+diff --git a/Section3/AdditiveCosets.lean b/Section3/AdditiveCosets.lean
+index 9fa5d88..b409884 100644
+--- a/Section3/AdditiveCosets.lean
++++ b/Section3/AdditiveCosets.lean
+@@ -16,11 +16,11 @@ include hv
+ theorem coset_discs (H : AddSubgroup (VFType (M := M)))
+     (hH : IsBall (Subtype.val '' (H : Set (VFType (M := M)))))
+     (d : VFType (M := M) ⧸ H) :
+-    ∃ a r, {x | QuotientAddGroup.mk' H x = d} = Balls.openDisc v a r ∨
+-      {x | QuotientAddGroup.mk' H x = d} = Balls.closedDisc v a r := by
++    ∃ a, (∃ r : Balls.OpenRadius Γ, {x | QuotientAddGroup.mk' H x = d} = Balls.openDisc v a r) ∨
++      (∃ r : Balls.Radius Γ, {x | QuotientAddGroup.mk' H x = d} = Balls.closedDisc v a r) := by
+   obtain ⟨c, hc⟩ := QuotientAddGroup.mk'_surjective H d
+-  obtain ⟨a, r, he | he⟩ := encodedBall_disc v hv _ hH
+-  · refine ⟨a + c, r, Or.inl ?_⟩
++  obtain ⟨a, ⟨r, he⟩ | ⟨r, he⟩⟩ := encodedBall_disc v hv _ hH
++  · refine ⟨a + c, Or.inl ⟨r, ?_⟩⟩
+     ext x
+     change QuotientAddGroup.mk' H x = d ↔ _
+     rw [← hc]
+@@ -32,7 +32,7 @@ theorem coset_discs (H : AddSubgroup (VFType (M := M)))
+       · rintro ⟨z, hz, hez⟩; exact (Subtype.ext hez : z = x - c) ▸ hz
+     exact hmem.trans ((Set.ext_iff.mp he (x - c)).trans (by
+       simpa only [add_sub_cancel_right] using Balls.sub_mem_openDisc_iff v (a + c) c x r))
+-  · refine ⟨a + c, r, Or.inr ?_⟩
++  · refine ⟨a + c, Or.inr ⟨r, ?_⟩⟩
+     ext x
+     change QuotientAddGroup.mk' H x = d ↔ _
+     rw [← hc]
+diff --git a/Section3/BallDefinablePoint.lean b/Section3/BallDefinablePoint.lean
+index ad3467a..efed0f4 100644
+--- a/Section3/BallDefinablePoint.lean
++++ b/Section3/BallDefinablePoint.lean
+@@ -40,7 +40,7 @@ closed ball, including the singleton and whole-field conventions. -/
+ theorem finite_definable_obstacles_both (S U : Set M) (hU : DefinableAt S .vf U) :
+     ∃ R : Finset (VFType (M := M)), R.Nonempty ∧
+       DefinableAt S .vf (Subtype.val '' (R : Set (VFType (M := M)))) ∧
+-      (∀ (a : VFType (M := M)) (r : Balls.Radius Γ),
++      (∀ (a : VFType (M := M)) (r : Balls.OpenRadius Γ),
+         (∀ c ∈ R, c ∉ Balls.openDisc v a r) →
+         ∀ x ∈ Balls.openDisc v a r, ∀ y ∈ Balls.openDisc v a r,
+           (x.val ∈ U ↔ y.val ∈ U)) ∧
+@@ -87,7 +87,8 @@ theorem definable_point_of_proper_subset_canonical
+     (hc : CanonicalStructure.IsCanonical (M := M)) (h00 : M ⊨ Axioms.ACVF00)
+     (S A : Set M) (hA : DefinableAt S .vf A) (hne : A.Nonempty)
+     (B : Set (VFType (M := M)))
+-    (hB : ∃ a ρ, B = Balls.openDisc v a ρ ∨ B = Balls.closedDisc v a ρ)
++    (hB : ∃ a, (∃ ρ : Balls.OpenRadius Γ, B = Balls.openDisc v a ρ) ∨
++      (∃ ρ : Balls.Radius Γ, B = Balls.closedDisc v a ρ))
+     (hsub : ∀ x : VFType (M := M), x.val ∈ A → x ∈ B)
+     (hproper : ∃ b ∈ B, b.val ∉ A) :
+     ∃ b : VFType (M := M), b ∈ B ∧ DefinableClosureAt S .vf b.val := by
+@@ -101,7 +102,7 @@ theorem definable_point_of_proper_subset_canonical
+     have hmiss : ∀ r ∈ R, r ∉ B := by simpa only [not_exists, not_and] using hnot
+     obtain ⟨a, ha⟩ := hT
+     obtain ⟨b, hb, hbA⟩ := hproper
+-    obtain ⟨c, ρ, hB' | hB'⟩ := hB
++    obtain ⟨c, ⟨ρ, hB'⟩ | ⟨ρ, hB'⟩⟩ := hB
+     · have hab := hO c ρ (hB' ▸ hmiss) a (hB' ▸ hsub a ha) b (hB' ▸ hb)
+       exact hbA (hab.mp ha)
+     · have hab := hC c ρ (hB' ▸ hmiss) a (hB' ▸ hsub a ha) b (hB' ▸ hb)
+@@ -112,7 +113,7 @@ theorem definable_point_of_proper_subset_canonical
+     rw [← NearestRootSyntax.nearest_eq_image v hv R A hA.2]
+     exact NearestRootSyntax.nearest_definable S _ A hRdef.raw_definable hA.raw_definable
+   have hNB : ∀ x ∈ N, x ∈ B := by
+-    obtain ⟨c, ρ, hB' | hB'⟩ := hB
++    obtain ⟨c, ⟨ρ, hB'⟩ | ⟨ρ, hB'⟩⟩ := hB
+     · rw [hB']
+       exact Balls.nearestRoots_mem_openDisc v R T c ρ
+         (fun x hx => hB' ▸ hsub x hx) (hB' ▸ hTR)
+@@ -120,7 +121,7 @@ theorem definable_point_of_proper_subset_canonical
+       exact Balls.nearestRoots_mem_closedDisc v R T c ρ
+         (fun x hx => hB' ▸ hsub x hx) (hB' ▸ hTR)
+   have hmB : mean N ∈ B := by
+-    obtain ⟨c, ρ, hB' | hB'⟩ := hB
++    obtain ⟨c, ⟨ρ, hB'⟩ | ⟨ρ, hB'⟩⟩ := hB
+     · rw [hB']
+       exact mean_mem_openDisc v hv h00 N hN c ρ (hB' ▸ hNB)
+     · rw [hB']
+diff --git a/Section3/BallFibreConstancy.lean b/Section3/BallFibreConstancy.lean
+index 0eaa7b6..26a9953 100644
+--- a/Section3/BallFibreConstancy.lean
++++ b/Section3/BallFibreConstancy.lean
+@@ -30,8 +30,8 @@ theorem finite_exceptions (S : Set M)
+     {Γ : Type} [LinearOrderedCommGroupWithZero Γ]
+     (v : Valuation (VFType (M := M)) Γ)
+     (hv : ∀ x y : VFType (M := M), VFValued.predV x y ↔ v x ≤ v y)
+-    (hq : ∀ d : Q, ∃ a r, {x | q x = d} = Balls.openDisc v a r ∨
+-      {x | q x = d} = Balls.closedDisc v a r) :
++    (hq : ∀ d : Q, ∃ a, (∃ r : Balls.OpenRadius Γ, {x | q x = d} = Balls.openDisc v a r) ∨
++      (∃ r : Balls.Radius Γ, {x | q x = d} = Balls.closedDisc v a r)) :
+     {d : Q | ∃ x y, q x = d ∧ q y = d ∧ f x ≠ f y}.Finite := by
+   obtain ⟨R, _, _, hO, hC⟩ := mixed_finite_definable_obstacles v hv S (graph f) hgraph
+   apply (R.finite_toSet.image q).subset
+@@ -40,7 +40,7 @@ theorem finite_exceptions (S : Set M)
+   have havoid : ∀ c ∈ R, q c ≠ d := by
+     intro c hc he
+     exact hd ⟨c, hc, he⟩
+-  obtain ⟨a, r, he | he⟩ := hq d
++  obtain ⟨a, ⟨r, he⟩ | ⟨r, he⟩⟩ := hq d
+   · have hav : ∀ c ∈ R, c ∉ Balls.openDisc v a r := by
+       intro c hc hh
+       exact havoid c hc ((Set.ext_iff.mp he c).mpr hh)
+diff --git a/Section3/BallGeometry.lean b/Section3/BallGeometry.lean
+index abd8baa..580bae5 100644
+--- a/Section3/BallGeometry.lean
++++ b/Section3/BallGeometry.lean
+@@ -6,8 +6,9 @@ import CanonicalRV
+ 
+ Radii have the paper's order: `OrderDual Γ` reverses Mathlib's multiplicative
+ valuation order, so valuation zero is radius infinity. `WithBot` adds radius
+-minus infinity for the whole field. The open-disc-at-infinity convention is
+-explicit and is distinct from the strict inequality at an ordinary radius.
++minus infinity for the whole field in the closed chart. Open radii are
++`OrderDual Γˣ`: a finite value, excluding valuation zero (radius infinity).
++Singletons are closed discs at infinity; no open-disc-at-infinity case exists.
+ There is one absorbing RV element, inherited from the released language.
+ -/
+ 
+@@ -25,26 +26,28 @@ def closedDisc (v : Valuation K Γ) (a : K) : Radius Γ → Set K
+   | ⊥ => Set.univ
+   | (γ : OrderDual Γ) => {x | v (x - a) ≤ (OrderDual.ofDual γ)}
+ 
+-def openDisc (v : Valuation K Γ) (a : K) : Radius Γ → Set K
+-  | ⊥ => Set.univ
+-  | (γ : OrderDual Γ) => if (OrderDual.ofDual γ) = 0 then {a} else {x | v (x - a) < (OrderDual.ofDual γ)}
++/-- The radius of a proper open disc is finite in the paper's order. -/
++abbrev OpenRadius (Γ : Type) [LinearOrderedCommGroupWithZero Γ] := OrderDual Γˣ
++
++/-- Package a nonzero multiplicative value as a finite valuative radius. -/
++def openRadius (γ : Γ) (hγ : γ ≠ 0) : OpenRadius Γ :=
++  OrderDual.toDual (Units.mk0 γ hγ)
++
++def openDisc (v : Valuation K Γ) (a : K) (r : OpenRadius Γ) : Set K :=
++  {x | v (x - a) < (OrderDual.ofDual r : Γˣ).val}
++
++@[simp] theorem openDisc_openRadius (v : Valuation K Γ) (a : K) (γ : Γ) (hγ : γ ≠ 0) :
++    openDisc v a (openRadius γ hγ) = {x | v (x - a) < γ} := rfl
+ 
+ @[simp] theorem closedDisc_bottom (v : Valuation K Γ) (a : K) :
+     closedDisc v a ⊥ = Set.univ := rfl
+ 
+-@[simp] theorem openDisc_bottom (v : Valuation K Γ) (a : K) :
+-    openDisc v a ⊥ = Set.univ := rfl
+-
+ @[simp] theorem closedDisc_infinity (v : Valuation K Γ) (a : K) :
+     closedDisc v a (↑(0 : OrderDual Γ)) = {a} := by
+   ext x
+   change v (x - a) ≤ (0 : Γ) ↔ x = a
+   rw [le_zero_iff, map_eq_zero, sub_eq_zero]
+ 
+-@[simp] theorem openDisc_infinity (v : Valuation K Γ) (a : K) :
+-    openDisc v a (↑(0 : OrderDual Γ)) = {a} := by
+-  simp [openDisc]
+-
+ theorem centre_mem_closedDisc (v : Valuation K Γ) (a : K) (r : Radius Γ) :
+     a ∈ closedDisc v a r := by
+   cases r with
+@@ -54,18 +57,11 @@ theorem centre_mem_closedDisc (v : Valuation K Γ) (a : K) (r : Radius Γ) :
+     rw [sub_self, map_zero]
+     exact zero_le
+ 
+-theorem centre_mem_openDisc (v : Valuation K Γ) (a : K) (r : Radius Γ) :
++theorem centre_mem_openDisc (v : Valuation K Γ) (a : K) (r : OpenRadius Γ) :
+     a ∈ openDisc v a r := by
+-  cases r with
+-  | none => trivial
+-  | some γ =>
+-    by_cases hγ : (OrderDual.ofDual γ) = 0
+-    · simp [openDisc, hγ]
+-    · change a ∈ (if OrderDual.ofDual γ = 0 then {a} else {x | v (x - a) < OrderDual.ofDual γ})
+-      rw [if_neg hγ]
+-      change v (a - a) < OrderDual.ofDual γ
+-      rw [sub_self, map_zero]
+-      exact pos_iff_ne_zero.mpr hγ
++  change v (a - a) < (OrderDual.ofDual r : Γˣ).val
++  rw [sub_self, map_zero]
++  exact Units.zero_lt _
+ 
+ /-- The extra RV coordinates of a polydisc are fixed, as in Definition 2.6. -/
+ def polydisc {R : Type} {n m : ℕ} (B : Fin n → Set K) (t : Fin m → R) :
+@@ -75,7 +71,7 @@ def closedPolydisc (v : Valuation K Γ) {n : ℕ} (a : Fin n → K)
+     (r : Fin n → Radius Γ) : Set (Fin n → K) := {x | ∀ i, x i ∈ closedDisc v (a i) (r i)}
+ 
+ def openPolydisc (v : Valuation K Γ) {n : ℕ} (a : Fin n → K)
+-    (r : Fin n → Radius Γ) : Set (Fin n → K) := {x | ∀ i, x i ∈ openDisc v (a i) (r i)}
++    (r : Fin n → OpenRadius Γ) : Set (Fin n → K) := {x | ∀ i, x i ∈ openDisc v (a i) (r i)}
+ 
+ /-- Minimum in the paper's radius order, including infinity for zero coordinates. -/
+ noncomputable def polydiscRadius {n : ℕ} (r : Fin n → Radius Γ) : Radius Γ :=
+@@ -87,12 +83,6 @@ noncomputable def polydiscRadius {n : ℕ} (r : Fin n → Radius Γ) : Radius Γ
+   simp only [closedPolydisc, Set.mem_ofPred_eq, closedDisc_infinity, Set.mem_singleton_iff]
+   exact ⟨fun h => funext h, fun h i => congrFun h i⟩
+ 
+-@[simp] theorem openPolydisc_infinity (v : Valuation K Γ) {n : ℕ} (a : Fin n → K) :
+-    openPolydisc v a (fun _ => ↑(0 : OrderDual Γ)) = {a} := by
+-  ext x
+-  simp only [openPolydisc, Set.mem_ofPred_eq, openDisc_infinity, Set.mem_singleton_iff]
+-  exact ⟨fun h => funext h, fun h i => congrFun h i⟩
+-
+ section Encoded
+ 
+ variable {M : Type} [LRV.Structure M] [hM : M ⊨ Axioms.ACVF]
+@@ -120,12 +110,9 @@ theorem rvFibre_eq_openDisc (v : Valuation (VF M) Γ)
+     (hv : ∀ x y : VF M, VFValued.predV x y ↔ v x ≤ v y)
+     (a : VF M) (ha : a ≠ 0) :
+     rvFibre (CanonicalRV.encodedRv a) =
+-      openDisc v a (↑(OrderDual.toDual (v a))) := by
+-  have hva : v a ≠ 0 := (map_ne_zero v).mpr ha
++      openDisc v a (openRadius (v a) ((map_ne_zero v).mpr ha)) := by
+   ext x
+-  simp only [rvFibre, Set.mem_ofPred_eq, CanonicalRV.encodedRv, openDisc]
+-  change iRv x.val = iRv a.val ↔ x ∈ (if v a = 0 then {a} else {x | v (x - a) < v a})
+-  rw [if_neg hva]
++  change iRv x.val = iRv a.val ↔ v (x - a) < v a
+   rw [CanonicalRV.encoded_eq_iff_close x.property a.property
+     (fun h => ha (Subtype.ext h))]
+   change (¬ VFValued.predV a (x - a)) ↔ v (x - a) < v a
+diff --git a/Section3/BallInitial.lean b/Section3/BallInitial.lean
+index ba297ad..a59eb9b 100644
+--- a/Section3/BallInitial.lean
++++ b/Section3/BallInitial.lean
+@@ -21,37 +21,18 @@ theorem closedDisc_zero_downward (a : K) (ρ : Radius Γ)
+       exact v.map_add_le hx ha
+     exact v.map_sub_le (hxy.trans hx') ha
+ 
+-theorem openDisc_zero_downward (a : K) (ρ : Radius Γ)
++theorem openDisc_zero_downward (a : K) (ρ : OpenRadius Γ)
+     (hz : (0 : K) ∈ openDisc v a ρ) {x y : K}
+     (hx : x ∈ openDisc v a ρ) (hxy : v y ≤ v x) : y ∈ openDisc v a ρ := by
+-  cases ρ with
+-  | none => trivial
+-  | some γ =>
+-    by_cases hγ : OrderDual.ofDual γ = 0
+-    · have heγ : γ = OrderDual.toDual (0 : Γ) := congrArg OrderDual.toDual hγ
+-      subst γ
+-      change (0 : K) ∈ openDisc v a (↑(0 : OrderDual Γ)) at hz
+-      change x ∈ openDisc v a (↑(0 : OrderDual Γ)) at hx
+-      change y ∈ openDisc v a (↑(0 : OrderDual Γ))
+-      have hz0 : (0 : K) = a := by simpa only [openDisc_infinity, Set.mem_singleton_iff] using hz
+-      have ha : a = 0 := hz0.symm
+-      have hx0 : x = 0 := by simpa only [openDisc_infinity, Set.mem_singleton_iff, ha] using hx
+-      have hy0 : y = 0 := (map_eq_zero v).mp (le_zero_iff.mp (by simpa only [hx0, map_zero] using hxy))
+-      simp only [openDisc_infinity, Set.mem_singleton_iff, ha, hy0]
+-    · have ha : v a < OrderDual.ofDual γ := by
+-        change (0 : K) ∈ if OrderDual.ofDual γ = 0 then {a} else {z | v (z - a) < OrderDual.ofDual γ} at hz
+-        rw [if_neg hγ] at hz
+-        change v (0 - a) < OrderDual.ofDual γ at hz
+-        simpa only [zero_sub, Valuation.map_neg] using hz
+-      have hx' : v x < OrderDual.ofDual γ := by
+-        have hx' : v (x - a) < OrderDual.ofDual γ := by
+-          simpa only [openDisc, if_neg hγ, Set.mem_ofPred_eq] using hx
+-        have he : x = (x - a) + a := by ring
+-        rw [he]
+-        exact v.map_add_lt hx' ha
+-      change y ∈ if OrderDual.ofDual γ = 0 then {a} else {z | v (z - a) < OrderDual.ofDual γ}
+-      rw [if_neg hγ]
+-      exact v.map_sub_lt (lt_of_le_of_lt hxy hx') ha
++  have ha : v a < (OrderDual.ofDual ρ : Γˣ).val := by
++    change v (0 - a) < (OrderDual.ofDual ρ : Γˣ).val at hz
++    simpa only [zero_sub, Valuation.map_neg] using hz
++  have hx' : v x < (OrderDual.ofDual ρ : Γˣ).val := by
++    have he : x = (x - a) + a := by ring
++    rw [he]
++    exact v.map_add_lt hx ha
++  exact v.map_sub_lt (lt_of_le_of_lt hxy hx') ha
++
+ end SpecialTransformations.Section3.Balls
+ namespace SpecialTransformations.Section3
+ variable {M : Type} [LRV.Structure M] [hM : M ⊨ Axioms.ACVF]
+@@ -63,7 +44,7 @@ include hv
+ theorem ball_zero_downward (B : Set M) (hB : IsBall B)
+     (hz : (0 : VFType (M := M)).val ∈ B)
+     {x y : VFType (M := M)} (hx : x.val ∈ B) (hxy : v y ≤ v x) : y.val ∈ B := by
+-  obtain ⟨a, ρ, he | he⟩ := encodedBall_disc v hv B hB
++  obtain ⟨a, ⟨ρ, he⟩ | ⟨ρ, he⟩⟩ := encodedBall_disc v hv B hB
+   · exact (Set.ext_iff.mp he y).mpr (Balls.openDisc_zero_downward v a ρ
+       ((Set.ext_iff.mp he 0).mp hz) ((Set.ext_iff.mp he x).mp hx) hxy)
+   · exact (Set.ext_iff.mp he y).mpr (Balls.closedDisc_zero_downward v a ρ
+diff --git a/Section3/BallTranslation.lean b/Section3/BallTranslation.lean
+index 062acb8..f81a860 100644
+--- a/Section3/BallTranslation.lean
++++ b/Section3/BallTranslation.lean
+@@ -16,17 +16,13 @@ theorem sub_mem_closedDisc_iff (v : Valuation K Γ) (a c x : K) (r : Radius Γ)
+     change v ((x - c) - (a - c)) ≤ OrderDual.ofDual γ ↔ v (x - a) ≤ OrderDual.ofDual γ
+     rw [hd]
+ 
+-theorem sub_mem_openDisc_iff (v : Valuation K Γ) (a c x : K) (r : Radius Γ) :
++theorem sub_mem_openDisc_iff (v : Valuation K Γ) (a c x : K) (r : OpenRadius Γ) :
+     x - c ∈ openDisc v (a - c) r ↔ x ∈ openDisc v a r := by
+   have hd : (x - c) - (a - c) = x - a := by abel
+-  cases r with
+-  | none => rfl
+-  | some γ =>
+-    by_cases hγ : OrderDual.ofDual γ = 0
+-    · simp only [openDisc, if_pos hγ, Set.mem_singleton_iff]
+-      exact sub_left_inj
+-    · simp only [openDisc, if_neg hγ, Set.mem_ofPred_eq]
+-      rw [hd]
++  change v ((x - c) - (a - c)) < (OrderDual.ofDual r : Γˣ).val ↔
++    v (x - a) < (OrderDual.ofDual r : Γˣ).val
++  rw [hd]
++
+ end General
+ 
+ variable {M : Type} [LRV.Structure M] [hM : M ⊨ Axioms.ACVF]
+@@ -35,7 +31,7 @@ variable {Γ : Type} [LinearOrderedCommGroupWithZero Γ]
+     (hv : ∀ x y : VFType (M := M), VFValued.predV x y ↔ v x ≤ v y)
+ 
+ include hv in
+-theorem rv_sub_constant_openDisc (a c : VFType (M := M)) (r : Radius Γ)
++theorem rv_sub_constant_openDisc (a c : VFType (M := M)) (r : OpenRadius Γ)
+     (hc : c ∉ openDisc v a r) (x y : VFType (M := M))
+     (hx : x ∈ openDisc v a r) (hy : y ∈ openDisc v a r) :
+     iRv (x - c).val = iRv (y - c).val := by
+diff --git a/Section3/ClosedBallCentres.lean b/Section3/ClosedBallCentres.lean
+index cfc2801..69e30c1 100644
+--- a/Section3/ClosedBallCentres.lean
++++ b/Section3/ClosedBallCentres.lean
+@@ -63,8 +63,7 @@ theorem finite_definable_hitting_set (hc : CanonicalStructure.IsCanonical (M :=
+       (y : VFType (M := M)) (hy : y ∈ ValOneEC.openBall v a (v b)) :
+       (x ∈ ⋃ B ∈ hfF.toFinset, B ↔ y ∈ ⋃ B ∈ hfF.toFinset, B) := by
+     have hb : v b ≠ 0 := ne_of_gt (lt_of_le_of_lt zero_le hx)
+-    have heq : Balls.openDisc v a (↑(OrderDual.toDual (v b))) = ValOneEC.openBall v a (v b) := by
+-      simp only [Balls.openDisc, OrderDual.ofDual_toDual, if_neg hb]
++    have heq : Balls.openDisc v a (Balls.openRadius (v b) hb) = ValOneEC.openBall v a (v b) := by
+       rfl
+     exact (hUmem x).symm.trans ((hconst a _ (heq.symm ▸ havoid) x
+       (heq.symm ▸ hx) y (heq.symm ▸ hy)).trans (hUmem y))
+diff --git a/Section3/DiscCentres.lean b/Section3/DiscCentres.lean
+index 9caaad3..52457e4 100644
+--- a/Section3/DiscCentres.lean
++++ b/Section3/DiscCentres.lean
+@@ -37,28 +37,18 @@ theorem closedDisc_rv_constant (a : VFType (M := M)) (r : Radius Γ)
+     exact lt_of_le_of_lt hx hγ
+ 
+ include hv in
+-theorem openDisc_rv_constant (a : VFType (M := M)) (r : Radius Γ)
++theorem openDisc_rv_constant (a : VFType (M := M)) (r : OpenRadius Γ)
+     (hzero : (0 : VFType (M := M)) ∉ openDisc v a r)
+     (x : VFType (M := M)) (hx : x ∈ openDisc v a r) : iRv x.val = iRv a.val := by
+   have ha : a ≠ 0 := by
+     intro h
+     exact hzero (h ▸ centre_mem_openDisc v a r)
+-  cases r with
+-  | none => exact (hzero (Set.mem_univ _)).elim
+-  | some γ =>
+-    by_cases hγ : OrderDual.ofDual γ = 0
+-    · have hxa : x = a := by simpa only [openDisc, if_pos hγ, Set.mem_singleton_iff] using hx
+-      rw [hxa]
+-    · have hγa : OrderDual.ofDual γ ≤ v a := by
+-        apply le_of_not_gt
+-        intro h
+-        apply hzero
+-        change (0 : VFType (M := M)) ∈
+-          if OrderDual.ofDual γ = 0 then {a} else {x | v (x - a) < OrderDual.ofDual γ}
+-        rw [if_neg hγ]
+-        simpa only [Set.mem_ofPred_eq, zero_sub, Valuation.map_neg] using h
+-      have hx' : v (x - a) < OrderDual.ofDual γ := by
+-        simpa only [openDisc, if_neg hγ, Set.mem_ofPred_eq] using hx
+-      exact rv_eq_of_sub_lt v hv x a ha (lt_of_lt_of_le hx' hγa)
++  have hγa : (OrderDual.ofDual r : Γˣ).val ≤ v a := by
++    apply le_of_not_gt
++    intro h
++    apply hzero
++    change v (0 - a) < (OrderDual.ofDual r : Γˣ).val
++    simpa only [zero_sub, Valuation.map_neg] using h
++  exact rv_eq_of_sub_lt v hv x a ha (lt_of_lt_of_le hx hγa)
+ 
+ end SpecialTransformations.Section3.Balls
+diff --git a/Section3/EncodedBallGeometry.lean b/Section3/EncodedBallGeometry.lean
+index dce8359..ba21a4d 100644
+--- a/Section3/EncodedBallGeometry.lean
++++ b/Section3/EncodedBallGeometry.lean
+@@ -109,10 +109,12 @@ theorem encodedBall_disc {Γ : Type} [LinearOrderedCommGroupWithZero Γ]
+     (v : Valuation (VFType (M := M)) Γ)
+     (hv : ∀ x y : VFType (M := M), VFValued.predV x y ↔ v x ≤ v y)
+     (B : Set M) (hB : IsBall B) :
+-    ∃ a ρ, {x : VFType (M := M) | x.val ∈ B} = Balls.openDisc v a ρ ∨
+-      {x : VFType (M := M) | x.val ∈ B} = Balls.closedDisc v a ρ := by
++    ∃ a, (∃ ρ : Balls.OpenRadius Γ,
++      {x : VFType (M := M) | x.val ∈ B} = Balls.openDisc v a ρ) ∨
++      (∃ ρ : Balls.Radius Γ,
++        {x : VFType (M := M) | x.val ∈ B} = Balls.closedDisc v a ρ) := by
+   rcases hB with hB | ⟨a, t, ha, ht, ht0, hB⟩ | (⟨a, t, ha, ht, ht0, hB⟩ | ⟨a, ha, hB⟩)
+-  · refine ⟨0, ⊥, Or.inr ?_⟩
++  · refine ⟨0, Or.inr ⟨⊥, ?_⟩⟩
+     ext x
+     change x.val ∈ B ↔ True
+     rw [hB]
+@@ -120,7 +122,7 @@ theorem encodedBall_disc {Γ : Type} [LinearOrderedCommGroupWithZero Γ]
+   · let a' : VFType (M := M) := ⟨a, ha⟩
+     obtain ⟨b, hb⟩ := CanonicalRV.encodedRv_surjective (⟨t, ht⟩ : CanonicalRV.RVSort M)
+     have hb' : iRv b.val = t := congrArg Subtype.val hb
+-    refine ⟨a', ↑(OrderDual.toDual (v b)), Or.inr ?_⟩
++    refine ⟨a', Or.inr ⟨↑(OrderDual.toDual (v b)), ?_⟩⟩
+     apply Set.ext
+     intro (x : VFType (M := M))
+     change x.val ∈ B ↔ v (x - a') ≤ v b
+@@ -139,12 +141,12 @@ theorem encodedBall_disc {Γ : Type} [LinearOrderedCommGroupWithZero Γ]
+       intro he
+       exact ht0 (hb'.symm.trans ((CanonicalRV.encodedRv_zero_iff b).mpr he))
+     have hvb : v b ≠ 0 := (map_ne_zero v).mpr hb0
+-    refine ⟨a', ↑(OrderDual.toDual (v b)), Or.inl ?_⟩
++    refine ⟨a', Or.inl ⟨Balls.openRadius (v b) hvb, ?_⟩⟩
+     apply Set.ext
+     intro (x : VFType (M := M))
+-    change x.val ∈ B ↔ x ∈ Balls.openDisc v a' (↑(OrderDual.toDual (v b)))
++    change x.val ∈ B ↔ x ∈ Balls.openDisc v a' (Balls.openRadius (v b) hvb)
+     rw [hB]
+-    simp only [Balls.openDisc, OrderDual.ofDual_toDual, if_neg hvb, Set.mem_ofPred_eq]
++    simp only [Balls.openDisc_openRadius, Set.mem_ofPred_eq]
+     change (iVF x.val ∧ iLe t (iRv (iVFAdd x.val (iVFNeg a))) ∧
+       ¬ iLe (iRv (iVFAdd x.val (iVFNeg a))) t) ↔ v (x - a') < v b
+     rw [and_iff_right x.property]
+@@ -156,7 +158,7 @@ theorem encodedBall_disc {Γ : Type} [LinearOrderedCommGroupWithZero Γ]
+     rw [hb', hd] at hle hge
+     rw [hle, hge, lt_iff_le_not_ge]
+   · let a' : VFType (M := M) := ⟨a, ha⟩
+-    refine ⟨a', ↑(0 : OrderDual Γ), Or.inr ?_⟩
++    refine ⟨a', Or.inr ⟨↑(0 : OrderDual Γ), ?_⟩⟩
+     rw [Balls.closedDisc_infinity]
+     apply Set.ext
+     intro (x : VFType (M := M))
+diff --git a/Section3/GammaBallDefinablePoint.lean b/Section3/GammaBallDefinablePoint.lean
+index 52abddf..52b6bd7 100644
+--- a/Section3/GammaBallDefinablePoint.lean
++++ b/Section3/GammaBallDefinablePoint.lean
+@@ -72,7 +72,8 @@ theorem lemma_3_11_gamma_base (h00 : M ⊨ Axioms.ACVF00) (B : Base (M := M))
+     have hU : U.Nonempty := by
+       obtain ⟨a,ha⟩ := hne
+       exact ⟨⟨a,hAN.2 ha⟩,ha⟩
+-    have hdisc : ∃ a ρ, V = Balls.openDisc v a ρ ∨ V = Balls.closedDisc v a ρ :=
++    have hdisc : ∃ a, (∃ ρ : Balls.OpenRadius Γ, V = Balls.openDisc v a ρ) ∨
++      (∃ ρ : Balls.Radius Γ, V = Balls.closedDisc v a ρ) :=
+       encodedBall_disc v hv C hCN
+     have hsub : ∀ a ∈ U, a ∈ V := fun a ha => hproper.1 ha
+     have hprop : ∃ b ∈ V, b.val ∉ A := by
+@@ -84,13 +85,13 @@ theorem lemma_3_11_gamma_base (h00 : M ⊨ Axioms.ACVF00) (B : Base (M := M))
+       have hmiss₀ : ∀ r ∈ R₀, r ∉ V := fun r hr => hmiss r (hR₀R hr)
+       obtain ⟨a,ha⟩ := hU
+       obtain ⟨b,hb,hbA⟩ := hprop
+-      obtain ⟨c,ρ,he | he⟩ := hdisc
++      obtain ⟨c, ⟨ρ, he⟩ | ⟨ρ, he⟩⟩ := hdisc
+       · exact hbA ((hO c ρ (he ▸ hmiss₀) a (he ▸ hsub a ha) b (he ▸ hb)).mp ha)
+       · exact hbA ((hCl c ρ (he ▸ hmiss₀) a (he ▸ hsub a ha) b (he ▸ hb)).mp ha)
+     let F := Balls.nearestRoots v R U
+     have hF : F.Nonempty := Balls.nearestRoots_nonempty v R hR U hU
+     have hFV : ∀ x ∈ F, x ∈ V := by
+-      obtain ⟨c,ρ,he | he⟩ := hdisc
++      obtain ⟨c, ⟨ρ, he⟩ | ⟨ρ, he⟩⟩ := hdisc
+       · rw [he]
+         exact Balls.nearestRoots_mem_openDisc v R U c ρ
+           (fun x hx => he ▸ hsub x hx) (he ▸ hTR)
+@@ -98,7 +99,7 @@ theorem lemma_3_11_gamma_base (h00 : M ⊨ Axioms.ACVF00) (B : Base (M := M))
+         exact Balls.nearestRoots_mem_closedDisc v R U c ρ
+           (fun x hx => he ▸ hsub x hx) (he ▸ hTR)
+     have hmV : mean F ∈ V := by
+-      obtain ⟨c,ρ,he | he⟩ := hdisc
++      obtain ⟨c, ⟨ρ, he⟩ | ⟨ρ, he⟩⟩ := hdisc
+       · rw [he]
+         exact mean_mem_openDisc v hv h00N F hF c ρ (he ▸ hFV)
+       · rw [he]
+diff --git a/Section3/GeneralBallCenters.lean b/Section3/GeneralBallCenters.lean
+index 58a6d1d..dcfad08 100644
+--- a/Section3/GeneralBallCenters.lean
++++ b/Section3/GeneralBallCenters.lean
+@@ -404,11 +404,9 @@ theorem normalized_mean_mem (h00 : M ⊨ Axioms.ACVF00) (D : OpenBall M)
+   let a : VFType (M := M) := ⟨q.val 0,q.property.1 0⟩
+   let r : VFType (M := M) := ⟨q.val 1,q.property.1 1⟩
+   have hr : v r ≠ 0 := (v.ne_zero_iff).mpr (@radius_ne_zero M N hN q.val hqN)
+-  have he : @ball M N q.val = Balls.openDisc v a (↑(OrderDual.toDual (v r))) := by
++  have he : @ball M N q.val = Balls.openDisc v a (Balls.openRadius (v r) hr) := by
+     rw [@ball_eq_open M N hN Γ hΓ v hv q.val hqN]
+-    change ValOneEC.openBall v a (v r) =
+-      (if v r = 0 then {a} else ValOneEC.openBall v a (v r))
+-    exact (if_neg hr).symm
++    rfl
+   have hFN (x : VFType (M := M)) (hx : x ∈ F) : x ∈ @ball M N q.val := by
+     have hh := hF x hx
+     rw [← hq] at hh
+@@ -418,7 +416,7 @@ theorem normalized_mean_mem (h00 : M ⊨ Axioms.ACVF00) (D : OpenBall M)
+   have hm : (@Barycentre.mean M N hN F) ∈ @ball M N q.val := by
+     rw [he]
+     apply @Barycentre.mean_mem_openDisc M N hN Γ hΓ v hv h00N F hne a
+-      (↑(OrderDual.toDual (v r)))
++      (Balls.openRadius (v r) hr)
+     intro x hx
+     rw [← he]
+     exact hFN x hx
+diff --git a/Section3/MeanInBalls.lean b/Section3/MeanInBalls.lean
+index b55e747..3319d5a 100644
+--- a/Section3/MeanInBalls.lean
++++ b/Section3/MeanInBalls.lean
+@@ -46,31 +46,11 @@ theorem mean_mem_closedDisc (h00 : M ⊨ Axioms.ACVF00)
+ 
+ theorem mean_mem_openDisc (h00 : M ⊨ Axioms.ACVF00)
+     (A : Finset (VFType (M := M))) (hne : A.Nonempty)
+-    (a : VFType (M := M)) (r : Radius Γ) (hA : ∀ x ∈ A, x ∈ openDisc v a r) :
++    (a : VFType (M := M)) (r : OpenRadius Γ) (hA : ∀ x ∈ A, x ∈ openDisc v a r) :
+     mean A ∈ openDisc v a r := by
+-  cases r with
+-  | none => trivial
+-  | some γ =>
+-    by_cases hγ : OrderDual.ofDual γ = 0
+-    · have heγ : γ = OrderDual.toDual (0 : Γ) := congrArg OrderDual.toDual hγ
+-      subst γ
+-      have hcl : ∀ x ∈ A, x ∈ closedDisc v a (↑(0 : OrderDual Γ)) := by
+-        intro x hx
+-        have hax := hA x hx
+-        change x ∈ openDisc v a (↑(0 : OrderDual Γ)) at hax
+-        simpa only [closedDisc_infinity, openDisc_infinity] using hax
+-      change mean A ∈ openDisc v a (↑(0 : OrderDual Γ))
+-      simpa only [closedDisc_infinity, openDisc_infinity] using
+-        mean_mem_closedDisc v hv h00 A hne a _ hcl
+-    · have hb : ∀ x ∈ A, v (x - a) < OrderDual.ofDual γ := by
+-        intro x hx
+-        simpa only [openDisc, if_neg hγ, Set.mem_ofPred_eq] using hA x hx
+-      change mean A ∈ if OrderDual.ofDual γ = 0 then {a} else
+-        {x | v (x - a) < OrderDual.ofDual γ}
+-      rw [if_neg hγ]
+-      change v (mean A - a) < OrderDual.ofDual γ
+-      rw [mean_sub_eq h00 A hne a, map_div₀,
+-        natCast_value_one v hv h00 A.card (Finset.card_ne_zero.mpr hne), div_one]
+-      exact v.map_sum_lt hγ hb
++  change v (mean A - a) < (OrderDual.ofDual r : Γˣ).val
++  rw [mean_sub_eq h00 A hne a, map_div₀,
++    natCast_value_one v hv h00 A.card (Finset.card_ne_zero.mpr hne), div_one]
++  exact v.map_sum_lt (Units.ne_zero _) hA
+ 
+ end SpecialTransformations.Section3.Barycentre
+diff --git a/Section3/MixedRootFree.lean b/Section3/MixedRootFree.lean
+index 9d11ae7..d2be888 100644
+--- a/Section3/MixedRootFree.lean
++++ b/Section3/MixedRootFree.lean
+@@ -19,7 +19,7 @@ theorem mixed_qf_rootFree_constant (S : Set M) (p : Parameters S)
+     (hp : ∀ i (h : iVF (p.values i)), (⟨p.values i, h⟩ : VFType (M := M)) ∈ E)
+     (φ : LRV.BoundedFormula (Fin p.length) (m + 1)) (hqf : φ.IsQF)
+     (hws : WellSorted p.sorts contextSort φ)
+-    (a : VFType (M := M)) (r : Balls.Radius Γ)
++    (a : VFType (M := M)) (r : Balls.OpenRadius Γ)
+     (havoid : ∀ c ∈ PolynomialObstacles.obstacles E (MixedPolynomialSupport.formula p E hp φ),
+       c ∉ Balls.openDisc v a r)
+     (x y : VFType (M := M)) (hx : x ∈ Balls.openDisc v a r)
+@@ -54,7 +54,7 @@ theorem mixed_finite_definable_obstacles (S : Set M) (U : Set (Fin (m + 1) → M
+     (hU : DefinableOver S contextSort U) :
+     ∃ R : Finset (VFType (M := M)), R.Nonempty ∧
+       DefinableAt S .vf (Subtype.val '' (R : Set (VFType (M := M)))) ∧
+-      (∀ (a : VFType (M := M)) (r : Balls.Radius Γ),
++      (∀ (a : VFType (M := M)) (r : Balls.OpenRadius Γ),
+         (∀ c ∈ R, c ∉ Balls.openDisc v a r) →
+         ∀ x ∈ Balls.openDisc v a r, ∀ y ∈ Balls.openDisc v a r,
+         ∀ ys : Fin m → M, (∀ j, iRV (ys j)) →
+diff --git a/Section3/NearestRoots.lean b/Section3/NearestRoots.lean
+index 29bd88d..ac9b730 100644
+--- a/Section3/NearestRoots.lean
++++ b/Section3/NearestRoots.lean
+@@ -35,41 +35,22 @@ theorem nearestRoots_mem_closedDisc (R : Finset K) (A : Set K) (a : K) (ρ : Rad
+     rw [he]
+     exact v.map_add_le hrx hxB
+ 
+-theorem nearestRoots_mem_openDisc (R : Finset K) (A : Set K) (a : K) (ρ : Radius Γ)
++theorem nearestRoots_mem_openDisc (R : Finset K) (A : Set K) (a : K) (ρ : OpenRadius Γ)
+     (hA : A ⊆ openDisc v a ρ) (hR : ∃ r ∈ R, r ∈ openDisc v a ρ) :
+     ∀ r ∈ nearestRoots v R A, r ∈ openDisc v a ρ := by
+   intro r hr
+-  cases ρ with
+-  | none => trivial
+-  | some γ =>
+-    by_cases hγ : OrderDual.ofDual γ = 0
+-    · have heγ : γ = OrderDual.toDual (0 : Γ) := congrArg OrderDual.toDual hγ
+-      subst γ
+-      change A ⊆ openDisc v a (↑(0 : OrderDual Γ)) at hA
+-      change (∃ s ∈ R, s ∈ openDisc v a (↑(0 : OrderDual Γ))) at hR
+-      have hA' : A ⊆ closedDisc v a (↑(0 : OrderDual Γ)) := by
+-        simpa only [openDisc_infinity, closedDisc_infinity] using hA
+-      have hR' : ∃ s ∈ R, s ∈ closedDisc v a (↑(0 : OrderDual Γ)) := by
+-        simpa only [openDisc_infinity, closedDisc_infinity] using hR
+-      change r ∈ openDisc v a (↑(0 : OrderDual Γ))
+-      simpa only [openDisc_infinity, closedDisc_infinity] using
+-        nearestRoots_mem_closedDisc v R A a _ hA' hR' r hr
+-    · obtain ⟨hrR, x, hxA, hnear⟩ := Finset.mem_filter.mp hr
+-      obtain ⟨s, hsR, hsB⟩ := hR
+-      have hxB : v (x - a) < OrderDual.ofDual γ := by
+-        simpa only [openDisc, if_neg hγ, Set.mem_ofPred_eq] using hA hxA
+-      have hsB' : v (s - a) < OrderDual.ofDual γ := by
+-        simpa only [openDisc, if_neg hγ, Set.mem_ofPred_eq] using hsB
+-      have hsx : v (s - x) < OrderDual.ofDual γ := by
+-        have he : s - x = (s - a) - (x - a) := by ring
+-        rw [he]
+-        exact v.map_sub_lt hsB' hxB
+-      have hrx := lt_of_le_of_lt (hnear s hsR) hsx
+-      change r ∈ if OrderDual.ofDual γ = 0 then {a} else {x | v (x - a) < OrderDual.ofDual γ}
+-      rw [if_neg hγ]
+-      change v (r - a) < OrderDual.ofDual γ
+-      have he : r - a = (r - x) + (x - a) := by ring
+-      rw [he]
+-      exact v.map_add_lt hrx hxB
++  obtain ⟨hrR, x, hxA, hnear⟩ := Finset.mem_filter.mp hr
++  obtain ⟨s, hsR, hsB⟩ := hR
++  have hxB : v (x - a) < (OrderDual.ofDual ρ : Γˣ).val := hA hxA
++  have hsB' : v (s - a) < (OrderDual.ofDual ρ : Γˣ).val := hsB
++  have hsx : v (s - x) < (OrderDual.ofDual ρ : Γˣ).val := by
++    have he : s - x = (s - a) - (x - a) := by ring
++    rw [he]
++    exact v.map_sub_lt hsB' hxB
++  have hrx := lt_of_le_of_lt (hnear s hsR) hsx
++  change v (r - a) < (OrderDual.ofDual ρ : Γˣ).val
++  have he : r - a = (r - x) + (x - a) := by ring
++  rw [he]
++  exact v.map_add_lt hrx hxB
+ 
+ end SpecialTransformations.Section3.Balls
+diff --git a/Section3/OpenBallCenters.lean b/Section3/OpenBallCenters.lean
+index 834a1fe..55d85b0 100644
+--- a/Section3/OpenBallCenters.lean
++++ b/Section3/OpenBallCenters.lean
+@@ -205,11 +205,7 @@ theorem hull_boundary_rv_fibre_iff (a c x r y : VFType (M := M)) (hr : r ≠ 0)
+     have hzv : v r = 0 := by rw [← he,hz,map_zero]
+     exact hr (v.zero_iff.mp hzv)
+   have hF := Set.ext_iff.mp (rvFibre_eq_openDisc v hv (x-c) hxc) (y-c)
+-  have hn : v (x-c) ≠ 0 := by rw [he]; exact (v.ne_zero_iff).mpr hr
+   have hd : (y-c)-(x-c) = y-x := by abel
+-  change iRv (y-c).val = iRv (x-c).val ↔ (y-c) ∈
+-    (if v (x-c) = 0 then {x-c} else {z | v (z-(x-c)) < v (x-c)}) at hF
+-  rw [if_neg hn] at hF
+   change iRv (y-c).val = iRv (x-c).val ↔ v ((y-c)-(x-c)) < v (x-c) at hF
+   rw [hd,he] at hF
+   exact hF.trans (strictDisc_recenter_iff v a x y r hx)
+@@ -271,11 +267,8 @@ theorem open_centers_of_finite_hitting_set {Γ : Type} [LinearOrderedCommGroupWi
+       exact ⟨x,Finset.mem_filter.mpr ⟨hxR,hxD⟩⟩
+     obtain ⟨a,r,hr,he⟩ := hopen t ht
+     have hn : v r ≠ 0 := (v.ne_zero_iff).mpr hr
+-    have he' : D t = Balls.openDisc v a (↑(OrderDual.toDual (v r))) := by
++    have he' : D t = Balls.openDisc v a (Balls.openRadius (v r) hn) := by
+       rw [he]
+-      change ValOneEC.openBall v a (v r) =
+-        (if v r = 0 then {a} else {x | v (x-a) < v r})
+-      rw [if_neg hn]
+       rfl
+     rw [he']
+     exact mean_mem_openDisc v hv h00 (F t) hne a _ (fun x hx => by
+@@ -597,25 +590,22 @@ theorem offsets_finite (A : Set (OpenBall M)) (hA : A.Finite) (c : A → M)
+   let X : VFType (M := M) := ⟨x D,underlying_subset_vf D.val (hx D)⟩
+   let Y : VFType (M := M) := ⟨y,underlying_subset_vf D.val hy⟩
+   have hn : v r ≠ 0 := (v.ne_zero_iff).mpr (radius_ne_zero q.val q.property)
+-  have hb : ball q.val = Balls.openDisc v a (↑(OrderDual.toDual (v r))) := by
++  have hb : ball q.val = Balls.openDisc v a (Balls.openRadius (v r) hn) := by
+     rw [ball_eq_open v hv q.val q.property]
+-    change ValOneEC.openBall v a (v r) =
+-      (if v r = 0 then {a} else {z | v (z-a) < v r})
+-    rw [if_neg hn]
+     rfl
+-  have hx' : X ∈ Balls.openDisc v a (↑(OrderDual.toDual (v r))) := by
++  have hx' : X ∈ Balls.openDisc v a (Balls.openRadius (v r) hn) := by
+     rw [← hb]
+     change x D ∈ rawBall q.val
+     have hXD := hx D
+     rw [← hq] at hXD
+     exact hXD
+-  have hy' : Y ∈ Balls.openDisc v a (↑(OrderDual.toDual (v r))) := by
++  have hy' : Y ∈ Balls.openDisc v a (Balls.openRadius (v r) hn) := by
+     rw [← hb]
+     change y ∈ rawBall q.val
+     have hh := hy
+     rw [← hq] at hh
+     exact hh
+-  have hc' : C ∉ Balls.openDisc v a (↑(OrderDual.toDual (v r))) := by
++  have hc' : C ∉ Balls.openDisc v a (Balls.openRadius (v r) hn) := by
+     rw [← hb]
+     change c D ∉ rawBall q.val
+     have hh := hcout
+diff --git a/Section3/PolynomialRVConstant.lean b/Section3/PolynomialRVConstant.lean
+index 99d581c..1423560 100644
+--- a/Section3/PolynomialRVConstant.lean
++++ b/Section3/PolynomialRVConstant.lean
+@@ -47,7 +47,7 @@ variable {Γ : Type} [LinearOrderedCommGroupWithZero Γ]
+ 
+ include hv in
+ theorem polynomial_rv_constant_openDisc (p : Polynomial (VFType (M := M)))
+-    (a : VFType (M := M)) (r : Balls.Radius Γ)
++    (a : VFType (M := M)) (r : Balls.OpenRadius Γ)
+     (hroot : ∀ c ∈ p.roots, c ∉ Balls.openDisc v a r)
+     (x y : VFType (M := M)) (hx : x ∈ Balls.openDisc v a r)
+     (hy : y ∈ Balls.openDisc v a r) : iRv (p.eval x).val = iRv (p.eval y).val := by
+diff --git a/Section3/RVFibreConstancy.lean b/Section3/RVFibreConstancy.lean
+index cdf1739..2d1b3ad 100644
+--- a/Section3/RVFibreConstancy.lean
++++ b/Section3/RVFibreConstancy.lean
+@@ -44,7 +44,7 @@ theorem corollary_3_12 (S B : Set M) (f : domain B → Fin m → M)
+     have hc0 : c ≠ 0 := by
+       intro he
+       exact ht0 (ha.symm.trans ((CanonicalRV.encodedRv_zero_iff c).mpr he))
+-    let ρ : Balls.Radius Γ := ↑(OrderDual.toDual (v c))
++    let ρ : Balls.OpenRadius Γ := Balls.openRadius (v c) ((map_ne_zero v).mpr hc0)
+     have hball : Balls.rvFibre (CanonicalRV.encodedRv c) = Balls.openDisc v c ρ :=
+       Balls.rvFibre_eq_openDisc v hv c hc0
+     have hmem (x : VFType (M := M)) (hx : iRv x.val = t) : x ∈ Balls.openDisc v c ρ := by
+diff --git a/Section3/RadialBalls.lean b/Section3/RadialBalls.lean
+index a717e7b..851cd3b 100644
+--- a/Section3/RadialBalls.lean
++++ b/Section3/RadialBalls.lean
+@@ -25,36 +25,20 @@ theorem closedDisc_zero_radial (a : K) (ρ : Radius Γ) (hz : (0 : K) ∈ closed
+     change x ∈ closedDisc v a (↑γ) ↔ y ∈ closedDisc v a (↑γ)
+     rw [he x, he y, hxy]
+ 
+-theorem openDisc_zero_radial (a : K) (ρ : Radius Γ) (hz : (0 : K) ∈ openDisc v a ρ)
++theorem openDisc_zero_radial (a : K) (ρ : OpenRadius Γ) (hz : (0 : K) ∈ openDisc v a ρ)
+     (x y : K) (hxy : v x = v y) : x ∈ openDisc v a ρ ↔ y ∈ openDisc v a ρ := by
+-  cases ρ with
+-  | none => exact Iff.rfl
+-  | some γ =>
+-    by_cases hγ : OrderDual.ofDual γ = 0
+-    · have heγ : γ = OrderDual.toDual (0 : Γ) := congrArg OrderDual.toDual hγ
+-      subst γ
+-      change (0 : K) ∈ openDisc v a (↑(0 : OrderDual Γ)) at hz
+-      have hz' : (0 : K) ∈ closedDisc v a (↑(0 : OrderDual Γ)) := by
+-        simpa only [closedDisc_infinity, openDisc_infinity] using hz
+-      change x ∈ openDisc v a (↑(0 : OrderDual Γ)) ↔ y ∈ openDisc v a (↑(0 : OrderDual Γ))
+-      simpa only [closedDisc_infinity, openDisc_infinity] using
+-        closedDisc_zero_radial v a (↑(0 : OrderDual Γ)) hz' x y hxy
+-    · have ha : v a < OrderDual.ofDual γ := by
+-        change (0 : K) ∈ if OrderDual.ofDual γ = 0 then {a} else {z | v (z - a) < OrderDual.ofDual γ} at hz
+-        rw [if_neg hγ] at hz
+-        change v (0 - a) < OrderDual.ofDual γ at hz
+-        simpa only [zero_sub, Valuation.map_neg] using hz
+-      have he (z : K) : z ∈ openDisc v a (↑γ) ↔ v z < OrderDual.ofDual γ := by
+-        simp only [openDisc, if_neg hγ, Set.mem_ofPred_eq]
+-        constructor
+-        · intro h
+-          have hz : z = (z - a) + a := by ring
+-          rw [hz]
+-          exact v.map_add_lt h ha
+-        · intro h
+-          exact v.map_sub_lt h ha
+-      change x ∈ openDisc v a (↑γ) ↔ y ∈ openDisc v a (↑γ)
+-      rw [he x, he y, hxy]
++  have ha : v a < (OrderDual.ofDual ρ : Γˣ).val := by
++    change v (0 - a) < (OrderDual.ofDual ρ : Γˣ).val at hz
++    simpa only [zero_sub, Valuation.map_neg] using hz
++  have he (z : K) : z ∈ openDisc v a ρ ↔ v z < (OrderDual.ofDual ρ : Γˣ).val := by
++    change v (z - a) < (OrderDual.ofDual ρ : Γˣ).val ↔ _
++    constructor
++    · intro h
++      have hz : z = (z - a) + a := by ring
++      rw [hz]
++      exact v.map_add_lt h ha
++    · exact fun h => v.map_sub_lt h ha
++  rw [he x, he y, hxy]
+ 
+ end SpecialTransformations.Section3.Balls
+ 
+@@ -70,7 +54,7 @@ include hv
+ 
+ theorem ball_zero_radial (B : Set M) (hB : IsBall B) (hz : (0 : VFType (M := M)).val ∈ B)
+     (x y : VFType (M := M)) (hxy : v x = v y) : x.val ∈ B ↔ y.val ∈ B := by
+-  obtain ⟨a, ρ, he | he⟩ := encodedBall_disc v hv B hB
++  obtain ⟨a, ⟨ρ, he⟩ | ⟨ρ, he⟩⟩ := encodedBall_disc v hv B hB
+   · exact (Set.ext_iff.mp he x).trans
+       ((Balls.openDisc_zero_radial v a ρ ((Set.ext_iff.mp he 0).mp hz) x y hxy).trans
+         (Set.ext_iff.mp he y).symm)
+@@ -81,7 +65,7 @@ theorem ball_zero_radial (B : Set M) (hB : IsBall B) (hz : (0 : VFType (M := M))
+ theorem ball_avoiding_zero_rv (B : Set M) (hB : IsBall B)
+     (hz : (0 : VFType (M := M)).val ∉ B) :
+     ∃ t : M, iRV t ∧ ∀ x : VFType (M := M), x.val ∈ B → iRv x.val = t := by
+-  obtain ⟨a, ρ, he | he⟩ := encodedBall_disc v hv B hB
++  obtain ⟨a, ⟨ρ, he⟩ | ⟨ρ, he⟩⟩ := encodedBall_disc v hv B hB
+   · refine ⟨iRv a.val, rv_mem hM a.property, ?_⟩
+     intro x hx
+     exact Balls.openDisc_rv_constant v hv a ρ
+diff --git a/Section3/Remark319Audit.lean b/Section3/Remark319Audit.lean
+index 1e77cbd..df8ebcb 100644
+--- a/Section3/Remark319Audit.lean
++++ b/Section3/Remark319Audit.lean
+@@ -86,7 +86,7 @@ theorem rawSigns_not_ball (h00 : M ⊨ Axioms.ACVF00) : ¬ IsBall (rawSigns (M :
+   have hmean : Barycentre.mean (points (M := M)) = 0 := by
+     simp [Barycentre.mean, points, Finset.sum_pair hdiff]
+   have hne : (points (M := M)).Nonempty := ⟨1, Finset.mem_insert_self _ _⟩
+-  obtain ⟨a, ρ, he | he⟩ := encodedBall_disc v hv (rawSigns (M := M)) hB
++  obtain ⟨a, ⟨ρ, he⟩ | ⟨ρ, he⟩⟩ := encodedBall_disc v hv (rawSigns (M := M)) hB
+   · have hmem : ∀ x ∈ points (M := M), x ∈ Balls.openDisc v a ρ := by
+       intro x hx
+       exact (Set.ext_iff.mp he x).mp ⟨x, hx, rfl⟩
+diff --git a/Section3/RootFreeConstancy.lean b/Section3/RootFreeConstancy.lean
+index 7534603..24e0161 100644
+--- a/Section3/RootFreeConstancy.lean
++++ b/Section3/RootFreeConstancy.lean
+@@ -20,7 +20,7 @@ theorem qf_rootFree_constant (S : Set M) (p : Parameters S)
+     (hp : ∀ i (h : iVF (p.values i)), (⟨p.values i, h⟩ : VFType (M := M)) ∈ E)
+     (φ : LRV.BoundedFormula (Fin p.length) 1) (hqf : φ.IsQF)
+     (hws : WellSorted p.sorts (fun _ => .vf) φ)
+-    (a : VFType (M := M)) (r : Balls.Radius Γ)
++    (a : VFType (M := M)) (r : Balls.OpenRadius Γ)
+     (havoid : ∀ c ∈ PolynomialObstacles.obstacles E (PolynomialSupport.formula p E hp φ),
+       c ∉ Balls.openDisc v a r)
+     (x y : VFType (M := M)) (hx : x ∈ Balls.openDisc v a r)
+@@ -38,7 +38,7 @@ This strengthens pointwise local constancy and uses the completed QE input. -/
+ theorem finite_definable_obstacles (S U : Set M) (hU : DefinableAt S .vf U) :
+     ∃ R : Finset (VFType (M := M)), R.Nonempty ∧
+       DefinableAt S .vf (Subtype.val '' (R : Set (VFType (M := M)))) ∧
+-      ∀ (a : VFType (M := M)) (r : Balls.Radius Γ),
++      ∀ (a : VFType (M := M)) (r : Balls.OpenRadius Γ),
+         (∀ c ∈ R, c ∉ Balls.openDisc v a r) →
+         ∀ x ∈ Balls.openDisc v a r, ∀ y ∈ Balls.openDisc v a r,
+           (x.val ∈ U ↔ y.val ∈ U) := by
+diff --git a/Section3/TupleValuation.lean b/Section3/TupleValuation.lean
+index 2d68d61..a9598d3 100644
+--- a/Section3/TupleValuation.lean
++++ b/Section3/TupleValuation.lean
+@@ -42,10 +42,9 @@ theorem closedPolydisc_uniform_iff (v : Valuation K Γ) {n : ℕ}
+ 
+ theorem openPolydisc_uniform_iff (v : Valuation K Γ) {n : ℕ}
+     (a x : Fin n → K) (γ : OrderDual Γ) (hγ : OrderDual.ofDual γ ≠ 0) :
+-    x ∈ openPolydisc v a (fun _ => (γ : Radius Γ)) ↔
++    x ∈ openPolydisc v a (fun _ => openRadius (OrderDual.ofDual γ) hγ) ↔
+       γ < tupleValuation v (fun i => x i - a i) := by
+-  change (∀ i, x i ∈ openDisc v (a i) ↑γ) ↔ _
+-  simp only [openDisc, if_neg hγ, Set.mem_ofPred_eq]
++  change (∀ i, v (x i - a i) < OrderDual.ofDual γ) ↔ _
+   change (∀ i, v (x i - a i) < OrderDual.ofDual γ) ↔
+     Finset.univ.sup (fun i => v (x i - a i)) < OrderDual.ofDual γ
+   rw [Finset.sup_lt_iff (by simpa only [bot_eq_zero] using (pos_iff_ne_zero.mpr hγ))]
+diff --git a/Section3/ValuativeCentre.lean b/Section3/ValuativeCentre.lean
+index 1918d3d..83cf2fd 100644
+--- a/Section3/ValuativeCentre.lean
++++ b/Section3/ValuativeCentre.lean
+@@ -40,26 +40,16 @@ theorem closedDisc_value_constant (v : Valuation K Γ) (a : K) (r : Radius Γ)
+       exact lt_of_le_of_lt hx hγ
+   simpa only [sub_add_cancel] using v.map_add_eq_of_lt_right hxa
+ 
+-theorem openDisc_value_constant (v : Valuation K Γ) (a : K) (r : Radius Γ)
++theorem openDisc_value_constant (v : Valuation K Γ) (a : K) (r : OpenRadius Γ)
+     (hzero : (0 : K) ∉ openDisc v a r) (x : K) (hx : x ∈ openDisc v a r) :
+     v x = v a := by
+-  cases r with
+-  | none => exact (hzero (Set.mem_univ _)).elim
+-  | some γ =>
+-    by_cases hγ : OrderDual.ofDual γ = 0
+-    · have hxa : x = a := by simpa only [openDisc, if_pos hγ, Set.mem_singleton_iff] using hx
+-      rw [hxa]
+-    · have hγa : OrderDual.ofDual γ ≤ v a := by
+-        apply le_of_not_gt
+-        intro h
+-        apply hzero
+-        change (0 : K) ∈ if OrderDual.ofDual γ = 0 then {a} else
+-          {x | v (x - a) < OrderDual.ofDual γ}
+-        rw [if_neg hγ]
+-        simpa only [Set.mem_ofPred_eq, zero_sub, Valuation.map_neg] using h
+-      have hx' : v (x - a) < OrderDual.ofDual γ := by
+-        simpa only [openDisc, if_neg hγ, Set.mem_ofPred_eq] using hx
+-      simpa only [sub_add_cancel] using v.map_add_eq_of_lt_right (lt_of_lt_of_le hx' hγa)
++  have hγa : (OrderDual.ofDual r : Γˣ).val ≤ v a := by
++    apply le_of_not_gt
++    intro h
++    apply hzero
++    change v (0 - a) < (OrderDual.ofDual r : Γˣ).val
++    simpa only [zero_sub, Valuation.map_neg] using h
++  simpa only [sub_add_cancel] using v.map_add_eq_of_lt_right (lt_of_lt_of_le hx hγa)
+ 
+ theorem valuativeCentre_closedDisc (v : Valuation K Γ) (a : K) (r : Radius Γ) :
+     valuativeCentre v (closedDisc v a r) =
+@@ -71,7 +61,7 @@ theorem valuativeCentre_closedDisc (v : Valuation K Γ) (a : K) (r : Radius Γ)
+   · exact valuativeCentre_of_constant v _ a (centre_mem_closedDisc v a r)
+       (closedDisc_value_constant v a r h)
+ 
+-theorem valuativeCentre_openDisc (v : Valuation K Γ) (a : K) (r : Radius Γ) :
++theorem valuativeCentre_openDisc (v : Valuation K Γ) (a : K) (r : OpenRadius Γ) :
+     valuativeCentre v (openDisc v a r) =
+       if (0 : K) ∈ openDisc v a r then OrderDual.toDual (0 : Γ) else
+         OrderDual.toDual (v a) := by
+diff --git a/Section4/PolydiscLocal.lean b/Section4/PolydiscLocal.lean
+index 16e91ad..060d1fd 100644
+--- a/Section4/PolydiscLocal.lean
++++ b/Section4/PolydiscLocal.lean
+@@ -54,14 +54,7 @@ theorem ValuedPolydisc.side_infinite [Valued K Γ]
+ theorem ValuedPolydisc.carrier_eq_paper_balls {v : Valuation K Γ} {n : ℕ}
+     (D : ValuedPolydisc v n) :
+     D.carrier = {x | ∀ i, x i ∈ Balls.openDisc v (D.centre i)
+-      (↑(OrderDual.toDual (v (D.step i))) : Balls.Radius Γ)} := by
+-  ext x
+-  apply forall_congr'
+-  intro i
+-  change (v (x i - D.centre i) < v (D.step i)) ↔
+-    x i ∈ (if v (D.step i) = 0 then {D.centre i}
+-      else {y | v (y - D.centre i) < v (D.step i)})
+-  rw [if_neg (v.ne_zero_iff.mpr (D.step_ne_zero i))]
++      (Balls.openRadius (v (D.step i)) (v.ne_zero_iff.mpr (D.step_ne_zero i)))} := by
+   rfl
+ 
+ theorem exists_nonzero_ball_subset [Valued K Γ] (a : K) {s : Set K} (hs : s ∈ 𝓝 a) :
+diff --git a/Section5/Assembly.lean b/Section5/Assembly.lean
+index b691300..b79057c 100644
+--- a/Section5/Assembly.lean
++++ b/Section5/Assembly.lean
+@@ -536,7 +536,7 @@ theorem vertical_relation_of_zero_obstacles {Γ : Type} [LinearOrderedCommGroupW
+     (v : Valuation (VF (M := M)) Γ)
+     (hv : ∀ x y : VF (M := M), VFValued.predV x y ↔ v x ≤ v y)
+     (U : Set (Point (M := M) (n + 1) k)) (R : VerticalRootFamily A)
+-    (hO : ∀ (p : Point (M := M) n m) (a : VF (M := M)) (r : Section3.Balls.Radius Γ),
++    (hO : ∀ (p : Point (M := M) n m) (a : VF (M := M)) (r : Section3.Balls.OpenRadius Γ),
+       (∀ x ∈ Section3.Balls.openDisc v a r, insertHead x p ∈ carrier A) →
+       (∀ x ∈ R.fibre p, x ∉ Section3.Balls.openDisc v a r) →
+       ∀ x ∈ Section3.Balls.openDisc v a r, ∀ y ∈ Section3.Balls.openDisc v a r,
+@@ -562,14 +562,14 @@ theorem vertical_relation_of_zero_obstacles {Γ : Type} [LinearOrderedCommGroupW
+     let a₀ := T.inverseMap b
+     let p := dropHead id a₀.val
+     let centre := vfAt a₀.val 0
+-    let ρ : Section3.Balls.Radius Γ := ↑(OrderDual.toDual (v (vfAt b.val 0)))
+     have hrad : v (vfAt b.val 0) ≠ 0 := (map_ne_zero v).mpr hb
++    let ρ : Section3.Balls.OpenRadius Γ := Section3.Balls.openRadius (v (vfAt b.val 0)) hrad
+     have hmem (x : VF (M := M)) (hx : x ∈ Section3.Balls.openDisc v centre ρ) :
+         insertHead x p ∈ T.inverseSlice b := by
+       rw [he]
+       refine ⟨?_, (fun _ => rfl), rfl⟩
+       change v (x - centre) < v (vfAt b.val 0)
+-      simpa only [Section3.Balls.openDisc, ρ, OrderDual.ofDual_toDual, if_neg hrad,
++      simpa only [ρ, Section3.Balls.openDisc_openRadius,
+         Set.mem_ofPred_eq] using hx
+     have hball : ∀ x ∈ Section3.Balls.openDisc v centre ρ, insertHead x p ∈ carrier A := by
+       intro x hx
+@@ -588,7 +588,7 @@ theorem vertical_relation_of_zero_obstacles {Γ : Type} [LinearOrderedCommGroupW
+         by rw [T.apply_inverse]; intro i; exact (htail i).symm⟩
+     rw [he] at hcF
+     have hy : vfAt (T.inverseMap c).val 0 ∈ Section3.Balls.openDisc v centre ρ := by
+-      simpa only [Section3.Balls.openDisc, ρ, OrderDual.ofDual_toDual, if_neg hrad,
++      simpa only [ρ, Section3.Balls.openDisc_openRadius,
+         Set.mem_ofPred_eq] using hcF.1
+     have hpC : dropHead id (T.inverseMap c).val = p := Prod.ext (funext hcF.2.1) hcF.2.2
+     have hOrigB : insertHead centre p = a₀.val := insertHead_dropHead a₀.val
+diff --git a/Section5/GeneralAssembly.lean b/Section5/GeneralAssembly.lean
+index e2f6d40..4f5c908 100644
+--- a/Section5/GeneralAssembly.lean
++++ b/Section5/GeneralAssembly.lean
+@@ -33,7 +33,7 @@ def UniformVerticalObstacles {Γ : Type} [LinearOrderedCommGroupWithZero Γ]
+   ∀ {m k : ℕ} (U : DefSet (M := M) S (n + 1) k)
+     (A : DefSet (M := M) S (n + 1) m), IsRVPullback (carrier A) →
+   ∃ R : VerticalRootFamily A, ∃ d : ℕ, R.Bound d ∧
+-    ∀ (p : Point (M := M) n m) (a : VF (M := M)) (r : Section3.Balls.Radius Γ),
++    ∀ (p : Point (M := M) n m) (a : VF (M := M)) (r : Section3.Balls.OpenRadius Γ),
+       (∀ x ∈ Section3.Balls.openDisc v a r, insertHead x p ∈ carrier A) →
+       (∀ x ∈ R.fibre p, x ∉ Section3.Balls.openDisc v a r) →
+       ∀ x ∈ Section3.Balls.openDisc v a r, ∀ y ∈ Section3.Balls.openDisc v a r,
+diff --git a/Section5/RootConstruction.lean b/Section5/RootConstruction.lean
+index b198f1d..c5a5802 100644
+--- a/Section5/RootConstruction.lean
++++ b/Section5/RootConstruction.lean
+@@ -141,7 +141,7 @@ theorem mean_sameRV (h00 : M ⊨ Axioms.ACVF00) (F : Finset (VF (M := M)))
+     letI := hΓ
+     have hball := Section3.Balls.rvFibre_eq_openDisc v hv a ha
+     have hmem (x : VF (M := M)) (hx : x ∈ F) :
+-        x ∈ Section3.Balls.openDisc v a (↑(OrderDual.toDual (v a))) := by
++        x ∈ Section3.Balls.openDisc v a (Section3.Balls.openRadius (v a) ((map_ne_zero v).mpr ha)) := by
+       rw [← hball]
+       exact congrArg Subtype.val (hF x hx)
+     have hm := Section3.Barycentre.mean_mem_openDisc v hv h00 F hne a _ hmem
+@@ -750,14 +750,14 @@ theorem polynomial_contractible_of_zero_roots
+     letI := hΓ
+     obtain ⟨he, _⟩ := U.unary_inverse_fibre v hv hB b hb
+     let a := vfAt (U.inverseMap b).val 0
+-    let ρ : Section3.Balls.Radius Γ := ↑(OrderDual.toDual (v (vfAt b.val 0)))
+     have hrad : v (vfAt b.val 0) ≠ 0 := (map_ne_zero v).mpr hb
++    let ρ : Section3.Balls.OpenRadius Γ := Section3.Balls.openRadius (v (vfAt b.val 0)) hrad
+     have hmem (x : VF (M := M)) (hx : x ∈ Section3.Balls.openDisc v a ρ) :
+         unaryPoint x (U.inverseMap b).val.2 ∈ U.inverseFibre b := by
+       rw [he]
+       refine ⟨?_, rfl⟩
+       change v (x - a) < v (vfAt b.val 0)
+-      simpa only [Section3.Balls.openDisc, ρ, OrderDual.ofDual_toDual, if_neg hrad,
++      simpa only [ρ, Section3.Balls.openDisc_openRadius,
+         Set.mem_ofPred_eq] using hx
+     have hroot : ∀ r ∈ p.roots, r ∉ Section3.Balls.openDisc v a ρ := by
+       intro r hr hrd
+@@ -776,7 +776,7 @@ theorem polynomial_contractible_of_zero_roots
+       ⟨U.inverseMap c, rfl, by rw [U.apply_inverse]; exact hbc.symm⟩
+     rw [he] at hcF
+     have hy : vfAt (U.inverseMap c).val 0 ∈ Section3.Balls.openDisc v a ρ := by
+-      simpa only [Section3.Balls.openDisc, ρ, OrderDual.ofDual_toDual, if_neg hrad,
++      simpa only [ρ, Section3.Balls.openDisc_openRadius,
+         Set.mem_ofPred_eq] using hcF.1
+     exact Subtype.ext (Section3.polynomial_rv_constant_openDisc v hv p a ρ hroot _ _
+       (Section3.Balls.centre_mem_openDisc v a ρ) hy)
+diff --git a/Section5/UnaryRelations.lean b/Section5/UnaryRelations.lean
+index af75d80..11f42d3 100644
+--- a/Section5/UnaryRelations.lean
++++ b/Section5/UnaryRelations.lean
+@@ -87,7 +87,7 @@ theorem relation_contractible_of_zero_obstacles {k : ℕ}
+     (v : Valuation (VF (M := M)) Γ)
+     (hv : ∀ x y : VF (M := M), VFValued.predV x y ↔ v x ≤ v y)
+     (U : Set (Fin (k + 1) → M)) (Q : Finset (VF (M := M)))
+-    (hO : ∀ (a : VF (M := M)) (r : Section3.Balls.Radius Γ),
++    (hO : ∀ (a : VF (M := M)) (r : Section3.Balls.OpenRadius Γ),
+       (∀ x ∈ Q, x ∉ Section3.Balls.openDisc v a r) →
+       ∀ x ∈ Section3.Balls.openDisc v a r, ∀ y ∈ Section3.Balls.openDisc v a r,
+       ∀ ys : Fin k → M, (∀ i, iRV (ys i)) → (Fin.cons x.val ys ∈ U ↔ Fin.cons y.val ys ∈ U))
+@@ -109,14 +109,14 @@ theorem relation_contractible_of_zero_obstacles {k : ℕ}
+     rfl
+   · obtain ⟨he, _⟩ := T.unary_inverse_fibre v hv hB b hb
+     let a := vfAt (T.inverseMap b).val 0
+-    let ρ : Section3.Balls.Radius Γ := ↑(OrderDual.toDual (v (vfAt b.val 0)))
+     have hrad : v (vfAt b.val 0) ≠ 0 := (map_ne_zero v).mpr hb
++    let ρ : Section3.Balls.OpenRadius Γ := Section3.Balls.openRadius (v (vfAt b.val 0)) hrad
+     have hmem (x : VF (M := M)) (hx : x ∈ Section3.Balls.openDisc v a ρ) :
+         unaryPoint x (T.inverseMap b).val.2 ∈ T.inverseFibre b := by
+       rw [he]
+       refine ⟨?_, rfl⟩
+       change v (x - a) < v (vfAt b.val 0)
+-      simpa only [Section3.Balls.openDisc, ρ, OrderDual.ofDual_toDual, if_neg hrad,
++      simpa only [ρ, Section3.Balls.openDisc_openRadius,
+         Set.mem_ofPred_eq] using hx
+     have havoid : ∀ x ∈ Q, x ∉ Section3.Balls.openDisc v a ρ := by
+       intro x hx hxd
+@@ -130,7 +130,7 @@ theorem relation_contractible_of_zero_obstacles {k : ℕ}
+       ⟨T.inverseMap c, rfl, by rw [T.apply_inverse]; exact hbc.symm⟩
+     rw [he] at hcF
+     have hy : vfAt (T.inverseMap c).val 0 ∈ Section3.Balls.openDisc v a ρ := by
+-      simpa only [Section3.Balls.openDisc, ρ, OrderDual.ofDual_toDual, if_neg hrad,
++      simpa only [ρ, Section3.Balls.openDisc_openRadius,
+         Set.mem_ofPred_eq] using hcF.1
+     exact hO a ρ havoid a (Section3.Balls.centre_mem_openDisc v a ρ) _ hy ys hys
+ 
+diff --git a/Section5/UnarySets.lean b/Section5/UnarySets.lean
+index e7ba2b6..c8e1678 100644
+--- a/Section5/UnarySets.lean
++++ b/Section5/UnarySets.lean
+@@ -774,14 +774,14 @@ theorem lemma_5_2_at_boundary (h00 : M ⊨ Axioms.ACVF00) (A : DefSet (M := M) S
+     obtain ⟨he, _⟩ := T.unary_inverse_fibre v hv hB b hb
+     rw [T.inverse_apply] at he
+     let centre := vfAt a.val 0
+-    let ρ : Section3.Balls.Radius Γ := ↑(OrderDual.toDual (v (vfAt b.val 0)))
+     have hrad : v (vfAt b.val 0) ≠ 0 := (map_ne_zero v).mpr hb
++    let ρ : Section3.Balls.OpenRadius Γ := Section3.Balls.openRadius (v (vfAt b.val 0)) hrad
+     have hmem (x : VF (M := M)) (hx : x ∈ Section3.Balls.openDisc v centre ρ) :
+         unaryPoint x a.val.2 ∈ T.inverseFibre b := by
+       rw [he]
+       refine ⟨?_, rfl⟩
+       change v (x - centre) < v (vfAt b.val 0)
+-      simpa only [Section3.Balls.openDisc, ρ, OrderDual.ofDual_toDual, if_neg hrad,
++      simpa only [ρ, Section3.Balls.openDisc_openRadius,
+         Set.mem_ofPred_eq] using hx
+     have havoid : ∀ x ∈ Q, x ∉ Section3.Balls.openDisc v centre ρ := by
+       intro x hx hxd
+@@ -800,7 +800,7 @@ theorem lemma_5_2_at_boundary (h00 : M ⊨ Axioms.ACVF00) (A : DefSet (M := M) S
+       ⟨u, rfl, by rw [T.apply_inverse]; exact hbc.symm⟩
+     rw [he] at huF
+     have hy : vfAt u.val 0 ∈ Section3.Balls.openDisc v centre ρ := by
+-      simpa only [Section3.Balls.openDisc, ρ, OrderDual.ofDual_toDual, if_neg hrad,
++      simpa only [ρ, Section3.Balls.openDisc_openRadius,
+         Set.mem_ofPred_eq] using huF.1
+     have hconst := hO centre ρ havoid centre (Section3.Balls.centre_mem_openDisc v centre ρ)
+       (vfAt u.val 0) hy (fun i => (a.val.2 i).val) (fun i => (a.val.2 i).property)
+diff --git a/Section5/VerticalObstacles.lean b/Section5/VerticalObstacles.lean
+index 643ba9f..691137d 100644
+--- a/Section5/VerticalObstacles.lean
++++ b/Section5/VerticalObstacles.lean
+@@ -184,42 +184,19 @@ private theorem exists_controlling_fibre {Γ : Type} [LinearOrderedCommGroupWith
+ 
+ private theorem closed_through_pair_subset {K Γ : Type} [Field K]
+     [LinearOrderedCommGroupWithZero Γ] (v : Valuation K Γ) (a x y : K)
+-    (r : Balls.Radius Γ) (hx : x ∈ Balls.openDisc v a r)
++    (r : Balls.OpenRadius Γ) (hx : x ∈ Balls.openDisc v a r)
+     (hy : y ∈ Balls.openDisc v a r) :
+     Balls.closedDisc v x (↑(OrderDual.toDual (v (y - x)))) ⊆ Balls.openDisc v a r := by
+-  cases r with
+-  | none => exact Set.subset_univ _
+-  | some γ =>
+-    by_cases hγ : OrderDual.ofDual γ = 0
+-    · have hr : γ = (0 : OrderDual Γ) := hγ
+-      subst γ
+-      change x ∈ (if (0 : Γ) = 0 then {a} else {z | v (z - a) < 0}) at hx
+-      change y ∈ (if (0 : Γ) = 0 then {a} else {z | v (z - a) < 0}) at hy
+-      change _ ⊆ (if (0 : Γ) = 0 then {a} else {z | v (z - a) < 0})
+-      simp only [if_pos rfl, Set.mem_singleton_iff] at hx hy ⊢
+-      subst x
+-      subst y
+-      intro z hz
+-      change v (z - a) ≤ v (a - a) at hz
+-      rw [sub_self, map_zero, le_zero_iff, map_eq_zero, sub_eq_zero] at hz
+-      exact hz
+-    · change x ∈ (if OrderDual.ofDual γ = 0 then {a} else
+-        {z | v (z - a) < OrderDual.ofDual γ}) at hx
+-      change y ∈ (if OrderDual.ofDual γ = 0 then {a} else
+-        {z | v (z - a) < OrderDual.ofDual γ}) at hy
+-      change _ ⊆ (if OrderDual.ofDual γ = 0 then {a} else
+-        {z | v (z - a) < OrderDual.ofDual γ})
+-      rw [if_neg hγ] at hx hy ⊢
+-      intro z hz
+-      change v (z - x) ≤ v (y - x) at hz
+-      change v (x - a) < OrderDual.ofDual γ at hx
+-      change v (y - a) < OrderDual.ofDual γ at hy
+-      change v (z - a) < OrderDual.ofDual γ
+-      have hyx : v (y - x) < OrderDual.ofDual γ := by
+-        rw [show y - x = (y - a) - (x - a) by ring]
+-        exact v.map_sub_lt hy hx
+-      rw [show z - a = (z - x) + (x - a) by ring]
+-      exact v.map_add_lt (hz.trans_lt hyx) hx
++  intro z hz
++  change v (z - x) ≤ v (y - x) at hz
++  change v (x - a) < (OrderDual.ofDual r : Γˣ).val at hx
++  change v (y - a) < (OrderDual.ofDual r : Γˣ).val at hy
++  change v (z - a) < (OrderDual.ofDual r : Γˣ).val
++  have hyx : v (y - x) < (OrderDual.ofDual r : Γˣ).val := by
++    rw [show y - x = (y - a) - (x - a) by ring]
++    exact v.map_sub_lt hy hx
++  rw [show z - a = (z - x) + (x - a) by ring]
++  exact v.map_add_lt (hz.trans_lt hyx) hx
+ 
+ private theorem uniformControllingRelation {κ : Cardinal} (hs : Saturated M κ)
+     (hsmall : Cardinal.mk S < κ) {Γ : Type} [LinearOrderedCommGroupWithZero Γ]
+diff --git a/Section8/UnaryBalls.lean b/Section8/UnaryBalls.lean
+index 1038d43..548f4a6 100644
+--- a/Section8/UnaryBalls.lean
++++ b/Section8/UnaryBalls.lean
+@@ -59,10 +59,9 @@ theorem infinite_definable_contains_small_ball {S A : Set M}
+   have hU := Filter.inter_mem (strictBall_mem_nhds a' r' hr')
+     (R.finite_toSet.isClosed.isOpen_compl.mem_nhds hR)
+   obtain ⟨s, hs0, hs⟩ := Section4.exists_nonzero_ball_subset a' hU
+-  let ρ : Balls.Radius Γ := ↑(OrderDual.toDual (v s))
++  let ρ : Balls.OpenRadius Γ := Balls.openRadius (v s) (v.ne_zero_iff.mpr hs0)
+   have hdisc (x : VFType (M := M)) : x ∈ Balls.openDisc v a' ρ ↔ v (x - a') < v s := by
+-    change x ∈ (if v s = 0 then {a'} else {y | v (y - a') < v s}) ↔ _
+-    rw [if_neg (v.ne_zero_iff.mpr hs0)] <;> rfl
++    rfl
+   have havoid : ∀ c ∈ R, c ∉ Balls.openDisc v a' ρ := by
+     intro c hc hcd
+     exact (hs ((hdisc c).mp hcd)).2 hc

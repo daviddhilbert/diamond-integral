@@ -1,0 +1,18 @@
+--- a/section 2/reference/diamond_integral_revision_annotated.tex
++++ b/section 2/reference/diamond_integral_revision_annotated.tex
+@@ -1524,13 +1524,13 @@
+ \end{proof}
+ 
+ % BEGIN REFEREE INSERTION R043
+-\RefereeRemark{043}{Gap; revised}{The annulus equality needs a proof}{%
++\PartlyResolvedRefereeRemark{043}{Gap; revised}{The annulus equality needs a proof}{%
+ \textit{Original source line 1132.}\quad Specify that $A$ and $B$ each have one $\VF$-coordinate. The finite limit is a singleton $\{b\}$ by \cite[Lemma~9.4]{Yin:special:trans}; nonemptiness follows because the values are nonempty on a punctured neighborhood. The equality of whole thin annuli needs more explanation. Here is a repair. The valuation calculation in the proof of \cite[Lemma~8.3]{Yin:special:trans}, applied to $x\mapsto\vv(f(x)-b)$, gives
+ \[
+  \vv(f(x)-b)=q\vv(x-a)+c\qquad(q\in\mathbb Q_{>0})
+ \]
+ on a sufficiently small punctured neighborhood: each unary polynomial has eventually monomial valuation, and the limit forces positive slope. Remove the at most one exceptional input with $f(x)=b$. By $C$-minimality, $B$ contains a punctured neighborhood of $b$. The inverse has a unique projective limit there, necessarily $a$, since points $x\to a$ give $f(x)\to b$. Apply the same valuation calculation to the inverse. The resulting two affine maps of tail radii are inverse, so every sufficiently small target shell consists exactly of images of its corresponding source shell. Taking their unions proves the asserted punctured-disc equality. Thus the lemma is repairable; an additional assertion that $q=1$ is unnecessary.
+-}
++}{The arity objection is withdrawn: the statement already says that $A$ and $B$ are subsets of $\VF$, so both are unary. The general tuple convention does not alter that explicit scope, as the author confirms. No arity amendment or change to the statement is needed. The separate proof-detail comments are being assessed against the paper's own argument; no proposed proof replacement has been approved or applied.}
+ % END REFEREE INSERTION R043
+ 
+ \begin{defn}

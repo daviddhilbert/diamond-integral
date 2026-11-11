@@ -1,0 +1,25 @@
+--- a/section 2/reference/diamond_integral_revision_annotated.tex
++++ b/section 2/reference/diamond_integral_revision_annotated.tex
+@@ -1346,15 +1346,19 @@
+ 
+ 
+ \begin{defn}
+-Let $A \sub \VF^n$ and $f : A \fun \mdl P(\VF^m)$ be a definable function whose range is bounded. For $a \in \VF^n$ and $L \sub \VF^m$, we say that $L$ is a \memph{limit set of $f$ at $a$}, written as $\lim_{A \rightarrow a} f \sub L$, if for every $\epsilon \in \Gamma$ there is a $\delta \in \Gamma$ such that if $c \in \go( a, \delta) \cap (A \mi a)$ then $f(c) \sub \bigcup_{b \in L'} \go(b, \epsilon)$ for some $L' \sub L$.
++Let $A \sub \VF^n$ and $f : A \fun \mdl P(\VF^m)$ be a definable function. For $a \in \VF^n$ and $L \sub \VF^m$, we say that $L$ is a \memph{limit set of $f$ at $a$}, written as $\lim_{A \rightarrow a} f \sub L$, if for every $\epsilon \in \Gamma$ there is a $\delta \in \Gamma$ such that if $c \in \go(a,\delta) \cap (A\setminus\{a\})$ then
++\[
++f(c)\sub\bigcup_{b\in L}\go(b,\epsilon).
++\]
++This is a local definition and imposes no global boundedness hypothesis. A finite limit set forces the union of the values $f(c)$ to be bounded on some punctured neighborhood of $a$. Whenever boundedness of the range is assumed, it means boundedness of $\bigcup_{c\in A}f(c)$.
+ 
+ A limit set $L$ of $f$ at $a$ is \memph{minimal} if no proper subset of $L$ is a limit set of $f$ at $a$.
+ \end{defn}
+ 
+ % BEGIN REFEREE INSERTION R038
+-\RefereeRemark{038}{Clarification; revised}{Simplify the limit-set definition}{%
++\ResolvedRefereeRemark{038}{Clarification; revised}{Simplify the limit-set definition}{%
+ \textit{Original source line 1046.}\quad Say explicitly that $\bigcup_{a\in A}f(a)$ is bounded. The auxiliary subset $L'$ does no work: the displayed condition is equivalent to $f(c)\subseteq\bigcup_{b\in L}\go(b,\epsilon)$. The following definition of continuity is applied to finitary functions without a global boundedness hypothesis, so the present definition needs a compatible extension. One can use the same formula for arbitrary correspondences whenever a finite affine limit exists, or formulate limits in $(\mathbb P^1(\VF))^m$ from the outset; local boundedness near the point suffices for affine local uses.
+-}
++}{The author approves the local limit formula without a global range bound, using all of $L$ in place of the redundant subfamily $L'$. A finite limit set supplies local boundedness on a punctured neighborhood. Any separately assumed range bound refers to the union of all values. Minimality and the puncture are unchanged.}
+ % END REFEREE INSERTION R038
+ 
+ Observe that if $\lim_{A \rightarrow a} f \sub L$ and $b \in L$ is not isolated in $L$ then actually $\lim_{ A \rightarrow  a} f \sub L \mi b$. So in a minimal limit set every element is isolated. Moreover, if a minimal limit set $L$ exists then its topological closure is unique:

@@ -1,0 +1,21 @@
+--- a/section 2/reference/diamond_integral_revision_annotated.tex
++++ b/section 2/reference/diamond_integral_revision_annotated.tex
+@@ -1267,13 +1267,13 @@
+ \[
+ f : \VF^n \times \RV^m \fun \VF^{n'} \times \RV^{m'}
+ \]
+-be a definable function. By dimension theory, for every $t \in \RV^m$ there is an $s \in \RV^{m'}$ such that $\dim_{\VF}(\dom(f_{(t, s)})) = n$ and hence $\dom(f_{(t, s)})$ has an open subset. For such an $s \in \RV^{m'}$ and each $a$ contained in an open subset of $\dom(f_{(t, s)})$, we define the partial derivatives of $f$ at $(a, t)$ to be those of $f_{(t, s)}$ at $a$. If $n = n'$ and all the partial derivatives exist at a point $(a, t)$ then the \memph{Jacobian of $f$ at $(a,t)$} is defined in the usual way (that is, the determinant of the Jacobian matrix) and is denoted by $\jcb_{\VF} f(a,t)$.
++be a definable function. For each fixed input $\RV$-tuple $t$, generic local constancy of definable $\RV$-valued maps \cite[Lemma~8.9]{Yin:special:trans} implies that, outside a definable set of $\VF$-dimension less than $n$, the output $\RV$-tuple is constant on a neighborhood of each input $a$. If this tuple is $s$, then $\dom(f_{(t,s)})$ contains a neighborhood of $a$. At such a point $(a,t)$, we define the partial derivatives of $f$ to be those of this local $\VF$-map $f_{(t,s)}$. If $n = n'$ and all the partial derivatives exist, the \memph{Jacobian of $f$ at $(a,t)$} is the determinant of the matrix whose $(j,i)$-entry is the $ij$th partial derivative, and is denoted by $\jcb_{\VF} f(a,t)$.
+ 
+ \begin{lem}\label{diff:almost:every}
+-The Jacobian of $f$  exists and is a continuous function almost everywhere.
+-\end{lem}
+-\begin{proof}
+-This is immediate by \cite[Corollary~9.9]{Yin:special:trans}.
++Assume $n=n'$. The Jacobian of $f$ exists and is a continuous function almost everywhere.
++\end{lem}
++\begin{proof}
++First remove the definable locus where the output $\RV$-tuple is not locally constant in the input $\VF$-coordinates. On each resulting open fiber with both input and output $\RV$-tuples fixed, extend the $\VF$-map by zero outside its domain and apply \cite[Corollary~9.9]{Yin:special:trans} to its partial derivatives. Their nonexistence and discontinuity loci are definable and have $\VF$-dimension less than $n$ in every such fiber. Retaining or projecting away $\RV$-coordinates does not increase $\VF$-dimension, so the combined exceptional locus still has $\VF$-dimension less than $n$. Off this locus all partial derivatives, and hence their determinant, are continuous. In arity zero the Jacobian is the empty determinant $1$.
+ \end{proof}
+ 
+ % BEGIN REFEREE INSERTION R035

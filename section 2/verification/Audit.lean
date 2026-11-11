@@ -1,0 +1,2792 @@
+import DiamondIntegral
+import Section3.Library
+import Section3.VFAlgebraicity
+import Section3.GammaBaseCMinimal
+import Section5.Library
+import Section4.PolydiscLocal
+set_option pp.universes true
+set_option pp.fullNames true
+set_option format.width 120
+#print DiamondIntegral.Section2.VF
+#print DiamondIntegral.Section2.RVInfinity
+#print DiamondIntegral.Section2.rvZero
+#print DiamondIntegral.Section2.RV
+#print DiamondIntegral.Section2.GammaInfinity
+#print DiamondIntegral.Section2.Gamma
+#print DiamondIntegral.Section2.ParameterBase
+#print DiamondIntegral.Section2.DclVFGenerated
+#print DiamondIntegral.Section2.DclVFGammaGenerated
+#print DiamondIntegral.Section2.DefinableOverBase
+#print DiamondIntegral.Section2.VFGenerated
+#print DiamondIntegral.Section2.VFGeneratedFieldBase
+#print DiamondIntegral.Section2.Mixed
+#print DiamondIntegral.Section2.rvCoordinates
+#print DiamondIntegral.Section2.rvHull
+#print DiamondIntegral.Section2.IsRVPullback
+#print DiamondIntegral.Section2.rvBoundary
+#print DiamondIntegral.Section2.DC
+#print DiamondIntegral.Section2.closedDiscCode
+#print DiamondIntegral.Section2.openDiscCode
+#print DiamondIntegral.Section2.GraphFibreContinuous
+#print DiamondIntegral.Section2.finiteValue
+#print DiamondIntegral.Section2.labelledComp
+#print DiamondIntegral.Section2.r023_f
+#print DiamondIntegral.Section2.r023_g
+#print DiamondIntegral.Section2.nonzeroRVCode
+#print DiamondIntegral.Section2.HasVFInteriorDim
+#print DiamondIntegral.Section2.vfDimension
+#print DiamondIntegral.Section2.rvInputValues
+#print DiamondIntegral.Section2.rvTargetValues
+#print DiamondIntegral.Section2.rvMapGraph
+#print DiamondIntegral.Section2.RVHasFiniteMap
+#print DiamondIntegral.Section2.rvDimension
+#print DiamondIntegral.Section2.ClosedDC
+#print DiamondIntegral.Section2.ClosedDiscDefinable
+#print DiamondIntegral.Section2.ClosedDiscAlgebraic
+#print DiamondIntegral.Section2.GeneratesCompleteType
+#print DiamondIntegral.Section2.IsCompleteTypeDefinable
+#print DiamondIntegral.Section2.IsAtomic
+#print DiamondIntegral.Section2.adjoinGamma
+#print DiamondIntegral.Section2.NontrivialDefinableGamma
+#print DiamondIntegral.Section2.AtomicGammaBaseChangeInput
+#print DiamondIntegral.Section2.DiscAlgebraic
+#print DiamondIntegral.Section2.DiscDefinable
+#print DiamondIntegral.Section2.adjoinRV
+#print DiamondIntegral.Section2.finitePolydiscNames
+#print DiamondIntegral.Section2.FinitePolydiscRelation
+#print DiamondIntegral.Section2.FinitePolydiscRelation.fibre
+#print DiamondIntegral.Section2.AlgebraicOverFinitePolydiscNames
+#print DiamondIntegral.Section2.vfRVImage
+#print DiamondIntegral.Section2.IsOpenDisc
+#print DiamondIntegral.Section2.IsClosedDisc
+#print DiamondIntegral.Section2.thinAnnulus
+#print DiamondIntegral.Section2.IsThinAnnulus
+#print DiamondIntegral.Section2.IsPrimitiveDisc
+#print DiamondIntegral.Section2.scalarVFGraph
+#print DiamondIntegral.Section2.PrimitiveImageInput
+#print DiamondIntegral.Section2.OpenDiscImageInput
+#print DiamondIntegral.Section2.vfFunctionGraph
+#print DiamondIntegral.Section2.vfRelationTags
+#print DiamondIntegral.Section2.vfTagBranch
+#print DiamondIntegral.Section2.tupleBase
+#print DiamondIntegral.Section2.coordinateLineImage
+#print DiamondIntegral.Section2.FiniteDiscTupleRelation
+#print DiamondIntegral.Section2.FiniteDiscTupleRelation.fibre
+#print DiamondIntegral.Section2.DefinableOverFiniteDiscNames
+#print DiamondIntegral.Section2.GeneratesTypeOverFiniteDiscNames
+#print DiamondIntegral.Section2.IsAtomicOverFiniteDiscNames
+#print DiamondIntegral.Section2.scalarRVBoundary
+#print DiamondIntegral.Section2.scalarBoundaryTuples
+#print DiamondIntegral.Section2.vfCoordinateSection
+#print DiamondIntegral.Section2.coordinateValues
+#print DiamondIntegral.Section2.tupleValue
+#print DiamondIntegral.Section2.HasDerivativeAt
+#print DiamondIntegral.Section2.HasPartialDerivativeAt
+#print DiamondIntegral.Section2.rvFunctionGraph
+#print DiamondIntegral.Section2.RVFunctionLocallyConstantAt
+#print DiamondIntegral.Section2.FinitePolydiscRelation.toTuple
+#print DiamondIntegral.Section2.FiniteDiscTupleRelation.toScalar
+#print DiamondIntegral.Section2.ValuedCoordinates
+#print DiamondIntegral.Section2.valuationCoordinates
+#print DiamondIntegral.Section2.valim
+#print DiamondIntegral.Section2.GammaBoundedBy
+#print DiamondIntegral.Section2.GammaDoublyBoundedBy
+#print DiamondIntegral.Section2.BoundedBy
+#print DiamondIntegral.Section2.DoublyBoundedBy
+#print DiamondIntegral.Section2.IsBounded
+#print DiamondIntegral.Section2.IsDoublyBounded
+#print DiamondIntegral.Section2.HasLimitSet
+#print DiamondIntegral.Section2.HasMinimalLimitSet
+#print DiamondIntegral.Section2.BoundedVFRange
+#print DiamondIntegral.Section2.forgetRVCoordinatesMap
+#print DiamondIntegral.Section2.IsOpenDiscPartition
+#print DiamondIntegral.Section2.gammaIndexedFamilyGraph
+#print DiamondIntegral.Section2.fibreClosure
+#print DiamondIntegral.Section2.fibreOpenExtension
+#print DiamondIntegral.Section2.fibreGraph
+#print DiamondIntegral.Section2.vfCorrespondenceGraph
+#print DiamondIntegral.Section2.FinitaryRVCode
+#print DiamondIntegral.Section2.FinitaryRVCode.labelGraph
+#print DiamondIntegral.Section2.FinitaryRVCode.typedCode
+#print DiamondIntegral.Section2.FinitaryRVCode.codedGraph
+#print DiamondIntegral.Section2.FinitaryRVCode.branchDomain
+#print DiamondIntegral.Section2.FinitaryRVCode.branchGraph
+#print DiamondIntegral.Section2.FinitaryRVCode.HasValue
+#print DiamondIntegral.Section2.FinitaryRVCode.branch
+#print DiamondIntegral.Section2.FinitaryRVCode.branchBadRaw
+#print DiamondIntegral.Section2.FinitaryRVCode.badRaw
+#print DiamondIntegral.Section2.repeatVFMap
+#print DiamondIntegral.Section2.jacobianFibre
+#print DiamondIntegral.Section2.FiniteDiscTupleRelation.imageReal
+#print DiamondIntegral.Section2.FiniteDiscTupleRelation.inter
+#print DiamondIntegral.Section2.FiniteDiscTupleRelation.pullbackDiscNames
+#print DiamondIntegral.Section2.gammaRelationPreimageMap
+#print DiamondIntegral.Section2.UnaryDiscAtomicityInput
+#print DiamondIntegral.Section2.AtomicDiscGammaBaseChangeInput
+#print DiamondIntegral.Section2.coordinateDiscBase
+#print DiamondIntegral.Section2.FiniteDiscTupleRelation.coordinateLine
+#print DiamondIntegral.Section2.namedPolydisc
+#print DiamondIntegral.Section2.singletonDiscTupleNames
+#print DiamondIntegral.Section2.SingletonDiscTupleRelation
+#print DiamondIntegral.Section2.SingletonDiscTupleRelation.fibre
+#print DiamondIntegral.Section2.DefinableOverSingletonDiscNames
+#print DiamondIntegral.Section2.namedSingletonPolydisc
+#print DiamondIntegral.Section2.IsAtomicOverSingletonDiscNames
+#print DiamondIntegral.Section2.FiniteDiscTupleRelation.fixPrefix
+#print DiamondIntegral.Section2.normalFormDiscNames
+#print DiamondIntegral.Section2.prefixedNamedPolydisc
+#print DiamondIntegral.Section2.IsAtomicOverDiscNamesNormalForm
+#print DiamondIntegral.Section2.PolydiscNaming
+#print DiamondIntegral.Section2.discNameProduct
+#print DiamondIntegral.Section2.finitePolydiscNaming
+#print DiamondIntegral.Section2.DefinableOverPolydiscNames
+#print DiamondIntegral.Section2.IsAtomicOverPolydiscNames
+#print DiamondIntegral.Section2.FiniteChoice.RelationDefinable
+#print DiamondIntegral.Section2.FiniteChoice.GoodRelation
+#print DiamondIntegral.Section2.rawVFRelation
+#print DiamondIntegral.Section2.vfApproach
+#print DiamondIntegral.Section2.avoidFiniteVF
+#print DiamondIntegral.Section2.curveSource
+#print DiamondIntegral.Section2.invertCoordinates
+#print DiamondIntegral.Section2.inversionDomain
+#print DiamondIntegral.Section2.projectiveMask
+#print DiamondIntegral.Section2.projectiveCentre
+#print DiamondIntegral.Section2.projectiveClosure
+#print DiamondIntegral.Section2.rawVFInverse
+#print DiamondIntegral.Section2.rawInvertCoordinates
+#print DiamondIntegral.Section2.projectiveParameters
+#print DiamondIntegral.Section2.vfPullback
+#print DiamondIntegral.Section2.elementaryVFGeneratedFieldBase
+#print DiamondIntegral.Section2.vfInfinitySide
+#print DiamondIntegral.Section2.vfEscape
+#print DiamondIntegral.Section2.ProjectiveLine
+#print DiamondIntegral.Section2.ProjectiveLine.finite
+#print DiamondIntegral.Section2.ProjectiveLine.infinity
+#print DiamondIntegral.Section2.ProjectiveLine.reciprocalChart
+#print DiamondIntegral.Section2.ProjectiveLine.reciprocal
+#print DiamondIntegral.Section2.ProjectiveLine.topology
+#print DiamondIntegral.Section2.ProjectiveLine.reciprocalHomeomorph
+#print DiamondIntegral.Section2.finiteProjectiveTuple
+#print DiamondIntegral.Section2.projectiveTuple
+#print DiamondIntegral.Section2.projectiveTupleChart
+#print DiamondIntegral.Section2.projectiveChartBall
+#print DiamondIntegral.Section2.projectiveGraph
+#print DiamondIntegral.Section2.relativeProjectiveGraph
+#print DiamondIntegral.Section2.ProjectiveGraphCluster
+#print DiamondIntegral.Section2.projectiveTarget
+#print DiamondIntegral.Section2.compactifiedTargetGraph
+#print DiamondIntegral.Section2.affineTargetGraph
+#print DiamondIntegral.Section2.vfGammaGraph
+#print DiamondIntegral.Section2.partitionEscape
+#print DiamondIntegral.Section2.mixedTuple
+#print DiamondIntegral.Section2.mixedSort
+#print DiamondIntegral.Section2.MixedDefinable
+#print DiamondIntegral.Section2.mixedMapGraph
+#print DiamondIntegral.Section2.MixedMapDefinable
+#print DiamondIntegral.Section2.FibreConcentric
+#print DiamondIntegral.Section2.HasDiscToDiscProperty
+#print DiamondIntegral.Section2.DiscToDiscPartition
+#print DiamondIntegral.Section2.DiscToDiscPartitionInput
+#print DiamondIntegral.Section2.relativeBadLocus
+#print DiamondIntegral.Section2.fibreBallHits
+#print DiamondIntegral.Section2.rawGammaBallRelation
+#print DiamondIntegral.Section2.radiusGoodFibre
+#print DiamondIntegral.Section2.goodRadiusCodes
+#print DiamondIntegral.Section2.goodRadiusProjection
+#print DiamondIntegral.Section2.vfPairValues
+#print DiamondIntegral.Section2.vfPairHomeomorph
+#print DiamondIntegral.Section2.vfRawFibreClosure
+#print DiamondIntegral.Section2.vfPairMapGraph
+#print DiamondIntegral.Section2.relativePairProjectiveGraph
+#print DiamondIntegral.Section2.affineFibreGraph
+#print DiamondIntegral.Section2.reciprocalFibreGraph
+#print DiamondIntegral.Section2.projectiveFibreGraph
+#print DiamondIntegral.Section2.projectiveFibreChart
+#print DiamondIntegral.Section2.rawTypeLocus
+#print DiamondIntegral.Section2.containedFibreCodes
+#print DiamondIntegral.Section2.rawOpenPolydiscProper
+#print DiamondIntegral.Section2.rawOpenPolydisc
+#print DiamondIntegral.Section2.rawPointImageCodes
+#print DiamondIntegral.Section2.rawOpenImageCodes
+#print DiamondIntegral.Section2.rawDiscShapeCodes
+#print DiamondIntegral.Section2.rawTaggedPolydiscImage
+#print DiamondIntegral.Section2.rawPolydiscTagRow
+#print DiamondIntegral.Section2.rawGoodTaggedPolydiscCodes
+#print DiamondIntegral.Section2.UnaryOpenDiscRVBaseChangeInput
+#print DiamondIntegral.Section2.OpenDiscNamesImageInput
+#print DiamondIntegral.Section2.openPolydiscCarrier
+#print DiamondIntegral.Section2.openPolydiscGammaRelation
+#print DiamondIntegral.Section2.TaggedPolydiscBranchDecomposition
+#print DiamondIntegral.Section2.TaggedPolydiscBranchDecompositionOverDiscNames
+#print DiamondIntegral.Section2.discCompactnessNames
+#print DiamondIntegral.Section2.namedDiscTypeLocus
+#print DiamondIntegral.Section2.badDiscFibreCodes
+#print DiamondIntegral.Section2.FiniteDiscTupleRelation.rawOperation
+#print DiamondIntegral.Section2.parametricTaggedImage
+#print DiamondIntegral.Section2.parametricTagRow
+#print DiamondIntegral.Section2.rvRawMapGraph
+#print DiamondIntegral.Section2.rvCollapseZero
+#print DiamondIntegral.Section2.rvCollapseTuple
+#print DiamondIntegral.Section2.rvOne
+#print DiamondIntegral.Section2.rvTupleProduct
+#print DiamondIntegral.Section2.rvReindexed
+#print DiamondIntegral.Section2.rawSingletonRows
+#print DiamondIntegral.Section2.rawUniqueChoice
+#print DiamondIntegral.Section2.firstChoiceDomain
+#print DiamondIntegral.Section2.rvRawFibre
+#print DiamondIntegral.Section2.rawCoordinateSection
+#print DiamondIntegral.Section2.boundaryParameterSort
+#print DiamondIntegral.Section2.boundaryFibreRelation
+#print DiamondIntegral.Section2.coordinateBoundaryPairs
+#print DiamondIntegral.Section2.boundaryTagSet
+#print DiamondIntegral.Section2.boundaryRepresentativeCandidates
+#print DiamondIntegral.Section2.boundaryRepresentativeValues
+#print DiamondIntegral.Section2.ZeroFaceChart
+#print DiamondIntegral.Section2.zeroFaceChart
+#print DiamondIntegral.Section2.ZeroFaceChart.zeroIndex
+#print DiamondIntegral.Section2.ZeroFaceChart.freeIndex
+#print DiamondIntegral.Section2.ZeroFaceChart.insert
+#print DiamondIntegral.Section2.ZeroFaceChart.project
+#print DiamondIntegral.Section2.ZeroFaceChart.slice
+#print DiamondIntegral.Section2.ZeroFaceChart.lift
+#print DiamondIntegral.Section2.rawRVPolydisc
+#print DiamondIntegral.Section2.OpenRVRowsConstant
+#print DiamondIntegral.Section2.RVPolydiscRowsConstant
+#print DiamondIntegral.Section2.rawCoordinateProjection
+#print DiamondIntegral.Section2.rawRVValues
+#print DiamondIntegral.Section2.rawVFComplement
+#print DiamondIntegral.Section2.rawRVImage
+#print DiamondIntegral.Section2.rawRVBoundary
+#print DiamondIntegral.Section2.rawRVInterior
+#print DiamondIntegral.Section2.lastToCoordinate
+#print DiamondIntegral.Section2.rvCoordinateCylinder
+#print DiamondIntegral.Section2.rawScalarCorrespondenceGraph
+#print DiamondIntegral.Section2.boundaryRVGraph
+#print DiamondIntegral.Section2.boundaryCoverPiece
+#print DiamondIntegral.Section2.scalarPartialGraph
+#print DiamondIntegral.Section2.scalarZeroExtension
+#print DiamondIntegral.Section2.gammaPowerOrderIso
+#print DiamondIntegral.Section2.gammaAffineRadius
+#print DiamondIntegral.Section2.puncturedGammaDisc
+#print DiamondIntegral.Section2.PuncturedValueLaw
+#print DiamondIntegral.Section2.gammaPowerRelationImage
+#print DiamondIntegral.Section2.GammaPiecewiseRationalAffineInput
+#print DiamondIntegral.Section2.rawFibreForallCompare
+#print DiamondIntegral.Section2.rawGammaFamilyGraph
+#print DiamondIntegral.Section2.mixedGammaGraph
+#print DiamondIntegral.Section2.mixedGammaFamily
+#print DiamondIntegral.Section2.IsMixedOpenDiscPartition
+#print DiamondIntegral.Section2.DefinableOverDiscGroundAndPolydiscNames
+#print DiamondIntegral.Section2.IsAtomicOverDiscGroundAndPolydiscNames
+#print DiamondIntegral.Section2.FiniteDiscTupleRelation.preimageRealMap
+#print DiamondIntegral.Section2.prefixedCoordinateGammaIndex
+#print DiamondIntegral.Section2.prefixedCoordinateRealMap
+#print DiamondIntegral.Section2.prefixedCoordinateRelation
+#print DiamondIntegral.Section2.FiniteDiscTupleRelation.prefixedCoordinateLine
+#print DiamondIntegral.Section2.IsContractibleAlong
+#print DiamondIntegral.Section2.contractionAlong
+#print DiamondIntegral.Section2.IsRVContractible
+#print DiamondIntegral.Section2.rvContraction
+#print DiamondIntegral.Section2.definableRVContraction
+#print DiamondIntegral.Section2.GammaLabels
+#print DiamondIntegral.Section2.rvFiniteValue
+#print DiamondIntegral.Section2.gammaLabelWeight
+#print DiamondIntegral.Section2.gammaJacobian
+#print DiamondIntegral.Section2.finiteDiscRawProper
+#print DiamondIntegral.Section2.finiteDiscRawMember
+#print DiamondIntegral.Section2.finiteDiscRawCentres
+#print DiamondIntegral.Section2.finiteDiscRawNames
+#print DiamondIntegral.Section2.finiteDiscRawEq
+#print DiamondIntegral.Section2.discHullCurrent
+#print DiamondIntegral.Section2.discHullArguments
+#print DiamondIntegral.Section2.discInvariantHull
+#print DiamondIntegral.Section2.discPromotedGammaRelation
+#print DiamondIntegral.Section2.FiniteDiscTupleRelation.promoted
+#print DiamondIntegral.Section2.rawGammaUpperGraph
+#print DiamondIntegral.Section2.rawGammaLUBGraph
+#print DiamondIntegral.Section2.rawGammaLessGraph
+#print DiamondIntegral.Section2.rawFibreRelationalImage
+#print DiamondIntegral.Section2.gammaAbs
+#print DiamondIntegral.Section2.gammaAbsCodeRelation
+#print DiamondIntegral.Section2.projectedGammaFamily
+#print DiamondIntegral.Section2.gammaDomainCodes
+#print DiamondIntegral.Section2.rvValueDomain
+#print DiamondIntegral.Section2.rvValueFamily
+#print DiamondIntegral.Section2.rvValueSource
+#print DiamondIntegral.Section2.rawHeadDomain
+#print DiamondIntegral.Section2.RVCodeDoublyBounded
+#print DiamondIntegral.Section2.RVValueDoublyBounded
+#print DiamondIntegral.Section2.rvGammaFunctionGraph
+#print DiamondIntegral.Section2.rvGammaRawExtension
+#print DiamondIntegral.Section2.rvScalarFunctionGraph
+#print SpecialTransformations.Section3.Balls.OpenRadius
+#print SpecialTransformations.Section3.Balls.openDisc
+#print SpecialTransformations.Section3.Balls.closedDisc
+#print SpecialTransformations.Section8.vfTupleValue
+#print SpecialTransformations.Section9.HasVFDerivativeAt
+#print SpecialTransformations.Section9.HasVFPartialAt
+#print SpecialTransformations.Section9.IsVFChartAt
+#print SpecialTransformations.Section9.HasMixedVFDerivativeAt
+#print SpecialTransformations.Section9.HasMixedVFJacobianAt
+#print SpecialTransformations.Section9.LimitPoint
+#print SpecialTransformations.Section9.memLimitBall
+#print SpecialTransformations.Section9.IsLimitSet
+#print SpecialTransformations.Section9.IsMinimalLimitSet
+#print SpecialTransformations.Section9.unaryLimitGraph
+#print SpecialTransformations.Section9.LimitSetDefinable
+#check @DiamondIntegral.Section2.vfApproach_eq
+#print axioms DiamondIntegral.Section2.vfApproach_eq
+#check @DiamondIntegral.Section2.vfApproach_graph_definable
+#print axioms DiamondIntegral.Section2.vfApproach_graph_definable
+#check @DiamondIntegral.Section2.vfApproach_nonempty_of_mem_closure
+#print axioms DiamondIntegral.Section2.vfApproach_nonempty_of_mem_closure
+#check @DiamondIntegral.Section2.vfApproach_hasLimitSet
+#print axioms DiamondIntegral.Section2.vfApproach_hasLimitSet
+#check @DiamondIntegral.Section2.vfApproach_hasMinimalLimitSet
+#print axioms DiamondIntegral.Section2.vfApproach_hasMinimalLimitSet
+#check @DiamondIntegral.Section2.exists_affine_approach_germ
+#print axioms DiamondIntegral.Section2.exists_affine_approach_germ
+#check @DiamondIntegral.Section2.lemma_2_46_affine_core
+#print axioms DiamondIntegral.Section2.lemma_2_46_affine_core
+#check @DiamondIntegral.Section2.lemma_2_46_affine
+#print axioms DiamondIntegral.Section2.lemma_2_46_affine
+#check @DiamondIntegral.Section2.elementary_meets_definable_tuple
+#print axioms DiamondIntegral.Section2.elementary_meets_definable_tuple
+#check @DiamondIntegral.Section2.acl_meets_definable_tuple
+#print axioms DiamondIntegral.Section2.acl_meets_definable_tuple
+#check @DiamondIntegral.Section2.definable_finite_choice_vf_core
+#print axioms DiamondIntegral.Section2.definable_finite_choice_vf_core
+#check @DiamondIntegral.Section2.definable_finite_choice_vf_parameters
+#print axioms DiamondIntegral.Section2.definable_finite_choice_vf_parameters
+#check @DiamondIntegral.Section2.definable_finite_choice_vf_generated
+#print axioms DiamondIntegral.Section2.definable_finite_choice_vf_generated
+#check @DiamondIntegral.Section2.definableClosure_eq_of_henselian_canonical
+#print axioms DiamondIntegral.Section2.definableClosure_eq_of_henselian_canonical
+#check @DiamondIntegral.Section2.lemma_2_11
+#print axioms DiamondIntegral.Section2.lemma_2_11
+#check @DiamondIntegral.Section2.vfDimension_lt_of_companion_lt
+#print axioms DiamondIntegral.Section2.vfDimension_lt_of_companion_lt
+#check @DiamondIntegral.Section2.lemma_2_36
+#print axioms DiamondIntegral.Section2.lemma_2_36
+#check @DiamondIntegral.Section2.GeneratesCompleteType.subset_nonempty
+#print axioms DiamondIntegral.Section2.GeneratesCompleteType.subset_nonempty
+#check @DiamondIntegral.Section2.GeneratesCompleteType.restrict_base
+#print axioms DiamondIntegral.Section2.GeneratesCompleteType.restrict_base
+#check @DiamondIntegral.Section2.isAtomic_iff_definable_completeTypeDefinable
+#print axioms DiamondIntegral.Section2.isAtomic_iff_definable_completeTypeDefinable
+#check @DiamondIntegral.Section2.IsAtomic.disjoint_finite
+#print axioms DiamondIntegral.Section2.IsAtomic.disjoint_finite
+#check @DiamondIntegral.Section2.IsAtomic.not_algebraic_at
+#print axioms DiamondIntegral.Section2.IsAtomic.not_algebraic_at
+#check @DiamondIntegral.Section2.IsAtomic.adjoin_definable_gamma
+#print axioms DiamondIntegral.Section2.IsAtomic.adjoin_definable_gamma
+#check @DiamondIntegral.Section2.nontrivialDefinableGamma_of_names
+#print axioms DiamondIntegral.Section2.nontrivialDefinableGamma_of_names
+#check @DiamondIntegral.Section2.NontrivialDefinableGamma.mono
+#print axioms DiamondIntegral.Section2.NontrivialDefinableGamma.mono
+#check @DiamondIntegral.Section2.lemma_2_23
+#print axioms DiamondIntegral.Section2.lemma_2_23
+#check @DiamondIntegral.Section2.append_init_last
+#print axioms DiamondIntegral.Section2.append_init_last
+#check @DiamondIntegral.Section2.rectangle_init_projection
+#print axioms DiamondIntegral.Section2.rectangle_init_projection
+#check @DiamondIntegral.Section2.rectangle_last_fibre
+#print axioms DiamondIntegral.Section2.rectangle_last_fibre
+#check @DiamondIntegral.Section2.tupleBase_adjoinRV
+#print axioms DiamondIntegral.Section2.tupleBase_adjoinRV
+#check @DiamondIntegral.Section2.lemma_2_24_disc_names_unary
+#print axioms DiamondIntegral.Section2.lemma_2_24_disc_names_unary
+#check @DiamondIntegral.Section2.lemma_2_24_disc_names
+#print axioms DiamondIntegral.Section2.lemma_2_24_disc_names
+#check @DiamondIntegral.Section2.lemma_2_24_unary
+#print axioms DiamondIntegral.Section2.lemma_2_24_unary
+#check @DiamondIntegral.Section2.rv_row_definable
+#print axioms DiamondIntegral.Section2.rv_row_definable
+#check @DiamondIntegral.Section2.lemma_2_26_rv_relation
+#print axioms DiamondIntegral.Section2.lemma_2_26_rv_relation
+#check @DiamondIntegral.Section2.lemma_2_24_disc_names_rv_tuple
+#print axioms DiamondIntegral.Section2.lemma_2_24_disc_names_rv_tuple
+#check @DiamondIntegral.Section2.lemma_2_24_disc_normal_form
+#print axioms DiamondIntegral.Section2.lemma_2_24_disc_normal_form
+#check @DiamondIntegral.Section2.coordinate_section_definable
+#print axioms DiamondIntegral.Section2.coordinate_section_definable
+#check @DiamondIntegral.Section2.coordinate_line_atomic
+#print axioms DiamondIntegral.Section2.coordinate_line_atomic
+#check @DiamondIntegral.Section2.lemma_2_24
+#print axioms DiamondIntegral.Section2.lemma_2_24
+#check @DiamondIntegral.Section2.lemma_2_24_rv_tuple
+#print axioms DiamondIntegral.Section2.lemma_2_24_rv_tuple
+#check @DiamondIntegral.Section2.vf_open_nonempty_infinite
+#print axioms DiamondIntegral.Section2.vf_open_nonempty_infinite
+#check @DiamondIntegral.Section2.fibreBallHits_finite
+#print axioms DiamondIntegral.Section2.fibreBallHits_finite
+#check @DiamondIntegral.Section2.no_finite_continuous_choice_in_uniform_bad_locus
+#print axioms DiamondIntegral.Section2.no_finite_continuous_choice_in_uniform_bad_locus
+#check @DiamondIntegral.Section2.algebraic_of_independent_over_element
+#print axioms DiamondIntegral.Section2.algebraic_of_independent_over_element
+#check @DiamondIntegral.Section2.vf_algebraic_of_uniform_on_box
+#print axioms DiamondIntegral.Section2.vf_algebraic_of_uniform_on_box
+#check @DiamondIntegral.Section2.isOpenDisc_of_pairs_enclosed
+#print axioms DiamondIntegral.Section2.isOpenDisc_of_pairs_enclosed
+#check @DiamondIntegral.Section2.VFGeneratedFieldBase.fieldNames_subset
+#print axioms DiamondIntegral.Section2.VFGeneratedFieldBase.fieldNames_subset
+#check @DiamondIntegral.Section2.VFGeneratedFieldBase.vfGenerated
+#print axioms DiamondIntegral.Section2.VFGeneratedFieldBase.vfGenerated
+#check @DiamondIntegral.Section2.VFGeneratedFieldBase.definable_over_fieldNames
+#print axioms DiamondIntegral.Section2.VFGeneratedFieldBase.definable_over_fieldNames
+#check @DiamondIntegral.Section2.VFGeneratedFieldBase.definableClosure_fieldNames
+#print axioms DiamondIntegral.Section2.VFGeneratedFieldBase.definableClosure_fieldNames
+#check @DiamondIntegral.Section2.VFGeneratedFieldBase.algebraicAt_vf_iff
+#print axioms DiamondIntegral.Section2.VFGeneratedFieldBase.algebraicAt_vf_iff
+#check @DiamondIntegral.Section2.promote_tuple_definable_base
+#print axioms DiamondIntegral.Section2.promote_tuple_definable_base
+#check @DiamondIntegral.Section2.GeneratesCompleteType.block_fibre
+#print axioms DiamondIntegral.Section2.GeneratesCompleteType.block_fibre
+#check @DiamondIntegral.Section2.rvBoundary_coordinate_exit
+#print axioms DiamondIntegral.Section2.rvBoundary_coordinate_exit
+#check @DiamondIntegral.Section2.rvBoundary_coordinate_section
+#print axioms DiamondIntegral.Section2.rvBoundary_coordinate_section
+#check @DiamondIntegral.Section2.rawVFComplement_vfValues
+#print axioms DiamondIntegral.Section2.rawVFComplement_vfValues
+#check @DiamondIntegral.Section2.rawRVImage_vfValues
+#print axioms DiamondIntegral.Section2.rawRVImage_vfValues
+#check @DiamondIntegral.Section2.rawRVBoundary_vfValues
+#print axioms DiamondIntegral.Section2.rawRVBoundary_vfValues
+#check @DiamondIntegral.Section2.lemma_2_35_vf
+#print axioms DiamondIntegral.Section2.lemma_2_35_vf
+#check @DiamondIntegral.Section2.rawRVBoundary_coordinate_exit
+#print axioms DiamondIntegral.Section2.rawRVBoundary_coordinate_exit
+#check @DiamondIntegral.Section2.rawRVBoundary_subset_cover
+#print axioms DiamondIntegral.Section2.rawRVBoundary_subset_cover
+#check @DiamondIntegral.Section2.boundaryCoverPiece_dimension
+#print axioms DiamondIntegral.Section2.boundaryCoverPiece_dimension
+#check @DiamondIntegral.Section2.rawRVBoundary_zero_empty
+#print axioms DiamondIntegral.Section2.rawRVBoundary_zero_empty
+#check @DiamondIntegral.Section2.lemma_2_35
+#print axioms DiamondIntegral.Section2.lemma_2_35
+#check @DiamondIntegral.Section2.boundaryRVGraph_finite_projection
+#print axioms DiamondIntegral.Section2.boundaryRVGraph_finite_projection
+#check @DiamondIntegral.Section2.boundaryRVGraph_dimension_lt
+#print axioms DiamondIntegral.Section2.boundaryRVGraph_dimension_lt
+#check @DiamondIntegral.Section2.boundaryRVGraph_mem_iff
+#print axioms DiamondIntegral.Section2.boundaryRVGraph_mem_iff
+#check @DiamondIntegral.Section2.rawScalarCorrespondenceGraph_restrict_definable
+#print axioms DiamondIntegral.Section2.rawScalarCorrespondenceGraph_restrict_definable
+#check @DiamondIntegral.Section2.boundaryRVGraph_definable
+#print axioms DiamondIntegral.Section2.boundaryRVGraph_definable
+#check @DiamondIntegral.Section2.boundaryRepresentativeCandidates_definable
+#print axioms DiamondIntegral.Section2.boundaryRepresentativeCandidates_definable
+#check @DiamondIntegral.Section2.boundaryRepresentativeValues_raw_definable
+#print axioms DiamondIntegral.Section2.boundaryRepresentativeValues_raw_definable
+#check @DiamondIntegral.Section2.boundaryRepresentativeValues_definable
+#print axioms DiamondIntegral.Section2.boundaryRepresentativeValues_definable
+#check @DiamondIntegral.Section2.boundary_representative_correspondence_exists
+#print axioms DiamondIntegral.Section2.boundary_representative_correspondence_exists
+#check @DiamondIntegral.Section2.rawCoordinateProjection_definable
+#print axioms DiamondIntegral.Section2.rawCoordinateProjection_definable
+#check @DiamondIntegral.Section2.boundary_representative_partition
+#print axioms DiamondIntegral.Section2.boundary_representative_partition
+#check @DiamondIntegral.Section2.boundaryRepresentativeValues_finite
+#print axioms DiamondIntegral.Section2.boundaryRepresentativeValues_finite
+#check @DiamondIntegral.Section2.boundaryRepresentativeCandidates_rv_injective
+#print axioms DiamondIntegral.Section2.boundaryRepresentativeCandidates_rv_injective
+#check @DiamondIntegral.Section2.boundaryRepresentativeValues_rv_injective
+#print axioms DiamondIntegral.Section2.boundaryRepresentativeValues_rv_injective
+#check @DiamondIntegral.Section2.boundaryRepresentativeValues_proper
+#print axioms DiamondIntegral.Section2.boundaryRepresentativeValues_proper
+#check @DiamondIntegral.Section2.boundaryTagSet_subset_representative_rv_image
+#print axioms DiamondIntegral.Section2.boundaryTagSet_subset_representative_rv_image
+#check @DiamondIntegral.Section2.coordinateBoundaryPairs_at_iff
+#print axioms DiamondIntegral.Section2.coordinateBoundaryPairs_at_iff
+#check @DiamondIntegral.Section2.coordinateBoundaryPairs_finite_tags
+#print axioms DiamondIntegral.Section2.coordinateBoundaryPairs_finite_tags
+#check @DiamondIntegral.Section2.affineTargetGraph_isClosed_iff_of_bounded
+#print axioms DiamondIntegral.Section2.affineTargetGraph_isClosed_iff_of_bounded
+#check @DiamondIntegral.Section2.lemma_2_50_bounded
+#print axioms DiamondIntegral.Section2.lemma_2_50_bounded
+#check @DiamondIntegral.Section2.boundedBy_iff
+#print axioms DiamondIntegral.Section2.boundedBy_iff
+#check @DiamondIntegral.Section2.doublyBoundedBy_iff
+#print axioms DiamondIntegral.Section2.doublyBoundedBy_iff
+#check @DiamondIntegral.Section2.GammaDoublyBoundedBy.finite_values
+#print axioms DiamondIntegral.Section2.GammaDoublyBoundedBy.finite_values
+#check @DiamondIntegral.Section2.DoublyBoundedBy.vf_ne_zero
+#print axioms DiamondIntegral.Section2.DoublyBoundedBy.vf_ne_zero
+#check @DiamondIntegral.Section2.DoublyBoundedBy.rv_ne_zero
+#print axioms DiamondIntegral.Section2.DoublyBoundedBy.rv_ne_zero
+#check @DiamondIntegral.Section2.DoublyBoundedBy.gamma_ne_infinity
+#print axioms DiamondIntegral.Section2.DoublyBoundedBy.gamma_ne_infinity
+#check @DiamondIntegral.Section2.BoundedBy.subset
+#print axioms DiamondIntegral.Section2.BoundedBy.subset
+#check @DiamondIntegral.Section2.DoublyBoundedBy.subset
+#print axioms DiamondIntegral.Section2.DoublyBoundedBy.subset
+#check @DiamondIntegral.Section2.c_minimal_ground_base
+#print axioms DiamondIntegral.Section2.c_minimal_ground_base
+#check @DiamondIntegral.Section2.c_minimal_parameter_base
+#print axioms DiamondIntegral.Section2.c_minimal_parameter_base
+#check @DiamondIntegral.Section2.definableOverFiniteDiscNames_zero_iff
+#print axioms DiamondIntegral.Section2.definableOverFiniteDiscNames_zero_iff
+#check @DiamondIntegral.Section2.generatesTypeOverFiniteDiscNames_zero_iff
+#print axioms DiamondIntegral.Section2.generatesTypeOverFiniteDiscNames_zero_iff
+#check @DiamondIntegral.Section2.lemma_2_23_disc_names
+#print axioms DiamondIntegral.Section2.lemma_2_23_disc_names
+#check @DiamondIntegral.Section2.lemma_2_23_disc_gamma_tuple
+#print axioms DiamondIntegral.Section2.lemma_2_23_disc_gamma_tuple
+#check @DiamondIntegral.Section2.lemma_2_25_unary
+#print axioms DiamondIntegral.Section2.lemma_2_25_unary
+#check @DiamondIntegral.Section2.named_open_disc_rv_rows_constant
+#print axioms DiamondIntegral.Section2.named_open_disc_rv_rows_constant
+#check @DiamondIntegral.Section2.named_open_disc_image
+#print axioms DiamondIntegral.Section2.named_open_disc_image
+#check @DiamondIntegral.Section2.gamma_definable_image_doubly_bounded
+#print axioms DiamondIntegral.Section2.gamma_definable_image_doubly_bounded
+#check @DiamondIntegral.Section2.lemma_2_27
+#print axioms DiamondIntegral.Section2.lemma_2_27
+#check @DiamondIntegral.Section2.lemma_2_28
+#print axioms DiamondIntegral.Section2.lemma_2_28
+#check @DiamondIntegral.Section2.corollary_2_49
+#print axioms DiamondIntegral.Section2.corollary_2_49
+#check @DiamondIntegral.Section2.closed_bounded_image_bounded_vf_core
+#print axioms DiamondIntegral.Section2.closed_bounded_image_bounded_vf_core
+#check @DiamondIntegral.Section2.lemma_2_48_image_bounded_vf_generated
+#print axioms DiamondIntegral.Section2.lemma_2_48_image_bounded_vf_generated
+#check @DiamondIntegral.Section2.closed_bounded_image_mem_vf_core
+#print axioms DiamondIntegral.Section2.closed_bounded_image_mem_vf_core
+#check @DiamondIntegral.Section2.lemma_2_48_image_closed_vf_generated
+#print axioms DiamondIntegral.Section2.lemma_2_48_image_closed_vf_generated
+#check @DiamondIntegral.Section2.lemma_2_48
+#print axioms DiamondIntegral.Section2.lemma_2_48
+#check @DiamondIntegral.Section2.image_mem_of_approaching_finite_limit
+#print axioms DiamondIntegral.Section2.image_mem_of_approaching_finite_limit
+#check @DiamondIntegral.Section2.HasLimitSet.no_reciprocal_escape
+#print axioms DiamondIntegral.Section2.HasLimitSet.no_reciprocal_escape
+#check @DiamondIntegral.Section2.compactifiedTargetGraph_isClosed_iff
+#print axioms DiamondIntegral.Section2.compactifiedTargetGraph_isClosed_iff
+#check @DiamondIntegral.Section2.lemma_2_50
+#print axioms DiamondIntegral.Section2.lemma_2_50
+#check @DiamondIntegral.Section2.projectiveClosure_eq_finite_of_closed_bounded
+#print axioms DiamondIntegral.Section2.projectiveClosure_eq_finite_of_closed_bounded
+#check @DiamondIntegral.Section2.continuousWithinAt_iff_vfBalls
+#print axioms DiamondIntegral.Section2.continuousWithinAt_iff_vfBalls
+#check @DiamondIntegral.Section2.ContinuousOn.projectiveGraphCluster_eq
+#print axioms DiamondIntegral.Section2.ContinuousOn.projectiveGraphCluster_eq
+#check @DiamondIntegral.Section2.exists_projectiveGraphCluster_of_not_continuousWithinAt
+#print axioms DiamondIntegral.Section2.exists_projectiveGraphCluster_of_not_continuousWithinAt
+#check @DiamondIntegral.Section2.continuousOn_iff_relativeProjectiveGraph_isClosed
+#print axioms DiamondIntegral.Section2.continuousOn_iff_relativeProjectiveGraph_isClosed
+#check @DiamondIntegral.Section2.GraphFibreContinuous.labelledComp
+#print axioms DiamondIntegral.Section2.GraphFibreContinuous.labelledComp
+#check @DiamondIntegral.Section2.labelledComp_forget
+#print axioms DiamondIntegral.Section2.labelledComp_forget
+#check @DiamondIntegral.Section2.r023_distinct_tags
+#print axioms DiamondIntegral.Section2.r023_distinct_tags
+#check @DiamondIntegral.Section2.r023_composite
+#print axioms DiamondIntegral.Section2.r023_composite
+#check @DiamondIntegral.Section2.r023_f_graphFibreContinuous
+#print axioms DiamondIntegral.Section2.r023_f_graphFibreContinuous
+#check @DiamondIntegral.Section2.r023_g_graphFibreContinuous
+#print axioms DiamondIntegral.Section2.r023_g_graphFibreContinuous
+#check @DiamondIntegral.Section2.r023_labelled_composite_continuous
+#print axioms DiamondIntegral.Section2.r023_labelled_composite_continuous
+#check @DiamondIntegral.Section2.forgetting_intermediate_tags_counterexample
+#print axioms DiamondIntegral.Section2.forgetting_intermediate_tags_counterexample
+#check @DiamondIntegral.Section2.contractionAlong_spec
+#print axioms DiamondIntegral.Section2.contractionAlong_spec
+#check @DiamondIntegral.Section2.contractionAlong_unique
+#print axioms DiamondIntegral.Section2.contractionAlong_unique
+#check @DiamondIntegral.Section2.isContractibleAlong_iff_exists
+#print axioms DiamondIntegral.Section2.isContractibleAlong_iff_exists
+#check @DiamondIntegral.Section2.rvCoordinates_eq_companion_key
+#print axioms DiamondIntegral.Section2.rvCoordinates_eq_companion_key
+#check @DiamondIntegral.Section2.isRVContractible_iff_companion
+#print axioms DiamondIntegral.Section2.isRVContractible_iff_companion
+#check @DiamondIntegral.Section2.rv_eq_zero_iff
+#print axioms DiamondIntegral.Section2.rv_eq_zero_iff
+#check @DiamondIntegral.Section2.rv_zero
+#print axioms DiamondIntegral.Section2.rv_zero
+#check @DiamondIntegral.Section2.rv_surjective
+#print axioms DiamondIntegral.Section2.rv_surjective
+#check @DiamondIntegral.Section2.tupleRV_surjective
+#print axioms DiamondIntegral.Section2.tupleRV_surjective
+#check @DiamondIntegral.Section2.rvCoordinates_surjective
+#print axioms DiamondIntegral.Section2.rvCoordinates_surjective
+#check @DiamondIntegral.Section2.rv_fibre_zero
+#print axioms DiamondIntegral.Section2.rv_fibre_zero
+#check @DiamondIntegral.Section2.vfValue_surjective
+#print axioms DiamondIntegral.Section2.vfValue_surjective
+#check @DiamondIntegral.Section2.vfValue_eq_infinity_iff
+#print axioms DiamondIntegral.Section2.vfValue_eq_infinity_iff
+#check @DiamondIntegral.Section2.vfValue_eq_iff
+#print axioms DiamondIntegral.Section2.vfValue_eq_iff
+#check @DiamondIntegral.Section2.dclVFGenerated_dclVFGammaGenerated
+#print axioms DiamondIntegral.Section2.dclVFGenerated_dclVFGammaGenerated
+#check @DiamondIntegral.Section2.sorted_init_last_iff
+#print axioms DiamondIntegral.Section2.sorted_init_last_iff
+#check @DiamondIntegral.Section2.boundaryFibreRelation_definable
+#print axioms DiamondIntegral.Section2.boundaryFibreRelation_definable
+#check @DiamondIntegral.Section2.coordinateBoundaryPairs_definable
+#print axioms DiamondIntegral.Section2.coordinateBoundaryPairs_definable
+#check @DiamondIntegral.Section2.tupleBase_snoc_rv
+#print axioms DiamondIntegral.Section2.tupleBase_snoc_rv
+#check @DiamondIntegral.Section2.coordinate_boundary_definable_point
+#print axioms DiamondIntegral.Section2.coordinate_boundary_definable_point
+#check @DiamondIntegral.Section2.FiniteDiscTupleRelation.coordinateLine_fibre
+#print axioms DiamondIntegral.Section2.FiniteDiscTupleRelation.coordinateLine_fibre
+#check @DiamondIntegral.Section2.coordinate_line_graph_definable
+#print axioms DiamondIntegral.Section2.coordinate_line_graph_definable
+#check @DiamondIntegral.Section2.vfCorrespondenceGraph_image_definable
+#print axioms DiamondIntegral.Section2.vfCorrespondenceGraph_image_definable
+#check @DiamondIntegral.Section2.vfPullback_graph_definable
+#print axioms DiamondIntegral.Section2.vfPullback_graph_definable
+#check @DiamondIntegral.Section2.vf_map_image_definable
+#print axioms DiamondIntegral.Section2.vf_map_image_definable
+#check @DiamondIntegral.Section2.vfCorrespondenceGraph_at
+#print axioms DiamondIntegral.Section2.vfCorrespondenceGraph_at
+#check @DiamondIntegral.Section2.vfCorrespondence_hits_definable
+#print axioms DiamondIntegral.Section2.vfCorrespondence_hits_definable
+#check @DiamondIntegral.Section2.vfCorrespondence_domain_definable
+#print axioms DiamondIntegral.Section2.vfCorrespondence_domain_definable
+#check @DiamondIntegral.Section2.vfCorrespondence_restrict_definable
+#print axioms DiamondIntegral.Section2.vfCorrespondence_restrict_definable
+#check @DiamondIntegral.Section2.vfCorrespondenceGraph_piecewise_definable
+#print axioms DiamondIntegral.Section2.vfCorrespondenceGraph_piecewise_definable
+#check @DiamondIntegral.Section2.finite_exception_curve_extension
+#print axioms DiamondIntegral.Section2.finite_exception_curve_extension
+#check @DiamondIntegral.Section2.projectiveParameters_eq_centre
+#print axioms DiamondIntegral.Section2.projectiveParameters_eq_centre
+#check @DiamondIntegral.Section2.lemma_2_46
+#print axioms DiamondIntegral.Section2.lemma_2_46
+#check @DiamondIntegral.Section2.curveSource_definable
+#print axioms DiamondIntegral.Section2.curveSource_definable
+#check @DiamondIntegral.Section2.curveSource_nonzero
+#print axioms DiamondIntegral.Section2.curveSource_nonzero
+#check @DiamondIntegral.Section2.curveSource_iff_valuation
+#print axioms DiamondIntegral.Section2.curveSource_iff_valuation
+#check @DiamondIntegral.Section2.curveSource_isOpen
+#print axioms DiamondIntegral.Section2.curveSource_isOpen
+#check @DiamondIntegral.Section2.curveSource_accumulates
+#print axioms DiamondIntegral.Section2.curveSource_accumulates
+#check @DiamondIntegral.Section2.rawVFInverse_vf
+#print axioms DiamondIntegral.Section2.rawVFInverse_vf
+#check @DiamondIntegral.Section2.rawVFInverse_graph_iff
+#print axioms DiamondIntegral.Section2.rawVFInverse_graph_iff
+#check @DiamondIntegral.Section2.rawVFInverse_definable
+#print axioms DiamondIntegral.Section2.rawVFInverse_definable
+#check @DiamondIntegral.Section2.tupleValue_le_coordinate
+#print axioms DiamondIntegral.Section2.tupleValue_le_coordinate
+#check @DiamondIntegral.Section2.tupleValue_eq_coordinate
+#print axioms DiamondIntegral.Section2.tupleValue_eq_coordinate
+#check @DiamondIntegral.Section2.tupleValue_zero
+#print axioms DiamondIntegral.Section2.tupleValue_zero
+#check @DiamondIntegral.Section2.tupleValue_eq_infinity_iff
+#print axioms DiamondIntegral.Section2.tupleValue_eq_infinity_iff
+#check @DiamondIntegral.Section2.tupleValue_lower_bound_iff
+#print axioms DiamondIntegral.Section2.tupleValue_lower_bound_iff
+#check @DiamondIntegral.Section2.hasDerivativeAt_iff_companion
+#print axioms DiamondIntegral.Section2.hasDerivativeAt_iff_companion
+#check @DiamondIntegral.Section2.HasDerivativeAt.unique
+#print axioms DiamondIntegral.Section2.HasDerivativeAt.unique
+#check @DiamondIntegral.Section2.HasDerivativeAt.partial_matrix_entry
+#print axioms DiamondIntegral.Section2.HasDerivativeAt.partial_matrix_entry
+#check @DiamondIntegral.Section2.HasVFInteriorDim.le_arity
+#print axioms DiamondIntegral.Section2.HasVFInteriorDim.le_arity
+#check @DiamondIntegral.Section2.HasVFInteriorDim.le_dimension
+#print axioms DiamondIntegral.Section2.HasVFInteriorDim.le_dimension
+#check @DiamondIntegral.Section2.vfDimension_eq_iff
+#print axioms DiamondIntegral.Section2.vfDimension_eq_iff
+#check @DiamondIntegral.Section2.vfDimension_empty
+#print axioms DiamondIntegral.Section2.vfDimension_empty
+#check @DiamondIntegral.Section2.hasVFInteriorDim_zero_iff
+#print axioms DiamondIntegral.Section2.hasVFInteriorDim_zero_iff
+#check @DiamondIntegral.Section2.vfDimension_eq_bot_iff
+#print axioms DiamondIntegral.Section2.vfDimension_eq_bot_iff
+#check @DiamondIntegral.Section2.vfDimension_eq_full_iff
+#print axioms DiamondIntegral.Section2.vfDimension_eq_full_iff
+#check @DiamondIntegral.Section2.lemma_2_17
+#print axioms DiamondIntegral.Section2.lemma_2_17
+#check @DiamondIntegral.Section2.disc_underlying_subset_vf
+#print axioms DiamondIntegral.Section2.disc_underlying_subset_vf
+#check @DiamondIntegral.Section2.discPoints_injective
+#print axioms DiamondIntegral.Section2.discPoints_injective
+#check @DiamondIntegral.Section2.finitePolydiscNames_recenter
+#print axioms DiamondIntegral.Section2.finitePolydiscNames_recenter
+#check @DiamondIntegral.Section2.definableOverFiniteDiscNames_of_ground
+#print axioms DiamondIntegral.Section2.definableOverFiniteDiscNames_of_ground
+#check @DiamondIntegral.Section2.GeneratesTypeOverFiniteDiscNames.ground
+#print axioms DiamondIntegral.Section2.GeneratesTypeOverFiniteDiscNames.ground
+#check @DiamondIntegral.Section2.GeneratesTypeOverFiniteDiscNames.subset_nonempty
+#print axioms DiamondIntegral.Section2.GeneratesTypeOverFiniteDiscNames.subset_nonempty
+#check @DiamondIntegral.Section2.generatesTypeOverFiniteDiscNames_iff_of_names
+#print axioms DiamondIntegral.Section2.generatesTypeOverFiniteDiscNames_iff_of_names
+#check @DiamondIntegral.Section2.isAtomicOverFiniteDiscNames_iff_of_names
+#print axioms DiamondIntegral.Section2.isAtomicOverFiniteDiscNames_iff_of_names
+#check @DiamondIntegral.Section2.GeneratesTypeOverFiniteDiscNames.disjoint_ground_finite
+#print axioms DiamondIntegral.Section2.GeneratesTypeOverFiniteDiscNames.disjoint_ground_finite
+#check @DiamondIntegral.Section2.finitePolydiscNames_center_mem
+#print axioms DiamondIntegral.Section2.finitePolydiscNames_center_mem
+#check @DiamondIntegral.Section2.namedPolydisc_nonempty
+#print axioms DiamondIntegral.Section2.namedPolydisc_nonempty
+#check @DiamondIntegral.Section2.namedPolydisc_proper
+#print axioms DiamondIntegral.Section2.namedPolydisc_proper
+#check @DiamondIntegral.Section2.DefinableOverFiniteDiscNames.sorted_iInter
+#print axioms DiamondIntegral.Section2.DefinableOverFiniteDiscNames.sorted_iInter
+#check @DiamondIntegral.Section2.namedPolydisc_definable_of_type
+#print axioms DiamondIntegral.Section2.namedPolydisc_definable_of_type
+#check @DiamondIntegral.Section2.FinitePolydiscRelation.fibre_eq_of_names
+#print axioms DiamondIntegral.Section2.FinitePolydiscRelation.fibre_eq_of_names
+#check @DiamondIntegral.Section2.FinitePolydiscRelation.definable_fibre
+#print axioms DiamondIntegral.Section2.FinitePolydiscRelation.definable_fibre
+#check @DiamondIntegral.Section2.algebraic_over_disc_names_pointwise
+#print axioms DiamondIntegral.Section2.algebraic_over_disc_names_pointwise
+#check @DiamondIntegral.Section2.closedDC_underlying
+#print axioms DiamondIntegral.Section2.closedDC_underlying
+#check @DiamondIntegral.Section2.lemma_2_19_algebraic
+#print axioms DiamondIntegral.Section2.lemma_2_19_algebraic
+#check @DiamondIntegral.Section2.lemma_2_19_definable
+#print axioms DiamondIntegral.Section2.lemma_2_19_definable
+#check @DiamondIntegral.Section2.lemma_2_21
+#print axioms DiamondIntegral.Section2.lemma_2_21
+#check @DiamondIntegral.Section2.FinitePolydiscRelation.toTuple_fibre
+#print axioms DiamondIntegral.Section2.FinitePolydiscRelation.toTuple_fibre
+#check @DiamondIntegral.Section2.FiniteDiscTupleRelation.toScalar_fibre
+#print axioms DiamondIntegral.Section2.FiniteDiscTupleRelation.toScalar_fibre
+#check @DiamondIntegral.Section2.definableOverFiniteDiscNames_unary_iff
+#print axioms DiamondIntegral.Section2.definableOverFiniteDiscNames_unary_iff
+#check @DiamondIntegral.Section2.algebraicOverFinitePolydiscNames_iff
+#print axioms DiamondIntegral.Section2.algebraicOverFinitePolydiscNames_iff
+#check @DiamondIntegral.Section2.FibreConcentric.mono
+#print axioms DiamondIntegral.Section2.FibreConcentric.mono
+#check @DiamondIntegral.Section2.lemma_2_32
+#print axioms DiamondIntegral.Section2.lemma_2_32
+#check @DiamondIntegral.Section2.gammaRelation_precompose_fibre
+#print axioms DiamondIntegral.Section2.gammaRelation_precompose_fibre
+#check @DiamondIntegral.Section2.FiniteDiscTupleRelation.inter_fibre
+#print axioms DiamondIntegral.Section2.FiniteDiscTupleRelation.inter_fibre
+#check @DiamondIntegral.Section2.DefinableOverFiniteDiscNames.inter
+#print axioms DiamondIntegral.Section2.DefinableOverFiniteDiscNames.inter
+#check @DiamondIntegral.Section2.FiniteDiscTupleRelation.compl_fibre
+#print axioms DiamondIntegral.Section2.FiniteDiscTupleRelation.compl_fibre
+#check @DiamondIntegral.Section2.DefinableOverFiniteDiscNames.compl
+#print axioms DiamondIntegral.Section2.DefinableOverFiniteDiscNames.compl
+#check @DiamondIntegral.Section2.FiniteDiscTupleRelation.preimageReal_fibre
+#print axioms DiamondIntegral.Section2.FiniteDiscTupleRelation.preimageReal_fibre
+#check @DiamondIntegral.Section2.DefinableOverFiniteDiscNames.preimage_real
+#print axioms DiamondIntegral.Section2.DefinableOverFiniteDiscNames.preimage_real
+#check @DiamondIntegral.Section2.DefinableOverFiniteDiscNames.mono
+#print axioms DiamondIntegral.Section2.DefinableOverFiniteDiscNames.mono
+#check @DiamondIntegral.Section2.FiniteDiscTupleRelation.pullbackDiscNames_fibre
+#print axioms DiamondIntegral.Section2.FiniteDiscTupleRelation.pullbackDiscNames_fibre
+#check @DiamondIntegral.Section2.DefinableOverFiniteDiscNames.pullback_names
+#print axioms DiamondIntegral.Section2.DefinableOverFiniteDiscNames.pullback_names
+#check @DiamondIntegral.Section2.FiniteDiscTupleRelation.rawOperation_fibre
+#print axioms DiamondIntegral.Section2.FiniteDiscTupleRelation.rawOperation_fibre
+#check @DiamondIntegral.Section2.FiniteDiscTupleRelation.fibre_proper
+#print axioms DiamondIntegral.Section2.FiniteDiscTupleRelation.fibre_proper
+#check @DiamondIntegral.Section2.FiniteDiscTupleRelation.fibre_eq_of_names
+#print axioms DiamondIntegral.Section2.FiniteDiscTupleRelation.fibre_eq_of_names
+#check @DiamondIntegral.Section2.DefinableOverFiniteDiscNames.proper
+#print axioms DiamondIntegral.Section2.DefinableOverFiniteDiscNames.proper
+#check @DiamondIntegral.Section2.definableOverFiniteDiscNames_iff_of_names
+#print axioms DiamondIntegral.Section2.definableOverFiniteDiscNames_iff_of_names
+#check @DiamondIntegral.Section2.FiniteDiscTupleRelation.definable_fibre
+#print axioms DiamondIntegral.Section2.FiniteDiscTupleRelation.definable_fibre
+#check @DiamondIntegral.Section2.FiniteDiscTupleRelation.imageReal_fibre
+#print axioms DiamondIntegral.Section2.FiniteDiscTupleRelation.imageReal_fibre
+#check @DiamondIntegral.Section2.DefinableOverFiniteDiscNames.image_real
+#print axioms DiamondIntegral.Section2.DefinableOverFiniteDiscNames.image_real
+#check @DiamondIntegral.Section2.gamma_representatives_append_left
+#print axioms DiamondIntegral.Section2.gamma_representatives_append_left
+#check @DiamondIntegral.Section2.gamma_representatives_append_right
+#print axioms DiamondIntegral.Section2.gamma_representatives_append_right
+#check @DiamondIntegral.Section2.sorted_append_vf
+#print axioms DiamondIntegral.Section2.sorted_append_vf
+#check @DiamondIntegral.Section2.discInvariantHull_named_iff
+#print axioms DiamondIntegral.Section2.discInvariantHull_named_iff
+#check @DiamondIntegral.Section2.promote_tuple_definable_disc_names
+#print axioms DiamondIntegral.Section2.promote_tuple_definable_disc_names
+#check @DiamondIntegral.Section2.FiniteDiscTupleRelation.preimageRealMap_fibre
+#print axioms DiamondIntegral.Section2.FiniteDiscTupleRelation.preimageRealMap_fibre
+#check @DiamondIntegral.Section2.DefinableOverFiniteDiscNames.preimage_real_map
+#print axioms DiamondIntegral.Section2.DefinableOverFiniteDiscNames.preimage_real_map
+#check @DiamondIntegral.Section2.FiniteDiscTupleRelation.fixPrefix_fibre
+#print axioms DiamondIntegral.Section2.FiniteDiscTupleRelation.fixPrefix_fibre
+#check @DiamondIntegral.Section2.DefinableOverFiniteDiscNames.fix_prefix
+#print axioms DiamondIntegral.Section2.DefinableOverFiniteDiscNames.fix_prefix
+#check @DiamondIntegral.Section2.GeneratesTypeOverFiniteDiscNames.image_real
+#print axioms DiamondIntegral.Section2.GeneratesTypeOverFiniteDiscNames.image_real
+#check @DiamondIntegral.Section2.IsAtomicOverFiniteDiscNames.image_real
+#print axioms DiamondIntegral.Section2.IsAtomicOverFiniteDiscNames.image_real
+#check @DiamondIntegral.Section2.GeneratesTypeOverFiniteDiscNames.block_fibre
+#print axioms DiamondIntegral.Section2.GeneratesTypeOverFiniteDiscNames.block_fibre
+#check @DiamondIntegral.Section2.IsAtomicOverFiniteDiscNames.block_fibre
+#print axioms DiamondIntegral.Section2.IsAtomicOverFiniteDiscNames.block_fibre
+#check @DiamondIntegral.Section2.radiusRepresentative_value
+#print axioms DiamondIntegral.Section2.radiusRepresentative_value
+#check @DiamondIntegral.Section2.radiusRepresentative_zero_iff
+#print axioms DiamondIntegral.Section2.radiusRepresentative_zero_iff
+#check @DiamondIntegral.Section2.closedDiscCode_points
+#print axioms DiamondIntegral.Section2.closedDiscCode_points
+#check @DiamondIntegral.Section2.openDiscCode_points
+#print axioms DiamondIntegral.Section2.openDiscCode_points
+#check @DiamondIntegral.Section2.closedDiscCode_infinity_points
+#print axioms DiamondIntegral.Section2.closedDiscCode_infinity_points
+#check @DiamondIntegral.Section2.openDiscCode_ne_closedDiscCode
+#print axioms DiamondIntegral.Section2.openDiscCode_ne_closedDiscCode
+#check @DiamondIntegral.Section2.lemma_2_14_vf
+#print axioms DiamondIntegral.Section2.lemma_2_14_vf
+#check @DiamondIntegral.Section2.lemma_2_14_rv
+#print axioms DiamondIntegral.Section2.lemma_2_14_rv
+#check @DiamondIntegral.Section2.vfPairValues_injective
+#print axioms DiamondIntegral.Section2.vfPairValues_injective
+#check @DiamondIntegral.Section2.vfPair_inter_definable
+#print axioms DiamondIntegral.Section2.vfPair_inter_definable
+#check @DiamondIntegral.Section2.vfPair_sdiff_definable
+#print axioms DiamondIntegral.Section2.vfPair_sdiff_definable
+#check @DiamondIntegral.Section2.vfPair_base_definable
+#print axioms DiamondIntegral.Section2.vfPair_base_definable
+#check @DiamondIntegral.Section2.vfPair_graph_eq
+#print axioms DiamondIntegral.Section2.vfPair_graph_eq
+#check @DiamondIntegral.Section2.relativeBadLocus_definable
+#print axioms DiamondIntegral.Section2.relativeBadLocus_definable
+#check @DiamondIntegral.Section2.relativeBadLocus_graph_definable
+#print axioms DiamondIntegral.Section2.relativeBadLocus_graph_definable
+#check @DiamondIntegral.Section2.not_mem_relativeBadLocus_of_open
+#print axioms DiamondIntegral.Section2.not_mem_relativeBadLocus_of_open
+#check @DiamondIntegral.Section2.open_restriction_of_bad_projection_subset
+#print axioms DiamondIntegral.Section2.open_restriction_of_bad_projection_subset
+#check @DiamondIntegral.Section2.fibreBallHits_interior_empty
+#print axioms DiamondIntegral.Section2.fibreBallHits_interior_empty
+#check @DiamondIntegral.Section2.affineFibreGraph_definable
+#print axioms DiamondIntegral.Section2.affineFibreGraph_definable
+#check @DiamondIntegral.Section2.reciprocalFibreGraph_definable
+#print axioms DiamondIntegral.Section2.reciprocalFibreGraph_definable
+#check @DiamondIntegral.Section2.subset_fibreClosure
+#print axioms DiamondIntegral.Section2.subset_fibreClosure
+#check @DiamondIntegral.Section2.fibreClosure_fibres_isClosed
+#print axioms DiamondIntegral.Section2.fibreClosure_fibres_isClosed
+#check @DiamondIntegral.Section2.fibreClosure_inter_of_relatively_closed
+#print axioms DiamondIntegral.Section2.fibreClosure_inter_of_relatively_closed
+#check @DiamondIntegral.Section2.fibreOpenExtension_fibres_isOpen
+#print axioms DiamondIntegral.Section2.fibreOpenExtension_fibres_isOpen
+#check @DiamondIntegral.Section2.fibreOpenExtension_inter_of_relatively_open
+#print axioms DiamondIntegral.Section2.fibreOpenExtension_inter_of_relatively_open
+#check @DiamondIntegral.Section2.fibreClosure_graph_inter
+#print axioms DiamondIntegral.Section2.fibreClosure_graph_inter
+#check @DiamondIntegral.Section2.ProjectiveLine.reciprocalChart_eq_finite_iff
+#print axioms DiamondIntegral.Section2.ProjectiveLine.reciprocalChart_eq_finite_iff
+#check @DiamondIntegral.Section2.finiteProjectiveTuple_injective
+#print axioms DiamondIntegral.Section2.finiteProjectiveTuple_injective
+#check @DiamondIntegral.Section2.projectiveFibreChart_affine_preimage
+#print axioms DiamondIntegral.Section2.projectiveFibreChart_affine_preimage
+#check @DiamondIntegral.Section2.projectiveFibreChart_reciprocal_preimage
+#print axioms DiamondIntegral.Section2.projectiveFibreChart_reciprocal_preimage
+#check @DiamondIntegral.Section2.projectiveFibreChart_isOpenEmbedding
+#print axioms DiamondIntegral.Section2.projectiveFibreChart_isOpenEmbedding
+#check @DiamondIntegral.Section2.projectiveFibreChart_join
+#print axioms DiamondIntegral.Section2.projectiveFibreChart_join
+#check @DiamondIntegral.Section2.projectiveFibreChart_preimage_closure
+#print axioms DiamondIntegral.Section2.projectiveFibreChart_preimage_closure
+#check @DiamondIntegral.Section2.projectiveFibreChart_closure_graph_definable
+#print axioms DiamondIntegral.Section2.projectiveFibreChart_closure_graph_definable
+#check @DiamondIntegral.Section2.vfPairMapGraph_remove_base_definable
+#print axioms DiamondIntegral.Section2.vfPairMapGraph_remove_base_definable
+#check @DiamondIntegral.Section2.proposition_2_55
+#print axioms DiamondIntegral.Section2.proposition_2_55
+#check @DiamondIntegral.Section2.lemma_2_54_open
+#print axioms DiamondIntegral.Section2.lemma_2_54_open
+#check @DiamondIntegral.Section2.lemma_2_54_closed
+#print axioms DiamondIntegral.Section2.lemma_2_54_closed
+#check @DiamondIntegral.Section2.lemma_2_54
+#print axioms DiamondIntegral.Section2.lemma_2_54
+#check @DiamondIntegral.Section2.FinitaryRVCode.codedGraph_definable
+#print axioms DiamondIntegral.Section2.FinitaryRVCode.codedGraph_definable
+#check @DiamondIntegral.Section2.FinitaryRVCode.branchDomain_definable
+#print axioms DiamondIntegral.Section2.FinitaryRVCode.branchDomain_definable
+#check @DiamondIntegral.Section2.FinitaryRVCode.branchGraph_definable
+#print axioms DiamondIntegral.Section2.FinitaryRVCode.branchGraph_definable
+#check @DiamondIntegral.Section2.FinitaryRVCode.hasValue_unique
+#print axioms DiamondIntegral.Section2.FinitaryRVCode.hasValue_unique
+#check @DiamondIntegral.Section2.FinitaryRVCode.branch_eq_of_hasValue
+#print axioms DiamondIntegral.Section2.FinitaryRVCode.branch_eq_of_hasValue
+#check @DiamondIntegral.Section2.FinitaryRVCode.hasValue_branch
+#print axioms DiamondIntegral.Section2.FinitaryRVCode.hasValue_branch
+#check @DiamondIntegral.Section2.FinitaryRVCode.mem_codedGraph
+#print axioms DiamondIntegral.Section2.FinitaryRVCode.mem_codedGraph
+#check @DiamondIntegral.Section2.FinitaryRVCode.mem_branchDomain
+#print axioms DiamondIntegral.Section2.FinitaryRVCode.mem_branchDomain
+#check @DiamondIntegral.Section2.FinitaryRVCode.branchGraph_slice
+#print axioms DiamondIntegral.Section2.FinitaryRVCode.branchGraph_slice
+#check @DiamondIntegral.Section2.exists_finitaryRVCode
+#print axioms DiamondIntegral.Section2.exists_finitaryRVCode
+#check @DiamondIntegral.Section2.FinitaryRVCode.mem_labelGraph
+#print axioms DiamondIntegral.Section2.FinitaryRVCode.mem_labelGraph
+#check @DiamondIntegral.Section2.FinitaryRVCode.labelGraph_definable
+#print axioms DiamondIntegral.Section2.FinitaryRVCode.labelGraph_definable
+#check @DiamondIntegral.Section2.FinitaryRVCode.labelFibre_eq_image
+#print axioms DiamondIntegral.Section2.FinitaryRVCode.labelFibre_eq_image
+#check @DiamondIntegral.Section2.FinitaryRVCode.minimalLimit_of_good
+#print axioms DiamondIntegral.Section2.FinitaryRVCode.minimalLimit_of_good
+#check @DiamondIntegral.Section2.lemma_2_44
+#print axioms DiamondIntegral.Section2.lemma_2_44
+#check @DiamondIntegral.Section2.FinitaryRVCode.branch_definable
+#print axioms DiamondIntegral.Section2.FinitaryRVCode.branch_definable
+#check @DiamondIntegral.Section2.FinitaryRVCode.mem_branchContinuous
+#print axioms DiamondIntegral.Section2.FinitaryRVCode.mem_branchContinuous
+#check @DiamondIntegral.Section2.FinitaryRVCode.branchBadRaw_definable
+#print axioms DiamondIntegral.Section2.FinitaryRVCode.branchBadRaw_definable
+#check @DiamondIntegral.Section2.FinitaryRVCode.badRaw_definable
+#print axioms DiamondIntegral.Section2.FinitaryRVCode.badRaw_definable
+#check @DiamondIntegral.Section2.FinitaryRVCode.mem_badRaw
+#print axioms DiamondIntegral.Section2.FinitaryRVCode.mem_badRaw
+#check @DiamondIntegral.Section2.FinitaryRVCode.not_mem_badRaw_of_independent
+#print axioms DiamondIntegral.Section2.FinitaryRVCode.not_mem_badRaw_of_independent
+#check @DiamondIntegral.Section2.FinitaryRVCode.badRaw_dimension_lt
+#print axioms DiamondIntegral.Section2.FinitaryRVCode.badRaw_dimension_lt
+#check @DiamondIntegral.Section2.corollary_2_30
+#print axioms DiamondIntegral.Section2.corollary_2_30
+#check @DiamondIntegral.Section2.finitary_rv_partition
+#print axioms DiamondIntegral.Section2.finitary_rv_partition
+#check @DiamondIntegral.Section2.exists_ne_mem_vfBall
+#print axioms DiamondIntegral.Section2.exists_ne_mem_vfBall
+#check @DiamondIntegral.Section2.finite_vfBalls_pairwise_disjoint
+#print axioms DiamondIntegral.Section2.finite_vfBalls_pairwise_disjoint
+#check @DiamondIntegral.Section2.vfBall_mem_nhds
+#print axioms DiamondIntegral.Section2.vfBall_mem_nhds
+#check @DiamondIntegral.Section2.exists_vfBall_subset_nhds
+#print axioms DiamondIntegral.Section2.exists_vfBall_subset_nhds
+#check @DiamondIntegral.Section2.continuousAt_ball_estimate
+#print axioms DiamondIntegral.Section2.continuousAt_ball_estimate
+#check @DiamondIntegral.Section2.finite_continuous_branches_limit
+#print axioms DiamondIntegral.Section2.finite_continuous_branches_limit
+#check @DiamondIntegral.Section2.finite_continuous_branches_minimal_limit
+#print axioms DiamondIntegral.Section2.finite_continuous_branches_minimal_limit
+#check @DiamondIntegral.Section2.FiniteChoice.good_relation_of_algebraic
+#print axioms DiamondIntegral.Section2.FiniteChoice.good_relation_of_algebraic
+#check @DiamondIntegral.Section2.FiniteChoice.domain_definable
+#print axioms DiamondIntegral.Section2.FiniteChoice.domain_definable
+#check @DiamondIntegral.Section2.FiniteChoice.definable_finite_choice_over
+#print axioms DiamondIntegral.Section2.FiniteChoice.definable_finite_choice_over
+#check @DiamondIntegral.Section2.FiniteChoice.definable_finite_choice
+#print axioms DiamondIntegral.Section2.FiniteChoice.definable_finite_choice
+#check @DiamondIntegral.Section2.closedDiscCode_mem_iff_value
+#print axioms DiamondIntegral.Section2.closedDiscCode_mem_iff_value
+#check @DiamondIntegral.Section2.finiteDiscRawMember_iff
+#print axioms DiamondIntegral.Section2.finiteDiscRawMember_iff
+#check @DiamondIntegral.Section2.finiteDiscRawProper_definable
+#print axioms DiamondIntegral.Section2.finiteDiscRawProper_definable
+#check @DiamondIntegral.Section2.finiteDiscRawMember_definable
+#print axioms DiamondIntegral.Section2.finiteDiscRawMember_definable
+#check @DiamondIntegral.Section2.finiteDiscRawEq_iff
+#print axioms DiamondIntegral.Section2.finiteDiscRawEq_iff
+#check @DiamondIntegral.Section2.finiteDiscRawEq_definable
+#print axioms DiamondIntegral.Section2.finiteDiscRawEq_definable
+#check @DiamondIntegral.Section2.finiteDiscRawCentres_values
+#print axioms DiamondIntegral.Section2.finiteDiscRawCentres_values
+#check @DiamondIntegral.Section2.finiteDiscRawProper_append
+#print axioms DiamondIntegral.Section2.finiteDiscRawProper_append
+#check @DiamondIntegral.Section2.finiteDiscRawNames_append
+#print axioms DiamondIntegral.Section2.finiteDiscRawNames_append
+#check @DiamondIntegral.Section2.raw_gamma_values_ofRaw
+#print axioms DiamondIntegral.Section2.raw_gamma_values_ofRaw
+#check @DiamondIntegral.Section2.finiteDiscRawNames_gamma_codes
+#print axioms DiamondIntegral.Section2.finiteDiscRawNames_gamma_codes
+#check @DiamondIntegral.Section2.finiteDiscRawEq_congr_left
+#print axioms DiamondIntegral.Section2.finiteDiscRawEq_congr_left
+#check @DiamondIntegral.Section2.FiniteDiscTupleRelation.raw_row_iff
+#print axioms DiamondIntegral.Section2.FiniteDiscTupleRelation.raw_row_iff
+#check @DiamondIntegral.Section2.gamma_raw_relation_invariant
+#print axioms DiamondIntegral.Section2.gamma_raw_relation_invariant
+#check @DiamondIntegral.Section2.discInvariantHull_congr
+#print axioms DiamondIntegral.Section2.discInvariantHull_congr
+#check @DiamondIntegral.Section2.discInvariantHull_definable
+#print axioms DiamondIntegral.Section2.discInvariantHull_definable
+#check @DiamondIntegral.Section2.discHullCurrent_append
+#print axioms DiamondIntegral.Section2.discHullCurrent_append
+#check @DiamondIntegral.Section2.discHullArguments_append
+#print axioms DiamondIntegral.Section2.discHullArguments_append
+#check @DiamondIntegral.Section2.discHullCurrent_proper
+#print axioms DiamondIntegral.Section2.discHullCurrent_proper
+#check @DiamondIntegral.Section2.discHullCurrent_names
+#print axioms DiamondIntegral.Section2.discHullCurrent_names
+#check @DiamondIntegral.Section2.discHullCurrent_same_values
+#print axioms DiamondIntegral.Section2.discHullCurrent_same_values
+#check @DiamondIntegral.Section2.avoidFiniteVF_definable
+#print axioms DiamondIntegral.Section2.avoidFiniteVF_definable
+#check @DiamondIntegral.Section2.origin_representative_ball_isClopen
+#print axioms DiamondIntegral.Section2.origin_representative_ball_isClopen
+#check @DiamondIntegral.Section2.avoidFiniteVF_isClopen
+#print axioms DiamondIntegral.Section2.avoidFiniteVF_isClopen
+#check @DiamondIntegral.Section2.zero_mem_avoidFiniteVF
+#print axioms DiamondIntegral.Section2.zero_mem_avoidFiniteVF
+#check @DiamondIntegral.Section2.avoidFiniteVF_disjoint
+#print axioms DiamondIntegral.Section2.avoidFiniteVF_disjoint
+#check @DiamondIntegral.Section2.avoidFiniteVF_mem_nhds_zero
+#print axioms DiamondIntegral.Section2.avoidFiniteVF_mem_nhds_zero
+#check @DiamondIntegral.Section2.lemma_2_15_vf
+#print axioms DiamondIntegral.Section2.lemma_2_15_vf
+#check @DiamondIntegral.Section2.lemma_2_15_rv
+#print axioms DiamondIntegral.Section2.lemma_2_15_rv
+#check @DiamondIntegral.Section2.finite_good_cover_partition
+#print axioms DiamondIntegral.Section2.finite_good_cover_partition
+#check @DiamondIntegral.Section2.type_local_finite_good_partition
+#print axioms DiamondIntegral.Section2.type_local_finite_good_partition
+#check @DiamondIntegral.Section2.HasLimitSet.minimal_of_frequent_hits
+#print axioms DiamondIntegral.Section2.HasLimitSet.minimal_of_frequent_hits
+#check @DiamondIntegral.Section2.HasLimitSet.image_of_continuousAt
+#print axioms DiamondIntegral.Section2.HasLimitSet.image_of_continuousAt
+#check @DiamondIntegral.Section2.HasMinimalLimitSet.image_of_continuousAt
+#print axioms DiamondIntegral.Section2.HasMinimalLimitSet.image_of_continuousAt
+#check @DiamondIntegral.Section2.HasMinimalLimitSet.frequently_hits
+#print axioms DiamondIntegral.Section2.HasMinimalLimitSet.frequently_hits
+#check @DiamondIntegral.Section2.HasLimitSet.nonempty_of_frequent_values
+#print axioms DiamondIntegral.Section2.HasLimitSet.nonempty_of_frequent_values
+#check @DiamondIntegral.Section2.exists_finite_affine_limit
+#print axioms DiamondIntegral.Section2.exists_finite_affine_limit
+#check @DiamondIntegral.Section2.HasMinimalLimitSet.subset_closed
+#print axioms DiamondIntegral.Section2.HasMinimalLimitSet.subset_closed
+#check @DiamondIntegral.Section2.lemma_2_45
+#print axioms DiamondIntegral.Section2.lemma_2_45
+#check @DiamondIntegral.Section2.firstChoiceDomain_cover
+#print axioms DiamondIntegral.Section2.firstChoiceDomain_cover
+#check @DiamondIntegral.Section2.firstChoiceDomain_disjoint
+#print axioms DiamondIntegral.Section2.firstChoiceDomain_disjoint
+#check @DiamondIntegral.Section2.firstChoiceDomain_definable
+#print axioms DiamondIntegral.Section2.firstChoiceDomain_definable
+#check @DiamondIntegral.Section2.finite_partial_unique_choice
+#print axioms DiamondIntegral.Section2.finite_partial_unique_choice
+#check @DiamondIntegral.Section2.nonzeroRVCode_injective
+#print axioms DiamondIntegral.Section2.nonzeroRVCode_injective
+#check @DiamondIntegral.Section2.nonzeroRVCode_proper
+#print axioms DiamondIntegral.Section2.nonzeroRVCode_proper
+#check @DiamondIntegral.Section2.nonzeroRVCode_definable
+#print axioms DiamondIntegral.Section2.nonzeroRVCode_definable
+#check @DiamondIntegral.Section2.finite_rv_coding
+#print axioms DiamondIntegral.Section2.finite_rv_coding
+#check @DiamondIntegral.Section2.lemma_2_12
+#print axioms DiamondIntegral.Section2.lemma_2_12
+#check @DiamondIntegral.Section2.lemma_2_13
+#print axioms DiamondIntegral.Section2.lemma_2_13
+#check @DiamondIntegral.Section2.exists_nonempty_finite_definable_vf_subset
+#print axioms DiamondIntegral.Section2.exists_nonempty_finite_definable_vf_subset
+#check @DiamondIntegral.Section2.gammaAbs_le_iff
+#print axioms DiamondIntegral.Section2.gammaAbs_le_iff
+#check @DiamondIntegral.Section2.gamma_inverse_definable
+#print axioms DiamondIntegral.Section2.gamma_inverse_definable
+#check @DiamondIntegral.Section2.gamma_max_definable
+#print axioms DiamondIntegral.Section2.gamma_max_definable
+#check @DiamondIntegral.Section2.gammaAbs_definable
+#print axioms DiamondIntegral.Section2.gammaAbs_definable
+#check @DiamondIntegral.Section2.gammaAbsCodeRelation_definable
+#print axioms DiamondIntegral.Section2.gammaAbsCodeRelation_definable
+#check @DiamondIntegral.Section2.rawGammaFamilyGraph_abs_definable
+#print axioms DiamondIntegral.Section2.rawGammaFamilyGraph_abs_definable
+#check @DiamondIntegral.Section2.gamma_symmetric_bound_iff
+#print axioms DiamondIntegral.Section2.gamma_symmetric_bound_iff
+#check @DiamondIntegral.Section2.gamma_zpow_image_bounded
+#print axioms DiamondIntegral.Section2.gamma_zpow_image_bounded
+#check @DiamondIntegral.Section2.gammaPowerRelationImage_bounded
+#print axioms DiamondIntegral.Section2.gammaPowerRelationImage_bounded
+#check @DiamondIntegral.Section2.gamma_finite_power_laws_bounded
+#print axioms DiamondIntegral.Section2.gamma_finite_power_laws_bounded
+#check @DiamondIntegral.Section2.rawGammaBallRelation_definable
+#print axioms DiamondIntegral.Section2.rawGammaBallRelation_definable
+#check @DiamondIntegral.Section2.rawGammaBallRelation_iff
+#print axioms DiamondIntegral.Section2.rawGammaBallRelation_iff
+#check @DiamondIntegral.Section2.gammaDomainCodes_definable
+#print axioms DiamondIntegral.Section2.gammaDomainCodes_definable
+#check @DiamondIntegral.Section2.uniform_gamma_domain_supremum
+#print axioms DiamondIntegral.Section2.uniform_gamma_domain_supremum
+#check @DiamondIntegral.Section2.gammaAbs_image_isLUB
+#print axioms DiamondIntegral.Section2.gammaAbs_image_isLUB
+#check @DiamondIntegral.Section2.gamma_endpoint_bound_eq
+#print axioms DiamondIntegral.Section2.gamma_endpoint_bound_eq
+#check @DiamondIntegral.Section2.rawGammaFamilyGraph_fibre_definable
+#print axioms DiamondIntegral.Section2.rawGammaFamilyGraph_fibre_definable
+#check @DiamondIntegral.Section2.rawGammaFamilyGraph_exists_lub
+#print axioms DiamondIntegral.Section2.rawGammaFamilyGraph_exists_lub
+#check @DiamondIntegral.Section2.rawGammaFamilyGraph_pullback_definable
+#print axioms DiamondIntegral.Section2.rawGammaFamilyGraph_pullback_definable
+#check @DiamondIntegral.Section2.rawGammaFamilyGraph_source_projection_definable
+#print axioms DiamondIntegral.Section2.rawGammaFamilyGraph_source_projection_definable
+#check @DiamondIntegral.Section2.rawGammaFamilyGraph_restrict_definable
+#print axioms DiamondIntegral.Section2.rawGammaFamilyGraph_restrict_definable
+#check @DiamondIntegral.Section2.gamma_indexed_finite_union
+#print axioms DiamondIntegral.Section2.gamma_indexed_finite_union
+#check @DiamondIntegral.Section2.exists_infinite_gamma_fibre
+#print axioms DiamondIntegral.Section2.exists_infinite_gamma_fibre
+#check @DiamondIntegral.Section2.rawHeadDomain_projection
+#print axioms DiamondIntegral.Section2.rawHeadDomain_projection
+#check @DiamondIntegral.Section2.rawHeadDomain_definable
+#print axioms DiamondIntegral.Section2.rawHeadDomain_definable
+#check @DiamondIntegral.Section2.unaryGammaFamilyGraph_scalar_definable
+#print axioms DiamondIntegral.Section2.unaryGammaFamilyGraph_scalar_definable
+#check @DiamondIntegral.Section2.rvFiniteValue_val
+#print axioms DiamondIntegral.Section2.rvFiniteValue_val
+#check @DiamondIntegral.Section2.gammaJacobian_self
+#print axioms DiamondIntegral.Section2.gammaJacobian_self
+#check @DiamondIntegral.Section2.gammaJacobian_comp
+#print axioms DiamondIntegral.Section2.gammaJacobian_comp
+#check @DiamondIntegral.Section2.gammaJacobian_symm
+#print axioms DiamondIntegral.Section2.gammaJacobian_symm
+#check @DiamondIntegral.Section2.gammaJacobian_eq_companion
+#print axioms DiamondIntegral.Section2.gammaJacobian_eq_companion
+#check @DiamondIntegral.Section2.gammaPowerOrderIso_apply
+#print axioms DiamondIntegral.Section2.gammaPowerOrderIso_apply
+#check @DiamondIntegral.Section2.gammaAffineRadius_pow
+#print axioms DiamondIntegral.Section2.gammaAffineRadius_pow
+#check @DiamondIntegral.Section2.gammaPowerGerm_finite_value
+#print axioms DiamondIntegral.Section2.gammaPowerGerm_finite_value
+#check @DiamondIntegral.Section2.puncturedGammaDisc_anti
+#print axioms DiamondIntegral.Section2.puncturedGammaDisc_anti
+#check @DiamondIntegral.Section2.gammaPowerGerm_disc_iff
+#print axioms DiamondIntegral.Section2.gammaPowerGerm_disc_iff
+#check @DiamondIntegral.Section2.gammaRelationPreimageMap_fibre
+#print axioms DiamondIntegral.Section2.gammaRelationPreimageMap_fibre
+#check @DiamondIntegral.Section2.gamma_definable_exists_isGLB
+#print axioms DiamondIntegral.Section2.gamma_definable_exists_isGLB
+#check @DiamondIntegral.Section2.gamma_definable_exists_isLUB
+#print axioms DiamondIntegral.Section2.gamma_definable_exists_isLUB
+#check @DiamondIntegral.Section2.gamma_definable_exists_unique_isLUB
+#print axioms DiamondIntegral.Section2.gamma_definable_exists_unique_isLUB
+#check @DiamondIntegral.Section2.gamma_isLUB_definable
+#print axioms DiamondIntegral.Section2.gamma_isLUB_definable
+#check @DiamondIntegral.Section2.gamma_definable_supremum
+#print axioms DiamondIntegral.Section2.gamma_definable_supremum
+#check @DiamondIntegral.Section2.VFGeneratedFieldBase.definableOver_gamma_names_iff
+#print axioms DiamondIntegral.Section2.VFGeneratedFieldBase.definableOver_gamma_names_iff
+#check @DiamondIntegral.Section2.VFGeneratedFieldBase.gamma_closure_eq
+#print axioms DiamondIntegral.Section2.VFGeneratedFieldBase.gamma_closure_eq
+#check @DiamondIntegral.Section2.VFGeneratedFieldBase.gamma_closure_generated
+#print axioms DiamondIntegral.Section2.VFGeneratedFieldBase.gamma_closure_generated
+#check @DiamondIntegral.Section2.lemma_2_20_algebraic
+#print axioms DiamondIntegral.Section2.lemma_2_20_algebraic
+#check @DiamondIntegral.Section2.lemma_2_20_definable
+#print axioms DiamondIntegral.Section2.lemma_2_20_definable
+#check @DiamondIntegral.Section2.good_named_polydisc_branches
+#print axioms DiamondIntegral.Section2.good_named_polydisc_branches
+#check @DiamondIntegral.Section2.hensel_root_unique
+#print axioms DiamondIntegral.Section2.hensel_root_unique
+#check @DiamondIntegral.Section2.residueClass_definable
+#print axioms DiamondIntegral.Section2.residueClass_definable
+#check @DiamondIntegral.Section2.henselian_of_definableClosure_eq
+#print axioms DiamondIntegral.Section2.henselian_of_definableClosure_eq
+#check @DiamondIntegral.Section2.vfInfinitySide_iff
+#print axioms DiamondIntegral.Section2.vfInfinitySide_iff
+#check @DiamondIntegral.Section2.vfInfinitySide_raw_definable
+#print axioms DiamondIntegral.Section2.vfInfinitySide_raw_definable
+#check @DiamondIntegral.Section2.vfEscape_graph_definable
+#print axioms DiamondIntegral.Section2.vfEscape_graph_definable
+#check @DiamondIntegral.Section2.vfEscape_nonempty_of_unbounded
+#print axioms DiamondIntegral.Section2.vfEscape_nonempty_of_unbounded
+#check @DiamondIntegral.Section2.punctured_vf_nhds_neBot
+#print axioms DiamondIntegral.Section2.punctured_vf_nhds_neBot
+#check @DiamondIntegral.Section2.puncturedGammaDisc_mem_nhdsWithin
+#print axioms DiamondIntegral.Section2.puncturedGammaDisc_mem_nhdsWithin
+#check @DiamondIntegral.Section2.inverse_disc_control_of_definable_limit
+#print axioms DiamondIntegral.Section2.inverse_disc_control_of_definable_limit
+#check @DiamondIntegral.Section2.HasDerivativeAt.continuousAt
+#print axioms DiamondIntegral.Section2.HasDerivativeAt.continuousAt
+#check @DiamondIntegral.Section2.jacobianFibre_continuousAt_of_chart
+#print axioms DiamondIntegral.Section2.jacobianFibre_continuousAt_of_chart
+#check @DiamondIntegral.Section2.lemma_2_38
+#print axioms DiamondIntegral.Section2.lemma_2_38
+#check @DiamondIntegral.Section2.HasLimitSet.of_eventuallyEq
+#print axioms DiamondIntegral.Section2.HasLimitSet.of_eventuallyEq
+#check @DiamondIntegral.Section2.hasMinimalLimitSet_iff_of_eventuallyEq
+#print axioms DiamondIntegral.Section2.hasMinimalLimitSet_iff_of_eventuallyEq
+#check @DiamondIntegral.Section2.finite_constant_minimal_limit
+#print axioms DiamondIntegral.Section2.finite_constant_minimal_limit
+#check @DiamondIntegral.Section2.clopen_extension_continuous
+#print axioms DiamondIntegral.Section2.clopen_extension_continuous
+#check @DiamondIntegral.Section2.hasLimitSet_iff_companion
+#print axioms DiamondIntegral.Section2.hasLimitSet_iff_companion
+#check @DiamondIntegral.Section2.hasLimitSet_iff_subfamily
+#print axioms DiamondIntegral.Section2.hasLimitSet_iff_subfamily
+#check @DiamondIntegral.Section2.hasMinimalLimitSet_iff_companion
+#print axioms DiamondIntegral.Section2.hasMinimalLimitSet_iff_companion
+#check @DiamondIntegral.Section2.HasMinimalLimitSet.isolated
+#print axioms DiamondIntegral.Section2.HasMinimalLimitSet.isolated
+#check @DiamondIntegral.Section2.lemma_2_43
+#print axioms DiamondIntegral.Section2.lemma_2_43
+#check @DiamondIntegral.Section2.HasLimitSet.finite_locally_bounded
+#print axioms DiamondIntegral.Section2.HasLimitSet.finite_locally_bounded
+#check @DiamondIntegral.Section2.hasLimitSet_empty_zero_arity
+#print axioms DiamondIntegral.Section2.hasLimitSet_empty_zero_arity
+#check @DiamondIntegral.Section2.not_hasMinimalLimitSet_zero_arity
+#print axioms DiamondIntegral.Section2.not_hasMinimalLimitSet_zero_arity
+#check @DiamondIntegral.Section2.mixedTuple_rv
+#print axioms DiamondIntegral.Section2.mixedTuple_rv
+#check @DiamondIntegral.Section2.mixedTuple_eq_append_iff
+#print axioms DiamondIntegral.Section2.mixedTuple_eq_append_iff
+#check @DiamondIntegral.Section2.mixed_rv_domain_definable
+#print axioms DiamondIntegral.Section2.mixed_rv_domain_definable
+#check @DiamondIntegral.Section2.mixedGammaFamily_graph_definable
+#print axioms DiamondIntegral.Section2.mixedGammaFamily_graph_definable
+#check @DiamondIntegral.Section2.mixedGammaFamily_fibre_eq
+#print axioms DiamondIntegral.Section2.mixedGammaFamily_fibre_eq
+#check @DiamondIntegral.Section2.mixed_vf_fibre_definable
+#print axioms DiamondIntegral.Section2.mixed_vf_fibre_definable
+#check @DiamondIntegral.Section2.mixedGammaGraph_fibre_definable
+#print axioms DiamondIntegral.Section2.mixedGammaGraph_fibre_definable
+#check @DiamondIntegral.Section2.coordinate_section_definable_disc_names
+#print axioms DiamondIntegral.Section2.coordinate_section_definable_disc_names
+#check @DiamondIntegral.Section2.coordinate_line_atomic_disc_names
+#print axioms DiamondIntegral.Section2.coordinate_line_atomic_disc_names
+#check @DiamondIntegral.Section2.coordinate_line_graph_definable_disc_names
+#print axioms DiamondIntegral.Section2.coordinate_line_graph_definable_disc_names
+#check @DiamondIntegral.Section2.GeneratesTypeOverFiniteDiscNames.coordinate_fibre
+#print axioms DiamondIntegral.Section2.GeneratesTypeOverFiniteDiscNames.coordinate_fibre
+#check @DiamondIntegral.Section2.DefinableOverFiniteDiscNames.raw_auxiliary
+#print axioms DiamondIntegral.Section2.DefinableOverFiniteDiscNames.raw_auxiliary
+#check @DiamondIntegral.Section2.finite_subcover_disc_names
+#print axioms DiamondIntegral.Section2.finite_subcover_disc_names
+#check @DiamondIntegral.Section2.DefinableOverFiniteDiscNames.sorted_finite_iInter
+#print axioms DiamondIntegral.Section2.DefinableOverFiniteDiscNames.sorted_finite_iInter
+#check @DiamondIntegral.Section2.DefinableOverFiniteDiscNames.append_names_left
+#print axioms DiamondIntegral.Section2.DefinableOverFiniteDiscNames.append_names_left
+#check @DiamondIntegral.Section2.DefinableOverFiniteDiscNames.append_names_right
+#print axioms DiamondIntegral.Section2.DefinableOverFiniteDiscNames.append_names_right
+#check @DiamondIntegral.Section2.corollary_2_30_disc_names
+#print axioms DiamondIntegral.Section2.corollary_2_30_disc_names
+#check @DiamondIntegral.Section2.good_named_polydisc_branches_disc_names
+#print axioms DiamondIntegral.Section2.good_named_polydisc_branches_disc_names
+#check @DiamondIntegral.Section2.goodTaggedCodes_definable_disc_names
+#print axioms DiamondIntegral.Section2.goodTaggedCodes_definable_disc_names
+#check @DiamondIntegral.Section2.rawOpenPolydiscProper_sorted
+#print axioms DiamondIntegral.Section2.rawOpenPolydiscProper_sorted
+#check @DiamondIntegral.Section2.lemma_2_25_finite_names
+#print axioms DiamondIntegral.Section2.lemma_2_25_finite_names
+#check @DiamondIntegral.Section2.atomic_open_polydisc_image_disc_names
+#print axioms DiamondIntegral.Section2.atomic_open_polydisc_image_disc_names
+#check @DiamondIntegral.Section2.vfRelationTags_definable_disc_names
+#print axioms DiamondIntegral.Section2.vfRelationTags_definable_disc_names
+#check @DiamondIntegral.Section2.vfTagBranch_definable_disc_names
+#print axioms DiamondIntegral.Section2.vfTagBranch_definable_disc_names
+#check @DiamondIntegral.Section2.vfTagBranch_cover_disc_names
+#print axioms DiamondIntegral.Section2.vfTagBranch_cover_disc_names
+#check @DiamondIntegral.Section2.atomic_polydisc_rv_branches_disc_names
+#print axioms DiamondIntegral.Section2.atomic_polydisc_rv_branches_disc_names
+#check @DiamondIntegral.Section2.rv_relation_constant_disc_names
+#print axioms DiamondIntegral.Section2.rv_relation_constant_disc_names
+#check @DiamondIntegral.Section2.rv_image_constant_disc_names
+#print axioms DiamondIntegral.Section2.rv_image_constant_disc_names
+#check @DiamondIntegral.Section2.lemma_2_26_disc_names
+#print axioms DiamondIntegral.Section2.lemma_2_26_disc_names
+#check @DiamondIntegral.Section2.vfRVImage_definable_disc_names
+#print axioms DiamondIntegral.Section2.vfRVImage_definable_disc_names
+#check @DiamondIntegral.Section2.rv_row_definable_disc_names
+#print axioms DiamondIntegral.Section2.rv_row_definable_disc_names
+#check @DiamondIntegral.Section2.named_tag_branch_graph_definable
+#print axioms DiamondIntegral.Section2.named_tag_branch_graph_definable
+#check @DiamondIntegral.Section2.lemma_2_29_disc_names
+#print axioms DiamondIntegral.Section2.lemma_2_29_disc_names
+#check @DiamondIntegral.Section2.good_tagged_polydisc_partition_disc_names
+#print axioms DiamondIntegral.Section2.good_tagged_polydisc_partition_disc_names
+#check @DiamondIntegral.Section2.named_tuple_tag_branch_graph_definable
+#print axioms DiamondIntegral.Section2.named_tuple_tag_branch_graph_definable
+#check @DiamondIntegral.Section2.namedDiscTypeLocus_generates
+#print axioms DiamondIntegral.Section2.namedDiscTypeLocus_generates
+#check @DiamondIntegral.Section2.badDiscFibreCodes_definable
+#print axioms DiamondIntegral.Section2.badDiscFibreCodes_definable
+#check @DiamondIntegral.Section2.named_type_local_good_neighbourhood
+#print axioms DiamondIntegral.Section2.named_type_local_good_neighbourhood
+#check @DiamondIntegral.Section2.rawGoodTaggedPolydiscCodes_of_branches
+#print axioms DiamondIntegral.Section2.rawGoodTaggedPolydiscCodes_of_branches
+#check @DiamondIntegral.Section2.type_good_tagged_polydisc_code_disc_names
+#print axioms DiamondIntegral.Section2.type_good_tagged_polydisc_code_disc_names
+#check @DiamondIntegral.Section2.named_type_local_finite_good_cover
+#print axioms DiamondIntegral.Section2.named_type_local_finite_good_cover
+#check @DiamondIntegral.Section2.named_finite_good_cover_partition
+#print axioms DiamondIntegral.Section2.named_finite_good_cover_partition
+#check @DiamondIntegral.Section2.vf_function_image_definable_disc_names
+#print axioms DiamondIntegral.Section2.vf_function_image_definable_disc_names
+#check @DiamondIntegral.Section2.vf_function_image_atomic_disc_names
+#print axioms DiamondIntegral.Section2.vf_function_image_atomic_disc_names
+#check @DiamondIntegral.Section2.isOpenDisc_iff_points
+#print axioms DiamondIntegral.Section2.isOpenDisc_iff_points
+#check @DiamondIntegral.Section2.openDiscs_nested
+#print axioms DiamondIntegral.Section2.openDiscs_nested
+#check @DiamondIntegral.Section2.ball_points_form
+#print axioms DiamondIntegral.Section2.ball_points_form
+#check @DiamondIntegral.Section2.IsOpenDisc.isBall
+#print axioms DiamondIntegral.Section2.IsOpenDisc.isBall
+#check @DiamondIntegral.Section2.IsOpenDisc.infinite
+#print axioms DiamondIntegral.Section2.IsOpenDisc.infinite
+#check @DiamondIntegral.Section2.IsOpenDiscPartition.constant_of_lt_bound
+#print axioms DiamondIntegral.Section2.IsOpenDiscPartition.constant_of_lt_bound
+#check @DiamondIntegral.Section2.IsOpenDiscPartition.bddBelow
+#print axioms DiamondIntegral.Section2.IsOpenDiscPartition.bddBelow
+#check @DiamondIntegral.Section2.IsOpenDiscPartition.no_escape_limit
+#print axioms DiamondIntegral.Section2.IsOpenDiscPartition.no_escape_limit
+#check @DiamondIntegral.Section2.openDiscCode_mem_iff_value
+#print axioms DiamondIntegral.Section2.openDiscCode_mem_iff_value
+#check @DiamondIntegral.Section2.openPolydiscCarrier_definable
+#print axioms DiamondIntegral.Section2.openPolydiscCarrier_definable
+#check @DiamondIntegral.Section2.openPolydiscCarrier_at
+#print axioms DiamondIntegral.Section2.openPolydiscCarrier_at
+#check @DiamondIntegral.Section2.openPolydiscGammaRelation_fibre
+#print axioms DiamondIntegral.Section2.openPolydiscGammaRelation_fibre
+#check @DiamondIntegral.Section2.named_open_polydisc_definable
+#print axioms DiamondIntegral.Section2.named_open_polydisc_definable
+#check @DiamondIntegral.Section2.finitary_open_rv_partition
+#print axioms DiamondIntegral.Section2.finitary_open_rv_partition
+#check @DiamondIntegral.Section2.VFGeneratedFieldBase.parameter_core
+#print axioms DiamondIntegral.Section2.VFGeneratedFieldBase.parameter_core
+#check @DiamondIntegral.Section2.puncturedGammaDisc_raw_eq
+#print axioms DiamondIntegral.Section2.puncturedGammaDisc_raw_eq
+#check @DiamondIntegral.Section2.puncturedGammaDisc_parametrically_definable
+#print axioms DiamondIntegral.Section2.puncturedGammaDisc_parametrically_definable
+#check @DiamondIntegral.Section2.exists_puncturedGammaDisc_subset_nhds
+#print axioms DiamondIntegral.Section2.exists_puncturedGammaDisc_subset_nhds
+#check @DiamondIntegral.Section2.parametricTagRow_definable
+#print axioms DiamondIntegral.Section2.parametricTagRow_definable
+#check @DiamondIntegral.Section2.parametricTaggedImage_definable
+#print axioms DiamondIntegral.Section2.parametricTaggedImage_definable
+#check @DiamondIntegral.Section2.parametricGoodTaggedPolydiscCodes_definable
+#print axioms DiamondIntegral.Section2.parametricGoodTaggedPolydiscCodes_definable
+#check @DiamondIntegral.Section2.lemma_2_53
+#print axioms DiamondIntegral.Section2.lemma_2_53
+#check @DiamondIntegral.Section2.lemma_2_53_image_bounds
+#print axioms DiamondIntegral.Section2.lemma_2_53_image_bounds
+#check @DiamondIntegral.Section2.openDiscPartition_bddAbove_vf_core
+#print axioms DiamondIntegral.Section2.openDiscPartition_bddAbove_vf_core
+#check @DiamondIntegral.Section2.lemma_2_53_vf
+#print axioms DiamondIntegral.Section2.lemma_2_53_vf
+#check @DiamondIntegral.Section2.codeValue_rv_finite
+#print axioms DiamondIntegral.Section2.codeValue_rv_finite
+#check @DiamondIntegral.Section2.partitionEscape_graph_definable
+#print axioms DiamondIntegral.Section2.partitionEscape_graph_definable
+#check @DiamondIntegral.Section2.partitionEscape_nonempty_of_unbounded
+#print axioms DiamondIntegral.Section2.partitionEscape_nonempty_of_unbounded
+#check @DiamondIntegral.Section2.lemma_2_18_finite_names
+#print axioms DiamondIntegral.Section2.lemma_2_18_finite_names
+#check @DiamondIntegral.Section2.IsAtomicOverFiniteDiscNames.image_equiv
+#print axioms DiamondIntegral.Section2.IsAtomicOverFiniteDiscNames.image_equiv
+#check @DiamondIntegral.Section2.lemma_2_25
+#print axioms DiamondIntegral.Section2.lemma_2_25
+#check @DiamondIntegral.Section2.lemma_2_25_closed
+#print axioms DiamondIntegral.Section2.lemma_2_25_closed
+#check @DiamondIntegral.Section2.lemma_2_25_open
+#print axioms DiamondIntegral.Section2.lemma_2_25_open
+#check @DiamondIntegral.Section2.PolydiscNaming.product_iff
+#print axioms DiamondIntegral.Section2.PolydiscNaming.product_iff
+#check @DiamondIntegral.Section2.discNameProduct_proper
+#print axioms DiamondIntegral.Section2.discNameProduct_proper
+#check @DiamondIntegral.Section2.closedPolydiscNaming_nonempty
+#print axioms DiamondIntegral.Section2.closedPolydiscNaming_nonempty
+#check @DiamondIntegral.Section2.rectangle_image_isOpenDisc
+#print axioms DiamondIntegral.Section2.rectangle_image_isOpenDisc
+#check @DiamondIntegral.Section2.atomic_open_polydisc_image
+#print axioms DiamondIntegral.Section2.atomic_open_polydisc_image
+#check @DiamondIntegral.Section2.atomicNormalForm_iff_of_names
+#print axioms DiamondIntegral.Section2.atomicNormalForm_iff_of_names
+#check @DiamondIntegral.Section2.lemma_2_25_singleton_normal_form
+#print axioms DiamondIntegral.Section2.lemma_2_25_singleton_normal_form
+#check @DiamondIntegral.Section2.prefixedCoordinateRelation_mem
+#print axioms DiamondIntegral.Section2.prefixedCoordinateRelation_mem
+#check @DiamondIntegral.Section2.prefixedCoordinateRelation_mem_general
+#print axioms DiamondIntegral.Section2.prefixedCoordinateRelation_mem_general
+#check @DiamondIntegral.Section2.FiniteDiscTupleRelation.prefixedCoordinateLine_fibre
+#print axioms DiamondIntegral.Section2.FiniteDiscTupleRelation.prefixedCoordinateLine_fibre
+#check @DiamondIntegral.Section2.finitePolydiscNames_append
+#print axioms DiamondIntegral.Section2.finitePolydiscNames_append
+#check @DiamondIntegral.Section2.prefixedCoordinateGammaIndex_append
+#print axioms DiamondIntegral.Section2.prefixedCoordinateGammaIndex_append
+#check @DiamondIntegral.Section2.prefixedCoordinateRealMap_definable
+#print axioms DiamondIntegral.Section2.prefixedCoordinateRealMap_definable
+#check @DiamondIntegral.Section2.prefixedCoordinateRealMap_append
+#print axioms DiamondIntegral.Section2.prefixedCoordinateRealMap_append
+#check @DiamondIntegral.Section2.namedPolydisc_definable_with_disc_ground
+#print axioms DiamondIntegral.Section2.namedPolydisc_definable_with_disc_ground
+#check @DiamondIntegral.Section2.lemma_2_25_with_disc_ground
+#print axioms DiamondIntegral.Section2.lemma_2_25_with_disc_ground
+#check @DiamondIntegral.Section2.atomic_in_every_chart_with_disc_ground
+#print axioms DiamondIntegral.Section2.atomic_in_every_chart_with_disc_ground
+#check @DiamondIntegral.Section2.lemma_2_25_disc_ground
+#print axioms DiamondIntegral.Section2.lemma_2_25_disc_ground
+#check @DiamondIntegral.Section2.lemma_2_25_disc_ground_closed
+#print axioms DiamondIntegral.Section2.lemma_2_25_disc_ground_closed
+#check @DiamondIntegral.Section2.lemma_2_25_disc_ground_open
+#print axioms DiamondIntegral.Section2.lemma_2_25_disc_ground_open
+#check @DiamondIntegral.Section2.lemma_2_25_singleton_with_disc_ground
+#print axioms DiamondIntegral.Section2.lemma_2_25_singleton_with_disc_ground
+#check @DiamondIntegral.Section2.thinAnnulus_points
+#print axioms DiamondIntegral.Section2.thinAnnulus_points
+#check @DiamondIntegral.Section2.vfPairMapGraph_join_definable
+#print axioms DiamondIntegral.Section2.vfPairMapGraph_join_definable
+#check @DiamondIntegral.Section2.relativePairProjectiveGraph_isClosed_iff
+#print axioms DiamondIntegral.Section2.relativePairProjectiveGraph_isClosed_iff
+#check @DiamondIntegral.Section2.continuousOn_pair_iff_projective_graph_isClosed
+#print axioms DiamondIntegral.Section2.continuousOn_pair_iff_projective_graph_isClosed
+#check @DiamondIntegral.Section2.isClosed_of_two_open_maps_cover
+#print axioms DiamondIntegral.Section2.isClosed_of_two_open_maps_cover
+#check @DiamondIntegral.Section2.projective_unary_chart_cover
+#print axioms DiamondIntegral.Section2.projective_unary_chart_cover
+#check @DiamondIntegral.Section2.isClosed_projective_unary_of_charts
+#print axioms DiamondIntegral.Section2.isClosed_projective_unary_of_charts
+#check @DiamondIntegral.Section2.rawInvertCoordinates_definable
+#print axioms DiamondIntegral.Section2.rawInvertCoordinates_definable
+#check @DiamondIntegral.Section2.vfValues_invertCoordinates
+#print axioms DiamondIntegral.Section2.vfValues_invertCoordinates
+#check @DiamondIntegral.Section2.inversionDomain_definable
+#print axioms DiamondIntegral.Section2.inversionDomain_definable
+#check @DiamondIntegral.Section2.invertCoordinates_image_definable
+#print axioms DiamondIntegral.Section2.invertCoordinates_image_definable
+#check @DiamondIntegral.Section2.invertCoordinates_correspondence_definable
+#print axioms DiamondIntegral.Section2.invertCoordinates_correspondence_definable
+#check @DiamondIntegral.Section2.invertCoordinates_involutive
+#print axioms DiamondIntegral.Section2.invertCoordinates_involutive
+#check @DiamondIntegral.Section2.invertCoordinates_domain
+#print axioms DiamondIntegral.Section2.invertCoordinates_domain
+#check @DiamondIntegral.Section2.vfValue_inv_finite
+#print axioms DiamondIntegral.Section2.vfValue_inv_finite
+#check @DiamondIntegral.Section2.reciprocal_near_zero_iff
+#print axioms DiamondIntegral.Section2.reciprocal_near_zero_iff
+#check @DiamondIntegral.Section2.projectiveBall_in_domain
+#print axioms DiamondIntegral.Section2.projectiveBall_in_domain
+#check @DiamondIntegral.Section2.projective_chart_near_iff
+#print axioms DiamondIntegral.Section2.projective_chart_near_iff
+#check @DiamondIntegral.Section2.continuousAt_invertCoordinates
+#print axioms DiamondIntegral.Section2.continuousAt_invertCoordinates
+#check @DiamondIntegral.Section2.projectiveClosure_chart_mem_closure
+#print axioms DiamondIntegral.Section2.projectiveClosure_chart_mem_closure
+#check @DiamondIntegral.Section2.projectiveClosure_finite_iff
+#print axioms DiamondIntegral.Section2.projectiveClosure_finite_iff
+#check @DiamondIntegral.Section2.projective_family_closed_off_finite
+#print axioms DiamondIntegral.Section2.projective_family_closed_off_finite
+#check @DiamondIntegral.Section2.continuous_finiteProjectiveTuple
+#print axioms DiamondIntegral.Section2.continuous_finiteProjectiveTuple
+#check @DiamondIntegral.Section2.projectiveFibreClosure_graph_inter
+#print axioms DiamondIntegral.Section2.projectiveFibreClosure_graph_inter
+#check @DiamondIntegral.Section2.projectiveGraphCluster_iff_mem_closure
+#print axioms DiamondIntegral.Section2.projectiveGraphCluster_iff_mem_closure
+#check @DiamondIntegral.Section2.relativeProjectiveGraph_isClosed_iff
+#print axioms DiamondIntegral.Section2.relativeProjectiveGraph_isClosed_iff
+#check @DiamondIntegral.Section2.ProjectiveLine.finite_injective
+#print axioms DiamondIntegral.Section2.ProjectiveLine.finite_injective
+#check @DiamondIntegral.Section2.ProjectiveLine.reciprocal_finite
+#print axioms DiamondIntegral.Section2.ProjectiveLine.reciprocal_finite
+#check @DiamondIntegral.Section2.ProjectiveLine.reciprocal_reciprocalChart
+#print axioms DiamondIntegral.Section2.ProjectiveLine.reciprocal_reciprocalChart
+#check @DiamondIntegral.Section2.ProjectiveLine.reciprocal_involutive
+#print axioms DiamondIntegral.Section2.ProjectiveLine.reciprocal_involutive
+#check @DiamondIntegral.Section2.ProjectiveLine.isOpen_iff_charts
+#print axioms DiamondIntegral.Section2.ProjectiveLine.isOpen_iff_charts
+#check @DiamondIntegral.Section2.ProjectiveLine.continuous_finite
+#print axioms DiamondIntegral.Section2.ProjectiveLine.continuous_finite
+#check @DiamondIntegral.Section2.ProjectiveLine.continuous_reciprocalChart
+#print axioms DiamondIntegral.Section2.ProjectiveLine.continuous_reciprocalChart
+#check @DiamondIntegral.Section2.ProjectiveLine.continuous_reciprocal
+#print axioms DiamondIntegral.Section2.ProjectiveLine.continuous_reciprocal
+#check @DiamondIntegral.Section2.ProjectiveLine.isOpenMap_finite
+#print axioms DiamondIntegral.Section2.ProjectiveLine.isOpenMap_finite
+#check @DiamondIntegral.Section2.ProjectiveLine.isOpenEmbedding_finite
+#print axioms DiamondIntegral.Section2.ProjectiveLine.isOpenEmbedding_finite
+#check @DiamondIntegral.Section2.ProjectiveLine.isOpenEmbedding_reciprocalChart
+#print axioms DiamondIntegral.Section2.ProjectiveLine.isOpenEmbedding_reciprocalChart
+#check @DiamondIntegral.Section2.projectiveClosure_univ
+#print axioms DiamondIntegral.Section2.projectiveClosure_univ
+#check @DiamondIntegral.Section2.finiteProjectiveTuple_denseRange
+#print axioms DiamondIntegral.Section2.finiteProjectiveTuple_denseRange
+#check @DiamondIntegral.Section2.projectiveProduct_t2Space
+#print axioms DiamondIntegral.Section2.projectiveProduct_t2Space
+#check @DiamondIntegral.Section2.projectiveTupleChart_centre
+#print axioms DiamondIntegral.Section2.projectiveTupleChart_centre
+#check @DiamondIntegral.Section2.projectiveTupleChart_inverse
+#print axioms DiamondIntegral.Section2.projectiveTupleChart_inverse
+#check @DiamondIntegral.Section2.projectiveTupleChart_eq_finite_iff
+#print axioms DiamondIntegral.Section2.projectiveTupleChart_eq_finite_iff
+#check @DiamondIntegral.Section2.mem_projectiveChartBall_finite_iff
+#print axioms DiamondIntegral.Section2.mem_projectiveChartBall_finite_iff
+#check @DiamondIntegral.Section2.projectiveTupleChart_isOpenEmbedding
+#print axioms DiamondIntegral.Section2.projectiveTupleChart_isOpenEmbedding
+#check @DiamondIntegral.Section2.projectiveChartBall_isOpen
+#print axioms DiamondIntegral.Section2.projectiveChartBall_isOpen
+#check @DiamondIntegral.Section2.projectiveChartBall_mem_nhds
+#print axioms DiamondIntegral.Section2.projectiveChartBall_mem_nhds
+#check @DiamondIntegral.Section2.exists_projectiveChartBall_subset_nhds
+#print axioms DiamondIntegral.Section2.exists_projectiveChartBall_subset_nhds
+#check @DiamondIntegral.Section2.projectiveClosure_iff_topological
+#print axioms DiamondIntegral.Section2.projectiveClosure_iff_topological
+#check @DiamondIntegral.Section2.gammaPowerGerm_puncturedValueLaw
+#print axioms DiamondIntegral.Section2.gammaPowerGerm_puncturedValueLaw
+#check @DiamondIntegral.Section2.PuncturedValueLaw.disc_iff
+#print axioms DiamondIntegral.Section2.PuncturedValueLaw.disc_iff
+#check @DiamondIntegral.Section2.punctured_disc_images_of_value_law
+#print axioms DiamondIntegral.Section2.punctured_disc_images_of_value_law
+#check @DiamondIntegral.Section2.rvCollapseTuple_finite_fibres
+#print axioms DiamondIntegral.Section2.rvCollapseTuple_finite_fibres
+#check @DiamondIntegral.Section2.rv_finite_map_to_arity
+#print axioms DiamondIntegral.Section2.rv_finite_map_to_arity
+#check @DiamondIntegral.Section2.rvDimension_le_arity
+#print axioms DiamondIntegral.Section2.rvDimension_le_arity
+#check @DiamondIntegral.Section2.RVValueDoublyBounded.nonzero
+#print axioms DiamondIntegral.Section2.RVValueDoublyBounded.nonzero
+#check @DiamondIntegral.Section2.nonzero_rv_codeValue_val
+#print axioms DiamondIntegral.Section2.nonzero_rv_codeValue_val
+#check @DiamondIntegral.Section2.rvGammaRawExtension_on
+#print axioms DiamondIntegral.Section2.rvGammaRawExtension_on
+#check @DiamondIntegral.Section2.rvGammaFunctionGraph_raw_eq
+#print axioms DiamondIntegral.Section2.rvGammaFunctionGraph_raw_eq
+#check @DiamondIntegral.Section2.lemma_2_41_gamma
+#print axioms DiamondIntegral.Section2.lemma_2_41_gamma
+#check @DiamondIntegral.Section2.rvGammaFunctionGraph_of_rv_definable
+#print axioms DiamondIntegral.Section2.rvGammaFunctionGraph_of_rv_definable
+#check @DiamondIntegral.Section2.lemma_2_41
+#print axioms DiamondIntegral.Section2.lemma_2_41
+#check @DiamondIntegral.Section2.vfRelationTags_eq_row
+#print axioms DiamondIntegral.Section2.vfRelationTags_eq_row
+#check @DiamondIntegral.Section2.vfRelationTags_finite
+#print axioms DiamondIntegral.Section2.vfRelationTags_finite
+#check @DiamondIntegral.Section2.vfRelationTags_definable
+#print axioms DiamondIntegral.Section2.vfRelationTags_definable
+#check @DiamondIntegral.Section2.vfTagBranch_definable
+#print axioms DiamondIntegral.Section2.vfTagBranch_definable
+#check @DiamondIntegral.Section2.vfTagBranch_existsUnique
+#print axioms DiamondIntegral.Section2.vfTagBranch_existsUnique
+#check @DiamondIntegral.Section2.vfTagBranch_function
+#print axioms DiamondIntegral.Section2.vfTagBranch_function
+#check @DiamondIntegral.Section2.vfTagBranch_cover
+#print axioms DiamondIntegral.Section2.vfTagBranch_cover
+#check @DiamondIntegral.Section2.atomic_polydisc_rv_branches
+#print axioms DiamondIntegral.Section2.atomic_polydisc_rv_branches
+#check @DiamondIntegral.Section2.lastToCoordinate_castSucc
+#print axioms DiamondIntegral.Section2.lastToCoordinate_castSucc
+#check @DiamondIntegral.Section2.lastToCoordinate_last
+#print axioms DiamondIntegral.Section2.lastToCoordinate_last
+#check @DiamondIntegral.Section2.rvCoordinateCylinder_eq_reindexed
+#print axioms DiamondIntegral.Section2.rvCoordinateCylinder_eq_reindexed
+#check @DiamondIntegral.Section2.rvCoordinateCylinder_definable
+#print axioms DiamondIntegral.Section2.rvCoordinateCylinder_definable
+#check @DiamondIntegral.Section2.rvDimension_coordinate_cylinder_lt
+#print axioms DiamondIntegral.Section2.rvDimension_coordinate_cylinder_lt
+#check @DiamondIntegral.Section2.rvDimension_empty
+#print axioms DiamondIntegral.Section2.rvDimension_empty
+#check @DiamondIntegral.Section2.rvDimension_eq_bot_iff
+#print axioms DiamondIntegral.Section2.rvDimension_eq_bot_iff
+#check @DiamondIntegral.Section2.rvDimension_empty_lt
+#print axioms DiamondIntegral.Section2.rvDimension_empty_lt
+#check @DiamondIntegral.Section2.rv_finite_map_exists
+#print axioms DiamondIntegral.Section2.rv_finite_map_exists
+#check @DiamondIntegral.Section2.rvDimension_attained
+#print axioms DiamondIntegral.Section2.rvDimension_attained
+#check @DiamondIntegral.Section2.rvDimension_lt_succ_iff_finite_map
+#print axioms DiamondIntegral.Section2.rvDimension_lt_succ_iff_finite_map
+#check @DiamondIntegral.Section2.rvDimension_finite_union_lt
+#print axioms DiamondIntegral.Section2.rvDimension_finite_union_lt
+#check @DiamondIntegral.Section2.rvDimension_cylinder_lt
+#print axioms DiamondIntegral.Section2.rvDimension_cylinder_lt
+#check @DiamondIntegral.Section2.rvRawFibre_definable
+#print axioms DiamondIntegral.Section2.rvRawFibre_definable
+#check @DiamondIntegral.Section2.rvRawFibre_isOpenDisc
+#print axioms DiamondIntegral.Section2.rvRawFibre_isOpenDisc
+#check @DiamondIntegral.Section2.boundary_rv_fibre_definable_point
+#print axioms DiamondIntegral.Section2.boundary_rv_fibre_definable_point
+#check @DiamondIntegral.Section2.rvHasFiniteMap_zero_of_finite
+#print axioms DiamondIntegral.Section2.rvHasFiniteMap_zero_of_finite
+#check @DiamondIntegral.Section2.rvDimension_finite_eq_zero
+#print axioms DiamondIntegral.Section2.rvDimension_finite_eq_zero
+#check @DiamondIntegral.Section2.rvDimension_finite_lt_one
+#print axioms DiamondIntegral.Section2.rvDimension_finite_lt_one
+#check @DiamondIntegral.Section2.lemma_2_35_unary
+#print axioms DiamondIntegral.Section2.lemma_2_35_unary
+#check @DiamondIntegral.Section2.rvBoundary_zero_arity_dimension
+#print axioms DiamondIntegral.Section2.rvBoundary_zero_arity_dimension
+#check @DiamondIntegral.Section2.lemma_2_41_gamma_raw
+#print axioms DiamondIntegral.Section2.lemma_2_41_gamma_raw
+#check @DiamondIntegral.Section2.rawGammaLessGraph_eq
+#print axioms DiamondIntegral.Section2.rawGammaLessGraph_eq
+#check @DiamondIntegral.Section2.rawGammaLessGraph_definable
+#print axioms DiamondIntegral.Section2.rawGammaLessGraph_definable
+#check @DiamondIntegral.Section2.rv_gamma_image_finite_on_value_fibre
+#print axioms DiamondIntegral.Section2.rv_gamma_image_finite_on_value_fibre
+#check @DiamondIntegral.Section2.mem_rvHull_iff
+#print axioms DiamondIntegral.Section2.mem_rvHull_iff
+#check @DiamondIntegral.Section2.subset_rvHull
+#print axioms DiamondIntegral.Section2.subset_rvHull
+#check @DiamondIntegral.Section2.rvHull_mono
+#print axioms DiamondIntegral.Section2.rvHull_mono
+#check @DiamondIntegral.Section2.rvHull_idempotent
+#print axioms DiamondIntegral.Section2.rvHull_idempotent
+#check @DiamondIntegral.Section2.rvHull_least
+#print axioms DiamondIntegral.Section2.rvHull_least
+#check @DiamondIntegral.Section2.rvHull_preserves_tags
+#print axioms DiamondIntegral.Section2.rvHull_preserves_tags
+#check @DiamondIntegral.Section2.vfFibre_rvHull
+#print axioms DiamondIntegral.Section2.vfFibre_rvHull
+#check @DiamondIntegral.Section2.rvHull_zero_singleton
+#print axioms DiamondIntegral.Section2.rvHull_zero_singleton
+#check @DiamondIntegral.Section2.isRVPullback_iff_boundary_empty
+#print axioms DiamondIntegral.Section2.isRVPullback_iff_boundary_empty
+#check @DiamondIntegral.Section2.rv_eq_definable
+#print axioms DiamondIntegral.Section2.rv_eq_definable
+#check @DiamondIntegral.Section2.vfRVImage_definable
+#print axioms DiamondIntegral.Section2.vfRVImage_definable
+#check @DiamondIntegral.Section2.rv_image_constant_on_atomic_polydisc
+#print axioms DiamondIntegral.Section2.rv_image_constant_on_atomic_polydisc
+#check @DiamondIntegral.Section2.lemma_2_26
+#print axioms DiamondIntegral.Section2.lemma_2_26
+#check @DiamondIntegral.Section2.rv_indexed_dimension_le
+#print axioms DiamondIntegral.Section2.rv_indexed_dimension_le
+#check @DiamondIntegral.Section2.rv_indexed_dimension_lt
+#print axioms DiamondIntegral.Section2.rv_indexed_dimension_lt
+#check @DiamondIntegral.Section2.rv_indexed_image_dimension_lt
+#print axioms DiamondIntegral.Section2.rv_indexed_image_dimension_lt
+#check @DiamondIntegral.Section2.rv_indexed_gamma_family_bounded
+#print axioms DiamondIntegral.Section2.rv_indexed_gamma_family_bounded
+#check @DiamondIntegral.Section2.rvFunctionGraph_fibre
+#print axioms DiamondIntegral.Section2.rvFunctionGraph_fibre
+#check @DiamondIntegral.Section2.rvFunctionLocallyConstantAt_iff_fibre
+#print axioms DiamondIntegral.Section2.rvFunctionLocallyConstantAt_iff_fibre
+#check @DiamondIntegral.Section2.rvFunctionLocallyConstant_zero_arity
+#print axioms DiamondIntegral.Section2.rvFunctionLocallyConstant_zero_arity
+#check @DiamondIntegral.Section2.rvFunction_locallyConstant_of_independent
+#print axioms DiamondIntegral.Section2.rvFunction_locallyConstant_of_independent
+#check @DiamondIntegral.Section2.rvFunction_locallyConstant_ae
+#print axioms DiamondIntegral.Section2.rvFunction_locallyConstant_ae
+#check @DiamondIntegral.Section2.RVHasFiniteMap.domain_definable
+#print axioms DiamondIntegral.Section2.RVHasFiniteMap.domain_definable
+#check @DiamondIntegral.Section2.rvReindexed_definable
+#print axioms DiamondIntegral.Section2.rvReindexed_definable
+#check @DiamondIntegral.Section2.rvDimension_reindex_le
+#print axioms DiamondIntegral.Section2.rvDimension_reindex_le
+#check @DiamondIntegral.Section2.rvInputValues_injective
+#print axioms DiamondIntegral.Section2.rvInputValues_injective
+#check @DiamondIntegral.Section2.rvRawMapGraph_definable
+#print axioms DiamondIntegral.Section2.rvRawMapGraph_definable
+#check @DiamondIntegral.Section2.rvMapGraph_of_raw_map
+#print axioms DiamondIntegral.Section2.rvMapGraph_of_raw_map
+#check @DiamondIntegral.Section2.rvMapGraph_sorted
+#print axioms DiamondIntegral.Section2.rvMapGraph_sorted
+#check @DiamondIntegral.Section2.rvMapGraph_definable_of_raw_map
+#print axioms DiamondIntegral.Section2.rvMapGraph_definable_of_raw_map
+#check @DiamondIntegral.Section2.rvOne_raw_definable
+#print axioms DiamondIntegral.Section2.rvOne_raw_definable
+#check @DiamondIntegral.Section2.RVHasFiniteMap.append_constants
+#print axioms DiamondIntegral.Section2.RVHasFiniteMap.append_constants
+#check @DiamondIntegral.Section2.RVHasFiniteMap.product
+#print axioms DiamondIntegral.Section2.RVHasFiniteMap.product
+#check @DiamondIntegral.Section2.rv_univ_definable
+#print axioms DiamondIntegral.Section2.rv_univ_definable
+#check @DiamondIntegral.Section2.RVHasFiniteMap.reindex
+#print axioms DiamondIntegral.Section2.RVHasFiniteMap.reindex
+#check @DiamondIntegral.Section2.RVHasFiniteMap.restrict
+#print axioms DiamondIntegral.Section2.RVHasFiniteMap.restrict
+#check @DiamondIntegral.Section2.rvDimension_le_of_finite_map
+#print axioms DiamondIntegral.Section2.rvDimension_le_of_finite_map
+#check @DiamondIntegral.Section2.rvDimension_mono
+#print axioms DiamondIntegral.Section2.rvDimension_mono
+#check @DiamondIntegral.Section2.rv_finite_map_empty
+#print axioms DiamondIntegral.Section2.rv_finite_map_empty
+#check @DiamondIntegral.Section2.RVHasFiniteMap.union
+#print axioms DiamondIntegral.Section2.RVHasFiniteMap.union
+#check @DiamondIntegral.Section2.rv_finite_map_finite_union
+#print axioms DiamondIntegral.Section2.rv_finite_map_finite_union
+#check @DiamondIntegral.Section2.finite_function_fibres_comp
+#print axioms DiamondIntegral.Section2.finite_function_fibres_comp
+#check @DiamondIntegral.Section2.rv_finite_map_of_finite_projection
+#print axioms DiamondIntegral.Section2.rv_finite_map_of_finite_projection
+#check @DiamondIntegral.Section2.rvDimension_lt_of_finite_projection
+#print axioms DiamondIntegral.Section2.rvDimension_lt_of_finite_projection
+#check @DiamondIntegral.Section2.forgetRVCoordinatesMap_mem
+#print axioms DiamondIntegral.Section2.forgetRVCoordinatesMap_mem
+#check @DiamondIntegral.Section2.vfDimension_le_arity
+#print axioms DiamondIntegral.Section2.vfDimension_le_arity
+#check @DiamondIntegral.Section2.forgetRV_full_dimension_iff
+#print axioms DiamondIntegral.Section2.forgetRV_full_dimension_iff
+#check @DiamondIntegral.Section2.forgetRV_dimension_lt_iff
+#print axioms DiamondIntegral.Section2.forgetRV_dimension_lt_iff
+#check @DiamondIntegral.Section2.rv_indexed_union_vfDimension_lt
+#print axioms DiamondIntegral.Section2.rv_indexed_union_vfDimension_lt
+#check @DiamondIntegral.Section2.sameScalar_iff_codeValue_eq
+#print axioms DiamondIntegral.Section2.sameScalar_iff_codeValue_eq
+#check @DiamondIntegral.Section2.rvValueSource_definable
+#print axioms DiamondIntegral.Section2.rvValueSource_definable
+#check @DiamondIntegral.Section2.rvValueSource_projection
+#print axioms DiamondIntegral.Section2.rvValueSource_projection
+#check @DiamondIntegral.Section2.rvValueDomain_codes_definable
+#print axioms DiamondIntegral.Section2.rvValueDomain_codes_definable
+#check @DiamondIntegral.Section2.rvValueSource_graph_definable
+#print axioms DiamondIntegral.Section2.rvValueSource_graph_definable
+#check @DiamondIntegral.Section2.projectedGammaFamily_value_eq
+#print axioms DiamondIntegral.Section2.projectedGammaFamily_value_eq
+#check @DiamondIntegral.Section2.rvValueFamily_graph_definable
+#print axioms DiamondIntegral.Section2.rvValueFamily_graph_definable
+#check @DiamondIntegral.Section2.rvValueFamily_nonempty
+#print axioms DiamondIntegral.Section2.rvValueFamily_nonempty
+#check @DiamondIntegral.Section2.rvValueFamily_finite
+#print axioms DiamondIntegral.Section2.rvValueFamily_finite
+#check @DiamondIntegral.Section2.goodRadiusProjection_uniform_definable
+#print axioms DiamondIntegral.Section2.goodRadiusProjection_uniform_definable
+#check @DiamondIntegral.Section2.goodRadiusProjection_finite
+#print axioms DiamondIntegral.Section2.goodRadiusProjection_finite
+#check @DiamondIntegral.Section2.goodRadiusProjection_union_finite
+#print axioms DiamondIntegral.Section2.goodRadiusProjection_union_finite
+#check @DiamondIntegral.Section2.raw_iff_definable
+#print axioms DiamondIntegral.Section2.raw_iff_definable
+#check @DiamondIntegral.Section2.rawPointImageCodes_definable
+#print axioms DiamondIntegral.Section2.rawPointImageCodes_definable
+#check @DiamondIntegral.Section2.rawOpenImageCodes_definable
+#print axioms DiamondIntegral.Section2.rawOpenImageCodes_definable
+#check @DiamondIntegral.Section2.rawDiscShapeCodes_definable
+#print axioms DiamondIntegral.Section2.rawDiscShapeCodes_definable
+#check @DiamondIntegral.Section2.rawDiscShapeCodes_nonempty
+#print axioms DiamondIntegral.Section2.rawDiscShapeCodes_nonempty
+#check @DiamondIntegral.Section2.rawDiscShapeCodes_of_shape
+#print axioms DiamondIntegral.Section2.rawDiscShapeCodes_of_shape
+#check @DiamondIntegral.Section2.rawFibreForallCompare_definable
+#print axioms DiamondIntegral.Section2.rawFibreForallCompare_definable
+#check @DiamondIntegral.Section2.rawFibreRelationalImage_definable
+#print axioms DiamondIntegral.Section2.rawFibreRelationalImage_definable
+#check @DiamondIntegral.Section2.raw_definable_map_image
+#print axioms DiamondIntegral.Section2.raw_definable_map_image
+#check @DiamondIntegral.Section2.rawRVValues_definable
+#print axioms DiamondIntegral.Section2.rawRVValues_definable
+#check @DiamondIntegral.Section2.rawOpenPolydiscProper_definable
+#print axioms DiamondIntegral.Section2.rawOpenPolydiscProper_definable
+#check @DiamondIntegral.Section2.rawOpenPolydisc_membership_definable
+#print axioms DiamondIntegral.Section2.rawOpenPolydisc_membership_definable
+#check @DiamondIntegral.Section2.rawOpenPolydisc_proper
+#print axioms DiamondIntegral.Section2.rawOpenPolydisc_proper
+#check @DiamondIntegral.Section2.rawOpenPolydisc_named
+#print axioms DiamondIntegral.Section2.rawOpenPolydisc_named
+#check @DiamondIntegral.Section2.rawOpenPolydisc_presentation
+#print axioms DiamondIntegral.Section2.rawOpenPolydisc_presentation
+#check @DiamondIntegral.Section2.rawRVBoundary_eq_inter
+#print axioms DiamondIntegral.Section2.rawRVBoundary_eq_inter
+#check @DiamondIntegral.Section2.rawRVInterior_iff
+#print axioms DiamondIntegral.Section2.rawRVInterior_iff
+#check @DiamondIntegral.Section2.rawRVInterior_of_mem_not_boundary
+#print axioms DiamondIntegral.Section2.rawRVInterior_of_mem_not_boundary
+#check @DiamondIntegral.Section2.rawVFComplement_definable
+#print axioms DiamondIntegral.Section2.rawVFComplement_definable
+#check @DiamondIntegral.Section2.rawRVImage_values_eq
+#print axioms DiamondIntegral.Section2.rawRVImage_values_eq
+#check @DiamondIntegral.Section2.rawRVImage_definable
+#print axioms DiamondIntegral.Section2.rawRVImage_definable
+#check @DiamondIntegral.Section2.rawRVBoundary_definable
+#print axioms DiamondIntegral.Section2.rawRVBoundary_definable
+#check @DiamondIntegral.Section2.rawRVInterior_definable
+#print axioms DiamondIntegral.Section2.rawRVInterior_definable
+#check @DiamondIntegral.Section2.rawRVPolydisc_nonempty
+#print axioms DiamondIntegral.Section2.rawRVPolydisc_nonempty
+#check @DiamondIntegral.Section2.rvRawFibre_mem_zero_iff
+#print axioms DiamondIntegral.Section2.rvRawFibre_mem_zero_iff
+#check @DiamondIntegral.Section2.rawRVPolydisc_eq_named_of_nonzero
+#print axioms DiamondIntegral.Section2.rawRVPolydisc_eq_named_of_nonzero
+#check @DiamondIntegral.Section2.TaggedPolydiscBranchDecomposition.rows_constant
+#print axioms DiamondIntegral.Section2.TaggedPolydiscBranchDecomposition.rows_constant
+#check @DiamondIntegral.Section2.rawSingletonRows_definable
+#print axioms DiamondIntegral.Section2.rawSingletonRows_definable
+#check @DiamondIntegral.Section2.rawUniqueChoice_mem
+#print axioms DiamondIntegral.Section2.rawUniqueChoice_mem
+#check @DiamondIntegral.Section2.rawUniqueChoice_graph_definable
+#print axioms DiamondIntegral.Section2.rawUniqueChoice_graph_definable
+#check @DiamondIntegral.Section2.raw_rv_eq_definable
+#print axioms DiamondIntegral.Section2.raw_rv_eq_definable
+#check @DiamondIntegral.Section2.rawPolydiscTagRow_definable
+#print axioms DiamondIntegral.Section2.rawPolydiscTagRow_definable
+#check @DiamondIntegral.Section2.rawTaggedPolydiscImage_definable
+#print axioms DiamondIntegral.Section2.rawTaggedPolydiscImage_definable
+#check @DiamondIntegral.Section2.rawGoodTaggedPolydiscCodes_definable
+#print axioms DiamondIntegral.Section2.rawGoodTaggedPolydiscCodes_definable
+#check @DiamondIntegral.Section2.rawGoodTaggedPolydiscCodes_rows
+#print axioms DiamondIntegral.Section2.rawGoodTaggedPolydiscCodes_rows
+#check @DiamondIntegral.Section2.rectangle_induction
+#print axioms DiamondIntegral.Section2.rectangle_induction
+#check @DiamondIntegral.Section2.rectangle_image_pair
+#print axioms DiamondIntegral.Section2.rectangle_image_pair
+#check @DiamondIntegral.Section2.rectangle_image_eq_maximal
+#print axioms DiamondIntegral.Section2.rectangle_image_eq_maximal
+#check @DiamondIntegral.Section2.rectangle_coordinate_exit
+#print axioms DiamondIntegral.Section2.rectangle_coordinate_exit
+#check @DiamondIntegral.Section2.continuousWithinAt_ball_estimate
+#print axioms DiamondIntegral.Section2.continuousWithinAt_ball_estimate
+#check @DiamondIntegral.Section2.HasLimitSet.image_of_continuousWithinAt
+#print axioms DiamondIntegral.Section2.HasLimitSet.image_of_continuousWithinAt
+#check @DiamondIntegral.Section2.HasMinimalLimitSet.image_of_continuousWithinAt
+#print axioms DiamondIntegral.Section2.HasMinimalLimitSet.image_of_continuousWithinAt
+#check @DiamondIntegral.Section2.scalarRVBoundary_compl
+#print axioms DiamondIntegral.Section2.scalarRVBoundary_compl
+#check @DiamondIntegral.Section2.scalarRVBoundary_univ
+#print axioms DiamondIntegral.Section2.scalarRVBoundary_univ
+#check @DiamondIntegral.Section2.scalarRVBoundary_union_subset
+#print axioms DiamondIntegral.Section2.scalarRVBoundary_union_subset
+#check @DiamondIntegral.Section2.rvZero_not_mem_scalarRVBoundary
+#print axioms DiamondIntegral.Section2.rvZero_not_mem_scalarRVBoundary
+#check @DiamondIntegral.Section2.scalarRVBoundary_ball_containing_zero
+#print axioms DiamondIntegral.Section2.scalarRVBoundary_ball_containing_zero
+#check @DiamondIntegral.Section2.scalarRVBoundary_ball_finite
+#print axioms DiamondIntegral.Section2.scalarRVBoundary_ball_finite
+#check @DiamondIntegral.Section2.scalarRVBoundary_boolComb_finite
+#print axioms DiamondIntegral.Section2.scalarRVBoundary_boolComb_finite
+#check @DiamondIntegral.Section2.lemma_2_35_unary_finite
+#print axioms DiamondIntegral.Section2.lemma_2_35_unary_finite
+#check @DiamondIntegral.Section2.rvBoundary_zero_arity
+#print axioms DiamondIntegral.Section2.rvBoundary_zero_arity
+#check @DiamondIntegral.Section2.scalarRVBoundary_iff_mixed
+#print axioms DiamondIntegral.Section2.scalarRVBoundary_iff_mixed
+#check @DiamondIntegral.Section2.scalarRVBoundary_definable
+#print axioms DiamondIntegral.Section2.scalarRVBoundary_definable
+#check @DiamondIntegral.Section2.scalarBoundaryTuples_finite
+#print axioms DiamondIntegral.Section2.scalarBoundaryTuples_finite
+#check @DiamondIntegral.Section2.scalarBoundaryTuples_definable
+#print axioms DiamondIntegral.Section2.scalarBoundaryTuples_definable
+#check @DiamondIntegral.Section2.scalar_correspondence_pullback_definable
+#print axioms DiamondIntegral.Section2.scalar_correspondence_pullback_definable
+#check @DiamondIntegral.Section2.scalarPartialGraph_domain_definable
+#print axioms DiamondIntegral.Section2.scalarPartialGraph_domain_definable
+#check @DiamondIntegral.Section2.scalarPartialGraph_restricted_image_definable
+#print axioms DiamondIntegral.Section2.scalarPartialGraph_restricted_image_definable
+#check @DiamondIntegral.Section2.scalarZeroExtension_on
+#print axioms DiamondIntegral.Section2.scalarZeroExtension_on
+#check @DiamondIntegral.Section2.scalarZeroExtension_definable
+#print axioms DiamondIntegral.Section2.scalarZeroExtension_definable
+#check @DiamondIntegral.Section2.unaryScalarGraph_update_definable
+#print axioms DiamondIntegral.Section2.unaryScalarGraph_update_definable
+#check @DiamondIntegral.Section2.scalar_vf_image_atomic
+#print axioms DiamondIntegral.Section2.scalar_vf_image_atomic
+#check @DiamondIntegral.Section2.unaryScalarGraph_tuple_limit_graph
+#print axioms DiamondIntegral.Section2.unaryScalarGraph_tuple_limit_graph
+#check @DiamondIntegral.Section2.exists_scalar_continuous_limit
+#print axioms DiamondIntegral.Section2.exists_scalar_continuous_limit
+#check @DiamondIntegral.Section2.exists_scalar_continuous_limit_at
+#print axioms DiamondIntegral.Section2.exists_scalar_continuous_limit_at
+#check @DiamondIntegral.Section2.unaryScalarGraph_sub_definable
+#print axioms DiamondIntegral.Section2.unaryScalarGraph_sub_definable
+#check @DiamondIntegral.Section2.unaryScalarGraph_input_shift_definable
+#print axioms DiamondIntegral.Section2.unaryScalarGraph_input_shift_definable
+#check @DiamondIntegral.Section2.closedDiscCode_infinity_underlying
+#print axioms DiamondIntegral.Section2.closedDiscCode_infinity_underlying
+#check @DiamondIntegral.Section2.singletonDiscTupleNames_injective
+#print axioms DiamondIntegral.Section2.singletonDiscTupleNames_injective
+#check @DiamondIntegral.Section2.SingletonDiscTupleRelation.fibre_eq_of_names
+#print axioms DiamondIntegral.Section2.SingletonDiscTupleRelation.fibre_eq_of_names
+#check @DiamondIntegral.Section2.definableOverSingletonDiscNames_iff
+#print axioms DiamondIntegral.Section2.definableOverSingletonDiscNames_iff
+#check @DiamondIntegral.Section2.namedSingletonPolydisc_eq
+#print axioms DiamondIntegral.Section2.namedSingletonPolydisc_eq
+#check @DiamondIntegral.Section2.singletonPolydisc_atomic
+#print axioms DiamondIntegral.Section2.singletonPolydisc_atomic
+#check @DiamondIntegral.Section2.HasLimitSet.singleton_tendsto
+#print axioms DiamondIntegral.Section2.HasLimitSet.singleton_tendsto
+#check @DiamondIntegral.Section2.HasLimitSet.continuousAt_update
+#print axioms DiamondIntegral.Section2.HasLimitSet.continuousAt_update
+#check @DiamondIntegral.Section2.exists_countable_vf_generated_base
+#print axioms DiamondIntegral.Section2.exists_countable_vf_generated_base
+#check @DiamondIntegral.Section2.exists_small_vf_generated_base_for_definable
+#print axioms DiamondIntegral.Section2.exists_small_vf_generated_base_for_definable
+#check @DiamondIntegral.Section2.exists_small_vf_generated_base_for_two_definable
+#print axioms DiamondIntegral.Section2.exists_small_vf_generated_base_for_two_definable
+#check @DiamondIntegral.Section2.lemma_2_29
+#print axioms DiamondIntegral.Section2.lemma_2_29
+#check @DiamondIntegral.Section2.good_tagged_polydisc_partition
+#print axioms DiamondIntegral.Section2.good_tagged_polydisc_partition
+#check @DiamondIntegral.Section2.type_polydisc_line_atomic
+#print axioms DiamondIntegral.Section2.type_polydisc_line_atomic
+#check @DiamondIntegral.Section2.coordinate_relation_definable
+#print axioms DiamondIntegral.Section2.coordinate_relation_definable
+#check @DiamondIntegral.Section2.GeneratesCompleteType.image_real
+#print axioms DiamondIntegral.Section2.GeneratesCompleteType.image_real
+#check @DiamondIntegral.Section2.GeneratesCompleteType.coordinate_fibre
+#print axioms DiamondIntegral.Section2.GeneratesCompleteType.coordinate_fibre
+#check @DiamondIntegral.Section2.type_good_tagged_polydisc_code
+#print axioms DiamondIntegral.Section2.type_good_tagged_polydisc_code
+#check @DiamondIntegral.Section2.mem_rawTypeLocus
+#print axioms DiamondIntegral.Section2.mem_rawTypeLocus
+#check @DiamondIntegral.Section2.rawTypeLocus_decides
+#print axioms DiamondIntegral.Section2.rawTypeLocus_decides
+#check @DiamondIntegral.Section2.containedFibreCodes_definable
+#print axioms DiamondIntegral.Section2.containedFibreCodes_definable
+#check @DiamondIntegral.Section2.type_local_good_neighbourhood
+#print axioms DiamondIntegral.Section2.type_local_good_neighbourhood
+#check @DiamondIntegral.Section2.type_local_finite_good_cover
+#print axioms DiamondIntegral.Section2.type_local_finite_good_cover
+#check @DiamondIntegral.Section2.rawTypeLocus_generates
+#print axioms DiamondIntegral.Section2.rawTypeLocus_generates
+#check @DiamondIntegral.Section2.rawTypeLocus_complete
+#print axioms DiamondIntegral.Section2.rawTypeLocus_complete
+#check @DiamondIntegral.Section2.type_polydisc_tagged_branch_image
+#print axioms DiamondIntegral.Section2.type_polydisc_tagged_branch_image
+#check @DiamondIntegral.Section2.type_polydisc_rv_rows_constant
+#print axioms DiamondIntegral.Section2.type_polydisc_rv_rows_constant
+#check @DiamondIntegral.Section2.lemma_2_44_unary
+#print axioms DiamondIntegral.Section2.lemma_2_44_unary
+#check @DiamondIntegral.Section2.unary_definable_finite_of_interior_empty
+#print axioms DiamondIntegral.Section2.unary_definable_finite_of_interior_empty
+#check @DiamondIntegral.Section2.unary_definable_finite_of_interior_empty_any_base
+#print axioms DiamondIntegral.Section2.unary_definable_finite_of_interior_empty_any_base
+#check @DiamondIntegral.Section2.HasMinimalLimitSet.to_projective
+#print axioms DiamondIntegral.Section2.HasMinimalLimitSet.to_projective
+#check @DiamondIntegral.Section2.HasMinimalLimitSet.card_le
+#print axioms DiamondIntegral.Section2.HasMinimalLimitSet.card_le
+#check @DiamondIntegral.Section2.exists_singleton_affine_limit
+#print axioms DiamondIntegral.Section2.exists_singleton_affine_limit
+#check @DiamondIntegral.Section2.unary_rv_gamma_image_doubly_bounded
+#print axioms DiamondIntegral.Section2.unary_rv_gamma_image_doubly_bounded
+#check @DiamondIntegral.Section2.strict_vf_ball_mem_nhds
+#print axioms DiamondIntegral.Section2.strict_vf_ball_mem_nhds
+#check @DiamondIntegral.Section2.exists_positive_gamma_power_germ
+#print axioms DiamondIntegral.Section2.exists_positive_gamma_power_germ
+#check @DiamondIntegral.Section2.exists_positive_gamma_power_germ_of_continuousAt
+#print axioms DiamondIntegral.Section2.exists_positive_gamma_power_germ_of_continuousAt
+#check @DiamondIntegral.Section2.uniform_bad_fibre_projection_finite
+#print axioms DiamondIntegral.Section2.uniform_bad_fibre_projection_finite
+#check @DiamondIntegral.Section2.uniform_coordinate_boundary_representatives
+#print axioms DiamondIntegral.Section2.uniform_coordinate_boundary_representatives
+#check @DiamondIntegral.Section2.uniform_vf_choice_of_pointwise_definable
+#print axioms DiamondIntegral.Section2.uniform_vf_choice_of_pointwise_definable
+#check @DiamondIntegral.Section2.vfRawFibreClosure_definable
+#print axioms DiamondIntegral.Section2.vfRawFibreClosure_definable
+#check @DiamondIntegral.Section2.vfRawFibreClosure_at
+#print axioms DiamondIntegral.Section2.vfRawFibreClosure_at
+#check @DiamondIntegral.Section2.vf_fibreClosure_graph_definable
+#print axioms DiamondIntegral.Section2.vf_fibreClosure_graph_definable
+#check @DiamondIntegral.Section2.rawGammaUpperGraph_eq
+#print axioms DiamondIntegral.Section2.rawGammaUpperGraph_eq
+#check @DiamondIntegral.Section2.rawGammaUpperGraph_definable
+#print axioms DiamondIntegral.Section2.rawGammaUpperGraph_definable
+#check @DiamondIntegral.Section2.rawGammaLUBGraph_eq
+#print axioms DiamondIntegral.Section2.rawGammaLUBGraph_eq
+#check @DiamondIntegral.Section2.rawGammaLUBGraph_definable
+#print axioms DiamondIntegral.Section2.rawGammaLUBGraph_definable
+#check @DiamondIntegral.Section2.rawGammaLUBGraph_selector_eq
+#print axioms DiamondIntegral.Section2.rawGammaLUBGraph_selector_eq
+#check @DiamondIntegral.Section2.uniform_gamma_supremum
+#print axioms DiamondIntegral.Section2.uniform_gamma_supremum
+#check @DiamondIntegral.Section2.uniform_partial_unique_choice
+#print axioms DiamondIntegral.Section2.uniform_partial_unique_choice
+#check @DiamondIntegral.Section2.goodRadiusCodes_definable
+#print axioms DiamondIntegral.Section2.goodRadiusCodes_definable
+#check @DiamondIntegral.Section2.goodRadiusCodes_at
+#print axioms DiamondIntegral.Section2.goodRadiusCodes_at
+#check @DiamondIntegral.Section2.radiusGoodFibre_graph_definable_univ
+#print axioms DiamondIntegral.Section2.radiusGoodFibre_graph_definable_univ
+#check @DiamondIntegral.Section2.vf_sdiff_definable
+#print axioms DiamondIntegral.Section2.vf_sdiff_definable
+#check @DiamondIntegral.Section2.vf_univ_definable
+#print axioms DiamondIntegral.Section2.vf_univ_definable
+#check @DiamondIntegral.Section2.vf_map_preimage_definable
+#print axioms DiamondIntegral.Section2.vf_map_preimage_definable
+#check @DiamondIntegral.Section2.vf_map_restrict_definable
+#print axioms DiamondIntegral.Section2.vf_map_restrict_definable
+#check @DiamondIntegral.Section2.vfBall_definable_univ
+#print axioms DiamondIntegral.Section2.vfBall_definable_univ
+#check @DiamondIntegral.Section2.vfBall_isOpen
+#print axioms DiamondIntegral.Section2.vfBall_isOpen
+#check @DiamondIntegral.Section2.rawVFRelation_definable
+#print axioms DiamondIntegral.Section2.rawVFRelation_definable
+#check @DiamondIntegral.Section2.vf_finite_choice_of_raw
+#print axioms DiamondIntegral.Section2.vf_finite_choice_of_raw
+#check @DiamondIntegral.Section2.finite_vf_choice_vf_core
+#print axioms DiamondIntegral.Section2.finite_vf_choice_vf_core
+#check @DiamondIntegral.Section2.vf_function_image_definable
+#print axioms DiamondIntegral.Section2.vf_function_image_definable
+#check @DiamondIntegral.Section2.vf_function_image_atomic
+#print axioms DiamondIntegral.Section2.vf_function_image_atomic
+#check @DiamondIntegral.Section2.vf_closure_definable
+#print axioms DiamondIntegral.Section2.vf_closure_definable
+#check @DiamondIntegral.Section2.vfPair_join_definable
+#print axioms DiamondIntegral.Section2.vfPair_join_definable
+#check @DiamondIntegral.Section2.vfPair_definable_of_joined
+#print axioms DiamondIntegral.Section2.vfPair_definable_of_joined
+#check @DiamondIntegral.Section2.vfPair_closure_definable
+#print axioms DiamondIntegral.Section2.vfPair_closure_definable
+#check @DiamondIntegral.Section2.bounded_injective_partial_value_law
+#print axioms DiamondIntegral.Section2.bounded_injective_partial_value_law
+#check @DiamondIntegral.Section2.lemma_2_51
+#print axioms DiamondIntegral.Section2.lemma_2_51
+#check @DiamondIntegral.Section2.ZeroFaceChart.insert_rawRVPolydisc
+#print axioms DiamondIntegral.Section2.ZeroFaceChart.insert_rawRVPolydisc
+#check @DiamondIntegral.Section2.ZeroFaceChart.rv_rows_constant_lift
+#print axioms DiamondIntegral.Section2.ZeroFaceChart.rv_rows_constant_lift
+#check @DiamondIntegral.Section2.ZeroFaceChart.coordinate_cases
+#print axioms DiamondIntegral.Section2.ZeroFaceChart.coordinate_cases
+#check @DiamondIntegral.Section2.ZeroFaceChart.insert_zero
+#print axioms DiamondIntegral.Section2.ZeroFaceChart.insert_zero
+#check @DiamondIntegral.Section2.ZeroFaceChart.insert_free
+#print axioms DiamondIntegral.Section2.ZeroFaceChart.insert_free
+#check @DiamondIntegral.Section2.ZeroFaceChart.project_insert
+#print axioms DiamondIntegral.Section2.ZeroFaceChart.project_insert
+#check @DiamondIntegral.Section2.ZeroFaceChart.insert_project
+#print axioms DiamondIntegral.Section2.ZeroFaceChart.insert_project
+#check @DiamondIntegral.Section2.ZeroFaceChart.insert_injective
+#print axioms DiamondIntegral.Section2.ZeroFaceChart.insert_injective
+#check @DiamondIntegral.Section2.ZeroFaceChart.lift_subset
+#print axioms DiamondIntegral.Section2.ZeroFaceChart.lift_subset
+#check @DiamondIntegral.Section2.ZeroFaceChart.lift_disjoint
+#print axioms DiamondIntegral.Section2.ZeroFaceChart.lift_disjoint
+#check @DiamondIntegral.Section2.ZeroFaceChart.lift_zero_pattern
+#print axioms DiamondIntegral.Section2.ZeroFaceChart.lift_zero_pattern
+#check @DiamondIntegral.Section2.ZeroFaceChart.lift_other_disjoint
+#print axioms DiamondIntegral.Section2.ZeroFaceChart.lift_other_disjoint
+#check @DiamondIntegral.Section2.ZeroFaceChart.slice_project
+#print axioms DiamondIntegral.Section2.ZeroFaceChart.slice_project
+#check @DiamondIntegral.Section2.ZeroFaceChart.insert_definable
+#print axioms DiamondIntegral.Section2.ZeroFaceChart.insert_definable
+#check @DiamondIntegral.Section2.ZeroFaceChart.slice_definable
+#print axioms DiamondIntegral.Section2.ZeroFaceChart.slice_definable
+#check @DiamondIntegral.Section2.ZeroFaceChart.lift_definable
+#print axioms DiamondIntegral.Section2.ZeroFaceChart.lift_definable
+#check @DiamondIntegral.Section2.vfZero_singleton_definable
+#print axioms DiamondIntegral.Section2.vfZero_singleton_definable
+#check @DiamondIntegral.Section2.ZeroFaceChart.vf_slice_definable
+#print axioms DiamondIntegral.Section2.ZeroFaceChart.vf_slice_definable
+#check @DiamondIntegral.Section2.ZeroFaceChart.vf_lift_definable
+#print axioms DiamondIntegral.Section2.ZeroFaceChart.vf_lift_definable
+#check @SpecialTransformations.Section3.Balls.rvFibre_zero
+#print axioms SpecialTransformations.Section3.Balls.rvFibre_zero
+#check @SpecialTransformations.Section3.Balls.rvFibre_eq_openDisc
+#print axioms SpecialTransformations.Section3.Balls.rvFibre_eq_openDisc
+#check @SpecialTransformations.Section3.BallImaginaries.lemma_3_13
+#print axioms SpecialTransformations.Section3.BallImaginaries.lemma_3_13
+#check @SpecialTransformations.Section3.lemma_3_3
+#print axioms SpecialTransformations.Section3.lemma_3_3
+#check @SpecialTransformations.Section3.GammaParameters.c_minimal_gamma_base
+#print axioms SpecialTransformations.Section3.GammaParameters.c_minimal_gamma_base
+#check @SpecialTransformations.Section7.valuationRing_henselian
+#print axioms SpecialTransformations.Section7.valuationRing_henselian
+#check @IsLocalRing.eq_of_eval_eq_zero_of_not_isUnit_sub
+#print axioms IsLocalRing.eq_of_eval_eq_zero_of_not_isUnit_sub
+#check @SpecialTransformations.Section3.canonical_algebraicClosureSubstructure_elementary
+#print axioms SpecialTransformations.Section3.canonical_algebraicClosureSubstructure_elementary
+#check @SpecialTransformations.Section6.HenselianTheory.henselian_of_compatible_equiv
+#print axioms SpecialTransformations.Section6.HenselianTheory.henselian_of_compatible_equiv
+#check @SpecialTransformations.Section6.henselian_automorphism_invariance
+#print axioms SpecialTransformations.Section6.henselian_automorphism_invariance
+#check @SpecialTransformations.Section6.lemma_6_2_in_algebraic_envelope_pure
+#print axioms SpecialTransformations.Section6.lemma_6_2_in_algebraic_envelope_pure
+#check @SpecialTransformations.Section6.DclClosed.image
+#print axioms SpecialTransformations.Section6.DclClosed.image
+#check @SpecialTransformations.Section3.lemma_3_9
+#print axioms SpecialTransformations.Section3.lemma_3_9
+#check @SpecialTransformations.Section3.lemma_3_6_vf
+#print axioms SpecialTransformations.Section3.lemma_3_6_vf
+#check @SpecialTransformations.Section3.GammaParameters.lemma_3_6_rv
+#print axioms SpecialTransformations.Section3.GammaParameters.lemma_3_6_rv
+#check @SpecialTransformations.Section3.RawClosure.finite_of_definable_subset_algebraic
+#print axioms SpecialTransformations.Section3.RawClosure.finite_of_definable_subset_algebraic
+#check @SpecialTransformations.Section3.Saturated.definable_finite_subcover
+#print axioms SpecialTransformations.Section3.Saturated.definable_finite_subcover
+#check @SpecialTransformations.Section3.RawClosure.hasMore_definable
+#print axioms SpecialTransformations.Section3.RawClosure.hasMore_definable
+#check @SpecialTransformations.Section3.RawClosure.no_inj_iff_finite_ncard_le
+#print axioms SpecialTransformations.Section3.RawClosure.no_inj_iff_finite_ncard_le
+#check @SpecialTransformations.Section3.DefinableAt.isBoolComb_balls
+#print axioms SpecialTransformations.Section3.DefinableAt.isBoolComb_balls
+#check @SpecialTransformations.Section3.GammaParameters.algebraic_vf_iff_real
+#print axioms SpecialTransformations.Section3.GammaParameters.algebraic_vf_iff_real
+#check @SpecialTransformations.Section3.algebraicAt_vf_union_rv_iff
+#print axioms SpecialTransformations.Section3.algebraicAt_vf_union_rv_iff
+#check @SpecialTransformations.Section3.GammaParameters.promote_scalar_definable_base
+#print axioms SpecialTransformations.Section3.GammaParameters.promote_scalar_definable_base
+#check @SpecialTransformations.Section3.GammaParameters.tuple_singleton_definable_base
+#print axioms SpecialTransformations.Section3.GammaParameters.tuple_singleton_definable_base
+#check @SpecialTransformations.Section4.exists_independent_of_contains_box
+#print axioms SpecialTransformations.Section4.exists_independent_of_contains_box
+#check @SpecialTransformations.Section3.algebraicAt_vf_isAlgebraic
+#print axioms SpecialTransformations.Section3.algebraicAt_vf_isAlgebraic
+#check @SpecialTransformations.Section3.algebraicAt_vf_iff_parameterField
+#print axioms SpecialTransformations.Section3.algebraicAt_vf_iff_parameterField
+#check @SpecialTransformations.Section8.vfTupleValue_le_component
+#print axioms SpecialTransformations.Section8.vfTupleValue_le_component
+#check @SpecialTransformations.Section8.vfTupleValue_eq_component
+#print axioms SpecialTransformations.Section8.vfTupleValue_eq_component
+#check @SpecialTransformations.Section8.vfTupleValue_zero
+#print axioms SpecialTransformations.Section8.vfTupleValue_zero
+#check @SpecialTransformations.Section9.vfTupleValue_ne_zero
+#print axioms SpecialTransformations.Section9.vfTupleValue_ne_zero
+#check @SpecialTransformations.Section9.HasVFDerivativeAt.unique
+#print axioms SpecialTransformations.Section9.HasVFDerivativeAt.unique
+#check @SpecialTransformations.Section9.HasVFDerivativeAt.hasPartialAt
+#print axioms SpecialTransformations.Section9.HasVFDerivativeAt.hasPartialAt
+#check @SpecialTransformations.Section8.rvFibre_locallyConstant_of_independent
+#print axioms SpecialTransformations.Section8.rvFibre_locallyConstant_of_independent
+#check @SpecialTransformations.Section8.lemma_8_9_canonical
+#print axioms SpecialTransformations.Section8.lemma_8_9_canonical
+#check @SpecialTransformations.Section8.rawOpenBall_infinite
+#print axioms SpecialTransformations.Section8.rawOpenBall_infinite
+#check @SpecialTransformations.Section8.infinite_definable_contains_small_ball
+#print axioms SpecialTransformations.Section8.infinite_definable_contains_small_ball
+#check @SpecialTransformations.Section3.GammaParameters.gamma_definable_finite_thresholds
+#print axioms SpecialTransformations.Section3.GammaParameters.gamma_definable_finite_thresholds
+#check @SpecialTransformations.Section3.FiniteThresholds.exists_infimum
+#print axioms SpecialTransformations.Section3.FiniteThresholds.exists_infimum
+#check @SpecialTransformations.Section3.GammaParameters.leastCodes_definable_base
+#print axioms SpecialTransformations.Section3.GammaParameters.leastCodes_definable_base
+#check @SpecialTransformations.Section9.isVFLimitSet_iff
+#print axioms SpecialTransformations.Section9.isVFLimitSet_iff
+#check @SpecialTransformations.Section9.IsMinimalVFLimitSet.isolated
+#print axioms SpecialTransformations.Section9.IsMinimalVFLimitSet.isolated
+#check @SpecialTransformations.Section9.lemma_9_2_topological
+#print axioms SpecialTransformations.Section9.lemma_9_2_topological
+#check @SpecialTransformations.Section4.lemma_4_3
+#print axioms SpecialTransformations.Section4.lemma_4_3
+#check @SpecialTransformations.Section4.vfDim_image_le
+#print axioms SpecialTransformations.Section4.vfDim_image_le
+#check @SpecialTransformations.Section4.model_valuation_nontrivial
+#print axioms SpecialTransformations.Section4.model_valuation_nontrivial
+#check @SpecialTransformations.Section4.rawFixedRVFibre_sorted
+#print axioms SpecialTransformations.Section4.rawFixedRVFibre_sorted
+#check @SpecialTransformations.Section4.independent_definable_mem_nhds
+#print axioms SpecialTransformations.Section4.independent_definable_mem_nhds
+#check @SpecialTransformations.Section8.gamma_has_vf_representative
+#print axioms SpecialTransformations.Section8.gamma_has_vf_representative
+#check @SpecialTransformations.Section8.uniformBall_mem_nhds
+#print axioms SpecialTransformations.Section8.uniformBall_mem_nhds
+#check @SpecialTransformations.Section8.exists_uniformBall_subset_of_mem_nhds
+#print axioms SpecialTransformations.Section8.exists_uniformBall_subset_of_mem_nhds
+#check @SpecialTransformations.Section9.exists_pairwise_disjoint_limitBall
+#print axioms SpecialTransformations.Section9.exists_pairwise_disjoint_limitBall
+#check @SpecialTransformations.Section9.IsMinimalLimitSet.frequently_hits
+#print axioms SpecialTransformations.Section9.IsMinimalLimitSet.frequently_hits
+#check @SpecialTransformations.Section9.lemma_9_5
+#print axioms SpecialTransformations.Section9.lemma_9_5
+#check @SpecialTransformations.Section9.vfClosure_eq_closure
+#print axioms SpecialTransformations.Section9.vfClosure_eq_closure
+#check @SpecialTransformations.Section9.lemma_9_4
+#print axioms SpecialTransformations.Section9.lemma_9_4
+#check @SpecialTransformations.Section8.normalize_eq_of_isCanonical
+#print axioms SpecialTransformations.Section8.normalize_eq_of_isCanonical
+#check @SpecialTransformations.Section3.finite_rv_to_vf_tuple_relation_image
+#print axioms SpecialTransformations.Section3.finite_rv_to_vf_tuple_relation_image
+#check @SpecialTransformations.Section3.GammaParameters.EndpointLogic.codeValue_surjective
+#print axioms SpecialTransformations.Section3.GammaParameters.EndpointLogic.codeValue_surjective
+#check @closure_subtype
+#print axioms closure_subtype
+#check @isClosed_eq
+#print axioms isClosed_eq
+#check @SpecialTransformations.Section8.lemma_8_7_canonical
+#print axioms SpecialTransformations.Section8.lemma_8_7_canonical
+#check @SpecialTransformations.Section4.vfDim_eq_arity_of_contains_polydisc
+#print axioms SpecialTransformations.Section4.vfDim_eq_arity_of_contains_polydisc
+#check @SpecialTransformations.Section4.TupleFamilies.uniform_coding
+#print axioms SpecialTransformations.Section4.TupleFamilies.uniform_coding
+#check @SpecialTransformations.Section8.continuousInputsFamily_definable
+#print axioms SpecialTransformations.Section8.continuousInputsFamily_definable
+#check @SpecialTransformations.Section8.mem_continuousInputs_iff
+#print axioms SpecialTransformations.Section8.mem_continuousInputs_iff
+#check @SpecialTransformations.Section8.rvConstantRaw_definable
+#print axioms SpecialTransformations.Section8.rvConstantRaw_definable
+#check @SpecialTransformations.Section8.continuousAt_of_independent
+#print axioms SpecialTransformations.Section8.continuousAt_of_independent
+#check @SpecialTransformations.Section8.vfDim_lt_of_no_independent
+#print axioms SpecialTransformations.Section8.vfDim_lt_of_no_independent
+#check @SpecialTransformations.Section9.HasMixedVFJacobianAt.unique
+#print axioms SpecialTransformations.Section9.HasMixedVFJacobianAt.unique
+#check @SpecialTransformations.Section9.exists_totalMixedJacobianMap
+#print axioms SpecialTransformations.Section9.exists_totalMixedJacobianMap
+#check @SpecialTransformations.Section9.mixedDifferentiableAt_of_independent
+#print axioms SpecialTransformations.Section9.mixedDifferentiableAt_of_independent
+#check @SpecialTransformations.Section9.mixedDifferentiabilityLocus_definable
+#print axioms SpecialTransformations.Section9.mixedDifferentiabilityLocus_definable
+#check @SpecialTransformations.Section9.mixed_vfDim_lt_of_no_independent
+#print axioms SpecialTransformations.Section9.mixed_vfDim_lt_of_no_independent
+#check @SpecialTransformations.Section9.HasVFDerivativeAt.maps_vfBall
+#print axioms SpecialTransformations.Section9.HasVFDerivativeAt.maps_vfBall
+#check @SpecialTransformations.Section3.GammaParameters.Relation.precomposeGamma
+#print axioms SpecialTransformations.Section3.GammaParameters.Relation.precomposeGamma
+#check @SpecialTransformations.Section3.GammaParameters.Relation.imageReal
+#print axioms SpecialTransformations.Section3.GammaParameters.Relation.imageReal
+#check @SpecialTransformations.Section3.GammaParameters.Relation.inter
+#print axioms SpecialTransformations.Section3.GammaParameters.Relation.inter
+#check @SpecialTransformations.Section3.GammaParameters.Relation.interRealPreimage
+#print axioms SpecialTransformations.Section3.GammaParameters.Relation.interRealPreimage
+#check @SpecialTransformations.Section3.GammaParameters.promote_gamma_relation
+#print axioms SpecialTransformations.Section3.GammaParameters.promote_gamma_relation
+#check @SpecialTransformations.ModelTheory.promote_definable_tuple_fibre
+#print axioms SpecialTransformations.ModelTheory.promote_definable_tuple_fibre
+#check @SpecialTransformations.Section3.RawClosure.Tuple.GoodRelation
+#print axioms SpecialTransformations.Section3.RawClosure.Tuple.GoodRelation
+#check @SpecialTransformations.Section3.RawClosure.Tuple.good_relation_of_algebraic
+#print axioms SpecialTransformations.Section3.RawClosure.Tuple.good_relation_of_algebraic
+#check @SpecialTransformations.Section3.Saturated.definable_finite_subcover_tuple
+#print axioms SpecialTransformations.Section3.Saturated.definable_finite_subcover_tuple
+#check @SpecialTransformations.Section3.GammaParameters.DefinableOverBase.eliminate_definable_params
+#print axioms SpecialTransformations.Section3.GammaParameters.DefinableOverBase.eliminate_definable_params
+#check @SpecialTransformations.Section3.GammaParameters.gamma_value_of_named_code
+#print axioms SpecialTransformations.Section3.GammaParameters.gamma_value_of_named_code
+#check @SpecialTransformations.Section3.small_union_range
+#print axioms SpecialTransformations.Section3.small_union_range
+#check @SpecialTransformations.Section3.GammaParameters.proper_normalized_definable
+#print axioms SpecialTransformations.Section3.GammaParameters.proper_normalized_definable
+#check @SpecialTransformations.Section3.GammaParameters.representatives_values
+#print axioms SpecialTransformations.Section3.GammaParameters.representatives_values
+#check @SpecialTransformations.Section9.IsLimitSet.mem_of_frequently_hits
+#print axioms SpecialTransformations.Section9.IsLimitSet.mem_of_frequently_hits
+#check @SpecialTransformations.Milestone0.Transfer.vfInvFun
+#print axioms SpecialTransformations.Milestone0.Transfer.vfInvFun
+#check @Valued.isClopen_ball
+#print axioms Valued.isClopen_ball
+#check @ContinuousInv₀.continuousAt_inv₀
+#print axioms ContinuousInv₀.continuousAt_inv₀
+#check @FirstOrder.Language.exists_elementarySubstructure_card_eq
+#print axioms FirstOrder.Language.exists_elementarySubstructure_card_eq
+#check @FirstOrder.Language.ElementarySubstructure.meetsDefinable
+#print axioms FirstOrder.Language.ElementarySubstructure.meetsDefinable
+#check @SpecialTransformations.Section3.VFFieldBase.ofSubstructure
+#print axioms SpecialTransformations.Section3.VFFieldBase.ofSubstructure
+#check @SpecialTransformations.Section3.definableClosureAt_vf_inv
+#print axioms SpecialTransformations.Section3.definableClosureAt_vf_inv
+#check @VFAlgClosed.isAlgClosed_vfType
+#print axioms VFAlgClosed.isAlgClosed_vfType
+#check @Topology.IsOpenEmbedding.piMap
+#print axioms Topology.IsOpenEmbedding.piMap
+#check @Topology.IsEmbedding.closure_eq_preimage_closure_image
+#print axioms Topology.IsEmbedding.closure_eq_preimage_closure_image
+#check @Topology.IsEmbedding.prodMap
+#print axioms Topology.IsEmbedding.prodMap
+#check @Topology.IsClosedEmbedding.prodMap
+#print axioms Topology.IsClosedEmbedding.prodMap
+#check @Topology.IsClosedEmbedding.isClosed_iff_image_isClosed
+#print axioms Topology.IsClosedEmbedding.isClosed_iff_image_isClosed
+#check @SpecialTransformations.Section3.Values.vrv_le_iff
+#print axioms SpecialTransformations.Section3.Values.vrv_le_iff
+#check @SpecialTransformations.Section3.raw_definableOver_sorted
+#print axioms SpecialTransformations.Section3.raw_definableOver_sorted
+#check @SpecialTransformations.Section8.vfRawClosure_definable
+#print axioms SpecialTransformations.Section8.vfRawClosure_definable
+#check @SpecialTransformations.Section8.mem_vfRawClosure_iff
+#print axioms SpecialTransformations.Section8.mem_vfRawClosure_iff
+#check @Homeomorph.image_closure
+#print axioms Homeomorph.image_closure
+#check @Homeomorph.image
+#print axioms Homeomorph.image
+#check @SpecialTransformations.Section8.uniformBallRelation_definable
+#print axioms SpecialTransformations.Section8.uniformBallRelation_definable
+#check @IsOpenMap.preimage_closure_eq_closure_preimage
+#print axioms IsOpenMap.preimage_closure_eq_closure_preimage
+#check @SpecialTransformations.Section8.unary_graph_polynomial_relation
+#print axioms SpecialTransformations.Section8.unary_graph_polynomial_relation
+#check @SpecialTransformations.Section8.mvPolynomial_has_shape
+#print axioms SpecialTransformations.Section8.mvPolynomial_has_shape
+#check @SpecialTransformations.Section8.scalar_eventually_zero_or_positive_power
+#print axioms SpecialTransformations.Section8.scalar_eventually_zero_or_positive_power
+#check @SpecialTransformations.Section8.exists_gammaPowerGerm
+#print axioms SpecialTransformations.Section8.exists_gammaPowerGerm
+#check @SpecialTransformations.Section8.unary_definable_punctured_germ
+#print axioms SpecialTransformations.Section8.unary_definable_punctured_germ
+#check @SpecialTransformations.Section3.Values.gamma_pow_surjective
+#print axioms SpecialTransformations.Section3.Values.gamma_pow_surjective
+#check @SpecialTransformations.Section3.GammaParameters.finite_image_of_definable_cuts
+#print axioms SpecialTransformations.Section3.GammaParameters.finite_image_of_definable_cuts
+#check @SpecialTransformations.Section4.GammaSyntax.mul_definable
+#print axioms SpecialTransformations.Section4.GammaSyntax.mul_definable
+#check @SpecialTransformations.Section4.GammaSyntax.one_definable
+#print axioms SpecialTransformations.Section4.GammaSyntax.one_definable
+#check @SpecialTransformations.Section5.contractionMap
+#print axioms SpecialTransformations.Section5.contractionMap
+#check @SpecialTransformations.Section5.contractionFun_spec
+#print axioms SpecialTransformations.Section5.contractionFun_spec
+#check @SpecialTransformations.Section5.contractionFun_unique
+#print axioms SpecialTransformations.Section5.contractionFun_unique
+#check @SpecialTransformations.Section9.rvGammaJacobian_comp
+#print axioms SpecialTransformations.Section9.rvGammaJacobian_comp
+#check @SpecialTransformations.Section3.AdditiveCosets.coset_discs
+#print axioms SpecialTransformations.Section3.AdditiveCosets.coset_discs
+#check @SpecialTransformations.Section3.AdditiveCosets.lemma_3_18_1
+#print axioms SpecialTransformations.Section3.AdditiveCosets.lemma_3_18_1
+#check @SpecialTransformations.Section3.qf_rootFree_constant_closed
+#print axioms SpecialTransformations.Section3.qf_rootFree_constant_closed
+#check @SpecialTransformations.Section3.finite_definable_obstacles_both
+#print axioms SpecialTransformations.Section3.finite_definable_obstacles_both
+#check @SpecialTransformations.Section3.definable_point_of_proper_subset_canonical
+#print axioms SpecialTransformations.Section3.definable_point_of_proper_subset_canonical
+#check @SpecialTransformations.Section3.lemma_3_11
+#print axioms SpecialTransformations.Section3.lemma_3_11
+#check @SpecialTransformations.Section3.BallFibreConstancy.mem_graph
+#print axioms SpecialTransformations.Section3.BallFibreConstancy.mem_graph
+#check @SpecialTransformations.Section3.BallFibreConstancy.finite_exceptions
+#print axioms SpecialTransformations.Section3.BallFibreConstancy.finite_exceptions
+#check @SpecialTransformations.Section3.Balls.openDisc_openRadius
+#print axioms SpecialTransformations.Section3.Balls.openDisc_openRadius
+#check @SpecialTransformations.Section3.Balls.closedDisc_bottom
+#print axioms SpecialTransformations.Section3.Balls.closedDisc_bottom
+#check @SpecialTransformations.Section3.Balls.closedDisc_infinity
+#print axioms SpecialTransformations.Section3.Balls.closedDisc_infinity
+#check @SpecialTransformations.Section3.Balls.centre_mem_closedDisc
+#print axioms SpecialTransformations.Section3.Balls.centre_mem_closedDisc
+#check @SpecialTransformations.Section3.Balls.centre_mem_openDisc
+#print axioms SpecialTransformations.Section3.Balls.centre_mem_openDisc
+#check @SpecialTransformations.Section3.Balls.closedPolydisc_infinity
+#print axioms SpecialTransformations.Section3.Balls.closedPolydisc_infinity
+#check @SpecialTransformations.Section3.Balls.closedDisc_zero_downward
+#print axioms SpecialTransformations.Section3.Balls.closedDisc_zero_downward
+#check @SpecialTransformations.Section3.Balls.openDisc_zero_downward
+#print axioms SpecialTransformations.Section3.Balls.openDisc_zero_downward
+#check @SpecialTransformations.Section3.ball_zero_downward
+#print axioms SpecialTransformations.Section3.ball_zero_downward
+#check @SpecialTransformations.Section3.Balls.sub_mem_closedDisc_iff
+#print axioms SpecialTransformations.Section3.Balls.sub_mem_closedDisc_iff
+#check @SpecialTransformations.Section3.Balls.sub_mem_openDisc_iff
+#print axioms SpecialTransformations.Section3.Balls.sub_mem_openDisc_iff
+#check @SpecialTransformations.Section3.Balls.rv_sub_constant_openDisc
+#print axioms SpecialTransformations.Section3.Balls.rv_sub_constant_openDisc
+#check @SpecialTransformations.Section3.Balls.rv_sub_constant_closedDisc
+#print axioms SpecialTransformations.Section3.Balls.rv_sub_constant_closedDisc
+#check @SpecialTransformations.Section3.BallFamilies.finite_definable_hitting_set
+#print axioms SpecialTransformations.Section3.BallFamilies.finite_definable_hitting_set
+#check @SpecialTransformations.Section3.BallFamilies.closed_family_centres
+#print axioms SpecialTransformations.Section3.BallFamilies.closed_family_centres
+#check @SpecialTransformations.Section3.Balls.rv_eq_of_sub_lt
+#print axioms SpecialTransformations.Section3.Balls.rv_eq_of_sub_lt
+#check @SpecialTransformations.Section3.Balls.closedDisc_rv_constant
+#print axioms SpecialTransformations.Section3.Balls.closedDisc_rv_constant
+#check @SpecialTransformations.Section3.Balls.openDisc_rv_constant
+#print axioms SpecialTransformations.Section3.Balls.openDisc_rv_constant
+#check @SpecialTransformations.Section3.rv_difference_normalize
+#print axioms SpecialTransformations.Section3.rv_difference_normalize
+#check @SpecialTransformations.Section3.rv_le_normalize
+#print axioms SpecialTransformations.Section3.rv_le_normalize
+#check @SpecialTransformations.Section3.closedBall_set_normalize
+#print axioms SpecialTransformations.Section3.closedBall_set_normalize
+#check @SpecialTransformations.Section3.openBall_set_normalize
+#print axioms SpecialTransformations.Section3.openBall_set_normalize
+#check @SpecialTransformations.Section3.isBall_normalize
+#print axioms SpecialTransformations.Section3.isBall_normalize
+#check @SpecialTransformations.Section3.isBall_subset_vf
+#print axioms SpecialTransformations.Section3.isBall_subset_vf
+#check @SpecialTransformations.Section3.encodedBall_disc
+#print axioms SpecialTransformations.Section3.encodedBall_disc
+#check @SpecialTransformations.Section3.GammaParameters.lemma_3_11_gamma_base
+#print axioms SpecialTransformations.Section3.GammaParameters.lemma_3_11_gamma_base
+#check @SpecialTransformations.Section3.BallImaginaries.underlying_injective
+#print axioms SpecialTransformations.Section3.BallImaginaries.underlying_injective
+#check @SpecialTransformations.Section3.BallImaginaries.underlying_ofClosed
+#print axioms SpecialTransformations.Section3.BallImaginaries.underlying_ofClosed
+#check @SpecialTransformations.Section3.BallImaginaries.underlying_ofOpen
+#print axioms SpecialTransformations.Section3.BallImaginaries.underlying_ofOpen
+#check @SpecialTransformations.Section3.BallImaginaries.ofClosed_injective
+#print axioms SpecialTransformations.Section3.BallImaginaries.ofClosed_injective
+#check @SpecialTransformations.Section3.BallImaginaries.ofOpen_injective
+#print axioms SpecialTransformations.Section3.BallImaginaries.ofOpen_injective
+#check @SpecialTransformations.Section3.BallImaginaries.closedFamily_finite
+#print axioms SpecialTransformations.Section3.BallImaginaries.closedFamily_finite
+#check @SpecialTransformations.Section3.BallImaginaries.openFamily_finite
+#print axioms SpecialTransformations.Section3.BallImaginaries.openFamily_finite
+#check @SpecialTransformations.Section3.BallImaginaries.family_cases
+#print axioms SpecialTransformations.Section3.BallImaginaries.family_cases
+#check @SpecialTransformations.Section3.BallImaginaries.closed_disc_coded
+#print axioms SpecialTransformations.Section3.BallImaginaries.closed_disc_coded
+#check @SpecialTransformations.Section3.BallImaginaries.open_disc_coded
+#print axioms SpecialTransformations.Section3.BallImaginaries.open_disc_coded
+#check @SpecialTransformations.Section3.BallImaginaries.universe_coded
+#print axioms SpecialTransformations.Section3.BallImaginaries.universe_coded
+#check @SpecialTransformations.Section3.BallFamilies.intersection_mean_definable
+#print axioms SpecialTransformations.Section3.BallFamilies.intersection_mean_definable
+#check @SpecialTransformations.Section3.BallFamilies.normalized_mean_graph_definable
+#print axioms SpecialTransformations.Section3.BallFamilies.normalized_mean_graph_definable
+#check @SpecialTransformations.Section3.ClosedBallCodes.meanGraph_definable
+#print axioms SpecialTransformations.Section3.ClosedBallCodes.meanGraph_definable
+#check @SpecialTransformations.Section3.ClosedBallCodes.familyMean_graph_definable_base
+#print axioms SpecialTransformations.Section3.ClosedBallCodes.familyMean_graph_definable_base
+#check @SpecialTransformations.Section3.OpenBallCodes.meanGraph_definable
+#print axioms SpecialTransformations.Section3.OpenBallCodes.meanGraph_definable
+#check @SpecialTransformations.Section3.OpenBallCodes.familyMean_graph_definable_base
+#print axioms SpecialTransformations.Section3.OpenBallCodes.familyMean_graph_definable_base
+#check @SpecialTransformations.Section3.ClosedBallCodes.normalized_mean_mem
+#print axioms SpecialTransformations.Section3.ClosedBallCodes.normalized_mean_mem
+#check @SpecialTransformations.Section3.OpenBallCodes.normalized_mean_mem
+#print axioms SpecialTransformations.Section3.OpenBallCodes.normalized_mean_mem
+#check @SpecialTransformations.Section3.BallImaginaries.closed_center_image_definable
+#print axioms SpecialTransformations.Section3.BallImaginaries.closed_center_image_definable
+#check @SpecialTransformations.Section3.BallImaginaries.finite_family_algebraic_points
+#print axioms SpecialTransformations.Section3.BallImaginaries.finite_family_algebraic_points
+#check @SpecialTransformations.Section3.BallImaginaries.familyMean_definable_base
+#print axioms SpecialTransformations.Section3.BallImaginaries.familyMean_definable_base
+#check @SpecialTransformations.Section3.BallImaginaries.familyMean_mem
+#print axioms SpecialTransformations.Section3.BallImaginaries.familyMean_mem
+#check @SpecialTransformations.Section3.Barycentre.mean_sub_eq
+#print axioms SpecialTransformations.Section3.Barycentre.mean_sub_eq
+#check @SpecialTransformations.Section3.Barycentre.natCast_value_one
+#print axioms SpecialTransformations.Section3.Barycentre.natCast_value_one
+#check @SpecialTransformations.Section3.Barycentre.mean_mem_closedDisc
+#print axioms SpecialTransformations.Section3.Barycentre.mean_mem_closedDisc
+#check @SpecialTransformations.Section3.Barycentre.mean_mem_openDisc
+#print axioms SpecialTransformations.Section3.Barycentre.mean_mem_openDisc
+#check @SpecialTransformations.Section3.mixed_qf_rootFree_constant
+#print axioms SpecialTransformations.Section3.mixed_qf_rootFree_constant
+#check @SpecialTransformations.Section3.mixed_qf_rootFree_constant_closed
+#print axioms SpecialTransformations.Section3.mixed_qf_rootFree_constant_closed
+#check @SpecialTransformations.Section3.mixed_finite_definable_obstacles
+#print axioms SpecialTransformations.Section3.mixed_finite_definable_obstacles
+#check @SpecialTransformations.Section3.Balls.nearestRoots_nonempty
+#print axioms SpecialTransformations.Section3.Balls.nearestRoots_nonempty
+#check @SpecialTransformations.Section3.Balls.nearestRoots_mem_closedDisc
+#print axioms SpecialTransformations.Section3.Balls.nearestRoots_mem_closedDisc
+#check @SpecialTransformations.Section3.Balls.nearestRoots_mem_openDisc
+#print axioms SpecialTransformations.Section3.Balls.nearestRoots_mem_openDisc
+#check @SpecialTransformations.Section3.OpenBallCodes.hullCenterCode_raw_definable
+#print axioms SpecialTransformations.Section3.OpenBallCodes.hullCenterCode_raw_definable
+#check @SpecialTransformations.Section3.OpenBallCodes.hullCenterCode_normalize
+#print axioms SpecialTransformations.Section3.OpenBallCodes.hullCenterCode_normalize
+#check @SpecialTransformations.Section3.OpenBallCodes.finite_hull_centers
+#print axioms SpecialTransformations.Section3.OpenBallCodes.finite_hull_centers
+#check @SpecialTransformations.Section3.OpenBallCodes.finite_hull_center_image
+#print axioms SpecialTransformations.Section3.OpenBallCodes.finite_hull_center_image
+#check @SpecialTransformations.Section3.Balls.strictDisc_recenter_iff
+#print axioms SpecialTransformations.Section3.Balls.strictDisc_recenter_iff
+#check @SpecialTransformations.Section3.Balls.hull_boundary_distance
+#print axioms SpecialTransformations.Section3.Balls.hull_boundary_distance
+#check @SpecialTransformations.Section3.Balls.hull_boundary_rv_fibre_iff
+#print axioms SpecialTransformations.Section3.Balls.hull_boundary_rv_fibre_iff
+#check @SpecialTransformations.Section3.BallFamilies.open_centers_of_finite_hitting_set
+#print axioms SpecialTransformations.Section3.BallFamilies.open_centers_of_finite_hitting_set
+#check @SpecialTransformations.Section3.OpenBallCodes.membership_raw_definable
+#print axioms SpecialTransformations.Section3.OpenBallCodes.membership_raw_definable
+#check @SpecialTransformations.Section3.OpenBallCodes.relation_definable
+#print axioms SpecialTransformations.Section3.OpenBallCodes.relation_definable
+#check @SpecialTransformations.Section3.OpenBallCodes.rawBall_normalize
+#print axioms SpecialTransformations.Section3.OpenBallCodes.rawBall_normalize
+#check @SpecialTransformations.Section3.OpenBallCodes.membership_definable
+#print axioms SpecialTransformations.Section3.OpenBallCodes.membership_definable
+#check @SpecialTransformations.Section3.OpenBallCodes.differenceGraph_definable
+#print axioms SpecialTransformations.Section3.OpenBallCodes.differenceGraph_definable
+#check @SpecialTransformations.Section3.OpenBallCodes.center_sort_of_graph
+#print axioms SpecialTransformations.Section3.OpenBallCodes.center_sort_of_graph
+#check @SpecialTransformations.Section3.OpenBallCodes.offsets_definable_base
+#print axioms SpecialTransformations.Section3.OpenBallCodes.offsets_definable_base
+#check @SpecialTransformations.Section3.OpenBallCodes.raw_center_mem
+#print axioms SpecialTransformations.Section3.OpenBallCodes.raw_center_mem
+#check @SpecialTransformations.Section3.OpenBallCodes.underlying_nonempty
+#print axioms SpecialTransformations.Section3.OpenBallCodes.underlying_nonempty
+#check @SpecialTransformations.Section3.OpenBallCodes.underlying_subset_vf
+#print axioms SpecialTransformations.Section3.OpenBallCodes.underlying_subset_vf
+#check @SpecialTransformations.Section3.OpenBallCodes.offsets_finite
+#print axioms SpecialTransformations.Section3.OpenBallCodes.offsets_finite
+#check @SpecialTransformations.Section3.GammaParameters.finite_hitting_set_of_algebraic_points
+#print axioms SpecialTransformations.Section3.GammaParameters.finite_hitting_set_of_algebraic_points
+#check @SpecialTransformations.Section3.OpenBallCodes.algebraic_point_of_boundary_offset
+#print axioms SpecialTransformations.Section3.OpenBallCodes.algebraic_point_of_boundary_offset
+#check @SpecialTransformations.Section3.OpenBallCodes.finite_family_algebraic_points
+#print axioms SpecialTransformations.Section3.OpenBallCodes.finite_family_algebraic_points
+#check @SpecialTransformations.Section3.OpenBallCodes.coded_open_centers_from_hitting_set
+#print axioms SpecialTransformations.Section3.OpenBallCodes.coded_open_centers_from_hitting_set
+#check @SpecialTransformations.Section3.OpenBallCodes.open_centers_from_real_hitting_set
+#print axioms SpecialTransformations.Section3.OpenBallCodes.open_centers_from_real_hitting_set
+#check @SpecialTransformations.Section3.OpenBallCodes.lemma_3_13_proper_open
+#print axioms SpecialTransformations.Section3.OpenBallCodes.lemma_3_13_proper_open
+#check @SpecialTransformations.Section3.polynomial_rv_eq_of_linear_factors
+#print axioms SpecialTransformations.Section3.polynomial_rv_eq_of_linear_factors
+#check @SpecialTransformations.Section3.polynomial_rv_constant_openDisc
+#print axioms SpecialTransformations.Section3.polynomial_rv_constant_openDisc
+#check @SpecialTransformations.Section3.polynomial_rv_constant_closedDisc
+#print axioms SpecialTransformations.Section3.polynomial_rv_constant_closedDisc
+#check @SpecialTransformations.Section3.RVFibreConstancy.mem_graph
+#print axioms SpecialTransformations.Section3.RVFibreConstancy.mem_graph
+#check @SpecialTransformations.Section3.RVFibreConstancy.corollary_3_12
+#print axioms SpecialTransformations.Section3.RVFibreConstancy.corollary_3_12
+#check @SpecialTransformations.Section3.Balls.closedDisc_zero_radial
+#print axioms SpecialTransformations.Section3.Balls.closedDisc_zero_radial
+#check @SpecialTransformations.Section3.Balls.openDisc_zero_radial
+#print axioms SpecialTransformations.Section3.Balls.openDisc_zero_radial
+#check @SpecialTransformations.Section3.ball_zero_radial
+#print axioms SpecialTransformations.Section3.ball_zero_radial
+#check @SpecialTransformations.Section3.ball_avoiding_zero_rv
+#print axioms SpecialTransformations.Section3.ball_avoiding_zero_rv
+#check @SpecialTransformations.Section3.Remark319Audit.mem_points
+#print axioms SpecialTransformations.Section3.Remark319Audit.mem_points
+#check @SpecialTransformations.Section3.Remark319Audit.signs_image
+#print axioms SpecialTransformations.Section3.Remark319Audit.signs_image
+#check @SpecialTransformations.Section3.Remark319Audit.rawSigns_definable
+#print axioms SpecialTransformations.Section3.Remark319Audit.rawSigns_definable
+#check @SpecialTransformations.Section3.Remark319Audit.zero_not_mem
+#print axioms SpecialTransformations.Section3.Remark319Audit.zero_not_mem
+#check @SpecialTransformations.Section3.Remark319Audit.rawSigns_not_ball
+#print axioms SpecialTransformations.Section3.Remark319Audit.rawSigns_not_ball
+#check @SpecialTransformations.Section3.Remark319Audit.rawSigns_not_valuation_units
+#print axioms SpecialTransformations.Section3.Remark319Audit.rawSigns_not_valuation_units
+#check @SpecialTransformations.Section3.qf_rootFree_constant
+#print axioms SpecialTransformations.Section3.qf_rootFree_constant
+#check @SpecialTransformations.Section3.finite_definable_obstacles
+#print axioms SpecialTransformations.Section3.finite_definable_obstacles
+#check @SpecialTransformations.Section3.Balls.tupleValuation_le_coordinate
+#print axioms SpecialTransformations.Section3.Balls.tupleValuation_le_coordinate
+#check @SpecialTransformations.Section3.Balls.le_tupleValuation_iff
+#print axioms SpecialTransformations.Section3.Balls.le_tupleValuation_iff
+#check @SpecialTransformations.Section3.Balls.tupleValuation_zero
+#print axioms SpecialTransformations.Section3.Balls.tupleValuation_zero
+#check @SpecialTransformations.Section3.Balls.tupleValuation_empty
+#print axioms SpecialTransformations.Section3.Balls.tupleValuation_empty
+#check @SpecialTransformations.Section3.Balls.closedPolydisc_uniform_iff
+#print axioms SpecialTransformations.Section3.Balls.closedPolydisc_uniform_iff
+#check @SpecialTransformations.Section3.Balls.openPolydisc_uniform_iff
+#print axioms SpecialTransformations.Section3.Balls.openPolydisc_uniform_iff
+#check @SpecialTransformations.Section3.Balls.valuativeCentre_of_zero_mem
+#print axioms SpecialTransformations.Section3.Balls.valuativeCentre_of_zero_mem
+#check @SpecialTransformations.Section3.Balls.valuativeCentre_of_constant
+#print axioms SpecialTransformations.Section3.Balls.valuativeCentre_of_constant
+#check @SpecialTransformations.Section3.Balls.closedDisc_value_constant
+#print axioms SpecialTransformations.Section3.Balls.closedDisc_value_constant
+#check @SpecialTransformations.Section3.Balls.openDisc_value_constant
+#print axioms SpecialTransformations.Section3.Balls.openDisc_value_constant
+#check @SpecialTransformations.Section3.Balls.valuativeCentre_closedDisc
+#print axioms SpecialTransformations.Section3.Balls.valuativeCentre_closedDisc
+#check @SpecialTransformations.Section3.Balls.valuativeCentre_openDisc
+#print axioms SpecialTransformations.Section3.Balls.valuativeCentre_openDisc
+#check @SpecialTransformations.Section5.oneCode_definable
+#print axioms SpecialTransformations.Section5.oneCode_definable
+#check @SpecialTransformations.Section5.rvConstant_definable
+#print axioms SpecialTransformations.Section5.rvConstant_definable
+#check @SpecialTransformations.Section5.rv_zero_ne_one
+#print axioms SpecialTransformations.Section5.rv_zero_ne_one
+#check @SpecialTransformations.Section5.membershipMap_iff
+#print axioms SpecialTransformations.Section5.membershipMap_iff
+#check @SpecialTransformations.Section5.membershipMap_eq_iff
+#print axioms SpecialTransformations.Section5.membershipMap_eq_iff
+#check @SpecialTransformations.Section5.Map.extend_apply
+#print axioms SpecialTransformations.Section5.Map.extend_apply
+#check @SpecialTransformations.Section5.Map.imageRepresentative_spec
+#print axioms SpecialTransformations.Section5.Map.imageRepresentative_spec
+#check @SpecialTransformations.Section5.Map.descend_apply
+#print axioms SpecialTransformations.Section5.Map.descend_apply
+#check @SpecialTransformations.Section5.Map.descend_unique
+#print axioms SpecialTransformations.Section5.Map.descend_unique
+#check @SpecialTransformations.Section5.Contractible.refine
+#print axioms SpecialTransformations.Section5.Contractible.refine
+#check @SpecialTransformations.Section5.pairRVMaps_contractible_left
+#print axioms SpecialTransformations.Section5.pairRVMaps_contractible_left
+#check @SpecialTransformations.Section5.pairRVMaps_contractible_right
+#print axioms SpecialTransformations.Section5.pairRVMaps_contractible_right
+#check @SpecialTransformations.Section5.pairRVMaps_comp
+#print axioms SpecialTransformations.Section5.pairRVMaps_comp
+#check @SpecialTransformations.Section5.baseImage_carrier
+#print axioms SpecialTransformations.Section5.baseImage_carrier
+#check @SpecialTransformations.Section5.mem_baseImage
+#print axioms SpecialTransformations.Section5.mem_baseImage
+#check @SpecialTransformations.Section5.dropHead_image_pullback
+#print axioms SpecialTransformations.Section5.dropHead_image_pullback
+#check @SpecialTransformations.Section5.baseImage_pullback
+#print axioms SpecialTransformations.Section5.baseImage_pullback
+#check @SpecialTransformations.Section5.baseImage_tagged
+#print axioms SpecialTransformations.Section5.baseImage_tagged
+#check @SpecialTransformations.Section5.replace_zero_insertHead
+#print axioms SpecialTransformations.Section5.replace_zero_insertHead
+#check @SpecialTransformations.Section5.canonicalImage_allTagged
+#print axioms SpecialTransformations.Section5.canonicalImage_allTagged
+#check @SpecialTransformations.Section5.Chain.lastKind_allTagged
+#print axioms SpecialTransformations.Section5.Chain.lastKind_allTagged
+#check @SpecialTransformations.Section5.baseImage_allTagged
+#print axioms SpecialTransformations.Section5.baseImage_allTagged
+#check @SpecialTransformations.Section5.headKey_eq_iff
+#print axioms SpecialTransformations.Section5.headKey_eq_iff
+#check @SpecialTransformations.Section5.headImage_carrier
+#print axioms SpecialTransformations.Section5.headImage_carrier
+#check @SpecialTransformations.Section5.headKey_image_pullback
+#print axioms SpecialTransformations.Section5.headKey_image_pullback
+#check @SpecialTransformations.Section5.headImage_pullback
+#print axioms SpecialTransformations.Section5.headImage_pullback
+#check @SpecialTransformations.Section5.headImage_mono
+#print axioms SpecialTransformations.Section5.headImage_mono
+#check @SpecialTransformations.Section5.headImage_tagged
+#print axioms SpecialTransformations.Section5.headImage_tagged
+#check @SpecialTransformations.Section5.headImage_allTagged
+#print axioms SpecialTransformations.Section5.headImage_allTagged
+#check @SpecialTransformations.Section5.headDescend_apply
+#print axioms SpecialTransformations.Section5.headDescend_apply
+#check @SpecialTransformations.Section5.SpecialBijection.restrict_prepared_at
+#print axioms SpecialTransformations.Section5.SpecialBijection.restrict_prepared_at
+#check @SpecialTransformations.Section5.SpecialBijection.restrict_contracted_indicator_at
+#print axioms SpecialTransformations.Section5.SpecialBijection.restrict_contracted_indicator_at
+#check @SpecialTransformations.Section5.vertical_relation_of_zero_obstacles
+#print axioms SpecialTransformations.Section5.vertical_relation_of_zero_obstacles
+#check @SpecialTransformations.Section5.allTagged_hull
+#print axioms SpecialTransformations.Section5.allTagged_hull
+#check @SpecialTransformations.Section5.headKey_mem_iff
+#print axioms SpecialTransformations.Section5.headKey_mem_iff
+#check @SpecialTransformations.Section5.dropHead_headTag
+#print axioms SpecialTransformations.Section5.dropHead_headTag
+#check @SpecialTransformations.Section5.vertical_rvGraph_transfer
+#print axioms SpecialTransformations.Section5.vertical_rvGraph_transfer
+#check @SpecialTransformations.Section5.Map.transportImage_apply
+#print axioms SpecialTransformations.Section5.Map.transportImage_apply
+#check @SpecialTransformations.Section5.restricted_map_injective
+#print axioms SpecialTransformations.Section5.restricted_map_injective
+#check @SpecialTransformations.Section5.restricted_image_mem_iff
+#print axioms SpecialTransformations.Section5.restricted_image_mem_iff
+#check @SpecialTransformations.Section5.vertical_graph_image
+#print axioms SpecialTransformations.Section5.vertical_graph_image
+#check @SpecialTransformations.Section5.complete_head_preparation
+#print axioms SpecialTransformations.Section5.complete_head_preparation
+#check @SpecialTransformations.Section5.restrict_prepared_map
+#print axioms SpecialTransformations.Section5.restrict_prepared_map
+#check @SpecialTransformations.Section5.tagged_rvMap_preparation
+#print axioms SpecialTransformations.Section5.tagged_rvMap_preparation
+#check @SpecialTransformations.Section5.rvPreparation_zero
+#print axioms SpecialTransformations.Section5.rvPreparation_zero
+#check @SpecialTransformations.Section5.rvPreparation_succ
+#print axioms SpecialTransformations.Section5.rvPreparation_succ
+#check @SpecialTransformations.Section5.rvPreparation_all
+#print axioms SpecialTransformations.Section5.rvPreparation_all
+#check @SpecialTransformations.Section5.mean_normalize
+#print axioms SpecialTransformations.Section5.mean_normalize
+#check @SpecialTransformations.Section5.mean_definable_normalized
+#print axioms SpecialTransformations.Section5.mean_definable_normalized
+#check @SpecialTransformations.Section5.rv_eq_zero_iff
+#print axioms SpecialTransformations.Section5.rv_eq_zero_iff
+#check @SpecialTransformations.Section5.mean_sameRV
+#print axioms SpecialTransformations.Section5.mean_sameRV
+#check @SpecialTransformations.Section5.unaryPoint_eta
+#print axioms SpecialTransformations.Section5.unaryPoint_eta
+#check @SpecialTransformations.Section5.mem_rootFibre
+#print axioms SpecialTransformations.Section5.mem_rootFibre
+#check @SpecialTransformations.Section5.rootFibre_card_le
+#print axioms SpecialTransformations.Section5.rootFibre_card_le
+#check @SpecialTransformations.Section5.rootBound_card
+#print axioms SpecialTransformations.Section5.rootBound_card
+#check @SpecialTransformations.Section5.rootBound_zero
+#print axioms SpecialTransformations.Section5.rootBound_zero
+#check @SpecialTransformations.Section5.rootFocus_center
+#print axioms SpecialTransformations.Section5.rootFocus_center
+#check @SpecialTransformations.Section5.nextRoot_fibre_subset
+#print axioms SpecialTransformations.Section5.nextRoot_fibre_subset
+#check @SpecialTransformations.Section5.rootBound_step
+#print axioms SpecialTransformations.Section5.rootBound_step
+#check @SpecialTransformations.Section5.unary_code_iff
+#print axioms SpecialTransformations.Section5.unary_code_iff
+#check @SpecialTransformations.Section5.FiniteRootSet.mem_points
+#print axioms SpecialTransformations.Section5.FiniteRootSet.mem_points
+#check @SpecialTransformations.Section5.FiniteRootSet.points_subset
+#print axioms SpecialTransformations.Section5.FiniteRootSet.points_subset
+#check @SpecialTransformations.Section5.FiniteRootSet.rawFamily_labels
+#print axioms SpecialTransformations.Section5.FiniteRootSet.rawFamily_labels
+#check @SpecialTransformations.Section5.FiniteRootSet.rawFamily_bound
+#print axioms SpecialTransformations.Section5.FiniteRootSet.rawFamily_bound
+#check @SpecialTransformations.Section5.FiniteRootSet.rawFamily_definable
+#print axioms SpecialTransformations.Section5.FiniteRootSet.rawFamily_definable
+#check @SpecialTransformations.Section5.Chain.alternating_none
+#print axioms SpecialTransformations.Section5.Chain.alternating_none
+#check @SpecialTransformations.Section5.Chain.append_alternating
+#print axioms SpecialTransformations.Section5.Chain.append_alternating
+#check @SpecialTransformations.Section5.Chain.append_toMap
+#print axioms SpecialTransformations.Section5.Chain.append_toMap
+#check @SpecialTransformations.Section5.Chain.lastKind_tagged
+#print axioms SpecialTransformations.Section5.Chain.lastKind_tagged
+#check @SpecialTransformations.Section5.FiniteRootSet.mem_push_points
+#print axioms SpecialTransformations.Section5.FiniteRootSet.mem_push_points
+#check @SpecialTransformations.Section5.FiniteRootSet.push_id_points
+#print axioms SpecialTransformations.Section5.FiniteRootSet.push_id_points
+#check @SpecialTransformations.Section5.FiniteRootSet.push_comp_points
+#print axioms SpecialTransformations.Section5.FiniteRootSet.push_comp_points
+#check @SpecialTransformations.Section5.FiniteRootSet.step_points
+#print axioms SpecialTransformations.Section5.FiniteRootSet.step_points
+#check @SpecialTransformations.Section5.FiniteRootSet.step_bound
+#print axioms SpecialTransformations.Section5.FiniteRootSet.step_bound
+#check @SpecialTransformations.Section5.FiniteRootSet.step_tagged
+#print axioms SpecialTransformations.Section5.FiniteRootSet.step_tagged
+#check @SpecialTransformations.Section5.FiniteRootSet.iterate
+#print axioms SpecialTransformations.Section5.FiniteRootSet.iterate
+#check @SpecialTransformations.Section5.FiniteRootSet.centralize_tagged
+#print axioms SpecialTransformations.Section5.FiniteRootSet.centralize_tagged
+#check @SpecialTransformations.Section5.FiniteRootSet.centralize_after
+#print axioms SpecialTransformations.Section5.FiniteRootSet.centralize_after
+#check @SpecialTransformations.Section5.scalarContractible_iff
+#print axioms SpecialTransformations.Section5.scalarContractible_iff
+#check @SpecialTransformations.Section5.polynomial_contractible_of_zero_roots
+#print axioms SpecialTransformations.Section5.polynomial_contractible_of_zero_roots
+#check @SpecialTransformations.Section5.polynomialCode_eq
+#print axioms SpecialTransformations.Section5.polynomialCode_eq
+#check @SpecialTransformations.Section5.polynomialCode_definable
+#print axioms SpecialTransformations.Section5.polynomialCode_definable
+#check @SpecialTransformations.Section5.zeroCode_definable
+#print axioms SpecialTransformations.Section5.zeroCode_definable
+#check @SpecialTransformations.Section5.polynomialZeroSet_finite
+#print axioms SpecialTransformations.Section5.polynomialZeroSet_finite
+#check @SpecialTransformations.Section5.theorem_5_4_unary
+#print axioms SpecialTransformations.Section5.theorem_5_4_unary
+#check @SpecialTransformations.Section5.RootFamily.image_fibre_cover
+#print axioms SpecialTransformations.Section5.RootFamily.image_fibre_cover
+#check @SpecialTransformations.Section5.RootFamily.push_bound
+#print axioms SpecialTransformations.Section5.RootFamily.push_bound
+#check @SpecialTransformations.Section5.relation_contractible_of_zero_obstacles
+#print axioms SpecialTransformations.Section5.relation_contractible_of_zero_obstacles
+#check @SpecialTransformations.Section5.unary_relation_preparation
+#print axioms SpecialTransformations.Section5.unary_relation_preparation
+#check @SpecialTransformations.Section5.isRVPullback_inter
+#print axioms SpecialTransformations.Section5.isRVPullback_inter
+#check @SpecialTransformations.Section5.sameRV_replace
+#print axioms SpecialTransformations.Section5.sameRV_replace
+#check @SpecialTransformations.Section5.Focus.restrict_eta
+#print axioms SpecialTransformations.Section5.Focus.restrict_eta
+#check @SpecialTransformations.Section5.Focus.restrict_image_subset
+#print axioms SpecialTransformations.Section5.Focus.restrict_image_subset
+#check @SpecialTransformations.Section5.Primitive.restrict
+#print axioms SpecialTransformations.Section5.Primitive.restrict
+#check @SpecialTransformations.Section5.Chain.cons_alternating_iff
+#print axioms SpecialTransformations.Section5.Chain.cons_alternating_iff
+#check @SpecialTransformations.Section5.Chain.restrict
+#print axioms SpecialTransformations.Section5.Chain.restrict
+#check @SpecialTransformations.Section5.SpecialBijection.restrict_at
+#print axioms SpecialTransformations.Section5.SpecialBijection.restrict_at
+#check @SpecialTransformations.Section5.SpecialBijection.restrict
+#print axioms SpecialTransformations.Section5.SpecialBijection.restrict
+#check @SpecialTransformations.Section5.RootFamily.mem_fibre
+#print axioms SpecialTransformations.Section5.RootFamily.mem_fibre
+#check @SpecialTransformations.Section5.RootFamily.card_bound
+#print axioms SpecialTransformations.Section5.RootFamily.card_bound
+#check @SpecialTransformations.Section5.RootFamily.bound_zero
+#print axioms SpecialTransformations.Section5.RootFamily.bound_zero
+#check @SpecialTransformations.Section5.RootFamily.rawFamily_labels
+#print axioms SpecialTransformations.Section5.RootFamily.rawFamily_labels
+#check @SpecialTransformations.Section5.RootFamily.rawFamily_bound
+#print axioms SpecialTransformations.Section5.RootFamily.rawFamily_bound
+#check @SpecialTransformations.Section5.RootFamily.rawFamily_definable
+#print axioms SpecialTransformations.Section5.RootFamily.rawFamily_definable
+#check @SpecialTransformations.Section5.RootFamily.mem_imageSet
+#print axioms SpecialTransformations.Section5.RootFamily.mem_imageSet
+#check @SpecialTransformations.Section5.RootFamily.imageSet_subset
+#print axioms SpecialTransformations.Section5.RootFamily.imageSet_subset
+#check @SpecialTransformations.Section5.RootFamily.step_fibre_subset
+#print axioms SpecialTransformations.Section5.RootFamily.step_fibre_subset
+#check @SpecialTransformations.Section5.RootFamily.step_bound
+#print axioms SpecialTransformations.Section5.RootFamily.step_bound
+#check @SpecialTransformations.Section5.RootFamily.step_tagged
+#print axioms SpecialTransformations.Section5.RootFamily.step_tagged
+#check @SpecialTransformations.Section5.RootFamily.iterate
+#print axioms SpecialTransformations.Section5.RootFamily.iterate
+#check @SpecialTransformations.Section5.RootFamily.canonical_fibre_subset
+#print axioms SpecialTransformations.Section5.RootFamily.canonical_fibre_subset
+#check @SpecialTransformations.Section5.RootFamily.canonical_bound
+#print axioms SpecialTransformations.Section5.RootFamily.canonical_bound
+#check @SpecialTransformations.Section5.RootFamily.centralize_after
+#print axioms SpecialTransformations.Section5.RootFamily.centralize_after
+#check @SpecialTransformations.Section5.RootFamily.restrict_bound
+#print axioms SpecialTransformations.Section5.RootFamily.restrict_bound
+#check @SpecialTransformations.Section5.RootFamily.centralize_boundary
+#print axioms SpecialTransformations.Section5.RootFamily.centralize_boundary
+#check @SpecialTransformations.Section5.rawUnaryValues_injective
+#print axioms SpecialTransformations.Section5.rawUnaryValues_injective
+#check @SpecialTransformations.Section5.mem_rawUnarySet_values
+#print axioms SpecialTransformations.Section5.mem_rawUnarySet_values
+#check @SpecialTransformations.Section5.rawUnarySet_definable
+#print axioms SpecialTransformations.Section5.rawUnarySet_definable
+#check @SpecialTransformations.Section5.obstacleFamily_bound
+#print axioms SpecialTransformations.Section5.obstacleFamily_bound
+#check @SpecialTransformations.Section5.lemma_5_2_at_boundary
+#print axioms SpecialTransformations.Section5.lemma_5_2_at_boundary
+#check @SpecialTransformations.Section5.lemma_5_2
+#print axioms SpecialTransformations.Section5.lemma_5_2
+#check @SpecialTransformations.Section5.lemma_5_2_after
+#print axioms SpecialTransformations.Section5.lemma_5_2_after
+#check @SpecialTransformations.Section5.Chain.append_assoc
+#print axioms SpecialTransformations.Section5.Chain.append_assoc
+#check @SpecialTransformations.Section5.Chain.append_suffix_alternating
+#print axioms SpecialTransformations.Section5.Chain.append_suffix_alternating
+#check @SpecialTransformations.Section5.theorem_5_5_unary
+#print axioms SpecialTransformations.Section5.theorem_5_5_unary
+#check @SpecialTransformations.Section5.uniformVerticalObstacles
+#print axioms SpecialTransformations.Section5.uniformVerticalObstacles
+#check @SpecialTransformations.Section4.ValuedPolydisc.mem_carrier_iff
+#print axioms SpecialTransformations.Section4.ValuedPolydisc.mem_carrier_iff
+#check @SpecialTransformations.Section4.ValuedPolydisc.side_mem_nhds
+#print axioms SpecialTransformations.Section4.ValuedPolydisc.side_mem_nhds
+#check @SpecialTransformations.Section4.ValuedPolydisc.side_infinite
+#print axioms SpecialTransformations.Section4.ValuedPolydisc.side_infinite
+#check @SpecialTransformations.Section4.ValuedPolydisc.carrier_eq_paper_balls
+#print axioms SpecialTransformations.Section4.ValuedPolydisc.carrier_eq_paper_balls
+#check @SpecialTransformations.Section4.exists_nonzero_ball_subset
+#print axioms SpecialTransformations.Section4.exists_nonzero_ball_subset
+#check @SpecialTransformations.Section4.exists_polydisc_subset_of_mem_nhds
+#print axioms SpecialTransformations.Section4.exists_polydisc_subset_of_mem_nhds
+#check @SpecialTransformations.Section4.independent_definable_contains_polydisc
+#print axioms SpecialTransformations.Section4.independent_definable_contains_polydisc

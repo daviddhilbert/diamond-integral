@@ -1,0 +1,61 @@
+--- a/section 2/reference/diamond_integral_revision_annotated.tex
++++ b/section 2/reference/diamond_integral_revision_annotated.tex
+@@ -1399,7 +1399,7 @@
+ Suppose that $f : \MM \mi 0 \fun \mdl P (A)$ is a definable finitary function, where $A$ is a closed and bounded set in $\VF$. Then there is a definable finite set $L \sub A$ such that $\lim_{\MM \mi 0 \rightarrow 0} f = L$.
+ \end{lem}
+ 
+-We remark that if a ``point at infinity'' is adjoined in each coordinate (one-point compactification of $\VF$)  then there is no need to require that $A$ be bounded.
++We remark that the finite-limit theorem also holds in the coordinatewise projective line $(\mathbb P^1(\VF))^m$, with the valuation topology: if $A\subseteq\VF^m$ is not bounded, take its closure there and allow infinite coordinates in $L$. This is the projective version of the same cited theorem; no topological local compactness is assumed.
+ 
+ 
+ \yimu{revision of the next few lemmas}
+@@ -1457,10 +1457,22 @@
+ 
+ 
+ \begin{lem}\label{cb:to:cb}
+-Let $A$ be a closed and bounded set in $\VF$, and $f : A \fun \VF^m$ a definable continuous function. Then $f(A)$ is also closed and bounded.
+-\end{lem}
+-\begin{proof}
+-Suppose for contradiction that $f(A)$ is not closed and bounded. Applying curve selection to any point in the frontier of $f(A)$,  we obtain a curve $C \sub f(A)$ such that $\lim_{\MM \mi 0 \rightarrow 0} C$ is not contained in $f(A)$. Since $f^{-1}(d)$ contains $d$-algebraic points for every $d \in f(A)$, we can pull back $C$ along $f$, that is, we can find a curve $C '\sub A$ with $f(C') = C$. By Lemma~\ref{lim:exists}, $\lim_{\MM \mi 0 \rightarrow 0} C' \sub A$. Since $f$ is continuous, this would mean $\lim_{\MM \mi 0 \rightarrow 0} C  \sub f(A)$, contradiction.
++Let $A\subseteq\VF^n$ be definable, closed and bounded, and let $f:A\fun\VF^m$ be definable and continuous. Then $f(A)$ is also closed and bounded.
++\end{lem}
++\begin{proof}
++The conclusion is geometric, so we may temporarily enlarge the parameter base to a small $\VF$-generated base over which all the data are definable. The standing nontriviality of the ground valuation is preserved. Over this base, and after naming any additional finite $\VF$ tuple, algebraic closure is a model of $\ACVF(0,0)$. Elementarity and compactness therefore give finite nonempty definable choices in the nonempty families below. No choice over the original parameter base is asserted.
++
++First let $b\in\overline{f(A)}\setminus f(A)$, where this closure is affine, and name $b$. For every $c\in\MM\setminus\{0\}$ the set
++\[
++\{x\in A:f(x)\in\go(b,\vv(c))\}
++\]
++is nonempty. Applying the model argument over the enlarged base together with $(b,c)$, and then compactness, gives a definable finitary function $F:\MM\setminus\{0\}\fun\mdl P(A)$ such that every $F(c)$ is nonempty and $f(F(c))\subseteq\go(b,\vv(c))$. Lemma~\ref{lim:exists}, in its finite-dimensional form, gives a finite minimal limit set $L\subseteq A$. This set is nonempty, since $F$ has nonempty values arbitrarily close to $0$. For every $a\in L$, minimality implies that values of $F$ meet every neighborhood of $a$ for inputs arbitrarily close to $0$: otherwise $a$ could be removed from $L$. Continuity at $a$ and the displayed containment force $f(a)=b$, contradicting $b\notin f(A)$. Thus $f(A)$ is closed.
++
++If $f(A)$ were unbounded, one coordinate $f_i$ would be unbounded. For every $c\in\MM\setminus\{0\}$ the definable set
++\[
++\{x\in A:\vv(f_i(x))<-\vv(c)\}
++\]
++would be nonempty. The same model argument and compactness give finite nonempty choices $F(c)$ inside these sets. Again Lemma~\ref{lim:exists} supplies a nonempty finite minimal limit set $L\subseteq A$. Choose $a\in L$. Continuity makes $f_i$ bounded on a neighborhood of $a$ in $A$, while minimality makes $F(c)$ meet that neighborhood for arbitrarily small nonzero $c$. The inequality $\vv(f_i(x))<-\vv(c)$ for all $x\in F(c)$ contradicts this local bound. Hence $f(A)$ is bounded as well.
+ \end{proof}
+ 
+ % BEGIN REFEREE INSERTION R041
+@@ -1476,10 +1488,18 @@
+ \end{cor}
+ 
+ \begin{lem}[The closed graph criterion for continuity]\label{closed:gra}
+-Let $A$, $B$ be definable sets in $\VF$. Suppose that $B$ is closed (if $B$ is not bounded then the  closure is taken in the coordinatewise one-point compactification). A definable function $f : A \fun B$ is continuous if and only if its graph  is closed in $A \times B$.
+-\end{lem}
+-\begin{proof}
+-The ``only if'' direction follows from the usual argument. For the ``if'' direction, suppose for contradiction that there are an $a \in A$ and an open polydisc $\gb$ around $f(a)$ such that for all open polydisc $\ga$ around $a$, $f(\ga \cap A)$ is not contained in $\gb$. By Lemma~\ref{curve:select}, we can choose a curve inside the graph of $f$ such that one of its limit points is of the form $(a, b') \in A \times B$. Since $b' \neq f(a)$, we have reached a contradiction.
++Let $A\subseteq\VF^n$ and $B\subseteq\VF^m$ be definable, with $B$ closed in affine space. Write $B^{\mathrm p}$ for the closure of $B$ in $(\mathbb P^1(\VF))^m$, with the valuation topology. A definable function $f:A\fun B$ is continuous if and only if its graph is closed in $A\times B^{\mathrm p}$. If $B$ is bounded, then $B^{\mathrm p}=B$, so this is the usual relative closed-graph condition.
++\end{lem}
++\begin{proof}
++The graph of a continuous map into the Hausdorff space $B^{\mathrm p}$ is closed, proving the forward implication.
++
++Conversely, suppose the graph is closed but $f$ is not continuous at $a\in A$. Choose a clopen projective polydisc $U$ around the finite point $f(a)$ such that
++\[
++D=\{x\in A:f(x)\notin U\}
++\]
++has $a$ in its closure. As in the preceding proof, temporarily enlarge the parameter base to a small $\VF$-generated base containing the parameters of these data. This changes neither continuity nor graph closure. By Lemma~\ref{curve:select}, there is a definable continuous finitary function $C:\MM\setminus\{0\}\fun\mdl P(D)$ with nonempty values and limit $\{a\}$.
++
++Apply the projective version of Lemma~\ref{lim:exists} to the finite-valued function $c\efun f(C(c))$. It has a finite minimal limit set $L$, which is nonempty because all the values are nonempty. Every point of $L$ belongs to the closed set $B^{\mathrm p}\setminus U$: minimality makes the image meet each neighborhood of such a point for inputs arbitrarily close to $0$. Choose $b'\in L$. This same property, together with $C(c)\to\{a\}$, shows that $(a,b')$ belongs to the closure of the graph of $f$ in $A\times B^{\mathrm p}$. Closedness of the graph gives $b'=f(a)$, contrary to $b'\notin U$. This proves continuity without a global $\VF$-generation hypothesis.
+ \end{proof}
+ 
+ % BEGIN REFEREE INSERTION R042

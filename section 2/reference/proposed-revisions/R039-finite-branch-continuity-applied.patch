@@ -1,0 +1,33 @@
+--- a/section 2/reference/diamond_integral_revision_annotated.tex
++++ b/section 2/reference/diamond_integral_revision_annotated.tex
+@@ -1373,20 +1373,26 @@
+ Let $A \sub \VF^n$ be a definable set with $\dim_{\VF}(A) = n$ and $f : A \fun \mdl P(\VF^m)$ a definable finitary function. We say that $f$ is \memph{continuous} if $\lim_{ A \rightarrow a} f = f(a)$ for all $a \in A$.
+ 
+ \begin{lem}\label{fini:conti}
+-The function $f$ is continuous almost everywhere.
++Suppose $n>0$. Then $f$ is continuous almost everywhere.
+ \end{lem}
+ \begin{proof}
+ This can be reduced to the familiar case that $f$ is indeed a function into $\VF^m$ as follows. By Lemma~\ref{finite:VF:project:RV} and compactness, there are a definable set $U$ in $\RV$ and a definable function $g: A \times \VF^m \fun A \times U$ such that, for all $a \in A$, $\pr_A(g(a, b)) = a$  and $g \rest (a \times f(a))$ is injective. For each $t \in U$, let
+ \[
+ A_t = \set{a \in A \given (a,t) \in g(a \times f(a))}
+ \]
+-and $f_t \sub f$ be the obvious $t$-definable function $A_t \fun \VF^m$. By dimension theory, more precisely, by Lemma~\ref{full:dim:open:poly}, $\dim_{\VF}(A_t) = n$ for some $t \in U$. For such a $t \in U$, by Lemma~\ref{fun:almost:cont}, $f_t$ is continuous almost everywhere.  The claim follows.
++and $f_t \sub f$ be the obvious $t$-definable function $A_t \fun \VF^m$. The discontinuity locus $E$ of $f$ is definable: the limit condition is first-order, and minimality of the finite set $f(a)$ can be tested by removing one of its elements at a time. Suppose for contradiction that $\dim_{\VF}(E)=n$. By Lemma~\ref{full:dim:open:poly}, $E$ contains a nonempty open polydisc. Apply generic local constancy \cite[Lemma~8.9]{Yin:special:trans} to the finite label-set map
++\[
++a\efun g(a\times f(a))_{\RV}.
++\]
++After shrinking to a nonempty open polydisc $P\sub E$, this set is a fixed finite set $T$. If $T$ is empty, then $f$ is the constant empty correspondence on $P$ and is continuous there, a contradiction.
++
++For each $t\in T$, the inverse branch $f_t$ is defined on all of $P$. Extend it by zero outside $A_t$ and apply Lemma~\ref{fun:almost:cont}. The finitely many branch-exception sets have union of $\VF$-dimension less than $n$, so choose $a\in P$ outside their union. All branches are continuous at $a$. Their finite union has limit set $f(a)$; this limit set is minimal because the distinct values at $a$ can be separated by sufficiently small discs and, since $n>0$, the punctured polydisc still accumulates at $a$. Thus $f$ is continuous at $a$, contradicting $P\sub E$. Hence $\dim_{\VF}(E)<n$.
+ \end{proof}
+ 
+ % BEGIN REFEREE INSERTION R039
+-\RefereeRemark{039}{Gap; revised}{One continuous branch is not enough}{%
++\ResolvedRefereeRemark{039}{Gap; revised}{One continuous branch is not enough}{%
+ \textit{Original source line 1068.}\quad The argument finds one $t$ for which $A_t$ has full dimension and $f_t$ is generically continuous. That alone does not account for all branches of $f$. Apply generic local constancy to the finite $\RV$-label set $a\mapsto g(a\times f(a))_{\RV}$, then simultaneously apply generic continuity to its finitely many inverse branches on each neighborhood. To justify the global dimension conclusion, suppose the discontinuity locus had full dimension and choose an open polydisc in it where this label set is constant; the finite collection of branch-exception sets cannot fill that polydisc. The empty label set simply gives the constant empty correspondence and should be handled separately. This supplies the missing coverage argument.
+-}
++}{The author approves the expanded proof and the restriction $n>0$. The original ending uses the dimension principle that an $\RV$-indexed definable union of sets of $\VF$-dimension less than $n$ still has dimension less than $n$. The expanded argument obtains the same coverage by making the finite label set locally constant and treating all branches together, including the empty-label case. The positive-arity hypothesis is needed for the unchanged punctured limit convention.}
+ % END REFEREE INSERTION R039
+ 
+ \begin{lem}[{\cite[Lemma~9.5]{Yin:special:trans}}]\label{lim:exists}

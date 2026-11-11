@@ -1,0 +1,35 @@
+--- a/section 2/reference/diamond_integral_revision_annotated.tex
++++ b/section 2/reference/diamond_integral_revision_annotated.tex
+@@ -1139,20 +1139,25 @@
+ \end{lem}
+ 
+ \begin{lem}\label{atomic:open:multidisc}
+-Let $\ga$, $f$ be as in Lemma~\ref{at:rv:split} and suppose that $f$ is not constant. Then there are $t_1, \ldots, t_k \in \RV$ and for each $i$, a $t_i$-definable function $f_i : \ga \fun t^\sharp_i$ such that $f = \bigcup_i f_i$ and each $f_i(\ga)$ is either a point or a $t_i$-atomic open disc.
+-\end{lem}
+-\begin{proof}
+-By Lemmas~\ref{at:ball:t} and \ref{at:rv:split}, this is immediately reduced to the case that $f$ is a definable nonconstant function $\ga \fun t^\sharp$. We do induction on $n$. The base case $n=1$ is just Lemma~\ref{atomic:open:ball:open}. For the case $n > 1$,  by Lemma~\ref{hae:component:11}, $f(\ga)$ is an open disc or a closed disc or a thin annulus. Suppose for contradiction that $f(\ga)$ is a closed disc or a  thin annulus. By the inductive hypothesis, for every $a \in \pr_{1}(\ga)$ there is a maximal open subdisc $\gb_a \sub f(\ga)$ that contains $f(\ga_a)$, similarly for every $a \in \pr_{>1}(\ga)$. It follows that $f(\ga)$ is actually contained in a maximal open subdisc of $f(\ga)$, which is absurd.
++Let $\ga$, $f$ be as in Lemma~\ref{at:rv:split} and suppose that $f$ is not constant. Then there are $t_1, \ldots, t_k \in \RV_\infty$ and for each $i$, a $t_i$-definable function $f_i : \ga \fun t^\sharp_i$ such that $f = \bigcup_i f_i$ and each $f_i(\ga)$ is either a point or a $t_i$-atomic open disc.
++\end{lem}
++\begin{proof}
++By Lemma~\ref{at:rv:split} and injectivity of $\rv$ on each finite fiber, $f$ decomposes into finitely many $t$-definable single-valued branches $g:\ga\fun t^\sharp$. A branch with $t=\infty$ is the constant zero branch. Any constant branch already has the required form, so fix a nonconstant branch, for which $t\in\RV$. Lemma~\ref{at:ball:t} makes $\ga$ atomic over $t$.
++
++Every coordinate line of $\ga$ is atomic over its fixed coordinates and $t$. By Lemma~\ref{atomic:open:ball:open}, its image under $g$ is a point or an open disc. Any two points of $\ga$ can be joined by changing one coordinate at a time. Starting at a point with image $p$ and ending at a point with different image, the first nonconstant line image is an open neighborhood of $p$ contained in $g(\ga)$. Thus $g(\ga)$ is open. It is a proper definable subset of $\VF$, since it lies in $t^\sharp$.
++
++By \cmin-minimality, every point of a proper definable open subset of $\VF$ lies in a maximal open disc contained in that subset. Choose such a disc $D\sub g(\ga)$ containing one value of $g$. An open line image that meets $D$ is contained in $D$: intersecting open discs are nested, and maximality excludes a larger one inside $g(\ga)$. A point image also stays in $D$ when its initial value is in $D$. The coordinate chains therefore keep every value of $g$ in $D$, so $g(\ga)=D$. The definable image of an atomic set is atomic over the same base, hence this open disc is $t$-atomic, as required.
++
+ \end{proof}
+ 
+ % BEGIN REFEREE INSERTION R030
+-\RefereeRemark{030}{Gap; revised}{A unary image lemma is used on a polydisc}{%
++\ResolvedRefereeRemark{030}{Gap; revised}{A unary image lemma is used on a polydisc}{%
+ \textit{Original source line 918.}\quad For $n>1$, Lemma~\ref{hae:component:11} does not directly apply to $f:\ga\to\VF$, since it has a unary domain. Supply the missing argument that $f(\ga)$ has just one primitive component. A possible route is the canonical finite component decomposition of an atomic unary set: every coordinate slice of $\ga$ is atomic over its fixed coordinates, and its image is a point or an open disc by induction. Show that such an image must lie in one primitive component, then connect any two source points by changing coordinates one at a time. The same coordinate-chain argument excludes a closed disc or thin annulus as the whole image, because each slice image lies in a single maximal open subdisc. This fills the role of the inapplicable unary citation, once the component claim is spelled out.
+-}
++}{The author approves the coordinate-chain proof. Unary coordinate-line images are points or open discs; maximal open discs in a proper definable open image then force the entire nonconstant image to be one open disc. This replaces the inapplicable unary citation on the polydisc. The tag ranges here and in Corollary~\ref{part:rv:cons} are also enlarged to $\RV_\infty$, retaining the constant zero branch.}
+ % END REFEREE INSERTION R030
+ 
+ \begin{cor}\label{part:rv:cons}
+-Let $A \sub \VF^n$ be a definable set and $f : A \fun \mdl P(\VF)$ a definable finitary function as in Lemma~\ref{at:rv:split}. Then there are a definable finite partition $(A_i)_i$ of $A$ and, for each $i$ and all open polydiscs $\ga \sub A_i$, finitely many $t_{\ga j}$-definable functions $f_{\ga j} : \ga \fun t^\sharp_{\ga j}$, where $t_{\ga j} \in \RV$, such that  $f \rest \ga = \bigcup_j f_{\ga j}$  and each $f_{\ga j}(\ga)$ is either a point or an open disc.
++Let $A \sub \VF^n$ be a definable set and $f : A \fun \mdl P(\VF)$ a definable finitary function as in Lemma~\ref{at:rv:split}. Then there are a definable finite partition $(A_i)_i$ of $A$ and, for each $i$ and all open polydiscs $\ga \sub A_i$, finitely many $t_{\ga j}$-definable functions $f_{\ga j} : \ga \fun t^\sharp_{\ga j}$, where $t_{\ga j} \in \RV_\infty$, such that  $f \rest \ga = \bigcup_j f_{\ga j}$  and each $f_{\ga j}(\ga)$ is either a point or an open disc.
+ \end{cor}
+ \begin{proof}
+ For $a \in A$, let $D_a \sub A$ be the type-definable subset containing $a$. By Lemma~\ref{atom:self}, every open polydisc $\ga \sub D_a$ is $\code \ga$-atomic and hence, by Lemma~\ref{atomic:open:ball:open}, the assertion holds for $\ga$. Then, by compactness, the assertion must hold in a definable subset $A_a \sub A$ that contains $a$; by compactness again, it holds in finitely many definable subsets $A_1, \ldots, A_m$ of $A$ with $\bigcup_i A_i = A$. Then the partition of $A$ generated by $A_1, \ldots, A_m$ is as desired.

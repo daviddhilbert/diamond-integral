@@ -1,0 +1,11 @@
+--- a/section 2/reference/diamond_integral_revision_annotated.tex
++++ b/section 2/reference/diamond_integral_revision_annotated.tex
+@@ -1122,6 +1122,8 @@
+ This is clear since, by Lemma~\ref{at:ball:t}, for every $t \in \rv(\bigcup f(\ga))$, $\ga$ is $t$-atomic and hence $f$ induces a $t$-definable function $\ga \fun t^\sharp$. The lemma follows.
+ \end{proof}
+ 
++A \memph{thin annulus} is a set of the form $\gc(a,\gamma)\setminus\go(a,\gamma)=\{x\in\VF:\vv(x-a)=\gamma\}$, where $a\in\VF$ and $\gamma\in\Gamma$. Equivalently, it is a closed disc with one maximal open subdisc removed.
++
+ \begin{lem}[{\cite[Lemma~3.8]{Yin:int:acvf}}]\label{hae:component:11}
+ Let $A \sub \VF$ be an atomic open disc or an atomic closed disc or an atomic thin annulus. Let $f : A \fun \VF$ be a definable function. Then $f(A)$ is also atomic of one of these three forms.
+ \end{lem}

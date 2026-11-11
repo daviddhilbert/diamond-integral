@@ -1,0 +1,15 @@
+--- a/section 2/reference/diamond_integral_revision_annotated.tex
++++ b/section 2/reference/diamond_integral_revision_annotated.tex
+@@ -1346,7 +1346,11 @@
+ 
+ 
+ \begin{defn}
+-Let $A \sub \VF^n$ and $f : A \fun \mdl P(\VF^m)$ be a definable function whose range is bounded. For $a \in \VF^n$ and $L \sub \VF^m$, we say that $L$ is a \memph{limit set of $f$ at $a$}, written as $\lim_{A \rightarrow a} f \sub L$, if for every $\epsilon \in \Gamma$ there is a $\delta \in \Gamma$ such that if $c \in \go( a, \delta) \cap (A \mi a)$ then $f(c) \sub \bigcup_{b \in L'} \go(b, \epsilon)$ for some $L' \sub L$.
++Let $A \sub \VF^n$ and $f : A \fun \mdl P(\VF^m)$ be a definable function. For $a \in \VF^n$ and $L \sub \VF^m$, we say that $L$ is a \memph{limit set of $f$ at $a$}, written as $\lim_{A \rightarrow a} f \sub L$, if for every $\epsilon \in \Gamma$ there is a $\delta \in \Gamma$ such that if $c \in \go(a,\delta) \cap (A\setminus\{a\})$ then
++\[
++f(c)\sub\bigcup_{b\in L}\go(b,\epsilon).
++\]
++This is a local definition and imposes no global boundedness hypothesis. A finite limit set forces the union of the values $f(c)$ to be bounded on some punctured neighborhood of $a$. Whenever boundedness of the range is assumed, it means boundedness of $\bigcup_{c\in A}f(c)$.
+ 
+ A limit set $L$ of $f$ at $a$ is \memph{minimal} if no proper subset of $L$ is a limit set of $f$ at $a$.
+ \end{defn}

@@ -1,0 +1,126 @@
+{
+  "base_revision": "9cc9760892092dd34cfad4a6dee655843c52f30c",
+  "patch_sha256": "1025b80e4d836f501bb09a342effbf33a6e02a2cba48d75bb01262e4027c98a7",
+  "files": {
+    "Section3/AdditiveCosets.lean": {
+      "before": "c601308ba4d063fa83a493eeb29a6ffbacc87df2f786a785857d41df167ecc19",
+      "after": "402caced2e84057dd98a3eab719fc2a66bc8e9f655e172c7cebea94b14401d35"
+    },
+    "Section3/BallDefinablePoint.lean": {
+      "before": "f89a4bb49bc03cbeaaf313734365eb18fc1c570b66cdf93f1cdf46cfdfc61a04",
+      "after": "f6f76e71546929173cc4e3e15b0cd97049168a8079e95670444c0d9fe6ccaefe"
+    },
+    "Section3/BallFibreConstancy.lean": {
+      "before": "8f2ebf451e917b66e5c3013438f3e0b06a7f3b5acce02a39507fc8a45f5e1e81",
+      "after": "9d68df4cfc621f738b6618082439de72bbd46a079567d20c2faa898596483038"
+    },
+    "Section3/BallGeometry.lean": {
+      "before": "2aaf79419b64498c9f132d2a1a17d55f51218abf7342fcb58d14b4a0ae2872ad",
+      "after": "8563c6b7c9f8ff27d01e766aa228c1e01e2038b9cac61f446a887027201d1764"
+    },
+    "Section3/BallInitial.lean": {
+      "before": "60faae3427c7eb5d64d58b4819eeec61590a4f9579dd3e36f51caa26fae2d8d5",
+      "after": "4d7fbb7165b15da770537bc1cf129608bb1ec3f29c13e5df99af42d718296fae"
+    },
+    "Section3/BallTranslation.lean": {
+      "before": "9fefcc508378724baa702f0b737909c2ed5a4185a172a227c18576370ab53980",
+      "after": "4780f7195396cff928d5dd44dcf6929f9651731af5bb36d8b2dad484a5d8b2fa"
+    },
+    "Section3/ClosedBallCentres.lean": {
+      "before": "53a1e0c4b3dbe10c285567f251f9f0592eec1dc290d38bfda3769154a7e1ee95",
+      "after": "ce1c73b967760adc347bb21b42ce5b758f3213da84310231e427973619be9305"
+    },
+    "Section3/DiscCentres.lean": {
+      "before": "2ec7135968083f759f97ba9905f19120249a3907afeafdd99be5066646d6c78f",
+      "after": "5ca823dfb7e02d5bc0c69ed21438ab4956af5852447770bfbef8ab286e19eb34"
+    },
+    "Section3/EncodedBallGeometry.lean": {
+      "before": "9d1f2f68892ac8cf051f8c2dd902f0b43fbe53fa8b068ab020f18dad9d95ba36",
+      "after": "add5784f3891f42234cf5b3f01de9f55048f394d61ed2832068ab3cce6b1623e"
+    },
+    "Section3/GammaBallDefinablePoint.lean": {
+      "before": "cfb30004c5bf72baab40e86da0d20e51d19944b9a9dc50e8659d7f8ec3554be7",
+      "after": "0fab53c558f328b02258d1e171ad892f1cc61c5e91ea0909b159f361947209ea"
+    },
+    "Section3/GeneralBallCenters.lean": {
+      "before": "2d2a4bb8a21f043ebca43ad89489d0daf60e2ea70b261d4c0ebfc3464e4ecc79",
+      "after": "48a970543652632bbcd4ed8bff821e53526131917135c0180cbfd5c7a4fd1dd5"
+    },
+    "Section3/MeanInBalls.lean": {
+      "before": "7883e82c4a67852db1344bf08ed6e369f31479aacf8e20aee031969369657187",
+      "after": "36b1dabff1af27c44fd77d72cb143571b0138aad864bf2fbd132c92affa31189"
+    },
+    "Section3/MixedRootFree.lean": {
+      "before": "9b7b244bc1e4bbd4203460513aa3cb8f5ea3f1df67e9ecbc2736c76ce11a06b0",
+      "after": "84c57b5f6d3f4b78d0c05d7c1f37388f090028bd96d5265d160e0e81b92993c1"
+    },
+    "Section3/NearestRoots.lean": {
+      "before": "0c78dc7b1362428478400ac0bc4eb877ad1fb8c62a072264068cf490401f6d8a",
+      "after": "51fe3c77b606e6d3ca5ba6730637453167c7194d60015b57641408c796c642c3"
+    },
+    "Section3/OpenBallCenters.lean": {
+      "before": "45d594cf709bf1ed4b02b6480dd90a5b24e931b9b46b134f4adfc7b99c68794d",
+      "after": "5b86e44febac041f672b06d83ec7ebecbdf609272b5779d889841298f97afd66"
+    },
+    "Section3/PolynomialRVConstant.lean": {
+      "before": "9ba5ed68b7c047d0cc27bc808a5409d06c4034671d6d95aca674d346f9114e4b",
+      "after": "27d09a5188c426f1690a90e8010cf55c897ed4688453ae0c3a97c75d31caeb9c"
+    },
+    "Section3/RVFibreConstancy.lean": {
+      "before": "384e092061c5a8b7cb721b25d2c7d2cdcb049817d8bd76ca323d4af9f925248d",
+      "after": "13df89229525a6a1dc2523af34239c22b7d9dee345a7267c7af2db215615527d"
+    },
+    "Section3/RadialBalls.lean": {
+      "before": "6c1d3b836bf2947f0c1b123e728b94c01b65d7a434103e6f08e2e97763264c48",
+      "after": "65e214bcabf57ee7bd80797d68e51f3935cf72c9d47ddae2a8d906d65c6186bc"
+    },
+    "Section3/Remark319Audit.lean": {
+      "before": "db1c95345e9fb2c4dfa29527c40acf5f1209b204982226317eabdb8eb8389e26",
+      "after": "5d336e30341096ccddb0bf88f311957013726001c3064a08f3f19f3f263ce8a9"
+    },
+    "Section3/RootFreeConstancy.lean": {
+      "before": "96adb5cbd41f12f3d08910e0285adb55535a29807c258fa1dcd7301ff793c8ca",
+      "after": "9947c54bdbbbc22199c90ece705ebdc4806943ce383e95a821661b097307ee8a"
+    },
+    "Section3/TupleValuation.lean": {
+      "before": "ce4087708899f664527ac67455823f8927b23552323eb723d08e58838a6898dc",
+      "after": "3e92429f8427000b5bbf11e9ee23cef568d4c741239f5e364337d58f67b674af"
+    },
+    "Section3/ValuativeCentre.lean": {
+      "before": "2d2d78ba06a7698901063e91bf4ac75503b891e058b1aee12b448c5e8a7dd7b0",
+      "after": "af42e6d3c109de9bfe1acfb8fc55618cb8aa98913ab3461bd9e1928f185d0245"
+    },
+    "Section4/PolydiscLocal.lean": {
+      "before": "fb2c200083e37857a15684510fece5fddddb4d08ad159f847322ad68e901d37f",
+      "after": "a5cf5a838f2e6711e1c1767793738a16137ba0d3a150a678fdb8d76990bde8a5"
+    },
+    "Section5/Assembly.lean": {
+      "before": "3cc0948ed347f7e06e33f689137875c426d6b5f31d53b22e8fd67e5f83ecd002",
+      "after": "f135eeff083c6305898d2c711a99f9f30a3f785be6b8251d03b15c7978592b3e"
+    },
+    "Section5/GeneralAssembly.lean": {
+      "before": "ba6b5a6b9cc8745b398333e55fbb1e8edf3e95f21a73b2efaded29bba07925bc",
+      "after": "c6a269f7dcb26f025173206b227e539f82733d0cb21cdc6bee7e184bb4a2b8a9"
+    },
+    "Section5/RootConstruction.lean": {
+      "before": "85c6d6195b171885f0bd9cf98a8346beef3e14b17bafc74b1c343f8a5cfab8c6",
+      "after": "e250b511d6bd07449e7d9d83acce40326aa5e29b4ed452c009dec8dd1f065145"
+    },
+    "Section5/UnaryRelations.lean": {
+      "before": "f4068dd0aa795373510ab82bdfbda01465b5759881994c6f3f885f94578b44fe",
+      "after": "148d760408ac09a0399046812479ccc50752e6484dc502ae48f2f029a199f1fc"
+    },
+    "Section5/UnarySets.lean": {
+      "before": "6a20ada26d2a9ff3e815737faf3d7c36930b3eecd05cc4e8f64d426203ff0a56",
+      "after": "a5aac0a5c449fb39743e1b7c4aef642b91065cbf924c05a0427d39ad870bbaeb"
+    },
+    "Section5/VerticalObstacles.lean": {
+      "before": "1d9930d4eedac62f5efc84294f1842cf27c2dfdf136593605e076ff838b97caa",
+      "after": "2131aaa9f7d821344b72bb908d4ac21e983a893636fe91c16b01e223744c9e61"
+    },
+    "Section8/UnaryBalls.lean": {
+      "before": "391760008397d0fd52c03acc61c66213c6fc40b568f73473acfa1bd0b523dd75",
+      "after": "37d8f2a735a065d227ad9500557daad04293eb07a11c4304ac4d9845dd7c3b6b"
+    }
+  }
+}

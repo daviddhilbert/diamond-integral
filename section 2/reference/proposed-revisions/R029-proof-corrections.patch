@@ -1,0 +1,11 @@
+--- a/section 2/reference/diamond_integral_revision_annotated.tex
++++ b/section 2/reference/diamond_integral_revision_annotated.tex
+@@ -1096,7 +1096,7 @@
+ Let $\ga \sub \VF^n$ be an atomic open polydisc. Then $\ga$ is $t$-atomic for all $t \in \RV$.
+ \end{lem}
+ \begin{proof}
+-For the case $n=1$, if $\ga$ were not $t$-atomic then, by Corollary~\ref{open:disc:def:point} and Lemma~\ref{dcl:to:ac}, it would contain a definable point, contradicting atomicity. For the case $n>1$, by induction on $n$, $\ga_1$ is $t$-atomic and for every $a \in \ga_1$, $\ga_{>1}$ is $(a, t)$-atomic. So $\ga$ cannot have nonempty $t$-definable subset.
++For the case $n=1$, if $\ga$ were not $t$-atomic then, by Corollary~\ref{open:disc:def:point} and Lemma~\ref{dcl:to:ac}, it would contain a point algebraic over the fixed ground base. This point belongs to a finite ground-definable set. Atomicity would then force the whole infinite open disc $\ga$ to lie in that finite set, a contradiction. For the case $n>1$, by induction on $n$, $\ga_1$ is $t$-atomic and for every $a \in \ga_1$, $\ga_{>1}$ is $(a, t)$-atomic. So $\ga$ cannot have a nonempty proper $t$-definable subset.
+ \end{proof}
+ 
+ % BEGIN REFEREE INSERTION R029

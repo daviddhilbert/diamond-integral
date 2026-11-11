@@ -1,0 +1,14 @@
+--- a/section 2/reference/diamond_integral_revision_annotated.tex
++++ b/section 2/reference/diamond_integral_revision_annotated.tex
+@@ -890,9 +890,9 @@
+ \end{nota}
+ 
+ % BEGIN REFEREE INSERTION R021
+-\RefereeRemark{021}{Clarification}{Elements versus tuples; scalar hypotheses}{%
++\ResolvedRefereeRemark{021}{Clarification}{Elements versus tuples; scalar hypotheses}{%
+ \textit{Original source line 724.}\quad The sentence beginning `by writing $a\in A$' should say that an element of $A$ may itself be a tuple, rather than that it is a tuple of elements of $A$. More importantly, please explicitly override this convention whenever a result requires a single coordinate; the exchange principle and Lemma~\ref{finite:fib:def} below are false for arbitrary tuples.
+-}
++}{The explicitly stated tuple convention is retained. The author has clarified that literal subsets of $\VF$ or $\RV$ specify one coordinate; the tuple convention does not enlarge that scope. Scalar exchange is explicit in Lemma~2.14, and Lemma~\ref{finite:fib:def} is already unary as written. The suggested rephrasing of the convention is editorial; no further main-text amendment is adopted.}
+ % END REFEREE INSERTION R021
+ 
+ From here on we work in a sufficiently saturated model $\bb U$ of $\ACVF(0,0)$, together with a parameter  set $\mathbb{S}$, which is supposed to be a substructure of $\bb U$. So by a definable set  we shall mean an $\bb S$-definable set, unless indicated otherwise. For the rest of this paper, we assume that $\Gamma(\mathbb S)$ is nontrivial.

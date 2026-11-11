@@ -1,0 +1,23 @@
+--- a/section 2/reference/diamond_integral_revision_annotated.tex
++++ b/section 2/reference/diamond_integral_revision_annotated.tex
+@@ -1285,15 +1285,15 @@
+ \begin{ter}\label{bounded}
+ We say that a set $I \sub \Gamma_{\infty}^n$ is \memph{$\gamma$-bounded}, where $\gamma \in \Gamma$, if it is contained in the box $[\gamma, \infty]^n$, and is \memph{doubly $\gamma$-bounded} if it is contained in the box $[-\gamma, \gamma]^n$. More generally, let $A$ be a subset of $\VF^n \times \RV_\infty^m \times \Gamma_\infty^l$ and
+ \[
+-A_{\Gamma} = \set{(\vv(a), \vrv(t), \gamma) \given (a, t, \gamma) \in A} \sub \Gamma_{\infty}^{n+m+l};
+-\]
+-then we say that $A$ is \memph{$\gamma$-bounded} if $A_{\Gamma}$ is, and so on.
++\operatorname{valim}(A) = \set{(\vv(a), \vrv(t), \gamma) \given (a, t, \gamma) \in A} \sub \Gamma_{\infty}^{n+m+l},
++\]
++where $\vv(a)$ and $\vrv(t)$ are taken coordinatewise. We say that $A$ is \memph{$\gamma$-bounded} if $\operatorname{valim}(A)$ is, and likewise for \memph{doubly $\gamma$-bounded}. A set is \memph{bounded} if it is $\gamma$-bounded for some $\gamma\in\Gamma$, and \memph{doubly bounded} if it is doubly $\gamma$-bounded for some $\gamma\in\Gamma$. The notation $A_{\Gamma}$ continues to mean projection to existing $\Gamma$-coordinates.
+ \end{ter}
+ 
+ % BEGIN REFEREE INSERTION R036
+-\RefereeRemark{036}{Clarification}{A valuation image is not a coordinate projection}{%
++\ResolvedRefereeRemark{036}{Clarification}{A valuation image is not a coordinate projection}{%
+ \textit{Original source line 1001.}\quad The notation $A_\Gamma$ here conflicts with Notation~\ref{indexing}, where it denotes projection to existing $\Gamma$-coordinates. Use a separate notation such as $\operatorname{valim}(A)$ for this coordinatewise valuation image. Also explicitly say that `bounded' means $\gamma$-bounded for some $\gamma$, and similarly for `doubly bounded'.
+-}
++}{The author approves $\operatorname{valim}(A)$ for the coordinatewise valuation image, reserving $A_{\Gamma}$ for projection to existing $\Gamma$-coordinates. The existential finite bound in ``bounded'' and ``doubly bounded'' is now explicit. This coordinatewise convention is distinct from the minimum tuple valuation used in differentiation.}
+ % END REFEREE INSERTION R036
+ 
+ \begin{defn}[Contractions]\label{defn:corr:cont}
