@@ -15,7 +15,8 @@ section. Canonical encodings, characteristic, genuine saturation, smallness,
 compatible valuations and generation hypotheses remain explicit in the
 individual theorem types. The nine author-accepted cited interfaces are
 [recorded separately](verification/CITED-INPUTS.md) and are replaceable.
-The results of [18, §3] are accepted while upstream formalization proceeds.
+The results of [18, §3] now have [proved upstream source links](verification/UPSTREAM-LINKS.md).
+The downstream inputs remain explicit pending compiled interface bridges.
 
 | Main text | Implementation | Scope and result |
 |---|---|---|

@@ -401,14 +401,16 @@
     "lakefile.toml": "6c5c8f0167720ea736f178475562bb4df3a223b80390115514556920d4020a04",
     "lake-manifest.json": "713b4e54c7cffe7c54ba90dbc5aab9d73032eaaccfc237076daf17a1f8651238",
     "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
-    "ACCEPTED-CITED-RESULTS.md": "24e84abaa2c66402b85fa1855c2064dd3b3cae2d4bbe5cee2d361f5275d1325b",
-    "section 2/verify.py": "1848e6bb13940f8ca3f0766053ddb8167faf084585df2b2367c303e4807b7a2a",
+    "ACCEPTED-CITED-RESULTS.md": "27ff91e3bbb43b133f73b3f48d9da8815520f34164c7fa65a5482d7e83c513d0",
+    "section 2/verify.py": "34753b39a5a658d3143a31e065f1b0f4882b955a51ba8e21d87a31cb73e5ea7b",
     "section 2/prepare-reuse.py": "fd134a0924dd57c807ed04d4f528e073a23178f69c06a3d632eaad7fcdd2ab35",
     "section 2/reuse/manifest.json": "c652f4bd9ed8ccd6950f6927712563ffbb822f8027ff961dda5fbf42c6d7cb8a",
     "section 2/reuse/headlines.json": "134352eba03803fce202ad91e5d4428e396fce0f5720d7f74ccebba77892fb04",
     "section 2/reuse/open-disc-radius.patch": "1025b80e4d836f501bb09a342effbf33a6e02a2cba48d75bb01262e4027c98a7",
-    "section 2/verification/CITED-INPUTS.md": "785921f61c83b0bfd89d43637219030b7db89ae9d273685ba48a51432334574b",
-    "section 2/verification/DISC-GROUND-REVIEW.md": "6cce8961bfeb7217a9f4cbca542d4cc3b813eb7210f0aa66f755d6dc6aec41af"
+    "section 2/verification/CITED-INPUTS.md": "46c61cfbd49f918f0bcbaed4171da0b5a0c4790ed8e264c9c316e6bf0018a4ed",
+    "section 2/verification/DISC-GROUND-REVIEW.md": "6cce8961bfeb7217a9f4cbca542d4cc3b813eb7210f0aa66f755d6dc6aec41af",
+    "section 2/verification/UPSTREAM-LINKS.md": "07c965dc1ef92b69dc78e58c165a8e86751e3105eff5335d4d04a3c2640bf432",
+    "section 2/verification/UPSTREAM-LINKS.json": "ffea4c1723fa57cc6b7dc2dfb2acd976e7eb085bda8f14f2e98392b8b1b5aff4"
   },
   "manuscript_sha256": "b2e68432e60db8c288cc10c5cd11a74bb0b41f24a3249cd5e31bdf54e4bdf98d",
   "accepted_cited_inputs": [
@@ -419,7 +421,15 @@
         "DiamondIntegral.Section2.lemma_2_23"
       ],
       "status": "Explicit author-accepted mathematical premise; not independently verified here",
-      "scope_record": "section 2/verification/CITED-INPUTS.md"
+      "scope_record": "section 2/verification/CITED-INPUTS.md",
+      "upstream_reference": {
+        "paper_result": "3.3",
+        "repository": "daviddhilbert/integration-in-ACVF",
+        "revision": "a2dd3066c992ed2d84a2ccad4298ae3b9061bd40",
+        "declaration": "IntegrationInACVF.Section3ACVF.FullGammaAtomicity.lemma_3_3",
+        "source_url": "https://github.com/daviddhilbert/integration-in-ACVF/blob/a2dd3066c992ed2d84a2ccad4298ae3b9061bd40/section%203/IntegrationSection3ACVF/FullGammaAtomicity.lean#L127",
+        "integration_status": "Upstream proved export located and source type reviewed; downstream definability/atomicity adapters remain explicit, not yet discharged by an imported Lean bridge."
+      }
     },
     {
       "interface": "DiamondIntegral.Section2.PrimitiveImageInput",
@@ -428,7 +438,15 @@
         "DiamondIntegral.Section2.lemma_2_27"
       ],
       "status": "Explicit author-accepted mathematical premise; image atomicity proved independently here",
-      "scope_record": "section 2/verification/CITED-INPUTS.md"
+      "scope_record": "section 2/verification/CITED-INPUTS.md",
+      "upstream_reference": {
+        "paper_result": "3.8",
+        "repository": "daviddhilbert/integration-in-ACVF",
+        "revision": "a2dd3066c992ed2d84a2ccad4298ae3b9061bd40",
+        "declaration": "IntegrationInACVF.Section3ACVF.PrimitiveImages.lemma_3_8",
+        "source_url": "https://github.com/daviddhilbert/integration-in-ACVF/blob/a2dd3066c992ed2d84a2ccad4298ae3b9061bd40/section%203/IntegrationSection3ACVF/PrimitiveImages.lean#L34",
+        "integration_status": "Upstream proved export located and source type reviewed; downstream definability/atomicity adapters remain explicit, not yet discharged by an imported Lean bridge."
+      }
     },
     {
       "interface": "DiamondIntegral.Section2.OpenDiscImageInput",
@@ -439,7 +457,15 @@
         "DiamondIntegral.Section2.lemma_2_29"
       ],
       "status": "Explicit author-accepted unary geometric premise, including uses over temporary real/Gamma bases; coordinate chains, image atomicity and branch reconstruction proved here",
-      "scope_record": "section 2/verification/CITED-INPUTS.md"
+      "scope_record": "section 2/verification/CITED-INPUTS.md",
+      "upstream_reference": {
+        "paper_result": "3.13",
+        "repository": "daviddhilbert/integration-in-ACVF",
+        "revision": "a2dd3066c992ed2d84a2ccad4298ae3b9061bd40",
+        "declaration": "IntegrationInACVF.Section3ACVF.OpenImages.lemma_3_13",
+        "source_url": "https://github.com/daviddhilbert/integration-in-ACVF/blob/a2dd3066c992ed2d84a2ccad4298ae3b9061bd40/section%203/IntegrationSection3ACVF/OpenImages.lean#L43",
+        "integration_status": "Upstream proved export located and source type reviewed; downstream definability/atomicity adapters remain explicit, not yet discharged by an imported Lean bridge."
+      }
     },
     {
       "interface": "DiamondIntegral.Section2.UnaryDiscAtomicityInput",
@@ -458,7 +484,15 @@
         "DiamondIntegral.Section2.corollary_2_30_disc_names"
       ],
       "status": "Explicit author-accepted unary input, retaining existing finite disc names, ACVF(0,0), and nontrivial ground Gamma; replaceable when upstream formalization is complete",
-      "scope_record": "section 2/verification/CITED-INPUTS.md"
+      "scope_record": "section 2/verification/CITED-INPUTS.md",
+      "upstream_reference": {
+        "paper_result": "3.4",
+        "repository": "daviddhilbert/integration-in-ACVF",
+        "revision": "a2dd3066c992ed2d84a2ccad4298ae3b9061bd40",
+        "declaration": "IntegrationInACVF.Section3ACVF.CompleteTypeBallAtomicity.lemma_3_4",
+        "source_url": "https://github.com/daviddhilbert/integration-in-ACVF/blob/a2dd3066c992ed2d84a2ccad4298ae3b9061bd40/section%203/IntegrationSection3ACVF/CompleteTypeBallAtomicity.lean#L60",
+        "integration_status": "Upstream proved export located and source type reviewed; downstream definability/atomicity adapters remain explicit, not yet discharged by an imported Lean bridge."
+      }
     },
     {
       "interface": "DiamondIntegral.Section2.AtomicDiscGammaBaseChangeInput",
@@ -477,7 +511,15 @@
         "DiamondIntegral.Section2.corollary_2_30_disc_names"
       ],
       "status": "Explicit author-accepted Gamma base-change input with existing finite disc names; atomicity required before Gamma extension; replaceable upstream interface",
-      "scope_record": "section 2/verification/CITED-INPUTS.md"
+      "scope_record": "section 2/verification/CITED-INPUTS.md",
+      "upstream_reference": {
+        "paper_result": "3.3",
+        "repository": "daviddhilbert/integration-in-ACVF",
+        "revision": "a2dd3066c992ed2d84a2ccad4298ae3b9061bd40",
+        "declaration": "IntegrationInACVF.Section3ACVF.FullGammaAtomicity.lemma_3_3_one_unary",
+        "source_url": "https://github.com/daviddhilbert/integration-in-ACVF/blob/a2dd3066c992ed2d84a2ccad4298ae3b9061bd40/section%203/IntegrationSection3ACVF/FullGammaAtomicity.lean#L134",
+        "integration_status": "Upstream proved export located and source type reviewed; downstream definability/atomicity adapters remain explicit, not yet discharged by an imported Lean bridge."
+      }
     },
     {
       "interface": "DiamondIntegral.Section2.DiscToDiscPartitionInput",
@@ -486,7 +528,16 @@
         "DiamondIntegral.Section2.lemma_2_32"
       ],
       "status": "Explicit author-accepted cited partition theorem; ACVF(0,0), nontrivial ground Gamma, fixed real/Gamma base and both RV label tuples retained; replaceable upstream interface",
-      "scope_record": "section 2/verification/CITED-INPUTS.md"
+      "scope_record": "section 2/verification/CITED-INPUTS.md",
+      "upstream_reference": {
+        "paper_result": "3.19/3.21",
+        "repository": "daviddhilbert/integration-in-ACVF",
+        "revision": "a2dd3066c992ed2d84a2ccad4298ae3b9061bd40",
+        "declaration": "IntegrationInACVF.Section3ACVF.CoordinatePartitions.proposition_3_21",
+        "source_url": "https://github.com/daviddhilbert/integration-in-ACVF/blob/a2dd3066c992ed2d84a2ccad4298ae3b9061bd40/section%203/IntegrationSection3ACVF/CoordinatePartitions.lean#L20",
+        "integration_status": "Upstream proved export located and source type reviewed; downstream definability/atomicity adapters remain explicit, not yet discharged by an imported Lean bridge.",
+        "additional_source_url": "https://github.com/daviddhilbert/integration-in-ACVF/blob/a2dd3066c992ed2d84a2ccad4298ae3b9061bd40/section%203/IntegrationSection3ACVF/FullOpenToOpenPartition.lean#L93"
+      }
     },
     {
       "interface": "DiamondIntegral.Section2.UnaryOpenDiscRVBaseChangeInput",
@@ -502,7 +553,15 @@
         "DiamondIntegral.Section2.corollary_2_30_disc_names"
       ],
       "status": "Explicit author-accepted unary input with existing finite DC prefix; ACVF(0,0), nontrivial ground Gamma, and actual RV tag retained; replaceable upstream interface",
-      "scope_record": "section 2/verification/CITED-INPUTS.md"
+      "scope_record": "section 2/verification/CITED-INPUTS.md",
+      "upstream_reference": {
+        "paper_result": "3.9",
+        "repository": "daviddhilbert/integration-in-ACVF",
+        "revision": "a2dd3066c992ed2d84a2ccad4298ae3b9061bd40",
+        "declaration": "IntegrationInACVF.Section3ACVF.OpenBallConstancy.lemma_3_9_open",
+        "source_url": "https://github.com/daviddhilbert/integration-in-ACVF/blob/a2dd3066c992ed2d84a2ccad4298ae3b9061bd40/section%203/IntegrationSection3ACVF/OpenBallConstancy.lean#L182",
+        "integration_status": "Upstream proved export located and source type reviewed; downstream definability/atomicity adapters remain explicit, not yet discharged by an imported Lean bridge."
+      }
     },
     {
       "interface": "DiamondIntegral.Section2.OpenDiscNamesImageInput",
@@ -515,7 +574,15 @@
         "DiamondIntegral.Section2.corollary_2_30_disc_names"
       ],
       "status": "Explicit author-accepted unary geometric input retaining finite DC ground names; product images, type-local coding, compactness and finite branch reconstruction proved here",
-      "scope_record": "section 2/verification/CITED-INPUTS.md"
+      "scope_record": "section 2/verification/CITED-INPUTS.md",
+      "upstream_reference": {
+        "paper_result": "3.13",
+        "repository": "daviddhilbert/integration-in-ACVF",
+        "revision": "a2dd3066c992ed2d84a2ccad4298ae3b9061bd40",
+        "declaration": "IntegrationInACVF.Section3ACVF.OpenImages.lemma_3_13",
+        "source_url": "https://github.com/daviddhilbert/integration-in-ACVF/blob/a2dd3066c992ed2d84a2ccad4298ae3b9061bd40/section%203/IntegrationSection3ACVF/OpenImages.lean#L43",
+        "integration_status": "Upstream proved export located and source type reviewed; downstream definability/atomicity adapters remain explicit, not yet discharged by an imported Lean bridge."
+      }
     },
     {
       "interface": "DiamondIntegral.Section2.GammaPiecewiseRationalAffineInput",
@@ -528,7 +595,12 @@
         "DiamondIntegral.Section2.lemma_2_41"
       ],
       "status": "Explicit author-accepted background from the context of [18, Section 3]; full guarded Gamma-code graph, characteristic zero and nontrivial ground Gamma retained; finite power-law boundedness proved here, full RV-domain 2.41 not assumed",
-      "scope_record": "section 2/verification/CITED-INPUTS.md"
+      "scope_record": "section 2/verification/CITED-INPUTS.md",
+      "upstream_reference": {
+        "repository": "daviddhilbert/integration-in-ACVF",
+        "revision": "a2dd3066c992ed2d84a2ccad4298ae3b9061bd40",
+        "integration_status": "Retained accepted QE/value-group background. The numbered RV-linearity result 3.18 and Gamma piecewise monotonicity are not the exact rational-affine power-law interface; no matching producer identified in this inspection."
+      }
     }
   ],
   "public_theorems": [

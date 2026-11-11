@@ -446,7 +446,7 @@ def main() -> None:
 
     inputs = sources + [ROOT / name for name in ("DiamondIntegral.lean", "lakefile.toml", "lake-manifest.json", "lean-toolchain", "ACCEPTED-CITED-RESULTS.md")]
     inputs += [SECTION / name for name in ("verify.py", "prepare-reuse.py", "reuse/manifest.json", "reuse/headlines.json", "reuse/open-disc-radius.patch")]
-    inputs += [RECORD / "CITED-INPUTS.md", RECORD / "DISC-GROUND-REVIEW.md"]
+    inputs += [RECORD / "CITED-INPUTS.md", RECORD / "DISC-GROUND-REVIEW.md", RECORD / "UPSTREAM-LINKS.md", RECORD / "UPSTREAM-LINKS.json"]
     record = {
         "status": "PASS",
         "scope": "Project build; public section theorem types/axioms; selected reuse types/axioms. Semantic scope review: COVERAGE.md, STATUS.md and verification/DISC-GROUND-REVIEW.md.",
@@ -551,6 +551,9 @@ def main() -> None:
         "reuse_theorems": reuse_theorems,
         "axioms": {name: audited[name] for name in exports + reuse_theorems},
     }
+    upstream_links = json.loads((RECORD / "UPSTREAM-LINKS.json").read_text())
+    for entry in record["accepted_cited_inputs"]:
+        entry["upstream_reference"] = upstream_links[entry["interface"].rsplit(".", 1)[-1]]
     (RECORD / "Audit.lean").write_text(audit_file.read_text())
     (RECORD / "headline-audit.txt").write_text(output)
     (RECORD / "status.json").write_text(json.dumps(record, indent=2) + "\n")

@@ -1,5 +1,14 @@
 # Accepted cited results
 
+Current author update: [18, Sections 1–3] is now formalized in
+[`daviddhilbert/integration-in-ACVF`](https://github.com/daviddhilbert/integration-in-ACVF).
+[Exact upstream declarations and scope checks](section%202/verification/UPSTREAM-LINKS.md) link the eight
+numbered-result interfaces to proved exports at a fixed revision. The existing
+nine explicit inputs remain in Lean until checked interface bridges replace
+them; the ninth is separately accepted Gamma rational-affine background.
+Earlier “being formalized” notes below record the previous authorization.
+
+
 Author instructions, November 9, 2026: results cited from bibliography item 18
 and items 19–22 may be taken as given while their formalizations are underway.
 Do not search for absent Lean exports or formalize those papers as part of this

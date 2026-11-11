@@ -1751,3 +1751,24 @@ state, and no new main-text departure was made during this integration.
 The approved PDF extract is queued right; visibility is unconfirmed.
 The 30-file companion patch and unrelated uncommitted work are preserved.
 Nothing was committed or pushed.
+
+## Completed upstream citation links
+
+The author reports that Sections 1–3 of bibliography [18] are formalized.
+`verification/UPSTREAM-LINKS.md` and its JSON companion link eight numbered-
+result input interfaces to exact proved exports in integration-in-ACVF at
+revision a2dd3066c992ed2d84a2ccad4298ae3b9061bd40. Source types, base
+representations, nontrivial-value witnesses, saturation and smallness were
+inspected. Both projects use compatible current Lean/dependency pins.
+
+These are source/dependency links, not compiled adapter proofs. All nine
+downstream inputs remain explicit; the Gamma rational-affine background
+has no exact producer identified in this inspection. In particular the full
+upstream 3.4 and partition theorems have explicit saturation/smallness scope
+that must be propagated through appropriately scoped wrappers before any
+input is removed. No main-text edit or theorem weakening was made.
+
+The refreshed project verifier passes 850 public theorem audits / 378
+selected reuse audits in `.scratch/upstream-citation-links-verification.log`.
+Its machine record now includes the fixed upstream references and their
+source-map hashes. Only the standard three logical principles occur.

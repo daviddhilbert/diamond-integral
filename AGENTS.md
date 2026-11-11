@@ -21,11 +21,11 @@
   workflow. Report manuscript progress, supporting Lean lemmas and complete
   numbered results separately; an export count does not certify full section
   formalization.
-- Take the results of [18, Section 3] as given in their stated context while
-  that section is being formalized. Consult its context when needed, but do
-  not reprove those results here or search for unfinished Lean exports.
-  Keep cited results as explicit replaceable inputs; their formulations may
-  change when the upstream Lean formalization is complete.
+- Sections 1–3 of [18] are now formalized in daviddhilbert/integration-in-ACVF.
+  Use section 2/verification/UPSTREAM-LINKS.md for exact exports and scope
+  checks. Prefer checked bridges to those exports over re-proving them.
+  Keep an explicit accepted input until its definability, atomicity and
+  hypothesis bridge is actually compiled; a source link does not discharge it.
 - Keep the revised PDF available in the right-side panel for manuscript
   review. Report a queued or failed display request accurately.
 - Preserve uncommitted work. Do not commit or push without instruction.

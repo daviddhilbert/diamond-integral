@@ -1,5 +1,14 @@
 # Explicit cited inputs in Section 2
 
+Current author update: [18, Sections 1–3] is now formalized in
+[`daviddhilbert/integration-in-ACVF`](https://github.com/daviddhilbert/integration-in-ACVF).
+[Exact upstream declarations and scope checks](UPSTREAM-LINKS.md) link the eight
+numbered-result interfaces to proved exports at a fixed revision. The existing
+nine explicit inputs remain in Lean until checked interface bridges replace
+them; the ninth is separately accepted Gamma rational-affine background.
+Earlier “being formalized” notes below record the previous authorization.
+
+
 Current total: **nine** replaceable accepted interfaces. Counts in the
 chronological notes below record earlier stages. The final 850/378 audit
 checks all public types and standard logical dependencies; it does not
