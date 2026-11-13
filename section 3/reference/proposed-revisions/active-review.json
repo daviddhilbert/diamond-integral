@@ -1,0 +1,52 @@
+{
+  "active_items": [],
+  "status": "C002 approved and applied; resolved manuscript PDF compiled",
+  "source": "section 3/reference/proposed-revisions/C002-monicity-and-use-review.tex",
+  "source_sha256": "28b16c1506483a84e98a2092a8d3706c6cb8f3e117bd90af8a435463af3e007c",
+  "pdf": "section 3/reference/proposed-revisions/C002-monicity-and-use-review.pdf",
+  "pdf_sha256": "12b278a67b7f87aaa7c6543438ef8e397d56c05dbc3a92e28d6b7ecd6ff5b276",
+  "printed_pages": [
+    34,
+    35
+  ],
+  "working_manuscript_sha256": "080b909692985183f5e60db787e800dd23dd9c3b3bca01f7b1beb6efcc065b97",
+  "display": "Resolved PDF-only right-panel request returned queued; visibility unconfirmed",
+  "withdrawn_items": {
+    "C001": "Unnecessary definition correction withdrawn; intended full-preimage convention retained."
+  },
+  "mathematical_result": "Positive Gamma-to-RV injection via residue generics and Reichstein--Youssin Theorem 7.1 / Corollary 2.5; not groupified injectivity.",
+  "formal_scope": "Author now approves the cited Reichstein--Youssin Theorem 7.1 / Corollary 2.5 input. The ACVF bridges and all-degree coefficient monicity still require local Lean proofs.",
+  "later_use": "No later construction requires horizontal monicity. Quotient descent after corrected 3.18 and concrete h_m checks remain separate obligations.",
+  "audit_note": "section 3/verification/COEFFICIENT-MONICITY-CHECK.md",
+  "compiler": "pdflatex, three passes; focused manuscript extract",
+  "supersedes": "C001-C002-definedness-review.pdf (preserved; C001 withdrawn and C002 omission no longer asserted as an error correction)",
+  "approval_applied": true,
+  "approved_items": [
+    "R050",
+    "R051",
+    "R053",
+    "R054",
+    "T001",
+    "C002"
+  ],
+  "previous_approval_record": "T001-approval.json",
+  "visual_check": "Both resolved pages compiled; final proof page and green resolution visually checked.",
+  "dependency_receipt": "section 3/verification/coefficient-dependencies.json",
+  "approval_user_message": "excellent ... add this proof and carry on the work",
+  "approval_recorded_at": "2026-11-12T11:08:12.752638-08:00",
+  "approval_timezone": "America/Los_Angeles",
+  "approval_scope": "Add the mathematical proof of the horizontal positive monomorphisms and its Reichstein--Youssin citation. The process-status and later-development review notes are not inserted into the paper.",
+  "source_before_sha256": "24c58ba674814c3f12f6097b9fd61dc5675af627b6b9d4a43cae46052e6f68cb",
+  "source_after_sha256": "080b909692985183f5e60db787e800dd23dd9c3b3bca01f7b1beb6efcc065b97",
+  "corresponding_referee_item": null,
+  "referee_action": "No corresponding referee item; existing resolved notes preserved. Added a brief green C002 author resolution.",
+  "review_request": "Approved by author; no confirmation pending.",
+  "resolved_pdf": "section 3/reference/proposed-revisions/C002-resolved-review.pdf",
+  "resolved_pdf_sha256": "be575e4210e5ed00b9e6a6b82ce8b18ad5ad969ff89cc141ec72a4e9a82dccd3",
+  "resolved_printed_pages": [
+    34,
+    35
+  ],
+  "main_pdf": "section 2/reference/diamond_integral_revision_annotated.pdf",
+  "main_pdf_sha256": "60ac6772ccd7d4d177b2b5d26733756b4b8f63335102fb9ee67bf63589cce35c"
+}

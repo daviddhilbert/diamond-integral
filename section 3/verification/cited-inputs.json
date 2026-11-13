@@ -1,0 +1,221 @@
+{
+  "authorization": "ACCEPTED-CITED-RESULTS.md",
+  "source": {
+    "item": 18,
+    "title": "Integration in algebraically closed valued fields",
+    "url": "https://arxiv.org/pdf/0809.0473",
+    "version": "v2, 29 December 2010"
+  },
+  "scope": "Small VF-generated real-base specializations and complete Gamma-ground interfaces for unmeasured, bounded and measured lifts. All cited inputs remain explicit and replaceable. Same-ground essential measured groupoids, pointwise cofull representatives, graded and filtered presentation comparisons and the documented VF/Gamma-generated context applications are proved locally. Independently named disc imaginaries and concrete section 4 categories lie outside this section 3 certificate.",
+  "context": [
+    "BaseContext.model00",
+    "BaseContext.uncountable",
+    "BaseContext.saturated",
+    "BaseContext.homogeneous",
+    "BaseContext.small",
+    "BaseContext.nontrivial_values",
+    "CanonicalStructure.IsCanonical",
+    "Section2.VFGeneratedFieldBase of the same base"
+  ],
+  "inputs": [
+    {
+      "declaration": "DiamondIntegral.Section3.YinUnmeasuredLiftInput",
+      "source_statements": [
+        "Proposition 6.18",
+        "discussion of nonzero targets and bounded degrees preceding Theorem 6.19",
+        "Theorem 6.19",
+        "following identification of the elementary relation"
+      ],
+      "additional_hypothesis": "The supplied valued-field topology realizes the actual model valuation predicate.",
+      "fields": [
+        "actual class lift homomorphism",
+        "evaluation on every objectLiftVF",
+        "surjectivity",
+        "kernel equal to rvSpecialCongruence"
+      ]
+    },
+    {
+      "declaration": "DiamondIntegral.Section3.YinBoundedUnmeasuredLiftInput",
+      "source_statements": [
+        "Proposition 6.18",
+        "bounded-degree discussion preceding Theorem 6.19"
+      ],
+      "additional_hypothesis": "The supplied valued-field topology realizes the actual model valuation predicate.",
+      "fields": [
+        "bounded additive lifts",
+        "evaluation on actual objects raised to the degree bound",
+        "surjectivity in every bound",
+        "kernel is the restricted actual special congruence"
+      ]
+    },
+    {
+      "declaration": "DiamondIntegral.Section3.YinMeasuredLiftInput",
+      "source_statements": [
+        "Theorems 2.35\u20132.36",
+        "opening of Section 7 extending the final results to the other volume categories",
+        "Propositions 7.8\u20137.10",
+        "Theorem 7.13"
+      ],
+      "additional_hypothesis": "Characteristic zero of VF, with the actual intrinsic Gamma valuation used for forms and Jacobians.",
+      "fields": [
+        "Gamma-measured class lift homomorphism",
+        "evaluation on every measuredObjectLift",
+        "surjectivity",
+        "kernel equal to measuredRVSpecialCongruence"
+      ]
+    },
+    {
+      "declaration": "DiamondIntegral.Section3.YinDegreeMeasuredLiftInput",
+      "source_statements": [
+        "Propositions 7.8\u20137.9, Gamma-volume variant as stipulated at the opening of Section 7"
+      ],
+      "additional_hypothesis": "Characteristic zero of VF.",
+      "fields": [
+        "fixed-degree additive lifts",
+        "evaluation on measuredObjectLift",
+        "surjectivity in every degree",
+        "kernel is the restricted actual homogeneous congruence"
+      ]
+    },
+    {
+      "declaration": "DiamondIntegral.Section3.YinGammaAffineInput",
+      "source_statements": [
+        "[19] Remark 2.28",
+        "[19] Lemma 2.29 with the function class identified in Remark 2.28"
+      ],
+      "fields": [
+        "Finite-cover integral-affine formulas for actual unary Gamma contractions",
+        "Piecewise unimodular integer-matrix characterization of the actual Gamma arrows"
+      ],
+      "constants": "Values of nonzero RV points in the same named base; arbitrary Gamma-definable translations are not introduced."
+    },
+    {
+      "declaration": "DiamondIntegral.Section3.YinGammaGroundUnmeasuredLiftInput",
+      "source_statements": [
+        "Proposition 6.18",
+        "Theorem 6.19",
+        "identification of the elementary unmeasured relation following Theorem 6.19"
+      ],
+      "context": "GammaGroundContext: ACVF(0,0), full saturation and homogeneity, small real substructure and Gamma subgroup, genuine real-language VF generation through VFGeneratedFieldBase, subgroup closure including values of named real RV points, and nontrivial Gamma ground. No chosen Gamma representative is added to the ground.",
+      "fields": [
+        "lift: canonical actual Gamma-ground RV semiring to the finite-RV-fibre VF semiring",
+        "lift_class: evaluation on every actual full-label object lift",
+        "surjective: surjectivity of that semiring homomorphism",
+        "kernel: the generated relation point[1] = positive-RV[1] + unit[0] is exactly its kernel congruence"
+      ],
+      "boundary": "Explicit replaceable cited input, not a global principle or independently reproved kernel theorem. Graded RV and filtered VF presentation comparisons in this scope are proved locally."
+    },
+    {
+      "declaration": "DiamondIntegral.Section3.YinGammaGroundMeasuredLiftInput",
+      "source_statements": [
+        "Theorems 2.35\u20132.36",
+        "opening extension of Section 7 to the relevant volume categories",
+        "Propositions 7.8\u20137.10",
+        "Theorem 7.13"
+      ],
+      "context": "GammaGroundContext retains ACVF(0,0), full saturation and homogeneity, small real substructure and Gamma subgroup, genuinely VF-generated real part through VFGeneratedFieldBase, all named RV values in the subgroup, and nontriviality of the full Gamma ground. The valued-field topology is explicitly compatible with the actual model predicate.",
+      "fields": [
+        "actual Gamma-ground measured RV-to-VF semiring lift",
+        "evaluation on every original full-label object lift and its pulled-back Gamma form",
+        "surjectivity",
+        "kernel exactly the homogeneous point[1] = positive-RV[1] relation"
+      ],
+      "boundary": "Explicit replaceable input, with the actual pointwise RV and essential pointwise-representative VF groupoids. The graded additive/universal-semiring comparison is proved locally."
+    },
+    {
+      "declaration": "DiamondIntegral.Section3.YinGammaGroundDegreeMeasuredLiftInput",
+      "source_statements": [
+        "Theorems 2.35\u20132.36",
+        "opening extension of Section 7 to the relevant volume categories",
+        "Propositions 7.8\u20137.10",
+        "Theorem 7.13"
+      ],
+      "context": "GammaGroundContext retains ACVF(0,0), full saturation and homogeneity, small real substructure and Gamma subgroup, genuinely VF-generated real part through VFGeneratedFieldBase, all named RV values in the subgroup, and nontriviality of the full Gamma ground. The valued-field topology is explicitly compatible with the actual model predicate.",
+      "fields": [
+        "fixed-degree additive lifts between actual Gamma-ground scissor quotients",
+        "evaluation on every actual measured object lift, including degree zero with its full form",
+        "surjectivity in every degree",
+        "kernel is the restriction of the concrete homogeneous global special relation"
+      ],
+      "boundary": "Explicit replaceable input. Its fixed-degree source/target are actual additive scissor quotients. Identification of the source global presentation with its graded direct sum is proved locally."
+    },
+    {
+      "declaration": "DiamondIntegral.Section3.YinGammaGroundBoundedUnmeasuredLiftInput",
+      "source_statements": [
+        "Proposition 6.18",
+        "bounded-degree discussion preceding Theorem 6.19"
+      ],
+      "context": "GammaGroundContext retains ACVF(0,0), full saturation and homogeneity, small real substructure and Gamma subgroup, genuinely VF-generated real part through VFGeneratedFieldBase, all named RV values in the subgroup, and nontriviality of the full Gamma ground. The valued-field topology is explicitly compatible with the actual model predicate.",
+      "fields": [
+        "bounded additive lifts from actual finite direct sums into actual dimension-bounded VF scissors",
+        "evaluation on every object lift with its dimension bound raised",
+        "surjectivity in every bound",
+        "kernel is the restriction of the concrete nonhomogeneous global special relation"
+      ],
+      "boundary": "Explicit replaceable input. Transition compatibility is proved from the object formula using additive generator extensionality, without assuming an object representative for every RV class."
+    }
+  ],
+  "logical_status": "Explicit replaceable inputs, not global premises or compiled proofs of the external paper. Derived comparisons are relative to the corresponding input. Latest verification receipt determines which declarations have passed the local build and audit.",
+  "excluded": [
+    "HK Proposition 10.10(2)",
+    "Any silent acceptance of HK Corollary 10.3 or Proposition 10.10(1)",
+    "Full imaginary-base or VF/Gamma generation scope without a separate translation"
+  ],
+  "additional_sources": [
+    {
+      "item": 19,
+      "title": "Integration in algebraically closed valued fields with sections",
+      "url": "https://arxiv.org/pdf/1204.5979",
+      "version": "v2, 20 May 2012",
+      "scope": "Only the explicitly pure-LRV contraction discussion at a VF-generated underlying real base. No cross-section tensor theorem is transferred."
+    }
+  ],
+  "additional_author_approved_inputs": [
+    {
+      "declaration": "DiamondIntegral.Section3.ReichsteinYoussinInput",
+      "source": {
+        "item": 23,
+        "authors": "Z. Reichstein and B. Youssin",
+        "title": "A birational invariant for algebraic group actions",
+        "journal": "Pacific Journal of Mathematics",
+        "volume": 204,
+        "number": 1,
+        "year": 2002,
+        "pages": "223\u2013246",
+        "doi": "10.2140/pjm.2002.204.223",
+        "url": "https://msp.org/pjm/2002/204-1/pjm-v204-n1-p12-p.pdf",
+        "arxiv": "https://arxiv.org/pdf/math/0007181"
+      },
+      "source_statements": [
+        "Theorem 7.1",
+        "Corollary 2.5"
+      ],
+      "approval": "Author explicitly instructed: add this proof and carry on the work (November 12, 2026).",
+      "fields": [
+        "classification of faithful diagonal representations with jointly generating finite weight tuples, from an actual equivariant rational function field isomorphism to a unimodular change of weights"
+      ],
+      "local_obligations": [
+        "ACVF normalization and graph invariance",
+        "generic-fibre matching and uniform original-ground definability",
+        "full-fibre monomial coefficient recovery and finite gluing"
+      ],
+      "boundary": "No HK result or ACVF bridge is a given input; positive monicity does not imply groupified monicity.",
+      "local_proofs_completed": [
+        "actual generic Gamma-family bijection and inverse compatibility, including finite tags",
+        "ACVF normalization and original-ground character invariance of actual graphs",
+        "original-ground RV coefficients and compactness/gluing to full bijective RV lifts",
+        "positive homogeneous and graded semiring injectivity of both ordinary horizontal arrows",
+        "finite-tagged full-ground Gamma morphisms exactly characterized by piecewise unimodular formulas",
+        "arbitrary nonbijective full-code contractions from Gamma^n to Gamma^m have piecewise rectangular integer-affine formulas with genuine original-ground RV translations"
+      ],
+      "context_wrapper": "DiamondIntegral.Section3.GammaGroundCoefficientClassification"
+    }
+  ],
+  "upstream_refresh": {
+    "revision": "7d4acc730496b3bd05a22c268ffd89540ca694f9",
+    "review": "verification/integration-reuse.json#later_export_review",
+    "native_export_module": "IntegrationLaterExports.lean",
+    "section6_inputs_replaced": false,
+    "reason": "Preserve the exact closure/generation and category-presentation boundaries; the imported native results remain conditional only on their explicit source hypotheses, including unfinished 5.8. Section 7 measured results are unavailable."
+  }
+}

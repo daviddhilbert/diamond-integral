@@ -1,0 +1,288 @@
+{
+  "status": "COMPLETE_IN_DOCUMENTED_PAPER_CONTEXTS_RELATIVE_TO_ACCEPTED_CITATIONS",
+  "review_date": "2026-11-12",
+  "scope": "Original real/RV names and complete Gamma ground, finite tuples and finite tags; actual valuation topology where VF dimension or derivatives occur.",
+  "generation_hypothesis": "Arbitrary small real/RV plus Gamma grounds for the constructions and local results; the actual VF/Gamma-generated GammaGroundContext for the [18] lift/integral applications.",
+  "accepted_inputs": [
+    "Later [18] global, bounded and degreewise geometric lift/kernel records, with their stated hypotheses.",
+    "Author-approved [23] Reichstein--Youssin Theorem 7.1 and Corollary 2.5, only the exact diagonal representation classification."
+  ],
+  "native_reuse": "[18] sections 1\u20133 have checked local presentation adapters. The November 12 update imports exact later section 6 proof exports with all native hypotheses, including the unfinished 5.8 input. Legacy lift inputs are retained until closure and category transport is compiled; measured section 7 is unavailable.",
+  "no_HK_input": true,
+  "proof_review": "Each target was compared to its manuscript statement and actual compiled declaration scope. Declaration counts alone are not the completion criterion.",
+  "boundaries": [
+    "No independent proof of the accepted later [18] geometric kernels or of the approved R\u2013Y theorem is claimed.",
+    "No groupified injectivity is inferred from positive coefficient monicity.",
+    "Independently named disc imaginaries outside the unqualified paper ground and the concrete bounded categories of section 4 are not included in this section 3 certificate. Already definable interpreted names have checked transport.",
+    "Optional wording/punctuation annotations R047, R048, R049 and R167 were not changed or marked resolved by this formalization review. The mathematical corrections R050/R051/R053/R054 and author-approved T001/C002 are adopted.",
+    "Author decision, November 12: skip the supplementary unary-ray refinement. It is not an unfinished target of the approved positive tensor presentation."
+  ],
+  "targets": [
+    {
+      "paper_target": "Definition 3.1",
+      "status": "implemented",
+      "scope": "Original real/RV names and complete Gamma ground, finite tuples and finite tags; actual valuation topology where VF dimension or derivatives occur. Positive scissors, graded/cartesian semirings, group completion and actual VF filtration.",
+      "declarations": [
+        "DiamondIntegral.Section3.gammaGroundRVSemiringEquivDirectSum",
+        "DiamondIntegral.Section3.gammaGroundGammaSemiringEquivDirectSum",
+        "DiamondIntegral.Section3.gammaGroundMeasuredGammaSemiringEquivDirectSum",
+        "DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaSemiringEquivDirectSum",
+        "DiamondIntegral.Section3.gammaGroundMeasuredVFGradedSemiringEquiv",
+        "DiamondIntegral.Section3.gammaGroundFiniteVFSemiringEquiv",
+        "DiamondIntegral.Section3.gammaGroundVFSemiringIsColimit",
+        "DiamondIntegral.Section3.gammaGroundVFRingIsColimit"
+      ]
+    },
+    {
+      "paper_target": "Definition 3.2",
+      "status": "implemented",
+      "scope": "Original real/RV names and complete Gamma ground, finite tuples and finite tags; actual valuation topology where VF dimension or derivatives occur. Empty maximum is bottom; nonempty maximum attained at an actual VF fibre.",
+      "declarations": [
+        "DiamondIntegral.Section3.gammaGroundRVFibreDimension",
+        "DiamondIntegral.Section3.gammaGroundRVFibreDimension_eq_bot_iff",
+        "DiamondIntegral.Section3.gammaGroundRV_fibre_dimension_le",
+        "DiamondIntegral.Section3.gammaGroundRV_fibre_dimension_attained",
+        "DiamondIntegral.Section3.gammaGroundRVFibreDimension_ofReal"
+      ]
+    },
+    {
+      "paper_target": "Lemma 3.3",
+      "status": "proved_locally",
+      "scope": "Original real/RV names and complete Gamma ground, finite tuples and finite tags; actual valuation topology where VF dimension or derivatives occur. Canonical ACVF00, genuine saturation and small real base are explicit. Earlier RV exchange is discharged by the linked source proofs.",
+      "declarations": [
+        "DiamondIntegral.Section3.gammaGroundLemma_3_3"
+      ]
+    },
+    {
+      "paper_target": "Definition 3.4",
+      "status": "implemented",
+      "scope": "Original real/RV names and complete Gamma ground, finite tuples and finite tags; actual valuation topology where VF dimension or derivatives occur. Intrinsic section 2 VF dimension and literal finite RV fibres.",
+      "declarations": [
+        "DiamondIntegral.Section3.GammaGroundVFObject",
+        "DiamondIntegral.Section3.gammaGroundVFObjectGroupoid",
+        "DiamondIntegral.Section3.GammaGroundVFObject.ofNamed",
+        "DiamondIntegral.Section3.GammaGroundVFObject.finiteSupport",
+        "DiamondIntegral.Section3.GammaGroundVFObject.rvFibreDimension_le_zero"
+      ]
+    },
+    {
+      "paper_target": "Definition 3.5 and Remark 3.7",
+      "status": "implemented",
+      "scope": "Original real/RV names and complete Gamma ground, finite tuples and finite tags; actual valuation topology where VF dimension or derivatives occur. Positive-degree essential preserving maps have cofull representatives and the actual dimension-agreement quotient. Degree zero preserves every pointwise form.",
+      "declarations": [
+        "DiamondIntegral.Section3.GammaGroundMeasuredVFData",
+        "DiamondIntegral.Section3.GammaGroundEssentialVFMap",
+        "DiamondIntegral.Section3.gammaGroundEssentialQuotientEquiv",
+        "DiamondIntegral.Section3.gammaGroundEssentialGroupoid",
+        "DiamondIntegral.Section3.gammaGroundMeasuredVFGroupoid",
+        "DiamondIntegral.Section3.GammaGroundZeroMeasuredVFHom",
+        "DiamondIntegral.Section3.gammaGroundZeroMeasuredRVVFEquivalence"
+      ]
+    },
+    {
+      "paper_target": "Notation 3.6",
+      "status": "implemented",
+      "scope": "Original real/RV names and complete Gamma ground, finite tuples and finite tags; actual valuation topology where VF dimension or derivatives occur. Additive volume convention is represented multiplicatively; the identity form represents additive zero.",
+      "declarations": [
+        "DiamondIntegral.Section3.gammaGroundOneForm"
+      ]
+    },
+    {
+      "paper_target": "Definition 3.8 and Notation 3.9",
+      "status": "implemented",
+      "scope": "Original real/RV names and complete Gamma ground, finite tuples and finite tags; actual valuation topology where VF dimension or derivatives occur. Actual nonzero finite labels, arbitrary zero domain coordinates, projection representatives and actual VF[0]/RV[0] equivalences.",
+      "declarations": [
+        "DiamondIntegral.Section3.GammaGroundRVObject",
+        "DiamondIntegral.Section3.gammaGroundRVClass_eq_iff_iso",
+        "DiamondIntegral.Section3.gammaGroundRVHasFiniteMap_iff_nonzero",
+        "DiamondIntegral.Section3.gammaGroundRVZeroPattern",
+        "DiamondIntegral.Section3.gammaGroundRVNonzeroStratum",
+        "DiamondIntegral.Section3.gammaGroundRVNonzeroStratum_degree_le",
+        "DiamondIntegral.Section3.gammaGroundRVClass_projectionObject",
+        "DiamondIntegral.Section3.gammaGroundZeroRVVFEquivalence",
+        "DiamondIntegral.Section3.gammaGroundZeroMeasuredRVVFEquivalence"
+      ]
+    },
+    {
+      "paper_target": "Definition 3.10",
+      "status": "implemented",
+      "scope": "Original real/RV names and complete Gamma ground, finite tuples and finite tags; actual valuation topology where VF dimension or derivatives occur. Finite domain-value-support full subcategory, actual positive representatives and injective graded inclusion.",
+      "declarations": [
+        "DiamondIntegral.Section3.GammaGroundRESObject",
+        "DiamondIntegral.Section3.gammaGroundRESClass_eq_iff_iso",
+        "DiamondIntegral.Section3.gammaGroundRESToRVKPlus_injective",
+        "DiamondIntegral.Section3.gammaGroundRESGradedInclusion_injective"
+      ]
+    },
+    {
+      "paper_target": "Notation 3.11",
+      "status": "implemented",
+      "scope": "Original real/RV names and complete Gamma ground, finite tuples and finite tags; actual valuation topology where VF dimension or derivatives occur. Complete finite-to-finite correspondence and nonempty finite-valued presentation.",
+      "declarations": [
+        "DiamondIntegral.Section3.GammaGroundRVObject.correspondence",
+        "DiamondIntegral.Section3.GammaGroundRVObject.correspondence_mem",
+        "DiamondIntegral.Section3.GammaGroundRVObject.correspondence_fibre_finite",
+        "DiamondIntegral.Section3.GammaGroundRVObject.correspondence_reverse_fibre_finite",
+        "DiamondIntegral.Section3.GammaGroundRVObject.correspondenceFinitary_nonempty",
+        "DiamondIntegral.Section3.GammaGroundRVObject.correspondencePoint"
+      ]
+    },
+    {
+      "paper_target": "Definition 3.12",
+      "status": "implemented",
+      "scope": "Original real/RV names and complete Gamma ground, finite tuples and finite tags; actual valuation topology where VF dimension or derivatives occur. Pointwise combined-weight equality, all actual labels and all volume forms retained.",
+      "declarations": [
+        "DiamondIntegral.Section3.GammaGroundMeasuredRVObject",
+        "DiamondIntegral.Section3.GammaGroundMeasuredRVHom",
+        "DiamondIntegral.Section3.gammaGroundMeasuredRVClass_eq_iff_iso",
+        "DiamondIntegral.Section3.gammaGroundMeasuredRVSemiringEquivDirectSum",
+        "DiamondIntegral.Section3.gammaGroundMeasuredRESGradedInclusion_injective"
+      ]
+    },
+    {
+      "paper_target": "Definition 3.13",
+      "status": "implemented",
+      "scope": "Original real/RV names and complete Gamma ground, finite tuples and finite tags; actual valuation topology where VF dimension or derivatives occur. Intended morphisms carry bijections on full RV code preimages. Forward lift well-definedness is local and uses no affine-classification input.",
+      "declarations": [
+        "DiamondIntegral.Section3.GammaGroundGammaHom",
+        "DiamondIntegral.Section3.gammaGroundGammaHom_lift_iso",
+        "DiamondIntegral.Section3.gammaGroundGammaClass_eq_iff_iso",
+        "DiamondIntegral.Section3.gammaGroundGammaToRVKPlus",
+        "DiamondIntegral.Section3.gammaGroundGammaToRVSemiring",
+        "DiamondIntegral.Section3.gammaGroundFiniteGammaToGammaKPlus_injective"
+      ]
+    },
+    {
+      "paper_target": "Remark 3.14",
+      "status": "background_parameter_convention",
+      "scope": "Original real/RV names and complete Gamma ground, finite tuples and finite tags; actual valuation topology where VF dimension or derivatives occur. Definability of a Gamma value is not identified with existence of an original-ground definable RV representative. The representative subgroup is defined exactly; divisible hull is not substituted.",
+      "declarations": [
+        "DiamondIntegral.Section3.gammaGroundRVDefinableUnits",
+        "DiamondIntegral.Section3.gammaGroundDefinableRVValues",
+        "DiamondIntegral.Section3.gammaGroundDefinableRVValues_mem_iff"
+      ]
+    },
+    {
+      "paper_target": "Remark 3.15",
+      "status": "proved_relative_to_approved_RY",
+      "scope": "Original real/RV names and complete Gamma ground, finite tuples and finite tags; actual valuation topology where VF dimension or derivatives occur. Arbitrary full-code contractions from Gamma^n to Gamma^m have finite rectangular integer-affine formulas, with no bijectivity assumption and including zero arities. The finite-tagged piecewise-GL morphism criterion is also proved locally over the full mixed ground. Every translation uses an actual definable RV point. No [19] scope expansion or HK input.",
+      "declarations": [
+        "DiamondIntegral.Section3.gammaGroundUnary_code_contraction_piecewiseIntegralAffine",
+        "DiamondIntegral.Section3.gammaGroundContext_unary_contraction_piecewiseIntegralAffine",
+        "DiamondIntegral.Section3.gammaGround_code_contraction_piecewiseIntegralAffine",
+        "DiamondIntegral.Section3.gammaGroundContext_contraction_piecewiseIntegralAffine",
+        "DiamondIntegral.Section3.gammaGroundGammaHom_iff_piecewiseGLZ",
+        "DiamondIntegral.Section3.gammaGroundContext_GammaHom_iff_piecewiseGLZ"
+      ]
+    },
+    {
+      "paper_target": "Definition 3.16",
+      "status": "implemented",
+      "scope": "Original real/RV names and complete Gamma ground, finite tuples and finite tags; actual valuation topology where VF dimension or derivatives occur. Actual pointwise forms, finite measured full subcategory, positive classes and graded semirings.",
+      "declarations": [
+        "DiamondIntegral.Section3.GammaGroundMeasuredGammaObject",
+        "DiamondIntegral.Section3.GammaGroundMeasuredGammaHom",
+        "DiamondIntegral.Section3.gammaGroundMeasuredGammaSemiringEquivDirectSum",
+        "DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaSemiringEquivDirectSum"
+      ]
+    },
+    {
+      "paper_target": "Notation 3.17",
+      "status": "implemented",
+      "scope": "Original real/RV names and complete Gamma ground, finite tuples and finite tags; actual valuation topology where VF dimension or derivatives occur. Combined weights retain both the volume form and every label coordinate.",
+      "declarations": [
+        "DiamondIntegral.Section3.GammaGroundMeasuredRVObject.combinedWeight",
+        "DiamondIntegral.Section3.GammaGroundMeasuredGammaObject.combinedWeight",
+        "DiamondIntegral.Section3.GammaGroundMeasuredRVObject.combinedWeightForm_value"
+      ]
+    },
+    {
+      "paper_target": "Ordinary positive coefficient square / C002",
+      "status": "proved_relative_to_approved_RY",
+      "scope": "Original real/RV names and complete Gamma ground, finite tuples and finite tags; actual valuation topology where VF dimension or derivatives occur. Homogeneous and graded positive injectivity. Actual Gamma-isomorphism reflection includes every finite tag and full old-ground RV lift. No groupified monicity is inferred.",
+      "declarations": [
+        "DiamondIntegral.Section3.gammaGroundGamma_reflects_RV_lift_bijection",
+        "DiamondIntegral.Section3.gammaGroundGammaToRVKPlus_injective",
+        "DiamondIntegral.Section3.gammaGroundFiniteGammaToRESKPlus_injective",
+        "DiamondIntegral.Section3.gammaGroundGammaToRVSemiring_injective",
+        "DiamondIntegral.Section3.gammaGroundFiniteGammaToRESSemiring_injective",
+        "DiamondIntegral.Section3.gammaGroundContext_coefficient_monomorphisms",
+        "DiamondIntegral.Section3.gammaGroundContext_coefficient_monomorphisms_degree"
+      ]
+    },
+    {
+      "paper_target": "Corrected Proposition 3.18 / T001",
+      "status": "proved_locally",
+      "scope": "Original real/RV names and complete Gamma ground, finite tuples and finite tags; actual valuation topology where VF dimension or derivatives occur. Both actual tensor maps are surjective; both explicit elementary congruences equal their full kernels; both graded positive quotient comparisons keep original degrees. Both actual groupified tensor kernels are the ideals of differences of precisely those pairs, with checked quotient ring equivalences in the actual context. Nontrivial Gamma(S), never nontrivial VF(S), is used.",
+      "declarations": [
+        "DiamondIntegral.Section3.proposition_3_18_unmeasured",
+        "DiamondIntegral.Section3.proposition_3_18_measured",
+        "DiamondIntegral.Section3.proposition_3_18_unmeasured_kernel",
+        "DiamondIntegral.Section3.proposition_3_18_measured_kernel",
+        "DiamondIntegral.Section3.proposition_3_18_unmeasured_graded",
+        "DiamondIntegral.Section3.proposition_3_18_measured_graded",
+        "DiamondIntegral.Section3.gammaGroundUnmeasuredGroupTensor_kernel",
+        "DiamondIntegral.Section3.gammaGroundMeasuredGroupTensor_kernel",
+        "DiamondIntegral.Section3.proposition_3_18_unmeasured_ring",
+        "DiamondIntegral.Section3.proposition_3_18_measured_ring",
+        "DiamondIntegral.Section3.gammaGroundUnmeasuredCoefficientQuotient_objects_in_degree",
+        "DiamondIntegral.Section3.gammaGroundMeasuredCoefficientQuotient_objects_in_degree"
+      ]
+    },
+    {
+      "paper_target": "Notation 3.19",
+      "status": "implemented",
+      "scope": "Original real/RV names and complete Gamma ground, finite tuples and finite tags; actual valuation topology where VF dimension or derivatives occur. Additive zero is the multiplicative identity form in every degree.",
+      "declarations": [
+        "DiamondIntegral.Section3.gammaGroundOneForm"
+      ]
+    },
+    {
+      "paper_target": "Notation 3.20",
+      "status": "implemented",
+      "scope": "Original real/RV names and complete Gamma ground, finite tuples and finite tags; actual valuation topology where VF dimension or derivatives occur. Actual ordinary and measured special generators and congruences; completion is the corresponding principal-ideal quotient.",
+      "declarations": [
+        "DiamondIntegral.Section3.gammaGroundRVPrincipalElement",
+        "DiamondIntegral.Section3.gammaGroundMeasuredRVPrincipalElement",
+        "DiamondIntegral.Section3.gammaGroundRVSpecialCompletionEquiv",
+        "DiamondIntegral.Section3.gammaGroundMeasuredRVSpecialCompletionEquiv"
+      ]
+    },
+    {
+      "paper_target": "Notation 3.21",
+      "status": "implemented_relative_to_accepted_18",
+      "scope": "Original real/RV names and complete Gamma ground, finite tuples and finite tags; actual valuation topology where VF dimension or derivatives occur. Actual object lifts retain the original forms in every degree. Class descent uses only explicit accepted [18] lift records at the stipulated VF/Gamma-generated context.",
+      "declarations": [
+        "DiamondIntegral.Section3.gammaGroundObjectLiftFinite",
+        "DiamondIntegral.Section3.gammaGroundMeasuredObjectLift",
+        "DiamondIntegral.Section3.gammaGroundObjectLift_finite_rv_fibres",
+        "DiamondIntegral.Section3.gammaGroundMeasuredObjectLift_form",
+        "DiamondIntegral.Section3.gammaGroundUnmeasuredPositiveIntegral_lift_class",
+        "DiamondIntegral.Section3.gammaGroundMeasuredPositiveIntegral_lift_class"
+      ]
+    },
+    {
+      "paper_target": "Theorem 3.22",
+      "status": "proved_relative_to_accepted_18",
+      "scope": "Original real/RV names and complete Gamma ground, finite tuples and finite tags; actual valuation topology where VF dimension or derivatives occur. VF/Gamma-generation and the actual GammaGroundContext are explicit. Global and degreewise [18] geometric lift/kernel results remain precise replaceable cited inputs, not HK inputs. Actual filtered/graded presentations, ring consequences, characterizations and uniqueness are proved.",
+      "declarations": [
+        "DiamondIntegral.Section3.gammaGroundUnmeasuredPositiveIntegral",
+        "DiamondIntegral.Section3.gammaGroundUnmeasuredPositiveIntegral_characterization",
+        "DiamondIntegral.Section3.gammaGroundUnmeasuredPositiveIntegral_unique",
+        "DiamondIntegral.Section3.gammaGroundUnmeasuredRingIntegral",
+        "DiamondIntegral.Section3.gammaGroundBoundedUnmeasuredIntegral",
+        "DiamondIntegral.Section3.gammaGroundBoundedUnmeasuredIntegral_transition",
+        "DiamondIntegral.Section3.gammaGroundMeasuredPositiveIntegral",
+        "DiamondIntegral.Section3.gammaGroundMeasuredPositiveIntegral_characterization",
+        "DiamondIntegral.Section3.gammaGroundMeasuredPositiveIntegral_unique",
+        "DiamondIntegral.Section3.gammaGroundMeasuredRingIntegral",
+        "DiamondIntegral.Section3.gammaGroundDegreeMeasuredIntegral",
+        "DiamondIntegral.Section3.gammaGroundDegreeMeasuredIntegral_characterization",
+        "DiamondIntegral.Section3.gammaGroundDegreeMeasuredIntegral_unique",
+        "DiamondIntegral.Section3.gammaGroundMeasuredGradedIntegral",
+        "DiamondIntegral.Section3.gammaGroundMeasuredGradedRingIntegral",
+        "DiamondIntegral.Section3.gammaGroundUnmeasuredFilteredIntegral"
+      ]
+    }
+  ]
+}

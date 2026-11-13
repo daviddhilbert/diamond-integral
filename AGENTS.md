@@ -28,8 +28,26 @@
   hypothesis bridge is actually compiled; a source link does not discharge it.
 - Keep the revised PDF available in the right-side panel for manuscript
   review. Report a queued or failed display request accurately.
+- Review one or two correction items at a time, in paper order. Show only
+  a PDF in the right panel, with the proposed edits in a different color
+  inside the manuscript context. Do not open the TeX editor or substitute
+  a separate summary for the manuscript review. Wait for the author's
+  reading and comments before moving to the next review batch. After
+  approval, incorporate the change, gray out any corresponding referee
+  item, and add a brief resolution note, following the section 2 records.
 - Preserve uncommitted work. Do not commit or push without instruction.
 - The author approved nontrivial Γ(S) as a standing assumption throughout
   the paper. Track whether any later argument actually needs triviality;
   report a genuine conflict before changing scope. The former exception
   was at the opening of §6, not §5.
+
+- Author instruction, November 11: prove the HK coefficient embeddings and
+  tensor comparisons locally. No HK result may be used as a given input.
+  Consult HK proof ideas and Section 4.2 of arXiv:1509.07695, but prove
+  every needed ACVF lemma here. Do not ask again to accept HK inputs.
+
+- Author instruction, November 12: the supplementary unary-ray kernel
+  refinement may be skipped. Check the newer Integration in ACVF exports,
+  update the relevant records and pins, audit, then commit and push this
+  section's work. This authorizes the push requested in this session; keep
+  exact upstream hypotheses and unfinished-input boundaries explicit.

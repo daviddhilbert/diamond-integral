@@ -63,3 +63,74 @@ that background precisely as a replaceable explicit input. Its consequence
 for bounded Gamma domains is proved here from the finite power laws;
 the RV-domain assertion and the induction of diamond-integral 2.41 are
 not taken as given. See `section 2/verification/CITED-INPUTS.md`.
+
+
+Author update, November 11, 2026: Sections 1–3 of *Integration in
+algebraically closed valued fields* are finished. Link relevant cited
+results to `daviddhilbert/integration-in-ACVF`. The consumer pins revision
+`3c3e478cf1f298061c4489cc03f95669d551ce5e`, with the unchanged Lean,
+Mathlib, Special transformations and ACVF-QE pins. Inspect exact exported
+hypotheses and prove any presentation bridges before replacing a local
+input. Sections 4–7 of that repository remain outside this completed
+checkpoint; their existing accepted cited interfaces are retained.
+
+The local consumer records five proof-body adaptations to [18] in
+`section 3/reuse/integration-open-radius.patch`. They accommodate the
+already approved Special transformations proper-open-radius API; the
+upstream theorem statements are unchanged. The package pin and both
+compatibility patches are checked by the verification scripts. Native
+original-Gamma-base constructors for the 3.3, 3.8 and 3.13 cited interfaces
+are now provided in section 3. Full finite-disc-name presentation transport
+is tracked separately; a direct upstream export alone is not reported as
+discharging a local interface with different parameter syntax.
+
+The subsequent native finite-disc syntax equivalence now supplies checked
+constructors for the finite-disc-name 3.3, 3.4, 3.9 and 3.13 interfaces as
+well. The ball constructor retains actual saturation at an infinite cardinal;
+finite real support allows it at every enlarged real base in the local
+polydisc induction, without dropping any old imaginary names. The 2.25 and
+2.30 wrappers instantiate the original geometric interfaces. The mixed disc-to-disc partition interface now also has a checked
+constructor from [18, 3.21]. It retains the original base and all RV labels,
+using finite real support and four source/target zero cells to preserve
+ordinary open discs in both directions. Actual saturation at an infinite
+cardinal remains explicit. Eight of the nine legacy interfaces are supplied;
+the separate Gamma piecewise-affine background remains explicit in the
+reuse inventory.
+
+
+Author decision, November 11, 2026: HK Lemma 10.1, Corollary 10.3 and
+Proposition 10.10(1) must be proved in this project. No HK result is
+authorized as a given input. HK and Section 4.2 of
+https://arxiv.org/abs/1509.07695 may be consulted for proof ideas; their
+needed ACVF ingredients must be proved locally. The previous conditional
+HK input proposal is withdrawn and is not a project dependency.
+
+
+Author approval, November 12, 2026: add the coefficient-monicity proof
+using Reichstein--Youssin, *A birational invariant for algebraic group
+actions*, Pacific Journal of Mathematics 204 (2002), no. 1, 223--246,
+DOI 10.2140/pjm.2002.204.223, Theorem 7.1 and Corollary 2.5. The exact
+authorized consequence is: two faithful diagonalizable n-dimensional
+representations over an algebraically closed field of characteristic
+zero that are equivariantly birational have weight tuples related by
+GL_n(Z), and therefore have an equivariant monomial isomorphism of their
+open coordinate tori. Retain this as an explicit replaceable cited
+input. It does not supply the ACVF residue-generic extraction, original-
+ground character action, coefficient descent or finite gluing; prove
+those bridges locally. No HK result is authorized by this approval.
+The bibliography entry was appended so the existing items 18--22 keep
+their numbering.
+
+
+Author update, November 12, 2026: refresh [18] against the nearly completed
+repository, audit, and push the section 3 work. The current consumer pins
+7d4acc730496b3bd05a22c268ffd89540ca694f9. Its section 4 is checked;
+section 6 RV[k]/RV[*] integration is checked relative to the explicit
+Section5TwoOrderInputAll (the unfinished section 5.8 refinement). Section 7
+measured integration is not yet available. Exact later source exports are
+linked in IntegrationLaterExports.lean and integration-reuse.json, retaining
+the native VFGammaGeneratedBase closure requirement and native categories.
+A source export is not a substitute for the legacy lift record until the
+closure/category comparison is compiled. The accepted records remain
+replaceable and no HK input is introduced. The author explicitly skips
+the supplementary unary-ray refinement.

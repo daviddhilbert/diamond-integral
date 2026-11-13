@@ -1,0 +1,47 @@
+{
+  "active_items": [],
+  "status": "T001 approved and applied; resolved PDF compiled",
+  "source": "section 3/reference/proposed-revisions/T001-semiring-proposition-review.tex",
+  "source_sha256": "6243ebf972e2f7104ec217c3d9064751e0dc7807a19479810282bacac23a2b91",
+  "pdf": "section 3/reference/proposed-revisions/T001-semiring-proposition-review.pdf",
+  "pdf_sha256": "26bff3f7fafbbe63290190b1cb2c9ed0f97f52a034e743c05bb08312a5d45257",
+  "document_pages": [
+    34,
+    35,
+    36
+  ],
+  "working_manuscript_sha256": "24c58ba674814c3f12f6097b9fd61dc5675af627b6b9d4a43cae46052e6f68cb",
+  "approved_items": [
+    "R050",
+    "R051",
+    "R053",
+    "R054",
+    "T001"
+  ],
+  "display": "Resolved PDF-only right-panel request returned queued; visibility unconfirmed",
+  "compiler": "pdflatex, three passes; focused manuscript extract",
+  "kernel_proof": "section 3/verification/POSITIVE-TENSOR-KERNEL.md",
+  "previous_unmeasured_review": "section 3/reference/proposed-revisions/T001-kernel-review.pdf",
+  "previous_measured_review": "section 3/reference/proposed-revisions/T001-measured-kernel-review.pdf",
+  "previous_retraction_review": "section 3/reference/proposed-revisions/T001-retraction-review.pdf",
+  "lean_scope": "Both complete positive kernel equalities, quotient semiring isomorphisms, direct-sum gradings and original r+n object-degree formulas pass the 842-module integrated audit (2566 theorem types; 4841 audited heads). TensorPresentationContext instantiates both at the actual VF/Gamma-generated GammaGroundContext. General imaginary-ground presentation transport remains separate. No HK premise, additive cancellation or groupification is used.",
+  "review_request": "Approved by the author; no confirmation pending.",
+  "approval_scope": "Final T001 corrected Proposition 3.18 and both positive proofs, as displayed on printed pages 34\u201336. Review-only explanatory and formalization-status notes remain in the preserved proposal.",
+  "approval_applied": true,
+  "approval_user_message": "approved, carry on",
+  "approval_recorded_at": "2026-11-12T08:37:46.087204-08:00",
+  "approval_timezone": "America/Los_Angeles",
+  "source_before_sha256": "7dc1818a674a975ae970d376f2c487d7ab6f225392e1b316e478d10cb1cb6492",
+  "source_after_sha256": "24c58ba674814c3f12f6097b9fd61dc5675af627b6b9d4a43cae46052e6f68cb",
+  "corresponding_referee_item": null,
+  "referee_action": "No matching referee item; existing resolved R050/R051/R053/R054 notes remain gray. A brief green T001 author resolution was added.",
+  "resolved_pdf": "section 3/reference/proposed-revisions/T001-resolved-review.pdf",
+  "resolved_pdf_sha256": "77696f68282d4115d15de3c180057810cf79cbb3b5c25a80d68b37e6d6215e2f",
+  "resolved_printed_pages": [
+    34,
+    35,
+    36
+  ],
+  "main_pdf": "section 2/reference/diamond_integral_revision_annotated.pdf",
+  "main_pdf_sha256": "7a172bc0806fd67c234891eddaafdb8e5ebf47251ea54a0efb5734f7847cb2d8"
+}

@@ -1,0 +1,25 @@
+{
+  "approval_status": "Superseded combined review; R050 and R051/R053 approved separately; R054 not yet approved",
+  "working_manuscript": "section 2/reference/diamond_integral_revision_annotated.tex",
+  "working_manuscript_sha256": "b2e68432e60db8c288cc10c5cd11a74bb0b41f24a3249cd5e31bdf54e4bdf98d",
+  "proposals": [
+    "R050: piecewise Z-affine in Remark 3.15",
+    "R053: existing generation hypothesis before both lift homomorphism assertions",
+    "R051: homogeneous/nonhomogeneous spelling",
+    "R054: measured integral superscript"
+  ],
+  "files": {
+    "review-summary.pdf": "eefac1a5fd5f6cbaa2e7a42934b629a11cb758a98ab3da955287cbe97e2d9bd4",
+    "review-summary.tex": "79eb30fae6bae63d92043d0b84a4bada46808d462b7b208485958a90f659e22b",
+    "section3-review.tex": "889a3c38965cccd069ee04a237dce9444bf3e10c4f0fa3b746c3cf1a480b5d7d"
+  },
+  "display_status": "Full manuscript source and compiled PDF preview queued; automatic visibility unconfirmed",
+  "main_source_modified": false,
+  "full_manuscript_compilation": {
+    "tool": "codex_app__compile_latex_document",
+    "status": "success",
+    "path": "/workspace/diamond-integral/section 3/reference/proposed-revisions/section3-review.tex",
+    "standalone_pdf_exported": false
+  },
+  "superseded_by": "active-review.json"
+}

@@ -1,0 +1,27 @@
+{
+  "active_items": [
+    "R050"
+  ],
+  "printed_page": 34,
+  "status": "approved and applied",
+  "source": "section 3/reference/proposed-revisions/R050-piecewise-affine-review.tex",
+  "source_sha256": "25bd70161ec4cda2f9ab384976011e0b27d2dc751b38b1f33060e756d836ea55",
+  "pdf": "section 3/reference/proposed-revisions/R050-piecewise-affine-review.pdf",
+  "pdf_sha256": "532b3babba0a0d04afada83d35448015b07d1153a4fdb6478de273ea7f25bbbf",
+  "working_manuscript_sha256": "b2e68432e60db8c288cc10c5cd11a74bb0b41f24a3249cd5e31bdf54e4bdf98d",
+  "working_manuscript_modified": true,
+  "proposed_replacement": {
+    "from": "then it is $\\Z$-linear (with constant terms",
+    "to": "then it is {\\color{ResolutionGreen}piecewise $\\Z$-affine} (with constant terms"
+  },
+  "display": "PDF-only right-panel request queued; visibility unconfirmed",
+  "supersedes": "Combined R050/R051/R053/R054 review and summary approval request",
+  "compiler": "pdflatex, three successful passes; focused extract visually inspected",
+  "approval_scope": "R050 only, following the R050-only PDF review",
+  "adopted_manuscript_sha256": "53a7b29b9ad2b8433094f935e1ccc8b5bc46c2b9e4bd5e1255c5c902359c406d",
+  "approval_applied": true,
+  "source_before_sha256": "b2e68432e60db8c288cc10c5cd11a74bb0b41f24a3249cd5e31bdf54e4bdf98d",
+  "source_after_sha256": "53a7b29b9ad2b8433094f935e1ccc8b5bc46c2b9e4bd5e1255c5c902359c406d",
+  "resolved_pdf": "section 3/reference/proposed-revisions/R050-resolved-review.pdf",
+  "resolved_pdf_sha256": "41b1fbfd81ab62807a73e09c7c25051009f764d2e3883584fa77da1a48a235fe"
+}

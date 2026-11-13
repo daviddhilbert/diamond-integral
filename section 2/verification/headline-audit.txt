@@ -1,3 +1,5 @@
+warning: integration_in_acvf: repository has local changes:
+  /workspace/diamond-integral/.lake/packages/integration_in_acvf
 warning: special_transformations: repository has local changes:
   /workspace/diamond-integral/.lake/packages/special_transformations
 @[reducible] def DiamondIntegral.Section2.VF : (M : Type) →

@@ -1,0 +1,26 @@
+{
+  "active_items": [
+    "R051",
+    "R053"
+  ],
+  "status": "approved and applied",
+  "source": "section 3/reference/proposed-revisions/R051-R053-review.tex",
+  "source_sha256": "42db19957b1f6085c4d05f297686af8fc09d6f6d59fe779c429f5fd0b692b9dc",
+  "pdf": "section 3/reference/proposed-revisions/R051-R053-review.pdf",
+  "pdf_sha256": "da347bdc28c2ab681d8f0679e374746bde648fe178ee74bd20cc3ea7a8682ea7",
+  "printed_pages": [
+    35
+  ],
+  "working_manuscript_sha256": "53a7b29b9ad2b8433094f935e1ccc8b5bc46c2b9e4bd5e1255c5c902359c406d",
+  "approved_items": [
+    "R050"
+  ],
+  "display": "PDF-only right-panel request queued; visibility unconfirmed",
+  "compiler": "pdflatex, three passes; reviewed context extract",
+  "approval_scope": "R051 and R053 only, following the focused PDF on printed page 35",
+  "approval_applied": true,
+  "source_before_sha256": "53a7b29b9ad2b8433094f935e1ccc8b5bc46c2b9e4bd5e1255c5c902359c406d",
+  "source_after_sha256": "8eed10e887799949925b695c59ec068566033dd4732463a322eb7a29ed4b7bcf",
+  "resolved_pdf": "section 3/reference/proposed-revisions/R051-R053-resolved-review.pdf",
+  "resolved_pdf_sha256": "3829ca93cb566f8ca75dec9b7af334a5d41d7404386982783bf89982da6f2c15"
+}

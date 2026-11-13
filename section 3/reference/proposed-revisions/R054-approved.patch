@@ -1,0 +1,18 @@
+--- a/section 2/reference/diamond_integral_revision_annotated.tex
++++ b/section 2/reference/diamond_integral_revision_annotated.tex
+@@ -1927,12 +1927,12 @@
+ \[
+ \int_{+}^\mu : \gsk  \mgVF[k] \fun \gsk  \mgRV[k] /  \mgisp
+ \]
+-such that $\int_{+} [\bm A] = [\bm U]/  \mgisp$  if and only if $[\bm A] = [{\mgL}{\bm U}]$.
++such that $\int_{+}^{\mu} [\bm A] = [\bm U]/  \mgisp$  if and only if $[\bm A] = [{\mgL}{\bm U}]$.
+ 
+ % BEGIN REFEREE INSERTION R054
+-\RefereeRemark{054}{Typo}{Measured integral notation}{%
++\ResolvedRefereeRemark{054}{Typo}{Measured integral notation}{%
+ \textit{Original source line 1386.}\quad The integral in this characterization should be $\int_+^\mu$, consistently with the immediately preceding display.
+-}
++}{The author approves adding the measured superscript $\mu$ in this characterization. The measured congruence and the asserted equality of lift classes are unchanged.}
+ % END REFEREE INSERTION R054
+ Taking the direct sum of the groupifications yields a canonical isomorphism of graded rings
+ \[

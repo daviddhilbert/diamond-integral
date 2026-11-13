@@ -2,71 +2,79 @@
   "AtomicGammaBaseChangeInput": {
     "paper_result": "3.3",
     "repository": "daviddhilbert/integration-in-ACVF",
-    "revision": "a2dd3066c992ed2d84a2ccad4298ae3b9061bd40",
+    "revision": "7d4acc730496b3bd05a22c268ffd89540ca694f9",
     "declaration": "IntegrationInACVF.Section3ACVF.FullGammaAtomicity.lemma_3_3",
-    "source_url": "https://github.com/daviddhilbert/integration-in-ACVF/blob/a2dd3066c992ed2d84a2ccad4298ae3b9061bd40/section%203/IntegrationSection3ACVF/FullGammaAtomicity.lean#L127",
-    "integration_status": "Upstream proved export located and source type reviewed; downstream definability/atomicity adapters remain explicit, not yet discharged by an imported Lean bridge."
+    "source_url": "https://github.com/daviddhilbert/integration-in-ACVF/blob/7d4acc730496b3bd05a22c268ffd89540ca694f9/section%203/IntegrationSection3ACVF/FullGammaAtomicity.lean#L127",
+    "integration_status": "Checked constructor compiled and included in the section 3 type/principle audit; the legacy interface remains available for compatibility.",
+    "checked_constructor": "DiamondIntegral.Section3.integrationAtomicGammaBaseChangeInput_complete"
   },
   "AtomicDiscGammaBaseChangeInput": {
     "paper_result": "3.3",
     "repository": "daviddhilbert/integration-in-ACVF",
-    "revision": "a2dd3066c992ed2d84a2ccad4298ae3b9061bd40",
+    "revision": "7d4acc730496b3bd05a22c268ffd89540ca694f9",
     "declaration": "IntegrationInACVF.Section3ACVF.FullGammaAtomicity.lemma_3_3_one_unary",
-    "source_url": "https://github.com/daviddhilbert/integration-in-ACVF/blob/a2dd3066c992ed2d84a2ccad4298ae3b9061bd40/section%203/IntegrationSection3ACVF/FullGammaAtomicity.lean#L134",
-    "integration_status": "Upstream proved export located and source type reviewed; downstream definability/atomicity adapters remain explicit, not yet discharged by an imported Lean bridge."
+    "source_url": "https://github.com/daviddhilbert/integration-in-ACVF/blob/7d4acc730496b3bd05a22c268ffd89540ca694f9/section%203/IntegrationSection3ACVF/FullGammaAtomicity.lean#L134",
+    "integration_status": "Checked constructor compiled and included in the section 3 type/principle audit; the legacy interface remains available for compatibility.",
+    "checked_constructor": "DiamondIntegral.Section3.integrationAtomicDiscGammaBaseChangeInput"
   },
   "UnaryDiscAtomicityInput": {
     "paper_result": "3.4",
     "repository": "daviddhilbert/integration-in-ACVF",
-    "revision": "a2dd3066c992ed2d84a2ccad4298ae3b9061bd40",
+    "revision": "7d4acc730496b3bd05a22c268ffd89540ca694f9",
     "declaration": "IntegrationInACVF.Section3ACVF.CompleteTypeBallAtomicity.lemma_3_4",
-    "source_url": "https://github.com/daviddhilbert/integration-in-ACVF/blob/a2dd3066c992ed2d84a2ccad4298ae3b9061bd40/section%203/IntegrationSection3ACVF/CompleteTypeBallAtomicity.lean#L60",
-    "integration_status": "Upstream proved export located and source type reviewed; downstream definability/atomicity adapters remain explicit, not yet discharged by an imported Lean bridge."
+    "source_url": "https://github.com/daviddhilbert/integration-in-ACVF/blob/7d4acc730496b3bd05a22c268ffd89540ca694f9/section%203/IntegrationSection3ACVF/CompleteTypeBallAtomicity.lean#L60",
+    "integration_status": "Checked constructor compiled and included in the section 3 type/principle audit; the legacy interface remains available for compatibility.",
+    "checked_constructor": "DiamondIntegral.Section3.integrationUnaryDiscAtomicityInput"
   },
   "PrimitiveImageInput": {
     "paper_result": "3.8",
     "repository": "daviddhilbert/integration-in-ACVF",
-    "revision": "a2dd3066c992ed2d84a2ccad4298ae3b9061bd40",
+    "revision": "7d4acc730496b3bd05a22c268ffd89540ca694f9",
     "declaration": "IntegrationInACVF.Section3ACVF.PrimitiveImages.lemma_3_8",
-    "source_url": "https://github.com/daviddhilbert/integration-in-ACVF/blob/a2dd3066c992ed2d84a2ccad4298ae3b9061bd40/section%203/IntegrationSection3ACVF/PrimitiveImages.lean#L34",
-    "integration_status": "Upstream proved export located and source type reviewed; downstream definability/atomicity adapters remain explicit, not yet discharged by an imported Lean bridge."
+    "source_url": "https://github.com/daviddhilbert/integration-in-ACVF/blob/7d4acc730496b3bd05a22c268ffd89540ca694f9/section%203/IntegrationSection3ACVF/PrimitiveImages.lean#L34",
+    "integration_status": "Checked constructor compiled and included in the section 3 type/principle audit; the legacy interface remains available for compatibility.",
+    "checked_constructor": "DiamondIntegral.Section3.integrationPrimitiveImageInput"
   },
   "UnaryOpenDiscRVBaseChangeInput": {
     "paper_result": "3.9",
     "repository": "daviddhilbert/integration-in-ACVF",
-    "revision": "a2dd3066c992ed2d84a2ccad4298ae3b9061bd40",
+    "revision": "7d4acc730496b3bd05a22c268ffd89540ca694f9",
     "declaration": "IntegrationInACVF.Section3ACVF.OpenBallConstancy.lemma_3_9_open",
-    "source_url": "https://github.com/daviddhilbert/integration-in-ACVF/blob/a2dd3066c992ed2d84a2ccad4298ae3b9061bd40/section%203/IntegrationSection3ACVF/OpenBallConstancy.lean#L182",
-    "integration_status": "Upstream proved export located and source type reviewed; downstream definability/atomicity adapters remain explicit, not yet discharged by an imported Lean bridge."
+    "source_url": "https://github.com/daviddhilbert/integration-in-ACVF/blob/7d4acc730496b3bd05a22c268ffd89540ca694f9/section%203/IntegrationSection3ACVF/OpenBallConstancy.lean#L182",
+    "integration_status": "Checked constructor compiled and included in the section 3 type/principle audit; the legacy interface remains available for compatibility.",
+    "checked_constructor": "DiamondIntegral.Section3.integrationUnaryOpenDiscRVBaseChangeInput"
   },
   "OpenDiscImageInput": {
     "paper_result": "3.13",
     "repository": "daviddhilbert/integration-in-ACVF",
-    "revision": "a2dd3066c992ed2d84a2ccad4298ae3b9061bd40",
+    "revision": "7d4acc730496b3bd05a22c268ffd89540ca694f9",
     "declaration": "IntegrationInACVF.Section3ACVF.OpenImages.lemma_3_13",
-    "source_url": "https://github.com/daviddhilbert/integration-in-ACVF/blob/a2dd3066c992ed2d84a2ccad4298ae3b9061bd40/section%203/IntegrationSection3ACVF/OpenImages.lean#L43",
-    "integration_status": "Upstream proved export located and source type reviewed; downstream definability/atomicity adapters remain explicit, not yet discharged by an imported Lean bridge."
+    "source_url": "https://github.com/daviddhilbert/integration-in-ACVF/blob/7d4acc730496b3bd05a22c268ffd89540ca694f9/section%203/IntegrationSection3ACVF/OpenImages.lean#L43",
+    "integration_status": "Checked constructor compiled and included in the section 3 type/principle audit; the legacy interface remains available for compatibility.",
+    "checked_constructor": "DiamondIntegral.Section3.integrationOpenDiscImageInput"
   },
   "OpenDiscNamesImageInput": {
     "paper_result": "3.13",
     "repository": "daviddhilbert/integration-in-ACVF",
-    "revision": "a2dd3066c992ed2d84a2ccad4298ae3b9061bd40",
+    "revision": "7d4acc730496b3bd05a22c268ffd89540ca694f9",
     "declaration": "IntegrationInACVF.Section3ACVF.OpenImages.lemma_3_13",
-    "source_url": "https://github.com/daviddhilbert/integration-in-ACVF/blob/a2dd3066c992ed2d84a2ccad4298ae3b9061bd40/section%203/IntegrationSection3ACVF/OpenImages.lean#L43",
-    "integration_status": "Upstream proved export located and source type reviewed; downstream definability/atomicity adapters remain explicit, not yet discharged by an imported Lean bridge."
+    "source_url": "https://github.com/daviddhilbert/integration-in-ACVF/blob/7d4acc730496b3bd05a22c268ffd89540ca694f9/section%203/IntegrationSection3ACVF/OpenImages.lean#L43",
+    "integration_status": "Checked constructor compiled and included in the section 3 type/principle audit; the legacy interface remains available for compatibility.",
+    "checked_constructor": "DiamondIntegral.Section3.integrationOpenDiscNamesImageInput"
   },
   "DiscToDiscPartitionInput": {
     "paper_result": "3.19/3.21",
     "repository": "daviddhilbert/integration-in-ACVF",
-    "revision": "a2dd3066c992ed2d84a2ccad4298ae3b9061bd40",
+    "revision": "7d4acc730496b3bd05a22c268ffd89540ca694f9",
     "declaration": "IntegrationInACVF.Section3ACVF.CoordinatePartitions.proposition_3_21",
-    "source_url": "https://github.com/daviddhilbert/integration-in-ACVF/blob/a2dd3066c992ed2d84a2ccad4298ae3b9061bd40/section%203/IntegrationSection3ACVF/CoordinatePartitions.lean#L20",
-    "integration_status": "Upstream proved export located and source type reviewed; downstream definability/atomicity adapters remain explicit, not yet discharged by an imported Lean bridge.",
-    "additional_source_url": "https://github.com/daviddhilbert/integration-in-ACVF/blob/a2dd3066c992ed2d84a2ccad4298ae3b9061bd40/section%203/IntegrationSection3ACVF/FullOpenToOpenPartition.lean#L93"
+    "source_url": "https://github.com/daviddhilbert/integration-in-ACVF/blob/7d4acc730496b3bd05a22c268ffd89540ca694f9/section%203/IntegrationSection3ACVF/CoordinatePartitions.lean#L20",
+    "integration_status": "Checked constructor compiled and included in the section 3 type/principle audit; the legacy interface remains available for compatibility.",
+    "additional_source_url": "https://github.com/daviddhilbert/integration-in-ACVF/blob/a2dd3066c992ed2d84a2ccad4298ae3b9061bd40/section%203/IntegrationSection3ACVF/FullOpenToOpenPartition.lean#L93",
+    "checked_constructor": "DiamondIntegral.Section3.integrationDiscToDiscPartitionInput"
   },
   "GammaPiecewiseRationalAffineInput": {
     "repository": "daviddhilbert/integration-in-ACVF",
-    "revision": "a2dd3066c992ed2d84a2ccad4298ae3b9061bd40",
+    "revision": "7d4acc730496b3bd05a22c268ffd89540ca694f9",
     "integration_status": "Retained accepted QE/value-group background. The numbered RV-linearity result 3.18 and Gamma piecewise monotonicity are not the exact rational-affine power-law interface; no matching producer identified in this inspection."
   }
 }

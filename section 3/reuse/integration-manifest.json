@@ -1,0 +1,48 @@
+{
+  "base_revision": "7d4acc730496b3bd05a22c268ffd89540ca694f9",
+  "reason": "Consumer compatibility with the already approved proper-open-radius API in Special transformations. Numbered source statements are unchanged. The two auxiliary obstacle lemmas quantify over OpenRadius to match their corrected predecessor producers; other changes are confined to proof bodies.",
+  "supporting_signature_adaptations": [
+    "IntegrationInACVF.Section4.RelativeObstaclePreparation.zero_obstacles: proper OpenRadius in the auxiliary obstacle premise",
+    "IntegrationInACVF.Section5.relative_zero_obstacles: proper OpenRadius in the auxiliary obstacle premise"
+  ],
+  "numbered_statement_changes": false,
+  "patch_sha256": "4c78af253a893a12b7009e584dce0b56ac1faa12d17af92f79ec65d280ccf00b",
+  "files": {
+    "section 3/IntegrationSection3ACVF/CanonicalBallSupport.lean": {
+      "before": "2fa29778596a751b355aa94695d15eba49b3213140a21644a6e2227aee86e6b1",
+      "after": "48a928794c9f47909d85ca81eb7e7d7f52c1a4762d9690d9983c0609f307d732"
+    },
+    "section 3/IntegrationSection3ACVF/CompleteTypeRVProfiles.lean": {
+      "before": "4d1f39c2f615f8e7808360aec6e2743be55e3397ab8fb2b05ab59c26a652be17",
+      "after": "1d1e4d20ed3760f230265da23905917b5261e3666d69a183ea8e6a260c5732f8"
+    },
+    "section 3/IntegrationSection3ACVF/OpenBallRVGeometry.lean": {
+      "before": "8afd583d05e221b2f0e304b1abb586c52f8c8fe420816ce02e6190ffb453e116",
+      "after": "8bf5b18e70d55272244a2329d056287da4a20e871acab05d2d69f5b06f77b5ca"
+    },
+    "section 3/IntegrationSection3ACVF/PolynomialEscape.lean": {
+      "before": "3d30eb90dfaecb9ee0260ebbaa27e3e16d01c1633fc568f824207b4be777fb4c",
+      "after": "6ca93216b5ebfd1b29640e892b84544bcd59b54c85900e09ece8ef07025f83c9"
+    },
+    "section 3/IntegrationSection3ACVF/ValuativeCentreGeometry.lean": {
+      "before": "4a9fef5b3eaaedd9ac6a78a079fb904037efd5209df1d72ef3bbf99086f19c92",
+      "after": "4bd88d0793d2fb9be0648a7bd4687a55ca7c85a1d89dabb45de9cbf65af898d4"
+    },
+    "section 4/IntegrationSection4/EmptyInteriorFinite.lean": {
+      "before": "e14f436d8755e772f69c2ffa2884b4e1ee8c4e6f6359606a1fb52e8bfe50db7f",
+      "after": "1b1166e9e185efd130450c6917cfa8d2252f68b73a835001ca870738f5e32222"
+    },
+    "section 4/IntegrationSection4/RelativeObstaclePreparation.lean": {
+      "before": "f0fa2b805a84429866c1fec2746354cbaaa92d92e2449f611f11e613b0a81663",
+      "after": "026d01118f8e68a81cd51071e16fe62937b4f01092d3d565a14c82016c88ab1c"
+    },
+    "section 5/IntegrationSection5/RelativeObstaclePreparation.lean": {
+      "before": "60d2729e0ca0e08c49e42b1cd3f86c045dc037da5b514c010835149e0bd8d093",
+      "after": "eee7e6e70a39f3d385a5bc5824b9552b928c8e8f2a6398a37cfa37e3a38e2428"
+    },
+    "section 5/IntegrationSection5/UnaryBallImages.lean": {
+      "before": "8a1f804c3727f0485fc58d2cae230c3e62969a88610c879101260bc5db1b46f8",
+      "after": "45cc5c5d0d85952d583e372e8fb6398dd05733c30d4e34c2b112f0ecf0628274"
+    }
+  }
+}

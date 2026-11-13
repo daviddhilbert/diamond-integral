@@ -17,7 +17,7 @@ jobs:
   build:
     name: Build pinned Lean project
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 180
     steps:
       - uses: actions/checkout@v5
         with:
@@ -33,10 +33,15 @@ jobs:
           use-mathlib-cache: 'true'
 
       - name: Prepare approved library correction
-        run: python3 'section 2/prepare-reuse.py'
+        run: |
+          python3 'section 2/prepare-reuse.py'
+          python3 'section 3/prepare-integration-reuse.py'
 
       - name: Build the Lean project
         run: lake -R build
 
       - name: Audit section 2 exports
         run: lake env python3 'section 2/verify.py'
+
+      - name: Audit section 3 exports
+        run: lake env python3 'section 3/verify.py'

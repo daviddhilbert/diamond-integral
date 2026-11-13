@@ -1,0 +1,28 @@
+{
+  "active_items": [
+    "C002"
+  ],
+  "status": "Mathematical monicity proof using external birational classification; local Lean monicity unfinished; no manuscript change adopted",
+  "source": "section 3/reference/proposed-revisions/C002-monicity-and-use-review.tex",
+  "source_sha256": "28b16c1506483a84e98a2092a8d3706c6cb8f3e117bd90af8a435463af3e007c",
+  "pdf": "section 3/reference/proposed-revisions/C002-monicity-and-use-review.pdf",
+  "pdf_sha256": "12b278a67b7f87aaa7c6543438ef8e397d56c05dbc3a92e28d6b7ecd6ff5b276",
+  "printed_pages": [
+    34,
+    35
+  ],
+  "working_manuscript_sha256": "24c58ba674814c3f12f6097b9fd61dc5675af627b6b9d4a43cae46052e6f68cb",
+  "display": "PDF-only right-panel request returned queued; visibility unconfirmed",
+  "withdrawn_items": {
+    "C001": "Unnecessary definition correction withdrawn; intended full-preimage convention retained."
+  },
+  "mathematical_result": "Positive Gamma-to-RV injection via residue generics and Reichstein--Youssin Theorem 7.1 / Corollary 2.5; not groupified injectivity.",
+  "formal_scope": "External birational theorem not added as an accepted input or new premise. Local all-degree coefficient monicity remains unfinished.",
+  "later_use": "No later construction requires horizontal monicity. Quotient descent after corrected 3.18 and concrete h_m checks remain separate obligations.",
+  "audit_note": "section 3/verification/COEFFICIENT-MONICITY-CHECK.md",
+  "compiler": "pdflatex, three passes; focused manuscript extract",
+  "supersedes": "C001-C002-definedness-review.pdf (preserved; C001 withdrawn and C002 omission no longer asserted as an error correction)",
+  "approval_applied": false,
+  "visual_check": "Both pages inspected; formula typo corrected and recompiled; changes and explanations blue in manuscript context.",
+  "dependency_receipt": "section 3/verification/coefficient-dependencies.json"
+}

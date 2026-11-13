@@ -1,0 +1,19 @@
+{
+  "active_items": [
+    "C001"
+  ],
+  "status": "Critical mathematical proof question; no proposed change to the manuscript statement",
+  "source": "section 3/reference/proposed-revisions/C001-coefficient-embedding-question.tex",
+  "source_sha256": "4b5de430a604dfd397ad3868668dfbc6f721b85b3a70dcf5fd735057832f4d7b",
+  "pdf": "section 3/reference/proposed-revisions/C001-coefficient-embedding-question.pdf",
+  "pdf_sha256": "0d4c7be99de8a892100cb128048ec6513e13ed71818beb7fdd7b6e990e2a209e",
+  "printed_pages": [
+    33,
+    34
+  ],
+  "working_manuscript_sha256": "24c58ba674814c3f12f6097b9fd61dc5675af627b6b9d4a43cae46052e6f68cb",
+  "display": "PDF-only right-panel request returned queued; visibility unconfirmed",
+  "question": "Construct a same-ground fibre-respecting replacement for an arbitrary bijection of full Gamma lifts, including finite tagged Gamma domains without RV representatives.",
+  "not_claimed": "No counterexample or error in the coefficient embedding is asserted.",
+  "completed": "Corrected Proposition 3.18 and both positive kernels; both actual degree-zero category comparisons; coefficient reflection in degree zero and for singleton Gamma domains."
+}

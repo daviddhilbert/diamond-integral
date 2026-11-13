@@ -1,0 +1,227 @@
+{
+  "repository": "https://github.com/daviddhilbert/integration-in-ACVF",
+  "revision": "7d4acc730496b3bd05a22c268ffd89540ca694f9",
+  "consumer_compatibility_manifest": "section 3/reuse/integration-manifest.json",
+  "status": "Proof export inventory; consult VERIFICATION.json source hashes for the verified checkpoint.",
+  "exports": [
+    {
+      "consumer": "DiamondIntegral.Section3.integration_corollary_2_15",
+      "upstream": "IntegrationInACVF.Section2.corollary_2_15"
+    },
+    {
+      "consumer": "DiamondIntegral.Section3.integration_corollary_2_34",
+      "upstream": "IntegrationInACVF.Section2.corollary_2_34"
+    },
+    {
+      "consumer": "DiamondIntegral.Section3.integration_corollary_2_34_all_degrees",
+      "upstream": "IntegrationInACVF.Section2.VolumeDescentAllDegrees.corollary_2_34_all_degrees"
+    },
+    {
+      "consumer": "DiamondIntegral.Section3.integration_lemma_3_2",
+      "upstream": "IntegrationInACVF.Section3ACVF.FullBaseAtomicity.lemma_3_2"
+    },
+    {
+      "consumer": "DiamondIntegral.Section3.integration_lemma_3_3",
+      "upstream": "IntegrationInACVF.Section3ACVF.FullGammaAtomicity.lemma_3_3"
+    },
+    {
+      "consumer": "DiamondIntegral.Section3.integration_lemma_3_4",
+      "upstream": "IntegrationInACVF.Section3ACVF.CompleteTypeBallAtomicity.lemma_3_4"
+    },
+    {
+      "consumer": "DiamondIntegral.Section3.integration_lemma_3_6",
+      "upstream": "IntegrationInACVF.Section3ACVF.PrimitiveDecomposition.lemma_3_6"
+    },
+    {
+      "consumer": "DiamondIntegral.Section3.integration_corollary_3_7",
+      "upstream": "IntegrationInACVF.Section3ACVF.SameRadiusCoverage.corollary_3_7_gamma"
+    },
+    {
+      "consumer": "DiamondIntegral.Section3.integration_lemma_3_8",
+      "upstream": "IntegrationInACVF.Section3ACVF.PrimitiveImages.lemma_3_8"
+    },
+    {
+      "consumer": "DiamondIntegral.Section3.integration_lemma_3_9",
+      "upstream": "IntegrationInACVF.Section3ACVF.OpenBallConstancy.lemma_3_9_open"
+    },
+    {
+      "consumer": "DiamondIntegral.Section3.integration_corollary_3_10",
+      "upstream": "IntegrationInACVF.Section3ACVF.OpenBallConstancy.corollary_3_10_open"
+    },
+    {
+      "consumer": "DiamondIntegral.Section3.integration_lemma_3_11",
+      "upstream": "IntegrationInACVF.Section3ACVF.Separation.lemma_3_11"
+    },
+    {
+      "consumer": "DiamondIntegral.Section3.integration_lemma_3_12_no_function",
+      "upstream": "IntegrationInACVF.Section3ACVF.SeparationFunctions.no_function_from_open"
+    },
+    {
+      "consumer": "DiamondIntegral.Section3.integration_lemma_3_12_no_finite_to_one",
+      "upstream": "IntegrationInACVF.Section3ACVF.SeparationFunctions.no_finite_to_one_to_open"
+    },
+    {
+      "consumer": "DiamondIntegral.Section3.integration_lemma_3_13",
+      "upstream": "IntegrationInACVF.Section3ACVF.OpenImages.lemma_3_13"
+    },
+    {
+      "consumer": "DiamondIntegral.Section3.integration_lemma_3_14",
+      "upstream": "IntegrationInACVF.Section3ACVF.ClosedImageObstruction.lemma_3_14"
+    },
+    {
+      "consumer": "DiamondIntegral.Section3.integration_lemma_3_15",
+      "upstream": "IntegrationInACVF.Section3ACVF.FullCompleteTypeOpenImages.lemma_3_15"
+    },
+    {
+      "consumer": "DiamondIntegral.Section3.integration_lemma_3_16",
+      "upstream": "IntegrationInACVF.Section3ACVF.GammaLinearity.lemma_3_16"
+    },
+    {
+      "consumer": "DiamondIntegral.Section3.integration_corollary_3_17_ordinary",
+      "upstream": "IntegrationInACVF.Section3ACVF.LeastLinearRadiusExistence.corollary_3_17_ordinary"
+    },
+    {
+      "consumer": "DiamondIntegral.Section3.integration_corollary_3_17_conditional",
+      "upstream": "IntegrationInACVF.Section3ACVF.LinearRadiusThreshold.corollary_3_17"
+    },
+    {
+      "consumer": "DiamondIntegral.Section3.integration_lemma_3_18",
+      "upstream": "IntegrationInACVF.Section3ACVF.RVLinearity.lemma_3_18"
+    },
+    {
+      "consumer": "DiamondIntegral.Section3.integration_proposition_3_19",
+      "upstream": "IntegrationInACVF.Section3ACVF.FullOpenToOpenPartition.proposition_3_19"
+    },
+    {
+      "consumer": "DiamondIntegral.Section3.integration_proposition_3_21",
+      "upstream": "IntegrationInACVF.Section3ACVF.CoordinatePartitions.proposition_3_21"
+    },
+    {
+      "consumer": "DiamondIntegral.Section3.integration_lemma_3_22",
+      "upstream": "IntegrationInACVF.Section3ACVF.ThinFamilyConservation.lemma_3_22"
+    },
+    {
+      "consumer": "DiamondIntegral.Section3.integration_proposition_3_23",
+      "upstream": "IntegrationInACVF.Section3ACVF.AtomicPrimitiveDistinction.proposition_3_23"
+    },
+    {
+      "consumer": "DiamondIntegral.Section3.integration_proposition_3_24",
+      "upstream": "IntegrationInACVF.Section3ACVF.PuncturedBallObstruction.proposition_3_24"
+    }
+  ],
+  "native_adapters": {
+    "2.15": [
+      "integrationGammaToRVInfinity_finite",
+      "integrationGammaToRV_finite"
+    ],
+    "3.3 / diamond-integral 2.23": [
+      "integrationAtomicGammaBaseChangeInput_complete",
+      "integration_lemma_2_23"
+    ],
+    "3.8 / diamond-integral 2.27": [
+      "integrationPrimitiveImageInput",
+      "integration_lemma_2_27"
+    ],
+    "3.13 / diamond-integral 2.28": [
+      "integrationOpenDiscImageInput",
+      "integration_lemma_2_28"
+    ],
+    "3.3 with finite disc names": [
+      "integrationAtomicDiscGammaBaseChangeInput"
+    ],
+    "3.4 with finite disc names": [
+      "integrationUnaryDiscAtomicityInput"
+    ],
+    "3.9 with finite disc names and RV-infinity": [
+      "integrationUnaryOpenDiscRVBaseChangeInput"
+    ],
+    "3.13 with finite disc names": [
+      "integrationOpenDiscNamesImageInput"
+    ],
+    "diamond-integral 2.25": [
+      "integration_lemma_2_25_closed",
+      "integration_lemma_2_25_open"
+    ],
+    "diamond-integral 2.30": [
+      "integration_corollary_2_30",
+      "integration_corollary_2_30_disc_names"
+    ],
+    "3.19/3.21 / diamond-integral 2.32": [
+      "integrationFullCoordinatePartition",
+      "integrationDiscToDiscPartition",
+      "integrationDiscToDiscPartitionInput",
+      "integration_lemma_2_32"
+    ]
+  },
+  "remaining_native_presentation_adapters": [],
+  "boundaries": [
+    "Section 1 is introductory.",
+    "The Gamma piecewise rational-affine background input is not the numbered RV-linearity theorem 3.18.",
+    "Ordinary-source least-radius existence 3.17 is distinguished from its conditional whole-VF statement.",
+    "3.24 retains the approved ordinary closed-parent scope; its open target may be VF.",
+    "RV-form descent 2.34 does not silently supply the Gamma-volume lift/kernel interfaces.",
+    "The new native section 6 proof exports retain Section5TwoOrderInputAll, actual VFGammaGeneratedBase and their native categories. They are not identified with the legacy lift/kernel records without checked closure and category transport. Measured section 7 remains unavailable; no HK input is introduced."
+  ],
+  "native_scope_notes": [
+    "integrationFiniteDiscDefinable_iff retains the full mixed-output sort guard and every old actual disc name.",
+    "integrationUnaryDiscAtomicityInput uses actual saturation at an infinite cardinal, with no bound on the enlarged real base: every cut is reduced to finite real support while all old imaginaries remain fixed.",
+    "Eight legacy interfaces now have checked constructors. The separate Gamma-affine background remains explicit.",
+    "The native disc-to-disc adapter retains all source/target RV labels and the original real/Gamma base. Finite real support retains every imaginary parameter; four source/target zero cells exclude whole-VF images in both directions, using checked open-ball infinitude. Actual saturation at an infinite cardinal remains explicit."
+  ],
+  "later_exports": [
+    {
+      "consumer": "DiamondIntegral.Section3.integration_lemma_6_17",
+      "upstream": "IntegrationInACVF.Section6.FiniteRV.lemma_6_17"
+    },
+    {
+      "consumer": "DiamondIntegral.Section3.integration_proposition_6_18",
+      "upstream": "IntegrationInACVF.Section6.FiniteRV.proposition_6_18"
+    },
+    {
+      "consumer": "DiamondIntegral.Section3.integration_proposition_6_18_lift",
+      "upstream": "IntegrationInACVF.Section6.FiniteRV.proposition_6_18_lift"
+    },
+    {
+      "consumer": "DiamondIntegral.Section3.integration_theorem_6_19",
+      "upstream": "IntegrationInACVF.Section6.FiniteRV.theorem_6_19"
+    },
+    {
+      "consumer": "DiamondIntegral.Section3.integration_theorem_6_19_lift",
+      "upstream": "IntegrationInACVF.Section6.FiniteRV.theorem_6_19_lift_finite"
+    },
+    {
+      "consumer": "DiamondIntegral.Section3.integration_theorem_6_19_characterization",
+      "upstream": "IntegrationInACVF.Section6.FiniteRV.theorem_6_19_characterization"
+    },
+    {
+      "consumer": "DiamondIntegral.Section3.integration_nonzero_basic_congruence",
+      "upstream": "IntegrationInACVF.Section6.FiniteRV.gammaNonzeroIsp_eq_resolved_basic"
+    },
+    {
+      "consumer": "DiamondIntegral.Section3.integration_nonzero_principal_ideal",
+      "upstream": "IntegrationInACVF.Section6.FiniteRV.gammaNonzeroIsp_relationIdeal_j"
+    },
+    {
+      "consumer": "DiamondIntegral.Section3.integration_nonzero_completion_quotient",
+      "upstream": "IntegrationInACVF.Section6.FiniteRV.gammaNonzeroCompletionQuotientEquiv"
+    },
+    {
+      "consumer": "DiamondIntegral.Section3.integration_nonzero_completion_quotient_of",
+      "upstream": "IntegrationInACVF.Section6.FiniteRV.gammaNonzeroCompletionQuotientEquiv_of"
+    }
+  ],
+  "later_export_review": {
+    "review_date": "2026-11-12",
+    "revision": "7d4acc730496b3bd05a22c268ffd89540ca694f9",
+    "upstream_status": "Section 4 checked; Section 5 remains in progress; Section 6 RV[k] integration checked relative to the explicit Section 5.8 input; Section 7 has no formalization verifier.",
+    "remaining_upstream_input": "IntegrationInACVF.Section6.Section5TwoOrderInputAll",
+    "parameter_boundary": "The source VFGammaGeneratedBase explicitly requires closureBase of VF/Gamma generators to equal the base. DiamondIntegral.GammaGroundContext records language-generation of its real substructure and a Gamma subgroup, without definable-closedness. No direct identification is made.",
+    "presentation_boundary": "Native finite Gamma RV/VF categories, zero-coordinate compression, elementary blowup congruences and intrinsic/semi-universal scissor presentations require checked comparison maps before constructing the legacy Yin lift-input records.",
+    "legacy_input_status": "The exact native Section 6 exports are now imported and audited. Existing unmeasured/global/bounded lift records are retained, rather than silently claiming the remaining closure/category bridges. Measured inputs are retained because Section 7 is absent.",
+    "compatibility_patch_files": 9,
+    "auxiliary_API_adaptations": [
+      "IntegrationInACVF.Section4.RelativeObstaclePreparation.zero_obstacles: proper OpenRadius in the auxiliary obstacle premise",
+      "IntegrationInACVF.Section5.relative_zero_obstacles: proper OpenRadius in the auxiliary obstacle premise"
+    ]
+  }
+}

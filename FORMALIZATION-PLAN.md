@@ -2,6 +2,15 @@
 
 **Forey and Yin, _Bounded integral and motivic Milnor fiber_**
 
+Current checkpoint: §§2–3 are formalized in the documented manuscript
+contexts, relative to the explicitly accepted cited inputs. Section 3
+includes the corrected positive tensor kernel congruences, their actual
+ring ideals, the ordinary positive coefficient monomorphisms and both
+full-ground affine classifications. See [§3 status](<section 3/STATUS.md>)
+and [the manuscript target map](<section 3/verification/paper-targets.json>).
+No HK result is a given input. The supplementary unary-ray refinement
+was explicitly skipped by the author.
+
 The working source is
 [the annotated TeX](<section 2/reference/diamond_integral_revision_annotated.tex>),
 with [its PDF](<section 2/reference/diamond_integral_revision_annotated.pdf>)
@@ -54,13 +63,16 @@ polynomial preparation target can be compared directly with Yin's
   It matches the changes in `/workspace/special-transformations` and avoids
   an absolute-path Lake dependency. Replace the patch with a published pin
   when publication is authorized.
-- The author directed on November 9, 2026 that the cited results from Yin's
-  [*Integration in Algebraically Closed Valued Fields*](https://arxiv.org/abs/0809.0473)
-  be taken as given while that formalization is underway. Represent required
-  results as explicit, cited theorem inputs; do not search for missing Lean
-  exports or rebuild that paper here. Preserve the original parameter scope,
-  proper-invariance and boundedness requirements. Distinguish these accepted
-  inputs from results compiled from an imported library.
+- The [Integration in ACVF](https://github.com/daviddhilbert/integration-in-ACVF)
+  dependency pins `7d4acc730496b3bd05a22c268ffd89540ca694f9`.
+  Eight original §2 cited interfaces have checked native constructors.
+  Exact later §6 exports are also linked; they retain the unfinished §5.8
+  input and native closure/category conditions. Preserve explicit accepted
+  lift records until the remaining comparison maps are compiled. Measured
+  §7 is not yet available. The exact review and compatibility patches are
+  recorded in [the reuse inventory](<section 3/verification/integration-reuse.json>).
+  Preserve parameter scope, proper invariance and boundedness, and
+  distinguish accepted inputs from compiled proof exports.
 - The same authorization applies to bibliography items 19–22. Exact titles,
   citation keys and the explicit-input convention are recorded in
   [ACCEPTED-CITED-RESULTS.md](ACCEPTED-CITED-RESULTS.md).

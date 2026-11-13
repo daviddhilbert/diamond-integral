@@ -1,0 +1,13103 @@
+import DiamondIntegral
+set_option pp.universes true
+set_option pp.fullNames true
+set_option pp.notation false
+set_option format.width 120
+#print DiamondIntegral.Section3.acfDefinableDiagonalBirationalEquiv
+#print DiamondIntegral.Section3.acfGenericBirationalEquiv
+#print DiamondIntegral.Section3.additiveTransportCommMonoid
+#print DiamondIntegral.Section3.additiveTransportCommSemiring
+#print DiamondIntegral.Section3.additiveTransportRingEquiv
+#print DiamondIntegral.Section3.algebraicallyClosedUnitsDivisibleNat
+#print DiamondIntegral.Section3.algebraicallyClosedUnitsDivisibleInt
+#print DiamondIntegral.Section3.balancedSquareMap
+#print DiamondIntegral.Section3.balancedTensorMap
+#print DiamondIntegral.Section3.GammaGroundGammaEvaluationTranslationInvariant
+#print DiamondIntegral.Section3.gammaGroundBalancedEvaluationOnRV
+#print DiamondIntegral.Section3.boundedVFFibre
+#print DiamondIntegral.Section3.DefinableBijection.ofCarrierEq
+#print DiamondIntegral.Section3.DefinableBijection.ofEmpty
+#print DiamondIntegral.Section3.characterValueImage
+#print DiamondIntegral.Section3.YinBoundedUnmeasuredLiftInput
+#print DiamondIntegral.Section3.boundedUnmeasuredIntegral
+#print DiamondIntegral.Section3.YinMeasuredLiftInput
+#print DiamondIntegral.Section3.measuredRVFixedSpecialHom
+#print DiamondIntegral.Section3.measuredRVFixedSpecialCongruence
+#print DiamondIntegral.Section3.YinDegreeMeasuredLiftInput
+#print DiamondIntegral.Section3.measuredPositiveIntegral
+#print DiamondIntegral.Section3.measuredRingIntegral
+#print DiamondIntegral.Section3.degreeMeasuredIntegral
+#print DiamondIntegral.Section3.YinUnmeasuredLiftInput
+#print DiamondIntegral.Section3.unmeasuredPositiveIntegral
+#print DiamondIntegral.Section3.unmeasuredRingIntegral
+#print DiamondIntegral.Section3.codeSpace
+#print DiamondIntegral.Section3.codePreimage
+#print DiamondIntegral.Section3.codeDecode
+#print DiamondIntegral.Section3.FiniteFamily.codeLift
+#print DiamondIntegral.Section3.FiniteFamily.decode
+#print DiamondIntegral.Section3.codedGammaBoundary
+#print DiamondIntegral.Section3.completedKernelQuotientEquiv
+#print DiamondIntegral.Section3.transportedRelationIdeal
+#print DiamondIntegral.Section3.completionDirectSumForward
+#print DiamondIntegral.Section3.completionDirectSumBackward
+#print DiamondIntegral.Section3.completionDirectSumEquiv
+#print DiamondIntegral.Section3.ringCompletionCongr
+#print DiamondIntegral.Section3.semiringIntegralFromKernel
+#print DiamondIntegral.Section3.additiveCompletionMap
+#print DiamondIntegral.Section3.additiveCompletionFunctor
+#print DiamondIntegral.Section3.additiveCompletionHomEquiv
+#print DiamondIntegral.Section3.additiveCompletionAdjunction
+#print DiamondIntegral.Section3.ringCompletionMap
+#print DiamondIntegral.Section3.CompletionTensor
+#print DiamondIntegral.Section3.completionTensorLeft
+#print DiamondIntegral.Section3.completionTensorRight
+#print DiamondIntegral.Section3.toCompletionTensor
+#print DiamondIntegral.Section3.fromCompletionTensorLeft
+#print DiamondIntegral.Section3.fromCompletionTensorRight
+#print DiamondIntegral.Section3.fromCompletionTensor
+#print DiamondIntegral.Section3.ringCompletionTensorEquiv
+#print DiamondIntegral.Section3.groupifiedTensorIso
+#print DiamondIntegral.Section3.coordinateProductChart
+#print DiamondIntegral.Section3.CoproductIsoData
+#print DiamondIntegral.Section3.CoproductIsoClasses
+#print DiamondIntegral.Section3.coproductIsoClass
+#print DiamondIntegral.Section3.DefinableBijection.inverseImage
+#print DiamondIntegral.Section3.DefinableBijection.restrictTargetMap
+#print DiamondIntegral.Section3.DefinableBijection.restrictTarget
+#print DiamondIntegral.Section3.DefinableBijection
+#print DiamondIntegral.Section3.DefinableBijection.id
+#print DiamondIntegral.Section3.DefinableBijection.comp
+#print DiamondIntegral.Section3.DefinableBijection.symm
+#print DiamondIntegral.Section3.IsDefinablePoint
+#print DiamondIntegral.Section3.columnSeparation
+#print DiamondIntegral.Section3.diagonalPolynomialEquiv
+#print DiamondIntegral.Section3.TorusRationalFunction
+#print DiamondIntegral.Section3.torusRationalVariable
+#print DiamondIntegral.Section3.diagonalRationalEquiv
+#print DiamondIntegral.Section3.DiagonalWeightsFaithful
+#print DiamondIntegral.Section3.equalityRatioCharacter
+#print DiamondIntegral.Section3.equalityActiveCharacters
+#print DiamondIntegral.Section3.equalityValuePattern
+#print DiamondIntegral.Section3.EssentialVFMap.Generic
+#print DiamondIntegral.Section3.EssentialVFMap.id
+#print DiamondIntegral.Section3.EssentialVFMap.symm
+#print DiamondIntegral.Section3.EssentialVFMap.genericFun
+#print DiamondIntegral.Section3.EssentialVFMap.genericEquiv
+#print DiamondIntegral.Section3.EssentialVFMap.compSource
+#print DiamondIntegral.Section3.EssentialVFMap.compMiddle
+#print DiamondIntegral.Section3.EssentialVFMap.comp
+#print DiamondIntegral.Section3.EssentialVFMap
+#print DiamondIntegral.Section3.EssentialVFMap.widen
+#print DiamondIntegral.Section3.EssentialVFMap.Preserves
+#print DiamondIntegral.Section3.familyCodeCoprodInl
+#print DiamondIntegral.Section3.familyCodeCoprodInr
+#print DiamondIntegral.Section3.familyCodeCoprodBridge
+#print DiamondIntegral.Section3.familyCoprodInl
+#print DiamondIntegral.Section3.familyCoprodInr
+#print DiamondIntegral.Section3.familyCoprodDecode
+#print DiamondIntegral.Section3.familyCoprodEncode
+#print DiamondIntegral.Section3.familyCoprodEquiv
+#print DiamondIntegral.Section3.familyCoprodMapEquiv
+#print DiamondIntegral.Section3.FamilyBijection.coprod
+#print DiamondIntegral.Section3.familyCodeRepresentative
+#print DiamondIntegral.Section3.familyDescendedMap
+#print DiamondIntegral.Section3.FamilyBijection.descend
+#print DiamondIntegral.Section3.familyCoprodDropEmpty
+#print DiamondIntegral.Section3.familyCoprodDropEmptyEquiv
+#print DiamondIntegral.Section3.familyCoprodEmptyRightBijection
+#print DiamondIntegral.Section3.FamilyMap
+#print DiamondIntegral.Section3.FamilyMap.id
+#print DiamondIntegral.Section3.FamilyMap.comp
+#print DiamondIntegral.Section3.FamilyBijection.toFamilyMap
+#print DiamondIntegral.Section3.FiniteFamily.withPieces
+#print DiamondIntegral.Section3.familyPartitionTag
+#print DiamondIntegral.Section3.familyPartitionPieceMap
+#print DiamondIntegral.Section3.familyPartitionMap
+#print DiamondIntegral.Section3.familyPartitionBijection
+#print DiamondIntegral.Section3.FamilyBijection.pieces
+#print DiamondIntegral.Section3.familySigmaProductEquiv
+#print DiamondIntegral.Section3.FiniteFamily.coprod
+#print DiamondIntegral.Section3.familyTaggedMap
+#print DiamondIntegral.Section3.familyBijectionOfTagEquiv
+#print DiamondIntegral.Section3.relationColumn
+#print DiamondIntegral.Section3.FiniteFamily
+#print DiamondIntegral.Section3.FiniteFamily.Carrier
+#print DiamondIntegral.Section3.familyGraph
+#print DiamondIntegral.Section3.FamilyDefinable
+#print DiamondIntegral.Section3.FamilyBijection
+#print DiamondIntegral.Section3.FamilyBijection.id
+#print DiamondIntegral.Section3.FamilyBijection.comp
+#print DiamondIntegral.Section3.FamilyBijection.symm
+#print DiamondIntegral.Section3.finiteGammaDirectSumInvariant
+#print DiamondIntegral.Section3.finiteGammaPresentationToDirectSum
+#print DiamondIntegral.Section3.finiteGammaDirectSumToPresentationAdd
+#print DiamondIntegral.Section3.finiteGammaDirectSumToPresentation
+#print DiamondIntegral.Section3.finiteGammaSemiringEquivDirectSum
+#print DiamondIntegral.Section3.finiteGammaRepresentative
+#print DiamondIntegral.Section3.finiteGammaClassMul
+#print DiamondIntegral.Section3.FiniteGammaDirectSum
+#print DiamondIntegral.Section3.finiteGammaDirectSumToGamma
+#print DiamondIntegral.Section3.finiteGammaDirectSumClass
+#print DiamondIntegral.Section3.finiteGammaGradedInclusion
+#print DiamondIntegral.Section3.FiniteGammaObject.coprod
+#print DiamondIntegral.Section3.FiniteGammaObject.empty
+#print DiamondIntegral.Section3.FiniteGammaObject.restrict
+#print DiamondIntegral.Section3.finiteGammaPresentation
+#print DiamondIntegral.Section3.FiniteGammaKPlus
+#print DiamondIntegral.Section3.finiteGammaClass
+#print DiamondIntegral.Section3.finiteGammaToGammaKPlus
+#print DiamondIntegral.Section3.finiteGammaToRESKPlus
+#print DiamondIntegral.Section3.GradedFiniteGammaObject
+#print DiamondIntegral.Section3.gradedFiniteGammaIso
+#print DiamondIntegral.Section3.gradedFiniteGammaScissor
+#print DiamondIntegral.Section3.finiteGammaSemiringPresentation
+#print DiamondIntegral.Section3.FiniteGammaPositiveSemiring
+#print DiamondIntegral.Section3.FiniteGammaGrothendieckRing
+#print DiamondIntegral.Section3.finiteGammaSemiringClass
+#print DiamondIntegral.Section3.finiteGammaKPlusToSemiring
+#print DiamondIntegral.Section3.finiteGammaToGammaInvariant
+#print DiamondIntegral.Section3.finiteGammaToGammaSemiring
+#print DiamondIntegral.Section3.finiteGammaToRESInvariant
+#print DiamondIntegral.Section3.finiteGammaToRESSemiring
+#print DiamondIntegral.Section3.resToRVSemiring
+#print DiamondIntegral.Section3.gammaUniversalCodePredicate
+#print DiamondIntegral.Section3.gammaUniqueScalar
+#print DiamondIntegral.Section3.fullGammaFunctionMap
+#print DiamondIntegral.Section3.FullGammaFunction
+#print DiamondIntegral.Section3.FullGammaPartialFunction
+#print DiamondIntegral.Section3.FullGammaPartialFunction.domain
+#print DiamondIntegral.Section3.FullGammaPartialFunction.eval
+#print DiamondIntegral.Section3.gammaPowerSetOfFull
+#print DiamondIntegral.Section3.adjoinGammaTuple
+#print DiamondIntegral.Section3.FullRawDefinable
+#print DiamondIntegral.Section3.GammaIntegralAffineFormula
+#print DiamondIntegral.Section3.GammaIntegralAffineFormula.eval
+#print DiamondIntegral.Section3.GammaIntegralAffineFormula.Unimodular
+#print DiamondIntegral.Section3.GammaPiecewiseGLZ
+#print DiamondIntegral.Section3.GammaUnaryPiecewiseIntegralAffine
+#print DiamondIntegral.Section3.YinGammaAffineInput
+#print DiamondIntegral.Section3.gammaHomOfPiecewiseGLZ
+#print DiamondIntegral.Section3.gammaAffineValue
+#print DiamondIntegral.Section3.gammaGroundGammaAffinePreimage
+#print DiamondIntegral.Section3.GammaObject
+#print DiamondIntegral.Section3.GammaHom
+#print DiamondIntegral.Section3.GammaHom.id
+#print DiamondIntegral.Section3.GammaHom.comp
+#print DiamondIntegral.Section3.GammaHom.symm
+#print DiamondIntegral.Section3.finiteGammaProperty
+#print DiamondIntegral.Section3.FiniteGammaObject
+#print DiamondIntegral.Section3.GammaHom.ofCodeBijection
+#print DiamondIntegral.Section3.measuredGammaHomOfCodes
+#print DiamondIntegral.Section3.gammaRVCodeForm
+#print DiamondIntegral.Section3.gammaCodeInclusion
+#print DiamondIntegral.Section3.gammaRVCodeInclusion
+#print DiamondIntegral.Section3.GammaCodeObject
+#print DiamondIntegral.Section3.GammaCodeMap
+#print DiamondIntegral.Section3.GammaCodeObject.product
+#print DiamondIntegral.Section3.GammaCodeObject.unit
+#print DiamondIntegral.Section3.gammaCodeBijectionOfIso
+#print DiamondIntegral.Section3.gammaHomOfCodeIso
+#print DiamondIntegral.Section3.gammaCodeProductSwap
+#print DiamondIntegral.Section3.gammaCodeProductCommIso
+#print DiamondIntegral.Section3.gammaCodeProductAssoc
+#print DiamondIntegral.Section3.gammaCodeProductAssocInv
+#print DiamondIntegral.Section3.gammaCodeProductAssocIso
+#print DiamondIntegral.Section3.gammaCodePairFunction
+#print DiamondIntegral.Section3.gammaCodePairFamilyMap
+#print DiamondIntegral.Section3.gammaCodeProductPair
+#print DiamondIntegral.Section3.gammaProductLeftCodePieceMap
+#print DiamondIntegral.Section3.gammaProductRightCodePieceMap
+#print DiamondIntegral.Section3.gammaProductLeftCodeFamilyMap
+#print DiamondIntegral.Section3.gammaProductRightCodeFamilyMap
+#print DiamondIntegral.Section3.gammaCodeProductFst
+#print DiamondIntegral.Section3.gammaCodeProductSnd
+#print DiamondIntegral.Section3.gammaEmptyCode
+#print DiamondIntegral.Section3.gammaUnitCode
+#print DiamondIntegral.Section3.gammaToUnitPieceMap
+#print DiamondIntegral.Section3.gammaCodeToUnit
+#print DiamondIntegral.Section3.gammaCodeProductRightUnitIso
+#print DiamondIntegral.Section3.gammaCodeLeftMap
+#print DiamondIntegral.Section3.gammaCodeRightMap
+#print DiamondIntegral.Section3.gammaCoprodLeftCut
+#print DiamondIntegral.Section3.gammaCoprodLeftCutIso
+#print DiamondIntegral.Section3.gammaCoprodRightCutIso
+#print DiamondIntegral.Section3.GammaHom.coprod
+#print DiamondIntegral.Section3.gammaCoproductIsoData
+#print DiamondIntegral.Section3.GammaIsoClasses
+#print DiamondIntegral.Section3.gammaIsoClass
+#print DiamondIntegral.Section3.gammaVFCoordinateFibre
+#print DiamondIntegral.Section3.gammaFiniteVFCode
+#print DiamondIntegral.Section3.gammaFiniteVFCodeRelation
+#print DiamondIntegral.Section3.gammaMultiplyMap
+#print DiamondIntegral.Section3.gammaOneForm
+#print DiamondIntegral.Section3.GammaVolumeForm.mul
+#print DiamondIntegral.Section3.GammaTupleIndependentOver
+#print DiamondIntegral.Section3.GammaGroundCharacterHyperplane
+#print DiamondIntegral.Section3.GammaGroundCharacterHyperplane.carrier
+#print DiamondIntegral.Section3.GammaGroundCharacterHyperplane.defSet
+#print DiamondIntegral.Section3.gammaDirectSumInvariant
+#print DiamondIntegral.Section3.gammaPresentationToDirectSum
+#print DiamondIntegral.Section3.gammaDirectSumToPresentationAdd
+#print DiamondIntegral.Section3.gammaDirectSumToPresentation
+#print DiamondIntegral.Section3.gammaSemiringEquivDirectSum
+#print DiamondIntegral.Section3.GammaDirectSum
+#print DiamondIntegral.Section3.gammaDirectSumClass
+#print DiamondIntegral.Section3.OriginalGroundAffineRVFormula
+#print DiamondIntegral.Section3.gammaGroundAffineValueMap
+#print DiamondIntegral.Section3.gammaGroundAffineAgreement
+#print DiamondIntegral.Section3.GammaGroundAnnularRadius
+#print DiamondIntegral.Section3.gammaGroundMeasuredAnnularElement
+#print DiamondIntegral.Section3.GammaGroundAnnularGenerator
+#print DiamondIntegral.Section3.GammaGroundAnnularGenerator.element
+#print DiamondIntegral.Section3.gammaGroundAnnularIdeal
+#print DiamondIntegral.Section3.GammaGroundBijection.prodMap
+#print DiamondIntegral.Section3.GammaGroundBijection.inverseImage
+#print DiamondIntegral.Section3.GammaGroundBijection.restrictTargetMap
+#print DiamondIntegral.Section3.GammaGroundBijection.restrictTarget
+#print DiamondIntegral.Section3.GammaGroundMap.inverse
+#print DiamondIntegral.Section3.GammaGroundBijection
+#print DiamondIntegral.Section3.GammaGroundBijection.id
+#print DiamondIntegral.Section3.GammaGroundBijection.comp
+#print DiamondIntegral.Section3.GammaGroundBijection.symm
+#print DiamondIntegral.Section3.gammaGroundBooleanAtom
+#print DiamondIntegral.Section3.GammaGroundBijection.ofCarrierEq
+#print DiamondIntegral.Section3.gammaCodeCharacterTwist
+#print DiamondIntegral.Section3.gammaGroundChartTransitionDomain
+#print DiamondIntegral.Section3.gammaGroundChartTransitionMap
+#print DiamondIntegral.Section3.YinGammaGroundBoundedUnmeasuredLiftInput
+#print DiamondIntegral.Section3.gammaGroundBoundedUnmeasuredIntegral
+#print DiamondIntegral.Section3.YinGammaGroundMeasuredLiftInput
+#print DiamondIntegral.Section3.gammaGroundMeasuredRVFixedSpecialHom
+#print DiamondIntegral.Section3.gammaGroundMeasuredRVFixedSpecialCongruence
+#print DiamondIntegral.Section3.YinGammaGroundDegreeMeasuredLiftInput
+#print DiamondIntegral.Section3.gammaGroundMeasuredPositiveIntegral
+#print DiamondIntegral.Section3.gammaGroundMeasuredRingIntegral
+#print DiamondIntegral.Section3.gammaGroundDegreeMeasuredIntegral
+#print DiamondIntegral.Section3.gammaGroundObjectLiftFinite
+#print DiamondIntegral.Section3.YinGammaGroundUnmeasuredLiftInput
+#print DiamondIntegral.Section3.gammaGroundUnmeasuredPositiveIntegral
+#print DiamondIntegral.Section3.gammaGroundUnmeasuredRingIntegral
+#print DiamondIntegral.Section3.gammaGroundCodePreimage
+#print DiamondIntegral.Section3.gammaGroundCodeDecode
+#print DiamondIntegral.Section3.GammaGroundFiniteFamily.codeLift
+#print DiamondIntegral.Section3.GammaGroundFiniteFamily.decode
+#print DiamondIntegral.Section3.GammaGroundCoefficientClassification
+#print DiamondIntegral.Section3.GammaGroundComposableRealization
+#print DiamondIntegral.Section3.GammaGroundComposableRealization.first
+#print DiamondIntegral.Section3.GammaGroundComposableRealization.second
+#print DiamondIntegral.Section3.GammaGroundMap.const
+#print DiamondIntegral.Section3.GammaGroundContext
+#print DiamondIntegral.Section3.GammaGroundContext.base
+#print DiamondIntegral.Section3.GammaGroundDefSet.ofReal
+#print DiamondIntegral.Section3.GammaGroundDefSet.empty
+#print DiamondIntegral.Section3.GammaGroundDefSet.univ
+#print DiamondIntegral.Section3.GammaGroundDefSet.inter
+#print DiamondIntegral.Section3.GammaGroundDefSet.union
+#print DiamondIntegral.Section3.GammaGroundDefSet.compl
+#print DiamondIntegral.Section3.GammaGroundDefSet.sdiff
+#print DiamondIntegral.Section3.gammaGroundDefinablePointBijection
+#print DiamondIntegral.Section3.GammaGroundDerivativeLogic.mixedJacobianCodes
+#print DiamondIntegral.Section3.GammaGroundBijection.ofEmpty
+#print DiamondIntegral.Section3.GammaGroundMap.equalizer
+#print DiamondIntegral.Section3.GammaGroundEssentialGerm
+#print DiamondIntegral.Section3.gammaGroundEssentialOfRepresentative
+#print DiamondIntegral.Section3.gammaGroundEssentialAESetoid
+#print DiamondIntegral.Section3.gammaGroundEssentialQuotientEquiv
+#print DiamondIntegral.Section3.GammaGroundEssentialDomain
+#print DiamondIntegral.Section3.gammaGroundEssentialGroupoid
+#print DiamondIntegral.Section3.GammaGroundEssentialVFMap.compSource
+#print DiamondIntegral.Section3.GammaGroundEssentialVFMap.compMiddle
+#print DiamondIntegral.Section3.GammaGroundEssentialVFMap.comp
+#print DiamondIntegral.Section3.GammaGroundEssentialVFMap
+#print DiamondIntegral.Section3.GammaGroundEssentialVFMap.id
+#print DiamondIntegral.Section3.GammaGroundEssentialVFMap.symm
+#print DiamondIntegral.Section3.GammaGroundEssentialVFMap.genericFun
+#print DiamondIntegral.Section3.GammaGroundEssentialVFMap.genericEquiv
+#print DiamondIntegral.Section3.GammaGroundEssentialVFMap.PreservesGeneric
+#print DiamondIntegral.Section3.GammaGroundEssentialVFMap.restrictSource
+#print DiamondIntegral.Section3.GammaGroundFamilyBijection.branchBijection
+#print DiamondIntegral.Section3.GammaGroundFamilyMap.branchMap
+#print DiamondIntegral.Section3.GammaGroundFamilyMap.branchGraph
+#print DiamondIntegral.Section3.GammaGroundFamilyMap.branchSource
+#print DiamondIntegral.Section3.gammaGroundFamilyCodeCoprodInl
+#print DiamondIntegral.Section3.gammaGroundFamilyCodeCoprodInr
+#print DiamondIntegral.Section3.gammaGroundFamilyCodeCoprodBridge
+#print DiamondIntegral.Section3.gammaGroundFamilyCoprodInl
+#print DiamondIntegral.Section3.gammaGroundFamilyCoprodInr
+#print DiamondIntegral.Section3.gammaGroundFamilyCoprodDecode
+#print DiamondIntegral.Section3.gammaGroundFamilyCoprodEncode
+#print DiamondIntegral.Section3.gammaGroundFamilyCoprodEquiv
+#print DiamondIntegral.Section3.gammaGroundFamilyCoprodMapEquiv
+#print DiamondIntegral.Section3.GammaGroundFamilyBijection.coprod
+#print DiamondIntegral.Section3.gammaGroundFamilyCodeRepresentative
+#print DiamondIntegral.Section3.gammaGroundFamilyDescendedMap
+#print DiamondIntegral.Section3.GammaGroundFamilyBijection.descend
+#print DiamondIntegral.Section3.gammaGroundFamilyCoprodDropEmpty
+#print DiamondIntegral.Section3.gammaGroundFamilyCoprodDropEmptyEquiv
+#print DiamondIntegral.Section3.gammaGroundFamilyCoprodEmptyRightBijection
+#print DiamondIntegral.Section3.GammaGroundFamilyMap.branchEqualizer
+#print DiamondIntegral.Section3.GammaGroundFamilyMap.equalizerPiece
+#print DiamondIntegral.Section3.GammaGroundFamilyMap
+#print DiamondIntegral.Section3.GammaGroundFamilyMap.id
+#print DiamondIntegral.Section3.GammaGroundFamilyMap.comp
+#print DiamondIntegral.Section3.GammaGroundFamilyBijection.toFamilyMap
+#print DiamondIntegral.Section3.GammaGroundFiniteFamily.withPieces
+#print DiamondIntegral.Section3.gammaGroundFamilyPartitionTag
+#print DiamondIntegral.Section3.gammaGroundFamilyPartitionPieceMap
+#print DiamondIntegral.Section3.gammaGroundFamilyPartitionMap
+#print DiamondIntegral.Section3.gammaGroundFamilyPartitionBijection
+#print DiamondIntegral.Section3.GammaGroundFamilyBijection.pieces
+#print DiamondIntegral.Section3.GammaGroundFamilyMap.pieces
+#print DiamondIntegral.Section3.GammaGroundGammaObject.unitValueFamilyMap
+#print DiamondIntegral.Section3.GammaGroundFiniteFamily.coprod
+#print DiamondIntegral.Section3.gammaGroundFamilyTaggedMap
+#print DiamondIntegral.Section3.gammaGroundFamilyBijectionOfTagEquiv
+#print DiamondIntegral.Section3.GammaGroundFamilyMap.valueMap
+#print DiamondIntegral.Section3.gammaGroundFibreInterior
+#print DiamondIntegral.Section3.GammaGroundFiniteFamily
+#print DiamondIntegral.Section3.GammaGroundFiniteFamily.Carrier
+#print DiamondIntegral.Section3.gammaGroundFamilyGraph
+#print DiamondIntegral.Section3.GammaGroundFamilyDefinable
+#print DiamondIntegral.Section3.GammaGroundFamilyBijection
+#print DiamondIntegral.Section3.GammaGroundFamilyBijection.id
+#print DiamondIntegral.Section3.GammaGroundFamilyBijection.comp
+#print DiamondIntegral.Section3.GammaGroundFamilyBijection.symm
+#print DiamondIntegral.Section3.gammaGroundFiniteGammaDirectSumInvariant
+#print DiamondIntegral.Section3.gammaGroundFiniteGammaPresentationToDirectSum
+#print DiamondIntegral.Section3.gammaGroundFiniteGammaDirectSumToPresentationAdd
+#print DiamondIntegral.Section3.gammaGroundFiniteGammaDirectSumToPresentation
+#print DiamondIntegral.Section3.gammaGroundFiniteGammaSemiringEquivDirectSum
+#print DiamondIntegral.Section3.gammaGroundFiniteGammaRepresentative
+#print DiamondIntegral.Section3.gammaGroundFiniteGammaClassMul
+#print DiamondIntegral.Section3.GammaGroundFiniteGammaDirectSum
+#print DiamondIntegral.Section3.gammaGroundFiniteGammaDirectSumToGamma
+#print DiamondIntegral.Section3.gammaGroundFiniteGammaDirectSumClass
+#print DiamondIntegral.Section3.gammaGroundFiniteGammaGradedInclusion
+#print DiamondIntegral.Section3.GammaGroundFiniteGammaObject.coprod
+#print DiamondIntegral.Section3.GammaGroundFiniteGammaObject.empty
+#print DiamondIntegral.Section3.GammaGroundFiniteGammaObject.restrict
+#print DiamondIntegral.Section3.gammaGroundFiniteGammaPresentation
+#print DiamondIntegral.Section3.GammaGroundFiniteGammaKPlus
+#print DiamondIntegral.Section3.gammaGroundFiniteGammaClass
+#print DiamondIntegral.Section3.gammaGroundFiniteGammaToGammaKPlus
+#print DiamondIntegral.Section3.GammaGroundGradedFiniteGammaObject
+#print DiamondIntegral.Section3.gammaGroundGradedFiniteGammaIso
+#print DiamondIntegral.Section3.gammaGroundGradedFiniteGammaScissor
+#print DiamondIntegral.Section3.gammaGroundFiniteGammaSemiringPresentation
+#print DiamondIntegral.Section3.GammaGroundFiniteGammaPositiveSemiring
+#print DiamondIntegral.Section3.GammaGroundFiniteGammaGrothendieckRing
+#print DiamondIntegral.Section3.gammaGroundFiniteGammaSemiringClass
+#print DiamondIntegral.Section3.gammaGroundFiniteGammaKPlusToSemiring
+#print DiamondIntegral.Section3.gammaGroundFiniteGammaToGammaInvariant
+#print DiamondIntegral.Section3.gammaGroundFiniteGammaToGammaSemiring
+#print DiamondIntegral.Section3.gammaGroundFiniteGammaToRESInvariant
+#print DiamondIntegral.Section3.gammaGroundFiniteGammaToRESSemiring
+#print DiamondIntegral.Section3.gammaGroundRESToRVSemiring
+#print DiamondIntegral.Section3.gammaGroundFiniteGammaToRESKPlus
+#print DiamondIntegral.Section3.GammaGroundMap.emptyTo
+#print DiamondIntegral.Section3.GammaGroundFiniteMapPiece
+#print DiamondIntegral.Section3.GammaGroundFiniteMapPiece.empty
+#print DiamondIntegral.Section3.GammaGroundFiniteMapPiece.union
+#print DiamondIntegral.Section3.GammaGroundFiniteMapPiece.glue
+#print DiamondIntegral.Section3.gammaGroundMapOfFiniteCodeGraph
+#print DiamondIntegral.Section3.GammaGroundFiniteVFObject.coprod
+#print DiamondIntegral.Section3.GammaGroundFiniteVFObject
+#print DiamondIntegral.Section3.GammaGroundFiniteVFObject.ofBound
+#print DiamondIntegral.Section3.GammaGroundFiniteVFObject.toBound
+#print DiamondIntegral.Section3.GammaGroundFiniteVFObject.restrict
+#print DiamondIntegral.Section3.GammaGroundFiniteVFObject.empty
+#print DiamondIntegral.Section3.GammaGroundFiniteVFObject.unit
+#print DiamondIntegral.Section3.gammaGroundFiniteVFScissor
+#print DiamondIntegral.Section3.gammaGroundFiniteVFPresentation
+#print DiamondIntegral.Section3.GammaGroundFiniteVFKPlus
+#print DiamondIntegral.Section3.gammaGroundFiniteVFClass
+#print DiamondIntegral.Section3.gammaGroundGammaFormPartialFunction
+#print DiamondIntegral.Section3.gammaGroundUniqueFibreFunction
+#print DiamondIntegral.Section3.GammaGroundGammaObject
+#print DiamondIntegral.Section3.GammaGroundGammaHom
+#print DiamondIntegral.Section3.GammaGroundGammaHom.id
+#print DiamondIntegral.Section3.GammaGroundGammaHom.comp
+#print DiamondIntegral.Section3.GammaGroundGammaHom.symm
+#print DiamondIntegral.Section3.gammaGroundFiniteGammaProperty
+#print DiamondIntegral.Section3.GammaGroundFiniteGammaObject
+#print DiamondIntegral.Section3.GammaGroundGammaHom.ofCodeBijection
+#print DiamondIntegral.Section3.gammaGroundMeasuredGammaHomOfCodes
+#print DiamondIntegral.Section3.gammaGroundGammaRVCodeForm
+#print DiamondIntegral.Section3.gammaGroundGammaCodeInclusion
+#print DiamondIntegral.Section3.gammaGroundGammaRVCodeInclusion
+#print DiamondIntegral.Section3.GammaGroundGammaCodeObject
+#print DiamondIntegral.Section3.GammaGroundGammaCodeMap
+#print DiamondIntegral.Section3.GammaGroundGammaCodeObject.product
+#print DiamondIntegral.Section3.GammaGroundGammaCodeObject.unit
+#print DiamondIntegral.Section3.gammaGroundGammaCodeBijectionOfIso
+#print DiamondIntegral.Section3.gammaGroundGammaHomOfCodeIso
+#print DiamondIntegral.Section3.gammaGroundGammaCodeProductSwap
+#print DiamondIntegral.Section3.gammaGroundGammaCodeProductCommIso
+#print DiamondIntegral.Section3.gammaGroundGammaCodeProductAssoc
+#print DiamondIntegral.Section3.gammaGroundGammaCodeProductAssocInv
+#print DiamondIntegral.Section3.gammaGroundGammaCodeProductAssocIso
+#print DiamondIntegral.Section3.gammaGroundGammaCodePairFunction
+#print DiamondIntegral.Section3.gammaGroundGammaCodePairFamilyMap
+#print DiamondIntegral.Section3.gammaGroundGammaCodeProductPair
+#print DiamondIntegral.Section3.gammaGroundGammaProductLeftCodePieceMap
+#print DiamondIntegral.Section3.gammaGroundGammaProductRightCodePieceMap
+#print DiamondIntegral.Section3.gammaGroundGammaProductLeftCodeFamilyMap
+#print DiamondIntegral.Section3.gammaGroundGammaProductRightCodeFamilyMap
+#print DiamondIntegral.Section3.gammaGroundGammaCodeProductFst
+#print DiamondIntegral.Section3.gammaGroundGammaCodeProductSnd
+#print DiamondIntegral.Section3.gammaGroundGammaUnitCode
+#print DiamondIntegral.Section3.gammaGroundGammaToUnitPieceMap
+#print DiamondIntegral.Section3.gammaGroundGammaCodeToUnit
+#print DiamondIntegral.Section3.gammaGroundGammaCodeProductRightUnitIso
+#print DiamondIntegral.Section3.gammaGroundGammaCodeLeftMap
+#print DiamondIntegral.Section3.gammaGroundGammaCodeRightMap
+#print DiamondIntegral.Section3.gammaGroundGammaCoprodLeftCut
+#print DiamondIntegral.Section3.gammaGroundGammaCoprodLeftCutIso
+#print DiamondIntegral.Section3.gammaGroundGammaCoprodRightCutIso
+#print DiamondIntegral.Section3.GammaGroundGammaHom.coprod
+#print DiamondIntegral.Section3.gammaGroundGammaCoproductIsoData
+#print DiamondIntegral.Section3.GammaGroundGammaIsoClasses
+#print DiamondIntegral.Section3.gammaGroundGammaIsoClass
+#print DiamondIntegral.Section3.gammaGroundGammaDirectSumInvariant
+#print DiamondIntegral.Section3.gammaGroundGammaPresentationToDirectSum
+#print DiamondIntegral.Section3.gammaGroundGammaDirectSumToPresentationAdd
+#print DiamondIntegral.Section3.gammaGroundGammaDirectSumToPresentation
+#print DiamondIntegral.Section3.gammaGroundGammaSemiringEquivDirectSum
+#print DiamondIntegral.Section3.GammaGroundGammaDirectSum
+#print DiamondIntegral.Section3.gammaGroundGammaDirectSumClass
+#print DiamondIntegral.Section3.gammaGroundGammaGroupDirectSumEquiv
+#print DiamondIntegral.Section3.gammaGroundFiniteGammaGroupDirectSumEquiv
+#print DiamondIntegral.Section3.gammaGroundMeasuredGammaGroupDirectSumEquiv
+#print DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaGroupDirectSumEquiv
+#print DiamondIntegral.Section3.gammaGroundGammaRepresentative
+#print DiamondIntegral.Section3.gammaGroundGammaClassMul
+#print DiamondIntegral.Section3.gammaGroundGammaCodeBijectionOfLift
+#print DiamondIntegral.Section3.gammaGroundGammaHomOfLiftBijection
+#print DiamondIntegral.Section3.gammaGroundGammaSubsingletonHomOfLift
+#print DiamondIntegral.Section3.gammaGroundGammaZeroHomOfLift
+#print DiamondIntegral.Section3.gammaGroundGammaPartitionHom
+#print DiamondIntegral.Section3.gammaGroundGammaKPlusToIsoClasses
+#print DiamondIntegral.Section3.gammaGroundGammaProductCodeFunctionEquiv
+#print DiamondIntegral.Section3.gammaGroundGammaProductCodeBijection
+#print DiamondIntegral.Section3.gammaGroundGammaProductCode
+#print DiamondIntegral.Section3.gammaGroundGammaProductCarrierPieceEquiv
+#print DiamondIntegral.Section3.gammaGroundGammaProductCodePieceEquiv
+#print DiamondIntegral.Section3.GammaGroundGammaObject.productCarrierEquiv
+#print DiamondIntegral.Section3.GammaGroundGammaObject.productCodeEquiv
+#print DiamondIntegral.Section3.gammaGroundGammaProductRightDistribHom
+#print DiamondIntegral.Section3.gammaGroundGammaProductCommHom
+#print DiamondIntegral.Section3.gammaGroundGammaProductAssocHom
+#print DiamondIntegral.Section3.gammaGroundGammaProductRightUnitHom
+#print DiamondIntegral.Section3.gammaGroundGammaKPlusCast
+#print DiamondIntegral.Section3.gammaGroundGammaEmptyTagsIso
+#print DiamondIntegral.Section3.gammaGroundGammaProductEmptyIso
+#print DiamondIntegral.Section3.gammaGroundGammaEmptyProductIso
+#print DiamondIntegral.Section3.gammaGroundGammaProductFunctionEquiv
+#print DiamondIntegral.Section3.GammaGroundGammaHom.productCodes
+#print DiamondIntegral.Section3.GammaGroundGammaHom.product
+#print DiamondIntegral.Section3.gammaGroundGammaProductPair
+#print DiamondIntegral.Section3.gammaGroundGammaAppendMap
+#print DiamondIntegral.Section3.gammaGroundGammaAppendBijection
+#print DiamondIntegral.Section3.GammaGroundGammaObject.product
+#print DiamondIntegral.Section3.GammaGroundGammaObject.unit
+#print DiamondIntegral.Section3.GammaGroundFiniteGammaObject.product
+#print DiamondIntegral.Section3.GammaGroundFiniteGammaObject.unit
+#print DiamondIntegral.Section3.GammaGroundFiniteGammaObject.resLift
+#print DiamondIntegral.Section3.GammaGroundGammaPiece
+#print DiamondIntegral.Section3.gammaGroundGammaCodeToRV
+#print DiamondIntegral.Section3.gammaGroundGammaRVCodeLift
+#print DiamondIntegral.Section3.gammaGroundGammaRVCodeBijection
+#print DiamondIntegral.Section3.gammaGroundGammaRESCodeLift
+#print DiamondIntegral.Section3.gammaGroundGammaRVCodeIso
+#print DiamondIntegral.Section3.GammaGroundGammaObject.rvPieces
+#print DiamondIntegral.Section3.GammaGroundGammaObject.rvCodeBijection
+#print DiamondIntegral.Section3.GammaGroundGammaObject.rvLift
+#print DiamondIntegral.Section3.gammaGroundGammaRVProductFamilies
+#print DiamondIntegral.Section3.gammaGroundGammaRVProductBijection
+#print DiamondIntegral.Section3.gammaGroundGammaRVUnitBijection
+#print DiamondIntegral.Section3.gammaGroundGammaToRVKPlus
+#print DiamondIntegral.Section3.gammaGroundGammaDirectSumToRV
+#print DiamondIntegral.Section3.gammaGroundGammaCoprodEmptyRightHom
+#print DiamondIntegral.Section3.GammaGroundGammaObject.emptyPieces
+#print DiamondIntegral.Section3.GammaGroundGammaObject.empty
+#print DiamondIntegral.Section3.GammaGroundGammaObject.restrict
+#print DiamondIntegral.Section3.GammaGroundGammaObject.difference
+#print DiamondIntegral.Section3.GammaGroundMeasuredGammaObject.empty
+#print DiamondIntegral.Section3.GammaGroundMeasuredGammaObject.restrict
+#print DiamondIntegral.Section3.GammaGroundGammaScissor
+#print DiamondIntegral.Section3.gammaGroundGammaPresentation
+#print DiamondIntegral.Section3.GammaGroundGammaKPlus
+#print DiamondIntegral.Section3.GammaGroundGammaKGroup
+#print DiamondIntegral.Section3.gammaGroundGammaClass
+#print DiamondIntegral.Section3.GammaGroundMeasuredGammaScissor
+#print DiamondIntegral.Section3.gammaGroundMeasuredGammaPresentation
+#print DiamondIntegral.Section3.GammaGroundMeasuredGammaKPlus
+#print DiamondIntegral.Section3.GammaGroundMeasuredGammaKGroup
+#print DiamondIntegral.Section3.gammaGroundMeasuredGammaClass
+#print DiamondIntegral.Section3.GammaGroundGradedGammaObject
+#print DiamondIntegral.Section3.gammaGroundGradedGammaIso
+#print DiamondIntegral.Section3.gammaGroundGradedGammaScissor
+#print DiamondIntegral.Section3.gammaGroundGammaSemiringPresentation
+#print DiamondIntegral.Section3.GammaGroundGammaPositiveSemiring
+#print DiamondIntegral.Section3.GammaGroundGammaGrothendieckRing
+#print DiamondIntegral.Section3.gammaGroundGammaSemiringClass
+#print DiamondIntegral.Section3.gammaGroundGammaKPlusToSemiring
+#print DiamondIntegral.Section3.gammaGroundGammaToRVSemiringInvariant
+#print DiamondIntegral.Section3.gammaGroundGammaToRVSemiring
+#print DiamondIntegral.Section3.gammaGroundRVSingleFamily
+#print DiamondIntegral.Section3.gammaGroundRVSingleFamilyBijection
+#print DiamondIntegral.Section3.GammaGroundGammaObject.single
+#print DiamondIntegral.Section3.gammaGroundGammaSingleLiftBijection
+#print DiamondIntegral.Section3.gammaGroundGammaTagHom
+#print DiamondIntegral.Section3.gammaGroundGammaCoprodCommIso
+#print DiamondIntegral.Section3.gammaGroundGammaCoprodAssocIso
+#print DiamondIntegral.Section3.gammaGroundGammaCoprodEmptyIso
+#print DiamondIntegral.Section3.gammaGroundGammaUnitSlice
+#print DiamondIntegral.Section3.GammaGroundGammaObject.coordinates
+#print DiamondIntegral.Section3.GammaGroundMeasuredGammaObject
+#print DiamondIntegral.Section3.GammaGroundMeasuredGammaObject.weight
+#print DiamondIntegral.Section3.GammaGroundMeasuredGammaObject.combinedWeight
+#print DiamondIntegral.Section3.GammaGroundMeasuredGammaHom
+#print DiamondIntegral.Section3.GammaGroundMeasuredGammaHom.id
+#print DiamondIntegral.Section3.GammaGroundMeasuredGammaHom.comp
+#print DiamondIntegral.Section3.GammaGroundMeasuredGammaHom.symm
+#print DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaProperty
+#print DiamondIntegral.Section3.GammaGroundMeasuredFiniteGammaObject
+#print DiamondIntegral.Section3.GammaGroundGeneric
+#print DiamondIntegral.Section3.gammaGroundRVUnitIntersection
+#print DiamondIntegral.Section3.gammaGroundMeasuredVFWeight
+#print DiamondIntegral.Section3.GammaGroundGenericMeasuredVFGerm
+#print DiamondIntegral.Section3.gammaGroundGenericMeasuredVFGroupoid
+#print DiamondIntegral.Section3.rvNormalizedUnitTuple
+#print DiamondIntegral.Section3.gammaGroundMeasuredGradedIntegral
+#print DiamondIntegral.Section3.gammaGroundMeasuredGradedRingIntegral
+#print DiamondIntegral.Section3.gammaGroundUnmeasuredFilteredIntegral
+#print DiamondIntegral.Section3.GammaGroundMap.graphSet
+#print DiamondIntegral.Section3.GammaGroundMap.graphPair
+#print DiamondIntegral.Section3.GammaGroundMap.graphPairBijection
+#print DiamondIntegral.Section3.GammaGroundPiecewiseIntegralAffine
+#print DiamondIntegral.Section3.gammaGroundMonomialValueImage
+#print DiamondIntegral.Section3.gammaGroundIntegralMonomialMap
+#print DiamondIntegral.Section3.gammaGroundGammaSingleMonomialHom
+#print DiamondIntegral.Section3.universalSingletonPower
+#print DiamondIntegral.Section3.GammaGroundVolumeForm.inv
+#print DiamondIntegral.Section3.gammaGroundFullJacobianRelation
+#print DiamondIntegral.Section3.gammaGroundFullJacobianGraph
+#print DiamondIntegral.Section3.gammaGroundJacobianSource
+#print DiamondIntegral.Section3.gammaGroundJacobianScalar
+#print DiamondIntegral.Section3.gammaGroundDifferentiabilityLocus
+#print DiamondIntegral.Section3.gammaGroundObjectLift
+#print DiamondIntegral.Section3.gammaGroundObjectLiftVF
+#print DiamondIntegral.Section3.GammaGroundMap.comp
+#print DiamondIntegral.Section3.GammaGroundMap.image
+#print DiamondIntegral.Section3.GammaGroundMap.toImage
+#print DiamondIntegral.Section3.GammaGroundMap.FiniteFibres
+#print DiamondIntegral.Section3.GammaGroundMap.preimage
+#print DiamondIntegral.Section3.GammaGroundMap.pair
+#print DiamondIntegral.Section3.GammaGroundMap.prodMap
+#print DiamondIntegral.Section3.GammaGroundDefSet.prod
+#print DiamondIntegral.Section3.GammaGroundMap.inclusion
+#print DiamondIntegral.Section3.GammaGroundMap.restrict
+#print DiamondIntegral.Section3.GammaGroundMap.corestrict
+#print DiamondIntegral.Section3.GammaGroundMap.toUniv
+#print DiamondIntegral.Section3.GammaGroundMap.ofReal
+#print DiamondIntegral.Section3.GammaGroundMap.ofGlobal
+#print DiamondIntegral.Section3.GammaGroundMap.prodFst
+#print DiamondIntegral.Section3.GammaGroundMap.prodSnd
+#print DiamondIntegral.Section3.universalPowerCoordinate
+#print DiamondIntegral.Section3.GammaGroundMap.tuple
+#print DiamondIntegral.Section3.GammaGroundMap.union
+#print DiamondIntegral.Section3.GammaGroundMap
+#print DiamondIntegral.Section3.GammaGroundMap.id
+#print DiamondIntegral.Section3.GammaGroundMeasuredRVDiagramSupport
+#print DiamondIntegral.Section3.GammaGroundMeasuredRVDiagramSupport.namedDomain
+#print DiamondIntegral.Section3.GammaGroundMeasuredRVDiagramSupport.namedLabel
+#print DiamondIntegral.Section3.GammaGroundMeasuredRVDiagramSupport.namedUnderlying
+#print DiamondIntegral.Section3.GammaGroundMeasuredRVDiagramSupport.namedObject
+#print DiamondIntegral.Section3.GammaGroundMeasuredRVDiagramSupport.namedArrow
+#print DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaDirectSumInvariant
+#print DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaPresentationToDirectSum
+#print DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaDirectSumToPresentationAdd
+#print DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaDirectSumToPresentation
+#print DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaSemiringEquivDirectSum
+#print DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaRepresentative
+#print DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaClassMul
+#print DiamondIntegral.Section3.GammaGroundMeasuredFiniteGammaDirectSum
+#print DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaDirectSumToGamma
+#print DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaDirectSumClass
+#print DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaGradedInclusion
+#print DiamondIntegral.Section3.GammaGroundMeasuredFiniteGammaObject.coprod
+#print DiamondIntegral.Section3.GammaGroundMeasuredFiniteGammaObject.restrict
+#print DiamondIntegral.Section3.GammaGroundMeasuredFiniteGammaObject.empty
+#print DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaPresentation
+#print DiamondIntegral.Section3.GammaGroundMeasuredFiniteGammaKPlus
+#print DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaClass
+#print DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaToGammaKPlus
+#print DiamondIntegral.Section3.GammaGroundGradedMeasuredFiniteGammaObject
+#print DiamondIntegral.Section3.gammaGroundGradedMeasuredFiniteGammaIso
+#print DiamondIntegral.Section3.gammaGroundGradedMeasuredFiniteGammaScissor
+#print DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaSemiringPresentation
+#print DiamondIntegral.Section3.GammaGroundMeasuredFiniteGammaPositiveSemiring
+#print DiamondIntegral.Section3.GammaGroundMeasuredFiniteGammaGrothendieckRing
+#print DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaSemiringClass
+#print DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaKPlusToSemiring
+#print DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaToGammaInvariant
+#print DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaToGammaSemiring
+#print DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaToRESInvariant
+#print DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaToRESSemiring
+#print DiamondIntegral.Section3.gammaGroundMeasuredRESToRVSemiring
+#print DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaToRESKPlus
+#print DiamondIntegral.Section3.gammaGroundMeasuredGammaHomOfCodeIso
+#print DiamondIntegral.Section3.GammaGroundMeasuredGammaObject.codeCombined
+#print DiamondIntegral.Section3.gammaGroundMeasuredGammaProductCommHom
+#print DiamondIntegral.Section3.gammaGroundMeasuredGammaProductAssocHom
+#print DiamondIntegral.Section3.gammaGroundMeasuredGammaProductRightUnitHom
+#print DiamondIntegral.Section3.gammaGroundMeasuredGammaCoprodCommHom
+#print DiamondIntegral.Section3.GammaGroundMeasuredGammaHom.coprod
+#print DiamondIntegral.Section3.gammaGroundMeasuredGammaCoprodAssocHom
+#print DiamondIntegral.Section3.gammaGroundMeasuredGammaCoprodEmptyHom
+#print DiamondIntegral.Section3.gammaGroundMeasuredGammaCoproductIsoData
+#print DiamondIntegral.Section3.GammaGroundMeasuredGammaIsoClasses
+#print DiamondIntegral.Section3.gammaGroundMeasuredGammaIsoClass
+#print DiamondIntegral.Section3.GammaGroundMeasuredGammaObject.coprod
+#print DiamondIntegral.Section3.gammaGroundMeasuredGammaDirectSumInvariant
+#print DiamondIntegral.Section3.gammaGroundMeasuredGammaPresentationToDirectSum
+#print DiamondIntegral.Section3.gammaGroundMeasuredGammaDirectSumToPresentationAdd
+#print DiamondIntegral.Section3.gammaGroundMeasuredGammaDirectSumToPresentation
+#print DiamondIntegral.Section3.gammaGroundMeasuredGammaSemiringEquivDirectSum
+#print DiamondIntegral.Section3.GammaGroundMeasuredGammaDirectSum
+#print DiamondIntegral.Section3.gammaGroundMeasuredGammaDirectSumClass
+#print DiamondIntegral.Section3.gammaGroundMeasuredGammaRepresentative
+#print DiamondIntegral.Section3.gammaGroundMeasuredGammaClassMul
+#print DiamondIntegral.Section3.gammaGroundMeasuredGammaPartitionHom
+#print DiamondIntegral.Section3.gammaGroundMeasuredGammaKPlusToIsoClasses
+#print DiamondIntegral.Section3.gammaGroundMeasuredGammaProductRightDistribHom
+#print DiamondIntegral.Section3.gammaGroundMeasuredGammaKPlusCast
+#print DiamondIntegral.Section3.gammaGroundMeasuredGammaEmptyTagsHom
+#print DiamondIntegral.Section3.gammaGroundMeasuredGammaProductEmptyIso
+#print DiamondIntegral.Section3.gammaGroundMeasuredGammaEmptyProductIso
+#print DiamondIntegral.Section3.gammaGroundMeasuredGammaProductLiftHom
+#print DiamondIntegral.Section3.gammaGroundMeasuredGammaUnitLiftHom
+#print DiamondIntegral.Section3.GammaGroundMeasuredGammaHom.product
+#print DiamondIntegral.Section3.gammaGroundGammaProductLeft
+#print DiamondIntegral.Section3.gammaGroundGammaProductRight
+#print DiamondIntegral.Section3.GammaGroundMeasuredGammaObject.product
+#print DiamondIntegral.Section3.GammaGroundMeasuredGammaObject.unit
+#print DiamondIntegral.Section3.GammaGroundMeasuredFiniteGammaObject.product
+#print DiamondIntegral.Section3.GammaGroundMeasuredFiniteGammaObject.unit
+#print DiamondIntegral.Section3.GammaGroundGammaObject.rvEncodeCode
+#print DiamondIntegral.Section3.gammaGroundMeasuredGammaLiftForm
+#print DiamondIntegral.Section3.GammaGroundMeasuredGammaObject.rvLift
+#print DiamondIntegral.Section3.GammaGroundMeasuredFiniteGammaObject.resLift
+#print DiamondIntegral.Section3.gammaGroundGammaCodeFamilyBijection
+#print DiamondIntegral.Section3.gammaGroundMeasuredGammaRVHom
+#print DiamondIntegral.Section3.gammaGroundMeasuredGammaRVRestrictionHom
+#print DiamondIntegral.Section3.gammaGroundMeasuredGammaToRVKPlus
+#print DiamondIntegral.Section3.gammaGroundMeasuredGammaCoprodLeftCutHom
+#print DiamondIntegral.Section3.gammaGroundMeasuredGammaCoprodRightCutHom
+#print DiamondIntegral.Section3.GammaGroundGradedMeasuredGammaObject
+#print DiamondIntegral.Section3.gammaGroundGradedMeasuredGammaIso
+#print DiamondIntegral.Section3.gammaGroundGradedMeasuredGammaScissor
+#print DiamondIntegral.Section3.gammaGroundMeasuredGammaSemiringPresentation
+#print DiamondIntegral.Section3.GammaGroundMeasuredGammaPositiveSemiring
+#print DiamondIntegral.Section3.GammaGroundMeasuredGammaGrothendieckRing
+#print DiamondIntegral.Section3.gammaGroundMeasuredGammaSemiringClass
+#print DiamondIntegral.Section3.gammaGroundMeasuredGammaKPlusToSemiring
+#print DiamondIntegral.Section3.gammaGroundMeasuredGammaToRVSemiringInvariant
+#print DiamondIntegral.Section3.gammaGroundMeasuredGammaToRVSemiring
+#print DiamondIntegral.Section3.gammaGroundMeasuredGammaSingleWeight
+#print DiamondIntegral.Section3.gammaGroundGammaUnitLiftBijection
+#print DiamondIntegral.Section3.GammaGroundMeasuredRESObject.unit
+#print DiamondIntegral.Section3.gammaGroundMeasuredRESRepresentative
+#print DiamondIntegral.Section3.gammaGroundMeasuredRESClassMul
+#print DiamondIntegral.Section3.GammaGroundMeasuredRESDirectSum
+#print DiamondIntegral.Section3.gammaGroundMeasuredRESDirectSumToRV
+#print DiamondIntegral.Section3.gammaGroundMeasuredRESDirectSumClass
+#print DiamondIntegral.Section3.gammaGroundMeasuredRESGradedInclusion
+#print DiamondIntegral.Section3.GammaGroundMeasuredRESGrothendieckRing
+#print DiamondIntegral.Section3.gammaGroundMeasuredRESGroupDirectSumEquiv
+#print DiamondIntegral.Section3.gammaGroundMeasuredRESRingToRV
+#print DiamondIntegral.Section3.GammaGroundMeasuredRESObject.product
+#print DiamondIntegral.Section3.GammaGroundMeasuredRESObject.empty
+#print DiamondIntegral.Section3.GammaGroundMeasuredRESObject.restrict
+#print DiamondIntegral.Section3.GammaGroundMeasuredRESObject.coprod
+#print DiamondIntegral.Section3.gammaGroundMeasuredRESPresentation
+#print DiamondIntegral.Section3.GammaGroundMeasuredRESKPlus
+#print DiamondIntegral.Section3.gammaGroundMeasuredRESClass
+#print DiamondIntegral.Section3.gammaGroundMeasuredRESToRVKPlus
+#print DiamondIntegral.Section3.GammaGroundRVObject.target
+#print DiamondIntegral.Section3.GammaGroundVolumeForm
+#print DiamondIntegral.Section3.gammaGroundFormValue
+#print DiamondIntegral.Section3.GammaGroundMeasuredRVObject
+#print DiamondIntegral.Section3.GammaGroundMeasuredRVObject.combinedWeight
+#print DiamondIntegral.Section3.GammaGroundMeasuredRVHom
+#print DiamondIntegral.Section3.GammaGroundMeasuredRVHom.id
+#print DiamondIntegral.Section3.GammaGroundMeasuredRVHom.comp
+#print DiamondIntegral.Section3.GammaGroundMeasuredRVHom.symm
+#print DiamondIntegral.Section3.gammaGroundMeasuredResProperty
+#print DiamondIntegral.Section3.GammaGroundMeasuredRESObject
+#print DiamondIntegral.Section3.GammaGroundMeasuredRVObject.coprod
+#print DiamondIntegral.Section3.gammaGroundMeasuredRVForgetInvariant
+#print DiamondIntegral.Section3.gammaGroundMeasuredRVForgetSemiring
+#print DiamondIntegral.Section3.gammaGroundMeasuredRVForgetRing
+#print DiamondIntegral.Section3.gammaGroundMeasuredRVOne
+#print DiamondIntegral.Section3.gammaGroundMeasuredRVPositive
+#print DiamondIntegral.Section3.gammaGroundMeasuredRVSpecialCongruence
+#print DiamondIntegral.Section3.gammaGroundMeasuredRVPrincipalElement
+#print DiamondIntegral.Section3.gammaGroundMeasuredRVSpecialCompletionEquiv
+#print DiamondIntegral.Section3.gammaGroundMeasuredRVDirectSumInvariant
+#print DiamondIntegral.Section3.gammaGroundMeasuredRVPresentationToDirectSum
+#print DiamondIntegral.Section3.gammaGroundMeasuredRVDirectSumToPresentationAdd
+#print DiamondIntegral.Section3.gammaGroundMeasuredRVDirectSumToPresentation
+#print DiamondIntegral.Section3.gammaGroundMeasuredRVSemiringEquivDirectSum
+#print DiamondIntegral.Section3.gammaGroundMeasuredRVKPlusCast
+#print DiamondIntegral.Section3.GammaGroundMeasuredRVDirectSum
+#print DiamondIntegral.Section3.gammaGroundMeasuredRVDirectSumClass
+#print DiamondIntegral.Section3.gammaGroundMeasuredRVGroupDirectSumEquiv
+#print DiamondIntegral.Section3.gammaGroundMeasuredRVRepresentative
+#print DiamondIntegral.Section3.gammaGroundMeasuredRVClassMul
+#print DiamondIntegral.Section3.GammaGroundMeasuredRVIsoClasses
+#print DiamondIntegral.Section3.gammaGroundMeasuredRVIsoClass
+#print DiamondIntegral.Section3.gammaGroundMeasuredRVKPlusToIsoClasses
+#print DiamondIntegral.Section3.GammaGroundMeasuredRVMapObject
+#print DiamondIntegral.Section3.GammaGroundMeasuredRVMap
+#print DiamondIntegral.Section3.gammaGroundMeasuredRVMapIsoOfHom
+#print DiamondIntegral.Section3.gammaGroundMeasuredRVHomOfMapIso
+#print DiamondIntegral.Section3.GammaGroundMeasuredRVMapObject.coprod
+#print DiamondIntegral.Section3.gammaGroundMeasuredRVMapInl
+#print DiamondIntegral.Section3.gammaGroundMeasuredRVMapInr
+#print DiamondIntegral.Section3.gammaGroundMeasuredRVMapDesc
+#print DiamondIntegral.Section3.gammaGroundMeasuredRVMapCoprodIsColimit
+#print DiamondIntegral.Section3.GammaGroundMeasuredRVMapObject.empty
+#print DiamondIntegral.Section3.gammaGroundMeasuredRVMapEmptyHom
+#print DiamondIntegral.Section3.gammaGroundMeasuredRVMapEmptyIsInitial
+#print DiamondIntegral.Section3.gammaGroundMeasuredRVPartitionHom
+#print DiamondIntegral.Section3.GammaGroundMeasuredRVObject.reindexVolume
+#print DiamondIntegral.Section3.gammaGroundMeasuredRVProductCommHom
+#print DiamondIntegral.Section3.gammaGroundMeasuredRVProductAssocHom
+#print DiamondIntegral.Section3.gammaGroundMeasuredRVProductRightUnitHom
+#print DiamondIntegral.Section3.gammaGroundMeasuredRVProductHom
+#print DiamondIntegral.Section3.gammaGroundMeasuredRVProductIso
+#print DiamondIntegral.Section3.gammaGroundMeasuredRVProductRestrictionHom
+#print DiamondIntegral.Section3.gammaGroundMeasuredRVCoprodLeftRestrictionHom
+#print DiamondIntegral.Section3.gammaGroundMeasuredRVCoprodRightRestrictionHom
+#print DiamondIntegral.Section3.gammaGroundMeasuredRVProductLeft
+#print DiamondIntegral.Section3.gammaGroundMeasuredRVProductRight
+#print DiamondIntegral.Section3.GammaGroundMeasuredRVObject.product
+#print DiamondIntegral.Section3.GammaGroundMeasuredRVSpecialQuotient
+#print DiamondIntegral.Section3.GammaGroundMeasuredRVGradingPolynomial
+#print DiamondIntegral.Section3.gammaGroundMeasuredRVPolynomialInvariant
+#print DiamondIntegral.Section3.gammaGroundMeasuredRVPolynomialMap
+#print DiamondIntegral.Section3.gammaGroundMeasuredRVQuotientGrading
+#print DiamondIntegral.Section3.GammaGroundMeasuredRVObject.empty
+#print DiamondIntegral.Section3.GammaGroundMeasuredRVObject.restrict
+#print DiamondIntegral.Section3.gammaGroundMeasuredRVScissor
+#print DiamondIntegral.Section3.gammaGroundMeasuredRVPresentation
+#print DiamondIntegral.Section3.GammaGroundMeasuredRVKPlus
+#print DiamondIntegral.Section3.gammaGroundMeasuredRVClass
+#print DiamondIntegral.Section3.GammaGroundMeasuredRVObject.withZeroForm
+#print DiamondIntegral.Section3.GammaGroundMeasuredRVObject.unit
+#print DiamondIntegral.Section3.GradedGammaGroundMeasuredRVObject
+#print DiamondIntegral.Section3.gradedGammaGroundMeasuredRVIso
+#print DiamondIntegral.Section3.gradedGammaGroundMeasuredRVScissor
+#print DiamondIntegral.Section3.gammaGroundMeasuredRVSemiringPresentation
+#print DiamondIntegral.Section3.GammaGroundMeasuredRVPositiveSemiring
+#print DiamondIntegral.Section3.GammaGroundMeasuredRVGrothendieckRing
+#print DiamondIntegral.Section3.gammaGroundMeasuredRVSemiringClass
+#print DiamondIntegral.Section3.gammaGroundMeasuredRVKPlusToSemiring
+#print DiamondIntegral.Section3.GammaGroundMeasuredRVObject.ofNamed
+#print DiamondIntegral.Section3.GammaGroundMeasuredPositiveTensor
+#print DiamondIntegral.Section3.gammaGroundMeasuredTensorMap
+#print DiamondIntegral.Section3.gammaGroundMeasuredGroupTensorMap
+#print DiamondIntegral.Section3.GammaGroundMeasuredVFData
+#print DiamondIntegral.Section3.gammaGroundObjectLiftLabel
+#print DiamondIntegral.Section3.gammaGroundMeasuredObjectLift
+#print DiamondIntegral.Section3.GammaGroundMeasuredVFData.restrict
+#print DiamondIntegral.Section3.GammaGroundMeasuredVFData.empty
+#print DiamondIntegral.Section3.GammaGroundMeasuredVFData.unit
+#print DiamondIntegral.Section3.GammaGroundMeasuredVFDirectSum
+#print DiamondIntegral.Section3.gammaGroundMeasuredVFDirectSumToSemiring
+#print DiamondIntegral.Section3.gammaGroundMeasuredVFDirectSumEquiv
+#print DiamondIntegral.Section3.GammaGroundMeasuredVFRepresentative
+#print DiamondIntegral.Section3.GammaGroundMeasuredVFGerm
+#print DiamondIntegral.Section3.gammaGroundMeasuredOfRepresentative
+#print DiamondIntegral.Section3.gammaGroundMeasuredAESetoid
+#print DiamondIntegral.Section3.gammaGroundMeasuredQuotientEquiv
+#print DiamondIntegral.Section3.gammaGroundMeasuredGermEquivGeneric
+#print DiamondIntegral.Section3.gammaGroundPositiveMeasuredVFGroupoid
+#print DiamondIntegral.Section3.gammaGroundMeasuredVFDirectSumClass
+#print DiamondIntegral.Section3.gammaGroundMeasuredVFDirectSumCommSemiring
+#print DiamondIntegral.Section3.gammaGroundMeasuredVFGradedSemiringEquiv
+#print DiamondIntegral.Section3.gammaGroundMeasuredVFGradedRingEquiv
+#print DiamondIntegral.Section3.gammaGroundMeasuredVFGroupDirectSumEquiv
+#print DiamondIntegral.Section3.gammaGroundMeasuredVFPolynomialGrading
+#print DiamondIntegral.Section3.gammaGroundMeasuredVFProductLeft
+#print DiamondIntegral.Section3.gammaGroundMeasuredVFProductRight
+#print DiamondIntegral.Section3.GammaGroundMeasuredVFData.product
+#print DiamondIntegral.Section3.gammaGroundMeasuredVFGroupoid
+#print DiamondIntegral.Section3.GammaGroundMeasuredVFHom
+#print DiamondIntegral.Section3.gammaGroundMeasuredVFScissor
+#print DiamondIntegral.Section3.gammaGroundMeasuredVFPresentation
+#print DiamondIntegral.Section3.GammaGroundMeasuredVFKPlus
+#print DiamondIntegral.Section3.gammaGroundMeasuredVFClass
+#print DiamondIntegral.Section3.GradedGammaGroundMeasuredVFData
+#print DiamondIntegral.Section3.gradedGammaGroundMeasuredVFIso
+#print DiamondIntegral.Section3.gradedGammaGroundMeasuredVFScissor
+#print DiamondIntegral.Section3.gammaGroundMeasuredVFSemiringPresentation
+#print DiamondIntegral.Section3.GammaGroundMeasuredVFPositiveSemiring
+#print DiamondIntegral.Section3.GammaGroundMeasuredVFGrothendieckRing
+#print DiamondIntegral.Section3.gammaGroundMeasuredVFSemiringClass
+#print DiamondIntegral.Section3.gammaGroundMeasuredVFKPlusToSemiring
+#print DiamondIntegral.Section3.GammaGroundZeroMeasuredVF
+#print DiamondIntegral.Section3.GammaGroundZeroMeasuredVFHom
+#print DiamondIntegral.Section3.GammaGroundZeroMeasuredVFHom.id
+#print DiamondIntegral.Section3.GammaGroundZeroMeasuredVFHom.comp
+#print DiamondIntegral.Section3.GammaGroundZeroMeasuredVFHom.symm
+#print DiamondIntegral.Section3.gammaGroundMixedPack
+#print DiamondIntegral.Section3.gammaGroundMixedProductDomain
+#print DiamondIntegral.Section3.gammaGroundMixedUnpack
+#print DiamondIntegral.Section3.GammaGroundFiniteVFObject.product
+#print DiamondIntegral.Section3.gammaGroundMixedLeftTag
+#print DiamondIntegral.Section3.gammaGroundMixedRightTag
+#print DiamondIntegral.Section3.gammaGroundGammaSingleHomOfAffineMonomial
+#print DiamondIntegral.Section3.GammaGroundWithNameDefinable
+#print DiamondIntegral.Section3.GammaGroundDefSet.ofNamed
+#print DiamondIntegral.Section3.GammaGroundMap.ofNamed
+#print DiamondIntegral.Section3.GammaGroundBijection.ofNamed
+#print DiamondIntegral.Section3.namedRVToGammaGround
+#print DiamondIntegral.Section3.GammaGroundMeasuredRVHom.ofNamed
+#print DiamondIntegral.Section3.namedMeasuredRVToGammaGround
+#print DiamondIntegral.Section3.namedVFToGammaGround
+#print DiamondIntegral.Section3.GammaGroundDefinable
+#print DiamondIntegral.Section3.GammaGroundDefSet
+#print DiamondIntegral.Section3.GammaGroundPiecewiseGLZ
+#print DiamondIntegral.Section3.gammaGroundRVUnitPointTranslation
+#print DiamondIntegral.Section3.gammaGroundGammaSinglePointTranslation
+#print DiamondIntegral.Section3.rvUnitRealTupleMap
+#print DiamondIntegral.Section3.GammaGroundEssentialVFMap.Preserves
+#print DiamondIntegral.Section3.GammaGroundEssentialVFMap.sourceForm
+#print DiamondIntegral.Section3.GammaGroundEssentialVFMap.targetForm
+#print DiamondIntegral.Section3.GammaGroundRVObject.withCombinedWeight
+#print DiamondIntegral.Section3.GammaGroundRESObject.withCombinedWeight
+#print DiamondIntegral.Section3.GammaGroundRESObject.unit
+#print DiamondIntegral.Section3.gammaGroundRESRepresentative
+#print DiamondIntegral.Section3.gammaGroundRESClassMul
+#print DiamondIntegral.Section3.GammaGroundRESDirectSum
+#print DiamondIntegral.Section3.gammaGroundRESDirectSumToRV
+#print DiamondIntegral.Section3.gammaGroundRESDirectSumClass
+#print DiamondIntegral.Section3.gammaGroundRESGradedInclusion
+#print DiamondIntegral.Section3.GammaGroundRESGrothendieckRing
+#print DiamondIntegral.Section3.gammaGroundRESGroupDirectSumEquiv
+#print DiamondIntegral.Section3.gammaGroundRESRingToRV
+#print DiamondIntegral.Section3.GammaGroundRESObject.empty
+#print DiamondIntegral.Section3.GammaGroundRESObject.restrict
+#print DiamondIntegral.Section3.GammaGroundRESObject.product
+#print DiamondIntegral.Section3.GammaGroundRESObject.coprod
+#print DiamondIntegral.Section3.gammaGroundRESPresentation
+#print DiamondIntegral.Section3.GammaGroundRESKPlus
+#print DiamondIntegral.Section3.gammaGroundRESClass
+#print DiamondIntegral.Section3.gammaGroundRESToRVKPlus
+#print DiamondIntegral.Section3.rvAngularGlobalCoordinateMap
+#print DiamondIntegral.Section3.gammaGroundRVAngularCoordinateMap
+#print DiamondIntegral.Section3.gammaGroundRVMixedValueProjection
+#print DiamondIntegral.Section3.gammaGroundRVAngularCoordinateBijection
+#print DiamondIntegral.Section3.gammaGroundRVAngularMixedDomain
+#print DiamondIntegral.Section3.gammaGroundRVAngularResidueDomain
+#print DiamondIntegral.Section3.gammaGroundRVBoundedToDirectSum
+#print DiamondIntegral.Section3.GammaGroundRVObject
+#print DiamondIntegral.Section3.GammaGroundRVObject.ofReal
+#print DiamondIntegral.Section3.GammaGroundRVObject.ofNamed
+#print DiamondIntegral.Section3.gammaGroundResProperty
+#print DiamondIntegral.Section3.GammaGroundRESObject
+#print DiamondIntegral.Section3.gammaGroundRVCoprodLeft
+#print DiamondIntegral.Section3.gammaGroundRVCoprodRight
+#print DiamondIntegral.Section3.GammaGroundRVObject.coprod
+#print DiamondIntegral.Section3.GammaGroundRVObject.correspondence
+#print DiamondIntegral.Section3.GammaGroundRVObject.correspondenceFinitary
+#print DiamondIntegral.Section3.GammaGroundRVObject.targetOfImage
+#print DiamondIntegral.Section3.GammaGroundRVObject.correspondencePoint
+#print DiamondIntegral.Section3.GammaGroundRVObject.correspondenceJacobian
+#print DiamondIntegral.Section3.gammaGroundRVDefinableUnits
+#print DiamondIntegral.Section3.gammaGroundDefinableRVValues
+#print DiamondIntegral.Section3.GammaGroundRVHasFiniteMap
+#print DiamondIntegral.Section3.gammaGroundRVDim
+#print DiamondIntegral.Section3.gammaGroundRVDimension
+#print DiamondIntegral.Section3.gammaGroundEmptyBijection
+#print DiamondIntegral.Section3.gammaGroundRVFamilyDesc
+#print DiamondIntegral.Section3.gammaGroundRVFamilyMap
+#print DiamondIntegral.Section3.GammaGroundFamilyBijection.rvRealization
+#print DiamondIntegral.Section3.gammaGroundRVSelectCoordinates
+#print DiamondIntegral.Section3.GammaGroundFiniteFamily.rvTarget
+#print DiamondIntegral.Section3.GammaGroundFiniteFamily.rvObject
+#print DiamondIntegral.Section3.gammaGroundRVFamilyIso
+#print DiamondIntegral.Section3.GammaGroundFiniteFamily.rvProduct
+#print DiamondIntegral.Section3.gammaGroundRVFamilyProductBranch
+#print DiamondIntegral.Section3.gammaGroundRVFamilyProductMap
+#print DiamondIntegral.Section3.gammaGroundRVFamilyProductBijection
+#print DiamondIntegral.Section3.gammaGroundRVFamilyTagMap
+#print DiamondIntegral.Section3.GammaGroundFiniteFamily.rvRealization
+#print DiamondIntegral.Section3.GammaGroundFiniteFamily.rvEncode
+#print DiamondIntegral.Section3.GammaGroundFiniteFamily.rvEquiv
+#print DiamondIntegral.Section3.GammaGroundFiniteFamily.rvPieceEncode
+#print DiamondIntegral.Section3.gammaGroundRVFamilyBijectionOfRealization
+#print DiamondIntegral.Section3.GammaGroundRVObject.difference
+#print DiamondIntegral.Section3.gammaGroundRVFibreDimension
+#print DiamondIntegral.Section3.gammaGroundFixedVFFibre
+#print DiamondIntegral.Section3.gammaGroundRVFibreDim
+#print DiamondIntegral.Section3.GammaGroundRVBoundedPositive
+#print DiamondIntegral.Section3.gammaGroundRVBoundedClass
+#print DiamondIntegral.Section3.gammaGroundRVBoundedInclude
+#print DiamondIntegral.Section3.gammaGroundRVBoundedTransition
+#print DiamondIntegral.Section3.gammaGroundRVBoundedSpecialHom
+#print DiamondIntegral.Section3.gammaGroundRVBoundedSpecialCongruence
+#print DiamondIntegral.Section3.gammaGroundRVBoundedQuotientTransition
+#print DiamondIntegral.Section3.gammaGroundRVCoordinateSet
+#print DiamondIntegral.Section3.gammaGroundDefSetFiniteUnion
+#print DiamondIntegral.Section3.gammaGroundRVUnitValueFibre
+#print DiamondIntegral.Section3.GammaGroundRVFormProductChart.changeWeight
+#print DiamondIntegral.Section3.GammaGroundRVFormProductChart
+#print DiamondIntegral.Section3.GammaGroundRVFormProductChart.pullback
+#print DiamondIntegral.Section3.gammaGroundRVSpecialCongruence
+#print DiamondIntegral.Section3.gammaGroundRVPrincipalElement
+#print DiamondIntegral.Section3.gammaGroundRVSpecialCompletionEquiv
+#print DiamondIntegral.Section3.rvGenericCoordinateInput
+#print DiamondIntegral.Section3.rvGenericCoordinate
+#print DiamondIntegral.Section3.gammaGroundRVGenericValueGraph
+#print DiamondIntegral.Section3.gammaGroundFullPreimageValueMap
+#print DiamondIntegral.Section3.gammaGroundRVGenericUnits
+#print DiamondIntegral.Section3.gammaGroundRVGenericValueMap
+#print DiamondIntegral.Section3.gammaGroundRVGenericValueImage
+#print DiamondIntegral.Section3.gammaGroundRVDirectSumInvariant
+#print DiamondIntegral.Section3.gammaGroundRVPresentationToDirectSum
+#print DiamondIntegral.Section3.gammaGroundRVDirectSumToPresentationAdd
+#print DiamondIntegral.Section3.gammaGroundRVDirectSumToPresentation
+#print DiamondIntegral.Section3.gammaGroundRVSemiringEquivDirectSum
+#print DiamondIntegral.Section3.gammaGroundRVKPlusCast
+#print DiamondIntegral.Section3.GammaGroundRVDirectSum
+#print DiamondIntegral.Section3.gammaGroundRVDirectSumClass
+#print DiamondIntegral.Section3.gammaGroundRVGroupDirectSumEquiv
+#print DiamondIntegral.Section3.gammaGroundRVRepresentative
+#print DiamondIntegral.Section3.gammaGroundRVClassMul
+#print DiamondIntegral.Section3.rvInfiniteLast
+#print DiamondIntegral.Section3.GammaGroundRVIsoClasses
+#print DiamondIntegral.Section3.gammaGroundRVIsoClass
+#print DiamondIntegral.Section3.gammaGroundRVKPlusToIsoClasses
+#print DiamondIntegral.Section3.GammaGroundRVObject.unitLabelMap
+#print DiamondIntegral.Section3.GammaGroundRVObject.labelValueMap
+#print DiamondIntegral.Section3.GammaGroundRVObject.labelWeightForm
+#print DiamondIntegral.Section3.GammaGroundMeasuredRVObject.combinedWeightForm
+#print DiamondIntegral.Section3.GammaGroundRVMapObject
+#print DiamondIntegral.Section3.gammaGroundRVMapIsoOfBijection
+#print DiamondIntegral.Section3.gammaGroundRVBijectionOfMapIso
+#print DiamondIntegral.Section3.GammaGroundRVMapObject.coprod
+#print DiamondIntegral.Section3.gammaGroundRVMapInl
+#print DiamondIntegral.Section3.gammaGroundRVMapInr
+#print DiamondIntegral.Section3.gammaGroundRVMapDesc
+#print DiamondIntegral.Section3.gammaGroundRVMapCoprodIsColimit
+#print DiamondIntegral.Section3.GammaGroundRVMapObject.empty
+#print DiamondIntegral.Section3.gammaGroundRVMapEmptyHom
+#print DiamondIntegral.Section3.gammaGroundRVMapEmptyIsInitial
+#print DiamondIntegral.Section3.GammaGroundRVProductPiece
+#print DiamondIntegral.Section3.gammaGroundRVPackPair
+#print DiamondIntegral.Section3.GammaGroundRVMapObject.restrict
+#print DiamondIntegral.Section3.gammaGroundRVMapPartitionIso
+#print DiamondIntegral.Section3.gammaGroundRVCoprodLeftRestrictionIso
+#print DiamondIntegral.Section3.gammaGroundRVCoprodRightRestrictionIso
+#print DiamondIntegral.Section3.GammaGroundBijection.prodSwap
+#print DiamondIntegral.Section3.GammaGroundBijection.prodAssoc
+#print DiamondIntegral.Section3.GammaGroundRVObject.reindexVolume
+#print DiamondIntegral.Section3.gammaGroundRVProductCommBijection
+#print DiamondIntegral.Section3.gammaGroundRVProductAssocBijection
+#print DiamondIntegral.Section3.gammaGroundRVRightUnitProjection
+#print DiamondIntegral.Section3.gammaGroundRVProductRightUnitBijection
+#print DiamondIntegral.Section3.gammaGroundRVPackBijection
+#print DiamondIntegral.Section3.gammaGroundRVProductBijection
+#print DiamondIntegral.Section3.gammaGroundRVProductIso
+#print DiamondIntegral.Section3.GammaGroundRVProductChart
+#print DiamondIntegral.Section3.gammaGroundRVProductRestrictionIso
+#print DiamondIntegral.Section3.gammaGroundRVPack
+#print DiamondIntegral.Section3.gammaGroundRVProductDomain
+#print DiamondIntegral.Section3.gammaGroundRVUnpack
+#print DiamondIntegral.Section3.gammaGroundRVAppendTargets
+#print DiamondIntegral.Section3.GammaGroundRVObject.product
+#print DiamondIntegral.Section3.GammaGroundRVObject.unit
+#print DiamondIntegral.Section3.GammaGroundRVObject.graphMap
+#print DiamondIntegral.Section3.GammaGroundRVObject.graphBijection
+#print DiamondIntegral.Section3.GammaGroundRVObject.projectionObject
+#print DiamondIntegral.Section3.GammaGroundRVObject.projectionIso
+#print DiamondIntegral.Section3.GammaGroundRVObject.empty
+#print DiamondIntegral.Section3.GammaGroundRVObject.restrict
+#print DiamondIntegral.Section3.gammaGroundRVScissor
+#print DiamondIntegral.Section3.gammaGroundRVPresentation
+#print DiamondIntegral.Section3.GammaGroundRVKPlus
+#print DiamondIntegral.Section3.gammaGroundRVClass
+#print DiamondIntegral.Section3.GradedGammaGroundRVObject
+#print DiamondIntegral.Section3.gradedGammaGroundRVScissor
+#print DiamondIntegral.Section3.gammaGroundRVSemiringPresentation
+#print DiamondIntegral.Section3.GammaGroundRVPositiveSemiring
+#print DiamondIntegral.Section3.GammaGroundRVGrothendieckRing
+#print DiamondIntegral.Section3.gammaGroundRVSemiringClass
+#print DiamondIntegral.Section3.gammaGroundRVKPlusToSemiring
+#print DiamondIntegral.Section3.gammaGroundRVSemiringUniversal
+#print DiamondIntegral.Section3.gammaGroundRVLeftTag
+#print DiamondIntegral.Section3.gammaGroundRVRightTag
+#print DiamondIntegral.Section3.gammaGroundRVUntagLeft
+#print DiamondIntegral.Section3.gammaGroundRVUntagRight
+#print DiamondIntegral.Section3.gammaGroundRVUnitAffineMap
+#print DiamondIntegral.Section3.rvUnitRawCoordinateImage
+#print DiamondIntegral.Section3.gammaGroundRVUnitSetOfBase
+#print DiamondIntegral.Section3.GammaGroundMap.unitGraphMap
+#print DiamondIntegral.Section3.GammaGroundMap.unitGraphBijection
+#print DiamondIntegral.Section3.GammaGroundMap.unitGraphLabel
+#print DiamondIntegral.Section3.gammaGroundRVUnitMixedRelation
+#print DiamondIntegral.Section3.gammaGroundRVUnitGammaPreimage
+#print DiamondIntegral.Section3.gammaGroundRVUnitToRVMap
+#print DiamondIntegral.Section3.gammaGroundRVUnitPresentationBijection
+#print DiamondIntegral.Section3.GammaGroundMap.unitRaw
+#print DiamondIntegral.Section3.gammaGroundRVUnitValueGraphProduct
+#print DiamondIntegral.Section3.gammaGroundRVUnitValueGraph
+#print DiamondIntegral.Section3.gammaGroundRVZeroPattern
+#print DiamondIntegral.Section3.gammaGroundRVPatternSource
+#print DiamondIntegral.Section3.gammaGroundRVPatternMap
+#print DiamondIntegral.Section3.gammaGroundRVNonzeroStratum
+#print DiamondIntegral.Section3.gammaGroundRVStratifiedObject
+#print DiamondIntegral.Section3.gammaGroundRVPatternTags
+#print DiamondIntegral.Section3.gammaGroundRVPatternFamily
+#print DiamondIntegral.Section3.gammaGroundRVPatternFold
+#print DiamondIntegral.Section3.gammaGroundRVPatternCarrierEquiv
+#print DiamondIntegral.Section3.realCodeSpace
+#print DiamondIntegral.Section3.realCodeDecodeMap
+#print DiamondIntegral.Section3.realCodeTupleMap
+#print DiamondIntegral.Section3.GammaGroundMap.graph
+#print DiamondIntegral.Section3.GammaGroundRawDefinable
+#print DiamondIntegral.Section3.rawTupleProjectionMap
+#print DiamondIntegral.Section3.GammaGroundDefSet.monoReal
+#print DiamondIntegral.Section3.GammaGroundMap.monoReal
+#print DiamondIntegral.Section3.gammaGroundRealPointFibre
+#print DiamondIntegral.Section3.gammaGroundRealPointFibreInclusion
+#print DiamondIntegral.Section3.GammaGroundMap.fibreSource
+#print DiamondIntegral.Section3.realPointInsertMap
+#print DiamondIntegral.Section3.GammaGroundMap.fibre
+#print DiamondIntegral.Section3.gammaGroundMeasureJacobianLeft
+#print DiamondIntegral.Section3.gammaGroundMeasureJacobianRight
+#print DiamondIntegral.Section3.gammaGroundRegularMeasureLocus
+#print DiamondIntegral.Section3.GammaGroundRelationDefinable
+#print DiamondIntegral.Section3.gammaGroundSingleFamilyBijection
+#print DiamondIntegral.Section3.gammaSortedRawRelation
+#print DiamondIntegral.Section3.gammaPowerRawRelation
+#print DiamondIntegral.Section3.gammaRelationOfPowerSet
+#print DiamondIntegral.Section3.gammaGroundGammaTail
+#print DiamondIntegral.Section3.gammaGroundGammaPositiveTail
+#print DiamondIntegral.Section3.gammaGroundGammaAnnulus
+#print DiamondIntegral.Section3.gammaGroundGammaTailTranslation
+#print DiamondIntegral.Section3.GammaGroundTopForm
+#print DiamondIntegral.Section3.GammaGroundVolumeForm.toTop
+#print DiamondIntegral.Section3.GammaGroundTopForm.mul
+#print DiamondIntegral.Section3.GammaGroundMap.valuation
+#print DiamondIntegral.Section3.gammaGroundRVUnitAffinePointBijection
+#print DiamondIntegral.Section3.gammaGroundGammaSingleAffinePointHom
+#print DiamondIntegral.Section3.GammaGroundUnaryPiecewiseIntegralAffine
+#print DiamondIntegral.Section3.GammaGroundGammaObject.unitCodeBijection
+#print DiamondIntegral.Section3.gammaGroundUnitFamilyBijectionOfRVLift
+#print DiamondIntegral.Section3.gammaGroundGammaHomOfUnitFamilyLift
+#print DiamondIntegral.Section3.GammaGroundGammaObject.unitFamily
+#print DiamondIntegral.Section3.gammaGroundUnitFullCodeTransport
+#print DiamondIntegral.Section3.gammaGroundGammaSingleHomOfUnitBijection
+#print DiamondIntegral.Section3.gammaGroundUnitPreimageProductBijection
+#print DiamondIntegral.Section3.GammaGroundShearDomain
+#print DiamondIntegral.Section3.gammaGroundGammaShear
+#print DiamondIntegral.Section3.gammaGroundRVUnitShear
+#print DiamondIntegral.Section3.GammaGroundUnmeasuredPositiveTensor
+#print DiamondIntegral.Section3.gammaGroundUnmeasuredTensorMap
+#print DiamondIntegral.Section3.gammaGroundUnmeasuredGroupTensorMap
+#print DiamondIntegral.Section3.GammaGroundVFObject
+#print DiamondIntegral.Section3.GammaGroundVFObject.raise
+#print DiamondIntegral.Section3.GammaGroundVFObject.restrict
+#print DiamondIntegral.Section3.GammaGroundVFObject.ofReal
+#print DiamondIntegral.Section3.GammaGroundVFObject.ofNamed
+#print DiamondIntegral.Section3.GammaGroundVFDiagramSupport
+#print DiamondIntegral.Section3.GammaGroundVFDiagramSupport.namedObject
+#print DiamondIntegral.Section3.GammaGroundVFDiagramSupport.namedArrow
+#print DiamondIntegral.Section3.GammaGroundVFObject.ofDimensions
+#print DiamondIntegral.Section3.gammaGroundVFKPlusToSemiring
+#print DiamondIntegral.Section3.gammaGroundFiniteVFSemiringAddEquiv
+#print DiamondIntegral.Section3.gammaGroundVFRaiseKPlus
+#print DiamondIntegral.Section3.gammaGroundVFToFiniteKPlus
+#print DiamondIntegral.Section3.gammaGroundVFGroupDiagram
+#print DiamondIntegral.Section3.gammaGroundVFGroupCocone
+#print DiamondIntegral.Section3.gammaGroundVFGroupIsColimit
+#print DiamondIntegral.Section3.CompatibleGammaGroundVFPositiveMaps
+#print DiamondIntegral.Section3.gammaGroundVFColimitInvariant
+#print DiamondIntegral.Section3.gammaGroundVFColimitLift
+#print DiamondIntegral.Section3.gammaGroundVFPositiveColimitUniversal
+#print DiamondIntegral.Section3.gammaGroundVFPositiveDiagram
+#print DiamondIntegral.Section3.gammaGroundVFPositiveCocone
+#print DiamondIntegral.Section3.gammaGroundVFCompatibleOfCocone
+#print DiamondIntegral.Section3.gammaGroundVFPositiveIsColimit
+#print DiamondIntegral.Section3.GammaGroundVFObject.empty
+#print DiamondIntegral.Section3.gammaGroundVFScissor
+#print DiamondIntegral.Section3.gammaGroundVFPresentation
+#print DiamondIntegral.Section3.GammaGroundVFKPlus
+#print DiamondIntegral.Section3.gammaGroundVFClass
+#print DiamondIntegral.Section3.gammaGroundVFSemiringPresentation
+#print DiamondIntegral.Section3.GammaGroundVFPositiveSemiring
+#print DiamondIntegral.Section3.GammaGroundVFGrothendieckRing
+#print DiamondIntegral.Section3.gammaGroundVFSemiringClass
+#print DiamondIntegral.Section3.gammaGroundFiniteVFKPlusToSemiring
+#print DiamondIntegral.Section3.gammaGroundFiniteVFCommSemiring
+#print DiamondIntegral.Section3.gammaGroundFiniteVFSemiringEquiv
+#print DiamondIntegral.Section3.gammaGroundVFSemiringColimitCocone
+#print DiamondIntegral.Section3.gammaGroundVFSemiringIsColimit
+#print DiamondIntegral.Section3.gammaGroundVFRingColimitCocone
+#print DiamondIntegral.Section3.gammaGroundVFRingIsColimit
+#print DiamondIntegral.Section3.gammaGroundOneForm
+#print DiamondIntegral.Section3.GammaGroundVolumeForm.mul
+#print DiamondIntegral.Section3.gammaGroundFiniteRVZeroObject
+#print DiamondIntegral.Section3.gammaGroundZeroRVVFEquivalence
+#print DiamondIntegral.Section3.gammaGroundZeroMeasuredRVVFEquivalence
+#print DiamondIntegral.Section3.gammaGroundZeroMeasuredRVLiftHom
+#print DiamondIntegral.Section3.gammaGroundZeroMeasuredRVToVF
+#print DiamondIntegral.Section3.gammaGroundZeroMeasuredRVPreimage
+#print DiamondIntegral.Section3.universalEmptyVFMap
+#print DiamondIntegral.Section3.universalRVInsertEmptyVF
+#print DiamondIntegral.Section3.gammaGroundZeroRVLiftBijection
+#print DiamondIntegral.Section3.gammaGroundZeroRVToVF
+#print DiamondIntegral.Section3.gammaRepresentative
+#print DiamondIntegral.Section3.gammaClassMul
+#print DiamondIntegral.Section3.gammaGroundGammaTranslate
+#print DiamondIntegral.Section3.gammaValuePrefix
+#print DiamondIntegral.Section3.gammaPartitionHom
+#print DiamondIntegral.Section3.gammaKPlusToIsoClasses
+#print DiamondIntegral.Section3.gammaProductCodeFunctionEquiv
+#print DiamondIntegral.Section3.gammaProductCodeBijection
+#print DiamondIntegral.Section3.gammaProductCarrierPieceEquiv
+#print DiamondIntegral.Section3.gammaProductCodePieceEquiv
+#print DiamondIntegral.Section3.GammaObject.productCarrierEquiv
+#print DiamondIntegral.Section3.GammaObject.productCodeEquiv
+#print DiamondIntegral.Section3.gammaProductRightDistribHom
+#print DiamondIntegral.Section3.gammaProductCommHom
+#print DiamondIntegral.Section3.gammaProductAssocHom
+#print DiamondIntegral.Section3.gammaProductRightUnitHom
+#print DiamondIntegral.Section3.gammaKPlusCast
+#print DiamondIntegral.Section3.gammaEmptyTagsIso
+#print DiamondIntegral.Section3.gammaProductEmptyIso
+#print DiamondIntegral.Section3.gammaEmptyProductIso
+#print DiamondIntegral.Section3.gammaProductFunctionEquiv
+#print DiamondIntegral.Section3.GammaHom.productCodes
+#print DiamondIntegral.Section3.GammaHom.product
+#print DiamondIntegral.Section3.gammaProductPair
+#print DiamondIntegral.Section3.gammaAppendMap
+#print DiamondIntegral.Section3.gammaAppendBijection
+#print DiamondIntegral.Section3.GammaObject.product
+#print DiamondIntegral.Section3.GammaObject.unit
+#print DiamondIntegral.Section3.FiniteGammaObject.product
+#print DiamondIntegral.Section3.FiniteGammaObject.unit
+#print DiamondIntegral.Section3.FiniteGammaObject.resLift
+#print DiamondIntegral.Section3.GammaPiece
+#print DiamondIntegral.Section3.gammaCodeTuple
+#print DiamondIntegral.Section3.gammaCodeToRV
+#print DiamondIntegral.Section3.gammaRVCodeLift
+#print DiamondIntegral.Section3.gammaRVCodeBijection
+#print DiamondIntegral.Section3.gammaRESCodeLift
+#print DiamondIntegral.Section3.gammaRVCodeIso
+#print DiamondIntegral.Section3.GammaObject.rvPieces
+#print DiamondIntegral.Section3.GammaObject.rvCodeBijection
+#print DiamondIntegral.Section3.GammaObject.rvLift
+#print DiamondIntegral.Section3.gammaRVSmallRow
+#print DiamondIntegral.Section3.gammaRVMinorityRelation
+#print DiamondIntegral.Section3.gammaRVMinority
+#print DiamondIntegral.Section3.gammaProductCode
+#print DiamondIntegral.Section3.gammaCodeLeft
+#print DiamondIntegral.Section3.gammaCodeRight
+#print DiamondIntegral.Section3.gammaCodeAppend
+#print DiamondIntegral.Section3.gammaRVProductFamilies
+#print DiamondIntegral.Section3.gammaRVProductBijection
+#print DiamondIntegral.Section3.gammaRVUnitBijection
+#print DiamondIntegral.Section3.gammaToRVKPlus
+#print DiamondIntegral.Section3.gammaCoprodEmptyRightHom
+#print DiamondIntegral.Section3.GammaObject.emptyPieces
+#print DiamondIntegral.Section3.GammaObject.empty
+#print DiamondIntegral.Section3.GammaObject.restrict
+#print DiamondIntegral.Section3.GammaObject.difference
+#print DiamondIntegral.Section3.MeasuredGammaObject.empty
+#print DiamondIntegral.Section3.MeasuredGammaObject.restrict
+#print DiamondIntegral.Section3.GammaScissor
+#print DiamondIntegral.Section3.gammaPresentation
+#print DiamondIntegral.Section3.GammaKPlus
+#print DiamondIntegral.Section3.GammaKGroup
+#print DiamondIntegral.Section3.gammaClass
+#print DiamondIntegral.Section3.MeasuredGammaScissor
+#print DiamondIntegral.Section3.measuredGammaPresentation
+#print DiamondIntegral.Section3.MeasuredGammaKPlus
+#print DiamondIntegral.Section3.MeasuredGammaKGroup
+#print DiamondIntegral.Section3.measuredGammaClass
+#print DiamondIntegral.Section3.GradedGammaObject
+#print DiamondIntegral.Section3.gradedGammaIso
+#print DiamondIntegral.Section3.gradedGammaScissor
+#print DiamondIntegral.Section3.gammaSemiringPresentation
+#print DiamondIntegral.Section3.GammaPositiveSemiring
+#print DiamondIntegral.Section3.GammaGrothendieckRing
+#print DiamondIntegral.Section3.gammaSemiringClass
+#print DiamondIntegral.Section3.gammaKPlusToSemiring
+#print DiamondIntegral.Section3.gammaToRVSemiringInvariant
+#print DiamondIntegral.Section3.gammaToRVSemiring
+#print DiamondIntegral.Section3.gammaTagHom
+#print DiamondIntegral.Section3.gammaCoprodCommIso
+#print DiamondIntegral.Section3.gammaCoprodAssocIso
+#print DiamondIntegral.Section3.gammaCoprodEmptyIso
+#print DiamondIntegral.Section3.gammaTopSpace
+#print DiamondIntegral.Section3.rvGammaTopMap
+#print DiamondIntegral.Section3.gammaTopValuationMap
+#print DiamondIntegral.Section3.gammaIncludeTopMap
+#print DiamondIntegral.Section3.gammaTopMultiplyMap
+#print DiamondIntegral.Section3.gammaVFCoordinateRow
+#print DiamondIntegral.Section3.GammaObject.coordinates
+#print DiamondIntegral.Section3.gammaTupleJacobian
+#print DiamondIntegral.Section3.MeasuredGammaObject
+#print DiamondIntegral.Section3.MeasuredGammaObject.weight
+#print DiamondIntegral.Section3.MeasuredGammaObject.combinedWeight
+#print DiamondIntegral.Section3.MeasuredGammaHom
+#print DiamondIntegral.Section3.MeasuredGammaHom.id
+#print DiamondIntegral.Section3.MeasuredGammaHom.comp
+#print DiamondIntegral.Section3.MeasuredGammaHom.symm
+#print DiamondIntegral.Section3.measuredFiniteGammaProperty
+#print DiamondIntegral.Section3.MeasuredFiniteGammaObject
+#print DiamondIntegral.Section3.rebaseSpace
+#print DiamondIntegral.Section3.volumeGammaSpace
+#print DiamondIntegral.Section3.GammaVolumeForm
+#print DiamondIntegral.Section3.gammaFormValue
+#print DiamondIntegral.Section3.diagonalWeightGroup
+#print DiamondIntegral.Section3.sourceDiagonalWeights
+#print DiamondIntegral.Section3.targetDiagonalWeights
+#print DiamondIntegral.Section3.diagonalWeightGroupEmbedding
+#print DiamondIntegral.Section3.genericFieldDiagonalEquiv
+#print DiamondIntegral.Section3.goodUnaryGammaRelation
+#print DiamondIntegral.Section3.gammaGroupDirectSumEquiv
+#print DiamondIntegral.Section3.finiteGammaGroupDirectSumEquiv
+#print DiamondIntegral.Section3.rvGroupDirectSumEquiv
+#print DiamondIntegral.Section3.measuredRVGroupDirectSumEquiv
+#print DiamondIntegral.Section3.measuredRESGroupDirectSumEquiv
+#print DiamondIntegral.Section3.ScissorPresentation
+#print DiamondIntegral.Section3.KPlus
+#print DiamondIntegral.Section3.KGroup
+#print DiamondIntegral.Section3.positiveClass
+#print DiamondIntegral.Section3.groupClass
+#print DiamondIntegral.Section3.groupUniversalEquiv
+#print DiamondIntegral.Section3.RingCompletion
+#print DiamondIntegral.Section3.relationIdeal
+#print DiamondIntegral.Section3.quotientToIdealQuotient
+#print DiamondIntegral.Section3.completionQuotientMap
+#print DiamondIntegral.Section3.idealQuotientToCompletion
+#print DiamondIntegral.Section3.completedCongruenceEquiv
+#print DiamondIntegral.Section3.groupifiedUnmeasuredRelation
+#print DiamondIntegral.Section3.groupifiedMeasuredRelation
+#print DiamondIntegral.Section3.NamedDefSet.changeName
+#print DiamondIntegral.Section3.NamedMap.changeName
+#print DiamondIntegral.Section3.NamedBijection.changeName
+#print DiamondIntegral.Section3.ImaginaryDefinable
+#print DiamondIntegral.Section3.NamedDefSet
+#print DiamondIntegral.Section3.realCodeParameters
+#print DiamondIntegral.Section3.NamedDefSet.overRealCode
+#print DiamondIntegral.Section3.NamedDefSet.ofReal
+#print DiamondIntegral.Section3.NamedDefSet.empty
+#print DiamondIntegral.Section3.NamedDefSet.univ
+#print DiamondIntegral.Section3.NamedDefSet.inter
+#print DiamondIntegral.Section3.NamedDefSet.union
+#print DiamondIntegral.Section3.NamedDefSet.compl
+#print DiamondIntegral.Section3.NamedDefSet.sdiff
+#print DiamondIntegral.Section3.integerCharacter
+#print DiamondIntegral.Section3.integerBasisMatrix
+#print DiamondIntegral.Section3.integerBasisInverseMatrix
+#print DiamondIntegral.Section3.integerMonomialBasisEquiv
+#print DiamondIntegral.Section3.integerMonomialMap
+#print DiamondIntegral.Section3.integerMonomialEquiv
+#print DiamondIntegral.Section3.integrationDiscBase
+#print DiamondIntegral.Section3.integrationDiscCode
+#print DiamondIntegral.Section3.integrationDiscProper
+#print DiamondIntegral.Section3.integrationDiscBody
+#print DiamondIntegral.Section3.integrationDiscCut
+#print DiamondIntegral.Section3.integrationDiscRadiusRows
+#print DiamondIntegral.Section3.integrationDiscInverseCarrier
+#print DiamondIntegral.Section3.integrationDiscInverseRelation
+#print DiamondIntegral.Section3.integrationDiscInverseTupleRelation
+#print DiamondIntegral.Section3.integrationRVCutRows
+#print DiamondIntegral.Section3.integrationDiscRadiiMap
+#print DiamondIntegral.Section3.integrationDiscPoint
+#print DiamondIntegral.Section3.integrationRadiiCodes
+#print DiamondIntegral.Section3.integrationDiscRecode
+#print DiamondIntegral.Section3.integrationDiscRecodePoint
+#print DiamondIntegral.Section3.integrationDiscNamesTuple
+#print DiamondIntegral.Section3.integrationGammaBase
+#print DiamondIntegral.Section3.integrationGammaRelation
+#print DiamondIntegral.Section3.integrationGammaRecode
+#print DiamondIntegral.Section3.integrationGammaRelationOfFull
+#print DiamondIntegral.Section3.integrationGammaTailRelation
+#print DiamondIntegral.Section3.integrationGammaTailRecode
+#print DiamondIntegral.Section3.integration_corollary_2_15
+#print DiamondIntegral.Section3.integration_corollary_2_34
+#print DiamondIntegral.Section3.integration_corollary_2_34_all_degrees
+#print DiamondIntegral.Section3.integration_lemma_3_2
+#print DiamondIntegral.Section3.integration_lemma_3_3
+#print DiamondIntegral.Section3.integration_lemma_3_4
+#print DiamondIntegral.Section3.integration_lemma_3_6
+#print DiamondIntegral.Section3.integration_corollary_3_7
+#print DiamondIntegral.Section3.integration_lemma_3_8
+#print DiamondIntegral.Section3.integration_lemma_3_9
+#print DiamondIntegral.Section3.integration_corollary_3_10
+#print DiamondIntegral.Section3.integration_lemma_3_11
+#print DiamondIntegral.Section3.integration_lemma_3_12_no_function
+#print DiamondIntegral.Section3.integration_lemma_3_12_no_finite_to_one
+#print DiamondIntegral.Section3.integration_lemma_3_13
+#print DiamondIntegral.Section3.integration_lemma_3_14
+#print DiamondIntegral.Section3.integration_lemma_3_15
+#print DiamondIntegral.Section3.integration_lemma_3_16
+#print DiamondIntegral.Section3.integration_corollary_3_17_ordinary
+#print DiamondIntegral.Section3.integration_corollary_3_17_conditional
+#print DiamondIntegral.Section3.integration_lemma_3_18
+#print DiamondIntegral.Section3.integration_proposition_3_19
+#print DiamondIntegral.Section3.integration_proposition_3_21
+#print DiamondIntegral.Section3.integration_lemma_3_22
+#print DiamondIntegral.Section3.integration_proposition_3_23
+#print DiamondIntegral.Section3.integration_proposition_3_24
+#print DiamondIntegral.Section3.integration_lemma_6_17
+#print DiamondIntegral.Section3.integration_proposition_6_18
+#print DiamondIntegral.Section3.integration_proposition_6_18_lift
+#print DiamondIntegral.Section3.integration_theorem_6_19
+#print DiamondIntegral.Section3.integration_theorem_6_19_lift
+#print DiamondIntegral.Section3.integration_theorem_6_19_characterization
+#print DiamondIntegral.Section3.integration_nonzero_basic_congruence
+#print DiamondIntegral.Section3.integration_nonzero_principal_ideal
+#print DiamondIntegral.Section3.integration_nonzero_completion_quotient
+#print DiamondIntegral.Section3.integration_nonzero_completion_quotient_of
+#print DiamondIntegral.Section3.integrationMixedRawMap
+#print DiamondIntegral.Section3.integrationMixedVFIndex
+#print DiamondIntegral.Section3.integrationMixedContext
+#print DiamondIntegral.Section3.IntegrationMixedPaperFibres
+#print DiamondIntegral.Section3.integrationTruthCell
+#print DiamondIntegral.Section3.integrationRawZeroPiece
+#print DiamondIntegral.Section3.objectLift
+#print DiamondIntegral.Section3.objectLiftVF
+#print DiamondIntegral.Section3.literalActiveCharacters
+#print DiamondIntegral.Section3.literalValueCell
+#print DiamondIntegral.Section3.EqualityValuePattern
+#print DiamondIntegral.Section3.equalityPatternCell
+#print DiamondIntegral.Section3.maskedEqualityCharacters
+#print DiamondIntegral.Section3.polynomialResiduePattern
+#print DiamondIntegral.Section3.maskedPolynomialCharacters
+#print DiamondIntegral.Section3.gammaGroundMatchedResidualBijection
+#print DiamondIntegral.Section3.gammaGroundConstantForm
+#print DiamondIntegral.Section3.GammaGroundMeasuredRESObject.shiftCombinedWeight
+#print DiamondIntegral.Section3.gammaGroundMeasuredGammaScalar
+#print DiamondIntegral.Section3.GammaGroundMeasuredGammaObject.shiftCombinedWeight
+#print DiamondIntegral.Section3.gammaGroundMeasuredGammaScalarRightUnitHom
+#print DiamondIntegral.Section3.measuredFiniteGammaDirectSumInvariant
+#print DiamondIntegral.Section3.measuredFiniteGammaPresentationToDirectSum
+#print DiamondIntegral.Section3.measuredFiniteGammaDirectSumToPresentationAdd
+#print DiamondIntegral.Section3.measuredFiniteGammaDirectSumToPresentation
+#print DiamondIntegral.Section3.measuredFiniteGammaSemiringEquivDirectSum
+#print DiamondIntegral.Section3.measuredFiniteGammaRepresentative
+#print DiamondIntegral.Section3.measuredFiniteGammaClassMul
+#print DiamondIntegral.Section3.MeasuredFiniteGammaDirectSum
+#print DiamondIntegral.Section3.measuredFiniteGammaDirectSumToGamma
+#print DiamondIntegral.Section3.measuredFiniteGammaDirectSumClass
+#print DiamondIntegral.Section3.measuredFiniteGammaGradedInclusion
+#print DiamondIntegral.Section3.MeasuredFiniteGammaObject.coprod
+#print DiamondIntegral.Section3.MeasuredFiniteGammaObject.restrict
+#print DiamondIntegral.Section3.MeasuredFiniteGammaObject.empty
+#print DiamondIntegral.Section3.measuredFiniteGammaPresentation
+#print DiamondIntegral.Section3.MeasuredFiniteGammaKPlus
+#print DiamondIntegral.Section3.measuredFiniteGammaClass
+#print DiamondIntegral.Section3.measuredFiniteGammaToGammaKPlus
+#print DiamondIntegral.Section3.GradedMeasuredFiniteGammaObject
+#print DiamondIntegral.Section3.gradedMeasuredFiniteGammaIso
+#print DiamondIntegral.Section3.gradedMeasuredFiniteGammaScissor
+#print DiamondIntegral.Section3.measuredFiniteGammaSemiringPresentation
+#print DiamondIntegral.Section3.MeasuredFiniteGammaPositiveSemiring
+#print DiamondIntegral.Section3.MeasuredFiniteGammaGrothendieckRing
+#print DiamondIntegral.Section3.measuredFiniteGammaSemiringClass
+#print DiamondIntegral.Section3.measuredFiniteGammaKPlusToSemiring
+#print DiamondIntegral.Section3.measuredFiniteGammaToGammaInvariant
+#print DiamondIntegral.Section3.measuredFiniteGammaToGammaSemiring
+#print DiamondIntegral.Section3.measuredFiniteGammaToRESInvariant
+#print DiamondIntegral.Section3.measuredFiniteGammaToRESSemiring
+#print DiamondIntegral.Section3.measuredResToRVSemiring
+#print DiamondIntegral.Section3.measuredFiniteGammaToRESKPlus
+#print DiamondIntegral.Section3.measuredGammaHomOfCodeIso
+#print DiamondIntegral.Section3.MeasuredGammaObject.codeCombined
+#print DiamondIntegral.Section3.measuredGammaProductCommHom
+#print DiamondIntegral.Section3.measuredGammaProductAssocHom
+#print DiamondIntegral.Section3.measuredGammaProductRightUnitHom
+#print DiamondIntegral.Section3.measuredGammaCoprodCommHom
+#print DiamondIntegral.Section3.MeasuredGammaHom.coprod
+#print DiamondIntegral.Section3.measuredGammaCoprodAssocHom
+#print DiamondIntegral.Section3.measuredGammaCoprodEmptyHom
+#print DiamondIntegral.Section3.measuredGammaCoproductIsoData
+#print DiamondIntegral.Section3.MeasuredGammaIsoClasses
+#print DiamondIntegral.Section3.measuredGammaIsoClass
+#print DiamondIntegral.Section3.MeasuredGammaObject.coprod
+#print DiamondIntegral.Section3.gammaGroundMeasuredGammaSingleHomOfWeightUnitBijection
+#print DiamondIntegral.Section3.gammaGroundPrefixRestrictedWeight
+#print DiamondIntegral.Section3.measuredGammaDirectSumInvariant
+#print DiamondIntegral.Section3.measuredGammaPresentationToDirectSum
+#print DiamondIntegral.Section3.measuredGammaDirectSumToPresentationAdd
+#print DiamondIntegral.Section3.measuredGammaDirectSumToPresentation
+#print DiamondIntegral.Section3.measuredGammaSemiringEquivDirectSum
+#print DiamondIntegral.Section3.MeasuredGammaDirectSum
+#print DiamondIntegral.Section3.measuredGammaDirectSumClass
+#print DiamondIntegral.Section3.measuredGammaGroupDirectSumEquiv
+#print DiamondIntegral.Section3.measuredFiniteGammaGroupDirectSumEquiv
+#print DiamondIntegral.Section3.measuredGammaRepresentative
+#print DiamondIntegral.Section3.measuredGammaClassMul
+#print DiamondIntegral.Section3.gammaGroundMeasuredGammaSingleMonomialHom
+#print DiamondIntegral.Section3.measuredGammaPartitionHom
+#print DiamondIntegral.Section3.measuredGammaKPlusToIsoClasses
+#print DiamondIntegral.Section3.gammaGroundMeasuredGammaSingleForm
+#print DiamondIntegral.Section3.measuredGammaProductRightDistribHom
+#print DiamondIntegral.Section3.measuredGammaKPlusCast
+#print DiamondIntegral.Section3.measuredGammaEmptyTagsHom
+#print DiamondIntegral.Section3.measuredGammaProductEmptyIso
+#print DiamondIntegral.Section3.measuredGammaEmptyProductIso
+#print DiamondIntegral.Section3.measuredGammaProductLiftHom
+#print DiamondIntegral.Section3.measuredGammaUnitLiftHom
+#print DiamondIntegral.Section3.MeasuredGammaHom.product
+#print DiamondIntegral.Section3.gammaProductLeft
+#print DiamondIntegral.Section3.gammaProductRight
+#print DiamondIntegral.Section3.MeasuredGammaObject.product
+#print DiamondIntegral.Section3.MeasuredGammaObject.unit
+#print DiamondIntegral.Section3.MeasuredFiniteGammaObject.product
+#print DiamondIntegral.Section3.MeasuredFiniteGammaObject.unit
+#print DiamondIntegral.Section3.GammaObject.rvEncodeCode
+#print DiamondIntegral.Section3.measuredGammaLiftForm
+#print DiamondIntegral.Section3.MeasuredGammaObject.rvLift
+#print DiamondIntegral.Section3.MeasuredFiniteGammaObject.resLift
+#print DiamondIntegral.Section3.gammaCodeFamilyBijection
+#print DiamondIntegral.Section3.measuredGammaRVHom
+#print DiamondIntegral.Section3.measuredGammaRVRestrictionHom
+#print DiamondIntegral.Section3.measuredGammaToRVKPlus
+#print DiamondIntegral.Section3.measuredGammaCoprodLeftCutHom
+#print DiamondIntegral.Section3.measuredGammaCoprodRightCutHom
+#print DiamondIntegral.Section3.GradedMeasuredGammaObject
+#print DiamondIntegral.Section3.gradedMeasuredGammaIso
+#print DiamondIntegral.Section3.gradedMeasuredGammaScissor
+#print DiamondIntegral.Section3.measuredGammaSemiringPresentation
+#print DiamondIntegral.Section3.MeasuredGammaPositiveSemiring
+#print DiamondIntegral.Section3.MeasuredGammaGrothendieckRing
+#print DiamondIntegral.Section3.measuredGammaSemiringClass
+#print DiamondIntegral.Section3.measuredGammaKPlusToSemiring
+#print DiamondIntegral.Section3.measuredGammaToRVSemiringInvariant
+#print DiamondIntegral.Section3.measuredGammaToRVSemiring
+#print DiamondIntegral.Section3.gammaGroundTranslatedGammaWeight
+#print DiamondIntegral.Section3.gammaGroundMeasuredGammaTranslatedPiece
+#print DiamondIntegral.Section3.objectLiftLabel
+#print DiamondIntegral.Section3.measuredLiftForm
+#print DiamondIntegral.Section3.measuredObjectLift
+#print DiamondIntegral.Section3.gammaGroundMeasuredMonomialPatchBoxMatch
+#print DiamondIntegral.Section3.gammaGroundMeasuredMonomialPatchLocalMatch
+#print DiamondIntegral.Section3.gammaGroundMeasuredGammaSingleWeightRestrictHom
+#print DiamondIntegral.Section3.GammaGroundMeasuredNativeTensorChart.nativeForm
+#print DiamondIntegral.Section3.GammaGroundRESUnitChart.measured
+#print DiamondIntegral.Section3.GammaGroundMeasuredNativeTensorChart
+#print DiamondIntegral.Section3.GammaGroundMeasuredNativeTensorChart.residue
+#print DiamondIntegral.Section3.GammaGroundMeasuredNativeTensorChart.gamma
+#print DiamondIntegral.Section3.GammaGroundMeasuredNativeTensorChart.value
+#print DiamondIntegral.Section3.GammaGroundMeasuredNativeTensorChart.object
+#print DiamondIntegral.Section3.GammaGroundMeasuredNativeTensorChart.bijection
+#print DiamondIntegral.Section3.GammaGroundMeasuredNativeTensorChart.ofPiece
+#print DiamondIntegral.Section3.GammaGroundMeasuredNativeTensorChart.restrictBox
+#print DiamondIntegral.Section3.measuredResDirectSumInvariant
+#print DiamondIntegral.Section3.measuredResPresentationToDirectSum
+#print DiamondIntegral.Section3.measuredResDirectSumToPresentationAdd
+#print DiamondIntegral.Section3.measuredResDirectSumToPresentation
+#print DiamondIntegral.Section3.measuredResSemiringEquivDirectSum
+#print DiamondIntegral.Section3.measuredResRepresentative
+#print DiamondIntegral.Section3.measuredResClassMul
+#print DiamondIntegral.Section3.MeasuredRESDirectSum
+#print DiamondIntegral.Section3.measuredResDirectSumToRV
+#print DiamondIntegral.Section3.measuredResDirectSumClass
+#print DiamondIntegral.Section3.measuredResGradedInclusion
+#print DiamondIntegral.Section3.measuredRESForgetInvariant
+#print DiamondIntegral.Section3.measuredRESForgetSemiring
+#print DiamondIntegral.Section3.MeasuredRESObject.coprod
+#print DiamondIntegral.Section3.MeasuredRESObject.product
+#print DiamondIntegral.Section3.MeasuredRESObject.unit
+#print DiamondIntegral.Section3.GradedMeasuredRESObject
+#print DiamondIntegral.Section3.gradedMeasuredRESIso
+#print DiamondIntegral.Section3.gradedMeasuredRESScissor
+#print DiamondIntegral.Section3.measuredRESSemiringPresentation
+#print DiamondIntegral.Section3.MeasuredRESPositiveSemiring
+#print DiamondIntegral.Section3.MeasuredRESGrothendieckRing
+#print DiamondIntegral.Section3.measuredRESSemiringClass
+#print DiamondIntegral.Section3.measuredRESKPlusToSemiring
+#print DiamondIntegral.Section3.measuredRESSemiringUniversal
+#print DiamondIntegral.Section3.gammaGroundMeasuredRESWeightFibre
+#print DiamondIntegral.Section3.measuredRVCoprodForm
+#print DiamondIntegral.Section3.MeasuredRVObject.coprod
+#print DiamondIntegral.Section3.measuredRVSpecialCongruence
+#print DiamondIntegral.Section3.measuredRVPrincipalElement
+#print DiamondIntegral.Section3.measuredRVSpecialCompletionEquiv
+#print DiamondIntegral.Section3.measuredRVDirectSumInvariant
+#print DiamondIntegral.Section3.measuredRVPresentationToDirectSum
+#print DiamondIntegral.Section3.measuredRVDirectSumToPresentationAdd
+#print DiamondIntegral.Section3.measuredRVDirectSumToPresentation
+#print DiamondIntegral.Section3.measuredRVSemiringEquivDirectSum
+#print DiamondIntegral.Section3.MeasuredRVDirectSum
+#print DiamondIntegral.Section3.measuredRVDirectSumClass
+#print DiamondIntegral.Section3.measuredRVRepresentative
+#print DiamondIntegral.Section3.measuredRVClassMul
+#print DiamondIntegral.Section3.measuredRVKPlusCast
+#print DiamondIntegral.Section3.MeasuredRVIsoClasses
+#print DiamondIntegral.Section3.measuredRVIsoClass
+#print DiamondIntegral.Section3.measuredRVRestrictionIsoOfCarrierEq
+#print DiamondIntegral.Section3.measuredRVKPlusToIsoClasses
+#print DiamondIntegral.Section3.MeasuredRVMapObject
+#print DiamondIntegral.Section3.MeasuredRVMap
+#print DiamondIntegral.Section3.measuredRVMapIsoOfHom
+#print DiamondIntegral.Section3.measuredRVHomOfMapIso
+#print DiamondIntegral.Section3.MeasuredRVMapObject.coprod
+#print DiamondIntegral.Section3.measuredRVMapInl
+#print DiamondIntegral.Section3.measuredRVMapInr
+#print DiamondIntegral.Section3.measuredRVMapDesc
+#print DiamondIntegral.Section3.measuredRVMapCoprodIsColimit
+#print DiamondIntegral.Section3.MeasuredRVMapObject.empty
+#print DiamondIntegral.Section3.measuredRVMapEmptyHom
+#print DiamondIntegral.Section3.measuredRVMapEmptyIsInitial
+#print DiamondIntegral.Section3.MeasuredRVMapObject.restrict
+#print DiamondIntegral.Section3.measuredRVUnionSubset
+#print DiamondIntegral.Section3.measuredRVUnionInl
+#print DiamondIntegral.Section3.measuredRVUnionInr
+#print DiamondIntegral.Section3.measuredRVUnionDesc
+#print DiamondIntegral.Section3.measuredRVUnionIsColimit
+#print DiamondIntegral.Section3.measuredRVCoprodUnionIso
+#print DiamondIntegral.Section3.RVObject.reindexVolume
+#print DiamondIntegral.Section3.MeasuredRVObject.reindexVolume
+#print DiamondIntegral.Section3.measuredRVProductAssocHom
+#print DiamondIntegral.Section3.measuredRVProductCommHom
+#print DiamondIntegral.Section3.measuredRVProductRightUnitHom
+#print DiamondIntegral.Section3.measuredRVProductRestrictionHom
+#print DiamondIntegral.Section3.measuredRVCoprodLeftRestrictionHom
+#print DiamondIntegral.Section3.measuredRVCoprodRightRestrictionHom
+#print DiamondIntegral.Section3.MeasuredRVObject.product
+#print DiamondIntegral.Section3.measuredRVProductHom
+#print DiamondIntegral.Section3.MeasuredRVObject.withZeroForm
+#print DiamondIntegral.Section3.MeasuredRVObject.unit
+#print DiamondIntegral.Section3.MeasuredRVSpecialQuotient
+#print DiamondIntegral.Section3.MeasuredRVGradingPolynomial
+#print DiamondIntegral.Section3.measuredRVPolynomialInvariant
+#print DiamondIntegral.Section3.measuredRVPolynomialMap
+#print DiamondIntegral.Section3.measuredRVQuotientGrading
+#print DiamondIntegral.Section3.RVVolumeForm.restrict
+#print DiamondIntegral.Section3.emptyRVVolumeForm
+#print DiamondIntegral.Section3.MeasuredRVObject.empty
+#print DiamondIntegral.Section3.MeasuredRVObject.restrict
+#print DiamondIntegral.Section3.MeasuredRVScissor
+#print DiamondIntegral.Section3.measuredRVPresentation
+#print DiamondIntegral.Section3.MeasuredRVKPlus
+#print DiamondIntegral.Section3.MeasuredRVKGroup
+#print DiamondIntegral.Section3.measuredRVClass
+#print DiamondIntegral.Section3.GradedMeasuredRVObject
+#print DiamondIntegral.Section3.gradedMeasuredRVIso
+#print DiamondIntegral.Section3.gradedMeasuredRVScissor
+#print DiamondIntegral.Section3.measuredRVSemiringPresentation
+#print DiamondIntegral.Section3.MeasuredRVPositiveSemiring
+#print DiamondIntegral.Section3.MeasuredRVGrothendieckRing
+#print DiamondIntegral.Section3.measuredRVSemiringClass
+#print DiamondIntegral.Section3.measuredRVKPlusToSemiring
+#print DiamondIntegral.Section3.measuredRVSemiringUniversal
+#print DiamondIntegral.Section3.GammaGroundMeasuredTensorResidual.weight
+#print DiamondIntegral.Section3.GammaGroundMeasuredTensorResidual.chart
+#print DiamondIntegral.Section3.GammaGroundMeasuredTensorResidual.object
+#print DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.sourceUnion
+#print DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.targetUnion
+#print DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.residualBijection
+#print DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.Seed
+#print DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.seed
+#print DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.seedTarget
+#print DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.seedMatch
+#print DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.gridMatching
+#print DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.Cell
+#print DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.MatchedIndex
+#print DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.sourceBox
+#print DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.targetParent
+#print DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.targetBox
+#print DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.data
+#print DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.sourceMap
+#print DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.targetMap
+#print DiamondIntegral.Section3.GammaGroundMeasuredTensorSourceGridMatching
+#print DiamondIntegral.Section3.gammaGroundMeasuredTensorSourceGridMatching
+#print DiamondIntegral.Section3.GammaGroundMeasuredTensorSourceGridMatching.Cell
+#print DiamondIntegral.Section3.GammaGroundMeasuredTensorSourceGridMatching.forget
+#print DiamondIntegral.Section3.gammaGroundMeasuredTensorBooleanCell
+#print DiamondIntegral.Section3.GammaGroundTensorBox.measuredValue
+#print DiamondIntegral.Section3.GammaGroundTensorBox.toMeasuredNativeChart
+#print DiamondIntegral.Section3.gammaGroundMeasuredCoefficientPair
+#print DiamondIntegral.Section3.gammaGroundMeasuredCoefficientCongruence
+#print DiamondIntegral.Section3.GammaGroundMeasuredCoefficientQuotient
+#print DiamondIntegral.Section3.gammaGroundMeasuredCoefficientQuotientMap
+#print DiamondIntegral.Section3.gammaGroundMeasuredRVDegreeProjection
+#print DiamondIntegral.Section3.gammaGroundMeasuredTensorPiecesInDegree
+#print DiamondIntegral.Section3.GammaGroundMeasuredTensorBoxMatch
+#print DiamondIntegral.Section3.GammaGroundMeasuredTensorBoxMatch.symm
+#print DiamondIntegral.Section3.GammaGroundMeasuredTensorBoxMatch.unsymm
+#print DiamondIntegral.Section3.GammaGroundMeasuredTensorLocalMatch
+#print DiamondIntegral.Section3.GammaGroundMeasuredTensorLocalMatch.forget
+#print DiamondIntegral.Section3.GammaGroundMeasuredTensorLocalMatch.symm
+#print DiamondIntegral.Section3.GammaGroundMeasuredTensorLocalMatch.unsymm
+#print DiamondIntegral.Section3.MeasuredPositiveTensor
+#print DiamondIntegral.Section3.measuredTensorMap
+#print DiamondIntegral.Section3.measuredGroupTensorMap
+#print DiamondIntegral.Section3.GammaGroundMeasuredTensorTerm
+#print DiamondIntegral.Section3.GammaGroundMeasuredTensorTerm.value
+#print DiamondIntegral.Section3.GammaGroundMeasuredTensorTerm.rvObject
+#print DiamondIntegral.Section3.gammaGroundMeasuredCoefficientQuotientEquiv
+#print DiamondIntegral.Section3.gammaGroundMeasuredCoefficientQuotientEquivDirectSum
+#print DiamondIntegral.Section3.gammaGroundMeasuredCoefficientQuotientDegreeInclusion
+#print DiamondIntegral.Section3.GammaGroundMeasuredRESObject.normalizeCombinedWeight
+#print DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.sourceFamily
+#print DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.targetFamily
+#print DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayer.Index
+#print DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayer.chart
+#print DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayer.map
+#print DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayer.weightForm
+#print DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayer.object
+#print DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerMatchEntry
+#print DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayer
+#print DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayer.unmeasured
+#print DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayer.topChart
+#print DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayer.lowerChart
+#print DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayer.topValue
+#print DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayer.value
+#print DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover
+#print DiamondIntegral.Section3.MeasuredVFData
+#print DiamondIntegral.Section3.MeasuredVFData.toObject
+#print DiamondIntegral.Section3.MeasuredVFData.ofObject
+#print DiamondIntegral.Section3.measuredVFDataEquiv
+#print DiamondIntegral.Section3.MeasuredVFData.empty
+#print DiamondIntegral.Section3.MeasuredVFData.restrict
+#print DiamondIntegral.Section3.MeasuredVFDirectSum
+#print DiamondIntegral.Section3.measuredVFDirectSumToSemiring
+#print DiamondIntegral.Section3.measuredRVToVFDirectSum
+#print DiamondIntegral.Section3.measuredVFDirectSumEquiv
+#print DiamondIntegral.Section3.measuredVFDirectSumClass
+#print DiamondIntegral.Section3.measuredVFDirectSumCommSemiring
+#print DiamondIntegral.Section3.measuredVFGradedSemiringEquiv
+#print DiamondIntegral.Section3.measuredVFGradedRingEquiv
+#print DiamondIntegral.Section3.measuredVFGroupDirectSumEquiv
+#print DiamondIntegral.Section3.measuredVFPolynomialGrading
+#print DiamondIntegral.Section3.PositiveMeasuredVF
+#print DiamondIntegral.Section3.PositiveMeasuredVF.weight
+#print DiamondIntegral.Section3.PositiveMeasuredVF.Representative
+#print DiamondIntegral.Section3.PositiveMeasuredVF.Germ
+#print DiamondIntegral.Section3.PositiveMeasuredVF.ofRepresentative
+#print DiamondIntegral.Section3.PositiveMeasuredVF.aeSetoid
+#print DiamondIntegral.Section3.PositiveMeasuredVF.quotientEquiv
+#print DiamondIntegral.Section3.measuredVFProductLeft
+#print DiamondIntegral.Section3.measuredVFProductRight
+#print DiamondIntegral.Section3.MeasuredVFData.product
+#print DiamondIntegral.Section3.MeasuredVFData.unit
+#print DiamondIntegral.Section3.measuredVFDataClass
+#print DiamondIntegral.Section3.ZeroMeasuredVF.empty
+#print DiamondIntegral.Section3.ZeroMeasuredVF.restrict
+#print DiamondIntegral.Section3.zeroMeasuredVFScissor
+#print DiamondIntegral.Section3.zeroMeasuredVFPresentation
+#print DiamondIntegral.Section3.zeroMeasuredVFClass
+#print DiamondIntegral.Section3.PositiveMeasuredVF.empty
+#print DiamondIntegral.Section3.PositiveMeasuredVF.restrict
+#print DiamondIntegral.Section3.positiveMeasuredVFScissor
+#print DiamondIntegral.Section3.positiveMeasuredVFPresentation
+#print DiamondIntegral.Section3.positiveMeasuredVFClass
+#print DiamondIntegral.Section3.MeasuredVFObject
+#print DiamondIntegral.Section3.measuredVFPresentation
+#print DiamondIntegral.Section3.MeasuredVFKPlus
+#print DiamondIntegral.Section3.MeasuredVFKGroup
+#print DiamondIntegral.Section3.GradedMeasuredVFData
+#print DiamondIntegral.Section3.gradedMeasuredVFIso
+#print DiamondIntegral.Section3.gradedMeasuredVFScissor
+#print DiamondIntegral.Section3.measuredVFSemiringPresentation
+#print DiamondIntegral.Section3.MeasuredVFPositiveSemiring
+#print DiamondIntegral.Section3.MeasuredVFGrothendieckRing
+#print DiamondIntegral.Section3.measuredVFDataSemiringClass
+#print DiamondIntegral.Section3.measuredVFObjectSemiringClass
+#print DiamondIntegral.Section3.measuredVFKPlusToSemiring
+#print DiamondIntegral.Section3.ZeroMeasuredVF
+#print DiamondIntegral.Section3.ZeroMeasuredVFHom
+#print DiamondIntegral.Section3.ZeroMeasuredVFHom.id
+#print DiamondIntegral.Section3.ZeroMeasuredVFHom.comp
+#print DiamondIntegral.Section3.ZeroMeasuredVFHom.symm
+#print DiamondIntegral.Section3.mixedGammaTupleDefinable
+#print DiamondIntegral.Section3.mixedValueProjection
+#print DiamondIntegral.Section3.mixedValueQuotient
+#print DiamondIntegral.Section3.GammaGroundRVProductMonomialPatch.sourceBox
+#print DiamondIntegral.Section3.GammaGroundRVProductMonomialPatch.targetBox
+#print DiamondIntegral.Section3.gammaGroundMonomialPatchBoxMatch
+#print DiamondIntegral.Section3.gammaGroundMonomialPatchLocalMatch
+#print DiamondIntegral.Section3.universalProductSwap
+#print DiamondIntegral.Section3.NamedMap.inverse
+#print DiamondIntegral.Section3.NamedBijection
+#print DiamondIntegral.Section3.NamedBijection.id
+#print DiamondIntegral.Section3.NamedBijection.comp
+#print DiamondIntegral.Section3.NamedBijection.symm
+#print DiamondIntegral.Section3.NamedBijection.overRealCode
+#print DiamondIntegral.Section3.universalProductFst
+#print DiamondIntegral.Section3.universalProductSnd
+#print DiamondIntegral.Section3.NamedMap
+#print DiamondIntegral.Section3.NamedMap.id
+#print DiamondIntegral.Section3.NamedMap.overRealCode
+#print DiamondIntegral.Section3.namedObjectLift
+#print DiamondIntegral.Section3.namedObjectLiftVF
+#print DiamondIntegral.Section3.universalTripleFirstSecond
+#print DiamondIntegral.Section3.universalTripleFirstThird
+#print DiamondIntegral.Section3.NamedMap.comp
+#print DiamondIntegral.Section3.NamedMap.image
+#print DiamondIntegral.Section3.NamedMap.toImage
+#print DiamondIntegral.Section3.NamedMap.FiniteFibres
+#print DiamondIntegral.Section3.NamedMap.pair
+#print DiamondIntegral.Section3.NamedMap.prodMap
+#print DiamondIntegral.Section3.NamedDefSet.prod
+#print DiamondIntegral.Section3.NamedMap.inclusion
+#print DiamondIntegral.Section3.NamedMap.restrict
+#print DiamondIntegral.Section3.NamedMap.corestrict
+#print DiamondIntegral.Section3.NamedMap.toUniv
+#print DiamondIntegral.Section3.NamedMap.ofReal
+#print DiamondIntegral.Section3.NamedMap.ofGlobal
+#print DiamondIntegral.Section3.NamedMap.prodFst
+#print DiamondIntegral.Section3.NamedMap.prodSnd
+#print DiamondIntegral.Section3.NamedRVObject.target
+#print DiamondIntegral.Section3.NamedGammaVolumeForm
+#print DiamondIntegral.Section3.namedGammaFormValue
+#print DiamondIntegral.Section3.NamedMeasuredRVObject
+#print DiamondIntegral.Section3.NamedMeasuredRVObject.combinedWeight
+#print DiamondIntegral.Section3.NamedMeasuredRVHom
+#print DiamondIntegral.Section3.NamedMeasuredRVHom.id
+#print DiamondIntegral.Section3.NamedMeasuredRVHom.comp
+#print DiamondIntegral.Section3.NamedMeasuredRVHom.symm
+#print DiamondIntegral.Section3.NamedMeasuredRVObject.overRealCode
+#print DiamondIntegral.Section3.NamedMeasuredRVHom.overRealCode
+#print DiamondIntegral.Section3.namedMeasuredRVToRealCode
+#print DiamondIntegral.Section3.namedMeasuredResProperty
+#print DiamondIntegral.Section3.NamedMeasuredRESObject
+#print DiamondIntegral.Section3.NamedRVObject
+#print DiamondIntegral.Section3.NamedRVObject.overRealCode
+#print DiamondIntegral.Section3.namedRVToRealCode
+#print DiamondIntegral.Section3.NamedRVObject.ofReal
+#print DiamondIntegral.Section3.namedResProperty
+#print DiamondIntegral.Section3.NamedRESObject
+#print DiamondIntegral.Section3.NamedRVObject.empty
+#print DiamondIntegral.Section3.NamedRVObject.restrict
+#print DiamondIntegral.Section3.namedRVScissor
+#print DiamondIntegral.Section3.namedRVPresentation
+#print DiamondIntegral.Section3.NamedRVKPlus
+#print DiamondIntegral.Section3.namedRVClass
+#print DiamondIntegral.Section3.NamedVFObject
+#print DiamondIntegral.Section3.NamedVFObject.overRealCode
+#print DiamondIntegral.Section3.namedVFToRealCode
+#print DiamondIntegral.Section3.NamedVFObject.raise
+#print DiamondIntegral.Section3.NamedVFObject.restrict
+#print DiamondIntegral.Section3.NamedVFObject.ofReal
+#print DiamondIntegral.Section3.gammaGroundTensorBoxInParent
+#print DiamondIntegral.Section3.gammaGroundTensorChildEnumeration
+#print DiamondIntegral.Section3.gammaGroundTensorChildren
+#print DiamondIntegral.Section3.GammaGroundTensorParentRemainderIndex
+#print DiamondIntegral.Section3.gammaGroundTensorParentRemainderBox
+#print DiamondIntegral.Section3.nativeGammaBoundaryCarrier
+#print DiamondIntegral.Section3.nativeGammaBoundaryRelation
+#print DiamondIntegral.Section3.gammaGroundNativeProductTransitionFree
+#print DiamondIntegral.Section3.gammaGroundNativeProductTransitionResidue
+#print DiamondIntegral.Section3.gammaGroundTensorGridBox
+#print DiamondIntegral.Section3.GammaGroundNativeTensorChart
+#print DiamondIntegral.Section3.GammaGroundNativeTensorChart.source
+#print DiamondIntegral.Section3.GammaGroundNativeTensorChart.value
+#print DiamondIntegral.Section3.GammaGroundNativeTensorChart.object
+#print DiamondIntegral.Section3.GammaGroundNativeTensorChart.bijection
+#print DiamondIntegral.Section3.GammaGroundNativeTensorChart.ofPiece
+#print DiamondIntegral.Section3.gammaGroundTensorGridNonempty
+#print DiamondIntegral.Section3.gammaGroundTensorGridSelected
+#print DiamondIntegral.Section3.GammaGroundTensorGridCoveredIndex
+#print DiamondIntegral.Section3.GammaGroundTensorGridUncoveredIndex
+#print DiamondIntegral.Section3.GammaGroundTensorBox.toNativeChart
+#print DiamondIntegral.Section3.gammaGroundNativeTensorListObject
+#print DiamondIntegral.Section3.gammaGroundNativeTensorListIndex
+#print DiamondIntegral.Section3.gammaGroundNativeTensorListComponent
+#print DiamondIntegral.Section3.gammaGroundNativeTensorListInjection
+#print DiamondIntegral.Section3.gammaGroundNativeTensorListInjectionOfEq
+#print DiamondIntegral.Section3.gammaGroundNativeTensorListPrefixIndex
+#print DiamondIntegral.Section3.gammaGroundNativeTensorListSuffixIndex
+#print DiamondIntegral.Section3.gammaGroundNativeTensorOfFnIndex
+#print DiamondIntegral.Section3.GammaGroundNormalizedMeasuredTensorPiece
+#print DiamondIntegral.Section3.GammaGroundNormalizedMeasuredTensorPiece.value
+#print DiamondIntegral.Section3.orderBoundary
+#print DiamondIntegral.Section3.LiteralValuePattern
+#print DiamondIntegral.Section3.literalPatternCell
+#print DiamondIntegral.Section3.literalPatternCharacters
+#print DiamondIntegral.Section3.literalPattern
+#print DiamondIntegral.Section3.gammaGroundUnmeasuredTensorDescend
+#print DiamondIntegral.Section3.gammaGroundMeasuredTensorDescend
+#print DiamondIntegral.Section3.universalPowerProjection
+#print DiamondIntegral.Section3.PresentedPredicateDefinable
+#print DiamondIntegral.Section3.finProductSumDistrib
+#print DiamondIntegral.Section3.integralFromKernel
+#print DiamondIntegral.Section3.RESObject.coprod
+#print DiamondIntegral.Section3.RESObject.unit
+#print DiamondIntegral.Section3.resRepresentative
+#print DiamondIntegral.Section3.resClassMul
+#print DiamondIntegral.Section3.RESDirectSum
+#print DiamondIntegral.Section3.resDirectSumToRV
+#print DiamondIntegral.Section3.resDirectSumClass
+#print DiamondIntegral.Section3.resGradedInclusion
+#print DiamondIntegral.Section3.RESObject.empty
+#print DiamondIntegral.Section3.RESObject.restrict
+#print DiamondIntegral.Section3.RESObject.product
+#print DiamondIntegral.Section3.resPresentation
+#print DiamondIntegral.Section3.RESKPlus
+#print DiamondIntegral.Section3.RESKGroup
+#print DiamondIntegral.Section3.resClass
+#print DiamondIntegral.Section3.resToRVKPlus
+#print DiamondIntegral.Section3.MeasuredRESObject.empty
+#print DiamondIntegral.Section3.MeasuredRESObject.restrict
+#print DiamondIntegral.Section3.measuredRESPresentation
+#print DiamondIntegral.Section3.MeasuredRESKPlus
+#print DiamondIntegral.Section3.MeasuredRESKGroup
+#print DiamondIntegral.Section3.measuredResClass
+#print DiamondIntegral.Section3.measuredResToRVKPlus
+#print DiamondIntegral.Section3.rvNonzeroTupleValueCode
+#print DiamondIntegral.Section3.GammaGroundRESUnitChart
+#print DiamondIntegral.Section3.gammaGroundRESUnitChart
+#print DiamondIntegral.Section3.GammaGroundRESUnitChart.restrict
+#print DiamondIntegral.Section3.RVAngularCell
+#print DiamondIntegral.Section3.rvAngularCoordinateCode
+#print DiamondIntegral.Section3.rvAngularCoordinateMap
+#print DiamondIntegral.Section3.rvAngularCoordinateBijection
+#print DiamondIntegral.Section3.RVAngularCell.gammaWeight
+#print DiamondIntegral.Section3.RVAngularCell.inverseFreeMatrix
+#print DiamondIntegral.Section3.RVAngularCell.inverseResidueCoefficient
+#print DiamondIntegral.Section3.RVAngularCell.inverseResidueMatrix
+#print DiamondIntegral.Section3.RVAngularCell.outputMonomialMatrix
+#print DiamondIntegral.Section3.RVAngularCell.outputCoefficientMatrix
+#print DiamondIntegral.Section3.rvUnitTupleValues
+#print DiamondIntegral.Section3.RVAngularCell.coordinateEquiv
+#print DiamondIntegral.Section3.RVAngularCell.coordinateImage
+#print DiamondIntegral.Section3.coordinateValueIndex
+#print DiamondIntegral.Section3.coordinateValueJoin
+#print DiamondIntegral.Section3.RVAngularCell.valueReconstruction
+#print DiamondIntegral.Section3.RVObject
+#print DiamondIntegral.Section3.RVObject.valueSupport
+#print DiamondIntegral.Section3.resProperty
+#print DiamondIntegral.Section3.RESObject
+#print DiamondIntegral.Section3.RVObject.toCompanion
+#print DiamondIntegral.Section3.clauseActiveCharacters
+#print DiamondIntegral.Section3.rvClauseValueCell
+#print DiamondIntegral.Section3.monomialGammaExpression
+#print DiamondIntegral.Section3.monomialGammaResidue
+#print DiamondIntegral.Section3.monomialGammaEqualValue
+#print DiamondIntegral.Section3.gammaGroundRVUnitSkewMap
+#print DiamondIntegral.Section3.gammaGroundRVUnitSkewBijection
+#print DiamondIntegral.Section3.gammaGroundRVUnitCoefficientTranslation
+#print DiamondIntegral.Section3.RVObject.coprod
+#print DiamondIntegral.Section3.RVObject.correspondence
+#print DiamondIntegral.Section3.RVObject.correspondenceFinitary
+#print DiamondIntegral.Section3.RVObject.targetOfImage
+#print DiamondIntegral.Section3.RVObject.correspondencePoint
+#print DiamondIntegral.Section3.RVObject.correspondenceJacobian
+#print DiamondIntegral.Section3.rvDNFRelabel
+#print DiamondIntegral.Section3.RVDNFValueCellIndex
+#print DiamondIntegral.Section3.rvDNFValueCell
+#print DiamondIntegral.Section3.allRVVariableEquiv
+#print DiamondIntegral.Section3.sourceVFFixedValues
+#print DiamondIntegral.Section3.sourceRVFixedParameters
+#print DiamondIntegral.Section3.rvSumGraph
+#print DiamondIntegral.Section3.cleanRV
+#print DiamondIntegral.Section3.cleanRVMap
+#print DiamondIntegral.Section3.rvFamilyDesc
+#print DiamondIntegral.Section3.rvFamilyMap
+#print DiamondIntegral.Section3.FamilyBijection.rvRealization
+#print DiamondIntegral.Section3.FiniteFamily.rvTarget
+#print DiamondIntegral.Section3.FiniteFamily.rvObject
+#print DiamondIntegral.Section3.rvFamilyIso
+#print DiamondIntegral.Section3.FiniteFamily.rvProduct
+#print DiamondIntegral.Section3.rvFamilyProductBranch
+#print DiamondIntegral.Section3.rvFamilyProductMap
+#print DiamondIntegral.Section3.rvFamilyProductBijection
+#print DiamondIntegral.Section3.familyRealizationPullEquiv
+#print DiamondIntegral.Section3.FamilyBijection.ofRVRealization
+#print DiamondIntegral.Section3.rvFamilyTag
+#print DiamondIntegral.Section3.rvFamilyTagMap
+#print DiamondIntegral.Section3.FiniteFamily.rvRealization
+#print DiamondIntegral.Section3.FiniteFamily.rvEncode
+#print DiamondIntegral.Section3.FiniteFamily.rvEquiv
+#print DiamondIntegral.Section3.rvFibreDimension
+#print DiamondIntegral.Section3.RVBoundedPositive
+#print DiamondIntegral.Section3.rvBoundedClass
+#print DiamondIntegral.Section3.rvBoundedInclude
+#print DiamondIntegral.Section3.rvBoundedTransition
+#print DiamondIntegral.Section3.rvBoundedSpecialHom
+#print DiamondIntegral.Section3.rvBoundedSpecialCongruence
+#print DiamondIntegral.Section3.rvBoundedQuotientTransition
+#print DiamondIntegral.Section3.gammaGroundRVListSum
+#print DiamondIntegral.Section3.gammaGroundRVListInjection
+#print DiamondIntegral.Section3.RVVolumeForm.toGammaVolumeForm
+#print DiamondIntegral.Section3.rvGammaNativeGraph
+#print DiamondIntegral.Section3.rvGammaRawGraph
+#print DiamondIntegral.Section3.GammaVolumeForm.toRVVolumeForm
+#print DiamondIntegral.Section3.rvVolumeFormEquiv
+#print DiamondIntegral.Section3.GammaValueFunctionData
+#print DiamondIntegral.Section3.gammaRVColumnValues
+#print DiamondIntegral.Section3.rvUnitGammaGraph
+#print DiamondIntegral.Section3.rvOneDomain
+#print DiamondIntegral.Section3.rvOneObject
+#print DiamondIntegral.Section3.rvPositiveDomain
+#print DiamondIntegral.Section3.rvPositiveObject
+#print DiamondIntegral.Section3.rvSpecialCongruence
+#print DiamondIntegral.Section3.rvPrincipalElement
+#print DiamondIntegral.Section3.rvSpecialCompletionEquiv
+#print DiamondIntegral.Section3.RVCoordinateInvariant
+#print DiamondIntegral.Section3.rvFullFibreGeneric
+#print DiamondIntegral.Section3.rvAngularMixedDomain
+#print DiamondIntegral.Section3.rvAngularResidueDomain
+#print DiamondIntegral.Section3.rvDNFLiterals
+#print DiamondIntegral.Section3.RVDNFGlobalPattern
+#print DiamondIntegral.Section3.rvDNFPatternCell
+#print DiamondIntegral.Section3.rvDNFPatternCharacters
+#print DiamondIntegral.Section3.rvDirectSumInvariant
+#print DiamondIntegral.Section3.rvPresentationToDirectSum
+#print DiamondIntegral.Section3.rvDirectSumToPresentationAdd
+#print DiamondIntegral.Section3.rvDirectSumToPresentation
+#print DiamondIntegral.Section3.rvSemiringEquivDirectSum
+#print DiamondIntegral.Section3.rvRepresentative
+#print DiamondIntegral.Section3.rvClassMul
+#print DiamondIntegral.Section3.RVDirectSum
+#print DiamondIntegral.Section3.rvDirectSumToAmbient
+#print DiamondIntegral.Section3.rvDirectSumClass
+#print DiamondIntegral.Section3.equalityGammaPattern
+#print DiamondIntegral.Section3.literalGammaPattern
+#print DiamondIntegral.Section3.globalGammaPattern
+#print DiamondIntegral.Section3.rvMixedValueProjectionMap
+#print DiamondIntegral.Section3.rvMonomialBasisBijection
+#print DiamondIntegral.Section3.rvMonomialCoefficient
+#print DiamondIntegral.Section3.rvMonomialSetMap
+#print DiamondIntegral.Section3.rvTorusUnitsEquiv
+#print DiamondIntegral.Section3.rvMonomialTorusMap
+#print DiamondIntegral.Section3.rvMonomialTorusBijection
+#print DiamondIntegral.Section3.GammaGroundRVProductMonomialPatch.restrict
+#print DiamondIntegral.Section3.GammaGroundRVProductMonomialPatch.restrictTarget
+#print DiamondIntegral.Section3.rvIntegerMonomialTerm
+#print DiamondIntegral.Section3.rvIntegerMonomialRawMap
+#print DiamondIntegral.Section3.RVProductPiece
+#print DiamondIntegral.Section3.rvNonzeroTupleCode
+#print DiamondIntegral.Section3.rvNonzeroTupleCodeMap
+#print DiamondIntegral.Section3.gammaGroundRVNonzeroTupleCodeMap
+#print DiamondIntegral.Section3.gammaGroundRVNonzeroTupleCodeBijection
+#print DiamondIntegral.Section3.rvNormalizedMapRelation
+#print DiamondIntegral.Section3.rvOriginalPointWeights
+#print DiamondIntegral.Section3.RVOriginalDiagonalWeightGroup
+#print DiamondIntegral.Section3.parameterTermFunction
+#print DiamondIntegral.Section3.rvMonomialParameterTerm
+#print DiamondIntegral.Section3.rvPatternCoordinateEquiv
+#print DiamondIntegral.Section3.rvPatternCoordinateImage
+#print DiamondIntegral.Section3.rvPatternFreeValueMap
+#print DiamondIntegral.Section3.rvAmbientHom
+#print DiamondIntegral.Section3.rvAmbientIso
+#print DiamondIntegral.Section3.AmbientRVKPlus
+#print DiamondIntegral.Section3.rvAmbientClass
+#print DiamondIntegral.Section3.rvToAmbientKPlus
+#print DiamondIntegral.Section3.gammaGroundProductSwap
+#print DiamondIntegral.Section3.GammaGroundRVProductMonomialPatch
+#print DiamondIntegral.Section3.GammaGroundRVProductMonomialPatch.source
+#print DiamondIntegral.Section3.GammaGroundRVProductMonomialPatch.targetGamma
+#print DiamondIntegral.Section3.GammaGroundRVProductMonomialPatch.target
+#print DiamondIntegral.Section3.GammaGroundRVProductMonomialPatch.bijection
+#print DiamondIntegral.Section3.gammaGroundRVUnitAffineProductBijection
+#print DiamondIntegral.Section3.RVObject.product
+#print DiamondIntegral.Section3.rvProductBijection
+#print DiamondIntegral.Section3.rvProductLeft
+#print DiamondIntegral.Section3.rvProductRight
+#print DiamondIntegral.Section3.RVObject.graphMap
+#print DiamondIntegral.Section3.RVObject.graphBijection
+#print DiamondIntegral.Section3.RVObject.projectionObject
+#print DiamondIntegral.Section3.RVObject.projectionIso
+#print DiamondIntegral.Section3.rvNormalizedPoint
+#print DiamondIntegral.Section3.rvNormalizedTuple
+#print DiamondIntegral.Section3.RVResidueField
+#print DiamondIntegral.Section3.residueUnitToRV
+#print DiamondIntegral.Section3.RVObject.empty
+#print DiamondIntegral.Section3.RVObject.restrict
+#print DiamondIntegral.Section3.RVObject.difference
+#print DiamondIntegral.Section3.RVScissor
+#print DiamondIntegral.Section3.rvPresentation
+#print DiamondIntegral.Section3.RVKPlus
+#print DiamondIntegral.Section3.RVKGroup
+#print DiamondIntegral.Section3.rvClass
+#print DiamondIntegral.Section3.RVObject.unit
+#print DiamondIntegral.Section3.GradedRVObject
+#print DiamondIntegral.Section3.gradedRVScissor
+#print DiamondIntegral.Section3.rvSemiringPresentation
+#print DiamondIntegral.Section3.RVPositiveSemiring
+#print DiamondIntegral.Section3.RVGrothendieckRing
+#print DiamondIntegral.Section3.rvSemiringClass
+#print DiamondIntegral.Section3.rvKPlusToSemiring
+#print DiamondIntegral.Section3.rvSemiringUniversal
+#print DiamondIntegral.Section3.unaryGammaTopMap
+#print DiamondIntegral.Section3.unaryRVGammaPiece
+#print DiamondIntegral.Section3.unaryRVValue
+#print DiamondIntegral.Section3.unaryRVScalarSet
+#print DiamondIntegral.Section3.unaryRVValueImage
+#print DiamondIntegral.Section3.unaryRVMixedValues
+#print DiamondIntegral.Section3.unaryRVFullValues
+#print DiamondIntegral.Section3.unaryRVExceptionalValues
+#print DiamondIntegral.Section3.unaryRVResiduePart
+#print DiamondIntegral.Section3.unaryRVCompletePart
+#print DiamondIntegral.Section3.gammaGroundRVUnitCoordinateTupleMap
+#print DiamondIntegral.Section3.gammaGroundRVUnitSparseTupleMap
+#print DiamondIntegral.Section3.GammaGroundRESAvailableValue
+#print DiamondIntegral.Section3.gammaGroundSparseValueTuple
+#print DiamondIntegral.Section3.rvUnitCoordinateDomain
+#print DiamondIntegral.Section3.gammaGroundRVUnitFullCodeBijection
+#print DiamondIntegral.Section3.gammaGroundRVUnitGammaCodeMap
+#print DiamondIntegral.Section3.gammaGroundRVUnitGammaCodeBijection
+#print DiamondIntegral.Section3.rvUnitGammaMap
+#print DiamondIntegral.Section3.rvUnitMixedRelation
+#print DiamondIntegral.Section3.rvUnitToRVMap
+#print DiamondIntegral.Section3.rvUnitPresentationBijection
+#print DiamondIntegral.Section3.rvUnitProductTuple
+#print DiamondIntegral.Section3.rvUnitProductTupleMap
+#print DiamondIntegral.Section3.gammaGroundRVUnitProductTupleMap
+#print DiamondIntegral.Section3.gammaGroundRVUnitProductTupleBijection
+#print DiamondIntegral.Section3.rvUnitSetOfRaw
+#print DiamondIntegral.Section3.rvUnitGammaPreimage
+#print DiamondIntegral.Section3.rvUnitRectangularMonomialCode
+#print DiamondIntegral.Section3.rvUnitRectangularMonomialMap
+#print DiamondIntegral.Section3.gammaGroundRVUnitRectangularMonomialMap
+#print DiamondIntegral.Section3.rvUnitValues
+#print DiamondIntegral.Section3.rawRVUnitSpace
+#print DiamondIntegral.Section3.rvUnitTupleMulMap
+#print DiamondIntegral.Section3.gammaGroundRVUnitTupleMulMap
+#print DiamondIntegral.Section3.rvUnitTupleProductMap
+#print DiamondIntegral.Section3.gammaGroundRVUnitTupleProductMap
+#print DiamondIntegral.Section3.gammaGroundRVUnitTupleProductBijection
+#print DiamondIntegral.Section3.rvUnitValueHom
+#print DiamondIntegral.Section3.literalValueMask
+#print DiamondIntegral.Section3.rvMonomialRelabel
+#print DiamondIntegral.Section3.rvPolynomialRelabel
+#print DiamondIntegral.Section3.rvLiteralRelabel
+#print DiamondIntegral.Section3.RVObject.target
+#print DiamondIntegral.Section3.RVVolumeForm
+#print DiamondIntegral.Section3.MeasuredRVObject
+#print DiamondIntegral.Section3.MeasuredRVObject.combinedWeight
+#print DiamondIntegral.Section3.MeasuredRVHom
+#print DiamondIntegral.Section3.MeasuredRVHom.id
+#print DiamondIntegral.Section3.MeasuredRVHom.comp
+#print DiamondIntegral.Section3.MeasuredRVHom.symm
+#print DiamondIntegral.Section3.measuredResProperty
+#print DiamondIntegral.Section3.MeasuredRESObject
+#print DiamondIntegral.Section3.rvZeroPattern
+#print DiamondIntegral.Section3.rvSelectCoordinates
+#print DiamondIntegral.Section3.rvPatternSource
+#print DiamondIntegral.Section3.rvPatternMap
+#print DiamondIntegral.Section3.rvNonzeroStratum
+#print DiamondIntegral.Section3.rvStratifiedObject
+#print DiamondIntegral.Section3.rvPatternTags
+#print DiamondIntegral.Section3.rvPatternFamily
+#print DiamondIntegral.Section3.rvPatternFold
+#print DiamondIntegral.Section3.rvPatternCarrierEquiv
+#print DiamondIntegral.Section3.GammaGroundTensorRankLayerMatchedFamily
+#print DiamondIntegral.Section3.GammaGroundTensorRankLayerMatchedFamily.union
+#print DiamondIntegral.Section3.GammaGroundTensorRankLayerMatchedFamily.residualObject
+#print DiamondIntegral.Section3.GammaGroundTensorRankLayerMatchedFamily.TopResidualIndex
+#print DiamondIntegral.Section3.GammaGroundTensorRankLayerMatchedFamily.ResidualIndex
+#print DiamondIntegral.Section3.GammaGroundTensorRankLayerMatchedFamily.remainderBox
+#print DiamondIntegral.Section3.GammaGroundTensorRankLayerMatchedFamily.residualChart
+#print DiamondIntegral.Section3.GammaGroundTensorRankLayerMatchedFamily.ambientMap
+#print DiamondIntegral.Section3.GammaGroundTensorRankLayerMatchedFamily.residualMap
+#print DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover.sourceUnion
+#print DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover.targetUnion
+#print DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover.residualBijection
+#print DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover.Seed
+#print DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover.seed
+#print DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover.seedTarget
+#print DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover.seedMatch
+#print DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover.gridMatching
+#print DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover.Cell
+#print DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover.MatchedIndex
+#print DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover.sourceBox
+#print DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover.targetParent
+#print DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover.targetBox
+#print DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover.data
+#print DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover.sourceMap
+#print DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover.targetMap
+#print DiamondIntegral.Section3.rawTupleSpace
+#print DiamondIntegral.Section3.diagonalWeightScaling
+#print DiamondIntegral.Section3.DiagonalBirationalEquiv
+#print DiamondIntegral.Section3.DiagonalBirationalEquiv.refl
+#print DiamondIntegral.Section3.DiagonalBirationalEquiv.symm
+#print DiamondIntegral.Section3.DiagonalBirationalEquiv.trans
+#print DiamondIntegral.Section3.ReichsteinYoussinInput
+#print DiamondIntegral.Section3.adjoinRVUnitTuple
+#print DiamondIntegral.Section3.goodGammaImage
+#print DiamondIntegral.Section3.gammaTupleColumnValues
+#print DiamondIntegral.Section3.gammaTupleFamilyValues
+#print DiamondIntegral.Section3.residuePolynomialCharacters
+#print DiamondIntegral.Section3.ringPresentationQuotientEquiv
+#print DiamondIntegral.Section3.ringPresentationDescend
+#print DiamondIntegral.Section3.regionCollapseCongruence
+#print DiamondIntegral.Section3.torusSingle
+#print DiamondIntegral.Section3.GammaGroundTensorSourceGridMatching
+#print DiamondIntegral.Section3.gammaGroundTensorSourceGridMatching
+#print DiamondIntegral.Section3.GammaGroundTensorSourceGridMatching.Cell
+#print DiamondIntegral.Section3.GammaGroundTensorSourceGridMatching.sourceMap
+#print DiamondIntegral.Section3.GammaGroundTensorSourceGridMatching.targetMap
+#print DiamondIntegral.Section3.gammaGroundTensorBooleanCell
+#print DiamondIntegral.Section3.GammaGroundTensorRemainderIndex
+#print DiamondIntegral.Section3.gammaGroundTensorRemainderBox
+#print DiamondIntegral.Section3.gammaGroundTensorNativeProductBijection
+#print DiamondIntegral.Section3.gammaGroundTensorCoefficientBijection
+#print DiamondIntegral.Section3.GammaGroundRESAvailableValueTuple
+#print DiamondIntegral.Section3.gammaGroundUnmeasuredCoefficientPair
+#print DiamondIntegral.Section3.gammaGroundUnmeasuredCoefficientCongruence
+#print DiamondIntegral.Section3.GammaGroundUnmeasuredCoefficientQuotient
+#print DiamondIntegral.Section3.gammaGroundUnmeasuredCoefficientQuotientMap
+#print DiamondIntegral.Section3.gammaGroundUnmeasuredTensorDegreeImage
+#print DiamondIntegral.Section3.gammaGroundRVObjectAtDegree
+#print DiamondIntegral.Section3.GammaGroundUnmeasuredTensorTerm.rvObjectAt
+#print DiamondIntegral.Section3.gammaGroundTensorListRVObject
+#print DiamondIntegral.Section3.gammaGroundTensorTermsInDegree
+#print DiamondIntegral.Section3.GammaGroundTensorBoxMatch.unsymm
+#print DiamondIntegral.Section3.GammaGroundTensorLocalMatch.unsymm
+#print DiamondIntegral.Section3.gammaGroundNativeProductDomain
+#print DiamondIntegral.Section3.GammaGroundTensorBox
+#print DiamondIntegral.Section3.GammaGroundTensorBox.source
+#print DiamondIntegral.Section3.GammaGroundTensorBox.value
+#print DiamondIntegral.Section3.GammaGroundTensorBox.inclusion
+#print DiamondIntegral.Section3.GammaGroundTensorBoxMatch
+#print DiamondIntegral.Section3.GammaGroundTensorBoxMatch.symm
+#print DiamondIntegral.Section3.GammaGroundTensorLocalMatch
+#print DiamondIntegral.Section3.GammaGroundTensorLocalMatch.symm
+#print DiamondIntegral.Section3.GammaGroundUnmeasuredTensorTerm
+#print DiamondIntegral.Section3.GammaGroundUnmeasuredTensorTerm.value
+#print DiamondIntegral.Section3.GammaGroundUnmeasuredTensorTerm.rvObject
+#print DiamondIntegral.Section3.GammaGroundUnmeasuredTensorPiece
+#print DiamondIntegral.Section3.GammaGroundUnmeasuredTensorPiece.asTerm
+#print DiamondIntegral.Section3.GammaGroundUnmeasuredTensorPiece.value
+#print DiamondIntegral.Section3.GammaGroundUnmeasuredTensorTerm.pieces
+#print DiamondIntegral.Section3.proposition_3_18_unmeasured
+#print DiamondIntegral.Section3.proposition_3_18_measured
+#print DiamondIntegral.Section3.proposition_3_18_unmeasured_graded
+#print DiamondIntegral.Section3.proposition_3_18_measured_graded
+#print DiamondIntegral.Section3.GammaGroundTensorRankLayer.object
+#print DiamondIntegral.Section3.GammaGroundTensorRankLayer.topIndex
+#print DiamondIntegral.Section3.GammaGroundTensorRankLayer.lowerIndex
+#print DiamondIntegral.Section3.GammaGroundTensorRankLayer.topMap
+#print DiamondIntegral.Section3.GammaGroundTensorRankLayer.lowerMap
+#print DiamondIntegral.Section3.GammaGroundTensorRankLayerMatchEntry
+#print DiamondIntegral.Section3.GammaGroundNativeTensorChart.asPiece
+#print DiamondIntegral.Section3.GammaGroundTensorRankLayer
+#print DiamondIntegral.Section3.GammaGroundTensorRankLayer.value
+#print DiamondIntegral.Section3.GammaGroundTensorRankLayer.topChart
+#print DiamondIntegral.Section3.GammaGroundTensorRankLayer.charts
+#print DiamondIntegral.Section3.positiveSigmaFinsetFibre
+#print DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover
+#print DiamondIntegral.Section3.GammaGroundTensorRectangle
+#print DiamondIntegral.Section3.GammaGroundTensorRectangle.residueObject
+#print DiamondIntegral.Section3.GammaGroundTensorRectangle.value
+#print DiamondIntegral.Section3.GammaGroundTensorRectangle.source
+#print DiamondIntegral.Section3.GammaGroundTensorRectangle.inside
+#print DiamondIntegral.Section3.GammaGroundTensorRectangle.outsideGamma
+#print DiamondIntegral.Section3.GammaGroundTensorRectangle.outsideResidue
+#print DiamondIntegral.Section3.GammaGroundTensorRectangle.split
+#print DiamondIntegral.Section3.GammaGroundTensorRectangle.refine
+#print DiamondIntegral.Section3.gammaGroundUnmeasuredGroupTensorDescend
+#print DiamondIntegral.Section3.proposition_3_18_unmeasured_ring
+#print DiamondIntegral.Section3.gammaGroundMeasuredGroupTensorDescend
+#print DiamondIntegral.Section3.proposition_3_18_measured_ring
+#print DiamondIntegral.Section3.GammaGroundUnmeasuredGroupTensor
+#print DiamondIntegral.Section3.gammaGroundUnmeasuredTensorCompletionEquiv
+#print DiamondIntegral.Section3.gammaGroundUnmeasuredTensorRelationIdeal
+#print DiamondIntegral.Section3.gammaGroundUnmeasuredGroupTensorQuotientEquiv
+#print DiamondIntegral.Section3.GammaGroundMeasuredGroupTensor
+#print DiamondIntegral.Section3.gammaGroundMeasuredTensorCompletionEquiv
+#print DiamondIntegral.Section3.gammaGroundMeasuredTensorRelationIdeal
+#print DiamondIntegral.Section3.gammaGroundMeasuredGroupTensorQuotientEquiv
+#print DiamondIntegral.Section3.universalTupleRVMap
+#print DiamondIntegral.Section3.universalLiftGraphMap
+#print DiamondIntegral.Section3.UnmeasuredPositiveTensor
+#print DiamondIntegral.Section3.unmeasuredTensorMap
+#print DiamondIntegral.Section3.unmeasuredGroupTensorMap
+#print DiamondIntegral.Section3.gammaGroundTensorPiecesInDegree
+#print DiamondIntegral.Section3.gammaGroundUnmeasuredCoefficientQuotientEquiv
+#print DiamondIntegral.Section3.gammaGroundUnmeasuredCoefficientQuotientEquivDirectSum
+#print DiamondIntegral.Section3.gammaGroundUnmeasuredCoefficientQuotientDegreeInclusion
+#print DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover.sourceFamily
+#print DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover.targetFamily
+#print DiamondIntegral.Section3.VFObject
+#print DiamondIntegral.Section3.VFObject.raise
+#print DiamondIntegral.Section3.vfObjectOfFiniteFibres
+#print DiamondIntegral.Section3.VFObject.restrict
+#print DiamondIntegral.Section3.VFObject.empty
+#print DiamondIntegral.Section3.VFObject.toCompanionFinite
+#print DiamondIntegral.Section3.VFObject.coprod
+#print DiamondIntegral.Section3.vfRaiseKPlus
+#print DiamondIntegral.Section3.MixedFiniteFibres
+#print DiamondIntegral.Section3.vfFiniteDomainClass
+#print DiamondIntegral.Section3.vfGroupDiagram
+#print DiamondIntegral.Section3.vfGroupCocone
+#print DiamondIntegral.Section3.vfGroupIsColimit
+#print DiamondIntegral.Section3.CompatibleVFPositiveMaps
+#print DiamondIntegral.Section3.vfColimitInvariant
+#print DiamondIntegral.Section3.vfColimitLift
+#print DiamondIntegral.Section3.vfPositiveColimitUniversal
+#print DiamondIntegral.Section3.vfPositiveDiagram
+#print DiamondIntegral.Section3.vfPositiveCocone
+#print DiamondIntegral.Section3.vfCompatibleOfCocone
+#print DiamondIntegral.Section3.vfPositiveIsColimit
+#print DiamondIntegral.Section3.vfCompanionFiniteIso
+#print DiamondIntegral.Section3.vfBijectionOfFiniteIso
+#print DiamondIntegral.Section3.vfToFiniteKPlus
+#print DiamondIntegral.Section3.VFObject.toCompanionAll
+#print DiamondIntegral.Section3.VFObject.unit
+#print DiamondIntegral.Section3.VFObject.product
+#print DiamondIntegral.Section3.vfProductBijection
+#print DiamondIntegral.Section3.VFObject.difference
+#print DiamondIntegral.Section3.VFScissor
+#print DiamondIntegral.Section3.vfPresentation
+#print DiamondIntegral.Section3.VFKPlus
+#print DiamondIntegral.Section3.VFKGroup
+#print DiamondIntegral.Section3.vfClass
+#print DiamondIntegral.Section3.FilteredVFObject
+#print DiamondIntegral.Section3.filteredVFScissor
+#print DiamondIntegral.Section3.vfSemiringPresentation
+#print DiamondIntegral.Section3.VFPositiveSemiring
+#print DiamondIntegral.Section3.VFGrothendieckRing
+#print DiamondIntegral.Section3.vfSemiringClass
+#print DiamondIntegral.Section3.vfKPlusToSemiring
+#print DiamondIntegral.Section3.vfSemiringUniversal
+#print DiamondIntegral.Section3.vfObjectOfCompanionFinite
+#print DiamondIntegral.Section3.vfSemiringToFiniteInvariant
+#print DiamondIntegral.Section3.vfSemiringToFinite
+#print DiamondIntegral.Section3.vfFiniteToSemiringInvariant
+#print DiamondIntegral.Section3.vfFiniteToSemiringAdd
+#print DiamondIntegral.Section3.vfFiniteToSemiring
+#print DiamondIntegral.Section3.vfSemiringEquivFinite
+#print DiamondIntegral.Section3.RVCharacterPair
+#print DiamondIntegral.Section3.valueCharacterTwistHom
+#print DiamondIntegral.Section3.valueCharacterTwistEquiv
+#print DiamondIntegral.Section3.rvOriginalGroundCharacterTwist
+#print DiamondIntegral.Section3.rvCharacterResidueScalar
+#print DiamondIntegral.Section3.unitsEquivExtendZero
+#print DiamondIntegral.Section3.rvOriginalGroundCharacterTwistZero
+#print DiamondIntegral.Section3.mixedFibreValues
+#print DiamondIntegral.Section3.fullFibreValues
+#print DiamondIntegral.Section3.PositiveMeasuredVF.positiveMeasuredVFGroupoid
+#print DiamondIntegral.Section3.additiveCompletionFunctorLeftAdjoint
+#print DiamondIntegral.Section3.coproductIsoClassesAdd
+#print DiamondIntegral.Section3.coproductIsoClassesAddCommMonoid
+#print DiamondIntegral.Section3.coproductIsoClassesZero
+#print DiamondIntegral.Section3.finiteGammaDirectSumCommMonoid
+#print DiamondIntegral.Section3.finiteGammaDirectSumCommSemiring
+#print DiamondIntegral.Section3.finiteGammaGammaAlgebra
+#print DiamondIntegral.Section3.finiteGammaKPlusDistributivity
+#print DiamondIntegral.Section3.finiteGammaKPlusGMul
+#print DiamondIntegral.Section3.finiteGammaKPlusGOne
+#print DiamondIntegral.Section3.finiteGammaRESAlgebra
+#print DiamondIntegral.Section3.gammaCodeMapCategory
+#print DiamondIntegral.Section3.gammaGroundDefSetCoeSort
+#print DiamondIntegral.Section3.gammaGroundFiniteGammaDirectSumCommMonoid
+#print DiamondIntegral.Section3.gammaGroundFiniteGammaDirectSumCommSemiring
+#print DiamondIntegral.Section3.gammaGroundFiniteGammaGammaAlgebra
+#print DiamondIntegral.Section3.gammaGroundFiniteGammaKPlusDistributivity
+#print DiamondIntegral.Section3.gammaGroundFiniteGammaKPlusGMul
+#print DiamondIntegral.Section3.gammaGroundFiniteGammaKPlusGOne
+#print DiamondIntegral.Section3.gammaGroundFiniteGammaRESAlgebra
+#print DiamondIntegral.Section3.gammaGroundFiniteVFObjectGroupoid
+#print DiamondIntegral.Section3.gammaGroundGammaCodeMapCategory
+#print DiamondIntegral.Section3.gammaGroundGammaKPlusGCommMonoid
+#print DiamondIntegral.Section3.gammaGroundGammaKPlusGCommSemiring
+#print DiamondIntegral.Section3.gammaGroundGammaKPlusGMul
+#print DiamondIntegral.Section3.gammaGroundGammaKPlusGNonUnitalNonAssocSemiring
+#print DiamondIntegral.Section3.gammaGroundGammaKPlusGOne
+#print DiamondIntegral.Section3.gammaGroundGammaKPlusGSemiring
+#print DiamondIntegral.Section3.gammaGroundGammaObjectGroupoid
+#print DiamondIntegral.Section3.gammaGroundMapCoeFun
+#print DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaDirectSumCommMonoid
+#print DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaDirectSumCommSemiring
+#print DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaGammaAlgebra
+#print DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaKPlusDistributivity
+#print DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaKPlusGMul
+#print DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaKPlusGOne
+#print DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaRESAlgebra
+#print DiamondIntegral.Section3.gammaGroundMeasuredGammaGroupoid
+#print DiamondIntegral.Section3.gammaGroundMeasuredGammaKPlusGCommMonoid
+#print DiamondIntegral.Section3.gammaGroundMeasuredGammaKPlusGCommSemiring
+#print DiamondIntegral.Section3.gammaGroundMeasuredGammaKPlusGMul
+#print DiamondIntegral.Section3.gammaGroundMeasuredGammaKPlusGNonUnitalNonAssocSemiring
+#print DiamondIntegral.Section3.gammaGroundMeasuredGammaKPlusGOne
+#print DiamondIntegral.Section3.gammaGroundMeasuredGammaKPlusGSemiring
+#print DiamondIntegral.Section3.gammaGroundMeasuredPositiveFiniteGammaSemiring
+#print DiamondIntegral.Section3.gammaGroundMeasuredPositiveGammaSemiring
+#print DiamondIntegral.Section3.gammaGroundMeasuredRESDirectSumCommMonoid
+#print DiamondIntegral.Section3.gammaGroundMeasuredRESDirectSumCommSemiring
+#print DiamondIntegral.Section3.gammaGroundMeasuredRESKPlusDistributivity
+#print DiamondIntegral.Section3.gammaGroundMeasuredRESKPlusGMul
+#print DiamondIntegral.Section3.gammaGroundMeasuredRESKPlusGOne
+#print DiamondIntegral.Section3.gammaGroundMeasuredRVGradingCoefficientSemiring
+#print DiamondIntegral.Section3.gammaGroundMeasuredRVGroupoid
+#print DiamondIntegral.Section3.gammaGroundMeasuredRVKPlusGCommMonoid
+#print DiamondIntegral.Section3.gammaGroundMeasuredRVKPlusGCommSemiring
+#print DiamondIntegral.Section3.gammaGroundMeasuredRVKPlusGMul
+#print DiamondIntegral.Section3.gammaGroundMeasuredRVKPlusGNonUnitalNonAssocSemiring
+#print DiamondIntegral.Section3.gammaGroundMeasuredRVKPlusGOne
+#print DiamondIntegral.Section3.gammaGroundMeasuredRVKPlusGSemiring
+#print DiamondIntegral.Section3.gammaGroundMeasuredRVMapCategory
+#print DiamondIntegral.Section3.gammaGroundMeasuredRVMapHasBinaryCoproducts
+#print DiamondIntegral.Section3.gammaGroundMeasuredRVMapHasColimitPair
+#print DiamondIntegral.Section3.gammaGroundMeasuredRVMapHasInitial
+#print DiamondIntegral.Section3.gammaGroundMeasuredRVMapMonoidal
+#print DiamondIntegral.Section3.gammaGroundMeasuredRVMapSymmetric
+#print DiamondIntegral.Section3.gammaGroundMeasuredTensorFiniteGammaRing
+#print DiamondIntegral.Section3.gammaGroundMeasuredTensorGammaRing
+#print DiamondIntegral.Section3.gammaGroundMeasuredTensorRVRing
+#print DiamondIntegral.Section3.gammaGroundMeasuredTensorRing
+#print DiamondIntegral.Section3.gammaGroundRESDirectSumCommMonoid
+#print DiamondIntegral.Section3.gammaGroundRESDirectSumCommSemiring
+#print DiamondIntegral.Section3.gammaGroundRESKPlusDistributivity
+#print DiamondIntegral.Section3.gammaGroundRESKPlusGMul
+#print DiamondIntegral.Section3.gammaGroundRESKPlusGOne
+#print DiamondIntegral.Section3.gammaGroundRVKPlusGCommMonoid
+#print DiamondIntegral.Section3.gammaGroundRVKPlusGCommSemiring
+#print DiamondIntegral.Section3.gammaGroundRVKPlusGMul
+#print DiamondIntegral.Section3.gammaGroundRVKPlusGNonUnitalNonAssocSemiring
+#print DiamondIntegral.Section3.gammaGroundRVKPlusGOne
+#print DiamondIntegral.Section3.gammaGroundRVKPlusGSemiring
+#print DiamondIntegral.Section3.gammaGroundRVMapCategory
+#print DiamondIntegral.Section3.gammaGroundRVMapHasBinaryCoproducts
+#print DiamondIntegral.Section3.gammaGroundRVMapHasColimitPair
+#print DiamondIntegral.Section3.gammaGroundRVMapHasInitial
+#print DiamondIntegral.Section3.gammaGroundRVMapHomCoeFun
+#print DiamondIntegral.Section3.gammaGroundRVMapMonoidal
+#print DiamondIntegral.Section3.gammaGroundRVMapSymmetric
+#print DiamondIntegral.Section3.gammaGroundRVObjectGroupoid
+#print DiamondIntegral.Section3.gammaGroundUnmeasuredPositiveFiniteGammaSemiring
+#print DiamondIntegral.Section3.gammaGroundUnmeasuredPositiveGammaSemiring
+#print DiamondIntegral.Section3.gammaGroundUnmeasuredTensorFiniteGammaRing
+#print DiamondIntegral.Section3.gammaGroundUnmeasuredTensorGammaRing
+#print DiamondIntegral.Section3.gammaGroundUnmeasuredTensorRVRing
+#print DiamondIntegral.Section3.gammaGroundUnmeasuredTensorRing
+#print DiamondIntegral.Section3.gammaGroundVFObjectGroupoid
+#print DiamondIntegral.Section3.gammaGroundZeroMeasuredRVToVF_faithful
+#print DiamondIntegral.Section3.gammaGroundZeroMeasuredRVToVF_full
+#print DiamondIntegral.Section3.gammaGroundZeroMeasuredVFGroupoid
+#print DiamondIntegral.Section3.gammaGroundZeroRVToVF_faithful
+#print DiamondIntegral.Section3.gammaGroundZeroRVToVF_full
+#print DiamondIntegral.Section3.gammaKPlusGCommMonoid
+#print DiamondIntegral.Section3.gammaKPlusGCommSemiring
+#print DiamondIntegral.Section3.gammaKPlusGMul
+#print DiamondIntegral.Section3.gammaKPlusGNonUnitalNonAssocSemiring
+#print DiamondIntegral.Section3.gammaKPlusGOne
+#print DiamondIntegral.Section3.gammaKPlusGSemiring
+#print DiamondIntegral.Section3.gammaObjectGroupoid
+#print DiamondIntegral.Section3.instGroupoidMeasuredRVObject
+#print DiamondIntegral.Section3.instGroupoidRVObject
+#print DiamondIntegral.Section3.instGroupoidVFObject
+#print DiamondIntegral.Section3.instGroupoidZeroMeasuredVF
+#print DiamondIntegral.Section3.literalValuePattern_finite
+#print DiamondIntegral.Section3.measuredFiniteGammaDirectSumCommMonoid
+#print DiamondIntegral.Section3.measuredFiniteGammaDirectSumCommSemiring
+#print DiamondIntegral.Section3.measuredFiniteGammaGammaAlgebra
+#print DiamondIntegral.Section3.measuredFiniteGammaKPlusDistributivity
+#print DiamondIntegral.Section3.measuredFiniteGammaKPlusGMul
+#print DiamondIntegral.Section3.measuredFiniteGammaKPlusGOne
+#print DiamondIntegral.Section3.measuredFiniteGammaRESAlgebra
+#print DiamondIntegral.Section3.measuredGammaGroupoid
+#print DiamondIntegral.Section3.measuredGammaKPlusGCommMonoid
+#print DiamondIntegral.Section3.measuredGammaKPlusGCommSemiring
+#print DiamondIntegral.Section3.measuredGammaKPlusGMul
+#print DiamondIntegral.Section3.measuredGammaKPlusGNonUnitalNonAssocSemiring
+#print DiamondIntegral.Section3.measuredGammaKPlusGOne
+#print DiamondIntegral.Section3.measuredGammaKPlusGSemiring
+#print DiamondIntegral.Section3.measuredRVGradingCoefficientSemiring
+#print DiamondIntegral.Section3.measuredRVKPlusGCommMonoid
+#print DiamondIntegral.Section3.measuredRVKPlusGCommSemiring
+#print DiamondIntegral.Section3.measuredRVKPlusGMul
+#print DiamondIntegral.Section3.measuredRVKPlusGNonUnitalNonAssocSemiring
+#print DiamondIntegral.Section3.measuredRVKPlusGOne
+#print DiamondIntegral.Section3.measuredRVKPlusGSemiring
+#print DiamondIntegral.Section3.measuredRVMapCategory
+#print DiamondIntegral.Section3.measuredRVMapHasBinaryCoproducts
+#print DiamondIntegral.Section3.measuredRVMapHasColimitPair
+#print DiamondIntegral.Section3.measuredRVMapHasInitial
+#print DiamondIntegral.Section3.measuredRVMapMonoidal
+#print DiamondIntegral.Section3.measuredRVMapSymmetric
+#print DiamondIntegral.Section3.measuredResDirectSumCommMonoid
+#print DiamondIntegral.Section3.measuredResDirectSumCommSemiring
+#print DiamondIntegral.Section3.measuredResKPlusDistributivity
+#print DiamondIntegral.Section3.measuredResKPlusGMul
+#print DiamondIntegral.Section3.measuredResKPlusGOne
+#print DiamondIntegral.Section3.measuredVFObjectGroupoid
+#print DiamondIntegral.Section3.namedDefSetCoeSort
+#print DiamondIntegral.Section3.namedMapCoeFun
+#print DiamondIntegral.Section3.namedMeasuredRVGroupoid
+#print DiamondIntegral.Section3.namedMeasuredRVToGammaGroundFaithful
+#print DiamondIntegral.Section3.namedMeasuredRVToRealCodeFaithful
+#print DiamondIntegral.Section3.namedRVObjectGroupoid
+#print DiamondIntegral.Section3.namedRVToGammaGroundFaithful
+#print DiamondIntegral.Section3.namedRVToRealCodeFaithful
+#print DiamondIntegral.Section3.namedVFObjectGroupoid
+#print DiamondIntegral.Section3.namedVFToGammaGroundFaithful
+#print DiamondIntegral.Section3.namedVFToRealCodeFaithful
+#print DiamondIntegral.Section3.resDirectSumCommMonoid
+#print DiamondIntegral.Section3.resDirectSumCommSemiring
+#print DiamondIntegral.Section3.resKPlusDistributivity
+#print DiamondIntegral.Section3.resKPlusGMul
+#print DiamondIntegral.Section3.resKPlusGOne
+#print DiamondIntegral.Section3.ringCompletionAlgebra
+#print DiamondIntegral.Section3.rvDNFGlobalPattern_finite
+#print DiamondIntegral.Section3.rvDNFValueCellIndex_finite
+#print DiamondIntegral.Section3.rvDirectSumCommMonoid
+#print DiamondIntegral.Section3.rvDirectSumCommSemiring
+#print DiamondIntegral.Section3.rvKPlusDistributivity
+#print DiamondIntegral.Section3.rvKPlusGMul
+#print DiamondIntegral.Section3.rvKPlusGOne
+#check @DiamondIntegral.Section3.finite_parameters_countable_algclosed_subfield
+#print axioms DiamondIntegral.Section3.finite_parameters_countable_algclosed_subfield
+#check @DiamondIntegral.Section3.acf_definable_countable_algclosed_coefficients
+#print axioms DiamondIntegral.Section3.acf_definable_countable_algclosed_coefficients
+#check @DiamondIntegral.Section3.acf_qf_conjugate_invariant
+#print axioms DiamondIntegral.Section3.acf_qf_conjugate_invariant
+#check @DiamondIntegral.Section3.acf_formula_conjugate_invariant
+#print axioms DiamondIntegral.Section3.acf_formula_conjugate_invariant
+#check @DiamondIntegral.Section3.acf_singleton_formula_mem_subfield
+#print axioms DiamondIntegral.Section3.acf_singleton_formula_mem_subfield
+#check @DiamondIntegral.Section3.acf_definable_singleton_mem_subfield
+#print axioms DiamondIntegral.Section3.acf_definable_singleton_mem_subfield
+#check @DiamondIntegral.Section3.acf_definable_graph_value_mem_adjoin
+#print axioms DiamondIntegral.Section3.acf_definable_graph_value_mem_adjoin
+#check @DiamondIntegral.Section3.acf_definable_graph_value_rational
+#print axioms DiamondIntegral.Section3.acf_definable_graph_value_rational
+#check @DiamondIntegral.Section3.acf_definable_relation_coordinates_mem_adjoin
+#print axioms DiamondIntegral.Section3.acf_definable_relation_coordinates_mem_adjoin
+#check @DiamondIntegral.Section3.acf_definable_bijection_adjoin_eq
+#print axioms DiamondIntegral.Section3.acf_definable_bijection_adjoin_eq
+#check @DiamondIntegral.Section3.acf_dependent_family_countable_algclosed_coefficients
+#print axioms DiamondIntegral.Section3.acf_dependent_family_countable_algclosed_coefficients
+#check @DiamondIntegral.Section3.acf_definable_diagonal_monomial_weights
+#print axioms DiamondIntegral.Section3.acf_definable_diagonal_monomial_weights
+#check @DiamondIntegral.Section3.acf_finite_family_countable_algclosed_coefficients
+#print axioms DiamondIntegral.Section3.acf_finite_family_countable_algclosed_coefficients
+#check @DiamondIntegral.Section3.acfGenericBirationalEquiv_evaluate
+#print axioms DiamondIntegral.Section3.acfGenericBirationalEquiv_evaluate
+#check @DiamondIntegral.Section3.acf_generic_diagonal_graph_output
+#print axioms DiamondIntegral.Section3.acf_generic_diagonal_graph_output
+#check @DiamondIntegral.Section3.acfGenericBirationalEquiv_diagonal
+#print axioms DiamondIntegral.Section3.acfGenericBirationalEquiv_diagonal
+#check @DiamondIntegral.Section3.acf_definable_partition_unique_generic
+#print axioms DiamondIntegral.Section3.acf_definable_partition_unique_generic
+#check @DiamondIntegral.Section3.acf_definable_bijection_target_independent
+#print axioms DiamondIntegral.Section3.acf_definable_bijection_target_independent
+#check @DiamondIntegral.Section3.algebraicallyIndependent_coordinate_ne_zero
+#print axioms DiamondIntegral.Section3.algebraicallyIndependent_coordinate_ne_zero
+#check @DiamondIntegral.Section3.acf_independent_diagonal_scale
+#print axioms DiamondIntegral.Section3.acf_independent_diagonal_scale
+#check @DiamondIntegral.Section3.acf_independent_coordinate_replacements_infinite
+#print axioms DiamondIntegral.Section3.acf_independent_coordinate_replacements_infinite
+#check @DiamondIntegral.Section3.acf_generic_coordinate_side_infinite
+#print axioms DiamondIntegral.Section3.acf_generic_coordinate_side_infinite
+#check @DiamondIntegral.Section3.acf_independent_formula_iff
+#print axioms DiamondIntegral.Section3.acf_independent_formula_iff
+#check @DiamondIntegral.Section3.acf_independent_definable_iff
+#print axioms DiamondIntegral.Section3.acf_independent_definable_iff
+#check @DiamondIntegral.Section3.acf_formula_intermediate_embedding
+#print axioms DiamondIntegral.Section3.acf_formula_intermediate_embedding
+#check @DiamondIntegral.Section3.acf_definable_intermediate_embedding
+#print axioms DiamondIntegral.Section3.acf_definable_intermediate_embedding
+#check @DiamondIntegral.Section3.affineMonomial_parameter_injective
+#print axioms DiamondIntegral.Section3.affineMonomial_parameter_injective
+#check @DiamondIntegral.Section3.gammaGroundRVProduct_residue_output_injective
+#print axioms DiamondIntegral.Section3.gammaGroundRVProduct_residue_output_injective
+#check @DiamondIntegral.Section3.character_extends_of_divisible
+#print axioms DiamondIntegral.Section3.character_extends_of_divisible
+#check @DiamondIntegral.Section3.algebraicallyClosed_character_extends
+#print axioms DiamondIntegral.Section3.algebraicallyClosed_character_extends
+#check @DiamondIntegral.Section3.balancedSquareMap_tmul
+#print axioms DiamondIntegral.Section3.balancedSquareMap_tmul
+#check @DiamondIntegral.Section3.balancedSquareMap_unique
+#print axioms DiamondIntegral.Section3.balancedSquareMap_unique
+#check @DiamondIntegral.Section3.balancedTensorMap_tmul
+#print axioms DiamondIntegral.Section3.balancedTensorMap_tmul
+#check @DiamondIntegral.Section3.balancedTensorMap_unique
+#print axioms DiamondIntegral.Section3.balancedTensorMap_unique
+#check @DiamondIntegral.Section3.gammaGroundBalancedEvaluation_respects_coefficient_pairs
+#print axioms DiamondIntegral.Section3.gammaGroundBalancedEvaluation_respects_coefficient_pairs
+#check @DiamondIntegral.Section3.gammaGroundBalancedEvaluationOnRV_tensor
+#print axioms DiamondIntegral.Section3.gammaGroundBalancedEvaluationOnRV_tensor
+#check @DiamondIntegral.Section3.gammaGroundBalancedEvaluationOnRV_objects
+#print axioms DiamondIntegral.Section3.gammaGroundBalancedEvaluationOnRV_objects
+#check @DiamondIntegral.Section3.gammaGroundBalancedEvaluationOnRV_on_RES
+#print axioms DiamondIntegral.Section3.gammaGroundBalancedEvaluationOnRV_on_RES
+#check @DiamondIntegral.Section3.gammaGroundBalancedEvaluationOnRV_unique
+#print axioms DiamondIntegral.Section3.gammaGroundBalancedEvaluationOnRV_unique
+#check @DiamondIntegral.Section3.boundedVFFibre_card_le
+#print axioms DiamondIntegral.Section3.boundedVFFibre_card_le
+#check @DiamondIntegral.Section3.boundedVFFibre_mem
+#print axioms DiamondIntegral.Section3.boundedVFFibre_mem
+#check @DiamondIntegral.Section3.boundedVFFibre_definable
+#print axioms DiamondIntegral.Section3.boundedVFFibre_definable
+#check @DiamondIntegral.Section3.boundedVFFibre_code_definable
+#print axioms DiamondIntegral.Section3.boundedVFFibre_code_definable
+#check @DiamondIntegral.Section3.boundedVFFibre_code_injective
+#print axioms DiamondIntegral.Section3.boundedVFFibre_code_injective
+#check @DiamondIntegral.Section3.integerCharacter_add
+#print axioms DiamondIntegral.Section3.integerCharacter_add
+#check @DiamondIntegral.Section3.integerCharacter_zero
+#print axioms DiamondIntegral.Section3.integerCharacter_zero
+#check @DiamondIntegral.Section3.characterValueImage_zero_finite
+#print axioms DiamondIntegral.Section3.characterValueImage_zero_finite
+#check @DiamondIntegral.Section3.characterValueImage_add_finite
+#print axioms DiamondIntegral.Section3.characterValueImage_add_finite
+#check @DiamondIntegral.Section3.characterValueImage_smul_finite
+#print axioms DiamondIntegral.Section3.characterValueImage_smul_finite
+#check @DiamondIntegral.Section3.characterValueImage_span_finite
+#print axioms DiamondIntegral.Section3.characterValueImage_span_finite
+#check @DiamondIntegral.Section3.smith_basis_coordinate_values_finite
+#print axioms DiamondIntegral.Section3.smith_basis_coordinate_values_finite
+#check @DiamondIntegral.Section3.boundedUnmeasuredIntegral_characterization
+#print axioms DiamondIntegral.Section3.boundedUnmeasuredIntegral_characterization
+#check @DiamondIntegral.Section3.boundedLift_transition
+#print axioms DiamondIntegral.Section3.boundedLift_transition
+#check @DiamondIntegral.Section3.boundedUnmeasuredIntegral_lift
+#print axioms DiamondIntegral.Section3.boundedUnmeasuredIntegral_lift
+#check @DiamondIntegral.Section3.boundedUnmeasuredIntegral_transition
+#print axioms DiamondIntegral.Section3.boundedUnmeasuredIntegral_transition
+#check @DiamondIntegral.Section3.measuredPositiveIntegral_characterization
+#print axioms DiamondIntegral.Section3.measuredPositiveIntegral_characterization
+#check @DiamondIntegral.Section3.degreeMeasuredIntegral_characterization
+#print axioms DiamondIntegral.Section3.degreeMeasuredIntegral_characterization
+#check @DiamondIntegral.Section3.unmeasuredPositiveIntegral_characterization
+#print axioms DiamondIntegral.Section3.unmeasuredPositiveIntegral_characterization
+#check @DiamondIntegral.Section3.codeDecode_surjective
+#print axioms DiamondIntegral.Section3.codeDecode_surjective
+#check @DiamondIntegral.Section3.FiniteFamily.decode_surjective
+#print axioms DiamondIntegral.Section3.FiniteFamily.decode_surjective
+#check @DiamondIntegral.Section3.codedGammaBoundary_definable
+#print axioms DiamondIntegral.Section3.codedGammaBoundary_definable
+#check @DiamondIntegral.Section3.codedGammaBoundary_iff
+#print axioms DiamondIntegral.Section3.codedGammaBoundary_iff
+#check @DiamondIntegral.Section3.common_names_gamma_definable_elimination
+#print axioms DiamondIntegral.Section3.common_names_gamma_definable_elimination
+#check @DiamondIntegral.Section3.completedKernelQuotientEquiv_of
+#print axioms DiamondIntegral.Section3.completedKernelQuotientEquiv_of
+#check @DiamondIntegral.Section3.completedKernelQuotientEquiv_comp
+#print axioms DiamondIntegral.Section3.completedKernelQuotientEquiv_comp
+#check @DiamondIntegral.Section3.relationIdeal_eq_completed_kernel
+#print axioms DiamondIntegral.Section3.relationIdeal_eq_completed_kernel
+#check @DiamondIntegral.Section3.transportedRelationIdeal_eq_map
+#print axioms DiamondIntegral.Section3.transportedRelationIdeal_eq_map
+#check @DiamondIntegral.Section3.transportedRelationIdeal_eq_kernel
+#print axioms DiamondIntegral.Section3.transportedRelationIdeal_eq_kernel
+#check @DiamondIntegral.Section3.completionAddHom_ext
+#print axioms DiamondIntegral.Section3.completionAddHom_ext
+#check @DiamondIntegral.Section3.completionDirectSumForward_of
+#print axioms DiamondIntegral.Section3.completionDirectSumForward_of
+#check @DiamondIntegral.Section3.completionDirectSumBackward_of
+#print axioms DiamondIntegral.Section3.completionDirectSumBackward_of
+#check @DiamondIntegral.Section3.completionDirectSumEquiv_of
+#print axioms DiamondIntegral.Section3.completionDirectSumEquiv_of
+#check @DiamondIntegral.Section3.ringCompletionCongr_of
+#print axioms DiamondIntegral.Section3.ringCompletionCongr_of
+#check @DiamondIntegral.Section3.semiringIntegralFromKernel_characterization
+#print axioms DiamondIntegral.Section3.semiringIntegralFromKernel_characterization
+#check @DiamondIntegral.Section3.additiveCompletionMap_of
+#print axioms DiamondIntegral.Section3.additiveCompletionMap_of
+#check @DiamondIntegral.Section3.additiveCompletionMap_id
+#print axioms DiamondIntegral.Section3.additiveCompletionMap_id
+#check @DiamondIntegral.Section3.additiveCompletionMap_comp
+#print axioms DiamondIntegral.Section3.additiveCompletionMap_comp
+#check @DiamondIntegral.Section3.ringCompletionMap_surjective
+#print axioms DiamondIntegral.Section3.ringCompletionMap_surjective
+#check @DiamondIntegral.Section3.ringCompletionMap_of
+#print axioms DiamondIntegral.Section3.ringCompletionMap_of
+#check @DiamondIntegral.Section3.ringCompletionScalar_of
+#print axioms DiamondIntegral.Section3.ringCompletionScalar_of
+#check @DiamondIntegral.Section3.completionTensor_square
+#print axioms DiamondIntegral.Section3.completionTensor_square
+#check @DiamondIntegral.Section3.toCompletionTensor_tmul
+#print axioms DiamondIntegral.Section3.toCompletionTensor_tmul
+#check @DiamondIntegral.Section3.fromCompletionTensor_square
+#print axioms DiamondIntegral.Section3.fromCompletionTensor_square
+#check @DiamondIntegral.Section3.fromCompletionTensor_tmul
+#print axioms DiamondIntegral.Section3.fromCompletionTensor_tmul
+#check @DiamondIntegral.Section3.ringCompletionTensorEquiv_tmul
+#print axioms DiamondIntegral.Section3.ringCompletionTensorEquiv_tmul
+#check @DiamondIntegral.Section3.groupifiedTensorIso_tmul
+#print axioms DiamondIntegral.Section3.groupifiedTensorIso_tmul
+#check @DiamondIntegral.Section3.coordinateProductChart_fst
+#print axioms DiamondIntegral.Section3.coordinateProductChart_fst
+#check @DiamondIntegral.Section3.coordinateProductChart_snd
+#print axioms DiamondIntegral.Section3.coordinateProductChart_snd
+#check @DiamondIntegral.Section3.coordinateProductChart_fixed_cover
+#print axioms DiamondIntegral.Section3.coordinateProductChart_fixed_cover
+#check @DiamondIntegral.Section3.coordinateProductChart_free_cover
+#print axioms DiamondIntegral.Section3.coordinateProductChart_free_cover
+#check @DiamondIntegral.Section3.coproductIsoClass_eq_iff
+#print axioms DiamondIntegral.Section3.coproductIsoClass_eq_iff
+#check @DiamondIntegral.Section3.coproductIsoClass_coprod
+#print axioms DiamondIntegral.Section3.coproductIsoClass_coprod
+#check @DiamondIntegral.Section3.DefinableBijection.inverseImage_subset
+#print axioms DiamondIntegral.Section3.DefinableBijection.inverseImage_subset
+#check @DiamondIntegral.Section3.DefinableBijection.ext
+#print axioms DiamondIntegral.Section3.DefinableBijection.ext
+#check @DiamondIntegral.Section3.DefinableBijection.symm_apply_apply
+#print axioms DiamondIntegral.Section3.DefinableBijection.symm_apply_apply
+#check @DiamondIntegral.Section3.DefinableBijection.apply_symm_apply
+#print axioms DiamondIntegral.Section3.DefinableBijection.apply_symm_apply
+#check @DiamondIntegral.Section3.IsDefinablePoint.map
+#print axioms DiamondIntegral.Section3.IsDefinablePoint.map
+#check @DiamondIntegral.Section3.definableBijection_has_point_iff
+#print axioms DiamondIntegral.Section3.definableBijection_has_point_iff
+#check @DiamondIntegral.Section3.finite_columns_of_finite_tests
+#print axioms DiamondIntegral.Section3.finite_columns_of_finite_tests
+#check @DiamondIntegral.Section3.finite_columns_of_definable_separating_tests
+#print axioms DiamondIntegral.Section3.finite_columns_of_definable_separating_tests
+#check @DiamondIntegral.Section3.diagonalWeightScaling_eq_refl
+#print axioms DiamondIntegral.Section3.diagonalWeightScaling_eq_refl
+#check @DiamondIntegral.Section3.DiagonalBirationalEquiv.annihilates_target
+#print axioms DiamondIntegral.Section3.DiagonalBirationalEquiv.annihilates_target
+#check @DiamondIntegral.Section3.DiagonalBirationalEquiv.annihilator_iff
+#print axioms DiamondIntegral.Section3.DiagonalBirationalEquiv.annihilator_iff
+#check @DiamondIntegral.Section3.DiagonalBirationalEquiv.faithful_weights
+#print axioms DiamondIntegral.Section3.DiagonalBirationalEquiv.faithful_weights
+#check @DiamondIntegral.Section3.DiagonalBirationalEquiv.monomial_weights
+#print axioms DiamondIntegral.Section3.DiagonalBirationalEquiv.monomial_weights
+#check @DiamondIntegral.Section3.diagonalPolynomialEquiv_X
+#print axioms DiamondIntegral.Section3.diagonalPolynomialEquiv_X
+#check @DiamondIntegral.Section3.diagonalRationalEquiv_variable
+#print axioms DiamondIntegral.Section3.diagonalRationalEquiv_variable
+#check @DiamondIntegral.Section3.torusRationalVariable_ne_zero
+#print axioms DiamondIntegral.Section3.torusRationalVariable_ne_zero
+#check @DiamondIntegral.Section3.diagonalRationalEquiv_one
+#print axioms DiamondIntegral.Section3.diagonalRationalEquiv_one
+#check @DiamondIntegral.Section3.character_eq_one_of_joint_generators
+#print axioms DiamondIntegral.Section3.character_eq_one_of_joint_generators
+#check @DiamondIntegral.Section3.diagonalWeightsFaithful_of_generators
+#print axioms DiamondIntegral.Section3.diagonalWeightsFaithful_of_generators
+#check @DiamondIntegral.Section3.equality_payload_depends_on_active_characters
+#print axioms DiamondIntegral.Section3.equality_payload_depends_on_active_characters
+#check @DiamondIntegral.Section3.equalityActiveCharacters_finite
+#print axioms DiamondIntegral.Section3.equalityActiveCharacters_finite
+#check @DiamondIntegral.Section3.equalityActiveCharacters_value_finite
+#print axioms DiamondIntegral.Section3.equalityActiveCharacters_value_finite
+#check @DiamondIntegral.Section3.equality_domain_iff_of_active_characters
+#print axioms DiamondIntegral.Section3.equality_domain_iff_of_active_characters
+#check @DiamondIntegral.Section3.equalityPatternCell_own
+#print axioms DiamondIntegral.Section3.equalityPatternCell_own
+#check @DiamondIntegral.Section3.equalityPatternCell_unique
+#print axioms DiamondIntegral.Section3.equalityPatternCell_unique
+#check @DiamondIntegral.Section3.equalityPatternCell_iff_of_values
+#print axioms DiamondIntegral.Section3.equalityPatternCell_iff_of_values
+#check @DiamondIntegral.Section3.EssentialVFMap.independent_not_mem
+#print axioms DiamondIntegral.Section3.EssentialVFMap.independent_not_mem
+#check @DiamondIntegral.Section3.EssentialVFMap.mem_of_small_complement
+#print axioms DiamondIntegral.Section3.EssentialVFMap.mem_of_small_complement
+#check @DiamondIntegral.Section3.EssentialVFMap.small_complement_of_generic
+#print axioms DiamondIntegral.Section3.EssentialVFMap.small_complement_of_generic
+#check @DiamondIntegral.Section3.EssentialVFMap.genericEquiv_eq_iff
+#print axioms DiamondIntegral.Section3.EssentialVFMap.genericEquiv_eq_iff
+#check @DiamondIntegral.Section3.EssentialVFMap.compSource_subset
+#print axioms DiamondIntegral.Section3.EssentialVFMap.compSource_subset
+#check @DiamondIntegral.Section3.EssentialVFMap.compMiddle_injective
+#print axioms DiamondIntegral.Section3.EssentialVFMap.compMiddle_injective
+#check @DiamondIntegral.Section3.EssentialVFMap.genericEquiv_comp
+#print axioms DiamondIntegral.Section3.EssentialVFMap.genericEquiv_comp
+#check @DiamondIntegral.Section3.EssentialVFMap.genericEquiv_symm
+#print axioms DiamondIntegral.Section3.EssentialVFMap.genericEquiv_symm
+#check @DiamondIntegral.Section3.EssentialVFMap.exists_restriction_preserving_jacobian
+#print axioms DiamondIntegral.Section3.EssentialVFMap.exists_restriction_preserving_jacobian
+#check @DiamondIntegral.Section3.EssentialVFMap.refine_preserves
+#print axioms DiamondIntegral.Section3.EssentialVFMap.refine_preserves
+#check @DiamondIntegral.Section3.EssentialVFMap.exists_preserving_id
+#print axioms DiamondIntegral.Section3.EssentialVFMap.exists_preserving_id
+#check @DiamondIntegral.Section3.EssentialVFMap.exists_preserving_symm
+#print axioms DiamondIntegral.Section3.EssentialVFMap.exists_preserving_symm
+#check @DiamondIntegral.Section3.EssentialVFMap.exists_preserving_comp
+#print axioms DiamondIntegral.Section3.EssentialVFMap.exists_preserving_comp
+#check @DiamondIntegral.Section3.familyCodeCoprodBridge_inl
+#print axioms DiamondIntegral.Section3.familyCodeCoprodBridge_inl
+#check @DiamondIntegral.Section3.familyCodeCoprodBridge_inr
+#print axioms DiamondIntegral.Section3.familyCodeCoprodBridge_inr
+#check @DiamondIntegral.Section3.familyCodeCoprod_decode_inl
+#print axioms DiamondIntegral.Section3.familyCodeCoprod_decode_inl
+#check @DiamondIntegral.Section3.familyCodeCoprod_decode_inr
+#print axioms DiamondIntegral.Section3.familyCodeCoprod_decode_inr
+#check @DiamondIntegral.Section3.familyCodeCoprodBridge_symm_inl
+#print axioms DiamondIntegral.Section3.familyCodeCoprodBridge_symm_inl
+#check @DiamondIntegral.Section3.familyCodeCoprodBridge_symm_inr
+#print axioms DiamondIntegral.Section3.familyCodeCoprodBridge_symm_inr
+#check @DiamondIntegral.Section3.familyCodeCoprod_cases
+#print axioms DiamondIntegral.Section3.familyCodeCoprod_cases
+#check @DiamondIntegral.Section3.familyCoprodDecode_inl
+#print axioms DiamondIntegral.Section3.familyCoprodDecode_inl
+#check @DiamondIntegral.Section3.familyCoprodDecode_inr
+#print axioms DiamondIntegral.Section3.familyCoprodDecode_inr
+#check @DiamondIntegral.Section3.familyCoprodEncode_decode
+#print axioms DiamondIntegral.Section3.familyCoprodEncode_decode
+#check @DiamondIntegral.Section3.familyCoprodInl_inj
+#print axioms DiamondIntegral.Section3.familyCoprodInl_inj
+#check @DiamondIntegral.Section3.familyCoprodInr_inj
+#print axioms DiamondIntegral.Section3.familyCoprodInr_inj
+#check @DiamondIntegral.Section3.familyCoprodInl_ne_inr
+#print axioms DiamondIntegral.Section3.familyCoprodInl_ne_inr
+#check @DiamondIntegral.Section3.familyCoprodMapEquiv_inl
+#print axioms DiamondIntegral.Section3.familyCoprodMapEquiv_inl
+#check @DiamondIntegral.Section3.familyCoprodMapEquiv_inr
+#print axioms DiamondIntegral.Section3.familyCoprodMapEquiv_inr
+#check @DiamondIntegral.Section3.familyCoprodMapEquiv_definable
+#print axioms DiamondIntegral.Section3.familyCoprodMapEquiv_definable
+#check @DiamondIntegral.Section3.familyDecode_definable
+#print axioms DiamondIntegral.Section3.familyDecode_definable
+#check @DiamondIntegral.Section3.FamilyDefinable.descend
+#print axioms DiamondIntegral.Section3.FamilyDefinable.descend
+#check @DiamondIntegral.Section3.familyCodeRepresentative_spec
+#print axioms DiamondIntegral.Section3.familyCodeRepresentative_spec
+#check @DiamondIntegral.Section3.familyDescendedMap_decode
+#print axioms DiamondIntegral.Section3.familyDescendedMap_decode
+#check @DiamondIntegral.Section3.familyCoprodDropEmpty_inl
+#print axioms DiamondIntegral.Section3.familyCoprodDropEmpty_inl
+#check @DiamondIntegral.Section3.familyCoprodDropEmpty_definable
+#print axioms DiamondIntegral.Section3.familyCoprodDropEmpty_definable
+#check @DiamondIntegral.Section3.FamilyMap.ext
+#print axioms DiamondIntegral.Section3.FamilyMap.ext
+#check @DiamondIntegral.Section3.FamilyDefinable.congr_fun
+#print axioms DiamondIntegral.Section3.FamilyDefinable.congr_fun
+#check @DiamondIntegral.Section3.familyCarrier_ext
+#print axioms DiamondIntegral.Section3.familyCarrier_ext
+#check @DiamondIntegral.Section3.familyCoprod_cases
+#print axioms DiamondIntegral.Section3.familyCoprod_cases
+#check @DiamondIntegral.Section3.familyPartitionSubset
+#print axioms DiamondIntegral.Section3.familyPartitionSubset
+#check @DiamondIntegral.Section3.familyPartitionMap_inl
+#print axioms DiamondIntegral.Section3.familyPartitionMap_inl
+#check @DiamondIntegral.Section3.familyPartitionMap_inr
+#print axioms DiamondIntegral.Section3.familyPartitionMap_inr
+#check @DiamondIntegral.Section3.familyPartitionMap_bijective
+#print axioms DiamondIntegral.Section3.familyPartitionMap_bijective
+#check @DiamondIntegral.Section3.familyTaggedMap_definable
+#print axioms DiamondIntegral.Section3.familyTaggedMap_definable
+#check @DiamondIntegral.Section3.familyBijectionOfTagEquiv_apply
+#print axioms DiamondIntegral.Section3.familyBijectionOfTagEquiv_apply
+#check @DiamondIntegral.Section3.fieldUnit_zpow_injective_isUnit
+#print axioms DiamondIntegral.Section3.fieldUnit_zpow_injective_isUnit
+#check @DiamondIntegral.Section3.finite_columns_of_constant_off_finite
+#print axioms DiamondIntegral.Section3.finite_columns_of_constant_off_finite
+#check @DiamondIntegral.Section3.finite_column_partition
+#print axioms DiamondIntegral.Section3.finite_column_partition
+#check @DiamondIntegral.Section3.finite_projection_of_finite_columns
+#print axioms DiamondIntegral.Section3.finite_projection_of_finite_columns
+#check @DiamondIntegral.Section3.finite_columns_of_common_controller
+#print axioms DiamondIntegral.Section3.finite_columns_of_common_controller
+#check @DiamondIntegral.Section3.finite_columns_of_finite_boundary_union
+#print axioms DiamondIntegral.Section3.finite_columns_of_finite_boundary_union
+#check @DiamondIntegral.Section3.finite_definable_column_partition
+#print axioms DiamondIntegral.Section3.finite_definable_column_partition
+#check @DiamondIntegral.Section3.relationDefinable_exists_finite
+#print axioms DiamondIntegral.Section3.relationDefinable_exists_finite
+#check @DiamondIntegral.Section3.FamilyDefinable.id
+#print axioms DiamondIntegral.Section3.FamilyDefinable.id
+#check @DiamondIntegral.Section3.FamilyDefinable.comp
+#print axioms DiamondIntegral.Section3.FamilyDefinable.comp
+#check @DiamondIntegral.Section3.FamilyBijection.ext
+#print axioms DiamondIntegral.Section3.FamilyBijection.ext
+#check @DiamondIntegral.Section3.finiteGammaPresentationToDirectSum_class
+#print axioms DiamondIntegral.Section3.finiteGammaPresentationToDirectSum_class
+#check @DiamondIntegral.Section3.finiteGammaDirectSumToPresentationAdd_of
+#print axioms DiamondIntegral.Section3.finiteGammaDirectSumToPresentationAdd_of
+#check @DiamondIntegral.Section3.finiteGammaDirectSumToPresentationAdd_one
+#print axioms DiamondIntegral.Section3.finiteGammaDirectSumToPresentationAdd_one
+#check @DiamondIntegral.Section3.finiteGammaDirectSumToPresentationAdd_mul
+#print axioms DiamondIntegral.Section3.finiteGammaDirectSumToPresentationAdd_mul
+#check @DiamondIntegral.Section3.finiteGammaDirectSumToPresentation_class
+#print axioms DiamondIntegral.Section3.finiteGammaDirectSumToPresentation_class
+#check @DiamondIntegral.Section3.finiteGammaRepresentative_class
+#print axioms DiamondIntegral.Section3.finiteGammaRepresentative_class
+#check @DiamondIntegral.Section3.finiteGammaToGammaKPlus_mul
+#print axioms DiamondIntegral.Section3.finiteGammaToGammaKPlus_mul
+#check @DiamondIntegral.Section3.finiteGammaClassMul_class
+#print axioms DiamondIntegral.Section3.finiteGammaClassMul_class
+#check @DiamondIntegral.Section3.finiteGammaDirectSumToGamma_injective
+#print axioms DiamondIntegral.Section3.finiteGammaDirectSumToGamma_injective
+#check @DiamondIntegral.Section3.finiteGammaDirectSumToGamma_one
+#print axioms DiamondIntegral.Section3.finiteGammaDirectSumToGamma_one
+#check @DiamondIntegral.Section3.finiteGammaDirectSumToGamma_mul
+#print axioms DiamondIntegral.Section3.finiteGammaDirectSumToGamma_mul
+#check @DiamondIntegral.Section3.finiteGammaDirectSumClass_product
+#print axioms DiamondIntegral.Section3.finiteGammaDirectSumClass_product
+#check @DiamondIntegral.Section3.finiteGammaGradedInclusion_injective
+#print axioms DiamondIntegral.Section3.finiteGammaGradedInclusion_injective
+#check @DiamondIntegral.Section3.finiteGammaClass_iso
+#print axioms DiamondIntegral.Section3.finiteGammaClass_iso
+#check @DiamondIntegral.Section3.finiteGammaClass_empty
+#print axioms DiamondIntegral.Section3.finiteGammaClass_empty
+#check @DiamondIntegral.Section3.finiteGammaClass_coprod
+#print axioms DiamondIntegral.Section3.finiteGammaClass_coprod
+#check @DiamondIntegral.Section3.finiteGammaClass_surjective
+#print axioms DiamondIntegral.Section3.finiteGammaClass_surjective
+#check @DiamondIntegral.Section3.finiteGammaClass_eq_iff_iso
+#print axioms DiamondIntegral.Section3.finiteGammaClass_eq_iff_iso
+#check @DiamondIntegral.Section3.finiteGammaToGammaKPlus_injective
+#print axioms DiamondIntegral.Section3.finiteGammaToGammaKPlus_injective
+#check @DiamondIntegral.Section3.finiteGammaToGammaKPlus_class
+#print axioms DiamondIntegral.Section3.finiteGammaToGammaKPlus_class
+#check @DiamondIntegral.Section3.finiteGammaToRESKPlus_class
+#print axioms DiamondIntegral.Section3.finiteGammaToRESKPlus_class
+#check @DiamondIntegral.Section3.finiteGamma_positive_square
+#print axioms DiamondIntegral.Section3.finiteGamma_positive_square
+#check @DiamondIntegral.Section3.finiteGammaSemiringClass_iso
+#print axioms DiamondIntegral.Section3.finiteGammaSemiringClass_iso
+#check @DiamondIntegral.Section3.finiteGammaSemiringClass_empty
+#print axioms DiamondIntegral.Section3.finiteGammaSemiringClass_empty
+#check @DiamondIntegral.Section3.finiteGammaSemiringClass_unit
+#print axioms DiamondIntegral.Section3.finiteGammaSemiringClass_unit
+#check @DiamondIntegral.Section3.finiteGammaSemiringClass_product
+#print axioms DiamondIntegral.Section3.finiteGammaSemiringClass_product
+#check @DiamondIntegral.Section3.finiteGammaSemiringClass_scissor
+#print axioms DiamondIntegral.Section3.finiteGammaSemiringClass_scissor
+#check @DiamondIntegral.Section3.finiteGammaKPlusToSemiring_class
+#print axioms DiamondIntegral.Section3.finiteGammaKPlusToSemiring_class
+#check @DiamondIntegral.Section3.finiteGammaGradedInclusion_class
+#print axioms DiamondIntegral.Section3.finiteGammaGradedInclusion_class
+#check @DiamondIntegral.Section3.finiteGammaInclusion_grading
+#print axioms DiamondIntegral.Section3.finiteGammaInclusion_grading
+#check @DiamondIntegral.Section3.finiteGammaToGammaSemiring_injective
+#print axioms DiamondIntegral.Section3.finiteGammaToGammaSemiring_injective
+#check @DiamondIntegral.Section3.finiteGammaToGammaSemiring_class
+#print axioms DiamondIntegral.Section3.finiteGammaToGammaSemiring_class
+#check @DiamondIntegral.Section3.finiteGammaToRESSemiring_class
+#print axioms DiamondIntegral.Section3.finiteGammaToRESSemiring_class
+#check @DiamondIntegral.Section3.resToRVSemiring_class
+#print axioms DiamondIntegral.Section3.resToRVSemiring_class
+#check @DiamondIntegral.Section3.resToRVSemiring_injective
+#print axioms DiamondIntegral.Section3.resToRVSemiring_injective
+#check @DiamondIntegral.Section3.finiteGamma_semiring_square
+#print axioms DiamondIntegral.Section3.finiteGamma_semiring_square
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredTensor_finite_hyperplane_reduction
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredTensor_finite_hyperplane_reduction
+#check @DiamondIntegral.Section3.gammaUniversalCodePredicate_definable
+#print axioms DiamondIntegral.Section3.gammaUniversalCodePredicate_definable
+#check @DiamondIntegral.Section3.fullGamma_adjoin_abstraction
+#print axioms DiamondIntegral.Section3.fullGamma_adjoin_abstraction
+#check @DiamondIntegral.Section3.fullRaw_sameScalar
+#print axioms DiamondIntegral.Section3.fullRaw_sameScalar
+#check @DiamondIntegral.Section3.gammaCode_same_iff
+#print axioms DiamondIntegral.Section3.gammaCode_same_iff
+#check @DiamondIntegral.Section3.gammaTuple_has_full_code
+#print axioms DiamondIntegral.Section3.gammaTuple_has_full_code
+#check @DiamondIntegral.Section3.fullGammaFiniteColumnPartition
+#print axioms DiamondIntegral.Section3.fullGammaFiniteColumnPartition
+#check @DiamondIntegral.Section3.gammaTuple_scalar_eta
+#print axioms DiamondIntegral.Section3.gammaTuple_scalar_eta
+#check @DiamondIntegral.Section3.gammaUniqueScalar_definable
+#print axioms DiamondIntegral.Section3.gammaUniqueScalar_definable
+#check @DiamondIntegral.Section3.gammaDcl_tuple_partial_function
+#print axioms DiamondIntegral.Section3.gammaDcl_tuple_partial_function
+#check @DiamondIntegral.Section3.gammaDcl_tuple_function
+#print axioms DiamondIntegral.Section3.gammaDcl_tuple_function
+#check @DiamondIntegral.Section3.FullGammaFunction.comp
+#print axioms DiamondIntegral.Section3.FullGammaFunction.comp
+#check @DiamondIntegral.Section3.FullGammaFunction.eval_definable
+#print axioms DiamondIntegral.Section3.FullGammaFunction.eval_definable
+#check @DiamondIntegral.Section3.FullGammaFunction.lt
+#print axioms DiamondIntegral.Section3.FullGammaFunction.lt
+#check @DiamondIntegral.Section3.FullGammaFunction.proj
+#print axioms DiamondIntegral.Section3.FullGammaFunction.proj
+#check @DiamondIntegral.Section3.FullGammaFunction.constant
+#print axioms DiamondIntegral.Section3.FullGammaFunction.constant
+#check @DiamondIntegral.Section3.FullGammaFunction.one
+#print axioms DiamondIntegral.Section3.FullGammaFunction.one
+#check @DiamondIntegral.Section3.FullGammaFunction.reindex
+#print axioms DiamondIntegral.Section3.FullGammaFunction.reindex
+#check @DiamondIntegral.Section3.FullGammaFunction.substitute
+#print axioms DiamondIntegral.Section3.FullGammaFunction.substitute
+#check @DiamondIntegral.Section3.FullGammaFunction.mul
+#print axioms DiamondIntegral.Section3.FullGammaFunction.mul
+#check @DiamondIntegral.Section3.FullGammaFunction.inv
+#print axioms DiamondIntegral.Section3.FullGammaFunction.inv
+#check @DiamondIntegral.Section3.FullGammaFunction.pow
+#print axioms DiamondIntegral.Section3.FullGammaFunction.pow
+#check @DiamondIntegral.Section3.FullGammaFunction.zpow
+#print axioms DiamondIntegral.Section3.FullGammaFunction.zpow
+#check @DiamondIntegral.Section3.FullGammaFunction.prod
+#print axioms DiamondIntegral.Section3.FullGammaFunction.prod
+#check @DiamondIntegral.Section3.FullGammaFunction.eq
+#print axioms DiamondIntegral.Section3.FullGammaFunction.eq
+#check @DiamondIntegral.Section3.FullGammaPartialFunction.eval_graph
+#print axioms DiamondIntegral.Section3.FullGammaPartialFunction.eval_graph
+#check @DiamondIntegral.Section3.FullGammaPartialFunction.eval_eq
+#print axioms DiamondIntegral.Section3.FullGammaPartialFunction.eval_eq
+#check @DiamondIntegral.Section3.FullGammaPartialFunction.domain_definable
+#print axioms DiamondIntegral.Section3.FullGammaPartialFunction.domain_definable
+#check @DiamondIntegral.Section3.FullGammaPartialFunction.eval_definable
+#print axioms DiamondIntegral.Section3.FullGammaPartialFunction.eval_definable
+#check @DiamondIntegral.Section3.fullGamma_realBase
+#print axioms DiamondIntegral.Section3.fullGamma_realBase
+#check @DiamondIntegral.Section3.gammaPower_predicate_definable
+#print axioms DiamondIntegral.Section3.gammaPower_predicate_definable
+#check @DiamondIntegral.Section3.adjoinGammaTuple_zero
+#print axioms DiamondIntegral.Section3.adjoinGammaTuple_zero
+#check @DiamondIntegral.Section3.adjoinGammaTuple_succ
+#print axioms DiamondIntegral.Section3.adjoinGammaTuple_succ
+#check @DiamondIntegral.Section3.fullGamma_tuple_abstraction
+#print axioms DiamondIntegral.Section3.fullGamma_tuple_abstraction
+#check @DiamondIntegral.Section3.fullGammaTuple_definable_point
+#print axioms DiamondIntegral.Section3.fullGammaTuple_definable_point
+#check @DiamondIntegral.Section3.FullRawDefinable.and
+#print axioms DiamondIntegral.Section3.FullRawDefinable.and
+#check @DiamondIntegral.Section3.FullRawDefinable.not
+#print axioms DiamondIntegral.Section3.FullRawDefinable.not
+#check @DiamondIntegral.Section3.FullRawDefinable.or
+#print axioms DiamondIntegral.Section3.FullRawDefinable.or
+#check @DiamondIntegral.Section3.FullRawDefinable.imp
+#print axioms DiamondIntegral.Section3.FullRawDefinable.imp
+#check @DiamondIntegral.Section3.FullRawDefinable.iff
+#print axioms DiamondIntegral.Section3.FullRawDefinable.iff
+#check @DiamondIntegral.Section3.FullRawDefinable.reindex
+#print axioms DiamondIntegral.Section3.FullRawDefinable.reindex
+#check @DiamondIntegral.Section3.FullRawDefinable.exists_block
+#print axioms DiamondIntegral.Section3.FullRawDefinable.exists_block
+#check @DiamondIntegral.Section3.FullRawDefinable.forall_block
+#print axioms DiamondIntegral.Section3.FullRawDefinable.forall_block
+#check @DiamondIntegral.Section3.FullRawDefinable.forall_finite
+#print axioms DiamondIntegral.Section3.FullRawDefinable.forall_finite
+#check @DiamondIntegral.Section3.FullRawDefinable.forall_one
+#print axioms DiamondIntegral.Section3.FullRawDefinable.forall_one
+#check @DiamondIntegral.Section3.FullRawDefinable.exists_two
+#print axioms DiamondIntegral.Section3.FullRawDefinable.exists_two
+#check @DiamondIntegral.Section3.fullRaw_nonzero
+#print axioms DiamondIntegral.Section3.fullRaw_nonzero
+#check @DiamondIntegral.Section3.fullRaw_rv
+#print axioms DiamondIntegral.Section3.fullRaw_rv
+#check @DiamondIntegral.Section3.fullRaw_codeLt
+#print axioms DiamondIntegral.Section3.fullRaw_codeLt
+#check @DiamondIntegral.Section3.gammaHom_piecewiseGLZ
+#print axioms DiamondIntegral.Section3.gammaHom_piecewiseGLZ
+#check @DiamondIntegral.Section3.gammaGroundGammaAffineImage_mem
+#print axioms DiamondIntegral.Section3.gammaGroundGammaAffineImage_mem
+#check @DiamondIntegral.Section3.gammaGroundGammaAffineImage_restrict_target
+#print axioms DiamondIntegral.Section3.gammaGroundGammaAffineImage_restrict_target
+#check @DiamondIntegral.Section3.GammaGroundMap.image_restrict_preimage
+#print axioms DiamondIntegral.Section3.GammaGroundMap.image_restrict_preimage
+#check @DiamondIntegral.Section3.gamma_finite_of_definable_subset_algebraic
+#print axioms DiamondIntegral.Section3.gamma_finite_of_definable_subset_algebraic
+#check @DiamondIntegral.Section3.gammaTupleSpace_rvCoded
+#print axioms DiamondIntegral.Section3.gammaTupleSpace_rvCoded
+#check @DiamondIntegral.Section3.GammaHom.ext
+#print axioms DiamondIntegral.Section3.GammaHom.ext
+#check @DiamondIntegral.Section3.gammaRVCodeBijection_restrict
+#print axioms DiamondIntegral.Section3.gammaRVCodeBijection_restrict
+#check @DiamondIntegral.Section3.gammaCodeDecode_inclusion
+#print axioms DiamondIntegral.Section3.gammaCodeDecode_inclusion
+#check @DiamondIntegral.Section3.gammaRVCodeForm_restrict
+#print axioms DiamondIntegral.Section3.gammaRVCodeForm_restrict
+#check @DiamondIntegral.Section3.GammaCodeMap.ext
+#print axioms DiamondIntegral.Section3.GammaCodeMap.ext
+#check @DiamondIntegral.Section3.gammaCodeIso_kernel
+#print axioms DiamondIntegral.Section3.gammaCodeIso_kernel
+#check @DiamondIntegral.Section3.gammaCodeProductPair_fst_assoc
+#print axioms DiamondIntegral.Section3.gammaCodeProductPair_fst_assoc
+#check @DiamondIntegral.Section3.gammaCodeProductPair_snd_assoc
+#print axioms DiamondIntegral.Section3.gammaCodeProductPair_snd_assoc
+#check @DiamondIntegral.Section3.gammaCodeProduct_hom_ext
+#print axioms DiamondIntegral.Section3.gammaCodeProduct_hom_ext
+#check @DiamondIntegral.Section3.gammaCodePairFunction_factor
+#print axioms DiamondIntegral.Section3.gammaCodePairFunction_factor
+#check @DiamondIntegral.Section3.gammaCodePairFunction_graph
+#print axioms DiamondIntegral.Section3.gammaCodePairFunction_graph
+#check @DiamondIntegral.Section3.gammaCodeProductPair_fst
+#print axioms DiamondIntegral.Section3.gammaCodeProductPair_fst
+#check @DiamondIntegral.Section3.gammaCodeProductPair_snd
+#print axioms DiamondIntegral.Section3.gammaCodeProductPair_snd
+#check @DiamondIntegral.Section3.gammaCodeProductPair_unique
+#print axioms DiamondIntegral.Section3.gammaCodeProductPair_unique
+#check @DiamondIntegral.Section3.gammaUnitCodes_subsingleton
+#print axioms DiamondIntegral.Section3.gammaUnitCodes_subsingleton
+#check @DiamondIntegral.Section3.gammaCodeUnit_hom_ext
+#print axioms DiamondIntegral.Section3.gammaCodeUnit_hom_ext
+#check @DiamondIntegral.Section3.gammaCodeLeft_append
+#print axioms DiamondIntegral.Section3.gammaCodeLeft_append
+#check @DiamondIntegral.Section3.gammaCodeRight_append
+#print axioms DiamondIntegral.Section3.gammaCodeRight_append
+#check @DiamondIntegral.Section3.gammaCodeAppend_left_right
+#print axioms DiamondIntegral.Section3.gammaCodeAppend_left_right
+#check @DiamondIntegral.Section3.gammaProductCodePieceEquiv_left_val
+#print axioms DiamondIntegral.Section3.gammaProductCodePieceEquiv_left_val
+#check @DiamondIntegral.Section3.gammaProductCodePieceEquiv_right_val
+#print axioms DiamondIntegral.Section3.gammaProductCodePieceEquiv_right_val
+#check @DiamondIntegral.Section3.gammaCodeTuple_injective
+#print axioms DiamondIntegral.Section3.gammaCodeTuple_injective
+#check @DiamondIntegral.Section3.gammaRVCodeLift_mono
+#print axioms DiamondIntegral.Section3.gammaRVCodeLift_mono
+#check @DiamondIntegral.Section3.gammaRVCodeLift_sdiff
+#print axioms DiamondIntegral.Section3.gammaRVCodeLift_sdiff
+#check @DiamondIntegral.Section3.gammaCoprodLeftCut_subset
+#print axioms DiamondIntegral.Section3.gammaCoprodLeftCut_subset
+#check @DiamondIntegral.Section3.gammaIsoClass_eq_iff
+#print axioms DiamondIntegral.Section3.gammaIsoClass_eq_iff
+#check @DiamondIntegral.Section3.gammaIsoClass_empty
+#print axioms DiamondIntegral.Section3.gammaIsoClass_empty
+#check @DiamondIntegral.Section3.gammaIsoClass_coprod
+#print axioms DiamondIntegral.Section3.gammaIsoClass_coprod
+#check @DiamondIntegral.Section3.gammaFiniteVFCoding
+#print axioms DiamondIntegral.Section3.gammaFiniteVFCoding
+#check @DiamondIntegral.Section3.gammaGroundGammaPiece_fixed_prefix_product
+#print axioms DiamondIntegral.Section3.gammaGroundGammaPiece_fixed_prefix_product
+#check @DiamondIntegral.Section3.gammaGroundDefSet_eq_of_carrier_eq
+#print axioms DiamondIntegral.Section3.gammaGroundDefSet_eq_of_carrier_eq
+#check @DiamondIntegral.Section3.gammaGroundGammaSemiringClass_fixed_prefix
+#print axioms DiamondIntegral.Section3.gammaGroundGammaSemiringClass_fixed_prefix
+#check @DiamondIntegral.Section3.gammaOneForm_value
+#print axioms DiamondIntegral.Section3.gammaOneForm_value
+#check @DiamondIntegral.Section3.GammaVolumeForm.mul_value
+#print axioms DiamondIntegral.Section3.GammaVolumeForm.mul_value
+#check @DiamondIntegral.Section3.gammaFullRaw_common_names
+#print axioms DiamondIntegral.Section3.gammaFullRaw_common_names
+#check @DiamondIntegral.Section3.gammaGroundRVAngularCell_residueArity_zero
+#print axioms DiamondIntegral.Section3.gammaGroundRVAngularCell_residueArity_zero
+#check @DiamondIntegral.Section3.gammaGroundRVAngularCell_generic_fibre_invariant
+#print axioms DiamondIntegral.Section3.gammaGroundRVAngularCell_generic_fibre_invariant
+#check @DiamondIntegral.Section3.GammaGroundCharacterHyperplane.definable
+#print axioms DiamondIntegral.Section3.GammaGroundCharacterHyperplane.definable
+#check @DiamondIntegral.Section3.gammaGround_generic_finite_cover
+#print axioms DiamondIntegral.Section3.gammaGround_generic_finite_cover
+#check @DiamondIntegral.Section3.gammaGroundRVUnit_generic_value_fibre_invariant
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnit_generic_value_fibre_invariant
+#check @DiamondIntegral.Section3.gammaGroundRVUnitGammaMap_generic_fibre_constant
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnitGammaMap_generic_fibre_constant
+#check @DiamondIntegral.Section3.gammaPresentationToDirectSum_class
+#print axioms DiamondIntegral.Section3.gammaPresentationToDirectSum_class
+#check @DiamondIntegral.Section3.gammaDirectSumToPresentationAdd_of
+#print axioms DiamondIntegral.Section3.gammaDirectSumToPresentationAdd_of
+#check @DiamondIntegral.Section3.gammaDirectSumToPresentationAdd_one
+#print axioms DiamondIntegral.Section3.gammaDirectSumToPresentationAdd_one
+#check @DiamondIntegral.Section3.gammaDirectSumToPresentationAdd_mul
+#print axioms DiamondIntegral.Section3.gammaDirectSumToPresentationAdd_mul
+#check @DiamondIntegral.Section3.gammaDirectSumToPresentation_class
+#print axioms DiamondIntegral.Section3.gammaDirectSumToPresentation_class
+#check @DiamondIntegral.Section3.gammaDirectSumClass_product
+#print axioms DiamondIntegral.Section3.gammaDirectSumClass_product
+#check @DiamondIntegral.Section3.gammaDirectSumClass_coprod
+#print axioms DiamondIntegral.Section3.gammaDirectSumClass_coprod
+#check @DiamondIntegral.Section3.gammaDirectSumClass_unit
+#print axioms DiamondIntegral.Section3.gammaDirectSumClass_unit
+#check @DiamondIntegral.Section3.gammaGroundAffineAgreement_subset
+#print axioms DiamondIntegral.Section3.gammaGroundAffineAgreement_subset
+#check @DiamondIntegral.Section3.gammaGroundAffineAgreement_mem
+#print axioms DiamondIntegral.Section3.gammaGroundAffineAgreement_mem
+#check @DiamondIntegral.Section3.gammaGroundAffine_finite_partition
+#print axioms DiamondIntegral.Section3.gammaGroundAffine_finite_partition
+#check @DiamondIntegral.Section3.gammaGroundAffine_partition_full_lift
+#print axioms DiamondIntegral.Section3.gammaGroundAffine_partition_full_lift
+#check @DiamondIntegral.Section3.integralAffine_identity_slice_bottom
+#print axioms DiamondIntegral.Section3.integralAffine_identity_slice_bottom
+#check @DiamondIntegral.Section3.gammaGroundRVAngularProduct_residue_image_point_definable
+#print axioms DiamondIntegral.Section3.gammaGroundRVAngularProduct_residue_image_point_definable
+#check @DiamondIntegral.Section3.gammaGroundRVAngularProduct_inverse_coefficients_definable
+#print axioms DiamondIntegral.Section3.gammaGroundRVAngularProduct_inverse_coefficients_definable
+#check @DiamondIntegral.Section3.gammaGroundRVAngularCell_residue_values_definable
+#print axioms DiamondIntegral.Section3.gammaGroundRVAngularCell_residue_values_definable
+#check @DiamondIntegral.Section3.gammaGroundRVAngularProduct_output_monomial
+#print axioms DiamondIntegral.Section3.gammaGroundRVAngularProduct_output_monomial
+#check @DiamondIntegral.Section3.gammaGroundRVAngularProduct_residue_singleton_piece
+#print axioms DiamondIntegral.Section3.gammaGroundRVAngularProduct_residue_singleton_piece
+#check @DiamondIntegral.Section3.gammaGroundRVAngularProduct_residue_point_definable
+#print axioms DiamondIntegral.Section3.gammaGroundRVAngularProduct_residue_point_definable
+#check @DiamondIntegral.Section3.gammaGroundMeasuredAnnularElement_forget_zero
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredAnnularElement_forget_zero
+#check @DiamondIntegral.Section3.gammaGroundAnnularIdeal_le_forget_kernel
+#print axioms DiamondIntegral.Section3.gammaGroundAnnularIdeal_le_forget_kernel
+#check @DiamondIntegral.Section3.gammaGroundAnnularPullback_le_actual_tensor_kernel
+#print axioms DiamondIntegral.Section3.gammaGroundAnnularPullback_le_actual_tensor_kernel
+#check @DiamondIntegral.Section3.gammaGroundGammaTail_positive_partition
+#print axioms DiamondIntegral.Section3.gammaGroundGammaTail_positive_partition
+#check @DiamondIntegral.Section3.gammaGroundGammaAnnulus_positive_absorption
+#print axioms DiamondIntegral.Section3.gammaGroundGammaAnnulus_positive_absorption
+#check @DiamondIntegral.Section3.gammaGroundGammaAnnulus_ring_zero
+#print axioms DiamondIntegral.Section3.gammaGroundGammaAnnulus_ring_zero
+#check @DiamondIntegral.Section3.gammaGroundRVAnnulus_ring_zero
+#print axioms DiamondIntegral.Section3.gammaGroundRVAnnulus_ring_zero
+#check @DiamondIntegral.Section3.GammaGroundBijection.inverseImage_subset
+#print axioms DiamondIntegral.Section3.GammaGroundBijection.inverseImage_subset
+#check @DiamondIntegral.Section3.GammaGroundMap.inverse_apply
+#print axioms DiamondIntegral.Section3.GammaGroundMap.inverse_apply
+#check @DiamondIntegral.Section3.GammaGroundMap.apply_inverse
+#print axioms DiamondIntegral.Section3.GammaGroundMap.apply_inverse
+#check @DiamondIntegral.Section3.GammaGroundBijection.ext
+#print axioms DiamondIntegral.Section3.GammaGroundBijection.ext
+#check @DiamondIntegral.Section3.gammaGroundBooleanAtom_subset
+#print axioms DiamondIntegral.Section3.gammaGroundBooleanAtom_subset
+#check @DiamondIntegral.Section3.gammaGroundBooleanAtom_disjoint
+#print axioms DiamondIntegral.Section3.gammaGroundBooleanAtom_disjoint
+#check @DiamondIntegral.Section3.gammaGroundBooleanAtom_cover
+#print axioms DiamondIntegral.Section3.gammaGroundBooleanAtom_cover
+#check @DiamondIntegral.Section3.gammaGroundBooleanAtom_selected_cover
+#print axioms DiamondIntegral.Section3.gammaGroundBooleanAtom_selected_cover
+#check @DiamondIntegral.Section3.gammaCodeCharacterTwist_value
+#print axioms DiamondIntegral.Section3.gammaCodeCharacterTwist_value
+#check @DiamondIntegral.Section3.rvCharacterTwist_definableOverBase
+#print axioms DiamondIntegral.Section3.rvCharacterTwist_definableOverBase
+#check @DiamondIntegral.Section3.gammaGroundChartTransitionDomain_subset
+#print axioms DiamondIntegral.Section3.gammaGroundChartTransitionDomain_subset
+#check @DiamondIntegral.Section3.gammaGroundChartTransitionMap_agrees
+#print axioms DiamondIntegral.Section3.gammaGroundChartTransitionMap_agrees
+#check @DiamondIntegral.Section3.gammaGroundChartTransitionMap_injective
+#print axioms DiamondIntegral.Section3.gammaGroundChartTransitionMap_injective
+#check @DiamondIntegral.Section3.gammaGroundChartTransitionDomain_cover
+#print axioms DiamondIntegral.Section3.gammaGroundChartTransitionDomain_cover
+#check @DiamondIntegral.Section3.gammaGroundBoundedUnmeasuredIntegral_characterization
+#print axioms DiamondIntegral.Section3.gammaGroundBoundedUnmeasuredIntegral_characterization
+#check @DiamondIntegral.Section3.gammaGroundBoundedLift_transition
+#print axioms DiamondIntegral.Section3.gammaGroundBoundedLift_transition
+#check @DiamondIntegral.Section3.gammaGroundBoundedUnmeasuredIntegral_lift
+#print axioms DiamondIntegral.Section3.gammaGroundBoundedUnmeasuredIntegral_lift
+#check @DiamondIntegral.Section3.gammaGroundBoundedUnmeasuredIntegral_transition
+#print axioms DiamondIntegral.Section3.gammaGroundBoundedUnmeasuredIntegral_transition
+#check @DiamondIntegral.Section3.gammaGroundMeasuredPositiveIntegral_characterization
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredPositiveIntegral_characterization
+#check @DiamondIntegral.Section3.gammaGroundMeasuredPositiveIntegral_lift_class
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredPositiveIntegral_lift_class
+#check @DiamondIntegral.Section3.gammaGroundMeasuredPositiveIntegral_unique
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredPositiveIntegral_unique
+#check @DiamondIntegral.Section3.gammaGroundDegreeMeasuredIntegral_characterization
+#print axioms DiamondIntegral.Section3.gammaGroundDegreeMeasuredIntegral_characterization
+#check @DiamondIntegral.Section3.gammaGroundDegreeMeasuredIntegral_lift_class
+#print axioms DiamondIntegral.Section3.gammaGroundDegreeMeasuredIntegral_lift_class
+#check @DiamondIntegral.Section3.gammaGroundDegreeMeasuredIntegral_unique
+#print axioms DiamondIntegral.Section3.gammaGroundDegreeMeasuredIntegral_unique
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredPositiveIntegral_characterization
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredPositiveIntegral_characterization
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredPositiveIntegral_lift_class
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredPositiveIntegral_lift_class
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredPositiveIntegral_unique
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredPositiveIntegral_unique
+#check @DiamondIntegral.Section3.gammaGroundCodeDecode_surjective
+#print axioms DiamondIntegral.Section3.gammaGroundCodeDecode_surjective
+#check @DiamondIntegral.Section3.GammaGroundFiniteFamily.decode_surjective
+#print axioms DiamondIntegral.Section3.GammaGroundFiniteFamily.decode_surjective
+#check @DiamondIntegral.Section3.gammaGroundContext_coefficient_monomorphisms
+#print axioms DiamondIntegral.Section3.gammaGroundContext_coefficient_monomorphisms
+#check @DiamondIntegral.Section3.gammaGroundContext_coefficient_monomorphisms_degree
+#print axioms DiamondIntegral.Section3.gammaGroundContext_coefficient_monomorphisms_degree
+#check @DiamondIntegral.Section3.GammaGroundDefinable.common_names
+#print axioms DiamondIntegral.Section3.GammaGroundDefinable.common_names
+#check @DiamondIntegral.Section3.gammaGround_definable_finite_subcover
+#print axioms DiamondIntegral.Section3.gammaGround_definable_finite_subcover
+#check @DiamondIntegral.Section3.gammaGround_composable_realization
+#print axioms DiamondIntegral.Section3.gammaGround_composable_realization
+#check @DiamondIntegral.Section3.GammaGroundContext.real_vfGenerated
+#print axioms DiamondIntegral.Section3.GammaGroundContext.real_vfGenerated
+#check @DiamondIntegral.Section3.GammaGroundContext.values_subset
+#print axioms DiamondIntegral.Section3.GammaGroundContext.values_subset
+#check @DiamondIntegral.Section3.GammaGroundContext.nontrivial_values
+#print axioms DiamondIntegral.Section3.GammaGroundContext.nontrivial_values
+#check @DiamondIntegral.Section3.GammaGroundDerivativeLogic.mixedJacobianCodes_definable
+#print axioms DiamondIntegral.Section3.GammaGroundDerivativeLogic.mixedJacobianCodes_definable
+#check @DiamondIntegral.Section3.gammaGround_differentiable_of_independent
+#print axioms DiamondIntegral.Section3.gammaGround_differentiable_of_independent
+#check @DiamondIntegral.Section3.gammaGround_jacobian_comp_of_independent
+#print axioms DiamondIntegral.Section3.gammaGround_jacobian_comp_of_independent
+#check @DiamondIntegral.Section3.gammaGround_jacobian_inverse_of_independent
+#print axioms DiamondIntegral.Section3.gammaGround_jacobian_inverse_of_independent
+#check @DiamondIntegral.Section3.GammaGroundMap.equalizer_subset
+#print axioms DiamondIntegral.Section3.GammaGroundMap.equalizer_subset
+#check @DiamondIntegral.Section3.GammaGroundEssentialVFMap.compSource_subset
+#print axioms DiamondIntegral.Section3.GammaGroundEssentialVFMap.compSource_subset
+#check @DiamondIntegral.Section3.GammaGroundEssentialVFMap.compMiddle_injective
+#print axioms DiamondIntegral.Section3.GammaGroundEssentialVFMap.compMiddle_injective
+#check @DiamondIntegral.Section3.GammaGroundEssentialVFMap.generic_mem_compSource
+#print axioms DiamondIntegral.Section3.GammaGroundEssentialVFMap.generic_mem_compSource
+#check @DiamondIntegral.Section3.GammaGroundEssentialVFMap.genericEquiv_comp
+#print axioms DiamondIntegral.Section3.GammaGroundEssentialVFMap.genericEquiv_comp
+#check @DiamondIntegral.Section3.GammaGroundEssentialVFMap.genericEquiv_id
+#print axioms DiamondIntegral.Section3.GammaGroundEssentialVFMap.genericEquiv_id
+#check @DiamondIntegral.Section3.GammaGroundEssentialVFMap.genericEquiv_symm
+#print axioms DiamondIntegral.Section3.GammaGroundEssentialVFMap.genericEquiv_symm
+#check @DiamondIntegral.Section3.GammaGroundEssentialVFMap.genericEquiv_eq_iff
+#print axioms DiamondIntegral.Section3.GammaGroundEssentialVFMap.genericEquiv_eq_iff
+#check @DiamondIntegral.Section3.gammaGround_independent_map
+#print axioms DiamondIntegral.Section3.gammaGround_independent_map
+#check @DiamondIntegral.Section3.GammaGroundEssentialVFMap.preservesGeneric_id
+#print axioms DiamondIntegral.Section3.GammaGroundEssentialVFMap.preservesGeneric_id
+#check @DiamondIntegral.Section3.GammaGroundEssentialVFMap.preservesGeneric_symm
+#print axioms DiamondIntegral.Section3.GammaGroundEssentialVFMap.preservesGeneric_symm
+#check @DiamondIntegral.Section3.GammaGroundEssentialVFMap.preservesGeneric_comp
+#print axioms DiamondIntegral.Section3.GammaGroundEssentialVFMap.preservesGeneric_comp
+#check @DiamondIntegral.Section3.GammaGroundEssentialVFMap.genericEquiv_restrictSource
+#print axioms DiamondIntegral.Section3.GammaGroundEssentialVFMap.genericEquiv_restrictSource
+#check @DiamondIntegral.Section3.GammaGroundEssentialVFMap.restrictSource_jacobian
+#print axioms DiamondIntegral.Section3.GammaGroundEssentialVFMap.restrictSource_jacobian
+#check @DiamondIntegral.Section3.GammaGroundFamilyBijection.branchImage_subset
+#print axioms DiamondIntegral.Section3.GammaGroundFamilyBijection.branchImage_subset
+#check @DiamondIntegral.Section3.GammaGroundFamilyBijection.branchImage_partition
+#print axioms DiamondIntegral.Section3.GammaGroundFamilyBijection.branchImage_partition
+#check @DiamondIntegral.Section3.GammaGroundFamilyMap.branchMap_value
+#print axioms DiamondIntegral.Section3.GammaGroundFamilyMap.branchMap_value
+#check @DiamondIntegral.Section3.GammaGroundFamilyMap.branchMap_point
+#print axioms DiamondIntegral.Section3.GammaGroundFamilyMap.branchMap_point
+#check @DiamondIntegral.Section3.GammaGroundFamilyMap.branchMap_injective
+#print axioms DiamondIntegral.Section3.GammaGroundFamilyMap.branchMap_injective
+#check @DiamondIntegral.Section3.GammaGroundFamilyMap.mem_branchSource
+#print axioms DiamondIntegral.Section3.GammaGroundFamilyMap.mem_branchSource
+#check @DiamondIntegral.Section3.GammaGroundFamilyMap.branchSource_subset
+#print axioms DiamondIntegral.Section3.GammaGroundFamilyMap.branchSource_subset
+#check @DiamondIntegral.Section3.GammaGroundFamilyMap.mem_branchSource_iff_tag
+#print axioms DiamondIntegral.Section3.GammaGroundFamilyMap.mem_branchSource_iff_tag
+#check @DiamondIntegral.Section3.GammaGroundFamilyMap.branchSource_partition
+#print axioms DiamondIntegral.Section3.GammaGroundFamilyMap.branchSource_partition
+#check @DiamondIntegral.Section3.gammaGroundFamilyCodeCoprodBridge_inl
+#print axioms DiamondIntegral.Section3.gammaGroundFamilyCodeCoprodBridge_inl
+#check @DiamondIntegral.Section3.gammaGroundFamilyCodeCoprodBridge_inr
+#print axioms DiamondIntegral.Section3.gammaGroundFamilyCodeCoprodBridge_inr
+#check @DiamondIntegral.Section3.gammaGroundFamilyCodeCoprod_decode_inl
+#print axioms DiamondIntegral.Section3.gammaGroundFamilyCodeCoprod_decode_inl
+#check @DiamondIntegral.Section3.gammaGroundFamilyCodeCoprod_decode_inr
+#print axioms DiamondIntegral.Section3.gammaGroundFamilyCodeCoprod_decode_inr
+#check @DiamondIntegral.Section3.gammaGroundFamilyCodeCoprodBridge_symm_inl
+#print axioms DiamondIntegral.Section3.gammaGroundFamilyCodeCoprodBridge_symm_inl
+#check @DiamondIntegral.Section3.gammaGroundFamilyCodeCoprodBridge_symm_inr
+#print axioms DiamondIntegral.Section3.gammaGroundFamilyCodeCoprodBridge_symm_inr
+#check @DiamondIntegral.Section3.gammaGroundFamilyCodeCoprod_cases
+#print axioms DiamondIntegral.Section3.gammaGroundFamilyCodeCoprod_cases
+#check @DiamondIntegral.Section3.gammaGroundFamilyCoprodDecode_inl
+#print axioms DiamondIntegral.Section3.gammaGroundFamilyCoprodDecode_inl
+#check @DiamondIntegral.Section3.gammaGroundFamilyCoprodDecode_inr
+#print axioms DiamondIntegral.Section3.gammaGroundFamilyCoprodDecode_inr
+#check @DiamondIntegral.Section3.gammaGroundFamilyCoprodEncode_decode
+#print axioms DiamondIntegral.Section3.gammaGroundFamilyCoprodEncode_decode
+#check @DiamondIntegral.Section3.gammaGroundFamilyCoprodInl_inj
+#print axioms DiamondIntegral.Section3.gammaGroundFamilyCoprodInl_inj
+#check @DiamondIntegral.Section3.gammaGroundFamilyCoprodInr_inj
+#print axioms DiamondIntegral.Section3.gammaGroundFamilyCoprodInr_inj
+#check @DiamondIntegral.Section3.gammaGroundFamilyCoprodInl_ne_inr
+#print axioms DiamondIntegral.Section3.gammaGroundFamilyCoprodInl_ne_inr
+#check @DiamondIntegral.Section3.gammaGroundFamilyCoprodMapEquiv_inl
+#print axioms DiamondIntegral.Section3.gammaGroundFamilyCoprodMapEquiv_inl
+#check @DiamondIntegral.Section3.gammaGroundFamilyCoprodMapEquiv_inr
+#print axioms DiamondIntegral.Section3.gammaGroundFamilyCoprodMapEquiv_inr
+#check @DiamondIntegral.Section3.gammaGroundFamilyCoprodMapEquiv_definable
+#print axioms DiamondIntegral.Section3.gammaGroundFamilyCoprodMapEquiv_definable
+#check @DiamondIntegral.Section3.gammaGroundFamilyDecode_definable
+#print axioms DiamondIntegral.Section3.gammaGroundFamilyDecode_definable
+#check @DiamondIntegral.Section3.GammaGroundFamilyDefinable.descend
+#print axioms DiamondIntegral.Section3.GammaGroundFamilyDefinable.descend
+#check @DiamondIntegral.Section3.gammaGroundFamilyCodeRepresentative_spec
+#print axioms DiamondIntegral.Section3.gammaGroundFamilyCodeRepresentative_spec
+#check @DiamondIntegral.Section3.gammaGroundFamilyDescendedMap_decode
+#print axioms DiamondIntegral.Section3.gammaGroundFamilyDescendedMap_decode
+#check @DiamondIntegral.Section3.gammaGroundFamilyCoprodDropEmpty_inl
+#print axioms DiamondIntegral.Section3.gammaGroundFamilyCoprodDropEmpty_inl
+#check @DiamondIntegral.Section3.gammaGroundFamilyCoprodDropEmpty_definable
+#print axioms DiamondIntegral.Section3.gammaGroundFamilyCoprodDropEmpty_definable
+#check @DiamondIntegral.Section3.GammaGroundFamilyMap.mem_equalizerPiece
+#print axioms DiamondIntegral.Section3.GammaGroundFamilyMap.mem_equalizerPiece
+#check @DiamondIntegral.Section3.GammaGroundFamilyMap.equalizerPiece_subset
+#print axioms DiamondIntegral.Section3.GammaGroundFamilyMap.equalizerPiece_subset
+#check @DiamondIntegral.Section3.GammaGroundFamilyMap.mem_equalizerPiece_at
+#print axioms DiamondIntegral.Section3.GammaGroundFamilyMap.mem_equalizerPiece_at
+#check @DiamondIntegral.Section3.GammaGroundFamilyMap.ext
+#print axioms DiamondIntegral.Section3.GammaGroundFamilyMap.ext
+#check @DiamondIntegral.Section3.GammaGroundFamilyDefinable.congr_fun
+#print axioms DiamondIntegral.Section3.GammaGroundFamilyDefinable.congr_fun
+#check @DiamondIntegral.Section3.gammaGroundFamilyBijection_of_partitions
+#print axioms DiamondIntegral.Section3.gammaGroundFamilyBijection_of_partitions
+#check @DiamondIntegral.Section3.gammaGroundFamilyCarrier_ext
+#print axioms DiamondIntegral.Section3.gammaGroundFamilyCarrier_ext
+#check @DiamondIntegral.Section3.gammaGroundFamilyCoprod_cases
+#print axioms DiamondIntegral.Section3.gammaGroundFamilyCoprod_cases
+#check @DiamondIntegral.Section3.gammaGroundFamilyPartitionSubset
+#print axioms DiamondIntegral.Section3.gammaGroundFamilyPartitionSubset
+#check @DiamondIntegral.Section3.gammaGroundFamilyPartitionMap_inl
+#print axioms DiamondIntegral.Section3.gammaGroundFamilyPartitionMap_inl
+#check @DiamondIntegral.Section3.gammaGroundFamilyPartitionMap_inr
+#print axioms DiamondIntegral.Section3.gammaGroundFamilyPartitionMap_inr
+#check @DiamondIntegral.Section3.gammaGroundFamilyPartitionMap_bijective
+#print axioms DiamondIntegral.Section3.gammaGroundFamilyPartitionMap_bijective
+#check @DiamondIntegral.Section3.gammaGroundFamilyMap_of_selected_values
+#print axioms DiamondIntegral.Section3.gammaGroundFamilyMap_of_selected_values
+#check @DiamondIntegral.Section3.gammaGroundFamilyTaggedMap_definable
+#print axioms DiamondIntegral.Section3.gammaGroundFamilyTaggedMap_definable
+#check @DiamondIntegral.Section3.gammaGroundFamilyBijectionOfTagEquiv_apply
+#print axioms DiamondIntegral.Section3.gammaGroundFamilyBijectionOfTagEquiv_apply
+#check @DiamondIntegral.Section3.GammaGroundFamilyMap.valueMap_value
+#print axioms DiamondIntegral.Section3.GammaGroundFamilyMap.valueMap_value
+#check @DiamondIntegral.Section3.mem_gammaGroundFibreInterior
+#print axioms DiamondIntegral.Section3.mem_gammaGroundFibreInterior
+#check @DiamondIntegral.Section3.gammaGroundFibreInterior_subset
+#print axioms DiamondIntegral.Section3.gammaGroundFibreInterior_subset
+#check @DiamondIntegral.Section3.gammaGroundFibreInterior_open_fibres
+#print axioms DiamondIntegral.Section3.gammaGroundFibreInterior_open_fibres
+#check @DiamondIntegral.Section3.gammaGroundFibreInterior_preserves_cofull
+#print axioms DiamondIntegral.Section3.gammaGroundFibreInterior_preserves_cofull
+#check @DiamondIntegral.Section3.GammaGroundDefinable.iInter
+#print axioms DiamondIntegral.Section3.GammaGroundDefinable.iInter
+#check @DiamondIntegral.Section3.gammaGround_finite_cover_partition
+#print axioms DiamondIntegral.Section3.gammaGround_finite_cover_partition
+#check @DiamondIntegral.Section3.GammaGroundFamilyDefinable.id
+#print axioms DiamondIntegral.Section3.GammaGroundFamilyDefinable.id
+#check @DiamondIntegral.Section3.GammaGroundFamilyDefinable.comp
+#print axioms DiamondIntegral.Section3.GammaGroundFamilyDefinable.comp
+#check @DiamondIntegral.Section3.GammaGroundFamilyBijection.ext
+#print axioms DiamondIntegral.Section3.GammaGroundFamilyBijection.ext
+#check @DiamondIntegral.Section3.gammaGroundFiniteRVFibres_iff
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteRVFibres_iff
+#check @DiamondIntegral.Section3.gammaGroundFiniteGammaPresentationToDirectSum_class
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGammaPresentationToDirectSum_class
+#check @DiamondIntegral.Section3.gammaGroundFiniteGammaDirectSumToPresentationAdd_of
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGammaDirectSumToPresentationAdd_of
+#check @DiamondIntegral.Section3.gammaGroundFiniteGammaDirectSumToPresentationAdd_one
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGammaDirectSumToPresentationAdd_one
+#check @DiamondIntegral.Section3.gammaGroundFiniteGammaDirectSumToPresentationAdd_mul
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGammaDirectSumToPresentationAdd_mul
+#check @DiamondIntegral.Section3.gammaGroundFiniteGammaDirectSumToPresentation_class
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGammaDirectSumToPresentation_class
+#check @DiamondIntegral.Section3.gammaGroundFiniteGammaRepresentative_class
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGammaRepresentative_class
+#check @DiamondIntegral.Section3.gammaGroundFiniteGammaToGammaKPlus_mul
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGammaToGammaKPlus_mul
+#check @DiamondIntegral.Section3.gammaGroundFiniteGammaClassMul_class
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGammaClassMul_class
+#check @DiamondIntegral.Section3.gammaGroundFiniteGammaDirectSumToGamma_injective
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGammaDirectSumToGamma_injective
+#check @DiamondIntegral.Section3.gammaGroundFiniteGammaDirectSumToGamma_one
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGammaDirectSumToGamma_one
+#check @DiamondIntegral.Section3.gammaGroundFiniteGammaDirectSumToGamma_mul
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGammaDirectSumToGamma_mul
+#check @DiamondIntegral.Section3.gammaGroundFiniteGammaDirectSumClass_product
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGammaDirectSumClass_product
+#check @DiamondIntegral.Section3.gammaGroundFiniteGammaGradedInclusion_injective
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGammaGradedInclusion_injective
+#check @DiamondIntegral.Section3.gammaGroundFiniteGammaClass_iso
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGammaClass_iso
+#check @DiamondIntegral.Section3.gammaGroundFiniteGammaClass_empty
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGammaClass_empty
+#check @DiamondIntegral.Section3.gammaGroundFiniteGammaClass_coprod
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGammaClass_coprod
+#check @DiamondIntegral.Section3.gammaGroundFiniteGammaClass_surjective
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGammaClass_surjective
+#check @DiamondIntegral.Section3.gammaGroundFiniteGammaClass_eq_iff_iso
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGammaClass_eq_iff_iso
+#check @DiamondIntegral.Section3.gammaGroundFiniteGammaToGammaKPlus_injective
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGammaToGammaKPlus_injective
+#check @DiamondIntegral.Section3.gammaGroundFiniteGammaToRESKPlus_injective
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGammaToRESKPlus_injective
+#check @DiamondIntegral.Section3.gammaGroundFiniteGammaToGammaKPlus_class
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGammaToGammaKPlus_class
+#check @DiamondIntegral.Section3.gammaGroundFiniteGammaSemiringClass_iso
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGammaSemiringClass_iso
+#check @DiamondIntegral.Section3.gammaGroundFiniteGammaSemiringClass_empty
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGammaSemiringClass_empty
+#check @DiamondIntegral.Section3.gammaGroundFiniteGammaSemiringClass_unit
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGammaSemiringClass_unit
+#check @DiamondIntegral.Section3.gammaGroundFiniteGammaSemiringClass_product
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGammaSemiringClass_product
+#check @DiamondIntegral.Section3.gammaGroundFiniteGammaSemiringClass_scissor
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGammaSemiringClass_scissor
+#check @DiamondIntegral.Section3.gammaGroundFiniteGammaKPlusToSemiring_class
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGammaKPlusToSemiring_class
+#check @DiamondIntegral.Section3.gammaGroundFiniteGammaGradedInclusion_class
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGammaGradedInclusion_class
+#check @DiamondIntegral.Section3.gammaGroundFiniteGammaInclusion_grading
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGammaInclusion_grading
+#check @DiamondIntegral.Section3.gammaGroundFiniteGammaToGammaSemiring_injective
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGammaToGammaSemiring_injective
+#check @DiamondIntegral.Section3.gammaGroundFiniteGammaToGammaSemiring_class
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGammaToGammaSemiring_class
+#check @DiamondIntegral.Section3.gammaGroundFiniteGammaToRESSemiring_class
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGammaToRESSemiring_class
+#check @DiamondIntegral.Section3.gammaGroundRESToRVSemiring_class
+#print axioms DiamondIntegral.Section3.gammaGroundRESToRVSemiring_class
+#check @DiamondIntegral.Section3.gammaGroundRESToRVSemiring_injective
+#print axioms DiamondIntegral.Section3.gammaGroundRESToRVSemiring_injective
+#check @DiamondIntegral.Section3.gammaGroundFiniteGamma_semiring_square
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGamma_semiring_square
+#check @DiamondIntegral.Section3.gammaGroundFiniteGammaToRESKPlus_class
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGammaToRESKPlus_class
+#check @DiamondIntegral.Section3.gammaGroundFiniteGamma_positive_square
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGamma_positive_square
+#check @DiamondIntegral.Section3.GammaGroundFiniteMapPiece.mem_glue_source
+#print axioms DiamondIntegral.Section3.GammaGroundFiniteMapPiece.mem_glue_source
+#check @DiamondIntegral.Section3.gammaGroundFiniteCoverFiniteMap
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteCoverFiniteMap
+#check @DiamondIntegral.Section3.gammaGroundFiniteMixedCodeMap
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteMixedCodeMap
+#check @DiamondIntegral.Section3.gammaGroundDefinable_finite_common_names
+#print axioms DiamondIntegral.Section3.gammaGroundDefinable_finite_common_names
+#check @DiamondIntegral.Section3.gammaGroundDefinable_fintype_common_names
+#print axioms DiamondIntegral.Section3.gammaGroundDefinable_fintype_common_names
+#check @DiamondIntegral.Section3.GammaGroundMap.prodMap_apply
+#print axioms DiamondIntegral.Section3.GammaGroundMap.prodMap_apply
+#check @DiamondIntegral.Section3.GammaGroundMap.FiniteFibres.prodMap
+#print axioms DiamondIntegral.Section3.GammaGroundMap.FiniteFibres.prodMap
+#check @DiamondIntegral.Section3.GammaGroundDefinable.finiteSupport
+#print axioms DiamondIntegral.Section3.GammaGroundDefinable.finiteSupport
+#check @DiamondIntegral.Section3.GammaGroundDefinable.iUnion
+#print axioms DiamondIntegral.Section3.GammaGroundDefinable.iUnion
+#check @DiamondIntegral.Section3.rawVFSpace_preimage_eq_values_image
+#print axioms DiamondIntegral.Section3.rawVFSpace_preimage_eq_values_image
+#check @DiamondIntegral.Section3.gammaGroundFiniteVFCodeMap
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteVFCodeMap
+#check @DiamondIntegral.Section3.gammaGroundFiniteVFClass_coprod
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteVFClass_coprod
+#check @DiamondIntegral.Section3.gammaGroundFiniteVFClass_surjective
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteVFClass_surjective
+#check @DiamondIntegral.Section3.GammaGroundFiniteVFObject.of_toBound
+#print axioms DiamondIntegral.Section3.GammaGroundFiniteVFObject.of_toBound
+#check @DiamondIntegral.Section3.gammaGroundFiniteVFClass_iso
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteVFClass_iso
+#check @DiamondIntegral.Section3.gammaGroundFiniteVFClass_empty
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteVFClass_empty
+#check @DiamondIntegral.Section3.gammaGroundFiniteVFClass_scissor
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteVFClass_scissor
+#check @DiamondIntegral.Section3.gammaGroundGammaPower_definable_iff
+#print axioms DiamondIntegral.Section3.gammaGroundGammaPower_definable_iff
+#check @DiamondIntegral.Section3.fullGamma_finite_tuple_point_definable
+#print axioms DiamondIntegral.Section3.fullGamma_finite_tuple_point_definable
+#check @DiamondIntegral.Section3.gammaGroundGamma_finite_tuple_point_definable
+#print axioms DiamondIntegral.Section3.gammaGroundGamma_finite_tuple_point_definable
+#check @DiamondIntegral.Section3.gammaGroundGammaForm_full_graph
+#print axioms DiamondIntegral.Section3.gammaGroundGammaForm_full_graph
+#check @DiamondIntegral.Section3.gammaGroundGammaForm_total_function
+#print axioms DiamondIntegral.Section3.gammaGroundGammaForm_total_function
+#check @DiamondIntegral.Section3.gammaGroundRawDefinable_iff_fullRV
+#print axioms DiamondIntegral.Section3.gammaGroundRawDefinable_iff_fullRV
+#check @DiamondIntegral.Section3.gammaGroundDefinable_iff_full_rv_codes
+#print axioms DiamondIntegral.Section3.gammaGroundDefinable_iff_full_rv_codes
+#check @DiamondIntegral.Section3.gammaGroundDefinable_unique_fibre
+#print axioms DiamondIntegral.Section3.gammaGroundDefinable_unique_fibre
+#check @DiamondIntegral.Section3.gammaGroundUniqueFibreFunction_spec
+#print axioms DiamondIntegral.Section3.gammaGroundUniqueFibreFunction_spec
+#check @DiamondIntegral.Section3.gammaGroundGammaHom_piecewiseGLZ
+#print axioms DiamondIntegral.Section3.gammaGroundGammaHom_piecewiseGLZ
+#check @DiamondIntegral.Section3.gammaGroundGammaHom_iff_piecewiseGLZ
+#print axioms DiamondIntegral.Section3.gammaGroundGammaHom_iff_piecewiseGLZ
+#check @DiamondIntegral.Section3.gammaGroundContext_GammaHom_iff_piecewiseGLZ
+#print axioms DiamondIntegral.Section3.gammaGroundContext_GammaHom_iff_piecewiseGLZ
+#check @DiamondIntegral.Section3.gammaGroundGammaTupleSpace_rvCoded
+#print axioms DiamondIntegral.Section3.gammaGroundGammaTupleSpace_rvCoded
+#check @DiamondIntegral.Section3.GammaGroundGammaHom.ext
+#print axioms DiamondIntegral.Section3.GammaGroundGammaHom.ext
+#check @DiamondIntegral.Section3.GammaGroundBijection.symm_apply_apply
+#print axioms DiamondIntegral.Section3.GammaGroundBijection.symm_apply_apply
+#check @DiamondIntegral.Section3.gammaGroundGammaRVCodeBijection_restrict
+#print axioms DiamondIntegral.Section3.gammaGroundGammaRVCodeBijection_restrict
+#check @DiamondIntegral.Section3.gammaGroundGammaCodeDecode_inclusion
+#print axioms DiamondIntegral.Section3.gammaGroundGammaCodeDecode_inclusion
+#check @DiamondIntegral.Section3.gammaGroundGammaRVCodeForm_restrict
+#print axioms DiamondIntegral.Section3.gammaGroundGammaRVCodeForm_restrict
+#check @DiamondIntegral.Section3.GammaGroundGammaCodeMap.ext
+#print axioms DiamondIntegral.Section3.GammaGroundGammaCodeMap.ext
+#check @DiamondIntegral.Section3.gammaGroundGammaCodeIso_kernel
+#print axioms DiamondIntegral.Section3.gammaGroundGammaCodeIso_kernel
+#check @DiamondIntegral.Section3.gammaGroundGammaCodeProductPair_fst_assoc
+#print axioms DiamondIntegral.Section3.gammaGroundGammaCodeProductPair_fst_assoc
+#check @DiamondIntegral.Section3.gammaGroundGammaCodeProductPair_snd_assoc
+#print axioms DiamondIntegral.Section3.gammaGroundGammaCodeProductPair_snd_assoc
+#check @DiamondIntegral.Section3.gammaGroundGammaCodeProduct_hom_ext
+#print axioms DiamondIntegral.Section3.gammaGroundGammaCodeProduct_hom_ext
+#check @DiamondIntegral.Section3.gammaGroundGammaCodePairFunction_factor
+#print axioms DiamondIntegral.Section3.gammaGroundGammaCodePairFunction_factor
+#check @DiamondIntegral.Section3.gammaGroundGammaCodePairFunction_graph
+#print axioms DiamondIntegral.Section3.gammaGroundGammaCodePairFunction_graph
+#check @DiamondIntegral.Section3.gammaGroundGammaCodeProductPair_fst
+#print axioms DiamondIntegral.Section3.gammaGroundGammaCodeProductPair_fst
+#check @DiamondIntegral.Section3.gammaGroundGammaCodeProductPair_snd
+#print axioms DiamondIntegral.Section3.gammaGroundGammaCodeProductPair_snd
+#check @DiamondIntegral.Section3.gammaGroundGammaCodeProductPair_unique
+#print axioms DiamondIntegral.Section3.gammaGroundGammaCodeProductPair_unique
+#check @DiamondIntegral.Section3.gammaGroundGammaUnitCodes_subsingleton
+#print axioms DiamondIntegral.Section3.gammaGroundGammaUnitCodes_subsingleton
+#check @DiamondIntegral.Section3.gammaGroundGammaCodeUnit_hom_ext
+#print axioms DiamondIntegral.Section3.gammaGroundGammaCodeUnit_hom_ext
+#check @DiamondIntegral.Section3.gammaGroundGammaProductCodePieceEquiv_left_val
+#print axioms DiamondIntegral.Section3.gammaGroundGammaProductCodePieceEquiv_left_val
+#check @DiamondIntegral.Section3.gammaGroundGammaProductCodePieceEquiv_right_val
+#print axioms DiamondIntegral.Section3.gammaGroundGammaProductCodePieceEquiv_right_val
+#check @DiamondIntegral.Section3.gammaGroundGammaCodeTuple_injective
+#print axioms DiamondIntegral.Section3.gammaGroundGammaCodeTuple_injective
+#check @DiamondIntegral.Section3.gammaGroundGammaRVCodeLift_mono
+#print axioms DiamondIntegral.Section3.gammaGroundGammaRVCodeLift_mono
+#check @DiamondIntegral.Section3.gammaGroundGammaRVCodeLift_sdiff
+#print axioms DiamondIntegral.Section3.gammaGroundGammaRVCodeLift_sdiff
+#check @DiamondIntegral.Section3.gammaGroundGammaCoprodLeftCut_subset
+#print axioms DiamondIntegral.Section3.gammaGroundGammaCoprodLeftCut_subset
+#check @DiamondIntegral.Section3.gammaGroundGammaIsoClass_eq_iff
+#print axioms DiamondIntegral.Section3.gammaGroundGammaIsoClass_eq_iff
+#check @DiamondIntegral.Section3.gammaGroundGammaIsoClass_empty
+#print axioms DiamondIntegral.Section3.gammaGroundGammaIsoClass_empty
+#check @DiamondIntegral.Section3.gammaGroundGammaIsoClass_coprod
+#print axioms DiamondIntegral.Section3.gammaGroundGammaIsoClass_coprod
+#check @DiamondIntegral.Section3.gammaGroundGammaPresentationToDirectSum_class
+#print axioms DiamondIntegral.Section3.gammaGroundGammaPresentationToDirectSum_class
+#check @DiamondIntegral.Section3.gammaGroundGammaDirectSumToPresentationAdd_of
+#print axioms DiamondIntegral.Section3.gammaGroundGammaDirectSumToPresentationAdd_of
+#check @DiamondIntegral.Section3.gammaGroundGammaDirectSumToPresentationAdd_one
+#print axioms DiamondIntegral.Section3.gammaGroundGammaDirectSumToPresentationAdd_one
+#check @DiamondIntegral.Section3.gammaGroundGammaDirectSumToPresentationAdd_mul
+#print axioms DiamondIntegral.Section3.gammaGroundGammaDirectSumToPresentationAdd_mul
+#check @DiamondIntegral.Section3.gammaGroundGammaDirectSumToPresentation_class
+#print axioms DiamondIntegral.Section3.gammaGroundGammaDirectSumToPresentation_class
+#check @DiamondIntegral.Section3.gammaGroundGammaDirectSumClass_product
+#print axioms DiamondIntegral.Section3.gammaGroundGammaDirectSumClass_product
+#check @DiamondIntegral.Section3.gammaGroundGammaDirectSumClass_coprod
+#print axioms DiamondIntegral.Section3.gammaGroundGammaDirectSumClass_coprod
+#check @DiamondIntegral.Section3.gammaGroundGammaDirectSumClass_unit
+#print axioms DiamondIntegral.Section3.gammaGroundGammaDirectSumClass_unit
+#check @DiamondIntegral.Section3.gammaGroundGammaGroupDirectSumEquiv_class
+#print axioms DiamondIntegral.Section3.gammaGroundGammaGroupDirectSumEquiv_class
+#check @DiamondIntegral.Section3.gammaGroundFiniteGammaGroupDirectSumEquiv_class
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGammaGroupDirectSumEquiv_class
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaGroupDirectSumEquiv_class
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaGroupDirectSumEquiv_class
+#check @DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaGroupDirectSumEquiv_class
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaGroupDirectSumEquiv_class
+#check @DiamondIntegral.Section3.GammaGroundGammaHom.exists_unit_family_lift
+#print axioms DiamondIntegral.Section3.GammaGroundGammaHom.exists_unit_family_lift
+#check @DiamondIntegral.Section3.GammaGroundGammaHom.exists_generic_unit_family_lift
+#print axioms DiamondIntegral.Section3.GammaGroundGammaHom.exists_generic_unit_family_lift
+#check @DiamondIntegral.Section3.gammaGroundGammaRepresentative_class
+#print axioms DiamondIntegral.Section3.gammaGroundGammaRepresentative_class
+#check @DiamondIntegral.Section3.gammaGroundGammaClassMul_class
+#print axioms DiamondIntegral.Section3.gammaGroundGammaClassMul_class
+#check @DiamondIntegral.Section3.gammaGroundGammaClassMul_comm_cast
+#print axioms DiamondIntegral.Section3.gammaGroundGammaClassMul_comm_cast
+#check @DiamondIntegral.Section3.gammaGroundGammaHomogeneous_mul_comm
+#print axioms DiamondIntegral.Section3.gammaGroundGammaHomogeneous_mul_comm
+#check @DiamondIntegral.Section3.gammaGroundGammaHomogeneous_mul_one
+#print axioms DiamondIntegral.Section3.gammaGroundGammaHomogeneous_mul_one
+#check @DiamondIntegral.Section3.gammaGroundGammaHomogeneous_mul_assoc
+#print axioms DiamondIntegral.Section3.gammaGroundGammaHomogeneous_mul_assoc
+#check @DiamondIntegral.Section3.gammaGroundGammaClassMul_zero
+#print axioms DiamondIntegral.Section3.gammaGroundGammaClassMul_zero
+#check @DiamondIntegral.Section3.gammaGroundGammaClassMul_zero_left
+#print axioms DiamondIntegral.Section3.gammaGroundGammaClassMul_zero_left
+#check @DiamondIntegral.Section3.gammaGroundGammaClassMul_add
+#print axioms DiamondIntegral.Section3.gammaGroundGammaClassMul_add
+#check @DiamondIntegral.Section3.gammaGroundGammaClassMul_add_left
+#print axioms DiamondIntegral.Section3.gammaGroundGammaClassMul_add_left
+#check @DiamondIntegral.Section3.gammaGroundGammaZero_decode_injective
+#print axioms DiamondIntegral.Section3.gammaGroundGammaZero_decode_injective
+#check @DiamondIntegral.Section3.gammaGroundGammaToRVKPlus_zero_injective
+#print axioms DiamondIntegral.Section3.gammaGroundGammaToRVKPlus_zero_injective
+#check @DiamondIntegral.Section3.gammaGroundGammaIsoClass_scissor
+#print axioms DiamondIntegral.Section3.gammaGroundGammaIsoClass_scissor
+#check @DiamondIntegral.Section3.gammaGroundGammaKPlusToIsoClasses_class
+#print axioms DiamondIntegral.Section3.gammaGroundGammaKPlusToIsoClasses_class
+#check @DiamondIntegral.Section3.gammaGroundGammaClass_eq_iff_iso
+#print axioms DiamondIntegral.Section3.gammaGroundGammaClass_eq_iff_iso
+#check @DiamondIntegral.Section3.gammaGroundGammaProductCodeFunctionEquiv_factor
+#print axioms DiamondIntegral.Section3.gammaGroundGammaProductCodeFunctionEquiv_factor
+#check @DiamondIntegral.Section3.gammaGroundGammaProductCodeFunctionEquiv_graph
+#print axioms DiamondIntegral.Section3.gammaGroundGammaProductCodeFunctionEquiv_graph
+#check @DiamondIntegral.Section3.gammaGroundGammaProductCodeFunctionEquiv_definable
+#print axioms DiamondIntegral.Section3.gammaGroundGammaProductCodeFunctionEquiv_definable
+#check @DiamondIntegral.Section3.gammaGroundGammaProductCode_surjective
+#print axioms DiamondIntegral.Section3.gammaGroundGammaProductCode_surjective
+#check @DiamondIntegral.Section3.gammaGroundGammaProductCarrierPieceEquiv_append
+#print axioms DiamondIntegral.Section3.gammaGroundGammaProductCarrierPieceEquiv_append
+#check @DiamondIntegral.Section3.gammaGroundGammaProductCodePieceEquiv_code
+#print axioms DiamondIntegral.Section3.gammaGroundGammaProductCodePieceEquiv_code
+#check @DiamondIntegral.Section3.GammaGroundGammaObject.productCarrierEquiv_append
+#print axioms DiamondIntegral.Section3.GammaGroundGammaObject.productCarrierEquiv_append
+#check @DiamondIntegral.Section3.GammaGroundGammaObject.productCodeEquiv_code
+#print axioms DiamondIntegral.Section3.GammaGroundGammaObject.productCodeEquiv_code
+#check @DiamondIntegral.Section3.gammaGroundGammaProductCode_decode
+#print axioms DiamondIntegral.Section3.gammaGroundGammaProductCode_decode
+#check @DiamondIntegral.Section3.GammaGroundGammaObject.productCodeEquiv_decode
+#print axioms DiamondIntegral.Section3.GammaGroundGammaObject.productCodeEquiv_decode
+#check @DiamondIntegral.Section3.gammaGroundGammaClass_product_coprod
+#print axioms DiamondIntegral.Section3.gammaGroundGammaClass_product_coprod
+#check @DiamondIntegral.Section3.gammaGroundGammaKPlusCast_add
+#print axioms DiamondIntegral.Section3.gammaGroundGammaKPlusCast_add
+#check @DiamondIntegral.Section3.gammaGroundGammaClass_cast
+#print axioms DiamondIntegral.Section3.gammaGroundGammaClass_cast
+#check @DiamondIntegral.Section3.gammaGroundGammaClass_heq_of_castHom
+#print axioms DiamondIntegral.Section3.gammaGroundGammaClass_heq_of_castHom
+#check @DiamondIntegral.Section3.gammaGroundGammaProductFunctionEquiv_factor
+#print axioms DiamondIntegral.Section3.gammaGroundGammaProductFunctionEquiv_factor
+#check @DiamondIntegral.Section3.GammaGroundGammaHom.productCodes_contract
+#print axioms DiamondIntegral.Section3.GammaGroundGammaHom.productCodes_contract
+#check @DiamondIntegral.Section3.GammaGroundGammaHom.product_factor
+#print axioms DiamondIntegral.Section3.GammaGroundGammaHom.product_factor
+#check @DiamondIntegral.Section3.gammaGroundGammaProductPair_tag
+#print axioms DiamondIntegral.Section3.gammaGroundGammaProductPair_tag
+#check @DiamondIntegral.Section3.gammaGroundGammaProductPair_append
+#print axioms DiamondIntegral.Section3.gammaGroundGammaProductPair_append
+#check @DiamondIntegral.Section3.gammaGroundGammaProductPair_val
+#print axioms DiamondIntegral.Section3.gammaGroundGammaProductPair_val
+#check @DiamondIntegral.Section3.gammaGroundGammaProductDistrib_pair_left
+#print axioms DiamondIntegral.Section3.gammaGroundGammaProductDistrib_pair_left
+#check @DiamondIntegral.Section3.gammaGroundGammaProductDistrib_pair_right
+#print axioms DiamondIntegral.Section3.gammaGroundGammaProductDistrib_pair_right
+#check @DiamondIntegral.Section3.gammaGroundGammaAppendMap_injective
+#print axioms DiamondIntegral.Section3.gammaGroundGammaAppendMap_injective
+#check @DiamondIntegral.Section3.GammaGroundGammaObject.degree_zero_finite
+#print axioms DiamondIntegral.Section3.GammaGroundGammaObject.degree_zero_finite
+#check @DiamondIntegral.Section3.GammaGroundGammaObject.product_finite
+#print axioms DiamondIntegral.Section3.GammaGroundGammaObject.product_finite
+#check @DiamondIntegral.Section3.GammaGroundGammaObject.rvLift_res
+#print axioms DiamondIntegral.Section3.GammaGroundGammaObject.rvLift_res
+#check @DiamondIntegral.Section3.gammaGroundFiniteGammaHom_lift_iso
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGammaHom_lift_iso
+#check @DiamondIntegral.Section3.gammaGroundGammaCodeToRV_injective
+#print axioms DiamondIntegral.Section3.gammaGroundGammaCodeToRV_injective
+#check @DiamondIntegral.Section3.gammaGroundGammaRVCodeLift_res
+#print axioms DiamondIntegral.Section3.gammaGroundGammaRVCodeLift_res
+#check @DiamondIntegral.Section3.gammaGroundGammaRVCodeLift_mem
+#print axioms DiamondIntegral.Section3.gammaGroundGammaRVCodeLift_mem
+#check @DiamondIntegral.Section3.GammaGroundGammaObject.rvPieces_nonzero
+#print axioms DiamondIntegral.Section3.GammaGroundGammaObject.rvPieces_nonzero
+#check @DiamondIntegral.Section3.gammaGroundGammaHom_lift_iso
+#print axioms DiamondIntegral.Section3.gammaGroundGammaHom_lift_iso
+#check @DiamondIntegral.Section3.gammaGroundGamma_reflects_RV_lift_bijection
+#print axioms DiamondIntegral.Section3.gammaGroundGamma_reflects_RV_lift_bijection
+#check @DiamondIntegral.Section3.gammaGroundGammaToRVKPlus_injective
+#print axioms DiamondIntegral.Section3.gammaGroundGammaToRVKPlus_injective
+#check @DiamondIntegral.Section3.gammaGroundGammaRVProductBijection_code
+#print axioms DiamondIntegral.Section3.gammaGroundGammaRVProductBijection_code
+#check @DiamondIntegral.Section3.gammaGroundGammaRVCodeLift_product
+#print axioms DiamondIntegral.Section3.gammaGroundGammaRVCodeLift_product
+#check @DiamondIntegral.Section3.gammaGroundGammaRVClass_product
+#print axioms DiamondIntegral.Section3.gammaGroundGammaRVClass_product
+#check @DiamondIntegral.Section3.gammaGroundGammaRVClass_unit
+#print axioms DiamondIntegral.Section3.gammaGroundGammaRVClass_unit
+#check @DiamondIntegral.Section3.gammaGroundGammaRVClass_empty
+#print axioms DiamondIntegral.Section3.gammaGroundGammaRVClass_empty
+#check @DiamondIntegral.Section3.GammaGroundGammaObject.rvLift_restrict_subset
+#print axioms DiamondIntegral.Section3.GammaGroundGammaObject.rvLift_restrict_subset
+#check @DiamondIntegral.Section3.GammaGroundGammaObject.rvLift_difference
+#print axioms DiamondIntegral.Section3.GammaGroundGammaObject.rvLift_difference
+#check @DiamondIntegral.Section3.gammaGroundGammaRVClass_scissor
+#print axioms DiamondIntegral.Section3.gammaGroundGammaRVClass_scissor
+#check @DiamondIntegral.Section3.gammaGroundGammaToRVKPlus_class
+#print axioms DiamondIntegral.Section3.gammaGroundGammaToRVKPlus_class
+#check @DiamondIntegral.Section3.gammaGroundGammaRVLift_grading
+#print axioms DiamondIntegral.Section3.gammaGroundGammaRVLift_grading
+#check @DiamondIntegral.Section3.gammaGroundGammaToRVSemiring_injective
+#print axioms DiamondIntegral.Section3.gammaGroundGammaToRVSemiring_injective
+#check @DiamondIntegral.Section3.gammaGroundFiniteGammaToRESSemiring_injective
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGammaToRESSemiring_injective
+#check @DiamondIntegral.Section3.gammaGroundGammaClass_coprod
+#print axioms DiamondIntegral.Section3.gammaGroundGammaClass_coprod
+#check @DiamondIntegral.Section3.gammaGroundGammaClass_surjective
+#print axioms DiamondIntegral.Section3.gammaGroundGammaClass_surjective
+#check @DiamondIntegral.Section3.gammaGroundGammaClass_iso
+#print axioms DiamondIntegral.Section3.gammaGroundGammaClass_iso
+#check @DiamondIntegral.Section3.gammaGroundGammaClass_empty
+#print axioms DiamondIntegral.Section3.gammaGroundGammaClass_empty
+#check @DiamondIntegral.Section3.gammaGroundGammaClass_scissor
+#print axioms DiamondIntegral.Section3.gammaGroundGammaClass_scissor
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaClass_iso
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaClass_iso
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaClass_empty
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaClass_empty
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaClass_scissor
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaClass_scissor
+#check @DiamondIntegral.Section3.gammaGroundGammaSemiringClass_iso
+#print axioms DiamondIntegral.Section3.gammaGroundGammaSemiringClass_iso
+#check @DiamondIntegral.Section3.gammaGroundGammaSemiringClass_empty
+#print axioms DiamondIntegral.Section3.gammaGroundGammaSemiringClass_empty
+#check @DiamondIntegral.Section3.gammaGroundGammaSemiringClass_unit
+#print axioms DiamondIntegral.Section3.gammaGroundGammaSemiringClass_unit
+#check @DiamondIntegral.Section3.gammaGroundGammaSemiringClass_product
+#print axioms DiamondIntegral.Section3.gammaGroundGammaSemiringClass_product
+#check @DiamondIntegral.Section3.gammaGroundGammaSemiringClass_scissor
+#print axioms DiamondIntegral.Section3.gammaGroundGammaSemiringClass_scissor
+#check @DiamondIntegral.Section3.gammaGroundGammaKPlusToSemiring_class
+#print axioms DiamondIntegral.Section3.gammaGroundGammaKPlusToSemiring_class
+#check @DiamondIntegral.Section3.gammaGroundGammaRVSemiringClass_empty
+#print axioms DiamondIntegral.Section3.gammaGroundGammaRVSemiringClass_empty
+#check @DiamondIntegral.Section3.gammaGroundGammaRVSemiringClass_unit
+#print axioms DiamondIntegral.Section3.gammaGroundGammaRVSemiringClass_unit
+#check @DiamondIntegral.Section3.gammaGroundGammaRVSemiringClass_scissor
+#print axioms DiamondIntegral.Section3.gammaGroundGammaRVSemiringClass_scissor
+#check @DiamondIntegral.Section3.gammaGroundGammaToRVSemiring_class
+#print axioms DiamondIntegral.Section3.gammaGroundGammaToRVSemiring_class
+#check @DiamondIntegral.Section3.gammaGroundGammaUnitSlice_formula
+#print axioms DiamondIntegral.Section3.gammaGroundGammaUnitSlice_formula
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGamma_equation_iff
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGamma_equation_iff
+#check @DiamondIntegral.Section3.GammaGroundMeasuredGammaHom.ext
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredGammaHom.ext
+#check @DiamondIntegral.Section3.gammaGroundRVGenericValueImage_subset_values
+#print axioms DiamondIntegral.Section3.gammaGroundRVGenericValueImage_subset_values
+#check @DiamondIntegral.Section3.gammaGroundRVGenericValueImage_partition
+#print axioms DiamondIntegral.Section3.gammaGroundRVGenericValueImage_partition
+#check @DiamondIntegral.Section3.gammaGroundGeneric_finite_fibre_test
+#print axioms DiamondIntegral.Section3.gammaGroundGeneric_finite_fibre_test
+#check @DiamondIntegral.Section3.gammaGroundGeneric_mono_on_fibre
+#print axioms DiamondIntegral.Section3.gammaGroundGeneric_mono_on_fibre
+#check @DiamondIntegral.Section3.gammaGroundRVGenericValueImage_full_preimage
+#print axioms DiamondIntegral.Section3.gammaGroundRVGenericValueImage_full_preimage
+#check @DiamondIntegral.Section3.gammaGround_independent_not_mem
+#print axioms DiamondIntegral.Section3.gammaGround_independent_not_mem
+#check @DiamondIntegral.Section3.gammaGround_mem_of_small_complement
+#print axioms DiamondIntegral.Section3.gammaGround_mem_of_small_complement
+#check @DiamondIntegral.Section3.gammaGround_small_complement_of_generic
+#print axioms DiamondIntegral.Section3.gammaGround_small_complement_of_generic
+#check @DiamondIntegral.Section3.gammaGroundRVGenericValueImage_iInter
+#print axioms DiamondIntegral.Section3.gammaGroundRVGenericValueImage_iInter
+#check @DiamondIntegral.Section3.rvNormalizedUnitTuple_values
+#print axioms DiamondIntegral.Section3.rvNormalizedUnitTuple_values
+#check @DiamondIntegral.Section3.rvNormalizedUnitTuple_raw
+#print axioms DiamondIntegral.Section3.rvNormalizedUnitTuple_raw
+#check @DiamondIntegral.Section3.gammaGroundRVGeneric_normalized_test
+#print axioms DiamondIntegral.Section3.gammaGroundRVGeneric_normalized_test
+#check @DiamondIntegral.Section3.gammaGroundRVGeneric_value_unique
+#print axioms DiamondIntegral.Section3.gammaGroundRVGeneric_value_unique
+#check @DiamondIntegral.Section3.gammaGroundUnitFamily_contraction_is_generic
+#print axioms DiamondIntegral.Section3.gammaGroundUnitFamily_contraction_is_generic
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGradedIntegral_class
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGradedIntegral_class
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredFilteredIntegral_class
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredFilteredIntegral_class
+#check @DiamondIntegral.Section3.GammaGroundMap.graphPair_bijective
+#print axioms DiamondIntegral.Section3.GammaGroundMap.graphPair_bijective
+#check @DiamondIntegral.Section3.gammaGround_code_contraction_piecewiseIntegralAffine
+#print axioms DiamondIntegral.Section3.gammaGround_code_contraction_piecewiseIntegralAffine
+#check @DiamondIntegral.Section3.gammaGroundContext_contraction_piecewiseIntegralAffine
+#print axioms DiamondIntegral.Section3.gammaGroundContext_contraction_piecewiseIntegralAffine
+#check @DiamondIntegral.Section3.gammaGround_contraction_piecewiseIntegralAffine
+#print axioms DiamondIntegral.Section3.gammaGround_contraction_piecewiseIntegralAffine
+#check @DiamondIntegral.Section3.gammaGroundMonomialValueImage_mem
+#print axioms DiamondIntegral.Section3.gammaGroundMonomialValueImage_mem
+#check @DiamondIntegral.Section3.gammaGroundIntegralMonomialMap_value
+#print axioms DiamondIntegral.Section3.gammaGroundIntegralMonomialMap_value
+#check @DiamondIntegral.Section3.gammaGroundIntegralMonomialMap_bijective
+#print axioms DiamondIntegral.Section3.gammaGroundIntegralMonomialMap_bijective
+#check @DiamondIntegral.Section3.gammaGroundGammaSemiringClass_monomial_image
+#print axioms DiamondIntegral.Section3.gammaGroundGammaSemiringClass_monomial_image
+#check @DiamondIntegral.Section3.GammaGroundVolumeForm.inv_value
+#print axioms DiamondIntegral.Section3.GammaGroundVolumeForm.inv_value
+#check @DiamondIntegral.Section3.gammaGroundFullJacobianRelation_definable
+#print axioms DiamondIntegral.Section3.gammaGroundFullJacobianRelation_definable
+#check @DiamondIntegral.Section3.mem_gammaGroundDifferentiabilityLocus
+#print axioms DiamondIntegral.Section3.mem_gammaGroundDifferentiabilityLocus
+#check @DiamondIntegral.Section3.gammaGroundLemma_3_3
+#print axioms DiamondIntegral.Section3.gammaGroundLemma_3_3
+#check @DiamondIntegral.Section3.gammaGroundRVDimension_ofReal
+#print axioms DiamondIntegral.Section3.gammaGroundRVDimension_ofReal
+#check @DiamondIntegral.Section3.mem_gammaGroundObjectLift
+#print axioms DiamondIntegral.Section3.mem_gammaGroundObjectLift
+#check @DiamondIntegral.Section3.gammaGroundObjectLift_finite_rv_fibres
+#print axioms DiamondIntegral.Section3.gammaGroundObjectLift_finite_rv_fibres
+#check @DiamondIntegral.Section3.gammaGroundObjectLift_vf_coordinates_nonzero
+#print axioms DiamondIntegral.Section3.gammaGroundObjectLift_vf_coordinates_nonzero
+#check @DiamondIntegral.Section3.GammaGroundMap.comp_apply
+#print axioms DiamondIntegral.Section3.GammaGroundMap.comp_apply
+#check @DiamondIntegral.Section3.gammaGroundMap_of_finite_partition
+#print axioms DiamondIntegral.Section3.gammaGroundMap_of_finite_partition
+#check @DiamondIntegral.Section3.GammaGroundMap.toImage_bijective
+#print axioms DiamondIntegral.Section3.GammaGroundMap.toImage_bijective
+#check @DiamondIntegral.Section3.GammaGroundMap.finiteFibres_of_injective
+#print axioms DiamondIntegral.Section3.GammaGroundMap.finiteFibres_of_injective
+#check @DiamondIntegral.Section3.GammaGroundMap.FiniteFibres.comp
+#print axioms DiamondIntegral.Section3.GammaGroundMap.FiniteFibres.comp
+#check @DiamondIntegral.Section3.GammaGroundMap.definable_preimage
+#print axioms DiamondIntegral.Section3.GammaGroundMap.definable_preimage
+#check @DiamondIntegral.Section3.GammaGroundMap.preimage_subset
+#print axioms DiamondIntegral.Section3.GammaGroundMap.preimage_subset
+#check @DiamondIntegral.Section3.GammaGroundMap.realize
+#print axioms DiamondIntegral.Section3.GammaGroundMap.realize
+#check @DiamondIntegral.Section3.GammaGroundMap.relation_definable
+#print axioms DiamondIntegral.Section3.GammaGroundMap.relation_definable
+#check @DiamondIntegral.Section3.GammaGroundMap.tuple_value
+#print axioms DiamondIntegral.Section3.GammaGroundMap.tuple_value
+#check @DiamondIntegral.Section3.GammaGroundMap.union_on_left
+#print axioms DiamondIntegral.Section3.GammaGroundMap.union_on_left
+#check @DiamondIntegral.Section3.GammaGroundMap.union_on_right
+#print axioms DiamondIntegral.Section3.GammaGroundMap.union_on_right
+#check @DiamondIntegral.Section3.GammaGroundMap.FiniteFibres.union
+#print axioms DiamondIntegral.Section3.GammaGroundMap.FiniteFibres.union
+#check @DiamondIntegral.Section3.GammaGroundMap.ext
+#print axioms DiamondIntegral.Section3.GammaGroundMap.ext
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVDiagram_finite_support
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVDiagram_finite_support
+#check @DiamondIntegral.Section3.GammaGroundMeasuredRVDiagramSupport.object_reconstructed
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredRVDiagramSupport.object_reconstructed
+#check @DiamondIntegral.Section3.GammaGroundMeasuredRVDiagramSupport.arrow_reconstructed
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredRVDiagramSupport.arrow_reconstructed
+#check @DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaPresentationToDirectSum_class
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaPresentationToDirectSum_class
+#check @DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaDirectSumToPresentationAdd_of
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaDirectSumToPresentationAdd_of
+#check @DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaDirectSumToPresentationAdd_one
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaDirectSumToPresentationAdd_one
+#check @DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaDirectSumToPresentationAdd_mul
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaDirectSumToPresentationAdd_mul
+#check @DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaDirectSumToPresentation_class
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaDirectSumToPresentation_class
+#check @DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaRepresentative_class
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaRepresentative_class
+#check @DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaToGammaKPlus_mul
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaToGammaKPlus_mul
+#check @DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaClassMul_class
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaClassMul_class
+#check @DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaDirectSumToGamma_injective
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaDirectSumToGamma_injective
+#check @DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaDirectSumToGamma_one
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaDirectSumToGamma_one
+#check @DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaDirectSumToGamma_mul
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaDirectSumToGamma_mul
+#check @DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaDirectSumClass_product
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaDirectSumClass_product
+#check @DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaGradedInclusion_injective
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaGradedInclusion_injective
+#check @DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaClass_iso
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaClass_iso
+#check @DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaClass_empty
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaClass_empty
+#check @DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaClass_coprod
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaClass_coprod
+#check @DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaClass_surjective
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaClass_surjective
+#check @DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaClass_eq_iff_iso
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaClass_eq_iff_iso
+#check @DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaToGammaKPlus_injective
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaToGammaKPlus_injective
+#check @DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaToGammaKPlus_class
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaToGammaKPlus_class
+#check @DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaSemiringClass_iso
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaSemiringClass_iso
+#check @DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaSemiringClass_empty
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaSemiringClass_empty
+#check @DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaSemiringClass_unit
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaSemiringClass_unit
+#check @DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaSemiringClass_product
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaSemiringClass_product
+#check @DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaSemiringClass_scissor
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaSemiringClass_scissor
+#check @DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaKPlusToSemiring_class
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaKPlusToSemiring_class
+#check @DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaGradedInclusion_class
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaGradedInclusion_class
+#check @DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaInclusion_grading
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaInclusion_grading
+#check @DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaToGammaSemiring_injective
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaToGammaSemiring_injective
+#check @DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaToGammaSemiring_class
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaToGammaSemiring_class
+#check @DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaToRESSemiring_class
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaToRESSemiring_class
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRESToRVSemiring_class
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRESToRVSemiring_class
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRESToRVSemiring_injective
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRESToRVSemiring_injective
+#check @DiamondIntegral.Section3.gammaGroundMeasuredFiniteGamma_semiring_square
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredFiniteGamma_semiring_square
+#check @DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaToRESKPlus_class
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaToRESKPlus_class
+#check @DiamondIntegral.Section3.gammaGroundMeasuredFiniteGamma_positive_square
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredFiniteGamma_positive_square
+#check @DiamondIntegral.Section3.gammaGroundGammaCodePair_fst_apply
+#print axioms DiamondIntegral.Section3.gammaGroundGammaCodePair_fst_apply
+#check @DiamondIntegral.Section3.gammaGroundGammaCodePair_snd_apply
+#print axioms DiamondIntegral.Section3.gammaGroundGammaCodePair_snd_apply
+#check @DiamondIntegral.Section3.gammaGroundGammaCodeComp_apply
+#print axioms DiamondIntegral.Section3.gammaGroundGammaCodeComp_apply
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaCodeCombined_product
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaCodeCombined_product
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaUnit_combined
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaUnit_combined
+#check @DiamondIntegral.Section3.gammaGroundGammaCoprodComm_inl
+#print axioms DiamondIntegral.Section3.gammaGroundGammaCoprodComm_inl
+#check @DiamondIntegral.Section3.gammaGroundGammaCoprodComm_inr
+#print axioms DiamondIntegral.Section3.gammaGroundGammaCoprodComm_inr
+#check @DiamondIntegral.Section3.gammaGroundGammaCoprodAssoc_left
+#print axioms DiamondIntegral.Section3.gammaGroundGammaCoprodAssoc_left
+#check @DiamondIntegral.Section3.gammaGroundGammaCoprodAssoc_middle
+#print axioms DiamondIntegral.Section3.gammaGroundGammaCoprodAssoc_middle
+#check @DiamondIntegral.Section3.gammaGroundGammaCoprodAssoc_right
+#print axioms DiamondIntegral.Section3.gammaGroundGammaCoprodAssoc_right
+#check @DiamondIntegral.Section3.gammaGroundGammaCoprodEmpty_inr
+#print axioms DiamondIntegral.Section3.gammaGroundGammaCoprodEmpty_inr
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaIsoClass_eq_iff
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaIsoClass_eq_iff
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaIsoClass_empty
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaIsoClass_empty
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaIsoClass_coprod
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaIsoClass_coprod
+#check @DiamondIntegral.Section3.gammaGroundFormValue_transport
+#print axioms DiamondIntegral.Section3.gammaGroundFormValue_transport
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaCoprod_combined_left
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaCoprod_combined_left
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaCoprod_combined_right
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaCoprod_combined_right
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaPresentationToDirectSum_class
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaPresentationToDirectSum_class
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaDirectSumToPresentationAdd_of
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaDirectSumToPresentationAdd_of
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaDirectSumToPresentationAdd_one
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaDirectSumToPresentationAdd_one
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaDirectSumToPresentationAdd_mul
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaDirectSumToPresentationAdd_mul
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaDirectSumToPresentation_class
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaDirectSumToPresentation_class
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaDirectSumClass_product
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaDirectSumClass_product
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaDirectSumClass_coprod
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaDirectSumClass_coprod
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaDirectSumClass_unit
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaDirectSumClass_unit
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaRepresentative_class
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaRepresentative_class
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaClassMul_class
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaClassMul_class
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaClassMul_comm_cast
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaClassMul_comm_cast
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaHomogeneous_mul_comm
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaHomogeneous_mul_comm
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaHomogeneous_mul_one
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaHomogeneous_mul_one
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaHomogeneous_mul_assoc
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaHomogeneous_mul_assoc
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaClassMul_zero
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaClassMul_zero
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaClassMul_zero_left
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaClassMul_zero_left
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaClassMul_add
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaClassMul_add
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaClassMul_add_left
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaClassMul_add_left
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaIsoClass_scissor
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaIsoClass_scissor
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaKPlusToIsoClasses_class
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaKPlusToIsoClasses_class
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaClass_eq_iff_iso
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaClass_eq_iff_iso
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaProduct_combined_pair
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaProduct_combined_pair
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaClass_product_coprod
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaClass_product_coprod
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaKPlusCast_add
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaKPlusCast_add
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaClass_cast
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaClass_cast
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaClass_heq_of_castHom
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaClass_heq_of_castHom
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaRVClass_product
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaRVClass_product
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaRVClass_unit
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaRVClass_unit
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaProduct_factor
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaProduct_factor
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaProduct_preserves
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaProduct_preserves
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaProduct_combined
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaProduct_combined
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaProduct_combined_code
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaProduct_combined_code
+#check @DiamondIntegral.Section3.GammaGroundGammaObject.rvEncodeCode_surjective
+#print axioms DiamondIntegral.Section3.GammaGroundGammaObject.rvEncodeCode_surjective
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaLiftForm_code
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaLiftForm_code
+#check @DiamondIntegral.Section3.gammaGroundRVFamilyTarget_encode
+#print axioms DiamondIntegral.Section3.gammaGroundRVFamilyTarget_encode
+#check @DiamondIntegral.Section3.gammaGroundGammaRVLift_target_code
+#print axioms DiamondIntegral.Section3.gammaGroundGammaRVLift_target_code
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaLift_combined
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaLift_combined
+#check @DiamondIntegral.Section3.gammaGroundGammaCodeFamilyBijection_encode
+#print axioms DiamondIntegral.Section3.gammaGroundGammaCodeFamilyBijection_encode
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaHom_lift_iso
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaHom_lift_iso
+#check @DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaHom_lift_iso
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaHom_lift_iso
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaRVClass_empty
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaRVClass_empty
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaRVClass_scissor
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaRVClass_scissor
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaToRVKPlus_class
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaToRVKPlus_class
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaRestriction_combined
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaRestriction_combined
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaClass_coprod
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaClass_coprod
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaClass_surjective
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaClass_surjective
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaLiftForm_restrict
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaLiftForm_restrict
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaSemiringClass_iso
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaSemiringClass_iso
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaSemiringClass_empty
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaSemiringClass_empty
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaSemiringClass_unit
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaSemiringClass_unit
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaSemiringClass_product
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaSemiringClass_product
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaSemiringClass_scissor
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaSemiringClass_scissor
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaKPlusToSemiring_class
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaKPlusToSemiring_class
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaRVSemiringClass_empty
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaRVSemiringClass_empty
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaRVSemiringClass_unit
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaRVSemiringClass_unit
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaRVSemiringClass_scissor
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaRVSemiringClass_scissor
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaToRVSemiring_class
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaToRVSemiring_class
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaSingleWeight_combined
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaSingleWeight_combined
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaUnitLift_combined
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaUnitLift_combined
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRESRepresentative_class
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRESRepresentative_class
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRESToRVKPlus_mul
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRESToRVKPlus_mul
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRESClassMul_class
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRESClassMul_class
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRESDirectSumToRV_injective
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRESDirectSumToRV_injective
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRESDirectSumToRV_one
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRESDirectSumToRV_one
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRESDirectSumToRV_mul
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRESDirectSumToRV_mul
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRESDirectSumClass_product
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRESDirectSumClass_product
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRESGradedInclusion_injective
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRESGradedInclusion_injective
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRESRingToRV_class
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRESRingToRV_class
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRESClass_scissor
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRESClass_scissor
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRESClass_coprod
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRESClass_coprod
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRESClass_surjective
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRESClass_surjective
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRESClass_eq_iff_iso
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRESClass_eq_iff_iso
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRESToRVKPlus_injective
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRESToRVKPlus_injective
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRESToRVKPlus_class
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRESToRVKPlus_class
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRESClass_iso
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRESClass_iso
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRESClass_empty
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRESClass_empty
+#check @DiamondIntegral.Section3.GammaGroundMeasuredRVHom.ext
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredRVHom.ext
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVCoprod_form_left
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVCoprod_form_left
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVCoprod_form_right
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVCoprod_form_right
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVCoprod_combined_left
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVCoprod_combined_left
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVCoprod_combined_right
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVCoprod_combined_right
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVClass_of_empty
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVClass_of_empty
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVSemiringClass_of_empty
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVSemiringClass_of_empty
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVClass_finiteUnion
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVClass_finiteUnion
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVClass_finite_partition
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVClass_finite_partition
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVSemiringClass_finite_partition
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVSemiringClass_finite_partition
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVForgetSemiring_class
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVForgetSemiring_class
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVForgetRing_class
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVForgetRing_class
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVPresentationToDirectSum_class
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVPresentationToDirectSum_class
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVDirectSumToPresentationAdd_of
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVDirectSumToPresentationAdd_of
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVDirectSumToPresentationAdd_one
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVDirectSumToPresentationAdd_one
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVDirectSumToPresentationAdd_mul
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVDirectSumToPresentationAdd_mul
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVDirectSumToPresentation_class
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVDirectSumToPresentation_class
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVKPlusCast_add
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVKPlusCast_add
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVClass_cast_reindex
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVClass_cast_reindex
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVClassMul_comm_cast
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVClassMul_comm_cast
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVClass_heq_of_reindexedIso
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVClass_heq_of_reindexedIso
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVHomogeneous_mul_comm
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVHomogeneous_mul_comm
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVHomogeneous_mul_one
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVHomogeneous_mul_one
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVHomogeneous_mul_assoc
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVHomogeneous_mul_assoc
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVDirectSumClass_product
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVDirectSumClass_product
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVDirectSumClass_coprod
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVDirectSumClass_coprod
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVDirectSumClass_unit
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVDirectSumClass_unit
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVPresentationToDirectSum_fixed
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVPresentationToDirectSum_fixed
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVKPlusToSemiring_injective
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVKPlusToSemiring_injective
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVGroupDirectSumEquiv_class
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVGroupDirectSumEquiv_class
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVRepresentative_class
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVRepresentative_class
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVClassMul_class
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVClassMul_class
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVKPlusToSemiring_mul
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVKPlusToSemiring_mul
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVIsoClass_eq_iff
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVIsoClass_eq_iff
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVIsoClass_empty
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVIsoClass_empty
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVIsoClass_coprod
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVIsoClass_coprod
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVIsoClass_scissor
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVIsoClass_scissor
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVKPlusToIsoClasses_class
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVKPlusToIsoClasses_class
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVClass_eq_iff_iso
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVClass_eq_iff_iso
+#check @DiamondIntegral.Section3.GammaGroundMeasuredRVMap.ext
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredRVMap.ext
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVMapIso_iff
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVMapIso_iff
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVMapInl_desc
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVMapInl_desc
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVMapInr_desc
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVMapInr_desc
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVMapCoprod_hom_ext
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVMapCoprod_hom_ext
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVClassMul_zero
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVClassMul_zero
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVKPlusCast_zero
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVKPlusCast_zero
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVClassMul_zero_left
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVClassMul_zero_left
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVClassMul_add
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVClassMul_add
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVClassMul_add_left
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVClassMul_add_left
+#check @DiamondIntegral.Section3.GammaGroundMeasuredRVObject.reindex_combinedWeight
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredRVObject.reindex_combinedWeight
+#check @DiamondIntegral.Section3.GammaGroundMeasuredRVObject.unit_combinedWeight
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredRVObject.unit_combinedWeight
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVClass_partition
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVClass_partition
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVClass_product_coprod
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVClass_product_coprod
+#check @DiamondIntegral.Section3.GammaGroundMeasuredRVObject.product_form
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredRVObject.product_form
+#check @DiamondIntegral.Section3.GammaGroundMeasuredRVObject.product_combined
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredRVObject.product_combined
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVSpecialMap_zero
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVSpecialMap_zero
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVSpecialMap_one
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVSpecialMap_one
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVSpecialMap_add
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVSpecialMap_add
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVSpecialMap_mul
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVSpecialMap_mul
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVMonomial_add
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVMonomial_add
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVPolynomialMap_class
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVPolynomialMap_class
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVPolynomialMap_respects
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVPolynomialMap_respects
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVQuotientGrading_class
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVQuotientGrading_class
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVQuotientGrading_fixed
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVQuotientGrading_fixed
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVClass_coprod
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVClass_coprod
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVClass_surjective
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVClass_surjective
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVClass_empty
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVClass_empty
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVClass_iso
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVClass_iso
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVClass_scissor
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVClass_scissor
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVSemiringClass_iso
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVSemiringClass_iso
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVSemiringClass_empty
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVSemiringClass_empty
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVSemiringClass_unit
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVSemiringClass_unit
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVSemiringClass_product
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVSemiringClass_product
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVSemiringClass_scissor
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVSemiringClass_scissor
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVKPlusToSemiring_class
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVKPlusToSemiring_class
+#check @DiamondIntegral.Section3.GammaGroundMeasuredRVObject.ofNamed_combined
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredRVObject.ofNamed_combined
+#check @DiamondIntegral.Section3.GammaGroundMeasuredRVObject.finiteSupport
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredRVObject.finiteSupport
+#check @DiamondIntegral.Section3.gammaGroundMeasuredTensorMap_tmul
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredTensorMap_tmul
+#check @DiamondIntegral.Section3.gammaGroundMeasuredTensorMap_objects
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredTensorMap_objects
+#check @DiamondIntegral.Section3.gammaGroundObjectLiftLabel_value
+#print axioms DiamondIntegral.Section3.gammaGroundObjectLiftLabel_value
+#check @DiamondIntegral.Section3.gammaGroundMeasuredObjectLift_form
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredObjectLift_form
+#check @DiamondIntegral.Section3.gammaGroundMeasuredVFDirectSumToSemiring_of
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredVFDirectSumToSemiring_of
+#check @DiamondIntegral.Section3.gammaGroundMeasuredVFDirectSumToSemiring_add
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredVFDirectSumToSemiring_add
+#check @DiamondIntegral.Section3.gammaGroundMeasuredVFKPlusToSemiring_add
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredVFKPlusToSemiring_add
+#check @DiamondIntegral.Section3.gammaGroundMeasuredVFDirectSum_grading_coeff
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredVFDirectSum_grading_coeff
+#check @DiamondIntegral.Section3.gammaGroundMeasuredVFDirectSumToSemiring_injective
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredVFDirectSumToSemiring_injective
+#check @DiamondIntegral.Section3.gammaGroundMeasuredVFDirectSumToSemiring_surjective
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredVFDirectSumToSemiring_surjective
+#check @DiamondIntegral.Section3.gammaGroundMeasuredAE_iff_agreement
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredAE_iff_agreement
+#check @DiamondIntegral.Section3.gammaGroundMeasuredVFDirectSumToSemiring_class
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredVFDirectSumToSemiring_class
+#check @DiamondIntegral.Section3.gammaGroundMeasuredVFDirectSumClass_product
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredVFDirectSumClass_product
+#check @DiamondIntegral.Section3.gammaGroundMeasuredVFDirectSumClass_unit
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredVFDirectSumClass_unit
+#check @DiamondIntegral.Section3.gammaGroundMeasuredVFPolynomialGrading_add
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredVFPolynomialGrading_add
+#check @DiamondIntegral.Section3.gammaGroundMeasuredPositiveIntegral_add
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredPositiveIntegral_add
+#check @DiamondIntegral.Section3.gammaGroundMeasuredVFPolynomialGrading_fixed
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredVFPolynomialGrading_fixed
+#check @DiamondIntegral.Section3.GammaGroundMeasuredVFData.product_form
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredVFData.product_form
+#check @DiamondIntegral.Section3.gammaGroundMeasuredLift_degree_compat
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredLift_degree_compat
+#check @DiamondIntegral.Section3.gammaGroundMeasuredVFKPlusToSemiring_injective
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredVFKPlusToSemiring_injective
+#check @DiamondIntegral.Section3.gammaGroundMeasuredVFClass_surjective
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredVFClass_surjective
+#check @DiamondIntegral.Section3.gammaGroundMeasuredVFClass_empty
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredVFClass_empty
+#check @DiamondIntegral.Section3.gammaGroundMeasuredVFClass_iso
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredVFClass_iso
+#check @DiamondIntegral.Section3.gammaGroundMeasuredVFClass_scissor
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredVFClass_scissor
+#check @DiamondIntegral.Section3.gammaGroundMeasuredVFSemiringClass_iso
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredVFSemiringClass_iso
+#check @DiamondIntegral.Section3.gammaGroundMeasuredVFSemiringClass_empty
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredVFSemiringClass_empty
+#check @DiamondIntegral.Section3.gammaGroundMeasuredVFSemiringClass_unit
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredVFSemiringClass_unit
+#check @DiamondIntegral.Section3.gammaGroundMeasuredVFSemiringClass_product
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredVFSemiringClass_product
+#check @DiamondIntegral.Section3.gammaGroundMeasuredVFSemiringClass_scissor
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredVFSemiringClass_scissor
+#check @DiamondIntegral.Section3.gammaGroundMeasuredVFKPlusToSemiring_class
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredVFKPlusToSemiring_class
+#check @DiamondIntegral.Section3.GammaGroundZeroMeasuredVFHom.ext
+#print axioms DiamondIntegral.Section3.GammaGroundZeroMeasuredVFHom.ext
+#check @DiamondIntegral.Section3.gammaGroundMixedPack_injective
+#print axioms DiamondIntegral.Section3.gammaGroundMixedPack_injective
+#check @DiamondIntegral.Section3.mem_gammaGroundMixedProductDomain
+#print axioms DiamondIntegral.Section3.mem_gammaGroundMixedProductDomain
+#check @DiamondIntegral.Section3.gammaGroundMixedProduct_finite
+#print axioms DiamondIntegral.Section3.gammaGroundMixedProduct_finite
+#check @DiamondIntegral.Section3.gammaGroundMap_output_vf_coordinate_isAlgebraic
+#print axioms DiamondIntegral.Section3.gammaGroundMap_output_vf_coordinate_isAlgebraic
+#check @DiamondIntegral.Section3.gammaGroundMixedMap_output_rv_coordinate_algebraic
+#print axioms DiamondIntegral.Section3.gammaGroundMixedMap_output_rv_coordinate_algebraic
+#check @DiamondIntegral.Section3.gammaGroundMixedMap_vf_base_algebraic
+#print axioms DiamondIntegral.Section3.gammaGroundMixedMap_vf_base_algebraic
+#check @DiamondIntegral.Section3.gammaGroundMixedBijection_point_rv_rank
+#print axioms DiamondIntegral.Section3.gammaGroundMixedBijection_point_rv_rank
+#check @DiamondIntegral.Section3.gammaGroundMixedLeftTag_injective
+#print axioms DiamondIntegral.Section3.gammaGroundMixedLeftTag_injective
+#check @DiamondIntegral.Section3.gammaGroundMixedRightTag_injective
+#print axioms DiamondIntegral.Section3.gammaGroundMixedRightTag_injective
+#check @DiamondIntegral.Section3.gammaGroundMixedTaggedImages_disjoint
+#print axioms DiamondIntegral.Section3.gammaGroundMixedTaggedImages_disjoint
+#check @DiamondIntegral.Section3.gammaGroundFiniteRVFibres_leftTag
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteRVFibres_leftTag
+#check @DiamondIntegral.Section3.gammaGroundFiniteRVFibres_rightTag
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteRVFibres_rightTag
+#check @DiamondIntegral.Section3.gammaGroundWithNameDefinable_iff
+#print axioms DiamondIntegral.Section3.gammaGroundWithNameDefinable_iff
+#check @DiamondIntegral.Section3.gammaGroundWithNameRelation_iff
+#print axioms DiamondIntegral.Section3.gammaGroundWithNameRelation_iff
+#check @DiamondIntegral.Section3.ImaginaryDefinable.name_singleton
+#print axioms DiamondIntegral.Section3.ImaginaryDefinable.name_singleton
+#check @DiamondIntegral.Section3.GammaGroundDefinable.gammaTuple_singleton
+#print axioms DiamondIntegral.Section3.GammaGroundDefinable.gammaTuple_singleton
+#check @DiamondIntegral.Section3.GammaGroundDefinable.eliminateName
+#print axioms DiamondIntegral.Section3.GammaGroundDefinable.eliminateName
+#check @DiamondIntegral.Section3.gammaGround_ordered_cover_partition
+#print axioms DiamondIntegral.Section3.gammaGround_ordered_cover_partition
+#check @DiamondIntegral.Section3.gammaGroundNames_append
+#print axioms DiamondIntegral.Section3.gammaGroundNames_append
+#check @DiamondIntegral.Section3.gammaPowerProjection_left_append
+#print axioms DiamondIntegral.Section3.gammaPowerProjection_left_append
+#check @DiamondIntegral.Section3.gammaPowerProjection_right_append
+#print axioms DiamondIntegral.Section3.gammaPowerProjection_right_append
+#check @DiamondIntegral.Section3.GammaGroundDefinable.of_real
+#print axioms DiamondIntegral.Section3.GammaGroundDefinable.of_real
+#check @DiamondIntegral.Section3.GammaGroundDefinable.inter
+#print axioms DiamondIntegral.Section3.GammaGroundDefinable.inter
+#check @DiamondIntegral.Section3.GammaGroundDefinable.union
+#print axioms DiamondIntegral.Section3.GammaGroundDefinable.union
+#check @DiamondIntegral.Section3.GammaGroundDefinable.compl
+#print axioms DiamondIntegral.Section3.GammaGroundDefinable.compl
+#check @DiamondIntegral.Section3.GammaGroundDefinable.congr
+#print axioms DiamondIntegral.Section3.GammaGroundDefinable.congr
+#check @DiamondIntegral.Section3.GammaGroundDefinable.preimage
+#print axioms DiamondIntegral.Section3.GammaGroundDefinable.preimage
+#check @DiamondIntegral.Section3.GammaGroundDefinable.image
+#print axioms DiamondIntegral.Section3.GammaGroundDefinable.image
+#check @DiamondIntegral.Section3.gammaGroundPiecewiseGLZ_of_pointwise
+#print axioms DiamondIntegral.Section3.gammaGroundPiecewiseGLZ_of_pointwise
+#check @DiamondIntegral.Section3.gammaGroundPiecewiseGLZ_pointwise
+#print axioms DiamondIntegral.Section3.gammaGroundPiecewiseGLZ_pointwise
+#check @DiamondIntegral.Section3.gammaGroundGammaHom_of_piecewiseGLZ
+#print axioms DiamondIntegral.Section3.gammaGroundGammaHom_of_piecewiseGLZ
+#check @DiamondIntegral.Section3.gammaGroundGamma_piecewise_value_map
+#print axioms DiamondIntegral.Section3.gammaGroundGamma_piecewise_value_map
+#check @DiamondIntegral.Section3.gammaGroundPoint_realTuple_function
+#print axioms DiamondIntegral.Section3.gammaGroundPoint_realTuple_function
+#check @DiamondIntegral.Section3.gammaGroundPoint_rvUnitTuple_function
+#print axioms DiamondIntegral.Section3.gammaGroundPoint_rvUnitTuple_function
+#check @DiamondIntegral.Section3.gammaGroundRVUnitTuple_point_definable
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnitTuple_point_definable
+#check @DiamondIntegral.Section3.gammaGroundRVUnitCoefficient_function
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnitCoefficient_function
+#check @DiamondIntegral.Section3.GammaGroundEssentialVFMap.Preserves.toGeneric
+#print axioms DiamondIntegral.Section3.GammaGroundEssentialVFMap.Preserves.toGeneric
+#check @DiamondIntegral.Section3.GammaGroundEssentialVFMap.regularMeasureLocus_cofull
+#print axioms DiamondIntegral.Section3.GammaGroundEssentialVFMap.regularMeasureLocus_cofull
+#check @DiamondIntegral.Section3.GammaGroundEssentialVFMap.exists_pointwise_preserving
+#print axioms DiamondIntegral.Section3.GammaGroundEssentialVFMap.exists_pointwise_preserving
+#check @DiamondIntegral.Section3.GammaGroundRVObject.withCombinedWeight_value
+#print axioms DiamondIntegral.Section3.GammaGroundRVObject.withCombinedWeight_value
+#check @DiamondIntegral.Section3.GammaGroundRVObject.product_res
+#print axioms DiamondIntegral.Section3.GammaGroundRVObject.product_res
+#check @DiamondIntegral.Section3.GammaGroundRVObject.coprod_res
+#print axioms DiamondIntegral.Section3.GammaGroundRVObject.coprod_res
+#check @DiamondIntegral.Section3.gammaGroundRESRepresentative_class
+#print axioms DiamondIntegral.Section3.gammaGroundRESRepresentative_class
+#check @DiamondIntegral.Section3.gammaGroundRESToRVKPlus_mul
+#print axioms DiamondIntegral.Section3.gammaGroundRESToRVKPlus_mul
+#check @DiamondIntegral.Section3.gammaGroundRESClassMul_class
+#print axioms DiamondIntegral.Section3.gammaGroundRESClassMul_class
+#check @DiamondIntegral.Section3.gammaGroundRESDirectSumToRV_injective
+#print axioms DiamondIntegral.Section3.gammaGroundRESDirectSumToRV_injective
+#check @DiamondIntegral.Section3.gammaGroundRESDirectSumToRV_one
+#print axioms DiamondIntegral.Section3.gammaGroundRESDirectSumToRV_one
+#check @DiamondIntegral.Section3.gammaGroundRESDirectSumToRV_mul
+#print axioms DiamondIntegral.Section3.gammaGroundRESDirectSumToRV_mul
+#check @DiamondIntegral.Section3.gammaGroundRESDirectSumClass_product
+#print axioms DiamondIntegral.Section3.gammaGroundRESDirectSumClass_product
+#check @DiamondIntegral.Section3.gammaGroundRESGradedInclusion_injective
+#print axioms DiamondIntegral.Section3.gammaGroundRESGradedInclusion_injective
+#check @DiamondIntegral.Section3.gammaGroundRESRingToRV_class
+#print axioms DiamondIntegral.Section3.gammaGroundRESRingToRV_class
+#check @DiamondIntegral.Section3.gammaGroundRESClass_scissor
+#print axioms DiamondIntegral.Section3.gammaGroundRESClass_scissor
+#check @DiamondIntegral.Section3.gammaGroundRESClass_coprod
+#print axioms DiamondIntegral.Section3.gammaGroundRESClass_coprod
+#check @DiamondIntegral.Section3.gammaGroundRESClass_surjective
+#print axioms DiamondIntegral.Section3.gammaGroundRESClass_surjective
+#check @DiamondIntegral.Section3.gammaGroundRESClass_eq_iff_iso
+#print axioms DiamondIntegral.Section3.gammaGroundRESClass_eq_iff_iso
+#check @DiamondIntegral.Section3.gammaGroundRESToRVKPlus_injective
+#print axioms DiamondIntegral.Section3.gammaGroundRESToRVKPlus_injective
+#check @DiamondIntegral.Section3.gammaGroundResProperty_restrict
+#print axioms DiamondIntegral.Section3.gammaGroundResProperty_restrict
+#check @DiamondIntegral.Section3.gammaGroundRESToRVKPlus_class
+#print axioms DiamondIntegral.Section3.gammaGroundRESToRVKPlus_class
+#check @DiamondIntegral.Section3.gammaGroundRESClass_iso
+#print axioms DiamondIntegral.Section3.gammaGroundRESClass_iso
+#check @DiamondIntegral.Section3.gammaGroundRESClass_empty
+#print axioms DiamondIntegral.Section3.gammaGroundRESClass_empty
+#check @DiamondIntegral.Section3.gammaGroundRVAngularCoordinateMap_injective
+#print axioms DiamondIntegral.Section3.gammaGroundRVAngularCoordinateMap_injective
+#check @DiamondIntegral.Section3.gammaGroundRVAngularCoordinateMap_image
+#print axioms DiamondIntegral.Section3.gammaGroundRVAngularCoordinateMap_image
+#check @DiamondIntegral.Section3.gammaGroundRVAngularCell_product_bijections
+#print axioms DiamondIntegral.Section3.gammaGroundRVAngularCell_product_bijections
+#check @DiamondIntegral.Section3.gammaGroundRVAngularCell_product_maps
+#print axioms DiamondIntegral.Section3.gammaGroundRVAngularCell_product_maps
+#check @DiamondIntegral.Section3.gammaGroundRVAngularCell_finite_products
+#print axioms DiamondIntegral.Section3.gammaGroundRVAngularCell_finite_products
+#check @DiamondIntegral.Section3.gammaGroundRVMixedValueProjection_image
+#print axioms DiamondIntegral.Section3.gammaGroundRVMixedValueProjection_image
+#check @DiamondIntegral.Section3.gammaGroundRVAngularMixedDomain_carrier
+#print axioms DiamondIntegral.Section3.gammaGroundRVAngularMixedDomain_carrier
+#check @DiamondIntegral.Section3.gammaGroundRVAngularMixedDomain_full_preimage
+#print axioms DiamondIntegral.Section3.gammaGroundRVAngularMixedDomain_full_preimage
+#check @DiamondIntegral.Section3.gammaGroundRVAngularResidueDomain_carrier
+#print axioms DiamondIntegral.Section3.gammaGroundRVAngularResidueDomain_carrier
+#check @DiamondIntegral.Section3.gammaGroundRVAngularResidueDomain_finite_values
+#print axioms DiamondIntegral.Section3.gammaGroundRVAngularResidueDomain_finite_values
+#check @DiamondIntegral.Section3.gammaGroundRVAngularCell_weight_charts
+#print axioms DiamondIntegral.Section3.gammaGroundRVAngularCell_weight_charts
+#check @DiamondIntegral.Section3.gammaGroundRVBoundedToDirectSum_component
+#print axioms DiamondIntegral.Section3.gammaGroundRVBoundedToDirectSum_component
+#check @DiamondIntegral.Section3.gammaGroundRVBoundedInclude_grading
+#print axioms DiamondIntegral.Section3.gammaGroundRVBoundedInclude_grading
+#check @DiamondIntegral.Section3.gammaGroundRVBoundedInclude_injective
+#print axioms DiamondIntegral.Section3.gammaGroundRVBoundedInclude_injective
+#check @DiamondIntegral.Section3.GammaGroundRVObject.finiteSupport
+#print axioms DiamondIntegral.Section3.GammaGroundRVObject.finiteSupport
+#check @DiamondIntegral.Section3.GammaGroundRVObject.degree_zero_finite
+#print axioms DiamondIntegral.Section3.GammaGroundRVObject.degree_zero_finite
+#check @DiamondIntegral.Section3.GammaGroundRVObject.degree_zero_res
+#print axioms DiamondIntegral.Section3.GammaGroundRVObject.degree_zero_res
+#check @DiamondIntegral.Section3.gammaGroundRVSet_character_invariant
+#print axioms DiamondIntegral.Section3.gammaGroundRVSet_character_invariant
+#check @DiamondIntegral.Section3.gammaGroundRawRV_character_invariant
+#print axioms DiamondIntegral.Section3.gammaGroundRawRV_character_invariant
+#check @DiamondIntegral.Section3.gammaGroundRVCoprodIso
+#print axioms DiamondIntegral.Section3.gammaGroundRVCoprodIso
+#check @DiamondIntegral.Section3.gammaGroundRVCoprod_assoc
+#print axioms DiamondIntegral.Section3.gammaGroundRVCoprod_assoc
+#check @DiamondIntegral.Section3.gammaGroundRVCoprod_comm
+#print axioms DiamondIntegral.Section3.gammaGroundRVCoprod_comm
+#check @DiamondIntegral.Section3.gammaGroundRVCoprod_empty
+#print axioms DiamondIntegral.Section3.gammaGroundRVCoprod_empty
+#check @DiamondIntegral.Section3.gammaGroundRV_coordinate_row_finite_or_cofinite
+#print axioms DiamondIntegral.Section3.gammaGroundRV_coordinate_row_finite_or_cofinite
+#check @DiamondIntegral.Section3.gammaGroundRVCoprod_volume_left
+#print axioms DiamondIntegral.Section3.gammaGroundRVCoprod_volume_left
+#check @DiamondIntegral.Section3.gammaGroundRVCoprod_volume_right
+#print axioms DiamondIntegral.Section3.gammaGroundRVCoprod_volume_right
+#check @DiamondIntegral.Section3.gammaGroundRVClass_coprod
+#print axioms DiamondIntegral.Section3.gammaGroundRVClass_coprod
+#check @DiamondIntegral.Section3.gammaGroundRVClass_surjective
+#print axioms DiamondIntegral.Section3.gammaGroundRVClass_surjective
+#check @DiamondIntegral.Section3.GammaGroundBijection.apply_symm_apply
+#print axioms DiamondIntegral.Section3.GammaGroundBijection.apply_symm_apply
+#check @DiamondIntegral.Section3.GammaGroundRVObject.correspondence_mem
+#print axioms DiamondIntegral.Section3.GammaGroundRVObject.correspondence_mem
+#check @DiamondIntegral.Section3.GammaGroundRVObject.correspondence_subset
+#print axioms DiamondIntegral.Section3.GammaGroundRVObject.correspondence_subset
+#check @DiamondIntegral.Section3.GammaGroundRVObject.correspondence_symm
+#print axioms DiamondIntegral.Section3.GammaGroundRVObject.correspondence_symm
+#check @DiamondIntegral.Section3.GammaGroundRVObject.correspondence_fibre_finite
+#print axioms DiamondIntegral.Section3.GammaGroundRVObject.correspondence_fibre_finite
+#check @DiamondIntegral.Section3.GammaGroundRVObject.correspondence_reverse_fibre_finite
+#print axioms DiamondIntegral.Section3.GammaGroundRVObject.correspondence_reverse_fibre_finite
+#check @DiamondIntegral.Section3.GammaGroundRVObject.correspondenceFinitary_nonempty
+#print axioms DiamondIntegral.Section3.GammaGroundRVObject.correspondenceFinitary_nonempty
+#check @DiamondIntegral.Section3.GammaGroundRVObject.correspondenceFinitary_finite
+#print axioms DiamondIntegral.Section3.GammaGroundRVObject.correspondenceFinitary_finite
+#check @DiamondIntegral.Section3.GammaGroundRVObject.correspondenceFinitary_subset
+#print axioms DiamondIntegral.Section3.GammaGroundRVObject.correspondenceFinitary_subset
+#check @DiamondIntegral.Section3.GammaGroundRVObject.correspondenceJacobian_at
+#print axioms DiamondIntegral.Section3.GammaGroundRVObject.correspondenceJacobian_at
+#check @DiamondIntegral.Section3.gammaGroundDefinableRVValues_mem_iff
+#print axioms DiamondIntegral.Section3.gammaGroundDefinableRVValues_mem_iff
+#check @DiamondIntegral.Section3.gammaGroundRVHasFiniteMap_self
+#print axioms DiamondIntegral.Section3.gammaGroundRVHasFiniteMap_self
+#check @DiamondIntegral.Section3.gammaGroundRVDim_attained
+#print axioms DiamondIntegral.Section3.gammaGroundRVDim_attained
+#check @DiamondIntegral.Section3.gammaGroundRVDim_le_of_finite_map
+#print axioms DiamondIntegral.Section3.gammaGroundRVDim_le_of_finite_map
+#check @DiamondIntegral.Section3.gammaGroundRVDim_le_arity
+#print axioms DiamondIntegral.Section3.gammaGroundRVDim_le_arity
+#check @DiamondIntegral.Section3.gammaGroundRVDim_le_iff_point_rank
+#print axioms DiamondIntegral.Section3.gammaGroundRVDim_le_iff_point_rank
+#check @DiamondIntegral.Section3.gammaGroundRVDim_eq_zero_iff_finite
+#print axioms DiamondIntegral.Section3.gammaGroundRVDim_eq_zero_iff_finite
+#check @DiamondIntegral.Section3.gammaGroundRVDim_ofReal
+#print axioms DiamondIntegral.Section3.gammaGroundRVDim_ofReal
+#check @DiamondIntegral.Section3.gammaGroundRVDimension_eq_bot_iff
+#print axioms DiamondIntegral.Section3.gammaGroundRVDimension_eq_bot_iff
+#check @DiamondIntegral.Section3.gammaGroundRVClass_of_empty
+#print axioms DiamondIntegral.Section3.gammaGroundRVClass_of_empty
+#check @DiamondIntegral.Section3.gammaGroundRVSemiringClass_of_empty
+#print axioms DiamondIntegral.Section3.gammaGroundRVSemiringClass_of_empty
+#check @DiamondIntegral.Section3.gammaGroundRVFamilyDesc_graph_definable
+#print axioms DiamondIntegral.Section3.gammaGroundRVFamilyDesc_graph_definable
+#check @DiamondIntegral.Section3.gammaGroundRVFamilyDesc_encode
+#print axioms DiamondIntegral.Section3.gammaGroundRVFamilyDesc_encode
+#check @DiamondIntegral.Section3.gammaGroundRVFamilyDesc_restrict
+#print axioms DiamondIntegral.Section3.gammaGroundRVFamilyDesc_restrict
+#check @DiamondIntegral.Section3.GammaGroundFamilyDefinable.rvRealization
+#print axioms DiamondIntegral.Section3.GammaGroundFamilyDefinable.rvRealization
+#check @DiamondIntegral.Section3.gammaGroundRVFamilyMap_encode
+#print axioms DiamondIntegral.Section3.gammaGroundRVFamilyMap_encode
+#check @DiamondIntegral.Section3.GammaGroundFiniteFamily.rvTarget_finite
+#print axioms DiamondIntegral.Section3.GammaGroundFiniteFamily.rvTarget_finite
+#check @DiamondIntegral.Section3.gammaGroundRVFamilyProductBranch_pair
+#print axioms DiamondIntegral.Section3.gammaGroundRVFamilyProductBranch_pair
+#check @DiamondIntegral.Section3.gammaGroundRVFamilyProductMap_bijective
+#print axioms DiamondIntegral.Section3.gammaGroundRVFamilyProductMap_bijective
+#check @DiamondIntegral.Section3.GammaGroundFiniteFamily.rvEncode_bijective
+#print axioms DiamondIntegral.Section3.GammaGroundFiniteFamily.rvEncode_bijective
+#check @DiamondIntegral.Section3.gammaGroundRVFamilyTuple_injective
+#print axioms DiamondIntegral.Section3.gammaGroundRVFamilyTuple_injective
+#check @DiamondIntegral.Section3.gammaGroundRVFamilyRealization_mono
+#print axioms DiamondIntegral.Section3.gammaGroundRVFamilyRealization_mono
+#check @DiamondIntegral.Section3.gammaGroundRVFamilyRealization_sdiff
+#print axioms DiamondIntegral.Section3.gammaGroundRVFamilyRealization_sdiff
+#check @DiamondIntegral.Section3.GammaGroundFiniteFamily.rvObject_res
+#print axioms DiamondIntegral.Section3.GammaGroundFiniteFamily.rvObject_res
+#check @DiamondIntegral.Section3.gammaGroundRVFibreDim_eq_zero_iff_finite_fibres
+#print axioms DiamondIntegral.Section3.gammaGroundRVFibreDim_eq_zero_iff_finite_fibres
+#check @DiamondIntegral.Section3.gammaGroundRVFibreDimension_eq_bot_iff
+#print axioms DiamondIntegral.Section3.gammaGroundRVFibreDimension_eq_bot_iff
+#check @DiamondIntegral.Section3.gammaGroundRV_fibre_dimension_le
+#print axioms DiamondIntegral.Section3.gammaGroundRV_fibre_dimension_le
+#check @DiamondIntegral.Section3.gammaGroundRV_fibre_dimension_attained
+#print axioms DiamondIntegral.Section3.gammaGroundRV_fibre_dimension_attained
+#check @DiamondIntegral.Section3.gammaGroundRVFibreDim_bounded
+#print axioms DiamondIntegral.Section3.gammaGroundRVFibreDim_bounded
+#check @DiamondIntegral.Section3.gammaGroundRVFibreDim_le_arity
+#print axioms DiamondIntegral.Section3.gammaGroundRVFibreDim_le_arity
+#check @DiamondIntegral.Section3.gammaGroundRVFibreDim_attained
+#print axioms DiamondIntegral.Section3.gammaGroundRVFibreDim_attained
+#check @DiamondIntegral.Section3.gammaGroundRVFibreDim_le_of_bijective
+#print axioms DiamondIntegral.Section3.gammaGroundRVFibreDim_le_of_bijective
+#check @DiamondIntegral.Section3.gammaGroundRVFibreDim_eq_of_bijective
+#print axioms DiamondIntegral.Section3.gammaGroundRVFibreDim_eq_of_bijective
+#check @DiamondIntegral.Section3.gammaGroundRVBoundedInclude_of
+#print axioms DiamondIntegral.Section3.gammaGroundRVBoundedInclude_of
+#check @DiamondIntegral.Section3.gammaGroundRVBoundedInclude_class
+#print axioms DiamondIntegral.Section3.gammaGroundRVBoundedInclude_class
+#check @DiamondIntegral.Section3.gammaGroundRVBoundedTransition_of
+#print axioms DiamondIntegral.Section3.gammaGroundRVBoundedTransition_of
+#check @DiamondIntegral.Section3.gammaGroundRVBoundedInclude_transition
+#print axioms DiamondIntegral.Section3.gammaGroundRVBoundedInclude_transition
+#check @DiamondIntegral.Section3.gammaGroundRVBoundedTransition_refl
+#print axioms DiamondIntegral.Section3.gammaGroundRVBoundedTransition_refl
+#check @DiamondIntegral.Section3.gammaGroundRVBoundedTransition_comp
+#print axioms DiamondIntegral.Section3.gammaGroundRVBoundedTransition_comp
+#check @DiamondIntegral.Section3.gammaGroundRVBoundedQuotientTransition_mk
+#print axioms DiamondIntegral.Section3.gammaGroundRVBoundedQuotientTransition_mk
+#check @DiamondIntegral.Section3.gammaGroundRVCoordinateSet_definable
+#print axioms DiamondIntegral.Section3.gammaGroundRVCoordinateSet_definable
+#check @DiamondIntegral.Section3.gammaGroundRVCoordinateSet_finite
+#print axioms DiamondIntegral.Section3.gammaGroundRVCoordinateSet_finite
+#check @DiamondIntegral.Section3.gammaGroundFiniteMapRVCoordinateAlgebraic
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteMapRVCoordinateAlgebraic
+#check @DiamondIntegral.Section3.gammaGroundRVTupleRank_le_of_finite_map
+#print axioms DiamondIntegral.Section3.gammaGroundRVTupleRank_le_of_finite_map
+#check @DiamondIntegral.Section3.gammaGroundRVClass_finiteUnion
+#print axioms DiamondIntegral.Section3.gammaGroundRVClass_finiteUnion
+#check @DiamondIntegral.Section3.gammaGroundRVClass_finite_partition
+#print axioms DiamondIntegral.Section3.gammaGroundRVClass_finite_partition
+#check @DiamondIntegral.Section3.gammaGroundRVSemiringClass_finite_partition
+#print axioms DiamondIntegral.Section3.gammaGroundRVSemiringClass_finite_partition
+#check @DiamondIntegral.Section3.fullGamma_tuple_singleton_definable
+#print axioms DiamondIntegral.Section3.fullGamma_tuple_singleton_definable
+#check @DiamondIntegral.Section3.gammaGroundRVUnit_finite_value_fibres
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnit_finite_value_fibres
+#check @DiamondIntegral.Section3.gammaGroundRVFormProductCharts_assemble
+#print axioms DiamondIntegral.Section3.gammaGroundRVFormProductCharts_assemble
+#check @DiamondIntegral.Section3.gammaGroundRV_form_normal_form
+#print axioms DiamondIntegral.Section3.gammaGroundRV_form_normal_form
+#check @DiamondIntegral.Section3.gammaGroundRVBijection_generic_bijection
+#print axioms DiamondIntegral.Section3.gammaGroundRVBijection_generic_bijection
+#check @DiamondIntegral.Section3.gammaGroundRVGeneric_contraction
+#print axioms DiamondIntegral.Section3.gammaGroundRVGeneric_contraction
+#check @DiamondIntegral.Section3.gammaGroundRVMap_generic_contraction
+#print axioms DiamondIntegral.Section3.gammaGroundRVMap_generic_contraction
+#check @DiamondIntegral.Section3.rvGenericCoordinate_definableOverBase
+#print axioms DiamondIntegral.Section3.rvGenericCoordinate_definableOverBase
+#check @DiamondIntegral.Section3.rvGenericCoordinate_fold_definableOverBase
+#print axioms DiamondIntegral.Section3.rvGenericCoordinate_fold_definableOverBase
+#check @DiamondIntegral.Section3.mem_rvGenericCoordinate_iff
+#print axioms DiamondIntegral.Section3.mem_rvGenericCoordinate_iff
+#check @DiamondIntegral.Section3.gammaGroundRVGenericValueGraph_append_mem_iff
+#print axioms DiamondIntegral.Section3.gammaGroundRVGenericValueGraph_append_mem_iff
+#check @DiamondIntegral.Section3.gammaGroundRVGeneric_inverse_at
+#print axioms DiamondIntegral.Section3.gammaGroundRVGeneric_inverse_at
+#check @DiamondIntegral.Section3.gammaGroundRVGeneric_scalar_contraction
+#print axioms DiamondIntegral.Section3.gammaGroundRVGeneric_scalar_contraction
+#check @DiamondIntegral.Section3.gammaGroundRVGeneric_scalar_unique
+#print axioms DiamondIntegral.Section3.gammaGroundRVGeneric_scalar_unique
+#check @DiamondIntegral.Section3.gammaGroundRVGeneric_tuple_contraction
+#print axioms DiamondIntegral.Section3.gammaGroundRVGeneric_tuple_contraction
+#check @DiamondIntegral.Section3.gammaGroundRVGenericValueImage_mem_iff
+#print axioms DiamondIntegral.Section3.gammaGroundRVGenericValueImage_mem_iff
+#check @DiamondIntegral.Section3.gammaGroundRVPresentationToDirectSum_class
+#print axioms DiamondIntegral.Section3.gammaGroundRVPresentationToDirectSum_class
+#check @DiamondIntegral.Section3.gammaGroundRVDirectSumToPresentationAdd_of
+#print axioms DiamondIntegral.Section3.gammaGroundRVDirectSumToPresentationAdd_of
+#check @DiamondIntegral.Section3.gammaGroundRVDirectSumToPresentationAdd_one
+#print axioms DiamondIntegral.Section3.gammaGroundRVDirectSumToPresentationAdd_one
+#check @DiamondIntegral.Section3.gammaGroundRVDirectSumToPresentationAdd_mul
+#print axioms DiamondIntegral.Section3.gammaGroundRVDirectSumToPresentationAdd_mul
+#check @DiamondIntegral.Section3.gammaGroundRVDirectSumToPresentation_class
+#print axioms DiamondIntegral.Section3.gammaGroundRVDirectSumToPresentation_class
+#check @DiamondIntegral.Section3.gammaGroundRVKPlusCast_add
+#print axioms DiamondIntegral.Section3.gammaGroundRVKPlusCast_add
+#check @DiamondIntegral.Section3.gammaGroundRVClass_cast_reindex
+#print axioms DiamondIntegral.Section3.gammaGroundRVClass_cast_reindex
+#check @DiamondIntegral.Section3.gammaGroundRVClassMul_comm_cast
+#print axioms DiamondIntegral.Section3.gammaGroundRVClassMul_comm_cast
+#check @DiamondIntegral.Section3.gammaGroundRVClass_heq_of_reindexedIso
+#print axioms DiamondIntegral.Section3.gammaGroundRVClass_heq_of_reindexedIso
+#check @DiamondIntegral.Section3.gammaGroundRVHomogeneous_mul_comm
+#print axioms DiamondIntegral.Section3.gammaGroundRVHomogeneous_mul_comm
+#check @DiamondIntegral.Section3.gammaGroundRVHomogeneous_mul_one
+#print axioms DiamondIntegral.Section3.gammaGroundRVHomogeneous_mul_one
+#check @DiamondIntegral.Section3.gammaGroundRVHomogeneous_mul_assoc
+#print axioms DiamondIntegral.Section3.gammaGroundRVHomogeneous_mul_assoc
+#check @DiamondIntegral.Section3.gammaGroundRVDirectSumClass_product
+#print axioms DiamondIntegral.Section3.gammaGroundRVDirectSumClass_product
+#check @DiamondIntegral.Section3.gammaGroundRVDirectSumClass_coprod
+#print axioms DiamondIntegral.Section3.gammaGroundRVDirectSumClass_coprod
+#check @DiamondIntegral.Section3.gammaGroundRVDirectSumClass_unit
+#print axioms DiamondIntegral.Section3.gammaGroundRVDirectSumClass_unit
+#check @DiamondIntegral.Section3.gammaGroundRVPresentationToDirectSum_fixed
+#print axioms DiamondIntegral.Section3.gammaGroundRVPresentationToDirectSum_fixed
+#check @DiamondIntegral.Section3.gammaGroundRVKPlusToSemiring_injective
+#print axioms DiamondIntegral.Section3.gammaGroundRVKPlusToSemiring_injective
+#check @DiamondIntegral.Section3.gammaGroundRVGroupDirectSumEquiv_class
+#print axioms DiamondIntegral.Section3.gammaGroundRVGroupDirectSumEquiv_class
+#check @DiamondIntegral.Section3.gammaGroundRVRepresentative_class
+#print axioms DiamondIntegral.Section3.gammaGroundRVRepresentative_class
+#check @DiamondIntegral.Section3.gammaGroundRVClassMul_class
+#print axioms DiamondIntegral.Section3.gammaGroundRVClassMul_class
+#check @DiamondIntegral.Section3.gammaGroundRVKPlusToSemiring_mul
+#print axioms DiamondIntegral.Section3.gammaGroundRVKPlusToSemiring_mul
+#check @DiamondIntegral.Section3.rvInfiniteLast_definableOverBase
+#print axioms DiamondIntegral.Section3.rvInfiniteLast_definableOverBase
+#check @DiamondIntegral.Section3.gammaGroundRVIsoClass_eq_iff
+#print axioms DiamondIntegral.Section3.gammaGroundRVIsoClass_eq_iff
+#check @DiamondIntegral.Section3.gammaGroundRVIsoClass_empty
+#print axioms DiamondIntegral.Section3.gammaGroundRVIsoClass_empty
+#check @DiamondIntegral.Section3.gammaGroundRVIsoClass_coprod
+#print axioms DiamondIntegral.Section3.gammaGroundRVIsoClass_coprod
+#check @DiamondIntegral.Section3.gammaGroundRVIsoClass_scissor
+#print axioms DiamondIntegral.Section3.gammaGroundRVIsoClass_scissor
+#check @DiamondIntegral.Section3.gammaGroundRVKPlusToIsoClasses_class
+#print axioms DiamondIntegral.Section3.gammaGroundRVKPlusToIsoClasses_class
+#check @DiamondIntegral.Section3.gammaGroundRVClass_eq_iff_iso
+#print axioms DiamondIntegral.Section3.gammaGroundRVClass_eq_iff_iso
+#check @DiamondIntegral.Section3.GammaGroundRVObject.unitLabelMap_coe
+#print axioms DiamondIntegral.Section3.GammaGroundRVObject.unitLabelMap_coe
+#check @DiamondIntegral.Section3.GammaGroundRVObject.labelValueMap_value
+#print axioms DiamondIntegral.Section3.GammaGroundRVObject.labelValueMap_value
+#check @DiamondIntegral.Section3.GammaGroundRVObject.labelWeightForm_value
+#print axioms DiamondIntegral.Section3.GammaGroundRVObject.labelWeightForm_value
+#check @DiamondIntegral.Section3.GammaGroundMeasuredRVObject.combinedWeightForm_value
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredRVObject.combinedWeightForm_value
+#check @DiamondIntegral.Section3.gammaGroundRVMapInl_desc
+#print axioms DiamondIntegral.Section3.gammaGroundRVMapInl_desc
+#check @DiamondIntegral.Section3.gammaGroundRVMapInr_desc
+#print axioms DiamondIntegral.Section3.gammaGroundRVMapInr_desc
+#check @DiamondIntegral.Section3.gammaGroundRVMapCoprod_hom_ext
+#print axioms DiamondIntegral.Section3.gammaGroundRVMapCoprod_hom_ext
+#check @DiamondIntegral.Section3.gammaGroundRVMap_character_equivariant
+#print axioms DiamondIntegral.Section3.gammaGroundRVMap_character_equivariant
+#check @DiamondIntegral.Section3.gammaGroundRVAngularCell_product_pieces
+#print axioms DiamondIntegral.Section3.gammaGroundRVAngularCell_product_pieces
+#check @DiamondIntegral.Section3.gammaGroundRV_nonzero_product_normal_form
+#print axioms DiamondIntegral.Section3.gammaGroundRV_nonzero_product_normal_form
+#check @DiamondIntegral.Section3.gammaGroundRVHasFiniteMap_iff_nonzero
+#print axioms DiamondIntegral.Section3.gammaGroundRVHasFiniteMap_iff_nonzero
+#check @DiamondIntegral.Section3.exists_gammaGroundRVPackPair
+#print axioms DiamondIntegral.Section3.exists_gammaGroundRVPackPair
+#check @DiamondIntegral.Section3.gammaGroundRVUnpack_pair
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnpack_pair
+#check @DiamondIntegral.Section3.GammaGroundMeasuredRVObject.product_combined_pair
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredRVObject.product_combined_pair
+#check @DiamondIntegral.Section3.gammaGroundRVProductBijection_unpack
+#print axioms DiamondIntegral.Section3.gammaGroundRVProductBijection_unpack
+#check @DiamondIntegral.Section3.gammaGroundRVClass_product_coprod
+#print axioms DiamondIntegral.Section3.gammaGroundRVClass_product_coprod
+#check @DiamondIntegral.Section3.gammaGroundRVClassMul_zero
+#print axioms DiamondIntegral.Section3.gammaGroundRVClassMul_zero
+#check @DiamondIntegral.Section3.gammaGroundRVKPlusCast_zero
+#print axioms DiamondIntegral.Section3.gammaGroundRVKPlusCast_zero
+#check @DiamondIntegral.Section3.gammaGroundRVClassMul_zero_left
+#print axioms DiamondIntegral.Section3.gammaGroundRVClassMul_zero_left
+#check @DiamondIntegral.Section3.gammaGroundRVClassMul_add
+#print axioms DiamondIntegral.Section3.gammaGroundRVClassMul_add
+#check @DiamondIntegral.Section3.gammaGroundRVClassMul_add_left
+#print axioms DiamondIntegral.Section3.gammaGroundRVClassMul_add_left
+#check @DiamondIntegral.Section3.gammaGroundRV_product_normal_form
+#print axioms DiamondIntegral.Section3.gammaGroundRV_product_normal_form
+#check @DiamondIntegral.Section3.gammaGroundRVProductCommBijection_pair
+#print axioms DiamondIntegral.Section3.gammaGroundRVProductCommBijection_pair
+#check @DiamondIntegral.Section3.gammaGroundRVProductAssocBijection_pair
+#print axioms DiamondIntegral.Section3.gammaGroundRVProductAssocBijection_pair
+#check @DiamondIntegral.Section3.GammaGroundDefSet.eq_of_carrier_eq
+#print axioms DiamondIntegral.Section3.GammaGroundDefSet.eq_of_carrier_eq
+#check @DiamondIntegral.Section3.mem_gammaGroundRVProductDomain
+#print axioms DiamondIntegral.Section3.mem_gammaGroundRVProductDomain
+#check @DiamondIntegral.Section3.gammaGroundRVProductDomain_union
+#print axioms DiamondIntegral.Section3.gammaGroundRVProductDomain_union
+#check @DiamondIntegral.Section3.gammaGroundRVProductDomain_disjoint
+#print axioms DiamondIntegral.Section3.gammaGroundRVProductDomain_disjoint
+#check @DiamondIntegral.Section3.gammaGroundRVProductRestrictionSubset
+#print axioms DiamondIntegral.Section3.gammaGroundRVProductRestrictionSubset
+#check @DiamondIntegral.Section3.gammaGroundRVClass_partition
+#print axioms DiamondIntegral.Section3.gammaGroundRVClass_partition
+#check @DiamondIntegral.Section3.gammaGroundRVProduct_weight_refinement
+#print axioms DiamondIntegral.Section3.gammaGroundRVProduct_weight_refinement
+#check @DiamondIntegral.Section3.gammaGroundRVPack_injective
+#print axioms DiamondIntegral.Section3.gammaGroundRVPack_injective
+#check @DiamondIntegral.Section3.gammaGroundRVAppendTargets_injective
+#print axioms DiamondIntegral.Section3.gammaGroundRVAppendTargets_injective
+#check @DiamondIntegral.Section3.GammaGroundRVObject.graphMap_injective
+#print axioms DiamondIntegral.Section3.GammaGroundRVObject.graphMap_injective
+#check @DiamondIntegral.Section3.GammaGroundRVObject.projectionObject_volume
+#print axioms DiamondIntegral.Section3.GammaGroundRVObject.projectionObject_volume
+#check @DiamondIntegral.Section3.gammaGroundRVClass_projectionObject
+#print axioms DiamondIntegral.Section3.gammaGroundRVClass_projectionObject
+#check @DiamondIntegral.Section3.gammaGroundRVFiniteMap_of_coordinate_algebraicity
+#print axioms DiamondIntegral.Section3.gammaGroundRVFiniteMap_of_coordinate_algebraicity
+#check @DiamondIntegral.Section3.gammaGroundRVFiniteMap_of_point_rank
+#print axioms DiamondIntegral.Section3.gammaGroundRVFiniteMap_of_point_rank
+#check @DiamondIntegral.Section3.gammaGroundRVFibreDim_ofReal
+#print axioms DiamondIntegral.Section3.gammaGroundRVFibreDim_ofReal
+#check @DiamondIntegral.Section3.gammaGroundRVFibreDimension_ofReal
+#print axioms DiamondIntegral.Section3.gammaGroundRVFibreDimension_ofReal
+#check @DiamondIntegral.Section3.gammaGroundRVClass_empty
+#print axioms DiamondIntegral.Section3.gammaGroundRVClass_empty
+#check @DiamondIntegral.Section3.gammaGroundRVClass_iso
+#print axioms DiamondIntegral.Section3.gammaGroundRVClass_iso
+#check @DiamondIntegral.Section3.gammaGroundRVClass_scissor
+#print axioms DiamondIntegral.Section3.gammaGroundRVClass_scissor
+#check @DiamondIntegral.Section3.gammaGroundRVSemiringClass_iso
+#print axioms DiamondIntegral.Section3.gammaGroundRVSemiringClass_iso
+#check @DiamondIntegral.Section3.gammaGroundRVSemiringClass_empty
+#print axioms DiamondIntegral.Section3.gammaGroundRVSemiringClass_empty
+#check @DiamondIntegral.Section3.gammaGroundRVSemiringClass_unit
+#print axioms DiamondIntegral.Section3.gammaGroundRVSemiringClass_unit
+#check @DiamondIntegral.Section3.gammaGroundRVSemiringClass_product
+#print axioms DiamondIntegral.Section3.gammaGroundRVSemiringClass_product
+#check @DiamondIntegral.Section3.gammaGroundRVSemiringClass_scissor
+#print axioms DiamondIntegral.Section3.gammaGroundRVSemiringClass_scissor
+#check @DiamondIntegral.Section3.gammaGroundRVKPlusToSemiring_class
+#print axioms DiamondIntegral.Section3.gammaGroundRVKPlusToSemiring_class
+#check @DiamondIntegral.Section3.gammaGroundRVUnitMap_subsingleton_image_point_definable
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnitMap_subsingleton_image_point_definable
+#check @DiamondIntegral.Section3.gammaGroundRVLeftTag_injective
+#print axioms DiamondIntegral.Section3.gammaGroundRVLeftTag_injective
+#check @DiamondIntegral.Section3.gammaGroundRVRightTag_injective
+#print axioms DiamondIntegral.Section3.gammaGroundRVRightTag_injective
+#check @DiamondIntegral.Section3.gammaGroundRVTaggedImages_disjoint
+#print axioms DiamondIntegral.Section3.gammaGroundRVTaggedImages_disjoint
+#check @DiamondIntegral.Section3.gammaGroundRVUnitAffineMap_formula
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnitAffineMap_formula
+#check @DiamondIntegral.Section3.gammaGroundRVUnitAffineMap_values
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnitAffineMap_values
+#check @DiamondIntegral.Section3.gammaGroundRVUnit_angular_cells
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnit_angular_cells
+#check @DiamondIntegral.Section3.gammaGroundRVUnitCoordinate_definable
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnitCoordinate_definable
+#check @DiamondIntegral.Section3.rvUnitRawCoordinateImage_finite_values
+#print axioms DiamondIntegral.Section3.rvUnitRawCoordinateImage_finite_values
+#check @DiamondIntegral.Section3.rawRVUnitSpace_code_proper
+#print axioms DiamondIntegral.Section3.rawRVUnitSpace_code_proper
+#check @DiamondIntegral.Section3.rvUnitSpace_preimage_eq_image
+#print axioms DiamondIntegral.Section3.rvUnitSpace_preimage_eq_image
+#check @DiamondIntegral.Section3.gammaGroundRVUnit_definable_iff
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnit_definable_iff
+#check @DiamondIntegral.Section3.gammaPower_code_proper
+#print axioms DiamondIntegral.Section3.gammaPower_code_proper
+#check @DiamondIntegral.Section3.gammaGroundGammaPower_predicate_definable
+#print axioms DiamondIntegral.Section3.gammaGroundGammaPower_predicate_definable
+#check @DiamondIntegral.Section3.gammaGroundRVUnit_form_normal_form
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnit_form_normal_form
+#check @DiamondIntegral.Section3.GammaGroundMap.unitGraphMap_injective
+#print axioms DiamondIntegral.Section3.GammaGroundMap.unitGraphMap_injective
+#check @DiamondIntegral.Section3.GammaGroundMap.unitGraph_input_injective
+#print axioms DiamondIntegral.Section3.GammaGroundMap.unitGraph_input_injective
+#check @DiamondIntegral.Section3.GammaGroundMap.unitGraph_output_injective
+#print axioms DiamondIntegral.Section3.GammaGroundMap.unitGraph_output_injective
+#check @DiamondIntegral.Section3.GammaGroundMap.unitGraphLabel_finite
+#print axioms DiamondIntegral.Section3.GammaGroundMap.unitGraphLabel_finite
+#check @DiamondIntegral.Section3.gammaGroundRVUnitMixedRelation_unit
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnitMixedRelation_unit
+#check @DiamondIntegral.Section3.gammaGroundRVUnitMixedRelation_proper
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnitMixedRelation_proper
+#check @DiamondIntegral.Section3.gammaGroundRVUnitMixedRelation_definable
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnitMixedRelation_definable
+#check @DiamondIntegral.Section3.gammaGroundRVUnitMixed_definable_products
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnitMixed_definable_products
+#check @DiamondIntegral.Section3.gammaGroundRVUnitToRVMap_injective
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnitToRVMap_injective
+#check @DiamondIntegral.Section3.gammaGroundRVUnit_RES_of_rank_bound
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnit_RES_of_rank_bound
+#check @DiamondIntegral.Section3.GammaGroundMap.unitRaw_chart
+#print axioms DiamondIntegral.Section3.GammaGroundMap.unitRaw_chart
+#check @DiamondIntegral.Section3.GammaGroundMap.unitRaw_injective
+#print axioms DiamondIntegral.Section3.GammaGroundMap.unitRaw_injective
+#check @DiamondIntegral.Section3.rvNormalizedUnitMap_point
+#print axioms DiamondIntegral.Section3.rvNormalizedUnitMap_point
+#check @DiamondIntegral.Section3.gammaGroundRVUnitMixed_finite_rectangles
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnitMixed_finite_rectangles
+#check @DiamondIntegral.Section3.gammaGroundRVUnitTuple_point_definable_iff
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnitTuple_point_definable_iff
+#check @DiamondIntegral.Section3.gammaGroundRVUnit_subsingleton_point_definable
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnit_subsingleton_point_definable
+#check @DiamondIntegral.Section3.gammaGroundRVUnitValueGraph_append_mem_iff
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnitValueGraph_append_mem_iff
+#check @DiamondIntegral.Section3.gammaGroundRVUnit_value_weight_normal_form
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnit_value_weight_normal_form
+#check @DiamondIntegral.Section3.gammaGroundRVPatternSource_subset
+#print axioms DiamondIntegral.Section3.gammaGroundRVPatternSource_subset
+#check @DiamondIntegral.Section3.gammaGroundRVPatternMap_finite
+#print axioms DiamondIntegral.Section3.gammaGroundRVPatternMap_finite
+#check @DiamondIntegral.Section3.gammaGroundZeroPattern_projection_injective
+#print axioms DiamondIntegral.Section3.gammaGroundZeroPattern_projection_injective
+#check @DiamondIntegral.Section3.gammaGroundRVNonzeroStratum_degree_le
+#print axioms DiamondIntegral.Section3.gammaGroundRVNonzeroStratum_degree_le
+#check @DiamondIntegral.Section3.gammaGroundRVPatternSource_partition
+#print axioms DiamondIntegral.Section3.gammaGroundRVPatternSource_partition
+#check @DiamondIntegral.Section3.gammaGroundRVPatternFold_bijective
+#print axioms DiamondIntegral.Section3.gammaGroundRVPatternFold_bijective
+#check @DiamondIntegral.Section3.gammaGroundRVPatternCarrierEquiv_graph
+#print axioms DiamondIntegral.Section3.gammaGroundRVPatternCarrierEquiv_graph
+#check @DiamondIntegral.Section3.GammaGroundDefinable.of_real_codes
+#print axioms DiamondIntegral.Section3.GammaGroundDefinable.of_real_codes
+#check @DiamondIntegral.Section3.gammaGroundDefinable_iff_raw_codes
+#print axioms DiamondIntegral.Section3.gammaGroundDefinable_iff_raw_codes
+#check @DiamondIntegral.Section3.GammaGroundMap.raw_graph_definable
+#print axioms DiamondIntegral.Section3.GammaGroundMap.raw_graph_definable
+#check @DiamondIntegral.Section3.GammaGroundRawDefinable.of_real
+#print axioms DiamondIntegral.Section3.GammaGroundRawDefinable.of_real
+#check @DiamondIntegral.Section3.GammaGroundRawDefinable.inter
+#print axioms DiamondIntegral.Section3.GammaGroundRawDefinable.inter
+#check @DiamondIntegral.Section3.GammaGroundRawDefinable.union
+#print axioms DiamondIntegral.Section3.GammaGroundRawDefinable.union
+#check @DiamondIntegral.Section3.GammaGroundRawDefinable.compl
+#print axioms DiamondIntegral.Section3.GammaGroundRawDefinable.compl
+#check @DiamondIntegral.Section3.GammaGroundRawDefinable.congr
+#print axioms DiamondIntegral.Section3.GammaGroundRawDefinable.congr
+#check @DiamondIntegral.Section3.GammaGroundRawDefinable.himp
+#print axioms DiamondIntegral.Section3.GammaGroundRawDefinable.himp
+#check @DiamondIntegral.Section3.GammaGroundRawDefinable.preimage_comp
+#print axioms DiamondIntegral.Section3.GammaGroundRawDefinable.preimage_comp
+#check @DiamondIntegral.Section3.GammaGroundRawDefinable.image_comp
+#print axioms DiamondIntegral.Section3.GammaGroundRawDefinable.image_comp
+#check @DiamondIntegral.Section3.GammaGroundRawDefinable.exists_of_finite
+#print axioms DiamondIntegral.Section3.GammaGroundRawDefinable.exists_of_finite
+#check @DiamondIntegral.Section3.GammaGroundRawDefinable.forall_of_finite
+#print axioms DiamondIntegral.Section3.GammaGroundRawDefinable.forall_of_finite
+#check @DiamondIntegral.Section3.GammaGroundRawDefinable.iInter
+#print axioms DiamondIntegral.Section3.GammaGroundRawDefinable.iInter
+#check @DiamondIntegral.Section3.GammaGroundRawDefinable.iUnion
+#print axioms DiamondIntegral.Section3.GammaGroundRawDefinable.iUnion
+#check @DiamondIntegral.Section3.GammaGroundDefinable.on_real_codes
+#print axioms DiamondIntegral.Section3.GammaGroundDefinable.on_real_codes
+#check @DiamondIntegral.Section3.gammaGroundRaw_residue_pullback_pure
+#print axioms DiamondIntegral.Section3.gammaGroundRaw_residue_pullback_pure
+#check @DiamondIntegral.Section3.GammaGroundMap.fibreSource_value
+#print axioms DiamondIntegral.Section3.GammaGroundMap.fibreSource_value
+#check @DiamondIntegral.Section3.GammaGroundDefinable.monoReal
+#print axioms DiamondIntegral.Section3.GammaGroundDefinable.monoReal
+#check @DiamondIntegral.Section3.GammaGroundDefinable.fibreRealPoint
+#print axioms DiamondIntegral.Section3.GammaGroundDefinable.fibreRealPoint
+#check @DiamondIntegral.Section3.GammaGroundMap.fibre_finite
+#print axioms DiamondIntegral.Section3.GammaGroundMap.fibre_finite
+#check @DiamondIntegral.Section3.realCodeParameters_small
+#print axioms DiamondIntegral.Section3.realCodeParameters_small
+#check @DiamondIntegral.Section3.gammaPowerCode_rv
+#print axioms DiamondIntegral.Section3.gammaPowerCode_rv
+#check @DiamondIntegral.Section3.gammaPowerCode_parameterField
+#print axioms DiamondIntegral.Section3.gammaPowerCode_parameterField
+#check @DiamondIntegral.Section3.GammaGroundDefinable.realizeFinite
+#print axioms DiamondIntegral.Section3.GammaGroundDefinable.realizeFinite
+#check @DiamondIntegral.Section3.GammaGroundDefinable.realize
+#print axioms DiamondIntegral.Section3.GammaGroundDefinable.realize
+#check @DiamondIntegral.Section3.mem_gammaGroundRegularMeasureLocus
+#print axioms DiamondIntegral.Section3.mem_gammaGroundRegularMeasureLocus
+#check @DiamondIntegral.Section3.gammaGroundRegularMeasureLocus_subset
+#print axioms DiamondIntegral.Section3.gammaGroundRegularMeasureLocus_subset
+#check @DiamondIntegral.Section3.gammaGroundRelationDefinable_pullback
+#print axioms DiamondIntegral.Section3.gammaGroundRelationDefinable_pullback
+#check @DiamondIntegral.Section3.GammaGroundRelationDefinable.congr
+#print axioms DiamondIntegral.Section3.GammaGroundRelationDefinable.congr
+#check @DiamondIntegral.Section3.GammaGroundRelationDefinable.symm
+#print axioms DiamondIntegral.Section3.GammaGroundRelationDefinable.symm
+#check @DiamondIntegral.Section3.GammaGroundRelationDefinable.comp
+#print axioms DiamondIntegral.Section3.GammaGroundRelationDefinable.comp
+#check @DiamondIntegral.Section3.GammaGroundRelationDefinable.exists_finite
+#print axioms DiamondIntegral.Section3.GammaGroundRelationDefinable.exists_finite
+#check @DiamondIntegral.Section3.gammaGround_residue_pullback_pure
+#print axioms DiamondIntegral.Section3.gammaGround_residue_pullback_pure
+#check @DiamondIntegral.Section3.gammaGroundRV_value_kernel_of_contraction
+#print axioms DiamondIntegral.Section3.gammaGroundRV_value_kernel_of_contraction
+#check @DiamondIntegral.Section3.gammaGroundGammaShear_unit_slice
+#print axioms DiamondIntegral.Section3.gammaGroundGammaShear_unit_slice
+#check @DiamondIntegral.Section3.gammaGroundSingleFamilyBijection_value
+#print axioms DiamondIntegral.Section3.gammaGroundSingleFamilyBijection_value
+#check @DiamondIntegral.Section3.gammaGroundAffine_full_lift
+#print axioms DiamondIntegral.Section3.gammaGroundAffine_full_lift
+#check @DiamondIntegral.Section3.gammaGroundGammaSingle_reflects_RV_bijection
+#print axioms DiamondIntegral.Section3.gammaGroundGammaSingle_reflects_RV_bijection
+#check @DiamondIntegral.Section3.gammaGroundGammaSemiringClass_single_eq_of_RV_bijection
+#print axioms DiamondIntegral.Section3.gammaGroundGammaSemiringClass_single_eq_of_RV_bijection
+#check @DiamondIntegral.Section3.gammaSortedRaw_row
+#print axioms DiamondIntegral.Section3.gammaSortedRaw_row
+#check @DiamondIntegral.Section3.gammaSortedRawRelation_fibre
+#print axioms DiamondIntegral.Section3.gammaSortedRawRelation_fibre
+#check @DiamondIntegral.Section3.gammaRelationRawPower_definable
+#print axioms DiamondIntegral.Section3.gammaRelationRawPower_definable
+#check @DiamondIntegral.Section3.gammaGroundRawDefinable_iff_sortedBase
+#print axioms DiamondIntegral.Section3.gammaGroundRawDefinable_iff_sortedBase
+#check @DiamondIntegral.Section3.gammaRelationPower_definable
+#print axioms DiamondIntegral.Section3.gammaRelationPower_definable
+#check @DiamondIntegral.Section3.gammaPowerRawRelation_row
+#print axioms DiamondIntegral.Section3.gammaPowerRawRelation_row
+#check @DiamondIntegral.Section3.gammaRelationOfPowerSet_fibre
+#print axioms DiamondIntegral.Section3.gammaRelationOfPowerSet_fibre
+#check @DiamondIntegral.Section3.GammaGroundDefinable.toRVBase
+#print axioms DiamondIntegral.Section3.GammaGroundDefinable.toRVBase
+#check @DiamondIntegral.Section3.gammaGroundDefinable_iff_rvBase
+#print axioms DiamondIntegral.Section3.gammaGroundDefinable_iff_rvBase
+#check @DiamondIntegral.Section3.gammaGroundGammaAnnulus_mem
+#print axioms DiamondIntegral.Section3.gammaGroundGammaAnnulus_mem
+#check @DiamondIntegral.Section3.GammaGroundVolumeForm.toTop_value
+#print axioms DiamondIntegral.Section3.GammaGroundVolumeForm.toTop_value
+#check @DiamondIntegral.Section3.GammaGroundTopForm.mul_value
+#print axioms DiamondIntegral.Section3.GammaGroundTopForm.mul_value
+#check @DiamondIntegral.Section3.GammaGroundMap.valuation_value
+#print axioms DiamondIntegral.Section3.GammaGroundMap.valuation_value
+#check @DiamondIntegral.Section3.gammaGroundTorusWeight_coefficients
+#print axioms DiamondIntegral.Section3.gammaGroundTorusWeight_coefficients
+#check @DiamondIntegral.Section3.gammaGroundRVUnitAffinePointBijection_formula
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnitAffinePointBijection_formula
+#check @DiamondIntegral.Section3.gammaGroundUnary_code_contraction_piecewiseIntegralAffine
+#print axioms DiamondIntegral.Section3.gammaGroundUnary_code_contraction_piecewiseIntegralAffine
+#check @DiamondIntegral.Section3.gammaGroundContext_unary_contraction_piecewiseIntegralAffine
+#print axioms DiamondIntegral.Section3.gammaGroundContext_unary_contraction_piecewiseIntegralAffine
+#check @DiamondIntegral.Section3.gammaGroundUnary_contraction_piecewiseIntegralAffine
+#print axioms DiamondIntegral.Section3.gammaGroundUnary_contraction_piecewiseIntegralAffine
+#check @DiamondIntegral.Section3.integralAffine_shear_slice_coordinate
+#print axioms DiamondIntegral.Section3.integralAffine_shear_slice_coordinate
+#check @DiamondIntegral.Section3.gammaGroundGammaSingleHomOfUnitBijection_contract
+#print axioms DiamondIntegral.Section3.gammaGroundGammaSingleHomOfUnitBijection_contract
+#check @DiamondIntegral.Section3.GammaGroundGammaObject.unitCode_decode
+#print axioms DiamondIntegral.Section3.GammaGroundGammaObject.unitCode_decode
+#check @DiamondIntegral.Section3.GammaGroundGammaObject.unitCode_inverse_decode
+#print axioms DiamondIntegral.Section3.GammaGroundGammaObject.unitCode_inverse_decode
+#check @DiamondIntegral.Section3.gammaGroundUnitFamily_affine_full_lift
+#print axioms DiamondIntegral.Section3.gammaGroundUnitFamily_affine_full_lift
+#check @DiamondIntegral.Section3.gammaGroundUnitFamily_generic_bijection
+#print axioms DiamondIntegral.Section3.gammaGroundUnitFamily_generic_bijection
+#check @DiamondIntegral.Section3.gammaGroundUnitFamily_generic_contraction
+#print axioms DiamondIntegral.Section3.gammaGroundUnitFamily_generic_contraction
+#check @DiamondIntegral.Section3.gammaGroundUnitFamily_generic_inverse_at
+#print axioms DiamondIntegral.Section3.gammaGroundUnitFamily_generic_inverse_at
+#check @DiamondIntegral.Section3.gammaGroundUnitFamily_generic_tags
+#print axioms DiamondIntegral.Section3.gammaGroundUnitFamily_generic_tags
+#check @DiamondIntegral.Section3.gammaGroundUnitFamily_generic_values
+#print axioms DiamondIntegral.Section3.gammaGroundUnitFamily_generic_values
+#check @DiamondIntegral.Section3.gammaGroundUnitFamily_generic_original_coefficients
+#print axioms DiamondIntegral.Section3.gammaGroundUnitFamily_generic_original_coefficients
+#check @DiamondIntegral.Section3.gammaGroundUnitFamily_generic_value_range
+#print axioms DiamondIntegral.Section3.gammaGroundUnitFamily_generic_value_range
+#check @DiamondIntegral.Section3.gammaGroundUnitFullCodeTransport_decode
+#print axioms DiamondIntegral.Section3.gammaGroundUnitFullCodeTransport_decode
+#check @DiamondIntegral.Section3.gammaGroundGammaSingle_decode_eq_iff
+#print axioms DiamondIntegral.Section3.gammaGroundGammaSingle_decode_eq_iff
+#check @DiamondIntegral.Section3.rvUnitTupleValues_append
+#print axioms DiamondIntegral.Section3.rvUnitTupleValues_append
+#check @DiamondIntegral.Section3.gammaGroundUnitPreimageProductBijection_formula
+#print axioms DiamondIntegral.Section3.gammaGroundUnitPreimageProductBijection_formula
+#check @DiamondIntegral.Section3.gammaGroundRVUnitShear_value_kernel
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnitShear_value_kernel
+#check @DiamondIntegral.Section3.gammaGroundGammaShear_at_product
+#print axioms DiamondIntegral.Section3.gammaGroundGammaShear_at_product
+#check @DiamondIntegral.Section3.gammaGroundRVUnitShear_at_product
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnitShear_at_product
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredTensorMap_tmul
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredTensorMap_tmul
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredTensorMap_objects
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredTensorMap_objects
+#check @DiamondIntegral.Section3.GammaGroundVFObject.finiteSupport
+#print axioms DiamondIntegral.Section3.GammaGroundVFObject.finiteSupport
+#check @DiamondIntegral.Section3.gammaGroundVFDiagram_finite_support
+#print axioms DiamondIntegral.Section3.gammaGroundVFDiagram_finite_support
+#check @DiamondIntegral.Section3.GammaGroundVFDiagramSupport.object_reconstructed
+#print axioms DiamondIntegral.Section3.GammaGroundVFDiagramSupport.object_reconstructed
+#check @DiamondIntegral.Section3.GammaGroundVFDiagramSupport.arrow_reconstructed
+#print axioms DiamondIntegral.Section3.GammaGroundVFDiagramSupport.arrow_reconstructed
+#check @DiamondIntegral.Section3.gammaGroundVFDimension_le_iff_point_rank
+#print axioms DiamondIntegral.Section3.gammaGroundVFDimension_le_iff_point_rank
+#check @DiamondIntegral.Section3.gammaGroundRV_fibre_dimension_le_zero_iff
+#print axioms DiamondIntegral.Section3.gammaGroundRV_fibre_dimension_le_zero_iff
+#check @DiamondIntegral.Section3.GammaGroundVFObject.rvFibreDimension_le_zero
+#print axioms DiamondIntegral.Section3.GammaGroundVFObject.rvFibreDimension_le_zero
+#check @DiamondIntegral.Section3.gammaGroundVFDimension_le_of_finiteMap
+#print axioms DiamondIntegral.Section3.gammaGroundVFDimension_le_of_finiteMap
+#check @DiamondIntegral.Section3.gammaGroundVFDimension_eq_of_bijection
+#print axioms DiamondIntegral.Section3.gammaGroundVFDimension_eq_of_bijection
+#check @DiamondIntegral.Section3.gammaGroundVFKPlusToSemiring_class
+#print axioms DiamondIntegral.Section3.gammaGroundVFKPlusToSemiring_class
+#check @DiamondIntegral.Section3.gammaGroundBoundedLift_global_compat
+#print axioms DiamondIntegral.Section3.gammaGroundBoundedLift_global_compat
+#check @DiamondIntegral.Section3.gammaGroundVFKPlusToSemiring_injective
+#print axioms DiamondIntegral.Section3.gammaGroundVFKPlusToSemiring_injective
+#check @DiamondIntegral.Section3.gammaGroundVFKPlusToSemiring_raise
+#print axioms DiamondIntegral.Section3.gammaGroundVFKPlusToSemiring_raise
+#check @DiamondIntegral.Section3.gammaGroundVFRaiseKPlus_injective
+#print axioms DiamondIntegral.Section3.gammaGroundVFRaiseKPlus_injective
+#check @DiamondIntegral.Section3.gammaGroundFiniteVFKPlusToSemiring_surjective
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteVFKPlusToSemiring_surjective
+#check @DiamondIntegral.Section3.gammaGroundFiniteVFKPlusToSemiring_injective
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteVFKPlusToSemiring_injective
+#check @DiamondIntegral.Section3.gammaGroundVFRaiseKPlus_class
+#print axioms DiamondIntegral.Section3.gammaGroundVFRaiseKPlus_class
+#check @DiamondIntegral.Section3.gammaGroundVFRaiseKPlus_refl
+#print axioms DiamondIntegral.Section3.gammaGroundVFRaiseKPlus_refl
+#check @DiamondIntegral.Section3.gammaGroundVFRaiseKPlus_comp
+#print axioms DiamondIntegral.Section3.gammaGroundVFRaiseKPlus_comp
+#check @DiamondIntegral.Section3.gammaGroundVFToFiniteKPlus_class
+#print axioms DiamondIntegral.Section3.gammaGroundVFToFiniteKPlus_class
+#check @DiamondIntegral.Section3.gammaGroundVFToFiniteKPlus_raise
+#print axioms DiamondIntegral.Section3.gammaGroundVFToFiniteKPlus_raise
+#check @DiamondIntegral.Section3.gammaGroundVFGroupCocone_class
+#print axioms DiamondIntegral.Section3.gammaGroundVFGroupCocone_class
+#check @DiamondIntegral.Section3.CompatibleGammaGroundVFPositiveMaps.ext
+#print axioms DiamondIntegral.Section3.CompatibleGammaGroundVFPositiveMaps.ext
+#check @DiamondIntegral.Section3.compatibleGammaGroundVF_value_bijection
+#print axioms DiamondIntegral.Section3.compatibleGammaGroundVF_value_bijection
+#check @DiamondIntegral.Section3.gammaGroundVFColimitLift_class
+#print axioms DiamondIntegral.Section3.gammaGroundVFColimitLift_class
+#check @DiamondIntegral.Section3.gammaGroundVFColimitLift_inclusion
+#print axioms DiamondIntegral.Section3.gammaGroundVFColimitLift_inclusion
+#check @DiamondIntegral.Section3.gammaGroundVFColimitLift_unique
+#print axioms DiamondIntegral.Section3.gammaGroundVFColimitLift_unique
+#check @DiamondIntegral.Section3.gammaGroundVFClass_empty
+#print axioms DiamondIntegral.Section3.gammaGroundVFClass_empty
+#check @DiamondIntegral.Section3.gammaGroundVFClass_iso
+#print axioms DiamondIntegral.Section3.gammaGroundVFClass_iso
+#check @DiamondIntegral.Section3.gammaGroundVFClass_scissor
+#print axioms DiamondIntegral.Section3.gammaGroundVFClass_scissor
+#check @DiamondIntegral.Section3.gammaGroundVFSemiringClass_iso
+#print axioms DiamondIntegral.Section3.gammaGroundVFSemiringClass_iso
+#check @DiamondIntegral.Section3.gammaGroundVFSemiringClass_empty
+#print axioms DiamondIntegral.Section3.gammaGroundVFSemiringClass_empty
+#check @DiamondIntegral.Section3.gammaGroundVFSemiringClass_unit
+#print axioms DiamondIntegral.Section3.gammaGroundVFSemiringClass_unit
+#check @DiamondIntegral.Section3.gammaGroundVFSemiringClass_product
+#print axioms DiamondIntegral.Section3.gammaGroundVFSemiringClass_product
+#check @DiamondIntegral.Section3.gammaGroundVFSemiringClass_scissor
+#print axioms DiamondIntegral.Section3.gammaGroundVFSemiringClass_scissor
+#check @DiamondIntegral.Section3.gammaGroundFiniteVFKPlusToSemiring_class
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteVFKPlusToSemiring_class
+#check @DiamondIntegral.Section3.gammaGroundFiniteVFClass_product
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteVFClass_product
+#check @DiamondIntegral.Section3.gammaGroundVF_small_union_iff
+#print axioms DiamondIntegral.Section3.gammaGroundVF_small_union_iff
+#check @DiamondIntegral.Section3.GammaGroundVFObject.degree_zero_finite
+#print axioms DiamondIntegral.Section3.GammaGroundVFObject.degree_zero_finite
+#check @DiamondIntegral.Section3.gammaGroundOneForm_value
+#print axioms DiamondIntegral.Section3.gammaGroundOneForm_value
+#check @DiamondIntegral.Section3.GammaGroundVolumeForm.mul_value
+#print axioms DiamondIntegral.Section3.GammaGroundVolumeForm.mul_value
+#check @DiamondIntegral.Section3.gammaGroundVolumeForm_glue_injective_charts
+#print axioms DiamondIntegral.Section3.gammaGroundVolumeForm_glue_injective_charts
+#check @DiamondIntegral.Section3.gammaGroundVFZeroRVRepresentative
+#print axioms DiamondIntegral.Section3.gammaGroundVFZeroRVRepresentative
+#check @DiamondIntegral.Section3.gammaGroundZeroMeasuredRVRepresentative
+#print axioms DiamondIntegral.Section3.gammaGroundZeroMeasuredRVRepresentative
+#check @DiamondIntegral.Section3.GammaGroundMeasuredRVObject.zero_combinedWeight
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredRVObject.zero_combinedWeight
+#check @DiamondIntegral.Section3.gammaRepresentative_class
+#print axioms DiamondIntegral.Section3.gammaRepresentative_class
+#check @DiamondIntegral.Section3.gammaClassMul_class
+#print axioms DiamondIntegral.Section3.gammaClassMul_class
+#check @DiamondIntegral.Section3.gammaClassMul_comm_cast
+#print axioms DiamondIntegral.Section3.gammaClassMul_comm_cast
+#check @DiamondIntegral.Section3.gammaHomogeneous_mul_comm
+#print axioms DiamondIntegral.Section3.gammaHomogeneous_mul_comm
+#check @DiamondIntegral.Section3.gammaHomogeneous_mul_one
+#print axioms DiamondIntegral.Section3.gammaHomogeneous_mul_one
+#check @DiamondIntegral.Section3.gammaHomogeneous_mul_assoc
+#print axioms DiamondIntegral.Section3.gammaHomogeneous_mul_assoc
+#check @DiamondIntegral.Section3.gammaClassMul_zero
+#print axioms DiamondIntegral.Section3.gammaClassMul_zero
+#check @DiamondIntegral.Section3.gammaClassMul_zero_left
+#print axioms DiamondIntegral.Section3.gammaClassMul_zero_left
+#check @DiamondIntegral.Section3.gammaClassMul_add
+#print axioms DiamondIntegral.Section3.gammaClassMul_add
+#check @DiamondIntegral.Section3.gammaClassMul_add_left
+#print axioms DiamondIntegral.Section3.gammaClassMul_add_left
+#check @DiamondIntegral.Section3.gammaDefinableClosure_nonzero_power_root
+#print axioms DiamondIntegral.Section3.gammaDefinableClosure_nonzero_power_root
+#check @DiamondIntegral.Section3.gammaGround_character_hyperplane_fixed_coordinate
+#print axioms DiamondIntegral.Section3.gammaGround_character_hyperplane_fixed_coordinate
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredTensor_character_hyperplane_reduction
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredTensor_character_hyperplane_reduction
+#check @DiamondIntegral.Section3.gammaDefinableClosure_integerCharacter
+#print axioms DiamondIntegral.Section3.gammaDefinableClosure_integerCharacter
+#check @DiamondIntegral.Section3.gammaTupleIndependent_monomial_arity_le
+#print axioms DiamondIntegral.Section3.gammaTupleIndependent_monomial_arity_le
+#check @DiamondIntegral.Section3.integerBasisMatrix_det_isUnit
+#print axioms DiamondIntegral.Section3.integerBasisMatrix_det_isUnit
+#check @DiamondIntegral.Section3.gammaGroundGamma_character_hyperplane_image
+#print axioms DiamondIntegral.Section3.gammaGroundGamma_character_hyperplane_image
+#check @DiamondIntegral.Section3.gammaGroundGammaSemiringClass_single_empty
+#print axioms DiamondIntegral.Section3.gammaGroundGammaSemiringClass_single_empty
+#check @DiamondIntegral.Section3.gammaGroundGammaSemiringClass_native_partition
+#print axioms DiamondIntegral.Section3.gammaGroundGammaSemiringClass_native_partition
+#check @DiamondIntegral.Section3.gammaGroundGammaSemiringClass_native_finiteUnion
+#print axioms DiamondIntegral.Section3.gammaGroundGammaSemiringClass_native_finiteUnion
+#check @DiamondIntegral.Section3.gammaGroundGammaSemiringClass_native_finite_partition
+#print axioms DiamondIntegral.Section3.gammaGroundGammaSemiringClass_native_finite_partition
+#check @DiamondIntegral.Section3.gammaGroundRESDirectSumClass_finite_partition
+#print axioms DiamondIntegral.Section3.gammaGroundRESDirectSumClass_finite_partition
+#check @DiamondIntegral.Section3.gammaDefinableClosure_one
+#print axioms DiamondIntegral.Section3.gammaDefinableClosure_one
+#check @DiamondIntegral.Section3.gammaGroundGammaTranslate_shift
+#print axioms DiamondIntegral.Section3.gammaGroundGammaTranslate_shift
+#check @DiamondIntegral.Section3.gammaGroundGammaTranslate_one
+#print axioms DiamondIntegral.Section3.gammaGroundGammaTranslate_one
+#check @DiamondIntegral.Section3.gammaValuePrefix_definable
+#print axioms DiamondIntegral.Section3.gammaValuePrefix_definable
+#check @DiamondIntegral.Section3.gammaValuePrefix_zero
+#print axioms DiamondIntegral.Section3.gammaValuePrefix_zero
+#check @DiamondIntegral.Section3.gammaValuePrefix_all
+#print axioms DiamondIntegral.Section3.gammaValuePrefix_all
+#check @DiamondIntegral.Section3.gammaIsoClass_scissor
+#print axioms DiamondIntegral.Section3.gammaIsoClass_scissor
+#check @DiamondIntegral.Section3.gammaKPlusToIsoClasses_class
+#print axioms DiamondIntegral.Section3.gammaKPlusToIsoClasses_class
+#check @DiamondIntegral.Section3.gammaClass_eq_iff_iso
+#print axioms DiamondIntegral.Section3.gammaClass_eq_iff_iso
+#check @DiamondIntegral.Section3.gammaGroundGammaSemiringClass_coprod
+#print axioms DiamondIntegral.Section3.gammaGroundGammaSemiringClass_coprod
+#check @DiamondIntegral.Section3.gammaGroundGammaSemiringClass_finite_pieces
+#print axioms DiamondIntegral.Section3.gammaGroundGammaSemiringClass_finite_pieces
+#check @DiamondIntegral.Section3.gammaGroundGammaSemiringClass_tag_sum
+#print axioms DiamondIntegral.Section3.gammaGroundGammaSemiringClass_tag_sum
+#check @DiamondIntegral.Section3.gammaProductCodeFunctionEquiv_factor
+#print axioms DiamondIntegral.Section3.gammaProductCodeFunctionEquiv_factor
+#check @DiamondIntegral.Section3.gammaProductCodeFunctionEquiv_graph
+#print axioms DiamondIntegral.Section3.gammaProductCodeFunctionEquiv_graph
+#check @DiamondIntegral.Section3.gammaProductCodeFunctionEquiv_definable
+#print axioms DiamondIntegral.Section3.gammaProductCodeFunctionEquiv_definable
+#check @DiamondIntegral.Section3.gammaProductCarrierPieceEquiv_append
+#print axioms DiamondIntegral.Section3.gammaProductCarrierPieceEquiv_append
+#check @DiamondIntegral.Section3.gammaProductCodePieceEquiv_code
+#print axioms DiamondIntegral.Section3.gammaProductCodePieceEquiv_code
+#check @DiamondIntegral.Section3.GammaObject.productCarrierEquiv_append
+#print axioms DiamondIntegral.Section3.GammaObject.productCarrierEquiv_append
+#check @DiamondIntegral.Section3.GammaObject.productCodeEquiv_code
+#print axioms DiamondIntegral.Section3.GammaObject.productCodeEquiv_code
+#check @DiamondIntegral.Section3.gammaProductCode_decode
+#print axioms DiamondIntegral.Section3.gammaProductCode_decode
+#check @DiamondIntegral.Section3.GammaObject.productCodeEquiv_decode
+#print axioms DiamondIntegral.Section3.GammaObject.productCodeEquiv_decode
+#check @DiamondIntegral.Section3.gammaClass_product_coprod
+#print axioms DiamondIntegral.Section3.gammaClass_product_coprod
+#check @DiamondIntegral.Section3.gammaKPlusCast_add
+#print axioms DiamondIntegral.Section3.gammaKPlusCast_add
+#check @DiamondIntegral.Section3.gammaClass_cast
+#print axioms DiamondIntegral.Section3.gammaClass_cast
+#check @DiamondIntegral.Section3.gammaClass_heq_of_castHom
+#print axioms DiamondIntegral.Section3.gammaClass_heq_of_castHom
+#check @DiamondIntegral.Section3.gammaProductFunctionEquiv_factor
+#print axioms DiamondIntegral.Section3.gammaProductFunctionEquiv_factor
+#check @DiamondIntegral.Section3.GammaHom.productCodes_contract
+#print axioms DiamondIntegral.Section3.GammaHom.productCodes_contract
+#check @DiamondIntegral.Section3.GammaHom.product_factor
+#print axioms DiamondIntegral.Section3.GammaHom.product_factor
+#check @DiamondIntegral.Section3.gammaProductPair_tag
+#print axioms DiamondIntegral.Section3.gammaProductPair_tag
+#check @DiamondIntegral.Section3.gammaProductPair_append
+#print axioms DiamondIntegral.Section3.gammaProductPair_append
+#check @DiamondIntegral.Section3.gammaProductPair_val
+#print axioms DiamondIntegral.Section3.gammaProductPair_val
+#check @DiamondIntegral.Section3.gammaProductDistrib_pair_left
+#print axioms DiamondIntegral.Section3.gammaProductDistrib_pair_left
+#check @DiamondIntegral.Section3.gammaProductDistrib_pair_right
+#print axioms DiamondIntegral.Section3.gammaProductDistrib_pair_right
+#check @DiamondIntegral.Section3.gammaAppendMap_injective
+#print axioms DiamondIntegral.Section3.gammaAppendMap_injective
+#check @DiamondIntegral.Section3.GammaObject.degree_zero_finite
+#print axioms DiamondIntegral.Section3.GammaObject.degree_zero_finite
+#check @DiamondIntegral.Section3.GammaObject.product_finite
+#print axioms DiamondIntegral.Section3.GammaObject.product_finite
+#check @DiamondIntegral.Section3.GammaObject.rvLift_res
+#print axioms DiamondIntegral.Section3.GammaObject.rvLift_res
+#check @DiamondIntegral.Section3.finiteGammaHom_lift_iso
+#print axioms DiamondIntegral.Section3.finiteGammaHom_lift_iso
+#check @DiamondIntegral.Section3.gammaRVBase_finite_columns
+#print axioms DiamondIntegral.Section3.gammaRVBase_finite_columns
+#check @DiamondIntegral.Section3.gammaCodeToRV_injective
+#print axioms DiamondIntegral.Section3.gammaCodeToRV_injective
+#check @DiamondIntegral.Section3.gammaRVCodeLift_res
+#print axioms DiamondIntegral.Section3.gammaRVCodeLift_res
+#check @DiamondIntegral.Section3.gammaRVBase_finite_column_partition
+#print axioms DiamondIntegral.Section3.gammaRVBase_finite_column_partition
+#check @DiamondIntegral.Section3.gammaRV_row_definable
+#print axioms DiamondIntegral.Section3.gammaRV_row_definable
+#check @DiamondIntegral.Section3.gammaRV_value_fibre_dichotomy
+#print axioms DiamondIntegral.Section3.gammaRV_value_fibre_dichotomy
+#check @DiamondIntegral.Section3.gammaRV_finite_columns_of_finite_sides
+#print axioms DiamondIntegral.Section3.gammaRV_finite_columns_of_finite_sides
+#check @DiamondIntegral.Section3.gammaRV_value_fibre_finite_columns
+#print axioms DiamondIntegral.Section3.gammaRV_value_fibre_finite_columns
+#check @DiamondIntegral.Section3.gammaRV_uniform_finite_sides
+#print axioms DiamondIntegral.Section3.gammaRV_uniform_finite_sides
+#check @DiamondIntegral.Section3.gammaRV_finite_minority
+#print axioms DiamondIntegral.Section3.gammaRV_finite_minority
+#check @DiamondIntegral.Section3.gammaRVBase_value_slice_finite_columns
+#print axioms DiamondIntegral.Section3.gammaRVBase_value_slice_finite_columns
+#check @DiamondIntegral.Section3.gammaRVBase_finite_value_columns
+#print axioms DiamondIntegral.Section3.gammaRVBase_finite_value_columns
+#check @DiamondIntegral.Section3.GammaObject.rvPieces_nonzero
+#print axioms DiamondIntegral.Section3.GammaObject.rvPieces_nonzero
+#check @DiamondIntegral.Section3.gammaHom_lift_iso
+#print axioms DiamondIntegral.Section3.gammaHom_lift_iso
+#check @DiamondIntegral.Section3.gammaRVMinority_definable
+#print axioms DiamondIntegral.Section3.gammaRVMinority_definable
+#check @DiamondIntegral.Section3.gammaCodeAppend_tuple
+#print axioms DiamondIntegral.Section3.gammaCodeAppend_tuple
+#check @DiamondIntegral.Section3.gammaProductCode_surjective
+#print axioms DiamondIntegral.Section3.gammaProductCode_surjective
+#check @DiamondIntegral.Section3.gammaRVProductBijection_code
+#print axioms DiamondIntegral.Section3.gammaRVProductBijection_code
+#check @DiamondIntegral.Section3.gammaCodeAppend_decode
+#print axioms DiamondIntegral.Section3.gammaCodeAppend_decode
+#check @DiamondIntegral.Section3.gammaRVCodeLift_product
+#print axioms DiamondIntegral.Section3.gammaRVCodeLift_product
+#check @DiamondIntegral.Section3.gammaRVClass_product
+#print axioms DiamondIntegral.Section3.gammaRVClass_product
+#check @DiamondIntegral.Section3.gammaRVClass_unit
+#print axioms DiamondIntegral.Section3.gammaRVClass_unit
+#check @DiamondIntegral.Section3.gammaRV_value_fibre_rectangle_partition
+#print axioms DiamondIntegral.Section3.gammaRV_value_fibre_rectangle_partition
+#check @DiamondIntegral.Section3.defSet_eq_of_carrier_eq
+#print axioms DiamondIntegral.Section3.defSet_eq_of_carrier_eq
+#check @DiamondIntegral.Section3.gammaRVClass_empty
+#print axioms DiamondIntegral.Section3.gammaRVClass_empty
+#check @DiamondIntegral.Section3.GammaObject.rvLift_restrict_subset
+#print axioms DiamondIntegral.Section3.GammaObject.rvLift_restrict_subset
+#check @DiamondIntegral.Section3.GammaObject.rvLift_difference
+#print axioms DiamondIntegral.Section3.GammaObject.rvLift_difference
+#check @DiamondIntegral.Section3.gammaRVClass_scissor
+#print axioms DiamondIntegral.Section3.gammaRVClass_scissor
+#check @DiamondIntegral.Section3.gammaToRVKPlus_class
+#print axioms DiamondIntegral.Section3.gammaToRVKPlus_class
+#check @DiamondIntegral.Section3.gammaClass_coprod
+#print axioms DiamondIntegral.Section3.gammaClass_coprod
+#check @DiamondIntegral.Section3.gammaClass_surjective
+#print axioms DiamondIntegral.Section3.gammaClass_surjective
+#check @DiamondIntegral.Section3.gammaClass_iso
+#print axioms DiamondIntegral.Section3.gammaClass_iso
+#check @DiamondIntegral.Section3.gammaClass_empty
+#print axioms DiamondIntegral.Section3.gammaClass_empty
+#check @DiamondIntegral.Section3.gammaClass_scissor
+#print axioms DiamondIntegral.Section3.gammaClass_scissor
+#check @DiamondIntegral.Section3.measuredGammaClass_iso
+#print axioms DiamondIntegral.Section3.measuredGammaClass_iso
+#check @DiamondIntegral.Section3.measuredGammaClass_empty
+#print axioms DiamondIntegral.Section3.measuredGammaClass_empty
+#check @DiamondIntegral.Section3.measuredGammaClass_scissor
+#print axioms DiamondIntegral.Section3.measuredGammaClass_scissor
+#check @DiamondIntegral.Section3.gammaSemiringClass_iso
+#print axioms DiamondIntegral.Section3.gammaSemiringClass_iso
+#check @DiamondIntegral.Section3.gammaSemiringClass_empty
+#print axioms DiamondIntegral.Section3.gammaSemiringClass_empty
+#check @DiamondIntegral.Section3.gammaSemiringClass_unit
+#print axioms DiamondIntegral.Section3.gammaSemiringClass_unit
+#check @DiamondIntegral.Section3.gammaSemiringClass_product
+#print axioms DiamondIntegral.Section3.gammaSemiringClass_product
+#check @DiamondIntegral.Section3.gammaSemiringClass_scissor
+#print axioms DiamondIntegral.Section3.gammaSemiringClass_scissor
+#check @DiamondIntegral.Section3.gammaKPlusToSemiring_class
+#print axioms DiamondIntegral.Section3.gammaKPlusToSemiring_class
+#check @DiamondIntegral.Section3.gammaRVSemiringClass_empty
+#print axioms DiamondIntegral.Section3.gammaRVSemiringClass_empty
+#check @DiamondIntegral.Section3.gammaRVSemiringClass_unit
+#print axioms DiamondIntegral.Section3.gammaRVSemiringClass_unit
+#check @DiamondIntegral.Section3.gammaRVSemiringClass_scissor
+#print axioms DiamondIntegral.Section3.gammaRVSemiringClass_scissor
+#check @DiamondIntegral.Section3.gammaToRVSemiring_class
+#print axioms DiamondIntegral.Section3.gammaToRVSemiring_class
+#check @DiamondIntegral.Section3.gammaTopValuationMap_value
+#print axioms DiamondIntegral.Section3.gammaTopValuationMap_value
+#check @DiamondIntegral.Section3.gammaVFCoordinateRow_vf
+#print axioms DiamondIntegral.Section3.gammaVFCoordinateRow_vf
+#check @DiamondIntegral.Section3.gammaVFCoordinateRow_definable
+#print axioms DiamondIntegral.Section3.gammaVFCoordinateRow_definable
+#check @DiamondIntegral.Section3.gammaVFCoordinateRow_invariant
+#print axioms DiamondIntegral.Section3.gammaVFCoordinateRow_invariant
+#check @DiamondIntegral.Section3.boundedVFFibre_eq_of_row_eq
+#print axioms DiamondIntegral.Section3.boundedVFFibre_eq_of_row_eq
+#check @DiamondIntegral.Section3.gammaVFCoordinateFibre_code_invariant
+#print axioms DiamondIntegral.Section3.gammaVFCoordinateFibre_code_invariant
+#check @DiamondIntegral.Section3.measuredGamma_equation_iff
+#print axioms DiamondIntegral.Section3.measuredGamma_equation_iff
+#check @DiamondIntegral.Section3.MeasuredGammaHom.ext
+#print axioms DiamondIntegral.Section3.MeasuredGammaHom.ext
+#check @DiamondIntegral.Section3.gammaCarrier
+#print axioms DiamondIntegral.Section3.gammaCarrier
+#check @DiamondIntegral.Section3.diagonalWeightGroupEmbedding_injective
+#print axioms DiamondIntegral.Section3.diagonalWeightGroupEmbedding_injective
+#check @DiamondIntegral.Section3.diagonalWeightGroupEmbedding_source
+#print axioms DiamondIntegral.Section3.diagonalWeightGroupEmbedding_source
+#check @DiamondIntegral.Section3.diagonalWeightGroupEmbedding_target
+#print axioms DiamondIntegral.Section3.diagonalWeightGroupEmbedding_target
+#check @DiamondIntegral.Section3.diagonalWeightGroup_joint_generation
+#print axioms DiamondIntegral.Section3.diagonalWeightGroup_joint_generation
+#check @DiamondIntegral.Section3.torusRational_algHom_ext
+#print axioms DiamondIntegral.Section3.torusRational_algHom_ext
+#check @DiamondIntegral.Section3.genericFieldDiagonalEquiv_coordinate
+#print axioms DiamondIntegral.Section3.genericFieldDiagonalEquiv_coordinate
+#check @DiamondIntegral.Section3.goodGammaRow_mem_code_iff
+#print axioms DiamondIntegral.Section3.goodGammaRow_mem_code_iff
+#check @DiamondIntegral.Section3.goodUnaryGammaRelation_sorted
+#print axioms DiamondIntegral.Section3.goodUnaryGammaRelation_sorted
+#check @DiamondIntegral.Section3.goodUnaryGammaRelation_definable
+#print axioms DiamondIntegral.Section3.goodUnaryGammaRelation_definable
+#check @DiamondIntegral.Section3.goodGammaRow_definable
+#print axioms DiamondIntegral.Section3.goodGammaRow_definable
+#check @DiamondIntegral.Section3.goodGammaRow_member_algebraic
+#print axioms DiamondIntegral.Section3.goodGammaRow_member_algebraic
+#check @DiamondIntegral.Section3.gammaGroupDirectSumEquiv_class
+#print axioms DiamondIntegral.Section3.gammaGroupDirectSumEquiv_class
+#check @DiamondIntegral.Section3.finiteGammaGroupDirectSumEquiv_class
+#print axioms DiamondIntegral.Section3.finiteGammaGroupDirectSumEquiv_class
+#check @DiamondIntegral.Section3.rvGroupDirectSumEquiv_class
+#print axioms DiamondIntegral.Section3.rvGroupDirectSumEquiv_class
+#check @DiamondIntegral.Section3.measuredRVGroupDirectSumEquiv_class
+#print axioms DiamondIntegral.Section3.measuredRVGroupDirectSumEquiv_class
+#check @DiamondIntegral.Section3.measuredRESGroupDirectSumEquiv_class
+#print axioms DiamondIntegral.Section3.measuredRESGroupDirectSumEquiv_class
+#check @DiamondIntegral.Section3.positiveClass_iso
+#print axioms DiamondIntegral.Section3.positiveClass_iso
+#check @DiamondIntegral.Section3.positiveClass_empty
+#print axioms DiamondIntegral.Section3.positiveClass_empty
+#check @DiamondIntegral.Section3.positiveClass_scissor
+#print axioms DiamondIntegral.Section3.positiveClass_scissor
+#check @DiamondIntegral.Section3.groupClass_iso
+#print axioms DiamondIntegral.Section3.groupClass_iso
+#check @DiamondIntegral.Section3.groupClass_empty
+#print axioms DiamondIntegral.Section3.groupClass_empty
+#check @DiamondIntegral.Section3.groupClass_scissor
+#print axioms DiamondIntegral.Section3.groupClass_scissor
+#check @DiamondIntegral.Section3.groupUniversalEquiv_class
+#print axioms DiamondIntegral.Section3.groupUniversalEquiv_class
+#check @DiamondIntegral.Section3.unmeasured_relation_iff
+#print axioms DiamondIntegral.Section3.unmeasured_relation_iff
+#check @DiamondIntegral.Section3.measured_relation_iff
+#print axioms DiamondIntegral.Section3.measured_relation_iff
+#check @DiamondIntegral.Section3.relationIdeal_le_ker
+#print axioms DiamondIntegral.Section3.relationIdeal_le_ker
+#check @DiamondIntegral.Section3.completedCongruenceEquiv_generator
+#print axioms DiamondIntegral.Section3.completedCongruenceEquiv_generator
+#check @DiamondIntegral.Section3.relationIdeal_pair
+#print axioms DiamondIntegral.Section3.relationIdeal_pair
+#check @DiamondIntegral.Section3.unmeasured_relationIdeal
+#print axioms DiamondIntegral.Section3.unmeasured_relationIdeal
+#check @DiamondIntegral.Section3.measured_relationIdeal
+#print axioms DiamondIntegral.Section3.measured_relationIdeal
+#check @DiamondIntegral.Section3.residuePolynomial_rawEval_inK
+#print axioms DiamondIntegral.Section3.residuePolynomial_rawEval_inK
+#check @DiamondIntegral.Section3.guarded_equality_value_split
+#print axioms DiamondIntegral.Section3.guarded_equality_value_split
+#check @DiamondIntegral.Section3.guarded_equality_ratio_inK
+#print axioms DiamondIntegral.Section3.guarded_equality_ratio_inK
+#check @DiamondIntegral.Section3.ideal_pullback_le_kernel
+#print axioms DiamondIntegral.Section3.ideal_pullback_le_kernel
+#check @DiamondIntegral.Section3.ideal_span_pullback_le_kernel
+#print axioms DiamondIntegral.Section3.ideal_span_pullback_le_kernel
+#check @DiamondIntegral.Section3.ImaginaryDefinable.changeName
+#print axioms DiamondIntegral.Section3.ImaginaryDefinable.changeName
+#check @DiamondIntegral.Section3.ImaginaryDefinable.extendLeft
+#print axioms DiamondIntegral.Section3.ImaginaryDefinable.extendLeft
+#check @DiamondIntegral.Section3.ImaginaryDefinable.extendRight
+#print axioms DiamondIntegral.Section3.ImaginaryDefinable.extendRight
+#check @DiamondIntegral.Section3.ImaginaryDefinable.image
+#print axioms DiamondIntegral.Section3.ImaginaryDefinable.image
+#check @DiamondIntegral.Section3.ImaginaryDefinable.preimage
+#print axioms DiamondIntegral.Section3.ImaginaryDefinable.preimage
+#check @DiamondIntegral.Section3.ImaginaryDefinable.of_real
+#print axioms DiamondIntegral.Section3.ImaginaryDefinable.of_real
+#check @DiamondIntegral.Section3.ImaginaryDefinable.inter
+#print axioms DiamondIntegral.Section3.ImaginaryDefinable.inter
+#check @DiamondIntegral.Section3.ImaginaryDefinable.union
+#print axioms DiamondIntegral.Section3.ImaginaryDefinable.union
+#check @DiamondIntegral.Section3.ImaginaryDefinable.compl
+#print axioms DiamondIntegral.Section3.ImaginaryDefinable.compl
+#check @DiamondIntegral.Section3.ImaginaryDefinable.mono
+#print axioms DiamondIntegral.Section3.ImaginaryDefinable.mono
+#check @DiamondIntegral.Section3.ImaginaryDefinable.over_real_code
+#print axioms DiamondIntegral.Section3.ImaginaryDefinable.over_real_code
+#check @DiamondIntegral.Section3.integerCharacter_nonzero_basis_multiple
+#print axioms DiamondIntegral.Section3.integerCharacter_nonzero_basis_multiple
+#check @DiamondIntegral.Section3.integerCharacter_nonzero_basis_power
+#print axioms DiamondIntegral.Section3.integerCharacter_nonzero_basis_power
+#check @DiamondIntegral.Section3.integerCharacter_mul
+#print axioms DiamondIntegral.Section3.integerCharacter_mul
+#check @DiamondIntegral.Section3.integerCharacter_monomialMap
+#print axioms DiamondIntegral.Section3.integerCharacter_monomialMap
+#check @DiamondIntegral.Section3.integerCharacter_nonzero_first_basis_multiple
+#print axioms DiamondIntegral.Section3.integerCharacter_nonzero_first_basis_multiple
+#check @DiamondIntegral.Section3.integerCharacter_nonzero_first_basis_power
+#print axioms DiamondIntegral.Section3.integerCharacter_nonzero_first_basis_power
+#check @DiamondIntegral.Section3.integerCharacter_smul
+#print axioms DiamondIntegral.Section3.integerCharacter_smul
+#check @DiamondIntegral.Section3.integerCharacter_basis_reconstruction
+#print axioms DiamondIntegral.Section3.integerCharacter_basis_reconstruction
+#check @DiamondIntegral.Section3.integerCharacter_smith
+#print axioms DiamondIntegral.Section3.integerCharacter_smith
+#check @DiamondIntegral.Section3.smith_character_exponent_ne_zero
+#print axioms DiamondIntegral.Section3.smith_character_exponent_ne_zero
+#check @DiamondIntegral.Section3.integerBasisInverse_mul
+#print axioms DiamondIntegral.Section3.integerBasisInverse_mul
+#check @DiamondIntegral.Section3.integerBasis_mul_inverse
+#print axioms DiamondIntegral.Section3.integerBasis_mul_inverse
+#check @DiamondIntegral.Section3.integerMonomialMap_mul
+#print axioms DiamondIntegral.Section3.integerMonomialMap_mul
+#check @DiamondIntegral.Section3.integerMonomialMap_residue_injective_of_coset_injective
+#print axioms DiamondIntegral.Section3.integerMonomialMap_residue_injective_of_coset_injective
+#check @DiamondIntegral.Section3.integerMonomialMap_coset_det_isUnit
+#print axioms DiamondIntegral.Section3.integerMonomialMap_coset_det_isUnit
+#check @DiamondIntegral.Section3.integerMonomialMap_mul_rect
+#print axioms DiamondIntegral.Section3.integerMonomialMap_mul_rect
+#check @DiamondIntegral.Section3.integerMonomialMap_inv_rect
+#print axioms DiamondIntegral.Section3.integerMonomialMap_inv_rect
+#check @DiamondIntegral.Section3.integerMonomialMap_sub
+#print axioms DiamondIntegral.Section3.integerMonomialMap_sub
+#check @DiamondIntegral.Section3.integerMonomialMap_eliminate_coefficients
+#print axioms DiamondIntegral.Section3.integerMonomialMap_eliminate_coefficients
+#check @DiamondIntegral.Section3.integer_power_sum
+#print axioms DiamondIntegral.Section3.integer_power_sum
+#check @DiamondIntegral.Section3.integerMonomialMap_comp
+#print axioms DiamondIntegral.Section3.integerMonomialMap_comp
+#check @DiamondIntegral.Section3.integerMonomialMap_one
+#print axioms DiamondIntegral.Section3.integerMonomialMap_one
+#check @DiamondIntegral.Section3.integerMonomialMap_reindex_input
+#print axioms DiamondIntegral.Section3.integerMonomialMap_reindex_input
+#check @DiamondIntegral.Section3.integerBasis_dual_apply
+#print axioms DiamondIntegral.Section3.integerBasis_dual_apply
+#check @DiamondIntegral.Section3.integerMatrix_left_kernel_of_fewer_columns
+#print axioms DiamondIntegral.Section3.integerMatrix_left_kernel_of_fewer_columns
+#check @DiamondIntegral.Section3.integrationClosedDisc_gammaBall
+#print axioms DiamondIntegral.Section3.integrationClosedDisc_gammaBall
+#check @DiamondIntegral.Section3.integrationOpenDisc_gammaBall
+#print axioms DiamondIntegral.Section3.integrationOpenDisc_gammaBall
+#check @DiamondIntegral.Section3.integrationIsOpenBall_iff
+#print axioms DiamondIntegral.Section3.integrationIsOpenBall_iff
+#check @DiamondIntegral.Section3.integrationFullCoordinatePartition
+#print axioms DiamondIntegral.Section3.integrationFullCoordinatePartition
+#check @DiamondIntegral.Section3.integrationFiniteDiscNames_snoc
+#print axioms DiamondIntegral.Section3.integrationFiniteDiscNames_snoc
+#check @DiamondIntegral.Section3.integrationDiscBase_snoc
+#print axioms DiamondIntegral.Section3.integrationDiscBase_snoc
+#check @DiamondIntegral.Section3.integrationDiscSorted
+#print axioms DiamondIntegral.Section3.integrationDiscSorted
+#check @DiamondIntegral.Section3.integrationDiscAtomic
+#print axioms DiamondIntegral.Section3.integrationDiscAtomic
+#check @DiamondIntegral.Section3.integrationDiscAtomic_to_native
+#print axioms DiamondIntegral.Section3.integrationDiscAtomic_to_native
+#check @DiamondIntegral.Section3.integrationDiscUnaryComplete
+#print axioms DiamondIntegral.Section3.integrationDiscUnaryComplete
+#check @DiamondIntegral.Section3.integrationDiscUnaryAtomic_to_native
+#print axioms DiamondIntegral.Section3.integrationDiscUnaryAtomic_to_native
+#check @DiamondIntegral.Section3.integrationDisc_center_mem
+#print axioms DiamondIntegral.Section3.integrationDisc_center_mem
+#check @DiamondIntegral.Section3.integrationAtomicDiscGammaBaseChangeInput
+#print axioms DiamondIntegral.Section3.integrationAtomicDiscGammaBaseChangeInput
+#check @DiamondIntegral.Section3.integrationUnaryDiscAtomicityInput_small
+#print axioms DiamondIntegral.Section3.integrationUnaryDiscAtomicityInput_small
+#check @DiamondIntegral.Section3.integrationUnaryDiscAtomicityInput
+#print axioms DiamondIntegral.Section3.integrationUnaryDiscAtomicityInput
+#check @DiamondIntegral.Section3.integrationDiscBase_mono
+#print axioms DiamondIntegral.Section3.integrationDiscBase_mono
+#check @DiamondIntegral.Section3.integrationDiscBase_name
+#print axioms DiamondIntegral.Section3.integrationDiscBase_name
+#check @DiamondIntegral.Section3.integrationDiscBase_adjoinGamma
+#print axioms DiamondIntegral.Section3.integrationDiscBase_adjoinGamma
+#check @DiamondIntegral.Section3.integrationNamedDiscCodes
+#print axioms DiamondIntegral.Section3.integrationNamedDiscCodes
+#check @DiamondIntegral.Section3.integrationNamedDiscCodes_row
+#print axioms DiamondIntegral.Section3.integrationNamedDiscCodes_row
+#check @DiamondIntegral.Section3.integrationDiscCode_compatible
+#print axioms DiamondIntegral.Section3.integrationDiscCode_compatible
+#check @DiamondIntegral.Section3.integrationDiscCode_definable
+#print axioms DiamondIntegral.Section3.integrationDiscCode_definable
+#check @DiamondIntegral.Section3.integrationVFCoordinate_definable
+#print axioms DiamondIntegral.Section3.integrationVFCoordinate_definable
+#check @DiamondIntegral.Section3.integrationZeroCoordinate_definable
+#print axioms DiamondIntegral.Section3.integrationZeroCoordinate_definable
+#check @DiamondIntegral.Section3.integrationDiscProper_definable
+#print axioms DiamondIntegral.Section3.integrationDiscProper_definable
+#check @DiamondIntegral.Section3.integrationDiscBody_definable
+#print axioms DiamondIntegral.Section3.integrationDiscBody_definable
+#check @DiamondIntegral.Section3.integrationDiscProper_point
+#print axioms DiamondIntegral.Section3.integrationDiscProper_point
+#check @DiamondIntegral.Section3.integrationDiscBody_row
+#print axioms DiamondIntegral.Section3.integrationDiscBody_row
+#check @DiamondIntegral.Section3.integrationDiscCut_definable
+#print axioms DiamondIntegral.Section3.integrationDiscCut_definable
+#check @DiamondIntegral.Section3.integrationDiscCut_eq_fibre
+#print axioms DiamondIntegral.Section3.integrationDiscCut_eq_fibre
+#check @DiamondIntegral.Section3.integrationFiniteDiscDefinable_to_full
+#print axioms DiamondIntegral.Section3.integrationFiniteDiscDefinable_to_full
+#check @DiamondIntegral.Section3.integrationEmptyBase_definable_iff
+#print axioms DiamondIntegral.Section3.integrationEmptyBase_definable_iff
+#check @DiamondIntegral.Section3.integrationNormalizedRV_definable
+#print axioms DiamondIntegral.Section3.integrationNormalizedRV_definable
+#check @DiamondIntegral.Section3.integrationDiscRadiusRows_definable
+#print axioms DiamondIntegral.Section3.integrationDiscRadiusRows_definable
+#check @DiamondIntegral.Section3.integrationDiscInverseCarrier_definable
+#print axioms DiamondIntegral.Section3.integrationDiscInverseCarrier_definable
+#check @DiamondIntegral.Section3.integrationNormalizedRV_on_vf
+#print axioms DiamondIntegral.Section3.integrationNormalizedRV_on_vf
+#check @DiamondIntegral.Section3.integrationSameScalar_codes
+#print axioms DiamondIntegral.Section3.integrationSameScalar_codes
+#check @DiamondIntegral.Section3.integrationSameScalar_radius
+#print axioms DiamondIntegral.Section3.integrationSameScalar_radius
+#check @DiamondIntegral.Section3.integrationAppendVF_sorted
+#print axioms DiamondIntegral.Section3.integrationAppendVF_sorted
+#check @DiamondIntegral.Section3.integrationDiscInverseCarrier_row
+#print axioms DiamondIntegral.Section3.integrationDiscInverseCarrier_row
+#check @DiamondIntegral.Section3.integrationDiscInverseCarrier_invariant
+#print axioms DiamondIntegral.Section3.integrationDiscInverseCarrier_invariant
+#check @DiamondIntegral.Section3.integrationDiscInverseRelation_row
+#print axioms DiamondIntegral.Section3.integrationDiscInverseRelation_row
+#check @DiamondIntegral.Section3.integrationFiniteDiscDefinable_of_full
+#print axioms DiamondIntegral.Section3.integrationFiniteDiscDefinable_of_full
+#check @DiamondIntegral.Section3.integrationFiniteDiscDefinable_iff
+#print axioms DiamondIntegral.Section3.integrationFiniteDiscDefinable_iff
+#check @DiamondIntegral.Section3.integrationDiscToDiscPartition
+#print axioms DiamondIntegral.Section3.integrationDiscToDiscPartition
+#check @DiamondIntegral.Section3.integrationDiscUnaryAtomic
+#print axioms DiamondIntegral.Section3.integrationDiscUnaryAtomic
+#check @DiamondIntegral.Section3.integrationRVCoordinate_definable
+#print axioms DiamondIntegral.Section3.integrationRVCoordinate_definable
+#check @DiamondIntegral.Section3.integrationRVCutRows_graph
+#print axioms DiamondIntegral.Section3.integrationRVCutRows_graph
+#check @DiamondIntegral.Section3.integrationFullOpenRVAtomic
+#print axioms DiamondIntegral.Section3.integrationFullOpenRVAtomic
+#check @DiamondIntegral.Section3.integrationDiscBase_adjoinRV
+#print axioms DiamondIntegral.Section3.integrationDiscBase_adjoinRV
+#check @DiamondIntegral.Section3.integrationUnaryOpenDiscRVBaseChangeInput
+#print axioms DiamondIntegral.Section3.integrationUnaryOpenDiscRVBaseChangeInput
+#check @DiamondIntegral.Section3.integrationOpenDiscNamesImageInput
+#print axioms DiamondIntegral.Section3.integrationOpenDiscNamesImageInput
+#check @DiamondIntegral.Section3.integrationDiscRadiiMap_definable
+#print axioms DiamondIntegral.Section3.integrationDiscRadiiMap_definable
+#check @DiamondIntegral.Section3.integrationRadiiCodes_values
+#print axioms DiamondIntegral.Section3.integrationRadiiCodes_values
+#check @DiamondIntegral.Section3.integrationDiscRadiiMap_row
+#print axioms DiamondIntegral.Section3.integrationDiscRadiiMap_row
+#check @DiamondIntegral.Section3.integrationDiscTail_row
+#print axioms DiamondIntegral.Section3.integrationDiscTail_row
+#check @DiamondIntegral.Section3.integrationDiscRecode_definable
+#print axioms DiamondIntegral.Section3.integrationDiscRecode_definable
+#check @DiamondIntegral.Section3.integrationDiscRecode_row
+#print axioms DiamondIntegral.Section3.integrationDiscRecode_row
+#check @DiamondIntegral.Section3.integrationDiscToDiscPartitionInput
+#print axioms DiamondIntegral.Section3.integrationDiscToDiscPartitionInput
+#check @DiamondIntegral.Section3.integration_lemma_2_32
+#print axioms DiamondIntegral.Section3.integration_lemma_2_32
+#check @DiamondIntegral.Section3.integrationDiscWith
+#print axioms DiamondIntegral.Section3.integrationDiscWith
+#check @DiamondIntegral.Section3.integration_corollary_2_30
+#print axioms DiamondIntegral.Section3.integration_corollary_2_30
+#check @DiamondIntegral.Section3.integration_corollary_2_30_disc_names
+#print axioms DiamondIntegral.Section3.integration_corollary_2_30_disc_names
+#check @DiamondIntegral.Section3.integrationGammaToRVInfinity_finite
+#print axioms DiamondIntegral.Section3.integrationGammaToRVInfinity_finite
+#check @DiamondIntegral.Section3.integrationGammaToRV_finite
+#print axioms DiamondIntegral.Section3.integrationGammaToRV_finite
+#check @DiamondIntegral.Section3.integrationFullFiniteRealSupport
+#print axioms DiamondIntegral.Section3.integrationFullFiniteRealSupport
+#check @DiamondIntegral.Section3.integrationFullCompleteType_restrict
+#print axioms DiamondIntegral.Section3.integrationFullCompleteType_restrict
+#check @DiamondIntegral.Section3.integrationEmpty_small
+#print axioms DiamondIntegral.Section3.integrationEmpty_small
+#check @DiamondIntegral.Section3.integrationFinset_small
+#print axioms DiamondIntegral.Section3.integrationFinset_small
+#check @DiamondIntegral.Section3.integrationFullBallAtomicity
+#print axioms DiamondIntegral.Section3.integrationFullBallAtomicity
+#check @DiamondIntegral.Section3.integrationGammaRelation_pullback
+#print axioms DiamondIntegral.Section3.integrationGammaRelation_pullback
+#check @DiamondIntegral.Section3.integrationGammaRelation_definable
+#print axioms DiamondIntegral.Section3.integrationGammaRelation_definable
+#check @DiamondIntegral.Section3.integrationGammaWith
+#print axioms DiamondIntegral.Section3.integrationGammaWith
+#check @DiamondIntegral.Section3.integrationGammaDefinable
+#print axioms DiamondIntegral.Section3.integrationGammaDefinable
+#check @DiamondIntegral.Section3.integrationGammaRecode_definable
+#print axioms DiamondIntegral.Section3.integrationGammaRecode_definable
+#check @DiamondIntegral.Section3.integrationGammaRecode_row
+#print axioms DiamondIntegral.Section3.integrationGammaRecode_row
+#check @DiamondIntegral.Section3.integrationGammaDefinable_iff
+#print axioms DiamondIntegral.Section3.integrationGammaDefinable_iff
+#check @DiamondIntegral.Section3.integrationGammaAtomic
+#print axioms DiamondIntegral.Section3.integrationGammaAtomic
+#check @DiamondIntegral.Section3.integrationGammaAtomic_to_native
+#print axioms DiamondIntegral.Section3.integrationGammaAtomic_to_native
+#check @DiamondIntegral.Section3.integrationGammaBase_adjoin
+#print axioms DiamondIntegral.Section3.integrationGammaBase_adjoin
+#check @DiamondIntegral.Section3.integrationAtomicGammaBaseChangeInput
+#print axioms DiamondIntegral.Section3.integrationAtomicGammaBaseChangeInput
+#check @DiamondIntegral.Section3.integrationGammaDiv_definable
+#print axioms DiamondIntegral.Section3.integrationGammaDiv_definable
+#check @DiamondIntegral.Section3.integrationPositiveGamma_of_nontrivial
+#print axioms DiamondIntegral.Section3.integrationPositiveGamma_of_nontrivial
+#check @DiamondIntegral.Section3.integrationAtomicGammaBaseChangeInput_complete
+#print axioms DiamondIntegral.Section3.integrationAtomicGammaBaseChangeInput_complete
+#check @DiamondIntegral.Section3.integration_lemma_2_23
+#print axioms DiamondIntegral.Section3.integration_lemma_2_23
+#check @DiamondIntegral.Section3.integrationGammaEmbed_proper_iff
+#print axioms DiamondIntegral.Section3.integrationGammaEmbed_proper_iff
+#check @DiamondIntegral.Section3.integrationGammaTailRecode_definable
+#print axioms DiamondIntegral.Section3.integrationGammaTailRecode_definable
+#check @DiamondIntegral.Section3.integrationGammaTail_pullback
+#print axioms DiamondIntegral.Section3.integrationGammaTail_pullback
+#check @DiamondIntegral.Section3.integrationGammaTailWith
+#print axioms DiamondIntegral.Section3.integrationGammaTailWith
+#check @DiamondIntegral.Section3.integrationGammaTailOverBase
+#print axioms DiamondIntegral.Section3.integrationGammaTailOverBase
+#check @DiamondIntegral.Section3.integrationGammaTail_row
+#print axioms DiamondIntegral.Section3.integrationGammaTail_row
+#check @DiamondIntegral.Section3.integrationMixedTuple_injective
+#print axioms DiamondIntegral.Section3.integrationMixedTuple_injective
+#check @DiamondIntegral.Section3.integrationMixedTuple_sorted
+#print axioms DiamondIntegral.Section3.integrationMixedTuple_sorted
+#check @DiamondIntegral.Section3.integrationMixedRawMap_on
+#print axioms DiamondIntegral.Section3.integrationMixedRawMap_on
+#check @DiamondIntegral.Section3.integrationMixedRawMap_injOn
+#print axioms DiamondIntegral.Section3.integrationMixedRawMap_injOn
+#check @DiamondIntegral.Section3.integrationMixedRawGraph_definable
+#print axioms DiamondIntegral.Section3.integrationMixedRawGraph_definable
+#check @DiamondIntegral.Section3.integrationMixedVFCoordinate
+#print axioms DiamondIntegral.Section3.integrationMixedVFCoordinate
+#check @DiamondIntegral.Section3.integrationMixedTail
+#print axioms DiamondIntegral.Section3.integrationMixedTail
+#check @DiamondIntegral.Section3.integrationMixedInsert
+#print axioms DiamondIntegral.Section3.integrationMixedInsert
+#check @DiamondIntegral.Section3.integrationMixedPaperFibres_of_coordinate
+#print axioms DiamondIntegral.Section3.integrationMixedPaperFibres_of_coordinate
+#check @DiamondIntegral.Section3.integrationMixed_reconstruct
+#print axioms DiamondIntegral.Section3.integrationMixed_reconstruct
+#check @DiamondIntegral.Section3.IntegrationMixedPaperFibres.mono
+#print axioms DiamondIntegral.Section3.IntegrationMixedPaperFibres.mono
+#check @DiamondIntegral.Section3.IntegrationMixedPaperFibres.inverse
+#print axioms DiamondIntegral.Section3.IntegrationMixedPaperFibres.inverse
+#check @DiamondIntegral.Section3.integrationFibreConcentric_of_paper
+#print axioms DiamondIntegral.Section3.integrationFibreConcentric_of_paper
+#check @DiamondIntegral.Section3.integrationHasDiscToDisc_of_paper
+#print axioms DiamondIntegral.Section3.integrationHasDiscToDisc_of_paper
+#check @DiamondIntegral.Section3.integration_lemma_2_25_closed
+#print axioms DiamondIntegral.Section3.integration_lemma_2_25_closed
+#check @DiamondIntegral.Section3.integration_lemma_2_25_open
+#print axioms DiamondIntegral.Section3.integration_lemma_2_25_open
+#check @DiamondIntegral.Section3.integrationIsClosedBall_iff
+#print axioms DiamondIntegral.Section3.integrationIsClosedBall_iff
+#check @DiamondIntegral.Section3.integrationClosed_oneComponent
+#print axioms DiamondIntegral.Section3.integrationClosed_oneComponent
+#check @DiamondIntegral.Section3.integrationThin_body
+#print axioms DiamondIntegral.Section3.integrationThin_body
+#check @DiamondIntegral.Section3.integrationThin_oneComponent
+#print axioms DiamondIntegral.Section3.integrationThin_oneComponent
+#check @DiamondIntegral.Section3.integrationPrimitive_iff
+#print axioms DiamondIntegral.Section3.integrationPrimitive_iff
+#check @DiamondIntegral.Section3.integrationUnaryAtomic
+#print axioms DiamondIntegral.Section3.integrationUnaryAtomic
+#check @DiamondIntegral.Section3.integrationAtomic_neVF
+#print axioms DiamondIntegral.Section3.integrationAtomic_neVF
+#check @DiamondIntegral.Section3.integrationPrimitiveImageInput
+#print axioms DiamondIntegral.Section3.integrationPrimitiveImageInput
+#check @DiamondIntegral.Section3.integration_lemma_2_27
+#print axioms DiamondIntegral.Section3.integration_lemma_2_27
+#check @DiamondIntegral.Section3.integrationOpenDiscImageInput
+#print axioms DiamondIntegral.Section3.integrationOpenDiscImageInput
+#check @DiamondIntegral.Section3.integration_lemma_2_28
+#print axioms DiamondIntegral.Section3.integration_lemma_2_28
+#check @DiamondIntegral.Section3.integrationTruthCell_mem
+#print axioms DiamondIntegral.Section3.integrationTruthCell_mem
+#check @DiamondIntegral.Section3.integrationTruthCell_unique
+#print axioms DiamondIntegral.Section3.integrationTruthCell_unique
+#check @DiamondIntegral.Section3.integrationTruthCell_definable
+#print axioms DiamondIntegral.Section3.integrationTruthCell_definable
+#check @DiamondIntegral.Section3.integrationCoordinateZero_definable
+#print axioms DiamondIntegral.Section3.integrationCoordinateZero_definable
+#check @DiamondIntegral.Section3.integrationOutputZero_definable
+#print axioms DiamondIntegral.Section3.integrationOutputZero_definable
+#check @DiamondIntegral.Section3.integrationRawZeroPiece_definable
+#print axioms DiamondIntegral.Section3.integrationRawZeroPiece_definable
+#check @DiamondIntegral.Section3.mem_objectLift
+#print axioms DiamondIntegral.Section3.mem_objectLift
+#check @DiamondIntegral.Section3.objectLift_finite_rv_fibres
+#print axioms DiamondIntegral.Section3.objectLift_finite_rv_fibres
+#check @DiamondIntegral.Section3.objectLift_vf_coordinates_nonzero
+#print axioms DiamondIntegral.Section3.objectLift_vf_coordinates_nonzero
+#check @DiamondIntegral.Section3.literalActiveCharacters_finite
+#print axioms DiamondIntegral.Section3.literalActiveCharacters_finite
+#check @DiamondIntegral.Section3.literalActiveCharacters_value_finite
+#print axioms DiamondIntegral.Section3.literalActiveCharacters_value_finite
+#check @DiamondIntegral.Section3.literalValueCell_iff_of_values
+#print axioms DiamondIntegral.Section3.literalValueCell_iff_of_values
+#check @DiamondIntegral.Section3.literal_comparison_depends_on_characters
+#print axioms DiamondIntegral.Section3.literal_comparison_depends_on_characters
+#check @DiamondIntegral.Section3.maskedEqualityCharacters_finite
+#print axioms DiamondIntegral.Section3.maskedEqualityCharacters_finite
+#check @DiamondIntegral.Section3.maskedEqualityCharacters_value_finite
+#print axioms DiamondIntegral.Section3.maskedEqualityCharacters_value_finite
+#check @DiamondIntegral.Section3.equality_total_value_split
+#print axioms DiamondIntegral.Section3.equality_total_value_split
+#check @DiamondIntegral.Section3.equality_payload_depends_on_masked_characters
+#print axioms DiamondIntegral.Section3.equality_payload_depends_on_masked_characters
+#check @DiamondIntegral.Section3.rvMonomial_inK_iff_of_values
+#print axioms DiamondIntegral.Section3.rvMonomial_inK_iff_of_values
+#check @DiamondIntegral.Section3.maskedPolynomialCharacters_finite
+#print axioms DiamondIntegral.Section3.maskedPolynomialCharacters_finite
+#check @DiamondIntegral.Section3.maskedPolynomialCharacters_value_finite
+#print axioms DiamondIntegral.Section3.maskedPolynomialCharacters_value_finite
+#check @DiamondIntegral.Section3.polynomialResiduePattern_iff_of_values
+#print axioms DiamondIntegral.Section3.polynomialResiduePattern_iff_of_values
+#check @DiamondIntegral.Section3.maskedPolynomial_depends_on_characters
+#print axioms DiamondIntegral.Section3.maskedPolynomial_depends_on_characters
+#check @DiamondIntegral.Section3.residuePolynomial_domain_iff_of_values
+#print axioms DiamondIntegral.Section3.residuePolynomial_domain_iff_of_values
+#check @DiamondIntegral.Section3.gammaGroundMatchedImages_disjoint
+#print axioms DiamondIntegral.Section3.gammaGroundMatchedImages_disjoint
+#check @DiamondIntegral.Section3.gammaGroundMatchedImages_preimage_union
+#print axioms DiamondIntegral.Section3.gammaGroundMatchedImages_preimage_union
+#check @DiamondIntegral.Section3.gammaGroundMatchedImages_target_subset_union
+#print axioms DiamondIntegral.Section3.gammaGroundMatchedImages_target_subset_union
+#check @DiamondIntegral.Section3.gammaGroundConstantForm_value
+#print axioms DiamondIntegral.Section3.gammaGroundConstantForm_value
+#check @DiamondIntegral.Section3.GammaGroundMeasuredRESObject.shiftCombinedWeight_value
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredRESObject.shiftCombinedWeight_value
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaScalar_lift_weight
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaScalar_lift_weight
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRES_shift_scalar_class
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRES_shift_scalar_class
+#check @DiamondIntegral.Section3.GammaGroundMeasuredGammaObject.shiftCombinedWeight_value
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredGammaObject.shiftCombinedWeight_value
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaScalar_combined
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaScalar_combined
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaProduct_scalar_combined
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaProduct_scalar_combined
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGamma_shift_scalar_class
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGamma_shift_scalar_class
+#check @DiamondIntegral.Section3.gammaGroundMeasuredTensor_shared_weight_shift
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredTensor_shared_weight_shift
+#check @DiamondIntegral.Section3.measuredFiniteGammaPresentationToDirectSum_class
+#print axioms DiamondIntegral.Section3.measuredFiniteGammaPresentationToDirectSum_class
+#check @DiamondIntegral.Section3.measuredFiniteGammaDirectSumToPresentationAdd_of
+#print axioms DiamondIntegral.Section3.measuredFiniteGammaDirectSumToPresentationAdd_of
+#check @DiamondIntegral.Section3.measuredFiniteGammaDirectSumToPresentationAdd_one
+#print axioms DiamondIntegral.Section3.measuredFiniteGammaDirectSumToPresentationAdd_one
+#check @DiamondIntegral.Section3.measuredFiniteGammaDirectSumToPresentationAdd_mul
+#print axioms DiamondIntegral.Section3.measuredFiniteGammaDirectSumToPresentationAdd_mul
+#check @DiamondIntegral.Section3.measuredFiniteGammaDirectSumToPresentation_class
+#print axioms DiamondIntegral.Section3.measuredFiniteGammaDirectSumToPresentation_class
+#check @DiamondIntegral.Section3.measuredFiniteGammaRepresentative_class
+#print axioms DiamondIntegral.Section3.measuredFiniteGammaRepresentative_class
+#check @DiamondIntegral.Section3.measuredFiniteGammaToGammaKPlus_mul
+#print axioms DiamondIntegral.Section3.measuredFiniteGammaToGammaKPlus_mul
+#check @DiamondIntegral.Section3.measuredFiniteGammaClassMul_class
+#print axioms DiamondIntegral.Section3.measuredFiniteGammaClassMul_class
+#check @DiamondIntegral.Section3.measuredFiniteGammaDirectSumToGamma_injective
+#print axioms DiamondIntegral.Section3.measuredFiniteGammaDirectSumToGamma_injective
+#check @DiamondIntegral.Section3.measuredFiniteGammaDirectSumToGamma_one
+#print axioms DiamondIntegral.Section3.measuredFiniteGammaDirectSumToGamma_one
+#check @DiamondIntegral.Section3.measuredFiniteGammaDirectSumToGamma_mul
+#print axioms DiamondIntegral.Section3.measuredFiniteGammaDirectSumToGamma_mul
+#check @DiamondIntegral.Section3.measuredFiniteGammaDirectSumClass_product
+#print axioms DiamondIntegral.Section3.measuredFiniteGammaDirectSumClass_product
+#check @DiamondIntegral.Section3.measuredFiniteGammaGradedInclusion_injective
+#print axioms DiamondIntegral.Section3.measuredFiniteGammaGradedInclusion_injective
+#check @DiamondIntegral.Section3.measuredFiniteGammaClass_iso
+#print axioms DiamondIntegral.Section3.measuredFiniteGammaClass_iso
+#check @DiamondIntegral.Section3.measuredFiniteGammaClass_empty
+#print axioms DiamondIntegral.Section3.measuredFiniteGammaClass_empty
+#check @DiamondIntegral.Section3.measuredFiniteGammaClass_coprod
+#print axioms DiamondIntegral.Section3.measuredFiniteGammaClass_coprod
+#check @DiamondIntegral.Section3.measuredFiniteGammaClass_surjective
+#print axioms DiamondIntegral.Section3.measuredFiniteGammaClass_surjective
+#check @DiamondIntegral.Section3.measuredFiniteGammaClass_eq_iff_iso
+#print axioms DiamondIntegral.Section3.measuredFiniteGammaClass_eq_iff_iso
+#check @DiamondIntegral.Section3.measuredFiniteGammaToGammaKPlus_injective
+#print axioms DiamondIntegral.Section3.measuredFiniteGammaToGammaKPlus_injective
+#check @DiamondIntegral.Section3.measuredFiniteGammaToGammaKPlus_class
+#print axioms DiamondIntegral.Section3.measuredFiniteGammaToGammaKPlus_class
+#check @DiamondIntegral.Section3.measuredFiniteGammaSemiringClass_iso
+#print axioms DiamondIntegral.Section3.measuredFiniteGammaSemiringClass_iso
+#check @DiamondIntegral.Section3.measuredFiniteGammaSemiringClass_empty
+#print axioms DiamondIntegral.Section3.measuredFiniteGammaSemiringClass_empty
+#check @DiamondIntegral.Section3.measuredFiniteGammaSemiringClass_unit
+#print axioms DiamondIntegral.Section3.measuredFiniteGammaSemiringClass_unit
+#check @DiamondIntegral.Section3.measuredFiniteGammaSemiringClass_product
+#print axioms DiamondIntegral.Section3.measuredFiniteGammaSemiringClass_product
+#check @DiamondIntegral.Section3.measuredFiniteGammaSemiringClass_scissor
+#print axioms DiamondIntegral.Section3.measuredFiniteGammaSemiringClass_scissor
+#check @DiamondIntegral.Section3.measuredFiniteGammaKPlusToSemiring_class
+#print axioms DiamondIntegral.Section3.measuredFiniteGammaKPlusToSemiring_class
+#check @DiamondIntegral.Section3.measuredFiniteGammaGradedInclusion_class
+#print axioms DiamondIntegral.Section3.measuredFiniteGammaGradedInclusion_class
+#check @DiamondIntegral.Section3.measuredFiniteGammaInclusion_grading
+#print axioms DiamondIntegral.Section3.measuredFiniteGammaInclusion_grading
+#check @DiamondIntegral.Section3.measuredFiniteGammaToGammaSemiring_injective
+#print axioms DiamondIntegral.Section3.measuredFiniteGammaToGammaSemiring_injective
+#check @DiamondIntegral.Section3.measuredFiniteGammaToGammaSemiring_class
+#print axioms DiamondIntegral.Section3.measuredFiniteGammaToGammaSemiring_class
+#check @DiamondIntegral.Section3.measuredFiniteGammaToRESSemiring_class
+#print axioms DiamondIntegral.Section3.measuredFiniteGammaToRESSemiring_class
+#check @DiamondIntegral.Section3.measuredResToRVSemiring_class
+#print axioms DiamondIntegral.Section3.measuredResToRVSemiring_class
+#check @DiamondIntegral.Section3.measuredResToRVSemiring_injective
+#print axioms DiamondIntegral.Section3.measuredResToRVSemiring_injective
+#check @DiamondIntegral.Section3.measuredFiniteGamma_semiring_square
+#print axioms DiamondIntegral.Section3.measuredFiniteGamma_semiring_square
+#check @DiamondIntegral.Section3.measuredFiniteGammaToRESKPlus_class
+#print axioms DiamondIntegral.Section3.measuredFiniteGammaToRESKPlus_class
+#check @DiamondIntegral.Section3.measuredFiniteGamma_positive_square
+#print axioms DiamondIntegral.Section3.measuredFiniteGamma_positive_square
+#check @DiamondIntegral.Section3.gammaCodePair_fst_apply
+#print axioms DiamondIntegral.Section3.gammaCodePair_fst_apply
+#check @DiamondIntegral.Section3.gammaCodePair_snd_apply
+#print axioms DiamondIntegral.Section3.gammaCodePair_snd_apply
+#check @DiamondIntegral.Section3.gammaCodeComp_apply
+#print axioms DiamondIntegral.Section3.gammaCodeComp_apply
+#check @DiamondIntegral.Section3.measuredGammaCodeCombined_product
+#print axioms DiamondIntegral.Section3.measuredGammaCodeCombined_product
+#check @DiamondIntegral.Section3.measuredGammaUnit_combined
+#print axioms DiamondIntegral.Section3.measuredGammaUnit_combined
+#check @DiamondIntegral.Section3.gammaCoprodComm_inl
+#print axioms DiamondIntegral.Section3.gammaCoprodComm_inl
+#check @DiamondIntegral.Section3.gammaCoprodComm_inr
+#print axioms DiamondIntegral.Section3.gammaCoprodComm_inr
+#check @DiamondIntegral.Section3.gammaCoprodAssoc_left
+#print axioms DiamondIntegral.Section3.gammaCoprodAssoc_left
+#check @DiamondIntegral.Section3.gammaCoprodAssoc_middle
+#print axioms DiamondIntegral.Section3.gammaCoprodAssoc_middle
+#check @DiamondIntegral.Section3.gammaCoprodAssoc_right
+#print axioms DiamondIntegral.Section3.gammaCoprodAssoc_right
+#check @DiamondIntegral.Section3.gammaCoprodEmpty_inr
+#print axioms DiamondIntegral.Section3.gammaCoprodEmpty_inr
+#check @DiamondIntegral.Section3.measuredGammaIsoClass_eq_iff
+#print axioms DiamondIntegral.Section3.measuredGammaIsoClass_eq_iff
+#check @DiamondIntegral.Section3.measuredGammaIsoClass_empty
+#print axioms DiamondIntegral.Section3.measuredGammaIsoClass_empty
+#check @DiamondIntegral.Section3.measuredGammaIsoClass_coprod
+#print axioms DiamondIntegral.Section3.measuredGammaIsoClass_coprod
+#check @DiamondIntegral.Section3.gammaFormValue_transport
+#print axioms DiamondIntegral.Section3.gammaFormValue_transport
+#check @DiamondIntegral.Section3.measuredGammaCoprod_combined_left
+#print axioms DiamondIntegral.Section3.measuredGammaCoprod_combined_left
+#check @DiamondIntegral.Section3.measuredGammaCoprod_combined_right
+#print axioms DiamondIntegral.Section3.measuredGammaCoprod_combined_right
+#check @DiamondIntegral.Section3.gammaGroundPrefixRestrictedWeight_definable
+#print axioms DiamondIntegral.Section3.gammaGroundPrefixRestrictedWeight_definable
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaSemiringClass_fixed_prefix
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaSemiringClass_fixed_prefix
+#check @DiamondIntegral.Section3.gammaGroundMeasuredTensor_fixed_prefix_absorption
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredTensor_fixed_prefix_absorption
+#check @DiamondIntegral.Section3.measuredGammaPresentationToDirectSum_class
+#print axioms DiamondIntegral.Section3.measuredGammaPresentationToDirectSum_class
+#check @DiamondIntegral.Section3.measuredGammaDirectSumToPresentationAdd_of
+#print axioms DiamondIntegral.Section3.measuredGammaDirectSumToPresentationAdd_of
+#check @DiamondIntegral.Section3.measuredGammaDirectSumToPresentationAdd_one
+#print axioms DiamondIntegral.Section3.measuredGammaDirectSumToPresentationAdd_one
+#check @DiamondIntegral.Section3.measuredGammaDirectSumToPresentationAdd_mul
+#print axioms DiamondIntegral.Section3.measuredGammaDirectSumToPresentationAdd_mul
+#check @DiamondIntegral.Section3.measuredGammaDirectSumToPresentation_class
+#print axioms DiamondIntegral.Section3.measuredGammaDirectSumToPresentation_class
+#check @DiamondIntegral.Section3.measuredGammaDirectSumClass_product
+#print axioms DiamondIntegral.Section3.measuredGammaDirectSumClass_product
+#check @DiamondIntegral.Section3.measuredGammaDirectSumClass_coprod
+#print axioms DiamondIntegral.Section3.measuredGammaDirectSumClass_coprod
+#check @DiamondIntegral.Section3.measuredGammaDirectSumClass_unit
+#print axioms DiamondIntegral.Section3.measuredGammaDirectSumClass_unit
+#check @DiamondIntegral.Section3.measuredGammaGroupDirectSumEquiv_class
+#print axioms DiamondIntegral.Section3.measuredGammaGroupDirectSumEquiv_class
+#check @DiamondIntegral.Section3.measuredFiniteGammaGroupDirectSumEquiv_class
+#print axioms DiamondIntegral.Section3.measuredFiniteGammaGroupDirectSumEquiv_class
+#check @DiamondIntegral.Section3.measuredGammaRepresentative_class
+#print axioms DiamondIntegral.Section3.measuredGammaRepresentative_class
+#check @DiamondIntegral.Section3.measuredGammaClassMul_class
+#print axioms DiamondIntegral.Section3.measuredGammaClassMul_class
+#check @DiamondIntegral.Section3.measuredGammaClassMul_comm_cast
+#print axioms DiamondIntegral.Section3.measuredGammaClassMul_comm_cast
+#check @DiamondIntegral.Section3.measuredGammaHomogeneous_mul_comm
+#print axioms DiamondIntegral.Section3.measuredGammaHomogeneous_mul_comm
+#check @DiamondIntegral.Section3.measuredGammaHomogeneous_mul_one
+#print axioms DiamondIntegral.Section3.measuredGammaHomogeneous_mul_one
+#check @DiamondIntegral.Section3.measuredGammaHomogeneous_mul_assoc
+#print axioms DiamondIntegral.Section3.measuredGammaHomogeneous_mul_assoc
+#check @DiamondIntegral.Section3.measuredGammaClassMul_zero
+#print axioms DiamondIntegral.Section3.measuredGammaClassMul_zero
+#check @DiamondIntegral.Section3.measuredGammaClassMul_zero_left
+#print axioms DiamondIntegral.Section3.measuredGammaClassMul_zero_left
+#check @DiamondIntegral.Section3.measuredGammaClassMul_add
+#print axioms DiamondIntegral.Section3.measuredGammaClassMul_add
+#check @DiamondIntegral.Section3.measuredGammaClassMul_add_left
+#print axioms DiamondIntegral.Section3.measuredGammaClassMul_add_left
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaSemiringClass_monomial_weight
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaSemiringClass_monomial_weight
+#check @DiamondIntegral.Section3.measuredGammaIsoClass_scissor
+#print axioms DiamondIntegral.Section3.measuredGammaIsoClass_scissor
+#check @DiamondIntegral.Section3.measuredGammaKPlusToIsoClasses_class
+#print axioms DiamondIntegral.Section3.measuredGammaKPlusToIsoClasses_class
+#check @DiamondIntegral.Section3.measuredGammaClass_eq_iff_iso
+#print axioms DiamondIntegral.Section3.measuredGammaClass_eq_iff_iso
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaSemiringClass_coprod
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaSemiringClass_coprod
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaSemiringClass_finite_pieces
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaSemiringClass_finite_pieces
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaSingleForm_full_weight
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaSingleForm_full_weight
+#check @DiamondIntegral.Section3.measuredGammaProduct_combined_pair
+#print axioms DiamondIntegral.Section3.measuredGammaProduct_combined_pair
+#check @DiamondIntegral.Section3.measuredGammaClass_product_coprod
+#print axioms DiamondIntegral.Section3.measuredGammaClass_product_coprod
+#check @DiamondIntegral.Section3.measuredGammaKPlusCast_add
+#print axioms DiamondIntegral.Section3.measuredGammaKPlusCast_add
+#check @DiamondIntegral.Section3.measuredGammaClass_cast
+#print axioms DiamondIntegral.Section3.measuredGammaClass_cast
+#check @DiamondIntegral.Section3.measuredGammaClass_heq_of_castHom
+#print axioms DiamondIntegral.Section3.measuredGammaClass_heq_of_castHom
+#check @DiamondIntegral.Section3.measuredGammaProduct_combined
+#print axioms DiamondIntegral.Section3.measuredGammaProduct_combined
+#check @DiamondIntegral.Section3.measuredGammaProduct_combined_code
+#print axioms DiamondIntegral.Section3.measuredGammaProduct_combined_code
+#check @DiamondIntegral.Section3.measuredGammaRVClass_product
+#print axioms DiamondIntegral.Section3.measuredGammaRVClass_product
+#check @DiamondIntegral.Section3.measuredGammaRVClass_unit
+#print axioms DiamondIntegral.Section3.measuredGammaRVClass_unit
+#check @DiamondIntegral.Section3.measuredGammaProduct_factor
+#print axioms DiamondIntegral.Section3.measuredGammaProduct_factor
+#check @DiamondIntegral.Section3.measuredGammaProduct_preserves
+#print axioms DiamondIntegral.Section3.measuredGammaProduct_preserves
+#check @DiamondIntegral.Section3.GammaObject.rvEncodeCode_surjective
+#print axioms DiamondIntegral.Section3.GammaObject.rvEncodeCode_surjective
+#check @DiamondIntegral.Section3.measuredGammaLiftForm_code
+#print axioms DiamondIntegral.Section3.measuredGammaLiftForm_code
+#check @DiamondIntegral.Section3.rvFamilyTarget_encode
+#print axioms DiamondIntegral.Section3.rvFamilyTarget_encode
+#check @DiamondIntegral.Section3.gammaRVLift_target_code
+#print axioms DiamondIntegral.Section3.gammaRVLift_target_code
+#check @DiamondIntegral.Section3.measuredGammaLift_combined
+#print axioms DiamondIntegral.Section3.measuredGammaLift_combined
+#check @DiamondIntegral.Section3.gammaCodeFamilyBijection_encode
+#print axioms DiamondIntegral.Section3.gammaCodeFamilyBijection_encode
+#check @DiamondIntegral.Section3.measuredGammaHom_lift_iso
+#print axioms DiamondIntegral.Section3.measuredGammaHom_lift_iso
+#check @DiamondIntegral.Section3.measuredFiniteGammaHom_lift_iso
+#print axioms DiamondIntegral.Section3.measuredFiniteGammaHom_lift_iso
+#check @DiamondIntegral.Section3.measuredGammaRVClass_empty
+#print axioms DiamondIntegral.Section3.measuredGammaRVClass_empty
+#check @DiamondIntegral.Section3.measuredGammaRVClass_scissor
+#print axioms DiamondIntegral.Section3.measuredGammaRVClass_scissor
+#check @DiamondIntegral.Section3.measuredGammaToRVKPlus_class
+#print axioms DiamondIntegral.Section3.measuredGammaToRVKPlus_class
+#check @DiamondIntegral.Section3.measuredGammaRestriction_combined
+#print axioms DiamondIntegral.Section3.measuredGammaRestriction_combined
+#check @DiamondIntegral.Section3.measuredGammaClass_coprod
+#print axioms DiamondIntegral.Section3.measuredGammaClass_coprod
+#check @DiamondIntegral.Section3.measuredGammaClass_surjective
+#print axioms DiamondIntegral.Section3.measuredGammaClass_surjective
+#check @DiamondIntegral.Section3.measuredGammaLiftForm_restrict
+#print axioms DiamondIntegral.Section3.measuredGammaLiftForm_restrict
+#check @DiamondIntegral.Section3.measuredGammaSemiringClass_iso
+#print axioms DiamondIntegral.Section3.measuredGammaSemiringClass_iso
+#check @DiamondIntegral.Section3.measuredGammaSemiringClass_empty
+#print axioms DiamondIntegral.Section3.measuredGammaSemiringClass_empty
+#check @DiamondIntegral.Section3.measuredGammaSemiringClass_unit
+#print axioms DiamondIntegral.Section3.measuredGammaSemiringClass_unit
+#check @DiamondIntegral.Section3.measuredGammaSemiringClass_product
+#print axioms DiamondIntegral.Section3.measuredGammaSemiringClass_product
+#check @DiamondIntegral.Section3.measuredGammaSemiringClass_scissor
+#print axioms DiamondIntegral.Section3.measuredGammaSemiringClass_scissor
+#check @DiamondIntegral.Section3.measuredGammaKPlusToSemiring_class
+#print axioms DiamondIntegral.Section3.measuredGammaKPlusToSemiring_class
+#check @DiamondIntegral.Section3.measuredGammaRVSemiringClass_empty
+#print axioms DiamondIntegral.Section3.measuredGammaRVSemiringClass_empty
+#check @DiamondIntegral.Section3.measuredGammaRVSemiringClass_unit
+#print axioms DiamondIntegral.Section3.measuredGammaRVSemiringClass_unit
+#check @DiamondIntegral.Section3.measuredGammaRVSemiringClass_scissor
+#print axioms DiamondIntegral.Section3.measuredGammaRVSemiringClass_scissor
+#check @DiamondIntegral.Section3.measuredGammaToRVSemiring_class
+#print axioms DiamondIntegral.Section3.measuredGammaToRVSemiring_class
+#check @DiamondIntegral.Section3.gammaGroundTranslatedGammaWeight_definable
+#print axioms DiamondIntegral.Section3.gammaGroundTranslatedGammaWeight_definable
+#check @DiamondIntegral.Section3.gammaGroundTranslatedGammaWeight_prefix_step
+#print axioms DiamondIntegral.Section3.gammaGroundTranslatedGammaWeight_prefix_step
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaSingleWeight_class_eqOn
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaSingleWeight_class_eqOn
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaTranslatedPiece_tuple_eq
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaTranslatedPiece_tuple_eq
+#check @DiamondIntegral.Section3.gammaGroundMeasuredCoefficientCongruence_prefix_step
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredCoefficientCongruence_prefix_step
+#check @DiamondIntegral.Section3.gammaGroundMeasuredCoefficientCongruence_tuple_translation
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredCoefficientCongruence_tuple_translation
+#check @DiamondIntegral.Section3.fullGammaFunction_monomial_pullback
+#print axioms DiamondIntegral.Section3.fullGammaFunction_monomial_pullback
+#check @DiamondIntegral.Section3.gammaGroundMeasuredTensor_character_hyperplane_reduction
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredTensor_character_hyperplane_reduction
+#check @DiamondIntegral.Section3.objectLiftLabel_value
+#print axioms DiamondIntegral.Section3.objectLiftLabel_value
+#check @DiamondIntegral.Section3.measuredLiftForm_value
+#print axioms DiamondIntegral.Section3.measuredLiftForm_value
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRESDirectSumClass_weight_bijection
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRESDirectSumClass_weight_bijection
+#check @DiamondIntegral.Section3.gammaGroundMeasuredCoefficientCongruence_local_monomial
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredCoefficientCongruence_local_monomial
+#check @DiamondIntegral.Section3.gammaGroundMeasuredMonomialPatch_tensor_congruence
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredMonomialPatch_tensor_congruence
+#check @DiamondIntegral.Section3.gammaGroundMeasuredTensorParentRemainder_value_split
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredTensorParentRemainder_value_split
+#check @DiamondIntegral.Section3.gammaGroundTensorBoxInParent_measuredValue
+#print axioms DiamondIntegral.Section3.gammaGroundTensorBoxInParent_measuredValue
+#check @DiamondIntegral.Section3.gammaGroundMeasuredTensorParents_residual_value_split
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredTensorParents_residual_value_split
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaSemiringClass_native_partition
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaSemiringClass_native_partition
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaSemiringClass_single_empty
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaSemiringClass_single_empty
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaSemiringClass_native_finiteUnion
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaSemiringClass_native_finiteUnion
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaSemiringClass_native_finite_partition
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaSemiringClass_native_finite_partition
+#check @DiamondIntegral.Section3.GammaGroundMeasuredNativeTensorChart.nativeForm_value
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredNativeTensorChart.nativeForm_value
+#check @DiamondIntegral.Section3.GammaGroundMeasuredRVObject.restrict_weight
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredRVObject.restrict_weight
+#check @DiamondIntegral.Section3.gammaGroundMeasuredNativeTensorChart_restrict_image_class
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredNativeTensorChart_restrict_image_class
+#check @DiamondIntegral.Section3.gammaGroundMeasuredNativeTensorCharts_RV_image_partition
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredNativeTensorCharts_RV_image_partition
+#check @DiamondIntegral.Section3.GammaGroundRESUnitChart.measured_local_monomial_congruence
+#print axioms DiamondIntegral.Section3.GammaGroundRESUnitChart.measured_local_monomial_congruence
+#check @DiamondIntegral.Section3.gammaGroundMeasuredNativeProductTransition_square_match_cover
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredNativeProductTransition_square_match_cover
+#check @DiamondIntegral.Section3.GammaGroundRESUnitChart.measured_disjoint_full_preimage_partition
+#print axioms DiamondIntegral.Section3.GammaGroundRESUnitChart.measured_disjoint_full_preimage_partition
+#check @DiamondIntegral.Section3.GammaGroundRESUnitChart.measured_finite_disjoint_full_preimage_partition
+#print axioms DiamondIntegral.Section3.GammaGroundRESUnitChart.measured_finite_disjoint_full_preimage_partition
+#check @DiamondIntegral.Section3.GammaGroundRESUnitChart.measured_weight
+#print axioms DiamondIntegral.Section3.GammaGroundRESUnitChart.measured_weight
+#check @DiamondIntegral.Section3.GammaGroundRESUnitChart.measured_finite_partition
+#print axioms DiamondIntegral.Section3.GammaGroundRESUnitChart.measured_finite_partition
+#check @DiamondIntegral.Section3.GammaGroundRESUnitChart.measured_class_of_empty
+#print axioms DiamondIntegral.Section3.GammaGroundRESUnitChart.measured_class_of_empty
+#check @DiamondIntegral.Section3.GammaGroundMeasuredNativeTensorChart.residue_weight
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredNativeTensorChart.residue_weight
+#check @DiamondIntegral.Section3.GammaGroundMeasuredNativeTensorChart.native_weight
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredNativeTensorChart.native_weight
+#check @DiamondIntegral.Section3.GammaGroundMeasuredNativeTensorChart.value_image
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredNativeTensorChart.value_image
+#check @DiamondIntegral.Section3.GammaGroundMeasuredNativeTensorChart.ofPiece_value
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredNativeTensorChart.ofPiece_value
+#check @DiamondIntegral.Section3.gammaGroundMeasuredNativeTensor_finite_hyperplane_normal_form
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredNativeTensor_finite_hyperplane_normal_form
+#check @DiamondIntegral.Section3.gammaGroundMonomialPatch_weight_equation
+#print axioms DiamondIntegral.Section3.gammaGroundMonomialPatch_weight_equation
+#check @DiamondIntegral.Section3.gammaGroundMeasuredTensor_pure_native_normal_form
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredTensor_pure_native_normal_form
+#check @DiamondIntegral.Section3.measuredResPresentationToDirectSum_class
+#print axioms DiamondIntegral.Section3.measuredResPresentationToDirectSum_class
+#check @DiamondIntegral.Section3.measuredResDirectSumToPresentationAdd_of
+#print axioms DiamondIntegral.Section3.measuredResDirectSumToPresentationAdd_of
+#check @DiamondIntegral.Section3.measuredResDirectSumToPresentationAdd_one
+#print axioms DiamondIntegral.Section3.measuredResDirectSumToPresentationAdd_one
+#check @DiamondIntegral.Section3.measuredResDirectSumToPresentationAdd_mul
+#print axioms DiamondIntegral.Section3.measuredResDirectSumToPresentationAdd_mul
+#check @DiamondIntegral.Section3.measuredResDirectSumToPresentation_class
+#print axioms DiamondIntegral.Section3.measuredResDirectSumToPresentation_class
+#check @DiamondIntegral.Section3.measuredResRepresentative_class
+#print axioms DiamondIntegral.Section3.measuredResRepresentative_class
+#check @DiamondIntegral.Section3.measuredResToRVKPlus_mul
+#print axioms DiamondIntegral.Section3.measuredResToRVKPlus_mul
+#check @DiamondIntegral.Section3.measuredResClassMul_class
+#print axioms DiamondIntegral.Section3.measuredResClassMul_class
+#check @DiamondIntegral.Section3.measuredResDirectSumToRV_injective
+#print axioms DiamondIntegral.Section3.measuredResDirectSumToRV_injective
+#check @DiamondIntegral.Section3.measuredResDirectSumToRV_one
+#print axioms DiamondIntegral.Section3.measuredResDirectSumToRV_one
+#check @DiamondIntegral.Section3.measuredResDirectSumToRV_mul
+#print axioms DiamondIntegral.Section3.measuredResDirectSumToRV_mul
+#check @DiamondIntegral.Section3.measuredResDirectSumClass_product
+#print axioms DiamondIntegral.Section3.measuredResDirectSumClass_product
+#check @DiamondIntegral.Section3.measuredResGradedInclusion_injective
+#print axioms DiamondIntegral.Section3.measuredResGradedInclusion_injective
+#check @DiamondIntegral.Section3.measuredRESForgetSemiring_class
+#print axioms DiamondIntegral.Section3.measuredRESForgetSemiring_class
+#check @DiamondIntegral.Section3.measuredRESForgetSemiring_fixed
+#print axioms DiamondIntegral.Section3.measuredRESForgetSemiring_fixed
+#check @DiamondIntegral.Section3.measuredResClass_iso
+#print axioms DiamondIntegral.Section3.measuredResClass_iso
+#check @DiamondIntegral.Section3.measuredResClass_empty
+#print axioms DiamondIntegral.Section3.measuredResClass_empty
+#check @DiamondIntegral.Section3.measuredResClass_scissor
+#print axioms DiamondIntegral.Section3.measuredResClass_scissor
+#check @DiamondIntegral.Section3.measuredResClass_coprod
+#print axioms DiamondIntegral.Section3.measuredResClass_coprod
+#check @DiamondIntegral.Section3.measuredResClass_surjective
+#print axioms DiamondIntegral.Section3.measuredResClass_surjective
+#check @DiamondIntegral.Section3.measuredResClass_eq_iff_iso
+#print axioms DiamondIntegral.Section3.measuredResClass_eq_iff_iso
+#check @DiamondIntegral.Section3.measuredResToRVKPlus_injective
+#print axioms DiamondIntegral.Section3.measuredResToRVKPlus_injective
+#check @DiamondIntegral.Section3.measuredRESSemiringClass_iso
+#print axioms DiamondIntegral.Section3.measuredRESSemiringClass_iso
+#check @DiamondIntegral.Section3.measuredRESSemiringClass_empty
+#print axioms DiamondIntegral.Section3.measuredRESSemiringClass_empty
+#check @DiamondIntegral.Section3.measuredRESSemiringClass_unit
+#print axioms DiamondIntegral.Section3.measuredRESSemiringClass_unit
+#check @DiamondIntegral.Section3.measuredRESSemiringClass_product
+#print axioms DiamondIntegral.Section3.measuredRESSemiringClass_product
+#check @DiamondIntegral.Section3.measuredRESSemiringClass_scissor
+#print axioms DiamondIntegral.Section3.measuredRESSemiringClass_scissor
+#check @DiamondIntegral.Section3.measuredRESKPlusToSemiring_class
+#print axioms DiamondIntegral.Section3.measuredRESKPlusToSemiring_class
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRESWeightFibre_mem
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRESWeightFibre_mem
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRESDirectSumClass_finite_partition
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRESDirectSumClass_finite_partition
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRES_constant_weight_partition
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRES_constant_weight_partition
+#check @DiamondIntegral.Section3.measuredRVCoprod_form_left
+#print axioms DiamondIntegral.Section3.measuredRVCoprod_form_left
+#check @DiamondIntegral.Section3.measuredRVCoprod_form_right
+#print axioms DiamondIntegral.Section3.measuredRVCoprod_form_right
+#check @DiamondIntegral.Section3.measuredRVCoprod_combined_left
+#print axioms DiamondIntegral.Section3.measuredRVCoprod_combined_left
+#check @DiamondIntegral.Section3.measuredRVCoprod_combined_right
+#print axioms DiamondIntegral.Section3.measuredRVCoprod_combined_right
+#check @DiamondIntegral.Section3.measuredRVPresentationToDirectSum_class
+#print axioms DiamondIntegral.Section3.measuredRVPresentationToDirectSum_class
+#check @DiamondIntegral.Section3.measuredRVDirectSumToPresentationAdd_of
+#print axioms DiamondIntegral.Section3.measuredRVDirectSumToPresentationAdd_of
+#check @DiamondIntegral.Section3.measuredRVDirectSumToPresentationAdd_one
+#print axioms DiamondIntegral.Section3.measuredRVDirectSumToPresentationAdd_one
+#check @DiamondIntegral.Section3.measuredRVDirectSumToPresentationAdd_mul
+#print axioms DiamondIntegral.Section3.measuredRVDirectSumToPresentationAdd_mul
+#check @DiamondIntegral.Section3.measuredRVDirectSumToPresentation_class
+#print axioms DiamondIntegral.Section3.measuredRVDirectSumToPresentation_class
+#check @DiamondIntegral.Section3.measuredRVDirectSumClass_product
+#print axioms DiamondIntegral.Section3.measuredRVDirectSumClass_product
+#check @DiamondIntegral.Section3.measuredRVDirectSumClass_coprod
+#print axioms DiamondIntegral.Section3.measuredRVDirectSumClass_coprod
+#check @DiamondIntegral.Section3.measuredRVDirectSumClass_unit
+#print axioms DiamondIntegral.Section3.measuredRVDirectSumClass_unit
+#check @DiamondIntegral.Section3.measuredRVRepresentative_class
+#print axioms DiamondIntegral.Section3.measuredRVRepresentative_class
+#check @DiamondIntegral.Section3.measuredRVClassMul_class
+#print axioms DiamondIntegral.Section3.measuredRVClassMul_class
+#check @DiamondIntegral.Section3.measuredRVKPlusCast_add
+#print axioms DiamondIntegral.Section3.measuredRVKPlusCast_add
+#check @DiamondIntegral.Section3.measuredRVClass_cast_reindex
+#print axioms DiamondIntegral.Section3.measuredRVClass_cast_reindex
+#check @DiamondIntegral.Section3.measuredRVClassMul_comm_cast
+#print axioms DiamondIntegral.Section3.measuredRVClassMul_comm_cast
+#check @DiamondIntegral.Section3.measuredRVClass_heq_of_reindexedIso
+#print axioms DiamondIntegral.Section3.measuredRVClass_heq_of_reindexedIso
+#check @DiamondIntegral.Section3.measuredRVHomogeneous_mul_comm
+#print axioms DiamondIntegral.Section3.measuredRVHomogeneous_mul_comm
+#check @DiamondIntegral.Section3.measuredRVHomogeneous_mul_one
+#print axioms DiamondIntegral.Section3.measuredRVHomogeneous_mul_one
+#check @DiamondIntegral.Section3.measuredRVHomogeneous_mul_assoc
+#print axioms DiamondIntegral.Section3.measuredRVHomogeneous_mul_assoc
+#check @DiamondIntegral.Section3.measuredRVClassMul_zero
+#print axioms DiamondIntegral.Section3.measuredRVClassMul_zero
+#check @DiamondIntegral.Section3.measuredRVKPlusCast_zero
+#print axioms DiamondIntegral.Section3.measuredRVKPlusCast_zero
+#check @DiamondIntegral.Section3.measuredRVClassMul_zero_left
+#print axioms DiamondIntegral.Section3.measuredRVClassMul_zero_left
+#check @DiamondIntegral.Section3.measuredRVClassMul_add
+#print axioms DiamondIntegral.Section3.measuredRVClassMul_add
+#check @DiamondIntegral.Section3.measuredRVClassMul_add_left
+#print axioms DiamondIntegral.Section3.measuredRVClassMul_add_left
+#check @DiamondIntegral.Section3.measuredRVIsoClass_eq_iff
+#print axioms DiamondIntegral.Section3.measuredRVIsoClass_eq_iff
+#check @DiamondIntegral.Section3.measuredRVIsoClass_empty
+#print axioms DiamondIntegral.Section3.measuredRVIsoClass_empty
+#check @DiamondIntegral.Section3.measuredRVIsoClass_coprod
+#print axioms DiamondIntegral.Section3.measuredRVIsoClass_coprod
+#check @DiamondIntegral.Section3.measuredRVIsoClass_scissor
+#print axioms DiamondIntegral.Section3.measuredRVIsoClass_scissor
+#check @DiamondIntegral.Section3.measuredRVKPlusToIsoClasses_class
+#print axioms DiamondIntegral.Section3.measuredRVKPlusToIsoClasses_class
+#check @DiamondIntegral.Section3.measuredRVClass_eq_iff_iso
+#print axioms DiamondIntegral.Section3.measuredRVClass_eq_iff_iso
+#check @DiamondIntegral.Section3.MeasuredRVMap.ext
+#print axioms DiamondIntegral.Section3.MeasuredRVMap.ext
+#check @DiamondIntegral.Section3.measuredRVMapIso_iff
+#print axioms DiamondIntegral.Section3.measuredRVMapIso_iff
+#check @DiamondIntegral.Section3.measuredRVMapInl_desc
+#print axioms DiamondIntegral.Section3.measuredRVMapInl_desc
+#check @DiamondIntegral.Section3.measuredRVMapInr_desc
+#print axioms DiamondIntegral.Section3.measuredRVMapInr_desc
+#check @DiamondIntegral.Section3.measuredRVMapCoprod_hom_ext
+#print axioms DiamondIntegral.Section3.measuredRVMapCoprod_hom_ext
+#check @DiamondIntegral.Section3.measuredRVUnion_inl_desc
+#print axioms DiamondIntegral.Section3.measuredRVUnion_inl_desc
+#check @DiamondIntegral.Section3.measuredRVUnion_inr_desc
+#print axioms DiamondIntegral.Section3.measuredRVUnion_inr_desc
+#check @DiamondIntegral.Section3.measuredRVUnion_hom_ext
+#print axioms DiamondIntegral.Section3.measuredRVUnion_hom_ext
+#check @DiamondIntegral.Section3.MeasuredRVObject.reindex_combinedWeight
+#print axioms DiamondIntegral.Section3.MeasuredRVObject.reindex_combinedWeight
+#check @DiamondIntegral.Section3.MeasuredRVObject.product_combined_pair
+#print axioms DiamondIntegral.Section3.MeasuredRVObject.product_combined_pair
+#check @DiamondIntegral.Section3.rvProductSwapMap_pair
+#print axioms DiamondIntegral.Section3.rvProductSwapMap_pair
+#check @DiamondIntegral.Section3.MeasuredRVObject.unit_combinedWeight
+#print axioms DiamondIntegral.Section3.MeasuredRVObject.unit_combinedWeight
+#check @DiamondIntegral.Section3.measuredRVClass_partition
+#print axioms DiamondIntegral.Section3.measuredRVClass_partition
+#check @DiamondIntegral.Section3.measuredRVClass_product_coprod
+#print axioms DiamondIntegral.Section3.measuredRVClass_product_coprod
+#check @DiamondIntegral.Section3.RVObject.target_product
+#print axioms DiamondIntegral.Section3.RVObject.target_product
+#check @DiamondIntegral.Section3.MeasuredRVObject.product_form
+#print axioms DiamondIntegral.Section3.MeasuredRVObject.product_form
+#check @DiamondIntegral.Section3.MeasuredRVObject.product_combinedWeight
+#print axioms DiamondIntegral.Section3.MeasuredRVObject.product_combinedWeight
+#check @DiamondIntegral.Section3.MeasuredRVObject.withZeroForm_value
+#print axioms DiamondIntegral.Section3.MeasuredRVObject.withZeroForm_value
+#check @DiamondIntegral.Section3.measuredRVSpecialMap_zero
+#print axioms DiamondIntegral.Section3.measuredRVSpecialMap_zero
+#check @DiamondIntegral.Section3.measuredRVSpecialMap_one
+#print axioms DiamondIntegral.Section3.measuredRVSpecialMap_one
+#check @DiamondIntegral.Section3.measuredRVSpecialMap_add
+#print axioms DiamondIntegral.Section3.measuredRVSpecialMap_add
+#check @DiamondIntegral.Section3.measuredRVSpecialMap_mul
+#print axioms DiamondIntegral.Section3.measuredRVSpecialMap_mul
+#check @DiamondIntegral.Section3.measuredRVMonomial_add
+#print axioms DiamondIntegral.Section3.measuredRVMonomial_add
+#check @DiamondIntegral.Section3.measuredRVPolynomialMap_class
+#print axioms DiamondIntegral.Section3.measuredRVPolynomialMap_class
+#check @DiamondIntegral.Section3.measuredRVPolynomialMap_respects
+#print axioms DiamondIntegral.Section3.measuredRVPolynomialMap_respects
+#check @DiamondIntegral.Section3.measuredRVQuotientGrading_class
+#print axioms DiamondIntegral.Section3.measuredRVQuotientGrading_class
+#check @DiamondIntegral.Section3.measuredRVQuotientGrading_fixed
+#print axioms DiamondIntegral.Section3.measuredRVQuotientGrading_fixed
+#check @DiamondIntegral.Section3.measuredRVClass_coprod
+#print axioms DiamondIntegral.Section3.measuredRVClass_coprod
+#check @DiamondIntegral.Section3.measuredRVClass_surjective
+#print axioms DiamondIntegral.Section3.measuredRVClass_surjective
+#check @DiamondIntegral.Section3.measuredRVClass_empty
+#print axioms DiamondIntegral.Section3.measuredRVClass_empty
+#check @DiamondIntegral.Section3.measuredRVClass_iso
+#print axioms DiamondIntegral.Section3.measuredRVClass_iso
+#check @DiamondIntegral.Section3.measuredRVClass_scissor
+#print axioms DiamondIntegral.Section3.measuredRVClass_scissor
+#check @DiamondIntegral.Section3.measuredRVSemiringClass_iso
+#print axioms DiamondIntegral.Section3.measuredRVSemiringClass_iso
+#check @DiamondIntegral.Section3.measuredRVSemiringClass_empty
+#print axioms DiamondIntegral.Section3.measuredRVSemiringClass_empty
+#check @DiamondIntegral.Section3.measuredRVSemiringClass_unit
+#print axioms DiamondIntegral.Section3.measuredRVSemiringClass_unit
+#check @DiamondIntegral.Section3.measuredRVSemiringClass_product
+#print axioms DiamondIntegral.Section3.measuredRVSemiringClass_product
+#check @DiamondIntegral.Section3.measuredRVSemiringClass_scissor
+#print axioms DiamondIntegral.Section3.measuredRVSemiringClass_scissor
+#check @DiamondIntegral.Section3.measuredRVKPlusToSemiring_class
+#print axioms DiamondIntegral.Section3.measuredRVKPlusToSemiring_class
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorResidual.weight_definable
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorResidual.weight_definable
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorResidual.map_weight
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorResidual.map_weight
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorResidual.value_image
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorResidual.value_image
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorResidual.value_split
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorResidual.value_split
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.residualBijection_agrees
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.residualBijection_agrees
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.source_union_or_hyperplane
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.source_union_or_hyperplane
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.target_union_or_hyperplane
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.target_union_or_hyperplane
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorResidual.lower_normal_form
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorResidual.lower_normal_form
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.matched_congruence
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.matched_congruence
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.sourceMap_disjoint
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.sourceMap_disjoint
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.targetMap_disjoint
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.targetMap_disjoint
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.source_seed_cover
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.source_seed_cover
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorSourceGridMatching.congruence
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorSourceGridMatching.congruence
+#check @DiamondIntegral.Section3.gammaGroundMeasuredTensor_boolean_cells
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredTensor_boolean_cells
+#check @DiamondIntegral.Section3.gammaGroundMeasuredTensor_rectangle_boolean_cells
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredTensor_rectangle_boolean_cells
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRESDirectSumClass_of_empty
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRESDirectSumClass_of_empty
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaSemiringClass_native_of_empty
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaSemiringClass_native_of_empty
+#check @DiamondIntegral.Section3.gammaGroundMeasuredTensorBooleanCell_nonempty_of_ne_zero
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredTensorBooleanCell_nonempty_of_ne_zero
+#check @DiamondIntegral.Section3.gammaGroundMeasuredTensor_disjoint_product_partition
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredTensor_disjoint_product_partition
+#check @DiamondIntegral.Section3.gammaGroundMeasuredTensor_disjoint_full_preimage_partition
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredTensor_disjoint_full_preimage_partition
+#check @DiamondIntegral.Section3.GammaGroundTensorBox.toMeasuredNativeChart_value
+#print axioms DiamondIntegral.Section3.GammaGroundTensorBox.toMeasuredNativeChart_value
+#check @DiamondIntegral.Section3.GammaGroundTensorBox.measuredValue_eq_zero_of_not_nonempty
+#print axioms DiamondIntegral.Section3.GammaGroundTensorBox.measuredValue_eq_zero_of_not_nonempty
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVSemiringClass_of_weight_bijection
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVSemiringClass_of_weight_bijection
+#check @DiamondIntegral.Section3.gammaGroundMeasuredTensor_chart_preimage
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredTensor_chart_preimage
+#check @DiamondIntegral.Section3.gammaGroundMeasuredTensorNativeProduct_weight
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredTensorNativeProduct_weight
+#check @DiamondIntegral.Section3.gammaGroundMeasuredTensor_coefficient_pair
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredTensor_coefficient_pair
+#check @DiamondIntegral.Section3.gammaGroundMeasuredCoefficientPair_valid
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredCoefficientPair_valid
+#check @DiamondIntegral.Section3.gammaGroundMeasuredCoefficientCongruence_le_ker
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredCoefficientCongruence_le_ker
+#check @DiamondIntegral.Section3.gammaGroundMeasuredCoefficientQuotientMap_class
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredCoefficientQuotientMap_class
+#check @DiamondIntegral.Section3.gammaGroundMeasuredCoefficientQuotientMap_surjective
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredCoefficientQuotientMap_surjective
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVDegreeProjection_class
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVDegreeProjection_class
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVDegreeProjection_piece
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVDegreeProjection_piece
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVDegreeProjection_list
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVDegreeProjection_list
+#check @DiamondIntegral.Section3.gammaGroundMeasuredTensorPiecesInDegree_images_equal
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredTensorPiecesInDegree_images_equal
+#check @DiamondIntegral.Section3.gammaGroundMeasuredTensorPiece_homogeneous_native_charts
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredTensorPiece_homogeneous_native_charts
+#check @DiamondIntegral.Section3.gammaGroundMeasuredTensorGridBox_value_sum
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredTensorGridBox_value_sum
+#check @DiamondIntegral.Section3.gammaGroundMeasuredTensorGrid_selected_value_split
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredTensorGrid_selected_value_split
+#check @DiamondIntegral.Section3.gammaGroundMeasuredTensorBox_disjoint_remainder_value_split
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredTensorBox_disjoint_remainder_value_split
+#check @DiamondIntegral.Section3.measuredTensorMap_tmul
+#print axioms DiamondIntegral.Section3.measuredTensorMap_tmul
+#check @DiamondIntegral.Section3.measuredTensorMap_objects
+#print axioms DiamondIntegral.Section3.measuredTensorMap_objects
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorTerm.value_image
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorTerm.value_image
+#check @DiamondIntegral.Section3.gammaGroundMeasuredTensor_object_normal_form
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredTensor_object_normal_form
+#check @DiamondIntegral.Section3.gammaGroundMeasuredTensor_kernel_generated
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredTensor_kernel_generated
+#check @DiamondIntegral.Section3.gammaGroundMeasuredCoefficientCongruence_eq_ker
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredCoefficientCongruence_eq_ker
+#check @DiamondIntegral.Section3.gammaGroundMeasuredCoefficientQuotientMap_bijective
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredCoefficientQuotientMap_bijective
+#check @DiamondIntegral.Section3.gammaGroundMeasuredCoefficientQuotientEquiv_class
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredCoefficientQuotientEquiv_class
+#check @DiamondIntegral.Section3.gammaGroundMeasuredCoefficientQuotientEquivDirectSum_objects
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredCoefficientQuotientEquivDirectSum_objects
+#check @DiamondIntegral.Section3.gammaGroundMeasuredCoefficientQuotientDegreeInclusion_image
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredCoefficientQuotientDegreeInclusion_image
+#check @DiamondIntegral.Section3.gammaGroundMeasuredCoefficientQuotient_objects_in_degree
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredCoefficientQuotient_objects_in_degree
+#check @DiamondIntegral.Section3.GammaGroundMeasuredRESObject.normalizeCombinedWeight_value
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredRESObject.normalizeCombinedWeight_value
+#check @DiamondIntegral.Section3.gammaGroundMeasuredTensor_constant_RES_normalization
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredTensor_constant_RES_normalization
+#check @DiamondIntegral.Section3.gammaGroundMeasuredTensor_RES_weight_normalization
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredTensor_RES_weight_normalization
+#check @DiamondIntegral.Section3.gammaGroundMeasuredTensorRankLayer_kernel_step
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredTensorRankLayer_kernel_step
+#check @DiamondIntegral.Section3.gammaGroundMeasuredNativeTensor_kernel_congruence
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredNativeTensor_kernel_congruence
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayer.map_injective
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayer.map_injective
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayer.map_disjoint
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayer.map_disjoint
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayer.map_cover
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayer.map_cover
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayer.weightForm_exists
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayer.weightForm_exists
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayer.weightForm_map
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayer.weightForm_map
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayer.map_weight
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayer.map_weight
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayer.topMap_weight
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayer.topMap_weight
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayer.lowerMap_weight
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayer.lowerMap_weight
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayer.value_charts
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayer.value_charts
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayer.value_image
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayer.value_image
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayer.iso_of_equal_images
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayer.iso_of_equal_images
+#check @DiamondIntegral.Section3.gammaGroundMeasuredTensorRankLayer_top_match_cover
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredTensorRankLayer_top_match_cover
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayer.topChart_value
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayer.topChart_value
+#check @DiamondIntegral.Section3.gammaGroundMeasuredNativeTensorChart_top_normalize
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredNativeTensorChart_top_normalize
+#check @DiamondIntegral.Section3.gammaGroundMeasuredNativeTensor_rank_layer_normal_form
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredNativeTensor_rank_layer_normal_form
+#check @DiamondIntegral.Section3.gammaGroundMeasuredTensorRankLayer_two_sided_cover
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredTensorRankLayer_two_sided_cover
+#check @DiamondIntegral.Section3.gammaGroundMeasuredNativeTensor_rank_zero_absorption
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredNativeTensor_rank_zero_absorption
+#check @DiamondIntegral.Section3.gammaGroundMeasuredNativeTensorList_rank_zero_absorption
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredNativeTensorList_rank_zero_absorption
+#check @DiamondIntegral.Section3.gammaGroundMeasuredNativeTensor_rank_zero_kernel_trivial
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredNativeTensor_rank_zero_kernel_trivial
+#check @DiamondIntegral.Section3.gammaGroundMeasuredTensor_object_preimage
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredTensor_object_preimage
+#check @DiamondIntegral.Section3.gammaGroundMeasuredTensorMap_surjective
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredTensorMap_surjective
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGroupTensorMap_surjective
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGroupTensorMap_surjective
+#check @DiamondIntegral.Section3.MeasuredVFData.of_toObject
+#print axioms DiamondIntegral.Section3.MeasuredVFData.of_toObject
+#check @DiamondIntegral.Section3.MeasuredVFData.to_ofObject
+#print axioms DiamondIntegral.Section3.MeasuredVFData.to_ofObject
+#check @DiamondIntegral.Section3.measuredVFDirectSumToSemiring_of
+#print axioms DiamondIntegral.Section3.measuredVFDirectSumToSemiring_of
+#check @DiamondIntegral.Section3.measuredVFDirectSumToSemiring_add
+#print axioms DiamondIntegral.Section3.measuredVFDirectSumToSemiring_add
+#check @DiamondIntegral.Section3.measuredVFKPlusToSemiring_add
+#print axioms DiamondIntegral.Section3.measuredVFKPlusToSemiring_add
+#check @DiamondIntegral.Section3.measuredVFDirectSum_grading_coeff
+#print axioms DiamondIntegral.Section3.measuredVFDirectSum_grading_coeff
+#check @DiamondIntegral.Section3.measuredVFDirectSumToSemiring_injective
+#print axioms DiamondIntegral.Section3.measuredVFDirectSumToSemiring_injective
+#check @DiamondIntegral.Section3.measuredVFDirectSum_lift_compat
+#print axioms DiamondIntegral.Section3.measuredVFDirectSum_lift_compat
+#check @DiamondIntegral.Section3.measuredVFDirectSumToSemiring_surjective
+#print axioms DiamondIntegral.Section3.measuredVFDirectSumToSemiring_surjective
+#check @DiamondIntegral.Section3.measuredVFDirectSumToSemiring_class
+#print axioms DiamondIntegral.Section3.measuredVFDirectSumToSemiring_class
+#check @DiamondIntegral.Section3.measuredVFDirectSumClass_product
+#print axioms DiamondIntegral.Section3.measuredVFDirectSumClass_product
+#check @DiamondIntegral.Section3.measuredVFDirectSumClass_unit
+#print axioms DiamondIntegral.Section3.measuredVFDirectSumClass_unit
+#check @DiamondIntegral.Section3.measuredVFPolynomialGrading_add
+#print axioms DiamondIntegral.Section3.measuredVFPolynomialGrading_add
+#check @DiamondIntegral.Section3.measuredPositiveIntegral_add
+#print axioms DiamondIntegral.Section3.measuredPositiveIntegral_add
+#check @DiamondIntegral.Section3.measuredVFPolynomialGrading_fixed
+#print axioms DiamondIntegral.Section3.measuredVFPolynomialGrading_fixed
+#check @DiamondIntegral.Section3.PositiveMeasuredVF.ae_iff_agreement
+#print axioms DiamondIntegral.Section3.PositiveMeasuredVF.ae_iff_agreement
+#check @DiamondIntegral.Section3.PositiveMeasuredVF.ae_iff_paper_agreement
+#print axioms DiamondIntegral.Section3.PositiveMeasuredVF.ae_iff_paper_agreement
+#check @DiamondIntegral.Section3.MeasuredVFData.product_form
+#print axioms DiamondIntegral.Section3.MeasuredVFData.product_form
+#check @DiamondIntegral.Section3.measuredLift_degree_compat
+#print axioms DiamondIntegral.Section3.measuredLift_degree_compat
+#check @DiamondIntegral.Section3.measuredVFKPlusToSemiring_injective
+#print axioms DiamondIntegral.Section3.measuredVFKPlusToSemiring_injective
+#check @DiamondIntegral.Section3.measuredVFClass_surjective
+#print axioms DiamondIntegral.Section3.measuredVFClass_surjective
+#check @DiamondIntegral.Section3.measuredVFDataClass_inclusion
+#print axioms DiamondIntegral.Section3.measuredVFDataClass_inclusion
+#check @DiamondIntegral.Section3.measuredVFDataClass_surjective
+#print axioms DiamondIntegral.Section3.measuredVFDataClass_surjective
+#check @DiamondIntegral.Section3.zeroMeasuredVFClass_empty
+#print axioms DiamondIntegral.Section3.zeroMeasuredVFClass_empty
+#check @DiamondIntegral.Section3.zeroMeasuredVFClass_iso
+#print axioms DiamondIntegral.Section3.zeroMeasuredVFClass_iso
+#check @DiamondIntegral.Section3.zeroMeasuredVFClass_scissor
+#print axioms DiamondIntegral.Section3.zeroMeasuredVFClass_scissor
+#check @DiamondIntegral.Section3.positiveMeasuredVFClass_empty
+#print axioms DiamondIntegral.Section3.positiveMeasuredVFClass_empty
+#check @DiamondIntegral.Section3.positiveMeasuredVFClass_iso
+#print axioms DiamondIntegral.Section3.positiveMeasuredVFClass_iso
+#check @DiamondIntegral.Section3.positiveMeasuredVFClass_scissor
+#print axioms DiamondIntegral.Section3.positiveMeasuredVFClass_scissor
+#check @DiamondIntegral.Section3.measuredVFDataSemiringClass_iso
+#print axioms DiamondIntegral.Section3.measuredVFDataSemiringClass_iso
+#check @DiamondIntegral.Section3.measuredVFDataSemiringClass_empty
+#print axioms DiamondIntegral.Section3.measuredVFDataSemiringClass_empty
+#check @DiamondIntegral.Section3.measuredVFObjectSemiringClass_empty
+#print axioms DiamondIntegral.Section3.measuredVFObjectSemiringClass_empty
+#check @DiamondIntegral.Section3.measuredVFDataSemiringClass_product
+#print axioms DiamondIntegral.Section3.measuredVFDataSemiringClass_product
+#check @DiamondIntegral.Section3.measuredVFObjectSemiringClass_scissor
+#print axioms DiamondIntegral.Section3.measuredVFObjectSemiringClass_scissor
+#check @DiamondIntegral.Section3.measuredVFKPlusToSemiring_class
+#print axioms DiamondIntegral.Section3.measuredVFKPlusToSemiring_class
+#check @DiamondIntegral.Section3.ZeroMeasuredVF.finite_domain
+#print axioms DiamondIntegral.Section3.ZeroMeasuredVF.finite_domain
+#check @DiamondIntegral.Section3.ZeroMeasuredVFHom.ext
+#print axioms DiamondIntegral.Section3.ZeroMeasuredVFHom.ext
+#check @DiamondIntegral.Section3.zeroMeasuredVF_equation
+#print axioms DiamondIntegral.Section3.zeroMeasuredVF_equation
+#check @DiamondIntegral.Section3.mixedGammaTupleDefinable.column_difference
+#print axioms DiamondIntegral.Section3.mixedGammaTupleDefinable.column_difference
+#check @DiamondIntegral.Section3.mixedGammaTupleDefinable.column
+#print axioms DiamondIntegral.Section3.mixedGammaTupleDefinable.column
+#check @DiamondIntegral.Section3.mixedGammaTupleDefinable.fibre
+#print axioms DiamondIntegral.Section3.mixedGammaTupleDefinable.fibre
+#check @DiamondIntegral.Section3.mixedJacobian_eq_of_restriction
+#print axioms DiamondIntegral.Section3.mixedJacobian_eq_of_restriction
+#check @DiamondIntegral.Section3.mixedValueQuotient_mem
+#print axioms DiamondIntegral.Section3.mixedValueQuotient_mem
+#check @DiamondIntegral.Section3.mixedValueQuotient_full_preimage
+#print axioms DiamondIntegral.Section3.mixedValueQuotient_full_preimage
+#check @DiamondIntegral.Section3.mixedValueProjection_preimage_prod
+#print axioms DiamondIntegral.Section3.mixedValueProjection_preimage_prod
+#check @DiamondIntegral.Section3.mixedValueQuotient_rectangles
+#print axioms DiamondIntegral.Section3.mixedValueQuotient_rectangles
+#check @DiamondIntegral.Section3.integerMonomialBasis_value_eq_of_coordinates
+#print axioms DiamondIntegral.Section3.integerMonomialBasis_value_eq_of_coordinates
+#check @DiamondIntegral.Section3.integerMonomialBasis_value_eq_of_active_and_free
+#print axioms DiamondIntegral.Section3.integerMonomialBasis_value_eq_of_active_and_free
+#check @DiamondIntegral.Section3.coordinateProductChart_symm_zero
+#print axioms DiamondIntegral.Section3.coordinateProductChart_symm_zero
+#check @DiamondIntegral.Section3.coordinateProductChart_symm_free
+#print axioms DiamondIntegral.Section3.coordinateProductChart_symm_free
+#check @DiamondIntegral.Section3.coordinateProductChart_character_split
+#print axioms DiamondIntegral.Section3.coordinateProductChart_character_split
+#check @DiamondIntegral.Section3.monomialProduct_subsingleton_of_constant_coefficient_values
+#print axioms DiamondIntegral.Section3.monomialProduct_subsingleton_of_constant_coefficient_values
+#check @DiamondIntegral.Section3.integerCharacter_depends_on_smith_coordinates
+#print axioms DiamondIntegral.Section3.integerCharacter_depends_on_smith_coordinates
+#check @DiamondIntegral.Section3.exists_monomial_residue_coordinates
+#print axioms DiamondIntegral.Section3.exists_monomial_residue_coordinates
+#check @DiamondIntegral.Section3.affineMonomial_value_kernel_iff
+#print axioms DiamondIntegral.Section3.affineMonomial_value_kernel_iff
+#check @DiamondIntegral.Section3.NamedMap.inverse_apply
+#print axioms DiamondIntegral.Section3.NamedMap.inverse_apply
+#check @DiamondIntegral.Section3.NamedMap.apply_inverse
+#print axioms DiamondIntegral.Section3.NamedMap.apply_inverse
+#check @DiamondIntegral.Section3.NamedBijection.ext
+#print axioms DiamondIntegral.Section3.NamedBijection.ext
+#check @DiamondIntegral.Section3.relationDefinable_iff_product
+#print axioms DiamondIntegral.Section3.relationDefinable_iff_product
+#check @DiamondIntegral.Section3.ImaginaryDefinable.congr
+#print axioms DiamondIntegral.Section3.ImaginaryDefinable.congr
+#check @DiamondIntegral.Section3.NamedMap.ext
+#print axioms DiamondIntegral.Section3.NamedMap.ext
+#check @DiamondIntegral.Section3.mem_namedObjectLift
+#print axioms DiamondIntegral.Section3.mem_namedObjectLift
+#check @DiamondIntegral.Section3.namedObjectLift_finite_rv_fibres
+#print axioms DiamondIntegral.Section3.namedObjectLift_finite_rv_fibres
+#check @DiamondIntegral.Section3.namedObjectLift_overRealCode
+#print axioms DiamondIntegral.Section3.namedObjectLift_overRealCode
+#check @DiamondIntegral.Section3.namedObjectLiftVF_overRealCode
+#print axioms DiamondIntegral.Section3.namedObjectLiftVF_overRealCode
+#check @DiamondIntegral.Section3.namedObjectLift_vf_coordinates_nonzero
+#print axioms DiamondIntegral.Section3.namedObjectLift_vf_coordinates_nonzero
+#check @DiamondIntegral.Section3.NamedMap.comp_apply
+#print axioms DiamondIntegral.Section3.NamedMap.comp_apply
+#check @DiamondIntegral.Section3.NamedMap.toImage_bijective
+#print axioms DiamondIntegral.Section3.NamedMap.toImage_bijective
+#check @DiamondIntegral.Section3.NamedMap.finiteFibres_of_injective
+#print axioms DiamondIntegral.Section3.NamedMap.finiteFibres_of_injective
+#check @DiamondIntegral.Section3.NamedMap.FiniteFibres.comp
+#print axioms DiamondIntegral.Section3.NamedMap.FiniteFibres.comp
+#check @DiamondIntegral.Section3.NamedMeasuredRVHom.ext
+#print axioms DiamondIntegral.Section3.NamedMeasuredRVHom.ext
+#check @DiamondIntegral.Section3.NamedMeasuredRVObject.overRealCode_combined
+#print axioms DiamondIntegral.Section3.NamedMeasuredRVObject.overRealCode_combined
+#check @DiamondIntegral.Section3.NamedRVObject.degree_zero_finite
+#print axioms DiamondIntegral.Section3.NamedRVObject.degree_zero_finite
+#check @DiamondIntegral.Section3.NamedRVObject.degree_zero_res
+#print axioms DiamondIntegral.Section3.NamedRVObject.degree_zero_res
+#check @DiamondIntegral.Section3.namedRVClass_empty
+#print axioms DiamondIntegral.Section3.namedRVClass_empty
+#check @DiamondIntegral.Section3.namedRVClass_iso
+#print axioms DiamondIntegral.Section3.namedRVClass_iso
+#check @DiamondIntegral.Section3.namedRVClass_scissor
+#print axioms DiamondIntegral.Section3.namedRVClass_scissor
+#check @DiamondIntegral.Section3.gammaGroundTensorBox_child_image_pullback
+#print axioms DiamondIntegral.Section3.gammaGroundTensorBox_child_image_pullback
+#check @DiamondIntegral.Section3.gammaGroundTensorBoxInParent_image
+#print axioms DiamondIntegral.Section3.gammaGroundTensorBoxInParent_image
+#check @DiamondIntegral.Section3.gammaGroundTensorBox_children_disjoint
+#print axioms DiamondIntegral.Section3.gammaGroundTensorBox_children_disjoint
+#check @DiamondIntegral.Section3.gammaGroundTensorChildren_disjoint
+#print axioms DiamondIntegral.Section3.gammaGroundTensorChildren_disjoint
+#check @DiamondIntegral.Section3.gammaGroundTensorParentRemainder_value_split
+#print axioms DiamondIntegral.Section3.gammaGroundTensorParentRemainder_value_split
+#check @DiamondIntegral.Section3.gammaGroundTensorParentRemainder_source_cover
+#print axioms DiamondIntegral.Section3.gammaGroundTensorParentRemainder_source_cover
+#check @DiamondIntegral.Section3.gammaGroundTensorParentRemainder_gamma_cover
+#print axioms DiamondIntegral.Section3.gammaGroundTensorParentRemainder_gamma_cover
+#check @DiamondIntegral.Section3.positive_sum_fibres
+#print axioms DiamondIntegral.Section3.positive_sum_fibres
+#check @DiamondIntegral.Section3.gammaGroundTensorBoxInParent_value
+#print axioms DiamondIntegral.Section3.gammaGroundTensorBoxInParent_value
+#check @DiamondIntegral.Section3.gammaGroundTensorParents_residual_value_split
+#print axioms DiamondIntegral.Section3.gammaGroundTensorParents_residual_value_split
+#check @DiamondIntegral.Section3.nativeGammaColumn_definable
+#print axioms DiamondIntegral.Section3.nativeGammaColumn_definable
+#check @DiamondIntegral.Section3.nativeGammaBoundaryCarrier_mem
+#print axioms DiamondIntegral.Section3.nativeGammaBoundaryCarrier_mem
+#check @DiamondIntegral.Section3.nativeGammaBoundaryCarrier_definable
+#print axioms DiamondIntegral.Section3.nativeGammaBoundaryCarrier_definable
+#check @DiamondIntegral.Section3.nativeGammaBoundaryRow_eq
+#print axioms DiamondIntegral.Section3.nativeGammaBoundaryRow_eq
+#check @DiamondIntegral.Section3.gammaGroundNativeProductTransition_square_match_cover
+#print axioms DiamondIntegral.Section3.gammaGroundNativeProductTransition_square_match_cover
+#check @DiamondIntegral.Section3.gammaGroundNativeProductTransition_joint_injective
+#print axioms DiamondIntegral.Section3.gammaGroundNativeProductTransition_joint_injective
+#check @DiamondIntegral.Section3.gammaGroundNativeProductTransition_graph
+#print axioms DiamondIntegral.Section3.gammaGroundNativeProductTransition_graph
+#check @DiamondIntegral.Section3.gammaGroundNativeProductTransition_lower_arity_cover
+#print axioms DiamondIntegral.Section3.gammaGroundNativeProductTransition_lower_arity_cover
+#check @DiamondIntegral.Section3.gammaGroundTensorGridBox_disjoint
+#print axioms DiamondIntegral.Section3.gammaGroundTensorGridBox_disjoint
+#check @DiamondIntegral.Section3.gammaGroundTensorGridBox_cover
+#print axioms DiamondIntegral.Section3.gammaGroundTensorGridBox_cover
+#check @DiamondIntegral.Section3.gammaGroundTensorGridBox_value_sum
+#print axioms DiamondIntegral.Section3.gammaGroundTensorGridBox_value_sum
+#check @DiamondIntegral.Section3.gammaGroundTensorGridBox_factors_subset
+#print axioms DiamondIntegral.Section3.gammaGroundTensorGridBox_factors_subset
+#check @DiamondIntegral.Section3.gammaGroundTensorGridBox_disjoint_of_unselected
+#print axioms DiamondIntegral.Section3.gammaGroundTensorGridBox_disjoint_of_unselected
+#check @DiamondIntegral.Section3.GammaGroundTensorBox.value_eq_zero_of_empty_residue
+#print axioms DiamondIntegral.Section3.GammaGroundTensorBox.value_eq_zero_of_empty_residue
+#check @DiamondIntegral.Section3.GammaGroundTensorBox.value_eq_zero_of_empty_gamma
+#print axioms DiamondIntegral.Section3.GammaGroundTensorBox.value_eq_zero_of_empty_gamma
+#check @DiamondIntegral.Section3.GammaGroundTensorBox.value_eq_zero_of_not_nonempty
+#print axioms DiamondIntegral.Section3.GammaGroundTensorBox.value_eq_zero_of_not_nonempty
+#check @DiamondIntegral.Section3.gammaGroundTensorGridBox_nonempty_value_sum
+#print axioms DiamondIntegral.Section3.gammaGroundTensorGridBox_nonempty_value_sum
+#check @DiamondIntegral.Section3.GammaGroundNativeTensorChart.value_image
+#print axioms DiamondIntegral.Section3.GammaGroundNativeTensorChart.value_image
+#check @DiamondIntegral.Section3.GammaGroundNativeTensorChart.ofPiece_value
+#print axioms DiamondIntegral.Section3.GammaGroundNativeTensorChart.ofPiece_value
+#check @DiamondIntegral.Section3.gammaGroundTensorGrid_selected_value_split
+#print axioms DiamondIntegral.Section3.gammaGroundTensorGrid_selected_value_split
+#check @DiamondIntegral.Section3.gammaGroundTensorGrid_selected_source_cover
+#print axioms DiamondIntegral.Section3.gammaGroundTensorGrid_selected_source_cover
+#check @DiamondIntegral.Section3.gammaGroundTensorGrid_uncovered_disjoint
+#print axioms DiamondIntegral.Section3.gammaGroundTensorGrid_uncovered_disjoint
+#check @DiamondIntegral.Section3.gammaGroundTensorGrid_uncovered_gamma_cover
+#print axioms DiamondIntegral.Section3.gammaGroundTensorGrid_uncovered_gamma_cover
+#check @DiamondIntegral.Section3.gammaGroundNativeTensor_finite_hyperplane_normal_form
+#print axioms DiamondIntegral.Section3.gammaGroundNativeTensor_finite_hyperplane_normal_form
+#check @DiamondIntegral.Section3.GammaGroundMap.image_subset_target
+#print axioms DiamondIntegral.Section3.GammaGroundMap.image_subset_target
+#check @DiamondIntegral.Section3.GammaGroundMap.corestrict_injective
+#print axioms DiamondIntegral.Section3.GammaGroundMap.corestrict_injective
+#check @DiamondIntegral.Section3.GammaGroundTensorBox.toNativeChart_value
+#print axioms DiamondIntegral.Section3.GammaGroundTensorBox.toNativeChart_value
+#check @DiamondIntegral.Section3.GammaGroundTensorBox.inclusion_injective
+#print axioms DiamondIntegral.Section3.GammaGroundTensorBox.inclusion_injective
+#check @DiamondIntegral.Section3.gammaGroundNativeTensorChart_restrict_image_class
+#print axioms DiamondIntegral.Section3.gammaGroundNativeTensorChart_restrict_image_class
+#check @DiamondIntegral.Section3.gammaGroundNativeTensorCharts_RV_image_partition
+#print axioms DiamondIntegral.Section3.gammaGroundNativeTensorCharts_RV_image_partition
+#check @DiamondIntegral.Section3.gammaGroundNativeTensorListInjection_injective
+#print axioms DiamondIntegral.Section3.gammaGroundNativeTensorListInjection_injective
+#check @DiamondIntegral.Section3.gammaGroundNativeTensorListInjection_image_subset
+#print axioms DiamondIntegral.Section3.gammaGroundNativeTensorListInjection_image_subset
+#check @DiamondIntegral.Section3.gammaGroundNativeTensorListInjection_disjoint
+#print axioms DiamondIntegral.Section3.gammaGroundNativeTensorListInjection_disjoint
+#check @DiamondIntegral.Section3.gammaGroundNativeTensorListInjection_cover
+#print axioms DiamondIntegral.Section3.gammaGroundNativeTensorListInjection_cover
+#check @DiamondIntegral.Section3.gammaGroundNativeTensorListObject_image
+#print axioms DiamondIntegral.Section3.gammaGroundNativeTensorListObject_image
+#check @DiamondIntegral.Section3.gammaGroundNativeTensorListObject_iso_of_equal_images
+#print axioms DiamondIntegral.Section3.gammaGroundNativeTensorListObject_iso_of_equal_images
+#check @DiamondIntegral.Section3.gammaGroundTensorPiece_homogeneous_native_charts
+#print axioms DiamondIntegral.Section3.gammaGroundTensorPiece_homogeneous_native_charts
+#check @DiamondIntegral.Section3.gammaGroundNativeTensorListInjectionOfEq_injective
+#print axioms DiamondIntegral.Section3.gammaGroundNativeTensorListInjectionOfEq_injective
+#check @DiamondIntegral.Section3.gammaGroundNativeTensorListInjectionOfEq_image
+#print axioms DiamondIntegral.Section3.gammaGroundNativeTensorListInjectionOfEq_image
+#check @DiamondIntegral.Section3.gammaGroundNativeTensorListPrefix_get
+#print axioms DiamondIntegral.Section3.gammaGroundNativeTensorListPrefix_get
+#check @DiamondIntegral.Section3.gammaGroundNativeTensorListSuffix_get
+#print axioms DiamondIntegral.Section3.gammaGroundNativeTensorListSuffix_get
+#check @DiamondIntegral.Section3.gammaGroundNativeTensorOfFn_get
+#print axioms DiamondIntegral.Section3.gammaGroundNativeTensorOfFn_get
+#check @DiamondIntegral.Section3.GammaGroundRESUnitChart.disjoint_full_preimage_partition
+#print axioms DiamondIntegral.Section3.GammaGroundRESUnitChart.disjoint_full_preimage_partition
+#check @DiamondIntegral.Section3.GammaGroundRESUnitChart.finite_disjoint_full_preimage_partition
+#print axioms DiamondIntegral.Section3.GammaGroundRESUnitChart.finite_disjoint_full_preimage_partition
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaObject_full_piece_weights
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaObject_full_piece_weights
+#check @DiamondIntegral.Section3.gammaGroundMeasuredTensor_pure_normalized_pieces
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredTensor_pure_normalized_pieces
+#check @DiamondIntegral.Section3.gammaGroundMeasuredTensor_normalized_piece_normal_form
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredTensor_normalized_piece_normal_form
+#check @DiamondIntegral.Section3.orderBoundary_eq_minimal_controller
+#print axioms DiamondIntegral.Section3.orderBoundary_eq_minimal_controller
+#check @DiamondIntegral.Section3.orderBoundary_finite_of_controller
+#print axioms DiamondIntegral.Section3.orderBoundary_finite_of_controller
+#check @DiamondIntegral.Section3.orderBoundary_controls
+#print axioms DiamondIntegral.Section3.orderBoundary_controls
+#check @DiamondIntegral.Section3.literalPatternCell_own
+#print axioms DiamondIntegral.Section3.literalPatternCell_own
+#check @DiamondIntegral.Section3.literalPatternCell_unique
+#print axioms DiamondIntegral.Section3.literalPatternCell_unique
+#check @DiamondIntegral.Section3.literalPatternCell_iff_of_values
+#print axioms DiamondIntegral.Section3.literalPatternCell_iff_of_values
+#check @DiamondIntegral.Section3.literalPatternCharacters_finite
+#print axioms DiamondIntegral.Section3.literalPatternCharacters_finite
+#check @DiamondIntegral.Section3.literalPatternCharacters_value_finite
+#print axioms DiamondIntegral.Section3.literalPatternCharacters_value_finite
+#check @DiamondIntegral.Section3.literal_comparison_depends_on_pattern_characters
+#print axioms DiamondIntegral.Section3.literal_comparison_depends_on_pattern_characters
+#check @DiamondIntegral.Section3.positivePresentation_surjective_of_generators
+#print axioms DiamondIntegral.Section3.positivePresentation_surjective_of_generators
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredTensorDescend_image
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredTensorDescend_image
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredTensorDescend_unique
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredTensorDescend_unique
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredTensor_descends_iff
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredTensor_descends_iff
+#check @DiamondIntegral.Section3.gammaGroundMeasuredTensorDescend_image
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredTensorDescend_image
+#check @DiamondIntegral.Section3.gammaGroundMeasuredTensorDescend_unique
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredTensorDescend_unique
+#check @DiamondIntegral.Section3.gammaGroundMeasuredTensor_descends_iff
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredTensor_descends_iff
+#check @DiamondIntegral.Section3.positivePresentation_additive_normal_form
+#print axioms DiamondIntegral.Section3.positivePresentation_additive_normal_form
+#check @DiamondIntegral.Section3.positivePresentation_additive_induction
+#print axioms DiamondIntegral.Section3.positivePresentation_additive_induction
+#check @DiamondIntegral.Section3.positivePresentation_additiveHom_ext
+#print axioms DiamondIntegral.Section3.positivePresentation_additiveHom_ext
+#check @DiamondIntegral.Section3.positivePresentation_additive_surjective
+#print axioms DiamondIntegral.Section3.positivePresentation_additive_surjective
+#check @DiamondIntegral.Section3.positivePresentationHom_ext
+#print axioms DiamondIntegral.Section3.positivePresentationHom_ext
+#check @DiamondIntegral.Section3.positiveAdditivePresentationHom_ext
+#print axioms DiamondIntegral.Section3.positiveAdditivePresentationHom_ext
+#check @DiamondIntegral.Section3.PresentedPredicateDefinable.and
+#print axioms DiamondIntegral.Section3.PresentedPredicateDefinable.and
+#check @DiamondIntegral.Section3.PresentedPredicateDefinable.or
+#print axioms DiamondIntegral.Section3.PresentedPredicateDefinable.or
+#check @DiamondIntegral.Section3.PresentedPredicateDefinable.not
+#print axioms DiamondIntegral.Section3.PresentedPredicateDefinable.not
+#check @DiamondIntegral.Section3.PresentedPredicateDefinable.congr
+#print axioms DiamondIntegral.Section3.PresentedPredicateDefinable.congr
+#check @DiamondIntegral.Section3.PresentedPredicateDefinable.bool_pattern
+#print axioms DiamondIntegral.Section3.PresentedPredicateDefinable.bool_pattern
+#check @DiamondIntegral.Section3.PresentedPredicateDefinable.forall_finite
+#print axioms DiamondIntegral.Section3.PresentedPredicateDefinable.forall_finite
+#check @DiamondIntegral.Section3.finProductSumDistrib_left
+#print axioms DiamondIntegral.Section3.finProductSumDistrib_left
+#check @DiamondIntegral.Section3.finProductSumDistrib_right
+#print axioms DiamondIntegral.Section3.finProductSumDistrib_right
+#check @DiamondIntegral.Section3.integralFromKernel_characterization
+#print axioms DiamondIntegral.Section3.integralFromKernel_characterization
+#check @DiamondIntegral.Section3.integralFromKernel_unique
+#print axioms DiamondIntegral.Section3.integralFromKernel_unique
+#check @DiamondIntegral.Section3.gammaGroundRVUnitTuple_point_values_definable
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnitTuple_point_values_definable
+#check @DiamondIntegral.Section3.gammaGroundRES_coefficient_constant_value_neighborhood
+#print axioms DiamondIntegral.Section3.gammaGroundRES_coefficient_constant_value_neighborhood
+#check @DiamondIntegral.Section3.RVObject.coprod_res
+#print axioms DiamondIntegral.Section3.RVObject.coprod_res
+#check @DiamondIntegral.Section3.resClass_iso
+#print axioms DiamondIntegral.Section3.resClass_iso
+#check @DiamondIntegral.Section3.resClass_empty
+#print axioms DiamondIntegral.Section3.resClass_empty
+#check @DiamondIntegral.Section3.resClass_scissor
+#print axioms DiamondIntegral.Section3.resClass_scissor
+#check @DiamondIntegral.Section3.resClass_coprod
+#print axioms DiamondIntegral.Section3.resClass_coprod
+#check @DiamondIntegral.Section3.resClass_surjective
+#print axioms DiamondIntegral.Section3.resClass_surjective
+#check @DiamondIntegral.Section3.resClass_eq_iff_iso
+#print axioms DiamondIntegral.Section3.resClass_eq_iff_iso
+#check @DiamondIntegral.Section3.resToRVKPlus_injective
+#print axioms DiamondIntegral.Section3.resToRVKPlus_injective
+#check @DiamondIntegral.Section3.gammaGroundRESUnit_gamma_weight_finite_named
+#print axioms DiamondIntegral.Section3.gammaGroundRESUnit_gamma_weight_finite_named
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRES_combined_weight_finite_named
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRES_combined_weight_finite_named
+#check @DiamondIntegral.Section3.resRepresentative_class
+#print axioms DiamondIntegral.Section3.resRepresentative_class
+#check @DiamondIntegral.Section3.resToRVKPlus_mul
+#print axioms DiamondIntegral.Section3.resToRVKPlus_mul
+#check @DiamondIntegral.Section3.resClassMul_class
+#print axioms DiamondIntegral.Section3.resClassMul_class
+#check @DiamondIntegral.Section3.resDirectSumToRV_injective
+#print axioms DiamondIntegral.Section3.resDirectSumToRV_injective
+#check @DiamondIntegral.Section3.resDirectSumToRV_one
+#print axioms DiamondIntegral.Section3.resDirectSumToRV_one
+#check @DiamondIntegral.Section3.resDirectSumToRV_mul
+#print axioms DiamondIntegral.Section3.resDirectSumToRV_mul
+#check @DiamondIntegral.Section3.resDirectSumClass_product
+#print axioms DiamondIntegral.Section3.resDirectSumClass_product
+#check @DiamondIntegral.Section3.resGradedInclusion_injective
+#print axioms DiamondIntegral.Section3.resGradedInclusion_injective
+#check @DiamondIntegral.Section3.resProperty_restrict
+#print axioms DiamondIntegral.Section3.resProperty_restrict
+#check @DiamondIntegral.Section3.resToRVKPlus_class
+#print axioms DiamondIntegral.Section3.resToRVKPlus_class
+#check @DiamondIntegral.Section3.measuredResToRVKPlus_class
+#print axioms DiamondIntegral.Section3.measuredResToRVKPlus_class
+#check @DiamondIntegral.Section3.rvNonzeroTupleCode_values
+#print axioms DiamondIntegral.Section3.rvNonzeroTupleCode_values
+#check @DiamondIntegral.Section3.gammaGroundRES_nonzero_code_finite
+#print axioms DiamondIntegral.Section3.gammaGroundRES_nonzero_code_finite
+#check @DiamondIntegral.Section3.GammaGroundRESUnitChart.local_monomial_congruence
+#print axioms DiamondIntegral.Section3.GammaGroundRESUnitChart.local_monomial_congruence
+#check @DiamondIntegral.Section3.rvDNFPatternCell_angularCell
+#print axioms DiamondIntegral.Section3.rvDNFPatternCell_angularCell
+#check @DiamondIntegral.Section3.RVAngularCell.coordinate_full_fibre
+#print axioms DiamondIntegral.Section3.RVAngularCell.coordinate_full_fibre
+#check @DiamondIntegral.Section3.rvAngularCoordinateCode_definable
+#print axioms DiamondIntegral.Section3.rvAngularCoordinateCode_definable
+#check @DiamondIntegral.Section3.rvAngularCoordinateCode_values
+#print axioms DiamondIntegral.Section3.rvAngularCoordinateCode_values
+#check @DiamondIntegral.Section3.rvAngularCoordinateMap_injective
+#print axioms DiamondIntegral.Section3.rvAngularCoordinateMap_injective
+#check @DiamondIntegral.Section3.rvAngularCoordinateMap_image
+#print axioms DiamondIntegral.Section3.rvAngularCoordinateMap_image
+#check @DiamondIntegral.Section3.FullGammaFunction.freezeLeft
+#print axioms DiamondIntegral.Section3.FullGammaFunction.freezeLeft
+#check @DiamondIntegral.Section3.RVAngularCell.gammaWeight_definable
+#print axioms DiamondIntegral.Section3.RVAngularCell.gammaWeight_definable
+#check @DiamondIntegral.Section3.RVAngularCell.gammaWeight_coordinate
+#print axioms DiamondIntegral.Section3.RVAngularCell.gammaWeight_coordinate
+#check @DiamondIntegral.Section3.RVAngularCell.inverseResidueCoefficient_value_definable
+#print axioms DiamondIntegral.Section3.RVAngularCell.inverseResidueCoefficient_value_definable
+#check @DiamondIntegral.Section3.gammaGroundRVAngularCell_generic_projection_arity_le
+#print axioms DiamondIntegral.Section3.gammaGroundRVAngularCell_generic_projection_arity_le
+#check @DiamondIntegral.Section3.rvAngularGraph_free_block_unimodular
+#print axioms DiamondIntegral.Section3.rvAngularGraph_free_block_unimodular
+#check @DiamondIntegral.Section3.RVAngularCell.input_value_fibre_solve
+#print axioms DiamondIntegral.Section3.RVAngularCell.input_value_fibre_solve
+#check @DiamondIntegral.Section3.RVAngularCell.output_on_value_fibre
+#print axioms DiamondIntegral.Section3.RVAngularCell.output_on_value_fibre
+#check @DiamondIntegral.Section3.RVAngularCell.coordinateEquiv_symm_monomial
+#print axioms DiamondIntegral.Section3.RVAngularCell.coordinateEquiv_symm_monomial
+#check @DiamondIntegral.Section3.gammaGroundRVAngularCell_free_arity_le_label
+#print axioms DiamondIntegral.Section3.gammaGroundRVAngularCell_free_arity_le_label
+#check @DiamondIntegral.Section3.gammaGroundRVAngularCell_generic_arity_eq_label
+#print axioms DiamondIntegral.Section3.gammaGroundRVAngularCell_generic_arity_eq_label
+#check @DiamondIntegral.Section3.RVAngularCell.coordinate_output_monomial
+#print axioms DiamondIntegral.Section3.RVAngularCell.coordinate_output_monomial
+#check @DiamondIntegral.Section3.rvAngularGraph_output_matrix_unimodular
+#print axioms DiamondIntegral.Section3.rvAngularGraph_output_matrix_unimodular
+#check @DiamondIntegral.Section3.definableRV_finite_angular_partition
+#print axioms DiamondIntegral.Section3.definableRV_finite_angular_partition
+#check @DiamondIntegral.Section3.rvAngularCell_product_bijections
+#print axioms DiamondIntegral.Section3.rvAngularCell_product_bijections
+#check @DiamondIntegral.Section3.rvAngularCell_finite_products
+#print axioms DiamondIntegral.Section3.rvAngularCell_finite_products
+#check @DiamondIntegral.Section3.RVAngularCell.coordinateImage_fibre_invariant
+#print axioms DiamondIntegral.Section3.RVAngularCell.coordinateImage_fibre_invariant
+#check @DiamondIntegral.Section3.RVAngularCell.full_value_preimage
+#print axioms DiamondIntegral.Section3.RVAngularCell.full_value_preimage
+#check @DiamondIntegral.Section3.RVAngularCell.residue_tuple_values_finite
+#print axioms DiamondIntegral.Section3.RVAngularCell.residue_tuple_values_finite
+#check @DiamondIntegral.Section3.rvAngularProduct_residue_subsingleton
+#print axioms DiamondIntegral.Section3.rvAngularProduct_residue_subsingleton
+#check @DiamondIntegral.Section3.coordinateValueJoin_eq
+#print axioms DiamondIntegral.Section3.coordinateValueJoin_eq
+#check @DiamondIntegral.Section3.RVAngularCell.coordinate_value_naturality
+#print axioms DiamondIntegral.Section3.RVAngularCell.coordinate_value_naturality
+#check @DiamondIntegral.Section3.RVAngularCell.valueReconstruction_coordinate
+#print axioms DiamondIntegral.Section3.RVAngularCell.valueReconstruction_coordinate
+#check @DiamondIntegral.Section3.RVAngularCell.valueReconstruction_definable
+#print axioms DiamondIntegral.Section3.RVAngularCell.valueReconstruction_definable
+#check @DiamondIntegral.Section3.RVObject.degree_zero_finite
+#print axioms DiamondIntegral.Section3.RVObject.degree_zero_finite
+#check @DiamondIntegral.Section3.RVObject.degree_zero_res
+#print axioms DiamondIntegral.Section3.RVObject.degree_zero_res
+#check @DiamondIntegral.Section3.RVObject.correspondence_finite
+#print axioms DiamondIntegral.Section3.RVObject.correspondence_finite
+#check @DiamondIntegral.Section3.clauseActiveCharacters_finite
+#print axioms DiamondIntegral.Section3.clauseActiveCharacters_finite
+#check @DiamondIntegral.Section3.clauseActiveCharacters_value_finite
+#print axioms DiamondIntegral.Section3.clauseActiveCharacters_value_finite
+#check @DiamondIntegral.Section3.rvClauseValueCell_angular_invariant
+#print axioms DiamondIntegral.Section3.rvClauseValueCell_angular_invariant
+#check @DiamondIntegral.Section3.rvClauseValueCell_residue_coordinates
+#print axioms DiamondIntegral.Section3.rvClauseValueCell_residue_coordinates
+#check @DiamondIntegral.Section3.rvClauseValueCell_monomial_free_invariant
+#print axioms DiamondIntegral.Section3.rvClauseValueCell_monomial_free_invariant
+#check @DiamondIntegral.Section3.rvClauseValueCell_chart_invariant
+#print axioms DiamondIntegral.Section3.rvClauseValueCell_chart_invariant
+#check @DiamondIntegral.Section3.monomialGammaExpression_semantics
+#print axioms DiamondIntegral.Section3.monomialGammaExpression_semantics
+#check @DiamondIntegral.Section3.monomialGammaExpression_definable
+#print axioms DiamondIntegral.Section3.monomialGammaExpression_definable
+#check @DiamondIntegral.Section3.monomialGammaResidue_semantics
+#print axioms DiamondIntegral.Section3.monomialGammaResidue_semantics
+#check @DiamondIntegral.Section3.monomialGammaResidue_definable
+#print axioms DiamondIntegral.Section3.monomialGammaResidue_definable
+#check @DiamondIntegral.Section3.monomialGammaEqualValue_semantics
+#print axioms DiamondIntegral.Section3.monomialGammaEqualValue_semantics
+#check @DiamondIntegral.Section3.monomialGammaEqualValue_definable
+#print axioms DiamondIntegral.Section3.monomialGammaEqualValue_definable
+#check @DiamondIntegral.Section3.rvMonomialCoefficient_raw_definable
+#print axioms DiamondIntegral.Section3.rvMonomialCoefficient_raw_definable
+#check @DiamondIntegral.Section3.rvMonomialCoefficient_definable
+#print axioms DiamondIntegral.Section3.rvMonomialCoefficient_definable
+#check @DiamondIntegral.Section3.rvMonomialCoefficient_value_original_ground
+#print axioms DiamondIntegral.Section3.rvMonomialCoefficient_value_original_ground
+#check @DiamondIntegral.Section3.gammaGroundRVUnitSkewMap_value
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnitSkewMap_value
+#check @DiamondIntegral.Section3.gammaGroundRVUnitSkewMap_bijective
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnitSkewMap_bijective
+#check @DiamondIntegral.Section3.rvClass_coprod
+#print axioms DiamondIntegral.Section3.rvClass_coprod
+#check @DiamondIntegral.Section3.rvClass_surjective
+#print axioms DiamondIntegral.Section3.rvClass_surjective
+#check @DiamondIntegral.Section3.RVObject.correspondence_mem
+#print axioms DiamondIntegral.Section3.RVObject.correspondence_mem
+#check @DiamondIntegral.Section3.RVObject.correspondence_subset
+#print axioms DiamondIntegral.Section3.RVObject.correspondence_subset
+#check @DiamondIntegral.Section3.RVObject.correspondence_symm
+#print axioms DiamondIntegral.Section3.RVObject.correspondence_symm
+#check @DiamondIntegral.Section3.RVObject.correspondence_fibre_finite
+#print axioms DiamondIntegral.Section3.RVObject.correspondence_fibre_finite
+#check @DiamondIntegral.Section3.RVObject.correspondence_reverse_fibre_finite
+#print axioms DiamondIntegral.Section3.RVObject.correspondence_reverse_fibre_finite
+#check @DiamondIntegral.Section3.RVObject.correspondenceFinitary_nonempty
+#print axioms DiamondIntegral.Section3.RVObject.correspondenceFinitary_nonempty
+#check @DiamondIntegral.Section3.RVObject.correspondenceFinitary_finite
+#print axioms DiamondIntegral.Section3.RVObject.correspondenceFinitary_finite
+#check @DiamondIntegral.Section3.RVObject.correspondenceFinitary_subset
+#print axioms DiamondIntegral.Section3.RVObject.correspondenceFinitary_subset
+#check @DiamondIntegral.Section3.RVObject.correspondenceJacobian_at
+#print axioms DiamondIntegral.Section3.RVObject.correspondenceJacobian_at
+#check @DiamondIntegral.Section3.rvDNFRelabel_comparison
+#print axioms DiamondIntegral.Section3.rvDNFRelabel_comparison
+#check @DiamondIntegral.Section3.rvDNFRelabel_certified
+#print axioms DiamondIntegral.Section3.rvDNFRelabel_certified
+#check @DiamondIntegral.Section3.rvDNFValueCells_cover
+#print axioms DiamondIntegral.Section3.rvDNFValueCells_cover
+#check @DiamondIntegral.Section3.rvDNFValueCells_finite
+#print axioms DiamondIntegral.Section3.rvDNFValueCells_finite
+#check @DiamondIntegral.Section3.rvDNF_clause_certificate
+#print axioms DiamondIntegral.Section3.rvDNF_clause_certificate
+#check @DiamondIntegral.Section3.sourceVF_allRV_independent
+#print axioms DiamondIntegral.Section3.sourceVF_allRV_independent
+#check @DiamondIntegral.Section3.definableRV_guarded_DNF
+#print axioms DiamondIntegral.Section3.definableRV_guarded_DNF
+#check @DiamondIntegral.Section3.rv_relation_eq_sumGraph
+#print axioms DiamondIntegral.Section3.rv_relation_eq_sumGraph
+#check @DiamondIntegral.Section3.rvMapGraph_sumGraph
+#print axioms DiamondIntegral.Section3.rvMapGraph_sumGraph
+#check @DiamondIntegral.Section3.rvMapGraph_definable_iff
+#print axioms DiamondIntegral.Section3.rvMapGraph_definable_iff
+#check @DiamondIntegral.Section3.cleanRV_nonzero
+#print axioms DiamondIntegral.Section3.cleanRV_nonzero
+#check @DiamondIntegral.Section3.cleanRVMap_finite
+#print axioms DiamondIntegral.Section3.cleanRVMap_finite
+#check @DiamondIntegral.Section3.rvFiniteMap_iff
+#print axioms DiamondIntegral.Section3.rvFiniteMap_iff
+#check @DiamondIntegral.Section3.rvDimension_eq_companion
+#print axioms DiamondIntegral.Section3.rvDimension_eq_companion
+#check @DiamondIntegral.Section3.rvFamilyDesc_graph_definable
+#print axioms DiamondIntegral.Section3.rvFamilyDesc_graph_definable
+#check @DiamondIntegral.Section3.rvFamilyDesc_encode
+#print axioms DiamondIntegral.Section3.rvFamilyDesc_encode
+#check @DiamondIntegral.Section3.rvFamilyDesc_restrict
+#print axioms DiamondIntegral.Section3.rvFamilyDesc_restrict
+#check @DiamondIntegral.Section3.FamilyDefinable.rvRealization
+#print axioms DiamondIntegral.Section3.FamilyDefinable.rvRealization
+#check @DiamondIntegral.Section3.rvFamilyMap_encode
+#print axioms DiamondIntegral.Section3.rvFamilyMap_encode
+#check @DiamondIntegral.Section3.FiniteFamily.rvTarget_finite
+#print axioms DiamondIntegral.Section3.FiniteFamily.rvTarget_finite
+#check @DiamondIntegral.Section3.rvFamilyProductBranch_pair
+#print axioms DiamondIntegral.Section3.rvFamilyProductBranch_pair
+#check @DiamondIntegral.Section3.rvFamilyProductMap_bijective
+#print axioms DiamondIntegral.Section3.rvFamilyProductMap_bijective
+#check @DiamondIntegral.Section3.familyRealizationPullEquiv_apply_iff
+#print axioms DiamondIntegral.Section3.familyRealizationPullEquiv_apply_iff
+#check @DiamondIntegral.Section3.familyRealizationPullEquiv_definable
+#print axioms DiamondIntegral.Section3.familyRealizationPullEquiv_definable
+#check @DiamondIntegral.Section3.FamilyBijection.ofRVRealization_encode
+#print axioms DiamondIntegral.Section3.FamilyBijection.ofRVRealization_encode
+#check @DiamondIntegral.Section3.rvFamilyTag_injective
+#print axioms DiamondIntegral.Section3.rvFamilyTag_injective
+#check @DiamondIntegral.Section3.FiniteFamily.rvEncode_bijective
+#print axioms DiamondIntegral.Section3.FiniteFamily.rvEncode_bijective
+#check @DiamondIntegral.Section3.rvFamilyTuple_injective
+#print axioms DiamondIntegral.Section3.rvFamilyTuple_injective
+#check @DiamondIntegral.Section3.rvFamilyRealization_mono
+#print axioms DiamondIntegral.Section3.rvFamilyRealization_mono
+#check @DiamondIntegral.Section3.rvFamilyRealization_sdiff
+#print axioms DiamondIntegral.Section3.rvFamilyRealization_sdiff
+#check @DiamondIntegral.Section3.FiniteFamily.rvObject_res
+#print axioms DiamondIntegral.Section3.FiniteFamily.rvObject_res
+#check @DiamondIntegral.Section3.rvFibreDimension_eq_bot_iff
+#print axioms DiamondIntegral.Section3.rvFibreDimension_eq_bot_iff
+#check @DiamondIntegral.Section3.rv_fibre_dimension_le
+#print axioms DiamondIntegral.Section3.rv_fibre_dimension_le
+#check @DiamondIntegral.Section3.rv_fibre_dimension_attained
+#print axioms DiamondIntegral.Section3.rv_fibre_dimension_attained
+#check @DiamondIntegral.Section3.rv_fibre_dimension_le_zero_iff
+#print axioms DiamondIntegral.Section3.rv_fibre_dimension_le_zero_iff
+#check @DiamondIntegral.Section3.lemma_3_3
+#print axioms DiamondIntegral.Section3.lemma_3_3
+#check @DiamondIntegral.Section3.rvBoundedInclude_of
+#print axioms DiamondIntegral.Section3.rvBoundedInclude_of
+#check @DiamondIntegral.Section3.rvBoundedInclude_class
+#print axioms DiamondIntegral.Section3.rvBoundedInclude_class
+#check @DiamondIntegral.Section3.rvBoundedTransition_of
+#print axioms DiamondIntegral.Section3.rvBoundedTransition_of
+#check @DiamondIntegral.Section3.rvBoundedInclude_transition
+#print axioms DiamondIntegral.Section3.rvBoundedInclude_transition
+#check @DiamondIntegral.Section3.rvBoundedTransition_refl
+#print axioms DiamondIntegral.Section3.rvBoundedTransition_refl
+#check @DiamondIntegral.Section3.rvBoundedTransition_comp
+#print axioms DiamondIntegral.Section3.rvBoundedTransition_comp
+#check @DiamondIntegral.Section3.rvBoundedQuotientTransition_mk
+#print axioms DiamondIntegral.Section3.rvBoundedQuotientTransition_mk
+#check @DiamondIntegral.Section3.gammaGroundRVCoprodLeft_injective
+#print axioms DiamondIntegral.Section3.gammaGroundRVCoprodLeft_injective
+#check @DiamondIntegral.Section3.gammaGroundRVCoprodRight_injective
+#print axioms DiamondIntegral.Section3.gammaGroundRVCoprodRight_injective
+#check @DiamondIntegral.Section3.gammaGroundRVListInjection_zero
+#print axioms DiamondIntegral.Section3.gammaGroundRVListInjection_zero
+#check @DiamondIntegral.Section3.gammaGroundRVListInjection_succ
+#print axioms DiamondIntegral.Section3.gammaGroundRVListInjection_succ
+#check @DiamondIntegral.Section3.gammaGroundRVListInjection_injective
+#print axioms DiamondIntegral.Section3.gammaGroundRVListInjection_injective
+#check @DiamondIntegral.Section3.gammaGroundRVListInjection_cover
+#print axioms DiamondIntegral.Section3.gammaGroundRVListInjection_cover
+#check @DiamondIntegral.Section3.gammaGroundRVListInjection_disjoint
+#print axioms DiamondIntegral.Section3.gammaGroundRVListInjection_disjoint
+#check @DiamondIntegral.Section3.gammaGroundRVListSum_class
+#print axioms DiamondIntegral.Section3.gammaGroundRVListSum_class
+#check @DiamondIntegral.Section3.gammaRVFunction_range_definable
+#print axioms DiamondIntegral.Section3.gammaRVFunction_range_definable
+#check @DiamondIntegral.Section3.nativeGamma_named_of_full_scalar
+#print axioms DiamondIntegral.Section3.nativeGamma_named_of_full_scalar
+#check @DiamondIntegral.Section3.rv_finite_value_support_gamma_value_named
+#print axioms DiamondIntegral.Section3.rv_finite_value_support_gamma_value_named
+#check @DiamondIntegral.Section3.rv_finite_value_gamma_correspondence_finite
+#print axioms DiamondIntegral.Section3.rv_finite_value_gamma_correspondence_finite
+#check @DiamondIntegral.Section3.nativeGamma_named_of_finite_scalar
+#print axioms DiamondIntegral.Section3.nativeGamma_named_of_finite_scalar
+#check @DiamondIntegral.Section3.rv_finite_value_gamma_correspondence_named
+#print axioms DiamondIntegral.Section3.rv_finite_value_gamma_correspondence_named
+#check @DiamondIntegral.Section3.rv_mem_value_fibre_iff
+#print axioms DiamondIntegral.Section3.rv_mem_value_fibre_iff
+#check @DiamondIntegral.Section3.rv_value_slice_gamma_image_finite
+#print axioms DiamondIntegral.Section3.rv_value_slice_gamma_image_finite
+#check @DiamondIntegral.Section3.rv_finite_value_support_gamma_image_finite
+#print axioms DiamondIntegral.Section3.rv_finite_value_support_gamma_image_finite
+#check @DiamondIntegral.Section3.gammaRelation_definable
+#print axioms DiamondIntegral.Section3.gammaRelation_definable
+#check @DiamondIntegral.Section3.RVVolumeForm.toGammaVolumeForm_value
+#print axioms DiamondIntegral.Section3.RVVolumeForm.toGammaVolumeForm_value
+#check @DiamondIntegral.Section3.rvGammaRawGraph_code_iff
+#print axioms DiamondIntegral.Section3.rvGammaRawGraph_code_iff
+#check @DiamondIntegral.Section3.GammaVolumeForm.toRVVolumeForm_value
+#print axioms DiamondIntegral.Section3.GammaVolumeForm.toRVVolumeForm_value
+#check @DiamondIntegral.Section3.GammaVolumeForm.toRV_toGamma
+#print axioms DiamondIntegral.Section3.GammaVolumeForm.toRV_toGamma
+#check @DiamondIntegral.Section3.gammaRelation_ext
+#print axioms DiamondIntegral.Section3.gammaRelation_ext
+#check @DiamondIntegral.Section3.RVVolumeForm.ext
+#print axioms DiamondIntegral.Section3.RVVolumeForm.ext
+#check @DiamondIntegral.Section3.RVVolumeForm.toGamma_toRV
+#print axioms DiamondIntegral.Section3.RVVolumeForm.toGamma_toRV
+#check @DiamondIntegral.Section3.gammaGroundRVFullGammaPreimage_arity_le_of_finite_map
+#print axioms DiamondIntegral.Section3.gammaGroundRVFullGammaPreimage_arity_le_of_finite_map
+#check @DiamondIntegral.Section3.gammaGroundRVFullGammaPreimage_arity_le_of_unit_map
+#print axioms DiamondIntegral.Section3.gammaGroundRVFullGammaPreimage_arity_le_of_unit_map
+#check @DiamondIntegral.Section3.rvUnitGammaGraph_finite_value_functions
+#print axioms DiamondIntegral.Section3.rvUnitGammaGraph_finite_value_functions
+#check @DiamondIntegral.Section3.gammaGroundRVUnitGammaForm_value_partition
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnitGammaForm_value_partition
+#check @DiamondIntegral.Section3.gammaRVColumnValues_definable
+#print axioms DiamondIntegral.Section3.gammaRVColumnValues_definable
+#check @DiamondIntegral.Section3.rv_gamma_unary_finite_rectangles
+#print axioms DiamondIntegral.Section3.rv_gamma_unary_finite_rectangles
+#check @DiamondIntegral.Section3.gammaScalar_definable_iff_native
+#print axioms DiamondIntegral.Section3.gammaScalar_definable_iff_native
+#check @DiamondIntegral.Section3.rvUnitGammaGraph_point_definable
+#print axioms DiamondIntegral.Section3.rvUnitGammaGraph_point_definable
+#check @DiamondIntegral.Section3.rvUnitGammaGraph_point_value_function
+#print axioms DiamondIntegral.Section3.rvUnitGammaGraph_point_value_function
+#check @DiamondIntegral.Section3.rvGenericCoordinate_invariant
+#print axioms DiamondIntegral.Section3.rvGenericCoordinate_invariant
+#check @DiamondIntegral.Section3.rvGenericCoordinate_preserves_invariant
+#print axioms DiamondIntegral.Section3.rvGenericCoordinate_preserves_invariant
+#check @DiamondIntegral.Section3.rvGenericCoordinate_fold_preserves_invariant
+#print axioms DiamondIntegral.Section3.rvGenericCoordinate_fold_preserves_invariant
+#check @DiamondIntegral.Section3.rvGenericCoordinate_fold_invariant
+#print axioms DiamondIntegral.Section3.rvGenericCoordinate_fold_invariant
+#check @DiamondIntegral.Section3.rvGeneric_family_countable_coefficients
+#print axioms DiamondIntegral.Section3.rvGeneric_family_countable_coefficients
+#check @DiamondIntegral.Section3.exists_rvGeneric_family_test_point
+#print axioms DiamondIntegral.Section3.exists_rvGeneric_family_test_point
+#check @DiamondIntegral.Section3.gammaGroundRVUnitMap_generic_fibre_joint_arity_le
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnitMap_generic_fibre_joint_arity_le
+#check @DiamondIntegral.Section3.gammaGroundRVUnitMap_generic_fibre_joint_unimodular
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnitMap_generic_fibre_joint_unimodular
+#check @DiamondIntegral.Section3.gammaGroundRVUnitMap_generic_fibre_monomial
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnitMap_generic_fibre_monomial
+#check @DiamondIntegral.Section3.gammaGroundRVUnitMap_generic_fibre_unimodular
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnitMap_generic_fibre_unimodular
+#check @DiamondIntegral.Section3.rvUnitTuples_same_of_values_eq
+#print axioms DiamondIntegral.Section3.rvUnitTuples_same_of_values_eq
+#check @DiamondIntegral.Section3.rvFullFibreGeneric_partition
+#print axioms DiamondIntegral.Section3.rvFullFibreGeneric_partition
+#check @DiamondIntegral.Section3.rvCoordinateInvariant_full_fibre
+#print axioms DiamondIntegral.Section3.rvCoordinateInvariant_full_fibre
+#check @DiamondIntegral.Section3.rvFullFibreGeneric_invariant
+#print axioms DiamondIntegral.Section3.rvFullFibreGeneric_invariant
+#check @DiamondIntegral.Section3.rvFullFibreGeneric_definableOverBase
+#print axioms DiamondIntegral.Section3.rvFullFibreGeneric_definableOverBase
+#check @DiamondIntegral.Section3.gammaGroundRVAngular_generic_graph_block
+#print axioms DiamondIntegral.Section3.gammaGroundRVAngular_generic_graph_block
+#check @DiamondIntegral.Section3.rvGeneric_family_extra_coefficients
+#print axioms DiamondIntegral.Section3.rvGeneric_family_extra_coefficients
+#check @DiamondIntegral.Section3.gammaGroundRVGeneric_original_coefficients
+#print axioms DiamondIntegral.Section3.gammaGroundRVGeneric_original_coefficients
+#check @DiamondIntegral.Section3.rvGenericCoordinate_fold_at_residue_generic
+#print axioms DiamondIntegral.Section3.rvGenericCoordinate_fold_at_residue_generic
+#check @DiamondIntegral.Section3.gammaGroundRVUnitResidueMap_generic_fibre_definable
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnitResidueMap_generic_fibre_definable
+#check @DiamondIntegral.Section3.rvGenericCoordinate_at_residue_generic
+#print axioms DiamondIntegral.Section3.rvGenericCoordinate_at_residue_generic
+#check @DiamondIntegral.Section3.rvGenericCoordinate_support
+#print axioms DiamondIntegral.Section3.rvGenericCoordinate_support
+#check @DiamondIntegral.Section3.rvGenericCoordinate_fold_support
+#print axioms DiamondIntegral.Section3.rvGenericCoordinate_fold_support
+#check @DiamondIntegral.Section3.rvFullFibreGeneric_support
+#print axioms DiamondIntegral.Section3.rvFullFibreGeneric_support
+#check @DiamondIntegral.Section3.rvAngularMixedDomain_carrier
+#print axioms DiamondIntegral.Section3.rvAngularMixedDomain_carrier
+#check @DiamondIntegral.Section3.rvAngularMixedDomain_full_preimage
+#print axioms DiamondIntegral.Section3.rvAngularMixedDomain_full_preimage
+#check @DiamondIntegral.Section3.rvAngularResidueDomain_carrier
+#print axioms DiamondIntegral.Section3.rvAngularResidueDomain_carrier
+#check @DiamondIntegral.Section3.rvAngularResidueDomain_finite_values
+#print axioms DiamondIntegral.Section3.rvAngularResidueDomain_finite_values
+#check @DiamondIntegral.Section3.rvDNFPatternCell_monomial_free_invariant
+#print axioms DiamondIntegral.Section3.rvDNFPatternCell_monomial_free_invariant
+#check @DiamondIntegral.Section3.rvDNFPatternCell_chart_invariant
+#print axioms DiamondIntegral.Section3.rvDNFPatternCell_chart_invariant
+#check @DiamondIntegral.Section3.rvDNFLiterals_mem
+#print axioms DiamondIntegral.Section3.rvDNFLiterals_mem
+#check @DiamondIntegral.Section3.rvDNFPatternCells_cover
+#print axioms DiamondIntegral.Section3.rvDNFPatternCells_cover
+#check @DiamondIntegral.Section3.rvDNFPatternCells_disjoint
+#print axioms DiamondIntegral.Section3.rvDNFPatternCells_disjoint
+#check @DiamondIntegral.Section3.rvDNFPatternCells_finite
+#print axioms DiamondIntegral.Section3.rvDNFPatternCells_finite
+#check @DiamondIntegral.Section3.rvDNFPatternCharacters_finite
+#print axioms DiamondIntegral.Section3.rvDNFPatternCharacters_finite
+#check @DiamondIntegral.Section3.rvDNFPatternCharacters_value_finite
+#print axioms DiamondIntegral.Section3.rvDNFPatternCharacters_value_finite
+#check @DiamondIntegral.Section3.rvDNFPatternCell_angular_invariant
+#print axioms DiamondIntegral.Section3.rvDNFPatternCell_angular_invariant
+#check @DiamondIntegral.Section3.rvDNFPatternCell_residue_coordinates
+#print axioms DiamondIntegral.Section3.rvDNFPatternCell_residue_coordinates
+#check @DiamondIntegral.Section3.rvPresentationToDirectSum_class
+#print axioms DiamondIntegral.Section3.rvPresentationToDirectSum_class
+#check @DiamondIntegral.Section3.rvDirectSumToPresentationAdd_of
+#print axioms DiamondIntegral.Section3.rvDirectSumToPresentationAdd_of
+#check @DiamondIntegral.Section3.rvDirectSumToPresentationAdd_one
+#print axioms DiamondIntegral.Section3.rvDirectSumToPresentationAdd_one
+#check @DiamondIntegral.Section3.rvDirectSumToPresentationAdd_mul
+#print axioms DiamondIntegral.Section3.rvDirectSumToPresentationAdd_mul
+#check @DiamondIntegral.Section3.rvDirectSumToPresentation_class
+#print axioms DiamondIntegral.Section3.rvDirectSumToPresentation_class
+#check @DiamondIntegral.Section3.rvRepresentative_class
+#print axioms DiamondIntegral.Section3.rvRepresentative_class
+#check @DiamondIntegral.Section3.rvToAmbientKPlus_mul
+#print axioms DiamondIntegral.Section3.rvToAmbientKPlus_mul
+#check @DiamondIntegral.Section3.rvClassMul_class
+#print axioms DiamondIntegral.Section3.rvClassMul_class
+#check @DiamondIntegral.Section3.rvDirectSumToAmbient_injective
+#print axioms DiamondIntegral.Section3.rvDirectSumToAmbient_injective
+#check @DiamondIntegral.Section3.rvDirectSumToAmbient_one
+#print axioms DiamondIntegral.Section3.rvDirectSumToAmbient_one
+#check @DiamondIntegral.Section3.rvDirectSumToAmbient_mul
+#print axioms DiamondIntegral.Section3.rvDirectSumToAmbient_mul
+#check @DiamondIntegral.Section3.rvDirectSumClass_product
+#print axioms DiamondIntegral.Section3.rvDirectSumClass_product
+#check @DiamondIntegral.Section3.gammaSyntax_decode_rvUnitValues
+#print axioms DiamondIntegral.Section3.gammaSyntax_decode_rvUnitValues
+#check @DiamondIntegral.Section3.rvUnitValues_gammaProper
+#print axioms DiamondIntegral.Section3.rvUnitValues_gammaProper
+#check @DiamondIntegral.Section3.gammaGround_finite_angular_partition
+#print axioms DiamondIntegral.Section3.gammaGround_finite_angular_partition
+#check @DiamondIntegral.Section3.equalityGammaPattern_semantics
+#print axioms DiamondIntegral.Section3.equalityGammaPattern_semantics
+#check @DiamondIntegral.Section3.literalGammaPattern_semantics
+#print axioms DiamondIntegral.Section3.literalGammaPattern_semantics
+#check @DiamondIntegral.Section3.globalGammaPattern_semantics
+#print axioms DiamondIntegral.Section3.globalGammaPattern_semantics
+#check @DiamondIntegral.Section3.fullGamma_bool_pattern
+#print axioms DiamondIntegral.Section3.fullGamma_bool_pattern
+#check @DiamondIntegral.Section3.equalityGammaPattern_definable
+#print axioms DiamondIntegral.Section3.equalityGammaPattern_definable
+#check @DiamondIntegral.Section3.literalGammaPattern_definable
+#print axioms DiamondIntegral.Section3.literalGammaPattern_definable
+#check @DiamondIntegral.Section3.globalGammaPattern_definable
+#print axioms DiamondIntegral.Section3.globalGammaPattern_definable
+#check @DiamondIntegral.Section3.rvMixedValueProjectionMap_values
+#print axioms DiamondIntegral.Section3.rvMixedValueProjectionMap_values
+#check @DiamondIntegral.Section3.rvMixedValueProjectionMap_image
+#print axioms DiamondIntegral.Section3.rvMixedValueProjectionMap_image
+#check @DiamondIntegral.Section3.mixedValueQuotient_residue_projection
+#print axioms DiamondIntegral.Section3.mixedValueQuotient_residue_projection
+#check @DiamondIntegral.Section3.smith_basis_residue_tuple_values_finite
+#print axioms DiamondIntegral.Section3.smith_basis_residue_tuple_values_finite
+#check @DiamondIntegral.Section3.rv_exists_monomial_residue_coordinates
+#print axioms DiamondIntegral.Section3.rv_exists_monomial_residue_coordinates
+#check @DiamondIntegral.Section3.rvUnitValue_eq_iff_absolute_eq
+#print axioms DiamondIntegral.Section3.rvUnitValue_eq_iff_absolute_eq
+#check @DiamondIntegral.Section3.rvUnitValue_eq_one_iff_inK
+#print axioms DiamondIntegral.Section3.rvUnitValue_eq_one_iff_inK
+#check @DiamondIntegral.Section3.rvMonomial_rawEval_units
+#print axioms DiamondIntegral.Section3.rvMonomial_rawEval_units
+#check @DiamondIntegral.Section3.rvMonomial_zero_coefficient
+#print axioms DiamondIntegral.Section3.rvMonomial_zero_coefficient
+#check @DiamondIntegral.Section3.rvMonomial_residue_character_values_finite
+#print axioms DiamondIntegral.Section3.rvMonomial_residue_character_values_finite
+#check @DiamondIntegral.Section3.rvMonomial_full_fibre_unimodular
+#print axioms DiamondIntegral.Section3.rvMonomial_full_fibre_unimodular
+#check @DiamondIntegral.Section3.rvAffineMonomial_full_fibre_unimodular
+#print axioms DiamondIntegral.Section3.rvAffineMonomial_full_fibre_unimodular
+#check @DiamondIntegral.Section3.GammaGroundRVProductMonomialPatch.residueMap_image_subset
+#print axioms DiamondIntegral.Section3.GammaGroundRVProductMonomialPatch.residueMap_image_subset
+#check @DiamondIntegral.Section3.GammaGroundRVProductMonomialPatch.restrict_source_subset
+#print axioms DiamondIntegral.Section3.GammaGroundRVProductMonomialPatch.restrict_source_subset
+#check @DiamondIntegral.Section3.gammaGroundMonomialPatch_tensor_congruence
+#print axioms DiamondIntegral.Section3.gammaGroundMonomialPatch_tensor_congruence
+#check @DiamondIntegral.Section3.GammaGroundRVProductMonomialPatch.target_residue_preimage_nonempty
+#print axioms DiamondIntegral.Section3.GammaGroundRVProductMonomialPatch.target_residue_preimage_nonempty
+#check @DiamondIntegral.Section3.GammaGroundRVProductMonomialPatch.target_gamma_preimage_nonempty
+#print axioms DiamondIntegral.Section3.GammaGroundRVProductMonomialPatch.target_gamma_preimage_nonempty
+#check @DiamondIntegral.Section3.GammaGroundRVProductMonomialPatch.restrictTarget_residue_image
+#print axioms DiamondIntegral.Section3.GammaGroundRVProductMonomialPatch.restrictTarget_residue_image
+#check @DiamondIntegral.Section3.GammaGroundRVProductMonomialPatch.restrictTarget_gamma_image
+#print axioms DiamondIntegral.Section3.GammaGroundRVProductMonomialPatch.restrictTarget_gamma_image
+#check @DiamondIntegral.Section3.gammaGroundMonomialPatch_target_cut_congruence
+#print axioms DiamondIntegral.Section3.gammaGroundMonomialPatch_target_cut_congruence
+#check @DiamondIntegral.Section3.integerCharacter_sub
+#print axioms DiamondIntegral.Section3.integerCharacter_sub
+#check @DiamondIntegral.Section3.rvMonomial_ratio_units
+#print axioms DiamondIntegral.Section3.rvMonomial_ratio_units
+#check @DiamondIntegral.Section3.scaled_residue_character_values_finite
+#print axioms DiamondIntegral.Section3.scaled_residue_character_values_finite
+#check @DiamondIntegral.Section3.rvMonomial_ratio_character_values_finite
+#print axioms DiamondIntegral.Section3.rvMonomial_ratio_character_values_finite
+#check @DiamondIntegral.Section3.rvIntegerMonomialTerm_realize
+#print axioms DiamondIntegral.Section3.rvIntegerMonomialTerm_realize
+#check @DiamondIntegral.Section3.rvIntegerMonomialRawMap_definable
+#print axioms DiamondIntegral.Section3.rvIntegerMonomialRawMap_definable
+#check @DiamondIntegral.Section3.rvIntegerMonomialRawMap_values
+#print axioms DiamondIntegral.Section3.rvIntegerMonomialRawMap_values
+#check @DiamondIntegral.Section3.integerCharacter_value_eq
+#print axioms DiamondIntegral.Section3.integerCharacter_value_eq
+#check @DiamondIntegral.Section3.rvMonomial_absolute_depends_on_values
+#print axioms DiamondIntegral.Section3.rvMonomial_absolute_depends_on_values
+#check @DiamondIntegral.Section3.rvMonomial_rawEval_ne_zero
+#print axioms DiamondIntegral.Section3.rvMonomial_rawEval_ne_zero
+#check @DiamondIntegral.Section3.rvAngularCell_product_pieces
+#print axioms DiamondIntegral.Section3.rvAngularCell_product_pieces
+#check @DiamondIntegral.Section3.definableRV_nonzero_product_normal_form
+#print axioms DiamondIntegral.Section3.definableRV_nonzero_product_normal_form
+#check @DiamondIntegral.Section3.rvNonzeroTupleCode_injective
+#print axioms DiamondIntegral.Section3.rvNonzeroTupleCode_injective
+#check @DiamondIntegral.Section3.rvNormalizedMapRelation_character_invariant
+#print axioms DiamondIntegral.Section3.rvNormalizedMapRelation_character_invariant
+#check @DiamondIntegral.Section3.rvNormalizedMapRelation_weight_character_invariant
+#print axioms DiamondIntegral.Section3.rvNormalizedMapRelation_weight_character_invariant
+#check @DiamondIntegral.Section3.rvNormalizedMapRelation_monomial_weights
+#print axioms DiamondIntegral.Section3.rvNormalizedMapRelation_monomial_weights
+#check @DiamondIntegral.Section3.rvNormalizedMapRelation_original_coefficients
+#print axioms DiamondIntegral.Section3.rvNormalizedMapRelation_original_coefficients
+#check @DiamondIntegral.Section3.rvNormalizedMapRelation_functional
+#print axioms DiamondIntegral.Section3.rvNormalizedMapRelation_functional
+#check @DiamondIntegral.Section3.rvNormalizedMapRelation_inverse_functional
+#print axioms DiamondIntegral.Section3.rvNormalizedMapRelation_inverse_functional
+#check @DiamondIntegral.Section3.rvNormalizedMapRelation_pure
+#print axioms DiamondIntegral.Section3.rvNormalizedMapRelation_pure
+#check @DiamondIntegral.Section3.rvMap_residue_generic_original_coefficients
+#print axioms DiamondIntegral.Section3.rvMap_residue_generic_original_coefficients
+#check @DiamondIntegral.Section3.rvMonomial_residue_predicate_definable
+#print axioms DiamondIntegral.Section3.rvMonomial_residue_predicate_definable
+#check @DiamondIntegral.Section3.rvMonomial_equal_value_predicate_definable
+#print axioms DiamondIntegral.Section3.rvMonomial_equal_value_predicate_definable
+#check @DiamondIntegral.Section3.parameterTermFunction_definable
+#print axioms DiamondIntegral.Section3.parameterTermFunction_definable
+#check @DiamondIntegral.Section3.rvMonomialParameterTerm_realize
+#print axioms DiamondIntegral.Section3.rvMonomialParameterTerm_realize
+#check @DiamondIntegral.Section3.rvPatternCoordinateImage_fibre_invariant
+#print axioms DiamondIntegral.Section3.rvPatternCoordinateImage_fibre_invariant
+#check @DiamondIntegral.Section3.rvPatternCoordinateImage_full_value_preimage
+#print axioms DiamondIntegral.Section3.rvPatternCoordinateImage_full_value_preimage
+#check @DiamondIntegral.Section3.rvPattern_residue_tuple_values_finite
+#print axioms DiamondIntegral.Section3.rvPattern_residue_tuple_values_finite
+#check @DiamondIntegral.Section3.rvAmbientClass_scissor
+#print axioms DiamondIntegral.Section3.rvAmbientClass_scissor
+#check @DiamondIntegral.Section3.rvToAmbientKPlus_class
+#print axioms DiamondIntegral.Section3.rvToAmbientKPlus_class
+#check @DiamondIntegral.Section3.rvClass_eq_iff_iso
+#print axioms DiamondIntegral.Section3.rvClass_eq_iff_iso
+#check @DiamondIntegral.Section3.rvToAmbientKPlus_injective
+#print axioms DiamondIntegral.Section3.rvToAmbientKPlus_injective
+#check @DiamondIntegral.Section3.gammaGroundRVProduct_residue_rank_add_le
+#print axioms DiamondIntegral.Section3.gammaGroundRVProduct_residue_rank_add_le
+#check @DiamondIntegral.Section3.gammaGroundRVProduct_residue_rank_le_sub
+#print axioms DiamondIntegral.Section3.gammaGroundRVProduct_residue_rank_le_sub
+#check @DiamondIntegral.Section3.gammaGroundRVProduct_generic_fibre_arity_le
+#print axioms DiamondIntegral.Section3.gammaGroundRVProduct_generic_fibre_arity_le
+#check @DiamondIntegral.Section3.gammaGround_fibreSource_joint_injective
+#print axioms DiamondIntegral.Section3.gammaGround_fibreSource_joint_injective
+#check @DiamondIntegral.Section3.gammaGroundRVProduct_generic_fibre_monomial
+#print axioms DiamondIntegral.Section3.gammaGroundRVProduct_generic_fibre_monomial
+#check @DiamondIntegral.Section3.GammaGroundRVProductMonomialPatch.source_subset
+#print axioms DiamondIntegral.Section3.GammaGroundRVProductMonomialPatch.source_subset
+#check @DiamondIntegral.Section3.GammaGroundRVProductMonomialPatch.residueMap_injective
+#print axioms DiamondIntegral.Section3.GammaGroundRVProductMonomialPatch.residueMap_injective
+#check @DiamondIntegral.Section3.GammaGroundRVProductMonomialPatch.bijection_value
+#print axioms DiamondIntegral.Section3.GammaGroundRVProductMonomialPatch.bijection_value
+#check @DiamondIntegral.Section3.GammaGroundRVProductMonomialPatch.bijection_agrees
+#print axioms DiamondIntegral.Section3.GammaGroundRVProductMonomialPatch.bijection_agrees
+#check @DiamondIntegral.Section3.GammaGroundRVProductMonomialPatch.target_subset
+#print axioms DiamondIntegral.Section3.GammaGroundRVProductMonomialPatch.target_subset
+#check @DiamondIntegral.Section3.GammaGroundRVProductMonomialPatch.gamma_subset
+#print axioms DiamondIntegral.Section3.GammaGroundRVProductMonomialPatch.gamma_subset
+#check @DiamondIntegral.Section3.GammaGroundRVProductMonomialPatch.targetGamma_subset
+#print axioms DiamondIntegral.Section3.GammaGroundRVProductMonomialPatch.targetGamma_subset
+#check @DiamondIntegral.Section3.gammaGroundRVProduct_finite_monomial_cover
+#print axioms DiamondIntegral.Section3.gammaGroundRVProduct_finite_monomial_cover
+#check @DiamondIntegral.Section3.gammaGroundRVProduct_formula_neighborhood
+#print axioms DiamondIntegral.Section3.gammaGroundRVProduct_formula_neighborhood
+#check @DiamondIntegral.Section3.gammaGroundRVProduct_residue_map_generic_fibre
+#print axioms DiamondIntegral.Section3.gammaGroundRVProduct_residue_map_generic_fibre
+#check @DiamondIntegral.Section3.gammaGroundRVProduct_gamma_map_generic_fibre
+#print axioms DiamondIntegral.Section3.gammaGroundRVProduct_gamma_map_generic_fibre
+#check @DiamondIntegral.Section3.gammaGroundRVProduct_lower_arity_hyperplane_cover
+#print axioms DiamondIntegral.Section3.gammaGroundRVProduct_lower_arity_hyperplane_cover
+#check @DiamondIntegral.Section3.gammaGroundRVUnitAffineProductBijection_value
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnitAffineProductBijection_value
+#check @DiamondIntegral.Section3.gammaGroundRVProduct_monomial_rectangle_image
+#print axioms DiamondIntegral.Section3.gammaGroundRVProduct_monomial_rectangle_image
+#check @DiamondIntegral.Section3.gammaGroundRVProduct_monomial_residue_image_finite
+#print axioms DiamondIntegral.Section3.gammaGroundRVProduct_monomial_residue_image_finite
+#check @DiamondIntegral.Section3.gammaGroundRVProduct_monomial_neighborhood
+#print axioms DiamondIntegral.Section3.gammaGroundRVProduct_monomial_neighborhood
+#check @DiamondIntegral.Section3.gammaGroundRVProduct_RES_factor
+#print axioms DiamondIntegral.Section3.gammaGroundRVProduct_RES_factor
+#check @DiamondIntegral.Section3.rv_rank_extension_in_gamma_fibres
+#print axioms DiamondIntegral.Section3.rv_rank_extension_in_gamma_fibres
+#check @DiamondIntegral.Section3.gammaGroundRVProduct_finite_residue_of_full_label
+#print axioms DiamondIntegral.Section3.gammaGroundRVProduct_finite_residue_of_full_label
+#check @DiamondIntegral.Section3.rvProductLeft_map
+#print axioms DiamondIntegral.Section3.rvProductLeft_map
+#check @DiamondIntegral.Section3.rvProductRight_map
+#print axioms DiamondIntegral.Section3.rvProductRight_map
+#check @DiamondIntegral.Section3.RVObject.product_res
+#print axioms DiamondIntegral.Section3.RVObject.product_res
+#check @DiamondIntegral.Section3.RVObject.graphMap_injective
+#print axioms DiamondIntegral.Section3.RVObject.graphMap_injective
+#check @DiamondIntegral.Section3.RVObject.projectionObject_volume
+#print axioms DiamondIntegral.Section3.RVObject.projectionObject_volume
+#check @DiamondIntegral.Section3.rvClass_projectionObject
+#print axioms DiamondIntegral.Section3.rvClass_projectionObject
+#check @DiamondIntegral.Section3.rvRaw_le_definable
+#print axioms DiamondIntegral.Section3.rvRaw_le_definable
+#check @DiamondIntegral.Section3.rvRaw_same_value_definable
+#print axioms DiamondIntegral.Section3.rvRaw_same_value_definable
+#check @DiamondIntegral.Section3.rvRaw_units_definable
+#print axioms DiamondIntegral.Section3.rvRaw_units_definable
+#check @DiamondIntegral.Section3.rvRaw_inK_definable
+#print axioms DiamondIntegral.Section3.rvRaw_inK_definable
+#check @DiamondIntegral.Section3.rawPredicate_bool_pattern
+#print axioms DiamondIntegral.Section3.rawPredicate_bool_pattern
+#check @DiamondIntegral.Section3.exists_residueUnitToRV_of_value_one
+#print axioms DiamondIntegral.Section3.exists_residueUnitToRV_of_value_one
+#check @DiamondIntegral.Section3.rvNormalizedPoint_surjective_on_fibre
+#print axioms DiamondIntegral.Section3.rvNormalizedPoint_surjective_on_fibre
+#check @DiamondIntegral.Section3.rvNormalizedTuple_surjective_on_fibre
+#print axioms DiamondIntegral.Section3.rvNormalizedTuple_surjective_on_fibre
+#check @DiamondIntegral.Section3.rvNormalizedPoint_raw_injective
+#print axioms DiamondIntegral.Section3.rvNormalizedPoint_raw_injective
+#check @DiamondIntegral.Section3.rvNormalizedPoint_nonzero
+#print axioms DiamondIntegral.Section3.rvNormalizedPoint_nonzero
+#check @DiamondIntegral.Section3.rvNormalizedPoint_sameScalar
+#print axioms DiamondIntegral.Section3.rvNormalizedPoint_sameScalar
+#check @DiamondIntegral.Section3.rvNormalizedTuple_update
+#print axioms DiamondIntegral.Section3.rvNormalizedTuple_update
+#check @DiamondIntegral.Section3.presentationValuation_natCast
+#print axioms DiamondIntegral.Section3.presentationValuation_natCast
+#check @DiamondIntegral.Section3.rvResidueField_charZero
+#print axioms DiamondIntegral.Section3.rvResidueField_charZero
+#check @DiamondIntegral.Section3.residueUnitToRV_injective
+#print axioms DiamondIntegral.Section3.residueUnitToRV_injective
+#check @DiamondIntegral.Section3.rvUnit_zpow_injective_isUnit
+#print axioms DiamondIntegral.Section3.rvUnit_zpow_injective_isUnit
+#check @DiamondIntegral.Section3.residueUnitToRV_value_one
+#print axioms DiamondIntegral.Section3.residueUnitToRV_value_one
+#check @DiamondIntegral.Section3.rvClass_iso
+#print axioms DiamondIntegral.Section3.rvClass_iso
+#check @DiamondIntegral.Section3.rvClass_empty
+#print axioms DiamondIntegral.Section3.rvClass_empty
+#check @DiamondIntegral.Section3.rvClass_scissor
+#print axioms DiamondIntegral.Section3.rvClass_scissor
+#check @DiamondIntegral.Section3.rvSemiringClass_iso
+#print axioms DiamondIntegral.Section3.rvSemiringClass_iso
+#check @DiamondIntegral.Section3.rvSemiringClass_empty
+#print axioms DiamondIntegral.Section3.rvSemiringClass_empty
+#check @DiamondIntegral.Section3.rvSemiringClass_unit
+#print axioms DiamondIntegral.Section3.rvSemiringClass_unit
+#check @DiamondIntegral.Section3.rvSemiringClass_product
+#print axioms DiamondIntegral.Section3.rvSemiringClass_product
+#check @DiamondIntegral.Section3.rvSemiringClass_scissor
+#print axioms DiamondIntegral.Section3.rvSemiringClass_scissor
+#check @DiamondIntegral.Section3.rvKPlusToSemiring_class
+#print axioms DiamondIntegral.Section3.rvKPlusToSemiring_class
+#check @DiamondIntegral.Section3.sourceEqualityPattern_definable
+#print axioms DiamondIntegral.Section3.sourceEqualityPattern_definable
+#check @DiamondIntegral.Section3.sourceLiteralPattern_definable
+#print axioms DiamondIntegral.Section3.sourceLiteralPattern_definable
+#check @DiamondIntegral.Section3.sourceGlobalPattern_definable
+#print axioms DiamondIntegral.Section3.sourceGlobalPattern_definable
+#check @DiamondIntegral.Section3.sourceDNFPatternCell_definable
+#print axioms DiamondIntegral.Section3.sourceDNFPatternCell_definable
+#check @DiamondIntegral.Section3.unaryRVCompletePart_eq_gammaLift
+#print axioms DiamondIntegral.Section3.unaryRVCompletePart_eq_gammaLift
+#check @DiamondIntegral.Section3.unaryRV_residue_gamma_decomposition
+#print axioms DiamondIntegral.Section3.unaryRV_residue_gamma_decomposition
+#check @DiamondIntegral.Section3.unaryRVScalarSet_definable
+#print axioms DiamondIntegral.Section3.unaryRVScalarSet_definable
+#check @DiamondIntegral.Section3.unaryRVMixedValues_finite
+#print axioms DiamondIntegral.Section3.unaryRVMixedValues_finite
+#check @DiamondIntegral.Section3.gammaTopInfinity_definable
+#print axioms DiamondIntegral.Section3.gammaTopInfinity_definable
+#check @DiamondIntegral.Section3.unaryRVExceptionalValues_finite
+#print axioms DiamondIntegral.Section3.unaryRVExceptionalValues_finite
+#check @DiamondIntegral.Section3.unaryRVResiduePart_finite_values
+#print axioms DiamondIntegral.Section3.unaryRVResiduePart_finite_values
+#check @DiamondIntegral.Section3.unaryRVValuePartition
+#print axioms DiamondIntegral.Section3.unaryRVValuePartition
+#check @DiamondIntegral.Section3.unaryRVValuePartition_disjoint
+#print axioms DiamondIntegral.Section3.unaryRVValuePartition_disjoint
+#check @DiamondIntegral.Section3.unaryRVCompletePart_nonzero
+#print axioms DiamondIntegral.Section3.unaryRVCompletePart_nonzero
+#check @DiamondIntegral.Section3.gammaGroundRVUnitCoordinateTupleMap_value
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnitCoordinateTupleMap_value
+#check @DiamondIntegral.Section3.gammaGroundRVUnitSparseTupleMap_value
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnitSparseTupleMap_value
+#check @DiamondIntegral.Section3.gammaGroundRESAvailableValueTuple_sparse_iff
+#print axioms DiamondIntegral.Section3.gammaGroundRESAvailableValueTuple_sparse_iff
+#check @DiamondIntegral.Section3.rvUnitDomain_preimage
+#print axioms DiamondIntegral.Section3.rvUnitDomain_preimage
+#check @DiamondIntegral.Section3.rvUnitDomain_raw_definable
+#print axioms DiamondIntegral.Section3.rvUnitDomain_raw_definable
+#check @DiamondIntegral.Section3.rvUnitDomain_native_definable
+#print axioms DiamondIntegral.Section3.rvUnitDomain_native_definable
+#check @DiamondIntegral.Section3.rvUnitCoordinateDomain_definable
+#print axioms DiamondIntegral.Section3.rvUnitCoordinateDomain_definable
+#check @DiamondIntegral.Section3.rvUnitCoordinateDomain_finite_values
+#print axioms DiamondIntegral.Section3.rvUnitCoordinateDomain_finite_values
+#check @DiamondIntegral.Section3.gammaGroundRVUnitFullCode_decode
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnitFullCode_decode
+#check @DiamondIntegral.Section3.gammaGroundRVUnitFullCode_inverse_decode
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnitFullCode_inverse_decode
+#check @DiamondIntegral.Section3.gammaVolume_code_decode
+#print axioms DiamondIntegral.Section3.gammaVolume_code_decode
+#check @DiamondIntegral.Section3.gammaGroundRVUnitGammaForm_graph
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnitGammaForm_graph
+#check @DiamondIntegral.Section3.rvUnitValueHom_surjective
+#print axioms DiamondIntegral.Section3.rvUnitValueHom_surjective
+#check @DiamondIntegral.Section3.rvUnitTupleValues_surjective
+#print axioms DiamondIntegral.Section3.rvUnitTupleValues_surjective
+#check @DiamondIntegral.Section3.rvUnitGammaMap_values
+#print axioms DiamondIntegral.Section3.rvUnitGammaMap_values
+#check @DiamondIntegral.Section3.GammaGroundMap.unitGraphMap_input
+#print axioms DiamondIntegral.Section3.GammaGroundMap.unitGraphMap_input
+#check @DiamondIntegral.Section3.GammaGroundMap.unitGraphMap_output
+#print axioms DiamondIntegral.Section3.GammaGroundMap.unitGraphMap_output
+#check @DiamondIntegral.Section3.rvUnitMixedRelation_unit
+#print axioms DiamondIntegral.Section3.rvUnitMixedRelation_unit
+#check @DiamondIntegral.Section3.rvUnitMixedRelation_proper
+#print axioms DiamondIntegral.Section3.rvUnitMixedRelation_proper
+#check @DiamondIntegral.Section3.rvUnitMixedRelation_definable
+#print axioms DiamondIntegral.Section3.rvUnitMixedRelation_definable
+#check @DiamondIntegral.Section3.rvUnitMixed_finite_rectangles
+#print axioms DiamondIntegral.Section3.rvUnitMixed_finite_rectangles
+#check @DiamondIntegral.Section3.rvIntegerMonomialRawMap_unitValues
+#print axioms DiamondIntegral.Section3.rvIntegerMonomialRawMap_unitValues
+#check @DiamondIntegral.Section3.rvUnitToRVMap_values
+#print axioms DiamondIntegral.Section3.rvUnitToRVMap_values
+#check @DiamondIntegral.Section3.rvUnitToRVMap_injective
+#print axioms DiamondIntegral.Section3.rvUnitToRVMap_injective
+#check @DiamondIntegral.Section3.gammaGroundRVUnitProduct_rank_le_of_finite_map
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnitProduct_rank_le_of_finite_map
+#check @DiamondIntegral.Section3.rvUnitProductTuple_injective
+#print axioms DiamondIntegral.Section3.rvUnitProductTuple_injective
+#check @DiamondIntegral.Section3.rvUnitProductTupleMap_values
+#print axioms DiamondIntegral.Section3.rvUnitProductTupleMap_values
+#check @DiamondIntegral.Section3.gammaGroundRVUnitProductTupleMap_injective
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnitProductTupleMap_injective
+#check @DiamondIntegral.Section3.rvUnitMixed_definable_products
+#print axioms DiamondIntegral.Section3.rvUnitMixed_definable_products
+#check @DiamondIntegral.Section3.rvUnitRectangularMonomialCode_values
+#print axioms DiamondIntegral.Section3.rvUnitRectangularMonomialCode_values
+#check @DiamondIntegral.Section3.rvUnitValues_injective
+#print axioms DiamondIntegral.Section3.rvUnitValues_injective
+#check @DiamondIntegral.Section3.rvUnitValues_range
+#print axioms DiamondIntegral.Section3.rvUnitValues_range
+#check @DiamondIntegral.Section3.rvUnitValues_range_definable
+#print axioms DiamondIntegral.Section3.rvUnitValues_range_definable
+#check @DiamondIntegral.Section3.rvUnitValues_decode
+#print axioms DiamondIntegral.Section3.rvUnitValues_decode
+#check @DiamondIntegral.Section3.decode_rvUnitValues
+#print axioms DiamondIntegral.Section3.decode_rvUnitValues
+#check @DiamondIntegral.Section3.rvUnitSpace_predicate_definable
+#print axioms DiamondIntegral.Section3.rvUnitSpace_predicate_definable
+#check @DiamondIntegral.Section3.gammaGroundRVUnitTupleMulMap_value
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnitTupleMulMap_value
+#check @DiamondIntegral.Section3.rvUnitTupleValues_mul
+#print axioms DiamondIntegral.Section3.rvUnitTupleValues_mul
+#check @DiamondIntegral.Section3.rvUnitTupleValues_inv
+#print axioms DiamondIntegral.Section3.rvUnitTupleValues_inv
+#check @DiamondIntegral.Section3.rvUnitTupleProductMap_bijective
+#print axioms DiamondIntegral.Section3.rvUnitTupleProductMap_bijective
+#check @DiamondIntegral.Section3.gammaGroundRVUnitTupleProductMap_injective
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnitTupleProductMap_injective
+#check @DiamondIntegral.Section3.monomial_map_value
+#print axioms DiamondIntegral.Section3.monomial_map_value
+#check @DiamondIntegral.Section3.literalValueCell_own_mask
+#print axioms DiamondIntegral.Section3.literalValueCell_own_mask
+#check @DiamondIntegral.Section3.rvClauseValueCells_cover
+#print axioms DiamondIntegral.Section3.rvClauseValueCells_cover
+#check @DiamondIntegral.Section3.rvClauseValueCells_finite
+#print axioms DiamondIntegral.Section3.rvClauseValueCells_finite
+#check @DiamondIntegral.Section3.rv_value_fibre_gamma_image_finite
+#print axioms DiamondIntegral.Section3.rv_value_fibre_gamma_image_finite
+#check @DiamondIntegral.Section3.exists_nonalgebraic_in_gamma_fibre
+#print axioms DiamondIntegral.Section3.exists_nonalgebraic_in_gamma_fibre
+#check @DiamondIntegral.Section3.exists_independent_gamma_fibre_tuple
+#print axioms DiamondIntegral.Section3.exists_independent_gamma_fibre_tuple
+#check @DiamondIntegral.Section3.rvSequenceIndependent_append
+#print axioms DiamondIntegral.Section3.rvSequenceIndependent_append
+#check @DiamondIntegral.Section3.rv_tuple_gamma_algebraic_depends_on_values
+#print axioms DiamondIntegral.Section3.rv_tuple_gamma_algebraic_depends_on_values
+#check @DiamondIntegral.Section3.rvMonomialRelabel_rawEval
+#print axioms DiamondIntegral.Section3.rvMonomialRelabel_rawEval
+#check @DiamondIntegral.Section3.rvPolynomialRelabel_rawEval
+#print axioms DiamondIntegral.Section3.rvPolynomialRelabel_rawEval
+#check @DiamondIntegral.Section3.rvPolynomialRelabel_domain
+#print axioms DiamondIntegral.Section3.rvPolynomialRelabel_domain
+#check @DiamondIntegral.Section3.rvLiteralRelabel_domain
+#print axioms DiamondIntegral.Section3.rvLiteralRelabel_domain
+#check @DiamondIntegral.Section3.rvLiteralRelabel_comparison
+#print axioms DiamondIntegral.Section3.rvLiteralRelabel_comparison
+#check @DiamondIntegral.Section3.measuredRV_equation_iff
+#print axioms DiamondIntegral.Section3.measuredRV_equation_iff
+#check @DiamondIntegral.Section3.MeasuredRVHom.ext
+#print axioms DiamondIntegral.Section3.MeasuredRVHom.ext
+#check @DiamondIntegral.Section3.rvPatternSource_subset
+#print axioms DiamondIntegral.Section3.rvPatternSource_subset
+#check @DiamondIntegral.Section3.rvPatternMap_finite
+#print axioms DiamondIntegral.Section3.rvPatternMap_finite
+#check @DiamondIntegral.Section3.zeroPattern_projection_injective
+#print axioms DiamondIntegral.Section3.zeroPattern_projection_injective
+#check @DiamondIntegral.Section3.rvNonzeroStratum_degree_le
+#print axioms DiamondIntegral.Section3.rvNonzeroStratum_degree_le
+#check @DiamondIntegral.Section3.rvPatternSource_partition
+#print axioms DiamondIntegral.Section3.rvPatternSource_partition
+#check @DiamondIntegral.Section3.rvPatternFold_bijective
+#print axioms DiamondIntegral.Section3.rvPatternFold_bijective
+#check @DiamondIntegral.Section3.rvPatternCarrierEquiv_graph
+#print axioms DiamondIntegral.Section3.rvPatternCarrierEquiv_graph
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayerMatchedFamily.ambientMap_injective
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayerMatchedFamily.ambientMap_injective
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayerMatchedFamily.lower_outside_union
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayerMatchedFamily.lower_outside_union
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayerMatchedFamily.ambientMap_outside_union
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayerMatchedFamily.ambientMap_outside_union
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayerMatchedFamily.residualMap_injective
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayerMatchedFamily.residualMap_injective
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayerMatchedFamily.residualMap_image
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayerMatchedFamily.residualMap_image
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayerMatchedFamily.ambientMap_disjoint
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayerMatchedFamily.ambientMap_disjoint
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayerMatchedFamily.residualMap_disjoint
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayerMatchedFamily.residualMap_disjoint
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayerMatchedFamily.residualMap_cover
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayerMatchedFamily.residualMap_cover
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayerMatchedFamily.residual_value_image
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayerMatchedFamily.residual_value_image
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayerMatchedFamily.value_split
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayerMatchedFamily.value_split
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayerMatchedFamily.residual_lower_normal_form
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayerMatchedFamily.residual_lower_normal_form
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover.source_union_or_hyperplane
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover.source_union_or_hyperplane
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover.target_union_or_hyperplane
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover.target_union_or_hyperplane
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover.matched_congruence
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover.matched_congruence
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover.sourceMap_disjoint
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover.sourceMap_disjoint
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover.targetMap_disjoint
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover.targetMap_disjoint
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover.source_seed_cover
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover.source_seed_cover
+#check @DiamondIntegral.Section3.residue_add_closed
+#print axioms DiamondIntegral.Section3.residue_add_closed
+#check @DiamondIntegral.Section3.residueSum_inK_total
+#print axioms DiamondIntegral.Section3.residueSum_inK_total
+#check @DiamondIntegral.Section3.residueSum_selective_congr
+#print axioms DiamondIntegral.Section3.residueSum_selective_congr
+#check @DiamondIntegral.Section3.rawTupleSpace_definable_iff
+#print axioms DiamondIntegral.Section3.rawTupleSpace_definable_iff
+#check @DiamondIntegral.Section3.ImaginaryDefinable.on_real_codes
+#print axioms DiamondIntegral.Section3.ImaginaryDefinable.on_real_codes
+#check @DiamondIntegral.Section3.rawDefinable_realTuple_abstraction
+#print axioms DiamondIntegral.Section3.rawDefinable_realTuple_abstraction
+#check @DiamondIntegral.Section3.presentedDefinable_realTuple_abstraction
+#print axioms DiamondIntegral.Section3.presentedDefinable_realTuple_abstraction
+#check @DiamondIntegral.Section3.imaginaryDefinable_realTuple_abstraction
+#print axioms DiamondIntegral.Section3.imaginaryDefinable_realTuple_abstraction
+#check @DiamondIntegral.Section3.gammaGroundDefinable_realTuple_abstraction
+#print axioms DiamondIntegral.Section3.gammaGroundDefinable_realTuple_abstraction
+#check @DiamondIntegral.Section3.rectangularMonomial_mul
+#print axioms DiamondIntegral.Section3.rectangularMonomial_mul
+#check @DiamondIntegral.Section3.rectangularMonomial_residue_injective
+#print axioms DiamondIntegral.Section3.rectangularMonomial_residue_injective
+#check @DiamondIntegral.Section3.rectangularMonomial_arity_le_of_injective
+#print axioms DiamondIntegral.Section3.rectangularMonomial_arity_le_of_injective
+#check @DiamondIntegral.Section3.rvAffineRectangularMonomial_full_fibre_arity_le
+#print axioms DiamondIntegral.Section3.rvAffineRectangularMonomial_full_fibre_arity_le
+#check @DiamondIntegral.Section3.abs_not_affine
+#print axioms DiamondIntegral.Section3.abs_not_affine
+#check @DiamondIntegral.Section3.no_definable_bijection_of_point_obstruction
+#print axioms DiamondIntegral.Section3.no_definable_bijection_of_point_obstruction
+#check @DiamondIntegral.Section3.reichsteinYoussin_monomial_weights
+#print axioms DiamondIntegral.Section3.reichsteinYoussin_monomial_weights
+#check @DiamondIntegral.Section3.relationDefinable_pullback
+#print axioms DiamondIntegral.Section3.relationDefinable_pullback
+#check @DiamondIntegral.Section3.gammaGroundRVUnit_residue_gamma_closure_iff
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnit_residue_gamma_closure_iff
+#check @DiamondIntegral.Section3.residue_tuple_gamma_finite_columns
+#print axioms DiamondIntegral.Section3.residue_tuple_gamma_finite_columns
+#check @DiamondIntegral.Section3.gammaGroundRVUnit_residue_gamma_independent_iff
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnit_residue_gamma_independent_iff
+#check @DiamondIntegral.Section3.gammaGroundResidueGamma_product_neighborhood
+#print axioms DiamondIntegral.Section3.gammaGroundResidueGamma_product_neighborhood
+#check @DiamondIntegral.Section3.gammaGroundRES_full_fibre_avoidance_neighborhood
+#print axioms DiamondIntegral.Section3.gammaGroundRES_full_fibre_avoidance_neighborhood
+#check @DiamondIntegral.Section3.goodGammaImage_definable
+#print axioms DiamondIntegral.Section3.goodGammaImage_definable
+#check @DiamondIntegral.Section3.goodGammaImage_finite_residue_tuple
+#print axioms DiamondIntegral.Section3.goodGammaImage_finite_residue_tuple
+#check @DiamondIntegral.Section3.gammaTuplePullback_definable
+#print axioms DiamondIntegral.Section3.gammaTuplePullback_definable
+#check @DiamondIntegral.Section3.gammaTupleColumnValues_definable
+#print axioms DiamondIntegral.Section3.gammaTupleColumnValues_definable
+#check @DiamondIntegral.Section3.residue_tuple_gamma_finite_rectangles
+#print axioms DiamondIntegral.Section3.residue_tuple_gamma_finite_rectangles
+#check @DiamondIntegral.Section3.residue_gamma_tuple_finite_columns
+#print axioms DiamondIntegral.Section3.residue_gamma_tuple_finite_columns
+#check @DiamondIntegral.Section3.residue_gamma_tuple_finite_residue_projection
+#print axioms DiamondIntegral.Section3.residue_gamma_tuple_finite_residue_projection
+#check @DiamondIntegral.Section3.gammaTupleFamilyValues_definable
+#print axioms DiamondIntegral.Section3.gammaTupleFamilyValues_definable
+#check @DiamondIntegral.Section3.residue_gamma_tuple_finite_rectangles
+#print axioms DiamondIntegral.Section3.residue_gamma_tuple_finite_rectangles
+#check @DiamondIntegral.Section3.residue_columns_named_gamma_tuple_separation
+#print axioms DiamondIntegral.Section3.residue_columns_named_gamma_tuple_separation
+#check @DiamondIntegral.Section3.exists_residue_generic_over_countable
+#print axioms DiamondIntegral.Section3.exists_residue_generic_over_countable
+#check @DiamondIntegral.Section3.gammaGroundRVUnit_generic_fibre_over_residue
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnit_generic_fibre_over_residue
+#check @DiamondIntegral.Section3.gammaGroundRVUnitResidueMap_generic_fibre_constant
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnitResidueMap_generic_fibre_constant
+#check @DiamondIntegral.Section3.residue_pair_gamma_algebraic_elimination
+#print axioms DiamondIntegral.Section3.residue_pair_gamma_algebraic_elimination
+#check @DiamondIntegral.Section3.residuePolynomialCharacters_finite
+#print axioms DiamondIntegral.Section3.residuePolynomialCharacters_finite
+#check @DiamondIntegral.Section3.residuePolynomialCharacters_value_finite
+#print axioms DiamondIntegral.Section3.residuePolynomialCharacters_value_finite
+#check @DiamondIntegral.Section3.residuePolynomial_term_depends_on_characters
+#print axioms DiamondIntegral.Section3.residuePolynomial_term_depends_on_characters
+#check @DiamondIntegral.Section3.residuePolynomial_depends_on_characters
+#print axioms DiamondIntegral.Section3.residuePolynomial_depends_on_characters
+#check @DiamondIntegral.Section3.residuePolynomial_domain_iff_of_characters
+#print axioms DiamondIntegral.Section3.residuePolynomial_domain_iff_of_characters
+#check @DiamondIntegral.Section3.residue_scaled_equality_distinct_values
+#print axioms DiamondIntegral.Section3.residue_scaled_equality_distinct_values
+#check @DiamondIntegral.Section3.residue_scaled_equality_ratio
+#print axioms DiamondIntegral.Section3.residue_scaled_equality_ratio
+#check @DiamondIntegral.Section3.residue_ratio_of_equal_values
+#print axioms DiamondIntegral.Section3.residue_ratio_of_equal_values
+#check @DiamondIntegral.Section3.residue_tuple_gamma_algebraic_elimination
+#print axioms DiamondIntegral.Section3.residue_tuple_gamma_algebraic_elimination
+#check @DiamondIntegral.Section3.transportedRelationIdeal_le_kernel_iff
+#print axioms DiamondIntegral.Section3.transportedRelationIdeal_le_kernel_iff
+#check @DiamondIntegral.Section3.ringPresentationQuotientEquiv_mk
+#print axioms DiamondIntegral.Section3.ringPresentationQuotientEquiv_mk
+#check @DiamondIntegral.Section3.ringPresentationDescend_image
+#print axioms DiamondIntegral.Section3.ringPresentationDescend_image
+#check @DiamondIntegral.Section3.ringPresentationDescend_unique
+#print axioms DiamondIntegral.Section3.ringPresentationDescend_unique
+#check @DiamondIntegral.Section3.ringPresentation_descends_iff
+#print axioms DiamondIntegral.Section3.ringPresentation_descends_iff
+#check @DiamondIntegral.Section3.regionCollapseCongruence_eq_outside
+#print axioms DiamondIntegral.Section3.regionCollapseCongruence_eq_outside
+#check @DiamondIntegral.Section3.ringConGen_eq_outside_region
+#print axioms DiamondIntegral.Section3.ringConGen_eq_outside_region
+#check @DiamondIntegral.Section3.integerCharacter_torusSingle
+#print axioms DiamondIntegral.Section3.integerCharacter_torusSingle
+#check @DiamondIntegral.Section3.integerCharacter_basis_single
+#print axioms DiamondIntegral.Section3.integerCharacter_basis_single
+#check @DiamondIntegral.Section3.smith_character_single_free
+#print axioms DiamondIntegral.Section3.smith_character_single_free
+#check @DiamondIntegral.Section3.smith_character_single_active
+#print axioms DiamondIntegral.Section3.smith_character_single_active
+#check @DiamondIntegral.Section3.smith_coordinates_surjective_of_character_injective
+#print axioms DiamondIntegral.Section3.smith_coordinates_surjective_of_character_injective
+#check @DiamondIntegral.Section3.smith_power_injective_of_character_injective
+#print axioms DiamondIntegral.Section3.smith_power_injective_of_character_injective
+#check @DiamondIntegral.Section3.integerCharacter_span_eq_top_of_injective
+#print axioms DiamondIntegral.Section3.integerCharacter_span_eq_top_of_injective
+#check @DiamondIntegral.Section3.integerMonomialMap_row_span_eq_top_of_injective
+#print axioms DiamondIntegral.Section3.integerMonomialMap_row_span_eq_top_of_injective
+#check @DiamondIntegral.Section3.integerMonomialMap_det_isUnit_of_injective
+#print axioms DiamondIntegral.Section3.integerMonomialMap_det_isUnit_of_injective
+#check @DiamondIntegral.Section3.GammaGroundTensorSourceGridMatching.congruence
+#print axioms DiamondIntegral.Section3.GammaGroundTensorSourceGridMatching.congruence
+#check @DiamondIntegral.Section3.GammaGroundTensorSourceGridMatching.sourceMap_disjoint
+#print axioms DiamondIntegral.Section3.GammaGroundTensorSourceGridMatching.sourceMap_disjoint
+#check @DiamondIntegral.Section3.GammaGroundTensorSourceGridMatching.targetMap_disjoint
+#print axioms DiamondIntegral.Section3.GammaGroundTensorSourceGridMatching.targetMap_disjoint
+#check @DiamondIntegral.Section3.GammaGroundTensorSourceGridMatching.original_source_covered
+#print axioms DiamondIntegral.Section3.GammaGroundTensorSourceGridMatching.original_source_covered
+#check @DiamondIntegral.Section3.GammaGroundTensorSourceGridMatching.original_target_covered
+#print axioms DiamondIntegral.Section3.GammaGroundTensorSourceGridMatching.original_target_covered
+#check @DiamondIntegral.Section3.positive_sum_subtype_as_ite
+#print axioms DiamondIntegral.Section3.positive_sum_subtype_as_ite
+#check @DiamondIntegral.Section3.positive_sum_two_subtypes_as_ite
+#print axioms DiamondIntegral.Section3.positive_sum_two_subtypes_as_ite
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredTensor_boolean_cells
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredTensor_boolean_cells
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredTensor_rectangle_boolean_cells
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredTensor_rectangle_boolean_cells
+#check @DiamondIntegral.Section3.gammaGroundRESDirectSumClass_of_empty
+#print axioms DiamondIntegral.Section3.gammaGroundRESDirectSumClass_of_empty
+#check @DiamondIntegral.Section3.gammaGroundGammaSemiringClass_native_of_empty
+#print axioms DiamondIntegral.Section3.gammaGroundGammaSemiringClass_native_of_empty
+#check @DiamondIntegral.Section3.gammaGroundTensorBooleanCell_nonempty_of_ne_zero
+#print axioms DiamondIntegral.Section3.gammaGroundTensorBooleanCell_nonempty_of_ne_zero
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredTensor_disjoint_product_partition
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredTensor_disjoint_product_partition
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredTensor_disjoint_full_preimage_partition
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredTensor_disjoint_full_preimage_partition
+#check @DiamondIntegral.Section3.gammaGroundTensorGrid_uncovered_source_cover
+#print axioms DiamondIntegral.Section3.gammaGroundTensorGrid_uncovered_source_cover
+#check @DiamondIntegral.Section3.gammaGroundTensorRemainderBox_disjoint
+#print axioms DiamondIntegral.Section3.gammaGroundTensorRemainderBox_disjoint
+#check @DiamondIntegral.Section3.gammaGroundTensorRemainderBox_cover
+#print axioms DiamondIntegral.Section3.gammaGroundTensorRemainderBox_cover
+#check @DiamondIntegral.Section3.gammaGroundTensorBox_disjoint_remainder_value_split
+#print axioms DiamondIntegral.Section3.gammaGroundTensorBox_disjoint_remainder_value_split
+#check @DiamondIntegral.Section3.gammaGroundTensorNativeProductBijection_pair
+#print axioms DiamondIntegral.Section3.gammaGroundTensorNativeProductBijection_pair
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredTensor_coefficient_pair
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredTensor_coefficient_pair
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredCoefficientPair_valid
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredCoefficientPair_valid
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredCoefficientCongruence_le_ker
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredCoefficientCongruence_le_ker
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredCoefficientQuotientMap_class
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredCoefficientQuotientMap_class
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredCoefficientQuotientMap_surjective
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredCoefficientQuotientMap_surjective
+#check @DiamondIntegral.Section3.gammaGroundRVObjectAtDegree_class
+#print axioms DiamondIntegral.Section3.gammaGroundRVObjectAtDegree_class
+#check @DiamondIntegral.Section3.GammaGroundUnmeasuredTensorTerm.rvObjectAt_class
+#print axioms DiamondIntegral.Section3.GammaGroundUnmeasuredTensorTerm.rvObjectAt_class
+#check @DiamondIntegral.Section3.gammaGroundTensorListRVObject_class
+#print axioms DiamondIntegral.Section3.gammaGroundTensorListRVObject_class
+#check @DiamondIntegral.Section3.gammaGroundTensorListRVObject_iso_of_equal_images
+#print axioms DiamondIntegral.Section3.gammaGroundTensorListRVObject_iso_of_equal_images
+#check @DiamondIntegral.Section3.positive_list_sum_by_degree
+#print axioms DiamondIntegral.Section3.positive_list_sum_by_degree
+#check @DiamondIntegral.Section3.gammaGroundRVSemiringClass_coprod
+#print axioms DiamondIntegral.Section3.gammaGroundRVSemiringClass_coprod
+#check @DiamondIntegral.Section3.gammaGroundRVObjectAtDegree_semiringClass
+#print axioms DiamondIntegral.Section3.gammaGroundRVObjectAtDegree_semiringClass
+#check @DiamondIntegral.Section3.GammaGroundUnmeasuredTensorTerm.rvObjectAt_semiringClass
+#print axioms DiamondIntegral.Section3.GammaGroundUnmeasuredTensorTerm.rvObjectAt_semiringClass
+#check @DiamondIntegral.Section3.gammaGroundTensorListRVObject_semiringClass
+#print axioms DiamondIntegral.Section3.gammaGroundTensorListRVObject_semiringClass
+#check @DiamondIntegral.Section3.gammaGroundTensorTermsInDegree_images_equal
+#print axioms DiamondIntegral.Section3.gammaGroundTensorTermsInDegree_images_equal
+#check @DiamondIntegral.Section3.tensor_algebraMap_factor_balance
+#print axioms DiamondIntegral.Section3.tensor_algebraMap_factor_balance
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredTensor_finite_factor_absorption
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredTensor_finite_factor_absorption
+#check @DiamondIntegral.Section3.gammaGroundMeasuredTensor_finite_factor_absorption
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredTensor_finite_factor_absorption
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredTensor_fixed_prefix_absorption
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredTensor_fixed_prefix_absorption
+#check @DiamondIntegral.Section3.GammaGroundTensorBox.ext
+#print axioms DiamondIntegral.Section3.GammaGroundTensorBox.ext
+#check @DiamondIntegral.Section3.gammaGroundRESDirectSumClass_bijection
+#print axioms DiamondIntegral.Section3.gammaGroundRESDirectSumClass_bijection
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredCoefficientCongruence_local_monomial
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredCoefficientCongruence_local_monomial
+#check @DiamondIntegral.Section3.GammaGroundUnmeasuredTensorTerm.value_image
+#print axioms DiamondIntegral.Section3.GammaGroundUnmeasuredTensorTerm.value_image
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredTensor_object_normal_form
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredTensor_object_normal_form
+#check @DiamondIntegral.Section3.GammaGroundUnmeasuredTensorTerm.value_pieces
+#print axioms DiamondIntegral.Section3.GammaGroundUnmeasuredTensorTerm.value_pieces
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredTensor_piece_normal_form
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredTensor_piece_normal_form
+#check @DiamondIntegral.Section3.GammaGroundContext.nontrivial_definable_gamma
+#print axioms DiamondIntegral.Section3.GammaGroundContext.nontrivial_definable_gamma
+#check @DiamondIntegral.Section3.proposition_3_18_unmeasured_kernel
+#print axioms DiamondIntegral.Section3.proposition_3_18_unmeasured_kernel
+#check @DiamondIntegral.Section3.proposition_3_18_measured_kernel
+#print axioms DiamondIntegral.Section3.proposition_3_18_measured_kernel
+#check @DiamondIntegral.Section3.gammaGroundRESDirectSumClass_scissor
+#print axioms DiamondIntegral.Section3.gammaGroundRESDirectSumClass_scissor
+#check @DiamondIntegral.Section3.gammaGroundGammaSemiringClass_piece_cut
+#print axioms DiamondIntegral.Section3.gammaGroundGammaSemiringClass_piece_cut
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredTensor_product_cut
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredTensor_product_cut
+#check @DiamondIntegral.Section3.gammaGroundNativeProduct_rectangle_complement
+#print axioms DiamondIntegral.Section3.gammaGroundNativeProduct_rectangle_complement
+#check @DiamondIntegral.Section3.GammaGroundMap.preimage_target_sdiff
+#print axioms DiamondIntegral.Section3.GammaGroundMap.preimage_target_sdiff
+#check @DiamondIntegral.Section3.GammaGroundRESUnitChart.class_cut
+#print axioms DiamondIntegral.Section3.GammaGroundRESUnitChart.class_cut
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayer.top_get
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayer.top_get
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayer.lower_get
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayer.lower_get
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayer.topMap_image
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayer.topMap_image
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayer.lowerMap_image
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayer.lowerMap_image
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayer.topMap_injective
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayer.topMap_injective
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayer.lowerMap_injective
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayer.lowerMap_injective
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayer.lower_rank_at
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayer.lower_rank_at
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayer.topMap_disjoint
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayer.topMap_disjoint
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayer.lowerMap_disjoint
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayer.lowerMap_disjoint
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayer.top_lower_disjoint
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayer.top_lower_disjoint
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayer.cover
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayer.cover
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayer.value_image
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayer.value_image
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayer.iso_of_equal_images
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayer.iso_of_equal_images
+#check @DiamondIntegral.Section3.gammaGroundTensorRankLayer_top_match_cover
+#print axioms DiamondIntegral.Section3.gammaGroundTensorRankLayer_top_match_cover
+#check @DiamondIntegral.Section3.GammaGroundNativeTensorChart.asPiece_value
+#print axioms DiamondIntegral.Section3.GammaGroundNativeTensorChart.asPiece_value
+#check @DiamondIntegral.Section3.gammaGroundNativeTensor_rank_zero_kernel_trivial
+#print axioms DiamondIntegral.Section3.gammaGroundNativeTensor_rank_zero_kernel_trivial
+#check @DiamondIntegral.Section3.gammaGroundNativeTensorChart_top_normalize
+#print axioms DiamondIntegral.Section3.gammaGroundNativeTensorChart_top_normalize
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayer.value_charts
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayer.value_charts
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayer.charts_rank_bound
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayer.charts_rank_bound
+#check @DiamondIntegral.Section3.gammaGroundNativeTensor_rank_layer_normal_form
+#print axioms DiamondIntegral.Section3.gammaGroundNativeTensor_rank_layer_normal_form
+#check @DiamondIntegral.Section3.positiveSigmaFinsetFibre_mem
+#print axioms DiamondIntegral.Section3.positiveSigmaFinsetFibre_mem
+#check @DiamondIntegral.Section3.gammaGroundTensorRankLayer_two_sided_cover
+#print axioms DiamondIntegral.Section3.gammaGroundTensorRankLayer_two_sided_cover
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredTensor_RES_injective
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredTensor_RES_injective
+#check @DiamondIntegral.Section3.gammaGroundTensorPiece_rank_zero_absorption
+#print axioms DiamondIntegral.Section3.gammaGroundTensorPiece_rank_zero_absorption
+#check @DiamondIntegral.Section3.gammaGroundTensorList_rank_zero_absorption
+#print axioms DiamondIntegral.Section3.gammaGroundTensorList_rank_zero_absorption
+#check @DiamondIntegral.Section3.gammaGroundTensor_rank_zero_kernel_trivial
+#print axioms DiamondIntegral.Section3.gammaGroundTensor_rank_zero_kernel_trivial
+#check @DiamondIntegral.Section3.GammaGroundTensorRectangle.value_split
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRectangle.value_split
+#check @DiamondIntegral.Section3.GammaGroundTensorRectangle.split_source_subset
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRectangle.split_source_subset
+#check @DiamondIntegral.Section3.GammaGroundTensorRectangle.split_source_cover
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRectangle.split_source_cover
+#check @DiamondIntegral.Section3.GammaGroundTensorRectangle.split_pairwise_disjoint
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRectangle.split_pairwise_disjoint
+#check @DiamondIntegral.Section3.GammaGroundTensorRectangle.refine_source_subset
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRectangle.refine_source_subset
+#check @DiamondIntegral.Section3.GammaGroundTensorRectangle.refine_source_cover
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRectangle.refine_source_cover
+#check @DiamondIntegral.Section3.GammaGroundTensorRectangle.value_refine
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRectangle.value_refine
+#check @DiamondIntegral.Section3.GammaGroundTensorRectangle.refine_pairwise_disjoint
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRectangle.refine_pairwise_disjoint
+#check @DiamondIntegral.Section3.GammaGroundTensorRectangle.split_decides_patch
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRectangle.split_decides_patch
+#check @DiamondIntegral.Section3.GammaGroundTensorRectangle.refine_decides_patches
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRectangle.refine_decides_patches
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredGroupTensor_descends_iff
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredGroupTensor_descends_iff
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredGroupTensorDescend_image
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredGroupTensorDescend_image
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredGroupTensorDescend_unique
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredGroupTensorDescend_unique
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGroupTensor_descends_iff
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGroupTensor_descends_iff
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGroupTensorDescend_image
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGroupTensorDescend_image
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGroupTensorDescend_unique
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGroupTensorDescend_unique
+#check @DiamondIntegral.Section3.gammaGroundAnnularPullback_le_tensor_relation_ideal
+#print axioms DiamondIntegral.Section3.gammaGroundAnnularPullback_le_tensor_relation_ideal
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredTensorCompletionEquiv_tmul
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredTensorCompletionEquiv_tmul
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredGroupTensor_kernel
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredGroupTensor_kernel
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredGroupTensorQuotientEquiv_mk
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredGroupTensorQuotientEquiv_mk
+#check @DiamondIntegral.Section3.gammaGroundMeasuredTensorCompletionEquiv_tmul
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredTensorCompletionEquiv_tmul
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGroupTensor_kernel
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGroupTensor_kernel
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGroupTensorQuotientEquiv_mk
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGroupTensorQuotientEquiv_mk
+#check @DiamondIntegral.Section3.gammaGroundRESAvailableValue_of_tuple
+#print axioms DiamondIntegral.Section3.gammaGroundRESAvailableValue_of_tuple
+#check @DiamondIntegral.Section3.gammaSparseValueTuple_definable
+#print axioms DiamondIntegral.Section3.gammaSparseValueTuple_definable
+#check @DiamondIntegral.Section3.gammaValuePrefix_succ_sparse
+#print axioms DiamondIntegral.Section3.gammaValuePrefix_succ_sparse
+#check @DiamondIntegral.Section3.gammaGroundGammaTranslate_prefix_step
+#print axioms DiamondIntegral.Section3.gammaGroundGammaTranslate_prefix_step
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredCoefficientCongruence_prefix_step
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredCoefficientCongruence_prefix_step
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredCoefficientCongruence_tuple_translation
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredCoefficientCongruence_tuple_translation
+#check @DiamondIntegral.Section3.gammaPullback_value_eq_same_scalar
+#print axioms DiamondIntegral.Section3.gammaPullback_value_eq_same_scalar
+#check @DiamondIntegral.Section3.gamma_value_definable_of_rv_definable
+#print axioms DiamondIntegral.Section3.gamma_value_definable_of_rv_definable
+#check @DiamondIntegral.Section3.monomial_coefficients_of_quotient_weights
+#print axioms DiamondIntegral.Section3.monomial_coefficients_of_quotient_weights
+#check @DiamondIntegral.Section3.tupleRV_decode_code
+#print axioms DiamondIntegral.Section3.tupleRV_decode_code
+#check @DiamondIntegral.Section3.unary_residue_gamma_algebraic_elimination
+#print axioms DiamondIntegral.Section3.unary_residue_gamma_algebraic_elimination
+#check @DiamondIntegral.Section3.unary_residue_gamma_definable_elimination
+#print axioms DiamondIntegral.Section3.unary_residue_gamma_definable_elimination
+#check @DiamondIntegral.Section3.affineMonomial_full_value_fibre_solve
+#print axioms DiamondIntegral.Section3.affineMonomial_full_value_fibre_solve
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredTensor_chart_preimage
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredTensor_chart_preimage
+#check @DiamondIntegral.Section3.unmeasuredTensorMap_tmul
+#print axioms DiamondIntegral.Section3.unmeasuredTensorMap_tmul
+#check @DiamondIntegral.Section3.unmeasuredTensorMap_objects
+#print axioms DiamondIntegral.Section3.unmeasuredTensorMap_objects
+#check @DiamondIntegral.Section3.gammaGroundTensorPiecesInDegree_term_values
+#print axioms DiamondIntegral.Section3.gammaGroundTensorPiecesInDegree_term_values
+#check @DiamondIntegral.Section3.gammaGroundTensorPiecesInDegree_images_equal
+#print axioms DiamondIntegral.Section3.gammaGroundTensorPiecesInDegree_images_equal
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredTensor_kernel_generated
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredTensor_kernel_generated
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredCoefficientCongruence_eq_ker
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredCoefficientCongruence_eq_ker
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredCoefficientQuotientMap_bijective
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredCoefficientQuotientMap_bijective
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredCoefficientQuotientEquiv_class
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredCoefficientQuotientEquiv_class
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredCoefficientQuotientEquivDirectSum_objects
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredCoefficientQuotientEquivDirectSum_objects
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredCoefficientQuotientDegreeInclusion_image
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredCoefficientQuotientDegreeInclusion_image
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredCoefficientQuotient_objects_in_degree
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredCoefficientQuotient_objects_in_degree
+#check @DiamondIntegral.Section3.gammaGroundTensorRankLayer_kernel_step
+#print axioms DiamondIntegral.Section3.gammaGroundTensorRankLayer_kernel_step
+#check @DiamondIntegral.Section3.gammaGroundNativeTensor_kernel_congruence
+#print axioms DiamondIntegral.Section3.gammaGroundNativeTensor_kernel_congruence
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredTensor_object_preimage
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredTensor_object_preimage
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredTensorMap_surjective
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredTensorMap_surjective
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredGroupTensorMap_surjective
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredGroupTensorMap_surjective
+#check @DiamondIntegral.Section3.vf_dimension_le_arity
+#print axioms DiamondIntegral.Section3.vf_dimension_le_arity
+#check @DiamondIntegral.Section3.hasVFInteriorDim_mono
+#print axioms DiamondIntegral.Section3.hasVFInteriorDim_mono
+#check @DiamondIntegral.Section3.vf_dimension_mono
+#print axioms DiamondIntegral.Section3.vf_dimension_mono
+#check @DiamondIntegral.Section3.vfClass_coprod
+#print axioms DiamondIntegral.Section3.vfClass_coprod
+#check @DiamondIntegral.Section3.vfClass_surjective
+#print axioms DiamondIntegral.Section3.vfClass_surjective
+#check @DiamondIntegral.Section3.vf_small_iff_companion
+#print axioms DiamondIntegral.Section3.vf_small_iff_companion
+#check @DiamondIntegral.Section3.vf_small_zero_iff_empty
+#print axioms DiamondIntegral.Section3.vf_small_zero_iff_empty
+#check @DiamondIntegral.Section3.vfSelect_fibre
+#print axioms DiamondIntegral.Section3.vfSelect_fibre
+#check @DiamondIntegral.Section3.vfDimension_le_companion
+#print axioms DiamondIntegral.Section3.vfDimension_le_companion
+#check @DiamondIntegral.Section3.vfDimension_eq_companion
+#print axioms DiamondIntegral.Section3.vfDimension_eq_companion
+#check @DiamondIntegral.Section3.vfDimension_le_iff_companion
+#print axioms DiamondIntegral.Section3.vfDimension_le_iff_companion
+#check @DiamondIntegral.Section3.vfKPlusToSemiring_raise
+#print axioms DiamondIntegral.Section3.vfKPlusToSemiring_raise
+#check @DiamondIntegral.Section3.vfKPlusToSemiring_injective
+#print axioms DiamondIntegral.Section3.vfKPlusToSemiring_injective
+#check @DiamondIntegral.Section3.vfRaiseKPlus_injective
+#print axioms DiamondIntegral.Section3.vfRaiseKPlus_injective
+#check @DiamondIntegral.Section3.vfSemiringClass_surjective
+#print axioms DiamondIntegral.Section3.vfSemiringClass_surjective
+#check @DiamondIntegral.Section3.vfSemiringClass_eq_iff_bijection
+#print axioms DiamondIntegral.Section3.vfSemiringClass_eq_iff_bijection
+#check @DiamondIntegral.Section3.vfRaiseKPlus_class
+#print axioms DiamondIntegral.Section3.vfRaiseKPlus_class
+#check @DiamondIntegral.Section3.vfRaiseKPlus_refl
+#print axioms DiamondIntegral.Section3.vfRaiseKPlus_refl
+#check @DiamondIntegral.Section3.vfRaiseKPlus_comp
+#print axioms DiamondIntegral.Section3.vfRaiseKPlus_comp
+#check @DiamondIntegral.Section3.vfFiniteDomainClass_empty
+#print axioms DiamondIntegral.Section3.vfFiniteDomainClass_empty
+#check @DiamondIntegral.Section3.vfFiniteDomainClass_disjoint_union
+#print axioms DiamondIntegral.Section3.vfFiniteDomainClass_disjoint_union
+#check @DiamondIntegral.Section3.vfFiniteDomainClass_union_inter
+#print axioms DiamondIntegral.Section3.vfFiniteDomainClass_union_inter
+#check @DiamondIntegral.Section3.vfGroupCocone_class
+#print axioms DiamondIntegral.Section3.vfGroupCocone_class
+#check @DiamondIntegral.Section3.CompatibleVFPositiveMaps.ext
+#print axioms DiamondIntegral.Section3.CompatibleVFPositiveMaps.ext
+#check @DiamondIntegral.Section3.compatibleVF_value_bijection
+#print axioms DiamondIntegral.Section3.compatibleVF_value_bijection
+#check @DiamondIntegral.Section3.vfColimitLift_class
+#print axioms DiamondIntegral.Section3.vfColimitLift_class
+#check @DiamondIntegral.Section3.vfColimitLift_inclusion
+#print axioms DiamondIntegral.Section3.vfColimitLift_inclusion
+#check @DiamondIntegral.Section3.vfColimitLift_unique
+#print axioms DiamondIntegral.Section3.vfColimitLift_unique
+#check @DiamondIntegral.Section3.vfFiniteClass_cut
+#print axioms DiamondIntegral.Section3.vfFiniteClass_cut
+#check @DiamondIntegral.Section3.vfToFiniteKPlus_class
+#print axioms DiamondIntegral.Section3.vfToFiniteKPlus_class
+#check @DiamondIntegral.Section3.vfClass_eq_iff_iso
+#print axioms DiamondIntegral.Section3.vfClass_eq_iff_iso
+#check @DiamondIntegral.Section3.vfToFiniteKPlus_injective
+#print axioms DiamondIntegral.Section3.vfToFiniteKPlus_injective
+#check @DiamondIntegral.Section3.vfClass_iso
+#print axioms DiamondIntegral.Section3.vfClass_iso
+#check @DiamondIntegral.Section3.vfClass_empty
+#print axioms DiamondIntegral.Section3.vfClass_empty
+#check @DiamondIntegral.Section3.vfClass_scissor
+#print axioms DiamondIntegral.Section3.vfClass_scissor
+#check @DiamondIntegral.Section3.vfSemiringClass_bijection
+#print axioms DiamondIntegral.Section3.vfSemiringClass_bijection
+#check @DiamondIntegral.Section3.vfSemiringClass_raise
+#print axioms DiamondIntegral.Section3.vfSemiringClass_raise
+#check @DiamondIntegral.Section3.vfSemiringClass_empty
+#print axioms DiamondIntegral.Section3.vfSemiringClass_empty
+#check @DiamondIntegral.Section3.vfSemiringClass_unit
+#print axioms DiamondIntegral.Section3.vfSemiringClass_unit
+#check @DiamondIntegral.Section3.vfSemiringClass_product
+#print axioms DiamondIntegral.Section3.vfSemiringClass_product
+#check @DiamondIntegral.Section3.vfSemiringClass_scissor
+#print axioms DiamondIntegral.Section3.vfSemiringClass_scissor
+#check @DiamondIntegral.Section3.vfKPlusToSemiring_class
+#print axioms DiamondIntegral.Section3.vfKPlusToSemiring_class
+#check @DiamondIntegral.Section3.vfSemiringToFinite_class
+#print axioms DiamondIntegral.Section3.vfSemiringToFinite_class
+#check @DiamondIntegral.Section3.vfFiniteToSemiringAdd_class
+#print axioms DiamondIntegral.Section3.vfFiniteToSemiringAdd_class
+#check @DiamondIntegral.Section3.vfFiniteToSemiringAdd_one
+#print axioms DiamondIntegral.Section3.vfFiniteToSemiringAdd_one
+#check @DiamondIntegral.Section3.vfFiniteToSemiringAdd_mul
+#print axioms DiamondIntegral.Section3.vfFiniteToSemiringAdd_mul
+#check @DiamondIntegral.Section3.vfFiniteToSemiring_class
+#print axioms DiamondIntegral.Section3.vfFiniteToSemiring_class
+#check @DiamondIntegral.Section3.rvCharacterPair_ground
+#print axioms DiamondIntegral.Section3.rvCharacterPair_ground
+#check @DiamondIntegral.Section3.rvCharacterTwist_definableOver
+#print axioms DiamondIntegral.Section3.rvCharacterTwist_definableOver
+#check @DiamondIntegral.Section3.rvCharacterPair_qf
+#print axioms DiamondIntegral.Section3.rvCharacterPair_qf
+#check @DiamondIntegral.Section3.rvCharacterPair_formula
+#print axioms DiamondIntegral.Section3.rvCharacterPair_formula
+#check @DiamondIntegral.Section3.rvCharacterPair_function
+#print axioms DiamondIntegral.Section3.rvCharacterPair_function
+#check @DiamondIntegral.Section3.rvCharacterPair_term
+#print axioms DiamondIntegral.Section3.rvCharacterPair_term
+#check @DiamondIntegral.Section3.rvCharacterPair_equal
+#print axioms DiamondIntegral.Section3.rvCharacterPair_equal
+#check @DiamondIntegral.Section3.rvCharacterPair_relation
+#print axioms DiamondIntegral.Section3.rvCharacterPair_relation
+#check @DiamondIntegral.Section3.valueCharacterTwistHom_apply
+#print axioms DiamondIntegral.Section3.valueCharacterTwistHom_apply
+#check @DiamondIntegral.Section3.valueCharacterTwistHom_value
+#print axioms DiamondIntegral.Section3.valueCharacterTwistHom_value
+#check @DiamondIntegral.Section3.valueCharacterTwistEquiv_value
+#print axioms DiamondIntegral.Section3.valueCharacterTwistEquiv_value
+#check @DiamondIntegral.Section3.valueCharacterTwistEquiv_fixed
+#print axioms DiamondIntegral.Section3.valueCharacterTwistEquiv_fixed
+#check @DiamondIntegral.Section3.rvOriginalGroundCharacterTwist_value
+#print axioms DiamondIntegral.Section3.rvOriginalGroundCharacterTwist_value
+#check @DiamondIntegral.Section3.rvOriginalGroundCharacterTwist_fixes_ground
+#print axioms DiamondIntegral.Section3.rvOriginalGroundCharacterTwist_fixes_ground
+#check @DiamondIntegral.Section3.rvOriginalGroundCharacterTwistZero_fixes_ground
+#print axioms DiamondIntegral.Section3.rvOriginalGroundCharacterTwistZero_fixes_ground
+#check @DiamondIntegral.Section3.rvOriginalGroundCharacterTwistZero_rv
+#print axioms DiamondIntegral.Section3.rvOriginalGroundCharacterTwistZero_rv
+#check @DiamondIntegral.Section3.rvOriginalGroundCharacterTwistZero_le
+#print axioms DiamondIntegral.Section3.rvOriginalGroundCharacterTwistZero_le
+#check @DiamondIntegral.Section3.rvOriginalGroundCharacterTwistZero_units
+#print axioms DiamondIntegral.Section3.rvOriginalGroundCharacterTwistZero_units
+#check @DiamondIntegral.Section3.rvOriginalGroundCharacterTwist_formula
+#print axioms DiamondIntegral.Section3.rvOriginalGroundCharacterTwist_formula
+#check @DiamondIntegral.Section3.rvOriginalGroundCharacterTwistZero_normalized
+#print axioms DiamondIntegral.Section3.rvOriginalGroundCharacterTwistZero_normalized
+#check @DiamondIntegral.Section3.gammaGroundNormalizedRelation_character_invariant
+#print axioms DiamondIntegral.Section3.gammaGroundNormalizedRelation_character_invariant
+#check @DiamondIntegral.Section3.rvOriginalGroundCharacterTwistZero_zero
+#print axioms DiamondIntegral.Section3.rvOriginalGroundCharacterTwistZero_zero
+#check @DiamondIntegral.Section3.rvOriginalGroundCharacterTwistZero_residue
+#print axioms DiamondIntegral.Section3.rvOriginalGroundCharacterTwistZero_residue
+#check @DiamondIntegral.Section3.rvOriginalGroundCharacterTwistZero_inK
+#print axioms DiamondIntegral.Section3.rvOriginalGroundCharacterTwistZero_inK
+#check @DiamondIntegral.Section3.rvOriginalGroundCharacterTwistZero_addK
+#print axioms DiamondIntegral.Section3.rvOriginalGroundCharacterTwistZero_addK
+#check @DiamondIntegral.Section3.rvOriginalGroundCharacterTwistZero_negK
+#print axioms DiamondIntegral.Section3.rvOriginalGroundCharacterTwistZero_negK
+#check @DiamondIntegral.Section3.unitsEquivExtendZero_coe
+#print axioms DiamondIntegral.Section3.unitsEquivExtendZero_coe
+#check @DiamondIntegral.Section3.unitsEquivExtendZero_zero
+#print axioms DiamondIntegral.Section3.unitsEquivExtendZero_zero
+#check @DiamondIntegral.Section3.rvOriginalGroundCharacterTwistZero_coe
+#print axioms DiamondIntegral.Section3.rvOriginalGroundCharacterTwistZero_coe
+#check @DiamondIntegral.Section3.rvOriginalGroundCharacterTwistZero_value
+#print axioms DiamondIntegral.Section3.rvOriginalGroundCharacterTwistZero_value
+#check @DiamondIntegral.Section3.mixedFibreValues_finite_of_exceptions
+#print axioms DiamondIntegral.Section3.mixedFibreValues_finite_of_exceptions
+#check @DiamondIntegral.Section3.mem_fullFibreValues_iff
+#print axioms DiamondIntegral.Section3.mem_fullFibreValues_iff
+#check @DiamondIntegral.Section3.fullFibreValues_subset
+#print axioms DiamondIntegral.Section3.fullFibreValues_subset
+#check @DiamondIntegral.Section3.mixed_full_fibre_partition
+#print axioms DiamondIntegral.Section3.mixed_full_fibre_partition
+#check @DiamondIntegral.Section3.mixed_full_fibre_disjoint
+#print axioms DiamondIntegral.Section3.mixed_full_fibre_disjoint
+#check @DiamondIntegral.Section3.mixed_full_fibre_partition_avoiding
+#print axioms DiamondIntegral.Section3.mixed_full_fibre_partition_avoiding
+#check @DiamondIntegral.Section3.mixed_full_fibre_disjoint_avoiding
+#print axioms DiamondIntegral.Section3.mixed_full_fibre_disjoint_avoiding
+#check @DiamondIntegral.Section3.acfDefinableDiagonalBirationalEquiv
+#print axioms DiamondIntegral.Section3.acfDefinableDiagonalBirationalEquiv
+#check @DiamondIntegral.Section3.acfGenericBirationalEquiv
+#print axioms DiamondIntegral.Section3.acfGenericBirationalEquiv
+#check @DiamondIntegral.Section3.additiveTransportCommMonoid
+#print axioms DiamondIntegral.Section3.additiveTransportCommMonoid
+#check @DiamondIntegral.Section3.additiveTransportCommSemiring
+#print axioms DiamondIntegral.Section3.additiveTransportCommSemiring
+#check @DiamondIntegral.Section3.additiveTransportRingEquiv
+#print axioms DiamondIntegral.Section3.additiveTransportRingEquiv
+#check @DiamondIntegral.Section3.algebraicallyClosedUnitsDivisibleNat
+#print axioms DiamondIntegral.Section3.algebraicallyClosedUnitsDivisibleNat
+#check @DiamondIntegral.Section3.algebraicallyClosedUnitsDivisibleInt
+#print axioms DiamondIntegral.Section3.algebraicallyClosedUnitsDivisibleInt
+#check @DiamondIntegral.Section3.balancedSquareMap
+#print axioms DiamondIntegral.Section3.balancedSquareMap
+#check @DiamondIntegral.Section3.balancedTensorMap
+#print axioms DiamondIntegral.Section3.balancedTensorMap
+#check @DiamondIntegral.Section3.GammaGroundGammaEvaluationTranslationInvariant
+#print axioms DiamondIntegral.Section3.GammaGroundGammaEvaluationTranslationInvariant
+#check @DiamondIntegral.Section3.gammaGroundBalancedEvaluationOnRV
+#print axioms DiamondIntegral.Section3.gammaGroundBalancedEvaluationOnRV
+#check @DiamondIntegral.Section3.boundedVFFibre
+#print axioms DiamondIntegral.Section3.boundedVFFibre
+#check @DiamondIntegral.Section3.DefinableBijection.ofCarrierEq
+#print axioms DiamondIntegral.Section3.DefinableBijection.ofCarrierEq
+#check @DiamondIntegral.Section3.DefinableBijection.ofEmpty
+#print axioms DiamondIntegral.Section3.DefinableBijection.ofEmpty
+#check @DiamondIntegral.Section3.characterValueImage
+#print axioms DiamondIntegral.Section3.characterValueImage
+#check @DiamondIntegral.Section3.YinBoundedUnmeasuredLiftInput
+#print axioms DiamondIntegral.Section3.YinBoundedUnmeasuredLiftInput
+#check @DiamondIntegral.Section3.boundedUnmeasuredIntegral
+#print axioms DiamondIntegral.Section3.boundedUnmeasuredIntegral
+#check @DiamondIntegral.Section3.YinMeasuredLiftInput
+#print axioms DiamondIntegral.Section3.YinMeasuredLiftInput
+#check @DiamondIntegral.Section3.measuredRVFixedSpecialHom
+#print axioms DiamondIntegral.Section3.measuredRVFixedSpecialHom
+#check @DiamondIntegral.Section3.measuredRVFixedSpecialCongruence
+#print axioms DiamondIntegral.Section3.measuredRVFixedSpecialCongruence
+#check @DiamondIntegral.Section3.YinDegreeMeasuredLiftInput
+#print axioms DiamondIntegral.Section3.YinDegreeMeasuredLiftInput
+#check @DiamondIntegral.Section3.measuredPositiveIntegral
+#print axioms DiamondIntegral.Section3.measuredPositiveIntegral
+#check @DiamondIntegral.Section3.measuredRingIntegral
+#print axioms DiamondIntegral.Section3.measuredRingIntegral
+#check @DiamondIntegral.Section3.degreeMeasuredIntegral
+#print axioms DiamondIntegral.Section3.degreeMeasuredIntegral
+#check @DiamondIntegral.Section3.YinUnmeasuredLiftInput
+#print axioms DiamondIntegral.Section3.YinUnmeasuredLiftInput
+#check @DiamondIntegral.Section3.unmeasuredPositiveIntegral
+#print axioms DiamondIntegral.Section3.unmeasuredPositiveIntegral
+#check @DiamondIntegral.Section3.unmeasuredRingIntegral
+#print axioms DiamondIntegral.Section3.unmeasuredRingIntegral
+#check @DiamondIntegral.Section3.codeSpace
+#print axioms DiamondIntegral.Section3.codeSpace
+#check @DiamondIntegral.Section3.codePreimage
+#print axioms DiamondIntegral.Section3.codePreimage
+#check @DiamondIntegral.Section3.codeDecode
+#print axioms DiamondIntegral.Section3.codeDecode
+#check @DiamondIntegral.Section3.FiniteFamily.codeLift
+#print axioms DiamondIntegral.Section3.FiniteFamily.codeLift
+#check @DiamondIntegral.Section3.FiniteFamily.decode
+#print axioms DiamondIntegral.Section3.FiniteFamily.decode
+#check @DiamondIntegral.Section3.codedGammaBoundary
+#print axioms DiamondIntegral.Section3.codedGammaBoundary
+#check @DiamondIntegral.Section3.completedKernelQuotientEquiv
+#print axioms DiamondIntegral.Section3.completedKernelQuotientEquiv
+#check @DiamondIntegral.Section3.transportedRelationIdeal
+#print axioms DiamondIntegral.Section3.transportedRelationIdeal
+#check @DiamondIntegral.Section3.completionDirectSumForward
+#print axioms DiamondIntegral.Section3.completionDirectSumForward
+#check @DiamondIntegral.Section3.completionDirectSumBackward
+#print axioms DiamondIntegral.Section3.completionDirectSumBackward
+#check @DiamondIntegral.Section3.completionDirectSumEquiv
+#print axioms DiamondIntegral.Section3.completionDirectSumEquiv
+#check @DiamondIntegral.Section3.ringCompletionCongr
+#print axioms DiamondIntegral.Section3.ringCompletionCongr
+#check @DiamondIntegral.Section3.semiringIntegralFromKernel
+#print axioms DiamondIntegral.Section3.semiringIntegralFromKernel
+#check @DiamondIntegral.Section3.additiveCompletionMap
+#print axioms DiamondIntegral.Section3.additiveCompletionMap
+#check @DiamondIntegral.Section3.additiveCompletionFunctor
+#print axioms DiamondIntegral.Section3.additiveCompletionFunctor
+#check @DiamondIntegral.Section3.additiveCompletionHomEquiv
+#print axioms DiamondIntegral.Section3.additiveCompletionHomEquiv
+#check @DiamondIntegral.Section3.additiveCompletionAdjunction
+#print axioms DiamondIntegral.Section3.additiveCompletionAdjunction
+#check @DiamondIntegral.Section3.ringCompletionMap
+#print axioms DiamondIntegral.Section3.ringCompletionMap
+#check @DiamondIntegral.Section3.CompletionTensor
+#print axioms DiamondIntegral.Section3.CompletionTensor
+#check @DiamondIntegral.Section3.completionTensorLeft
+#print axioms DiamondIntegral.Section3.completionTensorLeft
+#check @DiamondIntegral.Section3.completionTensorRight
+#print axioms DiamondIntegral.Section3.completionTensorRight
+#check @DiamondIntegral.Section3.toCompletionTensor
+#print axioms DiamondIntegral.Section3.toCompletionTensor
+#check @DiamondIntegral.Section3.fromCompletionTensorLeft
+#print axioms DiamondIntegral.Section3.fromCompletionTensorLeft
+#check @DiamondIntegral.Section3.fromCompletionTensorRight
+#print axioms DiamondIntegral.Section3.fromCompletionTensorRight
+#check @DiamondIntegral.Section3.fromCompletionTensor
+#print axioms DiamondIntegral.Section3.fromCompletionTensor
+#check @DiamondIntegral.Section3.ringCompletionTensorEquiv
+#print axioms DiamondIntegral.Section3.ringCompletionTensorEquiv
+#check @DiamondIntegral.Section3.groupifiedTensorIso
+#print axioms DiamondIntegral.Section3.groupifiedTensorIso
+#check @DiamondIntegral.Section3.coordinateProductChart
+#print axioms DiamondIntegral.Section3.coordinateProductChart
+#check @DiamondIntegral.Section3.CoproductIsoData
+#print axioms DiamondIntegral.Section3.CoproductIsoData
+#check @DiamondIntegral.Section3.CoproductIsoClasses
+#print axioms DiamondIntegral.Section3.CoproductIsoClasses
+#check @DiamondIntegral.Section3.coproductIsoClass
+#print axioms DiamondIntegral.Section3.coproductIsoClass
+#check @DiamondIntegral.Section3.DefinableBijection.inverseImage
+#print axioms DiamondIntegral.Section3.DefinableBijection.inverseImage
+#check @DiamondIntegral.Section3.DefinableBijection.restrictTargetMap
+#print axioms DiamondIntegral.Section3.DefinableBijection.restrictTargetMap
+#check @DiamondIntegral.Section3.DefinableBijection.restrictTarget
+#print axioms DiamondIntegral.Section3.DefinableBijection.restrictTarget
+#check @DiamondIntegral.Section3.DefinableBijection
+#print axioms DiamondIntegral.Section3.DefinableBijection
+#check @DiamondIntegral.Section3.DefinableBijection.id
+#print axioms DiamondIntegral.Section3.DefinableBijection.id
+#check @DiamondIntegral.Section3.DefinableBijection.comp
+#print axioms DiamondIntegral.Section3.DefinableBijection.comp
+#check @DiamondIntegral.Section3.DefinableBijection.symm
+#print axioms DiamondIntegral.Section3.DefinableBijection.symm
+#check @DiamondIntegral.Section3.IsDefinablePoint
+#print axioms DiamondIntegral.Section3.IsDefinablePoint
+#check @DiamondIntegral.Section3.columnSeparation
+#print axioms DiamondIntegral.Section3.columnSeparation
+#check @DiamondIntegral.Section3.diagonalPolynomialEquiv
+#print axioms DiamondIntegral.Section3.diagonalPolynomialEquiv
+#check @DiamondIntegral.Section3.TorusRationalFunction
+#print axioms DiamondIntegral.Section3.TorusRationalFunction
+#check @DiamondIntegral.Section3.torusRationalVariable
+#print axioms DiamondIntegral.Section3.torusRationalVariable
+#check @DiamondIntegral.Section3.diagonalRationalEquiv
+#print axioms DiamondIntegral.Section3.diagonalRationalEquiv
+#check @DiamondIntegral.Section3.DiagonalWeightsFaithful
+#print axioms DiamondIntegral.Section3.DiagonalWeightsFaithful
+#check @DiamondIntegral.Section3.equalityRatioCharacter
+#print axioms DiamondIntegral.Section3.equalityRatioCharacter
+#check @DiamondIntegral.Section3.equalityActiveCharacters
+#print axioms DiamondIntegral.Section3.equalityActiveCharacters
+#check @DiamondIntegral.Section3.equalityValuePattern
+#print axioms DiamondIntegral.Section3.equalityValuePattern
+#check @DiamondIntegral.Section3.EssentialVFMap.Generic
+#print axioms DiamondIntegral.Section3.EssentialVFMap.Generic
+#check @DiamondIntegral.Section3.EssentialVFMap.id
+#print axioms DiamondIntegral.Section3.EssentialVFMap.id
+#check @DiamondIntegral.Section3.EssentialVFMap.symm
+#print axioms DiamondIntegral.Section3.EssentialVFMap.symm
+#check @DiamondIntegral.Section3.EssentialVFMap.genericFun
+#print axioms DiamondIntegral.Section3.EssentialVFMap.genericFun
+#check @DiamondIntegral.Section3.EssentialVFMap.genericEquiv
+#print axioms DiamondIntegral.Section3.EssentialVFMap.genericEquiv
+#check @DiamondIntegral.Section3.EssentialVFMap.compSource
+#print axioms DiamondIntegral.Section3.EssentialVFMap.compSource
+#check @DiamondIntegral.Section3.EssentialVFMap.compMiddle
+#print axioms DiamondIntegral.Section3.EssentialVFMap.compMiddle
+#check @DiamondIntegral.Section3.EssentialVFMap.comp
+#print axioms DiamondIntegral.Section3.EssentialVFMap.comp
+#check @DiamondIntegral.Section3.EssentialVFMap
+#print axioms DiamondIntegral.Section3.EssentialVFMap
+#check @DiamondIntegral.Section3.EssentialVFMap.widen
+#print axioms DiamondIntegral.Section3.EssentialVFMap.widen
+#check @DiamondIntegral.Section3.EssentialVFMap.Preserves
+#print axioms DiamondIntegral.Section3.EssentialVFMap.Preserves
+#check @DiamondIntegral.Section3.familyCodeCoprodInl
+#print axioms DiamondIntegral.Section3.familyCodeCoprodInl
+#check @DiamondIntegral.Section3.familyCodeCoprodInr
+#print axioms DiamondIntegral.Section3.familyCodeCoprodInr
+#check @DiamondIntegral.Section3.familyCodeCoprodBridge
+#print axioms DiamondIntegral.Section3.familyCodeCoprodBridge
+#check @DiamondIntegral.Section3.familyCoprodInl
+#print axioms DiamondIntegral.Section3.familyCoprodInl
+#check @DiamondIntegral.Section3.familyCoprodInr
+#print axioms DiamondIntegral.Section3.familyCoprodInr
+#check @DiamondIntegral.Section3.familyCoprodDecode
+#print axioms DiamondIntegral.Section3.familyCoprodDecode
+#check @DiamondIntegral.Section3.familyCoprodEncode
+#print axioms DiamondIntegral.Section3.familyCoprodEncode
+#check @DiamondIntegral.Section3.familyCoprodEquiv
+#print axioms DiamondIntegral.Section3.familyCoprodEquiv
+#check @DiamondIntegral.Section3.familyCoprodMapEquiv
+#print axioms DiamondIntegral.Section3.familyCoprodMapEquiv
+#check @DiamondIntegral.Section3.FamilyBijection.coprod
+#print axioms DiamondIntegral.Section3.FamilyBijection.coprod
+#check @DiamondIntegral.Section3.familyCodeRepresentative
+#print axioms DiamondIntegral.Section3.familyCodeRepresentative
+#check @DiamondIntegral.Section3.familyDescendedMap
+#print axioms DiamondIntegral.Section3.familyDescendedMap
+#check @DiamondIntegral.Section3.FamilyBijection.descend
+#print axioms DiamondIntegral.Section3.FamilyBijection.descend
+#check @DiamondIntegral.Section3.familyCoprodDropEmpty
+#print axioms DiamondIntegral.Section3.familyCoprodDropEmpty
+#check @DiamondIntegral.Section3.familyCoprodDropEmptyEquiv
+#print axioms DiamondIntegral.Section3.familyCoprodDropEmptyEquiv
+#check @DiamondIntegral.Section3.familyCoprodEmptyRightBijection
+#print axioms DiamondIntegral.Section3.familyCoprodEmptyRightBijection
+#check @DiamondIntegral.Section3.FamilyMap
+#print axioms DiamondIntegral.Section3.FamilyMap
+#check @DiamondIntegral.Section3.FamilyMap.id
+#print axioms DiamondIntegral.Section3.FamilyMap.id
+#check @DiamondIntegral.Section3.FamilyMap.comp
+#print axioms DiamondIntegral.Section3.FamilyMap.comp
+#check @DiamondIntegral.Section3.FamilyBijection.toFamilyMap
+#print axioms DiamondIntegral.Section3.FamilyBijection.toFamilyMap
+#check @DiamondIntegral.Section3.FiniteFamily.withPieces
+#print axioms DiamondIntegral.Section3.FiniteFamily.withPieces
+#check @DiamondIntegral.Section3.familyPartitionTag
+#print axioms DiamondIntegral.Section3.familyPartitionTag
+#check @DiamondIntegral.Section3.familyPartitionPieceMap
+#print axioms DiamondIntegral.Section3.familyPartitionPieceMap
+#check @DiamondIntegral.Section3.familyPartitionMap
+#print axioms DiamondIntegral.Section3.familyPartitionMap
+#check @DiamondIntegral.Section3.familyPartitionBijection
+#print axioms DiamondIntegral.Section3.familyPartitionBijection
+#check @DiamondIntegral.Section3.FamilyBijection.pieces
+#print axioms DiamondIntegral.Section3.FamilyBijection.pieces
+#check @DiamondIntegral.Section3.familySigmaProductEquiv
+#print axioms DiamondIntegral.Section3.familySigmaProductEquiv
+#check @DiamondIntegral.Section3.FiniteFamily.coprod
+#print axioms DiamondIntegral.Section3.FiniteFamily.coprod
+#check @DiamondIntegral.Section3.familyTaggedMap
+#print axioms DiamondIntegral.Section3.familyTaggedMap
+#check @DiamondIntegral.Section3.familyBijectionOfTagEquiv
+#print axioms DiamondIntegral.Section3.familyBijectionOfTagEquiv
+#check @DiamondIntegral.Section3.relationColumn
+#print axioms DiamondIntegral.Section3.relationColumn
+#check @DiamondIntegral.Section3.FiniteFamily
+#print axioms DiamondIntegral.Section3.FiniteFamily
+#check @DiamondIntegral.Section3.FiniteFamily.Carrier
+#print axioms DiamondIntegral.Section3.FiniteFamily.Carrier
+#check @DiamondIntegral.Section3.familyGraph
+#print axioms DiamondIntegral.Section3.familyGraph
+#check @DiamondIntegral.Section3.FamilyDefinable
+#print axioms DiamondIntegral.Section3.FamilyDefinable
+#check @DiamondIntegral.Section3.FamilyBijection
+#print axioms DiamondIntegral.Section3.FamilyBijection
+#check @DiamondIntegral.Section3.FamilyBijection.id
+#print axioms DiamondIntegral.Section3.FamilyBijection.id
+#check @DiamondIntegral.Section3.FamilyBijection.comp
+#print axioms DiamondIntegral.Section3.FamilyBijection.comp
+#check @DiamondIntegral.Section3.FamilyBijection.symm
+#print axioms DiamondIntegral.Section3.FamilyBijection.symm
+#check @DiamondIntegral.Section3.finiteGammaDirectSumInvariant
+#print axioms DiamondIntegral.Section3.finiteGammaDirectSumInvariant
+#check @DiamondIntegral.Section3.finiteGammaPresentationToDirectSum
+#print axioms DiamondIntegral.Section3.finiteGammaPresentationToDirectSum
+#check @DiamondIntegral.Section3.finiteGammaDirectSumToPresentationAdd
+#print axioms DiamondIntegral.Section3.finiteGammaDirectSumToPresentationAdd
+#check @DiamondIntegral.Section3.finiteGammaDirectSumToPresentation
+#print axioms DiamondIntegral.Section3.finiteGammaDirectSumToPresentation
+#check @DiamondIntegral.Section3.finiteGammaSemiringEquivDirectSum
+#print axioms DiamondIntegral.Section3.finiteGammaSemiringEquivDirectSum
+#check @DiamondIntegral.Section3.finiteGammaRepresentative
+#print axioms DiamondIntegral.Section3.finiteGammaRepresentative
+#check @DiamondIntegral.Section3.finiteGammaClassMul
+#print axioms DiamondIntegral.Section3.finiteGammaClassMul
+#check @DiamondIntegral.Section3.FiniteGammaDirectSum
+#print axioms DiamondIntegral.Section3.FiniteGammaDirectSum
+#check @DiamondIntegral.Section3.finiteGammaDirectSumToGamma
+#print axioms DiamondIntegral.Section3.finiteGammaDirectSumToGamma
+#check @DiamondIntegral.Section3.finiteGammaDirectSumClass
+#print axioms DiamondIntegral.Section3.finiteGammaDirectSumClass
+#check @DiamondIntegral.Section3.finiteGammaGradedInclusion
+#print axioms DiamondIntegral.Section3.finiteGammaGradedInclusion
+#check @DiamondIntegral.Section3.FiniteGammaObject.coprod
+#print axioms DiamondIntegral.Section3.FiniteGammaObject.coprod
+#check @DiamondIntegral.Section3.FiniteGammaObject.empty
+#print axioms DiamondIntegral.Section3.FiniteGammaObject.empty
+#check @DiamondIntegral.Section3.FiniteGammaObject.restrict
+#print axioms DiamondIntegral.Section3.FiniteGammaObject.restrict
+#check @DiamondIntegral.Section3.finiteGammaPresentation
+#print axioms DiamondIntegral.Section3.finiteGammaPresentation
+#check @DiamondIntegral.Section3.FiniteGammaKPlus
+#print axioms DiamondIntegral.Section3.FiniteGammaKPlus
+#check @DiamondIntegral.Section3.finiteGammaClass
+#print axioms DiamondIntegral.Section3.finiteGammaClass
+#check @DiamondIntegral.Section3.finiteGammaToGammaKPlus
+#print axioms DiamondIntegral.Section3.finiteGammaToGammaKPlus
+#check @DiamondIntegral.Section3.finiteGammaToRESKPlus
+#print axioms DiamondIntegral.Section3.finiteGammaToRESKPlus
+#check @DiamondIntegral.Section3.GradedFiniteGammaObject
+#print axioms DiamondIntegral.Section3.GradedFiniteGammaObject
+#check @DiamondIntegral.Section3.gradedFiniteGammaIso
+#print axioms DiamondIntegral.Section3.gradedFiniteGammaIso
+#check @DiamondIntegral.Section3.gradedFiniteGammaScissor
+#print axioms DiamondIntegral.Section3.gradedFiniteGammaScissor
+#check @DiamondIntegral.Section3.finiteGammaSemiringPresentation
+#print axioms DiamondIntegral.Section3.finiteGammaSemiringPresentation
+#check @DiamondIntegral.Section3.FiniteGammaPositiveSemiring
+#print axioms DiamondIntegral.Section3.FiniteGammaPositiveSemiring
+#check @DiamondIntegral.Section3.FiniteGammaGrothendieckRing
+#print axioms DiamondIntegral.Section3.FiniteGammaGrothendieckRing
+#check @DiamondIntegral.Section3.finiteGammaSemiringClass
+#print axioms DiamondIntegral.Section3.finiteGammaSemiringClass
+#check @DiamondIntegral.Section3.finiteGammaKPlusToSemiring
+#print axioms DiamondIntegral.Section3.finiteGammaKPlusToSemiring
+#check @DiamondIntegral.Section3.finiteGammaToGammaInvariant
+#print axioms DiamondIntegral.Section3.finiteGammaToGammaInvariant
+#check @DiamondIntegral.Section3.finiteGammaToGammaSemiring
+#print axioms DiamondIntegral.Section3.finiteGammaToGammaSemiring
+#check @DiamondIntegral.Section3.finiteGammaToRESInvariant
+#print axioms DiamondIntegral.Section3.finiteGammaToRESInvariant
+#check @DiamondIntegral.Section3.finiteGammaToRESSemiring
+#print axioms DiamondIntegral.Section3.finiteGammaToRESSemiring
+#check @DiamondIntegral.Section3.resToRVSemiring
+#print axioms DiamondIntegral.Section3.resToRVSemiring
+#check @DiamondIntegral.Section3.gammaUniversalCodePredicate
+#print axioms DiamondIntegral.Section3.gammaUniversalCodePredicate
+#check @DiamondIntegral.Section3.gammaUniqueScalar
+#print axioms DiamondIntegral.Section3.gammaUniqueScalar
+#check @DiamondIntegral.Section3.fullGammaFunctionMap
+#print axioms DiamondIntegral.Section3.fullGammaFunctionMap
+#check @DiamondIntegral.Section3.FullGammaFunction
+#print axioms DiamondIntegral.Section3.FullGammaFunction
+#check @DiamondIntegral.Section3.FullGammaPartialFunction
+#print axioms DiamondIntegral.Section3.FullGammaPartialFunction
+#check @DiamondIntegral.Section3.FullGammaPartialFunction.domain
+#print axioms DiamondIntegral.Section3.FullGammaPartialFunction.domain
+#check @DiamondIntegral.Section3.FullGammaPartialFunction.eval
+#print axioms DiamondIntegral.Section3.FullGammaPartialFunction.eval
+#check @DiamondIntegral.Section3.gammaPowerSetOfFull
+#print axioms DiamondIntegral.Section3.gammaPowerSetOfFull
+#check @DiamondIntegral.Section3.adjoinGammaTuple
+#print axioms DiamondIntegral.Section3.adjoinGammaTuple
+#check @DiamondIntegral.Section3.FullRawDefinable
+#print axioms DiamondIntegral.Section3.FullRawDefinable
+#check @DiamondIntegral.Section3.GammaIntegralAffineFormula
+#print axioms DiamondIntegral.Section3.GammaIntegralAffineFormula
+#check @DiamondIntegral.Section3.GammaIntegralAffineFormula.eval
+#print axioms DiamondIntegral.Section3.GammaIntegralAffineFormula.eval
+#check @DiamondIntegral.Section3.GammaIntegralAffineFormula.Unimodular
+#print axioms DiamondIntegral.Section3.GammaIntegralAffineFormula.Unimodular
+#check @DiamondIntegral.Section3.GammaPiecewiseGLZ
+#print axioms DiamondIntegral.Section3.GammaPiecewiseGLZ
+#check @DiamondIntegral.Section3.GammaUnaryPiecewiseIntegralAffine
+#print axioms DiamondIntegral.Section3.GammaUnaryPiecewiseIntegralAffine
+#check @DiamondIntegral.Section3.YinGammaAffineInput
+#print axioms DiamondIntegral.Section3.YinGammaAffineInput
+#check @DiamondIntegral.Section3.gammaHomOfPiecewiseGLZ
+#print axioms DiamondIntegral.Section3.gammaHomOfPiecewiseGLZ
+#check @DiamondIntegral.Section3.gammaAffineValue
+#print axioms DiamondIntegral.Section3.gammaAffineValue
+#check @DiamondIntegral.Section3.gammaGroundGammaAffinePreimage
+#print axioms DiamondIntegral.Section3.gammaGroundGammaAffinePreimage
+#check @DiamondIntegral.Section3.GammaObject
+#print axioms DiamondIntegral.Section3.GammaObject
+#check @DiamondIntegral.Section3.GammaHom
+#print axioms DiamondIntegral.Section3.GammaHom
+#check @DiamondIntegral.Section3.GammaHom.id
+#print axioms DiamondIntegral.Section3.GammaHom.id
+#check @DiamondIntegral.Section3.GammaHom.comp
+#print axioms DiamondIntegral.Section3.GammaHom.comp
+#check @DiamondIntegral.Section3.GammaHom.symm
+#print axioms DiamondIntegral.Section3.GammaHom.symm
+#check @DiamondIntegral.Section3.finiteGammaProperty
+#print axioms DiamondIntegral.Section3.finiteGammaProperty
+#check @DiamondIntegral.Section3.FiniteGammaObject
+#print axioms DiamondIntegral.Section3.FiniteGammaObject
+#check @DiamondIntegral.Section3.GammaHom.ofCodeBijection
+#print axioms DiamondIntegral.Section3.GammaHom.ofCodeBijection
+#check @DiamondIntegral.Section3.measuredGammaHomOfCodes
+#print axioms DiamondIntegral.Section3.measuredGammaHomOfCodes
+#check @DiamondIntegral.Section3.gammaRVCodeForm
+#print axioms DiamondIntegral.Section3.gammaRVCodeForm
+#check @DiamondIntegral.Section3.gammaCodeInclusion
+#print axioms DiamondIntegral.Section3.gammaCodeInclusion
+#check @DiamondIntegral.Section3.gammaRVCodeInclusion
+#print axioms DiamondIntegral.Section3.gammaRVCodeInclusion
+#check @DiamondIntegral.Section3.GammaCodeObject
+#print axioms DiamondIntegral.Section3.GammaCodeObject
+#check @DiamondIntegral.Section3.GammaCodeMap
+#print axioms DiamondIntegral.Section3.GammaCodeMap
+#check @DiamondIntegral.Section3.GammaCodeObject.product
+#print axioms DiamondIntegral.Section3.GammaCodeObject.product
+#check @DiamondIntegral.Section3.GammaCodeObject.unit
+#print axioms DiamondIntegral.Section3.GammaCodeObject.unit
+#check @DiamondIntegral.Section3.gammaCodeBijectionOfIso
+#print axioms DiamondIntegral.Section3.gammaCodeBijectionOfIso
+#check @DiamondIntegral.Section3.gammaHomOfCodeIso
+#print axioms DiamondIntegral.Section3.gammaHomOfCodeIso
+#check @DiamondIntegral.Section3.gammaCodeProductSwap
+#print axioms DiamondIntegral.Section3.gammaCodeProductSwap
+#check @DiamondIntegral.Section3.gammaCodeProductCommIso
+#print axioms DiamondIntegral.Section3.gammaCodeProductCommIso
+#check @DiamondIntegral.Section3.gammaCodeProductAssoc
+#print axioms DiamondIntegral.Section3.gammaCodeProductAssoc
+#check @DiamondIntegral.Section3.gammaCodeProductAssocInv
+#print axioms DiamondIntegral.Section3.gammaCodeProductAssocInv
+#check @DiamondIntegral.Section3.gammaCodeProductAssocIso
+#print axioms DiamondIntegral.Section3.gammaCodeProductAssocIso
+#check @DiamondIntegral.Section3.gammaCodePairFunction
+#print axioms DiamondIntegral.Section3.gammaCodePairFunction
+#check @DiamondIntegral.Section3.gammaCodePairFamilyMap
+#print axioms DiamondIntegral.Section3.gammaCodePairFamilyMap
+#check @DiamondIntegral.Section3.gammaCodeProductPair
+#print axioms DiamondIntegral.Section3.gammaCodeProductPair
+#check @DiamondIntegral.Section3.gammaProductLeftCodePieceMap
+#print axioms DiamondIntegral.Section3.gammaProductLeftCodePieceMap
+#check @DiamondIntegral.Section3.gammaProductRightCodePieceMap
+#print axioms DiamondIntegral.Section3.gammaProductRightCodePieceMap
+#check @DiamondIntegral.Section3.gammaProductLeftCodeFamilyMap
+#print axioms DiamondIntegral.Section3.gammaProductLeftCodeFamilyMap
+#check @DiamondIntegral.Section3.gammaProductRightCodeFamilyMap
+#print axioms DiamondIntegral.Section3.gammaProductRightCodeFamilyMap
+#check @DiamondIntegral.Section3.gammaCodeProductFst
+#print axioms DiamondIntegral.Section3.gammaCodeProductFst
+#check @DiamondIntegral.Section3.gammaCodeProductSnd
+#print axioms DiamondIntegral.Section3.gammaCodeProductSnd
+#check @DiamondIntegral.Section3.gammaEmptyCode
+#print axioms DiamondIntegral.Section3.gammaEmptyCode
+#check @DiamondIntegral.Section3.gammaUnitCode
+#print axioms DiamondIntegral.Section3.gammaUnitCode
+#check @DiamondIntegral.Section3.gammaToUnitPieceMap
+#print axioms DiamondIntegral.Section3.gammaToUnitPieceMap
+#check @DiamondIntegral.Section3.gammaCodeToUnit
+#print axioms DiamondIntegral.Section3.gammaCodeToUnit
+#check @DiamondIntegral.Section3.gammaCodeProductRightUnitIso
+#print axioms DiamondIntegral.Section3.gammaCodeProductRightUnitIso
+#check @DiamondIntegral.Section3.gammaCodeLeftMap
+#print axioms DiamondIntegral.Section3.gammaCodeLeftMap
+#check @DiamondIntegral.Section3.gammaCodeRightMap
+#print axioms DiamondIntegral.Section3.gammaCodeRightMap
+#check @DiamondIntegral.Section3.gammaCoprodLeftCut
+#print axioms DiamondIntegral.Section3.gammaCoprodLeftCut
+#check @DiamondIntegral.Section3.gammaCoprodLeftCutIso
+#print axioms DiamondIntegral.Section3.gammaCoprodLeftCutIso
+#check @DiamondIntegral.Section3.gammaCoprodRightCutIso
+#print axioms DiamondIntegral.Section3.gammaCoprodRightCutIso
+#check @DiamondIntegral.Section3.GammaHom.coprod
+#print axioms DiamondIntegral.Section3.GammaHom.coprod
+#check @DiamondIntegral.Section3.gammaCoproductIsoData
+#print axioms DiamondIntegral.Section3.gammaCoproductIsoData
+#check @DiamondIntegral.Section3.GammaIsoClasses
+#print axioms DiamondIntegral.Section3.GammaIsoClasses
+#check @DiamondIntegral.Section3.gammaIsoClass
+#print axioms DiamondIntegral.Section3.gammaIsoClass
+#check @DiamondIntegral.Section3.gammaVFCoordinateFibre
+#print axioms DiamondIntegral.Section3.gammaVFCoordinateFibre
+#check @DiamondIntegral.Section3.gammaFiniteVFCode
+#print axioms DiamondIntegral.Section3.gammaFiniteVFCode
+#check @DiamondIntegral.Section3.gammaFiniteVFCodeRelation
+#print axioms DiamondIntegral.Section3.gammaFiniteVFCodeRelation
+#check @DiamondIntegral.Section3.gammaMultiplyMap
+#print axioms DiamondIntegral.Section3.gammaMultiplyMap
+#check @DiamondIntegral.Section3.gammaOneForm
+#print axioms DiamondIntegral.Section3.gammaOneForm
+#check @DiamondIntegral.Section3.GammaVolumeForm.mul
+#print axioms DiamondIntegral.Section3.GammaVolumeForm.mul
+#check @DiamondIntegral.Section3.GammaTupleIndependentOver
+#print axioms DiamondIntegral.Section3.GammaTupleIndependentOver
+#check @DiamondIntegral.Section3.GammaGroundCharacterHyperplane
+#print axioms DiamondIntegral.Section3.GammaGroundCharacterHyperplane
+#check @DiamondIntegral.Section3.GammaGroundCharacterHyperplane.carrier
+#print axioms DiamondIntegral.Section3.GammaGroundCharacterHyperplane.carrier
+#check @DiamondIntegral.Section3.GammaGroundCharacterHyperplane.defSet
+#print axioms DiamondIntegral.Section3.GammaGroundCharacterHyperplane.defSet
+#check @DiamondIntegral.Section3.gammaDirectSumInvariant
+#print axioms DiamondIntegral.Section3.gammaDirectSumInvariant
+#check @DiamondIntegral.Section3.gammaPresentationToDirectSum
+#print axioms DiamondIntegral.Section3.gammaPresentationToDirectSum
+#check @DiamondIntegral.Section3.gammaDirectSumToPresentationAdd
+#print axioms DiamondIntegral.Section3.gammaDirectSumToPresentationAdd
+#check @DiamondIntegral.Section3.gammaDirectSumToPresentation
+#print axioms DiamondIntegral.Section3.gammaDirectSumToPresentation
+#check @DiamondIntegral.Section3.gammaSemiringEquivDirectSum
+#print axioms DiamondIntegral.Section3.gammaSemiringEquivDirectSum
+#check @DiamondIntegral.Section3.GammaDirectSum
+#print axioms DiamondIntegral.Section3.GammaDirectSum
+#check @DiamondIntegral.Section3.gammaDirectSumClass
+#print axioms DiamondIntegral.Section3.gammaDirectSumClass
+#check @DiamondIntegral.Section3.OriginalGroundAffineRVFormula
+#print axioms DiamondIntegral.Section3.OriginalGroundAffineRVFormula
+#check @DiamondIntegral.Section3.gammaGroundAffineValueMap
+#print axioms DiamondIntegral.Section3.gammaGroundAffineValueMap
+#check @DiamondIntegral.Section3.gammaGroundAffineAgreement
+#print axioms DiamondIntegral.Section3.gammaGroundAffineAgreement
+#check @DiamondIntegral.Section3.GammaGroundAnnularRadius
+#print axioms DiamondIntegral.Section3.GammaGroundAnnularRadius
+#check @DiamondIntegral.Section3.gammaGroundMeasuredAnnularElement
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredAnnularElement
+#check @DiamondIntegral.Section3.GammaGroundAnnularGenerator
+#print axioms DiamondIntegral.Section3.GammaGroundAnnularGenerator
+#check @DiamondIntegral.Section3.GammaGroundAnnularGenerator.element
+#print axioms DiamondIntegral.Section3.GammaGroundAnnularGenerator.element
+#check @DiamondIntegral.Section3.gammaGroundAnnularIdeal
+#print axioms DiamondIntegral.Section3.gammaGroundAnnularIdeal
+#check @DiamondIntegral.Section3.GammaGroundBijection.prodMap
+#print axioms DiamondIntegral.Section3.GammaGroundBijection.prodMap
+#check @DiamondIntegral.Section3.GammaGroundBijection.inverseImage
+#print axioms DiamondIntegral.Section3.GammaGroundBijection.inverseImage
+#check @DiamondIntegral.Section3.GammaGroundBijection.restrictTargetMap
+#print axioms DiamondIntegral.Section3.GammaGroundBijection.restrictTargetMap
+#check @DiamondIntegral.Section3.GammaGroundBijection.restrictTarget
+#print axioms DiamondIntegral.Section3.GammaGroundBijection.restrictTarget
+#check @DiamondIntegral.Section3.GammaGroundMap.inverse
+#print axioms DiamondIntegral.Section3.GammaGroundMap.inverse
+#check @DiamondIntegral.Section3.GammaGroundBijection
+#print axioms DiamondIntegral.Section3.GammaGroundBijection
+#check @DiamondIntegral.Section3.GammaGroundBijection.id
+#print axioms DiamondIntegral.Section3.GammaGroundBijection.id
+#check @DiamondIntegral.Section3.GammaGroundBijection.comp
+#print axioms DiamondIntegral.Section3.GammaGroundBijection.comp
+#check @DiamondIntegral.Section3.GammaGroundBijection.symm
+#print axioms DiamondIntegral.Section3.GammaGroundBijection.symm
+#check @DiamondIntegral.Section3.gammaGroundBooleanAtom
+#print axioms DiamondIntegral.Section3.gammaGroundBooleanAtom
+#check @DiamondIntegral.Section3.GammaGroundBijection.ofCarrierEq
+#print axioms DiamondIntegral.Section3.GammaGroundBijection.ofCarrierEq
+#check @DiamondIntegral.Section3.gammaCodeCharacterTwist
+#print axioms DiamondIntegral.Section3.gammaCodeCharacterTwist
+#check @DiamondIntegral.Section3.gammaGroundChartTransitionDomain
+#print axioms DiamondIntegral.Section3.gammaGroundChartTransitionDomain
+#check @DiamondIntegral.Section3.gammaGroundChartTransitionMap
+#print axioms DiamondIntegral.Section3.gammaGroundChartTransitionMap
+#check @DiamondIntegral.Section3.YinGammaGroundBoundedUnmeasuredLiftInput
+#print axioms DiamondIntegral.Section3.YinGammaGroundBoundedUnmeasuredLiftInput
+#check @DiamondIntegral.Section3.gammaGroundBoundedUnmeasuredIntegral
+#print axioms DiamondIntegral.Section3.gammaGroundBoundedUnmeasuredIntegral
+#check @DiamondIntegral.Section3.YinGammaGroundMeasuredLiftInput
+#print axioms DiamondIntegral.Section3.YinGammaGroundMeasuredLiftInput
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVFixedSpecialHom
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVFixedSpecialHom
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVFixedSpecialCongruence
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVFixedSpecialCongruence
+#check @DiamondIntegral.Section3.YinGammaGroundDegreeMeasuredLiftInput
+#print axioms DiamondIntegral.Section3.YinGammaGroundDegreeMeasuredLiftInput
+#check @DiamondIntegral.Section3.gammaGroundMeasuredPositiveIntegral
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredPositiveIntegral
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRingIntegral
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRingIntegral
+#check @DiamondIntegral.Section3.gammaGroundDegreeMeasuredIntegral
+#print axioms DiamondIntegral.Section3.gammaGroundDegreeMeasuredIntegral
+#check @DiamondIntegral.Section3.gammaGroundObjectLiftFinite
+#print axioms DiamondIntegral.Section3.gammaGroundObjectLiftFinite
+#check @DiamondIntegral.Section3.YinGammaGroundUnmeasuredLiftInput
+#print axioms DiamondIntegral.Section3.YinGammaGroundUnmeasuredLiftInput
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredPositiveIntegral
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredPositiveIntegral
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredRingIntegral
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredRingIntegral
+#check @DiamondIntegral.Section3.gammaGroundCodePreimage
+#print axioms DiamondIntegral.Section3.gammaGroundCodePreimage
+#check @DiamondIntegral.Section3.gammaGroundCodeDecode
+#print axioms DiamondIntegral.Section3.gammaGroundCodeDecode
+#check @DiamondIntegral.Section3.GammaGroundFiniteFamily.codeLift
+#print axioms DiamondIntegral.Section3.GammaGroundFiniteFamily.codeLift
+#check @DiamondIntegral.Section3.GammaGroundFiniteFamily.decode
+#print axioms DiamondIntegral.Section3.GammaGroundFiniteFamily.decode
+#check @DiamondIntegral.Section3.GammaGroundCoefficientClassification
+#print axioms DiamondIntegral.Section3.GammaGroundCoefficientClassification
+#check @DiamondIntegral.Section3.GammaGroundComposableRealization
+#print axioms DiamondIntegral.Section3.GammaGroundComposableRealization
+#check @DiamondIntegral.Section3.GammaGroundComposableRealization.first
+#print axioms DiamondIntegral.Section3.GammaGroundComposableRealization.first
+#check @DiamondIntegral.Section3.GammaGroundComposableRealization.second
+#print axioms DiamondIntegral.Section3.GammaGroundComposableRealization.second
+#check @DiamondIntegral.Section3.GammaGroundMap.const
+#print axioms DiamondIntegral.Section3.GammaGroundMap.const
+#check @DiamondIntegral.Section3.GammaGroundContext
+#print axioms DiamondIntegral.Section3.GammaGroundContext
+#check @DiamondIntegral.Section3.GammaGroundContext.base
+#print axioms DiamondIntegral.Section3.GammaGroundContext.base
+#check @DiamondIntegral.Section3.GammaGroundDefSet.ofReal
+#print axioms DiamondIntegral.Section3.GammaGroundDefSet.ofReal
+#check @DiamondIntegral.Section3.GammaGroundDefSet.empty
+#print axioms DiamondIntegral.Section3.GammaGroundDefSet.empty
+#check @DiamondIntegral.Section3.GammaGroundDefSet.univ
+#print axioms DiamondIntegral.Section3.GammaGroundDefSet.univ
+#check @DiamondIntegral.Section3.GammaGroundDefSet.inter
+#print axioms DiamondIntegral.Section3.GammaGroundDefSet.inter
+#check @DiamondIntegral.Section3.GammaGroundDefSet.union
+#print axioms DiamondIntegral.Section3.GammaGroundDefSet.union
+#check @DiamondIntegral.Section3.GammaGroundDefSet.compl
+#print axioms DiamondIntegral.Section3.GammaGroundDefSet.compl
+#check @DiamondIntegral.Section3.GammaGroundDefSet.sdiff
+#print axioms DiamondIntegral.Section3.GammaGroundDefSet.sdiff
+#check @DiamondIntegral.Section3.gammaGroundDefinablePointBijection
+#print axioms DiamondIntegral.Section3.gammaGroundDefinablePointBijection
+#check @DiamondIntegral.Section3.GammaGroundDerivativeLogic.mixedJacobianCodes
+#print axioms DiamondIntegral.Section3.GammaGroundDerivativeLogic.mixedJacobianCodes
+#check @DiamondIntegral.Section3.GammaGroundBijection.ofEmpty
+#print axioms DiamondIntegral.Section3.GammaGroundBijection.ofEmpty
+#check @DiamondIntegral.Section3.GammaGroundMap.equalizer
+#print axioms DiamondIntegral.Section3.GammaGroundMap.equalizer
+#check @DiamondIntegral.Section3.GammaGroundEssentialGerm
+#print axioms DiamondIntegral.Section3.GammaGroundEssentialGerm
+#check @DiamondIntegral.Section3.gammaGroundEssentialOfRepresentative
+#print axioms DiamondIntegral.Section3.gammaGroundEssentialOfRepresentative
+#check @DiamondIntegral.Section3.gammaGroundEssentialAESetoid
+#print axioms DiamondIntegral.Section3.gammaGroundEssentialAESetoid
+#check @DiamondIntegral.Section3.gammaGroundEssentialQuotientEquiv
+#print axioms DiamondIntegral.Section3.gammaGroundEssentialQuotientEquiv
+#check @DiamondIntegral.Section3.GammaGroundEssentialDomain
+#print axioms DiamondIntegral.Section3.GammaGroundEssentialDomain
+#check @DiamondIntegral.Section3.gammaGroundEssentialGroupoid
+#print axioms DiamondIntegral.Section3.gammaGroundEssentialGroupoid
+#check @DiamondIntegral.Section3.GammaGroundEssentialVFMap.compSource
+#print axioms DiamondIntegral.Section3.GammaGroundEssentialVFMap.compSource
+#check @DiamondIntegral.Section3.GammaGroundEssentialVFMap.compMiddle
+#print axioms DiamondIntegral.Section3.GammaGroundEssentialVFMap.compMiddle
+#check @DiamondIntegral.Section3.GammaGroundEssentialVFMap.comp
+#print axioms DiamondIntegral.Section3.GammaGroundEssentialVFMap.comp
+#check @DiamondIntegral.Section3.GammaGroundEssentialVFMap
+#print axioms DiamondIntegral.Section3.GammaGroundEssentialVFMap
+#check @DiamondIntegral.Section3.GammaGroundEssentialVFMap.id
+#print axioms DiamondIntegral.Section3.GammaGroundEssentialVFMap.id
+#check @DiamondIntegral.Section3.GammaGroundEssentialVFMap.symm
+#print axioms DiamondIntegral.Section3.GammaGroundEssentialVFMap.symm
+#check @DiamondIntegral.Section3.GammaGroundEssentialVFMap.genericFun
+#print axioms DiamondIntegral.Section3.GammaGroundEssentialVFMap.genericFun
+#check @DiamondIntegral.Section3.GammaGroundEssentialVFMap.genericEquiv
+#print axioms DiamondIntegral.Section3.GammaGroundEssentialVFMap.genericEquiv
+#check @DiamondIntegral.Section3.GammaGroundEssentialVFMap.PreservesGeneric
+#print axioms DiamondIntegral.Section3.GammaGroundEssentialVFMap.PreservesGeneric
+#check @DiamondIntegral.Section3.GammaGroundEssentialVFMap.restrictSource
+#print axioms DiamondIntegral.Section3.GammaGroundEssentialVFMap.restrictSource
+#check @DiamondIntegral.Section3.GammaGroundFamilyBijection.branchBijection
+#print axioms DiamondIntegral.Section3.GammaGroundFamilyBijection.branchBijection
+#check @DiamondIntegral.Section3.GammaGroundFamilyMap.branchMap
+#print axioms DiamondIntegral.Section3.GammaGroundFamilyMap.branchMap
+#check @DiamondIntegral.Section3.GammaGroundFamilyMap.branchGraph
+#print axioms DiamondIntegral.Section3.GammaGroundFamilyMap.branchGraph
+#check @DiamondIntegral.Section3.GammaGroundFamilyMap.branchSource
+#print axioms DiamondIntegral.Section3.GammaGroundFamilyMap.branchSource
+#check @DiamondIntegral.Section3.gammaGroundFamilyCodeCoprodInl
+#print axioms DiamondIntegral.Section3.gammaGroundFamilyCodeCoprodInl
+#check @DiamondIntegral.Section3.gammaGroundFamilyCodeCoprodInr
+#print axioms DiamondIntegral.Section3.gammaGroundFamilyCodeCoprodInr
+#check @DiamondIntegral.Section3.gammaGroundFamilyCodeCoprodBridge
+#print axioms DiamondIntegral.Section3.gammaGroundFamilyCodeCoprodBridge
+#check @DiamondIntegral.Section3.gammaGroundFamilyCoprodInl
+#print axioms DiamondIntegral.Section3.gammaGroundFamilyCoprodInl
+#check @DiamondIntegral.Section3.gammaGroundFamilyCoprodInr
+#print axioms DiamondIntegral.Section3.gammaGroundFamilyCoprodInr
+#check @DiamondIntegral.Section3.gammaGroundFamilyCoprodDecode
+#print axioms DiamondIntegral.Section3.gammaGroundFamilyCoprodDecode
+#check @DiamondIntegral.Section3.gammaGroundFamilyCoprodEncode
+#print axioms DiamondIntegral.Section3.gammaGroundFamilyCoprodEncode
+#check @DiamondIntegral.Section3.gammaGroundFamilyCoprodEquiv
+#print axioms DiamondIntegral.Section3.gammaGroundFamilyCoprodEquiv
+#check @DiamondIntegral.Section3.gammaGroundFamilyCoprodMapEquiv
+#print axioms DiamondIntegral.Section3.gammaGroundFamilyCoprodMapEquiv
+#check @DiamondIntegral.Section3.GammaGroundFamilyBijection.coprod
+#print axioms DiamondIntegral.Section3.GammaGroundFamilyBijection.coprod
+#check @DiamondIntegral.Section3.gammaGroundFamilyCodeRepresentative
+#print axioms DiamondIntegral.Section3.gammaGroundFamilyCodeRepresentative
+#check @DiamondIntegral.Section3.gammaGroundFamilyDescendedMap
+#print axioms DiamondIntegral.Section3.gammaGroundFamilyDescendedMap
+#check @DiamondIntegral.Section3.GammaGroundFamilyBijection.descend
+#print axioms DiamondIntegral.Section3.GammaGroundFamilyBijection.descend
+#check @DiamondIntegral.Section3.gammaGroundFamilyCoprodDropEmpty
+#print axioms DiamondIntegral.Section3.gammaGroundFamilyCoprodDropEmpty
+#check @DiamondIntegral.Section3.gammaGroundFamilyCoprodDropEmptyEquiv
+#print axioms DiamondIntegral.Section3.gammaGroundFamilyCoprodDropEmptyEquiv
+#check @DiamondIntegral.Section3.gammaGroundFamilyCoprodEmptyRightBijection
+#print axioms DiamondIntegral.Section3.gammaGroundFamilyCoprodEmptyRightBijection
+#check @DiamondIntegral.Section3.GammaGroundFamilyMap.branchEqualizer
+#print axioms DiamondIntegral.Section3.GammaGroundFamilyMap.branchEqualizer
+#check @DiamondIntegral.Section3.GammaGroundFamilyMap.equalizerPiece
+#print axioms DiamondIntegral.Section3.GammaGroundFamilyMap.equalizerPiece
+#check @DiamondIntegral.Section3.GammaGroundFamilyMap
+#print axioms DiamondIntegral.Section3.GammaGroundFamilyMap
+#check @DiamondIntegral.Section3.GammaGroundFamilyMap.id
+#print axioms DiamondIntegral.Section3.GammaGroundFamilyMap.id
+#check @DiamondIntegral.Section3.GammaGroundFamilyMap.comp
+#print axioms DiamondIntegral.Section3.GammaGroundFamilyMap.comp
+#check @DiamondIntegral.Section3.GammaGroundFamilyBijection.toFamilyMap
+#print axioms DiamondIntegral.Section3.GammaGroundFamilyBijection.toFamilyMap
+#check @DiamondIntegral.Section3.GammaGroundFiniteFamily.withPieces
+#print axioms DiamondIntegral.Section3.GammaGroundFiniteFamily.withPieces
+#check @DiamondIntegral.Section3.gammaGroundFamilyPartitionTag
+#print axioms DiamondIntegral.Section3.gammaGroundFamilyPartitionTag
+#check @DiamondIntegral.Section3.gammaGroundFamilyPartitionPieceMap
+#print axioms DiamondIntegral.Section3.gammaGroundFamilyPartitionPieceMap
+#check @DiamondIntegral.Section3.gammaGroundFamilyPartitionMap
+#print axioms DiamondIntegral.Section3.gammaGroundFamilyPartitionMap
+#check @DiamondIntegral.Section3.gammaGroundFamilyPartitionBijection
+#print axioms DiamondIntegral.Section3.gammaGroundFamilyPartitionBijection
+#check @DiamondIntegral.Section3.GammaGroundFamilyBijection.pieces
+#print axioms DiamondIntegral.Section3.GammaGroundFamilyBijection.pieces
+#check @DiamondIntegral.Section3.GammaGroundFamilyMap.pieces
+#print axioms DiamondIntegral.Section3.GammaGroundFamilyMap.pieces
+#check @DiamondIntegral.Section3.GammaGroundGammaObject.unitValueFamilyMap
+#print axioms DiamondIntegral.Section3.GammaGroundGammaObject.unitValueFamilyMap
+#check @DiamondIntegral.Section3.GammaGroundFiniteFamily.coprod
+#print axioms DiamondIntegral.Section3.GammaGroundFiniteFamily.coprod
+#check @DiamondIntegral.Section3.gammaGroundFamilyTaggedMap
+#print axioms DiamondIntegral.Section3.gammaGroundFamilyTaggedMap
+#check @DiamondIntegral.Section3.gammaGroundFamilyBijectionOfTagEquiv
+#print axioms DiamondIntegral.Section3.gammaGroundFamilyBijectionOfTagEquiv
+#check @DiamondIntegral.Section3.GammaGroundFamilyMap.valueMap
+#print axioms DiamondIntegral.Section3.GammaGroundFamilyMap.valueMap
+#check @DiamondIntegral.Section3.gammaGroundFibreInterior
+#print axioms DiamondIntegral.Section3.gammaGroundFibreInterior
+#check @DiamondIntegral.Section3.GammaGroundFiniteFamily
+#print axioms DiamondIntegral.Section3.GammaGroundFiniteFamily
+#check @DiamondIntegral.Section3.GammaGroundFiniteFamily.Carrier
+#print axioms DiamondIntegral.Section3.GammaGroundFiniteFamily.Carrier
+#check @DiamondIntegral.Section3.gammaGroundFamilyGraph
+#print axioms DiamondIntegral.Section3.gammaGroundFamilyGraph
+#check @DiamondIntegral.Section3.GammaGroundFamilyDefinable
+#print axioms DiamondIntegral.Section3.GammaGroundFamilyDefinable
+#check @DiamondIntegral.Section3.GammaGroundFamilyBijection
+#print axioms DiamondIntegral.Section3.GammaGroundFamilyBijection
+#check @DiamondIntegral.Section3.GammaGroundFamilyBijection.id
+#print axioms DiamondIntegral.Section3.GammaGroundFamilyBijection.id
+#check @DiamondIntegral.Section3.GammaGroundFamilyBijection.comp
+#print axioms DiamondIntegral.Section3.GammaGroundFamilyBijection.comp
+#check @DiamondIntegral.Section3.GammaGroundFamilyBijection.symm
+#print axioms DiamondIntegral.Section3.GammaGroundFamilyBijection.symm
+#check @DiamondIntegral.Section3.gammaGroundFiniteGammaDirectSumInvariant
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGammaDirectSumInvariant
+#check @DiamondIntegral.Section3.gammaGroundFiniteGammaPresentationToDirectSum
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGammaPresentationToDirectSum
+#check @DiamondIntegral.Section3.gammaGroundFiniteGammaDirectSumToPresentationAdd
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGammaDirectSumToPresentationAdd
+#check @DiamondIntegral.Section3.gammaGroundFiniteGammaDirectSumToPresentation
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGammaDirectSumToPresentation
+#check @DiamondIntegral.Section3.gammaGroundFiniteGammaSemiringEquivDirectSum
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGammaSemiringEquivDirectSum
+#check @DiamondIntegral.Section3.gammaGroundFiniteGammaRepresentative
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGammaRepresentative
+#check @DiamondIntegral.Section3.gammaGroundFiniteGammaClassMul
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGammaClassMul
+#check @DiamondIntegral.Section3.GammaGroundFiniteGammaDirectSum
+#print axioms DiamondIntegral.Section3.GammaGroundFiniteGammaDirectSum
+#check @DiamondIntegral.Section3.gammaGroundFiniteGammaDirectSumToGamma
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGammaDirectSumToGamma
+#check @DiamondIntegral.Section3.gammaGroundFiniteGammaDirectSumClass
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGammaDirectSumClass
+#check @DiamondIntegral.Section3.gammaGroundFiniteGammaGradedInclusion
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGammaGradedInclusion
+#check @DiamondIntegral.Section3.GammaGroundFiniteGammaObject.coprod
+#print axioms DiamondIntegral.Section3.GammaGroundFiniteGammaObject.coprod
+#check @DiamondIntegral.Section3.GammaGroundFiniteGammaObject.empty
+#print axioms DiamondIntegral.Section3.GammaGroundFiniteGammaObject.empty
+#check @DiamondIntegral.Section3.GammaGroundFiniteGammaObject.restrict
+#print axioms DiamondIntegral.Section3.GammaGroundFiniteGammaObject.restrict
+#check @DiamondIntegral.Section3.gammaGroundFiniteGammaPresentation
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGammaPresentation
+#check @DiamondIntegral.Section3.GammaGroundFiniteGammaKPlus
+#print axioms DiamondIntegral.Section3.GammaGroundFiniteGammaKPlus
+#check @DiamondIntegral.Section3.gammaGroundFiniteGammaClass
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGammaClass
+#check @DiamondIntegral.Section3.gammaGroundFiniteGammaToGammaKPlus
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGammaToGammaKPlus
+#check @DiamondIntegral.Section3.GammaGroundGradedFiniteGammaObject
+#print axioms DiamondIntegral.Section3.GammaGroundGradedFiniteGammaObject
+#check @DiamondIntegral.Section3.gammaGroundGradedFiniteGammaIso
+#print axioms DiamondIntegral.Section3.gammaGroundGradedFiniteGammaIso
+#check @DiamondIntegral.Section3.gammaGroundGradedFiniteGammaScissor
+#print axioms DiamondIntegral.Section3.gammaGroundGradedFiniteGammaScissor
+#check @DiamondIntegral.Section3.gammaGroundFiniteGammaSemiringPresentation
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGammaSemiringPresentation
+#check @DiamondIntegral.Section3.GammaGroundFiniteGammaPositiveSemiring
+#print axioms DiamondIntegral.Section3.GammaGroundFiniteGammaPositiveSemiring
+#check @DiamondIntegral.Section3.GammaGroundFiniteGammaGrothendieckRing
+#print axioms DiamondIntegral.Section3.GammaGroundFiniteGammaGrothendieckRing
+#check @DiamondIntegral.Section3.gammaGroundFiniteGammaSemiringClass
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGammaSemiringClass
+#check @DiamondIntegral.Section3.gammaGroundFiniteGammaKPlusToSemiring
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGammaKPlusToSemiring
+#check @DiamondIntegral.Section3.gammaGroundFiniteGammaToGammaInvariant
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGammaToGammaInvariant
+#check @DiamondIntegral.Section3.gammaGroundFiniteGammaToGammaSemiring
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGammaToGammaSemiring
+#check @DiamondIntegral.Section3.gammaGroundFiniteGammaToRESInvariant
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGammaToRESInvariant
+#check @DiamondIntegral.Section3.gammaGroundFiniteGammaToRESSemiring
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGammaToRESSemiring
+#check @DiamondIntegral.Section3.gammaGroundRESToRVSemiring
+#print axioms DiamondIntegral.Section3.gammaGroundRESToRVSemiring
+#check @DiamondIntegral.Section3.gammaGroundFiniteGammaToRESKPlus
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGammaToRESKPlus
+#check @DiamondIntegral.Section3.GammaGroundMap.emptyTo
+#print axioms DiamondIntegral.Section3.GammaGroundMap.emptyTo
+#check @DiamondIntegral.Section3.GammaGroundFiniteMapPiece
+#print axioms DiamondIntegral.Section3.GammaGroundFiniteMapPiece
+#check @DiamondIntegral.Section3.GammaGroundFiniteMapPiece.empty
+#print axioms DiamondIntegral.Section3.GammaGroundFiniteMapPiece.empty
+#check @DiamondIntegral.Section3.GammaGroundFiniteMapPiece.union
+#print axioms DiamondIntegral.Section3.GammaGroundFiniteMapPiece.union
+#check @DiamondIntegral.Section3.GammaGroundFiniteMapPiece.glue
+#print axioms DiamondIntegral.Section3.GammaGroundFiniteMapPiece.glue
+#check @DiamondIntegral.Section3.gammaGroundMapOfFiniteCodeGraph
+#print axioms DiamondIntegral.Section3.gammaGroundMapOfFiniteCodeGraph
+#check @DiamondIntegral.Section3.GammaGroundFiniteVFObject.coprod
+#print axioms DiamondIntegral.Section3.GammaGroundFiniteVFObject.coprod
+#check @DiamondIntegral.Section3.GammaGroundFiniteVFObject
+#print axioms DiamondIntegral.Section3.GammaGroundFiniteVFObject
+#check @DiamondIntegral.Section3.GammaGroundFiniteVFObject.ofBound
+#print axioms DiamondIntegral.Section3.GammaGroundFiniteVFObject.ofBound
+#check @DiamondIntegral.Section3.GammaGroundFiniteVFObject.toBound
+#print axioms DiamondIntegral.Section3.GammaGroundFiniteVFObject.toBound
+#check @DiamondIntegral.Section3.GammaGroundFiniteVFObject.restrict
+#print axioms DiamondIntegral.Section3.GammaGroundFiniteVFObject.restrict
+#check @DiamondIntegral.Section3.GammaGroundFiniteVFObject.empty
+#print axioms DiamondIntegral.Section3.GammaGroundFiniteVFObject.empty
+#check @DiamondIntegral.Section3.GammaGroundFiniteVFObject.unit
+#print axioms DiamondIntegral.Section3.GammaGroundFiniteVFObject.unit
+#check @DiamondIntegral.Section3.gammaGroundFiniteVFScissor
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteVFScissor
+#check @DiamondIntegral.Section3.gammaGroundFiniteVFPresentation
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteVFPresentation
+#check @DiamondIntegral.Section3.GammaGroundFiniteVFKPlus
+#print axioms DiamondIntegral.Section3.GammaGroundFiniteVFKPlus
+#check @DiamondIntegral.Section3.gammaGroundFiniteVFClass
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteVFClass
+#check @DiamondIntegral.Section3.gammaGroundGammaFormPartialFunction
+#print axioms DiamondIntegral.Section3.gammaGroundGammaFormPartialFunction
+#check @DiamondIntegral.Section3.gammaGroundUniqueFibreFunction
+#print axioms DiamondIntegral.Section3.gammaGroundUniqueFibreFunction
+#check @DiamondIntegral.Section3.GammaGroundGammaObject
+#print axioms DiamondIntegral.Section3.GammaGroundGammaObject
+#check @DiamondIntegral.Section3.GammaGroundGammaHom
+#print axioms DiamondIntegral.Section3.GammaGroundGammaHom
+#check @DiamondIntegral.Section3.GammaGroundGammaHom.id
+#print axioms DiamondIntegral.Section3.GammaGroundGammaHom.id
+#check @DiamondIntegral.Section3.GammaGroundGammaHom.comp
+#print axioms DiamondIntegral.Section3.GammaGroundGammaHom.comp
+#check @DiamondIntegral.Section3.GammaGroundGammaHom.symm
+#print axioms DiamondIntegral.Section3.GammaGroundGammaHom.symm
+#check @DiamondIntegral.Section3.gammaGroundFiniteGammaProperty
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGammaProperty
+#check @DiamondIntegral.Section3.GammaGroundFiniteGammaObject
+#print axioms DiamondIntegral.Section3.GammaGroundFiniteGammaObject
+#check @DiamondIntegral.Section3.GammaGroundGammaHom.ofCodeBijection
+#print axioms DiamondIntegral.Section3.GammaGroundGammaHom.ofCodeBijection
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaHomOfCodes
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaHomOfCodes
+#check @DiamondIntegral.Section3.gammaGroundGammaRVCodeForm
+#print axioms DiamondIntegral.Section3.gammaGroundGammaRVCodeForm
+#check @DiamondIntegral.Section3.gammaGroundGammaCodeInclusion
+#print axioms DiamondIntegral.Section3.gammaGroundGammaCodeInclusion
+#check @DiamondIntegral.Section3.gammaGroundGammaRVCodeInclusion
+#print axioms DiamondIntegral.Section3.gammaGroundGammaRVCodeInclusion
+#check @DiamondIntegral.Section3.GammaGroundGammaCodeObject
+#print axioms DiamondIntegral.Section3.GammaGroundGammaCodeObject
+#check @DiamondIntegral.Section3.GammaGroundGammaCodeMap
+#print axioms DiamondIntegral.Section3.GammaGroundGammaCodeMap
+#check @DiamondIntegral.Section3.GammaGroundGammaCodeObject.product
+#print axioms DiamondIntegral.Section3.GammaGroundGammaCodeObject.product
+#check @DiamondIntegral.Section3.GammaGroundGammaCodeObject.unit
+#print axioms DiamondIntegral.Section3.GammaGroundGammaCodeObject.unit
+#check @DiamondIntegral.Section3.gammaGroundGammaCodeBijectionOfIso
+#print axioms DiamondIntegral.Section3.gammaGroundGammaCodeBijectionOfIso
+#check @DiamondIntegral.Section3.gammaGroundGammaHomOfCodeIso
+#print axioms DiamondIntegral.Section3.gammaGroundGammaHomOfCodeIso
+#check @DiamondIntegral.Section3.gammaGroundGammaCodeProductSwap
+#print axioms DiamondIntegral.Section3.gammaGroundGammaCodeProductSwap
+#check @DiamondIntegral.Section3.gammaGroundGammaCodeProductCommIso
+#print axioms DiamondIntegral.Section3.gammaGroundGammaCodeProductCommIso
+#check @DiamondIntegral.Section3.gammaGroundGammaCodeProductAssoc
+#print axioms DiamondIntegral.Section3.gammaGroundGammaCodeProductAssoc
+#check @DiamondIntegral.Section3.gammaGroundGammaCodeProductAssocInv
+#print axioms DiamondIntegral.Section3.gammaGroundGammaCodeProductAssocInv
+#check @DiamondIntegral.Section3.gammaGroundGammaCodeProductAssocIso
+#print axioms DiamondIntegral.Section3.gammaGroundGammaCodeProductAssocIso
+#check @DiamondIntegral.Section3.gammaGroundGammaCodePairFunction
+#print axioms DiamondIntegral.Section3.gammaGroundGammaCodePairFunction
+#check @DiamondIntegral.Section3.gammaGroundGammaCodePairFamilyMap
+#print axioms DiamondIntegral.Section3.gammaGroundGammaCodePairFamilyMap
+#check @DiamondIntegral.Section3.gammaGroundGammaCodeProductPair
+#print axioms DiamondIntegral.Section3.gammaGroundGammaCodeProductPair
+#check @DiamondIntegral.Section3.gammaGroundGammaProductLeftCodePieceMap
+#print axioms DiamondIntegral.Section3.gammaGroundGammaProductLeftCodePieceMap
+#check @DiamondIntegral.Section3.gammaGroundGammaProductRightCodePieceMap
+#print axioms DiamondIntegral.Section3.gammaGroundGammaProductRightCodePieceMap
+#check @DiamondIntegral.Section3.gammaGroundGammaProductLeftCodeFamilyMap
+#print axioms DiamondIntegral.Section3.gammaGroundGammaProductLeftCodeFamilyMap
+#check @DiamondIntegral.Section3.gammaGroundGammaProductRightCodeFamilyMap
+#print axioms DiamondIntegral.Section3.gammaGroundGammaProductRightCodeFamilyMap
+#check @DiamondIntegral.Section3.gammaGroundGammaCodeProductFst
+#print axioms DiamondIntegral.Section3.gammaGroundGammaCodeProductFst
+#check @DiamondIntegral.Section3.gammaGroundGammaCodeProductSnd
+#print axioms DiamondIntegral.Section3.gammaGroundGammaCodeProductSnd
+#check @DiamondIntegral.Section3.gammaGroundGammaUnitCode
+#print axioms DiamondIntegral.Section3.gammaGroundGammaUnitCode
+#check @DiamondIntegral.Section3.gammaGroundGammaToUnitPieceMap
+#print axioms DiamondIntegral.Section3.gammaGroundGammaToUnitPieceMap
+#check @DiamondIntegral.Section3.gammaGroundGammaCodeToUnit
+#print axioms DiamondIntegral.Section3.gammaGroundGammaCodeToUnit
+#check @DiamondIntegral.Section3.gammaGroundGammaCodeProductRightUnitIso
+#print axioms DiamondIntegral.Section3.gammaGroundGammaCodeProductRightUnitIso
+#check @DiamondIntegral.Section3.gammaGroundGammaCodeLeftMap
+#print axioms DiamondIntegral.Section3.gammaGroundGammaCodeLeftMap
+#check @DiamondIntegral.Section3.gammaGroundGammaCodeRightMap
+#print axioms DiamondIntegral.Section3.gammaGroundGammaCodeRightMap
+#check @DiamondIntegral.Section3.gammaGroundGammaCoprodLeftCut
+#print axioms DiamondIntegral.Section3.gammaGroundGammaCoprodLeftCut
+#check @DiamondIntegral.Section3.gammaGroundGammaCoprodLeftCutIso
+#print axioms DiamondIntegral.Section3.gammaGroundGammaCoprodLeftCutIso
+#check @DiamondIntegral.Section3.gammaGroundGammaCoprodRightCutIso
+#print axioms DiamondIntegral.Section3.gammaGroundGammaCoprodRightCutIso
+#check @DiamondIntegral.Section3.GammaGroundGammaHom.coprod
+#print axioms DiamondIntegral.Section3.GammaGroundGammaHom.coprod
+#check @DiamondIntegral.Section3.gammaGroundGammaCoproductIsoData
+#print axioms DiamondIntegral.Section3.gammaGroundGammaCoproductIsoData
+#check @DiamondIntegral.Section3.GammaGroundGammaIsoClasses
+#print axioms DiamondIntegral.Section3.GammaGroundGammaIsoClasses
+#check @DiamondIntegral.Section3.gammaGroundGammaIsoClass
+#print axioms DiamondIntegral.Section3.gammaGroundGammaIsoClass
+#check @DiamondIntegral.Section3.gammaGroundGammaDirectSumInvariant
+#print axioms DiamondIntegral.Section3.gammaGroundGammaDirectSumInvariant
+#check @DiamondIntegral.Section3.gammaGroundGammaPresentationToDirectSum
+#print axioms DiamondIntegral.Section3.gammaGroundGammaPresentationToDirectSum
+#check @DiamondIntegral.Section3.gammaGroundGammaDirectSumToPresentationAdd
+#print axioms DiamondIntegral.Section3.gammaGroundGammaDirectSumToPresentationAdd
+#check @DiamondIntegral.Section3.gammaGroundGammaDirectSumToPresentation
+#print axioms DiamondIntegral.Section3.gammaGroundGammaDirectSumToPresentation
+#check @DiamondIntegral.Section3.gammaGroundGammaSemiringEquivDirectSum
+#print axioms DiamondIntegral.Section3.gammaGroundGammaSemiringEquivDirectSum
+#check @DiamondIntegral.Section3.GammaGroundGammaDirectSum
+#print axioms DiamondIntegral.Section3.GammaGroundGammaDirectSum
+#check @DiamondIntegral.Section3.gammaGroundGammaDirectSumClass
+#print axioms DiamondIntegral.Section3.gammaGroundGammaDirectSumClass
+#check @DiamondIntegral.Section3.gammaGroundGammaGroupDirectSumEquiv
+#print axioms DiamondIntegral.Section3.gammaGroundGammaGroupDirectSumEquiv
+#check @DiamondIntegral.Section3.gammaGroundFiniteGammaGroupDirectSumEquiv
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGammaGroupDirectSumEquiv
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaGroupDirectSumEquiv
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaGroupDirectSumEquiv
+#check @DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaGroupDirectSumEquiv
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaGroupDirectSumEquiv
+#check @DiamondIntegral.Section3.gammaGroundGammaRepresentative
+#print axioms DiamondIntegral.Section3.gammaGroundGammaRepresentative
+#check @DiamondIntegral.Section3.gammaGroundGammaClassMul
+#print axioms DiamondIntegral.Section3.gammaGroundGammaClassMul
+#check @DiamondIntegral.Section3.gammaGroundGammaCodeBijectionOfLift
+#print axioms DiamondIntegral.Section3.gammaGroundGammaCodeBijectionOfLift
+#check @DiamondIntegral.Section3.gammaGroundGammaHomOfLiftBijection
+#print axioms DiamondIntegral.Section3.gammaGroundGammaHomOfLiftBijection
+#check @DiamondIntegral.Section3.gammaGroundGammaSubsingletonHomOfLift
+#print axioms DiamondIntegral.Section3.gammaGroundGammaSubsingletonHomOfLift
+#check @DiamondIntegral.Section3.gammaGroundGammaZeroHomOfLift
+#print axioms DiamondIntegral.Section3.gammaGroundGammaZeroHomOfLift
+#check @DiamondIntegral.Section3.gammaGroundGammaPartitionHom
+#print axioms DiamondIntegral.Section3.gammaGroundGammaPartitionHom
+#check @DiamondIntegral.Section3.gammaGroundGammaKPlusToIsoClasses
+#print axioms DiamondIntegral.Section3.gammaGroundGammaKPlusToIsoClasses
+#check @DiamondIntegral.Section3.gammaGroundGammaProductCodeFunctionEquiv
+#print axioms DiamondIntegral.Section3.gammaGroundGammaProductCodeFunctionEquiv
+#check @DiamondIntegral.Section3.gammaGroundGammaProductCodeBijection
+#print axioms DiamondIntegral.Section3.gammaGroundGammaProductCodeBijection
+#check @DiamondIntegral.Section3.gammaGroundGammaProductCode
+#print axioms DiamondIntegral.Section3.gammaGroundGammaProductCode
+#check @DiamondIntegral.Section3.gammaGroundGammaProductCarrierPieceEquiv
+#print axioms DiamondIntegral.Section3.gammaGroundGammaProductCarrierPieceEquiv
+#check @DiamondIntegral.Section3.gammaGroundGammaProductCodePieceEquiv
+#print axioms DiamondIntegral.Section3.gammaGroundGammaProductCodePieceEquiv
+#check @DiamondIntegral.Section3.GammaGroundGammaObject.productCarrierEquiv
+#print axioms DiamondIntegral.Section3.GammaGroundGammaObject.productCarrierEquiv
+#check @DiamondIntegral.Section3.GammaGroundGammaObject.productCodeEquiv
+#print axioms DiamondIntegral.Section3.GammaGroundGammaObject.productCodeEquiv
+#check @DiamondIntegral.Section3.gammaGroundGammaProductRightDistribHom
+#print axioms DiamondIntegral.Section3.gammaGroundGammaProductRightDistribHom
+#check @DiamondIntegral.Section3.gammaGroundGammaProductCommHom
+#print axioms DiamondIntegral.Section3.gammaGroundGammaProductCommHom
+#check @DiamondIntegral.Section3.gammaGroundGammaProductAssocHom
+#print axioms DiamondIntegral.Section3.gammaGroundGammaProductAssocHom
+#check @DiamondIntegral.Section3.gammaGroundGammaProductRightUnitHom
+#print axioms DiamondIntegral.Section3.gammaGroundGammaProductRightUnitHom
+#check @DiamondIntegral.Section3.gammaGroundGammaKPlusCast
+#print axioms DiamondIntegral.Section3.gammaGroundGammaKPlusCast
+#check @DiamondIntegral.Section3.gammaGroundGammaEmptyTagsIso
+#print axioms DiamondIntegral.Section3.gammaGroundGammaEmptyTagsIso
+#check @DiamondIntegral.Section3.gammaGroundGammaProductEmptyIso
+#print axioms DiamondIntegral.Section3.gammaGroundGammaProductEmptyIso
+#check @DiamondIntegral.Section3.gammaGroundGammaEmptyProductIso
+#print axioms DiamondIntegral.Section3.gammaGroundGammaEmptyProductIso
+#check @DiamondIntegral.Section3.gammaGroundGammaProductFunctionEquiv
+#print axioms DiamondIntegral.Section3.gammaGroundGammaProductFunctionEquiv
+#check @DiamondIntegral.Section3.GammaGroundGammaHom.productCodes
+#print axioms DiamondIntegral.Section3.GammaGroundGammaHom.productCodes
+#check @DiamondIntegral.Section3.GammaGroundGammaHom.product
+#print axioms DiamondIntegral.Section3.GammaGroundGammaHom.product
+#check @DiamondIntegral.Section3.gammaGroundGammaProductPair
+#print axioms DiamondIntegral.Section3.gammaGroundGammaProductPair
+#check @DiamondIntegral.Section3.gammaGroundGammaAppendMap
+#print axioms DiamondIntegral.Section3.gammaGroundGammaAppendMap
+#check @DiamondIntegral.Section3.gammaGroundGammaAppendBijection
+#print axioms DiamondIntegral.Section3.gammaGroundGammaAppendBijection
+#check @DiamondIntegral.Section3.GammaGroundGammaObject.product
+#print axioms DiamondIntegral.Section3.GammaGroundGammaObject.product
+#check @DiamondIntegral.Section3.GammaGroundGammaObject.unit
+#print axioms DiamondIntegral.Section3.GammaGroundGammaObject.unit
+#check @DiamondIntegral.Section3.GammaGroundFiniteGammaObject.product
+#print axioms DiamondIntegral.Section3.GammaGroundFiniteGammaObject.product
+#check @DiamondIntegral.Section3.GammaGroundFiniteGammaObject.unit
+#print axioms DiamondIntegral.Section3.GammaGroundFiniteGammaObject.unit
+#check @DiamondIntegral.Section3.GammaGroundFiniteGammaObject.resLift
+#print axioms DiamondIntegral.Section3.GammaGroundFiniteGammaObject.resLift
+#check @DiamondIntegral.Section3.GammaGroundGammaPiece
+#print axioms DiamondIntegral.Section3.GammaGroundGammaPiece
+#check @DiamondIntegral.Section3.gammaGroundGammaCodeToRV
+#print axioms DiamondIntegral.Section3.gammaGroundGammaCodeToRV
+#check @DiamondIntegral.Section3.gammaGroundGammaRVCodeLift
+#print axioms DiamondIntegral.Section3.gammaGroundGammaRVCodeLift
+#check @DiamondIntegral.Section3.gammaGroundGammaRVCodeBijection
+#print axioms DiamondIntegral.Section3.gammaGroundGammaRVCodeBijection
+#check @DiamondIntegral.Section3.gammaGroundGammaRESCodeLift
+#print axioms DiamondIntegral.Section3.gammaGroundGammaRESCodeLift
+#check @DiamondIntegral.Section3.gammaGroundGammaRVCodeIso
+#print axioms DiamondIntegral.Section3.gammaGroundGammaRVCodeIso
+#check @DiamondIntegral.Section3.GammaGroundGammaObject.rvPieces
+#print axioms DiamondIntegral.Section3.GammaGroundGammaObject.rvPieces
+#check @DiamondIntegral.Section3.GammaGroundGammaObject.rvCodeBijection
+#print axioms DiamondIntegral.Section3.GammaGroundGammaObject.rvCodeBijection
+#check @DiamondIntegral.Section3.GammaGroundGammaObject.rvLift
+#print axioms DiamondIntegral.Section3.GammaGroundGammaObject.rvLift
+#check @DiamondIntegral.Section3.gammaGroundGammaRVProductFamilies
+#print axioms DiamondIntegral.Section3.gammaGroundGammaRVProductFamilies
+#check @DiamondIntegral.Section3.gammaGroundGammaRVProductBijection
+#print axioms DiamondIntegral.Section3.gammaGroundGammaRVProductBijection
+#check @DiamondIntegral.Section3.gammaGroundGammaRVUnitBijection
+#print axioms DiamondIntegral.Section3.gammaGroundGammaRVUnitBijection
+#check @DiamondIntegral.Section3.gammaGroundGammaToRVKPlus
+#print axioms DiamondIntegral.Section3.gammaGroundGammaToRVKPlus
+#check @DiamondIntegral.Section3.gammaGroundGammaDirectSumToRV
+#print axioms DiamondIntegral.Section3.gammaGroundGammaDirectSumToRV
+#check @DiamondIntegral.Section3.gammaGroundGammaCoprodEmptyRightHom
+#print axioms DiamondIntegral.Section3.gammaGroundGammaCoprodEmptyRightHom
+#check @DiamondIntegral.Section3.GammaGroundGammaObject.emptyPieces
+#print axioms DiamondIntegral.Section3.GammaGroundGammaObject.emptyPieces
+#check @DiamondIntegral.Section3.GammaGroundGammaObject.empty
+#print axioms DiamondIntegral.Section3.GammaGroundGammaObject.empty
+#check @DiamondIntegral.Section3.GammaGroundGammaObject.restrict
+#print axioms DiamondIntegral.Section3.GammaGroundGammaObject.restrict
+#check @DiamondIntegral.Section3.GammaGroundGammaObject.difference
+#print axioms DiamondIntegral.Section3.GammaGroundGammaObject.difference
+#check @DiamondIntegral.Section3.GammaGroundMeasuredGammaObject.empty
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredGammaObject.empty
+#check @DiamondIntegral.Section3.GammaGroundMeasuredGammaObject.restrict
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredGammaObject.restrict
+#check @DiamondIntegral.Section3.GammaGroundGammaScissor
+#print axioms DiamondIntegral.Section3.GammaGroundGammaScissor
+#check @DiamondIntegral.Section3.gammaGroundGammaPresentation
+#print axioms DiamondIntegral.Section3.gammaGroundGammaPresentation
+#check @DiamondIntegral.Section3.GammaGroundGammaKPlus
+#print axioms DiamondIntegral.Section3.GammaGroundGammaKPlus
+#check @DiamondIntegral.Section3.GammaGroundGammaKGroup
+#print axioms DiamondIntegral.Section3.GammaGroundGammaKGroup
+#check @DiamondIntegral.Section3.gammaGroundGammaClass
+#print axioms DiamondIntegral.Section3.gammaGroundGammaClass
+#check @DiamondIntegral.Section3.GammaGroundMeasuredGammaScissor
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredGammaScissor
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaPresentation
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaPresentation
+#check @DiamondIntegral.Section3.GammaGroundMeasuredGammaKPlus
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredGammaKPlus
+#check @DiamondIntegral.Section3.GammaGroundMeasuredGammaKGroup
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredGammaKGroup
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaClass
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaClass
+#check @DiamondIntegral.Section3.GammaGroundGradedGammaObject
+#print axioms DiamondIntegral.Section3.GammaGroundGradedGammaObject
+#check @DiamondIntegral.Section3.gammaGroundGradedGammaIso
+#print axioms DiamondIntegral.Section3.gammaGroundGradedGammaIso
+#check @DiamondIntegral.Section3.gammaGroundGradedGammaScissor
+#print axioms DiamondIntegral.Section3.gammaGroundGradedGammaScissor
+#check @DiamondIntegral.Section3.gammaGroundGammaSemiringPresentation
+#print axioms DiamondIntegral.Section3.gammaGroundGammaSemiringPresentation
+#check @DiamondIntegral.Section3.GammaGroundGammaPositiveSemiring
+#print axioms DiamondIntegral.Section3.GammaGroundGammaPositiveSemiring
+#check @DiamondIntegral.Section3.GammaGroundGammaGrothendieckRing
+#print axioms DiamondIntegral.Section3.GammaGroundGammaGrothendieckRing
+#check @DiamondIntegral.Section3.gammaGroundGammaSemiringClass
+#print axioms DiamondIntegral.Section3.gammaGroundGammaSemiringClass
+#check @DiamondIntegral.Section3.gammaGroundGammaKPlusToSemiring
+#print axioms DiamondIntegral.Section3.gammaGroundGammaKPlusToSemiring
+#check @DiamondIntegral.Section3.gammaGroundGammaToRVSemiringInvariant
+#print axioms DiamondIntegral.Section3.gammaGroundGammaToRVSemiringInvariant
+#check @DiamondIntegral.Section3.gammaGroundGammaToRVSemiring
+#print axioms DiamondIntegral.Section3.gammaGroundGammaToRVSemiring
+#check @DiamondIntegral.Section3.gammaGroundRVSingleFamily
+#print axioms DiamondIntegral.Section3.gammaGroundRVSingleFamily
+#check @DiamondIntegral.Section3.gammaGroundRVSingleFamilyBijection
+#print axioms DiamondIntegral.Section3.gammaGroundRVSingleFamilyBijection
+#check @DiamondIntegral.Section3.GammaGroundGammaObject.single
+#print axioms DiamondIntegral.Section3.GammaGroundGammaObject.single
+#check @DiamondIntegral.Section3.gammaGroundGammaSingleLiftBijection
+#print axioms DiamondIntegral.Section3.gammaGroundGammaSingleLiftBijection
+#check @DiamondIntegral.Section3.gammaGroundGammaTagHom
+#print axioms DiamondIntegral.Section3.gammaGroundGammaTagHom
+#check @DiamondIntegral.Section3.gammaGroundGammaCoprodCommIso
+#print axioms DiamondIntegral.Section3.gammaGroundGammaCoprodCommIso
+#check @DiamondIntegral.Section3.gammaGroundGammaCoprodAssocIso
+#print axioms DiamondIntegral.Section3.gammaGroundGammaCoprodAssocIso
+#check @DiamondIntegral.Section3.gammaGroundGammaCoprodEmptyIso
+#print axioms DiamondIntegral.Section3.gammaGroundGammaCoprodEmptyIso
+#check @DiamondIntegral.Section3.gammaGroundGammaUnitSlice
+#print axioms DiamondIntegral.Section3.gammaGroundGammaUnitSlice
+#check @DiamondIntegral.Section3.GammaGroundGammaObject.coordinates
+#print axioms DiamondIntegral.Section3.GammaGroundGammaObject.coordinates
+#check @DiamondIntegral.Section3.GammaGroundMeasuredGammaObject
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredGammaObject
+#check @DiamondIntegral.Section3.GammaGroundMeasuredGammaObject.weight
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredGammaObject.weight
+#check @DiamondIntegral.Section3.GammaGroundMeasuredGammaObject.combinedWeight
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredGammaObject.combinedWeight
+#check @DiamondIntegral.Section3.GammaGroundMeasuredGammaHom
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredGammaHom
+#check @DiamondIntegral.Section3.GammaGroundMeasuredGammaHom.id
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredGammaHom.id
+#check @DiamondIntegral.Section3.GammaGroundMeasuredGammaHom.comp
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredGammaHom.comp
+#check @DiamondIntegral.Section3.GammaGroundMeasuredGammaHom.symm
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredGammaHom.symm
+#check @DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaProperty
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaProperty
+#check @DiamondIntegral.Section3.GammaGroundMeasuredFiniteGammaObject
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredFiniteGammaObject
+#check @DiamondIntegral.Section3.GammaGroundGeneric
+#print axioms DiamondIntegral.Section3.GammaGroundGeneric
+#check @DiamondIntegral.Section3.gammaGroundRVUnitIntersection
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnitIntersection
+#check @DiamondIntegral.Section3.gammaGroundMeasuredVFWeight
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredVFWeight
+#check @DiamondIntegral.Section3.GammaGroundGenericMeasuredVFGerm
+#print axioms DiamondIntegral.Section3.GammaGroundGenericMeasuredVFGerm
+#check @DiamondIntegral.Section3.gammaGroundGenericMeasuredVFGroupoid
+#print axioms DiamondIntegral.Section3.gammaGroundGenericMeasuredVFGroupoid
+#check @DiamondIntegral.Section3.rvNormalizedUnitTuple
+#print axioms DiamondIntegral.Section3.rvNormalizedUnitTuple
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGradedIntegral
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGradedIntegral
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGradedRingIntegral
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGradedRingIntegral
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredFilteredIntegral
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredFilteredIntegral
+#check @DiamondIntegral.Section3.GammaGroundMap.graphSet
+#print axioms DiamondIntegral.Section3.GammaGroundMap.graphSet
+#check @DiamondIntegral.Section3.GammaGroundMap.graphPair
+#print axioms DiamondIntegral.Section3.GammaGroundMap.graphPair
+#check @DiamondIntegral.Section3.GammaGroundMap.graphPairBijection
+#print axioms DiamondIntegral.Section3.GammaGroundMap.graphPairBijection
+#check @DiamondIntegral.Section3.GammaGroundPiecewiseIntegralAffine
+#print axioms DiamondIntegral.Section3.GammaGroundPiecewiseIntegralAffine
+#check @DiamondIntegral.Section3.gammaGroundMonomialValueImage
+#print axioms DiamondIntegral.Section3.gammaGroundMonomialValueImage
+#check @DiamondIntegral.Section3.gammaGroundIntegralMonomialMap
+#print axioms DiamondIntegral.Section3.gammaGroundIntegralMonomialMap
+#check @DiamondIntegral.Section3.gammaGroundGammaSingleMonomialHom
+#print axioms DiamondIntegral.Section3.gammaGroundGammaSingleMonomialHom
+#check @DiamondIntegral.Section3.universalSingletonPower
+#print axioms DiamondIntegral.Section3.universalSingletonPower
+#check @DiamondIntegral.Section3.GammaGroundVolumeForm.inv
+#print axioms DiamondIntegral.Section3.GammaGroundVolumeForm.inv
+#check @DiamondIntegral.Section3.gammaGroundFullJacobianRelation
+#print axioms DiamondIntegral.Section3.gammaGroundFullJacobianRelation
+#check @DiamondIntegral.Section3.gammaGroundFullJacobianGraph
+#print axioms DiamondIntegral.Section3.gammaGroundFullJacobianGraph
+#check @DiamondIntegral.Section3.gammaGroundJacobianSource
+#print axioms DiamondIntegral.Section3.gammaGroundJacobianSource
+#check @DiamondIntegral.Section3.gammaGroundJacobianScalar
+#print axioms DiamondIntegral.Section3.gammaGroundJacobianScalar
+#check @DiamondIntegral.Section3.gammaGroundDifferentiabilityLocus
+#print axioms DiamondIntegral.Section3.gammaGroundDifferentiabilityLocus
+#check @DiamondIntegral.Section3.gammaGroundObjectLift
+#print axioms DiamondIntegral.Section3.gammaGroundObjectLift
+#check @DiamondIntegral.Section3.gammaGroundObjectLiftVF
+#print axioms DiamondIntegral.Section3.gammaGroundObjectLiftVF
+#check @DiamondIntegral.Section3.GammaGroundMap.comp
+#print axioms DiamondIntegral.Section3.GammaGroundMap.comp
+#check @DiamondIntegral.Section3.GammaGroundMap.image
+#print axioms DiamondIntegral.Section3.GammaGroundMap.image
+#check @DiamondIntegral.Section3.GammaGroundMap.toImage
+#print axioms DiamondIntegral.Section3.GammaGroundMap.toImage
+#check @DiamondIntegral.Section3.GammaGroundMap.FiniteFibres
+#print axioms DiamondIntegral.Section3.GammaGroundMap.FiniteFibres
+#check @DiamondIntegral.Section3.GammaGroundMap.preimage
+#print axioms DiamondIntegral.Section3.GammaGroundMap.preimage
+#check @DiamondIntegral.Section3.GammaGroundMap.pair
+#print axioms DiamondIntegral.Section3.GammaGroundMap.pair
+#check @DiamondIntegral.Section3.GammaGroundMap.prodMap
+#print axioms DiamondIntegral.Section3.GammaGroundMap.prodMap
+#check @DiamondIntegral.Section3.GammaGroundDefSet.prod
+#print axioms DiamondIntegral.Section3.GammaGroundDefSet.prod
+#check @DiamondIntegral.Section3.GammaGroundMap.inclusion
+#print axioms DiamondIntegral.Section3.GammaGroundMap.inclusion
+#check @DiamondIntegral.Section3.GammaGroundMap.restrict
+#print axioms DiamondIntegral.Section3.GammaGroundMap.restrict
+#check @DiamondIntegral.Section3.GammaGroundMap.corestrict
+#print axioms DiamondIntegral.Section3.GammaGroundMap.corestrict
+#check @DiamondIntegral.Section3.GammaGroundMap.toUniv
+#print axioms DiamondIntegral.Section3.GammaGroundMap.toUniv
+#check @DiamondIntegral.Section3.GammaGroundMap.ofReal
+#print axioms DiamondIntegral.Section3.GammaGroundMap.ofReal
+#check @DiamondIntegral.Section3.GammaGroundMap.ofGlobal
+#print axioms DiamondIntegral.Section3.GammaGroundMap.ofGlobal
+#check @DiamondIntegral.Section3.GammaGroundMap.prodFst
+#print axioms DiamondIntegral.Section3.GammaGroundMap.prodFst
+#check @DiamondIntegral.Section3.GammaGroundMap.prodSnd
+#print axioms DiamondIntegral.Section3.GammaGroundMap.prodSnd
+#check @DiamondIntegral.Section3.universalPowerCoordinate
+#print axioms DiamondIntegral.Section3.universalPowerCoordinate
+#check @DiamondIntegral.Section3.GammaGroundMap.tuple
+#print axioms DiamondIntegral.Section3.GammaGroundMap.tuple
+#check @DiamondIntegral.Section3.GammaGroundMap.union
+#print axioms DiamondIntegral.Section3.GammaGroundMap.union
+#check @DiamondIntegral.Section3.GammaGroundMap
+#print axioms DiamondIntegral.Section3.GammaGroundMap
+#check @DiamondIntegral.Section3.GammaGroundMap.id
+#print axioms DiamondIntegral.Section3.GammaGroundMap.id
+#check @DiamondIntegral.Section3.GammaGroundMeasuredRVDiagramSupport
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredRVDiagramSupport
+#check @DiamondIntegral.Section3.GammaGroundMeasuredRVDiagramSupport.namedDomain
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredRVDiagramSupport.namedDomain
+#check @DiamondIntegral.Section3.GammaGroundMeasuredRVDiagramSupport.namedLabel
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredRVDiagramSupport.namedLabel
+#check @DiamondIntegral.Section3.GammaGroundMeasuredRVDiagramSupport.namedUnderlying
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredRVDiagramSupport.namedUnderlying
+#check @DiamondIntegral.Section3.GammaGroundMeasuredRVDiagramSupport.namedObject
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredRVDiagramSupport.namedObject
+#check @DiamondIntegral.Section3.GammaGroundMeasuredRVDiagramSupport.namedArrow
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredRVDiagramSupport.namedArrow
+#check @DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaDirectSumInvariant
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaDirectSumInvariant
+#check @DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaPresentationToDirectSum
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaPresentationToDirectSum
+#check @DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaDirectSumToPresentationAdd
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaDirectSumToPresentationAdd
+#check @DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaDirectSumToPresentation
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaDirectSumToPresentation
+#check @DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaSemiringEquivDirectSum
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaSemiringEquivDirectSum
+#check @DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaRepresentative
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaRepresentative
+#check @DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaClassMul
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaClassMul
+#check @DiamondIntegral.Section3.GammaGroundMeasuredFiniteGammaDirectSum
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredFiniteGammaDirectSum
+#check @DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaDirectSumToGamma
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaDirectSumToGamma
+#check @DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaDirectSumClass
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaDirectSumClass
+#check @DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaGradedInclusion
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaGradedInclusion
+#check @DiamondIntegral.Section3.GammaGroundMeasuredFiniteGammaObject.coprod
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredFiniteGammaObject.coprod
+#check @DiamondIntegral.Section3.GammaGroundMeasuredFiniteGammaObject.restrict
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredFiniteGammaObject.restrict
+#check @DiamondIntegral.Section3.GammaGroundMeasuredFiniteGammaObject.empty
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredFiniteGammaObject.empty
+#check @DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaPresentation
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaPresentation
+#check @DiamondIntegral.Section3.GammaGroundMeasuredFiniteGammaKPlus
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredFiniteGammaKPlus
+#check @DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaClass
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaClass
+#check @DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaToGammaKPlus
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaToGammaKPlus
+#check @DiamondIntegral.Section3.GammaGroundGradedMeasuredFiniteGammaObject
+#print axioms DiamondIntegral.Section3.GammaGroundGradedMeasuredFiniteGammaObject
+#check @DiamondIntegral.Section3.gammaGroundGradedMeasuredFiniteGammaIso
+#print axioms DiamondIntegral.Section3.gammaGroundGradedMeasuredFiniteGammaIso
+#check @DiamondIntegral.Section3.gammaGroundGradedMeasuredFiniteGammaScissor
+#print axioms DiamondIntegral.Section3.gammaGroundGradedMeasuredFiniteGammaScissor
+#check @DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaSemiringPresentation
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaSemiringPresentation
+#check @DiamondIntegral.Section3.GammaGroundMeasuredFiniteGammaPositiveSemiring
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredFiniteGammaPositiveSemiring
+#check @DiamondIntegral.Section3.GammaGroundMeasuredFiniteGammaGrothendieckRing
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredFiniteGammaGrothendieckRing
+#check @DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaSemiringClass
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaSemiringClass
+#check @DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaKPlusToSemiring
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaKPlusToSemiring
+#check @DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaToGammaInvariant
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaToGammaInvariant
+#check @DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaToGammaSemiring
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaToGammaSemiring
+#check @DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaToRESInvariant
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaToRESInvariant
+#check @DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaToRESSemiring
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaToRESSemiring
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRESToRVSemiring
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRESToRVSemiring
+#check @DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaToRESKPlus
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaToRESKPlus
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaHomOfCodeIso
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaHomOfCodeIso
+#check @DiamondIntegral.Section3.GammaGroundMeasuredGammaObject.codeCombined
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredGammaObject.codeCombined
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaProductCommHom
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaProductCommHom
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaProductAssocHom
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaProductAssocHom
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaProductRightUnitHom
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaProductRightUnitHom
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaCoprodCommHom
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaCoprodCommHom
+#check @DiamondIntegral.Section3.GammaGroundMeasuredGammaHom.coprod
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredGammaHom.coprod
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaCoprodAssocHom
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaCoprodAssocHom
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaCoprodEmptyHom
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaCoprodEmptyHom
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaCoproductIsoData
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaCoproductIsoData
+#check @DiamondIntegral.Section3.GammaGroundMeasuredGammaIsoClasses
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredGammaIsoClasses
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaIsoClass
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaIsoClass
+#check @DiamondIntegral.Section3.GammaGroundMeasuredGammaObject.coprod
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredGammaObject.coprod
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaDirectSumInvariant
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaDirectSumInvariant
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaPresentationToDirectSum
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaPresentationToDirectSum
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaDirectSumToPresentationAdd
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaDirectSumToPresentationAdd
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaDirectSumToPresentation
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaDirectSumToPresentation
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaSemiringEquivDirectSum
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaSemiringEquivDirectSum
+#check @DiamondIntegral.Section3.GammaGroundMeasuredGammaDirectSum
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredGammaDirectSum
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaDirectSumClass
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaDirectSumClass
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaRepresentative
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaRepresentative
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaClassMul
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaClassMul
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaPartitionHom
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaPartitionHom
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaKPlusToIsoClasses
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaKPlusToIsoClasses
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaProductRightDistribHom
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaProductRightDistribHom
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaKPlusCast
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaKPlusCast
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaEmptyTagsHom
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaEmptyTagsHom
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaProductEmptyIso
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaProductEmptyIso
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaEmptyProductIso
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaEmptyProductIso
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaProductLiftHom
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaProductLiftHom
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaUnitLiftHom
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaUnitLiftHom
+#check @DiamondIntegral.Section3.GammaGroundMeasuredGammaHom.product
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredGammaHom.product
+#check @DiamondIntegral.Section3.gammaGroundGammaProductLeft
+#print axioms DiamondIntegral.Section3.gammaGroundGammaProductLeft
+#check @DiamondIntegral.Section3.gammaGroundGammaProductRight
+#print axioms DiamondIntegral.Section3.gammaGroundGammaProductRight
+#check @DiamondIntegral.Section3.GammaGroundMeasuredGammaObject.product
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredGammaObject.product
+#check @DiamondIntegral.Section3.GammaGroundMeasuredGammaObject.unit
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredGammaObject.unit
+#check @DiamondIntegral.Section3.GammaGroundMeasuredFiniteGammaObject.product
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredFiniteGammaObject.product
+#check @DiamondIntegral.Section3.GammaGroundMeasuredFiniteGammaObject.unit
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredFiniteGammaObject.unit
+#check @DiamondIntegral.Section3.GammaGroundGammaObject.rvEncodeCode
+#print axioms DiamondIntegral.Section3.GammaGroundGammaObject.rvEncodeCode
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaLiftForm
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaLiftForm
+#check @DiamondIntegral.Section3.GammaGroundMeasuredGammaObject.rvLift
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredGammaObject.rvLift
+#check @DiamondIntegral.Section3.GammaGroundMeasuredFiniteGammaObject.resLift
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredFiniteGammaObject.resLift
+#check @DiamondIntegral.Section3.gammaGroundGammaCodeFamilyBijection
+#print axioms DiamondIntegral.Section3.gammaGroundGammaCodeFamilyBijection
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaRVHom
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaRVHom
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaRVRestrictionHom
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaRVRestrictionHom
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaToRVKPlus
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaToRVKPlus
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaCoprodLeftCutHom
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaCoprodLeftCutHom
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaCoprodRightCutHom
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaCoprodRightCutHom
+#check @DiamondIntegral.Section3.GammaGroundGradedMeasuredGammaObject
+#print axioms DiamondIntegral.Section3.GammaGroundGradedMeasuredGammaObject
+#check @DiamondIntegral.Section3.gammaGroundGradedMeasuredGammaIso
+#print axioms DiamondIntegral.Section3.gammaGroundGradedMeasuredGammaIso
+#check @DiamondIntegral.Section3.gammaGroundGradedMeasuredGammaScissor
+#print axioms DiamondIntegral.Section3.gammaGroundGradedMeasuredGammaScissor
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaSemiringPresentation
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaSemiringPresentation
+#check @DiamondIntegral.Section3.GammaGroundMeasuredGammaPositiveSemiring
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredGammaPositiveSemiring
+#check @DiamondIntegral.Section3.GammaGroundMeasuredGammaGrothendieckRing
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredGammaGrothendieckRing
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaSemiringClass
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaSemiringClass
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaKPlusToSemiring
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaKPlusToSemiring
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaToRVSemiringInvariant
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaToRVSemiringInvariant
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaToRVSemiring
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaToRVSemiring
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaSingleWeight
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaSingleWeight
+#check @DiamondIntegral.Section3.gammaGroundGammaUnitLiftBijection
+#print axioms DiamondIntegral.Section3.gammaGroundGammaUnitLiftBijection
+#check @DiamondIntegral.Section3.GammaGroundMeasuredRESObject.unit
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredRESObject.unit
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRESRepresentative
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRESRepresentative
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRESClassMul
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRESClassMul
+#check @DiamondIntegral.Section3.GammaGroundMeasuredRESDirectSum
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredRESDirectSum
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRESDirectSumToRV
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRESDirectSumToRV
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRESDirectSumClass
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRESDirectSumClass
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRESGradedInclusion
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRESGradedInclusion
+#check @DiamondIntegral.Section3.GammaGroundMeasuredRESGrothendieckRing
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredRESGrothendieckRing
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRESGroupDirectSumEquiv
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRESGroupDirectSumEquiv
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRESRingToRV
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRESRingToRV
+#check @DiamondIntegral.Section3.GammaGroundMeasuredRESObject.product
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredRESObject.product
+#check @DiamondIntegral.Section3.GammaGroundMeasuredRESObject.empty
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredRESObject.empty
+#check @DiamondIntegral.Section3.GammaGroundMeasuredRESObject.restrict
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredRESObject.restrict
+#check @DiamondIntegral.Section3.GammaGroundMeasuredRESObject.coprod
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredRESObject.coprod
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRESPresentation
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRESPresentation
+#check @DiamondIntegral.Section3.GammaGroundMeasuredRESKPlus
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredRESKPlus
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRESClass
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRESClass
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRESToRVKPlus
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRESToRVKPlus
+#check @DiamondIntegral.Section3.GammaGroundRVObject.target
+#print axioms DiamondIntegral.Section3.GammaGroundRVObject.target
+#check @DiamondIntegral.Section3.GammaGroundVolumeForm
+#print axioms DiamondIntegral.Section3.GammaGroundVolumeForm
+#check @DiamondIntegral.Section3.gammaGroundFormValue
+#print axioms DiamondIntegral.Section3.gammaGroundFormValue
+#check @DiamondIntegral.Section3.GammaGroundMeasuredRVObject
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredRVObject
+#check @DiamondIntegral.Section3.GammaGroundMeasuredRVObject.combinedWeight
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredRVObject.combinedWeight
+#check @DiamondIntegral.Section3.GammaGroundMeasuredRVHom
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredRVHom
+#check @DiamondIntegral.Section3.GammaGroundMeasuredRVHom.id
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredRVHom.id
+#check @DiamondIntegral.Section3.GammaGroundMeasuredRVHom.comp
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredRVHom.comp
+#check @DiamondIntegral.Section3.GammaGroundMeasuredRVHom.symm
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredRVHom.symm
+#check @DiamondIntegral.Section3.gammaGroundMeasuredResProperty
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredResProperty
+#check @DiamondIntegral.Section3.GammaGroundMeasuredRESObject
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredRESObject
+#check @DiamondIntegral.Section3.GammaGroundMeasuredRVObject.coprod
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredRVObject.coprod
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVForgetInvariant
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVForgetInvariant
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVForgetSemiring
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVForgetSemiring
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVForgetRing
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVForgetRing
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVOne
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVOne
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVPositive
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVPositive
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVSpecialCongruence
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVSpecialCongruence
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVPrincipalElement
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVPrincipalElement
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVSpecialCompletionEquiv
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVSpecialCompletionEquiv
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVDirectSumInvariant
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVDirectSumInvariant
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVPresentationToDirectSum
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVPresentationToDirectSum
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVDirectSumToPresentationAdd
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVDirectSumToPresentationAdd
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVDirectSumToPresentation
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVDirectSumToPresentation
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVSemiringEquivDirectSum
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVSemiringEquivDirectSum
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVKPlusCast
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVKPlusCast
+#check @DiamondIntegral.Section3.GammaGroundMeasuredRVDirectSum
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredRVDirectSum
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVDirectSumClass
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVDirectSumClass
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVGroupDirectSumEquiv
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVGroupDirectSumEquiv
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVRepresentative
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVRepresentative
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVClassMul
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVClassMul
+#check @DiamondIntegral.Section3.GammaGroundMeasuredRVIsoClasses
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredRVIsoClasses
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVIsoClass
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVIsoClass
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVKPlusToIsoClasses
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVKPlusToIsoClasses
+#check @DiamondIntegral.Section3.GammaGroundMeasuredRVMapObject
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredRVMapObject
+#check @DiamondIntegral.Section3.GammaGroundMeasuredRVMap
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredRVMap
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVMapIsoOfHom
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVMapIsoOfHom
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVHomOfMapIso
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVHomOfMapIso
+#check @DiamondIntegral.Section3.GammaGroundMeasuredRVMapObject.coprod
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredRVMapObject.coprod
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVMapInl
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVMapInl
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVMapInr
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVMapInr
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVMapDesc
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVMapDesc
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVMapCoprodIsColimit
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVMapCoprodIsColimit
+#check @DiamondIntegral.Section3.GammaGroundMeasuredRVMapObject.empty
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredRVMapObject.empty
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVMapEmptyHom
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVMapEmptyHom
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVMapEmptyIsInitial
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVMapEmptyIsInitial
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVPartitionHom
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVPartitionHom
+#check @DiamondIntegral.Section3.GammaGroundMeasuredRVObject.reindexVolume
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredRVObject.reindexVolume
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVProductCommHom
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVProductCommHom
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVProductAssocHom
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVProductAssocHom
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVProductRightUnitHom
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVProductRightUnitHom
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVProductHom
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVProductHom
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVProductIso
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVProductIso
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVProductRestrictionHom
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVProductRestrictionHom
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVCoprodLeftRestrictionHom
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVCoprodLeftRestrictionHom
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVCoprodRightRestrictionHom
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVCoprodRightRestrictionHom
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVProductLeft
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVProductLeft
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVProductRight
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVProductRight
+#check @DiamondIntegral.Section3.GammaGroundMeasuredRVObject.product
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredRVObject.product
+#check @DiamondIntegral.Section3.GammaGroundMeasuredRVSpecialQuotient
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredRVSpecialQuotient
+#check @DiamondIntegral.Section3.GammaGroundMeasuredRVGradingPolynomial
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredRVGradingPolynomial
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVPolynomialInvariant
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVPolynomialInvariant
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVPolynomialMap
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVPolynomialMap
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVQuotientGrading
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVQuotientGrading
+#check @DiamondIntegral.Section3.GammaGroundMeasuredRVObject.empty
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredRVObject.empty
+#check @DiamondIntegral.Section3.GammaGroundMeasuredRVObject.restrict
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredRVObject.restrict
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVScissor
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVScissor
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVPresentation
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVPresentation
+#check @DiamondIntegral.Section3.GammaGroundMeasuredRVKPlus
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredRVKPlus
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVClass
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVClass
+#check @DiamondIntegral.Section3.GammaGroundMeasuredRVObject.withZeroForm
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredRVObject.withZeroForm
+#check @DiamondIntegral.Section3.GammaGroundMeasuredRVObject.unit
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredRVObject.unit
+#check @DiamondIntegral.Section3.GradedGammaGroundMeasuredRVObject
+#print axioms DiamondIntegral.Section3.GradedGammaGroundMeasuredRVObject
+#check @DiamondIntegral.Section3.gradedGammaGroundMeasuredRVIso
+#print axioms DiamondIntegral.Section3.gradedGammaGroundMeasuredRVIso
+#check @DiamondIntegral.Section3.gradedGammaGroundMeasuredRVScissor
+#print axioms DiamondIntegral.Section3.gradedGammaGroundMeasuredRVScissor
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVSemiringPresentation
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVSemiringPresentation
+#check @DiamondIntegral.Section3.GammaGroundMeasuredRVPositiveSemiring
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredRVPositiveSemiring
+#check @DiamondIntegral.Section3.GammaGroundMeasuredRVGrothendieckRing
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredRVGrothendieckRing
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVSemiringClass
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVSemiringClass
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVKPlusToSemiring
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVKPlusToSemiring
+#check @DiamondIntegral.Section3.GammaGroundMeasuredRVObject.ofNamed
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredRVObject.ofNamed
+#check @DiamondIntegral.Section3.GammaGroundMeasuredPositiveTensor
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredPositiveTensor
+#check @DiamondIntegral.Section3.gammaGroundMeasuredTensorMap
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredTensorMap
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGroupTensorMap
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGroupTensorMap
+#check @DiamondIntegral.Section3.GammaGroundMeasuredVFData
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredVFData
+#check @DiamondIntegral.Section3.gammaGroundObjectLiftLabel
+#print axioms DiamondIntegral.Section3.gammaGroundObjectLiftLabel
+#check @DiamondIntegral.Section3.gammaGroundMeasuredObjectLift
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredObjectLift
+#check @DiamondIntegral.Section3.GammaGroundMeasuredVFData.restrict
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredVFData.restrict
+#check @DiamondIntegral.Section3.GammaGroundMeasuredVFData.empty
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredVFData.empty
+#check @DiamondIntegral.Section3.GammaGroundMeasuredVFData.unit
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredVFData.unit
+#check @DiamondIntegral.Section3.GammaGroundMeasuredVFDirectSum
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredVFDirectSum
+#check @DiamondIntegral.Section3.gammaGroundMeasuredVFDirectSumToSemiring
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredVFDirectSumToSemiring
+#check @DiamondIntegral.Section3.gammaGroundMeasuredVFDirectSumEquiv
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredVFDirectSumEquiv
+#check @DiamondIntegral.Section3.GammaGroundMeasuredVFRepresentative
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredVFRepresentative
+#check @DiamondIntegral.Section3.GammaGroundMeasuredVFGerm
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredVFGerm
+#check @DiamondIntegral.Section3.gammaGroundMeasuredOfRepresentative
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredOfRepresentative
+#check @DiamondIntegral.Section3.gammaGroundMeasuredAESetoid
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredAESetoid
+#check @DiamondIntegral.Section3.gammaGroundMeasuredQuotientEquiv
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredQuotientEquiv
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGermEquivGeneric
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGermEquivGeneric
+#check @DiamondIntegral.Section3.gammaGroundPositiveMeasuredVFGroupoid
+#print axioms DiamondIntegral.Section3.gammaGroundPositiveMeasuredVFGroupoid
+#check @DiamondIntegral.Section3.gammaGroundMeasuredVFDirectSumClass
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredVFDirectSumClass
+#check @DiamondIntegral.Section3.gammaGroundMeasuredVFDirectSumCommSemiring
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredVFDirectSumCommSemiring
+#check @DiamondIntegral.Section3.gammaGroundMeasuredVFGradedSemiringEquiv
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredVFGradedSemiringEquiv
+#check @DiamondIntegral.Section3.gammaGroundMeasuredVFGradedRingEquiv
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredVFGradedRingEquiv
+#check @DiamondIntegral.Section3.gammaGroundMeasuredVFGroupDirectSumEquiv
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredVFGroupDirectSumEquiv
+#check @DiamondIntegral.Section3.gammaGroundMeasuredVFPolynomialGrading
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredVFPolynomialGrading
+#check @DiamondIntegral.Section3.gammaGroundMeasuredVFProductLeft
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredVFProductLeft
+#check @DiamondIntegral.Section3.gammaGroundMeasuredVFProductRight
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredVFProductRight
+#check @DiamondIntegral.Section3.GammaGroundMeasuredVFData.product
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredVFData.product
+#check @DiamondIntegral.Section3.gammaGroundMeasuredVFGroupoid
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredVFGroupoid
+#check @DiamondIntegral.Section3.GammaGroundMeasuredVFHom
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredVFHom
+#check @DiamondIntegral.Section3.gammaGroundMeasuredVFScissor
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredVFScissor
+#check @DiamondIntegral.Section3.gammaGroundMeasuredVFPresentation
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredVFPresentation
+#check @DiamondIntegral.Section3.GammaGroundMeasuredVFKPlus
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredVFKPlus
+#check @DiamondIntegral.Section3.gammaGroundMeasuredVFClass
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredVFClass
+#check @DiamondIntegral.Section3.GradedGammaGroundMeasuredVFData
+#print axioms DiamondIntegral.Section3.GradedGammaGroundMeasuredVFData
+#check @DiamondIntegral.Section3.gradedGammaGroundMeasuredVFIso
+#print axioms DiamondIntegral.Section3.gradedGammaGroundMeasuredVFIso
+#check @DiamondIntegral.Section3.gradedGammaGroundMeasuredVFScissor
+#print axioms DiamondIntegral.Section3.gradedGammaGroundMeasuredVFScissor
+#check @DiamondIntegral.Section3.gammaGroundMeasuredVFSemiringPresentation
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredVFSemiringPresentation
+#check @DiamondIntegral.Section3.GammaGroundMeasuredVFPositiveSemiring
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredVFPositiveSemiring
+#check @DiamondIntegral.Section3.GammaGroundMeasuredVFGrothendieckRing
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredVFGrothendieckRing
+#check @DiamondIntegral.Section3.gammaGroundMeasuredVFSemiringClass
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredVFSemiringClass
+#check @DiamondIntegral.Section3.gammaGroundMeasuredVFKPlusToSemiring
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredVFKPlusToSemiring
+#check @DiamondIntegral.Section3.GammaGroundZeroMeasuredVF
+#print axioms DiamondIntegral.Section3.GammaGroundZeroMeasuredVF
+#check @DiamondIntegral.Section3.GammaGroundZeroMeasuredVFHom
+#print axioms DiamondIntegral.Section3.GammaGroundZeroMeasuredVFHom
+#check @DiamondIntegral.Section3.GammaGroundZeroMeasuredVFHom.id
+#print axioms DiamondIntegral.Section3.GammaGroundZeroMeasuredVFHom.id
+#check @DiamondIntegral.Section3.GammaGroundZeroMeasuredVFHom.comp
+#print axioms DiamondIntegral.Section3.GammaGroundZeroMeasuredVFHom.comp
+#check @DiamondIntegral.Section3.GammaGroundZeroMeasuredVFHom.symm
+#print axioms DiamondIntegral.Section3.GammaGroundZeroMeasuredVFHom.symm
+#check @DiamondIntegral.Section3.gammaGroundMixedPack
+#print axioms DiamondIntegral.Section3.gammaGroundMixedPack
+#check @DiamondIntegral.Section3.gammaGroundMixedProductDomain
+#print axioms DiamondIntegral.Section3.gammaGroundMixedProductDomain
+#check @DiamondIntegral.Section3.gammaGroundMixedUnpack
+#print axioms DiamondIntegral.Section3.gammaGroundMixedUnpack
+#check @DiamondIntegral.Section3.GammaGroundFiniteVFObject.product
+#print axioms DiamondIntegral.Section3.GammaGroundFiniteVFObject.product
+#check @DiamondIntegral.Section3.gammaGroundMixedLeftTag
+#print axioms DiamondIntegral.Section3.gammaGroundMixedLeftTag
+#check @DiamondIntegral.Section3.gammaGroundMixedRightTag
+#print axioms DiamondIntegral.Section3.gammaGroundMixedRightTag
+#check @DiamondIntegral.Section3.gammaGroundGammaSingleHomOfAffineMonomial
+#print axioms DiamondIntegral.Section3.gammaGroundGammaSingleHomOfAffineMonomial
+#check @DiamondIntegral.Section3.GammaGroundWithNameDefinable
+#print axioms DiamondIntegral.Section3.GammaGroundWithNameDefinable
+#check @DiamondIntegral.Section3.GammaGroundDefSet.ofNamed
+#print axioms DiamondIntegral.Section3.GammaGroundDefSet.ofNamed
+#check @DiamondIntegral.Section3.GammaGroundMap.ofNamed
+#print axioms DiamondIntegral.Section3.GammaGroundMap.ofNamed
+#check @DiamondIntegral.Section3.GammaGroundBijection.ofNamed
+#print axioms DiamondIntegral.Section3.GammaGroundBijection.ofNamed
+#check @DiamondIntegral.Section3.namedRVToGammaGround
+#print axioms DiamondIntegral.Section3.namedRVToGammaGround
+#check @DiamondIntegral.Section3.GammaGroundMeasuredRVHom.ofNamed
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredRVHom.ofNamed
+#check @DiamondIntegral.Section3.namedMeasuredRVToGammaGround
+#print axioms DiamondIntegral.Section3.namedMeasuredRVToGammaGround
+#check @DiamondIntegral.Section3.namedVFToGammaGround
+#print axioms DiamondIntegral.Section3.namedVFToGammaGround
+#check @DiamondIntegral.Section3.GammaGroundDefinable
+#print axioms DiamondIntegral.Section3.GammaGroundDefinable
+#check @DiamondIntegral.Section3.GammaGroundDefSet
+#print axioms DiamondIntegral.Section3.GammaGroundDefSet
+#check @DiamondIntegral.Section3.GammaGroundPiecewiseGLZ
+#print axioms DiamondIntegral.Section3.GammaGroundPiecewiseGLZ
+#check @DiamondIntegral.Section3.gammaGroundRVUnitPointTranslation
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnitPointTranslation
+#check @DiamondIntegral.Section3.gammaGroundGammaSinglePointTranslation
+#print axioms DiamondIntegral.Section3.gammaGroundGammaSinglePointTranslation
+#check @DiamondIntegral.Section3.rvUnitRealTupleMap
+#print axioms DiamondIntegral.Section3.rvUnitRealTupleMap
+#check @DiamondIntegral.Section3.GammaGroundEssentialVFMap.Preserves
+#print axioms DiamondIntegral.Section3.GammaGroundEssentialVFMap.Preserves
+#check @DiamondIntegral.Section3.GammaGroundEssentialVFMap.sourceForm
+#print axioms DiamondIntegral.Section3.GammaGroundEssentialVFMap.sourceForm
+#check @DiamondIntegral.Section3.GammaGroundEssentialVFMap.targetForm
+#print axioms DiamondIntegral.Section3.GammaGroundEssentialVFMap.targetForm
+#check @DiamondIntegral.Section3.GammaGroundRVObject.withCombinedWeight
+#print axioms DiamondIntegral.Section3.GammaGroundRVObject.withCombinedWeight
+#check @DiamondIntegral.Section3.GammaGroundRESObject.withCombinedWeight
+#print axioms DiamondIntegral.Section3.GammaGroundRESObject.withCombinedWeight
+#check @DiamondIntegral.Section3.GammaGroundRESObject.unit
+#print axioms DiamondIntegral.Section3.GammaGroundRESObject.unit
+#check @DiamondIntegral.Section3.gammaGroundRESRepresentative
+#print axioms DiamondIntegral.Section3.gammaGroundRESRepresentative
+#check @DiamondIntegral.Section3.gammaGroundRESClassMul
+#print axioms DiamondIntegral.Section3.gammaGroundRESClassMul
+#check @DiamondIntegral.Section3.GammaGroundRESDirectSum
+#print axioms DiamondIntegral.Section3.GammaGroundRESDirectSum
+#check @DiamondIntegral.Section3.gammaGroundRESDirectSumToRV
+#print axioms DiamondIntegral.Section3.gammaGroundRESDirectSumToRV
+#check @DiamondIntegral.Section3.gammaGroundRESDirectSumClass
+#print axioms DiamondIntegral.Section3.gammaGroundRESDirectSumClass
+#check @DiamondIntegral.Section3.gammaGroundRESGradedInclusion
+#print axioms DiamondIntegral.Section3.gammaGroundRESGradedInclusion
+#check @DiamondIntegral.Section3.GammaGroundRESGrothendieckRing
+#print axioms DiamondIntegral.Section3.GammaGroundRESGrothendieckRing
+#check @DiamondIntegral.Section3.gammaGroundRESGroupDirectSumEquiv
+#print axioms DiamondIntegral.Section3.gammaGroundRESGroupDirectSumEquiv
+#check @DiamondIntegral.Section3.gammaGroundRESRingToRV
+#print axioms DiamondIntegral.Section3.gammaGroundRESRingToRV
+#check @DiamondIntegral.Section3.GammaGroundRESObject.empty
+#print axioms DiamondIntegral.Section3.GammaGroundRESObject.empty
+#check @DiamondIntegral.Section3.GammaGroundRESObject.restrict
+#print axioms DiamondIntegral.Section3.GammaGroundRESObject.restrict
+#check @DiamondIntegral.Section3.GammaGroundRESObject.product
+#print axioms DiamondIntegral.Section3.GammaGroundRESObject.product
+#check @DiamondIntegral.Section3.GammaGroundRESObject.coprod
+#print axioms DiamondIntegral.Section3.GammaGroundRESObject.coprod
+#check @DiamondIntegral.Section3.gammaGroundRESPresentation
+#print axioms DiamondIntegral.Section3.gammaGroundRESPresentation
+#check @DiamondIntegral.Section3.GammaGroundRESKPlus
+#print axioms DiamondIntegral.Section3.GammaGroundRESKPlus
+#check @DiamondIntegral.Section3.gammaGroundRESClass
+#print axioms DiamondIntegral.Section3.gammaGroundRESClass
+#check @DiamondIntegral.Section3.gammaGroundRESToRVKPlus
+#print axioms DiamondIntegral.Section3.gammaGroundRESToRVKPlus
+#check @DiamondIntegral.Section3.rvAngularGlobalCoordinateMap
+#print axioms DiamondIntegral.Section3.rvAngularGlobalCoordinateMap
+#check @DiamondIntegral.Section3.gammaGroundRVAngularCoordinateMap
+#print axioms DiamondIntegral.Section3.gammaGroundRVAngularCoordinateMap
+#check @DiamondIntegral.Section3.gammaGroundRVMixedValueProjection
+#print axioms DiamondIntegral.Section3.gammaGroundRVMixedValueProjection
+#check @DiamondIntegral.Section3.gammaGroundRVAngularCoordinateBijection
+#print axioms DiamondIntegral.Section3.gammaGroundRVAngularCoordinateBijection
+#check @DiamondIntegral.Section3.gammaGroundRVAngularMixedDomain
+#print axioms DiamondIntegral.Section3.gammaGroundRVAngularMixedDomain
+#check @DiamondIntegral.Section3.gammaGroundRVAngularResidueDomain
+#print axioms DiamondIntegral.Section3.gammaGroundRVAngularResidueDomain
+#check @DiamondIntegral.Section3.gammaGroundRVBoundedToDirectSum
+#print axioms DiamondIntegral.Section3.gammaGroundRVBoundedToDirectSum
+#check @DiamondIntegral.Section3.GammaGroundRVObject
+#print axioms DiamondIntegral.Section3.GammaGroundRVObject
+#check @DiamondIntegral.Section3.GammaGroundRVObject.ofReal
+#print axioms DiamondIntegral.Section3.GammaGroundRVObject.ofReal
+#check @DiamondIntegral.Section3.GammaGroundRVObject.ofNamed
+#print axioms DiamondIntegral.Section3.GammaGroundRVObject.ofNamed
+#check @DiamondIntegral.Section3.gammaGroundResProperty
+#print axioms DiamondIntegral.Section3.gammaGroundResProperty
+#check @DiamondIntegral.Section3.GammaGroundRESObject
+#print axioms DiamondIntegral.Section3.GammaGroundRESObject
+#check @DiamondIntegral.Section3.gammaGroundRVCoprodLeft
+#print axioms DiamondIntegral.Section3.gammaGroundRVCoprodLeft
+#check @DiamondIntegral.Section3.gammaGroundRVCoprodRight
+#print axioms DiamondIntegral.Section3.gammaGroundRVCoprodRight
+#check @DiamondIntegral.Section3.GammaGroundRVObject.coprod
+#print axioms DiamondIntegral.Section3.GammaGroundRVObject.coprod
+#check @DiamondIntegral.Section3.GammaGroundRVObject.correspondence
+#print axioms DiamondIntegral.Section3.GammaGroundRVObject.correspondence
+#check @DiamondIntegral.Section3.GammaGroundRVObject.correspondenceFinitary
+#print axioms DiamondIntegral.Section3.GammaGroundRVObject.correspondenceFinitary
+#check @DiamondIntegral.Section3.GammaGroundRVObject.targetOfImage
+#print axioms DiamondIntegral.Section3.GammaGroundRVObject.targetOfImage
+#check @DiamondIntegral.Section3.GammaGroundRVObject.correspondencePoint
+#print axioms DiamondIntegral.Section3.GammaGroundRVObject.correspondencePoint
+#check @DiamondIntegral.Section3.GammaGroundRVObject.correspondenceJacobian
+#print axioms DiamondIntegral.Section3.GammaGroundRVObject.correspondenceJacobian
+#check @DiamondIntegral.Section3.gammaGroundRVDefinableUnits
+#print axioms DiamondIntegral.Section3.gammaGroundRVDefinableUnits
+#check @DiamondIntegral.Section3.gammaGroundDefinableRVValues
+#print axioms DiamondIntegral.Section3.gammaGroundDefinableRVValues
+#check @DiamondIntegral.Section3.GammaGroundRVHasFiniteMap
+#print axioms DiamondIntegral.Section3.GammaGroundRVHasFiniteMap
+#check @DiamondIntegral.Section3.gammaGroundRVDim
+#print axioms DiamondIntegral.Section3.gammaGroundRVDim
+#check @DiamondIntegral.Section3.gammaGroundRVDimension
+#print axioms DiamondIntegral.Section3.gammaGroundRVDimension
+#check @DiamondIntegral.Section3.gammaGroundEmptyBijection
+#print axioms DiamondIntegral.Section3.gammaGroundEmptyBijection
+#check @DiamondIntegral.Section3.gammaGroundRVFamilyDesc
+#print axioms DiamondIntegral.Section3.gammaGroundRVFamilyDesc
+#check @DiamondIntegral.Section3.gammaGroundRVFamilyMap
+#print axioms DiamondIntegral.Section3.gammaGroundRVFamilyMap
+#check @DiamondIntegral.Section3.GammaGroundFamilyBijection.rvRealization
+#print axioms DiamondIntegral.Section3.GammaGroundFamilyBijection.rvRealization
+#check @DiamondIntegral.Section3.gammaGroundRVSelectCoordinates
+#print axioms DiamondIntegral.Section3.gammaGroundRVSelectCoordinates
+#check @DiamondIntegral.Section3.GammaGroundFiniteFamily.rvTarget
+#print axioms DiamondIntegral.Section3.GammaGroundFiniteFamily.rvTarget
+#check @DiamondIntegral.Section3.GammaGroundFiniteFamily.rvObject
+#print axioms DiamondIntegral.Section3.GammaGroundFiniteFamily.rvObject
+#check @DiamondIntegral.Section3.gammaGroundRVFamilyIso
+#print axioms DiamondIntegral.Section3.gammaGroundRVFamilyIso
+#check @DiamondIntegral.Section3.GammaGroundFiniteFamily.rvProduct
+#print axioms DiamondIntegral.Section3.GammaGroundFiniteFamily.rvProduct
+#check @DiamondIntegral.Section3.gammaGroundRVFamilyProductBranch
+#print axioms DiamondIntegral.Section3.gammaGroundRVFamilyProductBranch
+#check @DiamondIntegral.Section3.gammaGroundRVFamilyProductMap
+#print axioms DiamondIntegral.Section3.gammaGroundRVFamilyProductMap
+#check @DiamondIntegral.Section3.gammaGroundRVFamilyProductBijection
+#print axioms DiamondIntegral.Section3.gammaGroundRVFamilyProductBijection
+#check @DiamondIntegral.Section3.gammaGroundRVFamilyTagMap
+#print axioms DiamondIntegral.Section3.gammaGroundRVFamilyTagMap
+#check @DiamondIntegral.Section3.GammaGroundFiniteFamily.rvRealization
+#print axioms DiamondIntegral.Section3.GammaGroundFiniteFamily.rvRealization
+#check @DiamondIntegral.Section3.GammaGroundFiniteFamily.rvEncode
+#print axioms DiamondIntegral.Section3.GammaGroundFiniteFamily.rvEncode
+#check @DiamondIntegral.Section3.GammaGroundFiniteFamily.rvEquiv
+#print axioms DiamondIntegral.Section3.GammaGroundFiniteFamily.rvEquiv
+#check @DiamondIntegral.Section3.GammaGroundFiniteFamily.rvPieceEncode
+#print axioms DiamondIntegral.Section3.GammaGroundFiniteFamily.rvPieceEncode
+#check @DiamondIntegral.Section3.gammaGroundRVFamilyBijectionOfRealization
+#print axioms DiamondIntegral.Section3.gammaGroundRVFamilyBijectionOfRealization
+#check @DiamondIntegral.Section3.GammaGroundRVObject.difference
+#print axioms DiamondIntegral.Section3.GammaGroundRVObject.difference
+#check @DiamondIntegral.Section3.gammaGroundRVFibreDimension
+#print axioms DiamondIntegral.Section3.gammaGroundRVFibreDimension
+#check @DiamondIntegral.Section3.gammaGroundFixedVFFibre
+#print axioms DiamondIntegral.Section3.gammaGroundFixedVFFibre
+#check @DiamondIntegral.Section3.gammaGroundRVFibreDim
+#print axioms DiamondIntegral.Section3.gammaGroundRVFibreDim
+#check @DiamondIntegral.Section3.GammaGroundRVBoundedPositive
+#print axioms DiamondIntegral.Section3.GammaGroundRVBoundedPositive
+#check @DiamondIntegral.Section3.gammaGroundRVBoundedClass
+#print axioms DiamondIntegral.Section3.gammaGroundRVBoundedClass
+#check @DiamondIntegral.Section3.gammaGroundRVBoundedInclude
+#print axioms DiamondIntegral.Section3.gammaGroundRVBoundedInclude
+#check @DiamondIntegral.Section3.gammaGroundRVBoundedTransition
+#print axioms DiamondIntegral.Section3.gammaGroundRVBoundedTransition
+#check @DiamondIntegral.Section3.gammaGroundRVBoundedSpecialHom
+#print axioms DiamondIntegral.Section3.gammaGroundRVBoundedSpecialHom
+#check @DiamondIntegral.Section3.gammaGroundRVBoundedSpecialCongruence
+#print axioms DiamondIntegral.Section3.gammaGroundRVBoundedSpecialCongruence
+#check @DiamondIntegral.Section3.gammaGroundRVBoundedQuotientTransition
+#print axioms DiamondIntegral.Section3.gammaGroundRVBoundedQuotientTransition
+#check @DiamondIntegral.Section3.gammaGroundRVCoordinateSet
+#print axioms DiamondIntegral.Section3.gammaGroundRVCoordinateSet
+#check @DiamondIntegral.Section3.gammaGroundDefSetFiniteUnion
+#print axioms DiamondIntegral.Section3.gammaGroundDefSetFiniteUnion
+#check @DiamondIntegral.Section3.gammaGroundRVUnitValueFibre
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnitValueFibre
+#check @DiamondIntegral.Section3.GammaGroundRVFormProductChart.changeWeight
+#print axioms DiamondIntegral.Section3.GammaGroundRVFormProductChart.changeWeight
+#check @DiamondIntegral.Section3.GammaGroundRVFormProductChart
+#print axioms DiamondIntegral.Section3.GammaGroundRVFormProductChart
+#check @DiamondIntegral.Section3.GammaGroundRVFormProductChart.pullback
+#print axioms DiamondIntegral.Section3.GammaGroundRVFormProductChart.pullback
+#check @DiamondIntegral.Section3.gammaGroundRVSpecialCongruence
+#print axioms DiamondIntegral.Section3.gammaGroundRVSpecialCongruence
+#check @DiamondIntegral.Section3.gammaGroundRVPrincipalElement
+#print axioms DiamondIntegral.Section3.gammaGroundRVPrincipalElement
+#check @DiamondIntegral.Section3.gammaGroundRVSpecialCompletionEquiv
+#print axioms DiamondIntegral.Section3.gammaGroundRVSpecialCompletionEquiv
+#check @DiamondIntegral.Section3.rvGenericCoordinateInput
+#print axioms DiamondIntegral.Section3.rvGenericCoordinateInput
+#check @DiamondIntegral.Section3.rvGenericCoordinate
+#print axioms DiamondIntegral.Section3.rvGenericCoordinate
+#check @DiamondIntegral.Section3.gammaGroundRVGenericValueGraph
+#print axioms DiamondIntegral.Section3.gammaGroundRVGenericValueGraph
+#check @DiamondIntegral.Section3.gammaGroundFullPreimageValueMap
+#print axioms DiamondIntegral.Section3.gammaGroundFullPreimageValueMap
+#check @DiamondIntegral.Section3.gammaGroundRVGenericUnits
+#print axioms DiamondIntegral.Section3.gammaGroundRVGenericUnits
+#check @DiamondIntegral.Section3.gammaGroundRVGenericValueMap
+#print axioms DiamondIntegral.Section3.gammaGroundRVGenericValueMap
+#check @DiamondIntegral.Section3.gammaGroundRVGenericValueImage
+#print axioms DiamondIntegral.Section3.gammaGroundRVGenericValueImage
+#check @DiamondIntegral.Section3.gammaGroundRVDirectSumInvariant
+#print axioms DiamondIntegral.Section3.gammaGroundRVDirectSumInvariant
+#check @DiamondIntegral.Section3.gammaGroundRVPresentationToDirectSum
+#print axioms DiamondIntegral.Section3.gammaGroundRVPresentationToDirectSum
+#check @DiamondIntegral.Section3.gammaGroundRVDirectSumToPresentationAdd
+#print axioms DiamondIntegral.Section3.gammaGroundRVDirectSumToPresentationAdd
+#check @DiamondIntegral.Section3.gammaGroundRVDirectSumToPresentation
+#print axioms DiamondIntegral.Section3.gammaGroundRVDirectSumToPresentation
+#check @DiamondIntegral.Section3.gammaGroundRVSemiringEquivDirectSum
+#print axioms DiamondIntegral.Section3.gammaGroundRVSemiringEquivDirectSum
+#check @DiamondIntegral.Section3.gammaGroundRVKPlusCast
+#print axioms DiamondIntegral.Section3.gammaGroundRVKPlusCast
+#check @DiamondIntegral.Section3.GammaGroundRVDirectSum
+#print axioms DiamondIntegral.Section3.GammaGroundRVDirectSum
+#check @DiamondIntegral.Section3.gammaGroundRVDirectSumClass
+#print axioms DiamondIntegral.Section3.gammaGroundRVDirectSumClass
+#check @DiamondIntegral.Section3.gammaGroundRVGroupDirectSumEquiv
+#print axioms DiamondIntegral.Section3.gammaGroundRVGroupDirectSumEquiv
+#check @DiamondIntegral.Section3.gammaGroundRVRepresentative
+#print axioms DiamondIntegral.Section3.gammaGroundRVRepresentative
+#check @DiamondIntegral.Section3.gammaGroundRVClassMul
+#print axioms DiamondIntegral.Section3.gammaGroundRVClassMul
+#check @DiamondIntegral.Section3.rvInfiniteLast
+#print axioms DiamondIntegral.Section3.rvInfiniteLast
+#check @DiamondIntegral.Section3.GammaGroundRVIsoClasses
+#print axioms DiamondIntegral.Section3.GammaGroundRVIsoClasses
+#check @DiamondIntegral.Section3.gammaGroundRVIsoClass
+#print axioms DiamondIntegral.Section3.gammaGroundRVIsoClass
+#check @DiamondIntegral.Section3.gammaGroundRVKPlusToIsoClasses
+#print axioms DiamondIntegral.Section3.gammaGroundRVKPlusToIsoClasses
+#check @DiamondIntegral.Section3.GammaGroundRVObject.unitLabelMap
+#print axioms DiamondIntegral.Section3.GammaGroundRVObject.unitLabelMap
+#check @DiamondIntegral.Section3.GammaGroundRVObject.labelValueMap
+#print axioms DiamondIntegral.Section3.GammaGroundRVObject.labelValueMap
+#check @DiamondIntegral.Section3.GammaGroundRVObject.labelWeightForm
+#print axioms DiamondIntegral.Section3.GammaGroundRVObject.labelWeightForm
+#check @DiamondIntegral.Section3.GammaGroundMeasuredRVObject.combinedWeightForm
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredRVObject.combinedWeightForm
+#check @DiamondIntegral.Section3.GammaGroundRVMapObject
+#print axioms DiamondIntegral.Section3.GammaGroundRVMapObject
+#check @DiamondIntegral.Section3.gammaGroundRVMapIsoOfBijection
+#print axioms DiamondIntegral.Section3.gammaGroundRVMapIsoOfBijection
+#check @DiamondIntegral.Section3.gammaGroundRVBijectionOfMapIso
+#print axioms DiamondIntegral.Section3.gammaGroundRVBijectionOfMapIso
+#check @DiamondIntegral.Section3.GammaGroundRVMapObject.coprod
+#print axioms DiamondIntegral.Section3.GammaGroundRVMapObject.coprod
+#check @DiamondIntegral.Section3.gammaGroundRVMapInl
+#print axioms DiamondIntegral.Section3.gammaGroundRVMapInl
+#check @DiamondIntegral.Section3.gammaGroundRVMapInr
+#print axioms DiamondIntegral.Section3.gammaGroundRVMapInr
+#check @DiamondIntegral.Section3.gammaGroundRVMapDesc
+#print axioms DiamondIntegral.Section3.gammaGroundRVMapDesc
+#check @DiamondIntegral.Section3.gammaGroundRVMapCoprodIsColimit
+#print axioms DiamondIntegral.Section3.gammaGroundRVMapCoprodIsColimit
+#check @DiamondIntegral.Section3.GammaGroundRVMapObject.empty
+#print axioms DiamondIntegral.Section3.GammaGroundRVMapObject.empty
+#check @DiamondIntegral.Section3.gammaGroundRVMapEmptyHom
+#print axioms DiamondIntegral.Section3.gammaGroundRVMapEmptyHom
+#check @DiamondIntegral.Section3.gammaGroundRVMapEmptyIsInitial
+#print axioms DiamondIntegral.Section3.gammaGroundRVMapEmptyIsInitial
+#check @DiamondIntegral.Section3.GammaGroundRVProductPiece
+#print axioms DiamondIntegral.Section3.GammaGroundRVProductPiece
+#check @DiamondIntegral.Section3.gammaGroundRVPackPair
+#print axioms DiamondIntegral.Section3.gammaGroundRVPackPair
+#check @DiamondIntegral.Section3.GammaGroundRVMapObject.restrict
+#print axioms DiamondIntegral.Section3.GammaGroundRVMapObject.restrict
+#check @DiamondIntegral.Section3.gammaGroundRVMapPartitionIso
+#print axioms DiamondIntegral.Section3.gammaGroundRVMapPartitionIso
+#check @DiamondIntegral.Section3.gammaGroundRVCoprodLeftRestrictionIso
+#print axioms DiamondIntegral.Section3.gammaGroundRVCoprodLeftRestrictionIso
+#check @DiamondIntegral.Section3.gammaGroundRVCoprodRightRestrictionIso
+#print axioms DiamondIntegral.Section3.gammaGroundRVCoprodRightRestrictionIso
+#check @DiamondIntegral.Section3.GammaGroundBijection.prodSwap
+#print axioms DiamondIntegral.Section3.GammaGroundBijection.prodSwap
+#check @DiamondIntegral.Section3.GammaGroundBijection.prodAssoc
+#print axioms DiamondIntegral.Section3.GammaGroundBijection.prodAssoc
+#check @DiamondIntegral.Section3.GammaGroundRVObject.reindexVolume
+#print axioms DiamondIntegral.Section3.GammaGroundRVObject.reindexVolume
+#check @DiamondIntegral.Section3.gammaGroundRVProductCommBijection
+#print axioms DiamondIntegral.Section3.gammaGroundRVProductCommBijection
+#check @DiamondIntegral.Section3.gammaGroundRVProductAssocBijection
+#print axioms DiamondIntegral.Section3.gammaGroundRVProductAssocBijection
+#check @DiamondIntegral.Section3.gammaGroundRVRightUnitProjection
+#print axioms DiamondIntegral.Section3.gammaGroundRVRightUnitProjection
+#check @DiamondIntegral.Section3.gammaGroundRVProductRightUnitBijection
+#print axioms DiamondIntegral.Section3.gammaGroundRVProductRightUnitBijection
+#check @DiamondIntegral.Section3.gammaGroundRVPackBijection
+#print axioms DiamondIntegral.Section3.gammaGroundRVPackBijection
+#check @DiamondIntegral.Section3.gammaGroundRVProductBijection
+#print axioms DiamondIntegral.Section3.gammaGroundRVProductBijection
+#check @DiamondIntegral.Section3.gammaGroundRVProductIso
+#print axioms DiamondIntegral.Section3.gammaGroundRVProductIso
+#check @DiamondIntegral.Section3.GammaGroundRVProductChart
+#print axioms DiamondIntegral.Section3.GammaGroundRVProductChart
+#check @DiamondIntegral.Section3.gammaGroundRVProductRestrictionIso
+#print axioms DiamondIntegral.Section3.gammaGroundRVProductRestrictionIso
+#check @DiamondIntegral.Section3.gammaGroundRVPack
+#print axioms DiamondIntegral.Section3.gammaGroundRVPack
+#check @DiamondIntegral.Section3.gammaGroundRVProductDomain
+#print axioms DiamondIntegral.Section3.gammaGroundRVProductDomain
+#check @DiamondIntegral.Section3.gammaGroundRVUnpack
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnpack
+#check @DiamondIntegral.Section3.gammaGroundRVAppendTargets
+#print axioms DiamondIntegral.Section3.gammaGroundRVAppendTargets
+#check @DiamondIntegral.Section3.GammaGroundRVObject.product
+#print axioms DiamondIntegral.Section3.GammaGroundRVObject.product
+#check @DiamondIntegral.Section3.GammaGroundRVObject.unit
+#print axioms DiamondIntegral.Section3.GammaGroundRVObject.unit
+#check @DiamondIntegral.Section3.GammaGroundRVObject.graphMap
+#print axioms DiamondIntegral.Section3.GammaGroundRVObject.graphMap
+#check @DiamondIntegral.Section3.GammaGroundRVObject.graphBijection
+#print axioms DiamondIntegral.Section3.GammaGroundRVObject.graphBijection
+#check @DiamondIntegral.Section3.GammaGroundRVObject.projectionObject
+#print axioms DiamondIntegral.Section3.GammaGroundRVObject.projectionObject
+#check @DiamondIntegral.Section3.GammaGroundRVObject.projectionIso
+#print axioms DiamondIntegral.Section3.GammaGroundRVObject.projectionIso
+#check @DiamondIntegral.Section3.GammaGroundRVObject.empty
+#print axioms DiamondIntegral.Section3.GammaGroundRVObject.empty
+#check @DiamondIntegral.Section3.GammaGroundRVObject.restrict
+#print axioms DiamondIntegral.Section3.GammaGroundRVObject.restrict
+#check @DiamondIntegral.Section3.gammaGroundRVScissor
+#print axioms DiamondIntegral.Section3.gammaGroundRVScissor
+#check @DiamondIntegral.Section3.gammaGroundRVPresentation
+#print axioms DiamondIntegral.Section3.gammaGroundRVPresentation
+#check @DiamondIntegral.Section3.GammaGroundRVKPlus
+#print axioms DiamondIntegral.Section3.GammaGroundRVKPlus
+#check @DiamondIntegral.Section3.gammaGroundRVClass
+#print axioms DiamondIntegral.Section3.gammaGroundRVClass
+#check @DiamondIntegral.Section3.GradedGammaGroundRVObject
+#print axioms DiamondIntegral.Section3.GradedGammaGroundRVObject
+#check @DiamondIntegral.Section3.gradedGammaGroundRVScissor
+#print axioms DiamondIntegral.Section3.gradedGammaGroundRVScissor
+#check @DiamondIntegral.Section3.gammaGroundRVSemiringPresentation
+#print axioms DiamondIntegral.Section3.gammaGroundRVSemiringPresentation
+#check @DiamondIntegral.Section3.GammaGroundRVPositiveSemiring
+#print axioms DiamondIntegral.Section3.GammaGroundRVPositiveSemiring
+#check @DiamondIntegral.Section3.GammaGroundRVGrothendieckRing
+#print axioms DiamondIntegral.Section3.GammaGroundRVGrothendieckRing
+#check @DiamondIntegral.Section3.gammaGroundRVSemiringClass
+#print axioms DiamondIntegral.Section3.gammaGroundRVSemiringClass
+#check @DiamondIntegral.Section3.gammaGroundRVKPlusToSemiring
+#print axioms DiamondIntegral.Section3.gammaGroundRVKPlusToSemiring
+#check @DiamondIntegral.Section3.gammaGroundRVSemiringUniversal
+#print axioms DiamondIntegral.Section3.gammaGroundRVSemiringUniversal
+#check @DiamondIntegral.Section3.gammaGroundRVLeftTag
+#print axioms DiamondIntegral.Section3.gammaGroundRVLeftTag
+#check @DiamondIntegral.Section3.gammaGroundRVRightTag
+#print axioms DiamondIntegral.Section3.gammaGroundRVRightTag
+#check @DiamondIntegral.Section3.gammaGroundRVUntagLeft
+#print axioms DiamondIntegral.Section3.gammaGroundRVUntagLeft
+#check @DiamondIntegral.Section3.gammaGroundRVUntagRight
+#print axioms DiamondIntegral.Section3.gammaGroundRVUntagRight
+#check @DiamondIntegral.Section3.gammaGroundRVUnitAffineMap
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnitAffineMap
+#check @DiamondIntegral.Section3.rvUnitRawCoordinateImage
+#print axioms DiamondIntegral.Section3.rvUnitRawCoordinateImage
+#check @DiamondIntegral.Section3.gammaGroundRVUnitSetOfBase
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnitSetOfBase
+#check @DiamondIntegral.Section3.GammaGroundMap.unitGraphMap
+#print axioms DiamondIntegral.Section3.GammaGroundMap.unitGraphMap
+#check @DiamondIntegral.Section3.GammaGroundMap.unitGraphBijection
+#print axioms DiamondIntegral.Section3.GammaGroundMap.unitGraphBijection
+#check @DiamondIntegral.Section3.GammaGroundMap.unitGraphLabel
+#print axioms DiamondIntegral.Section3.GammaGroundMap.unitGraphLabel
+#check @DiamondIntegral.Section3.gammaGroundRVUnitMixedRelation
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnitMixedRelation
+#check @DiamondIntegral.Section3.gammaGroundRVUnitGammaPreimage
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnitGammaPreimage
+#check @DiamondIntegral.Section3.gammaGroundRVUnitToRVMap
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnitToRVMap
+#check @DiamondIntegral.Section3.gammaGroundRVUnitPresentationBijection
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnitPresentationBijection
+#check @DiamondIntegral.Section3.GammaGroundMap.unitRaw
+#print axioms DiamondIntegral.Section3.GammaGroundMap.unitRaw
+#check @DiamondIntegral.Section3.gammaGroundRVUnitValueGraphProduct
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnitValueGraphProduct
+#check @DiamondIntegral.Section3.gammaGroundRVUnitValueGraph
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnitValueGraph
+#check @DiamondIntegral.Section3.gammaGroundRVZeroPattern
+#print axioms DiamondIntegral.Section3.gammaGroundRVZeroPattern
+#check @DiamondIntegral.Section3.gammaGroundRVPatternSource
+#print axioms DiamondIntegral.Section3.gammaGroundRVPatternSource
+#check @DiamondIntegral.Section3.gammaGroundRVPatternMap
+#print axioms DiamondIntegral.Section3.gammaGroundRVPatternMap
+#check @DiamondIntegral.Section3.gammaGroundRVNonzeroStratum
+#print axioms DiamondIntegral.Section3.gammaGroundRVNonzeroStratum
+#check @DiamondIntegral.Section3.gammaGroundRVStratifiedObject
+#print axioms DiamondIntegral.Section3.gammaGroundRVStratifiedObject
+#check @DiamondIntegral.Section3.gammaGroundRVPatternTags
+#print axioms DiamondIntegral.Section3.gammaGroundRVPatternTags
+#check @DiamondIntegral.Section3.gammaGroundRVPatternFamily
+#print axioms DiamondIntegral.Section3.gammaGroundRVPatternFamily
+#check @DiamondIntegral.Section3.gammaGroundRVPatternFold
+#print axioms DiamondIntegral.Section3.gammaGroundRVPatternFold
+#check @DiamondIntegral.Section3.gammaGroundRVPatternCarrierEquiv
+#print axioms DiamondIntegral.Section3.gammaGroundRVPatternCarrierEquiv
+#check @DiamondIntegral.Section3.realCodeSpace
+#print axioms DiamondIntegral.Section3.realCodeSpace
+#check @DiamondIntegral.Section3.realCodeDecodeMap
+#print axioms DiamondIntegral.Section3.realCodeDecodeMap
+#check @DiamondIntegral.Section3.realCodeTupleMap
+#print axioms DiamondIntegral.Section3.realCodeTupleMap
+#check @DiamondIntegral.Section3.GammaGroundMap.graph
+#print axioms DiamondIntegral.Section3.GammaGroundMap.graph
+#check @DiamondIntegral.Section3.GammaGroundRawDefinable
+#print axioms DiamondIntegral.Section3.GammaGroundRawDefinable
+#check @DiamondIntegral.Section3.rawTupleProjectionMap
+#print axioms DiamondIntegral.Section3.rawTupleProjectionMap
+#check @DiamondIntegral.Section3.GammaGroundDefSet.monoReal
+#print axioms DiamondIntegral.Section3.GammaGroundDefSet.monoReal
+#check @DiamondIntegral.Section3.GammaGroundMap.monoReal
+#print axioms DiamondIntegral.Section3.GammaGroundMap.monoReal
+#check @DiamondIntegral.Section3.gammaGroundRealPointFibre
+#print axioms DiamondIntegral.Section3.gammaGroundRealPointFibre
+#check @DiamondIntegral.Section3.gammaGroundRealPointFibreInclusion
+#print axioms DiamondIntegral.Section3.gammaGroundRealPointFibreInclusion
+#check @DiamondIntegral.Section3.GammaGroundMap.fibreSource
+#print axioms DiamondIntegral.Section3.GammaGroundMap.fibreSource
+#check @DiamondIntegral.Section3.realPointInsertMap
+#print axioms DiamondIntegral.Section3.realPointInsertMap
+#check @DiamondIntegral.Section3.GammaGroundMap.fibre
+#print axioms DiamondIntegral.Section3.GammaGroundMap.fibre
+#check @DiamondIntegral.Section3.gammaGroundMeasureJacobianLeft
+#print axioms DiamondIntegral.Section3.gammaGroundMeasureJacobianLeft
+#check @DiamondIntegral.Section3.gammaGroundMeasureJacobianRight
+#print axioms DiamondIntegral.Section3.gammaGroundMeasureJacobianRight
+#check @DiamondIntegral.Section3.gammaGroundRegularMeasureLocus
+#print axioms DiamondIntegral.Section3.gammaGroundRegularMeasureLocus
+#check @DiamondIntegral.Section3.GammaGroundRelationDefinable
+#print axioms DiamondIntegral.Section3.GammaGroundRelationDefinable
+#check @DiamondIntegral.Section3.gammaGroundSingleFamilyBijection
+#print axioms DiamondIntegral.Section3.gammaGroundSingleFamilyBijection
+#check @DiamondIntegral.Section3.gammaSortedRawRelation
+#print axioms DiamondIntegral.Section3.gammaSortedRawRelation
+#check @DiamondIntegral.Section3.gammaPowerRawRelation
+#print axioms DiamondIntegral.Section3.gammaPowerRawRelation
+#check @DiamondIntegral.Section3.gammaRelationOfPowerSet
+#print axioms DiamondIntegral.Section3.gammaRelationOfPowerSet
+#check @DiamondIntegral.Section3.gammaGroundGammaTail
+#print axioms DiamondIntegral.Section3.gammaGroundGammaTail
+#check @DiamondIntegral.Section3.gammaGroundGammaPositiveTail
+#print axioms DiamondIntegral.Section3.gammaGroundGammaPositiveTail
+#check @DiamondIntegral.Section3.gammaGroundGammaAnnulus
+#print axioms DiamondIntegral.Section3.gammaGroundGammaAnnulus
+#check @DiamondIntegral.Section3.gammaGroundGammaTailTranslation
+#print axioms DiamondIntegral.Section3.gammaGroundGammaTailTranslation
+#check @DiamondIntegral.Section3.GammaGroundTopForm
+#print axioms DiamondIntegral.Section3.GammaGroundTopForm
+#check @DiamondIntegral.Section3.GammaGroundVolumeForm.toTop
+#print axioms DiamondIntegral.Section3.GammaGroundVolumeForm.toTop
+#check @DiamondIntegral.Section3.GammaGroundTopForm.mul
+#print axioms DiamondIntegral.Section3.GammaGroundTopForm.mul
+#check @DiamondIntegral.Section3.GammaGroundMap.valuation
+#print axioms DiamondIntegral.Section3.GammaGroundMap.valuation
+#check @DiamondIntegral.Section3.gammaGroundRVUnitAffinePointBijection
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnitAffinePointBijection
+#check @DiamondIntegral.Section3.gammaGroundGammaSingleAffinePointHom
+#print axioms DiamondIntegral.Section3.gammaGroundGammaSingleAffinePointHom
+#check @DiamondIntegral.Section3.GammaGroundUnaryPiecewiseIntegralAffine
+#print axioms DiamondIntegral.Section3.GammaGroundUnaryPiecewiseIntegralAffine
+#check @DiamondIntegral.Section3.GammaGroundGammaObject.unitCodeBijection
+#print axioms DiamondIntegral.Section3.GammaGroundGammaObject.unitCodeBijection
+#check @DiamondIntegral.Section3.gammaGroundUnitFamilyBijectionOfRVLift
+#print axioms DiamondIntegral.Section3.gammaGroundUnitFamilyBijectionOfRVLift
+#check @DiamondIntegral.Section3.gammaGroundGammaHomOfUnitFamilyLift
+#print axioms DiamondIntegral.Section3.gammaGroundGammaHomOfUnitFamilyLift
+#check @DiamondIntegral.Section3.GammaGroundGammaObject.unitFamily
+#print axioms DiamondIntegral.Section3.GammaGroundGammaObject.unitFamily
+#check @DiamondIntegral.Section3.gammaGroundUnitFullCodeTransport
+#print axioms DiamondIntegral.Section3.gammaGroundUnitFullCodeTransport
+#check @DiamondIntegral.Section3.gammaGroundGammaSingleHomOfUnitBijection
+#print axioms DiamondIntegral.Section3.gammaGroundGammaSingleHomOfUnitBijection
+#check @DiamondIntegral.Section3.gammaGroundUnitPreimageProductBijection
+#print axioms DiamondIntegral.Section3.gammaGroundUnitPreimageProductBijection
+#check @DiamondIntegral.Section3.GammaGroundShearDomain
+#print axioms DiamondIntegral.Section3.GammaGroundShearDomain
+#check @DiamondIntegral.Section3.gammaGroundGammaShear
+#print axioms DiamondIntegral.Section3.gammaGroundGammaShear
+#check @DiamondIntegral.Section3.gammaGroundRVUnitShear
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnitShear
+#check @DiamondIntegral.Section3.GammaGroundUnmeasuredPositiveTensor
+#print axioms DiamondIntegral.Section3.GammaGroundUnmeasuredPositiveTensor
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredTensorMap
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredTensorMap
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredGroupTensorMap
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredGroupTensorMap
+#check @DiamondIntegral.Section3.GammaGroundVFObject
+#print axioms DiamondIntegral.Section3.GammaGroundVFObject
+#check @DiamondIntegral.Section3.GammaGroundVFObject.raise
+#print axioms DiamondIntegral.Section3.GammaGroundVFObject.raise
+#check @DiamondIntegral.Section3.GammaGroundVFObject.restrict
+#print axioms DiamondIntegral.Section3.GammaGroundVFObject.restrict
+#check @DiamondIntegral.Section3.GammaGroundVFObject.ofReal
+#print axioms DiamondIntegral.Section3.GammaGroundVFObject.ofReal
+#check @DiamondIntegral.Section3.GammaGroundVFObject.ofNamed
+#print axioms DiamondIntegral.Section3.GammaGroundVFObject.ofNamed
+#check @DiamondIntegral.Section3.GammaGroundVFDiagramSupport
+#print axioms DiamondIntegral.Section3.GammaGroundVFDiagramSupport
+#check @DiamondIntegral.Section3.GammaGroundVFDiagramSupport.namedObject
+#print axioms DiamondIntegral.Section3.GammaGroundVFDiagramSupport.namedObject
+#check @DiamondIntegral.Section3.GammaGroundVFDiagramSupport.namedArrow
+#print axioms DiamondIntegral.Section3.GammaGroundVFDiagramSupport.namedArrow
+#check @DiamondIntegral.Section3.GammaGroundVFObject.ofDimensions
+#print axioms DiamondIntegral.Section3.GammaGroundVFObject.ofDimensions
+#check @DiamondIntegral.Section3.gammaGroundVFKPlusToSemiring
+#print axioms DiamondIntegral.Section3.gammaGroundVFKPlusToSemiring
+#check @DiamondIntegral.Section3.gammaGroundFiniteVFSemiringAddEquiv
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteVFSemiringAddEquiv
+#check @DiamondIntegral.Section3.gammaGroundVFRaiseKPlus
+#print axioms DiamondIntegral.Section3.gammaGroundVFRaiseKPlus
+#check @DiamondIntegral.Section3.gammaGroundVFToFiniteKPlus
+#print axioms DiamondIntegral.Section3.gammaGroundVFToFiniteKPlus
+#check @DiamondIntegral.Section3.gammaGroundVFGroupDiagram
+#print axioms DiamondIntegral.Section3.gammaGroundVFGroupDiagram
+#check @DiamondIntegral.Section3.gammaGroundVFGroupCocone
+#print axioms DiamondIntegral.Section3.gammaGroundVFGroupCocone
+#check @DiamondIntegral.Section3.gammaGroundVFGroupIsColimit
+#print axioms DiamondIntegral.Section3.gammaGroundVFGroupIsColimit
+#check @DiamondIntegral.Section3.CompatibleGammaGroundVFPositiveMaps
+#print axioms DiamondIntegral.Section3.CompatibleGammaGroundVFPositiveMaps
+#check @DiamondIntegral.Section3.gammaGroundVFColimitInvariant
+#print axioms DiamondIntegral.Section3.gammaGroundVFColimitInvariant
+#check @DiamondIntegral.Section3.gammaGroundVFColimitLift
+#print axioms DiamondIntegral.Section3.gammaGroundVFColimitLift
+#check @DiamondIntegral.Section3.gammaGroundVFPositiveColimitUniversal
+#print axioms DiamondIntegral.Section3.gammaGroundVFPositiveColimitUniversal
+#check @DiamondIntegral.Section3.gammaGroundVFPositiveDiagram
+#print axioms DiamondIntegral.Section3.gammaGroundVFPositiveDiagram
+#check @DiamondIntegral.Section3.gammaGroundVFPositiveCocone
+#print axioms DiamondIntegral.Section3.gammaGroundVFPositiveCocone
+#check @DiamondIntegral.Section3.gammaGroundVFCompatibleOfCocone
+#print axioms DiamondIntegral.Section3.gammaGroundVFCompatibleOfCocone
+#check @DiamondIntegral.Section3.gammaGroundVFPositiveIsColimit
+#print axioms DiamondIntegral.Section3.gammaGroundVFPositiveIsColimit
+#check @DiamondIntegral.Section3.GammaGroundVFObject.empty
+#print axioms DiamondIntegral.Section3.GammaGroundVFObject.empty
+#check @DiamondIntegral.Section3.gammaGroundVFScissor
+#print axioms DiamondIntegral.Section3.gammaGroundVFScissor
+#check @DiamondIntegral.Section3.gammaGroundVFPresentation
+#print axioms DiamondIntegral.Section3.gammaGroundVFPresentation
+#check @DiamondIntegral.Section3.GammaGroundVFKPlus
+#print axioms DiamondIntegral.Section3.GammaGroundVFKPlus
+#check @DiamondIntegral.Section3.gammaGroundVFClass
+#print axioms DiamondIntegral.Section3.gammaGroundVFClass
+#check @DiamondIntegral.Section3.gammaGroundVFSemiringPresentation
+#print axioms DiamondIntegral.Section3.gammaGroundVFSemiringPresentation
+#check @DiamondIntegral.Section3.GammaGroundVFPositiveSemiring
+#print axioms DiamondIntegral.Section3.GammaGroundVFPositiveSemiring
+#check @DiamondIntegral.Section3.GammaGroundVFGrothendieckRing
+#print axioms DiamondIntegral.Section3.GammaGroundVFGrothendieckRing
+#check @DiamondIntegral.Section3.gammaGroundVFSemiringClass
+#print axioms DiamondIntegral.Section3.gammaGroundVFSemiringClass
+#check @DiamondIntegral.Section3.gammaGroundFiniteVFKPlusToSemiring
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteVFKPlusToSemiring
+#check @DiamondIntegral.Section3.gammaGroundFiniteVFCommSemiring
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteVFCommSemiring
+#check @DiamondIntegral.Section3.gammaGroundFiniteVFSemiringEquiv
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteVFSemiringEquiv
+#check @DiamondIntegral.Section3.gammaGroundVFSemiringColimitCocone
+#print axioms DiamondIntegral.Section3.gammaGroundVFSemiringColimitCocone
+#check @DiamondIntegral.Section3.gammaGroundVFSemiringIsColimit
+#print axioms DiamondIntegral.Section3.gammaGroundVFSemiringIsColimit
+#check @DiamondIntegral.Section3.gammaGroundVFRingColimitCocone
+#print axioms DiamondIntegral.Section3.gammaGroundVFRingColimitCocone
+#check @DiamondIntegral.Section3.gammaGroundVFRingIsColimit
+#print axioms DiamondIntegral.Section3.gammaGroundVFRingIsColimit
+#check @DiamondIntegral.Section3.gammaGroundOneForm
+#print axioms DiamondIntegral.Section3.gammaGroundOneForm
+#check @DiamondIntegral.Section3.GammaGroundVolumeForm.mul
+#print axioms DiamondIntegral.Section3.GammaGroundVolumeForm.mul
+#check @DiamondIntegral.Section3.gammaGroundFiniteRVZeroObject
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteRVZeroObject
+#check @DiamondIntegral.Section3.gammaGroundZeroRVVFEquivalence
+#print axioms DiamondIntegral.Section3.gammaGroundZeroRVVFEquivalence
+#check @DiamondIntegral.Section3.gammaGroundZeroMeasuredRVVFEquivalence
+#print axioms DiamondIntegral.Section3.gammaGroundZeroMeasuredRVVFEquivalence
+#check @DiamondIntegral.Section3.gammaGroundZeroMeasuredRVLiftHom
+#print axioms DiamondIntegral.Section3.gammaGroundZeroMeasuredRVLiftHom
+#check @DiamondIntegral.Section3.gammaGroundZeroMeasuredRVToVF
+#print axioms DiamondIntegral.Section3.gammaGroundZeroMeasuredRVToVF
+#check @DiamondIntegral.Section3.gammaGroundZeroMeasuredRVPreimage
+#print axioms DiamondIntegral.Section3.gammaGroundZeroMeasuredRVPreimage
+#check @DiamondIntegral.Section3.universalEmptyVFMap
+#print axioms DiamondIntegral.Section3.universalEmptyVFMap
+#check @DiamondIntegral.Section3.universalRVInsertEmptyVF
+#print axioms DiamondIntegral.Section3.universalRVInsertEmptyVF
+#check @DiamondIntegral.Section3.gammaGroundZeroRVLiftBijection
+#print axioms DiamondIntegral.Section3.gammaGroundZeroRVLiftBijection
+#check @DiamondIntegral.Section3.gammaGroundZeroRVToVF
+#print axioms DiamondIntegral.Section3.gammaGroundZeroRVToVF
+#check @DiamondIntegral.Section3.gammaRepresentative
+#print axioms DiamondIntegral.Section3.gammaRepresentative
+#check @DiamondIntegral.Section3.gammaClassMul
+#print axioms DiamondIntegral.Section3.gammaClassMul
+#check @DiamondIntegral.Section3.gammaGroundGammaTranslate
+#print axioms DiamondIntegral.Section3.gammaGroundGammaTranslate
+#check @DiamondIntegral.Section3.gammaValuePrefix
+#print axioms DiamondIntegral.Section3.gammaValuePrefix
+#check @DiamondIntegral.Section3.gammaPartitionHom
+#print axioms DiamondIntegral.Section3.gammaPartitionHom
+#check @DiamondIntegral.Section3.gammaKPlusToIsoClasses
+#print axioms DiamondIntegral.Section3.gammaKPlusToIsoClasses
+#check @DiamondIntegral.Section3.gammaProductCodeFunctionEquiv
+#print axioms DiamondIntegral.Section3.gammaProductCodeFunctionEquiv
+#check @DiamondIntegral.Section3.gammaProductCodeBijection
+#print axioms DiamondIntegral.Section3.gammaProductCodeBijection
+#check @DiamondIntegral.Section3.gammaProductCarrierPieceEquiv
+#print axioms DiamondIntegral.Section3.gammaProductCarrierPieceEquiv
+#check @DiamondIntegral.Section3.gammaProductCodePieceEquiv
+#print axioms DiamondIntegral.Section3.gammaProductCodePieceEquiv
+#check @DiamondIntegral.Section3.GammaObject.productCarrierEquiv
+#print axioms DiamondIntegral.Section3.GammaObject.productCarrierEquiv
+#check @DiamondIntegral.Section3.GammaObject.productCodeEquiv
+#print axioms DiamondIntegral.Section3.GammaObject.productCodeEquiv
+#check @DiamondIntegral.Section3.gammaProductRightDistribHom
+#print axioms DiamondIntegral.Section3.gammaProductRightDistribHom
+#check @DiamondIntegral.Section3.gammaProductCommHom
+#print axioms DiamondIntegral.Section3.gammaProductCommHom
+#check @DiamondIntegral.Section3.gammaProductAssocHom
+#print axioms DiamondIntegral.Section3.gammaProductAssocHom
+#check @DiamondIntegral.Section3.gammaProductRightUnitHom
+#print axioms DiamondIntegral.Section3.gammaProductRightUnitHom
+#check @DiamondIntegral.Section3.gammaKPlusCast
+#print axioms DiamondIntegral.Section3.gammaKPlusCast
+#check @DiamondIntegral.Section3.gammaEmptyTagsIso
+#print axioms DiamondIntegral.Section3.gammaEmptyTagsIso
+#check @DiamondIntegral.Section3.gammaProductEmptyIso
+#print axioms DiamondIntegral.Section3.gammaProductEmptyIso
+#check @DiamondIntegral.Section3.gammaEmptyProductIso
+#print axioms DiamondIntegral.Section3.gammaEmptyProductIso
+#check @DiamondIntegral.Section3.gammaProductFunctionEquiv
+#print axioms DiamondIntegral.Section3.gammaProductFunctionEquiv
+#check @DiamondIntegral.Section3.GammaHom.productCodes
+#print axioms DiamondIntegral.Section3.GammaHom.productCodes
+#check @DiamondIntegral.Section3.GammaHom.product
+#print axioms DiamondIntegral.Section3.GammaHom.product
+#check @DiamondIntegral.Section3.gammaProductPair
+#print axioms DiamondIntegral.Section3.gammaProductPair
+#check @DiamondIntegral.Section3.gammaAppendMap
+#print axioms DiamondIntegral.Section3.gammaAppendMap
+#check @DiamondIntegral.Section3.gammaAppendBijection
+#print axioms DiamondIntegral.Section3.gammaAppendBijection
+#check @DiamondIntegral.Section3.GammaObject.product
+#print axioms DiamondIntegral.Section3.GammaObject.product
+#check @DiamondIntegral.Section3.GammaObject.unit
+#print axioms DiamondIntegral.Section3.GammaObject.unit
+#check @DiamondIntegral.Section3.FiniteGammaObject.product
+#print axioms DiamondIntegral.Section3.FiniteGammaObject.product
+#check @DiamondIntegral.Section3.FiniteGammaObject.unit
+#print axioms DiamondIntegral.Section3.FiniteGammaObject.unit
+#check @DiamondIntegral.Section3.FiniteGammaObject.resLift
+#print axioms DiamondIntegral.Section3.FiniteGammaObject.resLift
+#check @DiamondIntegral.Section3.GammaPiece
+#print axioms DiamondIntegral.Section3.GammaPiece
+#check @DiamondIntegral.Section3.gammaCodeTuple
+#print axioms DiamondIntegral.Section3.gammaCodeTuple
+#check @DiamondIntegral.Section3.gammaCodeToRV
+#print axioms DiamondIntegral.Section3.gammaCodeToRV
+#check @DiamondIntegral.Section3.gammaRVCodeLift
+#print axioms DiamondIntegral.Section3.gammaRVCodeLift
+#check @DiamondIntegral.Section3.gammaRVCodeBijection
+#print axioms DiamondIntegral.Section3.gammaRVCodeBijection
+#check @DiamondIntegral.Section3.gammaRESCodeLift
+#print axioms DiamondIntegral.Section3.gammaRESCodeLift
+#check @DiamondIntegral.Section3.gammaRVCodeIso
+#print axioms DiamondIntegral.Section3.gammaRVCodeIso
+#check @DiamondIntegral.Section3.GammaObject.rvPieces
+#print axioms DiamondIntegral.Section3.GammaObject.rvPieces
+#check @DiamondIntegral.Section3.GammaObject.rvCodeBijection
+#print axioms DiamondIntegral.Section3.GammaObject.rvCodeBijection
+#check @DiamondIntegral.Section3.GammaObject.rvLift
+#print axioms DiamondIntegral.Section3.GammaObject.rvLift
+#check @DiamondIntegral.Section3.gammaRVSmallRow
+#print axioms DiamondIntegral.Section3.gammaRVSmallRow
+#check @DiamondIntegral.Section3.gammaRVMinorityRelation
+#print axioms DiamondIntegral.Section3.gammaRVMinorityRelation
+#check @DiamondIntegral.Section3.gammaRVMinority
+#print axioms DiamondIntegral.Section3.gammaRVMinority
+#check @DiamondIntegral.Section3.gammaProductCode
+#print axioms DiamondIntegral.Section3.gammaProductCode
+#check @DiamondIntegral.Section3.gammaCodeLeft
+#print axioms DiamondIntegral.Section3.gammaCodeLeft
+#check @DiamondIntegral.Section3.gammaCodeRight
+#print axioms DiamondIntegral.Section3.gammaCodeRight
+#check @DiamondIntegral.Section3.gammaCodeAppend
+#print axioms DiamondIntegral.Section3.gammaCodeAppend
+#check @DiamondIntegral.Section3.gammaRVProductFamilies
+#print axioms DiamondIntegral.Section3.gammaRVProductFamilies
+#check @DiamondIntegral.Section3.gammaRVProductBijection
+#print axioms DiamondIntegral.Section3.gammaRVProductBijection
+#check @DiamondIntegral.Section3.gammaRVUnitBijection
+#print axioms DiamondIntegral.Section3.gammaRVUnitBijection
+#check @DiamondIntegral.Section3.gammaToRVKPlus
+#print axioms DiamondIntegral.Section3.gammaToRVKPlus
+#check @DiamondIntegral.Section3.gammaCoprodEmptyRightHom
+#print axioms DiamondIntegral.Section3.gammaCoprodEmptyRightHom
+#check @DiamondIntegral.Section3.GammaObject.emptyPieces
+#print axioms DiamondIntegral.Section3.GammaObject.emptyPieces
+#check @DiamondIntegral.Section3.GammaObject.empty
+#print axioms DiamondIntegral.Section3.GammaObject.empty
+#check @DiamondIntegral.Section3.GammaObject.restrict
+#print axioms DiamondIntegral.Section3.GammaObject.restrict
+#check @DiamondIntegral.Section3.GammaObject.difference
+#print axioms DiamondIntegral.Section3.GammaObject.difference
+#check @DiamondIntegral.Section3.MeasuredGammaObject.empty
+#print axioms DiamondIntegral.Section3.MeasuredGammaObject.empty
+#check @DiamondIntegral.Section3.MeasuredGammaObject.restrict
+#print axioms DiamondIntegral.Section3.MeasuredGammaObject.restrict
+#check @DiamondIntegral.Section3.GammaScissor
+#print axioms DiamondIntegral.Section3.GammaScissor
+#check @DiamondIntegral.Section3.gammaPresentation
+#print axioms DiamondIntegral.Section3.gammaPresentation
+#check @DiamondIntegral.Section3.GammaKPlus
+#print axioms DiamondIntegral.Section3.GammaKPlus
+#check @DiamondIntegral.Section3.GammaKGroup
+#print axioms DiamondIntegral.Section3.GammaKGroup
+#check @DiamondIntegral.Section3.gammaClass
+#print axioms DiamondIntegral.Section3.gammaClass
+#check @DiamondIntegral.Section3.MeasuredGammaScissor
+#print axioms DiamondIntegral.Section3.MeasuredGammaScissor
+#check @DiamondIntegral.Section3.measuredGammaPresentation
+#print axioms DiamondIntegral.Section3.measuredGammaPresentation
+#check @DiamondIntegral.Section3.MeasuredGammaKPlus
+#print axioms DiamondIntegral.Section3.MeasuredGammaKPlus
+#check @DiamondIntegral.Section3.MeasuredGammaKGroup
+#print axioms DiamondIntegral.Section3.MeasuredGammaKGroup
+#check @DiamondIntegral.Section3.measuredGammaClass
+#print axioms DiamondIntegral.Section3.measuredGammaClass
+#check @DiamondIntegral.Section3.GradedGammaObject
+#print axioms DiamondIntegral.Section3.GradedGammaObject
+#check @DiamondIntegral.Section3.gradedGammaIso
+#print axioms DiamondIntegral.Section3.gradedGammaIso
+#check @DiamondIntegral.Section3.gradedGammaScissor
+#print axioms DiamondIntegral.Section3.gradedGammaScissor
+#check @DiamondIntegral.Section3.gammaSemiringPresentation
+#print axioms DiamondIntegral.Section3.gammaSemiringPresentation
+#check @DiamondIntegral.Section3.GammaPositiveSemiring
+#print axioms DiamondIntegral.Section3.GammaPositiveSemiring
+#check @DiamondIntegral.Section3.GammaGrothendieckRing
+#print axioms DiamondIntegral.Section3.GammaGrothendieckRing
+#check @DiamondIntegral.Section3.gammaSemiringClass
+#print axioms DiamondIntegral.Section3.gammaSemiringClass
+#check @DiamondIntegral.Section3.gammaKPlusToSemiring
+#print axioms DiamondIntegral.Section3.gammaKPlusToSemiring
+#check @DiamondIntegral.Section3.gammaToRVSemiringInvariant
+#print axioms DiamondIntegral.Section3.gammaToRVSemiringInvariant
+#check @DiamondIntegral.Section3.gammaToRVSemiring
+#print axioms DiamondIntegral.Section3.gammaToRVSemiring
+#check @DiamondIntegral.Section3.gammaTagHom
+#print axioms DiamondIntegral.Section3.gammaTagHom
+#check @DiamondIntegral.Section3.gammaCoprodCommIso
+#print axioms DiamondIntegral.Section3.gammaCoprodCommIso
+#check @DiamondIntegral.Section3.gammaCoprodAssocIso
+#print axioms DiamondIntegral.Section3.gammaCoprodAssocIso
+#check @DiamondIntegral.Section3.gammaCoprodEmptyIso
+#print axioms DiamondIntegral.Section3.gammaCoprodEmptyIso
+#check @DiamondIntegral.Section3.gammaTopSpace
+#print axioms DiamondIntegral.Section3.gammaTopSpace
+#check @DiamondIntegral.Section3.rvGammaTopMap
+#print axioms DiamondIntegral.Section3.rvGammaTopMap
+#check @DiamondIntegral.Section3.gammaTopValuationMap
+#print axioms DiamondIntegral.Section3.gammaTopValuationMap
+#check @DiamondIntegral.Section3.gammaIncludeTopMap
+#print axioms DiamondIntegral.Section3.gammaIncludeTopMap
+#check @DiamondIntegral.Section3.gammaTopMultiplyMap
+#print axioms DiamondIntegral.Section3.gammaTopMultiplyMap
+#check @DiamondIntegral.Section3.gammaVFCoordinateRow
+#print axioms DiamondIntegral.Section3.gammaVFCoordinateRow
+#check @DiamondIntegral.Section3.GammaObject.coordinates
+#print axioms DiamondIntegral.Section3.GammaObject.coordinates
+#check @DiamondIntegral.Section3.gammaTupleJacobian
+#print axioms DiamondIntegral.Section3.gammaTupleJacobian
+#check @DiamondIntegral.Section3.MeasuredGammaObject
+#print axioms DiamondIntegral.Section3.MeasuredGammaObject
+#check @DiamondIntegral.Section3.MeasuredGammaObject.weight
+#print axioms DiamondIntegral.Section3.MeasuredGammaObject.weight
+#check @DiamondIntegral.Section3.MeasuredGammaObject.combinedWeight
+#print axioms DiamondIntegral.Section3.MeasuredGammaObject.combinedWeight
+#check @DiamondIntegral.Section3.MeasuredGammaHom
+#print axioms DiamondIntegral.Section3.MeasuredGammaHom
+#check @DiamondIntegral.Section3.MeasuredGammaHom.id
+#print axioms DiamondIntegral.Section3.MeasuredGammaHom.id
+#check @DiamondIntegral.Section3.MeasuredGammaHom.comp
+#print axioms DiamondIntegral.Section3.MeasuredGammaHom.comp
+#check @DiamondIntegral.Section3.MeasuredGammaHom.symm
+#print axioms DiamondIntegral.Section3.MeasuredGammaHom.symm
+#check @DiamondIntegral.Section3.measuredFiniteGammaProperty
+#print axioms DiamondIntegral.Section3.measuredFiniteGammaProperty
+#check @DiamondIntegral.Section3.MeasuredFiniteGammaObject
+#print axioms DiamondIntegral.Section3.MeasuredFiniteGammaObject
+#check @DiamondIntegral.Section3.rebaseSpace
+#print axioms DiamondIntegral.Section3.rebaseSpace
+#check @DiamondIntegral.Section3.volumeGammaSpace
+#print axioms DiamondIntegral.Section3.volumeGammaSpace
+#check @DiamondIntegral.Section3.GammaVolumeForm
+#print axioms DiamondIntegral.Section3.GammaVolumeForm
+#check @DiamondIntegral.Section3.gammaFormValue
+#print axioms DiamondIntegral.Section3.gammaFormValue
+#check @DiamondIntegral.Section3.diagonalWeightGroup
+#print axioms DiamondIntegral.Section3.diagonalWeightGroup
+#check @DiamondIntegral.Section3.sourceDiagonalWeights
+#print axioms DiamondIntegral.Section3.sourceDiagonalWeights
+#check @DiamondIntegral.Section3.targetDiagonalWeights
+#print axioms DiamondIntegral.Section3.targetDiagonalWeights
+#check @DiamondIntegral.Section3.diagonalWeightGroupEmbedding
+#print axioms DiamondIntegral.Section3.diagonalWeightGroupEmbedding
+#check @DiamondIntegral.Section3.genericFieldDiagonalEquiv
+#print axioms DiamondIntegral.Section3.genericFieldDiagonalEquiv
+#check @DiamondIntegral.Section3.goodUnaryGammaRelation
+#print axioms DiamondIntegral.Section3.goodUnaryGammaRelation
+#check @DiamondIntegral.Section3.gammaGroupDirectSumEquiv
+#print axioms DiamondIntegral.Section3.gammaGroupDirectSumEquiv
+#check @DiamondIntegral.Section3.finiteGammaGroupDirectSumEquiv
+#print axioms DiamondIntegral.Section3.finiteGammaGroupDirectSumEquiv
+#check @DiamondIntegral.Section3.rvGroupDirectSumEquiv
+#print axioms DiamondIntegral.Section3.rvGroupDirectSumEquiv
+#check @DiamondIntegral.Section3.measuredRVGroupDirectSumEquiv
+#print axioms DiamondIntegral.Section3.measuredRVGroupDirectSumEquiv
+#check @DiamondIntegral.Section3.measuredRESGroupDirectSumEquiv
+#print axioms DiamondIntegral.Section3.measuredRESGroupDirectSumEquiv
+#check @DiamondIntegral.Section3.ScissorPresentation
+#print axioms DiamondIntegral.Section3.ScissorPresentation
+#check @DiamondIntegral.Section3.KPlus
+#print axioms DiamondIntegral.Section3.KPlus
+#check @DiamondIntegral.Section3.KGroup
+#print axioms DiamondIntegral.Section3.KGroup
+#check @DiamondIntegral.Section3.positiveClass
+#print axioms DiamondIntegral.Section3.positiveClass
+#check @DiamondIntegral.Section3.groupClass
+#print axioms DiamondIntegral.Section3.groupClass
+#check @DiamondIntegral.Section3.groupUniversalEquiv
+#print axioms DiamondIntegral.Section3.groupUniversalEquiv
+#check @DiamondIntegral.Section3.RingCompletion
+#print axioms DiamondIntegral.Section3.RingCompletion
+#check @DiamondIntegral.Section3.relationIdeal
+#print axioms DiamondIntegral.Section3.relationIdeal
+#check @DiamondIntegral.Section3.quotientToIdealQuotient
+#print axioms DiamondIntegral.Section3.quotientToIdealQuotient
+#check @DiamondIntegral.Section3.completionQuotientMap
+#print axioms DiamondIntegral.Section3.completionQuotientMap
+#check @DiamondIntegral.Section3.idealQuotientToCompletion
+#print axioms DiamondIntegral.Section3.idealQuotientToCompletion
+#check @DiamondIntegral.Section3.completedCongruenceEquiv
+#print axioms DiamondIntegral.Section3.completedCongruenceEquiv
+#check @DiamondIntegral.Section3.groupifiedUnmeasuredRelation
+#print axioms DiamondIntegral.Section3.groupifiedUnmeasuredRelation
+#check @DiamondIntegral.Section3.groupifiedMeasuredRelation
+#print axioms DiamondIntegral.Section3.groupifiedMeasuredRelation
+#check @DiamondIntegral.Section3.NamedDefSet.changeName
+#print axioms DiamondIntegral.Section3.NamedDefSet.changeName
+#check @DiamondIntegral.Section3.NamedMap.changeName
+#print axioms DiamondIntegral.Section3.NamedMap.changeName
+#check @DiamondIntegral.Section3.NamedBijection.changeName
+#print axioms DiamondIntegral.Section3.NamedBijection.changeName
+#check @DiamondIntegral.Section3.ImaginaryDefinable
+#print axioms DiamondIntegral.Section3.ImaginaryDefinable
+#check @DiamondIntegral.Section3.NamedDefSet
+#print axioms DiamondIntegral.Section3.NamedDefSet
+#check @DiamondIntegral.Section3.realCodeParameters
+#print axioms DiamondIntegral.Section3.realCodeParameters
+#check @DiamondIntegral.Section3.NamedDefSet.overRealCode
+#print axioms DiamondIntegral.Section3.NamedDefSet.overRealCode
+#check @DiamondIntegral.Section3.NamedDefSet.ofReal
+#print axioms DiamondIntegral.Section3.NamedDefSet.ofReal
+#check @DiamondIntegral.Section3.NamedDefSet.empty
+#print axioms DiamondIntegral.Section3.NamedDefSet.empty
+#check @DiamondIntegral.Section3.NamedDefSet.univ
+#print axioms DiamondIntegral.Section3.NamedDefSet.univ
+#check @DiamondIntegral.Section3.NamedDefSet.inter
+#print axioms DiamondIntegral.Section3.NamedDefSet.inter
+#check @DiamondIntegral.Section3.NamedDefSet.union
+#print axioms DiamondIntegral.Section3.NamedDefSet.union
+#check @DiamondIntegral.Section3.NamedDefSet.compl
+#print axioms DiamondIntegral.Section3.NamedDefSet.compl
+#check @DiamondIntegral.Section3.NamedDefSet.sdiff
+#print axioms DiamondIntegral.Section3.NamedDefSet.sdiff
+#check @DiamondIntegral.Section3.integerCharacter
+#print axioms DiamondIntegral.Section3.integerCharacter
+#check @DiamondIntegral.Section3.integerBasisMatrix
+#print axioms DiamondIntegral.Section3.integerBasisMatrix
+#check @DiamondIntegral.Section3.integerBasisInverseMatrix
+#print axioms DiamondIntegral.Section3.integerBasisInverseMatrix
+#check @DiamondIntegral.Section3.integerMonomialBasisEquiv
+#print axioms DiamondIntegral.Section3.integerMonomialBasisEquiv
+#check @DiamondIntegral.Section3.integerMonomialMap
+#print axioms DiamondIntegral.Section3.integerMonomialMap
+#check @DiamondIntegral.Section3.integerMonomialEquiv
+#print axioms DiamondIntegral.Section3.integerMonomialEquiv
+#check @DiamondIntegral.Section3.integrationDiscBase
+#print axioms DiamondIntegral.Section3.integrationDiscBase
+#check @DiamondIntegral.Section3.integrationDiscCode
+#print axioms DiamondIntegral.Section3.integrationDiscCode
+#check @DiamondIntegral.Section3.integrationDiscProper
+#print axioms DiamondIntegral.Section3.integrationDiscProper
+#check @DiamondIntegral.Section3.integrationDiscBody
+#print axioms DiamondIntegral.Section3.integrationDiscBody
+#check @DiamondIntegral.Section3.integrationDiscCut
+#print axioms DiamondIntegral.Section3.integrationDiscCut
+#check @DiamondIntegral.Section3.integrationDiscRadiusRows
+#print axioms DiamondIntegral.Section3.integrationDiscRadiusRows
+#check @DiamondIntegral.Section3.integrationDiscInverseCarrier
+#print axioms DiamondIntegral.Section3.integrationDiscInverseCarrier
+#check @DiamondIntegral.Section3.integrationDiscInverseRelation
+#print axioms DiamondIntegral.Section3.integrationDiscInverseRelation
+#check @DiamondIntegral.Section3.integrationDiscInverseTupleRelation
+#print axioms DiamondIntegral.Section3.integrationDiscInverseTupleRelation
+#check @DiamondIntegral.Section3.integrationRVCutRows
+#print axioms DiamondIntegral.Section3.integrationRVCutRows
+#check @DiamondIntegral.Section3.integrationDiscRadiiMap
+#print axioms DiamondIntegral.Section3.integrationDiscRadiiMap
+#check @DiamondIntegral.Section3.integrationDiscPoint
+#print axioms DiamondIntegral.Section3.integrationDiscPoint
+#check @DiamondIntegral.Section3.integrationRadiiCodes
+#print axioms DiamondIntegral.Section3.integrationRadiiCodes
+#check @DiamondIntegral.Section3.integrationDiscRecode
+#print axioms DiamondIntegral.Section3.integrationDiscRecode
+#check @DiamondIntegral.Section3.integrationDiscRecodePoint
+#print axioms DiamondIntegral.Section3.integrationDiscRecodePoint
+#check @DiamondIntegral.Section3.integrationDiscNamesTuple
+#print axioms DiamondIntegral.Section3.integrationDiscNamesTuple
+#check @DiamondIntegral.Section3.integrationGammaBase
+#print axioms DiamondIntegral.Section3.integrationGammaBase
+#check @DiamondIntegral.Section3.integrationGammaRelation
+#print axioms DiamondIntegral.Section3.integrationGammaRelation
+#check @DiamondIntegral.Section3.integrationGammaRecode
+#print axioms DiamondIntegral.Section3.integrationGammaRecode
+#check @DiamondIntegral.Section3.integrationGammaRelationOfFull
+#print axioms DiamondIntegral.Section3.integrationGammaRelationOfFull
+#check @DiamondIntegral.Section3.integrationGammaTailRelation
+#print axioms DiamondIntegral.Section3.integrationGammaTailRelation
+#check @DiamondIntegral.Section3.integrationGammaTailRecode
+#print axioms DiamondIntegral.Section3.integrationGammaTailRecode
+#check @DiamondIntegral.Section3.integration_corollary_2_15
+#print axioms DiamondIntegral.Section3.integration_corollary_2_15
+#check @DiamondIntegral.Section3.integration_corollary_2_34
+#print axioms DiamondIntegral.Section3.integration_corollary_2_34
+#check @DiamondIntegral.Section3.integration_corollary_2_34_all_degrees
+#print axioms DiamondIntegral.Section3.integration_corollary_2_34_all_degrees
+#check @DiamondIntegral.Section3.integration_lemma_3_2
+#print axioms DiamondIntegral.Section3.integration_lemma_3_2
+#check @DiamondIntegral.Section3.integration_lemma_3_3
+#print axioms DiamondIntegral.Section3.integration_lemma_3_3
+#check @DiamondIntegral.Section3.integration_lemma_3_4
+#print axioms DiamondIntegral.Section3.integration_lemma_3_4
+#check @DiamondIntegral.Section3.integration_lemma_3_6
+#print axioms DiamondIntegral.Section3.integration_lemma_3_6
+#check @DiamondIntegral.Section3.integration_corollary_3_7
+#print axioms DiamondIntegral.Section3.integration_corollary_3_7
+#check @DiamondIntegral.Section3.integration_lemma_3_8
+#print axioms DiamondIntegral.Section3.integration_lemma_3_8
+#check @DiamondIntegral.Section3.integration_lemma_3_9
+#print axioms DiamondIntegral.Section3.integration_lemma_3_9
+#check @DiamondIntegral.Section3.integration_corollary_3_10
+#print axioms DiamondIntegral.Section3.integration_corollary_3_10
+#check @DiamondIntegral.Section3.integration_lemma_3_11
+#print axioms DiamondIntegral.Section3.integration_lemma_3_11
+#check @DiamondIntegral.Section3.integration_lemma_3_12_no_function
+#print axioms DiamondIntegral.Section3.integration_lemma_3_12_no_function
+#check @DiamondIntegral.Section3.integration_lemma_3_12_no_finite_to_one
+#print axioms DiamondIntegral.Section3.integration_lemma_3_12_no_finite_to_one
+#check @DiamondIntegral.Section3.integration_lemma_3_13
+#print axioms DiamondIntegral.Section3.integration_lemma_3_13
+#check @DiamondIntegral.Section3.integration_lemma_3_14
+#print axioms DiamondIntegral.Section3.integration_lemma_3_14
+#check @DiamondIntegral.Section3.integration_lemma_3_15
+#print axioms DiamondIntegral.Section3.integration_lemma_3_15
+#check @DiamondIntegral.Section3.integration_lemma_3_16
+#print axioms DiamondIntegral.Section3.integration_lemma_3_16
+#check @DiamondIntegral.Section3.integration_corollary_3_17_ordinary
+#print axioms DiamondIntegral.Section3.integration_corollary_3_17_ordinary
+#check @DiamondIntegral.Section3.integration_corollary_3_17_conditional
+#print axioms DiamondIntegral.Section3.integration_corollary_3_17_conditional
+#check @DiamondIntegral.Section3.integration_lemma_3_18
+#print axioms DiamondIntegral.Section3.integration_lemma_3_18
+#check @DiamondIntegral.Section3.integration_proposition_3_19
+#print axioms DiamondIntegral.Section3.integration_proposition_3_19
+#check @DiamondIntegral.Section3.integration_proposition_3_21
+#print axioms DiamondIntegral.Section3.integration_proposition_3_21
+#check @DiamondIntegral.Section3.integration_lemma_3_22
+#print axioms DiamondIntegral.Section3.integration_lemma_3_22
+#check @DiamondIntegral.Section3.integration_proposition_3_23
+#print axioms DiamondIntegral.Section3.integration_proposition_3_23
+#check @DiamondIntegral.Section3.integration_proposition_3_24
+#print axioms DiamondIntegral.Section3.integration_proposition_3_24
+#check @DiamondIntegral.Section3.integration_lemma_6_17
+#print axioms DiamondIntegral.Section3.integration_lemma_6_17
+#check @DiamondIntegral.Section3.integration_proposition_6_18
+#print axioms DiamondIntegral.Section3.integration_proposition_6_18
+#check @DiamondIntegral.Section3.integration_proposition_6_18_lift
+#print axioms DiamondIntegral.Section3.integration_proposition_6_18_lift
+#check @DiamondIntegral.Section3.integration_theorem_6_19
+#print axioms DiamondIntegral.Section3.integration_theorem_6_19
+#check @DiamondIntegral.Section3.integration_theorem_6_19_lift
+#print axioms DiamondIntegral.Section3.integration_theorem_6_19_lift
+#check @DiamondIntegral.Section3.integration_theorem_6_19_characterization
+#print axioms DiamondIntegral.Section3.integration_theorem_6_19_characterization
+#check @DiamondIntegral.Section3.integration_nonzero_basic_congruence
+#print axioms DiamondIntegral.Section3.integration_nonzero_basic_congruence
+#check @DiamondIntegral.Section3.integration_nonzero_principal_ideal
+#print axioms DiamondIntegral.Section3.integration_nonzero_principal_ideal
+#check @DiamondIntegral.Section3.integration_nonzero_completion_quotient
+#print axioms DiamondIntegral.Section3.integration_nonzero_completion_quotient
+#check @DiamondIntegral.Section3.integration_nonzero_completion_quotient_of
+#print axioms DiamondIntegral.Section3.integration_nonzero_completion_quotient_of
+#check @DiamondIntegral.Section3.integrationMixedRawMap
+#print axioms DiamondIntegral.Section3.integrationMixedRawMap
+#check @DiamondIntegral.Section3.integrationMixedVFIndex
+#print axioms DiamondIntegral.Section3.integrationMixedVFIndex
+#check @DiamondIntegral.Section3.integrationMixedContext
+#print axioms DiamondIntegral.Section3.integrationMixedContext
+#check @DiamondIntegral.Section3.IntegrationMixedPaperFibres
+#print axioms DiamondIntegral.Section3.IntegrationMixedPaperFibres
+#check @DiamondIntegral.Section3.integrationTruthCell
+#print axioms DiamondIntegral.Section3.integrationTruthCell
+#check @DiamondIntegral.Section3.integrationRawZeroPiece
+#print axioms DiamondIntegral.Section3.integrationRawZeroPiece
+#check @DiamondIntegral.Section3.objectLift
+#print axioms DiamondIntegral.Section3.objectLift
+#check @DiamondIntegral.Section3.objectLiftVF
+#print axioms DiamondIntegral.Section3.objectLiftVF
+#check @DiamondIntegral.Section3.literalActiveCharacters
+#print axioms DiamondIntegral.Section3.literalActiveCharacters
+#check @DiamondIntegral.Section3.literalValueCell
+#print axioms DiamondIntegral.Section3.literalValueCell
+#check @DiamondIntegral.Section3.EqualityValuePattern
+#print axioms DiamondIntegral.Section3.EqualityValuePattern
+#check @DiamondIntegral.Section3.equalityPatternCell
+#print axioms DiamondIntegral.Section3.equalityPatternCell
+#check @DiamondIntegral.Section3.maskedEqualityCharacters
+#print axioms DiamondIntegral.Section3.maskedEqualityCharacters
+#check @DiamondIntegral.Section3.polynomialResiduePattern
+#print axioms DiamondIntegral.Section3.polynomialResiduePattern
+#check @DiamondIntegral.Section3.maskedPolynomialCharacters
+#print axioms DiamondIntegral.Section3.maskedPolynomialCharacters
+#check @DiamondIntegral.Section3.gammaGroundMatchedResidualBijection
+#print axioms DiamondIntegral.Section3.gammaGroundMatchedResidualBijection
+#check @DiamondIntegral.Section3.gammaGroundConstantForm
+#print axioms DiamondIntegral.Section3.gammaGroundConstantForm
+#check @DiamondIntegral.Section3.GammaGroundMeasuredRESObject.shiftCombinedWeight
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredRESObject.shiftCombinedWeight
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaScalar
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaScalar
+#check @DiamondIntegral.Section3.GammaGroundMeasuredGammaObject.shiftCombinedWeight
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredGammaObject.shiftCombinedWeight
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaScalarRightUnitHom
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaScalarRightUnitHom
+#check @DiamondIntegral.Section3.measuredFiniteGammaDirectSumInvariant
+#print axioms DiamondIntegral.Section3.measuredFiniteGammaDirectSumInvariant
+#check @DiamondIntegral.Section3.measuredFiniteGammaPresentationToDirectSum
+#print axioms DiamondIntegral.Section3.measuredFiniteGammaPresentationToDirectSum
+#check @DiamondIntegral.Section3.measuredFiniteGammaDirectSumToPresentationAdd
+#print axioms DiamondIntegral.Section3.measuredFiniteGammaDirectSumToPresentationAdd
+#check @DiamondIntegral.Section3.measuredFiniteGammaDirectSumToPresentation
+#print axioms DiamondIntegral.Section3.measuredFiniteGammaDirectSumToPresentation
+#check @DiamondIntegral.Section3.measuredFiniteGammaSemiringEquivDirectSum
+#print axioms DiamondIntegral.Section3.measuredFiniteGammaSemiringEquivDirectSum
+#check @DiamondIntegral.Section3.measuredFiniteGammaRepresentative
+#print axioms DiamondIntegral.Section3.measuredFiniteGammaRepresentative
+#check @DiamondIntegral.Section3.measuredFiniteGammaClassMul
+#print axioms DiamondIntegral.Section3.measuredFiniteGammaClassMul
+#check @DiamondIntegral.Section3.MeasuredFiniteGammaDirectSum
+#print axioms DiamondIntegral.Section3.MeasuredFiniteGammaDirectSum
+#check @DiamondIntegral.Section3.measuredFiniteGammaDirectSumToGamma
+#print axioms DiamondIntegral.Section3.measuredFiniteGammaDirectSumToGamma
+#check @DiamondIntegral.Section3.measuredFiniteGammaDirectSumClass
+#print axioms DiamondIntegral.Section3.measuredFiniteGammaDirectSumClass
+#check @DiamondIntegral.Section3.measuredFiniteGammaGradedInclusion
+#print axioms DiamondIntegral.Section3.measuredFiniteGammaGradedInclusion
+#check @DiamondIntegral.Section3.MeasuredFiniteGammaObject.coprod
+#print axioms DiamondIntegral.Section3.MeasuredFiniteGammaObject.coprod
+#check @DiamondIntegral.Section3.MeasuredFiniteGammaObject.restrict
+#print axioms DiamondIntegral.Section3.MeasuredFiniteGammaObject.restrict
+#check @DiamondIntegral.Section3.MeasuredFiniteGammaObject.empty
+#print axioms DiamondIntegral.Section3.MeasuredFiniteGammaObject.empty
+#check @DiamondIntegral.Section3.measuredFiniteGammaPresentation
+#print axioms DiamondIntegral.Section3.measuredFiniteGammaPresentation
+#check @DiamondIntegral.Section3.MeasuredFiniteGammaKPlus
+#print axioms DiamondIntegral.Section3.MeasuredFiniteGammaKPlus
+#check @DiamondIntegral.Section3.measuredFiniteGammaClass
+#print axioms DiamondIntegral.Section3.measuredFiniteGammaClass
+#check @DiamondIntegral.Section3.measuredFiniteGammaToGammaKPlus
+#print axioms DiamondIntegral.Section3.measuredFiniteGammaToGammaKPlus
+#check @DiamondIntegral.Section3.GradedMeasuredFiniteGammaObject
+#print axioms DiamondIntegral.Section3.GradedMeasuredFiniteGammaObject
+#check @DiamondIntegral.Section3.gradedMeasuredFiniteGammaIso
+#print axioms DiamondIntegral.Section3.gradedMeasuredFiniteGammaIso
+#check @DiamondIntegral.Section3.gradedMeasuredFiniteGammaScissor
+#print axioms DiamondIntegral.Section3.gradedMeasuredFiniteGammaScissor
+#check @DiamondIntegral.Section3.measuredFiniteGammaSemiringPresentation
+#print axioms DiamondIntegral.Section3.measuredFiniteGammaSemiringPresentation
+#check @DiamondIntegral.Section3.MeasuredFiniteGammaPositiveSemiring
+#print axioms DiamondIntegral.Section3.MeasuredFiniteGammaPositiveSemiring
+#check @DiamondIntegral.Section3.MeasuredFiniteGammaGrothendieckRing
+#print axioms DiamondIntegral.Section3.MeasuredFiniteGammaGrothendieckRing
+#check @DiamondIntegral.Section3.measuredFiniteGammaSemiringClass
+#print axioms DiamondIntegral.Section3.measuredFiniteGammaSemiringClass
+#check @DiamondIntegral.Section3.measuredFiniteGammaKPlusToSemiring
+#print axioms DiamondIntegral.Section3.measuredFiniteGammaKPlusToSemiring
+#check @DiamondIntegral.Section3.measuredFiniteGammaToGammaInvariant
+#print axioms DiamondIntegral.Section3.measuredFiniteGammaToGammaInvariant
+#check @DiamondIntegral.Section3.measuredFiniteGammaToGammaSemiring
+#print axioms DiamondIntegral.Section3.measuredFiniteGammaToGammaSemiring
+#check @DiamondIntegral.Section3.measuredFiniteGammaToRESInvariant
+#print axioms DiamondIntegral.Section3.measuredFiniteGammaToRESInvariant
+#check @DiamondIntegral.Section3.measuredFiniteGammaToRESSemiring
+#print axioms DiamondIntegral.Section3.measuredFiniteGammaToRESSemiring
+#check @DiamondIntegral.Section3.measuredResToRVSemiring
+#print axioms DiamondIntegral.Section3.measuredResToRVSemiring
+#check @DiamondIntegral.Section3.measuredFiniteGammaToRESKPlus
+#print axioms DiamondIntegral.Section3.measuredFiniteGammaToRESKPlus
+#check @DiamondIntegral.Section3.measuredGammaHomOfCodeIso
+#print axioms DiamondIntegral.Section3.measuredGammaHomOfCodeIso
+#check @DiamondIntegral.Section3.MeasuredGammaObject.codeCombined
+#print axioms DiamondIntegral.Section3.MeasuredGammaObject.codeCombined
+#check @DiamondIntegral.Section3.measuredGammaProductCommHom
+#print axioms DiamondIntegral.Section3.measuredGammaProductCommHom
+#check @DiamondIntegral.Section3.measuredGammaProductAssocHom
+#print axioms DiamondIntegral.Section3.measuredGammaProductAssocHom
+#check @DiamondIntegral.Section3.measuredGammaProductRightUnitHom
+#print axioms DiamondIntegral.Section3.measuredGammaProductRightUnitHom
+#check @DiamondIntegral.Section3.measuredGammaCoprodCommHom
+#print axioms DiamondIntegral.Section3.measuredGammaCoprodCommHom
+#check @DiamondIntegral.Section3.MeasuredGammaHom.coprod
+#print axioms DiamondIntegral.Section3.MeasuredGammaHom.coprod
+#check @DiamondIntegral.Section3.measuredGammaCoprodAssocHom
+#print axioms DiamondIntegral.Section3.measuredGammaCoprodAssocHom
+#check @DiamondIntegral.Section3.measuredGammaCoprodEmptyHom
+#print axioms DiamondIntegral.Section3.measuredGammaCoprodEmptyHom
+#check @DiamondIntegral.Section3.measuredGammaCoproductIsoData
+#print axioms DiamondIntegral.Section3.measuredGammaCoproductIsoData
+#check @DiamondIntegral.Section3.MeasuredGammaIsoClasses
+#print axioms DiamondIntegral.Section3.MeasuredGammaIsoClasses
+#check @DiamondIntegral.Section3.measuredGammaIsoClass
+#print axioms DiamondIntegral.Section3.measuredGammaIsoClass
+#check @DiamondIntegral.Section3.MeasuredGammaObject.coprod
+#print axioms DiamondIntegral.Section3.MeasuredGammaObject.coprod
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaSingleHomOfWeightUnitBijection
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaSingleHomOfWeightUnitBijection
+#check @DiamondIntegral.Section3.gammaGroundPrefixRestrictedWeight
+#print axioms DiamondIntegral.Section3.gammaGroundPrefixRestrictedWeight
+#check @DiamondIntegral.Section3.measuredGammaDirectSumInvariant
+#print axioms DiamondIntegral.Section3.measuredGammaDirectSumInvariant
+#check @DiamondIntegral.Section3.measuredGammaPresentationToDirectSum
+#print axioms DiamondIntegral.Section3.measuredGammaPresentationToDirectSum
+#check @DiamondIntegral.Section3.measuredGammaDirectSumToPresentationAdd
+#print axioms DiamondIntegral.Section3.measuredGammaDirectSumToPresentationAdd
+#check @DiamondIntegral.Section3.measuredGammaDirectSumToPresentation
+#print axioms DiamondIntegral.Section3.measuredGammaDirectSumToPresentation
+#check @DiamondIntegral.Section3.measuredGammaSemiringEquivDirectSum
+#print axioms DiamondIntegral.Section3.measuredGammaSemiringEquivDirectSum
+#check @DiamondIntegral.Section3.MeasuredGammaDirectSum
+#print axioms DiamondIntegral.Section3.MeasuredGammaDirectSum
+#check @DiamondIntegral.Section3.measuredGammaDirectSumClass
+#print axioms DiamondIntegral.Section3.measuredGammaDirectSumClass
+#check @DiamondIntegral.Section3.measuredGammaGroupDirectSumEquiv
+#print axioms DiamondIntegral.Section3.measuredGammaGroupDirectSumEquiv
+#check @DiamondIntegral.Section3.measuredFiniteGammaGroupDirectSumEquiv
+#print axioms DiamondIntegral.Section3.measuredFiniteGammaGroupDirectSumEquiv
+#check @DiamondIntegral.Section3.measuredGammaRepresentative
+#print axioms DiamondIntegral.Section3.measuredGammaRepresentative
+#check @DiamondIntegral.Section3.measuredGammaClassMul
+#print axioms DiamondIntegral.Section3.measuredGammaClassMul
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaSingleMonomialHom
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaSingleMonomialHom
+#check @DiamondIntegral.Section3.measuredGammaPartitionHom
+#print axioms DiamondIntegral.Section3.measuredGammaPartitionHom
+#check @DiamondIntegral.Section3.measuredGammaKPlusToIsoClasses
+#print axioms DiamondIntegral.Section3.measuredGammaKPlusToIsoClasses
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaSingleForm
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaSingleForm
+#check @DiamondIntegral.Section3.measuredGammaProductRightDistribHom
+#print axioms DiamondIntegral.Section3.measuredGammaProductRightDistribHom
+#check @DiamondIntegral.Section3.measuredGammaKPlusCast
+#print axioms DiamondIntegral.Section3.measuredGammaKPlusCast
+#check @DiamondIntegral.Section3.measuredGammaEmptyTagsHom
+#print axioms DiamondIntegral.Section3.measuredGammaEmptyTagsHom
+#check @DiamondIntegral.Section3.measuredGammaProductEmptyIso
+#print axioms DiamondIntegral.Section3.measuredGammaProductEmptyIso
+#check @DiamondIntegral.Section3.measuredGammaEmptyProductIso
+#print axioms DiamondIntegral.Section3.measuredGammaEmptyProductIso
+#check @DiamondIntegral.Section3.measuredGammaProductLiftHom
+#print axioms DiamondIntegral.Section3.measuredGammaProductLiftHom
+#check @DiamondIntegral.Section3.measuredGammaUnitLiftHom
+#print axioms DiamondIntegral.Section3.measuredGammaUnitLiftHom
+#check @DiamondIntegral.Section3.MeasuredGammaHom.product
+#print axioms DiamondIntegral.Section3.MeasuredGammaHom.product
+#check @DiamondIntegral.Section3.gammaProductLeft
+#print axioms DiamondIntegral.Section3.gammaProductLeft
+#check @DiamondIntegral.Section3.gammaProductRight
+#print axioms DiamondIntegral.Section3.gammaProductRight
+#check @DiamondIntegral.Section3.MeasuredGammaObject.product
+#print axioms DiamondIntegral.Section3.MeasuredGammaObject.product
+#check @DiamondIntegral.Section3.MeasuredGammaObject.unit
+#print axioms DiamondIntegral.Section3.MeasuredGammaObject.unit
+#check @DiamondIntegral.Section3.MeasuredFiniteGammaObject.product
+#print axioms DiamondIntegral.Section3.MeasuredFiniteGammaObject.product
+#check @DiamondIntegral.Section3.MeasuredFiniteGammaObject.unit
+#print axioms DiamondIntegral.Section3.MeasuredFiniteGammaObject.unit
+#check @DiamondIntegral.Section3.GammaObject.rvEncodeCode
+#print axioms DiamondIntegral.Section3.GammaObject.rvEncodeCode
+#check @DiamondIntegral.Section3.measuredGammaLiftForm
+#print axioms DiamondIntegral.Section3.measuredGammaLiftForm
+#check @DiamondIntegral.Section3.MeasuredGammaObject.rvLift
+#print axioms DiamondIntegral.Section3.MeasuredGammaObject.rvLift
+#check @DiamondIntegral.Section3.MeasuredFiniteGammaObject.resLift
+#print axioms DiamondIntegral.Section3.MeasuredFiniteGammaObject.resLift
+#check @DiamondIntegral.Section3.gammaCodeFamilyBijection
+#print axioms DiamondIntegral.Section3.gammaCodeFamilyBijection
+#check @DiamondIntegral.Section3.measuredGammaRVHom
+#print axioms DiamondIntegral.Section3.measuredGammaRVHom
+#check @DiamondIntegral.Section3.measuredGammaRVRestrictionHom
+#print axioms DiamondIntegral.Section3.measuredGammaRVRestrictionHom
+#check @DiamondIntegral.Section3.measuredGammaToRVKPlus
+#print axioms DiamondIntegral.Section3.measuredGammaToRVKPlus
+#check @DiamondIntegral.Section3.measuredGammaCoprodLeftCutHom
+#print axioms DiamondIntegral.Section3.measuredGammaCoprodLeftCutHom
+#check @DiamondIntegral.Section3.measuredGammaCoprodRightCutHom
+#print axioms DiamondIntegral.Section3.measuredGammaCoprodRightCutHom
+#check @DiamondIntegral.Section3.GradedMeasuredGammaObject
+#print axioms DiamondIntegral.Section3.GradedMeasuredGammaObject
+#check @DiamondIntegral.Section3.gradedMeasuredGammaIso
+#print axioms DiamondIntegral.Section3.gradedMeasuredGammaIso
+#check @DiamondIntegral.Section3.gradedMeasuredGammaScissor
+#print axioms DiamondIntegral.Section3.gradedMeasuredGammaScissor
+#check @DiamondIntegral.Section3.measuredGammaSemiringPresentation
+#print axioms DiamondIntegral.Section3.measuredGammaSemiringPresentation
+#check @DiamondIntegral.Section3.MeasuredGammaPositiveSemiring
+#print axioms DiamondIntegral.Section3.MeasuredGammaPositiveSemiring
+#check @DiamondIntegral.Section3.MeasuredGammaGrothendieckRing
+#print axioms DiamondIntegral.Section3.MeasuredGammaGrothendieckRing
+#check @DiamondIntegral.Section3.measuredGammaSemiringClass
+#print axioms DiamondIntegral.Section3.measuredGammaSemiringClass
+#check @DiamondIntegral.Section3.measuredGammaKPlusToSemiring
+#print axioms DiamondIntegral.Section3.measuredGammaKPlusToSemiring
+#check @DiamondIntegral.Section3.measuredGammaToRVSemiringInvariant
+#print axioms DiamondIntegral.Section3.measuredGammaToRVSemiringInvariant
+#check @DiamondIntegral.Section3.measuredGammaToRVSemiring
+#print axioms DiamondIntegral.Section3.measuredGammaToRVSemiring
+#check @DiamondIntegral.Section3.gammaGroundTranslatedGammaWeight
+#print axioms DiamondIntegral.Section3.gammaGroundTranslatedGammaWeight
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaTranslatedPiece
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaTranslatedPiece
+#check @DiamondIntegral.Section3.objectLiftLabel
+#print axioms DiamondIntegral.Section3.objectLiftLabel
+#check @DiamondIntegral.Section3.measuredLiftForm
+#print axioms DiamondIntegral.Section3.measuredLiftForm
+#check @DiamondIntegral.Section3.measuredObjectLift
+#print axioms DiamondIntegral.Section3.measuredObjectLift
+#check @DiamondIntegral.Section3.gammaGroundMeasuredMonomialPatchBoxMatch
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredMonomialPatchBoxMatch
+#check @DiamondIntegral.Section3.gammaGroundMeasuredMonomialPatchLocalMatch
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredMonomialPatchLocalMatch
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaSingleWeightRestrictHom
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaSingleWeightRestrictHom
+#check @DiamondIntegral.Section3.GammaGroundMeasuredNativeTensorChart.nativeForm
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredNativeTensorChart.nativeForm
+#check @DiamondIntegral.Section3.GammaGroundRESUnitChart.measured
+#print axioms DiamondIntegral.Section3.GammaGroundRESUnitChart.measured
+#check @DiamondIntegral.Section3.GammaGroundMeasuredNativeTensorChart
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredNativeTensorChart
+#check @DiamondIntegral.Section3.GammaGroundMeasuredNativeTensorChart.residue
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredNativeTensorChart.residue
+#check @DiamondIntegral.Section3.GammaGroundMeasuredNativeTensorChart.gamma
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredNativeTensorChart.gamma
+#check @DiamondIntegral.Section3.GammaGroundMeasuredNativeTensorChart.value
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredNativeTensorChart.value
+#check @DiamondIntegral.Section3.GammaGroundMeasuredNativeTensorChart.object
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredNativeTensorChart.object
+#check @DiamondIntegral.Section3.GammaGroundMeasuredNativeTensorChart.bijection
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredNativeTensorChart.bijection
+#check @DiamondIntegral.Section3.GammaGroundMeasuredNativeTensorChart.ofPiece
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredNativeTensorChart.ofPiece
+#check @DiamondIntegral.Section3.GammaGroundMeasuredNativeTensorChart.restrictBox
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredNativeTensorChart.restrictBox
+#check @DiamondIntegral.Section3.measuredResDirectSumInvariant
+#print axioms DiamondIntegral.Section3.measuredResDirectSumInvariant
+#check @DiamondIntegral.Section3.measuredResPresentationToDirectSum
+#print axioms DiamondIntegral.Section3.measuredResPresentationToDirectSum
+#check @DiamondIntegral.Section3.measuredResDirectSumToPresentationAdd
+#print axioms DiamondIntegral.Section3.measuredResDirectSumToPresentationAdd
+#check @DiamondIntegral.Section3.measuredResDirectSumToPresentation
+#print axioms DiamondIntegral.Section3.measuredResDirectSumToPresentation
+#check @DiamondIntegral.Section3.measuredResSemiringEquivDirectSum
+#print axioms DiamondIntegral.Section3.measuredResSemiringEquivDirectSum
+#check @DiamondIntegral.Section3.measuredResRepresentative
+#print axioms DiamondIntegral.Section3.measuredResRepresentative
+#check @DiamondIntegral.Section3.measuredResClassMul
+#print axioms DiamondIntegral.Section3.measuredResClassMul
+#check @DiamondIntegral.Section3.MeasuredRESDirectSum
+#print axioms DiamondIntegral.Section3.MeasuredRESDirectSum
+#check @DiamondIntegral.Section3.measuredResDirectSumToRV
+#print axioms DiamondIntegral.Section3.measuredResDirectSumToRV
+#check @DiamondIntegral.Section3.measuredResDirectSumClass
+#print axioms DiamondIntegral.Section3.measuredResDirectSumClass
+#check @DiamondIntegral.Section3.measuredResGradedInclusion
+#print axioms DiamondIntegral.Section3.measuredResGradedInclusion
+#check @DiamondIntegral.Section3.measuredRESForgetInvariant
+#print axioms DiamondIntegral.Section3.measuredRESForgetInvariant
+#check @DiamondIntegral.Section3.measuredRESForgetSemiring
+#print axioms DiamondIntegral.Section3.measuredRESForgetSemiring
+#check @DiamondIntegral.Section3.MeasuredRESObject.coprod
+#print axioms DiamondIntegral.Section3.MeasuredRESObject.coprod
+#check @DiamondIntegral.Section3.MeasuredRESObject.product
+#print axioms DiamondIntegral.Section3.MeasuredRESObject.product
+#check @DiamondIntegral.Section3.MeasuredRESObject.unit
+#print axioms DiamondIntegral.Section3.MeasuredRESObject.unit
+#check @DiamondIntegral.Section3.GradedMeasuredRESObject
+#print axioms DiamondIntegral.Section3.GradedMeasuredRESObject
+#check @DiamondIntegral.Section3.gradedMeasuredRESIso
+#print axioms DiamondIntegral.Section3.gradedMeasuredRESIso
+#check @DiamondIntegral.Section3.gradedMeasuredRESScissor
+#print axioms DiamondIntegral.Section3.gradedMeasuredRESScissor
+#check @DiamondIntegral.Section3.measuredRESSemiringPresentation
+#print axioms DiamondIntegral.Section3.measuredRESSemiringPresentation
+#check @DiamondIntegral.Section3.MeasuredRESPositiveSemiring
+#print axioms DiamondIntegral.Section3.MeasuredRESPositiveSemiring
+#check @DiamondIntegral.Section3.MeasuredRESGrothendieckRing
+#print axioms DiamondIntegral.Section3.MeasuredRESGrothendieckRing
+#check @DiamondIntegral.Section3.measuredRESSemiringClass
+#print axioms DiamondIntegral.Section3.measuredRESSemiringClass
+#check @DiamondIntegral.Section3.measuredRESKPlusToSemiring
+#print axioms DiamondIntegral.Section3.measuredRESKPlusToSemiring
+#check @DiamondIntegral.Section3.measuredRESSemiringUniversal
+#print axioms DiamondIntegral.Section3.measuredRESSemiringUniversal
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRESWeightFibre
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRESWeightFibre
+#check @DiamondIntegral.Section3.measuredRVCoprodForm
+#print axioms DiamondIntegral.Section3.measuredRVCoprodForm
+#check @DiamondIntegral.Section3.MeasuredRVObject.coprod
+#print axioms DiamondIntegral.Section3.MeasuredRVObject.coprod
+#check @DiamondIntegral.Section3.measuredRVSpecialCongruence
+#print axioms DiamondIntegral.Section3.measuredRVSpecialCongruence
+#check @DiamondIntegral.Section3.measuredRVPrincipalElement
+#print axioms DiamondIntegral.Section3.measuredRVPrincipalElement
+#check @DiamondIntegral.Section3.measuredRVSpecialCompletionEquiv
+#print axioms DiamondIntegral.Section3.measuredRVSpecialCompletionEquiv
+#check @DiamondIntegral.Section3.measuredRVDirectSumInvariant
+#print axioms DiamondIntegral.Section3.measuredRVDirectSumInvariant
+#check @DiamondIntegral.Section3.measuredRVPresentationToDirectSum
+#print axioms DiamondIntegral.Section3.measuredRVPresentationToDirectSum
+#check @DiamondIntegral.Section3.measuredRVDirectSumToPresentationAdd
+#print axioms DiamondIntegral.Section3.measuredRVDirectSumToPresentationAdd
+#check @DiamondIntegral.Section3.measuredRVDirectSumToPresentation
+#print axioms DiamondIntegral.Section3.measuredRVDirectSumToPresentation
+#check @DiamondIntegral.Section3.measuredRVSemiringEquivDirectSum
+#print axioms DiamondIntegral.Section3.measuredRVSemiringEquivDirectSum
+#check @DiamondIntegral.Section3.MeasuredRVDirectSum
+#print axioms DiamondIntegral.Section3.MeasuredRVDirectSum
+#check @DiamondIntegral.Section3.measuredRVDirectSumClass
+#print axioms DiamondIntegral.Section3.measuredRVDirectSumClass
+#check @DiamondIntegral.Section3.measuredRVRepresentative
+#print axioms DiamondIntegral.Section3.measuredRVRepresentative
+#check @DiamondIntegral.Section3.measuredRVClassMul
+#print axioms DiamondIntegral.Section3.measuredRVClassMul
+#check @DiamondIntegral.Section3.measuredRVKPlusCast
+#print axioms DiamondIntegral.Section3.measuredRVKPlusCast
+#check @DiamondIntegral.Section3.MeasuredRVIsoClasses
+#print axioms DiamondIntegral.Section3.MeasuredRVIsoClasses
+#check @DiamondIntegral.Section3.measuredRVIsoClass
+#print axioms DiamondIntegral.Section3.measuredRVIsoClass
+#check @DiamondIntegral.Section3.measuredRVRestrictionIsoOfCarrierEq
+#print axioms DiamondIntegral.Section3.measuredRVRestrictionIsoOfCarrierEq
+#check @DiamondIntegral.Section3.measuredRVKPlusToIsoClasses
+#print axioms DiamondIntegral.Section3.measuredRVKPlusToIsoClasses
+#check @DiamondIntegral.Section3.MeasuredRVMapObject
+#print axioms DiamondIntegral.Section3.MeasuredRVMapObject
+#check @DiamondIntegral.Section3.MeasuredRVMap
+#print axioms DiamondIntegral.Section3.MeasuredRVMap
+#check @DiamondIntegral.Section3.measuredRVMapIsoOfHom
+#print axioms DiamondIntegral.Section3.measuredRVMapIsoOfHom
+#check @DiamondIntegral.Section3.measuredRVHomOfMapIso
+#print axioms DiamondIntegral.Section3.measuredRVHomOfMapIso
+#check @DiamondIntegral.Section3.MeasuredRVMapObject.coprod
+#print axioms DiamondIntegral.Section3.MeasuredRVMapObject.coprod
+#check @DiamondIntegral.Section3.measuredRVMapInl
+#print axioms DiamondIntegral.Section3.measuredRVMapInl
+#check @DiamondIntegral.Section3.measuredRVMapInr
+#print axioms DiamondIntegral.Section3.measuredRVMapInr
+#check @DiamondIntegral.Section3.measuredRVMapDesc
+#print axioms DiamondIntegral.Section3.measuredRVMapDesc
+#check @DiamondIntegral.Section3.measuredRVMapCoprodIsColimit
+#print axioms DiamondIntegral.Section3.measuredRVMapCoprodIsColimit
+#check @DiamondIntegral.Section3.MeasuredRVMapObject.empty
+#print axioms DiamondIntegral.Section3.MeasuredRVMapObject.empty
+#check @DiamondIntegral.Section3.measuredRVMapEmptyHom
+#print axioms DiamondIntegral.Section3.measuredRVMapEmptyHom
+#check @DiamondIntegral.Section3.measuredRVMapEmptyIsInitial
+#print axioms DiamondIntegral.Section3.measuredRVMapEmptyIsInitial
+#check @DiamondIntegral.Section3.MeasuredRVMapObject.restrict
+#print axioms DiamondIntegral.Section3.MeasuredRVMapObject.restrict
+#check @DiamondIntegral.Section3.measuredRVUnionSubset
+#print axioms DiamondIntegral.Section3.measuredRVUnionSubset
+#check @DiamondIntegral.Section3.measuredRVUnionInl
+#print axioms DiamondIntegral.Section3.measuredRVUnionInl
+#check @DiamondIntegral.Section3.measuredRVUnionInr
+#print axioms DiamondIntegral.Section3.measuredRVUnionInr
+#check @DiamondIntegral.Section3.measuredRVUnionDesc
+#print axioms DiamondIntegral.Section3.measuredRVUnionDesc
+#check @DiamondIntegral.Section3.measuredRVUnionIsColimit
+#print axioms DiamondIntegral.Section3.measuredRVUnionIsColimit
+#check @DiamondIntegral.Section3.measuredRVCoprodUnionIso
+#print axioms DiamondIntegral.Section3.measuredRVCoprodUnionIso
+#check @DiamondIntegral.Section3.RVObject.reindexVolume
+#print axioms DiamondIntegral.Section3.RVObject.reindexVolume
+#check @DiamondIntegral.Section3.MeasuredRVObject.reindexVolume
+#print axioms DiamondIntegral.Section3.MeasuredRVObject.reindexVolume
+#check @DiamondIntegral.Section3.measuredRVProductAssocHom
+#print axioms DiamondIntegral.Section3.measuredRVProductAssocHom
+#check @DiamondIntegral.Section3.measuredRVProductCommHom
+#print axioms DiamondIntegral.Section3.measuredRVProductCommHom
+#check @DiamondIntegral.Section3.measuredRVProductRightUnitHom
+#print axioms DiamondIntegral.Section3.measuredRVProductRightUnitHom
+#check @DiamondIntegral.Section3.measuredRVProductRestrictionHom
+#print axioms DiamondIntegral.Section3.measuredRVProductRestrictionHom
+#check @DiamondIntegral.Section3.measuredRVCoprodLeftRestrictionHom
+#print axioms DiamondIntegral.Section3.measuredRVCoprodLeftRestrictionHom
+#check @DiamondIntegral.Section3.measuredRVCoprodRightRestrictionHom
+#print axioms DiamondIntegral.Section3.measuredRVCoprodRightRestrictionHom
+#check @DiamondIntegral.Section3.MeasuredRVObject.product
+#print axioms DiamondIntegral.Section3.MeasuredRVObject.product
+#check @DiamondIntegral.Section3.measuredRVProductHom
+#print axioms DiamondIntegral.Section3.measuredRVProductHom
+#check @DiamondIntegral.Section3.MeasuredRVObject.withZeroForm
+#print axioms DiamondIntegral.Section3.MeasuredRVObject.withZeroForm
+#check @DiamondIntegral.Section3.MeasuredRVObject.unit
+#print axioms DiamondIntegral.Section3.MeasuredRVObject.unit
+#check @DiamondIntegral.Section3.MeasuredRVSpecialQuotient
+#print axioms DiamondIntegral.Section3.MeasuredRVSpecialQuotient
+#check @DiamondIntegral.Section3.MeasuredRVGradingPolynomial
+#print axioms DiamondIntegral.Section3.MeasuredRVGradingPolynomial
+#check @DiamondIntegral.Section3.measuredRVPolynomialInvariant
+#print axioms DiamondIntegral.Section3.measuredRVPolynomialInvariant
+#check @DiamondIntegral.Section3.measuredRVPolynomialMap
+#print axioms DiamondIntegral.Section3.measuredRVPolynomialMap
+#check @DiamondIntegral.Section3.measuredRVQuotientGrading
+#print axioms DiamondIntegral.Section3.measuredRVQuotientGrading
+#check @DiamondIntegral.Section3.RVVolumeForm.restrict
+#print axioms DiamondIntegral.Section3.RVVolumeForm.restrict
+#check @DiamondIntegral.Section3.emptyRVVolumeForm
+#print axioms DiamondIntegral.Section3.emptyRVVolumeForm
+#check @DiamondIntegral.Section3.MeasuredRVObject.empty
+#print axioms DiamondIntegral.Section3.MeasuredRVObject.empty
+#check @DiamondIntegral.Section3.MeasuredRVObject.restrict
+#print axioms DiamondIntegral.Section3.MeasuredRVObject.restrict
+#check @DiamondIntegral.Section3.MeasuredRVScissor
+#print axioms DiamondIntegral.Section3.MeasuredRVScissor
+#check @DiamondIntegral.Section3.measuredRVPresentation
+#print axioms DiamondIntegral.Section3.measuredRVPresentation
+#check @DiamondIntegral.Section3.MeasuredRVKPlus
+#print axioms DiamondIntegral.Section3.MeasuredRVKPlus
+#check @DiamondIntegral.Section3.MeasuredRVKGroup
+#print axioms DiamondIntegral.Section3.MeasuredRVKGroup
+#check @DiamondIntegral.Section3.measuredRVClass
+#print axioms DiamondIntegral.Section3.measuredRVClass
+#check @DiamondIntegral.Section3.GradedMeasuredRVObject
+#print axioms DiamondIntegral.Section3.GradedMeasuredRVObject
+#check @DiamondIntegral.Section3.gradedMeasuredRVIso
+#print axioms DiamondIntegral.Section3.gradedMeasuredRVIso
+#check @DiamondIntegral.Section3.gradedMeasuredRVScissor
+#print axioms DiamondIntegral.Section3.gradedMeasuredRVScissor
+#check @DiamondIntegral.Section3.measuredRVSemiringPresentation
+#print axioms DiamondIntegral.Section3.measuredRVSemiringPresentation
+#check @DiamondIntegral.Section3.MeasuredRVPositiveSemiring
+#print axioms DiamondIntegral.Section3.MeasuredRVPositiveSemiring
+#check @DiamondIntegral.Section3.MeasuredRVGrothendieckRing
+#print axioms DiamondIntegral.Section3.MeasuredRVGrothendieckRing
+#check @DiamondIntegral.Section3.measuredRVSemiringClass
+#print axioms DiamondIntegral.Section3.measuredRVSemiringClass
+#check @DiamondIntegral.Section3.measuredRVKPlusToSemiring
+#print axioms DiamondIntegral.Section3.measuredRVKPlusToSemiring
+#check @DiamondIntegral.Section3.measuredRVSemiringUniversal
+#print axioms DiamondIntegral.Section3.measuredRVSemiringUniversal
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorResidual.weight
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorResidual.weight
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorResidual.chart
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorResidual.chart
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorResidual.object
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorResidual.object
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.sourceUnion
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.sourceUnion
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.targetUnion
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.targetUnion
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.residualBijection
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.residualBijection
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.Seed
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.Seed
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.seed
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.seed
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.seedTarget
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.seedTarget
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.seedMatch
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.seedMatch
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.gridMatching
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.gridMatching
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.Cell
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.Cell
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.MatchedIndex
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.MatchedIndex
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.sourceBox
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.sourceBox
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.targetParent
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.targetParent
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.targetBox
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.targetBox
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.data
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.data
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.sourceMap
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.sourceMap
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.targetMap
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.targetMap
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorSourceGridMatching
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorSourceGridMatching
+#check @DiamondIntegral.Section3.gammaGroundMeasuredTensorSourceGridMatching
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredTensorSourceGridMatching
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorSourceGridMatching.Cell
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorSourceGridMatching.Cell
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorSourceGridMatching.forget
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorSourceGridMatching.forget
+#check @DiamondIntegral.Section3.gammaGroundMeasuredTensorBooleanCell
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredTensorBooleanCell
+#check @DiamondIntegral.Section3.GammaGroundTensorBox.measuredValue
+#print axioms DiamondIntegral.Section3.GammaGroundTensorBox.measuredValue
+#check @DiamondIntegral.Section3.GammaGroundTensorBox.toMeasuredNativeChart
+#print axioms DiamondIntegral.Section3.GammaGroundTensorBox.toMeasuredNativeChart
+#check @DiamondIntegral.Section3.gammaGroundMeasuredCoefficientPair
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredCoefficientPair
+#check @DiamondIntegral.Section3.gammaGroundMeasuredCoefficientCongruence
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredCoefficientCongruence
+#check @DiamondIntegral.Section3.GammaGroundMeasuredCoefficientQuotient
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredCoefficientQuotient
+#check @DiamondIntegral.Section3.gammaGroundMeasuredCoefficientQuotientMap
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredCoefficientQuotientMap
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVDegreeProjection
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVDegreeProjection
+#check @DiamondIntegral.Section3.gammaGroundMeasuredTensorPiecesInDegree
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredTensorPiecesInDegree
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorBoxMatch
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorBoxMatch
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorBoxMatch.symm
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorBoxMatch.symm
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorBoxMatch.unsymm
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorBoxMatch.unsymm
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorLocalMatch
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorLocalMatch
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorLocalMatch.forget
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorLocalMatch.forget
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorLocalMatch.symm
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorLocalMatch.symm
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorLocalMatch.unsymm
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorLocalMatch.unsymm
+#check @DiamondIntegral.Section3.MeasuredPositiveTensor
+#print axioms DiamondIntegral.Section3.MeasuredPositiveTensor
+#check @DiamondIntegral.Section3.measuredTensorMap
+#print axioms DiamondIntegral.Section3.measuredTensorMap
+#check @DiamondIntegral.Section3.measuredGroupTensorMap
+#print axioms DiamondIntegral.Section3.measuredGroupTensorMap
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorTerm
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorTerm
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorTerm.value
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorTerm.value
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorTerm.rvObject
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorTerm.rvObject
+#check @DiamondIntegral.Section3.gammaGroundMeasuredCoefficientQuotientEquiv
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredCoefficientQuotientEquiv
+#check @DiamondIntegral.Section3.gammaGroundMeasuredCoefficientQuotientEquivDirectSum
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredCoefficientQuotientEquivDirectSum
+#check @DiamondIntegral.Section3.gammaGroundMeasuredCoefficientQuotientDegreeInclusion
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredCoefficientQuotientDegreeInclusion
+#check @DiamondIntegral.Section3.GammaGroundMeasuredRESObject.normalizeCombinedWeight
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredRESObject.normalizeCombinedWeight
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.sourceFamily
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.sourceFamily
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.targetFamily
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover.targetFamily
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayer.Index
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayer.Index
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayer.chart
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayer.chart
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayer.map
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayer.map
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayer.weightForm
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayer.weightForm
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayer.object
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayer.object
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerMatchEntry
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerMatchEntry
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayer
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayer
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayer.unmeasured
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayer.unmeasured
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayer.topChart
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayer.topChart
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayer.lowerChart
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayer.lowerChart
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayer.topValue
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayer.topValue
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayer.value
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayer.value
+#check @DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredTensorRankLayerTwoSidedCover
+#check @DiamondIntegral.Section3.MeasuredVFData
+#print axioms DiamondIntegral.Section3.MeasuredVFData
+#check @DiamondIntegral.Section3.MeasuredVFData.toObject
+#print axioms DiamondIntegral.Section3.MeasuredVFData.toObject
+#check @DiamondIntegral.Section3.MeasuredVFData.ofObject
+#print axioms DiamondIntegral.Section3.MeasuredVFData.ofObject
+#check @DiamondIntegral.Section3.measuredVFDataEquiv
+#print axioms DiamondIntegral.Section3.measuredVFDataEquiv
+#check @DiamondIntegral.Section3.MeasuredVFData.empty
+#print axioms DiamondIntegral.Section3.MeasuredVFData.empty
+#check @DiamondIntegral.Section3.MeasuredVFData.restrict
+#print axioms DiamondIntegral.Section3.MeasuredVFData.restrict
+#check @DiamondIntegral.Section3.MeasuredVFDirectSum
+#print axioms DiamondIntegral.Section3.MeasuredVFDirectSum
+#check @DiamondIntegral.Section3.measuredVFDirectSumToSemiring
+#print axioms DiamondIntegral.Section3.measuredVFDirectSumToSemiring
+#check @DiamondIntegral.Section3.measuredRVToVFDirectSum
+#print axioms DiamondIntegral.Section3.measuredRVToVFDirectSum
+#check @DiamondIntegral.Section3.measuredVFDirectSumEquiv
+#print axioms DiamondIntegral.Section3.measuredVFDirectSumEquiv
+#check @DiamondIntegral.Section3.measuredVFDirectSumClass
+#print axioms DiamondIntegral.Section3.measuredVFDirectSumClass
+#check @DiamondIntegral.Section3.measuredVFDirectSumCommSemiring
+#print axioms DiamondIntegral.Section3.measuredVFDirectSumCommSemiring
+#check @DiamondIntegral.Section3.measuredVFGradedSemiringEquiv
+#print axioms DiamondIntegral.Section3.measuredVFGradedSemiringEquiv
+#check @DiamondIntegral.Section3.measuredVFGradedRingEquiv
+#print axioms DiamondIntegral.Section3.measuredVFGradedRingEquiv
+#check @DiamondIntegral.Section3.measuredVFGroupDirectSumEquiv
+#print axioms DiamondIntegral.Section3.measuredVFGroupDirectSumEquiv
+#check @DiamondIntegral.Section3.measuredVFPolynomialGrading
+#print axioms DiamondIntegral.Section3.measuredVFPolynomialGrading
+#check @DiamondIntegral.Section3.PositiveMeasuredVF
+#print axioms DiamondIntegral.Section3.PositiveMeasuredVF
+#check @DiamondIntegral.Section3.PositiveMeasuredVF.weight
+#print axioms DiamondIntegral.Section3.PositiveMeasuredVF.weight
+#check @DiamondIntegral.Section3.PositiveMeasuredVF.Representative
+#print axioms DiamondIntegral.Section3.PositiveMeasuredVF.Representative
+#check @DiamondIntegral.Section3.PositiveMeasuredVF.Germ
+#print axioms DiamondIntegral.Section3.PositiveMeasuredVF.Germ
+#check @DiamondIntegral.Section3.PositiveMeasuredVF.ofRepresentative
+#print axioms DiamondIntegral.Section3.PositiveMeasuredVF.ofRepresentative
+#check @DiamondIntegral.Section3.PositiveMeasuredVF.aeSetoid
+#print axioms DiamondIntegral.Section3.PositiveMeasuredVF.aeSetoid
+#check @DiamondIntegral.Section3.PositiveMeasuredVF.quotientEquiv
+#print axioms DiamondIntegral.Section3.PositiveMeasuredVF.quotientEquiv
+#check @DiamondIntegral.Section3.measuredVFProductLeft
+#print axioms DiamondIntegral.Section3.measuredVFProductLeft
+#check @DiamondIntegral.Section3.measuredVFProductRight
+#print axioms DiamondIntegral.Section3.measuredVFProductRight
+#check @DiamondIntegral.Section3.MeasuredVFData.product
+#print axioms DiamondIntegral.Section3.MeasuredVFData.product
+#check @DiamondIntegral.Section3.MeasuredVFData.unit
+#print axioms DiamondIntegral.Section3.MeasuredVFData.unit
+#check @DiamondIntegral.Section3.measuredVFDataClass
+#print axioms DiamondIntegral.Section3.measuredVFDataClass
+#check @DiamondIntegral.Section3.ZeroMeasuredVF.empty
+#print axioms DiamondIntegral.Section3.ZeroMeasuredVF.empty
+#check @DiamondIntegral.Section3.ZeroMeasuredVF.restrict
+#print axioms DiamondIntegral.Section3.ZeroMeasuredVF.restrict
+#check @DiamondIntegral.Section3.zeroMeasuredVFScissor
+#print axioms DiamondIntegral.Section3.zeroMeasuredVFScissor
+#check @DiamondIntegral.Section3.zeroMeasuredVFPresentation
+#print axioms DiamondIntegral.Section3.zeroMeasuredVFPresentation
+#check @DiamondIntegral.Section3.zeroMeasuredVFClass
+#print axioms DiamondIntegral.Section3.zeroMeasuredVFClass
+#check @DiamondIntegral.Section3.PositiveMeasuredVF.empty
+#print axioms DiamondIntegral.Section3.PositiveMeasuredVF.empty
+#check @DiamondIntegral.Section3.PositiveMeasuredVF.restrict
+#print axioms DiamondIntegral.Section3.PositiveMeasuredVF.restrict
+#check @DiamondIntegral.Section3.positiveMeasuredVFScissor
+#print axioms DiamondIntegral.Section3.positiveMeasuredVFScissor
+#check @DiamondIntegral.Section3.positiveMeasuredVFPresentation
+#print axioms DiamondIntegral.Section3.positiveMeasuredVFPresentation
+#check @DiamondIntegral.Section3.positiveMeasuredVFClass
+#print axioms DiamondIntegral.Section3.positiveMeasuredVFClass
+#check @DiamondIntegral.Section3.MeasuredVFObject
+#print axioms DiamondIntegral.Section3.MeasuredVFObject
+#check @DiamondIntegral.Section3.measuredVFPresentation
+#print axioms DiamondIntegral.Section3.measuredVFPresentation
+#check @DiamondIntegral.Section3.MeasuredVFKPlus
+#print axioms DiamondIntegral.Section3.MeasuredVFKPlus
+#check @DiamondIntegral.Section3.MeasuredVFKGroup
+#print axioms DiamondIntegral.Section3.MeasuredVFKGroup
+#check @DiamondIntegral.Section3.GradedMeasuredVFData
+#print axioms DiamondIntegral.Section3.GradedMeasuredVFData
+#check @DiamondIntegral.Section3.gradedMeasuredVFIso
+#print axioms DiamondIntegral.Section3.gradedMeasuredVFIso
+#check @DiamondIntegral.Section3.gradedMeasuredVFScissor
+#print axioms DiamondIntegral.Section3.gradedMeasuredVFScissor
+#check @DiamondIntegral.Section3.measuredVFSemiringPresentation
+#print axioms DiamondIntegral.Section3.measuredVFSemiringPresentation
+#check @DiamondIntegral.Section3.MeasuredVFPositiveSemiring
+#print axioms DiamondIntegral.Section3.MeasuredVFPositiveSemiring
+#check @DiamondIntegral.Section3.MeasuredVFGrothendieckRing
+#print axioms DiamondIntegral.Section3.MeasuredVFGrothendieckRing
+#check @DiamondIntegral.Section3.measuredVFDataSemiringClass
+#print axioms DiamondIntegral.Section3.measuredVFDataSemiringClass
+#check @DiamondIntegral.Section3.measuredVFObjectSemiringClass
+#print axioms DiamondIntegral.Section3.measuredVFObjectSemiringClass
+#check @DiamondIntegral.Section3.measuredVFKPlusToSemiring
+#print axioms DiamondIntegral.Section3.measuredVFKPlusToSemiring
+#check @DiamondIntegral.Section3.ZeroMeasuredVF
+#print axioms DiamondIntegral.Section3.ZeroMeasuredVF
+#check @DiamondIntegral.Section3.ZeroMeasuredVFHom
+#print axioms DiamondIntegral.Section3.ZeroMeasuredVFHom
+#check @DiamondIntegral.Section3.ZeroMeasuredVFHom.id
+#print axioms DiamondIntegral.Section3.ZeroMeasuredVFHom.id
+#check @DiamondIntegral.Section3.ZeroMeasuredVFHom.comp
+#print axioms DiamondIntegral.Section3.ZeroMeasuredVFHom.comp
+#check @DiamondIntegral.Section3.ZeroMeasuredVFHom.symm
+#print axioms DiamondIntegral.Section3.ZeroMeasuredVFHom.symm
+#check @DiamondIntegral.Section3.mixedGammaTupleDefinable
+#print axioms DiamondIntegral.Section3.mixedGammaTupleDefinable
+#check @DiamondIntegral.Section3.mixedValueProjection
+#print axioms DiamondIntegral.Section3.mixedValueProjection
+#check @DiamondIntegral.Section3.mixedValueQuotient
+#print axioms DiamondIntegral.Section3.mixedValueQuotient
+#check @DiamondIntegral.Section3.GammaGroundRVProductMonomialPatch.sourceBox
+#print axioms DiamondIntegral.Section3.GammaGroundRVProductMonomialPatch.sourceBox
+#check @DiamondIntegral.Section3.GammaGroundRVProductMonomialPatch.targetBox
+#print axioms DiamondIntegral.Section3.GammaGroundRVProductMonomialPatch.targetBox
+#check @DiamondIntegral.Section3.gammaGroundMonomialPatchBoxMatch
+#print axioms DiamondIntegral.Section3.gammaGroundMonomialPatchBoxMatch
+#check @DiamondIntegral.Section3.gammaGroundMonomialPatchLocalMatch
+#print axioms DiamondIntegral.Section3.gammaGroundMonomialPatchLocalMatch
+#check @DiamondIntegral.Section3.universalProductSwap
+#print axioms DiamondIntegral.Section3.universalProductSwap
+#check @DiamondIntegral.Section3.NamedMap.inverse
+#print axioms DiamondIntegral.Section3.NamedMap.inverse
+#check @DiamondIntegral.Section3.NamedBijection
+#print axioms DiamondIntegral.Section3.NamedBijection
+#check @DiamondIntegral.Section3.NamedBijection.id
+#print axioms DiamondIntegral.Section3.NamedBijection.id
+#check @DiamondIntegral.Section3.NamedBijection.comp
+#print axioms DiamondIntegral.Section3.NamedBijection.comp
+#check @DiamondIntegral.Section3.NamedBijection.symm
+#print axioms DiamondIntegral.Section3.NamedBijection.symm
+#check @DiamondIntegral.Section3.NamedBijection.overRealCode
+#print axioms DiamondIntegral.Section3.NamedBijection.overRealCode
+#check @DiamondIntegral.Section3.universalProductFst
+#print axioms DiamondIntegral.Section3.universalProductFst
+#check @DiamondIntegral.Section3.universalProductSnd
+#print axioms DiamondIntegral.Section3.universalProductSnd
+#check @DiamondIntegral.Section3.NamedMap
+#print axioms DiamondIntegral.Section3.NamedMap
+#check @DiamondIntegral.Section3.NamedMap.id
+#print axioms DiamondIntegral.Section3.NamedMap.id
+#check @DiamondIntegral.Section3.NamedMap.overRealCode
+#print axioms DiamondIntegral.Section3.NamedMap.overRealCode
+#check @DiamondIntegral.Section3.namedObjectLift
+#print axioms DiamondIntegral.Section3.namedObjectLift
+#check @DiamondIntegral.Section3.namedObjectLiftVF
+#print axioms DiamondIntegral.Section3.namedObjectLiftVF
+#check @DiamondIntegral.Section3.universalTripleFirstSecond
+#print axioms DiamondIntegral.Section3.universalTripleFirstSecond
+#check @DiamondIntegral.Section3.universalTripleFirstThird
+#print axioms DiamondIntegral.Section3.universalTripleFirstThird
+#check @DiamondIntegral.Section3.NamedMap.comp
+#print axioms DiamondIntegral.Section3.NamedMap.comp
+#check @DiamondIntegral.Section3.NamedMap.image
+#print axioms DiamondIntegral.Section3.NamedMap.image
+#check @DiamondIntegral.Section3.NamedMap.toImage
+#print axioms DiamondIntegral.Section3.NamedMap.toImage
+#check @DiamondIntegral.Section3.NamedMap.FiniteFibres
+#print axioms DiamondIntegral.Section3.NamedMap.FiniteFibres
+#check @DiamondIntegral.Section3.NamedMap.pair
+#print axioms DiamondIntegral.Section3.NamedMap.pair
+#check @DiamondIntegral.Section3.NamedMap.prodMap
+#print axioms DiamondIntegral.Section3.NamedMap.prodMap
+#check @DiamondIntegral.Section3.NamedDefSet.prod
+#print axioms DiamondIntegral.Section3.NamedDefSet.prod
+#check @DiamondIntegral.Section3.NamedMap.inclusion
+#print axioms DiamondIntegral.Section3.NamedMap.inclusion
+#check @DiamondIntegral.Section3.NamedMap.restrict
+#print axioms DiamondIntegral.Section3.NamedMap.restrict
+#check @DiamondIntegral.Section3.NamedMap.corestrict
+#print axioms DiamondIntegral.Section3.NamedMap.corestrict
+#check @DiamondIntegral.Section3.NamedMap.toUniv
+#print axioms DiamondIntegral.Section3.NamedMap.toUniv
+#check @DiamondIntegral.Section3.NamedMap.ofReal
+#print axioms DiamondIntegral.Section3.NamedMap.ofReal
+#check @DiamondIntegral.Section3.NamedMap.ofGlobal
+#print axioms DiamondIntegral.Section3.NamedMap.ofGlobal
+#check @DiamondIntegral.Section3.NamedMap.prodFst
+#print axioms DiamondIntegral.Section3.NamedMap.prodFst
+#check @DiamondIntegral.Section3.NamedMap.prodSnd
+#print axioms DiamondIntegral.Section3.NamedMap.prodSnd
+#check @DiamondIntegral.Section3.NamedRVObject.target
+#print axioms DiamondIntegral.Section3.NamedRVObject.target
+#check @DiamondIntegral.Section3.NamedGammaVolumeForm
+#print axioms DiamondIntegral.Section3.NamedGammaVolumeForm
+#check @DiamondIntegral.Section3.namedGammaFormValue
+#print axioms DiamondIntegral.Section3.namedGammaFormValue
+#check @DiamondIntegral.Section3.NamedMeasuredRVObject
+#print axioms DiamondIntegral.Section3.NamedMeasuredRVObject
+#check @DiamondIntegral.Section3.NamedMeasuredRVObject.combinedWeight
+#print axioms DiamondIntegral.Section3.NamedMeasuredRVObject.combinedWeight
+#check @DiamondIntegral.Section3.NamedMeasuredRVHom
+#print axioms DiamondIntegral.Section3.NamedMeasuredRVHom
+#check @DiamondIntegral.Section3.NamedMeasuredRVHom.id
+#print axioms DiamondIntegral.Section3.NamedMeasuredRVHom.id
+#check @DiamondIntegral.Section3.NamedMeasuredRVHom.comp
+#print axioms DiamondIntegral.Section3.NamedMeasuredRVHom.comp
+#check @DiamondIntegral.Section3.NamedMeasuredRVHom.symm
+#print axioms DiamondIntegral.Section3.NamedMeasuredRVHom.symm
+#check @DiamondIntegral.Section3.NamedMeasuredRVObject.overRealCode
+#print axioms DiamondIntegral.Section3.NamedMeasuredRVObject.overRealCode
+#check @DiamondIntegral.Section3.NamedMeasuredRVHom.overRealCode
+#print axioms DiamondIntegral.Section3.NamedMeasuredRVHom.overRealCode
+#check @DiamondIntegral.Section3.namedMeasuredRVToRealCode
+#print axioms DiamondIntegral.Section3.namedMeasuredRVToRealCode
+#check @DiamondIntegral.Section3.namedMeasuredResProperty
+#print axioms DiamondIntegral.Section3.namedMeasuredResProperty
+#check @DiamondIntegral.Section3.NamedMeasuredRESObject
+#print axioms DiamondIntegral.Section3.NamedMeasuredRESObject
+#check @DiamondIntegral.Section3.NamedRVObject
+#print axioms DiamondIntegral.Section3.NamedRVObject
+#check @DiamondIntegral.Section3.NamedRVObject.overRealCode
+#print axioms DiamondIntegral.Section3.NamedRVObject.overRealCode
+#check @DiamondIntegral.Section3.namedRVToRealCode
+#print axioms DiamondIntegral.Section3.namedRVToRealCode
+#check @DiamondIntegral.Section3.NamedRVObject.ofReal
+#print axioms DiamondIntegral.Section3.NamedRVObject.ofReal
+#check @DiamondIntegral.Section3.namedResProperty
+#print axioms DiamondIntegral.Section3.namedResProperty
+#check @DiamondIntegral.Section3.NamedRESObject
+#print axioms DiamondIntegral.Section3.NamedRESObject
+#check @DiamondIntegral.Section3.NamedRVObject.empty
+#print axioms DiamondIntegral.Section3.NamedRVObject.empty
+#check @DiamondIntegral.Section3.NamedRVObject.restrict
+#print axioms DiamondIntegral.Section3.NamedRVObject.restrict
+#check @DiamondIntegral.Section3.namedRVScissor
+#print axioms DiamondIntegral.Section3.namedRVScissor
+#check @DiamondIntegral.Section3.namedRVPresentation
+#print axioms DiamondIntegral.Section3.namedRVPresentation
+#check @DiamondIntegral.Section3.NamedRVKPlus
+#print axioms DiamondIntegral.Section3.NamedRVKPlus
+#check @DiamondIntegral.Section3.namedRVClass
+#print axioms DiamondIntegral.Section3.namedRVClass
+#check @DiamondIntegral.Section3.NamedVFObject
+#print axioms DiamondIntegral.Section3.NamedVFObject
+#check @DiamondIntegral.Section3.NamedVFObject.overRealCode
+#print axioms DiamondIntegral.Section3.NamedVFObject.overRealCode
+#check @DiamondIntegral.Section3.namedVFToRealCode
+#print axioms DiamondIntegral.Section3.namedVFToRealCode
+#check @DiamondIntegral.Section3.NamedVFObject.raise
+#print axioms DiamondIntegral.Section3.NamedVFObject.raise
+#check @DiamondIntegral.Section3.NamedVFObject.restrict
+#print axioms DiamondIntegral.Section3.NamedVFObject.restrict
+#check @DiamondIntegral.Section3.NamedVFObject.ofReal
+#print axioms DiamondIntegral.Section3.NamedVFObject.ofReal
+#check @DiamondIntegral.Section3.gammaGroundTensorBoxInParent
+#print axioms DiamondIntegral.Section3.gammaGroundTensorBoxInParent
+#check @DiamondIntegral.Section3.gammaGroundTensorChildEnumeration
+#print axioms DiamondIntegral.Section3.gammaGroundTensorChildEnumeration
+#check @DiamondIntegral.Section3.gammaGroundTensorChildren
+#print axioms DiamondIntegral.Section3.gammaGroundTensorChildren
+#check @DiamondIntegral.Section3.GammaGroundTensorParentRemainderIndex
+#print axioms DiamondIntegral.Section3.GammaGroundTensorParentRemainderIndex
+#check @DiamondIntegral.Section3.gammaGroundTensorParentRemainderBox
+#print axioms DiamondIntegral.Section3.gammaGroundTensorParentRemainderBox
+#check @DiamondIntegral.Section3.nativeGammaBoundaryCarrier
+#print axioms DiamondIntegral.Section3.nativeGammaBoundaryCarrier
+#check @DiamondIntegral.Section3.nativeGammaBoundaryRelation
+#print axioms DiamondIntegral.Section3.nativeGammaBoundaryRelation
+#check @DiamondIntegral.Section3.gammaGroundNativeProductTransitionFree
+#print axioms DiamondIntegral.Section3.gammaGroundNativeProductTransitionFree
+#check @DiamondIntegral.Section3.gammaGroundNativeProductTransitionResidue
+#print axioms DiamondIntegral.Section3.gammaGroundNativeProductTransitionResidue
+#check @DiamondIntegral.Section3.gammaGroundTensorGridBox
+#print axioms DiamondIntegral.Section3.gammaGroundTensorGridBox
+#check @DiamondIntegral.Section3.GammaGroundNativeTensorChart
+#print axioms DiamondIntegral.Section3.GammaGroundNativeTensorChart
+#check @DiamondIntegral.Section3.GammaGroundNativeTensorChart.source
+#print axioms DiamondIntegral.Section3.GammaGroundNativeTensorChart.source
+#check @DiamondIntegral.Section3.GammaGroundNativeTensorChart.value
+#print axioms DiamondIntegral.Section3.GammaGroundNativeTensorChart.value
+#check @DiamondIntegral.Section3.GammaGroundNativeTensorChart.object
+#print axioms DiamondIntegral.Section3.GammaGroundNativeTensorChart.object
+#check @DiamondIntegral.Section3.GammaGroundNativeTensorChart.bijection
+#print axioms DiamondIntegral.Section3.GammaGroundNativeTensorChart.bijection
+#check @DiamondIntegral.Section3.GammaGroundNativeTensorChart.ofPiece
+#print axioms DiamondIntegral.Section3.GammaGroundNativeTensorChart.ofPiece
+#check @DiamondIntegral.Section3.gammaGroundTensorGridNonempty
+#print axioms DiamondIntegral.Section3.gammaGroundTensorGridNonempty
+#check @DiamondIntegral.Section3.gammaGroundTensorGridSelected
+#print axioms DiamondIntegral.Section3.gammaGroundTensorGridSelected
+#check @DiamondIntegral.Section3.GammaGroundTensorGridCoveredIndex
+#print axioms DiamondIntegral.Section3.GammaGroundTensorGridCoveredIndex
+#check @DiamondIntegral.Section3.GammaGroundTensorGridUncoveredIndex
+#print axioms DiamondIntegral.Section3.GammaGroundTensorGridUncoveredIndex
+#check @DiamondIntegral.Section3.GammaGroundTensorBox.toNativeChart
+#print axioms DiamondIntegral.Section3.GammaGroundTensorBox.toNativeChart
+#check @DiamondIntegral.Section3.gammaGroundNativeTensorListObject
+#print axioms DiamondIntegral.Section3.gammaGroundNativeTensorListObject
+#check @DiamondIntegral.Section3.gammaGroundNativeTensorListIndex
+#print axioms DiamondIntegral.Section3.gammaGroundNativeTensorListIndex
+#check @DiamondIntegral.Section3.gammaGroundNativeTensorListComponent
+#print axioms DiamondIntegral.Section3.gammaGroundNativeTensorListComponent
+#check @DiamondIntegral.Section3.gammaGroundNativeTensorListInjection
+#print axioms DiamondIntegral.Section3.gammaGroundNativeTensorListInjection
+#check @DiamondIntegral.Section3.gammaGroundNativeTensorListInjectionOfEq
+#print axioms DiamondIntegral.Section3.gammaGroundNativeTensorListInjectionOfEq
+#check @DiamondIntegral.Section3.gammaGroundNativeTensorListPrefixIndex
+#print axioms DiamondIntegral.Section3.gammaGroundNativeTensorListPrefixIndex
+#check @DiamondIntegral.Section3.gammaGroundNativeTensorListSuffixIndex
+#print axioms DiamondIntegral.Section3.gammaGroundNativeTensorListSuffixIndex
+#check @DiamondIntegral.Section3.gammaGroundNativeTensorOfFnIndex
+#print axioms DiamondIntegral.Section3.gammaGroundNativeTensorOfFnIndex
+#check @DiamondIntegral.Section3.GammaGroundNormalizedMeasuredTensorPiece
+#print axioms DiamondIntegral.Section3.GammaGroundNormalizedMeasuredTensorPiece
+#check @DiamondIntegral.Section3.GammaGroundNormalizedMeasuredTensorPiece.value
+#print axioms DiamondIntegral.Section3.GammaGroundNormalizedMeasuredTensorPiece.value
+#check @DiamondIntegral.Section3.orderBoundary
+#print axioms DiamondIntegral.Section3.orderBoundary
+#check @DiamondIntegral.Section3.LiteralValuePattern
+#print axioms DiamondIntegral.Section3.LiteralValuePattern
+#check @DiamondIntegral.Section3.literalPatternCell
+#print axioms DiamondIntegral.Section3.literalPatternCell
+#check @DiamondIntegral.Section3.literalPatternCharacters
+#print axioms DiamondIntegral.Section3.literalPatternCharacters
+#check @DiamondIntegral.Section3.literalPattern
+#print axioms DiamondIntegral.Section3.literalPattern
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredTensorDescend
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredTensorDescend
+#check @DiamondIntegral.Section3.gammaGroundMeasuredTensorDescend
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredTensorDescend
+#check @DiamondIntegral.Section3.universalPowerProjection
+#print axioms DiamondIntegral.Section3.universalPowerProjection
+#check @DiamondIntegral.Section3.PresentedPredicateDefinable
+#print axioms DiamondIntegral.Section3.PresentedPredicateDefinable
+#check @DiamondIntegral.Section3.finProductSumDistrib
+#print axioms DiamondIntegral.Section3.finProductSumDistrib
+#check @DiamondIntegral.Section3.integralFromKernel
+#print axioms DiamondIntegral.Section3.integralFromKernel
+#check @DiamondIntegral.Section3.RESObject.coprod
+#print axioms DiamondIntegral.Section3.RESObject.coprod
+#check @DiamondIntegral.Section3.RESObject.unit
+#print axioms DiamondIntegral.Section3.RESObject.unit
+#check @DiamondIntegral.Section3.resRepresentative
+#print axioms DiamondIntegral.Section3.resRepresentative
+#check @DiamondIntegral.Section3.resClassMul
+#print axioms DiamondIntegral.Section3.resClassMul
+#check @DiamondIntegral.Section3.RESDirectSum
+#print axioms DiamondIntegral.Section3.RESDirectSum
+#check @DiamondIntegral.Section3.resDirectSumToRV
+#print axioms DiamondIntegral.Section3.resDirectSumToRV
+#check @DiamondIntegral.Section3.resDirectSumClass
+#print axioms DiamondIntegral.Section3.resDirectSumClass
+#check @DiamondIntegral.Section3.resGradedInclusion
+#print axioms DiamondIntegral.Section3.resGradedInclusion
+#check @DiamondIntegral.Section3.RESObject.empty
+#print axioms DiamondIntegral.Section3.RESObject.empty
+#check @DiamondIntegral.Section3.RESObject.restrict
+#print axioms DiamondIntegral.Section3.RESObject.restrict
+#check @DiamondIntegral.Section3.RESObject.product
+#print axioms DiamondIntegral.Section3.RESObject.product
+#check @DiamondIntegral.Section3.resPresentation
+#print axioms DiamondIntegral.Section3.resPresentation
+#check @DiamondIntegral.Section3.RESKPlus
+#print axioms DiamondIntegral.Section3.RESKPlus
+#check @DiamondIntegral.Section3.RESKGroup
+#print axioms DiamondIntegral.Section3.RESKGroup
+#check @DiamondIntegral.Section3.resClass
+#print axioms DiamondIntegral.Section3.resClass
+#check @DiamondIntegral.Section3.resToRVKPlus
+#print axioms DiamondIntegral.Section3.resToRVKPlus
+#check @DiamondIntegral.Section3.MeasuredRESObject.empty
+#print axioms DiamondIntegral.Section3.MeasuredRESObject.empty
+#check @DiamondIntegral.Section3.MeasuredRESObject.restrict
+#print axioms DiamondIntegral.Section3.MeasuredRESObject.restrict
+#check @DiamondIntegral.Section3.measuredRESPresentation
+#print axioms DiamondIntegral.Section3.measuredRESPresentation
+#check @DiamondIntegral.Section3.MeasuredRESKPlus
+#print axioms DiamondIntegral.Section3.MeasuredRESKPlus
+#check @DiamondIntegral.Section3.MeasuredRESKGroup
+#print axioms DiamondIntegral.Section3.MeasuredRESKGroup
+#check @DiamondIntegral.Section3.measuredResClass
+#print axioms DiamondIntegral.Section3.measuredResClass
+#check @DiamondIntegral.Section3.measuredResToRVKPlus
+#print axioms DiamondIntegral.Section3.measuredResToRVKPlus
+#check @DiamondIntegral.Section3.rvNonzeroTupleValueCode
+#print axioms DiamondIntegral.Section3.rvNonzeroTupleValueCode
+#check @DiamondIntegral.Section3.GammaGroundRESUnitChart
+#print axioms DiamondIntegral.Section3.GammaGroundRESUnitChart
+#check @DiamondIntegral.Section3.gammaGroundRESUnitChart
+#print axioms DiamondIntegral.Section3.gammaGroundRESUnitChart
+#check @DiamondIntegral.Section3.GammaGroundRESUnitChart.restrict
+#print axioms DiamondIntegral.Section3.GammaGroundRESUnitChart.restrict
+#check @DiamondIntegral.Section3.RVAngularCell
+#print axioms DiamondIntegral.Section3.RVAngularCell
+#check @DiamondIntegral.Section3.rvAngularCoordinateCode
+#print axioms DiamondIntegral.Section3.rvAngularCoordinateCode
+#check @DiamondIntegral.Section3.rvAngularCoordinateMap
+#print axioms DiamondIntegral.Section3.rvAngularCoordinateMap
+#check @DiamondIntegral.Section3.rvAngularCoordinateBijection
+#print axioms DiamondIntegral.Section3.rvAngularCoordinateBijection
+#check @DiamondIntegral.Section3.RVAngularCell.gammaWeight
+#print axioms DiamondIntegral.Section3.RVAngularCell.gammaWeight
+#check @DiamondIntegral.Section3.RVAngularCell.inverseFreeMatrix
+#print axioms DiamondIntegral.Section3.RVAngularCell.inverseFreeMatrix
+#check @DiamondIntegral.Section3.RVAngularCell.inverseResidueCoefficient
+#print axioms DiamondIntegral.Section3.RVAngularCell.inverseResidueCoefficient
+#check @DiamondIntegral.Section3.RVAngularCell.inverseResidueMatrix
+#print axioms DiamondIntegral.Section3.RVAngularCell.inverseResidueMatrix
+#check @DiamondIntegral.Section3.RVAngularCell.outputMonomialMatrix
+#print axioms DiamondIntegral.Section3.RVAngularCell.outputMonomialMatrix
+#check @DiamondIntegral.Section3.RVAngularCell.outputCoefficientMatrix
+#print axioms DiamondIntegral.Section3.RVAngularCell.outputCoefficientMatrix
+#check @DiamondIntegral.Section3.rvUnitTupleValues
+#print axioms DiamondIntegral.Section3.rvUnitTupleValues
+#check @DiamondIntegral.Section3.RVAngularCell.coordinateEquiv
+#print axioms DiamondIntegral.Section3.RVAngularCell.coordinateEquiv
+#check @DiamondIntegral.Section3.RVAngularCell.coordinateImage
+#print axioms DiamondIntegral.Section3.RVAngularCell.coordinateImage
+#check @DiamondIntegral.Section3.coordinateValueIndex
+#print axioms DiamondIntegral.Section3.coordinateValueIndex
+#check @DiamondIntegral.Section3.coordinateValueJoin
+#print axioms DiamondIntegral.Section3.coordinateValueJoin
+#check @DiamondIntegral.Section3.RVAngularCell.valueReconstruction
+#print axioms DiamondIntegral.Section3.RVAngularCell.valueReconstruction
+#check @DiamondIntegral.Section3.RVObject
+#print axioms DiamondIntegral.Section3.RVObject
+#check @DiamondIntegral.Section3.RVObject.valueSupport
+#print axioms DiamondIntegral.Section3.RVObject.valueSupport
+#check @DiamondIntegral.Section3.resProperty
+#print axioms DiamondIntegral.Section3.resProperty
+#check @DiamondIntegral.Section3.RESObject
+#print axioms DiamondIntegral.Section3.RESObject
+#check @DiamondIntegral.Section3.RVObject.toCompanion
+#print axioms DiamondIntegral.Section3.RVObject.toCompanion
+#check @DiamondIntegral.Section3.clauseActiveCharacters
+#print axioms DiamondIntegral.Section3.clauseActiveCharacters
+#check @DiamondIntegral.Section3.rvClauseValueCell
+#print axioms DiamondIntegral.Section3.rvClauseValueCell
+#check @DiamondIntegral.Section3.monomialGammaExpression
+#print axioms DiamondIntegral.Section3.monomialGammaExpression
+#check @DiamondIntegral.Section3.monomialGammaResidue
+#print axioms DiamondIntegral.Section3.monomialGammaResidue
+#check @DiamondIntegral.Section3.monomialGammaEqualValue
+#print axioms DiamondIntegral.Section3.monomialGammaEqualValue
+#check @DiamondIntegral.Section3.gammaGroundRVUnitSkewMap
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnitSkewMap
+#check @DiamondIntegral.Section3.gammaGroundRVUnitSkewBijection
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnitSkewBijection
+#check @DiamondIntegral.Section3.gammaGroundRVUnitCoefficientTranslation
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnitCoefficientTranslation
+#check @DiamondIntegral.Section3.RVObject.coprod
+#print axioms DiamondIntegral.Section3.RVObject.coprod
+#check @DiamondIntegral.Section3.RVObject.correspondence
+#print axioms DiamondIntegral.Section3.RVObject.correspondence
+#check @DiamondIntegral.Section3.RVObject.correspondenceFinitary
+#print axioms DiamondIntegral.Section3.RVObject.correspondenceFinitary
+#check @DiamondIntegral.Section3.RVObject.targetOfImage
+#print axioms DiamondIntegral.Section3.RVObject.targetOfImage
+#check @DiamondIntegral.Section3.RVObject.correspondencePoint
+#print axioms DiamondIntegral.Section3.RVObject.correspondencePoint
+#check @DiamondIntegral.Section3.RVObject.correspondenceJacobian
+#print axioms DiamondIntegral.Section3.RVObject.correspondenceJacobian
+#check @DiamondIntegral.Section3.rvDNFRelabel
+#print axioms DiamondIntegral.Section3.rvDNFRelabel
+#check @DiamondIntegral.Section3.RVDNFValueCellIndex
+#print axioms DiamondIntegral.Section3.RVDNFValueCellIndex
+#check @DiamondIntegral.Section3.rvDNFValueCell
+#print axioms DiamondIntegral.Section3.rvDNFValueCell
+#check @DiamondIntegral.Section3.allRVVariableEquiv
+#print axioms DiamondIntegral.Section3.allRVVariableEquiv
+#check @DiamondIntegral.Section3.sourceVFFixedValues
+#print axioms DiamondIntegral.Section3.sourceVFFixedValues
+#check @DiamondIntegral.Section3.sourceRVFixedParameters
+#print axioms DiamondIntegral.Section3.sourceRVFixedParameters
+#check @DiamondIntegral.Section3.rvSumGraph
+#print axioms DiamondIntegral.Section3.rvSumGraph
+#check @DiamondIntegral.Section3.cleanRV
+#print axioms DiamondIntegral.Section3.cleanRV
+#check @DiamondIntegral.Section3.cleanRVMap
+#print axioms DiamondIntegral.Section3.cleanRVMap
+#check @DiamondIntegral.Section3.rvFamilyDesc
+#print axioms DiamondIntegral.Section3.rvFamilyDesc
+#check @DiamondIntegral.Section3.rvFamilyMap
+#print axioms DiamondIntegral.Section3.rvFamilyMap
+#check @DiamondIntegral.Section3.FamilyBijection.rvRealization
+#print axioms DiamondIntegral.Section3.FamilyBijection.rvRealization
+#check @DiamondIntegral.Section3.FiniteFamily.rvTarget
+#print axioms DiamondIntegral.Section3.FiniteFamily.rvTarget
+#check @DiamondIntegral.Section3.FiniteFamily.rvObject
+#print axioms DiamondIntegral.Section3.FiniteFamily.rvObject
+#check @DiamondIntegral.Section3.rvFamilyIso
+#print axioms DiamondIntegral.Section3.rvFamilyIso
+#check @DiamondIntegral.Section3.FiniteFamily.rvProduct
+#print axioms DiamondIntegral.Section3.FiniteFamily.rvProduct
+#check @DiamondIntegral.Section3.rvFamilyProductBranch
+#print axioms DiamondIntegral.Section3.rvFamilyProductBranch
+#check @DiamondIntegral.Section3.rvFamilyProductMap
+#print axioms DiamondIntegral.Section3.rvFamilyProductMap
+#check @DiamondIntegral.Section3.rvFamilyProductBijection
+#print axioms DiamondIntegral.Section3.rvFamilyProductBijection
+#check @DiamondIntegral.Section3.familyRealizationPullEquiv
+#print axioms DiamondIntegral.Section3.familyRealizationPullEquiv
+#check @DiamondIntegral.Section3.FamilyBijection.ofRVRealization
+#print axioms DiamondIntegral.Section3.FamilyBijection.ofRVRealization
+#check @DiamondIntegral.Section3.rvFamilyTag
+#print axioms DiamondIntegral.Section3.rvFamilyTag
+#check @DiamondIntegral.Section3.rvFamilyTagMap
+#print axioms DiamondIntegral.Section3.rvFamilyTagMap
+#check @DiamondIntegral.Section3.FiniteFamily.rvRealization
+#print axioms DiamondIntegral.Section3.FiniteFamily.rvRealization
+#check @DiamondIntegral.Section3.FiniteFamily.rvEncode
+#print axioms DiamondIntegral.Section3.FiniteFamily.rvEncode
+#check @DiamondIntegral.Section3.FiniteFamily.rvEquiv
+#print axioms DiamondIntegral.Section3.FiniteFamily.rvEquiv
+#check @DiamondIntegral.Section3.rvFibreDimension
+#print axioms DiamondIntegral.Section3.rvFibreDimension
+#check @DiamondIntegral.Section3.RVBoundedPositive
+#print axioms DiamondIntegral.Section3.RVBoundedPositive
+#check @DiamondIntegral.Section3.rvBoundedClass
+#print axioms DiamondIntegral.Section3.rvBoundedClass
+#check @DiamondIntegral.Section3.rvBoundedInclude
+#print axioms DiamondIntegral.Section3.rvBoundedInclude
+#check @DiamondIntegral.Section3.rvBoundedTransition
+#print axioms DiamondIntegral.Section3.rvBoundedTransition
+#check @DiamondIntegral.Section3.rvBoundedSpecialHom
+#print axioms DiamondIntegral.Section3.rvBoundedSpecialHom
+#check @DiamondIntegral.Section3.rvBoundedSpecialCongruence
+#print axioms DiamondIntegral.Section3.rvBoundedSpecialCongruence
+#check @DiamondIntegral.Section3.rvBoundedQuotientTransition
+#print axioms DiamondIntegral.Section3.rvBoundedQuotientTransition
+#check @DiamondIntegral.Section3.gammaGroundRVListSum
+#print axioms DiamondIntegral.Section3.gammaGroundRVListSum
+#check @DiamondIntegral.Section3.gammaGroundRVListInjection
+#print axioms DiamondIntegral.Section3.gammaGroundRVListInjection
+#check @DiamondIntegral.Section3.RVVolumeForm.toGammaVolumeForm
+#print axioms DiamondIntegral.Section3.RVVolumeForm.toGammaVolumeForm
+#check @DiamondIntegral.Section3.rvGammaNativeGraph
+#print axioms DiamondIntegral.Section3.rvGammaNativeGraph
+#check @DiamondIntegral.Section3.rvGammaRawGraph
+#print axioms DiamondIntegral.Section3.rvGammaRawGraph
+#check @DiamondIntegral.Section3.GammaVolumeForm.toRVVolumeForm
+#print axioms DiamondIntegral.Section3.GammaVolumeForm.toRVVolumeForm
+#check @DiamondIntegral.Section3.rvVolumeFormEquiv
+#print axioms DiamondIntegral.Section3.rvVolumeFormEquiv
+#check @DiamondIntegral.Section3.GammaValueFunctionData
+#print axioms DiamondIntegral.Section3.GammaValueFunctionData
+#check @DiamondIntegral.Section3.gammaRVColumnValues
+#print axioms DiamondIntegral.Section3.gammaRVColumnValues
+#check @DiamondIntegral.Section3.rvUnitGammaGraph
+#print axioms DiamondIntegral.Section3.rvUnitGammaGraph
+#check @DiamondIntegral.Section3.rvOneDomain
+#print axioms DiamondIntegral.Section3.rvOneDomain
+#check @DiamondIntegral.Section3.rvOneObject
+#print axioms DiamondIntegral.Section3.rvOneObject
+#check @DiamondIntegral.Section3.rvPositiveDomain
+#print axioms DiamondIntegral.Section3.rvPositiveDomain
+#check @DiamondIntegral.Section3.rvPositiveObject
+#print axioms DiamondIntegral.Section3.rvPositiveObject
+#check @DiamondIntegral.Section3.rvSpecialCongruence
+#print axioms DiamondIntegral.Section3.rvSpecialCongruence
+#check @DiamondIntegral.Section3.rvPrincipalElement
+#print axioms DiamondIntegral.Section3.rvPrincipalElement
+#check @DiamondIntegral.Section3.rvSpecialCompletionEquiv
+#print axioms DiamondIntegral.Section3.rvSpecialCompletionEquiv
+#check @DiamondIntegral.Section3.RVCoordinateInvariant
+#print axioms DiamondIntegral.Section3.RVCoordinateInvariant
+#check @DiamondIntegral.Section3.rvFullFibreGeneric
+#print axioms DiamondIntegral.Section3.rvFullFibreGeneric
+#check @DiamondIntegral.Section3.rvAngularMixedDomain
+#print axioms DiamondIntegral.Section3.rvAngularMixedDomain
+#check @DiamondIntegral.Section3.rvAngularResidueDomain
+#print axioms DiamondIntegral.Section3.rvAngularResidueDomain
+#check @DiamondIntegral.Section3.rvDNFLiterals
+#print axioms DiamondIntegral.Section3.rvDNFLiterals
+#check @DiamondIntegral.Section3.RVDNFGlobalPattern
+#print axioms DiamondIntegral.Section3.RVDNFGlobalPattern
+#check @DiamondIntegral.Section3.rvDNFPatternCell
+#print axioms DiamondIntegral.Section3.rvDNFPatternCell
+#check @DiamondIntegral.Section3.rvDNFPatternCharacters
+#print axioms DiamondIntegral.Section3.rvDNFPatternCharacters
+#check @DiamondIntegral.Section3.rvDirectSumInvariant
+#print axioms DiamondIntegral.Section3.rvDirectSumInvariant
+#check @DiamondIntegral.Section3.rvPresentationToDirectSum
+#print axioms DiamondIntegral.Section3.rvPresentationToDirectSum
+#check @DiamondIntegral.Section3.rvDirectSumToPresentationAdd
+#print axioms DiamondIntegral.Section3.rvDirectSumToPresentationAdd
+#check @DiamondIntegral.Section3.rvDirectSumToPresentation
+#print axioms DiamondIntegral.Section3.rvDirectSumToPresentation
+#check @DiamondIntegral.Section3.rvSemiringEquivDirectSum
+#print axioms DiamondIntegral.Section3.rvSemiringEquivDirectSum
+#check @DiamondIntegral.Section3.rvRepresentative
+#print axioms DiamondIntegral.Section3.rvRepresentative
+#check @DiamondIntegral.Section3.rvClassMul
+#print axioms DiamondIntegral.Section3.rvClassMul
+#check @DiamondIntegral.Section3.RVDirectSum
+#print axioms DiamondIntegral.Section3.RVDirectSum
+#check @DiamondIntegral.Section3.rvDirectSumToAmbient
+#print axioms DiamondIntegral.Section3.rvDirectSumToAmbient
+#check @DiamondIntegral.Section3.rvDirectSumClass
+#print axioms DiamondIntegral.Section3.rvDirectSumClass
+#check @DiamondIntegral.Section3.equalityGammaPattern
+#print axioms DiamondIntegral.Section3.equalityGammaPattern
+#check @DiamondIntegral.Section3.literalGammaPattern
+#print axioms DiamondIntegral.Section3.literalGammaPattern
+#check @DiamondIntegral.Section3.globalGammaPattern
+#print axioms DiamondIntegral.Section3.globalGammaPattern
+#check @DiamondIntegral.Section3.rvMixedValueProjectionMap
+#print axioms DiamondIntegral.Section3.rvMixedValueProjectionMap
+#check @DiamondIntegral.Section3.rvMonomialBasisBijection
+#print axioms DiamondIntegral.Section3.rvMonomialBasisBijection
+#check @DiamondIntegral.Section3.rvMonomialCoefficient
+#print axioms DiamondIntegral.Section3.rvMonomialCoefficient
+#check @DiamondIntegral.Section3.rvMonomialSetMap
+#print axioms DiamondIntegral.Section3.rvMonomialSetMap
+#check @DiamondIntegral.Section3.rvTorusUnitsEquiv
+#print axioms DiamondIntegral.Section3.rvTorusUnitsEquiv
+#check @DiamondIntegral.Section3.rvMonomialTorusMap
+#print axioms DiamondIntegral.Section3.rvMonomialTorusMap
+#check @DiamondIntegral.Section3.rvMonomialTorusBijection
+#print axioms DiamondIntegral.Section3.rvMonomialTorusBijection
+#check @DiamondIntegral.Section3.GammaGroundRVProductMonomialPatch.restrict
+#print axioms DiamondIntegral.Section3.GammaGroundRVProductMonomialPatch.restrict
+#check @DiamondIntegral.Section3.GammaGroundRVProductMonomialPatch.restrictTarget
+#print axioms DiamondIntegral.Section3.GammaGroundRVProductMonomialPatch.restrictTarget
+#check @DiamondIntegral.Section3.rvIntegerMonomialTerm
+#print axioms DiamondIntegral.Section3.rvIntegerMonomialTerm
+#check @DiamondIntegral.Section3.rvIntegerMonomialRawMap
+#print axioms DiamondIntegral.Section3.rvIntegerMonomialRawMap
+#check @DiamondIntegral.Section3.RVProductPiece
+#print axioms DiamondIntegral.Section3.RVProductPiece
+#check @DiamondIntegral.Section3.rvNonzeroTupleCode
+#print axioms DiamondIntegral.Section3.rvNonzeroTupleCode
+#check @DiamondIntegral.Section3.rvNonzeroTupleCodeMap
+#print axioms DiamondIntegral.Section3.rvNonzeroTupleCodeMap
+#check @DiamondIntegral.Section3.gammaGroundRVNonzeroTupleCodeMap
+#print axioms DiamondIntegral.Section3.gammaGroundRVNonzeroTupleCodeMap
+#check @DiamondIntegral.Section3.gammaGroundRVNonzeroTupleCodeBijection
+#print axioms DiamondIntegral.Section3.gammaGroundRVNonzeroTupleCodeBijection
+#check @DiamondIntegral.Section3.rvNormalizedMapRelation
+#print axioms DiamondIntegral.Section3.rvNormalizedMapRelation
+#check @DiamondIntegral.Section3.rvOriginalPointWeights
+#print axioms DiamondIntegral.Section3.rvOriginalPointWeights
+#check @DiamondIntegral.Section3.RVOriginalDiagonalWeightGroup
+#print axioms DiamondIntegral.Section3.RVOriginalDiagonalWeightGroup
+#check @DiamondIntegral.Section3.parameterTermFunction
+#print axioms DiamondIntegral.Section3.parameterTermFunction
+#check @DiamondIntegral.Section3.rvMonomialParameterTerm
+#print axioms DiamondIntegral.Section3.rvMonomialParameterTerm
+#check @DiamondIntegral.Section3.rvPatternCoordinateEquiv
+#print axioms DiamondIntegral.Section3.rvPatternCoordinateEquiv
+#check @DiamondIntegral.Section3.rvPatternCoordinateImage
+#print axioms DiamondIntegral.Section3.rvPatternCoordinateImage
+#check @DiamondIntegral.Section3.rvPatternFreeValueMap
+#print axioms DiamondIntegral.Section3.rvPatternFreeValueMap
+#check @DiamondIntegral.Section3.rvAmbientHom
+#print axioms DiamondIntegral.Section3.rvAmbientHom
+#check @DiamondIntegral.Section3.rvAmbientIso
+#print axioms DiamondIntegral.Section3.rvAmbientIso
+#check @DiamondIntegral.Section3.AmbientRVKPlus
+#print axioms DiamondIntegral.Section3.AmbientRVKPlus
+#check @DiamondIntegral.Section3.rvAmbientClass
+#print axioms DiamondIntegral.Section3.rvAmbientClass
+#check @DiamondIntegral.Section3.rvToAmbientKPlus
+#print axioms DiamondIntegral.Section3.rvToAmbientKPlus
+#check @DiamondIntegral.Section3.gammaGroundProductSwap
+#print axioms DiamondIntegral.Section3.gammaGroundProductSwap
+#check @DiamondIntegral.Section3.GammaGroundRVProductMonomialPatch
+#print axioms DiamondIntegral.Section3.GammaGroundRVProductMonomialPatch
+#check @DiamondIntegral.Section3.GammaGroundRVProductMonomialPatch.source
+#print axioms DiamondIntegral.Section3.GammaGroundRVProductMonomialPatch.source
+#check @DiamondIntegral.Section3.GammaGroundRVProductMonomialPatch.targetGamma
+#print axioms DiamondIntegral.Section3.GammaGroundRVProductMonomialPatch.targetGamma
+#check @DiamondIntegral.Section3.GammaGroundRVProductMonomialPatch.target
+#print axioms DiamondIntegral.Section3.GammaGroundRVProductMonomialPatch.target
+#check @DiamondIntegral.Section3.GammaGroundRVProductMonomialPatch.bijection
+#print axioms DiamondIntegral.Section3.GammaGroundRVProductMonomialPatch.bijection
+#check @DiamondIntegral.Section3.gammaGroundRVUnitAffineProductBijection
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnitAffineProductBijection
+#check @DiamondIntegral.Section3.RVObject.product
+#print axioms DiamondIntegral.Section3.RVObject.product
+#check @DiamondIntegral.Section3.rvProductBijection
+#print axioms DiamondIntegral.Section3.rvProductBijection
+#check @DiamondIntegral.Section3.rvProductLeft
+#print axioms DiamondIntegral.Section3.rvProductLeft
+#check @DiamondIntegral.Section3.rvProductRight
+#print axioms DiamondIntegral.Section3.rvProductRight
+#check @DiamondIntegral.Section3.RVObject.graphMap
+#print axioms DiamondIntegral.Section3.RVObject.graphMap
+#check @DiamondIntegral.Section3.RVObject.graphBijection
+#print axioms DiamondIntegral.Section3.RVObject.graphBijection
+#check @DiamondIntegral.Section3.RVObject.projectionObject
+#print axioms DiamondIntegral.Section3.RVObject.projectionObject
+#check @DiamondIntegral.Section3.RVObject.projectionIso
+#print axioms DiamondIntegral.Section3.RVObject.projectionIso
+#check @DiamondIntegral.Section3.rvNormalizedPoint
+#print axioms DiamondIntegral.Section3.rvNormalizedPoint
+#check @DiamondIntegral.Section3.rvNormalizedTuple
+#print axioms DiamondIntegral.Section3.rvNormalizedTuple
+#check @DiamondIntegral.Section3.RVResidueField
+#print axioms DiamondIntegral.Section3.RVResidueField
+#check @DiamondIntegral.Section3.residueUnitToRV
+#print axioms DiamondIntegral.Section3.residueUnitToRV
+#check @DiamondIntegral.Section3.RVObject.empty
+#print axioms DiamondIntegral.Section3.RVObject.empty
+#check @DiamondIntegral.Section3.RVObject.restrict
+#print axioms DiamondIntegral.Section3.RVObject.restrict
+#check @DiamondIntegral.Section3.RVObject.difference
+#print axioms DiamondIntegral.Section3.RVObject.difference
+#check @DiamondIntegral.Section3.RVScissor
+#print axioms DiamondIntegral.Section3.RVScissor
+#check @DiamondIntegral.Section3.rvPresentation
+#print axioms DiamondIntegral.Section3.rvPresentation
+#check @DiamondIntegral.Section3.RVKPlus
+#print axioms DiamondIntegral.Section3.RVKPlus
+#check @DiamondIntegral.Section3.RVKGroup
+#print axioms DiamondIntegral.Section3.RVKGroup
+#check @DiamondIntegral.Section3.rvClass
+#print axioms DiamondIntegral.Section3.rvClass
+#check @DiamondIntegral.Section3.RVObject.unit
+#print axioms DiamondIntegral.Section3.RVObject.unit
+#check @DiamondIntegral.Section3.GradedRVObject
+#print axioms DiamondIntegral.Section3.GradedRVObject
+#check @DiamondIntegral.Section3.gradedRVScissor
+#print axioms DiamondIntegral.Section3.gradedRVScissor
+#check @DiamondIntegral.Section3.rvSemiringPresentation
+#print axioms DiamondIntegral.Section3.rvSemiringPresentation
+#check @DiamondIntegral.Section3.RVPositiveSemiring
+#print axioms DiamondIntegral.Section3.RVPositiveSemiring
+#check @DiamondIntegral.Section3.RVGrothendieckRing
+#print axioms DiamondIntegral.Section3.RVGrothendieckRing
+#check @DiamondIntegral.Section3.rvSemiringClass
+#print axioms DiamondIntegral.Section3.rvSemiringClass
+#check @DiamondIntegral.Section3.rvKPlusToSemiring
+#print axioms DiamondIntegral.Section3.rvKPlusToSemiring
+#check @DiamondIntegral.Section3.rvSemiringUniversal
+#print axioms DiamondIntegral.Section3.rvSemiringUniversal
+#check @DiamondIntegral.Section3.unaryGammaTopMap
+#print axioms DiamondIntegral.Section3.unaryGammaTopMap
+#check @DiamondIntegral.Section3.unaryRVGammaPiece
+#print axioms DiamondIntegral.Section3.unaryRVGammaPiece
+#check @DiamondIntegral.Section3.unaryRVValue
+#print axioms DiamondIntegral.Section3.unaryRVValue
+#check @DiamondIntegral.Section3.unaryRVScalarSet
+#print axioms DiamondIntegral.Section3.unaryRVScalarSet
+#check @DiamondIntegral.Section3.unaryRVValueImage
+#print axioms DiamondIntegral.Section3.unaryRVValueImage
+#check @DiamondIntegral.Section3.unaryRVMixedValues
+#print axioms DiamondIntegral.Section3.unaryRVMixedValues
+#check @DiamondIntegral.Section3.unaryRVFullValues
+#print axioms DiamondIntegral.Section3.unaryRVFullValues
+#check @DiamondIntegral.Section3.unaryRVExceptionalValues
+#print axioms DiamondIntegral.Section3.unaryRVExceptionalValues
+#check @DiamondIntegral.Section3.unaryRVResiduePart
+#print axioms DiamondIntegral.Section3.unaryRVResiduePart
+#check @DiamondIntegral.Section3.unaryRVCompletePart
+#print axioms DiamondIntegral.Section3.unaryRVCompletePart
+#check @DiamondIntegral.Section3.gammaGroundRVUnitCoordinateTupleMap
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnitCoordinateTupleMap
+#check @DiamondIntegral.Section3.gammaGroundRVUnitSparseTupleMap
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnitSparseTupleMap
+#check @DiamondIntegral.Section3.GammaGroundRESAvailableValue
+#print axioms DiamondIntegral.Section3.GammaGroundRESAvailableValue
+#check @DiamondIntegral.Section3.gammaGroundSparseValueTuple
+#print axioms DiamondIntegral.Section3.gammaGroundSparseValueTuple
+#check @DiamondIntegral.Section3.rvUnitCoordinateDomain
+#print axioms DiamondIntegral.Section3.rvUnitCoordinateDomain
+#check @DiamondIntegral.Section3.gammaGroundRVUnitFullCodeBijection
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnitFullCodeBijection
+#check @DiamondIntegral.Section3.gammaGroundRVUnitGammaCodeMap
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnitGammaCodeMap
+#check @DiamondIntegral.Section3.gammaGroundRVUnitGammaCodeBijection
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnitGammaCodeBijection
+#check @DiamondIntegral.Section3.rvUnitGammaMap
+#print axioms DiamondIntegral.Section3.rvUnitGammaMap
+#check @DiamondIntegral.Section3.rvUnitMixedRelation
+#print axioms DiamondIntegral.Section3.rvUnitMixedRelation
+#check @DiamondIntegral.Section3.rvUnitToRVMap
+#print axioms DiamondIntegral.Section3.rvUnitToRVMap
+#check @DiamondIntegral.Section3.rvUnitPresentationBijection
+#print axioms DiamondIntegral.Section3.rvUnitPresentationBijection
+#check @DiamondIntegral.Section3.rvUnitProductTuple
+#print axioms DiamondIntegral.Section3.rvUnitProductTuple
+#check @DiamondIntegral.Section3.rvUnitProductTupleMap
+#print axioms DiamondIntegral.Section3.rvUnitProductTupleMap
+#check @DiamondIntegral.Section3.gammaGroundRVUnitProductTupleMap
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnitProductTupleMap
+#check @DiamondIntegral.Section3.gammaGroundRVUnitProductTupleBijection
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnitProductTupleBijection
+#check @DiamondIntegral.Section3.rvUnitSetOfRaw
+#print axioms DiamondIntegral.Section3.rvUnitSetOfRaw
+#check @DiamondIntegral.Section3.rvUnitGammaPreimage
+#print axioms DiamondIntegral.Section3.rvUnitGammaPreimage
+#check @DiamondIntegral.Section3.rvUnitRectangularMonomialCode
+#print axioms DiamondIntegral.Section3.rvUnitRectangularMonomialCode
+#check @DiamondIntegral.Section3.rvUnitRectangularMonomialMap
+#print axioms DiamondIntegral.Section3.rvUnitRectangularMonomialMap
+#check @DiamondIntegral.Section3.gammaGroundRVUnitRectangularMonomialMap
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnitRectangularMonomialMap
+#check @DiamondIntegral.Section3.rvUnitValues
+#print axioms DiamondIntegral.Section3.rvUnitValues
+#check @DiamondIntegral.Section3.rawRVUnitSpace
+#print axioms DiamondIntegral.Section3.rawRVUnitSpace
+#check @DiamondIntegral.Section3.rvUnitTupleMulMap
+#print axioms DiamondIntegral.Section3.rvUnitTupleMulMap
+#check @DiamondIntegral.Section3.gammaGroundRVUnitTupleMulMap
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnitTupleMulMap
+#check @DiamondIntegral.Section3.rvUnitTupleProductMap
+#print axioms DiamondIntegral.Section3.rvUnitTupleProductMap
+#check @DiamondIntegral.Section3.gammaGroundRVUnitTupleProductMap
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnitTupleProductMap
+#check @DiamondIntegral.Section3.gammaGroundRVUnitTupleProductBijection
+#print axioms DiamondIntegral.Section3.gammaGroundRVUnitTupleProductBijection
+#check @DiamondIntegral.Section3.rvUnitValueHom
+#print axioms DiamondIntegral.Section3.rvUnitValueHom
+#check @DiamondIntegral.Section3.literalValueMask
+#print axioms DiamondIntegral.Section3.literalValueMask
+#check @DiamondIntegral.Section3.rvMonomialRelabel
+#print axioms DiamondIntegral.Section3.rvMonomialRelabel
+#check @DiamondIntegral.Section3.rvPolynomialRelabel
+#print axioms DiamondIntegral.Section3.rvPolynomialRelabel
+#check @DiamondIntegral.Section3.rvLiteralRelabel
+#print axioms DiamondIntegral.Section3.rvLiteralRelabel
+#check @DiamondIntegral.Section3.RVObject.target
+#print axioms DiamondIntegral.Section3.RVObject.target
+#check @DiamondIntegral.Section3.RVVolumeForm
+#print axioms DiamondIntegral.Section3.RVVolumeForm
+#check @DiamondIntegral.Section3.MeasuredRVObject
+#print axioms DiamondIntegral.Section3.MeasuredRVObject
+#check @DiamondIntegral.Section3.MeasuredRVObject.combinedWeight
+#print axioms DiamondIntegral.Section3.MeasuredRVObject.combinedWeight
+#check @DiamondIntegral.Section3.MeasuredRVHom
+#print axioms DiamondIntegral.Section3.MeasuredRVHom
+#check @DiamondIntegral.Section3.MeasuredRVHom.id
+#print axioms DiamondIntegral.Section3.MeasuredRVHom.id
+#check @DiamondIntegral.Section3.MeasuredRVHom.comp
+#print axioms DiamondIntegral.Section3.MeasuredRVHom.comp
+#check @DiamondIntegral.Section3.MeasuredRVHom.symm
+#print axioms DiamondIntegral.Section3.MeasuredRVHom.symm
+#check @DiamondIntegral.Section3.measuredResProperty
+#print axioms DiamondIntegral.Section3.measuredResProperty
+#check @DiamondIntegral.Section3.MeasuredRESObject
+#print axioms DiamondIntegral.Section3.MeasuredRESObject
+#check @DiamondIntegral.Section3.rvZeroPattern
+#print axioms DiamondIntegral.Section3.rvZeroPattern
+#check @DiamondIntegral.Section3.rvSelectCoordinates
+#print axioms DiamondIntegral.Section3.rvSelectCoordinates
+#check @DiamondIntegral.Section3.rvPatternSource
+#print axioms DiamondIntegral.Section3.rvPatternSource
+#check @DiamondIntegral.Section3.rvPatternMap
+#print axioms DiamondIntegral.Section3.rvPatternMap
+#check @DiamondIntegral.Section3.rvNonzeroStratum
+#print axioms DiamondIntegral.Section3.rvNonzeroStratum
+#check @DiamondIntegral.Section3.rvStratifiedObject
+#print axioms DiamondIntegral.Section3.rvStratifiedObject
+#check @DiamondIntegral.Section3.rvPatternTags
+#print axioms DiamondIntegral.Section3.rvPatternTags
+#check @DiamondIntegral.Section3.rvPatternFamily
+#print axioms DiamondIntegral.Section3.rvPatternFamily
+#check @DiamondIntegral.Section3.rvPatternFold
+#print axioms DiamondIntegral.Section3.rvPatternFold
+#check @DiamondIntegral.Section3.rvPatternCarrierEquiv
+#print axioms DiamondIntegral.Section3.rvPatternCarrierEquiv
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayerMatchedFamily
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayerMatchedFamily
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayerMatchedFamily.union
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayerMatchedFamily.union
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayerMatchedFamily.residualObject
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayerMatchedFamily.residualObject
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayerMatchedFamily.TopResidualIndex
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayerMatchedFamily.TopResidualIndex
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayerMatchedFamily.ResidualIndex
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayerMatchedFamily.ResidualIndex
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayerMatchedFamily.remainderBox
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayerMatchedFamily.remainderBox
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayerMatchedFamily.residualChart
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayerMatchedFamily.residualChart
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayerMatchedFamily.ambientMap
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayerMatchedFamily.ambientMap
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayerMatchedFamily.residualMap
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayerMatchedFamily.residualMap
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover.sourceUnion
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover.sourceUnion
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover.targetUnion
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover.targetUnion
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover.residualBijection
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover.residualBijection
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover.Seed
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover.Seed
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover.seed
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover.seed
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover.seedTarget
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover.seedTarget
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover.seedMatch
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover.seedMatch
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover.gridMatching
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover.gridMatching
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover.Cell
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover.Cell
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover.MatchedIndex
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover.MatchedIndex
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover.sourceBox
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover.sourceBox
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover.targetParent
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover.targetParent
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover.targetBox
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover.targetBox
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover.data
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover.data
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover.sourceMap
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover.sourceMap
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover.targetMap
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover.targetMap
+#check @DiamondIntegral.Section3.rawTupleSpace
+#print axioms DiamondIntegral.Section3.rawTupleSpace
+#check @DiamondIntegral.Section3.diagonalWeightScaling
+#print axioms DiamondIntegral.Section3.diagonalWeightScaling
+#check @DiamondIntegral.Section3.DiagonalBirationalEquiv
+#print axioms DiamondIntegral.Section3.DiagonalBirationalEquiv
+#check @DiamondIntegral.Section3.DiagonalBirationalEquiv.refl
+#print axioms DiamondIntegral.Section3.DiagonalBirationalEquiv.refl
+#check @DiamondIntegral.Section3.DiagonalBirationalEquiv.symm
+#print axioms DiamondIntegral.Section3.DiagonalBirationalEquiv.symm
+#check @DiamondIntegral.Section3.DiagonalBirationalEquiv.trans
+#print axioms DiamondIntegral.Section3.DiagonalBirationalEquiv.trans
+#check @DiamondIntegral.Section3.ReichsteinYoussinInput
+#print axioms DiamondIntegral.Section3.ReichsteinYoussinInput
+#check @DiamondIntegral.Section3.adjoinRVUnitTuple
+#print axioms DiamondIntegral.Section3.adjoinRVUnitTuple
+#check @DiamondIntegral.Section3.goodGammaImage
+#print axioms DiamondIntegral.Section3.goodGammaImage
+#check @DiamondIntegral.Section3.gammaTupleColumnValues
+#print axioms DiamondIntegral.Section3.gammaTupleColumnValues
+#check @DiamondIntegral.Section3.gammaTupleFamilyValues
+#print axioms DiamondIntegral.Section3.gammaTupleFamilyValues
+#check @DiamondIntegral.Section3.residuePolynomialCharacters
+#print axioms DiamondIntegral.Section3.residuePolynomialCharacters
+#check @DiamondIntegral.Section3.ringPresentationQuotientEquiv
+#print axioms DiamondIntegral.Section3.ringPresentationQuotientEquiv
+#check @DiamondIntegral.Section3.ringPresentationDescend
+#print axioms DiamondIntegral.Section3.ringPresentationDescend
+#check @DiamondIntegral.Section3.regionCollapseCongruence
+#print axioms DiamondIntegral.Section3.regionCollapseCongruence
+#check @DiamondIntegral.Section3.torusSingle
+#print axioms DiamondIntegral.Section3.torusSingle
+#check @DiamondIntegral.Section3.GammaGroundTensorSourceGridMatching
+#print axioms DiamondIntegral.Section3.GammaGroundTensorSourceGridMatching
+#check @DiamondIntegral.Section3.gammaGroundTensorSourceGridMatching
+#print axioms DiamondIntegral.Section3.gammaGroundTensorSourceGridMatching
+#check @DiamondIntegral.Section3.GammaGroundTensorSourceGridMatching.Cell
+#print axioms DiamondIntegral.Section3.GammaGroundTensorSourceGridMatching.Cell
+#check @DiamondIntegral.Section3.GammaGroundTensorSourceGridMatching.sourceMap
+#print axioms DiamondIntegral.Section3.GammaGroundTensorSourceGridMatching.sourceMap
+#check @DiamondIntegral.Section3.GammaGroundTensorSourceGridMatching.targetMap
+#print axioms DiamondIntegral.Section3.GammaGroundTensorSourceGridMatching.targetMap
+#check @DiamondIntegral.Section3.gammaGroundTensorBooleanCell
+#print axioms DiamondIntegral.Section3.gammaGroundTensorBooleanCell
+#check @DiamondIntegral.Section3.GammaGroundTensorRemainderIndex
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRemainderIndex
+#check @DiamondIntegral.Section3.gammaGroundTensorRemainderBox
+#print axioms DiamondIntegral.Section3.gammaGroundTensorRemainderBox
+#check @DiamondIntegral.Section3.gammaGroundTensorNativeProductBijection
+#print axioms DiamondIntegral.Section3.gammaGroundTensorNativeProductBijection
+#check @DiamondIntegral.Section3.gammaGroundTensorCoefficientBijection
+#print axioms DiamondIntegral.Section3.gammaGroundTensorCoefficientBijection
+#check @DiamondIntegral.Section3.GammaGroundRESAvailableValueTuple
+#print axioms DiamondIntegral.Section3.GammaGroundRESAvailableValueTuple
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredCoefficientPair
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredCoefficientPair
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredCoefficientCongruence
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredCoefficientCongruence
+#check @DiamondIntegral.Section3.GammaGroundUnmeasuredCoefficientQuotient
+#print axioms DiamondIntegral.Section3.GammaGroundUnmeasuredCoefficientQuotient
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredCoefficientQuotientMap
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredCoefficientQuotientMap
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredTensorDegreeImage
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredTensorDegreeImage
+#check @DiamondIntegral.Section3.gammaGroundRVObjectAtDegree
+#print axioms DiamondIntegral.Section3.gammaGroundRVObjectAtDegree
+#check @DiamondIntegral.Section3.GammaGroundUnmeasuredTensorTerm.rvObjectAt
+#print axioms DiamondIntegral.Section3.GammaGroundUnmeasuredTensorTerm.rvObjectAt
+#check @DiamondIntegral.Section3.gammaGroundTensorListRVObject
+#print axioms DiamondIntegral.Section3.gammaGroundTensorListRVObject
+#check @DiamondIntegral.Section3.gammaGroundTensorTermsInDegree
+#print axioms DiamondIntegral.Section3.gammaGroundTensorTermsInDegree
+#check @DiamondIntegral.Section3.GammaGroundTensorBoxMatch.unsymm
+#print axioms DiamondIntegral.Section3.GammaGroundTensorBoxMatch.unsymm
+#check @DiamondIntegral.Section3.GammaGroundTensorLocalMatch.unsymm
+#print axioms DiamondIntegral.Section3.GammaGroundTensorLocalMatch.unsymm
+#check @DiamondIntegral.Section3.gammaGroundNativeProductDomain
+#print axioms DiamondIntegral.Section3.gammaGroundNativeProductDomain
+#check @DiamondIntegral.Section3.GammaGroundTensorBox
+#print axioms DiamondIntegral.Section3.GammaGroundTensorBox
+#check @DiamondIntegral.Section3.GammaGroundTensorBox.source
+#print axioms DiamondIntegral.Section3.GammaGroundTensorBox.source
+#check @DiamondIntegral.Section3.GammaGroundTensorBox.value
+#print axioms DiamondIntegral.Section3.GammaGroundTensorBox.value
+#check @DiamondIntegral.Section3.GammaGroundTensorBox.inclusion
+#print axioms DiamondIntegral.Section3.GammaGroundTensorBox.inclusion
+#check @DiamondIntegral.Section3.GammaGroundTensorBoxMatch
+#print axioms DiamondIntegral.Section3.GammaGroundTensorBoxMatch
+#check @DiamondIntegral.Section3.GammaGroundTensorBoxMatch.symm
+#print axioms DiamondIntegral.Section3.GammaGroundTensorBoxMatch.symm
+#check @DiamondIntegral.Section3.GammaGroundTensorLocalMatch
+#print axioms DiamondIntegral.Section3.GammaGroundTensorLocalMatch
+#check @DiamondIntegral.Section3.GammaGroundTensorLocalMatch.symm
+#print axioms DiamondIntegral.Section3.GammaGroundTensorLocalMatch.symm
+#check @DiamondIntegral.Section3.GammaGroundUnmeasuredTensorTerm
+#print axioms DiamondIntegral.Section3.GammaGroundUnmeasuredTensorTerm
+#check @DiamondIntegral.Section3.GammaGroundUnmeasuredTensorTerm.value
+#print axioms DiamondIntegral.Section3.GammaGroundUnmeasuredTensorTerm.value
+#check @DiamondIntegral.Section3.GammaGroundUnmeasuredTensorTerm.rvObject
+#print axioms DiamondIntegral.Section3.GammaGroundUnmeasuredTensorTerm.rvObject
+#check @DiamondIntegral.Section3.GammaGroundUnmeasuredTensorPiece
+#print axioms DiamondIntegral.Section3.GammaGroundUnmeasuredTensorPiece
+#check @DiamondIntegral.Section3.GammaGroundUnmeasuredTensorPiece.asTerm
+#print axioms DiamondIntegral.Section3.GammaGroundUnmeasuredTensorPiece.asTerm
+#check @DiamondIntegral.Section3.GammaGroundUnmeasuredTensorPiece.value
+#print axioms DiamondIntegral.Section3.GammaGroundUnmeasuredTensorPiece.value
+#check @DiamondIntegral.Section3.GammaGroundUnmeasuredTensorTerm.pieces
+#print axioms DiamondIntegral.Section3.GammaGroundUnmeasuredTensorTerm.pieces
+#check @DiamondIntegral.Section3.proposition_3_18_unmeasured
+#print axioms DiamondIntegral.Section3.proposition_3_18_unmeasured
+#check @DiamondIntegral.Section3.proposition_3_18_measured
+#print axioms DiamondIntegral.Section3.proposition_3_18_measured
+#check @DiamondIntegral.Section3.proposition_3_18_unmeasured_graded
+#print axioms DiamondIntegral.Section3.proposition_3_18_unmeasured_graded
+#check @DiamondIntegral.Section3.proposition_3_18_measured_graded
+#print axioms DiamondIntegral.Section3.proposition_3_18_measured_graded
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayer.object
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayer.object
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayer.topIndex
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayer.topIndex
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayer.lowerIndex
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayer.lowerIndex
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayer.topMap
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayer.topMap
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayer.lowerMap
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayer.lowerMap
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayerMatchEntry
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayerMatchEntry
+#check @DiamondIntegral.Section3.GammaGroundNativeTensorChart.asPiece
+#print axioms DiamondIntegral.Section3.GammaGroundNativeTensorChart.asPiece
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayer
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayer
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayer.value
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayer.value
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayer.topChart
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayer.topChart
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayer.charts
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayer.charts
+#check @DiamondIntegral.Section3.positiveSigmaFinsetFibre
+#print axioms DiamondIntegral.Section3.positiveSigmaFinsetFibre
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover
+#check @DiamondIntegral.Section3.GammaGroundTensorRectangle
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRectangle
+#check @DiamondIntegral.Section3.GammaGroundTensorRectangle.residueObject
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRectangle.residueObject
+#check @DiamondIntegral.Section3.GammaGroundTensorRectangle.value
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRectangle.value
+#check @DiamondIntegral.Section3.GammaGroundTensorRectangle.source
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRectangle.source
+#check @DiamondIntegral.Section3.GammaGroundTensorRectangle.inside
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRectangle.inside
+#check @DiamondIntegral.Section3.GammaGroundTensorRectangle.outsideGamma
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRectangle.outsideGamma
+#check @DiamondIntegral.Section3.GammaGroundTensorRectangle.outsideResidue
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRectangle.outsideResidue
+#check @DiamondIntegral.Section3.GammaGroundTensorRectangle.split
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRectangle.split
+#check @DiamondIntegral.Section3.GammaGroundTensorRectangle.refine
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRectangle.refine
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredGroupTensorDescend
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredGroupTensorDescend
+#check @DiamondIntegral.Section3.proposition_3_18_unmeasured_ring
+#print axioms DiamondIntegral.Section3.proposition_3_18_unmeasured_ring
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGroupTensorDescend
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGroupTensorDescend
+#check @DiamondIntegral.Section3.proposition_3_18_measured_ring
+#print axioms DiamondIntegral.Section3.proposition_3_18_measured_ring
+#check @DiamondIntegral.Section3.GammaGroundUnmeasuredGroupTensor
+#print axioms DiamondIntegral.Section3.GammaGroundUnmeasuredGroupTensor
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredTensorCompletionEquiv
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredTensorCompletionEquiv
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredTensorRelationIdeal
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredTensorRelationIdeal
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredGroupTensorQuotientEquiv
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredGroupTensorQuotientEquiv
+#check @DiamondIntegral.Section3.GammaGroundMeasuredGroupTensor
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredGroupTensor
+#check @DiamondIntegral.Section3.gammaGroundMeasuredTensorCompletionEquiv
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredTensorCompletionEquiv
+#check @DiamondIntegral.Section3.gammaGroundMeasuredTensorRelationIdeal
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredTensorRelationIdeal
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGroupTensorQuotientEquiv
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGroupTensorQuotientEquiv
+#check @DiamondIntegral.Section3.universalTupleRVMap
+#print axioms DiamondIntegral.Section3.universalTupleRVMap
+#check @DiamondIntegral.Section3.universalLiftGraphMap
+#print axioms DiamondIntegral.Section3.universalLiftGraphMap
+#check @DiamondIntegral.Section3.UnmeasuredPositiveTensor
+#print axioms DiamondIntegral.Section3.UnmeasuredPositiveTensor
+#check @DiamondIntegral.Section3.unmeasuredTensorMap
+#print axioms DiamondIntegral.Section3.unmeasuredTensorMap
+#check @DiamondIntegral.Section3.unmeasuredGroupTensorMap
+#print axioms DiamondIntegral.Section3.unmeasuredGroupTensorMap
+#check @DiamondIntegral.Section3.gammaGroundTensorPiecesInDegree
+#print axioms DiamondIntegral.Section3.gammaGroundTensorPiecesInDegree
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredCoefficientQuotientEquiv
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredCoefficientQuotientEquiv
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredCoefficientQuotientEquivDirectSum
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredCoefficientQuotientEquivDirectSum
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredCoefficientQuotientDegreeInclusion
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredCoefficientQuotientDegreeInclusion
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover.sourceFamily
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover.sourceFamily
+#check @DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover.targetFamily
+#print axioms DiamondIntegral.Section3.GammaGroundTensorRankLayerTwoSidedCover.targetFamily
+#check @DiamondIntegral.Section3.VFObject
+#print axioms DiamondIntegral.Section3.VFObject
+#check @DiamondIntegral.Section3.VFObject.raise
+#print axioms DiamondIntegral.Section3.VFObject.raise
+#check @DiamondIntegral.Section3.vfObjectOfFiniteFibres
+#print axioms DiamondIntegral.Section3.vfObjectOfFiniteFibres
+#check @DiamondIntegral.Section3.VFObject.restrict
+#print axioms DiamondIntegral.Section3.VFObject.restrict
+#check @DiamondIntegral.Section3.VFObject.empty
+#print axioms DiamondIntegral.Section3.VFObject.empty
+#check @DiamondIntegral.Section3.VFObject.toCompanionFinite
+#print axioms DiamondIntegral.Section3.VFObject.toCompanionFinite
+#check @DiamondIntegral.Section3.VFObject.coprod
+#print axioms DiamondIntegral.Section3.VFObject.coprod
+#check @DiamondIntegral.Section3.vfRaiseKPlus
+#print axioms DiamondIntegral.Section3.vfRaiseKPlus
+#check @DiamondIntegral.Section3.MixedFiniteFibres
+#print axioms DiamondIntegral.Section3.MixedFiniteFibres
+#check @DiamondIntegral.Section3.vfFiniteDomainClass
+#print axioms DiamondIntegral.Section3.vfFiniteDomainClass
+#check @DiamondIntegral.Section3.vfGroupDiagram
+#print axioms DiamondIntegral.Section3.vfGroupDiagram
+#check @DiamondIntegral.Section3.vfGroupCocone
+#print axioms DiamondIntegral.Section3.vfGroupCocone
+#check @DiamondIntegral.Section3.vfGroupIsColimit
+#print axioms DiamondIntegral.Section3.vfGroupIsColimit
+#check @DiamondIntegral.Section3.CompatibleVFPositiveMaps
+#print axioms DiamondIntegral.Section3.CompatibleVFPositiveMaps
+#check @DiamondIntegral.Section3.vfColimitInvariant
+#print axioms DiamondIntegral.Section3.vfColimitInvariant
+#check @DiamondIntegral.Section3.vfColimitLift
+#print axioms DiamondIntegral.Section3.vfColimitLift
+#check @DiamondIntegral.Section3.vfPositiveColimitUniversal
+#print axioms DiamondIntegral.Section3.vfPositiveColimitUniversal
+#check @DiamondIntegral.Section3.vfPositiveDiagram
+#print axioms DiamondIntegral.Section3.vfPositiveDiagram
+#check @DiamondIntegral.Section3.vfPositiveCocone
+#print axioms DiamondIntegral.Section3.vfPositiveCocone
+#check @DiamondIntegral.Section3.vfCompatibleOfCocone
+#print axioms DiamondIntegral.Section3.vfCompatibleOfCocone
+#check @DiamondIntegral.Section3.vfPositiveIsColimit
+#print axioms DiamondIntegral.Section3.vfPositiveIsColimit
+#check @DiamondIntegral.Section3.vfCompanionFiniteIso
+#print axioms DiamondIntegral.Section3.vfCompanionFiniteIso
+#check @DiamondIntegral.Section3.vfBijectionOfFiniteIso
+#print axioms DiamondIntegral.Section3.vfBijectionOfFiniteIso
+#check @DiamondIntegral.Section3.vfToFiniteKPlus
+#print axioms DiamondIntegral.Section3.vfToFiniteKPlus
+#check @DiamondIntegral.Section3.VFObject.toCompanionAll
+#print axioms DiamondIntegral.Section3.VFObject.toCompanionAll
+#check @DiamondIntegral.Section3.VFObject.unit
+#print axioms DiamondIntegral.Section3.VFObject.unit
+#check @DiamondIntegral.Section3.VFObject.product
+#print axioms DiamondIntegral.Section3.VFObject.product
+#check @DiamondIntegral.Section3.vfProductBijection
+#print axioms DiamondIntegral.Section3.vfProductBijection
+#check @DiamondIntegral.Section3.VFObject.difference
+#print axioms DiamondIntegral.Section3.VFObject.difference
+#check @DiamondIntegral.Section3.VFScissor
+#print axioms DiamondIntegral.Section3.VFScissor
+#check @DiamondIntegral.Section3.vfPresentation
+#print axioms DiamondIntegral.Section3.vfPresentation
+#check @DiamondIntegral.Section3.VFKPlus
+#print axioms DiamondIntegral.Section3.VFKPlus
+#check @DiamondIntegral.Section3.VFKGroup
+#print axioms DiamondIntegral.Section3.VFKGroup
+#check @DiamondIntegral.Section3.vfClass
+#print axioms DiamondIntegral.Section3.vfClass
+#check @DiamondIntegral.Section3.FilteredVFObject
+#print axioms DiamondIntegral.Section3.FilteredVFObject
+#check @DiamondIntegral.Section3.filteredVFScissor
+#print axioms DiamondIntegral.Section3.filteredVFScissor
+#check @DiamondIntegral.Section3.vfSemiringPresentation
+#print axioms DiamondIntegral.Section3.vfSemiringPresentation
+#check @DiamondIntegral.Section3.VFPositiveSemiring
+#print axioms DiamondIntegral.Section3.VFPositiveSemiring
+#check @DiamondIntegral.Section3.VFGrothendieckRing
+#print axioms DiamondIntegral.Section3.VFGrothendieckRing
+#check @DiamondIntegral.Section3.vfSemiringClass
+#print axioms DiamondIntegral.Section3.vfSemiringClass
+#check @DiamondIntegral.Section3.vfKPlusToSemiring
+#print axioms DiamondIntegral.Section3.vfKPlusToSemiring
+#check @DiamondIntegral.Section3.vfSemiringUniversal
+#print axioms DiamondIntegral.Section3.vfSemiringUniversal
+#check @DiamondIntegral.Section3.vfObjectOfCompanionFinite
+#print axioms DiamondIntegral.Section3.vfObjectOfCompanionFinite
+#check @DiamondIntegral.Section3.vfSemiringToFiniteInvariant
+#print axioms DiamondIntegral.Section3.vfSemiringToFiniteInvariant
+#check @DiamondIntegral.Section3.vfSemiringToFinite
+#print axioms DiamondIntegral.Section3.vfSemiringToFinite
+#check @DiamondIntegral.Section3.vfFiniteToSemiringInvariant
+#print axioms DiamondIntegral.Section3.vfFiniteToSemiringInvariant
+#check @DiamondIntegral.Section3.vfFiniteToSemiringAdd
+#print axioms DiamondIntegral.Section3.vfFiniteToSemiringAdd
+#check @DiamondIntegral.Section3.vfFiniteToSemiring
+#print axioms DiamondIntegral.Section3.vfFiniteToSemiring
+#check @DiamondIntegral.Section3.vfSemiringEquivFinite
+#print axioms DiamondIntegral.Section3.vfSemiringEquivFinite
+#check @DiamondIntegral.Section3.RVCharacterPair
+#print axioms DiamondIntegral.Section3.RVCharacterPair
+#check @DiamondIntegral.Section3.valueCharacterTwistHom
+#print axioms DiamondIntegral.Section3.valueCharacterTwistHom
+#check @DiamondIntegral.Section3.valueCharacterTwistEquiv
+#print axioms DiamondIntegral.Section3.valueCharacterTwistEquiv
+#check @DiamondIntegral.Section3.rvOriginalGroundCharacterTwist
+#print axioms DiamondIntegral.Section3.rvOriginalGroundCharacterTwist
+#check @DiamondIntegral.Section3.rvCharacterResidueScalar
+#print axioms DiamondIntegral.Section3.rvCharacterResidueScalar
+#check @DiamondIntegral.Section3.unitsEquivExtendZero
+#print axioms DiamondIntegral.Section3.unitsEquivExtendZero
+#check @DiamondIntegral.Section3.rvOriginalGroundCharacterTwistZero
+#print axioms DiamondIntegral.Section3.rvOriginalGroundCharacterTwistZero
+#check @DiamondIntegral.Section3.mixedFibreValues
+#print axioms DiamondIntegral.Section3.mixedFibreValues
+#check @DiamondIntegral.Section3.fullFibreValues
+#print axioms DiamondIntegral.Section3.fullFibreValues
+#check @DiamondIntegral.Section3.PositiveMeasuredVF.positiveMeasuredVFGroupoid
+#print axioms DiamondIntegral.Section3.PositiveMeasuredVF.positiveMeasuredVFGroupoid
+#check @DiamondIntegral.Section3.additiveCompletionFunctorLeftAdjoint
+#print axioms DiamondIntegral.Section3.additiveCompletionFunctorLeftAdjoint
+#check @DiamondIntegral.Section3.coproductIsoClassesAdd
+#print axioms DiamondIntegral.Section3.coproductIsoClassesAdd
+#check @DiamondIntegral.Section3.coproductIsoClassesAddCommMonoid
+#print axioms DiamondIntegral.Section3.coproductIsoClassesAddCommMonoid
+#check @DiamondIntegral.Section3.coproductIsoClassesZero
+#print axioms DiamondIntegral.Section3.coproductIsoClassesZero
+#check @DiamondIntegral.Section3.finiteGammaDirectSumCommMonoid
+#print axioms DiamondIntegral.Section3.finiteGammaDirectSumCommMonoid
+#check @DiamondIntegral.Section3.finiteGammaDirectSumCommSemiring
+#print axioms DiamondIntegral.Section3.finiteGammaDirectSumCommSemiring
+#check @DiamondIntegral.Section3.finiteGammaGammaAlgebra
+#print axioms DiamondIntegral.Section3.finiteGammaGammaAlgebra
+#check @DiamondIntegral.Section3.finiteGammaKPlusDistributivity
+#print axioms DiamondIntegral.Section3.finiteGammaKPlusDistributivity
+#check @DiamondIntegral.Section3.finiteGammaKPlusGMul
+#print axioms DiamondIntegral.Section3.finiteGammaKPlusGMul
+#check @DiamondIntegral.Section3.finiteGammaKPlusGOne
+#print axioms DiamondIntegral.Section3.finiteGammaKPlusGOne
+#check @DiamondIntegral.Section3.finiteGammaRESAlgebra
+#print axioms DiamondIntegral.Section3.finiteGammaRESAlgebra
+#check @DiamondIntegral.Section3.gammaCodeMapCategory
+#print axioms DiamondIntegral.Section3.gammaCodeMapCategory
+#check @DiamondIntegral.Section3.gammaGroundDefSetCoeSort
+#print axioms DiamondIntegral.Section3.gammaGroundDefSetCoeSort
+#check @DiamondIntegral.Section3.gammaGroundFiniteGammaDirectSumCommMonoid
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGammaDirectSumCommMonoid
+#check @DiamondIntegral.Section3.gammaGroundFiniteGammaDirectSumCommSemiring
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGammaDirectSumCommSemiring
+#check @DiamondIntegral.Section3.gammaGroundFiniteGammaGammaAlgebra
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGammaGammaAlgebra
+#check @DiamondIntegral.Section3.gammaGroundFiniteGammaKPlusDistributivity
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGammaKPlusDistributivity
+#check @DiamondIntegral.Section3.gammaGroundFiniteGammaKPlusGMul
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGammaKPlusGMul
+#check @DiamondIntegral.Section3.gammaGroundFiniteGammaKPlusGOne
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGammaKPlusGOne
+#check @DiamondIntegral.Section3.gammaGroundFiniteGammaRESAlgebra
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteGammaRESAlgebra
+#check @DiamondIntegral.Section3.gammaGroundFiniteVFObjectGroupoid
+#print axioms DiamondIntegral.Section3.gammaGroundFiniteVFObjectGroupoid
+#check @DiamondIntegral.Section3.gammaGroundGammaCodeMapCategory
+#print axioms DiamondIntegral.Section3.gammaGroundGammaCodeMapCategory
+#check @DiamondIntegral.Section3.gammaGroundGammaKPlusGCommMonoid
+#print axioms DiamondIntegral.Section3.gammaGroundGammaKPlusGCommMonoid
+#check @DiamondIntegral.Section3.gammaGroundGammaKPlusGCommSemiring
+#print axioms DiamondIntegral.Section3.gammaGroundGammaKPlusGCommSemiring
+#check @DiamondIntegral.Section3.gammaGroundGammaKPlusGMul
+#print axioms DiamondIntegral.Section3.gammaGroundGammaKPlusGMul
+#check @DiamondIntegral.Section3.gammaGroundGammaKPlusGNonUnitalNonAssocSemiring
+#print axioms DiamondIntegral.Section3.gammaGroundGammaKPlusGNonUnitalNonAssocSemiring
+#check @DiamondIntegral.Section3.gammaGroundGammaKPlusGOne
+#print axioms DiamondIntegral.Section3.gammaGroundGammaKPlusGOne
+#check @DiamondIntegral.Section3.gammaGroundGammaKPlusGSemiring
+#print axioms DiamondIntegral.Section3.gammaGroundGammaKPlusGSemiring
+#check @DiamondIntegral.Section3.gammaGroundGammaObjectGroupoid
+#print axioms DiamondIntegral.Section3.gammaGroundGammaObjectGroupoid
+#check @DiamondIntegral.Section3.gammaGroundMapCoeFun
+#print axioms DiamondIntegral.Section3.gammaGroundMapCoeFun
+#check @DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaDirectSumCommMonoid
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaDirectSumCommMonoid
+#check @DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaDirectSumCommSemiring
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaDirectSumCommSemiring
+#check @DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaGammaAlgebra
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaGammaAlgebra
+#check @DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaKPlusDistributivity
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaKPlusDistributivity
+#check @DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaKPlusGMul
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaKPlusGMul
+#check @DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaKPlusGOne
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaKPlusGOne
+#check @DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaRESAlgebra
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredFiniteGammaRESAlgebra
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaGroupoid
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaGroupoid
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaKPlusGCommMonoid
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaKPlusGCommMonoid
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaKPlusGCommSemiring
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaKPlusGCommSemiring
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaKPlusGMul
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaKPlusGMul
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaKPlusGNonUnitalNonAssocSemiring
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaKPlusGNonUnitalNonAssocSemiring
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaKPlusGOne
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaKPlusGOne
+#check @DiamondIntegral.Section3.gammaGroundMeasuredGammaKPlusGSemiring
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGammaKPlusGSemiring
+#check @DiamondIntegral.Section3.gammaGroundMeasuredPositiveFiniteGammaSemiring
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredPositiveFiniteGammaSemiring
+#check @DiamondIntegral.Section3.gammaGroundMeasuredPositiveGammaSemiring
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredPositiveGammaSemiring
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRESDirectSumCommMonoid
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRESDirectSumCommMonoid
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRESDirectSumCommSemiring
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRESDirectSumCommSemiring
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRESKPlusDistributivity
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRESKPlusDistributivity
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRESKPlusGMul
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRESKPlusGMul
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRESKPlusGOne
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRESKPlusGOne
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVGradingCoefficientSemiring
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVGradingCoefficientSemiring
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVGroupoid
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVGroupoid
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVKPlusGCommMonoid
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVKPlusGCommMonoid
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVKPlusGCommSemiring
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVKPlusGCommSemiring
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVKPlusGMul
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVKPlusGMul
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVKPlusGNonUnitalNonAssocSemiring
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVKPlusGNonUnitalNonAssocSemiring
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVKPlusGOne
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVKPlusGOne
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVKPlusGSemiring
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVKPlusGSemiring
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVMapCategory
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVMapCategory
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVMapHasBinaryCoproducts
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVMapHasBinaryCoproducts
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVMapHasColimitPair
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVMapHasColimitPair
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVMapHasInitial
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVMapHasInitial
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVMapMonoidal
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVMapMonoidal
+#check @DiamondIntegral.Section3.gammaGroundMeasuredRVMapSymmetric
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredRVMapSymmetric
+#check @DiamondIntegral.Section3.gammaGroundMeasuredTensorFiniteGammaRing
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredTensorFiniteGammaRing
+#check @DiamondIntegral.Section3.gammaGroundMeasuredTensorGammaRing
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredTensorGammaRing
+#check @DiamondIntegral.Section3.gammaGroundMeasuredTensorRVRing
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredTensorRVRing
+#check @DiamondIntegral.Section3.gammaGroundMeasuredTensorRing
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredTensorRing
+#check @DiamondIntegral.Section3.gammaGroundRESDirectSumCommMonoid
+#print axioms DiamondIntegral.Section3.gammaGroundRESDirectSumCommMonoid
+#check @DiamondIntegral.Section3.gammaGroundRESDirectSumCommSemiring
+#print axioms DiamondIntegral.Section3.gammaGroundRESDirectSumCommSemiring
+#check @DiamondIntegral.Section3.gammaGroundRESKPlusDistributivity
+#print axioms DiamondIntegral.Section3.gammaGroundRESKPlusDistributivity
+#check @DiamondIntegral.Section3.gammaGroundRESKPlusGMul
+#print axioms DiamondIntegral.Section3.gammaGroundRESKPlusGMul
+#check @DiamondIntegral.Section3.gammaGroundRESKPlusGOne
+#print axioms DiamondIntegral.Section3.gammaGroundRESKPlusGOne
+#check @DiamondIntegral.Section3.gammaGroundRVKPlusGCommMonoid
+#print axioms DiamondIntegral.Section3.gammaGroundRVKPlusGCommMonoid
+#check @DiamondIntegral.Section3.gammaGroundRVKPlusGCommSemiring
+#print axioms DiamondIntegral.Section3.gammaGroundRVKPlusGCommSemiring
+#check @DiamondIntegral.Section3.gammaGroundRVKPlusGMul
+#print axioms DiamondIntegral.Section3.gammaGroundRVKPlusGMul
+#check @DiamondIntegral.Section3.gammaGroundRVKPlusGNonUnitalNonAssocSemiring
+#print axioms DiamondIntegral.Section3.gammaGroundRVKPlusGNonUnitalNonAssocSemiring
+#check @DiamondIntegral.Section3.gammaGroundRVKPlusGOne
+#print axioms DiamondIntegral.Section3.gammaGroundRVKPlusGOne
+#check @DiamondIntegral.Section3.gammaGroundRVKPlusGSemiring
+#print axioms DiamondIntegral.Section3.gammaGroundRVKPlusGSemiring
+#check @DiamondIntegral.Section3.gammaGroundRVMapCategory
+#print axioms DiamondIntegral.Section3.gammaGroundRVMapCategory
+#check @DiamondIntegral.Section3.gammaGroundRVMapHasBinaryCoproducts
+#print axioms DiamondIntegral.Section3.gammaGroundRVMapHasBinaryCoproducts
+#check @DiamondIntegral.Section3.gammaGroundRVMapHasColimitPair
+#print axioms DiamondIntegral.Section3.gammaGroundRVMapHasColimitPair
+#check @DiamondIntegral.Section3.gammaGroundRVMapHasInitial
+#print axioms DiamondIntegral.Section3.gammaGroundRVMapHasInitial
+#check @DiamondIntegral.Section3.gammaGroundRVMapHomCoeFun
+#print axioms DiamondIntegral.Section3.gammaGroundRVMapHomCoeFun
+#check @DiamondIntegral.Section3.gammaGroundRVMapMonoidal
+#print axioms DiamondIntegral.Section3.gammaGroundRVMapMonoidal
+#check @DiamondIntegral.Section3.gammaGroundRVMapSymmetric
+#print axioms DiamondIntegral.Section3.gammaGroundRVMapSymmetric
+#check @DiamondIntegral.Section3.gammaGroundRVObjectGroupoid
+#print axioms DiamondIntegral.Section3.gammaGroundRVObjectGroupoid
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredPositiveFiniteGammaSemiring
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredPositiveFiniteGammaSemiring
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredPositiveGammaSemiring
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredPositiveGammaSemiring
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredTensorFiniteGammaRing
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredTensorFiniteGammaRing
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredTensorGammaRing
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredTensorGammaRing
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredTensorRVRing
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredTensorRVRing
+#check @DiamondIntegral.Section3.gammaGroundUnmeasuredTensorRing
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredTensorRing
+#check @DiamondIntegral.Section3.gammaGroundVFObjectGroupoid
+#print axioms DiamondIntegral.Section3.gammaGroundVFObjectGroupoid
+#check @DiamondIntegral.Section3.gammaGroundZeroMeasuredRVToVF_faithful
+#print axioms DiamondIntegral.Section3.gammaGroundZeroMeasuredRVToVF_faithful
+#check @DiamondIntegral.Section3.gammaGroundZeroMeasuredRVToVF_full
+#print axioms DiamondIntegral.Section3.gammaGroundZeroMeasuredRVToVF_full
+#check @DiamondIntegral.Section3.gammaGroundZeroMeasuredVFGroupoid
+#print axioms DiamondIntegral.Section3.gammaGroundZeroMeasuredVFGroupoid
+#check @DiamondIntegral.Section3.gammaGroundZeroRVToVF_faithful
+#print axioms DiamondIntegral.Section3.gammaGroundZeroRVToVF_faithful
+#check @DiamondIntegral.Section3.gammaGroundZeroRVToVF_full
+#print axioms DiamondIntegral.Section3.gammaGroundZeroRVToVF_full
+#check @DiamondIntegral.Section3.gammaKPlusGCommMonoid
+#print axioms DiamondIntegral.Section3.gammaKPlusGCommMonoid
+#check @DiamondIntegral.Section3.gammaKPlusGCommSemiring
+#print axioms DiamondIntegral.Section3.gammaKPlusGCommSemiring
+#check @DiamondIntegral.Section3.gammaKPlusGMul
+#print axioms DiamondIntegral.Section3.gammaKPlusGMul
+#check @DiamondIntegral.Section3.gammaKPlusGNonUnitalNonAssocSemiring
+#print axioms DiamondIntegral.Section3.gammaKPlusGNonUnitalNonAssocSemiring
+#check @DiamondIntegral.Section3.gammaKPlusGOne
+#print axioms DiamondIntegral.Section3.gammaKPlusGOne
+#check @DiamondIntegral.Section3.gammaKPlusGSemiring
+#print axioms DiamondIntegral.Section3.gammaKPlusGSemiring
+#check @DiamondIntegral.Section3.gammaObjectGroupoid
+#print axioms DiamondIntegral.Section3.gammaObjectGroupoid
+#check @DiamondIntegral.Section3.instGroupoidMeasuredRVObject
+#print axioms DiamondIntegral.Section3.instGroupoidMeasuredRVObject
+#check @DiamondIntegral.Section3.instGroupoidRVObject
+#print axioms DiamondIntegral.Section3.instGroupoidRVObject
+#check @DiamondIntegral.Section3.instGroupoidVFObject
+#print axioms DiamondIntegral.Section3.instGroupoidVFObject
+#check @DiamondIntegral.Section3.instGroupoidZeroMeasuredVF
+#print axioms DiamondIntegral.Section3.instGroupoidZeroMeasuredVF
+#check @DiamondIntegral.Section3.literalValuePattern_finite
+#print axioms DiamondIntegral.Section3.literalValuePattern_finite
+#check @DiamondIntegral.Section3.measuredFiniteGammaDirectSumCommMonoid
+#print axioms DiamondIntegral.Section3.measuredFiniteGammaDirectSumCommMonoid
+#check @DiamondIntegral.Section3.measuredFiniteGammaDirectSumCommSemiring
+#print axioms DiamondIntegral.Section3.measuredFiniteGammaDirectSumCommSemiring
+#check @DiamondIntegral.Section3.measuredFiniteGammaGammaAlgebra
+#print axioms DiamondIntegral.Section3.measuredFiniteGammaGammaAlgebra
+#check @DiamondIntegral.Section3.measuredFiniteGammaKPlusDistributivity
+#print axioms DiamondIntegral.Section3.measuredFiniteGammaKPlusDistributivity
+#check @DiamondIntegral.Section3.measuredFiniteGammaKPlusGMul
+#print axioms DiamondIntegral.Section3.measuredFiniteGammaKPlusGMul
+#check @DiamondIntegral.Section3.measuredFiniteGammaKPlusGOne
+#print axioms DiamondIntegral.Section3.measuredFiniteGammaKPlusGOne
+#check @DiamondIntegral.Section3.measuredFiniteGammaRESAlgebra
+#print axioms DiamondIntegral.Section3.measuredFiniteGammaRESAlgebra
+#check @DiamondIntegral.Section3.measuredGammaGroupoid
+#print axioms DiamondIntegral.Section3.measuredGammaGroupoid
+#check @DiamondIntegral.Section3.measuredGammaKPlusGCommMonoid
+#print axioms DiamondIntegral.Section3.measuredGammaKPlusGCommMonoid
+#check @DiamondIntegral.Section3.measuredGammaKPlusGCommSemiring
+#print axioms DiamondIntegral.Section3.measuredGammaKPlusGCommSemiring
+#check @DiamondIntegral.Section3.measuredGammaKPlusGMul
+#print axioms DiamondIntegral.Section3.measuredGammaKPlusGMul
+#check @DiamondIntegral.Section3.measuredGammaKPlusGNonUnitalNonAssocSemiring
+#print axioms DiamondIntegral.Section3.measuredGammaKPlusGNonUnitalNonAssocSemiring
+#check @DiamondIntegral.Section3.measuredGammaKPlusGOne
+#print axioms DiamondIntegral.Section3.measuredGammaKPlusGOne
+#check @DiamondIntegral.Section3.measuredGammaKPlusGSemiring
+#print axioms DiamondIntegral.Section3.measuredGammaKPlusGSemiring
+#check @DiamondIntegral.Section3.measuredRVGradingCoefficientSemiring
+#print axioms DiamondIntegral.Section3.measuredRVGradingCoefficientSemiring
+#check @DiamondIntegral.Section3.measuredRVKPlusGCommMonoid
+#print axioms DiamondIntegral.Section3.measuredRVKPlusGCommMonoid
+#check @DiamondIntegral.Section3.measuredRVKPlusGCommSemiring
+#print axioms DiamondIntegral.Section3.measuredRVKPlusGCommSemiring
+#check @DiamondIntegral.Section3.measuredRVKPlusGMul
+#print axioms DiamondIntegral.Section3.measuredRVKPlusGMul
+#check @DiamondIntegral.Section3.measuredRVKPlusGNonUnitalNonAssocSemiring
+#print axioms DiamondIntegral.Section3.measuredRVKPlusGNonUnitalNonAssocSemiring
+#check @DiamondIntegral.Section3.measuredRVKPlusGOne
+#print axioms DiamondIntegral.Section3.measuredRVKPlusGOne
+#check @DiamondIntegral.Section3.measuredRVKPlusGSemiring
+#print axioms DiamondIntegral.Section3.measuredRVKPlusGSemiring
+#check @DiamondIntegral.Section3.measuredRVMapCategory
+#print axioms DiamondIntegral.Section3.measuredRVMapCategory
+#check @DiamondIntegral.Section3.measuredRVMapHasBinaryCoproducts
+#print axioms DiamondIntegral.Section3.measuredRVMapHasBinaryCoproducts
+#check @DiamondIntegral.Section3.measuredRVMapHasColimitPair
+#print axioms DiamondIntegral.Section3.measuredRVMapHasColimitPair
+#check @DiamondIntegral.Section3.measuredRVMapHasInitial
+#print axioms DiamondIntegral.Section3.measuredRVMapHasInitial
+#check @DiamondIntegral.Section3.measuredRVMapMonoidal
+#print axioms DiamondIntegral.Section3.measuredRVMapMonoidal
+#check @DiamondIntegral.Section3.measuredRVMapSymmetric
+#print axioms DiamondIntegral.Section3.measuredRVMapSymmetric
+#check @DiamondIntegral.Section3.measuredResDirectSumCommMonoid
+#print axioms DiamondIntegral.Section3.measuredResDirectSumCommMonoid
+#check @DiamondIntegral.Section3.measuredResDirectSumCommSemiring
+#print axioms DiamondIntegral.Section3.measuredResDirectSumCommSemiring
+#check @DiamondIntegral.Section3.measuredResKPlusDistributivity
+#print axioms DiamondIntegral.Section3.measuredResKPlusDistributivity
+#check @DiamondIntegral.Section3.measuredResKPlusGMul
+#print axioms DiamondIntegral.Section3.measuredResKPlusGMul
+#check @DiamondIntegral.Section3.measuredResKPlusGOne
+#print axioms DiamondIntegral.Section3.measuredResKPlusGOne
+#check @DiamondIntegral.Section3.measuredVFObjectGroupoid
+#print axioms DiamondIntegral.Section3.measuredVFObjectGroupoid
+#check @DiamondIntegral.Section3.namedDefSetCoeSort
+#print axioms DiamondIntegral.Section3.namedDefSetCoeSort
+#check @DiamondIntegral.Section3.namedMapCoeFun
+#print axioms DiamondIntegral.Section3.namedMapCoeFun
+#check @DiamondIntegral.Section3.namedMeasuredRVGroupoid
+#print axioms DiamondIntegral.Section3.namedMeasuredRVGroupoid
+#check @DiamondIntegral.Section3.namedMeasuredRVToGammaGroundFaithful
+#print axioms DiamondIntegral.Section3.namedMeasuredRVToGammaGroundFaithful
+#check @DiamondIntegral.Section3.namedMeasuredRVToRealCodeFaithful
+#print axioms DiamondIntegral.Section3.namedMeasuredRVToRealCodeFaithful
+#check @DiamondIntegral.Section3.namedRVObjectGroupoid
+#print axioms DiamondIntegral.Section3.namedRVObjectGroupoid
+#check @DiamondIntegral.Section3.namedRVToGammaGroundFaithful
+#print axioms DiamondIntegral.Section3.namedRVToGammaGroundFaithful
+#check @DiamondIntegral.Section3.namedRVToRealCodeFaithful
+#print axioms DiamondIntegral.Section3.namedRVToRealCodeFaithful
+#check @DiamondIntegral.Section3.namedVFObjectGroupoid
+#print axioms DiamondIntegral.Section3.namedVFObjectGroupoid
+#check @DiamondIntegral.Section3.namedVFToGammaGroundFaithful
+#print axioms DiamondIntegral.Section3.namedVFToGammaGroundFaithful
+#check @DiamondIntegral.Section3.namedVFToRealCodeFaithful
+#print axioms DiamondIntegral.Section3.namedVFToRealCodeFaithful
+#check @DiamondIntegral.Section3.resDirectSumCommMonoid
+#print axioms DiamondIntegral.Section3.resDirectSumCommMonoid
+#check @DiamondIntegral.Section3.resDirectSumCommSemiring
+#print axioms DiamondIntegral.Section3.resDirectSumCommSemiring
+#check @DiamondIntegral.Section3.resKPlusDistributivity
+#print axioms DiamondIntegral.Section3.resKPlusDistributivity
+#check @DiamondIntegral.Section3.resKPlusGMul
+#print axioms DiamondIntegral.Section3.resKPlusGMul
+#check @DiamondIntegral.Section3.resKPlusGOne
+#print axioms DiamondIntegral.Section3.resKPlusGOne
+#check @DiamondIntegral.Section3.ringCompletionAlgebra
+#print axioms DiamondIntegral.Section3.ringCompletionAlgebra
+#check @DiamondIntegral.Section3.rvDNFGlobalPattern_finite
+#print axioms DiamondIntegral.Section3.rvDNFGlobalPattern_finite
+#check @DiamondIntegral.Section3.rvDNFValueCellIndex_finite
+#print axioms DiamondIntegral.Section3.rvDNFValueCellIndex_finite
+#check @DiamondIntegral.Section3.rvDirectSumCommMonoid
+#print axioms DiamondIntegral.Section3.rvDirectSumCommMonoid
+#check @DiamondIntegral.Section3.rvDirectSumCommSemiring
+#print axioms DiamondIntegral.Section3.rvDirectSumCommSemiring
+#check @DiamondIntegral.Section3.rvKPlusDistributivity
+#print axioms DiamondIntegral.Section3.rvKPlusDistributivity
+#check @DiamondIntegral.Section3.rvKPlusGMul
+#print axioms DiamondIntegral.Section3.rvKPlusGMul
+#check @DiamondIntegral.Section3.rvKPlusGOne
+#print axioms DiamondIntegral.Section3.rvKPlusGOne
+#check @SpecialTransformations.Section4.PositiveAdditiveGrothendieck.universalEquiv
+#print axioms SpecialTransformations.Section4.PositiveAdditiveGrothendieck.universalEquiv
+#check @Algebra.GrothendieckAddGroup.lift_apply_of
+#print axioms Algebra.GrothendieckAddGroup.lift_apply_of
+#check @Algebra.GrothendieckAddGroup.liftRingHom
+#print axioms Algebra.GrothendieckAddGroup.liftRingHom
+#check @SpecialTransformations.DefinableGeometry.Map.inverse
+#print axioms SpecialTransformations.DefinableGeometry.Map.inverse
+#check @SpecialTransformations.Section4.rvLift_finite_rv_fibres
+#print axioms SpecialTransformations.Section4.rvLift_finite_rv_fibres
+#check @DiamondIntegral.Section2.gammaJacobian_comp
+#print axioms DiamondIntegral.Section2.gammaJacobian_comp
+#check @DiamondIntegral.Section2.vfDimension_eq_bot_iff
+#print axioms DiamondIntegral.Section2.vfDimension_eq_bot_iff
+#check @AddCon.quotientKerEquivOfSurjective
+#print axioms AddCon.quotientKerEquivOfSurjective

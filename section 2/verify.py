@@ -347,6 +347,11 @@ def main() -> None:
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     reuse_manifest = module.prepare()
+    integration_spec = importlib.util.spec_from_file_location(
+        "prepare_integration_reuse", ROOT / "section 3/prepare-integration-reuse.py")
+    integration_module = importlib.util.module_from_spec(integration_spec)
+    integration_spec.loader.exec_module(integration_module)
+    integration_patch = integration_module.prepare()
     sources = sorted(SECTION.glob("*.lean"))
     exports: list[str] = []
     for source in sources:
@@ -384,6 +389,7 @@ def main() -> None:
         "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
         "acvf_qe": "939346b0a99899e22a873479364e3cc5d142731c",
         "special_transformations": "9cc9760892092dd34cfad4a6dee655843c52f30c",
+        "integration_in_acvf": "7d4acc730496b3bd05a22c268ffd89540ca694f9",
     }
     for package, expected in pins.items():
         actual = subprocess.check_output(
@@ -446,6 +452,8 @@ def main() -> None:
 
     inputs = sources + [ROOT / name for name in ("DiamondIntegral.lean", "lakefile.toml", "lake-manifest.json", "lean-toolchain", "ACCEPTED-CITED-RESULTS.md")]
     inputs += [SECTION / name for name in ("verify.py", "prepare-reuse.py", "reuse/manifest.json", "reuse/headlines.json", "reuse/open-disc-radius.patch")]
+    inputs += [ROOT / "section 3" / name for name in (
+        "prepare-integration-reuse.py", "reuse/integration-manifest.json", "reuse/integration-open-radius.patch")]
     inputs += [RECORD / "CITED-INPUTS.md", RECORD / "DISC-GROUND-REVIEW.md", RECORD / "UPSTREAM-LINKS.md", RECORD / "UPSTREAM-LINKS.json"]
     record = {
         "status": "PASS",
@@ -453,19 +461,31 @@ def main() -> None:
         "lean": version,
         "pins": pins,
         "approved_library_patch": reuse_manifest,
+        "integration_compatibility_patch": integration_patch,
+        "checked_cited_adapters": {
+            "AtomicGammaBaseChangeInput": "DiamondIntegral.Section3.integrationAtomicGammaBaseChangeInput_complete (requires ACVF00)",
+            "PrimitiveImageInput": "DiamondIntegral.Section3.integrationPrimitiveImageInput",
+            "OpenDiscImageInput": "DiamondIntegral.Section3.integrationOpenDiscImageInput",
+            "AtomicDiscGammaBaseChangeInput": "DiamondIntegral.Section3.integrationAtomicDiscGammaBaseChangeInput",
+            "UnaryDiscAtomicityInput": "DiamondIntegral.Section3.integrationUnaryDiscAtomicityInput (requires actual saturation at an infinite cardinal)",
+            "UnaryOpenDiscRVBaseChangeInput": "DiamondIntegral.Section3.integrationUnaryOpenDiscRVBaseChangeInput",
+            "OpenDiscNamesImageInput": "DiamondIntegral.Section3.integrationOpenDiscNamesImageInput",
+            "DiscToDiscPartitionInput": "DiamondIntegral.Section3.integrationDiscToDiscPartitionInput (requires actual saturation at an infinite cardinal)",
+            "verification": "section 3/verification/VERIFICATION.json",
+        },
         "sources": {str(p.relative_to(ROOT)): sha256(p) for p in inputs},
         "manuscript_sha256": sha256(SECTION / "reference/diamond_integral_revision_annotated.tex"),
         "accepted_cited_inputs": [{
             "interface": "DiamondIntegral.Section2.AtomicGammaBaseChangeInput",
             "source": "Bibliography [18], Yin, Integration in algebraically closed valued fields, Lemma 3.3",
             "used_by": ["DiamondIntegral.Section2.lemma_2_23"],
-            "status": "Explicit author-accepted mathematical premise; not independently verified here",
+            "status": "Legacy replaceable interface; checked constructor from pinned [18] now supplied in section 3. See checked_cited_adapters and the complete section 3 audit.",
             "scope_record": "section 2/verification/CITED-INPUTS.md",
         }, {
             "interface": "DiamondIntegral.Section2.PrimitiveImageInput",
             "source": "Bibliography [18], Yin, Integration in algebraically closed valued fields, Lemma 3.8 (geometric conclusion)",
             "used_by": ["DiamondIntegral.Section2.lemma_2_27"],
-            "status": "Explicit author-accepted mathematical premise; image atomicity proved independently here",
+            "status": "Legacy replaceable interface; checked constructor from pinned [18] now supplied in section 3. See checked_cited_adapters and the complete section 3 audit.",
             "scope_record": "section 2/verification/CITED-INPUTS.md",
         }, {
             "interface": "DiamondIntegral.Section2.OpenDiscImageInput",
@@ -473,7 +493,7 @@ def main() -> None:
             "used_by": ["DiamondIntegral.Section2.lemma_2_28",
                         "DiamondIntegral.Section2.atomic_open_polydisc_image",
                         "DiamondIntegral.Section2.lemma_2_29"],
-            "status": "Explicit author-accepted unary geometric premise, including uses over temporary real/Gamma bases; coordinate chains, image atomicity and branch reconstruction proved here",
+            "status": "Legacy replaceable interface; checked constructor from pinned [18] now supplied in section 3. See checked_cited_adapters and the complete section 3 audit.",
             "scope_record": "section 2/verification/CITED-INPUTS.md",
         }, {
             "interface": "DiamondIntegral.Section2.UnaryDiscAtomicityInput",
@@ -489,7 +509,7 @@ def main() -> None:
                         "DiamondIntegral.Section2.lemma_2_25_disc_ground_closed",
                         "DiamondIntegral.Section2.lemma_2_25_disc_ground_open",
                         "DiamondIntegral.Section2.corollary_2_30_disc_names"],
-            "status": "Explicit author-accepted unary input, retaining existing finite disc names, ACVF(0,0), and nontrivial ground Gamma; replaceable when upstream formalization is complete",
+            "status": "Legacy replaceable interface; checked constructor from pinned [18] now supplied in section 3. See checked_cited_adapters and the complete section 3 audit.",
             "scope_record": "section 2/verification/CITED-INPUTS.md",
         }, {
             "interface": "DiamondIntegral.Section2.AtomicDiscGammaBaseChangeInput",
@@ -505,13 +525,13 @@ def main() -> None:
                         "DiamondIntegral.Section2.lemma_2_25_disc_ground_closed",
                         "DiamondIntegral.Section2.lemma_2_25_disc_ground_open",
                         "DiamondIntegral.Section2.corollary_2_30_disc_names"],
-            "status": "Explicit author-accepted Gamma base-change input with existing finite disc names; atomicity required before Gamma extension; replaceable upstream interface",
+            "status": "Legacy replaceable interface; checked constructor from pinned [18] now supplied in section 3. See checked_cited_adapters and the complete section 3 audit.",
             "scope_record": "section 2/verification/CITED-INPUTS.md",
         }, {
             "interface": "DiamondIntegral.Section2.DiscToDiscPartitionInput",
             "source": "Bibliography [18], Yin, Integration in algebraically closed valued fields, Proposition 3.19 and mixed-coordinate Proposition 3.21",
             "used_by": ["DiamondIntegral.Section2.lemma_2_32"],
-            "status": "Explicit author-accepted cited partition theorem; ACVF(0,0), nontrivial ground Gamma, fixed real/Gamma base and both RV label tuples retained; replaceable upstream interface",
+            "status": "Legacy replaceable interface; checked constructor from pinned [18] now supplied in section 3. See checked_cited_adapters and the complete section 3 audit.",
             "scope_record": "section 2/verification/CITED-INPUTS.md",
         }, {
             "interface": "DiamondIntegral.Section2.UnaryOpenDiscRVBaseChangeInput",
@@ -524,7 +544,7 @@ def main() -> None:
                         "DiamondIntegral.Section2.corollary_2_30",
                         "DiamondIntegral.Section2.lemma_2_29_disc_names",
                         "DiamondIntegral.Section2.corollary_2_30_disc_names"],
-            "status": "Explicit author-accepted unary input with existing finite DC prefix; ACVF(0,0), nontrivial ground Gamma, and actual RV tag retained; replaceable upstream interface",
+            "status": "Legacy replaceable interface; checked constructor from pinned [18] now supplied in section 3. See checked_cited_adapters and the complete section 3 audit.",
             "scope_record": "section 2/verification/CITED-INPUTS.md",
         }, {
             "interface": "DiamondIntegral.Section2.OpenDiscNamesImageInput",
@@ -534,7 +554,7 @@ def main() -> None:
                         "DiamondIntegral.Section2.corollary_2_30",
                         "DiamondIntegral.Section2.lemma_2_29_disc_names",
                         "DiamondIntegral.Section2.corollary_2_30_disc_names"],
-            "status": "Explicit author-accepted unary geometric input retaining finite DC ground names; product images, type-local coding, compactness and finite branch reconstruction proved here",
+            "status": "Legacy replaceable interface; checked constructor from pinned [18] now supplied in section 3. See checked_cited_adapters and the complete section 3 audit.",
             "scope_record": "section 2/verification/CITED-INPUTS.md",
         }, {
             "interface": "DiamondIntegral.Section2.GammaPiecewiseRationalAffineInput",

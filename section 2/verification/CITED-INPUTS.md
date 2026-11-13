@@ -1,18 +1,31 @@
 # Explicit cited inputs in Section 2
 
-Current author update: [18, Sections 1–3] is now formalized in
+Current source inventory: [18] is linked to
 [`daviddhilbert/integration-in-ACVF`](https://github.com/daviddhilbert/integration-in-ACVF).
-[Exact upstream declarations and scope checks](UPSTREAM-LINKS.md) link the eight
-numbered-result interfaces to proved exports at a fixed revision. The existing
-nine explicit inputs remain in Lean until checked interface bridges replace
-them; the ninth is separately accepted Gamma rational-affine background.
-Earlier “being formalized” notes below record the previous authorization.
+[Exact declarations and scope checks](UPSTREAM-LINKS.md) document the
+numbered sources. The subsequently compiled adapters are recorded below
+and in the section 3 reuse inventory.
 
+Nine legacy interfaces remain available. Eight now have checked constructors
+from the completed [18] repository: the original-Gamma-base 3.3, 3.8 and
+3.13 interfaces and all four finite-disc-name 3.3, 3.4, 3.9 and 3.13
+interfaces, together with the mixed disc-to-disc partition 3.19/3.21. `IntegrationDiscInverse` proves the complete finite-disc syntax
+equivalence. `IntegrationFullFiniteSupport` reduces each cut to its finite
+real support, retaining every old imaginary, so the unary ball constructor
+can be supplied uniformly at every enlarged real base under actual
+saturation at an infinite cardinal. The 2.25 closed/open and 2.30 real/DC
+wrappers supply these checked constructors. Their combined printed types
+and dependencies are audited by the section 3 runner.
+`IntegrationDiscToDisc` supplies Lemma 2.32 under actual saturation at an
+infinite cardinal. The four zero cells preserve the native ordinary-disc
+convention in both directions, without naming any new parameter. The
+separate Gamma piecewise-affine background remains an explicit accepted input in
+`section 3/verification/integration-reuse.json`.
 
-Current total: **nine** replaceable accepted interfaces. Counts in the
+Counts in the
 chronological notes below record earlier stages. The final 850/378 audit
-checks all public types and standard logical dependencies; it does not
-discharge these explicit external mathematical premises. Full numbered
+checks the legacy public types and standard logical dependencies; the
+section 3 receipt additionally audits all eight checked constructors. Full numbered
 results and their parameter scopes are listed in [COVERAGE.md](../COVERAGE.md).
 
 `AtomicBaseChange.lean` defines `AtomicGammaBaseChangeInput B`, the

@@ -1,0 +1,26 @@
+[
+  {
+    "source": "Section10/EssentialVFMap.lean",
+    "revision": "f76d100e07c0a791259244fc7fdf06f4dfaaf8ae",
+    "original_sha256": "5e284ce44c565f86b6dad6f9a6e9f1a8e94317ffd510d35a9c212920284be4bc",
+    "destination": "section 3/EssentialVFMap.lean",
+    "adaptation": "Local namespace/import paths; refine_preserves made public in EssentialVFMeasure; original hypotheses retained. Fresh project build and principle audit passed.",
+    "local_sha256": "c5ae7019bf1aa57bbc8d4b28224597e35996f1080af5c4c30f47b9c1f36a71c7"
+  },
+  {
+    "source": "Section10/EssentialVFGerms.lean",
+    "revision": "f76d100e07c0a791259244fc7fdf06f4dfaaf8ae",
+    "original_sha256": "881045b1407341019dbcc323f73aee4a0a095e3516f9ef715dc09b383e23b9a7",
+    "destination": "section 3/EssentialVFGerms.lean",
+    "adaptation": "Local namespace/import paths; refine_preserves made public in EssentialVFMeasure; original hypotheses retained. Fresh project build and principle audit passed.",
+    "local_sha256": "27a2d5cd606ec5a5545e83c2355dea00ff95da7a2d396ceb196d9b9b027d2fac"
+  },
+  {
+    "source": "Section10/EssentialVFMeasure.lean",
+    "revision": "f76d100e07c0a791259244fc7fdf06f4dfaaf8ae",
+    "original_sha256": "cda4297bfaaaedb8a41cb4da6a8fb02edcb76d888ed84c33bf86d0cd086fd1bb",
+    "destination": "section 3/EssentialVFMeasure.lean",
+    "adaptation": "Local namespace/import paths; refine_preserves made public in EssentialVFMeasure; original hypotheses retained. Fresh project build and principle audit passed.",
+    "local_sha256": "33d164e5e5dd55435e580cf68433f2d52fc97ca70e489c71cfc9cc9109abebd2"
+  }
+]

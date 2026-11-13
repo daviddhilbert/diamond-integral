@@ -1,0 +1,18 @@
+--- a/section 2/reference/diamond_integral_revision_annotated.tex
++++ b/section 2/reference/diamond_integral_revision_annotated.tex
+@@ -1812,12 +1812,12 @@
+ 
+ 
+ \begin{rem}\label{GLZ:char}
+-By \cite[Remark~2.28]{Yin:int:expan:acvf}, if a definable function between two sets in $\Gamma$ is a $\vrv$-contraction then it is $\Z$-linear (with constant terms of the form $\vrv(t)$, where $t \in \RV$ is definable, that is, $t \in \RV(\mathbb{S})$). Moreover,  a definable bijection  between two objects of $\Gamma[k]$ is a  $\Gamma[k]$-morphism if and only if it is definably a piecewise $\mgl_k(\Z)$-transformation. The ``if'' direction is clear. For the ``only if'' direction, see \cite[Lemma~10.1]{hrushovski:kazhdan:integration:vf} or \cite[Lemma~2.29]{Yin:int:expan:acvf}.
++By \cite[Remark~2.28]{Yin:int:expan:acvf}, if a definable function between two sets in $\Gamma$ is a $\vrv$-contraction then it is piecewise $\Z$-affine (with constant terms of the form $\vrv(t)$, where $t \in \RV$ is definable, that is, $t \in \RV(\mathbb{S})$). Moreover,  a definable bijection  between two objects of $\Gamma[k]$ is a  $\Gamma[k]$-morphism if and only if it is definably a piecewise $\mgl_k(\Z)$-transformation. The ``if'' direction is clear. For the ``only if'' direction, see \cite[Lemma~10.1]{hrushovski:kazhdan:integration:vf} or \cite[Lemma~2.29]{Yin:int:expan:acvf}.
+ 
+ % BEGIN REFEREE INSERTION R050
+-\RefereeRemark{050}{Clarification}{Piecewise integral-affine behavior}{%
++\ResolvedRefereeRemark{050}{Clarification}{Piecewise integral-affine behavior}{%
+ \textit{Original source line 1289.}\quad The first sentence needs ``piecewise $\mathbb Z$-affine,'' not globally ``$\mathbb Z$-linear.'' For example, $\gamma\mapsto |\gamma|$ is the $\vrv$-contraction of the definable map $t\mapsto t$ for $\vrv(t)\geq0$, $t\mapsto t^{-1}$ otherwise. Its two integral-linear formulas differ. Retain the specified restriction on the translation constants.
+-}
++}{The author approves the piecewise $\Z$-affine formulation. The restriction on translation constants and the following piecewise $\mgl_k(\Z)$ characterization are retained.}
+ % END REFEREE INSERTION R050
+ \end{rem}
+ 

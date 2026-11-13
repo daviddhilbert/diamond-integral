@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "scope": "Transitive Lean declaration dependencies of seven existing roots; no new mathematical theorem is certified. Horizontal Gamma-to-RV or finite-Gamma-to-RES injectivity is not used; checked vertical RES-to-RV injection is used.",
+  "roots": {
+    "DiamondIntegral.Section3.proposition_3_18_unmeasured": 2225,
+    "DiamondIntegral.Section3.proposition_3_18_measured": 3076,
+    "DiamondIntegral.Section3.gammaGroundUnmeasuredTensor_descends_iff": 2217,
+    "DiamondIntegral.Section3.gammaGroundMeasuredTensor_descends_iff": 3068,
+    "DiamondIntegral.Section3.gammaGroundBalancedEvaluationOnRV": 2219,
+    "DiamondIntegral.Section3.gammaGroundBalancedEvaluationOnRV_on_RES": 2222,
+    "DiamondIntegral.Section3.gammaGroundAnnularPullback_le_actual_tensor_kernel": 1123
+  },
+  "source": "section 3/verification/CoefficientDependencies.lean",
+  "source_sha256": "7cdedc5a5c7f061962b00081551e5f4f5a8777d41ddc1c0f5cd3796a7fb71441",
+  "log": "section 3/verification/coefficient-dependencies.log",
+  "log_sha256": "2edd346ddad910e4f95a39041dd16846ed24cfef3e4a4df9f7267bf18e367b65"
+}

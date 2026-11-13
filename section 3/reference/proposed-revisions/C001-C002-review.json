@@ -1,0 +1,29 @@
+{
+  "active_items": [
+    "C002"
+  ],
+  "status": "C001 definition correction withdrawn; C002 horizontal injectivity remains unresolved and its proposed omission is unapproved.",
+  "source": "section 3/reference/proposed-revisions/C001-C002-definedness-review.tex",
+  "source_sha256": "38156cd608b871b34ef8b48afec15ec39ba152ca0cf6255ff4d1881ff0bf6dd4",
+  "pdf": "section 3/reference/proposed-revisions/C001-C002-definedness-review.pdf",
+  "pdf_sha256": "bcbc751ac220a204ea9253b1a6400a16f9cf0e8574d2a8e13ab182a243cc596e",
+  "printed_pages": [
+    33,
+    34,
+    35
+  ],
+  "working_manuscript_sha256": "24c58ba674814c3f12f6097b9fd61dc5675af627b6b9d4a43cae46052e6f68cb",
+  "display": "PDF-only right-panel request returned queued; visibility unconfirmed",
+  "C001": "Make full RV preimages explicit; weaker arbitrary-subset reading fails well-definedness.",
+  "C002": "Provisionally omit unsupported horizontal monicity; no counterexample to the full-preimage version is claimed.",
+  "mathematical_audit": "section 3/verification/COEFFICIENT-MAP-SCOPE-AUDIT.md",
+  "counterexample_verification": "Mathematical proof; not a compiled Lean construction of the Puiseux model and curve argument.",
+  "supersedes_question": "C001-coefficient-embedding-question.pdf (preserved)",
+  "compiler": "pdflatex, three passes; focused manuscript extract",
+  "visual_check": "All three review pages inspected; proposed changes and explanations blue in manuscript context.",
+  "withdrawn_items": {
+    "C001": "Withdrawn after the author clarified that Gamma morphisms use full RV preimages. No definition correction is needed for that intended category."
+  },
+  "scope_clarification": "The arbitrary-RV-subset alternative was introduced by the assistant and is not the intended Gamma category. Its fifth-root example does not address injectivity of the intended map.",
+  "display_note": "Preserved PDF includes withdrawn C001; do not treat it as an active correction."
+}

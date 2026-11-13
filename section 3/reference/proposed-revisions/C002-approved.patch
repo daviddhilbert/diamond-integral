@@ -1,0 +1,91 @@
+--- a/section 2/reference/diamond_integral_revision_annotated.tex
++++ b/section 2/reference/diamond_integral_revision_annotated.tex
+@@ -1847,7 +1847,73 @@
+  \Square(0,0)/>->`>->`>->`>->/<400>[{\gsk \Gamma^{\fin}[*]}`{\gsk \RES[*]}`{\gsk \Gamma[*]}`{\gsk \RV[*]}; ```]
+ \efig
+ \]
+-where all the arrows are monomorphisms. The map
++where all the arrows are monomorphisms.
++
++\begin{proof}[Proof of the horizontal monomorphisms]
++It suffices to prove that an $\mathbb S$-definable bijection
++$F:I^\sharp\fun J^\sharp$ in $\RV[n]$ implies that $I$ and $J$ are
++isomorphic in $\Gamma[n]$, retaining all finite disjoint-union tags.
++The case $n=0$ is immediate, so suppose $n>0$.
++
++For each $\alpha\in I$, the full fibre $\alpha^\sharp$ is a torsor
++for $(\K^\times)^n$ and has a unique residue-generic type. By
++residue-field/value-group orthogonality, $\vrv\circ F$ has finite
++image on that fibre, with its target tag included. Exactly one target
++fibre $\beta^\sharp$ receives its generic part. Its image has residue
++dimension $n$, since $F$ is injective, and is therefore generic in
++$\beta^\sharp$. The same argument for $F^{-1}$ shows that this
++assignment defines a bijection $h:I\fun J$. Definability of residue
++dimension in families makes $h$ definable over $\mathbb S$.
++After trivializing the two fibres solely for the proof, the generic
++restriction of $F$ is a birational map of residue tori: in
++characteristic zero, the constructible maps supplied by $F$ and
++$F^{-1}$ are rational inverses on dense open subsets.
++
++Fix $\alpha\in I$, put $\beta=h(\alpha)$, and set
++\[
++ \Delta=\vrv(\RV\cap\dcl(\mathbb S)),\qquad
++ L=(\Delta+\textstyle\sum_i\Z\alpha_i+\sum_i\Z\beta_i)/\Delta.
++\]
++The group $L$ is finitely generated. Let $D$ be the diagonalizable
++group over $\K$ with character group $L$. Its two diagonal
++representations have weights $\bar\alpha_i$ and $\bar\beta_i$.
++Every character $\chi:L\fun\K^\times$ extends to $\Gamma/\Delta$,
++since $\K^\times$ is divisible. The resulting RV twist
++$u\efun\chi(\vrv(u))u$ fixes the residue field, every Gamma value,
++and every old-ground RV point. It preserves the RV group operations
++and residue addition, so relative RV quantifier elimination makes
++it preserve every $\mathbb S$-definable RV relation, including the
++graph of $F$. The birational map of the two residue tori is thus
++$D$-equivariant. The two actions have the same kernel, by that map
++and its inverse, and their joint kernel is trivial because all their
++weights generate $L$. Both representations are faithful.
++
++By \cite[Theorem~7.1 and Corollary~2.5]{reichstein:youssin:birational},
++there is a matrix $M\in\operatorname{GL}_n(\Z)$ with
++$\beta-M\alpha\in\Delta^n$. Choose
++$c_i\in\RV\cap\dcl(\mathbb S)$ with these values. Then
++\[
++ H(u)_i=c_i\prod_j u_j^{M_{ij}}
++\]
++is an $\mathbb S$-definable bijection of the full fibres at $\alpha$
++and $\beta$. This replaces the generic birational map; it need not
++extend the given map on its dense open domain. Compactness supplies
++finitely many such formulas on a definable partition of $I$.
++Their full-preimage maps glue to a bijection contracting to $h$,
++so $h$ is a $\Gamma[n]$-morphism. This proves the lower horizontal
++positive injection. The upper injection follows from the commuting
++square and the two vertical positive injections.
++\end{proof}
++
++% BEGIN AUTHOR RESOLUTION C002
++{\normalfont\small\color{ResolutionGreen}
++\noindent\textbf{Author resolution (C002).} The author approved adding
++the original-ground proof of the horizontal positive monomorphisms,
++using the indicated Reichstein--Youssin result. No HK theorem is taken
++as an input. There is no corresponding referee item.\par}
++% END AUTHOR RESOLUTION C002
++
++The map
+ \[
+ \gsk \RES[*] \times \gsk \Gamma[*] \fun \gsk \RV[*]
+ \]
+@@ -4566,6 +4632,13 @@
+ \bysame, \emph{Integration in power-bounded {$T$}-convex valued fields},
+   (2018), arXiv:1808.07129 [math.LO].
+ 
++
++\bibitem{reichstein:youssin:birational}
++Zinovy Reichstein and Boris Youssin,
++{A birational invariant for algebraic group actions},
++{\em Pacific Journal of Mathematics} \textbf{204} (2002), no.~1,
++223--246, DOI \href{https://doi.org/10.2140/pjm.2002.204.223}{10.2140/pjm.2002.204.223}.
++
+ \end{thebibliography}
+ 
+ 

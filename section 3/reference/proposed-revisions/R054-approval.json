@@ -1,0 +1,28 @@
+{
+  "active_items": [
+    "R054"
+  ],
+  "status": "approved and applied",
+  "source": "section 3/reference/proposed-revisions/R054-measured-notation-review.tex",
+  "source_sha256": "e47721d5976b094a1d5c49cf09a4778633587337bded1c82791105c5d4f2e681",
+  "pdf": "section 3/reference/proposed-revisions/R054-measured-notation-review.pdf",
+  "pdf_sha256": "8077d4d252a745487a6a59b18fcceea98ab77cd5462b7f7f931cffca8bdb4791",
+  "printed_pages": [
+    36
+  ],
+  "working_manuscript_sha256": "8eed10e887799949925b695c59ec068566033dd4732463a322eb7a29ed4b7bcf",
+  "approved_items": [
+    "R050",
+    "R051",
+    "R053"
+  ],
+  "display": "PDF-only right-panel request queued; visibility unconfirmed",
+  "compiler": "pdflatex, three passes; focused manuscript extract",
+  "presentation": "Printed page 36, cropped after the end of section 3 to exclude section 4 referee items",
+  "approval_scope": "R054 only",
+  "approval_applied": true,
+  "source_before_sha256": "8eed10e887799949925b695c59ec068566033dd4732463a322eb7a29ed4b7bcf",
+  "source_after_sha256": "7dc1818a674a975ae970d376f2c487d7ab6f225392e1b316e478d10cb1cb6492",
+  "resolved_pdf": "section 3/reference/proposed-revisions/R054-resolved-review.pdf",
+  "resolved_pdf_sha256": "e7243d0e6bfdda259719b506a8ecc52b751dab6784ba1487709f3fe8286af29e"
+}
