@@ -1,0 +1,10005 @@
+import «section 4».Section
+set_option pp.universes true
+set_option pp.fullNames true
+set_option pp.proofs false
+set_option format.width 120
+#print DiamondIntegral.Section4.Review.geometric_relation_vanishes
+#print axioms DiamondIntegral.Section4.Review.geometric_relation_vanishes
+#print DiamondIntegral.Section4.Review.printed_geometric_remainder
+#print axioms DiamondIntegral.Section4.Review.printed_geometric_remainder
+#print DiamondIntegral.Section4.Review.bounded_relation_vanishes
+#print axioms DiamondIntegral.Section4.Review.bounded_relation_vanishes
+#print DiamondIntegral.Section4.Review.measured_geometric_sign
+#print axioms DiamondIntegral.Section4.Review.measured_geometric_sign
+#print DiamondIntegral.Section4.Review.printed_measured_sign_requires_two_torsion
+#print axioms DiamondIntegral.Section4.Review.printed_measured_sign_requires_two_torsion
+#print DiamondIntegral.Section4.Review.measured_ray_product
+#print axioms DiamondIntegral.Section4.Review.measured_ray_product
+#print DiamondIntegral.Section4.Review.geometric_point_after_forgetting
+#print axioms DiamondIntegral.Section4.Review.geometric_point_after_forgetting
+#print DiamondIntegral.Section4.Review.different_point_images
+#print axioms DiamondIntegral.Section4.Review.different_point_images
+#print DiamondIntegral.Section4.Review.positive_radius_cancellation
+#print axioms DiamondIntegral.Section4.Review.positive_radius_cancellation
+#print DiamondIntegral.Section4.Review.zero_radius_printed_remainder
+#print axioms DiamondIntegral.Section4.Review.zero_radius_printed_remainder
+#print DiamondIntegral.Section4.Review.zero_radius_actual_generator
+#print axioms DiamondIntegral.Section4.Review.zero_radius_actual_generator
+#print DiamondIntegral.Section4.Review.geometric_mixed_associativity
+#print axioms DiamondIntegral.Section4.Review.geometric_mixed_associativity
+#print DiamondIntegral.Section4.Review.bounded_mixed_associativity
+#print axioms DiamondIntegral.Section4.Review.bounded_mixed_associativity
+#print DiamondIntegral.Section4.Review.pointFn
+#print axioms DiamondIntegral.Section4.Review.pointFn
+#print DiamondIntegral.Section4.Review.printedInterval
+#print axioms DiamondIntegral.Section4.Review.printedInterval
+#print DiamondIntegral.Section4.Review.intervalFn
+#print axioms DiamondIntegral.Section4.Review.intervalFn
+#print DiamondIntegral.Section4.Review.pointFn_self
+#print axioms DiamondIntegral.Section4.Review.pointFn_self
+#print DiamondIntegral.Section4.Review.pointFn_ne
+#print axioms DiamondIntegral.Section4.Review.pointFn_ne
+#print DiamondIntegral.Section4.Review.printedInterval_nonpositive
+#print axioms DiamondIntegral.Section4.Review.printedInterval_nonpositive
+#print DiamondIntegral.Section4.Review.printedInterval_zero
+#print axioms DiamondIntegral.Section4.Review.printedInterval_zero
+#print DiamondIntegral.Section4.Review.intervalFn_zero
+#print axioms DiamondIntegral.Section4.Review.intervalFn_zero
+#print DiamondIntegral.Section4.Review.intervalFn_positive
+#print axioms DiamondIntegral.Section4.Review.intervalFn_positive
+#print DiamondIntegral.Section4.Review.intervalFn_negative
+#print axioms DiamondIntegral.Section4.Review.intervalFn_negative
+#print DiamondIntegral.Section4.Review.intervalFn_zero_ne_empty
+#print axioms DiamondIntegral.Section4.Review.intervalFn_zero_ne_empty
+#print DiamondIntegral.Section4.Review.no_printed_negative_euler_value
+#print axioms DiamondIntegral.Section4.Review.no_printed_negative_euler_value
+#print DiamondIntegral.Section4.Review.stabilized_fraction_ne_zero
+#print axioms DiamondIntegral.Section4.Review.stabilized_fraction_ne_zero
+#print DiamondIntegral.Section4.Review.torsion_fraction_maps_zero
+#print axioms DiamondIntegral.Section4.Review.torsion_fraction_maps_zero
+#print DiamondIntegral.Section4.Review.localization_comparison_not_injective
+#print axioms DiamondIntegral.Section4.Review.localization_comparison_not_injective
+#print DiamondIntegral.Section4.jumpPrefix
+#print axioms DiamondIntegral.Section4.jumpPrefix
+#print DiamondIntegral.Section4.StepCoefficients
+#print axioms DiamondIntegral.Section4.StepCoefficients
+#print DiamondIntegral.Section4.stepEval
+#print axioms DiamondIntegral.Section4.stepEval
+#print DiamondIntegral.Section4.jumpPrefix_zero
+#print axioms DiamondIntegral.Section4.jumpPrefix_zero
+#print DiamondIntegral.Section4.jumpPrefix_add
+#print axioms DiamondIntegral.Section4.jumpPrefix_add
+#print DiamondIntegral.Section4.jumpPrefix_single
+#print axioms DiamondIntegral.Section4.jumpPrefix_single
+#print DiamondIntegral.Section4.stepEval_zero
+#print axioms DiamondIntegral.Section4.stepEval_zero
+#print DiamondIntegral.Section4.stepEval_add
+#print axioms DiamondIntegral.Section4.stepEval_add
+#print DiamondIntegral.Section4.stepEvaluation
+#print axioms DiamondIntegral.Section4.stepEvaluation
+#print DiamondIntegral.Section4.jumpPrefix_finite_range
+#print axioms DiamondIntegral.Section4.jumpPrefix_finite_range
+#print DiamondIntegral.Section4.stepEval_finite_range
+#print axioms DiamondIntegral.Section4.stepEval_finite_range
+#print DiamondIntegral.Section4.stepFunctionSubgroup
+#print axioms DiamondIntegral.Section4.stepFunctionSubgroup
+#print DiamondIntegral.Section4.StepFunction
+#print axioms DiamondIntegral.Section4.StepFunction
+#print DiamondIntegral.Section4.jumpPrefix_left
+#print axioms DiamondIntegral.Section4.jumpPrefix_left
+#print DiamondIntegral.Section4.jumpPrefix_right
+#print axioms DiamondIntegral.Section4.jumpPrefix_right
+#print DiamondIntegral.Section4.exists_left_gap
+#print axioms DiamondIntegral.Section4.exists_left_gap
+#print DiamondIntegral.Section4.exists_right_gap
+#print axioms DiamondIntegral.Section4.exists_right_gap
+#print DiamondIntegral.Section4.stepEval_eq_zero_iff
+#print axioms DiamondIntegral.Section4.stepEval_eq_zero_iff
+#print DiamondIntegral.Section4.stepEvaluation_injective
+#print axioms DiamondIntegral.Section4.stepEvaluation_injective
+#print DiamondIntegral.Section4.stepCoefficientsEquiv
+#print axioms DiamondIntegral.Section4.stepCoefficientsEquiv
+#print DiamondIntegral.Section4.stepFunction_finite_range
+#print axioms DiamondIntegral.Section4.stepFunction_finite_range
+#print DiamondIntegral.Section4.EulerKind
+#print axioms DiamondIntegral.Section4.EulerKind
+#print DiamondIntegral.Section4.EulerKind.lineValue
+#print axioms DiamondIntegral.Section4.EulerKind.lineValue
+#print DiamondIntegral.Section4.EulerKind.rayValue
+#print axioms DiamondIntegral.Section4.EulerKind.rayValue
+#print DiamondIntegral.Section4.EulerKind.lineValue_sq
+#print axioms DiamondIntegral.Section4.EulerKind.lineValue_sq
+#print DiamondIntegral.Section4.EulerKind.rayValue_sq
+#print axioms DiamondIntegral.Section4.EulerKind.rayValue_sq
+#print DiamondIntegral.Section4.coefficientSum
+#print axioms DiamondIntegral.Section4.coefficientSum
+#print DiamondIntegral.Section4.coefficientSum_single
+#print axioms DiamondIntegral.Section4.coefficientSum_single
+#print DiamondIntegral.Section4.GammaGroupRing
+#print axioms DiamondIntegral.Section4.GammaGroupRing
+#print DiamondIntegral.Section4.EulerModel
+#print axioms DiamondIntegral.Section4.EulerModel
+#print DiamondIntegral.Section4.groupCoefficientSum
+#print axioms DiamondIntegral.Section4.groupCoefficientSum
+#print DiamondIntegral.Section4.groupCoefficientSum_eq
+#print axioms DiamondIntegral.Section4.groupCoefficientSum_eq
+#print DiamondIntegral.Section4.groupCoefficientSum_ofCoeff
+#print axioms DiamondIntegral.Section4.groupCoefficientSum_ofCoeff
+#print DiamondIntegral.Section4.normalCoordinates
+#print axioms DiamondIntegral.Section4.normalCoordinates
+#print DiamondIntegral.Section4.groupCoefficientSum_single
+#print axioms DiamondIntegral.Section4.groupCoefficientSum_single
+#print DiamondIntegral.Section4.modelPoint
+#print axioms DiamondIntegral.Section4.modelPoint
+#print DiamondIntegral.Section4.modelRay
+#print axioms DiamondIntegral.Section4.modelRay
+#print DiamondIntegral.Section4.modelLine
+#print axioms DiamondIntegral.Section4.modelLine
+#print DiamondIntegral.Section4.modelPoint_zero
+#print axioms DiamondIntegral.Section4.modelPoint_zero
+#print DiamondIntegral.Section4.modelPoint_mul
+#print axioms DiamondIntegral.Section4.modelPoint_mul
+#print DiamondIntegral.Section4.modelPoint_ray
+#print axioms DiamondIntegral.Section4.modelPoint_ray
+#print DiamondIntegral.Section4.modelRay_mul
+#print axioms DiamondIntegral.Section4.modelRay_mul
+#print DiamondIntegral.Section4.modelLine_point
+#print axioms DiamondIntegral.Section4.modelLine_point
+#print DiamondIntegral.Section4.modelLine_ray
+#print axioms DiamondIntegral.Section4.modelLine_ray
+#print DiamondIntegral.Section4.modelLine_mul
+#print axioms DiamondIntegral.Section4.modelLine_mul
+#print DiamondIntegral.Section4.modelFunctionEquiv
+#print axioms DiamondIntegral.Section4.modelFunctionEquiv
+#print DiamondIntegral.Section4.modelFunctionEquiv_eval
+#print axioms DiamondIntegral.Section4.modelFunctionEquiv_eval
+#print DiamondIntegral.Section4.modelPoint_function
+#print axioms DiamondIntegral.Section4.modelPoint_function
+#print DiamondIntegral.Section4.modelRay_function
+#print axioms DiamondIntegral.Section4.modelRay_function
+#print DiamondIntegral.Section4.modelLine_function
+#print axioms DiamondIntegral.Section4.modelLine_function
+#print DiamondIntegral.Section4.EulerFunction
+#print axioms DiamondIntegral.Section4.EulerFunction
+#print DiamondIntegral.Section4.eulerFunctionCoeFun
+#print axioms DiamondIntegral.Section4.eulerFunctionCoeFun
+#print DiamondIntegral.Section4.eulerCoordinates
+#print axioms DiamondIntegral.Section4.eulerCoordinates
+#print DiamondIntegral.Section4.eulerFunctionCommRing
+#print axioms DiamondIntegral.Section4.eulerFunctionCommRing
+#print DiamondIntegral.Section4.eulerCoordinatesRingEquiv
+#print axioms DiamondIntegral.Section4.eulerCoordinatesRingEquiv
+#print DiamondIntegral.Section4.EulerFunction.ofModel
+#print axioms DiamondIntegral.Section4.EulerFunction.ofModel
+#print DiamondIntegral.Section4.EulerFunction.ofModel_eval
+#print axioms DiamondIntegral.Section4.EulerFunction.ofModel_eval
+#print DiamondIntegral.Section4.EulerFunction.ofModel_add
+#print axioms DiamondIntegral.Section4.EulerFunction.ofModel_add
+#print DiamondIntegral.Section4.EulerFunction.ofModel_mul
+#print axioms DiamondIntegral.Section4.EulerFunction.ofModel_mul
+#print DiamondIntegral.Section4.EulerFunction.ofModel_neg
+#print axioms DiamondIntegral.Section4.EulerFunction.ofModel_neg
+#print DiamondIntegral.Section4.EulerFunction.ofModel_zsmul
+#print axioms DiamondIntegral.Section4.EulerFunction.ofModel_zsmul
+#print DiamondIntegral.Section4.EulerFunction.eval_add
+#print axioms DiamondIntegral.Section4.EulerFunction.eval_add
+#print DiamondIntegral.Section4.EulerFunction.eval_zero
+#print axioms DiamondIntegral.Section4.EulerFunction.eval_zero
+#print DiamondIntegral.Section4.EulerFunction.eval_neg
+#print axioms DiamondIntegral.Section4.EulerFunction.eval_neg
+#print DiamondIntegral.Section4.EulerFunction.eval_injective
+#print axioms DiamondIntegral.Section4.EulerFunction.eval_injective
+#print DiamondIntegral.Section4.EulerFunction.finite_range
+#print axioms DiamondIntegral.Section4.EulerFunction.finite_range
+#print DiamondIntegral.Section4.EulerFunction.point
+#print axioms DiamondIntegral.Section4.EulerFunction.point
+#print DiamondIntegral.Section4.EulerFunction.ray
+#print axioms DiamondIntegral.Section4.EulerFunction.ray
+#print DiamondIntegral.Section4.EulerFunction.line
+#print axioms DiamondIntegral.Section4.EulerFunction.line
+#print DiamondIntegral.Section4.EulerFunction.point_eval
+#print axioms DiamondIntegral.Section4.EulerFunction.point_eval
+#print DiamondIntegral.Section4.EulerFunction.ray_eval
+#print axioms DiamondIntegral.Section4.EulerFunction.ray_eval
+#print DiamondIntegral.Section4.EulerFunction.line_eval
+#print axioms DiamondIntegral.Section4.EulerFunction.line_eval
+#print DiamondIntegral.Section4.EulerFunction.point_zero
+#print axioms DiamondIntegral.Section4.EulerFunction.point_zero
+#print DiamondIntegral.Section4.EulerFunction.point_mul
+#print axioms DiamondIntegral.Section4.EulerFunction.point_mul
+#print DiamondIntegral.Section4.EulerFunction.point_ray
+#print axioms DiamondIntegral.Section4.EulerFunction.point_ray
+#print DiamondIntegral.Section4.EulerFunction.ray_mul
+#print axioms DiamondIntegral.Section4.EulerFunction.ray_mul
+#print DiamondIntegral.Section4.EulerFunction.line_point
+#print axioms DiamondIntegral.Section4.EulerFunction.line_point
+#print DiamondIntegral.Section4.EulerFunction.line_ray
+#print axioms DiamondIntegral.Section4.EulerFunction.line_ray
+#print DiamondIntegral.Section4.EulerFunction.line_mul
+#print axioms DiamondIntegral.Section4.EulerFunction.line_mul
+#print DiamondIntegral.Section4.EulerFunction.totalEuler
+#print axioms DiamondIntegral.Section4.EulerFunction.totalEuler
+#print DiamondIntegral.Section4.EulerFunction.totalEuler_point
+#print axioms DiamondIntegral.Section4.EulerFunction.totalEuler_point
+#print DiamondIntegral.Section4.EulerFunction.totalEuler_ray
+#print axioms DiamondIntegral.Section4.EulerFunction.totalEuler_ray
+#print DiamondIntegral.Section4.EulerFunction.totalEuler_line
+#print axioms DiamondIntegral.Section4.EulerFunction.totalEuler_line
+#print DiamondIntegral.Section4.EulerFunction.evaluation
+#print axioms DiamondIntegral.Section4.EulerFunction.evaluation
+#print DiamondIntegral.Section4.EulerFunction.eval_zsmul
+#print axioms DiamondIntegral.Section4.EulerFunction.eval_zsmul
+#print DiamondIntegral.Section4.EulerFunction.eval_finsuppSum
+#print axioms DiamondIntegral.Section4.EulerFunction.eval_finsuppSum
+#print DiamondIntegral.Section4.EulerFunction.coefficientEquiv
+#print axioms DiamondIntegral.Section4.EulerFunction.coefficientEquiv
+#print DiamondIntegral.Section4.EulerFunction.ofCoefficients
+#print axioms DiamondIntegral.Section4.EulerFunction.ofCoefficients
+#print DiamondIntegral.Section4.EulerFunction.ofCoefficients_eval
+#print axioms DiamondIntegral.Section4.EulerFunction.ofCoefficients_eval
+#print DiamondIntegral.Section4.EulerFunction.linearCombination
+#print axioms DiamondIntegral.Section4.EulerFunction.linearCombination
+#print DiamondIntegral.Section4.EulerFunction.linearCombination_eval
+#print axioms DiamondIntegral.Section4.EulerFunction.linearCombination_eval
+#print DiamondIntegral.Section4.EulerFunction.ofCoefficients_eq_linearCombination
+#print axioms DiamondIntegral.Section4.EulerFunction.ofCoefficients_eq_linearCombination
+#print DiamondIntegral.Section4.EulerFunction.generator_expansion
+#print axioms DiamondIntegral.Section4.EulerFunction.generator_expansion
+#print DiamondIntegral.Section4.EulerFunction.additive_ext
+#print axioms DiamondIntegral.Section4.EulerFunction.additive_ext
+#print DiamondIntegral.Section4.ConstantNear
+#print axioms DiamondIntegral.Section4.ConstantNear
+#print DiamondIntegral.Section4.stepEval_constantNear_iff
+#print axioms DiamondIntegral.Section4.stepEval_constantNear_iff
+#print DiamondIntegral.Section4.stepEval_breakpoints
+#print axioms DiamondIntegral.Section4.stepEval_breakpoints
+#print DiamondIntegral.Section4.stepEval_finite_breakpoints
+#print axioms DiamondIntegral.Section4.stepEval_finite_breakpoints
+#print DiamondIntegral.Section4.EulerFunction.breakpoints
+#print axioms DiamondIntegral.Section4.EulerFunction.breakpoints
+#print DiamondIntegral.Section4.EulerFunction.mem_breakpoints_iff
+#print axioms DiamondIntegral.Section4.EulerFunction.mem_breakpoints_iff
+#print DiamondIntegral.Section4.EulerFunction.finite_breakpoints
+#print axioms DiamondIntegral.Section4.EulerFunction.finite_breakpoints
+#print DiamondIntegral.Section4.EulerFunction.eq_of_no_breakpoints_between
+#print axioms DiamondIntegral.Section4.EulerFunction.eq_of_no_breakpoints_between
+#print DiamondIntegral.Section4.EulerFunction.eq_on_openInterval_without_breakpoints
+#print axioms DiamondIntegral.Section4.EulerFunction.eq_on_openInterval_without_breakpoints
+#print DiamondIntegral.Section4.EulerFunction.leftValue
+#print axioms DiamondIntegral.Section4.EulerFunction.leftValue
+#print DiamondIntegral.Section4.EulerFunction.rightValue
+#print axioms DiamondIntegral.Section4.EulerFunction.rightValue
+#print DiamondIntegral.Section4.EulerFunction.tailValue
+#print axioms DiamondIntegral.Section4.EulerFunction.tailValue
+#print DiamondIntegral.Section4.EulerFunction.leftValue_germ
+#print axioms DiamondIntegral.Section4.EulerFunction.leftValue_germ
+#print DiamondIntegral.Section4.EulerFunction.rightValue_germ
+#print axioms DiamondIntegral.Section4.EulerFunction.rightValue_germ
+#print DiamondIntegral.Section4.EulerFunction.tailValue_germ
+#print axioms DiamondIntegral.Section4.EulerFunction.tailValue_germ
+#print DiamondIntegral.Section4.EulerFunction.leftValue_eq_iff
+#print axioms DiamondIntegral.Section4.EulerFunction.leftValue_eq_iff
+#print DiamondIntegral.Section4.EulerFunction.rightValue_eq_iff
+#print axioms DiamondIntegral.Section4.EulerFunction.rightValue_eq_iff
+#print DiamondIntegral.Section4.EulerFunction.tailValue_eq_iff
+#print axioms DiamondIntegral.Section4.EulerFunction.tailValue_eq_iff
+#print DiamondIntegral.Section4.EulerFunction.leftValue_mem_range
+#print axioms DiamondIntegral.Section4.EulerFunction.leftValue_mem_range
+#print DiamondIntegral.Section4.EulerFunction.rightValue_mem_range
+#print axioms DiamondIntegral.Section4.EulerFunction.rightValue_mem_range
+#print DiamondIntegral.Section4.EulerFunction.tailValue_mem_range
+#print axioms DiamondIntegral.Section4.EulerFunction.tailValue_mem_range
+#print DiamondIntegral.Section4.EulerFunction.pointCoefficient_eq
+#print axioms DiamondIntegral.Section4.EulerFunction.pointCoefficient_eq
+#print DiamondIntegral.Section4.EulerFunction.rayCoefficient_eq
+#print axioms DiamondIntegral.Section4.EulerFunction.rayCoefficient_eq
+#print DiamondIntegral.Section4.EulerFunction.finsupp_sum_eq_enumerated
+#print axioms DiamondIntegral.Section4.EulerFunction.finsupp_sum_eq_enumerated
+#print DiamondIntegral.Section4.EulerFunction.expansion_of_finite_enumeration
+#print axioms DiamondIntegral.Section4.EulerFunction.expansion_of_finite_enumeration
+#print DiamondIntegral.Section4.EulerFunction.coefficient_expansion_of_finite_enumeration
+#print axioms DiamondIntegral.Section4.EulerFunction.coefficient_expansion_of_finite_enumeration
+#print DiamondIntegral.Section4.constantNear_of_cutDetermined
+#print axioms DiamondIntegral.Section4.constantNear_of_cutDetermined
+#print DiamondIntegral.Section4.nonConstantNear_subset_cuts
+#print axioms DiamondIntegral.Section4.nonConstantNear_subset_cuts
+#print DiamondIntegral.Section4.finite_nonConstantNear_of_cuts
+#print axioms DiamondIntegral.Section4.finite_nonConstantNear_of_cuts
+#print DiamondIntegral.Section4.ncard_nonConstantNear_le_cuts
+#print axioms DiamondIntegral.Section4.ncard_nonConstantNear_le_cuts
+#print DiamondIntegral.Section4.FiniteOrderRanks.rank
+#print axioms DiamondIntegral.Section4.FiniteOrderRanks.rank
+#print DiamondIntegral.Section4.FiniteOrderRanks.rank_lt_card
+#print axioms DiamondIntegral.Section4.FiniteOrderRanks.rank_lt_card
+#print DiamondIntegral.Section4.FiniteOrderRanks.rank_orderIsoOfFin
+#print axioms DiamondIntegral.Section4.FiniteOrderRanks.rank_orderIsoOfFin
+#print DiamondIntegral.Section4.FiniteOrderRanks.rank_strictMonoOn
+#print axioms DiamondIntegral.Section4.FiniteOrderRanks.rank_strictMonoOn
+#print DiamondIntegral.Section4.FiniteOrderRanks.exists_unique_rank
+#print axioms DiamondIntegral.Section4.FiniteOrderRanks.exists_unique_rank
+#print DiamondIntegral.Section4.FiniteOrderRanks.setRank
+#print axioms DiamondIntegral.Section4.FiniteOrderRanks.setRank
+#print DiamondIntegral.Section4.FiniteOrderRanks.setRank_toFinset
+#print axioms DiamondIntegral.Section4.FiniteOrderRanks.setRank_toFinset
+#print DiamondIntegral.Section4.FiniteOrderRanks.setRank_lt_ncard
+#print axioms DiamondIntegral.Section4.FiniteOrderRanks.setRank_lt_ncard
+#print DiamondIntegral.Section4.FiniteOrderRanks.exists_unique_setRank
+#print axioms DiamondIntegral.Section4.FiniteOrderRanks.exists_unique_setRank
+#print DiamondIntegral.Section4.EulerFunction.coefficients_eval
+#print axioms DiamondIntegral.Section4.EulerFunction.coefficients_eval
+#print DiamondIntegral.Section4.EulerFunction.restrictRay
+#print axioms DiamondIntegral.Section4.EulerFunction.restrictRay
+#print DiamondIntegral.Section4.EulerFunction.restrictRay_eval
+#print axioms DiamondIntegral.Section4.EulerFunction.restrictRay_eval
+#print DiamondIntegral.Section4.EulerFunction.pointwiseProduct
+#print axioms DiamondIntegral.Section4.EulerFunction.pointwiseProduct
+#print DiamondIntegral.Section4.EulerFunction.pointwiseProduct_eval
+#print axioms DiamondIntegral.Section4.EulerFunction.pointwiseProduct_eval
+#print DiamondIntegral.Section4.EulerFunction.pointwiseProduct_comm
+#print axioms DiamondIntegral.Section4.EulerFunction.pointwiseProduct_comm
+#print DiamondIntegral.Section4.EulerFunction.pointwiseProduct_add_left
+#print axioms DiamondIntegral.Section4.EulerFunction.pointwiseProduct_add_left
+#print DiamondIntegral.Section4.EulerFunction.pointwiseProduct_add_right
+#print axioms DiamondIntegral.Section4.EulerFunction.pointwiseProduct_add_right
+#print DiamondIntegral.Section4.EulerFunction.pointwiseProduct_zero_left
+#print axioms DiamondIntegral.Section4.EulerFunction.pointwiseProduct_zero_left
+#print DiamondIntegral.Section4.EulerFunction.pointwiseProduct_point
+#print axioms DiamondIntegral.Section4.EulerFunction.pointwiseProduct_point
+#print DiamondIntegral.Section4.EulerFunction.pointwiseProduct_line
+#print axioms DiamondIntegral.Section4.EulerFunction.pointwiseProduct_line
+#print DiamondIntegral.Section4.EulerFunction.pointwiseProduct_ray
+#print axioms DiamondIntegral.Section4.EulerFunction.pointwiseProduct_ray
+#print DiamondIntegral.Section4.EulerFunction.eval_sub
+#print axioms DiamondIntegral.Section4.EulerFunction.eval_sub
+#print DiamondIntegral.Section4.EulerFunction.leftRay
+#print axioms DiamondIntegral.Section4.EulerFunction.leftRay
+#print DiamondIntegral.Section4.EulerFunction.leftRay_eval
+#print axioms DiamondIntegral.Section4.EulerFunction.leftRay_eval
+#print DiamondIntegral.Section4.EulerFunction.totalEuler_leftRay
+#print axioms DiamondIntegral.Section4.EulerFunction.totalEuler_leftRay
+#print DiamondIntegral.Section4.EulerFunction.openInterval
+#print axioms DiamondIntegral.Section4.EulerFunction.openInterval
+#print DiamondIntegral.Section4.EulerFunction.openInterval_eval
+#print axioms DiamondIntegral.Section4.EulerFunction.openInterval_eval
+#print DiamondIntegral.Section4.EulerFunction.totalEuler_openInterval
+#print axioms DiamondIntegral.Section4.EulerFunction.totalEuler_openInterval
+#print DiamondIntegral.Section4.EulerFunction.openInterval_empty
+#print axioms DiamondIntegral.Section4.EulerFunction.openInterval_empty
+#print DiamondIntegral.Section4.EulerFunction.boundedInterval
+#print axioms DiamondIntegral.Section4.EulerFunction.boundedInterval
+#print DiamondIntegral.Section4.EulerFunction.boundedInterval_zero
+#print axioms DiamondIntegral.Section4.EulerFunction.boundedInterval_zero
+#print DiamondIntegral.Section4.EulerFunction.boundedInterval_positive
+#print axioms DiamondIntegral.Section4.EulerFunction.boundedInterval_positive
+#print DiamondIntegral.Section4.EulerFunction.boundedInterval_negative
+#print axioms DiamondIntegral.Section4.EulerFunction.boundedInterval_negative
+#print DiamondIntegral.Section4.EulerFunction.totalEuler_boundedInterval
+#print axioms DiamondIntegral.Section4.EulerFunction.totalEuler_boundedInterval
+#print DiamondIntegral.Section4.EulerFunction.reflection_point_iff
+#print axioms DiamondIntegral.Section4.EulerFunction.reflection_point_iff
+#print DiamondIntegral.Section4.EulerFunction.reflection_ray_iff
+#print axioms DiamondIntegral.Section4.EulerFunction.reflection_ray_iff
+#print DiamondIntegral.Section4.EulerFunction.reflectAt
+#print axioms DiamondIntegral.Section4.EulerFunction.reflectAt
+#print DiamondIntegral.Section4.EulerFunction.reflectAt_eval
+#print axioms DiamondIntegral.Section4.EulerFunction.reflectAt_eval
+#print DiamondIntegral.Section4.EulerFunction.reflectAt_add
+#print axioms DiamondIntegral.Section4.EulerFunction.reflectAt_add
+#print DiamondIntegral.Section4.EulerFunction.reflectAt_zero
+#print axioms DiamondIntegral.Section4.EulerFunction.reflectAt_zero
+#print DiamondIntegral.Section4.EulerFunction.reflection
+#print axioms DiamondIntegral.Section4.EulerFunction.reflection
+#print DiamondIntegral.Section4.EulerFunction.reflectAt_point
+#print axioms DiamondIntegral.Section4.EulerFunction.reflectAt_point
+#print DiamondIntegral.Section4.EulerFunction.reflectAt_ray
+#print axioms DiamondIntegral.Section4.EulerFunction.reflectAt_ray
+#print DiamondIntegral.Section4.EulerFunction.reflectAt_line
+#print axioms DiamondIntegral.Section4.EulerFunction.reflectAt_line
+#print DiamondIntegral.Section4.EulerFunction.reflection_involutive
+#print axioms DiamondIntegral.Section4.EulerFunction.reflection_involutive
+#print DiamondIntegral.Section4.EulerFunction.totalEuler_reflection
+#print axioms DiamondIntegral.Section4.EulerFunction.totalEuler_reflection
+#print DiamondIntegral.Section4.EulerFunction.totalEuler_reflectAt
+#print axioms DiamondIntegral.Section4.EulerFunction.totalEuler_reflectAt
+#print DiamondIntegral.Section4.EulerFunction.orderPush
+#print axioms DiamondIntegral.Section4.EulerFunction.orderPush
+#print DiamondIntegral.Section4.EulerFunction.orderPush_eval
+#print axioms DiamondIntegral.Section4.EulerFunction.orderPush_eval
+#print DiamondIntegral.Section4.EulerFunction.orderTransport
+#print axioms DiamondIntegral.Section4.EulerFunction.orderTransport
+#print DiamondIntegral.Section4.EulerFunction.orderPush_trans
+#print axioms DiamondIntegral.Section4.EulerFunction.orderPush_trans
+#print DiamondIntegral.Section4.EulerFunction.orderPush_line
+#print axioms DiamondIntegral.Section4.EulerFunction.orderPush_line
+#print DiamondIntegral.Section4.EulerFunction.orderPush_point
+#print axioms DiamondIntegral.Section4.EulerFunction.orderPush_point
+#print DiamondIntegral.Section4.EulerFunction.orderPush_ray
+#print axioms DiamondIntegral.Section4.EulerFunction.orderPush_ray
+#print DiamondIntegral.Section4.EulerFunction.totalEuler_orderPush
+#print axioms DiamondIntegral.Section4.EulerFunction.totalEuler_orderPush
+#print DiamondIntegral.Section4.EulerFunction.IsDoublyBounded.orderPush
+#print axioms DiamondIntegral.Section4.EulerFunction.IsDoublyBounded.orderPush
+#print DiamondIntegral.Section4.EulerFunction.UnaryBranch
+#print axioms DiamondIntegral.Section4.EulerFunction.UnaryBranch
+#print DiamondIntegral.Section4.EulerFunction.UnaryBranch.apply
+#print axioms DiamondIntegral.Section4.EulerFunction.UnaryBranch.apply
+#print DiamondIntegral.Section4.EulerFunction.UnaryBranch.push
+#print axioms DiamondIntegral.Section4.EulerFunction.UnaryBranch.push
+#print DiamondIntegral.Section4.EulerFunction.UnaryBranch.fibre
+#print axioms DiamondIntegral.Section4.EulerFunction.UnaryBranch.fibre
+#print DiamondIntegral.Section4.EulerFunction.UnaryBranch.fibre_eval
+#print axioms DiamondIntegral.Section4.EulerFunction.UnaryBranch.fibre_eval
+#print DiamondIntegral.Section4.EulerFunction.totalEuler_pointwise_point
+#print axioms DiamondIntegral.Section4.EulerFunction.totalEuler_pointwise_point
+#print DiamondIntegral.Section4.EulerFunction.UnaryBranch.fibreEuler
+#print axioms DiamondIntegral.Section4.EulerFunction.UnaryBranch.fibreEuler
+#print DiamondIntegral.Section4.EulerFunction.UnaryBranch.totalEuler_push
+#print axioms DiamondIntegral.Section4.EulerFunction.UnaryBranch.totalEuler_push
+#print DiamondIntegral.Section4.EulerFunction.unaryPushforward
+#print axioms DiamondIntegral.Section4.EulerFunction.unaryPushforward
+#print DiamondIntegral.Section4.EulerFunction.unaryFibre
+#print axioms DiamondIntegral.Section4.EulerFunction.unaryFibre
+#print DiamondIntegral.Section4.EulerFunction.unaryPushforward_eval
+#print axioms DiamondIntegral.Section4.EulerFunction.unaryPushforward_eval
+#print DiamondIntegral.Section4.EulerFunction.unary_pushforward_fubini
+#print axioms DiamondIntegral.Section4.EulerFunction.unary_pushforward_fubini
+#print DiamondIntegral.Section4.EulerFunction.unaryFibre_eval_of_compatible
+#print axioms DiamondIntegral.Section4.EulerFunction.unaryFibre_eval_of_compatible
+#print DiamondIntegral.Section4.EulerFunction.IsUnaryImage
+#print axioms DiamondIntegral.Section4.EulerFunction.IsUnaryImage
+#print DiamondIntegral.Section4.EulerFunction.IsUnaryImage.unique
+#print axioms DiamondIntegral.Section4.EulerFunction.IsUnaryImage.unique
+#print DiamondIntegral.Section4.EulerFunction.isUnaryImage_zero
+#print axioms DiamondIntegral.Section4.EulerFunction.isUnaryImage_zero
+#print DiamondIntegral.Section4.EulerFunction.IsUnaryImage.add
+#print axioms DiamondIntegral.Section4.EulerFunction.IsUnaryImage.add
+#print DiamondIntegral.Section4.EulerFunction.IsUnaryImage.zsmul
+#print axioms DiamondIntegral.Section4.EulerFunction.IsUnaryImage.zsmul
+#print DiamondIntegral.Section4.EulerFunction.UnaryBranch.isUnaryImage
+#print axioms DiamondIntegral.Section4.EulerFunction.UnaryBranch.isUnaryImage
+#print DiamondIntegral.Section4.EulerFunction.isUnaryImage_id
+#print axioms DiamondIntegral.Section4.EulerFunction.isUnaryImage_id
+#print DiamondIntegral.Section4.EulerFunction.isUnaryImage_const
+#print axioms DiamondIntegral.Section4.EulerFunction.isUnaryImage_const
+#print DiamondIntegral.Section4.EulerFunction.UnaryBranch.pull
+#print axioms DiamondIntegral.Section4.EulerFunction.UnaryBranch.pull
+#print DiamondIntegral.Section4.EulerFunction.UnaryBranch.pull_eval
+#print axioms DiamondIntegral.Section4.EulerFunction.UnaryBranch.pull_eval
+#print DiamondIntegral.Section4.EulerFunction.UnaryBranch.fibre_pointwise_pull
+#print axioms DiamondIntegral.Section4.EulerFunction.UnaryBranch.fibre_pointwise_pull
+#print DiamondIntegral.Section4.EulerFunction.UnaryBranch.projection_formula
+#print axioms DiamondIntegral.Section4.EulerFunction.UnaryBranch.projection_formula
+#print DiamondIntegral.Section4.EulerFunction.restrictedSource
+#print axioms DiamondIntegral.Section4.EulerFunction.restrictedSource
+#print DiamondIntegral.Section4.EulerFunction.restrictedSource_eval_of_compatible
+#print axioms DiamondIntegral.Section4.EulerFunction.restrictedSource_eval_of_compatible
+#print DiamondIntegral.Section4.EulerFunction.unaryPushforward_projection_formula
+#print axioms DiamondIntegral.Section4.EulerFunction.unaryPushforward_projection_formula
+#print DiamondIntegral.Section4.EulerFunction.totalEuler_restrictedSource
+#print axioms DiamondIntegral.Section4.EulerFunction.totalEuler_restrictedSource
+#print DiamondIntegral.Section4.EulerFunction.totalEuler_restrict_leftRay
+#print axioms DiamondIntegral.Section4.EulerFunction.totalEuler_restrict_leftRay
+#print DiamondIntegral.Section4.EulerFunction.totalEuler_cumulative
+#print axioms DiamondIntegral.Section4.EulerFunction.totalEuler_cumulative
+#print DiamondIntegral.Section4.EulerFunction.UnaryProjectionData
+#print axioms DiamondIntegral.Section4.EulerFunction.UnaryProjectionData
+#print DiamondIntegral.Section4.EulerFunction.UnaryProjectionData.ofProperties
+#print axioms DiamondIntegral.Section4.EulerFunction.UnaryProjectionData.ofProperties
+#print DiamondIntegral.Section4.EulerFunction.kernelColumn
+#print axioms DiamondIntegral.Section4.EulerFunction.kernelColumn
+#print DiamondIntegral.Section4.EulerFunction.kernelRow
+#print axioms DiamondIntegral.Section4.EulerFunction.kernelRow
+#print DiamondIntegral.Section4.EulerFunction.kernelVertical
+#print axioms DiamondIntegral.Section4.EulerFunction.kernelVertical
+#print DiamondIntegral.Section4.EulerFunction.kernelHorizontal
+#print axioms DiamondIntegral.Section4.EulerFunction.kernelHorizontal
+#print DiamondIntegral.Section4.EulerFunction.kernelRow_eval
+#print axioms DiamondIntegral.Section4.EulerFunction.kernelRow_eval
+#print DiamondIntegral.Section4.EulerFunction.kernelColumn_integral
+#print axioms DiamondIntegral.Section4.EulerFunction.kernelColumn_integral
+#print DiamondIntegral.Section4.EulerFunction.kernelRow_integral
+#print axioms DiamondIntegral.Section4.EulerFunction.kernelRow_integral
+#print DiamondIntegral.Section4.EulerFunction.kernel_fubini
+#print axioms DiamondIntegral.Section4.EulerFunction.kernel_fubini
+#print DiamondIntegral.Section4.EulerFunction.openInterval_indicator_difference
+#print axioms DiamondIntegral.Section4.EulerFunction.openInterval_indicator_difference
+#print DiamondIntegral.Section4.EulerFunction.stripFibre
+#print axioms DiamondIntegral.Section4.EulerFunction.stripFibre
+#print DiamondIntegral.Section4.EulerFunction.stripPushforward
+#print axioms DiamondIntegral.Section4.EulerFunction.stripPushforward
+#print DiamondIntegral.Section4.EulerFunction.stripFibre_eval
+#print axioms DiamondIntegral.Section4.EulerFunction.stripFibre_eval
+#print DiamondIntegral.Section4.EulerFunction.stripPushforward_eval
+#print axioms DiamondIntegral.Section4.EulerFunction.stripPushforward_eval
+#print DiamondIntegral.Section4.EulerFunction.strip_fubini
+#print axioms DiamondIntegral.Section4.EulerFunction.strip_fubini
+#print DiamondIntegral.Section4.EulerFunction.strip_verticalEuler
+#print axioms DiamondIntegral.Section4.EulerFunction.strip_verticalEuler
+#print DiamondIntegral.Section4.EulerFunction.positivePowerIso
+#print axioms DiamondIntegral.Section4.EulerFunction.positivePowerIso
+#print DiamondIntegral.Section4.EulerFunction.positiveRationalAffineIso
+#print axioms DiamondIntegral.Section4.EulerFunction.positiveRationalAffineIso
+#print DiamondIntegral.Section4.EulerFunction.positiveRationalAffineIso_spec
+#print axioms DiamondIntegral.Section4.EulerFunction.positiveRationalAffineIso_spec
+#print DiamondIntegral.Section4.EulerFunction.power_law_branch
+#print axioms DiamondIntegral.Section4.EulerFunction.power_law_branch
+#print DiamondIntegral.Section4.EulerFunction.exists_pushforward_of_power_laws
+#print axioms DiamondIntegral.Section4.EulerFunction.exists_pushforward_of_power_laws
+#print DiamondIntegral.Section4.EulerFunction.exists_power_law_projection
+#print axioms DiamondIntegral.Section4.EulerFunction.exists_power_law_projection
+#print DiamondIntegral.Section4.EulerFunction.finite_large_power_law_fibres
+#print axioms DiamondIntegral.Section4.EulerFunction.finite_large_power_law_fibres
+#print DiamondIntegral.Section4.EulerFunction.pointwiseProduct_ray_leftRay
+#print axioms DiamondIntegral.Section4.EulerFunction.pointwiseProduct_ray_leftRay
+#print DiamondIntegral.Section4.EulerFunction.convolutionValue
+#print axioms DiamondIntegral.Section4.EulerFunction.convolutionValue
+#print DiamondIntegral.Section4.EulerFunction.convolutionValue_line
+#print axioms DiamondIntegral.Section4.EulerFunction.convolutionValue_line
+#print DiamondIntegral.Section4.EulerFunction.convolutionValue_point
+#print axioms DiamondIntegral.Section4.EulerFunction.convolutionValue_point
+#print DiamondIntegral.Section4.EulerFunction.convolutionValue_ray_line
+#print axioms DiamondIntegral.Section4.EulerFunction.convolutionValue_ray_line
+#print DiamondIntegral.Section4.EulerFunction.convolutionValue_ray_point
+#print axioms DiamondIntegral.Section4.EulerFunction.convolutionValue_ray_point
+#print DiamondIntegral.Section4.EulerFunction.convolutionValue_ray_ray
+#print axioms DiamondIntegral.Section4.EulerFunction.convolutionValue_ray_ray
+#print DiamondIntegral.Section4.EulerFunction.convolutionRight
+#print axioms DiamondIntegral.Section4.EulerFunction.convolutionRight
+#print DiamondIntegral.Section4.EulerFunction.convolutionBilinear
+#print axioms DiamondIntegral.Section4.EulerFunction.convolutionBilinear
+#print DiamondIntegral.Section4.EulerFunction.productBilinear
+#print axioms DiamondIntegral.Section4.EulerFunction.productBilinear
+#print DiamondIntegral.Section4.EulerFunction.convolutionBilinear_eq_product
+#print axioms DiamondIntegral.Section4.EulerFunction.convolutionBilinear_eq_product
+#print DiamondIntegral.Section4.EulerFunction.convolutionValue_eq_product
+#print axioms DiamondIntegral.Section4.EulerFunction.convolutionValue_eq_product
+#print DiamondIntegral.Section4.EulerFunction.convolution_associative
+#print axioms DiamondIntegral.Section4.EulerFunction.convolution_associative
+#print DiamondIntegral.Section4.EulerFunction.convolution_commutative
+#print axioms DiamondIntegral.Section4.EulerFunction.convolution_commutative
+#print DiamondIntegral.Section4.EulerFunction.boundedInterval_nonneg_form
+#print axioms DiamondIntegral.Section4.EulerFunction.boundedInterval_nonneg_form
+#print DiamondIntegral.Section4.EulerFunction.boundedInterval_nonpos_form
+#print axioms DiamondIntegral.Section4.EulerFunction.boundedInterval_nonpos_form
+#print DiamondIntegral.Section4.EulerFunction.point_mul_openInterval
+#print axioms DiamondIntegral.Section4.EulerFunction.point_mul_openInterval
+#print DiamondIntegral.Section4.EulerFunction.point_mul_boundedInterval_zero
+#print axioms DiamondIntegral.Section4.EulerFunction.point_mul_boundedInterval_zero
+#print DiamondIntegral.Section4.EulerFunction.point_mul_boundedInterval
+#print axioms DiamondIntegral.Section4.EulerFunction.point_mul_boundedInterval
+#print DiamondIntegral.Section4.EulerFunction.openInterval_nonneg_decomposition
+#print axioms DiamondIntegral.Section4.EulerFunction.openInterval_nonneg_decomposition
+#print DiamondIntegral.Section4.EulerFunction.openInterval_nonpos_decomposition
+#print axioms DiamondIntegral.Section4.EulerFunction.openInterval_nonpos_decomposition
+#print DiamondIntegral.Section4.EulerFunction.openInterval_cross_decomposition
+#print axioms DiamondIntegral.Section4.EulerFunction.openInterval_cross_decomposition
+#print DiamondIntegral.Section4.EulerFunction.ray_point
+#print axioms DiamondIntegral.Section4.EulerFunction.ray_point
+#print DiamondIntegral.Section4.EulerFunction.boundedInterval_mul_nonneg
+#print axioms DiamondIntegral.Section4.EulerFunction.boundedInterval_mul_nonneg
+#print DiamondIntegral.Section4.EulerFunction.boundedInterval_mul_nonpos
+#print axioms DiamondIntegral.Section4.EulerFunction.boundedInterval_mul_nonpos
+#print DiamondIntegral.Section4.EulerFunction.boundedInterval_mul_opposite
+#print axioms DiamondIntegral.Section4.EulerFunction.boundedInterval_mul_opposite
+#print DiamondIntegral.Section4.EulerFunction.boundedInterval_mul_opposite'
+#print axioms DiamondIntegral.Section4.EulerFunction.boundedInterval_mul_opposite'
+#print DiamondIntegral.Section4.stepEval_below
+#print axioms DiamondIntegral.Section4.stepEval_below
+#print DiamondIntegral.Section4.stepEval_above
+#print axioms DiamondIntegral.Section4.stepEval_above
+#print DiamondIntegral.Section4.EulerFunction.IsDoublyBounded
+#print axioms DiamondIntegral.Section4.EulerFunction.IsDoublyBounded
+#print DiamondIntegral.Section4.EulerFunction.ray_not_isDoublyBounded
+#print axioms DiamondIntegral.Section4.EulerFunction.ray_not_isDoublyBounded
+#print DiamondIntegral.Section4.EulerFunction.line_not_isDoublyBounded
+#print axioms DiamondIntegral.Section4.EulerFunction.line_not_isDoublyBounded
+#print DiamondIntegral.Section4.EulerFunction.isDoublyBounded_iff_coefficients
+#print axioms DiamondIntegral.Section4.EulerFunction.isDoublyBounded_iff_coefficients
+#print DiamondIntegral.Section4.EulerFunction.isDoublyBounded_zero
+#print axioms DiamondIntegral.Section4.EulerFunction.isDoublyBounded_zero
+#print DiamondIntegral.Section4.EulerFunction.isDoublyBounded_point
+#print axioms DiamondIntegral.Section4.EulerFunction.isDoublyBounded_point
+#print DiamondIntegral.Section4.EulerFunction.isDoublyBounded_one
+#print axioms DiamondIntegral.Section4.EulerFunction.isDoublyBounded_one
+#print DiamondIntegral.Section4.EulerFunction.IsDoublyBounded.neg
+#print axioms DiamondIntegral.Section4.EulerFunction.IsDoublyBounded.neg
+#print DiamondIntegral.Section4.EulerFunction.IsDoublyBounded.add
+#print axioms DiamondIntegral.Section4.EulerFunction.IsDoublyBounded.add
+#print DiamondIntegral.Section4.EulerFunction.convolution_support_witness
+#print axioms DiamondIntegral.Section4.EulerFunction.convolution_support_witness
+#print DiamondIntegral.Section4.EulerFunction.IsDoublyBounded.mul
+#print axioms DiamondIntegral.Section4.EulerFunction.IsDoublyBounded.mul
+#print DiamondIntegral.Section4.EulerFunction.boundedSubring
+#print axioms DiamondIntegral.Section4.EulerFunction.boundedSubring
+#print DiamondIntegral.Section4.EulerFunction.changeKind
+#print axioms DiamondIntegral.Section4.EulerFunction.changeKind
+#print DiamondIntegral.Section4.EulerFunction.changeKind_eval
+#print axioms DiamondIntegral.Section4.EulerFunction.changeKind_eval
+#print DiamondIntegral.Section4.EulerFunction.changeKind_coefficients
+#print axioms DiamondIntegral.Section4.EulerFunction.changeKind_coefficients
+#print DiamondIntegral.Section4.EulerFunction.changeKind_self
+#print axioms DiamondIntegral.Section4.EulerFunction.changeKind_self
+#print DiamondIntegral.Section4.EulerFunction.changeKind_trans
+#print axioms DiamondIntegral.Section4.EulerFunction.changeKind_trans
+#print DiamondIntegral.Section4.EulerFunction.totalEuler_ofCoefficients
+#print axioms DiamondIntegral.Section4.EulerFunction.totalEuler_ofCoefficients
+#print DiamondIntegral.Section4.EulerFunction.totalEuler_coefficients
+#print axioms DiamondIntegral.Section4.EulerFunction.totalEuler_coefficients
+#print DiamondIntegral.Section4.EulerFunction.IsDoublyBounded.changeKind
+#print axioms DiamondIntegral.Section4.EulerFunction.IsDoublyBounded.changeKind
+#print DiamondIntegral.Section4.EulerFunction.totalEuler_of_bounded
+#print axioms DiamondIntegral.Section4.EulerFunction.totalEuler_of_bounded
+#print DiamondIntegral.Section4.EulerFunction.totalEuler_changeKind
+#print axioms DiamondIntegral.Section4.EulerFunction.totalEuler_changeKind
+#print DiamondIntegral.Section4.EulerFunction.IsDoublyBounded.pointwise_left
+#print axioms DiamondIntegral.Section4.EulerFunction.IsDoublyBounded.pointwise_left
+#print DiamondIntegral.Section4.EulerFunction.changeKind_pointwiseProduct
+#print axioms DiamondIntegral.Section4.EulerFunction.changeKind_pointwiseProduct
+#print DiamondIntegral.Section4.EulerFunction.changeKind_reflectAt
+#print axioms DiamondIntegral.Section4.EulerFunction.changeKind_reflectAt
+#print DiamondIntegral.Section4.EulerFunction.changeKind_mul_of_bounded
+#print axioms DiamondIntegral.Section4.EulerFunction.changeKind_mul_of_bounded
+#print DiamondIntegral.Section4.EulerFunction.boundedKindEquiv
+#print axioms DiamondIntegral.Section4.EulerFunction.boundedKindEquiv
+#print DiamondIntegral.Section4.EulerFunction.boundedEuler
+#print axioms DiamondIntegral.Section4.EulerFunction.boundedEuler
+#print DiamondIntegral.Section4.EulerFunction.closedInterval
+#print axioms DiamondIntegral.Section4.EulerFunction.closedInterval
+#print DiamondIntegral.Section4.EulerFunction.closedInterval_eval
+#print axioms DiamondIntegral.Section4.EulerFunction.closedInterval_eval
+#print DiamondIntegral.Section4.EulerFunction.totalEuler_closedInterval
+#print axioms DiamondIntegral.Section4.EulerFunction.totalEuler_closedInterval
+#print DiamondIntegral.Section4.EulerFunction.truncate
+#print axioms DiamondIntegral.Section4.EulerFunction.truncate
+#print DiamondIntegral.Section4.EulerFunction.truncate_eval
+#print axioms DiamondIntegral.Section4.EulerFunction.truncate_eval
+#print DiamondIntegral.Section4.EulerFunction.truncate_line
+#print axioms DiamondIntegral.Section4.EulerFunction.truncate_line
+#print DiamondIntegral.Section4.EulerFunction.truncate_point
+#print axioms DiamondIntegral.Section4.EulerFunction.truncate_point
+#print DiamondIntegral.Section4.EulerFunction.truncate_ray
+#print axioms DiamondIntegral.Section4.EulerFunction.truncate_ray
+#print DiamondIntegral.Section4.EulerFunction.totalEuler_truncate_coefficients
+#print axioms DiamondIntegral.Section4.EulerFunction.totalEuler_truncate_coefficients
+#print DiamondIntegral.Section4.EulerFunction.boundedEuler_stabilization
+#print axioms DiamondIntegral.Section4.EulerFunction.boundedEuler_stabilization
+#print DiamondIntegral.Section4.EulerFunction.isDoublyBounded_openInterval
+#print axioms DiamondIntegral.Section4.EulerFunction.isDoublyBounded_openInterval
+#print DiamondIntegral.Section4.EulerFunction.isDoublyBounded_boundedInterval
+#print axioms DiamondIntegral.Section4.EulerFunction.isDoublyBounded_boundedInterval
+#print DiamondIntegral.Section4.EulerFunction.boundedPoint
+#print axioms DiamondIntegral.Section4.EulerFunction.boundedPoint
+#print DiamondIntegral.Section4.EulerFunction.boundedIntervalElement
+#print axioms DiamondIntegral.Section4.EulerFunction.boundedIntervalElement
+#print DiamondIntegral.Section4.EulerFunction.boundedPoint_coe
+#print axioms DiamondIntegral.Section4.EulerFunction.boundedPoint_coe
+#print DiamondIntegral.Section4.EulerFunction.boundedIntervalElement_coe
+#print axioms DiamondIntegral.Section4.EulerFunction.boundedIntervalElement_coe
+#print DiamondIntegral.Section4.EulerFunction.boundedPoint_zero
+#print axioms DiamondIntegral.Section4.EulerFunction.boundedPoint_zero
+#print DiamondIntegral.Section4.EulerFunction.boundedEuler_point
+#print axioms DiamondIntegral.Section4.EulerFunction.boundedEuler_point
+#print DiamondIntegral.Section4.EulerFunction.boundedEuler_interval
+#print axioms DiamondIntegral.Section4.EulerFunction.boundedEuler_interval
+#print DiamondIntegral.Section4.EulerFunction.boundedRayDifference
+#print axioms DiamondIntegral.Section4.EulerFunction.boundedRayDifference
+#print DiamondIntegral.Section4.EulerFunction.boundedRayDifference_coe
+#print axioms DiamondIntegral.Section4.EulerFunction.boundedRayDifference_coe
+#print DiamondIntegral.Section4.EulerFunction.boundedCombination
+#print axioms DiamondIntegral.Section4.EulerFunction.boundedCombination
+#print DiamondIntegral.Section4.EulerFunction.boundedCombination_coe
+#print axioms DiamondIntegral.Section4.EulerFunction.boundedCombination_coe
+#print DiamondIntegral.Section4.EulerFunction.balanced_ray_sum_eval
+#print axioms DiamondIntegral.Section4.EulerFunction.balanced_ray_sum_eval
+#print DiamondIntegral.Section4.EulerFunction.boundedCombination_eval
+#print axioms DiamondIntegral.Section4.EulerFunction.boundedCombination_eval
+#print DiamondIntegral.Section4.EulerFunction.bounded_generator_expansion
+#print axioms DiamondIntegral.Section4.EulerFunction.bounded_generator_expansion
+#print DiamondIntegral.Section4.EulerFunction.bounded_additive_ext
+#print axioms DiamondIntegral.Section4.EulerFunction.bounded_additive_ext
+#print DiamondIntegral.Section4.EulerFunction.boundedEulerGenerators
+#print axioms DiamondIntegral.Section4.EulerFunction.boundedEulerGenerators
+#print DiamondIntegral.Section4.EulerFunction.boundedEulerIdeal
+#print axioms DiamondIntegral.Section4.EulerFunction.boundedEulerIdeal
+#print DiamondIntegral.Section4.EulerFunction.BoundedFunctionQuotient
+#print axioms DiamondIntegral.Section4.EulerFunction.BoundedFunctionQuotient
+#print DiamondIntegral.Section4.EulerFunction.point_relation_mem
+#print axioms DiamondIntegral.Section4.EulerFunction.point_relation_mem
+#print DiamondIntegral.Section4.EulerFunction.interval_relation_mem
+#print axioms DiamondIntegral.Section4.EulerFunction.interval_relation_mem
+#print DiamondIntegral.Section4.EulerFunction.boundedEulerIdeal_le_kernel
+#print axioms DiamondIntegral.Section4.EulerFunction.boundedEulerIdeal_le_kernel
+#print DiamondIntegral.Section4.EulerFunction.boundedQuotientMap
+#print axioms DiamondIntegral.Section4.EulerFunction.boundedQuotientMap
+#print DiamondIntegral.Section4.EulerFunction.boundedQuotientMap_point
+#print axioms DiamondIntegral.Section4.EulerFunction.boundedQuotientMap_point
+#print DiamondIntegral.Section4.EulerFunction.boundedQuotientMap_interval
+#print axioms DiamondIntegral.Section4.EulerFunction.boundedQuotientMap_interval
+#print DiamondIntegral.Section4.EulerFunction.boundedQuotientMap_eq_intEuler
+#print axioms DiamondIntegral.Section4.EulerFunction.boundedQuotientMap_eq_intEuler
+#print DiamondIntegral.Section4.EulerFunction.boundedQuotientMap_apply
+#print axioms DiamondIntegral.Section4.EulerFunction.boundedQuotientMap_apply
+#print DiamondIntegral.Section4.EulerFunction.boundedEulerIdeal_eq_kernel
+#print axioms DiamondIntegral.Section4.EulerFunction.boundedEulerIdeal_eq_kernel
+#print DiamondIntegral.Section4.EulerFunction.quotientEuler
+#print axioms DiamondIntegral.Section4.EulerFunction.quotientEuler
+#print DiamondIntegral.Section4.EulerFunction.quotientEuler_mk
+#print axioms DiamondIntegral.Section4.EulerFunction.quotientEuler_mk
+#print DiamondIntegral.Section4.EulerFunction.boundedEulerQuotientEquiv
+#print axioms DiamondIntegral.Section4.EulerFunction.boundedEulerQuotientEquiv
+#print DiamondIntegral.Section4.EulerFunction.cutCode
+#print axioms DiamondIntegral.Section4.EulerFunction.cutCode
+#print DiamondIntegral.Section4.EulerFunction.cutCode_eq_iff
+#print axioms DiamondIntegral.Section4.EulerFunction.cutCode_eq_iff
+#print DiamondIntegral.Section4.EulerFunction.cutIndicator
+#print axioms DiamondIntegral.Section4.EulerFunction.cutIndicator
+#print DiamondIntegral.Section4.EulerFunction.cutIndicator_eval
+#print axioms DiamondIntegral.Section4.EulerFunction.cutIndicator_eval
+#print DiamondIntegral.Section4.EulerFunction.cutCell
+#print axioms DiamondIntegral.Section4.EulerFunction.cutCell
+#print DiamondIntegral.Section4.EulerFunction.cutCell_eval
+#print axioms DiamondIntegral.Section4.EulerFunction.cutCell_eval
+#print DiamondIntegral.Section4.EulerFunction.CutDetermined
+#print axioms DiamondIntegral.Section4.EulerFunction.CutDetermined
+#print DiamondIntegral.Section4.EulerFunction.exists_finite_cuts_of_finite_range
+#print axioms DiamondIntegral.Section4.EulerFunction.exists_finite_cuts_of_finite_range
+#print DiamondIntegral.Section4.EulerFunction.cutSampleValue
+#print axioms DiamondIntegral.Section4.EulerFunction.cutSampleValue
+#print DiamondIntegral.Section4.EulerFunction.cutSampleValue_eq
+#print axioms DiamondIntegral.Section4.EulerFunction.cutSampleValue_eq
+#print DiamondIntegral.Section4.EulerFunction.ofCutFunction
+#print axioms DiamondIntegral.Section4.EulerFunction.ofCutFunction
+#print DiamondIntegral.Section4.EulerFunction.eval_finsetSum
+#print axioms DiamondIntegral.Section4.EulerFunction.eval_finsetSum
+#print DiamondIntegral.Section4.EulerFunction.ofCutFunction_eval
+#print axioms DiamondIntegral.Section4.EulerFunction.ofCutFunction_eval
+#print DiamondIntegral.Section4.EulerFunction.exists_eulerFunction_of_finite_cuts
+#print axioms DiamondIntegral.Section4.EulerFunction.exists_eulerFunction_of_finite_cuts
+#print DiamondIntegral.Section4.EulerFunction.finite_range_of_finite_cuts
+#print axioms DiamondIntegral.Section4.EulerFunction.finite_range_of_finite_cuts
+#print DiamondIntegral.Section4.EulerFunction.cutCode_zero_iff
+#print axioms DiamondIntegral.Section4.EulerFunction.cutCode_zero_iff
+#print DiamondIntegral.Section4.EulerFunction.cutCode_one_iff
+#print axioms DiamondIntegral.Section4.EulerFunction.cutCode_one_iff
+#print DiamondIntegral.Section4.EulerFunction.cutCode_two_iff
+#print axioms DiamondIntegral.Section4.EulerFunction.cutCode_two_iff
+#print DiamondIntegral.Section4.EulerFunction.cutPatternValue
+#print axioms DiamondIntegral.Section4.EulerFunction.cutPatternValue
+#print DiamondIntegral.Section4.EulerFunction.totalEuler_cutCell
+#print axioms DiamondIntegral.Section4.EulerFunction.totalEuler_cutCell
+#print DiamondIntegral.Section4.EulerFunction.cutEulerSum
+#print axioms DiamondIntegral.Section4.EulerFunction.cutEulerSum
+#print DiamondIntegral.Section4.EulerFunction.totalEuler_cut_indicator
+#print axioms DiamondIntegral.Section4.EulerFunction.totalEuler_cut_indicator
+#print DiamondIntegral.Section4.EulerFunction.possibleCutEulerValues
+#print axioms DiamondIntegral.Section4.EulerFunction.possibleCutEulerValues
+#print DiamondIntegral.Section4.EulerFunction.possibleCutEulerValues_finite
+#print axioms DiamondIntegral.Section4.EulerFunction.possibleCutEulerValues_finite
+#print DiamondIntegral.Section4.EulerFunction.cutEulerSum_mem_possible
+#print axioms DiamondIntegral.Section4.EulerFunction.cutEulerSum_mem_possible
+#print DiamondIntegral.Section4.EulerFunction.exists_fin_inj_of_finite_ncard
+#print axioms DiamondIntegral.Section4.EulerFunction.exists_fin_inj_of_finite_ncard
+#print DiamondIntegral.Section4.EulerFunction.finite_ncard_le_iff_no_inj
+#print axioms DiamondIntegral.Section4.EulerFunction.finite_ncard_le_iff_no_inj
+#print DiamondIntegral.Section4.EulerFunction.finiteIndicator
+#print axioms DiamondIntegral.Section4.EulerFunction.finiteIndicator
+#print DiamondIntegral.Section4.EulerFunction.finiteIndicator_eval
+#print axioms DiamondIntegral.Section4.EulerFunction.finiteIndicator_eval
+#print DiamondIntegral.Section4.EulerFunction.totalEuler_finiteIndicator
+#print axioms DiamondIntegral.Section4.EulerFunction.totalEuler_finiteIndicator
+#print DiamondIntegral.Section4.EulerFunction.totalEuler_finite_set
+#print axioms DiamondIntegral.Section4.EulerFunction.totalEuler_finite_set
+#print DiamondIntegral.Section4.EulerFunction.totalEuler_finite_set_equiv
+#print axioms DiamondIntegral.Section4.EulerFunction.totalEuler_finite_set_equiv
+#print DiamondIntegral.Section4.GammaDefinableEuler.PaperGamma
+#print axioms DiamondIntegral.Section4.GammaDefinableEuler.PaperGamma
+#print DiamondIntegral.Section4.GammaDefinableEuler.toPaperGamma
+#print axioms DiamondIntegral.Section4.GammaDefinableEuler.toPaperGamma
+#print DiamondIntegral.Section4.GammaDefinableEuler.toPaperGamma_le
+#print axioms DiamondIntegral.Section4.GammaDefinableEuler.toPaperGamma_le
+#print DiamondIntegral.Section4.GammaDefinableEuler.toPaperGamma_mul
+#print axioms DiamondIntegral.Section4.GammaDefinableEuler.toPaperGamma_mul
+#print DiamondIntegral.Section4.GammaDefinableEuler.toPaperGamma_one
+#print axioms DiamondIntegral.Section4.GammaDefinableEuler.toPaperGamma_one
+#print DiamondIntegral.Section4.GammaDefinableEuler.definable_fibre_cut_control
+#print axioms DiamondIntegral.Section4.GammaDefinableEuler.definable_fibre_cut_control
+#print DiamondIntegral.Section4.GammaDefinableEuler.definable_function_finite_cuts
+#print axioms DiamondIntegral.Section4.GammaDefinableEuler.definable_function_finite_cuts
+#print DiamondIntegral.Section4.GammaDefinableEuler.exists_eulerFunction_of_definable
+#print axioms DiamondIntegral.Section4.GammaDefinableEuler.exists_eulerFunction_of_definable
+#print DiamondIntegral.Section4.GammaOrderLogic.Formula
+#print axioms DiamondIntegral.Section4.GammaOrderLogic.Formula
+#print DiamondIntegral.Section4.GammaOrderLogic.Formula.Realize
+#print axioms DiamondIntegral.Section4.GammaOrderLogic.Formula.Realize
+#print DiamondIntegral.Section4.GammaOrderLogic.GammaDefinable
+#print axioms DiamondIntegral.Section4.GammaOrderLogic.GammaDefinable
+#print DiamondIntegral.Section4.GammaOrderLogic.proper_definable_base
+#print axioms DiamondIntegral.Section4.GammaOrderLogic.proper_definable_base
+#print DiamondIntegral.Section4.GammaOrderLogic.formula_definable_base
+#print axioms DiamondIntegral.Section4.GammaOrderLogic.formula_definable_base
+#print DiamondIntegral.Section4.GammaOrderLogic.unary_definable_iff
+#print axioms DiamondIntegral.Section4.GammaOrderLogic.unary_definable_iff
+#print DiamondIntegral.Section4.GammaOrderLogic.interiorFormula
+#print axioms DiamondIntegral.Section4.GammaOrderLogic.interiorFormula
+#print DiamondIntegral.Section4.GammaOrderLogic.Interior
+#print axioms DiamondIntegral.Section4.GammaOrderLogic.Interior
+#print DiamondIntegral.Section4.GammaOrderLogic.interiorFormula_realize
+#print axioms DiamondIntegral.Section4.GammaOrderLogic.interiorFormula_realize
+#print DiamondIntegral.Section4.GammaOrderLogic.interior_definable_base
+#print axioms DiamondIntegral.Section4.GammaOrderLogic.interior_definable_base
+#print DiamondIntegral.Section4.GammaOrderLogic.complement_definable_base
+#print axioms DiamondIntegral.Section4.GammaOrderLogic.complement_definable_base
+#print DiamondIntegral.Section4.GammaOrderLogic.finite_union_definable_base
+#print axioms DiamondIntegral.Section4.GammaOrderLogic.finite_union_definable_base
+#print DiamondIntegral.Section4.GammaRelationLogic.preimage_definable_base
+#print axioms DiamondIntegral.Section4.GammaRelationLogic.preimage_definable_base
+#print DiamondIntegral.Section4.GammaRelationLogic.inter_definable_base
+#print axioms DiamondIntegral.Section4.GammaRelationLogic.inter_definable_base
+#print DiamondIntegral.Section4.GammaRelationLogic.complement_definable_base
+#print axioms DiamondIntegral.Section4.GammaRelationLogic.complement_definable_base
+#print DiamondIntegral.Section4.GammaRelationLogic.exists_definable_base
+#print axioms DiamondIntegral.Section4.GammaRelationLogic.exists_definable_base
+#print DiamondIntegral.Section4.GammaQuantifierLogic.image_definable_base
+#print axioms DiamondIntegral.Section4.GammaQuantifierLogic.image_definable_base
+#print DiamondIntegral.Section4.GammaQuantifierLogic.finite_iInter_definable_base
+#print axioms DiamondIntegral.Section4.GammaQuantifierLogic.finite_iInter_definable_base
+#print DiamondIntegral.Section4.GammaQuantifierLogic.union_definable_base
+#print axioms DiamondIntegral.Section4.GammaQuantifierLogic.union_definable_base
+#print DiamondIntegral.Section4.GammaQuantifierLogic.finite_iUnion_definable_base
+#print axioms DiamondIntegral.Section4.GammaQuantifierLogic.finite_iUnion_definable_base
+#print DiamondIntegral.Section4.GammaFormulaLogic.Formula
+#print axioms DiamondIntegral.Section4.GammaFormulaLogic.Formula
+#print DiamondIntegral.Section4.GammaFormulaLogic.Formula.Realize
+#print axioms DiamondIntegral.Section4.GammaFormulaLogic.Formula.Realize
+#print DiamondIntegral.Section4.GammaFormulaLogic.Formula.imp
+#print axioms DiamondIntegral.Section4.GammaFormulaLogic.Formula.imp
+#print DiamondIntegral.Section4.GammaFormulaLogic.Formula.iff
+#print axioms DiamondIntegral.Section4.GammaFormulaLogic.Formula.iff
+#print DiamondIntegral.Section4.GammaFormulaLogic.Formula.all
+#print axioms DiamondIntegral.Section4.GammaFormulaLogic.Formula.all
+#print DiamondIntegral.Section4.GammaFormulaLogic.Formula.allOf
+#print axioms DiamondIntegral.Section4.GammaFormulaLogic.Formula.allOf
+#print DiamondIntegral.Section4.GammaFormulaLogic.Formula.anyOf
+#print axioms DiamondIntegral.Section4.GammaFormulaLogic.Formula.anyOf
+#print DiamondIntegral.Section4.GammaFormulaLogic.Formula.imp_realize
+#print axioms DiamondIntegral.Section4.GammaFormulaLogic.Formula.imp_realize
+#print DiamondIntegral.Section4.GammaFormulaLogic.Formula.iff_realize
+#print axioms DiamondIntegral.Section4.GammaFormulaLogic.Formula.iff_realize
+#print DiamondIntegral.Section4.GammaFormulaLogic.Formula.all_realize
+#print axioms DiamondIntegral.Section4.GammaFormulaLogic.Formula.all_realize
+#print DiamondIntegral.Section4.GammaFormulaLogic.Formula.allOf_realize
+#print axioms DiamondIntegral.Section4.GammaFormulaLogic.Formula.allOf_realize
+#print DiamondIntegral.Section4.GammaFormulaLogic.Formula.anyOf_realize
+#print axioms DiamondIntegral.Section4.GammaFormulaLogic.Formula.anyOf_realize
+#print DiamondIntegral.Section4.GammaFormulaLogic.formula_definable_base
+#print axioms DiamondIntegral.Section4.GammaFormulaLogic.formula_definable_base
+#print DiamondIntegral.Section4.GammaGermLogic.germFormula
+#print axioms DiamondIntegral.Section4.GammaGermLogic.germFormula
+#print DiamondIntegral.Section4.GammaGermLogic.tailFormula
+#print axioms DiamondIntegral.Section4.GammaGermLogic.tailFormula
+#print DiamondIntegral.Section4.GammaGermLogic.LeftGerm
+#print axioms DiamondIntegral.Section4.GammaGermLogic.LeftGerm
+#print DiamondIntegral.Section4.GammaGermLogic.RightGerm
+#print axioms DiamondIntegral.Section4.GammaGermLogic.RightGerm
+#print DiamondIntegral.Section4.GammaGermLogic.Tail
+#print axioms DiamondIntegral.Section4.GammaGermLogic.Tail
+#print DiamondIntegral.Section4.GammaGermLogic.germFormula_realize
+#print axioms DiamondIntegral.Section4.GammaGermLogic.germFormula_realize
+#print DiamondIntegral.Section4.GammaGermLogic.tailFormula_realize
+#print axioms DiamondIntegral.Section4.GammaGermLogic.tailFormula_realize
+#print DiamondIntegral.Section4.GammaGermLogic.leftGerm_definable
+#print axioms DiamondIntegral.Section4.GammaGermLogic.leftGerm_definable
+#print DiamondIntegral.Section4.GammaGermLogic.rightGerm_definable
+#print axioms DiamondIntegral.Section4.GammaGermLogic.rightGerm_definable
+#print DiamondIntegral.Section4.GammaGermLogic.tail_definable
+#print axioms DiamondIntegral.Section4.GammaGermLogic.tail_definable
+#print DiamondIntegral.Section4.GammaGermFamilies.germFamily
+#print axioms DiamondIntegral.Section4.GammaGermFamilies.germFamily
+#print DiamondIntegral.Section4.GammaGermFamilies.tailFamily
+#print axioms DiamondIntegral.Section4.GammaGermFamilies.tailFamily
+#print DiamondIntegral.Section4.GammaGermFamilies.germFamily_level_iff
+#print axioms DiamondIntegral.Section4.GammaGermFamilies.germFamily_level_iff
+#print DiamondIntegral.Section4.GammaGermFamilies.tailFamily_level_iff
+#print axioms DiamondIntegral.Section4.GammaGermFamilies.tailFamily_level_iff
+#print DiamondIntegral.Section4.GammaGermFamilies.germFamily_definable
+#print axioms DiamondIntegral.Section4.GammaGermFamilies.germFamily_definable
+#print DiamondIntegral.Section4.GammaGermFamilies.tailFamily_definable
+#print axioms DiamondIntegral.Section4.GammaGermFamilies.tailFamily_definable
+#print DiamondIntegral.Section4.GammaGermFamilies.pointCoefficientFamily
+#print axioms DiamondIntegral.Section4.GammaGermFamilies.pointCoefficientFamily
+#print DiamondIntegral.Section4.GammaGermFamilies.rayCoefficientFamily
+#print axioms DiamondIntegral.Section4.GammaGermFamilies.rayCoefficientFamily
+#print DiamondIntegral.Section4.GammaGermFamilies.pointCoefficientFamily_eq
+#print axioms DiamondIntegral.Section4.GammaGermFamilies.pointCoefficientFamily_eq
+#print DiamondIntegral.Section4.GammaGermFamilies.rayCoefficientFamily_eq
+#print axioms DiamondIntegral.Section4.GammaGermFamilies.rayCoefficientFamily_eq
+#print DiamondIntegral.Section4.GammaGermFamilies.pointCoefficientFamily_definable
+#print axioms DiamondIntegral.Section4.GammaGermFamilies.pointCoefficientFamily_definable
+#print DiamondIntegral.Section4.GammaGermFamilies.rayCoefficientFamily_definable
+#print axioms DiamondIntegral.Section4.GammaGermFamilies.rayCoefficientFamily_definable
+#print DiamondIntegral.Section4.GammaFibreCounting.univ_definable_base
+#print axioms DiamondIntegral.Section4.GammaFibreCounting.univ_definable_base
+#print DiamondIntegral.Section4.GammaFibreCounting.ne_definable_base
+#print axioms DiamondIntegral.Section4.GammaFibreCounting.ne_definable_base
+#print DiamondIntegral.Section4.GammaFibreCounting.AtLeast
+#print axioms DiamondIntegral.Section4.GammaFibreCounting.AtLeast
+#print DiamondIntegral.Section4.GammaFibreCounting.atLeast_definable_base
+#print axioms DiamondIntegral.Section4.GammaFibreCounting.atLeast_definable_base
+#print DiamondIntegral.Section4.GammaFibreCounting.atMost_definable_base
+#print axioms DiamondIntegral.Section4.GammaFibreCounting.atMost_definable_base
+#print DiamondIntegral.Section4.GammaFibreCounting.exactly_definable_base
+#print axioms DiamondIntegral.Section4.GammaFibreCounting.exactly_definable_base
+#print DiamondIntegral.Section4.GammaFibreCounting.atMost_iff
+#print axioms DiamondIntegral.Section4.GammaFibreCounting.atMost_iff
+#print DiamondIntegral.Section4.GammaFibreCounting.exactly_iff
+#print axioms DiamondIntegral.Section4.GammaFibreCounting.exactly_iff
+#print DiamondIntegral.Section4.GammaTupleCounting.AtLeast
+#print axioms DiamondIntegral.Section4.GammaTupleCounting.AtLeast
+#print DiamondIntegral.Section4.GammaTupleCounting.atLeast_definable_base
+#print axioms DiamondIntegral.Section4.GammaTupleCounting.atLeast_definable_base
+#print DiamondIntegral.Section4.GammaTupleCounting.atMost_iff
+#print axioms DiamondIntegral.Section4.GammaTupleCounting.atMost_iff
+#print DiamondIntegral.Section4.GammaTupleCounting.exactly_iff
+#print axioms DiamondIntegral.Section4.GammaTupleCounting.exactly_iff
+#print DiamondIntegral.Section4.GammaTupleCounting.exactly_definable_base
+#print axioms DiamondIntegral.Section4.GammaTupleCounting.exactly_definable_base
+#print DiamondIntegral.Section4.GammaTupleCounting.atLeast_succ_iff
+#print axioms DiamondIntegral.Section4.GammaTupleCounting.atLeast_succ_iff
+#print DiamondIntegral.Section4.GammaUniformFiniteFibres.uniform_finite_bound
+#print axioms DiamondIntegral.Section4.GammaUniformFiniteFibres.uniform_finite_bound
+#print DiamondIntegral.Section4.GammaWeightedBoundary.ConstantRegion
+#print axioms DiamondIntegral.Section4.GammaWeightedBoundary.ConstantRegion
+#print DiamondIntegral.Section4.GammaWeightedBoundary.Boundary
+#print axioms DiamondIntegral.Section4.GammaWeightedBoundary.Boundary
+#print DiamondIntegral.Section4.GammaWeightedBoundary.constantRegion_definable
+#print axioms DiamondIntegral.Section4.GammaWeightedBoundary.constantRegion_definable
+#print DiamondIntegral.Section4.GammaWeightedBoundary.boundary_definable
+#print axioms DiamondIntegral.Section4.GammaWeightedBoundary.boundary_definable
+#print DiamondIntegral.Section4.GammaWeightedBoundary.constantRegion_iff
+#print axioms DiamondIntegral.Section4.GammaWeightedBoundary.constantRegion_iff
+#print DiamondIntegral.Section4.GammaWeightedBoundary.boundary_iff
+#print axioms DiamondIntegral.Section4.GammaWeightedBoundary.boundary_iff
+#print DiamondIntegral.Section4.GammaWeightedBoundary.finite_boundary_fibres
+#print axioms DiamondIntegral.Section4.GammaWeightedBoundary.finite_boundary_fibres
+#print DiamondIntegral.Section4.GammaWeightedBoundary.exists_boundaryPartition
+#print axioms DiamondIntegral.Section4.GammaWeightedBoundary.exists_boundaryPartition
+#print DiamondIntegral.Section4.GammaCanonicalExpansion.activeIndices
+#print axioms DiamondIntegral.Section4.GammaCanonicalExpansion.activeIndices
+#print DiamondIntegral.Section4.GammaCanonicalExpansion.pointWeight
+#print axioms DiamondIntegral.Section4.GammaCanonicalExpansion.pointWeight
+#print DiamondIntegral.Section4.GammaCanonicalExpansion.rayWeight
+#print axioms DiamondIntegral.Section4.GammaCanonicalExpansion.rayWeight
+#print DiamondIntegral.Section4.GammaCanonicalExpansion.pointWeight_definable
+#print axioms DiamondIntegral.Section4.GammaCanonicalExpansion.pointWeight_definable
+#print DiamondIntegral.Section4.GammaCanonicalExpansion.rayWeight_definable
+#print axioms DiamondIntegral.Section4.GammaCanonicalExpansion.rayWeight_definable
+#print DiamondIntegral.Section4.GammaCanonicalExpansion.breakpoint_indexing
+#print axioms DiamondIntegral.Section4.GammaCanonicalExpansion.breakpoint_indexing
+#print DiamondIntegral.Section4.GammaCanonicalExpansion.fibre_expansion
+#print axioms DiamondIntegral.Section4.GammaCanonicalExpansion.fibre_expansion
+#print DiamondIntegral.Section4.GammaUnaryProjection.exists_unary_projection
+#print axioms DiamondIntegral.Section4.GammaUnaryProjection.exists_unary_projection
+#print DiamondIntegral.Section4.GammaKernelDecomposition.KernelDecomposition
+#print axioms DiamondIntegral.Section4.GammaKernelDecomposition.KernelDecomposition
+#print DiamondIntegral.Section4.GammaKernelDecomposition.exists_kernelDecomposition
+#print axioms DiamondIntegral.Section4.GammaKernelDecomposition.exists_kernelDecomposition
+#print DiamondIntegral.Section4.GammaFubiniTwo.swapFamily
+#print axioms DiamondIntegral.Section4.GammaFubiniTwo.swapFamily
+#print DiamondIntegral.Section4.GammaFubiniTwo.swapFamily_definable
+#print axioms DiamondIntegral.Section4.GammaFubiniTwo.swapFamily_definable
+#print DiamondIntegral.Section4.GammaFubiniTwo.vertical_inner
+#print axioms DiamondIntegral.Section4.GammaFubiniTwo.vertical_inner
+#print DiamondIntegral.Section4.GammaFubiniTwo.swapped_fibre
+#print axioms DiamondIntegral.Section4.GammaFubiniTwo.swapped_fibre
+#print DiamondIntegral.Section4.GammaFubiniTwo.horizontal_inner
+#print axioms DiamondIntegral.Section4.GammaFubiniTwo.horizontal_inner
+#print DiamondIntegral.Section4.GammaFubiniTwo.fubini_two
+#print axioms DiamondIntegral.Section4.GammaFubiniTwo.fubini_two
+#print DiamondIntegral.Section4.GammaParametricFubini.swapFirstTwoIndex
+#print axioms DiamondIntegral.Section4.GammaParametricFubini.swapFirstTwoIndex
+#print DiamondIntegral.Section4.GammaParametricFubini.swapFirstTwo
+#print axioms DiamondIntegral.Section4.GammaParametricFubini.swapFirstTwo
+#print DiamondIntegral.Section4.GammaParametricFubini.swapFirstTwo_definable
+#print axioms DiamondIntegral.Section4.GammaParametricFubini.swapFirstTwo_definable
+#print DiamondIntegral.Section4.GammaParametricFubini.integralTwoAt
+#print axioms DiamondIntegral.Section4.GammaParametricFubini.integralTwoAt
+#print DiamondIntegral.Section4.GammaParametricFubini.commute_first_two
+#print axioms DiamondIntegral.Section4.GammaParametricFubini.commute_first_two
+#print DiamondIntegral.Section4.GammaSortedFibres.lowerRelation
+#print axioms DiamondIntegral.Section4.GammaSortedFibres.lowerRelation
+#print DiamondIntegral.Section4.GammaSortedFibres.lowerRelation_definable
+#print axioms DiamondIntegral.Section4.GammaSortedFibres.lowerRelation_definable
+#print DiamondIntegral.Section4.GammaSortedFibres.RankGraph
+#print axioms DiamondIntegral.Section4.GammaSortedFibres.RankGraph
+#print DiamondIntegral.Section4.GammaSortedFibres.rankGraph_definable
+#print axioms DiamondIntegral.Section4.GammaSortedFibres.rankGraph_definable
+#print DiamondIntegral.Section4.GammaSortedFibres.point
+#print axioms DiamondIntegral.Section4.GammaSortedFibres.point
+#print DiamondIntegral.Section4.GammaSortedFibres.point_spec
+#print axioms DiamondIntegral.Section4.GammaSortedFibres.point_spec
+#print DiamondIntegral.Section4.GammaSortedFibres.pointMap
+#print axioms DiamondIntegral.Section4.GammaSortedFibres.pointMap
+#print DiamondIntegral.Section4.GammaSortedFibres.pointMap_graph_eq
+#print axioms DiamondIntegral.Section4.GammaSortedFibres.pointMap_graph_eq
+#print DiamondIntegral.Section4.GammaSortedFibres.pointMap_graph_definable
+#print axioms DiamondIntegral.Section4.GammaSortedFibres.pointMap_graph_definable
+#print DiamondIntegral.Section4.GammaFiniteGraphPartition.rankGraph_cover
+#print axioms DiamondIntegral.Section4.GammaFiniteGraphPartition.rankGraph_cover
+#print DiamondIntegral.Section4.GammaFiniteGraphPartition.rankGraph_disjoint
+#print axioms DiamondIntegral.Section4.GammaFiniteGraphPartition.rankGraph_disjoint
+#print DiamondIntegral.Section4.GammaFiniteGraphPartition.FiniteGraphPartition
+#print axioms DiamondIntegral.Section4.GammaFiniteGraphPartition.FiniteGraphPartition
+#print DiamondIntegral.Section4.GammaFiniteGraphPartition.canonicalPartition
+#print axioms DiamondIntegral.Section4.GammaFiniteGraphPartition.canonicalPartition
+#print DiamondIntegral.Section4.GammaFiniteGraphPartition.exists_boundaryPartition
+#print axioms DiamondIntegral.Section4.GammaFiniteGraphPartition.exists_boundaryPartition
+#print DiamondIntegral.Section4.GammaDefinableMaps.MapDefinable
+#print axioms DiamondIntegral.Section4.GammaDefinableMaps.MapDefinable
+#print DiamondIntegral.Section4.GammaDefinableMaps.eq_definable_base
+#print axioms DiamondIntegral.Section4.GammaDefinableMaps.eq_definable_base
+#print DiamondIntegral.Section4.GammaDefinableMaps.projection_definable
+#print axioms DiamondIntegral.Section4.GammaDefinableMaps.projection_definable
+#print DiamondIntegral.Section4.GammaDefinableMaps.constant_definable
+#print axioms DiamondIntegral.Section4.GammaDefinableMaps.constant_definable
+#print DiamondIntegral.Section4.GammaDefinableMaps.reindex_definable
+#print axioms DiamondIntegral.Section4.GammaDefinableMaps.reindex_definable
+#print DiamondIntegral.Section4.GammaDefinableMaps.mul_definable
+#print axioms DiamondIntegral.Section4.GammaDefinableMaps.mul_definable
+#print DiamondIntegral.Section4.GammaDefinableMaps.nat_power_definable
+#print axioms DiamondIntegral.Section4.GammaDefinableMaps.nat_power_definable
+#print DiamondIntegral.Section4.GammaDefinableMaps.inverse_graph_definable
+#print axioms DiamondIntegral.Section4.GammaDefinableMaps.inverse_graph_definable
+#print DiamondIntegral.Section4.GammaDefinableMaps.inverse_definable
+#print axioms DiamondIntegral.Section4.GammaDefinableMaps.inverse_definable
+#print DiamondIntegral.Section4.GammaDefinableMaps.int_power_definable
+#print axioms DiamondIntegral.Section4.GammaDefinableMaps.int_power_definable
+#print DiamondIntegral.Section4.GammaDefinableMaps.equal_maps_definable
+#print axioms DiamondIntegral.Section4.GammaDefinableMaps.equal_maps_definable
+#print DiamondIntegral.Section4.GammaDefinableMaps.root_definable
+#print axioms DiamondIntegral.Section4.GammaDefinableMaps.root_definable
+#print DiamondIntegral.Section4.GammaBaseExtension.withGamma
+#print axioms DiamondIntegral.Section4.GammaBaseExtension.withGamma
+#print DiamondIntegral.Section4.GammaBaseExtension.definableOverBase_extend
+#print axioms DiamondIntegral.Section4.GammaBaseExtension.definableOverBase_extend
+#print DiamondIntegral.Section4.GammaBaseExtension.gammaRelation_extend
+#print axioms DiamondIntegral.Section4.GammaBaseExtension.gammaRelation_extend
+#print DiamondIntegral.Section4.GammaBaseExtension.gammaSet_extend
+#print axioms DiamondIntegral.Section4.GammaBaseExtension.gammaSet_extend
+#print DiamondIntegral.Section4.GammaBaseExtension.gammaName_extend
+#print axioms DiamondIntegral.Section4.GammaBaseExtension.gammaName_extend
+#print DiamondIntegral.Section4.GammaBaseExtension.of_real_syntax
+#print axioms DiamondIntegral.Section4.GammaBaseExtension.of_real_syntax
+#print DiamondIntegral.Section4.GammaBaseExtension.of_real_set
+#print axioms DiamondIntegral.Section4.GammaBaseExtension.of_real_set
+#print DiamondIntegral.Section4.GammaBaseExtension.to_common_real_syntax
+#print axioms DiamondIntegral.Section4.GammaBaseExtension.to_common_real_syntax
+#print DiamondIntegral.Section4.GammaParameterExtension.nontrivial_extend
+#print axioms DiamondIntegral.Section4.GammaParameterExtension.nontrivial_extend
+#print DiamondIntegral.Section4.GammaParameterExtension.finite_gamma_extension_small
+#print axioms DiamondIntegral.Section4.GammaParameterExtension.finite_gamma_extension_small
+#print DiamondIntegral.Section4.GammaFamilySlices.slice_definable_base
+#print axioms DiamondIntegral.Section4.GammaFamilySlices.slice_definable_base
+#print DiamondIntegral.Section4.GammaFamilySlicesTwo.slice_definable_base
+#print axioms DiamondIntegral.Section4.GammaFamilySlicesTwo.slice_definable_base
+#print DiamondIntegral.Section4.GammaFamilySlicesTwo.sliceTwo
+#print axioms DiamondIntegral.Section4.GammaFamilySlicesTwo.sliceTwo
+#print DiamondIntegral.Section4.GammaFamilySlicesTwo.sliceTwo_definable
+#print axioms DiamondIntegral.Section4.GammaFamilySlicesTwo.sliceTwo_definable
+#print DiamondIntegral.Section4.GammaUniformCuts.Controls
+#print axioms DiamondIntegral.Section4.GammaUniformCuts.Controls
+#print DiamondIntegral.Section4.GammaUniformCuts.controlsFormula
+#print axioms DiamondIntegral.Section4.GammaUniformCuts.controlsFormula
+#print DiamondIntegral.Section4.GammaUniformCuts.controlsFormula_realize
+#print axioms DiamondIntegral.Section4.GammaUniformCuts.controlsFormula_realize
+#print DiamondIntegral.Section4.GammaUniformCuts.CutBound
+#print axioms DiamondIntegral.Section4.GammaUniformCuts.CutBound
+#print DiamondIntegral.Section4.GammaUniformCuts.cutBound_definable_base
+#print axioms DiamondIntegral.Section4.GammaUniformCuts.cutBound_definable_base
+#print DiamondIntegral.Section4.GammaUniformCuts.exists_cutBound
+#print axioms DiamondIntegral.Section4.GammaUniformCuts.exists_cutBound
+#print DiamondIntegral.Section4.GammaUniformCuts.cutBound_mono
+#print axioms DiamondIntegral.Section4.GammaUniformCuts.cutBound_mono
+#print DiamondIntegral.Section4.GammaUniformCuts.uniform_cutBound
+#print axioms DiamondIntegral.Section4.GammaUniformCuts.uniform_cutBound
+#print DiamondIntegral.Section4.GammaFamilyBoundary.interiorFormula
+#print axioms DiamondIntegral.Section4.GammaFamilyBoundary.interiorFormula
+#print DiamondIntegral.Section4.GammaFamilyBoundary.Interior
+#print axioms DiamondIntegral.Section4.GammaFamilyBoundary.Interior
+#print DiamondIntegral.Section4.GammaFamilyBoundary.interiorFormula_realize
+#print axioms DiamondIntegral.Section4.GammaFamilyBoundary.interiorFormula_realize
+#print DiamondIntegral.Section4.GammaFamilyBoundary.interior_definable_base
+#print axioms DiamondIntegral.Section4.GammaFamilyBoundary.interior_definable_base
+#print DiamondIntegral.Section4.GammaFamilyBoundary.Boundary
+#print axioms DiamondIntegral.Section4.GammaFamilyBoundary.Boundary
+#print DiamondIntegral.Section4.GammaFamilyBoundary.boundary_definable_base
+#print axioms DiamondIntegral.Section4.GammaFamilyBoundary.boundary_definable_base
+#print DiamondIntegral.Section4.GammaFamilyBoundary.boundary_iff_nonConstantNear
+#print axioms DiamondIntegral.Section4.GammaFamilyBoundary.boundary_iff_nonConstantNear
+#print DiamondIntegral.Section4.GammaFamilyBoundary.uniform_boundary_bound
+#print axioms DiamondIntegral.Section4.GammaFamilyBoundary.uniform_boundary_bound
+#print DiamondIntegral.Section4.GammaFamilyEuler.fibreEuler
+#print axioms DiamondIntegral.Section4.GammaFamilyEuler.fibreEuler
+#print DiamondIntegral.Section4.GammaFamilyEuler.fibreEuler_cutSum
+#print axioms DiamondIntegral.Section4.GammaFamilyEuler.fibreEuler_cutSum
+#print DiamondIntegral.Section4.GammaFamilyEuler.fibreEuler_finite_range
+#print axioms DiamondIntegral.Section4.GammaFamilyEuler.fibreEuler_finite_range
+#print DiamondIntegral.Section4.GammaFamilyCutLogic.codeFormula
+#print axioms DiamondIntegral.Section4.GammaFamilyCutLogic.codeFormula
+#print DiamondIntegral.Section4.GammaFamilyCutLogic.codeFormula_realize
+#print axioms DiamondIntegral.Section4.GammaFamilyCutLogic.codeFormula_realize
+#print DiamondIntegral.Section4.GammaFamilyCutLogic.occupiedFormula
+#print axioms DiamondIntegral.Section4.GammaFamilyCutLogic.occupiedFormula
+#print DiamondIntegral.Section4.GammaFamilyCutLogic.Occupied
+#print axioms DiamondIntegral.Section4.GammaFamilyCutLogic.Occupied
+#print DiamondIntegral.Section4.GammaFamilyCutLogic.occupiedFormula_realize
+#print axioms DiamondIntegral.Section4.GammaFamilyCutLogic.occupiedFormula_realize
+#print DiamondIntegral.Section4.GammaFamilyCutLogic.maskValue
+#print axioms DiamondIntegral.Section4.GammaFamilyCutLogic.maskValue
+#print DiamondIntegral.Section4.GammaFamilyCutLogic.cutSum
+#print axioms DiamondIntegral.Section4.GammaFamilyCutLogic.cutSum
+#print DiamondIntegral.Section4.GammaFamilyCutLogic.occupied_definable_base
+#print axioms DiamondIntegral.Section4.GammaFamilyCutLogic.occupied_definable_base
+#print DiamondIntegral.Section4.GammaFamilyCutLogic.mask_definable_base
+#print axioms DiamondIntegral.Section4.GammaFamilyCutLogic.mask_definable_base
+#print DiamondIntegral.Section4.GammaFamilyCutLogic.cutSum_level_definable_base
+#print axioms DiamondIntegral.Section4.GammaFamilyCutLogic.cutSum_level_definable_base
+#print DiamondIntegral.Section4.GammaFamilyIntegration.fibreEuler_level_definable
+#print axioms DiamondIntegral.Section4.GammaFamilyIntegration.fibreEuler_level_definable
+#print DiamondIntegral.Section4.GammaFamilyIntegration.IntegerFamilyDefinable
+#print axioms DiamondIntegral.Section4.GammaFamilyIntegration.IntegerFamilyDefinable
+#print DiamondIntegral.Section4.GammaFamilyIntegration.fibreEuler_integerFamilyDefinable
+#print axioms DiamondIntegral.Section4.GammaFamilyIntegration.fibreEuler_integerFamilyDefinable
+#print DiamondIntegral.Section4.GammaIntegerFamilies.univ_definable_base
+#print axioms DiamondIntegral.Section4.GammaIntegerFamilies.univ_definable_base
+#print DiamondIntegral.Section4.GammaIntegerFamilies.empty_definable_base
+#print axioms DiamondIntegral.Section4.GammaIntegerFamilies.empty_definable_base
+#print DiamondIntegral.Section4.GammaIntegerFamilies.const_definable
+#print axioms DiamondIntegral.Section4.GammaIntegerFamilies.const_definable
+#print DiamondIntegral.Section4.GammaIntegerFamilies.map_definable
+#print axioms DiamondIntegral.Section4.GammaIntegerFamilies.map_definable
+#print DiamondIntegral.Section4.GammaIntegerFamilies.add_definable
+#print axioms DiamondIntegral.Section4.GammaIntegerFamilies.add_definable
+#print DiamondIntegral.Section4.GammaIntegerFamilies.finsetSum_definable
+#print axioms DiamondIntegral.Section4.GammaIntegerFamilies.finsetSum_definable
+#print DiamondIntegral.Section4.GammaIntegerFamilies.reindex_definable
+#print axioms DiamondIntegral.Section4.GammaIntegerFamilies.reindex_definable
+#print DiamondIntegral.Section4.GammaIntegerFamilies.combine_definable
+#print axioms DiamondIntegral.Section4.GammaIntegerFamilies.combine_definable
+#print DiamondIntegral.Section4.GammaIntegerFamilies.familySubgroup
+#print axioms DiamondIntegral.Section4.GammaIntegerFamilies.familySubgroup
+#print DiamondIntegral.Section4.GammaIndicators.indicator_definable
+#print axioms DiamondIntegral.Section4.GammaIndicators.indicator_definable
+#print DiamondIntegral.Section4.GammaIndicators.indicatorFamily
+#print axioms DiamondIntegral.Section4.GammaIndicators.indicatorFamily
+#print DiamondIntegral.Section4.GammaIndicators.indicator_scissor
+#print axioms DiamondIntegral.Section4.GammaIndicators.indicator_scissor
+#print DiamondIntegral.Section4.GammaIteratedIntegral.emptyTuple
+#print axioms DiamondIntegral.Section4.GammaIteratedIntegral.emptyTuple
+#print DiamondIntegral.Section4.GammaIteratedIntegral.evaluateZero
+#print axioms DiamondIntegral.Section4.GammaIteratedIntegral.evaluateZero
+#print DiamondIntegral.Section4.GammaIteratedIntegral.unaryFunction
+#print axioms DiamondIntegral.Section4.GammaIteratedIntegral.unaryFunction
+#print DiamondIntegral.Section4.GammaIteratedIntegral.unaryFunction_eval
+#print axioms DiamondIntegral.Section4.GammaIteratedIntegral.unaryFunction_eval
+#print DiamondIntegral.Section4.GammaIteratedIntegral.integrateAll
+#print axioms DiamondIntegral.Section4.GammaIteratedIntegral.integrateAll
+#print DiamondIntegral.Section4.GammaIteratedIntegral.integrateAll_unary
+#print axioms DiamondIntegral.Section4.GammaIteratedIntegral.integrateAll_unary
+#print DiamondIntegral.Section4.GammaIteratedIntegral.integrateAll_unary_from_euler
+#print axioms DiamondIntegral.Section4.GammaIteratedIntegral.integrateAll_unary_from_euler
+#print DiamondIntegral.Section4.GammaIteratedIntegral.integrateAll_scissor
+#print axioms DiamondIntegral.Section4.GammaIteratedIntegral.integrateAll_scissor
+#print DiamondIntegral.Section4.GammaPartialEvaluation.restrictedValue
+#print axioms DiamondIntegral.Section4.GammaPartialEvaluation.restrictedValue
+#print DiamondIntegral.Section4.GammaPartialEvaluation.restrictedValue_definable
+#print axioms DiamondIntegral.Section4.GammaPartialEvaluation.restrictedValue_definable
+#print DiamondIntegral.Section4.GammaPartialMaps.extendMap
+#print axioms DiamondIntegral.Section4.GammaPartialMaps.extendMap
+#print DiamondIntegral.Section4.GammaPartialMaps.extendMap_definable
+#print axioms DiamondIntegral.Section4.GammaPartialMaps.extendMap_definable
+#print DiamondIntegral.Section4.GammaWeightedFamilies.exists_fibreFunction
+#print axioms DiamondIntegral.Section4.GammaWeightedFamilies.exists_fibreFunction
+#print DiamondIntegral.Section4.GammaWeightedFamilies.fibreFunction
+#print axioms DiamondIntegral.Section4.GammaWeightedFamilies.fibreFunction
+#print DiamondIntegral.Section4.GammaWeightedFamilies.fibreFunction_eval
+#print axioms DiamondIntegral.Section4.GammaWeightedFamilies.fibreFunction_eval
+#print DiamondIntegral.Section4.GammaWeightedFamilies.integralFirst
+#print axioms DiamondIntegral.Section4.GammaWeightedFamilies.integralFirst
+#print DiamondIntegral.Section4.GammaWeightedFamilies.integralFirst_levelSum
+#print axioms DiamondIntegral.Section4.GammaWeightedFamilies.integralFirst_levelSum
+#print DiamondIntegral.Section4.GammaWeightedFamilies.integralFirst_definable
+#print axioms DiamondIntegral.Section4.GammaWeightedFamilies.integralFirst_definable
+#print DiamondIntegral.Section4.GammaWeightedFamilies.integralFirst_zero
+#print axioms DiamondIntegral.Section4.GammaWeightedFamilies.integralFirst_zero
+#print DiamondIntegral.Section4.GammaWeightedFamilies.integralFirst_add
+#print axioms DiamondIntegral.Section4.GammaWeightedFamilies.integralFirst_add
+#print DiamondIntegral.Section4.GammaWeightedFamilies.integrateFirst
+#print axioms DiamondIntegral.Section4.GammaWeightedFamilies.integrateFirst
+#print DiamondIntegral.Section4.GammaFibreIntegralCongruence.integralFirst_congr
+#print axioms DiamondIntegral.Section4.GammaFibreIntegralCongruence.integralFirst_congr
+#print DiamondIntegral.Section4.GammaCoordinatePullback.keepFirst
+#print axioms DiamondIntegral.Section4.GammaCoordinatePullback.keepFirst
+#print DiamondIntegral.Section4.GammaCoordinatePullback.pullback
+#print axioms DiamondIntegral.Section4.GammaCoordinatePullback.pullback
+#print DiamondIntegral.Section4.GammaCoordinatePullback.pullback_id
+#print axioms DiamondIntegral.Section4.GammaCoordinatePullback.pullback_id
+#print DiamondIntegral.Section4.GammaCoordinatePullback.pullback_comp
+#print axioms DiamondIntegral.Section4.GammaCoordinatePullback.pullback_comp
+#print DiamondIntegral.Section4.GammaCoordinatePullback.integralFirst_naturality
+#print axioms DiamondIntegral.Section4.GammaCoordinatePullback.integralFirst_naturality
+#print DiamondIntegral.Section4.GammaCoordinatePullback.integrateFirst_naturality
+#print axioms DiamondIntegral.Section4.GammaCoordinatePullback.integrateFirst_naturality
+#print DiamondIntegral.Section4.FinitePermutationGeneration.lift
+#print axioms DiamondIntegral.Section4.FinitePermutationGeneration.lift
+#print DiamondIntegral.Section4.FinitePermutationGeneration.decompose
+#print axioms DiamondIntegral.Section4.FinitePermutationGeneration.decompose
+#print DiamondIntegral.Section4.FinitePermutationGeneration.all_mem
+#print axioms DiamondIntegral.Section4.FinitePermutationGeneration.all_mem
+#print DiamondIntegral.Section4.FiniteTupleBlocks.headIndex
+#print axioms DiamondIntegral.Section4.FiniteTupleBlocks.headIndex
+#print DiamondIntegral.Section4.FiniteTupleBlocks.tailIndex
+#print axioms DiamondIntegral.Section4.FiniteTupleBlocks.tailIndex
+#print DiamondIntegral.Section4.FiniteTupleBlocks.join
+#print axioms DiamondIntegral.Section4.FiniteTupleBlocks.join
+#print DiamondIntegral.Section4.FiniteTupleBlocks.headIndex_injective
+#print axioms DiamondIntegral.Section4.FiniteTupleBlocks.headIndex_injective
+#print DiamondIntegral.Section4.FiniteTupleBlocks.tailIndex_injective
+#print axioms DiamondIntegral.Section4.FiniteTupleBlocks.tailIndex_injective
+#print DiamondIntegral.Section4.FiniteTupleBlocks.join_reconstruct
+#print axioms DiamondIntegral.Section4.FiniteTupleBlocks.join_reconstruct
+#print DiamondIntegral.Section4.FiniteTupleGraphProduct.block_ext
+#print axioms DiamondIntegral.Section4.FiniteTupleGraphProduct.block_ext
+#print DiamondIntegral.Section4.FiniteTupleGraphProduct.graphShuffle
+#print axioms DiamondIntegral.Section4.FiniteTupleGraphProduct.graphShuffle
+#print DiamondIntegral.Section4.FiniteTupleGraphProduct.graphShuffle_join
+#print axioms DiamondIntegral.Section4.FiniteTupleGraphProduct.graphShuffle_join
+#print DiamondIntegral.Section4.RVRealProducts.productSet
+#print axioms DiamondIntegral.Section4.RVRealProducts.productSet
+#print DiamondIntegral.Section4.RVRealProducts.productSet_join
+#print axioms DiamondIntegral.Section4.RVRealProducts.productSet_join
+#print DiamondIntegral.Section4.RVRealProducts.productSet_exists
+#print axioms DiamondIntegral.Section4.RVRealProducts.productSet_exists
+#print DiamondIntegral.Section4.RVRealProducts.productSet_definable
+#print axioms DiamondIntegral.Section4.RVRealProducts.productSet_definable
+#print DiamondIntegral.Section4.RVRealProducts.productMap
+#print axioms DiamondIntegral.Section4.RVRealProducts.productMap
+#print DiamondIntegral.Section4.RVRealProducts.productMap_join
+#print axioms DiamondIntegral.Section4.RVRealProducts.productMap_join
+#print DiamondIntegral.Section4.RVRealProducts.graphOn_exists
+#print axioms DiamondIntegral.Section4.RVRealProducts.graphOn_exists
+#print DiamondIntegral.Section4.RVRealProducts.product_graph_eq_image
+#print axioms DiamondIntegral.Section4.RVRealProducts.product_graph_eq_image
+#print DiamondIntegral.Section4.RVRealProducts.product_graph_definable
+#print axioms DiamondIntegral.Section4.RVRealProducts.product_graph_definable
+#print DiamondIntegral.Section4.RVCoordinateMaps.graphIndices
+#print axioms DiamondIntegral.Section4.RVCoordinateMaps.graphIndices
+#print DiamondIntegral.Section4.RVCoordinateMaps.graphIndices_tuple
+#print axioms DiamondIntegral.Section4.RVCoordinateMaps.graphIndices_tuple
+#print DiamondIntegral.Section4.RVCoordinateMaps.coordinate_graph_definable
+#print axioms DiamondIntegral.Section4.RVCoordinateMaps.coordinate_graph_definable
+#print DiamondIntegral.Section4.RVCoordinateMaps.coordinateIso
+#print axioms DiamondIntegral.Section4.RVCoordinateMaps.coordinateIso
+#print DiamondIntegral.Section4.RVForgetScissors.forgetPacked
+#print axioms DiamondIntegral.Section4.RVForgetScissors.forgetPacked
+#print DiamondIntegral.Section4.RVForgetScissors.packedDomain
+#print axioms DiamondIntegral.Section4.RVForgetScissors.packedDomain
+#print DiamondIntegral.Section4.RVForgetScissors.packedDomain_eq_image
+#print axioms DiamondIntegral.Section4.RVForgetScissors.packedDomain_eq_image
+#print DiamondIntegral.Section4.RVForgetScissors.forgetPacked_injOn
+#print axioms DiamondIntegral.Section4.RVForgetScissors.forgetPacked_injOn
+#print DiamondIntegral.Section4.RVForgetScissors.Scissor
+#print axioms DiamondIntegral.Section4.RVForgetScissors.Scissor
+#print DiamondIntegral.Section4.RVForgetScissors.measured_scissor
+#print axioms DiamondIntegral.Section4.RVForgetScissors.measured_scissor
+#print DiamondIntegral.Section4.RVForgetScissors.UnderlyingIso
+#print axioms DiamondIntegral.Section4.RVForgetScissors.UnderlyingIso
+#print DiamondIntegral.Section4.RVForgetScissors.ofMeasured
+#print axioms DiamondIntegral.Section4.RVForgetScissors.ofMeasured
+#print DiamondIntegral.Section4.RVForgetScissors.ofMap
+#print axioms DiamondIntegral.Section4.RVForgetScissors.ofMap
+#print DiamondIntegral.Section4.RVUnderlyingIsomorphisms.Iso
+#print axioms DiamondIntegral.Section4.RVUnderlyingIsomorphisms.Iso
+#print DiamondIntegral.Section4.RVUnderlyingIsomorphisms.ofFixed
+#print axioms DiamondIntegral.Section4.RVUnderlyingIsomorphisms.ofFixed
+#print DiamondIntegral.Section4.RVUnderlyingIsomorphisms.toFixed
+#print axioms DiamondIntegral.Section4.RVUnderlyingIsomorphisms.toFixed
+#print DiamondIntegral.Section4.RVUnderlyingIsomorphisms.ofMap
+#print axioms DiamondIntegral.Section4.RVUnderlyingIsomorphisms.ofMap
+#print DiamondIntegral.Section4.RVUnderlyingIsomorphisms.refl
+#print axioms DiamondIntegral.Section4.RVUnderlyingIsomorphisms.refl
+#print DiamondIntegral.Section4.RVUnderlyingIsomorphisms.symm
+#print axioms DiamondIntegral.Section4.RVUnderlyingIsomorphisms.symm
+#print DiamondIntegral.Section4.RVUnderlyingIsomorphisms.Iso.extension
+#print axioms DiamondIntegral.Section4.RVUnderlyingIsomorphisms.Iso.extension
+#print DiamondIntegral.Section4.RVUnderlyingIsomorphisms.Iso.extension_on
+#print axioms DiamondIntegral.Section4.RVUnderlyingIsomorphisms.Iso.extension_on
+#print DiamondIntegral.Section4.RVUnderlyingIsomorphisms.Iso.extension_graph
+#print axioms DiamondIntegral.Section4.RVUnderlyingIsomorphisms.Iso.extension_graph
+#print DiamondIntegral.Section4.RVUnderlyingProducts.domainEquiv
+#print axioms DiamondIntegral.Section4.RVUnderlyingProducts.domainEquiv
+#print DiamondIntegral.Section4.RVUnderlyingProducts.productEquiv
+#print axioms DiamondIntegral.Section4.RVUnderlyingProducts.productEquiv
+#print DiamondIntegral.Section4.RVUnderlyingProducts.productEquiv_coe
+#print axioms DiamondIntegral.Section4.RVUnderlyingProducts.productEquiv_coe
+#print DiamondIntegral.Section4.RVUnderlyingProducts.productIso
+#print axioms DiamondIntegral.Section4.RVUnderlyingProducts.productIso
+#print DiamondIntegral.Section4.RVMeasuredProduct.product
+#print axioms DiamondIntegral.Section4.RVMeasuredProduct.product
+#print DiamondIntegral.Section4.RVMeasuredProduct.product_volume_join
+#print axioms DiamondIntegral.Section4.RVMeasuredProduct.product_volume_join
+#print DiamondIntegral.Section4.RVMeasuredProductProperties.product_weight_join
+#print axioms DiamondIntegral.Section4.RVMeasuredProductProperties.product_weight_join
+#print DiamondIntegral.Section4.RVMeasuredProductProperties.product_pattern
+#print axioms DiamondIntegral.Section4.RVMeasuredProductProperties.product_pattern
+#print DiamondIntegral.Section4.RVMeasuredProductProperties.product_finite_patterns
+#print axioms DiamondIntegral.Section4.RVMeasuredProductProperties.product_finite_patterns
+#print DiamondIntegral.Section4.RVMeasuredProductProperties.resProduct
+#print axioms DiamondIntegral.Section4.RVMeasuredProductProperties.resProduct
+#print DiamondIntegral.Section4.RVMeasuredProductProperties.product_domain_bounded
+#print axioms DiamondIntegral.Section4.RVMeasuredProductProperties.product_domain_bounded
+#print DiamondIntegral.Section4.RESChartRing.Generator
+#print axioms DiamondIntegral.Section4.RESChartRing.Generator
+#print DiamondIntegral.Section4.RESChartRing.symbol
+#print axioms DiamondIntegral.Section4.RESChartRing.symbol
+#print DiamondIntegral.Section4.RESChartRing.unit
+#print axioms DiamondIntegral.Section4.RESChartRing.unit
+#print DiamondIntegral.Section4.RESChartRing.Relation
+#print axioms DiamondIntegral.Section4.RESChartRing.Relation
+#print DiamondIntegral.Section4.RESChartRing.relationIdeal
+#print axioms DiamondIntegral.Section4.RESChartRing.relationIdeal
+#print DiamondIntegral.Section4.RESChartRing.Ring
+#print axioms DiamondIntegral.Section4.RESChartRing.Ring
+#print DiamondIntegral.Section4.RESChartRing.objectClass
+#print axioms DiamondIntegral.Section4.RESChartRing.objectClass
+#print DiamondIntegral.Section4.RESChartRing.relation_zero
+#print axioms DiamondIntegral.Section4.RESChartRing.relation_zero
+#print DiamondIntegral.Section4.RESChartRing.objectClass_unit
+#print axioms DiamondIntegral.Section4.RESChartRing.objectClass_unit
+#print DiamondIntegral.Section4.RESChartRing.objectClass_product
+#print axioms DiamondIntegral.Section4.RESChartRing.objectClass_product
+#print DiamondIntegral.Section4.RESChartRing.objectClass_iso
+#print axioms DiamondIntegral.Section4.RESChartRing.objectClass_iso
+#print DiamondIntegral.Section4.RESChartRing.objectClass_empty
+#print axioms DiamondIntegral.Section4.RESChartRing.objectClass_empty
+#print DiamondIntegral.Section4.RESChartRing.objectClass_scissor
+#print axioms DiamondIntegral.Section4.RESChartRing.objectClass_scissor
+#print DiamondIntegral.Section4.RESChartRing.Invariant
+#print axioms DiamondIntegral.Section4.RESChartRing.Invariant
+#print DiamondIntegral.Section4.RESChartRing.freeMap
+#print axioms DiamondIntegral.Section4.RESChartRing.freeMap
+#print DiamondIntegral.Section4.RESChartRing.freeMap_symbol
+#print axioms DiamondIntegral.Section4.RESChartRing.freeMap_symbol
+#print DiamondIntegral.Section4.RESChartRing.invariant_relation_zero
+#print axioms DiamondIntegral.Section4.RESChartRing.invariant_relation_zero
+#print DiamondIntegral.Section4.RESChartRing.invariant_ideal_zero
+#print axioms DiamondIntegral.Section4.RESChartRing.invariant_ideal_zero
+#print DiamondIntegral.Section4.RESChartRing.lift
+#print axioms DiamondIntegral.Section4.RESChartRing.lift
+#print DiamondIntegral.Section4.RESChartRing.lift_objectClass
+#print axioms DiamondIntegral.Section4.RESChartRing.lift_objectClass
+#print DiamondIntegral.Section4.PolynomialDiagonal.diagonal
+#print axioms DiamondIntegral.Section4.PolynomialDiagonal.diagonal
+#print DiamondIntegral.Section4.PolynomialDiagonal.diagonal_monomial
+#print axioms DiamondIntegral.Section4.PolynomialDiagonal.diagonal_monomial
+#print DiamondIntegral.Section4.PolynomialDiagonal.diagonal_coeff
+#print axioms DiamondIntegral.Section4.PolynomialDiagonal.diagonal_coeff
+#print DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction
+#print axioms DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction
+#print DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.piece
+#print axioms DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.piece
+#print DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.coefficient_mem
+#print axioms DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.coefficient_mem
+#print DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.coefficient_of_mem
+#print axioms DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.coefficient_of_mem
+#print DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.sum_coefficients
+#print axioms DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.sum_coefficients
+#print DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.decompose
+#print axioms DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.decompose
+#print DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.decompose_apply
+#print axioms DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.decompose_apply
+#print DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.decomposeHom
+#print axioms DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.decomposeHom
+#print DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.recompose_decompose
+#print axioms DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.recompose_decompose
+#print DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.decompose_of_mem
+#print axioms DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.decompose_of_mem
+#print DiamondIntegral.Section4.PointLocalizationNormalization.coactionGradedRing
+#print axioms DiamondIntegral.Section4.PointLocalizationNormalization.coactionGradedRing
+#print DiamondIntegral.Section4.PointLocalizationNormalization.evaluation
+#print axioms DiamondIntegral.Section4.PointLocalizationNormalization.evaluation
+#print DiamondIntegral.Section4.PointLocalizationNormalization.evaluation_homogeneous
+#print axioms DiamondIntegral.Section4.PointLocalizationNormalization.evaluation_homogeneous
+#print DiamondIntegral.Section4.PointLocalizationNormalization.evaluation_fraction
+#print axioms DiamondIntegral.Section4.PointLocalizationNormalization.evaluation_fraction
+#print DiamondIntegral.Section4.PointLocalizationNormalization.Source
+#print axioms DiamondIntegral.Section4.PointLocalizationNormalization.Source
+#print DiamondIntegral.Section4.PointLocalizationNormalization.embedding
+#print axioms DiamondIntegral.Section4.PointLocalizationNormalization.embedding
+#print DiamondIntegral.Section4.PointLocalizationNormalization.embedding_injective
+#print axioms DiamondIntegral.Section4.PointLocalizationNormalization.embedding_injective
+#print DiamondIntegral.Section4.PointLocalizationNormalization.evaluation_homogeneous_mem
+#print axioms DiamondIntegral.Section4.PointLocalizationNormalization.evaluation_homogeneous_mem
+#print DiamondIntegral.Section4.PointLocalizationNormalization.evaluation_mem
+#print axioms DiamondIntegral.Section4.PointLocalizationNormalization.evaluation_mem
+#print DiamondIntegral.Section4.PointLocalizationNormalization.rangeEquiv
+#print axioms DiamondIntegral.Section4.PointLocalizationNormalization.rangeEquiv
+#print DiamondIntegral.Section4.PointLocalizationNormalization.normalize
+#print axioms DiamondIntegral.Section4.PointLocalizationNormalization.normalize
+#print DiamondIntegral.Section4.PointLocalizationNormalization.embedding_normalize
+#print axioms DiamondIntegral.Section4.PointLocalizationNormalization.embedding_normalize
+#print DiamondIntegral.Section4.PointLocalizationNormalization.normalize_homogeneous
+#print axioms DiamondIntegral.Section4.PointLocalizationNormalization.normalize_homogeneous
+#print DiamondIntegral.Section4.PointLocalizationNormalization.normalize_point
+#print axioms DiamondIntegral.Section4.PointLocalizationNormalization.normalize_point
+#print DiamondIntegral.Section4.PointLocalizationEquivalence.coactionGradedRing
+#print axioms DiamondIntegral.Section4.PointLocalizationEquivalence.coactionGradedRing
+#print DiamondIntegral.Section4.PointLocalizationEquivalence.pointIdeal
+#print axioms DiamondIntegral.Section4.PointLocalizationEquivalence.pointIdeal
+#print DiamondIntegral.Section4.PointLocalizationEquivalence.Quotient
+#print axioms DiamondIntegral.Section4.PointLocalizationEquivalence.Quotient
+#print DiamondIntegral.Section4.PointLocalizationEquivalence.quotientMap
+#print axioms DiamondIntegral.Section4.PointLocalizationEquivalence.quotientMap
+#print DiamondIntegral.Section4.PointLocalizationEquivalence.quotient_point
+#print axioms DiamondIntegral.Section4.PointLocalizationEquivalence.quotient_point
+#print DiamondIntegral.Section4.PointLocalizationEquivalence.fromLocalization
+#print axioms DiamondIntegral.Section4.PointLocalizationEquivalence.fromLocalization
+#print DiamondIntegral.Section4.PointLocalizationEquivalence.fromLocalization_algebraMap
+#print axioms DiamondIntegral.Section4.PointLocalizationEquivalence.fromLocalization_algebraMap
+#print DiamondIntegral.Section4.PointLocalizationEquivalence.fromLocalization_fraction
+#print axioms DiamondIntegral.Section4.PointLocalizationEquivalence.fromLocalization_fraction
+#print DiamondIntegral.Section4.PointLocalizationEquivalence.fromSource
+#print axioms DiamondIntegral.Section4.PointLocalizationEquivalence.fromSource
+#print DiamondIntegral.Section4.PointLocalizationEquivalence.fromSource_normalize
+#print axioms DiamondIntegral.Section4.PointLocalizationEquivalence.fromSource_normalize
+#print DiamondIntegral.Section4.PointLocalizationEquivalence.pointIdeal_le_normalize_ker
+#print axioms DiamondIntegral.Section4.PointLocalizationEquivalence.pointIdeal_le_normalize_ker
+#print DiamondIntegral.Section4.PointLocalizationEquivalence.toSource
+#print axioms DiamondIntegral.Section4.PointLocalizationEquivalence.toSource
+#print DiamondIntegral.Section4.PointLocalizationEquivalence.toSource_mk
+#print axioms DiamondIntegral.Section4.PointLocalizationEquivalence.toSource_mk
+#print DiamondIntegral.Section4.PointLocalizationEquivalence.fromSource_toSource
+#print axioms DiamondIntegral.Section4.PointLocalizationEquivalence.fromSource_toSource
+#print DiamondIntegral.Section4.PointLocalizationEquivalence.toSource_fromSource
+#print axioms DiamondIntegral.Section4.PointLocalizationEquivalence.toSource_fromSource
+#print DiamondIntegral.Section4.PointLocalizationEquivalence.equiv
+#print axioms DiamondIntegral.Section4.PointLocalizationEquivalence.equiv
+#print DiamondIntegral.Section4.PointLocalizationEquivalence.equiv_mk
+#print axioms DiamondIntegral.Section4.PointLocalizationEquivalence.equiv_mk
+#print DiamondIntegral.Section4.PointLocalizationEquivalence.normalize_kernel
+#print axioms DiamondIntegral.Section4.PointLocalizationEquivalence.normalize_kernel
+#print DiamondIntegral.Section4.RESPointLocalization.point_mem
+#print axioms DiamondIntegral.Section4.RESPointLocalization.point_mem
+#print DiamondIntegral.Section4.RESPointLocalization.Ring
+#print axioms DiamondIntegral.Section4.RESPointLocalization.Ring
+#print DiamondIntegral.Section4.RESPointLocalization.normalizedEquiv
+#print axioms DiamondIntegral.Section4.RESPointLocalization.normalizedEquiv
+#print DiamondIntegral.Section4.RESPointLocalization.dimensionFreeEquiv
+#print axioms DiamondIntegral.Section4.RESPointLocalization.dimensionFreeEquiv
+#print DiamondIntegral.Section4.RESPointLocalization.chartFraction
+#print axioms DiamondIntegral.Section4.RESPointLocalization.chartFraction
+#print DiamondIntegral.Section4.RESPointLocalization.dimensionFreeEquiv_object
+#print axioms DiamondIntegral.Section4.RESPointLocalization.dimensionFreeEquiv_object
+#print DiamondIntegral.Section4.RESPointLocalization.point_fraction_one
+#print axioms DiamondIntegral.Section4.RESPointLocalization.point_fraction_one
+#print DiamondIntegral.Section4.TensorPolynomialCoaction.Data
+#print axioms DiamondIntegral.Section4.TensorPolynomialCoaction.Data
+#print DiamondIntegral.Section4.TensorPolynomialCoaction.leftInclusion
+#print axioms DiamondIntegral.Section4.TensorPolynomialCoaction.leftInclusion
+#print DiamondIntegral.Section4.TensorPolynomialCoaction.rightInclusion
+#print axioms DiamondIntegral.Section4.TensorPolynomialCoaction.rightInclusion
+#print DiamondIntegral.Section4.TensorPolynomialCoaction.leftInclusion_base
+#print axioms DiamondIntegral.Section4.TensorPolynomialCoaction.leftInclusion_base
+#print DiamondIntegral.Section4.TensorPolynomialCoaction.rightInclusion_base
+#print axioms DiamondIntegral.Section4.TensorPolynomialCoaction.rightInclusion_base
+#print DiamondIntegral.Section4.TensorPolynomialCoaction.baseMap
+#print axioms DiamondIntegral.Section4.TensorPolynomialCoaction.baseMap
+#print DiamondIntegral.Section4.TensorPolynomialCoaction.leftMap
+#print axioms DiamondIntegral.Section4.TensorPolynomialCoaction.leftMap
+#print DiamondIntegral.Section4.TensorPolynomialCoaction.rightMap
+#print axioms DiamondIntegral.Section4.TensorPolynomialCoaction.rightMap
+#print DiamondIntegral.Section4.TensorPolynomialCoaction.leftMap_base
+#print axioms DiamondIntegral.Section4.TensorPolynomialCoaction.leftMap_base
+#print DiamondIntegral.Section4.TensorPolynomialCoaction.rightMap_base
+#print axioms DiamondIntegral.Section4.TensorPolynomialCoaction.rightMap_base
+#print DiamondIntegral.Section4.TensorPolynomialCoaction.coactionMap
+#print axioms DiamondIntegral.Section4.TensorPolynomialCoaction.coactionMap
+#print DiamondIntegral.Section4.TensorPolynomialCoaction.coactionMap_tmul
+#print axioms DiamondIntegral.Section4.TensorPolynomialCoaction.coactionMap_tmul
+#print DiamondIntegral.Section4.TensorPolynomialCoaction.coactionMap_tmul_eigen
+#print axioms DiamondIntegral.Section4.TensorPolynomialCoaction.coactionMap_tmul_eigen
+#print DiamondIntegral.Section4.TensorPolynomialCoaction.coactionMap_counit
+#print axioms DiamondIntegral.Section4.TensorPolynomialCoaction.coactionMap_counit
+#print DiamondIntegral.Section4.TensorCoactionGrading.coassocSubgroup
+#print axioms DiamondIntegral.Section4.TensorCoactionGrading.coassocSubgroup
+#print DiamondIntegral.Section4.TensorCoactionGrading.eigen_mem_coassoc
+#print axioms DiamondIntegral.Section4.TensorCoactionGrading.eigen_mem_coassoc
+#print DiamondIntegral.Section4.TensorCoactionGrading.coassoc_tmul_mem
+#print axioms DiamondIntegral.Section4.TensorCoactionGrading.coassoc_tmul_mem
+#print DiamondIntegral.Section4.TensorCoactionGrading.coactionMap_coassoc
+#print axioms DiamondIntegral.Section4.TensorCoactionGrading.coactionMap_coassoc
+#print DiamondIntegral.Section4.TensorCoactionGrading.coaction
+#print axioms DiamondIntegral.Section4.TensorCoactionGrading.coaction
+#print DiamondIntegral.Section4.TensorCoactionGrading.piece
+#print axioms DiamondIntegral.Section4.TensorCoactionGrading.piece
+#print DiamondIntegral.Section4.TensorCoactionGrading.gradedRing
+#print axioms DiamondIntegral.Section4.TensorCoactionGrading.gradedRing
+#print DiamondIntegral.Section4.TensorCoactionGrading.tmul_mem
+#print axioms DiamondIntegral.Section4.TensorCoactionGrading.tmul_mem
+#print DiamondIntegral.Section4.TensorZeroDegree.zeroProjection_tmul
+#print axioms DiamondIntegral.Section4.TensorZeroDegree.zeroProjection_tmul
+#print DiamondIntegral.Section4.TensorZeroDegree.left_base_mem
+#print axioms DiamondIntegral.Section4.TensorZeroDegree.left_base_mem
+#print DiamondIntegral.Section4.TensorZeroDegree.leftZeroInclusion
+#print axioms DiamondIntegral.Section4.TensorZeroDegree.leftZeroInclusion
+#print DiamondIntegral.Section4.TensorZeroDegree.zeroProjection_range
+#print axioms DiamondIntegral.Section4.TensorZeroDegree.zeroProjection_range
+#print DiamondIntegral.Section4.TensorZeroDegree.zero_surjective
+#print axioms DiamondIntegral.Section4.TensorZeroDegree.zero_surjective
+#print DiamondIntegral.Section4.RVBalancedGradings.measuredData
+#print axioms DiamondIntegral.Section4.RVBalancedGradings.measuredData
+#print DiamondIntegral.Section4.RVBalancedGradings.boundedData
+#print axioms DiamondIntegral.Section4.RVBalancedGradings.boundedData
+#print DiamondIntegral.Section4.RVBalancedGradings.measuredCoaction
+#print axioms DiamondIntegral.Section4.RVBalancedGradings.measuredCoaction
+#print DiamondIntegral.Section4.RVBalancedGradings.boundedCoaction
+#print axioms DiamondIntegral.Section4.RVBalancedGradings.boundedCoaction
+#print DiamondIntegral.Section4.RVBalancedGradings.measuredPiece
+#print axioms DiamondIntegral.Section4.RVBalancedGradings.measuredPiece
+#print DiamondIntegral.Section4.RVBalancedGradings.boundedPiece
+#print axioms DiamondIntegral.Section4.RVBalancedGradings.boundedPiece
+#print DiamondIntegral.Section4.RVBalancedGradings.measuredGradedRing
+#print axioms DiamondIntegral.Section4.RVBalancedGradings.measuredGradedRing
+#print DiamondIntegral.Section4.RVBalancedGradings.boundedGradedRing
+#print axioms DiamondIntegral.Section4.RVBalancedGradings.boundedGradedRing
+#print DiamondIntegral.Section4.RVBalancedGradings.measured_tmul_mem
+#print axioms DiamondIntegral.Section4.RVBalancedGradings.measured_tmul_mem
+#print DiamondIntegral.Section4.RVBalancedGradings.bounded_tmul_mem
+#print axioms DiamondIntegral.Section4.RVBalancedGradings.bounded_tmul_mem
+#print DiamondIntegral.Section4.RVBalancedSpecialGradings.pPreimage_mem
+#print axioms DiamondIntegral.Section4.RVBalancedSpecialGradings.pPreimage_mem
+#print DiamondIntegral.Section4.RVBalancedSpecialGradings.hPreimage_mem
+#print axioms DiamondIntegral.Section4.RVBalancedSpecialGradings.hPreimage_mem
+#print DiamondIntegral.Section4.RVBalancedSpecialGradings.radiusPreimage_mem
+#print axioms DiamondIntegral.Section4.RVBalancedSpecialGradings.radiusPreimage_mem
+#print DiamondIntegral.Section4.RVBalancedRadiusIdeal.radiusIdeal
+#print axioms DiamondIntegral.Section4.RVBalancedRadiusIdeal.radiusIdeal
+#print DiamondIntegral.Section4.RVBalancedRadiusIdeal.radiusPreimage_mem_ideal
+#print axioms DiamondIntegral.Section4.RVBalancedRadiusIdeal.radiusPreimage_mem_ideal
+#print DiamondIntegral.Section4.RVBalancedRadiusIdeal.radiusIdeal_homogeneous
+#print axioms DiamondIntegral.Section4.RVBalancedRadiusIdeal.radiusIdeal_homogeneous
+#print DiamondIntegral.Section4.RVBalancedRadiusIdeal.comparison_map_ideal
+#print axioms DiamondIntegral.Section4.RVBalancedRadiusIdeal.comparison_map_ideal
+#print DiamondIntegral.Section4.RVBalancedRadiusIdeal.radiusIdeal_le_evaluation_ker
+#print axioms DiamondIntegral.Section4.RVBalancedRadiusIdeal.radiusIdeal_le_evaluation_ker
+#print DiamondIntegral.Section4.RVBalancedRadiusQuotient.Ring
+#print axioms DiamondIntegral.Section4.RVBalancedRadiusQuotient.Ring
+#print DiamondIntegral.Section4.RVBalancedRadiusQuotient.quotient
+#print axioms DiamondIntegral.Section4.RVBalancedRadiusQuotient.quotient
+#print DiamondIntegral.Section4.RVBalancedRadiusQuotient.ideal_coefficients
+#print axioms DiamondIntegral.Section4.RVBalancedRadiusQuotient.ideal_coefficients
+#print DiamondIntegral.Section4.RVBalancedRadiusQuotient.coaction
+#print axioms DiamondIntegral.Section4.RVBalancedRadiusQuotient.coaction
+#print DiamondIntegral.Section4.RVBalancedRadiusQuotient.piece
+#print axioms DiamondIntegral.Section4.RVBalancedRadiusQuotient.piece
+#print DiamondIntegral.Section4.RVBalancedRadiusQuotient.gradedRing
+#print axioms DiamondIntegral.Section4.RVBalancedRadiusQuotient.gradedRing
+#print DiamondIntegral.Section4.RVBalancedRadiusQuotient.quotient_mem
+#print axioms DiamondIntegral.Section4.RVBalancedRadiusQuotient.quotient_mem
+#print DiamondIntegral.Section4.RVBalancedRadiusQuotient.radiusPreimage_zero
+#print axioms DiamondIntegral.Section4.RVBalancedRadiusQuotient.radiusPreimage_zero
+#print DiamondIntegral.Section4.RVBalancedRadiusQuotient.radiusIdeal_le_comparison_ker
+#print axioms DiamondIntegral.Section4.RVBalancedRadiusQuotient.radiusIdeal_le_comparison_ker
+#print DiamondIntegral.Section4.RVBalancedRadiusQuotient.comparison
+#print axioms DiamondIntegral.Section4.RVBalancedRadiusQuotient.comparison
+#print DiamondIntegral.Section4.RVBalancedRadiusQuotient.comparison_mk
+#print axioms DiamondIntegral.Section4.RVBalancedRadiusQuotient.comparison_mk
+#print DiamondIntegral.Section4.RVBalancedRadiusQuotient.evaluation
+#print axioms DiamondIntegral.Section4.RVBalancedRadiusQuotient.evaluation
+#print DiamondIntegral.Section4.RVBalancedRadiusQuotient.evaluation_mk
+#print axioms DiamondIntegral.Section4.RVBalancedRadiusQuotient.evaluation_mk
+#print DiamondIntegral.Section4.RVBalancedRadiusQuotient.ofRES
+#print axioms DiamondIntegral.Section4.RVBalancedRadiusQuotient.ofRES
+#print DiamondIntegral.Section4.RVBalancedRadiusQuotient.ofRES_mem
+#print axioms DiamondIntegral.Section4.RVBalancedRadiusQuotient.ofRES_mem
+#print DiamondIntegral.Section4.RVBalancedRadiusQuotient.comparison_ofRES
+#print axioms DiamondIntegral.Section4.RVBalancedRadiusQuotient.comparison_ofRES
+#print DiamondIntegral.Section4.RVBalancedRadiusQuotient.evaluation_ofRES
+#print axioms DiamondIntegral.Section4.RVBalancedRadiusQuotient.evaluation_ofRES
+#print DiamondIntegral.Section4.RVBalancedRadiusQuotient.evaluation_independent_kind
+#print axioms DiamondIntegral.Section4.RVBalancedRadiusQuotient.evaluation_independent_kind
+#print DiamondIntegral.Section4.RVBalancedRadiusDegreeZero.ideal_le_zero_ker
+#print axioms DiamondIntegral.Section4.RVBalancedRadiusDegreeZero.ideal_le_zero_ker
+#print DiamondIntegral.Section4.RVBalancedRadiusDegreeZero.zeroEquiv
+#print axioms DiamondIntegral.Section4.RVBalancedRadiusDegreeZero.zeroEquiv
+#print DiamondIntegral.Section4.RVBalancedRadiusDegreeZero.zeroEquiv_apply
+#print axioms DiamondIntegral.Section4.RVBalancedRadiusDegreeZero.zeroEquiv_apply
+#print DiamondIntegral.Section4.RVBalancedRadiusDegreeZero.ofRES_injective_on_degree_zero
+#print axioms DiamondIntegral.Section4.RVBalancedRadiusDegreeZero.ofRES_injective_on_degree_zero
+#print DiamondIntegral.Section4.RVBalancedRadiusDegreeZero.weightMap
+#print axioms DiamondIntegral.Section4.RVBalancedRadiusDegreeZero.weightMap
+#print DiamondIntegral.Section4.RVBalancedRadiusDegreeZero.weightMap_injective
+#print axioms DiamondIntegral.Section4.RVBalancedRadiusDegreeZero.weightMap_injective
+#print DiamondIntegral.Section4.RVBalancedRadiusDegreeZero.zero_ne_one
+#print axioms DiamondIntegral.Section4.RVBalancedRadiusDegreeZero.zero_ne_one
+#print DiamondIntegral.Section4.RVBalancedZeroDegree.measured_surjective
+#print axioms DiamondIntegral.Section4.RVBalancedZeroDegree.measured_surjective
+#print DiamondIntegral.Section4.RVBalancedZeroDegree.measured_injective
+#print axioms DiamondIntegral.Section4.RVBalancedZeroDegree.measured_injective
+#print DiamondIntegral.Section4.RVBalancedZeroDegree.measuredMap
+#print axioms DiamondIntegral.Section4.RVBalancedZeroDegree.measuredMap
+#print DiamondIntegral.Section4.RVBalancedZeroDegree.measuredMap_bijective
+#print axioms DiamondIntegral.Section4.RVBalancedZeroDegree.measuredMap_bijective
+#print DiamondIntegral.Section4.RVBalancedZeroDegree.measuredEquiv
+#print axioms DiamondIntegral.Section4.RVBalancedZeroDegree.measuredEquiv
+#print DiamondIntegral.Section4.RVBalancedZeroDegree.measuredEquiv_apply
+#print axioms DiamondIntegral.Section4.RVBalancedZeroDegree.measuredEquiv_apply
+#print DiamondIntegral.Section4.RVBalancedZeroDegree.bounded_surjective
+#print axioms DiamondIntegral.Section4.RVBalancedZeroDegree.bounded_surjective
+#print DiamondIntegral.Section4.RVBalancedZeroDegree.bounded_injective
+#print axioms DiamondIntegral.Section4.RVBalancedZeroDegree.bounded_injective
+#print DiamondIntegral.Section4.RVBalancedZeroDegree.boundedMap
+#print axioms DiamondIntegral.Section4.RVBalancedZeroDegree.boundedMap
+#print DiamondIntegral.Section4.RVBalancedZeroDegree.boundedMap_bijective
+#print axioms DiamondIntegral.Section4.RVBalancedZeroDegree.boundedMap_bijective
+#print DiamondIntegral.Section4.RVBalancedZeroDegree.boundedEquiv
+#print axioms DiamondIntegral.Section4.RVBalancedZeroDegree.boundedEquiv
+#print DiamondIntegral.Section4.RVBalancedZeroDegree.boundedEquiv_apply
+#print axioms DiamondIntegral.Section4.RVBalancedZeroDegree.boundedEquiv_apply
+#print DiamondIntegral.Section4.RVBalancedZeroDegree.radiusEquiv
+#print axioms DiamondIntegral.Section4.RVBalancedZeroDegree.radiusEquiv
+#print DiamondIntegral.Section4.RVBalancedZeroDegree.radiusEquiv_apply
+#print axioms DiamondIntegral.Section4.RVBalancedZeroDegree.radiusEquiv_apply
+#print DiamondIntegral.Section4.RVBalancedZeroDegree.measured_comparison_injective
+#print axioms DiamondIntegral.Section4.RVBalancedZeroDegree.measured_comparison_injective
+#print DiamondIntegral.Section4.RVBalancedZeroDegree.bounded_comparison_injective
+#print axioms DiamondIntegral.Section4.RVBalancedZeroDegree.bounded_comparison_injective
+#print DiamondIntegral.Section4.RVBalancedZeroDegree.radius_comparison_injective
+#print axioms DiamondIntegral.Section4.RVBalancedZeroDegree.radius_comparison_injective
+#print DiamondIntegral.Section4.RVComparisonKernels.measured_compatibility
+#print axioms DiamondIntegral.Section4.RVComparisonKernels.measured_compatibility
+#print DiamondIntegral.Section4.RVComparisonKernels.bounded_compatibility
+#print axioms DiamondIntegral.Section4.RVComparisonKernels.bounded_compatibility
+#print DiamondIntegral.Section4.RVComparisonKernels.radius_compatibility
+#print axioms DiamondIntegral.Section4.RVComparisonKernels.radius_compatibility
+#print DiamondIntegral.Section4.RVComparisonKernels.measured_kernel_homogeneous
+#print axioms DiamondIntegral.Section4.RVComparisonKernels.measured_kernel_homogeneous
+#print DiamondIntegral.Section4.RVComparisonKernels.bounded_kernel_homogeneous
+#print axioms DiamondIntegral.Section4.RVComparisonKernels.bounded_kernel_homogeneous
+#print DiamondIntegral.Section4.RVComparisonKernels.radius_kernel_homogeneous
+#print axioms DiamondIntegral.Section4.RVComparisonKernels.radius_kernel_homogeneous
+#print DiamondIntegral.Section4.RVComparisonKernels.measured_positive_decomposition
+#print axioms DiamondIntegral.Section4.RVComparisonKernels.measured_positive_decomposition
+#print DiamondIntegral.Section4.RVComparisonKernels.bounded_positive_decomposition
+#print axioms DiamondIntegral.Section4.RVComparisonKernels.bounded_positive_decomposition
+#print DiamondIntegral.Section4.RVComparisonKernels.radius_positive_decomposition
+#print axioms DiamondIntegral.Section4.RVComparisonKernels.radius_positive_decomposition
+#print DiamondIntegral.Section4.RVBalancedRadiusChoices.withLift
+#print axioms DiamondIntegral.Section4.RVBalancedRadiusChoices.withLift
+#print DiamondIntegral.Section4.RVBalancedRadiusChoices.withLift_formula
+#print axioms DiamondIntegral.Section4.RVBalancedRadiusChoices.withLift_formula
+#print DiamondIntegral.Section4.RVBalancedRadiusChoices.withLift_independent
+#print axioms DiamondIntegral.Section4.RVBalancedRadiusChoices.withLift_independent
+#print DiamondIntegral.Section4.RVBalancedRadiusChoices.canonical_eq_withLift
+#print axioms DiamondIntegral.Section4.RVBalancedRadiusChoices.canonical_eq_withLift
+#print DiamondIntegral.Section4.RVBalancedRadiusChoices.annulus_zero_class
+#print axioms DiamondIntegral.Section4.RVBalancedRadiusChoices.annulus_zero_class
+#print DiamondIntegral.Section4.RVBalancedRadiusChoices.withLift_zero
+#print axioms DiamondIntegral.Section4.RVBalancedRadiusChoices.withLift_zero
+#print DiamondIntegral.Section4.RVBalancedRadiusChoices.canonical_zero
+#print axioms DiamondIntegral.Section4.RVBalancedRadiusChoices.canonical_zero
+#print DiamondIntegral.Section4.RVBalancedMapGradings.gradedMeasuredComparison
+#print axioms DiamondIntegral.Section4.RVBalancedMapGradings.gradedMeasuredComparison
+#print DiamondIntegral.Section4.RVBalancedMapGradings.gradedBoundedComparison
+#print axioms DiamondIntegral.Section4.RVBalancedMapGradings.gradedBoundedComparison
+#print DiamondIntegral.Section4.RVBalancedMapGradings.gradedMeasuredEvaluation
+#print axioms DiamondIntegral.Section4.RVBalancedMapGradings.gradedMeasuredEvaluation
+#print DiamondIntegral.Section4.RVBalancedMapGradings.gradedBoundedEvaluation
+#print axioms DiamondIntegral.Section4.RVBalancedMapGradings.gradedBoundedEvaluation
+#print DiamondIntegral.Section4.RVVolumeIsoEvaluation.unbounded_gamma_eq
+#print axioms DiamondIntegral.Section4.RVVolumeIsoEvaluation.unbounded_gamma_eq
+#print DiamondIntegral.Section4.RVVolumeIsoEvaluation.bounded_auxiliary_eq
+#print axioms DiamondIntegral.Section4.RVVolumeIsoEvaluation.bounded_auxiliary_eq
+#print DiamondIntegral.Section4.RVVolumeIsoEvaluation.bounded_gamma_eq
+#print axioms DiamondIntegral.Section4.RVVolumeIsoEvaluation.bounded_gamma_eq
+#print DiamondIntegral.Section4.RVVolumeIsoEvaluation.unbounded_tensor_difference
+#print axioms DiamondIntegral.Section4.RVVolumeIsoEvaluation.unbounded_tensor_difference
+#print DiamondIntegral.Section4.RVVolumeIsoEvaluation.bounded_tensor_difference
+#print axioms DiamondIntegral.Section4.RVVolumeIsoEvaluation.bounded_tensor_difference
+#print DiamondIntegral.Section4.RVTranslationEvaluation.measured_difference
+#print axioms DiamondIntegral.Section4.RVTranslationEvaluation.measured_difference
+#print DiamondIntegral.Section4.RVTranslationEvaluation.bounded_difference
+#print axioms DiamondIntegral.Section4.RVTranslationEvaluation.bounded_difference
+#print DiamondIntegral.Section4.RVTranslationIdeals.measuredGenerator
+#print axioms DiamondIntegral.Section4.RVTranslationIdeals.measuredGenerator
+#print DiamondIntegral.Section4.RVTranslationIdeals.boundedGenerator
+#print axioms DiamondIntegral.Section4.RVTranslationIdeals.boundedGenerator
+#print DiamondIntegral.Section4.RVTranslationIdeals.measuredIdeal
+#print axioms DiamondIntegral.Section4.RVTranslationIdeals.measuredIdeal
+#print DiamondIntegral.Section4.RVTranslationIdeals.boundedIdeal
+#print axioms DiamondIntegral.Section4.RVTranslationIdeals.boundedIdeal
+#print DiamondIntegral.Section4.RVTranslationIdeals.measuredIdeal_homogeneous
+#print axioms DiamondIntegral.Section4.RVTranslationIdeals.measuredIdeal_homogeneous
+#print DiamondIntegral.Section4.RVTranslationIdeals.boundedIdeal_homogeneous
+#print axioms DiamondIntegral.Section4.RVTranslationIdeals.boundedIdeal_homogeneous
+#print DiamondIntegral.Section4.RVTranslationIdeals.measuredIdeal_le_evaluation_ker
+#print axioms DiamondIntegral.Section4.RVTranslationIdeals.measuredIdeal_le_evaluation_ker
+#print DiamondIntegral.Section4.RVTranslationIdeals.boundedIdeal_le_evaluation_ker
+#print axioms DiamondIntegral.Section4.RVTranslationIdeals.boundedIdeal_le_evaluation_ker
+#print DiamondIntegral.Section4.TensorGradedMaps.compatibilitySubgroup
+#print axioms DiamondIntegral.Section4.TensorGradedMaps.compatibilitySubgroup
+#print DiamondIntegral.Section4.TensorGradedMaps.eigen_mem_compatibility
+#print axioms DiamondIntegral.Section4.TensorGradedMaps.eigen_mem_compatibility
+#print DiamondIntegral.Section4.TensorGradedMaps.tmul_mem_compatibility
+#print axioms DiamondIntegral.Section4.TensorGradedMaps.tmul_mem_compatibility
+#print DiamondIntegral.Section4.TensorGradedMaps.map_coaction
+#print axioms DiamondIntegral.Section4.TensorGradedMaps.map_coaction
+#print DiamondIntegral.Section4.TensorGradedMaps.map_mem
+#print axioms DiamondIntegral.Section4.TensorGradedMaps.map_mem
+#print DiamondIntegral.Section4.TensorGradedMaps.gradedMap
+#print axioms DiamondIntegral.Section4.TensorGradedMaps.gradedMap
+#print DiamondIntegral.Section4.RestrictedPolynomialGrading.source
+#print axioms DiamondIntegral.Section4.RestrictedPolynomialGrading.source
+#print DiamondIntegral.Section4.RestrictedPolynomialGrading.monomial_coefficient_mem
+#print axioms DiamondIntegral.Section4.RestrictedPolynomialGrading.monomial_coefficient_mem
+#print DiamondIntegral.Section4.RestrictedPolynomialGrading.diagonal_coefficients
+#print axioms DiamondIntegral.Section4.RestrictedPolynomialGrading.diagonal_coefficients
+#print DiamondIntegral.Section4.RestrictedPolynomialGrading.coactionFun
+#print axioms DiamondIntegral.Section4.RestrictedPolynomialGrading.coactionFun
+#print DiamondIntegral.Section4.RestrictedPolynomialGrading.map_coactionFun
+#print axioms DiamondIntegral.Section4.RestrictedPolynomialGrading.map_coactionFun
+#print DiamondIntegral.Section4.RestrictedPolynomialGrading.coactionMap
+#print axioms DiamondIntegral.Section4.RestrictedPolynomialGrading.coactionMap
+#print DiamondIntegral.Section4.RestrictedPolynomialGrading.coaction_coefficient
+#print axioms DiamondIntegral.Section4.RestrictedPolynomialGrading.coaction_coefficient
+#print DiamondIntegral.Section4.RestrictedPolynomialGrading.diagonal_counit
+#print axioms DiamondIntegral.Section4.RestrictedPolynomialGrading.diagonal_counit
+#print DiamondIntegral.Section4.RestrictedPolynomialGrading.coaction
+#print axioms DiamondIntegral.Section4.RestrictedPolynomialGrading.coaction
+#print DiamondIntegral.Section4.RestrictedPolynomialGrading.piece
+#print axioms DiamondIntegral.Section4.RestrictedPolynomialGrading.piece
+#print DiamondIntegral.Section4.RestrictedPolynomialGrading.gradedRing
+#print axioms DiamondIntegral.Section4.RestrictedPolynomialGrading.gradedRing
+#print DiamondIntegral.Section4.RestrictedPolynomialGrading.mem_piece
+#print axioms DiamondIntegral.Section4.RestrictedPolynomialGrading.mem_piece
+#print DiamondIntegral.Section4.GammaPolynomialGradings.unboundedPiece
+#print axioms DiamondIntegral.Section4.GammaPolynomialGradings.unboundedPiece
+#print DiamondIntegral.Section4.GammaPolynomialGradings.unboundedGradedRing
+#print axioms DiamondIntegral.Section4.GammaPolynomialGradings.unboundedGradedRing
+#print DiamondIntegral.Section4.GammaPolynomialGradings.mem_unboundedPiece
+#print axioms DiamondIntegral.Section4.GammaPolynomialGradings.mem_unboundedPiece
+#print DiamondIntegral.Section4.GammaPolynomialGradings.unbounded_monomial_mem
+#print axioms DiamondIntegral.Section4.GammaPolynomialGradings.unbounded_monomial_mem
+#print DiamondIntegral.Section4.GammaPolynomialGradings.boundedPiece
+#print axioms DiamondIntegral.Section4.GammaPolynomialGradings.boundedPiece
+#print DiamondIntegral.Section4.GammaPolynomialGradings.boundedGradedRing
+#print axioms DiamondIntegral.Section4.GammaPolynomialGradings.boundedGradedRing
+#print DiamondIntegral.Section4.GammaPolynomialGradings.mem_boundedPiece
+#print axioms DiamondIntegral.Section4.GammaPolynomialGradings.mem_boundedPiece
+#print DiamondIntegral.Section4.GammaPolynomialGradings.bounded_monomial_mem
+#print axioms DiamondIntegral.Section4.GammaPolynomialGradings.bounded_monomial_mem
+#print DiamondIntegral.Section4.GammaPolynomialGradings.toUnbounded_mem
+#print axioms DiamondIntegral.Section4.GammaPolynomialGradings.toUnbounded_mem
+#print DiamondIntegral.Section4.GammaPolynomialGradings.objectPolynomial_mem
+#print axioms DiamondIntegral.Section4.GammaPolynomialGradings.objectPolynomial_mem
+#print DiamondIntegral.Section4.GammaPolynomialGradings.boundedObjectPolynomial_mem
+#print axioms DiamondIntegral.Section4.GammaPolynomialGradings.boundedObjectPolynomial_mem
+#print DiamondIntegral.Section4.RESPsiGradings.groupRingCharacter_mem
+#print axioms DiamondIntegral.Section4.RESPsiGradings.groupRingCharacter_mem
+#print DiamondIntegral.Section4.RESPsiGradings.coefficientCharacter_mem
+#print axioms DiamondIntegral.Section4.RESPsiGradings.coefficientCharacter_mem
+#print DiamondIntegral.Section4.RESPsiGradings.measured_torus_pow_mem
+#print axioms DiamondIntegral.Section4.RESPsiGradings.measured_torus_pow_mem
+#print DiamondIntegral.Section4.RESPsiGradings.psi_unbounded_mem
+#print axioms DiamondIntegral.Section4.RESPsiGradings.psi_unbounded_mem
+#print DiamondIntegral.Section4.RESPsiGradings.ordinary_torus_mem
+#print axioms DiamondIntegral.Section4.RESPsiGradings.ordinary_torus_mem
+#print DiamondIntegral.Section4.RESPsiGradings.ordinary_torus_pow_mem
+#print axioms DiamondIntegral.Section4.RESPsiGradings.ordinary_torus_pow_mem
+#print DiamondIntegral.Section4.RESPsiGradings.ordinary_intCast_mem
+#print axioms DiamondIntegral.Section4.RESPsiGradings.ordinary_intCast_mem
+#print DiamondIntegral.Section4.RESPsiGradings.psi_bounded_mem
+#print axioms DiamondIntegral.Section4.RESPsiGradings.psi_bounded_mem
+#print DiamondIntegral.Section4.RESPsiGradings.gradedUnboundedPsi
+#print axioms DiamondIntegral.Section4.RESPsiGradings.gradedUnboundedPsi
+#print DiamondIntegral.Section4.RESPsiGradings.gradedBoundedPsi
+#print axioms DiamondIntegral.Section4.RESPsiGradings.gradedBoundedPsi
+#print DiamondIntegral.Section4.RVChartRing.Generator
+#print axioms DiamondIntegral.Section4.RVChartRing.Generator
+#print DiamondIntegral.Section4.RVChartRing.symbol
+#print axioms DiamondIntegral.Section4.RVChartRing.symbol
+#print DiamondIntegral.Section4.RVChartRing.unit
+#print axioms DiamondIntegral.Section4.RVChartRing.unit
+#print DiamondIntegral.Section4.RVChartRing.Relation
+#print axioms DiamondIntegral.Section4.RVChartRing.Relation
+#print DiamondIntegral.Section4.RVChartRing.relationIdeal
+#print axioms DiamondIntegral.Section4.RVChartRing.relationIdeal
+#print DiamondIntegral.Section4.RVChartRing.Ring
+#print axioms DiamondIntegral.Section4.RVChartRing.Ring
+#print DiamondIntegral.Section4.RVChartRing.objectClass
+#print axioms DiamondIntegral.Section4.RVChartRing.objectClass
+#print DiamondIntegral.Section4.RVChartRing.relation_zero
+#print axioms DiamondIntegral.Section4.RVChartRing.relation_zero
+#print DiamondIntegral.Section4.RVChartRing.objectClass_unit
+#print axioms DiamondIntegral.Section4.RVChartRing.objectClass_unit
+#print DiamondIntegral.Section4.RVChartRing.objectClass_product
+#print axioms DiamondIntegral.Section4.RVChartRing.objectClass_product
+#print DiamondIntegral.Section4.RVChartRing.objectClass_iso
+#print axioms DiamondIntegral.Section4.RVChartRing.objectClass_iso
+#print DiamondIntegral.Section4.RVChartRing.objectClass_empty
+#print axioms DiamondIntegral.Section4.RVChartRing.objectClass_empty
+#print DiamondIntegral.Section4.RVChartRing.objectClass_scissor
+#print axioms DiamondIntegral.Section4.RVChartRing.objectClass_scissor
+#print DiamondIntegral.Section4.RVChartRing.Invariant
+#print axioms DiamondIntegral.Section4.RVChartRing.Invariant
+#print DiamondIntegral.Section4.RVChartRing.freeMap
+#print axioms DiamondIntegral.Section4.RVChartRing.freeMap
+#print DiamondIntegral.Section4.RVChartRing.freeMap_symbol
+#print axioms DiamondIntegral.Section4.RVChartRing.freeMap_symbol
+#print DiamondIntegral.Section4.RVChartRing.invariant_relation_zero
+#print axioms DiamondIntegral.Section4.RVChartRing.invariant_relation_zero
+#print DiamondIntegral.Section4.RVChartRing.invariant_ideal_zero
+#print axioms DiamondIntegral.Section4.RVChartRing.invariant_ideal_zero
+#print DiamondIntegral.Section4.RVChartRing.lift
+#print axioms DiamondIntegral.Section4.RVChartRing.lift
+#print DiamondIntegral.Section4.RVChartRing.lift_objectClass
+#print axioms DiamondIntegral.Section4.RVChartRing.lift_objectClass
+#print DiamondIntegral.Section4.RVGrading.hom_ext
+#print axioms DiamondIntegral.Section4.RVGrading.hom_ext
+#print DiamondIntegral.Section4.RVGrading.gradingInvariant
+#print axioms DiamondIntegral.Section4.RVGrading.gradingInvariant
+#print DiamondIntegral.Section4.RVGrading.coaction
+#print axioms DiamondIntegral.Section4.RVGrading.coaction
+#print DiamondIntegral.Section4.RVGrading.coaction_class
+#print axioms DiamondIntegral.Section4.RVGrading.coaction_class
+#print DiamondIntegral.Section4.RVGrading.coaction_counit
+#print axioms DiamondIntegral.Section4.RVGrading.coaction_counit
+#print DiamondIntegral.Section4.RVGrading.coaction_coassoc
+#print axioms DiamondIntegral.Section4.RVGrading.coaction_coassoc
+#print DiamondIntegral.Section4.RVGrading.gradingCoaction
+#print axioms DiamondIntegral.Section4.RVGrading.gradingCoaction
+#print DiamondIntegral.Section4.RVGrading.gradedPiece
+#print axioms DiamondIntegral.Section4.RVGrading.gradedPiece
+#print DiamondIntegral.Section4.RVGrading.gradedRing
+#print axioms DiamondIntegral.Section4.RVGrading.gradedRing
+#print DiamondIntegral.Section4.RVGrading.class_mem
+#print axioms DiamondIntegral.Section4.RVGrading.class_mem
+#print DiamondIntegral.Section4.RVBoundedCharts.BoundedChart
+#print axioms DiamondIntegral.Section4.RVBoundedCharts.BoundedChart
+#print DiamondIntegral.Section4.RVBoundedCharts.product
+#print axioms DiamondIntegral.Section4.RVBoundedCharts.product
+#print DiamondIntegral.Section4.RVBoundedCharts.weightedUnit
+#print axioms DiamondIntegral.Section4.RVBoundedCharts.weightedUnit
+#print DiamondIntegral.Section4.RVBoundedCharts.ofRES
+#print axioms DiamondIntegral.Section4.RVBoundedCharts.ofRES
+#print DiamondIntegral.Section4.RVChartMaps.fixedDegreeInvariant
+#print axioms DiamondIntegral.Section4.RVChartMaps.fixedDegreeInvariant
+#print DiamondIntegral.Section4.RVChartMaps.fixedDegreeMap
+#print axioms DiamondIntegral.Section4.RVChartMaps.fixedDegreeMap
+#print DiamondIntegral.Section4.RVChartMaps.fixedDegreeMap_class
+#print axioms DiamondIntegral.Section4.RVChartMaps.fixedDegreeMap_class
+#print DiamondIntegral.Section4.RVChartMaps.fixedDegreeGradedInvariant
+#print axioms DiamondIntegral.Section4.RVChartMaps.fixedDegreeGradedInvariant
+#print DiamondIntegral.Section4.RVChartMaps.fixedDegreeMap_mem
+#print axioms DiamondIntegral.Section4.RVChartMaps.fixedDegreeMap_mem
+#print DiamondIntegral.Section4.RVChartMaps.resInvariant
+#print axioms DiamondIntegral.Section4.RVChartMaps.resInvariant
+#print DiamondIntegral.Section4.RVChartMaps.ofRES
+#print axioms DiamondIntegral.Section4.RVChartMaps.ofRES
+#print DiamondIntegral.Section4.RVChartMaps.ofRES_class
+#print axioms DiamondIntegral.Section4.RVChartMaps.ofRES_class
+#print DiamondIntegral.Section4.RVChartMaps.ofRES_coaction
+#print axioms DiamondIntegral.Section4.RVChartMaps.ofRES_coaction
+#print DiamondIntegral.Section4.RVChartMaps.ofRES_mem
+#print axioms DiamondIntegral.Section4.RVChartMaps.ofRES_mem
+#print DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.zeroProjection
+#print axioms DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.zeroProjection
+#print DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.zeroProjection_mem
+#print axioms DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.zeroProjection_mem
+#print DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.zeroProjection_of_mem
+#print axioms DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.zeroProjection_of_mem
+#print DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.zeroProjection_natural
+#print axioms DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.zeroProjection_natural
+#print DiamondIntegral.Section4.RVZeroDegreeRES.full_projection_range
+#print axioms DiamondIntegral.Section4.RVZeroDegreeRES.full_projection_range
+#print DiamondIntegral.Section4.RVZeroDegreeRES.full_degree_zero_surjective
+#print axioms DiamondIntegral.Section4.RVZeroDegreeRES.full_degree_zero_surjective
+#print DiamondIntegral.Section4.RVZeroDegreeRES.bounded_projection_range
+#print axioms DiamondIntegral.Section4.RVZeroDegreeRES.bounded_projection_range
+#print DiamondIntegral.Section4.RVZeroDegreeRES.bounded_degree_zero_surjective
+#print axioms DiamondIntegral.Section4.RVZeroDegreeRES.bounded_degree_zero_surjective
+#print DiamondIntegral.Section4.RVFiniteWeightedCounts.Target
+#print axioms DiamondIntegral.Section4.RVFiniteWeightedCounts.Target
+#print DiamondIntegral.Section4.RVFiniteWeightedCounts.count
+#print axioms DiamondIntegral.Section4.RVFiniteWeightedCounts.count
+#print DiamondIntegral.Section4.RVFiniteWeightedCounts.count_iso
+#print axioms DiamondIntegral.Section4.RVFiniteWeightedCounts.count_iso
+#print DiamondIntegral.Section4.RVFiniteWeightedCounts.packing
+#print axioms DiamondIntegral.Section4.RVFiniteWeightedCounts.packing
+#print DiamondIntegral.Section4.RVFiniteWeightedCounts.packing_injective
+#print axioms DiamondIntegral.Section4.RVFiniteWeightedCounts.packing_injective
+#print DiamondIntegral.Section4.RVFiniteWeightedCounts.packed_eq_image
+#print axioms DiamondIntegral.Section4.RVFiniteWeightedCounts.packed_eq_image
+#print DiamondIntegral.Section4.RVFiniteWeightedCounts.packed_finite
+#print axioms DiamondIntegral.Section4.RVFiniteWeightedCounts.packed_finite
+#print DiamondIntegral.Section4.RVFiniteWeightedCounts.count_packed
+#print axioms DiamondIntegral.Section4.RVFiniteWeightedCounts.count_packed
+#print DiamondIntegral.Section4.RVFiniteWeightedCounts.count_empty
+#print axioms DiamondIntegral.Section4.RVFiniteWeightedCounts.count_empty
+#print DiamondIntegral.Section4.RVFiniteWeightedCounts.count_scissor
+#print axioms DiamondIntegral.Section4.RVFiniteWeightedCounts.count_scissor
+#print DiamondIntegral.Section4.RVFiniteWeightedCounts.product_domain_finite
+#print axioms DiamondIntegral.Section4.RVFiniteWeightedCounts.product_domain_finite
+#print DiamondIntegral.Section4.RVFiniteWeightedCounts.count_product
+#print axioms DiamondIntegral.Section4.RVFiniteWeightedCounts.count_product
+#print DiamondIntegral.Section4.RVFiniteWeightedCounts.count_singleton
+#print axioms DiamondIntegral.Section4.RVFiniteWeightedCounts.count_singleton
+#print DiamondIntegral.Section4.RVFiniteWeightedCounts.count_weightedUnit
+#print axioms DiamondIntegral.Section4.RVFiniteWeightedCounts.count_weightedUnit
+#print DiamondIntegral.Section4.RVZeroWeightedCount.value
+#print axioms DiamondIntegral.Section4.RVZeroWeightedCount.value
+#print DiamondIntegral.Section4.RVZeroWeightedCount.invariant
+#print axioms DiamondIntegral.Section4.RVZeroWeightedCount.invariant
+#print DiamondIntegral.Section4.RVZeroWeightedCount.full
+#print axioms DiamondIntegral.Section4.RVZeroWeightedCount.full
+#print DiamondIntegral.Section4.RVZeroWeightedCount.full_class
+#print axioms DiamondIntegral.Section4.RVZeroWeightedCount.full_class
+#print DiamondIntegral.Section4.RVZeroWeightedCount.res
+#print axioms DiamondIntegral.Section4.RVZeroWeightedCount.res
+#print DiamondIntegral.Section4.RVZeroWeightedCount.res_weightedUnit
+#print axioms DiamondIntegral.Section4.RVZeroWeightedCount.res_weightedUnit
+#print DiamondIntegral.Section4.RVZeroWeightedCount.bounded
+#print axioms DiamondIntegral.Section4.RVZeroWeightedCount.bounded
+#print DiamondIntegral.Section4.RVZeroWeightedCount.bounded_ofRES
+#print axioms DiamondIntegral.Section4.RVZeroWeightedCount.bounded_ofRES
+#print DiamondIntegral.Section4.RESWeightEmbedding.nativeName
+#print axioms DiamondIntegral.Section4.RESWeightEmbedding.nativeName
+#print DiamondIntegral.Section4.RESWeightEmbedding.nativeName_injective
+#print axioms DiamondIntegral.Section4.RESWeightEmbedding.nativeName_injective
+#print DiamondIntegral.Section4.RESWeightEmbedding.nativeMap
+#print axioms DiamondIntegral.Section4.RESWeightEmbedding.nativeMap
+#print DiamondIntegral.Section4.RESWeightEmbedding.nativeMap_single
+#print axioms DiamondIntegral.Section4.RESWeightEmbedding.nativeMap_single
+#print DiamondIntegral.Section4.RESWeightEmbedding.nativeMap_injective
+#print axioms DiamondIntegral.Section4.RESWeightEmbedding.nativeMap_injective
+#print DiamondIntegral.Section4.RESWeightEmbedding.weightMap
+#print axioms DiamondIntegral.Section4.RESWeightEmbedding.weightMap
+#print DiamondIntegral.Section4.RESWeightEmbedding.weightMap_single
+#print axioms DiamondIntegral.Section4.RESWeightEmbedding.weightMap_single
+#print DiamondIntegral.Section4.RESWeightEmbedding.count_weightMap
+#print axioms DiamondIntegral.Section4.RESWeightEmbedding.count_weightMap
+#print DiamondIntegral.Section4.RESWeightEmbedding.weightMap_injective
+#print axioms DiamondIntegral.Section4.RESWeightEmbedding.weightMap_injective
+#print DiamondIntegral.Section4.RESWeightEmbedding.weightMap_mem
+#print axioms DiamondIntegral.Section4.RESWeightEmbedding.weightMap_mem
+#print DiamondIntegral.Section4.RESWeightEmbedding.reducedWeightMap
+#print axioms DiamondIntegral.Section4.RESWeightEmbedding.reducedWeightMap
+#print DiamondIntegral.Section4.RESWeightEmbedding.reducedWeightMap_injective
+#print axioms DiamondIntegral.Section4.RESWeightEmbedding.reducedWeightMap_injective
+#print DiamondIntegral.Section4.RESWeightEmbedding.reducedWeightMap_eq_character
+#print axioms DiamondIntegral.Section4.RESWeightEmbedding.reducedWeightMap_eq_character
+#print DiamondIntegral.Section4.RESWeightEmbedding.reduced_character_injective
+#print axioms DiamondIntegral.Section4.RESWeightEmbedding.reduced_character_injective
+#print DiamondIntegral.Section4.RESWeightEmbedding.reduced_zero_ne_one
+#print axioms DiamondIntegral.Section4.RESWeightEmbedding.reduced_zero_ne_one
+#print DiamondIntegral.Section4.RESWeightEmbedding.radiusWeightMap
+#print axioms DiamondIntegral.Section4.RESWeightEmbedding.radiusWeightMap
+#print DiamondIntegral.Section4.RESWeightEmbedding.radiusWeightMap_injective
+#print axioms DiamondIntegral.Section4.RESWeightEmbedding.radiusWeightMap_injective
+#print DiamondIntegral.Section4.RVZeroDegreeRetraction.value
+#print axioms DiamondIntegral.Section4.RVZeroDegreeRetraction.value
+#print DiamondIntegral.Section4.RVZeroDegreeRetraction.invariant
+#print axioms DiamondIntegral.Section4.RVZeroDegreeRetraction.invariant
+#print DiamondIntegral.Section4.RVZeroDegreeRetraction.full
+#print axioms DiamondIntegral.Section4.RVZeroDegreeRetraction.full
+#print DiamondIntegral.Section4.RVZeroDegreeRetraction.full_class
+#print axioms DiamondIntegral.Section4.RVZeroDegreeRetraction.full_class
+#print DiamondIntegral.Section4.RVZeroDegreeRetraction.full_ofRES
+#print axioms DiamondIntegral.Section4.RVZeroDegreeRetraction.full_ofRES
+#print DiamondIntegral.Section4.RVZeroDegreeRetraction.full_left_inverse
+#print axioms DiamondIntegral.Section4.RVZeroDegreeRetraction.full_left_inverse
+#print DiamondIntegral.Section4.RVZeroDegreeRetraction.full_injective_on_degree_zero
+#print axioms DiamondIntegral.Section4.RVZeroDegreeRetraction.full_injective_on_degree_zero
+#print DiamondIntegral.Section4.RVZeroDegreeRetraction.bounded
+#print axioms DiamondIntegral.Section4.RVZeroDegreeRetraction.bounded
+#print DiamondIntegral.Section4.RVZeroDegreeRetraction.bounded_ofRES
+#print axioms DiamondIntegral.Section4.RVZeroDegreeRetraction.bounded_ofRES
+#print DiamondIntegral.Section4.RVZeroDegreeRetraction.bounded_left_inverse
+#print axioms DiamondIntegral.Section4.RVZeroDegreeRetraction.bounded_left_inverse
+#print DiamondIntegral.Section4.RVZeroDegreeRetraction.bounded_injective_on_degree_zero
+#print axioms DiamondIntegral.Section4.RVZeroDegreeRetraction.bounded_injective_on_degree_zero
+#print DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.zeroSubring
+#print axioms DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.zeroSubring
+#print DiamondIntegral.Section4.RVZeroDegreeEquivalences.resZero
+#print axioms DiamondIntegral.Section4.RVZeroDegreeEquivalences.resZero
+#print DiamondIntegral.Section4.RVZeroDegreeEquivalences.fullZero
+#print axioms DiamondIntegral.Section4.RVZeroDegreeEquivalences.fullZero
+#print DiamondIntegral.Section4.RVZeroDegreeEquivalences.boundedZero
+#print axioms DiamondIntegral.Section4.RVZeroDegreeEquivalences.boundedZero
+#print DiamondIntegral.Section4.RVZeroDegreeEquivalences.fullMap
+#print axioms DiamondIntegral.Section4.RVZeroDegreeEquivalences.fullMap
+#print DiamondIntegral.Section4.RVZeroDegreeEquivalences.fullMap_bijective
+#print axioms DiamondIntegral.Section4.RVZeroDegreeEquivalences.fullMap_bijective
+#print DiamondIntegral.Section4.RVZeroDegreeEquivalences.fullEquiv
+#print axioms DiamondIntegral.Section4.RVZeroDegreeEquivalences.fullEquiv
+#print DiamondIntegral.Section4.RVZeroDegreeEquivalences.fullEquiv_apply
+#print axioms DiamondIntegral.Section4.RVZeroDegreeEquivalences.fullEquiv_apply
+#print DiamondIntegral.Section4.RVZeroDegreeEquivalences.fullEquiv_symm_apply
+#print axioms DiamondIntegral.Section4.RVZeroDegreeEquivalences.fullEquiv_symm_apply
+#print DiamondIntegral.Section4.RVZeroDegreeEquivalences.boundedMap
+#print axioms DiamondIntegral.Section4.RVZeroDegreeEquivalences.boundedMap
+#print DiamondIntegral.Section4.RVZeroDegreeEquivalences.boundedMap_bijective
+#print axioms DiamondIntegral.Section4.RVZeroDegreeEquivalences.boundedMap_bijective
+#print DiamondIntegral.Section4.RVZeroDegreeEquivalences.boundedEquiv
+#print axioms DiamondIntegral.Section4.RVZeroDegreeEquivalences.boundedEquiv
+#print DiamondIntegral.Section4.RVZeroDegreeEquivalences.boundedEquiv_apply
+#print axioms DiamondIntegral.Section4.RVZeroDegreeEquivalences.boundedEquiv_apply
+#print DiamondIntegral.Section4.RVZeroDegreeEquivalences.boundedEquiv_symm_apply
+#print axioms DiamondIntegral.Section4.RVZeroDegreeEquivalences.boundedEquiv_symm_apply
+#print DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.zeroProjection_of_positive_mem
+#print axioms DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.zeroProjection_of_positive_mem
+#print DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.quotient_injective_on_zero
+#print axioms DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.quotient_injective_on_zero
+#print DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.quotient_surjective_on_zero
+#print axioms DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.quotient_surjective_on_zero
+#print DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.quotientZeroMap
+#print axioms DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.quotientZeroMap
+#print DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.quotientZeroEquiv
+#print axioms DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.quotientZeroEquiv
+#print DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.quotientZeroEquiv_apply
+#print axioms DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.quotientZeroEquiv_apply
+#print DiamondIntegral.Section4.ReductionDegreeZero.measured_ideal_le_zero_ker
+#print axioms DiamondIntegral.Section4.ReductionDegreeZero.measured_ideal_le_zero_ker
+#print DiamondIntegral.Section4.ReductionDegreeZero.ordinary_ideal_le_zero_ker
+#print axioms DiamondIntegral.Section4.ReductionDegreeZero.ordinary_ideal_le_zero_ker
+#print DiamondIntegral.Section4.ReductionDegreeZero.radius_ideal_le_zero_ker
+#print axioms DiamondIntegral.Section4.ReductionDegreeZero.radius_ideal_le_zero_ker
+#print DiamondIntegral.Section4.ReductionDegreeZero.measuredEquiv
+#print axioms DiamondIntegral.Section4.ReductionDegreeZero.measuredEquiv
+#print DiamondIntegral.Section4.ReductionDegreeZero.ordinaryEquiv
+#print axioms DiamondIntegral.Section4.ReductionDegreeZero.ordinaryEquiv
+#print DiamondIntegral.Section4.ReductionDegreeZero.radiusEquiv
+#print axioms DiamondIntegral.Section4.ReductionDegreeZero.radiusEquiv
+#print DiamondIntegral.Section4.ReductionDegreeZero.measuredEquiv_apply
+#print axioms DiamondIntegral.Section4.ReductionDegreeZero.measuredEquiv_apply
+#print DiamondIntegral.Section4.ReductionDegreeZero.ordinaryEquiv_apply
+#print axioms DiamondIntegral.Section4.ReductionDegreeZero.ordinaryEquiv_apply
+#print DiamondIntegral.Section4.ReductionDegreeZero.radiusEquiv_apply
+#print axioms DiamondIntegral.Section4.ReductionDegreeZero.radiusEquiv_apply
+#print DiamondIntegral.Section4.RVBoundedRing.Generator
+#print axioms DiamondIntegral.Section4.RVBoundedRing.Generator
+#print DiamondIntegral.Section4.RVBoundedRing.symbol
+#print axioms DiamondIntegral.Section4.RVBoundedRing.symbol
+#print DiamondIntegral.Section4.RVBoundedRing.unit
+#print axioms DiamondIntegral.Section4.RVBoundedRing.unit
+#print DiamondIntegral.Section4.RVBoundedRing.Relation
+#print axioms DiamondIntegral.Section4.RVBoundedRing.Relation
+#print DiamondIntegral.Section4.RVBoundedRing.relationIdeal
+#print axioms DiamondIntegral.Section4.RVBoundedRing.relationIdeal
+#print DiamondIntegral.Section4.RVBoundedRing.Ring
+#print axioms DiamondIntegral.Section4.RVBoundedRing.Ring
+#print DiamondIntegral.Section4.RVBoundedRing.objectClass
+#print axioms DiamondIntegral.Section4.RVBoundedRing.objectClass
+#print DiamondIntegral.Section4.RVBoundedRing.relation_zero
+#print axioms DiamondIntegral.Section4.RVBoundedRing.relation_zero
+#print DiamondIntegral.Section4.RVBoundedRing.objectClass_unit
+#print axioms DiamondIntegral.Section4.RVBoundedRing.objectClass_unit
+#print DiamondIntegral.Section4.RVBoundedRing.objectClass_product
+#print axioms DiamondIntegral.Section4.RVBoundedRing.objectClass_product
+#print DiamondIntegral.Section4.RVBoundedRing.objectClass_iso
+#print axioms DiamondIntegral.Section4.RVBoundedRing.objectClass_iso
+#print DiamondIntegral.Section4.RVBoundedRing.objectClass_empty
+#print axioms DiamondIntegral.Section4.RVBoundedRing.objectClass_empty
+#print DiamondIntegral.Section4.RVBoundedRing.objectClass_scissor
+#print axioms DiamondIntegral.Section4.RVBoundedRing.objectClass_scissor
+#print DiamondIntegral.Section4.RVBoundedRing.Invariant
+#print axioms DiamondIntegral.Section4.RVBoundedRing.Invariant
+#print DiamondIntegral.Section4.RVBoundedRing.freeMap
+#print axioms DiamondIntegral.Section4.RVBoundedRing.freeMap
+#print DiamondIntegral.Section4.RVBoundedRing.freeMap_symbol
+#print axioms DiamondIntegral.Section4.RVBoundedRing.freeMap_symbol
+#print DiamondIntegral.Section4.RVBoundedRing.invariant_relation_zero
+#print axioms DiamondIntegral.Section4.RVBoundedRing.invariant_relation_zero
+#print DiamondIntegral.Section4.RVBoundedRing.invariant_ideal_zero
+#print axioms DiamondIntegral.Section4.RVBoundedRing.invariant_ideal_zero
+#print DiamondIntegral.Section4.RVBoundedRing.lift
+#print axioms DiamondIntegral.Section4.RVBoundedRing.lift
+#print DiamondIntegral.Section4.RVBoundedRing.lift_objectClass
+#print axioms DiamondIntegral.Section4.RVBoundedRing.lift_objectClass
+#print DiamondIntegral.Section4.RVBoundedGrading.hom_ext
+#print axioms DiamondIntegral.Section4.RVBoundedGrading.hom_ext
+#print DiamondIntegral.Section4.RVBoundedGrading.gradingInvariant
+#print axioms DiamondIntegral.Section4.RVBoundedGrading.gradingInvariant
+#print DiamondIntegral.Section4.RVBoundedGrading.coaction
+#print axioms DiamondIntegral.Section4.RVBoundedGrading.coaction
+#print DiamondIntegral.Section4.RVBoundedGrading.coaction_class
+#print axioms DiamondIntegral.Section4.RVBoundedGrading.coaction_class
+#print DiamondIntegral.Section4.RVBoundedGrading.coaction_counit
+#print axioms DiamondIntegral.Section4.RVBoundedGrading.coaction_counit
+#print DiamondIntegral.Section4.RVBoundedGrading.coaction_coassoc
+#print axioms DiamondIntegral.Section4.RVBoundedGrading.coaction_coassoc
+#print DiamondIntegral.Section4.RVBoundedGrading.gradingCoaction
+#print axioms DiamondIntegral.Section4.RVBoundedGrading.gradingCoaction
+#print DiamondIntegral.Section4.RVBoundedGrading.gradedPiece
+#print axioms DiamondIntegral.Section4.RVBoundedGrading.gradedPiece
+#print DiamondIntegral.Section4.RVBoundedGrading.gradedRing
+#print axioms DiamondIntegral.Section4.RVBoundedGrading.gradedRing
+#print DiamondIntegral.Section4.RVBoundedGrading.class_mem
+#print axioms DiamondIntegral.Section4.RVBoundedGrading.class_mem
+#print DiamondIntegral.Section4.RVBoundedMaps.forgetInvariant
+#print axioms DiamondIntegral.Section4.RVBoundedMaps.forgetInvariant
+#print DiamondIntegral.Section4.RVBoundedMaps.forget
+#print axioms DiamondIntegral.Section4.RVBoundedMaps.forget
+#print DiamondIntegral.Section4.RVBoundedMaps.forget_class
+#print axioms DiamondIntegral.Section4.RVBoundedMaps.forget_class
+#print DiamondIntegral.Section4.RVBoundedMaps.resInvariant
+#print axioms DiamondIntegral.Section4.RVBoundedMaps.resInvariant
+#print DiamondIntegral.Section4.RVBoundedMaps.ofRES
+#print axioms DiamondIntegral.Section4.RVBoundedMaps.ofRES
+#print DiamondIntegral.Section4.RVBoundedMaps.ofRES_class
+#print axioms DiamondIntegral.Section4.RVBoundedMaps.ofRES_class
+#print DiamondIntegral.Section4.RVBoundedMaps.forget_ofRES
+#print axioms DiamondIntegral.Section4.RVBoundedMaps.forget_ofRES
+#print DiamondIntegral.Section4.RVBoundedMaps.forget_coaction
+#print axioms DiamondIntegral.Section4.RVBoundedMaps.forget_coaction
+#print DiamondIntegral.Section4.RVBoundedMaps.forget_mem
+#print axioms DiamondIntegral.Section4.RVBoundedMaps.forget_mem
+#print DiamondIntegral.Section4.RVBoundedMaps.ofRES_coaction
+#print axioms DiamondIntegral.Section4.RVBoundedMaps.ofRES_coaction
+#print DiamondIntegral.Section4.RVBoundedMaps.ofRES_mem
+#print axioms DiamondIntegral.Section4.RVBoundedMaps.ofRES_mem
+#print DiamondIntegral.Section4.RVRadiusIdeal.boundedAnnulus
+#print axioms DiamondIntegral.Section4.RVRadiusIdeal.boundedAnnulus
+#print DiamondIntegral.Section4.RVRadiusIdeal.boundedPoint
+#print axioms DiamondIntegral.Section4.RVRadiusIdeal.boundedPoint
+#print DiamondIntegral.Section4.RVRadiusIdeal.radiusGenerator
+#print axioms DiamondIntegral.Section4.RVRadiusIdeal.radiusGenerator
+#print DiamondIntegral.Section4.RVRadiusIdeal.radiusGenerator_independent
+#print axioms DiamondIntegral.Section4.RVRadiusIdeal.radiusGenerator_independent
+#print DiamondIntegral.Section4.RVRadiusIdeal.radiusGenerator_zero
+#print axioms DiamondIntegral.Section4.RVRadiusIdeal.radiusGenerator_zero
+#print DiamondIntegral.Section4.RVRadiusIdeal.pGamma
+#print axioms DiamondIntegral.Section4.RVRadiusIdeal.pGamma
+#print DiamondIntegral.Section4.RVRadiusIdeal.pGamma_eq
+#print axioms DiamondIntegral.Section4.RVRadiusIdeal.pGamma_eq
+#print DiamondIntegral.Section4.RVRadiusIdeal.pGamma_zero
+#print axioms DiamondIntegral.Section4.RVRadiusIdeal.pGamma_zero
+#print DiamondIntegral.Section4.RVRadiusIdeal.pGamma_mem_degree_one
+#print axioms DiamondIntegral.Section4.RVRadiusIdeal.pGamma_mem_degree_one
+#print DiamondIntegral.Section4.RVRadiusIdeal.radiusIdeal
+#print axioms DiamondIntegral.Section4.RVRadiusIdeal.radiusIdeal
+#print DiamondIntegral.Section4.RVRadiusIdeal.pGamma_mem_ideal
+#print axioms DiamondIntegral.Section4.RVRadiusIdeal.pGamma_mem_ideal
+#print DiamondIntegral.Section4.RVRadiusIdeal.radiusIdeal_homogeneous
+#print axioms DiamondIntegral.Section4.RVRadiusIdeal.radiusIdeal_homogeneous
+#print DiamondIntegral.Section4.RVRadiusIdeal.forget_pGamma
+#print axioms DiamondIntegral.Section4.RVRadiusIdeal.forget_pGamma
+#print DiamondIntegral.Section4.RVRadiusQuotient.Ring
+#print axioms DiamondIntegral.Section4.RVRadiusQuotient.Ring
+#print DiamondIntegral.Section4.RVRadiusQuotient.quotient
+#print axioms DiamondIntegral.Section4.RVRadiusQuotient.quotient
+#print DiamondIntegral.Section4.RVRadiusQuotient.ideal_coefficients
+#print axioms DiamondIntegral.Section4.RVRadiusQuotient.ideal_coefficients
+#print DiamondIntegral.Section4.RVRadiusQuotient.coaction
+#print axioms DiamondIntegral.Section4.RVRadiusQuotient.coaction
+#print DiamondIntegral.Section4.RVRadiusQuotient.piece
+#print axioms DiamondIntegral.Section4.RVRadiusQuotient.piece
+#print DiamondIntegral.Section4.RVRadiusQuotient.gradedRing
+#print axioms DiamondIntegral.Section4.RVRadiusQuotient.gradedRing
+#print DiamondIntegral.Section4.RVRadiusQuotient.quotient_mem
+#print axioms DiamondIntegral.Section4.RVRadiusQuotient.quotient_mem
+#print DiamondIntegral.Section4.RVRadiusQuotient.pGamma_zero
+#print axioms DiamondIntegral.Section4.RVRadiusQuotient.pGamma_zero
+#print DiamondIntegral.Section4.RVRadiusQuotient.ofRES
+#print axioms DiamondIntegral.Section4.RVRadiusQuotient.ofRES
+#print DiamondIntegral.Section4.RVRadiusQuotient.ofRES_mem
+#print axioms DiamondIntegral.Section4.RVRadiusQuotient.ofRES_mem
+#print DiamondIntegral.Section4.RESOrdinaryPoints.pointIso
+#print axioms DiamondIntegral.Section4.RESOrdinaryPoints.pointIso
+#print DiamondIntegral.Section4.RESOrdinaryPoints.point_classes
+#print axioms DiamondIntegral.Section4.RESOrdinaryPoints.point_classes
+#print DiamondIntegral.Section4.RESOrdinaryPoints.forget_point_classes
+#print axioms DiamondIntegral.Section4.RESOrdinaryPoints.forget_point_classes
+#print DiamondIntegral.Section4.RESPointTuples.tuple
+#print axioms DiamondIntegral.Section4.RESPointTuples.tuple
+#print DiamondIntegral.Section4.RESPointTuples.tuple_definable
+#print axioms DiamondIntegral.Section4.RESPointTuples.tuple_definable
+#print DiamondIntegral.Section4.RESPointTuples.chart
+#print axioms DiamondIntegral.Section4.RESPointTuples.chart
+#print DiamondIntegral.Section4.RESPointTuples.res
+#print axioms DiamondIntegral.Section4.RESPointTuples.res
+#print DiamondIntegral.Section4.RESPointTuples.join_tuple
+#print axioms DiamondIntegral.Section4.RESPointTuples.join_tuple
+#print DiamondIntegral.Section4.RESPointTuples.underlyingIso
+#print axioms DiamondIntegral.Section4.RESPointTuples.underlyingIso
+#print DiamondIntegral.Section4.RESPointTuples.product_domain
+#print axioms DiamondIntegral.Section4.RESPointTuples.product_domain
+#print DiamondIntegral.Section4.RESPointTuples.productIso
+#print axioms DiamondIntegral.Section4.RESPointTuples.productIso
+#print DiamondIntegral.Section4.RESPointTuples.ordinary_product
+#print axioms DiamondIntegral.Section4.RESPointTuples.ordinary_product
+#print DiamondIntegral.Section4.RESPointTuples.unitIso
+#print axioms DiamondIntegral.Section4.RESPointTuples.unitIso
+#print DiamondIntegral.Section4.RESPointTuples.ordinary_zero
+#print axioms DiamondIntegral.Section4.RESPointTuples.ordinary_zero
+#print DiamondIntegral.Section4.RESPointTuples.ordinary_power
+#print axioms DiamondIntegral.Section4.RESPointTuples.ordinary_power
+#print DiamondIntegral.Section4.RESPointIdentification.point_domain
+#print axioms DiamondIntegral.Section4.RESPointIdentification.point_domain
+#print DiamondIntegral.Section4.RESPointIdentification.pointIso
+#print axioms DiamondIntegral.Section4.RESPointIdentification.pointIso
+#print DiamondIntegral.Section4.RESPointIdentification.ordinary_point
+#print axioms DiamondIntegral.Section4.RESPointIdentification.ordinary_point
+#print DiamondIntegral.Section4.RESHomogenization.castRES
+#print axioms DiamondIntegral.Section4.RESHomogenization.castRES
+#print DiamondIntegral.Section4.RESHomogenization.ordinary_cast
+#print axioms DiamondIntegral.Section4.RESHomogenization.ordinary_cast
+#print DiamondIntegral.Section4.RESHomogenization.castTarget
+#print axioms DiamondIntegral.Section4.RESHomogenization.castTarget
+#print DiamondIntegral.Section4.RESHomogenization.homogenizingIso
+#print axioms DiamondIntegral.Section4.RESHomogenization.homogenizingIso
+#print DiamondIntegral.Section4.RESHomogenization.ordinary_homogenization
+#print axioms DiamondIntegral.Section4.RESHomogenization.ordinary_homogenization
+#print DiamondIntegral.Section4.RESDimensionFreeRing.relations
+#print axioms DiamondIntegral.Section4.RESDimensionFreeRing.relations
+#print DiamondIntegral.Section4.RESDimensionFreeRing.degreeIdeal
+#print axioms DiamondIntegral.Section4.RESDimensionFreeRing.degreeIdeal
+#print DiamondIntegral.Section4.RESDimensionFreeRing.Ring
+#print axioms DiamondIntegral.Section4.RESDimensionFreeRing.Ring
+#print DiamondIntegral.Section4.RESDimensionFreeRing.quotient
+#print axioms DiamondIntegral.Section4.RESDimensionFreeRing.quotient
+#print DiamondIntegral.Section4.RESDimensionFreeRing.objectClass
+#print axioms DiamondIntegral.Section4.RESDimensionFreeRing.objectClass
+#print DiamondIntegral.Section4.RESDimensionFreeRing.objectClass_iso
+#print axioms DiamondIntegral.Section4.RESDimensionFreeRing.objectClass_iso
+#print DiamondIntegral.Section4.RESDimensionFreeRing.objectClass_product
+#print axioms DiamondIntegral.Section4.RESDimensionFreeRing.objectClass_product
+#print DiamondIntegral.Section4.RESDimensionFreeRing.objectClass_unit
+#print axioms DiamondIntegral.Section4.RESDimensionFreeRing.objectClass_unit
+#print DiamondIntegral.Section4.RESDimensionFreeRing.pointClass
+#print axioms DiamondIntegral.Section4.RESDimensionFreeRing.pointClass
+#print DiamondIntegral.Section4.RESDimensionFreeRing.pointIdeal
+#print axioms DiamondIntegral.Section4.RESDimensionFreeRing.pointIdeal
+#print DiamondIntegral.Section4.RESDimensionFreeRing.point_minus_one_mem
+#print axioms DiamondIntegral.Section4.RESDimensionFreeRing.point_minus_one_mem
+#print DiamondIntegral.Section4.RESDimensionFreeRing.pointIdeal_le_degreeIdeal
+#print axioms DiamondIntegral.Section4.RESDimensionFreeRing.pointIdeal_le_degreeIdeal
+#print DiamondIntegral.Section4.RESDimensionFreeRing.point_quotient_one
+#print axioms DiamondIntegral.Section4.RESDimensionFreeRing.point_quotient_one
+#print DiamondIntegral.Section4.RESDimensionFreeRing.relation_mem_pointIdeal
+#print axioms DiamondIntegral.Section4.RESDimensionFreeRing.relation_mem_pointIdeal
+#print DiamondIntegral.Section4.RESDimensionFreeRing.degreeIdeal_le_pointIdeal
+#print axioms DiamondIntegral.Section4.RESDimensionFreeRing.degreeIdeal_le_pointIdeal
+#print DiamondIntegral.Section4.RESDimensionFreeRing.degreeIdeal_eq_pointIdeal
+#print axioms DiamondIntegral.Section4.RESDimensionFreeRing.degreeIdeal_eq_pointIdeal
+#print DiamondIntegral.Section4.RESDimensionFreeRing.pointIdeal_eq_manuscript
+#print axioms DiamondIntegral.Section4.RESDimensionFreeRing.pointIdeal_eq_manuscript
+#print DiamondIntegral.Section4.RESDimensionFreeRing.kernel_quotient
+#print axioms DiamondIntegral.Section4.RESDimensionFreeRing.kernel_quotient
+#print DiamondIntegral.Section4.RESDimensionFreeRing.normalizationEquiv
+#print axioms DiamondIntegral.Section4.RESDimensionFreeRing.normalizationEquiv
+#print DiamondIntegral.Section4.RESDimensionFreeRing.normalizationEquiv_mk
+#print axioms DiamondIntegral.Section4.RESDimensionFreeRing.normalizationEquiv_mk
+#print DiamondIntegral.Section4.RESDimensionFreeReduction.fibreIdeal
+#print axioms DiamondIntegral.Section4.RESDimensionFreeReduction.fibreIdeal
+#print DiamondIntegral.Section4.RESDimensionFreeReduction.Ring
+#print axioms DiamondIntegral.Section4.RESDimensionFreeReduction.Ring
+#print DiamondIntegral.Section4.RESDimensionFreeReduction.quotient
+#print axioms DiamondIntegral.Section4.RESDimensionFreeReduction.quotient
+#print DiamondIntegral.Section4.RESDimensionFreeReduction.fromOrdinary
+#print axioms DiamondIntegral.Section4.RESDimensionFreeReduction.fromOrdinary
+#print DiamondIntegral.Section4.RESDimensionFreeReduction.kernel_fromOrdinary
+#print axioms DiamondIntegral.Section4.RESDimensionFreeReduction.kernel_fromOrdinary
+#print DiamondIntegral.Section4.RESDimensionFreeReduction.pointClass
+#print axioms DiamondIntegral.Section4.RESDimensionFreeReduction.pointClass
+#print DiamondIntegral.Section4.RESDimensionFreeReduction.pointIdeal
+#print axioms DiamondIntegral.Section4.RESDimensionFreeReduction.pointIdeal
+#print DiamondIntegral.Section4.RESDimensionFreeReduction.degreeImage_eq_pointIdeal
+#print axioms DiamondIntegral.Section4.RESDimensionFreeReduction.degreeImage_eq_pointIdeal
+#print DiamondIntegral.Section4.RESDimensionFreeReduction.Normalized
+#print axioms DiamondIntegral.Section4.RESDimensionFreeReduction.Normalized
+#print DiamondIntegral.Section4.RESDimensionFreeReduction.normalizationEquiv
+#print axioms DiamondIntegral.Section4.RESDimensionFreeReduction.normalizationEquiv
+#print DiamondIntegral.Section4.RESDimensionFreeReduction.normalizationEquiv_raw
+#print axioms DiamondIntegral.Section4.RESDimensionFreeReduction.normalizationEquiv_raw
+#print DiamondIntegral.Section4.RESDimensionFreeReduction.fromGradedReduced
+#print axioms DiamondIntegral.Section4.RESDimensionFreeReduction.fromGradedReduced
+#print DiamondIntegral.Section4.RESDimensionFreeReduction.fromGradedReduced_raw
+#print axioms DiamondIntegral.Section4.RESDimensionFreeReduction.fromGradedReduced_raw
+#print DiamondIntegral.Section4.RESDimensionFreeReduction.kernel_fromGradedReduced
+#print axioms DiamondIntegral.Section4.RESDimensionFreeReduction.kernel_fromGradedReduced
+#print DiamondIntegral.Section4.RESRingCoaction.hom_ext
+#print axioms DiamondIntegral.Section4.RESRingCoaction.hom_ext
+#print DiamondIntegral.Section4.RESRingCoaction.gradingInvariant
+#print axioms DiamondIntegral.Section4.RESRingCoaction.gradingInvariant
+#print DiamondIntegral.Section4.RESRingCoaction.coaction
+#print axioms DiamondIntegral.Section4.RESRingCoaction.coaction
+#print DiamondIntegral.Section4.RESRingCoaction.coaction_class
+#print axioms DiamondIntegral.Section4.RESRingCoaction.coaction_class
+#print DiamondIntegral.Section4.RESRingCoaction.coaction_counit
+#print axioms DiamondIntegral.Section4.RESRingCoaction.coaction_counit
+#print DiamondIntegral.Section4.RESRingCoaction.coaction_injective
+#print axioms DiamondIntegral.Section4.RESRingCoaction.coaction_injective
+#print DiamondIntegral.Section4.RESRingCoaction.gradedPiece
+#print axioms DiamondIntegral.Section4.RESRingCoaction.gradedPiece
+#print DiamondIntegral.Section4.RESRingCoaction.class_mem_gradedPiece
+#print axioms DiamondIntegral.Section4.RESRingCoaction.class_mem_gradedPiece
+#print DiamondIntegral.Section4.RESRingCoaction.one_mem_gradedPiece
+#print axioms DiamondIntegral.Section4.RESRingCoaction.one_mem_gradedPiece
+#print DiamondIntegral.Section4.RESRingCoaction.mul_mem_gradedPiece
+#print axioms DiamondIntegral.Section4.RESRingCoaction.mul_mem_gradedPiece
+#print DiamondIntegral.Section4.RESRingCoaction.gradedPiece_inter_zero
+#print axioms DiamondIntegral.Section4.RESRingCoaction.gradedPiece_inter_zero
+#print DiamondIntegral.Section4.RESGrading.coaction_coassoc
+#print axioms DiamondIntegral.Section4.RESGrading.coaction_coassoc
+#print DiamondIntegral.Section4.RESGrading.gradingCoaction
+#print axioms DiamondIntegral.Section4.RESGrading.gradingCoaction
+#print DiamondIntegral.Section4.RESGrading.gradedRing
+#print axioms DiamondIntegral.Section4.RESGrading.gradedRing
+#print DiamondIntegral.Section4.RESGrading.component
+#print axioms DiamondIntegral.Section4.RESGrading.component
+#print DiamondIntegral.Section4.RESGrading.component_mem
+#print axioms DiamondIntegral.Section4.RESGrading.component_mem
+#print DiamondIntegral.Section4.RESGrading.sum_components
+#print axioms DiamondIntegral.Section4.RESGrading.sum_components
+#print DiamondIntegral.Section4.RESGrading.component_class
+#print axioms DiamondIntegral.Section4.RESGrading.component_class
+#print DiamondIntegral.Section4.RESGrading.component_of_mem
+#print axioms DiamondIntegral.Section4.RESGrading.component_of_mem
+#print DiamondIntegral.Section4.RESOrdinaryRing.Invariant
+#print axioms DiamondIntegral.Section4.RESOrdinaryRing.Invariant
+#print DiamondIntegral.Section4.RESOrdinaryRing.freeMap
+#print axioms DiamondIntegral.Section4.RESOrdinaryRing.freeMap
+#print DiamondIntegral.Section4.RESOrdinaryRing.freeMap_symbol
+#print axioms DiamondIntegral.Section4.RESOrdinaryRing.freeMap_symbol
+#print DiamondIntegral.Section4.RESOrdinaryRing.invariant_relation_zero
+#print axioms DiamondIntegral.Section4.RESOrdinaryRing.invariant_relation_zero
+#print DiamondIntegral.Section4.RESOrdinaryRing.invariant_ideal_zero
+#print axioms DiamondIntegral.Section4.RESOrdinaryRing.invariant_ideal_zero
+#print DiamondIntegral.Section4.RESOrdinaryRing.lift
+#print axioms DiamondIntegral.Section4.RESOrdinaryRing.lift
+#print DiamondIntegral.Section4.RESOrdinaryRing.lift_objectClass
+#print axioms DiamondIntegral.Section4.RESOrdinaryRing.lift_objectClass
+#print DiamondIntegral.Section4.RESOrdinaryRing.hom_ext
+#print axioms DiamondIntegral.Section4.RESOrdinaryRing.hom_ext
+#print DiamondIntegral.Section4.RESOrdinaryGrading.gradingInvariant
+#print axioms DiamondIntegral.Section4.RESOrdinaryGrading.gradingInvariant
+#print DiamondIntegral.Section4.RESOrdinaryGrading.coaction
+#print axioms DiamondIntegral.Section4.RESOrdinaryGrading.coaction
+#print DiamondIntegral.Section4.RESOrdinaryGrading.coaction_class
+#print axioms DiamondIntegral.Section4.RESOrdinaryGrading.coaction_class
+#print DiamondIntegral.Section4.RESOrdinaryGrading.coaction_counit
+#print axioms DiamondIntegral.Section4.RESOrdinaryGrading.coaction_counit
+#print DiamondIntegral.Section4.RESOrdinaryGrading.coaction_coassoc
+#print axioms DiamondIntegral.Section4.RESOrdinaryGrading.coaction_coassoc
+#print DiamondIntegral.Section4.RESOrdinaryGrading.gradingCoaction
+#print axioms DiamondIntegral.Section4.RESOrdinaryGrading.gradingCoaction
+#print DiamondIntegral.Section4.RESOrdinaryGrading.gradedPiece
+#print axioms DiamondIntegral.Section4.RESOrdinaryGrading.gradedPiece
+#print DiamondIntegral.Section4.RESOrdinaryGrading.gradedRing
+#print axioms DiamondIntegral.Section4.RESOrdinaryGrading.gradedRing
+#print DiamondIntegral.Section4.RESOrdinaryGrading.class_mem
+#print axioms DiamondIntegral.Section4.RESOrdinaryGrading.class_mem
+#print DiamondIntegral.Section4.RESOrdinaryGrading.forget_coaction
+#print axioms DiamondIntegral.Section4.RESOrdinaryGrading.forget_coaction
+#print DiamondIntegral.Section4.RESOrdinaryGrading.forget_mem
+#print axioms DiamondIntegral.Section4.RESOrdinaryGrading.forget_mem
+#print DiamondIntegral.Section4.RESOrdinaryGrading.forget_component
+#print axioms DiamondIntegral.Section4.RESOrdinaryGrading.forget_component
+#print DiamondIntegral.Section4.RESReductionGradings.measured_fibre_homogeneous
+#print axioms DiamondIntegral.Section4.RESReductionGradings.measured_fibre_homogeneous
+#print DiamondIntegral.Section4.RESReductionGradings.measured_affine_mem
+#print axioms DiamondIntegral.Section4.RESReductionGradings.measured_affine_mem
+#print DiamondIntegral.Section4.RESReductionGradings.measured_reduction_homogeneous
+#print axioms DiamondIntegral.Section4.RESReductionGradings.measured_reduction_homogeneous
+#print DiamondIntegral.Section4.RESReductionGradings.measured_ideal_coefficients
+#print axioms DiamondIntegral.Section4.RESReductionGradings.measured_ideal_coefficients
+#print DiamondIntegral.Section4.RESReductionGradings.measuredCoaction
+#print axioms DiamondIntegral.Section4.RESReductionGradings.measuredCoaction
+#print DiamondIntegral.Section4.RESReductionGradings.measuredPiece
+#print axioms DiamondIntegral.Section4.RESReductionGradings.measuredPiece
+#print DiamondIntegral.Section4.RESReductionGradings.measuredGradedRing
+#print axioms DiamondIntegral.Section4.RESReductionGradings.measuredGradedRing
+#print DiamondIntegral.Section4.RESReductionGradings.measured_quotient_mem
+#print axioms DiamondIntegral.Section4.RESReductionGradings.measured_quotient_mem
+#print DiamondIntegral.Section4.RESReductionGradings.measured_class_mem
+#print axioms DiamondIntegral.Section4.RESReductionGradings.measured_class_mem
+#print DiamondIntegral.Section4.RESReductionGradings.measured_torus_mem
+#print axioms DiamondIntegral.Section4.RESReductionGradings.measured_torus_mem
+#print DiamondIntegral.Section4.RESReductionGradings.measured_point_mem
+#print axioms DiamondIntegral.Section4.RESReductionGradings.measured_point_mem
+#print DiamondIntegral.Section4.RESReductionGradings.measured_weight_mem
+#print axioms DiamondIntegral.Section4.RESReductionGradings.measured_weight_mem
+#print DiamondIntegral.Section4.RESReductionGradings.ordinary_fibre_homogeneous
+#print axioms DiamondIntegral.Section4.RESReductionGradings.ordinary_fibre_homogeneous
+#print DiamondIntegral.Section4.RESReductionGradings.ordinary_ideal_coefficients
+#print axioms DiamondIntegral.Section4.RESReductionGradings.ordinary_ideal_coefficients
+#print DiamondIntegral.Section4.RESReductionGradings.ordinaryCoaction
+#print axioms DiamondIntegral.Section4.RESReductionGradings.ordinaryCoaction
+#print DiamondIntegral.Section4.RESReductionGradings.ordinaryPiece
+#print axioms DiamondIntegral.Section4.RESReductionGradings.ordinaryPiece
+#print DiamondIntegral.Section4.RESReductionGradings.ordinaryGradedRing
+#print axioms DiamondIntegral.Section4.RESReductionGradings.ordinaryGradedRing
+#print DiamondIntegral.Section4.RESReductionGradings.ordinary_quotient_mem
+#print axioms DiamondIntegral.Section4.RESReductionGradings.ordinary_quotient_mem
+#print DiamondIntegral.Section4.RESReductionGradings.ordinary_class_mem
+#print axioms DiamondIntegral.Section4.RESReductionGradings.ordinary_class_mem
+#print DiamondIntegral.Section4.RESReductionGradings.forget_mem
+#print axioms DiamondIntegral.Section4.RESReductionGradings.forget_mem
+#print DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.quotientMap
+#print axioms DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.quotientMap
+#print DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.quotientMap_mk
+#print axioms DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.quotientMap_mk
+#print DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.quotient
+#print axioms DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.quotient
+#print DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.quotient_mem
+#print axioms DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.quotient_mem
+#print DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.decompose_coefficient
+#print axioms DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.decompose_coefficient
+#print DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.homogeneous_ideal_coefficients
+#print axioms DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.homogeneous_ideal_coefficients
+#print DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.map_coaction_of_mem
+#print axioms DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.map_coaction_of_mem
+#print DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.quotientLift_mem
+#print axioms DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.quotientLift_mem
+#print DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.gradedQuotientLift
+#print axioms DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.gradedQuotientLift
+#print DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.kernel_coefficient_mem
+#print axioms DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.kernel_coefficient_mem
+#print DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.kernel_homogeneous
+#print axioms DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.kernel_homogeneous
+#print DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.kernel_zeroProjection
+#print axioms DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.kernel_zeroProjection
+#print DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.kernel_positive_decomposition
+#print axioms DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.kernel_positive_decomposition
+#print DiamondIntegral.Section4.RESOrdinaryRing.Generator
+#print axioms DiamondIntegral.Section4.RESOrdinaryRing.Generator
+#print DiamondIntegral.Section4.RESOrdinaryRing.symbol
+#print axioms DiamondIntegral.Section4.RESOrdinaryRing.symbol
+#print DiamondIntegral.Section4.RESOrdinaryRing.Relation
+#print axioms DiamondIntegral.Section4.RESOrdinaryRing.Relation
+#print DiamondIntegral.Section4.RESOrdinaryRing.relationIdeal
+#print axioms DiamondIntegral.Section4.RESOrdinaryRing.relationIdeal
+#print DiamondIntegral.Section4.RESOrdinaryRing.Ring
+#print axioms DiamondIntegral.Section4.RESOrdinaryRing.Ring
+#print DiamondIntegral.Section4.RESOrdinaryRing.objectClass
+#print axioms DiamondIntegral.Section4.RESOrdinaryRing.objectClass
+#print DiamondIntegral.Section4.RESOrdinaryRing.relation_zero
+#print axioms DiamondIntegral.Section4.RESOrdinaryRing.relation_zero
+#print DiamondIntegral.Section4.RESOrdinaryRing.objectClass_unit
+#print axioms DiamondIntegral.Section4.RESOrdinaryRing.objectClass_unit
+#print DiamondIntegral.Section4.RESOrdinaryRing.objectClass_product
+#print axioms DiamondIntegral.Section4.RESOrdinaryRing.objectClass_product
+#print DiamondIntegral.Section4.RESOrdinaryRing.objectClass_iso
+#print axioms DiamondIntegral.Section4.RESOrdinaryRing.objectClass_iso
+#print DiamondIntegral.Section4.RESOrdinaryRing.objectClass_empty
+#print axioms DiamondIntegral.Section4.RESOrdinaryRing.objectClass_empty
+#print DiamondIntegral.Section4.RESOrdinaryRing.objectClass_scissor
+#print axioms DiamondIntegral.Section4.RESOrdinaryRing.objectClass_scissor
+#print DiamondIntegral.Section4.RESOrdinaryRing.forgetInvariant
+#print axioms DiamondIntegral.Section4.RESOrdinaryRing.forgetInvariant
+#print DiamondIntegral.Section4.RESOrdinaryRing.forget
+#print axioms DiamondIntegral.Section4.RESOrdinaryRing.forget
+#print DiamondIntegral.Section4.RESOrdinaryRing.forget_objectClass
+#print axioms DiamondIntegral.Section4.RESOrdinaryRing.forget_objectClass
+#print DiamondIntegral.Section4.RESOrdinaryRing.trivialVolume
+#print axioms DiamondIntegral.Section4.RESOrdinaryRing.trivialVolume
+#print DiamondIntegral.Section4.RESOrdinaryRing.trivialRES
+#print axioms DiamondIntegral.Section4.RESOrdinaryRing.trivialRES
+#print DiamondIntegral.Section4.RESOrdinaryRing.trivialIso
+#print axioms DiamondIntegral.Section4.RESOrdinaryRing.trivialIso
+#print DiamondIntegral.Section4.RESOrdinaryRing.objectClass_trivial
+#print axioms DiamondIntegral.Section4.RESOrdinaryRing.objectClass_trivial
+#print DiamondIntegral.Section4.RESOrdinaryRing.forget_weightedUnit
+#print axioms DiamondIntegral.Section4.RESOrdinaryRing.forget_weightedUnit
+#print DiamondIntegral.Section4.RESOrdinaryRing.scaled_class
+#print axioms DiamondIntegral.Section4.RESOrdinaryRing.scaled_class
+#print DiamondIntegral.Section4.RESBoundedPsi.psi
+#print axioms DiamondIntegral.Section4.RESBoundedPsi.psi
+#print DiamondIntegral.Section4.RESBoundedPsi.psi_point
+#print axioms DiamondIntegral.Section4.RESBoundedPsi.psi_point
+#print DiamondIntegral.Section4.RESBoundedPsi.psi_interval
+#print axioms DiamondIntegral.Section4.RESBoundedPsi.psi_interval
+#print DiamondIntegral.Section4.RESBoundedPsi.psi_object
+#print axioms DiamondIntegral.Section4.RESBoundedPsi.psi_object
+#print DiamondIntegral.Section4.RESBoundedPsi.chartMap
+#print axioms DiamondIntegral.Section4.RESBoundedPsi.chartMap
+#print DiamondIntegral.Section4.RESBoundedPsi.chartMap_boundedClass
+#print axioms DiamondIntegral.Section4.RESBoundedPsi.chartMap_boundedClass
+#print DiamondIntegral.Section4.RESBoundedPsi.chartMap_independent_kind
+#print axioms DiamondIntegral.Section4.RESBoundedPsi.chartMap_independent_kind
+#print DiamondIntegral.Section4.RESBoundedPsi.psi_point_fibre
+#print axioms DiamondIntegral.Section4.RESBoundedPsi.psi_point_fibre
+#print DiamondIntegral.Section4.RESBoundedFiniteBalancing.psi_singleton_fibre
+#print axioms DiamondIntegral.Section4.RESBoundedFiniteBalancing.psi_singleton_fibre
+#print DiamondIntegral.Section4.GammaBoundedSingletonProfiles.singleton_bounded
+#print axioms DiamondIntegral.Section4.GammaBoundedSingletonProfiles.singleton_bounded
+#print DiamondIntegral.Section4.GammaBoundedSingletonProfiles.toUnbounded_pointMonomial
+#print axioms DiamondIntegral.Section4.GammaBoundedSingletonProfiles.toUnbounded_pointMonomial
+#print DiamondIntegral.Section4.GammaBoundedSingletonProfiles.objectPolynomial_singleton
+#print axioms DiamondIntegral.Section4.GammaBoundedSingletonProfiles.objectPolynomial_singleton
+#print DiamondIntegral.Section4.RESOrdinaryReduction.fibreRelations
+#print axioms DiamondIntegral.Section4.RESOrdinaryReduction.fibreRelations
+#print DiamondIntegral.Section4.RESOrdinaryReduction.fibreIdeal
+#print axioms DiamondIntegral.Section4.RESOrdinaryReduction.fibreIdeal
+#print DiamondIntegral.Section4.RESOrdinaryReduction.ReducedRing
+#print axioms DiamondIntegral.Section4.RESOrdinaryReduction.ReducedRing
+#print DiamondIntegral.Section4.RESOrdinaryReduction.quotient
+#print axioms DiamondIntegral.Section4.RESOrdinaryReduction.quotient
+#print DiamondIntegral.Section4.RESOrdinaryReduction.torusClass
+#print axioms DiamondIntegral.Section4.RESOrdinaryReduction.torusClass
+#print DiamondIntegral.Section4.RESOrdinaryReduction.pointClass
+#print axioms DiamondIntegral.Section4.RESOrdinaryReduction.pointClass
+#print DiamondIntegral.Section4.RESOrdinaryReduction.forget
+#print axioms DiamondIntegral.Section4.RESOrdinaryReduction.forget
+#print DiamondIntegral.Section4.RESOrdinaryReduction.forget_objectClass
+#print axioms DiamondIntegral.Section4.RESOrdinaryReduction.forget_objectClass
+#print DiamondIntegral.Section4.RESOrdinaryReduction.forget_weightedUnit
+#print axioms DiamondIntegral.Section4.RESOrdinaryReduction.forget_weightedUnit
+#print DiamondIntegral.Section4.RESOrdinaryReduction.forget_scaled
+#print axioms DiamondIntegral.Section4.RESOrdinaryReduction.forget_scaled
+#print DiamondIntegral.Section4.RESOrdinaryReduction.fibre_class
+#print axioms DiamondIntegral.Section4.RESOrdinaryReduction.fibre_class
+#print DiamondIntegral.Section4.RESOrdinaryReduction.forget_fibre
+#print axioms DiamondIntegral.Section4.RESOrdinaryReduction.forget_fibre
+#print DiamondIntegral.Section4.RESOrdinaryReduction.forget_kills_measuredFibreIdeal
+#print axioms DiamondIntegral.Section4.RESOrdinaryReduction.forget_kills_measuredFibreIdeal
+#print DiamondIntegral.Section4.RESOrdinaryReduction.forgetFibreQuotient
+#print axioms DiamondIntegral.Section4.RESOrdinaryReduction.forgetFibreQuotient
+#print DiamondIntegral.Section4.RESUnboundedPsi.weightedTorus
+#print axioms DiamondIntegral.Section4.RESUnboundedPsi.weightedTorus
+#print DiamondIntegral.Section4.RESUnboundedPsi.weightedPoint
+#print axioms DiamondIntegral.Section4.RESUnboundedPsi.weightedPoint
+#print DiamondIntegral.Section4.RESUnboundedPsi.weightedTorus_formula
+#print axioms DiamondIntegral.Section4.RESUnboundedPsi.weightedTorus_formula
+#print DiamondIntegral.Section4.RESUnboundedPsi.weightedPoint_formula
+#print axioms DiamondIntegral.Section4.RESUnboundedPsi.weightedPoint_formula
+#print DiamondIntegral.Section4.RESUnboundedPsi.psi
+#print axioms DiamondIntegral.Section4.RESUnboundedPsi.psi
+#print DiamondIntegral.Section4.RESUnboundedPsi.psi_point_positive
+#print axioms DiamondIntegral.Section4.RESUnboundedPsi.psi_point_positive
+#print DiamondIntegral.Section4.RESUnboundedPsi.psi_ray_positive
+#print axioms DiamondIntegral.Section4.RESUnboundedPsi.psi_ray_positive
+#print DiamondIntegral.Section4.RESUnboundedPsi.psi_line_positive
+#print axioms DiamondIntegral.Section4.RESUnboundedPsi.psi_line_positive
+#print DiamondIntegral.Section4.RESUnboundedPsi.psi_point_zero
+#print axioms DiamondIntegral.Section4.RESUnboundedPsi.psi_point_zero
+#print DiamondIntegral.Section4.RESUnboundedPsi.psi_counterweighted_geometric
+#print axioms DiamondIntegral.Section4.RESUnboundedPsi.psi_counterweighted_geometric
+#print DiamondIntegral.Section4.RESUnboundedPsi.psi_counterweighted_bounded
+#print axioms DiamondIntegral.Section4.RESUnboundedPsi.psi_counterweighted_bounded
+#print DiamondIntegral.Section4.RESFiniteBalancing.psi_singleton_fibre
+#print axioms DiamondIntegral.Section4.RESFiniteBalancing.psi_singleton_fibre
+#print DiamondIntegral.Section4.RESMeasuredReduction.fibreRelations
+#print axioms DiamondIntegral.Section4.RESMeasuredReduction.fibreRelations
+#print DiamondIntegral.Section4.RESMeasuredReduction.fibreIdeal
+#print axioms DiamondIntegral.Section4.RESMeasuredReduction.fibreIdeal
+#print DiamondIntegral.Section4.RESMeasuredReduction.affineClass
+#print axioms DiamondIntegral.Section4.RESMeasuredReduction.affineClass
+#print DiamondIntegral.Section4.RESMeasuredReduction.reductionIdeal
+#print axioms DiamondIntegral.Section4.RESMeasuredReduction.reductionIdeal
+#print DiamondIntegral.Section4.RESMeasuredReduction.ReducedRing
+#print axioms DiamondIntegral.Section4.RESMeasuredReduction.ReducedRing
+#print DiamondIntegral.Section4.RESMeasuredReduction.quotient
+#print axioms DiamondIntegral.Section4.RESMeasuredReduction.quotient
+#print DiamondIntegral.Section4.RESMeasuredReduction.torusClass
+#print axioms DiamondIntegral.Section4.RESMeasuredReduction.torusClass
+#print DiamondIntegral.Section4.RESMeasuredReduction.pointClass
+#print axioms DiamondIntegral.Section4.RESMeasuredReduction.pointClass
+#print DiamondIntegral.Section4.RESMeasuredReduction.weightValue
+#print axioms DiamondIntegral.Section4.RESMeasuredReduction.weightValue
+#print DiamondIntegral.Section4.RESMeasuredReduction.weightCharacter
+#print axioms DiamondIntegral.Section4.RESMeasuredReduction.weightCharacter
+#print DiamondIntegral.Section4.RESMeasuredReduction.weightCharacter_value
+#print axioms DiamondIntegral.Section4.RESMeasuredReduction.weightCharacter_value
+#print DiamondIntegral.Section4.RESMeasuredReduction.torus_plus_point_zero
+#print axioms DiamondIntegral.Section4.RESMeasuredReduction.torus_plus_point_zero
+#print DiamondIntegral.Section4.RESMeasuredReduction.point_plus_torus_zero
+#print axioms DiamondIntegral.Section4.RESMeasuredReduction.point_plus_torus_zero
+#print DiamondIntegral.Section4.RESMeasuredReduction.scaled_class
+#print axioms DiamondIntegral.Section4.RESMeasuredReduction.scaled_class
+#print DiamondIntegral.Section4.RESMeasuredReduction.fibre_class_eq_scaled
+#print axioms DiamondIntegral.Section4.RESMeasuredReduction.fibre_class_eq_scaled
+#print DiamondIntegral.Section4.RESMeasuredReduction.fibre_class
+#print axioms DiamondIntegral.Section4.RESMeasuredReduction.fibre_class
+#print DiamondIntegral.Section4.RESFibreObjects.sharp_valuePattern
+#print axioms DiamondIntegral.Section4.RESFibreObjects.sharp_valuePattern
+#print DiamondIntegral.Section4.RESFibreObjects.sharp_finite_patterns
+#print axioms DiamondIntegral.Section4.RESFibreObjects.sharp_finite_patterns
+#print DiamondIntegral.Section4.RESFibreObjects.sharpRESChart
+#print axioms DiamondIntegral.Section4.RESFibreObjects.sharpRESChart
+#print DiamondIntegral.Section4.RESFibreObjects.gammaFibre
+#print axioms DiamondIntegral.Section4.RESFibreObjects.gammaFibre
+#print DiamondIntegral.Section4.RESFibreObjects.gammaFibre_finite
+#print axioms DiamondIntegral.Section4.RESFibreObjects.gammaFibre_finite
+#print DiamondIntegral.Section4.RESFibreObjects.fibre
+#print axioms DiamondIntegral.Section4.RESFibreObjects.fibre
+#print DiamondIntegral.Section4.RESFibreObjects.torus
+#print axioms DiamondIntegral.Section4.RESFibreObjects.torus
+#print DiamondIntegral.Section4.RESFibreObjects.point
+#print axioms DiamondIntegral.Section4.RESFibreObjects.point
+#print DiamondIntegral.Section4.RVWeightScaling.scaled
+#print axioms DiamondIntegral.Section4.RVWeightScaling.scaled
+#print DiamondIntegral.Section4.RVWeightScaling.scaled_weight
+#print axioms DiamondIntegral.Section4.RVWeightScaling.scaled_weight
+#print DiamondIntegral.Section4.RVWeightScaling.scaledRES
+#print axioms DiamondIntegral.Section4.RVWeightScaling.scaledRES
+#print DiamondIntegral.Section4.RVWeightScaling.scaleProductIso
+#print axioms DiamondIntegral.Section4.RVWeightScaling.scaleProductIso
+#print DiamondIntegral.Section4.RVWeightScaling.scaledRES_class
+#print axioms DiamondIntegral.Section4.RVWeightScaling.scaledRES_class
+#print DiamondIntegral.Section4.RESWeightCharacter.weightedUnitProductIso
+#print axioms DiamondIntegral.Section4.RESWeightCharacter.weightedUnitProductIso
+#print DiamondIntegral.Section4.RESWeightCharacter.weightedUnitClass_product
+#print axioms DiamondIntegral.Section4.RESWeightCharacter.weightedUnitClass_product
+#print DiamondIntegral.Section4.RESWeightCharacter.weightCharacter
+#print axioms DiamondIntegral.Section4.RESWeightCharacter.weightCharacter
+#print DiamondIntegral.Section4.RESWeightCharacter.weightCharacter_value
+#print axioms DiamondIntegral.Section4.RESWeightCharacter.weightCharacter_value
+#print DiamondIntegral.Section4.RVVolumeMaps.volumeGraph
+#print axioms DiamondIntegral.Section4.RVVolumeMaps.volumeGraph
+#print DiamondIntegral.Section4.RVVolumeMaps.VolumeDefinable
+#print axioms DiamondIntegral.Section4.RVVolumeMaps.VolumeDefinable
+#print DiamondIntegral.Section4.RVVolumeMaps.multiply_definable
+#print axioms DiamondIntegral.Section4.RVVolumeMaps.multiply_definable
+#print DiamondIntegral.Section4.RVVolumeMaps.reindex_restrict_definable
+#print axioms DiamondIntegral.Section4.RVVolumeMaps.reindex_restrict_definable
+#print DiamondIntegral.Section4.FiniteTupleBlocks.headIndex_val
+#print axioms DiamondIntegral.Section4.FiniteTupleBlocks.headIndex_val
+#print DiamondIntegral.Section4.FiniteTupleBlocks.tailIndex_val
+#print axioms DiamondIntegral.Section4.FiniteTupleBlocks.tailIndex_val
+#print DiamondIntegral.Section4.FiniteTupleBlocks.outputToLast
+#print axioms DiamondIntegral.Section4.FiniteTupleBlocks.outputToLast
+#print DiamondIntegral.Section4.FiniteTupleBlocks.outputToLast_zero
+#print axioms DiamondIntegral.Section4.FiniteTupleBlocks.outputToLast_zero
+#print DiamondIntegral.Section4.FiniteTupleBlocks.outputToLast_succ
+#print axioms DiamondIntegral.Section4.FiniteTupleBlocks.outputToLast_succ
+#print DiamondIntegral.Section4.FiniteTupleBlocks.join_rotate
+#print axioms DiamondIntegral.Section4.FiniteTupleBlocks.join_rotate
+#print DiamondIntegral.Section4.GammaBlockSlices.slice_definable_base
+#print axioms DiamondIntegral.Section4.GammaBlockSlices.slice_definable_base
+#print DiamondIntegral.Section4.GammaBlockSlices.slice
+#print axioms DiamondIntegral.Section4.GammaBlockSlices.slice
+#print DiamondIntegral.Section4.GammaBlockSlices.slice_definable
+#print axioms DiamondIntegral.Section4.GammaBlockSlices.slice_definable
+#print DiamondIntegral.Section4.GammaPrefixIntegration.integratePrefix
+#print axioms DiamondIntegral.Section4.GammaPrefixIntegration.integratePrefix
+#print DiamondIntegral.Section4.GammaPrefixIntegration.integrateAll_factor
+#print axioms DiamondIntegral.Section4.GammaPrefixIntegration.integrateAll_factor
+#print DiamondIntegral.Section4.GammaPrefixIntegration.integratePrefix_fibre
+#print axioms DiamondIntegral.Section4.GammaPrefixIntegration.integratePrefix_fibre
+#print DiamondIntegral.Section4.GammaGraphIntegration.integralFirst_singleton
+#print axioms DiamondIntegral.Section4.GammaGraphIntegration.integralFirst_singleton
+#print DiamondIntegral.Section4.GammaGraphIntegration.graphWeight
+#print axioms DiamondIntegral.Section4.GammaGraphIntegration.graphWeight
+#print DiamondIntegral.Section4.GammaGraphIntegration.graphWeightMap
+#print axioms DiamondIntegral.Section4.GammaGraphIntegration.graphWeightMap
+#print DiamondIntegral.Section4.GammaGraphIntegration.graphWeight_fibre
+#print axioms DiamondIntegral.Section4.GammaGraphIntegration.graphWeight_fibre
+#print DiamondIntegral.Section4.GammaGraphIntegration.integrate_graphWeight
+#print axioms DiamondIntegral.Section4.GammaGraphIntegration.integrate_graphWeight
+#print DiamondIntegral.Section4.GammaUnaryFamilyBridge.unary_definable
+#print axioms DiamondIntegral.Section4.GammaUnaryFamilyBridge.unary_definable
+#print DiamondIntegral.Section4.GammaUnaryFamilyBridge.toEuler
+#print axioms DiamondIntegral.Section4.GammaUnaryFamilyBridge.toEuler
+#print DiamondIntegral.Section4.GammaUnaryFamilyBridge.toEuler_eval
+#print axioms DiamondIntegral.Section4.GammaUnaryFamilyBridge.toEuler_eval
+#print DiamondIntegral.Section4.GammaUnaryFamilyBridge.toEuler_integral
+#print axioms DiamondIntegral.Section4.GammaUnaryFamilyBridge.toEuler_integral
+#print DiamondIntegral.Section4.GammaHigherPushforward.pushforwardFamily
+#print axioms DiamondIntegral.Section4.GammaHigherPushforward.pushforwardFamily
+#print DiamondIntegral.Section4.GammaHigherPushforward.fibreFamily
+#print axioms DiamondIntegral.Section4.GammaHigherPushforward.fibreFamily
+#print DiamondIntegral.Section4.GammaHigherPushforward.fibreFamily_eval
+#print axioms DiamondIntegral.Section4.GammaHigherPushforward.fibreFamily_eval
+#print DiamondIntegral.Section4.GammaHigherPushforward.pushforwardFamily_fibre
+#print axioms DiamondIntegral.Section4.GammaHigherPushforward.pushforwardFamily_fibre
+#print DiamondIntegral.Section4.GammaHigherPushforward.pushforwardFamily_integral
+#print axioms DiamondIntegral.Section4.GammaHigherPushforward.pushforwardFamily_integral
+#print DiamondIntegral.Section4.GammaHigherPushforward.pushforward
+#print axioms DiamondIntegral.Section4.GammaHigherPushforward.pushforward
+#print DiamondIntegral.Section4.GammaHigherPushforward.pushforward_eval
+#print axioms DiamondIntegral.Section4.GammaHigherPushforward.pushforward_eval
+#print DiamondIntegral.Section4.GammaHigherPushforward.pushforward_integral
+#print axioms DiamondIntegral.Section4.GammaHigherPushforward.pushforward_integral
+#print DiamondIntegral.Section4.GammaBoundedFamilies.BoxSupported
+#print axioms DiamondIntegral.Section4.GammaBoundedFamilies.BoxSupported
+#print DiamondIntegral.Section4.GammaBoundedFamilies.fibreFunction_bounded
+#print axioms DiamondIntegral.Section4.GammaBoundedFamilies.fibreFunction_bounded
+#print DiamondIntegral.Section4.GammaBoundedFamilies.fibreFunction_changeKind
+#print axioms DiamondIntegral.Section4.GammaBoundedFamilies.fibreFunction_changeKind
+#print DiamondIntegral.Section4.GammaBoundedFamilies.integralFirst_bounded_comparison
+#print axioms DiamondIntegral.Section4.GammaBoundedFamilies.integralFirst_bounded_comparison
+#print DiamondIntegral.Section4.GammaBoundedFamilies.integralFirst_boxSupported
+#print axioms DiamondIntegral.Section4.GammaBoundedFamilies.integralFirst_boxSupported
+#print DiamondIntegral.Section4.GammaBoundedFamilies.integrateAll_bounded_comparison
+#print axioms DiamondIntegral.Section4.GammaBoundedFamilies.integrateAll_bounded_comparison
+#print DiamondIntegral.Section4.FiniteTupleBlocks.blockSwap
+#print axioms DiamondIntegral.Section4.FiniteTupleBlocks.blockSwap
+#print DiamondIntegral.Section4.FiniteTupleBlocks.blockSwap_head
+#print axioms DiamondIntegral.Section4.FiniteTupleBlocks.blockSwap_head
+#print DiamondIntegral.Section4.FiniteTupleBlocks.blockSwap_tail
+#print axioms DiamondIntegral.Section4.FiniteTupleBlocks.blockSwap_tail
+#print DiamondIntegral.Section4.FiniteTupleBlocks.join_blockSwap
+#print axioms DiamondIntegral.Section4.FiniteTupleBlocks.join_blockSwap
+#print DiamondIntegral.Section4.GammaBlockFubini.block_fubini
+#print axioms DiamondIntegral.Section4.GammaBlockFubini.block_fubini
+#print DiamondIntegral.Section4.GammaIntegralCongruence.integrateAll_congr
+#print axioms DiamondIntegral.Section4.GammaIntegralCongruence.integrateAll_congr
+#print DiamondIntegral.Section4.GammaMapOrder.lt_maps_definable
+#print axioms DiamondIntegral.Section4.GammaMapOrder.lt_maps_definable
+#print DiamondIntegral.Section4.GammaMapOrder.piecewise_definable
+#print axioms DiamondIntegral.Section4.GammaMapOrder.piecewise_definable
+#print DiamondIntegral.Section4.GammaMapOrder.max_definable
+#print axioms DiamondIntegral.Section4.GammaMapOrder.max_definable
+#print DiamondIntegral.Section4.GammaRadius.radius
+#print axioms DiamondIntegral.Section4.GammaRadius.radius
+#print DiamondIntegral.Section4.GammaRadius.radius_definable
+#print axioms DiamondIntegral.Section4.GammaRadius.radius_definable
+#print DiamondIntegral.Section4.GammaRadius.one_le_radius
+#print axioms DiamondIntegral.Section4.GammaRadius.one_le_radius
+#print DiamondIntegral.Section4.GammaRadius.coordinate_le_radius
+#print axioms DiamondIntegral.Section4.GammaRadius.coordinate_le_radius
+#print DiamondIntegral.Section4.GammaRadius.inverse_coordinate_le_radius
+#print axioms DiamondIntegral.Section4.GammaRadius.inverse_coordinate_le_radius
+#print DiamondIntegral.Section4.GammaRadius.radius_bounds
+#print axioms DiamondIntegral.Section4.GammaRadius.radius_bounds
+#print DiamondIntegral.Section4.GammaRadius.radius_le_iff
+#print axioms DiamondIntegral.Section4.GammaRadius.radius_le_iff
+#print DiamondIntegral.Section4.GammaRadiusProfiles.radius_graph_definable
+#print axioms DiamondIntegral.Section4.GammaRadiusProfiles.radius_graph_definable
+#print DiamondIntegral.Section4.GammaRadiusProfiles.radius_fibre_bounded
+#print axioms DiamondIntegral.Section4.GammaRadiusProfiles.radius_fibre_bounded
+#print DiamondIntegral.Section4.GammaRadiusProfiles.radiusProfile
+#print axioms DiamondIntegral.Section4.GammaRadiusProfiles.radiusProfile
+#print DiamondIntegral.Section4.GammaRadiusProfiles.radiusProfile_changeKind
+#print axioms DiamondIntegral.Section4.GammaRadiusProfiles.radiusProfile_changeKind
+#print DiamondIntegral.Section4.GammaRadiusProfiles.radiusProfile_stabilization
+#print axioms DiamondIntegral.Section4.GammaRadiusProfiles.radiusProfile_stabilization
+#print DiamondIntegral.Section4.GammaHigherProjection.unaryCompose
+#print axioms DiamondIntegral.Section4.GammaHigherProjection.unaryCompose
+#print DiamondIntegral.Section4.GammaHigherProjection.multiplyFamily
+#print axioms DiamondIntegral.Section4.GammaHigherProjection.multiplyFamily
+#print DiamondIntegral.Section4.GammaHigherProjection.pushforwardFamily_projection_at
+#print axioms DiamondIntegral.Section4.GammaHigherProjection.pushforwardFamily_projection_at
+#print DiamondIntegral.Section4.GammaHigherProjection.pushforward_projection
+#print axioms DiamondIntegral.Section4.GammaHigherProjection.pushforward_projection
+#print DiamondIntegral.Section4.GammaHigherProjection.integral_projection
+#print axioms DiamondIntegral.Section4.GammaHigherProjection.integral_projection
+#print DiamondIntegral.Section4.GammaSymmetricTruncation.interval_definable
+#print axioms DiamondIntegral.Section4.GammaSymmetricTruncation.interval_definable
+#print DiamondIntegral.Section4.GammaSymmetricTruncation.intervalFamily
+#print axioms DiamondIntegral.Section4.GammaSymmetricTruncation.intervalFamily
+#print DiamondIntegral.Section4.GammaSymmetricTruncation.intervalFamily_eval
+#print axioms DiamondIntegral.Section4.GammaSymmetricTruncation.intervalFamily_eval
+#print DiamondIntegral.Section4.GammaSymmetricTruncation.intervalFamily_toEuler
+#print axioms DiamondIntegral.Section4.GammaSymmetricTruncation.intervalFamily_toEuler
+#print DiamondIntegral.Section4.GammaSymmetricTruncation.truncateFamily
+#print axioms DiamondIntegral.Section4.GammaSymmetricTruncation.truncateFamily
+#print DiamondIntegral.Section4.GammaSymmetricTruncation.truncateFamily_eval
+#print axioms DiamondIntegral.Section4.GammaSymmetricTruncation.truncateFamily_eval
+#print DiamondIntegral.Section4.GammaSymmetricTruncation.integral_truncateFamily
+#print axioms DiamondIntegral.Section4.GammaSymmetricTruncation.integral_truncateFamily
+#print DiamondIntegral.Section4.GammaBoxStabilization.radiusBase
+#print axioms DiamondIntegral.Section4.GammaBoxStabilization.radiusBase
+#print DiamondIntegral.Section4.GammaBoxStabilization.radius_name
+#print axioms DiamondIntegral.Section4.GammaBoxStabilization.radius_name
+#print DiamondIntegral.Section4.GammaBoxStabilization.boxTruncation
+#print axioms DiamondIntegral.Section4.GammaBoxStabilization.boxTruncation
+#print DiamondIntegral.Section4.GammaBoxStabilization.boxTruncation_eval
+#print axioms DiamondIntegral.Section4.GammaBoxStabilization.boxTruncation_eval
+#print DiamondIntegral.Section4.GammaBoxStabilization.box_stabilization
+#print axioms DiamondIntegral.Section4.GammaBoxStabilization.box_stabilization
+#print DiamondIntegral.Section4.GammaProfileBijections.indicator_fibre_membership
+#print axioms DiamondIntegral.Section4.GammaProfileBijections.indicator_fibre_membership
+#print DiamondIntegral.Section4.GammaProfileBijections.indicator_fibre_eq_indicator
+#print axioms DiamondIntegral.Section4.GammaProfileBijections.indicator_fibre_eq_indicator
+#print DiamondIntegral.Section4.GammaProfileBijections.profile_bijOn
+#print axioms DiamondIntegral.Section4.GammaProfileBijections.profile_bijOn
+#print DiamondIntegral.Section4.GammaConstantPushforward.pushforward_constant
+#print axioms DiamondIntegral.Section4.GammaConstantPushforward.pushforward_constant
+#print DiamondIntegral.Section4.GammaCounterweightedRay.positiveRay
+#print axioms DiamondIntegral.Section4.GammaCounterweightedRay.positiveRay
+#print DiamondIntegral.Section4.GammaCounterweightedRay.positiveRay_definable
+#print axioms DiamondIntegral.Section4.GammaCounterweightedRay.positiveRay_definable
+#print DiamondIntegral.Section4.GammaCounterweightedRay.inverseCoordinate
+#print axioms DiamondIntegral.Section4.GammaCounterweightedRay.inverseCoordinate
+#print DiamondIntegral.Section4.GammaCounterweightedRay.inverseCoordinate_definable
+#print axioms DiamondIntegral.Section4.GammaCounterweightedRay.inverseCoordinate_definable
+#print DiamondIntegral.Section4.GammaCounterweightedRay.correctedWeight_inverse
+#print axioms DiamondIntegral.Section4.GammaCounterweightedRay.correctedWeight_inverse
+#print DiamondIntegral.Section4.GammaCounterweightedRay.positiveRay_integral
+#print axioms DiamondIntegral.Section4.GammaCounterweightedRay.positiveRay_integral
+#print DiamondIntegral.Section4.GammaCounterweightedRay.counterweighted_ray_profile
+#print axioms DiamondIntegral.Section4.GammaCounterweightedRay.counterweighted_ray_profile
+#print DiamondIntegral.Section4.GammaCounterweightedRay.counterweighted_ray_geometric
+#print axioms DiamondIntegral.Section4.GammaCounterweightedRay.counterweighted_ray_geometric
+#print DiamondIntegral.Section4.GammaCounterweightedRay.counterweighted_ray_bounded
+#print axioms DiamondIntegral.Section4.GammaCounterweightedRay.counterweighted_ray_bounded
+#print DiamondIntegral.Section4.GammaMeasuredProfileInvariance.correctedWeight_preserved
+#print axioms DiamondIntegral.Section4.GammaMeasuredProfileInvariance.correctedWeight_preserved
+#print DiamondIntegral.Section4.GammaMeasuredProfileInvariance.correctedWeight_graph
+#print axioms DiamondIntegral.Section4.GammaMeasuredProfileInvariance.correctedWeight_graph
+#print DiamondIntegral.Section4.GammaMeasuredProfileInvariance.profile_volume_bijOn
+#print axioms DiamondIntegral.Section4.GammaMeasuredProfileInvariance.profile_volume_bijOn
+#print DiamondIntegral.Section4.GammaPushforwardSupport.pushforward_support
+#print axioms DiamondIntegral.Section4.GammaPushforwardSupport.pushforward_support
+#print DiamondIntegral.Section4.GammaPushforwardSupport.pushforward_bounded
+#print axioms DiamondIntegral.Section4.GammaPushforwardSupport.pushforward_bounded
+#print DiamondIntegral.Section4.GammaBoundedProfiles.correctedWeight_bounds
+#print axioms DiamondIntegral.Section4.GammaBoundedProfiles.correctedWeight_bounds
+#print DiamondIntegral.Section4.GammaBoundedProfiles.profile_bounded
+#print axioms DiamondIntegral.Section4.GammaBoundedProfiles.profile_bounded
+#print DiamondIntegral.Section4.GammaBoundedProfiles.profile_changeKind
+#print axioms DiamondIntegral.Section4.GammaBoundedProfiles.profile_changeKind
+#print DiamondIntegral.Section4.GammaBoundedMapImage.bounded_map_image
+#print axioms DiamondIntegral.Section4.GammaBoundedMapImage.bounded_map_image
+#print DiamondIntegral.Section4.GammaBoundedProfileRange.profile_bounded_of_domain
+#print axioms DiamondIntegral.Section4.GammaBoundedProfileRange.profile_bounded_of_domain
+#print DiamondIntegral.Section4.GammaBoundedProfileRange.boundedProfile
+#print axioms DiamondIntegral.Section4.GammaBoundedProfileRange.boundedProfile
+#print DiamondIntegral.Section4.GammaBoundedProfileRange.boundedProfile_euler
+#print axioms DiamondIntegral.Section4.GammaBoundedProfileRange.boundedProfile_euler
+#print DiamondIntegral.Section4.GammaBoundedProfileRange.boundedProfile_changeKind
+#print axioms DiamondIntegral.Section4.GammaBoundedProfileRange.boundedProfile_changeKind
+#print DiamondIntegral.Section4.GammaProfileRestrictions.profile_eq_on_domain
+#print axioms DiamondIntegral.Section4.GammaProfileRestrictions.profile_eq_on_domain
+#print DiamondIntegral.Section4.GammaProfileRestrictions.partialProfile
+#print axioms DiamondIntegral.Section4.GammaProfileRestrictions.partialProfile
+#print DiamondIntegral.Section4.GammaProfileRestrictions.partialProfile_eq_extension
+#print axioms DiamondIntegral.Section4.GammaProfileRestrictions.partialProfile_eq_extension
+#print DiamondIntegral.Section4.GammaZeroDegreeProfile.zero_arity_value_definable
+#print axioms DiamondIntegral.Section4.GammaZeroDegreeProfile.zero_arity_value_definable
+#print DiamondIntegral.Section4.GammaZeroDegreeProfile.profile_zero_degree
+#print axioms DiamondIntegral.Section4.GammaZeroDegreeProfile.profile_zero_degree
+#print DiamondIntegral.Section4.GammaZeroDegreeProfile.profile_zero_degree_pointSubring
+#print axioms DiamondIntegral.Section4.GammaZeroDegreeProfile.profile_zero_degree_pointSubring
+#print DiamondIntegral.Section4.GammaObjectPolynomial.profileCoefficient
+#print axioms DiamondIntegral.Section4.GammaObjectPolynomial.profileCoefficient
+#print DiamondIntegral.Section4.GammaObjectPolynomial.profile_monomial_mem
+#print axioms DiamondIntegral.Section4.GammaObjectPolynomial.profile_monomial_mem
+#print DiamondIntegral.Section4.GammaObjectPolynomial.objectPolynomial
+#print axioms DiamondIntegral.Section4.GammaObjectPolynomial.objectPolynomial
+#print DiamondIntegral.Section4.GammaObjectPolynomial.objectPolynomial_coeff
+#print axioms DiamondIntegral.Section4.GammaObjectPolynomial.objectPolynomial_coeff
+#print DiamondIntegral.Section4.GammaSingletonProfiles.productName
+#print axioms DiamondIntegral.Section4.GammaSingletonProfiles.productName
+#print DiamondIntegral.Section4.GammaSingletonProfiles.profile_singleton
+#print axioms DiamondIntegral.Section4.GammaSingletonProfiles.profile_singleton
+#print DiamondIntegral.Section4.GammaSingletonProfiles.objectPolynomial_singleton
+#print axioms DiamondIntegral.Section4.GammaSingletonProfiles.objectPolynomial_singleton
+#print DiamondIntegral.Section4.GammaSumMap.graph_of_mapDefinable
+#print axioms DiamondIntegral.Section4.GammaSumMap.graph_of_mapDefinable
+#print DiamondIntegral.Section4.GammaSumMap.sumMap
+#print axioms DiamondIntegral.Section4.GammaSumMap.sumMap
+#print DiamondIntegral.Section4.GammaSumMap.sumMap_definable
+#print axioms DiamondIntegral.Section4.GammaSumMap.sumMap_definable
+#print DiamondIntegral.Section4.GammaSumMap.sumMap_join
+#print axioms DiamondIntegral.Section4.GammaSumMap.sumMap_join
+#print DiamondIntegral.Section4.GammaSumMap.prod_blocks
+#print axioms DiamondIntegral.Section4.GammaSumMap.prod_blocks
+#print DiamondIntegral.Section4.GammaSumMap.correctedWeight_sumMap
+#print axioms DiamondIntegral.Section4.GammaSumMap.correctedWeight_sumMap
+#print DiamondIntegral.Section4.GammaSumFibres.prefix_sum_fibre
+#print axioms DiamondIntegral.Section4.GammaSumFibres.prefix_sum_fibre
+#print DiamondIntegral.Section4.GammaPushforwardConvolution.pushforward_sum_product
+#print axioms DiamondIntegral.Section4.GammaPushforwardConvolution.pushforward_sum_product
+#print DiamondIntegral.Section4.GammaProfileProducts.productSet
+#print axioms DiamondIntegral.Section4.GammaProfileProducts.productSet
+#print DiamondIntegral.Section4.GammaProfileProducts.productSet_definable
+#print axioms DiamondIntegral.Section4.GammaProfileProducts.productSet_definable
+#print DiamondIntegral.Section4.GammaProfileProducts.productSet_indicator
+#print axioms DiamondIntegral.Section4.GammaProfileProducts.productSet_indicator
+#print DiamondIntegral.Section4.GammaProfileProducts.profile_product
+#print axioms DiamondIntegral.Section4.GammaProfileProducts.profile_product
+#print DiamondIntegral.Section4.GammaObjectMultiplication.profileCoefficient_product
+#print axioms DiamondIntegral.Section4.GammaObjectMultiplication.profileCoefficient_product
+#print DiamondIntegral.Section4.GammaObjectMultiplication.objectPolynomial_product
+#print axioms DiamondIntegral.Section4.GammaObjectMultiplication.objectPolynomial_product
+#print DiamondIntegral.Section4.GammaObjectMultiplication.objectPolynomial_one
+#print axioms DiamondIntegral.Section4.GammaObjectMultiplication.objectPolynomial_one
+#print DiamondIntegral.Section4.GammaObjectRelations.objectPolynomial_volume_bijOn
+#print axioms DiamondIntegral.Section4.GammaObjectRelations.objectPolynomial_volume_bijOn
+#print DiamondIntegral.Section4.GammaObjectRelations.objectPolynomial_scissor
+#print axioms DiamondIntegral.Section4.GammaObjectRelations.objectPolynomial_scissor
+#print DiamondIntegral.Section4.GammaObjectRelations.objectPolynomial_empty
+#print axioms DiamondIntegral.Section4.GammaObjectRelations.objectPolynomial_empty
+#print DiamondIntegral.Section4.GammaObjectRelations.objectPolynomial_eq_on_domain
+#print axioms DiamondIntegral.Section4.GammaObjectRelations.objectPolynomial_eq_on_domain
+#print DiamondIntegral.Section4.GammaCellSections.integralFirst_from_euler
+#print axioms DiamondIntegral.Section4.GammaCellSections.integralFirst_from_euler
+#print DiamondIntegral.Section4.GammaCellSections.graphCell
+#print axioms DiamondIntegral.Section4.GammaCellSections.graphCell
+#print DiamondIntegral.Section4.GammaCellSections.integrateFirst_graph
+#print axioms DiamondIntegral.Section4.GammaCellSections.integrateFirst_graph
+#print DiamondIntegral.Section4.GammaCellSections.bandCell
+#print axioms DiamondIntegral.Section4.GammaCellSections.bandCell
+#print DiamondIntegral.Section4.GammaCellSections.integrateFirst_band
+#print axioms DiamondIntegral.Section4.GammaCellSections.integrateFirst_band
+#print DiamondIntegral.Section4.GammaCellUnboundedSections.integrateFirst_specified
+#print axioms DiamondIntegral.Section4.GammaCellUnboundedSections.integrateFirst_specified
+#print DiamondIntegral.Section4.GammaCellUnboundedSections.upperRayCell
+#print axioms DiamondIntegral.Section4.GammaCellUnboundedSections.upperRayCell
+#print DiamondIntegral.Section4.GammaCellUnboundedSections.lowerRayCell
+#print axioms DiamondIntegral.Section4.GammaCellUnboundedSections.lowerRayCell
+#print DiamondIntegral.Section4.GammaCellUnboundedSections.lineCell
+#print axioms DiamondIntegral.Section4.GammaCellUnboundedSections.lineCell
+#print DiamondIntegral.Section4.GammaCellUnboundedSections.integrateFirst_upperRay
+#print axioms DiamondIntegral.Section4.GammaCellUnboundedSections.integrateFirst_upperRay
+#print DiamondIntegral.Section4.GammaCellUnboundedSections.integrateFirst_lowerRay
+#print axioms DiamondIntegral.Section4.GammaCellUnboundedSections.integrateFirst_lowerRay
+#print DiamondIntegral.Section4.GammaCellUnboundedSections.integrateFirst_line
+#print axioms DiamondIntegral.Section4.GammaCellUnboundedSections.integrateFirst_line
+#print DiamondIntegral.Section4.GammaFinitePartitions.familyEvaluation
+#print axioms DiamondIntegral.Section4.GammaFinitePartitions.familyEvaluation
+#print DiamondIntegral.Section4.GammaFinitePartitions.indicator_partition
+#print axioms DiamondIntegral.Section4.GammaFinitePartitions.indicator_partition
+#print DiamondIntegral.Section4.GammaFinitePartitions.integral_partition
+#print axioms DiamondIntegral.Section4.GammaFinitePartitions.integral_partition
+#print DiamondIntegral.Section4.GammaCellFormula.geometric_partition_formula
+#print axioms DiamondIntegral.Section4.GammaCellFormula.geometric_partition_formula
+#print DiamondIntegral.Section4.GammaWeightedCharts.Chart
+#print axioms DiamondIntegral.Section4.GammaWeightedCharts.Chart
+#print DiamondIntegral.Section4.GammaWeightedCharts.Chart.normalizedVolume
+#print axioms DiamondIntegral.Section4.GammaWeightedCharts.Chart.normalizedVolume
+#print DiamondIntegral.Section4.GammaWeightedCharts.Chart.normalizedVolume_definable
+#print axioms DiamondIntegral.Section4.GammaWeightedCharts.Chart.normalizedVolume_definable
+#print DiamondIntegral.Section4.GammaWeightedCharts.Chart.normalizedVolume_on
+#print axioms DiamondIntegral.Section4.GammaWeightedCharts.Chart.normalizedVolume_on
+#print DiamondIntegral.Section4.GammaWeightedCharts.VolumeIso
+#print axioms DiamondIntegral.Section4.GammaWeightedCharts.VolumeIso
+#print DiamondIntegral.Section4.GammaWeightedCharts.chartPolynomial
+#print axioms DiamondIntegral.Section4.GammaWeightedCharts.chartPolynomial
+#print DiamondIntegral.Section4.GammaWeightedCharts.chartPolynomial_volumeIso
+#print axioms DiamondIntegral.Section4.GammaWeightedCharts.chartPolynomial_volumeIso
+#print DiamondIntegral.Section4.GammaChartOperations.ofTotal
+#print axioms DiamondIntegral.Section4.GammaChartOperations.ofTotal
+#print DiamondIntegral.Section4.GammaChartOperations.chartPolynomial_ofTotal
+#print axioms DiamondIntegral.Section4.GammaChartOperations.chartPolynomial_ofTotal
+#print DiamondIntegral.Section4.GammaChartOperations.product
+#print axioms DiamondIntegral.Section4.GammaChartOperations.product
+#print DiamondIntegral.Section4.GammaChartOperations.product_volume_join
+#print axioms DiamondIntegral.Section4.GammaChartOperations.product_volume_join
+#print DiamondIntegral.Section4.GammaChartOperations.unit
+#print axioms DiamondIntegral.Section4.GammaChartOperations.unit
+#print DiamondIntegral.Section4.GammaChartOperations.chartPolynomial_product
+#print axioms DiamondIntegral.Section4.GammaChartOperations.chartPolynomial_product
+#print DiamondIntegral.Section4.GammaChartOperations.chartPolynomial_unit
+#print axioms DiamondIntegral.Section4.GammaChartOperations.chartPolynomial_unit
+#print DiamondIntegral.Section4.GammaChartPresentation.Generator
+#print axioms DiamondIntegral.Section4.GammaChartPresentation.Generator
+#print DiamondIntegral.Section4.GammaChartPresentation.symbol
+#print axioms DiamondIntegral.Section4.GammaChartPresentation.symbol
+#print DiamondIntegral.Section4.GammaChartPresentation.Relation
+#print axioms DiamondIntegral.Section4.GammaChartPresentation.Relation
+#print DiamondIntegral.Section4.GammaChartPresentation.relationIdeal
+#print axioms DiamondIntegral.Section4.GammaChartPresentation.relationIdeal
+#print DiamondIntegral.Section4.GammaChartPresentation.ChartRing
+#print axioms DiamondIntegral.Section4.GammaChartPresentation.ChartRing
+#print DiamondIntegral.Section4.GammaChartPresentation.freeInterpretation
+#print axioms DiamondIntegral.Section4.GammaChartPresentation.freeInterpretation
+#print DiamondIntegral.Section4.GammaChartPresentation.freeInterpretation_symbol
+#print axioms DiamondIntegral.Section4.GammaChartPresentation.freeInterpretation_symbol
+#print DiamondIntegral.Section4.GammaChartPresentation.relation_vanishes
+#print axioms DiamondIntegral.Section4.GammaChartPresentation.relation_vanishes
+#print DiamondIntegral.Section4.GammaChartPresentation.relationIdeal_vanishes
+#print axioms DiamondIntegral.Section4.GammaChartPresentation.relationIdeal_vanishes
+#print DiamondIntegral.Section4.GammaChartPresentation.interpretation
+#print axioms DiamondIntegral.Section4.GammaChartPresentation.interpretation
+#print DiamondIntegral.Section4.GammaChartPresentation.interpretation_symbol
+#print axioms DiamondIntegral.Section4.GammaChartPresentation.interpretation_symbol
+#print DiamondIntegral.Section4.GammaBoundedPolynomial.forgetBounded
+#print axioms DiamondIntegral.Section4.GammaBoundedPolynomial.forgetBounded
+#print DiamondIntegral.Section4.GammaBoundedPolynomial.forgetBounded_injective
+#print axioms DiamondIntegral.Section4.GammaBoundedPolynomial.forgetBounded_injective
+#print DiamondIntegral.Section4.GammaBoundedPolynomial.boundedPointSubring
+#print axioms DiamondIntegral.Section4.GammaBoundedPolynomial.boundedPointSubring
+#print DiamondIntegral.Section4.GammaBoundedPolynomial.sourceRing
+#print axioms DiamondIntegral.Section4.GammaBoundedPolynomial.sourceRing
+#print DiamondIntegral.Section4.GammaBoundedPolynomial.mem_sourceRing
+#print axioms DiamondIntegral.Section4.GammaBoundedPolynomial.mem_sourceRing
+#print DiamondIntegral.Section4.GammaBoundedPolynomial.monomial_mem_positive
+#print axioms DiamondIntegral.Section4.GammaBoundedPolynomial.monomial_mem_positive
+#print DiamondIntegral.Section4.GammaBoundedPolynomial.point_mem_boundedPointSubring
+#print axioms DiamondIntegral.Section4.GammaBoundedPolynomial.point_mem_boundedPointSubring
+#print DiamondIntegral.Section4.GammaBoundedPolynomial.point_monomial_mem
+#print axioms DiamondIntegral.Section4.GammaBoundedPolynomial.point_monomial_mem
+#print DiamondIntegral.Section4.GammaBoundedPolynomial.toUnbounded
+#print axioms DiamondIntegral.Section4.GammaBoundedPolynomial.toUnbounded
+#print DiamondIntegral.Section4.GammaBoundedPolynomial.toUnbounded_injective
+#print axioms DiamondIntegral.Section4.GammaBoundedPolynomial.toUnbounded_injective
+#print DiamondIntegral.Section4.GammaBoundedProducts.DomainBounded
+#print axioms DiamondIntegral.Section4.GammaBoundedProducts.DomainBounded
+#print DiamondIntegral.Section4.GammaBoundedProducts.all_coordinates
+#print axioms DiamondIntegral.Section4.GammaBoundedProducts.all_coordinates
+#print DiamondIntegral.Section4.GammaBoundedProducts.DomainBounded.subset
+#print axioms DiamondIntegral.Section4.GammaBoundedProducts.DomainBounded.subset
+#print DiamondIntegral.Section4.GammaBoundedProducts.DomainBounded.empty
+#print axioms DiamondIntegral.Section4.GammaBoundedProducts.DomainBounded.empty
+#print DiamondIntegral.Section4.GammaBoundedProducts.DomainBounded.unit
+#print axioms DiamondIntegral.Section4.GammaBoundedProducts.DomainBounded.unit
+#print DiamondIntegral.Section4.GammaBoundedProducts.DomainBounded.union
+#print axioms DiamondIntegral.Section4.GammaBoundedProducts.DomainBounded.union
+#print DiamondIntegral.Section4.GammaBoundedProducts.DomainBounded.product
+#print axioms DiamondIntegral.Section4.GammaBoundedProducts.DomainBounded.product
+#print DiamondIntegral.Section4.GammaBoundedObjectPolynomial.objectPolynomial
+#print axioms DiamondIntegral.Section4.GammaBoundedObjectPolynomial.objectPolynomial
+#print DiamondIntegral.Section4.GammaBoundedObjectPolynomial.toUnbounded_objectPolynomial
+#print axioms DiamondIntegral.Section4.GammaBoundedObjectPolynomial.toUnbounded_objectPolynomial
+#print DiamondIntegral.Section4.GammaBoundedObjectPolynomial.eulerPolynomial
+#print axioms DiamondIntegral.Section4.GammaBoundedObjectPolynomial.eulerPolynomial
+#print DiamondIntegral.Section4.GammaBoundedObjectPolynomial.eulerPolynomial_object
+#print axioms DiamondIntegral.Section4.GammaBoundedObjectPolynomial.eulerPolynomial_object
+#print DiamondIntegral.Section4.GammaBoundedSpecialization.specialize
+#print axioms DiamondIntegral.Section4.GammaBoundedSpecialization.specialize
+#print DiamondIntegral.Section4.GammaBoundedSpecialization.specialize_monomial
+#print axioms DiamondIntegral.Section4.GammaBoundedSpecialization.specialize_monomial
+#print DiamondIntegral.Section4.GammaBoundedSpecialization.pointMonomial
+#print axioms DiamondIntegral.Section4.GammaBoundedSpecialization.pointMonomial
+#print DiamondIntegral.Section4.GammaBoundedSpecialization.intervalMonomial
+#print axioms DiamondIntegral.Section4.GammaBoundedSpecialization.intervalMonomial
+#print DiamondIntegral.Section4.GammaBoundedSpecialization.specialize_point
+#print axioms DiamondIntegral.Section4.GammaBoundedSpecialization.specialize_point
+#print DiamondIntegral.Section4.GammaBoundedSpecialization.specialize_interval
+#print axioms DiamondIntegral.Section4.GammaBoundedSpecialization.specialize_interval
+#print DiamondIntegral.Section4.GammaBoundedSpecialization.specialize_object
+#print axioms DiamondIntegral.Section4.GammaBoundedSpecialization.specialize_object
+#print DiamondIntegral.Section4.EulerFunction.fullPointMonoidHom
+#print axioms DiamondIntegral.Section4.EulerFunction.fullPointMonoidHom
+#print DiamondIntegral.Section4.EulerFunction.fullPointRing
+#print axioms DiamondIntegral.Section4.EulerFunction.fullPointRing
+#print DiamondIntegral.Section4.EulerFunction.fullPointRing_single
+#print axioms DiamondIntegral.Section4.EulerFunction.fullPointRing_single
+#print DiamondIntegral.Section4.EulerFunction.endpointCoordinate
+#print axioms DiamondIntegral.Section4.EulerFunction.endpointCoordinate
+#print DiamondIntegral.Section4.EulerFunction.endpointCoordinate_point
+#print axioms DiamondIntegral.Section4.EulerFunction.endpointCoordinate_point
+#print DiamondIntegral.Section4.EulerFunction.endpointCoordinate_ray
+#print axioms DiamondIntegral.Section4.EulerFunction.endpointCoordinate_ray
+#print DiamondIntegral.Section4.EulerFunction.endpointCoordinate_line
+#print axioms DiamondIntegral.Section4.EulerFunction.endpointCoordinate_line
+#print DiamondIntegral.Section4.EulerFunction.endpointProjection
+#print axioms DiamondIntegral.Section4.EulerFunction.endpointProjection
+#print DiamondIntegral.Section4.EulerFunction.endpointProjection_point
+#print axioms DiamondIntegral.Section4.EulerFunction.endpointProjection_point
+#print DiamondIntegral.Section4.EulerFunction.endpointProjection_ray
+#print axioms DiamondIntegral.Section4.EulerFunction.endpointProjection_ray
+#print DiamondIntegral.Section4.EulerFunction.endpointProjection_line
+#print axioms DiamondIntegral.Section4.EulerFunction.endpointProjection_line
+#print DiamondIntegral.Section4.GammaEndpointProjection.pointValueEmbedding
+#print axioms DiamondIntegral.Section4.GammaEndpointProjection.pointValueEmbedding
+#print DiamondIntegral.Section4.GammaEndpointProjection.pointValueEmbedding_injective
+#print axioms DiamondIntegral.Section4.GammaEndpointProjection.pointValueEmbedding_injective
+#print DiamondIntegral.Section4.GammaEndpointProjection.pointValueEmbedding_single
+#print axioms DiamondIntegral.Section4.GammaEndpointProjection.pointValueEmbedding_single
+#print DiamondIntegral.Section4.GammaEndpointProjection.point_mem_range
+#print axioms DiamondIntegral.Section4.GammaEndpointProjection.point_mem_range
+#print DiamondIntegral.Section4.GammaEndpointProjection.endpointProjection_mem_range
+#print axioms DiamondIntegral.Section4.GammaEndpointProjection.endpointProjection_mem_range
+#print DiamondIntegral.Section4.GammaEndpointProjection.pointRangeEquiv
+#print axioms DiamondIntegral.Section4.GammaEndpointProjection.pointRangeEquiv
+#print DiamondIntegral.Section4.GammaEndpointProjection.endpointToRange
+#print axioms DiamondIntegral.Section4.GammaEndpointProjection.endpointToRange
+#print DiamondIntegral.Section4.GammaEndpointProjection.namedEndpoint
+#print axioms DiamondIntegral.Section4.GammaEndpointProjection.namedEndpoint
+#print DiamondIntegral.Section4.GammaEndpointProjection.namedEndpoint_spec
+#print axioms DiamondIntegral.Section4.GammaEndpointProjection.namedEndpoint_spec
+#print DiamondIntegral.Section4.GammaEndpointProjection.namedEndpoint_point
+#print axioms DiamondIntegral.Section4.GammaEndpointProjection.namedEndpoint_point
+#print DiamondIntegral.Section4.GammaEndpointProjection.namedEndpoint_ray
+#print axioms DiamondIntegral.Section4.GammaEndpointProjection.namedEndpoint_ray
+#print DiamondIntegral.Section4.GammaEndpointProjection.namedEndpoint_line
+#print axioms DiamondIntegral.Section4.GammaEndpointProjection.namedEndpoint_line
+#print DiamondIntegral.Section4.GammaUnboundedSpecialization.weightCharacter
+#print axioms DiamondIntegral.Section4.GammaUnboundedSpecialization.weightCharacter
+#print DiamondIntegral.Section4.GammaUnboundedSpecialization.weightCharacter_single
+#print axioms DiamondIntegral.Section4.GammaUnboundedSpecialization.weightCharacter_single
+#print DiamondIntegral.Section4.GammaUnboundedSpecialization.coefficientCharacter
+#print axioms DiamondIntegral.Section4.GammaUnboundedSpecialization.coefficientCharacter
+#print DiamondIntegral.Section4.GammaUnboundedSpecialization.coefficientCharacter_point
+#print axioms DiamondIntegral.Section4.GammaUnboundedSpecialization.coefficientCharacter_point
+#print DiamondIntegral.Section4.GammaUnboundedSpecialization.coefficientCharacter_ray
+#print axioms DiamondIntegral.Section4.GammaUnboundedSpecialization.coefficientCharacter_ray
+#print DiamondIntegral.Section4.GammaUnboundedSpecialization.coefficientCharacter_line
+#print axioms DiamondIntegral.Section4.GammaUnboundedSpecialization.coefficientCharacter_line
+#print DiamondIntegral.Section4.GammaUnboundedSpecialization.specialize
+#print axioms DiamondIntegral.Section4.GammaUnboundedSpecialization.specialize
+#print DiamondIntegral.Section4.GammaUnboundedSpecialization.specialize_monomial
+#print axioms DiamondIntegral.Section4.GammaUnboundedSpecialization.specialize_monomial
+#print DiamondIntegral.Section4.GammaUnboundedSpecialization.pointMonomial
+#print axioms DiamondIntegral.Section4.GammaUnboundedSpecialization.pointMonomial
+#print DiamondIntegral.Section4.GammaUnboundedSpecialization.rayMonomial
+#print axioms DiamondIntegral.Section4.GammaUnboundedSpecialization.rayMonomial
+#print DiamondIntegral.Section4.GammaUnboundedSpecialization.lineMonomial
+#print axioms DiamondIntegral.Section4.GammaUnboundedSpecialization.lineMonomial
+#print DiamondIntegral.Section4.GammaUnboundedSpecialization.specialize_point
+#print axioms DiamondIntegral.Section4.GammaUnboundedSpecialization.specialize_point
+#print DiamondIntegral.Section4.GammaUnboundedSpecialization.specialize_ray
+#print axioms DiamondIntegral.Section4.GammaUnboundedSpecialization.specialize_ray
+#print DiamondIntegral.Section4.GammaUnboundedSpecialization.specialize_line
+#print axioms DiamondIntegral.Section4.GammaUnboundedSpecialization.specialize_line
+#print DiamondIntegral.Section4.GammaUnboundedAssignments.specialize_point_positive
+#print axioms DiamondIntegral.Section4.GammaUnboundedAssignments.specialize_point_positive
+#print DiamondIntegral.Section4.GammaUnboundedAssignments.specialize_ray_pointClass
+#print axioms DiamondIntegral.Section4.GammaUnboundedAssignments.specialize_ray_pointClass
+#print DiamondIntegral.Section4.GammaUnboundedAssignments.counterweighted_coefficient
+#print axioms DiamondIntegral.Section4.GammaUnboundedAssignments.counterweighted_coefficient
+#print DiamondIntegral.Section4.GammaUnboundedAssignments.specialize_counterweighted
+#print axioms DiamondIntegral.Section4.GammaUnboundedAssignments.specialize_counterweighted
+#print DiamondIntegral.Section4.GammaUnboundedAssignments.specialize_counterweighted_geometric
+#print axioms DiamondIntegral.Section4.GammaUnboundedAssignments.specialize_counterweighted_geometric
+#print DiamondIntegral.Section4.GammaUnboundedAssignments.specialize_counterweighted_bounded
+#print axioms DiamondIntegral.Section4.GammaUnboundedAssignments.specialize_counterweighted_bounded
+#print DiamondIntegral.Section4.GammaBoundedChartMap.boundedGenerators
+#print axioms DiamondIntegral.Section4.GammaBoundedChartMap.boundedGenerators
+#print DiamondIntegral.Section4.GammaBoundedChartMap.boundedChartSubring
+#print axioms DiamondIntegral.Section4.GammaBoundedChartMap.boundedChartSubring
+#print DiamondIntegral.Section4.GammaBoundedChartMap.boundedClass
+#print axioms DiamondIntegral.Section4.GammaBoundedChartMap.boundedClass
+#print DiamondIntegral.Section4.GammaBoundedChartMap.boundedRangeEquiv
+#print axioms DiamondIntegral.Section4.GammaBoundedChartMap.boundedRangeEquiv
+#print DiamondIntegral.Section4.GammaBoundedChartMap.boundedGenerator_image
+#print axioms DiamondIntegral.Section4.GammaBoundedChartMap.boundedGenerator_image
+#print DiamondIntegral.Section4.GammaBoundedChartMap.bounded_image
+#print axioms DiamondIntegral.Section4.GammaBoundedChartMap.bounded_image
+#print DiamondIntegral.Section4.GammaBoundedChartMap.interpretationToRange
+#print axioms DiamondIntegral.Section4.GammaBoundedChartMap.interpretationToRange
+#print DiamondIntegral.Section4.GammaBoundedChartMap.interpretation
+#print axioms DiamondIntegral.Section4.GammaBoundedChartMap.interpretation
+#print DiamondIntegral.Section4.GammaBoundedChartMap.toUnbounded_interpretation
+#print axioms DiamondIntegral.Section4.GammaBoundedChartMap.toUnbounded_interpretation
+#print DiamondIntegral.Section4.GammaBoundedChartMap.interpretation_boundedClass
+#print axioms DiamondIntegral.Section4.GammaBoundedChartMap.interpretation_boundedClass
+#print DiamondIntegral.Section4.GammaBoundedChartMap.specialize
+#print axioms DiamondIntegral.Section4.GammaBoundedChartMap.specialize
+#print DiamondIntegral.Section4.GammaBoundedChartMap.specialize_boundedClass
+#print axioms DiamondIntegral.Section4.GammaBoundedChartMap.specialize_boundedClass
+#print DiamondIntegral.Section4.GammaBoundedChartComparison.bounded_hom_ext
+#print axioms DiamondIntegral.Section4.GammaBoundedChartComparison.bounded_hom_ext
+#print DiamondIntegral.Section4.GammaBoundedChartComparison.specialize_independent_kind
+#print axioms DiamondIntegral.Section4.GammaBoundedChartComparison.specialize_independent_kind
+#print DiamondIntegral.Section4.GammaChartSpecializations.specialize
+#print axioms DiamondIntegral.Section4.GammaChartSpecializations.specialize
+#print DiamondIntegral.Section4.GammaChartSpecializations.specialize_ofTotal
+#print axioms DiamondIntegral.Section4.GammaChartSpecializations.specialize_ofTotal
+#print DiamondIntegral.Section4.GammaChartSpecializations.counterweightedRayClass
+#print axioms DiamondIntegral.Section4.GammaChartSpecializations.counterweightedRayClass
+#print DiamondIntegral.Section4.GammaChartSpecializations.geometric_counterweightedRay
+#print axioms DiamondIntegral.Section4.GammaChartSpecializations.geometric_counterweightedRay
+#print DiamondIntegral.Section4.GammaChartSpecializations.bounded_counterweightedRay
+#print axioms DiamondIntegral.Section4.GammaChartSpecializations.bounded_counterweightedRay
+#print DiamondIntegral.Section4.GammaSpecializationComparison.coefficientCharacter_forgetBounded
+#print axioms DiamondIntegral.Section4.GammaSpecializationComparison.coefficientCharacter_forgetBounded
+#print DiamondIntegral.Section4.GammaSpecializationComparison.specialize_toUnbounded
+#print axioms DiamondIntegral.Section4.GammaSpecializationComparison.specialize_toUnbounded
+#print DiamondIntegral.Section4.GammaSpecializationComparison.specialize_bounded_chart
+#print axioms DiamondIntegral.Section4.GammaSpecializationComparison.specialize_bounded_chart
+#print DiamondIntegral.Section4.GammaCylindricalCells.Cell
+#print axioms DiamondIntegral.Section4.GammaCylindricalCells.Cell
+#print DiamondIntegral.Section4.GammaCylindricalCells.Cell.definable
+#print axioms DiamondIntegral.Section4.GammaCylindricalCells.Cell.definable
+#print DiamondIntegral.Section4.GammaCylindricalCells.geometric_value
+#print axioms DiamondIntegral.Section4.GammaCylindricalCells.geometric_value
+#print DiamondIntegral.Section4.GammaReflectedFamilies.reflectionMap
+#print axioms DiamondIntegral.Section4.GammaReflectedFamilies.reflectionMap
+#print DiamondIntegral.Section4.GammaReflectedFamilies.reflectionMap_definable
+#print axioms DiamondIntegral.Section4.GammaReflectedFamilies.reflectionMap_definable
+#print DiamondIntegral.Section4.GammaReflectedFamilies.reflectionMap_graph
+#print axioms DiamondIntegral.Section4.GammaReflectedFamilies.reflectionMap_graph
+#print DiamondIntegral.Section4.GammaReflectedFamilies.reflectFamily
+#print axioms DiamondIntegral.Section4.GammaReflectedFamilies.reflectFamily
+#print DiamondIntegral.Section4.GammaReflectedFamilies.reflectFamily_eval
+#print axioms DiamondIntegral.Section4.GammaReflectedFamilies.reflectFamily_eval
+#print DiamondIntegral.Section4.GammaReflectedFamilies.reflectFamily_toEuler
+#print axioms DiamondIntegral.Section4.GammaReflectedFamilies.reflectFamily_toEuler
+#print DiamondIntegral.Section4.GammaReflectedFamilies.toEuler_extend
+#print axioms DiamondIntegral.Section4.GammaReflectedFamilies.toEuler_extend
+#print DiamondIntegral.Section4.GammaProfileScissors.profile_scissor
+#print axioms DiamondIntegral.Section4.GammaProfileScissors.profile_scissor
+#print DiamondIntegral.Section4.GammaProfileScissors.profile_empty
+#print axioms DiamondIntegral.Section4.GammaProfileScissors.profile_empty
+#print DiamondIntegral.Section4.GammaPushforwardCongruence.pushforward_congr
+#print axioms DiamondIntegral.Section4.GammaPushforwardCongruence.pushforward_congr
+#print DiamondIntegral.Section4.GammaPushforwardCongruence.pushforward_eq_on_support
+#print axioms DiamondIntegral.Section4.GammaPushforwardCongruence.pushforward_eq_on_support
+#print DiamondIntegral.Section4.GammaProductFamilies.extendFamily
+#print axioms DiamondIntegral.Section4.GammaProductFamilies.extendFamily
+#print DiamondIntegral.Section4.GammaProductFamilies.productFamily
+#print axioms DiamondIntegral.Section4.GammaProductFamilies.productFamily
+#print DiamondIntegral.Section4.GammaProductFamilies.productFamily_join
+#print axioms DiamondIntegral.Section4.GammaProductFamilies.productFamily_join
+#print DiamondIntegral.Section4.GammaProductFamilies.prefix_product
+#print axioms DiamondIntegral.Section4.GammaProductFamilies.prefix_product
+#print DiamondIntegral.Section4.GammaProductFamilies.integrateAll_product
+#print axioms DiamondIntegral.Section4.GammaProductFamilies.integrateAll_product
+#print DiamondIntegral.Section4.GammaBijectiveRelations.prefix_indicator_unique
+#print axioms DiamondIntegral.Section4.GammaBijectiveRelations.prefix_indicator_unique
+#print DiamondIntegral.Section4.GammaBijectiveRelations.integral_bijective_relation
+#print axioms DiamondIntegral.Section4.GammaBijectiveRelations.integral_bijective_relation
+#print DiamondIntegral.Section4.GammaBijectiveRelations.graphOn
+#print axioms DiamondIntegral.Section4.GammaBijectiveRelations.graphOn
+#print DiamondIntegral.Section4.GammaBijectiveRelations.graphOn_join
+#print axioms DiamondIntegral.Section4.GammaBijectiveRelations.graphOn_join
+#print DiamondIntegral.Section4.GammaBijectiveRelations.integrateAll_bijOn
+#print axioms DiamondIntegral.Section4.GammaBijectiveRelations.integrateAll_bijOn
+#print DiamondIntegral.Section4.GammaPointFamilies.integrateAll_singleton
+#print axioms DiamondIntegral.Section4.GammaPointFamilies.integrateAll_singleton
+#print DiamondIntegral.Section4.GammaWeightProfiles.finset_prod_definable
+#print axioms DiamondIntegral.Section4.GammaWeightProfiles.finset_prod_definable
+#print DiamondIntegral.Section4.GammaWeightProfiles.correctedWeight
+#print axioms DiamondIntegral.Section4.GammaWeightProfiles.correctedWeight
+#print DiamondIntegral.Section4.GammaWeightProfiles.correctedWeight_definable
+#print axioms DiamondIntegral.Section4.GammaWeightProfiles.correctedWeight_definable
+#print DiamondIntegral.Section4.GammaWeightProfiles.extendWeight
+#print axioms DiamondIntegral.Section4.GammaWeightProfiles.extendWeight
+#print DiamondIntegral.Section4.GammaWeightProfiles.extendWeight_definable
+#print axioms DiamondIntegral.Section4.GammaWeightProfiles.extendWeight_definable
+#print DiamondIntegral.Section4.GammaWeightProfiles.profile
+#print axioms DiamondIntegral.Section4.GammaWeightProfiles.profile
+#print DiamondIntegral.Section4.GammaWeightProfiles.profile_integral
+#print axioms DiamondIntegral.Section4.GammaWeightProfiles.profile_integral
+#print DiamondIntegral.Section4.GammaFubiniPermutation.integralStabilizer
+#print axioms DiamondIntegral.Section4.GammaFubiniPermutation.integralStabilizer
+#print DiamondIntegral.Section4.GammaFubiniPermutation.integral_front_swap
+#print axioms DiamondIntegral.Section4.GammaFubiniPermutation.integral_front_swap
+#print DiamondIntegral.Section4.GammaFubiniPermutation.lift_eq_keepFirst
+#print axioms DiamondIntegral.Section4.GammaFubiniPermutation.lift_eq_keepFirst
+#print DiamondIntegral.Section4.GammaFubiniPermutation.front_swap_eq
+#print axioms DiamondIntegral.Section4.GammaFubiniPermutation.front_swap_eq
+#print DiamondIntegral.Section4.GammaFubiniPermutation.permutation_mem
+#print axioms DiamondIntegral.Section4.GammaFubiniPermutation.permutation_mem
+#print DiamondIntegral.Section4.GammaFubiniPermutation.integrateAll_permutation
+#print axioms DiamondIntegral.Section4.GammaFubiniPermutation.integrateAll_permutation
+#print DiamondIntegral.Section4.GammaFubiniPermutation.integrateAll_equiv
+#print axioms DiamondIntegral.Section4.GammaFubiniPermutation.integrateAll_equiv
+#print DiamondIntegral.Section4.GammaPowerLawCells.power_law_definable
+#print axioms DiamondIntegral.Section4.GammaPowerLawCells.power_law_definable
+#print DiamondIntegral.Section4.GammaPowerLawCells.lawCell
+#print axioms DiamondIntegral.Section4.GammaPowerLawCells.lawCell
+#print DiamondIntegral.Section4.GammaPowerLawCells.lawCell_definable
+#print axioms DiamondIntegral.Section4.GammaPowerLawCells.lawCell_definable
+#print DiamondIntegral.Section4.GammaPowerLawCells.lawCells_definable_extend
+#print axioms DiamondIntegral.Section4.GammaPowerLawCells.lawCells_definable_extend
+#print DiamondIntegral.Section4.GammaPowerLawCells.firstCell
+#print axioms DiamondIntegral.Section4.GammaPowerLawCells.firstCell
+#print DiamondIntegral.Section4.GammaPowerLawCells.firstCell_definable
+#print axioms DiamondIntegral.Section4.GammaPowerLawCells.firstCell_definable
+#print DiamondIntegral.Section4.GammaPowerLawCells.firstCell_disjoint
+#print axioms DiamondIntegral.Section4.GammaPowerLawCells.firstCell_disjoint
+#print DiamondIntegral.Section4.GammaPowerLawCells.firstCell_cover
+#print axioms DiamondIntegral.Section4.GammaPowerLawCells.firstCell_cover
+#print DiamondIntegral.Section4.GammaPowerLawCells.firstCell_sum
+#print axioms DiamondIntegral.Section4.GammaPowerLawCells.firstCell_sum
+#print DiamondIntegral.Section4.GammaUnaryPowerPushforward.exists_power_law_image
+#print axioms DiamondIntegral.Section4.GammaUnaryPowerPushforward.exists_power_law_image
+#print DiamondIntegral.Section4.GammaPowerLawBijections.power_law_bijection_invariance
+#print axioms DiamondIntegral.Section4.GammaPowerLawBijections.power_law_bijection_invariance
+#print DiamondIntegral.Section4.GammaUnaryBijections.commonBase
+#print axioms DiamondIntegral.Section4.GammaUnaryBijections.commonBase
+#print DiamondIntegral.Section4.GammaUnaryBijections.nontrivial_commonBase
+#print axioms DiamondIntegral.Section4.GammaUnaryBijections.nontrivial_commonBase
+#print DiamondIntegral.Section4.GammaUnaryBijections.unary_bijection_invariance
+#print axioms DiamondIntegral.Section4.GammaUnaryBijections.unary_bijection_invariance
+#print DiamondIntegral.Section4.GammaUnaryDescent.finite_subset_definable
+#print axioms DiamondIntegral.Section4.GammaUnaryDescent.finite_subset_definable
+#print DiamondIntegral.Section4.GammaUnaryDescent.unary_union_definable
+#print axioms DiamondIntegral.Section4.GammaUnaryDescent.unary_union_definable
+#print DiamondIntegral.Section4.GammaUnaryDescent.integerDefinable_of_counting
+#print axioms DiamondIntegral.Section4.GammaUnaryDescent.integerDefinable_of_counting
+#print DiamondIntegral.Section4.GammaUnaryDescent.exists_definable_power_law_image
+#print axioms DiamondIntegral.Section4.GammaUnaryDescent.exists_definable_power_law_image
+#print DiamondIntegral.Section4.GammaUnaryDescent.exists_unary_definable_image
+#print axioms DiamondIntegral.Section4.GammaUnaryDescent.exists_unary_definable_image
+#print DiamondIntegral.Section4.GammaWeightedPushforward.exists_weighted_image
+#print axioms DiamondIntegral.Section4.GammaWeightedPushforward.exists_weighted_image
+#print DiamondIntegral.Section4.GammaUnaryPushforwardMap.paperMap
+#print axioms DiamondIntegral.Section4.GammaUnaryPushforwardMap.paperMap
+#print DiamondIntegral.Section4.GammaUnaryPushforwardMap.exists_base_image
+#print axioms DiamondIntegral.Section4.GammaUnaryPushforwardMap.exists_base_image
+#print DiamondIntegral.Section4.GammaUnaryPushforwardMap.pushforward
+#print axioms DiamondIntegral.Section4.GammaUnaryPushforwardMap.pushforward
+#print DiamondIntegral.Section4.GammaUnaryPushforwardMap.pushforward_spec
+#print axioms DiamondIntegral.Section4.GammaUnaryPushforwardMap.pushforward_spec
+#print DiamondIntegral.Section4.GammaUnaryPushforwardMap.pushforward_id
+#print axioms DiamondIntegral.Section4.GammaUnaryPushforwardMap.pushforward_id
+#print DiamondIntegral.Section4.GammaEulerSets.exists_indicator
+#print axioms DiamondIntegral.Section4.GammaEulerSets.exists_indicator
+#print DiamondIntegral.Section4.GammaEulerSets.indicator
+#print axioms DiamondIntegral.Section4.GammaEulerSets.indicator
+#print DiamondIntegral.Section4.GammaEulerSets.indicator_eval
+#print axioms DiamondIntegral.Section4.GammaEulerSets.indicator_eval
+#print DiamondIntegral.Section4.GammaEulerSets.indicator_base_independent
+#print axioms DiamondIntegral.Section4.GammaEulerSets.indicator_base_independent
+#print DiamondIntegral.Section4.GammaEulerSets.indicator_empty
+#print axioms DiamondIntegral.Section4.GammaEulerSets.indicator_empty
+#print DiamondIntegral.Section4.GammaEulerSets.indicator_singleton
+#print axioms DiamondIntegral.Section4.GammaEulerSets.indicator_singleton
+#print DiamondIntegral.Section4.GammaEulerSets.indicator_scissor
+#print axioms DiamondIntegral.Section4.GammaEulerSets.indicator_scissor
+#print DiamondIntegral.Section4.GammaEulerSets.eulerValue
+#print axioms DiamondIntegral.Section4.GammaEulerSets.eulerValue
+#print DiamondIntegral.Section4.GammaEulerSets.eulerValue_base_independent
+#print axioms DiamondIntegral.Section4.GammaEulerSets.eulerValue_base_independent
+#print DiamondIntegral.Section4.GammaEulerSets.eulerValue_empty
+#print axioms DiamondIntegral.Section4.GammaEulerSets.eulerValue_empty
+#print DiamondIntegral.Section4.GammaEulerSets.eulerValue_singleton
+#print axioms DiamondIntegral.Section4.GammaEulerSets.eulerValue_singleton
+#print DiamondIntegral.Section4.GammaEulerSets.eulerValue_scissor
+#print axioms DiamondIntegral.Section4.GammaEulerSets.eulerValue_scissor
+#print DiamondIntegral.Section4.GammaEulerSets.indicator_changeKind
+#print axioms DiamondIntegral.Section4.GammaEulerSets.indicator_changeKind
+#print DiamondIntegral.Section4.GammaEulerSets.eulerValue_agree_of_bounded
+#print axioms DiamondIntegral.Section4.GammaEulerSets.eulerValue_agree_of_bounded
+#print DiamondIntegral.Section4.GammaEulerSets.eulerValue_stabilization
+#print axioms DiamondIntegral.Section4.GammaEulerSets.eulerValue_stabilization
+#print DiamondIntegral.Section4.GammaFunctionProvenance.constantNear_eq_union_interiors
+#print axioms DiamondIntegral.Section4.GammaFunctionProvenance.constantNear_eq_union_interiors
+#print DiamondIntegral.Section4.GammaFunctionProvenance.constantNear_definable_base
+#print axioms DiamondIntegral.Section4.GammaFunctionProvenance.constantNear_definable_base
+#print DiamondIntegral.Section4.GammaFunctionProvenance.breakpoint_definable_base
+#print axioms DiamondIntegral.Section4.GammaFunctionProvenance.breakpoint_definable_base
+#print DiamondIntegral.Section4.GammaFunctionProvenance.coefficient_threshold_definable_base
+#print axioms DiamondIntegral.Section4.GammaFunctionProvenance.coefficient_threshold_definable_base
+#print DiamondIntegral.Section4.GammaFunctionProvenance.definable_function_coefficients
+#print axioms DiamondIntegral.Section4.GammaFunctionProvenance.definable_function_coefficients
+#print DiamondIntegral.Section4.GammaDefinableFunctions.empty_definable_base
+#print axioms DiamondIntegral.Section4.GammaDefinableFunctions.empty_definable_base
+#print DiamondIntegral.Section4.GammaDefinableFunctions.univ_definable_base
+#print axioms DiamondIntegral.Section4.GammaDefinableFunctions.univ_definable_base
+#print DiamondIntegral.Section4.GammaDefinableFunctions.inter_definable_base
+#print axioms DiamondIntegral.Section4.GammaDefinableFunctions.inter_definable_base
+#print DiamondIntegral.Section4.GammaDefinableFunctions.IntegerDefinable
+#print axioms DiamondIntegral.Section4.GammaDefinableFunctions.IntegerDefinable
+#print DiamondIntegral.Section4.GammaDefinableFunctions.integerDefinable_const
+#print axioms DiamondIntegral.Section4.GammaDefinableFunctions.integerDefinable_const
+#print DiamondIntegral.Section4.GammaDefinableFunctions.integerDefinable_indicator
+#print axioms DiamondIntegral.Section4.GammaDefinableFunctions.integerDefinable_indicator
+#print DiamondIntegral.Section4.GammaDefinableFunctions.IntegerDefinable.map
+#print axioms DiamondIntegral.Section4.GammaDefinableFunctions.IntegerDefinable.map
+#print DiamondIntegral.Section4.GammaDefinableFunctions.IntegerDefinable.add
+#print axioms DiamondIntegral.Section4.GammaDefinableFunctions.IntegerDefinable.add
+#print DiamondIntegral.Section4.GammaDefinableFunctions.integerDefinable_finsetSum
+#print axioms DiamondIntegral.Section4.GammaDefinableFunctions.integerDefinable_finsetSum
+#print DiamondIntegral.Section4.GammaDefinableFunctions.rightRay_definable_base
+#print axioms DiamondIntegral.Section4.GammaDefinableFunctions.rightRay_definable_base
+#print DiamondIntegral.Section4.GammaDefinableFunctions.point_integerDefinable
+#print axioms DiamondIntegral.Section4.GammaDefinableFunctions.point_integerDefinable
+#print DiamondIntegral.Section4.GammaDefinableFunctions.ray_integerDefinable
+#print axioms DiamondIntegral.Section4.GammaDefinableFunctions.ray_integerDefinable
+#print DiamondIntegral.Section4.GammaDefinableFunctions.linearCombination_integerDefinable
+#print axioms DiamondIntegral.Section4.GammaDefinableFunctions.linearCombination_integerDefinable
+#print DiamondIntegral.Section4.GammaDefinableFunctions.integerDefinable_iff_coefficients
+#print axioms DiamondIntegral.Section4.GammaDefinableFunctions.integerDefinable_iff_coefficients
+#print DiamondIntegral.Section4.GammaGroupNames.codeValue_mul
+#print axioms DiamondIntegral.Section4.GammaGroupNames.codeValue_mul
+#print DiamondIntegral.Section4.GammaGroupNames.raw_mul_value_definable
+#print axioms DiamondIntegral.Section4.GammaGroupNames.raw_mul_value_definable
+#print DiamondIntegral.Section4.GammaGroupNames.mul_graph_definable_base
+#print axioms DiamondIntegral.Section4.GammaGroupNames.mul_graph_definable_base
+#print DiamondIntegral.Section4.GammaGroupNames.mul_definable_base
+#print axioms DiamondIntegral.Section4.GammaGroupNames.mul_definable_base
+#print DiamondIntegral.Section4.GammaGroupNames.add_definable_base
+#print axioms DiamondIntegral.Section4.GammaGroupNames.add_definable_base
+#print DiamondIntegral.Section4.GammaGroupNames.one_definable_base
+#print axioms DiamondIntegral.Section4.GammaGroupNames.one_definable_base
+#print DiamondIntegral.Section4.GammaGroupNames.zero_definable_base
+#print axioms DiamondIntegral.Section4.GammaGroupNames.zero_definable_base
+#print DiamondIntegral.Section4.GammaNamesSubgroup.inverse_definable_base
+#print axioms DiamondIntegral.Section4.GammaNamesSubgroup.inverse_definable_base
+#print DiamondIntegral.Section4.GammaNamesSubgroup.namesSubgroup
+#print axioms DiamondIntegral.Section4.GammaNamesSubgroup.namesSubgroup
+#print DiamondIntegral.Section4.GammaNamesSubgroup.additiveNames
+#print axioms DiamondIntegral.Section4.GammaNamesSubgroup.additiveNames
+#print DiamondIntegral.Section4.GammaNamesSubgroup.DefinableGammaGroupRing
+#print axioms DiamondIntegral.Section4.GammaNamesSubgroup.DefinableGammaGroupRing
+#print DiamondIntegral.Section4.GammaNamedRoots.root_definable_base
+#print axioms DiamondIntegral.Section4.GammaNamedRoots.root_definable_base
+#print DiamondIntegral.Section4.GammaNamedRoots.namesRootable
+#print axioms DiamondIntegral.Section4.GammaNamedRoots.namesRootable
+#print DiamondIntegral.Section4.GammaRVLifts.rvNames
+#print axioms DiamondIntegral.Section4.GammaRVLifts.rvNames
+#print DiamondIntegral.Section4.GammaRVLifts.unit_nonzero_code
+#print axioms DiamondIntegral.Section4.GammaRVLifts.unit_nonzero_code
+#print DiamondIntegral.Section4.GammaRVLifts.valueHom
+#print axioms DiamondIntegral.Section4.GammaRVLifts.valueHom
+#print DiamondIntegral.Section4.GammaRVLifts.liftableValues
+#print axioms DiamondIntegral.Section4.GammaRVLifts.liftableValues
+#print DiamondIntegral.Section4.GammaRVLifts.mem_liftableValues_iff
+#print axioms DiamondIntegral.Section4.GammaRVLifts.mem_liftableValues_iff
+#print DiamondIntegral.Section4.GammaRVLifts.liftableValues_le_names
+#print axioms DiamondIntegral.Section4.GammaRVLifts.liftableValues_le_names
+#print DiamondIntegral.Section4.GammaRVLifts.admissibleRadii
+#print axioms DiamondIntegral.Section4.GammaRVLifts.admissibleRadii
+#print DiamondIntegral.Section4.GammaRVLifts.admissibleRadii_iff
+#print axioms DiamondIntegral.Section4.GammaRVLifts.admissibleRadii_iff
+#print DiamondIntegral.Section4.GammaRVLifts.one_admissible
+#print axioms DiamondIntegral.Section4.GammaRVLifts.one_admissible
+#print DiamondIntegral.Section4.GammaRVLifts.mul_admissible
+#print axioms DiamondIntegral.Section4.GammaRVLifts.mul_admissible
+#print DiamondIntegral.Section4.GammaRVLifts.admissible_definable
+#print axioms DiamondIntegral.Section4.GammaRVLifts.admissible_definable
+#print DiamondIntegral.Section4.GammaRVChartPresentation.codeValues
+#print axioms DiamondIntegral.Section4.GammaRVChartPresentation.codeValues
+#print DiamondIntegral.Section4.GammaRVChartPresentation.sharp
+#print axioms DiamondIntegral.Section4.GammaRVChartPresentation.sharp
+#print DiamondIntegral.Section4.GammaRVChartPresentation.sharp_definable
+#print axioms DiamondIntegral.Section4.GammaRVChartPresentation.sharp_definable
+#print DiamondIntegral.Section4.GammaRVChartPresentation.rawGraphOn
+#print axioms DiamondIntegral.Section4.GammaRVChartPresentation.rawGraphOn
+#print DiamondIntegral.Section4.GammaRVChartPresentation.RVVolumeIso
+#print axioms DiamondIntegral.Section4.GammaRVChartPresentation.RVVolumeIso
+#print DiamondIntegral.Section4.GammaRVChartPresentation.Relation
+#print axioms DiamondIntegral.Section4.GammaRVChartPresentation.Relation
+#print DiamondIntegral.Section4.GammaRVChartPresentation.relation_forget
+#print axioms DiamondIntegral.Section4.GammaRVChartPresentation.relation_forget
+#print DiamondIntegral.Section4.GammaRVChartPresentation.relationIdeal
+#print axioms DiamondIntegral.Section4.GammaRVChartPresentation.relationIdeal
+#print DiamondIntegral.Section4.GammaRVChartPresentation.relationIdeal_le
+#print axioms DiamondIntegral.Section4.GammaRVChartPresentation.relationIdeal_le
+#print DiamondIntegral.Section4.GammaRVChartPresentation.ChartRing
+#print axioms DiamondIntegral.Section4.GammaRVChartPresentation.ChartRing
+#print DiamondIntegral.Section4.GammaRVChartPresentation.forget
+#print axioms DiamondIntegral.Section4.GammaRVChartPresentation.forget
+#print DiamondIntegral.Section4.GammaRVChartPresentation.forget_symbol
+#print axioms DiamondIntegral.Section4.GammaRVChartPresentation.forget_symbol
+#print DiamondIntegral.Section4.GammaRVChartPresentation.forget_surjective
+#print axioms DiamondIntegral.Section4.GammaRVChartPresentation.forget_surjective
+#print DiamondIntegral.Section4.GammaRVChartPresentation.interpretation
+#print axioms DiamondIntegral.Section4.GammaRVChartPresentation.interpretation
+#print DiamondIntegral.Section4.GammaRVChartPresentation.interpretation_symbol
+#print axioms DiamondIntegral.Section4.GammaRVChartPresentation.interpretation_symbol
+#print DiamondIntegral.Section4.GammaRVChartPresentation.specialize
+#print axioms DiamondIntegral.Section4.GammaRVChartPresentation.specialize
+#print DiamondIntegral.Section4.GammaTupleMaps.graph_definable
+#print axioms DiamondIntegral.Section4.GammaTupleMaps.graph_definable
+#print DiamondIntegral.Section4.GammaTupleMaps.image_definable
+#print axioms DiamondIntegral.Section4.GammaTupleMaps.image_definable
+#print DiamondIntegral.Section4.GammaTupleMaps.preimage_definable
+#print axioms DiamondIntegral.Section4.GammaTupleMaps.preimage_definable
+#print DiamondIntegral.Section4.GammaTupleMaps.compose_definable
+#print axioms DiamondIntegral.Section4.GammaTupleMaps.compose_definable
+#print DiamondIntegral.Section4.GammaTranslation.shift
+#print axioms DiamondIntegral.Section4.GammaTranslation.shift
+#print DiamondIntegral.Section4.GammaTranslation.shift_coordinates
+#print axioms DiamondIntegral.Section4.GammaTranslation.shift_coordinates
+#print DiamondIntegral.Section4.GammaTranslation.translated
+#print axioms DiamondIntegral.Section4.GammaTranslation.translated
+#print DiamondIntegral.Section4.GammaTranslation.translated_definable
+#print axioms DiamondIntegral.Section4.GammaTranslation.translated_definable
+#print DiamondIntegral.Section4.GammaTranslation.shift_bijOn
+#print axioms DiamondIntegral.Section4.GammaTranslation.shift_bijOn
+#print DiamondIntegral.Section4.GammaTranslation.integral_translated
+#print axioms DiamondIntegral.Section4.GammaTranslation.integral_translated
+#print DiamondIntegral.Section4.GammaTranslation.compensatedVolume
+#print axioms DiamondIntegral.Section4.GammaTranslation.compensatedVolume
+#print DiamondIntegral.Section4.GammaTranslation.compensatedVolume_definable
+#print axioms DiamondIntegral.Section4.GammaTranslation.compensatedVolume_definable
+#print DiamondIntegral.Section4.GammaTranslation.compensated_volume_eq
+#print axioms DiamondIntegral.Section4.GammaTranslation.compensated_volume_eq
+#print DiamondIntegral.Section4.GammaTranslation.profile_translated
+#print axioms DiamondIntegral.Section4.GammaTranslation.profile_translated
+#print DiamondIntegral.Section4.GammaTranslationCharts.translatedChart
+#print axioms DiamondIntegral.Section4.GammaTranslationCharts.translatedChart
+#print DiamondIntegral.Section4.GammaTranslationCharts.translationVolumeIso
+#print axioms DiamondIntegral.Section4.GammaTranslationCharts.translationVolumeIso
+#print DiamondIntegral.Section4.GammaTranslationCharts.chartPolynomial_translated
+#print axioms DiamondIntegral.Section4.GammaTranslationCharts.chartPolynomial_translated
+#print DiamondIntegral.Section4.GammaBoundedTranslationCharts.translated_bounded
+#print axioms DiamondIntegral.Section4.GammaBoundedTranslationCharts.translated_bounded
+#print DiamondIntegral.Section4.GammaBoundedTranslationCharts.translatedChart
+#print axioms DiamondIntegral.Section4.GammaBoundedTranslationCharts.translatedChart
+#print DiamondIntegral.Section4.GammaBoundedTranslationCharts.translationVolumeIso
+#print axioms DiamondIntegral.Section4.GammaBoundedTranslationCharts.translationVolumeIso
+#print DiamondIntegral.Section4.RVMeasuredCharts.graphOn
+#print axioms DiamondIntegral.Section4.RVMeasuredCharts.graphOn
+#print DiamondIntegral.Section4.RVMeasuredCharts.Chart
+#print axioms DiamondIntegral.Section4.RVMeasuredCharts.Chart
+#print DiamondIntegral.Section4.RVMeasuredCharts.Chart.correctedWeight
+#print axioms DiamondIntegral.Section4.RVMeasuredCharts.Chart.correctedWeight
+#print DiamondIntegral.Section4.RVMeasuredCharts.Chart.valuePattern
+#print axioms DiamondIntegral.Section4.RVMeasuredCharts.Chart.valuePattern
+#print DiamondIntegral.Section4.RVMeasuredCharts.RESChart
+#print axioms DiamondIntegral.Section4.RVMeasuredCharts.RESChart
+#print DiamondIntegral.Section4.RVMeasuredCharts.Chart.zero_domain_finite
+#print axioms DiamondIntegral.Section4.RVMeasuredCharts.Chart.zero_domain_finite
+#print DiamondIntegral.Section4.RVMeasuredCharts.Chart.finite_domain_values
+#print axioms DiamondIntegral.Section4.RVMeasuredCharts.Chart.finite_domain_values
+#print DiamondIntegral.Section4.RVMeasuredCharts.zeroRESChart
+#print axioms DiamondIntegral.Section4.RVMeasuredCharts.zeroRESChart
+#print DiamondIntegral.Section4.RVMeasuredCharts.Iso
+#print axioms DiamondIntegral.Section4.RVMeasuredCharts.Iso
+#print DiamondIntegral.Section4.RVMeasuredCharts.correctedWeight_eq_iff
+#print axioms DiamondIntegral.Section4.RVMeasuredCharts.correctedWeight_eq_iff
+#print DiamondIntegral.Section4.RVMeasuredCharts.Iso.volume_eq
+#print axioms DiamondIntegral.Section4.RVMeasuredCharts.Iso.volume_eq
+#print DiamondIntegral.Section4.RVMeasuredCharts.constant_volume_definable
+#print axioms DiamondIntegral.Section4.RVMeasuredCharts.constant_volume_definable
+#print DiamondIntegral.Section4.RVMeasuredCharts.zero_tuple_definable
+#print axioms DiamondIntegral.Section4.RVMeasuredCharts.zero_tuple_definable
+#print DiamondIntegral.Section4.RVMeasuredCharts.weightedUnit
+#print axioms DiamondIntegral.Section4.RVMeasuredCharts.weightedUnit
+#print DiamondIntegral.Section4.RVMeasuredCharts.weightedUnit_correctedWeight
+#print axioms DiamondIntegral.Section4.RVMeasuredCharts.weightedUnit_correctedWeight
+#print DiamondIntegral.Section4.RVMeasuredCharts.weightedRESUnit
+#print axioms DiamondIntegral.Section4.RVMeasuredCharts.weightedRESUnit
+#print DiamondIntegral.Section4.RVMeasuredCharts.weightedUnit_iso_forces_eq
+#print axioms DiamondIntegral.Section4.RVMeasuredCharts.weightedUnit_iso_forces_eq
+#print DiamondIntegral.Section4.RVMeasuredBounds.finiteValue
+#print axioms DiamondIntegral.Section4.RVMeasuredBounds.finiteValue
+#print DiamondIntegral.Section4.RVMeasuredBounds.finiteValue_vrv
+#print axioms DiamondIntegral.Section4.RVMeasuredBounds.finiteValue_vrv
+#print DiamondIntegral.Section4.RVMeasuredBounds.DomainBounded
+#print axioms DiamondIntegral.Section4.RVMeasuredBounds.DomainBounded
+#print DiamondIntegral.Section4.RVMeasuredBounds.finite_patterns_bounded
+#print axioms DiamondIntegral.Section4.RVMeasuredBounds.finite_patterns_bounded
+#print DiamondIntegral.Section4.RVMeasuredBounds.res_domain_bounded
+#print axioms DiamondIntegral.Section4.RVMeasuredBounds.res_domain_bounded
+#print DiamondIntegral.Section4.RVMeasuredBounds.sharp_domain_bounded
+#print axioms DiamondIntegral.Section4.RVMeasuredBounds.sharp_domain_bounded
+#print DiamondIntegral.Section4.RVRadiusBounds.boundedSpan
+#print axioms DiamondIntegral.Section4.RVRadiusBounds.boundedSpan
+#print DiamondIntegral.Section4.RVRadiusBounds.boundedClass_mem
+#print axioms DiamondIntegral.Section4.RVRadiusBounds.boundedClass_mem
+#print DiamondIntegral.Section4.RVRadiusBounds.annulus_domain_bounded
+#print axioms DiamondIntegral.Section4.RVRadiusBounds.annulus_domain_bounded
+#print DiamondIntegral.Section4.RVRadiusBounds.point_domain_bounded
+#print axioms DiamondIntegral.Section4.RVRadiusBounds.point_domain_bounded
+#print DiamondIntegral.Section4.RVRadiusBounds.radiusGenerator_mem_boundedSpan
+#print axioms DiamondIntegral.Section4.RVRadiusBounds.radiusGenerator_mem_boundedSpan
+#print DiamondIntegral.Section4.RVRadiusBounds.pGamma_mem_boundedSpan
+#print axioms DiamondIntegral.Section4.RVRadiusBounds.pGamma_mem_boundedSpan
+#print DiamondIntegral.Section4.RVRadiusGenerators.RadiusLift
+#print axioms DiamondIntegral.Section4.RVRadiusGenerators.RadiusLift
+#print DiamondIntegral.Section4.RVRadiusGenerators.radiusLift_exists
+#print axioms DiamondIntegral.Section4.RVRadiusGenerators.radiusLift_exists
+#print DiamondIntegral.Section4.RVRadiusGenerators.oneCode
+#print axioms DiamondIntegral.Section4.RVRadiusGenerators.oneCode
+#print DiamondIntegral.Section4.RVRadiusGenerators.oneCode_value
+#print axioms DiamondIntegral.Section4.RVRadiusGenerators.oneCode_value
+#print DiamondIntegral.Section4.RVRadiusGenerators.oneCode_definable
+#print axioms DiamondIntegral.Section4.RVRadiusGenerators.oneCode_definable
+#print DiamondIntegral.Section4.RVRadiusGenerators.unitLift
+#print axioms DiamondIntegral.Section4.RVRadiusGenerators.unitLift
+#print DiamondIntegral.Section4.RVRadiusGenerators.radiusGenerator
+#print axioms DiamondIntegral.Section4.RVRadiusGenerators.radiusGenerator
+#print DiamondIntegral.Section4.RVRadiusGenerators.radiusGenerator_independent
+#print axioms DiamondIntegral.Section4.RVRadiusGenerators.radiusGenerator_independent
+#print DiamondIntegral.Section4.RVRadiusGenerators.radiusGenerator_zero
+#print axioms DiamondIntegral.Section4.RVRadiusGenerators.radiusGenerator_zero
+#print DiamondIntegral.Section4.RVRadiusGenerators.pGamma
+#print axioms DiamondIntegral.Section4.RVRadiusGenerators.pGamma
+#print DiamondIntegral.Section4.RVRadiusGenerators.pGamma_eq
+#print axioms DiamondIntegral.Section4.RVRadiusGenerators.pGamma_eq
+#print DiamondIntegral.Section4.RVRadiusGenerators.pGamma_zero
+#print axioms DiamondIntegral.Section4.RVRadiusGenerators.pGamma_zero
+#print DiamondIntegral.Section4.RVMeasuredGroup.packed
+#print axioms DiamondIntegral.Section4.RVMeasuredGroup.packed
+#print DiamondIntegral.Section4.RVMeasuredGroup.Scissor
+#print axioms DiamondIntegral.Section4.RVMeasuredGroup.Scissor
+#print DiamondIntegral.Section4.RVMeasuredGroup.Relation
+#print axioms DiamondIntegral.Section4.RVMeasuredGroup.Relation
+#print DiamondIntegral.Section4.RVMeasuredGroup.relationSubgroup
+#print axioms DiamondIntegral.Section4.RVMeasuredGroup.relationSubgroup
+#print DiamondIntegral.Section4.RVMeasuredGroup.KGroup
+#print axioms DiamondIntegral.Section4.RVMeasuredGroup.KGroup
+#print DiamondIntegral.Section4.RVMeasuredGroup.objectClass
+#print axioms DiamondIntegral.Section4.RVMeasuredGroup.objectClass
+#print DiamondIntegral.Section4.RVMeasuredGroup.relation_zero
+#print axioms DiamondIntegral.Section4.RVMeasuredGroup.relation_zero
+#print DiamondIntegral.Section4.RVMeasuredGroup.objectClass_iso
+#print axioms DiamondIntegral.Section4.RVMeasuredGroup.objectClass_iso
+#print DiamondIntegral.Section4.RVMeasuredGroup.objectClass_empty
+#print axioms DiamondIntegral.Section4.RVMeasuredGroup.objectClass_empty
+#print DiamondIntegral.Section4.RVMeasuredGroup.objectClass_scissor
+#print axioms DiamondIntegral.Section4.RVMeasuredGroup.objectClass_scissor
+#print DiamondIntegral.Section4.RVMeasuredGroup.Invariant
+#print axioms DiamondIntegral.Section4.RVMeasuredGroup.Invariant
+#print DiamondIntegral.Section4.RVMeasuredGroup.invariant_relation_zero
+#print axioms DiamondIntegral.Section4.RVMeasuredGroup.invariant_relation_zero
+#print DiamondIntegral.Section4.RVMeasuredGroup.lift
+#print axioms DiamondIntegral.Section4.RVMeasuredGroup.lift
+#print DiamondIntegral.Section4.RVMeasuredGroup.lift_objectClass
+#print axioms DiamondIntegral.Section4.RVMeasuredGroup.lift_objectClass
+#print DiamondIntegral.Section4.RVMeasuredGroup.hom_ext
+#print axioms DiamondIntegral.Section4.RVMeasuredGroup.hom_ext
+#print DiamondIntegral.Section4.RVMeasuredGroup.lift_unique
+#print axioms DiamondIntegral.Section4.RVMeasuredGroup.lift_unique
+#print DiamondIntegral.Section4.RVSharpCharts.duplicate
+#print axioms DiamondIntegral.Section4.RVSharpCharts.duplicate
+#print DiamondIntegral.Section4.RVSharpCharts.duplicate_head
+#print axioms DiamondIntegral.Section4.RVSharpCharts.duplicate_head
+#print DiamondIntegral.Section4.RVSharpCharts.duplicate_tail
+#print axioms DiamondIntegral.Section4.RVSharpCharts.duplicate_tail
+#print DiamondIntegral.Section4.RVSharpCharts.duplicate_tuple
+#print axioms DiamondIntegral.Section4.RVSharpCharts.duplicate_tuple
+#print DiamondIntegral.Section4.RVSharpCharts.identity_graph_definable
+#print axioms DiamondIntegral.Section4.RVSharpCharts.identity_graph_definable
+#print DiamondIntegral.Section4.RVSharpCharts.sharpChart
+#print axioms DiamondIntegral.Section4.RVSharpCharts.sharpChart
+#print DiamondIntegral.Section4.RVSharpCharts.sharpChart_weight
+#print axioms DiamondIntegral.Section4.RVSharpCharts.sharpChart_weight
+#print DiamondIntegral.Section4.RVSharpCharts.sharpIso
+#print axioms DiamondIntegral.Section4.RVSharpCharts.sharpIso
+#print DiamondIntegral.Section4.RVSharpProducts.sharp_product_domain
+#print axioms DiamondIntegral.Section4.RVSharpProducts.sharp_product_domain
+#print DiamondIntegral.Section4.RVSharpProducts.sharp_product_weight
+#print axioms DiamondIntegral.Section4.RVSharpProducts.sharp_product_weight
+#print DiamondIntegral.Section4.RVSharpProducts.sharpProductIso
+#print axioms DiamondIntegral.Section4.RVSharpProducts.sharpProductIso
+#print DiamondIntegral.Section4.RVSharpProducts.sharp_product_class
+#print axioms DiamondIntegral.Section4.RVSharpProducts.sharp_product_class
+#print DiamondIntegral.Section4.RVSharpProducts.sharpUnitIso
+#print axioms DiamondIntegral.Section4.RVSharpProducts.sharpUnitIso
+#print DiamondIntegral.Section4.RVSharpProducts.sharp_unit_class
+#print axioms DiamondIntegral.Section4.RVSharpProducts.sharp_unit_class
+#print DiamondIntegral.Section4.RVSharpScissors.weightedRaw
+#print axioms DiamondIntegral.Section4.RVSharpScissors.weightedRaw
+#print DiamondIntegral.Section4.RVSharpScissors.weightedRaw_injective
+#print axioms DiamondIntegral.Section4.RVSharpScissors.weightedRaw_injective
+#print DiamondIntegral.Section4.RVSharpScissors.packed_ofTotal
+#print axioms DiamondIntegral.Section4.RVSharpScissors.packed_ofTotal
+#print DiamondIntegral.Section4.RVSharpScissors.sharp_union
+#print axioms DiamondIntegral.Section4.RVSharpScissors.sharp_union
+#print DiamondIntegral.Section4.RVSharpScissors.sharp_inter
+#print axioms DiamondIntegral.Section4.RVSharpScissors.sharp_inter
+#print DiamondIntegral.Section4.RVSharpScissors.sharp_scissor
+#print axioms DiamondIntegral.Section4.RVSharpScissors.sharp_scissor
+#print DiamondIntegral.Section4.RVSharpScissors.sharp_empty
+#print axioms DiamondIntegral.Section4.RVSharpScissors.sharp_empty
+#print DiamondIntegral.Section4.GammaRVChartPresentation.objectClass
+#print axioms DiamondIntegral.Section4.GammaRVChartPresentation.objectClass
+#print DiamondIntegral.Section4.GammaRVChartPresentation.relation_zero
+#print axioms DiamondIntegral.Section4.GammaRVChartPresentation.relation_zero
+#print DiamondIntegral.Section4.GammaRVChartPresentation.class_unit
+#print axioms DiamondIntegral.Section4.GammaRVChartPresentation.class_unit
+#print DiamondIntegral.Section4.GammaRVChartPresentation.class_product
+#print axioms DiamondIntegral.Section4.GammaRVChartPresentation.class_product
+#print DiamondIntegral.Section4.GammaRVChartPresentation.class_iso
+#print axioms DiamondIntegral.Section4.GammaRVChartPresentation.class_iso
+#print DiamondIntegral.Section4.GammaRVChartPresentation.class_empty
+#print axioms DiamondIntegral.Section4.GammaRVChartPresentation.class_empty
+#print DiamondIntegral.Section4.GammaRVChartPresentation.class_scissor
+#print axioms DiamondIntegral.Section4.GammaRVChartPresentation.class_scissor
+#print DiamondIntegral.Section4.GammaRVChartPresentation.Invariant
+#print axioms DiamondIntegral.Section4.GammaRVChartPresentation.Invariant
+#print DiamondIntegral.Section4.GammaRVChartPresentation.freeMap
+#print axioms DiamondIntegral.Section4.GammaRVChartPresentation.freeMap
+#print DiamondIntegral.Section4.GammaRVChartPresentation.freeMap_symbol
+#print axioms DiamondIntegral.Section4.GammaRVChartPresentation.freeMap_symbol
+#print DiamondIntegral.Section4.GammaRVChartPresentation.invariant_relation_zero
+#print axioms DiamondIntegral.Section4.GammaRVChartPresentation.invariant_relation_zero
+#print DiamondIntegral.Section4.GammaRVChartPresentation.invariant_ideal_zero
+#print axioms DiamondIntegral.Section4.GammaRVChartPresentation.invariant_ideal_zero
+#print DiamondIntegral.Section4.GammaRVChartPresentation.lift
+#print axioms DiamondIntegral.Section4.GammaRVChartPresentation.lift
+#print DiamondIntegral.Section4.GammaRVChartPresentation.lift_class
+#print axioms DiamondIntegral.Section4.GammaRVChartPresentation.lift_class
+#print DiamondIntegral.Section4.GammaRVChartPresentation.hom_ext
+#print axioms DiamondIntegral.Section4.GammaRVChartPresentation.hom_ext
+#print DiamondIntegral.Section4.GammaRVGrading.gradingInvariant
+#print axioms DiamondIntegral.Section4.GammaRVGrading.gradingInvariant
+#print DiamondIntegral.Section4.GammaRVGrading.coaction
+#print axioms DiamondIntegral.Section4.GammaRVGrading.coaction
+#print DiamondIntegral.Section4.GammaRVGrading.coaction_class
+#print axioms DiamondIntegral.Section4.GammaRVGrading.coaction_class
+#print DiamondIntegral.Section4.GammaRVGrading.coaction_counit
+#print axioms DiamondIntegral.Section4.GammaRVGrading.coaction_counit
+#print DiamondIntegral.Section4.GammaRVGrading.coaction_coassoc
+#print axioms DiamondIntegral.Section4.GammaRVGrading.coaction_coassoc
+#print DiamondIntegral.Section4.GammaRVGrading.gradingCoaction
+#print axioms DiamondIntegral.Section4.GammaRVGrading.gradingCoaction
+#print DiamondIntegral.Section4.GammaRVGrading.gradedPiece
+#print axioms DiamondIntegral.Section4.GammaRVGrading.gradedPiece
+#print DiamondIntegral.Section4.GammaRVGrading.gradedRing
+#print axioms DiamondIntegral.Section4.GammaRVGrading.gradedRing
+#print DiamondIntegral.Section4.GammaRVGrading.class_mem
+#print axioms DiamondIntegral.Section4.GammaRVGrading.class_mem
+#print DiamondIntegral.Section4.GammaRVGrading.map_coaction_of_classes
+#print axioms DiamondIntegral.Section4.GammaRVGrading.map_coaction_of_classes
+#print DiamondIntegral.Section4.GammaRVGrading.map_mem_of_classes
+#print axioms DiamondIntegral.Section4.GammaRVGrading.map_mem_of_classes
+#print DiamondIntegral.Section4.GammaRVMapGradings.gradedSharp
+#print axioms DiamondIntegral.Section4.GammaRVMapGradings.gradedSharp
+#print DiamondIntegral.Section4.GammaRVMapGradings.interpretation_class_mem
+#print axioms DiamondIntegral.Section4.GammaRVMapGradings.interpretation_class_mem
+#print DiamondIntegral.Section4.GammaRVMapGradings.gradedInterpretation
+#print axioms DiamondIntegral.Section4.GammaRVMapGradings.gradedInterpretation
+#print DiamondIntegral.Section4.GammaRVMapGradings.gradedEvaluation
+#print axioms DiamondIntegral.Section4.GammaRVMapGradings.gradedEvaluation
+#print DiamondIntegral.Section4.GammaEulerEvaluation.coefficientEuler
+#print axioms DiamondIntegral.Section4.GammaEulerEvaluation.coefficientEuler
+#print DiamondIntegral.Section4.GammaEulerEvaluation.polynomial
+#print axioms DiamondIntegral.Section4.GammaEulerEvaluation.polynomial
+#print DiamondIntegral.Section4.GammaEulerEvaluation.polynomial_chart
+#print axioms DiamondIntegral.Section4.GammaEulerEvaluation.polynomial_chart
+#print DiamondIntegral.Section4.GammaEulerEvaluation.evaluation
+#print axioms DiamondIntegral.Section4.GammaEulerEvaluation.evaluation
+#print DiamondIntegral.Section4.GammaEulerEvaluation.evaluation_class
+#print axioms DiamondIntegral.Section4.GammaEulerEvaluation.evaluation_class
+#print DiamondIntegral.Section4.GammaEulerEvaluation.bounded_independent_kind
+#print axioms DiamondIntegral.Section4.GammaEulerEvaluation.bounded_independent_kind
+#print DiamondIntegral.Section4.GammaEulerEvaluation.polynomial_map
+#print axioms DiamondIntegral.Section4.GammaEulerEvaluation.polynomial_map
+#print DiamondIntegral.Section4.GammaEulerEvaluation.polynomial_zero_of_mem
+#print axioms DiamondIntegral.Section4.GammaEulerEvaluation.polynomial_zero_of_mem
+#print DiamondIntegral.Section4.GammaOrdinaryEvaluation.evaluation
+#print axioms DiamondIntegral.Section4.GammaOrdinaryEvaluation.evaluation
+#print DiamondIntegral.Section4.GammaOrdinaryEvaluation.evaluation_class
+#print axioms DiamondIntegral.Section4.GammaOrdinaryEvaluation.evaluation_class
+#print DiamondIntegral.Section4.GammaOrdinaryEvaluation.evaluation_class_mem
+#print axioms DiamondIntegral.Section4.GammaOrdinaryEvaluation.evaluation_class_mem
+#print DiamondIntegral.Section4.GammaOrdinaryEvaluation.gradedEvaluation
+#print axioms DiamondIntegral.Section4.GammaOrdinaryEvaluation.gradedEvaluation
+#print DiamondIntegral.Section4.GammaOrdinaryEvaluation.resMap
+#print axioms DiamondIntegral.Section4.GammaOrdinaryEvaluation.resMap
+#print DiamondIntegral.Section4.GammaOrdinaryEvaluation.gammaMap
+#print axioms DiamondIntegral.Section4.GammaOrdinaryEvaluation.gammaMap
+#print DiamondIntegral.Section4.GammaOrdinaryEvaluation.gammaMap_class
+#print axioms DiamondIntegral.Section4.GammaOrdinaryEvaluation.gammaMap_class
+#print DiamondIntegral.Section4.GammaOrdinaryEvaluation.weightedUnit_balance
+#print axioms DiamondIntegral.Section4.GammaOrdinaryEvaluation.weightedUnit_balance
+#print DiamondIntegral.Section4.GammaOrdinaryEvaluation.fibre_balance
+#print axioms DiamondIntegral.Section4.GammaOrdinaryEvaluation.fibre_balance
+#print DiamondIntegral.Section4.GammaOrdinaryEvaluation.finite_balance
+#print axioms DiamondIntegral.Section4.GammaOrdinaryEvaluation.finite_balance
+#print DiamondIntegral.Section4.GammaOrdinaryEvaluation.finite_balance_apply
+#print axioms DiamondIntegral.Section4.GammaOrdinaryEvaluation.finite_balance_apply
+#print DiamondIntegral.Section4.GammaOrdinaryBoundedComparison.evaluation_forget
+#print axioms DiamondIntegral.Section4.GammaOrdinaryBoundedComparison.evaluation_forget
+#print DiamondIntegral.Section4.RVBoundedTensorComparison.gammaForget
+#print axioms DiamondIntegral.Section4.RVBoundedTensorComparison.gammaForget
+#print DiamondIntegral.Section4.RVBoundedTensorComparison.toFull
+#print axioms DiamondIntegral.Section4.RVBoundedTensorComparison.toFull
+#print DiamondIntegral.Section4.RVBoundedTensorComparison.toFull_tmul
+#print axioms DiamondIntegral.Section4.RVBoundedTensorComparison.toFull_tmul
+#print DiamondIntegral.Section4.RVBoundedTensorComparison.rvForget
+#print axioms DiamondIntegral.Section4.RVBoundedTensorComparison.rvForget
+#print DiamondIntegral.Section4.RVBoundedTensorComparison.comparison_square
+#print axioms DiamondIntegral.Section4.RVBoundedTensorComparison.comparison_square
+#print DiamondIntegral.Section4.RVBoundedTensorComparison.gradedToFull
+#print axioms DiamondIntegral.Section4.RVBoundedTensorComparison.gradedToFull
+#print DiamondIntegral.Section4.RVBoundedTensorComparison.evaluation_square
+#print axioms DiamondIntegral.Section4.RVBoundedTensorComparison.evaluation_square
+#print DiamondIntegral.Section4.RVBoundedTensorComparison.evaluation_independent_on_bounded
+#print axioms DiamondIntegral.Section4.RVBoundedTensorComparison.evaluation_independent_on_bounded
+#print DiamondIntegral.Section4.RVBoundedOrdinaryEvaluation.evaluation
+#print axioms DiamondIntegral.Section4.RVBoundedOrdinaryEvaluation.evaluation
+#print DiamondIntegral.Section4.RVBoundedOrdinaryEvaluation.evaluation_tmul
+#print axioms DiamondIntegral.Section4.RVBoundedOrdinaryEvaluation.evaluation_tmul
+#print DiamondIntegral.Section4.RVBoundedOrdinaryEvaluation.gradedEvaluation
+#print axioms DiamondIntegral.Section4.RVBoundedOrdinaryEvaluation.gradedEvaluation
+#print DiamondIntegral.Section4.RVBoundedOrdinaryEvaluation.evaluation_independent_kind
+#print axioms DiamondIntegral.Section4.RVBoundedOrdinaryEvaluation.evaluation_independent_kind
+#print DiamondIntegral.Section4.RVBoundedOrdinaryEvaluation.evaluation_res
+#print axioms DiamondIntegral.Section4.RVBoundedOrdinaryEvaluation.evaluation_res
+#print DiamondIntegral.Section4.RVBoundedOrdinaryEvaluation.evaluation_eq_previous
+#print axioms DiamondIntegral.Section4.RVBoundedOrdinaryEvaluation.evaluation_eq_previous
+#print DiamondIntegral.Section4.RESAffineLocalization.affineClass
+#print axioms DiamondIntegral.Section4.RESAffineLocalization.affineClass
+#print DiamondIntegral.Section4.RESAffineLocalization.affine_mem
+#print axioms DiamondIntegral.Section4.RESAffineLocalization.affine_mem
+#print DiamondIntegral.Section4.RESAffineLocalization.dimensionFreeAffine
+#print axioms DiamondIntegral.Section4.RESAffineLocalization.dimensionFreeAffine
+#print DiamondIntegral.Section4.RESAffineLocalization.Source
+#print axioms DiamondIntegral.Section4.RESAffineLocalization.Source
+#print DiamondIntegral.Section4.RESAffineLocalization.Target
+#print axioms DiamondIntegral.Section4.RESAffineLocalization.Target
+#print DiamondIntegral.Section4.RESAffineLocalization.baseMap
+#print axioms DiamondIntegral.Section4.RESAffineLocalization.baseMap
+#print DiamondIntegral.Section4.RESAffineLocalization.localizationMap
+#print axioms DiamondIntegral.Section4.RESAffineLocalization.localizationMap
+#print DiamondIntegral.Section4.RESAffineLocalization.localizationMap_algebraMap
+#print axioms DiamondIntegral.Section4.RESAffineLocalization.localizationMap_algebraMap
+#print DiamondIntegral.Section4.RESAffineLocalization.comparison
+#print axioms DiamondIntegral.Section4.RESAffineLocalization.comparison
+#print DiamondIntegral.Section4.RESAffineLocalization.fraction
+#print axioms DiamondIntegral.Section4.RESAffineLocalization.fraction
+#print DiamondIntegral.Section4.RESAffineLocalization.comparison_fraction
+#print axioms DiamondIntegral.Section4.RESAffineLocalization.comparison_fraction
+#print DiamondIntegral.Section4.RVBoundedOrdinaryRadius.annulus_evaluation
+#print axioms DiamondIntegral.Section4.RVBoundedOrdinaryRadius.annulus_evaluation
+#print DiamondIntegral.Section4.RVBoundedOrdinaryRadius.radius_evaluation
+#print axioms DiamondIntegral.Section4.RVBoundedOrdinaryRadius.radius_evaluation
+#print DiamondIntegral.Section4.RVBoundedOrdinaryRadius.ideal_le_ker
+#print axioms DiamondIntegral.Section4.RVBoundedOrdinaryRadius.ideal_le_ker
+#print DiamondIntegral.Section4.RVBoundedOrdinaryRadius.evaluation
+#print axioms DiamondIntegral.Section4.RVBoundedOrdinaryRadius.evaluation
+#print DiamondIntegral.Section4.RVBoundedOrdinaryRadius.evaluation_mk
+#print axioms DiamondIntegral.Section4.RVBoundedOrdinaryRadius.evaluation_mk
+#print DiamondIntegral.Section4.RVBoundedOrdinaryRadius.evaluation_res
+#print axioms DiamondIntegral.Section4.RVBoundedOrdinaryRadius.evaluation_res
+#print DiamondIntegral.Section4.RVBoundedOrdinaryRadius.evaluation_independent_kind
+#print axioms DiamondIntegral.Section4.RVBoundedOrdinaryRadius.evaluation_independent_kind
+#print DiamondIntegral.Section4.RVBoundedOrdinaryRadius.evaluation_eq_previous
+#print axioms DiamondIntegral.Section4.RVBoundedOrdinaryRadius.evaluation_eq_previous
+#print DiamondIntegral.Section4.GammaOrdinarySpecialClasses.positiveRay_integral
+#print axioms DiamondIntegral.Section4.GammaOrdinarySpecialClasses.positiveRay_integral
+#print DiamondIntegral.Section4.GammaOrdinarySpecialClasses.evaluation_ray
+#print axioms DiamondIntegral.Section4.GammaOrdinarySpecialClasses.evaluation_ray
+#print DiamondIntegral.Section4.GammaOrdinarySpecialClasses.evaluation_counterweighted
+#print axioms DiamondIntegral.Section4.GammaOrdinarySpecialClasses.evaluation_counterweighted
+#print DiamondIntegral.Section4.RVOrdinaryTensorEvaluation.gammaEvaluation
+#print axioms DiamondIntegral.Section4.RVOrdinaryTensorEvaluation.gammaEvaluation
+#print DiamondIntegral.Section4.RVOrdinaryTensorEvaluation.evaluation
+#print axioms DiamondIntegral.Section4.RVOrdinaryTensorEvaluation.evaluation
+#print DiamondIntegral.Section4.RVOrdinaryTensorEvaluation.evaluation_tmul
+#print axioms DiamondIntegral.Section4.RVOrdinaryTensorEvaluation.evaluation_tmul
+#print DiamondIntegral.Section4.RVOrdinaryTensorEvaluation.gradedEvaluation
+#print axioms DiamondIntegral.Section4.RVOrdinaryTensorEvaluation.gradedEvaluation
+#print DiamondIntegral.Section4.RVOrdinaryTensorEvaluation.evaluation_res
+#print axioms DiamondIntegral.Section4.RVOrdinaryTensorEvaluation.evaluation_res
+#print DiamondIntegral.Section4.RVOrdinarySpecialValues.evaluation_p
+#print axioms DiamondIntegral.Section4.RVOrdinarySpecialValues.evaluation_p
+#print DiamondIntegral.Section4.RVOrdinarySpecialValues.evaluation_h
+#print axioms DiamondIntegral.Section4.RVOrdinarySpecialValues.evaluation_h
+#print DiamondIntegral.Section4.RVOrdinarySpecialValues.evaluation_p_geometric
+#print axioms DiamondIntegral.Section4.RVOrdinarySpecialValues.evaluation_p_geometric
+#print DiamondIntegral.Section4.RVOrdinarySpecialValues.evaluation_p_bounded
+#print axioms DiamondIntegral.Section4.RVOrdinarySpecialValues.evaluation_p_bounded
+#print DiamondIntegral.Section4.RVOrdinaryDimensionFreeEvaluation.point_value_one
+#print axioms DiamondIntegral.Section4.RVOrdinaryDimensionFreeEvaluation.point_value_one
+#print DiamondIntegral.Section4.RVOrdinaryDimensionFreeEvaluation.torusClass
+#print axioms DiamondIntegral.Section4.RVOrdinaryDimensionFreeEvaluation.torusClass
+#print DiamondIntegral.Section4.RVOrdinaryDimensionFreeEvaluation.affineClass
+#print axioms DiamondIntegral.Section4.RVOrdinaryDimensionFreeEvaluation.affineClass
+#print DiamondIntegral.Section4.RVOrdinaryDimensionFreeEvaluation.affineClass_eq
+#print axioms DiamondIntegral.Section4.RVOrdinaryDimensionFreeEvaluation.affineClass_eq
+#print DiamondIntegral.Section4.RVOrdinaryDimensionFreeEvaluation.geometricIdeal
+#print axioms DiamondIntegral.Section4.RVOrdinaryDimensionFreeEvaluation.geometricIdeal
+#print DiamondIntegral.Section4.RVOrdinaryDimensionFreeEvaluation.GeometricRing
+#print axioms DiamondIntegral.Section4.RVOrdinaryDimensionFreeEvaluation.GeometricRing
+#print DiamondIntegral.Section4.RVOrdinaryDimensionFreeEvaluation.geometricQuotient
+#print axioms DiamondIntegral.Section4.RVOrdinaryDimensionFreeEvaluation.geometricQuotient
+#print DiamondIntegral.Section4.RVOrdinaryDimensionFreeEvaluation.geometric_torus_zero
+#print axioms DiamondIntegral.Section4.RVOrdinaryDimensionFreeEvaluation.geometric_torus_zero
+#print DiamondIntegral.Section4.RVOrdinaryDimensionFreeEvaluation.baseEvaluation
+#print axioms DiamondIntegral.Section4.RVOrdinaryDimensionFreeEvaluation.baseEvaluation
+#print DiamondIntegral.Section4.RVOrdinaryDimensionFreeEvaluation.boundedEvaluation
+#print axioms DiamondIntegral.Section4.RVOrdinaryDimensionFreeEvaluation.boundedEvaluation
+#print DiamondIntegral.Section4.RVOrdinaryDimensionFreeEvaluation.geometricEvaluation
+#print axioms DiamondIntegral.Section4.RVOrdinaryDimensionFreeEvaluation.geometricEvaluation
+#print DiamondIntegral.Section4.RVOrdinaryDimensionFreeEvaluation.baseEvaluation_res
+#print axioms DiamondIntegral.Section4.RVOrdinaryDimensionFreeEvaluation.baseEvaluation_res
+#print DiamondIntegral.Section4.RVOrdinaryDimensionFreeEvaluation.bounded_p_minus_one
+#print axioms DiamondIntegral.Section4.RVOrdinaryDimensionFreeEvaluation.bounded_p_minus_one
+#print DiamondIntegral.Section4.RVOrdinaryDimensionFreeEvaluation.geometric_p_minus_one
+#print axioms DiamondIntegral.Section4.RVOrdinaryDimensionFreeEvaluation.geometric_p_minus_one
+#print DiamondIntegral.Section4.RVOrdinaryDimensionFreeEvaluation.geometric_positive_gamma
+#print axioms DiamondIntegral.Section4.RVOrdinaryDimensionFreeEvaluation.geometric_positive_gamma
+#print DiamondIntegral.Section4.GammaBoundedRVCharts.BoundedChart
+#print axioms DiamondIntegral.Section4.GammaBoundedRVCharts.BoundedChart
+#print DiamondIntegral.Section4.GammaBoundedRVCharts.ofTotal
+#print axioms DiamondIntegral.Section4.GammaBoundedRVCharts.ofTotal
+#print DiamondIntegral.Section4.GammaBoundedRVCharts.product
+#print axioms DiamondIntegral.Section4.GammaBoundedRVCharts.product
+#print DiamondIntegral.Section4.GammaBoundedRVCharts.unit
+#print axioms DiamondIntegral.Section4.GammaBoundedRVCharts.unit
+#print DiamondIntegral.Section4.GammaBoundedRVCharts.sharp
+#print axioms DiamondIntegral.Section4.GammaBoundedRVCharts.sharp
+#print DiamondIntegral.Section4.GammaBoundedRVCharts.sharpProductIso
+#print axioms DiamondIntegral.Section4.GammaBoundedRVCharts.sharpProductIso
+#print DiamondIntegral.Section4.GammaBoundedRVCharts.sharpUnitIso
+#print axioms DiamondIntegral.Section4.GammaBoundedRVCharts.sharpUnitIso
+#print DiamondIntegral.Section4.GammaBoundedRVPresentation.Generator
+#print axioms DiamondIntegral.Section4.GammaBoundedRVPresentation.Generator
+#print DiamondIntegral.Section4.GammaBoundedRVPresentation.symbol
+#print axioms DiamondIntegral.Section4.GammaBoundedRVPresentation.symbol
+#print DiamondIntegral.Section4.GammaBoundedRVPresentation.Relation
+#print axioms DiamondIntegral.Section4.GammaBoundedRVPresentation.Relation
+#print DiamondIntegral.Section4.GammaBoundedRVPresentation.relationIdeal
+#print axioms DiamondIntegral.Section4.GammaBoundedRVPresentation.relationIdeal
+#print DiamondIntegral.Section4.GammaBoundedRVPresentation.ChartRing
+#print axioms DiamondIntegral.Section4.GammaBoundedRVPresentation.ChartRing
+#print DiamondIntegral.Section4.GammaBoundedRVPresentation.objectClass
+#print axioms DiamondIntegral.Section4.GammaBoundedRVPresentation.objectClass
+#print DiamondIntegral.Section4.GammaBoundedRVPresentation.relation_zero
+#print axioms DiamondIntegral.Section4.GammaBoundedRVPresentation.relation_zero
+#print DiamondIntegral.Section4.GammaBoundedRVPresentation.class_unit
+#print axioms DiamondIntegral.Section4.GammaBoundedRVPresentation.class_unit
+#print DiamondIntegral.Section4.GammaBoundedRVPresentation.class_product
+#print axioms DiamondIntegral.Section4.GammaBoundedRVPresentation.class_product
+#print DiamondIntegral.Section4.GammaBoundedRVPresentation.class_iso
+#print axioms DiamondIntegral.Section4.GammaBoundedRVPresentation.class_iso
+#print DiamondIntegral.Section4.GammaBoundedRVPresentation.class_empty
+#print axioms DiamondIntegral.Section4.GammaBoundedRVPresentation.class_empty
+#print DiamondIntegral.Section4.GammaBoundedRVPresentation.class_scissor
+#print axioms DiamondIntegral.Section4.GammaBoundedRVPresentation.class_scissor
+#print DiamondIntegral.Section4.GammaBoundedRVPresentation.Invariant
+#print axioms DiamondIntegral.Section4.GammaBoundedRVPresentation.Invariant
+#print DiamondIntegral.Section4.GammaBoundedRVPresentation.freeMap
+#print axioms DiamondIntegral.Section4.GammaBoundedRVPresentation.freeMap
+#print DiamondIntegral.Section4.GammaBoundedRVPresentation.freeMap_symbol
+#print axioms DiamondIntegral.Section4.GammaBoundedRVPresentation.freeMap_symbol
+#print DiamondIntegral.Section4.GammaBoundedRVPresentation.invariant_relation_zero
+#print axioms DiamondIntegral.Section4.GammaBoundedRVPresentation.invariant_relation_zero
+#print DiamondIntegral.Section4.GammaBoundedRVPresentation.invariant_ideal_zero
+#print axioms DiamondIntegral.Section4.GammaBoundedRVPresentation.invariant_ideal_zero
+#print DiamondIntegral.Section4.GammaBoundedRVPresentation.lift
+#print axioms DiamondIntegral.Section4.GammaBoundedRVPresentation.lift
+#print DiamondIntegral.Section4.GammaBoundedRVPresentation.lift_class
+#print axioms DiamondIntegral.Section4.GammaBoundedRVPresentation.lift_class
+#print DiamondIntegral.Section4.GammaBoundedRVPresentation.hom_ext
+#print axioms DiamondIntegral.Section4.GammaBoundedRVPresentation.hom_ext
+#print DiamondIntegral.Section4.GammaBoundedRVEmpty.class_empty_support
+#print axioms DiamondIntegral.Section4.GammaBoundedRVEmpty.class_empty_support
+#print DiamondIntegral.Section4.GammaBoundedRVMaps.forgetInvariant
+#print axioms DiamondIntegral.Section4.GammaBoundedRVMaps.forgetInvariant
+#print DiamondIntegral.Section4.GammaBoundedRVMaps.forget
+#print axioms DiamondIntegral.Section4.GammaBoundedRVMaps.forget
+#print DiamondIntegral.Section4.GammaBoundedRVMaps.forget_class
+#print axioms DiamondIntegral.Section4.GammaBoundedRVMaps.forget_class
+#print DiamondIntegral.Section4.GammaBoundedRVMaps.auxiliaryInvariant
+#print axioms DiamondIntegral.Section4.GammaBoundedRVMaps.auxiliaryInvariant
+#print DiamondIntegral.Section4.GammaBoundedRVMaps.auxiliary
+#print axioms DiamondIntegral.Section4.GammaBoundedRVMaps.auxiliary
+#print DiamondIntegral.Section4.GammaBoundedRVMaps.auxiliary_class
+#print axioms DiamondIntegral.Section4.GammaBoundedRVMaps.auxiliary_class
+#print DiamondIntegral.Section4.GammaBoundedRVMaps.sharpInvariant
+#print axioms DiamondIntegral.Section4.GammaBoundedRVMaps.sharpInvariant
+#print DiamondIntegral.Section4.GammaBoundedRVMaps.sharp
+#print axioms DiamondIntegral.Section4.GammaBoundedRVMaps.sharp
+#print DiamondIntegral.Section4.GammaBoundedRVMaps.sharp_class
+#print axioms DiamondIntegral.Section4.GammaBoundedRVMaps.sharp_class
+#print DiamondIntegral.Section4.GammaBoundedRVMaps.forget_sharp
+#print axioms DiamondIntegral.Section4.GammaBoundedRVMaps.forget_sharp
+#print DiamondIntegral.Section4.GammaBoundedRVGrading.gradingInvariant
+#print axioms DiamondIntegral.Section4.GammaBoundedRVGrading.gradingInvariant
+#print DiamondIntegral.Section4.GammaBoundedRVGrading.coaction
+#print axioms DiamondIntegral.Section4.GammaBoundedRVGrading.coaction
+#print DiamondIntegral.Section4.GammaBoundedRVGrading.coaction_class
+#print axioms DiamondIntegral.Section4.GammaBoundedRVGrading.coaction_class
+#print DiamondIntegral.Section4.GammaBoundedRVGrading.coaction_counit
+#print axioms DiamondIntegral.Section4.GammaBoundedRVGrading.coaction_counit
+#print DiamondIntegral.Section4.GammaBoundedRVGrading.coaction_coassoc
+#print axioms DiamondIntegral.Section4.GammaBoundedRVGrading.coaction_coassoc
+#print DiamondIntegral.Section4.GammaBoundedRVGrading.gradingCoaction
+#print axioms DiamondIntegral.Section4.GammaBoundedRVGrading.gradingCoaction
+#print DiamondIntegral.Section4.GammaBoundedRVGrading.gradedPiece
+#print axioms DiamondIntegral.Section4.GammaBoundedRVGrading.gradedPiece
+#print DiamondIntegral.Section4.GammaBoundedRVGrading.gradedRing
+#print axioms DiamondIntegral.Section4.GammaBoundedRVGrading.gradedRing
+#print DiamondIntegral.Section4.GammaBoundedRVGrading.class_mem
+#print axioms DiamondIntegral.Section4.GammaBoundedRVGrading.class_mem
+#print DiamondIntegral.Section4.GammaBoundedRVGrading.map_coaction_of_classes
+#print axioms DiamondIntegral.Section4.GammaBoundedRVGrading.map_coaction_of_classes
+#print DiamondIntegral.Section4.GammaBoundedRVGrading.map_mem_of_classes
+#print axioms DiamondIntegral.Section4.GammaBoundedRVGrading.map_mem_of_classes
+#print DiamondIntegral.Section4.GammaBoundedRVProfiles.gradedForget
+#print axioms DiamondIntegral.Section4.GammaBoundedRVProfiles.gradedForget
+#print DiamondIntegral.Section4.GammaBoundedRVProfiles.gradedSharp
+#print axioms DiamondIntegral.Section4.GammaBoundedRVProfiles.gradedSharp
+#print DiamondIntegral.Section4.GammaBoundedRVProfiles.interpretation
+#print axioms DiamondIntegral.Section4.GammaBoundedRVProfiles.interpretation
+#print DiamondIntegral.Section4.GammaBoundedRVProfiles.interpretation_class
+#print axioms DiamondIntegral.Section4.GammaBoundedRVProfiles.interpretation_class
+#print DiamondIntegral.Section4.GammaBoundedRVProfiles.interpretation_class_mem
+#print axioms DiamondIntegral.Section4.GammaBoundedRVProfiles.interpretation_class_mem
+#print DiamondIntegral.Section4.GammaBoundedRVProfiles.gradedInterpretation
+#print axioms DiamondIntegral.Section4.GammaBoundedRVProfiles.gradedInterpretation
+#print DiamondIntegral.Section4.GammaBoundedRVProfiles.gradedEvaluation
+#print axioms DiamondIntegral.Section4.GammaBoundedRVProfiles.gradedEvaluation
+#print DiamondIntegral.Section4.GammaBoundedRVProfiles.evaluation_independent_kind
+#print axioms DiamondIntegral.Section4.GammaBoundedRVProfiles.evaluation_independent_kind
+#print DiamondIntegral.Section4.RVBoundedTensor.Source
+#print axioms DiamondIntegral.Section4.RVBoundedTensor.Source
+#print DiamondIntegral.Section4.RVBoundedTensor.comparison
+#print axioms DiamondIntegral.Section4.RVBoundedTensor.comparison
+#print DiamondIntegral.Section4.RVBoundedTensor.comparison_tmul
+#print axioms DiamondIntegral.Section4.RVBoundedTensor.comparison_tmul
+#print DiamondIntegral.Section4.RVBoundedTensor.evaluation
+#print axioms DiamondIntegral.Section4.RVBoundedTensor.evaluation
+#print DiamondIntegral.Section4.RVBoundedTensor.evaluation_tmul
+#print axioms DiamondIntegral.Section4.RVBoundedTensor.evaluation_tmul
+#print DiamondIntegral.Section4.RVBoundedTensor.evaluation_independent_kind
+#print axioms DiamondIntegral.Section4.RVBoundedTensor.evaluation_independent_kind
+#print DiamondIntegral.Section4.RVRadiusTensor.annulusChart
+#print axioms DiamondIntegral.Section4.RVRadiusTensor.annulusChart
+#print DiamondIntegral.Section4.RVRadiusTensor.radiusPreimage
+#print axioms DiamondIntegral.Section4.RVRadiusTensor.radiusPreimage
+#print DiamondIntegral.Section4.RVRadiusTensor.comparison_radiusPreimage
+#print axioms DiamondIntegral.Section4.RVRadiusTensor.comparison_radiusPreimage
+#print DiamondIntegral.Section4.RVRadiusTensor.pGammaPreimage
+#print axioms DiamondIntegral.Section4.RVRadiusTensor.pGammaPreimage
+#print DiamondIntegral.Section4.RVRadiusTensor.comparison_pGammaPreimage
+#print axioms DiamondIntegral.Section4.RVRadiusTensor.comparison_pGammaPreimage
+#print DiamondIntegral.Section4.RVRadiusTensor.annulus_evaluation
+#print axioms DiamondIntegral.Section4.RVRadiusTensor.annulus_evaluation
+#print DiamondIntegral.Section4.RVRadiusTensor.evaluation_radiusPreimage
+#print axioms DiamondIntegral.Section4.RVRadiusTensor.evaluation_radiusPreimage
+#print DiamondIntegral.Section4.RVRadiusTensor.evaluation_pGammaPreimage
+#print axioms DiamondIntegral.Section4.RVRadiusTensor.evaluation_pGammaPreimage
+#print DiamondIntegral.Section4.GammaUnaryIdentityProfile.pushforward_coordinate
+#print axioms DiamondIntegral.Section4.GammaUnaryIdentityProfile.pushforward_coordinate
+#print DiamondIntegral.Section4.GammaUnaryIdentityProfile.profile_one
+#print axioms DiamondIntegral.Section4.GammaUnaryIdentityProfile.profile_one
+#print DiamondIntegral.Section4.GammaUnaryIdentityProfile.profile_positiveRay
+#print axioms DiamondIntegral.Section4.GammaUnaryIdentityProfile.profile_positiveRay
+#print DiamondIntegral.Section4.GammaUnaryIdentityProfile.objectPolynomial_positiveRay
+#print axioms DiamondIntegral.Section4.GammaUnaryIdentityProfile.objectPolynomial_positiveRay
+#print DiamondIntegral.Section4.GammaFiniteNames.scalar_image_definable
+#print axioms DiamondIntegral.Section4.GammaFiniteNames.scalar_image_definable
+#print DiamondIntegral.Section4.GammaFiniteNames.finite_value_definable
+#print axioms DiamondIntegral.Section4.GammaFiniteNames.finite_value_definable
+#print DiamondIntegral.Section4.GammaFiniteNames.finite_coordinate_definable
+#print axioms DiamondIntegral.Section4.GammaFiniteNames.finite_coordinate_definable
+#print DiamondIntegral.Section4.GammaFiniteNames.finite_chart_weight_definable
+#print axioms DiamondIntegral.Section4.GammaFiniteNames.finite_chart_weight_definable
+#print DiamondIntegral.Section4.GammaTupleSingletonProfiles.singleton_definable
+#print axioms DiamondIntegral.Section4.GammaTupleSingletonProfiles.singleton_definable
+#print DiamondIntegral.Section4.GammaTupleSingletonProfiles.productName
+#print axioms DiamondIntegral.Section4.GammaTupleSingletonProfiles.productName
+#print DiamondIntegral.Section4.GammaTupleSingletonProfiles.profile_singleton
+#print axioms DiamondIntegral.Section4.GammaTupleSingletonProfiles.profile_singleton
+#print DiamondIntegral.Section4.GammaTupleSingletonProfiles.objectPolynomial_singleton
+#print axioms DiamondIntegral.Section4.GammaTupleSingletonProfiles.objectPolynomial_singleton
+#print DiamondIntegral.Section4.GammaFiniteBounds.finite_domain_bounded
+#print axioms DiamondIntegral.Section4.GammaFiniteBounds.finite_domain_bounded
+#print DiamondIntegral.Section4.GammaFiniteBounds.singleton_bounded
+#print axioms DiamondIntegral.Section4.GammaFiniteBounds.singleton_bounded
+#print DiamondIntegral.Section4.GammaFiniteBounds.boundedChart
+#print axioms DiamondIntegral.Section4.GammaFiniteBounds.boundedChart
+#print DiamondIntegral.Section4.GammaRVIdentityIso.sameDomainIso
+#print axioms DiamondIntegral.Section4.GammaRVIdentityIso.sameDomainIso
+#print DiamondIntegral.Section4.GammaRVIdentityIso.class_eq_on_domain
+#print axioms DiamondIntegral.Section4.GammaRVIdentityIso.class_eq_on_domain
+#print DiamondIntegral.Section4.GammaRVIdentityIso.normalizedIso
+#print axioms DiamondIntegral.Section4.GammaRVIdentityIso.normalizedIso
+#print DiamondIntegral.Section4.GammaRVIdentityIso.class_normalized
+#print axioms DiamondIntegral.Section4.GammaRVIdentityIso.class_normalized
+#print DiamondIntegral.Section4.GammaNameTuples.NameTuple
+#print axioms DiamondIntegral.Section4.GammaNameTuples.NameTuple
+#print DiamondIntegral.Section4.GammaNameTuples.values
+#print axioms DiamondIntegral.Section4.GammaNameTuples.values
+#print DiamondIntegral.Section4.GammaNameTuples.values_injective
+#print axioms DiamondIntegral.Section4.GammaNameTuples.values_injective
+#print DiamondIntegral.Section4.GammaNameTuples.singleton_definable
+#print axioms DiamondIntegral.Section4.GammaNameTuples.singleton_definable
+#print DiamondIntegral.Section4.GammaNameTuples.namedSupport
+#print axioms DiamondIntegral.Section4.GammaNameTuples.namedSupport
+#print DiamondIntegral.Section4.GammaNameTuples.namedSupport_finite
+#print axioms DiamondIntegral.Section4.GammaNameTuples.namedSupport_finite
+#print DiamondIntegral.Section4.GammaNameTuples.namedSupport_image
+#print axioms DiamondIntegral.Section4.GammaNameTuples.namedSupport_image
+#print DiamondIntegral.Section4.GammaNameTuples.support
+#print axioms DiamondIntegral.Section4.GammaNameTuples.support
+#print DiamondIntegral.Section4.GammaNameTuples.support_definable
+#print axioms DiamondIntegral.Section4.GammaNameTuples.support_definable
+#print DiamondIntegral.Section4.GammaNameTuples.finite_support_representation
+#print axioms DiamondIntegral.Section4.GammaNameTuples.finite_support_representation
+#print DiamondIntegral.Section4.GammaNameTuples.support_empty
+#print axioms DiamondIntegral.Section4.GammaNameTuples.support_empty
+#print DiamondIntegral.Section4.GammaNameTuples.support_insert
+#print axioms DiamondIntegral.Section4.GammaNameTuples.support_insert
+#print DiamondIntegral.Section4.GammaNameTuples.values_not_mem_support
+#print axioms DiamondIntegral.Section4.GammaNameTuples.values_not_mem_support
+#print DiamondIntegral.Section4.GammaNameTuples.singleton_inter_support
+#print axioms DiamondIntegral.Section4.GammaNameTuples.singleton_inter_support
+#print DiamondIntegral.Section4.GammaNameTuples.scalar_value_definable
+#print axioms DiamondIntegral.Section4.GammaNameTuples.scalar_value_definable
+#print DiamondIntegral.Section4.GammaFiniteRVCharts.FiniteChart
+#print axioms DiamondIntegral.Section4.GammaFiniteRVCharts.FiniteChart
+#print DiamondIntegral.Section4.GammaFiniteRVCharts.ofTotal
+#print axioms DiamondIntegral.Section4.GammaFiniteRVCharts.ofTotal
+#print DiamondIntegral.Section4.GammaFiniteRVCharts.product
+#print axioms DiamondIntegral.Section4.GammaFiniteRVCharts.product
+#print DiamondIntegral.Section4.GammaFiniteRVCharts.unit
+#print axioms DiamondIntegral.Section4.GammaFiniteRVCharts.unit
+#print DiamondIntegral.Section4.GammaFiniteRVCharts.sharp
+#print axioms DiamondIntegral.Section4.GammaFiniteRVCharts.sharp
+#print DiamondIntegral.Section4.GammaFiniteRVCharts.bounded
+#print axioms DiamondIntegral.Section4.GammaFiniteRVCharts.bounded
+#print DiamondIntegral.Section4.GammaFiniteRVCharts.sharpProductIso
+#print axioms DiamondIntegral.Section4.GammaFiniteRVCharts.sharpProductIso
+#print DiamondIntegral.Section4.GammaFiniteRVCharts.sharpUnitIso
+#print axioms DiamondIntegral.Section4.GammaFiniteRVCharts.sharpUnitIso
+#print DiamondIntegral.Section4.GammaFiniteRVPresentation.Generator
+#print axioms DiamondIntegral.Section4.GammaFiniteRVPresentation.Generator
+#print DiamondIntegral.Section4.GammaFiniteRVPresentation.symbol
+#print axioms DiamondIntegral.Section4.GammaFiniteRVPresentation.symbol
+#print DiamondIntegral.Section4.GammaFiniteRVPresentation.Relation
+#print axioms DiamondIntegral.Section4.GammaFiniteRVPresentation.Relation
+#print DiamondIntegral.Section4.GammaFiniteRVPresentation.relationIdeal
+#print axioms DiamondIntegral.Section4.GammaFiniteRVPresentation.relationIdeal
+#print DiamondIntegral.Section4.GammaFiniteRVPresentation.ChartRing
+#print axioms DiamondIntegral.Section4.GammaFiniteRVPresentation.ChartRing
+#print DiamondIntegral.Section4.GammaFiniteRVPresentation.objectClass
+#print axioms DiamondIntegral.Section4.GammaFiniteRVPresentation.objectClass
+#print DiamondIntegral.Section4.GammaFiniteRVPresentation.relation_zero
+#print axioms DiamondIntegral.Section4.GammaFiniteRVPresentation.relation_zero
+#print DiamondIntegral.Section4.GammaFiniteRVPresentation.class_unit
+#print axioms DiamondIntegral.Section4.GammaFiniteRVPresentation.class_unit
+#print DiamondIntegral.Section4.GammaFiniteRVPresentation.class_product
+#print axioms DiamondIntegral.Section4.GammaFiniteRVPresentation.class_product
+#print DiamondIntegral.Section4.GammaFiniteRVPresentation.class_iso
+#print axioms DiamondIntegral.Section4.GammaFiniteRVPresentation.class_iso
+#print DiamondIntegral.Section4.GammaFiniteRVPresentation.class_empty
+#print axioms DiamondIntegral.Section4.GammaFiniteRVPresentation.class_empty
+#print DiamondIntegral.Section4.GammaFiniteRVPresentation.class_scissor
+#print axioms DiamondIntegral.Section4.GammaFiniteRVPresentation.class_scissor
+#print DiamondIntegral.Section4.GammaFiniteRVPresentation.Invariant
+#print axioms DiamondIntegral.Section4.GammaFiniteRVPresentation.Invariant
+#print DiamondIntegral.Section4.GammaFiniteRVPresentation.freeMap
+#print axioms DiamondIntegral.Section4.GammaFiniteRVPresentation.freeMap
+#print DiamondIntegral.Section4.GammaFiniteRVPresentation.freeMap_symbol
+#print axioms DiamondIntegral.Section4.GammaFiniteRVPresentation.freeMap_symbol
+#print DiamondIntegral.Section4.GammaFiniteRVPresentation.invariant_relation_zero
+#print axioms DiamondIntegral.Section4.GammaFiniteRVPresentation.invariant_relation_zero
+#print DiamondIntegral.Section4.GammaFiniteRVPresentation.invariant_ideal_zero
+#print axioms DiamondIntegral.Section4.GammaFiniteRVPresentation.invariant_ideal_zero
+#print DiamondIntegral.Section4.GammaFiniteRVPresentation.lift
+#print axioms DiamondIntegral.Section4.GammaFiniteRVPresentation.lift
+#print DiamondIntegral.Section4.GammaFiniteRVPresentation.lift_class
+#print axioms DiamondIntegral.Section4.GammaFiniteRVPresentation.lift_class
+#print DiamondIntegral.Section4.GammaFiniteRVPresentation.hom_ext
+#print axioms DiamondIntegral.Section4.GammaFiniteRVPresentation.hom_ext
+#print DiamondIntegral.Section4.GammaFiniteRVGrading.gradingInvariant
+#print axioms DiamondIntegral.Section4.GammaFiniteRVGrading.gradingInvariant
+#print DiamondIntegral.Section4.GammaFiniteRVGrading.coaction
+#print axioms DiamondIntegral.Section4.GammaFiniteRVGrading.coaction
+#print DiamondIntegral.Section4.GammaFiniteRVGrading.coaction_class
+#print axioms DiamondIntegral.Section4.GammaFiniteRVGrading.coaction_class
+#print DiamondIntegral.Section4.GammaFiniteRVGrading.coaction_counit
+#print axioms DiamondIntegral.Section4.GammaFiniteRVGrading.coaction_counit
+#print DiamondIntegral.Section4.GammaFiniteRVGrading.coaction_coassoc
+#print axioms DiamondIntegral.Section4.GammaFiniteRVGrading.coaction_coassoc
+#print DiamondIntegral.Section4.GammaFiniteRVGrading.gradingCoaction
+#print axioms DiamondIntegral.Section4.GammaFiniteRVGrading.gradingCoaction
+#print DiamondIntegral.Section4.GammaFiniteRVGrading.gradedPiece
+#print axioms DiamondIntegral.Section4.GammaFiniteRVGrading.gradedPiece
+#print DiamondIntegral.Section4.GammaFiniteRVGrading.gradedRing
+#print axioms DiamondIntegral.Section4.GammaFiniteRVGrading.gradedRing
+#print DiamondIntegral.Section4.GammaFiniteRVGrading.class_mem
+#print axioms DiamondIntegral.Section4.GammaFiniteRVGrading.class_mem
+#print DiamondIntegral.Section4.GammaFiniteRVGrading.map_coaction_of_classes
+#print axioms DiamondIntegral.Section4.GammaFiniteRVGrading.map_coaction_of_classes
+#print DiamondIntegral.Section4.GammaFiniteRVGrading.map_mem_of_classes
+#print axioms DiamondIntegral.Section4.GammaFiniteRVGrading.map_mem_of_classes
+#print DiamondIntegral.Section4.GammaFiniteRVMaps.forgetInvariant
+#print axioms DiamondIntegral.Section4.GammaFiniteRVMaps.forgetInvariant
+#print DiamondIntegral.Section4.GammaFiniteRVMaps.forget
+#print axioms DiamondIntegral.Section4.GammaFiniteRVMaps.forget
+#print DiamondIntegral.Section4.GammaFiniteRVMaps.forget_class
+#print axioms DiamondIntegral.Section4.GammaFiniteRVMaps.forget_class
+#print DiamondIntegral.Section4.GammaFiniteRVMaps.boundedInvariant
+#print axioms DiamondIntegral.Section4.GammaFiniteRVMaps.boundedInvariant
+#print DiamondIntegral.Section4.GammaFiniteRVMaps.bounded
+#print axioms DiamondIntegral.Section4.GammaFiniteRVMaps.bounded
+#print DiamondIntegral.Section4.GammaFiniteRVMaps.bounded_class
+#print axioms DiamondIntegral.Section4.GammaFiniteRVMaps.bounded_class
+#print DiamondIntegral.Section4.GammaFiniteRVMaps.sharpInvariant
+#print axioms DiamondIntegral.Section4.GammaFiniteRVMaps.sharpInvariant
+#print DiamondIntegral.Section4.GammaFiniteRVMaps.sharp
+#print axioms DiamondIntegral.Section4.GammaFiniteRVMaps.sharp
+#print DiamondIntegral.Section4.GammaFiniteRVMaps.sharp_class
+#print axioms DiamondIntegral.Section4.GammaFiniteRVMaps.sharp_class
+#print DiamondIntegral.Section4.GammaFiniteRVMaps.forget_bounded
+#print axioms DiamondIntegral.Section4.GammaFiniteRVMaps.forget_bounded
+#print DiamondIntegral.Section4.GammaFiniteRVMaps.sharp_full_comparison
+#print axioms DiamondIntegral.Section4.GammaFiniteRVMaps.sharp_full_comparison
+#print DiamondIntegral.Section4.GammaFiniteRVMaps.sharp_bounded_comparison
+#print axioms DiamondIntegral.Section4.GammaFiniteRVMaps.sharp_bounded_comparison
+#print DiamondIntegral.Section4.GammaFiniteDecomposition.class_eq_on_domain
+#print axioms DiamondIntegral.Section4.GammaFiniteDecomposition.class_eq_on_domain
+#print DiamondIntegral.Section4.GammaFiniteDecomposition.class_normalized
+#print axioms DiamondIntegral.Section4.GammaFiniteDecomposition.class_normalized
+#print DiamondIntegral.Section4.GammaFiniteDecomposition.setChart
+#print axioms DiamondIntegral.Section4.GammaFiniteDecomposition.setChart
+#print DiamondIntegral.Section4.GammaFiniteDecomposition.pointChart
+#print axioms DiamondIntegral.Section4.GammaFiniteDecomposition.pointChart
+#print DiamondIntegral.Section4.GammaFiniteDecomposition.constantChart
+#print axioms DiamondIntegral.Section4.GammaFiniteDecomposition.constantChart
+#print DiamondIntegral.Section4.GammaFiniteDecomposition.setChart_class_empty
+#print axioms DiamondIntegral.Section4.GammaFiniteDecomposition.setChart_class_empty
+#print DiamondIntegral.Section4.GammaFiniteDecomposition.setChart_class_insert
+#print axioms DiamondIntegral.Section4.GammaFiniteDecomposition.setChart_class_insert
+#print DiamondIntegral.Section4.GammaFiniteDecomposition.setChart_class_sum
+#print axioms DiamondIntegral.Section4.GammaFiniteDecomposition.setChart_class_sum
+#print DiamondIntegral.Section4.GammaFiniteDecomposition.pointChart_class_constant
+#print axioms DiamondIntegral.Section4.GammaFiniteDecomposition.pointChart_class_constant
+#print DiamondIntegral.Section4.GammaFiniteDecomposition.setChart_class_sum_constants
+#print axioms DiamondIntegral.Section4.GammaFiniteDecomposition.setChart_class_sum_constants
+#print DiamondIntegral.Section4.GammaFiniteDecomposition.finite_class_decomposition
+#print axioms DiamondIntegral.Section4.GammaFiniteDecomposition.finite_class_decomposition
+#print DiamondIntegral.Section4.GammaFiniteGenerators.weightedUnit
+#print axioms DiamondIntegral.Section4.GammaFiniteGenerators.weightedUnit
+#print DiamondIntegral.Section4.GammaFiniteGenerators.fibre
+#print axioms DiamondIntegral.Section4.GammaFiniteGenerators.fibre
+#print DiamondIntegral.Section4.GammaFiniteGenerators.singletonChart
+#print axioms DiamondIntegral.Section4.GammaFiniteGenerators.singletonChart
+#print DiamondIntegral.Section4.GammaFiniteGenerators.singleton_zero_class
+#print axioms DiamondIntegral.Section4.GammaFiniteGenerators.singleton_zero_class
+#print DiamondIntegral.Section4.GammaFiniteGenerators.singleton_succ_class
+#print axioms DiamondIntegral.Section4.GammaFiniteGenerators.singleton_succ_class
+#print DiamondIntegral.Section4.GammaFiniteGenerators.hom_agree_singletons
+#print axioms DiamondIntegral.Section4.GammaFiniteGenerators.hom_agree_singletons
+#print DiamondIntegral.Section4.GammaFiniteGenerators.hom_ext_by_generators
+#print axioms DiamondIntegral.Section4.GammaFiniteGenerators.hom_ext_by_generators
+#print DiamondIntegral.Section4.GammaFiniteRVMapGradings.gradedForget
+#print axioms DiamondIntegral.Section4.GammaFiniteRVMapGradings.gradedForget
+#print DiamondIntegral.Section4.GammaFiniteRVMapGradings.gradedBounded
+#print axioms DiamondIntegral.Section4.GammaFiniteRVMapGradings.gradedBounded
+#print DiamondIntegral.Section4.GammaFiniteRVMapGradings.gradedSharp
+#print axioms DiamondIntegral.Section4.GammaFiniteRVMapGradings.gradedSharp
+#print DiamondIntegral.Section4.GammaZeroDegreeFinite.finiteZero
+#print axioms DiamondIntegral.Section4.GammaZeroDegreeFinite.finiteZero
+#print DiamondIntegral.Section4.GammaZeroDegreeFinite.value
+#print axioms DiamondIntegral.Section4.GammaZeroDegreeFinite.value
+#print DiamondIntegral.Section4.GammaZeroDegreeFinite.invariant
+#print axioms DiamondIntegral.Section4.GammaZeroDegreeFinite.invariant
+#print DiamondIntegral.Section4.GammaZeroDegreeFinite.full
+#print axioms DiamondIntegral.Section4.GammaZeroDegreeFinite.full
+#print DiamondIntegral.Section4.GammaZeroDegreeFinite.full_class
+#print axioms DiamondIntegral.Section4.GammaZeroDegreeFinite.full_class
+#print DiamondIntegral.Section4.GammaZeroDegreeFinite.forget_full
+#print axioms DiamondIntegral.Section4.GammaZeroDegreeFinite.forget_full
+#print DiamondIntegral.Section4.GammaZeroDegreeFinite.full_forget
+#print axioms DiamondIntegral.Section4.GammaZeroDegreeFinite.full_forget
+#print DiamondIntegral.Section4.GammaZeroDegreeFinite.gradedFull
+#print axioms DiamondIntegral.Section4.GammaZeroDegreeFinite.gradedFull
+#print DiamondIntegral.Section4.GammaZeroDegreeFinite.full_zero_preimage
+#print axioms DiamondIntegral.Section4.GammaZeroDegreeFinite.full_zero_preimage
+#print DiamondIntegral.Section4.GammaZeroDegreeFinite.bounded
+#print axioms DiamondIntegral.Section4.GammaZeroDegreeFinite.bounded
+#print DiamondIntegral.Section4.GammaZeroDegreeFinite.bounded_class
+#print axioms DiamondIntegral.Section4.GammaZeroDegreeFinite.bounded_class
+#print DiamondIntegral.Section4.GammaZeroDegreeFinite.finite_bounded
+#print axioms DiamondIntegral.Section4.GammaZeroDegreeFinite.finite_bounded
+#print DiamondIntegral.Section4.GammaZeroDegreeFinite.gradedBounded
+#print axioms DiamondIntegral.Section4.GammaZeroDegreeFinite.gradedBounded
+#print DiamondIntegral.Section4.GammaZeroDegreeFinite.bounded_zero_preimage
+#print axioms DiamondIntegral.Section4.GammaZeroDegreeFinite.bounded_zero_preimage
+#print DiamondIntegral.Section4.RESFiniteUnitBalancing.weightedUnitSharpIso
+#print axioms DiamondIntegral.Section4.RESFiniteUnitBalancing.weightedUnitSharpIso
+#print DiamondIntegral.Section4.RESFiniteUnitBalancing.sharp_weightedUnit_class
+#print axioms DiamondIntegral.Section4.RESFiniteUnitBalancing.sharp_weightedUnit_class
+#print DiamondIntegral.Section4.RESFiniteUnitBalancing.weightedUnit_polynomial
+#print axioms DiamondIntegral.Section4.RESFiniteUnitBalancing.weightedUnit_polynomial
+#print DiamondIntegral.Section4.RESFiniteUnitBalancing.unbounded_weightedUnit_value
+#print axioms DiamondIntegral.Section4.RESFiniteUnitBalancing.unbounded_weightedUnit_value
+#print DiamondIntegral.Section4.RESFiniteUnitBalancing.unbounded_weightedUnit_balance
+#print axioms DiamondIntegral.Section4.RESFiniteUnitBalancing.unbounded_weightedUnit_balance
+#print DiamondIntegral.Section4.RESAllFiniteBalancing.resMap
+#print axioms DiamondIntegral.Section4.RESAllFiniteBalancing.resMap
+#print DiamondIntegral.Section4.RESAllFiniteBalancing.gammaMap
+#print axioms DiamondIntegral.Section4.RESAllFiniteBalancing.gammaMap
+#print DiamondIntegral.Section4.RESAllFiniteBalancing.fibre_balance
+#print axioms DiamondIntegral.Section4.RESAllFiniteBalancing.fibre_balance
+#print DiamondIntegral.Section4.RESAllFiniteBalancing.finite_balance
+#print axioms DiamondIntegral.Section4.RESAllFiniteBalancing.finite_balance
+#print DiamondIntegral.Section4.RESAllFiniteBalancing.finite_balance_apply
+#print axioms DiamondIntegral.Section4.RESAllFiniteBalancing.finite_balance_apply
+#print DiamondIntegral.Section4.RESAllBoundedFiniteBalancing.resMap
+#print axioms DiamondIntegral.Section4.RESAllBoundedFiniteBalancing.resMap
+#print DiamondIntegral.Section4.RESAllBoundedFiniteBalancing.gammaMap
+#print axioms DiamondIntegral.Section4.RESAllBoundedFiniteBalancing.gammaMap
+#print DiamondIntegral.Section4.RESAllBoundedFiniteBalancing.gammaMap_class
+#print axioms DiamondIntegral.Section4.RESAllBoundedFiniteBalancing.gammaMap_class
+#print DiamondIntegral.Section4.RESAllBoundedFiniteBalancing.weightedUnit_balance
+#print axioms DiamondIntegral.Section4.RESAllBoundedFiniteBalancing.weightedUnit_balance
+#print DiamondIntegral.Section4.RESAllBoundedFiniteBalancing.fibre_balance
+#print axioms DiamondIntegral.Section4.RESAllBoundedFiniteBalancing.fibre_balance
+#print DiamondIntegral.Section4.RESAllBoundedFiniteBalancing.finite_balance
+#print axioms DiamondIntegral.Section4.RESAllBoundedFiniteBalancing.finite_balance
+#print DiamondIntegral.Section4.RESAllBoundedFiniteBalancing.finite_balance_apply
+#print axioms DiamondIntegral.Section4.RESAllBoundedFiniteBalancing.finite_balance_apply
+#print DiamondIntegral.Section4.FiniteGammaAlgebras.resAlgebra
+#print axioms DiamondIntegral.Section4.FiniteGammaAlgebras.resAlgebra
+#print DiamondIntegral.Section4.FiniteGammaAlgebras.gammaAlgebra
+#print axioms DiamondIntegral.Section4.FiniteGammaAlgebras.gammaAlgebra
+#print DiamondIntegral.Section4.FiniteGammaAlgebras.boundedGammaAlgebra
+#print axioms DiamondIntegral.Section4.FiniteGammaAlgebras.boundedGammaAlgebra
+#print DiamondIntegral.Section4.FiniteGammaAlgebras.rvAlgebra
+#print axioms DiamondIntegral.Section4.FiniteGammaAlgebras.rvAlgebra
+#print DiamondIntegral.Section4.FiniteGammaAlgebras.boundedRVAlgebra
+#print axioms DiamondIntegral.Section4.FiniteGammaAlgebras.boundedRVAlgebra
+#print DiamondIntegral.Section4.FiniteGammaAlgebras.measuredTargetAlgebra
+#print axioms DiamondIntegral.Section4.FiniteGammaAlgebras.measuredTargetAlgebra
+#print DiamondIntegral.Section4.FiniteGammaAlgebras.ordinaryTargetAlgebra
+#print axioms DiamondIntegral.Section4.FiniteGammaAlgebras.ordinaryTargetAlgebra
+#print DiamondIntegral.Section4.RVFiniteBalancedTensor.Source
+#print axioms DiamondIntegral.Section4.RVFiniteBalancedTensor.Source
+#print DiamondIntegral.Section4.RVFiniteBalancedTensor.resComparison
+#print axioms DiamondIntegral.Section4.RVFiniteBalancedTensor.resComparison
+#print DiamondIntegral.Section4.RVFiniteBalancedTensor.gammaComparison
+#print axioms DiamondIntegral.Section4.RVFiniteBalancedTensor.gammaComparison
+#print DiamondIntegral.Section4.RVFiniteBalancedTensor.comparison
+#print axioms DiamondIntegral.Section4.RVFiniteBalancedTensor.comparison
+#print DiamondIntegral.Section4.RVFiniteBalancedTensor.comparison_tmul
+#print axioms DiamondIntegral.Section4.RVFiniteBalancedTensor.comparison_tmul
+#print DiamondIntegral.Section4.RVFiniteBalancedTensor.resEvaluation
+#print axioms DiamondIntegral.Section4.RVFiniteBalancedTensor.resEvaluation
+#print DiamondIntegral.Section4.RVFiniteBalancedTensor.gammaEvaluation
+#print axioms DiamondIntegral.Section4.RVFiniteBalancedTensor.gammaEvaluation
+#print DiamondIntegral.Section4.RVFiniteBalancedTensor.evaluation
+#print axioms DiamondIntegral.Section4.RVFiniteBalancedTensor.evaluation
+#print DiamondIntegral.Section4.RVFiniteBalancedTensor.evaluation_tmul
+#print axioms DiamondIntegral.Section4.RVFiniteBalancedTensor.evaluation_tmul
+#print DiamondIntegral.Section4.RVFiniteBalancedTensor.resInclusion
+#print axioms DiamondIntegral.Section4.RVFiniteBalancedTensor.resInclusion
+#print DiamondIntegral.Section4.RVFiniteBalancedTensor.gammaInclusion
+#print axioms DiamondIntegral.Section4.RVFiniteBalancedTensor.gammaInclusion
+#print DiamondIntegral.Section4.RVFiniteBalancedTensor.sourceIntScalarTower
+#print axioms DiamondIntegral.Section4.RVFiniteBalancedTensor.sourceIntScalarTower
+#print DiamondIntegral.Section4.RVFiniteBalancedTensor.fromInteger
+#print axioms DiamondIntegral.Section4.RVFiniteBalancedTensor.fromInteger
+#print DiamondIntegral.Section4.RVFiniteBalancedTensor.fromInteger_tmul
+#print axioms DiamondIntegral.Section4.RVFiniteBalancedTensor.fromInteger_tmul
+#print DiamondIntegral.Section4.RVFiniteBalancedTensor.comparison_fromInteger
+#print axioms DiamondIntegral.Section4.RVFiniteBalancedTensor.comparison_fromInteger
+#print DiamondIntegral.Section4.RVFiniteBalancedTensor.evaluation_fromInteger
+#print axioms DiamondIntegral.Section4.RVFiniteBalancedTensor.evaluation_fromInteger
+#print DiamondIntegral.Section4.RVFiniteBalancedTensor.comparison_res
+#print axioms DiamondIntegral.Section4.RVFiniteBalancedTensor.comparison_res
+#print DiamondIntegral.Section4.RVFiniteBalancedTensor.evaluation_res
+#print axioms DiamondIntegral.Section4.RVFiniteBalancedTensor.evaluation_res
+#print DiamondIntegral.Section4.RVBoundedBalancedTensor.Source
+#print axioms DiamondIntegral.Section4.RVBoundedBalancedTensor.Source
+#print DiamondIntegral.Section4.RVBoundedBalancedTensor.resComparison
+#print axioms DiamondIntegral.Section4.RVBoundedBalancedTensor.resComparison
+#print DiamondIntegral.Section4.RVBoundedBalancedTensor.gammaComparison
+#print axioms DiamondIntegral.Section4.RVBoundedBalancedTensor.gammaComparison
+#print DiamondIntegral.Section4.RVBoundedBalancedTensor.comparison
+#print axioms DiamondIntegral.Section4.RVBoundedBalancedTensor.comparison
+#print DiamondIntegral.Section4.RVBoundedBalancedTensor.comparison_tmul
+#print axioms DiamondIntegral.Section4.RVBoundedBalancedTensor.comparison_tmul
+#print DiamondIntegral.Section4.RVBoundedBalancedTensor.resEvaluation
+#print axioms DiamondIntegral.Section4.RVBoundedBalancedTensor.resEvaluation
+#print DiamondIntegral.Section4.RVBoundedBalancedTensor.gammaEvaluation
+#print axioms DiamondIntegral.Section4.RVBoundedBalancedTensor.gammaEvaluation
+#print DiamondIntegral.Section4.RVBoundedBalancedTensor.evaluation
+#print axioms DiamondIntegral.Section4.RVBoundedBalancedTensor.evaluation
+#print DiamondIntegral.Section4.RVBoundedBalancedTensor.evaluation_tmul
+#print axioms DiamondIntegral.Section4.RVBoundedBalancedTensor.evaluation_tmul
+#print DiamondIntegral.Section4.RVBoundedBalancedTensor.resInclusion
+#print axioms DiamondIntegral.Section4.RVBoundedBalancedTensor.resInclusion
+#print DiamondIntegral.Section4.RVBoundedBalancedTensor.gammaInclusion
+#print axioms DiamondIntegral.Section4.RVBoundedBalancedTensor.gammaInclusion
+#print DiamondIntegral.Section4.RVBoundedBalancedTensor.sourceIntScalarTower
+#print axioms DiamondIntegral.Section4.RVBoundedBalancedTensor.sourceIntScalarTower
+#print DiamondIntegral.Section4.RVBoundedBalancedTensor.fromInteger
+#print axioms DiamondIntegral.Section4.RVBoundedBalancedTensor.fromInteger
+#print DiamondIntegral.Section4.RVBoundedBalancedTensor.fromInteger_tmul
+#print axioms DiamondIntegral.Section4.RVBoundedBalancedTensor.fromInteger_tmul
+#print DiamondIntegral.Section4.RVBoundedBalancedTensor.comparison_fromInteger
+#print axioms DiamondIntegral.Section4.RVBoundedBalancedTensor.comparison_fromInteger
+#print DiamondIntegral.Section4.RVBoundedBalancedTensor.evaluation_fromInteger
+#print axioms DiamondIntegral.Section4.RVBoundedBalancedTensor.evaluation_fromInteger
+#print DiamondIntegral.Section4.RVBoundedBalancedTensor.comparison_res
+#print axioms DiamondIntegral.Section4.RVBoundedBalancedTensor.comparison_res
+#print DiamondIntegral.Section4.RVBoundedBalancedTensor.evaluation_res
+#print axioms DiamondIntegral.Section4.RVBoundedBalancedTensor.evaluation_res
+#print DiamondIntegral.Section4.RVBoundedBalancedTensor.evaluation_independent_kind
+#print axioms DiamondIntegral.Section4.RVBoundedBalancedTensor.evaluation_independent_kind
+#print DiamondIntegral.Section4.RVBalancedSpecialClasses.pPreimage
+#print axioms DiamondIntegral.Section4.RVBalancedSpecialClasses.pPreimage
+#print DiamondIntegral.Section4.RVBalancedSpecialClasses.hPreimage
+#print axioms DiamondIntegral.Section4.RVBalancedSpecialClasses.hPreimage
+#print DiamondIntegral.Section4.RVBalancedSpecialClasses.radiusPreimage
+#print axioms DiamondIntegral.Section4.RVBalancedSpecialClasses.radiusPreimage
+#print DiamondIntegral.Section4.RVBalancedSpecialClasses.comparison_pPreimage
+#print axioms DiamondIntegral.Section4.RVBalancedSpecialClasses.comparison_pPreimage
+#print DiamondIntegral.Section4.RVBalancedSpecialClasses.comparison_hPreimage
+#print axioms DiamondIntegral.Section4.RVBalancedSpecialClasses.comparison_hPreimage
+#print DiamondIntegral.Section4.RVBalancedSpecialClasses.comparison_radiusPreimage
+#print axioms DiamondIntegral.Section4.RVBalancedSpecialClasses.comparison_radiusPreimage
+#print DiamondIntegral.Section4.RVBalancedSpecialClasses.evaluation_pPreimage
+#print axioms DiamondIntegral.Section4.RVBalancedSpecialClasses.evaluation_pPreimage
+#print DiamondIntegral.Section4.RVBalancedSpecialClasses.evaluation_hPreimage_geometric
+#print axioms DiamondIntegral.Section4.RVBalancedSpecialClasses.evaluation_hPreimage_geometric
+#print DiamondIntegral.Section4.RVBalancedSpecialClasses.evaluation_hPreimage_bounded
+#print axioms DiamondIntegral.Section4.RVBalancedSpecialClasses.evaluation_hPreimage_bounded
+#print DiamondIntegral.Section4.RVBalancedSpecialClasses.evaluation_radiusPreimage
+#print axioms DiamondIntegral.Section4.RVBalancedSpecialClasses.evaluation_radiusPreimage
+#print DiamondIntegral.Section4.RVMeasuredTensor.Source
+#print axioms DiamondIntegral.Section4.RVMeasuredTensor.Source
+#print DiamondIntegral.Section4.RVMeasuredTensor.comparison
+#print axioms DiamondIntegral.Section4.RVMeasuredTensor.comparison
+#print DiamondIntegral.Section4.RVMeasuredTensor.comparison_tmul
+#print axioms DiamondIntegral.Section4.RVMeasuredTensor.comparison_tmul
+#print DiamondIntegral.Section4.RVMeasuredTensor.evaluation
+#print axioms DiamondIntegral.Section4.RVMeasuredTensor.evaluation
+#print DiamondIntegral.Section4.RVMeasuredTensor.evaluation_tmul
+#print axioms DiamondIntegral.Section4.RVMeasuredTensor.evaluation_tmul
+#print DiamondIntegral.Section4.RVMeasuredSpecialClasses.rayChart
+#print axioms DiamondIntegral.Section4.RVMeasuredSpecialClasses.rayChart
+#print DiamondIntegral.Section4.RVMeasuredSpecialClasses.counterweightedChart
+#print axioms DiamondIntegral.Section4.RVMeasuredSpecialClasses.counterweightedChart
+#print DiamondIntegral.Section4.RVMeasuredSpecialClasses.pClass
+#print axioms DiamondIntegral.Section4.RVMeasuredSpecialClasses.pClass
+#print DiamondIntegral.Section4.RVMeasuredSpecialClasses.hClass
+#print axioms DiamondIntegral.Section4.RVMeasuredSpecialClasses.hClass
+#print DiamondIntegral.Section4.RVMeasuredSpecialClasses.pPreimage
+#print axioms DiamondIntegral.Section4.RVMeasuredSpecialClasses.pPreimage
+#print DiamondIntegral.Section4.RVMeasuredSpecialClasses.hPreimage
+#print axioms DiamondIntegral.Section4.RVMeasuredSpecialClasses.hPreimage
+#print DiamondIntegral.Section4.RVMeasuredSpecialClasses.comparison_pPreimage
+#print axioms DiamondIntegral.Section4.RVMeasuredSpecialClasses.comparison_pPreimage
+#print DiamondIntegral.Section4.RVMeasuredSpecialClasses.comparison_hPreimage
+#print axioms DiamondIntegral.Section4.RVMeasuredSpecialClasses.comparison_hPreimage
+#print DiamondIntegral.Section4.RVMeasuredSpecialClasses.pClass_mem
+#print axioms DiamondIntegral.Section4.RVMeasuredSpecialClasses.pClass_mem
+#print DiamondIntegral.Section4.RVMeasuredSpecialClasses.hClass_mem
+#print axioms DiamondIntegral.Section4.RVMeasuredSpecialClasses.hClass_mem
+#print DiamondIntegral.Section4.RVMeasuredSpecialClasses.right_class_evaluation
+#print axioms DiamondIntegral.Section4.RVMeasuredSpecialClasses.right_class_evaluation
+#print DiamondIntegral.Section4.RVMeasuredSpecialClasses.psi_positiveRay
+#print axioms DiamondIntegral.Section4.RVMeasuredSpecialClasses.psi_positiveRay
+#print DiamondIntegral.Section4.RVMeasuredSpecialClasses.evaluation_pPreimage
+#print axioms DiamondIntegral.Section4.RVMeasuredSpecialClasses.evaluation_pPreimage
+#print DiamondIntegral.Section4.RVMeasuredSpecialClasses.evaluation_hPreimage_geometric
+#print axioms DiamondIntegral.Section4.RVMeasuredSpecialClasses.evaluation_hPreimage_geometric
+#print DiamondIntegral.Section4.RVMeasuredSpecialClasses.evaluation_hPreimage_bounded
+#print axioms DiamondIntegral.Section4.RVMeasuredSpecialClasses.evaluation_hPreimage_bounded
+#print DiamondIntegral.Section4.RVSharpRingMap.freeMap
+#print axioms DiamondIntegral.Section4.RVSharpRingMap.freeMap
+#print DiamondIntegral.Section4.RVSharpRingMap.freeMap_symbol
+#print axioms DiamondIntegral.Section4.RVSharpRingMap.freeMap_symbol
+#print DiamondIntegral.Section4.RVSharpRingMap.relation_zero
+#print axioms DiamondIntegral.Section4.RVSharpRingMap.relation_zero
+#print DiamondIntegral.Section4.RVSharpRingMap.ideal_zero
+#print axioms DiamondIntegral.Section4.RVSharpRingMap.ideal_zero
+#print DiamondIntegral.Section4.RVSharpRingMap.sharp
+#print axioms DiamondIntegral.Section4.RVSharpRingMap.sharp
+#print DiamondIntegral.Section4.RVSharpRingMap.sharp_class
+#print axioms DiamondIntegral.Section4.RVSharpRingMap.sharp_class
+#print DiamondIntegral.Section4.RVSharpRingMap.sharp_class_mem
+#print axioms DiamondIntegral.Section4.RVSharpRingMap.sharp_class_mem
+#print DiamondIntegral.Section4.RVPointChoices.point_tuple_definable
+#print axioms DiamondIntegral.Section4.RVPointChoices.point_tuple_definable
+#print DiamondIntegral.Section4.RVPointChoices.pair_tuple_definable
+#print axioms DiamondIntegral.Section4.RVPointChoices.pair_tuple_definable
+#print DiamondIntegral.Section4.RVPointChoices.pointChart
+#print axioms DiamondIntegral.Section4.RVPointChoices.pointChart
+#print DiamondIntegral.Section4.RVPointChoices.pointChart_weight
+#print axioms DiamondIntegral.Section4.RVPointChoices.pointChart_weight
+#print DiamondIntegral.Section4.RVPointChoices.same_value_iso
+#print axioms DiamondIntegral.Section4.RVPointChoices.same_value_iso
+#print DiamondIntegral.Section4.RVPointChoices.pointChart_finite_values
+#print axioms DiamondIntegral.Section4.RVPointChoices.pointChart_finite_values
+#print DiamondIntegral.Section4.RVPointChoices.pointRESChart
+#print axioms DiamondIntegral.Section4.RVPointChoices.pointRESChart
+#print DiamondIntegral.Section4.GammaRadiusAnnulus.annulus
+#print axioms DiamondIntegral.Section4.GammaRadiusAnnulus.annulus
+#print DiamondIntegral.Section4.GammaRadiusAnnulus.annulus_definable
+#print axioms DiamondIntegral.Section4.GammaRadiusAnnulus.annulus_definable
+#print DiamondIntegral.Section4.GammaRadiusAnnulus.annulus_bounded
+#print axioms DiamondIntegral.Section4.GammaRadiusAnnulus.annulus_bounded
+#print DiamondIntegral.Section4.GammaRadiusAnnulus.annulus_one
+#print axioms DiamondIntegral.Section4.GammaRadiusAnnulus.annulus_one
+#print DiamondIntegral.Section4.GammaRadiusAnnulus.annulusFamily
+#print axioms DiamondIntegral.Section4.GammaRadiusAnnulus.annulusFamily
+#print DiamondIntegral.Section4.GammaRadiusAnnulus.annulusFamily_toEuler
+#print axioms DiamondIntegral.Section4.GammaRadiusAnnulus.annulusFamily_toEuler
+#print DiamondIntegral.Section4.GammaRadiusAnnulus.integral_annulus
+#print axioms DiamondIntegral.Section4.GammaRadiusAnnulus.integral_annulus
+#print DiamondIntegral.Section4.GammaRadiusAnnulus.annulusChart
+#print axioms DiamondIntegral.Section4.GammaRadiusAnnulus.annulusChart
+#print DiamondIntegral.Section4.GammaRadiusAnnulus.annulusClass
+#print axioms DiamondIntegral.Section4.GammaRadiusAnnulus.annulusClass
+#print DiamondIntegral.Section4.GammaRadiusAnnulus.specialize_annulus
+#print axioms DiamondIntegral.Section4.GammaRadiusAnnulus.specialize_annulus
+#print DiamondIntegral.Section4.GammaPointAlgebra.pointMonoidHom
+#print axioms DiamondIntegral.Section4.GammaPointAlgebra.pointMonoidHom
+#print DiamondIntegral.Section4.GammaPointAlgebra.pointGroupRing
+#print axioms DiamondIntegral.Section4.GammaPointAlgebra.pointGroupRing
+#print DiamondIntegral.Section4.GammaPointAlgebra.pointGroupRing_single
+#print axioms DiamondIntegral.Section4.GammaPointAlgebra.pointGroupRing_single
+#print DiamondIntegral.Section4.GammaPointAlgebra.pointGroupRing_eval
+#print axioms DiamondIntegral.Section4.GammaPointAlgebra.pointGroupRing_eval
+#print DiamondIntegral.Section4.GammaPointAlgebra.pointGroupRing_injective
+#print axioms DiamondIntegral.Section4.GammaPointAlgebra.pointGroupRing_injective
+#print DiamondIntegral.Section4.GammaPointAlgebra.pointGroupRing_coe
+#print axioms DiamondIntegral.Section4.GammaPointAlgebra.pointGroupRing_coe
+#print DiamondIntegral.Section4.GammaPointAlgebra.pointGroupRing_isDoublyBounded
+#print axioms DiamondIntegral.Section4.GammaPointAlgebra.pointGroupRing_isDoublyBounded
+#print DiamondIntegral.Section4.GammaPointAlgebra.totalEuler_pointGroupRing
+#print axioms DiamondIntegral.Section4.GammaPointAlgebra.totalEuler_pointGroupRing
+#print DiamondIntegral.Section4.GammaPointAlgebra.pointSubring
+#print axioms DiamondIntegral.Section4.GammaPointAlgebra.pointSubring
+#print DiamondIntegral.Section4.GammaPointAlgebra.ray_not_mem_pointSubring
+#print axioms DiamondIntegral.Section4.GammaPointAlgebra.ray_not_mem_pointSubring
+#print DiamondIntegral.Section4.GammaPointAlgebra.line_not_mem_pointSubring
+#print axioms DiamondIntegral.Section4.GammaPointAlgebra.line_not_mem_pointSubring
+#print DiamondIntegral.Section4.GammaFunctionPolynomial.sourceRing
+#print axioms DiamondIntegral.Section4.GammaFunctionPolynomial.sourceRing
+#print DiamondIntegral.Section4.GammaFunctionPolynomial.mem_sourceRing
+#print axioms DiamondIntegral.Section4.GammaFunctionPolynomial.mem_sourceRing
+#print DiamondIntegral.Section4.GammaFunctionPolynomial.C_mem_sourceRing
+#print axioms DiamondIntegral.Section4.GammaFunctionPolynomial.C_mem_sourceRing
+#print DiamondIntegral.Section4.GammaFunctionPolynomial.monomial_mem_sourceRing
+#print axioms DiamondIntegral.Section4.GammaFunctionPolynomial.monomial_mem_sourceRing
+#print DiamondIntegral.Section4.GammaFunctionPolynomial.ray_C_not_mem_sourceRing
+#print axioms DiamondIntegral.Section4.GammaFunctionPolynomial.ray_C_not_mem_sourceRing
+#print DiamondIntegral.Section4.GammaFunctionPolynomial.line_C_not_mem_sourceRing
+#print axioms DiamondIntegral.Section4.GammaFunctionPolynomial.line_C_not_mem_sourceRing
+#print DiamondIntegral.Section4.GammaFunctionPolynomial.assemble
+#print axioms DiamondIntegral.Section4.GammaFunctionPolynomial.assemble
+#print DiamondIntegral.Section4.GammaFunctionPolynomial.assemble_injective
+#print axioms DiamondIntegral.Section4.GammaFunctionPolynomial.assemble_injective
+#print DiamondIntegral.Section4.GammaFunctionPolynomial.assemble_surjective
+#print axioms DiamondIntegral.Section4.GammaFunctionPolynomial.assemble_surjective
+#print DiamondIntegral.Section4.GammaFunctionPolynomial.assemblyHom
+#print axioms DiamondIntegral.Section4.GammaFunctionPolynomial.assemblyHom
+#print DiamondIntegral.Section4.GammaFunctionPolynomial.sourceDecomposition
+#print axioms DiamondIntegral.Section4.GammaFunctionPolynomial.sourceDecomposition
+#print DiamondIntegral.Section4.GammaDefinableConvolution.baseSubgroup
+#print axioms DiamondIntegral.Section4.GammaDefinableConvolution.baseSubgroup
+#print DiamondIntegral.Section4.GammaDefinableConvolution.line_mem_base
+#print axioms DiamondIntegral.Section4.GammaDefinableConvolution.line_mem_base
+#print DiamondIntegral.Section4.GammaDefinableConvolution.point_mem_base
+#print axioms DiamondIntegral.Section4.GammaDefinableConvolution.point_mem_base
+#print DiamondIntegral.Section4.GammaDefinableConvolution.ray_mem_base
+#print axioms DiamondIntegral.Section4.GammaDefinableConvolution.ray_mem_base
+#print DiamondIntegral.Section4.GammaDefinableConvolution.base_generator_induction
+#print axioms DiamondIntegral.Section4.GammaDefinableConvolution.base_generator_induction
+#print DiamondIntegral.Section4.GammaDefinableConvolution.leftProduct
+#print axioms DiamondIntegral.Section4.GammaDefinableConvolution.leftProduct
+#print DiamondIntegral.Section4.GammaDefinableConvolution.rightProduct
+#print axioms DiamondIntegral.Section4.GammaDefinableConvolution.rightProduct
+#print DiamondIntegral.Section4.GammaDefinableConvolution.line_mul_mem_base
+#print axioms DiamondIntegral.Section4.GammaDefinableConvolution.line_mul_mem_base
+#print DiamondIntegral.Section4.GammaDefinableConvolution.point_mul_mem_base
+#print axioms DiamondIntegral.Section4.GammaDefinableConvolution.point_mul_mem_base
+#print DiamondIntegral.Section4.GammaDefinableConvolution.ray_mul_mem_base
+#print axioms DiamondIntegral.Section4.GammaDefinableConvolution.ray_mul_mem_base
+#print DiamondIntegral.Section4.GammaDefinableConvolution.mul_mem_base
+#print axioms DiamondIntegral.Section4.GammaDefinableConvolution.mul_mem_base
+#print DiamondIntegral.Section4.GammaDefinableConvolution.baseSubring
+#print axioms DiamondIntegral.Section4.GammaDefinableConvolution.baseSubring
+#print DiamondIntegral.Section4.GammaDefinableConvolution.convolution_integerDefinable
+#print axioms DiamondIntegral.Section4.GammaDefinableConvolution.convolution_integerDefinable
+#print DiamondIntegral.Section4.GammaFunctionRing.DefinableFunction
+#print axioms DiamondIntegral.Section4.GammaFunctionRing.DefinableFunction
+#print DiamondIntegral.Section4.GammaFunctionRing.evaluate
+#print axioms DiamondIntegral.Section4.GammaFunctionRing.evaluate
+#print DiamondIntegral.Section4.GammaFunctionRing.evaluate_injective
+#print axioms DiamondIntegral.Section4.GammaFunctionRing.evaluate_injective
+#print DiamondIntegral.Section4.GammaFunctionRing.evaluate_surjective
+#print axioms DiamondIntegral.Section4.GammaFunctionRing.evaluate_surjective
+#print DiamondIntegral.Section4.GammaFunctionRing.evaluationEquiv
+#print axioms DiamondIntegral.Section4.GammaFunctionRing.evaluationEquiv
+#print DiamondIntegral.Section4.GammaFunctionRing.functionCommRing
+#print axioms DiamondIntegral.Section4.GammaFunctionRing.functionCommRing
+#print DiamondIntegral.Section4.GammaFunctionRing.toEulerRingEquiv
+#print axioms DiamondIntegral.Section4.GammaFunctionRing.toEulerRingEquiv
+#print DiamondIntegral.Section4.GammaFunctionRing.toEuler_eval
+#print axioms DiamondIntegral.Section4.GammaFunctionRing.toEuler_eval
+#print DiamondIntegral.Section4.GammaFunctionRing.add_eval
+#print axioms DiamondIntegral.Section4.GammaFunctionRing.add_eval
+#print DiamondIntegral.Section4.GammaFunctionRing.mul_eval
+#print axioms DiamondIntegral.Section4.GammaFunctionRing.mul_eval
+#print DiamondIntegral.Section4.GammaFunctionRing.one_eval
+#print axioms DiamondIntegral.Section4.GammaFunctionRing.one_eval
+#print DiamondIntegral.Section4.GammaBoundedFunctions.boundedBaseSubring
+#print axioms DiamondIntegral.Section4.GammaBoundedFunctions.boundedBaseSubring
+#print DiamondIntegral.Section4.GammaBoundedFunctions.Name
+#print axioms DiamondIntegral.Section4.GammaBoundedFunctions.Name
+#print DiamondIntegral.Section4.GammaBoundedFunctions.zeroName
+#print axioms DiamondIntegral.Section4.GammaBoundedFunctions.zeroName
+#print DiamondIntegral.Section4.GammaBoundedFunctions.basePoint
+#print axioms DiamondIntegral.Section4.GammaBoundedFunctions.basePoint
+#print DiamondIntegral.Section4.GammaBoundedFunctions.baseInterval
+#print axioms DiamondIntegral.Section4.GammaBoundedFunctions.baseInterval
+#print DiamondIntegral.Section4.GammaBoundedFunctions.baseRayDifference
+#print axioms DiamondIntegral.Section4.GammaBoundedFunctions.baseRayDifference
+#print DiamondIntegral.Section4.GammaBoundedFunctions.basePoint_zero
+#print axioms DiamondIntegral.Section4.GammaBoundedFunctions.basePoint_zero
+#print DiamondIntegral.Section4.GammaBoundedFunctions.baseRayDifference_coe
+#print axioms DiamondIntegral.Section4.GammaBoundedFunctions.baseRayDifference_coe
+#print DiamondIntegral.Section4.GammaBoundedFunctions.pointDefault
+#print axioms DiamondIntegral.Section4.GammaBoundedFunctions.pointDefault
+#print DiamondIntegral.Section4.GammaBoundedFunctions.rayDefault
+#print axioms DiamondIntegral.Section4.GammaBoundedFunctions.rayDefault
+#print DiamondIntegral.Section4.GammaBoundedFunctions.pointDefault_weighted
+#print axioms DiamondIntegral.Section4.GammaBoundedFunctions.pointDefault_weighted
+#print DiamondIntegral.Section4.GammaBoundedFunctions.rayDefault_weighted
+#print axioms DiamondIntegral.Section4.GammaBoundedFunctions.rayDefault_weighted
+#print DiamondIntegral.Section4.GammaBoundedFunctions.baseCombination
+#print axioms DiamondIntegral.Section4.GammaBoundedFunctions.baseCombination
+#print DiamondIntegral.Section4.GammaBoundedFunctions.baseCombination_coe
+#print axioms DiamondIntegral.Section4.GammaBoundedFunctions.baseCombination_coe
+#print DiamondIntegral.Section4.GammaBoundedFunctions.base_generator_expansion
+#print axioms DiamondIntegral.Section4.GammaBoundedFunctions.base_generator_expansion
+#print DiamondIntegral.Section4.GammaBoundedFunctions.base_bounded_additive_ext
+#print axioms DiamondIntegral.Section4.GammaBoundedFunctions.base_bounded_additive_ext
+#print DiamondIntegral.Section4.GammaBoundedFunctions.baseBoundedEuler
+#print axioms DiamondIntegral.Section4.GammaBoundedFunctions.baseBoundedEuler
+#print DiamondIntegral.Section4.GammaBoundedFunctions.baseBoundedEuler_point
+#print axioms DiamondIntegral.Section4.GammaBoundedFunctions.baseBoundedEuler_point
+#print DiamondIntegral.Section4.GammaBoundedFunctions.baseBoundedEuler_interval
+#print axioms DiamondIntegral.Section4.GammaBoundedFunctions.baseBoundedEuler_interval
+#print DiamondIntegral.Section4.GammaBoundedComparison.changeBaseKind
+#print axioms DiamondIntegral.Section4.GammaBoundedComparison.changeBaseKind
+#print DiamondIntegral.Section4.GammaBoundedComparison.changeBaseKind_eval
+#print axioms DiamondIntegral.Section4.GammaBoundedComparison.changeBaseKind_eval
+#print DiamondIntegral.Section4.GammaBoundedComparison.baseBoundedEuler_changeKind
+#print axioms DiamondIntegral.Section4.GammaBoundedComparison.baseBoundedEuler_changeKind
+#print DiamondIntegral.Section4.GammaBoundedQuotient.baseEulerGenerators
+#print axioms DiamondIntegral.Section4.GammaBoundedQuotient.baseEulerGenerators
+#print DiamondIntegral.Section4.GammaBoundedQuotient.baseEulerIdeal
+#print axioms DiamondIntegral.Section4.GammaBoundedQuotient.baseEulerIdeal
+#print DiamondIntegral.Section4.GammaBoundedQuotient.BoundedBaseQuotient
+#print axioms DiamondIntegral.Section4.GammaBoundedQuotient.BoundedBaseQuotient
+#print DiamondIntegral.Section4.GammaBoundedQuotient.baseEulerIdeal_le_kernel
+#print axioms DiamondIntegral.Section4.GammaBoundedQuotient.baseEulerIdeal_le_kernel
+#print DiamondIntegral.Section4.GammaBoundedQuotient.baseQuotientMap
+#print axioms DiamondIntegral.Section4.GammaBoundedQuotient.baseQuotientMap
+#print DiamondIntegral.Section4.GammaBoundedQuotient.baseQuotientMap_point
+#print axioms DiamondIntegral.Section4.GammaBoundedQuotient.baseQuotientMap_point
+#print DiamondIntegral.Section4.GammaBoundedQuotient.baseQuotientMap_interval
+#print axioms DiamondIntegral.Section4.GammaBoundedQuotient.baseQuotientMap_interval
+#print DiamondIntegral.Section4.GammaBoundedQuotient.baseQuotientMap_eq_intEuler
+#print axioms DiamondIntegral.Section4.GammaBoundedQuotient.baseQuotientMap_eq_intEuler
+#print DiamondIntegral.Section4.GammaBoundedQuotient.baseEulerIdeal_eq_kernel
+#print axioms DiamondIntegral.Section4.GammaBoundedQuotient.baseEulerIdeal_eq_kernel
+#print DiamondIntegral.Section4.GammaBoundedQuotient.boundedBaseQuotientEquiv
+#print axioms DiamondIntegral.Section4.GammaBoundedQuotient.boundedBaseQuotientEquiv
+#print DiamondIntegral.Section4.RVOrdinaryRing.Generator
+#print axioms DiamondIntegral.Section4.RVOrdinaryRing.Generator
+#print DiamondIntegral.Section4.RVOrdinaryRing.symbol
+#print axioms DiamondIntegral.Section4.RVOrdinaryRing.symbol
+#print DiamondIntegral.Section4.RVOrdinaryRing.Relation
+#print axioms DiamondIntegral.Section4.RVOrdinaryRing.Relation
+#print DiamondIntegral.Section4.RVOrdinaryRing.relationIdeal
+#print axioms DiamondIntegral.Section4.RVOrdinaryRing.relationIdeal
+#print DiamondIntegral.Section4.RVOrdinaryRing.Ring
+#print axioms DiamondIntegral.Section4.RVOrdinaryRing.Ring
+#print DiamondIntegral.Section4.RVOrdinaryRing.objectClass
+#print axioms DiamondIntegral.Section4.RVOrdinaryRing.objectClass
+#print DiamondIntegral.Section4.RVOrdinaryRing.relation_zero
+#print axioms DiamondIntegral.Section4.RVOrdinaryRing.relation_zero
+#print DiamondIntegral.Section4.RVOrdinaryRing.objectClass_unit
+#print axioms DiamondIntegral.Section4.RVOrdinaryRing.objectClass_unit
+#print DiamondIntegral.Section4.RVOrdinaryRing.objectClass_product
+#print axioms DiamondIntegral.Section4.RVOrdinaryRing.objectClass_product
+#print DiamondIntegral.Section4.RVOrdinaryRing.objectClass_iso
+#print axioms DiamondIntegral.Section4.RVOrdinaryRing.objectClass_iso
+#print DiamondIntegral.Section4.RVOrdinaryRing.objectClass_empty
+#print axioms DiamondIntegral.Section4.RVOrdinaryRing.objectClass_empty
+#print DiamondIntegral.Section4.RVOrdinaryRing.objectClass_scissor
+#print axioms DiamondIntegral.Section4.RVOrdinaryRing.objectClass_scissor
+#print DiamondIntegral.Section4.RVOrdinaryRing.forgetInvariant
+#print axioms DiamondIntegral.Section4.RVOrdinaryRing.forgetInvariant
+#print DiamondIntegral.Section4.RVOrdinaryRing.forget
+#print axioms DiamondIntegral.Section4.RVOrdinaryRing.forget
+#print DiamondIntegral.Section4.RVOrdinaryRing.forget_objectClass
+#print axioms DiamondIntegral.Section4.RVOrdinaryRing.forget_objectClass
+#print DiamondIntegral.Section4.RVOrdinaryRing.Invariant
+#print axioms DiamondIntegral.Section4.RVOrdinaryRing.Invariant
+#print DiamondIntegral.Section4.RVOrdinaryRing.freeMap
+#print axioms DiamondIntegral.Section4.RVOrdinaryRing.freeMap
+#print DiamondIntegral.Section4.RVOrdinaryRing.freeMap_symbol
+#print axioms DiamondIntegral.Section4.RVOrdinaryRing.freeMap_symbol
+#print DiamondIntegral.Section4.RVOrdinaryRing.invariant_relation_zero
+#print axioms DiamondIntegral.Section4.RVOrdinaryRing.invariant_relation_zero
+#print DiamondIntegral.Section4.RVOrdinaryRing.invariant_ideal_zero
+#print axioms DiamondIntegral.Section4.RVOrdinaryRing.invariant_ideal_zero
+#print DiamondIntegral.Section4.RVOrdinaryRing.lift
+#print axioms DiamondIntegral.Section4.RVOrdinaryRing.lift
+#print DiamondIntegral.Section4.RVOrdinaryRing.lift_objectClass
+#print axioms DiamondIntegral.Section4.RVOrdinaryRing.lift_objectClass
+#print DiamondIntegral.Section4.RVOrdinaryRing.hom_ext
+#print axioms DiamondIntegral.Section4.RVOrdinaryRing.hom_ext
+#print DiamondIntegral.Section4.RVOrdinaryGrading.gradingInvariant
+#print axioms DiamondIntegral.Section4.RVOrdinaryGrading.gradingInvariant
+#print DiamondIntegral.Section4.RVOrdinaryGrading.coaction
+#print axioms DiamondIntegral.Section4.RVOrdinaryGrading.coaction
+#print DiamondIntegral.Section4.RVOrdinaryGrading.coaction_class
+#print axioms DiamondIntegral.Section4.RVOrdinaryGrading.coaction_class
+#print DiamondIntegral.Section4.RVOrdinaryGrading.coaction_counit
+#print axioms DiamondIntegral.Section4.RVOrdinaryGrading.coaction_counit
+#print DiamondIntegral.Section4.RVOrdinaryGrading.coaction_coassoc
+#print axioms DiamondIntegral.Section4.RVOrdinaryGrading.coaction_coassoc
+#print DiamondIntegral.Section4.RVOrdinaryGrading.gradingCoaction
+#print axioms DiamondIntegral.Section4.RVOrdinaryGrading.gradingCoaction
+#print DiamondIntegral.Section4.RVOrdinaryGrading.gradedPiece
+#print axioms DiamondIntegral.Section4.RVOrdinaryGrading.gradedPiece
+#print DiamondIntegral.Section4.RVOrdinaryGrading.gradedRing
+#print axioms DiamondIntegral.Section4.RVOrdinaryGrading.gradedRing
+#print DiamondIntegral.Section4.RVOrdinaryGrading.class_mem
+#print axioms DiamondIntegral.Section4.RVOrdinaryGrading.class_mem
+#print DiamondIntegral.Section4.RVOrdinaryGrading.forget_coaction
+#print axioms DiamondIntegral.Section4.RVOrdinaryGrading.forget_coaction
+#print DiamondIntegral.Section4.RVOrdinaryGrading.forget_mem
+#print axioms DiamondIntegral.Section4.RVOrdinaryGrading.forget_mem
+#print DiamondIntegral.Section4.RVOrdinaryGrading.forget_component
+#print axioms DiamondIntegral.Section4.RVOrdinaryGrading.forget_component
+#print DiamondIntegral.Section4.RVOrdinaryMaps.resInvariant
+#print axioms DiamondIntegral.Section4.RVOrdinaryMaps.resInvariant
+#print DiamondIntegral.Section4.RVOrdinaryMaps.ofRES
+#print axioms DiamondIntegral.Section4.RVOrdinaryMaps.ofRES
+#print DiamondIntegral.Section4.RVOrdinaryMaps.ofRES_class
+#print axioms DiamondIntegral.Section4.RVOrdinaryMaps.ofRES_class
+#print DiamondIntegral.Section4.RVOrdinaryMaps.forget_ofRES
+#print axioms DiamondIntegral.Section4.RVOrdinaryMaps.forget_ofRES
+#print DiamondIntegral.Section4.RVOrdinaryMaps.boundedForget
+#print axioms DiamondIntegral.Section4.RVOrdinaryMaps.boundedForget
+#print DiamondIntegral.Section4.RVOrdinaryMaps.boundedForget_class
+#print axioms DiamondIntegral.Section4.RVOrdinaryMaps.boundedForget_class
+#print DiamondIntegral.Section4.RVOrdinaryMaps.boundedForget_ofRES
+#print axioms DiamondIntegral.Section4.RVOrdinaryMaps.boundedForget_ofRES
+#print DiamondIntegral.Section4.RVNamedMultiplication.raw_graph_definable
+#print axioms DiamondIntegral.Section4.RVNamedMultiplication.raw_graph_definable
+#print DiamondIntegral.Section4.RVNamedMultiplication.graph_definable
+#print axioms DiamondIntegral.Section4.RVNamedMultiplication.graph_definable
+#print DiamondIntegral.Section4.RVNamedMultiplication.scale
+#print axioms DiamondIntegral.Section4.RVNamedMultiplication.scale
+#print DiamondIntegral.Section4.RVNamedMultiplication.graphOn_definable
+#print axioms DiamondIntegral.Section4.RVNamedMultiplication.graphOn_definable
+#print DiamondIntegral.Section4.RVScaledRays.unitOfCode
+#print axioms DiamondIntegral.Section4.RVScaledRays.unitOfCode
+#print DiamondIntegral.Section4.RVScaledRays.inverseCode
+#print axioms DiamondIntegral.Section4.RVScaledRays.inverseCode
+#print DiamondIntegral.Section4.RVScaledRays.scale_nonzero
+#print axioms DiamondIntegral.Section4.RVScaledRays.scale_nonzero
+#print DiamondIntegral.Section4.RVScaledRays.inverseCode_value
+#print axioms DiamondIntegral.Section4.RVScaledRays.inverseCode_value
+#print DiamondIntegral.Section4.RVScaledRays.scale_inverse
+#print axioms DiamondIntegral.Section4.RVScaledRays.scale_inverse
+#print DiamondIntegral.Section4.RVScaledRays.scale_injective
+#print axioms DiamondIntegral.Section4.RVScaledRays.scale_injective
+#print DiamondIntegral.Section4.RVScaledRays.above
+#print axioms DiamondIntegral.Section4.RVScaledRays.above
+#print DiamondIntegral.Section4.RVScaledRays.above_definable
+#print axioms DiamondIntegral.Section4.RVScaledRays.above_definable
+#print DiamondIntegral.Section4.RVScaledRays.aboveChart
+#print axioms DiamondIntegral.Section4.RVScaledRays.aboveChart
+#print DiamondIntegral.Section4.RVScaledRays.scale_ray_bijective
+#print axioms DiamondIntegral.Section4.RVScaledRays.scale_ray_bijective
+#print DiamondIntegral.Section4.RVScaledRays.annulus_union_above
+#print axioms DiamondIntegral.Section4.RVScaledRays.annulus_union_above
+#print DiamondIntegral.Section4.RVScaledRays.annulus_inter_above
+#print axioms DiamondIntegral.Section4.RVScaledRays.annulus_inter_above
+#print DiamondIntegral.Section4.RVScaledRays.rayIso
+#print axioms DiamondIntegral.Section4.RVScaledRays.rayIso
+#print DiamondIntegral.Section4.RVOrdinarySharpScissors.sameSupportIso
+#print axioms DiamondIntegral.Section4.RVOrdinarySharpScissors.sameSupportIso
+#print DiamondIntegral.Section4.RVOrdinarySharpScissors.class_eq_of_support_eq
+#print axioms DiamondIntegral.Section4.RVOrdinarySharpScissors.class_eq_of_support_eq
+#print DiamondIntegral.Section4.RVOrdinarySharpScissors.scissor_ofTotal
+#print axioms DiamondIntegral.Section4.RVOrdinarySharpScissors.scissor_ofTotal
+#print DiamondIntegral.Section4.RVOrdinarySharpScissors.empty_support
+#print axioms DiamondIntegral.Section4.RVOrdinarySharpScissors.empty_support
+#print DiamondIntegral.Section4.RVOrdinaryRadius.annulus_zero
+#print axioms DiamondIntegral.Section4.RVOrdinaryRadius.annulus_zero
+#print DiamondIntegral.Section4.RVOrdinaryRadius.boundedForget_radiusGenerator
+#print axioms DiamondIntegral.Section4.RVOrdinaryRadius.boundedForget_radiusGenerator
+#print DiamondIntegral.Section4.RVOrdinaryRadius.boundedForget_pGamma
+#print axioms DiamondIntegral.Section4.RVOrdinaryRadius.boundedForget_pGamma
+#print DiamondIntegral.Section4.RVOrdinaryRadius.radiusIdeal_le_ker
+#print axioms DiamondIntegral.Section4.RVOrdinaryRadius.radiusIdeal_le_ker
+#print DiamondIntegral.Section4.RVOrdinaryRadius.forget
+#print axioms DiamondIntegral.Section4.RVOrdinaryRadius.forget
+#print DiamondIntegral.Section4.RVOrdinaryRadius.forget_quotient
+#print axioms DiamondIntegral.Section4.RVOrdinaryRadius.forget_quotient
+#print DiamondIntegral.Section4.RVOrdinaryRadius.forget_ofRES
+#print axioms DiamondIntegral.Section4.RVOrdinaryRadius.forget_ofRES
+#print DiamondIntegral.Section4.RVMeasuredScaling.scaled_class
+#print axioms DiamondIntegral.Section4.RVMeasuredScaling.scaled_class
+#print DiamondIntegral.Section4.RVMeasuredScaling.rayIso
+#print axioms DiamondIntegral.Section4.RVMeasuredScaling.rayIso
+#print DiamondIntegral.Section4.RVMeasuredScaling.above_class
+#print axioms DiamondIntegral.Section4.RVMeasuredScaling.above_class
+#print DiamondIntegral.Section4.RVMeasuredScaling.pointIso
+#print axioms DiamondIntegral.Section4.RVMeasuredScaling.pointIso
+#print DiamondIntegral.Section4.RVMeasuredScaling.point_class
+#print axioms DiamondIntegral.Section4.RVMeasuredScaling.point_class
+#print DiamondIntegral.Section4.RVOrdinaryMapGradings.ofRES_coaction
+#print axioms DiamondIntegral.Section4.RVOrdinaryMapGradings.ofRES_coaction
+#print DiamondIntegral.Section4.RVOrdinaryMapGradings.ofRES_mem
+#print axioms DiamondIntegral.Section4.RVOrdinaryMapGradings.ofRES_mem
+#print DiamondIntegral.Section4.RVOrdinaryMapGradings.gradedOfRES
+#print axioms DiamondIntegral.Section4.RVOrdinaryMapGradings.gradedOfRES
+#print DiamondIntegral.Section4.RVOrdinaryMapGradings.boundedForget_mem
+#print axioms DiamondIntegral.Section4.RVOrdinaryMapGradings.boundedForget_mem
+#print DiamondIntegral.Section4.RVOrdinaryMapGradings.gradedBoundedForget
+#print axioms DiamondIntegral.Section4.RVOrdinaryMapGradings.gradedBoundedForget
+#print DiamondIntegral.Section4.RVOrdinaryMapGradings.radiusForget_mem
+#print axioms DiamondIntegral.Section4.RVOrdinaryMapGradings.radiusForget_mem
+#print DiamondIntegral.Section4.RVOrdinaryMapGradings.gradedRadiusForget
+#print axioms DiamondIntegral.Section4.RVOrdinaryMapGradings.gradedRadiusForget
+#print DiamondIntegral.Section4.RVMeasuredRadius.ray_scissor
+#print axioms DiamondIntegral.Section4.RVMeasuredRadius.ray_scissor
+#print DiamondIntegral.Section4.RVMeasuredRadius.forget_radiusGenerator
+#print axioms DiamondIntegral.Section4.RVMeasuredRadius.forget_radiusGenerator
+#print DiamondIntegral.Section4.RVMeasuredRadius.forget_pGamma
+#print axioms DiamondIntegral.Section4.RVMeasuredRadius.forget_pGamma
+#print DiamondIntegral.Section4.RVMeasuredRadius.radiusIdeal_le_comap_pIdeal
+#print axioms DiamondIntegral.Section4.RVMeasuredRadius.radiusIdeal_le_comap_pIdeal
+#print DiamondIntegral.Section4.RVMeasuredPQuotient.pIdeal
+#print axioms DiamondIntegral.Section4.RVMeasuredPQuotient.pIdeal
+#print DiamondIntegral.Section4.RVMeasuredPQuotient.pIdeal_homogeneous
+#print axioms DiamondIntegral.Section4.RVMeasuredPQuotient.pIdeal_homogeneous
+#print DiamondIntegral.Section4.RVMeasuredPQuotient.Ring
+#print axioms DiamondIntegral.Section4.RVMeasuredPQuotient.Ring
+#print DiamondIntegral.Section4.RVMeasuredPQuotient.quotient
+#print axioms DiamondIntegral.Section4.RVMeasuredPQuotient.quotient
+#print DiamondIntegral.Section4.RVMeasuredPQuotient.ideal_coefficients
+#print axioms DiamondIntegral.Section4.RVMeasuredPQuotient.ideal_coefficients
+#print DiamondIntegral.Section4.RVMeasuredPQuotient.coaction
+#print axioms DiamondIntegral.Section4.RVMeasuredPQuotient.coaction
+#print DiamondIntegral.Section4.RVMeasuredPQuotient.piece
+#print axioms DiamondIntegral.Section4.RVMeasuredPQuotient.piece
+#print DiamondIntegral.Section4.RVMeasuredPQuotient.gradedRing
+#print axioms DiamondIntegral.Section4.RVMeasuredPQuotient.gradedRing
+#print DiamondIntegral.Section4.RVMeasuredPQuotient.quotient_mem
+#print axioms DiamondIntegral.Section4.RVMeasuredPQuotient.quotient_mem
+#print DiamondIntegral.Section4.RVMeasuredPQuotient.p_zero
+#print axioms DiamondIntegral.Section4.RVMeasuredPQuotient.p_zero
+#print DiamondIntegral.Section4.RVMeasuredPQuotient.boundedMap
+#print axioms DiamondIntegral.Section4.RVMeasuredPQuotient.boundedMap
+#print DiamondIntegral.Section4.RVMeasuredPQuotient.radiusIdeal_le_ker
+#print axioms DiamondIntegral.Section4.RVMeasuredPQuotient.radiusIdeal_le_ker
+#print DiamondIntegral.Section4.RVMeasuredPQuotient.forget
+#print axioms DiamondIntegral.Section4.RVMeasuredPQuotient.forget
+#print DiamondIntegral.Section4.RVMeasuredPQuotient.forget_quotient
+#print axioms DiamondIntegral.Section4.RVMeasuredPQuotient.forget_quotient
+#print DiamondIntegral.Section4.RVMeasuredPQuotient.boundedMap_mem
+#print axioms DiamondIntegral.Section4.RVMeasuredPQuotient.boundedMap_mem
+#print DiamondIntegral.Section4.RVMeasuredPQuotient.forget_mem
+#print axioms DiamondIntegral.Section4.RVMeasuredPQuotient.forget_mem
+#print DiamondIntegral.Section4.RVMeasuredPQuotient.gradedForget
+#print axioms DiamondIntegral.Section4.RVMeasuredPQuotient.gradedForget
+#print DiamondIntegral.Section4.RVMeasuredPQuotient.ofRES
+#print axioms DiamondIntegral.Section4.RVMeasuredPQuotient.ofRES
+#print DiamondIntegral.Section4.RVMeasuredPQuotient.ofRES_mem
+#print axioms DiamondIntegral.Section4.RVMeasuredPQuotient.ofRES_mem
+#print DiamondIntegral.Section4.RVMeasuredPQuotient.forget_ofRES
+#print axioms DiamondIntegral.Section4.RVMeasuredPQuotient.forget_ofRES
+#print DiamondIntegral.Section4.RVOrdinaryPNormalization.pClass
+#print axioms DiamondIntegral.Section4.RVOrdinaryPNormalization.pClass
+#print DiamondIntegral.Section4.RVOrdinaryPNormalization.forget_pClass
+#print axioms DiamondIntegral.Section4.RVOrdinaryPNormalization.forget_pClass
+#print DiamondIntegral.Section4.RVOrdinaryPNormalization.pIdeal
+#print axioms DiamondIntegral.Section4.RVOrdinaryPNormalization.pIdeal
+#print DiamondIntegral.Section4.RVOrdinaryPNormalization.Ring
+#print axioms DiamondIntegral.Section4.RVOrdinaryPNormalization.Ring
+#print DiamondIntegral.Section4.RVOrdinaryPNormalization.quotient
+#print axioms DiamondIntegral.Section4.RVOrdinaryPNormalization.quotient
+#print DiamondIntegral.Section4.RVOrdinaryPNormalization.p_one
+#print axioms DiamondIntegral.Section4.RVOrdinaryPNormalization.p_one
+#print DiamondIntegral.Section4.RVOrdinaryPNormalization.forget
+#print axioms DiamondIntegral.Section4.RVOrdinaryPNormalization.forget
+#print DiamondIntegral.Section4.RVOrdinaryPNormalization.forget_quotient
+#print axioms DiamondIntegral.Section4.RVOrdinaryPNormalization.forget_quotient
+#print DiamondIntegral.Section4.RVOrdinaryPNormalization.ofRES
+#print axioms DiamondIntegral.Section4.RVOrdinaryPNormalization.ofRES
+#print DiamondIntegral.Section4.RVOrdinaryPNormalization.forget_ofRES
+#print axioms DiamondIntegral.Section4.RVOrdinaryPNormalization.forget_ofRES
+#print DiamondIntegral.Section4.RVMeasuredPDegreeZero.ideal_le_zero_ker
+#print axioms DiamondIntegral.Section4.RVMeasuredPDegreeZero.ideal_le_zero_ker
+#print DiamondIntegral.Section4.RVMeasuredPDegreeZero.zeroEquiv
+#print axioms DiamondIntegral.Section4.RVMeasuredPDegreeZero.zeroEquiv
+#print DiamondIntegral.Section4.RVMeasuredPDegreeZero.zeroEquiv_apply
+#print axioms DiamondIntegral.Section4.RVMeasuredPDegreeZero.zeroEquiv_apply
+#print DiamondIntegral.Section4.RVMeasuredPDegreeZero.ofRES_injective_on_degree_zero
+#print axioms DiamondIntegral.Section4.RVMeasuredPDegreeZero.ofRES_injective_on_degree_zero
+#print DiamondIntegral.Section4.RVMeasuredPDegreeZero.radiusZeroEquiv
+#print axioms DiamondIntegral.Section4.RVMeasuredPDegreeZero.radiusZeroEquiv
+#print DiamondIntegral.Section4.RVMeasuredPDegreeZero.radiusZeroEquiv_apply
+#print axioms DiamondIntegral.Section4.RVMeasuredPDegreeZero.radiusZeroEquiv_apply
+#print DiamondIntegral.Section4.RVMeasuredPDegreeZero.weightMap
+#print axioms DiamondIntegral.Section4.RVMeasuredPDegreeZero.weightMap
+#print DiamondIntegral.Section4.RVMeasuredPDegreeZero.weightMap_injective
+#print axioms DiamondIntegral.Section4.RVMeasuredPDegreeZero.weightMap_injective
+#print DiamondIntegral.Section4.RVMeasuredPDegreeZero.zero_ne_one
+#print axioms DiamondIntegral.Section4.RVMeasuredPDegreeZero.zero_ne_one
+#print DiamondIntegral.Section4.RVOrdinaryDegreeZero.value
+#print axioms DiamondIntegral.Section4.RVOrdinaryDegreeZero.value
+#print DiamondIntegral.Section4.RVOrdinaryDegreeZero.invariant
+#print axioms DiamondIntegral.Section4.RVOrdinaryDegreeZero.invariant
+#print DiamondIntegral.Section4.RVOrdinaryDegreeZero.full
+#print axioms DiamondIntegral.Section4.RVOrdinaryDegreeZero.full
+#print DiamondIntegral.Section4.RVOrdinaryDegreeZero.full_class
+#print axioms DiamondIntegral.Section4.RVOrdinaryDegreeZero.full_class
+#print DiamondIntegral.Section4.RVOrdinaryDegreeZero.full_ofRES
+#print axioms DiamondIntegral.Section4.RVOrdinaryDegreeZero.full_ofRES
+#print DiamondIntegral.Section4.RVOrdinaryDegreeZero.full_left_inverse
+#print axioms DiamondIntegral.Section4.RVOrdinaryDegreeZero.full_left_inverse
+#print DiamondIntegral.Section4.RVOrdinaryDegreeZero.full_injective_on_degree_zero
+#print axioms DiamondIntegral.Section4.RVOrdinaryDegreeZero.full_injective_on_degree_zero
+#print DiamondIntegral.Section4.RVOrdinaryDegreeZero.full_projection_range
+#print axioms DiamondIntegral.Section4.RVOrdinaryDegreeZero.full_projection_range
+#print DiamondIntegral.Section4.RVOrdinaryDegreeZero.full_degree_zero_surjective
+#print axioms DiamondIntegral.Section4.RVOrdinaryDegreeZero.full_degree_zero_surjective
+#print DiamondIntegral.Section4.RVOrdinaryDegreeZero.forget_full_square
+#print axioms DiamondIntegral.Section4.RVOrdinaryDegreeZero.forget_full_square
+#print DiamondIntegral.Section4.RVOrdinaryDegreeZero.zeroEquiv
+#print axioms DiamondIntegral.Section4.RVOrdinaryDegreeZero.zeroEquiv
+#print DiamondIntegral.Section4.RVOrdinaryDegreeZero.zeroEquiv_apply
+#print axioms DiamondIntegral.Section4.RVOrdinaryDegreeZero.zeroEquiv_apply
+#print DiamondIntegral.Section4.RingHomGluing.glue
+#print axioms DiamondIntegral.Section4.RingHomGluing.glue
+#print DiamondIntegral.Section4.RingHomGluing.glue_apply
+#print axioms DiamondIntegral.Section4.RingHomGluing.glue_apply
+#print DiamondIntegral.Section4.RESAlternativeReduction.pointRelations
+#print axioms DiamondIntegral.Section4.RESAlternativeReduction.pointRelations
+#print DiamondIntegral.Section4.RESAlternativeReduction.pointIdeal
+#print axioms DiamondIntegral.Section4.RESAlternativeReduction.pointIdeal
+#print DiamondIntegral.Section4.RESAlternativeReduction.pointRelations_mem
+#print axioms DiamondIntegral.Section4.RESAlternativeReduction.pointRelations_mem
+#print DiamondIntegral.Section4.RESAlternativeReduction.pointIdeal_homogeneous
+#print axioms DiamondIntegral.Section4.RESAlternativeReduction.pointIdeal_homogeneous
+#print DiamondIntegral.Section4.RESAlternativeReduction.Ring
+#print axioms DiamondIntegral.Section4.RESAlternativeReduction.Ring
+#print DiamondIntegral.Section4.RESAlternativeReduction.quotient
+#print axioms DiamondIntegral.Section4.RESAlternativeReduction.quotient
+#print DiamondIntegral.Section4.RESAlternativeReduction.fromMeasured
+#print axioms DiamondIntegral.Section4.RESAlternativeReduction.fromMeasured
+#print DiamondIntegral.Section4.RESAlternativeReduction.ideal_coefficients
+#print axioms DiamondIntegral.Section4.RESAlternativeReduction.ideal_coefficients
+#print DiamondIntegral.Section4.RESAlternativeReduction.coaction
+#print axioms DiamondIntegral.Section4.RESAlternativeReduction.coaction
+#print DiamondIntegral.Section4.RESAlternativeReduction.piece
+#print axioms DiamondIntegral.Section4.RESAlternativeReduction.piece
+#print DiamondIntegral.Section4.RESAlternativeReduction.gradedRing
+#print axioms DiamondIntegral.Section4.RESAlternativeReduction.gradedRing
+#print DiamondIntegral.Section4.RESAlternativeReduction.quotient_mem
+#print axioms DiamondIntegral.Section4.RESAlternativeReduction.quotient_mem
+#print DiamondIntegral.Section4.RESAlternativeReduction.torusClass
+#print axioms DiamondIntegral.Section4.RESAlternativeReduction.torusClass
+#print DiamondIntegral.Section4.RESAlternativeReduction.pointClass
+#print axioms DiamondIntegral.Section4.RESAlternativeReduction.pointClass
+#print DiamondIntegral.Section4.RESAlternativeReduction.weightCharacter
+#print axioms DiamondIntegral.Section4.RESAlternativeReduction.weightCharacter
+#print DiamondIntegral.Section4.RESAlternativeReduction.weight_mem
+#print axioms DiamondIntegral.Section4.RESAlternativeReduction.weight_mem
+#print DiamondIntegral.Section4.RESAlternativeReduction.torus_mem
+#print axioms DiamondIntegral.Section4.RESAlternativeReduction.torus_mem
+#print DiamondIntegral.Section4.RESAlternativeReduction.point_mem
+#print axioms DiamondIntegral.Section4.RESAlternativeReduction.point_mem
+#print DiamondIntegral.Section4.RESAlternativeReduction.torus_plus_point_zero
+#print axioms DiamondIntegral.Section4.RESAlternativeReduction.torus_plus_point_zero
+#print DiamondIntegral.Section4.RESAlternativeReduction.weighted_point
+#print axioms DiamondIntegral.Section4.RESAlternativeReduction.weighted_point
+#print DiamondIntegral.Section4.RESAlternativeReduction.weighted_torus
+#print axioms DiamondIntegral.Section4.RESAlternativeReduction.weighted_torus
+#print DiamondIntegral.Section4.RESAlternativeReduction.pointIdeal_le_zero_ker
+#print axioms DiamondIntegral.Section4.RESAlternativeReduction.pointIdeal_le_zero_ker
+#print DiamondIntegral.Section4.RESAlternativeReduction.zeroEquiv
+#print axioms DiamondIntegral.Section4.RESAlternativeReduction.zeroEquiv
+#print DiamondIntegral.Section4.GammaAlternativeSpecialization.namedEndpoint_pointGroupRing
+#print axioms DiamondIntegral.Section4.GammaAlternativeSpecialization.namedEndpoint_pointGroupRing
+#print DiamondIntegral.Section4.GammaAlternativeSpecialization.constantCoefficient
+#print axioms DiamondIntegral.Section4.GammaAlternativeSpecialization.constantCoefficient
+#print DiamondIntegral.Section4.GammaAlternativeSpecialization.constantWeights
+#print axioms DiamondIntegral.Section4.GammaAlternativeSpecialization.constantWeights
+#print DiamondIntegral.Section4.GammaAlternativeSpecialization.constantEuler
+#print axioms DiamondIntegral.Section4.GammaAlternativeSpecialization.constantEuler
+#print DiamondIntegral.Section4.GammaAlternativeSpecialization.character_mul
+#print axioms DiamondIntegral.Section4.GammaAlternativeSpecialization.character_mul
+#print DiamondIntegral.Section4.GammaAlternativeSpecialization.constant_difference_mul
+#print axioms DiamondIntegral.Section4.GammaAlternativeSpecialization.constant_difference_mul
+#print DiamondIntegral.Section4.GammaAlternativeSpecialization.polynomial_difference
+#print axioms DiamondIntegral.Section4.GammaAlternativeSpecialization.polynomial_difference
+#print DiamondIntegral.Section4.GammaAlternativeSpecialization.specialize
+#print axioms DiamondIntegral.Section4.GammaAlternativeSpecialization.specialize
+#print DiamondIntegral.Section4.GammaAlternativeSpecialization.specialize_apply
+#print axioms DiamondIntegral.Section4.GammaAlternativeSpecialization.specialize_apply
+#print DiamondIntegral.Section4.GammaAlternativeSpecialization.specialize_positive
+#print axioms DiamondIntegral.Section4.GammaAlternativeSpecialization.specialize_positive
+#print DiamondIntegral.Section4.GammaAlternativeSpecialization.specialize_point_zero
+#print axioms DiamondIntegral.Section4.GammaAlternativeSpecialization.specialize_point_zero
+#print DiamondIntegral.Section4.RESAlternativeForget.affineClass
+#print axioms DiamondIntegral.Section4.RESAlternativeForget.affineClass
+#print DiamondIntegral.Section4.RESAlternativeForget.affineIdeal
+#print axioms DiamondIntegral.Section4.RESAlternativeForget.affineIdeal
+#print DiamondIntegral.Section4.RESAlternativeForget.affine_mem
+#print axioms DiamondIntegral.Section4.RESAlternativeForget.affine_mem
+#print DiamondIntegral.Section4.RESAlternativeForget.affineIdeal_homogeneous
+#print axioms DiamondIntegral.Section4.RESAlternativeForget.affineIdeal_homogeneous
+#print DiamondIntegral.Section4.RESAlternativeForget.Ring
+#print axioms DiamondIntegral.Section4.RESAlternativeForget.Ring
+#print DiamondIntegral.Section4.RESAlternativeForget.quotient
+#print axioms DiamondIntegral.Section4.RESAlternativeForget.quotient
+#print DiamondIntegral.Section4.RESAlternativeForget.affine_zero
+#print axioms DiamondIntegral.Section4.RESAlternativeForget.affine_zero
+#print DiamondIntegral.Section4.RESAlternativeForget.ideal_coefficients
+#print axioms DiamondIntegral.Section4.RESAlternativeForget.ideal_coefficients
+#print DiamondIntegral.Section4.RESAlternativeForget.coaction
+#print axioms DiamondIntegral.Section4.RESAlternativeForget.coaction
+#print DiamondIntegral.Section4.RESAlternativeForget.piece
+#print axioms DiamondIntegral.Section4.RESAlternativeForget.piece
+#print DiamondIntegral.Section4.RESAlternativeForget.gradedRing
+#print axioms DiamondIntegral.Section4.RESAlternativeForget.gradedRing
+#print DiamondIntegral.Section4.RESAlternativeForget.quotient_mem
+#print axioms DiamondIntegral.Section4.RESAlternativeForget.quotient_mem
+#print DiamondIntegral.Section4.RESAlternativeForget.rawForget
+#print axioms DiamondIntegral.Section4.RESAlternativeForget.rawForget
+#print DiamondIntegral.Section4.RESAlternativeForget.rawForget_affine
+#print axioms DiamondIntegral.Section4.RESAlternativeForget.rawForget_affine
+#print DiamondIntegral.Section4.RESAlternativeForget.reductionIdeal_le_ker
+#print axioms DiamondIntegral.Section4.RESAlternativeForget.reductionIdeal_le_ker
+#print DiamondIntegral.Section4.RESAlternativeForget.measuredForget
+#print axioms DiamondIntegral.Section4.RESAlternativeForget.measuredForget
+#print DiamondIntegral.Section4.RESAlternativeForget.measuredForget_point
+#print axioms DiamondIntegral.Section4.RESAlternativeForget.measuredForget_point
+#print DiamondIntegral.Section4.RESAlternativeForget.measuredForget_torus
+#print axioms DiamondIntegral.Section4.RESAlternativeForget.measuredForget_torus
+#print DiamondIntegral.Section4.RESAlternativeForget.measuredForget_weight
+#print axioms DiamondIntegral.Section4.RESAlternativeForget.measuredForget_weight
+#print DiamondIntegral.Section4.RESAlternativeForget.pointIdeal_le_ker
+#print axioms DiamondIntegral.Section4.RESAlternativeForget.pointIdeal_le_ker
+#print DiamondIntegral.Section4.RESAlternativeForget.forget
+#print axioms DiamondIntegral.Section4.RESAlternativeForget.forget
+#print DiamondIntegral.Section4.RESAlternativeForget.forget_fromMeasured
+#print axioms DiamondIntegral.Section4.RESAlternativeForget.forget_fromMeasured
+#print DiamondIntegral.Section4.RESAlternativeForget.measuredForget_mem
+#print axioms DiamondIntegral.Section4.RESAlternativeForget.measuredForget_mem
+#print DiamondIntegral.Section4.RESAlternativeForget.forget_mem
+#print axioms DiamondIntegral.Section4.RESAlternativeForget.forget_mem
+#print DiamondIntegral.Section4.RESAlternativeForget.gradedForget
+#print axioms DiamondIntegral.Section4.RESAlternativeForget.gradedForget
+#print DiamondIntegral.Section4.RESAlternativePsi.psi
+#print axioms DiamondIntegral.Section4.RESAlternativePsi.psi
+#print DiamondIntegral.Section4.RESAlternativePsi.psi_positive
+#print axioms DiamondIntegral.Section4.RESAlternativePsi.psi_positive
+#print DiamondIntegral.Section4.RESAlternativePsi.psi_point_zero
+#print axioms DiamondIntegral.Section4.RESAlternativePsi.psi_point_zero
+#print DiamondIntegral.Section4.RESAlternativePsi.psi_point_positive
+#print axioms DiamondIntegral.Section4.RESAlternativePsi.psi_point_positive
+#print DiamondIntegral.Section4.RESAlternativePsi.psi_ray_positive
+#print axioms DiamondIntegral.Section4.RESAlternativePsi.psi_ray_positive
+#print DiamondIntegral.Section4.RESAlternativePsi.psi_line_positive
+#print axioms DiamondIntegral.Section4.RESAlternativePsi.psi_line_positive
+#print DiamondIntegral.Section4.RESAlternativePsi.groupRingCharacter_mem
+#print axioms DiamondIntegral.Section4.RESAlternativePsi.groupRingCharacter_mem
+#print DiamondIntegral.Section4.RESAlternativePsi.intCast_mem
+#print axioms DiamondIntegral.Section4.RESAlternativePsi.intCast_mem
+#print DiamondIntegral.Section4.RESAlternativePsi.torus_pow_mem
+#print axioms DiamondIntegral.Section4.RESAlternativePsi.torus_pow_mem
+#print DiamondIntegral.Section4.RESAlternativePsi.psi_mem
+#print axioms DiamondIntegral.Section4.RESAlternativePsi.psi_mem
+#print DiamondIntegral.Section4.RESAlternativePsi.gradedPsi
+#print axioms DiamondIntegral.Section4.RESAlternativePsi.gradedPsi
+#print DiamondIntegral.Section4.GammaAlternativeEvaluation.gradedEvaluation
+#print axioms DiamondIntegral.Section4.GammaAlternativeEvaluation.gradedEvaluation
+#print DiamondIntegral.Section4.GammaAlternativeEvaluation.evaluation
+#print axioms DiamondIntegral.Section4.GammaAlternativeEvaluation.evaluation
+#print DiamondIntegral.Section4.GammaAlternativeEvaluation.evaluation_class_positive
+#print axioms DiamondIntegral.Section4.GammaAlternativeEvaluation.evaluation_class_positive
+#print DiamondIntegral.Section4.GammaAlternativeEvaluation.resMap
+#print axioms DiamondIntegral.Section4.GammaAlternativeEvaluation.resMap
+#print DiamondIntegral.Section4.GammaAlternativeEvaluation.gammaMap
+#print axioms DiamondIntegral.Section4.GammaAlternativeEvaluation.gammaMap
+#print DiamondIntegral.Section4.GammaAlternativeEvaluation.weightedUnit_balance
+#print axioms DiamondIntegral.Section4.GammaAlternativeEvaluation.weightedUnit_balance
+#print DiamondIntegral.Section4.GammaAlternativeEvaluation.fibre_balance
+#print axioms DiamondIntegral.Section4.GammaAlternativeEvaluation.fibre_balance
+#print DiamondIntegral.Section4.GammaAlternativeEvaluation.finite_balance
+#print axioms DiamondIntegral.Section4.GammaAlternativeEvaluation.finite_balance
+#print DiamondIntegral.Section4.RVAlternativeTensorEvaluation.targetAlgebra
+#print axioms DiamondIntegral.Section4.RVAlternativeTensorEvaluation.targetAlgebra
+#print DiamondIntegral.Section4.RVAlternativeTensorEvaluation.resEvaluation
+#print axioms DiamondIntegral.Section4.RVAlternativeTensorEvaluation.resEvaluation
+#print DiamondIntegral.Section4.RVAlternativeTensorEvaluation.gammaEvaluation
+#print axioms DiamondIntegral.Section4.RVAlternativeTensorEvaluation.gammaEvaluation
+#print DiamondIntegral.Section4.RVAlternativeTensorEvaluation.evaluation
+#print axioms DiamondIntegral.Section4.RVAlternativeTensorEvaluation.evaluation
+#print DiamondIntegral.Section4.RVAlternativeTensorEvaluation.evaluation_tmul
+#print axioms DiamondIntegral.Section4.RVAlternativeTensorEvaluation.evaluation_tmul
+#print DiamondIntegral.Section4.RVAlternativeTensorEvaluation.gradedEvaluation
+#print axioms DiamondIntegral.Section4.RVAlternativeTensorEvaluation.gradedEvaluation
+#print DiamondIntegral.Section4.RVAlternativeTensorEvaluation.evaluation_res
+#print axioms DiamondIntegral.Section4.RVAlternativeTensorEvaluation.evaluation_res
+#print DiamondIntegral.Section4.RVAlternativeTensorEvaluation.gamma_ray
+#print axioms DiamondIntegral.Section4.RVAlternativeTensorEvaluation.gamma_ray
+#print DiamondIntegral.Section4.RVAlternativeTensorEvaluation.gamma_counterweighted
+#print axioms DiamondIntegral.Section4.RVAlternativeTensorEvaluation.gamma_counterweighted
+#print DiamondIntegral.Section4.RVAlternativeTensorEvaluation.evaluation_p
+#print axioms DiamondIntegral.Section4.RVAlternativeTensorEvaluation.evaluation_p
+#print DiamondIntegral.Section4.RVAlternativeTensorEvaluation.evaluation_h
+#print axioms DiamondIntegral.Section4.RVAlternativeTensorEvaluation.evaluation_h
+#print DiamondIntegral.Section4.GammaAlternativeSpecialization.weightCharacter_map
+#print axioms DiamondIntegral.Section4.GammaAlternativeSpecialization.weightCharacter_map
+#print DiamondIntegral.Section4.GammaAlternativeSpecialization.constantWeights_map_trivial
+#print axioms DiamondIntegral.Section4.GammaAlternativeSpecialization.constantWeights_map_trivial
+#print DiamondIntegral.Section4.GammaAlternativeSpecialization.specialize_map_trivial
+#print axioms DiamondIntegral.Section4.GammaAlternativeSpecialization.specialize_map_trivial
+#print DiamondIntegral.Section4.RESAlternativeCompatibility.forget_weight
+#print axioms DiamondIntegral.Section4.RESAlternativeCompatibility.forget_weight
+#print DiamondIntegral.Section4.RESAlternativeCompatibility.forget_torus
+#print axioms DiamondIntegral.Section4.RESAlternativeCompatibility.forget_torus
+#print DiamondIntegral.Section4.RESAlternativeCompatibility.psi_forget
+#print axioms DiamondIntegral.Section4.RESAlternativeCompatibility.psi_forget
+#print DiamondIntegral.Section4.RESAlternativeCompatibility.gamma_forget
+#print axioms DiamondIntegral.Section4.RESAlternativeCompatibility.gamma_forget
+#print DiamondIntegral.Section4.RESAlternativeCompatibility.tensor_forget
+#print axioms DiamondIntegral.Section4.RESAlternativeCompatibility.tensor_forget
+#print DiamondIntegral.Section4.RESAlternativeRawQuotient.rawPointDifference
+#print axioms DiamondIntegral.Section4.RESAlternativeRawQuotient.rawPointDifference
+#print DiamondIntegral.Section4.RESAlternativeRawQuotient.rawPointIdeal
+#print axioms DiamondIntegral.Section4.RESAlternativeRawQuotient.rawPointIdeal
+#print DiamondIntegral.Section4.RESAlternativeRawQuotient.pointDifference_map
+#print axioms DiamondIntegral.Section4.RESAlternativeRawQuotient.pointDifference_map
+#print DiamondIntegral.Section4.RESAlternativeRawQuotient.pointIdeal_map
+#print axioms DiamondIntegral.Section4.RESAlternativeRawQuotient.pointIdeal_map
+#print DiamondIntegral.Section4.RESAlternativeRawQuotient.rawIdeal
+#print axioms DiamondIntegral.Section4.RESAlternativeRawQuotient.rawIdeal
+#print DiamondIntegral.Section4.RESAlternativeRawQuotient.RawRing
+#print axioms DiamondIntegral.Section4.RESAlternativeRawQuotient.RawRing
+#print DiamondIntegral.Section4.RESAlternativeRawQuotient.equivalence
+#print axioms DiamondIntegral.Section4.RESAlternativeRawQuotient.equivalence
+#print DiamondIntegral.Section4.RESAlternativeRawQuotient.equivalence_fromMeasured
+#print axioms DiamondIntegral.Section4.RESAlternativeRawQuotient.equivalence_fromMeasured
+#print DiamondIntegral.Section4.RESAlternativeRawQuotient.kernel_fromMeasured
+#print axioms DiamondIntegral.Section4.RESAlternativeRawQuotient.kernel_fromMeasured
+#print DiamondIntegral.Section4.RESAffineNormalization.normalize
+#print axioms DiamondIntegral.Section4.RESAffineNormalization.normalize
+#print DiamondIntegral.Section4.RESAffineNormalization.normalize_homogeneous
+#print axioms DiamondIntegral.Section4.RESAffineNormalization.normalize_homogeneous
+#print DiamondIntegral.Section4.RESAffineNormalization.normalize_affine
+#print axioms DiamondIntegral.Section4.RESAffineNormalization.normalize_affine
+#print DiamondIntegral.Section4.RESAffineNormalization.normalize_kernel
+#print axioms DiamondIntegral.Section4.RESAffineNormalization.normalize_kernel
+#print DiamondIntegral.Section4.RESAffineNormalization.equivalence
+#print axioms DiamondIntegral.Section4.RESAffineNormalization.equivalence
+#print DiamondIntegral.Section4.RESAffineNormalization.comparison_homogeneous
+#print axioms DiamondIntegral.Section4.RESAffineNormalization.comparison_homogeneous
+#print DiamondIntegral.Section4.RESAffineNormalization.comparison_point
+#print axioms DiamondIntegral.Section4.RESAffineNormalization.comparison_point
+#print DiamondIntegral.Section4.RVAffineTensorEvaluation.pIdeal
+#print axioms DiamondIntegral.Section4.RVAffineTensorEvaluation.pIdeal
+#print DiamondIntegral.Section4.RVAffineTensorEvaluation.Ring
+#print axioms DiamondIntegral.Section4.RVAffineTensorEvaluation.Ring
+#print DiamondIntegral.Section4.RVAffineTensorEvaluation.quotient
+#print axioms DiamondIntegral.Section4.RVAffineTensorEvaluation.quotient
+#print DiamondIntegral.Section4.RVAffineTensorEvaluation.homogeneousEvaluation
+#print axioms DiamondIntegral.Section4.RVAffineTensorEvaluation.homogeneousEvaluation
+#print DiamondIntegral.Section4.RVAffineTensorEvaluation.geometricEvaluation
+#print axioms DiamondIntegral.Section4.RVAffineTensorEvaluation.geometricEvaluation
+#print DiamondIntegral.Section4.RVAffineTensorEvaluation.homogeneous_p
+#print axioms DiamondIntegral.Section4.RVAffineTensorEvaluation.homogeneous_p
+#print DiamondIntegral.Section4.RVAffineTensorEvaluation.pIdeal_le_homogeneous_ker
+#print axioms DiamondIntegral.Section4.RVAffineTensorEvaluation.pIdeal_le_homogeneous_ker
+#print DiamondIntegral.Section4.RVAffineTensorEvaluation.homogeneousQuotient
+#print axioms DiamondIntegral.Section4.RVAffineTensorEvaluation.homogeneousQuotient
+#print DiamondIntegral.Section4.RVAffineTensorEvaluation.geometricQuotient
+#print axioms DiamondIntegral.Section4.RVAffineTensorEvaluation.geometricQuotient
+#print DiamondIntegral.Section4.RVAffineTensorEvaluation.geometricQuotient_apply
+#print axioms DiamondIntegral.Section4.RVAffineTensorEvaluation.geometricQuotient_apply
+#print DiamondIntegral.Section4.RVAffineTensorEvaluation.pIdeal_le_bounded_ker
+#print axioms DiamondIntegral.Section4.RVAffineTensorEvaluation.pIdeal_le_bounded_ker
+#print DiamondIntegral.Section4.RVAffineTensorEvaluation.boundedQuotient
+#print axioms DiamondIntegral.Section4.RVAffineTensorEvaluation.boundedQuotient
+#print DiamondIntegral.Section4.RVAffineTensorEvaluation.boundedQuotient_apply
+#print axioms DiamondIntegral.Section4.RVAffineTensorEvaluation.boundedQuotient_apply
+#print DiamondIntegral.Section4.RVAffineTensorEvaluation.homogeneous_res
+#print axioms DiamondIntegral.Section4.RVAffineTensorEvaluation.homogeneous_res
+#print DiamondIntegral.Section4.RVAffineTensorEvaluation.geometric_point
+#print axioms DiamondIntegral.Section4.RVAffineTensorEvaluation.geometric_point
+#print DiamondIntegral.Section4.RVAffineTensorEvaluation.bounded_point
+#print axioms DiamondIntegral.Section4.RVAffineTensorEvaluation.bounded_point
+#print DiamondIntegral.Section4.RESAffineSpecialization.affine_one
+#print axioms DiamondIntegral.Section4.RESAffineSpecialization.affine_one
+#print DiamondIntegral.Section4.RESAffineSpecialization.specialize
+#print axioms DiamondIntegral.Section4.RESAffineSpecialization.specialize
+#print DiamondIntegral.Section4.RESAffineSpecialization.specialize_algebraMap
+#print axioms DiamondIntegral.Section4.RESAffineSpecialization.specialize_algebraMap
+#print DiamondIntegral.Section4.RESAffineSpecialization.specialize_fraction
+#print axioms DiamondIntegral.Section4.RESAffineSpecialization.specialize_fraction
+#print DiamondIntegral.Section4.RESAffineSpecialization.specialize_homogeneous
+#print axioms DiamondIntegral.Section4.RESAffineSpecialization.specialize_homogeneous
+#print DiamondIntegral.Section4.RESAffineSpecialization.specialize_normalize
+#print axioms DiamondIntegral.Section4.RESAffineSpecialization.specialize_normalize
+#print DiamondIntegral.Section4.RESAffineSpecialization.tensor_specialization
+#print axioms DiamondIntegral.Section4.RESAffineSpecialization.tensor_specialization
+#print DiamondIntegral.Section4.RESAffineSpecialization.quotient_specialization
+#print axioms DiamondIntegral.Section4.RESAffineSpecialization.quotient_specialization
+#print DiamondIntegral.Section4.RVChartDisjointUnion.Data
+#print axioms DiamondIntegral.Section4.RVChartDisjointUnion.Data
+#print DiamondIntegral.Section4.RVChartDisjointUnion.Data.toChart
+#print axioms DiamondIntegral.Section4.RVChartDisjointUnion.Data.toChart
+#print DiamondIntegral.Section4.RVChartDisjointUnion.ofChart
+#print axioms DiamondIntegral.Section4.RVChartDisjointUnion.ofChart
+#print DiamondIntegral.Section4.RVChartDisjointUnion.ofChart_toChart
+#print axioms DiamondIntegral.Section4.RVChartDisjointUnion.ofChart_toChart
+#print DiamondIntegral.Section4.RVChartDisjointUnion.piecewise
+#print axioms DiamondIntegral.Section4.RVChartDisjointUnion.piecewise
+#print DiamondIntegral.Section4.RVChartDisjointUnion.graphOn_piecewise
+#print axioms DiamondIntegral.Section4.RVChartDisjointUnion.graphOn_piecewise
+#print DiamondIntegral.Section4.RVChartDisjointUnion.disjointUnion
+#print axioms DiamondIntegral.Section4.RVChartDisjointUnion.disjointUnion
+#print DiamondIntegral.Section4.RVChartDisjointUnion.disjointUnion_weight_left
+#print axioms DiamondIntegral.Section4.RVChartDisjointUnion.disjointUnion_weight_left
+#print DiamondIntegral.Section4.RVChartDisjointUnion.disjointUnion_weight_right
+#print axioms DiamondIntegral.Section4.RVChartDisjointUnion.disjointUnion_weight_right
+#print DiamondIntegral.Section4.RVChartDisjointUnion.empty
+#print axioms DiamondIntegral.Section4.RVChartDisjointUnion.empty
+#print DiamondIntegral.Section4.RVChartDisjointUnion.packed_empty
+#print axioms DiamondIntegral.Section4.RVChartDisjointUnion.packed_empty
+#print DiamondIntegral.Section4.RVChartDisjointUnion.packed_disjointUnion
+#print axioms DiamondIntegral.Section4.RVChartDisjointUnion.packed_disjointUnion
+#print DiamondIntegral.Section4.RVChartDisjointUnion.packed_inter_empty
+#print axioms DiamondIntegral.Section4.RVChartDisjointUnion.packed_inter_empty
+#print DiamondIntegral.Section4.RVChartDisjointUnion.scissor
+#print axioms DiamondIntegral.Section4.RVChartDisjointUnion.scissor
+#print DiamondIntegral.Section4.RVChartDisjointUnion.class_disjointUnion
+#print axioms DiamondIntegral.Section4.RVChartDisjointUnion.class_disjointUnion
+#print DiamondIntegral.Section4.RVChartUnionProperties.finite_patterns
+#print axioms DiamondIntegral.Section4.RVChartUnionProperties.finite_patterns
+#print DiamondIntegral.Section4.RVChartUnionProperties.resUnion
+#print axioms DiamondIntegral.Section4.RVChartUnionProperties.resUnion
+#print DiamondIntegral.Section4.RVChartUnionProperties.domain_bounded
+#print axioms DiamondIntegral.Section4.RVChartUnionProperties.domain_bounded
+#print DiamondIntegral.Section4.RVChartUnionProperties.boundedUnion
+#print axioms DiamondIntegral.Section4.RVChartUnionProperties.boundedUnion
+#print DiamondIntegral.Section4.RVChartUnionProperties.ordinary_class
+#print axioms DiamondIntegral.Section4.RVChartUnionProperties.ordinary_class
+#print DiamondIntegral.Section4.RVChartUnionProperties.res_class
+#print axioms DiamondIntegral.Section4.RVChartUnionProperties.res_class
+#print DiamondIntegral.Section4.RVChartUnionProperties.ordinary_res_class
+#print axioms DiamondIntegral.Section4.RVChartUnionProperties.ordinary_res_class
+#print DiamondIntegral.Section4.RVChartUnionProperties.bounded_class
+#print axioms DiamondIntegral.Section4.RVChartUnionProperties.bounded_class
+#print DiamondIntegral.Section4.RVNamedTuples.tupleData
+#print axioms DiamondIntegral.Section4.RVNamedTuples.tupleData
+#print DiamondIntegral.Section4.RVNamedTuples.tupleChart
+#print axioms DiamondIntegral.Section4.RVNamedTuples.tupleChart
+#print DiamondIntegral.Section4.RVNamedTuples.tupleRESChart
+#print axioms DiamondIntegral.Section4.RVNamedTuples.tupleRESChart
+#print DiamondIntegral.Section4.RVNamedTuples.tupleUnitIso
+#print axioms DiamondIntegral.Section4.RVNamedTuples.tupleUnitIso
+#print DiamondIntegral.Section4.RVNamedTuples.tuple_class
+#print axioms DiamondIntegral.Section4.RVNamedTuples.tuple_class
+#print DiamondIntegral.Section4.RVNamedTuples.tuple_res_class
+#print axioms DiamondIntegral.Section4.RVNamedTuples.tuple_res_class
+#print DiamondIntegral.Section4.RVNamedTuples.zero_definable
+#print axioms DiamondIntegral.Section4.RVNamedTuples.zero_definable
+#print DiamondIntegral.Section4.RVNamedTuples.one_definable
+#print axioms DiamondIntegral.Section4.RVNamedTuples.one_definable
+#print DiamondIntegral.Section4.RVNamedTuples.zeros
+#print axioms DiamondIntegral.Section4.RVNamedTuples.zeros
+#print DiamondIntegral.Section4.RVNamedTuples.tagZero
+#print axioms DiamondIntegral.Section4.RVNamedTuples.tagZero
+#print DiamondIntegral.Section4.RVNamedTuples.tagOne
+#print axioms DiamondIntegral.Section4.RVNamedTuples.tagOne
+#print DiamondIntegral.Section4.RVNamedTuples.castGrade
+#print axioms DiamondIntegral.Section4.RVNamedTuples.castGrade
+#print DiamondIntegral.Section4.RVNamedTuples.castGrade_domain
+#print axioms DiamondIntegral.Section4.RVNamedTuples.castGrade_domain
+#print DiamondIntegral.Section4.RVNamedTuples.castGrade_class
+#print axioms DiamondIntegral.Section4.RVNamedTuples.castGrade_class
+#print DiamondIntegral.Section4.RVTaggedCoproduct.leftRawData
+#print axioms DiamondIntegral.Section4.RVTaggedCoproduct.leftRawData
+#print DiamondIntegral.Section4.RVTaggedCoproduct.leftData
+#print axioms DiamondIntegral.Section4.RVTaggedCoproduct.leftData
+#print DiamondIntegral.Section4.RVTaggedCoproduct.rightData
+#print axioms DiamondIntegral.Section4.RVTaggedCoproduct.rightData
+#print DiamondIntegral.Section4.RVTaggedCoproduct.left_tag
+#print axioms DiamondIntegral.Section4.RVTaggedCoproduct.left_tag
+#print DiamondIntegral.Section4.RVTaggedCoproduct.right_tag
+#print axioms DiamondIntegral.Section4.RVTaggedCoproduct.right_tag
+#print DiamondIntegral.Section4.RVTaggedCoproduct.tagged_disjoint
+#print axioms DiamondIntegral.Section4.RVTaggedCoproduct.tagged_disjoint
+#print DiamondIntegral.Section4.RVTaggedCoproduct.left_class
+#print axioms DiamondIntegral.Section4.RVTaggedCoproduct.left_class
+#print DiamondIntegral.Section4.RVTaggedCoproduct.right_class
+#print axioms DiamondIntegral.Section4.RVTaggedCoproduct.right_class
+#print DiamondIntegral.Section4.RVTaggedCoproduct.coproduct
+#print axioms DiamondIntegral.Section4.RVTaggedCoproduct.coproduct
+#print DiamondIntegral.Section4.RVTaggedCoproduct.class_coproduct
+#print axioms DiamondIntegral.Section4.RVTaggedCoproduct.class_coproduct
+#print DiamondIntegral.Section4.RVTaggedCoproductProperties.castGrade_finite_iff
+#print axioms DiamondIntegral.Section4.RVTaggedCoproductProperties.castGrade_finite_iff
+#print DiamondIntegral.Section4.RVTaggedCoproductProperties.castGrade_bounded_iff
+#print axioms DiamondIntegral.Section4.RVTaggedCoproductProperties.castGrade_bounded_iff
+#print DiamondIntegral.Section4.RVTaggedCoproductProperties.zeroTagRES
+#print axioms DiamondIntegral.Section4.RVTaggedCoproductProperties.zeroTagRES
+#print DiamondIntegral.Section4.RVTaggedCoproductProperties.oneTagRES
+#print axioms DiamondIntegral.Section4.RVTaggedCoproductProperties.oneTagRES
+#print DiamondIntegral.Section4.RVTaggedCoproductProperties.zerosRES
+#print axioms DiamondIntegral.Section4.RVTaggedCoproductProperties.zerosRES
+#print DiamondIntegral.Section4.RVTaggedCoproductProperties.left_finite_patterns
+#print axioms DiamondIntegral.Section4.RVTaggedCoproductProperties.left_finite_patterns
+#print DiamondIntegral.Section4.RVTaggedCoproductProperties.right_finite_patterns
+#print axioms DiamondIntegral.Section4.RVTaggedCoproductProperties.right_finite_patterns
+#print DiamondIntegral.Section4.RVTaggedCoproductProperties.resCoproduct
+#print axioms DiamondIntegral.Section4.RVTaggedCoproductProperties.resCoproduct
+#print DiamondIntegral.Section4.RVTaggedCoproductProperties.left_domain_bounded
+#print axioms DiamondIntegral.Section4.RVTaggedCoproductProperties.left_domain_bounded
+#print DiamondIntegral.Section4.RVTaggedCoproductProperties.right_domain_bounded
+#print axioms DiamondIntegral.Section4.RVTaggedCoproductProperties.right_domain_bounded
+#print DiamondIntegral.Section4.RVTaggedCoproductProperties.boundedCoproduct
+#print axioms DiamondIntegral.Section4.RVTaggedCoproductProperties.boundedCoproduct
+#print DiamondIntegral.Section4.RVTaggedCoproductProperties.ordinary_class_coproduct
+#print axioms DiamondIntegral.Section4.RVTaggedCoproductProperties.ordinary_class_coproduct
+#print DiamondIntegral.Section4.RVTaggedCoproductClasses.castGrade_res_class
+#print axioms DiamondIntegral.Section4.RVTaggedCoproductClasses.castGrade_res_class
+#print DiamondIntegral.Section4.RVTaggedCoproductClasses.leftRES
+#print axioms DiamondIntegral.Section4.RVTaggedCoproductClasses.leftRES
+#print DiamondIntegral.Section4.RVTaggedCoproductClasses.rightRES
+#print axioms DiamondIntegral.Section4.RVTaggedCoproductClasses.rightRES
+#print DiamondIntegral.Section4.RVTaggedCoproductClasses.left_res_class
+#print axioms DiamondIntegral.Section4.RVTaggedCoproductClasses.left_res_class
+#print DiamondIntegral.Section4.RVTaggedCoproductClasses.right_res_class
+#print axioms DiamondIntegral.Section4.RVTaggedCoproductClasses.right_res_class
+#print DiamondIntegral.Section4.RVTaggedCoproductClasses.res_coproduct_class
+#print axioms DiamondIntegral.Section4.RVTaggedCoproductClasses.res_coproduct_class
+#print DiamondIntegral.Section4.RVTaggedCoproductClasses.ordinary_res_coproduct_class
+#print axioms DiamondIntegral.Section4.RVTaggedCoproductClasses.ordinary_res_coproduct_class
+#print DiamondIntegral.Section4.RVTaggedCoproductClasses.castGrade_bounded_class
+#print axioms DiamondIntegral.Section4.RVTaggedCoproductClasses.castGrade_bounded_class
+#print DiamondIntegral.Section4.RVTaggedCoproductClasses.bounded_tuple_class
+#print axioms DiamondIntegral.Section4.RVTaggedCoproductClasses.bounded_tuple_class
+#print DiamondIntegral.Section4.RVTaggedCoproductClasses.leftBounded
+#print axioms DiamondIntegral.Section4.RVTaggedCoproductClasses.leftBounded
+#print DiamondIntegral.Section4.RVTaggedCoproductClasses.rightBounded
+#print axioms DiamondIntegral.Section4.RVTaggedCoproductClasses.rightBounded
+#print DiamondIntegral.Section4.RVTaggedCoproductClasses.left_bounded_class
+#print axioms DiamondIntegral.Section4.RVTaggedCoproductClasses.left_bounded_class
+#print DiamondIntegral.Section4.RVTaggedCoproductClasses.right_bounded_class
+#print axioms DiamondIntegral.Section4.RVTaggedCoproductClasses.right_bounded_class
+#print DiamondIntegral.Section4.RVTaggedCoproductClasses.bounded_coproduct_class
+#print axioms DiamondIntegral.Section4.RVTaggedCoproductClasses.bounded_coproduct_class
+#print DiamondIntegral.Section4.RVGraphComposition.pack
+#print axioms DiamondIntegral.Section4.RVGraphComposition.pack
+#print DiamondIntegral.Section4.RVGraphComposition.lastTwo
+#print axioms DiamondIntegral.Section4.RVGraphComposition.lastTwo
+#print DiamondIntegral.Section4.RVGraphComposition.outerTwo
+#print axioms DiamondIntegral.Section4.RVGraphComposition.outerTwo
+#print DiamondIntegral.Section4.RVGraphComposition.pack_first
+#print axioms DiamondIntegral.Section4.RVGraphComposition.pack_first
+#print DiamondIntegral.Section4.RVGraphComposition.pack_lastTwo
+#print axioms DiamondIntegral.Section4.RVGraphComposition.pack_lastTwo
+#print DiamondIntegral.Section4.RVGraphComposition.pack_outerTwo
+#print axioms DiamondIntegral.Section4.RVGraphComposition.pack_outerTwo
+#print DiamondIntegral.Section4.RVGraphComposition.reconstruct
+#print axioms DiamondIntegral.Section4.RVGraphComposition.reconstruct
+#print DiamondIntegral.Section4.RVGraphComposition.graph_compose_definable
+#print axioms DiamondIntegral.Section4.RVGraphComposition.graph_compose_definable
+#print DiamondIntegral.Section4.RVUnderlyingIsomorphisms.Iso.extension_bijOn
+#print axioms DiamondIntegral.Section4.RVUnderlyingIsomorphisms.Iso.extension_bijOn
+#print DiamondIntegral.Section4.RVUnderlyingIsomorphisms.trans
+#print axioms DiamondIntegral.Section4.RVUnderlyingIsomorphisms.trans
+#print DiamondIntegral.Section4.RVUnderlyingIsomorphisms.trans_equiv_coe
+#print axioms DiamondIntegral.Section4.RVUnderlyingIsomorphisms.trans_equiv_coe
+#print DiamondIntegral.Section4.RVMeasuredIsomorphisms.underlying
+#print axioms DiamondIntegral.Section4.RVMeasuredIsomorphisms.underlying
+#print DiamondIntegral.Section4.RVMeasuredIsomorphisms.refl
+#print axioms DiamondIntegral.Section4.RVMeasuredIsomorphisms.refl
+#print DiamondIntegral.Section4.RVMeasuredIsomorphisms.symm
+#print axioms DiamondIntegral.Section4.RVMeasuredIsomorphisms.symm
+#print DiamondIntegral.Section4.RVMeasuredIsomorphisms.trans
+#print axioms DiamondIntegral.Section4.RVMeasuredIsomorphisms.trans
+#print DiamondIntegral.Section4.RVMeasuredIsomorphisms.productIso
+#print axioms DiamondIntegral.Section4.RVMeasuredIsomorphisms.productIso
+#print DiamondIntegral.Section4.RVPointProductIsomorphisms.product_weight_coordinates
+#print axioms DiamondIntegral.Section4.RVPointProductIsomorphisms.product_weight_coordinates
+#print DiamondIntegral.Section4.RVPointProductIsomorphisms.tuple_weight
+#print axioms DiamondIntegral.Section4.RVPointProductIsomorphisms.tuple_weight
+#print DiamondIntegral.Section4.RVPointProductIsomorphisms.leftTupleIso
+#print axioms DiamondIntegral.Section4.RVPointProductIsomorphisms.leftTupleIso
+#print DiamondIntegral.Section4.RVPointProductIsomorphisms.rightRawData
+#print axioms DiamondIntegral.Section4.RVPointProductIsomorphisms.rightRawData
+#print DiamondIntegral.Section4.RVPointProductIsomorphisms.rightData
+#print axioms DiamondIntegral.Section4.RVPointProductIsomorphisms.rightData
+#print DiamondIntegral.Section4.RVPointProductIsomorphisms.castGrade_weight
+#print axioms DiamondIntegral.Section4.RVPointProductIsomorphisms.castGrade_weight
+#print DiamondIntegral.Section4.RVPointProductIsomorphisms.rightTupleIso
+#print axioms DiamondIntegral.Section4.RVPointProductIsomorphisms.rightTupleIso
+#print DiamondIntegral.Section4.RVTaggedComponentIsomorphisms.leftIso
+#print axioms DiamondIntegral.Section4.RVTaggedComponentIsomorphisms.leftIso
+#print DiamondIntegral.Section4.RVTaggedComponentIsomorphisms.rightIso
+#print axioms DiamondIntegral.Section4.RVTaggedComponentIsomorphisms.rightIso
+#print DiamondIntegral.Section4.RVDisjointUnionIsomorphisms.piecewise_bijOn
+#print axioms DiamondIntegral.Section4.RVDisjointUnionIsomorphisms.piecewise_bijOn
+#print DiamondIntegral.Section4.RVDisjointUnionIsomorphisms.unionIso
+#print axioms DiamondIntegral.Section4.RVDisjointUnionIsomorphisms.unionIso
+#print DiamondIntegral.Section4.RVChartRestrictions.restrict
+#print axioms DiamondIntegral.Section4.RVChartRestrictions.restrict
+#print DiamondIntegral.Section4.RVChartRestrictions.restrict_weight
+#print axioms DiamondIntegral.Section4.RVChartRestrictions.restrict_weight
+#print DiamondIntegral.Section4.RVChartRestrictions.restrict_finite_patterns
+#print axioms DiamondIntegral.Section4.RVChartRestrictions.restrict_finite_patterns
+#print DiamondIntegral.Section4.RVChartRestrictions.restrict_domain_bounded
+#print axioms DiamondIntegral.Section4.RVChartRestrictions.restrict_domain_bounded
+#print DiamondIntegral.Section4.RVChartRestrictions.difference_definable
+#print axioms DiamondIntegral.Section4.RVChartRestrictions.difference_definable
+#print DiamondIntegral.Section4.RVChartRestrictions.outside
+#print axioms DiamondIntegral.Section4.RVChartRestrictions.outside
+#print DiamondIntegral.Section4.RVChartRestrictions.inside
+#print axioms DiamondIntegral.Section4.RVChartRestrictions.inside
+#print DiamondIntegral.Section4.RVChartRestrictions.pieces_disjoint
+#print axioms DiamondIntegral.Section4.RVChartRestrictions.pieces_disjoint
+#print DiamondIntegral.Section4.RVChartRestrictions.partitionIso
+#print axioms DiamondIntegral.Section4.RVChartRestrictions.partitionIso
+#print DiamondIntegral.Section4.RVScissorComponents.sameDomainIso
+#print axioms DiamondIntegral.Section4.RVScissorComponents.sameDomainIso
+#print DiamondIntegral.Section4.RVScissorComponents.packedPoint
+#print axioms DiamondIntegral.Section4.RVScissorComponents.packedPoint
+#print DiamondIntegral.Section4.RVScissorComponents.mem_packed_iff
+#print axioms DiamondIntegral.Section4.RVScissorComponents.mem_packed_iff
+#print DiamondIntegral.Section4.RVScissorComponents.union_left
+#print axioms DiamondIntegral.Section4.RVScissorComponents.union_left
+#print DiamondIntegral.Section4.RVScissorComponents.union_right
+#print axioms DiamondIntegral.Section4.RVScissorComponents.union_right
+#print DiamondIntegral.Section4.RVScissorComponents.domain_union
+#print axioms DiamondIntegral.Section4.RVScissorComponents.domain_union
+#print DiamondIntegral.Section4.RVScissorComponents.intersection_left
+#print axioms DiamondIntegral.Section4.RVScissorComponents.intersection_left
+#print DiamondIntegral.Section4.RVScissorComponents.domain_intersection
+#print axioms DiamondIntegral.Section4.RVScissorComponents.domain_intersection
+#print DiamondIntegral.Section4.RVScissorComponents.outsideIso
+#print axioms DiamondIntegral.Section4.RVScissorComponents.outsideIso
+#print DiamondIntegral.Section4.RVScissorComponents.insideLeftIso
+#print axioms DiamondIntegral.Section4.RVScissorComponents.insideLeftIso
+#print DiamondIntegral.Section4.RVScissorComponents.insideUnionIso
+#print axioms DiamondIntegral.Section4.RVScissorComponents.insideUnionIso
+#print DiamondIntegral.Section4.RVTaggedPartitionIsomorphisms.disjointTaggedIso
+#print axioms DiamondIntegral.Section4.RVTaggedPartitionIsomorphisms.disjointTaggedIso
+#print DiamondIntegral.Section4.RVTaggedPartitionIsomorphisms.partitionTaggedIso
+#print axioms DiamondIntegral.Section4.RVTaggedPartitionIsomorphisms.partitionTaggedIso
+#print DiamondIntegral.Section4.RVDisjointInvariants.AdditiveInvariant
+#print axioms DiamondIntegral.Section4.RVDisjointInvariants.AdditiveInvariant
+#print DiamondIntegral.Section4.RVDisjointInvariants.partition_value
+#print axioms DiamondIntegral.Section4.RVDisjointInvariants.partition_value
+#print DiamondIntegral.Section4.RVDisjointInvariants.scissor_data
+#print axioms DiamondIntegral.Section4.RVDisjointInvariants.scissor_data
+#print DiamondIntegral.Section4.RVDisjointInvariants.scissor
+#print axioms DiamondIntegral.Section4.RVDisjointInvariants.scissor
+#print DiamondIntegral.Section4.RVDisjointPresentation.Generator
+#print axioms DiamondIntegral.Section4.RVDisjointPresentation.Generator
+#print DiamondIntegral.Section4.RVDisjointPresentation.symbol
+#print axioms DiamondIntegral.Section4.RVDisjointPresentation.symbol
+#print DiamondIntegral.Section4.RVDisjointPresentation.Relation
+#print axioms DiamondIntegral.Section4.RVDisjointPresentation.Relation
+#print DiamondIntegral.Section4.RVDisjointPresentation.relationIdeal
+#print axioms DiamondIntegral.Section4.RVDisjointPresentation.relationIdeal
+#print DiamondIntegral.Section4.RVDisjointPresentation.Ring
+#print axioms DiamondIntegral.Section4.RVDisjointPresentation.Ring
+#print DiamondIntegral.Section4.RVDisjointPresentation.objectClass
+#print axioms DiamondIntegral.Section4.RVDisjointPresentation.objectClass
+#print DiamondIntegral.Section4.RVDisjointPresentation.relation_zero
+#print axioms DiamondIntegral.Section4.RVDisjointPresentation.relation_zero
+#print DiamondIntegral.Section4.RVDisjointPresentation.objectClass_unit
+#print axioms DiamondIntegral.Section4.RVDisjointPresentation.objectClass_unit
+#print DiamondIntegral.Section4.RVDisjointPresentation.objectClass_product
+#print axioms DiamondIntegral.Section4.RVDisjointPresentation.objectClass_product
+#print DiamondIntegral.Section4.RVDisjointPresentation.objectClass_iso
+#print axioms DiamondIntegral.Section4.RVDisjointPresentation.objectClass_iso
+#print DiamondIntegral.Section4.RVDisjointPresentation.objectClass_empty
+#print axioms DiamondIntegral.Section4.RVDisjointPresentation.objectClass_empty
+#print DiamondIntegral.Section4.RVDisjointPresentation.objectClass_coproduct
+#print axioms DiamondIntegral.Section4.RVDisjointPresentation.objectClass_coproduct
+#print DiamondIntegral.Section4.RVDisjointPresentation.Invariant
+#print axioms DiamondIntegral.Section4.RVDisjointPresentation.Invariant
+#print DiamondIntegral.Section4.RVDisjointPresentation.freeMap
+#print axioms DiamondIntegral.Section4.RVDisjointPresentation.freeMap
+#print DiamondIntegral.Section4.RVDisjointPresentation.freeMap_symbol
+#print axioms DiamondIntegral.Section4.RVDisjointPresentation.freeMap_symbol
+#print DiamondIntegral.Section4.RVDisjointPresentation.invariant_relation_zero
+#print axioms DiamondIntegral.Section4.RVDisjointPresentation.invariant_relation_zero
+#print DiamondIntegral.Section4.RVDisjointPresentation.lift
+#print axioms DiamondIntegral.Section4.RVDisjointPresentation.lift
+#print DiamondIntegral.Section4.RVDisjointPresentation.lift_objectClass
+#print axioms DiamondIntegral.Section4.RVDisjointPresentation.lift_objectClass
+#print DiamondIntegral.Section4.RVDisjointPresentation.hom_ext
+#print axioms DiamondIntegral.Section4.RVDisjointPresentation.hom_ext
+#print DiamondIntegral.Section4.RVDisjointPresentation.chartInvariant
+#print axioms DiamondIntegral.Section4.RVDisjointPresentation.chartInvariant
+#print DiamondIntegral.Section4.RVDisjointPresentation.classInvariant
+#print axioms DiamondIntegral.Section4.RVDisjointPresentation.classInvariant
+#print DiamondIntegral.Section4.RVDisjointPresentation.toChartInvariant
+#print axioms DiamondIntegral.Section4.RVDisjointPresentation.toChartInvariant
+#print DiamondIntegral.Section4.RVDisjointPresentation.toChartRing
+#print axioms DiamondIntegral.Section4.RVDisjointPresentation.toChartRing
+#print DiamondIntegral.Section4.RVDisjointPresentation.fromChartRing
+#print axioms DiamondIntegral.Section4.RVDisjointPresentation.fromChartRing
+#print DiamondIntegral.Section4.RVDisjointPresentation.toChartRing_class
+#print axioms DiamondIntegral.Section4.RVDisjointPresentation.toChartRing_class
+#print DiamondIntegral.Section4.RVDisjointPresentation.fromChartRing_class
+#print axioms DiamondIntegral.Section4.RVDisjointPresentation.fromChartRing_class
+#print DiamondIntegral.Section4.RVDisjointPresentation.to_from
+#print axioms DiamondIntegral.Section4.RVDisjointPresentation.to_from
+#print DiamondIntegral.Section4.RVDisjointPresentation.from_to
+#print axioms DiamondIntegral.Section4.RVDisjointPresentation.from_to
+#print DiamondIntegral.Section4.RVDisjointPresentation.equivalence
+#print axioms DiamondIntegral.Section4.RVDisjointPresentation.equivalence
+#print DiamondIntegral.Section4.RVDisjointGrading.gradingInvariant
+#print axioms DiamondIntegral.Section4.RVDisjointGrading.gradingInvariant
+#print DiamondIntegral.Section4.RVDisjointGrading.coaction
+#print axioms DiamondIntegral.Section4.RVDisjointGrading.coaction
+#print DiamondIntegral.Section4.RVDisjointGrading.coaction_class
+#print axioms DiamondIntegral.Section4.RVDisjointGrading.coaction_class
+#print DiamondIntegral.Section4.RVDisjointGrading.coaction_counit
+#print axioms DiamondIntegral.Section4.RVDisjointGrading.coaction_counit
+#print DiamondIntegral.Section4.RVDisjointGrading.coaction_coassoc
+#print axioms DiamondIntegral.Section4.RVDisjointGrading.coaction_coassoc
+#print DiamondIntegral.Section4.RVDisjointGrading.gradingCoaction
+#print axioms DiamondIntegral.Section4.RVDisjointGrading.gradingCoaction
+#print DiamondIntegral.Section4.RVDisjointGrading.piece
+#print axioms DiamondIntegral.Section4.RVDisjointGrading.piece
+#print DiamondIntegral.Section4.RVDisjointGrading.gradedRing
+#print axioms DiamondIntegral.Section4.RVDisjointGrading.gradedRing
+#print DiamondIntegral.Section4.RVDisjointGrading.class_mem
+#print axioms DiamondIntegral.Section4.RVDisjointGrading.class_mem
+#print DiamondIntegral.Section4.RVDisjointGrading.toChart_coaction
+#print axioms DiamondIntegral.Section4.RVDisjointGrading.toChart_coaction
+#print DiamondIntegral.Section4.RVDisjointGrading.fromChart_coaction
+#print axioms DiamondIntegral.Section4.RVDisjointGrading.fromChart_coaction
+#print DiamondIntegral.Section4.RVDisjointGrading.toChart_mem
+#print axioms DiamondIntegral.Section4.RVDisjointGrading.toChart_mem
+#print DiamondIntegral.Section4.RVDisjointGrading.fromChart_mem
+#print axioms DiamondIntegral.Section4.RVDisjointGrading.fromChart_mem
+#print DiamondIntegral.Section4.RVDisjointGrading.gradedToChart
+#print axioms DiamondIntegral.Section4.RVDisjointGrading.gradedToChart
+#print DiamondIntegral.Section4.RVDisjointGrading.gradedFromChart
+#print axioms DiamondIntegral.Section4.RVDisjointGrading.gradedFromChart
+#print DiamondIntegral.Section4.RVDisjointGrading.equivalence_mem_iff
+#print axioms DiamondIntegral.Section4.RVDisjointGrading.equivalence_mem_iff
+#print DiamondIntegral.Section4.RVAdmissibleFamilies.Family
+#print axioms DiamondIntegral.Section4.RVAdmissibleFamilies.Family
+#print DiamondIntegral.Section4.RVAdmissibleFamilies.all
+#print axioms DiamondIntegral.Section4.RVAdmissibleFamilies.all
+#print DiamondIntegral.Section4.RVAdmissibleFamilies.res
+#print axioms DiamondIntegral.Section4.RVAdmissibleFamilies.res
+#print DiamondIntegral.Section4.RVAdmissibleFamilies.bounded
+#print axioms DiamondIntegral.Section4.RVAdmissibleFamilies.bounded
+#print DiamondIntegral.Section4.RVAdmissibleFamilies.Family.outside_good
+#print axioms DiamondIntegral.Section4.RVAdmissibleFamilies.Family.outside_good
+#print DiamondIntegral.Section4.RVAdmissibleFamilies.Family.inside_good
+#print axioms DiamondIntegral.Section4.RVAdmissibleFamilies.Family.inside_good
+#print DiamondIntegral.Section4.RVAdmissibleDisjointInvariants.AdditiveInvariant
+#print axioms DiamondIntegral.Section4.RVAdmissibleDisjointInvariants.AdditiveInvariant
+#print DiamondIntegral.Section4.RVAdmissibleDisjointInvariants.partition_value
+#print axioms DiamondIntegral.Section4.RVAdmissibleDisjointInvariants.partition_value
+#print DiamondIntegral.Section4.RVAdmissibleDisjointInvariants.scissor_data
+#print axioms DiamondIntegral.Section4.RVAdmissibleDisjointInvariants.scissor_data
+#print DiamondIntegral.Section4.RVAdmissibleDisjointInvariants.scissor
+#print axioms DiamondIntegral.Section4.RVAdmissibleDisjointInvariants.scissor
+#print DiamondIntegral.Section4.RVFamilyDisjointPresentation.Object
+#print axioms DiamondIntegral.Section4.RVFamilyDisjointPresentation.Object
+#print DiamondIntegral.Section4.RVFamilyDisjointPresentation.Generator
+#print axioms DiamondIntegral.Section4.RVFamilyDisjointPresentation.Generator
+#print DiamondIntegral.Section4.RVFamilyDisjointPresentation.unit
+#print axioms DiamondIntegral.Section4.RVFamilyDisjointPresentation.unit
+#print DiamondIntegral.Section4.RVFamilyDisjointPresentation.product
+#print axioms DiamondIntegral.Section4.RVFamilyDisjointPresentation.product
+#print DiamondIntegral.Section4.RVFamilyDisjointPresentation.coproduct
+#print axioms DiamondIntegral.Section4.RVFamilyDisjointPresentation.coproduct
+#print DiamondIntegral.Section4.RVFamilyDisjointPresentation.symbol
+#print axioms DiamondIntegral.Section4.RVFamilyDisjointPresentation.symbol
+#print DiamondIntegral.Section4.RVFamilyDisjointPresentation.Relation
+#print axioms DiamondIntegral.Section4.RVFamilyDisjointPresentation.Relation
+#print DiamondIntegral.Section4.RVFamilyDisjointPresentation.relationIdeal
+#print axioms DiamondIntegral.Section4.RVFamilyDisjointPresentation.relationIdeal
+#print DiamondIntegral.Section4.RVFamilyDisjointPresentation.Ring
+#print axioms DiamondIntegral.Section4.RVFamilyDisjointPresentation.Ring
+#print DiamondIntegral.Section4.RVFamilyDisjointPresentation.objectClass
+#print axioms DiamondIntegral.Section4.RVFamilyDisjointPresentation.objectClass
+#print DiamondIntegral.Section4.RVFamilyDisjointPresentation.relation_zero
+#print axioms DiamondIntegral.Section4.RVFamilyDisjointPresentation.relation_zero
+#print DiamondIntegral.Section4.RVFamilyDisjointPresentation.objectClass_unit
+#print axioms DiamondIntegral.Section4.RVFamilyDisjointPresentation.objectClass_unit
+#print DiamondIntegral.Section4.RVFamilyDisjointPresentation.objectClass_product
+#print axioms DiamondIntegral.Section4.RVFamilyDisjointPresentation.objectClass_product
+#print DiamondIntegral.Section4.RVFamilyDisjointPresentation.objectClass_iso
+#print axioms DiamondIntegral.Section4.RVFamilyDisjointPresentation.objectClass_iso
+#print DiamondIntegral.Section4.RVFamilyDisjointPresentation.objectClass_empty
+#print axioms DiamondIntegral.Section4.RVFamilyDisjointPresentation.objectClass_empty
+#print DiamondIntegral.Section4.RVFamilyDisjointPresentation.objectClass_coproduct
+#print axioms DiamondIntegral.Section4.RVFamilyDisjointPresentation.objectClass_coproduct
+#print DiamondIntegral.Section4.RVFamilyDisjointPresentation.Invariant
+#print axioms DiamondIntegral.Section4.RVFamilyDisjointPresentation.Invariant
+#print DiamondIntegral.Section4.RVFamilyDisjointPresentation.freeMap
+#print axioms DiamondIntegral.Section4.RVFamilyDisjointPresentation.freeMap
+#print DiamondIntegral.Section4.RVFamilyDisjointPresentation.freeMap_symbol
+#print axioms DiamondIntegral.Section4.RVFamilyDisjointPresentation.freeMap_symbol
+#print DiamondIntegral.Section4.RVFamilyDisjointPresentation.invariant_relation_zero
+#print axioms DiamondIntegral.Section4.RVFamilyDisjointPresentation.invariant_relation_zero
+#print DiamondIntegral.Section4.RVFamilyDisjointPresentation.lift
+#print axioms DiamondIntegral.Section4.RVFamilyDisjointPresentation.lift
+#print DiamondIntegral.Section4.RVFamilyDisjointPresentation.lift_objectClass
+#print axioms DiamondIntegral.Section4.RVFamilyDisjointPresentation.lift_objectClass
+#print DiamondIntegral.Section4.RVFamilyDisjointPresentation.hom_ext
+#print axioms DiamondIntegral.Section4.RVFamilyDisjointPresentation.hom_ext
+#print DiamondIntegral.Section4.RVFamilyDisjointPresentation.classInvariant
+#print axioms DiamondIntegral.Section4.RVFamilyDisjointPresentation.classInvariant
+#print DiamondIntegral.Section4.RVFamilyDisjointPresentation.objectClass_scissor
+#print axioms DiamondIntegral.Section4.RVFamilyDisjointPresentation.objectClass_scissor
+#print DiamondIntegral.Section4.RESDisjointPresentation.family
+#print axioms DiamondIntegral.Section4.RESDisjointPresentation.family
+#print DiamondIntegral.Section4.RESDisjointPresentation.Ring
+#print axioms DiamondIntegral.Section4.RESDisjointPresentation.Ring
+#print DiamondIntegral.Section4.RESDisjointPresentation.toObject
+#print axioms DiamondIntegral.Section4.RESDisjointPresentation.toObject
+#print DiamondIntegral.Section4.RESDisjointPresentation.fromObject
+#print axioms DiamondIntegral.Section4.RESDisjointPresentation.fromObject
+#print DiamondIntegral.Section4.RESDisjointPresentation.objectClass
+#print axioms DiamondIntegral.Section4.RESDisjointPresentation.objectClass
+#print DiamondIntegral.Section4.RESDisjointPresentation.toChartInvariant
+#print axioms DiamondIntegral.Section4.RESDisjointPresentation.toChartInvariant
+#print DiamondIntegral.Section4.RESDisjointPresentation.toChartRing
+#print axioms DiamondIntegral.Section4.RESDisjointPresentation.toChartRing
+#print DiamondIntegral.Section4.RESDisjointPresentation.toChartRing_class
+#print axioms DiamondIntegral.Section4.RESDisjointPresentation.toChartRing_class
+#print DiamondIntegral.Section4.RESDisjointPresentation.fromChartInvariant
+#print axioms DiamondIntegral.Section4.RESDisjointPresentation.fromChartInvariant
+#print DiamondIntegral.Section4.RESDisjointPresentation.fromChartRing
+#print axioms DiamondIntegral.Section4.RESDisjointPresentation.fromChartRing
+#print DiamondIntegral.Section4.RESDisjointPresentation.fromChartRing_class
+#print axioms DiamondIntegral.Section4.RESDisjointPresentation.fromChartRing_class
+#print DiamondIntegral.Section4.RESDisjointPresentation.to_from
+#print axioms DiamondIntegral.Section4.RESDisjointPresentation.to_from
+#print DiamondIntegral.Section4.RESDisjointPresentation.from_to
+#print axioms DiamondIntegral.Section4.RESDisjointPresentation.from_to
+#print DiamondIntegral.Section4.RESDisjointPresentation.equivalence
+#print axioms DiamondIntegral.Section4.RESDisjointPresentation.equivalence
+#print DiamondIntegral.Section4.RVBoundedDisjointPresentation.family
+#print axioms DiamondIntegral.Section4.RVBoundedDisjointPresentation.family
+#print DiamondIntegral.Section4.RVBoundedDisjointPresentation.Ring
+#print axioms DiamondIntegral.Section4.RVBoundedDisjointPresentation.Ring
+#print DiamondIntegral.Section4.RVBoundedDisjointPresentation.toObject
+#print axioms DiamondIntegral.Section4.RVBoundedDisjointPresentation.toObject
+#print DiamondIntegral.Section4.RVBoundedDisjointPresentation.fromObject
+#print axioms DiamondIntegral.Section4.RVBoundedDisjointPresentation.fromObject
+#print DiamondIntegral.Section4.RVBoundedDisjointPresentation.objectClass
+#print axioms DiamondIntegral.Section4.RVBoundedDisjointPresentation.objectClass
+#print DiamondIntegral.Section4.RVBoundedDisjointPresentation.toChartInvariant
+#print axioms DiamondIntegral.Section4.RVBoundedDisjointPresentation.toChartInvariant
+#print DiamondIntegral.Section4.RVBoundedDisjointPresentation.toChartRing
+#print axioms DiamondIntegral.Section4.RVBoundedDisjointPresentation.toChartRing
+#print DiamondIntegral.Section4.RVBoundedDisjointPresentation.toChartRing_class
+#print axioms DiamondIntegral.Section4.RVBoundedDisjointPresentation.toChartRing_class
+#print DiamondIntegral.Section4.RVBoundedDisjointPresentation.fromChartInvariant
+#print axioms DiamondIntegral.Section4.RVBoundedDisjointPresentation.fromChartInvariant
+#print DiamondIntegral.Section4.RVBoundedDisjointPresentation.fromChartRing
+#print axioms DiamondIntegral.Section4.RVBoundedDisjointPresentation.fromChartRing
+#print DiamondIntegral.Section4.RVBoundedDisjointPresentation.fromChartRing_class
+#print axioms DiamondIntegral.Section4.RVBoundedDisjointPresentation.fromChartRing_class
+#print DiamondIntegral.Section4.RVBoundedDisjointPresentation.to_from
+#print axioms DiamondIntegral.Section4.RVBoundedDisjointPresentation.to_from
+#print DiamondIntegral.Section4.RVBoundedDisjointPresentation.from_to
+#print axioms DiamondIntegral.Section4.RVBoundedDisjointPresentation.from_to
+#print DiamondIntegral.Section4.RVBoundedDisjointPresentation.equivalence
+#print axioms DiamondIntegral.Section4.RVBoundedDisjointPresentation.equivalence
+#print DiamondIntegral.Section4.RVFamilyDisjointGrading.gradingInvariant
+#print axioms DiamondIntegral.Section4.RVFamilyDisjointGrading.gradingInvariant
+#print DiamondIntegral.Section4.RVFamilyDisjointGrading.coaction
+#print axioms DiamondIntegral.Section4.RVFamilyDisjointGrading.coaction
+#print DiamondIntegral.Section4.RVFamilyDisjointGrading.coaction_class
+#print axioms DiamondIntegral.Section4.RVFamilyDisjointGrading.coaction_class
+#print DiamondIntegral.Section4.RVFamilyDisjointGrading.coaction_counit
+#print axioms DiamondIntegral.Section4.RVFamilyDisjointGrading.coaction_counit
+#print DiamondIntegral.Section4.RVFamilyDisjointGrading.coaction_coassoc
+#print axioms DiamondIntegral.Section4.RVFamilyDisjointGrading.coaction_coassoc
+#print DiamondIntegral.Section4.RVFamilyDisjointGrading.gradingCoaction
+#print axioms DiamondIntegral.Section4.RVFamilyDisjointGrading.gradingCoaction
+#print DiamondIntegral.Section4.RVFamilyDisjointGrading.piece
+#print axioms DiamondIntegral.Section4.RVFamilyDisjointGrading.piece
+#print DiamondIntegral.Section4.RVFamilyDisjointGrading.gradedRing
+#print axioms DiamondIntegral.Section4.RVFamilyDisjointGrading.gradedRing
+#print DiamondIntegral.Section4.RVFamilyDisjointGrading.class_mem
+#print axioms DiamondIntegral.Section4.RVFamilyDisjointGrading.class_mem
+#print DiamondIntegral.Section4.RVFamilyDisjointGrading.map_coaction_of_classes
+#print axioms DiamondIntegral.Section4.RVFamilyDisjointGrading.map_coaction_of_classes
+#print DiamondIntegral.Section4.RVFamilyDisjointGrading.map_mem_of_classes
+#print axioms DiamondIntegral.Section4.RVFamilyDisjointGrading.map_mem_of_classes
+#print DiamondIntegral.Section4.RESDisjointGrading.piece
+#print axioms DiamondIntegral.Section4.RESDisjointGrading.piece
+#print DiamondIntegral.Section4.RESDisjointGrading.toChart_coaction
+#print axioms DiamondIntegral.Section4.RESDisjointGrading.toChart_coaction
+#print DiamondIntegral.Section4.RESDisjointGrading.fromChart_coaction
+#print axioms DiamondIntegral.Section4.RESDisjointGrading.fromChart_coaction
+#print DiamondIntegral.Section4.RESDisjointGrading.toChart_mem
+#print axioms DiamondIntegral.Section4.RESDisjointGrading.toChart_mem
+#print DiamondIntegral.Section4.RESDisjointGrading.fromChart_mem
+#print axioms DiamondIntegral.Section4.RESDisjointGrading.fromChart_mem
+#print DiamondIntegral.Section4.RESDisjointGrading.gradedToChart
+#print axioms DiamondIntegral.Section4.RESDisjointGrading.gradedToChart
+#print DiamondIntegral.Section4.RESDisjointGrading.gradedFromChart
+#print axioms DiamondIntegral.Section4.RESDisjointGrading.gradedFromChart
+#print DiamondIntegral.Section4.RESDisjointGrading.equivalence_mem_iff
+#print axioms DiamondIntegral.Section4.RESDisjointGrading.equivalence_mem_iff
+#print DiamondIntegral.Section4.RVBoundedDisjointGrading.piece
+#print axioms DiamondIntegral.Section4.RVBoundedDisjointGrading.piece
+#print DiamondIntegral.Section4.RVBoundedDisjointGrading.toChart_coaction
+#print axioms DiamondIntegral.Section4.RVBoundedDisjointGrading.toChart_coaction
+#print DiamondIntegral.Section4.RVBoundedDisjointGrading.fromChart_coaction
+#print axioms DiamondIntegral.Section4.RVBoundedDisjointGrading.fromChart_coaction
+#print DiamondIntegral.Section4.RVBoundedDisjointGrading.toChart_mem
+#print axioms DiamondIntegral.Section4.RVBoundedDisjointGrading.toChart_mem
+#print DiamondIntegral.Section4.RVBoundedDisjointGrading.fromChart_mem
+#print axioms DiamondIntegral.Section4.RVBoundedDisjointGrading.fromChart_mem
+#print DiamondIntegral.Section4.RVBoundedDisjointGrading.gradedToChart
+#print axioms DiamondIntegral.Section4.RVBoundedDisjointGrading.gradedToChart
+#print DiamondIntegral.Section4.RVBoundedDisjointGrading.gradedFromChart
+#print axioms DiamondIntegral.Section4.RVBoundedDisjointGrading.gradedFromChart
+#print DiamondIntegral.Section4.RVBoundedDisjointGrading.equivalence_mem_iff
+#print axioms DiamondIntegral.Section4.RVBoundedDisjointGrading.equivalence_mem_iff
+#print DiamondIntegral.Section4.RVOrdinaryScissorComponents.sameDomainIso
+#print axioms DiamondIntegral.Section4.RVOrdinaryScissorComponents.sameDomainIso
+#print DiamondIntegral.Section4.RVOrdinaryScissorComponents.mem_packedDomain_iff
+#print axioms DiamondIntegral.Section4.RVOrdinaryScissorComponents.mem_packedDomain_iff
+#print DiamondIntegral.Section4.RVOrdinaryScissorComponents.domain_union
+#print axioms DiamondIntegral.Section4.RVOrdinaryScissorComponents.domain_union
+#print DiamondIntegral.Section4.RVOrdinaryScissorComponents.domain_intersection
+#print axioms DiamondIntegral.Section4.RVOrdinaryScissorComponents.domain_intersection
+#print DiamondIntegral.Section4.RVOrdinaryScissorComponents.outsideIso
+#print axioms DiamondIntegral.Section4.RVOrdinaryScissorComponents.outsideIso
+#print DiamondIntegral.Section4.RVOrdinaryScissorComponents.insideLeftIso
+#print axioms DiamondIntegral.Section4.RVOrdinaryScissorComponents.insideLeftIso
+#print DiamondIntegral.Section4.RVOrdinaryScissorComponents.insideUnionIso
+#print axioms DiamondIntegral.Section4.RVOrdinaryScissorComponents.insideUnionIso
+#print DiamondIntegral.Section4.RVOrdinaryDisjointInvariants.AdditiveInvariant
+#print axioms DiamondIntegral.Section4.RVOrdinaryDisjointInvariants.AdditiveInvariant
+#print DiamondIntegral.Section4.RVOrdinaryDisjointInvariants.partition_value
+#print axioms DiamondIntegral.Section4.RVOrdinaryDisjointInvariants.partition_value
+#print DiamondIntegral.Section4.RVOrdinaryDisjointInvariants.scissor_data
+#print axioms DiamondIntegral.Section4.RVOrdinaryDisjointInvariants.scissor_data
+#print DiamondIntegral.Section4.RVOrdinaryDisjointInvariants.scissor
+#print axioms DiamondIntegral.Section4.RVOrdinaryDisjointInvariants.scissor
+#print DiamondIntegral.Section4.RVOrdinaryFamilyPresentation.Object
+#print axioms DiamondIntegral.Section4.RVOrdinaryFamilyPresentation.Object
+#print DiamondIntegral.Section4.RVOrdinaryFamilyPresentation.Generator
+#print axioms DiamondIntegral.Section4.RVOrdinaryFamilyPresentation.Generator
+#print DiamondIntegral.Section4.RVOrdinaryFamilyPresentation.unit
+#print axioms DiamondIntegral.Section4.RVOrdinaryFamilyPresentation.unit
+#print DiamondIntegral.Section4.RVOrdinaryFamilyPresentation.product
+#print axioms DiamondIntegral.Section4.RVOrdinaryFamilyPresentation.product
+#print DiamondIntegral.Section4.RVOrdinaryFamilyPresentation.coproduct
+#print axioms DiamondIntegral.Section4.RVOrdinaryFamilyPresentation.coproduct
+#print DiamondIntegral.Section4.RVOrdinaryFamilyPresentation.symbol
+#print axioms DiamondIntegral.Section4.RVOrdinaryFamilyPresentation.symbol
+#print DiamondIntegral.Section4.RVOrdinaryFamilyPresentation.Relation
+#print axioms DiamondIntegral.Section4.RVOrdinaryFamilyPresentation.Relation
+#print DiamondIntegral.Section4.RVOrdinaryFamilyPresentation.relationIdeal
+#print axioms DiamondIntegral.Section4.RVOrdinaryFamilyPresentation.relationIdeal
+#print DiamondIntegral.Section4.RVOrdinaryFamilyPresentation.Ring
+#print axioms DiamondIntegral.Section4.RVOrdinaryFamilyPresentation.Ring
+#print DiamondIntegral.Section4.RVOrdinaryFamilyPresentation.objectClass
+#print axioms DiamondIntegral.Section4.RVOrdinaryFamilyPresentation.objectClass
+#print DiamondIntegral.Section4.RVOrdinaryFamilyPresentation.relation_zero
+#print axioms DiamondIntegral.Section4.RVOrdinaryFamilyPresentation.relation_zero
+#print DiamondIntegral.Section4.RVOrdinaryFamilyPresentation.objectClass_unit
+#print axioms DiamondIntegral.Section4.RVOrdinaryFamilyPresentation.objectClass_unit
+#print DiamondIntegral.Section4.RVOrdinaryFamilyPresentation.objectClass_product
+#print axioms DiamondIntegral.Section4.RVOrdinaryFamilyPresentation.objectClass_product
+#print DiamondIntegral.Section4.RVOrdinaryFamilyPresentation.objectClass_iso
+#print axioms DiamondIntegral.Section4.RVOrdinaryFamilyPresentation.objectClass_iso
+#print DiamondIntegral.Section4.RVOrdinaryFamilyPresentation.objectClass_empty
+#print axioms DiamondIntegral.Section4.RVOrdinaryFamilyPresentation.objectClass_empty
+#print DiamondIntegral.Section4.RVOrdinaryFamilyPresentation.objectClass_coproduct
+#print axioms DiamondIntegral.Section4.RVOrdinaryFamilyPresentation.objectClass_coproduct
+#print DiamondIntegral.Section4.RVOrdinaryFamilyPresentation.Invariant
+#print axioms DiamondIntegral.Section4.RVOrdinaryFamilyPresentation.Invariant
+#print DiamondIntegral.Section4.RVOrdinaryFamilyPresentation.freeMap
+#print axioms DiamondIntegral.Section4.RVOrdinaryFamilyPresentation.freeMap
+#print DiamondIntegral.Section4.RVOrdinaryFamilyPresentation.freeMap_symbol
+#print axioms DiamondIntegral.Section4.RVOrdinaryFamilyPresentation.freeMap_symbol
+#print DiamondIntegral.Section4.RVOrdinaryFamilyPresentation.invariant_relation_zero
+#print axioms DiamondIntegral.Section4.RVOrdinaryFamilyPresentation.invariant_relation_zero
+#print DiamondIntegral.Section4.RVOrdinaryFamilyPresentation.lift
+#print axioms DiamondIntegral.Section4.RVOrdinaryFamilyPresentation.lift
+#print DiamondIntegral.Section4.RVOrdinaryFamilyPresentation.lift_objectClass
+#print axioms DiamondIntegral.Section4.RVOrdinaryFamilyPresentation.lift_objectClass
+#print DiamondIntegral.Section4.RVOrdinaryFamilyPresentation.hom_ext
+#print axioms DiamondIntegral.Section4.RVOrdinaryFamilyPresentation.hom_ext
+#print DiamondIntegral.Section4.RVOrdinaryFamilyPresentation.classInvariant
+#print axioms DiamondIntegral.Section4.RVOrdinaryFamilyPresentation.classInvariant
+#print DiamondIntegral.Section4.RVOrdinaryFamilyPresentation.objectClass_scissor
+#print axioms DiamondIntegral.Section4.RVOrdinaryFamilyPresentation.objectClass_scissor
+#print DiamondIntegral.Section4.RVOrdinaryFamilyGrading.gradingInvariant
+#print axioms DiamondIntegral.Section4.RVOrdinaryFamilyGrading.gradingInvariant
+#print DiamondIntegral.Section4.RVOrdinaryFamilyGrading.coaction
+#print axioms DiamondIntegral.Section4.RVOrdinaryFamilyGrading.coaction
+#print DiamondIntegral.Section4.RVOrdinaryFamilyGrading.coaction_class
+#print axioms DiamondIntegral.Section4.RVOrdinaryFamilyGrading.coaction_class
+#print DiamondIntegral.Section4.RVOrdinaryFamilyGrading.coaction_counit
+#print axioms DiamondIntegral.Section4.RVOrdinaryFamilyGrading.coaction_counit
+#print DiamondIntegral.Section4.RVOrdinaryFamilyGrading.coaction_coassoc
+#print axioms DiamondIntegral.Section4.RVOrdinaryFamilyGrading.coaction_coassoc
+#print DiamondIntegral.Section4.RVOrdinaryFamilyGrading.gradingCoaction
+#print axioms DiamondIntegral.Section4.RVOrdinaryFamilyGrading.gradingCoaction
+#print DiamondIntegral.Section4.RVOrdinaryFamilyGrading.piece
+#print axioms DiamondIntegral.Section4.RVOrdinaryFamilyGrading.piece
+#print DiamondIntegral.Section4.RVOrdinaryFamilyGrading.gradedRing
+#print axioms DiamondIntegral.Section4.RVOrdinaryFamilyGrading.gradedRing
+#print DiamondIntegral.Section4.RVOrdinaryFamilyGrading.class_mem
+#print axioms DiamondIntegral.Section4.RVOrdinaryFamilyGrading.class_mem
+#print DiamondIntegral.Section4.RVOrdinaryFamilyGrading.map_coaction_of_classes
+#print axioms DiamondIntegral.Section4.RVOrdinaryFamilyGrading.map_coaction_of_classes
+#print DiamondIntegral.Section4.RVOrdinaryFamilyGrading.map_mem_of_classes
+#print axioms DiamondIntegral.Section4.RVOrdinaryFamilyGrading.map_mem_of_classes
+#print DiamondIntegral.Section4.RESOrdinaryDisjointPresentation.family
+#print axioms DiamondIntegral.Section4.RESOrdinaryDisjointPresentation.family
+#print DiamondIntegral.Section4.RESOrdinaryDisjointPresentation.Ring
+#print axioms DiamondIntegral.Section4.RESOrdinaryDisjointPresentation.Ring
+#print DiamondIntegral.Section4.RESOrdinaryDisjointPresentation.toObject
+#print axioms DiamondIntegral.Section4.RESOrdinaryDisjointPresentation.toObject
+#print DiamondIntegral.Section4.RESOrdinaryDisjointPresentation.fromObject
+#print axioms DiamondIntegral.Section4.RESOrdinaryDisjointPresentation.fromObject
+#print DiamondIntegral.Section4.RESOrdinaryDisjointPresentation.objectClass
+#print axioms DiamondIntegral.Section4.RESOrdinaryDisjointPresentation.objectClass
+#print DiamondIntegral.Section4.RESOrdinaryDisjointPresentation.toChartInvariant
+#print axioms DiamondIntegral.Section4.RESOrdinaryDisjointPresentation.toChartInvariant
+#print DiamondIntegral.Section4.RESOrdinaryDisjointPresentation.toChartRing
+#print axioms DiamondIntegral.Section4.RESOrdinaryDisjointPresentation.toChartRing
+#print DiamondIntegral.Section4.RESOrdinaryDisjointPresentation.toChartRing_class
+#print axioms DiamondIntegral.Section4.RESOrdinaryDisjointPresentation.toChartRing_class
+#print DiamondIntegral.Section4.RESOrdinaryDisjointPresentation.fromChartInvariant
+#print axioms DiamondIntegral.Section4.RESOrdinaryDisjointPresentation.fromChartInvariant
+#print DiamondIntegral.Section4.RESOrdinaryDisjointPresentation.fromChartRing
+#print axioms DiamondIntegral.Section4.RESOrdinaryDisjointPresentation.fromChartRing
+#print DiamondIntegral.Section4.RESOrdinaryDisjointPresentation.fromChartRing_class
+#print axioms DiamondIntegral.Section4.RESOrdinaryDisjointPresentation.fromChartRing_class
+#print DiamondIntegral.Section4.RESOrdinaryDisjointPresentation.to_from
+#print axioms DiamondIntegral.Section4.RESOrdinaryDisjointPresentation.to_from
+#print DiamondIntegral.Section4.RESOrdinaryDisjointPresentation.from_to
+#print axioms DiamondIntegral.Section4.RESOrdinaryDisjointPresentation.from_to
+#print DiamondIntegral.Section4.RESOrdinaryDisjointPresentation.equivalence
+#print axioms DiamondIntegral.Section4.RESOrdinaryDisjointPresentation.equivalence
+#print DiamondIntegral.Section4.RVOrdinaryDisjointPresentation.family
+#print axioms DiamondIntegral.Section4.RVOrdinaryDisjointPresentation.family
+#print DiamondIntegral.Section4.RVOrdinaryDisjointPresentation.Ring
+#print axioms DiamondIntegral.Section4.RVOrdinaryDisjointPresentation.Ring
+#print DiamondIntegral.Section4.RVOrdinaryDisjointPresentation.toObject
+#print axioms DiamondIntegral.Section4.RVOrdinaryDisjointPresentation.toObject
+#print DiamondIntegral.Section4.RVOrdinaryDisjointPresentation.fromObject
+#print axioms DiamondIntegral.Section4.RVOrdinaryDisjointPresentation.fromObject
+#print DiamondIntegral.Section4.RVOrdinaryDisjointPresentation.objectClass
+#print axioms DiamondIntegral.Section4.RVOrdinaryDisjointPresentation.objectClass
+#print DiamondIntegral.Section4.RVOrdinaryDisjointPresentation.toChartInvariant
+#print axioms DiamondIntegral.Section4.RVOrdinaryDisjointPresentation.toChartInvariant
+#print DiamondIntegral.Section4.RVOrdinaryDisjointPresentation.toChartRing
+#print axioms DiamondIntegral.Section4.RVOrdinaryDisjointPresentation.toChartRing
+#print DiamondIntegral.Section4.RVOrdinaryDisjointPresentation.toChartRing_class
+#print axioms DiamondIntegral.Section4.RVOrdinaryDisjointPresentation.toChartRing_class
+#print DiamondIntegral.Section4.RVOrdinaryDisjointPresentation.fromChartInvariant
+#print axioms DiamondIntegral.Section4.RVOrdinaryDisjointPresentation.fromChartInvariant
+#print DiamondIntegral.Section4.RVOrdinaryDisjointPresentation.fromChartRing
+#print axioms DiamondIntegral.Section4.RVOrdinaryDisjointPresentation.fromChartRing
+#print DiamondIntegral.Section4.RVOrdinaryDisjointPresentation.fromChartRing_class
+#print axioms DiamondIntegral.Section4.RVOrdinaryDisjointPresentation.fromChartRing_class
+#print DiamondIntegral.Section4.RVOrdinaryDisjointPresentation.to_from
+#print axioms DiamondIntegral.Section4.RVOrdinaryDisjointPresentation.to_from
+#print DiamondIntegral.Section4.RVOrdinaryDisjointPresentation.from_to
+#print axioms DiamondIntegral.Section4.RVOrdinaryDisjointPresentation.from_to
+#print DiamondIntegral.Section4.RVOrdinaryDisjointPresentation.equivalence
+#print axioms DiamondIntegral.Section4.RVOrdinaryDisjointPresentation.equivalence
+#print DiamondIntegral.Section4.RVDisjointRadiusQuotient.radiusGenerator
+#print axioms DiamondIntegral.Section4.RVDisjointRadiusQuotient.radiusGenerator
+#print DiamondIntegral.Section4.RVDisjointRadiusQuotient.toChart_radiusGenerator
+#print axioms DiamondIntegral.Section4.RVDisjointRadiusQuotient.toChart_radiusGenerator
+#print DiamondIntegral.Section4.RVDisjointRadiusQuotient.radiusGenerator_independent
+#print axioms DiamondIntegral.Section4.RVDisjointRadiusQuotient.radiusGenerator_independent
+#print DiamondIntegral.Section4.RVDisjointRadiusQuotient.pGamma
+#print axioms DiamondIntegral.Section4.RVDisjointRadiusQuotient.pGamma
+#print DiamondIntegral.Section4.RVDisjointRadiusQuotient.toChart_pGamma
+#print axioms DiamondIntegral.Section4.RVDisjointRadiusQuotient.toChart_pGamma
+#print DiamondIntegral.Section4.RVDisjointRadiusQuotient.pGamma_zero
+#print axioms DiamondIntegral.Section4.RVDisjointRadiusQuotient.pGamma_zero
+#print DiamondIntegral.Section4.RVDisjointRadiusQuotient.radiusIdeal
+#print axioms DiamondIntegral.Section4.RVDisjointRadiusQuotient.radiusIdeal
+#print DiamondIntegral.Section4.RVDisjointRadiusQuotient.map_radiusIdeal
+#print axioms DiamondIntegral.Section4.RVDisjointRadiusQuotient.map_radiusIdeal
+#print DiamondIntegral.Section4.RVDisjointRadiusQuotient.Ring
+#print axioms DiamondIntegral.Section4.RVDisjointRadiusQuotient.Ring
+#print DiamondIntegral.Section4.RVDisjointRadiusQuotient.quotient
+#print axioms DiamondIntegral.Section4.RVDisjointRadiusQuotient.quotient
+#print DiamondIntegral.Section4.RVDisjointRadiusQuotient.quotientEquivalence
+#print axioms DiamondIntegral.Section4.RVDisjointRadiusQuotient.quotientEquivalence
+#print DiamondIntegral.Section4.RVDisjointRadiusQuotient.quotientEquivalence_quotient
+#print axioms DiamondIntegral.Section4.RVDisjointRadiusQuotient.quotientEquivalence_quotient
+#print DiamondIntegral.Section4.RVDisjointRadiusQuotient.quotientEquivalence_class
+#print axioms DiamondIntegral.Section4.RVDisjointRadiusQuotient.quotientEquivalence_class
+#print DiamondIntegral.Section4.RVDisjointRadiusQuotient.pGamma_mem
+#print axioms DiamondIntegral.Section4.RVDisjointRadiusQuotient.pGamma_mem
+#print DiamondIntegral.Section4.RVDisjointRadiusQuotient.radiusIdeal_homogeneous
+#print axioms DiamondIntegral.Section4.RVDisjointRadiusQuotient.radiusIdeal_homogeneous
+#print DiamondIntegral.Section4.RVDisjointRadiusQuotient.ideal_coefficients
+#print axioms DiamondIntegral.Section4.RVDisjointRadiusQuotient.ideal_coefficients
+#print DiamondIntegral.Section4.RVDisjointRadiusQuotient.coaction
+#print axioms DiamondIntegral.Section4.RVDisjointRadiusQuotient.coaction
+#print DiamondIntegral.Section4.RVDisjointRadiusQuotient.piece
+#print axioms DiamondIntegral.Section4.RVDisjointRadiusQuotient.piece
+#print DiamondIntegral.Section4.RVDisjointRadiusQuotient.gradedRing
+#print axioms DiamondIntegral.Section4.RVDisjointRadiusQuotient.gradedRing
+#print DiamondIntegral.Section4.RVDisjointRadiusQuotient.quotient_mem
+#print axioms DiamondIntegral.Section4.RVDisjointRadiusQuotient.quotient_mem
+#print DiamondIntegral.Section4.RVDisjointRadiusQuotient.comparison_ideal_zero
+#print axioms DiamondIntegral.Section4.RVDisjointRadiusQuotient.comparison_ideal_zero
+#print DiamondIntegral.Section4.RVDisjointRadiusQuotient.comparison
+#print axioms DiamondIntegral.Section4.RVDisjointRadiusQuotient.comparison
+#print DiamondIntegral.Section4.RVDisjointRadiusQuotient.comparison_eq
+#print axioms DiamondIntegral.Section4.RVDisjointRadiusQuotient.comparison_eq
+#print DiamondIntegral.Section4.RVDisjointRadiusQuotient.quotientEquivalence_mem
+#print axioms DiamondIntegral.Section4.RVDisjointRadiusQuotient.quotientEquivalence_mem
+#print DiamondIntegral.Section4.RVDisjointRadiusQuotient.gradedComparison
+#print axioms DiamondIntegral.Section4.RVDisjointRadiusQuotient.gradedComparison
+#print DiamondIntegral.Section4.RESOrdinaryDisjointGrading.piece
+#print axioms DiamondIntegral.Section4.RESOrdinaryDisjointGrading.piece
+#print DiamondIntegral.Section4.RESOrdinaryDisjointGrading.toChart_coaction
+#print axioms DiamondIntegral.Section4.RESOrdinaryDisjointGrading.toChart_coaction
+#print DiamondIntegral.Section4.RESOrdinaryDisjointGrading.fromChart_coaction
+#print axioms DiamondIntegral.Section4.RESOrdinaryDisjointGrading.fromChart_coaction
+#print DiamondIntegral.Section4.RESOrdinaryDisjointGrading.toChart_mem
+#print axioms DiamondIntegral.Section4.RESOrdinaryDisjointGrading.toChart_mem
+#print DiamondIntegral.Section4.RESOrdinaryDisjointGrading.fromChart_mem
+#print axioms DiamondIntegral.Section4.RESOrdinaryDisjointGrading.fromChart_mem
+#print DiamondIntegral.Section4.RESOrdinaryDisjointGrading.gradedToChart
+#print axioms DiamondIntegral.Section4.RESOrdinaryDisjointGrading.gradedToChart
+#print DiamondIntegral.Section4.RESOrdinaryDisjointGrading.gradedFromChart
+#print axioms DiamondIntegral.Section4.RESOrdinaryDisjointGrading.gradedFromChart
+#print DiamondIntegral.Section4.RESOrdinaryDisjointGrading.equivalence_mem_iff
+#print axioms DiamondIntegral.Section4.RESOrdinaryDisjointGrading.equivalence_mem_iff
+#print DiamondIntegral.Section4.RVOrdinaryDisjointGrading.piece
+#print axioms DiamondIntegral.Section4.RVOrdinaryDisjointGrading.piece
+#print DiamondIntegral.Section4.RVOrdinaryDisjointGrading.toChart_coaction
+#print axioms DiamondIntegral.Section4.RVOrdinaryDisjointGrading.toChart_coaction
+#print DiamondIntegral.Section4.RVOrdinaryDisjointGrading.fromChart_coaction
+#print axioms DiamondIntegral.Section4.RVOrdinaryDisjointGrading.fromChart_coaction
+#print DiamondIntegral.Section4.RVOrdinaryDisjointGrading.toChart_mem
+#print axioms DiamondIntegral.Section4.RVOrdinaryDisjointGrading.toChart_mem
+#print DiamondIntegral.Section4.RVOrdinaryDisjointGrading.fromChart_mem
+#print axioms DiamondIntegral.Section4.RVOrdinaryDisjointGrading.fromChart_mem
+#print DiamondIntegral.Section4.RVOrdinaryDisjointGrading.gradedToChart
+#print axioms DiamondIntegral.Section4.RVOrdinaryDisjointGrading.gradedToChart
+#print DiamondIntegral.Section4.RVOrdinaryDisjointGrading.gradedFromChart
+#print axioms DiamondIntegral.Section4.RVOrdinaryDisjointGrading.gradedFromChart
+#print DiamondIntegral.Section4.RVOrdinaryDisjointGrading.equivalence_mem_iff
+#print axioms DiamondIntegral.Section4.RVOrdinaryDisjointGrading.equivalence_mem_iff
+#print DiamondIntegral.Section4.RVDisjointPQuotients.Measured.pClass
+#print axioms DiamondIntegral.Section4.RVDisjointPQuotients.Measured.pClass
+#print DiamondIntegral.Section4.RVDisjointPQuotients.Measured.toChart_pClass
+#print axioms DiamondIntegral.Section4.RVDisjointPQuotients.Measured.toChart_pClass
+#print DiamondIntegral.Section4.RVDisjointPQuotients.Measured.pIdeal
+#print axioms DiamondIntegral.Section4.RVDisjointPQuotients.Measured.pIdeal
+#print DiamondIntegral.Section4.RVDisjointPQuotients.Measured.map_pIdeal
+#print axioms DiamondIntegral.Section4.RVDisjointPQuotients.Measured.map_pIdeal
+#print DiamondIntegral.Section4.RVDisjointPQuotients.Measured.Ring
+#print axioms DiamondIntegral.Section4.RVDisjointPQuotients.Measured.Ring
+#print DiamondIntegral.Section4.RVDisjointPQuotients.Measured.quotient
+#print axioms DiamondIntegral.Section4.RVDisjointPQuotients.Measured.quotient
+#print DiamondIntegral.Section4.RVDisjointPQuotients.Measured.equivalence
+#print axioms DiamondIntegral.Section4.RVDisjointPQuotients.Measured.equivalence
+#print DiamondIntegral.Section4.RVDisjointPQuotients.Measured.equivalence_quotient
+#print axioms DiamondIntegral.Section4.RVDisjointPQuotients.Measured.equivalence_quotient
+#print DiamondIntegral.Section4.RVDisjointPQuotients.Measured.equivalence_class
+#print axioms DiamondIntegral.Section4.RVDisjointPQuotients.Measured.equivalence_class
+#print DiamondIntegral.Section4.RVDisjointPQuotients.Measured.p_zero
+#print axioms DiamondIntegral.Section4.RVDisjointPQuotients.Measured.p_zero
+#print DiamondIntegral.Section4.RVDisjointPQuotients.Measured.pClass_mem
+#print axioms DiamondIntegral.Section4.RVDisjointPQuotients.Measured.pClass_mem
+#print DiamondIntegral.Section4.RVDisjointPQuotients.Measured.pIdeal_homogeneous
+#print axioms DiamondIntegral.Section4.RVDisjointPQuotients.Measured.pIdeal_homogeneous
+#print DiamondIntegral.Section4.RVDisjointPQuotients.Ordinary.pClass
+#print axioms DiamondIntegral.Section4.RVDisjointPQuotients.Ordinary.pClass
+#print DiamondIntegral.Section4.RVDisjointPQuotients.Ordinary.toChart_pClass
+#print axioms DiamondIntegral.Section4.RVDisjointPQuotients.Ordinary.toChart_pClass
+#print DiamondIntegral.Section4.RVDisjointPQuotients.Ordinary.pIdeal
+#print axioms DiamondIntegral.Section4.RVDisjointPQuotients.Ordinary.pIdeal
+#print DiamondIntegral.Section4.RVDisjointPQuotients.Ordinary.map_pIdeal
+#print axioms DiamondIntegral.Section4.RVDisjointPQuotients.Ordinary.map_pIdeal
+#print DiamondIntegral.Section4.RVDisjointPQuotients.Ordinary.Ring
+#print axioms DiamondIntegral.Section4.RVDisjointPQuotients.Ordinary.Ring
+#print DiamondIntegral.Section4.RVDisjointPQuotients.Ordinary.quotient
+#print axioms DiamondIntegral.Section4.RVDisjointPQuotients.Ordinary.quotient
+#print DiamondIntegral.Section4.RVDisjointPQuotients.Ordinary.equivalence
+#print axioms DiamondIntegral.Section4.RVDisjointPQuotients.Ordinary.equivalence
+#print DiamondIntegral.Section4.RVDisjointPQuotients.Ordinary.equivalence_quotient
+#print axioms DiamondIntegral.Section4.RVDisjointPQuotients.Ordinary.equivalence_quotient
+#print DiamondIntegral.Section4.RVDisjointPQuotients.Ordinary.equivalence_class
+#print axioms DiamondIntegral.Section4.RVDisjointPQuotients.Ordinary.equivalence_class
+#print DiamondIntegral.Section4.RVDisjointPQuotients.Ordinary.p_one
+#print axioms DiamondIntegral.Section4.RVDisjointPQuotients.Ordinary.p_one
+#print DiamondIntegral.Section4.RESDisjointReduction.Measured.fibreRelations
+#print axioms DiamondIntegral.Section4.RESDisjointReduction.Measured.fibreRelations
+#print DiamondIntegral.Section4.RESDisjointReduction.Measured.fibreIdeal
+#print axioms DiamondIntegral.Section4.RESDisjointReduction.Measured.fibreIdeal
+#print DiamondIntegral.Section4.RESDisjointReduction.Measured.affineClass
+#print axioms DiamondIntegral.Section4.RESDisjointReduction.Measured.affineClass
+#print DiamondIntegral.Section4.RESDisjointReduction.Measured.reductionIdeal
+#print axioms DiamondIntegral.Section4.RESDisjointReduction.Measured.reductionIdeal
+#print DiamondIntegral.Section4.RESDisjointReduction.Measured.image_fibreRelations
+#print axioms DiamondIntegral.Section4.RESDisjointReduction.Measured.image_fibreRelations
+#print DiamondIntegral.Section4.RESDisjointReduction.Measured.map_fibreIdeal
+#print axioms DiamondIntegral.Section4.RESDisjointReduction.Measured.map_fibreIdeal
+#print DiamondIntegral.Section4.RESDisjointReduction.Measured.toChart_affineClass
+#print axioms DiamondIntegral.Section4.RESDisjointReduction.Measured.toChart_affineClass
+#print DiamondIntegral.Section4.RESDisjointReduction.Measured.map_reductionIdeal
+#print axioms DiamondIntegral.Section4.RESDisjointReduction.Measured.map_reductionIdeal
+#print DiamondIntegral.Section4.RESDisjointReduction.Measured.Ring
+#print axioms DiamondIntegral.Section4.RESDisjointReduction.Measured.Ring
+#print DiamondIntegral.Section4.RESDisjointReduction.Measured.quotient
+#print axioms DiamondIntegral.Section4.RESDisjointReduction.Measured.quotient
+#print DiamondIntegral.Section4.RESDisjointReduction.Measured.equivalence
+#print axioms DiamondIntegral.Section4.RESDisjointReduction.Measured.equivalence
+#print DiamondIntegral.Section4.RESDisjointReduction.Measured.equivalence_quotient
+#print axioms DiamondIntegral.Section4.RESDisjointReduction.Measured.equivalence_quotient
+#print DiamondIntegral.Section4.RESDisjointReduction.Measured.equivalence_class
+#print axioms DiamondIntegral.Section4.RESDisjointReduction.Measured.equivalence_class
+#print DiamondIntegral.Section4.RESDisjointReduction.Ordinary.fibreRelations
+#print axioms DiamondIntegral.Section4.RESDisjointReduction.Ordinary.fibreRelations
+#print DiamondIntegral.Section4.RESDisjointReduction.Ordinary.fibreIdeal
+#print axioms DiamondIntegral.Section4.RESDisjointReduction.Ordinary.fibreIdeal
+#print DiamondIntegral.Section4.RESDisjointReduction.Ordinary.image_fibreRelations
+#print axioms DiamondIntegral.Section4.RESDisjointReduction.Ordinary.image_fibreRelations
+#print DiamondIntegral.Section4.RESDisjointReduction.Ordinary.map_fibreIdeal
+#print axioms DiamondIntegral.Section4.RESDisjointReduction.Ordinary.map_fibreIdeal
+#print DiamondIntegral.Section4.RESDisjointReduction.Ordinary.Ring
+#print axioms DiamondIntegral.Section4.RESDisjointReduction.Ordinary.Ring
+#print DiamondIntegral.Section4.RESDisjointReduction.Ordinary.quotient
+#print axioms DiamondIntegral.Section4.RESDisjointReduction.Ordinary.quotient
+#print DiamondIntegral.Section4.RESDisjointReduction.Ordinary.equivalence
+#print axioms DiamondIntegral.Section4.RESDisjointReduction.Ordinary.equivalence
+#print DiamondIntegral.Section4.RESDisjointReduction.Ordinary.equivalence_quotient
+#print axioms DiamondIntegral.Section4.RESDisjointReduction.Ordinary.equivalence_quotient
+#print DiamondIntegral.Section4.RESDisjointReduction.Ordinary.equivalence_class
+#print axioms DiamondIntegral.Section4.RESDisjointReduction.Ordinary.equivalence_class
+#print DiamondIntegral.Section4.GammaRVFinitePartitions.class_disjoint_union
+#print axioms DiamondIntegral.Section4.GammaRVFinitePartitions.class_disjoint_union
+#print DiamondIntegral.Section4.GammaRVFinitePartitions.support
+#print axioms DiamondIntegral.Section4.GammaRVFinitePartitions.support
+#print DiamondIntegral.Section4.GammaRVFinitePartitions.support_definable
+#print axioms DiamondIntegral.Section4.GammaRVFinitePartitions.support_definable
+#print DiamondIntegral.Section4.GammaRVFinitePartitions.unionChart
+#print axioms DiamondIntegral.Section4.GammaRVFinitePartitions.unionChart
+#print DiamondIntegral.Section4.GammaRVFinitePartitions.class_unionChart
+#print axioms DiamondIntegral.Section4.GammaRVFinitePartitions.class_unionChart
+#print DiamondIntegral.Section4.GammaRVFinitePartitions.restrict
+#print axioms DiamondIntegral.Section4.GammaRVFinitePartitions.restrict
+#print DiamondIntegral.Section4.GammaRVFinitePartitions.class_partition
+#print axioms DiamondIntegral.Section4.GammaRVFinitePartitions.class_partition
+#print DiamondIntegral.Section4.GammaRVFiniteFamilies.familyClass
+#print axioms DiamondIntegral.Section4.GammaRVFiniteFamilies.familyClass
+#print DiamondIntegral.Section4.GammaRVFiniteFamilies.familyClass_empty
+#print axioms DiamondIntegral.Section4.GammaRVFiniteFamilies.familyClass_empty
+#print DiamondIntegral.Section4.GammaRVFiniteFamilies.familyClass_singleton
+#print axioms DiamondIntegral.Section4.GammaRVFiniteFamilies.familyClass_singleton
+#print DiamondIntegral.Section4.GammaRVFiniteFamilies.familyClass_sum
+#print axioms DiamondIntegral.Section4.GammaRVFiniteFamilies.familyClass_sum
+#print DiamondIntegral.Section4.GammaRVFiniteFamilies.familyClass_product
+#print axioms DiamondIntegral.Section4.GammaRVFiniteFamilies.familyClass_product
+#print DiamondIntegral.Section4.GammaRVFiniteFamilies.PartitionIso
+#print axioms DiamondIntegral.Section4.GammaRVFiniteFamilies.PartitionIso
+#print DiamondIntegral.Section4.GammaRVFiniteFamilies.familyClass_partitionIso
+#print axioms DiamondIntegral.Section4.GammaRVFiniteFamilies.familyClass_partitionIso
+#print DiamondIntegral.Section4.GammaRVFiniteFamilies.map_familyClass
+#print axioms DiamondIntegral.Section4.GammaRVFiniteFamilies.map_familyClass
+#print DiamondIntegral.Section4.FiniteFamilyBijections.Domain
+#print axioms DiamondIntegral.Section4.FiniteFamilyBijections.Domain
+#print DiamondIntegral.Section4.FiniteFamilyBijections.sourcePiece
+#print axioms DiamondIntegral.Section4.FiniteFamilyBijections.sourcePiece
+#print DiamondIntegral.Section4.FiniteFamilyBijections.targetPiece
+#print axioms DiamondIntegral.Section4.FiniteFamilyBijections.targetPiece
+#print DiamondIntegral.Section4.FiniteFamilyBijections.pieceMap
+#print axioms DiamondIntegral.Section4.FiniteFamilyBijections.pieceMap
+#print DiamondIntegral.Section4.FiniteFamilyBijections.pieceMap_on
+#print axioms DiamondIntegral.Section4.FiniteFamilyBijections.pieceMap_on
+#print DiamondIntegral.Section4.FiniteFamilyBijections.sourcePiece_subset
+#print axioms DiamondIntegral.Section4.FiniteFamilyBijections.sourcePiece_subset
+#print DiamondIntegral.Section4.FiniteFamilyBijections.sourcePiece_disjoint
+#print axioms DiamondIntegral.Section4.FiniteFamilyBijections.sourcePiece_disjoint
+#print DiamondIntegral.Section4.FiniteFamilyBijections.sourcePiece_cover
+#print axioms DiamondIntegral.Section4.FiniteFamilyBijections.sourcePiece_cover
+#print DiamondIntegral.Section4.FiniteFamilyBijections.pieceMap_mem
+#print axioms DiamondIntegral.Section4.FiniteFamilyBijections.pieceMap_mem
+#print DiamondIntegral.Section4.FiniteFamilyBijections.pieceMap_bijOn
+#print axioms DiamondIntegral.Section4.FiniteFamilyBijections.pieceMap_bijOn
+#print DiamondIntegral.Section4.FiniteFamilyBijections.mapDomain
+#print axioms DiamondIntegral.Section4.FiniteFamilyBijections.mapDomain
+#print DiamondIntegral.Section4.FiniteFamilyBijections.commute_symm
+#print axioms DiamondIntegral.Section4.FiniteFamilyBijections.commute_symm
+#print DiamondIntegral.Section4.FiniteFamilyBijections.sourcePiece_pullback
+#print axioms DiamondIntegral.Section4.FiniteFamilyBijections.sourcePiece_pullback
+#print DiamondIntegral.Section4.FiniteFamilyBijections.targetPiece_pullback
+#print axioms DiamondIntegral.Section4.FiniteFamilyBijections.targetPiece_pullback
+#print DiamondIntegral.Section4.GammaRVFamilyIsomorphisms.gammaDomain
+#print axioms DiamondIntegral.Section4.GammaRVFamilyIsomorphisms.gammaDomain
+#print DiamondIntegral.Section4.GammaRVFamilyIsomorphisms.rvDomain
+#print axioms DiamondIntegral.Section4.GammaRVFamilyIsomorphisms.rvDomain
+#print DiamondIntegral.Section4.GammaRVFamilyIsomorphisms.codeDomain
+#print axioms DiamondIntegral.Section4.GammaRVFamilyIsomorphisms.codeDomain
+#print DiamondIntegral.Section4.GammaRVFamilyIsomorphisms.Iso
+#print axioms DiamondIntegral.Section4.GammaRVFamilyIsomorphisms.Iso
+#print DiamondIntegral.Section4.GammaRVFamilyIsomorphisms.sourcePiece_lift
+#print axioms DiamondIntegral.Section4.GammaRVFamilyIsomorphisms.sourcePiece_lift
+#print DiamondIntegral.Section4.GammaRVFamilyIsomorphisms.targetPiece_lift
+#print axioms DiamondIntegral.Section4.GammaRVFamilyIsomorphisms.targetPiece_lift
+#print DiamondIntegral.Section4.GammaRVFamilyIsomorphisms.pieceIso
+#print axioms DiamondIntegral.Section4.GammaRVFamilyIsomorphisms.pieceIso
+#print DiamondIntegral.Section4.GammaRVFamilyIsomorphisms.partitionIso
+#print axioms DiamondIntegral.Section4.GammaRVFamilyIsomorphisms.partitionIso
+#print DiamondIntegral.Section4.GammaRVFamilyIsomorphisms.familyClass_iso
+#print axioms DiamondIntegral.Section4.GammaRVFamilyIsomorphisms.familyClass_iso
+#print DiamondIntegral.Section4.GammaRVFamilySharp.sharpFamily
+#print axioms DiamondIntegral.Section4.GammaRVFamilySharp.sharpFamily
+#print DiamondIntegral.Section4.GammaRVFamilySharp.sharpFamily_class
+#print axioms DiamondIntegral.Section4.GammaRVFamilySharp.sharpFamily_class
+#print DiamondIntegral.Section4.GammaRVFamilySharp.sharp_familyClass
+#print axioms DiamondIntegral.Section4.GammaRVFamilySharp.sharp_familyClass
+#print DiamondIntegral.Section4.GammaRVFamilySharp.familyClass_mem
+#print axioms DiamondIntegral.Section4.GammaRVFamilySharp.familyClass_mem
+#print DiamondIntegral.Section4.GammaRVFamilySharp.sharpFamily_iso_class
+#print axioms DiamondIntegral.Section4.GammaRVFamilySharp.sharpFamily_iso_class
+#print DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.Family
+#print axioms DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.Family
+#print DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.single
+#print axioms DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.single
+#print DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.Generator
+#print axioms DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.Generator
+#print DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.symbol
+#print axioms DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.symbol
+#print DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.singleSymbol
+#print axioms DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.singleSymbol
+#print DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.Relation
+#print axioms DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.Relation
+#print DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.relationIdeal
+#print axioms DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.relationIdeal
+#print DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.Ring
+#print axioms DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.Ring
+#print DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.objectClass
+#print axioms DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.objectClass
+#print DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.singleClass
+#print axioms DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.singleClass
+#print DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.relation_zero
+#print axioms DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.relation_zero
+#print DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.class_family
+#print axioms DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.class_family
+#print DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.class_unit
+#print axioms DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.class_unit
+#print DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.class_product
+#print axioms DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.class_product
+#print DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.class_singleIso
+#print axioms DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.class_singleIso
+#print DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.class_iso
+#print axioms DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.class_iso
+#print DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.class_empty
+#print axioms DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.class_empty
+#print DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.class_scissor
+#print axioms DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.class_scissor
+#print DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.evaluation
+#print axioms DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.evaluation
+#print DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.evaluation_single
+#print axioms DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.evaluation_single
+#print DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.freeMap
+#print axioms DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.freeMap
+#print DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.freeMap_symbol
+#print axioms DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.freeMap_symbol
+#print DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.freeMap_single
+#print axioms DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.freeMap_single
+#print DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.freeMap_relation_zero
+#print axioms DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.freeMap_relation_zero
+#print DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.toChartRing
+#print axioms DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.toChartRing
+#print DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.toChart_class
+#print axioms DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.toChart_class
+#print DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.toChart_single
+#print axioms DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.toChart_single
+#print DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.fromChartInvariant
+#print axioms DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.fromChartInvariant
+#print DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.fromChartRing
+#print axioms DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.fromChartRing
+#print DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.fromChart_class
+#print axioms DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.fromChart_class
+#print DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.to_from
+#print axioms DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.to_from
+#print DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.from_to
+#print axioms DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.from_to
+#print DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.equivalence
+#print axioms DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.equivalence
+#print DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.hom_ext
+#print axioms DiamondIntegral.Section4.GammaRVFiniteUnionPresentation.hom_ext
+#print DiamondIntegral.Section4.GammaRVFiniteUnionGrading.evaluation_mem
+#print axioms DiamondIntegral.Section4.GammaRVFiniteUnionGrading.evaluation_mem
+#print DiamondIntegral.Section4.GammaRVFiniteUnionGrading.coaction
+#print axioms DiamondIntegral.Section4.GammaRVFiniteUnionGrading.coaction
+#print DiamondIntegral.Section4.GammaRVFiniteUnionGrading.coaction_class
+#print axioms DiamondIntegral.Section4.GammaRVFiniteUnionGrading.coaction_class
+#print DiamondIntegral.Section4.GammaRVFiniteUnionGrading.coaction_counit
+#print axioms DiamondIntegral.Section4.GammaRVFiniteUnionGrading.coaction_counit
+#print DiamondIntegral.Section4.GammaRVFiniteUnionGrading.coaction_coassoc
+#print axioms DiamondIntegral.Section4.GammaRVFiniteUnionGrading.coaction_coassoc
+#print DiamondIntegral.Section4.GammaRVFiniteUnionGrading.gradingCoaction
+#print axioms DiamondIntegral.Section4.GammaRVFiniteUnionGrading.gradingCoaction
+#print DiamondIntegral.Section4.GammaRVFiniteUnionGrading.piece
+#print axioms DiamondIntegral.Section4.GammaRVFiniteUnionGrading.piece
+#print DiamondIntegral.Section4.GammaRVFiniteUnionGrading.gradedRing
+#print axioms DiamondIntegral.Section4.GammaRVFiniteUnionGrading.gradedRing
+#print DiamondIntegral.Section4.GammaRVFiniteUnionGrading.class_mem
+#print axioms DiamondIntegral.Section4.GammaRVFiniteUnionGrading.class_mem
+#print DiamondIntegral.Section4.GammaRVFiniteUnionGrading.toChart_coaction
+#print axioms DiamondIntegral.Section4.GammaRVFiniteUnionGrading.toChart_coaction
+#print DiamondIntegral.Section4.GammaRVFiniteUnionGrading.fromChart_coaction
+#print axioms DiamondIntegral.Section4.GammaRVFiniteUnionGrading.fromChart_coaction
+#print DiamondIntegral.Section4.GammaRVFiniteUnionGrading.toChart_mem
+#print axioms DiamondIntegral.Section4.GammaRVFiniteUnionGrading.toChart_mem
+#print DiamondIntegral.Section4.GammaRVFiniteUnionGrading.fromChart_mem
+#print axioms DiamondIntegral.Section4.GammaRVFiniteUnionGrading.fromChart_mem
+#print DiamondIntegral.Section4.GammaRVFiniteUnionGrading.gradedToChart
+#print axioms DiamondIntegral.Section4.GammaRVFiniteUnionGrading.gradedToChart
+#print DiamondIntegral.Section4.GammaRVFiniteUnionGrading.gradedFromChart
+#print axioms DiamondIntegral.Section4.GammaRVFiniteUnionGrading.gradedFromChart
+#print DiamondIntegral.Section4.GammaRVFiniteUnionOperations.empty
+#print axioms DiamondIntegral.Section4.GammaRVFiniteUnionOperations.empty
+#print DiamondIntegral.Section4.GammaRVFiniteUnionOperations.coproduct
+#print axioms DiamondIntegral.Section4.GammaRVFiniteUnionOperations.coproduct
+#print DiamondIntegral.Section4.GammaRVFiniteUnionOperations.product
+#print axioms DiamondIntegral.Section4.GammaRVFiniteUnionOperations.product
+#print DiamondIntegral.Section4.GammaRVFiniteUnionOperations.class_empty
+#print axioms DiamondIntegral.Section4.GammaRVFiniteUnionOperations.class_empty
+#print DiamondIntegral.Section4.GammaRVFiniteUnionOperations.class_coproduct
+#print axioms DiamondIntegral.Section4.GammaRVFiniteUnionOperations.class_coproduct
+#print DiamondIntegral.Section4.GammaRVFiniteUnionOperations.class_product
+#print axioms DiamondIntegral.Section4.GammaRVFiniteUnionOperations.class_product
+#print DiamondIntegral.Section4.GammaBoundedRVPartitions.class_eq_on_domain
+#print axioms DiamondIntegral.Section4.GammaBoundedRVPartitions.class_eq_on_domain
+#print DiamondIntegral.Section4.GammaBoundedRVPartitions.class_disjoint_union
+#print axioms DiamondIntegral.Section4.GammaBoundedRVPartitions.class_disjoint_union
+#print DiamondIntegral.Section4.GammaBoundedRVPartitions.support_bounded
+#print axioms DiamondIntegral.Section4.GammaBoundedRVPartitions.support_bounded
+#print DiamondIntegral.Section4.GammaBoundedRVPartitions.unionChart
+#print axioms DiamondIntegral.Section4.GammaBoundedRVPartitions.unionChart
+#print DiamondIntegral.Section4.GammaBoundedRVPartitions.class_unionChart
+#print axioms DiamondIntegral.Section4.GammaBoundedRVPartitions.class_unionChart
+#print DiamondIntegral.Section4.GammaBoundedRVPartitions.restrict
+#print axioms DiamondIntegral.Section4.GammaBoundedRVPartitions.restrict
+#print DiamondIntegral.Section4.GammaBoundedRVPartitions.class_partition
+#print axioms DiamondIntegral.Section4.GammaBoundedRVPartitions.class_partition
+#print DiamondIntegral.Section4.GammaFiniteRVPartitions.class_eq_on_domain
+#print axioms DiamondIntegral.Section4.GammaFiniteRVPartitions.class_eq_on_domain
+#print DiamondIntegral.Section4.GammaFiniteRVPartitions.class_empty_support
+#print axioms DiamondIntegral.Section4.GammaFiniteRVPartitions.class_empty_support
+#print DiamondIntegral.Section4.GammaFiniteRVPartitions.class_disjoint_union
+#print axioms DiamondIntegral.Section4.GammaFiniteRVPartitions.class_disjoint_union
+#print DiamondIntegral.Section4.GammaFiniteRVPartitions.support_finite
+#print axioms DiamondIntegral.Section4.GammaFiniteRVPartitions.support_finite
+#print DiamondIntegral.Section4.GammaFiniteRVPartitions.unionChart
+#print axioms DiamondIntegral.Section4.GammaFiniteRVPartitions.unionChart
+#print DiamondIntegral.Section4.GammaFiniteRVPartitions.class_unionChart
+#print axioms DiamondIntegral.Section4.GammaFiniteRVPartitions.class_unionChart
+#print DiamondIntegral.Section4.GammaFiniteRVPartitions.restrict
+#print axioms DiamondIntegral.Section4.GammaFiniteRVPartitions.restrict
+#print DiamondIntegral.Section4.GammaFiniteRVPartitions.class_partition
+#print axioms DiamondIntegral.Section4.GammaFiniteRVPartitions.class_partition
+#print DiamondIntegral.Section4.GammaRestrictedRVFiniteFamilies.Bounded.familyClass
+#print axioms DiamondIntegral.Section4.GammaRestrictedRVFiniteFamilies.Bounded.familyClass
+#print DiamondIntegral.Section4.GammaRestrictedRVFiniteFamilies.Bounded.familyClass_iso
+#print axioms DiamondIntegral.Section4.GammaRestrictedRVFiniteFamilies.Bounded.familyClass_iso
+#print DiamondIntegral.Section4.GammaRestrictedRVFiniteFamilies.Finite.familyClass
+#print axioms DiamondIntegral.Section4.GammaRestrictedRVFiniteFamilies.Finite.familyClass
+#print DiamondIntegral.Section4.GammaRestrictedRVFiniteFamilies.Finite.familyClass_iso
+#print axioms DiamondIntegral.Section4.GammaRestrictedRVFiniteFamilies.Finite.familyClass_iso
+#print DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.Family
+#print axioms DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.Family
+#print DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.single
+#print axioms DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.single
+#print DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.Generator
+#print axioms DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.Generator
+#print DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.symbol
+#print axioms DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.symbol
+#print DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.singleSymbol
+#print axioms DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.singleSymbol
+#print DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.Relation
+#print axioms DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.Relation
+#print DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.relationIdeal
+#print axioms DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.relationIdeal
+#print DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.Ring
+#print axioms DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.Ring
+#print DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.objectClass
+#print axioms DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.objectClass
+#print DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.singleClass
+#print axioms DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.singleClass
+#print DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.relation_zero
+#print axioms DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.relation_zero
+#print DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.class_family
+#print axioms DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.class_family
+#print DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.class_unit
+#print axioms DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.class_unit
+#print DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.class_product
+#print axioms DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.class_product
+#print DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.class_singleIso
+#print axioms DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.class_singleIso
+#print DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.class_iso
+#print axioms DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.class_iso
+#print DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.class_empty
+#print axioms DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.class_empty
+#print DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.class_scissor
+#print axioms DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.class_scissor
+#print DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.evaluation
+#print axioms DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.evaluation
+#print DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.evaluation_single
+#print axioms DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.evaluation_single
+#print DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.freeMap
+#print axioms DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.freeMap
+#print DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.freeMap_symbol
+#print axioms DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.freeMap_symbol
+#print DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.freeMap_single
+#print axioms DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.freeMap_single
+#print DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.freeMap_relation_zero
+#print axioms DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.freeMap_relation_zero
+#print DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.toChartRing
+#print axioms DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.toChartRing
+#print DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.toChart_class
+#print axioms DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.toChart_class
+#print DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.toChart_single
+#print axioms DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.toChart_single
+#print DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.fromChartInvariant
+#print axioms DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.fromChartInvariant
+#print DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.fromChartRing
+#print axioms DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.fromChartRing
+#print DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.fromChart_class
+#print axioms DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.fromChart_class
+#print DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.to_from
+#print axioms DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.to_from
+#print DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.from_to
+#print axioms DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.from_to
+#print DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.equivalence
+#print axioms DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.equivalence
+#print DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.hom_ext
+#print axioms DiamondIntegral.Section4.GammaBoundedRVFiniteUnionPresentation.hom_ext
+#print DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.Family
+#print axioms DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.Family
+#print DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.single
+#print axioms DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.single
+#print DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.Generator
+#print axioms DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.Generator
+#print DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.symbol
+#print axioms DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.symbol
+#print DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.singleSymbol
+#print axioms DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.singleSymbol
+#print DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.Relation
+#print axioms DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.Relation
+#print DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.relationIdeal
+#print axioms DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.relationIdeal
+#print DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.Ring
+#print axioms DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.Ring
+#print DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.objectClass
+#print axioms DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.objectClass
+#print DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.singleClass
+#print axioms DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.singleClass
+#print DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.relation_zero
+#print axioms DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.relation_zero
+#print DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.class_family
+#print axioms DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.class_family
+#print DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.class_unit
+#print axioms DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.class_unit
+#print DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.class_product
+#print axioms DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.class_product
+#print DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.class_singleIso
+#print axioms DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.class_singleIso
+#print DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.class_iso
+#print axioms DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.class_iso
+#print DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.class_empty
+#print axioms DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.class_empty
+#print DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.class_scissor
+#print axioms DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.class_scissor
+#print DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.evaluation
+#print axioms DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.evaluation
+#print DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.evaluation_single
+#print axioms DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.evaluation_single
+#print DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.freeMap
+#print axioms DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.freeMap
+#print DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.freeMap_symbol
+#print axioms DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.freeMap_symbol
+#print DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.freeMap_single
+#print axioms DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.freeMap_single
+#print DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.freeMap_relation_zero
+#print axioms DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.freeMap_relation_zero
+#print DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.toChartRing
+#print axioms DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.toChartRing
+#print DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.toChart_class
+#print axioms DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.toChart_class
+#print DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.toChart_single
+#print axioms DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.toChart_single
+#print DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.fromChartInvariant
+#print axioms DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.fromChartInvariant
+#print DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.fromChartRing
+#print axioms DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.fromChartRing
+#print DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.fromChart_class
+#print axioms DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.fromChart_class
+#print DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.to_from
+#print axioms DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.to_from
+#print DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.from_to
+#print axioms DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.from_to
+#print DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.equivalence
+#print axioms DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.equivalence
+#print DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.hom_ext
+#print axioms DiamondIntegral.Section4.GammaFiniteRVFiniteUnionPresentation.hom_ext
+#print DiamondIntegral.Section4.GammaBoundedRVFiniteUnionGrading.evaluation_mem
+#print axioms DiamondIntegral.Section4.GammaBoundedRVFiniteUnionGrading.evaluation_mem
+#print DiamondIntegral.Section4.GammaBoundedRVFiniteUnionGrading.coaction
+#print axioms DiamondIntegral.Section4.GammaBoundedRVFiniteUnionGrading.coaction
+#print DiamondIntegral.Section4.GammaBoundedRVFiniteUnionGrading.coaction_class
+#print axioms DiamondIntegral.Section4.GammaBoundedRVFiniteUnionGrading.coaction_class
+#print DiamondIntegral.Section4.GammaBoundedRVFiniteUnionGrading.coaction_counit
+#print axioms DiamondIntegral.Section4.GammaBoundedRVFiniteUnionGrading.coaction_counit
+#print DiamondIntegral.Section4.GammaBoundedRVFiniteUnionGrading.coaction_coassoc
+#print axioms DiamondIntegral.Section4.GammaBoundedRVFiniteUnionGrading.coaction_coassoc
+#print DiamondIntegral.Section4.GammaBoundedRVFiniteUnionGrading.gradingCoaction
+#print axioms DiamondIntegral.Section4.GammaBoundedRVFiniteUnionGrading.gradingCoaction
+#print DiamondIntegral.Section4.GammaBoundedRVFiniteUnionGrading.piece
+#print axioms DiamondIntegral.Section4.GammaBoundedRVFiniteUnionGrading.piece
+#print DiamondIntegral.Section4.GammaBoundedRVFiniteUnionGrading.gradedRing
+#print axioms DiamondIntegral.Section4.GammaBoundedRVFiniteUnionGrading.gradedRing
+#print DiamondIntegral.Section4.GammaBoundedRVFiniteUnionGrading.class_mem
+#print axioms DiamondIntegral.Section4.GammaBoundedRVFiniteUnionGrading.class_mem
+#print DiamondIntegral.Section4.GammaBoundedRVFiniteUnionGrading.toChart_coaction
+#print axioms DiamondIntegral.Section4.GammaBoundedRVFiniteUnionGrading.toChart_coaction
+#print DiamondIntegral.Section4.GammaBoundedRVFiniteUnionGrading.fromChart_coaction
+#print axioms DiamondIntegral.Section4.GammaBoundedRVFiniteUnionGrading.fromChart_coaction
+#print DiamondIntegral.Section4.GammaBoundedRVFiniteUnionGrading.toChart_mem
+#print axioms DiamondIntegral.Section4.GammaBoundedRVFiniteUnionGrading.toChart_mem
+#print DiamondIntegral.Section4.GammaBoundedRVFiniteUnionGrading.fromChart_mem
+#print axioms DiamondIntegral.Section4.GammaBoundedRVFiniteUnionGrading.fromChart_mem
+#print DiamondIntegral.Section4.GammaBoundedRVFiniteUnionGrading.gradedToChart
+#print axioms DiamondIntegral.Section4.GammaBoundedRVFiniteUnionGrading.gradedToChart
+#print DiamondIntegral.Section4.GammaBoundedRVFiniteUnionGrading.gradedFromChart
+#print axioms DiamondIntegral.Section4.GammaBoundedRVFiniteUnionGrading.gradedFromChart
+#print DiamondIntegral.Section4.GammaBoundedRVFiniteUnionOperations.empty
+#print axioms DiamondIntegral.Section4.GammaBoundedRVFiniteUnionOperations.empty
+#print DiamondIntegral.Section4.GammaBoundedRVFiniteUnionOperations.coproduct
+#print axioms DiamondIntegral.Section4.GammaBoundedRVFiniteUnionOperations.coproduct
+#print DiamondIntegral.Section4.GammaBoundedRVFiniteUnionOperations.product
+#print axioms DiamondIntegral.Section4.GammaBoundedRVFiniteUnionOperations.product
+#print DiamondIntegral.Section4.GammaBoundedRVFiniteUnionOperations.class_empty
+#print axioms DiamondIntegral.Section4.GammaBoundedRVFiniteUnionOperations.class_empty
+#print DiamondIntegral.Section4.GammaBoundedRVFiniteUnionOperations.class_coproduct
+#print axioms DiamondIntegral.Section4.GammaBoundedRVFiniteUnionOperations.class_coproduct
+#print DiamondIntegral.Section4.GammaBoundedRVFiniteUnionOperations.class_product
+#print axioms DiamondIntegral.Section4.GammaBoundedRVFiniteUnionOperations.class_product
+#print DiamondIntegral.Section4.GammaFiniteRVFiniteUnionGrading.evaluation_mem
+#print axioms DiamondIntegral.Section4.GammaFiniteRVFiniteUnionGrading.evaluation_mem
+#print DiamondIntegral.Section4.GammaFiniteRVFiniteUnionGrading.coaction
+#print axioms DiamondIntegral.Section4.GammaFiniteRVFiniteUnionGrading.coaction
+#print DiamondIntegral.Section4.GammaFiniteRVFiniteUnionGrading.coaction_class
+#print axioms DiamondIntegral.Section4.GammaFiniteRVFiniteUnionGrading.coaction_class
+#print DiamondIntegral.Section4.GammaFiniteRVFiniteUnionGrading.coaction_counit
+#print axioms DiamondIntegral.Section4.GammaFiniteRVFiniteUnionGrading.coaction_counit
+#print DiamondIntegral.Section4.GammaFiniteRVFiniteUnionGrading.coaction_coassoc
+#print axioms DiamondIntegral.Section4.GammaFiniteRVFiniteUnionGrading.coaction_coassoc
+#print DiamondIntegral.Section4.GammaFiniteRVFiniteUnionGrading.gradingCoaction
+#print axioms DiamondIntegral.Section4.GammaFiniteRVFiniteUnionGrading.gradingCoaction
+#print DiamondIntegral.Section4.GammaFiniteRVFiniteUnionGrading.piece
+#print axioms DiamondIntegral.Section4.GammaFiniteRVFiniteUnionGrading.piece
+#print DiamondIntegral.Section4.GammaFiniteRVFiniteUnionGrading.gradedRing
+#print axioms DiamondIntegral.Section4.GammaFiniteRVFiniteUnionGrading.gradedRing
+#print DiamondIntegral.Section4.GammaFiniteRVFiniteUnionGrading.class_mem
+#print axioms DiamondIntegral.Section4.GammaFiniteRVFiniteUnionGrading.class_mem
+#print DiamondIntegral.Section4.GammaFiniteRVFiniteUnionGrading.toChart_coaction
+#print axioms DiamondIntegral.Section4.GammaFiniteRVFiniteUnionGrading.toChart_coaction
+#print DiamondIntegral.Section4.GammaFiniteRVFiniteUnionGrading.fromChart_coaction
+#print axioms DiamondIntegral.Section4.GammaFiniteRVFiniteUnionGrading.fromChart_coaction
+#print DiamondIntegral.Section4.GammaFiniteRVFiniteUnionGrading.toChart_mem
+#print axioms DiamondIntegral.Section4.GammaFiniteRVFiniteUnionGrading.toChart_mem
+#print DiamondIntegral.Section4.GammaFiniteRVFiniteUnionGrading.fromChart_mem
+#print axioms DiamondIntegral.Section4.GammaFiniteRVFiniteUnionGrading.fromChart_mem
+#print DiamondIntegral.Section4.GammaFiniteRVFiniteUnionGrading.gradedToChart
+#print axioms DiamondIntegral.Section4.GammaFiniteRVFiniteUnionGrading.gradedToChart
+#print DiamondIntegral.Section4.GammaFiniteRVFiniteUnionGrading.gradedFromChart
+#print axioms DiamondIntegral.Section4.GammaFiniteRVFiniteUnionGrading.gradedFromChart
+#print DiamondIntegral.Section4.GammaFiniteRVFiniteUnionOperations.empty
+#print axioms DiamondIntegral.Section4.GammaFiniteRVFiniteUnionOperations.empty
+#print DiamondIntegral.Section4.GammaFiniteRVFiniteUnionOperations.coproduct
+#print axioms DiamondIntegral.Section4.GammaFiniteRVFiniteUnionOperations.coproduct
+#print DiamondIntegral.Section4.GammaFiniteRVFiniteUnionOperations.product
+#print axioms DiamondIntegral.Section4.GammaFiniteRVFiniteUnionOperations.product
+#print DiamondIntegral.Section4.GammaFiniteRVFiniteUnionOperations.class_empty
+#print axioms DiamondIntegral.Section4.GammaFiniteRVFiniteUnionOperations.class_empty
+#print DiamondIntegral.Section4.GammaFiniteRVFiniteUnionOperations.class_coproduct
+#print axioms DiamondIntegral.Section4.GammaFiniteRVFiniteUnionOperations.class_coproduct
+#print DiamondIntegral.Section4.GammaFiniteRVFiniteUnionOperations.class_product
+#print axioms DiamondIntegral.Section4.GammaFiniteRVFiniteUnionOperations.class_product
+#print DiamondIntegral.Section4.RingPresentationTransport.transport
+#print axioms DiamondIntegral.Section4.RingPresentationTransport.transport
+#print DiamondIntegral.Section4.RingPresentationTransport.transport_apply
+#print axioms DiamondIntegral.Section4.RingPresentationTransport.transport_apply
+#print DiamondIntegral.Section4.RingPresentationTransport.comparison
+#print axioms DiamondIntegral.Section4.RingPresentationTransport.comparison
+#print DiamondIntegral.Section4.RingPresentationTransport.transport_comp
+#print axioms DiamondIntegral.Section4.RingPresentationTransport.transport_comp
+#print DiamondIntegral.Section4.RingPresentationTransport.transport_id
+#print axioms DiamondIntegral.Section4.RingPresentationTransport.transport_id
+#print DiamondIntegral.Section4.RingPresentationTransport.kernel
+#print axioms DiamondIntegral.Section4.RingPresentationTransport.kernel
+#print DiamondIntegral.Section4.RingPresentationTransport.map_mem
+#print axioms DiamondIntegral.Section4.RingPresentationTransport.map_mem
+#print DiamondIntegral.Section4.RingPresentationTransport.transport_value
+#print axioms DiamondIntegral.Section4.RingPresentationTransport.transport_value
+#print DiamondIntegral.Section4.RingPresentationTransport.inverse_eq
+#print axioms DiamondIntegral.Section4.RingPresentationTransport.inverse_eq
+#print DiamondIntegral.Section4.IntrinsicPresentationMaps.gammaBoundedToFull
+#print axioms DiamondIntegral.Section4.IntrinsicPresentationMaps.gammaBoundedToFull
+#print DiamondIntegral.Section4.IntrinsicPresentationMaps.gammaFiniteToFull
+#print axioms DiamondIntegral.Section4.IntrinsicPresentationMaps.gammaFiniteToFull
+#print DiamondIntegral.Section4.IntrinsicPresentationMaps.gammaFiniteToBounded
+#print axioms DiamondIntegral.Section4.IntrinsicPresentationMaps.gammaFiniteToBounded
+#print DiamondIntegral.Section4.IntrinsicPresentationMaps.fullSharp
+#print axioms DiamondIntegral.Section4.IntrinsicPresentationMaps.fullSharp
+#print DiamondIntegral.Section4.IntrinsicPresentationMaps.boundedSharp
+#print axioms DiamondIntegral.Section4.IntrinsicPresentationMaps.boundedSharp
+#print DiamondIntegral.Section4.IntrinsicPresentationMaps.finiteSharp
+#print axioms DiamondIntegral.Section4.IntrinsicPresentationMaps.finiteSharp
+#print DiamondIntegral.Section4.IntrinsicPresentationMaps.resToFull
+#print axioms DiamondIntegral.Section4.IntrinsicPresentationMaps.resToFull
+#print DiamondIntegral.Section4.IntrinsicPresentationMaps.resToBounded
+#print axioms DiamondIntegral.Section4.IntrinsicPresentationMaps.resToBounded
+#print DiamondIntegral.Section4.IntrinsicPresentationMaps.rvBoundedToFull
+#print axioms DiamondIntegral.Section4.IntrinsicPresentationMaps.rvBoundedToFull
+#print DiamondIntegral.Section4.IntrinsicPresentationMaps.gamma_forget_bounded
+#print axioms DiamondIntegral.Section4.IntrinsicPresentationMaps.gamma_forget_bounded
+#print DiamondIntegral.Section4.IntrinsicPresentationMaps.bounded_sharp_square
+#print axioms DiamondIntegral.Section4.IntrinsicPresentationMaps.bounded_sharp_square
+#print DiamondIntegral.Section4.IntrinsicPresentationMaps.finite_full_sharp_square
+#print axioms DiamondIntegral.Section4.IntrinsicPresentationMaps.finite_full_sharp_square
+#print DiamondIntegral.Section4.IntrinsicPresentationMaps.finite_bounded_sharp_square
+#print axioms DiamondIntegral.Section4.IntrinsicPresentationMaps.finite_bounded_sharp_square
+#print DiamondIntegral.Section4.IntrinsicPresentationMaps.fullSharp_single
+#print axioms DiamondIntegral.Section4.IntrinsicPresentationMaps.fullSharp_single
+#print DiamondIntegral.Section4.IntrinsicPresentationMaps.boundedSharp_single
+#print axioms DiamondIntegral.Section4.IntrinsicPresentationMaps.boundedSharp_single
+#print DiamondIntegral.Section4.IntrinsicPresentationMaps.finiteSharp_single
+#print axioms DiamondIntegral.Section4.IntrinsicPresentationMaps.finiteSharp_single
+#print DiamondIntegral.Section4.IntrinsicPresentationGradings.gammaFull_inverse_mem
+#print axioms DiamondIntegral.Section4.IntrinsicPresentationGradings.gammaFull_inverse_mem
+#print DiamondIntegral.Section4.IntrinsicPresentationGradings.gammaBounded_inverse_mem
+#print axioms DiamondIntegral.Section4.IntrinsicPresentationGradings.gammaBounded_inverse_mem
+#print DiamondIntegral.Section4.IntrinsicPresentationGradings.gammaFinite_inverse_mem
+#print axioms DiamondIntegral.Section4.IntrinsicPresentationGradings.gammaFinite_inverse_mem
+#print DiamondIntegral.Section4.IntrinsicPresentationGradings.rvFull_inverse_mem
+#print axioms DiamondIntegral.Section4.IntrinsicPresentationGradings.rvFull_inverse_mem
+#print DiamondIntegral.Section4.IntrinsicPresentationGradings.rvBounded_inverse_mem
+#print axioms DiamondIntegral.Section4.IntrinsicPresentationGradings.rvBounded_inverse_mem
+#print DiamondIntegral.Section4.IntrinsicPresentationGradings.res_inverse_mem
+#print axioms DiamondIntegral.Section4.IntrinsicPresentationGradings.res_inverse_mem
+#print DiamondIntegral.Section4.IntrinsicPresentationGradings.gammaBoundedToFull_mem
+#print axioms DiamondIntegral.Section4.IntrinsicPresentationGradings.gammaBoundedToFull_mem
+#print DiamondIntegral.Section4.IntrinsicPresentationGradings.graded_gammaBoundedToFull
+#print axioms DiamondIntegral.Section4.IntrinsicPresentationGradings.graded_gammaBoundedToFull
+#print DiamondIntegral.Section4.IntrinsicPresentationGradings.gammaFiniteToFull_mem
+#print axioms DiamondIntegral.Section4.IntrinsicPresentationGradings.gammaFiniteToFull_mem
+#print DiamondIntegral.Section4.IntrinsicPresentationGradings.graded_gammaFiniteToFull
+#print axioms DiamondIntegral.Section4.IntrinsicPresentationGradings.graded_gammaFiniteToFull
+#print DiamondIntegral.Section4.IntrinsicPresentationGradings.gammaFiniteToBounded_mem
+#print axioms DiamondIntegral.Section4.IntrinsicPresentationGradings.gammaFiniteToBounded_mem
+#print DiamondIntegral.Section4.IntrinsicPresentationGradings.graded_gammaFiniteToBounded
+#print axioms DiamondIntegral.Section4.IntrinsicPresentationGradings.graded_gammaFiniteToBounded
+#print DiamondIntegral.Section4.IntrinsicPresentationGradings.fullSharp_mem
+#print axioms DiamondIntegral.Section4.IntrinsicPresentationGradings.fullSharp_mem
+#print DiamondIntegral.Section4.IntrinsicPresentationGradings.graded_fullSharp
+#print axioms DiamondIntegral.Section4.IntrinsicPresentationGradings.graded_fullSharp
+#print DiamondIntegral.Section4.IntrinsicPresentationGradings.boundedSharp_mem
+#print axioms DiamondIntegral.Section4.IntrinsicPresentationGradings.boundedSharp_mem
+#print DiamondIntegral.Section4.IntrinsicPresentationGradings.graded_boundedSharp
+#print axioms DiamondIntegral.Section4.IntrinsicPresentationGradings.graded_boundedSharp
+#print DiamondIntegral.Section4.IntrinsicPresentationGradings.finiteSharp_mem
+#print axioms DiamondIntegral.Section4.IntrinsicPresentationGradings.finiteSharp_mem
+#print DiamondIntegral.Section4.IntrinsicPresentationGradings.graded_finiteSharp
+#print axioms DiamondIntegral.Section4.IntrinsicPresentationGradings.graded_finiteSharp
+#print DiamondIntegral.Section4.IntrinsicPresentationGradings.resToFull_mem
+#print axioms DiamondIntegral.Section4.IntrinsicPresentationGradings.resToFull_mem
+#print DiamondIntegral.Section4.IntrinsicPresentationGradings.graded_resToFull
+#print axioms DiamondIntegral.Section4.IntrinsicPresentationGradings.graded_resToFull
+#print DiamondIntegral.Section4.IntrinsicPresentationGradings.resToBounded_mem
+#print axioms DiamondIntegral.Section4.IntrinsicPresentationGradings.resToBounded_mem
+#print DiamondIntegral.Section4.IntrinsicPresentationGradings.graded_resToBounded
+#print axioms DiamondIntegral.Section4.IntrinsicPresentationGradings.graded_resToBounded
+#print DiamondIntegral.Section4.IntrinsicPresentationGradings.rvBoundedToFull_mem
+#print axioms DiamondIntegral.Section4.IntrinsicPresentationGradings.rvBoundedToFull_mem
+#print DiamondIntegral.Section4.IntrinsicPresentationGradings.graded_rvBoundedToFull
+#print axioms DiamondIntegral.Section4.IntrinsicPresentationGradings.graded_rvBoundedToFull
+#print DiamondIntegral.Section4.CoactionQuotientEquivalence.forward_mem
+#print axioms DiamondIntegral.Section4.CoactionQuotientEquivalence.forward_mem
+#print DiamondIntegral.Section4.CoactionQuotientEquivalence.inverse_mem
+#print axioms DiamondIntegral.Section4.CoactionQuotientEquivalence.inverse_mem
+#print DiamondIntegral.Section4.CoactionQuotientEquivalence.mem_iff
+#print axioms DiamondIntegral.Section4.CoactionQuotientEquivalence.mem_iff
+#print DiamondIntegral.Section4.CoactionQuotientEquivalence.ideal_coefficients_of_map
+#print axioms DiamondIntegral.Section4.CoactionQuotientEquivalence.ideal_coefficients_of_map
+#print DiamondIntegral.Section4.IntrinsicQuotientGradings.MeasuredP.ideal_coefficients
+#print axioms DiamondIntegral.Section4.IntrinsicQuotientGradings.MeasuredP.ideal_coefficients
+#print DiamondIntegral.Section4.IntrinsicQuotientGradings.MeasuredP.coaction
+#print axioms DiamondIntegral.Section4.IntrinsicQuotientGradings.MeasuredP.coaction
+#print DiamondIntegral.Section4.IntrinsicQuotientGradings.MeasuredP.piece
+#print axioms DiamondIntegral.Section4.IntrinsicQuotientGradings.MeasuredP.piece
+#print DiamondIntegral.Section4.IntrinsicQuotientGradings.MeasuredP.gradedRing
+#print axioms DiamondIntegral.Section4.IntrinsicQuotientGradings.MeasuredP.gradedRing
+#print DiamondIntegral.Section4.IntrinsicQuotientGradings.MeasuredP.quotient_mem
+#print axioms DiamondIntegral.Section4.IntrinsicQuotientGradings.MeasuredP.quotient_mem
+#print DiamondIntegral.Section4.IntrinsicQuotientGradings.MeasuredP.equivalence_mem_iff
+#print axioms DiamondIntegral.Section4.IntrinsicQuotientGradings.MeasuredP.equivalence_mem_iff
+#print DiamondIntegral.Section4.IntrinsicQuotientGradings.MeasuredRES.ideal_coefficients
+#print axioms DiamondIntegral.Section4.IntrinsicQuotientGradings.MeasuredRES.ideal_coefficients
+#print DiamondIntegral.Section4.IntrinsicQuotientGradings.MeasuredRES.coaction
+#print axioms DiamondIntegral.Section4.IntrinsicQuotientGradings.MeasuredRES.coaction
+#print DiamondIntegral.Section4.IntrinsicQuotientGradings.MeasuredRES.piece
+#print axioms DiamondIntegral.Section4.IntrinsicQuotientGradings.MeasuredRES.piece
+#print DiamondIntegral.Section4.IntrinsicQuotientGradings.MeasuredRES.gradedRing
+#print axioms DiamondIntegral.Section4.IntrinsicQuotientGradings.MeasuredRES.gradedRing
+#print DiamondIntegral.Section4.IntrinsicQuotientGradings.MeasuredRES.quotient_mem
+#print axioms DiamondIntegral.Section4.IntrinsicQuotientGradings.MeasuredRES.quotient_mem
+#print DiamondIntegral.Section4.IntrinsicQuotientGradings.MeasuredRES.equivalence_mem_iff
+#print axioms DiamondIntegral.Section4.IntrinsicQuotientGradings.MeasuredRES.equivalence_mem_iff
+#print DiamondIntegral.Section4.IntrinsicQuotientGradings.OrdinaryRES.ideal_coefficients
+#print axioms DiamondIntegral.Section4.IntrinsicQuotientGradings.OrdinaryRES.ideal_coefficients
+#print DiamondIntegral.Section4.IntrinsicQuotientGradings.OrdinaryRES.coaction
+#print axioms DiamondIntegral.Section4.IntrinsicQuotientGradings.OrdinaryRES.coaction
+#print DiamondIntegral.Section4.IntrinsicQuotientGradings.OrdinaryRES.piece
+#print axioms DiamondIntegral.Section4.IntrinsicQuotientGradings.OrdinaryRES.piece
+#print DiamondIntegral.Section4.IntrinsicQuotientGradings.OrdinaryRES.gradedRing
+#print axioms DiamondIntegral.Section4.IntrinsicQuotientGradings.OrdinaryRES.gradedRing
+#print DiamondIntegral.Section4.IntrinsicQuotientGradings.OrdinaryRES.quotient_mem
+#print axioms DiamondIntegral.Section4.IntrinsicQuotientGradings.OrdinaryRES.quotient_mem
+#print DiamondIntegral.Section4.IntrinsicQuotientGradings.OrdinaryRES.inverse_mem
+#print axioms DiamondIntegral.Section4.IntrinsicQuotientGradings.OrdinaryRES.inverse_mem
+#print DiamondIntegral.Section4.IntrinsicQuotientGradings.OrdinaryRES.equivalence_mem_iff
+#print axioms DiamondIntegral.Section4.IntrinsicQuotientGradings.OrdinaryRES.equivalence_mem_iff
+#print DiamondIntegral.Section4.IntrinsicQuotientGradings.radius_equivalence_mem_iff
+#print axioms DiamondIntegral.Section4.IntrinsicQuotientGradings.radius_equivalence_mem_iff
+#print DiamondIntegral.Section4.IntrinsicFiniteGammaAlgebras.Coeff
+#print axioms DiamondIntegral.Section4.IntrinsicFiniteGammaAlgebras.Coeff
+#print DiamondIntegral.Section4.IntrinsicFiniteGammaAlgebras.resAlgebra
+#print axioms DiamondIntegral.Section4.IntrinsicFiniteGammaAlgebras.resAlgebra
+#print DiamondIntegral.Section4.IntrinsicFiniteGammaAlgebras.gammaAlgebra
+#print axioms DiamondIntegral.Section4.IntrinsicFiniteGammaAlgebras.gammaAlgebra
+#print DiamondIntegral.Section4.IntrinsicFiniteGammaAlgebras.boundedGammaAlgebra
+#print axioms DiamondIntegral.Section4.IntrinsicFiniteGammaAlgebras.boundedGammaAlgebra
+#print DiamondIntegral.Section4.IntrinsicFiniteGammaAlgebras.rvAlgebra
+#print axioms DiamondIntegral.Section4.IntrinsicFiniteGammaAlgebras.rvAlgebra
+#print DiamondIntegral.Section4.IntrinsicFiniteGammaAlgebras.boundedRVAlgebra
+#print axioms DiamondIntegral.Section4.IntrinsicFiniteGammaAlgebras.boundedRVAlgebra
+#print DiamondIntegral.Section4.IntrinsicFiniteGammaAlgebras.resEquivalence
+#print axioms DiamondIntegral.Section4.IntrinsicFiniteGammaAlgebras.resEquivalence
+#print DiamondIntegral.Section4.IntrinsicFiniteGammaAlgebras.gammaEquivalence
+#print axioms DiamondIntegral.Section4.IntrinsicFiniteGammaAlgebras.gammaEquivalence
+#print DiamondIntegral.Section4.IntrinsicFiniteGammaAlgebras.boundedGammaEquivalence
+#print axioms DiamondIntegral.Section4.IntrinsicFiniteGammaAlgebras.boundedGammaEquivalence
+#print DiamondIntegral.Section4.IntrinsicFiniteGammaAlgebras.rvEquivalence
+#print axioms DiamondIntegral.Section4.IntrinsicFiniteGammaAlgebras.rvEquivalence
+#print DiamondIntegral.Section4.IntrinsicFiniteGammaAlgebras.boundedRVEquivalence
+#print axioms DiamondIntegral.Section4.IntrinsicFiniteGammaAlgebras.boundedRVEquivalence
+#print DiamondIntegral.Section4.IntrinsicFiniteGammaAlgebras.coefficient_res
+#print axioms DiamondIntegral.Section4.IntrinsicFiniteGammaAlgebras.coefficient_res
+#print DiamondIntegral.Section4.IntrinsicFiniteGammaAlgebras.coefficient_gamma
+#print axioms DiamondIntegral.Section4.IntrinsicFiniteGammaAlgebras.coefficient_gamma
+#print DiamondIntegral.Section4.IntrinsicFiniteGammaAlgebras.coefficient_boundedGamma
+#print axioms DiamondIntegral.Section4.IntrinsicFiniteGammaAlgebras.coefficient_boundedGamma
+#print DiamondIntegral.Section4.IntrinsicBalancedTensors.Source
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedTensors.Source
+#print DiamondIntegral.Section4.IntrinsicBalancedTensors.BoundedSource
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedTensors.BoundedSource
+#print DiamondIntegral.Section4.IntrinsicBalancedTensors.equivalence
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedTensors.equivalence
+#print DiamondIntegral.Section4.IntrinsicBalancedTensors.boundedEquivalence
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedTensors.boundedEquivalence
+#print DiamondIntegral.Section4.IntrinsicBalancedTensors.equivalence_tmul
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedTensors.equivalence_tmul
+#print DiamondIntegral.Section4.IntrinsicBalancedTensors.boundedEquivalence_tmul
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedTensors.boundedEquivalence_tmul
+#print DiamondIntegral.Section4.IntrinsicBalancedTensors.equivalence_symm_tmul
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedTensors.equivalence_symm_tmul
+#print DiamondIntegral.Section4.IntrinsicBalancedTensors.boundedEquivalence_symm_tmul
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedTensors.boundedEquivalence_symm_tmul
+#print DiamondIntegral.Section4.IntrinsicBalancedTensors.comparison
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedTensors.comparison
+#print DiamondIntegral.Section4.IntrinsicBalancedTensors.boundedComparison
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedTensors.boundedComparison
+#print DiamondIntegral.Section4.IntrinsicBalancedTensors.comparison_tmul
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedTensors.comparison_tmul
+#print DiamondIntegral.Section4.IntrinsicBalancedTensors.boundedComparison_tmul
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedTensors.boundedComparison_tmul
+#print DiamondIntegral.Section4.IntrinsicBalancedTensors.comparison_square
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedTensors.comparison_square
+#print DiamondIntegral.Section4.IntrinsicBalancedTensors.boundedComparison_square
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedTensors.boundedComparison_square
+#print DiamondIntegral.Section4.IntrinsicBalancedGradings.measuredData
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedGradings.measuredData
+#print DiamondIntegral.Section4.IntrinsicBalancedGradings.boundedData
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedGradings.boundedData
+#print DiamondIntegral.Section4.IntrinsicBalancedGradings.measuredCoaction
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedGradings.measuredCoaction
+#print DiamondIntegral.Section4.IntrinsicBalancedGradings.boundedCoaction
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedGradings.boundedCoaction
+#print DiamondIntegral.Section4.IntrinsicBalancedGradings.measuredPiece
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedGradings.measuredPiece
+#print DiamondIntegral.Section4.IntrinsicBalancedGradings.boundedPiece
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedGradings.boundedPiece
+#print DiamondIntegral.Section4.IntrinsicBalancedGradings.measuredGradedRing
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedGradings.measuredGradedRing
+#print DiamondIntegral.Section4.IntrinsicBalancedGradings.boundedGradedRing
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedGradings.boundedGradedRing
+#print DiamondIntegral.Section4.IntrinsicBalancedGradings.measured_tmul_mem
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedGradings.measured_tmul_mem
+#print DiamondIntegral.Section4.IntrinsicBalancedGradings.bounded_tmul_mem
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedGradings.bounded_tmul_mem
+#print DiamondIntegral.Section4.IntrinsicBalancedGradings.equivalence_mem
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedGradings.equivalence_mem
+#print DiamondIntegral.Section4.IntrinsicBalancedGradings.boundedEquivalence_mem
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedGradings.boundedEquivalence_mem
+#print DiamondIntegral.Section4.IntrinsicBalancedGradings.inverse_mem
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedGradings.inverse_mem
+#print DiamondIntegral.Section4.IntrinsicBalancedGradings.boundedInverse_mem
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedGradings.boundedInverse_mem
+#print DiamondIntegral.Section4.IntrinsicBalancedGradings.comparison_mem
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedGradings.comparison_mem
+#print DiamondIntegral.Section4.IntrinsicBalancedGradings.boundedComparison_mem
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedGradings.boundedComparison_mem
+#print DiamondIntegral.Section4.IntrinsicBalancedEvaluations.measuredLeft
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedEvaluations.measuredLeft
+#print DiamondIntegral.Section4.IntrinsicBalancedEvaluations.ordinaryLeft
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedEvaluations.ordinaryLeft
+#print DiamondIntegral.Section4.IntrinsicBalancedEvaluations.measuredLeft_eq
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedEvaluations.measuredLeft_eq
+#print DiamondIntegral.Section4.IntrinsicBalancedEvaluations.measuredGamma
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedEvaluations.measuredGamma
+#print DiamondIntegral.Section4.IntrinsicBalancedEvaluations.boundedGamma
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedEvaluations.boundedGamma
+#print DiamondIntegral.Section4.IntrinsicBalancedEvaluations.measured
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedEvaluations.measured
+#print DiamondIntegral.Section4.IntrinsicBalancedEvaluations.bounded
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedEvaluations.bounded
+#print DiamondIntegral.Section4.IntrinsicBalancedEvaluations.measured_tmul
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedEvaluations.measured_tmul
+#print DiamondIntegral.Section4.IntrinsicBalancedEvaluations.bounded_tmul
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedEvaluations.bounded_tmul
+#print DiamondIntegral.Section4.IntrinsicBalancedEvaluations.measured_mem
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedEvaluations.measured_mem
+#print DiamondIntegral.Section4.IntrinsicBalancedEvaluations.bounded_mem
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedEvaluations.bounded_mem
+#print DiamondIntegral.Section4.IntrinsicBalancedEvaluations.gradedMeasured
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedEvaluations.gradedMeasured
+#print DiamondIntegral.Section4.IntrinsicBalancedEvaluations.gradedBounded
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedEvaluations.gradedBounded
+#print DiamondIntegral.Section4.IntrinsicBalancedEvaluations.bounded_independent_kind
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedEvaluations.bounded_independent_kind
+#print DiamondIntegral.Section4.IntrinsicBalancedEvaluations.measured_on_res
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedEvaluations.measured_on_res
+#print DiamondIntegral.Section4.IntrinsicBalancedEvaluations.bounded_on_res
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedEvaluations.bounded_on_res
+#print DiamondIntegral.Section4.IntrinsicBalancedSpecialClasses.pPreimage
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedSpecialClasses.pPreimage
+#print DiamondIntegral.Section4.IntrinsicBalancedSpecialClasses.hPreimage
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedSpecialClasses.hPreimage
+#print DiamondIntegral.Section4.IntrinsicBalancedSpecialClasses.radiusPreimage
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedSpecialClasses.radiusPreimage
+#print DiamondIntegral.Section4.IntrinsicBalancedSpecialClasses.radiusWithLift
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedSpecialClasses.radiusWithLift
+#print DiamondIntegral.Section4.IntrinsicBalancedSpecialClasses.radiusWithLift_independent
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedSpecialClasses.radiusWithLift_independent
+#print DiamondIntegral.Section4.IntrinsicBalancedSpecialClasses.radius_eq_withLift
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedSpecialClasses.radius_eq_withLift
+#print DiamondIntegral.Section4.IntrinsicBalancedSpecialClasses.radius_zero
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedSpecialClasses.radius_zero
+#print DiamondIntegral.Section4.IntrinsicBalancedSpecialClasses.pPreimage_mem
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedSpecialClasses.pPreimage_mem
+#print DiamondIntegral.Section4.IntrinsicBalancedSpecialClasses.hPreimage_mem
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedSpecialClasses.hPreimage_mem
+#print DiamondIntegral.Section4.IntrinsicBalancedSpecialClasses.radiusPreimage_mem
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedSpecialClasses.radiusPreimage_mem
+#print DiamondIntegral.Section4.IntrinsicBalancedSpecialClasses.comparison_pPreimage
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedSpecialClasses.comparison_pPreimage
+#print DiamondIntegral.Section4.IntrinsicBalancedSpecialClasses.comparison_radiusPreimage
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedSpecialClasses.comparison_radiusPreimage
+#print DiamondIntegral.Section4.IntrinsicBalancedSpecialClasses.evaluation_pPreimage
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedSpecialClasses.evaluation_pPreimage
+#print DiamondIntegral.Section4.IntrinsicBalancedSpecialClasses.evaluation_h_geometric
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedSpecialClasses.evaluation_h_geometric
+#print DiamondIntegral.Section4.IntrinsicBalancedSpecialClasses.evaluation_h_bounded
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedSpecialClasses.evaluation_h_bounded
+#print DiamondIntegral.Section4.IntrinsicBalancedSpecialClasses.evaluation_radiusPreimage
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedSpecialClasses.evaluation_radiusPreimage
+#print DiamondIntegral.Section4.IntrinsicBalancedRadiusQuotient.radiusIdeal
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedRadiusQuotient.radiusIdeal
+#print DiamondIntegral.Section4.IntrinsicBalancedRadiusQuotient.ideal_homogeneous
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedRadiusQuotient.ideal_homogeneous
+#print DiamondIntegral.Section4.IntrinsicBalancedRadiusQuotient.map_ideal
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedRadiusQuotient.map_ideal
+#print DiamondIntegral.Section4.IntrinsicBalancedRadiusQuotient.Ring
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedRadiusQuotient.Ring
+#print DiamondIntegral.Section4.IntrinsicBalancedRadiusQuotient.quotient
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedRadiusQuotient.quotient
+#print DiamondIntegral.Section4.IntrinsicBalancedRadiusQuotient.ideal_coefficients
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedRadiusQuotient.ideal_coefficients
+#print DiamondIntegral.Section4.IntrinsicBalancedRadiusQuotient.coaction
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedRadiusQuotient.coaction
+#print DiamondIntegral.Section4.IntrinsicBalancedRadiusQuotient.piece
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedRadiusQuotient.piece
+#print DiamondIntegral.Section4.IntrinsicBalancedRadiusQuotient.gradedRing
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedRadiusQuotient.gradedRing
+#print DiamondIntegral.Section4.IntrinsicBalancedRadiusQuotient.equivalence
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedRadiusQuotient.equivalence
+#print DiamondIntegral.Section4.IntrinsicBalancedRadiusQuotient.equivalence_mem_iff
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedRadiusQuotient.equivalence_mem_iff
+#print DiamondIntegral.Section4.IntrinsicBalancedRadiusQuotient.comparisonRaw
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedRadiusQuotient.comparisonRaw
+#print DiamondIntegral.Section4.IntrinsicBalancedRadiusQuotient.comparison_ideal_zero
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedRadiusQuotient.comparison_ideal_zero
+#print DiamondIntegral.Section4.IntrinsicBalancedRadiusQuotient.comparison
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedRadiusQuotient.comparison
+#print DiamondIntegral.Section4.IntrinsicBalancedRadiusQuotient.comparison_mem
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedRadiusQuotient.comparison_mem
+#print DiamondIntegral.Section4.IntrinsicBalancedRadiusQuotient.evaluation_ideal_zero
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedRadiusQuotient.evaluation_ideal_zero
+#print DiamondIntegral.Section4.IntrinsicBalancedRadiusQuotient.evaluation
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedRadiusQuotient.evaluation
+#print DiamondIntegral.Section4.IntrinsicBalancedRadiusQuotient.evaluation_mem
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedRadiusQuotient.evaluation_mem
+#print DiamondIntegral.Section4.IntrinsicBalancedRadiusQuotient.evaluation_independent_kind
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedRadiusQuotient.evaluation_independent_kind
+#print DiamondIntegral.Section4.IntrinsicBalancedRadiusQuotient.evaluation_res
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedRadiusQuotient.evaluation_res
+#print DiamondIntegral.Section4.IntrinsicBalancedPQuotient.pIdeal
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedPQuotient.pIdeal
+#print DiamondIntegral.Section4.IntrinsicBalancedPQuotient.ideal_homogeneous
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedPQuotient.ideal_homogeneous
+#print DiamondIntegral.Section4.IntrinsicBalancedPQuotient.Ring
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedPQuotient.Ring
+#print DiamondIntegral.Section4.IntrinsicBalancedPQuotient.quotient
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedPQuotient.quotient
+#print DiamondIntegral.Section4.IntrinsicBalancedPQuotient.p_zero
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedPQuotient.p_zero
+#print DiamondIntegral.Section4.IntrinsicBalancedPQuotient.ideal_coefficients
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedPQuotient.ideal_coefficients
+#print DiamondIntegral.Section4.IntrinsicBalancedPQuotient.coaction
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedPQuotient.coaction
+#print DiamondIntegral.Section4.IntrinsicBalancedPQuotient.piece
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedPQuotient.piece
+#print DiamondIntegral.Section4.IntrinsicBalancedPQuotient.gradedRing
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedPQuotient.gradedRing
+#print DiamondIntegral.Section4.IntrinsicBalancedPQuotient.comparisonRaw
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedPQuotient.comparisonRaw
+#print DiamondIntegral.Section4.IntrinsicBalancedPQuotient.comparison_ideal_zero
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedPQuotient.comparison_ideal_zero
+#print DiamondIntegral.Section4.IntrinsicBalancedPQuotient.comparison
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedPQuotient.comparison
+#print DiamondIntegral.Section4.IntrinsicBalancedPQuotient.comparison_mem
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedPQuotient.comparison_mem
+#print DiamondIntegral.Section4.IntrinsicBalancedPQuotient.target_zero_ne_one
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedPQuotient.target_zero_ne_one
+#print DiamondIntegral.Section4.IntrinsicBalancedPQuotient.zero_ne_one
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedPQuotient.zero_ne_one
+#print DiamondIntegral.Section4.IntrinsicBalancedPQuotient.evaluation_ideal_zero
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedPQuotient.evaluation_ideal_zero
+#print DiamondIntegral.Section4.IntrinsicBalancedPQuotient.evaluation
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedPQuotient.evaluation
+#print DiamondIntegral.Section4.IntrinsicBalancedPQuotient.evaluation_mem
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedPQuotient.evaluation_mem
+#print DiamondIntegral.Section4.IntrinsicBalancedPQuotient.evaluation_res
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedPQuotient.evaluation_res
+#print DiamondIntegral.Section4.IntrinsicBalancedPQuotient.evaluation_surjective
+#print axioms DiamondIntegral.Section4.IntrinsicBalancedPQuotient.evaluation_surjective
+#print DiamondIntegral.Section4.RVFiniteOrdinaryCounts.augmentation
+#print axioms DiamondIntegral.Section4.RVFiniteOrdinaryCounts.augmentation
+#print DiamondIntegral.Section4.RVFiniteOrdinaryCounts.count
+#print axioms DiamondIntegral.Section4.RVFiniteOrdinaryCounts.count
+#print DiamondIntegral.Section4.RVFiniteOrdinaryCounts.count_eq_sum
+#print axioms DiamondIntegral.Section4.RVFiniteOrdinaryCounts.count_eq_sum
+#print DiamondIntegral.Section4.RVFiniteOrdinaryCounts.count_iso
+#print axioms DiamondIntegral.Section4.RVFiniteOrdinaryCounts.count_iso
+#print DiamondIntegral.Section4.RVFiniteOrdinaryCounts.packedDomain_finite
+#print axioms DiamondIntegral.Section4.RVFiniteOrdinaryCounts.packedDomain_finite
+#print DiamondIntegral.Section4.RVFiniteOrdinaryCounts.count_packedDomain
+#print axioms DiamondIntegral.Section4.RVFiniteOrdinaryCounts.count_packedDomain
+#print DiamondIntegral.Section4.RVFiniteOrdinaryCounts.count_scissor
+#print axioms DiamondIntegral.Section4.RVFiniteOrdinaryCounts.count_scissor
+#print DiamondIntegral.Section4.RVFiniteOrdinaryCounts.count_product
+#print axioms DiamondIntegral.Section4.RVFiniteOrdinaryCounts.count_product
+#print DiamondIntegral.Section4.RVFiniteOrdinaryCounts.count_empty
+#print axioms DiamondIntegral.Section4.RVFiniteOrdinaryCounts.count_empty
+#print DiamondIntegral.Section4.RVFiniteOrdinaryCounts.count_weightedUnit
+#print axioms DiamondIntegral.Section4.RVFiniteOrdinaryCounts.count_weightedUnit
+#print DiamondIntegral.Section4.RVOrdinaryZeroCount.value
+#print axioms DiamondIntegral.Section4.RVOrdinaryZeroCount.value
+#print DiamondIntegral.Section4.RVOrdinaryZeroCount.invariant
+#print axioms DiamondIntegral.Section4.RVOrdinaryZeroCount.invariant
+#print DiamondIntegral.Section4.RVOrdinaryZeroCount.full
+#print axioms DiamondIntegral.Section4.RVOrdinaryZeroCount.full
+#print DiamondIntegral.Section4.RVOrdinaryZeroCount.full_class
+#print axioms DiamondIntegral.Section4.RVOrdinaryZeroCount.full_class
+#print DiamondIntegral.Section4.RVOrdinaryZeroCount.res
+#print axioms DiamondIntegral.Section4.RVOrdinaryZeroCount.res
+#print DiamondIntegral.Section4.RVOrdinaryZeroCount.res_class
+#print axioms DiamondIntegral.Section4.RVOrdinaryZeroCount.res_class
+#print DiamondIntegral.Section4.RVOrdinaryZeroCount.fibreIdeal_zero
+#print axioms DiamondIntegral.Section4.RVOrdinaryZeroCount.fibreIdeal_zero
+#print DiamondIntegral.Section4.RVOrdinaryZeroCount.reduced
+#print axioms DiamondIntegral.Section4.RVOrdinaryZeroCount.reduced
+#print DiamondIntegral.Section4.RVOrdinaryZeroCount.reduced_zero_ne_one
+#print axioms DiamondIntegral.Section4.RVOrdinaryZeroCount.reduced_zero_ne_one
+#print DiamondIntegral.Section4.RVOrdinaryZeroCount.reduced_point
+#print axioms DiamondIntegral.Section4.RVOrdinaryZeroCount.reduced_point
+#print DiamondIntegral.Section4.RESOrdinarySurjectivity.forget_surjective
+#print axioms DiamondIntegral.Section4.RESOrdinarySurjectivity.forget_surjective
+#print DiamondIntegral.Section4.RESOrdinarySurjectivity.reducedForget_surjective
+#print axioms DiamondIntegral.Section4.RESOrdinarySurjectivity.reducedForget_surjective
+#print DiamondIntegral.Section4.RESOrdinarySurjectivity.intrinsicLeft_surjective
+#print axioms DiamondIntegral.Section4.RESOrdinarySurjectivity.intrinsicLeft_surjective
+#print DiamondIntegral.Section4.RESOrdinarySurjectivity.tensor_evaluation_surjective
+#print axioms DiamondIntegral.Section4.RESOrdinarySurjectivity.tensor_evaluation_surjective
+#print DiamondIntegral.Section4.RESOrdinarySurjectivity.radius_evaluation_surjective
+#print axioms DiamondIntegral.Section4.RESOrdinarySurjectivity.radius_evaluation_surjective
+#print DiamondIntegral.Section4.IntrinsicBoundedNontriviality.ordinaryTargetCount
+#print axioms DiamondIntegral.Section4.IntrinsicBoundedNontriviality.ordinaryTargetCount
+#print DiamondIntegral.Section4.IntrinsicBoundedNontriviality.ordinaryTarget_zero_ne_one
+#print axioms DiamondIntegral.Section4.IntrinsicBoundedNontriviality.ordinaryTarget_zero_ne_one
+#print DiamondIntegral.Section4.IntrinsicBoundedNontriviality.count_point
+#print axioms DiamondIntegral.Section4.IntrinsicBoundedNontriviality.count_point
+#print DiamondIntegral.Section4.IntrinsicBoundedNontriviality.radiusSource_zero_ne_one
+#print axioms DiamondIntegral.Section4.IntrinsicBoundedNontriviality.radiusSource_zero_ne_one
+#print DiamondIntegral.Section4.IntrinsicBoundedNontriviality.tensorSource_zero_ne_one
+#print axioms DiamondIntegral.Section4.IntrinsicBoundedNontriviality.tensorSource_zero_ne_one
+#print DiamondIntegral.Section4.IntrinsicBoundedNontriviality.radiusRV_zero_ne_one
+#print axioms DiamondIntegral.Section4.IntrinsicBoundedNontriviality.radiusRV_zero_ne_one
+#print DiamondIntegral.Section4.GammaOrdinaryCharts.Chart
+#print axioms DiamondIntegral.Section4.GammaOrdinaryCharts.Chart
+#print DiamondIntegral.Section4.GammaOrdinaryCharts.ofSet
+#print axioms DiamondIntegral.Section4.GammaOrdinaryCharts.ofSet
+#print DiamondIntegral.Section4.GammaOrdinaryCharts.ofWeighted
+#print axioms DiamondIntegral.Section4.GammaOrdinaryCharts.ofWeighted
+#print DiamondIntegral.Section4.GammaOrdinaryCharts.toWeighted
+#print axioms DiamondIntegral.Section4.GammaOrdinaryCharts.toWeighted
+#print DiamondIntegral.Section4.GammaOrdinaryCharts.ofWeighted_toWeighted
+#print axioms DiamondIntegral.Section4.GammaOrdinaryCharts.ofWeighted_toWeighted
+#print DiamondIntegral.Section4.GammaOrdinaryCharts.unit
+#print axioms DiamondIntegral.Section4.GammaOrdinaryCharts.unit
+#print DiamondIntegral.Section4.GammaOrdinaryCharts.product
+#print axioms DiamondIntegral.Section4.GammaOrdinaryCharts.product
+#print DiamondIntegral.Section4.GammaOrdinaryCharts.empty
+#print axioms DiamondIntegral.Section4.GammaOrdinaryCharts.empty
+#print DiamondIntegral.Section4.GammaOrdinaryCharts.union
+#print axioms DiamondIntegral.Section4.GammaOrdinaryCharts.union
+#print DiamondIntegral.Section4.GammaOrdinaryCharts.inter
+#print axioms DiamondIntegral.Section4.GammaOrdinaryCharts.inter
+#print DiamondIntegral.Section4.GammaOrdinaryCharts.ofWeighted_product
+#print axioms DiamondIntegral.Section4.GammaOrdinaryCharts.ofWeighted_product
+#print DiamondIntegral.Section4.GammaOrdinaryCharts.Iso
+#print axioms DiamondIntegral.Section4.GammaOrdinaryCharts.Iso
+#print DiamondIntegral.Section4.GammaOrdinaryCharts.ofMeasured
+#print axioms DiamondIntegral.Section4.GammaOrdinaryCharts.ofMeasured
+#print DiamondIntegral.Section4.GammaOrdinaryCharts.sameSupportIso
+#print axioms DiamondIntegral.Section4.GammaOrdinaryCharts.sameSupportIso
+#print DiamondIntegral.Section4.GammaOrdinaryCharts.sharpChart
+#print axioms DiamondIntegral.Section4.GammaOrdinaryCharts.sharpChart
+#print DiamondIntegral.Section4.GammaOrdinaryCharts.sharpIso
+#print axioms DiamondIntegral.Section4.GammaOrdinaryCharts.sharpIso
+#print DiamondIntegral.Section4.GammaOrdinaryCharts.BoundedChart
+#print axioms DiamondIntegral.Section4.GammaOrdinaryCharts.BoundedChart
+#print DiamondIntegral.Section4.GammaOrdinaryCharts.FiniteChart
+#print axioms DiamondIntegral.Section4.GammaOrdinaryCharts.FiniteChart
+#print DiamondIntegral.Section4.GammaOrdinaryRing.Generator
+#print axioms DiamondIntegral.Section4.GammaOrdinaryRing.Generator
+#print DiamondIntegral.Section4.GammaOrdinaryRing.symbol
+#print axioms DiamondIntegral.Section4.GammaOrdinaryRing.symbol
+#print DiamondIntegral.Section4.GammaOrdinaryRing.Scissor
+#print axioms DiamondIntegral.Section4.GammaOrdinaryRing.Scissor
+#print DiamondIntegral.Section4.GammaOrdinaryRing.Relation
+#print axioms DiamondIntegral.Section4.GammaOrdinaryRing.Relation
+#print DiamondIntegral.Section4.GammaOrdinaryRing.relationIdeal
+#print axioms DiamondIntegral.Section4.GammaOrdinaryRing.relationIdeal
+#print DiamondIntegral.Section4.GammaOrdinaryRing.Ring
+#print axioms DiamondIntegral.Section4.GammaOrdinaryRing.Ring
+#print DiamondIntegral.Section4.GammaOrdinaryRing.objectClass
+#print axioms DiamondIntegral.Section4.GammaOrdinaryRing.objectClass
+#print DiamondIntegral.Section4.GammaOrdinaryRing.relation_zero
+#print axioms DiamondIntegral.Section4.GammaOrdinaryRing.relation_zero
+#print DiamondIntegral.Section4.GammaOrdinaryRing.class_unit
+#print axioms DiamondIntegral.Section4.GammaOrdinaryRing.class_unit
+#print DiamondIntegral.Section4.GammaOrdinaryRing.class_product
+#print axioms DiamondIntegral.Section4.GammaOrdinaryRing.class_product
+#print DiamondIntegral.Section4.GammaOrdinaryRing.class_iso
+#print axioms DiamondIntegral.Section4.GammaOrdinaryRing.class_iso
+#print DiamondIntegral.Section4.GammaOrdinaryRing.class_empty
+#print axioms DiamondIntegral.Section4.GammaOrdinaryRing.class_empty
+#print DiamondIntegral.Section4.GammaOrdinaryRing.class_scissor
+#print axioms DiamondIntegral.Section4.GammaOrdinaryRing.class_scissor
+#print DiamondIntegral.Section4.GammaOrdinaryRing.Invariant
+#print axioms DiamondIntegral.Section4.GammaOrdinaryRing.Invariant
+#print DiamondIntegral.Section4.GammaOrdinaryRing.freeMap
+#print axioms DiamondIntegral.Section4.GammaOrdinaryRing.freeMap
+#print DiamondIntegral.Section4.GammaOrdinaryRing.freeMap_symbol
+#print axioms DiamondIntegral.Section4.GammaOrdinaryRing.freeMap_symbol
+#print DiamondIntegral.Section4.GammaOrdinaryRing.freeMap_relation_zero
+#print axioms DiamondIntegral.Section4.GammaOrdinaryRing.freeMap_relation_zero
+#print DiamondIntegral.Section4.GammaOrdinaryRing.lift
+#print axioms DiamondIntegral.Section4.GammaOrdinaryRing.lift
+#print DiamondIntegral.Section4.GammaOrdinaryRing.lift_class
+#print axioms DiamondIntegral.Section4.GammaOrdinaryRing.lift_class
+#print DiamondIntegral.Section4.GammaOrdinaryRing.hom_ext
+#print axioms DiamondIntegral.Section4.GammaOrdinaryRing.hom_ext
+#print DiamondIntegral.Section4.GammaOrdinaryRing.forgetInvariant
+#print axioms DiamondIntegral.Section4.GammaOrdinaryRing.forgetInvariant
+#print DiamondIntegral.Section4.GammaOrdinaryRing.forget
+#print axioms DiamondIntegral.Section4.GammaOrdinaryRing.forget
+#print DiamondIntegral.Section4.GammaOrdinaryRing.forget_class
+#print axioms DiamondIntegral.Section4.GammaOrdinaryRing.forget_class
+#print DiamondIntegral.Section4.GammaOrdinaryRing.weightedFreeLift
+#print axioms DiamondIntegral.Section4.GammaOrdinaryRing.weightedFreeLift
+#print DiamondIntegral.Section4.GammaOrdinaryRing.forget_weightedFreeLift
+#print axioms DiamondIntegral.Section4.GammaOrdinaryRing.forget_weightedFreeLift
+#print DiamondIntegral.Section4.GammaOrdinaryRing.forget_surjective
+#print axioms DiamondIntegral.Section4.GammaOrdinaryRing.forget_surjective
+#print DiamondIntegral.Section4.GammaOrdinaryGrading.gradingInvariant
+#print axioms DiamondIntegral.Section4.GammaOrdinaryGrading.gradingInvariant
+#print DiamondIntegral.Section4.GammaOrdinaryGrading.coaction
+#print axioms DiamondIntegral.Section4.GammaOrdinaryGrading.coaction
+#print DiamondIntegral.Section4.GammaOrdinaryGrading.coaction_class
+#print axioms DiamondIntegral.Section4.GammaOrdinaryGrading.coaction_class
+#print DiamondIntegral.Section4.GammaOrdinaryGrading.coaction_counit
+#print axioms DiamondIntegral.Section4.GammaOrdinaryGrading.coaction_counit
+#print DiamondIntegral.Section4.GammaOrdinaryGrading.coaction_coassoc
+#print axioms DiamondIntegral.Section4.GammaOrdinaryGrading.coaction_coassoc
+#print DiamondIntegral.Section4.GammaOrdinaryGrading.gradingCoaction
+#print axioms DiamondIntegral.Section4.GammaOrdinaryGrading.gradingCoaction
+#print DiamondIntegral.Section4.GammaOrdinaryGrading.gradedPiece
+#print axioms DiamondIntegral.Section4.GammaOrdinaryGrading.gradedPiece
+#print DiamondIntegral.Section4.GammaOrdinaryGrading.gradedRing
+#print axioms DiamondIntegral.Section4.GammaOrdinaryGrading.gradedRing
+#print DiamondIntegral.Section4.GammaOrdinaryGrading.class_mem
+#print axioms DiamondIntegral.Section4.GammaOrdinaryGrading.class_mem
+#print DiamondIntegral.Section4.GammaOrdinaryGrading.forget_coaction
+#print axioms DiamondIntegral.Section4.GammaOrdinaryGrading.forget_coaction
+#print DiamondIntegral.Section4.GammaOrdinaryGrading.forget_mem
+#print axioms DiamondIntegral.Section4.GammaOrdinaryGrading.forget_mem
+#print DiamondIntegral.Section4.GammaOrdinaryEulerEvaluation.weightedEvaluation
+#print axioms DiamondIntegral.Section4.GammaOrdinaryEulerEvaluation.weightedEvaluation
+#print DiamondIntegral.Section4.GammaOrdinaryEulerEvaluation.value
+#print axioms DiamondIntegral.Section4.GammaOrdinaryEulerEvaluation.value
+#print DiamondIntegral.Section4.GammaOrdinaryEulerEvaluation.value_formula
+#print axioms DiamondIntegral.Section4.GammaOrdinaryEulerEvaluation.value_formula
+#print DiamondIntegral.Section4.GammaOrdinaryEulerEvaluation.value_ofWeighted
+#print axioms DiamondIntegral.Section4.GammaOrdinaryEulerEvaluation.value_ofWeighted
+#print DiamondIntegral.Section4.GammaOrdinaryEulerEvaluation.invariant
+#print axioms DiamondIntegral.Section4.GammaOrdinaryEulerEvaluation.invariant
+#print DiamondIntegral.Section4.GammaOrdinaryEulerEvaluation.evaluation
+#print axioms DiamondIntegral.Section4.GammaOrdinaryEulerEvaluation.evaluation
+#print DiamondIntegral.Section4.GammaOrdinaryEulerEvaluation.evaluation_value
+#print axioms DiamondIntegral.Section4.GammaOrdinaryEulerEvaluation.evaluation_value
+#print DiamondIntegral.Section4.GammaOrdinaryEulerEvaluation.evaluation_class
+#print axioms DiamondIntegral.Section4.GammaOrdinaryEulerEvaluation.evaluation_class
+#print DiamondIntegral.Section4.GammaOrdinaryEulerEvaluation.evaluation_forget
+#print axioms DiamondIntegral.Section4.GammaOrdinaryEulerEvaluation.evaluation_forget
+#print DiamondIntegral.Section4.GammaOrdinarySharpObjects.sameSupportIso
+#print axioms DiamondIntegral.Section4.GammaOrdinarySharpObjects.sameSupportIso
+#print DiamondIntegral.Section4.GammaOrdinarySharpObjects.sharp_unit
+#print axioms DiamondIntegral.Section4.GammaOrdinarySharpObjects.sharp_unit
+#print DiamondIntegral.Section4.GammaOrdinarySharpObjects.sharp_product
+#print axioms DiamondIntegral.Section4.GammaOrdinarySharpObjects.sharp_product
+#print DiamondIntegral.Section4.GammaOrdinarySharpObjects.sharp_empty
+#print axioms DiamondIntegral.Section4.GammaOrdinarySharpObjects.sharp_empty
+#print DiamondIntegral.Section4.GammaOrdinarySharpObjects.sharp_scissor
+#print axioms DiamondIntegral.Section4.GammaOrdinarySharpObjects.sharp_scissor
+#print DiamondIntegral.Section4.GammaOrdinarySharpRingMap.invariant
+#print axioms DiamondIntegral.Section4.GammaOrdinarySharpRingMap.invariant
+#print DiamondIntegral.Section4.GammaOrdinarySharpRingMap.sharp
+#print axioms DiamondIntegral.Section4.GammaOrdinarySharpRingMap.sharp
+#print DiamondIntegral.Section4.GammaOrdinarySharpRingMap.sharp_class
+#print axioms DiamondIntegral.Section4.GammaOrdinarySharpRingMap.sharp_class
+#print DiamondIntegral.Section4.GammaOrdinarySharpRingMap.forget_square
+#print axioms DiamondIntegral.Section4.GammaOrdinarySharpRingMap.forget_square
+#print DiamondIntegral.Section4.GammaOrdinarySharpRingMap.sharp_coaction
+#print axioms DiamondIntegral.Section4.GammaOrdinarySharpRingMap.sharp_coaction
+#print DiamondIntegral.Section4.GammaOrdinarySharpRingMap.sharp_mem
+#print axioms DiamondIntegral.Section4.GammaOrdinarySharpRingMap.sharp_mem
+#print DiamondIntegral.Section4.GammaOrdinarySharpRingMap.gradedSharp
+#print axioms DiamondIntegral.Section4.GammaOrdinarySharpRingMap.gradedSharp
+#print DiamondIntegral.Section4.GammaOrdinarySharpScissors.pack
+#print axioms DiamondIntegral.Section4.GammaOrdinarySharpScissors.pack
+#print DiamondIntegral.Section4.GammaOrdinarySharpScissors.packedDomain_sharp
+#print axioms DiamondIntegral.Section4.GammaOrdinarySharpScissors.packedDomain_sharp
+#print DiamondIntegral.Section4.GammaOrdinarySharpScissors.sharp_scissor
+#print axioms DiamondIntegral.Section4.GammaOrdinarySharpScissors.sharp_scissor
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteCharts.ofSet
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteCharts.ofSet
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteCharts.ofMeasured
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteCharts.ofMeasured
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteCharts.toWeighted
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteCharts.toWeighted
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteCharts.unit
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteCharts.unit
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteCharts.product
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteCharts.product
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteCharts.ofMeasured_toWeighted
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteCharts.ofMeasured_toWeighted
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteCharts.ofMeasured_product
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteCharts.ofMeasured_product
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteCharts.product_toChart
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteCharts.product_toChart
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteCharts.sharp
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteCharts.sharp
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteCharts.sharpIso
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteCharts.sharpIso
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteCharts.sharp_unit
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteCharts.sharp_unit
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteCharts.sharp_product
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteCharts.sharp_product
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteRing.Generator
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteRing.Generator
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteRing.symbol
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteRing.symbol
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteRing.Scissor
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteRing.Scissor
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteRing.Relation
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteRing.Relation
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteRing.relationIdeal
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteRing.relationIdeal
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteRing.Ring
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteRing.Ring
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteRing.objectClass
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteRing.objectClass
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteRing.relation_zero
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteRing.relation_zero
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteRing.class_unit
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteRing.class_unit
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteRing.class_product
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteRing.class_product
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteRing.class_iso
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteRing.class_iso
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteRing.class_empty
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteRing.class_empty
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteRing.class_scissor
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteRing.class_scissor
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteRing.Invariant
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteRing.Invariant
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteRing.freeMap
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteRing.freeMap
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteRing.freeMap_symbol
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteRing.freeMap_symbol
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteRing.freeMap_relation_zero
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteRing.freeMap_relation_zero
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteRing.lift
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteRing.lift
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteRing.lift_class
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteRing.lift_class
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteRing.hom_ext
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteRing.hom_ext
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteRing.forgetInvariant
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteRing.forgetInvariant
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteRing.forget
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteRing.forget
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteRing.forget_class
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteRing.forget_class
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteRing.weightedFreeLift
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteRing.weightedFreeLift
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteRing.forget_weightedFreeLift
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteRing.forget_weightedFreeLift
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteRing.forget_surjective
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteRing.forget_surjective
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteGrading.gradingInvariant
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteGrading.gradingInvariant
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteGrading.coaction
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteGrading.coaction
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteGrading.coaction_class
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteGrading.coaction_class
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteGrading.coaction_counit
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteGrading.coaction_counit
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteGrading.coaction_coassoc
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteGrading.coaction_coassoc
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteGrading.gradingCoaction
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteGrading.gradingCoaction
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteGrading.gradedPiece
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteGrading.gradedPiece
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteGrading.gradedRing
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteGrading.gradedRing
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteGrading.class_mem
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteGrading.class_mem
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteGrading.forget_coaction
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteGrading.forget_coaction
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteGrading.forget_mem
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteGrading.forget_mem
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteMaps.fullInvariant
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteMaps.fullInvariant
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteMaps.full
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteMaps.full
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteMaps.full_class
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteMaps.full_class
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteMaps.sharpInvariant
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteMaps.sharpInvariant
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteMaps.sharp
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteMaps.sharp
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteMaps.sharp_class
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteMaps.sharp_class
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteMaps.full_forget_square
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteMaps.full_forget_square
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteMaps.sharp_forget_square
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteMaps.sharp_forget_square
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteMaps.sharp_full_square
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteMaps.sharp_full_square
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteMapGradings.full_coaction
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteMapGradings.full_coaction
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteMapGradings.sharp_coaction
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteMapGradings.sharp_coaction
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteMapGradings.full_mem
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteMapGradings.full_mem
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteMapGradings.sharp_mem
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteMapGradings.sharp_mem
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteMapGradings.gradedFull
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteMapGradings.gradedFull
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteMapGradings.gradedSharp
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteMapGradings.gradedSharp
+#print DiamondIntegral.Section4.GammaOrdinaryAlgebras.Coeff
+#print axioms DiamondIntegral.Section4.GammaOrdinaryAlgebras.Coeff
+#print DiamondIntegral.Section4.GammaOrdinaryAlgebras.resAlgebra
+#print axioms DiamondIntegral.Section4.GammaOrdinaryAlgebras.resAlgebra
+#print DiamondIntegral.Section4.GammaOrdinaryAlgebras.gammaAlgebra
+#print axioms DiamondIntegral.Section4.GammaOrdinaryAlgebras.gammaAlgebra
+#print DiamondIntegral.Section4.GammaOrdinaryAlgebras.rvAlgebra
+#print axioms DiamondIntegral.Section4.GammaOrdinaryAlgebras.rvAlgebra
+#print DiamondIntegral.Section4.GammaOrdinaryAlgebras.targetAlgebra
+#print axioms DiamondIntegral.Section4.GammaOrdinaryAlgebras.targetAlgebra
+#print DiamondIntegral.Section4.GammaOrdinaryRESEvaluation.resMap
+#print axioms DiamondIntegral.Section4.GammaOrdinaryRESEvaluation.resMap
+#print DiamondIntegral.Section4.GammaOrdinaryRESEvaluation.evaluation
+#print axioms DiamondIntegral.Section4.GammaOrdinaryRESEvaluation.evaluation
+#print DiamondIntegral.Section4.GammaOrdinaryRESEvaluation.evaluation_class
+#print axioms DiamondIntegral.Section4.GammaOrdinaryRESEvaluation.evaluation_class
+#print DiamondIntegral.Section4.GammaOrdinaryRESEvaluation.evaluation_class_mem
+#print axioms DiamondIntegral.Section4.GammaOrdinaryRESEvaluation.evaluation_class_mem
+#print DiamondIntegral.Section4.GammaOrdinaryRESEvaluation.evaluation_coaction
+#print axioms DiamondIntegral.Section4.GammaOrdinaryRESEvaluation.evaluation_coaction
+#print DiamondIntegral.Section4.GammaOrdinaryRESEvaluation.evaluation_mem
+#print axioms DiamondIntegral.Section4.GammaOrdinaryRESEvaluation.evaluation_mem
+#print DiamondIntegral.Section4.GammaOrdinaryRESEvaluation.gradedEvaluation
+#print axioms DiamondIntegral.Section4.GammaOrdinaryRESEvaluation.gradedEvaluation
+#print DiamondIntegral.Section4.GammaOrdinaryRESEvaluation.evaluation_forget
+#print axioms DiamondIntegral.Section4.GammaOrdinaryRESEvaluation.evaluation_forget
+#print DiamondIntegral.Section4.GammaOrdinaryRESEvaluation.finite_balance_apply
+#print axioms DiamondIntegral.Section4.GammaOrdinaryRESEvaluation.finite_balance_apply
+#print DiamondIntegral.Section4.GammaOrdinaryRESEvaluation.finite_balance
+#print axioms DiamondIntegral.Section4.GammaOrdinaryRESEvaluation.finite_balance
+#print DiamondIntegral.Section4.RVOrdinaryBalancedTensor.Source
+#print axioms DiamondIntegral.Section4.RVOrdinaryBalancedTensor.Source
+#print DiamondIntegral.Section4.RVOrdinaryBalancedTensor.IntegerSource
+#print axioms DiamondIntegral.Section4.RVOrdinaryBalancedTensor.IntegerSource
+#print DiamondIntegral.Section4.RVOrdinaryBalancedTensor.resComparison
+#print axioms DiamondIntegral.Section4.RVOrdinaryBalancedTensor.resComparison
+#print DiamondIntegral.Section4.RVOrdinaryBalancedTensor.gammaComparison
+#print axioms DiamondIntegral.Section4.RVOrdinaryBalancedTensor.gammaComparison
+#print DiamondIntegral.Section4.RVOrdinaryBalancedTensor.comparison
+#print axioms DiamondIntegral.Section4.RVOrdinaryBalancedTensor.comparison
+#print DiamondIntegral.Section4.RVOrdinaryBalancedTensor.comparison_tmul
+#print axioms DiamondIntegral.Section4.RVOrdinaryBalancedTensor.comparison_tmul
+#print DiamondIntegral.Section4.RVOrdinaryBalancedTensor.resEvaluation
+#print axioms DiamondIntegral.Section4.RVOrdinaryBalancedTensor.resEvaluation
+#print DiamondIntegral.Section4.RVOrdinaryBalancedTensor.gammaEvaluation
+#print axioms DiamondIntegral.Section4.RVOrdinaryBalancedTensor.gammaEvaluation
+#print DiamondIntegral.Section4.RVOrdinaryBalancedTensor.evaluation
+#print axioms DiamondIntegral.Section4.RVOrdinaryBalancedTensor.evaluation
+#print DiamondIntegral.Section4.RVOrdinaryBalancedTensor.evaluation_tmul
+#print axioms DiamondIntegral.Section4.RVOrdinaryBalancedTensor.evaluation_tmul
+#print DiamondIntegral.Section4.RVOrdinaryBalancedTensor.evaluation_res
+#print axioms DiamondIntegral.Section4.RVOrdinaryBalancedTensor.evaluation_res
+#print DiamondIntegral.Section4.RVOrdinaryBalancedTensor.evaluation_gamma_chart
+#print axioms DiamondIntegral.Section4.RVOrdinaryBalancedTensor.evaluation_gamma_chart
+#print DiamondIntegral.Section4.RVOrdinaryBalancedGradings.data
+#print axioms DiamondIntegral.Section4.RVOrdinaryBalancedGradings.data
+#print DiamondIntegral.Section4.RVOrdinaryBalancedGradings.coaction
+#print axioms DiamondIntegral.Section4.RVOrdinaryBalancedGradings.coaction
+#print DiamondIntegral.Section4.RVOrdinaryBalancedGradings.piece
+#print axioms DiamondIntegral.Section4.RVOrdinaryBalancedGradings.piece
+#print DiamondIntegral.Section4.RVOrdinaryBalancedGradings.gradedRing
+#print axioms DiamondIntegral.Section4.RVOrdinaryBalancedGradings.gradedRing
+#print DiamondIntegral.Section4.RVOrdinaryBalancedGradings.tmul_mem
+#print axioms DiamondIntegral.Section4.RVOrdinaryBalancedGradings.tmul_mem
+#print DiamondIntegral.Section4.RVOrdinaryBalancedGradings.gradedComparison
+#print axioms DiamondIntegral.Section4.RVOrdinaryBalancedGradings.gradedComparison
+#print DiamondIntegral.Section4.RVOrdinaryBalancedGradings.gradedEvaluation
+#print axioms DiamondIntegral.Section4.RVOrdinaryBalancedGradings.gradedEvaluation
+#print DiamondIntegral.Section4.RVOrdinaryIntegerTensor.sourceIntScalarTower
+#print axioms DiamondIntegral.Section4.RVOrdinaryIntegerTensor.sourceIntScalarTower
+#print DiamondIntegral.Section4.RVOrdinaryIntegerTensor.resInclusion
+#print axioms DiamondIntegral.Section4.RVOrdinaryIntegerTensor.resInclusion
+#print DiamondIntegral.Section4.RVOrdinaryIntegerTensor.gammaInclusion
+#print axioms DiamondIntegral.Section4.RVOrdinaryIntegerTensor.gammaInclusion
+#print DiamondIntegral.Section4.RVOrdinaryIntegerTensor.fromInteger
+#print axioms DiamondIntegral.Section4.RVOrdinaryIntegerTensor.fromInteger
+#print DiamondIntegral.Section4.RVOrdinaryIntegerTensor.fromInteger_tmul
+#print axioms DiamondIntegral.Section4.RVOrdinaryIntegerTensor.fromInteger_tmul
+#print DiamondIntegral.Section4.RVOrdinaryIntegerTensor.fromInteger_surjective
+#print axioms DiamondIntegral.Section4.RVOrdinaryIntegerTensor.fromInteger_surjective
+#print DiamondIntegral.Section4.RVOrdinaryIntegerTensor.integerComparison
+#print axioms DiamondIntegral.Section4.RVOrdinaryIntegerTensor.integerComparison
+#print DiamondIntegral.Section4.RVOrdinaryIntegerTensor.comparison_fromInteger
+#print axioms DiamondIntegral.Section4.RVOrdinaryIntegerTensor.comparison_fromInteger
+#print DiamondIntegral.Section4.RVOrdinaryIntegerTensor.integerEvaluation
+#print axioms DiamondIntegral.Section4.RVOrdinaryIntegerTensor.integerEvaluation
+#print DiamondIntegral.Section4.RVOrdinaryIntegerTensor.evaluation_fromInteger
+#print axioms DiamondIntegral.Section4.RVOrdinaryIntegerTensor.evaluation_fromInteger
+#print DiamondIntegral.Section4.RVOrdinaryBalancedSpecialClasses.rayClass
+#print axioms DiamondIntegral.Section4.RVOrdinaryBalancedSpecialClasses.rayClass
+#print DiamondIntegral.Section4.RVOrdinaryBalancedSpecialClasses.pointPreimage
+#print axioms DiamondIntegral.Section4.RVOrdinaryBalancedSpecialClasses.pointPreimage
+#print DiamondIntegral.Section4.RVOrdinaryBalancedSpecialClasses.pPreimage
+#print axioms DiamondIntegral.Section4.RVOrdinaryBalancedSpecialClasses.pPreimage
+#print DiamondIntegral.Section4.RVOrdinaryBalancedSpecialClasses.pointPreimage_mem
+#print axioms DiamondIntegral.Section4.RVOrdinaryBalancedSpecialClasses.pointPreimage_mem
+#print DiamondIntegral.Section4.RVOrdinaryBalancedSpecialClasses.pPreimage_mem
+#print axioms DiamondIntegral.Section4.RVOrdinaryBalancedSpecialClasses.pPreimage_mem
+#print DiamondIntegral.Section4.RVOrdinaryBalancedSpecialClasses.comparison_pPreimage
+#print axioms DiamondIntegral.Section4.RVOrdinaryBalancedSpecialClasses.comparison_pPreimage
+#print DiamondIntegral.Section4.RVOrdinaryBalancedSpecialClasses.zeroCount
+#print axioms DiamondIntegral.Section4.RVOrdinaryBalancedSpecialClasses.zeroCount
+#print DiamondIntegral.Section4.RVOrdinaryBalancedSpecialClasses.zero_ne_one
+#print axioms DiamondIntegral.Section4.RVOrdinaryBalancedSpecialClasses.zero_ne_one
+#print DiamondIntegral.Section4.RVOrdinaryBalancedSpecialClasses.evaluation_ray
+#print axioms DiamondIntegral.Section4.RVOrdinaryBalancedSpecialClasses.evaluation_ray
+#print DiamondIntegral.Section4.RVOrdinaryBalancedSpecialClasses.evaluation_point
+#print axioms DiamondIntegral.Section4.RVOrdinaryBalancedSpecialClasses.evaluation_point
+#print DiamondIntegral.Section4.RVOrdinaryBalancedSpecialClasses.evaluation_p
+#print axioms DiamondIntegral.Section4.RVOrdinaryBalancedSpecialClasses.evaluation_p
+#print DiamondIntegral.Section4.RVOrdinaryBalancedSpecialClasses.evaluation_p_geometric
+#print axioms DiamondIntegral.Section4.RVOrdinaryBalancedSpecialClasses.evaluation_p_geometric
+#print DiamondIntegral.Section4.RVOrdinaryBalancedSpecialClasses.evaluation_p_bounded
+#print axioms DiamondIntegral.Section4.RVOrdinaryBalancedSpecialClasses.evaluation_p_bounded
+#print DiamondIntegral.Section4.RVOrdinaryBalancedSpecialClasses.evaluation_surjective
+#print axioms DiamondIntegral.Section4.RVOrdinaryBalancedSpecialClasses.evaluation_surjective
+#print DiamondIntegral.Section4.RVOrdinaryTensorNormalization.pIdeal
+#print axioms DiamondIntegral.Section4.RVOrdinaryTensorNormalization.pIdeal
+#print DiamondIntegral.Section4.RVOrdinaryTensorNormalization.Ring
+#print axioms DiamondIntegral.Section4.RVOrdinaryTensorNormalization.Ring
+#print DiamondIntegral.Section4.RVOrdinaryTensorNormalization.quotient
+#print axioms DiamondIntegral.Section4.RVOrdinaryTensorNormalization.quotient
+#print DiamondIntegral.Section4.RVOrdinaryTensorNormalization.comparisonRaw
+#print axioms DiamondIntegral.Section4.RVOrdinaryTensorNormalization.comparisonRaw
+#print DiamondIntegral.Section4.RVOrdinaryTensorNormalization.comparison_ideal_zero
+#print axioms DiamondIntegral.Section4.RVOrdinaryTensorNormalization.comparison_ideal_zero
+#print DiamondIntegral.Section4.RVOrdinaryTensorNormalization.comparison
+#print axioms DiamondIntegral.Section4.RVOrdinaryTensorNormalization.comparison
+#print DiamondIntegral.Section4.RVOrdinaryTensorNormalization.boundedRaw
+#print axioms DiamondIntegral.Section4.RVOrdinaryTensorNormalization.boundedRaw
+#print DiamondIntegral.Section4.RVOrdinaryTensorNormalization.homogeneousRaw
+#print axioms DiamondIntegral.Section4.RVOrdinaryTensorNormalization.homogeneousRaw
+#print DiamondIntegral.Section4.RVOrdinaryTensorNormalization.geometricRaw
+#print axioms DiamondIntegral.Section4.RVOrdinaryTensorNormalization.geometricRaw
+#print DiamondIntegral.Section4.RVOrdinaryTensorNormalization.bounded_p
+#print axioms DiamondIntegral.Section4.RVOrdinaryTensorNormalization.bounded_p
+#print DiamondIntegral.Section4.RVOrdinaryTensorNormalization.homogeneous_p
+#print axioms DiamondIntegral.Section4.RVOrdinaryTensorNormalization.homogeneous_p
+#print DiamondIntegral.Section4.RVOrdinaryTensorNormalization.bounded_ideal_zero
+#print axioms DiamondIntegral.Section4.RVOrdinaryTensorNormalization.bounded_ideal_zero
+#print DiamondIntegral.Section4.RVOrdinaryTensorNormalization.homogeneous_ideal_zero
+#print axioms DiamondIntegral.Section4.RVOrdinaryTensorNormalization.homogeneous_ideal_zero
+#print DiamondIntegral.Section4.RVOrdinaryTensorNormalization.bounded
+#print axioms DiamondIntegral.Section4.RVOrdinaryTensorNormalization.bounded
+#print DiamondIntegral.Section4.RVOrdinaryTensorNormalization.homogeneous
+#print axioms DiamondIntegral.Section4.RVOrdinaryTensorNormalization.homogeneous
+#print DiamondIntegral.Section4.RVOrdinaryTensorNormalization.geometric
+#print axioms DiamondIntegral.Section4.RVOrdinaryTensorNormalization.geometric
+#print DiamondIntegral.Section4.RVOrdinaryTensorNormalization.bounded_point
+#print axioms DiamondIntegral.Section4.RVOrdinaryTensorNormalization.bounded_point
+#print DiamondIntegral.Section4.RVOrdinaryTensorNormalization.geometric_point
+#print axioms DiamondIntegral.Section4.RVOrdinaryTensorNormalization.geometric_point
+#print DiamondIntegral.Section4.RVOrdinaryTensorNormalization.bounded_res
+#print axioms DiamondIntegral.Section4.RVOrdinaryTensorNormalization.bounded_res
+#print DiamondIntegral.Section4.RVOrdinaryTensorNormalization.homogeneous_res
+#print axioms DiamondIntegral.Section4.RVOrdinaryTensorNormalization.homogeneous_res
+#print DiamondIntegral.Section4.GammaOrdinaryRadius.ray
+#print axioms DiamondIntegral.Section4.GammaOrdinaryRadius.ray
+#print DiamondIntegral.Section4.GammaOrdinaryRadius.upperRay
+#print axioms DiamondIntegral.Section4.GammaOrdinaryRadius.upperRay
+#print DiamondIntegral.Section4.GammaOrdinaryRadius.annulus
+#print axioms DiamondIntegral.Section4.GammaOrdinaryRadius.annulus
+#print DiamondIntegral.Section4.GammaOrdinaryRadius.shift_ray_bijective
+#print axioms DiamondIntegral.Section4.GammaOrdinaryRadius.shift_ray_bijective
+#print DiamondIntegral.Section4.GammaOrdinaryRadius.rayIso
+#print axioms DiamondIntegral.Section4.GammaOrdinaryRadius.rayIso
+#print DiamondIntegral.Section4.GammaOrdinaryRadius.annulus_zero
+#print axioms DiamondIntegral.Section4.GammaOrdinaryRadius.annulus_zero
+#print DiamondIntegral.Section4.GammaOrdinaryRadius.annulus_one
+#print axioms DiamondIntegral.Section4.GammaOrdinaryRadius.annulus_one
+#print DiamondIntegral.Section4.GammaOrdinaryFinitePartitions.support
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFinitePartitions.support
+#print DiamondIntegral.Section4.GammaOrdinaryFinitePartitions.support_definable
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFinitePartitions.support_definable
+#print DiamondIntegral.Section4.GammaOrdinaryFinitePartitions.restrict
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFinitePartitions.restrict
+#print DiamondIntegral.Section4.GammaOrdinaryFinitePartitions.class_partition
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFinitePartitions.class_partition
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteFamilies.familyClass
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteFamilies.familyClass
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteFamilies.familyClass_empty
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteFamilies.familyClass_empty
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteFamilies.familyClass_singleton
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteFamilies.familyClass_singleton
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteFamilies.familyClass_sum
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteFamilies.familyClass_sum
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteFamilies.familyClass_product
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteFamilies.familyClass_product
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteFamilies.PartitionIso
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteFamilies.PartitionIso
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteFamilies.familyClass_partitionIso
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteFamilies.familyClass_partitionIso
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteFamilies.map_familyClass
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteFamilies.map_familyClass
+#print DiamondIntegral.Section4.GammaOrdinaryFamilyIsomorphisms.gammaDomain
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFamilyIsomorphisms.gammaDomain
+#print DiamondIntegral.Section4.GammaOrdinaryFamilyIsomorphisms.rvDomain
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFamilyIsomorphisms.rvDomain
+#print DiamondIntegral.Section4.GammaOrdinaryFamilyIsomorphisms.codeDomain
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFamilyIsomorphisms.codeDomain
+#print DiamondIntegral.Section4.GammaOrdinaryFamilyIsomorphisms.Iso
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFamilyIsomorphisms.Iso
+#print DiamondIntegral.Section4.GammaOrdinaryFamilyIsomorphisms.sourcePiece_lift
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFamilyIsomorphisms.sourcePiece_lift
+#print DiamondIntegral.Section4.GammaOrdinaryFamilyIsomorphisms.targetPiece_lift
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFamilyIsomorphisms.targetPiece_lift
+#print DiamondIntegral.Section4.GammaOrdinaryFamilyIsomorphisms.pieceIso
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFamilyIsomorphisms.pieceIso
+#print DiamondIntegral.Section4.GammaOrdinaryFamilyIsomorphisms.partitionIso
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFamilyIsomorphisms.partitionIso
+#print DiamondIntegral.Section4.GammaOrdinaryFamilyIsomorphisms.familyClass_iso
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFamilyIsomorphisms.familyClass_iso
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.Family
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.Family
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.single
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.single
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.Generator
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.Generator
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.symbol
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.symbol
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.singleSymbol
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.singleSymbol
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.Relation
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.Relation
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.relationIdeal
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.relationIdeal
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.Ring
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.Ring
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.objectClass
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.objectClass
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.singleClass
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.singleClass
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.relation_zero
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.relation_zero
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.class_family
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.class_family
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.class_unit
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.class_unit
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.class_product
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.class_product
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.class_singleIso
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.class_singleIso
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.class_iso
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.class_iso
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.class_empty
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.class_empty
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.class_scissor
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.class_scissor
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.evaluation
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.evaluation
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.evaluation_single
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.evaluation_single
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.freeMap
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.freeMap
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.freeMap_symbol
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.freeMap_symbol
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.freeMap_single
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.freeMap_single
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.freeMap_relation_zero
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.freeMap_relation_zero
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.toChartRing
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.toChartRing
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.toChart_class
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.toChart_class
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.toChart_single
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.toChart_single
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.fromChartInvariant
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.fromChartInvariant
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.fromChartRing
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.fromChartRing
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.fromChart_class
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.fromChart_class
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.to_from
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.to_from
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.from_to
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.from_to
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.equivalence
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.equivalence
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.hom_ext
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteUnionPresentation.hom_ext
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteSupportPartitions.restrict
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteSupportPartitions.restrict
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteSupportPartitions.class_partition
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteSupportPartitions.class_partition
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteUnionGrading.evaluation_mem
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteUnionGrading.evaluation_mem
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteUnionGrading.coaction
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteUnionGrading.coaction
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteUnionGrading.coaction_class
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteUnionGrading.coaction_class
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteUnionGrading.coaction_counit
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteUnionGrading.coaction_counit
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteUnionGrading.coaction_coassoc
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteUnionGrading.coaction_coassoc
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteUnionGrading.gradingCoaction
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteUnionGrading.gradingCoaction
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteUnionGrading.piece
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteUnionGrading.piece
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteUnionGrading.gradedRing
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteUnionGrading.gradedRing
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteUnionGrading.class_mem
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteUnionGrading.class_mem
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteUnionGrading.toChart_coaction
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteUnionGrading.toChart_coaction
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteUnionGrading.fromChart_coaction
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteUnionGrading.fromChart_coaction
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteUnionGrading.toChart_mem
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteUnionGrading.toChart_mem
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteUnionGrading.fromChart_mem
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteUnionGrading.fromChart_mem
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteUnionGrading.gradedToChart
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteUnionGrading.gradedToChart
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteUnionGrading.gradedFromChart
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteUnionGrading.gradedFromChart
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteUnionOperations.empty
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteUnionOperations.empty
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteUnionOperations.coproduct
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteUnionOperations.coproduct
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteUnionOperations.product
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteUnionOperations.product
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteUnionOperations.class_empty
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteUnionOperations.class_empty
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteUnionOperations.class_coproduct
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteUnionOperations.class_coproduct
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteUnionOperations.class_product
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteUnionOperations.class_product
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteSupportFamilies.familyClass
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteSupportFamilies.familyClass
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteSupportFamilies.familyClass_iso
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteSupportFamilies.familyClass_iso
+#print DiamondIntegral.Section4.RVOrdinaryTensorForget.forget
+#print axioms DiamondIntegral.Section4.RVOrdinaryTensorForget.forget
+#print DiamondIntegral.Section4.RVOrdinaryTensorForget.forget_tmul
+#print axioms DiamondIntegral.Section4.RVOrdinaryTensorForget.forget_tmul
+#print DiamondIntegral.Section4.RVOrdinaryTensorForget.forget_surjective
+#print axioms DiamondIntegral.Section4.RVOrdinaryTensorForget.forget_surjective
+#print DiamondIntegral.Section4.RVOrdinaryTensorForget.comparison_square
+#print axioms DiamondIntegral.Section4.RVOrdinaryTensorForget.comparison_square
+#print DiamondIntegral.Section4.RVOrdinaryTensorForget.gradedForget
+#print axioms DiamondIntegral.Section4.RVOrdinaryTensorForget.gradedForget
+#print DiamondIntegral.Section4.RVOrdinaryTensorForget.evaluation_square
+#print axioms DiamondIntegral.Section4.RVOrdinaryTensorForget.evaluation_square
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.Family
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.Family
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.single
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.single
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.Generator
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.Generator
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.symbol
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.symbol
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.singleSymbol
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.singleSymbol
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.Relation
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.Relation
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.relationIdeal
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.relationIdeal
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.Ring
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.Ring
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.objectClass
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.objectClass
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.singleClass
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.singleClass
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.relation_zero
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.relation_zero
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.class_family
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.class_family
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.class_unit
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.class_unit
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.class_product
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.class_product
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.class_singleIso
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.class_singleIso
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.class_iso
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.class_iso
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.class_empty
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.class_empty
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.class_scissor
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.class_scissor
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.evaluation
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.evaluation
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.evaluation_single
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.evaluation_single
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.freeMap
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.freeMap
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.freeMap_symbol
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.freeMap_symbol
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.freeMap_single
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.freeMap_single
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.freeMap_relation_zero
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.freeMap_relation_zero
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.toChartRing
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.toChartRing
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.toChart_class
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.toChart_class
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.toChart_single
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.toChart_single
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.fromChartInvariant
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.fromChartInvariant
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.fromChartRing
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.fromChartRing
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.fromChart_class
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.fromChart_class
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.to_from
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.to_from
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.from_to
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.from_to
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.equivalence
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.equivalence
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.hom_ext
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionPresentation.hom_ext
+#print DiamondIntegral.Section4.RVOrdinaryBoundedTensorForget.forget
+#print axioms DiamondIntegral.Section4.RVOrdinaryBoundedTensorForget.forget
+#print DiamondIntegral.Section4.RVOrdinaryBoundedTensorForget.forget_tmul
+#print axioms DiamondIntegral.Section4.RVOrdinaryBoundedTensorForget.forget_tmul
+#print DiamondIntegral.Section4.RVOrdinaryBoundedTensorForget.withLift_zero
+#print axioms DiamondIntegral.Section4.RVOrdinaryBoundedTensorForget.withLift_zero
+#print DiamondIntegral.Section4.RVOrdinaryBoundedTensorForget.radius_zero
+#print axioms DiamondIntegral.Section4.RVOrdinaryBoundedTensorForget.radius_zero
+#print DiamondIntegral.Section4.RVOrdinaryBoundedTensorForget.radiusIdeal_le_ker
+#print axioms DiamondIntegral.Section4.RVOrdinaryBoundedTensorForget.radiusIdeal_le_ker
+#print DiamondIntegral.Section4.RVOrdinaryBoundedTensorForget.fromRadius
+#print axioms DiamondIntegral.Section4.RVOrdinaryBoundedTensorForget.fromRadius
+#print DiamondIntegral.Section4.RVOrdinaryBoundedTensorForget.fromRadius_mk
+#print axioms DiamondIntegral.Section4.RVOrdinaryBoundedTensorForget.fromRadius_mk
+#print DiamondIntegral.Section4.RVOrdinaryBoundedTensorForget.gradedForget
+#print axioms DiamondIntegral.Section4.RVOrdinaryBoundedTensorForget.gradedForget
+#print DiamondIntegral.Section4.RVOrdinaryBoundedTensorForget.gradedFromRadius
+#print axioms DiamondIntegral.Section4.RVOrdinaryBoundedTensorForget.gradedFromRadius
+#print DiamondIntegral.Section4.RVOrdinaryBoundedTensorForget.evaluation_square
+#print axioms DiamondIntegral.Section4.RVOrdinaryBoundedTensorForget.evaluation_square
+#print DiamondIntegral.Section4.GammaOrdinaryFamilySharp.sharpFamily
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFamilySharp.sharpFamily
+#print DiamondIntegral.Section4.GammaOrdinaryFamilySharp.sharpFamily_class
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFamilySharp.sharpFamily_class
+#print DiamondIntegral.Section4.GammaOrdinaryFamilySharp.sharp_familyClass
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFamilySharp.sharp_familyClass
+#print DiamondIntegral.Section4.GammaOrdinaryFamilySharp.sharpFamily_iso_class
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFamilySharp.sharpFamily_iso_class
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionGrading.evaluation_mem
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionGrading.evaluation_mem
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionGrading.coaction
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionGrading.coaction
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionGrading.coaction_class
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionGrading.coaction_class
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionGrading.coaction_counit
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionGrading.coaction_counit
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionGrading.coaction_coassoc
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionGrading.coaction_coassoc
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionGrading.gradingCoaction
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionGrading.gradingCoaction
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionGrading.piece
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionGrading.piece
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionGrading.gradedRing
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionGrading.gradedRing
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionGrading.class_mem
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionGrading.class_mem
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionGrading.toChart_coaction
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionGrading.toChart_coaction
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionGrading.fromChart_coaction
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionGrading.fromChart_coaction
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionGrading.toChart_mem
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionGrading.toChart_mem
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionGrading.fromChart_mem
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionGrading.fromChart_mem
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionGrading.gradedToChart
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionGrading.gradedToChart
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionGrading.gradedFromChart
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionGrading.gradedFromChart
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionOperations.empty
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionOperations.empty
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionOperations.coproduct
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionOperations.coproduct
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionOperations.product
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionOperations.product
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionOperations.class_empty
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionOperations.class_empty
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionOperations.class_coproduct
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionOperations.class_coproduct
+#print DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionOperations.class_product
+#print axioms DiamondIntegral.Section4.GammaOrdinaryFiniteSupportUnionOperations.class_product
+#print DiamondIntegral.Section4.RVOrdinaryNormalizedForget.forget_p
+#print axioms DiamondIntegral.Section4.RVOrdinaryNormalizedForget.forget_p
+#print DiamondIntegral.Section4.RVOrdinaryNormalizedForget.map_pIdeal
+#print axioms DiamondIntegral.Section4.RVOrdinaryNormalizedForget.map_pIdeal
+#print DiamondIntegral.Section4.RVOrdinaryNormalizedForget.quotientRaw
+#print axioms DiamondIntegral.Section4.RVOrdinaryNormalizedForget.quotientRaw
+#print DiamondIntegral.Section4.RVOrdinaryNormalizedForget.pIdeal_le_ker
+#print axioms DiamondIntegral.Section4.RVOrdinaryNormalizedForget.pIdeal_le_ker
+#print DiamondIntegral.Section4.RVOrdinaryNormalizedForget.quotientForget
+#print axioms DiamondIntegral.Section4.RVOrdinaryNormalizedForget.quotientForget
+#print DiamondIntegral.Section4.RVOrdinaryNormalizedForget.quotientForget_mk
+#print axioms DiamondIntegral.Section4.RVOrdinaryNormalizedForget.quotientForget_mk
+#print DiamondIntegral.Section4.RVOrdinaryNormalizedForget.quotientForget_surjective
+#print axioms DiamondIntegral.Section4.RVOrdinaryNormalizedForget.quotientForget_surjective
+#print DiamondIntegral.Section4.RVOrdinaryNormalizedForget.bounded_raw_square
+#print axioms DiamondIntegral.Section4.RVOrdinaryNormalizedForget.bounded_raw_square
+#print DiamondIntegral.Section4.RVOrdinaryNormalizedForget.homogeneous_raw_square
+#print axioms DiamondIntegral.Section4.RVOrdinaryNormalizedForget.homogeneous_raw_square
+#print DiamondIntegral.Section4.RVOrdinaryNormalizedForget.geometric_raw_square
+#print axioms DiamondIntegral.Section4.RVOrdinaryNormalizedForget.geometric_raw_square
+#print DiamondIntegral.Section4.RVOrdinaryNormalizedForget.bounded_square
+#print axioms DiamondIntegral.Section4.RVOrdinaryNormalizedForget.bounded_square
+#print DiamondIntegral.Section4.RVOrdinaryNormalizedForget.homogeneous_square
+#print axioms DiamondIntegral.Section4.RVOrdinaryNormalizedForget.homogeneous_square
+#print DiamondIntegral.Section4.RVOrdinaryNormalizedForget.geometric_square
+#print axioms DiamondIntegral.Section4.RVOrdinaryNormalizedForget.geometric_square
+#print DiamondIntegral.Section4.RVVariableMultiplication.graph
+#print axioms DiamondIntegral.Section4.RVVariableMultiplication.graph
+#print DiamondIntegral.Section4.RVVariableMultiplication.raw_graph_definable
+#print axioms DiamondIntegral.Section4.RVVariableMultiplication.raw_graph_definable
+#print DiamondIntegral.Section4.RVVariableMultiplication.graph_definable
+#print axioms DiamondIntegral.Section4.RVVariableMultiplication.graph_definable
+#print DiamondIntegral.Section4.RVVariableMultiplication.scalar_graph_definable
+#print axioms DiamondIntegral.Section4.RVVariableMultiplication.scalar_graph_definable
+#print DiamondIntegral.Section4.RVDefinableTupleMaps.scalarIndices
+#print axioms DiamondIntegral.Section4.RVDefinableTupleMaps.scalarIndices
+#print DiamondIntegral.Section4.RVDefinableTupleMaps.scalarIndices_head
+#print axioms DiamondIntegral.Section4.RVDefinableTupleMaps.scalarIndices_head
+#print DiamondIntegral.Section4.RVDefinableTupleMaps.scalarIndices_tail
+#print axioms DiamondIntegral.Section4.RVDefinableTupleMaps.scalarIndices_tail
+#print DiamondIntegral.Section4.RVDefinableTupleMaps.scalar_pullback
+#print axioms DiamondIntegral.Section4.RVDefinableTupleMaps.scalar_pullback
+#print DiamondIntegral.Section4.RVDefinableTupleMaps.graph_definable
+#print axioms DiamondIntegral.Section4.RVDefinableTupleMaps.graph_definable
+#print DiamondIntegral.Section4.RVUnaryScaling.scale_proper
+#print axioms DiamondIntegral.Section4.RVUnaryScaling.scale_proper
+#print DiamondIntegral.Section4.RVUnaryScaling.scale_contraction
+#print axioms DiamondIntegral.Section4.RVUnaryScaling.scale_contraction
+#print DiamondIntegral.Section4.RVUnaryScaling.scale_sharp_bijective
+#print axioms DiamondIntegral.Section4.RVUnaryScaling.scale_sharp_bijective
+#print DiamondIntegral.Section4.RVUnaryScaling.scale_weight
+#print axioms DiamondIntegral.Section4.RVUnaryScaling.scale_weight
+#print DiamondIntegral.Section4.RVCoefficientShearGraphs.shear
+#print axioms DiamondIntegral.Section4.RVCoefficientShearGraphs.shear
+#print DiamondIntegral.Section4.RVCoefficientShearGraphs.shear_join
+#print axioms DiamondIntegral.Section4.RVCoefficientShearGraphs.shear_join
+#print DiamondIntegral.Section4.RVCoefficientShearGraphs.graph_definable
+#print axioms DiamondIntegral.Section4.RVCoefficientShearGraphs.graph_definable
+#print DiamondIntegral.Section4.RVCoefficientTranslation.coefficientCode
+#print axioms DiamondIntegral.Section4.RVCoefficientTranslation.coefficientCode
+#print DiamondIntegral.Section4.RVCoefficientTranslation.coefficientCode_value
+#print axioms DiamondIntegral.Section4.RVCoefficientTranslation.coefficientCode_value
+#print DiamondIntegral.Section4.RVCoefficientTranslation.translatedChart
+#print axioms DiamondIntegral.Section4.RVCoefficientTranslation.translatedChart
+#print DiamondIntegral.Section4.RVCoefficientTranslation.shear_bijective
+#print axioms DiamondIntegral.Section4.RVCoefficientTranslation.shear_bijective
+#print DiamondIntegral.Section4.RVCoefficientTranslation.iso
+#print axioms DiamondIntegral.Section4.RVCoefficientTranslation.iso
+#print DiamondIntegral.Section4.GammaOrdinaryTranslations.translatedChart
+#print axioms DiamondIntegral.Section4.GammaOrdinaryTranslations.translatedChart
+#print DiamondIntegral.Section4.GammaOrdinaryTranslations.ofWeighted_translated
+#print axioms DiamondIntegral.Section4.GammaOrdinaryTranslations.ofWeighted_translated
+#print DiamondIntegral.Section4.GammaOrdinaryTranslations.evaluation_translated
+#print axioms DiamondIntegral.Section4.GammaOrdinaryTranslations.evaluation_translated
+#print DiamondIntegral.Section4.GammaOrdinaryTranslations.resEvaluation_translated
+#print axioms DiamondIntegral.Section4.GammaOrdinaryTranslations.resEvaluation_translated
+#print DiamondIntegral.Section4.RVCoefficientTranslationKernel.comparison_generator_zero
+#print axioms DiamondIntegral.Section4.RVCoefficientTranslationKernel.comparison_generator_zero
+#print DiamondIntegral.Section4.RVCoefficientTranslationKernel.coefficientIdeal
+#print axioms DiamondIntegral.Section4.RVCoefficientTranslationKernel.coefficientIdeal
+#print DiamondIntegral.Section4.RVCoefficientTranslationKernel.coefficientIdeal_le_comparison_ker
+#print axioms DiamondIntegral.Section4.RVCoefficientTranslationKernel.coefficientIdeal_le_comparison_ker
+#print DiamondIntegral.Section4.RVCoefficientTranslationKernel.coefficientIdeal_le_translationIdeal
+#print axioms DiamondIntegral.Section4.RVCoefficientTranslationKernel.coefficientIdeal_le_translationIdeal
+#print DiamondIntegral.Section4.RVCoefficientTranslationKernel.coefficientIdeal_homogeneous
+#print axioms DiamondIntegral.Section4.RVCoefficientTranslationKernel.coefficientIdeal_homogeneous
+#print DiamondIntegral.Section4.RVCoefficientTranslationKernel.coefficientIdeal_le_evaluation_ker
+#print axioms DiamondIntegral.Section4.RVCoefficientTranslationKernel.coefficientIdeal_le_evaluation_ker
+#print DiamondIntegral.Section4.RVOrdinaryTranslationIdeal.generator
+#print axioms DiamondIntegral.Section4.RVOrdinaryTranslationIdeal.generator
+#print DiamondIntegral.Section4.RVOrdinaryTranslationIdeal.translationIdeal
+#print axioms DiamondIntegral.Section4.RVOrdinaryTranslationIdeal.translationIdeal
+#print DiamondIntegral.Section4.RVOrdinaryTranslationIdeal.translationIdeal_homogeneous
+#print axioms DiamondIntegral.Section4.RVOrdinaryTranslationIdeal.translationIdeal_homogeneous
+#print DiamondIntegral.Section4.RVOrdinaryTranslationIdeal.forget_generator
+#print axioms DiamondIntegral.Section4.RVOrdinaryTranslationIdeal.forget_generator
+#print DiamondIntegral.Section4.RVOrdinaryTranslationIdeal.map_measuredIdeal_le
+#print axioms DiamondIntegral.Section4.RVOrdinaryTranslationIdeal.map_measuredIdeal_le
+#print DiamondIntegral.Section4.RVOrdinaryTranslationIdeal.evaluation_generator_zero
+#print axioms DiamondIntegral.Section4.RVOrdinaryTranslationIdeal.evaluation_generator_zero
+#print DiamondIntegral.Section4.RVOrdinaryTranslationIdeal.translationIdeal_le_evaluation_ker
+#print axioms DiamondIntegral.Section4.RVOrdinaryTranslationIdeal.translationIdeal_le_evaluation_ker
+#print DiamondIntegral.Section4.RVBoundedCoefficientTranslationKernel.comparison_generator_zero
+#print axioms DiamondIntegral.Section4.RVBoundedCoefficientTranslationKernel.comparison_generator_zero
+#print DiamondIntegral.Section4.RVBoundedCoefficientTranslationKernel.coefficientIdeal
+#print axioms DiamondIntegral.Section4.RVBoundedCoefficientTranslationKernel.coefficientIdeal
+#print DiamondIntegral.Section4.RVBoundedCoefficientTranslationKernel.coefficientIdeal_le_comparison_ker
+#print axioms DiamondIntegral.Section4.RVBoundedCoefficientTranslationKernel.coefficientIdeal_le_comparison_ker
+#print DiamondIntegral.Section4.RVBoundedCoefficientTranslationKernel.coefficientIdeal_homogeneous
+#print axioms DiamondIntegral.Section4.RVBoundedCoefficientTranslationKernel.coefficientIdeal_homogeneous
+#print DiamondIntegral.Section4.RVBoundedCoefficientTranslationKernel.forget_generator
+#print axioms DiamondIntegral.Section4.RVBoundedCoefficientTranslationKernel.forget_generator
+#print DiamondIntegral.Section4.RVBoundedCoefficientTranslationKernel.evaluation_generator_zero
+#print axioms DiamondIntegral.Section4.RVBoundedCoefficientTranslationKernel.evaluation_generator_zero
+#print DiamondIntegral.Section4.RVBoundedCoefficientTranslationKernel.coefficientIdeal_le_evaluation_ker
+#print axioms DiamondIntegral.Section4.RVBoundedCoefficientTranslationKernel.coefficientIdeal_le_evaluation_ker
+#print DiamondIntegral.Section4.RVCoordinateScaling.shiftVector
+#print axioms DiamondIntegral.Section4.RVCoordinateScaling.shiftVector
+#print DiamondIntegral.Section4.RVCoordinateScaling.scaleAt
+#print axioms DiamondIntegral.Section4.RVCoordinateScaling.scaleAt
+#print DiamondIntegral.Section4.RVCoordinateScaling.scaleAt_proper
+#print axioms DiamondIntegral.Section4.RVCoordinateScaling.scaleAt_proper
+#print DiamondIntegral.Section4.RVCoordinateScaling.scaleAt_inverse
+#print axioms DiamondIntegral.Section4.RVCoordinateScaling.scaleAt_inverse
+#print DiamondIntegral.Section4.RVCoordinateScaling.scaleAt_injective
+#print axioms DiamondIntegral.Section4.RVCoordinateScaling.scaleAt_injective
+#print DiamondIntegral.Section4.RVCoordinateScaling.scaleAt_contraction
+#print axioms DiamondIntegral.Section4.RVCoordinateScaling.scaleAt_contraction
+#print DiamondIntegral.Section4.RVCoordinateScaling.scaleAt_sharp_bijective
+#print axioms DiamondIntegral.Section4.RVCoordinateScaling.scaleAt_sharp_bijective
+#print DiamondIntegral.Section4.RVCoordinateScaling.shiftVector_definable
+#print axioms DiamondIntegral.Section4.RVCoordinateScaling.shiftVector_definable
+#print DiamondIntegral.Section4.RVCoordinateScaling.scaleAt_weight
+#print axioms DiamondIntegral.Section4.RVCoordinateScaling.scaleAt_weight
+#print DiamondIntegral.Section4.RVCoefficientCoordinateShearGraphs.shear
+#print axioms DiamondIntegral.Section4.RVCoefficientCoordinateShearGraphs.shear
+#print DiamondIntegral.Section4.RVCoefficientCoordinateShearGraphs.shear_join
+#print axioms DiamondIntegral.Section4.RVCoefficientCoordinateShearGraphs.shear_join
+#print DiamondIntegral.Section4.RVCoefficientCoordinateShearGraphs.scalar_projection
+#print axioms DiamondIntegral.Section4.RVCoefficientCoordinateShearGraphs.scalar_projection
+#print DiamondIntegral.Section4.RVCoefficientCoordinateShearGraphs.graph_definable
+#print axioms DiamondIntegral.Section4.RVCoefficientCoordinateShearGraphs.graph_definable
+#print DiamondIntegral.Section4.RVCoefficientCoordinateTranslation.translatedChart
+#print axioms DiamondIntegral.Section4.RVCoefficientCoordinateTranslation.translatedChart
+#print DiamondIntegral.Section4.RVCoefficientCoordinateTranslation.shear_bijective
+#print axioms DiamondIntegral.Section4.RVCoefficientCoordinateTranslation.shear_bijective
+#print DiamondIntegral.Section4.RVCoefficientCoordinateTranslation.iso
+#print axioms DiamondIntegral.Section4.RVCoefficientCoordinateTranslation.iso
+#print DiamondIntegral.Section4.RVCoefficientCoordinateTranslationKernel.comparison_generator_zero
+#print axioms DiamondIntegral.Section4.RVCoefficientCoordinateTranslationKernel.comparison_generator_zero
+#print DiamondIntegral.Section4.RVCoefficientCoordinateTranslationKernel.coefficientIdeal
+#print axioms DiamondIntegral.Section4.RVCoefficientCoordinateTranslationKernel.coefficientIdeal
+#print DiamondIntegral.Section4.RVCoefficientCoordinateTranslationKernel.coefficientIdeal_le_comparison_ker
+#print axioms DiamondIntegral.Section4.RVCoefficientCoordinateTranslationKernel.coefficientIdeal_le_comparison_ker
+#print DiamondIntegral.Section4.RVCoefficientCoordinateTranslationKernel.coefficientIdeal_le_translationIdeal
+#print axioms DiamondIntegral.Section4.RVCoefficientCoordinateTranslationKernel.coefficientIdeal_le_translationIdeal
+#print DiamondIntegral.Section4.RVCoefficientCoordinateTranslationKernel.coefficientIdeal_homogeneous
+#print axioms DiamondIntegral.Section4.RVCoefficientCoordinateTranslationKernel.coefficientIdeal_homogeneous
+#print DiamondIntegral.Section4.RVCoefficientCoordinateTranslationKernel.coefficientIdeal_le_evaluation_ker
+#print axioms DiamondIntegral.Section4.RVCoefficientCoordinateTranslationKernel.coefficientIdeal_le_evaluation_ker
+#print DiamondIntegral.Section4.RVDefinableGraphExtension.domain
+#print axioms DiamondIntegral.Section4.RVDefinableGraphExtension.domain
+#print DiamondIntegral.Section4.RVDefinableGraphExtension.chart
+#print axioms DiamondIntegral.Section4.RVDefinableGraphExtension.chart
+#print DiamondIntegral.Section4.RVDefinableGraphExtension.projection_bijective
+#print axioms DiamondIntegral.Section4.RVDefinableGraphExtension.projection_bijective
+#print DiamondIntegral.Section4.RVDefinableGraphExtension.iso
+#print axioms DiamondIntegral.Section4.RVDefinableGraphExtension.iso
+#print DiamondIntegral.Section4.RVBoundedCoefficientCoordinateTranslationKernel.comparison_generator_zero
+#print axioms DiamondIntegral.Section4.RVBoundedCoefficientCoordinateTranslationKernel.comparison_generator_zero
+#print DiamondIntegral.Section4.RVBoundedCoefficientCoordinateTranslationKernel.coefficientIdeal
+#print axioms DiamondIntegral.Section4.RVBoundedCoefficientCoordinateTranslationKernel.coefficientIdeal
+#print DiamondIntegral.Section4.RVBoundedCoefficientCoordinateTranslationKernel.coefficientIdeal_le_comparison_ker
+#print axioms DiamondIntegral.Section4.RVBoundedCoefficientCoordinateTranslationKernel.coefficientIdeal_le_comparison_ker
+#print DiamondIntegral.Section4.RVBoundedCoefficientCoordinateTranslationKernel.coefficientIdeal_homogeneous
+#print axioms DiamondIntegral.Section4.RVBoundedCoefficientCoordinateTranslationKernel.coefficientIdeal_homogeneous
+#print DiamondIntegral.Section4.RVBoundedCoefficientCoordinateTranslationKernel.forget_generator
+#print axioms DiamondIntegral.Section4.RVBoundedCoefficientCoordinateTranslationKernel.forget_generator
+#print DiamondIntegral.Section4.RVBoundedCoefficientCoordinateTranslationKernel.evaluation_generator_zero
+#print axioms DiamondIntegral.Section4.RVBoundedCoefficientCoordinateTranslationKernel.evaluation_generator_zero
+#print DiamondIntegral.Section4.RVBoundedCoefficientCoordinateTranslationKernel.coefficientIdeal_le_evaluation_ker
+#print axioms DiamondIntegral.Section4.RVBoundedCoefficientCoordinateTranslationKernel.coefficientIdeal_le_evaluation_ker
+#print DiamondIntegral.Section4.RVDefinableGraphRES.codeValue_vrv
+#print axioms DiamondIntegral.Section4.RVDefinableGraphRES.codeValue_vrv
+#print DiamondIntegral.Section4.RVDefinableGraphRES.last_eq
+#print axioms DiamondIntegral.Section4.RVDefinableGraphRES.last_eq
+#print DiamondIntegral.Section4.RVDefinableGraphRES.finite_patterns
+#print axioms DiamondIntegral.Section4.RVDefinableGraphRES.finite_patterns
+#print DiamondIntegral.Section4.RVDefinableGraphRES.resChart
+#print axioms DiamondIntegral.Section4.RVDefinableGraphRES.resChart
+#print DiamondIntegral.Section4.RVDefinableGraphRES.measured_class
+#print axioms DiamondIntegral.Section4.RVDefinableGraphRES.measured_class
+#print DiamondIntegral.Section4.RVDefinableGraphRES.ordinary_class
+#print axioms DiamondIntegral.Section4.RVDefinableGraphRES.ordinary_class
+#print DiamondIntegral.Section4.RVCoefficientFunctionTranslationKernel.measured_generator_mem
+#print axioms DiamondIntegral.Section4.RVCoefficientFunctionTranslationKernel.measured_generator_mem
+#print DiamondIntegral.Section4.RVCoefficientFunctionTranslationKernel.bounded_generator_mem
+#print axioms DiamondIntegral.Section4.RVCoefficientFunctionTranslationKernel.bounded_generator_mem
+#print DiamondIntegral.Section4.RVCoefficientFunctionTranslationKernel.measured_comparison_zero
+#print axioms DiamondIntegral.Section4.RVCoefficientFunctionTranslationKernel.measured_comparison_zero
+#print DiamondIntegral.Section4.RVCoefficientFunctionTranslationKernel.bounded_comparison_zero
+#print axioms DiamondIntegral.Section4.RVCoefficientFunctionTranslationKernel.bounded_comparison_zero
+#print DiamondIntegral.Section4.GammaOrdinaryZeroDegreeFinite.finiteZero
+#print axioms DiamondIntegral.Section4.GammaOrdinaryZeroDegreeFinite.finiteZero
+#print DiamondIntegral.Section4.GammaOrdinaryZeroDegreeFinite.value
+#print axioms DiamondIntegral.Section4.GammaOrdinaryZeroDegreeFinite.value
+#print DiamondIntegral.Section4.GammaOrdinaryZeroDegreeFinite.invariant
+#print axioms DiamondIntegral.Section4.GammaOrdinaryZeroDegreeFinite.invariant
+#print DiamondIntegral.Section4.GammaOrdinaryZeroDegreeFinite.full
+#print axioms DiamondIntegral.Section4.GammaOrdinaryZeroDegreeFinite.full
+#print DiamondIntegral.Section4.GammaOrdinaryZeroDegreeFinite.full_class
+#print axioms DiamondIntegral.Section4.GammaOrdinaryZeroDegreeFinite.full_class
+#print DiamondIntegral.Section4.GammaOrdinaryZeroDegreeFinite.finite_full
+#print axioms DiamondIntegral.Section4.GammaOrdinaryZeroDegreeFinite.finite_full
+#print DiamondIntegral.Section4.GammaOrdinaryZeroDegreeFinite.full_finite
+#print axioms DiamondIntegral.Section4.GammaOrdinaryZeroDegreeFinite.full_finite
+#print DiamondIntegral.Section4.GammaOrdinaryZeroDegreeFinite.full_coaction
+#print axioms DiamondIntegral.Section4.GammaOrdinaryZeroDegreeFinite.full_coaction
+#print DiamondIntegral.Section4.GammaOrdinaryZeroDegreeFinite.full_mem
+#print axioms DiamondIntegral.Section4.GammaOrdinaryZeroDegreeFinite.full_mem
+#print DiamondIntegral.Section4.GammaOrdinaryZeroDegreeFinite.full_zero_preimage
+#print axioms DiamondIntegral.Section4.GammaOrdinaryZeroDegreeFinite.full_zero_preimage
+#print DiamondIntegral.Section4.RVOrdinaryBalancedZeroDegree.comparison_res
+#print axioms DiamondIntegral.Section4.RVOrdinaryBalancedZeroDegree.comparison_res
+#print DiamondIntegral.Section4.RVOrdinaryBalancedZeroDegree.res_surjective
+#print axioms DiamondIntegral.Section4.RVOrdinaryBalancedZeroDegree.res_surjective
+#print DiamondIntegral.Section4.RVOrdinaryBalancedZeroDegree.res_injective
+#print axioms DiamondIntegral.Section4.RVOrdinaryBalancedZeroDegree.res_injective
+#print DiamondIntegral.Section4.RVOrdinaryBalancedZeroDegree.zeroMap
+#print axioms DiamondIntegral.Section4.RVOrdinaryBalancedZeroDegree.zeroMap
+#print DiamondIntegral.Section4.RVOrdinaryBalancedZeroDegree.zeroMap_bijective
+#print axioms DiamondIntegral.Section4.RVOrdinaryBalancedZeroDegree.zeroMap_bijective
+#print DiamondIntegral.Section4.RVOrdinaryBalancedZeroDegree.zeroEquiv
+#print axioms DiamondIntegral.Section4.RVOrdinaryBalancedZeroDegree.zeroEquiv
+#print DiamondIntegral.Section4.RVOrdinaryBalancedZeroDegree.comparison_injective
+#print axioms DiamondIntegral.Section4.RVOrdinaryBalancedZeroDegree.comparison_injective
+#print DiamondIntegral.Section4.RVOrdinaryBalancedZeroDegree.zeroComparison
+#print axioms DiamondIntegral.Section4.RVOrdinaryBalancedZeroDegree.zeroComparison
+#print DiamondIntegral.Section4.RVOrdinaryBalancedZeroDegree.zeroComparison_bijective
+#print axioms DiamondIntegral.Section4.RVOrdinaryBalancedZeroDegree.zeroComparison_bijective
+#print DiamondIntegral.Section4.RVOrdinaryBalancedZeroDegree.comparisonZeroEquiv
+#print axioms DiamondIntegral.Section4.RVOrdinaryBalancedZeroDegree.comparisonZeroEquiv
+#print DiamondIntegral.Section4.RVOrdinaryBalancedZeroDegree.compatibility
+#print axioms DiamondIntegral.Section4.RVOrdinaryBalancedZeroDegree.compatibility
+#print DiamondIntegral.Section4.RVOrdinaryBalancedZeroDegree.kernel_homogeneous
+#print axioms DiamondIntegral.Section4.RVOrdinaryBalancedZeroDegree.kernel_homogeneous
+#print DiamondIntegral.Section4.RVOrdinaryBalancedZeroDegree.kernel_positive_decomposition
+#print axioms DiamondIntegral.Section4.RVOrdinaryBalancedZeroDegree.kernel_positive_decomposition
+#print DiamondIntegral.Section4.GammaBoundaryConstancy.boundary_breakpoints
+#print axioms DiamondIntegral.Section4.GammaBoundaryConstancy.boundary_breakpoints
+#print DiamondIntegral.Section4.GammaBoundaryConstancy.mem_iff_of_no_boundary_between
+#print axioms DiamondIntegral.Section4.GammaBoundaryConstancy.mem_iff_of_no_boundary_between
+#print DiamondIntegral.Section4.GammaBoundaryConstancy.mem_iff_on_open_interval
+#print axioms DiamondIntegral.Section4.GammaBoundaryConstancy.mem_iff_on_open_interval
+#print DiamondIntegral.Section4.GammaPartialCellDefinability.extend
+#print axioms DiamondIntegral.Section4.GammaPartialCellDefinability.extend
+#print DiamondIntegral.Section4.GammaPartialCellDefinability.extend_definable
+#print axioms DiamondIntegral.Section4.GammaPartialCellDefinability.extend_definable
+#print DiamondIntegral.Section4.GammaPartialCellDefinability.extend_on
+#print axioms DiamondIntegral.Section4.GammaPartialCellDefinability.extend_on
+#print DiamondIntegral.Section4.GammaPartialCellDefinability.graph_restrict
+#print axioms DiamondIntegral.Section4.GammaPartialCellDefinability.graph_restrict
+#print DiamondIntegral.Section4.GammaPartialCellDefinability.graph_definable
+#print axioms DiamondIntegral.Section4.GammaPartialCellDefinability.graph_definable
+#print DiamondIntegral.Section4.GammaPartialCellDefinability.upperRay_definable
+#print axioms DiamondIntegral.Section4.GammaPartialCellDefinability.upperRay_definable
+#print DiamondIntegral.Section4.GammaPartialCellDefinability.lowerRay_definable
+#print axioms DiamondIntegral.Section4.GammaPartialCellDefinability.lowerRay_definable
+#print DiamondIntegral.Section4.GammaPartialCellDefinability.band_definable
+#print axioms DiamondIntegral.Section4.GammaPartialCellDefinability.band_definable
+#print DiamondIntegral.Section4.GammaPartialCellDefinability.line_definable
+#print axioms DiamondIntegral.Section4.GammaPartialCellDefinability.line_definable
+#print DiamondIntegral.Section4.GammaBoundaryComponents.mem_iff_on_upperRay
+#print axioms DiamondIntegral.Section4.GammaBoundaryComponents.mem_iff_on_upperRay
+#print DiamondIntegral.Section4.GammaBoundaryComponents.mem_iff_on_lowerRay
+#print axioms DiamondIntegral.Section4.GammaBoundaryComponents.mem_iff_on_lowerRay
+#print DiamondIntegral.Section4.GammaBoundaryComponents.mem_iff_on_line
+#print axioms DiamondIntegral.Section4.GammaBoundaryComponents.mem_iff_on_line
+#print DiamondIntegral.Section4.GammaBoundaryComponents.band_subset
+#print axioms DiamondIntegral.Section4.GammaBoundaryComponents.band_subset
+#print DiamondIntegral.Section4.GammaBoundaryComponents.upperRay_subset
+#print axioms DiamondIntegral.Section4.GammaBoundaryComponents.upperRay_subset
+#print DiamondIntegral.Section4.GammaBoundaryComponents.lowerRay_subset
+#print axioms DiamondIntegral.Section4.GammaBoundaryComponents.lowerRay_subset
+#print DiamondIntegral.Section4.GammaBoundaryComponents.line_subset
+#print axioms DiamondIntegral.Section4.GammaBoundaryComponents.line_subset
+#print DiamondIntegral.Section4.FiniteOrderComponents.component_cover
+#print axioms DiamondIntegral.Section4.FiniteOrderComponents.component_cover
+#print DiamondIntegral.Section4.GammaBoundaryStackBases.fibreBase
+#print axioms DiamondIntegral.Section4.GammaBoundaryStackBases.fibreBase
+#print DiamondIntegral.Section4.GammaBoundaryStackBases.mem_fibreBase
+#print axioms DiamondIntegral.Section4.GammaBoundaryStackBases.mem_fibreBase
+#print DiamondIntegral.Section4.GammaBoundaryStackBases.fibreBase_definable
+#print axioms DiamondIntegral.Section4.GammaBoundaryStackBases.fibreBase_definable
+#print DiamondIntegral.Section4.GammaBoundaryStackBases.activeBase
+#print axioms DiamondIntegral.Section4.GammaBoundaryStackBases.activeBase
+#print DiamondIntegral.Section4.GammaBoundaryStackBases.mem_activeBase
+#print axioms DiamondIntegral.Section4.GammaBoundaryStackBases.mem_activeBase
+#print DiamondIntegral.Section4.GammaBoundaryStackBases.activeBase_definable
+#print axioms DiamondIntegral.Section4.GammaBoundaryStackBases.activeBase_definable
+#print DiamondIntegral.Section4.GammaBoundaryStackBases.bandBase
+#print axioms DiamondIntegral.Section4.GammaBoundaryStackBases.bandBase
+#print DiamondIntegral.Section4.GammaBoundaryStackBases.upperBase
+#print axioms DiamondIntegral.Section4.GammaBoundaryStackBases.upperBase
+#print DiamondIntegral.Section4.GammaBoundaryStackBases.lowerBase
+#print axioms DiamondIntegral.Section4.GammaBoundaryStackBases.lowerBase
+#print DiamondIntegral.Section4.GammaBoundaryStackBases.lineBase
+#print axioms DiamondIntegral.Section4.GammaBoundaryStackBases.lineBase
+#print DiamondIntegral.Section4.OrderGapComponents.LowerBound
+#print axioms DiamondIntegral.Section4.OrderGapComponents.LowerBound
+#print DiamondIntegral.Section4.OrderGapComponents.UpperBound
+#print axioms DiamondIntegral.Section4.OrderGapComponents.UpperBound
+#print DiamondIntegral.Section4.OrderGapComponents.gap
+#print axioms DiamondIntegral.Section4.OrderGapComponents.gap
+#print DiamondIntegral.Section4.OrderGapComponents.Valid
+#print axioms DiamondIntegral.Section4.OrderGapComponents.Valid
+#print DiamondIntegral.Section4.OrderGapComponents.GreatestOption
+#print axioms DiamondIntegral.Section4.OrderGapComponents.GreatestOption
+#print DiamondIntegral.Section4.OrderGapComponents.LeastOption
+#print axioms DiamondIntegral.Section4.OrderGapComponents.LeastOption
+#print DiamondIntegral.Section4.OrderGapComponents.greatest_unique
+#print axioms DiamondIntegral.Section4.OrderGapComponents.greatest_unique
+#print DiamondIntegral.Section4.OrderGapComponents.least_unique
+#print axioms DiamondIntegral.Section4.OrderGapComponents.least_unique
+#print DiamondIntegral.Section4.OrderGapComponents.upperBound_mono
+#print axioms DiamondIntegral.Section4.OrderGapComponents.upperBound_mono
+#print DiamondIntegral.Section4.OrderGapComponents.lowerBound_mono
+#print axioms DiamondIntegral.Section4.OrderGapComponents.lowerBound_mono
+#print DiamondIntegral.Section4.OrderGapComponents.greatest_below
+#print axioms DiamondIntegral.Section4.OrderGapComponents.greatest_below
+#print DiamondIntegral.Section4.OrderGapComponents.least_above
+#print axioms DiamondIntegral.Section4.OrderGapComponents.least_above
+#print DiamondIntegral.Section4.OrderGapComponents.endpoints_eq_of_inter
+#print axioms DiamondIntegral.Section4.OrderGapComponents.endpoints_eq_of_inter
+#print DiamondIntegral.Section4.OrderGapComponents.disjoint_of_ne
+#print axioms DiamondIntegral.Section4.OrderGapComponents.disjoint_of_ne
+#print DiamondIntegral.Section4.GammaBoundaryStacks.pointBase
+#print axioms DiamondIntegral.Section4.GammaBoundaryStacks.pointBase
+#print DiamondIntegral.Section4.GammaBoundaryStacks.pointStack
+#print axioms DiamondIntegral.Section4.GammaBoundaryStacks.pointStack
+#print DiamondIntegral.Section4.GammaBoundaryStacks.bandStack
+#print axioms DiamondIntegral.Section4.GammaBoundaryStacks.bandStack
+#print DiamondIntegral.Section4.GammaBoundaryStacks.upperStack
+#print axioms DiamondIntegral.Section4.GammaBoundaryStacks.upperStack
+#print DiamondIntegral.Section4.GammaBoundaryStacks.lowerStack
+#print axioms DiamondIntegral.Section4.GammaBoundaryStacks.lowerStack
+#print DiamondIntegral.Section4.GammaBoundaryStacks.lineStack
+#print axioms DiamondIntegral.Section4.GammaBoundaryStacks.lineStack
+#print DiamondIntegral.Section4.GammaBoundaryStacks.pointBase_definable
+#print axioms DiamondIntegral.Section4.GammaBoundaryStacks.pointBase_definable
+#print DiamondIntegral.Section4.GammaBoundaryStacks.pointStack_definable
+#print axioms DiamondIntegral.Section4.GammaBoundaryStacks.pointStack_definable
+#print DiamondIntegral.Section4.GammaBoundaryStacks.bandBase_definable
+#print axioms DiamondIntegral.Section4.GammaBoundaryStacks.bandBase_definable
+#print DiamondIntegral.Section4.GammaBoundaryStacks.bandStack_definable
+#print axioms DiamondIntegral.Section4.GammaBoundaryStacks.bandStack_definable
+#print DiamondIntegral.Section4.GammaBoundaryStacks.upperBase_definable
+#print axioms DiamondIntegral.Section4.GammaBoundaryStacks.upperBase_definable
+#print DiamondIntegral.Section4.GammaBoundaryStacks.upperStack_definable
+#print axioms DiamondIntegral.Section4.GammaBoundaryStacks.upperStack_definable
+#print DiamondIntegral.Section4.GammaBoundaryStacks.lowerBase_definable
+#print axioms DiamondIntegral.Section4.GammaBoundaryStacks.lowerBase_definable
+#print DiamondIntegral.Section4.GammaBoundaryStacks.lowerStack_definable
+#print axioms DiamondIntegral.Section4.GammaBoundaryStacks.lowerStack_definable
+#print DiamondIntegral.Section4.GammaBoundaryStacks.lineBase_definable
+#print axioms DiamondIntegral.Section4.GammaBoundaryStacks.lineBase_definable
+#print DiamondIntegral.Section4.GammaBoundaryStacks.lineStack_definable
+#print axioms DiamondIntegral.Section4.GammaBoundaryStacks.lineStack_definable
+#print DiamondIntegral.Section4.GammaBoundaryStacks.pointStack_subset
+#print axioms DiamondIntegral.Section4.GammaBoundaryStacks.pointStack_subset
+#print DiamondIntegral.Section4.GammaBoundaryStacks.bandStack_subset
+#print axioms DiamondIntegral.Section4.GammaBoundaryStacks.bandStack_subset
+#print DiamondIntegral.Section4.GammaBoundaryStacks.upperStack_subset
+#print axioms DiamondIntegral.Section4.GammaBoundaryStacks.upperStack_subset
+#print DiamondIntegral.Section4.GammaBoundaryStacks.lowerStack_subset
+#print axioms DiamondIntegral.Section4.GammaBoundaryStacks.lowerStack_subset
+#print DiamondIntegral.Section4.GammaBoundaryStacks.lineStack_subset
+#print axioms DiamondIntegral.Section4.GammaBoundaryStacks.lineStack_subset
+#print DiamondIntegral.Section4.GammaGraphPartitionEndpoints.graph_definable
+#print axioms DiamondIntegral.Section4.GammaGraphPartitionEndpoints.graph_definable
+#print DiamondIntegral.Section4.GammaGraphPartitionEndpoints.endpoint
+#print axioms DiamondIntegral.Section4.GammaGraphPartitionEndpoints.endpoint
+#print DiamondIntegral.Section4.GammaGraphPartitionEndpoints.endpoint_definable
+#print axioms DiamondIntegral.Section4.GammaGraphPartitionEndpoints.endpoint_definable
+#print DiamondIntegral.Section4.GammaGraphPartitionEndpoints.endpoint_on
+#print axioms DiamondIntegral.Section4.GammaGraphPartitionEndpoints.endpoint_on
+#print DiamondIntegral.Section4.GammaGraphPartitionEndpoints.endpoint_mem
+#print axioms DiamondIntegral.Section4.GammaGraphPartitionEndpoints.endpoint_mem
+#print DiamondIntegral.Section4.GammaGraphPartitionEndpoints.endpoint_injective
+#print axioms DiamondIntegral.Section4.GammaGraphPartitionEndpoints.endpoint_injective
+#print DiamondIntegral.Section4.GammaGraphPartitionEndpoints.exists_endpoint
+#print axioms DiamondIntegral.Section4.GammaGraphPartitionEndpoints.exists_endpoint
+#print DiamondIntegral.Section4.GammaBoundaryStackFamily.Label
+#print axioms DiamondIntegral.Section4.GammaBoundaryStackFamily.Label
+#print DiamondIntegral.Section4.GammaBoundaryStackFamily.base
+#print axioms DiamondIntegral.Section4.GammaBoundaryStackFamily.base
+#print DiamondIntegral.Section4.GammaBoundaryStackFamily.shape
+#print axioms DiamondIntegral.Section4.GammaBoundaryStackFamily.shape
+#print DiamondIntegral.Section4.GammaBoundaryStackFamily.stack
+#print axioms DiamondIntegral.Section4.GammaBoundaryStackFamily.stack
+#print DiamondIntegral.Section4.GammaBoundaryStackFamily.dimensionRaise
+#print axioms DiamondIntegral.Section4.GammaBoundaryStackFamily.dimensionRaise
+#print DiamondIntegral.Section4.GammaBoundaryStackFamily.base_definable
+#print axioms DiamondIntegral.Section4.GammaBoundaryStackFamily.base_definable
+#print DiamondIntegral.Section4.GammaBoundaryStackFamily.shape_definable
+#print axioms DiamondIntegral.Section4.GammaBoundaryStackFamily.shape_definable
+#print DiamondIntegral.Section4.GammaBoundaryStackFamily.stack_definable
+#print axioms DiamondIntegral.Section4.GammaBoundaryStackFamily.stack_definable
+#print DiamondIntegral.Section4.GammaBoundaryStackFamily.stack_subset
+#print axioms DiamondIntegral.Section4.GammaBoundaryStackFamily.stack_subset
+#print DiamondIntegral.Section4.GammaBoundaryStackFamily.shape_mono
+#print axioms DiamondIntegral.Section4.GammaBoundaryStackFamily.shape_mono
+#print DiamondIntegral.Section4.GammaBoundaryStackCoverage.boundary_fibre_finite
+#print axioms DiamondIntegral.Section4.GammaBoundaryStackCoverage.boundary_fibre_finite
+#print DiamondIntegral.Section4.GammaBoundaryStackCoverage.cover_cons
+#print axioms DiamondIntegral.Section4.GammaBoundaryStackCoverage.cover_cons
+#print DiamondIntegral.Section4.GammaBoundaryStackCoverage.cover
+#print axioms DiamondIntegral.Section4.GammaBoundaryStackCoverage.cover
+#print DiamondIntegral.Section4.GammaBoundaryStackCoverage.union_stacks
+#print axioms DiamondIntegral.Section4.GammaBoundaryStackCoverage.union_stacks
+#print DiamondIntegral.Section4.GammaBoundaryGapLabels.GapLabel
+#print axioms DiamondIntegral.Section4.GammaBoundaryGapLabels.GapLabel
+#print DiamondIntegral.Section4.GammaBoundaryGapLabels.gapLabel
+#print axioms DiamondIntegral.Section4.GammaBoundaryGapLabels.gapLabel
+#print DiamondIntegral.Section4.GammaBoundaryGapLabels.gapSource
+#print axioms DiamondIntegral.Section4.GammaBoundaryGapLabels.gapSource
+#print DiamondIntegral.Section4.GammaBoundaryGapLabels.gapSource_iff
+#print axioms DiamondIntegral.Section4.GammaBoundaryGapLabels.gapSource_iff
+#print DiamondIntegral.Section4.GammaBoundaryGapLabels.shape_eq_gap
+#print axioms DiamondIntegral.Section4.GammaBoundaryGapLabels.shape_eq_gap
+#print DiamondIntegral.Section4.GammaBoundaryGapLabels.base_source
+#print axioms DiamondIntegral.Section4.GammaBoundaryGapLabels.base_source
+#print DiamondIntegral.Section4.GammaBoundaryGapLabels.base_active
+#print axioms DiamondIntegral.Section4.GammaBoundaryGapLabels.base_active
+#print DiamondIntegral.Section4.GammaBoundaryGapLabels.valid_gap
+#print axioms DiamondIntegral.Section4.GammaBoundaryGapLabels.valid_gap
+#print DiamondIntegral.Section4.GammaBoundaryGapLabels.stack_gap
+#print axioms DiamondIntegral.Section4.GammaBoundaryGapLabels.stack_gap
+#print DiamondIntegral.Section4.GammaBoundaryStackDisjointness.option_endpoint_injective
+#print axioms DiamondIntegral.Section4.GammaBoundaryStackDisjointness.option_endpoint_injective
+#print DiamondIntegral.Section4.GammaBoundaryStackDisjointness.gap_stacks_disjoint
+#print axioms DiamondIntegral.Section4.GammaBoundaryStackDisjointness.gap_stacks_disjoint
+#print DiamondIntegral.Section4.GammaBoundaryStackDisjointness.point_stack_spec
+#print axioms DiamondIntegral.Section4.GammaBoundaryStackDisjointness.point_stack_spec
+#print DiamondIntegral.Section4.GammaBoundaryStackDisjointness.point_stack_boundary
+#print axioms DiamondIntegral.Section4.GammaBoundaryStackDisjointness.point_stack_boundary
+#print DiamondIntegral.Section4.GammaBoundaryStackDisjointness.point_stacks_disjoint
+#print axioms DiamondIntegral.Section4.GammaBoundaryStackDisjointness.point_stacks_disjoint
+#print DiamondIntegral.Section4.GammaBoundaryStackDisjointness.point_gap_disjoint
+#print axioms DiamondIntegral.Section4.GammaBoundaryStackDisjointness.point_gap_disjoint
+#print DiamondIntegral.Section4.GammaBoundaryStackDisjointness.unpackGap
+#print axioms DiamondIntegral.Section4.GammaBoundaryStackDisjointness.unpackGap
+#print DiamondIntegral.Section4.GammaBoundaryStackDisjointness.gapLabel_unpack
+#print axioms DiamondIntegral.Section4.GammaBoundaryStackDisjointness.gapLabel_unpack
+#print DiamondIntegral.Section4.GammaBoundaryStackDisjointness.pairwise_disjoint
+#print axioms DiamondIntegral.Section4.GammaBoundaryStackDisjointness.pairwise_disjoint
+#print DiamondIntegral.Section4.GammaBoundaryStackRefinement.mem_shape
+#print axioms DiamondIntegral.Section4.GammaBoundaryStackRefinement.mem_shape
+#print DiamondIntegral.Section4.GammaBoundaryStackRefinement.shape_iUnion
+#print axioms DiamondIntegral.Section4.GammaBoundaryStackRefinement.shape_iUnion
+#print DiamondIntegral.Section4.GammaBoundaryStackRefinement.shape_disjoint
+#print axioms DiamondIntegral.Section4.GammaBoundaryStackRefinement.shape_disjoint
+#print DiamondIntegral.Section4.GammaBoundaryStackRefinement.shape_cell
+#print axioms DiamondIntegral.Section4.GammaBoundaryStackRefinement.shape_cell
+#print DiamondIntegral.Section4.GammaCylindricalDecompositionData.Decomposition
+#print axioms DiamondIntegral.Section4.GammaCylindricalDecompositionData.Decomposition
+#print DiamondIntegral.Section4.GammaCylindricalDecompositionData.cell_subset
+#print axioms DiamondIntegral.Section4.GammaCylindricalDecompositionData.cell_subset
+#print DiamondIntegral.Section4.GammaCylindricalDecompositionData.ofFamily
+#print axioms DiamondIntegral.Section4.GammaCylindricalDecompositionData.ofFamily
+#print DiamondIntegral.Section4.GammaCylindricalDecompositionData.empty
+#print axioms DiamondIntegral.Section4.GammaCylindricalDecompositionData.empty
+#print DiamondIntegral.Section4.GammaCylindricalDecompositionData.zero_univ
+#print axioms DiamondIntegral.Section4.GammaCylindricalDecompositionData.zero_univ
+#print DiamondIntegral.Section4.GammaCylindricalDecompositionData.exists_zero
+#print axioms DiamondIntegral.Section4.GammaCylindricalDecompositionData.exists_zero
+#print DiamondIntegral.Section4.GammaCylindricalDecompositionExistence.refine
+#print axioms DiamondIntegral.Section4.GammaCylindricalDecompositionExistence.refine
+#print DiamondIntegral.Section4.GammaCylindricalDecompositionExistence.exists_decomposition
+#print axioms DiamondIntegral.Section4.GammaCylindricalDecompositionExistence.exists_decomposition
+#print DiamondIntegral.Section4.GammaCylindricalCellGeometry.dimension_le
+#print axioms DiamondIntegral.Section4.GammaCylindricalCellGeometry.dimension_le
+#print DiamondIntegral.Section4.GammaCylindricalCellGeometry.nonempty
+#print axioms DiamondIntegral.Section4.GammaCylindricalCellGeometry.nonempty
+#print DiamondIntegral.Section4.GammaConstructedCellEuler.decomposition
+#print axioms DiamondIntegral.Section4.GammaConstructedCellEuler.decomposition
+#print DiamondIntegral.Section4.GammaConstructedCellEuler.geometric_sum
+#print axioms DiamondIntegral.Section4.GammaConstructedCellEuler.geometric_sum
+#print DiamondIntegral.Section4.GammaConstructedCellEuler.constructed_geometric_sum
+#print axioms DiamondIntegral.Section4.GammaConstructedCellEuler.constructed_geometric_sum
+#print DiamondIntegral.Section4.GammaConstructedCellEuler.sum_independent
+#print axioms DiamondIntegral.Section4.GammaConstructedCellEuler.sum_independent
+#print DiamondIntegral.Section4.GammaConstructedCellEuler.pieces_nonempty
+#print axioms DiamondIntegral.Section4.GammaConstructedCellEuler.pieces_nonempty
+#print DiamondIntegral.Section4.GammaConstructedCellEuler.dimensions_bounded
+#print axioms DiamondIntegral.Section4.GammaConstructedCellEuler.dimensions_bounded
+#print DiamondIntegral.Section4.RVOrdinaryCoefficientTranslationKernel.coefficientIdeal
+#print axioms DiamondIntegral.Section4.RVOrdinaryCoefficientTranslationKernel.coefficientIdeal
+#print DiamondIntegral.Section4.RVOrdinaryCoefficientTranslationKernel.map_measured_coefficientIdeal
+#print axioms DiamondIntegral.Section4.RVOrdinaryCoefficientTranslationKernel.map_measured_coefficientIdeal
+#print DiamondIntegral.Section4.RVOrdinaryCoefficientTranslationKernel.coefficientIdeal_le_comparison_ker
+#print axioms DiamondIntegral.Section4.RVOrdinaryCoefficientTranslationKernel.coefficientIdeal_le_comparison_ker
+#print DiamondIntegral.Section4.RVOrdinaryCoefficientTranslationKernel.coefficientIdeal_le_translationIdeal
+#print axioms DiamondIntegral.Section4.RVOrdinaryCoefficientTranslationKernel.coefficientIdeal_le_translationIdeal
+#print DiamondIntegral.Section4.RVOrdinaryCoefficientTranslationKernel.coefficientIdeal_homogeneous
+#print axioms DiamondIntegral.Section4.RVOrdinaryCoefficientTranslationKernel.coefficientIdeal_homogeneous
+#print DiamondIntegral.Section4.RVOrdinaryCoefficientTranslationKernel.function_generator_mem
+#print axioms DiamondIntegral.Section4.RVOrdinaryCoefficientTranslationKernel.function_generator_mem
+#print DiamondIntegral.Section4.RVOrdinaryCoefficientTranslationKernel.coefficientIdeal_le_evaluation_ker
+#print axioms DiamondIntegral.Section4.RVOrdinaryCoefficientTranslationKernel.coefficientIdeal_le_evaluation_ker
+#print DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.homogeneous_preimage
+#print axioms DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.homogeneous_preimage
+#print DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.surjectiveDescent
+#print axioms DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.surjectiveDescent
+#print DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.surjectiveDescent_apply
+#print axioms DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.surjectiveDescent_apply
+#print DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.gradedSurjectiveDescent
+#print axioms DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.gradedSurjectiveDescent
+#print DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.surjectiveDescent_unique
+#print axioms DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.surjectiveDescent_unique
+#print DiamondIntegral.Section4.ApprovedT001Presentation.Ordinary
+#print axioms DiamondIntegral.Section4.ApprovedT001Presentation.Ordinary
+#print DiamondIntegral.Section4.ApprovedT001Presentation.Measured
+#print axioms DiamondIntegral.Section4.ApprovedT001Presentation.Measured
+#print DiamondIntegral.Section4.ApprovedT001Presentation.Ordinary.kernel_eq
+#print axioms DiamondIntegral.Section4.ApprovedT001Presentation.Ordinary.kernel_eq
+#print DiamondIntegral.Section4.ApprovedT001Presentation.Measured.kernel_eq
+#print axioms DiamondIntegral.Section4.ApprovedT001Presentation.Measured.kernel_eq
+#print DiamondIntegral.Section4.RVT001OrdinaryDescent.kernel_le
+#print axioms DiamondIntegral.Section4.RVT001OrdinaryDescent.kernel_le
+#print DiamondIntegral.Section4.RVT001OrdinaryDescent.evaluation
+#print axioms DiamondIntegral.Section4.RVT001OrdinaryDescent.evaluation
+#print DiamondIntegral.Section4.RVT001OrdinaryDescent.evaluation_comparison
+#print axioms DiamondIntegral.Section4.RVT001OrdinaryDescent.evaluation_comparison
+#print DiamondIntegral.Section4.RVT001OrdinaryDescent.gradedEvaluation
+#print axioms DiamondIntegral.Section4.RVT001OrdinaryDescent.gradedEvaluation
+#print DiamondIntegral.Section4.RVT001OrdinaryDescent.evaluation_res
+#print axioms DiamondIntegral.Section4.RVT001OrdinaryDescent.evaluation_res
+#print DiamondIntegral.Section4.RVT001OrdinaryDescent.boundedEvaluation
+#print axioms DiamondIntegral.Section4.RVT001OrdinaryDescent.boundedEvaluation
+#print DiamondIntegral.Section4.RVT001OrdinaryDescent.gradedBoundedEvaluation
+#print axioms DiamondIntegral.Section4.RVT001OrdinaryDescent.gradedBoundedEvaluation
+#print DiamondIntegral.Section4.RVT001OrdinaryDescent.boundedEvaluation_res
+#print axioms DiamondIntegral.Section4.RVT001OrdinaryDescent.boundedEvaluation_res
+#print DiamondIntegral.Section4.RVT001OrdinaryDescent.boundedEvaluation_pGamma
+#print axioms DiamondIntegral.Section4.RVT001OrdinaryDescent.boundedEvaluation_pGamma
+#print DiamondIntegral.Section4.RVT001OrdinaryDescent.radiusIdeal_le_kernel
+#print axioms DiamondIntegral.Section4.RVT001OrdinaryDescent.radiusIdeal_le_kernel
+#print DiamondIntegral.Section4.RVT001OrdinaryDescent.radiusEvaluation
+#print axioms DiamondIntegral.Section4.RVT001OrdinaryDescent.radiusEvaluation
+#print DiamondIntegral.Section4.RVT001OrdinaryDescent.gradedRadiusEvaluation
+#print axioms DiamondIntegral.Section4.RVT001OrdinaryDescent.gradedRadiusEvaluation
+#print DiamondIntegral.Section4.RVT001OrdinaryDescent.radiusEvaluation_quotient
+#print axioms DiamondIntegral.Section4.RVT001OrdinaryDescent.radiusEvaluation_quotient
+#print DiamondIntegral.Section4.RVT001OrdinaryDescent.radiusEvaluation_res
+#print axioms DiamondIntegral.Section4.RVT001OrdinaryDescent.radiusEvaluation_res
+#print DiamondIntegral.Section4.RVT001MeasuredDescent.kernel_le
+#print axioms DiamondIntegral.Section4.RVT001MeasuredDescent.kernel_le
+#print DiamondIntegral.Section4.RVT001MeasuredDescent.evaluation
+#print axioms DiamondIntegral.Section4.RVT001MeasuredDescent.evaluation
+#print DiamondIntegral.Section4.RVT001MeasuredDescent.evaluation_comparison
+#print axioms DiamondIntegral.Section4.RVT001MeasuredDescent.evaluation_comparison
+#print DiamondIntegral.Section4.RVT001MeasuredDescent.gradedEvaluation
+#print axioms DiamondIntegral.Section4.RVT001MeasuredDescent.gradedEvaluation
+#print DiamondIntegral.Section4.RVT001MeasuredDescent.evaluation_res
+#print axioms DiamondIntegral.Section4.RVT001MeasuredDescent.evaluation_res
+#print DiamondIntegral.Section4.RVT001MeasuredDescent.evaluation_p
+#print axioms DiamondIntegral.Section4.RVT001MeasuredDescent.evaluation_p
+#print DiamondIntegral.Section4.RVT001MeasuredDescent.evaluation_h_geometric
+#print axioms DiamondIntegral.Section4.RVT001MeasuredDescent.evaluation_h_geometric
+#print DiamondIntegral.Section4.RVT001MeasuredDescent.evaluation_h_bounded
+#print axioms DiamondIntegral.Section4.RVT001MeasuredDescent.evaluation_h_bounded
+#print DiamondIntegral.Section4.RVT001MeasuredDescent.distinct_of_point_ne_zero
+#print axioms DiamondIntegral.Section4.RVT001MeasuredDescent.distinct_of_point_ne_zero
+#print DiamondIntegral.Section4.RVT001OrdinaryNormalization.boundedRaw
+#print axioms DiamondIntegral.Section4.RVT001OrdinaryNormalization.boundedRaw
+#print DiamondIntegral.Section4.RVT001OrdinaryNormalization.homogeneousRaw
+#print axioms DiamondIntegral.Section4.RVT001OrdinaryNormalization.homogeneousRaw
+#print DiamondIntegral.Section4.RVT001OrdinaryNormalization.boundedRaw_comparison
+#print axioms DiamondIntegral.Section4.RVT001OrdinaryNormalization.boundedRaw_comparison
+#print DiamondIntegral.Section4.RVT001OrdinaryNormalization.homogeneousRaw_comparison
+#print axioms DiamondIntegral.Section4.RVT001OrdinaryNormalization.homogeneousRaw_comparison
+#print DiamondIntegral.Section4.RVT001OrdinaryNormalization.bounded_p
+#print axioms DiamondIntegral.Section4.RVT001OrdinaryNormalization.bounded_p
+#print DiamondIntegral.Section4.RVT001OrdinaryNormalization.homogeneous_p
+#print axioms DiamondIntegral.Section4.RVT001OrdinaryNormalization.homogeneous_p
+#print DiamondIntegral.Section4.RVT001OrdinaryNormalization.bounded_ideal_zero
+#print axioms DiamondIntegral.Section4.RVT001OrdinaryNormalization.bounded_ideal_zero
+#print DiamondIntegral.Section4.RVT001OrdinaryNormalization.homogeneous_ideal_zero
+#print axioms DiamondIntegral.Section4.RVT001OrdinaryNormalization.homogeneous_ideal_zero
+#print DiamondIntegral.Section4.RVT001OrdinaryNormalization.bounded
+#print axioms DiamondIntegral.Section4.RVT001OrdinaryNormalization.bounded
+#print DiamondIntegral.Section4.RVT001OrdinaryNormalization.homogeneous
+#print axioms DiamondIntegral.Section4.RVT001OrdinaryNormalization.homogeneous
+#print DiamondIntegral.Section4.RVT001OrdinaryNormalization.geometric
+#print axioms DiamondIntegral.Section4.RVT001OrdinaryNormalization.geometric
+#print DiamondIntegral.Section4.RVT001OrdinaryNormalization.bounded_res
+#print axioms DiamondIntegral.Section4.RVT001OrdinaryNormalization.bounded_res
+#print DiamondIntegral.Section4.RVT001OrdinaryNormalization.homogeneous_res
+#print axioms DiamondIntegral.Section4.RVT001OrdinaryNormalization.homogeneous_res
+#print DiamondIntegral.Section4.RVT001OrdinaryNormalization.bounded_radius_square
+#print axioms DiamondIntegral.Section4.RVT001OrdinaryNormalization.bounded_radius_square
+#print DiamondIntegral.Section4.RVT001AlternativeDescent.gamma_translated
+#print axioms DiamondIntegral.Section4.RVT001AlternativeDescent.gamma_translated
+#print DiamondIntegral.Section4.RVT001AlternativeDescent.translation_generator_zero
+#print axioms DiamondIntegral.Section4.RVT001AlternativeDescent.translation_generator_zero
+#print DiamondIntegral.Section4.RVT001AlternativeDescent.translationIdeal_le_kernel
+#print axioms DiamondIntegral.Section4.RVT001AlternativeDescent.translationIdeal_le_kernel
+#print DiamondIntegral.Section4.RVT001AlternativeDescent.kernel_le
+#print axioms DiamondIntegral.Section4.RVT001AlternativeDescent.kernel_le
+#print DiamondIntegral.Section4.RVT001AlternativeDescent.evaluation
+#print axioms DiamondIntegral.Section4.RVT001AlternativeDescent.evaluation
+#print DiamondIntegral.Section4.RVT001AlternativeDescent.evaluation_comparison
+#print axioms DiamondIntegral.Section4.RVT001AlternativeDescent.evaluation_comparison
+#print DiamondIntegral.Section4.RVT001AlternativeDescent.gradedEvaluation
+#print axioms DiamondIntegral.Section4.RVT001AlternativeDescent.gradedEvaluation
+#print DiamondIntegral.Section4.RVT001AlternativeDescent.evaluation_res
+#print axioms DiamondIntegral.Section4.RVT001AlternativeDescent.evaluation_res
+#print DiamondIntegral.Section4.RVT001AlternativeDescent.evaluation_p
+#print axioms DiamondIntegral.Section4.RVT001AlternativeDescent.evaluation_p
+#print DiamondIntegral.Section4.RVT001AlternativeDescent.evaluation_h
+#print axioms DiamondIntegral.Section4.RVT001AlternativeDescent.evaluation_h
+#print DiamondIntegral.Section4.RVT001OrdinaryRanges.dimensionFree_surjective
+#print axioms DiamondIntegral.Section4.RVT001OrdinaryRanges.dimensionFree_surjective
+#print DiamondIntegral.Section4.RVT001OrdinaryRanges.affine_surjective
+#print axioms DiamondIntegral.Section4.RVT001OrdinaryRanges.affine_surjective
+#print DiamondIntegral.Section4.RVT001OrdinaryRanges.evaluation_surjective
+#print axioms DiamondIntegral.Section4.RVT001OrdinaryRanges.evaluation_surjective
+#print DiamondIntegral.Section4.RVT001OrdinaryRanges.boundedEvaluation_surjective
+#print axioms DiamondIntegral.Section4.RVT001OrdinaryRanges.boundedEvaluation_surjective
+#print DiamondIntegral.Section4.RVT001OrdinaryRanges.radiusEvaluation_surjective
+#print axioms DiamondIntegral.Section4.RVT001OrdinaryRanges.radiusEvaluation_surjective
+#print DiamondIntegral.Section4.RVT001OrdinaryRanges.boundedRaw_surjective
+#print axioms DiamondIntegral.Section4.RVT001OrdinaryRanges.boundedRaw_surjective
+#print DiamondIntegral.Section4.RVT001OrdinaryRanges.homogeneousRaw_surjective
+#print axioms DiamondIntegral.Section4.RVT001OrdinaryRanges.homogeneousRaw_surjective
+#print DiamondIntegral.Section4.RVT001OrdinaryRanges.bounded_surjective
+#print axioms DiamondIntegral.Section4.RVT001OrdinaryRanges.bounded_surjective
+#print DiamondIntegral.Section4.RVT001OrdinaryRanges.homogeneous_surjective
+#print axioms DiamondIntegral.Section4.RVT001OrdinaryRanges.homogeneous_surjective
+#print DiamondIntegral.Section4.RVT001OrdinaryRanges.geometric_range
+#print axioms DiamondIntegral.Section4.RVT001OrdinaryRanges.geometric_range
+#print DiamondIntegral.Section4.DefinableGaloisPoints.definable_invariant
+#print axioms DiamondIntegral.Section4.DefinableGaloisPoints.definable_invariant
+#print DiamondIntegral.Section4.DefinableGaloisPoints.graphOn
+#print axioms DiamondIntegral.Section4.DefinableGaloisPoints.graphOn
+#print DiamondIntegral.Section4.DefinableGaloisPoints.rationalPoints
+#print axioms DiamondIntegral.Section4.DefinableGaloisPoints.rationalPoints
+#print DiamondIntegral.Section4.DefinableGaloisPoints.graph_transport
+#print axioms DiamondIntegral.Section4.DefinableGaloisPoints.graph_transport
+#print DiamondIntegral.Section4.DefinableGaloisPoints.fixes_rational
+#print axioms DiamondIntegral.Section4.DefinableGaloisPoints.fixes_rational
+#print DiamondIntegral.Section4.DefinableGaloisPoints.mapsTo_rational
+#print axioms DiamondIntegral.Section4.DefinableGaloisPoints.mapsTo_rational
+#print DiamondIntegral.Section4.DefinableGaloisPoints.bijOn_rational
+#print axioms DiamondIntegral.Section4.DefinableGaloisPoints.bijOn_rational
+#print DiamondIntegral.Section4.DefinableGaloisPoints.rationalPoints_finite
+#print axioms DiamondIntegral.Section4.DefinableGaloisPoints.rationalPoints_finite
+#print DiamondIntegral.Section4.DefinableGaloisPoints.rational_count_eq
+#print axioms DiamondIntegral.Section4.DefinableGaloisPoints.rational_count_eq
+#print DiamondIntegral.Section4.GaloisPointCounts.count
+#print axioms DiamondIntegral.Section4.GaloisPointCounts.count
+#print DiamondIntegral.Section4.GaloisPointCounts.rational_empty
+#print axioms DiamondIntegral.Section4.GaloisPointCounts.rational_empty
+#print DiamondIntegral.Section4.GaloisPointCounts.rational_union
+#print axioms DiamondIntegral.Section4.GaloisPointCounts.rational_union
+#print DiamondIntegral.Section4.GaloisPointCounts.rational_inter
+#print axioms DiamondIntegral.Section4.GaloisPointCounts.rational_inter
+#print DiamondIntegral.Section4.GaloisPointCounts.empty
+#print axioms DiamondIntegral.Section4.GaloisPointCounts.empty
+#print DiamondIntegral.Section4.GaloisPointCounts.scissor
+#print axioms DiamondIntegral.Section4.GaloisPointCounts.scissor
+#print DiamondIntegral.Section4.GaloisPointCounts.rationalUnivEquiv
+#print axioms DiamondIntegral.Section4.GaloisPointCounts.rationalUnivEquiv
+#print DiamondIntegral.Section4.GaloisPointCounts.univ
+#print axioms DiamondIntegral.Section4.GaloisPointCounts.univ
+#print DiamondIntegral.Section4.GaloisPointCounts.point
+#print axioms DiamondIntegral.Section4.GaloisPointCounts.point
+#print DiamondIntegral.Section4.GaloisPointCounts.affine
+#print axioms DiamondIntegral.Section4.GaloisPointCounts.affine
+#print DiamondIntegral.Section4.GaloisPointCounts.product
+#print axioms DiamondIntegral.Section4.GaloisPointCounts.product
+#print DiamondIntegral.Section4.GaloisPointCounts.rationalProductEquiv
+#print axioms DiamondIntegral.Section4.GaloisPointCounts.rationalProductEquiv
+#print DiamondIntegral.Section4.GaloisPointCounts.mul
+#print axioms DiamondIntegral.Section4.GaloisPointCounts.mul
+#print DiamondIntegral.Section4.ACFPrimeSpecialization.sentence_specializes
+#print axioms DiamondIntegral.Section4.ACFPrimeSpecialization.sentence_specializes
+#print DiamondIntegral.Section4.ACFPrimeSpecialization.finite_parameter_field
+#print axioms DiamondIntegral.Section4.ACFPrimeSpecialization.finite_parameter_field
+#print DiamondIntegral.Section4.FiniteRelationSeparation.not_mem_span
+#print axioms DiamondIntegral.Section4.FiniteRelationSeparation.not_mem_span
+#print DiamondIntegral.Section4.FiniteRelationSeparation.quotient_ne_zero
+#print axioms DiamondIntegral.Section4.FiniteRelationSeparation.quotient_ne_zero
+#print DiamondIntegral.Section4.FieldPositiveExpressions.sumElim_comp_map
+#print axioms DiamondIntegral.Section4.FieldPositiveExpressions.sumElim_comp_map
+#print DiamondIntegral.Section4.FieldPositiveExpressions.Expr
+#print axioms DiamondIntegral.Section4.FieldPositiveExpressions.Expr
+#print DiamondIntegral.Section4.FieldPositiveExpressions.Expr.vars
+#print axioms DiamondIntegral.Section4.FieldPositiveExpressions.Expr.vars
+#print DiamondIntegral.Section4.FieldPositiveExpressions.Expr.eval
+#print axioms DiamondIntegral.Section4.FieldPositiveExpressions.Expr.eval
+#print DiamondIntegral.Section4.FieldPositiveExpressions.Expr.variables
+#print axioms DiamondIntegral.Section4.FieldPositiveExpressions.Expr.variables
+#print DiamondIntegral.Section4.FieldPositiveExpressions.Expr.finiteVariables
+#print axioms DiamondIntegral.Section4.FieldPositiveExpressions.Expr.finiteVariables
+#print DiamondIntegral.Section4.FieldPositiveExpressions.Expr.domain
+#print axioms DiamondIntegral.Section4.FieldPositiveExpressions.Expr.domain
+#print DiamondIntegral.Section4.FieldPositiveExpressions.allZero
+#print axioms DiamondIntegral.Section4.FieldPositiveExpressions.allZero
+#print DiamondIntegral.Section4.FieldPositiveExpressions.realize_allZero
+#print axioms DiamondIntegral.Section4.FieldPositiveExpressions.realize_allZero
+#print DiamondIntegral.Section4.FieldPositiveExpressions.Expr.formula
+#print axioms DiamondIntegral.Section4.FieldPositiveExpressions.Expr.formula
+#print DiamondIntegral.Section4.FieldPositiveExpressions.formula_realize
+#print axioms DiamondIntegral.Section4.FieldPositiveExpressions.formula_realize
+#print DiamondIntegral.Section4.FieldPositiveExpressions.freeRing_difference
+#print axioms DiamondIntegral.Section4.FieldPositiveExpressions.freeRing_difference
+#print DiamondIntegral.Section4.DefinableBiUniqueRelation.BiUnique
+#print axioms DiamondIntegral.Section4.DefinableBiUniqueRelation.BiUnique
+#print DiamondIntegral.Section4.DefinableBiUniqueRelation.map
+#print axioms DiamondIntegral.Section4.DefinableBiUniqueRelation.map
+#print DiamondIntegral.Section4.DefinableBiUniqueRelation.map_spec
+#print axioms DiamondIntegral.Section4.DefinableBiUniqueRelation.map_spec
+#print DiamondIntegral.Section4.DefinableBiUniqueRelation.bijOn
+#print axioms DiamondIntegral.Section4.DefinableBiUniqueRelation.bijOn
+#print DiamondIntegral.Section4.DefinableBiUniqueRelation.graph_eq
+#print axioms DiamondIntegral.Section4.DefinableBiUniqueRelation.graph_eq
+#print DiamondIntegral.Section4.DefinableBiUniqueRelation.graph_definable
+#print axioms DiamondIntegral.Section4.DefinableBiUniqueRelation.graph_definable
+#print DiamondIntegral.Section4.DefinableBiUniqueRelation.rational_count_eq
+#print axioms DiamondIntegral.Section4.DefinableBiUniqueRelation.rational_count_eq
+#print DiamondIntegral.Section4.ACFFormulaSpecialization.formula_specializes
+#print axioms DiamondIntegral.Section4.ACFFormulaSpecialization.formula_specializes
+#print DiamondIntegral.Section4.ACFFormulaSpecialization.definable_of_parameters
+#print axioms DiamondIntegral.Section4.ACFFormulaSpecialization.definable_of_parameters
+#print DiamondIntegral.Section4.GaloisTaggedSum.taggedSum
+#print axioms DiamondIntegral.Section4.GaloisTaggedSum.taggedSum
+#print DiamondIntegral.Section4.GaloisTaggedSum.leftTag
+#print axioms DiamondIntegral.Section4.GaloisTaggedSum.leftTag
+#print DiamondIntegral.Section4.GaloisTaggedSum.rightTag
+#print axioms DiamondIntegral.Section4.GaloisTaggedSum.rightTag
+#print DiamondIntegral.Section4.GaloisTaggedSum.rationalEquiv
+#print axioms DiamondIntegral.Section4.GaloisTaggedSum.rationalEquiv
+#print DiamondIntegral.Section4.GaloisTaggedSum.count_add
+#print axioms DiamondIntegral.Section4.GaloisTaggedSum.count_add
+#print DiamondIntegral.Section4.BiUniqueFormula.sumElim_assoc
+#print axioms DiamondIntegral.Section4.BiUniqueFormula.sumElim_assoc
+#print DiamondIntegral.Section4.BiUniqueFormula.sumElim_swap
+#print axioms DiamondIntegral.Section4.BiUniqueFormula.sumElim_swap
+#print DiamondIntegral.Section4.BiUniqueFormula.rightUnique
+#print axioms DiamondIntegral.Section4.BiUniqueFormula.rightUnique
+#print DiamondIntegral.Section4.BiUniqueFormula.rightUnique_realize
+#print axioms DiamondIntegral.Section4.BiUniqueFormula.rightUnique_realize
+#print DiamondIntegral.Section4.BiUniqueFormula.formula
+#print axioms DiamondIntegral.Section4.BiUniqueFormula.formula
+#print DiamondIntegral.Section4.BiUniqueFormula.formula_realize
+#print axioms DiamondIntegral.Section4.BiUniqueFormula.formula_realize
+#print DiamondIntegral.Section4.FieldPositiveExpressions.Expr.eval_congr
+#print axioms DiamondIntegral.Section4.FieldPositiveExpressions.Expr.eval_congr
+#print DiamondIntegral.Section4.FieldPositiveExpressions.Expr.eval_hom
+#print axioms DiamondIntegral.Section4.FieldPositiveExpressions.Expr.eval_hom
+#print DiamondIntegral.Section4.FieldPositiveExpressions.Expr.domain_congr
+#print axioms DiamondIntegral.Section4.FieldPositiveExpressions.Expr.domain_congr
+#print DiamondIntegral.Section4.FiniteFieldFormulaParameters.common_parameters
+#print axioms DiamondIntegral.Section4.FiniteFieldFormulaParameters.common_parameters
+#print DiamondIntegral.Section4.FiniteFieldFormulaParameters.common_formulas
+#print axioms DiamondIntegral.Section4.FiniteFieldFormulaParameters.common_formulas
+#print DiamondIntegral.Section4.FieldDefinableRing.Chart
+#print axioms DiamondIntegral.Section4.FieldDefinableRing.Chart
+#print DiamondIntegral.Section4.FieldDefinableRing.Expression
+#print axioms DiamondIntegral.Section4.FieldDefinableRing.Expression
+#print DiamondIntegral.Section4.FieldDefinableRing.domain
+#print axioms DiamondIntegral.Section4.FieldDefinableRing.domain
+#print DiamondIntegral.Section4.FieldDefinableRing.Relation
+#print axioms DiamondIntegral.Section4.FieldDefinableRing.Relation
+#print DiamondIntegral.Section4.FieldDefinableRing.relationIdeal
+#print axioms DiamondIntegral.Section4.FieldDefinableRing.relationIdeal
+#print DiamondIntegral.Section4.FieldDefinableRing.Ring
+#print axioms DiamondIntegral.Section4.FieldDefinableRing.Ring
+#print DiamondIntegral.Section4.FieldDefinableRing.objectClass
+#print axioms DiamondIntegral.Section4.FieldDefinableRing.objectClass
+#print DiamondIntegral.Section4.FieldDefinableRing.affine
+#print axioms DiamondIntegral.Section4.FieldDefinableRing.affine
+#print DiamondIntegral.Section4.FieldDefinableRing.affineClass
+#print axioms DiamondIntegral.Section4.FieldDefinableRing.affineClass
+#print DiamondIntegral.Section4.FieldDefinableRing.affineRelations
+#print axioms DiamondIntegral.Section4.FieldDefinableRing.affineRelations
+#print DiamondIntegral.Section4.FieldDefinableRing.AffineQuotient
+#print axioms DiamondIntegral.Section4.FieldDefinableRing.AffineQuotient
+#print DiamondIntegral.Section4.FieldDefinableRing.relation_zero
+#print axioms DiamondIntegral.Section4.FieldDefinableRing.relation_zero
+#print DiamondIntegral.Section4.ACFLargeFiniteParameterField.exists_large
+#print axioms DiamondIntegral.Section4.ACFLargeFiniteParameterField.exists_large
+#print DiamondIntegral.Section4.FieldExpressionCounts.count_domain
+#print axioms DiamondIntegral.Section4.FieldExpressionCounts.count_domain
+#print DiamondIntegral.Section4.FieldExpressionCounts.eval_lift
+#print axioms DiamondIntegral.Section4.FieldExpressionCounts.eval_lift
+#print DiamondIntegral.Section4.FieldExpressionCounts.eval_cast
+#print axioms DiamondIntegral.Section4.FieldExpressionCounts.eval_cast
+#print DiamondIntegral.Section4.FiniteFieldPointDiagram.counts_exist
+#print axioms DiamondIntegral.Section4.FiniteFieldPointDiagram.counts_exist
+#print DiamondIntegral.Section4.FieldAffineNontrivial.separate_finite
+#print axioms DiamondIntegral.Section4.FieldAffineNontrivial.separate_finite
+#print DiamondIntegral.Section4.FieldAffineNontrivial.one_not_mem
+#print axioms DiamondIntegral.Section4.FieldAffineNontrivial.one_not_mem
+#print DiamondIntegral.Section4.FieldAffineNontrivial.quotient_one_ne_zero
+#print axioms DiamondIntegral.Section4.FieldAffineNontrivial.quotient_one_ne_zero
+#print DiamondIntegral.Section4.FieldAffineNontrivial.affineQuotient_nontrivial
+#print axioms DiamondIntegral.Section4.FieldAffineNontrivial.affineQuotient_nontrivial
+#print DiamondIntegral.Section4.FieldFiniteCharacters.exists_large
+#print axioms DiamondIntegral.Section4.FieldFiniteCharacters.exists_large
+#print DiamondIntegral.Section4.RVResiduePullback.ofRaw
+#print axioms DiamondIntegral.Section4.RVResiduePullback.ofRaw
+#print DiamondIntegral.Section4.RVResiduePullback.scaled_definable
+#print axioms DiamondIntegral.Section4.RVResiduePullback.scaled_definable
+#print DiamondIntegral.Section4.RVResiduePullback.scaled_coordinates_definable
+#print axioms DiamondIntegral.Section4.RVResiduePullback.scaled_coordinates_definable
+#print DiamondIntegral.Section4.RVResiduePullback.zeroPattern_definable
+#print axioms DiamondIntegral.Section4.RVResiduePullback.zeroPattern_definable
+#print DiamondIntegral.Section4.RVResiduePullback.normalized_definable
+#print axioms DiamondIntegral.Section4.RVResiduePullback.normalized_definable
+#print DiamondIntegral.Section4.RVResiduePullback.normalized_fibre_definable
+#print axioms DiamondIntegral.Section4.RVResiduePullback.normalized_fibre_definable
+#print DiamondIntegral.Section4.FieldAffineTranscendence.freePolynomial
+#print axioms DiamondIntegral.Section4.FieldAffineTranscendence.freePolynomial
+#print DiamondIntegral.Section4.FieldAffineTranscendence.polynomial_not_mem
+#print axioms DiamondIntegral.Section4.FieldAffineTranscendence.polynomial_not_mem
+#print DiamondIntegral.Section4.FieldAffineTranscendence.polynomial
+#print axioms DiamondIntegral.Section4.FieldAffineTranscendence.polynomial
+#print DiamondIntegral.Section4.FieldAffineTranscendence.polynomial_X
+#print axioms DiamondIntegral.Section4.FieldAffineTranscendence.polynomial_X
+#print DiamondIntegral.Section4.FieldAffineTranscendence.polynomial_injective
+#print axioms DiamondIntegral.Section4.FieldAffineTranscendence.polynomial_injective
+#print DiamondIntegral.Section4.FieldAffineTranscendence.affine_ne_one
+#print axioms DiamondIntegral.Section4.FieldAffineTranscendence.affine_ne_one
+#print DiamondIntegral.Section4.FieldAffineTranscendence.affine_pow_ne_zero
+#print axioms DiamondIntegral.Section4.FieldAffineTranscendence.affine_pow_ne_zero
+#print DiamondIntegral.Section4.RVResidueScaledCovers.Piece
+#print axioms DiamondIntegral.Section4.RVResidueScaledCovers.Piece
+#print DiamondIntegral.Section4.RVResidueScaledCovers.Piece.value
+#print axioms DiamondIntegral.Section4.RVResidueScaledCovers.Piece.value
+#print DiamondIntegral.Section4.RVResidueScaledCovers.Cover
+#print axioms DiamondIntegral.Section4.RVResidueScaledCovers.Cover
+#print DiamondIntegral.Section4.RVResidueScaledCovers.pullback_definable
+#print axioms DiamondIntegral.Section4.RVResidueScaledCovers.pullback_definable
+#print DiamondIntegral.Section4.RVResidueScaledCovers.Piece.reindex
+#print axioms DiamondIntegral.Section4.RVResidueScaledCovers.Piece.reindex
+#print DiamondIntegral.Section4.RVResidueScaledCovers.Cover.reindex
+#print axioms DiamondIntegral.Section4.RVResidueScaledCovers.Cover.reindex
+#print DiamondIntegral.Section4.RVResidueScaledCovers.Piece.prod
+#print axioms DiamondIntegral.Section4.RVResidueScaledCovers.Piece.prod
+#print DiamondIntegral.Section4.RVResidueScaledCovers.Cover.prod
+#print axioms DiamondIntegral.Section4.RVResidueScaledCovers.Cover.prod
+#print DiamondIntegral.Section4.RVResidueFullFibres.value_named
+#print axioms DiamondIntegral.Section4.RVResidueFullFibres.value_named
+#print DiamondIntegral.Section4.RVResidueFullFibres.fullBase
+#print axioms DiamondIntegral.Section4.RVResidueFullFibres.fullBase
+#print DiamondIntegral.Section4.RVResidueFullFibres.fibre
+#print axioms DiamondIntegral.Section4.RVResidueFullFibres.fibre
+#print DiamondIntegral.Section4.RVResidueFullFibres.normalized
+#print axioms DiamondIntegral.Section4.RVResidueFullFibres.normalized
+#print DiamondIntegral.Section4.RVResidueFullFibres.normalized_definable
+#print axioms DiamondIntegral.Section4.RVResidueFullFibres.normalized_definable
+#print DiamondIntegral.Section4.RVResidueFullFibres.normalizationEquiv
+#print axioms DiamondIntegral.Section4.RVResidueFullFibres.normalizationEquiv
+#print DiamondIntegral.Section4.FieldTaggedFamilies.domain
+#print axioms DiamondIntegral.Section4.FieldTaggedFamilies.domain
+#print DiamondIntegral.Section4.FieldTaggedFamilies.definable
+#print axioms DiamondIntegral.Section4.FieldTaggedFamilies.definable
+#print DiamondIntegral.Section4.FieldTaggedFamilies.encode
+#print axioms DiamondIntegral.Section4.FieldTaggedFamilies.encode
+#print DiamondIntegral.Section4.FieldTaggedFamilies.encode_injective
+#print axioms DiamondIntegral.Section4.FieldTaggedFamilies.encode_injective
+#print DiamondIntegral.Section4.FieldTaggedFamilies.encode_surjective
+#print axioms DiamondIntegral.Section4.FieldTaggedFamilies.encode_surjective
+#print DiamondIntegral.Section4.FieldTaggedFamilies.equiv
+#print axioms DiamondIntegral.Section4.FieldTaggedFamilies.equiv
+#print DiamondIntegral.Section4.FieldTaggedFamilies.tag
+#print axioms DiamondIntegral.Section4.FieldTaggedFamilies.tag
+#print DiamondIntegral.Section4.FieldTaggedFamilies.tag_injective
+#print axioms DiamondIntegral.Section4.FieldTaggedFamilies.tag_injective
+#print DiamondIntegral.Section4.FieldTaggedFamilies.chart
+#print axioms DiamondIntegral.Section4.FieldTaggedFamilies.chart
+#print DiamondIntegral.Section4.RVResidueFiniteNormalization.pattern
+#print axioms DiamondIntegral.Section4.RVResidueFiniteNormalization.pattern
+#print DiamondIntegral.Section4.RVResidueFiniteNormalization.Patterns
+#print axioms DiamondIntegral.Section4.RVResidueFiniteNormalization.Patterns
+#print DiamondIntegral.Section4.RVResidueFiniteNormalization.representative
+#print axioms DiamondIntegral.Section4.RVResidueFiniteNormalization.representative
+#print DiamondIntegral.Section4.RVResidueFiniteNormalization.representative_pattern
+#print axioms DiamondIntegral.Section4.RVResidueFiniteNormalization.representative_pattern
+#print DiamondIntegral.Section4.RVResidueFiniteNormalization.forgetFibre
+#print axioms DiamondIntegral.Section4.RVResidueFiniteNormalization.forgetFibre
+#print DiamondIntegral.Section4.RVResidueFiniteNormalization.forgetFibre_injective
+#print axioms DiamondIntegral.Section4.RVResidueFiniteNormalization.forgetFibre_injective
+#print DiamondIntegral.Section4.RVResidueFiniteNormalization.forgetFibre_surjective
+#print axioms DiamondIntegral.Section4.RVResidueFiniteNormalization.forgetFibre_surjective
+#print DiamondIntegral.Section4.RVResidueFiniteNormalization.fibreSumEquiv
+#print axioms DiamondIntegral.Section4.RVResidueFiniteNormalization.fibreSumEquiv
+#print DiamondIntegral.Section4.RVResidueFiniteNormalization.normalized
+#print axioms DiamondIntegral.Section4.RVResidueFiniteNormalization.normalized
+#print DiamondIntegral.Section4.RVResidueFiniteNormalization.normalized_definable
+#print axioms DiamondIntegral.Section4.RVResidueFiniteNormalization.normalized_definable
+#print DiamondIntegral.Section4.RVResidueFiniteNormalization.sumEquiv
+#print axioms DiamondIntegral.Section4.RVResidueFiniteNormalization.sumEquiv
+#print DiamondIntegral.Section4.RVResidueFiniteNormalization.sumEquiv_value
+#print axioms DiamondIntegral.Section4.RVResidueFiniteNormalization.sumEquiv_value
+#print DiamondIntegral.Section4.RVResidueCodes.Code
+#print axioms DiamondIntegral.Section4.RVResidueCodes.Code
+#print DiamondIntegral.Section4.RVResidueCodes.tag
+#print axioms DiamondIntegral.Section4.RVResidueCodes.tag
+#print DiamondIntegral.Section4.RVResidueCodes.tag_injective
+#print axioms DiamondIntegral.Section4.RVResidueCodes.tag_injective
+#print DiamondIntegral.Section4.RVResidueCodes.chart
+#print axioms DiamondIntegral.Section4.RVResidueCodes.chart
+#print DiamondIntegral.Section4.RVResidueCodes.equiv
+#print axioms DiamondIntegral.Section4.RVResidueCodes.equiv
+#print DiamondIntegral.Section4.RVResidueCodes.decode
+#print axioms DiamondIntegral.Section4.RVResidueCodes.decode
+#print DiamondIntegral.Section4.RVResidueCodes.decode_bijective
+#print axioms DiamondIntegral.Section4.RVResidueCodes.decode_bijective
+#print DiamondIntegral.Section4.RVResidueCodes.decode_on_tag
+#print axioms DiamondIntegral.Section4.RVResidueCodes.decode_on_tag
+#print DiamondIntegral.Section4.RVResidueCodes.cover
+#print axioms DiamondIntegral.Section4.RVResidueCodes.cover
+#print DiamondIntegral.Section4.RVResidueCodes.code
+#print axioms DiamondIntegral.Section4.RVResidueCodes.code
+#print DiamondIntegral.Section4.BiUniqueTransport.pullback
+#print axioms DiamondIntegral.Section4.BiUniqueTransport.pullback
+#print DiamondIntegral.Section4.RVResidueChartCodes.RawCode
+#print axioms DiamondIntegral.Section4.RVResidueChartCodes.RawCode
+#print DiamondIntegral.Section4.RVResidueChartCodes.typedSet
+#print axioms DiamondIntegral.Section4.RVResidueChartCodes.typedSet
+#print DiamondIntegral.Section4.RVResidueChartCodes.rawEquiv
+#print axioms DiamondIntegral.Section4.RVResidueChartCodes.rawEquiv
+#print DiamondIntegral.Section4.RVResidueChartCodes.patterns_finite
+#print axioms DiamondIntegral.Section4.RVResidueChartCodes.patterns_finite
+#print DiamondIntegral.Section4.RVResidueChartCodes.rvValues_bijective
+#print axioms DiamondIntegral.Section4.RVResidueChartCodes.rvValues_bijective
+#print DiamondIntegral.Section4.RVResidueChartCodes.code
+#print axioms DiamondIntegral.Section4.RVResidueChartCodes.code
+#print DiamondIntegral.Section4.RVResidueJoinedCovers.pieceJoin
+#print axioms DiamondIntegral.Section4.RVResidueJoinedCovers.pieceJoin
+#print DiamondIntegral.Section4.RVResidueJoinedCovers.pieceJoin_value
+#print axioms DiamondIntegral.Section4.RVResidueJoinedCovers.pieceJoin_value
+#print DiamondIntegral.Section4.RVResidueJoinedCovers.coverJoin
+#print axioms DiamondIntegral.Section4.RVResidueJoinedCovers.coverJoin
+#print DiamondIntegral.Section4.RVResidueCodeRelations.map_join
+#print axioms DiamondIntegral.Section4.RVResidueCodeRelations.map_join
+#print DiamondIntegral.Section4.RVResidueCodeRelations.restrict_relation
+#print axioms DiamondIntegral.Section4.RVResidueCodeRelations.restrict_relation
+#print DiamondIntegral.Section4.RVResidueCodeRelations.graph
+#print axioms DiamondIntegral.Section4.RVResidueCodeRelations.graph
+#print DiamondIntegral.Section4.RVResidueCodeRelations.graph_definable
+#print axioms DiamondIntegral.Section4.RVResidueCodeRelations.graph_definable
+#print DiamondIntegral.Section4.RVResidueCodeRelations.graph_biunique
+#print axioms DiamondIntegral.Section4.RVResidueCodeRelations.graph_biunique
+#print DiamondIntegral.Section4.RVResidueCodeRelations.objectClass_eq
+#print axioms DiamondIntegral.Section4.RVResidueCodeRelations.objectClass_eq
+#print DiamondIntegral.Section4.FieldCartesianCharts.product
+#print axioms DiamondIntegral.Section4.FieldCartesianCharts.product
+#print DiamondIntegral.Section4.FieldCartesianCharts.graph
+#print axioms DiamondIntegral.Section4.FieldCartesianCharts.graph
+#print DiamondIntegral.Section4.FieldCartesianCharts.graph_definable
+#print axioms DiamondIntegral.Section4.FieldCartesianCharts.graph_definable
+#print DiamondIntegral.Section4.FieldCartesianCharts.graph_biunique
+#print axioms DiamondIntegral.Section4.FieldCartesianCharts.graph_biunique
+#print DiamondIntegral.Section4.FieldCartesianCharts.objectClass_product
+#print axioms DiamondIntegral.Section4.FieldCartesianCharts.objectClass_product
+#print DiamondIntegral.Section4.FieldPointCharts.objectClass_empty
+#print axioms DiamondIntegral.Section4.FieldPointCharts.objectClass_empty
+#print DiamondIntegral.Section4.FieldPointCharts.objectClass_unique
+#print axioms DiamondIntegral.Section4.FieldPointCharts.objectClass_unique
+#print DiamondIntegral.Section4.RVResidueIsomorphisms.joined_graph_biunique
+#print axioms DiamondIntegral.Section4.RVResidueIsomorphisms.joined_graph_biunique
+#print DiamondIntegral.Section4.RVResidueIsomorphisms.value
+#print axioms DiamondIntegral.Section4.RVResidueIsomorphisms.value
+#print DiamondIntegral.Section4.RVResidueIsomorphisms.value_iso
+#print axioms DiamondIntegral.Section4.RVResidueIsomorphisms.value_iso
+#print DiamondIntegral.Section4.RVResidueIsomorphisms.value_measured_iso
+#print axioms DiamondIntegral.Section4.RVResidueIsomorphisms.value_measured_iso
+#print DiamondIntegral.Section4.FieldScissorBijection.mem_cases
+#print axioms DiamondIntegral.Section4.FieldScissorBijection.mem_cases
+#print DiamondIntegral.Section4.FieldScissorBijection.left_mem
+#print axioms DiamondIntegral.Section4.FieldScissorBijection.left_mem
+#print DiamondIntegral.Section4.FieldScissorBijection.right_mem
+#print axioms DiamondIntegral.Section4.FieldScissorBijection.right_mem
+#print DiamondIntegral.Section4.FieldScissorBijection.Vars
+#print axioms DiamondIntegral.Section4.FieldScissorBijection.Vars
+#print DiamondIntegral.Section4.FieldScissorBijection.graph
+#print axioms DiamondIntegral.Section4.FieldScissorBijection.graph
+#print DiamondIntegral.Section4.FieldScissorBijection.forall_eq
+#print axioms DiamondIntegral.Section4.FieldScissorBijection.forall_eq
+#print DiamondIntegral.Section4.FieldScissorBijection.graph_LL
+#print axioms DiamondIntegral.Section4.FieldScissorBijection.graph_LL
+#print DiamondIntegral.Section4.FieldScissorBijection.graph_LR
+#print axioms DiamondIntegral.Section4.FieldScissorBijection.graph_LR
+#print DiamondIntegral.Section4.FieldScissorBijection.graph_RL
+#print axioms DiamondIntegral.Section4.FieldScissorBijection.graph_RL
+#print DiamondIntegral.Section4.FieldScissorBijection.graph_RR
+#print axioms DiamondIntegral.Section4.FieldScissorBijection.graph_RR
+#print DiamondIntegral.Section4.FieldScissorBijection.biunique
+#print axioms DiamondIntegral.Section4.FieldScissorBijection.biunique
+#print DiamondIntegral.Section4.FieldScissorBijection.graph_definable
+#print axioms DiamondIntegral.Section4.FieldScissorBijection.graph_definable
+#print DiamondIntegral.Section4.RVResiduePointValues.code_empty
+#print axioms DiamondIntegral.Section4.RVResiduePointValues.code_empty
+#print DiamondIntegral.Section4.RVResiduePointValues.code_unique
+#print axioms DiamondIntegral.Section4.RVResiduePointValues.code_unique
+#print DiamondIntegral.Section4.RVResiduePointValues.value_empty
+#print axioms DiamondIntegral.Section4.RVResiduePointValues.value_empty
+#print DiamondIntegral.Section4.RVResiduePointValues.value_unique
+#print axioms DiamondIntegral.Section4.RVResiduePointValues.value_unique
+#print DiamondIntegral.Section4.RVResiduePointValues.value_weightedUnit
+#print axioms DiamondIntegral.Section4.RVResiduePointValues.value_weightedUnit
+#print DiamondIntegral.Section4.RVResiduePointValues.value_point
+#print axioms DiamondIntegral.Section4.RVResiduePointValues.value_point
+#print DiamondIntegral.Section4.RVResidueCodeIndependence.code_class_eq
+#print axioms DiamondIntegral.Section4.RVResidueCodeIndependence.code_class_eq
+#print DiamondIntegral.Section4.RVResidueCodeIndependence.code_class_value
+#print axioms DiamondIntegral.Section4.RVResidueCodeIndependence.code_class_value
+#print DiamondIntegral.Section4.RVResidueRestrictedCodes.cover_restrict
+#print axioms DiamondIntegral.Section4.RVResidueRestrictedCodes.cover_restrict
+#print DiamondIntegral.Section4.RVResidueRestrictedCodes.restrict
+#print axioms DiamondIntegral.Section4.RVResidueRestrictedCodes.restrict
+#print DiamondIntegral.Section4.TupleProductBijections.domain
+#print axioms DiamondIntegral.Section4.TupleProductBijections.domain
+#print DiamondIntegral.Section4.TupleProductBijections.map
+#print axioms DiamondIntegral.Section4.TupleProductBijections.map
+#print DiamondIntegral.Section4.TupleProductBijections.map_head
+#print axioms DiamondIntegral.Section4.TupleProductBijections.map_head
+#print DiamondIntegral.Section4.TupleProductBijections.map_tail
+#print axioms DiamondIntegral.Section4.TupleProductBijections.map_tail
+#print DiamondIntegral.Section4.TupleProductBijections.bijOn
+#print axioms DiamondIntegral.Section4.TupleProductBijections.bijOn
+#print DiamondIntegral.Section4.FieldScissorClasses.objectClass_scissor
+#print axioms DiamondIntegral.Section4.FieldScissorClasses.objectClass_scissor
+#print DiamondIntegral.Section4.RVResidueProductCodes.decode
+#print axioms DiamondIntegral.Section4.RVResidueProductCodes.decode
+#print DiamondIntegral.Section4.RVResidueProductCodes.decode_values
+#print axioms DiamondIntegral.Section4.RVResidueProductCodes.decode_values
+#print DiamondIntegral.Section4.RVResidueProductCodes.cover
+#print axioms DiamondIntegral.Section4.RVResidueProductCodes.cover
+#print DiamondIntegral.Section4.RVResidueProductCodes.product
+#print axioms DiamondIntegral.Section4.RVResidueProductCodes.product
+#print DiamondIntegral.Section4.RVResidueProductCodes.value_product
+#print axioms DiamondIntegral.Section4.RVResidueProductCodes.value_product
+#print DiamondIntegral.Section4.RVResidueScissors.scissor_uniform
+#print axioms DiamondIntegral.Section4.RVResidueScissors.scissor_uniform
+#print DiamondIntegral.Section4.RVResidueScissors.value_scissor
+#print axioms DiamondIntegral.Section4.RVResidueScissors.value_scissor
+#print DiamondIntegral.Section4.RESResidueTrace.invariant
+#print axioms DiamondIntegral.Section4.RESResidueTrace.invariant
+#print DiamondIntegral.Section4.RESResidueTrace.trace
+#print axioms DiamondIntegral.Section4.RESResidueTrace.trace
+#print DiamondIntegral.Section4.RESResidueTrace.trace_objectClass
+#print axioms DiamondIntegral.Section4.RESResidueTrace.trace_objectClass
+#print DiamondIntegral.Section4.RESResidueTrace.trace_point
+#print axioms DiamondIntegral.Section4.RESResidueTrace.trace_point
+#print DiamondIntegral.Section4.RESResidueTrace.trace_weightedUnit
+#print axioms DiamondIntegral.Section4.RESResidueTrace.trace_weightedUnit
+#print DiamondIntegral.Section4.RVResidueFibreCodes.puncturedLine
+#print axioms DiamondIntegral.Section4.RVResidueFibreCodes.puncturedLine
+#print DiamondIntegral.Section4.RVResidueFibreCodes.sameValue_scale_iff
+#print axioms DiamondIntegral.Section4.RVResidueFibreCodes.sameValue_scale_iff
+#print DiamondIntegral.Section4.RVResidueFibreCodes.scalarCode
+#print axioms DiamondIntegral.Section4.RVResidueFibreCodes.scalarCode
+#print DiamondIntegral.Section4.RVResidueFibreCodes.fibre_domain
+#print axioms DiamondIntegral.Section4.RVResidueFibreCodes.fibre_domain
+#print DiamondIntegral.Section4.RVResidueFibreCodes.value_fibre
+#print axioms DiamondIntegral.Section4.RVResidueFibreCodes.value_fibre
+#print DiamondIntegral.Section4.FieldAffineDecomposition.puncturedLine
+#print axioms DiamondIntegral.Section4.FieldAffineDecomposition.puncturedLine
+#print DiamondIntegral.Section4.FieldAffineDecomposition.zeroPoint
+#print axioms DiamondIntegral.Section4.FieldAffineDecomposition.zeroPoint
+#print DiamondIntegral.Section4.FieldAffineDecomposition.zeroPoint_class
+#print axioms DiamondIntegral.Section4.FieldAffineDecomposition.zeroPoint_class
+#print DiamondIntegral.Section4.FieldAffineDecomposition.punctured_plus_one
+#print axioms DiamondIntegral.Section4.FieldAffineDecomposition.punctured_plus_one
+#print DiamondIntegral.Section4.FieldAffineQuotientMap.ideal_le
+#print axioms DiamondIntegral.Section4.FieldAffineQuotientMap.ideal_le
+#print DiamondIntegral.Section4.FieldAffineQuotientMap.quotient
+#print axioms DiamondIntegral.Section4.FieldAffineQuotientMap.quotient
+#print DiamondIntegral.Section4.FieldAffineQuotientMap.quotient_objectClass
+#print axioms DiamondIntegral.Section4.FieldAffineQuotientMap.quotient_objectClass
+#print DiamondIntegral.Section4.FieldAffineQuotientMap.quotient_affine
+#print axioms DiamondIntegral.Section4.FieldAffineQuotientMap.quotient_affine
+#print DiamondIntegral.Section4.RESPointNonvanishing.trace_scaled
+#print axioms DiamondIntegral.Section4.RESPointNonvanishing.trace_scaled
+#print DiamondIntegral.Section4.RESPointNonvanishing.trace_fibre
+#print axioms DiamondIntegral.Section4.RESPointNonvanishing.trace_fibre
+#print DiamondIntegral.Section4.RESPointNonvanishing.trace_affine
+#print axioms DiamondIntegral.Section4.RESPointNonvanishing.trace_affine
+#print DiamondIntegral.Section4.RESPointNonvanishing.rawMap
+#print axioms DiamondIntegral.Section4.RESPointNonvanishing.rawMap
+#print DiamondIntegral.Section4.RESPointNonvanishing.fibreIdeal_le_ker
+#print axioms DiamondIntegral.Section4.RESPointNonvanishing.fibreIdeal_le_ker
+#print DiamondIntegral.Section4.RESPointNonvanishing.reductionIdeal_le_ker
+#print axioms DiamondIntegral.Section4.RESPointNonvanishing.reductionIdeal_le_ker
+#print DiamondIntegral.Section4.RESPointNonvanishing.reducedMap
+#print axioms DiamondIntegral.Section4.RESPointNonvanishing.reducedMap
+#print DiamondIntegral.Section4.RESPointNonvanishing.reducedMap_point
+#print axioms DiamondIntegral.Section4.RESPointNonvanishing.reducedMap_point
+#print DiamondIntegral.Section4.RESPointNonvanishing.point_ne_zero
+#print axioms DiamondIntegral.Section4.RESPointNonvanishing.point_ne_zero
+#print DiamondIntegral.Section4.RESPointNonvanishing.point_ne_zero_acvf00
+#print axioms DiamondIntegral.Section4.RESPointNonvanishing.point_ne_zero_acvf00
+#print DiamondIntegral.Section4.RVT001RetractionStatements.measured_evaluations_distinct
+#print axioms DiamondIntegral.Section4.RVT001RetractionStatements.measured_evaluations_distinct
+#print DiamondIntegral.Section4.RVT001RetractionStatements.proposition_4_7
+#print axioms DiamondIntegral.Section4.RVT001RetractionStatements.proposition_4_7
+#print DiamondIntegral.Section4.RVT001RetractionStatements.proposition_4_15
+#print axioms DiamondIntegral.Section4.RVT001RetractionStatements.proposition_4_15
+#print DiamondIntegral.Section4.RESOrdinaryResidueTrace.freeMap
+#print axioms DiamondIntegral.Section4.RESOrdinaryResidueTrace.freeMap
+#print DiamondIntegral.Section4.RESOrdinaryResidueTrace.freeMap_symbol
+#print axioms DiamondIntegral.Section4.RESOrdinaryResidueTrace.freeMap_symbol
+#print DiamondIntegral.Section4.RESOrdinaryResidueTrace.relation_zero
+#print axioms DiamondIntegral.Section4.RESOrdinaryResidueTrace.relation_zero
+#print DiamondIntegral.Section4.RESOrdinaryResidueTrace.relationIdeal_le
+#print axioms DiamondIntegral.Section4.RESOrdinaryResidueTrace.relationIdeal_le
+#print DiamondIntegral.Section4.RESOrdinaryResidueTrace.trace
+#print axioms DiamondIntegral.Section4.RESOrdinaryResidueTrace.trace
+#print DiamondIntegral.Section4.RESOrdinaryResidueTrace.trace_objectClass
+#print axioms DiamondIntegral.Section4.RESOrdinaryResidueTrace.trace_objectClass
+#print DiamondIntegral.Section4.RESOrdinaryResidueTrace.fibreIdeal_le
+#print axioms DiamondIntegral.Section4.RESOrdinaryResidueTrace.fibreIdeal_le
+#print DiamondIntegral.Section4.RESOrdinaryResidueTrace.reducedTrace
+#print axioms DiamondIntegral.Section4.RESOrdinaryResidueTrace.reducedTrace
+#print DiamondIntegral.Section4.RESOrdinaryResidueTrace.reducedTrace_point
+#print axioms DiamondIntegral.Section4.RESOrdinaryResidueTrace.reducedTrace_point
+#print DiamondIntegral.Section4.RESOrdinaryResidueTrace.reducedTrace_affine
+#print axioms DiamondIntegral.Section4.RESOrdinaryResidueTrace.reducedTrace_affine
+#print DiamondIntegral.Section4.RESOrdinaryResidueTrace.pointIdeal_le
+#print axioms DiamondIntegral.Section4.RESOrdinaryResidueTrace.pointIdeal_le
+#print DiamondIntegral.Section4.RESOrdinaryResidueTrace.normalizedTrace
+#print axioms DiamondIntegral.Section4.RESOrdinaryResidueTrace.normalizedTrace
+#print DiamondIntegral.Section4.RESOrdinaryResidueTrace.dimensionFreeTrace
+#print axioms DiamondIntegral.Section4.RESOrdinaryResidueTrace.dimensionFreeTrace
+#print DiamondIntegral.Section4.RESOrdinaryResidueTrace.dimensionFreeTrace_fromGraded
+#print axioms DiamondIntegral.Section4.RESOrdinaryResidueTrace.dimensionFreeTrace_fromGraded
+#print DiamondIntegral.Section4.RESOrdinaryResidueTrace.dimensionFreeTrace_affine
+#print axioms DiamondIntegral.Section4.RESOrdinaryResidueTrace.dimensionFreeTrace_affine
+#print DiamondIntegral.Section4.FieldAffineLocalizationNontrivial.power_mul_sub_ne_zero
+#print axioms DiamondIntegral.Section4.FieldAffineLocalizationNontrivial.power_mul_sub_ne_zero
+#print DiamondIntegral.Section4.FieldAffineLocalizationNontrivial.affine_ne_one
+#print axioms DiamondIntegral.Section4.FieldAffineLocalizationNontrivial.affine_ne_one
+#print DiamondIntegral.Section4.FieldAffineLocalizationNontrivial.inverse_ne_one
+#print axioms DiamondIntegral.Section4.FieldAffineLocalizationNontrivial.inverse_ne_one
+#print DiamondIntegral.Section4.RESAffineSeparation.FieldTarget
+#print axioms DiamondIntegral.Section4.RESAffineSeparation.FieldTarget
+#print DiamondIntegral.Section4.RESAffineSeparation.fieldBaseMap
+#print axioms DiamondIntegral.Section4.RESAffineSeparation.fieldBaseMap
+#print DiamondIntegral.Section4.RESAffineSeparation.fieldBaseMap_affine_unit
+#print axioms DiamondIntegral.Section4.RESAffineSeparation.fieldBaseMap_affine_unit
+#print DiamondIntegral.Section4.RESAffineSeparation.localizationTrace
+#print axioms DiamondIntegral.Section4.RESAffineSeparation.localizationTrace
+#print DiamondIntegral.Section4.RESAffineSeparation.localizationTrace_algebraMap
+#print axioms DiamondIntegral.Section4.RESAffineSeparation.localizationTrace_algebraMap
+#print DiamondIntegral.Section4.RESAffineSeparation.affine_ne_one
+#print axioms DiamondIntegral.Section4.RESAffineSeparation.affine_ne_one
+#print DiamondIntegral.Section4.RESAffineSeparation.inverse_ne_one
+#print axioms DiamondIntegral.Section4.RESAffineSeparation.inverse_ne_one
+#print DiamondIntegral.Section4.RESAffineSeparation.comparison_point_ne_one
+#print axioms DiamondIntegral.Section4.RESAffineSeparation.comparison_point_ne_one
+#print DiamondIntegral.Section4.RESAffineSeparation.comparison_point_ne_one_acvf00
+#print axioms DiamondIntegral.Section4.RESAffineSeparation.comparison_point_ne_one_acvf00
+#print DiamondIntegral.Section4.RVT001NormalizedDistinct.boundedInAffine
+#print axioms DiamondIntegral.Section4.RVT001NormalizedDistinct.boundedInAffine
+#print DiamondIntegral.Section4.RVT001NormalizedDistinct.bounded_point
+#print axioms DiamondIntegral.Section4.RVT001NormalizedDistinct.bounded_point
+#print DiamondIntegral.Section4.RVT001NormalizedDistinct.geometric_point_ne_one
+#print axioms DiamondIntegral.Section4.RVT001NormalizedDistinct.geometric_point_ne_one
+#print DiamondIntegral.Section4.RVT001NormalizedDistinct.normalized_maps_distinct
+#print axioms DiamondIntegral.Section4.RVT001NormalizedDistinct.normalized_maps_distinct
+#print DiamondIntegral.Section4.GammaRationalAffineContinuity.rationalAffine
+#print axioms DiamondIntegral.Section4.GammaRationalAffineContinuity.rationalAffine
+#print DiamondIntegral.Section4.GammaRationalAffineContinuity.rationalAffine_spec
+#print axioms DiamondIntegral.Section4.GammaRationalAffineContinuity.rationalAffine_spec
+#print DiamondIntegral.Section4.GammaRationalAffineContinuity.rationalAffine_unique
+#print axioms DiamondIntegral.Section4.GammaRationalAffineContinuity.rationalAffine_unique
+#print DiamondIntegral.Section4.GammaRationalAffineContinuity.rationalAffine_continuous
+#print axioms DiamondIntegral.Section4.GammaRationalAffineContinuity.rationalAffine_continuous
+#print DiamondIntegral.Section4.GammaRationalAffineContinuity.monomial_definable
+#print axioms DiamondIntegral.Section4.GammaRationalAffineContinuity.monomial_definable
+#print DiamondIntegral.Section4.GammaRationalAffineContinuity.rationalAffine_definable
+#print axioms DiamondIntegral.Section4.GammaRationalAffineContinuity.rationalAffine_definable
+#print DiamondIntegral.Section4.GammaRationalAffineContinuity.Branch
+#print axioms DiamondIntegral.Section4.GammaRationalAffineContinuity.Branch
+#print DiamondIntegral.Section4.GammaRationalAffineContinuity.Branch.eval
+#print axioms DiamondIntegral.Section4.GammaRationalAffineContinuity.Branch.eval
+#print DiamondIntegral.Section4.GammaRationalAffineContinuity.Branch.definable
+#print axioms DiamondIntegral.Section4.GammaRationalAffineContinuity.Branch.definable
+#print DiamondIntegral.Section4.GammaRationalAffineContinuity.Branch.continuous
+#print axioms DiamondIntegral.Section4.GammaRationalAffineContinuity.Branch.continuous
+#print DiamondIntegral.Section4.GammaContinuousCells.Cell
+#print axioms DiamondIntegral.Section4.GammaContinuousCells.Cell
+#print DiamondIntegral.Section4.GammaContinuousCells.Cell.cylindrical
+#print axioms DiamondIntegral.Section4.GammaContinuousCells.Cell.cylindrical
+#print DiamondIntegral.Section4.GammaContinuousCells.Cell.definable
+#print axioms DiamondIntegral.Section4.GammaContinuousCells.Cell.definable
+#print DiamondIntegral.Section4.GammaContinuousCells.Cell.nonempty
+#print axioms DiamondIntegral.Section4.GammaContinuousCells.Cell.nonempty
+#print DiamondIntegral.Section4.GammaContinuousCells.Cell.dimension_le
+#print axioms DiamondIntegral.Section4.GammaContinuousCells.Cell.dimension_le
+#print DiamondIntegral.Section4.GammaContinuousCells.Decomposition
+#print axioms DiamondIntegral.Section4.GammaContinuousCells.Decomposition
+#print DiamondIntegral.Section4.GammaContinuousCells.ofFamily
+#print axioms DiamondIntegral.Section4.GammaContinuousCells.ofFamily
+#print DiamondIntegral.Section4.GammaContinuousCells.empty
+#print axioms DiamondIntegral.Section4.GammaContinuousCells.empty
+#print DiamondIntegral.Section4.GammaContinuousCells.zero_univ
+#print axioms DiamondIntegral.Section4.GammaContinuousCells.zero_univ
+#print DiamondIntegral.Section4.GammaContinuousCells.exists_zero
+#print axioms DiamondIntegral.Section4.GammaContinuousCells.exists_zero
+#print DiamondIntegral.Section4.Section3GammaAffineInput.Input
+#print axioms DiamondIntegral.Section4.Section3GammaAffineInput.Input
+#print DiamondIntegral.Section4.GammaFiniteFirstMatch.first
+#print axioms DiamondIntegral.Section4.GammaFiniteFirstMatch.first
+#print DiamondIntegral.Section4.GammaFiniteFirstMatch.definable
+#print axioms DiamondIntegral.Section4.GammaFiniteFirstMatch.definable
+#print DiamondIntegral.Section4.GammaFiniteFirstMatch.disjoint
+#print axioms DiamondIntegral.Section4.GammaFiniteFirstMatch.disjoint
+#print DiamondIntegral.Section4.GammaFiniteFirstMatch.cover
+#print axioms DiamondIntegral.Section4.GammaFiniteFirstMatch.cover
+#print DiamondIntegral.Section4.GammaContinuousPartitions.Partition
+#print axioms DiamondIntegral.Section4.GammaContinuousPartitions.Partition
+#print DiamondIntegral.Section4.GammaContinuousPartitions.ofBranches
+#print axioms DiamondIntegral.Section4.GammaContinuousPartitions.ofBranches
+#print DiamondIntegral.Section4.GammaContinuousPartitions.exists_partition
+#print axioms DiamondIntegral.Section4.GammaContinuousPartitions.exists_partition
+#print DiamondIntegral.Section4.GammaContinuousPartitions.CommonCover
+#print axioms DiamondIntegral.Section4.GammaContinuousPartitions.CommonCover
+#print DiamondIntegral.Section4.GammaContinuousPartitions.common
+#print axioms DiamondIntegral.Section4.GammaContinuousPartitions.common
+#print DiamondIntegral.Section4.GammaContinuousPartitions.exists_common
+#print axioms DiamondIntegral.Section4.GammaContinuousPartitions.exists_common
+#print DiamondIntegral.Section4.GammaContinuousStackCells.shape_cell
+#print axioms DiamondIntegral.Section4.GammaContinuousStackCells.shape_cell
+#print DiamondIntegral.Section4.GammaContinuousDecompositionRefinement.refine
+#print axioms DiamondIntegral.Section4.GammaContinuousDecompositionRefinement.refine
+#print DiamondIntegral.Section4.GammaContinuousDecomposition.exists_decomposition
+#print axioms DiamondIntegral.Section4.GammaContinuousDecomposition.exists_decomposition
+#print DiamondIntegral.Section4.GammaContinuousDecomposition.decomposition
+#print axioms DiamondIntegral.Section4.GammaContinuousDecomposition.decomposition
+#print DiamondIntegral.Section4.GammaContinuousDecomposition.geometric_sum
+#print axioms DiamondIntegral.Section4.GammaContinuousDecomposition.geometric_sum
+#print DiamondIntegral.Section4.GammaContinuousDecomposition.constructed_geometric_sum
+#print axioms DiamondIntegral.Section4.GammaContinuousDecomposition.constructed_geometric_sum
+#print DiamondIntegral.Section4.GammaContinuousDecomposition.sum_independent
+#print axioms DiamondIntegral.Section4.GammaContinuousDecomposition.sum_independent
+#print DiamondIntegral.Section4.GammaContinuousDecomposition.pieces_nonempty
+#print axioms DiamondIntegral.Section4.GammaContinuousDecomposition.pieces_nonempty
+#print DiamondIntegral.Section4.GammaContinuousDecomposition.dimensions_bounded
+#print axioms DiamondIntegral.Section4.GammaContinuousDecomposition.dimensions_bounded
+#print DiamondIntegral.Section4.FieldBoundedProjection.Bounded
+#print axioms DiamondIntegral.Section4.FieldBoundedProjection.Bounded
+#print DiamondIntegral.Section4.FieldBoundedProjection.of_fibre_ncard_le
+#print axioms DiamondIntegral.Section4.FieldBoundedProjection.of_fibre_ncard_le
+#print DiamondIntegral.Section4.FieldBoundedProjection.formula
+#print axioms DiamondIntegral.Section4.FieldBoundedProjection.formula
+#print DiamondIntegral.Section4.FieldBoundedProjection.formula_realize
+#print axioms DiamondIntegral.Section4.FieldBoundedProjection.formula_realize
+#print DiamondIntegral.Section4.FieldBoundedProjection.count_le
+#print axioms DiamondIntegral.Section4.FieldBoundedProjection.count_le
+#print DiamondIntegral.Section4.FiniteFieldBoundedDiagram.counts_exist
+#print axioms DiamondIntegral.Section4.FiniteFieldBoundedDiagram.counts_exist
+#print DiamondIntegral.Section4.RVCoordinatePieceCover.exists_cover
+#print axioms DiamondIntegral.Section4.RVCoordinatePieceCover.exists_cover
+#print DiamondIntegral.Section4.RVCoordinatePieceCover.uniform_bound
+#print axioms DiamondIntegral.Section4.RVCoordinatePieceCover.uniform_bound
+#print DiamondIntegral.Section4.FieldBoundedCharacters.exists_large
+#print axioms DiamondIntegral.Section4.FieldBoundedCharacters.exists_large
+#print DiamondIntegral.Section4.RVChartCoordinateMap.coordinateMap
+#print axioms DiamondIntegral.Section4.RVChartCoordinateMap.coordinateMap
+#print DiamondIntegral.Section4.RVChartCoordinateMap.coordinateMap_finite
+#print axioms DiamondIntegral.Section4.RVChartCoordinateMap.coordinateMap_finite
+#print DiamondIntegral.Section4.RVChartCoordinateMap.dimension_le
+#print axioms DiamondIntegral.Section4.RVChartCoordinateMap.dimension_le
+#print DiamondIntegral.Section4.FieldGrowthFiltration.Good
+#print axioms DiamondIntegral.Section4.FieldGrowthFiltration.Good
+#print DiamondIntegral.Section4.FieldGrowthFiltration.piece
+#print axioms DiamondIntegral.Section4.FieldGrowthFiltration.piece
+#print DiamondIntegral.Section4.FieldGrowthFiltration.chart_eq
+#print axioms DiamondIntegral.Section4.FieldGrowthFiltration.chart_eq
+#print DiamondIntegral.Section4.FieldGrowthFiltration.class_mem
+#print axioms DiamondIntegral.Section4.FieldGrowthFiltration.class_mem
+#print DiamondIntegral.Section4.FieldGrowthFiltration.good_subset
+#print axioms DiamondIntegral.Section4.FieldGrowthFiltration.good_subset
+#print DiamondIntegral.Section4.FieldGrowthFiltration.union_mem
+#print axioms DiamondIntegral.Section4.FieldGrowthFiltration.union_mem
+#print DiamondIntegral.Section4.FieldGrowthFiltration.finite_union_mem
+#print axioms DiamondIntegral.Section4.FieldGrowthFiltration.finite_union_mem
+#print DiamondIntegral.Section4.RESResidueGrowth.domain
+#print axioms DiamondIntegral.Section4.RESResidueGrowth.domain
+#print DiamondIntegral.Section4.RESResidueGrowth.domain_definable
+#print axioms DiamondIntegral.Section4.RESResidueGrowth.domain_definable
+#print DiamondIntegral.Section4.RESResidueGrowth.domain_good
+#print axioms DiamondIntegral.Section4.RESResidueGrowth.domain_good
+#print DiamondIntegral.Section4.RESResidueGrowth.value_mem
+#print axioms DiamondIntegral.Section4.RESResidueGrowth.value_mem
+#print DiamondIntegral.Section4.RESOrdinaryAdditiveGeneration.span
+#print axioms DiamondIntegral.Section4.RESOrdinaryAdditiveGeneration.span
+#print DiamondIntegral.Section4.RESOrdinaryAdditiveGeneration.class_mem
+#print axioms DiamondIntegral.Section4.RESOrdinaryAdditiveGeneration.class_mem
+#print DiamondIntegral.Section4.RESOrdinaryAdditiveGeneration.mul_mem
+#print axioms DiamondIntegral.Section4.RESOrdinaryAdditiveGeneration.mul_mem
+#print DiamondIntegral.Section4.RESOrdinaryAdditiveGeneration.mem_span
+#print axioms DiamondIntegral.Section4.RESOrdinaryAdditiveGeneration.mem_span
+#print DiamondIntegral.Section4.RESOrdinaryAdditiveGeneration.induction
+#print axioms DiamondIntegral.Section4.RESOrdinaryAdditiveGeneration.induction
+#print DiamondIntegral.Section4.FieldGrowthSeparation.affine_power_separated
+#print axioms DiamondIntegral.Section4.FieldGrowthSeparation.affine_power_separated
+#print DiamondIntegral.Section4.RESHomogeneousGrowth.coefficientTrace
+#print axioms DiamondIntegral.Section4.RESHomogeneousGrowth.coefficientTrace
+#print DiamondIntegral.Section4.RESHomogeneousGrowth.coefficient_mem
+#print axioms DiamondIntegral.Section4.RESHomogeneousGrowth.coefficient_mem
+#print DiamondIntegral.Section4.RESHomogeneousGrowth.reduced_mem
+#print axioms DiamondIntegral.Section4.RESHomogeneousGrowth.reduced_mem
+#print DiamondIntegral.Section4.RESAffineNonsurjective.affine_not_mem_range
+#print axioms DiamondIntegral.Section4.RESAffineNonsurjective.affine_not_mem_range
+#print DiamondIntegral.Section4.RESAffineNonsurjective.not_surjective
+#print axioms DiamondIntegral.Section4.RESAffineNonsurjective.not_surjective
+#print DiamondIntegral.Section4.RESAffineNonsurjective.remark_4_4
+#print axioms DiamondIntegral.Section4.RESAffineNonsurjective.remark_4_4
+#print DiamondIntegral.Section4.Section3PresentationAudit.OrdinaryTransport
+#print axioms DiamondIntegral.Section4.Section3PresentationAudit.OrdinaryTransport
+#print DiamondIntegral.Section4.Section3PresentationAudit.MeasuredTransport
+#print axioms DiamondIntegral.Section4.Section3PresentationAudit.MeasuredTransport
+#print DiamondIntegral.Section4.Section3PresentationAudit.ordinary
+#print axioms DiamondIntegral.Section4.Section3PresentationAudit.ordinary
+#print DiamondIntegral.Section4.Section3PresentationAudit.measured
+#print axioms DiamondIntegral.Section4.Section3PresentationAudit.measured
+#print DiamondIntegral.Section4.Section3RVCodeBridge.rawDomain
+#print axioms DiamondIntegral.Section4.Section3RVCodeBridge.rawDomain
+#print DiamondIntegral.Section4.Section3RVCodeBridge.rawDomain_definable
+#print axioms DiamondIntegral.Section4.Section3RVCodeBridge.rawDomain_definable
+#print DiamondIntegral.Section4.Section3RVCodeBridge.rawEquiv
+#print axioms DiamondIntegral.Section4.Section3RVCodeBridge.rawEquiv
+#print DiamondIntegral.Section4.Section3RVCodeBridge.rawEquiv_apply
+#print axioms DiamondIntegral.Section4.Section3RVCodeBridge.rawEquiv_apply
+#print DiamondIntegral.Section4.Section3RVCodeBridge.rawEquiv_symm_value
+#print axioms DiamondIntegral.Section4.Section3RVCodeBridge.rawEquiv_symm_value
+#print DiamondIntegral.Section4.Section3RVCodeBridge.ofRaw
+#print axioms DiamondIntegral.Section4.Section3RVCodeBridge.ofRaw
+#print DiamondIntegral.Section4.Section3RVCodeBridge.rawDomain_ofRaw
+#print axioms DiamondIntegral.Section4.Section3RVCodeBridge.rawDomain_ofRaw
+#print DiamondIntegral.Section4.Section3RVCodeBridge.joinedGraph
+#print axioms DiamondIntegral.Section4.Section3RVCodeBridge.joinedGraph
+#print DiamondIntegral.Section4.Section3RVCodeBridge.joinedGraph_definable
+#print axioms DiamondIntegral.Section4.Section3RVCodeBridge.joinedGraph_definable
+#print DiamondIntegral.Section4.Section3RVCodeBridge.rawMap
+#print axioms DiamondIntegral.Section4.Section3RVCodeBridge.rawMap
+#print DiamondIntegral.Section4.Section3RVCodeBridge.rawMap_apply
+#print axioms DiamondIntegral.Section4.Section3RVCodeBridge.rawMap_apply
+#print DiamondIntegral.Section4.Section3RVCodeBridge.joinedGraph_eq
+#print axioms DiamondIntegral.Section4.Section3RVCodeBridge.joinedGraph_eq
+#print DiamondIntegral.Section4.Section3RVCodeBridge.rawMap_definable
+#print axioms DiamondIntegral.Section4.Section3RVCodeBridge.rawMap_definable
+#print DiamondIntegral.Section4.Section3RVCodeBridge.rawMap_bijective
+#print axioms DiamondIntegral.Section4.Section3RVCodeBridge.rawMap_bijective
+#print DiamondIntegral.Section4.Section3RVCodeBridge.rawMap_finite
+#print axioms DiamondIntegral.Section4.Section3RVCodeBridge.rawMap_finite
+#print DiamondIntegral.Section4.Section3RVCodeBridge.mapOfRaw
+#print axioms DiamondIntegral.Section4.Section3RVCodeBridge.mapOfRaw
+#print DiamondIntegral.Section4.Section3RVCodeBridge.mapOfRaw_value
+#print axioms DiamondIntegral.Section4.Section3RVCodeBridge.mapOfRaw_value
+#print DiamondIntegral.Section4.Section3RVCodeBridge.bijectionOfRaw
+#print axioms DiamondIntegral.Section4.Section3RVCodeBridge.bijectionOfRaw
+#print DiamondIntegral.Section4.Section3RVCodeBridge.bijectionOfRaw_value
+#print axioms DiamondIntegral.Section4.Section3RVCodeBridge.bijectionOfRaw_value
+#print DiamondIntegral.Section4.Section3RVChartBridge.chart
+#print axioms DiamondIntegral.Section4.Section3RVChartBridge.chart
+#print DiamondIntegral.Section4.Section3RVChartBridge.native
+#print axioms DiamondIntegral.Section4.Section3RVChartBridge.native
+#print DiamondIntegral.Section4.Section3RVChartBridge.native_coordinate
+#print axioms DiamondIntegral.Section4.Section3RVChartBridge.native_coordinate
+#print DiamondIntegral.Section4.Section3RVChartBridge.chart_coordinate
+#print axioms DiamondIntegral.Section4.Section3RVChartBridge.chart_coordinate
+#print DiamondIntegral.Section4.Section3RVChartBridge.chartRES
+#print axioms DiamondIntegral.Section4.Section3RVChartBridge.chartRES
+#print DiamondIntegral.Section4.Section3RVChartBridge.nativeRES
+#print axioms DiamondIntegral.Section4.Section3RVChartBridge.nativeRES
+#print DiamondIntegral.Section4.Section3RVChartBridge.chartIso
+#print axioms DiamondIntegral.Section4.Section3RVChartBridge.chartIso
+#print DiamondIntegral.Section4.Section3RVFormBridge.rawForm
+#print axioms DiamondIntegral.Section4.Section3RVFormBridge.rawForm
+#print DiamondIntegral.Section4.Section3RVFormBridge.rawForm_apply
+#print axioms DiamondIntegral.Section4.Section3RVFormBridge.rawForm_apply
+#print DiamondIntegral.Section4.Section3RVFormBridge.codeGraph
+#print axioms DiamondIntegral.Section4.Section3RVFormBridge.codeGraph
+#print DiamondIntegral.Section4.Section3RVFormBridge.rawForm_definable
+#print axioms DiamondIntegral.Section4.Section3RVFormBridge.rawForm_definable
+#print DiamondIntegral.Section4.Section3RVFormBridge.ofRawForm
+#print axioms DiamondIntegral.Section4.Section3RVFormBridge.ofRawForm
+#print DiamondIntegral.Section4.Section3RVFormBridge.ofRawForm_value
+#print axioms DiamondIntegral.Section4.Section3RVFormBridge.ofRawForm_value
+#print DiamondIntegral.Section4.Section3MeasuredRVChartBridge.codeValue_finite
+#print axioms DiamondIntegral.Section4.Section3MeasuredRVChartBridge.codeValue_finite
+#print DiamondIntegral.Section4.Section3MeasuredRVChartBridge.chart
+#print axioms DiamondIntegral.Section4.Section3MeasuredRVChartBridge.chart
+#print DiamondIntegral.Section4.Section3MeasuredRVChartBridge.native
+#print axioms DiamondIntegral.Section4.Section3MeasuredRVChartBridge.native
+#print DiamondIntegral.Section4.Section3MeasuredRVChartBridge.chartRES
+#print axioms DiamondIntegral.Section4.Section3MeasuredRVChartBridge.chartRES
+#print DiamondIntegral.Section4.Section3MeasuredRVChartBridge.nativeRES
+#print axioms DiamondIntegral.Section4.Section3MeasuredRVChartBridge.nativeRES
+#print DiamondIntegral.Section4.Section3MeasuredRVChartBridge.chart_weight
+#print axioms DiamondIntegral.Section4.Section3MeasuredRVChartBridge.chart_weight
+#print DiamondIntegral.Section4.Section3MeasuredRVChartBridge.native_weight
+#print axioms DiamondIntegral.Section4.Section3MeasuredRVChartBridge.native_weight
+#print DiamondIntegral.Section4.Section3MeasuredRVChartBridge.chartIso
+#print axioms DiamondIntegral.Section4.Section3MeasuredRVChartBridge.chartIso
+#print DiamondIntegral.Section4.Section3RVRoundtripBridge.rawRoundtrip
+#print axioms DiamondIntegral.Section4.Section3RVRoundtripBridge.rawRoundtrip
+#print DiamondIntegral.Section4.Section3RVRoundtripBridge.nativeIso
+#print axioms DiamondIntegral.Section4.Section3RVRoundtripBridge.nativeIso
+#print DiamondIntegral.Section4.Section3RVRoundtripBridge.nativeMeasuredIso
+#print axioms DiamondIntegral.Section4.Section3RVRoundtripBridge.nativeMeasuredIso
+#print DiamondIntegral.Section4.Section3RVRoundtripBridge.native_chart
+#print axioms DiamondIntegral.Section4.Section3RVRoundtripBridge.native_chart
+#print DiamondIntegral.Section4.Section3RVRoundtripBridge.native_chart_measured
+#print axioms DiamondIntegral.Section4.Section3RVRoundtripBridge.native_chart_measured
+#print DiamondIntegral.Section4.Section3RVRoundtripBridge.chart_native_domain
+#print axioms DiamondIntegral.Section4.Section3RVRoundtripBridge.chart_native_domain
+#print DiamondIntegral.Section4.Section3RVRoundtripBridge.chart_native
+#print axioms DiamondIntegral.Section4.Section3RVRoundtripBridge.chart_native
+#print DiamondIntegral.Section4.Section3RVRoundtripBridge.chart_native_weight
+#print axioms DiamondIntegral.Section4.Section3RVRoundtripBridge.chart_native_weight
+#print DiamondIntegral.Section4.Section3RVRoundtripBridge.chart_native_measured
+#print axioms DiamondIntegral.Section4.Section3RVRoundtripBridge.chart_native_measured
+#print DiamondIntegral.Section4.Section3RVProductBridge.productIndices
+#print axioms DiamondIntegral.Section4.Section3RVProductBridge.productIndices
+#print DiamondIntegral.Section4.Section3RVProductBridge.productIndices_surjective
+#print axioms DiamondIntegral.Section4.Section3RVProductBridge.productIndices_surjective
+#print DiamondIntegral.Section4.Section3RVProductBridge.append_productIndices
+#print axioms DiamondIntegral.Section4.Section3RVProductBridge.append_productIndices
+#print DiamondIntegral.Section4.Section3RVProductBridge.rawDomain_product
+#print axioms DiamondIntegral.Section4.Section3RVProductBridge.rawDomain_product
+#print DiamondIntegral.Section4.Section3RVProductBridge.product_bijOn
+#print axioms DiamondIntegral.Section4.Section3RVProductBridge.product_bijOn
+#print DiamondIntegral.Section4.Section3RVProductBridge.productIso
+#print axioms DiamondIntegral.Section4.Section3RVProductBridge.productIso
+#print DiamondIntegral.Section4.Section3RVProductBridge.unpack_append
+#print axioms DiamondIntegral.Section4.Section3RVProductBridge.unpack_append
+#print DiamondIntegral.Section4.Section3RVProductBridge.measuredProductIso
+#print axioms DiamondIntegral.Section4.Section3RVProductBridge.measuredProductIso
+#print DiamondIntegral.Section4.Section3RVRestrictionBridge.rawDomain_mono
+#print axioms DiamondIntegral.Section4.Section3RVRestrictionBridge.rawDomain_mono
+#print DiamondIntegral.Section4.Section3RVRestrictionBridge.rawDomain_sdiff
+#print axioms DiamondIntegral.Section4.Section3RVRestrictionBridge.rawDomain_sdiff
+#print DiamondIntegral.Section4.Section3RVRestrictionBridge.restrictionIso
+#print axioms DiamondIntegral.Section4.Section3RVRestrictionBridge.restrictionIso
+#print DiamondIntegral.Section4.Section3RVRestrictionBridge.measuredRestrictionIso
+#print axioms DiamondIntegral.Section4.Section3RVRestrictionBridge.measuredRestrictionIso
+#print DiamondIntegral.Section4.Section3RVRestrictionBridge.nativeRestrictionIso
+#print axioms DiamondIntegral.Section4.Section3RVRestrictionBridge.nativeRestrictionIso
+#print DiamondIntegral.Section4.Section3RVRestrictionBridge.nativeMeasuredRestrictionIso
+#print axioms DiamondIntegral.Section4.Section3RVRestrictionBridge.nativeMeasuredRestrictionIso
+#print DiamondIntegral.Section4.RVRestrictionInvariants.Measured
+#print axioms DiamondIntegral.Section4.RVRestrictionInvariants.Measured
+#print DiamondIntegral.Section4.RVRestrictionInvariants.Ordinary
+#print axioms DiamondIntegral.Section4.RVRestrictionInvariants.Ordinary
+#print DiamondIntegral.Section4.RVRestrictionInvariants.measured_scissor_data
+#print axioms DiamondIntegral.Section4.RVRestrictionInvariants.measured_scissor_data
+#print DiamondIntegral.Section4.RVRestrictionInvariants.measured_scissor
+#print axioms DiamondIntegral.Section4.RVRestrictionInvariants.measured_scissor
+#print DiamondIntegral.Section4.RVRestrictionInvariants.ordinary_scissor_data
+#print axioms DiamondIntegral.Section4.RVRestrictionInvariants.ordinary_scissor_data
+#print DiamondIntegral.Section4.RVRestrictionInvariants.ordinary_scissor
+#print axioms DiamondIntegral.Section4.RVRestrictionInvariants.ordinary_scissor
+#print DiamondIntegral.Section4.Section3RVClassCuts.ordinaryClass
+#print axioms DiamondIntegral.Section4.Section3RVClassCuts.ordinaryClass
+#print DiamondIntegral.Section4.Section3RVClassCuts.measuredClass
+#print axioms DiamondIntegral.Section4.Section3RVClassCuts.measuredClass
+#print DiamondIntegral.Section4.Section3RVClassCuts.ordinary_iso
+#print axioms DiamondIntegral.Section4.Section3RVClassCuts.ordinary_iso
+#print DiamondIntegral.Section4.Section3RVClassCuts.measured_iso
+#print axioms DiamondIntegral.Section4.Section3RVClassCuts.measured_iso
+#print DiamondIntegral.Section4.Section3RVClassCuts.ordinary_cut
+#print axioms DiamondIntegral.Section4.Section3RVClassCuts.ordinary_cut
+#print DiamondIntegral.Section4.Section3RVClassCuts.measured_cut
+#print axioms DiamondIntegral.Section4.Section3RVClassCuts.measured_cut
+#print DiamondIntegral.Section4.Section3RVClassCuts.complementIso
+#print axioms DiamondIntegral.Section4.Section3RVClassCuts.complementIso
+#print DiamondIntegral.Section4.Section3RVClassCuts.measuredComplementIso
+#print axioms DiamondIntegral.Section4.Section3RVClassCuts.measuredComplementIso
+#print DiamondIntegral.Section4.Section3RVClassCuts.ordinary_partition
+#print axioms DiamondIntegral.Section4.Section3RVClassCuts.ordinary_partition
+#print DiamondIntegral.Section4.Section3RVClassCuts.measured_partition
+#print axioms DiamondIntegral.Section4.Section3RVClassCuts.measured_partition
+#print DiamondIntegral.Section4.Section3RVClassCuts.ordinaryInvariant
+#print axioms DiamondIntegral.Section4.Section3RVClassCuts.ordinaryInvariant
+#print DiamondIntegral.Section4.Section3RVClassCuts.measuredInvariant
+#print axioms DiamondIntegral.Section4.Section3RVClassCuts.measuredInvariant
+#print DiamondIntegral.Section4.Section3RVChartCuts.insideIso
+#print axioms DiamondIntegral.Section4.Section3RVChartCuts.insideIso
+#print DiamondIntegral.Section4.Section3RVChartCuts.measured_cut
+#print axioms DiamondIntegral.Section4.Section3RVChartCuts.measured_cut
+#print DiamondIntegral.Section4.Section3RVChartCuts.ordinary_cut
+#print axioms DiamondIntegral.Section4.Section3RVChartCuts.ordinary_cut
+#print DiamondIntegral.Section4.Section3RVChartCuts.complementIso
+#print axioms DiamondIntegral.Section4.Section3RVChartCuts.complementIso
+#print DiamondIntegral.Section4.Section3RVChartCuts.measuredComplementIso
+#print axioms DiamondIntegral.Section4.Section3RVChartCuts.measuredComplementIso
+#print DiamondIntegral.Section4.Section3RVChartCuts.ordinary_native_cut
+#print axioms DiamondIntegral.Section4.Section3RVChartCuts.ordinary_native_cut
+#print DiamondIntegral.Section4.Section3RVChartCuts.measured_native_cut
+#print axioms DiamondIntegral.Section4.Section3RVChartCuts.measured_native_cut
+#print DiamondIntegral.Section4.Section3RVBasicClasses.emptyBijection
+#print axioms DiamondIntegral.Section4.Section3RVBasicClasses.emptyBijection
+#print DiamondIntegral.Section4.Section3RVBasicClasses.ordinary_native_empty
+#print axioms DiamondIntegral.Section4.Section3RVBasicClasses.ordinary_native_empty
+#print DiamondIntegral.Section4.Section3RVBasicClasses.measured_native_empty
+#print axioms DiamondIntegral.Section4.Section3RVBasicClasses.measured_native_empty
+#print DiamondIntegral.Section4.Section3RVBasicClasses.nativeUnitIso
+#print axioms DiamondIntegral.Section4.Section3RVBasicClasses.nativeUnitIso
+#print DiamondIntegral.Section4.Section3RVBasicClasses.nativeMeasuredUnitIso
+#print axioms DiamondIntegral.Section4.Section3RVBasicClasses.nativeMeasuredUnitIso
+#print DiamondIntegral.Section4.Section3RVBasicClasses.ordinary_native_unit
+#print axioms DiamondIntegral.Section4.Section3RVBasicClasses.ordinary_native_unit
+#print DiamondIntegral.Section4.Section3RVBasicClasses.measured_native_unit
+#print axioms DiamondIntegral.Section4.Section3RVBasicClasses.measured_native_unit
+#print DiamondIntegral.Section4.Section3RVBasicClasses.nativeProductIso
+#print axioms DiamondIntegral.Section4.Section3RVBasicClasses.nativeProductIso
+#print DiamondIntegral.Section4.Section3RVBasicClasses.nativeMeasuredProductIso
+#print axioms DiamondIntegral.Section4.Section3RVBasicClasses.nativeMeasuredProductIso
+#print DiamondIntegral.Section4.Section3RVBasicClasses.ordinary_native_product
+#print axioms DiamondIntegral.Section4.Section3RVBasicClasses.ordinary_native_product
+#print DiamondIntegral.Section4.Section3RVBasicClasses.measured_native_product
+#print axioms DiamondIntegral.Section4.Section3RVBasicClasses.measured_native_product
+#print DiamondIntegral.Section4.Section3RVNativeRingMaps.ordinaryInvariant
+#print axioms DiamondIntegral.Section4.Section3RVNativeRingMaps.ordinaryInvariant
+#print DiamondIntegral.Section4.Section3RVNativeRingMaps.measuredInvariant
+#print axioms DiamondIntegral.Section4.Section3RVNativeRingMaps.measuredInvariant
+#print DiamondIntegral.Section4.Section3RVNativeRingMaps.ordinary
+#print axioms DiamondIntegral.Section4.Section3RVNativeRingMaps.ordinary
+#print DiamondIntegral.Section4.Section3RVNativeRingMaps.measured
+#print axioms DiamondIntegral.Section4.Section3RVNativeRingMaps.measured
+#print DiamondIntegral.Section4.Section3RVNativeRingMaps.ordinary_class
+#print axioms DiamondIntegral.Section4.Section3RVNativeRingMaps.ordinary_class
+#print DiamondIntegral.Section4.Section3RVNativeRingMaps.measured_class
+#print axioms DiamondIntegral.Section4.Section3RVNativeRingMaps.measured_class
+#print DiamondIntegral.Section4.Section3RVChartRingMaps.unitIso
+#print axioms DiamondIntegral.Section4.Section3RVChartRingMaps.unitIso
+#print DiamondIntegral.Section4.Section3RVChartRingMaps.measuredUnitIso
+#print axioms DiamondIntegral.Section4.Section3RVChartRingMaps.measuredUnitIso
+#print DiamondIntegral.Section4.Section3RVChartRingMaps.ordinary_empty
+#print axioms DiamondIntegral.Section4.Section3RVChartRingMaps.ordinary_empty
+#print DiamondIntegral.Section4.Section3RVChartRingMaps.measured_empty
+#print axioms DiamondIntegral.Section4.Section3RVChartRingMaps.measured_empty
+#print DiamondIntegral.Section4.Section3RVChartRingMaps.ordinary_product
+#print axioms DiamondIntegral.Section4.Section3RVChartRingMaps.ordinary_product
+#print DiamondIntegral.Section4.Section3RVChartRingMaps.measured_product
+#print axioms DiamondIntegral.Section4.Section3RVChartRingMaps.measured_product
+#print DiamondIntegral.Section4.Section3RVChartRingMaps.ordinary_scissor
+#print axioms DiamondIntegral.Section4.Section3RVChartRingMaps.ordinary_scissor
+#print DiamondIntegral.Section4.Section3RVChartRingMaps.measured_scissor
+#print axioms DiamondIntegral.Section4.Section3RVChartRingMaps.measured_scissor
+#print DiamondIntegral.Section4.Section3RVChartRingMaps.ordinaryInvariant
+#print axioms DiamondIntegral.Section4.Section3RVChartRingMaps.ordinaryInvariant
+#print DiamondIntegral.Section4.Section3RVChartRingMaps.measuredInvariant
+#print axioms DiamondIntegral.Section4.Section3RVChartRingMaps.measuredInvariant
+#print DiamondIntegral.Section4.Section3RVChartRingMaps.ordinary
+#print axioms DiamondIntegral.Section4.Section3RVChartRingMaps.ordinary
+#print DiamondIntegral.Section4.Section3RVChartRingMaps.measured
+#print axioms DiamondIntegral.Section4.Section3RVChartRingMaps.measured
+#print DiamondIntegral.Section4.Section3RVChartRingMaps.ordinary_class
+#print axioms DiamondIntegral.Section4.Section3RVChartRingMaps.ordinary_class
+#print DiamondIntegral.Section4.Section3RVChartRingMaps.measured_class
+#print axioms DiamondIntegral.Section4.Section3RVChartRingMaps.measured_class
+#print DiamondIntegral.Section4.Section3RVRingEquivalences.ordinary_hom_ext
+#print axioms DiamondIntegral.Section4.Section3RVRingEquivalences.ordinary_hom_ext
+#print DiamondIntegral.Section4.Section3RVRingEquivalences.measured_hom_ext
+#print axioms DiamondIntegral.Section4.Section3RVRingEquivalences.measured_hom_ext
+#print DiamondIntegral.Section4.Section3RVRingEquivalences.ordinary_chart_native
+#print axioms DiamondIntegral.Section4.Section3RVRingEquivalences.ordinary_chart_native
+#print DiamondIntegral.Section4.Section3RVRingEquivalences.measured_chart_native
+#print axioms DiamondIntegral.Section4.Section3RVRingEquivalences.measured_chart_native
+#print DiamondIntegral.Section4.Section3RVRingEquivalences.ordinary_native_chart
+#print axioms DiamondIntegral.Section4.Section3RVRingEquivalences.ordinary_native_chart
+#print DiamondIntegral.Section4.Section3RVRingEquivalences.measured_native_chart
+#print axioms DiamondIntegral.Section4.Section3RVRingEquivalences.measured_native_chart
+#print DiamondIntegral.Section4.Section3RVRingEquivalences.ordinary
+#print axioms DiamondIntegral.Section4.Section3RVRingEquivalences.ordinary
+#print DiamondIntegral.Section4.Section3RVRingEquivalences.measured
+#print axioms DiamondIntegral.Section4.Section3RVRingEquivalences.measured
+#print DiamondIntegral.Section4.Section3RVRingEquivalences.ordinary_class
+#print axioms DiamondIntegral.Section4.Section3RVRingEquivalences.ordinary_class
+#print DiamondIntegral.Section4.Section3RVRingEquivalences.measured_class
+#print axioms DiamondIntegral.Section4.Section3RVRingEquivalences.measured_class
+#print DiamondIntegral.Section4.Section3RVRingEquivalences.ordinary_symm_class
+#print axioms DiamondIntegral.Section4.Section3RVRingEquivalences.ordinary_symm_class
+#print DiamondIntegral.Section4.Section3RVRingEquivalences.measured_symm_class
+#print axioms DiamondIntegral.Section4.Section3RVRingEquivalences.measured_symm_class
+#print DiamondIntegral.Section4.Section3GammaCodeBridge.full_iff
+#print axioms DiamondIntegral.Section4.Section3GammaCodeBridge.full_iff
+#print DiamondIntegral.Section4.Section3GammaCodeBridge.native_iff
+#print axioms DiamondIntegral.Section4.Section3GammaCodeBridge.native_iff
+#print DiamondIntegral.Section4.Section3GammaCodeBridge.native
+#print axioms DiamondIntegral.Section4.Section3GammaCodeBridge.native
+#print DiamondIntegral.Section4.Section3GammaCodeBridge.function_iff
+#print axioms DiamondIntegral.Section4.Section3GammaCodeBridge.function_iff
+#print DiamondIntegral.Section4.Section3GammaCodeBridge.form
+#print axioms DiamondIntegral.Section4.Section3GammaCodeBridge.form
+#print DiamondIntegral.Section4.Section3GammaCodeBridge.form_value
+#print axioms DiamondIntegral.Section4.Section3GammaCodeBridge.form_value
+#print DiamondIntegral.Section4.Section3GammaChartBridge.chart
+#print axioms DiamondIntegral.Section4.Section3GammaChartBridge.chart
+#print DiamondIntegral.Section4.Section3GammaChartBridge.nativeOrdinary
+#print axioms DiamondIntegral.Section4.Section3GammaChartBridge.nativeOrdinary
+#print DiamondIntegral.Section4.Section3GammaChartBridge.totalForm
+#print axioms DiamondIntegral.Section4.Section3GammaChartBridge.totalForm
+#print DiamondIntegral.Section4.Section3GammaChartBridge.totalForm_definable
+#print axioms DiamondIntegral.Section4.Section3GammaChartBridge.totalForm_definable
+#print DiamondIntegral.Section4.Section3GammaChartBridge.totalForm_on
+#print axioms DiamondIntegral.Section4.Section3GammaChartBridge.totalForm_on
+#print DiamondIntegral.Section4.Section3GammaChartBridge.measuredChart
+#print axioms DiamondIntegral.Section4.Section3GammaChartBridge.measuredChart
+#print DiamondIntegral.Section4.Section3GammaChartBridge.measuredChart_volume
+#print axioms DiamondIntegral.Section4.Section3GammaChartBridge.measuredChart_volume
+#print DiamondIntegral.Section4.Section3GammaChartBridge.nativeMeasured
+#print axioms DiamondIntegral.Section4.Section3GammaChartBridge.nativeMeasured
+#print DiamondIntegral.Section4.Section3GammaChartBridge.nativeMeasured_weight
+#print axioms DiamondIntegral.Section4.Section3GammaChartBridge.nativeMeasured_weight
+#print DiamondIntegral.Section4.Section3GammaChartBridge.ordinaryFamily
+#print axioms DiamondIntegral.Section4.Section3GammaChartBridge.ordinaryFamily
+#print DiamondIntegral.Section4.Section3GammaChartBridge.measuredFamily
+#print axioms DiamondIntegral.Section4.Section3GammaChartBridge.measuredFamily
+#print DiamondIntegral.Section4.Section3GammaChartBridge.measuredFamily_weight
+#print axioms DiamondIntegral.Section4.Section3GammaChartBridge.measuredFamily_weight
+#print DiamondIntegral.Section4.Section3GammaRelationBridge.splitMap
+#print axioms DiamondIntegral.Section4.Section3GammaRelationBridge.splitMap
+#print DiamondIntegral.Section4.Section3GammaRelationBridge.mergeIndices
+#print axioms DiamondIntegral.Section4.Section3GammaRelationBridge.mergeIndices
+#print DiamondIntegral.Section4.Section3GammaRelationBridge.append_mergeIndices
+#print axioms DiamondIntegral.Section4.Section3GammaRelationBridge.append_mergeIndices
+#print DiamondIntegral.Section4.Section3GammaRelationBridge.mergeMap
+#print axioms DiamondIntegral.Section4.Section3GammaRelationBridge.mergeMap
+#print DiamondIntegral.Section4.Section3GammaRelationBridge.mergeMap_value
+#print axioms DiamondIntegral.Section4.Section3GammaRelationBridge.mergeMap_value
+#print DiamondIntegral.Section4.Section3GammaRelationBridge.relation_iff
+#print axioms DiamondIntegral.Section4.Section3GammaRelationBridge.relation_iff
+#print DiamondIntegral.Section4.Section3RVRelationBridge.splitMap
+#print axioms DiamondIntegral.Section4.Section3RVRelationBridge.splitMap
+#print DiamondIntegral.Section4.Section3RVRelationBridge.mergeMap
+#print axioms DiamondIntegral.Section4.Section3RVRelationBridge.mergeMap
+#print DiamondIntegral.Section4.Section3RVRelationBridge.mergeMap_value
+#print axioms DiamondIntegral.Section4.Section3RVRelationBridge.mergeMap_value
+#print DiamondIntegral.Section4.Section3RVRelationBridge.realization
+#print axioms DiamondIntegral.Section4.Section3RVRelationBridge.realization
+#print DiamondIntegral.Section4.Section3RVRelationBridge.relation_iff
+#print axioms DiamondIntegral.Section4.Section3RVRelationBridge.relation_iff
+#print DiamondIntegral.Section4.Section3GammaMapBridge.map
+#print axioms DiamondIntegral.Section4.Section3GammaMapBridge.map
+#print DiamondIntegral.Section4.Section3GammaMapBridge.map_apply
+#print axioms DiamondIntegral.Section4.Section3GammaMapBridge.map_apply
+#print DiamondIntegral.Section4.Section3GammaMapBridge.map_definable
+#print axioms DiamondIntegral.Section4.Section3GammaMapBridge.map_definable
+#print DiamondIntegral.Section4.Section3GammaMapBridge.nativeMap
+#print axioms DiamondIntegral.Section4.Section3GammaMapBridge.nativeMap
+#print DiamondIntegral.Section4.Section3GammaRVCodeBridge.rawCode
+#print axioms DiamondIntegral.Section4.Section3GammaRVCodeBridge.rawCode
+#print DiamondIntegral.Section4.Section3GammaRVCodeBridge.rawCode_proper
+#print axioms DiamondIntegral.Section4.Section3GammaRVCodeBridge.rawCode_proper
+#print DiamondIntegral.Section4.Section3GammaRVCodeBridge.rawCode_value
+#print axioms DiamondIntegral.Section4.Section3GammaRVCodeBridge.rawCode_value
+#print DiamondIntegral.Section4.Section3GammaRVCodeBridge.codeToRV_raw
+#print axioms DiamondIntegral.Section4.Section3GammaRVCodeBridge.codeToRV_raw
+#print DiamondIntegral.Section4.Section3GammaRVCodeBridge.rawDomain_codeLift
+#print axioms DiamondIntegral.Section4.Section3GammaRVCodeBridge.rawDomain_codeLift
+#print DiamondIntegral.Section4.Section3GammaRVCodeBridge.codeLift_carrier
+#print axioms DiamondIntegral.Section4.Section3GammaRVCodeBridge.codeLift_carrier
+#print DiamondIntegral.Section4.Section3GammaRVCodeBridge.codeBijection
+#print axioms DiamondIntegral.Section4.Section3GammaRVCodeBridge.codeBijection
+#print DiamondIntegral.Section4.Section3GammaRVCodeBridge.codeBijection_value
+#print axioms DiamondIntegral.Section4.Section3GammaRVCodeBridge.codeBijection_value
+#print DiamondIntegral.Section4.Section3GammaFamilyBridge.familyEquiv
+#print axioms DiamondIntegral.Section4.Section3GammaFamilyBridge.familyEquiv
+#print DiamondIntegral.Section4.Section3GammaFamilyBridge.equiv
+#print axioms DiamondIntegral.Section4.Section3GammaFamilyBridge.equiv
+#print DiamondIntegral.Section4.Section3GammaFamilyBridge.sourcePiece_eq
+#print axioms DiamondIntegral.Section4.Section3GammaFamilyBridge.sourcePiece_eq
+#print DiamondIntegral.Section4.Section3GammaFamilyBridge.sourcePiece_definable
+#print axioms DiamondIntegral.Section4.Section3GammaFamilyBridge.sourcePiece_definable
+#print DiamondIntegral.Section4.Section3GammaFamilyBridge.pieceMap_branch
+#print axioms DiamondIntegral.Section4.Section3GammaFamilyBridge.pieceMap_branch
+#print DiamondIntegral.Section4.Section3GammaFamilyBridge.graph_definable
+#print axioms DiamondIntegral.Section4.Section3GammaFamilyBridge.graph_definable
+#print DiamondIntegral.Section4.Section3RVFamilyBridge.rvValues_join
+#print axioms DiamondIntegral.Section4.Section3RVFamilyBridge.rvValues_join
+#print DiamondIntegral.Section4.Section3RVFamilyBridge.familyEquiv
+#print axioms DiamondIntegral.Section4.Section3RVFamilyBridge.familyEquiv
+#print DiamondIntegral.Section4.Section3RVFamilyBridge.equiv
+#print axioms DiamondIntegral.Section4.Section3RVFamilyBridge.equiv
+#print DiamondIntegral.Section4.Section3RVFamilyBridge.equiv_apply
+#print axioms DiamondIntegral.Section4.Section3RVFamilyBridge.equiv_apply
+#print DiamondIntegral.Section4.Section3RVFamilyBridge.graph_definable
+#print axioms DiamondIntegral.Section4.Section3RVFamilyBridge.graph_definable
+#print DiamondIntegral.Section4.FiniteFamilyDomainCongruence.congr
+#print axioms DiamondIntegral.Section4.FiniteFamilyDomainCongruence.congr
+#print DiamondIntegral.Section4.FiniteFamilyDomainCongruence.transport
+#print axioms DiamondIntegral.Section4.FiniteFamilyDomainCongruence.transport
+#print DiamondIntegral.Section4.FiniteFamilyDomainCongruence.sourcePiece_eq
+#print axioms DiamondIntegral.Section4.FiniteFamilyDomainCongruence.sourcePiece_eq
+#print DiamondIntegral.Section4.FiniteFamilyDomainCongruence.pieceMap_eq
+#print axioms DiamondIntegral.Section4.FiniteFamilyDomainCongruence.pieceMap_eq
+#print DiamondIntegral.Section4.Section3GammaCodeFamilyBridge.rvFamily
+#print axioms DiamondIntegral.Section4.Section3GammaCodeFamilyBridge.rvFamily
+#print DiamondIntegral.Section4.Section3GammaCodeFamilyBridge.codeFamily
+#print axioms DiamondIntegral.Section4.Section3GammaCodeFamilyBridge.codeFamily
+#print DiamondIntegral.Section4.Section3GammaCodeFamilyBridge.codeEquiv
+#print axioms DiamondIntegral.Section4.Section3GammaCodeFamilyBridge.codeEquiv
+#print DiamondIntegral.Section4.Section3GammaCodeFamilyBridge.nativeMap
+#print axioms DiamondIntegral.Section4.Section3GammaCodeFamilyBridge.nativeMap
+#print DiamondIntegral.Section4.Section3GammaCodeFamilyBridge.liftEquiv
+#print axioms DiamondIntegral.Section4.Section3GammaCodeFamilyBridge.liftEquiv
+#print DiamondIntegral.Section4.Section3GammaCodeFamilyBridge.liftEquiv_transport
+#print axioms DiamondIntegral.Section4.Section3GammaCodeFamilyBridge.liftEquiv_transport
+#print DiamondIntegral.Section4.Section3GammaCodeFamilyBridge.lift_graph
+#print axioms DiamondIntegral.Section4.Section3GammaCodeFamilyBridge.lift_graph
+#print DiamondIntegral.Section4.Section3GammaCodeFamilyBridge.decode_commute
+#print axioms DiamondIntegral.Section4.Section3GammaCodeFamilyBridge.decode_commute
+#print DiamondIntegral.Section4.Section3GammaCodeFamilyBridge.contraction
+#print axioms DiamondIntegral.Section4.Section3GammaCodeFamilyBridge.contraction
+#print DiamondIntegral.Section4.Section3GammaFamilyIsomorphismBridge.sourcePiece_lift
+#print axioms DiamondIntegral.Section4.Section3GammaFamilyIsomorphismBridge.sourcePiece_lift
+#print DiamondIntegral.Section4.Section3GammaFamilyIsomorphismBridge.ordinaryWithLift
+#print axioms DiamondIntegral.Section4.Section3GammaFamilyIsomorphismBridge.ordinaryWithLift
+#print DiamondIntegral.Section4.Section3GammaFamilyIsomorphismBridge.ordinary
+#print axioms DiamondIntegral.Section4.Section3GammaFamilyIsomorphismBridge.ordinary
+#print DiamondIntegral.Section4.Section3GammaFamilyIsomorphismBridge.measured
+#print axioms DiamondIntegral.Section4.Section3GammaFamilyIsomorphismBridge.measured
+#print DiamondIntegral.Section4.Section3GammaNativeCodeMaps.gammaBijection
+#print axioms DiamondIntegral.Section4.Section3GammaNativeCodeMaps.gammaBijection
+#print DiamondIntegral.Section4.Section3GammaNativeCodeMaps.lift_graph
+#print axioms DiamondIntegral.Section4.Section3GammaNativeCodeMaps.lift_graph
+#print DiamondIntegral.Section4.Section3GammaNativeCodeMaps.rawBijection
+#print axioms DiamondIntegral.Section4.Section3GammaNativeCodeMaps.rawBijection
+#print DiamondIntegral.Section4.Section3GammaNativeCodeMaps.codeBijection
+#print axioms DiamondIntegral.Section4.Section3GammaNativeCodeMaps.codeBijection
+#print DiamondIntegral.Section4.Section3GammaNativeCodeMaps.codeBijection_raw
+#print axioms DiamondIntegral.Section4.Section3GammaNativeCodeMaps.codeBijection_raw
+#print DiamondIntegral.Section4.Section3GammaNativeCodeMaps.codeBijection_quotient
+#print axioms DiamondIntegral.Section4.Section3GammaNativeCodeMaps.codeBijection_quotient
+#print DiamondIntegral.Section4.Section3GammaNativeIsomorphisms.ordinary
+#print axioms DiamondIntegral.Section4.Section3GammaNativeIsomorphisms.ordinary
+#print DiamondIntegral.Section4.Section3GammaNativeIsomorphisms.measured
+#print axioms DiamondIntegral.Section4.Section3GammaNativeIsomorphisms.measured
+#print DiamondIntegral.Section4.Section3GammaRoundtripBridge.ordinary_chart_native
+#print axioms DiamondIntegral.Section4.Section3GammaRoundtripBridge.ordinary_chart_native
+#print DiamondIntegral.Section4.Section3GammaRoundtripBridge.ordinary_native_chart
+#print axioms DiamondIntegral.Section4.Section3GammaRoundtripBridge.ordinary_native_chart
+#print DiamondIntegral.Section4.Section3GammaRoundtripBridge.measured_chart_native
+#print axioms DiamondIntegral.Section4.Section3GammaRoundtripBridge.measured_chart_native
+#print DiamondIntegral.Section4.Section3GammaRoundtripBridge.measured_native_chart
+#print axioms DiamondIntegral.Section4.Section3GammaRoundtripBridge.measured_native_chart
+#print DiamondIntegral.Section4.RVAdmissibleRestrictionInvariants.Measured
+#print axioms DiamondIntegral.Section4.RVAdmissibleRestrictionInvariants.Measured
+#print DiamondIntegral.Section4.RVAdmissibleRestrictionInvariants.Ordinary
+#print axioms DiamondIntegral.Section4.RVAdmissibleRestrictionInvariants.Ordinary
+#print DiamondIntegral.Section4.RVAdmissibleRestrictionInvariants.measured_scissor_data
+#print axioms DiamondIntegral.Section4.RVAdmissibleRestrictionInvariants.measured_scissor_data
+#print DiamondIntegral.Section4.RVAdmissibleRestrictionInvariants.measured_scissor
+#print axioms DiamondIntegral.Section4.RVAdmissibleRestrictionInvariants.measured_scissor
+#print DiamondIntegral.Section4.RVAdmissibleRestrictionInvariants.ordinary_scissor_data
+#print axioms DiamondIntegral.Section4.RVAdmissibleRestrictionInvariants.ordinary_scissor_data
+#print DiamondIntegral.Section4.RVAdmissibleRestrictionInvariants.ordinary_scissor
+#print axioms DiamondIntegral.Section4.RVAdmissibleRestrictionInvariants.ordinary_scissor
+#print DiamondIntegral.Section4.Section3RESClassCuts.OrdinaryRing
+#print axioms DiamondIntegral.Section4.Section3RESClassCuts.OrdinaryRing
+#print DiamondIntegral.Section4.Section3RESClassCuts.MeasuredRing
+#print axioms DiamondIntegral.Section4.Section3RESClassCuts.MeasuredRing
+#print DiamondIntegral.Section4.Section3RESClassCuts.ordinaryClass
+#print axioms DiamondIntegral.Section4.Section3RESClassCuts.ordinaryClass
+#print DiamondIntegral.Section4.Section3RESClassCuts.measuredClass
+#print axioms DiamondIntegral.Section4.Section3RESClassCuts.measuredClass
+#print DiamondIntegral.Section4.Section3RESClassCuts.ordinaryComponent
+#print axioms DiamondIntegral.Section4.Section3RESClassCuts.ordinaryComponent
+#print DiamondIntegral.Section4.Section3RESClassCuts.measuredComponent
+#print axioms DiamondIntegral.Section4.Section3RESClassCuts.measuredComponent
+#print DiamondIntegral.Section4.Section3RESClassCuts.ordinary_iso
+#print axioms DiamondIntegral.Section4.Section3RESClassCuts.ordinary_iso
+#print DiamondIntegral.Section4.Section3RESClassCuts.measured_iso
+#print axioms DiamondIntegral.Section4.Section3RESClassCuts.measured_iso
+#print DiamondIntegral.Section4.Section3RESClassCuts.ordinary_cut
+#print axioms DiamondIntegral.Section4.Section3RESClassCuts.ordinary_cut
+#print DiamondIntegral.Section4.Section3RESClassCuts.measured_cut
+#print axioms DiamondIntegral.Section4.Section3RESClassCuts.measured_cut
+#print DiamondIntegral.Section4.Section3RESClassCuts.ordinaryNative
+#print axioms DiamondIntegral.Section4.Section3RESClassCuts.ordinaryNative
+#print DiamondIntegral.Section4.Section3RESClassCuts.measuredNative
+#print axioms DiamondIntegral.Section4.Section3RESClassCuts.measuredNative
+#print DiamondIntegral.Section4.Section3RESClassCuts.ordinary_partition
+#print axioms DiamondIntegral.Section4.Section3RESClassCuts.ordinary_partition
+#print DiamondIntegral.Section4.Section3RESClassCuts.measured_partition
+#print axioms DiamondIntegral.Section4.Section3RESClassCuts.measured_partition
+#print DiamondIntegral.Section4.Section3RESClassCuts.ordinaryInvariant
+#print axioms DiamondIntegral.Section4.Section3RESClassCuts.ordinaryInvariant
+#print DiamondIntegral.Section4.Section3RESClassCuts.measuredInvariant
+#print axioms DiamondIntegral.Section4.Section3RESClassCuts.measuredInvariant
+#print DiamondIntegral.Section4.Section3RESBasicClasses.ordinary_unit
+#print axioms DiamondIntegral.Section4.Section3RESBasicClasses.ordinary_unit
+#print DiamondIntegral.Section4.Section3RESBasicClasses.measured_unit
+#print axioms DiamondIntegral.Section4.Section3RESBasicClasses.measured_unit
+#print DiamondIntegral.Section4.Section3RESBasicClasses.ordinary_product
+#print axioms DiamondIntegral.Section4.Section3RESBasicClasses.ordinary_product
+#print DiamondIntegral.Section4.Section3RESBasicClasses.measured_product
+#print axioms DiamondIntegral.Section4.Section3RESBasicClasses.measured_product
+#print DiamondIntegral.Section4.Section3RESBasicClasses.ordinary_native_unit
+#print axioms DiamondIntegral.Section4.Section3RESBasicClasses.ordinary_native_unit
+#print DiamondIntegral.Section4.Section3RESBasicClasses.measured_native_unit
+#print axioms DiamondIntegral.Section4.Section3RESBasicClasses.measured_native_unit
+#print DiamondIntegral.Section4.Section3RESBasicClasses.ordinary_native_product
+#print axioms DiamondIntegral.Section4.Section3RESBasicClasses.ordinary_native_product
+#print DiamondIntegral.Section4.Section3RESBasicClasses.measured_native_product
+#print axioms DiamondIntegral.Section4.Section3RESBasicClasses.measured_native_product
+#print DiamondIntegral.Section4.Section3RESBasicClasses.ordinary_native_empty
+#print axioms DiamondIntegral.Section4.Section3RESBasicClasses.ordinary_native_empty
+#print DiamondIntegral.Section4.Section3RESBasicClasses.measured_native_empty
+#print axioms DiamondIntegral.Section4.Section3RESBasicClasses.measured_native_empty
+#print DiamondIntegral.Section4.Section3RESNativeRingMaps.ordinaryInvariant
+#print axioms DiamondIntegral.Section4.Section3RESNativeRingMaps.ordinaryInvariant
+#print DiamondIntegral.Section4.Section3RESNativeRingMaps.measuredInvariant
+#print axioms DiamondIntegral.Section4.Section3RESNativeRingMaps.measuredInvariant
+#print DiamondIntegral.Section4.Section3RESNativeRingMaps.ordinary
+#print axioms DiamondIntegral.Section4.Section3RESNativeRingMaps.ordinary
+#print DiamondIntegral.Section4.Section3RESNativeRingMaps.measured
+#print axioms DiamondIntegral.Section4.Section3RESNativeRingMaps.measured
+#print DiamondIntegral.Section4.Section3RESNativeRingMaps.ordinary_class
+#print axioms DiamondIntegral.Section4.Section3RESNativeRingMaps.ordinary_class
+#print DiamondIntegral.Section4.Section3RESNativeRingMaps.measured_class
+#print axioms DiamondIntegral.Section4.Section3RESNativeRingMaps.measured_class
+#print DiamondIntegral.Section4.Section3RESChartCuts.restrict
+#print axioms DiamondIntegral.Section4.Section3RESChartCuts.restrict
+#print DiamondIntegral.Section4.Section3RESChartCuts.outside
+#print axioms DiamondIntegral.Section4.Section3RESChartCuts.outside
+#print DiamondIntegral.Section4.Section3RESChartCuts.inside
+#print axioms DiamondIntegral.Section4.Section3RESChartCuts.inside
+#print DiamondIntegral.Section4.Section3RESChartCuts.ordinary_cut
+#print axioms DiamondIntegral.Section4.Section3RESChartCuts.ordinary_cut
+#print DiamondIntegral.Section4.Section3RESChartCuts.measured_cut
+#print axioms DiamondIntegral.Section4.Section3RESChartCuts.measured_cut
+#print DiamondIntegral.Section4.Section3RESChartCuts.ordinary_native_cut
+#print axioms DiamondIntegral.Section4.Section3RESChartCuts.ordinary_native_cut
+#print DiamondIntegral.Section4.Section3RESChartCuts.measured_native_cut
+#print axioms DiamondIntegral.Section4.Section3RESChartCuts.measured_native_cut
+#print DiamondIntegral.Section4.Section3RESChartCuts.ordinary_obj_eq
+#print axioms DiamondIntegral.Section4.Section3RESChartCuts.ordinary_obj_eq
+#print DiamondIntegral.Section4.Section3RESChartCuts.measured_obj_eq
+#print axioms DiamondIntegral.Section4.Section3RESChartCuts.measured_obj_eq
+#print DiamondIntegral.Section4.Section3RESChartCuts.ordinary_scissor
+#print axioms DiamondIntegral.Section4.Section3RESChartCuts.ordinary_scissor
+#print DiamondIntegral.Section4.Section3RESChartCuts.measured_scissor
+#print axioms DiamondIntegral.Section4.Section3RESChartCuts.measured_scissor
+#print DiamondIntegral.Section4.Section3RESChartAddMaps.ordinaryInvariant
+#print axioms DiamondIntegral.Section4.Section3RESChartAddMaps.ordinaryInvariant
+#print DiamondIntegral.Section4.Section3RESChartAddMaps.measuredInvariant
+#print axioms DiamondIntegral.Section4.Section3RESChartAddMaps.measuredInvariant
+#print DiamondIntegral.Section4.Section3RESChartAddMaps.ordinaryComponent
+#print axioms DiamondIntegral.Section4.Section3RESChartAddMaps.ordinaryComponent
+#print DiamondIntegral.Section4.Section3RESChartAddMaps.measuredComponent
+#print axioms DiamondIntegral.Section4.Section3RESChartAddMaps.measuredComponent
+#print DiamondIntegral.Section4.Section3RESChartAddMaps.ordinary
+#print axioms DiamondIntegral.Section4.Section3RESChartAddMaps.ordinary
+#print DiamondIntegral.Section4.Section3RESChartAddMaps.measured
+#print axioms DiamondIntegral.Section4.Section3RESChartAddMaps.measured
+#print DiamondIntegral.Section4.Section3RESChartAddMaps.ordinary_class
+#print axioms DiamondIntegral.Section4.Section3RESChartAddMaps.ordinary_class
+#print DiamondIntegral.Section4.Section3RESChartAddMaps.measured_class
+#print axioms DiamondIntegral.Section4.Section3RESChartAddMaps.measured_class
+#print DiamondIntegral.Section4.ObjectClassAdditiveGeneration.Presentation
+#print axioms DiamondIntegral.Section4.ObjectClassAdditiveGeneration.Presentation
+#print DiamondIntegral.Section4.ObjectClassAdditiveGeneration.span
+#print axioms DiamondIntegral.Section4.ObjectClassAdditiveGeneration.span
+#print DiamondIntegral.Section4.ObjectClassAdditiveGeneration.class_mem
+#print axioms DiamondIntegral.Section4.ObjectClassAdditiveGeneration.class_mem
+#print DiamondIntegral.Section4.ObjectClassAdditiveGeneration.mul_mem
+#print axioms DiamondIntegral.Section4.ObjectClassAdditiveGeneration.mul_mem
+#print DiamondIntegral.Section4.ObjectClassAdditiveGeneration.mem_span
+#print axioms DiamondIntegral.Section4.ObjectClassAdditiveGeneration.mem_span
+#print DiamondIntegral.Section4.ObjectClassAdditiveGeneration.hom_ext
+#print axioms DiamondIntegral.Section4.ObjectClassAdditiveGeneration.hom_ext
+#print DiamondIntegral.Section4.Section3RESRingEquivalences.ordinaryPresentation
+#print axioms DiamondIntegral.Section4.Section3RESRingEquivalences.ordinaryPresentation
+#print DiamondIntegral.Section4.Section3RESRingEquivalences.measuredPresentation
+#print axioms DiamondIntegral.Section4.Section3RESRingEquivalences.measuredPresentation
+#print DiamondIntegral.Section4.Section3RESRingEquivalences.ordinary_addHom_ext
+#print axioms DiamondIntegral.Section4.Section3RESRingEquivalences.ordinary_addHom_ext
+#print DiamondIntegral.Section4.Section3RESRingEquivalences.measured_addHom_ext
+#print axioms DiamondIntegral.Section4.Section3RESRingEquivalences.measured_addHom_ext
+#print DiamondIntegral.Section4.Section3RESRingEquivalences.ordinary_chart_native
+#print axioms DiamondIntegral.Section4.Section3RESRingEquivalences.ordinary_chart_native
+#print DiamondIntegral.Section4.Section3RESRingEquivalences.measured_chart_native
+#print axioms DiamondIntegral.Section4.Section3RESRingEquivalences.measured_chart_native
+#print DiamondIntegral.Section4.Section3RESRingEquivalences.ordinary_native_chart
+#print axioms DiamondIntegral.Section4.Section3RESRingEquivalences.ordinary_native_chart
+#print DiamondIntegral.Section4.Section3RESRingEquivalences.measured_native_chart
+#print axioms DiamondIntegral.Section4.Section3RESRingEquivalences.measured_native_chart
+#print DiamondIntegral.Section4.Section3RESRingEquivalences.ordinary
+#print axioms DiamondIntegral.Section4.Section3RESRingEquivalences.ordinary
+#print DiamondIntegral.Section4.Section3RESRingEquivalences.measured
+#print axioms DiamondIntegral.Section4.Section3RESRingEquivalences.measured
+#print DiamondIntegral.Section4.Section3RESRingEquivalences.ordinary_class
+#print axioms DiamondIntegral.Section4.Section3RESRingEquivalences.ordinary_class
+#print DiamondIntegral.Section4.Section3RESRingEquivalences.measured_class
+#print axioms DiamondIntegral.Section4.Section3RESRingEquivalences.measured_class
+#print DiamondIntegral.Section4.Section3RESRingEquivalences.ordinary_symm_class
+#print axioms DiamondIntegral.Section4.Section3RESRingEquivalences.ordinary_symm_class
+#print DiamondIntegral.Section4.Section3RESRingEquivalences.measured_symm_class
+#print axioms DiamondIntegral.Section4.Section3RESRingEquivalences.measured_symm_class
+#print DiamondIntegral.Section4.Section3GammaFamilyClasses.ordinaryValue
+#print axioms DiamondIntegral.Section4.Section3GammaFamilyClasses.ordinaryValue
+#print DiamondIntegral.Section4.Section3GammaFamilyClasses.measuredValue
+#print axioms DiamondIntegral.Section4.Section3GammaFamilyClasses.measuredValue
+#print DiamondIntegral.Section4.Section3GammaFamilyClasses.ordinary_iso
+#print axioms DiamondIntegral.Section4.Section3GammaFamilyClasses.ordinary_iso
+#print DiamondIntegral.Section4.Section3GammaFamilyClasses.measured_iso
+#print axioms DiamondIntegral.Section4.Section3GammaFamilyClasses.measured_iso
+#print DiamondIntegral.Section4.Section3GammaFamilyClasses.measured_piece_eq
+#print axioms DiamondIntegral.Section4.Section3GammaFamilyClasses.measured_piece_eq
+#print DiamondIntegral.Section4.Section3GammaFamilyClasses.ordinary_coprod
+#print axioms DiamondIntegral.Section4.Section3GammaFamilyClasses.ordinary_coprod
+#print DiamondIntegral.Section4.Section3GammaFamilyClasses.measured_coprod
+#print axioms DiamondIntegral.Section4.Section3GammaFamilyClasses.measured_coprod
+#print DiamondIntegral.Section4.Section3GammaChartAddMaps.cut_cover
+#print axioms DiamondIntegral.Section4.Section3GammaChartAddMaps.cut_cover
+#print DiamondIntegral.Section4.Section3GammaChartAddMaps.ordinary_cut
+#print axioms DiamondIntegral.Section4.Section3GammaChartAddMaps.ordinary_cut
+#print DiamondIntegral.Section4.Section3GammaChartAddMaps.measured_cut
+#print axioms DiamondIntegral.Section4.Section3GammaChartAddMaps.measured_cut
+#print DiamondIntegral.Section4.Section3GammaChartAddMaps.ordinaryInvariant
+#print axioms DiamondIntegral.Section4.Section3GammaChartAddMaps.ordinaryInvariant
+#print DiamondIntegral.Section4.Section3GammaChartAddMaps.measuredInvariant
+#print axioms DiamondIntegral.Section4.Section3GammaChartAddMaps.measuredInvariant
+#print DiamondIntegral.Section4.Section3GammaChartAddMaps.ordinaryComponent
+#print axioms DiamondIntegral.Section4.Section3GammaChartAddMaps.ordinaryComponent
+#print DiamondIntegral.Section4.Section3GammaChartAddMaps.measuredComponent
+#print axioms DiamondIntegral.Section4.Section3GammaChartAddMaps.measuredComponent
+#print DiamondIntegral.Section4.Section3GammaChartAddMaps.ordinaryComponent_class
+#print axioms DiamondIntegral.Section4.Section3GammaChartAddMaps.ordinaryComponent_class
+#print DiamondIntegral.Section4.Section3GammaChartAddMaps.measuredComponent_class
+#print axioms DiamondIntegral.Section4.Section3GammaChartAddMaps.measuredComponent_class
+#print DiamondIntegral.Section4.Section3GammaChartAddMaps.ordinaryDirectSum
+#print axioms DiamondIntegral.Section4.Section3GammaChartAddMaps.ordinaryDirectSum
+#print DiamondIntegral.Section4.Section3GammaChartAddMaps.measuredDirectSum
+#print axioms DiamondIntegral.Section4.Section3GammaChartAddMaps.measuredDirectSum
+#print DiamondIntegral.Section4.Section3GammaChartAddMaps.ordinary
+#print axioms DiamondIntegral.Section4.Section3GammaChartAddMaps.ordinary
+#print DiamondIntegral.Section4.Section3GammaChartAddMaps.measured
+#print axioms DiamondIntegral.Section4.Section3GammaChartAddMaps.measured
+#print DiamondIntegral.Section4.Section3GammaChartAddMaps.ordinary_class
+#print axioms DiamondIntegral.Section4.Section3GammaChartAddMaps.ordinary_class
+#print DiamondIntegral.Section4.Section3GammaChartAddMaps.measured_class
+#print axioms DiamondIntegral.Section4.Section3GammaChartAddMaps.measured_class
+#print DiamondIntegral.Section4.Section3GammaNativeClassCuts.ordinaryClass
+#print axioms DiamondIntegral.Section4.Section3GammaNativeClassCuts.ordinaryClass
+#print DiamondIntegral.Section4.Section3GammaNativeClassCuts.measuredClass
+#print axioms DiamondIntegral.Section4.Section3GammaNativeClassCuts.measuredClass
+#print DiamondIntegral.Section4.Section3GammaNativeClassCuts.ordinary_iso
+#print axioms DiamondIntegral.Section4.Section3GammaNativeClassCuts.ordinary_iso
+#print DiamondIntegral.Section4.Section3GammaNativeClassCuts.measured_iso
+#print axioms DiamondIntegral.Section4.Section3GammaNativeClassCuts.measured_iso
+#print DiamondIntegral.Section4.Section3GammaNativeClassCuts.valuation_scissor
+#print axioms DiamondIntegral.Section4.Section3GammaNativeClassCuts.valuation_scissor
+#print DiamondIntegral.Section4.Section3GammaNativeClassCuts.ordinary_partition
+#print axioms DiamondIntegral.Section4.Section3GammaNativeClassCuts.ordinary_partition
+#print DiamondIntegral.Section4.Section3GammaNativeClassCuts.ordinary_scissor
+#print axioms DiamondIntegral.Section4.Section3GammaNativeClassCuts.ordinary_scissor
+#print DiamondIntegral.Section4.Section3GammaNativeClassCuts.combinedFunction
+#print axioms DiamondIntegral.Section4.Section3GammaNativeClassCuts.combinedFunction
+#print DiamondIntegral.Section4.Section3GammaNativeClassCuts.combinedFunction_definable
+#print axioms DiamondIntegral.Section4.Section3GammaNativeClassCuts.combinedFunction_definable
+#print DiamondIntegral.Section4.Section3GammaNativeClassCuts.measured_ofTotal
+#print axioms DiamondIntegral.Section4.Section3GammaNativeClassCuts.measured_ofTotal
+#print DiamondIntegral.Section4.Section3GammaNativeClassCuts.measured_partition
+#print axioms DiamondIntegral.Section4.Section3GammaNativeClassCuts.measured_partition
+#print DiamondIntegral.Section4.Section3GammaNativeClassCuts.measured_scissor
+#print axioms DiamondIntegral.Section4.Section3GammaNativeClassCuts.measured_scissor
+#print DiamondIntegral.Section4.Section3GammaNativeClassCuts.ordinary_empty
+#print axioms DiamondIntegral.Section4.Section3GammaNativeClassCuts.ordinary_empty
+#print DiamondIntegral.Section4.Section3GammaNativeClassCuts.measured_empty
+#print axioms DiamondIntegral.Section4.Section3GammaNativeClassCuts.measured_empty
+#print DiamondIntegral.Section4.GammaCoordinateIsomorphisms.ordinary
+#print axioms DiamondIntegral.Section4.GammaCoordinateIsomorphisms.ordinary
+#print DiamondIntegral.Section4.Section3GammaProductBridge.append_permute
+#print axioms DiamondIntegral.Section4.Section3GammaProductBridge.append_permute
+#print DiamondIntegral.Section4.Section3GammaProductBridge.permutation
+#print axioms DiamondIntegral.Section4.Section3GammaProductBridge.permutation
+#print DiamondIntegral.Section4.Section3GammaProductBridge.product_bijOn
+#print axioms DiamondIntegral.Section4.Section3GammaProductBridge.product_bijOn
+#print DiamondIntegral.Section4.Section3GammaProductBridge.ordinary
+#print axioms DiamondIntegral.Section4.Section3GammaProductBridge.ordinary
+#print DiamondIntegral.Section4.Section3GammaBasicClasses.ordinary_unit
+#print axioms DiamondIntegral.Section4.Section3GammaBasicClasses.ordinary_unit
+#print DiamondIntegral.Section4.Section3GammaBasicClasses.measuredUnitHom
+#print axioms DiamondIntegral.Section4.Section3GammaBasicClasses.measuredUnitHom
+#print DiamondIntegral.Section4.Section3GammaBasicClasses.measured_unit
+#print axioms DiamondIntegral.Section4.Section3GammaBasicClasses.measured_unit
+#print DiamondIntegral.Section4.Section3GammaBasicClasses.ordinaryProductHom
+#print axioms DiamondIntegral.Section4.Section3GammaBasicClasses.ordinaryProductHom
+#print DiamondIntegral.Section4.Section3GammaBasicClasses.ordinary_product
+#print axioms DiamondIntegral.Section4.Section3GammaBasicClasses.ordinary_product
+#print DiamondIntegral.Section4.Section3GammaBasicClasses.measuredProductHom
+#print axioms DiamondIntegral.Section4.Section3GammaBasicClasses.measuredProductHom
+#print DiamondIntegral.Section4.Section3GammaBasicClasses.measured_product
+#print axioms DiamondIntegral.Section4.Section3GammaBasicClasses.measured_product
+#print DiamondIntegral.Section4.Section3GammaNativeRingMaps.ordinaryInvariant
+#print axioms DiamondIntegral.Section4.Section3GammaNativeRingMaps.ordinaryInvariant
+#print DiamondIntegral.Section4.Section3GammaNativeRingMaps.measuredInvariant
+#print axioms DiamondIntegral.Section4.Section3GammaNativeRingMaps.measuredInvariant
+#print DiamondIntegral.Section4.Section3GammaNativeRingMaps.ordinary
+#print axioms DiamondIntegral.Section4.Section3GammaNativeRingMaps.ordinary
+#print DiamondIntegral.Section4.Section3GammaNativeRingMaps.measured
+#print axioms DiamondIntegral.Section4.Section3GammaNativeRingMaps.measured
+#print DiamondIntegral.Section4.Section3GammaNativeRingMaps.ordinary_class
+#print axioms DiamondIntegral.Section4.Section3GammaNativeRingMaps.ordinary_class
+#print DiamondIntegral.Section4.Section3GammaNativeRingMaps.measured_class
+#print axioms DiamondIntegral.Section4.Section3GammaNativeRingMaps.measured_class
+#print DiamondIntegral.Section4.Section3GammaRingEquivalences.ordinary_add_class
+#print axioms DiamondIntegral.Section4.Section3GammaRingEquivalences.ordinary_add_class
+#print DiamondIntegral.Section4.Section3GammaRingEquivalences.measured_add_class
+#print axioms DiamondIntegral.Section4.Section3GammaRingEquivalences.measured_add_class
+#print DiamondIntegral.Section4.Section3GammaRingEquivalences.ordinaryPresentation
+#print axioms DiamondIntegral.Section4.Section3GammaRingEquivalences.ordinaryPresentation
+#print DiamondIntegral.Section4.Section3GammaRingEquivalences.measuredPresentation
+#print axioms DiamondIntegral.Section4.Section3GammaRingEquivalences.measuredPresentation
+#print DiamondIntegral.Section4.Section3GammaRingEquivalences.ordinary_toDirectSum_class
+#print axioms DiamondIntegral.Section4.Section3GammaRingEquivalences.ordinary_toDirectSum_class
+#print DiamondIntegral.Section4.Section3GammaRingEquivalences.measured_toDirectSum_class
+#print axioms DiamondIntegral.Section4.Section3GammaRingEquivalences.measured_toDirectSum_class
+#print DiamondIntegral.Section4.Section3GammaRingEquivalences.ordinary_addHom_ext
+#print axioms DiamondIntegral.Section4.Section3GammaRingEquivalences.ordinary_addHom_ext
+#print DiamondIntegral.Section4.Section3GammaRingEquivalences.measured_addHom_ext
+#print axioms DiamondIntegral.Section4.Section3GammaRingEquivalences.measured_addHom_ext
+#print DiamondIntegral.Section4.Section3GammaRingEquivalences.ordinary_chart_native
+#print axioms DiamondIntegral.Section4.Section3GammaRingEquivalences.ordinary_chart_native
+#print DiamondIntegral.Section4.Section3GammaRingEquivalences.measured_chart_native
+#print axioms DiamondIntegral.Section4.Section3GammaRingEquivalences.measured_chart_native
+#print DiamondIntegral.Section4.Section3GammaRingEquivalences.ordinary_native_chart
+#print axioms DiamondIntegral.Section4.Section3GammaRingEquivalences.ordinary_native_chart
+#print DiamondIntegral.Section4.Section3GammaRingEquivalences.measured_native_chart
+#print axioms DiamondIntegral.Section4.Section3GammaRingEquivalences.measured_native_chart
+#print DiamondIntegral.Section4.Section3GammaRingEquivalences.ordinary
+#print axioms DiamondIntegral.Section4.Section3GammaRingEquivalences.ordinary
+#print DiamondIntegral.Section4.Section3GammaRingEquivalences.measured
+#print axioms DiamondIntegral.Section4.Section3GammaRingEquivalences.measured
+#print DiamondIntegral.Section4.Section3GammaRingEquivalences.ordinary_class
+#print axioms DiamondIntegral.Section4.Section3GammaRingEquivalences.ordinary_class
+#print DiamondIntegral.Section4.Section3GammaRingEquivalences.measured_class
+#print axioms DiamondIntegral.Section4.Section3GammaRingEquivalences.measured_class
+#print DiamondIntegral.Section4.Section3GammaRingEquivalences.ordinary_symm_class
+#print axioms DiamondIntegral.Section4.Section3GammaRingEquivalences.ordinary_symm_class
+#print DiamondIntegral.Section4.Section3GammaRingEquivalences.measured_symm_class
+#print axioms DiamondIntegral.Section4.Section3GammaRingEquivalences.measured_symm_class
+#print DiamondIntegral.Section4.Section3FiniteGammaChartBridge.nativeOrdinary
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaChartBridge.nativeOrdinary
+#print DiamondIntegral.Section4.Section3FiniteGammaChartBridge.nativeMeasured
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaChartBridge.nativeMeasured
+#print DiamondIntegral.Section4.Section3FiniteGammaChartBridge.ordinaryFamily
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaChartBridge.ordinaryFamily
+#print DiamondIntegral.Section4.Section3FiniteGammaChartBridge.measuredFamily
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaChartBridge.measuredFamily
+#print DiamondIntegral.Section4.Section3FiniteGammaChartBridge.ordinaryValue
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaChartBridge.ordinaryValue
+#print DiamondIntegral.Section4.Section3FiniteGammaChartBridge.measuredValue
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaChartBridge.measuredValue
+#print DiamondIntegral.Section4.Section3FiniteGammaChartBridge.ordinary_value_iso
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaChartBridge.ordinary_value_iso
+#print DiamondIntegral.Section4.Section3FiniteGammaChartBridge.measured_value_iso
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaChartBridge.measured_value_iso
+#print DiamondIntegral.Section4.Section3FiniteGammaChartBridge.ordinaryClass
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaChartBridge.ordinaryClass
+#print DiamondIntegral.Section4.Section3FiniteGammaChartBridge.measuredClass
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaChartBridge.measuredClass
+#print DiamondIntegral.Section4.Section3FiniteGammaChartBridge.ordinary_iso
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaChartBridge.ordinary_iso
+#print DiamondIntegral.Section4.Section3FiniteGammaChartBridge.measured_iso
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaChartBridge.measured_iso
+#print DiamondIntegral.Section4.FinitePieceValuations.Piece
+#print axioms DiamondIntegral.Section4.FinitePieceValuations.Piece
+#print DiamondIntegral.Section4.FinitePieceValuations.scissor
+#print axioms DiamondIntegral.Section4.FinitePieceValuations.scissor
+#print DiamondIntegral.Section4.Section3FiniteGammaNativeClasses.single
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaNativeClasses.single
+#print DiamondIntegral.Section4.Section3FiniteGammaNativeClasses.singleWeight
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaNativeClasses.singleWeight
+#print DiamondIntegral.Section4.Section3FiniteGammaNativeClasses.ordinary_partition
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaNativeClasses.ordinary_partition
+#print DiamondIntegral.Section4.Section3FiniteGammaNativeClasses.measured_partition
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaNativeClasses.measured_partition
+#print DiamondIntegral.Section4.Section3FiniteGammaNativeClasses.ordinary_scissor
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaNativeClasses.ordinary_scissor
+#print DiamondIntegral.Section4.Section3FiniteGammaNativeClasses.measured_ofTotal
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaNativeClasses.measured_ofTotal
+#print DiamondIntegral.Section4.Section3FiniteGammaNativeClasses.measured_scissor
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaNativeClasses.measured_scissor
+#print DiamondIntegral.Section4.Section3FiniteGammaNativeClasses.ordinary_empty
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaNativeClasses.ordinary_empty
+#print DiamondIntegral.Section4.Section3FiniteGammaNativeClasses.measured_empty
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaNativeClasses.measured_empty
+#print DiamondIntegral.Section4.Section3FiniteGammaNativeRingMaps.ordinary_unit
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaNativeRingMaps.ordinary_unit
+#print DiamondIntegral.Section4.Section3FiniteGammaNativeRingMaps.measured_unit
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaNativeRingMaps.measured_unit
+#print DiamondIntegral.Section4.Section3FiniteGammaNativeRingMaps.ordinary_product
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaNativeRingMaps.ordinary_product
+#print DiamondIntegral.Section4.Section3FiniteGammaNativeRingMaps.measured_product
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaNativeRingMaps.measured_product
+#print DiamondIntegral.Section4.Section3FiniteGammaNativeRingMaps.ordinaryInvariant
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaNativeRingMaps.ordinaryInvariant
+#print DiamondIntegral.Section4.Section3FiniteGammaNativeRingMaps.measuredInvariant
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaNativeRingMaps.measuredInvariant
+#print DiamondIntegral.Section4.Section3FiniteGammaNativeRingMaps.ordinary
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaNativeRingMaps.ordinary
+#print DiamondIntegral.Section4.Section3FiniteGammaNativeRingMaps.measured
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaNativeRingMaps.measured
+#print DiamondIntegral.Section4.Section3FiniteGammaNativeRingMaps.ordinary_class
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaNativeRingMaps.ordinary_class
+#print DiamondIntegral.Section4.Section3FiniteGammaNativeRingMaps.measured_class
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaNativeRingMaps.measured_class
+#print DiamondIntegral.Section4.Section3FiniteGammaChartAddMaps.ordinary_congr
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaChartAddMaps.ordinary_congr
+#print DiamondIntegral.Section4.Section3FiniteGammaChartAddMaps.measured_congr
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaChartAddMaps.measured_congr
+#print DiamondIntegral.Section4.Section3FiniteGammaChartAddMaps.ordinary_coprod
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaChartAddMaps.ordinary_coprod
+#print DiamondIntegral.Section4.Section3FiniteGammaChartAddMaps.measured_piece_eq
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaChartAddMaps.measured_piece_eq
+#print DiamondIntegral.Section4.Section3FiniteGammaChartAddMaps.measured_coprod
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaChartAddMaps.measured_coprod
+#print DiamondIntegral.Section4.Section3FiniteGammaChartAddMaps.ordinary_cut
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaChartAddMaps.ordinary_cut
+#print DiamondIntegral.Section4.Section3FiniteGammaChartAddMaps.measured_cut
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaChartAddMaps.measured_cut
+#print DiamondIntegral.Section4.Section3FiniteGammaChartAddMaps.ordinaryInvariant
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaChartAddMaps.ordinaryInvariant
+#print DiamondIntegral.Section4.Section3FiniteGammaChartAddMaps.measuredInvariant
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaChartAddMaps.measuredInvariant
+#print DiamondIntegral.Section4.Section3FiniteGammaChartAddMaps.ordinaryComponent
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaChartAddMaps.ordinaryComponent
+#print DiamondIntegral.Section4.Section3FiniteGammaChartAddMaps.measuredComponent
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaChartAddMaps.measuredComponent
+#print DiamondIntegral.Section4.Section3FiniteGammaChartAddMaps.ordinaryComponent_class
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaChartAddMaps.ordinaryComponent_class
+#print DiamondIntegral.Section4.Section3FiniteGammaChartAddMaps.measuredComponent_class
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaChartAddMaps.measuredComponent_class
+#print DiamondIntegral.Section4.Section3FiniteGammaChartAddMaps.ordinaryDirectSum
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaChartAddMaps.ordinaryDirectSum
+#print DiamondIntegral.Section4.Section3FiniteGammaChartAddMaps.measuredDirectSum
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaChartAddMaps.measuredDirectSum
+#print DiamondIntegral.Section4.Section3FiniteGammaChartAddMaps.ordinary
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaChartAddMaps.ordinary
+#print DiamondIntegral.Section4.Section3FiniteGammaChartAddMaps.measured
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaChartAddMaps.measured
+#print DiamondIntegral.Section4.Section3FiniteGammaChartAddMaps.ordinary_class
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaChartAddMaps.ordinary_class
+#print DiamondIntegral.Section4.Section3FiniteGammaChartAddMaps.measured_class
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaChartAddMaps.measured_class
+#print DiamondIntegral.Section4.Section3FiniteGammaRingEquivalences.ordinary_add_class
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaRingEquivalences.ordinary_add_class
+#print DiamondIntegral.Section4.Section3FiniteGammaRingEquivalences.measured_add_class
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaRingEquivalences.measured_add_class
+#print DiamondIntegral.Section4.Section3FiniteGammaRingEquivalences.ordinaryPresentation
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaRingEquivalences.ordinaryPresentation
+#print DiamondIntegral.Section4.Section3FiniteGammaRingEquivalences.measuredPresentation
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaRingEquivalences.measuredPresentation
+#print DiamondIntegral.Section4.Section3FiniteGammaRingEquivalences.ordinary_toDirectSum_class
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaRingEquivalences.ordinary_toDirectSum_class
+#print DiamondIntegral.Section4.Section3FiniteGammaRingEquivalences.measured_toDirectSum_class
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaRingEquivalences.measured_toDirectSum_class
+#print DiamondIntegral.Section4.Section3FiniteGammaRingEquivalences.ordinary_addHom_ext
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaRingEquivalences.ordinary_addHom_ext
+#print DiamondIntegral.Section4.Section3FiniteGammaRingEquivalences.measured_addHom_ext
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaRingEquivalences.measured_addHom_ext
+#print DiamondIntegral.Section4.Section3FiniteGammaRingEquivalences.ordinary_chart_native
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaRingEquivalences.ordinary_chart_native
+#print DiamondIntegral.Section4.Section3FiniteGammaRingEquivalences.measured_chart_native
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaRingEquivalences.measured_chart_native
+#print DiamondIntegral.Section4.Section3FiniteGammaRingEquivalences.ordinary_native_chart
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaRingEquivalences.ordinary_native_chart
+#print DiamondIntegral.Section4.Section3FiniteGammaRingEquivalences.measured_native_chart
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaRingEquivalences.measured_native_chart
+#print DiamondIntegral.Section4.Section3FiniteGammaRingEquivalences.ordinary
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaRingEquivalences.ordinary
+#print DiamondIntegral.Section4.Section3FiniteGammaRingEquivalences.measured
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaRingEquivalences.measured
+#print DiamondIntegral.Section4.Section3FiniteGammaRingEquivalences.ordinary_class
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaRingEquivalences.ordinary_class
+#print DiamondIntegral.Section4.Section3FiniteGammaRingEquivalences.measured_class
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaRingEquivalences.measured_class
+#print DiamondIntegral.Section4.Section3FiniteGammaRingEquivalences.ordinary_symm_class
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaRingEquivalences.ordinary_symm_class
+#print DiamondIntegral.Section4.Section3FiniteGammaRingEquivalences.measured_symm_class
+#print axioms DiamondIntegral.Section4.Section3FiniteGammaRingEquivalences.measured_symm_class
+#print DiamondIntegral.Section4.RingTensorCongruence.map
+#print axioms DiamondIntegral.Section4.RingTensorCongruence.map
+#print DiamondIntegral.Section4.RingTensorCongruence.map_tmul
+#print axioms DiamondIntegral.Section4.RingTensorCongruence.map_tmul
+#print DiamondIntegral.Section4.RingTensorCongruence.hom_ext
+#print axioms DiamondIntegral.Section4.RingTensorCongruence.hom_ext
+#print DiamondIntegral.Section4.RingTensorCongruence.congr
+#print axioms DiamondIntegral.Section4.RingTensorCongruence.congr
+#print DiamondIntegral.Section4.RingTensorCongruence.congr_tmul
+#print axioms DiamondIntegral.Section4.RingTensorCongruence.congr_tmul
+#print DiamondIntegral.Section4.Section3GammaSharpBridge.ordinary
+#print axioms DiamondIntegral.Section4.Section3GammaSharpBridge.ordinary
+#print DiamondIntegral.Section4.Section3GammaSharpBridge.ordinary_code
+#print axioms DiamondIntegral.Section4.Section3GammaSharpBridge.ordinary_code
+#print DiamondIntegral.Section4.Section3GammaSharpBridge.measured
+#print axioms DiamondIntegral.Section4.Section3GammaSharpBridge.measured
+#print DiamondIntegral.Section4.Section3CoefficientSquares.ordinary_gamma
+#print axioms DiamondIntegral.Section4.Section3CoefficientSquares.ordinary_gamma
+#print DiamondIntegral.Section4.Section3CoefficientSquares.measured_gamma
+#print axioms DiamondIntegral.Section4.Section3CoefficientSquares.measured_gamma
+#print DiamondIntegral.Section4.Section3CoefficientSquares.ordinary_res
+#print axioms DiamondIntegral.Section4.Section3CoefficientSquares.ordinary_res
+#print DiamondIntegral.Section4.Section3CoefficientSquares.measured_res
+#print axioms DiamondIntegral.Section4.Section3CoefficientSquares.measured_res
+#print DiamondIntegral.Section4.Section3TensorRingEquivalences.ordinary
+#print axioms DiamondIntegral.Section4.Section3TensorRingEquivalences.ordinary
+#print DiamondIntegral.Section4.Section3TensorRingEquivalences.measured
+#print axioms DiamondIntegral.Section4.Section3TensorRingEquivalences.measured
+#print DiamondIntegral.Section4.Section3TensorRingEquivalences.ordinary_tmul
+#print axioms DiamondIntegral.Section4.Section3TensorRingEquivalences.ordinary_tmul
+#print DiamondIntegral.Section4.Section3TensorRingEquivalences.measured_tmul
+#print axioms DiamondIntegral.Section4.Section3TensorRingEquivalences.measured_tmul
+#print DiamondIntegral.Section4.Section3RVComparisonSquares.ordinary_res
+#print axioms DiamondIntegral.Section4.Section3RVComparisonSquares.ordinary_res
+#print DiamondIntegral.Section4.Section3RVComparisonSquares.measured_res
+#print axioms DiamondIntegral.Section4.Section3RVComparisonSquares.measured_res
+#print DiamondIntegral.Section4.Section3RVComparisonSquares.ordinary_gamma
+#print axioms DiamondIntegral.Section4.Section3RVComparisonSquares.ordinary_gamma
+#print DiamondIntegral.Section4.Section3RVComparisonSquares.measured_gamma
+#print axioms DiamondIntegral.Section4.Section3RVComparisonSquares.measured_gamma
+#print DiamondIntegral.Section4.CompletionTensorMapFormula.hom_ext
+#print axioms DiamondIntegral.Section4.CompletionTensorMapFormula.hom_ext
+#print DiamondIntegral.Section4.CompletionTensorMapFormula.completed
+#print axioms DiamondIntegral.Section4.CompletionTensorMapFormula.completed
+#print DiamondIntegral.Section4.CompletionTensorMapFormula.completed_of_tmul
+#print axioms DiamondIntegral.Section4.CompletionTensorMapFormula.completed_of_tmul
+#print DiamondIntegral.Section4.CompletionTensorMapFormula.completed_tmul
+#print axioms DiamondIntegral.Section4.CompletionTensorMapFormula.completed_tmul
+#print DiamondIntegral.Section4.Section3TensorComparisonSquares.ordinary_native_tmul
+#print axioms DiamondIntegral.Section4.Section3TensorComparisonSquares.ordinary_native_tmul
+#print DiamondIntegral.Section4.Section3TensorComparisonSquares.measured_native_tmul
+#print axioms DiamondIntegral.Section4.Section3TensorComparisonSquares.measured_native_tmul
+#print DiamondIntegral.Section4.Section3TensorComparisonSquares.ordinary_square
+#print axioms DiamondIntegral.Section4.Section3TensorComparisonSquares.ordinary_square
+#print DiamondIntegral.Section4.Section3TensorComparisonSquares.measured_square
+#print axioms DiamondIntegral.Section4.Section3TensorComparisonSquares.measured_square
+#print DiamondIntegral.Section4.Section3TensorComparisonSquares.ordinary
+#print axioms DiamondIntegral.Section4.Section3TensorComparisonSquares.ordinary
+#print DiamondIntegral.Section4.Section3TensorComparisonSquares.measured
+#print axioms DiamondIntegral.Section4.Section3TensorComparisonSquares.measured
+#print DiamondIntegral.Section4.Section3CoefficientFunctionBridge.coordinate
+#print axioms DiamondIntegral.Section4.Section3CoefficientFunctionBridge.coordinate
+#print DiamondIntegral.Section4.Section3CoefficientFunctionBridge.function
+#print axioms DiamondIntegral.Section4.Section3CoefficientFunctionBridge.function
+#print DiamondIntegral.Section4.Section3CoefficientFunctionBridge.function_apply
+#print axioms DiamondIntegral.Section4.Section3CoefficientFunctionBridge.function_apply
+#print DiamondIntegral.Section4.Section3CoefficientFunctionBridge.function_graph
+#print axioms DiamondIntegral.Section4.Section3CoefficientFunctionBridge.function_graph
+#print DiamondIntegral.Section4.Section3CoefficientFunctionBridge.function_nonzero
+#print axioms DiamondIntegral.Section4.Section3CoefficientFunctionBridge.function_nonzero
+#print DiamondIntegral.Section4.Section3CoefficientFunctionBridge.function_value
+#print axioms DiamondIntegral.Section4.Section3CoefficientFunctionBridge.function_value
+#print DiamondIntegral.Section4.Section3CoefficientChartRelations.shifted_support
+#print axioms DiamondIntegral.Section4.Section3CoefficientChartRelations.shifted_support
+#print DiamondIntegral.Section4.Section3CoefficientChartRelations.ordinary_translated
+#print axioms DiamondIntegral.Section4.Section3CoefficientChartRelations.ordinary_translated
+#print DiamondIntegral.Section4.Section3CoefficientChartRelations.weightChart
+#print axioms DiamondIntegral.Section4.Section3CoefficientChartRelations.weightChart
+#print DiamondIntegral.Section4.Section3CoefficientChartRelations.weightChart_weight
+#print axioms DiamondIntegral.Section4.Section3CoefficientChartRelations.weightChart_weight
+#print DiamondIntegral.Section4.Section3CoefficientChartRelations.measured_translated
+#print axioms DiamondIntegral.Section4.Section3CoefficientChartRelations.measured_translated
+#print DiamondIntegral.Section4.Section3CoefficientChartRelations.shiftVector_eq
+#print axioms DiamondIntegral.Section4.Section3CoefficientChartRelations.shiftVector_eq
+#print DiamondIntegral.Section4.Section3TensorClassTransport.ordinary_symm_tmul
+#print axioms DiamondIntegral.Section4.Section3TensorClassTransport.ordinary_symm_tmul
+#print DiamondIntegral.Section4.Section3TensorClassTransport.measured_symm_tmul
+#print axioms DiamondIntegral.Section4.Section3TensorClassTransport.measured_symm_tmul
+#print DiamondIntegral.Section4.Section3TensorClassTransport.ordinary_res_symm
+#print axioms DiamondIntegral.Section4.Section3TensorClassTransport.ordinary_res_symm
+#print DiamondIntegral.Section4.Section3TensorClassTransport.measured_res_symm
+#print axioms DiamondIntegral.Section4.Section3TensorClassTransport.measured_res_symm
+#print DiamondIntegral.Section4.Section3TensorClassTransport.ordinary_gamma_symm
+#print axioms DiamondIntegral.Section4.Section3TensorClassTransport.ordinary_gamma_symm
+#print DiamondIntegral.Section4.Section3TensorClassTransport.measured_gamma_symm
+#print axioms DiamondIntegral.Section4.Section3TensorClassTransport.measured_gamma_symm
+#print DiamondIntegral.Section4.Section3TensorClassTransport.ordinary_elementary
+#print axioms DiamondIntegral.Section4.Section3TensorClassTransport.ordinary_elementary
+#print DiamondIntegral.Section4.Section3TensorClassTransport.measured_elementary
+#print axioms DiamondIntegral.Section4.Section3TensorClassTransport.measured_elementary
+#print DiamondIntegral.Section4.Section3CoefficientPairTransport.ordinary
+#print axioms DiamondIntegral.Section4.Section3CoefficientPairTransport.ordinary
+#print DiamondIntegral.Section4.Section3CoefficientPairTransport.measured
+#print axioms DiamondIntegral.Section4.Section3CoefficientPairTransport.measured
+#print DiamondIntegral.Section4.Section3T001Integration.ordinaryTransport
+#print axioms DiamondIntegral.Section4.Section3T001Integration.ordinaryTransport
+#print DiamondIntegral.Section4.Section3T001Integration.measuredTransport
+#print axioms DiamondIntegral.Section4.Section3T001Integration.measuredTransport
+#print DiamondIntegral.Section4.Section3T001Integration.ordinary
+#print axioms DiamondIntegral.Section4.Section3T001Integration.ordinary
+#print DiamondIntegral.Section4.Section3T001Integration.measured
+#print axioms DiamondIntegral.Section4.Section3T001Integration.measured
+#print DiamondIntegral.Section4.Section3LinkedRetractionStatements.proposition_4_7
+#print axioms DiamondIntegral.Section4.Section3LinkedRetractionStatements.proposition_4_7
+#print DiamondIntegral.Section4.Section3LinkedRetractionStatements.proposition_4_15
+#print axioms DiamondIntegral.Section4.Section3LinkedRetractionStatements.proposition_4_15
+#print DiamondIntegral.Section2.GammaPiecewiseRationalAffineInput
+#print axioms DiamondIntegral.Section2.GammaPiecewiseRationalAffineInput
+#print DiamondIntegral.Section2.NontrivialDefinableGamma
+#print axioms DiamondIntegral.Section2.NontrivialDefinableGamma

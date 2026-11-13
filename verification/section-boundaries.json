@@ -1,0 +1,255 @@
+{
+  "status": "BOUNDARIES_AUDITED_EXPLICIT_INPUTS_RETAINED",
+  "section3_revision": "37c836172e93528e319cb2f2aa58d03c1b3c3bee",
+  "integration_revision": "7d4acc730496b3bd05a22c268ffd89540ca694f9",
+  "section2": {
+    "full_audit": "PASS",
+    "public_theorems": 850,
+    "reuse_declarations": 378,
+    "compiled_interface_constructors": {
+      "AtomicGammaBaseChangeInput": "DiamondIntegral.Section3.integrationAtomicGammaBaseChangeInput_complete",
+      "AtomicDiscGammaBaseChangeInput": "DiamondIntegral.Section3.integrationAtomicDiscGammaBaseChangeInput",
+      "UnaryDiscAtomicityInput": "DiamondIntegral.Section3.integrationUnaryDiscAtomicityInput",
+      "PrimitiveImageInput": "DiamondIntegral.Section3.integrationPrimitiveImageInput",
+      "UnaryOpenDiscRVBaseChangeInput": "DiamondIntegral.Section3.integrationUnaryOpenDiscRVBaseChangeInput",
+      "OpenDiscImageInput": "DiamondIntegral.Section3.integrationOpenDiscImageInput",
+      "OpenDiscNamesImageInput": "DiamondIntegral.Section3.integrationOpenDiscNamesImageInput",
+      "DiscToDiscPartitionInput": "DiamondIntegral.Section3.integrationDiscToDiscPartitionInput"
+    },
+    "remaining_accepted_background": [
+      "GammaPiecewiseRationalAffineInput"
+    ],
+    "constructor_location": "section 3; avoids a cyclic section 2 -> section 3 -> section 2 import",
+    "scope": "Actual original-base and finite-disc syntax; saturation, ACVF00, nontrivial Gamma and applicable smallness remain explicit."
+  },
+  "section3": {
+    "full_audit": "PASS",
+    "supporting_modules": 1003,
+    "declarations": 5324,
+    "paper_targets": 21,
+    "main_text_links": 119,
+    "section2_reuse": "Compiled imports and actual checked interface constructors",
+    "local_tensor_kernels": "Proved, without tensor injectivity or cancellation",
+    "later_unmeasured_bridge": "Not instantiated: native definable-closure and RV/VF category/compression/congruence comparisons differ from local legacy records",
+    "later_unmeasured_upstream_input": "IntegrationInACVF.Section6.Section5TwoOrderInputAll",
+    "measured_upstream_section7": "Absent at pinned revision; accepted inputs retained",
+    "approved_external_classification": "ReichsteinYoussinInput: faithful diagonal representation classification only",
+    "legacy_affine_helper": "YinGammaAffineInput remains explicit in its own conditional wrappers; not substituted for the main full-ground proofs"
+  },
+  "section4": {
+    "statement_audit": "PASS",
+    "manuscript_change_required": false,
+    "complete_relative_to_accepted_inputs": true,
+    "categorical_to_chart_transport": "PASS: fully instantiated by Section3T001Integration; linked numbered retractions take no T001 input",
+    "retained_interfaces": [
+      "Section3GammaAffineInput.Input"
+    ],
+    "linked_retraction_declarations": [
+      "DiamondIntegral.Section4.Section3LinkedRetractionStatements.proposition_4_7",
+      "DiamondIntegral.Section4.Section3LinkedRetractionStatements.proposition_4_15"
+    ]
+  },
+  "section1": "Introductory; no local Lean section library",
+  "sections5_to_8": {
+    "status": "Planning READMEs only in this checkout",
+    "Lean_files": 0,
+    "completion_claim": false,
+    "next_audit": "When implementations are available"
+  },
+  "focused_type_audit": {
+    "status": "PASS",
+    "declarations": 32,
+    "logical_axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "declaration_principles": {
+      "DiamondIntegral.Section3.integrationAtomicGammaBaseChangeInput_complete": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "DiamondIntegral.Section3.integrationAtomicDiscGammaBaseChangeInput": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "DiamondIntegral.Section3.integrationUnaryDiscAtomicityInput": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "DiamondIntegral.Section3.integrationPrimitiveImageInput": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "DiamondIntegral.Section3.integrationUnaryOpenDiscRVBaseChangeInput": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "DiamondIntegral.Section3.integrationOpenDiscImageInput": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "DiamondIntegral.Section3.integrationOpenDiscNamesImageInput": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "DiamondIntegral.Section3.integrationDiscToDiscPartitionInput": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "DiamondIntegral.Section3.integration_lemma_2_25_closed": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "DiamondIntegral.Section3.integration_lemma_2_25_open": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "DiamondIntegral.Section3.integration_corollary_2_30": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "DiamondIntegral.Section3.integration_corollary_2_30_disc_names": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "DiamondIntegral.Section3.integration_lemma_2_32": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "DiamondIntegral.Section3.integration_theorem_6_19": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "DiamondIntegral.Section3.integration_theorem_6_19_lift": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "DiamondIntegral.Section3.integration_theorem_6_19_characterization": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "DiamondIntegral.Section3.YinUnmeasuredLiftInput": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "DiamondIntegral.Section3.YinBoundedUnmeasuredLiftInput": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "DiamondIntegral.Section3.YinMeasuredLiftInput": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "DiamondIntegral.Section3.YinDegreeMeasuredLiftInput": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "DiamondIntegral.Section3.YinGammaGroundUnmeasuredLiftInput": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "DiamondIntegral.Section3.YinGammaGroundBoundedUnmeasuredLiftInput": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "DiamondIntegral.Section3.YinGammaGroundMeasuredLiftInput": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "DiamondIntegral.Section3.YinGammaGroundDegreeMeasuredLiftInput": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "DiamondIntegral.Section3.ReichsteinYoussinInput": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "DiamondIntegral.Section3.GammaGroundContext": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "DiamondIntegral.Section3.gammaGroundUnmeasuredGroupTensor_kernel": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "DiamondIntegral.Section3.gammaGroundMeasuredGroupTensor_kernel": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "DiamondIntegral.Section4.Section3T001Integration.ordinary": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "DiamondIntegral.Section4.Section3T001Integration.measured": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "DiamondIntegral.Section4.Section3LinkedRetractionStatements.proposition_4_7": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "DiamondIntegral.Section4.Section3LinkedRetractionStatements.proposition_4_15": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "source": "verification/SectionBoundaryAudit.lean",
+    "output": "verification/section-boundary-types.txt"
+  },
+  "proof_source_hash_checks": {
+    "section 2/verification/status.json": {
+      "checked_Lean_sources": 263,
+      "mismatches": []
+    },
+    "section 3/verification/VERIFICATION.json": {
+      "checked_Lean_sources": 1004,
+      "mismatches": []
+    }
+  },
+  "no_HK_input": true,
+  "new_mathematical_assumptions": false,
+  "manuscript_changed_by_this_audit": false,
+  "sources": {
+    "verification/SectionBoundaryAudit.lean": "adca14b9ef8cde66ed4f3b08ca384b1fca588f782d8d9385d17e9a5ce3a20f0f",
+    "verification/section-boundary-types.txt": "af4d52ecfd5ef5f35154979d4c0b3ac0ce0a04526dad896f451cbc58db141a33",
+    "section 2/verification/UPSTREAM-LINKS.json": "24bf0fff01eb06c686ae54db320ed72a18d6e454a00da8232b58fa77ca79c2ee",
+    "section 3/verification/integration-reuse.json": "76f71f4f2d76836665e800590afa7cda16b6b0c4d03b4954e35d42eb43b20418",
+    "section 3/reuse/integration-manifest.json": "fddd307a0a565035ef7495152a62832fdfe358a12312aed3c3424ab331e42adc",
+    "ACCEPTED-CITED-RESULTS.md": "e2c50e464ed4da537d9fee86293dbe134cb69699b0791e510c83d9a840e8ee83",
+    "verification/audit-section-boundaries.py": "61953ba95e1b4c09f691465ff41e68f521ee0aef795d32c3962657609c3d5a6f"
+  },
+  "publication_authorization": "Author requested commit and push after the completed section and dependency audits."
+}

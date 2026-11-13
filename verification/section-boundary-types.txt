@@ -1,0 +1,722 @@
+warning: integration_in_acvf: repository has local changes:
+  /workspace/diamond-integral/.lake/packages/integration_in_acvf
+warning: special_transformations: repository has local changes:
+  /workspace/diamond-integral/.lake/packages/special_transformations
+theorem DiamondIntegral.Section3.integrationAtomicGammaBaseChangeInput_complete : ∀ {M : Type}
+  [sM : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF],
+  M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF00 →
+    ∀ (B : SpecialTransformations.Section3.GammaParameters.Base),
+      DiamondIntegral.Section2.AtomicGammaBaseChangeInput B :=
+⋯
+'DiamondIntegral.Section3.integrationAtomicGammaBaseChangeInput_complete' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+theorem DiamondIntegral.Section3.integrationAtomicDiscGammaBaseChangeInput : ∀ {M : Type}
+  [sM : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base),
+  DiamondIntegral.Section2.AtomicDiscGammaBaseChangeInput B :=
+⋯
+'DiamondIntegral.Section3.integrationAtomicDiscGammaBaseChangeInput' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+theorem DiamondIntegral.Section3.integrationUnaryDiscAtomicityInput : ∀ {M : Type}
+  [sM : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {κ : Cardinal.{0}},
+  Cardinal.aleph0 ≤ κ →
+    SpecialTransformations.Section3.Saturated M κ →
+      ∀ (B : SpecialTransformations.Section3.GammaParameters.Base),
+        DiamondIntegral.Section2.UnaryDiscAtomicityInput B :=
+⋯
+'DiamondIntegral.Section3.integrationUnaryDiscAtomicityInput' depends on axioms: [propext, Classical.choice, Quot.sound]
+theorem DiamondIntegral.Section3.integrationPrimitiveImageInput : ∀ {M : Type}
+  [sM : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base), DiamondIntegral.Section2.PrimitiveImageInput B :=
+⋯
+'DiamondIntegral.Section3.integrationPrimitiveImageInput' depends on axioms: [propext, Classical.choice, Quot.sound]
+theorem DiamondIntegral.Section3.integrationUnaryOpenDiscRVBaseChangeInput : ∀ {M : Type}
+  [sM : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base),
+  DiamondIntegral.Section2.UnaryOpenDiscRVBaseChangeInput B :=
+⋯
+'DiamondIntegral.Section3.integrationUnaryOpenDiscRVBaseChangeInput' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+theorem DiamondIntegral.Section3.integrationOpenDiscImageInput : ∀ {M : Type}
+  [sM : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base), DiamondIntegral.Section2.OpenDiscImageInput B :=
+⋯
+'DiamondIntegral.Section3.integrationOpenDiscImageInput' depends on axioms: [propext, Classical.choice, Quot.sound]
+theorem DiamondIntegral.Section3.integrationOpenDiscNamesImageInput : ∀ {M : Type}
+  [sM : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base), DiamondIntegral.Section2.OpenDiscNamesImageInput B :=
+⋯
+'DiamondIntegral.Section3.integrationOpenDiscNamesImageInput' depends on axioms: [propext, Classical.choice, Quot.sound]
+theorem DiamondIntegral.Section3.integrationDiscToDiscPartitionInput : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {κ : Cardinal.{0}},
+  Cardinal.aleph0 ≤ κ →
+    SpecialTransformations.Section3.Saturated M κ →
+      ∀ (B : SpecialTransformations.Section3.GammaParameters.Base),
+        DiamondIntegral.Section2.DiscToDiscPartitionInput B :=
+⋯
+'DiamondIntegral.Section3.integrationDiscToDiscPartitionInput' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+theorem DiamondIntegral.Section3.integration_lemma_2_25_closed : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {κ : Cardinal.{0}},
+  Cardinal.aleph0 ≤ κ →
+    SpecialTransformations.Section3.Saturated M κ →
+      M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF00 →
+        ∀ (B : SpecialTransformations.Section3.GammaParameters.Base),
+          DiamondIntegral.Section2.NontrivialDefinableGamma B →
+            ∀ {d : ℕ} (a : Fin d → DiamondIntegral.Section2.VF M) (γ : Fin d → DiamondIntegral.Section2.GammaInfinity M)
+              (A : Set (Fin d → M)),
+              DiamondIntegral.Section2.GeneratesCompleteType B (fun x => SpecialTransformations.Milestone0.SortTag.vf)
+                  A →
+                (DiamondIntegral.Section2.discNameProduct fun i =>
+                      DiamondIntegral.Section2.closedDiscCode (a i) (γ i)) ⊆
+                    A →
+                  DiamondIntegral.Section2.IsAtomicOverPolydiscNames B
+                    (fun i => DiamondIntegral.Section2.closedDiscCode (a i) (γ i))
+                    (fun x => SpecialTransformations.Milestone0.SortTag.vf)
+                    (DiamondIntegral.Section2.discNameProduct fun i =>
+                      DiamondIntegral.Section2.closedDiscCode (a i) (γ i)) :=
+⋯
+'DiamondIntegral.Section3.integration_lemma_2_25_closed' depends on axioms: [propext, Classical.choice, Quot.sound]
+theorem DiamondIntegral.Section3.integration_lemma_2_25_open : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {κ : Cardinal.{0}},
+  Cardinal.aleph0 ≤ κ →
+    SpecialTransformations.Section3.Saturated M κ →
+      M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF00 →
+        ∀ (B : SpecialTransformations.Section3.GammaParameters.Base),
+          DiamondIntegral.Section2.NontrivialDefinableGamma B →
+            ∀ {d : ℕ} (a : Fin d → DiamondIntegral.Section2.VF M) (δ : Fin d → DiamondIntegral.Section2.Gamma M)
+              (A : Set (Fin d → M)),
+              DiamondIntegral.Section2.GeneratesCompleteType B (fun x => SpecialTransformations.Milestone0.SortTag.vf)
+                  A →
+                DiamondIntegral.Section2.discNameProduct
+                      (DiamondIntegral.Section2.finitePolydiscNames (fun x => Bool.false) a δ) ⊆
+                    A →
+                  DiamondIntegral.Section2.IsAtomicOverPolydiscNames B
+                    (DiamondIntegral.Section2.finitePolydiscNames (fun x => Bool.false) a δ)
+                    (fun x => SpecialTransformations.Milestone0.SortTag.vf)
+                    (DiamondIntegral.Section2.discNameProduct
+                      (DiamondIntegral.Section2.finitePolydiscNames (fun x => Bool.false) a δ)) :=
+⋯
+'DiamondIntegral.Section3.integration_lemma_2_25_open' depends on axioms: [propext, Classical.choice, Quot.sound]
+theorem DiamondIntegral.Section3.integration_corollary_2_30 : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF],
+  CanonicalStructure.IsCanonical →
+    M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF00 →
+      ∀ {κ : Cardinal.{0}},
+        Cardinal.aleph0 ≤ κ →
+          SpecialTransformations.Section3.Saturated M κ →
+            ∀ (S : Set M),
+              Cardinal.mk ↑S < κ →
+                DiamondIntegral.Section2.NontrivialDefinableGamma { real := S, gamma := ∅ } →
+                  ∀ {n : ℕ} (A : Set (Fin n → M)),
+                    SpecialTransformations.Section3.DefinableOver S
+                        (fun x => SpecialTransformations.Milestone0.SortTag.vf) A →
+                      ∀ (F : Set ((Fin n → M) × M)),
+                        SpecialTransformations.Section3.DefinableOver S
+                            (fun x => SpecialTransformations.Milestone0.SortTag.vf)
+                            {z | (Fin.init z, z (Fin.last n)) ∈ F} →
+                          (∀ x ∈ A, {y | (x, y) ∈ F}.Finite) →
+                            (∀ x ∈ A, Set.InjOn SpecialTransformations.Milestone0.iRv {y | (x, y) ∈ F}) →
+                              ∃ Q,
+                                Q.Finite ∧
+                                  Q.PairwiseDisjoint id ∧
+                                    (∀ V ∈ Q,
+                                        V.Nonempty ∧
+                                          V ⊆ A ∧
+                                            SpecialTransformations.Section3.DefinableOver S
+                                                (fun x => SpecialTransformations.Milestone0.SortTag.vf) V ∧
+                                              ∀ (a : Fin n → DiamondIntegral.Section2.VF M)
+                                                (δ : Fin n → DiamondIntegral.Section2.Gamma M),
+                                                DiamondIntegral.Section2.namedPolydisc (fun x => Bool.false) a δ ⊆ V →
+                                                  DiamondIntegral.Section2.TaggedPolydiscBranchDecomposition
+                                                    { real := S, gamma := ∅ } a δ F) ∧
+                                      ∀ x ∈ A, ∃ V ∈ Q, x ∈ V :=
+⋯
+'DiamondIntegral.Section3.integration_corollary_2_30' depends on axioms: [propext, Classical.choice, Quot.sound]
+theorem DiamondIntegral.Section3.integration_corollary_2_30_disc_names : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF],
+  CanonicalStructure.IsCanonical →
+    M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF00 →
+      ∀ {κ : Cardinal.{0}},
+        Cardinal.aleph0 ≤ κ →
+          SpecialTransformations.Section3.Saturated M κ →
+            ∀ (S : Set M),
+              Cardinal.mk ↑S < κ →
+                DiamondIntegral.Section2.NontrivialDefinableGamma { real := S, gamma := ∅ } →
+                  ∀ {k n : ℕ} (ground : Fin k → Bool) (b : Fin k → DiamondIntegral.Section2.VF M)
+                    (τ : Fin k → DiamondIntegral.Section2.Gamma M) (A : Set (Fin n → M)),
+                    DiamondIntegral.Section2.DefinableOverFiniteDiscNames { real := S, gamma := ∅ } ground b τ
+                        (fun x => SpecialTransformations.Milestone0.SortTag.vf) A →
+                      ∀ (F : Set ((Fin n → M) × M)),
+                        DiamondIntegral.Section2.DefinableOverFiniteDiscNames { real := S, gamma := ∅ } ground b τ
+                            (fun x => SpecialTransformations.Milestone0.SortTag.vf)
+                            {z | (Fin.init z, z (Fin.last n)) ∈ F} →
+                          (∀ x ∈ A, {y | (x, y) ∈ F}.Finite) →
+                            (∀ x ∈ A, Set.InjOn SpecialTransformations.Milestone0.iRv {y | (x, y) ∈ F}) →
+                              ∃ Q,
+                                Q.Finite ∧
+                                  Q.PairwiseDisjoint id ∧
+                                    (∀ V ∈ Q,
+                                        V.Nonempty ∧
+                                          V ⊆ A ∧
+                                            DiamondIntegral.Section2.DefinableOverFiniteDiscNames
+                                                { real := S, gamma := ∅ } ground b τ
+                                                (fun x => SpecialTransformations.Milestone0.SortTag.vf) V ∧
+                                              ∀ (a : Fin n → DiamondIntegral.Section2.VF M)
+                                                (δ : Fin n → DiamondIntegral.Section2.Gamma M),
+                                                DiamondIntegral.Section2.namedPolydisc (fun x => Bool.false) a δ ⊆ V →
+                                                  DiamondIntegral.Section2.TaggedPolydiscBranchDecompositionOverDiscNames
+                                                    { real := S, gamma := ∅ } ground b τ a δ F) ∧
+                                      ∀ x ∈ A, ∃ V ∈ Q, x ∈ V :=
+⋯
+'DiamondIntegral.Section3.integration_corollary_2_30_disc_names' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+theorem DiamondIntegral.Section3.integration_lemma_2_32 : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {κ : Cardinal.{0}},
+  Cardinal.aleph0 ≤ κ →
+    SpecialTransformations.Section3.Saturated M κ →
+      M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF00 →
+        ∀ (E : DiamondIntegral.Section2.ParameterBase M),
+          DiamondIntegral.Section2.NontrivialDefinableGamma E →
+            ∀ {r s : ℕ} (A : Set (DiamondIntegral.Section2.Mixed M 1 r))
+              (B : Set (DiamondIntegral.Section2.Mixed M 1 s))
+              (f : DiamondIntegral.Section2.Mixed M 1 r → DiamondIntegral.Section2.Mixed M 1 s),
+              DiamondIntegral.Section2.MixedDefinable E A →
+                DiamondIntegral.Section2.MixedDefinable E B →
+                  DiamondIntegral.Section2.MixedMapDefinable E A f →
+                    Set.BijOn f A B → DiamondIntegral.Section2.DiscToDiscPartition E A f :=
+⋯
+'DiamondIntegral.Section3.integration_lemma_2_32' depends on axioms: [propext, Classical.choice, Quot.sound]
+@[reducible] def DiamondIntegral.Section3.integration_theorem_6_19 : {M : Type} →
+  [sM : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B : SpecialTransformations.Section3.GammaParameters.Base} →
+        {κ : Cardinal.{0}} →
+          (hκ : Cardinal.aleph0 ≤ κ) →
+            (hs : SpecialTransformations.Section3.Saturated M κ) →
+              (h00 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF00) →
+                (hreal : Cardinal.mk ↑B.real < κ) →
+                  (FBase : SpecialTransformations.Section3.VFFieldBase B.real) →
+                    (hgamma : Cardinal.mk ↑B.gamma < κ) →
+                      (δ : SpecialTransformations.Section3.Values.Gamma) →
+                        (hδ : δ ∈ B.gamma) →
+                          (hδ1 : 1 < δ) →
+                            (h58 : IntegrationInACVF.Section6.Section5TwoOrderInputAll hκ hs) →
+                              (hB : SpecialTransformations.Section3.GammaParameters.VFGammaGeneratedBase B) →
+                                IntegrationInACVF.Section6.FiniteRV.GammaVFAllAdditiveKPlus B ≃+*
+                                  IntegrationInACVF.Section6.FiniteRV.GlobalIntegrationSemiringTarget hκ hs h00 hreal
+                                    FBase hgamma δ hδ hδ1 h58 hB :=
+@IntegrationInACVF.Section6.FiniteRV.theorem_6_19
+'DiamondIntegral.Section3.integration_theorem_6_19' depends on axioms: [propext, Classical.choice, Quot.sound]
+@[reducible] def DiamondIntegral.Section3.integration_theorem_6_19_lift : ∀ {M : Type}
+  [sM : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {k : ℕ} {κ : Cardinal.{0}} (hκ : Cardinal.aleph0 ≤ κ)
+  (hs : SpecialTransformations.Section3.Saturated M κ) (h00 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF00)
+  (hreal : Cardinal.mk ↑B.real < κ) (FBase : SpecialTransformations.Section3.VFFieldBase B.real)
+  (hgamma : Cardinal.mk ↑B.gamma < κ) (δ : SpecialTransformations.Section3.Values.Gamma) (hδ : δ ∈ B.gamma)
+  (hδ1 : 1 < δ) (h58 : IntegrationInACVF.Section6.Section5TwoOrderInputAll hκ hs)
+  (hB : SpecialTransformations.Section3.GammaParameters.VFGammaGeneratedBase B)
+  (U : SpecialTransformations.Section5.GammaRVFiniteObject B k),
+  (IntegrationInACVF.Section6.FiniteRV.theorem_6_19 hκ hs h00 hreal FBase hgamma δ hδ hδ1 h58 hB)
+      (IntegrationInACVF.Section6.FiniteRV.gammaAllAdditiveLiftClass U) =
+    IntegrationInACVF.Section6.FiniteRV.rvGlobalIntegralClass hκ hs h00 hreal FBase hgamma δ hδ hδ1 h58 hB U :=
+@IntegrationInACVF.Section6.FiniteRV.theorem_6_19_lift_finite
+'DiamondIntegral.Section3.integration_theorem_6_19_lift' depends on axioms: [propext, Classical.choice, Quot.sound]
+@[reducible] def DiamondIntegral.Section3.integration_theorem_6_19_characterization : ∀ {M : Type}
+  [sM : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {k : ℕ} {κ : Cardinal.{0}} (hκ : Cardinal.aleph0 ≤ κ)
+  (hs : SpecialTransformations.Section3.Saturated M κ) (h00 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF00)
+  (hreal : Cardinal.mk ↑B.real < κ) (FBase : SpecialTransformations.Section3.VFFieldBase B.real)
+  (hgamma : Cardinal.mk ↑B.gamma < κ) (δ : SpecialTransformations.Section3.Values.Gamma) (hδ : δ ∈ B.gamma)
+  (hδ1 : 1 < δ) (h58 : IntegrationInACVF.Section6.Section5TwoOrderInputAll hκ hs)
+  (hB : SpecialTransformations.Section3.GammaParameters.VFGammaGeneratedBase B)
+  (a : IntegrationInACVF.Section6.FiniteRV.GammaVFAllAdditiveKPlus B)
+  (U : SpecialTransformations.Section5.GammaRVFiniteObject B k),
+  (IntegrationInACVF.Section6.FiniteRV.theorem_6_19 hκ hs h00 hreal FBase hgamma δ hδ hδ1 h58 hB) a =
+      IntegrationInACVF.Section6.FiniteRV.rvGlobalIntegralClass hκ hs h00 hreal FBase hgamma δ hδ hδ1 h58 hB U ↔
+    a = IntegrationInACVF.Section6.FiniteRV.gammaAllAdditiveLiftClass U :=
+@IntegrationInACVF.Section6.FiniteRV.theorem_6_19_characterization
+'DiamondIntegral.Section3.integration_theorem_6_19_characterization' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+structure DiamondIntegral.Section3.YinUnmeasuredLiftInput {M : Type} [SpecialTransformations.Milestone0.LRV.Structure M]
+  [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {G : Type} [LinearOrderedCommGroupWithZero G]
+  [Valued (DiamondIntegral.Section2.VF M) G] (C : SpecialTransformations.Section3.BaseContext M)
+  (hc : CanonicalStructure.IsCanonical)
+  (hv :
+    ∀ (x y : DiamondIntegral.Section2.VF M),
+      SpecialTransformations.Milestone0.VFValued.predV x y ↔ Valued.v x ≤ Valued.v y)
+  (B : DiamondIntegral.Section2.VFGeneratedFieldBase C.base) : Type
+number of parameters: 10
+fields:
+  DiamondIntegral.Section3.YinUnmeasuredLiftInput.lift : DiamondIntegral.Section3.RVPositiveSemiring ↑C.base →+*
+      DiamondIntegral.Section3.VFPositiveSemiring C hc hv
+  DiamondIntegral.Section3.YinUnmeasuredLiftInput.lift_class : ∀ {k : ℕ}
+      (U : DiamondIntegral.Section3.RVObject (↑C.base) k),
+      self.lift (DiamondIntegral.Section3.rvSemiringClass U) =
+        DiamondIntegral.Section3.vfSemiringClass C hc hv (DiamondIntegral.Section3.objectLiftVF U)
+  DiamondIntegral.Section3.YinUnmeasuredLiftInput.surjective : Function.Surjective ⇑self.lift
+  DiamondIntegral.Section3.YinUnmeasuredLiftInput.kernel : DiamondIntegral.Section3.rvSpecialCongruence hc ↑C.base =
+      RingCon.ker self.lift
+constructor:
+  DiamondIntegral.Section3.YinUnmeasuredLiftInput.mk {M : Type} [SpecialTransformations.Milestone0.LRV.Structure M]
+    [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {G : Type} [LinearOrderedCommGroupWithZero G]
+    [Valued (DiamondIntegral.Section2.VF M) G] {C : SpecialTransformations.Section3.BaseContext M}
+    {hc : CanonicalStructure.IsCanonical}
+    {hv :
+      ∀ (x y : DiamondIntegral.Section2.VF M),
+        SpecialTransformations.Milestone0.VFValued.predV x y ↔ Valued.v x ≤ Valued.v y}
+    {B : DiamondIntegral.Section2.VFGeneratedFieldBase C.base}
+    (lift : DiamondIntegral.Section3.RVPositiveSemiring ↑C.base →+* DiamondIntegral.Section3.VFPositiveSemiring C hc hv)
+    (lift_class :
+      ∀ {k : ℕ} (U : DiamondIntegral.Section3.RVObject (↑C.base) k),
+        lift (DiamondIntegral.Section3.rvSemiringClass U) =
+          DiamondIntegral.Section3.vfSemiringClass C hc hv (DiamondIntegral.Section3.objectLiftVF U))
+    (surjective : Function.Surjective ⇑lift)
+    (kernel : DiamondIntegral.Section3.rvSpecialCongruence hc ↑C.base = RingCon.ker lift) :
+    DiamondIntegral.Section3.YinUnmeasuredLiftInput C hc hv B
+'DiamondIntegral.Section3.YinUnmeasuredLiftInput' depends on axioms: [propext, Classical.choice, Quot.sound]
+structure DiamondIntegral.Section3.YinBoundedUnmeasuredLiftInput {M : Type}
+  [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {G : Type}
+  [LinearOrderedCommGroupWithZero G] [Valued (DiamondIntegral.Section2.VF M) G]
+  (C : SpecialTransformations.Section3.BaseContext M) (hc : CanonicalStructure.IsCanonical)
+  (hv :
+    ∀ (x y : DiamondIntegral.Section2.VF M),
+      SpecialTransformations.Milestone0.VFValued.predV x y ↔ Valued.v x ≤ Valued.v y)
+  (B : DiamondIntegral.Section2.VFGeneratedFieldBase C.base) : Type
+number of parameters: 10
+fields:
+  DiamondIntegral.Section3.YinBoundedUnmeasuredLiftInput.lift : (k : ℕ) →
+      DiamondIntegral.Section3.RVBoundedPositive (↑C.base) k →+ DiamondIntegral.Section3.VFKPlus (↑C.base) k
+  DiamondIntegral.Section3.YinBoundedUnmeasuredLiftInput.lift_class : ∀ (k : ℕ) (i : Fin (k + 1))
+      (U : DiamondIntegral.Section3.RVObject ↑C.base ↑i),
+      (self.lift k) (DiamondIntegral.Section3.rvBoundedClass i U) =
+        DiamondIntegral.Section3.vfClass ((DiamondIntegral.Section3.objectLiftVF U).raise ⋯)
+  DiamondIntegral.Section3.YinBoundedUnmeasuredLiftInput.surjective : ∀ (k : ℕ), Function.Surjective ⇑(self.lift k)
+  DiamondIntegral.Section3.YinBoundedUnmeasuredLiftInput.kernel : ∀ (k : ℕ),
+      DiamondIntegral.Section3.rvBoundedSpecialCongruence hc = AddCon.ker (self.lift k)
+constructor:
+  DiamondIntegral.Section3.YinBoundedUnmeasuredLiftInput.mk {M : Type}
+    [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {G : Type}
+    [LinearOrderedCommGroupWithZero G] [Valued (DiamondIntegral.Section2.VF M) G]
+    {C : SpecialTransformations.Section3.BaseContext M} {hc : CanonicalStructure.IsCanonical}
+    {hv :
+      ∀ (x y : DiamondIntegral.Section2.VF M),
+        SpecialTransformations.Milestone0.VFValued.predV x y ↔ Valued.v x ≤ Valued.v y}
+    {B : DiamondIntegral.Section2.VFGeneratedFieldBase C.base}
+    (lift :
+      (k : ℕ) → DiamondIntegral.Section3.RVBoundedPositive (↑C.base) k →+ DiamondIntegral.Section3.VFKPlus (↑C.base) k)
+    (lift_class :
+      ∀ (k : ℕ) (i : Fin (k + 1)) (U : DiamondIntegral.Section3.RVObject ↑C.base ↑i),
+        (lift k) (DiamondIntegral.Section3.rvBoundedClass i U) =
+          DiamondIntegral.Section3.vfClass ((DiamondIntegral.Section3.objectLiftVF U).raise ⋯))
+    (surjective : ∀ (k : ℕ), Function.Surjective ⇑(lift k))
+    (kernel : ∀ (k : ℕ), DiamondIntegral.Section3.rvBoundedSpecialCongruence hc = AddCon.ker (lift k)) :
+    DiamondIntegral.Section3.YinBoundedUnmeasuredLiftInput C hc hv B
+'DiamondIntegral.Section3.YinBoundedUnmeasuredLiftInput' depends on axioms: [propext, Classical.choice, Quot.sound]
+structure DiamondIntegral.Section3.YinMeasuredLiftInput {M : Type} [SpecialTransformations.Milestone0.LRV.Structure M]
+  [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] [CharZero SpecialTransformations.Milestone0.Transfer.VFType]
+  (C : SpecialTransformations.Section3.BaseContext M) (hc : CanonicalStructure.IsCanonical)
+  (B : DiamondIntegral.Section2.VFGeneratedFieldBase C.base) : Type
+number of parameters: 7
+fields:
+  DiamondIntegral.Section3.YinMeasuredLiftInput.lift : DiamondIntegral.Section3.MeasuredRVPositiveSemiring hc
+        ↑C.base →+*
+      DiamondIntegral.Section3.MeasuredVFPositiveSemiring C hc
+  DiamondIntegral.Section3.YinMeasuredLiftInput.lift_class : ∀ {k : ℕ}
+      (U : DiamondIntegral.Section3.MeasuredRVObject (↑C.base) k),
+      self.lift (DiamondIntegral.Section3.measuredRVSemiringClass hc U) =
+        DiamondIntegral.Section3.measuredVFObjectSemiringClass C hc
+          (DiamondIntegral.Section3.measuredObjectLift hc C k U)
+  DiamondIntegral.Section3.YinMeasuredLiftInput.surjective : Function.Surjective ⇑self.lift
+  DiamondIntegral.Section3.YinMeasuredLiftInput.kernel : DiamondIntegral.Section3.measuredRVSpecialCongruence hc
+        ↑C.base =
+      RingCon.ker self.lift
+constructor:
+  DiamondIntegral.Section3.YinMeasuredLiftInput.mk {M : Type} [SpecialTransformations.Milestone0.LRV.Structure M]
+    [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] [CharZero SpecialTransformations.Milestone0.Transfer.VFType]
+    {C : SpecialTransformations.Section3.BaseContext M} {hc : CanonicalStructure.IsCanonical}
+    {B : DiamondIntegral.Section2.VFGeneratedFieldBase C.base}
+    (lift :
+      DiamondIntegral.Section3.MeasuredRVPositiveSemiring hc ↑C.base →+*
+        DiamondIntegral.Section3.MeasuredVFPositiveSemiring C hc)
+    (lift_class :
+      ∀ {k : ℕ} (U : DiamondIntegral.Section3.MeasuredRVObject (↑C.base) k),
+        lift (DiamondIntegral.Section3.measuredRVSemiringClass hc U) =
+          DiamondIntegral.Section3.measuredVFObjectSemiringClass C hc
+            (DiamondIntegral.Section3.measuredObjectLift hc C k U))
+    (surjective : Function.Surjective ⇑lift)
+    (kernel : DiamondIntegral.Section3.measuredRVSpecialCongruence hc ↑C.base = RingCon.ker lift) :
+    DiamondIntegral.Section3.YinMeasuredLiftInput C hc B
+'DiamondIntegral.Section3.YinMeasuredLiftInput' depends on axioms: [propext, Classical.choice, Quot.sound]
+structure DiamondIntegral.Section3.YinDegreeMeasuredLiftInput {M : Type}
+  [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  [CharZero SpecialTransformations.Milestone0.Transfer.VFType] (C : SpecialTransformations.Section3.BaseContext M)
+  (hc : CanonicalStructure.IsCanonical) (B : DiamondIntegral.Section2.VFGeneratedFieldBase C.base) : Type
+number of parameters: 7
+fields:
+  DiamondIntegral.Section3.YinDegreeMeasuredLiftInput.lift : (k : ℕ) →
+      DiamondIntegral.Section3.MeasuredRVKPlus hc (↑C.base) k →+ DiamondIntegral.Section3.MeasuredVFKPlus C hc k
+  DiamondIntegral.Section3.YinDegreeMeasuredLiftInput.lift_class : ∀ {k : ℕ}
+      (U : DiamondIntegral.Section3.MeasuredRVObject (↑C.base) k),
+      (self.lift k) (DiamondIntegral.Section3.measuredRVClass hc U) =
+        DiamondIntegral.Section3.positiveClass (DiamondIntegral.Section3.measuredVFPresentation C hc k)
+          (DiamondIntegral.Section3.measuredObjectLift hc C k U)
+  DiamondIntegral.Section3.YinDegreeMeasuredLiftInput.surjective : ∀ (k : ℕ), Function.Surjective ⇑(self.lift k)
+  DiamondIntegral.Section3.YinDegreeMeasuredLiftInput.kernel : ∀ (k : ℕ),
+      DiamondIntegral.Section3.measuredRVFixedSpecialCongruence C hc k = AddCon.ker (self.lift k)
+constructor:
+  DiamondIntegral.Section3.YinDegreeMeasuredLiftInput.mk {M : Type} [SpecialTransformations.Milestone0.LRV.Structure M]
+    [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] [CharZero SpecialTransformations.Milestone0.Transfer.VFType]
+    {C : SpecialTransformations.Section3.BaseContext M} {hc : CanonicalStructure.IsCanonical}
+    {B : DiamondIntegral.Section2.VFGeneratedFieldBase C.base}
+    (lift :
+      (k : ℕ) →
+        DiamondIntegral.Section3.MeasuredRVKPlus hc (↑C.base) k →+ DiamondIntegral.Section3.MeasuredVFKPlus C hc k)
+    (lift_class :
+      ∀ {k : ℕ} (U : DiamondIntegral.Section3.MeasuredRVObject (↑C.base) k),
+        (lift k) (DiamondIntegral.Section3.measuredRVClass hc U) =
+          DiamondIntegral.Section3.positiveClass (DiamondIntegral.Section3.measuredVFPresentation C hc k)
+            (DiamondIntegral.Section3.measuredObjectLift hc C k U))
+    (surjective : ∀ (k : ℕ), Function.Surjective ⇑(lift k))
+    (kernel : ∀ (k : ℕ), DiamondIntegral.Section3.measuredRVFixedSpecialCongruence C hc k = AddCon.ker (lift k)) :
+    DiamondIntegral.Section3.YinDegreeMeasuredLiftInput C hc B
+'DiamondIntegral.Section3.YinDegreeMeasuredLiftInput' depends on axioms: [propext, Classical.choice, Quot.sound]
+structure DiamondIntegral.Section3.YinGammaGroundUnmeasuredLiftInput {M : Type}
+  [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  (C : DiamondIntegral.Section3.GammaGroundContext M) (hc : CanonicalStructure.IsCanonical) : Type
+number of parameters: 5
+fields:
+  DiamondIntegral.Section3.YinGammaGroundUnmeasuredLiftInput.lift : DiamondIntegral.Section3.GammaGroundRVPositiveSemiring
+        hc C.base →+*
+      DiamondIntegral.Section3.GammaGroundVFPositiveSemiring hc C.base
+  DiamondIntegral.Section3.YinGammaGroundUnmeasuredLiftInput.lift_class : ∀ {k : ℕ}
+      (U : DiamondIntegral.Section3.GammaGroundRVObject hc C.base k),
+      self.lift (DiamondIntegral.Section3.gammaGroundRVSemiringClass U) =
+        DiamondIntegral.Section3.gammaGroundVFSemiringClass (DiamondIntegral.Section3.gammaGroundObjectLiftFinite U)
+  DiamondIntegral.Section3.YinGammaGroundUnmeasuredLiftInput.surjective : Function.Surjective ⇑self.lift
+  DiamondIntegral.Section3.YinGammaGroundUnmeasuredLiftInput.kernel : DiamondIntegral.Section3.gammaGroundRVSpecialCongruence
+        hc C.base =
+      RingCon.ker self.lift
+constructor:
+  DiamondIntegral.Section3.YinGammaGroundUnmeasuredLiftInput.mk {M : Type}
+    [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+    {C : DiamondIntegral.Section3.GammaGroundContext M} {hc : CanonicalStructure.IsCanonical}
+    (lift :
+      DiamondIntegral.Section3.GammaGroundRVPositiveSemiring hc C.base →+*
+        DiamondIntegral.Section3.GammaGroundVFPositiveSemiring hc C.base)
+    (lift_class :
+      ∀ {k : ℕ} (U : DiamondIntegral.Section3.GammaGroundRVObject hc C.base k),
+        lift (DiamondIntegral.Section3.gammaGroundRVSemiringClass U) =
+          DiamondIntegral.Section3.gammaGroundVFSemiringClass (DiamondIntegral.Section3.gammaGroundObjectLiftFinite U))
+    (surjective : Function.Surjective ⇑lift)
+    (kernel : DiamondIntegral.Section3.gammaGroundRVSpecialCongruence hc C.base = RingCon.ker lift) :
+    DiamondIntegral.Section3.YinGammaGroundUnmeasuredLiftInput C hc
+'DiamondIntegral.Section3.YinGammaGroundUnmeasuredLiftInput' depends on axioms: [propext, Classical.choice, Quot.sound]
+structure DiamondIntegral.Section3.YinGammaGroundBoundedUnmeasuredLiftInput {M : Type}
+  [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {G : Type}
+  [LinearOrderedCommGroupWithZero G] [Valued (DiamondIntegral.Section2.VF M) G]
+  (C : DiamondIntegral.Section3.GammaGroundContext M) (hc : CanonicalStructure.IsCanonical)
+  (hv :
+    ∀ (x y : DiamondIntegral.Section2.VF M),
+      SpecialTransformations.Milestone0.VFValued.predV x y ↔ Valued.v x ≤ Valued.v y) :
+  Type
+number of parameters: 9
+fields:
+  DiamondIntegral.Section3.YinGammaGroundBoundedUnmeasuredLiftInput.lift : (k : ℕ) →
+      DiamondIntegral.Section3.GammaGroundRVBoundedPositive hc C.base k →+
+        DiamondIntegral.Section3.GammaGroundVFKPlus hc C.base k
+  DiamondIntegral.Section3.YinGammaGroundBoundedUnmeasuredLiftInput.lift_class : ∀ (k : ℕ) (i : Fin (k + 1))
+      (U : DiamondIntegral.Section3.GammaGroundRVObject hc C.base ↑i),
+      (self.lift k) (DiamondIntegral.Section3.gammaGroundRVBoundedClass i U) =
+        DiamondIntegral.Section3.gammaGroundVFClass ((DiamondIntegral.Section3.gammaGroundObjectLiftVF U).raise ⋯)
+  DiamondIntegral.Section3.YinGammaGroundBoundedUnmeasuredLiftInput.surjective : ∀ (k : ℕ),
+      Function.Surjective ⇑(self.lift k)
+  DiamondIntegral.Section3.YinGammaGroundBoundedUnmeasuredLiftInput.kernel : ∀ (k : ℕ),
+      DiamondIntegral.Section3.gammaGroundRVBoundedSpecialCongruence hc = AddCon.ker (self.lift k)
+constructor:
+  DiamondIntegral.Section3.YinGammaGroundBoundedUnmeasuredLiftInput.mk {M : Type}
+    [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {G : Type}
+    [LinearOrderedCommGroupWithZero G] [Valued (DiamondIntegral.Section2.VF M) G]
+    {C : DiamondIntegral.Section3.GammaGroundContext M} {hc : CanonicalStructure.IsCanonical}
+    {hv :
+      ∀ (x y : DiamondIntegral.Section2.VF M),
+        SpecialTransformations.Milestone0.VFValued.predV x y ↔ Valued.v x ≤ Valued.v y}
+    (lift :
+      (k : ℕ) →
+        DiamondIntegral.Section3.GammaGroundRVBoundedPositive hc C.base k →+
+          DiamondIntegral.Section3.GammaGroundVFKPlus hc C.base k)
+    (lift_class :
+      ∀ (k : ℕ) (i : Fin (k + 1)) (U : DiamondIntegral.Section3.GammaGroundRVObject hc C.base ↑i),
+        (lift k) (DiamondIntegral.Section3.gammaGroundRVBoundedClass i U) =
+          DiamondIntegral.Section3.gammaGroundVFClass ((DiamondIntegral.Section3.gammaGroundObjectLiftVF U).raise ⋯))
+    (surjective : ∀ (k : ℕ), Function.Surjective ⇑(lift k))
+    (kernel : ∀ (k : ℕ), DiamondIntegral.Section3.gammaGroundRVBoundedSpecialCongruence hc = AddCon.ker (lift k)) :
+    DiamondIntegral.Section3.YinGammaGroundBoundedUnmeasuredLiftInput C hc hv
+'DiamondIntegral.Section3.YinGammaGroundBoundedUnmeasuredLiftInput' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+structure DiamondIntegral.Section3.YinGammaGroundMeasuredLiftInput {M : Type}
+  [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  [CharZero (DiamondIntegral.Section2.VF M)] {G : Type} [LinearOrderedCommGroupWithZero G]
+  [Valued (DiamondIntegral.Section2.VF M) G] (C : DiamondIntegral.Section3.GammaGroundContext M)
+  (hc : CanonicalStructure.IsCanonical)
+  (hv :
+    ∀ (x y : DiamondIntegral.Section2.VF M),
+      SpecialTransformations.Milestone0.VFValued.predV x y ↔ Valued.v x ≤ Valued.v y) :
+  Type
+number of parameters: 10
+fields:
+  DiamondIntegral.Section3.YinGammaGroundMeasuredLiftInput.lift : DiamondIntegral.Section3.GammaGroundMeasuredRVPositiveSemiring
+        hc C.base →+*
+      DiamondIntegral.Section3.GammaGroundMeasuredVFPositiveSemiring C hc hv
+  DiamondIntegral.Section3.YinGammaGroundMeasuredLiftInput.lift_class : ∀ {k : ℕ}
+      (U : DiamondIntegral.Section3.GammaGroundMeasuredRVObject hc C.base k),
+      self.lift (DiamondIntegral.Section3.gammaGroundMeasuredRVSemiringClass U) =
+        DiamondIntegral.Section3.gammaGroundMeasuredVFSemiringClass C hc hv
+          (DiamondIntegral.Section3.gammaGroundMeasuredObjectLift U)
+  DiamondIntegral.Section3.YinGammaGroundMeasuredLiftInput.surjective : Function.Surjective ⇑self.lift
+  DiamondIntegral.Section3.YinGammaGroundMeasuredLiftInput.kernel : DiamondIntegral.Section3.gammaGroundMeasuredRVSpecialCongruence
+        hc C.base =
+      RingCon.ker self.lift
+constructor:
+  DiamondIntegral.Section3.YinGammaGroundMeasuredLiftInput.mk {M : Type}
+    [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+    [CharZero (DiamondIntegral.Section2.VF M)] {G : Type} [LinearOrderedCommGroupWithZero G]
+    [Valued (DiamondIntegral.Section2.VF M) G] {C : DiamondIntegral.Section3.GammaGroundContext M}
+    {hc : CanonicalStructure.IsCanonical}
+    {hv :
+      ∀ (x y : DiamondIntegral.Section2.VF M),
+        SpecialTransformations.Milestone0.VFValued.predV x y ↔ Valued.v x ≤ Valued.v y}
+    (lift :
+      DiamondIntegral.Section3.GammaGroundMeasuredRVPositiveSemiring hc C.base →+*
+        DiamondIntegral.Section3.GammaGroundMeasuredVFPositiveSemiring C hc hv)
+    (lift_class :
+      ∀ {k : ℕ} (U : DiamondIntegral.Section3.GammaGroundMeasuredRVObject hc C.base k),
+        lift (DiamondIntegral.Section3.gammaGroundMeasuredRVSemiringClass U) =
+          DiamondIntegral.Section3.gammaGroundMeasuredVFSemiringClass C hc hv
+            (DiamondIntegral.Section3.gammaGroundMeasuredObjectLift U))
+    (surjective : Function.Surjective ⇑lift)
+    (kernel : DiamondIntegral.Section3.gammaGroundMeasuredRVSpecialCongruence hc C.base = RingCon.ker lift) :
+    DiamondIntegral.Section3.YinGammaGroundMeasuredLiftInput C hc hv
+'DiamondIntegral.Section3.YinGammaGroundMeasuredLiftInput' depends on axioms: [propext, Classical.choice, Quot.sound]
+structure DiamondIntegral.Section3.YinGammaGroundDegreeMeasuredLiftInput {M : Type}
+  [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  [CharZero (DiamondIntegral.Section2.VF M)] {G : Type} [LinearOrderedCommGroupWithZero G]
+  [Valued (DiamondIntegral.Section2.VF M) G] (C : DiamondIntegral.Section3.GammaGroundContext M)
+  (hc : CanonicalStructure.IsCanonical)
+  (hv :
+    ∀ (x y : DiamondIntegral.Section2.VF M),
+      SpecialTransformations.Milestone0.VFValued.predV x y ↔ Valued.v x ≤ Valued.v y) :
+  Type
+number of parameters: 10
+fields:
+  DiamondIntegral.Section3.YinGammaGroundDegreeMeasuredLiftInput.lift : (k : ℕ) →
+      DiamondIntegral.Section3.GammaGroundMeasuredRVKPlus hc C.base k →+
+        DiamondIntegral.Section3.GammaGroundMeasuredVFKPlus ⋯ ⋯ ⋯ hv k
+  DiamondIntegral.Section3.YinGammaGroundDegreeMeasuredLiftInput.lift_class : ∀ {k : ℕ}
+      (U : DiamondIntegral.Section3.GammaGroundMeasuredRVObject hc C.base k),
+      (self.lift k) (DiamondIntegral.Section3.gammaGroundMeasuredRVClass U) =
+        DiamondIntegral.Section3.gammaGroundMeasuredVFClass ⋯ ⋯ ⋯ hv
+          (DiamondIntegral.Section3.gammaGroundMeasuredObjectLift U)
+  DiamondIntegral.Section3.YinGammaGroundDegreeMeasuredLiftInput.surjective : ∀ (k : ℕ),
+      Function.Surjective ⇑(self.lift k)
+  DiamondIntegral.Section3.YinGammaGroundDegreeMeasuredLiftInput.kernel : ∀ (k : ℕ),
+      DiamondIntegral.Section3.gammaGroundMeasuredRVFixedSpecialCongruence C hc k = AddCon.ker (self.lift k)
+constructor:
+  DiamondIntegral.Section3.YinGammaGroundDegreeMeasuredLiftInput.mk {M : Type}
+    [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+    [CharZero (DiamondIntegral.Section2.VF M)] {G : Type} [LinearOrderedCommGroupWithZero G]
+    [Valued (DiamondIntegral.Section2.VF M) G] {C : DiamondIntegral.Section3.GammaGroundContext M}
+    {hc : CanonicalStructure.IsCanonical}
+    {hv :
+      ∀ (x y : DiamondIntegral.Section2.VF M),
+        SpecialTransformations.Milestone0.VFValued.predV x y ↔ Valued.v x ≤ Valued.v y}
+    (lift :
+      (k : ℕ) →
+        DiamondIntegral.Section3.GammaGroundMeasuredRVKPlus hc C.base k →+
+          DiamondIntegral.Section3.GammaGroundMeasuredVFKPlus ⋯ ⋯ ⋯ hv k)
+    (lift_class :
+      ∀ {k : ℕ} (U : DiamondIntegral.Section3.GammaGroundMeasuredRVObject hc C.base k),
+        (lift k) (DiamondIntegral.Section3.gammaGroundMeasuredRVClass U) =
+          DiamondIntegral.Section3.gammaGroundMeasuredVFClass ⋯ ⋯ ⋯ hv
+            (DiamondIntegral.Section3.gammaGroundMeasuredObjectLift U))
+    (surjective : ∀ (k : ℕ), Function.Surjective ⇑(lift k))
+    (kernel :
+      ∀ (k : ℕ), DiamondIntegral.Section3.gammaGroundMeasuredRVFixedSpecialCongruence C hc k = AddCon.ker (lift k)) :
+    DiamondIntegral.Section3.YinGammaGroundDegreeMeasuredLiftInput C hc hv
+'DiamondIntegral.Section3.YinGammaGroundDegreeMeasuredLiftInput' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+structure DiamondIntegral.Section3.ReichsteinYoussinInput.{u_3, u_4} (K : Type u_3) [Field K] [IsAlgClosed K]
+  [CharZero K] (A : Type u_4) [AddCommGroup A] : Prop
+number of parameters: 6
+fields:
+  DiamondIntegral.Section3.ReichsteinYoussinInput.classification : ∀ (n : ℕ) (a b : Fin n → A),
+      AddSubgroup.closure (Set.range a ∪ Set.range b) = ⊤ →
+        DiamondIntegral.Section3.DiagonalWeightsFaithful Kˣ a →
+          DiamondIntegral.Section3.DiagonalWeightsFaithful Kˣ b →
+            ∀ (a_4 : DiamondIntegral.Section3.DiagonalBirationalEquiv K a b),
+              ∃ C, IsUnit C.det ∧ ∀ (i : Fin n), b i = ∑ j, C i j • a j
+constructor:
+  DiamondIntegral.Section3.ReichsteinYoussinInput.mk.{u_3, u_4} {K : Type u_3} [Field K] [IsAlgClosed K] [CharZero K]
+    {A : Type u_4} [AddCommGroup A]
+    (classification :
+      ∀ (n : ℕ) (a b : Fin n → A),
+        AddSubgroup.closure (Set.range a ∪ Set.range b) = ⊤ →
+          DiamondIntegral.Section3.DiagonalWeightsFaithful Kˣ a →
+            DiamondIntegral.Section3.DiagonalWeightsFaithful Kˣ b →
+              ∀ (a_4 : DiamondIntegral.Section3.DiagonalBirationalEquiv K a b),
+                ∃ C, IsUnit C.det ∧ ∀ (i : Fin n), b i = ∑ j, C i j • a j) :
+    DiamondIntegral.Section3.ReichsteinYoussinInput K A
+'DiamondIntegral.Section3.ReichsteinYoussinInput' depends on axioms: [propext, Classical.choice, Quot.sound]
+structure DiamondIntegral.Section3.GammaGroundContext (M : Type) [SpecialTransformations.Milestone0.LRV.Structure M]
+  [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] : Type 1
+number of parameters: 3
+fields:
+  DiamondIntegral.Section3.GammaGroundContext.model00 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF00
+  DiamondIntegral.Section3.GammaGroundContext.κ : Cardinal.{0}
+  DiamondIntegral.Section3.GammaGroundContext.uncountable : Cardinal.aleph0 < self.κ
+  DiamondIntegral.Section3.GammaGroundContext.saturated : SpecialTransformations.Section3.Saturated M self.κ
+  DiamondIntegral.Section3.GammaGroundContext.homogeneous : SpecialTransformations.Section3.StronglyHomogeneous M self.κ
+  DiamondIntegral.Section3.GammaGroundContext.real : SpecialTransformations.Milestone0.LRV.Substructure M
+  DiamondIntegral.Section3.GammaGroundContext.fieldBase : DiamondIntegral.Section2.VFGeneratedFieldBase self.real
+  DiamondIntegral.Section3.GammaGroundContext.gamma : Subgroup SpecialTransformations.Section3.Values.Gamma
+  DiamondIntegral.Section3.GammaGroundContext.values_mem : ∀ (t : DiamondIntegral.Section2.RV M),
+      ↑↑t ∈ ↑self.real → DiamondIntegral.Section2.rvFiniteValue t ∈ self.gamma
+  DiamondIntegral.Section3.GammaGroundContext.small_real : Cardinal.mk ↥self.real < self.κ
+  DiamondIntegral.Section3.GammaGroundContext.small_gamma : Cardinal.mk ↥self.gamma < self.κ
+  DiamondIntegral.Section3.GammaGroundContext.nontrivial_gamma : ∃ γ, ↑γ ≠ 1
+constructor:
+  DiamondIntegral.Section3.GammaGroundContext.mk {M : Type} [SpecialTransformations.Milestone0.LRV.Structure M]
+    [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (model00 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF00)
+    (κ : Cardinal.{0}) (uncountable : Cardinal.aleph0 < κ) (saturated : SpecialTransformations.Section3.Saturated M κ)
+    (homogeneous : SpecialTransformations.Section3.StronglyHomogeneous M κ)
+    (real : SpecialTransformations.Milestone0.LRV.Substructure M)
+    (fieldBase : DiamondIntegral.Section2.VFGeneratedFieldBase real)
+    (gamma : Subgroup SpecialTransformations.Section3.Values.Gamma)
+    (values_mem : ∀ (t : DiamondIntegral.Section2.RV M), ↑↑t ∈ ↑real → DiamondIntegral.Section2.rvFiniteValue t ∈ gamma)
+    (small_real : Cardinal.mk ↥real < κ) (small_gamma : Cardinal.mk ↥gamma < κ) (nontrivial_gamma : ∃ γ, ↑γ ≠ 1) :
+    DiamondIntegral.Section3.GammaGroundContext M
+'DiamondIntegral.Section3.GammaGroundContext' depends on axioms: [propext, Classical.choice, Quot.sound]
+theorem DiamondIntegral.Section3.gammaGroundUnmeasuredGroupTensor_kernel : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {hc : CanonicalStructure.IsCanonical}
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {κ : Cardinal.{0}},
+  Cardinal.aleph0 ≤ κ →
+    SpecialTransformations.Section3.Saturated M κ →
+      M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF00 →
+        Cardinal.mk ↑B.real < κ →
+          Cardinal.mk ↑B.gamma < κ →
+            DiamondIntegral.Section2.NontrivialDefinableGamma B →
+              RingHom.ker DiamondIntegral.Section3.gammaGroundUnmeasuredGroupTensorMap =
+                DiamondIntegral.Section3.gammaGroundUnmeasuredTensorRelationIdeal :=
+⋯
+'DiamondIntegral.Section3.gammaGroundUnmeasuredGroupTensor_kernel' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+theorem DiamondIntegral.Section3.gammaGroundMeasuredGroupTensor_kernel : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {hc : CanonicalStructure.IsCanonical}
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {κ : Cardinal.{0}},
+  Cardinal.aleph0 ≤ κ →
+    SpecialTransformations.Section3.Saturated M κ →
+      M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF00 →
+        Cardinal.mk ↑B.real < κ →
+          Cardinal.mk ↑B.gamma < κ →
+            DiamondIntegral.Section2.NontrivialDefinableGamma B →
+              RingHom.ker DiamondIntegral.Section3.gammaGroundMeasuredGroupTensorMap =
+                DiamondIntegral.Section3.gammaGroundMeasuredTensorRelationIdeal :=
+⋯
+'DiamondIntegral.Section3.gammaGroundMeasuredGroupTensor_kernel' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+theorem DiamondIntegral.Section4.Section3T001Integration.ordinary : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {hc : CanonicalStructure.IsCanonical}
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {κ : Cardinal.{0}},
+  Cardinal.aleph0 ≤ κ →
+    SpecialTransformations.Section3.Saturated M κ →
+      M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF00 →
+        Cardinal.mk ↑B.real < κ →
+          Cardinal.mk ↑B.gamma < κ →
+            DiamondIntegral.Section2.NontrivialDefinableGamma B →
+              DiamondIntegral.Section4.ApprovedT001Presentation.Ordinary B :=
+⋯
+'DiamondIntegral.Section4.Section3T001Integration.ordinary' depends on axioms: [propext, Classical.choice, Quot.sound]
+theorem DiamondIntegral.Section4.Section3T001Integration.measured : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {hc : CanonicalStructure.IsCanonical}
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {κ : Cardinal.{0}},
+  Cardinal.aleph0 ≤ κ →
+    SpecialTransformations.Section3.Saturated M κ →
+      M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF00 →
+        Cardinal.mk ↑B.real < κ →
+          Cardinal.mk ↑B.gamma < κ →
+            DiamondIntegral.Section2.NontrivialDefinableGamma B →
+              DiamondIntegral.Section4.ApprovedT001Presentation.Measured B :=
+⋯
+'DiamondIntegral.Section4.Section3T001Integration.measured' depends on axioms: [propext, Classical.choice, Quot.sound]
+theorem DiamondIntegral.Section4.Section3LinkedRetractionStatements.proposition_4_7 : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF],
+  CanonicalStructure.IsCanonical →
+    M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF00 →
+      DiamondIntegral.Section2.GammaPiecewiseRationalAffineInput →
+        ∀ {κ : Cardinal.{0}},
+          Cardinal.aleph0 ≤ κ →
+            SpecialTransformations.Section3.Saturated M κ →
+              ∀ (B : SpecialTransformations.Section3.GammaParameters.Base),
+                Cardinal.mk ↑B.real < κ →
+                  Cardinal.mk ↑B.gamma < κ →
+                    DiamondIntegral.Section2.NontrivialDefinableGamma B →
+                      ∃ E_g E_b,
+                        E_g ≠ E_b ∧
+                          E_g (DiamondIntegral.Section4.RVMeasuredSpecialClasses.pClass B) = 0 ∧
+                            E_b (DiamondIntegral.Section4.RVMeasuredSpecialClasses.pClass B) = 0 ∧
+                              (∀ (x : DiamondIntegral.Section4.RESChartRing.Ring B),
+                                  E_g ((DiamondIntegral.Section4.RVChartMaps.ofRES B) x) =
+                                      (DiamondIntegral.Section4.RESMeasuredReduction.quotient B) x ∧
+                                    E_b ((DiamondIntegral.Section4.RVChartMaps.ofRES B) x) =
+                                      (DiamondIntegral.Section4.RESMeasuredReduction.quotient B) x) ∧
+                                E_g (DiamondIntegral.Section4.RVMeasuredSpecialClasses.hClass B) =
+                                    DiamondIntegral.Section4.RESMeasuredReduction.pointClass B ∧
+                                  E_b (DiamondIntegral.Section4.RVMeasuredSpecialClasses.hClass B) = 0 :=
+⋯
+'DiamondIntegral.Section4.Section3LinkedRetractionStatements.proposition_4_7' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+theorem DiamondIntegral.Section4.Section3LinkedRetractionStatements.proposition_4_15 : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF],
+  CanonicalStructure.IsCanonical →
+    M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF00 →
+      DiamondIntegral.Section2.GammaPiecewiseRationalAffineInput →
+        ∀ {κ : Cardinal.{0}},
+          Cardinal.aleph0 ≤ κ →
+            SpecialTransformations.Section3.Saturated M κ →
+              ∀ (B : SpecialTransformations.Section3.GammaParameters.Base),
+                Cardinal.mk ↑B.real < κ →
+                  Cardinal.mk ↑B.gamma < κ →
+                    DiamondIntegral.Section2.NontrivialDefinableGamma B →
+                      ∃ E,
+                        DiamondIntegral.Section4.RVRadiusIdeal.radiusIdeal B ≤ RingHom.ker ↑E ∧
+                          ∀ (x : DiamondIntegral.Section4.RESChartRing.Ring B),
+                            E ((DiamondIntegral.Section4.RVBoundedMaps.ofRES B) x) =
+                              (DiamondIntegral.Section4.RESOrdinaryReduction.forget B) x :=
+⋯
+'DiamondIntegral.Section4.Section3LinkedRetractionStatements.proposition_4_15' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

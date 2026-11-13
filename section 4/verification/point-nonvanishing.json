@@ -1,0 +1,19 @@
+{
+  "status": "CHECKED_PROOF_COMPLETION",
+  "item": "S4-U004",
+  "description": "Actual measured degree-one point nonvanishing and a main-text justification of Proposition 4.7 distinctness. No statement changed.",
+  "manuscript_status": "Applied as an independently established proof completion under standing author authorization; accepted colored review copy preserved.",
+  "formal_scope": "Canonical ACVF(0,0), arbitrary original real/Gamma base; no original-base RV lifts assumed for auxiliary normalization representatives.",
+  "proof": "Constructed residue trace through actual products, scissors, isomorphisms and fibre/affine relations; nontrivial target proved by finite-field specialization.",
+  "external_theorem_inputs_added": [],
+  "theorem": "DiamondIntegral.Section4.RESPointNonvanishing.point_ne_zero_acvf00",
+  "retraction_statement_scope": "All clauses of 4.7 and 4.15 are assembled relative to explicit uninstantiated T001 transport interfaces.",
+  "sources": {
+    "section 4/RESPointNonvanishing.lean": "1b77bbcb768fcafb1c43ff73c8b45330063a1aae2f7bff97220d6e88086e946f",
+    "section 4/RESResidueTrace.lean": "ac4444966c621f2459ce6c69d09a00edab4d6138795a5d9296bf7717e8b0967a",
+    "section 4/FieldAffineNontrivial.lean": "ff5f5129f4fa07a31032fc11bdca6270e824a4c9b7fbfa9e2d20c9034ec65ed1",
+    "section 4/RVT001RetractionStatements.lean": "12841137b1fbe8d3734fab333297d381dbb1e6cd0f13c816e9064b6c8743a80f",
+    "section 2/reference/diamond_integral_revision_annotated.tex": "4fdc06159f7ae4065f551fd1695113a88a9b8064299cdca58e72e4da1e68cf61",
+    "section 4/reference/section4-main-text-review.pdf": "74eb9b7e8ef9a0c5a69901e8af675cd0cccdf6f0c90da88730ec62ef75b3e602"
+  }
+}

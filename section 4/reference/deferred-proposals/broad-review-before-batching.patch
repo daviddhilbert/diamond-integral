@@ -1,0 +1,239 @@
+diff --git a/section 2/reference/diamond_integral_revision_annotated.tex b/section 2/reference/diamond_integral_revision_annotated.tex
+index 9760dd3..3f23186 100644
+--- a/section 2/reference/diamond_integral_revision_annotated.tex	
++++ b/section 2/reference/diamond_integral_revision_annotated.tex	
+@@ -26,6 +26,8 @@
+ }
+ % Author-approved resolutions are green; the original referee text is retained in gray.
+ \definecolor{ResolutionGreen}{RGB}{0,100,55}
++% Dark orange marks proposed Section 4 main-text revisions, awaiting author review.
++\definecolor{SectionFourProposal}{RGB}{175,75,0}
+ \newcommand{\ResolvedRefereeRemark}[5]{%
+   \par\medskip\begingroup\normalfont\small\color{gray}%
+   \emergencystretch=1.5em\noindent\textbf{Resolved referee R#1 [#2] -- #3.}\par\nobreak\noindent #4\par
+@@ -1945,6 +1947,12 @@ This is a combination of two main theorems, Theorems~8.8 and 8.29, of \cite{hrus
+ \section{Uniform retraction to $\RES$}
+ \label{sec:retract}
+ 
++{\normalfont\small\color{SectionFourProposal}
++\noindent\textbf{Proposed main-text revisions for author review.}
++The passages in dark orange in this section are proposed replacements and
++proof details; they have not yet been approved. The referee annotations
++retain their original status.\par}
++
+ \begin{defn}[Dimension-free $\RES$-categories]\label{df:res}
+ The objects of the category $\RES$ is obtained from $\RES[*]$ by forgetting the function $f$ in the pair $(U, f)$. Any definable bijection between two such objects is a morphism of $\RES$.
+ 
+@@ -1960,7 +1968,12 @@ The objects of the category $\RES$ is obtained from $\RES[*]$ by forgetting the
+ %\end{nota}
+ 
+ \begin{rem}
+-As  the  $\Gamma$-sort is an \omin-minimal group, there is  the \memph{geometric} \omin-minimal Euler characteristic  $\chi_g : \ggk \Gamma[*] \fun \Z$. This is roughly constructed as follows. Every definable set $X \sub \Gamma^k$ is definably bijective to a disjoint union of open cubes $\prod^k_{i= 1}(\alpha_i,\beta_i)$, where $\alpha_i, \beta_i \in \Gamma \cup \{-\infty, +\infty\}$. One sets $\chi_g(\prod^k_{i= 1}(\alpha_i,\beta_i)) = (-1)^k$ and then defines $\chi_g(X)$ by additivity. This does not depend on the chosen partition of $X$ and is invariant under definable bijections. It can also be shown that $\chi_g(X \cap [-\gamma, \gamma]^k)$ stabilizes as $\gamma$ approaches $+\infty$. The induced map, denoted by $\chi_b: \ggk \Gamma[*] \fun \Z$,  is the so-called \memph{bounded} \omin-minimal Euler characteristic. Obviously the two maps $\chi_g$, $\chi_b$  coincide on doubly bounded sets. On the other hand,  $\chi_g((0,+\infty))=-1$ whereas $\chi_b((0,+\infty))=0$. Both of them shall be denoted simply by $\chi$ when no distinction is needed.
++As  the  $\Gamma$-sort is an \omin-minimal group, there is  the \memph{geometric} \omin-minimal Euler characteristic  $\chi_g : \ggk \Gamma[*] \fun \Z$. This is roughly constructed as follows. {\color{SectionFourProposal}Choose a finite cell decomposition $X=\coprod_j C_j$ of a definable set $X\sub\Gamma^k$ and set
++\[
++\chi_g(X)=\sum_j(-1)^{\dim C_j}.
++\]
++The cell dimensions may vary, including dimension zero.}
++This does not depend on the chosen partition of $X$ and is invariant under definable bijections. It can also be shown that $\chi_g(X \cap [-\gamma, \gamma]^k)$ stabilizes as $\gamma$ approaches $+\infty$. The induced map, denoted by $\chi_b: \ggk \Gamma[*] \fun \Z$,  is the so-called \memph{bounded} \omin-minimal Euler characteristic. Obviously the two maps $\chi_g$, $\chi_b$  coincide on doubly bounded sets. On the other hand,  $\chi_g((0,+\infty))=-1$ whereas $\chi_b((0,+\infty))=0$. Both of them shall be denoted simply by $\chi$ when no distinction is needed.
+ 
+ % BEGIN REFEREE INSERTION R056
+ \RefereeRemark{056}{Error}{Cell dimensions in the Euler characteristic}{%
+@@ -1975,13 +1988,15 @@ See \cite[\S~9]{hrushovski:kazhdan:integration:vf} for more details, where $\chi
+ \begin{nota}\label{res:note}
+ Let $[\A] \in \ggk \RES$ denote the class of the affine line over the residue field. The class of the multiplicative torus $[\A] - 1$ over the residue field is written as $[\G_m]$; note that the multiplicative identity $1$ of $\ggk \RES$ is indeed the class $[1]$, but $[1]$ is not the multiplicative identity of the graded ring $\ggk \RES[*]$.
+ 
++{\color{SectionFourProposal}In the graded ring, $[\A]$ denotes the homogeneous degree-one class $[\G_m]+[1]\in\ggk\RES[1]$, where $[1]$ is the degree-one point class and the multiplicative identity is the degree-zero point class $1$. Every graded localization by $[\A]$ below uses this homogeneous class. After forgetting the grading, the identity is $[\A]=[\G_m]+1$.}
++
+ % BEGIN REFEREE INSERTION R057
+ \RefereeRemark{057}{Clarification}{Define the homogeneous affine-line class}{%
+ \textit{Original source line 1414.}\quad The graded and ungraded uses of $[\mathbb A]$ still need an explicit convention. In $\ggk\RES[*]$ set $\mathbb L_1=[\mathbb G_m]+[1]\in\ggk\RES[1]$, whereas in $\ggk\RES$ set $\mathbb L=[\mathbb G_m]+1$. Specify that every graded localization by $[\mathbb A]$ below means localization by $\mathbb L_1$, and that $!I[*]$ is generated by homogeneous degree-one differences. This is not merely cosmetic: $[\mathbb G_m]+1$ in the graded ring is inhomogeneous.
+ }
+ % END REFEREE INSERTION R057
+ 
+-Let $!I$ be the ideal of $\ggk \RES$ generated by the elements $[\gamma^\sharp] - [\G_m]$, where $\gamma \in \Gamma$ is definable. The quotient ring $\ggk \RES / !I$ is written as $\sggk \RES$. The ideal $!I[*]$ of $\ggk \RES[*]$ and the (graded) quotient ring $\sggk \RES[*] = \ggk \RES[*] / !I[*]$ are constructed in the same way.
++Let $!I$ be the ideal of $\ggk \RES$ generated by the elements $[\gamma^\sharp] - [\G_m]$, where $\gamma \in \Gamma$ is definable. The quotient ring $\ggk \RES / !I$ is written as $\sggk \RES$. {\color{SectionFourProposal}In the graded ring, $!I[*]$ is generated by the homogeneous degree-one differences $[\gamma^\sharp]-[\G_m]\in\ggk\RES[1]$, and we set $\sggk\RES[*]=\ggk\RES[*]/!I[*]$.}
+ 
+ The ideal of $\ggk \mgRES[*]$ generated by the  elements
+ \[
+@@ -2001,13 +2016,13 @@ The discussion here more or less follows \cite[\S~2.5]{hru:loe:lef} (also see \c
+ 
+ For $0 \leq l \leq n$, consider the maps
+ \[
+-\epsilon^{n,l}_g : \ggk \RES[n{-}l] \otimes \ggk \Gamma[l] \fun \sggk \RES[n]
++\epsilon^{n,l}_g : \ggk \RES[n{-}l] {\color{SectionFourProposal}\otimes_{\Z}} \ggk \Gamma[l] \fun \sggk \RES[n]
+ \]
+ given by
+ \begin{equation}\label{kill:gamma}
+ x \otimes y \efun \chi_g(y) x [\G_m]^l.
+ \end{equation}
+-Note that here we are forced to pass from ``${\ggk}$'' to ``$\sggk$'' in the target by the tensor $\otimes_{\gsk \Gamma^{\fin}[*]}$, for otherwise $\epsilon^{k,l}_g$ is not well-defined. Then $\bigoplus_{0 \leq l \leq n} \epsilon^{n,l}_g$ and $\Psi^{-1}$ induce a homomorphism
++{\color{SectionFourProposal}The component maps are first defined on tensor products over $\Z$. Their sum respects the homogeneous balancing relations over $\ggk\Gamma^{\fin}[*]$ after passing to $\sggk\RES[*]$: a finite Gamma class can be moved between the two factors because the differences $[\gamma^\sharp]-[\G_m]$ vanish in the target. Thus the degree-$n$ sum descends through the full graded tensor product and, together with $\Psi^{-1}$, induces a homomorphism}
+ 
+ % BEGIN REFEREE INSERTION R058
+ \RefereeRemark{058}{Clarification}{Tensor products of homogeneous pieces}{%
+@@ -2031,7 +2046,7 @@ These homomorphisms $\epsilon^m_g$, $m = 0, 1, \ldots$, are compatible in the ob
+ \]
+ whose range is precisely the zeroth piece $(\sggk \RES[*][[\A]^{-1}])_0$ of the $\Z$-graded ring on the righthand side. We have
+ \begin{equation}\label{eg:isp:van}
+-\bb E_g([\RV^{\ccirc}] + 1 - [1]) = - [\G_m][\A]^{-1} + 1 - [\A]^{-1} = 0.
++{\color{SectionFourProposal}\bb E_g([\RV^{\ccirc}] + 1 - [1]) = - [\G_m][\A]^{-1} + 1 - [1][\A]^{-1} = 0.}
+ \end{equation}
+ 
+ % BEGIN REFEREE INSERTION R059
+@@ -2115,7 +2130,7 @@ For each $\bm I = (I, \mu) \in \mG[k]$, let $\mu_I : I \fun \Gamma$ be the funct
+ \[
+ (\lambda_{[\bm I]} * \lambda_{[\bm J]})(\gamma) = \chi( (\mu \sigma)^{-1}_{I \times J}(\gamma)),
+ \]
+-where $\mu \sigma : I \times J \fun \Gamma$ is the function given by $(\alpha, \beta) \efun \mu(\alpha) + \sigma(\beta)$, and hence $\lambda_{[\bm I]} * \lambda_{[\bm J]} = \lambda_{[\bm I][\bm J]}$. Let $\Z\Gamma$ be the group ring of $\Gamma(\mathbb{S})$ over $\Z$, which is viewed as the subring of $\fn(\Gamma, \Z)$ generated, as a $\Z$-module, by $p_{\gamma}$. We have $\ggk \mG[0] \cong \Z\Gamma$. It follows that the map
++where $\mu \sigma : I \times J \fun \Gamma$ is the function given by $(\alpha, \beta) \efun \mu(\alpha) + \sigma(\beta)$, and hence $\lambda_{[\bm I]} * \lambda_{[\bm J]} = \lambda_{[\bm I][\bm J]}$. {\color{SectionFourProposal}Put $\Gamma_{\mathrm{def}}=\Gamma\cap\dcl^{\mathrm{eq}}(\mathbb S)$ and let $\Z[\Gamma_{\mathrm{def}}]$ be its group ring over $\Z$, viewed as the subring of $\fn(\Gamma,\Z)$ spanned by $p_\gamma$ for all $\gamma\in\Gamma_{\mathrm{def}}$. The degree-zero objects have definable constant weights, so $\ggk\mG[0]\cong\Z[\Gamma_{\mathrm{def}}]$.} It follows that the map
+ 
+ % BEGIN REFEREE INSERTION R062
+ \RefereeRemark{062}{Error}{The group ring uses definable value-group constants}{%
+@@ -2123,7 +2138,7 @@ where $\mu \sigma : I \times J \fun \Gamma$ is the function given by $(\alpha, \
+ }
+ % END REFEREE INSERTION R062
+ \[
+-\lambda : \ggk \mG[*] \fun \Z\Gamma \oplus X \fn(\Gamma, \Z)[X]
++\lambda : \ggk \mG[*] \fun {\color{SectionFourProposal}\Z[\Gamma_{\mathrm{def}}]} \oplus X \fn(\Gamma, \Z)[X]
+ \]
+ determined by the assignment
+ \[
+@@ -2137,15 +2152,15 @@ is a graded ring homomorphism. Of course, there are two such homomorphisms $\lam
+ 
+ 
+ 
+-We claim that the assignments
++We claim that the assignments {\color{SectionFourProposal}for $k\geq1$}
+ \begin{equation}\label{Gam:ass}
+ p_\gamma X^k \efun  [\G_m]^{k-1}[(\G_m, \gamma)], \quad q_\gamma X^k \efun  [\G_m]^{k-1}[(\{1\}, \gamma)], \quad r X^k \efun 0
+ \end{equation}
+ induce a graded ring homomorphism
+ \[
+-\psi : \Z\Gamma \oplus X\fn(\Gamma, \Z)[X] \fun \sggk \mgRES[*] / ([\A]).
++\psi : {\color{SectionFourProposal}\Z[\Gamma_{\mathrm{def}}]} \oplus X\fn(\Gamma, \Z)[X] \fun \sggk \mgRES[*] / ([\A]).
+ \]
+-Note that $\Z\Gamma$ may be regarded as a subring of $\ggk \mgRES[0]$ by identifying $p_\gamma$ with $[(\infty, \gamma)]$, which is the intended interpretation of the first assignment for $k = 0$. For the claim, it suffices to check that $\psi$ obeys the equational constraints for the generators above in Notation~\ref{gam:equ:cons}, which are all straightforward (the equality $\psi(q_\alpha) \psi( q_\beta) = \psi(- q_{\alpha + \beta})$ holds since $[\A] = [\G_m] +[1] = 0$ is forced).
++Note that {\color{SectionFourProposal}$\Z[\Gamma_{\mathrm{def}}]$} may be regarded as a subring of $\ggk \mgRES[0]$ by identifying $p_\gamma$ with $[(\infty, \gamma)]$, which is the intended interpretation of the first assignment for $k = 0$. {\color{SectionFourProposal}The $q_\gamma X^k$ and $rX^k$ assignments apply only for $k\geq1$.} For the claim, it suffices to check that $\psi$ obeys the equational constraints for the generators above in Notation~\ref{gam:equ:cons}, which are all straightforward ({\color{SectionFourProposal}for $k,l\geq1$, the equality $\psi(q_\alpha X^k)\psi(q_\beta X^l)=\psi(-q_{\alpha+\beta}X^{k+l})$ holds since $[\A]=[\G_m]+[1]=0$ is forced}).
+ 
+ % BEGIN REFEREE INSERTION R063
+ \RefereeRemark{063}{Typo}{Restore the degrees in the multiplicativity check}{%
+@@ -2165,7 +2180,7 @@ such that
+ \begin{itemize}
+   \item $\bm P \in \ggk \mgRV[1]$ vanishes under both of them,
+   \item for all $x \in \ggk \mgRES[*]$, $\mgE_{g}(x) = \mgE_{b}(x) = x/([\A])$,
+-  \item they are distinguished by $\mgE_{g}(\gh) = -[1]/([\A])$ and $\mgE_{b}(\gh) = 0$.
++  \item they are distinguished by $\mgE_{g}(\gh) = {\color{SectionFourProposal}+[1]/([\A])}$ and $\mgE_{b}(\gh) = 0$.
+ \end{itemize}
+ \end{prop}
+ 
+@@ -2185,6 +2200,13 @@ is $\ggk \mG^{\fin}[*]$-bilinear (because of  the ideal $!\mu I[*]$ in the targe
+ \]
+ The existence of the desired homomorphisms follow from a straightforward computation.
+ 
++{\color{SectionFourProposal}For the stated value on $\gh$, the corrected weight on $((0,\infty),-\id)$ is identically zero. Hence
++\[
++\lambda_g([((0,\infty),-\id)])=-p_0X,
++\qquad \mgE_g(\gh)=\psi(-p_0X)=-[\G_m]=+[1]\pmod{([\A])}.
++\]
++For $\chi_b$, the same open ray has Euler characteristic zero, giving $\mgE_b(\gh)=0$.}
++
+ % BEGIN REFEREE INSERTION R065
+ \RefereeRemark{065}{Typo}{Agreement}{%
+ \textit{Original source line 1570.}\quad Change the final verb ``follow'' to ``follows,'' since the subject is ``The existence.''
+@@ -2225,17 +2247,36 @@ By Lemma~\ref{db:to:db}, if $(U, f, \omega) \in \mgRV^{\db}[k]$ then $f(U)$, $\o
+ \end{rem}
+ 
+ \begin{nota}\label{db:generator}
+-In $\fn(\Gamma, \Z)$, for each definable element $\gamma \in \Gamma \mi 0$, let $o_{\gamma}$ be the characteristic function of $(0, \gamma)$; also set $o_0 = -p_0$. As a $\Z$-module, $\fn^{\db}(\Gamma, \Z)$ is generated by elements of the forms $p_\gamma$, $o_\gamma$. Of course $o_{\gamma} = q_0 - q_\gamma - p_\gamma$ if $\gamma> 0$, etc. An easy  computation shows that
++{\color{SectionFourProposal}Let $\fn^{\db}(\Gamma,\Z)$ be the subgroup of $\fn(\Gamma,\Z)$ consisting of functions whose nonzero locus is doubly bounded. For each definable $\gamma\in\Gamma$, set
++\[
++o_\gamma=\begin{cases}
++\mathbf1_{(0,\gamma)},&\gamma>0,\\
++\mathbf1_{(\gamma,0)},&\gamma<0,\\
++-p_0,&\gamma=0.
++\end{cases}
++\]
++As a $\Z$-module, $\fn^{\db}(\Gamma,\Z)$ is generated by $p_\gamma,o_\gamma$. For $\gamma>0$ we have $o_\gamma=q_0-q_\gamma-p_\gamma$, and for $\gamma<0$ we have $o_\gamma=q_\gamma-q_0-p_0$. The convention $o_0=-p_0$ is a convention for functions; it does not identify $o_0$ with the characteristic function of the empty interval $(0,0)$. The convolution products are given by the following cases.}
+ 
+ % BEGIN REFEREE INSERTION R067
+ \RefereeRemark{067}{Error}{Negative interval generators and bounded support}{%
+ \textit{Original source line 1600.}\quad For $\gamma<0$, the interval $(0,\gamma)$ is empty, so the definition as written cannot yield the claimed generators or quotient: the relation $o_\gamma+p_0$ would even kill the unit $p_0$. Define $o_\gamma=\mathbf1_{(\gamma,0)}$ when $\gamma<0$, retaining $o_\gamma=\mathbf1_{(0,\gamma)}$ when $\gamma>0$ and $o_0=-p_0$. Also define $\fn^{\db}(\Gamma,\mathbb Z)$ explicitly as the subgroup of functions whose nonzero locus is doubly bounded. These conventions make the subsequent formulas meaningful.
+ }
+ % END REFEREE INSERTION R067
+-\begin{itemize}
+-  \item $p_\alpha o_\beta$ equals $o_{\alpha + \beta} - o_\alpha - p_\alpha$ or $- o_{\alpha + \beta} + o_\alpha - p_{\alpha + \beta}$ or $ o_{\alpha + \beta} + o_\alpha + p_{0}$,
+-  \item $o_\alpha o_\beta$ equals $- o_{\alpha + \beta}$ or $- o_{\alpha} - o_\beta - p_{0}$.
+-\end{itemize}
++{\color{SectionFourProposal}For $\beta\ne0$, put $a=\min(\alpha,\alpha+\beta)$ and $b=\max(\alpha,\alpha+\beta)$. Then $p_\alpha o_\beta$ is the characteristic function of $(a,b)$, and
++\[
++p_\alpha o_\beta=\begin{cases}
++o_b-o_a-p_a,&0\leq a<b,\\
++o_a-o_b-p_b,&a<b\leq0,\\
++o_a+o_b+p_0,&a<0<b.
++\end{cases}
++\]
++For $\beta=0$, $p_\alpha o_0=-p_\alpha$. Also,
++\[
++o_\alpha o_\beta=\begin{cases}
++-o_{\alpha+\beta},&\alpha,\beta\geq0\text{ or }\alpha,\beta\leq0,\\
++-o_\alpha-o_\beta-p_0,&\alpha<0<\beta\text{ or }\beta<0<\alpha.
++\end{cases}
++\]}
+ \end{nota}
+ 
+ % BEGIN REFEREE INSERTION R068
+@@ -2247,14 +2288,14 @@ In $\fn(\Gamma, \Z)$, for each definable element $\gamma \in \Gamma \mi 0$, let
+ \begin{nota}\label{db:gam:fn}
+ The homomorphism
+ \begin{equation*}
+-\lambda : \ggk \mG^{\db}[*] \fun \Z\Gamma \oplus X \fn^{\db}(\Gamma, \Z)[X]
++\lambda : \ggk \mG^{\db}[*] \fun {\color{SectionFourProposal}\Z[\Gamma_{\mathrm{def}}]} \oplus X \fn^{\db}(\Gamma, \Z)[X]
+ \end{equation*}
+ is constructed as before (there is only one such homomorphism now since  $\chi_{g}$, $\chi_{b}$ agree on doubly bounded sets).
+ \end{nota}
+ 
+ 
+ \begin{nota}\label{pgammabis}
+-Recall that $\RV^{\ccirc}_\gamma = \rv(\MM_{\gamma} \mi 0)$ (Notation~\ref{defn:disc}). For each definable $\gamma \in \Gamma^+_0$, let
++Recall that $\RV^{\ccirc}_\gamma = \rv(\MM_{\gamma} \mi 0)$ (Notation~\ref{defn:disc}). {\color{SectionFourProposal}Let $D_{\RV}$ be the set of nonnegative definable $\gamma$ for which $\gamma^\sharp$ contains an $\mathbb S$-definable point. For each $\gamma\in D_{\RV}$, let}
+ \[
+ \bm P_\gamma = [\RV^{\ccirc} \mi \RV^{\ccirc}_{\gamma}] + [\{t_\gamma\}] - [1] \in \ggk \RV^{\db}[1],
+ \]
+@@ -2266,7 +2307,7 @@ where $t_\gamma \in \gamma^\sharp$ is any definable point.  It also stands for t
+ }
+ % END REFEREE INSERTION R069
+ 
+-Clearly  $\bm P_\gamma$ does not depend on the choice of $t_\gamma \in \gamma^\sharp$. The ideal of $\ggk \mRV^{\db}[*]$   generated by the elements $\bm P_\gamma$ is denoted by $(\bm P_\Gamma)$. The images of $(\bm P_\Gamma)$ under the obvious forgetful homomorphisms
++Clearly  $\bm P_\gamma$ does not depend on the choice of $t_\gamma \in \gamma^\sharp$. The ideal of $\ggk \mRV^{\db}[*]$   generated by the elements $\bm P_\gamma$ {\color{SectionFourProposal}with $\gamma\in D_{\RV}$} is denoted by $(\bm P_\Gamma)$. {\color{SectionFourProposal}A definable value need not admit a definable RV representative, as noted after Definition~\ref{def:Ga:cat}; the same restriction $\gamma\in D_{\RV}$ is used throughout this generating set.} The images of $(\bm P_\Gamma)$ under the obvious forgetful homomorphisms
+ \[
+ \ggk  \mgRV^{\db}[*] \fun \ggk \RV[*], \quad \ggk  \mgRV^{\db}[*] \fun \ggk  \mgRV[*]
+ \]
+@@ -2286,7 +2327,7 @@ p_\gamma X^k \efun  [\G_m]^{k}, \quad o_\gamma X^k \efun  - [\G_m]^{k}
+ \end{equation}
+ induce a graded ring homomorphism
+ \[
+-\psi^{\db} : \Z\Gamma \oplus X\fn^{\db}(\Gamma, \Z)[X] \fun \sggk \RES[*].
++\psi^{\db} : {\color{SectionFourProposal}\Z[\Gamma_{\mathrm{def}}]} \oplus X\fn^{\db}(\Gamma, \Z)[X] \fun \sggk \RES[*].
+ \]
+ In a nutshell, the  homomorphism $\psi^{\db} \circ \lambda$ is a ``forgetful'' map  given by $[(I, \mu)] \efun \chi(I)[\G_m]^{k}$, $(I, \mu) \in \mG^{\db}[k]$.
+ \end{rem}
+@@ -2302,11 +2343,16 @@ There is a graded ring homomorphism
+ such that $(\bm P_\Gamma)$ vanishes and, for all $x \in \ggk \mgRES[*]$, $\mgE^{\db}(x) = \phi(x)$.
+ \end{prop}
+ \begin{proof}
+-The homomorphism $\phi \times (\psi^{\db} \circ \lambda)$ is still $\ggk \mG^{\fin}[*]$-bilinear. We have
++The homomorphism $\phi \times (\psi^{\db} \circ \lambda)$ is still $\ggk \mG^{\fin}[*]$-bilinear. {\color{SectionFourProposal}For $\gamma=0$, the annulus in $\bm P_0$ is empty, and the singleton classes $[\{t_0\}]$ and $[1]$ agree, since their values and constant volume forms are zero. Thus $\bm P_0=0$. For $\gamma\in D_{\RV}$ with $\gamma>0$, we have
++\[
++({\mu} \Psi^{\db})^{-1}(\bm P_\gamma) = [(0, \gamma)] + [\{\gamma\}] + [\{t_\gamma\}] - [1].
++\]
++Its image under $\phi\otimes(\psi^{\db}\circ\lambda)$ is
+ \[
+-({\mu} \Psi^{\db})^{-1}(\bm P_\gamma) = [(0, \gamma)] + [\{\gamma\}] + [\{t_\gamma\}] - [1],
++\chi((0,\gamma))[\G_m]+\chi(\{\gamma\})[\G_m]+[1]-[1]
++=-[\G_m]+[\G_m]=0.
+ \]
+-which vanishes under $\phi \otimes (\psi^{\db} \circ \lambda)$.
++This proves vanishing for every generator. The open-interval-plus-endpoint expansion is used only when $\gamma>0$.}
+ 
+ % BEGIN REFEREE INSERTION R071
+ \RefereeRemark{071}{Error}{The zero-radius case in the proof}{%

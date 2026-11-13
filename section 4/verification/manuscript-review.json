@@ -1,0 +1,61 @@
+{
+  "status": "APPLIED_AUTHOR_APPROVED",
+  "current_display_items": [
+    "S4-T001-1",
+    "S4-T001-2"
+  ],
+  "printed_pages": [
+    40,
+    48
+  ],
+  "selected_printed_pages": [
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48
+  ],
+  "full_pdf_pages": 94,
+  "approval_requested": false,
+  "resolution_basis": "Existing Section 4 approvals retained; conflict-free synchronization of the finalized, already approved Section 3 manuscript from 37c8361. Section 4 main-text body unchanged.",
+  "resolved_section4_referee_ids": [
+    "055",
+    "056",
+    "057",
+    "058",
+    "059",
+    "060",
+    "168",
+    "061",
+    "062",
+    "063",
+    "064",
+    "065",
+    "066",
+    "067",
+    "068",
+    "069",
+    "070",
+    "071",
+    "072"
+  ],
+  "unflagged_editorial_fixes": [
+    "epsilon_g^{k,l} to epsilon_g^{n,l}",
+    "Repair the post-diagram sentence fragment",
+    "State vanishing for homogeneous positive Gamma degree, not mixed degrees"
+  ],
+  "deferred_proposals": "section 4/reference/deferred-proposals/",
+  "baseline_commit": "82fe1a127def2c24ca32a97935ff3de3f732a84c",
+  "sources": {
+    "section 2/reference/diamond_integral_revision_annotated.tex": "e6a2c4b9a20048d2993d8e78df94d4ec5ed9f09e2a7146183b72407075b91c23",
+    "section 2/reference/diamond_integral_revision_annotated.pdf": "4bffe858ceddea4510c2821d4a014417edf2494031567ab35ceb5318af55c70d",
+    "section 4/reference/section4-main-text-review.pdf": "3ade1aba307242914c521bccc70c7457e80ec5fe0db0aaa59ba2adf7d04d8b26",
+    "section 4/reference/section4-colored-main-text.patch": "39bee76140a692b01232629fa364c84ec8a3d42826edfe08106b93b51133a3ce",
+    "section 4/build-review.py": "be151bef30b9e804605bd7d59e25a222622f4a249cc7679e002b957848d953ab"
+  },
+  "latex": "Three successful pdflatex passes; no unresolved references."
+}

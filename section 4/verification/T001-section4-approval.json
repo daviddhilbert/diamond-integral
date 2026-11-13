@@ -1,0 +1,64 @@
+{
+  "status": "APPROVED_BY_AUTHOR",
+  "current_display_items": [
+    "S4-T001-1",
+    "S4-T001-2"
+  ],
+  "printed_pages": [
+    39,
+    46
+  ],
+  "selected_printed_pages": [
+    39,
+    40,
+    43,
+    44,
+    46
+  ],
+  "full_pdf_pages": 93,
+  "approval_requested": false,
+  "resolution_basis": "Consequences of the author-approved T001 correction: kernel descent and bounded restriction. The approved Section 3 statement and both proofs are synchronized verbatim. No new approval question.",
+  "resolved_section4_referee_ids": [
+    "055",
+    "056",
+    "057",
+    "058",
+    "059",
+    "060",
+    "168",
+    "061",
+    "062",
+    "063",
+    "064",
+    "065",
+    "066",
+    "067",
+    "068",
+    "069",
+    "070",
+    "071",
+    "072"
+  ],
+  "unflagged_editorial_fixes": [
+    "epsilon_g^{k,l} to epsilon_g^{n,l}",
+    "Repair the post-diagram sentence fragment",
+    "State vanishing for homogeneous positive Gamma degree, not mixed degrees"
+  ],
+  "deferred_proposals": "section 4/reference/deferred-proposals/",
+  "baseline_commit": "82fe1a127def2c24ca32a97935ff3de3f732a84c",
+  "sources": {
+    "section 2/reference/diamond_integral_revision_annotated.tex": "12c979f6e49890f865e53ff8ee798c3589a774e23527b402a9649e1dd8f40817",
+    "section 2/reference/diamond_integral_revision_annotated.pdf": "4513edc86d04dd9e7497949177895c4748a11254686ceab1491840857207289b",
+    "section 4/reference/section4-main-text-review.pdf": "5d561203cb4426fcb12810aa76798b399f3b006086c2c265baf6266aec66e99b",
+    "section 4/reference/section4-colored-main-text.patch": "c8d67b4c4c152619ab9a1b864292d9a94ede0f35d4a1f498fd4350c3c8a7d398",
+    "section 4/build-review.py": "be151bef30b9e804605bd7d59e25a222622f4a249cc7679e002b957848d953ab"
+  },
+  "latex": "Three successful pdflatex passes; no unresolved references.",
+  "approval_text": "approved. carry on and finsh the section",
+  "approved_items": [
+    "S4-T001-1",
+    "S4-T001-2"
+  ],
+  "colored_pdf": "section 4/reference/section4-T001-colored-approved.pdf",
+  "colored_pdf_sha256": "5d561203cb4426fcb12810aa76798b399f3b006086c2c265baf6266aec66e99b"
+}

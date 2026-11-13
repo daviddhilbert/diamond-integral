@@ -1,0 +1,50 @@
+{
+  "status": "APPLIED_AUTHOR_APPROVED",
+  "current_display_items": [
+    "R069"
+  ],
+  "printed_pages": [
+    43,
+    44
+  ],
+  "full_pdf_pages": 91,
+  "approval_requested": false,
+  "resolution_basis": "Explicit author approval of the displayed main-text proposal.",
+  "resolved_section4_referee_ids": [
+    "055",
+    "056",
+    "057",
+    "058",
+    "059",
+    "060",
+    "168",
+    "061",
+    "062",
+    "063",
+    "064",
+    "065",
+    "066",
+    "067",
+    "068",
+    "069",
+    "070",
+    "071",
+    "072"
+  ],
+  "unflagged_editorial_fixes": [
+    "epsilon_g^{k,l} to epsilon_g^{n,l}"
+  ],
+  "deferred_proposals": "section 4/reference/deferred-proposals/",
+  "baseline_commit": "82fe1a127def2c24ca32a97935ff3de3f732a84c",
+  "sources": {
+    "section 2/reference/diamond_integral_revision_annotated.tex": "c6d3b702568977b9f4c5d8ee0d331634673ce0d97f5764c34ccb0cca7ef4aef1",
+    "section 2/reference/diamond_integral_revision_annotated.pdf": "ede46cef6dd5d4a4e2bc66f8bf351e14b4ffde4c7ff163ddd217aa0bd470763c",
+    "section 4/reference/section4-main-text-review.pdf": "06b7fa9af7a4fb1cdc3d962db55ac40e2528f2e845b902cc710ba5ff6ce01129",
+    "section 4/reference/section4-colored-main-text.patch": "ac4a8649d507a573865ad419e6ba9c1c222c740cfaf8a012cce5a612afb4f992",
+    "section 4/build-review.py": "613866c479e62bb66900da506501fa0670cb15a59f79e8c781c0e0b80164a237"
+  },
+  "latex": "Three successful pdflatex passes; no unresolved references.",
+  "historical_record": true,
+  "archived_extract": "section 4/reference/section4-radius-accepted.pdf",
+  "note": "Historical certificate for the accepted R069 passage. Source hashes describe the approval build before S4-U003."
+}

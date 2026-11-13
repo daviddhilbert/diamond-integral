@@ -1,0 +1,69 @@
+import «section 3».Section
+import «section 4».Section
+set_option pp.fullNames true
+set_option pp.proofs false
+set_option format.width 120
+#print DiamondIntegral.Section3.integrationAtomicGammaBaseChangeInput_complete
+#print axioms DiamondIntegral.Section3.integrationAtomicGammaBaseChangeInput_complete
+#print DiamondIntegral.Section3.integrationAtomicDiscGammaBaseChangeInput
+#print axioms DiamondIntegral.Section3.integrationAtomicDiscGammaBaseChangeInput
+#print DiamondIntegral.Section3.integrationUnaryDiscAtomicityInput
+#print axioms DiamondIntegral.Section3.integrationUnaryDiscAtomicityInput
+#print DiamondIntegral.Section3.integrationPrimitiveImageInput
+#print axioms DiamondIntegral.Section3.integrationPrimitiveImageInput
+#print DiamondIntegral.Section3.integrationUnaryOpenDiscRVBaseChangeInput
+#print axioms DiamondIntegral.Section3.integrationUnaryOpenDiscRVBaseChangeInput
+#print DiamondIntegral.Section3.integrationOpenDiscImageInput
+#print axioms DiamondIntegral.Section3.integrationOpenDiscImageInput
+#print DiamondIntegral.Section3.integrationOpenDiscNamesImageInput
+#print axioms DiamondIntegral.Section3.integrationOpenDiscNamesImageInput
+#print DiamondIntegral.Section3.integrationDiscToDiscPartitionInput
+#print axioms DiamondIntegral.Section3.integrationDiscToDiscPartitionInput
+#print DiamondIntegral.Section3.integration_lemma_2_25_closed
+#print axioms DiamondIntegral.Section3.integration_lemma_2_25_closed
+#print DiamondIntegral.Section3.integration_lemma_2_25_open
+#print axioms DiamondIntegral.Section3.integration_lemma_2_25_open
+#print DiamondIntegral.Section3.integration_corollary_2_30
+#print axioms DiamondIntegral.Section3.integration_corollary_2_30
+#print DiamondIntegral.Section3.integration_corollary_2_30_disc_names
+#print axioms DiamondIntegral.Section3.integration_corollary_2_30_disc_names
+#print DiamondIntegral.Section3.integration_lemma_2_32
+#print axioms DiamondIntegral.Section3.integration_lemma_2_32
+#print DiamondIntegral.Section3.integration_theorem_6_19
+#print axioms DiamondIntegral.Section3.integration_theorem_6_19
+#print DiamondIntegral.Section3.integration_theorem_6_19_lift
+#print axioms DiamondIntegral.Section3.integration_theorem_6_19_lift
+#print DiamondIntegral.Section3.integration_theorem_6_19_characterization
+#print axioms DiamondIntegral.Section3.integration_theorem_6_19_characterization
+#print DiamondIntegral.Section3.YinUnmeasuredLiftInput
+#print axioms DiamondIntegral.Section3.YinUnmeasuredLiftInput
+#print DiamondIntegral.Section3.YinBoundedUnmeasuredLiftInput
+#print axioms DiamondIntegral.Section3.YinBoundedUnmeasuredLiftInput
+#print DiamondIntegral.Section3.YinMeasuredLiftInput
+#print axioms DiamondIntegral.Section3.YinMeasuredLiftInput
+#print DiamondIntegral.Section3.YinDegreeMeasuredLiftInput
+#print axioms DiamondIntegral.Section3.YinDegreeMeasuredLiftInput
+#print DiamondIntegral.Section3.YinGammaGroundUnmeasuredLiftInput
+#print axioms DiamondIntegral.Section3.YinGammaGroundUnmeasuredLiftInput
+#print DiamondIntegral.Section3.YinGammaGroundBoundedUnmeasuredLiftInput
+#print axioms DiamondIntegral.Section3.YinGammaGroundBoundedUnmeasuredLiftInput
+#print DiamondIntegral.Section3.YinGammaGroundMeasuredLiftInput
+#print axioms DiamondIntegral.Section3.YinGammaGroundMeasuredLiftInput
+#print DiamondIntegral.Section3.YinGammaGroundDegreeMeasuredLiftInput
+#print axioms DiamondIntegral.Section3.YinGammaGroundDegreeMeasuredLiftInput
+#print DiamondIntegral.Section3.ReichsteinYoussinInput
+#print axioms DiamondIntegral.Section3.ReichsteinYoussinInput
+#print DiamondIntegral.Section3.GammaGroundContext
+#print axioms DiamondIntegral.Section3.GammaGroundContext
+#print DiamondIntegral.Section3.gammaGroundUnmeasuredGroupTensor_kernel
+#print axioms DiamondIntegral.Section3.gammaGroundUnmeasuredGroupTensor_kernel
+#print DiamondIntegral.Section3.gammaGroundMeasuredGroupTensor_kernel
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredGroupTensor_kernel
+#print DiamondIntegral.Section4.Section3T001Integration.ordinary
+#print axioms DiamondIntegral.Section4.Section3T001Integration.ordinary
+#print DiamondIntegral.Section4.Section3T001Integration.measured
+#print axioms DiamondIntegral.Section4.Section3T001Integration.measured
+#print DiamondIntegral.Section4.Section3LinkedRetractionStatements.proposition_4_7
+#print axioms DiamondIntegral.Section4.Section3LinkedRetractionStatements.proposition_4_7
+#print DiamondIntegral.Section4.Section3LinkedRetractionStatements.proposition_4_15
+#print axioms DiamondIntegral.Section4.Section3LinkedRetractionStatements.proposition_4_15

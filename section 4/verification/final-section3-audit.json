@@ -1,0 +1,66 @@
+{
+  "status": "STATEMENT_AND_FORMAL_TRANSPORT_PASS",
+  "source_repository": "https://github.com/daviddhilbert/diamond-integral",
+  "source_revision": "37c836172e93528e319cb2f2aa58d03c1b3c3bee",
+  "source_thread": "01a1c67f-cca2-72cd-b3a5-a909eebcd02a",
+  "upstream_receipt_sha256": "aa63c793dd6f5db2a6d6f78d654bfbaf6ca11d99c8f13a383a9ee411f068b04f",
+  "upstream_status": "PASS",
+  "upstream_verified_source_hashes": 1016,
+  "upstream_supporting_declarations": 5324,
+  "upstream_paper_target_review": {
+    "status": "COMPLETE_IN_DOCUMENTED_PAPER_CONTEXTS_RELATIVE_TO_ACCEPTED_CITATIONS",
+    "targets": 21,
+    "declaration_links": 119,
+    "sha256": "817dbfc40394df762c340caf06e38dbe85e3f3848e22039b81bd3f22b7714f4d"
+  },
+  "section4_main_text_unchanged": true,
+  "section4_body_sha256": "0ed7eaa40b50ff5ef97d28e1399679b0b434e31b68d895d5c919196fb0aab383",
+  "accepted_T001_block_still_verbatim": true,
+  "statement_checks": {
+    "ordinary_kernel": "Exact ideal of elementary positive coefficient-pair differences; no tensor injectivity or cancellation.",
+    "measured_kernel": "Same RES coefficient and full combined Gamma weight, with translated domain and compensated original volume.",
+    "ground": "Actual kernel theorems retain arbitrary original real/Gamma bases, canonical ACVF00, saturation, both smallness hypotheses and nontrivial definable Gamma; VF-generation is only an extra context condition for VF lift/integral applications.",
+    "bounded_construction": "Uses full ordinary presentation and annihilation of accepted radius relations; no bounded tensor-kernel or bounded injectivity premise.",
+    "radius_indices": "Nonnegative radii with original-base definable RV lifts are unchanged; availability on a coefficient object is not confused with an original-base point.",
+    "gamma_affine_background": "General rational-affine normal form remains an explicit accepted QE background; the finalized integral-affine contraction classification is not substituted for it."
+  },
+  "external_boundaries": [
+    "Section 3 remains relative to the accepted later [18] lift/kernel records; measured [18, Section 7] is unfinished.",
+    "The coefficient-monicity classification retains the separately approved Reichstein–Youssin input. Section 4 Euler kernel descent does not require monicity."
+  ],
+  "formal_transport": {
+    "instantiated": true,
+    "reason": "All categorical-to-chart factors, coefficient squares, tensor sources, RV targets, comparison squares and elementary-pair ideal transport are constructed and compiled.",
+    "checked_reduction_module": "section 4/Section3PresentationAudit.lean",
+    "remaining_data": [],
+    "no_new_assumption_claimed_proved": true,
+    "section4_retractions_remain_relative_to_explicit_T001_interfaces": false,
+    "checked_components": {
+      "ordinary_RV_target_equivalence": "DiamondIntegral.Section4.Section3RVRingEquivalences.ordinary",
+      "measured_RV_target_equivalence": "DiamondIntegral.Section4.Section3RVRingEquivalences.measured",
+      "object_class_formulas": "Forward and inverse object formulas proved; original base and degree retained",
+      "status": "PASS: direct Lean checks, full project build, all 600 registered Section 4 modules and 4998 declaration types/logical dependencies audited.",
+      "Gamma_object_and_morphism_conversions": "Compiled: original-base supports, partial forms, finite tags, complete branch graphs, full RV-code contractions, ordinary/measured arrows in both directions and single-piece round trips.",
+      "ordinary_RES_factor_equivalence": "DiamondIntegral.Section4.Section3RESRingEquivalences.ordinary",
+      "measured_RES_factor_equivalence": "DiamondIntegral.Section4.Section3RESRingEquivalences.measured",
+      "Gamma_completion_to_chart_additive_maps": "Compiled: Section3GammaChartAddMaps, with actual family class formulas.",
+      "ordinary_Gamma_factor_equivalence": "DiamondIntegral.Section4.Section3GammaRingEquivalences.ordinary",
+      "measured_Gamma_factor_equivalence": "DiamondIntegral.Section4.Section3GammaRingEquivalences.measured",
+      "ordinary_finite_Gamma_factor_equivalence": "DiamondIntegral.Section4.Section3FiniteGammaRingEquivalences.ordinary",
+      "measured_finite_Gamma_factor_equivalence": "DiamondIntegral.Section4.Section3FiniteGammaRingEquivalences.measured",
+      "native_sharp_lift_bridge": "Section3GammaSharpBridge: ordinary and measured arrows retain the full original RV preimage and explicit tag.",
+      "ring_tensor_transport_constructor": "RingTensorCongruence.congr: actual factor equivalences and scalar squares give the tensor ring equivalence.",
+      "coefficient_squares": "Section3CoefficientSquares",
+      "tensor_ring_equivalences": "Section3TensorRingEquivalences",
+      "tensor_comparison_squares": "Section3TensorComparisonSquares",
+      "elementary_pair_ideal_transport": "Section3CoefficientPairTransport",
+      "actual_T001_constructors": "Section3T001Integration.ordinary and .measured"
+    },
+    "integration_module": "section 4/Section3T001Integration.lean",
+    "linked_retraction_module": "section 4/Section3LinkedRetractionStatements.lean"
+  },
+  "checked_reduction_module_status": "PASS: direct Lean check and library build against actual finalized Section 3 theorem objects.",
+  "joint_dependency_build": "PASS: DiamondIntegral entry point with actual Section 3 tensor proofs and all 600 Section 4 modules.",
+  "audit_results_reference": "section 4/verification/status.json",
+  "publication_authorization": "Author requested commit and push after the completed section and dependency audits."
+}

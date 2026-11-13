@@ -1,0 +1,186 @@
+theorem DiamondIntegral.Section4.Review.geometric_relation_vanishes.{u_1} : ∀ {R : Type u_1} [inst : CommRing.{u_1} R]
+  (torus point affine invAffine : R),
+  Eq.{u_1 + 1} affine (HAdd.hAdd.{u_1, u_1, u_1} torus point) →
+    Eq.{u_1 + 1} (HMul.hMul.{u_1, u_1, u_1} affine invAffine) 1 →
+      Eq.{u_1 + 1}
+        (HSub.hSub.{u_1, u_1, u_1}
+          (HAdd.hAdd.{u_1, u_1, u_1} (HMul.hMul.{u_1, u_1, u_1} (Neg.neg.{u_1} torus) invAffine) 1)
+          (HMul.hMul.{u_1, u_1, u_1} point invAffine))
+        0 :=
+⋯
+'DiamondIntegral.Section4.Review.geometric_relation_vanishes' depends on axioms: [propext, Quot.sound.{u}]
+theorem DiamondIntegral.Section4.Review.printed_geometric_remainder.{u_1} : ∀ {R : Type u_1} [inst : CommRing.{u_1} R]
+  (torus point affine invAffine : R),
+  Eq.{u_1 + 1} affine (HAdd.hAdd.{u_1, u_1, u_1} torus point) →
+    Eq.{u_1 + 1} (HMul.hMul.{u_1, u_1, u_1} affine invAffine) 1 →
+      Eq.{u_1 + 1}
+        (HSub.hSub.{u_1, u_1, u_1}
+          (HAdd.hAdd.{u_1, u_1, u_1} (HMul.hMul.{u_1, u_1, u_1} (Neg.neg.{u_1} torus) invAffine) 1) invAffine)
+        (HMul.hMul.{u_1, u_1, u_1} (HSub.hSub.{u_1, u_1, u_1} point 1) invAffine) :=
+⋯
+'DiamondIntegral.Section4.Review.printed_geometric_remainder' depends on axioms: [propext, Quot.sound.{u}]
+theorem DiamondIntegral.Section4.Review.bounded_relation_vanishes.{u_1} : ∀ {R : Type u_1} [inst : CommRing.{u_1} R]
+  (point invPoint : R),
+  Eq.{u_1 + 1} (HMul.hMul.{u_1, u_1, u_1} point invPoint) 1 →
+    Eq.{u_1 + 1} (HSub.hSub.{u_1, u_1, u_1} (HAdd.hAdd.{u_1, u_1, u_1} 0 1) (HMul.hMul.{u_1, u_1, u_1} point invPoint))
+      0 :=
+⋯
+'DiamondIntegral.Section4.Review.bounded_relation_vanishes' depends on axioms: [propext]
+theorem DiamondIntegral.Section4.Review.measured_geometric_sign.{u_1} : ∀ {R : Type u_1} [inst : CommRing.{u_1} R]
+  (torus point : R),
+  Eq.{u_1 + 1} (HAdd.hAdd.{u_1, u_1, u_1} torus point) 0 → Eq.{u_1 + 1} (Neg.neg.{u_1} torus) point :=
+⋯
+'DiamondIntegral.Section4.Review.measured_geometric_sign' depends on axioms: [propext]
+theorem DiamondIntegral.Section4.Review.printed_measured_sign_requires_two_torsion.{u_1} : ∀ {R : Type u_1}
+  [inst : CommRing.{u_1} R] (torus point : R),
+  Eq.{u_1 + 1} (HAdd.hAdd.{u_1, u_1, u_1} torus point) 0 →
+    Eq.{u_1 + 1} (Neg.neg.{u_1} torus) (Neg.neg.{u_1} point) → Eq.{u_1 + 1} (HAdd.hAdd.{u_1, u_1, u_1} point point) 0 :=
+⋯
+'DiamondIntegral.Section4.Review.printed_measured_sign_requires_two_torsion' depends on axioms: [propext]
+theorem DiamondIntegral.Section4.Review.measured_ray_product.{u_1} : ∀ {R : Type u_1} [inst : CommRing.{u_1} R]
+  (torus point : R),
+  Eq.{u_1 + 1} (HAdd.hAdd.{u_1, u_1, u_1} torus point) 0 →
+    Eq.{u_1 + 1} (HMul.hMul.{u_1, u_1, u_1} point point) (Neg.neg.{u_1} (HMul.hMul.{u_1, u_1, u_1} torus point)) :=
+⋯
+'DiamondIntegral.Section4.Review.measured_ray_product' depends on axioms: [propext, Quot.sound.{u}]
+theorem DiamondIntegral.Section4.Review.geometric_point_after_forgetting.{u_1} : ∀ {R : Type u_1}
+  [inst : CommRing.{u_1} R] (invAffine : R), Eq.{u_1 + 1} (HMul.hMul.{u_1, u_1, u_1} 1 invAffine) invAffine :=
+⋯
+'DiamondIntegral.Section4.Review.geometric_point_after_forgetting' does not depend on any axioms
+theorem DiamondIntegral.Section4.Review.different_point_images.{u_1} : ∀ {R : Type u_1} [inst : CommRing.{u_1} R]
+  (invAffine : R), Ne.{u_1 + 1} invAffine 1 → Ne.{u_1 + 1} 1 invAffine :=
+⋯
+'DiamondIntegral.Section4.Review.different_point_images' does not depend on any axioms
+theorem DiamondIntegral.Section4.Review.positive_radius_cancellation.{u_1} : ∀ {R : Type u_1} [inst : CommRing.{u_1} R]
+  (torus point : R),
+  Eq.{u_1 + 1}
+    (HSub.hSub.{u_1, u_1, u_1}
+      (HAdd.hAdd.{u_1, u_1, u_1}
+        (HAdd.hAdd.{u_1, u_1, u_1} (HMul.hMul.{u_1, u_1, u_1} (-1) torus) (HMul.hMul.{u_1, u_1, u_1} 1 torus)) point)
+      point)
+    0 :=
+⋯
+'DiamondIntegral.Section4.Review.positive_radius_cancellation' depends on axioms: [propext, Quot.sound.{u}]
+theorem DiamondIntegral.Section4.Review.zero_radius_printed_remainder.{u_1} : ∀ {R : Type u_1} [inst : CommRing.{u_1} R]
+  (torus point : R),
+  Eq.{u_1 + 1}
+    (HSub.hSub.{u_1, u_1, u_1}
+      (HAdd.hAdd.{u_1, u_1, u_1}
+        (HAdd.hAdd.{u_1, u_1, u_1} (HMul.hMul.{u_1, u_1, u_1} 0 torus) (HMul.hMul.{u_1, u_1, u_1} 1 torus)) point)
+      point)
+    torus :=
+⋯
+'DiamondIntegral.Section4.Review.zero_radius_printed_remainder' depends on axioms: [propext]
+theorem DiamondIntegral.Section4.Review.zero_radius_actual_generator.{u_1} : ∀ {R : Type u_1} [inst : CommRing.{u_1} R]
+  (point : R), Eq.{u_1 + 1} (HSub.hSub.{u_1, u_1, u_1} (HAdd.hAdd.{u_1, u_1, u_1} 0 point) point) 0 :=
+⋯
+'DiamondIntegral.Section4.Review.zero_radius_actual_generator' depends on axioms: [propext]
+theorem DiamondIntegral.Section4.Review.geometric_mixed_associativity : Eq.{1} (HMul.hMul.{0, 0, 0} (-1) (-1))
+  (Neg.neg.{0} (-1)) :=
+⋯
+'DiamondIntegral.Section4.Review.geometric_mixed_associativity' depends on axioms: [propext, Quot.sound.{u}]
+theorem DiamondIntegral.Section4.Review.bounded_mixed_associativity : Eq.{1} (HMul.hMul.{0, 0, 0} 0 0) (-0) :=
+⋯
+'DiamondIntegral.Section4.Review.bounded_mixed_associativity' depends on axioms: [propext]
+def DiamondIntegral.Section4.Review.pointFn.{u_1} : {Γ : Type u_1} → [LinearOrder.{u_1} Γ] → Γ → Γ → ℤ :=
+fun {Γ} [LinearOrder.{u_1} Γ] a x => ite.{1} (Eq.{u_1 + 1} x a) 1 0
+'DiamondIntegral.Section4.Review.pointFn' does not depend on any axioms
+def DiamondIntegral.Section4.Review.printedInterval.{u_1} : {Γ : Type u_1} →
+  [LinearOrder.{u_1} Γ] → [Zero.{u_1} Γ] → Γ → Γ → ℤ :=
+fun {Γ} [LinearOrder.{u_1} Γ] [Zero.{u_1} Γ] a x => ite.{1} (LT.lt.{u_1} 0 x ∧ LT.lt.{u_1} x a) 1 0
+'DiamondIntegral.Section4.Review.printedInterval' depends on axioms: [propext]
+def DiamondIntegral.Section4.Review.intervalFn.{u_1} : {Γ : Type u_1} →
+  [LinearOrder.{u_1} Γ] → [Zero.{u_1} Γ] → Γ → Γ → ℤ :=
+fun {Γ} [LinearOrder.{u_1} Γ] [Zero.{u_1} Γ] a =>
+  ite.{u_1 + 1} (Eq.{u_1 + 1} a 0) (Neg.neg.{u_1} (DiamondIntegral.Section4.Review.pointFn.{u_1} 0)) fun x =>
+    ite.{1} (LT.lt.{u_1} (Min.min.{u_1} 0 a) x ∧ LT.lt.{u_1} x (Max.max.{u_1} 0 a)) 1 0
+'DiamondIntegral.Section4.Review.intervalFn' depends on axioms: [propext]
+theorem DiamondIntegral.Section4.Review.pointFn_self.{u_1} : ∀ {Γ : Type u_1} [inst : LinearOrder.{u_1} Γ] (a : Γ),
+  Eq.{1} (DiamondIntegral.Section4.Review.pointFn.{u_1} a a) 1 :=
+⋯
+'DiamondIntegral.Section4.Review.pointFn_self' depends on axioms: [propext]
+theorem DiamondIntegral.Section4.Review.pointFn_ne.{u_1} : ∀ {Γ : Type u_1} [inst : LinearOrder.{u_1} Γ] (a x : Γ),
+  Ne.{u_1 + 1} x a → Eq.{1} (DiamondIntegral.Section4.Review.pointFn.{u_1} a x) 0 :=
+⋯
+'DiamondIntegral.Section4.Review.pointFn_ne' depends on axioms: [propext]
+theorem DiamondIntegral.Section4.Review.printedInterval_nonpositive.{u_1} : ∀ {Γ : Type u_1}
+  [inst : LinearOrder.{u_1} Γ] [inst_1 : Zero.{u_1} Γ] (a : Γ),
+  LE.le.{u_1} a 0 → Eq.{u_1 + 1} (DiamondIntegral.Section4.Review.printedInterval.{u_1} a) 0 :=
+⋯
+'DiamondIntegral.Section4.Review.printedInterval_nonpositive' depends on axioms: [propext, Quot.sound.{u}]
+theorem DiamondIntegral.Section4.Review.printedInterval_zero.{u_1} : ∀ {Γ : Type u_1} [inst : LinearOrder.{u_1} Γ]
+  [inst_1 : Zero.{u_1} Γ], Eq.{u_1 + 1} (DiamondIntegral.Section4.Review.printedInterval.{u_1} 0) 0 :=
+⋯
+'DiamondIntegral.Section4.Review.printedInterval_zero' depends on axioms: [propext, Quot.sound.{u}]
+theorem DiamondIntegral.Section4.Review.intervalFn_zero.{u_1} : ∀ {Γ : Type u_1} [inst : LinearOrder.{u_1} Γ]
+  [inst_1 : Zero.{u_1} Γ],
+  Eq.{u_1 + 1} (DiamondIntegral.Section4.Review.intervalFn.{u_1} 0)
+    (Neg.neg.{u_1} (DiamondIntegral.Section4.Review.pointFn.{u_1} 0)) :=
+⋯
+'DiamondIntegral.Section4.Review.intervalFn_zero' depends on axioms: [propext]
+theorem DiamondIntegral.Section4.Review.intervalFn_positive.{u_1} : ∀ {Γ : Type u_1} [inst : LinearOrder.{u_1} Γ]
+  [inst_1 : Zero.{u_1} Γ] (a : Γ),
+  LT.lt.{u_1} 0 a →
+    Eq.{u_1 + 1} (DiamondIntegral.Section4.Review.intervalFn.{u_1} a)
+      (DiamondIntegral.Section4.Review.printedInterval.{u_1} a) :=
+⋯
+'DiamondIntegral.Section4.Review.intervalFn_positive' depends on axioms: [propext, Quot.sound.{u}]
+theorem DiamondIntegral.Section4.Review.intervalFn_negative.{u_1} : ∀ {Γ : Type u_1} [inst : LinearOrder.{u_1} Γ]
+  [inst_1 : Zero.{u_1} Γ] (a : Γ),
+  LT.lt.{u_1} a 0 →
+    Eq.{u_1 + 1} (DiamondIntegral.Section4.Review.intervalFn.{u_1} a) fun x =>
+      ite.{1} (LT.lt.{u_1} a x ∧ LT.lt.{u_1} x 0) 1 0 :=
+⋯
+'DiamondIntegral.Section4.Review.intervalFn_negative' depends on axioms: [propext, Quot.sound.{u}]
+theorem DiamondIntegral.Section4.Review.intervalFn_zero_ne_empty.{u_1} : ∀ {Γ : Type u_1} [inst : LinearOrder.{u_1} Γ]
+  [inst_1 : Zero.{u_1} Γ],
+  Ne.{u_1 + 1} (DiamondIntegral.Section4.Review.intervalFn.{u_1} 0)
+    (DiamondIntegral.Section4.Review.printedInterval.{u_1} 0) :=
+⋯
+'DiamondIntegral.Section4.Review.intervalFn_zero_ne_empty' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.Review.no_printed_negative_euler_value.{u_1} : ∀ {Γ : Type u_1}
+  [inst : LinearOrder.{u_1} Γ] [inst_1 : Zero.{u_1} Γ] (a : Γ),
+  LT.lt.{u_1} a 0 →
+    ∀ (χ : AddMonoidHom.{u_1, 0} (Γ → ℤ) ℤ),
+      Ne.{1} (χ (DiamondIntegral.Section4.Review.printedInterval.{u_1} a)) (-1) :=
+⋯
+'DiamondIntegral.Section4.Review.no_printed_negative_euler_value' depends on axioms: [propext, Quot.sound.{u}]
+theorem DiamondIntegral.Section4.Review.stabilized_fraction_ne_zero.{u_1, u_3} : ∀ {R : Type u_1} {A : Type u_3}
+  [inst : CommRing.{u_1} R] [inst_1 : CommRing.{u_3} A] [inst_2 : Algebra.{u_1, u_3} R A] (a r : R)
+  [inst_3 : IsLocalization.Away.{u_1, u_3} a A],
+  (∀ (n : ℕ), Ne.{u_1 + 1} (HMul.hMul.{u_1, u_1, u_1} (HPow.hPow.{u_1, 0, u_1} a n) r) 0) →
+    ∀ (d : ℕ),
+      Ne.{u_3 + 1} (IsLocalization.mk'.{u_1, u_3} A r (Subtype.mk.{u_1 + 1} (HPow.hPow.{u_1, 0, u_1} a d) ⋯)) 0 :=
+⋯
+'DiamondIntegral.Section4.Review.stabilized_fraction_ne_zero' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.Review.torsion_fraction_maps_zero.{u_1, u_2, u_3, u_4} : ∀ {R : Type u_1}
+  {S : Type u_2} {A : Type u_3} {B : Type u_4} [inst : CommRing.{u_1} R] [inst_1 : CommRing.{u_2} S]
+  [inst_2 : CommRing.{u_3} A] [inst_3 : CommRing.{u_4} B] [inst_4 : Algebra.{u_1, u_3} R A]
+  [inst_5 : Algebra.{u_2, u_4} S B] (f : RingHom.{u_1, u_2} R S) (a r : R) [inst_6 : IsLocalization.Away.{u_1, u_3} a A]
+  [inst_7 : IsLocalization.Away.{u_2, u_4} (f a) B],
+  Eq.{u_2 + 1} (HMul.hMul.{u_2, u_2, u_2} (f a) (f r)) 0 →
+    ∀ (d : ℕ),
+      Eq.{u_4 + 1}
+        ((IsLocalization.Away.map.{u_1, u_3, u_2, u_4} A B f a)
+          (IsLocalization.mk'.{u_1, u_3} A r (Subtype.mk.{u_1 + 1} (HPow.hPow.{u_1, 0, u_1} a d) ⋯)))
+        0 :=
+⋯
+'DiamondIntegral.Section4.Review.torsion_fraction_maps_zero' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.Review.localization_comparison_not_injective.{u_1, u_2, u_3, u_4} : ∀ {R : Type u_1}
+  {S : Type u_2} {A : Type u_3} {B : Type u_4} [inst : CommRing.{u_1} R] [inst_1 : CommRing.{u_2} S]
+  [inst_2 : CommRing.{u_3} A] [inst_3 : CommRing.{u_4} B] [inst_4 : Algebra.{u_1, u_3} R A]
+  [inst_5 : Algebra.{u_2, u_4} S B] (f : RingHom.{u_1, u_2} R S) (a r : R) [inst_6 : IsLocalization.Away.{u_1, u_3} a A]
+  [inst_7 : IsLocalization.Away.{u_2, u_4} (f a) B],
+  (∀ (n : ℕ), Ne.{u_1 + 1} (HMul.hMul.{u_1, u_1, u_1} (HPow.hPow.{u_1, 0, u_1} a n) r) 0) →
+    Eq.{u_2 + 1} (HMul.hMul.{u_2, u_2, u_2} (f a) (f r)) 0 →
+      ¬Function.Injective.{u_3 + 1, u_4 + 1} ⇑(IsLocalization.Away.map.{u_1, u_3, u_2, u_4} A B f a) :=
+⋯
+'DiamondIntegral.Section4.Review.localization_comparison_not_injective' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]

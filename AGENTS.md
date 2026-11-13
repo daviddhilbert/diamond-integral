@@ -51,3 +51,11 @@
   update the relevant records and pins, audit, then commit and push this
   section's work. This authorizes the push requested in this session; keep
   exact upstream hypotheses and unfinished-input boundaries explicit.
+
+- Clear typos and independently established corrections are already authorized;
+  do not request renewed approval. Read the text itself, not only referee
+  annotations, and record independently discovered issues.
+- Author instruction, November 12, Section 4: unformalized results of the
+  current project's Section 3 could be taken as precise replaceable inputs
+  while its proofs and presentation adapters were pending. The finalized
+  Section 3 tensor adapters are now compiled in Section3T001Integration.

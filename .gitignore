@@ -1,4 +1,6 @@
 /.lake/
 /section 2/.scratch/
 /section 3/.scratch/
+/section 4/.scratch/
 __pycache__/
+/verification/.section-boundary-*.json

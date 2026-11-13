@@ -45,3 +45,6 @@ jobs:
 
       - name: Audit section 3 exports
         run: lake env python3 'section 3/verify.py'
+
+      - name: Audit section 4 exports
+        run: lake env python3 'section 4/verify.py'

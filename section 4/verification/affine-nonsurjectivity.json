@@ -1,0 +1,18 @@
+{
+  "status": "PROVED",
+  "main_text": "Remark 4.4 natural affine-localization comparison is not surjective.",
+  "theorem": "DiamondIntegral.Section4.RESAffineNonsurjective.remark_4_4",
+  "witness": "The dimension-free affine-line class in the affine-localized target.",
+  "scope": "Canonical ACVF(0,0), saturated above a small original real/Gamma base; exact hypotheses printed by full audit.",
+  "proof": [
+    "Actual chart coordinate map gives RV-dimension bound.",
+    "Finite coordinate-piece cover and numerical uniform fibre bounds.",
+    "Pure-field residue code classes lie in the degree growth filtration.",
+    "Finite diagrams specialize to arbitrarily large finite fields, preserving bounded projections.",
+    "Homogeneous reduced RES numerators retain the degree growth bound.",
+    "Clearing denominators would force q^(n+m+1) <= C*q^(n+m) for arbitrarily large q."
+  ],
+  "no_new_theorem_input": true,
+  "no_comparison_injectivity_assumption": true,
+  "no_manuscript_statement_change": true
+}

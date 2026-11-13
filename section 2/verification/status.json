@@ -457,11 +457,11 @@
     "section 2/ZeroFaceRVFibres.lean": "ab991e82a9090b4fd25539d2c6f53518dc131b9ef9f35471c46b617e84e2f893",
     "section 2/ZeroFaces.lean": "13803b4a43247d6c660807a5ca036bd2ab3354204509cf1909541f13c80d2689",
     "section 2/ZeroFacesVF.lean": "86dccef9f23b6ee8ebaa973ba8ec2a18bafaa8f30bb5140b5266950817f8cb56",
-    "DiamondIntegral.lean": "fecd06416aef5d325993429b089cb35504371963226b66f9017a306ea20737d8",
-    "lakefile.toml": "c62f1d34242ce8774cd067472082929612d3b52157d445363a48ae76b669421a",
+    "DiamondIntegral.lean": "92a69aaeb0ba22758a35c6663409314d3b905f4af420349285d73d7ae70ceecf",
+    "lakefile.toml": "5ea64ff68b3aae290d8b43aeddb8876903cea4fd8109314444371ede61690b4b",
     "lake-manifest.json": "ec80c4ddd3bc873989de2a4da7392222b8318c73586e538f0dde675427f92523",
     "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
-    "ACCEPTED-CITED-RESULTS.md": "f7bbb9ba25611520a88655ab7a1153a120b2034e166f70c94be5f79597ac32a9",
+    "ACCEPTED-CITED-RESULTS.md": "e2c50e464ed4da537d9fee86293dbe134cb69699b0791e510c83d9a840e8ee83",
     "section 2/verify.py": "f1f9a6ab6c48c987e881cfd65b0cd6639134d79b124704bc3ba21348b408b3b3",
     "section 2/prepare-reuse.py": "fd134a0924dd57c807ed04d4f528e073a23178f69c06a3d632eaad7fcdd2ab35",
     "section 2/reuse/manifest.json": "c652f4bd9ed8ccd6950f6927712563ffbb822f8027ff961dda5fbf42c6d7cb8a",
@@ -475,7 +475,7 @@
     "section 2/verification/UPSTREAM-LINKS.md": "7c987b3db8027bed0d577bf154ef512480eaa68a28bf394b870096a23583aba8",
     "section 2/verification/UPSTREAM-LINKS.json": "24bf0fff01eb06c686ae54db320ed72a18d6e454a00da8232b58fa77ca79c2ee"
   },
-  "manuscript_sha256": "080b909692985183f5e60db787e800dd23dd9c3b3bca01f7b1beb6efcc065b97",
+  "manuscript_sha256": "e6a2c4b9a20048d2993d8e78df94d4ec5ed9f09e2a7146183b72407075b91c23",
   "accepted_cited_inputs": [
     {
       "interface": "DiamondIntegral.Section2.AtomicGammaBaseChangeInput",

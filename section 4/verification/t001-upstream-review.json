@@ -1,0 +1,32 @@
+{
+  "status": "AUTHOR_APPROVAL_CONFIRMED",
+  "source_thread_id": "01a1c67f-cca2-72cd-b3a5-a909eebcd02a",
+  "source_title": "section 3",
+  "approval_turn_id": "01a1d09e-62bd-74ac-a4f3-6e9c1048c251",
+  "approval_text": "approved, carry on",
+  "current_thread_confirmation": "T001 is appoved, check it out and see what you need to do here",
+  "upstream_report": "Finalized ordinary and measured tensor kernel ideals and surjections are compiled over arbitrary original real/Gamma bases, with canonical ACVF00, saturation, both smallness conditions and nontrivial definable Gamma. VF generation is an extra context condition for VF lift applications, not for these kernel theorems.",
+  "local_transport_status": "CONSTRUCTED_FROM_FINALIZED_SECTION3_PROOFS",
+  "local_interfaces": [
+    "DiamondIntegral.Section4.ApprovedT001Presentation.Ordinary",
+    "DiamondIntegral.Section4.ApprovedT001Presentation.Measured"
+  ],
+  "manuscript_items": [
+    "S4-T001-1",
+    "S4-T001-2"
+  ],
+  "numbered_results_complete": [
+    "Proposition 4.7",
+    "Proposition 4.15"
+  ],
+  "local_section3_files": "Finalized Section 3 at 37c8361 is local and jointly built. Section3T001Integration constructs both interfaces through compiled factor, tensor and target equivalences, scalar/comparison squares and elementary-pair ideal transport.",
+  "approved_manuscript_block": {
+    "source": "section 4/reference/T001-approved-upstream.tex",
+    "characters_without_final_newline": 6924,
+    "block_sha256": "304f2a96e8ea85af71ce91b41a53653a1c39188fc3b56e7b96b4659541005637",
+    "source_thread_edit_id": "exec-dff8a40e-f478-4aa4-b9be-c7ee494419a6",
+    "source_thread_before_sha256": "7dc1818a674a975ae970d376f2c487d7ab6f225392e1b316e478d10cb1cb6492",
+    "source_thread_after_sha256": "24c58ba674814c3f12f6097b9fd61dc5675af627b6b9d4a43cae46052e6f68cb",
+    "local_incorporation": "VERBATIM_STATEMENT_AND_BOTH_PROOFS_WITH_APPROVED_RESOLUTION"
+  }
+}

@@ -134,3 +134,18 @@ A source export is not a substitute for the legacy lift record until the
 closure/category comparison is compiled. The accepted records remain
 replaceable and no HK input is introduced. The author explicitly skips
 the supplementary unary-ray refinement.
+
+## Historical Section 4 authorization — November 12
+
+The author instructed: “take unformalized results in sectrion3 as given
+for now.” This permitted the current project's corrected Section 3
+presentation results to be precise, replaceable background inputs while
+compilation and adapters were pending. It supplied no Section 4 Euler,
+cell-decomposition or localization conclusion as an input.
+
+Both ordinary and measured tensor presentation interfaces are now
+constructed from finalized Section 3 proofs in
+`section 4/Section3T001Integration.lean`. The linked retraction propositions
+have no T001 input. General rational-affine Gamma QE background and the
+already accepted external citations retain their documented scope. See
+[the project dependency audit](DEPENDENCY-AUDIT.md).

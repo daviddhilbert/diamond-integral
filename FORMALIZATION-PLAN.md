@@ -11,6 +11,12 @@ and [the manuscript target map](<section 3/verification/paper-targets.json>).
 No HK result is a given input. The supplementary unary-ray refinement
 was explicitly skipped by the author.
 
+Section 4 is also complete with its finalized Section 3 tensor kernel
+connection compiled. Both T001 interfaces are proved locally from the
+upstream kernels, and linked Propositions 4.7 and 4.15 take no T001 input.
+The cross-section boundary audit and remaining accepted citation scopes
+are recorded in [DEPENDENCY-AUDIT.md](DEPENDENCY-AUDIT.md).
+
 The working source is
 [the annotated TeX](<section 2/reference/diamond_integral_revision_annotated.tex>),
 with [its PDF](<section 2/reference/diamond_integral_revision_annotated.pdf>)

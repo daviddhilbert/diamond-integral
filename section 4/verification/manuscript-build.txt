@@ -1,0 +1,23 @@
+Build command: ['pdflatex', '-interaction=nonstopmode', '-halt-on-error', '-jobname=diamond_integral_revision_annotated', '-output-directory=/tmp/section4-review-my2im10l', '\\pdfmapfile{+dstroke.map}\\pdfmapfile{+stmaryrd.map}\\input{diamond_integral_revision_annotated.tex}']
+TEXMFHOME: /workspace/.tools/section4-texmf
+Excerpt: exact page-text equality checked against full manuscript.
+Final diagnostics:
+Package xcolor Warning: Package option `usenames' is obsolete and ignored on in
+LaTeX Font Warning: Font shape `U/stmry/b/n' undefined
+Overfull \hbox (6.85754pt too wide) in paragraph at lines 1404--1405
+Overfull \hbox (1.49588pt too wide) in paragraph at lines 1855--1859
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+Output written on /tmp/section4-review-my2im10l/diamond_integral_revision_annot
