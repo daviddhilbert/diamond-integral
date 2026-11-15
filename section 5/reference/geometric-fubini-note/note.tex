@@ -1,0 +1,148 @@
+\begin{center}
+ {\large\bfseries A geometric version of Theorem~5.17}
+\end{center}
+
+For a parameter base $\mathbb T$, put
+\[
+ R(\mathbb T)={!}\mathbf K(\RES_{\mathbb T}),\qquad
+ R_g(\mathbb T)=R(\mathbb T)[L^{-1}],\qquad L=[\mathbb A^1].
+\]
+We use $\E_g^{\mathbb T}$ for the geometric retraction of Section~4
+followed by the natural homomorphism to $R_g(\mathbb T)$.
+The RES grading is thus forgotten in the target. Write $\widetilde{\E}_g^{\mathbb T}$
+for the unnormalized geometric Euler homomorphism followed by forgetting
+the RES grading. If $\bm U\in\RV[k]$, then
+\begin{equation}\label{normalization}
+ \E_g^{\mathbb T}([\bm U])=L^{-k}\widetilde{\E}_g^{\mathbb T}([\bm U]).
+\end{equation}
+The class $L$ need not be a non-zero-divisor in $R(\mathbb T)$.
+
+\begin{proposition}
+Let $\mathbb S$ be a $(\VF,\Gamma)$-generated ground substructure,
+with $\Gamma(\mathbb S)$ nontrivial. Let $A,A'\in\VF_*$ and let
+$f:A\to B$, $f':A'\to B$ be definable maps. Put
+$A_b=f^{-1}(b)$, $A'_b=(f')^{-1}(b)$ and
+$\mathbb S_b=\mathbb S\langle b\rangle$.
+Suppose that for every $b\in B$ there are
+$\mathbb S_b$-definable objects $\bm U_b,\bm U'_b\in\RV[*]$ and
+$\mathbb S_b$-definable bijections
+\[
+ A_b\xrightarrow{\ \sim\ }\LL\bm U_b,
+ \qquad A'_b\xrightarrow{\ \sim\ }\LL\bm U'_b
+\]
+such that
+\[
+ \E_g^{\mathbb S_b}([\bm U_b])
+ =\E_g^{\mathbb S_b}([\bm U'_b])
+ \quad\text{in }R_g(\mathbb S_b).
+\]
+Then
+\[
+ \E_g^{\mathbb S}\!\left(\int[A]\right)
+ =\E_g^{\mathbb S}\!\left(\int[A']\right)
+ \quad\text{in }R_g(\mathbb S).
+\]
+As in Theorem~5.17, the hypothesis concerns all points of $B$ in the
+sufficiently saturated ambient model.
+\end{proposition}
+
+\begin{proof}
+We explain the changes to the proof of Theorem~5.17, retaining its
+positive lifting witnesses and intrinsic parameter-relative RES quotients.
+
+Fix $b$ temporarily, and let $k,k'$ be the degrees of its two RV
+representatives. Write
+\[
+ a=\widetilde{\E}_g^{\mathbb S_b}([\bm U_b]),\qquad
+ a'=\widetilde{\E}_g^{\mathbb S_b}([\bm U'_b]).
+\]
+By the definition of localization, the equality $L^{-k}a=L^{-k'}a'$
+is equivalent to the existence of an integer $N\geq k,k'$ such that
+\begin{equation}\label{clearing}
+ L^{N-k}a=L^{N-k'}a'\quad\text{in }R(\mathbb S_b).
+\end{equation}
+Indeed, after a common denominator has been chosen, some further power
+of $L$ annihilates the difference of the two numerators. This step does
+not cancel $L$ in the unlocalized ring.
+
+Let $\bm{\mathbb A}_{\RES}\in\RES[1]$ be the disjoint union of
+$\mathbb G_m$ and the degree-one point. Its ungraded class is $L$.
+Its lift is $\OO^\times\sqcup(1+\mathcal M)$, which is definably
+bijective to the closed unit ball $\OO$, by translating the second
+summand to $\mathcal M$. Consequently
+\[
+ \E_g([\bm{\mathbb A}_{\RES}])=L^{-1}L=1.
+\]
+Replace the two representatives by
+\[
+ \widehat{\bm U}_b=\bm U_b\times\bm{\mathbb A}_{\RES}^{\,N-k},
+ \qquad
+ \widehat{\bm U}'_b=\bm U'_b\times\bm{\mathbb A}_{\RES}^{\,N-k'}.
+\]
+Both have degree $N$, and \eqref{clearing} says that their $\widetilde{\E}_g$-values
+are equal. Their VF lifts are definably bijective to
+$A_b\times\OO^{N-k}$ and $A'_b\times\OO^{N-k'}$.
+
+The integer $N$ is part of the finite witness package. More precisely,
+express \eqref{clearing} by the finite stabilized RES-bijection criterion
+used in Theorem~5.17, and include the padding exponents, all its objects,
+bounds and graphs, and both positive lifting bijections. The validity of
+each fixed package is first order over the original ground. These
+conditions cover every ambient parameter $b$. Compactness supplies
+finitely many packages; a finite definable partition fixes $k,k',N$ and
+the witness formulas on each part. No uniform bound on the
+denominator-clearing exponents is assumed before this argument.
+
+Work on one such part. The relative RV calculation in the proof of
+Theorem~5.17 applies to $\widetilde{\E}_g$ with $\chi_g$ in place of $\chi_b$.
+For clarity, if $X$ is a definable RV set,
+$J\subseteq X\times\Gamma^r$ is definable, and
+\[
+ Y=\{(x,z)\in X\times(\RV^\times)^r:\vrv(z)\in J_x\},
+\]
+then its unnormalized form is
+\begin{equation}\label{push}
+ \widetilde{\E}_g([Y])=g^r\sum_e e\,\widetilde{\E}_g([X_e]),\qquad
+ g=[\mathbb G_m],\quad X_e=\{x:\chi_g(J_x)=e\}.
+\end{equation}
+This follows from the same monomial decomposition and Fubini formula
+for $\chi_g$ on the $\Gamma$-sort. The sum is finite, and its level sets are definable over the
+original ground. For the first-order Euler certificates, use finite
+decompositions into relatively open rational polyhedra: a nonempty
+cell of dimension $j$ has geometric Euler characteristic $(-1)^j$.
+The cell formulas, dimensions and nonemptiness flags are included in
+the finite package. The varying value-torsor identity also remains valid,
+since $\chi_g$ of a singleton is $1$. Thus the actual total-bijection
+relations and the value-fiber relations in the finite stabilized
+witnesses are preserved by $\widetilde{\E}_g$. Their common stabilization is
+cancelled additively, as in the proof of Theorem~5.17.
+
+Include all these formulas in the same preparation package. On a
+prepared base piece, let $d$ be the number of nonzero VF base coordinates
+and write $\tau=(s,t)$ as in that proof. The padded total RV objects have
+structure maps
+\[
+ q(\tau,u)=(s,p_\tau(u)),\qquad
+ q'(\tau,u')=(s,p'_\tau(u')),
+\]
+and both belong to $\RV[d+N]$. Finiteness of these maps follows from the
+actual RV fibers of the total VF lifts, as before. In particular, the
+retained coordinates $t$ receive no additional VF lifts. The relative
+calculation and complete stabilized witnesses give equality of the
+$\widetilde{\E}_g$-values of the two total objects. Multiplication by the common
+factor $L^{-(d+N)}$ and \eqref{normalization} give equality of their
+geometric values.
+
+On the chosen part the padded total VF spaces are
+$A|_{B_i}\times\OO^{N-k}$ and $A'|_{B_i}\times\OO^{N-k'}$.
+Since $\E_g(\int[\OO])=1$, their geometric values agree with those of
+$A|_{B_i}$ and $A'|_{B_i}$, respectively. Finite additivity over the base
+partition proves the assertion.
+\end{proof}
+
+\begin{remark}
+Taking $A'=\varnothing$ gives the corresponding vanishing statement.
+The proposition is stated in the ungraded localized target
+$R_g(\mathbb S)$. It uses no injectivity of the natural homomorphism
+from the homogeneous degree-zero affine localization to that target.
+\end{remark}

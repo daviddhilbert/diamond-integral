@@ -1,0 +1,43 @@
+\begin{cor}\label{cor:global:vanishing}
+Let $F=\C((t))$ and let $f:A\to B$ be a morphism of
+varieties over $\C$.
+Interpret these varieties in a sufficiently saturated
+ambient model $\mathbb U$ of $\mathrm{ACVF}(0,0)$, using
+finite affine charts.
+For $b\in B(\mathbb U)$ put $A_b=f^{-1}(b)$ and
+$\mathbb S_b=F\langle b\rangle$, with $b$ represented by its
+VF chart coordinates.
+If, for every $b\in B(\mathbb U)$,
+\[
+ \mathbb E_{\mathrm b}^{\mathbb S_b}\!
+       \left(\int[A_b]\right)=0
+       \quad\text{in }R(\mathbb S_b),
+\]
+then $\Vol([A])=0$ in $\gmv$.
+\end{cor}
+
+\begin{proof}
+Choose finite disjoint constructible pieces subordinate to
+affine covers of $A$ and $B$ and encode their finite tags
+by distinct elements of $\C$.
+This realizes $f$ as a definable map between VF tuples.
+Changing charts gives definably equivalent parameter
+bases and transports the fiber equality.
+
+Both $F$ and each $\mathbb S_b$ in these coordinates are
+VF-generated. Thus the integrals of Section~3 are
+available over these bases.
+The lifting theorem supplies positive RV representatives
+of $A_b$ with actual $\mathbb S_b$-definable lift bijections.
+Apply Theorem~5.17 to $A\to B$ and the empty family
+$\varnothing\to B$.
+The displayed hypothesis is precisely the required
+equality of their fiber retractions, so
+\[
+ \mathbb E_{\mathrm b}^{F}\!
+       \left(\int[A]\right)=0
+       \quad\text{in }R(F).
+\]
+Applying the global comparison $\Theta$ gives
+$\Vol([A])=0$.
+\end{proof}

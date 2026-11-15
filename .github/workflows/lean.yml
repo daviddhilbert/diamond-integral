@@ -32,10 +32,9 @@ jobs:
           lint: 'false'
           use-mathlib-cache: 'true'
 
-      - name: Prepare approved library correction
+      - name: Prepare verified dependency sources
         run: |
-          python3 'section 2/prepare-reuse.py'
-          python3 'section 3/prepare-integration-reuse.py'
+          python3 'section 5/prepare-dependencies.py'
 
       - name: Build the Lean project
         run: lake -R build
@@ -48,3 +47,6 @@ jobs:
 
       - name: Audit section 4 exports
         run: lake env python3 'section 4/verify.py'
+
+      - name: Audit section 5 exports and discharged inputs
+        run: lake env python3 'section 5/verify.py'

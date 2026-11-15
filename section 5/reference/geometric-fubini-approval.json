@@ -1,0 +1,15 @@
+{
+  "status": "APPROVED_AND_INCORPORATED",
+  "approved_date": "2026-11-14",
+  "passage": "Geometric version of Theorem 5.17",
+  "label": "prop:geometric:fubini",
+  "target": "Ungraded intrinsic RES quotient localized at the affine-line class",
+  "proof": "Finite denominator-clearing witnesses; affine-line padding; complete witness preparation; geometric relative RV Fubini; normalization in common total degree",
+  "working_manuscript_sha256": "0ba7039dc615a12099bfc92e759ca39ef1d380db6f0d8417b1376bed4ce9f2f9",
+  "formalization_status": "FULL_NATIVE_GEOMETRIC_VF_FUBINI_AND_VANISHING_AUDITED",
+  "formalization_context": "GammaGroundContext with the precise accepted Section 3 YinGammaGroundUnmeasuredLiftInput; no HK result assumed",
+  "audit": "Section5/.scratch/finite-comparison-audit-62.log",
+  "remaining_section_boundaries": [
+    "Actual variety finite-chart/global-comparison corollary specialization, including saturated ambient comparison transport"
+  ]
+}

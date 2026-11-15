@@ -1,0 +1,140 @@
+\documentclass[12pt]{amsart}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{dsfont,bm,mathtools}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage[top=2.3cm,bottom=2.3cm,left=2cm,right=2cm]{geometry}
+\usepackage{hyperref}
+\hypersetup{hidelinks}
+\allowdisplaybreaks
+\emergencystretch=1.5em
+\definecolor{ProposalOrange}{RGB}{160,65,0}
+\definecolor{RefereePurple}{RGB}{103,34,147}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lem}[thm]{Lemma}
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{Remark}
+\theoremstyle{definition}
+\newtheorem{nota}[thm]{Notation}
+\definecolor{ResolutionGreen}{RGB}{0,100,55}
+\newcommand{\C}{\mathds{C}}
+\newcommand{\Q}{\mathds{Q}}
+\newcommand{\rv}{\operatorname{rv}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\RV}{\mathrm{RV}}
+\newcommand{\RES}{\mathrm{RES}}
+\newcommand{\VF}{\mathrm{VF}}
+\newcommand{\K}{\mathds{k}}
+\newcommand{\Z}{\mathds{Z}}
+\newcommand{\N}{\mathds{N}}
+\newcommand{\vrv}{\operatorname{vrv}}
+\newcommand{\GL}{\operatorname{GL}}
+\newcommand{\dcl}{\operatorname{dcl}}
+\newcommand{\pr}{\operatorname{pr}}
+\newcommand{\defn}{\mathrm{def}}
+\newcommand{\given}{\,\middle|\,}
+\newcommand{\Sbase}{\mathbb S}
+\newcommand{\RVlang}{\mathcal L_{\mathrm{RV}}}
+\numberwithin{equation}{section}
+\pagestyle{plain}
+
+\newcommand{\A}{\mathds{A}}
+\newcommand{\Gm}{\mathbb G_m}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Kres}{K_0(\RES)}
+\newcommand{\Bangres}{{!K_0(\RES)}}
+\newcommand{\Kraw}{K_0^{\widehat\mu,\mathrm{raw}}(\Var_{\C})}
+\newcommand{\Kmon}{K_0^{\widehat\mu}(\Var_{\C})}
+\newcommand{\E}{\mathbb E_b}
+\newcommand{\Vol}{\operatorname{Vol}}
+\newcommand{\vv}{\operatorname{val}}
+\newcommand{\LiftingTheorem}{the lifting theorem of Section~3}
+
+\theoremstyle{plain}
+\newtheorem*{thm*}{Theorem}
+
+\newcommand{\R}{\mathds R}
+\newcommand{\Sfiber}{\mathbb S_b}
+\newcommand{\Rbase}[1]{{!K_0(\RES_{#1})}}
+\newcommand{\IsVFVG}{(\VF,\Gamma)\text{-generated}}
+\newcommand{\gsk}{K_+}
+\theoremstyle{plain}
+\newtheorem{test}[thm]{Test}
+
+\theoremstyle{plain}
+\newtheorem{cor}[thm]{Corollary}
+\begin{document}
+\setcounter{section}{5}
+\setcounter{thm}{20}
+{\small\noindent Forey--Yin, \emph{Bounded integral and motivic Milnor fiber}.
+Section 5: remaining corollary.
+Approved context is black; proposed manuscript text is orange.}
+\medskip
+
+\noindent\emph{End of the proof of Theorem 5.17.}
+The finite witnesses give equality of the global bounded
+retractions in $R(\Sbase)$.
+All cancellations take place in its additive group;
+no torus class is inverted.
+For $F=\C((t))$, the comparison $\Theta$ transports this
+global equality to motivic volume.
+
+{\color{ProposalOrange}
+\begin{cor}\label{cor:global:vanishing}
+Let $F=\C((t))$ and let $f:A\to B$ be a morphism of
+varieties over $\C$.
+Interpret these varieties in a sufficiently saturated
+ambient model $\mathbb U$ of $\mathrm{ACVF}(0,0)$, using
+finite affine charts.
+For $b\in B(\mathbb U)$ put $A_b=f^{-1}(b)$ and
+$\Sfiber=F\langle b\rangle$, with $b$ represented by its
+VF chart coordinates.
+If, for every $b\in B(\mathbb U)$,
+\[
+ \mathbb E_{\mathrm b}^{\Sfiber}\!
+       \left(\int[A_b]\right)=0
+       \quad\text{in }R(\Sfiber),
+\]
+then $\Vol([A])=0$ in $\Kmon$.
+\end{cor}
+
+\begin{proof}
+Choose finite disjoint constructible pieces subordinate to
+affine covers of $A$ and $B$ and encode their finite tags
+by distinct elements of $\C$.
+This realizes $f$ as a definable map between VF tuples.
+Changing charts gives definably equivalent parameter
+bases and transports the fiber equality.
+
+Both $F$ and each $\Sfiber$ in these coordinates are
+VF-generated. Thus the integrals of Section~3 are
+available over these bases.
+The lifting theorem supplies positive RV representatives
+of $A_b$ with actual $\Sfiber$-definable lift bijections.
+Apply Theorem~5.17 to $A\to B$ and the empty family
+$\varnothing\to B$.
+The displayed hypothesis is precisely the required
+equality of their fiber retractions, so
+\[
+ \mathbb E_{\mathrm b}^{F}\!
+       \left(\int[A]\right)=0
+       \quad\text{in }R(F).
+\]
+Applying the global comparison $\Theta$ gives
+$\Vol([A])=0$.
+\end{proof}
+}
+
+\medskip
+{\small\noindent\color{ProposalOrange}
+\textbf{Proposed disposition.}
+Replace the last corollary by this statement and proof.
+The fiber hypothesis uses the intrinsic coefficient ring
+already retained in Remark~5.18; it requires no comparison
+$\Theta_b$ over arbitrary fiber bases.
+The quantifier includes all ambient points, as required
+by Theorem~5.17, rather than only Puiseux points.
+This is the zero-fiber specialization of the corrected
+Fubini theorem.}
+
+\end{document}

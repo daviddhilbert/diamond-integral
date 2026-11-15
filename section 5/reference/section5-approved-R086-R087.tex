@@ -1,0 +1,126 @@
+\begin{rem}[The polyhedral base pieces]
+Each $E_a\subseteq\Q^n$ is the intersection with $\Q^n$ of
+a finite Boolean combination of closed rational polyhedra in
+$\R^n$. Here a closed rational polyhedron is specified by
+finitely many affine inequalities
+\[
+ a_j\cdot x\geq c_j,\qquad a_j\in\Q^n,\quad c_j\in\Q.
+\]
+In particular, the $E_a$ need not themselves be closed
+polyhedra; $(0,1)\cap\Q$ is a simple example.
+The finite arrangement of the bounding hyperplanes refines
+them into relatively open rational polyhedral cells, including
+cells of lower dimension. Such a refinement preserves the
+preceding formula by additivity of $\chi_b$ and constancy of
+the coefficients on each original base piece.
+
+The constants $c_j$ may be nonzero. If the chosen defining
+conditions are homogeneous, the resulting pieces can instead
+be refined into relatively open rational polyhedral cones.
+This conditional observation about the value-group formulas
+does not change the standing assumption that
+$\Gamma(\mathbb S)$ is nontrivial.
+\end{rem}
+
+\subsection{Fubini theorem}
+In this subsection, return to an arbitrary
+$(\VF,\Gamma)$-generated ground substructure $\mathbb S$,
+with the standing nontriviality of $\Gamma(\mathbb S)$.
+All definability remains in the original RV language.
+Let $A,A'\in\VF_*$ and let
+$f:A\to B$, $f':A'\to B$ be definable maps.
+Write $A_b=f^{-1}(b)$, $A'_b=(f')^{-1}(b)$ and
+$\mathbb S_b=\mathbb S\langle b\rangle$.
+For a parameter base $\mathbb T$, write
+\[
+ R(\mathbb T)=\sggk(\RES_{\mathbb T})
+\]
+for the ungraded RES quotient computed with
+$\mathbb T$-definable sets, maps and value-fiber relations.
+The subscript $\mathrm b$ in $\mathbb E_{\mathrm b}$ denotes
+the bounded retraction; the parameter base is specified
+separately.
+
+\begin{thm}\label{fubini}
+Suppose that for every $b\in B$ there are
+$\mathbb S_b$-definable objects
+$\bm U_b,\bm U'_b\in\RV[*]$ and
+$\mathbb S_b$-definable bijections
+\[
+ H_b:A_b\xrightarrow{\ \sim\ }\mathbb L\bm U_b,
+ \qquad
+ H'_b:A'_b\xrightarrow{\ \sim\ }\mathbb L\bm U'_b
+\]
+such that
+\[
+ \mathbb E_{\mathrm b}^{\mathbb S_b}([\bm U_b])
+ =
+ \mathbb E_{\mathrm b}^{\mathbb S_b}([\bm U'_b])
+ \quad\text{in }R(\mathbb S_b).
+\]
+Then, over the original ground $\mathbb S$,
+\[
+ \mathbb E_{\mathrm b}^{\mathbb S}\!\left(\int[A]\right)
+ =
+ \mathbb E_{\mathrm b}^{\mathbb S}\!\left(\int[A']\right)
+ \quad\text{in }R(\mathbb S).
+\]
+As usual, $B$ and its points are interpreted in the sufficiently
+saturated ambient model.
+\end{thm}
+
+The lifting hypotheses mean
+\[
+ [A_b]_+=[\mathbb L\bm U_b]_+,\qquad
+ [A'_b]_+=[\mathbb L\bm U'_b]_+
+\]
+in the positive Grothendieck semiring over $\mathbb S_b$.
+For these categories of definable sets, finite scissor
+decompositions assemble into actual definable bijections;
+the displayed maps specify the required witnesses explicitly.
+The ground-generation assumption supplies the domain of
+the global integral from Section~3.
+No generation assumption is imposed on every $\mathbb S_b$
+merely to evaluate the displayed RV retractions.
+
+
+% First paragraph of Remark 5.18 only.
+
+Whenever $\mathbb S_b$ is $(\VF,\Gamma)$-generated, the fiber
+integral of Section~3 is available and the hypothesis can
+equivalently be written
+\[
+ \mathbb E_{\mathrm b}^{\mathbb S_b}
+       \!\left(\int[A_b]\right)
+ =
+ \mathbb E_{\mathrm b}^{\mathbb S_b}
+       \!\left(\int[A'_b]\right).
+\]
+This applies, for example, to a base parameter $b$ consisting
+of VF and Gamma coordinates.
+If $B$ is definably bijective over $\mathbb S$ to a set of such
+tuples, transport the parameter along that bijection:
+the two parameter bases have the same definable closure,
+so their definable categories and the stated equalities agree.
+This does not assert equality of their generated substructures.
+
+% First compactness paragraphs in the proof.
+After the initial partition by the images of $f$ and $f'$,
+compactness gives a finite definable partition $(B_i)_i$
+such that the two RV representatives, their structure maps
+and finite-fiber bounds, and both bijection graphs
+$H_b,H'_b$ are all given by fixed formulas on each $B_i$.
+Indeed validity of each fixed finite package is a first-order
+condition, and these conditions cover the parameter space
+in the saturated model. Choose quantifier-free formulas
+$\xi_i(x,y)$, $\xi'_i(x,y')$ for the two representative objects.
+
+For the graph families over $B_i$, the replacements are the
+explicit definable bijections
+\[
+ (b,a)\longmapsto(b,H_b(a)),\qquad
+ (b,a')\longmapsto(b,H'_b(a')).
+\]
+The base coordinate and all finite RV labels are retained.
+The further preparation and descent of the RES equality
+witnesses belong to the subsequent argument.

@@ -37,7 +37,7 @@ where they are defined and proved.
 | [section 2](<section 2/README.md>) | pp. 10–24 | VF/RV/Gamma/DC conventions, parameter bases, discs, atoms, continuity and fiberwise results. Start with §2.1 and Lemma 2.11. |
 | [section 3](<section 3/README.md>) | pp. 25–28 | Grothendieck constructions and VF, RV, RES and Gamma categories with and without volume forms. Establish lifting and the two HK integral presentations at their stated parameter scope. |
 | [section 4](<section 4/README.md>) | pp. 29–35 | Prove the unmeasured and measured retractions to their respective RES targets. Verify Euler characteristics, convolution, interval generators and factorization through each quotient. |
-| [section 5](<section 5/README.md>) | pp. 36–46 | Prove the reduced-section and twistoid lemmas, then tropical Fubini and the fiberwise equality theorem. Track witness uniformization and arithmetic residue descent separately. |
+| [section 5](<section 5/README.md>) | pp. 36–46 | Complete requested original-language scope: Lemma 5.12, concrete Puiseux/Galois Remark 5.13 and comparison, bounded and geometric 5.17, and the actual-variety corollary. Gamma-linearity is proved from QE and the exact positive lifting/kernel input is constructed from completed [18] proofs over the original ground. Cross-section computations and [19] are excluded. |
 | [section 6](<section 6/README.md>) | pp. 47–61 | Prove proper covariance and standard contraction results, then lifting into the proper invariant categories. Audit Jacobians, global bounds, continuity and finite RV fibers under the actual operations. |
 | [section 7](<section 7/README.md>) | pp. 62–70 | Check the unary annular blowup relation, prove the 2-cell and contraction-order comparison, then identify the bounded lift kernel and construct the bounded integral (Theorem 7.26). |
 | [section 8](<section 8/README.md>) | pp. 71–80 | Prove the equivariant fixed-order coefficient comparison, rationality and the limit identity for motivic Milnor fiber (Theorem 8.11). Track the extended bounded zeta construction separately. |
@@ -299,3 +299,30 @@ The DC wrapper makes infinite saturation cardinality explicit. The nine
 accepted cited interfaces remain replaceable; no multivariable 2.25, 2.29
 or 2.30 is assumed. The final verifier passes 850/378 and records the
 approved unchanged manuscript hash. No source approval is pending.
+
+
+Section 5 continuation (November 14): the actual raw native ungraded RES
+ring is now proved isomorphic to the diagonal constructible complex-set
+ring (`PuiseuxOriginal.rawRESComparison`). Both maps and both round trips
+are compiled and audited over the original Laurent base; zero coordinates,
+finite labels, empty input and arity zero are included. The geometric
+variety bridge, actual quotient-ideal identification, relative RV/Gamma
+push and full Fubini remain unfinished. The canonical Puiseux ACVF-model
+context remains explicit; no HK theorem is accepted as input.
+
+Section 5 quotient continuation (November 14): the actual native RES fibre
+ideal is proved to correspond exactly to the actual diagonal constructible
+linear-action ideal, including arbitrary equivariant factors.
+`residueLinearActionComparison` gives the reduced-native/modified-constructible
+ring equivalence. The remaining comparison issue is the geometric variety
+bridge; the full relative push and Fubini theorem remain unfinished.
+
+Section 5 completion (November 15): the full requested scope and both former
+inputs are proved. `GammaQE.gamma_piecewise_rational_affine` constructs the
+numerical Gamma interface; `completed18GroundLiftInput` constructs the positive
+lift, its object formula, surjectivity and exact special kernel over the original
+base. Bounded/geometric Fubini and the actual-variety corollary instantiate these
+proofs, including all intrinsic F(b) field contexts. The source overlay and
+hypothesis-scope adapters for completed [18] are included with checked hashes and
+portable dependency preparation. Section 5 records contain no accepted inputs
+or remaining work. Earlier continuation notes describe intermediate stages.

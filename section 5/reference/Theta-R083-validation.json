@@ -1,0 +1,23 @@
+{
+  "status": "PENDING_AUTHOR_REVIEW",
+  "items": [
+    "Theta comparison, Notation 5.14",
+    "R083"
+  ],
+  "approved_items": [
+    "R080",
+    "R081",
+    "R082"
+  ],
+  "pdf_pages": 3,
+  "tex_errors": false,
+  "overfull_boxes": false,
+  "visual_review": "All three rendered pages inspected",
+  "lean_status": "No new Section 5 Lean declarations claimed",
+  "source_sha256": {
+    "Section5/reference/diamond_integral_revision_annotated.tex": "aefb9a07f201ff2c1ca5513b25f10056438b8b647ac21e9bfb6d0fc1046b2c56",
+    "Section5/reference/section5-approved-puiseux-kummer.tex": "ad59fb480e20ee40c98756d66759a4e24d322d4e3baf143ce1b7dd3bf7de1bcc",
+    "Section5/reference/proposed-revisions/Theta-R083-finite-realization/main.tex": "8b4ac42bb83c2f93d4a170a3d4f760d4aeeec17550542473cd811eb9ac58b256",
+    "output/pdf/section5-Theta-R083-review.pdf": "ad05bea9bede6c75e8e923c0f74f63fc0c4b9c4fcd392afc0541b897b9c7fd2e"
+  }
+}

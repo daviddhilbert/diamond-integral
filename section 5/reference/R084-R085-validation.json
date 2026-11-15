@@ -1,0 +1,26 @@
+{
+  "status": "PENDING_AUTHOR_REVIEW",
+  "items": [
+    "R084",
+    "R085"
+  ],
+  "incorporated_items": [
+    "R080",
+    "R081",
+    "R082",
+    "Theta comparison",
+    "R083"
+  ],
+  "pdf_pages": 3,
+  "visual_review": "All three final rendered pages inspected",
+  "tex_errors": false,
+  "overfull_boxes": false,
+  "scope": "Inflated-family identity in original RES, followed by Theta; no torus cancellation",
+  "lean_status": "No new Section 5 Lean proof claimed",
+  "source_sha256": {
+    "Section5/reference/diamond_integral_revision_annotated.tex": "bfef320f0af3d2a0552bf6d473e1846f87acdc607f409736281545498d02085a",
+    "Section5/reference/section5-approved-Theta-R083.tex": "df3f96e5481f5e0963bb66df18fa216b443a19a7b756e75970f964a17a7127f1",
+    "Section5/reference/proposed-revisions/R084-R085-relative-fubini/main.tex": "b39176b318a8763e89132cf7653a63fa52cd0746c539c291eddd47010ab478a5",
+    "output/pdf/section5-R084-R085-review.pdf": "308c855ee305720df2036d692e67d88710fad5ab070ad81229bbd9cac2c65dd7"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "status": "APPROVED_AND_INCORPORATED",
+  "items": [
+    "R094",
+    "R095"
+  ],
+  "approved_items": [
+    "R080",
+    "R081",
+    "R082",
+    "Theta comparison",
+    "R083",
+    "R084",
+    "R085",
+    "R086",
+    "R087",
+    "R088",
+    "R089",
+    "R090",
+    "R091",
+    "R092",
+    "R093",
+    "R094",
+    "R095"
+  ],
+  "pdf_pages": 3,
+  "visual_review": "All three final rendered pages inspected",
+  "adopted_fragment_visual_review": "All three rendered R094--R095 adopted-fragment pages inspected",
+  "overfull_boxes": false,
+  "tex_errors": false,
+  "scope": "Finite stabilized RES object witnesses; full-package first-order uniformization and VF-to-RV preparation; tagged totals finish the proposed Fubini proof. Following corollary deferred.",
+  "lean_status": "PASS_LEMMA_5_12_AND_SUPPORT; later results, including this new Fubini proof, remain unformalized",
+  "right_panel_display": "queued",
+  "historical_proposal_source_sha256": {
+    "Section5/reference/diamond_integral_revision_annotated.tex": "47a7a32e773785529903efbb60b0d0f20c87838ba5082b3555a477bc08517bdf",
+    "Section5/reference/section5-approved-R092-R093.tex": "66e11605344364b64621c9c6870b430126a0dc07735a0eb35a55a6fe38f753d2",
+    "Section5/reference/proposed-revisions/R094-R095-finite-witness-descent/main.tex": "211752521bb40f6eba7f43970a57bb51852cb9b76c78a34060c0a24526e8c96e",
+    "output/pdf/section5-R094-R095-review.pdf": "60dfa859590456bece5c31fd22b4184c465970736524722ebbaf5f1ed6b85fa9",
+    "Section5/worktree/section 5/verification/status.json": "b6d0208de1405b4ce64031e6025e9eed6621c27b5e5a1cd3d541347b91d96493",
+    "Section5/worktree/section 5/verification/paper-target-5-12.json": "316f1d2440d727857f0a15a699a9289d9eb582f89b8be8b1930ab769656bc605"
+  },
+  "incorporation_sha256": {
+    "Section5/reference/diamond_integral_revision_annotated.tex": "a3700cc297c850df9d807fed3e8d3723c34fc7e97f67f7a3ae51dc13e54cf53d",
+    "Section5/reference/section5-approved-R094-R095.tex": "ef6b324630c1ff60988d71bc29ea01e07e1a5d88c9e476a79bc2e2263fedadb4"
+  },
+  "original_graph_strategy": "Patchable by selecting and uniformizing every finite equality-witness formula before preparation; the finite stabilized criterion and Gamma-push are a shorter alternative organization, with no novelty claim"
+}

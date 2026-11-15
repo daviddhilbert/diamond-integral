@@ -1,0 +1,40 @@
+{
+  "paper_result": "Remark 5.13 (finite Kummer actions)",
+  "status": "COMPLETE_FOR_CONCRETE_PUISEUX_ORIGINAL_LANGUAGE_STRUCTURE",
+  "algebraic_galois_declaration": "DiamondIntegral.Section5.complexPuiseuxGaloisEquiv",
+  "complete_target": "DiamondIntegral.Section5.PuiseuxOriginal.remark_5_13",
+  "canonical_structure": "PuiseuxOriginal.canonicalInterpret is an explicitly constructed original LRV structure on concrete complex Puiseux VF and its actual normalized principal-unit RV quotient, with proved canonical totalization",
+  "concrete_field": "PuiseuxSeries C is the subfield of rational Hahn series consisting exactly of finite Laurent levels",
+  "actual_base": "puiseuxBaseSubfield C is the range of the full Laurent-series embedding at denominator 1",
+  "inverse_system": "CompatibleRoots C: units eta_n with eta_n^n=1 and eta_(n*d)^d=eta_n for every positive n,d",
+  "proved_bridges": {
+    "finite_Laurent_expansion": "laurentGrouped_residueParts and laurentGrouped_injective",
+    "power_basis_and_degree": "laurentPowerBasis and laurentPowerBasis_degree",
+    "generation_and_irreducibility": "laurentPowerBasis_adjoin and laurentUniformizer_irreducible",
+    "all_finite_characters_realized": "complexLaurentKummerEquiv",
+    "finite_coefficient_action_and_valuation": "laurentKummerEquiv_coeff and laurentKummerEquiv_orderTop",
+    "actual_Puiseux_union": "puiseuxSubfield and puiseuxSeries_finite_level",
+    "global_character_construction": "compatibleRootCharacter and compatibleRootValue_fraction",
+    "full_base_fixed": "puiseuxCharacter_fixes_base",
+    "actual_global_action_and_faithfulness": "puiseuxRootSystemAction and puiseuxRootSystemAction_injective",
+    "converse_and_surjectivity": "puiseuxAutomorphismSystem and puiseuxRootSystemAction_system",
+    "bundled_group_equivalence": "puiseuxGaloisEquiv and complexPuiseuxGaloisEquiv",
+    "all_base_automorphisms_preserve_valuation": "puiseuxAutomorphism_orderTop",
+    "actual_RV_quotient_normal_form": "puiseuxRVUnitEquiv: K-units modulo actual principal units is Q-valuations times k-units",
+    "actual_RV_action_and_formula": "valuedRVUnitEquiv, valuedRVEquiv_rv and puiseuxRVAction_coordinates",
+    "every_group_RV_automorphism_lifts": "puiseuxRVAutomorphism_lifts",
+    "quotient_RV_group_Galois_equivalence": "puiseuxRVGaloisEquiv",
+    "full_Laurent_RV_base_image": "puiseuxRV_fixes_base_iff",
+    "original_language_automorphism_transport": "originalValuedModelAut for canonical ACVF models and actual valuation-preorder-preserving field automorphisms",
+    "canonical_model_presentation": "PuiseuxOriginal.canonicalModelPresentation explicitly constructs the tagged-field ring equivalence and proves its compatibility with the actual Hahn valuation; the former model hypothesis is discharged by PuiseuxConcreteModel.canonical_model_ACVF",
+    "whole_original_language": "PuiseuxOriginal.canonicalLanguageAction and original_formula_invariant preserve every original formula, including VF quantifiers, over the entire Laurent base",
+    "full_induced_RV_identification": "PuiseuxOriginal.puiseuxOriginalRVGaloisEquiv and remark_5_13 identify actual field automorphisms with the full original induced RV subgroup",
+    "finite_RV_monodromy_formula": "puiseuxRVAction_fraction"
+  },
+  "remaining": [],
+  "outside_this_target": [
+    "PuiseuxAlgebraicClosedness proves algebraic closedness of the actual bounded-denominator Hahn subfield; PuiseuxConcreteModel constructs its original-language ACVF00 model. PuiseuxAmbientComparison transports the actual reduced RES ring along any elementary embedding, eliminating Gamma names already definable over the fixed real field",
+    "No profinite/topological equivalence is claimed by these algebraic identifications"
+  ],
+  "hk_results_assumed": []
+}

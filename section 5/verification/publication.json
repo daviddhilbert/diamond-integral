@@ -1,0 +1,46 @@
+{
+  "status": "PASS_SECTION5_PUBLICATION_CHECKPOINT",
+  "date": "2026-11-15",
+  "repository": "https://github.com/daviddhilbert/diamond-integral",
+  "base_revision": "d4b6b059cf9c6b859603064c127b1275f42d977e",
+  "root_build": {
+    "target": "DiamondIntegral",
+    "exit_code": 0,
+    "jobs": 13961,
+    "log": "root-build.log"
+  },
+  "section5_audit": {
+    "exit_code": 0,
+    "public_definitions_and_structures": 1357,
+    "public_theorems": 2234,
+    "principles": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "accepted_inputs": {},
+    "remaining_section_work": [],
+    "log": "publication-audit.log"
+  },
+  "dependency_preparation": {
+    "clean_pinned_clones": true,
+    "source_overrides_checked": 291,
+    "idempotence_checked": true,
+    "unexpected_local_edit_preserved": true,
+    "log": "dependency-preparation.log"
+  },
+  "publication_file_sha256": {
+    "DiamondIntegral.lean": "f418aa45329a972c03140c1c7207603754adac557bc1e6bc4a9c9b022ce8200b",
+    "lakefile.toml": "60f8fec4f04d94b25775118a78c298dc40c44e1d7b2cf2e6faa0a5eb34472139",
+    "lake-manifest.json": "ec80c4ddd3bc873989de2a4da7392222b8318c73586e538f0dde675427f92523",
+    "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+    ".github/workflows/lean.yml": "242773a4df21c63b9b4a127202337f6cbadcc7e8f9f9399004efcd04a0b2d9f9",
+    "section 3/prepare-integration-reuse.py": "419bed1f376414652ed3970d74e68feac318fb1e340acb2fb1a123fbe44c1a3b",
+    "section 5/verify.py": "bee37eae7bf1959db254dd069af25c08a9fe8e1d98c4fdaf43f627e8ed00cffc",
+    "section 5/prepare-dependencies.py": "cfb76a9e3f340c17c1049a1fd574d9c921865b3007a835ecc64f468eb771246b",
+    "section 5/dependency-overlay/manifest.json": "5e17424067cf22dc89e36cdcba9ff2acdcd94ea48048a7efc4d0bb94fbeff805",
+    "section 2/reference/diamond_integral_revision_annotated.tex": "3161d6084df6792311add28a0bc9fcfa714622a43d2258f1f28c10020cdd640d"
+  },
+  "section5_lean_sources_match_audit": true,
+  "scope": "Author-approved original-language Lemma 5.12 onward, concrete comparison, bounded/geometric Fubini and actual-variety corollary. Gamma-linearity and the exact original-ground positive lifting/kernel input are proved; unfinished [18] Section 7 supplies no input."
+}

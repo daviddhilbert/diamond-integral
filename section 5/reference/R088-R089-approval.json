@@ -1,0 +1,11 @@
+{
+  "status": "APPROVED_AND_INCORPORATED",
+  "items": [
+    "R088",
+    "R089"
+  ],
+  "working_manuscript_sha256": "8b3648b266b74c5d2d2f8176aa0cfb24ef947fc74debf13e278fac0ccecab5a7",
+  "adopted_fragment": "Section5/reference/section5-approved-R088-R089.tex",
+  "preserved_after": "End of Remark 5.18 and all subsequent proof material, including R090 onward",
+  "lean_status": "Arithmetic diagnostic not formalized; geometric support lemmas compiled separately"
+}

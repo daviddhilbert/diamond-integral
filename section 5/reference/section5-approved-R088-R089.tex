@@ -1,0 +1,108 @@
+For $F=\C((t))$, the conclusion over the ground base may be
+transported by the already constructed comparison $\Theta$:
+it becomes $\Vol([A])=\Vol([A'])$.
+The hypothesis still concerns every $b\in B$ in the
+saturated ambient model, with its own coefficient base
+$F\langle b\rangle$.
+It is not enough to test only the points of $B$ in the
+Puiseux field.
+
+For arbitrary $b$, retain the intrinsic ring
+$R(F\langle b\rangle)$.
+An algebraically closed ambient valued field does not enlarge
+the definability base.
+In particular, adjoining an algebraic closure of the residue
+field to the coefficient field of a realization can lose
+arithmetic descent; an action recording only tame inertia
+does not restore it.
+
+Here is a concrete instance.
+Choose a unit $b$ with residue $s$ transcendental over $\C$
+and put $K=F(b)$ with its Gauss valuation.
+For a polynomial $\sum_i a_i b^i$, its terms of least
+$t$-valuation have nonzero residual polynomial in $s$.
+Consequently
+\[
+ k(K)=k=\C(s),\qquad \Gamma(K)=\Z.
+\]
+The residue set
+\[
+ L=\{z:z^2=s\}
+\]
+is defined over $K$.
+It is a nonsplit quadratic residue cover: $s$ is not a square
+in $\C(s)$, since its order at $s=0$ is odd.
+Over $\overline{k}$ it becomes two points, each with trivial
+tame-inertia action, just as the constant two-point set does.
+
+The distinction survives in the RES quotient.
+Indeed, at this Gauss base the same finite framing argument
+used for $\Theta$ normalizes every finite rational value
+support by roots of $t$.
+RV quantifier elimination gives constructible sets and graphs
+over $k$, with a finite cyclic inertia action and with their
+$k$-descent retained.
+Changing a framing root multiplies coordinates by roots of
+unity in $\C$, so it gives a $k$-defined isomorphism after
+forgetting inertia.
+Applying compactly supported \'etale Euler realization then
+gives an additive and multiplicative invariant
+\[
+ \rho:R(K)\longrightarrow
+ K_0\bigl(\operatorname{Rep}_{\Q_\ell}(G_k)\bigr),
+ \qquad G_k=\operatorname{Gal}(\overline{k}/k).
+\]
+Here the realization is
+$\sum_j(-1)^j[H_c^j(-_{\overline{k}},\Q_\ell)]$;
+its additivity and multiplicativity follow from the
+localization sequence and K\"unneth formula.\footnote{For
+the standard realization on $K_0(\var_k)$, see
+J.~Nicaise, \emph{A trace formula for varieties over a
+discretely valued field}, Section~2.1(2),
+\href{https://arxiv.org/pdf/0805.1323}{arXiv:0805.1323}.
+Only this standard cohomological realization is used in this
+diagnostic; no comparison theorem for RES is assumed.}
+The quotient relations are killed because both
+$q^\sharp$ and $\G_m$ normalize to $\G_m$ after inertia is
+forgotten. Thus this argument constructs the required
+invariant without asserting a new comparison isomorphism.
+If $\varepsilon$ is the quadratic character attached to
+$k(\sqrt{s})/k$, then
+\[
+ \rho([L])=[1]+[\varepsilon]\ne 2[1].
+\]
+For $g\in G_k$ with $\varepsilon(g)=-1$, the two traces
+are $0$ and $2$. Residue base change gives two inertia-fixed
+points in both cases, so the proposed comparison is not
+injective.
+
+There is also no restriction of the theorem's test to points
+generating unramified extensions of $F$.
+For example, take
+\[
+ B=\{b:b^2=t\},\qquad A=B,\qquad f=\mathrm{id}_B,
+ \qquad A'=\varnothing.
+\]
+Every $b\in B$ has value $1/2$, so $F(b)/F$ is ramified
+quadratic. The unramified-point test has no points to check.
+On the other hand, $\rv$ identifies $B$ with the finite
+RES object
+\[
+ T=\{u:u^2=\rv(t)\}\in\RES[0].
+\]
+The two roots have distinct RV classes; conversely these are
+all the roots of $u^2=\rv(t)$.
+The degree-zero lifting comparison therefore gives
+\[
+ \Vol([B])=\Theta([T])
+   =[\{x:x^2=1\},\ \zeta\cdot x=\zeta x].
+\]
+The action factors through $\mu_2$ and interchanges the two
+points. Forgetting the action and taking compactly supported
+Euler characteristic sends this class to $2$, so it is
+nonzero. This Euler characteristic respects the linear-action
+relations, since every affine space of a fixed dimension has
+Euler characteristic $1$.
+Thus the asserted unramified-only criterion would give a
+false conclusion. The theorem retains the test at all
+ambient parameters in their original RES coefficient rings.

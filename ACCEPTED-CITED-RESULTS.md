@@ -135,6 +135,21 @@ closure/category comparison is compiled. The accepted records remain
 replaceable and no HK input is introduced. The author explicitly skips
 the supplementary unary-ray refinement.
 
+## Section 5 input discharge — November 15, 2026
+
+The exact `GammaPiecewiseRationalAffineInput` is now proved locally from QE
+by `DiamondIntegral.Section5.GammaQE.gamma_piecewise_rational_affine`.
+The completed [18] Section 5 branch at
+`73aa1e6c9218bcb01dd67e03cfbe3ec9115ac240` supplies the contraction proofs used
+to construct the scoped `Section5TwoOrderInputAll` registry. The checked local
+RV/VF category comparisons and definable-closure parameter transport construct
+`completed18GroundLiftInput C hc`, including positive surjectivity and the exact
+special kernel over the original `GammaGroundContext` base. These interfaces
+are instantiated in bounded/geometric Fubini and the actual-variety corollary,
+including every intrinsic F(b) field context. No unfinished [18] Section 7 or
+HK result is used. The pinned dependency revisions are retained; exact source
+overlays, preparation and provenance are versioned under `section 5`.
+
 ## Historical Section 4 authorization — November 12
 
 The author instructed: “take unformalized results in sectrion3 as given

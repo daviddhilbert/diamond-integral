@@ -1,0 +1,11 @@
+{
+  "status": "APPROVED_AND_INCORPORATED",
+  "passage": "Final corollary of Section 5",
+  "referee_items": "R096 and R097 remain withdrawn; no active referee item for this corollary",
+  "approved_statement": "Intrinsic fiber vanishing in R(F<b>) at every ambient point implies global motivic-volume vanishing",
+  "proof": "Positive lifting over VF-generated fiber bases; Theorem 5.17 against the empty family; global Theta over C((t))",
+  "working_manuscript_sha256": "17631808632069c4af757f0268e6e905ab60ea2499b852559f9110977cf62b01",
+  "adopted_fragment": "Section5/reference/section5-approved-final-corollary.tex",
+  "preserved": "All preceding text and all later sections",
+  "lean_status": "Lemma 5.12 complete; later numbered results remain unfinished"
+}

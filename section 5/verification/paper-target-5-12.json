@@ -1,0 +1,25 @@
+{
+  "paper_result": "Lemma 5.12 (coh:decom), approved original-language statement",
+  "status": "COMPLETE_IN_RECORDED_MODEL_AND_BASE_CONTEXT",
+  "declaration": "DiamondIntegral.Section5.monomial_decomposition_5_12",
+  "source": "section 5/MonomialMatrixForm.lean",
+  "input": "Actual original-ground definable subset of the nonzero RV n-torus",
+  "context": "Canonical ACVF00 model, actual saturation, real/Gamma base smallness and nontrivial definable Gamma",
+  "statement_mapping": {
+    "finite_original_value_partition": "The theorem conclusion gives pairwise disjoint values carriers covering rvUnitTupleValues image X",
+    "source_is_original_value_cut": "GroundMonomialPiece.source_cut",
+    "nonempty_residue_and_Gamma_factors": "GroundMonomialPiece.residue_nonempty and gamma_nonempty",
+    "singleton_residue_value": "GroundMonomialPiece.residue_values",
+    "original_ground_definability": "All sets are GammaGroundDefSet hc B; beta_definable and actual GammaGroundBijection use the same ground",
+    "arities": "GroundMonomialPiece.arity_eq: zeroArity + freeArity = n",
+    "GL_n_Z_matrix": "GroundMonomialPiece.matrix is Units (Matrix (Fin n) (Fin n) Z), constructed with its two-sided integral inverse",
+    "standard_block_order": "rowOrder_fixed, rowOrder_free and matrix_blockSplit identify the first residue and last free coordinates",
+    "literal_monomial_image": "The final theorem includes matrix_image; blockSplit is the standard Fin arity identification",
+    "empty_input_and_zero_arity": "No input nonemptiness or positive-arity hypothesis; empty output index is allowed"
+  },
+  "outside_this_target": [
+    "Zero-coordinate strata and RV[k] labels in later results (5.12 itself is stated on the nonzero torus)",
+    "Finite Kummer comparison, relative Gamma push and the full Fubini theorem"
+  ],
+  "hk_results_assumed": []
+}

@@ -1,0 +1,312 @@
+\documentclass[12pt]{amsart}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{dsfont,bm,mathtools}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage[top=2.3cm,bottom=2.3cm,left=2cm,right=2cm]{geometry}
+\usepackage{hyperref}
+\hypersetup{hidelinks}
+\allowdisplaybreaks
+\emergencystretch=1.5em
+\definecolor{ProposalOrange}{RGB}{160,65,0}
+\definecolor{RefereePurple}{RGB}{103,34,147}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lem}[thm]{Lemma}
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{Remark}
+\theoremstyle{definition}
+\newtheorem{nota}[thm]{Notation}
+\definecolor{ResolutionGreen}{RGB}{0,100,55}
+\newcommand{\C}{\mathds{C}}
+\newcommand{\Q}{\mathds{Q}}
+\newcommand{\rv}{\operatorname{rv}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\RV}{\mathrm{RV}}
+\newcommand{\RES}{\mathrm{RES}}
+\newcommand{\VF}{\mathrm{VF}}
+\newcommand{\K}{\mathds{k}}
+\newcommand{\Z}{\mathds{Z}}
+\newcommand{\N}{\mathds{N}}
+\newcommand{\vrv}{\operatorname{vrv}}
+\newcommand{\GL}{\operatorname{GL}}
+\newcommand{\dcl}{\operatorname{dcl}}
+\newcommand{\pr}{\operatorname{pr}}
+\newcommand{\defn}{\mathrm{def}}
+\newcommand{\given}{\,\middle|\,}
+\newcommand{\Sbase}{\mathbb S}
+\newcommand{\RVlang}{\mathcal L_{\mathrm{RV}}}
+\numberwithin{equation}{section}
+\pagestyle{plain}
+
+\newcommand{\A}{\mathds{A}}
+\newcommand{\Gm}{\mathbb G_m}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Kres}{K_0(\RES)}
+\newcommand{\Bangres}{{!K_0(\RES)}}
+\newcommand{\Kraw}{K_0^{\widehat\mu,\mathrm{raw}}(\Var_{\C})}
+\newcommand{\Kmon}{K_0^{\widehat\mu}(\Var_{\C})}
+\newcommand{\E}{\mathbb E_b}
+\newcommand{\Vol}{\operatorname{Vol}}
+\newcommand{\vv}{\operatorname{val}}
+\newcommand{\LiftingTheorem}{the lifting theorem of Section~3}
+
+\theoremstyle{plain}
+\newtheorem*{thm*}{Theorem}
+
+\newcommand{\R}{\mathds R}
+\newcommand{\Sfiber}{\mathbb S_b}
+\newcommand{\Rbase}[1]{{!K_0(\RES_{#1})}}
+\newcommand{\IsVFVG}{(\VF,\Gamma)\text{-generated}}
+\newcommand{\gsk}{K_+}
+\theoremstyle{plain}
+\newtheorem{test}[thm]{Test}
+\begin{document}
+\setcounter{section}{5}
+\setcounter{subsection}{2}
+\setcounter{thm}{19}
+{\small\noindent Forey--Yin, \emph{Bounded integral and motivic Milnor fiber}.
+Section 5 review: R094--R095.
+Approved context is black; proposed manuscript text is orange.}
+\medskip
+
+\noindent\emph{Proof of Theorem 5.17 (continued).}
+Put $g=[\Gm]$.
+The preceding relative Gamma-push calculation gives
+\[
+ \mathbb E_{\mathrm b}([\bm W])
+   =\sum_i e_i g^{\ell_i}\mathbb E_{\mathrm b}([\mathcal V_i])
+\]
+when the monomial packages are defined over the RV base.
+For a varying value tuple $\alpha(\tau)$ it also gives
+\[
+ \mathbb E_{\mathrm b}([T_{\alpha,\mathcal Z}])
+      =g^n\mathbb E_{\mathrm b}([\mathcal Z]).
+\]
+We must now obtain the complete finite witnesses over that base.
+
+{\color{ProposalOrange}
+\medskip
+\noindent\emph{Finite witnesses for the RES quotient.}
+The following object-level criterion supplies the finite
+data needed for compactness.
+
+\begin{test}\label{test}
+Let $\mathbb T$ be a parameter base and
+$P,Q\in\RES_{\mathbb T}$.
+The equality $[P]=[Q]$ in $R(\mathbb T)$ holds if and only if
+there are $C\in\RES_{\mathbb T}$, finitely many ordered pairs
+$(L_j,R_j)$, and an actual $\mathbb T$-definable bijection
+\begin{equation}\label{finite:RES:witness}
+ P\sqcup C\sqcup\bigsqcup_j R_j
+       \ \xrightarrow{\ \sim\ }\
+ Q\sqcup C\sqcup\bigsqcup_j L_j .
+\end{equation}
+For each $j$, the pair $(L_j,R_j)$ is either
+\[
+ \bigl(\alpha_j^\sharp\times Z_j,\
+              (\Gm)^{n_j}\times Z_j\bigr)
+\]
+or its reverse, where
+$Z_j\in\RES_{\mathbb T}$ and
+$\alpha_j\in\Gamma^{n_j}$ is $\mathbb T$-definable.
+All unions and copies are tagged disjoint unions.
+\end{test}
+
+To prove the criterion, an element of the ideal defining
+$R(\mathbb T)$ is a finite sum of its generators times
+elements of $K_0(\RES_{\mathbb T})$.
+Write each coefficient as a difference of two positive
+object classes. Absorb those objects into $Z_j$, reversing
+a pair for a negative coefficient.
+The one-coordinate generators already suffice; tuple
+generators give the same ideal by expanding a difference
+of products.
+Thus $[P]-[Q]=\sum_j([L_j]-[R_j])$ in the group completion.
+Equality there means that adding one common positive class
+$[C]$ makes the two positive sums equal.
+Positive scissor equalities assemble into an actual
+definable bijection, giving
+(\ref{finite:RES:witness}).
+Conversely that bijection and the defining ideal relations
+imply $[P]=[Q]$ in $R(\mathbb T)$.
+This gives finite object witnesses directly.
+
+\medskip
+\noindent\emph{Choose the full packages before preparing the base.}
+Return temporarily to $b\in B$ in the original parameter
+coordinates, and put $\Sfiber=\Sbase\langle b\rangle$.
+Apply Lemma 5.12 to the two RV representatives over
+$\Sfiber$, with their zero strata and finite tags retained.
+The standing nontriviality of the ground Gamma group
+also holds over $\Sfiber$.
+Only RV decomposition and the RV retraction are used here;
+no fiber VF-integration hypothesis is added.
+
+For one such finite package the charts have matrices $M_i$,
+free arities $\ell_i$, residue factors $V_{i,b}$,
+Gamma supports $I_{i,b}$ and integers
+$e_i=\chi_b(I_{i,b})$, and similarly for the primed family.
+Set
+\[
+ C_{i,b}=V_{i,b}\times(\Gm)^{\ell_i},
+ \qquad C'_{i',b}=V'_{i',b}\times(\Gm)^{\ell'_{i'}}.
+\]
+Writing $a^+=\max(a,0)$ and $a^-=\max(-a,0)$, form the
+positive RES objects
+\[
+ P_b=\bigsqcup_i e_i^+ C_{i,b}
+       \ \sqcup\ \bigsqcup_{i'}(e'_{i'})^- C'_{i',b},
+\]
+\[
+ Q_b=\bigsqcup_i e_i^- C_{i,b}
+       \ \sqcup\ \bigsqcup_{i'}(e'_{i'})^+ C'_{i',b}.
+\]
+Here $mC$ means $m$ tagged copies of $C$.
+The monomial evaluation and the hypothesis imply
+$[P_b]=[Q_b]$ in $R(\Sfiber)$.
+Choose the full finite witness of Test~\ref{test} over
+$\Sfiber$: the stabilizer $C_b$, the factors $Z_{j,b}$,
+the value tuples $\alpha_j(b)$, the orientations of the
+pairs, and the graph of the displayed bijection.
+
+Include in the package the representative and label
+formulas, their finite-fiber bounds, the monomial source
+pieces and coordinate maps, the residue and Gamma factors,
+and finite bounds for every RES value support.
+Include formulas defining all Gamma-valued parameter
+functions and the complete stabilization bijection graph.
+
+The Euler integers also have finite first-order certificates.
+After DOAG quantifier elimination, the indicator of each
+$I_{i,b}$ is a finite integer combination of indicators
+of closed rational polyhedra with $b$-definable Gamma
+parameters. Its bounded Euler characteristic is the
+same combination of their nonemptiness indicators,
+since a nonempty closed polyhedron has bounded Euler
+characteristic $1$.
+Record those parameter formulas, the indicator identity
+and the nonemptiness flags.
+Validity of a fixed such certificate is first order.
+
+Validity of the entire fixed finite package is now a
+first-order condition on $b$: all arities and bounds are
+fixed, and the required set identities, maps and actual
+bijections are given by formulas.
+These conditions cover every ambient $b\in B$.
+Saturation and compactness therefore give a finite
+definable partition of $B$ with one package on each piece.
+In particular, the matrices, copy numbers, Euler integers,
+arity lists and pair orientations are fixed on a piece.
+
+\medskip
+\noindent\emph{Prepare the witness formulas themselves.}
+Repeat the earlier mixed-base preparation with this larger
+finite package.
+First eliminate valued-field quantifiers in the formulas
+for all RV/Gamma sets and maps in it.
+Their only free VF variables are the VF coordinates of
+the base parameter $b$. Apply the preparation lemma to
+every VF polynomial occurring in these formulas, including
+those for the stabilization bijection, the Gamma-valued
+functions and the Euler certificates.
+Carry every original and newly introduced RV coordinate.
+
+As before, write the resulting base as
+\[
+ B^\flat=\{(c,t):\tau=(\rv(c),t)\in S\}.
+\]
+Every formula in the RV/Gamma witness package now depends
+on $(c,t)$ only through $\tau$.
+It therefore defines the representative sets, their label
+maps, the monomial data, all auxiliary RES objects,
+the Gamma functions $\alpha_j(\tau)$ and the actual
+stabilization bijection over $\Sbase\langle\tau\rangle$.
+The finite support bounds and the Euler certificates remain
+valid there: their defining first-order assertions involve
+only $\tau$ after preparation.
+
+This constructs the equality witness over the RV parameter
+base. It does not deduce that equality from injectivity of
+a base-extension map.
+The lift bijections $H_b,H'_b$ are kept as transported
+bijections of total mixed VF families; they need not
+descend to RV maps.
+Using them gives the total RV objects
+$\bm W,\bm W'$ exactly as in the earlier mixed-coordinate
+construction.
+The Gamma functions and support sets may vary with
+$\tau$; their constancy is not required.
+
+\medskip
+\noindent\emph{Apply the finite witnesses to the total families.}
+For every object family $F_\tau$ use the tagged total
+\[
+ \mathcal F=\{(\tau,u):\tau\in S,\ u\in F_\tau\}.
+\]
+Give each total a finite-to-one RV label, for example its
+full coordinate tuple when necessary.
+These totals are RV objects; no assertion that they are
+ground RES objects is needed.
+The uniform bijection (\ref{finite:RES:witness}) yields
+an actual definable bijection
+\[
+ \mathcal P\sqcup\mathcal C\sqcup\bigsqcup_j\mathcal R_j
+       \ \cong\
+ \mathcal Q\sqcup\mathcal C\sqcup\bigsqcup_j\mathcal L_j .
+\]
+For each $j$, the relative torsor identity gives
+\[
+ \mathbb E_{\mathrm b}([\mathcal L_j])
+       =\mathbb E_{\mathrm b}([\mathcal R_j]),
+\]
+with either orientation, even for varying
+$\alpha_j(\tau)$.
+Apply the ungraded bounded retraction to the total
+bijection and cancel the common summands additively:
+\[
+ \mathbb E_{\mathrm b}([\mathcal P])
+       =\mathbb E_{\mathrm b}([\mathcal Q]).
+\]
+The definitions of $P_\tau,Q_\tau$ turn their difference
+into
+\[
+ \sum_i e_i g^{\ell_i}\mathbb E_{\mathrm b}([\mathcal V_i])
+   -\sum_{i'}e'_{i'}g^{\ell'_{i'}}
+                   \mathbb E_{\mathrm b}([\mathcal V'_{i'}]).
+\]
+By the preceding family-coefficient formula this is
+$\mathbb E_{\mathrm b}([\bm W])
+ -\mathbb E_{\mathrm b}([\bm W'])$.
+Consequently the two global bounded values agree.
+Since $\bm W,\bm W'$ represent the original total
+VF objects under the lifting comparison, this proves
+the conclusion of Theorem 5.17.
+Sum over the finitely many base pieces.
+All cancellations above take place in the additive
+group of $R(\Sbase)$; no torus class is inverted.
+}
+
+\medskip
+{\normalfont\small\color{RefereePurple}
+\noindent\textbf{Referee R094 [Typo; revised] --
+Height convention.}
+In a construction-graph presentation, height is the
+maximum level number, or the number of levels minus one.
+The finite object-witness criterion above replaces that
+presentation and its height induction.\par
+\medskip
+\noindent\textbf{Referee R095 [Gap; revised] --
+Descent from VF parameters to RV parameters.}
+Prepare every formula in the full finite witness package
+over the original $b$, including the actual bijections
+and Gamma data. Preparing only the object formulas does
+not descend the equality witnesses. The proposed text
+carries out that larger preparation and forms tagged
+total families.\par}
+\medskip
+{\normalfont\small\color{ProposalOrange}
+\noindent\textbf{Proposed disposition of R094--R095.}
+Replace the old congruence test and construction-graph
+block through the end of the Fubini proof by the orange
+text. The following corollary will be reviewed separately.}
+\end{document}

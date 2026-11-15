@@ -1,0 +1,11 @@
+{
+  "status": "APPROVED_AND_INCORPORATED",
+  "items": [
+    "R086",
+    "R087"
+  ],
+  "working_manuscript_sha256": "9fced2fec35c7d6848dfe76289167edbfa63088fa26cfa56cf71a14adfefda3f",
+  "adopted_fragment": "Section5/reference/section5-approved-R086-R087.tex",
+  "preserved_after": "Arithmetic continuation of Remark 5.18, R088--R089, and proof after the first compactness step",
+  "lean_status": "Formalization started separately; no complete numbered result claimed"
+}

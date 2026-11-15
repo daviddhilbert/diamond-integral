@@ -1,0 +1,52 @@
+{
+  "status": "APPROVED_AND_INCORPORATED",
+  "passage": "Final corollary of Section 5",
+  "approved_through": "R095",
+  "withdrawn_items_not_revived": [
+    "R096",
+    "R097"
+  ],
+  "pdf_pages": 1,
+  "visual_review": "The final rendered page inspected; proposed statement and proof orange, approved Fubini context black",
+  "adopted_R094_R095_QA": "All three rendered adopted-fragment pages inspected; no TeX errors or overfull boxes",
+  "tex_errors": false,
+  "overfull_boxes": false,
+  "scope": "Intrinsic fiber vanishing in R(F<b>) at all saturated ambient points implies global motivic-volume vanishing by positive lifting, Theorem 5.17 against the empty family and ground Theta",
+  "lean_status": "PASS_LEMMA_5_12_AND_SUPPORT; full concrete Puiseux and quotient RV Galois identifications, exact full Laurent RV base, original-language transport for an explicit model presentation; full Remark 5.13, Theta and Fubini remain unfinished",
+  "lean_principles": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "right_panel_display": "queued",
+  "historical_proposal_source_sha256": {
+    "Section5/reference/diamond_integral_revision_annotated.tex": "a3700cc297c850df9d807fed3e8d3723c34fc7e97f67f7a3ae51dc13e54cf53d",
+    "Section5/reference/proposed-revisions/final-corollary/main.tex": "200a207ea84022b7670fdd305b185fa4eb1f7c1098fd434e0de355fa7765183e",
+    "output/pdf/section5-final-corollary-review.pdf": "580b5dabb4bae27d63ed3abf4997769226d064879700eea10ad021df07cb222a",
+    "Section5/worktree/section 5/KummerRootCharacters.lean": "ae13ce8ca6ad108a175b0e6e1167cb0c0e1ce746012f84dec097341f2cf16bc0",
+    "Section5/worktree/section 5/verification/status.json": "bdc2fa9e873bebd0bb848e301c1eb3b3eafbe95d56605516bf61bf92264aa306",
+    "Section5/worktree/section 5/verification/paper-target-5-12.json": "316f1d2440d727857f0a15a699a9289d9eb582f89b8be8b1930ab769656bc605"
+  },
+  "adopted_visual_review": "The rendered page of the actual adopted fragment inspected; all text black, no clipping or overlaps",
+  "source_sha256": {
+    "output/pdf/section5-final-corollary-approved.pdf": "aefbbc8417b7a9c3c5ad5377ec7cc3f2c75a107e23281eaf67b4291b1be30b26",
+    "Section5/reference/section5-approved-final-corollary.tex": "dcead32dc41182688a44967d0d964f288062784a25fd26c3e4d3c1a61bb15257",
+    "Section5/reference/diamond_integral_revision_annotated.tex": "17631808632069c4af757f0268e6e905ab60ea2499b852559f9110977cf62b01"
+  },
+  "historical_proposal_manuscript_checks": {
+    "complete_original_R094_R095_notes_retained": true,
+    "canonical_clone_synchronized": true,
+    "corollary_and_later_sections_unchanged": true
+  },
+  "current_manuscript_checks": {
+    "approved_corollary_incorporated_exactly": true,
+    "canonical_clone_synchronized": true,
+    "all_later_sections_unchanged": true,
+    "complete_R094_R095_referee_notes_retained": true
+  },
+  "verification_records": {
+    "Section5/worktree/section 5/verification/status.json": "dbbadb3fbaf87b2445696cd49de1f56018a741e2512e9de5e41c8047dffd426f",
+    "Section5/worktree/section 5/verification/paper-target-5-12.json": "316f1d2440d727857f0a15a699a9289d9eb582f89b8be8b1930ab769656bc605",
+    "Section5/worktree/section 5/verification/paper-target-5-13.json": "68e1594f4e260a33c196befb032331ceffa4d02a7425d51e9e4abcda53483ee9"
+  }
+}

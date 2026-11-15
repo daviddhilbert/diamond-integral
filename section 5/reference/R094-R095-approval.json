@@ -1,0 +1,11 @@
+{
+  "status": "APPROVED_AND_INCORPORATED",
+  "items": [
+    "R094",
+    "R095"
+  ],
+  "working_manuscript_sha256": "a3700cc297c850df9d807fed3e8d3723c34fc7e97f67f7a3ae51dc13e54cf53d",
+  "adopted_fragment": "Section5/reference/section5-approved-R094-R095.tex",
+  "preserved_after": "End of the Fubini proof, remaining corollary and every later section",
+  "lean_status": "Lemma 5.12 is compiled; the new Fubini proof remains to be formalized"
+}

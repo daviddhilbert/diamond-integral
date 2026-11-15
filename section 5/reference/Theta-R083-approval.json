@@ -1,0 +1,11 @@
+{
+  "status": "APPROVED_AND_INCORPORATED",
+  "items": [
+    "Theta comparison, Notation 5.14",
+    "R083"
+  ],
+  "working_manuscript_sha256": "bfef320f0af3d2a0552bf6d473e1846f87acdc607f409736281545498d02085a",
+  "adopted_fragment": "Section5/reference/section5-approved-Theta-R083.tex",
+  "later_text_preserved": "Old R084 itemize block and everything after it",
+  "lean_status": "No new Section 5 Lean proof claimed"
+}

@@ -1,0 +1,196 @@
+Put $R=\sggk\RES$ and $g=[\G_m]\in R$.
+
+\begin{thm*}[Inflated-family Fubini]
+There is a finite $F$-definable partition $(E_a)_a$ of $\Q^n$
+and classes $v_a\in R$ such that
+\begin{equation}\label{trop:fub:cons}
+ \nu(\gamma):=\bb E_b\!\left(\int[A_\gamma]\right)=v_a
+ \quad\text{for }\gamma\in E_a.
+\end{equation}
+The partition includes the parameters with empty fibers, where
+the value is $0$. Moreover,
+\begin{equation}\label{fubini:inflated:RES}
+ \bb E_b\!\left(\int[A^{\mathrm{inf}}]\right)
+   =g^n\sum_a\chi_b(E_a)v_a\quad\text{in }R.
+\end{equation}
+Applying the approved comparison $\Theta$ gives
+\[
+ \Vol([A^{\mathrm{inf}}])
+   =[\G_m]^n\sum_a\chi_b(E_a)\Theta(v_a).
+\]
+\end{thm*}
+
+\begin{proof}
+\emph{A relative monomial decomposition.}
+Work first on a fixed zero-coordinate stratum of one tagged
+component, and write
+$\mathcal U\subseteq\Gamma^n\times(\RV^\times)^r$.
+We claim that it has a finite definable partition
+$(\mathcal U_i)_i$, integer matrices $N_i\in\GL_r(\Z)$,
+fixed nonempty RES sets $W_i$ with singleton value support,
+and definable sets
+$J_i\subseteq\Gamma^n\times\Gamma^{\ell_i}$, such that
+\begin{equation}\label{relative:monomial:chart}
+ h_{N_i}(U_{i,\gamma})
+       =W_i\times(J_{i,\gamma})^\sharp,\qquad
+ J_{i,\gamma}=\{\eta:(\gamma,\eta)\in J_i\}.
+\end{equation}
+All these data are over $F$, and the coordinate changes act on
+$u$ alone, leaving the parameter $\gamma$ unchanged.
+The finite labels are transported with the charts as in
+Section~3. Combine the finitely many tag and zero strata at
+the end.
+
+Here is a proof of the claim from Lemma~5.12.
+Apply that lemma to $X=U^{\mathrm{inf}}$, in coordinates
+$(z,u)$, to get value-induced pieces
+\[
+ X_i=X\cap\vrv^{-1}(D_i),\qquad
+ h_M(X_i)=V\times I^\sharp,\qquad \vrv(V)=\{\beta\}.
+\]
+Fix one such piece and let $m$ be the number of coordinates of
+$V$. Each $X_i$ is invariant under multiplication of $z$ by
+$(\K^\times)^n$: both the family condition and $D_i$
+depend on $z$ only through its values.
+
+Let $B$ be the block of $M$ in its first $m$ rows and first
+$n$ columns, and put $p=\operatorname{rank}_{\Q}B$,
+$h=m-p$. The induced action on $V$ has exponent matrix $B$.
+Smith reduction gives $Q\in\GL_m(\Z)$ such that, after this
+change of active coordinates, its image is
+\[
+ \{1\}^h\times(\K^\times)^p.
+\]
+Indeed the nonzero diagonal powers in Smith form are
+surjective on the units of the algebraically closed residue
+field. Since the remaining factor $I^\sharp$ already contains
+every angular coordinate, invariance of $X_i$ implies
+invariance of $V$ under this image. It follows that
+\[
+ h_Q(V)=W_i\times(\beta_{\mathrm{free}})^\sharp
+\]
+for a definable $W_i$ in the first $h$ fixed-value
+coordinates.
+
+The first $h$ rows of $\operatorname{diag}(Q,1)M$ vanish in
+the $z$ columns. Their restrictions to the $u$ columns form
+a primitive sublattice of $\Z^r$: their span is primitive
+already in $\Z^{n+r}$, since these rows belong to an integer
+basis. Extend these rows to a basis of $\Z^r$, obtaining
+$N_i\in\GL_r(\Z)$. Write
+\[
+ h_{N_i}(u)=(w,y),\qquad
+ \vrv(W_i)=\{\beta_i^0\},\qquad \ell_i=r-h.
+\]
+On a fixed joint value tuple, membership in $X_i$ is now
+equivalent to $w\in W_i$. All other angular coordinates
+are free by the preceding invariance argument.
+Consequently the required value set is
+\[
+ J_i=\{(\gamma,\eta):
+       (\gamma,N_i^{-1}(\beta_i^0,\eta))\in D_i\}.
+\]
+This proves (\ref{relative:monomial:chart}).
+It also proves original-base definability: $W_i$ is a
+definable projection, its value tuple is fixed over $F$,
+and all coordinate matrices are integral. No angular
+representative is retained as a parameter.
+
+\emph{A separate base partition.}
+The projections of the value pieces to the parameter space
+may overlap. For example, in the constant family
+$U_\gamma=\{1,2\rv(t),3\rv(t)\}$, the natural pieces at
+internal values $0$ and $1$ both project onto the whole base.
+We therefore index the source pieces by $i$ and construct
+the base pieces independently.
+
+For each $i$, put $e_i(\gamma)=\chi_b(J_{i,\gamma})$.
+These are finite-range constructible integer functions.
+For completeness, quantifier elimination and
+inclusion--exclusion express the indicator of a definable
+subset of $\Q^{n+\ell}$ as a finite integer combination of
+indicators of closed rational polyhedra.
+Every nonempty closed polyhedron has bounded Euler
+characteristic $1$: its sufficiently large box cuts are
+nonempty closed bounded polyhedra, with geometric Euler
+characteristic $1$. A projection and a nonempty fiber of
+a closed polyhedron are closed polyhedra again.
+Thus for its indicator the fiber integral is the indicator
+of the projection. Linearity proves finite-range
+constructibility and the projection identity
+\begin{equation}\label{gamma:projection:formula}
+ \chi_b(J_i)=\int_{\Q^n} e_i(\gamma)\,d\chi_b.
+\end{equation}
+
+Take the common finite Boolean refinement of all the supports
+$\operatorname{pr}_{\Gamma^n}(J_i)$ and the level sets of
+all $e_i$. This is the partition $(E_a)_a$.
+It includes the complement of the union of those supports.
+Write $e_{ia}$ for the value of $e_i$ on $E_a$, and set
+\[
+ c_i=[W_i]g^{\ell_i},\qquad v_a=\sum_i e_{ia}c_i\quad\text{in }R.
+\]
+For every rational $\gamma$, all its coordinates are
+$F$-definable. The fiber representatives and
+(\ref{relative:monomial:chart}), evaluated by the retraction
+of Section~4, give
+\[
+ \bb E_b\!\left(\int[A_\gamma]\right)
+       =\sum_i\chi_b(J_{i,\gamma})[W_i]g^{\ell_i}.
+\]
+This proves (\ref{trop:fub:cons}), including empty fibers.
+Every contribution indexed by $i$ is constant on each $E_a$;
+their projections themselves are not required to be a partition.
+
+\emph{The total inflated space.}
+Give $U^{\mathrm{inf}}$ the label
+$(z,f_{\vrv(z)}(u))$, where $f_\gamma$ is the retained
+label of $\bm U_\gamma$; keep the finite tags and degrees.
+Its lift is definably bijective to $A^{\mathrm{inf}}$:
+use $H_{\vv(x)}$ on the second factor and retain $x$.
+The base RV tag is then $z=\rv(x)$. Thus this replacement
+is justified by an actual uniform bijection.
+
+The relative coordinate changes send the corresponding pieces
+of $U^{\mathrm{inf}}$ to
+\[
+ W_i\times J_i^\sharp,
+\]
+after a coordinate permutation. Here $J_i^\sharp$ is the
+full RV lift in $n+\ell_i$ coordinates.
+The Section~4 product formula therefore gives directly
+\[
+ \bb E_b\!\left(\int[A^{\mathrm{inf}}]\right)
+   =\sum_i\chi_b(J_i)[W_i]g^{n+\ell_i}
+   =g^n\sum_i\chi_b(J_i)c_i.
+\]
+Using (\ref{gamma:projection:formula}) and the base partition,
+\[
+ \sum_i\chi_b(J_i)c_i
+     =\sum_a\chi_b(E_a)\sum_i e_{ia}c_i
+     =\sum_a\chi_b(E_a)v_a.
+\]
+This proves (\ref{fubini:inflated:RES}). Applying $\Theta$
+proves the displayed motivic-volume identity.
+\end{proof}
+
+The factor $[\G_m]^n$ comes from the additional $n$ VF value
+coordinates in $A^{\mathrm{inf}}$.
+For $A_\gamma=B\cap\vv^{-1}(\gamma)$, the formula above still
+concerns this inflated total space.
+An identity for the original $B$ requires a decomposition
+compatible with its own tropicalization; it does not follow by
+cancelling $[\G_m]^n$ in the Grothendieck ring.
+
+% BEGIN REFEREE INSERTION R084
+\ResolvedRefereeRemark{084}{Error}{Projected pieces need not form a partition}{%
+\textit{Original source line 1830.}\quad The second bullet cannot in general hold together with the first. For example, use the constant family $U_\gamma=\{1,2\rv(t),3\rv(t)\}$. In $U=\bigcup_\gamma\gamma^\sharp\times U_\gamma$, the twistbacks at internal values $0$ and $1$ have respectively one and two points in the last coordinate. Thus they must lie in different twistoid pieces, whose projections to the base overlap at every $\gamma$. Use a separately indexed base partition $(E_a)_a$, subordinate to the projections of all $D_i$, such that every contribution indexed by $i$ is constant on each $E_a$. Then define $v_a$ by summing all those contributions. Include a base piece for empty fibers when necessary.
+}{The author approved the replacement on November 13, 2026. The relative monomial charts leave the Gamma parameter unchanged and supply fixed original-base RES factors. A separately indexed base partition refines all supports and fiber Euler-function level sets, and every indexed contribution is summed on each base piece, including the empty-fiber region.}
+% END REFEREE INSERTION R084
+
+% BEGIN REFEREE INSERTION R085
+\ResolvedRefereeRemark{085}{Clarification; revised}{The extra torus factor}{%
+\textit{Original source line 1839.}\quad This correctly formulated target is an inflated-family identity: $A=\bigcup_\gamma\vv^{-1}(\gamma)\times A_\gamma$. It has an additional factor $[\mathbb G_m]^n$ compared with the usual tropical Fubini identity for a set $B$ and its tropical fibers. State this scope explicitly. To deduce $\operatorname{Vol}(B)=\int\operatorname{Vol}(B\cap\vv^{-1}(\gamma))\,d\chi_b$, a compatible relative decomposition is still needed; cancellation of $[\mathbb G_m]^n$ in the Grothendieck ring is not justified. Compare \cite[Theorem~3.1.3]{Nic:Pay:trop:fub}.
+}{The author approved the explicit inflated-family statement and proof. The identity is proved first in the original RES target using the actual uniform lift bijections and relative charts, then transported by $\Theta$. The factor $[\G_m]^n$ is retained. No cancellation or claim of the ordinary uninflated identity is used.}
+% END REFEREE INSERTION R085
+

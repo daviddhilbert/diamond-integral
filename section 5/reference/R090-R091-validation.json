@@ -1,0 +1,37 @@
+{
+  "status": "APPROVED_AND_INCORPORATED",
+  "items": [
+    "R090",
+    "R091"
+  ],
+  "approved_items": [
+    "R080",
+    "R081",
+    "R082",
+    "Theta comparison",
+    "R083",
+    "R084",
+    "R085",
+    "R086",
+    "R087",
+    "R088",
+    "R089"
+  ],
+  "pdf_pages": 3,
+  "visual_review": "All three final rendered pages inspected",
+  "adopted_fragment_visual_review": "Both actual R088--R089 adopted-fragment pages inspected",
+  "overfull_boxes": false,
+  "tex_errors": false,
+  "scope": "Mixed-base preparation, finite total RV structure maps and Gamma value-parameter control; later RES-witness descent remains pending",
+  "lean_status": "PASS_SUPPORT_LEMMAS_ONLY: actual original-ground definable mixed RV/Gamma value partitions compiled and audited",
+  "source_sha256": {
+    "Section5/reference/diamond_integral_revision_annotated.tex": "8b3648b266b74c5d2d2f8176aa0cfb24ef947fc74debf13e278fac0ccecab5a7",
+    "Section5/reference/section5-approved-R088-R089.tex": "eadac4f4c91dd79a55e8cffea50ff14ce8343b2a72eb22facb9f6ef519119dfe",
+    "Section5/reference/proposed-revisions/R090-R091-mixed-base-value-parameters/main.tex": "7c53c4fe9f55c4bb47d369febe1f78a35401d2fb9b2508e192cac1a9a7545240",
+    "output/pdf/section5-R090-R091-review.pdf": "c4a472514746e2603bc02ccfae7a9f4e004e0d3e59f2a240b5eedc0cea425f8e",
+    "Section5/worktree/section 5/verification/status.json": "86e65736da589f3eee08156b2ec21b6ae8eabfc930331c58d95607f60e0601ad"
+  },
+  "right_panel_display": "queued",
+  "approval_record": "Section5/reference/R090-R091-approval.json",
+  "adopted_fragment_compilation": "PASS; both rendered pages inspected; no TeX errors or overfull boxes"
+}

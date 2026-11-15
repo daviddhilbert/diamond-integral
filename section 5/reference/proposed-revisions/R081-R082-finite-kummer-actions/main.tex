@@ -1,0 +1,168 @@
+\documentclass[12pt]{amsart}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{dsfont,bm,mathtools}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage[top=2.3cm,bottom=2.3cm,left=2cm,right=2cm]{geometry}
+\usepackage{hyperref}
+\allowdisplaybreaks
+\emergencystretch=1.5em
+\definecolor{ProposalOrange}{RGB}{160,65,0}
+\definecolor{RefereePurple}{RGB}{103,34,147}
+\newtheorem{lem}{Lemma}[section]
+\theoremstyle{remark}
+\newtheorem{rem}[lem]{Remark}
+\definecolor{ResolutionGreen}{RGB}{0,100,55}
+\newcommand{\C}{\mathds{C}}
+\newcommand{\Q}{\mathds{Q}}
+\newcommand{\rv}{\operatorname{rv}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\RV}{\mathrm{RV}}
+\newcommand{\RES}{\mathrm{RES}}
+\newcommand{\VF}{\mathrm{VF}}
+\newcommand{\K}{\mathds{k}}
+\newcommand{\Z}{\mathds{Z}}
+\newcommand{\N}{\mathds{N}}
+\newcommand{\vrv}{\operatorname{vrv}}
+\newcommand{\GL}{\operatorname{GL}}
+\newcommand{\dcl}{\operatorname{dcl}}
+\newcommand{\pr}{\operatorname{pr}}
+\newcommand{\defn}{\mathrm{def}}
+\newcommand{\given}{\,\middle|\,}
+\newcommand{\Sbase}{\mathbb S}
+\newcommand{\RVlang}{\mathcal L_{\mathrm{RV}}}
+\numberwithin{equation}{section}
+\pagestyle{plain}
+\begin{document}
+\setcounter{section}{4}
+{\small\noindent Forey--Yin, \emph{Bounded integral and motivic Milnor fiber}.
+Section 5 review: second batch (R081--R082).
+Approved context is black; proposed manuscript text is orange.}
+\medskip
+\section{Interlude: RV decomposition and Fubini theorems}\label{csndag}
+\setcounter{lem}{11}
+\begin{lem}[Monomial decomposition]\label{coh:decom}
+Let $U\subseteq(\RV^\times)^n$ be definable. There is a finite definable
+partition $(D_i)_i$ of $\vrv(U)$ such that, writing
+$U_i=U\cap\vrv^{-1}(D_i)$, there are $M_i\in\GL_n(\Z)$,
+$0\leq m_i\leq n$, a nonempty definable set
+$V_i\subseteq(\RV^\times)^{m_i}$, and a nonempty definable set
+$I_i\subseteq\Gamma^{n-m_i}$ with
+\[
+ \vrv(V_i)=\{\beta_i\},\qquad
+ h_{M_i}(U_i)=V_i\times I_i^\sharp .
+\]
+All sets and maps are definable over the original base $\Sbase$.
+In particular, the partition of $U$ is induced by a partition of
+its value support.
+\end{lem}
+{\normalfont\small\color{ResolutionGreen}
+\noindent The proof of Lemma~5.12 has been incorporated as approved.
+The next passage replaces the opening of Section~5.1 and its following remark.\par}
+\medskip
+
+{\color{ProposalOrange}
+\subsection{Tropical motivic Fubini theorem}\label{jp:fubini}
+In this subsection we work in the field $\widetilde{\C}$ of complex
+Puiseux series, considered as an elementary substructure of
+$\mathbb U$. Put $F=\C((t))$ and take the parameter base to be
+$\Sbase=F$. Normalize the valuation by $v(t)=1$, so that the
+value group of $\widetilde{\C}$ is identified with $\Q$.
+All definability and all categories are interpreted in the original
+language $\RVlang$ over $\Sbase$. In particular, each
+$a/N\in\Q$ is definable over $\Sbase$ as the unique solution of
+$N\gamma=a\,v(t)$.
+
+\begin{rem}[The finite Kummer actions]\label{puiseux:kummer:action}
+There are natural identifications
+\[
+ \Gal(\widetilde{\C}/F)\ \cong\ \widehat{\mu}
+ \ \cong\ \Aut\bigl(\RV(\widetilde{\C})/\RV(F)\bigr),
+ \qquad
+ \widehat{\mu}=\varprojlim_N\mu_N,
+\]
+where the transition map $\mu_M\to\mu_N$ for $N\mid M$
+is $\zeta\mapsto\zeta^{M/N}$, and the last automorphism group
+uses the induced original-language structure on $\RV$.
+
+For the proof, fix $N\geq1$, choose any root $\tau_N$ of
+$X^N-t$ in $\widetilde{\C}$, and put
+$F_N=\C((\tau_N))$. Grouping exponents modulo $N$ writes each
+element of $F_N$ uniquely as
+\[
+ \sum_{j=0}^{N-1}\tau_N^j f_j(t),\qquad f_j(t)\in F.
+\]
+Uniqueness also follows from the pairwise distinct valuations
+modulo $\Z$ of the nonzero summands. Thus $[F_N:F]=N$.
+Its $F$-automorphisms are precisely
+$\tau_N\mapsto\zeta\tau_N$ for $\zeta\in\mu_N$.
+Replacing $\tau_N$ by another root multiplies it by an element
+of $\mu_N\subseteq F$, so both $F_N$ and the ratio
+$\sigma(\tau_N)/\tau_N$ are independent of that choice.
+For $N\mid M$ these ratios satisfy
+\[
+ \frac{\sigma(\tau_N)}{\tau_N}
+ =
+ \left(\frac{\sigma(\tau_M)}{\tau_M}\right)^{M/N},
+\]
+since $\tau_M^{M/N}/\tau_N\in\mu_N\subseteq F$.
+The fields $F_N$ have union $\widetilde{\C}$.
+Their finite automorphisms therefore give exactly the compatible
+systems $(\zeta_N)_N\in\widehat{\mu}$, proving the first
+identification. Each such automorphism preserves the valuation:
+in the displayed expansion it multiplies the $j$th summand by
+$\zeta_N^j$, preserving its valuation and the unique least
+valuation of a nonzero sum.
+
+Write $r_N=\rv(\tau_N)$ and identify $\C^\times$ with the
+value-zero subgroup of $\RV(\widetilde{\C})$.
+For any $u$ of value $a/N$ there is a unique $c\in\C^\times$
+such that $u=c\,r_N^a$. The induced action is
+\[
+ \sigma_{(\zeta_N)}(c\,r_N^a)
+   =c\,\zeta_N^a r_N^a .
+\]
+In particular, a nonidentity system moves $r_N$ for some $N$.
+The action on $\RV$ is faithful.
+
+Finally, $\RV(F)$ is the subgroup generated by
+$\C^\times$ and $\rv(t)$, by taking the leading term of a
+Laurent series. An automorphism of the induced RV structure
+fixing $\RV(F)$ must send $r_N$ to
+$\zeta_Nr_N$ for some $\zeta_N\in\mu_N$: these are precisely
+the $N$ roots of $\rv(t)$ in $\RV$.
+The same relations as above force compatibility of the
+$\zeta_N$. The displayed action then determines the
+automorphism on every RV element. It agrees with the unique
+valued-field automorphism constructed from that system.
+This proves the second identification.
+The parameter base for all these definability assertions is
+still $\Sbase=F$.
+\end{rem}
+}
+\medskip
+
+{\normalfont\small\color{RefereePurple}
+\noindent\textbf{Referee R081 [Clarification; revised] --
+Normalization and language in the Puiseux setting.}
+For the original computation the referee requests normalization
+of the reduced section, compatible roots, and a distinction between
+the original and expanded languages so that the chosen roots
+do not erase monodromy.\par\medskip
+\noindent\textbf{Referee R082 [Typo] -- Formula for a reduced section.}
+The original assignment has the wrong input and takes values in
+VF instead of RV; the referee requests the corresponding
+compatible leading-term formula.\par}
+\medskip
+
+{\normalfont\small\color{ProposalOrange}
+\noindent\textbf{Proposed disposition of R081--R082.}
+Delete the expanded-language Puiseux convention and the
+reduced-section parametrization. Retain the Galois interpretation
+by the finite Kummer proof above, with the RV action written
+explicitly. The roots used in the proof remain auxiliary elements
+and are not adjoined to the definability base. No result on
+ramification groups or from [19] is used. The construction of
+$\Theta$ in the following notation will be reviewed separately
+using these finite actions.}
+\end{document}

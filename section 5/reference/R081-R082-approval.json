@@ -1,0 +1,11 @@
+{
+  "status": "APPROVED_AND_INCORPORATED",
+  "items": [
+    "R081",
+    "R082"
+  ],
+  "adopted_fragment": "Section5/reference/section5-approved-puiseux-kummer.tex",
+  "working_manuscript_sha256": "aefb9a07f201ff2c1ca5513b25f10056438b8b647ac21e9bfb6d0fc1046b2c56",
+  "later_text_preserved_from_label": "bipo:gdv",
+  "lean_status": "Not yet a compiled Section 5 proof"
+}

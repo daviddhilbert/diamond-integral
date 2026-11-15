@@ -1,0 +1,11 @@
+{
+  "status": "APPROVED_AND_INCORPORATED",
+  "items": [
+    "R090",
+    "R091"
+  ],
+  "working_manuscript_sha256": "ea71c99fe399aadc54ab566e3612662f0562871f6298a1723b4bf3e98780376f",
+  "adopted_fragment": "Section5/reference/section5-approved-R090-R091.tex",
+  "preserved_after": "Fiber-decomposition paragraph preceding R092 and all subsequent material",
+  "lean_status": "Manuscript proof approved; the full Fubini formalization remains pending"
+}

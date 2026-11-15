@@ -1,0 +1,278 @@
+\documentclass[12pt]{amsart}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{dsfont,bm,mathtools}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage[top=2.3cm,bottom=2.3cm,left=2cm,right=2cm]{geometry}
+\usepackage{hyperref}
+\hypersetup{hidelinks}
+\allowdisplaybreaks
+\emergencystretch=1.5em
+\definecolor{ProposalOrange}{RGB}{160,65,0}
+\definecolor{RefereePurple}{RGB}{103,34,147}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lem}[thm]{Lemma}
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{Remark}
+\theoremstyle{definition}
+\newtheorem{nota}[thm]{Notation}
+\definecolor{ResolutionGreen}{RGB}{0,100,55}
+\newcommand{\C}{\mathds{C}}
+\newcommand{\Q}{\mathds{Q}}
+\newcommand{\rv}{\operatorname{rv}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\RV}{\mathrm{RV}}
+\newcommand{\RES}{\mathrm{RES}}
+\newcommand{\VF}{\mathrm{VF}}
+\newcommand{\K}{\mathds{k}}
+\newcommand{\Z}{\mathds{Z}}
+\newcommand{\N}{\mathds{N}}
+\newcommand{\vrv}{\operatorname{vrv}}
+\newcommand{\GL}{\operatorname{GL}}
+\newcommand{\dcl}{\operatorname{dcl}}
+\newcommand{\pr}{\operatorname{pr}}
+\newcommand{\defn}{\mathrm{def}}
+\newcommand{\given}{\,\middle|\,}
+\newcommand{\Sbase}{\mathbb S}
+\newcommand{\RVlang}{\mathcal L_{\mathrm{RV}}}
+\numberwithin{equation}{section}
+\pagestyle{plain}
+
+\newcommand{\A}{\mathds{A}}
+\newcommand{\Gm}{\mathbb G_m}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Kres}{K_0(\RES)}
+\newcommand{\Bangres}{{!K_0(\RES)}}
+\newcommand{\Kraw}{K_0^{\widehat\mu,\mathrm{raw}}(\Var_{\C})}
+\newcommand{\Kmon}{K_0^{\widehat\mu}(\Var_{\C})}
+\newcommand{\E}{\mathbb E_b}
+\newcommand{\Vol}{\operatorname{Vol}}
+\newcommand{\vv}{\operatorname{val}}
+\newcommand{\LiftingTheorem}{the lifting theorem of Section~3}
+
+\theoremstyle{plain}
+\newtheorem*{thm*}{Theorem}
+
+\newcommand{\R}{\mathds R}
+\newcommand{\Sfiber}{\mathbb S_b}
+\newcommand{\Rbase}[1]{{!K_0(\RES_{#1})}}
+\newcommand{\IsVFVG}{(\VF,\Gamma)\text{-generated}}
+\newcommand{\gsk}{K_+}
+\begin{document}
+\setcounter{section}{5}
+\setcounter{subsection}{2}
+{\small\noindent Forey--Yin, \emph{Bounded integral and motivic Milnor fiber}.
+Section 5 review: R092--R093.
+Approved context is black; proposed manuscript text is orange.}
+\medskip
+
+\noindent\emph{Proof of Theorem 5.17 (continued).}
+The total spaces are represented by
+$\bm W=(W,q)$ and $\bm W'=(W',q')$ over the mixed RV base
+$S$. All base coordinates, finite tags and finite-to-one
+label maps are retained.
+The preceding parameter-control argument gives a finite
+partition on which Gamma families depend only on base
+values.
+
+{\color{ProposalOrange}
+\medskip
+\noindent\emph{Support notation and further refinements.}
+For a definable family of value supports put
+\[
+ D_{\gamma,i}=\{\delta:(\gamma,\delta)\in D_i\},\qquad
+ D_i=\{(\gamma,\delta):\gamma\in E,\ \delta\in D_{\gamma,i}\}.
+\]
+For the primed family the corresponding notation is
+$D'_{\gamma,i'}$ and $(D'_{i'})_{i'}$.
+Each function $\gamma\mapsto\chi_b(D_{\gamma,i})$ has
+finite range and definable level sets.
+A common finite partition of $E$ makes all these functions,
+and their primed counterparts, constant. On one such piece,
+write the constants as $e_i,e'_{i'}$; Gamma Fubini gives
+\[
+ \chi_b(D_i)=e_i\chi_b(E),\qquad
+ \chi_b(D'_{i'})=e'_{i'}\chi_b(E).
+\]
+Whenever the source or the base is restricted further,
+we refine again by the level sets of the resulting fiber
+Euler functions.
+
+\medskip
+\noindent\emph{A relative Gamma-push calculation.}
+We use the following calculation over the original ground
+in place of choosing a common fixed-value residue fiber
+of the base.
+Let $\bm X=(X,p)\in\RV[k]$, let
+$J\subseteq X\times\Gamma^r$ be definable, and put
+\[
+ J_x=\{\xi:(x,\xi)\in J\},\qquad
+ Y=\{(x,z):x\in X,\ \vrv(z)\in J_x\}.
+\]
+Give $Y$ the finite-to-one label $(p(x),z)$, of degree
+$k+r$. Set $g=[\Gm]$ in $R(\Sbase)$.
+The integer function $c(x)=\chi_b(J_x)$ has finite range
+and definable level sets $X_e=\{x:c(x)=e\}$, and
+\begin{equation}\label{relative:Gamma:push}
+ \mathbb E_{\mathrm b}^{\Sbase}([Y])
+       =g^r\sum_e e\,
+               \mathbb E_{\mathrm b}^{\Sbase}([X_e]).
+\end{equation}
+The sum is finite. All classes in this formula use the
+ungraded bounded retraction; the specified RV labels are
+retained before that evaluation.
+Two finite-to-one labels on the same RV set give the same
+bounded value: pad them with constant-one coordinates to
+a common degree. The underlying identity is then an RV
+isomorphism. Each padding multiplies by the degree-one
+point class, whose bounded value is $1$.
+
+Here is a proof. First work on fixed zero-coordinate
+strata, retaining the finite tags.
+Apply the preceding parameter-control argument to the
+Gamma fibers $J_x$, treating $x$ as the RV parameter.
+After a finite partition of $X$, the set $J_x$ depends only
+on $\vrv(x)$ through a fixed ground-definable Gamma
+family. Ordinary Gamma fiber integration now proves
+finite-range constructibility of $c$.
+Intersect this partition with its level sets.
+
+Apply Lemma 5.12 on each resulting part and write one chart
+as
+\[
+ h_M(X_0)=V\times I^\sharp,\qquad
+ \vrv(V)=\{\beta\},\qquad I\subseteq\Gamma^\ell.
+\]
+Here $\ell$ denotes the number of free RV coordinates,
+rather than the dimension of the Gamma set $I$.
+Because $M$ is integral unimodular, the original values
+are $M^{-1}(\beta,\eta)$ when $\eta=\vrv(w)$.
+The corresponding part of $Y$ therefore has the chart
+\[
+ V\times K^\sharp,\qquad
+ K=\{(\eta,\xi):\eta\in I,\
+            \xi\in J_{M^{-1}(\beta,\eta)}\}.
+\]
+The subscript on $J$ here denotes the value-parametrized
+Gamma family on this selected part.
+If $c=e$ there, Gamma Fubini gives
+$\chi_b(K)=e\chi_b(I)$.
+The monomial evaluation of the bounded retraction is
+\[
+ \mathbb E_{\mathrm b}([Y_0])
+      =[V]\,g^{\ell+r}\chi_b(K)
+      =g^r e\,[V]\,g^\ell\chi_b(I)
+      =g^r e\,\mathbb E_{\mathrm b}([X_0]).
+\]
+The coordinate change on $Y_0$ is $h_M$ on $x$ and the
+identity on $z$, so it preserves the finite labels by
+transport. Summing the finitely many parts proves
+(\ref{relative:Gamma:push}), entirely over the original
+ground.
+
+\medskip
+\noindent\emph{Keep the residue families over their RV base.}
+Once the finite monomial witness packages have been
+descended and prepared over $S$, write the resulting
+fiber charts as
+\[
+ h_{M_i}(U_{\tau,i})
+      =V_{i,\tau}\times I_{i,\tau}^{\sharp},
+ \qquad \tau\in S.
+\]
+The matrices, arities, finite tags, label maps and graphs
+are part of these packages.
+After the preceding parameter control and a finite common
+partition of $S$, the numbers
+$\chi_b(I_{i,\tau})=e_i$ are constant on a selected base
+piece; do the same for the primed family.
+The affine map
+$\eta\mapsto M_i^{-1}(\beta_{i,\tau},\eta)$ identifies
+this free support with the original value piece, so their
+bounded Euler characteristics agree.
+Retain every source chart on that piece. A chart may have
+empty fibers, and its projection need not equal the
+projections of other charts.
+
+Put
+\[
+ \mathcal V_i=\{(\tau,v):\tau\in S,\ v\in V_{i,\tau}\}.
+\]
+This is an RV object with a chosen finite-to-one label;
+it need not be a RES object over the ground.
+Apply (\ref{relative:Gamma:push}) with
+$X=\mathcal V_i$ and Gamma fiber $I_{i,\tau}$.
+The maps $(\tau,u)\mapsto(\tau,h_{M_i}(u))$
+retain the RV base coordinate. Thus
+\begin{equation}\label{fubini:family:coefficients}
+ \mathbb E_{\mathrm b}([\bm W])
+   =\sum_i e_i g^{\ell_i}
+               \mathbb E_{\mathrm b}([\mathcal V_i]),
+ \qquad
+ \mathbb E_{\mathrm b}([\bm W'])
+   =\sum_{i'} e'_{i'}g^{\ell'_{i'}}
+               \mathbb E_{\mathrm b}([\mathcal V'_{i'}]).
+\end{equation}
+The product labels in the calculation can be replaced by
+the transported labels of $\bm W,\bm W'$: the monomial
+evaluation in the ungraded bounded target is independent
+of that label choice, as in the earlier evaluation formula.
+
+There is a useful special case for the later RES relations.
+For any definable RV family
+$\mathcal Z=\{(\tau,z):z\in Z_\tau\}$ and definable
+$\alpha:S\to\Gamma^n$, set
+\[
+ T_{\alpha,\mathcal Z}
+  =\{(\tau,z,u):(\tau,z)\in\mathcal Z,\
+                        \vrv(u)=\alpha(\tau)\}.
+\]
+Its Gamma fibers are singletons, of bounded Euler
+characteristic $1$. Hence
+\begin{equation}\label{fubini:relative:torsor}
+ \mathbb E_{\mathrm b}([T_{\alpha,\mathcal Z}])
+      =g^n\mathbb E_{\mathrm b}([\mathcal Z])
+      =\mathbb E_{\mathrm b}([(\Gm)^n\times\mathcal Z]).
+\end{equation}
+This treats a varying value-torsor relation directly over
+the RV base.
+
+The remaining task is to obtain the finite monomial and
+RES-relation witness packages over this RV base from the
+hypothesis over $\Sbase\langle b\rangle$.
+The calculations above do not assert that descent.
+They show how to use the descended packages: combine
+(\ref{fubini:family:coefficients}) with
+(\ref{fubini:relative:torsor}), additivity and the actual
+bijections in the finite relation witnesses.
+A single finite Boolean partition of the base handles
+both families and all their supports. No selected chart
+is required to project surjectively, and every torus
+factor in these formulas is retained.
+}
+
+\medskip
+{\normalfont\small\color{RefereePurple}
+\noindent\textbf{Referee R092 [Typo; revised] --
+Order of the subscripts.}
+Use $D_{\gamma,i}$ and $D'_{\gamma,i'}$ consistently,
+including in the joint support sets, and use
+$(D'_{i'})_{i'}$.\par
+\medskip
+\noindent\textbf{Referee R093 [Clarification; revised] --
+Explain the common refinement.}
+The common-refinement argument can be justified by
+refining the projected supports, restricting to common
+base pieces and re-establishing the fiber Euler constants.
+Under the revised original-language approach, the
+familywise calculation above supplies a route that
+retains the residue families over the existing RV base.\par}
+\medskip
+{\normalfont\small\color{ProposalOrange}
+\noindent\textbf{Proposed disposition of R092--R093.}
+Correct the support notation and replace the common-twistback
+and weighted fixed-fiber reduction before the congruence test
+by the orange text. The finite witness construction and its
+descent (R094--R095) remain for the next batch, adapted to
+these RV families.}
+\end{document}

@@ -1,0 +1,11 @@
+{
+  "status": "APPROVED_AND_INCORPORATED",
+  "items": [
+    "R092",
+    "R093"
+  ],
+  "working_manuscript_sha256": "47a7a32e773785529903efbb60b0d0f20c87838ba5082b3555a477bc08517bdf",
+  "adopted_fragment": "Section5/reference/section5-approved-R092-R093.tex",
+  "preserved_after": "Congruence test and all subsequent witness material, including R094--R095",
+  "lean_status": "Relative Gamma push approved as manuscript proof; Lean work continues on 5.12"
+}

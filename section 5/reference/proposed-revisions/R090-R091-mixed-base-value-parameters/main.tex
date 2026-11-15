@@ -1,0 +1,289 @@
+\documentclass[12pt]{amsart}
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{dsfont,bm,mathtools}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage[top=2.3cm,bottom=2.3cm,left=2cm,right=2cm]{geometry}
+\usepackage{hyperref}
+\hypersetup{hidelinks}
+\allowdisplaybreaks
+\emergencystretch=1.5em
+\definecolor{ProposalOrange}{RGB}{160,65,0}
+\definecolor{RefereePurple}{RGB}{103,34,147}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lem}[thm]{Lemma}
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{Remark}
+\theoremstyle{definition}
+\newtheorem{nota}[thm]{Notation}
+\definecolor{ResolutionGreen}{RGB}{0,100,55}
+\newcommand{\C}{\mathds{C}}
+\newcommand{\Q}{\mathds{Q}}
+\newcommand{\rv}{\operatorname{rv}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\RV}{\mathrm{RV}}
+\newcommand{\RES}{\mathrm{RES}}
+\newcommand{\VF}{\mathrm{VF}}
+\newcommand{\K}{\mathds{k}}
+\newcommand{\Z}{\mathds{Z}}
+\newcommand{\N}{\mathds{N}}
+\newcommand{\vrv}{\operatorname{vrv}}
+\newcommand{\GL}{\operatorname{GL}}
+\newcommand{\dcl}{\operatorname{dcl}}
+\newcommand{\pr}{\operatorname{pr}}
+\newcommand{\defn}{\mathrm{def}}
+\newcommand{\given}{\,\middle|\,}
+\newcommand{\Sbase}{\mathbb S}
+\newcommand{\RVlang}{\mathcal L_{\mathrm{RV}}}
+\numberwithin{equation}{section}
+\pagestyle{plain}
+
+\newcommand{\A}{\mathds{A}}
+\newcommand{\Gm}{\mathbb G_m}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Kres}{K_0(\RES)}
+\newcommand{\Bangres}{{!K_0(\RES)}}
+\newcommand{\Kraw}{K_0^{\widehat\mu,\mathrm{raw}}(\Var_{\C})}
+\newcommand{\Kmon}{K_0^{\widehat\mu}(\Var_{\C})}
+\newcommand{\E}{\mathbb E_b}
+\newcommand{\Vol}{\operatorname{Vol}}
+\newcommand{\vv}{\operatorname{val}}
+\newcommand{\LiftingTheorem}{the lifting theorem of Section~3}
+
+\theoremstyle{plain}
+\newtheorem*{thm*}{Theorem}
+
+\newcommand{\R}{\mathds R}
+\newcommand{\Sfiber}{\mathbb S_b}
+\newcommand{\Rbase}[1]{{!K_0(\RES_{#1})}}
+\newcommand{\IsVFVG}{(\VF,\Gamma)\text{-generated}}
+\newcommand{\gsk}{K_+}
+\begin{document}
+\setcounter{section}{5}
+\setcounter{subsection}{2}
+\setcounter{thm}{18}
+{\small\noindent Forey--Yin, \emph{Bounded integral and motivic Milnor fiber}.
+Section 5 review: R090--R091.
+Approved context is black; proposed manuscript text is orange.}
+\medskip
+
+\noindent\emph{Proof of Theorem 5.17 (continued).}
+The first compactness step retains the RV representatives,
+their structure maps and finite-fiber bounds, and both actual
+lift-bijection graphs.
+The resulting maps of total families are
+$(b,a)\mapsto(b,H_b(a))$ and $(b,a')\mapsto(b,H'_b(a'))$.
+The base coordinates and all finite RV labels are retained.
+
+{\color{ProposalOrange}
+\medskip
+\noindent\emph{Preparation with the RV coordinates retained.}
+By the standing convention, write
+$B\subseteq\VF^{d_0}\times\RV_\infty^{q_0}$.
+First replace $A,A'$ by the graphs of $f,f'$.
+Their projections back to $A,A'$ are definable bijections,
+and the graphs still belong to $\VF_*$.
+On each compactness piece, write
+$\bm U_b=(U_b,p_b)$ and $\bm U'_b=(U'_b,p'_b)$,
+with fixed label degrees $k,k'$.
+All the RV coordinates of $u\in U_b$, including the finite
+tags, remain part of the representative.
+
+Apply the preceding preparation lemma to the finite list of
+VF polynomials appearing in the defining formulas for $B$,
+the representative sets and their structure-map graphs.
+These polynomials involve the VF base variables and ground
+coefficients; the RV parameters remain free variables.
+Thus preparation can be performed on the VF projection of
+the base. Carry along the original RV coordinates and every
+new RV coordinate introduced by the preparation.
+RV contractibility of the prepared polynomials makes all
+these RV-sorted data depend on the prepared VF base only
+through its RV tuple.
+
+After reparametrizing, and partitioning the zero-coordinate
+strata, write the base as
+\[
+ B^\flat=\{(c,t):\tau=(\rv(c),t)\in S\},\qquad
+ S\subseteq(\RV^\times)^d\times\RV_\infty^q.
+\]
+Here $c$ has $d$ nonzero VF coordinates and $t$ contains
+all the retained RV coordinates; the finite stratum tags
+are retained as well.
+The inverse preparation recovers the original parameter
+$b=b(c,t)$.
+The representatives and label maps are now denoted by
+\[
+ \bm U_\tau=(U_\tau,p_\tau),\qquad
+ p_\tau:U_\tau\longrightarrow(\RV^\times)^k,
+\]
+and similarly for the primed family.
+Using the transported lift bijections, the first total space
+is definably bijective to
+\[
+ Y=\{(c,t,x,u):
+       \tau=(\rv(c),t)\in S,\ u\in U_\tau,\
+       \rv(x)=p_\tau(u)\}.
+\]
+The primed construction is identical.
+These total spaces belong to $\VF_*$: they are obtained by
+the displayed bijections from the original graph families,
+and RV-fiber dimension is invariant under definable
+bijections.
+
+Put $\tau=(s,t)$ and form the RV object
+\[
+ W=\{(\tau,u):\tau\in S,\ u\in U_\tau\},\qquad
+ q(\tau,u)=(s,p_\tau(u)).
+\]
+Its structure map $q$ is finite-to-one.
+Indeed, fix $(s,w)$ and choose any
+$c\in\rv^{-1}(s)$ and $x\in\rv^{-1}(w)$.
+Then $q^{-1}(s,w)$ identifies, by keeping $(t,u)$, with the
+RV fiber of $Y$ at the fixed VF tuple $(c,x)$.
+That fiber is finite because $Y\in\VF_*$.
+The choices of $c,x$ are used only to prove finiteness and
+are not parameters in the definition of $W$ or $q$.
+Thus $\bm W=(W,q)\in\RV[d+k]$.
+
+There is an explicit definable bijection
+\[
+ \mathbb L\bm W\longrightarrow Y,\qquad
+ ((c,x),((s,t),u))\longmapsto(c,t,x,u).
+\]
+Its inverse restores the forced coordinate $s=\rv(c)$.
+Define $\bm W'$ in the same way, of degree $d+k'$.
+Consequently the two global integrals are represented by
+$\bm W,\bm W'$ modulo the lifting congruence.
+The coordinates $t$ remain RV coordinates; they are not
+replaced by VF coordinates or given additional lifts.
+
+This preparation does not descend the fiber RES equality
+from $\Sbase\langle b(c,t)\rangle$ to
+$\Sbase\langle\tau\rangle$.
+That equality is still interpreted over the former base.
+Its descent requires the finite RES-relation witnesses in
+the later argument; once those witnesses have been
+uniformized, their formulas can be included in the same
+finite preparation package.
+
+\medskip
+\noindent\emph{Controlling the value parameters.}
+For the subsequent RV calculations set $U=W$, $U'=W'$,
+\[
+ D=\vrv(U),\qquad D'=\vrv(U'),\qquad E=\vrv(S).
+\]
+Work componentwise on fixed zero-coordinate strata,
+retaining their finite tags.
+For $\tau\in S$, let $D_\tau=\vrv(U_\tau)$,
+where the value map is taken on all remaining nonzero
+coordinates of the underlying representative.
+The label maps are retained separately.
+
+We claim that a finite ground-definable partition
+$S=\coprod_a S_a$ makes $D_\tau$ depend only on
+$\gamma=\vrv(\tau)$ on each $S_a$.
+More precisely, there are ground-definable DOAG sets
+$\mathcal D_a\subseteq\vrv(S_a)\times\Gamma^r$ with
+\[
+ D_\tau=(\mathcal D_a)_{\vrv(\tau)}
+       \qquad(\tau\in S_a).
+\]
+The same partition can be chosen for the primed family.
+
+Here are the parameter details.
+Stable embeddedness of $\Gamma$, followed by compactness,
+first gives finitely many fixed DOAG formulas
+$\Phi_\ell(\delta,z)$ such that every $D_\tau$ has the form
+$\Phi_\ell(\Gamma^r,c)$ for some tuple $c$ in $\Gamma$.
+Partition $S$ according to the first applicable formula.
+For a fixed formula the set
+\[
+ P_\tau=\{c:\ \forall\delta,\
+       (\delta\in D_\tau\ \Longleftrightarrow\
+                    \Phi_\ell(\delta,c))\}
+\]
+is a nonempty definable set in a power of $\Gamma$.
+
+Fix a ground-definable $\epsilon>0$ in $\Gamma$.
+There is a definable selection $c(\tau)\in P_\tau$ using
+only $\tau$ and $\epsilon$.
+For completeness, in one ordered coordinate choose $0$
+when available. Otherwise use the first positive component,
+if one exists, reflecting the negative part if necessary.
+Choose its left endpoint if included, the midpoint for an
+open bounded interval, or its left endpoint plus $\epsilon$
+for an open ray. The component endpoints are definable
+from the set. Apply this rule successively to projections
+and fibers for tuples. O-minimality makes these choices
+uniformly definable. Hence the selection does not retain
+any externally chosen Gamma parameter.
+
+For a nonzero RV tuple $\tau$, RV quantifier elimination
+gives the parameter-control identity
+\[
+ \dcl(\Sbase,\tau)\cap\Gamma
+ =
+ \operatorname{span}_{\Q}
+ \bigl(\dcl(\Sbase)\cap\Gamma,\ \vrv(\tau)\bigr).
+\]
+To see the point, on each leading-term guard the value
+conditions are rational linear conditions in the value
+variables, with constants from the ground and the values
+of RV monomials in $\tau$.
+A uniquely defined Gamma element is a boundary value of
+these conditions, and therefore has the displayed rational
+affine form.
+Apply this to every coordinate of $c(\tau)$.
+
+These rational-affine descriptions cover every ambient
+$\tau$; compactness makes the list finite.
+Refine $S$ by their equality loci and by the earlier formula
+choices. On each resulting piece,
+\[
+ c(\tau)=L_a\vrv(\tau)+\alpha_a,
+ \qquad L_a\text{ a rational matrix},\quad
+ \alpha_a\in(\dcl(\Sbase)\cap\Gamma)^{\dim c}.
+\]
+Consequently one may take
+\[
+ \mathcal D_a=
+ \{(\gamma,\delta):\gamma\in\vrv(S_a),\
+             \Phi_{\ell(a)}(\delta,L_a\gamma+\alpha_a)\}.
+\]
+This is defined over the original ground.
+Intersect the two finite partitions to handle the primed
+family simultaneously.
+On a selected base piece the notation
+$D_{\vrv(\tau)}$, $D'_{\vrv(\tau)}$ is therefore justified.
+The first partition may depend on angular data in $\tau$;
+only after that partition do the value fibers depend on
+$\vrv(\tau)$ alone.
+}
+
+\medskip
+{\normalfont\small\color{RefereePurple}
+\noindent\textbf{Referee R090 [Gap] --
+RV coordinates cannot simply be discarded.}
+Compactness retains the RV parameter. Carry those
+coordinates and the finite-to-one structure maps throughout,
+checking that the total spaces remain objects of the stated
+categories.\par
+\medskip
+\noindent\textbf{Referee R091 [Clarification; revised] --
+Justification of the value-parameter dependence.}
+The finite partition is compatible with parameter control,
+but stable embeddedness alone does not justify it. Use the
+Gamma definable-closure identity and rational-affine
+descriptions to obtain dependence only on the values after
+a finite partition.\par}
+\medskip
+{\normalfont\small\color{ProposalOrange}
+\noindent\textbf{Proposed disposition of R090--R091.}
+Replace the mixed-coordinate reduction and the following
+value-dependence paragraph by the orange text.
+Keep the general mixed base and all RV labels.
+The later compatible monomial refinements and descent of
+RES-relation witnesses remain for their own review batches;
+this passage does not claim those steps are complete.}
+\end{document}

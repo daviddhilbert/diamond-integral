@@ -1,0 +1,18 @@
+{
+  "repository": "https://github.com/deancureton/Puiseux",
+  "commit": "73e78681d7bb78ddb202e29cb92ab3c16b723126",
+  "author": "Dean Cureton",
+  "license": "Apache-2.0",
+  "retrieved": "2026-11-14",
+  "upstream_lean": "4.33.0-rc1",
+  "upstream_mathlib": "e4c91783ca8e6a7c693ae624ade32fd22d4e43c1",
+  "local_lean": "4.35.0",
+  "local_mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+  "adaptations": "Only import/module wrappers changed. Proof bodies unchanged. All four source env checks returned final exit 0 in the pinned local environment. Main IsAlgClosed/IsAlgClosure proofs are actual Newton-Puiseux induction, with no added assumption. Local concrete field bridge pending.",
+  "source_sha256": {
+    "Puiseux/Algebraic.lean": "4f737e8f7f167ef0cd33070e4d8004e7949e1ecb5a10cd54ab1a26815cc73de2",
+    "Puiseux/AlgClosed.lean": "7fc802166bd20524e245743b7dc2f16597f8df30ccfc2e01e146a6cd30841b44",
+    "Puiseux/Basic.lean": "9357159709f219a0cb244cf03fffc2d5dbc824c1b410634fb3f516ea5f3640bb",
+    "Puiseux/HenselSplitting.lean": "8ea7e311ccdc4456f070e8917426d40ce5db8a473c735c4a53285aff5d43f96f"
+  }
+}

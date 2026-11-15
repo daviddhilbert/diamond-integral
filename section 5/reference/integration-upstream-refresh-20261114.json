@@ -1,0 +1,23 @@
+{
+  "checked_date": "2026-11-14",
+  "repository": "daviddhilbert/integration-in-ACVF",
+  "main": {
+    "revision": "7d4acc730496b3bd05a22c268ffd89540ca694f9",
+    "role": "Current installed pin and unmeasured Section 6 exports. Main documentation still records Section 5.8 as an explicit input."
+  },
+  "completed_section5": {
+    "branch": "section-5/contracting-to-rv",
+    "revision": "73aa1e6c9218bcb01dd67e03cfbe3ec9115ac240",
+    "status_url": "https://github.com/daviddhilbert/integration-in-ACVF/blob/73aa1e6c9218bcb01dd67e03cfbe3ec9115ac240/section%205/STATUS.md",
+    "producer": "IntegrationInACVF.Section5.lemma_5_8_finite",
+    "source": "section 5/IntegrationSection5/FiniteRVComparison.lean",
+    "source_blob": "96556754b1c5279ca2ccd9a402957450096d4d5d",
+    "scope": "Actual finite RV-volume categories, arbitrary auxiliary RV arity, original Gamma base; saturation, small original real base, ACVF00, VFGammaGeneratedBase, VFFieldBase and named delta > 1 retained.",
+    "related_producer": "IntegrationInACVF.Section5.lemma_5_5",
+    "verification": "Branch STATUS records a passing 1852-type/allowed-principle audit and complete finite-category numbered targets through 5.8. Actual producer source inspected."
+  },
+  "correction": "The earlier statement that [18] Corollary 5.8 lacks a proof was based on main alone and missed the completed feature branch.",
+  "local_status": "Completed branch fetched; no dependency working source, manifest pin or local Lean theorem changed. The local lifting/kernel input has not yet been replaced by a compiled constructor combining the completed Section 5 source with Section 6 and the local presentations.",
+  "gamma_status": "The separate GammaPiecewiseRationalAffineInput is not discharged by the inspected GammaLinearity or RVLinearity exports: those concern VF-ball maps, while GammaPiecewiseMonotonicity provides monotonicity rather than rational-affine power laws.",
+  "unmeasured_source_7_not_required": true
+}

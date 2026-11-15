@@ -1,0 +1,12 @@
+{
+  "status": "APPROVED_AND_INCORPORATED",
+  "items": [
+    "R084",
+    "R085"
+  ],
+  "working_manuscript_sha256": "158d50a0e1b41d11ece67aff068f59b2a0b886c15456c945c3a0f0483b52e329",
+  "adopted_fragment": "Section5/reference/section5-approved-R084-R085.tex",
+  "preserved_after": "Original polyhedral remark preceding R086 and all later text",
+  "scope": "Inflated-family Fubini, with torus factor retained",
+  "lean_status": "No new Section 5 Lean declaration claimed"
+}

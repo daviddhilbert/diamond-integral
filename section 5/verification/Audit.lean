@@ -1,0 +1,7184 @@
+import «section 5».Section
+set_option pp.universes true
+#print DiamondIntegral.Section5.rectangleValueCell
+#print DiamondIntegral.Section5.rectangleResidueCell
+#print DiamondIntegral.Section5.rectangleGammaCell
+#print DiamondIntegral.Section5.ValueInducedChartPiece
+#print DiamondIntegral.Section5.groundSupportPattern
+#print DiamondIntegral.Section5.groundResiduePattern
+#print DiamondIntegral.Section5.groundMixedActiveMap
+#print DiamondIntegral.Section5.groundMixedValueMap
+#print DiamondIntegral.Section5.groundValuePattern
+#print DiamondIntegral.Section5.groundPatternGamma
+#print DiamondIntegral.Section5.groundRVValueImage
+#print DiamondIntegral.Section5.GroundMonomialPiece
+#print DiamondIntegral.Section5.GroundMonomialPiece.rowOrder
+#print DiamondIntegral.Section5.GroundMonomialPiece.orderedBasis
+#print DiamondIntegral.Section5.GroundMonomialPiece.matrix
+#print DiamondIntegral.Section5.GroundMonomialPiece.blockSplit
+#print DiamondIntegral.Section5.kummerRatio
+#print DiamondIntegral.Section5.kummerRootRatio
+#print DiamondIntegral.Section5.kummerCharacter
+#print DiamondIntegral.Section5.finiteKummerEquiv
+#print DiamondIntegral.Section5.finiteKummerAutomorphism
+#print DiamondIntegral.Section5.laurentExponentMap
+#print DiamondIntegral.Section5.laurentScale
+#print DiamondIntegral.Section5.laurentResiduePart
+#print DiamondIntegral.Section5.laurentGrouped
+#print DiamondIntegral.Section5.laurentGroupingEquiv
+#print DiamondIntegral.Section5.laurentPowerSubfield
+#print DiamondIntegral.Section5.laurentScaleEquiv
+#print DiamondIntegral.Section5.laurentPowerCoordinates
+#print DiamondIntegral.Section5.laurentPowerBasis
+#print DiamondIntegral.Section5.laurentBaseUniformizer
+#print DiamondIntegral.Section5.laurentBaseConstant
+#print DiamondIntegral.Section5.laurentKummerEquiv
+#print DiamondIntegral.Section5.complexLaurentKummerEquiv
+#print DiamondIntegral.Section5.hahnCharacterTwist
+#print DiamondIntegral.Section5.hahnCharacterEquiv
+#print DiamondIntegral.Section5.rationalExponentMap
+#print DiamondIntegral.Section5.laurentToRational
+#print DiamondIntegral.Section5.rationalLaurentPart
+#print DiamondIntegral.Section5.puiseuxSubfield
+#print DiamondIntegral.Section5.PuiseuxSeries
+#print DiamondIntegral.Section5.compatibleRootSubgroup
+#print DiamondIntegral.Section5.CompatibleRoots
+#print DiamondIntegral.Section5.compatibleRootValue
+#print DiamondIntegral.Section5.compatibleRootCharacter
+#print DiamondIntegral.Section5.laurentToPuiseux
+#print DiamondIntegral.Section5.puiseuxBaseSubfield
+#print DiamondIntegral.Section5.puiseuxCharacterEquiv
+#print DiamondIntegral.Section5.puiseuxRootSystemAction
+#print DiamondIntegral.Section5.puiseuxRoot
+#print DiamondIntegral.Section5.puiseuxConstant
+#print DiamondIntegral.Section5.puiseuxBaseUniformizer
+#print DiamondIntegral.Section5.puiseuxBaseConstant
+#print DiamondIntegral.Section5.puiseuxRootSystemHom
+#print DiamondIntegral.Section5.puiseuxRootUnityEquiv
+#print DiamondIntegral.Section5.puiseuxAutomorphismRoot
+#print DiamondIntegral.Section5.puiseuxAutomorphismSystem
+#print DiamondIntegral.Section5.puiseuxGaloisEquiv
+#print DiamondIntegral.Section5.complexPuiseuxGaloisEquiv
+#print DiamondIntegral.Section5.rationalCharacterSystem
+#print DiamondIntegral.Section5.valuedRVUnitEquiv
+#print DiamondIntegral.Section5.valuedRVEquiv
+#print DiamondIntegral.Section5.puiseuxValuation
+#print DiamondIntegral.Section5.puiseuxUnitLeadingTerm
+#print DiamondIntegral.Section5.puiseuxMonomial
+#print DiamondIntegral.Section5.puiseuxMonomialUnit
+#print DiamondIntegral.Section5.puiseuxRVUnitEquiv
+#print DiamondIntegral.Section5.RationalRVUnits
+#print DiamondIntegral.Section5.rationalRVCharacter
+#print DiamondIntegral.Section5.puiseuxRVAction
+#print DiamondIntegral.Section5.puiseuxRVBaseAutomorphisms
+#print DiamondIntegral.Section5.puiseuxRVActionHom
+#print DiamondIntegral.Section5.puiseuxRVGaloisEquiv
+#print DiamondIntegral.Section5.puiseuxBaseRVMap
+#print DiamondIntegral.Section5.originalValuedModelAut
+#print DiamondIntegral.Section5.complexPuiseuxRVGaloisEquiv
+#print DiamondIntegral.Section5.PuiseuxModelPresentation
+#print DiamondIntegral.Section5.puiseuxModelFieldAction
+#print DiamondIntegral.Section5.puiseuxOriginalModelAction
+#print DiamondIntegral.Section5.PuiseuxOriginal.RV
+#print DiamondIntegral.Section5.PuiseuxOriginal.Carrier
+#print DiamondIntegral.Section5.PuiseuxOriginal.rvNormalEquiv
+#print DiamondIntegral.Section5.PuiseuxOriginal.rvOfField
+#print DiamondIntegral.Section5.PuiseuxOriginal.characterEquiv
+#print DiamondIntegral.Section5.PuiseuxOriginal.rvAction
+#print DiamondIntegral.Section5.PuiseuxOriginal.rvMul
+#print DiamondIntegral.Section5.PuiseuxOriginal.rvInv
+#print DiamondIntegral.Section5.PuiseuxOriginal.value
+#print DiamondIntegral.Section5.PuiseuxOriginal.inResidue
+#print DiamondIntegral.Section5.PuiseuxOriginal.residue
+#print DiamondIntegral.Section5.PuiseuxOriginal.residueLift
+#print DiamondIntegral.Section5.PuiseuxOriginal.kAdd
+#print DiamondIntegral.Section5.PuiseuxOriginal.kNeg
+#print DiamondIntegral.Section5.PuiseuxOriginal.vfPart
+#print DiamondIntegral.Section5.PuiseuxOriginal.rvPart
+#print DiamondIntegral.Section5.PuiseuxOriginal.inVF
+#print DiamondIntegral.Section5.PuiseuxOriginal.function
+#print DiamondIntegral.Section5.PuiseuxOriginal.relation
+#print DiamondIntegral.Section5.PuiseuxOriginal.interpret
+#print DiamondIntegral.Section5.PuiseuxOriginal.carrierAction
+#print DiamondIntegral.Section5.PuiseuxOriginal.languageAction
+#print DiamondIntegral.Section5.PuiseuxOriginal.canonicalInterpret
+#print DiamondIntegral.Section5.PuiseuxOriginal.canonicalLanguageAction
+#print DiamondIntegral.Section5.PuiseuxOriginal.baseCarrier
+#print DiamondIntegral.Section5.PuiseuxOriginal.ActualRVUnits
+#print DiamondIntegral.Section5.PuiseuxOriginal.quotientRVAction
+#print DiamondIntegral.Section5.PuiseuxOriginal.PreservesRVFormulas
+#print DiamondIntegral.Section5.PuiseuxOriginal.inducedRVAutSubgroup
+#print DiamondIntegral.Section5.PuiseuxOriginal.inducedRVBaseEquiv
+#print DiamondIntegral.Section5.PuiseuxOriginal.puiseuxOriginalRVGaloisEquiv
+#print DiamondIntegral.Section5.PuiseuxOriginal.kummerOriginalRVEquiv
+#print DiamondIntegral.Section5.PuiseuxOriginal.remark_5_13
+#print DiamondIntegral.Section5.PuiseuxOriginal.complexVarietyVolume_discharged
+#print DiamondIntegral.Section5.section5BoundedVFIntegral
+#print DiamondIntegral.Section5.section5GeometricVFIntegral
+#print DiamondIntegral.Section5.completedGroundTaggedFieldLiftInputs
+#print DiamondIntegral.Section5.completed18OriginalLiftInput
+#print DiamondIntegral.Section5.completed18GroundLiftInput
+#print DiamondIntegral.Section5.completed18NativeVFForgetInvariant
+#print DiamondIntegral.Section5.completed18NativeVFForget
+#print DiamondIntegral.Section5.completed18LocalLift
+#print DiamondIntegral.Section5.completed18OneGroundBijection
+#print DiamondIntegral.Section5.completed18VFClass
+#print DiamondIntegral.Section5.nativeVFPositiveGroundInvariant
+#print DiamondIntegral.Section5.nativeVFPositiveGround
+#print DiamondIntegral.Section5.groundVFNativeInvariant
+#print DiamondIntegral.Section5.groundVFNativePositive
+#print DiamondIntegral.Section5.completed18VFPositiveEquiv
+#print DiamondIntegral.Section5.completed18RVDirectSumAddEquiv
+#print DiamondIntegral.Section5.completed18RVDirectSumEquiv
+#print DiamondIntegral.Section5.completed18RVPositiveEquiv
+#print DiamondIntegral.Section5.groundMixed_gamma_iso
+#print DiamondIntegral.Section5.groundVFNativeObject
+#print DiamondIntegral.Section5.nativeVFGroundObject
+#print DiamondIntegral.Section5.groundVFObjectRoundTrip
+#print DiamondIntegral.Section5.nativeVFObjectRoundTrip
+#print DiamondIntegral.Section5.completed18RVClassAddEquiv
+#print DiamondIntegral.Section5.groundRVClassNative
+#print DiamondIntegral.Section5.nativeRVClassRepresentative
+#print DiamondIntegral.Section5.nativeRVClassGround
+#print DiamondIntegral.Section5.completed18RVClassEquiv
+#print DiamondIntegral.Section5.groundRVAtDomainEquiv
+#print DiamondIntegral.Section5.groundRVAtIso
+#print DiamondIntegral.Section5.nativeRVGroundDomainEquiv
+#print DiamondIntegral.Section5.nativeRVGroundIso
+#print DiamondIntegral.Section5.groundRVAtToNativeIso
+#print DiamondIntegral.Section5.groundRVObjectRoundTrip
+#print DiamondIntegral.Section5.nativeRVObjectRoundTrip
+#print DiamondIntegral.Section5.groundRVMapRawGraph
+#print DiamondIntegral.Section5.groundRVMapOfRawGraph
+#print DiamondIntegral.Section5.fullWeightIsoAtOfEquiv
+#print DiamondIntegral.Section5.nativeRVRawVolume
+#print DiamondIntegral.Section5.nativeRVGroundDomain
+#print DiamondIntegral.Section5.nativeRVGroundVolume
+#print DiamondIntegral.Section5.nativeRVGroundObject
+#print DiamondIntegral.Section5.groundRVPresentation
+#print DiamondIntegral.Section5.groundRVAt
+#print DiamondIntegral.Section5.groundRVPairIndex
+#print DiamondIntegral.Section5.nativeFiniteRVBaseTransfer
+#print DiamondIntegral.Section5.nativeFiniteRVIsoBaseTransfer
+#print DiamondIntegral.Section5.gammaIsoMapUniv
+#print DiamondIntegral.Section5.native_contraction_comparison
+#print DiamondIntegral.Section5.RelativeCor58Data
+#print DiamondIntegral.Section5.rvParameterInsertMap
+#print DiamondIntegral.Section5.rvParameterAttachedSet
+#print DiamondIntegral.Section5.rvParameterAttachEquiv
+#print DiamondIntegral.Section5.rvParameterAttachIso
+#print DiamondIntegral.Section5.rvParameterFamilyIndex
+#print DiamondIntegral.Section5.BaseDefinableIn
+#print DiamondIntegral.Section5.positionedCells_base_transfer
+#print DiamondIntegral.Section5.cellRestrictionTarget
+#print DiamondIntegral.Section5.cellRestrictionEquiv
+#print DiamondIntegral.Section5.restrictPositionedCells
+#print DiamondIntegral.Section5.GammaQE.dnfMonomials
+#print DiamondIntegral.Section5.GammaQE.literalMonomials
+#print DiamondIntegral.Section5.GammaQE.ValueComparisonsPreserved
+#print DiamondIntegral.Section5.GammaQE.SlopesSeparated
+#print DiamondIntegral.Section5.GammaQE.mapRVVariables
+#print DiamondIntegral.Section5.GammaQE.mapRVAtomVariables
+#print DiamondIntegral.Section5.GammaQE.mapRVBooleanVariables
+#print DiamondIntegral.Section5.GammaQE.perturbRV
+#print DiamondIntegral.Section5.GammaQE.flatCoefficient
+#print DiamondIntegral.Section5.GammaQE.flatValue
+#print DiamondIntegral.Section5.GammaQE.rvGamma
+#print DiamondIntegral.Section5.PuiseuxOriginal.complexVarietyVolume
+#print DiamondIntegral.Section5.PuiseuxOriginal.varietyNativeSourceFibreBijection
+#print DiamondIntegral.Section5.PuiseuxOriginal.varietyNativeTargetFibreBijection
+#print DiamondIntegral.Section5.nativeTargetChangedFibreBijection
+#print DiamondIntegral.Section5.PuiseuxOriginal.varietyNativeChartChange
+#print DiamondIntegral.Section5.nativeSourceFibreMap
+#print DiamondIntegral.Section5.nativeSourceFibreBijection
+#print DiamondIntegral.Section5.PuiseuxOriginal.varietyNativeFibrePointMap
+#print DiamondIntegral.Section5.PuiseuxOriginal.varietyNativeFibrePointEquiv
+#print DiamondIntegral.Section5.PuiseuxOriginal.varietyNativeMorphism
+#print DiamondIntegral.Section5.PuiseuxOriginal.varietyNativeInclusion
+#print DiamondIntegral.Section5.EquivariantVariety.AffineMorphismRefinement
+#print DiamondIntegral.Section5.EquivariantVariety.ImmersedPresentation.refine
+#print DiamondIntegral.Section5.EquivariantVariety.ImmersedPresentation.pullback
+#print DiamondIntegral.Section5.PuiseuxOriginal.varietyAtlasCount
+#print DiamondIntegral.Section5.PuiseuxOriginal.varietyAtlasIndex
+#print DiamondIntegral.Section5.PuiseuxOriginal.varietyNativeChart
+#print DiamondIntegral.Section5.PuiseuxOriginal.varietyNativeObject
+#print DiamondIntegral.Section5.PuiseuxOriginal.varietyNativePointEquiv
+#print DiamondIntegral.Section5.ComplexVariety.Morphism.pointMap
+#print DiamondIntegral.Section5.ComplexVariety.Morphism.affineAlgebraMap
+#print DiamondIntegral.Section5.PuiseuxOriginal.nativeGeometricAffineChart
+#print DiamondIntegral.Section5.PuiseuxOriginal.nativeGeometricAffineChartEquiv
+#print DiamondIntegral.Section5.EquivariantVariety.Object.underlyingVariety
+#print DiamondIntegral.Section5.EquivariantVariety.Object.underlyingPointEquiv
+#print DiamondIntegral.Section5.nativeVFFiniteSum
+#print DiamondIntegral.Section5.finiteDependentSumHeadEquiv
+#print DiamondIntegral.Section5.nativeVFFiniteSumEquiv
+#print DiamondIntegral.Section5.nativeVFFiniteSumInclusion
+#print DiamondIntegral.Section5.NativeGroundRVLabels
+#print DiamondIntegral.Section5.nativeVFCoproductLeft
+#print DiamondIntegral.Section5.nativeVFCoproductRight
+#print DiamondIntegral.Section5.nativeVFCoproductSum
+#print DiamondIntegral.Section5.nativeVFCoproductEquiv
+#print DiamondIntegral.Section5.vfAdjoinedMixedFiniteObject
+#print DiamondIntegral.Section5.PuiseuxOriginal.nativeAffineCoordinateEquiv
+#print DiamondIntegral.Section5.PuiseuxOriginal.nativeAffineAlgebraPointEquiv
+#print DiamondIntegral.Section5.PuiseuxOriginal.nativeAffineVarietyPointEquiv
+#print DiamondIntegral.Section5.vfRawMixedParameterLiftInput
+#print DiamondIntegral.Section5.PuiseuxOriginal.ambientPolynomialEquations
+#print DiamondIntegral.Section5.PuiseuxOriginal.nativeAffineVFObject
+#print DiamondIntegral.Section5.universalVFPolynomialMap
+#print DiamondIntegral.Section5.nativeVFPolynomialMap
+#print DiamondIntegral.Section5.ComplexVariety.affineCoordinates
+#print DiamondIntegral.Section5.EquivariantVariety.Object.fieldPoint
+#print DiamondIntegral.Section5.EquivariantVariety.Morphism.fieldPointMap
+#print DiamondIntegral.Section5.EquivariantVariety.ImmersedPresentation.fieldPointPartitionMap
+#print DiamondIntegral.Section5.EquivariantVariety.ImmersedPresentation.fieldPointEquiv
+#print DiamondIntegral.Section5.ComplexVariety.Point
+#print DiamondIntegral.Section5.ComplexVariety.affinePointEquiv
+#print DiamondIntegral.Section5.vfPolynomialRawLocus
+#print DiamondIntegral.Section5.nativeVFPolynomialDomain
+#print DiamondIntegral.Section5.nativeVFPolynomialObject
+#print DiamondIntegral.Section5.ComplexVariety
+#print DiamondIntegral.Section5.ComplexVariety.trivialObject
+#print DiamondIntegral.Section5.ComplexVariety.Morphism
+#print DiamondIntegral.Section5.ComplexVariety.Morphism.trivialMorphism
+#print DiamondIntegral.Section5.vfPolynomialRawCode
+#print DiamondIntegral.Section5.finiteAffinePointEquiv
+#print DiamondIntegral.Section5.FiniteAffineAlgebraPresentation
+#print DiamondIntegral.Section5.affinePointCoordinates
+#print DiamondIntegral.Section5.affinePointCoordinateEquiv
+#print DiamondIntegral.Section5.vfAdjoinedFiniteObject
+#print DiamondIntegral.Section5.PuiseuxOriginal.ambientPuiseuxFieldHom
+#print DiamondIntegral.Section5.PuiseuxOriginal.ambientComplexFieldHom
+#print DiamondIntegral.Section5.elementaryVFMap
+#print DiamondIntegral.Section5.elementaryVFFieldHom
+#print DiamondIntegral.Section5.sortedTransferVFRing
+#print DiamondIntegral.Section5.gammaGroundTransferChart
+#print DiamondIntegral.Section5.rvGroundTransferInvariant
+#print DiamondIntegral.Section5.rvGroundTransferOrdinary
+#print DiamondIntegral.Section5.vfAdjoinedContext
+#print DiamondIntegral.Section5.vfRawParameterBase
+#print DiamondIntegral.Section5.vfRawParameterLiftInput
+#print DiamondIntegral.Section5.vfAdjoinedField
+#print DiamondIntegral.Section5.vfFieldContext
+#print DiamondIntegral.Section5.sortedTransferOriginalLiftInput
+#print DiamondIntegral.Section5.vfFieldGammaMap
+#print DiamondIntegral.Section5.vfFieldGamma
+#print DiamondIntegral.Section5.vfFieldCarrier
+#print DiamondIntegral.Section5.vfFieldSubstructure
+#print DiamondIntegral.Section5.vfFieldSubstructureBase
+#print DiamondIntegral.Section5.vfFieldRVImage
+#print DiamondIntegral.Section5.sortedTransferRVInvariant
+#print DiamondIntegral.Section5.sortedTransferRVPositive
+#print DiamondIntegral.Section5.sortedTransferRVPositiveEquiv
+#print DiamondIntegral.Section5.sortedTransferFiniteVFObject
+#print DiamondIntegral.Section5.sortedTransferVFInvariant
+#print DiamondIntegral.Section5.sortedTransferVFPositive
+#print DiamondIntegral.Section5.sortedTransferVFPositiveEquiv
+#print DiamondIntegral.Section5.sortedTransferRVVolume
+#print DiamondIntegral.Section5.sortedTransferRVObject
+#print DiamondIntegral.Section5.sortedTransferMixedDomain
+#print DiamondIntegral.Section5.sortedTransferMixedBijection
+#print DiamondIntegral.Section5.sortedTransferRVDomain
+#print DiamondIntegral.Section5.sortedTransferRVRawBijection
+#print DiamondIntegral.Section5.sortedTransferRVBijection
+#print DiamondIntegral.Section5.nativeFiniteMixedMapFibre
+#print DiamondIntegral.Section5.OriginalBaseUnmeasuredLiftInput
+#print DiamondIntegral.Section5.originalBaseLiftInputOfContext
+#print DiamondIntegral.Section5.originalBasePositiveIntegral
+#print DiamondIntegral.Section5.originalBaseVFIntegralPositive
+#print DiamondIntegral.Section5.originalBaseVFIntegral
+#print DiamondIntegral.Section5.originalBaseVFBoundedValue
+#print DiamondIntegral.Section5.NativeBoundedWeakVFFibreVanishing
+#print DiamondIntegral.Section5.NativeBoundedWeakVFFibreLiftEquality
+#print DiamondIntegral.Section5.nativeWeakLiftKeyMap
+#print DiamondIntegral.Section5.nativeWeakLiftKeyBijection
+#print DiamondIntegral.Section5.nativePullbackWeakRVObject
+#print DiamondIntegral.Section5.nativePullbackWeakRVObject_lift_bijection
+#print DiamondIntegral.Section5.nativeWeakRVLabelGraph
+#print DiamondIntegral.Section5.NativeWeakRVObject
+#print DiamondIntegral.Section5.nativeWeakRVObjectLift
+#print DiamondIntegral.Section5.NativeVFLiftEqualitySchema.ValidWeak
+#print DiamondIntegral.Section5.nativePreparedRVKeyBijection_weak
+#print DiamondIntegral.Section5.PuiseuxOriginal.ambientBoundedVFVolume
+#print DiamondIntegral.Section5.PuiseuxOriginal.LaurentCoefficientNames
+#print DiamondIntegral.Section5.PuiseuxOriginal.laurentCoefficientEnumeration
+#print DiamondIntegral.Section5.PuiseuxOriginal.coefficientGroundComparison
+#print DiamondIntegral.Section5.PuiseuxOriginal.ambientRealPuiseuxComparison
+#print DiamondIntegral.Section5.PuiseuxOriginal.ambientPuiseuxComparison
+#print DiamondIntegral.Section5.elementaryRESOrdinaryReducedRestriction
+#print DiamondIntegral.Section5.elementaryRESUngradedReduced
+#print DiamondIntegral.Section5.elementaryRESReducedRestriction
+#print DiamondIntegral.Section5.resGroundTransferChart
+#print DiamondIntegral.Section5.resGroundTransferObject
+#print DiamondIntegral.Section5.resGroundTransferIso
+#print DiamondIntegral.Section5.resGroundTransferInvariant
+#print DiamondIntegral.Section5.resGroundTransferOrdinary
+#print DiamondIntegral.Section5.resGroundTransferGamma
+#print DiamondIntegral.Section5.resGroundTransferFibreIso
+#print DiamondIntegral.Section5.resGroundTransferToReduced
+#print DiamondIntegral.Section5.resGroundTransferUngradedReduced
+#print DiamondIntegral.Section5.resGroundTransferReduced
+#print DiamondIntegral.Section5.eliminateRealGammaRES
+#print DiamondIntegral.Section5.elementaryRESChartValue
+#print DiamondIntegral.Section5.elementaryRESRestrictionCutInvariant
+#print DiamondIntegral.Section5.elementaryRESRestrictionInvariant
+#print DiamondIntegral.Section5.elementaryRESOrdinaryRestriction
+#print DiamondIntegral.Section5.elementaryRESUngradedRestriction
+#print DiamondIntegral.Section5.fullRawValueFibre
+#print DiamondIntegral.Section5.elementaryNativeRESValue
+#print DiamondIntegral.Section5.elementaryNativeRVMap
+#print DiamondIntegral.Section5.elementaryNativeRVBijection
+#print DiamondIntegral.Section5.rawRVSetNative
+#print DiamondIntegral.Section5.rawGraphExtension
+#print DiamondIntegral.Section5.joinedToCanonicalIndices
+#print DiamondIntegral.Section5.rawGraphNativeMap
+#print DiamondIntegral.Section5.rawTupleSwap
+#print DiamondIntegral.Section5.RawDefinableGraphMap.inverse
+#print DiamondIntegral.Section5.nativeRawDomainSet
+#print DiamondIntegral.Section5.canonicalToJoinedIndices
+#print DiamondIntegral.Section5.nativeRawTupleMap
+#print DiamondIntegral.Section5.nativeRawGraphMap
+#print DiamondIntegral.Section5.RawDefinableGraphMap
+#print DiamondIntegral.Section5.RawDefinableGraphMap.graph
+#print DiamondIntegral.Section5.RawDefinableGraphMap.restrict
+#print DiamondIntegral.Section5.RawDefinableGraphMap.restriction
+#print DiamondIntegral.Section5.elementaryNativeRawRestriction
+#print DiamondIntegral.Section5.elementaryNativeRVRestriction
+#print DiamondIntegral.Section5.elementaryNativeRESRestriction
+#print DiamondIntegral.Section5.splitTupleFormula
+#print DiamondIntegral.Section5.elementaryRVMap
+#print DiamondIntegral.Section5.elementaryGammaTopMap
+#print DiamondIntegral.Section5.namedFormulaSet
+#print DiamondIntegral.Section5.NamedDefinableSet
+#print DiamondIntegral.Section5.NamedDefinableSet.ofFormula
+#print DiamondIntegral.Section5.elementaryNamedRestriction
+#print DiamondIntegral.Section5.elementaryNamedDefinableEquiv
+#print DiamondIntegral.Section5.namedActualDefinableEquiv
+#print DiamondIntegral.Section5.elementaryActualDefinableEquiv
+#print DiamondIntegral.Section5.PuiseuxOriginal.canonicalModelPresentation_concrete
+#print DiamondIntegral.Section5.PuiseuxOriginal.theta_5_14_concrete
+#print DiamondIntegral.Section5.PuiseuxOriginal.concreteCarrierNormal
+#print DiamondIntegral.Section5.PuiseuxOriginal.concreteLanguageEquiv
+#print DiamondIntegral.Section5.PuiseuxOriginal.v
+#print DiamondIntegral.Section5.PuiseuxOriginal.constantInteger
+#print DiamondIntegral.Section5.PuiseuxOriginal.constantResidue
+#print DiamondIntegral.Section5.PuiseuxOriginal.constantResidueEquiv
+#print DiamondIntegral.Section5.puiseuxNewtonEquiv
+#print DiamondIntegral.Section5.RESFiniteWitness.PrimitivePair.IsFibre
+#print DiamondIntegral.Section5.RESFiniteWitness.fibreTerms
+#print DiamondIntegral.Section5.RESFiniteWitness.underlyingTermsFamily
+#print DiamondIntegral.Section5.RESFiniteWitness.FibreOnlyFamilyWitness
+#print DiamondIntegral.Section5.RESFiniteWitness.LiteralFamilyWitness.fibreOnly
+#print DiamondIntegral.Section5.RESFiniteWitness.familyNativeObject
+#print DiamondIntegral.Section5.RESFiniteWitness.familyUngradedClass
+#print DiamondIntegral.Section5.RESFiniteWitness.reducedPositiveHom
+#print DiamondIntegral.Section5.RESFiniteWitness.nativeRVPositiveUnderlying
+#print DiamondIntegral.Section5.RESFiniteWitness.nativeRESPositiveUnderlying
+#print DiamondIntegral.Section5.RESFiniteWitness.nativeRESGradedUnderlying
+#print DiamondIntegral.Section5.RESFiniteWitness.familyRVSet
+#print DiamondIntegral.Section5.RESFiniteWitness.familyUnderlyingClass
+#print DiamondIntegral.Section5.NativeRVSetMapObject
+#print DiamondIntegral.Section5.nativeRVSetMapIsoOfBijection
+#print DiamondIntegral.Section5.nativeRVBijectionOfSetMapIso
+#print DiamondIntegral.Section5.NativeRVSetMapObject.coprod
+#print DiamondIntegral.Section5.nativeRVSetMapInl
+#print DiamondIntegral.Section5.nativeRVSetMapInr
+#print DiamondIntegral.Section5.nativeRVSetMapDesc
+#print DiamondIntegral.Section5.nativeRVSetMapCoprodIsColimit
+#print DiamondIntegral.Section5.NativeRVSetMapObject.empty
+#print DiamondIntegral.Section5.nativeRVSetMapEmptyHom
+#print DiamondIntegral.Section5.nativeRVSetMapEmptyIsInitial
+#print DiamondIntegral.Section5.NativeRVSetIsoClasses
+#print DiamondIntegral.Section5.nativeRVSetIsoClass
+#print DiamondIntegral.Section5.NativeGeometricVFFibreLiftVanishing
+#print DiamondIntegral.Section5.nativePreparedRVKeyStratumBijection
+#print DiamondIntegral.Section5.nativeRVZeroPatternBijection
+#print DiamondIntegral.Section5.nativeVFBaseStratumSelection
+#print DiamondIntegral.Section5.nativeVFBaseStratumDropBijection
+#print DiamondIntegral.Section5.nativeVFSelectedZeroStratum
+#print DiamondIntegral.Section5.originalConstantProductTotalBijection
+#print DiamondIntegral.Section5.NativeGeometricVFLiftEqualitySchema.RVAgreement
+#print DiamondIntegral.Section5.NativeGeometricVFFibreLiftEquality
+#print DiamondIntegral.Section5.originalPaddedRVRecodeBijection
+#print DiamondIntegral.Section5.NativeGeometricVFLiftEqualitySchema
+#print DiamondIntegral.Section5.NativeGeometricVFLiftEqualitySchema.Valid
+#print DiamondIntegral.Section5.originalPaddedRVDomain
+#print DiamondIntegral.Section5.originalConstantRVDomain
+#print DiamondIntegral.Section5.originalConstantRVRowBijection
+#print DiamondIntegral.Section5.nativeRVObjectMonoReal
+#print DiamondIntegral.Section5.nativeRVObjectMonoReal_product
+#print DiamondIntegral.Section5.nativeRVObjectMonoReal_affine
+#print DiamondIntegral.Section5.nativeRVObjectMonoReal_unit
+#print DiamondIntegral.Section5.NativeBoundedVFFibreLiftVanishing
+#print DiamondIntegral.Section5.nativeVFMapLiftWitnessBijection
+#print DiamondIntegral.Section5.nativeMixedPartialTotal
+#print DiamondIntegral.Section5.nativeMixedPartialTotalMap
+#print DiamondIntegral.Section5.nativeMixedPartialTotalBijection
+#print DiamondIntegral.Section5.nativeSpecialBaseIso
+#print DiamondIntegral.Section5.nativeSpecialBaseBijection
+#print DiamondIntegral.Section5.nativeVFClass
+#print DiamondIntegral.Section5.nativePreparedRVTotalMap
+#print DiamondIntegral.Section5.nativePreparedRVKeyBijection
+#print DiamondIntegral.Section5.nativeRVChartNormalized
+#print DiamondIntegral.Section5.nativeRVPositiveNormalized
+#print DiamondIntegral.Section5.nativeVFChartIntegralPositive
+#print DiamondIntegral.Section5.nativeVFChartIntegral
+#print DiamondIntegral.Section5.nativeVFBoundedValue
+#print DiamondIntegral.Section5.nativeVFGeometricValue
+#print DiamondIntegral.Section5.nativePointChartIso
+#print DiamondIntegral.Section5.nativePositiveChartIso
+#print DiamondIntegral.Section5.preparedRVTotalIndices
+#print DiamondIntegral.Section5.preparedRVFibreLabelIndices
+#print DiamondIntegral.Section5.nativeAffineRVObject
+#print DiamondIntegral.Section5.nativeAffineRVPower
+#print DiamondIntegral.Section5.nativeGroundGeometricRetraction
+#print DiamondIntegral.Section5.nativeFullKeyDropBijection
+#print DiamondIntegral.Section5.nativeRVCoordinateBijection
+#print DiamondIntegral.Section5.nativeRVZeroBlockIndices
+#print DiamondIntegral.Section5.nativeRVZeroBlockMap
+#print DiamondIntegral.Section5.nativeRVZeroBlockBijection
+#print DiamondIntegral.Section5.nativePreparedLiftBaseDomain
+#print DiamondIntegral.Section5.nativePreparedLiftRVPredicate
+#print DiamondIntegral.Section5.nativeVFFillCoordinates
+#print DiamondIntegral.Section5.nativeVFZeroStratumRVObject
+#print DiamondIntegral.Section5.nativeVFZeroStratum_lift_bijection
+#print DiamondIntegral.Section5.preparedFamilyBase
+#print DiamondIntegral.Section5.preparedFamilyOldRV
+#print DiamondIntegral.Section5.preparedFamilyFibreRV
+#print DiamondIntegral.Section5.preparedFamilyFibreVF
+#print DiamondIntegral.Section5.PreparedFamilyRVData
+#print DiamondIntegral.Section5.preparedFamilyRVData
+#print DiamondIntegral.Section5.nativeVFLiftFamily
+#print DiamondIntegral.Section5.originalParameterDomain
+#print DiamondIntegral.Section5.nativePullbackRVLabels
+#print DiamondIntegral.Section5.nativePullbackLiftBijection
+#print DiamondIntegral.Section5.nativePullbackRVObject
+#print DiamondIntegral.Section5.nativePullbackRVObject_lift_bijection
+#print DiamondIntegral.Section5.nativeVFBaseParameterMap
+#print DiamondIntegral.Section5.nativeVFPrepareBaseMap
+#print DiamondIntegral.Section5.nativeVFPrepareBaseBijection
+#print DiamondIntegral.Section5.universalMixedCoordinateMap
+#print DiamondIntegral.Section5.nativeMixedCoordinateMap
+#print DiamondIntegral.Section5.nativeMixedCoordinateBijection
+#print DiamondIntegral.Section5.nativeMixedMapTotal
+#print DiamondIntegral.Section5.nativeMixedMapGraphPacking
+#print DiamondIntegral.Section5.nativeMixedMapTotalBijection
+#print DiamondIntegral.Section5.NativeBoundedVFFibreLiftEquality
+#print DiamondIntegral.Section5.nativeMixedBlockSwap
+#print DiamondIntegral.Section5.nativeMixedMapFibreFormula
+#print DiamondIntegral.Section5.nativeMixedMapFibreAt
+#print DiamondIntegral.Section5.nativeVFZeroPattern
+#print DiamondIntegral.Section5.nativeVFZeroStratum
+#print DiamondIntegral.Section5.nativeVFZeroPatternIndex
+#print DiamondIntegral.Section5.nativeVFZeroStratumDropBijection
+#print DiamondIntegral.Section5.nativeMixedMapGraph
+#print DiamondIntegral.Section5.nativeMixedRVProjection
+#print DiamondIntegral.Section5.nativeMixedFullKeyMap
+#print DiamondIntegral.Section5.nativeRVZeroPattern
+#print DiamondIntegral.Section5.nativeRVZeroPatternBase
+#print DiamondIntegral.Section5.universalAttachSelectedVFKeys
+#print DiamondIntegral.Section5.nativeAttachSelectedVFKeys
+#print DiamondIntegral.Section5.nativeAttachSelectedVFKeysBijection
+#print DiamondIntegral.Section5.universalMixedVFSelection
+#print DiamondIntegral.Section5.nativeVFCoordinateSelection
+#print DiamondIntegral.Section5.nativeDropZeroVFBijection
+#print DiamondIntegral.Section5.nativeMixedPackingBijection
+#print DiamondIntegral.Section5.nativeMixedProductBijection
+#print DiamondIntegral.Section5.nativeGammaPointDomain
+#print DiamondIntegral.Section5.nativeGammaPointBijection
+#print DiamondIntegral.Section5.nativeTotalLabelRawValue
+#print DiamondIntegral.Section5.nativeTotalRVLabelMap
+#print DiamondIntegral.Section5.nativePreparedKeyDomain
+#print DiamondIntegral.Section5.nativePreparedParameterBase
+#print DiamondIntegral.Section5.nativeMixedFamilyTotal
+#print DiamondIntegral.Section5.nativeMixedFamilyTotalBijection
+#print DiamondIntegral.Section5.mixedTotalPermutationFun
+#print DiamondIntegral.Section5.mixedTotalPermutation
+#print DiamondIntegral.Section5.sortedReindexedDomain
+#print DiamondIntegral.Section5.sortedReindexedEquiv
+#print DiamondIntegral.Section5.reindexPairCoordinates
+#print DiamondIntegral.Section5.sortedIsoReindex
+#print DiamondIntegral.Section5.NativeVFLiftEqualitySchema.RVAgreement
+#print DiamondIntegral.Section5.nativeMixedOfRaw
+#print DiamondIntegral.Section5.nativeMixedBijectionOfSortedIso
+#print DiamondIntegral.Section5.NativeVFLiftEqualitySchema
+#print DiamondIntegral.Section5.NativeVFLiftEqualitySchema.Valid
+#print DiamondIntegral.Section5.nativeMixedPointOfCode
+#print DiamondIntegral.Section5.finiteRVLiftCoordinates
+#print DiamondIntegral.Section5.finiteRVSchemaLiftDomain
+#print DiamondIntegral.Section5.nativeMixedPairCodeIndices
+#print DiamondIntegral.Section5.nativeMixedGraph
+#print DiamondIntegral.Section5.nativeMixedSortedIso
+#print DiamondIntegral.Section5.nativeMixedCode
+#print DiamondIntegral.Section5.nativeMixedCodeIndices
+#print DiamondIntegral.Section5.nativeMixedDomain
+#print DiamondIntegral.Section5.nativeMixedDomainEquiv
+#print DiamondIntegral.Section5.nativeRVLabelLift
+#print DiamondIntegral.Section5.nativeRVObjectOfFiniteLift
+#print DiamondIntegral.Section5.nativeRVObjectOfLiftBijection
+#print DiamondIntegral.Section5.nativeFiniteRVSchemaRecode
+#print DiamondIntegral.Section5.nativeRVLabelGraph
+#print DiamondIntegral.Section5.finiteRVSchemaLabelsNonzero
+#print DiamondIntegral.Section5.nativeFiniteRVSchemaValid
+#print DiamondIntegral.Section5.nativeFiniteRVSchemaObject
+#print DiamondIntegral.Section5.finiteRVSchemaDomain
+#print DiamondIntegral.Section5.finiteRVSchemaLabels
+#print DiamondIntegral.Section5.finiteRVSchemaRawValue
+#print DiamondIntegral.Section5.finiteRVSchemaNativeVolume
+#print DiamondIntegral.Section5.finiteRVSchemaNativeObject
+#print DiamondIntegral.Section5.originalWholeCertificates
+#print DiamondIntegral.Section5.originalRVExpressionSumBijection
+#print DiamondIntegral.Section5.RVEvaluationEqualitySchema.domainPredicates
+#print DiamondIntegral.Section5.RVEvaluationEqualitySchema.graphPredicates
+#print DiamondIntegral.Section5.RVEvaluationEqualitySchema.recode
+#print DiamondIntegral.Section5.RVEvaluationEqualitySchema.RowAgreement
+#print DiamondIntegral.Section5.RVEvaluationEqualitySchema
+#print DiamondIntegral.Section5.RVEvaluationEqualitySchema.Valid
+#print DiamondIntegral.Section5.resWholeLeftPolynomial
+#print DiamondIntegral.Section5.resWholeRightPolynomial
+#print DiamondIntegral.Section5.RESWholeRelationCertificate
+#print DiamondIntegral.Section5.RESWholeRelationCertificate.leftExpression
+#print DiamondIntegral.Section5.RESWholeRelationCertificate.rightExpression
+#print DiamondIntegral.Section5.RESWholeRelationCertificate.Valid
+#print DiamondIntegral.Section5.RESWholeRelationCertificate.recode
+#print DiamondIntegral.Section5.RESWholeRelationCertificate.RowAgreement
+#print DiamondIntegral.Section5.RESWholeRelationCertificate.domainPredicates
+#print DiamondIntegral.Section5.RESWholeRelationCertificate.graphPredicates
+#print DiamondIntegral.Section5.RVRectangleDecompositionSchema.positivePolynomial
+#print DiamondIntegral.Section5.RVRectangleDecompositionSchema.negativePolynomial
+#print DiamondIntegral.Section5.RVRectangleDecompositionSchema.resPolynomial
+#print DiamondIntegral.Section5.RVRectanglePieceSchema.resContribution
+#print DiamondIntegral.Section5.RVRectangleDecompositionSchema.positiveExpression
+#print DiamondIntegral.Section5.RVRectangleDecompositionSchema.negativeExpression
+#print DiamondIntegral.Section5.resExpressionFiniteSum
+#print DiamondIntegral.Section5.nativeRVRowValue
+#print DiamondIntegral.Section5.originalRVRowBijection
+#print DiamondIntegral.Section5.resExpressionCopies
+#print DiamondIntegral.Section5.resExpressionTorusTimes
+#print DiamondIntegral.Section5.RESBijectionSchema.actualRowBijection
+#print DiamondIntegral.Section5.relativeRESFormalEvaluator
+#print DiamondIntegral.Section5.nativeRESRowBijection
+#print DiamondIntegral.Section5.relativeRESProductRowBijection
+#print DiamondIntegral.Section5.relativeRVTotalInvariant
+#print DiamondIntegral.Section5.nativeRelativeRVForget
+#print DiamondIntegral.Section5.originalRVRowProductSumBijection
+#print DiamondIntegral.Section5.relativePointProductInvariant
+#print DiamondIntegral.Section5.relativePointProductData
+#print DiamondIntegral.Section5.RelativeRVPositive
+#print DiamondIntegral.Section5.RelativeRVFamilyRing
+#print DiamondIntegral.Section5.relativeRVFamilyClass
+#print DiamondIntegral.Section5.nativeTaggedProductBijection
+#print DiamondIntegral.Section5.RelativeRVFamily.blockProduct
+#print DiamondIntegral.Section5.relativePointwiseIso
+#print DiamondIntegral.Section5.relativePointPresentation
+#print DiamondIntegral.Section5.originalRVRowProductPairBijection
+#print DiamondIntegral.Section5.originalEmptyDomain
+#print DiamondIntegral.Section5.originalRVRowTaggedBijection
+#print DiamondIntegral.Section5.gammaGroundTaggedEmptyRightBijection
+#print DiamondIntegral.Section5.gammaGroundTaggedEmptyLeftBijection
+#print DiamondIntegral.Section5.originalRVLeftTagRowBijection
+#print DiamondIntegral.Section5.originalRVRightTagRowBijection
+#print DiamondIntegral.Section5.nativeGeometricRetraction
+#print DiamondIntegral.Section5.geometricDegreeValue
+#print DiamondIntegral.Section5.RelativeRVFamily
+#print DiamondIntegral.Section5.RelativeRVFamily.total
+#print DiamondIntegral.Section5.RelativeRVFamily.empty
+#print DiamondIntegral.Section5.RelativeRVFamily.one
+#print DiamondIntegral.Section5.RelativeRVFamily.sum
+#print DiamondIntegral.Section5.RelativeRVFamily.product
+#print DiamondIntegral.Section5.RelativeRVBijection
+#print DiamondIntegral.Section5.RelativeRVBijection.id
+#print DiamondIntegral.Section5.RelativeRVBijection.comp
+#print DiamondIntegral.Section5.RelativeRVBijection.symm
+#print DiamondIntegral.Section5.relativeRVFamilyPresentation
+#print DiamondIntegral.Section5.PositiveProductData
+#print DiamondIntegral.Section5.PositiveProductData.leftMultiply
+#print DiamondIntegral.Section5.PositiveProductData.rightInvariant
+#print DiamondIntegral.Section5.PositiveProductData.bilinear
+#print DiamondIntegral.Section5.positiveProductCommSemiring
+#print DiamondIntegral.Section5.positiveProductCompletionClass
+#print DiamondIntegral.Section5.positiveProductAdditiveLift
+#print DiamondIntegral.Section5.originalProductTotalBijection
+#print DiamondIntegral.Section5.rawTupleReindexBijection
+#print DiamondIntegral.Section5.rawGammaTotalPacking
+#print DiamondIntegral.Section5.originalRawGammaTotalBijection
+#print DiamondIntegral.Section5.rawParameterDomainIndex
+#print DiamondIntegral.Section5.rawParameterRelationIndex
+#print DiamondIntegral.Section5.rawParameterProjectionRecode
+#print DiamondIntegral.Section5.originalRVTotalBijection
+#print DiamondIntegral.Section5.originalRawTotalEquiv
+#print DiamondIntegral.Section5.rawEquivalenceBijection
+#print DiamondIntegral.Section5.originalRawGammaFamily
+#print DiamondIntegral.Section5.originalRVTotalFamily
+#print DiamondIntegral.Section5.originalGammaRVRowBijection
+#print DiamondIntegral.Section5.nativeRESObjectOfUnitSet
+#print DiamondIntegral.Section5.nativeRESUnitSetBijection
+#print DiamondIntegral.Section5.originalRVRowProductBijection
+#print DiamondIntegral.Section5.originalRVRowDomain
+#print DiamondIntegral.Section5.OriginalEulerCertificate.predicates
+#print DiamondIntegral.Section5.RVRectanglePieceSchema.domainPredicates
+#print DiamondIntegral.Section5.RVRectangleDecompositionSchema
+#print DiamondIntegral.Section5.RVRectangleDecompositionSchema.Valid
+#print DiamondIntegral.Section5.RVRectangleDecompositionSchema.recode
+#print DiamondIntegral.Section5.RVRectanglePieceSchema
+#print DiamondIntegral.Section5.RVRectanglePieceSchema.target
+#print DiamondIntegral.Section5.RVRectanglePieceSchema.Valid
+#print DiamondIntegral.Section5.RVRectanglePieceSchema.recode
+#print DiamondIntegral.Section5.RVRectanglePieceSchema.RowAgreement
+#print DiamondIntegral.Section5.originalDomainLeftIndex
+#print DiamondIntegral.Section5.originalDomainRightIndex
+#print DiamondIntegral.Section5.originalDomainProduct
+#print DiamondIntegral.Section5.rawGammaFunctionFamily
+#print DiamondIntegral.Section5.RawRVRectangle
+#print DiamondIntegral.Section5.rawGammaLiftPacking
+#print DiamondIntegral.Section5.rawGammaRepresentativeBaseBijection
+#print DiamondIntegral.Section5.rawGammaRepresentativeDomain
+#print DiamondIntegral.Section5.rawGammaRepresentativeBijection
+#print DiamondIntegral.Section5.nativeRawWeightLevel
+#print DiamondIntegral.Section5.nativeRawWeightedValue
+#print DiamondIntegral.Section5.rawRVGammaFibreEulerValue
+#print DiamondIntegral.Section5.rawRVGammaBaseCode
+#print DiamondIntegral.Section5.rawRVGammaFamilyCodeMap
+#print DiamondIntegral.Section5.rawRVGammaFamilyCode
+#print DiamondIntegral.Section5.rawRVGammaLift
+#print DiamondIntegral.Section5.nativeUnitWeightLevel
+#print DiamondIntegral.Section5.nativeUnitWeightedValue
+#print DiamondIntegral.Section5.rvGammaFamilyRestrict
+#print DiamondIntegral.Section5.rvGammaReverseBijection
+#print DiamondIntegral.Section5.OriginalGammaCellTree.family
+#print DiamondIntegral.Section5.RVGammaCellFamily
+#print DiamondIntegral.Section5.unitGammaHeadFamilyMap
+#print DiamondIntegral.Section5.rvGammaHeadFamily
+#print DiamondIntegral.Section5.reverseSuffixPermutation
+#print DiamondIntegral.Section5.rvGammaReverseLift
+#print DiamondIntegral.Section5.originalGammaFamilyCodeDomain
+#print DiamondIntegral.Section5.originalGammaFamilyRealization
+#print DiamondIntegral.Section5.unitTupleReindexMap
+#print DiamondIntegral.Section5.groundUnitTupleReindexMap
+#print DiamondIntegral.Section5.groundUnitTuplePermutationBijection
+#print DiamondIntegral.Section5.unaryGammaFamilyLift
+#print DiamondIntegral.Section5.unitMixedGammaMap
+#print DiamondIntegral.Section5.rvGammaFamilyLift
+#print DiamondIntegral.Section5.generalEndpointTupleMap
+#print DiamondIntegral.Section5.endpointFamilyTupleMap
+#print DiamondIntegral.Section5.endpointConditionSet
+#print DiamondIntegral.Section5.endpointGammaFamily
+#print DiamondIntegral.Section5.groundGammaCylinderLift
+#print DiamondIntegral.Section5.GammaEndpointMonomialPiece
+#print DiamondIntegral.Section5.GroundMonomialPiece.extraGammaSource
+#print DiamondIntegral.Section5.GroundMonomialPiece.extraGammaBijection
+#print DiamondIntegral.Section5.GroundMonomialPiece.extraGammaDomain
+#print DiamondIntegral.Section5.GroundMonomialPiece.extraGammaProductBijection
+#print DiamondIntegral.Section5.GroundMonomialPiece.endpointGammaSupport
+#print DiamondIntegral.Section5.rvGammaFibreEulerValue
+#print DiamondIntegral.Section5.CylinderFibreKind.eulerFactor
+#print DiamondIntegral.Section5.rvGammaFamilySchema
+#print DiamondIntegral.Section5.gammaGroundMapCoordinate
+#print DiamondIntegral.Section5.unitGammaTupleTorsor
+#print DiamondIntegral.Section5.UnitGammaTorsorTower
+#print DiamondIntegral.Section5.unitGammaTorsorTower
+#print DiamondIntegral.Section5.originalGammaSourceValid
+#print DiamondIntegral.Section5.originalGammaSourceRow
+#print DiamondIntegral.Section5.originalGammaRowEulerValue
+#print DiamondIntegral.Section5.OriginalEulerCertificate.ValidFor
+#print DiamondIntegral.Section5.groundGammaFunctionGraphLift_projection
+#print DiamondIntegral.Section5.GammaFunctionMonomialPiece
+#print DiamondIntegral.Section5.GroundMonomialPiece.reconstructedTorsorDomain
+#print DiamondIntegral.Section5.GroundMonomialPiece.reconstructedTorsorProductBijection
+#print DiamondIntegral.Section5.GroundMonomialPiece.torsorCoordinateBijection
+#print DiamondIntegral.Section5.GroundMonomialPiece.reconstructedTorsorSource
+#print DiamondIntegral.Section5.GroundMonomialPiece.reconstructedTorsorBijection
+#print DiamondIntegral.Section5.unitTupleLastCylinder
+#print DiamondIntegral.Section5.GroundMonomialPiece.coordinateMap
+#print DiamondIntegral.Section5.GroundMonomialPiece.coordinateBijection
+#print DiamondIntegral.Section5.GroundMonomialPiece.freeValueReconstruction
+#print DiamondIntegral.Section5.GroundMonomialPiece.reconstructedGammaGraph
+#print DiamondIntegral.Section5.nativeGroundRVEvaluation
+#print DiamondIntegral.Section5.nativeRVObjectOfGammaSet
+#print DiamondIntegral.Section5.nativeRVObjectUnderlyingIso
+#print DiamondIntegral.Section5.nativeRVSetValue
+#print DiamondIntegral.Section5.nativeUnitRVSetValue
+#print DiamondIntegral.Section5.unitGraphInputValueMap
+#print DiamondIntegral.Section5.groundGammaFunctionGraphLift
+#print DiamondIntegral.Section5.ScalarGammaGraph
+#print DiamondIntegral.Section5.unitGammaGraphRow
+#print DiamondIntegral.Section5.ScalarGammaGraphPiece
+#print DiamondIntegral.Section5.scalarGammaGraphPieceOfMonomial
+#print DiamondIntegral.Section5.unitTupleInitMap
+#print DiamondIntegral.Section5.groundUnitTupleInitMap
+#print DiamondIntegral.Section5.presentedRootSchema
+#print DiamondIntegral.Section5.nativeSchemaUnderlyingIso
+#print DiamondIntegral.Section5.NativeRelationListPresentationAt
+#print DiamondIntegral.Section5.NativeRelationFamiliesPresentationAt
+#print DiamondIntegral.Section5.native_coefficient_relation_presentation
+#print DiamondIntegral.Section5.presentedFormalSum
+#print DiamondIntegral.Section5.presentedCoefficientExpression
+#print DiamondIntegral.Section5.presentedProductList
+#print DiamondIntegral.Section5.NativeDomainPresentationAt.retargetNative
+#print DiamondIntegral.Section5.PresentedGradedRESObjectAt
+#print DiamondIntegral.Section5.presentedOldObjects
+#print DiamondIntegral.Section5.presentedDegreeFormal
+#print DiamondIntegral.Section5.NativeRESExpressionPresentationAt
+#print DiamondIntegral.Section5.NativeRESExpressionPresentationAt.empty
+#print DiamondIntegral.Section5.NativeRESExpressionPresentationAt.coprod
+#print DiamondIntegral.Section5.NativeRESExpressionPresentationAt.product
+#print DiamondIntegral.Section5.NativeDomainPresentationAt
+#print DiamondIntegral.Section5.NativeDomainPresentationAt.empty
+#print DiamondIntegral.Section5.NativeDomainPresentationAt.sum
+#print DiamondIntegral.Section5.NativeDomainPresentationAt.product
+#print DiamondIntegral.Section5.NativeDomainPresentationAt.taggedFinFamily
+#print DiamondIntegral.Section5.RESPrimitivePresentationAt
+#print DiamondIntegral.Section5.nativeSchemaPresentation
+#print DiamondIntegral.Section5.nativeRawProductBijection
+#print DiamondIntegral.Section5.nativeSchemaProductBijection
+#print DiamondIntegral.Section5.RESLayoutStabilizationSchema.domainPredicates
+#print DiamondIntegral.Section5.RESLayoutStabilizationSchema.graphPredicates
+#print DiamondIntegral.Section5.gammaGroundBijectionOfCarrierEq
+#print DiamondIntegral.Section5.gammaGroundBijectionOfRawDomainEq
+#print DiamondIntegral.Section5.nativeSchemaSumBijection
+#print DiamondIntegral.Section5.RESLayoutStabilizationSchema.recode
+#print DiamondIntegral.Section5.RESLayoutStabilizationSchema.RowAgreement
+#print DiamondIntegral.Section5.RESLayoutStabilizationSchema
+#print DiamondIntegral.Section5.RESLayoutStabilizationSchema.Valid
+#print DiamondIntegral.Section5.recodeRESCertificate
+#print DiamondIntegral.Section5.RESRelationCertificate
+#print DiamondIntegral.Section5.resCertificateLeftExpression
+#print DiamondIntegral.Section5.resCertificateRightExpression
+#print DiamondIntegral.Section5.RESExpressionRelationSchema.recode
+#print DiamondIntegral.Section5.RESExpressionRelationSchema.RowAgreement
+#print DiamondIntegral.Section5.RESExpressionRelationSchema.domainPredicates
+#print DiamondIntegral.Section5.RESExpressionRelationSchema.graphPredicates
+#print DiamondIntegral.Section5.formalSchemaRecode
+#print DiamondIntegral.Section5.RESExpressionRelationSchema
+#print DiamondIntegral.Section5.RESExpressionRelationSchema.leftExpression
+#print DiamondIntegral.Section5.RESExpressionRelationSchema.rightExpression
+#print DiamondIntegral.Section5.RESExpressionRelationSchema.Valid
+#print DiamondIntegral.Section5.nativeUnderlyingBijection
+#print DiamondIntegral.Section5.RESAtomSchema
+#print DiamondIntegral.Section5.RESExpressionSchema.formalValue
+#print DiamondIntegral.Section5.nativeSchemaEvaluator
+#print DiamondIntegral.Section5.RESStabilizationSchema
+#print DiamondIntegral.Section5.RESStabilizationSchema.sourceExpression
+#print DiamondIntegral.Section5.RESStabilizationSchema.targetExpression
+#print DiamondIntegral.Section5.RESStabilizationSchema.Valid
+#print DiamondIntegral.Section5.resExpressionListSum
+#print DiamondIntegral.Section5.resRelationLeftExpression
+#print DiamondIntegral.Section5.resRelationRightExpression
+#print DiamondIntegral.Section5.resStabilizedExpression
+#print DiamondIntegral.Section5.RESExpressionBijectionSchema
+#print DiamondIntegral.Section5.RESExpressionBijectionSchema.Valid
+#print DiamondIntegral.Section5.RESExpressionBijectionSchema.recode
+#print DiamondIntegral.Section5.restoreRVParameters
+#print DiamondIntegral.Section5.mixedPreparedParameterRecode
+#print DiamondIntegral.Section5.resListExpression
+#print DiamondIntegral.Section5.RESRelationTermSchema.leftExpression
+#print DiamondIntegral.Section5.RESRelationTermSchema.rightExpression
+#print DiamondIntegral.Section5.RESExpressionSchema.recode
+#print DiamondIntegral.Section5.RESExpressionSchema.RowAgreement
+#print DiamondIntegral.Section5.RESExpressionSchema.domainPredicates
+#print DiamondIntegral.Section5.RESPrimitiveSchema.leftExpression
+#print DiamondIntegral.Section5.RESPrimitiveSchema.rightExpression
+#print DiamondIntegral.Section5.carryRVParameterDomain
+#print DiamondIntegral.Section5.uncarryRVParameterDomain
+#print DiamondIntegral.Section5.flattenGammaRelation
+#print DiamondIntegral.Section5.unflattenGammaRelation
+#print DiamondIntegral.Section5.RESSetSchema.empty
+#print DiamondIntegral.Section5.RESExpressionSchema
+#print DiamondIntegral.Section5.RESExpressionSchema.setSchema
+#print DiamondIntegral.Section5.RESExpressionSchema.Valid
+#print DiamondIntegral.Section5.RESExpressionSchema.nativeValue
+#print DiamondIntegral.Section5.nativeRESChartClass
+#print DiamondIntegral.Section5.nativeZeroValue
+#print DiamondIntegral.Section5.nativeOneValue
+#print DiamondIntegral.Section5.valuePatternLeftTag
+#print DiamondIntegral.Section5.valuePatternRightTag
+#print DiamondIntegral.Section5.RESSetSchema.sum
+#print DiamondIntegral.Section5.rawRVLeftTag
+#print DiamondIntegral.Section5.rawRVRightTag
+#print DiamondIntegral.Section5.rvTagLeftIndex
+#print DiamondIntegral.Section5.rvTagRightIndex
+#print DiamondIntegral.Section5.taggedParameterLeftIndex
+#print DiamondIntegral.Section5.taggedParameterRightIndex
+#print DiamondIntegral.Section5.nativeRVTaggedDomain
+#print DiamondIntegral.Section5.RESRelationTermSchema.domainPredicates
+#print DiamondIntegral.Section5.RESRelationTermSchema.graphPredicates
+#print DiamondIntegral.Section5.RESSetSchema.chartIso_of_row_eq
+#print DiamondIntegral.Section5.RESSetSchema.productIso
+#print DiamondIntegral.Section5.productLeftParameterIndex
+#print DiamondIntegral.Section5.productRightParameterIndex
+#print DiamondIntegral.Section5.RESSetSchema.product
+#print DiamondIntegral.Section5.RESRelationTermSchema
+#print DiamondIntegral.Section5.RESRelationTermSchema.Valid
+#print DiamondIntegral.Section5.RESRelationTermSchema.realize
+#print DiamondIntegral.Section5.RESRelationTermSchema.recode
+#print DiamondIntegral.Section5.RESRelationTermSchema.RowAgreement
+#print DiamondIntegral.Section5.RESPrimitiveSchema
+#print DiamondIntegral.Section5.RESPrimitiveSchema.Valid
+#print DiamondIntegral.Section5.RESPrimitiveSchema.realize
+#print DiamondIntegral.Section5.RESPrimitiveSchema.recode
+#print DiamondIntegral.Section5.RESPrimitiveSchema.RowAgreement
+#print DiamondIntegral.Section5.RESPrimitiveSchema.domainPredicates
+#print DiamondIntegral.Section5.RESPrimitiveSchema.graphPredicates
+#print DiamondIntegral.Section5.GammaValueSchema.constant
+#print DiamondIntegral.Section5.nativeTorusSchema
+#print DiamondIntegral.Section5.GammaValueSchema.fibre
+#print DiamondIntegral.Section5.GammaValueSchema.fibreIso
+#print DiamondIntegral.Section5.GammaValueSchema
+#print DiamondIntegral.Section5.GammaValueSchema.resSchema
+#print DiamondIntegral.Section5.GammaValueSchema.Valid
+#print DiamondIntegral.Section5.GammaValueSchema.value
+#print DiamondIntegral.Section5.GammaValueSchema.recode
+#print DiamondIntegral.Section5.OriginalGammaCellTree.domainFormula
+#print DiamondIntegral.Section5.firstCoordinateCurryIndex
+#print DiamondIntegral.Section5.curryFirstGammaDomain
+#print DiamondIntegral.Section5.OriginalSortedPredicate
+#print DiamondIntegral.Section5.RESSetSchema.chart
+#print DiamondIntegral.Section5.RESBijectionSchema.rawEquiv
+#print DiamondIntegral.Section5.RESBijectionSchema.chartIso
+#print DiamondIntegral.Section5.joinedRelationRow
+#print DiamondIntegral.Section5.RESBijectionSchema
+#print DiamondIntegral.Section5.RESBijectionSchema.Valid
+#print DiamondIntegral.Section5.RESBijectionSchema.recode
+#print DiamondIntegral.Section5.RESSetSchema.recode
+#print DiamondIntegral.Section5.RESSetSchema
+#print DiamondIntegral.Section5.RESSetSchema.rowDomain
+#print DiamondIntegral.Section5.RESSetSchema.validity
+#print DiamondIntegral.Section5.RESSetSchema.Valid
+#print DiamondIntegral.Section5.RESSetSchema.object
+#print DiamondIntegral.Section5.valueDistinctFormula
+#print DiamondIntegral.Section5.NativeRVValueSyntax
+#print DiamondIntegral.Section5.nativeRVValueSyntax
+#print DiamondIntegral.Section5.rvValuePatternEqualityFormula
+#print DiamondIntegral.Section5.rvFiniteValueValidityFormula
+#print DiamondIntegral.Section5.nativeRESObjectOfRawSet
+#print DiamondIntegral.Section5.OriginalEulerCertificate.recode
+#print DiamondIntegral.Section5.OriginalEulerCertificate.RowAgreement
+#print DiamondIntegral.Section5.OriginalGammaCellTree.recode
+#print DiamondIntegral.Section5.OriginalGammaCellTree.RowAgreement
+#print DiamondIntegral.Section5.OriginalGammaCellTree.predicates
+#print DiamondIntegral.Section5.CylindricalFormulaTree.RowRelated
+#print DiamondIntegral.Section5.OriginalEulerCertificate
+#print DiamondIntegral.Section5.OriginalEulerCertificate.syntax
+#print DiamondIntegral.Section5.NativeGammaRelationSyntax
+#print DiamondIntegral.Section5.nativeGammaRelationSyntax
+#print DiamondIntegral.Section5.OriginalGammaCellTree
+#print DiamondIntegral.Section5.OriginalGammaCellTree.syntax
+#print DiamondIntegral.Section5.gammaDomainSyntax
+#print DiamondIntegral.Section5.gammaFormulaRepresents
+#print DiamondIntegral.Section5.EulerFormulaCertificate
+#print DiamondIntegral.Section5.EulerFormulaCertificate.eulerValue
+#print DiamondIntegral.Section5.EulerFormulaCertificate.validity
+#print DiamondIntegral.Section5.finitePartitionValidityFormula
+#print DiamondIntegral.Section5.CylindricalFormulaTree.gammaDomain
+#print DiamondIntegral.Section5.CylindricalFormulaTree.gammaDefinable
+#print DiamondIntegral.Section5.CylindricalFormulaTree.rawDefinable
+#print DiamondIntegral.Section5.curryFirstCoordinateFormula
+#print DiamondIntegral.Section5.CylindricalFormulaTree
+#print DiamondIntegral.Section5.CylindricalFormulaTree.domain
+#print DiamondIntegral.Section5.CylindricalFormulaTree.shape
+#print DiamondIntegral.Section5.cylindricalStepValidityFormula
+#print DiamondIntegral.Section5.CylindricalFormulaTree.validity
+#print DiamondIntegral.Section5.tupleProperFormula
+#print DiamondIntegral.Section5.tupleQuotientEqualityFormula
+#print DiamondIntegral.Section5.quotientDomainValidityFormula
+#print DiamondIntegral.Section5.quotientFormulaDomain
+#print DiamondIntegral.Section5.nativeRVEvaluation
+#print DiamondIntegral.Section5.nativeTorusClass
+#print DiamondIntegral.Section5.castRVChart
+#print DiamondIntegral.Section5.castRVTarget
+#print DiamondIntegral.Section5.CylinderFibreKind
+#print DiamondIntegral.Section5.CylinderFibreKind.endpoints
+#print DiamondIntegral.Section5.CylinderFibreKind.condition
+#print DiamondIntegral.Section5.CylinderFibreKind.ordered
+#print DiamondIntegral.Section5.CylinderFibreKind.Describes
+#print DiamondIntegral.Section5.relationalIff
+#print DiamondIntegral.Section5.binaryRelabel
+#print DiamondIntegral.Section5.CylinderFibreKind.conditionFormula
+#print DiamondIntegral.Section5.CylinderFibreKind.orderFormula
+#print DiamondIntegral.Section5.cylindricalFibreValidityFormula
+#print DiamondIntegral.Section5.valueCollisionFormula
+#print DiamondIntegral.Section5.finiteValueValidityFormula
+#print DiamondIntegral.Section5.EquivariantVariety.ModifiedRing
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.geometricLinearActionComparison
+#print DiamondIntegral.Section5.PuiseuxOriginal.theta_5_14
+#print DiamondIntegral.Section5.EquivariantVariety.linearActionIdeal
+#print DiamondIntegral.Section5.linearPolynomialAction
+#print DiamondIntegral.Section5.finiteLinearAffineObject
+#print DiamondIntegral.Section5.diagonalLinearMap
+#print DiamondIntegral.Section5.linearRepresentation
+#print DiamondIntegral.Section5.linearCoordinateSchemeIso
+#print DiamondIntegral.Section5.characterBasisAffineIso
+#print DiamondIntegral.Section5.diagonalLinearEquiv
+#print DiamondIntegral.Section5.diagonalLinearRepresentation
+#print DiamondIntegral.Section5.diagonalFiniteAffineIso
+#print DiamondIntegral.Section5.trivialFiniteAffineIso
+#print DiamondIntegral.Section5.linearPolynomialMap
+#print DiamondIntegral.Section5.linearPolynomialEquiv
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.rawGeometricComparison
+#print DiamondIntegral.Section5.PuiseuxOriginal.rawVarietyComparison
+#print DiamondIntegral.Section5.EquivariantVariety.diagonalInvariant
+#print DiamondIntegral.Section5.EquivariantVariety.toDiagonalRing
+#print DiamondIntegral.Section5.EquivariantVariety.ProductPresentation.fst
+#print DiamondIntegral.Section5.EquivariantVariety.ProductPresentation.snd
+#print DiamondIntegral.Section5.EquivariantVariety.ProductPresentation.morphismOfProjections
+#print DiamondIntegral.Section5.EquivariantVariety.ProductPresentation.mapHom
+#print DiamondIntegral.Section5.EquivariantVariety.ProductPresentation.map
+#print DiamondIntegral.Section5.geometricUnitIso
+#print DiamondIntegral.Section5.geometricPreimage
+#print DiamondIntegral.Section5.diagonalSingletonPresentation
+#print DiamondIntegral.Section5.diagonalIsoOfImmersions
+#print DiamondIntegral.Section5.diagonalIsoOfTupleGraph
+#print DiamondIntegral.Section5.immersionCoordinateGraph
+#print DiamondIntegral.Section5.equivalenceOfGraph
+#print DiamondIntegral.Section5.rationalAffinePairMap
+#print DiamondIntegral.Section5.rationalAffinePair
+#print DiamondIntegral.Section5.DiagonalVarietyPresentation
+#print DiamondIntegral.Section5.DiagonalVarietyPresentation.preimage
+#print DiamondIntegral.Section5.EquivariantVariety.coordinateAlgebra
+#print DiamondIntegral.Section5.EquivariantVariety.coordinateSchemeAction
+#print DiamondIntegral.Section5.EquivariantVariety.coordinateAlgebraAction
+#print DiamondIntegral.Section5.specOverAlgHom
+#print DiamondIntegral.Section5.specOverAutomorphism
+#print DiamondIntegral.Section5.specActionAlgebraAction
+#print DiamondIntegral.Section5.EquivariantVariety.AffineVarietyPresentation
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.spectrumObject
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.immersedObject
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.geometricInvariant
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.toVarietyRing
+#print DiamondIntegral.Section5.PuiseuxOriginal.nativeToVarietyRing
+#print DiamondIntegral.Section5.affineProductLocus
+#print DiamondIntegral.Section5.affineProductImmersedPresentation
+#print DiamondIntegral.Section5.affineImmersedProductLeft
+#print DiamondIntegral.Section5.affineImmersedProductRight
+#print DiamondIntegral.Section5.affineImmersedProductPresentation
+#print DiamondIntegral.Section5.affineImmersedProductMap
+#print DiamondIntegral.Section5.affineImmersedProductObject
+#print DiamondIntegral.Section5.affineImmersedProductInclusion
+#print DiamondIntegral.Section5.reducedPullbackMap
+#print DiamondIntegral.Section5.EquivariantVariety.Morphism.factorThrough
+#print DiamondIntegral.Section5.rationalAffineCoordinateMap
+#print DiamondIntegral.Section5.rationalAffineLeft
+#print DiamondIntegral.Section5.rationalAffineRight
+#print DiamondIntegral.Section5.polynomialTensorFinEquiv
+#print DiamondIntegral.Section5.affineSpaceLeft
+#print DiamondIntegral.Section5.affineSpaceRight
+#print DiamondIntegral.Section5.affineSpaceOrdinaryProductIso
+#print DiamondIntegral.Section5.affineSpaceReducedProductIso
+#print DiamondIntegral.Section5.changeRationalPresentationWeights
+#print DiamondIntegral.Section5.EquivariantVariety.Morphism.id
+#print DiamondIntegral.Section5.EquivariantVariety.Morphism.comp
+#print DiamondIntegral.Section5.EquivariantVariety.Iso.toMorphism
+#print DiamondIntegral.Section5.EquivariantVariety.Iso.refl
+#print DiamondIntegral.Section5.EquivariantVariety.Iso.symm
+#print DiamondIntegral.Section5.EquivariantVariety.Iso.trans
+#print DiamondIntegral.Section5.complexEquivGraph
+#print DiamondIntegral.Section5.complexSpectrumExtension
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.geometricValue
+#print DiamondIntegral.Section5.EquivariantVariety.ImmersedPresentation.changeLocus
+#print DiamondIntegral.Section5.EquivariantGraphDecomposition.sourceLocus
+#print DiamondIntegral.Section5.EquivariantGraphDecomposition.targetLocus
+#print DiamondIntegral.Section5.EquivariantGraphDecomposition.sourceRationalInclusion
+#print DiamondIntegral.Section5.EquivariantGraphDecomposition.targetRationalInclusion
+#print DiamondIntegral.Section5.EquivariantGraphDecomposition.sourceRationalPresentation
+#print DiamondIntegral.Section5.EquivariantGraphDecomposition.targetRationalPresentation
+#print DiamondIntegral.Section5.EquivariantVariety.appendImmersedPresentation
+#print DiamondIntegral.Section5.EquivariantVariety.emptyImmersedPresentation
+#print DiamondIntegral.Section5.rationalAffineObject
+#print DiamondIntegral.Section5.EquivariantVariety.constructibleClass
+#print DiamondIntegral.Section5.EquivariantVariety.singletonImmersedPresentation
+#print DiamondIntegral.Section5.rationalPolynomialHom
+#print DiamondIntegral.Section5.rationalPolynomialEquiv
+#print DiamondIntegral.Section5.rationalPolynomialAction
+#print DiamondIntegral.Section5.EquivariantVariety.commonImmersionObject
+#print DiamondIntegral.Section5.EquivariantVariety.commonImmersionLeft
+#print DiamondIntegral.Section5.EquivariantVariety.commonImmersionRight
+#print DiamondIntegral.Section5.EquivariantVariety.ImmersedPresentation
+#print DiamondIntegral.Section5.EquivariantVariety.ImmersedPresentation.value
+#print DiamondIntegral.Section5.EquivariantVariety.subsetClass
+#print DiamondIntegral.Section5.EquivariantVariety.geometricScissorFunction
+#print DiamondIntegral.Section5.EquivariantVariety.Object.Invariant
+#print DiamondIntegral.Section5.EquivariantVariety.subsetObject
+#print DiamondIntegral.Section5.EquivariantVariety.subsetInclusion
+#print DiamondIntegral.Section5.EquivariantVariety.immersedPresentationIso
+#print DiamondIntegral.Section5.EquivariantVariety.subsetMorphism
+#print DiamondIntegral.Section5.LocallyClosedScissorFunction
+#print DiamondIntegral.Section5.EquivariantVariety.immersedObject
+#print DiamondIntegral.Section5.EquivariantVariety.invariantImmersedObject
+#print DiamondIntegral.Section5.EquivariantVariety.invariantImmersedInclusion
+#print DiamondIntegral.Section5.complexWindingCharacter
+#print DiamondIntegral.Section5.windingRootSystem
+#print DiamondIntegral.Section5.finiteRootProjection
+#print DiamondIntegral.Section5.PuiseuxOriginal.linePoint
+#print DiamondIntegral.Section5.PuiseuxOriginal.lineCoefficient
+#print DiamondIntegral.Section5.PuiseuxOriginal.ValueLine
+#print DiamondIntegral.Section5.PuiseuxOriginal.lineEquiv
+#print DiamondIntegral.Section5.PuiseuxOriginal.weightedAction
+#print DiamondIntegral.Section5.PuiseuxOriginal.finiteFrame
+#print DiamondIntegral.Section5.PuiseuxOriginal.frameChange
+#print DiamondIntegral.Section5.PuiseuxOriginal.KummerRVRoot
+#print DiamondIntegral.Section5.PuiseuxOriginal.rootOfPhase
+#print DiamondIntegral.Section5.PuiseuxOriginal.rootPhase
+#print DiamondIntegral.Section5.PuiseuxOriginal.kummerRootEquiv
+#print DiamondIntegral.Section5.PuiseuxOriginal.frameAtRoot
+#print DiamondIntegral.Section5.PuiseuxOriginal.descendSet
+#print DiamondIntegral.Section5.PuiseuxOriginal.FiniteInvariant
+#print DiamondIntegral.Section5.PuiseuxOriginal.descentEquiv
+#print DiamondIntegral.Section5.PuiseuxOriginal.descendedBijection
+#print DiamondIntegral.Section5.PuiseuxOriginal.descendGraph
+#print DiamondIntegral.Section5.PositiveRelationSum
+#print DiamondIntegral.Section5.OrientedPositivePair
+#print DiamondIntegral.Section5.positiveRelationIdeal
+#print DiamondIntegral.Section5.PuiseuxOriginal.taggedFieldEquiv
+#print DiamondIntegral.Section5.PuiseuxOriginal.canonicalModelPresentation
+#print DiamondIntegral.Section5.PuiseuxOriginal.canonicalModelAction
+#print DiamondIntegral.Section5.PuiseuxOriginal.rvTag
+#print DiamondIntegral.Section5.PuiseuxOriginal.taggedRVEquiv
+#print DiamondIntegral.Section5.PuiseuxOriginal.complexResidue
+#print DiamondIntegral.Section5.PuiseuxOriginal.complexResidueEquiv
+#print DiamondIntegral.Section5.RESFiniteWitness.positiveClass
+#print DiamondIntegral.Section5.RESFiniteWitness.relationPairs
+#print DiamondIntegral.Section5.PuiseuxOriginal.framedRVSet
+#print DiamondIntegral.Section5.PuiseuxOriginal.complexResidueImage
+#print DiamondIntegral.Section5.PuiseuxOriginal.rvUnitTagHom
+#print DiamondIntegral.Section5.PuiseuxOriginal.originalKummerRoots
+#print DiamondIntegral.Section5.PuiseuxOriginal.originalKummerRootMap
+#print DiamondIntegral.Section5.PuiseuxOriginal.originalKummerRootEquiv
+#print DiamondIntegral.Section5.PuiseuxOriginal.descentSource
+#print DiamondIntegral.Section5.PuiseuxOriginal.descentExponents
+#print DiamondIntegral.Section5.PuiseuxOriginal.descentMonomialMap
+#print DiamondIntegral.Section5.PuiseuxOriginal.descendedOriginalSet
+#print DiamondIntegral.Section5.PuiseuxOriginal.HasFrameSupport
+#print DiamondIntegral.Section5.PuiseuxOriginal.rootLevelMap
+#print DiamondIntegral.Section5.PuiseuxOriginal.tupleProductSet
+#print DiamondIntegral.Section5.characterLineIdeal
+#print DiamondIntegral.Section5.directSumCharacterIdeal
+#print DiamondIntegral.Section5.PuiseuxOriginal.sortedRVAction
+#print DiamondIntegral.Section5.PuiseuxOriginal.frameSetEquiv
+#print DiamondIntegral.Section5.PuiseuxOriginal.framedMap
+#print DiamondIntegral.Section5.PuiseuxOriginal.framedBijection
+#print DiamondIntegral.Section5.PuiseuxOriginal.originalGraphRVSet
+#print DiamondIntegral.Section5.PuiseuxOriginal.actualDescendEquiv
+#print DiamondIntegral.Section5.PuiseuxOriginal.actualDescendedBijection
+#print DiamondIntegral.Section5.PuiseuxOriginal.framedEquivGraph
+#print DiamondIntegral.Section5.PuiseuxOriginal.originalDescendedBijection
+#print DiamondIntegral.Section5.PuiseuxOriginal.gammaNormalEquiv
+#print DiamondIntegral.Section5.PuiseuxOriginal.complexZeroPattern
+#print DiamondIntegral.Section5.PuiseuxOriginal.originalValuePattern
+#print DiamondIntegral.Section5.PuiseuxOriginal.PatternFraming
+#print DiamondIntegral.Section5.PuiseuxOriginal.patternFraming
+#print DiamondIntegral.Section5.PuiseuxOriginal.patternSet
+#print DiamondIntegral.Section5.PuiseuxOriginal.patternPiece
+#print DiamondIntegral.Section5.EmptyGammaGround.base
+#print DiamondIntegral.Section5.EmptyGammaGround.toReal
+#print DiamondIntegral.Section5.EmptyGammaGround.fromReal
+#print DiamondIntegral.Section5.EmptyGammaGround.mapToReal
+#print DiamondIntegral.Section5.EmptyGammaGround.mapFromReal
+#print DiamondIntegral.Section5.EmptyGammaGround.bijectionToReal
+#print DiamondIntegral.Section5.EmptyGammaGround.bijectionFromReal
+#print DiamondIntegral.Section5.rvObjectOfSet
+#print DiamondIntegral.Section5.resObjectOfSet
+#print DiamondIntegral.Section5.nativeRESObjectOfSet
+#print DiamondIntegral.Section5.originalDomain
+#print DiamondIntegral.Section5.originalDomainBijection
+#print DiamondIntegral.Section5.PuiseuxOriginal.descendedRESObject
+#print DiamondIntegral.Section5.PuiseuxOriginal.rationalAction
+#print DiamondIntegral.Section5.PuiseuxOriginal.RationalInvariant
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.Object
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.Iso
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.unit
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.product
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.cut
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.outside
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.symbol
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.Relation
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.relationIdeal
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.Ring
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.objectClass
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.Invariant
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.lift
+#print DiamondIntegral.Section5.nativeUngradedClass
+#print DiamondIntegral.Section5.nativeUngradedHom
+#print DiamondIntegral.Section5.resSetClass
+#print DiamondIntegral.Section5.PuiseuxOriginal.RationalFraming
+#print DiamondIntegral.Section5.PuiseuxOriginal.rationalFraming
+#print DiamondIntegral.Section5.PuiseuxOriginal.rationalFrame
+#print DiamondIntegral.Section5.PuiseuxOriginal.rationalFramedSet
+#print DiamondIntegral.Section5.PuiseuxOriginal.framedObject
+#print DiamondIntegral.Section5.PuiseuxOriginal.rationalDescendedSet
+#print DiamondIntegral.Section5.PuiseuxOriginal.descendedObject
+#print DiamondIntegral.Section5.PuiseuxOriginal.rationalObjectBijection
+#print DiamondIntegral.Section5.PuiseuxOriginal.diagonalRESClass
+#print DiamondIntegral.Section5.resSetProduct
+#print DiamondIntegral.Section5.PuiseuxOriginal.diagonalRESInvariant
+#print DiamondIntegral.Section5.PuiseuxOriginal.diagonalToRES
+#print DiamondIntegral.Section5.PuiseuxOriginal.RationalFrameSupport
+#print DiamondIntegral.Section5.PuiseuxOriginal.rationalFrameEquiv
+#print DiamondIntegral.Section5.PuiseuxOriginal.rationalFramedBijection
+#print DiamondIntegral.Section5.PuiseuxOriginal.rationalFramedIso
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.ofSet
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.setClass
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.finiteUnion
+#print DiamondIntegral.Section5.PuiseuxOriginal.valuePattern
+#print DiamondIntegral.Section5.PuiseuxOriginal.actualValuePatterns
+#print DiamondIntegral.Section5.PuiseuxOriginal.valuePatternWeights
+#print DiamondIntegral.Section5.PuiseuxOriginal.valuePatternObject
+#print DiamondIntegral.Section5.PuiseuxOriginal.valuePatternClass
+#print DiamondIntegral.Section5.PuiseuxOriginal.forwardRESValue
+#print DiamondIntegral.Section5.PuiseuxOriginal.rvMapSlice
+#print DiamondIntegral.Section5.PuiseuxOriginal.rvSliceMap
+#print DiamondIntegral.Section5.PuiseuxOriginal.rvSliceImage
+#print DiamondIntegral.Section5.PuiseuxOriginal.rvSliceBijection
+#print DiamondIntegral.Section5.PuiseuxOriginal.originalPuiseuxGround
+#print DiamondIntegral.Section5.PuiseuxOriginal.nativeForwardValue
+#print DiamondIntegral.Section5.PuiseuxOriginal.nativeForwardComponent
+#print DiamondIntegral.Section5.PuiseuxOriginal.nativeForwardPositive
+#print DiamondIntegral.Section5.PuiseuxOriginal.nativeForwardPositiveRing
+#print DiamondIntegral.Section5.PuiseuxOriginal.nativeForwardOrdinary
+#print DiamondIntegral.Section5.PuiseuxOriginal.chartToDiagonal
+#print DiamondIntegral.Section5.PuiseuxOriginal.chartUnderlyingBijection
+#print DiamondIntegral.Section5.PuiseuxOriginal.resToDiagonal
+#print DiamondIntegral.Section5.rvFiniteUnion
+#print DiamondIntegral.Section5.PuiseuxOriginal.rawRESComparison
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.zeroSet
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.zeroObject
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.zeroIso
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.affineSpace
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.affineLine
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.puncturedLine
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.lineIdeal
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.torusIdeal
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.directSumLinearIdeal
+#print DiamondIntegral.Section5.PuiseuxOriginal.gammaRational
+#print DiamondIntegral.Section5.PuiseuxOriginal.rationalGamma
+#print DiamondIntegral.Section5.PuiseuxOriginal.originalValueFibre
+#print DiamondIntegral.Section5.PuiseuxOriginal.reducedDiagonalRing
+#print DiamondIntegral.Section5.PuiseuxOriginal.residueCharacterComparison
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.linearActionRelations
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.linearActionIdeal
+#print DiamondIntegral.Section5.PuiseuxOriginal.reducedLinearActionRing
+#print DiamondIntegral.Section5.PuiseuxOriginal.residueLinearActionComparison
+#print DiamondIntegral.Section5.polynomialDiagonalAction
+#print DiamondIntegral.Section5.schemePointAction
+#print DiamondIntegral.Section5.orderedOpenPiece
+#print DiamondIntegral.Section5.polynomialTerm
+#print DiamondIntegral.Section5.ringEmbeddingHom
+#print DiamondIntegral.Section5.elementaryRingHom
+#print DiamondIntegral.Section5.ComplexModels.theory
+#print DiamondIntegral.Section5.ComplexModels.Model
+#print DiamondIntegral.Section5.ComplexModels.acfModel
+#print DiamondIntegral.Section5.ComplexModels.fieldModel
+#print DiamondIntegral.Section5.ComplexModels.fieldCharModel
+#print DiamondIntegral.Section5.ComplexModels.characteristicZero
+#print DiamondIntegral.Section5.ComplexModels.algebraicallyClosed
+#print DiamondIntegral.Section5.ComplexModels.coefficientEmbedding
+#print DiamondIntegral.Section5.ComplexModels.coefficientHom
+#print DiamondIntegral.Section5.ComplexModels.coefficientFormula
+#print DiamondIntegral.Section5.namedPolynomialTerm
+#print DiamondIntegral.Section5.uniqueOutputFormula
+#print DiamondIntegral.Section5.uniqueOutputSentence
+#print DiamondIntegral.Section5.rationalGraphFormula
+#print DiamondIntegral.Section5.scalarCoordinateGraph
+#print DiamondIntegral.Section5.rationalTupleDenominator
+#print DiamondIntegral.Section5.rationalTupleNumerator
+#print DiamondIntegral.Section5.principalRationalAlgebraMap
+#print DiamondIntegral.Section5.principalPointEvaluation
+#print DiamondIntegral.Section5.principalAffineOpenInclusion
+#print DiamondIntegral.Section5.principalRationalSchemeMap
+#print DiamondIntegral.Section5.closedFamilySupport
+#print DiamondIntegral.Section5.closedFamilyDepth
+#print DiamondIntegral.Section5.closedFamilyAtLeast
+#print DiamondIntegral.Section5.closedFamilyStratum
+#print DiamondIntegral.Section5.ClopenGenerated
+#print DiamondIntegral.Section5.complexZariskiTopology
+#print DiamondIntegral.Section5.rationalTupleEquationSet
+#print DiamondIntegral.Section5.complexPolynomialPoint
+#print DiamondIntegral.Section5.principalComplexPoint
+#print DiamondIntegral.Section5.principalRationalTuple
+#print DiamondIntegral.Section5.complexPointQuotientLift
+#print DiamondIntegral.Section5.complexPointInverseEquiv
+#print DiamondIntegral.Section5.invariantIdealQuotientAction
+#print DiamondIntegral.Section5.closedAffineScheme
+#print DiamondIntegral.Section5.closedAffineInclusion
+#print DiamondIntegral.Section5.algebraSpecAction
+#print DiamondIntegral.Section5.complexAlgebraPoint
+#print DiamondIntegral.Section5.basicConstructibleIdeal
+#print DiamondIntegral.Section5.BasicClosedCoordinateRing
+#print DiamondIntegral.Section5.BasicConstructibleCoordinateRing
+#print DiamondIntegral.Section5.basicConstructibleCoordinateMap
+#print DiamondIntegral.Section5.basicConstructibleScheme
+#print DiamondIntegral.Section5.basicConstructibleInclusion
+#print DiamondIntegral.Section5.basicConstructiblePointLift
+#print DiamondIntegral.Section5.basicConstructiblePointEquiv
+#print DiamondIntegral.Section5.complexPointBasicFactor
+#print DiamondIntegral.Section5.unitRationalAlgebraMap
+#print DiamondIntegral.Section5.rationalBasicFactor
+#print DiamondIntegral.Section5.BasicComplexPoints
+#print DiamondIntegral.Section5.BasicRationalPointIso
+#print DiamondIntegral.Section5.BasicRationalPointIso.symm
+#print DiamondIntegral.Section5.BasicRationalPointIso.polynomialMap
+#print DiamondIntegral.Section5.BasicRationalPointIso.algebraMap
+#print DiamondIntegral.Section5.BasicRationalPointIso.algebraEquiv
+#print DiamondIntegral.Section5.BasicRationalPointIso.schemeIso
+#print DiamondIntegral.Section5.complexTupleSpectrumPoint
+#print DiamondIntegral.Section5.polynomialGraphMap
+#print DiamondIntegral.Section5.principalGraphSection
+#print DiamondIntegral.Section5.graphLocalizationLift
+#print DiamondIntegral.Section5.primeSignSupport
+#print DiamondIntegral.Section5.primeSignAtomData
+#print DiamondIntegral.Section5.constructibleTestPolynomials
+#print DiamondIntegral.Section5.rationalSpectrumGraphData
+#print DiamondIntegral.Section5.inverseRationalSpectrumGraphData
+#print DiamondIntegral.Section5.basicGraphLeft
+#print DiamondIntegral.Section5.basicGraphRight
+#print DiamondIntegral.Section5.locallyClosedAffineOpen
+#print DiamondIntegral.Section5.locallyClosedAffineScheme
+#print DiamondIntegral.Section5.locallyClosedAffineInclusion
+#print DiamondIntegral.Section5.invariantOpenMap
+#print DiamondIntegral.Section5.invariantOpenSchemeAction
+#print DiamondIntegral.Section5.reducedImmersionLift
+#print DiamondIntegral.Section5.reducedImmersionIso
+#print DiamondIntegral.Section5.reducedImmersionActionMap
+#print DiamondIntegral.Section5.reducedImmersionSchemeAction
+#print DiamondIntegral.Section5.schemeActionOverBase
+#print DiamondIntegral.Section5.schemeActionHomeomorph
+#print DiamondIntegral.Section5.overlapIdeal
+#print DiamondIntegral.Section5.OverlapAlgebra
+#print DiamondIntegral.Section5.overlapLeft
+#print DiamondIntegral.Section5.overlapRight
+#print DiamondIntegral.Section5.overlapLift
+#print DiamondIntegral.Section5.schemeAffinePullback
+#print DiamondIntegral.Section5.CylindricalShape
+#print DiamondIntegral.Section5.CylindricalShape.eulerValue
+#print DiamondIntegral.Section5.ShapedGammaCell
+#print DiamondIntegral.Section5.witnessRightUnique
+#print DiamondIntegral.Section5.bijectionValidityFormula
+#print DiamondIntegral.Section5.setEqualityValidityFormula
+#print DiamondIntegral.Section5.finiteWitnessValidityFormula
+#print DiamondIntegral.Section5.tupleEqualityFormula
+#print DiamondIntegral.Section5.tupleDistinctFormula
+#print DiamondIntegral.Section5.fibreCollisionFormula
+#print DiamondIntegral.Section5.finiteFibreValidityFormula
+#print DiamondIntegral.Section5.RESFiniteWitness.LiteralFamilyWitness
+#print DiamondIntegral.Section5.RESFiniteWitness.LiteralFamilyWitness.toActual
+#print DiamondIntegral.Section5.RESFiniteWitness.LiteralFamilyWitness.taggedBijection
+#print DiamondIntegral.Section5.RESFiniteWitness.PrimitivePair
+#print DiamondIntegral.Section5.RESFiniteWitness.PrimitivePair.leftObject
+#print DiamondIntegral.Section5.RESFiniteWitness.PrimitivePair.rightObject
+#print DiamondIntegral.Section5.RESFiniteWitness.RelationTerm
+#print DiamondIntegral.Section5.RESFiniteWitness.RelationTerm.leftFamily
+#print DiamondIntegral.Section5.RESFiniteWitness.RelationTerm.rightFamily
+#print DiamondIntegral.Section5.RESFiniteWitness.relationLeftFamily
+#print DiamondIntegral.Section5.RESFiniteWitness.relationRightFamily
+#print DiamondIntegral.Section5.RESFiniteWitness.ActualFamilyWitness.leftTotal
+#print DiamondIntegral.Section5.RESFiniteWitness.ActualFamilyWitness.rightTotal
+#print DiamondIntegral.Section5.RESFiniteWitness.ActualFamilyWitness.degreeCount
+#print DiamondIntegral.Section5.RESFiniteWitness.actualFamilyDegreeDomain
+#print DiamondIntegral.Section5.RESFiniteWitness.ActualFamilyWitness.taggedLeft
+#print DiamondIntegral.Section5.RESFiniteWitness.ActualFamilyWitness.taggedRight
+#print DiamondIntegral.Section5.RESFiniteWitness.ActualFamilyWitness.taggedSourceObject
+#print DiamondIntegral.Section5.RESFiniteWitness.ActualFamilyWitness.taggedTargetObject
+#print DiamondIntegral.Section5.RESFiniteWitness.ActualFamilyWitness.taggedBijection
+#print DiamondIntegral.Section5.gammaGroundCleanRVMap
+#print DiamondIntegral.Section5.nativeRESObjectOfGammaSet
+#print DiamondIntegral.Section5.GammaRVSet
+#print DiamondIntegral.Section5.taggedRVFinFamily
+#print DiamondIntegral.Section5.taggedRVFinFamilyBijection
+#print DiamondIntegral.Section5.GammaRVFiniteValues
+#print DiamondIntegral.Section5.gammaGroundDisjointUnionBijection
+#print DiamondIntegral.Section5.gammaGroundRVTaggedUnion
+#print DiamondIntegral.Section5.gammaGroundRVLeftTagBijection
+#print DiamondIntegral.Section5.gammaGroundRVRightTagBijection
+#print DiamondIntegral.Section5.gammaGroundRVTaggedUnionBijection
+#print DiamondIntegral.Section5.EquivariantGraphDecomposition.sourceVariety
+#print DiamondIntegral.Section5.EquivariantGraphDecomposition.targetVariety
+#print DiamondIntegral.Section5.EquivariantGraphDecomposition.commonAction
+#print DiamondIntegral.Section5.EquivariantGraphDecomposition.commonVariety
+#print DiamondIntegral.Section5.EquivariantGraphDecomposition.commonToSource
+#print DiamondIntegral.Section5.EquivariantGraphDecomposition.commonToTarget
+#print DiamondIntegral.Section5.RESFiniteWitness.stabilizedFamily
+#print DiamondIntegral.Section5.RESFiniteWitness.ActualFamilyWitness
+#print DiamondIntegral.Section5.RESFiniteWitness.GradedObject
+#print DiamondIntegral.Section5.RESFiniteWitness.positiveFamilyClass
+#print DiamondIntegral.Section5.RESFiniteWitness.gradedObjectProduct
+#print DiamondIntegral.Section5.RESFiniteWitness.positiveFamilyProduct
+#print DiamondIntegral.Section5.RESFiniteWitness.positiveFamilyAtDegree
+#print DiamondIntegral.Section5.RESFiniteWitness.positiveFamilyDegrees
+#print DiamondIntegral.Section5.RESFiniteWitness.positiveFamilyBound
+#print DiamondIntegral.Section5.EquivariantVariety.immersedAffineObject
+#print DiamondIntegral.Section5.EquivariantVariety.affineObject
+#print DiamondIntegral.Section5.EquivariantGraphDecomposition
+#print DiamondIntegral.Section5.polynomialDiagonalEquiv
+#print DiamondIntegral.Section5.polynomialDiagonalHom
+#print DiamondIntegral.Section5.finiteDiagonalAlgebraAction
+#print DiamondIntegral.Section5.EquivariantVariety.Object
+#print DiamondIntegral.Section5.EquivariantVariety.Iso
+#print DiamondIntegral.Section5.EquivariantVariety.Morphism
+#print DiamondIntegral.Section5.EquivariantVariety.ProductPresentation
+#print DiamondIntegral.Section5.EquivariantVariety.symbol
+#print DiamondIntegral.Section5.EquivariantVariety.Relation
+#print DiamondIntegral.Section5.EquivariantVariety.relationIdeal
+#print DiamondIntegral.Section5.EquivariantVariety.Ring
+#print DiamondIntegral.Section5.EquivariantVariety.objectClass
+#print DiamondIntegral.Section5.EquivariantVariety.Invariant
+#print DiamondIntegral.Section5.EquivariantVariety.lift
+#print DiamondIntegral.Section5.AffineBranchStratification
+#print DiamondIntegral.Section5.certifiedCommonPiece
+#print DiamondIntegral.Section5.certifiedCommonLeft
+#print DiamondIntegral.Section5.certifiedCommonRight
+#print DiamondIntegral.Section5.affineBranchRelation
+#print DiamondIntegral.Section5.reducedImmersionPointLift
+#print DiamondIntegral.Section5.reducedPullbackActionMap
+#print DiamondIntegral.Section5.reducedPullbackSchemeAction
+#print DiamondIntegral.Section5.AffineBranchCertificate
+#print DiamondIntegral.Section5.AffineBranchCertificate.pullback
+#print DiamondIntegral.Section5.AffineBranchCertificate.symm
+#print DiamondIntegral.Section5.schemeReductionLift
+#print DiamondIntegral.Section5.reducedPullback
+#print DiamondIntegral.Section5.reducedPullbackFst
+#print DiamondIntegral.Section5.reducedPullbackSnd
+#print DiamondIntegral.Section5.reducedPullbackLift
+#print DiamondIntegral.Section5.reducedClosedScheme
+#print DiamondIntegral.Section5.reducedClosedInclusion
+#print DiamondIntegral.Section5.reducedLocallyClosedOpen
+#print DiamondIntegral.Section5.reducedLocallyClosedScheme
+#print DiamondIntegral.Section5.reducedLocallyClosedInclusion
+#print DiamondIntegral.Section5.schemeReduction
+#print DiamondIntegral.Section5.schemeReductionMap
+#print DiamondIntegral.Section5.immersionBranchOpen
+#print DiamondIntegral.Section5.immersionBranchCover
+#print DiamondIntegral.Section5.immersionBranchLift
+#print DiamondIntegral.Section5.GroundTaggedFieldLiftInputs
+#print DiamondIntegral.Section5.GroundTaggedIntrinsicFibreVanishes
+#print PuiseuxSeries.isAlgClosed
+#print PuiseuxSeries.isAlgClosure
+#print PuiseuxSeries.isAlgebraic
+#print LaurentSeries.expand
+#print LaurentSeries.toHahn
+#print PuiseuxSeries.subfield
+#print PuiseuxSeries
+#print PuiseuxSeries.algebraLaurentSeries
+#print DiamondIntegral.Section5.valueInduced_rectangle_identity
+#print DiamondIntegral.Section5.rectangleValueCells_disjoint
+#print DiamondIntegral.Section5.rectangle_active_values_finite
+#print DiamondIntegral.Section5.finite_valueInduced_rectangle_partition
+#print DiamondIntegral.Section5.equiv_image_value_cut
+#print DiamondIntegral.Section5.finite_valueInduced_chart_partition
+#print DiamondIntegral.Section5.groundMixedValueMap_image
+#print DiamondIntegral.Section5.groundValuePattern_carrier
+#print DiamondIntegral.Section5.groundPatternGamma_carrier
+#print DiamondIntegral.Section5.ground_finite_value_rectangle_partition
+#print DiamondIntegral.Section5.ground_mixed_value_normal_form
+#print DiamondIntegral.Section5.groundRVValueImage_carrier
+#print DiamondIntegral.Section5.ground_angular_value_partition
+#print DiamondIntegral.Section5.ground_global_angular_value_partition
+#print DiamondIntegral.Section5.ground_global_monomial_decomposition
+#print DiamondIntegral.Section5.GroundMonomialPiece.rowOrder_fixed
+#print DiamondIntegral.Section5.GroundMonomialPiece.rowOrder_free
+#print DiamondIntegral.Section5.GroundMonomialPiece.matrix_blockSplit
+#print DiamondIntegral.Section5.GroundMonomialPiece.matrix_image
+#print DiamondIntegral.Section5.monomial_decomposition_5_12
+#print DiamondIntegral.Section5.kummerRatio_pow_one
+#print DiamondIntegral.Section5.rootsOfUnity_fixed_of_base
+#print DiamondIntegral.Section5.kummerRatio_cocycle
+#print DiamondIntegral.Section5.kummerRatio_root_independent
+#print DiamondIntegral.Section5.kummerRatio_pow
+#print DiamondIntegral.Section5.kummerRatio_transition
+#print DiamondIntegral.Section5.kummerRatio_injective
+#print DiamondIntegral.Section5.kummerSplittingField
+#print DiamondIntegral.Section5.finiteKummerEquiv_smul
+#print DiamondIntegral.Section5.finiteKummerEquiv_ratio
+#print DiamondIntegral.Section5.finiteKummerAutomorphism_root
+#print DiamondIntegral.Section5.finiteKummer_degree
+#print DiamondIntegral.Section5.laurentExponentMap_injective
+#print DiamondIntegral.Section5.laurentExponentMap_le
+#print DiamondIntegral.Section5.laurentScale_coeff
+#print DiamondIntegral.Section5.laurentScale_coeff_of_not_dvd
+#print DiamondIntegral.Section5.laurentResiduePart_coeff
+#print DiamondIntegral.Section5.laurentExponent_decomposition
+#print DiamondIntegral.Section5.laurentGrouped_coeff
+#print DiamondIntegral.Section5.laurentGrouped_residueParts
+#print DiamondIntegral.Section5.laurentGrouped_injective
+#print DiamondIntegral.Section5.laurentBaseCombination_eq
+#print DiamondIntegral.Section5.laurentPowerBasis_degree
+#print DiamondIntegral.Section5.laurentPowerBasis_adjoin
+#print DiamondIntegral.Section5.laurentUniformizer_pow
+#print DiamondIntegral.Section5.laurentUniformizer_minpoly
+#print DiamondIntegral.Section5.laurentUniformizer_irreducible
+#print DiamondIntegral.Section5.laurentBaseConstant_coe
+#print DiamondIntegral.Section5.laurentKummerEquiv_root
+#print DiamondIntegral.Section5.laurentKummerEquiv_single
+#print DiamondIntegral.Section5.laurentKummerEquiv_grouped
+#print DiamondIntegral.Section5.laurentKummerEquiv_coeff
+#print DiamondIntegral.Section5.laurentKummerEquiv_coeff_zero_iff
+#print DiamondIntegral.Section5.laurentKummerEquiv_support
+#print DiamondIntegral.Section5.laurentKummerEquiv_orderTop
+#print DiamondIntegral.Section5.hahnCharacterTwist_coeff
+#print DiamondIntegral.Section5.hahnCharacterTwist_support
+#print DiamondIntegral.Section5.hahnCharacterTwist_mul
+#print DiamondIntegral.Section5.hahnCharacterEquiv_coeff
+#print DiamondIntegral.Section5.hahnCharacterEquiv_orderTop
+#print DiamondIntegral.Section5.hahnEmbDomain_comp
+#print DiamondIntegral.Section5.rationalExponentMap_injective
+#print DiamondIntegral.Section5.rationalExponentMap_le
+#print DiamondIntegral.Section5.laurentToRational_range_iff
+#print DiamondIntegral.Section5.laurentToRational_level_mono
+#print DiamondIntegral.Section5.puiseuxSeries_finite_level
+#print DiamondIntegral.Section5.laurentToRational_scale
+#print DiamondIntegral.Section5.compatibleRootValue_fraction
+#print DiamondIntegral.Section5.compatibleRootCharacter_fraction
+#print DiamondIntegral.Section5.compatibleRootCharacter_int
+#print DiamondIntegral.Section5.puiseuxCharacter_mem
+#print DiamondIntegral.Section5.puiseuxCharacter_fixes_base
+#print DiamondIntegral.Section5.puiseuxRootSystemAction_orderTop
+#print DiamondIntegral.Section5.puiseuxRoot_coe
+#print DiamondIntegral.Section5.puiseuxRoot_ne_zero
+#print DiamondIntegral.Section5.puiseuxConstant_coe
+#print DiamondIntegral.Section5.puiseuxRoot_pow
+#print DiamondIntegral.Section5.puiseuxRoot_transition
+#print DiamondIntegral.Section5.puiseuxRootSystemAction_root
+#print DiamondIntegral.Section5.puiseuxRootSystemAction_injective
+#print DiamondIntegral.Section5.laurentToPuiseux_scale
+#print DiamondIntegral.Section5.laurentToPuiseux_single
+#print DiamondIntegral.Section5.puiseux_adjoin_roots
+#print DiamondIntegral.Section5.puiseuxAutomorphism_ext
+#print DiamondIntegral.Section5.puiseuxAutomorphism_constant
+#print DiamondIntegral.Section5.puiseuxRootUnityEquiv_val
+#print DiamondIntegral.Section5.puiseuxAutomorphismRoot_ratio
+#print DiamondIntegral.Section5.puiseuxRootSystemAction_system
+#print DiamondIntegral.Section5.puiseuxRootSystemAction_surjective
+#print DiamondIntegral.Section5.puiseuxAutomorphism_orderTop
+#print DiamondIntegral.Section5.compatibleRootCharacter_system
+#print DiamondIntegral.Section5.valuedAutomorphism_principalUnits
+#print DiamondIntegral.Section5.valuedRVUnitEquiv_mk
+#print DiamondIntegral.Section5.valuedRVEquiv_rv
+#print DiamondIntegral.Section5.puiseuxUnit_coe_ne_zero
+#print DiamondIntegral.Section5.puiseuxUnitLeadingTerm_ker
+#print DiamondIntegral.Section5.puiseuxMonomial_coe
+#print DiamondIntegral.Section5.puiseuxUnitLeadingTerm_monomial
+#print DiamondIntegral.Section5.puiseuxUnitLeadingTerm_surjective
+#print DiamondIntegral.Section5.rationalRVAutomorphism_value
+#print DiamondIntegral.Section5.rationalRVAutomorphism_formula
+#print DiamondIntegral.Section5.rationalRVAutomorphism_system
+#print DiamondIntegral.Section5.rationalRVSystem_unique
+#print DiamondIntegral.Section5.puiseuxRVUnitEquiv_mk
+#print DiamondIntegral.Section5.puiseuxAutomorphism_valuation
+#print DiamondIntegral.Section5.puiseuxRVAction_rootSystem_mk
+#print DiamondIntegral.Section5.puiseuxRVAction_coordinates
+#print DiamondIntegral.Section5.puiseuxRVAutomorphism_lifts
+#print DiamondIntegral.Section5.puiseuxRVRootSystemAction_injective
+#print DiamondIntegral.Section5.puiseuxRVAction_injective
+#print DiamondIntegral.Section5.puiseuxRVAction_fixes_base
+#print DiamondIntegral.Section5.hahnEmbDomain_order
+#print DiamondIntegral.Section5.hahnEmbDomain_leadingCoeff
+#print DiamondIntegral.Section5.puiseuxBaseRVMap_coordinates
+#print DiamondIntegral.Section5.puiseuxBaseRVMap_integer
+#print DiamondIntegral.Section5.puiseuxRV_fixes_base_iff
+#print DiamondIntegral.Section5.originalRVMap_surjective
+#print DiamondIntegral.Section5.originalValuedCarrier_surjective
+#print DiamondIntegral.Section5.puiseuxRVAction_fraction
+#print DiamondIntegral.Section5.puiseuxModelFieldAction_apply
+#print DiamondIntegral.Section5.puiseuxModelFieldAction_valued
+#print DiamondIntegral.Section5.puiseuxModelRVAction_rv
+#print DiamondIntegral.Section5.puiseuxModelFieldAction_fixes_base
+#print DiamondIntegral.Section5.PuiseuxOriginal.rvAction_normal
+#print DiamondIntegral.Section5.PuiseuxOriginal.rvAction_rv
+#print DiamondIntegral.Section5.PuiseuxOriginal.rvAction_mul
+#print DiamondIntegral.Section5.PuiseuxOriginal.rvAction_inv
+#print DiamondIntegral.Section5.PuiseuxOriginal.rvAction_value
+#print DiamondIntegral.Section5.PuiseuxOriginal.rvAction_inResidue
+#print DiamondIntegral.Section5.PuiseuxOriginal.rvAction_residue
+#print DiamondIntegral.Section5.PuiseuxOriginal.rvAction_residueLift
+#print DiamondIntegral.Section5.PuiseuxOriginal.rvAction_kAdd
+#print DiamondIntegral.Section5.PuiseuxOriginal.rvAction_kNeg
+#print DiamondIntegral.Section5.PuiseuxOriginal.carrierAction_vfPart
+#print DiamondIntegral.Section5.PuiseuxOriginal.carrierAction_rvPart
+#print DiamondIntegral.Section5.PuiseuxOriginal.carrierAction_inVF
+#print DiamondIntegral.Section5.PuiseuxOriginal.carrierAction_inl
+#print DiamondIntegral.Section5.PuiseuxOriginal.carrierAction_inr
+#print DiamondIntegral.Section5.PuiseuxOriginal.carrierAction_function
+#print DiamondIntegral.Section5.PuiseuxOriginal.carrierAction_relation
+#print DiamondIntegral.Section5.PuiseuxOriginal.canonicalInterpret_isCanonical
+#print DiamondIntegral.Section5.PuiseuxOriginal.carrierAction_sort
+#print DiamondIntegral.Section5.PuiseuxOriginal.carrierAction_fixes_base
+#print DiamondIntegral.Section5.PuiseuxOriginal.original_formula_invariant
+#print DiamondIntegral.Section5.PuiseuxOriginal.quotientRVAction_system
+#print DiamondIntegral.Section5.PuiseuxOriginal.preservesRVFormulas_of_base
+#print DiamondIntegral.Section5.NativeDomainPresentationAt.taggedFinFamily_formal
+#print DiamondIntegral.Section5.finite_degree_partition_sum
+#print DiamondIntegral.Section5.PuiseuxOriginal.corollary_global_vanishing_discharged
+#print DiamondIntegral.Section5.bounded_fubini_discharged
+#print DiamondIntegral.Section5.geometric_fubini_discharged
+#print DiamondIntegral.Section5.completed18ContextPositive
+#print DiamondIntegral.Section5.completed18RingHom_sum
+#print DiamondIntegral.Section5.positivePresentationHom_surjective_of_classes
+#print DiamondIntegral.Section5.completed18PositiveLift_pullback_preimage
+#print DiamondIntegral.Section5.completed18PositiveLift_class_preimage
+#print DiamondIntegral.Section5.completed18LocalLift_surjective
+#print DiamondIntegral.Section5.completed18LocalLift_kernel
+#print DiamondIntegral.Section5.completed18NativeVFForget_class
+#print DiamondIntegral.Section5.completed18NativeVFForget_lift
+#print DiamondIntegral.Section5.completed18NativePositiveLift_kernel
+#print DiamondIntegral.Section5.completed18_tupleRV
+#print DiamondIntegral.Section5.groundRVAt_volume_eq
+#print DiamondIntegral.Section5.groundRVAt_lift_domain
+#print DiamondIntegral.Section5.nativeVFPositiveGround_lift_class
+#print DiamondIntegral.Section5.completed18LocalLift_class
+#print DiamondIntegral.Section5.completed18Positive_domain
+#print DiamondIntegral.Section5.completed18RVPositiveEquiv_oneFactor
+#print DiamondIntegral.Section5.completed18RVPositiveEquiv_positiveFactor
+#print DiamondIntegral.Section5.completed18RVSpecial_iff
+#print DiamondIntegral.Section5.completed18VFClass_iso
+#print DiamondIntegral.Section5.nativeVFGround_scissor
+#print DiamondIntegral.Section5.nativeVFPositiveGround_class
+#print DiamondIntegral.Section5.groundVFNative_partition
+#print DiamondIntegral.Section5.groundVFNativePositive_class
+#print DiamondIntegral.Section5.completed18RVDirectSumAddEquiv_of
+#print DiamondIntegral.Section5.groundRVClassNative_unit
+#print DiamondIntegral.Section5.completed18RVDirectSumAddEquiv_one
+#print DiamondIntegral.Section5.completed18RVDirectSumAddEquiv_mul
+#print DiamondIntegral.Section5.completed18RVPositiveEquiv_class
+#print DiamondIntegral.Section5.groundMixed_gamma_set
+#print DiamondIntegral.Section5.groundVFNative_product_domain
+#print DiamondIntegral.Section5.groundVFClass_partition
+#print DiamondIntegral.Section5.groundVFClass_union_inter
+#print DiamondIntegral.Section5.rvLeftTag_normalized
+#print DiamondIntegral.Section5.rvRightTag_normalized
+#print DiamondIntegral.Section5.groundRVAt_coprod_domain
+#print DiamondIntegral.Section5.groundRVAt_product_domain
+#print DiamondIntegral.Section5.groundRVClassNative_zero
+#print DiamondIntegral.Section5.groundRVClassNative_add
+#print DiamondIntegral.Section5.groundRVClassNative_mul
+#print DiamondIntegral.Section5.groundRVClassNative_class
+#print DiamondIntegral.Section5.nativeRVClassRepresentative_class
+#print DiamondIntegral.Section5.nativeRVClassRepresentative_full
+#print DiamondIntegral.Section5.nativeRVClassGround_class
+#print DiamondIntegral.Section5.nativeRVClassGround_ground
+#print DiamondIntegral.Section5.groundRVClassNative_native
+#print DiamondIntegral.Section5.nativeRVGroundDomain_carrier
+#print DiamondIntegral.Section5.groundRVMapRawGraph_definable
+#print DiamondIntegral.Section5.groundRV_gamma_map
+#print DiamondIntegral.Section5.nativeRVRawVolume_spec
+#print DiamondIntegral.Section5.nativeRVRawVolume_eq
+#print DiamondIntegral.Section5.nativeRVRawVolume_proper
+#print DiamondIntegral.Section5.join_rv_proper
+#print DiamondIntegral.Section5.nativeRVRawVolume_graph
+#print DiamondIntegral.Section5.nativeRVGroundVolume_finite
+#print DiamondIntegral.Section5.nativeRVGroundVolume_nonzero
+#print DiamondIntegral.Section5.groundRVAt_domain
+#print DiamondIntegral.Section5.groundRVAt_volume
+#print DiamondIntegral.Section5.groundRVAt_full
+#print DiamondIntegral.Section5.groundPointCode_sorted
+#print DiamondIntegral.Section5.groundDefinable_univ
+#print DiamondIntegral.Section5.groundRV_gamma_set
+#print DiamondIntegral.Section5.groundRV_gamma_volume
+#print DiamondIntegral.Section5.completed_section5_input
+#print DiamondIntegral.Section5.perm_two_cases
+#print DiamondIntegral.Section5.gammaIso_congr_target_value
+#print DiamondIntegral.Section5.completed_two_order_input
+#print DiamondIntegral.Section5.completed_relative_corollary_5_8
+#print DiamondIntegral.Section5.positioned_cells_with_rv_parameters
+#print DiamondIntegral.Section5.BaseDefinableIn.program
+#print DiamondIntegral.Section5.gamma_point_code_preimage
+#print DiamondIntegral.Section5.rv_parameter_family
+#print DiamondIntegral.Section5.finite_generated_rv_parameter_base
+#print DiamondIntegral.Section5.BaseDefinableIn.transfer
+#print DiamondIntegral.Section5.BaseDefinableIn.labelBase
+#print DiamondIntegral.Section5.cellData_base_transfer
+#print DiamondIntegral.Section5.cellRestriction_graph
+#print DiamondIntegral.Section5.cellRestriction_fibre
+#print DiamondIntegral.Section5.exists_coherent_positioned_cell_label_injection
+#print DiamondIntegral.Section5.GammaQE.finite_laws_of_flat_graph
+#print DiamondIntegral.Section5.GammaQE.gamma_piecewise_rational_affine
+#print DiamondIntegral.Section5.GammaQE.positive_power_law
+#print DiamondIntegral.Section5.GammaQE.positive_power_denominator
+#print DiamondIntegral.Section5.GammaQE.graph_has_critical_pair
+#print DiamondIntegral.Section5.GammaQE.gamma_flat_normal_form
+#print DiamondIntegral.Section5.GammaQE.flat_finite_perturbation
+#print DiamondIntegral.Section5.GammaQE.flat_value_equality_preserved
+#print DiamondIntegral.Section5.GammaQE.flat_literal_preserved
+#print DiamondIntegral.Section5.GammaQE.gammaTop_mul_le_mul_iff
+#print DiamondIntegral.Section5.GammaQE.rv_value_ne_zero
+#print DiamondIntegral.Section5.GammaQE.rv_residue_value_one
+#print DiamondIntegral.Section5.GammaQE.scaled_residue_zero
+#print DiamondIntegral.Section5.GammaQE.scaled_residue_equality
+#print DiamondIntegral.Section5.GammaQE.gammaTop_le_zero
+#print DiamondIntegral.Section5.GammaQE.gammaTop_zero_le
+#print DiamondIntegral.Section5.GammaQE.scaled_value_order_zero
+#print DiamondIntegral.Section5.GammaQE.flat_residue_term_fixed
+#print DiamondIntegral.Section5.GammaQE.flat_residue_polynomial_fixed
+#print DiamondIntegral.Section5.GammaQE.raw_residue_sum_inK
+#print DiamondIntegral.Section5.GammaQE.flat_polynomial_inK
+#print DiamondIntegral.Section5.GammaQE.mapRVVariables_eval
+#print DiamondIntegral.Section5.GammaQE.mapRVAtomVariables_eval
+#print DiamondIntegral.Section5.GammaQE.mapRVBooleanVariables_eval
+#print DiamondIntegral.Section5.GammaQE.sourceVFValues_allRV
+#print DiamondIntegral.Section5.GammaQE.rvGamma_codeValue
+#print DiamondIntegral.Section5.GammaQE.flat_rawEval
+#print DiamondIntegral.Section5.GammaQE.flat_rawEval_perturb
+#print DiamondIntegral.Section5.GammaQE.flat_rawEval_ne_zero
+#print DiamondIntegral.Section5.GammaQE.flat_value
+#print DiamondIntegral.Section5.GammaQE.rvGamma_val
+#print DiamondIntegral.Section5.GammaQE.rv_inK_iff
+#print DiamondIntegral.Section5.GammaQE.gamma_val_zpow
+#print DiamondIntegral.Section5.GammaQE.rv_value_zpow
+#print DiamondIntegral.Section5.GammaQE.rvGamma_one
+#print DiamondIntegral.Section5.GammaQE.rvGamma_mul
+#print DiamondIntegral.Section5.GammaQE.rvGamma_inv
+#print DiamondIntegral.Section5.GammaQE.rvGamma_zpow
+#print DiamondIntegral.Section5.GammaQE.rvGamma_eq_iff
+#print DiamondIntegral.Section5.GammaQE.rvGamma_surjective
+#print DiamondIntegral.Section5.GammaFinitePerturbation.comparison_eventually
+#print DiamondIntegral.Section5.GammaFinitePerturbation.finite_comparisons
+#print DiamondIntegral.Section5.PuiseuxOriginal.complexVarietyVolume_chart
+#print DiamondIntegral.Section5.PuiseuxOriginal.corollary_global_vanishing
+#print DiamondIntegral.Section5.PuiseuxOriginal.varietyNativeChartChange_point
+#print DiamondIntegral.Section5.PuiseuxOriginal.varietyNativeMorphism_source_change
+#print DiamondIntegral.Section5.PuiseuxOriginal.varietyNativeMorphism_target_change
+#print DiamondIntegral.Section5.originalBaseTargetFibre_zero
+#print DiamondIntegral.Section5.PuiseuxOriginal.varietyNativeChartChange_bijective
+#print DiamondIntegral.Section5.PuiseuxOriginal.varietyNativeClass_independent
+#print DiamondIntegral.Section5.PuiseuxOriginal.varietyNativeChart_parameter_equivalent
+#print DiamondIntegral.Section5.nativeSourceFibreMap_value
+#print DiamondIntegral.Section5.nativeSourceFibreMap_bijective
+#print DiamondIntegral.Section5.PuiseuxOriginal.varietyNativeFibrePointMap_bijective
+#print DiamondIntegral.Section5.PuiseuxOriginal.varietyNativeMorphism_exists
+#print DiamondIntegral.Section5.PuiseuxOriginal.varietyNativeMorphism_point
+#print DiamondIntegral.Section5.PuiseuxOriginal.ambientBoundedVFVolume_ground_tagged_fibres
+#print DiamondIntegral.Section5.nativeMixedMap_value_singleton
+#print DiamondIntegral.Section5.nativeMixedMap_value_coordinate
+#print DiamondIntegral.Section5.nativeMixedMap_parameter_transfer
+#print DiamondIntegral.Section5.PuiseuxOriginal.varietyNativeChartMap_exists
+#print DiamondIntegral.Section5.PuiseuxOriginal.varietyNativeInclusion_exists
+#print DiamondIntegral.Section5.PuiseuxOriginal.varietyNativeInclusion_point
+#print DiamondIntegral.Section5.EquivariantVariety.affine_morphism_refinement_exists
+#print DiamondIntegral.Section5.PuiseuxOriginal.varietyNativePointEquiv_chart
+#print DiamondIntegral.Section5.PuiseuxOriginal.varietyNativeObject_groundLabels
+#print DiamondIntegral.Section5.PuiseuxOriginal.nativeGeometricAffineMap_exists
+#print DiamondIntegral.Section5.ComplexVariety.Morphism.affineAlgebraMap_spec
+#print DiamondIntegral.Section5.ComplexVariety.Morphism.affinePointEquiv_map
+#print DiamondIntegral.Section5.PuiseuxOriginal.nativeAffineAlgebraPointEquiv_coordinates
+#print DiamondIntegral.Section5.PuiseuxOriginal.nativeAffineAlgebraMap_exists
+#print DiamondIntegral.Section5.nativeVFFiniteSumInclusion_injective
+#print DiamondIntegral.Section5.nativeVFFiniteSum_chart_partition
+#print DiamondIntegral.Section5.nativeVFFiniteSum_map
+#print DiamondIntegral.Section5.EquivariantVariety.Object.underlyingVariety_isAffine
+#print DiamondIntegral.Section5.nativeVFFiniteSumInclusion_value
+#print DiamondIntegral.Section5.nativeVFFiniteSum_groundLabels
+#print DiamondIntegral.Section5.nativeGroundRVLabels_raw
+#print DiamondIntegral.Section5.nativeBoundedVFFubini_ground_tagged_vanishing
+#print DiamondIntegral.Section5.originalGround_rvZero
+#print DiamondIntegral.Section5.originalGround_rvOne
+#print DiamondIntegral.Section5.rvLeftTag_groundNames
+#print DiamondIntegral.Section5.rvRightTag_groundNames
+#print DiamondIntegral.Section5.NativeGroundRVLabels.coprod
+#print DiamondIntegral.Section5.NativeGroundRVLabels.pureVF
+#print DiamondIntegral.Section5.nativeVFCoproductSum_bijective
+#print DiamondIntegral.Section5.vfAdjoinedMixedFibreValue_to_raw
+#print DiamondIntegral.Section5.rawMixedParameters_subset_vfAdjoinedFieldNames
+#print DiamondIntegral.Section5.raw_to_vfAdjoinedContext_mixed
+#print DiamondIntegral.Section5.PuiseuxOriginal.ambientPolynomialEquations_coefficients
+#print DiamondIntegral.Section5.PuiseuxOriginal.nativeAffineVFObject_mem
+#print DiamondIntegral.Section5.nativeVFPolynomialMap_value
+#print DiamondIntegral.Section5.ComplexVariety.affine_coordinate_presentation
+#print DiamondIntegral.Section5.EquivariantVariety.ImmersedPresentation.fieldPoint_factor
+#print DiamondIntegral.Section5.EquivariantVariety.ImmersedPresentation.fieldPointPartitionMap_bijective
+#print DiamondIntegral.Section5.ComplexVariety.coordinateSpec_toC
+#print DiamondIntegral.Section5.ComplexVariety.coordinateIso_overC
+#print DiamondIntegral.Section5.vfPolynomialRawCode_eval
+#print DiamondIntegral.Section5.vfPolynomialRawLocus_definable
+#print DiamondIntegral.Section5.nativeVFPolynomialDomain_mem
+#print DiamondIntegral.Section5.ComplexVariety.finite_affine_presentation
+#print DiamondIntegral.Section5.vfPolynomialRawCode_definable
+#print DiamondIntegral.Section5.vfPolynomial_zero_definable
+#print DiamondIntegral.Section5.PuiseuxOriginal.ambientBoundedVFVolume_field_generated_fibres
+#print DiamondIntegral.Section5.finiteAffinePoint_equations_iff
+#print DiamondIntegral.Section5.nativePureVFTuple_proper
+#print DiamondIntegral.Section5.nativeBoundedVFFubini_field_generated_vanishing
+#print DiamondIntegral.Section5.PuiseuxOriginal.ambientLaurentField_nontrivial
+#print DiamondIntegral.Section5.finite_affine_algebra_presentation
+#print DiamondIntegral.Section5.affinePointCoordinates_aeval
+#print DiamondIntegral.Section5.affineMorphism_polynomial_coordinates
+#print DiamondIntegral.Section5.vfAdjoinedFibreValue_to_raw
+#print DiamondIntegral.Section5.PuiseuxOriginal.ambientPuiseuxFieldHom_val
+#print DiamondIntegral.Section5.PuiseuxOriginal.ambientPuiseuxFieldHom_base_mem
+#print DiamondIntegral.Section5.PuiseuxOriginal.ambientComplexFieldHom_base_mem
+#print DiamondIntegral.Section5.originalBaseVFBoundedValue_parameter_naturality
+#print DiamondIntegral.Section5.rvGroundTransferOrdinary_nativeChart
+#print DiamondIntegral.Section5.nativeGroundRVEvaluation_parameter_naturality
+#print DiamondIntegral.Section5.elementaryVFFieldHom_rv
+#print DiamondIntegral.Section5.vfNormalizedMap_ext
+#print DiamondIntegral.Section5.sortedTransferVFRing_class
+#print DiamondIntegral.Section5.sortedTransferVFRing_lift
+#print DiamondIntegral.Section5.nativeRVEvaluation_parameter_naturality
+#print DiamondIntegral.Section5.rvGroundTransferOrdinary_sharp_chart
+#print DiamondIntegral.Section5.resGroundTransferReduced_torus
+#print DiamondIntegral.Section5.rvOrdinaryRetraction_ext
+#print DiamondIntegral.Section5.rvGroundTransferOrdinary_class
+#print DiamondIntegral.Section5.rvGroundTransferOrdinary_res
+#print DiamondIntegral.Section5.resGroundTransferReduced_fromOrdinary
+#print DiamondIntegral.Section5.gamma_integral_parameter_independent
+#print DiamondIntegral.Section5.vfAdjoinedContext_to_raw
+#print DiamondIntegral.Section5.raw_to_vfAdjoinedContext
+#print DiamondIntegral.Section5.groundField_le_vfAdjoinedField
+#print DiamondIntegral.Section5.groundReal_subset_vfAdjoinedFieldNames
+#print DiamondIntegral.Section5.rawVFParameters_subset_vfAdjoinedFieldNames
+#print DiamondIntegral.Section5.vfAdjoinedField_small
+#print DiamondIntegral.Section5.vfAdjoinedField_nontrivial
+#print DiamondIntegral.Section5.vfFieldGamma_names
+#print DiamondIntegral.Section5.vfParameterFieldGamma_names
+#print DiamondIntegral.Section5.vfFieldSubstructure_small
+#print DiamondIntegral.Section5.vfParameterField_small
+#print DiamondIntegral.Section5.vfParameterFieldSubstructure_names
+#print DiamondIntegral.Section5.sortedTransferVFPositive_lift
+#print DiamondIntegral.Section5.sortedTransferRVPositive_oneObject
+#print DiamondIntegral.Section5.sortedTransferRVPositive_positiveObject
+#print DiamondIntegral.Section5.sortedTransferRVPositive_special
+#print DiamondIntegral.Section5.sortedTransferRVPositive_special_iff
+#print DiamondIntegral.Section5.vfFieldGammaMap_val
+#print DiamondIntegral.Section5.vfFieldGamma_mem_value
+#print DiamondIntegral.Section5.vfFieldGamma_values_mem
+#print DiamondIntegral.Section5.vfFieldGamma_small
+#print DiamondIntegral.Section5.vfFieldCarrier_vf
+#print DiamondIntegral.Section5.vfFieldCarrier_rv
+#print DiamondIntegral.Section5.vfFieldCarrier_zero
+#print DiamondIntegral.Section5.vfFieldRVImage_zero
+#print DiamondIntegral.Section5.vfFieldRVImage_one
+#print DiamondIntegral.Section5.vfFieldRVImage_mul
+#print DiamondIntegral.Section5.vfFieldRVImage_add
+#print DiamondIntegral.Section5.vfFieldRVImage_neg
+#print DiamondIntegral.Section5.nativePositiveRVClass_bijection
+#print DiamondIntegral.Section5.sortedTransferRVClass_empty
+#print DiamondIntegral.Section5.sortedTransferRVPositive_class
+#print DiamondIntegral.Section5.sortedTransferRVPositive_left_inv
+#print DiamondIntegral.Section5.nativePositiveVFClass_bijection
+#print DiamondIntegral.Section5.sortedTransferVFPositive_class
+#print DiamondIntegral.Section5.sortedTransferVFPositive_left_inv
+#print DiamondIntegral.Section5.sortedTransferRVVolume_value
+#print DiamondIntegral.Section5.PuiseuxOriginal.ambientBoundedVFVolume_intrinsic_fibre_vanishing
+#print DiamondIntegral.Section5.sortedTransferMixedDomain_carrier
+#print DiamondIntegral.Section5.nativeBoundedVFFubini_intrinsic_fibre_vanishing
+#print DiamondIntegral.Section5.originalBaseVFBoundedValue_of_weak_lift_bijection
+#print DiamondIntegral.Section5.originalBaseVFBoundedValue_positive_presentation
+#print DiamondIntegral.Section5.normalizedVFBoundedValue_of_lift_bijection
+#print DiamondIntegral.Section5.normalizedVFBoundedValue_pullback
+#print DiamondIntegral.Section5.normalizedVFBoundedValue_weak_lift
+#print DiamondIntegral.Section5.normalizedVFBoundedValue_of_weak_lift_bijection
+#print DiamondIntegral.Section5.originalBasePositiveIntegral_lift_class
+#print DiamondIntegral.Section5.originalBaseVFIntegral_lift_class
+#print DiamondIntegral.Section5.originalBaseVFBoundedValue_lift_class
+#print DiamondIntegral.Section5.originalBaseVFIntegral_ofContext
+#print DiamondIntegral.Section5.originalBaseVFBoundedValue_ofContext
+#print DiamondIntegral.Section5.native_arbitrary_weak_rv_lift_exists
+#print DiamondIntegral.Section5.native_arbitrary_weak_rv_integral_presentation
+#print DiamondIntegral.Section5.PuiseuxOriginal.ambientBoundedVFVolume_weak_fibre_vanishing
+#print DiamondIntegral.Section5.native_arbitrary_vf_pullback_preparation
+#print DiamondIntegral.Section5.nativeBoundedWeakVFFubini_vanishing
+#print DiamondIntegral.Section5.nativeVFPrepareAll_value
+#print DiamondIntegral.Section5.nativeVFPrepareAll_normalForm
+#print DiamondIntegral.Section5.nativeVFPrepareAll_base_mem
+#print DiamondIntegral.Section5.nativeVFPrepareAll_pullback
+#print DiamondIntegral.Section5.nativeBoundedWeakVFFubini
+#print DiamondIntegral.Section5.native_weak_vf_map_whole_witness_partition
+#print DiamondIntegral.Section5.nativeVFBoundedValue_map_fixed_whole_weak_witness
+#print DiamondIntegral.Section5.native_weak_vf_map_finite_whole_witness_catalog
+#print DiamondIntegral.Section5.nativeWeakRVObjectLift_pullback
+#print DiamondIntegral.Section5.nativeWeakLiftKey_graph
+#print DiamondIntegral.Section5.nativeVFBoundedValue_weak_lift
+#print DiamondIntegral.Section5.nativeVFBoundedValue_of_weak_lift_bijection
+#print DiamondIntegral.Section5.native_weak_vf_lift_equality_schema_at_parameter
+#print DiamondIntegral.Section5.native_vf_fixed_whole_witness_fubini_weak
+#print DiamondIntegral.Section5.finiteRVSchemaLiftDomain_presented_weak_native_row
+#print DiamondIntegral.Section5.finiteRVSchemaLiftDomain_presents_weak_native_lift
+#print DiamondIntegral.Section5.native_weak_finite_rv_schema_at_parameter
+#print DiamondIntegral.Section5.nativePreparedVFLift_row_values_weak
+#print DiamondIntegral.Section5.nativePreparedVFLift_total_values_weak
+#print DiamondIntegral.Section5.nativeWeakRVLabelGraph_definable
+#print DiamondIntegral.Section5.nativeWeakRVLabelGraph_append_iff
+#print DiamondIntegral.Section5.nativeWeakRVLabelGraph_fibre_finite
+#print DiamondIntegral.Section5.nativeWeakRVLabelGraph_reverse_definable
+#print DiamondIntegral.Section5.nativeWeakRVLabelGraph_uniform_bound
+#print DiamondIntegral.Section5.nativePreparedLift_bounded_value_weak
+#print DiamondIntegral.Section5.nativeWeakRVObjectLift_finite
+#print DiamondIntegral.Section5.NativeVFLiftEqualitySchema.rv_values_descend_weak
+#print DiamondIntegral.Section5.nativePreparedLiftKey_graphs_weak
+#print DiamondIntegral.Section5.nativePreparedLiftKey_onto_weak
+#print DiamondIntegral.Section5.NativeVFLiftEqualitySchema.validWeak_definable
+#print DiamondIntegral.Section5.native_vf_weak_lift_equality_finite_catalog
+#print DiamondIntegral.Section5.nativePreparedRVTotalMap_injective_weak
+#print DiamondIntegral.Section5.nativePreparedRVKey_value_weak
+#print DiamondIntegral.Section5.namedRV_value_definable
+#print DiamondIntegral.Section5.realGroundValues_definable
+#print DiamondIntegral.Section5.PuiseuxOriginal.ambientBoundedVFVolume_fibre_vanishing
+#print DiamondIntegral.Section5.PuiseuxOriginal.laurentCoefficientEnumeration_range
+#print DiamondIntegral.Section5.PuiseuxOriginal.ambientPuiseuxComparison_zero
+#print DiamondIntegral.Section5.elementaryRESChartValue_fibre
+#print DiamondIntegral.Section5.elementaryRESRestriction_kills_fibres
+#print DiamondIntegral.Section5.elementaryRESUngradedReduced_kills_fibres
+#print DiamondIntegral.Section5.resGroundTransferOrdinary_class
+#print DiamondIntegral.Section5.resGroundTransfer_degreeIdeal
+#print DiamondIntegral.Section5.resGroundTransfer_fibreIdeal
+#print DiamondIntegral.Section5.resGroundTransferUngradedReduced_kills
+#print DiamondIntegral.Section5.elementary_full_fibre_preimage
+#print DiamondIntegral.Section5.elementary_definable_value_descent
+#print DiamondIntegral.Section5.elementary_iRVZero
+#print DiamondIntegral.Section5.elementaryRVMap_zero
+#print DiamondIntegral.Section5.elementary_iRVOne
+#print DiamondIntegral.Section5.elementaryRVMap_one
+#print DiamondIntegral.Section5.elementaryGammaTopMap_one
+#print DiamondIntegral.Section5.realGammaGround_definable_iff
+#print DiamondIntegral.Section5.elementaryRESChartValue_partition
+#print DiamondIntegral.Section5.elementaryRESOrdinaryRestriction_class
+#print DiamondIntegral.Section5.elementaryRESOrdinaryRestriction_degreeIdeal
+#print DiamondIntegral.Section5.fullRawValueFibre_mem
+#print DiamondIntegral.Section5.fibre_domain_eq_full
+#print DiamondIntegral.Section5.fullRawValueFibre_nonempty
+#print DiamondIntegral.Section5.fullRawValueFibre_definable_iff
+#print DiamondIntegral.Section5.elementaryNativeRESValue_bijection
+#print DiamondIntegral.Section5.elementaryNativeRESValue_empty
+#print DiamondIntegral.Section5.elementaryNativeRESValue_product
+#print DiamondIntegral.Section5.elementaryNativeRESValue_cut
+#print DiamondIntegral.Section5.elementaryNativeRESValue_unit
+#print DiamondIntegral.Section5.elementary_namedFormula_nonempty
+#print DiamondIntegral.Section5.elementary_actual_nonempty
+#print DiamondIntegral.Section5.elementaryNativeRVMap_bijective
+#print DiamondIntegral.Section5.comp_joinedToCanonical
+#print DiamondIntegral.Section5.rawGraphExtension_graph_definable
+#print DiamondIntegral.Section5.rawGraphExtension_graph_sorted
+#print DiamondIntegral.Section5.rawGraphNativeMap_value
+#print DiamondIntegral.Section5.rawGraphNativeMap_bijective
+#print DiamondIntegral.Section5.rv_product_mem_projections
+#print DiamondIntegral.Section5.elementaryNativeRVRestriction_product
+#print DiamondIntegral.Section5.elementaryNativeRVRestriction_sdiff
+#print DiamondIntegral.Section5.elementaryNativeRVRestriction_empty
+#print DiamondIntegral.Section5.rawTupleSwap_append
+#print DiamondIntegral.Section5.rawTupleSwap_twice
+#print DiamondIntegral.Section5.RawDefinableGraphMap.restrict_injective
+#print DiamondIntegral.Section5.RawDefinableGraphMap.restrict_bijective
+#print DiamondIntegral.Section5.append_comp_canonicalToJoined
+#print DiamondIntegral.Section5.nativeRawTupleMap_graph_definable
+#print DiamondIntegral.Section5.nativeRawGraphMap_bijective
+#print DiamondIntegral.Section5.RawDefinableGraphMap.graph_append_iff
+#print DiamondIntegral.Section5.raw_tuple_comp_append
+#print DiamondIntegral.Section5.RawDefinableGraphMap.output_in_elementary_image
+#print DiamondIntegral.Section5.RawDefinableGraphMap.restrict_commutes
+#print DiamondIntegral.Section5.RawDefinableGraphMap.restrict_graph
+#print DiamondIntegral.Section5.elementaryRVSort_iff
+#print DiamondIntegral.Section5.elementaryNativeRawRestriction_sorted
+#print DiamondIntegral.Section5.elementaryNativeRVRestriction_mem
+#print DiamondIntegral.Section5.elementaryNativeRVRestriction_finite
+#print DiamondIntegral.Section5.splitTupleFormula_realize
+#print DiamondIntegral.Section5.elementary_tuple_exists_row
+#print DiamondIntegral.Section5.elementary_actual_projection
+#print DiamondIntegral.Section5.emptyGamma_sorted_definable_iff
+#print DiamondIntegral.Section5.emptyGamma_rawDomain_definable
+#print DiamondIntegral.Section5.elementaryRVMap_injective
+#print DiamondIntegral.Section5.elementaryRVMap_le
+#print DiamondIntegral.Section5.elementaryRVMap_sameValue
+#print DiamondIntegral.Section5.elementaryGammaTopMap_vrv
+#print DiamondIntegral.Section5.elementaryGammaTopMap_injective
+#print DiamondIntegral.Section5.elementaryRV_finite_values_restrict
+#print DiamondIntegral.Section5.elementary_namedFormula_mem
+#print DiamondIntegral.Section5.elementary_namedFormula_universal
+#print DiamondIntegral.Section5.elementary_namedFormula_equality
+#print DiamondIntegral.Section5.elementaryNamedRestriction_injective
+#print DiamondIntegral.Section5.elementaryNamedRestriction_surjective
+#print DiamondIntegral.Section5.namedDefinable_iff_actual
+#print DiamondIntegral.Section5.elementaryActualDefinableEquiv_carrier
+#print DiamondIntegral.Section5.elementary_namedFormula_exists_row
+#print DiamondIntegral.Section5.PuiseuxOriginal.theta_5_14_concrete_mk
+#print DiamondIntegral.Section5.PuiseuxOriginal.concrete_valuation_nontrivial
+#print DiamondIntegral.Section5.PuiseuxOriginal.canonical_model_ACVF00
+#print DiamondIntegral.Section5.PuiseuxOriginal.canonical_model_ACVF
+#print DiamondIntegral.Section5.PuiseuxOriginal.concreteCarrierNormal_inl
+#print DiamondIntegral.Section5.PuiseuxOriginal.concreteCarrierNormal_inr
+#print DiamondIntegral.Section5.PuiseuxOriginal.concreteCarrierNormal_vf
+#print DiamondIntegral.Section5.PuiseuxOriginal.concreteCarrierNormal_rv
+#print DiamondIntegral.Section5.PuiseuxOriginal.concreteCarrierNormal_vfSort
+#print DiamondIntegral.Section5.PuiseuxOriginal.concreteCarrierNormal_rvSort
+#print DiamondIntegral.Section5.PuiseuxOriginal.concreteCarrierNormal_sort
+#print DiamondIntegral.Section5.PuiseuxOriginal.concreteCarrierNormal_function
+#print DiamondIntegral.Section5.PuiseuxOriginal.raw_residueLift_coefficient
+#print DiamondIntegral.Section5.PuiseuxOriginal.raw_residueLift_residue
+#print DiamondIntegral.Section5.PuiseuxOriginal.raw_residueLift_mul
+#print DiamondIntegral.Section5.PuiseuxOriginal.raw_residueLift_inResidue
+#print DiamondIntegral.Section5.PuiseuxOriginal.raw_residueLift_add
+#print DiamondIntegral.Section5.PuiseuxOriginal.normal_inResidue
+#print DiamondIntegral.Section5.PuiseuxOriginal.normal_addResidue
+#print DiamondIntegral.Section5.PuiseuxOriginal.normal_negResidue
+#print DiamondIntegral.Section5.PuiseuxOriginal.normal_rvMul
+#print DiamondIntegral.Section5.PuiseuxOriginal.normal_rvInv
+#print DiamondIntegral.Section5.PuiseuxOriginal.normal_value_one
+#print DiamondIntegral.Section5.PuiseuxOriginal.normal_value_le
+#print DiamondIntegral.Section5.PuiseuxOriginal.constant_valuation
+#print DiamondIntegral.Section5.PuiseuxOriginal.normal_constant
+#print DiamondIntegral.Section5.PuiseuxOriginal.normal_value
+#print DiamondIntegral.Section5.PuiseuxOriginal.normal_residueCode_constant
+#print DiamondIntegral.Section5.PuiseuxOriginal.constantResidue_surjective
+#print DiamondIntegral.Section5.PuiseuxOriginal.normal_residueCode
+#print DiamondIntegral.Section5.laurentToRational_eq_newton
+#print DiamondIntegral.Section5.puiseuxSubfield_eq_newton
+#print DiamondIntegral.Section5.puiseuxNewtonEquiv_coe
+#print DiamondIntegral.Section5.puiseuxAlgebraicallyClosed
+#print DiamondIntegral.Section5.RESFiniteWitness.FibreOnlyFamilyWitness.reduced_equality
+#print DiamondIntegral.Section5.RESFiniteWitness.res_equality_iff_fibre_only_family_witness
+#print DiamondIntegral.Section5.RESFiniteWitness.FibreOnlyFamilyWitness.stabilizer_finite
+#print DiamondIntegral.Section5.RESFiniteWitness.FibreOnlyFamilyWitness.source_finite
+#print DiamondIntegral.Section5.RESFiniteWitness.FibreOnlyFamilyWitness.target_finite
+#print DiamondIntegral.Section5.RESFiniteWitness.productFamily_underlying_eq
+#print DiamondIntegral.Section5.RESFiniteWitness.RelationTerm.underlying_eq
+#print DiamondIntegral.Section5.RESFiniteWitness.relationFamilies_underlying_split
+#print DiamondIntegral.Section5.RESFiniteWitness.res_equality_has_fibre_only_witness
+#print DiamondIntegral.Section5.RESFiniteWitness.nativeUngradedClass_tagged
+#print DiamondIntegral.Section5.RESFiniteWitness.familyUngradedClass_eq
+#print DiamondIntegral.Section5.RESFiniteWitness.reducedPositiveHom_positiveClass
+#print DiamondIntegral.Section5.RESFiniteWitness.familyReducedClass_eq
+#print DiamondIntegral.Section5.RESFiniteWitness.positiveRelation_reduced_eq
+#print DiamondIntegral.Section5.RESFiniteWitness.nativeRVSetIsoClass_scissor
+#print DiamondIntegral.Section5.RESFiniteWitness.nativeRVPositiveUnderlying_class
+#print DiamondIntegral.Section5.RESFiniteWitness.nativeRESPositiveUnderlying_class
+#print DiamondIntegral.Section5.RESFiniteWitness.nativeRESGradedUnderlying_class
+#print DiamondIntegral.Section5.RESFiniteWitness.familyRVSet_finite
+#print DiamondIntegral.Section5.RESFiniteWitness.familyUnderlyingClass_eq
+#print DiamondIntegral.Section5.RESFiniteWitness.familyUnderlyingClass_append
+#print DiamondIntegral.Section5.RESFiniteWitness.familyUnderlyingClass_singleton
+#print DiamondIntegral.Section5.RESFiniteWitness.familyUnderlyingClass_eq_iff
+#print DiamondIntegral.Section5.nativeRVSetMapInl_desc
+#print DiamondIntegral.Section5.nativeRVSetMapInr_desc
+#print DiamondIntegral.Section5.nativeRVSetMapCoprod_hom_ext
+#print DiamondIntegral.Section5.nativeRVSetIsoClass_eq_iff
+#print DiamondIntegral.Section5.nativeRVSetIsoClass_empty
+#print DiamondIntegral.Section5.nativeRVSetIsoClass_tagged
+#print DiamondIntegral.Section5.nativeGeometricVFFubini_vanishing
+#print DiamondIntegral.Section5.nativeGeometricVFFubini_vanishing_map
+#print DiamondIntegral.Section5.nativeVFGeometricValue_map_fixed_whole_witness
+#print DiamondIntegral.Section5.nativeGeometricVFFubini
+#print DiamondIntegral.Section5.native_vf_fixed_geometric_whole_witness_fubini
+#print DiamondIntegral.Section5.nativePreparedLift_geometric_value
+#print DiamondIntegral.Section5.nativePreparedRVKeyStratum_value
+#print DiamondIntegral.Section5.nativeVFPrepareLift_fibre_nonzero
+#print DiamondIntegral.Section5.nativeVFGeometricValue_base_stratum
+#print DiamondIntegral.Section5.nativeVFGeometricValue_base_strata_sum
+#print DiamondIntegral.Section5.nativeRVZeroPattern_bijection_iff
+#print DiamondIntegral.Section5.nativeRVZeroPattern_inverseImage
+#print DiamondIntegral.Section5.nativeRVTotal_zeroPattern_carrier
+#print DiamondIntegral.Section5.nativePreparedGeometricVFLift_row_values
+#print DiamondIntegral.Section5.nativePreparedGeometricVFLift_subbase_total_values
+#print DiamondIntegral.Section5.nativeVFBaseStratumSelection_left
+#print DiamondIntegral.Section5.nativeVFBaseStratumSelection_right
+#print DiamondIntegral.Section5.nativeVFBaseStratum_omitted_zero
+#print DiamondIntegral.Section5.nativeVFBaseStratumDrop_pullback
+#print DiamondIntegral.Section5.nativeVFBaseStratumDrop_nonzero
+#print DiamondIntegral.Section5.nativeVFSelectedZeroStratum_mem
+#print DiamondIntegral.Section5.nativeVFSelectedZeroStratum_subset
+#print DiamondIntegral.Section5.nativeVFSelectedZeroStratum_disjoint
+#print DiamondIntegral.Section5.nativeVFSelectedZeroStratum_cover
+#print DiamondIntegral.Section5.nativeVFSelectedZeroStratum_pullback
+#print DiamondIntegral.Section5.nativeFullKeySelectedZeroStratum_image
+#print DiamondIntegral.Section5.geometricDegreeValue_eq_of_affine_weights
+#print DiamondIntegral.Section5.native_affine_weighted_rv_family_fubini
+#print DiamondIntegral.Section5.native_geometric_rv_family_common_degree
+#print DiamondIntegral.Section5.NativeGeometricVFLiftEqualitySchema.weighted_values_descend
+#print DiamondIntegral.Section5.NativeGeometricVFLiftEqualitySchema.canonical_padded_values_descend
+#print DiamondIntegral.Section5.nativeRVProductDomain_append_mem
+#print DiamondIntegral.Section5.originalConstantProductTotal_reindex
+#print DiamondIntegral.Section5.nativePaddedRV_total_value
+#print DiamondIntegral.Section5.NativeGeometricVFLiftEqualitySchema.padded_values_descend
+#print DiamondIntegral.Section5.prepare_native_geometric_vf_lift_RV_data
+#print DiamondIntegral.Section5.native_geometric_vf_map_finite_whole_witness_catalog
+#print DiamondIntegral.Section5.native_geometric_vf_map_whole_witness_partition
+#print DiamondIntegral.Section5.originalPaddedRVDomain_row
+#print DiamondIntegral.Section5.originalPaddedRVDomain_recode_row
+#print DiamondIntegral.Section5.nativePaddedRV_recode_value
+#print DiamondIntegral.Section5.NativeGeometricVFLiftEqualitySchema.valid_definable
+#print DiamondIntegral.Section5.native_geometric_vf_lift_schema_at_parameter
+#print DiamondIntegral.Section5.native_geometric_vf_lift_finite_catalog
+#print DiamondIntegral.Section5.nativeVFGeometricValue_lift_fraction
+#print DiamondIntegral.Section5.nativeVFGeometricValue_equal_iff_padded_lifts
+#print DiamondIntegral.Section5.nativeVFGeometricValue_nonzero_pullback
+#print DiamondIntegral.Section5.nativeAffineConstant_row_value
+#print DiamondIntegral.Section5.nativePaddedRV_row_value
+#print DiamondIntegral.Section5.geometricRowValue_eq_iff_padded
+#print DiamondIntegral.Section5.originalConstantRVDomain_row
+#print DiamondIntegral.Section5.nativeAffineRVPower_monoReal_raw_value
+#print DiamondIntegral.Section5.nativeBoundedVFFubini_vanishing
+#print DiamondIntegral.Section5.nativeBoundedVFFubini_vanishing_map
+#print DiamondIntegral.Section5.nativeVFClass_of_empty
+#print DiamondIntegral.Section5.nativeBoundedVFFubini
+#print DiamondIntegral.Section5.nativeVFMapLiftWitness_finite
+#print DiamondIntegral.Section5.nativeVFBoundedValue_map_fixed_whole_witness
+#print DiamondIntegral.Section5.nativeMixedPartialTotalMap_bijective
+#print DiamondIntegral.Section5.native_vf_fixed_whole_witness_fubini
+#print DiamondIntegral.Section5.nativeSpecialBaseBijection_inverse
+#print DiamondIntegral.Section5.nativeSpecialBaseBijection_parameter
+#print DiamondIntegral.Section5.nativePreparedLift_bounded_value
+#print DiamondIntegral.Section5.nativePreparedParameterBase_at_point
+#print DiamondIntegral.Section5.nativePreparedLiftRows_mem
+#print DiamondIntegral.Section5.nativePreparedLiftRows_base
+#print DiamondIntegral.Section5.nativeVFClass_bijection
+#print DiamondIntegral.Section5.nativeVFClass_finite_partition
+#print DiamondIntegral.Section5.nativeVFBoundedValue_of_lift_bijection
+#print DiamondIntegral.Section5.nativeVFGeometricValue_of_lift_bijection
+#print DiamondIntegral.Section5.nativeVFBoundedValue_pullback
+#print DiamondIntegral.Section5.nativeVFGeometricValue_pullback
+#print DiamondIntegral.Section5.preparedRVTotalIndices_packed_key
+#print DiamondIntegral.Section5.nativePreparedLiftKey_graphs
+#print DiamondIntegral.Section5.nativePreparedLiftKey_onto
+#print DiamondIntegral.Section5.nativePreparedRVTotalMap_injective
+#print DiamondIntegral.Section5.nativePreparedRVKey_value
+#print DiamondIntegral.Section5.nativeRVChartNormalized_principal
+#print DiamondIntegral.Section5.nativeVFChartIntegral_lift_class
+#print DiamondIntegral.Section5.nativeVFBoundedValue_lift_class
+#print DiamondIntegral.Section5.nativeVFGeometricValue_lift_class
+#print DiamondIntegral.Section5.nativePoint_raw_domain
+#print DiamondIntegral.Section5.nativeCodeValue_one
+#print DiamondIntegral.Section5.nativeOne_nonzero
+#print DiamondIntegral.Section5.nativePositive_raw_domain
+#print DiamondIntegral.Section5.nativePrincipal_chart_class
+#print DiamondIntegral.Section5.preparedRVTotalIndices_key
+#print DiamondIntegral.Section5.preparedRVFibreLabelIndices_key
+#print DiamondIntegral.Section5.preparedRVKey_ext
+#print DiamondIntegral.Section5.nativeOrdinaryClass_coprod
+#print DiamondIntegral.Section5.nativeGroundRVEvaluation_native_chart
+#print DiamondIntegral.Section5.nativeAffineRVObject_raw_value
+#print DiamondIntegral.Section5.nativeAffineRVPower_raw_value
+#print DiamondIntegral.Section5.nativeGroundGeometricRetraction_class
+#print DiamondIntegral.Section5.nativeGroundGeometricRetraction_affine_padding
+#print DiamondIntegral.Section5.nativeGroundGeometricRetraction_eq_iff_common_degree
+#print DiamondIntegral.Section5.nativeFullKeyDrop_value
+#print DiamondIntegral.Section5.nativeVFZeroStratumRVObject_raw_value
+#print DiamondIntegral.Section5.nativeVFZeroStrata_raw_value_sum
+#print DiamondIntegral.Section5.nativeFullKeySelection_commute
+#print DiamondIntegral.Section5.nativeFullKeySelection_image
+#print DiamondIntegral.Section5.nativeFullKeyZeroStratum_image
+#print DiamondIntegral.Section5.nativeRVSelectCoordinates_value
+#print DiamondIntegral.Section5.nativeRVSelectCoordinates_injective
+#print DiamondIntegral.Section5.nativeRVZeroBlockMap_value
+#print DiamondIntegral.Section5.nativeRVZeroBlockMap_injective
+#print DiamondIntegral.Section5.nativePreparedLift_packed_recode
+#print DiamondIntegral.Section5.nativePreparedLift_base_mem
+#print DiamondIntegral.Section5.nativePreparedLift_carrier_recode
+#print DiamondIntegral.Section5.nativePreparedLift_pullback
+#print DiamondIntegral.Section5.nativeVFZeroPattern_sameRV
+#print DiamondIntegral.Section5.nativeVFZeroStratum_pullback
+#print DiamondIntegral.Section5.nativeVFFillCoordinates_selected
+#print DiamondIntegral.Section5.nativeVFFillCoordinates_zero
+#print DiamondIntegral.Section5.nativeDropZeroVF_pullback
+#print DiamondIntegral.Section5.nativeVFZeroStratumDrop_pullback
+#print DiamondIntegral.Section5.preparedFamily_reconstruct
+#print DiamondIntegral.Section5.preparedFamilyBase_sameRV
+#print DiamondIntegral.Section5.preparedFamilyRVData_sameRV
+#print DiamondIntegral.Section5.preparedFamilyRVData_pullback
+#print DiamondIntegral.Section5.nativePreparedLiftNormalForm
+#print DiamondIntegral.Section5.nativeMixedCode_mem_domain_iff
+#print DiamondIntegral.Section5.nativeVFLiftFamily_mem
+#print DiamondIntegral.Section5.nativeVFLiftFamily_fibre_nonzero
+#print DiamondIntegral.Section5.originalParameterDomain_row
+#print DiamondIntegral.Section5.nativePullbackRVLabels_value
+#print DiamondIntegral.Section5.nativePullback_attach_image
+#print DiamondIntegral.Section5.nativePullbackRVLabels_nonzero
+#print DiamondIntegral.Section5.nativePullbackRVObject_bounded_value
+#print DiamondIntegral.Section5.nativeFiniteVFClass_of_empty
+#print DiamondIntegral.Section5.nativeFiniteVFClass_partition
+#print DiamondIntegral.Section5.nativeFiniteVFClass_finiteUnion
+#print DiamondIntegral.Section5.nativeFiniteVFClass_finite_partition
+#print DiamondIntegral.Section5.nativeVFSemiringClass_finite_partition
+#print DiamondIntegral.Section5.nativeMap_preimage_disjoint
+#print DiamondIntegral.Section5.nativeMap_preimage_cover
+#print DiamondIntegral.Section5.nativeMap_preimage_partition
+#print DiamondIntegral.Section5.native_vf_map_whole_witness_partition
+#print DiamondIntegral.Section5.nativeVFPrepareBaseMap_value
+#print DiamondIntegral.Section5.nativeVFPrepareBaseMap_injective
+#print DiamondIntegral.Section5.nativeVFPrepareBaseMap_finite
+#print DiamondIntegral.Section5.nativeMixedCoordinateMap_value
+#print DiamondIntegral.Section5.nativeMixedCoordinateMap_injective
+#print DiamondIntegral.Section5.nativeMixedMapGraphPacking_value
+#print DiamondIntegral.Section5.nativeMixedMapGraphPacking_injective
+#print DiamondIntegral.Section5.nativeMixedMapGraphPacking_image
+#print DiamondIntegral.Section5.nativeMixedMapTotal_finite
+#print DiamondIntegral.Section5.native_vf_map_finite_whole_witness_catalog
+#print DiamondIntegral.Section5.nativeMixedBlockSwap_append
+#print DiamondIntegral.Section5.nativeMixedMapFibreFormula_row
+#print DiamondIntegral.Section5.nativeMixedMapFibreAt_domain
+#print DiamondIntegral.Section5.nativeMixedMapFibreAt_mem
+#print DiamondIntegral.Section5.nativeMixedMapFibreAt_finite
+#print DiamondIntegral.Section5.nativeVFZeroStratum_mem
+#print DiamondIntegral.Section5.nativeVFZeroStratum_subset
+#print DiamondIntegral.Section5.nativeVFZeroStratum_disjoint
+#print DiamondIntegral.Section5.nativeVFZeroStratum_cover
+#print DiamondIntegral.Section5.nativeVFZeroPatternIndex_range
+#print DiamondIntegral.Section5.nativeVFZeroStratumDrop_nonzero
+#print DiamondIntegral.Section5.nativeVFZeroStratumDrop_finite
+#print DiamondIntegral.Section5.nativeMixedMapGraph_definable
+#print DiamondIntegral.Section5.nativeMixedFullKeyMap_value
+#print DiamondIntegral.Section5.nativeMixedFullKeyMap_raw_value
+#print DiamondIntegral.Section5.rvValues_tupleRV_zero_iff
+#print DiamondIntegral.Section5.nativeMixedFullKeyMap_vf_zero_iff
+#print DiamondIntegral.Section5.nativeRVZeroPattern_definable
+#print DiamondIntegral.Section5.nativeRVZeroPatternBase_mem
+#print DiamondIntegral.Section5.nativeRVZeroPatternBase_disjoint
+#print DiamondIntegral.Section5.nativeRVZeroPatternBase_cover
+#print DiamondIntegral.Section5.nativeRVZeroPatternBase_nonzero
+#print DiamondIntegral.Section5.nativeRVZeroPatternBase_zero
+#print DiamondIntegral.Section5.nativeAttachSelectedVFKeys_value
+#print DiamondIntegral.Section5.nativeAttachSelectedVFKeys_injective
+#print DiamondIntegral.Section5.nativeAttachSelectedVFKeys_finite
+#print DiamondIntegral.Section5.nativeVFCoordinateSelection_value
+#print DiamondIntegral.Section5.nativeVFCoordinateSelection_injective
+#print DiamondIntegral.Section5.nativeDropZeroVF_nonzero
+#print DiamondIntegral.Section5.nativeMixedProductBijection_pack
+#print DiamondIntegral.Section5.rawPreparedKey_first
+#print DiamondIntegral.Section5.rawPreparedKey_last
+#print DiamondIntegral.Section5.nativePreparedKey_realization
+#print DiamondIntegral.Section5.nativeTotalRVLabelMap_raw_value
+#print DiamondIntegral.Section5.rvValues_tupleRV_append
+#print DiamondIntegral.Section5.nativeTotalRVLabelLift_mem
+#print DiamondIntegral.Section5.nativeMixedCode_eq_gammaPointCode
+#print DiamondIntegral.Section5.nativeGammaPointBijection_apply
+#print DiamondIntegral.Section5.nativeGammaPointBijection_symm_apply
+#print DiamondIntegral.Section5.nativeTotalLabelRawValue_proper
+#print DiamondIntegral.Section5.nativeTotalLabelRawValue_definable
+#print DiamondIntegral.Section5.nativeTotalRVLabelMap_nonzero
+#print DiamondIntegral.Section5.nativePreparedParameterBase_representative
+#print DiamondIntegral.Section5.nativePreparedVFLift_row_values
+#print DiamondIntegral.Section5.nativePreparedVFLift_total_values
+#print DiamondIntegral.Section5.rawPreparedKey_definable
+#print DiamondIntegral.Section5.nativePreparedKeyDomain_raw
+#print DiamondIntegral.Section5.nativePreparedParameterBase_raw
+#print DiamondIntegral.Section5.sortedReindexedDomain_mem_iff
+#print DiamondIntegral.Section5.mixedTotalPermutation_sort
+#print DiamondIntegral.Section5.nativeMixedFamilyTotal_domain
+#print DiamondIntegral.Section5.nativeMixedFamilyTotal_mem
+#print DiamondIntegral.Section5.mixedTotalPermutationFun_left_inverse
+#print DiamondIntegral.Section5.mixedTotalPermutation_append
+#print DiamondIntegral.Section5.originalSortedRowTotal_definable
+#print DiamondIntegral.Section5.sortedReindexedDomain_definable
+#print DiamondIntegral.Section5.reindexPairCoordinates_append
+#print DiamondIntegral.Section5.NativeVFLiftEqualitySchema.rv_values_descend
+#print DiamondIntegral.Section5.prepare_native_vf_lift_RV_data
+#print DiamondIntegral.Section5.nativeMixedDomain_ofRaw
+#print DiamondIntegral.Section5.NativeVFLiftEqualitySchema.valid_definable
+#print DiamondIntegral.Section5.native_vf_lift_equality_schema_at_parameter
+#print DiamondIntegral.Section5.native_vf_lift_equality_finite_catalog
+#print DiamondIntegral.Section5.native_rv_row_value_of_presentation
+#print DiamondIntegral.Section5.finiteRVSchemaLiftDomain_presented_native_row
+#print DiamondIntegral.Section5.finiteRVSchemaLiftDomain_presents_native_lift
+#print DiamondIntegral.Section5.native_mixed_fixed_bijection_chart_at_parameter
+#print DiamondIntegral.Section5.nativeMixedPointOfCode_code
+#print DiamondIntegral.Section5.nativeMixedDomain_mem_iff
+#print DiamondIntegral.Section5.finiteRVLiftCoordinates_append
+#print DiamondIntegral.Section5.finiteRVLiftCoordinates_definable
+#print DiamondIntegral.Section5.finiteRVSchemaLiftDomain_row
+#print DiamondIntegral.Section5.finiteRVSchemaLiftDomain_native_row
+#print DiamondIntegral.Section5.nativeMixedPairCode_decode
+#print DiamondIntegral.Section5.nativeMixedGraph_definable
+#print DiamondIntegral.Section5.nativeMixedCode_injective
+#print DiamondIntegral.Section5.nativeMixedCode_proper
+#print DiamondIntegral.Section5.nativeMixedCode_decode
+#print DiamondIntegral.Section5.nativeMixedDomain_definable
+#print DiamondIntegral.Section5.nativeRVLabelLift_finite_fibres
+#print DiamondIntegral.Section5.finite_native_RV_labels_of_finite_lift
+#print DiamondIntegral.Section5.native_RV_finite_labels_iff_finite_lift
+#print DiamondIntegral.Section5.nativeRVObjectOfFiniteLift_lift
+#print DiamondIntegral.Section5.native_finite_rv_schema_at_parameter
+#print DiamondIntegral.Section5.finiteRVSchema_valid_recode_iff
+#print DiamondIntegral.Section5.finiteRVSchemaLabelsNonzero_recode_iff
+#print DiamondIntegral.Section5.nativeFiniteRVSchemaValid_recode_iff
+#print DiamondIntegral.Section5.nativeRVLabelGraph_definable
+#print DiamondIntegral.Section5.nativeRVLabelGraph_append_iff
+#print DiamondIntegral.Section5.nativeRVLabelGraph_fibre_finite
+#print DiamondIntegral.Section5.nativeRVLabelGraph_reverse_definable
+#print DiamondIntegral.Section5.nativeRVLabelGraph_uniform_bound
+#print DiamondIntegral.Section5.finiteRVSchemaLabelsNonzero_original
+#print DiamondIntegral.Section5.nativeFiniteRVSchemaValid_definable
+#print DiamondIntegral.Section5.finiteRVSchemaRawValue_mem
+#print DiamondIntegral.Section5.finiteRVSchemaRawValue_graph
+#print DiamondIntegral.Section5.finiteRVSchemaRawValue_definable
+#print DiamondIntegral.Section5.finiteRVSchemaRawValue_proper
+#print DiamondIntegral.Section5.finiteRVSchemaNativeVolume_finite
+#print DiamondIntegral.Section5.finiteRVSchemaNativeObject_label_graph
+#print DiamondIntegral.Section5.finiteRVSchemaNativeObject_row_value
+#print DiamondIntegral.Section5.prepare_rv_equality_with_extra_data
+#print DiamondIntegral.Section5.native_rv_equality_descends
+#print DiamondIntegral.Section5.rv_native_equality_iff_valid_package
+#print DiamondIntegral.Section5.rv_equality_finite_package_catalog
+#print DiamondIntegral.Section5.prepare_rv_evaluation_equality_catalog
+#print DiamondIntegral.Section5.rv_evaluation_equality_schema_at_parameter
+#print DiamondIntegral.Section5.originalWholeCertificates_left
+#print DiamondIntegral.Section5.originalWholeCertificates_right
+#print DiamondIntegral.Section5.originalWholeCertificates_valid
+#print DiamondIntegral.Section5.resExpression_atom_bijections_at_parameter
+#print DiamondIntegral.Section5.original_forall_ofFn_iff
+#print DiamondIntegral.Section5.RVEvaluationEqualitySchema.rowAgreement_iff_predicates
+#print DiamondIntegral.Section5.RVEvaluationEqualitySchema.recode_valid_iff
+#print DiamondIntegral.Section5.RVEvaluationEqualitySchema.valid_definable
+#print DiamondIntegral.Section5.RVEvaluationEqualitySchema.native_equality
+#print DiamondIntegral.Section5.RESWholeRelationCertificate.native_formal_equality
+#print DiamondIntegral.Section5.resWholePolynomials_native_equality
+#print DiamondIntegral.Section5.resWholeLeftPolynomial_recode
+#print DiamondIntegral.Section5.resWholeRightPolynomial_recode
+#print DiamondIntegral.Section5.RESWholeRelationCertificate.valid_definable
+#print DiamondIntegral.Section5.RESWholeRelationCertificate.expressions_valid
+#print DiamondIntegral.Section5.RESWholeRelationCertificate.native_equality
+#print DiamondIntegral.Section5.RESWholeRelationCertificate.recode_valid_iff
+#print DiamondIntegral.Section5.RESWholeRelationCertificate.left_formal_recode
+#print DiamondIntegral.Section5.RESWholeRelationCertificate.right_formal_recode
+#print DiamondIntegral.Section5.RESWholeRelationCertificate.rowAgreement_iff_predicates
+#print DiamondIntegral.Section5.additive_map_nat_mul
+#print DiamondIntegral.Section5.RVRectangleDecompositionSchema.resPolynomial_native_value
+#print DiamondIntegral.Section5.RVRectangleDecompositionSchema.resPolynomial_total_value
+#print DiamondIntegral.Section5.RVRectangleDecompositionSchema.positive_negative_polynomial_row_value
+#print DiamondIntegral.Section5.RVRectangleDecompositionSchema.positivePolynomial_recode
+#print DiamondIntegral.Section5.RVRectangleDecompositionSchema.negativePolynomial_recode
+#print DiamondIntegral.Section5.resExpressionCopies_formal_value
+#print DiamondIntegral.Section5.resExpressionTorusTimes_formal_value
+#print DiamondIntegral.Section5.RVRectanglePieceSchema.resContribution_formal_value
+#print DiamondIntegral.Section5.RVRectangleDecompositionSchema.positiveExpression_formal
+#print DiamondIntegral.Section5.RVRectangleDecompositionSchema.negativeExpression_formal
+#print DiamondIntegral.Section5.RVRectangleDecompositionSchema.resPolynomial_recode
+#print DiamondIntegral.Section5.nativeRelativeRVForget_value_power
+#print DiamondIntegral.Section5.nativeRESFormal_value_power_total
+#print DiamondIntegral.Section5.native_rv_family_fubini
+#print DiamondIntegral.Section5.native_rv_rectangle_family_fubini
+#print DiamondIntegral.Section5.RVRectanglePieceSchema.resContribution_valid
+#print DiamondIntegral.Section5.RVRectanglePieceSchema.resContribution_native_value
+#print DiamondIntegral.Section5.RVRectanglePieceSchema.resContribution_total_formal_value
+#print DiamondIntegral.Section5.RVRectangleDecompositionSchema.positiveExpression_valid
+#print DiamondIntegral.Section5.RVRectangleDecompositionSchema.negativeExpression_valid
+#print DiamondIntegral.Section5.RVRectangleDecompositionSchema.positive_negative_row_value
+#print DiamondIntegral.Section5.RVRectangleDecompositionSchema.positive_negative_total_formal_value
+#print DiamondIntegral.Section5.resExpressionListSum_additive_evaluate
+#print DiamondIntegral.Section5.resExpressionFiniteSum_valid
+#print DiamondIntegral.Section5.resExpressionFiniteSum_additive_evaluate
+#print DiamondIntegral.Section5.resExpressionFiniteSum_native_value
+#print DiamondIntegral.Section5.integer_positive_negative_cast
+#print DiamondIntegral.Section5.integer_positive_negative_weighted
+#print DiamondIntegral.Section5.RESSetSchema.native_row_value
+#print DiamondIntegral.Section5.original_gamma_row_value
+#print DiamondIntegral.Section5.RVRectanglePieceSchema.row_native_value
+#print DiamondIntegral.Section5.RVRectangleDecompositionSchema.row_native_value
+#print DiamondIntegral.Section5.nativeTorusSchema_valid
+#print DiamondIntegral.Section5.nativeTorusSchema_native_class
+#print DiamondIntegral.Section5.resExpressionCopies_valid
+#print DiamondIntegral.Section5.resExpressionCopies_native_value
+#print DiamondIntegral.Section5.resExpressionCopies_total_formal_value
+#print DiamondIntegral.Section5.resExpressionTorusTimes_valid
+#print DiamondIntegral.Section5.resExpressionTorusTimes_native_value
+#print DiamondIntegral.Section5.RESExpressionSchema.total_torus_step
+#print DiamondIntegral.Section5.resExpressionTorusTimes_total_formal_value
+#print DiamondIntegral.Section5.native_res_family_fubini
+#print DiamondIntegral.Section5.RESLayoutStabilizationSchema.total_native_equality
+#print DiamondIntegral.Section5.relativeRESFormalEvaluator_atom
+#print DiamondIntegral.Section5.RESExpressionRelationSchema.total_coefficient_equality
+#print DiamondIntegral.Section5.RESExpressionRelationSchema.total_formal_equality
+#print DiamondIntegral.Section5.resCertificateExpressions_total_formal_equality
+#print DiamondIntegral.Section5.gamma_value_coefficient_total_value
+#print DiamondIntegral.Section5.nativeRelativeRVForget_value_product
+#print DiamondIntegral.Section5.relativeRVCompletedClass_empty
+#print DiamondIntegral.Section5.RESExpressionSchema.relative_formal_evaluate
+#print DiamondIntegral.Section5.RESExpressionSchema.total_formal_evaluate
+#print DiamondIntegral.Section5.GammaValueSchema.source_valid
+#print DiamondIntegral.Section5.GammaValueSchema.source_row_singleton
+#print DiamondIntegral.Section5.GammaValueSchema.total_fibre_euler
+#print DiamondIntegral.Section5.gamma_value_total_value
+#print DiamondIntegral.Section5.relativeRVCompletedClass_iso
+#print DiamondIntegral.Section5.relativeRESProduct_class
+#print DiamondIntegral.Section5.relativeRVEmptyTotal
+#print DiamondIntegral.Section5.nativeRelativeRVForget_class
+#print DiamondIntegral.Section5.relativePointwiseIso_product_sum
+#print DiamondIntegral.Section5.relativeRVCompletedClass_product
+#print DiamondIntegral.Section5.relativeRVCompletedClass_sum
+#print DiamondIntegral.Section5.originalTaggedTotal_partition
+#print DiamondIntegral.Section5.original_tagged_total_value
+#print DiamondIntegral.Section5.relativePointClass_sum
+#print DiamondIntegral.Section5.relativePointwiseIso_product
+#print DiamondIntegral.Section5.relativePointwiseIso_refl
+#print DiamondIntegral.Section5.relativePointwiseIso_product_comm
+#print DiamondIntegral.Section5.relativePointwiseIso_product_assoc
+#print DiamondIntegral.Section5.relativePointwiseIso_product_empty
+#print DiamondIntegral.Section5.relativePointwiseIso_product_one
+#print DiamondIntegral.Section5.originalRVEmptyRow
+#print DiamondIntegral.Section5.original_rv_bijection_finite_catalog
+#print DiamondIntegral.Section5.originalRVTotalFamily_base_partition
+#print DiamondIntegral.Section5.original_rv_total_value_of_pointwise_bijections
+#print DiamondIntegral.Section5.nativeGeometricRetraction_class
+#print DiamondIntegral.Section5.nativeGeometricRetraction_point
+#print DiamondIntegral.Section5.nativeGeometricRetraction_equal_degree_clearing
+#print DiamondIntegral.Section5.geometricDegreeValue_shift
+#print DiamondIntegral.Section5.geometricDegreeValue_eq_iff
+#print DiamondIntegral.Section5.geometricDegreeValue_affine_padding
+#print DiamondIntegral.Section5.rawEquivalenceBijection_value
+#print DiamondIntegral.Section5.originalRVTotalBijection_preserves_base
+#print DiamondIntegral.Section5.relativeRVFamilyClass_sum
+#print DiamondIntegral.Section5.relativeRVFamilyClass_iso
+#print DiamondIntegral.Section5.PositiveProductData.leftMultiply_of
+#print DiamondIntegral.Section5.PositiveProductData.leftMultiply_comm
+#print DiamondIntegral.Section5.PositiveProductData.bilinear_of
+#print DiamondIntegral.Section5.PositiveProductData.bilinear_of_of
+#print DiamondIntegral.Section5.PositiveProductData.bilinear_assoc
+#print DiamondIntegral.Section5.PositiveProductData.bilinear_comm
+#print DiamondIntegral.Section5.PositiveProductData.bilinear_one_left
+#print DiamondIntegral.Section5.positiveProductAdditiveLift_class
+#print DiamondIntegral.Section5.RVRectanglePieceSchema.total_native_value
+#print DiamondIntegral.Section5.RVRectangleDecompositionSchema.total_native_value
+#print DiamondIntegral.Section5.original_product_total_value
+#print DiamondIntegral.Section5.rvValues_append
+#print DiamondIntegral.Section5.originalRVTotalFamily_append_mem
+#print DiamondIntegral.Section5.originalProductTotal_reindex
+#print DiamondIntegral.Section5.original_gamma_total_value
+#print DiamondIntegral.Section5.rawTupleReindexBijection_value
+#print DiamondIntegral.Section5.rawGammaTotalPacking_value
+#print DiamondIntegral.Section5.originalGammaRawUnits_row
+#print DiamondIntegral.Section5.originalRVTotalFamily_subset_gamma_packing
+#print DiamondIntegral.Section5.originalRawGammaTotal_preimage
+#print DiamondIntegral.Section5.native_raw_gamma_fubini_constant
+#print DiamondIntegral.Section5.originalRawGammaFamily_euler
+#print DiamondIntegral.Section5.OriginalEulerCertificate.source_valid
+#print DiamondIntegral.Section5.original_raw_gamma_certificate_fubini
+#print DiamondIntegral.Section5.rawParameterProjectionRecode_domain_agreement
+#print DiamondIntegral.Section5.rawParameterProjectionRecode_relation_agreement
+#print DiamondIntegral.Section5.rawParameterProjectionRecode_euler_agreement
+#print DiamondIntegral.Section5.rawParameterProjectionRecode_euler_valid_iff
+#print DiamondIntegral.Section5.rawRowTotal_definable
+#print DiamondIntegral.Section5.originalRawTotalEquiv_joined_definable
+#print DiamondIntegral.Section5.originalRawTotalEquiv_value
+#print DiamondIntegral.Section5.originalRawTotalEquiv_graph
+#print DiamondIntegral.Section5.originalRawGammaFamily_definable
+#print DiamondIntegral.Section5.RVRectangleDecompositionSchema.total_partition
+#print DiamondIntegral.Section5.rvValues_mem_rawDomain_iff
+#print DiamondIntegral.Section5.originalRVTotalFamily_raw_definable
+#print DiamondIntegral.Section5.originalRVTotalFamily_mem
+#print DiamondIntegral.Section5.rv_rectangle_families_descend
+#print DiamondIntegral.Section5.rv_rectangle_finite_catalog
+#print DiamondIntegral.Section5.rv_rectangle_decomposition_schema_at_parameter
+#print DiamondIntegral.Section5.rv_rectangle_piece_schema_at_parameter
+#print DiamondIntegral.Section5.rawDomain_finite_partition
+#print DiamondIntegral.Section5.originalGammaRVRow_raw
+#print DiamondIntegral.Section5.originalDomainProduct_presents_rawProduct
+#print DiamondIntegral.Section5.original_fixed_rv_bijection_schema_at_parameter
+#print DiamondIntegral.Section5.unitRVPresentation_finite_values
+#print DiamondIntegral.Section5.rawDomain_product
+#print DiamondIntegral.Section5.originalRVRowDomain_product_raw
+#print DiamondIntegral.Section5.prepare_rv_rectangle_catalog
+#print DiamondIntegral.Section5.originalRVRowDomain_raw
+#print DiamondIntegral.Section5.original_rv_domain_at_parameter
+#print DiamondIntegral.Section5.OriginalEulerCertificate.rowAgreement_iff_predicates
+#print DiamondIntegral.Section5.RVRectanglePieceSchema.rowAgreement_iff_predicates
+#print DiamondIntegral.Section5.RVRectangleDecompositionSchema.valid_definable
+#print DiamondIntegral.Section5.RVRectangleDecompositionSchema.recode_valid_iff
+#print DiamondIntegral.Section5.original_rv_bijection_schema_at_parameter
+#print DiamondIntegral.Section5.RVRectanglePieceSchema.valid_definable
+#print DiamondIntegral.Section5.RVRectanglePieceSchema.target_row_agreement
+#print DiamondIntegral.Section5.RVRectanglePieceSchema.recode_valid_iff
+#print DiamondIntegral.Section5.originalDomainLeftIndex_row
+#print DiamondIntegral.Section5.originalDomainRightIndex_row
+#print DiamondIntegral.Section5.originalDomainProduct_row
+#print DiamondIntegral.Section5.rawGammaFunctionFamily_euler
+#print DiamondIntegral.Section5.native_raw_gamma_tuple_torsor_fubini
+#print DiamondIntegral.Section5.raw_rv_rectangle_decomposition
+#print DiamondIntegral.Section5.RawRVRectangle.native_value
+#print DiamondIntegral.Section5.rawRVGammaLift_row
+#print DiamondIntegral.Section5.rawGammaLift_subset_packing
+#print DiamondIntegral.Section5.rawGammaRepresentativeDomain_row
+#print DiamondIntegral.Section5.native_raw_relative_gamma_fubini_partition
+#print DiamondIntegral.Section5.native_raw_relative_gamma_fubini
+#print DiamondIntegral.Section5.groundBijection_inverseImage_at
+#print DiamondIntegral.Section5.groundBijection_pullback_partition
+#print DiamondIntegral.Section5.nativeRVSetValue_raw_unit_bijection
+#print DiamondIntegral.Section5.rawRVGammaFibreEulerValue_forward_code
+#print DiamondIntegral.Section5.raw_rv_gamma_fibre_euler_constructible
+#print DiamondIntegral.Section5.nativeRVSetValue_of_empty
+#print DiamondIntegral.Section5.nativeRawWeightedValue_partition
+#print DiamondIntegral.Section5.rawRVGammaFamily_row_definable
+#print DiamondIntegral.Section5.rawRVGammaFibreEulerValue_code
+#print DiamondIntegral.Section5.native_relative_gamma_fubini
+#print DiamondIntegral.Section5.rawRVGammaFamilyCode_row
+#print DiamondIntegral.Section5.rawRVGammaFamilyCode_projection
+#print DiamondIntegral.Section5.nativeRVSetValue_nonzero_code
+#print DiamondIntegral.Section5.nativeUnitRVSetValue_of_empty
+#print DiamondIntegral.Section5.nativeUnitWeightedValue_partition
+#print DiamondIntegral.Section5.native_relative_gamma_fubini_partition
+#print DiamondIntegral.Section5.rv_gamma_euler_certificate_partition
+#print DiamondIntegral.Section5.native_euler_certificate_fubini
+#print DiamondIntegral.Section5.rvGammaFamilySchema_restrict_row
+#print DiamondIntegral.Section5.OriginalEulerCertificate.validFor_source_congr
+#print DiamondIntegral.Section5.rvGammaFamilyLift_restrict_partition
+#print DiamondIntegral.Section5.OriginalEulerCertificate.family_partition
+#print DiamondIntegral.Section5.reverseSuffixPermutation_involutive
+#print DiamondIntegral.Section5.rvGammaLift_reindex_mem
+#print DiamondIntegral.Section5.rvGammaReverseLift_finite_partition
+#print DiamondIntegral.Section5.OriginalGammaCellTree.family_row
+#print DiamondIntegral.Section5.OriginalGammaCellTree.family_is_cell
+#print DiamondIntegral.Section5.cylindrical_step_quotient_fibres
+#print DiamondIntegral.Section5.CylinderFibreKind.attach_eulerValue
+#print DiamondIntegral.Section5.RVGammaCellFamily.native_value
+#print DiamondIntegral.Section5.unitGammaHeadFamilyMap_value
+#print DiamondIntegral.Section5.rvGammaHeadFamily_mem
+#print DiamondIntegral.Section5.rvGammaReverseLift_head
+#print DiamondIntegral.Section5.reverseSuffixPermutation_left
+#print DiamondIntegral.Section5.reverseSuffixPermutation_right
+#print DiamondIntegral.Section5.allRVGammaDomain_definable
+#print DiamondIntegral.Section5.originalGammaFamilyRealization_projection
+#print DiamondIntegral.Section5.originalGammaFamilyRealization_row
+#print DiamondIntegral.Section5.unitTupleReindexMap_value
+#print DiamondIntegral.Section5.native_described_cylinder_fubini
+#print DiamondIntegral.Section5.rvGammaFamilyLift_mem
+#print DiamondIntegral.Section5.gammaEndpointCondition_definable
+#print DiamondIntegral.Section5.gammaEndpointOrdered_definable
+#print DiamondIntegral.Section5.cylinderEndpointGraph_definable
+#print DiamondIntegral.Section5.definable_cylinder_endpoints
+#print DiamondIntegral.Section5.ground_space_iff_definable
+#print DiamondIntegral.Section5.ground_space_forall_right
+#print DiamondIntegral.Section5.generalEndpointTupleMap_value
+#print DiamondIntegral.Section5.native_cylinder_fubini
+#print DiamondIntegral.Section5.CylinderFibreKind.endpoints_unique
+#print DiamondIntegral.Section5.GroundMonomialPiece.endpointGammaSupport_at_coordinate
+#print DiamondIntegral.Section5.GroundMonomialPiece.extraGammaDomain_cylinderLift
+#print DiamondIntegral.Section5.GroundMonomialPiece.cylinder_value
+#print DiamondIntegral.Section5.endpointFamilyTupleMap_value
+#print DiamondIntegral.Section5.endpointGammaFamily_mem
+#print DiamondIntegral.Section5.groundGammaCylinderLift_finite_partition
+#print DiamondIntegral.Section5.gamma_endpoint_monomial_catalog
+#print DiamondIntegral.Section5.GroundMonomialPiece.extraGammaTarget_subset
+#print DiamondIntegral.Section5.GroundMonomialPiece.extraGammaSource_mem
+#print DiamondIntegral.Section5.GroundMonomialPiece.extraGamma_value
+#print DiamondIntegral.Section5.GroundMonomialPiece.freeValueReconstruction_has_source
+#print DiamondIntegral.Section5.GroundMonomialPiece.endpointGammaSupport_describes
+#print DiamondIntegral.Section5.GroundMonomialPiece.endpointGammaSupport_euler
+#print DiamondIntegral.Section5.CylinderFibreKind.condition_fullDefinable
+#print DiamondIntegral.Section5.GroundMonomialPiece.endpointGammaSupport_row
+#print DiamondIntegral.Section5.gamma_last_cylinder_euler
+#print DiamondIntegral.Section5.rvGammaFamily_row_definable
+#print DiamondIntegral.Section5.rvGammaFibreEulerValue_integral
+#print DiamondIntegral.Section5.rv_gamma_fibre_euler_constructible
+#print DiamondIntegral.Section5.gamma_cylinder_integrateFirst
+#print DiamondIntegral.Section5.gamma_cylinder_integrateAll
+#print DiamondIntegral.Section5.rvGammaFamilySchema_row
+#print DiamondIntegral.Section5.rvGammaFamilySchema_represents
+#print DiamondIntegral.Section5.rvGammaFamilySchema_valid
+#print DiamondIntegral.Section5.rvGammaFamilySchema_quotient_row
+#print DiamondIntegral.Section5.unitGammaTupleTorsor_mem
+#print DiamondIntegral.Section5.native_gamma_tuple_torsor_fubini
+#print DiamondIntegral.Section5.original_euler_row_values_constructible
+#print DiamondIntegral.Section5.torsor_castAdd_succ
+#print DiamondIntegral.Section5.torsor_natAdd_castSucc
+#print DiamondIntegral.Section5.torsor_natAdd_last
+#print DiamondIntegral.Section5.unitGammaTorsorTower_projection_value
+#print DiamondIntegral.Section5.unitGammaTorsorTower_coordinate_value
+#print DiamondIntegral.Section5.unitGammaTorsorTower_mem_of_row
+#print DiamondIntegral.Section5.unitGammaTorsorTower_mem_iff
+#print DiamondIntegral.Section5.native_gamma_torsor_tower_value
+#print DiamondIntegral.Section5.originalGammaSourceRow_represents
+#print DiamondIntegral.Section5.originalGammaSourceRow_definable
+#print DiamondIntegral.Section5.OriginalEulerCertificate.validFor_definable
+#print DiamondIntegral.Section5.OriginalEulerCertificate.originalGammaRowEulerValue
+#print DiamondIntegral.Section5.groundGammaFunctionGraphLift_projection_value
+#print DiamondIntegral.Section5.groundGammaFunctionGraphLift_value
+#print DiamondIntegral.Section5.native_scalar_torsor_fubini
+#print DiamondIntegral.Section5.GroundMonomialPiece.reconstructedTorsorDomain_graphLift
+#print DiamondIntegral.Section5.GroundMonomialPiece.function_torsor_value
+#print DiamondIntegral.Section5.gamma_function_monomial_catalog
+#print DiamondIntegral.Section5.groundGammaFunctionGraphLift_restrict_mem
+#print DiamondIntegral.Section5.groundGammaFunctionGraphLift_finite_partition
+#print DiamondIntegral.Section5.GroundMonomialPiece.native_unit_value
+#print DiamondIntegral.Section5.GroundMonomialPiece.reconstructedTorsor_value
+#print DiamondIntegral.Section5.ground_monomial_source_partition
+#print DiamondIntegral.Section5.GroundMonomialPiece.torsorCoordinateBijection_value
+#print DiamondIntegral.Section5.GroundMonomialPiece.torsorTarget_subset
+#print DiamondIntegral.Section5.GroundMonomialPiece.reconstructedTorsorSource_mem
+#print DiamondIntegral.Section5.finAppendSingleton_eq_snoc
+#print DiamondIntegral.Section5.rvUnitTupleValues_snoc
+#print DiamondIntegral.Section5.unitTupleLastCylinder_mem
+#print DiamondIntegral.Section5.unitTupleLastProduct_mem
+#print DiamondIntegral.Section5.GroundMonomialPiece.coordinateMap_value
+#print DiamondIntegral.Section5.nativeUnitRVSetValue_gamma
+#print DiamondIntegral.Section5.nativeRVSetValue_object
+#print DiamondIntegral.Section5.nativeUnitRVSetValue_object
+#print DiamondIntegral.Section5.nativeRVSetValue_product
+#print DiamondIntegral.Section5.nativeRVSetValue_finite_partition
+#print DiamondIntegral.Section5.nativeUnitRVSetValue_product
+#print DiamondIntegral.Section5.nativeUnitRVSetValue_finite_partition
+#print DiamondIntegral.Section5.GroundMonomialPiece.reconstructedGammaGraph_euler
+#print DiamondIntegral.Section5.gamma_singleton_graph_euler
+#print DiamondIntegral.Section5.GroundMonomialPiece.freeValueReconstruction_definable
+#print DiamondIntegral.Section5.GroundMonomialPiece.freeValueReconstruction_coordinate
+#print DiamondIntegral.Section5.GroundMonomialPiece.reconstructedGammaGraph_row
+#print DiamondIntegral.Section5.GroundMonomialPiece.reconstructedGammaGraph_exists
+#print DiamondIntegral.Section5.GroundMonomialPiece.reconstructedGammaGraph_unique
+#print DiamondIntegral.Section5.GroundMonomialPiece.reconstructedGammaGraph_existsUnique
+#print DiamondIntegral.Section5.nativeGroundRVEvaluation_class
+#print DiamondIntegral.Section5.nativeGroundRVEvaluation_bijection
+#print DiamondIntegral.Section5.nativeGroundRVEvaluation_product
+#print DiamondIntegral.Section5.nativeGroundRVEvaluation_finite_partition
+#print DiamondIntegral.Section5.finite_scalar_gamma_parameter_control
+#print DiamondIntegral.Section5.nativeRVSetValue_bijection
+#print DiamondIntegral.Section5.nativeUnitRVSetValue_bijection
+#print DiamondIntegral.Section5.groundGammaFunctionGraphLift_functional
+#print DiamondIntegral.Section5.groundGammaFunctionGraphLift_domain
+#print DiamondIntegral.Section5.groundGammaFunctionGraphLift_row
+#print DiamondIntegral.Section5.scalar_gamma_parameter_control
+#print DiamondIntegral.Section5.GroundMonomialPiece.scalar_value_image_functional
+#print DiamondIntegral.Section5.GroundMonomialPiece.scalar_value_image_row
+#print DiamondIntegral.Section5.scalar_gamma_graph_value_partition
+#print DiamondIntegral.Section5.GroundMonomialPiece.coordinate_mem_iff
+#print DiamondIntegral.Section5.GroundMonomialPiece.active_values
+#print DiamondIntegral.Section5.GroundMonomialPiece.rectangle_reconstruction
+#print DiamondIntegral.Section5.GroundMonomialPiece.scalar_graph_value_unique
+#print DiamondIntegral.Section5.groundUnitTupleInitMap_image
+#print DiamondIntegral.Section5.monomial_scalar_graph_value_unique
+#print DiamondIntegral.Section5.residue_gamma_family_templates
+#print DiamondIntegral.Section5.native_res_equality_descends
+#print DiamondIntegral.Section5.res_native_equality_iff_valid_layout
+#print DiamondIntegral.Section5.res_equality_finite_layout_catalog
+#print DiamondIntegral.Section5.presented_tagged_layout_for
+#print DiamondIntegral.Section5.res_layout_schema_of_literal_witness
+#print DiamondIntegral.Section5.res_layout_schema_exists_of_native_equality
+#print DiamondIntegral.Section5.prepare_joint_res_euler_catalog
+#print DiamondIntegral.Section5.res_fixed_bijection_schema_at_parameter
+#print DiamondIntegral.Section5.res_expression_bijection_schema_at_parameter
+#print DiamondIntegral.Section5.presentedOldObjects_append
+#print DiamondIntegral.Section5.presentedFormalSum_append
+#print DiamondIntegral.Section5.native_relation_list_presentation_exists
+#print DiamondIntegral.Section5.native_relation_term_presentation_exists
+#print DiamondIntegral.Section5.native_presented_list_exists
+#print DiamondIntegral.Section5.presentedCoefficientExpression_valid
+#print DiamondIntegral.Section5.presentedCoefficientExpression_formal
+#print DiamondIntegral.Section5.presentedProductList_old
+#print DiamondIntegral.Section5.presentedProductList_formal
+#print DiamondIntegral.Section5.presented_degree_tagged_expression_exists
+#print DiamondIntegral.Section5.presented_degree_expression_exists
+#print DiamondIntegral.Section5.native_expression_presentation_exists
+#print DiamondIntegral.Section5.res_primitive_schema_at_parameter
+#print DiamondIntegral.Section5.native_res_schema_at_parameter
+#print DiamondIntegral.Section5.prepare_finite_res_layout_catalog
+#print DiamondIntegral.Section5.forall_mem_flatMap_iff
+#print DiamondIntegral.Section5.RESLayoutStabilizationSchema.rowAgreement_iff_predicates
+#print DiamondIntegral.Section5.rawDomain_carrier_eq
+#print DiamondIntegral.Section5.RESLayoutStabilizationSchema.recode_valid_iff
+#print DiamondIntegral.Section5.raw_native_left_tag
+#print DiamondIntegral.Section5.raw_native_right_tag
+#print DiamondIntegral.Section5.rawDomain_native_tagged_union
+#print DiamondIntegral.Section5.RESLayoutStabilizationSchema.valid_definable
+#print DiamondIntegral.Section5.RESLayoutStabilizationSchema.native_equality
+#print DiamondIntegral.Section5.resExpressionListSum_formal
+#print DiamondIntegral.Section5.resCertificateLeft_formal_recode
+#print DiamondIntegral.Section5.resCertificateRight_formal_recode
+#print DiamondIntegral.Section5.resCertificateLeftExpression_valid
+#print DiamondIntegral.Section5.resCertificateRightExpression_valid
+#print DiamondIntegral.Section5.resCertificateExpressions_native_equality
+#print DiamondIntegral.Section5.RESExpressionRelationSchema.expressions_recode
+#print DiamondIntegral.Section5.RESExpressionRelationSchema.recode_valid_iff
+#print DiamondIntegral.Section5.RESExpressionRelationSchema.rowAgreement_iff_predicates
+#print DiamondIntegral.Section5.RESExpressionSchema.formalValue_recode
+#print DiamondIntegral.Section5.RESExpressionRelationSchema.valid_definable
+#print DiamondIntegral.Section5.RESExpressionRelationSchema.expressions_valid
+#print DiamondIntegral.Section5.RESExpressionRelationSchema.native_equality
+#print DiamondIntegral.Section5.RESExpressionSchema.formalValue_evaluate
+#print DiamondIntegral.Section5.original_list_predicate_validity_definable
+#print DiamondIntegral.Section5.RESStabilizationSchema.valid_definable
+#print DiamondIntegral.Section5.RESStabilizationSchema.sourceExpression_valid
+#print DiamondIntegral.Section5.RESStabilizationSchema.targetExpression_valid
+#print DiamondIntegral.Section5.RESStabilizationSchema.native_equality
+#print DiamondIntegral.Section5.prepare_finite_mixed_original_base_RV_graphs
+#print DiamondIntegral.Section5.resExpressionListSum_valid
+#print DiamondIntegral.Section5.resRelationLeftExpression_valid
+#print DiamondIntegral.Section5.resRelationRightExpression_valid
+#print DiamondIntegral.Section5.resRelationExpressions_native_equality
+#print DiamondIntegral.Section5.resStabilizedExpression_valid
+#print DiamondIntegral.Section5.RESExpressionBijectionSchema.valid_definable
+#print DiamondIntegral.Section5.RESExpressionBijectionSchema.native_equality
+#print DiamondIntegral.Section5.RESExpressionBijectionSchema.recode_valid_iff
+#print DiamondIntegral.Section5.append_rv_sort
+#print DiamondIntegral.Section5.restoreRVParameters_row
+#print DiamondIntegral.Section5.mixedPreparedParameterRecode_domain_agreement
+#print DiamondIntegral.Section5.mixedPreparedParameterRecode_relation_agreement
+#print DiamondIntegral.Section5.resListExpression_valid
+#print DiamondIntegral.Section5.RESRelationTermSchema.leftExpression_valid
+#print DiamondIntegral.Section5.RESRelationTermSchema.rightExpression_valid
+#print DiamondIntegral.Section5.RESRelationTermSchema.native_expression_equality
+#print DiamondIntegral.Section5.RESExpressionSchema.rowAgreement_iff_predicates
+#print DiamondIntegral.Section5.RESExpressionSchema.recode_valid_iff
+#print DiamondIntegral.Section5.RESExpressionSchema.recode_row_iff
+#print DiamondIntegral.Section5.RESPrimitiveSchema.leftExpression_valid
+#print DiamondIntegral.Section5.RESPrimitiveSchema.rightExpression_valid
+#print DiamondIntegral.Section5.RESPrimitiveSchema.native_expression_equality
+#print DiamondIntegral.Section5.carryRVParameterDomain_row
+#print DiamondIntegral.Section5.uncarryRVParameterDomain_row
+#print DiamondIntegral.Section5.flattenGammaRelation_row
+#print DiamondIntegral.Section5.unflattenGammaRelation_row
+#print DiamondIntegral.Section5.RESSetSchema.empty_valid
+#print DiamondIntegral.Section5.RESExpressionSchema.valid_definable
+#print DiamondIntegral.Section5.RESExpressionSchema.setSchema_valid
+#print DiamondIntegral.Section5.RESExpressionSchema.nativeClass_eq
+#print DiamondIntegral.Section5.RESSetSchema.sum_native_class
+#print DiamondIntegral.Section5.nativeRESChartClass_iso
+#print DiamondIntegral.Section5.nativeRESChartClass_product
+#print DiamondIntegral.Section5.nativeRESChartClass_empty
+#print DiamondIntegral.Section5.nativeRESChartClass_cut
+#print DiamondIntegral.Section5.rawRVValuePattern_append
+#print DiamondIntegral.Section5.rawRVValuePattern_constant
+#print DiamondIntegral.Section5.rawRVLeftTag_valuePattern
+#print DiamondIntegral.Section5.rawRVRightTag_valuePattern
+#print DiamondIntegral.Section5.RESSetSchema.sum_row
+#print DiamondIntegral.Section5.RESSetSchema.sum_value_image
+#print DiamondIntegral.Section5.RESSetSchema.sum_valid
+#print DiamondIntegral.Section5.RESSetSchema.sum_recode_row
+#print DiamondIntegral.Section5.prepare_finite_res_relation_term_catalog
+#print DiamondIntegral.Section5.rawRVLeftTag_eq
+#print DiamondIntegral.Section5.rawRVRightTag_eq
+#print DiamondIntegral.Section5.OriginalSortedPredicate.equal_named_coordinate
+#print DiamondIntegral.Section5.taggedParameterLeftIndex_row
+#print DiamondIntegral.Section5.taggedParameterRightIndex_row
+#print DiamondIntegral.Section5.nativeRVTaggedDomain_row
+#print DiamondIntegral.Section5.RESRelationTermSchema.rowAgreement_iff_predicates
+#print DiamondIntegral.Section5.RESSetSchema.native_class_of_row_eq
+#print DiamondIntegral.Section5.RESSetSchema.product_native_class
+#print DiamondIntegral.Section5.productLeftParameterIndex_row
+#print DiamondIntegral.Section5.productRightParameterIndex_row
+#print DiamondIntegral.Section5.RESSetSchema.product_row
+#print DiamondIntegral.Section5.rawRVValuePattern_join
+#print DiamondIntegral.Section5.RESSetSchema.product_value_image
+#print DiamondIntegral.Section5.RESSetSchema.product_valid
+#print DiamondIntegral.Section5.RESRelationTermSchema.valid_definable
+#print DiamondIntegral.Section5.RESRelationTermSchema.recode_valid_iff
+#print DiamondIntegral.Section5.RESRelationTermSchema.recode_orientation
+#print DiamondIntegral.Section5.RESRelationTermSchema.recode_coefficient_count
+#print DiamondIntegral.Section5.prepare_finite_res_primitive_catalog
+#print DiamondIntegral.Section5.RESPrimitiveSchema.valid_definable
+#print DiamondIntegral.Section5.RESPrimitiveSchema.recode_valid_iff
+#print DiamondIntegral.Section5.RESPrimitiveSchema.rowAgreement_iff_predicates
+#print DiamondIntegral.Section5.GammaValueSchema.constant_row
+#print DiamondIntegral.Section5.GammaValueSchema.constant_valid
+#print DiamondIntegral.Section5.GammaValueSchema.constant_value
+#print DiamondIntegral.Section5.GammaValueSchema.fibre_domain
+#print DiamondIntegral.Section5.GammaValueSchema.native_fibre_equality
+#print DiamondIntegral.Section5.GammaValueSchema.valid_definable
+#print DiamondIntegral.Section5.GammaValueSchema.full_singleton_row
+#print DiamondIntegral.Section5.GammaValueSchema.value_row
+#print DiamondIntegral.Section5.GammaValueSchema.value_definable
+#print DiamondIntegral.Section5.GammaValueSchema.recode_valid_iff
+#print DiamondIntegral.Section5.GammaValueSchema.recode_value_eq
+#print DiamondIntegral.Section5.GammaValueSchema.valid_of_full_singleton_row
+#print DiamondIntegral.Section5.gamma_value_schema_at_parameter
+#print DiamondIntegral.Section5.original_euler_certificate_for_fixed_source
+#print DiamondIntegral.Section5.original_euler_finite_catalog
+#print DiamondIntegral.Section5.prepare_finite_original_euler_catalog
+#print DiamondIntegral.Section5.OriginalGammaCellTree.validity_definable
+#print DiamondIntegral.Section5.OriginalEulerCertificate.validity_definable
+#print DiamondIntegral.Section5.original_cylindrical_step_validity_definable
+#print DiamondIntegral.Section5.OriginalGammaCellTree.domainFormula_realize
+#print DiamondIntegral.Section5.firstCoordinateCurryIndex_row
+#print DiamondIntegral.Section5.curryFirstGammaDomain_row
+#print DiamondIntegral.Section5.original_domain_nonzero_validity_definable
+#print DiamondIntegral.Section5.original_domain_value_invariance_definable
+#print DiamondIntegral.Section5.original_quotient_domain_validity_definable
+#print DiamondIntegral.Section5.original_cylindrical_fibre_validity_definable
+#print DiamondIntegral.Section5.original_finite_partition_validity_definable
+#print DiamondIntegral.Section5.OriginalSortedPredicate.of_definable
+#print DiamondIntegral.Section5.OriginalSortedPredicate.truth
+#print DiamondIntegral.Section5.OriginalSortedPredicate.neg
+#print DiamondIntegral.Section5.OriginalSortedPredicate.conj
+#print DiamondIntegral.Section5.OriginalSortedPredicate.disj
+#print DiamondIntegral.Section5.OriginalSortedPredicate.impl
+#print DiamondIntegral.Section5.OriginalSortedPredicate.iff
+#print DiamondIntegral.Section5.OriginalSortedPredicate.congr
+#print DiamondIntegral.Section5.OriginalSortedPredicate.pullback
+#print DiamondIntegral.Section5.OriginalSortedPredicate.all
+#print DiamondIntegral.Section5.OriginalSortedPredicate.ex
+#print DiamondIntegral.Section5.OriginalSortedPredicate.finite_all
+#print DiamondIntegral.Section5.prepare_finite_original_base_RV_graphs
+#print DiamondIntegral.Section5.prepare_finite_res_bijection_schemata
+#print DiamondIntegral.Section5.joined_equiv_graph_append_definable
+#print DiamondIntegral.Section5.res_bijection_schema_at_parameter
+#print DiamondIntegral.Section5.res_uniform_support_bound
+#print DiamondIntegral.Section5.RESSetSchema.chart_domain
+#print DiamondIntegral.Section5.RESBijectionSchema.rawEquiv_graph
+#print DiamondIntegral.Section5.RESBijectionSchema.raw_joined_graph_definable
+#print DiamondIntegral.Section5.RESBijectionSchema.native_equality
+#print DiamondIntegral.Section5.forall_join_property
+#print DiamondIntegral.Section5.joinedRelationRow_definable
+#print DiamondIntegral.Section5.RESBijectionSchema.valid_definable
+#print DiamondIntegral.Section5.RESBijectionSchema.validity_formula
+#print DiamondIntegral.Section5.RESBijectionSchema.recode_valid_iff
+#print DiamondIntegral.Section5.original_validity_formula
+#print DiamondIntegral.Section5.RESSetSchema.recode_valueBound
+#print DiamondIntegral.Section5.RESSetSchema.recode_rowDomain
+#print DiamondIntegral.Section5.RESSetSchema.recode_valid_iff
+#print DiamondIntegral.Section5.native_family_value_bound_definable
+#print DiamondIntegral.Section5.RESSetSchema.valid_definable
+#print DiamondIntegral.Section5.nativeValueCounterexamples_definable
+#print DiamondIntegral.Section5.nativeValueCounterexamples_projection_iff
+#print DiamondIntegral.Section5.RESSetSchema.row_domain_definable
+#print DiamondIntegral.Section5.RESSetSchema.valid_iff_finite_values
+#print DiamondIntegral.Section5.raw_RV_value_image_eq_chart_range
+#print DiamondIntegral.Section5.res_set_schema_at_parameter
+#print DiamondIntegral.Section5.finite_image_bound_iff_no_distinct_rows
+#print DiamondIntegral.Section5.parameter_free_formula_original_definable
+#print DiamondIntegral.Section5.native_tuple_quotient_equality
+#print DiamondIntegral.Section5.valueDistinctFormula_realize
+#print DiamondIntegral.Section5.rawRVValuePattern_of_tuple
+#print DiamondIntegral.Section5.native_RV_value_syntax_exists
+#print DiamondIntegral.Section5.rvValuePatternEqualityFormula_realize
+#print DiamondIntegral.Section5.rvFiniteValueValidityFormula_card
+#print DiamondIntegral.Section5.gammaRVFiniteValues_iff_raw_patterns
+#print DiamondIntegral.Section5.valueCollisionFormula_realize_on_domain
+#print DiamondIntegral.Section5.finiteValueValidityFormula_on_domain_card
+#print DiamondIntegral.Section5.prepare_original_euler_certificate
+#print DiamondIntegral.Section5.OriginalEulerCertificate.recode_validity_iff
+#print DiamondIntegral.Section5.OriginalEulerCertificate.recode_eulerValue
+#print DiamondIntegral.Section5.finitePartitionValidity_congr
+#print DiamondIntegral.Section5.EulerFormulaCertificate.source_quotient_validity
+#print DiamondIntegral.Section5.EulerFormulaCertificate.validity_congr
+#print DiamondIntegral.Section5.EulerFormulaCertificate.eulerValue_congr
+#print DiamondIntegral.Section5.OriginalGammaCellTree.predicates_length
+#print DiamondIntegral.Section5.OriginalGammaCellTree.rowAgreement_iff_predicates
+#print DiamondIntegral.Section5.OriginalGammaCellTree.syntax_recode_related
+#print DiamondIntegral.Section5.OriginalGammaCellTree.recode_validity_iff
+#print DiamondIntegral.Section5.OriginalGammaCellTree.recode_shape
+#print DiamondIntegral.Section5.OriginalGammaCellTree.recode_gammaDomain
+#print DiamondIntegral.Section5.CylinderFibreKind.conditionFormula_parameter_independent
+#print DiamondIntegral.Section5.CylinderFibreKind.orderFormula_parameter_independent
+#print DiamondIntegral.Section5.cylindricalFibreValidity_congr
+#print DiamondIntegral.Section5.quotientDomainValidity_congr
+#print DiamondIntegral.Section5.cylindricalStepValidity_congr
+#print DiamondIntegral.Section5.CylindricalFormulaTree.RowRelated.domain
+#print DiamondIntegral.Section5.CylindricalFormulaTree.RowRelated.shape
+#print DiamondIntegral.Section5.CylindricalFormulaTree.RowRelated.validity
+#print DiamondIntegral.Section5.finitePartitionValidity_of_gamma_presentations
+#print DiamondIntegral.Section5.original_euler_certificate_exists
+#print DiamondIntegral.Section5.native_gamma_relation_syntax_exists
+#print DiamondIntegral.Section5.OriginalGammaCellTree.raw_definable
+#print DiamondIntegral.Section5.original_gamma_tree_extend
+#print DiamondIntegral.Section5.shaped_gamma_cell_has_original_formula_tree
+#print DiamondIntegral.Section5.gamma_domain_formula_syntax
+#print DiamondIntegral.Section5.gammaDomainSyntax_realize
+#print DiamondIntegral.Section5.promote_original_gamma_predicate
+#print DiamondIntegral.Section5.gammaDomainSyntax_row_definable
+#print DiamondIntegral.Section5.quotientDomainValidity_of_gamma_presentation
+#print DiamondIntegral.Section5.quotientFormulaDomain_eq_of_gamma_presentation
+#print DiamondIntegral.Section5.cylindricalStepValidity_of_gamma_presentations
+#print DiamondIntegral.Section5.gamma_tuple_code_surjective
+#print DiamondIntegral.Section5.EulerFormulaCertificate.integral_eq
+#print DiamondIntegral.Section5.finitePartitionValidityFormula_realize
+#print DiamondIntegral.Section5.finitePartitionValidityFormula_unique
+#print DiamondIntegral.Section5.CylindricalFormulaTree.gamma_shaped_of_validity
+#print DiamondIntegral.Section5.CylindricalFormulaTree.gamma_domain_definable_of_raw
+#print DiamondIntegral.Section5.CylindricalFormulaTree.gamma_definable_of_raw
+#print DiamondIntegral.Section5.CylindricalFormulaTree.gamma_euler_value
+#print DiamondIntegral.Section5.nativeRVEvaluation_monomial
+#print DiamondIntegral.Section5.nativeRVEvaluation_relative_monomial
+#print DiamondIntegral.Section5.curryFirstCoordinateFormula_realize
+#print DiamondIntegral.Section5.cylindricalStepValidityFormula_realize
+#print DiamondIntegral.Section5.CylindricalFormulaTree.domainValidity
+#print DiamondIntegral.Section5.tupleProperFormula_realize
+#print DiamondIntegral.Section5.tupleQuotientEqualityFormula_realize
+#print DiamondIntegral.Section5.quotientDomainValidityFormula_realize
+#print DiamondIntegral.Section5.quotientFormulaDomain_full_preimage
+#print DiamondIntegral.Section5.shaped_cell_of_fibre_certificate
+#print DiamondIntegral.Section5.ShapedGammaCell.fibre_certificate
+#print DiamondIntegral.Section5.nativeRVEvaluation_res
+#print DiamondIntegral.Section5.nativeRVEvaluation_gamma
+#print DiamondIntegral.Section5.nativeRVEvaluation_point
+#print DiamondIntegral.Section5.ordinary_castRVChart
+#print DiamondIntegral.Section5.ordinary_RV_homogenization
+#print DiamondIntegral.Section5.nativeRVEvaluation_underlyingIso
+#print DiamondIntegral.Section5.relationalIff_realize
+#print DiamondIntegral.Section5.binaryRelabel_realize
+#print DiamondIntegral.Section5.cylindricalFibreValidityFormula_realize
+#print DiamondIntegral.Section5.CylinderFibreKind.conditionFormula_realize
+#print DiamondIntegral.Section5.CylinderFibreKind.orderFormula_realize
+#print DiamondIntegral.Section5.cylindricalFibreValidityFormula_quotient
+#print DiamondIntegral.Section5.valueCollisionFormula_realize
+#print DiamondIntegral.Section5.finiteValueValidityFormula_card
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.geometricLinearActionComparison_mk
+#print DiamondIntegral.Section5.PuiseuxOriginal.theta_5_14_mk
+#print DiamondIntegral.Section5.finite_linear_difference_mem
+#print DiamondIntegral.Section5.finite_linear_product_difference_mem
+#print DiamondIntegral.Section5.rational_diagonal_difference_mem
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.geometricValue_affineSpace
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.toVarietyRing_affineSpace
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.affine_difference_mem
+#print DiamondIntegral.Section5.geometric_linearActionIdeal_correspondence
+#print DiamondIntegral.Section5.linearPolynomialMap_diagonal
+#print DiamondIntegral.Section5.character_basis_coordinates
+#print DiamondIntegral.Section5.character_basis_polynomial_coordinates
+#print DiamondIntegral.Section5.polynomialDiagonalAction_neg_inv
+#print DiamondIntegral.Section5.linearCoordinateSchemeIso_hom
+#print DiamondIntegral.Section5.finite_linear_affine_diagonalization
+#print DiamondIntegral.Section5.linearPolynomialMap_coordinate
+#print DiamondIntegral.Section5.linearPolynomialMap_point
+#print DiamondIntegral.Section5.linearPolynomialMap_comp
+#print DiamondIntegral.Section5.linearPolynomialMap_id
+#print DiamondIntegral.Section5.toDiagonalRing_geometricValue
+#print DiamondIntegral.Section5.toVarietyRing_toDiagonalRing
+#print DiamondIntegral.Section5.toDiagonalRing_toVarietyRing
+#print DiamondIntegral.Section5.PuiseuxOriginal.rawVarietyComparison_apply
+#print DiamondIntegral.Section5.geometricPreimage_product
+#print DiamondIntegral.Section5.EquivariantVariety.toDiagonalRing_objectClass
+#print DiamondIntegral.Section5.diagonalObject_presentation_partition
+#print DiamondIntegral.Section5.EquivariantVariety.ProductPresentation.hom_ext
+#print DiamondIntegral.Section5.EquivariantVariety.ProductPresentation.mapHom_fst
+#print DiamondIntegral.Section5.EquivariantVariety.ProductPresentation.mapHom_snd
+#print DiamondIntegral.Section5.EquivariantVariety.ProductPresentation.map_immersion
+#print DiamondIntegral.Section5.EquivariantVariety.ProductPresentation.map_range
+#print DiamondIntegral.Section5.immersedProduct_coordinate_domain
+#print DiamondIntegral.Section5.immersedProduct_coordinate_class
+#print DiamondIntegral.Section5.geometricPreimage_finite_partition
+#print DiamondIntegral.Section5.geometricPreimage_empty
+#print DiamondIntegral.Section5.geometricPreimage_iso
+#print DiamondIntegral.Section5.geometricPreimage_scissor
+#print DiamondIntegral.Section5.geometricPreimage_affine_zero
+#print DiamondIntegral.Section5.geometricPreimage_unit
+#print DiamondIntegral.Section5.diagonal_preimage_independent
+#print DiamondIntegral.Section5.geometricPreimage_eq_presentation
+#print DiamondIntegral.Section5.toVarietyRing_geometricPreimage
+#print DiamondIntegral.Section5.geometricPreimage_of_immersion
+#print DiamondIntegral.Section5.immersedObject_class_eq
+#print DiamondIntegral.Section5.injective_image_unique_partition
+#print DiamondIntegral.Section5.immersedObject_finite_partition
+#print DiamondIntegral.Section5.complex_coordinate_lift
+#print DiamondIntegral.Section5.immersionCoordinateGraph_scheme_point
+#print DiamondIntegral.Section5.immersionCoordinateGraph_point_coordinates
+#print DiamondIntegral.Section5.immersionCoordinateGraph_contained
+#print DiamondIntegral.Section5.immersionCoordinateGraph_left_unique
+#print DiamondIntegral.Section5.immersionCoordinateGraph_right_unique
+#print DiamondIntegral.Section5.immersionCoordinateGraph_left_exists
+#print DiamondIntegral.Section5.immersionCoordinateGraph_right_exists
+#print DiamondIntegral.Section5.complex_point_lift_constructible_image
+#print DiamondIntegral.Section5.complexTupleSpectrumPoint_injective
+#print DiamondIntegral.Section5.equivalenceOfGraph_iff
+#print DiamondIntegral.Section5.rationalAffine_product_hom_ext
+#print DiamondIntegral.Section5.rationalAffinePairMap_fst
+#print DiamondIntegral.Section5.rationalAffinePairMap_snd
+#print DiamondIntegral.Section5.rationalAffinePair_immersion
+#print DiamondIntegral.Section5.diagonal_variety_presentation
+#print DiamondIntegral.Section5.DiagonalVarietyPresentation.preimage_value
+#print DiamondIntegral.Section5.geometric_object_class_has_preimage
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.toVarietyRing_surjective
+#print DiamondIntegral.Section5.EquivariantVariety.coordinateSpec_toC
+#print DiamondIntegral.Section5.EquivariantVariety.coordinateIso_overC
+#print DiamondIntegral.Section5.EquivariantVariety.coordinateAlgebra_finiteType
+#print DiamondIntegral.Section5.EquivariantVariety.coordinateSchemeAction_hom
+#print DiamondIntegral.Section5.EquivariantVariety.coordinateSchemeAction_overC
+#print DiamondIntegral.Section5.EquivariantVariety.coordinateIso_equivariant
+#print DiamondIntegral.Section5.EquivariantVariety.Object.finite_level_overC
+#print DiamondIntegral.Section5.EquivariantVariety.affine_variety_diagonal_closed_embedding
+#print DiamondIntegral.Section5.specOverAlgHom_map
+#print DiamondIntegral.Section5.specMapAlgHom_injective
+#print DiamondIntegral.Section5.specMapAlgHom_comp
+#print DiamondIntegral.Section5.specMapAlgHom_id
+#print DiamondIntegral.Section5.specOverAutomorphism_map
+#print DiamondIntegral.Section5.specOverAutomorphism_algHom_map
+#print DiamondIntegral.Section5.algebraSpecAction_specActionAlgebraAction
+#print DiamondIntegral.Section5.EquivariantVariety.invariant_affine_closed_piece
+#print DiamondIntegral.Section5.EquivariantVariety.finite_affine_variety_presentation
+#print DiamondIntegral.Section5.rationalAffineObject_point_action
+#print DiamondIntegral.Section5.spectrumObject_extension
+#print DiamondIntegral.Section5.spectrumObject_geometricValue
+#print DiamondIntegral.Section5.immersedObject_geometricValue
+#print DiamondIntegral.Section5.complex_polynomial_zero_definable
+#print DiamondIntegral.Section5.complex_basic_constructible_domain_definable
+#print DiamondIntegral.Section5.complex_constructible_domain_definable
+#print DiamondIntegral.Section5.complexTupleSpectrumPoint_coordinate
+#print DiamondIntegral.Section5.complexSpectrumExtension_product
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.geometricValue_product
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.toVarietyRing_objectClass
+#print DiamondIntegral.Section5.PuiseuxOriginal.nativeToVarietyRing_comparison
+#print DiamondIntegral.Section5.affineProductLocus_constructible
+#print DiamondIntegral.Section5.affineProductLocus_invariant
+#print DiamondIntegral.Section5.affineProductImmersedPresentation_value
+#print DiamondIntegral.Section5.constructibleClass_affine_product
+#print DiamondIntegral.Section5.affineImmersedProductLeft_hom
+#print DiamondIntegral.Section5.affineImmersedProductRight_hom
+#print DiamondIntegral.Section5.affineImmersedProductObject_class
+#print DiamondIntegral.Section5.affineImmersedProductMap_fst
+#print DiamondIntegral.Section5.affineImmersedProductMap_snd
+#print DiamondIntegral.Section5.affineImmersedProductMap_immersion
+#print DiamondIntegral.Section5.affineImmersedProductMap_range
+#print DiamondIntegral.Section5.affineImmersedProductMap_invariant
+#print DiamondIntegral.Section5.affineImmersedProductInclusion_immersion
+#print DiamondIntegral.Section5.reducedPullbackMap_fst
+#print DiamondIntegral.Section5.reducedPullbackMap_snd
+#print DiamondIntegral.Section5.reducedPullbackMap_reduction
+#print DiamondIntegral.Section5.reducedPullbackMap_immersion
+#print DiamondIntegral.Section5.reducedPullbackMap_range
+#print DiamondIntegral.Section5.EquivariantVariety.Morphism.factorThrough_fac
+#print DiamondIntegral.Section5.rationalPolynomialAction_rename
+#print DiamondIntegral.Section5.polynomialTensorFinEquiv_left
+#print DiamondIntegral.Section5.polynomialTensorFinEquiv_right
+#print DiamondIntegral.Section5.polynomial_affine_pushout
+#print DiamondIntegral.Section5.polynomial_affine_pullback
+#print DiamondIntegral.Section5.affineSpaceReducedProductIso_fst
+#print DiamondIntegral.Section5.affineSpaceReducedProductIso_snd
+#print DiamondIntegral.Section5.constructibleClass_univ
+#print DiamondIntegral.Section5.complexSpectrumExtension_univ
+#print DiamondIntegral.Section5.rationalAffineObject_zero_toC_isIso
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.geometricValue_unit
+#print DiamondIntegral.Section5.changeRationalPresentationWeights_value
+#print DiamondIntegral.Section5.diagonalGeometricValue_of_presentation
+#print DiamondIntegral.Section5.diagonalGeometricValue_bijection_at_level
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.geometricValue_iso
+#print DiamondIntegral.Section5.EquivariantVariety.Morphism.comp_immersion
+#print DiamondIntegral.Section5.complexEquivGraph_pair
+#print DiamondIntegral.Section5.sumTuple_comp_finSum
+#print DiamondIntegral.Section5.complexEquivGraph_definable
+#print DiamondIntegral.Section5.complexEquivGraph_forward_unique
+#print DiamondIntegral.Section5.complexEquivGraph_inverse_unique
+#print DiamondIntegral.Section5.complexEquivGraph_source
+#print DiamondIntegral.Section5.complexEquivGraph_target
+#print DiamondIntegral.Section5.weightedAction_negative
+#print DiamondIntegral.Section5.complexEquivGraph_finite_invariant
+#print DiamondIntegral.Section5.complexSpectrumExtension_constructible
+#print DiamondIntegral.Section5.complexSpectrumExtension_point
+#print DiamondIntegral.Section5.complexSpectrumExtension_inter
+#print DiamondIntegral.Section5.complexSpectrumExtension_sdiff
+#print DiamondIntegral.Section5.complexSpectrumExtension_invariant
+#print DiamondIntegral.Section5.constructibleClass_set_congr
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.geometricValue_scissor
+#print DiamondIntegral.Section5.complexSpectrumExtension_empty
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.geometricValue_empty
+#print DiamondIntegral.Section5.EquivariantVariety.ImmersedPresentation.locus_eq
+#print DiamondIntegral.Section5.EquivariantVariety.ImmersedPresentation.constructible
+#print DiamondIntegral.Section5.EquivariantVariety.ImmersedPresentation.invariant
+#print DiamondIntegral.Section5.EquivariantVariety.ImmersedPresentation.changeLocus_value
+#print DiamondIntegral.Section5.EquivariantGraphDecomposition.graph_cover
+#print DiamondIntegral.Section5.EquivariantGraphDecomposition.sourceLocus_complex
+#print DiamondIntegral.Section5.EquivariantGraphDecomposition.targetLocus_complex
+#print DiamondIntegral.Section5.EquivariantGraphDecomposition.rationalPresentation_values_eq
+#print DiamondIntegral.Section5.EquivariantVariety.Object.Invariant.union
+#print DiamondIntegral.Section5.EquivariantVariety.appendImmersedPresentation_value
+#print DiamondIntegral.Section5.EquivariantVariety.constructibleClass_disjoint_union
+#print DiamondIntegral.Section5.EquivariantVariety.constructibleClass_scissor
+#print DiamondIntegral.Section5.EquivariantVariety.constructibleClass_empty
+#print DiamondIntegral.Section5.algebraSpecAction_comp
+#print DiamondIntegral.Section5.compatibleRootCharacter_inv_system
+#print DiamondIntegral.Section5.compatibleRootCharacter_neg
+#print DiamondIntegral.Section5.rationalAffineObject_common_level
+#print DiamondIntegral.Section5.rationalAffineObject_complex_action
+#print DiamondIntegral.Section5.EquivariantVariety.invariant_constructible_immersed_presentation
+#print DiamondIntegral.Section5.EquivariantVariety.constructibleClass_eq_presentation
+#print DiamondIntegral.Section5.EquivariantVariety.constructibleClass_of_immersion
+#print DiamondIntegral.Section5.compatibleRootCharacter_mul_system
+#print DiamondIntegral.Section5.compatibleRootCharacter_one_system
+#print DiamondIntegral.Section5.rationalPolynomialHom_one
+#print DiamondIntegral.Section5.rationalPolynomialHom_mul
+#print DiamondIntegral.Section5.rationalPolynomialHom_common_level
+#print DiamondIntegral.Section5.rationalPolynomialAction_common_level
+#print DiamondIntegral.Section5.rationalPolynomialAction_point
+#print DiamondIntegral.Section5.EquivariantVariety.reducedPullbackFst_immersion
+#print DiamondIntegral.Section5.EquivariantVariety.reducedPullbackSnd_immersion
+#print DiamondIntegral.Section5.EquivariantVariety.commonImmersion_invariant
+#print DiamondIntegral.Section5.EquivariantVariety.immersed_presentation_independent
+#print DiamondIntegral.Section5.EquivariantGraphDecomposition.source_class_partition
+#print DiamondIntegral.Section5.EquivariantGraphDecomposition.target_class_partition
+#print DiamondIntegral.Section5.EquivariantGraphDecomposition.geometric_classes_eq
+#print DiamondIntegral.Section5.EquivariantVariety.Object.Invariant.empty
+#print DiamondIntegral.Section5.EquivariantVariety.Object.Invariant.univ
+#print DiamondIntegral.Section5.EquivariantVariety.Object.Invariant.inter
+#print DiamondIntegral.Section5.EquivariantVariety.Object.Invariant.sdiff
+#print DiamondIntegral.Section5.EquivariantVariety.Object.Invariant.closure
+#print DiamondIntegral.Section5.EquivariantVariety.subsetClass_of_locallyClosed
+#print DiamondIntegral.Section5.EquivariantVariety.subsetClass_empty
+#print DiamondIntegral.Section5.EquivariantVariety.subsetClass_univ
+#print DiamondIntegral.Section5.EquivariantVariety.subsetClass_split
+#print DiamondIntegral.Section5.EquivariantVariety.subsetClass_finite_partition
+#print DiamondIntegral.Section5.EquivariantVariety.Morphism.range_invariant
+#print DiamondIntegral.Section5.EquivariantVariety.objectClass_eq_subsetClass
+#print DiamondIntegral.Section5.EquivariantVariety.objectClass_finite_immersed_partition
+#print DiamondIntegral.Section5.finite_firstOrder_witness_selection
+#print DiamondIntegral.Section5.EquivariantVariety.subsetInclusion_range
+#print DiamondIntegral.Section5.EquivariantVariety.subsetInclusion_immersion
+#print DiamondIntegral.Section5.EquivariantVariety.objectClass_immersed_presentations
+#print DiamondIntegral.Section5.EquivariantVariety.subsetMorphism_fac
+#print DiamondIntegral.Section5.EquivariantVariety.subsetMorphism_range
+#print DiamondIntegral.Section5.EquivariantVariety.subsetMorphism_immersion
+#print DiamondIntegral.Section5.finite_locallyClosed_scissor_partition
+#print DiamondIntegral.Section5.reduced_immersion_closed_of_range
+#print DiamondIntegral.Section5.reduced_immersion_open_of_range
+#print DiamondIntegral.Section5.finite_points_affine_neighborhood_over_affine_open
+#print DiamondIntegral.Section5.finite_factored_orbit
+#print DiamondIntegral.Section5.equivariant_reduced_immersion_isGood
+#print DiamondIntegral.Section5.EquivariantVariety.Object.noetherian
+#print DiamondIntegral.Section5.EquivariantVariety.Object.schemeSeparated
+#print DiamondIntegral.Section5.EquivariantVariety.restrictedAction_finite_level
+#print DiamondIntegral.Section5.complexWindingCharacter_one
+#print DiamondIntegral.Section5.windingRootSystem_primitive
+#print DiamondIntegral.Section5.finiteRootProjection_surjective
+#print DiamondIntegral.Section5.PuiseuxOriginal.lineCoefficient_point
+#print DiamondIntegral.Section5.PuiseuxOriginal.linePoint_coefficient
+#print DiamondIntegral.Section5.PuiseuxOriginal.rvAction_linePoint
+#print DiamondIntegral.Section5.PuiseuxOriginal.weightedAction_one
+#print DiamondIntegral.Section5.PuiseuxOriginal.weightedAction_mul
+#print DiamondIntegral.Section5.PuiseuxOriginal.finiteFrame_injective
+#print DiamondIntegral.Section5.PuiseuxOriginal.finiteFrame_action
+#print DiamondIntegral.Section5.PuiseuxOriginal.framed_formula_invariant
+#print DiamondIntegral.Section5.PuiseuxOriginal.frameChange_equivariant
+#print DiamondIntegral.Section5.PuiseuxOriginal.kummerRVRoot_value
+#print DiamondIntegral.Section5.PuiseuxOriginal.descendSet_eq_image
+#print DiamondIntegral.Section5.PuiseuxOriginal.frame_mem_descendSet
+#print DiamondIntegral.Section5.PuiseuxOriginal.descendedBijection_frame
+#print DiamondIntegral.Section5.PuiseuxOriginal.framed_formula_finiteInvariant
+#print DiamondIntegral.Section5.PuiseuxOriginal.descendGraph_eq_image
+#print DiamondIntegral.Section5.PositiveRelationSum.symm
+#print DiamondIntegral.Section5.PositiveRelationSum.add
+#print DiamondIntegral.Section5.PositiveRelationSum.mul
+#print DiamondIntegral.Section5.PositiveRelationSum.finite_list
+#print DiamondIntegral.Section5.PositiveRelationSum.difference_mem
+#print DiamondIntegral.Section5.mem_positiveRelationIdeal_iff
+#print DiamondIntegral.Section5.grothendieck_of_eq_iff
+#print DiamondIntegral.Section5.finite_stabilized_quotient_equality
+#print DiamondIntegral.Section5.PuiseuxOriginal.vfType_tag
+#print DiamondIntegral.Section5.PuiseuxOriginal.rvOfField_value
+#print DiamondIntegral.Section5.PuiseuxOriginal.taggedFieldEquiv_valuation
+#print DiamondIntegral.Section5.PuiseuxOriginal.rvSort_tag
+#print DiamondIntegral.Section5.PuiseuxOriginal.rvTag_zero
+#print DiamondIntegral.Section5.PuiseuxOriginal.rvTag_mul
+#print DiamondIntegral.Section5.PuiseuxOriginal.rvTag_add
+#print DiamondIntegral.Section5.PuiseuxOriginal.rvTag_inK
+#print DiamondIntegral.Section5.PuiseuxOriginal.residueLift_coefficient
+#print DiamondIntegral.Section5.PuiseuxOriginal.residueLift_residue
+#print DiamondIntegral.Section5.PuiseuxOriginal.residueLift_mul
+#print DiamondIntegral.Section5.PuiseuxOriginal.residueLift_inResidue
+#print DiamondIntegral.Section5.PuiseuxOriginal.residueLift_add
+#print DiamondIntegral.Section5.PuiseuxOriginal.residueRV_complexResidue
+#print DiamondIntegral.Section5.RESFiniteWitness.of_positiveClass
+#print DiamondIntegral.Section5.RESFiniteWitness.relationIdeal_eq_map
+#print DiamondIntegral.Section5.RESFiniteWitness.relationIdeal_mem_iff
+#print DiamondIntegral.Section5.RESFiniteWitness.res_finite_stabilized_equality
+#print DiamondIntegral.Section5.RESFiniteWitness.res_finite_list_equality
+#print DiamondIntegral.Section5.normalized_residue_constructible
+#print DiamondIntegral.Section5.ring_definable_preimage_equiv
+#print DiamondIntegral.Section5.PuiseuxOriginal.complex_normalized_residue_constructible
+#print DiamondIntegral.Section5.PuiseuxOriginal.linePoint_mul_residue
+#print DiamondIntegral.Section5.PuiseuxOriginal.framedRVSet_constructible
+#print DiamondIntegral.Section5.PuiseuxOriginal.rawRV_preimage_mem
+#print DiamondIntegral.Section5.PuiseuxOriginal.framedRVSet_finiteInvariant
+#print DiamondIntegral.Section5.PuiseuxOriginal.finite_framed_RES_comparison
+#print DiamondIntegral.Section5.basic_constructible_field_definable
+#print DiamondIntegral.Section5.constructible_field_definable
+#print DiamondIntegral.Section5.PuiseuxOriginal.residueRaw_complex
+#print DiamondIntegral.Section5.PuiseuxOriginal.residueName_base
+#print DiamondIntegral.Section5.PuiseuxOriginal.complex_residue_image_definable
+#print DiamondIntegral.Section5.PuiseuxOriginal.constructible_residue_image_definable
+#print DiamondIntegral.Section5.PuiseuxOriginal.rvTag_some_pow
+#print DiamondIntegral.Section5.PuiseuxOriginal.originalKummerRootMap_bijective
+#print DiamondIntegral.Section5.PuiseuxOriginal.rvTag_some_zpow
+#print DiamondIntegral.Section5.PuiseuxOriginal.rootFrame_tag
+#print DiamondIntegral.Section5.PuiseuxOriginal.descentMonomial_value
+#print DiamondIntegral.Section5.PuiseuxOriginal.descentMonomialMap_range
+#print DiamondIntegral.Section5.PuiseuxOriginal.framedRVSet_pure_definable
+#print DiamondIntegral.Section5.PuiseuxOriginal.framed_descendedOriginalSet
+#print DiamondIntegral.Section5.PuiseuxOriginal.frame_reconstruction
+#print DiamondIntegral.Section5.PuiseuxOriginal.descended_framedOriginalSet
+#print DiamondIntegral.Section5.PuiseuxOriginal.finiteFrame_inflate
+#print DiamondIntegral.Section5.PuiseuxOriginal.weightedAction_inflate
+#print DiamondIntegral.Section5.PuiseuxOriginal.frameAtRoot_change
+#print DiamondIntegral.Section5.PuiseuxOriginal.finiteFrame_append
+#print DiamondIntegral.Section5.PuiseuxOriginal.weightedAction_append
+#print DiamondIntegral.Section5.PuiseuxOriginal.frameAtRoot_append
+#print DiamondIntegral.Section5.PuiseuxOriginal.tupleProductSet_invariant
+#print DiamondIntegral.Section5.relativeGamma_finite_coefficients
+#print DiamondIntegral.Section5.finite_cyclic_character_basis
+#print DiamondIntegral.Section5.character_product_difference_mem
+#print DiamondIntegral.Section5.directSumCharacterIdeal_eq_characterLineIdeal
+#print DiamondIntegral.Section5.character_product_difference_multiple
+#print DiamondIntegral.Section5.PuiseuxOriginal.sortedRVAction_raw
+#print DiamondIntegral.Section5.PuiseuxOriginal.raw_original_definable_invariant
+#print DiamondIntegral.Section5.PuiseuxOriginal.original_RV_map_equivariant
+#print DiamondIntegral.Section5.PuiseuxOriginal.sortedRVAction_frame
+#print DiamondIntegral.Section5.PuiseuxOriginal.frameSetEquiv_action
+#print DiamondIntegral.Section5.PuiseuxOriginal.framedMap_equivariant
+#print DiamondIntegral.Section5.PuiseuxOriginal.framedBijection_equivariant
+#print DiamondIntegral.Section5.PuiseuxOriginal.original_graph_framed_constructible
+#print DiamondIntegral.Section5.PuiseuxOriginal.descendedOriginalSet_normalized_mem
+#print DiamondIntegral.Section5.PuiseuxOriginal.framedEquivGraph_invariant
+#print DiamondIntegral.Section5.PuiseuxOriginal.framedEquivGraph_append_mem
+#print DiamondIntegral.Section5.PuiseuxOriginal.normalized_descended_graph
+#print DiamondIntegral.Section5.PuiseuxOriginal.actual_descended_graph
+#print DiamondIntegral.Section5.PuiseuxOriginal.append_relation_definable
+#print DiamondIntegral.Section5.PuiseuxOriginal.rv_order_value
+#print DiamondIntegral.Section5.PuiseuxOriginal.vrv_eq_iff_value_eq
+#print DiamondIntegral.Section5.PuiseuxOriginal.normal_value_surjective
+#print DiamondIntegral.Section5.PuiseuxOriginal.gammaNormalEquiv_vrv
+#print DiamondIntegral.Section5.PuiseuxOriginal.native_finite_value_patterns_iff
+#print DiamondIntegral.Section5.PuiseuxOriginal.rational_tuple_common_level
+#print DiamondIntegral.Section5.PuiseuxOriginal.descendedOriginalSet_frameSupport
+#print DiamondIntegral.Section5.PuiseuxOriginal.finite_native_values_of_frameSupport
+#print DiamondIntegral.Section5.PuiseuxOriginal.descendedOriginalSet_native_finite_values
+#print DiamondIntegral.Section5.PuiseuxOriginal.complexZeroPattern_definable
+#print DiamondIntegral.Section5.PuiseuxOriginal.complexZeroPattern_invariant
+#print DiamondIntegral.Section5.PuiseuxOriginal.linePoint_value
+#print DiamondIntegral.Section5.PuiseuxOriginal.value_eq_top_iff
+#print DiamondIntegral.Section5.PuiseuxOriginal.lineCoefficient_eq_zero_iff
+#print DiamondIntegral.Section5.PuiseuxOriginal.originalValuePattern_values
+#print DiamondIntegral.Section5.PuiseuxOriginal.originalValuePattern_mem_iff
+#print DiamondIntegral.Section5.PuiseuxOriginal.patternFraming_nonempty
+#print DiamondIntegral.Section5.PuiseuxOriginal.patternSet_mem_iff
+#print DiamondIntegral.Section5.PuiseuxOriginal.patternPiece_mem_iff
+#print DiamondIntegral.Section5.PuiseuxOriginal.patternPiece_support
+#print DiamondIntegral.Section5.PuiseuxOriginal.original_finite_frame_partition
+#print DiamondIntegral.Section5.EmptyGammaGround.definable_iff
+#print DiamondIntegral.Section5.EmptyGammaGround.toReal_fromReal
+#print DiamondIntegral.Section5.EmptyGammaGround.fromReal_toReal
+#print DiamondIntegral.Section5.originalDomain_finite_values
+#print DiamondIntegral.Section5.PuiseuxOriginal.descendedRESObject_domain
+#print DiamondIntegral.Section5.PuiseuxOriginal.rationalAction_one
+#print DiamondIntegral.Section5.PuiseuxOriginal.rationalAction_mul
+#print DiamondIntegral.Section5.PuiseuxOriginal.rationalAction_common_level
+#print DiamondIntegral.Section5.PuiseuxOriginal.rationalInvariant_iff_finite
+#print DiamondIntegral.Section5.PuiseuxOriginal.rationalAction_append
+#print DiamondIntegral.Section5.PuiseuxOriginal.rationalInvariant_product
+#print DiamondIntegral.Section5.PuiseuxOriginal.rationalAction_frame
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.relation_zero
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.objectClass_unit
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.objectClass_product
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.objectClass_iso
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.objectClass_empty
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.objectClass_scissor
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.lift_objectClass
+#print DiamondIntegral.Section5.nativeUngradedHom_class
+#print DiamondIntegral.Section5.nativeUngradedClass_product
+#print DiamondIntegral.Section5.nativeUngradedClass_cut
+#print DiamondIntegral.Section5.nativeUngradedClass_empty
+#print DiamondIntegral.Section5.nativeUngradedClass_unit
+#print DiamondIntegral.Section5.nativeUngradedClass_bijection
+#print DiamondIntegral.Section5.resSetClass_bijection
+#print DiamondIntegral.Section5.resSetClass_originalDomain
+#print DiamondIntegral.Section5.resSetClass_congr
+#print DiamondIntegral.Section5.PuiseuxOriginal.rationalFraming_nonempty
+#print DiamondIntegral.Section5.PuiseuxOriginal.rationalFrame_common_level
+#print DiamondIntegral.Section5.PuiseuxOriginal.rationalFrame_injective
+#print DiamondIntegral.Section5.PuiseuxOriginal.rationalFramedSet_eq_finite
+#print DiamondIntegral.Section5.PuiseuxOriginal.finiteDescent_mem_image
+#print DiamondIntegral.Section5.PuiseuxOriginal.rationalDescent_mem_image
+#print DiamondIntegral.Section5.PuiseuxOriginal.rationalDescendedSet_eq_finite
+#print DiamondIntegral.Section5.PuiseuxOriginal.rationalDescendedSet_finite_values
+#print DiamondIntegral.Section5.PuiseuxOriginal.rational_framed_descent
+#print DiamondIntegral.Section5.PuiseuxOriginal.diagonalRESClass_iso
+#print DiamondIntegral.Section5.resSetProduct_mem
+#print DiamondIntegral.Section5.resSetClass_product
+#print DiamondIntegral.Section5.resSetClass_scissor
+#print DiamondIntegral.Section5.resSetClass_empty
+#print DiamondIntegral.Section5.PuiseuxOriginal.rationalDescent_carrier_image
+#print DiamondIntegral.Section5.PuiseuxOriginal.rationalDescent_product
+#print DiamondIntegral.Section5.PuiseuxOriginal.diagonalRESClass_product
+#print DiamondIntegral.Section5.PuiseuxOriginal.diagonalRESClass_empty
+#print DiamondIntegral.Section5.PuiseuxOriginal.diagonalRESClass_unit
+#print DiamondIntegral.Section5.PuiseuxOriginal.rationalDescent_scissor
+#print DiamondIntegral.Section5.PuiseuxOriginal.diagonalRESClass_scissor
+#print DiamondIntegral.Section5.PuiseuxOriginal.diagonalToRES_objectClass
+#print DiamondIntegral.Section5.PuiseuxOriginal.rationalFrame_reconstruction
+#print DiamondIntegral.Section5.PuiseuxOriginal.rationalFramedBijection_graph
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.setClass_congr
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.rationalInvariant_union
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.setClass_disjoint_union
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.finsetSup_mem
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.finsetSup_invariant
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.finiteUnion_class
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.finite_partition_class
+#print DiamondIntegral.Section5.PuiseuxOriginal.actualValuePatterns_finite
+#print DiamondIntegral.Section5.PuiseuxOriginal.patternPiece_rationalSupport
+#print DiamondIntegral.Section5.PuiseuxOriginal.valuePatternClass_zero
+#print DiamondIntegral.Section5.PuiseuxOriginal.forwardRESValue_eq_sum
+#print DiamondIntegral.Section5.PuiseuxOriginal.valuePatternClass_congr
+#print DiamondIntegral.Section5.PuiseuxOriginal.forwardRESValue_congr
+#print DiamondIntegral.Section5.PuiseuxOriginal.framedObject_class_scissor
+#print DiamondIntegral.Section5.PuiseuxOriginal.valuePatternClass_scissor
+#print DiamondIntegral.Section5.PuiseuxOriginal.actualValuePatterns_mono
+#print DiamondIntegral.Section5.PuiseuxOriginal.forwardRESValue_scissor
+#print DiamondIntegral.Section5.PuiseuxOriginal.forwardRESValue_empty
+#print DiamondIntegral.Section5.PuiseuxOriginal.rvMapSlice_mem
+#print DiamondIntegral.Section5.PuiseuxOriginal.rvMapSlice_subset
+#print DiamondIntegral.Section5.PuiseuxOriginal.rvSliceImage_mem
+#print DiamondIntegral.Section5.PuiseuxOriginal.rvMapSlice_support
+#print DiamondIntegral.Section5.PuiseuxOriginal.rvSliceImage_support
+#print DiamondIntegral.Section5.PuiseuxOriginal.rvMapSlice_partition
+#print DiamondIntegral.Section5.PuiseuxOriginal.rvSliceImage_partition
+#print DiamondIntegral.Section5.PuiseuxOriginal.framedObject_class_finite_partition
+#print DiamondIntegral.Section5.PuiseuxOriginal.valuePatternClass_slice_sum
+#print DiamondIntegral.Section5.PuiseuxOriginal.valuePatternClass_image_sum
+#print DiamondIntegral.Section5.PuiseuxOriginal.forwardRESValue_bijection
+#print DiamondIntegral.Section5.PuiseuxOriginal.valuePattern_eq_append_iff
+#print DiamondIntegral.Section5.PuiseuxOriginal.valuePatternObject_product
+#print DiamondIntegral.Section5.PuiseuxOriginal.forwardRESValue_product
+#print DiamondIntegral.Section5.PuiseuxOriginal.nativeForwardValue_bijection
+#print DiamondIntegral.Section5.PuiseuxOriginal.nativeForwardValue_empty
+#print DiamondIntegral.Section5.PuiseuxOriginal.nativeForwardValue_cut
+#print DiamondIntegral.Section5.PuiseuxOriginal.nativeForwardValue_scissor
+#print DiamondIntegral.Section5.PuiseuxOriginal.nativeForwardComponent_class
+#print DiamondIntegral.Section5.PuiseuxOriginal.nativeForwardPositive_class
+#print DiamondIntegral.Section5.PuiseuxOriginal.nativeForwardValue_unit
+#print DiamondIntegral.Section5.PuiseuxOriginal.nativeForwardValue_product
+#print DiamondIntegral.Section5.PuiseuxOriginal.nativeForwardPositive_one
+#print DiamondIntegral.Section5.PuiseuxOriginal.nativeForwardPositive_mul
+#print DiamondIntegral.Section5.PuiseuxOriginal.nativeForwardOrdinary_class
+#print DiamondIntegral.Section5.PuiseuxOriginal.chartToDiagonal_objectClass
+#print DiamondIntegral.Section5.PuiseuxOriginal.chartToDiagonal_degreeIdeal
+#print DiamondIntegral.Section5.PuiseuxOriginal.resToDiagonal_objectClass
+#print DiamondIntegral.Section5.PuiseuxOriginal.resToDiagonal_nativeClass
+#print DiamondIntegral.Section5.PuiseuxOriginal.resToDiagonal_resSetClass
+#print DiamondIntegral.Section5.rvFiniteUnion_mem
+#print DiamondIntegral.Section5.rvFiniteUnion_finite_values
+#print DiamondIntegral.Section5.resSetClass_disjoint_union
+#print DiamondIntegral.Section5.resSetClass_finiteUnion
+#print DiamondIntegral.Section5.resSetClass_finite_partition
+#print DiamondIntegral.Section5.PuiseuxOriginal.patternPiece_finite_values
+#print DiamondIntegral.Section5.PuiseuxOriginal.canonical_pattern_partition
+#print DiamondIntegral.Section5.PuiseuxOriginal.rational_descent_framed
+#print DiamondIntegral.Section5.PuiseuxOriginal.diagonalToRES_framedObject
+#print DiamondIntegral.Section5.PuiseuxOriginal.diagonalToRES_forwardRESValue
+#print DiamondIntegral.Section5.PuiseuxOriginal.forwardRESValue_of_support
+#print DiamondIntegral.Section5.PuiseuxOriginal.rationalDescendedSet_support
+#print DiamondIntegral.Section5.PuiseuxOriginal.resToDiagonal_diagonalRESClass
+#print DiamondIntegral.Section5.PuiseuxOriginal.resToDiagonal_diagonalToRES
+#print DiamondIntegral.Section5.PuiseuxOriginal.diagonalToRES_nativeForwardValue
+#print DiamondIntegral.Section5.PuiseuxOriginal.diagonalToRES_resToDiagonal
+#print DiamondIntegral.Section5.PuiseuxOriginal.rawRESComparison_resSetClass
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.zeroSet_definable
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.zeroSet_invariant
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.zeroGraph
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.zeroObject_class
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.affineLine_class
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.line_difference_eq_torus_difference
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.lineIdeal_eq_torusIdeal
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.directSumLinearIdeal_eq_lineIdeal
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.arbitrary_product_linear_relation_mem
+#print DiamondIntegral.Section5.PuiseuxOriginal.rv_normal_eq_none_iff
+#print DiamondIntegral.Section5.PuiseuxOriginal.gammaRational_value
+#print DiamondIntegral.Section5.PuiseuxOriginal.gammaRational_vrv_iff
+#print DiamondIntegral.Section5.PuiseuxOriginal.gammaRational_rationalGamma
+#print DiamondIntegral.Section5.PuiseuxOriginal.gammaRational_surjective
+#print DiamondIntegral.Section5.PuiseuxOriginal.gammaRational_one
+#print DiamondIntegral.Section5.PuiseuxOriginal.originalValueFibre_mem
+#print DiamondIntegral.Section5.PuiseuxOriginal.originalValueFibre_support
+#print DiamondIntegral.Section5.PuiseuxOriginal.framedValueFibre_object
+#print DiamondIntegral.Section5.PuiseuxOriginal.rawRESComparison_fibre
+#print DiamondIntegral.Section5.PuiseuxOriginal.rawRESComparison_torus
+#print DiamondIntegral.Section5.PuiseuxOriginal.rawRESComparison_fibre_difference
+#print DiamondIntegral.Section5.PuiseuxOriginal.fibreIdeal_image_le_lineIdeal
+#print DiamondIntegral.Section5.PuiseuxOriginal.rationalGamma_definable
+#print DiamondIntegral.Section5.PuiseuxOriginal.fibreIdeal_image_eq_lineIdeal
+#print DiamondIntegral.Section5.PuiseuxOriginal.residueCharacterComparison_mk
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.affineSpace_append
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.affineSpace_class
+#print DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.linearActionIdeal_eq_lineIdeal
+#print DiamondIntegral.Section5.PuiseuxOriginal.fibreIdeal_image_eq_linearActionIdeal
+#print DiamondIntegral.Section5.PuiseuxOriginal.residueLinearActionComparison_mk
+#print DiamondIntegral.Section5.finite_cyclic_eigen_generators
+#print DiamondIntegral.Section5.polynomialDiagonalAction_one
+#print DiamondIntegral.Section5.polynomialDiagonalAction_mul
+#print DiamondIntegral.Section5.finite_cyclic_equivariant_affine_embedding
+#print DiamondIntegral.Section5.schemePointAction_one
+#print DiamondIntegral.Section5.schemePointAction_mul
+#print DiamondIntegral.Section5.finite_invariant_affine_cover
+#print DiamondIntegral.Section5.orderedOpenPiece_closed
+#print DiamondIntegral.Section5.orderedOpenPiece_unique
+#print DiamondIntegral.Section5.orderedOpenPiece_invariant
+#print DiamondIntegral.Section5.finite_invariant_affine_stratification
+#print DiamondIntegral.Section5.finite_formula_cover
+#print DiamondIntegral.Section5.polynomial_term_exists
+#print DiamondIntegral.Section5.polynomialTerm_realize
+#print DiamondIntegral.Section5.ringEmbeddingHom_apply
+#print DiamondIntegral.Section5.ringEmbeddingHom_injective
+#print DiamondIntegral.Section5.elementaryRingHom_apply
+#print DiamondIntegral.Section5.ComplexModels.coefficientHom_apply
+#print DiamondIntegral.Section5.ComplexModels.coefficientHom_injective
+#print DiamondIntegral.Section5.ComplexModels.coefficientHom_constant
+#print DiamondIntegral.Section5.ComplexModels.coefficientFormula_realize
+#print DiamondIntegral.Section5.namedPolynomialTerm_realize
+#print DiamondIntegral.Section5.complex_model_graph_rational
+#print DiamondIntegral.Section5.uniqueOutputFormula_realize
+#print DiamondIntegral.Section5.uniqueOutputSentence_realize
+#print DiamondIntegral.Section5.complex_graph_unique_in_model
+#print DiamondIntegral.Section5.rationalGraphFormula_realize
+#print DiamondIntegral.Section5.complex_graph_finite_rational_cover
+#print DiamondIntegral.Section5.complex_scalar_graph_finite_rational_cover
+#print DiamondIntegral.Section5.complex_definable_named_formula
+#print DiamondIntegral.Section5.complex_definable_scalar_graph_finite_rational_cover
+#print DiamondIntegral.Section5.scalarCoordinateGraph_definable
+#print DiamondIntegral.Section5.complex_definable_graph_finite_rational_cover
+#print DiamondIntegral.Section5.rationalTuple_common_denominator
+#print DiamondIntegral.Section5.complex_definable_graph_finite_common_denominator_cover
+#print DiamondIntegral.Section5.principalPointEvaluation_algebraMap
+#print DiamondIntegral.Section5.principalPointEvaluation_invSelf
+#print DiamondIntegral.Section5.principalRationalAlgebraMap_point
+#print DiamondIntegral.Section5.principalAffineOpenInclusion_isOpenImmersion
+#print DiamondIntegral.Section5.principalAffineOpenInclusion_range
+#print DiamondIntegral.Section5.principalRationalSchemeMap_point
+#print DiamondIntegral.Section5.mem_closedFamilyAtLeast
+#print DiamondIntegral.Section5.closedFamilyAtLeast_isClosed
+#print DiamondIntegral.Section5.closedFamilyStratum_eq
+#print DiamondIntegral.Section5.closedFamilyStratum_isLocallyClosed
+#print DiamondIntegral.Section5.closedFamilySupport_erase
+#print DiamondIntegral.Section5.closedFamilyStratum_generator_compl
+#print DiamondIntegral.Section5.closedFamilyStratum_generator_isClopen
+#print DiamondIntegral.Section5.closedFamilyStratum_unique
+#print DiamondIntegral.Section5.closedFamilyDepth_permutation
+#print DiamondIntegral.Section5.constructible_closed_generators
+#print DiamondIntegral.Section5.finite_constructible_closed_generators
+#print DiamondIntegral.Section5.finite_invariant_constructible_strata
+#print DiamondIntegral.Section5.complexZariskiPoint_isInducing
+#print DiamondIntegral.Section5.complexZariskiPoint_injective
+#print DiamondIntegral.Section5.complexZariskiPoint_isEmbedding
+#print DiamondIntegral.Section5.complexZariski_noetherian
+#print DiamondIntegral.Section5.complex_definable_zariski_constructible
+#print DiamondIntegral.Section5.complex_named_formula_definable
+#print DiamondIntegral.Section5.complex_polynomial_zeroSet_definable
+#print DiamondIntegral.Section5.rationalTupleEquationSet_definable
+#print DiamondIntegral.Section5.complex_definable_bijection_finite_rational_cover
+#print DiamondIntegral.Section5.complexPolynomialPoint_isInducing
+#print DiamondIntegral.Section5.principalComplexPoint_square
+#print DiamondIntegral.Section5.principalComplexPoint_continuous
+#print DiamondIntegral.Section5.principalRationalTuple_square
+#print DiamondIntegral.Section5.principalRationalTuple_continuous
+#print DiamondIntegral.Section5.complex_points_separate_zero
+#print DiamondIntegral.Section5.complex_points_separate
+#print DiamondIntegral.Section5.complex_points_algHom_ext
+#print DiamondIntegral.Section5.complex_points_ideal_le_ker
+#print DiamondIntegral.Section5.complexPointQuotientLift_mk
+#print DiamondIntegral.Section5.invariantClosedIdeal_stable
+#print DiamondIntegral.Section5.invariantIdealQuotientAction_mk
+#print DiamondIntegral.Section5.closedAffineScheme_isReduced
+#print DiamondIntegral.Section5.closedAffineCoordinate_finiteType
+#print DiamondIntegral.Section5.closedAffineInclusion_isClosedImmersion
+#print DiamondIntegral.Section5.closedAffineInclusion_range
+#print DiamondIntegral.Section5.algebraSpecAction_hom
+#print DiamondIntegral.Section5.invariantClosedAffineInclusion_equivariant
+#print DiamondIntegral.Section5.basic_constructible_complex_point
+#print DiamondIntegral.Section5.constructible_complex_point
+#print DiamondIntegral.Section5.constructible_eq_of_complex_points
+#print DiamondIntegral.Section5.basicClosedCoordinate_reduced
+#print DiamondIntegral.Section5.basicConstructibleCoordinate_reduced
+#print DiamondIntegral.Section5.basicConstructibleCoordinate_finiteType
+#print DiamondIntegral.Section5.basicConstructibleCoordinateMap_equation
+#print DiamondIntegral.Section5.basicConstructibleCoordinateMap_denominator
+#print DiamondIntegral.Section5.basicConstructiblePoint_mem
+#print DiamondIntegral.Section5.basicConstructibleScheme_isReduced
+#print DiamondIntegral.Section5.basicConstructibleInclusion_isImmersion
+#print DiamondIntegral.Section5.basicConstructibleInclusion_range
+#print DiamondIntegral.Section5.basicPointIdeal_le_ker
+#print DiamondIntegral.Section5.basicConstructiblePointLift_coordinateMap
+#print DiamondIntegral.Section5.basicConstructiblePoint_ext
+#print DiamondIntegral.Section5.complex_points_isUnit
+#print DiamondIntegral.Section5.complexPointBasicFactor_kernel
+#print DiamondIntegral.Section5.complexPointBasicFactor_denominator
+#print DiamondIntegral.Section5.complexPointBasicFactor_coordinateMap
+#print DiamondIntegral.Section5.basicConstructibleFactor_ext
+#print DiamondIntegral.Section5.complexPointBasicFactor_Spec_square
+#print DiamondIntegral.Section5.complex_algHom_unit_inverse
+#print DiamondIntegral.Section5.unitRationalAlgebraMap_point
+#print DiamondIntegral.Section5.rationalBasicFactor_coordinateMap
+#print DiamondIntegral.Section5.BasicRationalPointIso.denominatorUnit
+#print DiamondIntegral.Section5.BasicRationalPointIso.polynomialMap_point
+#print DiamondIntegral.Section5.BasicRationalPointIso.algebraMap_coordinateMap
+#print DiamondIntegral.Section5.BasicRationalPointIso.algebraMap_point
+#print DiamondIntegral.Section5.complex_definable_spectrum_constructible
+#print DiamondIntegral.Section5.complex_definable_finite_spectrum_constructible
+#print DiamondIntegral.Section5.principalGraphSection_square
+#print DiamondIntegral.Section5.rational_graph_projection_isImmersion
+#print DiamondIntegral.Section5.primeSignAtomData_range
+#print DiamondIntegral.Section5.primeSignAtomData_mem
+#print DiamondIntegral.Section5.primeSignAtomData_support
+#print DiamondIntegral.Section5.primeSignAtoms_unique
+#print DiamondIntegral.Section5.constructibleTestPolynomials_denominator
+#print DiamondIntegral.Section5.constructibleTestPolynomials_equation
+#print DiamondIntegral.Section5.primeSignSupport_test
+#print DiamondIntegral.Section5.constructibleData_same_sign
+#print DiamondIntegral.Section5.finite_disjoint_basic_constructible_partition
+#print DiamondIntegral.Section5.primeSignSupport_restrict
+#print DiamondIntegral.Section5.finite_constructible_test_family
+#print DiamondIntegral.Section5.finite_subordinate_basic_partition
+#print DiamondIntegral.Section5.basicConstructibleData_isConstructible
+#print DiamondIntegral.Section5.rationalSpectrumGraphData_point
+#print DiamondIntegral.Section5.complexTupleSpectrumPoint_algHom
+#print DiamondIntegral.Section5.inverseRationalSpectrumGraphData_denominator
+#print DiamondIntegral.Section5.inverseRationalSpectrumGraphData_equation
+#print DiamondIntegral.Section5.inverseRationalSpectrumGraphData_point
+#print DiamondIntegral.Section5.complex_bijection_basic_rational_graph_partition
+#print DiamondIntegral.Section5.basicGraphMap_eq
+#print DiamondIntegral.Section5.basicGraphLeft_rational_relations
+#print DiamondIntegral.Section5.basicGraphLeft_isImmersion
+#print DiamondIntegral.Section5.basicGraphRight_rational_relations
+#print DiamondIntegral.Section5.basicGraphMap_swap_eq
+#print DiamondIntegral.Section5.basicGraphRight_isImmersion
+#print DiamondIntegral.Section5.complex_constructible_bijection_algebraic_pieces
+#print DiamondIntegral.Section5.locallyClosedAffineScheme_isReduced
+#print DiamondIntegral.Section5.locallyClosedAffineInclusion_isImmersion
+#print DiamondIntegral.Section5.locallyClosedAffineInclusion_range
+#print DiamondIntegral.Section5.invariantOpenMap_ι
+#print DiamondIntegral.Section5.invariantOpenMap_one
+#print DiamondIntegral.Section5.invariantOpenMap_mul
+#print DiamondIntegral.Section5.invariantOpenSchemeAction_equivariant
+#print DiamondIntegral.Section5.schemeAction_closure_invariant
+#print DiamondIntegral.Section5.schemeAction_coborder_invariant
+#print DiamondIntegral.Section5.invariant_locally_closed_affine_action
+#print DiamondIntegral.Section5.reduced_source_kernel_range
+#print DiamondIntegral.Section5.reduced_source_kernel_mono
+#print DiamondIntegral.Section5.reduced_closed_immersion_lift
+#print DiamondIntegral.Section5.reduced_immersion_lift
+#print DiamondIntegral.Section5.reducedImmersionLift_fac
+#print DiamondIntegral.Section5.complex_points_nilpotent
+#print DiamondIntegral.Section5.complex_points_zero_under_reduced_map
+#print DiamondIntegral.Section5.complex_points_maps_agree_after_reduction
+#print DiamondIntegral.Section5.reducedImmersionIso_fac
+#print DiamondIntegral.Section5.reducedImmersionIso_equivariant
+#print DiamondIntegral.Section5.reducedImmersionActionMap_fac
+#print DiamondIntegral.Section5.reducedImmersionActionMap_one
+#print DiamondIntegral.Section5.reducedImmersionActionMap_mul
+#print DiamondIntegral.Section5.reducedImmersionSchemeAction_fac
+#print DiamondIntegral.Section5.reducedImmersionSchemeAction_comp
+#print DiamondIntegral.Section5.schemeActionOverBase_hom
+#print DiamondIntegral.Section5.finite_scheme_invariant_constructible_strata
+#print DiamondIntegral.Section5.finite_affine_invariant_scheme_strata
+#print DiamondIntegral.Section5.clopen_inter_locallyClosed
+#print DiamondIntegral.Section5.overlap_commutes
+#print DiamondIntegral.Section5.overlapAlgebra_finiteType
+#print DiamondIntegral.Section5.overlapLift_left
+#print DiamondIntegral.Section5.overlapLift_right
+#print DiamondIntegral.Section5.complex_overlap_agreement
+#print DiamondIntegral.Section5.complex_overlap_ring_agreement
+#print DiamondIntegral.Section5.schemeAffinePullback_comp
+#print DiamondIntegral.Section5.schemeAffinePullback_injective
+#print DiamondIntegral.Section5.scheme_complex_overlap_agreement
+#print DiamondIntegral.Section5.reduced_affine_branches_compatible
+#print DiamondIntegral.Section5.glue_reduced_affine_branches
+#print DiamondIntegral.Section5.gamma_cell_has_shape
+#print DiamondIntegral.Section5.ShapedGammaCell.definable
+#print DiamondIntegral.Section5.shaped_cell_euler_value
+#print DiamondIntegral.Section5.finite_cylindrical_euler_certificate
+#print DiamondIntegral.Section5.witnessRightUnique_realize
+#print DiamondIntegral.Section5.bijectionValidityFormula_realize
+#print DiamondIntegral.Section5.setEqualityValidityFormula_realize
+#print DiamondIntegral.Section5.finiteWitnessValidityFormula_realize
+#print DiamondIntegral.Section5.tupleEqualityFormula_realize
+#print DiamondIntegral.Section5.tupleDistinctFormula_realize
+#print DiamondIntegral.Section5.fibreCollisionFormula_realize
+#print DiamondIntegral.Section5.finiteFibreValidityFormula_realize
+#print DiamondIntegral.Section5.no_injective_fin_iff_card_bound
+#print DiamondIntegral.Section5.finiteFibreValidityFormula_card
+#print DiamondIntegral.Section5.prepare_finite_original_base_RV_predicates
+#print DiamondIntegral.Section5.RESFiniteWitness.res_equality_iff_literal_family_witness
+#print DiamondIntegral.Section5.RESFiniteWitness.PrimitivePair.relation
+#print DiamondIntegral.Section5.RESFiniteWitness.relationPairs_literal
+#print DiamondIntegral.Section5.RESFiniteWitness.positiveFamilyClass_singleton
+#print DiamondIntegral.Section5.RESFiniteWitness.RelationTerm.positive_relation
+#print DiamondIntegral.Section5.RESFiniteWitness.relationTerms_positive_relation
+#print DiamondIntegral.Section5.RESFiniteWitness.literal_relation_term
+#print DiamondIntegral.Section5.RESFiniteWitness.relationLeftFamilyClass_append
+#print DiamondIntegral.Section5.RESFiniteWitness.relationRightFamilyClass_append
+#print DiamondIntegral.Section5.RESFiniteWitness.positive_relation_literal_terms
+#print DiamondIntegral.Section5.RESFiniteWitness.ActualFamilyWitness.taggedLeft_finite
+#print DiamondIntegral.Section5.RESFiniteWitness.ActualFamilyWitness.taggedRight_finite
+#print DiamondIntegral.Section5.RESFiniteWitness.res_equality_has_literal_tagged_witness
+#print DiamondIntegral.Section5.gammaGroundCleanRVMap_finite
+#print DiamondIntegral.Section5.nativeRESObjectOfGammaSet_domain
+#print DiamondIntegral.Section5.gammaGroundRVTaggedUnion_finite_values
+#print DiamondIntegral.Section5.taggedRVFinFamily_finite_values
+#print DiamondIntegral.Section5.EquivariantGraphDecomposition.commonAction_left
+#print DiamondIntegral.Section5.EquivariantGraphDecomposition.commonAction_right
+#print DiamondIntegral.Section5.EquivariantGraphDecomposition.common_immersions
+#print DiamondIntegral.Section5.RESFiniteWitness.stabilizedFamily_class
+#print DiamondIntegral.Section5.RESFiniteWitness.res_equality_iff_actual_family_witness
+#print DiamondIntegral.Section5.AffineBranchCertificate.overC
+#print DiamondIntegral.Section5.RESFiniteWitness.positiveFamilyClass_append
+#print DiamondIntegral.Section5.RESFiniteWitness.positiveFamilyClass_cons
+#print DiamondIntegral.Section5.RESFiniteWitness.positiveFamilyClass_product_map
+#print DiamondIntegral.Section5.RESFiniteWitness.positiveFamilyClass_product
+#print DiamondIntegral.Section5.RESFiniteWitness.positive_family_representative
+#print DiamondIntegral.Section5.RESFiniteWitness.positiveFamilyAtDegree_class
+#print DiamondIntegral.Section5.RESFiniteWitness.positive_family_equality_iff_bijections
+#print DiamondIntegral.Section5.RESFiniteWitness.positiveFamilyAtDegree_eq_empty
+#print DiamondIntegral.Section5.RESFiniteWitness.positive_family_equality_iff_finite_bijections
+#print DiamondIntegral.Section5.RESFiniteWitness.positive_family_finite_bijections
+#print DiamondIntegral.Section5.RESFiniteWitness.positiveFamilyBound_left
+#print DiamondIntegral.Section5.RESFiniteWitness.positiveFamilyBound_right
+#print DiamondIntegral.Section5.finite_points_affine_neighborhood_of_openImmersion
+#print DiamondIntegral.Section5.finite_points_affine_neighborhood_of_reduced_immersion
+#print DiamondIntegral.Section5.finite_action_on_reduced_affine_immersion_isGood
+#print DiamondIntegral.Section5.finite_points_principal_neighborhood
+#print DiamondIntegral.Section5.EquivariantVariety.algebraSpecAction_overC
+#print DiamondIntegral.Section5.complex_equivariant_bijection_decomposition
+#print DiamondIntegral.Section5.equivariant_certified_common_pieces
+#print DiamondIntegral.Section5.basicGraphLeft_image_invariant
+#print DiamondIntegral.Section5.basicGraphRight_image_invariant
+#print DiamondIntegral.Section5.basicGraphLeft_complex_image_iff
+#print DiamondIntegral.Section5.basicGraphRight_complex_image_iff
+#print DiamondIntegral.Section5.polynomialDiagonalAction_point
+#print DiamondIntegral.Section5.complexAlgebraPoint_injective
+#print DiamondIntegral.Section5.complexAlgebraPoint_comp
+#print DiamondIntegral.Section5.complexAlgebraPoint_closed
+#print DiamondIntegral.Section5.complex_point_mem_spec_image_iff
+#print DiamondIntegral.Section5.constructible_invariant_of_complex_points
+#print DiamondIntegral.Section5.EquivariantVariety.relation_zero
+#print DiamondIntegral.Section5.EquivariantVariety.objectClass_unit
+#print DiamondIntegral.Section5.EquivariantVariety.objectClass_product
+#print DiamondIntegral.Section5.EquivariantVariety.objectClass_iso
+#print DiamondIntegral.Section5.EquivariantVariety.objectClass_empty
+#print DiamondIntegral.Section5.EquivariantVariety.objectClass_scissor
+#print DiamondIntegral.Section5.EquivariantVariety.lift_objectClass
+#print DiamondIntegral.Section5.AffineBranchCertificate.equivariant
+#print DiamondIntegral.Section5.finite_invariant_branch_stratification
+#print DiamondIntegral.Section5.finite_equivariant_branch_stratification
+#print DiamondIntegral.Section5.certifiedCommon_immersions
+#print DiamondIntegral.Section5.certifiedCommon_left_partition
+#print DiamondIntegral.Section5.certifiedCommon_right_partition
+#print DiamondIntegral.Section5.affineBranchRelation_left_functional
+#print DiamondIntegral.Section5.affineBranchRelation_right_functional
+#print DiamondIntegral.Section5.AffineBranchCertificate.point
+#print DiamondIntegral.Section5.affineBranchRelation_mem_left
+#print DiamondIntegral.Section5.affineBranchRelation_mem_right
+#print DiamondIntegral.Section5.reducedImmersionPointLift_fac
+#print DiamondIntegral.Section5.affine_branches_point_functional
+#print DiamondIntegral.Section5.reducedPullbackActionMap_fst
+#print DiamondIntegral.Section5.reducedPullbackActionMap_snd
+#print DiamondIntegral.Section5.reducedPullbackActionMap_one
+#print DiamondIntegral.Section5.reducedPullbackActionMap_mul
+#print DiamondIntegral.Section5.reducedPullbackSchemeAction_fst
+#print DiamondIntegral.Section5.reducedPullbackSchemeAction_snd
+#print DiamondIntegral.Section5.reducedPullbackSchemeAction_comp
+#print DiamondIntegral.Section5.certified_inverse_pieces
+#print DiamondIntegral.Section5.AffineBranchCertificate.functional
+#print DiamondIntegral.Section5.glue_immersion_branches_certificate
+#print DiamondIntegral.Section5.schemeReductionLift_fac
+#print DiamondIntegral.Section5.schemeReductionLift_unique
+#print DiamondIntegral.Section5.reducedPullback_condition
+#print DiamondIntegral.Section5.reducedPullbackLift_fst
+#print DiamondIntegral.Section5.reducedPullbackLift_snd
+#print DiamondIntegral.Section5.reducedPullback_hom_ext
+#print DiamondIntegral.Section5.reducedPullback_isReduced
+#print DiamondIntegral.Section5.reducedPullbackFst_range
+#print DiamondIntegral.Section5.reducedPullbackSnd_range
+#print DiamondIntegral.Section5.reducedClosedScheme_isReduced
+#print DiamondIntegral.Section5.reducedClosedInclusion_isClosedImmersion
+#print DiamondIntegral.Section5.reducedClosedInclusion_range
+#print DiamondIntegral.Section5.reducedLocallyClosedScheme_isReduced
+#print DiamondIntegral.Section5.reducedLocallyClosedInclusion_isImmersion
+#print DiamondIntegral.Section5.reducedLocallyClosedInclusion_range
+#print DiamondIntegral.Section5.schemeReduction_isReduced
+#print DiamondIntegral.Section5.schemeReductionMap_isClosedImmersion
+#print DiamondIntegral.Section5.schemeReductionMap_surjective
+#print DiamondIntegral.Section5.graph_branches_transformed_complex_compatible
+#print DiamondIntegral.Section5.graph_branches_inverse_transformed_complex_compatible
+#print DiamondIntegral.Section5.specAlgHom_comp
+#print DiamondIntegral.Section5.glued_branches_equivariant
+#print DiamondIntegral.Section5.finite_regular_graph_strata
+#print DiamondIntegral.Section5.locallyClosed_constructible_of_noetherian
+#print DiamondIntegral.Section5.finite_invariant_constructible_substrata
+#print DiamondIntegral.Section5.immersion_preimage_isClopen
+#print DiamondIntegral.Section5.complex_graph_stratum_regular_map
+#print DiamondIntegral.Section5.immersionBranchLift_fac
+#print DiamondIntegral.Section5.glue_immersion_branches
+#print DiamondIntegral.Section5.basicGraphPoint_mem
+#print DiamondIntegral.Section5.graph_branches_complex_compatible
+#print DiamondIntegral.Section5.graph_branches_inverse_complex_compatible
+#print DiamondIntegral.Section5.PuiseuxOriginal.ambientBoundedVFVolume_point_indexed_fibres
+#print Polynomial.Monic.tschirnhausen
+#print Polynomial.Monic.exists_rootMultiplicity_pos_lt
+#print LaurentSeries.exists_ofPowerSeries_eq_of_order_nonneg
+#print LaurentSeries.orderTop_expand
+#print LaurentSeries.toHahn_expand_single_scaling
+#print LaurentSeries.newton_slope_scaling
+#print LaurentSeries.newton_puiseux_descent
+#print PuiseuxSeries.exists_root_mem_subfield
+#print PuiseuxSeries.isIntegral_single_one_div
+#print PuiseuxSeries.mem_adjoin_single_of_mem_fieldRange
+#print Polynomial.Monic.exists_factorization_rootMultiplicity_zero
+#print Polynomial.Monic.exists_factorization_rootMultiplicity
+#print HahnSeries.embDomain_embDomain
+#print LaurentSeries.toHahn_single
+#print LaurentSeries.toHahn_comp_expand
+#print LaurentSeries.fieldRange_toHahn_le
+#print LaurentSeries.directed_fieldRange_toHahn
+#print PuiseuxSeries.mem_subfield_iff
+#print PuiseuxSeries.mem_subfield_iff_support
+#print PuiseuxSeries.exists_common_index
+#print axioms DiamondIntegral.Section5.rectangleValueCell
+#print axioms DiamondIntegral.Section5.rectangleResidueCell
+#print axioms DiamondIntegral.Section5.rectangleGammaCell
+#print axioms DiamondIntegral.Section5.ValueInducedChartPiece
+#print axioms DiamondIntegral.Section5.groundSupportPattern
+#print axioms DiamondIntegral.Section5.groundResiduePattern
+#print axioms DiamondIntegral.Section5.groundMixedActiveMap
+#print axioms DiamondIntegral.Section5.groundMixedValueMap
+#print axioms DiamondIntegral.Section5.groundValuePattern
+#print axioms DiamondIntegral.Section5.groundPatternGamma
+#print axioms DiamondIntegral.Section5.groundRVValueImage
+#print axioms DiamondIntegral.Section5.GroundMonomialPiece
+#print axioms DiamondIntegral.Section5.GroundMonomialPiece.rowOrder
+#print axioms DiamondIntegral.Section5.GroundMonomialPiece.orderedBasis
+#print axioms DiamondIntegral.Section5.GroundMonomialPiece.matrix
+#print axioms DiamondIntegral.Section5.GroundMonomialPiece.blockSplit
+#print axioms DiamondIntegral.Section5.kummerRatio
+#print axioms DiamondIntegral.Section5.kummerRootRatio
+#print axioms DiamondIntegral.Section5.kummerCharacter
+#print axioms DiamondIntegral.Section5.finiteKummerEquiv
+#print axioms DiamondIntegral.Section5.finiteKummerAutomorphism
+#print axioms DiamondIntegral.Section5.laurentExponentMap
+#print axioms DiamondIntegral.Section5.laurentScale
+#print axioms DiamondIntegral.Section5.laurentResiduePart
+#print axioms DiamondIntegral.Section5.laurentGrouped
+#print axioms DiamondIntegral.Section5.laurentGroupingEquiv
+#print axioms DiamondIntegral.Section5.laurentPowerSubfield
+#print axioms DiamondIntegral.Section5.laurentScaleEquiv
+#print axioms DiamondIntegral.Section5.laurentPowerCoordinates
+#print axioms DiamondIntegral.Section5.laurentPowerBasis
+#print axioms DiamondIntegral.Section5.laurentBaseUniformizer
+#print axioms DiamondIntegral.Section5.laurentBaseConstant
+#print axioms DiamondIntegral.Section5.laurentKummerEquiv
+#print axioms DiamondIntegral.Section5.complexLaurentKummerEquiv
+#print axioms DiamondIntegral.Section5.hahnCharacterTwist
+#print axioms DiamondIntegral.Section5.hahnCharacterEquiv
+#print axioms DiamondIntegral.Section5.rationalExponentMap
+#print axioms DiamondIntegral.Section5.laurentToRational
+#print axioms DiamondIntegral.Section5.rationalLaurentPart
+#print axioms DiamondIntegral.Section5.puiseuxSubfield
+#print axioms DiamondIntegral.Section5.PuiseuxSeries
+#print axioms DiamondIntegral.Section5.compatibleRootSubgroup
+#print axioms DiamondIntegral.Section5.CompatibleRoots
+#print axioms DiamondIntegral.Section5.compatibleRootValue
+#print axioms DiamondIntegral.Section5.compatibleRootCharacter
+#print axioms DiamondIntegral.Section5.laurentToPuiseux
+#print axioms DiamondIntegral.Section5.puiseuxBaseSubfield
+#print axioms DiamondIntegral.Section5.puiseuxCharacterEquiv
+#print axioms DiamondIntegral.Section5.puiseuxRootSystemAction
+#print axioms DiamondIntegral.Section5.puiseuxRoot
+#print axioms DiamondIntegral.Section5.puiseuxConstant
+#print axioms DiamondIntegral.Section5.puiseuxBaseUniformizer
+#print axioms DiamondIntegral.Section5.puiseuxBaseConstant
+#print axioms DiamondIntegral.Section5.puiseuxRootSystemHom
+#print axioms DiamondIntegral.Section5.puiseuxRootUnityEquiv
+#print axioms DiamondIntegral.Section5.puiseuxAutomorphismRoot
+#print axioms DiamondIntegral.Section5.puiseuxAutomorphismSystem
+#print axioms DiamondIntegral.Section5.puiseuxGaloisEquiv
+#print axioms DiamondIntegral.Section5.complexPuiseuxGaloisEquiv
+#print axioms DiamondIntegral.Section5.rationalCharacterSystem
+#print axioms DiamondIntegral.Section5.valuedRVUnitEquiv
+#print axioms DiamondIntegral.Section5.valuedRVEquiv
+#print axioms DiamondIntegral.Section5.puiseuxValuation
+#print axioms DiamondIntegral.Section5.puiseuxUnitLeadingTerm
+#print axioms DiamondIntegral.Section5.puiseuxMonomial
+#print axioms DiamondIntegral.Section5.puiseuxMonomialUnit
+#print axioms DiamondIntegral.Section5.puiseuxRVUnitEquiv
+#print axioms DiamondIntegral.Section5.RationalRVUnits
+#print axioms DiamondIntegral.Section5.rationalRVCharacter
+#print axioms DiamondIntegral.Section5.puiseuxRVAction
+#print axioms DiamondIntegral.Section5.puiseuxRVBaseAutomorphisms
+#print axioms DiamondIntegral.Section5.puiseuxRVActionHom
+#print axioms DiamondIntegral.Section5.puiseuxRVGaloisEquiv
+#print axioms DiamondIntegral.Section5.puiseuxBaseRVMap
+#print axioms DiamondIntegral.Section5.originalValuedModelAut
+#print axioms DiamondIntegral.Section5.complexPuiseuxRVGaloisEquiv
+#print axioms DiamondIntegral.Section5.PuiseuxModelPresentation
+#print axioms DiamondIntegral.Section5.puiseuxModelFieldAction
+#print axioms DiamondIntegral.Section5.puiseuxOriginalModelAction
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.RV
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.Carrier
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rvNormalEquiv
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rvOfField
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.characterEquiv
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rvAction
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rvMul
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rvInv
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.value
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.inResidue
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.residue
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.residueLift
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.kAdd
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.kNeg
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.vfPart
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rvPart
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.inVF
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.function
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.relation
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.interpret
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.carrierAction
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.languageAction
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.canonicalInterpret
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.canonicalLanguageAction
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.baseCarrier
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.ActualRVUnits
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.quotientRVAction
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.PreservesRVFormulas
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.inducedRVAutSubgroup
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.inducedRVBaseEquiv
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.puiseuxOriginalRVGaloisEquiv
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.kummerOriginalRVEquiv
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.remark_5_13
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.complexVarietyVolume_discharged
+#print axioms DiamondIntegral.Section5.section5BoundedVFIntegral
+#print axioms DiamondIntegral.Section5.section5GeometricVFIntegral
+#print axioms DiamondIntegral.Section5.completedGroundTaggedFieldLiftInputs
+#print axioms DiamondIntegral.Section5.completed18OriginalLiftInput
+#print axioms DiamondIntegral.Section5.completed18GroundLiftInput
+#print axioms DiamondIntegral.Section5.completed18NativeVFForgetInvariant
+#print axioms DiamondIntegral.Section5.completed18NativeVFForget
+#print axioms DiamondIntegral.Section5.completed18LocalLift
+#print axioms DiamondIntegral.Section5.completed18OneGroundBijection
+#print axioms DiamondIntegral.Section5.completed18VFClass
+#print axioms DiamondIntegral.Section5.nativeVFPositiveGroundInvariant
+#print axioms DiamondIntegral.Section5.nativeVFPositiveGround
+#print axioms DiamondIntegral.Section5.groundVFNativeInvariant
+#print axioms DiamondIntegral.Section5.groundVFNativePositive
+#print axioms DiamondIntegral.Section5.completed18VFPositiveEquiv
+#print axioms DiamondIntegral.Section5.completed18RVDirectSumAddEquiv
+#print axioms DiamondIntegral.Section5.completed18RVDirectSumEquiv
+#print axioms DiamondIntegral.Section5.completed18RVPositiveEquiv
+#print axioms DiamondIntegral.Section5.groundMixed_gamma_iso
+#print axioms DiamondIntegral.Section5.groundVFNativeObject
+#print axioms DiamondIntegral.Section5.nativeVFGroundObject
+#print axioms DiamondIntegral.Section5.groundVFObjectRoundTrip
+#print axioms DiamondIntegral.Section5.nativeVFObjectRoundTrip
+#print axioms DiamondIntegral.Section5.completed18RVClassAddEquiv
+#print axioms DiamondIntegral.Section5.groundRVClassNative
+#print axioms DiamondIntegral.Section5.nativeRVClassRepresentative
+#print axioms DiamondIntegral.Section5.nativeRVClassGround
+#print axioms DiamondIntegral.Section5.completed18RVClassEquiv
+#print axioms DiamondIntegral.Section5.groundRVAtDomainEquiv
+#print axioms DiamondIntegral.Section5.groundRVAtIso
+#print axioms DiamondIntegral.Section5.nativeRVGroundDomainEquiv
+#print axioms DiamondIntegral.Section5.nativeRVGroundIso
+#print axioms DiamondIntegral.Section5.groundRVAtToNativeIso
+#print axioms DiamondIntegral.Section5.groundRVObjectRoundTrip
+#print axioms DiamondIntegral.Section5.nativeRVObjectRoundTrip
+#print axioms DiamondIntegral.Section5.groundRVMapRawGraph
+#print axioms DiamondIntegral.Section5.groundRVMapOfRawGraph
+#print axioms DiamondIntegral.Section5.fullWeightIsoAtOfEquiv
+#print axioms DiamondIntegral.Section5.nativeRVRawVolume
+#print axioms DiamondIntegral.Section5.nativeRVGroundDomain
+#print axioms DiamondIntegral.Section5.nativeRVGroundVolume
+#print axioms DiamondIntegral.Section5.nativeRVGroundObject
+#print axioms DiamondIntegral.Section5.groundRVPresentation
+#print axioms DiamondIntegral.Section5.groundRVAt
+#print axioms DiamondIntegral.Section5.groundRVPairIndex
+#print axioms DiamondIntegral.Section5.nativeFiniteRVBaseTransfer
+#print axioms DiamondIntegral.Section5.nativeFiniteRVIsoBaseTransfer
+#print axioms DiamondIntegral.Section5.gammaIsoMapUniv
+#print axioms DiamondIntegral.Section5.native_contraction_comparison
+#print axioms DiamondIntegral.Section5.RelativeCor58Data
+#print axioms DiamondIntegral.Section5.rvParameterInsertMap
+#print axioms DiamondIntegral.Section5.rvParameterAttachedSet
+#print axioms DiamondIntegral.Section5.rvParameterAttachEquiv
+#print axioms DiamondIntegral.Section5.rvParameterAttachIso
+#print axioms DiamondIntegral.Section5.rvParameterFamilyIndex
+#print axioms DiamondIntegral.Section5.BaseDefinableIn
+#print axioms DiamondIntegral.Section5.positionedCells_base_transfer
+#print axioms DiamondIntegral.Section5.cellRestrictionTarget
+#print axioms DiamondIntegral.Section5.cellRestrictionEquiv
+#print axioms DiamondIntegral.Section5.restrictPositionedCells
+#print axioms DiamondIntegral.Section5.GammaQE.dnfMonomials
+#print axioms DiamondIntegral.Section5.GammaQE.literalMonomials
+#print axioms DiamondIntegral.Section5.GammaQE.ValueComparisonsPreserved
+#print axioms DiamondIntegral.Section5.GammaQE.SlopesSeparated
+#print axioms DiamondIntegral.Section5.GammaQE.mapRVVariables
+#print axioms DiamondIntegral.Section5.GammaQE.mapRVAtomVariables
+#print axioms DiamondIntegral.Section5.GammaQE.mapRVBooleanVariables
+#print axioms DiamondIntegral.Section5.GammaQE.perturbRV
+#print axioms DiamondIntegral.Section5.GammaQE.flatCoefficient
+#print axioms DiamondIntegral.Section5.GammaQE.flatValue
+#print axioms DiamondIntegral.Section5.GammaQE.rvGamma
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.complexVarietyVolume
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.varietyNativeSourceFibreBijection
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.varietyNativeTargetFibreBijection
+#print axioms DiamondIntegral.Section5.nativeTargetChangedFibreBijection
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.varietyNativeChartChange
+#print axioms DiamondIntegral.Section5.nativeSourceFibreMap
+#print axioms DiamondIntegral.Section5.nativeSourceFibreBijection
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.varietyNativeFibrePointMap
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.varietyNativeFibrePointEquiv
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.varietyNativeMorphism
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.varietyNativeInclusion
+#print axioms DiamondIntegral.Section5.EquivariantVariety.AffineMorphismRefinement
+#print axioms DiamondIntegral.Section5.EquivariantVariety.ImmersedPresentation.refine
+#print axioms DiamondIntegral.Section5.EquivariantVariety.ImmersedPresentation.pullback
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.varietyAtlasCount
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.varietyAtlasIndex
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.varietyNativeChart
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.varietyNativeObject
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.varietyNativePointEquiv
+#print axioms DiamondIntegral.Section5.ComplexVariety.Morphism.pointMap
+#print axioms DiamondIntegral.Section5.ComplexVariety.Morphism.affineAlgebraMap
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.nativeGeometricAffineChart
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.nativeGeometricAffineChartEquiv
+#print axioms DiamondIntegral.Section5.EquivariantVariety.Object.underlyingVariety
+#print axioms DiamondIntegral.Section5.EquivariantVariety.Object.underlyingPointEquiv
+#print axioms DiamondIntegral.Section5.nativeVFFiniteSum
+#print axioms DiamondIntegral.Section5.finiteDependentSumHeadEquiv
+#print axioms DiamondIntegral.Section5.nativeVFFiniteSumEquiv
+#print axioms DiamondIntegral.Section5.nativeVFFiniteSumInclusion
+#print axioms DiamondIntegral.Section5.NativeGroundRVLabels
+#print axioms DiamondIntegral.Section5.nativeVFCoproductLeft
+#print axioms DiamondIntegral.Section5.nativeVFCoproductRight
+#print axioms DiamondIntegral.Section5.nativeVFCoproductSum
+#print axioms DiamondIntegral.Section5.nativeVFCoproductEquiv
+#print axioms DiamondIntegral.Section5.vfAdjoinedMixedFiniteObject
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.nativeAffineCoordinateEquiv
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.nativeAffineAlgebraPointEquiv
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.nativeAffineVarietyPointEquiv
+#print axioms DiamondIntegral.Section5.vfRawMixedParameterLiftInput
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.ambientPolynomialEquations
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.nativeAffineVFObject
+#print axioms DiamondIntegral.Section5.universalVFPolynomialMap
+#print axioms DiamondIntegral.Section5.nativeVFPolynomialMap
+#print axioms DiamondIntegral.Section5.ComplexVariety.affineCoordinates
+#print axioms DiamondIntegral.Section5.EquivariantVariety.Object.fieldPoint
+#print axioms DiamondIntegral.Section5.EquivariantVariety.Morphism.fieldPointMap
+#print axioms DiamondIntegral.Section5.EquivariantVariety.ImmersedPresentation.fieldPointPartitionMap
+#print axioms DiamondIntegral.Section5.EquivariantVariety.ImmersedPresentation.fieldPointEquiv
+#print axioms DiamondIntegral.Section5.ComplexVariety.Point
+#print axioms DiamondIntegral.Section5.ComplexVariety.affinePointEquiv
+#print axioms DiamondIntegral.Section5.vfPolynomialRawLocus
+#print axioms DiamondIntegral.Section5.nativeVFPolynomialDomain
+#print axioms DiamondIntegral.Section5.nativeVFPolynomialObject
+#print axioms DiamondIntegral.Section5.ComplexVariety
+#print axioms DiamondIntegral.Section5.ComplexVariety.trivialObject
+#print axioms DiamondIntegral.Section5.ComplexVariety.Morphism
+#print axioms DiamondIntegral.Section5.ComplexVariety.Morphism.trivialMorphism
+#print axioms DiamondIntegral.Section5.vfPolynomialRawCode
+#print axioms DiamondIntegral.Section5.finiteAffinePointEquiv
+#print axioms DiamondIntegral.Section5.FiniteAffineAlgebraPresentation
+#print axioms DiamondIntegral.Section5.affinePointCoordinates
+#print axioms DiamondIntegral.Section5.affinePointCoordinateEquiv
+#print axioms DiamondIntegral.Section5.vfAdjoinedFiniteObject
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.ambientPuiseuxFieldHom
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.ambientComplexFieldHom
+#print axioms DiamondIntegral.Section5.elementaryVFMap
+#print axioms DiamondIntegral.Section5.elementaryVFFieldHom
+#print axioms DiamondIntegral.Section5.sortedTransferVFRing
+#print axioms DiamondIntegral.Section5.gammaGroundTransferChart
+#print axioms DiamondIntegral.Section5.rvGroundTransferInvariant
+#print axioms DiamondIntegral.Section5.rvGroundTransferOrdinary
+#print axioms DiamondIntegral.Section5.vfAdjoinedContext
+#print axioms DiamondIntegral.Section5.vfRawParameterBase
+#print axioms DiamondIntegral.Section5.vfRawParameterLiftInput
+#print axioms DiamondIntegral.Section5.vfAdjoinedField
+#print axioms DiamondIntegral.Section5.vfFieldContext
+#print axioms DiamondIntegral.Section5.sortedTransferOriginalLiftInput
+#print axioms DiamondIntegral.Section5.vfFieldGammaMap
+#print axioms DiamondIntegral.Section5.vfFieldGamma
+#print axioms DiamondIntegral.Section5.vfFieldCarrier
+#print axioms DiamondIntegral.Section5.vfFieldSubstructure
+#print axioms DiamondIntegral.Section5.vfFieldSubstructureBase
+#print axioms DiamondIntegral.Section5.vfFieldRVImage
+#print axioms DiamondIntegral.Section5.sortedTransferRVInvariant
+#print axioms DiamondIntegral.Section5.sortedTransferRVPositive
+#print axioms DiamondIntegral.Section5.sortedTransferRVPositiveEquiv
+#print axioms DiamondIntegral.Section5.sortedTransferFiniteVFObject
+#print axioms DiamondIntegral.Section5.sortedTransferVFInvariant
+#print axioms DiamondIntegral.Section5.sortedTransferVFPositive
+#print axioms DiamondIntegral.Section5.sortedTransferVFPositiveEquiv
+#print axioms DiamondIntegral.Section5.sortedTransferRVVolume
+#print axioms DiamondIntegral.Section5.sortedTransferRVObject
+#print axioms DiamondIntegral.Section5.sortedTransferMixedDomain
+#print axioms DiamondIntegral.Section5.sortedTransferMixedBijection
+#print axioms DiamondIntegral.Section5.sortedTransferRVDomain
+#print axioms DiamondIntegral.Section5.sortedTransferRVRawBijection
+#print axioms DiamondIntegral.Section5.sortedTransferRVBijection
+#print axioms DiamondIntegral.Section5.nativeFiniteMixedMapFibre
+#print axioms DiamondIntegral.Section5.OriginalBaseUnmeasuredLiftInput
+#print axioms DiamondIntegral.Section5.originalBaseLiftInputOfContext
+#print axioms DiamondIntegral.Section5.originalBasePositiveIntegral
+#print axioms DiamondIntegral.Section5.originalBaseVFIntegralPositive
+#print axioms DiamondIntegral.Section5.originalBaseVFIntegral
+#print axioms DiamondIntegral.Section5.originalBaseVFBoundedValue
+#print axioms DiamondIntegral.Section5.NativeBoundedWeakVFFibreVanishing
+#print axioms DiamondIntegral.Section5.NativeBoundedWeakVFFibreLiftEquality
+#print axioms DiamondIntegral.Section5.nativeWeakLiftKeyMap
+#print axioms DiamondIntegral.Section5.nativeWeakLiftKeyBijection
+#print axioms DiamondIntegral.Section5.nativePullbackWeakRVObject
+#print axioms DiamondIntegral.Section5.nativePullbackWeakRVObject_lift_bijection
+#print axioms DiamondIntegral.Section5.nativeWeakRVLabelGraph
+#print axioms DiamondIntegral.Section5.NativeWeakRVObject
+#print axioms DiamondIntegral.Section5.nativeWeakRVObjectLift
+#print axioms DiamondIntegral.Section5.NativeVFLiftEqualitySchema.ValidWeak
+#print axioms DiamondIntegral.Section5.nativePreparedRVKeyBijection_weak
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.ambientBoundedVFVolume
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.LaurentCoefficientNames
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.laurentCoefficientEnumeration
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.coefficientGroundComparison
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.ambientRealPuiseuxComparison
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.ambientPuiseuxComparison
+#print axioms DiamondIntegral.Section5.elementaryRESOrdinaryReducedRestriction
+#print axioms DiamondIntegral.Section5.elementaryRESUngradedReduced
+#print axioms DiamondIntegral.Section5.elementaryRESReducedRestriction
+#print axioms DiamondIntegral.Section5.resGroundTransferChart
+#print axioms DiamondIntegral.Section5.resGroundTransferObject
+#print axioms DiamondIntegral.Section5.resGroundTransferIso
+#print axioms DiamondIntegral.Section5.resGroundTransferInvariant
+#print axioms DiamondIntegral.Section5.resGroundTransferOrdinary
+#print axioms DiamondIntegral.Section5.resGroundTransferGamma
+#print axioms DiamondIntegral.Section5.resGroundTransferFibreIso
+#print axioms DiamondIntegral.Section5.resGroundTransferToReduced
+#print axioms DiamondIntegral.Section5.resGroundTransferUngradedReduced
+#print axioms DiamondIntegral.Section5.resGroundTransferReduced
+#print axioms DiamondIntegral.Section5.eliminateRealGammaRES
+#print axioms DiamondIntegral.Section5.elementaryRESChartValue
+#print axioms DiamondIntegral.Section5.elementaryRESRestrictionCutInvariant
+#print axioms DiamondIntegral.Section5.elementaryRESRestrictionInvariant
+#print axioms DiamondIntegral.Section5.elementaryRESOrdinaryRestriction
+#print axioms DiamondIntegral.Section5.elementaryRESUngradedRestriction
+#print axioms DiamondIntegral.Section5.fullRawValueFibre
+#print axioms DiamondIntegral.Section5.elementaryNativeRESValue
+#print axioms DiamondIntegral.Section5.elementaryNativeRVMap
+#print axioms DiamondIntegral.Section5.elementaryNativeRVBijection
+#print axioms DiamondIntegral.Section5.rawRVSetNative
+#print axioms DiamondIntegral.Section5.rawGraphExtension
+#print axioms DiamondIntegral.Section5.joinedToCanonicalIndices
+#print axioms DiamondIntegral.Section5.rawGraphNativeMap
+#print axioms DiamondIntegral.Section5.rawTupleSwap
+#print axioms DiamondIntegral.Section5.RawDefinableGraphMap.inverse
+#print axioms DiamondIntegral.Section5.nativeRawDomainSet
+#print axioms DiamondIntegral.Section5.canonicalToJoinedIndices
+#print axioms DiamondIntegral.Section5.nativeRawTupleMap
+#print axioms DiamondIntegral.Section5.nativeRawGraphMap
+#print axioms DiamondIntegral.Section5.RawDefinableGraphMap
+#print axioms DiamondIntegral.Section5.RawDefinableGraphMap.graph
+#print axioms DiamondIntegral.Section5.RawDefinableGraphMap.restrict
+#print axioms DiamondIntegral.Section5.RawDefinableGraphMap.restriction
+#print axioms DiamondIntegral.Section5.elementaryNativeRawRestriction
+#print axioms DiamondIntegral.Section5.elementaryNativeRVRestriction
+#print axioms DiamondIntegral.Section5.elementaryNativeRESRestriction
+#print axioms DiamondIntegral.Section5.splitTupleFormula
+#print axioms DiamondIntegral.Section5.elementaryRVMap
+#print axioms DiamondIntegral.Section5.elementaryGammaTopMap
+#print axioms DiamondIntegral.Section5.namedFormulaSet
+#print axioms DiamondIntegral.Section5.NamedDefinableSet
+#print axioms DiamondIntegral.Section5.NamedDefinableSet.ofFormula
+#print axioms DiamondIntegral.Section5.elementaryNamedRestriction
+#print axioms DiamondIntegral.Section5.elementaryNamedDefinableEquiv
+#print axioms DiamondIntegral.Section5.namedActualDefinableEquiv
+#print axioms DiamondIntegral.Section5.elementaryActualDefinableEquiv
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.canonicalModelPresentation_concrete
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.theta_5_14_concrete
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.concreteCarrierNormal
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.concreteLanguageEquiv
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.v
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.constantInteger
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.constantResidue
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.constantResidueEquiv
+#print axioms DiamondIntegral.Section5.puiseuxNewtonEquiv
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.PrimitivePair.IsFibre
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.fibreTerms
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.underlyingTermsFamily
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.FibreOnlyFamilyWitness
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.LiteralFamilyWitness.fibreOnly
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.familyNativeObject
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.familyUngradedClass
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.reducedPositiveHom
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.nativeRVPositiveUnderlying
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.nativeRESPositiveUnderlying
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.nativeRESGradedUnderlying
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.familyRVSet
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.familyUnderlyingClass
+#print axioms DiamondIntegral.Section5.NativeRVSetMapObject
+#print axioms DiamondIntegral.Section5.nativeRVSetMapIsoOfBijection
+#print axioms DiamondIntegral.Section5.nativeRVBijectionOfSetMapIso
+#print axioms DiamondIntegral.Section5.NativeRVSetMapObject.coprod
+#print axioms DiamondIntegral.Section5.nativeRVSetMapInl
+#print axioms DiamondIntegral.Section5.nativeRVSetMapInr
+#print axioms DiamondIntegral.Section5.nativeRVSetMapDesc
+#print axioms DiamondIntegral.Section5.nativeRVSetMapCoprodIsColimit
+#print axioms DiamondIntegral.Section5.NativeRVSetMapObject.empty
+#print axioms DiamondIntegral.Section5.nativeRVSetMapEmptyHom
+#print axioms DiamondIntegral.Section5.nativeRVSetMapEmptyIsInitial
+#print axioms DiamondIntegral.Section5.NativeRVSetIsoClasses
+#print axioms DiamondIntegral.Section5.nativeRVSetIsoClass
+#print axioms DiamondIntegral.Section5.NativeGeometricVFFibreLiftVanishing
+#print axioms DiamondIntegral.Section5.nativePreparedRVKeyStratumBijection
+#print axioms DiamondIntegral.Section5.nativeRVZeroPatternBijection
+#print axioms DiamondIntegral.Section5.nativeVFBaseStratumSelection
+#print axioms DiamondIntegral.Section5.nativeVFBaseStratumDropBijection
+#print axioms DiamondIntegral.Section5.nativeVFSelectedZeroStratum
+#print axioms DiamondIntegral.Section5.originalConstantProductTotalBijection
+#print axioms DiamondIntegral.Section5.NativeGeometricVFLiftEqualitySchema.RVAgreement
+#print axioms DiamondIntegral.Section5.NativeGeometricVFFibreLiftEquality
+#print axioms DiamondIntegral.Section5.originalPaddedRVRecodeBijection
+#print axioms DiamondIntegral.Section5.NativeGeometricVFLiftEqualitySchema
+#print axioms DiamondIntegral.Section5.NativeGeometricVFLiftEqualitySchema.Valid
+#print axioms DiamondIntegral.Section5.originalPaddedRVDomain
+#print axioms DiamondIntegral.Section5.originalConstantRVDomain
+#print axioms DiamondIntegral.Section5.originalConstantRVRowBijection
+#print axioms DiamondIntegral.Section5.nativeRVObjectMonoReal
+#print axioms DiamondIntegral.Section5.nativeRVObjectMonoReal_product
+#print axioms DiamondIntegral.Section5.nativeRVObjectMonoReal_affine
+#print axioms DiamondIntegral.Section5.nativeRVObjectMonoReal_unit
+#print axioms DiamondIntegral.Section5.NativeBoundedVFFibreLiftVanishing
+#print axioms DiamondIntegral.Section5.nativeVFMapLiftWitnessBijection
+#print axioms DiamondIntegral.Section5.nativeMixedPartialTotal
+#print axioms DiamondIntegral.Section5.nativeMixedPartialTotalMap
+#print axioms DiamondIntegral.Section5.nativeMixedPartialTotalBijection
+#print axioms DiamondIntegral.Section5.nativeSpecialBaseIso
+#print axioms DiamondIntegral.Section5.nativeSpecialBaseBijection
+#print axioms DiamondIntegral.Section5.nativeVFClass
+#print axioms DiamondIntegral.Section5.nativePreparedRVTotalMap
+#print axioms DiamondIntegral.Section5.nativePreparedRVKeyBijection
+#print axioms DiamondIntegral.Section5.nativeRVChartNormalized
+#print axioms DiamondIntegral.Section5.nativeRVPositiveNormalized
+#print axioms DiamondIntegral.Section5.nativeVFChartIntegralPositive
+#print axioms DiamondIntegral.Section5.nativeVFChartIntegral
+#print axioms DiamondIntegral.Section5.nativeVFBoundedValue
+#print axioms DiamondIntegral.Section5.nativeVFGeometricValue
+#print axioms DiamondIntegral.Section5.nativePointChartIso
+#print axioms DiamondIntegral.Section5.nativePositiveChartIso
+#print axioms DiamondIntegral.Section5.preparedRVTotalIndices
+#print axioms DiamondIntegral.Section5.preparedRVFibreLabelIndices
+#print axioms DiamondIntegral.Section5.nativeAffineRVObject
+#print axioms DiamondIntegral.Section5.nativeAffineRVPower
+#print axioms DiamondIntegral.Section5.nativeGroundGeometricRetraction
+#print axioms DiamondIntegral.Section5.nativeFullKeyDropBijection
+#print axioms DiamondIntegral.Section5.nativeRVCoordinateBijection
+#print axioms DiamondIntegral.Section5.nativeRVZeroBlockIndices
+#print axioms DiamondIntegral.Section5.nativeRVZeroBlockMap
+#print axioms DiamondIntegral.Section5.nativeRVZeroBlockBijection
+#print axioms DiamondIntegral.Section5.nativePreparedLiftBaseDomain
+#print axioms DiamondIntegral.Section5.nativePreparedLiftRVPredicate
+#print axioms DiamondIntegral.Section5.nativeVFFillCoordinates
+#print axioms DiamondIntegral.Section5.nativeVFZeroStratumRVObject
+#print axioms DiamondIntegral.Section5.nativeVFZeroStratum_lift_bijection
+#print axioms DiamondIntegral.Section5.preparedFamilyBase
+#print axioms DiamondIntegral.Section5.preparedFamilyOldRV
+#print axioms DiamondIntegral.Section5.preparedFamilyFibreRV
+#print axioms DiamondIntegral.Section5.preparedFamilyFibreVF
+#print axioms DiamondIntegral.Section5.PreparedFamilyRVData
+#print axioms DiamondIntegral.Section5.preparedFamilyRVData
+#print axioms DiamondIntegral.Section5.nativeVFLiftFamily
+#print axioms DiamondIntegral.Section5.originalParameterDomain
+#print axioms DiamondIntegral.Section5.nativePullbackRVLabels
+#print axioms DiamondIntegral.Section5.nativePullbackLiftBijection
+#print axioms DiamondIntegral.Section5.nativePullbackRVObject
+#print axioms DiamondIntegral.Section5.nativePullbackRVObject_lift_bijection
+#print axioms DiamondIntegral.Section5.nativeVFBaseParameterMap
+#print axioms DiamondIntegral.Section5.nativeVFPrepareBaseMap
+#print axioms DiamondIntegral.Section5.nativeVFPrepareBaseBijection
+#print axioms DiamondIntegral.Section5.universalMixedCoordinateMap
+#print axioms DiamondIntegral.Section5.nativeMixedCoordinateMap
+#print axioms DiamondIntegral.Section5.nativeMixedCoordinateBijection
+#print axioms DiamondIntegral.Section5.nativeMixedMapTotal
+#print axioms DiamondIntegral.Section5.nativeMixedMapGraphPacking
+#print axioms DiamondIntegral.Section5.nativeMixedMapTotalBijection
+#print axioms DiamondIntegral.Section5.NativeBoundedVFFibreLiftEquality
+#print axioms DiamondIntegral.Section5.nativeMixedBlockSwap
+#print axioms DiamondIntegral.Section5.nativeMixedMapFibreFormula
+#print axioms DiamondIntegral.Section5.nativeMixedMapFibreAt
+#print axioms DiamondIntegral.Section5.nativeVFZeroPattern
+#print axioms DiamondIntegral.Section5.nativeVFZeroStratum
+#print axioms DiamondIntegral.Section5.nativeVFZeroPatternIndex
+#print axioms DiamondIntegral.Section5.nativeVFZeroStratumDropBijection
+#print axioms DiamondIntegral.Section5.nativeMixedMapGraph
+#print axioms DiamondIntegral.Section5.nativeMixedRVProjection
+#print axioms DiamondIntegral.Section5.nativeMixedFullKeyMap
+#print axioms DiamondIntegral.Section5.nativeRVZeroPattern
+#print axioms DiamondIntegral.Section5.nativeRVZeroPatternBase
+#print axioms DiamondIntegral.Section5.universalAttachSelectedVFKeys
+#print axioms DiamondIntegral.Section5.nativeAttachSelectedVFKeys
+#print axioms DiamondIntegral.Section5.nativeAttachSelectedVFKeysBijection
+#print axioms DiamondIntegral.Section5.universalMixedVFSelection
+#print axioms DiamondIntegral.Section5.nativeVFCoordinateSelection
+#print axioms DiamondIntegral.Section5.nativeDropZeroVFBijection
+#print axioms DiamondIntegral.Section5.nativeMixedPackingBijection
+#print axioms DiamondIntegral.Section5.nativeMixedProductBijection
+#print axioms DiamondIntegral.Section5.nativeGammaPointDomain
+#print axioms DiamondIntegral.Section5.nativeGammaPointBijection
+#print axioms DiamondIntegral.Section5.nativeTotalLabelRawValue
+#print axioms DiamondIntegral.Section5.nativeTotalRVLabelMap
+#print axioms DiamondIntegral.Section5.nativePreparedKeyDomain
+#print axioms DiamondIntegral.Section5.nativePreparedParameterBase
+#print axioms DiamondIntegral.Section5.nativeMixedFamilyTotal
+#print axioms DiamondIntegral.Section5.nativeMixedFamilyTotalBijection
+#print axioms DiamondIntegral.Section5.mixedTotalPermutationFun
+#print axioms DiamondIntegral.Section5.mixedTotalPermutation
+#print axioms DiamondIntegral.Section5.sortedReindexedDomain
+#print axioms DiamondIntegral.Section5.sortedReindexedEquiv
+#print axioms DiamondIntegral.Section5.reindexPairCoordinates
+#print axioms DiamondIntegral.Section5.sortedIsoReindex
+#print axioms DiamondIntegral.Section5.NativeVFLiftEqualitySchema.RVAgreement
+#print axioms DiamondIntegral.Section5.nativeMixedOfRaw
+#print axioms DiamondIntegral.Section5.nativeMixedBijectionOfSortedIso
+#print axioms DiamondIntegral.Section5.NativeVFLiftEqualitySchema
+#print axioms DiamondIntegral.Section5.NativeVFLiftEqualitySchema.Valid
+#print axioms DiamondIntegral.Section5.nativeMixedPointOfCode
+#print axioms DiamondIntegral.Section5.finiteRVLiftCoordinates
+#print axioms DiamondIntegral.Section5.finiteRVSchemaLiftDomain
+#print axioms DiamondIntegral.Section5.nativeMixedPairCodeIndices
+#print axioms DiamondIntegral.Section5.nativeMixedGraph
+#print axioms DiamondIntegral.Section5.nativeMixedSortedIso
+#print axioms DiamondIntegral.Section5.nativeMixedCode
+#print axioms DiamondIntegral.Section5.nativeMixedCodeIndices
+#print axioms DiamondIntegral.Section5.nativeMixedDomain
+#print axioms DiamondIntegral.Section5.nativeMixedDomainEquiv
+#print axioms DiamondIntegral.Section5.nativeRVLabelLift
+#print axioms DiamondIntegral.Section5.nativeRVObjectOfFiniteLift
+#print axioms DiamondIntegral.Section5.nativeRVObjectOfLiftBijection
+#print axioms DiamondIntegral.Section5.nativeFiniteRVSchemaRecode
+#print axioms DiamondIntegral.Section5.nativeRVLabelGraph
+#print axioms DiamondIntegral.Section5.finiteRVSchemaLabelsNonzero
+#print axioms DiamondIntegral.Section5.nativeFiniteRVSchemaValid
+#print axioms DiamondIntegral.Section5.nativeFiniteRVSchemaObject
+#print axioms DiamondIntegral.Section5.finiteRVSchemaDomain
+#print axioms DiamondIntegral.Section5.finiteRVSchemaLabels
+#print axioms DiamondIntegral.Section5.finiteRVSchemaRawValue
+#print axioms DiamondIntegral.Section5.finiteRVSchemaNativeVolume
+#print axioms DiamondIntegral.Section5.finiteRVSchemaNativeObject
+#print axioms DiamondIntegral.Section5.originalWholeCertificates
+#print axioms DiamondIntegral.Section5.originalRVExpressionSumBijection
+#print axioms DiamondIntegral.Section5.RVEvaluationEqualitySchema.domainPredicates
+#print axioms DiamondIntegral.Section5.RVEvaluationEqualitySchema.graphPredicates
+#print axioms DiamondIntegral.Section5.RVEvaluationEqualitySchema.recode
+#print axioms DiamondIntegral.Section5.RVEvaluationEqualitySchema.RowAgreement
+#print axioms DiamondIntegral.Section5.RVEvaluationEqualitySchema
+#print axioms DiamondIntegral.Section5.RVEvaluationEqualitySchema.Valid
+#print axioms DiamondIntegral.Section5.resWholeLeftPolynomial
+#print axioms DiamondIntegral.Section5.resWholeRightPolynomial
+#print axioms DiamondIntegral.Section5.RESWholeRelationCertificate
+#print axioms DiamondIntegral.Section5.RESWholeRelationCertificate.leftExpression
+#print axioms DiamondIntegral.Section5.RESWholeRelationCertificate.rightExpression
+#print axioms DiamondIntegral.Section5.RESWholeRelationCertificate.Valid
+#print axioms DiamondIntegral.Section5.RESWholeRelationCertificate.recode
+#print axioms DiamondIntegral.Section5.RESWholeRelationCertificate.RowAgreement
+#print axioms DiamondIntegral.Section5.RESWholeRelationCertificate.domainPredicates
+#print axioms DiamondIntegral.Section5.RESWholeRelationCertificate.graphPredicates
+#print axioms DiamondIntegral.Section5.RVRectangleDecompositionSchema.positivePolynomial
+#print axioms DiamondIntegral.Section5.RVRectangleDecompositionSchema.negativePolynomial
+#print axioms DiamondIntegral.Section5.RVRectangleDecompositionSchema.resPolynomial
+#print axioms DiamondIntegral.Section5.RVRectanglePieceSchema.resContribution
+#print axioms DiamondIntegral.Section5.RVRectangleDecompositionSchema.positiveExpression
+#print axioms DiamondIntegral.Section5.RVRectangleDecompositionSchema.negativeExpression
+#print axioms DiamondIntegral.Section5.resExpressionFiniteSum
+#print axioms DiamondIntegral.Section5.nativeRVRowValue
+#print axioms DiamondIntegral.Section5.originalRVRowBijection
+#print axioms DiamondIntegral.Section5.resExpressionCopies
+#print axioms DiamondIntegral.Section5.resExpressionTorusTimes
+#print axioms DiamondIntegral.Section5.RESBijectionSchema.actualRowBijection
+#print axioms DiamondIntegral.Section5.relativeRESFormalEvaluator
+#print axioms DiamondIntegral.Section5.nativeRESRowBijection
+#print axioms DiamondIntegral.Section5.relativeRESProductRowBijection
+#print axioms DiamondIntegral.Section5.relativeRVTotalInvariant
+#print axioms DiamondIntegral.Section5.nativeRelativeRVForget
+#print axioms DiamondIntegral.Section5.originalRVRowProductSumBijection
+#print axioms DiamondIntegral.Section5.relativePointProductInvariant
+#print axioms DiamondIntegral.Section5.relativePointProductData
+#print axioms DiamondIntegral.Section5.RelativeRVPositive
+#print axioms DiamondIntegral.Section5.RelativeRVFamilyRing
+#print axioms DiamondIntegral.Section5.relativeRVFamilyClass
+#print axioms DiamondIntegral.Section5.nativeTaggedProductBijection
+#print axioms DiamondIntegral.Section5.RelativeRVFamily.blockProduct
+#print axioms DiamondIntegral.Section5.relativePointwiseIso
+#print axioms DiamondIntegral.Section5.relativePointPresentation
+#print axioms DiamondIntegral.Section5.originalRVRowProductPairBijection
+#print axioms DiamondIntegral.Section5.originalEmptyDomain
+#print axioms DiamondIntegral.Section5.originalRVRowTaggedBijection
+#print axioms DiamondIntegral.Section5.gammaGroundTaggedEmptyRightBijection
+#print axioms DiamondIntegral.Section5.gammaGroundTaggedEmptyLeftBijection
+#print axioms DiamondIntegral.Section5.originalRVLeftTagRowBijection
+#print axioms DiamondIntegral.Section5.originalRVRightTagRowBijection
+#print axioms DiamondIntegral.Section5.nativeGeometricRetraction
+#print axioms DiamondIntegral.Section5.geometricDegreeValue
+#print axioms DiamondIntegral.Section5.RelativeRVFamily
+#print axioms DiamondIntegral.Section5.RelativeRVFamily.total
+#print axioms DiamondIntegral.Section5.RelativeRVFamily.empty
+#print axioms DiamondIntegral.Section5.RelativeRVFamily.one
+#print axioms DiamondIntegral.Section5.RelativeRVFamily.sum
+#print axioms DiamondIntegral.Section5.RelativeRVFamily.product
+#print axioms DiamondIntegral.Section5.RelativeRVBijection
+#print axioms DiamondIntegral.Section5.RelativeRVBijection.id
+#print axioms DiamondIntegral.Section5.RelativeRVBijection.comp
+#print axioms DiamondIntegral.Section5.RelativeRVBijection.symm
+#print axioms DiamondIntegral.Section5.relativeRVFamilyPresentation
+#print axioms DiamondIntegral.Section5.PositiveProductData
+#print axioms DiamondIntegral.Section5.PositiveProductData.leftMultiply
+#print axioms DiamondIntegral.Section5.PositiveProductData.rightInvariant
+#print axioms DiamondIntegral.Section5.PositiveProductData.bilinear
+#print axioms DiamondIntegral.Section5.positiveProductCommSemiring
+#print axioms DiamondIntegral.Section5.positiveProductCompletionClass
+#print axioms DiamondIntegral.Section5.positiveProductAdditiveLift
+#print axioms DiamondIntegral.Section5.originalProductTotalBijection
+#print axioms DiamondIntegral.Section5.rawTupleReindexBijection
+#print axioms DiamondIntegral.Section5.rawGammaTotalPacking
+#print axioms DiamondIntegral.Section5.originalRawGammaTotalBijection
+#print axioms DiamondIntegral.Section5.rawParameterDomainIndex
+#print axioms DiamondIntegral.Section5.rawParameterRelationIndex
+#print axioms DiamondIntegral.Section5.rawParameterProjectionRecode
+#print axioms DiamondIntegral.Section5.originalRVTotalBijection
+#print axioms DiamondIntegral.Section5.originalRawTotalEquiv
+#print axioms DiamondIntegral.Section5.rawEquivalenceBijection
+#print axioms DiamondIntegral.Section5.originalRawGammaFamily
+#print axioms DiamondIntegral.Section5.originalRVTotalFamily
+#print axioms DiamondIntegral.Section5.originalGammaRVRowBijection
+#print axioms DiamondIntegral.Section5.nativeRESObjectOfUnitSet
+#print axioms DiamondIntegral.Section5.nativeRESUnitSetBijection
+#print axioms DiamondIntegral.Section5.originalRVRowProductBijection
+#print axioms DiamondIntegral.Section5.originalRVRowDomain
+#print axioms DiamondIntegral.Section5.OriginalEulerCertificate.predicates
+#print axioms DiamondIntegral.Section5.RVRectanglePieceSchema.domainPredicates
+#print axioms DiamondIntegral.Section5.RVRectangleDecompositionSchema
+#print axioms DiamondIntegral.Section5.RVRectangleDecompositionSchema.Valid
+#print axioms DiamondIntegral.Section5.RVRectangleDecompositionSchema.recode
+#print axioms DiamondIntegral.Section5.RVRectanglePieceSchema
+#print axioms DiamondIntegral.Section5.RVRectanglePieceSchema.target
+#print axioms DiamondIntegral.Section5.RVRectanglePieceSchema.Valid
+#print axioms DiamondIntegral.Section5.RVRectanglePieceSchema.recode
+#print axioms DiamondIntegral.Section5.RVRectanglePieceSchema.RowAgreement
+#print axioms DiamondIntegral.Section5.originalDomainLeftIndex
+#print axioms DiamondIntegral.Section5.originalDomainRightIndex
+#print axioms DiamondIntegral.Section5.originalDomainProduct
+#print axioms DiamondIntegral.Section5.rawGammaFunctionFamily
+#print axioms DiamondIntegral.Section5.RawRVRectangle
+#print axioms DiamondIntegral.Section5.rawGammaLiftPacking
+#print axioms DiamondIntegral.Section5.rawGammaRepresentativeBaseBijection
+#print axioms DiamondIntegral.Section5.rawGammaRepresentativeDomain
+#print axioms DiamondIntegral.Section5.rawGammaRepresentativeBijection
+#print axioms DiamondIntegral.Section5.nativeRawWeightLevel
+#print axioms DiamondIntegral.Section5.nativeRawWeightedValue
+#print axioms DiamondIntegral.Section5.rawRVGammaFibreEulerValue
+#print axioms DiamondIntegral.Section5.rawRVGammaBaseCode
+#print axioms DiamondIntegral.Section5.rawRVGammaFamilyCodeMap
+#print axioms DiamondIntegral.Section5.rawRVGammaFamilyCode
+#print axioms DiamondIntegral.Section5.rawRVGammaLift
+#print axioms DiamondIntegral.Section5.nativeUnitWeightLevel
+#print axioms DiamondIntegral.Section5.nativeUnitWeightedValue
+#print axioms DiamondIntegral.Section5.rvGammaFamilyRestrict
+#print axioms DiamondIntegral.Section5.rvGammaReverseBijection
+#print axioms DiamondIntegral.Section5.OriginalGammaCellTree.family
+#print axioms DiamondIntegral.Section5.RVGammaCellFamily
+#print axioms DiamondIntegral.Section5.unitGammaHeadFamilyMap
+#print axioms DiamondIntegral.Section5.rvGammaHeadFamily
+#print axioms DiamondIntegral.Section5.reverseSuffixPermutation
+#print axioms DiamondIntegral.Section5.rvGammaReverseLift
+#print axioms DiamondIntegral.Section5.originalGammaFamilyCodeDomain
+#print axioms DiamondIntegral.Section5.originalGammaFamilyRealization
+#print axioms DiamondIntegral.Section5.unitTupleReindexMap
+#print axioms DiamondIntegral.Section5.groundUnitTupleReindexMap
+#print axioms DiamondIntegral.Section5.groundUnitTuplePermutationBijection
+#print axioms DiamondIntegral.Section5.unaryGammaFamilyLift
+#print axioms DiamondIntegral.Section5.unitMixedGammaMap
+#print axioms DiamondIntegral.Section5.rvGammaFamilyLift
+#print axioms DiamondIntegral.Section5.generalEndpointTupleMap
+#print axioms DiamondIntegral.Section5.endpointFamilyTupleMap
+#print axioms DiamondIntegral.Section5.endpointConditionSet
+#print axioms DiamondIntegral.Section5.endpointGammaFamily
+#print axioms DiamondIntegral.Section5.groundGammaCylinderLift
+#print axioms DiamondIntegral.Section5.GammaEndpointMonomialPiece
+#print axioms DiamondIntegral.Section5.GroundMonomialPiece.extraGammaSource
+#print axioms DiamondIntegral.Section5.GroundMonomialPiece.extraGammaBijection
+#print axioms DiamondIntegral.Section5.GroundMonomialPiece.extraGammaDomain
+#print axioms DiamondIntegral.Section5.GroundMonomialPiece.extraGammaProductBijection
+#print axioms DiamondIntegral.Section5.GroundMonomialPiece.endpointGammaSupport
+#print axioms DiamondIntegral.Section5.rvGammaFibreEulerValue
+#print axioms DiamondIntegral.Section5.CylinderFibreKind.eulerFactor
+#print axioms DiamondIntegral.Section5.rvGammaFamilySchema
+#print axioms DiamondIntegral.Section5.gammaGroundMapCoordinate
+#print axioms DiamondIntegral.Section5.unitGammaTupleTorsor
+#print axioms DiamondIntegral.Section5.UnitGammaTorsorTower
+#print axioms DiamondIntegral.Section5.unitGammaTorsorTower
+#print axioms DiamondIntegral.Section5.originalGammaSourceValid
+#print axioms DiamondIntegral.Section5.originalGammaSourceRow
+#print axioms DiamondIntegral.Section5.originalGammaRowEulerValue
+#print axioms DiamondIntegral.Section5.OriginalEulerCertificate.ValidFor
+#print axioms DiamondIntegral.Section5.groundGammaFunctionGraphLift_projection
+#print axioms DiamondIntegral.Section5.GammaFunctionMonomialPiece
+#print axioms DiamondIntegral.Section5.GroundMonomialPiece.reconstructedTorsorDomain
+#print axioms DiamondIntegral.Section5.GroundMonomialPiece.reconstructedTorsorProductBijection
+#print axioms DiamondIntegral.Section5.GroundMonomialPiece.torsorCoordinateBijection
+#print axioms DiamondIntegral.Section5.GroundMonomialPiece.reconstructedTorsorSource
+#print axioms DiamondIntegral.Section5.GroundMonomialPiece.reconstructedTorsorBijection
+#print axioms DiamondIntegral.Section5.unitTupleLastCylinder
+#print axioms DiamondIntegral.Section5.GroundMonomialPiece.coordinateMap
+#print axioms DiamondIntegral.Section5.GroundMonomialPiece.coordinateBijection
+#print axioms DiamondIntegral.Section5.GroundMonomialPiece.freeValueReconstruction
+#print axioms DiamondIntegral.Section5.GroundMonomialPiece.reconstructedGammaGraph
+#print axioms DiamondIntegral.Section5.nativeGroundRVEvaluation
+#print axioms DiamondIntegral.Section5.nativeRVObjectOfGammaSet
+#print axioms DiamondIntegral.Section5.nativeRVObjectUnderlyingIso
+#print axioms DiamondIntegral.Section5.nativeRVSetValue
+#print axioms DiamondIntegral.Section5.nativeUnitRVSetValue
+#print axioms DiamondIntegral.Section5.unitGraphInputValueMap
+#print axioms DiamondIntegral.Section5.groundGammaFunctionGraphLift
+#print axioms DiamondIntegral.Section5.ScalarGammaGraph
+#print axioms DiamondIntegral.Section5.unitGammaGraphRow
+#print axioms DiamondIntegral.Section5.ScalarGammaGraphPiece
+#print axioms DiamondIntegral.Section5.scalarGammaGraphPieceOfMonomial
+#print axioms DiamondIntegral.Section5.unitTupleInitMap
+#print axioms DiamondIntegral.Section5.groundUnitTupleInitMap
+#print axioms DiamondIntegral.Section5.presentedRootSchema
+#print axioms DiamondIntegral.Section5.nativeSchemaUnderlyingIso
+#print axioms DiamondIntegral.Section5.NativeRelationListPresentationAt
+#print axioms DiamondIntegral.Section5.NativeRelationFamiliesPresentationAt
+#print axioms DiamondIntegral.Section5.native_coefficient_relation_presentation
+#print axioms DiamondIntegral.Section5.presentedFormalSum
+#print axioms DiamondIntegral.Section5.presentedCoefficientExpression
+#print axioms DiamondIntegral.Section5.presentedProductList
+#print axioms DiamondIntegral.Section5.NativeDomainPresentationAt.retargetNative
+#print axioms DiamondIntegral.Section5.PresentedGradedRESObjectAt
+#print axioms DiamondIntegral.Section5.presentedOldObjects
+#print axioms DiamondIntegral.Section5.presentedDegreeFormal
+#print axioms DiamondIntegral.Section5.NativeRESExpressionPresentationAt
+#print axioms DiamondIntegral.Section5.NativeRESExpressionPresentationAt.empty
+#print axioms DiamondIntegral.Section5.NativeRESExpressionPresentationAt.coprod
+#print axioms DiamondIntegral.Section5.NativeRESExpressionPresentationAt.product
+#print axioms DiamondIntegral.Section5.NativeDomainPresentationAt
+#print axioms DiamondIntegral.Section5.NativeDomainPresentationAt.empty
+#print axioms DiamondIntegral.Section5.NativeDomainPresentationAt.sum
+#print axioms DiamondIntegral.Section5.NativeDomainPresentationAt.product
+#print axioms DiamondIntegral.Section5.NativeDomainPresentationAt.taggedFinFamily
+#print axioms DiamondIntegral.Section5.RESPrimitivePresentationAt
+#print axioms DiamondIntegral.Section5.nativeSchemaPresentation
+#print axioms DiamondIntegral.Section5.nativeRawProductBijection
+#print axioms DiamondIntegral.Section5.nativeSchemaProductBijection
+#print axioms DiamondIntegral.Section5.RESLayoutStabilizationSchema.domainPredicates
+#print axioms DiamondIntegral.Section5.RESLayoutStabilizationSchema.graphPredicates
+#print axioms DiamondIntegral.Section5.gammaGroundBijectionOfCarrierEq
+#print axioms DiamondIntegral.Section5.gammaGroundBijectionOfRawDomainEq
+#print axioms DiamondIntegral.Section5.nativeSchemaSumBijection
+#print axioms DiamondIntegral.Section5.RESLayoutStabilizationSchema.recode
+#print axioms DiamondIntegral.Section5.RESLayoutStabilizationSchema.RowAgreement
+#print axioms DiamondIntegral.Section5.RESLayoutStabilizationSchema
+#print axioms DiamondIntegral.Section5.RESLayoutStabilizationSchema.Valid
+#print axioms DiamondIntegral.Section5.recodeRESCertificate
+#print axioms DiamondIntegral.Section5.RESRelationCertificate
+#print axioms DiamondIntegral.Section5.resCertificateLeftExpression
+#print axioms DiamondIntegral.Section5.resCertificateRightExpression
+#print axioms DiamondIntegral.Section5.RESExpressionRelationSchema.recode
+#print axioms DiamondIntegral.Section5.RESExpressionRelationSchema.RowAgreement
+#print axioms DiamondIntegral.Section5.RESExpressionRelationSchema.domainPredicates
+#print axioms DiamondIntegral.Section5.RESExpressionRelationSchema.graphPredicates
+#print axioms DiamondIntegral.Section5.formalSchemaRecode
+#print axioms DiamondIntegral.Section5.RESExpressionRelationSchema
+#print axioms DiamondIntegral.Section5.RESExpressionRelationSchema.leftExpression
+#print axioms DiamondIntegral.Section5.RESExpressionRelationSchema.rightExpression
+#print axioms DiamondIntegral.Section5.RESExpressionRelationSchema.Valid
+#print axioms DiamondIntegral.Section5.nativeUnderlyingBijection
+#print axioms DiamondIntegral.Section5.RESAtomSchema
+#print axioms DiamondIntegral.Section5.RESExpressionSchema.formalValue
+#print axioms DiamondIntegral.Section5.nativeSchemaEvaluator
+#print axioms DiamondIntegral.Section5.RESStabilizationSchema
+#print axioms DiamondIntegral.Section5.RESStabilizationSchema.sourceExpression
+#print axioms DiamondIntegral.Section5.RESStabilizationSchema.targetExpression
+#print axioms DiamondIntegral.Section5.RESStabilizationSchema.Valid
+#print axioms DiamondIntegral.Section5.resExpressionListSum
+#print axioms DiamondIntegral.Section5.resRelationLeftExpression
+#print axioms DiamondIntegral.Section5.resRelationRightExpression
+#print axioms DiamondIntegral.Section5.resStabilizedExpression
+#print axioms DiamondIntegral.Section5.RESExpressionBijectionSchema
+#print axioms DiamondIntegral.Section5.RESExpressionBijectionSchema.Valid
+#print axioms DiamondIntegral.Section5.RESExpressionBijectionSchema.recode
+#print axioms DiamondIntegral.Section5.restoreRVParameters
+#print axioms DiamondIntegral.Section5.mixedPreparedParameterRecode
+#print axioms DiamondIntegral.Section5.resListExpression
+#print axioms DiamondIntegral.Section5.RESRelationTermSchema.leftExpression
+#print axioms DiamondIntegral.Section5.RESRelationTermSchema.rightExpression
+#print axioms DiamondIntegral.Section5.RESExpressionSchema.recode
+#print axioms DiamondIntegral.Section5.RESExpressionSchema.RowAgreement
+#print axioms DiamondIntegral.Section5.RESExpressionSchema.domainPredicates
+#print axioms DiamondIntegral.Section5.RESPrimitiveSchema.leftExpression
+#print axioms DiamondIntegral.Section5.RESPrimitiveSchema.rightExpression
+#print axioms DiamondIntegral.Section5.carryRVParameterDomain
+#print axioms DiamondIntegral.Section5.uncarryRVParameterDomain
+#print axioms DiamondIntegral.Section5.flattenGammaRelation
+#print axioms DiamondIntegral.Section5.unflattenGammaRelation
+#print axioms DiamondIntegral.Section5.RESSetSchema.empty
+#print axioms DiamondIntegral.Section5.RESExpressionSchema
+#print axioms DiamondIntegral.Section5.RESExpressionSchema.setSchema
+#print axioms DiamondIntegral.Section5.RESExpressionSchema.Valid
+#print axioms DiamondIntegral.Section5.RESExpressionSchema.nativeValue
+#print axioms DiamondIntegral.Section5.nativeRESChartClass
+#print axioms DiamondIntegral.Section5.nativeZeroValue
+#print axioms DiamondIntegral.Section5.nativeOneValue
+#print axioms DiamondIntegral.Section5.valuePatternLeftTag
+#print axioms DiamondIntegral.Section5.valuePatternRightTag
+#print axioms DiamondIntegral.Section5.RESSetSchema.sum
+#print axioms DiamondIntegral.Section5.rawRVLeftTag
+#print axioms DiamondIntegral.Section5.rawRVRightTag
+#print axioms DiamondIntegral.Section5.rvTagLeftIndex
+#print axioms DiamondIntegral.Section5.rvTagRightIndex
+#print axioms DiamondIntegral.Section5.taggedParameterLeftIndex
+#print axioms DiamondIntegral.Section5.taggedParameterRightIndex
+#print axioms DiamondIntegral.Section5.nativeRVTaggedDomain
+#print axioms DiamondIntegral.Section5.RESRelationTermSchema.domainPredicates
+#print axioms DiamondIntegral.Section5.RESRelationTermSchema.graphPredicates
+#print axioms DiamondIntegral.Section5.RESSetSchema.chartIso_of_row_eq
+#print axioms DiamondIntegral.Section5.RESSetSchema.productIso
+#print axioms DiamondIntegral.Section5.productLeftParameterIndex
+#print axioms DiamondIntegral.Section5.productRightParameterIndex
+#print axioms DiamondIntegral.Section5.RESSetSchema.product
+#print axioms DiamondIntegral.Section5.RESRelationTermSchema
+#print axioms DiamondIntegral.Section5.RESRelationTermSchema.Valid
+#print axioms DiamondIntegral.Section5.RESRelationTermSchema.realize
+#print axioms DiamondIntegral.Section5.RESRelationTermSchema.recode
+#print axioms DiamondIntegral.Section5.RESRelationTermSchema.RowAgreement
+#print axioms DiamondIntegral.Section5.RESPrimitiveSchema
+#print axioms DiamondIntegral.Section5.RESPrimitiveSchema.Valid
+#print axioms DiamondIntegral.Section5.RESPrimitiveSchema.realize
+#print axioms DiamondIntegral.Section5.RESPrimitiveSchema.recode
+#print axioms DiamondIntegral.Section5.RESPrimitiveSchema.RowAgreement
+#print axioms DiamondIntegral.Section5.RESPrimitiveSchema.domainPredicates
+#print axioms DiamondIntegral.Section5.RESPrimitiveSchema.graphPredicates
+#print axioms DiamondIntegral.Section5.GammaValueSchema.constant
+#print axioms DiamondIntegral.Section5.nativeTorusSchema
+#print axioms DiamondIntegral.Section5.GammaValueSchema.fibre
+#print axioms DiamondIntegral.Section5.GammaValueSchema.fibreIso
+#print axioms DiamondIntegral.Section5.GammaValueSchema
+#print axioms DiamondIntegral.Section5.GammaValueSchema.resSchema
+#print axioms DiamondIntegral.Section5.GammaValueSchema.Valid
+#print axioms DiamondIntegral.Section5.GammaValueSchema.value
+#print axioms DiamondIntegral.Section5.GammaValueSchema.recode
+#print axioms DiamondIntegral.Section5.OriginalGammaCellTree.domainFormula
+#print axioms DiamondIntegral.Section5.firstCoordinateCurryIndex
+#print axioms DiamondIntegral.Section5.curryFirstGammaDomain
+#print axioms DiamondIntegral.Section5.OriginalSortedPredicate
+#print axioms DiamondIntegral.Section5.RESSetSchema.chart
+#print axioms DiamondIntegral.Section5.RESBijectionSchema.rawEquiv
+#print axioms DiamondIntegral.Section5.RESBijectionSchema.chartIso
+#print axioms DiamondIntegral.Section5.joinedRelationRow
+#print axioms DiamondIntegral.Section5.RESBijectionSchema
+#print axioms DiamondIntegral.Section5.RESBijectionSchema.Valid
+#print axioms DiamondIntegral.Section5.RESBijectionSchema.recode
+#print axioms DiamondIntegral.Section5.RESSetSchema.recode
+#print axioms DiamondIntegral.Section5.RESSetSchema
+#print axioms DiamondIntegral.Section5.RESSetSchema.rowDomain
+#print axioms DiamondIntegral.Section5.RESSetSchema.validity
+#print axioms DiamondIntegral.Section5.RESSetSchema.Valid
+#print axioms DiamondIntegral.Section5.RESSetSchema.object
+#print axioms DiamondIntegral.Section5.valueDistinctFormula
+#print axioms DiamondIntegral.Section5.NativeRVValueSyntax
+#print axioms DiamondIntegral.Section5.nativeRVValueSyntax
+#print axioms DiamondIntegral.Section5.rvValuePatternEqualityFormula
+#print axioms DiamondIntegral.Section5.rvFiniteValueValidityFormula
+#print axioms DiamondIntegral.Section5.nativeRESObjectOfRawSet
+#print axioms DiamondIntegral.Section5.OriginalEulerCertificate.recode
+#print axioms DiamondIntegral.Section5.OriginalEulerCertificate.RowAgreement
+#print axioms DiamondIntegral.Section5.OriginalGammaCellTree.recode
+#print axioms DiamondIntegral.Section5.OriginalGammaCellTree.RowAgreement
+#print axioms DiamondIntegral.Section5.OriginalGammaCellTree.predicates
+#print axioms DiamondIntegral.Section5.CylindricalFormulaTree.RowRelated
+#print axioms DiamondIntegral.Section5.OriginalEulerCertificate
+#print axioms DiamondIntegral.Section5.OriginalEulerCertificate.syntax
+#print axioms DiamondIntegral.Section5.NativeGammaRelationSyntax
+#print axioms DiamondIntegral.Section5.nativeGammaRelationSyntax
+#print axioms DiamondIntegral.Section5.OriginalGammaCellTree
+#print axioms DiamondIntegral.Section5.OriginalGammaCellTree.syntax
+#print axioms DiamondIntegral.Section5.gammaDomainSyntax
+#print axioms DiamondIntegral.Section5.gammaFormulaRepresents
+#print axioms DiamondIntegral.Section5.EulerFormulaCertificate
+#print axioms DiamondIntegral.Section5.EulerFormulaCertificate.eulerValue
+#print axioms DiamondIntegral.Section5.EulerFormulaCertificate.validity
+#print axioms DiamondIntegral.Section5.finitePartitionValidityFormula
+#print axioms DiamondIntegral.Section5.CylindricalFormulaTree.gammaDomain
+#print axioms DiamondIntegral.Section5.CylindricalFormulaTree.gammaDefinable
+#print axioms DiamondIntegral.Section5.CylindricalFormulaTree.rawDefinable
+#print axioms DiamondIntegral.Section5.curryFirstCoordinateFormula
+#print axioms DiamondIntegral.Section5.CylindricalFormulaTree
+#print axioms DiamondIntegral.Section5.CylindricalFormulaTree.domain
+#print axioms DiamondIntegral.Section5.CylindricalFormulaTree.shape
+#print axioms DiamondIntegral.Section5.cylindricalStepValidityFormula
+#print axioms DiamondIntegral.Section5.CylindricalFormulaTree.validity
+#print axioms DiamondIntegral.Section5.tupleProperFormula
+#print axioms DiamondIntegral.Section5.tupleQuotientEqualityFormula
+#print axioms DiamondIntegral.Section5.quotientDomainValidityFormula
+#print axioms DiamondIntegral.Section5.quotientFormulaDomain
+#print axioms DiamondIntegral.Section5.nativeRVEvaluation
+#print axioms DiamondIntegral.Section5.nativeTorusClass
+#print axioms DiamondIntegral.Section5.castRVChart
+#print axioms DiamondIntegral.Section5.castRVTarget
+#print axioms DiamondIntegral.Section5.CylinderFibreKind
+#print axioms DiamondIntegral.Section5.CylinderFibreKind.endpoints
+#print axioms DiamondIntegral.Section5.CylinderFibreKind.condition
+#print axioms DiamondIntegral.Section5.CylinderFibreKind.ordered
+#print axioms DiamondIntegral.Section5.CylinderFibreKind.Describes
+#print axioms DiamondIntegral.Section5.relationalIff
+#print axioms DiamondIntegral.Section5.binaryRelabel
+#print axioms DiamondIntegral.Section5.CylinderFibreKind.conditionFormula
+#print axioms DiamondIntegral.Section5.CylinderFibreKind.orderFormula
+#print axioms DiamondIntegral.Section5.cylindricalFibreValidityFormula
+#print axioms DiamondIntegral.Section5.valueCollisionFormula
+#print axioms DiamondIntegral.Section5.finiteValueValidityFormula
+#print axioms DiamondIntegral.Section5.EquivariantVariety.ModifiedRing
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.geometricLinearActionComparison
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.theta_5_14
+#print axioms DiamondIntegral.Section5.EquivariantVariety.linearActionIdeal
+#print axioms DiamondIntegral.Section5.linearPolynomialAction
+#print axioms DiamondIntegral.Section5.finiteLinearAffineObject
+#print axioms DiamondIntegral.Section5.diagonalLinearMap
+#print axioms DiamondIntegral.Section5.linearRepresentation
+#print axioms DiamondIntegral.Section5.linearCoordinateSchemeIso
+#print axioms DiamondIntegral.Section5.characterBasisAffineIso
+#print axioms DiamondIntegral.Section5.diagonalLinearEquiv
+#print axioms DiamondIntegral.Section5.diagonalLinearRepresentation
+#print axioms DiamondIntegral.Section5.diagonalFiniteAffineIso
+#print axioms DiamondIntegral.Section5.trivialFiniteAffineIso
+#print axioms DiamondIntegral.Section5.linearPolynomialMap
+#print axioms DiamondIntegral.Section5.linearPolynomialEquiv
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.rawGeometricComparison
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rawVarietyComparison
+#print axioms DiamondIntegral.Section5.EquivariantVariety.diagonalInvariant
+#print axioms DiamondIntegral.Section5.EquivariantVariety.toDiagonalRing
+#print axioms DiamondIntegral.Section5.EquivariantVariety.ProductPresentation.fst
+#print axioms DiamondIntegral.Section5.EquivariantVariety.ProductPresentation.snd
+#print axioms DiamondIntegral.Section5.EquivariantVariety.ProductPresentation.morphismOfProjections
+#print axioms DiamondIntegral.Section5.EquivariantVariety.ProductPresentation.mapHom
+#print axioms DiamondIntegral.Section5.EquivariantVariety.ProductPresentation.map
+#print axioms DiamondIntegral.Section5.geometricUnitIso
+#print axioms DiamondIntegral.Section5.geometricPreimage
+#print axioms DiamondIntegral.Section5.diagonalSingletonPresentation
+#print axioms DiamondIntegral.Section5.diagonalIsoOfImmersions
+#print axioms DiamondIntegral.Section5.diagonalIsoOfTupleGraph
+#print axioms DiamondIntegral.Section5.immersionCoordinateGraph
+#print axioms DiamondIntegral.Section5.equivalenceOfGraph
+#print axioms DiamondIntegral.Section5.rationalAffinePairMap
+#print axioms DiamondIntegral.Section5.rationalAffinePair
+#print axioms DiamondIntegral.Section5.DiagonalVarietyPresentation
+#print axioms DiamondIntegral.Section5.DiagonalVarietyPresentation.preimage
+#print axioms DiamondIntegral.Section5.EquivariantVariety.coordinateAlgebra
+#print axioms DiamondIntegral.Section5.EquivariantVariety.coordinateSchemeAction
+#print axioms DiamondIntegral.Section5.EquivariantVariety.coordinateAlgebraAction
+#print axioms DiamondIntegral.Section5.specOverAlgHom
+#print axioms DiamondIntegral.Section5.specOverAutomorphism
+#print axioms DiamondIntegral.Section5.specActionAlgebraAction
+#print axioms DiamondIntegral.Section5.EquivariantVariety.AffineVarietyPresentation
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.spectrumObject
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.immersedObject
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.geometricInvariant
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.toVarietyRing
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.nativeToVarietyRing
+#print axioms DiamondIntegral.Section5.affineProductLocus
+#print axioms DiamondIntegral.Section5.affineProductImmersedPresentation
+#print axioms DiamondIntegral.Section5.affineImmersedProductLeft
+#print axioms DiamondIntegral.Section5.affineImmersedProductRight
+#print axioms DiamondIntegral.Section5.affineImmersedProductPresentation
+#print axioms DiamondIntegral.Section5.affineImmersedProductMap
+#print axioms DiamondIntegral.Section5.affineImmersedProductObject
+#print axioms DiamondIntegral.Section5.affineImmersedProductInclusion
+#print axioms DiamondIntegral.Section5.reducedPullbackMap
+#print axioms DiamondIntegral.Section5.EquivariantVariety.Morphism.factorThrough
+#print axioms DiamondIntegral.Section5.rationalAffineCoordinateMap
+#print axioms DiamondIntegral.Section5.rationalAffineLeft
+#print axioms DiamondIntegral.Section5.rationalAffineRight
+#print axioms DiamondIntegral.Section5.polynomialTensorFinEquiv
+#print axioms DiamondIntegral.Section5.affineSpaceLeft
+#print axioms DiamondIntegral.Section5.affineSpaceRight
+#print axioms DiamondIntegral.Section5.affineSpaceOrdinaryProductIso
+#print axioms DiamondIntegral.Section5.affineSpaceReducedProductIso
+#print axioms DiamondIntegral.Section5.changeRationalPresentationWeights
+#print axioms DiamondIntegral.Section5.EquivariantVariety.Morphism.id
+#print axioms DiamondIntegral.Section5.EquivariantVariety.Morphism.comp
+#print axioms DiamondIntegral.Section5.EquivariantVariety.Iso.toMorphism
+#print axioms DiamondIntegral.Section5.EquivariantVariety.Iso.refl
+#print axioms DiamondIntegral.Section5.EquivariantVariety.Iso.symm
+#print axioms DiamondIntegral.Section5.EquivariantVariety.Iso.trans
+#print axioms DiamondIntegral.Section5.complexEquivGraph
+#print axioms DiamondIntegral.Section5.complexSpectrumExtension
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.geometricValue
+#print axioms DiamondIntegral.Section5.EquivariantVariety.ImmersedPresentation.changeLocus
+#print axioms DiamondIntegral.Section5.EquivariantGraphDecomposition.sourceLocus
+#print axioms DiamondIntegral.Section5.EquivariantGraphDecomposition.targetLocus
+#print axioms DiamondIntegral.Section5.EquivariantGraphDecomposition.sourceRationalInclusion
+#print axioms DiamondIntegral.Section5.EquivariantGraphDecomposition.targetRationalInclusion
+#print axioms DiamondIntegral.Section5.EquivariantGraphDecomposition.sourceRationalPresentation
+#print axioms DiamondIntegral.Section5.EquivariantGraphDecomposition.targetRationalPresentation
+#print axioms DiamondIntegral.Section5.EquivariantVariety.appendImmersedPresentation
+#print axioms DiamondIntegral.Section5.EquivariantVariety.emptyImmersedPresentation
+#print axioms DiamondIntegral.Section5.rationalAffineObject
+#print axioms DiamondIntegral.Section5.EquivariantVariety.constructibleClass
+#print axioms DiamondIntegral.Section5.EquivariantVariety.singletonImmersedPresentation
+#print axioms DiamondIntegral.Section5.rationalPolynomialHom
+#print axioms DiamondIntegral.Section5.rationalPolynomialEquiv
+#print axioms DiamondIntegral.Section5.rationalPolynomialAction
+#print axioms DiamondIntegral.Section5.EquivariantVariety.commonImmersionObject
+#print axioms DiamondIntegral.Section5.EquivariantVariety.commonImmersionLeft
+#print axioms DiamondIntegral.Section5.EquivariantVariety.commonImmersionRight
+#print axioms DiamondIntegral.Section5.EquivariantVariety.ImmersedPresentation
+#print axioms DiamondIntegral.Section5.EquivariantVariety.ImmersedPresentation.value
+#print axioms DiamondIntegral.Section5.EquivariantVariety.subsetClass
+#print axioms DiamondIntegral.Section5.EquivariantVariety.geometricScissorFunction
+#print axioms DiamondIntegral.Section5.EquivariantVariety.Object.Invariant
+#print axioms DiamondIntegral.Section5.EquivariantVariety.subsetObject
+#print axioms DiamondIntegral.Section5.EquivariantVariety.subsetInclusion
+#print axioms DiamondIntegral.Section5.EquivariantVariety.immersedPresentationIso
+#print axioms DiamondIntegral.Section5.EquivariantVariety.subsetMorphism
+#print axioms DiamondIntegral.Section5.LocallyClosedScissorFunction
+#print axioms DiamondIntegral.Section5.EquivariantVariety.immersedObject
+#print axioms DiamondIntegral.Section5.EquivariantVariety.invariantImmersedObject
+#print axioms DiamondIntegral.Section5.EquivariantVariety.invariantImmersedInclusion
+#print axioms DiamondIntegral.Section5.complexWindingCharacter
+#print axioms DiamondIntegral.Section5.windingRootSystem
+#print axioms DiamondIntegral.Section5.finiteRootProjection
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.linePoint
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.lineCoefficient
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.ValueLine
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.lineEquiv
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.weightedAction
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.finiteFrame
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.frameChange
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.KummerRVRoot
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rootOfPhase
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rootPhase
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.kummerRootEquiv
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.frameAtRoot
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.descendSet
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.FiniteInvariant
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.descentEquiv
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.descendedBijection
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.descendGraph
+#print axioms DiamondIntegral.Section5.PositiveRelationSum
+#print axioms DiamondIntegral.Section5.OrientedPositivePair
+#print axioms DiamondIntegral.Section5.positiveRelationIdeal
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.taggedFieldEquiv
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.canonicalModelPresentation
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.canonicalModelAction
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rvTag
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.taggedRVEquiv
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.complexResidue
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.complexResidueEquiv
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.positiveClass
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.relationPairs
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.framedRVSet
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.complexResidueImage
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rvUnitTagHom
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.originalKummerRoots
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.originalKummerRootMap
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.originalKummerRootEquiv
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.descentSource
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.descentExponents
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.descentMonomialMap
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.descendedOriginalSet
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.HasFrameSupport
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rootLevelMap
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.tupleProductSet
+#print axioms DiamondIntegral.Section5.characterLineIdeal
+#print axioms DiamondIntegral.Section5.directSumCharacterIdeal
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.sortedRVAction
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.frameSetEquiv
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.framedMap
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.framedBijection
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.originalGraphRVSet
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.actualDescendEquiv
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.actualDescendedBijection
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.framedEquivGraph
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.originalDescendedBijection
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.gammaNormalEquiv
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.complexZeroPattern
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.originalValuePattern
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.PatternFraming
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.patternFraming
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.patternSet
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.patternPiece
+#print axioms DiamondIntegral.Section5.EmptyGammaGround.base
+#print axioms DiamondIntegral.Section5.EmptyGammaGround.toReal
+#print axioms DiamondIntegral.Section5.EmptyGammaGround.fromReal
+#print axioms DiamondIntegral.Section5.EmptyGammaGround.mapToReal
+#print axioms DiamondIntegral.Section5.EmptyGammaGround.mapFromReal
+#print axioms DiamondIntegral.Section5.EmptyGammaGround.bijectionToReal
+#print axioms DiamondIntegral.Section5.EmptyGammaGround.bijectionFromReal
+#print axioms DiamondIntegral.Section5.rvObjectOfSet
+#print axioms DiamondIntegral.Section5.resObjectOfSet
+#print axioms DiamondIntegral.Section5.nativeRESObjectOfSet
+#print axioms DiamondIntegral.Section5.originalDomain
+#print axioms DiamondIntegral.Section5.originalDomainBijection
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.descendedRESObject
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rationalAction
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.RationalInvariant
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.Object
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.Iso
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.unit
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.product
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.cut
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.outside
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.symbol
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.Relation
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.relationIdeal
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.Ring
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.objectClass
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.Invariant
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.lift
+#print axioms DiamondIntegral.Section5.nativeUngradedClass
+#print axioms DiamondIntegral.Section5.nativeUngradedHom
+#print axioms DiamondIntegral.Section5.resSetClass
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.RationalFraming
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rationalFraming
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rationalFrame
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rationalFramedSet
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.framedObject
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rationalDescendedSet
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.descendedObject
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rationalObjectBijection
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.diagonalRESClass
+#print axioms DiamondIntegral.Section5.resSetProduct
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.diagonalRESInvariant
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.diagonalToRES
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.RationalFrameSupport
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rationalFrameEquiv
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rationalFramedBijection
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rationalFramedIso
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.ofSet
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.setClass
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.finiteUnion
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.valuePattern
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.actualValuePatterns
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.valuePatternWeights
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.valuePatternObject
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.valuePatternClass
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.forwardRESValue
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rvMapSlice
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rvSliceMap
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rvSliceImage
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rvSliceBijection
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.originalPuiseuxGround
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.nativeForwardValue
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.nativeForwardComponent
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.nativeForwardPositive
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.nativeForwardPositiveRing
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.nativeForwardOrdinary
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.chartToDiagonal
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.chartUnderlyingBijection
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.resToDiagonal
+#print axioms DiamondIntegral.Section5.rvFiniteUnion
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rawRESComparison
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.zeroSet
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.zeroObject
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.zeroIso
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.affineSpace
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.affineLine
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.puncturedLine
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.lineIdeal
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.torusIdeal
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.directSumLinearIdeal
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.gammaRational
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rationalGamma
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.originalValueFibre
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.reducedDiagonalRing
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.residueCharacterComparison
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.linearActionRelations
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.linearActionIdeal
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.reducedLinearActionRing
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.residueLinearActionComparison
+#print axioms DiamondIntegral.Section5.polynomialDiagonalAction
+#print axioms DiamondIntegral.Section5.schemePointAction
+#print axioms DiamondIntegral.Section5.orderedOpenPiece
+#print axioms DiamondIntegral.Section5.polynomialTerm
+#print axioms DiamondIntegral.Section5.ringEmbeddingHom
+#print axioms DiamondIntegral.Section5.elementaryRingHom
+#print axioms DiamondIntegral.Section5.ComplexModels.theory
+#print axioms DiamondIntegral.Section5.ComplexModels.Model
+#print axioms DiamondIntegral.Section5.ComplexModels.acfModel
+#print axioms DiamondIntegral.Section5.ComplexModels.fieldModel
+#print axioms DiamondIntegral.Section5.ComplexModels.fieldCharModel
+#print axioms DiamondIntegral.Section5.ComplexModels.characteristicZero
+#print axioms DiamondIntegral.Section5.ComplexModels.algebraicallyClosed
+#print axioms DiamondIntegral.Section5.ComplexModels.coefficientEmbedding
+#print axioms DiamondIntegral.Section5.ComplexModels.coefficientHom
+#print axioms DiamondIntegral.Section5.ComplexModels.coefficientFormula
+#print axioms DiamondIntegral.Section5.namedPolynomialTerm
+#print axioms DiamondIntegral.Section5.uniqueOutputFormula
+#print axioms DiamondIntegral.Section5.uniqueOutputSentence
+#print axioms DiamondIntegral.Section5.rationalGraphFormula
+#print axioms DiamondIntegral.Section5.scalarCoordinateGraph
+#print axioms DiamondIntegral.Section5.rationalTupleDenominator
+#print axioms DiamondIntegral.Section5.rationalTupleNumerator
+#print axioms DiamondIntegral.Section5.principalRationalAlgebraMap
+#print axioms DiamondIntegral.Section5.principalPointEvaluation
+#print axioms DiamondIntegral.Section5.principalAffineOpenInclusion
+#print axioms DiamondIntegral.Section5.principalRationalSchemeMap
+#print axioms DiamondIntegral.Section5.closedFamilySupport
+#print axioms DiamondIntegral.Section5.closedFamilyDepth
+#print axioms DiamondIntegral.Section5.closedFamilyAtLeast
+#print axioms DiamondIntegral.Section5.closedFamilyStratum
+#print axioms DiamondIntegral.Section5.ClopenGenerated
+#print axioms DiamondIntegral.Section5.complexZariskiTopology
+#print axioms DiamondIntegral.Section5.rationalTupleEquationSet
+#print axioms DiamondIntegral.Section5.complexPolynomialPoint
+#print axioms DiamondIntegral.Section5.principalComplexPoint
+#print axioms DiamondIntegral.Section5.principalRationalTuple
+#print axioms DiamondIntegral.Section5.complexPointQuotientLift
+#print axioms DiamondIntegral.Section5.complexPointInverseEquiv
+#print axioms DiamondIntegral.Section5.invariantIdealQuotientAction
+#print axioms DiamondIntegral.Section5.closedAffineScheme
+#print axioms DiamondIntegral.Section5.closedAffineInclusion
+#print axioms DiamondIntegral.Section5.algebraSpecAction
+#print axioms DiamondIntegral.Section5.complexAlgebraPoint
+#print axioms DiamondIntegral.Section5.basicConstructibleIdeal
+#print axioms DiamondIntegral.Section5.BasicClosedCoordinateRing
+#print axioms DiamondIntegral.Section5.BasicConstructibleCoordinateRing
+#print axioms DiamondIntegral.Section5.basicConstructibleCoordinateMap
+#print axioms DiamondIntegral.Section5.basicConstructibleScheme
+#print axioms DiamondIntegral.Section5.basicConstructibleInclusion
+#print axioms DiamondIntegral.Section5.basicConstructiblePointLift
+#print axioms DiamondIntegral.Section5.basicConstructiblePointEquiv
+#print axioms DiamondIntegral.Section5.complexPointBasicFactor
+#print axioms DiamondIntegral.Section5.unitRationalAlgebraMap
+#print axioms DiamondIntegral.Section5.rationalBasicFactor
+#print axioms DiamondIntegral.Section5.BasicComplexPoints
+#print axioms DiamondIntegral.Section5.BasicRationalPointIso
+#print axioms DiamondIntegral.Section5.BasicRationalPointIso.symm
+#print axioms DiamondIntegral.Section5.BasicRationalPointIso.polynomialMap
+#print axioms DiamondIntegral.Section5.BasicRationalPointIso.algebraMap
+#print axioms DiamondIntegral.Section5.BasicRationalPointIso.algebraEquiv
+#print axioms DiamondIntegral.Section5.BasicRationalPointIso.schemeIso
+#print axioms DiamondIntegral.Section5.complexTupleSpectrumPoint
+#print axioms DiamondIntegral.Section5.polynomialGraphMap
+#print axioms DiamondIntegral.Section5.principalGraphSection
+#print axioms DiamondIntegral.Section5.graphLocalizationLift
+#print axioms DiamondIntegral.Section5.primeSignSupport
+#print axioms DiamondIntegral.Section5.primeSignAtomData
+#print axioms DiamondIntegral.Section5.constructibleTestPolynomials
+#print axioms DiamondIntegral.Section5.rationalSpectrumGraphData
+#print axioms DiamondIntegral.Section5.inverseRationalSpectrumGraphData
+#print axioms DiamondIntegral.Section5.basicGraphLeft
+#print axioms DiamondIntegral.Section5.basicGraphRight
+#print axioms DiamondIntegral.Section5.locallyClosedAffineOpen
+#print axioms DiamondIntegral.Section5.locallyClosedAffineScheme
+#print axioms DiamondIntegral.Section5.locallyClosedAffineInclusion
+#print axioms DiamondIntegral.Section5.invariantOpenMap
+#print axioms DiamondIntegral.Section5.invariantOpenSchemeAction
+#print axioms DiamondIntegral.Section5.reducedImmersionLift
+#print axioms DiamondIntegral.Section5.reducedImmersionIso
+#print axioms DiamondIntegral.Section5.reducedImmersionActionMap
+#print axioms DiamondIntegral.Section5.reducedImmersionSchemeAction
+#print axioms DiamondIntegral.Section5.schemeActionOverBase
+#print axioms DiamondIntegral.Section5.schemeActionHomeomorph
+#print axioms DiamondIntegral.Section5.overlapIdeal
+#print axioms DiamondIntegral.Section5.OverlapAlgebra
+#print axioms DiamondIntegral.Section5.overlapLeft
+#print axioms DiamondIntegral.Section5.overlapRight
+#print axioms DiamondIntegral.Section5.overlapLift
+#print axioms DiamondIntegral.Section5.schemeAffinePullback
+#print axioms DiamondIntegral.Section5.CylindricalShape
+#print axioms DiamondIntegral.Section5.CylindricalShape.eulerValue
+#print axioms DiamondIntegral.Section5.ShapedGammaCell
+#print axioms DiamondIntegral.Section5.witnessRightUnique
+#print axioms DiamondIntegral.Section5.bijectionValidityFormula
+#print axioms DiamondIntegral.Section5.setEqualityValidityFormula
+#print axioms DiamondIntegral.Section5.finiteWitnessValidityFormula
+#print axioms DiamondIntegral.Section5.tupleEqualityFormula
+#print axioms DiamondIntegral.Section5.tupleDistinctFormula
+#print axioms DiamondIntegral.Section5.fibreCollisionFormula
+#print axioms DiamondIntegral.Section5.finiteFibreValidityFormula
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.LiteralFamilyWitness
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.LiteralFamilyWitness.toActual
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.LiteralFamilyWitness.taggedBijection
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.PrimitivePair
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.PrimitivePair.leftObject
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.PrimitivePair.rightObject
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.RelationTerm
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.RelationTerm.leftFamily
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.RelationTerm.rightFamily
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.relationLeftFamily
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.relationRightFamily
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.ActualFamilyWitness.leftTotal
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.ActualFamilyWitness.rightTotal
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.ActualFamilyWitness.degreeCount
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.actualFamilyDegreeDomain
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.ActualFamilyWitness.taggedLeft
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.ActualFamilyWitness.taggedRight
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.ActualFamilyWitness.taggedSourceObject
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.ActualFamilyWitness.taggedTargetObject
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.ActualFamilyWitness.taggedBijection
+#print axioms DiamondIntegral.Section5.gammaGroundCleanRVMap
+#print axioms DiamondIntegral.Section5.nativeRESObjectOfGammaSet
+#print axioms DiamondIntegral.Section5.GammaRVSet
+#print axioms DiamondIntegral.Section5.taggedRVFinFamily
+#print axioms DiamondIntegral.Section5.taggedRVFinFamilyBijection
+#print axioms DiamondIntegral.Section5.GammaRVFiniteValues
+#print axioms DiamondIntegral.Section5.gammaGroundDisjointUnionBijection
+#print axioms DiamondIntegral.Section5.gammaGroundRVTaggedUnion
+#print axioms DiamondIntegral.Section5.gammaGroundRVLeftTagBijection
+#print axioms DiamondIntegral.Section5.gammaGroundRVRightTagBijection
+#print axioms DiamondIntegral.Section5.gammaGroundRVTaggedUnionBijection
+#print axioms DiamondIntegral.Section5.EquivariantGraphDecomposition.sourceVariety
+#print axioms DiamondIntegral.Section5.EquivariantGraphDecomposition.targetVariety
+#print axioms DiamondIntegral.Section5.EquivariantGraphDecomposition.commonAction
+#print axioms DiamondIntegral.Section5.EquivariantGraphDecomposition.commonVariety
+#print axioms DiamondIntegral.Section5.EquivariantGraphDecomposition.commonToSource
+#print axioms DiamondIntegral.Section5.EquivariantGraphDecomposition.commonToTarget
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.stabilizedFamily
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.ActualFamilyWitness
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.GradedObject
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.positiveFamilyClass
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.gradedObjectProduct
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.positiveFamilyProduct
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.positiveFamilyAtDegree
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.positiveFamilyDegrees
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.positiveFamilyBound
+#print axioms DiamondIntegral.Section5.EquivariantVariety.immersedAffineObject
+#print axioms DiamondIntegral.Section5.EquivariantVariety.affineObject
+#print axioms DiamondIntegral.Section5.EquivariantGraphDecomposition
+#print axioms DiamondIntegral.Section5.polynomialDiagonalEquiv
+#print axioms DiamondIntegral.Section5.polynomialDiagonalHom
+#print axioms DiamondIntegral.Section5.finiteDiagonalAlgebraAction
+#print axioms DiamondIntegral.Section5.EquivariantVariety.Object
+#print axioms DiamondIntegral.Section5.EquivariantVariety.Iso
+#print axioms DiamondIntegral.Section5.EquivariantVariety.Morphism
+#print axioms DiamondIntegral.Section5.EquivariantVariety.ProductPresentation
+#print axioms DiamondIntegral.Section5.EquivariantVariety.symbol
+#print axioms DiamondIntegral.Section5.EquivariantVariety.Relation
+#print axioms DiamondIntegral.Section5.EquivariantVariety.relationIdeal
+#print axioms DiamondIntegral.Section5.EquivariantVariety.Ring
+#print axioms DiamondIntegral.Section5.EquivariantVariety.objectClass
+#print axioms DiamondIntegral.Section5.EquivariantVariety.Invariant
+#print axioms DiamondIntegral.Section5.EquivariantVariety.lift
+#print axioms DiamondIntegral.Section5.AffineBranchStratification
+#print axioms DiamondIntegral.Section5.certifiedCommonPiece
+#print axioms DiamondIntegral.Section5.certifiedCommonLeft
+#print axioms DiamondIntegral.Section5.certifiedCommonRight
+#print axioms DiamondIntegral.Section5.affineBranchRelation
+#print axioms DiamondIntegral.Section5.reducedImmersionPointLift
+#print axioms DiamondIntegral.Section5.reducedPullbackActionMap
+#print axioms DiamondIntegral.Section5.reducedPullbackSchemeAction
+#print axioms DiamondIntegral.Section5.AffineBranchCertificate
+#print axioms DiamondIntegral.Section5.AffineBranchCertificate.pullback
+#print axioms DiamondIntegral.Section5.AffineBranchCertificate.symm
+#print axioms DiamondIntegral.Section5.schemeReductionLift
+#print axioms DiamondIntegral.Section5.reducedPullback
+#print axioms DiamondIntegral.Section5.reducedPullbackFst
+#print axioms DiamondIntegral.Section5.reducedPullbackSnd
+#print axioms DiamondIntegral.Section5.reducedPullbackLift
+#print axioms DiamondIntegral.Section5.reducedClosedScheme
+#print axioms DiamondIntegral.Section5.reducedClosedInclusion
+#print axioms DiamondIntegral.Section5.reducedLocallyClosedOpen
+#print axioms DiamondIntegral.Section5.reducedLocallyClosedScheme
+#print axioms DiamondIntegral.Section5.reducedLocallyClosedInclusion
+#print axioms DiamondIntegral.Section5.schemeReduction
+#print axioms DiamondIntegral.Section5.schemeReductionMap
+#print axioms DiamondIntegral.Section5.immersionBranchOpen
+#print axioms DiamondIntegral.Section5.immersionBranchCover
+#print axioms DiamondIntegral.Section5.immersionBranchLift
+#print axioms DiamondIntegral.Section5.GroundTaggedFieldLiftInputs
+#print axioms DiamondIntegral.Section5.GroundTaggedIntrinsicFibreVanishes
+#print axioms PuiseuxSeries.isAlgClosed
+#print axioms PuiseuxSeries.isAlgClosure
+#print axioms PuiseuxSeries.isAlgebraic
+#print axioms LaurentSeries.expand
+#print axioms LaurentSeries.toHahn
+#print axioms PuiseuxSeries.subfield
+#print axioms PuiseuxSeries
+#print axioms PuiseuxSeries.algebraLaurentSeries
+#print axioms DiamondIntegral.Section5.valueInduced_rectangle_identity
+#print axioms DiamondIntegral.Section5.rectangleValueCells_disjoint
+#print axioms DiamondIntegral.Section5.rectangle_active_values_finite
+#print axioms DiamondIntegral.Section5.finite_valueInduced_rectangle_partition
+#print axioms DiamondIntegral.Section5.equiv_image_value_cut
+#print axioms DiamondIntegral.Section5.finite_valueInduced_chart_partition
+#print axioms DiamondIntegral.Section5.groundMixedValueMap_image
+#print axioms DiamondIntegral.Section5.groundValuePattern_carrier
+#print axioms DiamondIntegral.Section5.groundPatternGamma_carrier
+#print axioms DiamondIntegral.Section5.ground_finite_value_rectangle_partition
+#print axioms DiamondIntegral.Section5.ground_mixed_value_normal_form
+#print axioms DiamondIntegral.Section5.groundRVValueImage_carrier
+#print axioms DiamondIntegral.Section5.ground_angular_value_partition
+#print axioms DiamondIntegral.Section5.ground_global_angular_value_partition
+#print axioms DiamondIntegral.Section5.ground_global_monomial_decomposition
+#print axioms DiamondIntegral.Section5.GroundMonomialPiece.rowOrder_fixed
+#print axioms DiamondIntegral.Section5.GroundMonomialPiece.rowOrder_free
+#print axioms DiamondIntegral.Section5.GroundMonomialPiece.matrix_blockSplit
+#print axioms DiamondIntegral.Section5.GroundMonomialPiece.matrix_image
+#print axioms DiamondIntegral.Section5.monomial_decomposition_5_12
+#print axioms DiamondIntegral.Section5.kummerRatio_pow_one
+#print axioms DiamondIntegral.Section5.rootsOfUnity_fixed_of_base
+#print axioms DiamondIntegral.Section5.kummerRatio_cocycle
+#print axioms DiamondIntegral.Section5.kummerRatio_root_independent
+#print axioms DiamondIntegral.Section5.kummerRatio_pow
+#print axioms DiamondIntegral.Section5.kummerRatio_transition
+#print axioms DiamondIntegral.Section5.kummerRatio_injective
+#print axioms DiamondIntegral.Section5.kummerSplittingField
+#print axioms DiamondIntegral.Section5.finiteKummerEquiv_smul
+#print axioms DiamondIntegral.Section5.finiteKummerEquiv_ratio
+#print axioms DiamondIntegral.Section5.finiteKummerAutomorphism_root
+#print axioms DiamondIntegral.Section5.finiteKummer_degree
+#print axioms DiamondIntegral.Section5.laurentExponentMap_injective
+#print axioms DiamondIntegral.Section5.laurentExponentMap_le
+#print axioms DiamondIntegral.Section5.laurentScale_coeff
+#print axioms DiamondIntegral.Section5.laurentScale_coeff_of_not_dvd
+#print axioms DiamondIntegral.Section5.laurentResiduePart_coeff
+#print axioms DiamondIntegral.Section5.laurentExponent_decomposition
+#print axioms DiamondIntegral.Section5.laurentGrouped_coeff
+#print axioms DiamondIntegral.Section5.laurentGrouped_residueParts
+#print axioms DiamondIntegral.Section5.laurentGrouped_injective
+#print axioms DiamondIntegral.Section5.laurentBaseCombination_eq
+#print axioms DiamondIntegral.Section5.laurentPowerBasis_degree
+#print axioms DiamondIntegral.Section5.laurentPowerBasis_adjoin
+#print axioms DiamondIntegral.Section5.laurentUniformizer_pow
+#print axioms DiamondIntegral.Section5.laurentUniformizer_minpoly
+#print axioms DiamondIntegral.Section5.laurentUniformizer_irreducible
+#print axioms DiamondIntegral.Section5.laurentBaseConstant_coe
+#print axioms DiamondIntegral.Section5.laurentKummerEquiv_root
+#print axioms DiamondIntegral.Section5.laurentKummerEquiv_single
+#print axioms DiamondIntegral.Section5.laurentKummerEquiv_grouped
+#print axioms DiamondIntegral.Section5.laurentKummerEquiv_coeff
+#print axioms DiamondIntegral.Section5.laurentKummerEquiv_coeff_zero_iff
+#print axioms DiamondIntegral.Section5.laurentKummerEquiv_support
+#print axioms DiamondIntegral.Section5.laurentKummerEquiv_orderTop
+#print axioms DiamondIntegral.Section5.hahnCharacterTwist_coeff
+#print axioms DiamondIntegral.Section5.hahnCharacterTwist_support
+#print axioms DiamondIntegral.Section5.hahnCharacterTwist_mul
+#print axioms DiamondIntegral.Section5.hahnCharacterEquiv_coeff
+#print axioms DiamondIntegral.Section5.hahnCharacterEquiv_orderTop
+#print axioms DiamondIntegral.Section5.hahnEmbDomain_comp
+#print axioms DiamondIntegral.Section5.rationalExponentMap_injective
+#print axioms DiamondIntegral.Section5.rationalExponentMap_le
+#print axioms DiamondIntegral.Section5.laurentToRational_range_iff
+#print axioms DiamondIntegral.Section5.laurentToRational_level_mono
+#print axioms DiamondIntegral.Section5.puiseuxSeries_finite_level
+#print axioms DiamondIntegral.Section5.laurentToRational_scale
+#print axioms DiamondIntegral.Section5.compatibleRootValue_fraction
+#print axioms DiamondIntegral.Section5.compatibleRootCharacter_fraction
+#print axioms DiamondIntegral.Section5.compatibleRootCharacter_int
+#print axioms DiamondIntegral.Section5.puiseuxCharacter_mem
+#print axioms DiamondIntegral.Section5.puiseuxCharacter_fixes_base
+#print axioms DiamondIntegral.Section5.puiseuxRootSystemAction_orderTop
+#print axioms DiamondIntegral.Section5.puiseuxRoot_coe
+#print axioms DiamondIntegral.Section5.puiseuxRoot_ne_zero
+#print axioms DiamondIntegral.Section5.puiseuxConstant_coe
+#print axioms DiamondIntegral.Section5.puiseuxRoot_pow
+#print axioms DiamondIntegral.Section5.puiseuxRoot_transition
+#print axioms DiamondIntegral.Section5.puiseuxRootSystemAction_root
+#print axioms DiamondIntegral.Section5.puiseuxRootSystemAction_injective
+#print axioms DiamondIntegral.Section5.laurentToPuiseux_scale
+#print axioms DiamondIntegral.Section5.laurentToPuiseux_single
+#print axioms DiamondIntegral.Section5.puiseux_adjoin_roots
+#print axioms DiamondIntegral.Section5.puiseuxAutomorphism_ext
+#print axioms DiamondIntegral.Section5.puiseuxAutomorphism_constant
+#print axioms DiamondIntegral.Section5.puiseuxRootUnityEquiv_val
+#print axioms DiamondIntegral.Section5.puiseuxAutomorphismRoot_ratio
+#print axioms DiamondIntegral.Section5.puiseuxRootSystemAction_system
+#print axioms DiamondIntegral.Section5.puiseuxRootSystemAction_surjective
+#print axioms DiamondIntegral.Section5.puiseuxAutomorphism_orderTop
+#print axioms DiamondIntegral.Section5.compatibleRootCharacter_system
+#print axioms DiamondIntegral.Section5.valuedAutomorphism_principalUnits
+#print axioms DiamondIntegral.Section5.valuedRVUnitEquiv_mk
+#print axioms DiamondIntegral.Section5.valuedRVEquiv_rv
+#print axioms DiamondIntegral.Section5.puiseuxUnit_coe_ne_zero
+#print axioms DiamondIntegral.Section5.puiseuxUnitLeadingTerm_ker
+#print axioms DiamondIntegral.Section5.puiseuxMonomial_coe
+#print axioms DiamondIntegral.Section5.puiseuxUnitLeadingTerm_monomial
+#print axioms DiamondIntegral.Section5.puiseuxUnitLeadingTerm_surjective
+#print axioms DiamondIntegral.Section5.rationalRVAutomorphism_value
+#print axioms DiamondIntegral.Section5.rationalRVAutomorphism_formula
+#print axioms DiamondIntegral.Section5.rationalRVAutomorphism_system
+#print axioms DiamondIntegral.Section5.rationalRVSystem_unique
+#print axioms DiamondIntegral.Section5.puiseuxRVUnitEquiv_mk
+#print axioms DiamondIntegral.Section5.puiseuxAutomorphism_valuation
+#print axioms DiamondIntegral.Section5.puiseuxRVAction_rootSystem_mk
+#print axioms DiamondIntegral.Section5.puiseuxRVAction_coordinates
+#print axioms DiamondIntegral.Section5.puiseuxRVAutomorphism_lifts
+#print axioms DiamondIntegral.Section5.puiseuxRVRootSystemAction_injective
+#print axioms DiamondIntegral.Section5.puiseuxRVAction_injective
+#print axioms DiamondIntegral.Section5.puiseuxRVAction_fixes_base
+#print axioms DiamondIntegral.Section5.hahnEmbDomain_order
+#print axioms DiamondIntegral.Section5.hahnEmbDomain_leadingCoeff
+#print axioms DiamondIntegral.Section5.puiseuxBaseRVMap_coordinates
+#print axioms DiamondIntegral.Section5.puiseuxBaseRVMap_integer
+#print axioms DiamondIntegral.Section5.puiseuxRV_fixes_base_iff
+#print axioms DiamondIntegral.Section5.originalRVMap_surjective
+#print axioms DiamondIntegral.Section5.originalValuedCarrier_surjective
+#print axioms DiamondIntegral.Section5.puiseuxRVAction_fraction
+#print axioms DiamondIntegral.Section5.puiseuxModelFieldAction_apply
+#print axioms DiamondIntegral.Section5.puiseuxModelFieldAction_valued
+#print axioms DiamondIntegral.Section5.puiseuxModelRVAction_rv
+#print axioms DiamondIntegral.Section5.puiseuxModelFieldAction_fixes_base
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rvAction_normal
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rvAction_rv
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rvAction_mul
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rvAction_inv
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rvAction_value
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rvAction_inResidue
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rvAction_residue
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rvAction_residueLift
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rvAction_kAdd
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rvAction_kNeg
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.carrierAction_vfPart
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.carrierAction_rvPart
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.carrierAction_inVF
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.carrierAction_inl
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.carrierAction_inr
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.carrierAction_function
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.carrierAction_relation
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.canonicalInterpret_isCanonical
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.carrierAction_sort
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.carrierAction_fixes_base
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.original_formula_invariant
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.quotientRVAction_system
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.preservesRVFormulas_of_base
+#print axioms DiamondIntegral.Section5.NativeDomainPresentationAt.taggedFinFamily_formal
+#print axioms DiamondIntegral.Section5.finite_degree_partition_sum
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.corollary_global_vanishing_discharged
+#print axioms DiamondIntegral.Section5.bounded_fubini_discharged
+#print axioms DiamondIntegral.Section5.geometric_fubini_discharged
+#print axioms DiamondIntegral.Section5.completed18ContextPositive
+#print axioms DiamondIntegral.Section5.completed18RingHom_sum
+#print axioms DiamondIntegral.Section5.positivePresentationHom_surjective_of_classes
+#print axioms DiamondIntegral.Section5.completed18PositiveLift_pullback_preimage
+#print axioms DiamondIntegral.Section5.completed18PositiveLift_class_preimage
+#print axioms DiamondIntegral.Section5.completed18LocalLift_surjective
+#print axioms DiamondIntegral.Section5.completed18LocalLift_kernel
+#print axioms DiamondIntegral.Section5.completed18NativeVFForget_class
+#print axioms DiamondIntegral.Section5.completed18NativeVFForget_lift
+#print axioms DiamondIntegral.Section5.completed18NativePositiveLift_kernel
+#print axioms DiamondIntegral.Section5.completed18_tupleRV
+#print axioms DiamondIntegral.Section5.groundRVAt_volume_eq
+#print axioms DiamondIntegral.Section5.groundRVAt_lift_domain
+#print axioms DiamondIntegral.Section5.nativeVFPositiveGround_lift_class
+#print axioms DiamondIntegral.Section5.completed18LocalLift_class
+#print axioms DiamondIntegral.Section5.completed18Positive_domain
+#print axioms DiamondIntegral.Section5.completed18RVPositiveEquiv_oneFactor
+#print axioms DiamondIntegral.Section5.completed18RVPositiveEquiv_positiveFactor
+#print axioms DiamondIntegral.Section5.completed18RVSpecial_iff
+#print axioms DiamondIntegral.Section5.completed18VFClass_iso
+#print axioms DiamondIntegral.Section5.nativeVFGround_scissor
+#print axioms DiamondIntegral.Section5.nativeVFPositiveGround_class
+#print axioms DiamondIntegral.Section5.groundVFNative_partition
+#print axioms DiamondIntegral.Section5.groundVFNativePositive_class
+#print axioms DiamondIntegral.Section5.completed18RVDirectSumAddEquiv_of
+#print axioms DiamondIntegral.Section5.groundRVClassNative_unit
+#print axioms DiamondIntegral.Section5.completed18RVDirectSumAddEquiv_one
+#print axioms DiamondIntegral.Section5.completed18RVDirectSumAddEquiv_mul
+#print axioms DiamondIntegral.Section5.completed18RVPositiveEquiv_class
+#print axioms DiamondIntegral.Section5.groundMixed_gamma_set
+#print axioms DiamondIntegral.Section5.groundVFNative_product_domain
+#print axioms DiamondIntegral.Section5.groundVFClass_partition
+#print axioms DiamondIntegral.Section5.groundVFClass_union_inter
+#print axioms DiamondIntegral.Section5.rvLeftTag_normalized
+#print axioms DiamondIntegral.Section5.rvRightTag_normalized
+#print axioms DiamondIntegral.Section5.groundRVAt_coprod_domain
+#print axioms DiamondIntegral.Section5.groundRVAt_product_domain
+#print axioms DiamondIntegral.Section5.groundRVClassNative_zero
+#print axioms DiamondIntegral.Section5.groundRVClassNative_add
+#print axioms DiamondIntegral.Section5.groundRVClassNative_mul
+#print axioms DiamondIntegral.Section5.groundRVClassNative_class
+#print axioms DiamondIntegral.Section5.nativeRVClassRepresentative_class
+#print axioms DiamondIntegral.Section5.nativeRVClassRepresentative_full
+#print axioms DiamondIntegral.Section5.nativeRVClassGround_class
+#print axioms DiamondIntegral.Section5.nativeRVClassGround_ground
+#print axioms DiamondIntegral.Section5.groundRVClassNative_native
+#print axioms DiamondIntegral.Section5.nativeRVGroundDomain_carrier
+#print axioms DiamondIntegral.Section5.groundRVMapRawGraph_definable
+#print axioms DiamondIntegral.Section5.groundRV_gamma_map
+#print axioms DiamondIntegral.Section5.nativeRVRawVolume_spec
+#print axioms DiamondIntegral.Section5.nativeRVRawVolume_eq
+#print axioms DiamondIntegral.Section5.nativeRVRawVolume_proper
+#print axioms DiamondIntegral.Section5.join_rv_proper
+#print axioms DiamondIntegral.Section5.nativeRVRawVolume_graph
+#print axioms DiamondIntegral.Section5.nativeRVGroundVolume_finite
+#print axioms DiamondIntegral.Section5.nativeRVGroundVolume_nonzero
+#print axioms DiamondIntegral.Section5.groundRVAt_domain
+#print axioms DiamondIntegral.Section5.groundRVAt_volume
+#print axioms DiamondIntegral.Section5.groundRVAt_full
+#print axioms DiamondIntegral.Section5.groundPointCode_sorted
+#print axioms DiamondIntegral.Section5.groundDefinable_univ
+#print axioms DiamondIntegral.Section5.groundRV_gamma_set
+#print axioms DiamondIntegral.Section5.groundRV_gamma_volume
+#print axioms DiamondIntegral.Section5.completed_section5_input
+#print axioms DiamondIntegral.Section5.perm_two_cases
+#print axioms DiamondIntegral.Section5.gammaIso_congr_target_value
+#print axioms DiamondIntegral.Section5.completed_two_order_input
+#print axioms DiamondIntegral.Section5.completed_relative_corollary_5_8
+#print axioms DiamondIntegral.Section5.positioned_cells_with_rv_parameters
+#print axioms DiamondIntegral.Section5.BaseDefinableIn.program
+#print axioms DiamondIntegral.Section5.gamma_point_code_preimage
+#print axioms DiamondIntegral.Section5.rv_parameter_family
+#print axioms DiamondIntegral.Section5.finite_generated_rv_parameter_base
+#print axioms DiamondIntegral.Section5.BaseDefinableIn.transfer
+#print axioms DiamondIntegral.Section5.BaseDefinableIn.labelBase
+#print axioms DiamondIntegral.Section5.cellData_base_transfer
+#print axioms DiamondIntegral.Section5.cellRestriction_graph
+#print axioms DiamondIntegral.Section5.cellRestriction_fibre
+#print axioms DiamondIntegral.Section5.exists_coherent_positioned_cell_label_injection
+#print axioms DiamondIntegral.Section5.GammaQE.finite_laws_of_flat_graph
+#print axioms DiamondIntegral.Section5.GammaQE.gamma_piecewise_rational_affine
+#print axioms DiamondIntegral.Section5.GammaQE.positive_power_law
+#print axioms DiamondIntegral.Section5.GammaQE.positive_power_denominator
+#print axioms DiamondIntegral.Section5.GammaQE.graph_has_critical_pair
+#print axioms DiamondIntegral.Section5.GammaQE.gamma_flat_normal_form
+#print axioms DiamondIntegral.Section5.GammaQE.flat_finite_perturbation
+#print axioms DiamondIntegral.Section5.GammaQE.flat_value_equality_preserved
+#print axioms DiamondIntegral.Section5.GammaQE.flat_literal_preserved
+#print axioms DiamondIntegral.Section5.GammaQE.gammaTop_mul_le_mul_iff
+#print axioms DiamondIntegral.Section5.GammaQE.rv_value_ne_zero
+#print axioms DiamondIntegral.Section5.GammaQE.rv_residue_value_one
+#print axioms DiamondIntegral.Section5.GammaQE.scaled_residue_zero
+#print axioms DiamondIntegral.Section5.GammaQE.scaled_residue_equality
+#print axioms DiamondIntegral.Section5.GammaQE.gammaTop_le_zero
+#print axioms DiamondIntegral.Section5.GammaQE.gammaTop_zero_le
+#print axioms DiamondIntegral.Section5.GammaQE.scaled_value_order_zero
+#print axioms DiamondIntegral.Section5.GammaQE.flat_residue_term_fixed
+#print axioms DiamondIntegral.Section5.GammaQE.flat_residue_polynomial_fixed
+#print axioms DiamondIntegral.Section5.GammaQE.raw_residue_sum_inK
+#print axioms DiamondIntegral.Section5.GammaQE.flat_polynomial_inK
+#print axioms DiamondIntegral.Section5.GammaQE.mapRVVariables_eval
+#print axioms DiamondIntegral.Section5.GammaQE.mapRVAtomVariables_eval
+#print axioms DiamondIntegral.Section5.GammaQE.mapRVBooleanVariables_eval
+#print axioms DiamondIntegral.Section5.GammaQE.sourceVFValues_allRV
+#print axioms DiamondIntegral.Section5.GammaQE.rvGamma_codeValue
+#print axioms DiamondIntegral.Section5.GammaQE.flat_rawEval
+#print axioms DiamondIntegral.Section5.GammaQE.flat_rawEval_perturb
+#print axioms DiamondIntegral.Section5.GammaQE.flat_rawEval_ne_zero
+#print axioms DiamondIntegral.Section5.GammaQE.flat_value
+#print axioms DiamondIntegral.Section5.GammaQE.rvGamma_val
+#print axioms DiamondIntegral.Section5.GammaQE.rv_inK_iff
+#print axioms DiamondIntegral.Section5.GammaQE.gamma_val_zpow
+#print axioms DiamondIntegral.Section5.GammaQE.rv_value_zpow
+#print axioms DiamondIntegral.Section5.GammaQE.rvGamma_one
+#print axioms DiamondIntegral.Section5.GammaQE.rvGamma_mul
+#print axioms DiamondIntegral.Section5.GammaQE.rvGamma_inv
+#print axioms DiamondIntegral.Section5.GammaQE.rvGamma_zpow
+#print axioms DiamondIntegral.Section5.GammaQE.rvGamma_eq_iff
+#print axioms DiamondIntegral.Section5.GammaQE.rvGamma_surjective
+#print axioms DiamondIntegral.Section5.GammaFinitePerturbation.comparison_eventually
+#print axioms DiamondIntegral.Section5.GammaFinitePerturbation.finite_comparisons
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.complexVarietyVolume_chart
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.corollary_global_vanishing
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.varietyNativeChartChange_point
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.varietyNativeMorphism_source_change
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.varietyNativeMorphism_target_change
+#print axioms DiamondIntegral.Section5.originalBaseTargetFibre_zero
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.varietyNativeChartChange_bijective
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.varietyNativeClass_independent
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.varietyNativeChart_parameter_equivalent
+#print axioms DiamondIntegral.Section5.nativeSourceFibreMap_value
+#print axioms DiamondIntegral.Section5.nativeSourceFibreMap_bijective
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.varietyNativeFibrePointMap_bijective
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.varietyNativeMorphism_exists
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.varietyNativeMorphism_point
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.ambientBoundedVFVolume_ground_tagged_fibres
+#print axioms DiamondIntegral.Section5.nativeMixedMap_value_singleton
+#print axioms DiamondIntegral.Section5.nativeMixedMap_value_coordinate
+#print axioms DiamondIntegral.Section5.nativeMixedMap_parameter_transfer
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.varietyNativeChartMap_exists
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.varietyNativeInclusion_exists
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.varietyNativeInclusion_point
+#print axioms DiamondIntegral.Section5.EquivariantVariety.affine_morphism_refinement_exists
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.varietyNativePointEquiv_chart
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.varietyNativeObject_groundLabels
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.nativeGeometricAffineMap_exists
+#print axioms DiamondIntegral.Section5.ComplexVariety.Morphism.affineAlgebraMap_spec
+#print axioms DiamondIntegral.Section5.ComplexVariety.Morphism.affinePointEquiv_map
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.nativeAffineAlgebraPointEquiv_coordinates
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.nativeAffineAlgebraMap_exists
+#print axioms DiamondIntegral.Section5.nativeVFFiniteSumInclusion_injective
+#print axioms DiamondIntegral.Section5.nativeVFFiniteSum_chart_partition
+#print axioms DiamondIntegral.Section5.nativeVFFiniteSum_map
+#print axioms DiamondIntegral.Section5.EquivariantVariety.Object.underlyingVariety_isAffine
+#print axioms DiamondIntegral.Section5.nativeVFFiniteSumInclusion_value
+#print axioms DiamondIntegral.Section5.nativeVFFiniteSum_groundLabels
+#print axioms DiamondIntegral.Section5.nativeGroundRVLabels_raw
+#print axioms DiamondIntegral.Section5.nativeBoundedVFFubini_ground_tagged_vanishing
+#print axioms DiamondIntegral.Section5.originalGround_rvZero
+#print axioms DiamondIntegral.Section5.originalGround_rvOne
+#print axioms DiamondIntegral.Section5.rvLeftTag_groundNames
+#print axioms DiamondIntegral.Section5.rvRightTag_groundNames
+#print axioms DiamondIntegral.Section5.NativeGroundRVLabels.coprod
+#print axioms DiamondIntegral.Section5.NativeGroundRVLabels.pureVF
+#print axioms DiamondIntegral.Section5.nativeVFCoproductSum_bijective
+#print axioms DiamondIntegral.Section5.vfAdjoinedMixedFibreValue_to_raw
+#print axioms DiamondIntegral.Section5.rawMixedParameters_subset_vfAdjoinedFieldNames
+#print axioms DiamondIntegral.Section5.raw_to_vfAdjoinedContext_mixed
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.ambientPolynomialEquations_coefficients
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.nativeAffineVFObject_mem
+#print axioms DiamondIntegral.Section5.nativeVFPolynomialMap_value
+#print axioms DiamondIntegral.Section5.ComplexVariety.affine_coordinate_presentation
+#print axioms DiamondIntegral.Section5.EquivariantVariety.ImmersedPresentation.fieldPoint_factor
+#print axioms DiamondIntegral.Section5.EquivariantVariety.ImmersedPresentation.fieldPointPartitionMap_bijective
+#print axioms DiamondIntegral.Section5.ComplexVariety.coordinateSpec_toC
+#print axioms DiamondIntegral.Section5.ComplexVariety.coordinateIso_overC
+#print axioms DiamondIntegral.Section5.vfPolynomialRawCode_eval
+#print axioms DiamondIntegral.Section5.vfPolynomialRawLocus_definable
+#print axioms DiamondIntegral.Section5.nativeVFPolynomialDomain_mem
+#print axioms DiamondIntegral.Section5.ComplexVariety.finite_affine_presentation
+#print axioms DiamondIntegral.Section5.vfPolynomialRawCode_definable
+#print axioms DiamondIntegral.Section5.vfPolynomial_zero_definable
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.ambientBoundedVFVolume_field_generated_fibres
+#print axioms DiamondIntegral.Section5.finiteAffinePoint_equations_iff
+#print axioms DiamondIntegral.Section5.nativePureVFTuple_proper
+#print axioms DiamondIntegral.Section5.nativeBoundedVFFubini_field_generated_vanishing
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.ambientLaurentField_nontrivial
+#print axioms DiamondIntegral.Section5.finite_affine_algebra_presentation
+#print axioms DiamondIntegral.Section5.affinePointCoordinates_aeval
+#print axioms DiamondIntegral.Section5.affineMorphism_polynomial_coordinates
+#print axioms DiamondIntegral.Section5.vfAdjoinedFibreValue_to_raw
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.ambientPuiseuxFieldHom_val
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.ambientPuiseuxFieldHom_base_mem
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.ambientComplexFieldHom_base_mem
+#print axioms DiamondIntegral.Section5.originalBaseVFBoundedValue_parameter_naturality
+#print axioms DiamondIntegral.Section5.rvGroundTransferOrdinary_nativeChart
+#print axioms DiamondIntegral.Section5.nativeGroundRVEvaluation_parameter_naturality
+#print axioms DiamondIntegral.Section5.elementaryVFFieldHom_rv
+#print axioms DiamondIntegral.Section5.vfNormalizedMap_ext
+#print axioms DiamondIntegral.Section5.sortedTransferVFRing_class
+#print axioms DiamondIntegral.Section5.sortedTransferVFRing_lift
+#print axioms DiamondIntegral.Section5.nativeRVEvaluation_parameter_naturality
+#print axioms DiamondIntegral.Section5.rvGroundTransferOrdinary_sharp_chart
+#print axioms DiamondIntegral.Section5.resGroundTransferReduced_torus
+#print axioms DiamondIntegral.Section5.rvOrdinaryRetraction_ext
+#print axioms DiamondIntegral.Section5.rvGroundTransferOrdinary_class
+#print axioms DiamondIntegral.Section5.rvGroundTransferOrdinary_res
+#print axioms DiamondIntegral.Section5.resGroundTransferReduced_fromOrdinary
+#print axioms DiamondIntegral.Section5.gamma_integral_parameter_independent
+#print axioms DiamondIntegral.Section5.vfAdjoinedContext_to_raw
+#print axioms DiamondIntegral.Section5.raw_to_vfAdjoinedContext
+#print axioms DiamondIntegral.Section5.groundField_le_vfAdjoinedField
+#print axioms DiamondIntegral.Section5.groundReal_subset_vfAdjoinedFieldNames
+#print axioms DiamondIntegral.Section5.rawVFParameters_subset_vfAdjoinedFieldNames
+#print axioms DiamondIntegral.Section5.vfAdjoinedField_small
+#print axioms DiamondIntegral.Section5.vfAdjoinedField_nontrivial
+#print axioms DiamondIntegral.Section5.vfFieldGamma_names
+#print axioms DiamondIntegral.Section5.vfParameterFieldGamma_names
+#print axioms DiamondIntegral.Section5.vfFieldSubstructure_small
+#print axioms DiamondIntegral.Section5.vfParameterField_small
+#print axioms DiamondIntegral.Section5.vfParameterFieldSubstructure_names
+#print axioms DiamondIntegral.Section5.sortedTransferVFPositive_lift
+#print axioms DiamondIntegral.Section5.sortedTransferRVPositive_oneObject
+#print axioms DiamondIntegral.Section5.sortedTransferRVPositive_positiveObject
+#print axioms DiamondIntegral.Section5.sortedTransferRVPositive_special
+#print axioms DiamondIntegral.Section5.sortedTransferRVPositive_special_iff
+#print axioms DiamondIntegral.Section5.vfFieldGammaMap_val
+#print axioms DiamondIntegral.Section5.vfFieldGamma_mem_value
+#print axioms DiamondIntegral.Section5.vfFieldGamma_values_mem
+#print axioms DiamondIntegral.Section5.vfFieldGamma_small
+#print axioms DiamondIntegral.Section5.vfFieldCarrier_vf
+#print axioms DiamondIntegral.Section5.vfFieldCarrier_rv
+#print axioms DiamondIntegral.Section5.vfFieldCarrier_zero
+#print axioms DiamondIntegral.Section5.vfFieldRVImage_zero
+#print axioms DiamondIntegral.Section5.vfFieldRVImage_one
+#print axioms DiamondIntegral.Section5.vfFieldRVImage_mul
+#print axioms DiamondIntegral.Section5.vfFieldRVImage_add
+#print axioms DiamondIntegral.Section5.vfFieldRVImage_neg
+#print axioms DiamondIntegral.Section5.nativePositiveRVClass_bijection
+#print axioms DiamondIntegral.Section5.sortedTransferRVClass_empty
+#print axioms DiamondIntegral.Section5.sortedTransferRVPositive_class
+#print axioms DiamondIntegral.Section5.sortedTransferRVPositive_left_inv
+#print axioms DiamondIntegral.Section5.nativePositiveVFClass_bijection
+#print axioms DiamondIntegral.Section5.sortedTransferVFPositive_class
+#print axioms DiamondIntegral.Section5.sortedTransferVFPositive_left_inv
+#print axioms DiamondIntegral.Section5.sortedTransferRVVolume_value
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.ambientBoundedVFVolume_intrinsic_fibre_vanishing
+#print axioms DiamondIntegral.Section5.sortedTransferMixedDomain_carrier
+#print axioms DiamondIntegral.Section5.nativeBoundedVFFubini_intrinsic_fibre_vanishing
+#print axioms DiamondIntegral.Section5.originalBaseVFBoundedValue_of_weak_lift_bijection
+#print axioms DiamondIntegral.Section5.originalBaseVFBoundedValue_positive_presentation
+#print axioms DiamondIntegral.Section5.normalizedVFBoundedValue_of_lift_bijection
+#print axioms DiamondIntegral.Section5.normalizedVFBoundedValue_pullback
+#print axioms DiamondIntegral.Section5.normalizedVFBoundedValue_weak_lift
+#print axioms DiamondIntegral.Section5.normalizedVFBoundedValue_of_weak_lift_bijection
+#print axioms DiamondIntegral.Section5.originalBasePositiveIntegral_lift_class
+#print axioms DiamondIntegral.Section5.originalBaseVFIntegral_lift_class
+#print axioms DiamondIntegral.Section5.originalBaseVFBoundedValue_lift_class
+#print axioms DiamondIntegral.Section5.originalBaseVFIntegral_ofContext
+#print axioms DiamondIntegral.Section5.originalBaseVFBoundedValue_ofContext
+#print axioms DiamondIntegral.Section5.native_arbitrary_weak_rv_lift_exists
+#print axioms DiamondIntegral.Section5.native_arbitrary_weak_rv_integral_presentation
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.ambientBoundedVFVolume_weak_fibre_vanishing
+#print axioms DiamondIntegral.Section5.native_arbitrary_vf_pullback_preparation
+#print axioms DiamondIntegral.Section5.nativeBoundedWeakVFFubini_vanishing
+#print axioms DiamondIntegral.Section5.nativeVFPrepareAll_value
+#print axioms DiamondIntegral.Section5.nativeVFPrepareAll_normalForm
+#print axioms DiamondIntegral.Section5.nativeVFPrepareAll_base_mem
+#print axioms DiamondIntegral.Section5.nativeVFPrepareAll_pullback
+#print axioms DiamondIntegral.Section5.nativeBoundedWeakVFFubini
+#print axioms DiamondIntegral.Section5.native_weak_vf_map_whole_witness_partition
+#print axioms DiamondIntegral.Section5.nativeVFBoundedValue_map_fixed_whole_weak_witness
+#print axioms DiamondIntegral.Section5.native_weak_vf_map_finite_whole_witness_catalog
+#print axioms DiamondIntegral.Section5.nativeWeakRVObjectLift_pullback
+#print axioms DiamondIntegral.Section5.nativeWeakLiftKey_graph
+#print axioms DiamondIntegral.Section5.nativeVFBoundedValue_weak_lift
+#print axioms DiamondIntegral.Section5.nativeVFBoundedValue_of_weak_lift_bijection
+#print axioms DiamondIntegral.Section5.native_weak_vf_lift_equality_schema_at_parameter
+#print axioms DiamondIntegral.Section5.native_vf_fixed_whole_witness_fubini_weak
+#print axioms DiamondIntegral.Section5.finiteRVSchemaLiftDomain_presented_weak_native_row
+#print axioms DiamondIntegral.Section5.finiteRVSchemaLiftDomain_presents_weak_native_lift
+#print axioms DiamondIntegral.Section5.native_weak_finite_rv_schema_at_parameter
+#print axioms DiamondIntegral.Section5.nativePreparedVFLift_row_values_weak
+#print axioms DiamondIntegral.Section5.nativePreparedVFLift_total_values_weak
+#print axioms DiamondIntegral.Section5.nativeWeakRVLabelGraph_definable
+#print axioms DiamondIntegral.Section5.nativeWeakRVLabelGraph_append_iff
+#print axioms DiamondIntegral.Section5.nativeWeakRVLabelGraph_fibre_finite
+#print axioms DiamondIntegral.Section5.nativeWeakRVLabelGraph_reverse_definable
+#print axioms DiamondIntegral.Section5.nativeWeakRVLabelGraph_uniform_bound
+#print axioms DiamondIntegral.Section5.nativePreparedLift_bounded_value_weak
+#print axioms DiamondIntegral.Section5.nativeWeakRVObjectLift_finite
+#print axioms DiamondIntegral.Section5.NativeVFLiftEqualitySchema.rv_values_descend_weak
+#print axioms DiamondIntegral.Section5.nativePreparedLiftKey_graphs_weak
+#print axioms DiamondIntegral.Section5.nativePreparedLiftKey_onto_weak
+#print axioms DiamondIntegral.Section5.NativeVFLiftEqualitySchema.validWeak_definable
+#print axioms DiamondIntegral.Section5.native_vf_weak_lift_equality_finite_catalog
+#print axioms DiamondIntegral.Section5.nativePreparedRVTotalMap_injective_weak
+#print axioms DiamondIntegral.Section5.nativePreparedRVKey_value_weak
+#print axioms DiamondIntegral.Section5.namedRV_value_definable
+#print axioms DiamondIntegral.Section5.realGroundValues_definable
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.ambientBoundedVFVolume_fibre_vanishing
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.laurentCoefficientEnumeration_range
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.ambientPuiseuxComparison_zero
+#print axioms DiamondIntegral.Section5.elementaryRESChartValue_fibre
+#print axioms DiamondIntegral.Section5.elementaryRESRestriction_kills_fibres
+#print axioms DiamondIntegral.Section5.elementaryRESUngradedReduced_kills_fibres
+#print axioms DiamondIntegral.Section5.resGroundTransferOrdinary_class
+#print axioms DiamondIntegral.Section5.resGroundTransfer_degreeIdeal
+#print axioms DiamondIntegral.Section5.resGroundTransfer_fibreIdeal
+#print axioms DiamondIntegral.Section5.resGroundTransferUngradedReduced_kills
+#print axioms DiamondIntegral.Section5.elementary_full_fibre_preimage
+#print axioms DiamondIntegral.Section5.elementary_definable_value_descent
+#print axioms DiamondIntegral.Section5.elementary_iRVZero
+#print axioms DiamondIntegral.Section5.elementaryRVMap_zero
+#print axioms DiamondIntegral.Section5.elementary_iRVOne
+#print axioms DiamondIntegral.Section5.elementaryRVMap_one
+#print axioms DiamondIntegral.Section5.elementaryGammaTopMap_one
+#print axioms DiamondIntegral.Section5.realGammaGround_definable_iff
+#print axioms DiamondIntegral.Section5.elementaryRESChartValue_partition
+#print axioms DiamondIntegral.Section5.elementaryRESOrdinaryRestriction_class
+#print axioms DiamondIntegral.Section5.elementaryRESOrdinaryRestriction_degreeIdeal
+#print axioms DiamondIntegral.Section5.fullRawValueFibre_mem
+#print axioms DiamondIntegral.Section5.fibre_domain_eq_full
+#print axioms DiamondIntegral.Section5.fullRawValueFibre_nonempty
+#print axioms DiamondIntegral.Section5.fullRawValueFibre_definable_iff
+#print axioms DiamondIntegral.Section5.elementaryNativeRESValue_bijection
+#print axioms DiamondIntegral.Section5.elementaryNativeRESValue_empty
+#print axioms DiamondIntegral.Section5.elementaryNativeRESValue_product
+#print axioms DiamondIntegral.Section5.elementaryNativeRESValue_cut
+#print axioms DiamondIntegral.Section5.elementaryNativeRESValue_unit
+#print axioms DiamondIntegral.Section5.elementary_namedFormula_nonempty
+#print axioms DiamondIntegral.Section5.elementary_actual_nonempty
+#print axioms DiamondIntegral.Section5.elementaryNativeRVMap_bijective
+#print axioms DiamondIntegral.Section5.comp_joinedToCanonical
+#print axioms DiamondIntegral.Section5.rawGraphExtension_graph_definable
+#print axioms DiamondIntegral.Section5.rawGraphExtension_graph_sorted
+#print axioms DiamondIntegral.Section5.rawGraphNativeMap_value
+#print axioms DiamondIntegral.Section5.rawGraphNativeMap_bijective
+#print axioms DiamondIntegral.Section5.rv_product_mem_projections
+#print axioms DiamondIntegral.Section5.elementaryNativeRVRestriction_product
+#print axioms DiamondIntegral.Section5.elementaryNativeRVRestriction_sdiff
+#print axioms DiamondIntegral.Section5.elementaryNativeRVRestriction_empty
+#print axioms DiamondIntegral.Section5.rawTupleSwap_append
+#print axioms DiamondIntegral.Section5.rawTupleSwap_twice
+#print axioms DiamondIntegral.Section5.RawDefinableGraphMap.restrict_injective
+#print axioms DiamondIntegral.Section5.RawDefinableGraphMap.restrict_bijective
+#print axioms DiamondIntegral.Section5.append_comp_canonicalToJoined
+#print axioms DiamondIntegral.Section5.nativeRawTupleMap_graph_definable
+#print axioms DiamondIntegral.Section5.nativeRawGraphMap_bijective
+#print axioms DiamondIntegral.Section5.RawDefinableGraphMap.graph_append_iff
+#print axioms DiamondIntegral.Section5.raw_tuple_comp_append
+#print axioms DiamondIntegral.Section5.RawDefinableGraphMap.output_in_elementary_image
+#print axioms DiamondIntegral.Section5.RawDefinableGraphMap.restrict_commutes
+#print axioms DiamondIntegral.Section5.RawDefinableGraphMap.restrict_graph
+#print axioms DiamondIntegral.Section5.elementaryRVSort_iff
+#print axioms DiamondIntegral.Section5.elementaryNativeRawRestriction_sorted
+#print axioms DiamondIntegral.Section5.elementaryNativeRVRestriction_mem
+#print axioms DiamondIntegral.Section5.elementaryNativeRVRestriction_finite
+#print axioms DiamondIntegral.Section5.splitTupleFormula_realize
+#print axioms DiamondIntegral.Section5.elementary_tuple_exists_row
+#print axioms DiamondIntegral.Section5.elementary_actual_projection
+#print axioms DiamondIntegral.Section5.emptyGamma_sorted_definable_iff
+#print axioms DiamondIntegral.Section5.emptyGamma_rawDomain_definable
+#print axioms DiamondIntegral.Section5.elementaryRVMap_injective
+#print axioms DiamondIntegral.Section5.elementaryRVMap_le
+#print axioms DiamondIntegral.Section5.elementaryRVMap_sameValue
+#print axioms DiamondIntegral.Section5.elementaryGammaTopMap_vrv
+#print axioms DiamondIntegral.Section5.elementaryGammaTopMap_injective
+#print axioms DiamondIntegral.Section5.elementaryRV_finite_values_restrict
+#print axioms DiamondIntegral.Section5.elementary_namedFormula_mem
+#print axioms DiamondIntegral.Section5.elementary_namedFormula_universal
+#print axioms DiamondIntegral.Section5.elementary_namedFormula_equality
+#print axioms DiamondIntegral.Section5.elementaryNamedRestriction_injective
+#print axioms DiamondIntegral.Section5.elementaryNamedRestriction_surjective
+#print axioms DiamondIntegral.Section5.namedDefinable_iff_actual
+#print axioms DiamondIntegral.Section5.elementaryActualDefinableEquiv_carrier
+#print axioms DiamondIntegral.Section5.elementary_namedFormula_exists_row
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.theta_5_14_concrete_mk
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.concrete_valuation_nontrivial
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.canonical_model_ACVF00
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.canonical_model_ACVF
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.concreteCarrierNormal_inl
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.concreteCarrierNormal_inr
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.concreteCarrierNormal_vf
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.concreteCarrierNormal_rv
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.concreteCarrierNormal_vfSort
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.concreteCarrierNormal_rvSort
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.concreteCarrierNormal_sort
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.concreteCarrierNormal_function
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.raw_residueLift_coefficient
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.raw_residueLift_residue
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.raw_residueLift_mul
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.raw_residueLift_inResidue
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.raw_residueLift_add
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.normal_inResidue
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.normal_addResidue
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.normal_negResidue
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.normal_rvMul
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.normal_rvInv
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.normal_value_one
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.normal_value_le
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.constant_valuation
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.normal_constant
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.normal_value
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.normal_residueCode_constant
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.constantResidue_surjective
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.normal_residueCode
+#print axioms DiamondIntegral.Section5.laurentToRational_eq_newton
+#print axioms DiamondIntegral.Section5.puiseuxSubfield_eq_newton
+#print axioms DiamondIntegral.Section5.puiseuxNewtonEquiv_coe
+#print axioms DiamondIntegral.Section5.puiseuxAlgebraicallyClosed
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.FibreOnlyFamilyWitness.reduced_equality
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.res_equality_iff_fibre_only_family_witness
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.FibreOnlyFamilyWitness.stabilizer_finite
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.FibreOnlyFamilyWitness.source_finite
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.FibreOnlyFamilyWitness.target_finite
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.productFamily_underlying_eq
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.RelationTerm.underlying_eq
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.relationFamilies_underlying_split
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.res_equality_has_fibre_only_witness
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.nativeUngradedClass_tagged
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.familyUngradedClass_eq
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.reducedPositiveHom_positiveClass
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.familyReducedClass_eq
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.positiveRelation_reduced_eq
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.nativeRVSetIsoClass_scissor
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.nativeRVPositiveUnderlying_class
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.nativeRESPositiveUnderlying_class
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.nativeRESGradedUnderlying_class
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.familyRVSet_finite
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.familyUnderlyingClass_eq
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.familyUnderlyingClass_append
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.familyUnderlyingClass_singleton
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.familyUnderlyingClass_eq_iff
+#print axioms DiamondIntegral.Section5.nativeRVSetMapInl_desc
+#print axioms DiamondIntegral.Section5.nativeRVSetMapInr_desc
+#print axioms DiamondIntegral.Section5.nativeRVSetMapCoprod_hom_ext
+#print axioms DiamondIntegral.Section5.nativeRVSetIsoClass_eq_iff
+#print axioms DiamondIntegral.Section5.nativeRVSetIsoClass_empty
+#print axioms DiamondIntegral.Section5.nativeRVSetIsoClass_tagged
+#print axioms DiamondIntegral.Section5.nativeGeometricVFFubini_vanishing
+#print axioms DiamondIntegral.Section5.nativeGeometricVFFubini_vanishing_map
+#print axioms DiamondIntegral.Section5.nativeVFGeometricValue_map_fixed_whole_witness
+#print axioms DiamondIntegral.Section5.nativeGeometricVFFubini
+#print axioms DiamondIntegral.Section5.native_vf_fixed_geometric_whole_witness_fubini
+#print axioms DiamondIntegral.Section5.nativePreparedLift_geometric_value
+#print axioms DiamondIntegral.Section5.nativePreparedRVKeyStratum_value
+#print axioms DiamondIntegral.Section5.nativeVFPrepareLift_fibre_nonzero
+#print axioms DiamondIntegral.Section5.nativeVFGeometricValue_base_stratum
+#print axioms DiamondIntegral.Section5.nativeVFGeometricValue_base_strata_sum
+#print axioms DiamondIntegral.Section5.nativeRVZeroPattern_bijection_iff
+#print axioms DiamondIntegral.Section5.nativeRVZeroPattern_inverseImage
+#print axioms DiamondIntegral.Section5.nativeRVTotal_zeroPattern_carrier
+#print axioms DiamondIntegral.Section5.nativePreparedGeometricVFLift_row_values
+#print axioms DiamondIntegral.Section5.nativePreparedGeometricVFLift_subbase_total_values
+#print axioms DiamondIntegral.Section5.nativeVFBaseStratumSelection_left
+#print axioms DiamondIntegral.Section5.nativeVFBaseStratumSelection_right
+#print axioms DiamondIntegral.Section5.nativeVFBaseStratum_omitted_zero
+#print axioms DiamondIntegral.Section5.nativeVFBaseStratumDrop_pullback
+#print axioms DiamondIntegral.Section5.nativeVFBaseStratumDrop_nonzero
+#print axioms DiamondIntegral.Section5.nativeVFSelectedZeroStratum_mem
+#print axioms DiamondIntegral.Section5.nativeVFSelectedZeroStratum_subset
+#print axioms DiamondIntegral.Section5.nativeVFSelectedZeroStratum_disjoint
+#print axioms DiamondIntegral.Section5.nativeVFSelectedZeroStratum_cover
+#print axioms DiamondIntegral.Section5.nativeVFSelectedZeroStratum_pullback
+#print axioms DiamondIntegral.Section5.nativeFullKeySelectedZeroStratum_image
+#print axioms DiamondIntegral.Section5.geometricDegreeValue_eq_of_affine_weights
+#print axioms DiamondIntegral.Section5.native_affine_weighted_rv_family_fubini
+#print axioms DiamondIntegral.Section5.native_geometric_rv_family_common_degree
+#print axioms DiamondIntegral.Section5.NativeGeometricVFLiftEqualitySchema.weighted_values_descend
+#print axioms DiamondIntegral.Section5.NativeGeometricVFLiftEqualitySchema.canonical_padded_values_descend
+#print axioms DiamondIntegral.Section5.nativeRVProductDomain_append_mem
+#print axioms DiamondIntegral.Section5.originalConstantProductTotal_reindex
+#print axioms DiamondIntegral.Section5.nativePaddedRV_total_value
+#print axioms DiamondIntegral.Section5.NativeGeometricVFLiftEqualitySchema.padded_values_descend
+#print axioms DiamondIntegral.Section5.prepare_native_geometric_vf_lift_RV_data
+#print axioms DiamondIntegral.Section5.native_geometric_vf_map_finite_whole_witness_catalog
+#print axioms DiamondIntegral.Section5.native_geometric_vf_map_whole_witness_partition
+#print axioms DiamondIntegral.Section5.originalPaddedRVDomain_row
+#print axioms DiamondIntegral.Section5.originalPaddedRVDomain_recode_row
+#print axioms DiamondIntegral.Section5.nativePaddedRV_recode_value
+#print axioms DiamondIntegral.Section5.NativeGeometricVFLiftEqualitySchema.valid_definable
+#print axioms DiamondIntegral.Section5.native_geometric_vf_lift_schema_at_parameter
+#print axioms DiamondIntegral.Section5.native_geometric_vf_lift_finite_catalog
+#print axioms DiamondIntegral.Section5.nativeVFGeometricValue_lift_fraction
+#print axioms DiamondIntegral.Section5.nativeVFGeometricValue_equal_iff_padded_lifts
+#print axioms DiamondIntegral.Section5.nativeVFGeometricValue_nonzero_pullback
+#print axioms DiamondIntegral.Section5.nativeAffineConstant_row_value
+#print axioms DiamondIntegral.Section5.nativePaddedRV_row_value
+#print axioms DiamondIntegral.Section5.geometricRowValue_eq_iff_padded
+#print axioms DiamondIntegral.Section5.originalConstantRVDomain_row
+#print axioms DiamondIntegral.Section5.nativeAffineRVPower_monoReal_raw_value
+#print axioms DiamondIntegral.Section5.nativeBoundedVFFubini_vanishing
+#print axioms DiamondIntegral.Section5.nativeBoundedVFFubini_vanishing_map
+#print axioms DiamondIntegral.Section5.nativeVFClass_of_empty
+#print axioms DiamondIntegral.Section5.nativeBoundedVFFubini
+#print axioms DiamondIntegral.Section5.nativeVFMapLiftWitness_finite
+#print axioms DiamondIntegral.Section5.nativeVFBoundedValue_map_fixed_whole_witness
+#print axioms DiamondIntegral.Section5.nativeMixedPartialTotalMap_bijective
+#print axioms DiamondIntegral.Section5.native_vf_fixed_whole_witness_fubini
+#print axioms DiamondIntegral.Section5.nativeSpecialBaseBijection_inverse
+#print axioms DiamondIntegral.Section5.nativeSpecialBaseBijection_parameter
+#print axioms DiamondIntegral.Section5.nativePreparedLift_bounded_value
+#print axioms DiamondIntegral.Section5.nativePreparedParameterBase_at_point
+#print axioms DiamondIntegral.Section5.nativePreparedLiftRows_mem
+#print axioms DiamondIntegral.Section5.nativePreparedLiftRows_base
+#print axioms DiamondIntegral.Section5.nativeVFClass_bijection
+#print axioms DiamondIntegral.Section5.nativeVFClass_finite_partition
+#print axioms DiamondIntegral.Section5.nativeVFBoundedValue_of_lift_bijection
+#print axioms DiamondIntegral.Section5.nativeVFGeometricValue_of_lift_bijection
+#print axioms DiamondIntegral.Section5.nativeVFBoundedValue_pullback
+#print axioms DiamondIntegral.Section5.nativeVFGeometricValue_pullback
+#print axioms DiamondIntegral.Section5.preparedRVTotalIndices_packed_key
+#print axioms DiamondIntegral.Section5.nativePreparedLiftKey_graphs
+#print axioms DiamondIntegral.Section5.nativePreparedLiftKey_onto
+#print axioms DiamondIntegral.Section5.nativePreparedRVTotalMap_injective
+#print axioms DiamondIntegral.Section5.nativePreparedRVKey_value
+#print axioms DiamondIntegral.Section5.nativeRVChartNormalized_principal
+#print axioms DiamondIntegral.Section5.nativeVFChartIntegral_lift_class
+#print axioms DiamondIntegral.Section5.nativeVFBoundedValue_lift_class
+#print axioms DiamondIntegral.Section5.nativeVFGeometricValue_lift_class
+#print axioms DiamondIntegral.Section5.nativePoint_raw_domain
+#print axioms DiamondIntegral.Section5.nativeCodeValue_one
+#print axioms DiamondIntegral.Section5.nativeOne_nonzero
+#print axioms DiamondIntegral.Section5.nativePositive_raw_domain
+#print axioms DiamondIntegral.Section5.nativePrincipal_chart_class
+#print axioms DiamondIntegral.Section5.preparedRVTotalIndices_key
+#print axioms DiamondIntegral.Section5.preparedRVFibreLabelIndices_key
+#print axioms DiamondIntegral.Section5.preparedRVKey_ext
+#print axioms DiamondIntegral.Section5.nativeOrdinaryClass_coprod
+#print axioms DiamondIntegral.Section5.nativeGroundRVEvaluation_native_chart
+#print axioms DiamondIntegral.Section5.nativeAffineRVObject_raw_value
+#print axioms DiamondIntegral.Section5.nativeAffineRVPower_raw_value
+#print axioms DiamondIntegral.Section5.nativeGroundGeometricRetraction_class
+#print axioms DiamondIntegral.Section5.nativeGroundGeometricRetraction_affine_padding
+#print axioms DiamondIntegral.Section5.nativeGroundGeometricRetraction_eq_iff_common_degree
+#print axioms DiamondIntegral.Section5.nativeFullKeyDrop_value
+#print axioms DiamondIntegral.Section5.nativeVFZeroStratumRVObject_raw_value
+#print axioms DiamondIntegral.Section5.nativeVFZeroStrata_raw_value_sum
+#print axioms DiamondIntegral.Section5.nativeFullKeySelection_commute
+#print axioms DiamondIntegral.Section5.nativeFullKeySelection_image
+#print axioms DiamondIntegral.Section5.nativeFullKeyZeroStratum_image
+#print axioms DiamondIntegral.Section5.nativeRVSelectCoordinates_value
+#print axioms DiamondIntegral.Section5.nativeRVSelectCoordinates_injective
+#print axioms DiamondIntegral.Section5.nativeRVZeroBlockMap_value
+#print axioms DiamondIntegral.Section5.nativeRVZeroBlockMap_injective
+#print axioms DiamondIntegral.Section5.nativePreparedLift_packed_recode
+#print axioms DiamondIntegral.Section5.nativePreparedLift_base_mem
+#print axioms DiamondIntegral.Section5.nativePreparedLift_carrier_recode
+#print axioms DiamondIntegral.Section5.nativePreparedLift_pullback
+#print axioms DiamondIntegral.Section5.nativeVFZeroPattern_sameRV
+#print axioms DiamondIntegral.Section5.nativeVFZeroStratum_pullback
+#print axioms DiamondIntegral.Section5.nativeVFFillCoordinates_selected
+#print axioms DiamondIntegral.Section5.nativeVFFillCoordinates_zero
+#print axioms DiamondIntegral.Section5.nativeDropZeroVF_pullback
+#print axioms DiamondIntegral.Section5.nativeVFZeroStratumDrop_pullback
+#print axioms DiamondIntegral.Section5.preparedFamily_reconstruct
+#print axioms DiamondIntegral.Section5.preparedFamilyBase_sameRV
+#print axioms DiamondIntegral.Section5.preparedFamilyRVData_sameRV
+#print axioms DiamondIntegral.Section5.preparedFamilyRVData_pullback
+#print axioms DiamondIntegral.Section5.nativePreparedLiftNormalForm
+#print axioms DiamondIntegral.Section5.nativeMixedCode_mem_domain_iff
+#print axioms DiamondIntegral.Section5.nativeVFLiftFamily_mem
+#print axioms DiamondIntegral.Section5.nativeVFLiftFamily_fibre_nonzero
+#print axioms DiamondIntegral.Section5.originalParameterDomain_row
+#print axioms DiamondIntegral.Section5.nativePullbackRVLabels_value
+#print axioms DiamondIntegral.Section5.nativePullback_attach_image
+#print axioms DiamondIntegral.Section5.nativePullbackRVLabels_nonzero
+#print axioms DiamondIntegral.Section5.nativePullbackRVObject_bounded_value
+#print axioms DiamondIntegral.Section5.nativeFiniteVFClass_of_empty
+#print axioms DiamondIntegral.Section5.nativeFiniteVFClass_partition
+#print axioms DiamondIntegral.Section5.nativeFiniteVFClass_finiteUnion
+#print axioms DiamondIntegral.Section5.nativeFiniteVFClass_finite_partition
+#print axioms DiamondIntegral.Section5.nativeVFSemiringClass_finite_partition
+#print axioms DiamondIntegral.Section5.nativeMap_preimage_disjoint
+#print axioms DiamondIntegral.Section5.nativeMap_preimage_cover
+#print axioms DiamondIntegral.Section5.nativeMap_preimage_partition
+#print axioms DiamondIntegral.Section5.native_vf_map_whole_witness_partition
+#print axioms DiamondIntegral.Section5.nativeVFPrepareBaseMap_value
+#print axioms DiamondIntegral.Section5.nativeVFPrepareBaseMap_injective
+#print axioms DiamondIntegral.Section5.nativeVFPrepareBaseMap_finite
+#print axioms DiamondIntegral.Section5.nativeMixedCoordinateMap_value
+#print axioms DiamondIntegral.Section5.nativeMixedCoordinateMap_injective
+#print axioms DiamondIntegral.Section5.nativeMixedMapGraphPacking_value
+#print axioms DiamondIntegral.Section5.nativeMixedMapGraphPacking_injective
+#print axioms DiamondIntegral.Section5.nativeMixedMapGraphPacking_image
+#print axioms DiamondIntegral.Section5.nativeMixedMapTotal_finite
+#print axioms DiamondIntegral.Section5.native_vf_map_finite_whole_witness_catalog
+#print axioms DiamondIntegral.Section5.nativeMixedBlockSwap_append
+#print axioms DiamondIntegral.Section5.nativeMixedMapFibreFormula_row
+#print axioms DiamondIntegral.Section5.nativeMixedMapFibreAt_domain
+#print axioms DiamondIntegral.Section5.nativeMixedMapFibreAt_mem
+#print axioms DiamondIntegral.Section5.nativeMixedMapFibreAt_finite
+#print axioms DiamondIntegral.Section5.nativeVFZeroStratum_mem
+#print axioms DiamondIntegral.Section5.nativeVFZeroStratum_subset
+#print axioms DiamondIntegral.Section5.nativeVFZeroStratum_disjoint
+#print axioms DiamondIntegral.Section5.nativeVFZeroStratum_cover
+#print axioms DiamondIntegral.Section5.nativeVFZeroPatternIndex_range
+#print axioms DiamondIntegral.Section5.nativeVFZeroStratumDrop_nonzero
+#print axioms DiamondIntegral.Section5.nativeVFZeroStratumDrop_finite
+#print axioms DiamondIntegral.Section5.nativeMixedMapGraph_definable
+#print axioms DiamondIntegral.Section5.nativeMixedFullKeyMap_value
+#print axioms DiamondIntegral.Section5.nativeMixedFullKeyMap_raw_value
+#print axioms DiamondIntegral.Section5.rvValues_tupleRV_zero_iff
+#print axioms DiamondIntegral.Section5.nativeMixedFullKeyMap_vf_zero_iff
+#print axioms DiamondIntegral.Section5.nativeRVZeroPattern_definable
+#print axioms DiamondIntegral.Section5.nativeRVZeroPatternBase_mem
+#print axioms DiamondIntegral.Section5.nativeRVZeroPatternBase_disjoint
+#print axioms DiamondIntegral.Section5.nativeRVZeroPatternBase_cover
+#print axioms DiamondIntegral.Section5.nativeRVZeroPatternBase_nonzero
+#print axioms DiamondIntegral.Section5.nativeRVZeroPatternBase_zero
+#print axioms DiamondIntegral.Section5.nativeAttachSelectedVFKeys_value
+#print axioms DiamondIntegral.Section5.nativeAttachSelectedVFKeys_injective
+#print axioms DiamondIntegral.Section5.nativeAttachSelectedVFKeys_finite
+#print axioms DiamondIntegral.Section5.nativeVFCoordinateSelection_value
+#print axioms DiamondIntegral.Section5.nativeVFCoordinateSelection_injective
+#print axioms DiamondIntegral.Section5.nativeDropZeroVF_nonzero
+#print axioms DiamondIntegral.Section5.nativeMixedProductBijection_pack
+#print axioms DiamondIntegral.Section5.rawPreparedKey_first
+#print axioms DiamondIntegral.Section5.rawPreparedKey_last
+#print axioms DiamondIntegral.Section5.nativePreparedKey_realization
+#print axioms DiamondIntegral.Section5.nativeTotalRVLabelMap_raw_value
+#print axioms DiamondIntegral.Section5.rvValues_tupleRV_append
+#print axioms DiamondIntegral.Section5.nativeTotalRVLabelLift_mem
+#print axioms DiamondIntegral.Section5.nativeMixedCode_eq_gammaPointCode
+#print axioms DiamondIntegral.Section5.nativeGammaPointBijection_apply
+#print axioms DiamondIntegral.Section5.nativeGammaPointBijection_symm_apply
+#print axioms DiamondIntegral.Section5.nativeTotalLabelRawValue_proper
+#print axioms DiamondIntegral.Section5.nativeTotalLabelRawValue_definable
+#print axioms DiamondIntegral.Section5.nativeTotalRVLabelMap_nonzero
+#print axioms DiamondIntegral.Section5.nativePreparedParameterBase_representative
+#print axioms DiamondIntegral.Section5.nativePreparedVFLift_row_values
+#print axioms DiamondIntegral.Section5.nativePreparedVFLift_total_values
+#print axioms DiamondIntegral.Section5.rawPreparedKey_definable
+#print axioms DiamondIntegral.Section5.nativePreparedKeyDomain_raw
+#print axioms DiamondIntegral.Section5.nativePreparedParameterBase_raw
+#print axioms DiamondIntegral.Section5.sortedReindexedDomain_mem_iff
+#print axioms DiamondIntegral.Section5.mixedTotalPermutation_sort
+#print axioms DiamondIntegral.Section5.nativeMixedFamilyTotal_domain
+#print axioms DiamondIntegral.Section5.nativeMixedFamilyTotal_mem
+#print axioms DiamondIntegral.Section5.mixedTotalPermutationFun_left_inverse
+#print axioms DiamondIntegral.Section5.mixedTotalPermutation_append
+#print axioms DiamondIntegral.Section5.originalSortedRowTotal_definable
+#print axioms DiamondIntegral.Section5.sortedReindexedDomain_definable
+#print axioms DiamondIntegral.Section5.reindexPairCoordinates_append
+#print axioms DiamondIntegral.Section5.NativeVFLiftEqualitySchema.rv_values_descend
+#print axioms DiamondIntegral.Section5.prepare_native_vf_lift_RV_data
+#print axioms DiamondIntegral.Section5.nativeMixedDomain_ofRaw
+#print axioms DiamondIntegral.Section5.NativeVFLiftEqualitySchema.valid_definable
+#print axioms DiamondIntegral.Section5.native_vf_lift_equality_schema_at_parameter
+#print axioms DiamondIntegral.Section5.native_vf_lift_equality_finite_catalog
+#print axioms DiamondIntegral.Section5.native_rv_row_value_of_presentation
+#print axioms DiamondIntegral.Section5.finiteRVSchemaLiftDomain_presented_native_row
+#print axioms DiamondIntegral.Section5.finiteRVSchemaLiftDomain_presents_native_lift
+#print axioms DiamondIntegral.Section5.native_mixed_fixed_bijection_chart_at_parameter
+#print axioms DiamondIntegral.Section5.nativeMixedPointOfCode_code
+#print axioms DiamondIntegral.Section5.nativeMixedDomain_mem_iff
+#print axioms DiamondIntegral.Section5.finiteRVLiftCoordinates_append
+#print axioms DiamondIntegral.Section5.finiteRVLiftCoordinates_definable
+#print axioms DiamondIntegral.Section5.finiteRVSchemaLiftDomain_row
+#print axioms DiamondIntegral.Section5.finiteRVSchemaLiftDomain_native_row
+#print axioms DiamondIntegral.Section5.nativeMixedPairCode_decode
+#print axioms DiamondIntegral.Section5.nativeMixedGraph_definable
+#print axioms DiamondIntegral.Section5.nativeMixedCode_injective
+#print axioms DiamondIntegral.Section5.nativeMixedCode_proper
+#print axioms DiamondIntegral.Section5.nativeMixedCode_decode
+#print axioms DiamondIntegral.Section5.nativeMixedDomain_definable
+#print axioms DiamondIntegral.Section5.nativeRVLabelLift_finite_fibres
+#print axioms DiamondIntegral.Section5.finite_native_RV_labels_of_finite_lift
+#print axioms DiamondIntegral.Section5.native_RV_finite_labels_iff_finite_lift
+#print axioms DiamondIntegral.Section5.nativeRVObjectOfFiniteLift_lift
+#print axioms DiamondIntegral.Section5.native_finite_rv_schema_at_parameter
+#print axioms DiamondIntegral.Section5.finiteRVSchema_valid_recode_iff
+#print axioms DiamondIntegral.Section5.finiteRVSchemaLabelsNonzero_recode_iff
+#print axioms DiamondIntegral.Section5.nativeFiniteRVSchemaValid_recode_iff
+#print axioms DiamondIntegral.Section5.nativeRVLabelGraph_definable
+#print axioms DiamondIntegral.Section5.nativeRVLabelGraph_append_iff
+#print axioms DiamondIntegral.Section5.nativeRVLabelGraph_fibre_finite
+#print axioms DiamondIntegral.Section5.nativeRVLabelGraph_reverse_definable
+#print axioms DiamondIntegral.Section5.nativeRVLabelGraph_uniform_bound
+#print axioms DiamondIntegral.Section5.finiteRVSchemaLabelsNonzero_original
+#print axioms DiamondIntegral.Section5.nativeFiniteRVSchemaValid_definable
+#print axioms DiamondIntegral.Section5.finiteRVSchemaRawValue_mem
+#print axioms DiamondIntegral.Section5.finiteRVSchemaRawValue_graph
+#print axioms DiamondIntegral.Section5.finiteRVSchemaRawValue_definable
+#print axioms DiamondIntegral.Section5.finiteRVSchemaRawValue_proper
+#print axioms DiamondIntegral.Section5.finiteRVSchemaNativeVolume_finite
+#print axioms DiamondIntegral.Section5.finiteRVSchemaNativeObject_label_graph
+#print axioms DiamondIntegral.Section5.finiteRVSchemaNativeObject_row_value
+#print axioms DiamondIntegral.Section5.prepare_rv_equality_with_extra_data
+#print axioms DiamondIntegral.Section5.native_rv_equality_descends
+#print axioms DiamondIntegral.Section5.rv_native_equality_iff_valid_package
+#print axioms DiamondIntegral.Section5.rv_equality_finite_package_catalog
+#print axioms DiamondIntegral.Section5.prepare_rv_evaluation_equality_catalog
+#print axioms DiamondIntegral.Section5.rv_evaluation_equality_schema_at_parameter
+#print axioms DiamondIntegral.Section5.originalWholeCertificates_left
+#print axioms DiamondIntegral.Section5.originalWholeCertificates_right
+#print axioms DiamondIntegral.Section5.originalWholeCertificates_valid
+#print axioms DiamondIntegral.Section5.resExpression_atom_bijections_at_parameter
+#print axioms DiamondIntegral.Section5.original_forall_ofFn_iff
+#print axioms DiamondIntegral.Section5.RVEvaluationEqualitySchema.rowAgreement_iff_predicates
+#print axioms DiamondIntegral.Section5.RVEvaluationEqualitySchema.recode_valid_iff
+#print axioms DiamondIntegral.Section5.RVEvaluationEqualitySchema.valid_definable
+#print axioms DiamondIntegral.Section5.RVEvaluationEqualitySchema.native_equality
+#print axioms DiamondIntegral.Section5.RESWholeRelationCertificate.native_formal_equality
+#print axioms DiamondIntegral.Section5.resWholePolynomials_native_equality
+#print axioms DiamondIntegral.Section5.resWholeLeftPolynomial_recode
+#print axioms DiamondIntegral.Section5.resWholeRightPolynomial_recode
+#print axioms DiamondIntegral.Section5.RESWholeRelationCertificate.valid_definable
+#print axioms DiamondIntegral.Section5.RESWholeRelationCertificate.expressions_valid
+#print axioms DiamondIntegral.Section5.RESWholeRelationCertificate.native_equality
+#print axioms DiamondIntegral.Section5.RESWholeRelationCertificate.recode_valid_iff
+#print axioms DiamondIntegral.Section5.RESWholeRelationCertificate.left_formal_recode
+#print axioms DiamondIntegral.Section5.RESWholeRelationCertificate.right_formal_recode
+#print axioms DiamondIntegral.Section5.RESWholeRelationCertificate.rowAgreement_iff_predicates
+#print axioms DiamondIntegral.Section5.additive_map_nat_mul
+#print axioms DiamondIntegral.Section5.RVRectangleDecompositionSchema.resPolynomial_native_value
+#print axioms DiamondIntegral.Section5.RVRectangleDecompositionSchema.resPolynomial_total_value
+#print axioms DiamondIntegral.Section5.RVRectangleDecompositionSchema.positive_negative_polynomial_row_value
+#print axioms DiamondIntegral.Section5.RVRectangleDecompositionSchema.positivePolynomial_recode
+#print axioms DiamondIntegral.Section5.RVRectangleDecompositionSchema.negativePolynomial_recode
+#print axioms DiamondIntegral.Section5.resExpressionCopies_formal_value
+#print axioms DiamondIntegral.Section5.resExpressionTorusTimes_formal_value
+#print axioms DiamondIntegral.Section5.RVRectanglePieceSchema.resContribution_formal_value
+#print axioms DiamondIntegral.Section5.RVRectangleDecompositionSchema.positiveExpression_formal
+#print axioms DiamondIntegral.Section5.RVRectangleDecompositionSchema.negativeExpression_formal
+#print axioms DiamondIntegral.Section5.RVRectangleDecompositionSchema.resPolynomial_recode
+#print axioms DiamondIntegral.Section5.nativeRelativeRVForget_value_power
+#print axioms DiamondIntegral.Section5.nativeRESFormal_value_power_total
+#print axioms DiamondIntegral.Section5.native_rv_family_fubini
+#print axioms DiamondIntegral.Section5.native_rv_rectangle_family_fubini
+#print axioms DiamondIntegral.Section5.RVRectanglePieceSchema.resContribution_valid
+#print axioms DiamondIntegral.Section5.RVRectanglePieceSchema.resContribution_native_value
+#print axioms DiamondIntegral.Section5.RVRectanglePieceSchema.resContribution_total_formal_value
+#print axioms DiamondIntegral.Section5.RVRectangleDecompositionSchema.positiveExpression_valid
+#print axioms DiamondIntegral.Section5.RVRectangleDecompositionSchema.negativeExpression_valid
+#print axioms DiamondIntegral.Section5.RVRectangleDecompositionSchema.positive_negative_row_value
+#print axioms DiamondIntegral.Section5.RVRectangleDecompositionSchema.positive_negative_total_formal_value
+#print axioms DiamondIntegral.Section5.resExpressionListSum_additive_evaluate
+#print axioms DiamondIntegral.Section5.resExpressionFiniteSum_valid
+#print axioms DiamondIntegral.Section5.resExpressionFiniteSum_additive_evaluate
+#print axioms DiamondIntegral.Section5.resExpressionFiniteSum_native_value
+#print axioms DiamondIntegral.Section5.integer_positive_negative_cast
+#print axioms DiamondIntegral.Section5.integer_positive_negative_weighted
+#print axioms DiamondIntegral.Section5.RESSetSchema.native_row_value
+#print axioms DiamondIntegral.Section5.original_gamma_row_value
+#print axioms DiamondIntegral.Section5.RVRectanglePieceSchema.row_native_value
+#print axioms DiamondIntegral.Section5.RVRectangleDecompositionSchema.row_native_value
+#print axioms DiamondIntegral.Section5.nativeTorusSchema_valid
+#print axioms DiamondIntegral.Section5.nativeTorusSchema_native_class
+#print axioms DiamondIntegral.Section5.resExpressionCopies_valid
+#print axioms DiamondIntegral.Section5.resExpressionCopies_native_value
+#print axioms DiamondIntegral.Section5.resExpressionCopies_total_formal_value
+#print axioms DiamondIntegral.Section5.resExpressionTorusTimes_valid
+#print axioms DiamondIntegral.Section5.resExpressionTorusTimes_native_value
+#print axioms DiamondIntegral.Section5.RESExpressionSchema.total_torus_step
+#print axioms DiamondIntegral.Section5.resExpressionTorusTimes_total_formal_value
+#print axioms DiamondIntegral.Section5.native_res_family_fubini
+#print axioms DiamondIntegral.Section5.RESLayoutStabilizationSchema.total_native_equality
+#print axioms DiamondIntegral.Section5.relativeRESFormalEvaluator_atom
+#print axioms DiamondIntegral.Section5.RESExpressionRelationSchema.total_coefficient_equality
+#print axioms DiamondIntegral.Section5.RESExpressionRelationSchema.total_formal_equality
+#print axioms DiamondIntegral.Section5.resCertificateExpressions_total_formal_equality
+#print axioms DiamondIntegral.Section5.gamma_value_coefficient_total_value
+#print axioms DiamondIntegral.Section5.nativeRelativeRVForget_value_product
+#print axioms DiamondIntegral.Section5.relativeRVCompletedClass_empty
+#print axioms DiamondIntegral.Section5.RESExpressionSchema.relative_formal_evaluate
+#print axioms DiamondIntegral.Section5.RESExpressionSchema.total_formal_evaluate
+#print axioms DiamondIntegral.Section5.GammaValueSchema.source_valid
+#print axioms DiamondIntegral.Section5.GammaValueSchema.source_row_singleton
+#print axioms DiamondIntegral.Section5.GammaValueSchema.total_fibre_euler
+#print axioms DiamondIntegral.Section5.gamma_value_total_value
+#print axioms DiamondIntegral.Section5.relativeRVCompletedClass_iso
+#print axioms DiamondIntegral.Section5.relativeRESProduct_class
+#print axioms DiamondIntegral.Section5.relativeRVEmptyTotal
+#print axioms DiamondIntegral.Section5.nativeRelativeRVForget_class
+#print axioms DiamondIntegral.Section5.relativePointwiseIso_product_sum
+#print axioms DiamondIntegral.Section5.relativeRVCompletedClass_product
+#print axioms DiamondIntegral.Section5.relativeRVCompletedClass_sum
+#print axioms DiamondIntegral.Section5.originalTaggedTotal_partition
+#print axioms DiamondIntegral.Section5.original_tagged_total_value
+#print axioms DiamondIntegral.Section5.relativePointClass_sum
+#print axioms DiamondIntegral.Section5.relativePointwiseIso_product
+#print axioms DiamondIntegral.Section5.relativePointwiseIso_refl
+#print axioms DiamondIntegral.Section5.relativePointwiseIso_product_comm
+#print axioms DiamondIntegral.Section5.relativePointwiseIso_product_assoc
+#print axioms DiamondIntegral.Section5.relativePointwiseIso_product_empty
+#print axioms DiamondIntegral.Section5.relativePointwiseIso_product_one
+#print axioms DiamondIntegral.Section5.originalRVEmptyRow
+#print axioms DiamondIntegral.Section5.original_rv_bijection_finite_catalog
+#print axioms DiamondIntegral.Section5.originalRVTotalFamily_base_partition
+#print axioms DiamondIntegral.Section5.original_rv_total_value_of_pointwise_bijections
+#print axioms DiamondIntegral.Section5.nativeGeometricRetraction_class
+#print axioms DiamondIntegral.Section5.nativeGeometricRetraction_point
+#print axioms DiamondIntegral.Section5.nativeGeometricRetraction_equal_degree_clearing
+#print axioms DiamondIntegral.Section5.geometricDegreeValue_shift
+#print axioms DiamondIntegral.Section5.geometricDegreeValue_eq_iff
+#print axioms DiamondIntegral.Section5.geometricDegreeValue_affine_padding
+#print axioms DiamondIntegral.Section5.rawEquivalenceBijection_value
+#print axioms DiamondIntegral.Section5.originalRVTotalBijection_preserves_base
+#print axioms DiamondIntegral.Section5.relativeRVFamilyClass_sum
+#print axioms DiamondIntegral.Section5.relativeRVFamilyClass_iso
+#print axioms DiamondIntegral.Section5.PositiveProductData.leftMultiply_of
+#print axioms DiamondIntegral.Section5.PositiveProductData.leftMultiply_comm
+#print axioms DiamondIntegral.Section5.PositiveProductData.bilinear_of
+#print axioms DiamondIntegral.Section5.PositiveProductData.bilinear_of_of
+#print axioms DiamondIntegral.Section5.PositiveProductData.bilinear_assoc
+#print axioms DiamondIntegral.Section5.PositiveProductData.bilinear_comm
+#print axioms DiamondIntegral.Section5.PositiveProductData.bilinear_one_left
+#print axioms DiamondIntegral.Section5.positiveProductAdditiveLift_class
+#print axioms DiamondIntegral.Section5.RVRectanglePieceSchema.total_native_value
+#print axioms DiamondIntegral.Section5.RVRectangleDecompositionSchema.total_native_value
+#print axioms DiamondIntegral.Section5.original_product_total_value
+#print axioms DiamondIntegral.Section5.rvValues_append
+#print axioms DiamondIntegral.Section5.originalRVTotalFamily_append_mem
+#print axioms DiamondIntegral.Section5.originalProductTotal_reindex
+#print axioms DiamondIntegral.Section5.original_gamma_total_value
+#print axioms DiamondIntegral.Section5.rawTupleReindexBijection_value
+#print axioms DiamondIntegral.Section5.rawGammaTotalPacking_value
+#print axioms DiamondIntegral.Section5.originalGammaRawUnits_row
+#print axioms DiamondIntegral.Section5.originalRVTotalFamily_subset_gamma_packing
+#print axioms DiamondIntegral.Section5.originalRawGammaTotal_preimage
+#print axioms DiamondIntegral.Section5.native_raw_gamma_fubini_constant
+#print axioms DiamondIntegral.Section5.originalRawGammaFamily_euler
+#print axioms DiamondIntegral.Section5.OriginalEulerCertificate.source_valid
+#print axioms DiamondIntegral.Section5.original_raw_gamma_certificate_fubini
+#print axioms DiamondIntegral.Section5.rawParameterProjectionRecode_domain_agreement
+#print axioms DiamondIntegral.Section5.rawParameterProjectionRecode_relation_agreement
+#print axioms DiamondIntegral.Section5.rawParameterProjectionRecode_euler_agreement
+#print axioms DiamondIntegral.Section5.rawParameterProjectionRecode_euler_valid_iff
+#print axioms DiamondIntegral.Section5.rawRowTotal_definable
+#print axioms DiamondIntegral.Section5.originalRawTotalEquiv_joined_definable
+#print axioms DiamondIntegral.Section5.originalRawTotalEquiv_value
+#print axioms DiamondIntegral.Section5.originalRawTotalEquiv_graph
+#print axioms DiamondIntegral.Section5.originalRawGammaFamily_definable
+#print axioms DiamondIntegral.Section5.RVRectangleDecompositionSchema.total_partition
+#print axioms DiamondIntegral.Section5.rvValues_mem_rawDomain_iff
+#print axioms DiamondIntegral.Section5.originalRVTotalFamily_raw_definable
+#print axioms DiamondIntegral.Section5.originalRVTotalFamily_mem
+#print axioms DiamondIntegral.Section5.rv_rectangle_families_descend
+#print axioms DiamondIntegral.Section5.rv_rectangle_finite_catalog
+#print axioms DiamondIntegral.Section5.rv_rectangle_decomposition_schema_at_parameter
+#print axioms DiamondIntegral.Section5.rv_rectangle_piece_schema_at_parameter
+#print axioms DiamondIntegral.Section5.rawDomain_finite_partition
+#print axioms DiamondIntegral.Section5.originalGammaRVRow_raw
+#print axioms DiamondIntegral.Section5.originalDomainProduct_presents_rawProduct
+#print axioms DiamondIntegral.Section5.original_fixed_rv_bijection_schema_at_parameter
+#print axioms DiamondIntegral.Section5.unitRVPresentation_finite_values
+#print axioms DiamondIntegral.Section5.rawDomain_product
+#print axioms DiamondIntegral.Section5.originalRVRowDomain_product_raw
+#print axioms DiamondIntegral.Section5.prepare_rv_rectangle_catalog
+#print axioms DiamondIntegral.Section5.originalRVRowDomain_raw
+#print axioms DiamondIntegral.Section5.original_rv_domain_at_parameter
+#print axioms DiamondIntegral.Section5.OriginalEulerCertificate.rowAgreement_iff_predicates
+#print axioms DiamondIntegral.Section5.RVRectanglePieceSchema.rowAgreement_iff_predicates
+#print axioms DiamondIntegral.Section5.RVRectangleDecompositionSchema.valid_definable
+#print axioms DiamondIntegral.Section5.RVRectangleDecompositionSchema.recode_valid_iff
+#print axioms DiamondIntegral.Section5.original_rv_bijection_schema_at_parameter
+#print axioms DiamondIntegral.Section5.RVRectanglePieceSchema.valid_definable
+#print axioms DiamondIntegral.Section5.RVRectanglePieceSchema.target_row_agreement
+#print axioms DiamondIntegral.Section5.RVRectanglePieceSchema.recode_valid_iff
+#print axioms DiamondIntegral.Section5.originalDomainLeftIndex_row
+#print axioms DiamondIntegral.Section5.originalDomainRightIndex_row
+#print axioms DiamondIntegral.Section5.originalDomainProduct_row
+#print axioms DiamondIntegral.Section5.rawGammaFunctionFamily_euler
+#print axioms DiamondIntegral.Section5.native_raw_gamma_tuple_torsor_fubini
+#print axioms DiamondIntegral.Section5.raw_rv_rectangle_decomposition
+#print axioms DiamondIntegral.Section5.RawRVRectangle.native_value
+#print axioms DiamondIntegral.Section5.rawRVGammaLift_row
+#print axioms DiamondIntegral.Section5.rawGammaLift_subset_packing
+#print axioms DiamondIntegral.Section5.rawGammaRepresentativeDomain_row
+#print axioms DiamondIntegral.Section5.native_raw_relative_gamma_fubini_partition
+#print axioms DiamondIntegral.Section5.native_raw_relative_gamma_fubini
+#print axioms DiamondIntegral.Section5.groundBijection_inverseImage_at
+#print axioms DiamondIntegral.Section5.groundBijection_pullback_partition
+#print axioms DiamondIntegral.Section5.nativeRVSetValue_raw_unit_bijection
+#print axioms DiamondIntegral.Section5.rawRVGammaFibreEulerValue_forward_code
+#print axioms DiamondIntegral.Section5.raw_rv_gamma_fibre_euler_constructible
+#print axioms DiamondIntegral.Section5.nativeRVSetValue_of_empty
+#print axioms DiamondIntegral.Section5.nativeRawWeightedValue_partition
+#print axioms DiamondIntegral.Section5.rawRVGammaFamily_row_definable
+#print axioms DiamondIntegral.Section5.rawRVGammaFibreEulerValue_code
+#print axioms DiamondIntegral.Section5.native_relative_gamma_fubini
+#print axioms DiamondIntegral.Section5.rawRVGammaFamilyCode_row
+#print axioms DiamondIntegral.Section5.rawRVGammaFamilyCode_projection
+#print axioms DiamondIntegral.Section5.nativeRVSetValue_nonzero_code
+#print axioms DiamondIntegral.Section5.nativeUnitRVSetValue_of_empty
+#print axioms DiamondIntegral.Section5.nativeUnitWeightedValue_partition
+#print axioms DiamondIntegral.Section5.native_relative_gamma_fubini_partition
+#print axioms DiamondIntegral.Section5.rv_gamma_euler_certificate_partition
+#print axioms DiamondIntegral.Section5.native_euler_certificate_fubini
+#print axioms DiamondIntegral.Section5.rvGammaFamilySchema_restrict_row
+#print axioms DiamondIntegral.Section5.OriginalEulerCertificate.validFor_source_congr
+#print axioms DiamondIntegral.Section5.rvGammaFamilyLift_restrict_partition
+#print axioms DiamondIntegral.Section5.OriginalEulerCertificate.family_partition
+#print axioms DiamondIntegral.Section5.reverseSuffixPermutation_involutive
+#print axioms DiamondIntegral.Section5.rvGammaLift_reindex_mem
+#print axioms DiamondIntegral.Section5.rvGammaReverseLift_finite_partition
+#print axioms DiamondIntegral.Section5.OriginalGammaCellTree.family_row
+#print axioms DiamondIntegral.Section5.OriginalGammaCellTree.family_is_cell
+#print axioms DiamondIntegral.Section5.cylindrical_step_quotient_fibres
+#print axioms DiamondIntegral.Section5.CylinderFibreKind.attach_eulerValue
+#print axioms DiamondIntegral.Section5.RVGammaCellFamily.native_value
+#print axioms DiamondIntegral.Section5.unitGammaHeadFamilyMap_value
+#print axioms DiamondIntegral.Section5.rvGammaHeadFamily_mem
+#print axioms DiamondIntegral.Section5.rvGammaReverseLift_head
+#print axioms DiamondIntegral.Section5.reverseSuffixPermutation_left
+#print axioms DiamondIntegral.Section5.reverseSuffixPermutation_right
+#print axioms DiamondIntegral.Section5.allRVGammaDomain_definable
+#print axioms DiamondIntegral.Section5.originalGammaFamilyRealization_projection
+#print axioms DiamondIntegral.Section5.originalGammaFamilyRealization_row
+#print axioms DiamondIntegral.Section5.unitTupleReindexMap_value
+#print axioms DiamondIntegral.Section5.native_described_cylinder_fubini
+#print axioms DiamondIntegral.Section5.rvGammaFamilyLift_mem
+#print axioms DiamondIntegral.Section5.gammaEndpointCondition_definable
+#print axioms DiamondIntegral.Section5.gammaEndpointOrdered_definable
+#print axioms DiamondIntegral.Section5.cylinderEndpointGraph_definable
+#print axioms DiamondIntegral.Section5.definable_cylinder_endpoints
+#print axioms DiamondIntegral.Section5.ground_space_iff_definable
+#print axioms DiamondIntegral.Section5.ground_space_forall_right
+#print axioms DiamondIntegral.Section5.generalEndpointTupleMap_value
+#print axioms DiamondIntegral.Section5.native_cylinder_fubini
+#print axioms DiamondIntegral.Section5.CylinderFibreKind.endpoints_unique
+#print axioms DiamondIntegral.Section5.GroundMonomialPiece.endpointGammaSupport_at_coordinate
+#print axioms DiamondIntegral.Section5.GroundMonomialPiece.extraGammaDomain_cylinderLift
+#print axioms DiamondIntegral.Section5.GroundMonomialPiece.cylinder_value
+#print axioms DiamondIntegral.Section5.endpointFamilyTupleMap_value
+#print axioms DiamondIntegral.Section5.endpointGammaFamily_mem
+#print axioms DiamondIntegral.Section5.groundGammaCylinderLift_finite_partition
+#print axioms DiamondIntegral.Section5.gamma_endpoint_monomial_catalog
+#print axioms DiamondIntegral.Section5.GroundMonomialPiece.extraGammaTarget_subset
+#print axioms DiamondIntegral.Section5.GroundMonomialPiece.extraGammaSource_mem
+#print axioms DiamondIntegral.Section5.GroundMonomialPiece.extraGamma_value
+#print axioms DiamondIntegral.Section5.GroundMonomialPiece.freeValueReconstruction_has_source
+#print axioms DiamondIntegral.Section5.GroundMonomialPiece.endpointGammaSupport_describes
+#print axioms DiamondIntegral.Section5.GroundMonomialPiece.endpointGammaSupport_euler
+#print axioms DiamondIntegral.Section5.CylinderFibreKind.condition_fullDefinable
+#print axioms DiamondIntegral.Section5.GroundMonomialPiece.endpointGammaSupport_row
+#print axioms DiamondIntegral.Section5.gamma_last_cylinder_euler
+#print axioms DiamondIntegral.Section5.rvGammaFamily_row_definable
+#print axioms DiamondIntegral.Section5.rvGammaFibreEulerValue_integral
+#print axioms DiamondIntegral.Section5.rv_gamma_fibre_euler_constructible
+#print axioms DiamondIntegral.Section5.gamma_cylinder_integrateFirst
+#print axioms DiamondIntegral.Section5.gamma_cylinder_integrateAll
+#print axioms DiamondIntegral.Section5.rvGammaFamilySchema_row
+#print axioms DiamondIntegral.Section5.rvGammaFamilySchema_represents
+#print axioms DiamondIntegral.Section5.rvGammaFamilySchema_valid
+#print axioms DiamondIntegral.Section5.rvGammaFamilySchema_quotient_row
+#print axioms DiamondIntegral.Section5.unitGammaTupleTorsor_mem
+#print axioms DiamondIntegral.Section5.native_gamma_tuple_torsor_fubini
+#print axioms DiamondIntegral.Section5.original_euler_row_values_constructible
+#print axioms DiamondIntegral.Section5.torsor_castAdd_succ
+#print axioms DiamondIntegral.Section5.torsor_natAdd_castSucc
+#print axioms DiamondIntegral.Section5.torsor_natAdd_last
+#print axioms DiamondIntegral.Section5.unitGammaTorsorTower_projection_value
+#print axioms DiamondIntegral.Section5.unitGammaTorsorTower_coordinate_value
+#print axioms DiamondIntegral.Section5.unitGammaTorsorTower_mem_of_row
+#print axioms DiamondIntegral.Section5.unitGammaTorsorTower_mem_iff
+#print axioms DiamondIntegral.Section5.native_gamma_torsor_tower_value
+#print axioms DiamondIntegral.Section5.originalGammaSourceRow_represents
+#print axioms DiamondIntegral.Section5.originalGammaSourceRow_definable
+#print axioms DiamondIntegral.Section5.OriginalEulerCertificate.validFor_definable
+#print axioms DiamondIntegral.Section5.OriginalEulerCertificate.originalGammaRowEulerValue
+#print axioms DiamondIntegral.Section5.groundGammaFunctionGraphLift_projection_value
+#print axioms DiamondIntegral.Section5.groundGammaFunctionGraphLift_value
+#print axioms DiamondIntegral.Section5.native_scalar_torsor_fubini
+#print axioms DiamondIntegral.Section5.GroundMonomialPiece.reconstructedTorsorDomain_graphLift
+#print axioms DiamondIntegral.Section5.GroundMonomialPiece.function_torsor_value
+#print axioms DiamondIntegral.Section5.gamma_function_monomial_catalog
+#print axioms DiamondIntegral.Section5.groundGammaFunctionGraphLift_restrict_mem
+#print axioms DiamondIntegral.Section5.groundGammaFunctionGraphLift_finite_partition
+#print axioms DiamondIntegral.Section5.GroundMonomialPiece.native_unit_value
+#print axioms DiamondIntegral.Section5.GroundMonomialPiece.reconstructedTorsor_value
+#print axioms DiamondIntegral.Section5.ground_monomial_source_partition
+#print axioms DiamondIntegral.Section5.GroundMonomialPiece.torsorCoordinateBijection_value
+#print axioms DiamondIntegral.Section5.GroundMonomialPiece.torsorTarget_subset
+#print axioms DiamondIntegral.Section5.GroundMonomialPiece.reconstructedTorsorSource_mem
+#print axioms DiamondIntegral.Section5.finAppendSingleton_eq_snoc
+#print axioms DiamondIntegral.Section5.rvUnitTupleValues_snoc
+#print axioms DiamondIntegral.Section5.unitTupleLastCylinder_mem
+#print axioms DiamondIntegral.Section5.unitTupleLastProduct_mem
+#print axioms DiamondIntegral.Section5.GroundMonomialPiece.coordinateMap_value
+#print axioms DiamondIntegral.Section5.nativeUnitRVSetValue_gamma
+#print axioms DiamondIntegral.Section5.nativeRVSetValue_object
+#print axioms DiamondIntegral.Section5.nativeUnitRVSetValue_object
+#print axioms DiamondIntegral.Section5.nativeRVSetValue_product
+#print axioms DiamondIntegral.Section5.nativeRVSetValue_finite_partition
+#print axioms DiamondIntegral.Section5.nativeUnitRVSetValue_product
+#print axioms DiamondIntegral.Section5.nativeUnitRVSetValue_finite_partition
+#print axioms DiamondIntegral.Section5.GroundMonomialPiece.reconstructedGammaGraph_euler
+#print axioms DiamondIntegral.Section5.gamma_singleton_graph_euler
+#print axioms DiamondIntegral.Section5.GroundMonomialPiece.freeValueReconstruction_definable
+#print axioms DiamondIntegral.Section5.GroundMonomialPiece.freeValueReconstruction_coordinate
+#print axioms DiamondIntegral.Section5.GroundMonomialPiece.reconstructedGammaGraph_row
+#print axioms DiamondIntegral.Section5.GroundMonomialPiece.reconstructedGammaGraph_exists
+#print axioms DiamondIntegral.Section5.GroundMonomialPiece.reconstructedGammaGraph_unique
+#print axioms DiamondIntegral.Section5.GroundMonomialPiece.reconstructedGammaGraph_existsUnique
+#print axioms DiamondIntegral.Section5.nativeGroundRVEvaluation_class
+#print axioms DiamondIntegral.Section5.nativeGroundRVEvaluation_bijection
+#print axioms DiamondIntegral.Section5.nativeGroundRVEvaluation_product
+#print axioms DiamondIntegral.Section5.nativeGroundRVEvaluation_finite_partition
+#print axioms DiamondIntegral.Section5.finite_scalar_gamma_parameter_control
+#print axioms DiamondIntegral.Section5.nativeRVSetValue_bijection
+#print axioms DiamondIntegral.Section5.nativeUnitRVSetValue_bijection
+#print axioms DiamondIntegral.Section5.groundGammaFunctionGraphLift_functional
+#print axioms DiamondIntegral.Section5.groundGammaFunctionGraphLift_domain
+#print axioms DiamondIntegral.Section5.groundGammaFunctionGraphLift_row
+#print axioms DiamondIntegral.Section5.scalar_gamma_parameter_control
+#print axioms DiamondIntegral.Section5.GroundMonomialPiece.scalar_value_image_functional
+#print axioms DiamondIntegral.Section5.GroundMonomialPiece.scalar_value_image_row
+#print axioms DiamondIntegral.Section5.scalar_gamma_graph_value_partition
+#print axioms DiamondIntegral.Section5.GroundMonomialPiece.coordinate_mem_iff
+#print axioms DiamondIntegral.Section5.GroundMonomialPiece.active_values
+#print axioms DiamondIntegral.Section5.GroundMonomialPiece.rectangle_reconstruction
+#print axioms DiamondIntegral.Section5.GroundMonomialPiece.scalar_graph_value_unique
+#print axioms DiamondIntegral.Section5.groundUnitTupleInitMap_image
+#print axioms DiamondIntegral.Section5.monomial_scalar_graph_value_unique
+#print axioms DiamondIntegral.Section5.residue_gamma_family_templates
+#print axioms DiamondIntegral.Section5.native_res_equality_descends
+#print axioms DiamondIntegral.Section5.res_native_equality_iff_valid_layout
+#print axioms DiamondIntegral.Section5.res_equality_finite_layout_catalog
+#print axioms DiamondIntegral.Section5.presented_tagged_layout_for
+#print axioms DiamondIntegral.Section5.res_layout_schema_of_literal_witness
+#print axioms DiamondIntegral.Section5.res_layout_schema_exists_of_native_equality
+#print axioms DiamondIntegral.Section5.prepare_joint_res_euler_catalog
+#print axioms DiamondIntegral.Section5.res_fixed_bijection_schema_at_parameter
+#print axioms DiamondIntegral.Section5.res_expression_bijection_schema_at_parameter
+#print axioms DiamondIntegral.Section5.presentedOldObjects_append
+#print axioms DiamondIntegral.Section5.presentedFormalSum_append
+#print axioms DiamondIntegral.Section5.native_relation_list_presentation_exists
+#print axioms DiamondIntegral.Section5.native_relation_term_presentation_exists
+#print axioms DiamondIntegral.Section5.native_presented_list_exists
+#print axioms DiamondIntegral.Section5.presentedCoefficientExpression_valid
+#print axioms DiamondIntegral.Section5.presentedCoefficientExpression_formal
+#print axioms DiamondIntegral.Section5.presentedProductList_old
+#print axioms DiamondIntegral.Section5.presentedProductList_formal
+#print axioms DiamondIntegral.Section5.presented_degree_tagged_expression_exists
+#print axioms DiamondIntegral.Section5.presented_degree_expression_exists
+#print axioms DiamondIntegral.Section5.native_expression_presentation_exists
+#print axioms DiamondIntegral.Section5.res_primitive_schema_at_parameter
+#print axioms DiamondIntegral.Section5.native_res_schema_at_parameter
+#print axioms DiamondIntegral.Section5.prepare_finite_res_layout_catalog
+#print axioms DiamondIntegral.Section5.forall_mem_flatMap_iff
+#print axioms DiamondIntegral.Section5.RESLayoutStabilizationSchema.rowAgreement_iff_predicates
+#print axioms DiamondIntegral.Section5.rawDomain_carrier_eq
+#print axioms DiamondIntegral.Section5.RESLayoutStabilizationSchema.recode_valid_iff
+#print axioms DiamondIntegral.Section5.raw_native_left_tag
+#print axioms DiamondIntegral.Section5.raw_native_right_tag
+#print axioms DiamondIntegral.Section5.rawDomain_native_tagged_union
+#print axioms DiamondIntegral.Section5.RESLayoutStabilizationSchema.valid_definable
+#print axioms DiamondIntegral.Section5.RESLayoutStabilizationSchema.native_equality
+#print axioms DiamondIntegral.Section5.resExpressionListSum_formal
+#print axioms DiamondIntegral.Section5.resCertificateLeft_formal_recode
+#print axioms DiamondIntegral.Section5.resCertificateRight_formal_recode
+#print axioms DiamondIntegral.Section5.resCertificateLeftExpression_valid
+#print axioms DiamondIntegral.Section5.resCertificateRightExpression_valid
+#print axioms DiamondIntegral.Section5.resCertificateExpressions_native_equality
+#print axioms DiamondIntegral.Section5.RESExpressionRelationSchema.expressions_recode
+#print axioms DiamondIntegral.Section5.RESExpressionRelationSchema.recode_valid_iff
+#print axioms DiamondIntegral.Section5.RESExpressionRelationSchema.rowAgreement_iff_predicates
+#print axioms DiamondIntegral.Section5.RESExpressionSchema.formalValue_recode
+#print axioms DiamondIntegral.Section5.RESExpressionRelationSchema.valid_definable
+#print axioms DiamondIntegral.Section5.RESExpressionRelationSchema.expressions_valid
+#print axioms DiamondIntegral.Section5.RESExpressionRelationSchema.native_equality
+#print axioms DiamondIntegral.Section5.RESExpressionSchema.formalValue_evaluate
+#print axioms DiamondIntegral.Section5.original_list_predicate_validity_definable
+#print axioms DiamondIntegral.Section5.RESStabilizationSchema.valid_definable
+#print axioms DiamondIntegral.Section5.RESStabilizationSchema.sourceExpression_valid
+#print axioms DiamondIntegral.Section5.RESStabilizationSchema.targetExpression_valid
+#print axioms DiamondIntegral.Section5.RESStabilizationSchema.native_equality
+#print axioms DiamondIntegral.Section5.prepare_finite_mixed_original_base_RV_graphs
+#print axioms DiamondIntegral.Section5.resExpressionListSum_valid
+#print axioms DiamondIntegral.Section5.resRelationLeftExpression_valid
+#print axioms DiamondIntegral.Section5.resRelationRightExpression_valid
+#print axioms DiamondIntegral.Section5.resRelationExpressions_native_equality
+#print axioms DiamondIntegral.Section5.resStabilizedExpression_valid
+#print axioms DiamondIntegral.Section5.RESExpressionBijectionSchema.valid_definable
+#print axioms DiamondIntegral.Section5.RESExpressionBijectionSchema.native_equality
+#print axioms DiamondIntegral.Section5.RESExpressionBijectionSchema.recode_valid_iff
+#print axioms DiamondIntegral.Section5.append_rv_sort
+#print axioms DiamondIntegral.Section5.restoreRVParameters_row
+#print axioms DiamondIntegral.Section5.mixedPreparedParameterRecode_domain_agreement
+#print axioms DiamondIntegral.Section5.mixedPreparedParameterRecode_relation_agreement
+#print axioms DiamondIntegral.Section5.resListExpression_valid
+#print axioms DiamondIntegral.Section5.RESRelationTermSchema.leftExpression_valid
+#print axioms DiamondIntegral.Section5.RESRelationTermSchema.rightExpression_valid
+#print axioms DiamondIntegral.Section5.RESRelationTermSchema.native_expression_equality
+#print axioms DiamondIntegral.Section5.RESExpressionSchema.rowAgreement_iff_predicates
+#print axioms DiamondIntegral.Section5.RESExpressionSchema.recode_valid_iff
+#print axioms DiamondIntegral.Section5.RESExpressionSchema.recode_row_iff
+#print axioms DiamondIntegral.Section5.RESPrimitiveSchema.leftExpression_valid
+#print axioms DiamondIntegral.Section5.RESPrimitiveSchema.rightExpression_valid
+#print axioms DiamondIntegral.Section5.RESPrimitiveSchema.native_expression_equality
+#print axioms DiamondIntegral.Section5.carryRVParameterDomain_row
+#print axioms DiamondIntegral.Section5.uncarryRVParameterDomain_row
+#print axioms DiamondIntegral.Section5.flattenGammaRelation_row
+#print axioms DiamondIntegral.Section5.unflattenGammaRelation_row
+#print axioms DiamondIntegral.Section5.RESSetSchema.empty_valid
+#print axioms DiamondIntegral.Section5.RESExpressionSchema.valid_definable
+#print axioms DiamondIntegral.Section5.RESExpressionSchema.setSchema_valid
+#print axioms DiamondIntegral.Section5.RESExpressionSchema.nativeClass_eq
+#print axioms DiamondIntegral.Section5.RESSetSchema.sum_native_class
+#print axioms DiamondIntegral.Section5.nativeRESChartClass_iso
+#print axioms DiamondIntegral.Section5.nativeRESChartClass_product
+#print axioms DiamondIntegral.Section5.nativeRESChartClass_empty
+#print axioms DiamondIntegral.Section5.nativeRESChartClass_cut
+#print axioms DiamondIntegral.Section5.rawRVValuePattern_append
+#print axioms DiamondIntegral.Section5.rawRVValuePattern_constant
+#print axioms DiamondIntegral.Section5.rawRVLeftTag_valuePattern
+#print axioms DiamondIntegral.Section5.rawRVRightTag_valuePattern
+#print axioms DiamondIntegral.Section5.RESSetSchema.sum_row
+#print axioms DiamondIntegral.Section5.RESSetSchema.sum_value_image
+#print axioms DiamondIntegral.Section5.RESSetSchema.sum_valid
+#print axioms DiamondIntegral.Section5.RESSetSchema.sum_recode_row
+#print axioms DiamondIntegral.Section5.prepare_finite_res_relation_term_catalog
+#print axioms DiamondIntegral.Section5.rawRVLeftTag_eq
+#print axioms DiamondIntegral.Section5.rawRVRightTag_eq
+#print axioms DiamondIntegral.Section5.OriginalSortedPredicate.equal_named_coordinate
+#print axioms DiamondIntegral.Section5.taggedParameterLeftIndex_row
+#print axioms DiamondIntegral.Section5.taggedParameterRightIndex_row
+#print axioms DiamondIntegral.Section5.nativeRVTaggedDomain_row
+#print axioms DiamondIntegral.Section5.RESRelationTermSchema.rowAgreement_iff_predicates
+#print axioms DiamondIntegral.Section5.RESSetSchema.native_class_of_row_eq
+#print axioms DiamondIntegral.Section5.RESSetSchema.product_native_class
+#print axioms DiamondIntegral.Section5.productLeftParameterIndex_row
+#print axioms DiamondIntegral.Section5.productRightParameterIndex_row
+#print axioms DiamondIntegral.Section5.RESSetSchema.product_row
+#print axioms DiamondIntegral.Section5.rawRVValuePattern_join
+#print axioms DiamondIntegral.Section5.RESSetSchema.product_value_image
+#print axioms DiamondIntegral.Section5.RESSetSchema.product_valid
+#print axioms DiamondIntegral.Section5.RESRelationTermSchema.valid_definable
+#print axioms DiamondIntegral.Section5.RESRelationTermSchema.recode_valid_iff
+#print axioms DiamondIntegral.Section5.RESRelationTermSchema.recode_orientation
+#print axioms DiamondIntegral.Section5.RESRelationTermSchema.recode_coefficient_count
+#print axioms DiamondIntegral.Section5.prepare_finite_res_primitive_catalog
+#print axioms DiamondIntegral.Section5.RESPrimitiveSchema.valid_definable
+#print axioms DiamondIntegral.Section5.RESPrimitiveSchema.recode_valid_iff
+#print axioms DiamondIntegral.Section5.RESPrimitiveSchema.rowAgreement_iff_predicates
+#print axioms DiamondIntegral.Section5.GammaValueSchema.constant_row
+#print axioms DiamondIntegral.Section5.GammaValueSchema.constant_valid
+#print axioms DiamondIntegral.Section5.GammaValueSchema.constant_value
+#print axioms DiamondIntegral.Section5.GammaValueSchema.fibre_domain
+#print axioms DiamondIntegral.Section5.GammaValueSchema.native_fibre_equality
+#print axioms DiamondIntegral.Section5.GammaValueSchema.valid_definable
+#print axioms DiamondIntegral.Section5.GammaValueSchema.full_singleton_row
+#print axioms DiamondIntegral.Section5.GammaValueSchema.value_row
+#print axioms DiamondIntegral.Section5.GammaValueSchema.value_definable
+#print axioms DiamondIntegral.Section5.GammaValueSchema.recode_valid_iff
+#print axioms DiamondIntegral.Section5.GammaValueSchema.recode_value_eq
+#print axioms DiamondIntegral.Section5.GammaValueSchema.valid_of_full_singleton_row
+#print axioms DiamondIntegral.Section5.gamma_value_schema_at_parameter
+#print axioms DiamondIntegral.Section5.original_euler_certificate_for_fixed_source
+#print axioms DiamondIntegral.Section5.original_euler_finite_catalog
+#print axioms DiamondIntegral.Section5.prepare_finite_original_euler_catalog
+#print axioms DiamondIntegral.Section5.OriginalGammaCellTree.validity_definable
+#print axioms DiamondIntegral.Section5.OriginalEulerCertificate.validity_definable
+#print axioms DiamondIntegral.Section5.original_cylindrical_step_validity_definable
+#print axioms DiamondIntegral.Section5.OriginalGammaCellTree.domainFormula_realize
+#print axioms DiamondIntegral.Section5.firstCoordinateCurryIndex_row
+#print axioms DiamondIntegral.Section5.curryFirstGammaDomain_row
+#print axioms DiamondIntegral.Section5.original_domain_nonzero_validity_definable
+#print axioms DiamondIntegral.Section5.original_domain_value_invariance_definable
+#print axioms DiamondIntegral.Section5.original_quotient_domain_validity_definable
+#print axioms DiamondIntegral.Section5.original_cylindrical_fibre_validity_definable
+#print axioms DiamondIntegral.Section5.original_finite_partition_validity_definable
+#print axioms DiamondIntegral.Section5.OriginalSortedPredicate.of_definable
+#print axioms DiamondIntegral.Section5.OriginalSortedPredicate.truth
+#print axioms DiamondIntegral.Section5.OriginalSortedPredicate.neg
+#print axioms DiamondIntegral.Section5.OriginalSortedPredicate.conj
+#print axioms DiamondIntegral.Section5.OriginalSortedPredicate.disj
+#print axioms DiamondIntegral.Section5.OriginalSortedPredicate.impl
+#print axioms DiamondIntegral.Section5.OriginalSortedPredicate.iff
+#print axioms DiamondIntegral.Section5.OriginalSortedPredicate.congr
+#print axioms DiamondIntegral.Section5.OriginalSortedPredicate.pullback
+#print axioms DiamondIntegral.Section5.OriginalSortedPredicate.all
+#print axioms DiamondIntegral.Section5.OriginalSortedPredicate.ex
+#print axioms DiamondIntegral.Section5.OriginalSortedPredicate.finite_all
+#print axioms DiamondIntegral.Section5.prepare_finite_original_base_RV_graphs
+#print axioms DiamondIntegral.Section5.prepare_finite_res_bijection_schemata
+#print axioms DiamondIntegral.Section5.joined_equiv_graph_append_definable
+#print axioms DiamondIntegral.Section5.res_bijection_schema_at_parameter
+#print axioms DiamondIntegral.Section5.res_uniform_support_bound
+#print axioms DiamondIntegral.Section5.RESSetSchema.chart_domain
+#print axioms DiamondIntegral.Section5.RESBijectionSchema.rawEquiv_graph
+#print axioms DiamondIntegral.Section5.RESBijectionSchema.raw_joined_graph_definable
+#print axioms DiamondIntegral.Section5.RESBijectionSchema.native_equality
+#print axioms DiamondIntegral.Section5.forall_join_property
+#print axioms DiamondIntegral.Section5.joinedRelationRow_definable
+#print axioms DiamondIntegral.Section5.RESBijectionSchema.valid_definable
+#print axioms DiamondIntegral.Section5.RESBijectionSchema.validity_formula
+#print axioms DiamondIntegral.Section5.RESBijectionSchema.recode_valid_iff
+#print axioms DiamondIntegral.Section5.original_validity_formula
+#print axioms DiamondIntegral.Section5.RESSetSchema.recode_valueBound
+#print axioms DiamondIntegral.Section5.RESSetSchema.recode_rowDomain
+#print axioms DiamondIntegral.Section5.RESSetSchema.recode_valid_iff
+#print axioms DiamondIntegral.Section5.native_family_value_bound_definable
+#print axioms DiamondIntegral.Section5.RESSetSchema.valid_definable
+#print axioms DiamondIntegral.Section5.nativeValueCounterexamples_definable
+#print axioms DiamondIntegral.Section5.nativeValueCounterexamples_projection_iff
+#print axioms DiamondIntegral.Section5.RESSetSchema.row_domain_definable
+#print axioms DiamondIntegral.Section5.RESSetSchema.valid_iff_finite_values
+#print axioms DiamondIntegral.Section5.raw_RV_value_image_eq_chart_range
+#print axioms DiamondIntegral.Section5.res_set_schema_at_parameter
+#print axioms DiamondIntegral.Section5.finite_image_bound_iff_no_distinct_rows
+#print axioms DiamondIntegral.Section5.parameter_free_formula_original_definable
+#print axioms DiamondIntegral.Section5.native_tuple_quotient_equality
+#print axioms DiamondIntegral.Section5.valueDistinctFormula_realize
+#print axioms DiamondIntegral.Section5.rawRVValuePattern_of_tuple
+#print axioms DiamondIntegral.Section5.native_RV_value_syntax_exists
+#print axioms DiamondIntegral.Section5.rvValuePatternEqualityFormula_realize
+#print axioms DiamondIntegral.Section5.rvFiniteValueValidityFormula_card
+#print axioms DiamondIntegral.Section5.gammaRVFiniteValues_iff_raw_patterns
+#print axioms DiamondIntegral.Section5.valueCollisionFormula_realize_on_domain
+#print axioms DiamondIntegral.Section5.finiteValueValidityFormula_on_domain_card
+#print axioms DiamondIntegral.Section5.prepare_original_euler_certificate
+#print axioms DiamondIntegral.Section5.OriginalEulerCertificate.recode_validity_iff
+#print axioms DiamondIntegral.Section5.OriginalEulerCertificate.recode_eulerValue
+#print axioms DiamondIntegral.Section5.finitePartitionValidity_congr
+#print axioms DiamondIntegral.Section5.EulerFormulaCertificate.source_quotient_validity
+#print axioms DiamondIntegral.Section5.EulerFormulaCertificate.validity_congr
+#print axioms DiamondIntegral.Section5.EulerFormulaCertificate.eulerValue_congr
+#print axioms DiamondIntegral.Section5.OriginalGammaCellTree.predicates_length
+#print axioms DiamondIntegral.Section5.OriginalGammaCellTree.rowAgreement_iff_predicates
+#print axioms DiamondIntegral.Section5.OriginalGammaCellTree.syntax_recode_related
+#print axioms DiamondIntegral.Section5.OriginalGammaCellTree.recode_validity_iff
+#print axioms DiamondIntegral.Section5.OriginalGammaCellTree.recode_shape
+#print axioms DiamondIntegral.Section5.OriginalGammaCellTree.recode_gammaDomain
+#print axioms DiamondIntegral.Section5.CylinderFibreKind.conditionFormula_parameter_independent
+#print axioms DiamondIntegral.Section5.CylinderFibreKind.orderFormula_parameter_independent
+#print axioms DiamondIntegral.Section5.cylindricalFibreValidity_congr
+#print axioms DiamondIntegral.Section5.quotientDomainValidity_congr
+#print axioms DiamondIntegral.Section5.cylindricalStepValidity_congr
+#print axioms DiamondIntegral.Section5.CylindricalFormulaTree.RowRelated.domain
+#print axioms DiamondIntegral.Section5.CylindricalFormulaTree.RowRelated.shape
+#print axioms DiamondIntegral.Section5.CylindricalFormulaTree.RowRelated.validity
+#print axioms DiamondIntegral.Section5.finitePartitionValidity_of_gamma_presentations
+#print axioms DiamondIntegral.Section5.original_euler_certificate_exists
+#print axioms DiamondIntegral.Section5.native_gamma_relation_syntax_exists
+#print axioms DiamondIntegral.Section5.OriginalGammaCellTree.raw_definable
+#print axioms DiamondIntegral.Section5.original_gamma_tree_extend
+#print axioms DiamondIntegral.Section5.shaped_gamma_cell_has_original_formula_tree
+#print axioms DiamondIntegral.Section5.gamma_domain_formula_syntax
+#print axioms DiamondIntegral.Section5.gammaDomainSyntax_realize
+#print axioms DiamondIntegral.Section5.promote_original_gamma_predicate
+#print axioms DiamondIntegral.Section5.gammaDomainSyntax_row_definable
+#print axioms DiamondIntegral.Section5.quotientDomainValidity_of_gamma_presentation
+#print axioms DiamondIntegral.Section5.quotientFormulaDomain_eq_of_gamma_presentation
+#print axioms DiamondIntegral.Section5.cylindricalStepValidity_of_gamma_presentations
+#print axioms DiamondIntegral.Section5.gamma_tuple_code_surjective
+#print axioms DiamondIntegral.Section5.EulerFormulaCertificate.integral_eq
+#print axioms DiamondIntegral.Section5.finitePartitionValidityFormula_realize
+#print axioms DiamondIntegral.Section5.finitePartitionValidityFormula_unique
+#print axioms DiamondIntegral.Section5.CylindricalFormulaTree.gamma_shaped_of_validity
+#print axioms DiamondIntegral.Section5.CylindricalFormulaTree.gamma_domain_definable_of_raw
+#print axioms DiamondIntegral.Section5.CylindricalFormulaTree.gamma_definable_of_raw
+#print axioms DiamondIntegral.Section5.CylindricalFormulaTree.gamma_euler_value
+#print axioms DiamondIntegral.Section5.nativeRVEvaluation_monomial
+#print axioms DiamondIntegral.Section5.nativeRVEvaluation_relative_monomial
+#print axioms DiamondIntegral.Section5.curryFirstCoordinateFormula_realize
+#print axioms DiamondIntegral.Section5.cylindricalStepValidityFormula_realize
+#print axioms DiamondIntegral.Section5.CylindricalFormulaTree.domainValidity
+#print axioms DiamondIntegral.Section5.tupleProperFormula_realize
+#print axioms DiamondIntegral.Section5.tupleQuotientEqualityFormula_realize
+#print axioms DiamondIntegral.Section5.quotientDomainValidityFormula_realize
+#print axioms DiamondIntegral.Section5.quotientFormulaDomain_full_preimage
+#print axioms DiamondIntegral.Section5.shaped_cell_of_fibre_certificate
+#print axioms DiamondIntegral.Section5.ShapedGammaCell.fibre_certificate
+#print axioms DiamondIntegral.Section5.nativeRVEvaluation_res
+#print axioms DiamondIntegral.Section5.nativeRVEvaluation_gamma
+#print axioms DiamondIntegral.Section5.nativeRVEvaluation_point
+#print axioms DiamondIntegral.Section5.ordinary_castRVChart
+#print axioms DiamondIntegral.Section5.ordinary_RV_homogenization
+#print axioms DiamondIntegral.Section5.nativeRVEvaluation_underlyingIso
+#print axioms DiamondIntegral.Section5.relationalIff_realize
+#print axioms DiamondIntegral.Section5.binaryRelabel_realize
+#print axioms DiamondIntegral.Section5.cylindricalFibreValidityFormula_realize
+#print axioms DiamondIntegral.Section5.CylinderFibreKind.conditionFormula_realize
+#print axioms DiamondIntegral.Section5.CylinderFibreKind.orderFormula_realize
+#print axioms DiamondIntegral.Section5.cylindricalFibreValidityFormula_quotient
+#print axioms DiamondIntegral.Section5.valueCollisionFormula_realize
+#print axioms DiamondIntegral.Section5.finiteValueValidityFormula_card
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.geometricLinearActionComparison_mk
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.theta_5_14_mk
+#print axioms DiamondIntegral.Section5.finite_linear_difference_mem
+#print axioms DiamondIntegral.Section5.finite_linear_product_difference_mem
+#print axioms DiamondIntegral.Section5.rational_diagonal_difference_mem
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.geometricValue_affineSpace
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.toVarietyRing_affineSpace
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.affine_difference_mem
+#print axioms DiamondIntegral.Section5.geometric_linearActionIdeal_correspondence
+#print axioms DiamondIntegral.Section5.linearPolynomialMap_diagonal
+#print axioms DiamondIntegral.Section5.character_basis_coordinates
+#print axioms DiamondIntegral.Section5.character_basis_polynomial_coordinates
+#print axioms DiamondIntegral.Section5.polynomialDiagonalAction_neg_inv
+#print axioms DiamondIntegral.Section5.linearCoordinateSchemeIso_hom
+#print axioms DiamondIntegral.Section5.finite_linear_affine_diagonalization
+#print axioms DiamondIntegral.Section5.linearPolynomialMap_coordinate
+#print axioms DiamondIntegral.Section5.linearPolynomialMap_point
+#print axioms DiamondIntegral.Section5.linearPolynomialMap_comp
+#print axioms DiamondIntegral.Section5.linearPolynomialMap_id
+#print axioms DiamondIntegral.Section5.toDiagonalRing_geometricValue
+#print axioms DiamondIntegral.Section5.toVarietyRing_toDiagonalRing
+#print axioms DiamondIntegral.Section5.toDiagonalRing_toVarietyRing
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rawVarietyComparison_apply
+#print axioms DiamondIntegral.Section5.geometricPreimage_product
+#print axioms DiamondIntegral.Section5.EquivariantVariety.toDiagonalRing_objectClass
+#print axioms DiamondIntegral.Section5.diagonalObject_presentation_partition
+#print axioms DiamondIntegral.Section5.EquivariantVariety.ProductPresentation.hom_ext
+#print axioms DiamondIntegral.Section5.EquivariantVariety.ProductPresentation.mapHom_fst
+#print axioms DiamondIntegral.Section5.EquivariantVariety.ProductPresentation.mapHom_snd
+#print axioms DiamondIntegral.Section5.EquivariantVariety.ProductPresentation.map_immersion
+#print axioms DiamondIntegral.Section5.EquivariantVariety.ProductPresentation.map_range
+#print axioms DiamondIntegral.Section5.immersedProduct_coordinate_domain
+#print axioms DiamondIntegral.Section5.immersedProduct_coordinate_class
+#print axioms DiamondIntegral.Section5.geometricPreimage_finite_partition
+#print axioms DiamondIntegral.Section5.geometricPreimage_empty
+#print axioms DiamondIntegral.Section5.geometricPreimage_iso
+#print axioms DiamondIntegral.Section5.geometricPreimage_scissor
+#print axioms DiamondIntegral.Section5.geometricPreimage_affine_zero
+#print axioms DiamondIntegral.Section5.geometricPreimage_unit
+#print axioms DiamondIntegral.Section5.diagonal_preimage_independent
+#print axioms DiamondIntegral.Section5.geometricPreimage_eq_presentation
+#print axioms DiamondIntegral.Section5.toVarietyRing_geometricPreimage
+#print axioms DiamondIntegral.Section5.geometricPreimage_of_immersion
+#print axioms DiamondIntegral.Section5.immersedObject_class_eq
+#print axioms DiamondIntegral.Section5.injective_image_unique_partition
+#print axioms DiamondIntegral.Section5.immersedObject_finite_partition
+#print axioms DiamondIntegral.Section5.complex_coordinate_lift
+#print axioms DiamondIntegral.Section5.immersionCoordinateGraph_scheme_point
+#print axioms DiamondIntegral.Section5.immersionCoordinateGraph_point_coordinates
+#print axioms DiamondIntegral.Section5.immersionCoordinateGraph_contained
+#print axioms DiamondIntegral.Section5.immersionCoordinateGraph_left_unique
+#print axioms DiamondIntegral.Section5.immersionCoordinateGraph_right_unique
+#print axioms DiamondIntegral.Section5.immersionCoordinateGraph_left_exists
+#print axioms DiamondIntegral.Section5.immersionCoordinateGraph_right_exists
+#print axioms DiamondIntegral.Section5.complex_point_lift_constructible_image
+#print axioms DiamondIntegral.Section5.complexTupleSpectrumPoint_injective
+#print axioms DiamondIntegral.Section5.equivalenceOfGraph_iff
+#print axioms DiamondIntegral.Section5.rationalAffine_product_hom_ext
+#print axioms DiamondIntegral.Section5.rationalAffinePairMap_fst
+#print axioms DiamondIntegral.Section5.rationalAffinePairMap_snd
+#print axioms DiamondIntegral.Section5.rationalAffinePair_immersion
+#print axioms DiamondIntegral.Section5.diagonal_variety_presentation
+#print axioms DiamondIntegral.Section5.DiagonalVarietyPresentation.preimage_value
+#print axioms DiamondIntegral.Section5.geometric_object_class_has_preimage
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.toVarietyRing_surjective
+#print axioms DiamondIntegral.Section5.EquivariantVariety.coordinateSpec_toC
+#print axioms DiamondIntegral.Section5.EquivariantVariety.coordinateIso_overC
+#print axioms DiamondIntegral.Section5.EquivariantVariety.coordinateAlgebra_finiteType
+#print axioms DiamondIntegral.Section5.EquivariantVariety.coordinateSchemeAction_hom
+#print axioms DiamondIntegral.Section5.EquivariantVariety.coordinateSchemeAction_overC
+#print axioms DiamondIntegral.Section5.EquivariantVariety.coordinateIso_equivariant
+#print axioms DiamondIntegral.Section5.EquivariantVariety.Object.finite_level_overC
+#print axioms DiamondIntegral.Section5.EquivariantVariety.affine_variety_diagonal_closed_embedding
+#print axioms DiamondIntegral.Section5.specOverAlgHom_map
+#print axioms DiamondIntegral.Section5.specMapAlgHom_injective
+#print axioms DiamondIntegral.Section5.specMapAlgHom_comp
+#print axioms DiamondIntegral.Section5.specMapAlgHom_id
+#print axioms DiamondIntegral.Section5.specOverAutomorphism_map
+#print axioms DiamondIntegral.Section5.specOverAutomorphism_algHom_map
+#print axioms DiamondIntegral.Section5.algebraSpecAction_specActionAlgebraAction
+#print axioms DiamondIntegral.Section5.EquivariantVariety.invariant_affine_closed_piece
+#print axioms DiamondIntegral.Section5.EquivariantVariety.finite_affine_variety_presentation
+#print axioms DiamondIntegral.Section5.rationalAffineObject_point_action
+#print axioms DiamondIntegral.Section5.spectrumObject_extension
+#print axioms DiamondIntegral.Section5.spectrumObject_geometricValue
+#print axioms DiamondIntegral.Section5.immersedObject_geometricValue
+#print axioms DiamondIntegral.Section5.complex_polynomial_zero_definable
+#print axioms DiamondIntegral.Section5.complex_basic_constructible_domain_definable
+#print axioms DiamondIntegral.Section5.complex_constructible_domain_definable
+#print axioms DiamondIntegral.Section5.complexTupleSpectrumPoint_coordinate
+#print axioms DiamondIntegral.Section5.complexSpectrumExtension_product
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.geometricValue_product
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.toVarietyRing_objectClass
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.nativeToVarietyRing_comparison
+#print axioms DiamondIntegral.Section5.affineProductLocus_constructible
+#print axioms DiamondIntegral.Section5.affineProductLocus_invariant
+#print axioms DiamondIntegral.Section5.affineProductImmersedPresentation_value
+#print axioms DiamondIntegral.Section5.constructibleClass_affine_product
+#print axioms DiamondIntegral.Section5.affineImmersedProductLeft_hom
+#print axioms DiamondIntegral.Section5.affineImmersedProductRight_hom
+#print axioms DiamondIntegral.Section5.affineImmersedProductObject_class
+#print axioms DiamondIntegral.Section5.affineImmersedProductMap_fst
+#print axioms DiamondIntegral.Section5.affineImmersedProductMap_snd
+#print axioms DiamondIntegral.Section5.affineImmersedProductMap_immersion
+#print axioms DiamondIntegral.Section5.affineImmersedProductMap_range
+#print axioms DiamondIntegral.Section5.affineImmersedProductMap_invariant
+#print axioms DiamondIntegral.Section5.affineImmersedProductInclusion_immersion
+#print axioms DiamondIntegral.Section5.reducedPullbackMap_fst
+#print axioms DiamondIntegral.Section5.reducedPullbackMap_snd
+#print axioms DiamondIntegral.Section5.reducedPullbackMap_reduction
+#print axioms DiamondIntegral.Section5.reducedPullbackMap_immersion
+#print axioms DiamondIntegral.Section5.reducedPullbackMap_range
+#print axioms DiamondIntegral.Section5.EquivariantVariety.Morphism.factorThrough_fac
+#print axioms DiamondIntegral.Section5.rationalPolynomialAction_rename
+#print axioms DiamondIntegral.Section5.polynomialTensorFinEquiv_left
+#print axioms DiamondIntegral.Section5.polynomialTensorFinEquiv_right
+#print axioms DiamondIntegral.Section5.polynomial_affine_pushout
+#print axioms DiamondIntegral.Section5.polynomial_affine_pullback
+#print axioms DiamondIntegral.Section5.affineSpaceReducedProductIso_fst
+#print axioms DiamondIntegral.Section5.affineSpaceReducedProductIso_snd
+#print axioms DiamondIntegral.Section5.constructibleClass_univ
+#print axioms DiamondIntegral.Section5.complexSpectrumExtension_univ
+#print axioms DiamondIntegral.Section5.rationalAffineObject_zero_toC_isIso
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.geometricValue_unit
+#print axioms DiamondIntegral.Section5.changeRationalPresentationWeights_value
+#print axioms DiamondIntegral.Section5.diagonalGeometricValue_of_presentation
+#print axioms DiamondIntegral.Section5.diagonalGeometricValue_bijection_at_level
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.geometricValue_iso
+#print axioms DiamondIntegral.Section5.EquivariantVariety.Morphism.comp_immersion
+#print axioms DiamondIntegral.Section5.complexEquivGraph_pair
+#print axioms DiamondIntegral.Section5.sumTuple_comp_finSum
+#print axioms DiamondIntegral.Section5.complexEquivGraph_definable
+#print axioms DiamondIntegral.Section5.complexEquivGraph_forward_unique
+#print axioms DiamondIntegral.Section5.complexEquivGraph_inverse_unique
+#print axioms DiamondIntegral.Section5.complexEquivGraph_source
+#print axioms DiamondIntegral.Section5.complexEquivGraph_target
+#print axioms DiamondIntegral.Section5.weightedAction_negative
+#print axioms DiamondIntegral.Section5.complexEquivGraph_finite_invariant
+#print axioms DiamondIntegral.Section5.complexSpectrumExtension_constructible
+#print axioms DiamondIntegral.Section5.complexSpectrumExtension_point
+#print axioms DiamondIntegral.Section5.complexSpectrumExtension_inter
+#print axioms DiamondIntegral.Section5.complexSpectrumExtension_sdiff
+#print axioms DiamondIntegral.Section5.complexSpectrumExtension_invariant
+#print axioms DiamondIntegral.Section5.constructibleClass_set_congr
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.geometricValue_scissor
+#print axioms DiamondIntegral.Section5.complexSpectrumExtension_empty
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.geometricValue_empty
+#print axioms DiamondIntegral.Section5.EquivariantVariety.ImmersedPresentation.locus_eq
+#print axioms DiamondIntegral.Section5.EquivariantVariety.ImmersedPresentation.constructible
+#print axioms DiamondIntegral.Section5.EquivariantVariety.ImmersedPresentation.invariant
+#print axioms DiamondIntegral.Section5.EquivariantVariety.ImmersedPresentation.changeLocus_value
+#print axioms DiamondIntegral.Section5.EquivariantGraphDecomposition.graph_cover
+#print axioms DiamondIntegral.Section5.EquivariantGraphDecomposition.sourceLocus_complex
+#print axioms DiamondIntegral.Section5.EquivariantGraphDecomposition.targetLocus_complex
+#print axioms DiamondIntegral.Section5.EquivariantGraphDecomposition.rationalPresentation_values_eq
+#print axioms DiamondIntegral.Section5.EquivariantVariety.Object.Invariant.union
+#print axioms DiamondIntegral.Section5.EquivariantVariety.appendImmersedPresentation_value
+#print axioms DiamondIntegral.Section5.EquivariantVariety.constructibleClass_disjoint_union
+#print axioms DiamondIntegral.Section5.EquivariantVariety.constructibleClass_scissor
+#print axioms DiamondIntegral.Section5.EquivariantVariety.constructibleClass_empty
+#print axioms DiamondIntegral.Section5.algebraSpecAction_comp
+#print axioms DiamondIntegral.Section5.compatibleRootCharacter_inv_system
+#print axioms DiamondIntegral.Section5.compatibleRootCharacter_neg
+#print axioms DiamondIntegral.Section5.rationalAffineObject_common_level
+#print axioms DiamondIntegral.Section5.rationalAffineObject_complex_action
+#print axioms DiamondIntegral.Section5.EquivariantVariety.invariant_constructible_immersed_presentation
+#print axioms DiamondIntegral.Section5.EquivariantVariety.constructibleClass_eq_presentation
+#print axioms DiamondIntegral.Section5.EquivariantVariety.constructibleClass_of_immersion
+#print axioms DiamondIntegral.Section5.compatibleRootCharacter_mul_system
+#print axioms DiamondIntegral.Section5.compatibleRootCharacter_one_system
+#print axioms DiamondIntegral.Section5.rationalPolynomialHom_one
+#print axioms DiamondIntegral.Section5.rationalPolynomialHom_mul
+#print axioms DiamondIntegral.Section5.rationalPolynomialHom_common_level
+#print axioms DiamondIntegral.Section5.rationalPolynomialAction_common_level
+#print axioms DiamondIntegral.Section5.rationalPolynomialAction_point
+#print axioms DiamondIntegral.Section5.EquivariantVariety.reducedPullbackFst_immersion
+#print axioms DiamondIntegral.Section5.EquivariantVariety.reducedPullbackSnd_immersion
+#print axioms DiamondIntegral.Section5.EquivariantVariety.commonImmersion_invariant
+#print axioms DiamondIntegral.Section5.EquivariantVariety.immersed_presentation_independent
+#print axioms DiamondIntegral.Section5.EquivariantGraphDecomposition.source_class_partition
+#print axioms DiamondIntegral.Section5.EquivariantGraphDecomposition.target_class_partition
+#print axioms DiamondIntegral.Section5.EquivariantGraphDecomposition.geometric_classes_eq
+#print axioms DiamondIntegral.Section5.EquivariantVariety.Object.Invariant.empty
+#print axioms DiamondIntegral.Section5.EquivariantVariety.Object.Invariant.univ
+#print axioms DiamondIntegral.Section5.EquivariantVariety.Object.Invariant.inter
+#print axioms DiamondIntegral.Section5.EquivariantVariety.Object.Invariant.sdiff
+#print axioms DiamondIntegral.Section5.EquivariantVariety.Object.Invariant.closure
+#print axioms DiamondIntegral.Section5.EquivariantVariety.subsetClass_of_locallyClosed
+#print axioms DiamondIntegral.Section5.EquivariantVariety.subsetClass_empty
+#print axioms DiamondIntegral.Section5.EquivariantVariety.subsetClass_univ
+#print axioms DiamondIntegral.Section5.EquivariantVariety.subsetClass_split
+#print axioms DiamondIntegral.Section5.EquivariantVariety.subsetClass_finite_partition
+#print axioms DiamondIntegral.Section5.EquivariantVariety.Morphism.range_invariant
+#print axioms DiamondIntegral.Section5.EquivariantVariety.objectClass_eq_subsetClass
+#print axioms DiamondIntegral.Section5.EquivariantVariety.objectClass_finite_immersed_partition
+#print axioms DiamondIntegral.Section5.finite_firstOrder_witness_selection
+#print axioms DiamondIntegral.Section5.EquivariantVariety.subsetInclusion_range
+#print axioms DiamondIntegral.Section5.EquivariantVariety.subsetInclusion_immersion
+#print axioms DiamondIntegral.Section5.EquivariantVariety.objectClass_immersed_presentations
+#print axioms DiamondIntegral.Section5.EquivariantVariety.subsetMorphism_fac
+#print axioms DiamondIntegral.Section5.EquivariantVariety.subsetMorphism_range
+#print axioms DiamondIntegral.Section5.EquivariantVariety.subsetMorphism_immersion
+#print axioms DiamondIntegral.Section5.finite_locallyClosed_scissor_partition
+#print axioms DiamondIntegral.Section5.reduced_immersion_closed_of_range
+#print axioms DiamondIntegral.Section5.reduced_immersion_open_of_range
+#print axioms DiamondIntegral.Section5.finite_points_affine_neighborhood_over_affine_open
+#print axioms DiamondIntegral.Section5.finite_factored_orbit
+#print axioms DiamondIntegral.Section5.equivariant_reduced_immersion_isGood
+#print axioms DiamondIntegral.Section5.EquivariantVariety.Object.noetherian
+#print axioms DiamondIntegral.Section5.EquivariantVariety.Object.schemeSeparated
+#print axioms DiamondIntegral.Section5.EquivariantVariety.restrictedAction_finite_level
+#print axioms DiamondIntegral.Section5.complexWindingCharacter_one
+#print axioms DiamondIntegral.Section5.windingRootSystem_primitive
+#print axioms DiamondIntegral.Section5.finiteRootProjection_surjective
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.lineCoefficient_point
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.linePoint_coefficient
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rvAction_linePoint
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.weightedAction_one
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.weightedAction_mul
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.finiteFrame_injective
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.finiteFrame_action
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.framed_formula_invariant
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.frameChange_equivariant
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.kummerRVRoot_value
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.descendSet_eq_image
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.frame_mem_descendSet
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.descendedBijection_frame
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.framed_formula_finiteInvariant
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.descendGraph_eq_image
+#print axioms DiamondIntegral.Section5.PositiveRelationSum.symm
+#print axioms DiamondIntegral.Section5.PositiveRelationSum.add
+#print axioms DiamondIntegral.Section5.PositiveRelationSum.mul
+#print axioms DiamondIntegral.Section5.PositiveRelationSum.finite_list
+#print axioms DiamondIntegral.Section5.PositiveRelationSum.difference_mem
+#print axioms DiamondIntegral.Section5.mem_positiveRelationIdeal_iff
+#print axioms DiamondIntegral.Section5.grothendieck_of_eq_iff
+#print axioms DiamondIntegral.Section5.finite_stabilized_quotient_equality
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.vfType_tag
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rvOfField_value
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.taggedFieldEquiv_valuation
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rvSort_tag
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rvTag_zero
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rvTag_mul
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rvTag_add
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rvTag_inK
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.residueLift_coefficient
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.residueLift_residue
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.residueLift_mul
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.residueLift_inResidue
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.residueLift_add
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.residueRV_complexResidue
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.of_positiveClass
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.relationIdeal_eq_map
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.relationIdeal_mem_iff
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.res_finite_stabilized_equality
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.res_finite_list_equality
+#print axioms DiamondIntegral.Section5.normalized_residue_constructible
+#print axioms DiamondIntegral.Section5.ring_definable_preimage_equiv
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.complex_normalized_residue_constructible
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.linePoint_mul_residue
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.framedRVSet_constructible
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rawRV_preimage_mem
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.framedRVSet_finiteInvariant
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.finite_framed_RES_comparison
+#print axioms DiamondIntegral.Section5.basic_constructible_field_definable
+#print axioms DiamondIntegral.Section5.constructible_field_definable
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.residueRaw_complex
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.residueName_base
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.complex_residue_image_definable
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.constructible_residue_image_definable
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rvTag_some_pow
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.originalKummerRootMap_bijective
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rvTag_some_zpow
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rootFrame_tag
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.descentMonomial_value
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.descentMonomialMap_range
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.framedRVSet_pure_definable
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.framed_descendedOriginalSet
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.frame_reconstruction
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.descended_framedOriginalSet
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.finiteFrame_inflate
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.weightedAction_inflate
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.frameAtRoot_change
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.finiteFrame_append
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.weightedAction_append
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.frameAtRoot_append
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.tupleProductSet_invariant
+#print axioms DiamondIntegral.Section5.relativeGamma_finite_coefficients
+#print axioms DiamondIntegral.Section5.finite_cyclic_character_basis
+#print axioms DiamondIntegral.Section5.character_product_difference_mem
+#print axioms DiamondIntegral.Section5.directSumCharacterIdeal_eq_characterLineIdeal
+#print axioms DiamondIntegral.Section5.character_product_difference_multiple
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.sortedRVAction_raw
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.raw_original_definable_invariant
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.original_RV_map_equivariant
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.sortedRVAction_frame
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.frameSetEquiv_action
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.framedMap_equivariant
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.framedBijection_equivariant
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.original_graph_framed_constructible
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.descendedOriginalSet_normalized_mem
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.framedEquivGraph_invariant
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.framedEquivGraph_append_mem
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.normalized_descended_graph
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.actual_descended_graph
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.append_relation_definable
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rv_order_value
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.vrv_eq_iff_value_eq
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.normal_value_surjective
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.gammaNormalEquiv_vrv
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.native_finite_value_patterns_iff
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rational_tuple_common_level
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.descendedOriginalSet_frameSupport
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.finite_native_values_of_frameSupport
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.descendedOriginalSet_native_finite_values
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.complexZeroPattern_definable
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.complexZeroPattern_invariant
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.linePoint_value
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.value_eq_top_iff
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.lineCoefficient_eq_zero_iff
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.originalValuePattern_values
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.originalValuePattern_mem_iff
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.patternFraming_nonempty
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.patternSet_mem_iff
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.patternPiece_mem_iff
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.patternPiece_support
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.original_finite_frame_partition
+#print axioms DiamondIntegral.Section5.EmptyGammaGround.definable_iff
+#print axioms DiamondIntegral.Section5.EmptyGammaGround.toReal_fromReal
+#print axioms DiamondIntegral.Section5.EmptyGammaGround.fromReal_toReal
+#print axioms DiamondIntegral.Section5.originalDomain_finite_values
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.descendedRESObject_domain
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rationalAction_one
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rationalAction_mul
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rationalAction_common_level
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rationalInvariant_iff_finite
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rationalAction_append
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rationalInvariant_product
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rationalAction_frame
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.relation_zero
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.objectClass_unit
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.objectClass_product
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.objectClass_iso
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.objectClass_empty
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.objectClass_scissor
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.lift_objectClass
+#print axioms DiamondIntegral.Section5.nativeUngradedHom_class
+#print axioms DiamondIntegral.Section5.nativeUngradedClass_product
+#print axioms DiamondIntegral.Section5.nativeUngradedClass_cut
+#print axioms DiamondIntegral.Section5.nativeUngradedClass_empty
+#print axioms DiamondIntegral.Section5.nativeUngradedClass_unit
+#print axioms DiamondIntegral.Section5.nativeUngradedClass_bijection
+#print axioms DiamondIntegral.Section5.resSetClass_bijection
+#print axioms DiamondIntegral.Section5.resSetClass_originalDomain
+#print axioms DiamondIntegral.Section5.resSetClass_congr
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rationalFraming_nonempty
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rationalFrame_common_level
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rationalFrame_injective
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rationalFramedSet_eq_finite
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.finiteDescent_mem_image
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rationalDescent_mem_image
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rationalDescendedSet_eq_finite
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rationalDescendedSet_finite_values
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rational_framed_descent
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.diagonalRESClass_iso
+#print axioms DiamondIntegral.Section5.resSetProduct_mem
+#print axioms DiamondIntegral.Section5.resSetClass_product
+#print axioms DiamondIntegral.Section5.resSetClass_scissor
+#print axioms DiamondIntegral.Section5.resSetClass_empty
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rationalDescent_carrier_image
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rationalDescent_product
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.diagonalRESClass_product
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.diagonalRESClass_empty
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.diagonalRESClass_unit
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rationalDescent_scissor
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.diagonalRESClass_scissor
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.diagonalToRES_objectClass
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rationalFrame_reconstruction
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rationalFramedBijection_graph
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.setClass_congr
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.rationalInvariant_union
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.setClass_disjoint_union
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.finsetSup_mem
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.finsetSup_invariant
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.finiteUnion_class
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.finite_partition_class
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.actualValuePatterns_finite
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.patternPiece_rationalSupport
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.valuePatternClass_zero
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.forwardRESValue_eq_sum
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.valuePatternClass_congr
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.forwardRESValue_congr
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.framedObject_class_scissor
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.valuePatternClass_scissor
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.actualValuePatterns_mono
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.forwardRESValue_scissor
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.forwardRESValue_empty
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rvMapSlice_mem
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rvMapSlice_subset
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rvSliceImage_mem
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rvMapSlice_support
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rvSliceImage_support
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rvMapSlice_partition
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rvSliceImage_partition
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.framedObject_class_finite_partition
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.valuePatternClass_slice_sum
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.valuePatternClass_image_sum
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.forwardRESValue_bijection
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.valuePattern_eq_append_iff
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.valuePatternObject_product
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.forwardRESValue_product
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.nativeForwardValue_bijection
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.nativeForwardValue_empty
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.nativeForwardValue_cut
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.nativeForwardValue_scissor
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.nativeForwardComponent_class
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.nativeForwardPositive_class
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.nativeForwardValue_unit
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.nativeForwardValue_product
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.nativeForwardPositive_one
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.nativeForwardPositive_mul
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.nativeForwardOrdinary_class
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.chartToDiagonal_objectClass
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.chartToDiagonal_degreeIdeal
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.resToDiagonal_objectClass
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.resToDiagonal_nativeClass
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.resToDiagonal_resSetClass
+#print axioms DiamondIntegral.Section5.rvFiniteUnion_mem
+#print axioms DiamondIntegral.Section5.rvFiniteUnion_finite_values
+#print axioms DiamondIntegral.Section5.resSetClass_disjoint_union
+#print axioms DiamondIntegral.Section5.resSetClass_finiteUnion
+#print axioms DiamondIntegral.Section5.resSetClass_finite_partition
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.patternPiece_finite_values
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.canonical_pattern_partition
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rational_descent_framed
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.diagonalToRES_framedObject
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.diagonalToRES_forwardRESValue
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.forwardRESValue_of_support
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rationalDescendedSet_support
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.resToDiagonal_diagonalRESClass
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.resToDiagonal_diagonalToRES
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.diagonalToRES_nativeForwardValue
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.diagonalToRES_resToDiagonal
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rawRESComparison_resSetClass
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.zeroSet_definable
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.zeroSet_invariant
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.zeroGraph
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.zeroObject_class
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.affineLine_class
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.line_difference_eq_torus_difference
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.lineIdeal_eq_torusIdeal
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.directSumLinearIdeal_eq_lineIdeal
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.arbitrary_product_linear_relation_mem
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rv_normal_eq_none_iff
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.gammaRational_value
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.gammaRational_vrv_iff
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.gammaRational_rationalGamma
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.gammaRational_surjective
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.gammaRational_one
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.originalValueFibre_mem
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.originalValueFibre_support
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.framedValueFibre_object
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rawRESComparison_fibre
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rawRESComparison_torus
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rawRESComparison_fibre_difference
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.fibreIdeal_image_le_lineIdeal
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.rationalGamma_definable
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.fibreIdeal_image_eq_lineIdeal
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.residueCharacterComparison_mk
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.affineSpace_append
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.affineSpace_class
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.DiagonalConstructible.linearActionIdeal_eq_lineIdeal
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.fibreIdeal_image_eq_linearActionIdeal
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.residueLinearActionComparison_mk
+#print axioms DiamondIntegral.Section5.finite_cyclic_eigen_generators
+#print axioms DiamondIntegral.Section5.polynomialDiagonalAction_one
+#print axioms DiamondIntegral.Section5.polynomialDiagonalAction_mul
+#print axioms DiamondIntegral.Section5.finite_cyclic_equivariant_affine_embedding
+#print axioms DiamondIntegral.Section5.schemePointAction_one
+#print axioms DiamondIntegral.Section5.schemePointAction_mul
+#print axioms DiamondIntegral.Section5.finite_invariant_affine_cover
+#print axioms DiamondIntegral.Section5.orderedOpenPiece_closed
+#print axioms DiamondIntegral.Section5.orderedOpenPiece_unique
+#print axioms DiamondIntegral.Section5.orderedOpenPiece_invariant
+#print axioms DiamondIntegral.Section5.finite_invariant_affine_stratification
+#print axioms DiamondIntegral.Section5.finite_formula_cover
+#print axioms DiamondIntegral.Section5.polynomial_term_exists
+#print axioms DiamondIntegral.Section5.polynomialTerm_realize
+#print axioms DiamondIntegral.Section5.ringEmbeddingHom_apply
+#print axioms DiamondIntegral.Section5.ringEmbeddingHom_injective
+#print axioms DiamondIntegral.Section5.elementaryRingHom_apply
+#print axioms DiamondIntegral.Section5.ComplexModels.coefficientHom_apply
+#print axioms DiamondIntegral.Section5.ComplexModels.coefficientHom_injective
+#print axioms DiamondIntegral.Section5.ComplexModels.coefficientHom_constant
+#print axioms DiamondIntegral.Section5.ComplexModels.coefficientFormula_realize
+#print axioms DiamondIntegral.Section5.namedPolynomialTerm_realize
+#print axioms DiamondIntegral.Section5.complex_model_graph_rational
+#print axioms DiamondIntegral.Section5.uniqueOutputFormula_realize
+#print axioms DiamondIntegral.Section5.uniqueOutputSentence_realize
+#print axioms DiamondIntegral.Section5.complex_graph_unique_in_model
+#print axioms DiamondIntegral.Section5.rationalGraphFormula_realize
+#print axioms DiamondIntegral.Section5.complex_graph_finite_rational_cover
+#print axioms DiamondIntegral.Section5.complex_scalar_graph_finite_rational_cover
+#print axioms DiamondIntegral.Section5.complex_definable_named_formula
+#print axioms DiamondIntegral.Section5.complex_definable_scalar_graph_finite_rational_cover
+#print axioms DiamondIntegral.Section5.scalarCoordinateGraph_definable
+#print axioms DiamondIntegral.Section5.complex_definable_graph_finite_rational_cover
+#print axioms DiamondIntegral.Section5.rationalTuple_common_denominator
+#print axioms DiamondIntegral.Section5.complex_definable_graph_finite_common_denominator_cover
+#print axioms DiamondIntegral.Section5.principalPointEvaluation_algebraMap
+#print axioms DiamondIntegral.Section5.principalPointEvaluation_invSelf
+#print axioms DiamondIntegral.Section5.principalRationalAlgebraMap_point
+#print axioms DiamondIntegral.Section5.principalAffineOpenInclusion_isOpenImmersion
+#print axioms DiamondIntegral.Section5.principalAffineOpenInclusion_range
+#print axioms DiamondIntegral.Section5.principalRationalSchemeMap_point
+#print axioms DiamondIntegral.Section5.mem_closedFamilyAtLeast
+#print axioms DiamondIntegral.Section5.closedFamilyAtLeast_isClosed
+#print axioms DiamondIntegral.Section5.closedFamilyStratum_eq
+#print axioms DiamondIntegral.Section5.closedFamilyStratum_isLocallyClosed
+#print axioms DiamondIntegral.Section5.closedFamilySupport_erase
+#print axioms DiamondIntegral.Section5.closedFamilyStratum_generator_compl
+#print axioms DiamondIntegral.Section5.closedFamilyStratum_generator_isClopen
+#print axioms DiamondIntegral.Section5.closedFamilyStratum_unique
+#print axioms DiamondIntegral.Section5.closedFamilyDepth_permutation
+#print axioms DiamondIntegral.Section5.constructible_closed_generators
+#print axioms DiamondIntegral.Section5.finite_constructible_closed_generators
+#print axioms DiamondIntegral.Section5.finite_invariant_constructible_strata
+#print axioms DiamondIntegral.Section5.complexZariskiPoint_isInducing
+#print axioms DiamondIntegral.Section5.complexZariskiPoint_injective
+#print axioms DiamondIntegral.Section5.complexZariskiPoint_isEmbedding
+#print axioms DiamondIntegral.Section5.complexZariski_noetherian
+#print axioms DiamondIntegral.Section5.complex_definable_zariski_constructible
+#print axioms DiamondIntegral.Section5.complex_named_formula_definable
+#print axioms DiamondIntegral.Section5.complex_polynomial_zeroSet_definable
+#print axioms DiamondIntegral.Section5.rationalTupleEquationSet_definable
+#print axioms DiamondIntegral.Section5.complex_definable_bijection_finite_rational_cover
+#print axioms DiamondIntegral.Section5.complexPolynomialPoint_isInducing
+#print axioms DiamondIntegral.Section5.principalComplexPoint_square
+#print axioms DiamondIntegral.Section5.principalComplexPoint_continuous
+#print axioms DiamondIntegral.Section5.principalRationalTuple_square
+#print axioms DiamondIntegral.Section5.principalRationalTuple_continuous
+#print axioms DiamondIntegral.Section5.complex_points_separate_zero
+#print axioms DiamondIntegral.Section5.complex_points_separate
+#print axioms DiamondIntegral.Section5.complex_points_algHom_ext
+#print axioms DiamondIntegral.Section5.complex_points_ideal_le_ker
+#print axioms DiamondIntegral.Section5.complexPointQuotientLift_mk
+#print axioms DiamondIntegral.Section5.invariantClosedIdeal_stable
+#print axioms DiamondIntegral.Section5.invariantIdealQuotientAction_mk
+#print axioms DiamondIntegral.Section5.closedAffineScheme_isReduced
+#print axioms DiamondIntegral.Section5.closedAffineCoordinate_finiteType
+#print axioms DiamondIntegral.Section5.closedAffineInclusion_isClosedImmersion
+#print axioms DiamondIntegral.Section5.closedAffineInclusion_range
+#print axioms DiamondIntegral.Section5.algebraSpecAction_hom
+#print axioms DiamondIntegral.Section5.invariantClosedAffineInclusion_equivariant
+#print axioms DiamondIntegral.Section5.basic_constructible_complex_point
+#print axioms DiamondIntegral.Section5.constructible_complex_point
+#print axioms DiamondIntegral.Section5.constructible_eq_of_complex_points
+#print axioms DiamondIntegral.Section5.basicClosedCoordinate_reduced
+#print axioms DiamondIntegral.Section5.basicConstructibleCoordinate_reduced
+#print axioms DiamondIntegral.Section5.basicConstructibleCoordinate_finiteType
+#print axioms DiamondIntegral.Section5.basicConstructibleCoordinateMap_equation
+#print axioms DiamondIntegral.Section5.basicConstructibleCoordinateMap_denominator
+#print axioms DiamondIntegral.Section5.basicConstructiblePoint_mem
+#print axioms DiamondIntegral.Section5.basicConstructibleScheme_isReduced
+#print axioms DiamondIntegral.Section5.basicConstructibleInclusion_isImmersion
+#print axioms DiamondIntegral.Section5.basicConstructibleInclusion_range
+#print axioms DiamondIntegral.Section5.basicPointIdeal_le_ker
+#print axioms DiamondIntegral.Section5.basicConstructiblePointLift_coordinateMap
+#print axioms DiamondIntegral.Section5.basicConstructiblePoint_ext
+#print axioms DiamondIntegral.Section5.complex_points_isUnit
+#print axioms DiamondIntegral.Section5.complexPointBasicFactor_kernel
+#print axioms DiamondIntegral.Section5.complexPointBasicFactor_denominator
+#print axioms DiamondIntegral.Section5.complexPointBasicFactor_coordinateMap
+#print axioms DiamondIntegral.Section5.basicConstructibleFactor_ext
+#print axioms DiamondIntegral.Section5.complexPointBasicFactor_Spec_square
+#print axioms DiamondIntegral.Section5.complex_algHom_unit_inverse
+#print axioms DiamondIntegral.Section5.unitRationalAlgebraMap_point
+#print axioms DiamondIntegral.Section5.rationalBasicFactor_coordinateMap
+#print axioms DiamondIntegral.Section5.BasicRationalPointIso.denominatorUnit
+#print axioms DiamondIntegral.Section5.BasicRationalPointIso.polynomialMap_point
+#print axioms DiamondIntegral.Section5.BasicRationalPointIso.algebraMap_coordinateMap
+#print axioms DiamondIntegral.Section5.BasicRationalPointIso.algebraMap_point
+#print axioms DiamondIntegral.Section5.complex_definable_spectrum_constructible
+#print axioms DiamondIntegral.Section5.complex_definable_finite_spectrum_constructible
+#print axioms DiamondIntegral.Section5.principalGraphSection_square
+#print axioms DiamondIntegral.Section5.rational_graph_projection_isImmersion
+#print axioms DiamondIntegral.Section5.primeSignAtomData_range
+#print axioms DiamondIntegral.Section5.primeSignAtomData_mem
+#print axioms DiamondIntegral.Section5.primeSignAtomData_support
+#print axioms DiamondIntegral.Section5.primeSignAtoms_unique
+#print axioms DiamondIntegral.Section5.constructibleTestPolynomials_denominator
+#print axioms DiamondIntegral.Section5.constructibleTestPolynomials_equation
+#print axioms DiamondIntegral.Section5.primeSignSupport_test
+#print axioms DiamondIntegral.Section5.constructibleData_same_sign
+#print axioms DiamondIntegral.Section5.finite_disjoint_basic_constructible_partition
+#print axioms DiamondIntegral.Section5.primeSignSupport_restrict
+#print axioms DiamondIntegral.Section5.finite_constructible_test_family
+#print axioms DiamondIntegral.Section5.finite_subordinate_basic_partition
+#print axioms DiamondIntegral.Section5.basicConstructibleData_isConstructible
+#print axioms DiamondIntegral.Section5.rationalSpectrumGraphData_point
+#print axioms DiamondIntegral.Section5.complexTupleSpectrumPoint_algHom
+#print axioms DiamondIntegral.Section5.inverseRationalSpectrumGraphData_denominator
+#print axioms DiamondIntegral.Section5.inverseRationalSpectrumGraphData_equation
+#print axioms DiamondIntegral.Section5.inverseRationalSpectrumGraphData_point
+#print axioms DiamondIntegral.Section5.complex_bijection_basic_rational_graph_partition
+#print axioms DiamondIntegral.Section5.basicGraphMap_eq
+#print axioms DiamondIntegral.Section5.basicGraphLeft_rational_relations
+#print axioms DiamondIntegral.Section5.basicGraphLeft_isImmersion
+#print axioms DiamondIntegral.Section5.basicGraphRight_rational_relations
+#print axioms DiamondIntegral.Section5.basicGraphMap_swap_eq
+#print axioms DiamondIntegral.Section5.basicGraphRight_isImmersion
+#print axioms DiamondIntegral.Section5.complex_constructible_bijection_algebraic_pieces
+#print axioms DiamondIntegral.Section5.locallyClosedAffineScheme_isReduced
+#print axioms DiamondIntegral.Section5.locallyClosedAffineInclusion_isImmersion
+#print axioms DiamondIntegral.Section5.locallyClosedAffineInclusion_range
+#print axioms DiamondIntegral.Section5.invariantOpenMap_ι
+#print axioms DiamondIntegral.Section5.invariantOpenMap_one
+#print axioms DiamondIntegral.Section5.invariantOpenMap_mul
+#print axioms DiamondIntegral.Section5.invariantOpenSchemeAction_equivariant
+#print axioms DiamondIntegral.Section5.schemeAction_closure_invariant
+#print axioms DiamondIntegral.Section5.schemeAction_coborder_invariant
+#print axioms DiamondIntegral.Section5.invariant_locally_closed_affine_action
+#print axioms DiamondIntegral.Section5.reduced_source_kernel_range
+#print axioms DiamondIntegral.Section5.reduced_source_kernel_mono
+#print axioms DiamondIntegral.Section5.reduced_closed_immersion_lift
+#print axioms DiamondIntegral.Section5.reduced_immersion_lift
+#print axioms DiamondIntegral.Section5.reducedImmersionLift_fac
+#print axioms DiamondIntegral.Section5.complex_points_nilpotent
+#print axioms DiamondIntegral.Section5.complex_points_zero_under_reduced_map
+#print axioms DiamondIntegral.Section5.complex_points_maps_agree_after_reduction
+#print axioms DiamondIntegral.Section5.reducedImmersionIso_fac
+#print axioms DiamondIntegral.Section5.reducedImmersionIso_equivariant
+#print axioms DiamondIntegral.Section5.reducedImmersionActionMap_fac
+#print axioms DiamondIntegral.Section5.reducedImmersionActionMap_one
+#print axioms DiamondIntegral.Section5.reducedImmersionActionMap_mul
+#print axioms DiamondIntegral.Section5.reducedImmersionSchemeAction_fac
+#print axioms DiamondIntegral.Section5.reducedImmersionSchemeAction_comp
+#print axioms DiamondIntegral.Section5.schemeActionOverBase_hom
+#print axioms DiamondIntegral.Section5.finite_scheme_invariant_constructible_strata
+#print axioms DiamondIntegral.Section5.finite_affine_invariant_scheme_strata
+#print axioms DiamondIntegral.Section5.clopen_inter_locallyClosed
+#print axioms DiamondIntegral.Section5.overlap_commutes
+#print axioms DiamondIntegral.Section5.overlapAlgebra_finiteType
+#print axioms DiamondIntegral.Section5.overlapLift_left
+#print axioms DiamondIntegral.Section5.overlapLift_right
+#print axioms DiamondIntegral.Section5.complex_overlap_agreement
+#print axioms DiamondIntegral.Section5.complex_overlap_ring_agreement
+#print axioms DiamondIntegral.Section5.schemeAffinePullback_comp
+#print axioms DiamondIntegral.Section5.schemeAffinePullback_injective
+#print axioms DiamondIntegral.Section5.scheme_complex_overlap_agreement
+#print axioms DiamondIntegral.Section5.reduced_affine_branches_compatible
+#print axioms DiamondIntegral.Section5.glue_reduced_affine_branches
+#print axioms DiamondIntegral.Section5.gamma_cell_has_shape
+#print axioms DiamondIntegral.Section5.ShapedGammaCell.definable
+#print axioms DiamondIntegral.Section5.shaped_cell_euler_value
+#print axioms DiamondIntegral.Section5.finite_cylindrical_euler_certificate
+#print axioms DiamondIntegral.Section5.witnessRightUnique_realize
+#print axioms DiamondIntegral.Section5.bijectionValidityFormula_realize
+#print axioms DiamondIntegral.Section5.setEqualityValidityFormula_realize
+#print axioms DiamondIntegral.Section5.finiteWitnessValidityFormula_realize
+#print axioms DiamondIntegral.Section5.tupleEqualityFormula_realize
+#print axioms DiamondIntegral.Section5.tupleDistinctFormula_realize
+#print axioms DiamondIntegral.Section5.fibreCollisionFormula_realize
+#print axioms DiamondIntegral.Section5.finiteFibreValidityFormula_realize
+#print axioms DiamondIntegral.Section5.no_injective_fin_iff_card_bound
+#print axioms DiamondIntegral.Section5.finiteFibreValidityFormula_card
+#print axioms DiamondIntegral.Section5.prepare_finite_original_base_RV_predicates
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.res_equality_iff_literal_family_witness
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.PrimitivePair.relation
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.relationPairs_literal
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.positiveFamilyClass_singleton
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.RelationTerm.positive_relation
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.relationTerms_positive_relation
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.literal_relation_term
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.relationLeftFamilyClass_append
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.relationRightFamilyClass_append
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.positive_relation_literal_terms
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.ActualFamilyWitness.taggedLeft_finite
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.ActualFamilyWitness.taggedRight_finite
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.res_equality_has_literal_tagged_witness
+#print axioms DiamondIntegral.Section5.gammaGroundCleanRVMap_finite
+#print axioms DiamondIntegral.Section5.nativeRESObjectOfGammaSet_domain
+#print axioms DiamondIntegral.Section5.gammaGroundRVTaggedUnion_finite_values
+#print axioms DiamondIntegral.Section5.taggedRVFinFamily_finite_values
+#print axioms DiamondIntegral.Section5.EquivariantGraphDecomposition.commonAction_left
+#print axioms DiamondIntegral.Section5.EquivariantGraphDecomposition.commonAction_right
+#print axioms DiamondIntegral.Section5.EquivariantGraphDecomposition.common_immersions
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.stabilizedFamily_class
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.res_equality_iff_actual_family_witness
+#print axioms DiamondIntegral.Section5.AffineBranchCertificate.overC
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.positiveFamilyClass_append
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.positiveFamilyClass_cons
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.positiveFamilyClass_product_map
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.positiveFamilyClass_product
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.positive_family_representative
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.positiveFamilyAtDegree_class
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.positive_family_equality_iff_bijections
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.positiveFamilyAtDegree_eq_empty
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.positive_family_equality_iff_finite_bijections
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.positive_family_finite_bijections
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.positiveFamilyBound_left
+#print axioms DiamondIntegral.Section5.RESFiniteWitness.positiveFamilyBound_right
+#print axioms DiamondIntegral.Section5.finite_points_affine_neighborhood_of_openImmersion
+#print axioms DiamondIntegral.Section5.finite_points_affine_neighborhood_of_reduced_immersion
+#print axioms DiamondIntegral.Section5.finite_action_on_reduced_affine_immersion_isGood
+#print axioms DiamondIntegral.Section5.finite_points_principal_neighborhood
+#print axioms DiamondIntegral.Section5.EquivariantVariety.algebraSpecAction_overC
+#print axioms DiamondIntegral.Section5.complex_equivariant_bijection_decomposition
+#print axioms DiamondIntegral.Section5.equivariant_certified_common_pieces
+#print axioms DiamondIntegral.Section5.basicGraphLeft_image_invariant
+#print axioms DiamondIntegral.Section5.basicGraphRight_image_invariant
+#print axioms DiamondIntegral.Section5.basicGraphLeft_complex_image_iff
+#print axioms DiamondIntegral.Section5.basicGraphRight_complex_image_iff
+#print axioms DiamondIntegral.Section5.polynomialDiagonalAction_point
+#print axioms DiamondIntegral.Section5.complexAlgebraPoint_injective
+#print axioms DiamondIntegral.Section5.complexAlgebraPoint_comp
+#print axioms DiamondIntegral.Section5.complexAlgebraPoint_closed
+#print axioms DiamondIntegral.Section5.complex_point_mem_spec_image_iff
+#print axioms DiamondIntegral.Section5.constructible_invariant_of_complex_points
+#print axioms DiamondIntegral.Section5.EquivariantVariety.relation_zero
+#print axioms DiamondIntegral.Section5.EquivariantVariety.objectClass_unit
+#print axioms DiamondIntegral.Section5.EquivariantVariety.objectClass_product
+#print axioms DiamondIntegral.Section5.EquivariantVariety.objectClass_iso
+#print axioms DiamondIntegral.Section5.EquivariantVariety.objectClass_empty
+#print axioms DiamondIntegral.Section5.EquivariantVariety.objectClass_scissor
+#print axioms DiamondIntegral.Section5.EquivariantVariety.lift_objectClass
+#print axioms DiamondIntegral.Section5.AffineBranchCertificate.equivariant
+#print axioms DiamondIntegral.Section5.finite_invariant_branch_stratification
+#print axioms DiamondIntegral.Section5.finite_equivariant_branch_stratification
+#print axioms DiamondIntegral.Section5.certifiedCommon_immersions
+#print axioms DiamondIntegral.Section5.certifiedCommon_left_partition
+#print axioms DiamondIntegral.Section5.certifiedCommon_right_partition
+#print axioms DiamondIntegral.Section5.affineBranchRelation_left_functional
+#print axioms DiamondIntegral.Section5.affineBranchRelation_right_functional
+#print axioms DiamondIntegral.Section5.AffineBranchCertificate.point
+#print axioms DiamondIntegral.Section5.affineBranchRelation_mem_left
+#print axioms DiamondIntegral.Section5.affineBranchRelation_mem_right
+#print axioms DiamondIntegral.Section5.reducedImmersionPointLift_fac
+#print axioms DiamondIntegral.Section5.affine_branches_point_functional
+#print axioms DiamondIntegral.Section5.reducedPullbackActionMap_fst
+#print axioms DiamondIntegral.Section5.reducedPullbackActionMap_snd
+#print axioms DiamondIntegral.Section5.reducedPullbackActionMap_one
+#print axioms DiamondIntegral.Section5.reducedPullbackActionMap_mul
+#print axioms DiamondIntegral.Section5.reducedPullbackSchemeAction_fst
+#print axioms DiamondIntegral.Section5.reducedPullbackSchemeAction_snd
+#print axioms DiamondIntegral.Section5.reducedPullbackSchemeAction_comp
+#print axioms DiamondIntegral.Section5.certified_inverse_pieces
+#print axioms DiamondIntegral.Section5.AffineBranchCertificate.functional
+#print axioms DiamondIntegral.Section5.glue_immersion_branches_certificate
+#print axioms DiamondIntegral.Section5.schemeReductionLift_fac
+#print axioms DiamondIntegral.Section5.schemeReductionLift_unique
+#print axioms DiamondIntegral.Section5.reducedPullback_condition
+#print axioms DiamondIntegral.Section5.reducedPullbackLift_fst
+#print axioms DiamondIntegral.Section5.reducedPullbackLift_snd
+#print axioms DiamondIntegral.Section5.reducedPullback_hom_ext
+#print axioms DiamondIntegral.Section5.reducedPullback_isReduced
+#print axioms DiamondIntegral.Section5.reducedPullbackFst_range
+#print axioms DiamondIntegral.Section5.reducedPullbackSnd_range
+#print axioms DiamondIntegral.Section5.reducedClosedScheme_isReduced
+#print axioms DiamondIntegral.Section5.reducedClosedInclusion_isClosedImmersion
+#print axioms DiamondIntegral.Section5.reducedClosedInclusion_range
+#print axioms DiamondIntegral.Section5.reducedLocallyClosedScheme_isReduced
+#print axioms DiamondIntegral.Section5.reducedLocallyClosedInclusion_isImmersion
+#print axioms DiamondIntegral.Section5.reducedLocallyClosedInclusion_range
+#print axioms DiamondIntegral.Section5.schemeReduction_isReduced
+#print axioms DiamondIntegral.Section5.schemeReductionMap_isClosedImmersion
+#print axioms DiamondIntegral.Section5.schemeReductionMap_surjective
+#print axioms DiamondIntegral.Section5.graph_branches_transformed_complex_compatible
+#print axioms DiamondIntegral.Section5.graph_branches_inverse_transformed_complex_compatible
+#print axioms DiamondIntegral.Section5.specAlgHom_comp
+#print axioms DiamondIntegral.Section5.glued_branches_equivariant
+#print axioms DiamondIntegral.Section5.finite_regular_graph_strata
+#print axioms DiamondIntegral.Section5.locallyClosed_constructible_of_noetherian
+#print axioms DiamondIntegral.Section5.finite_invariant_constructible_substrata
+#print axioms DiamondIntegral.Section5.immersion_preimage_isClopen
+#print axioms DiamondIntegral.Section5.complex_graph_stratum_regular_map
+#print axioms DiamondIntegral.Section5.immersionBranchLift_fac
+#print axioms DiamondIntegral.Section5.glue_immersion_branches
+#print axioms DiamondIntegral.Section5.basicGraphPoint_mem
+#print axioms DiamondIntegral.Section5.graph_branches_complex_compatible
+#print axioms DiamondIntegral.Section5.graph_branches_inverse_complex_compatible
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.ambientBoundedVFVolume_point_indexed_fibres
+#print axioms Polynomial.Monic.tschirnhausen
+#print axioms Polynomial.Monic.exists_rootMultiplicity_pos_lt
+#print axioms LaurentSeries.exists_ofPowerSeries_eq_of_order_nonneg
+#print axioms LaurentSeries.orderTop_expand
+#print axioms LaurentSeries.toHahn_expand_single_scaling
+#print axioms LaurentSeries.newton_slope_scaling
+#print axioms LaurentSeries.newton_puiseux_descent
+#print axioms PuiseuxSeries.exists_root_mem_subfield
+#print axioms PuiseuxSeries.isIntegral_single_one_div
+#print axioms PuiseuxSeries.mem_adjoin_single_of_mem_fieldRange
+#print axioms Polynomial.Monic.exists_factorization_rootMultiplicity_zero
+#print axioms Polynomial.Monic.exists_factorization_rootMultiplicity
+#print axioms HahnSeries.embDomain_embDomain
+#print axioms LaurentSeries.toHahn_single
+#print axioms LaurentSeries.toHahn_comp_expand
+#print axioms LaurentSeries.fieldRange_toHahn_le
+#print axioms LaurentSeries.directed_fieldRange_toHahn
+#print axioms PuiseuxSeries.mem_subfield_iff
+#print axioms PuiseuxSeries.mem_subfield_iff_support
+#print axioms PuiseuxSeries.exists_common_index

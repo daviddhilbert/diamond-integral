@@ -23,8 +23,9 @@ def prepare() -> dict:
     ).strip()
     if revision != manifest["base_revision"]:
         raise SystemExit(f"FAIL: unexpected integration compatibility revision: {revision}")
+    # Inspect only this compatibility layer; later audited overlays may coexist.
     current = subprocess.check_output(
-        ["git", "diff", "--no-ext-diff", "--binary", "--", "*.lean"], cwd=PACKAGE
+        ["git", "diff", "--no-ext-diff", "--binary", "--", *manifest["files"]], cwd=PACKAGE
     )
     if current != patch.read_bytes():
         if current:

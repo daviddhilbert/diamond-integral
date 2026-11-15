@@ -1,0 +1,17 @@
+{
+  "batch": "R081-R082",
+  "status": "PENDING_AUTHOR_REVIEW",
+  "approved_batch": "R080",
+  "approved_batch_status": "INCORPORATED",
+  "pdf_pages": 2,
+  "tex_errors": false,
+  "overfull_boxes": false,
+  "visual_review": "Both rendered pages inspected",
+  "lean_verification": "No new Section 5 Lean compilation",
+  "sources": {
+    "Section5/reference/diamond_integral_revision_annotated.tex": "c73df7bba4f635b9df7fec872fc4f579c201da92f4bdca73811f50846dc21be7",
+    "Section5/reference/section5-approved-through-5-12.tex": "fdda3433389402262128cbe7feb9b01f89eab47ee913f8cdfb395fb1fc8b5972",
+    "Section5/reference/proposed-revisions/R081-R082-finite-kummer-actions/main.tex": "7ec6faadfbdf2c6f9eb02f5095cd715ab1f4d157fc4accfd3758059013191169",
+    "output/pdf/section5-R081-R082-review.pdf": "fa55c8a03b0ef410f19a7ee9ea005c84d1a0d5cae1d5c24ef23170f994faf819"
+  }
+}

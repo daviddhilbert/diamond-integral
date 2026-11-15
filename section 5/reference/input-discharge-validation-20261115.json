@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-15",
+  "status": "PASS_BOTH_INPUTS_DISCHARGED",
+  "standing_hypotheses": "The recorded canonical ACVF00, saturated small original Gamma-ground contexts are retained.",
+  "constructors": {
+    "Section2.GammaPiecewiseRationalAffineInput": {
+      "constructor": "DiamondIntegral.Section5.GammaQE.gamma_piecewise_rational_affine",
+      "source": "section 5/GammaQEFiniteLaws.lean",
+      "proof": "Actual original-language QE, flat RV literals, finite perturbation and graph uniqueness give a finite rational-affine law cover. No Gamma-linearity premise is used."
+    },
+    "YinGammaGroundUnmeasuredLiftInput": {
+      "constructor": "DiamondIntegral.Section5.completed18GroundLiftInput",
+      "source": "section 5/Completed18GroundLiftInput.lean",
+      "proof": "The completed [18] Section 5 producers instantiate its Section 6 two-order registry. Actual RV and VF presentation equivalences identify the positive lift and its exact special kernel. RV-pullback preparation and zero strata prove positive surjectivity. The small generated definable closure is transported back to the original GammaGroundContext base through proved definability equivalence.",
+      "intrinsic_field_family": "DiamondIntegral.Section5.completedGroundTaggedFieldLiftInputs",
+      "unfinished_integration_section7_input": false
+    }
+  },
+  "instantiated_results": [
+    "DiamondIntegral.Section5.bounded_fubini_discharged",
+    "DiamondIntegral.Section5.geometric_fubini_discharged",
+    "DiamondIntegral.Section5.PuiseuxOriginal.corollary_global_vanishing_discharged"
+  ],
+  "full_audit_log": "Section5/.scratch/finite-comparison-audit-74.log",
+  "headline_types_and_principles_log": "Section5/.scratch/final-input-discharge-audit1.log",
+  "public_definitions_and_structures": 1357,
+  "public_theorems": 2234,
+  "principles": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "accepted_inputs": {},
+  "remaining_section_work": [],
+  "source_hashes_match_final_audit": true,
+  "dependency_provenance": [
+    "reference/integration-completed-section5-overlay.json",
+    "reference/integration-section6-scope-adapter.json"
+  ]
+}

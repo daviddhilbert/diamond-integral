@@ -1,0 +1,165 @@
+\section{Interlude: RV decomposition and Fubini theorems}\label{csndag}
+
+We continue to work in the original language $\lan{}{RV}{}$, over the
+standing parameter base $\mathbb S$. In particular, no cross-section is
+added to the language. We use the decomposition below and the
+retraction $\mathbb E_b$ of Section~4 to prove the Fubini statements.
+
+For an integer matrix $M=(m_{ab})\in\GL_n(\Z)$, write
+\[
+ h_M:(\RV^\times)^n\longrightarrow(\RV^\times)^n,\qquad
+ (h_M(u))_a=\prod_b u_b^{m_{ab}}.
+\]
+Thus $h_M^{-1}=h_{M^{-1}}$ and
+$\vrv(h_M(u))=M\vrv(u)$. For $I\subseteq\Gamma^\ell$, the notation
+$I^\sharp$ in the following lemma means its full inverse image in
+$(\RV^\times)^\ell$ under $\vrv$. The singleton zero/infinity element
+of $\RV_\infty$ is treated separately by fixing its coordinate positions.
+
+\setcounter{thm}{11}
+\begin{lem}[Monomial decomposition]\label{coh:decom}
+Let $U\subseteq(\RV^\times)^n$ be definable. There is a finite definable
+partition $(D_i)_i$ of $\vrv(U)$ such that, writing
+$U_i=U\cap\vrv^{-1}(D_i)$, there are $M_i\in\GL_n(\Z)$,
+$0\leq m_i\leq n$, a nonempty definable set
+$V_i\subseteq(\RV^\times)^{m_i}$, and a nonempty definable set
+$I_i\subseteq\Gamma^{n-m_i}$ with
+\[
+ \vrv(V_i)=\{\beta_i\},\qquad
+ h_{M_i}(U_i)=V_i\times I_i^\sharp .
+\]
+All sets and maps are definable over the original base $\mathbb S$.
+In particular, the partition of $U$ is induced by a partition of
+its value support.
+\end{lem}
+
+\begin{proof}
+We give the normal-form step as well as the integer reduction.
+
+\emph{Finite angular data.}
+For $e\in\Z^n$, put $u^e=\prod_j u_j^{e_j}$.
+The guarded RV normal form obtained from quantifier elimination has
+the following consequence. There is a finite definable partition
+$(P_a)_a$ of $\Gamma^n$ and, for each $a$, a finite set
+$E_a\subseteq\Z^n$ such that, for $X_a=U\cap\vrv^{-1}(P_a)$:
+\begin{enumerate}
+\item for every $e\in E_a$, the set
+$\{\vrv(u^e):u\in X_a\}$ is finite;
+\item if $u\in X_a$, $\vrv(u)=\vrv(u')$, and
+$u^e=(u')^e$ for every $e\in E_a$, then $u'\in X_a$.
+\end{enumerate}
+Here is the finite syntactic argument for this consequence.
+In the guarded normal form, a monomial is $c u^e$ and a residue
+polynomial is a finite sum of such monomials on their residue
+domains. Partition the value space according to the residue-domain
+status of every summand and the equality of the values of the two
+outer monomials in every equality. Retain all nonzero and domain
+guards and both signs of every literal; this partitions the entire
+Boolean formula, rather than just covering it by true clauses.
+A nonzero summand contributing to a residue polynomial forces
+\[
+ e\cdot\vrv(u)=-\vrv(c).
+\]
+Include its exponent $e$ among the active characters. A zero
+coefficient contributes nothing and needs no character.
+In an equality whose two nonzero outer coefficients have the same
+value, include the difference of their exponent vectors: its value
+is fixed by the quotient of those coefficients. If their values are
+different, the equality is possible precisely when both residue
+factors vanish. Thus every remaining angular test depends only on
+these finitely many characters. Order tests depend only on the
+coordinate values. This proves (1) and (2), including negated
+literals.
+
+The value partition is defined over $\mathbb S$. To check this if RV
+representatives of named value-group parameters are used while
+obtaining the normal form, the values of nonzero coefficients
+descend by the original-base Gamma parameter-control theorem:
+the value of a nonzero coefficient definable from these names
+lies in $\dcl^{\mathrm{eq}}(\mathbb S)\cap\Gamma$.
+The partition uses only those coefficient values. No chosen
+RV representative is retained as a new parameter.
+
+\emph{Integer coordinates.}
+Fix $a$ and let $N$ have rows the characters in $E_a$.
+Column Hermite reduction supplies $A\in\GL_n(\Z)$ with
+\[
+ NA=(C\ \ 0),\qquad \operatorname{rank}_{\mathbb Q}C=m,
+\]
+where $C$ has $m$ columns. This is an integer change of basis:
+column additions, interchanges and sign changes suffice.
+Set $z=h_{A^{-1}}(u)=(v,w)$ with $v\in(\RV^\times)^m$.
+By (1), $C\vrv(v)$ has finite image on $h_{A^{-1}}(X_a)$.
+The map $\beta\mapsto C\beta$ on $\Gamma^m$ is injective, since
+$C$ has full column rank and the ordered group $\Gamma$ is
+torsion-free. Consequently $\vrv(v)$ has finite image as well.
+These finitely many tuples are individually $\mathbb S$-definable:
+a finite definable subset of the ordered set $\Gamma^m$ can be
+enumerated lexicographically. Refine $P_a$ by these value tuples
+and fix one, denoted by $\beta$.
+
+On this piece, membership of $(v,w)$ depends only on $v$ and
+$\vrv(w)$. Indeed, changing $w$ within its value fiber keeps all
+coordinate values of $u=h_A(v,w)$ unchanged, while $NA=(C\ 0)$
+keeps every active character unchanged. Property (2) applies in
+both directions. Therefore this piece is the full inverse image
+of a definable relation
+\[
+ T\subseteq\beta^\sharp\times\Gamma^{n-m}
+\]
+under $(v,w)\mapsto(v,\vrv(w))$.
+
+\emph{Separate the residue and value data over the original base.}
+Temporarily choose a point of $\beta^\sharp$ to identify this
+fiber with a residue-field torus. Residue-field/Gamma
+orthogonality then implies that only finitely many distinct sets
+\[
+ T_\eta=\{v\in\beta^\sharp:(v,\eta)\in T\},
+ \qquad \eta\in\Gamma^{n-m},
+\]
+occur. This finiteness does not retain the chosen point as a
+parameter.
+
+We spell out descent to $\mathbb S$. Put
+$\Gamma_0=\dcl^{\mathrm{eq}}(\mathbb S)\cap\Gamma$.
+The equivalence relation
+\[
+ \eta\sim\eta' \quad\Longleftrightarrow\quad
+ \forall v\in\beta^\sharp\
+ \big((v,\eta)\in T\ \longleftrightarrow\ (v,\eta')\in T\big)
+\]
+is $\mathbb S$-definable. By the original-base Gamma
+parameter-control consequence of quantifier elimination, it is
+definable in the pure ordered divisible group over $\Gamma_0$.
+The standing nontriviality assumption makes $\Gamma_0$ a
+nontrivial divisible ordered subgroup, so
+$\Gamma_0\preceq\Gamma$. If there are $q$ equivalence classes,
+the assertion that $q$ pairwise inequivalent representatives
+exist is a first-order assertion over $\Gamma_0$. Hence we may
+take representatives $\eta_1,\ldots,\eta_q\in\Gamma_0^{n-m}$.
+Set
+\[
+ I_j=\{\eta:\eta\sim\eta_j\},\qquad V_j=T_{\eta_j}.
+\]
+These sets are definable over $\mathbb S$, the $I_j$ form a
+partition, and
+$T\cap(\beta^\sharp\times I_j)=V_j\times I_j$.
+Discard the empty residue fibers. Each remaining piece has
+full RV preimage $V_j\times I_j^\sharp$ and
+$\vrv(V_j)=\{\beta\}$.
+
+The corresponding original value piece is
+$D_j=A(\{\beta\}\times I_j)$. It lies in the chosen $P_a$:
+choose any $v\in V_j$ and lift each $\eta\in I_j$ to see this.
+The $D_j$ partition the value support of the fixed-beta piece
+of $X_a$.
+Doing this for each $a$ proves the assertion with
+$M_i=A^{-1}$. The cases $m=0$, $m=n$ and $U=\varnothing$
+are covered by the usual empty-tuple conventions.
+\end{proof}
+
+% BEGIN REFEREE INSERTION R080
+\ResolvedRefereeRemark{080}{Error}{Integer column operations}{%
+\textit{Original source line 1789.}\quad The parenthetical assertion about $\mathbb Z$ is incorrect: every matrix in $\mathrm{GL}_n(\mathbb Z)$ is a product of elementary integer column additions, column interchanges, and sign changes. One may simply invoke column Hermite reduction to obtain $N_iM_i=(C_i\;0)$ with $C_i$ of full column rank. Then $C_i\vrv(v)=\alpha_i$ determines the first coordinates uniquely, which supplies the asserted product decomposition. Also, the cited item 3.25 of \cite{hrushovski:kazhdan:integration:vf} is a corollary, and ``Lemmas~3.21'' should be ``Lemma~3.21''.
+}{The author approved the replacement on November 13, 2026. Lemma~\ref{coh:decom} now has an explicit original-base monomial decomposition and a proof from guarded RV normal form, integer reduction, and residue/Gamma separation. The incorrect parenthetical and the assumed HK 3.21/3.25 input are removed.}
+% END REFEREE INSERTION R080
