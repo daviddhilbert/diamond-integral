@@ -11,17 +11,27 @@ permissions:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
   build:
     name: Build pinned Lean project
     runs-on: ubuntu-latest
-    timeout-minutes: 180
+    timeout-minutes: 360
     steps:
       - uses: actions/checkout@v5
         with:
           persist-credentials: false
+
+      - name: Restore compiled Lean files
+        id: lean-cache
+        uses: actions/cache/restore@v5
+        with:
+          path: .lake
+          key: lean-build-v2-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('lean-toolchain', 'lake-manifest.json') }}-${{ github.sha }}
+          restore-keys: |
+            lean-build-v2-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('lean-toolchain', 'lake-manifest.json') }}-
+            lake-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('lean-toolchain') }}-${{ hashFiles('lake-manifest.json') }}-
 
       - name: Set up Lean and download the Mathlib cache
         uses: leanprover/lean-action@v1
@@ -31,6 +41,7 @@ jobs:
           test: 'false'
           lint: 'false'
           use-mathlib-cache: 'true'
+          use-github-cache: 'false'
 
       - name: Prepare verified dependency sources
         run: |
@@ -38,6 +49,15 @@ jobs:
 
       - name: Build the Lean project
         run: lake -R build
+
+      # The setup action completes before our external build. Saving its cache
+      # there would retain Mathlib alone and discard the expensive proof build.
+      - name: Save compiled Lean files
+        if: steps.lean-cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v5
+        with:
+          path: .lake
+          key: ${{ steps.lean-cache.outputs.cache-primary-key }}
 
       - name: Audit section 2 exports
         run: lake env python3 'section 2/verify.py'
