@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 360
     env:
-      LEAN_NUM_THREADS: "4"
+      LEAN_NUM_THREADS: "2"
       PYTHONUNBUFFERED: "1"
     steps:
       - uses: actions/checkout@v5
@@ -58,7 +58,7 @@ jobs:
 
       - name: Build the Lean project
         id: build
-        run: lake -R build
+        run: python3 verification/build_with_diagnostics.py
 
       # The setup action completes before our external build. Saving its cache
       # there would retain Mathlib alone and discard the expensive proof build.
@@ -105,3 +105,5 @@ jobs:
             section 6/verification/types-and-axioms.txt
             verification/upstream-weighted-zero-upgrade/
             .scratch/shared-foundation.json
+            .scratch/ci-build.log
+            .scratch/ci-build-resources.log
