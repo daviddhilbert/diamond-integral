@@ -35,7 +35,7 @@ roots = ["«section 3».AdditiveSemiringTransport", "«section 3».BalancedSquar
 [[require]]
 name = "integration_in_acvf"
 git = "https://github.com/daviddhilbert/integration-in-ACVF.git"
-rev = "7675d31332f20421c803ea16af84964ed74cd51f"
+rev = "2c29c5b848f9077274774125222bba563cdc11b4"
 
 [[lean_lib]]
 name = "section 6"

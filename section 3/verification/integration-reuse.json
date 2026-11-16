@@ -1,6 +1,6 @@
 {
   "repository": "https://github.com/daviddhilbert/integration-in-ACVF",
-  "revision": "7675d31332f20421c803ea16af84964ed74cd51f",
+  "revision": "2c29c5b848f9077274774125222bba563cdc11b4",
   "consumer_compatibility_manifest": "section 3/reuse/integration-manifest.json",
   "status": "Proof export inventory; consult VERIFICATION.json source hashes for the verified checkpoint.",
   "exports": [
@@ -223,5 +223,6 @@
       "IntegrationInACVF.Section4.RelativeObstaclePreparation.zero_obstacles: proper OpenRadius in the auxiliary obstacle premise",
       "IntegrationInACVF.Section5.relative_zero_obstacles: proper OpenRadius in the auxiliary obstacle premise"
     ]
-  }
+  },
+  "previous_revision": "7675d31332f20421c803ea16af84964ed74cd51f"
 }

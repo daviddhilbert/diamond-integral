@@ -1,0 +1,114 @@
+@DiamondIntegral.Section5.completed18NativePositiveLift_kernel : ∀ {M : Type}
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {κ : Cardinal.{0}} (hκ : LT.lt.{1} Cardinal.aleph0.{0} κ)
+  (hs : SpecialTransformations.Section3.Saturated M κ)
+  (h00 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00),
+  CanonicalStructure.IsCanonical →
+    ∀ (hr : LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ) (FBase : SpecialTransformations.Section3.VFFieldBase B.real),
+      LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) κ →
+        ∀ (δ : SpecialTransformations.Section3.Values.Gamma),
+          Membership.mem.{0, 0} B.gamma δ →
+            LT.lt.{0} 1 δ →
+              ∀ (hB : SpecialTransformations.Section3.GammaParameters.VFGammaGeneratedBase B),
+                Eq.{1} (ringConGen.{0} IntegrationInACVF.Section6.FiniteRV.gammaNonzeroBasicRelation)
+                  (RingCon.ker.{0, 0} (IntegrationInACVF.Section6.FiniteRV.gammaNonzeroGlobalLiftAt ⋯ hs h00 hr hB))
+'DiamondIntegral.Section5.completed18NativePositiveLift_kernel' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section5.completed18LocalLift_kernel : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {hc : CanonicalStructure.IsCanonical} {B : SpecialTransformations.Section3.GammaParameters.Base} {κ : Cardinal.{0}}
+  (hκ : LT.lt.{1} Cardinal.aleph0.{0} κ) (hs : SpecialTransformations.Section3.Saturated M κ)
+  (h00 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00)
+  (hr : LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ) (FBase : SpecialTransformations.Section3.VFFieldBase B.real),
+  LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) κ →
+    ∀ (δ : SpecialTransformations.Section3.Values.Gamma),
+      Membership.mem.{0, 0} B.gamma δ →
+        LT.lt.{0} 1 δ →
+          ∀ (hB : SpecialTransformations.Section3.GammaParameters.VFGammaGeneratedBase B),
+            Eq.{1} (DiamondIntegral.Section3.gammaGroundRVSpecialCongruence hc B)
+              (RingCon.ker.{0, 0} (DiamondIntegral.Section5.completed18LocalLift ⋯ hs h00 hr hB))
+'DiamondIntegral.Section5.completed18LocalLift_kernel' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section5.completed18GroundLiftInput : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (C : DiamondIntegral.Section3.GammaGroundContext M) →
+        (hc : CanonicalStructure.IsCanonical) → DiamondIntegral.Section3.YinGammaGroundUnmeasuredLiftInput C hc
+'DiamondIntegral.Section5.completed18GroundLiftInput' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@DiamondIntegral.Section5.bounded_fubini_discharged : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {hc : CanonicalStructure.IsCanonical} {G : DiamondIntegral.Section3.GammaGroundContext M}
+  (A A' : DiamondIntegral.Section3.GammaGroundFiniteVFObject hc G.base) {p q : ℕ}
+  (C : DiamondIntegral.Section3.GammaGroundDefSet hc G.base (SpecialTransformations.Section4.rawMixedSpace p q))
+  (f : DiamondIntegral.Section3.GammaGroundMap A.domain C) (f' : DiamondIntegral.Section3.GammaGroundMap A'.domain C),
+  (∀ (z : Fin (HAdd.hAdd.{0, 0, 0} p q) → M),
+      Membership.mem.{0, 0} (DiamondIntegral.Section5.nativeMixedDomain C) z →
+        DiamondIntegral.Section5.NativeBoundedVFFibreLiftEquality ⋯ ⋯ ⋯ ⋯ ⋯ ⋯ ⋯ f f' z) →
+    Eq.{1} ((DiamondIntegral.Section5.section5BoundedVFIntegral G hc) (DiamondIntegral.Section5.nativeVFClass A))
+      ((DiamondIntegral.Section5.section5BoundedVFIntegral G hc) (DiamondIntegral.Section5.nativeVFClass A'))
+'DiamondIntegral.Section5.bounded_fubini_discharged' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@DiamondIntegral.Section5.geometric_fubini_discharged : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {hc : CanonicalStructure.IsCanonical} {G : DiamondIntegral.Section3.GammaGroundContext M}
+  (A A' : DiamondIntegral.Section3.GammaGroundFiniteVFObject hc G.base) {p q : ℕ}
+  (C : DiamondIntegral.Section3.GammaGroundDefSet hc G.base (SpecialTransformations.Section4.rawMixedSpace p q))
+  (f : DiamondIntegral.Section3.GammaGroundMap A.domain C) (f' : DiamondIntegral.Section3.GammaGroundMap A'.domain C),
+  (∀ (z : Fin (HAdd.hAdd.{0, 0, 0} p q) → M),
+      Membership.mem.{0, 0} (DiamondIntegral.Section5.nativeMixedDomain C) z →
+        DiamondIntegral.Section5.NativeGeometricVFFibreLiftEquality ⋯ ⋯ ⋯ ⋯ ⋯ ⋯ ⋯ f f' z) →
+    Eq.{1} ((DiamondIntegral.Section5.section5GeometricVFIntegral G hc) (DiamondIntegral.Section5.nativeVFClass A))
+      ((DiamondIntegral.Section5.section5GeometricVFIntegral G hc) (DiamondIntegral.Section5.nativeVFClass A'))
+'DiamondIntegral.Section5.geometric_fubini_discharged' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section5.PuiseuxOriginal.corollary_global_vanishing_discharged : ∀ {N : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV N]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} N SpecialTransformations.Milestone0.Axioms.ACVF]
+  (e :
+    FirstOrder.Language.ElementaryEmbedding.{0, 0, 0, 0} SpecialTransformations.Milestone0.LRV
+      DiamondIntegral.Section5.PuiseuxOriginal.Carrier N)
+  (G : DiamondIntegral.Section3.GammaGroundContext N)
+  (hB :
+    Eq.{1} G.base.real
+      (Set.range.{0, 1}
+        (Function.comp.{1, 1, 1} (⇑e) DiamondIntegral.Section5.PuiseuxOriginal.laurentCoefficientEnumeration)))
+  (hc : CanonicalStructure.IsCanonical)
+  (hγ :
+    ∀ (γ : SpecialTransformations.Section3.Values.Gamma),
+      Membership.mem.{0, 0} G.base.gamma γ →
+        SpecialTransformations.Section3.GammaParameters.GammaDefinableClosureAtBase
+          (DiamondIntegral.Section5.EmptyGammaGround.base G.base.real) γ)
+  {X Y : DiamondIntegral.Section5.ComplexVariety} (f : X.Morphism Y)
+  (c : DiamondIntegral.Section5.EquivariantVariety.AffineVarietyPresentation X.trivialObject)
+  (d : DiamondIntegral.Section5.EquivariantVariety.AffineVarietyPresentation Y.trivialObject),
+  let A := DiamondIntegral.Section5.PuiseuxOriginal.varietyNativeObject e G hB hc c;
+  let C := (DiamondIntegral.Section5.PuiseuxOriginal.varietyNativeObject e G hB hc d).domain;
+  have hC := ⋯;
+  have F := DiamondIntegral.Section5.PuiseuxOriginal.varietyNativeMorphism e G hB hc c d f.trivialMorphism;
+  have hnt := ⋯;
+  (∀ (b : ↑Y.trivialObject.fieldPoint),
+      DiamondIntegral.Section5.GroundTaggedIntrinsicFibreVanishes ⋯ hnt hγ A C hC F
+        (DiamondIntegral.Section5.completedGroundTaggedFieldLiftInputs G hc hnt
+          (DiamondIntegral.Section5.PuiseuxOriginal.varietyNativeObject e G hB hc d).vfArity
+          (DiamondIntegral.Section5.PuiseuxOriginal.varietyNativeObject e G hB hc d).rvArity)
+        ((DiamondIntegral.Section5.PuiseuxOriginal.varietyNativePointEquiv e G hB hc d) b)) →
+    Eq.{2} (DiamondIntegral.Section5.PuiseuxOriginal.complexVarietyVolume_discharged e G hB hc hγ X) 0
+'DiamondIntegral.Section5.PuiseuxOriginal.corollary_global_vanishing_discharged' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section5.completed_section5_input : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {κ : Cardinal.{0}} (hκ : LE.le.{1} Cardinal.aleph0.{0} κ) (hs : SpecialTransformations.Section3.Saturated M κ)
+  (B : SpecialTransformations.Section3.GammaParameters.Base) (hr : LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ),
+  LT.lt.{1} Cardinal.aleph0.{0} κ →
+    FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00 →
+      ∀ (δ : SpecialTransformations.Section3.Values.Gamma),
+        Membership.mem.{0, 0} B.gamma δ → LT.lt.{0} 1 δ → IntegrationInACVF.Section6.Section5TwoOrderInput B hκ hs hr
+'DiamondIntegral.Section5.completed_section5_input' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]

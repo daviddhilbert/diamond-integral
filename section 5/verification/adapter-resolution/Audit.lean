@@ -1,0 +1,19 @@
+import «section 5».VarietyCorollaryDischarged
+import «section 5».Completed18Section5Input
+set_option pp.universes true
+set_option pp.fullNames true
+set_option format.width 120
+#check @DiamondIntegral.Section5.completed18NativePositiveLift_kernel
+#print axioms DiamondIntegral.Section5.completed18NativePositiveLift_kernel
+#check @DiamondIntegral.Section5.completed18LocalLift_kernel
+#print axioms DiamondIntegral.Section5.completed18LocalLift_kernel
+#check @DiamondIntegral.Section5.completed18GroundLiftInput
+#print axioms DiamondIntegral.Section5.completed18GroundLiftInput
+#check @DiamondIntegral.Section5.bounded_fubini_discharged
+#print axioms DiamondIntegral.Section5.bounded_fubini_discharged
+#check @DiamondIntegral.Section5.geometric_fubini_discharged
+#print axioms DiamondIntegral.Section5.geometric_fubini_discharged
+#check @DiamondIntegral.Section5.PuiseuxOriginal.corollary_global_vanishing_discharged
+#print axioms DiamondIntegral.Section5.PuiseuxOriginal.corollary_global_vanishing_discharged
+#check @DiamondIntegral.Section5.completed_section5_input
+#print axioms DiamondIntegral.Section5.completed_section5_input

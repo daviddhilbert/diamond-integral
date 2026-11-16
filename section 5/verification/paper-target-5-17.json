@@ -57,9 +57,10 @@
     "YinGammaGroundUnmeasuredLiftInput": {
       "constructor": "DiamondIntegral.Section5.completed18GroundLiftInput",
       "source": "section 5/Completed18GroundLiftInput.lean",
-      "proof": "The completed [18] Section 5 producers instantiate its Section 6 two-order registry. Actual RV and VF presentation equivalences identify the positive lift and its exact special kernel. RV-pullback preparation and zero strata prove positive surjectivity. The small generated definable closure is transported back to the original GammaGroundContext base through proved definability equivalence.",
+      "proof": "The published generated-base unmeasured Section 6 kernel closes the native lift directly, without a universal two-order registry or dependency-source patch. Actual RV and VF presentation equivalences identify the positive lift and its exact special kernel. RV-pullback preparation and zero strata prove positive surjectivity. The small generated definable closure is transported back to the original GammaGroundContext base through proved definability equivalence.",
       "intrinsic_field_family": "DiamondIntegral.Section5.completedGroundTaggedFieldLiftInputs",
-      "unfinished_integration_section7_input": false
+      "unfinished_integration_section7_input": false,
+      "dependency_scope_adapters": "retired; direct proved generated-base kernel"
     }
   },
   "cross_section_material_excluded": true

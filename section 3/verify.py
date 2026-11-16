@@ -16,7 +16,7 @@ SCRATCH = SECTION / ".scratch"
 RECORD = SECTION / "verification"
 ALLOWED = {"propext", "Classical.choice", "Quot.sound"}
 PINS = {
-    "integration_in_acvf": "7675d31332f20421c803ea16af84964ed74cd51f",
+    "integration_in_acvf": "2c29c5b848f9077274774125222bba563cdc11b4",
     "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
     "acvf_qe": "939346b0a99899e22a873479364e3cc5d142731c",
     "special_transformations": "25852c85a31c67069b148bd31348128318303510",

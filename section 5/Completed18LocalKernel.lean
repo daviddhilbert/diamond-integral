@@ -25,7 +25,7 @@ theorem completed18LocalLift_kernel (hκ : Cardinal.aleph0 < κ) (hs : Saturated
     (hB : VFGammaGeneratedBase B) :
     gammaGroundRVSpecialCongruence hc B=RingCon.ker (completed18LocalLift hκ.le hs h00 hr hB) := by
   ext x y
-  rw [completed18RVSpecial_iff,completed18NativePositiveLift_kernel hκ hs h00 hr FBase hγ δ hδ hδ1 hB]
+  rw [completed18RVSpecial_iff,completed18NativePositiveLift_kernel hκ hs h00 hc hr FBase hγ δ hδ hδ1 hB]
   change gammaNonzeroGlobalLiftAt hκ.le hs h00 hr hB (completed18RVPositiveEquiv x)=
     gammaNonzeroGlobalLiftAt hκ.le hs h00 hr hB (completed18RVPositiveEquiv y) ↔
       nativeVFPositiveGround (gammaNonzeroGlobalLiftAt hκ.le hs h00 hr hB (completed18RVPositiveEquiv x))=

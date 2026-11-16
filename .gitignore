@@ -4,3 +4,6 @@
 /section 4/.scratch/
 __pycache__/
 /verification/.section-boundary-*.json
+
+# Local migration and headline checks
+/.scratch/

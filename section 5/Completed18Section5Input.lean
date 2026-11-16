@@ -12,7 +12,10 @@ namespace DiamondIntegral.Section5
 variable {M : Type} [LRV.Structure M] [M ⊨ Axioms.ACVF]
 
 theorem completed_section5_input {κ : Cardinal} (hκ : Cardinal.aleph0 ≤ κ) (hs : SpecialTransformations.Section3.Saturated M κ) :
-    IntegrationInACVF.Section6.Section5TwoOrderInputAll hκ hs := by
+    ∀ (B : SpecialTransformations.Section3.GammaParameters.Base (M := M))
+      (hr : Cardinal.mk B.real < κ), Cardinal.aleph0 < κ → M ⊨ Axioms.ACVF00 →
+      ∀ δ : SpecialTransformations.Section3.Values.Gamma (M := M), δ ∈ B.gamma → 1 < δ →
+        IntegrationInACVF.Section6.Section5TwoOrderInput B hκ hs hr := by
   intro B hr hκ' h00 δ hδ hδ1
   exact completed_two_order_input hκ' hs h00 B hr δ hδ hδ1
 

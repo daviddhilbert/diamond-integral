@@ -1,5 +1,16 @@
 # Section 5 — Original-language monomial decomposition and Fubini
 
+Current adapter-resolution update, November 16, 2026: the two scoped [18]
+Section 6 source adapters have been removed. `Completed18NativePositiveKernel`
+uses the published generated-base kernel in
+`IntegrationInACVF.Section7.CompletedSection6`, through an explicit map from
+original VF objects to its closed VF presentation. The exact original positive
+lift and kernel, both Fubini conclusions and the variety corollary are retained.
+No universal two-order registry is assumed and no dependency source is patched.
+The physical Section 7 location contains the completed unmeasured Section 6
+kernel interface; no open Section 7 or measured-integration result is an input.
+`prepare-dependencies.py` now checks published sources without changing them.
+
 Current verified status, November 15, 2026: the requested scope is complete,
 and both former earlier-section inputs are discharged.
 `GammaQE.gamma_piecewise_rational_affine` proves the exact Gamma-linearity

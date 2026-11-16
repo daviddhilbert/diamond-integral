@@ -1,7 +1,7 @@
 {
-  "base_revision": "7675d31332f20421c803ea16af84964ed74cd51f",
+  "base_revision": "2c29c5b848f9077274774125222bba563cdc11b4",
   "upstream_completed_section5_revision": "73aa1e6c9218bcb01dd67e03cfbe3ec9115ac240",
-  "purpose": "Verify 250 completed Section 5 files already present byte-for-byte in the published upstream tree and apply only the two existing Section 6 hypothesis-scope adapters. The 39 proper-open-radius sources are now published upstream and checked by the Section 2 and Section 3 preparation scripts.",
+  "purpose": "Verify the 250 completed Section 5 sources already published upstream. No dependency source is patched.",
   "files": {
     "section 5/IntegrationSection5/ActiveUnaryCanonical.lean": {
       "before": "7e6158d0ac7751a8285ecd53d2d49082b166bbe703737098c8a541316957f08b",
@@ -1002,15 +1002,8 @@
     "section 5/IntegrationSection5/VerticalMeanTrace.lean": {
       "before": "88c8ee3825c74e89cc6a81e0b689b260c4193c89b5323b8a1b6ae1611da63b8b",
       "after": "88c8ee3825c74e89cc6a81e0b689b260c4193c89b5323b8a1b6ae1611da63b8b"
-    },
-    "section 6/IntegrationSection6/ArbitraryContractionOrders.lean": {
-      "before": "029acb41de5d4a305976b4f0816e2a73756a66593746644e9f011d6312496407",
-      "after": "f9764a68e60cdc7665a31bedec02b15bd43694e39c796f10014cf91f10325dd7"
-    },
-    "section 6/IntegrationSection6/ContractionOrderComparison.lean": {
-      "before": "901855823e52cfd31af3df91e12e981c4f8d4612f0a1c970f46c31d60d4318e6",
-      "after": "3a1a345eb348a7574f97c133aaa660045b6872eecf95bcb9abf9e25381300070"
     }
   },
-  "historical_base_revision": "7d4acc730496b3bd05a22c268ffd89540ca694f9"
+  "historical_base_revision": "7d4acc730496b3bd05a22c268ffd89540ca694f9",
+  "mode": "published-check-only"
 }

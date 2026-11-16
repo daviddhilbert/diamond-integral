@@ -1,0 +1,48 @@
+{
+  "status": "PASS_LOCAL",
+  "scope": "Replace both scoped dependency source adapters with the published generated-base unmeasured kernel, preserving the original positive lift and all final Section 5 conclusions.",
+  "base_commit": "ba6249a11b39e8e71fd0130ab0087e7185b95433",
+  "integration_revision": "2c29c5b848f9077274774125222bba563cdc11b4",
+  "root_build": "PASS (15388 jobs)",
+  "sections": {
+    "2": {
+      "exit": 0,
+      "log_sha256": "c1cc9e17043212ff1f0975f8e940fc508d625fc5c38bbd14c9164961d2fd32bf"
+    },
+    "3": {
+      "exit": 0,
+      "log_sha256": "c7506d6635bff3109fe2169c87cbf979442af480bb96e21957d0cec9b1f673dc"
+    },
+    "4": {
+      "exit": 0,
+      "log_sha256": "92cb06df3299ee2c634c037bcb47cbf79128df31f9251fdf34722ee7c2073661"
+    },
+    "5": {
+      "exit": 0,
+      "log_sha256": "3b85de3a128007cb7e18ed6c9ba19cde0928a794f10292270ba9edccbd26de4d"
+    },
+    "6": {
+      "exit": 0,
+      "log_sha256": "5ca5455b3434d29f4c9ba79e91e34158c881dde06515eb7a86c0f9db6e9d4627"
+    }
+  },
+  "weighted_zero_compatibility": "PASS (37 interfaces)",
+  "kernel_and_final_theorem_signatures": "PASS; full printed signatures in signatures-and-axioms.txt",
+  "logical_principles": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "dependency_source_patches": {},
+  "accepted_new_mathematical_inputs": [],
+  "cache_cleanup": "PASS: clean state, recognized retired source identities, unknown-edit preservation",
+  "source_sha256": {
+    "section 5/Completed18NativePositiveKernel.lean": "a51382a315c1199801e4567dd5ddb0fccd4364ee95d87273cdff8236c26a17a9",
+    "section 5/Completed18LocalKernel.lean": "6f9a5ce1eaac401bcab7703bcd081d3ed5cd94fa91ea19ac717eb2cf26675c6d",
+    "section 5/Completed18Section5Input.lean": "fe62d50ab0a93c7132502084fd69c507e5211b52be213fca3ab162b234f2d740",
+    "section 5/prepare-dependencies.py": "aabbb27dd8f2fe88eddd0a2e230b75f9dda3801416414e7e095d1557d4a2fdd0",
+    "section 5/clean-retired-ci-adapters.py": "dc344022f439e105f02fc2db4ea6239885f4ce45abcad8427c38fba5bd09a487",
+    "lakefile.toml": "6cfedd06c59e2cf0aa1f6c895cab2105455e95e49b3a445e47ca995acca7ec03",
+    "lake-manifest.json": "bca47d1ed71b0052b719f1f784df0843e3cefc4f0185ec3a708d783695dc2285"
+  }
+}

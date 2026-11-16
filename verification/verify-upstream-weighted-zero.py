@@ -14,7 +14,7 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'verification/upstream-weighted-zero-upgrade'
 PINS = {
     'special_transformations': '25852c85a31c67069b148bd31348128318303510',
-    'integration_in_acvf': '7675d31332f20421c803ea16af84964ed74cd51f',
+    'integration_in_acvf': '2c29c5b848f9077274774125222bba563cdc11b4',
 }
 ALLOWED = {'propext', 'Classical.choice', 'Quot.sound'}
 SPECIAL = 'SpecialTransformations.Section10.'
