@@ -11,6 +11,15 @@ baseline. The next active mathematical task is Section 7. The note covers
 all eight sections and the working protocol, including the Section 8
 consequences that must remain visible while Section 7 is revised.
 
+**New upstream compatibility issue, November 15:** read
+[the weighted-degree-zero audit](UPSTREAM-WEIGHTED-ZERO-AUDIT.md) before
+using corrected Integration in ACVF / Special transformations measured
+interfaces. This repository already retains Gamma weights in degree zero,
+including mixed products, zero lifts and RES/tensor coefficients. Four
+Section 3 measured lift/kernel inputs still need matching corrected
+upstream producers. Current pinned proofs do not certify a future pin
+migration. This issue is separate from the adopted aperture repair.
+
 ## Read these sources first
 
 1. [AGENTS.md](AGENTS.md), then this note.
@@ -154,6 +163,13 @@ quotient. The remaining mismatch in Section 7 is intentional pending this
 next work, not proof that its scalar theorem has already been repaired.
 
 ## Section 7: construction and proof plan
+
+First check the [weighted-zero compatibility boundary](UPSTREAM-WEIGHTED-ZERO-AUDIT.md):
+preserve the entire density on degree-zero factors and weighted finite
+families. Do not substitute an ordinary-zero upstream measured theorem
+for a weighted local interface, and do not infer I = J_var from density
+absorption. The local Section 6 constructions remain checked at the
+recorded pins.
 
 Read the main statements and proofs independently before the referee notes.
 The existing [mathematical draft](<section 6/reference/downstream-kernel-and-preservation-draft.tex>)

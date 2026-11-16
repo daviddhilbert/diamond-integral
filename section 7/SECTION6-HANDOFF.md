@@ -4,6 +4,12 @@ For continuation in another program, read the [full-paper handoff](../HANDOFF.md
 first. It includes every section, the working protocol, source priorities,
 build instructions and the detailed Section 7 plan.
 
+Also read the [new weighted-zero compatibility audit](../UPSTREAM-WEIGHTED-ZERO-AUDIT.md).
+The local Gamma-measured categories already retain degree-zero weights;
+corrected upstream measured lift/kernel interfaces still require exact
+consumer bridges. Keep weighted finite families and all mixed products
+in the Section 7 proof, independently of the aperture repair.
+
 Definition 6.11 is now the bounded variable-aperture definition, and 6.38
 is proved for that precise class. Section 4 defines the independent
 relative annular ideal J_var and proves its retraction and comparison

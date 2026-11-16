@@ -1,5 +1,11 @@
 # Aperture revision handoff from Section 6
 
+The [weighted-zero compatibility audit](../UPSTREAM-WEIGHTED-ZERO-AUDIT.md)
+also applies: the local coefficient categories retain Gamma weights in
+degree zero. Check the actual weight-preserving or weight-forgetting
+realization maps and any corrected upstream measured interfaces before
+claiming the final specialization comparison.
+
 Section 6 is complete under revised 6.11. The intended synchronized 7.2
 and revised 7.26 kernel theorem remain for the Section 7 session.
 Section 4 now defines the relative ideal J_var, proves ordinary retraction

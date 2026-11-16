@@ -10,6 +10,7 @@ supplied separately by the author.
 
 - [Working manuscript](<section 2/reference/diamond_integral_revision_annotated.tex>)
 - [Project instructions](AGENTS.md)
+- [Upstream weighted-degree-zero compatibility audit](UPSTREAM-WEIGHTED-ZERO-AUDIT.md)
 - [Section 7 handoff](<section 7/SECTION6-HANDOFF.md>)
 - [Section 8 handoff](<section 8/SECTION6-HANDOFF.md>)
 - [Current integrated verification](<section 6/verification/aperture-revision/integrated-audits.json>)

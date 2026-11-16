@@ -1,0 +1,134 @@
+{
+  "date": "2026-11-15",
+  "status": "SOURCE_REVIEW_WITH_EXISTING_COMPILED_EVIDENCE",
+  "proof_baseline": "da5441b92acbf4f58e2e1444f7aae353fb09e505",
+  "local_finding": "Gamma-valued degree-zero weights are already retained in the reviewed local categories, mixed products, zero lifts and RES/tensor coefficients. No corresponding local weight-loss defect identified in these paths.",
+  "upstream_decision": "Author approved weighted zero objects/families in Integration in ACVF and Special transformations; implementation/publication of that migration is not certified here.",
+  "future_upstream_compatibility_verified": false,
+  "new_lean_migration_claimed": false,
+  "manuscript_definitions_changed": false,
+  "dependency_pins_changed": false,
+  "measured_inputs_requiring_corrected_producers": [
+    "YinMeasuredLiftInput",
+    "YinDegreeMeasuredLiftInput",
+    "YinGammaGroundMeasuredLiftInput",
+    "YinGammaGroundDegreeMeasuredLiftInput"
+  ],
+  "ordinary_section5_producer": "Completed18GroundLiftInput constructs unmeasured inputs and does not discharge the four measured inputs.",
+  "aperture_repair": "Independent: weighted coefficients neither supply original-base RV apertures/continuous VF endpoints nor establish I=J_var.",
+  "reviewed_sources": [
+    {
+      "path": "section 3/RVVolumeForms.lean",
+      "sha256": "e43e0298c7d844327696b85adde1053f4119b7e1fcd8f18a6eca991a4b07f396",
+      "existing_audit": "section 3/verification/VERIFICATION.json"
+    },
+    {
+      "path": "section 3/MeasuredVFZero.lean",
+      "sha256": "09e16497d70fc2fd42b3300a53b5341e552a0cc61b785affd28f4dbc35429f51",
+      "existing_audit": "section 3/verification/VERIFICATION.json"
+    },
+    {
+      "path": "section 3/GammaGroundMeasuredVFZero.lean",
+      "sha256": "0a86606e5cb6014e2196f60266e20420affddbb1251c7c37edbf1017b9881f0f",
+      "existing_audit": "section 3/verification/VERIFICATION.json"
+    },
+    {
+      "path": "section 3/MeasuredRVProducts.lean",
+      "sha256": "749e5e749ab749d56d85307c58c244ae511e86e073dbb8280ffc918d23d3bea5",
+      "existing_audit": "section 3/verification/VERIFICATION.json"
+    },
+    {
+      "path": "section 3/MeasuredVFProducts.lean",
+      "sha256": "b4ef77632bf9443608cc44ae009e7977ba9936f1150a994f332bd0136a22db3b",
+      "existing_audit": "section 3/verification/VERIFICATION.json"
+    },
+    {
+      "path": "section 3/GammaGroundMeasuredRVProducts.lean",
+      "sha256": "a65344ac132ec0cbf36be31be3d7662c2f1b828610d7446231d75e66ba05def0",
+      "existing_audit": "section 3/verification/VERIFICATION.json"
+    },
+    {
+      "path": "section 3/GammaGroundMeasuredVFProducts.lean",
+      "sha256": "0ebb1fa38c01b9b61e07630cc37c127ed575c5701292fa3a94507abd52cbf4ba",
+      "existing_audit": "section 3/verification/VERIFICATION.json"
+    },
+    {
+      "path": "section 3/GammaGroundZeroMeasuredLift.lean",
+      "sha256": "51c0ebfbc75cca6871c5f234775b35f0f197c2c8dd4797c4b0a8c4414d11b645",
+      "existing_audit": "section 3/verification/VERIFICATION.json"
+    },
+    {
+      "path": "section 3/GammaVolumeCategories.lean",
+      "sha256": "988e789516318a51ca9191ff68d2d1839457780bd74c9809df852fece191f39a",
+      "existing_audit": "section 3/verification/VERIFICATION.json"
+    },
+    {
+      "path": "section 3/GammaGroundGammaVolumeCategories.lean",
+      "sha256": "4c009f0a452fd85afcbcb3186bd9cce92c5bb6e44d5ca5464cf2f0b6197bd31e",
+      "existing_audit": "section 3/verification/VERIFICATION.json"
+    },
+    {
+      "path": "section 3/MeasuredTensorRankZero.lean",
+      "sha256": "69882af0c90921a307d0059be1d2c9115b99654ec22ac867c62f6fb03dd9c70f",
+      "existing_audit": "section 3/verification/VERIFICATION.json"
+    },
+    {
+      "path": "section 3/CitedMeasuredIntegral.lean",
+      "sha256": "0025f444f37fe56ef360b2e0926eff3e14d03dfff6cc96f610636ecd4ab72c64",
+      "existing_audit": "section 3/verification/VERIFICATION.json"
+    },
+    {
+      "path": "section 3/GammaGroundCitedMeasuredIntegral.lean",
+      "sha256": "19c898cd101869fb97793d979b38dea4d302172f3d198e7987e2d080427f1b31",
+      "existing_audit": "section 3/verification/VERIFICATION.json"
+    },
+    {
+      "path": "section 4/RVZeroWeightedCount.lean",
+      "sha256": "7b4e0833b6e183bfe168cbf66928f84d5c5d902f47121f6f13e7d8ee44879536",
+      "existing_audit": "section 4/verification/status.json"
+    },
+    {
+      "path": "section 4/RESWeightEmbedding.lean",
+      "sha256": "a039f4446b4f5333bb701624f76b6280233e93fe17600539990551d675d2d716",
+      "existing_audit": "section 4/verification/status.json"
+    },
+    {
+      "path": "section 4/VariableApertureMeasuredComparison.lean",
+      "sha256": "b26878d716cc3511a4aecf34bfcffec959a99a7a0266061e00c53739f4553bf4",
+      "existing_audit": "section 4/verification/status.json"
+    },
+    {
+      "path": "section 4/RelativeAnnularQuotient.lean",
+      "sha256": "7fca04139d5a39f4f796e7b5a113c822608f6396855845159dfcb04de5ddf559",
+      "existing_audit": "section 4/verification/status.json"
+    },
+    {
+      "path": "section 5/Completed18GroundLiftInput.lean",
+      "sha256": "dc30551c8c8404c936775b856707830b9607291f1cd961af9511fb82e759c4b6",
+      "existing_audit": "section 5/verification/status.json"
+    },
+    {
+      "path": "section 6/ZeroArityRVIsomorphismLifts.lean",
+      "sha256": "1ed29c3fb009d720a7701f09ddce543071dbf3c7843c86983111b1624dde06cb",
+      "existing_audit": "section 6/verification/status.json"
+    }
+  ],
+  "existing_receipts": {
+    "3": {
+      "path": "section 3/verification/VERIFICATION.json",
+      "sha256": "1cc65b6dc36ae81d675bae0d95629dbbdf876c2d5aeff6961a257a0b0e87538f"
+    },
+    "4": {
+      "path": "section 4/verification/status.json",
+      "sha256": "71ec0c93422dc2c34ada722fa77e1908d4bb967b1af6b080fdaa1cda9dc7b6e6"
+    },
+    "5": {
+      "path": "section 5/verification/status.json",
+      "sha256": "6d0f6c84f095599deed1a56c2b7e1a2c48cd89eef0ead642549848283eae1baa"
+    },
+    "6": {
+      "path": "section 6/verification/status.json",
+      "sha256": "8fb6f974e1ef85e4bac65ca19b8bac2d369fc09d308a3c7e1b36beccc5194238"
+    }
+  }
+}
