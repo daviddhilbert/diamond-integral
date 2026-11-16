@@ -170235,5 +170235,3 @@ fun K [Field.{u_1} K] s hs =>
 'PuiseuxSeries.exists_common_index' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
 warning: integration_in_acvf: repository has local changes:
   /Users/yimu/Documents/Codex-Migration-20261112/projects/diamond integral/Section6/worktree/.lake/packages/integration_in_acvf
-warning: special_transformations: repository has local changes:
-  /Users/yimu/Documents/Codex-Migration-20261112/projects/diamond integral/Section6/worktree/.lake/packages/special_transformations

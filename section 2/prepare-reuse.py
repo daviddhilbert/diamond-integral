@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Apply the author-approved correction to the pinned companion library."""
+"""Verify the published companion sources, preserving the historical correction patch."""
 
 from __future__ import annotations
 
@@ -26,7 +26,10 @@ def prepare() -> dict:
     current = subprocess.check_output(
         ["git", "diff", "--no-ext-diff", "--binary", "--", "*.lean"], cwd=PACKAGE
     )
-    if current != patch.read_bytes():
+    if manifest.get("mode") == "published":
+        if current:
+            raise SystemExit("FAIL: published companion library has local Lean edits; preserving them")
+    elif current != patch.read_bytes():
         if current:
             raise SystemExit("FAIL: companion library has other Lean edits; leaving them untouched")
         subprocess.run(["git", "apply", "--check", str(patch)], cwd=PACKAGE, check=True)

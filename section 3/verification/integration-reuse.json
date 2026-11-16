@@ -1,6 +1,6 @@
 {
   "repository": "https://github.com/daviddhilbert/integration-in-ACVF",
-  "revision": "7d4acc730496b3bd05a22c268ffd89540ca694f9",
+  "revision": "7675d31332f20421c803ea16af84964ed74cd51f",
   "consumer_compatibility_manifest": "section 3/reuse/integration-manifest.json",
   "status": "Proof export inventory; consult VERIFICATION.json source hashes for the verified checkpoint.",
   "exports": [
@@ -212,7 +212,7 @@
   ],
   "later_export_review": {
     "review_date": "2026-11-12",
-    "revision": "7d4acc730496b3bd05a22c268ffd89540ca694f9",
+    "revision": "7675d31332f20421c803ea16af84964ed74cd51f",
     "upstream_status": "Section 4 checked; Section 5 remains in progress; Section 6 RV[k] integration checked relative to the explicit Section 5.8 input; Section 7 has no formalization verifier.",
     "remaining_upstream_input": "IntegrationInACVF.Section6.Section5TwoOrderInputAll",
     "parameter_boundary": "The source VFGammaGeneratedBase explicitly requires closureBase of VF/Gamma generators to equal the base. DiamondIntegral.GammaGroundContext records language-generation of its real substructure and a Gamma subgroup, without definable-closedness. No direct identification is made.",

@@ -73,3 +73,6 @@ jobs:
 
       - name: Audit section 6 and the bounded aperture revision
         run: lake env python3 'section 6/verify.py'
+
+      - name: Audit corrected upstream weighted-zero compatibility
+        run: lake env python3 verification/verify-upstream-weighted-zero.py

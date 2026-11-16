@@ -1,7 +1,5 @@
 warning: integration_in_acvf: repository has local changes:
   /Users/yimu/Documents/Codex-Migration-20261112/projects/diamond integral/Section6/worktree/.lake/packages/integration_in_acvf
-warning: special_transformations: repository has local changes:
-  /Users/yimu/Documents/Codex-Migration-20261112/projects/diamond integral/Section6/worktree/.lake/packages/special_transformations
 @DiamondIntegral.Section6.CentripetalData.core_false_of_focus_absent : ∀ {M : Type}
   [inst : SpecialTransformations.Milestone0.LRV.Structure M]
   [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set M} {n r : ℕ} {G : Type}

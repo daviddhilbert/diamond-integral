@@ -1,7 +1,5 @@
 warning: integration_in_acvf: repository has local changes:
   /Users/yimu/Documents/Codex-Migration-20261112/projects/diamond integral/Section6/worktree/.lake/packages/integration_in_acvf
-warning: special_transformations: repository has local changes:
-  /Users/yimu/Documents/Codex-Migration-20261112/projects/diamond integral/Section6/worktree/.lake/packages/special_transformations
 @[reducible] def DiamondIntegral.Section2.VF : (M : Type) →
   [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] → Type :=
 fun M [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] =>

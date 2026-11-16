@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "sections": {
+    "2": {
+      "status": "PASS",
+      "checked_source_hashes": 280,
+      "mismatches": []
+    },
+    "3": {
+      "status": "PASS",
+      "checked_source_hashes": 1016,
+      "mismatches": []
+    },
+    "4": {
+      "status": "PASS",
+      "checked_source_hashes": 631,
+      "mismatches": []
+    },
+    "5": {
+      "status": "PASS_SECTION5_REQUESTED_SCOPE_IN_RECORDED_CONTEXT",
+      "checked_source_hashes": 740,
+      "mismatches": []
+    },
+    "6": {
+      "status": "PASS",
+      "checked_source_hashes": 1287,
+      "mismatches": []
+    }
+  },
+  "focused_interfaces": 37,
+  "evidence_hashes_checked": 14,
+  "local_mathematical_proof_or_manuscript_changes": [],
+  "pins": {
+    "special_transformations": "25852c85a31c67069b148bd31348128318303510",
+    "integration_in_acvf": "7675d31332f20421c803ea16af84964ed74cd51f"
+  },
+  "conditional_Gamma_kernel_inputs": [
+    "YinMeasuredLiftInput",
+    "YinDegreeMeasuredLiftInput",
+    "YinGammaGroundMeasuredLiftInput",
+    "YinGammaGroundDegreeMeasuredLiftInput"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "section7_modules": 2041,
+  "section7_exports": 6711,
+  "root_build": "PASS: 13548 Lake jobs including valid cached dependencies",
+  "root_build_log_sha256": "0bf54ef90302bb263773b7ec7036f94308366cb58657877949b77437fb2e3780",
+  "full_project_verification": {
+    "foundation": "success",
+    "section2": "success",
+    "section3": "success",
+    "section4": "success",
+    "section5": "success",
+    "section6": "success",
+    "section7": "success"
+  },
+  "durations_seconds": {
+    "foundation": 4.511,
+    "section2": 13.601,
+    "section3": 22.261,
+    "section4": 11.892,
+    "section5": 14.156,
+    "section6": 41.139,
+    "section7": 46.746
+  },
+  "verification_log_sha256": "16b5192c2f6e591256fd684afc806aaf965997d4e1599b0ee67d0812f2c75918",
+  "registry_sha256": "45f2cfce41e76938b1b8e28e154a20bbbec38e956f588f4433147a268899680d",
+  "latest_batch_reviews": [
+    {
+      "modules": 25,
+      "exports": 70,
+      "reviewed_lines": 1791
+    },
+    {
+      "modules": 15,
+      "exports": 70,
+      "reviewed_lines": 1356
+    }
+  ],
+  "scope": "Complete active Section 7 targets in the accepted scope; standing hypotheses and nonempty-selected Lemma 7.5 retained. Other sections retain their documented scopes.",
+  "verifier_output_label": "After the passing proof audit, only the obsolete incomplete-section message/docstring was replaced by the audited registry scope; syntax compilation passed. No proof-audit logic changed.",
+  "ci_dispatch_tests": "PASS: 3 unittest tests",
+  "remote_ci": "pending",
+  "completed_at_utc": "2026-11-16T10:40:28.138873+00:00"
+}

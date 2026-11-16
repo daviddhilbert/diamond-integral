@@ -1,0 +1,116 @@
+import DiamondIntegral
+import Section10.WeightedZeroResults
+import Section10.WeightedFormProducts
+set_option pp.universes true
+set_option pp.fullNames true
+#check @SpecialTransformations.Section10.WeightedZero.iso_iff
+#print SpecialTransformations.Section10.WeightedZero.iso_iff
+#print axioms SpecialTransformations.Section10.WeightedZero.iso_iff
+#check @SpecialTransformations.Section10.MeasuredRVZero.lift_weight
+#print SpecialTransformations.Section10.MeasuredRVZero.lift_weight
+#print axioms SpecialTransformations.Section10.MeasuredRVZero.lift_weight
+#check @SpecialTransformations.Section10.MeasuredRVZero.liftMap_labels
+#print SpecialTransformations.Section10.MeasuredRVZero.liftMap_labels
+#print axioms SpecialTransformations.Section10.MeasuredRVZero.liftMap_labels
+#check @SpecialTransformations.Section10.MeasuredRVZero.liftMap_measure
+#print SpecialTransformations.Section10.MeasuredRVZero.liftMap_measure
+#print axioms SpecialTransformations.Section10.MeasuredRVZero.liftMap_measure
+#check @SpecialTransformations.Section10.theorem_10_4_gamma_zero
+#print SpecialTransformations.Section10.theorem_10_4_gamma_zero
+#print axioms SpecialTransformations.Section10.theorem_10_4_gamma_zero
+#check @SpecialTransformations.Section10.theorem_10_5_gamma_zero
+#print SpecialTransformations.Section10.theorem_10_5_gamma_zero
+#print axioms SpecialTransformations.Section10.theorem_10_5_gamma_zero
+#check @SpecialTransformations.Section10.corollary_10_6_gamma_zero
+#print SpecialTransformations.Section10.corollary_10_6_gamma_zero
+#print axioms SpecialTransformations.Section10.corollary_10_6_gamma_zero
+#check @SpecialTransformations.Section10.ZeroForm.gammaProduct_weight
+#print SpecialTransformations.Section10.ZeroForm.gammaProduct_weight
+#print axioms SpecialTransformations.Section10.ZeroForm.gammaProduct_weight
+#check @SpecialTransformations.Section10.gammaZeroForm_weight_eq_iff
+#print SpecialTransformations.Section10.gammaZeroForm_weight_eq_iff
+#print axioms SpecialTransformations.Section10.gammaZeroForm_weight_eq_iff
+#check @DiamondIntegral.Section3.YinMeasuredLiftInput
+#print DiamondIntegral.Section3.YinMeasuredLiftInput
+#print axioms DiamondIntegral.Section3.YinMeasuredLiftInput
+#check @DiamondIntegral.Section3.YinDegreeMeasuredLiftInput
+#print DiamondIntegral.Section3.YinDegreeMeasuredLiftInput
+#print axioms DiamondIntegral.Section3.YinDegreeMeasuredLiftInput
+#check @DiamondIntegral.Section3.YinGammaGroundMeasuredLiftInput
+#print DiamondIntegral.Section3.YinGammaGroundMeasuredLiftInput
+#print axioms DiamondIntegral.Section3.YinGammaGroundMeasuredLiftInput
+#check @DiamondIntegral.Section3.YinGammaGroundDegreeMeasuredLiftInput
+#print DiamondIntegral.Section3.YinGammaGroundDegreeMeasuredLiftInput
+#print axioms DiamondIntegral.Section3.YinGammaGroundDegreeMeasuredLiftInput
+#check @DiamondIntegral.Section3.MeasuredRVObject.product_combinedWeight
+#print DiamondIntegral.Section3.MeasuredRVObject.product_combinedWeight
+#print axioms DiamondIntegral.Section3.MeasuredRVObject.product_combinedWeight
+#check @DiamondIntegral.Section3.MeasuredVFData.product_form
+#print DiamondIntegral.Section3.MeasuredVFData.product_form
+#print axioms DiamondIntegral.Section3.MeasuredVFData.product_form
+#check @DiamondIntegral.Section3.GammaGroundMeasuredRVObject.zero_combinedWeight
+#print DiamondIntegral.Section3.GammaGroundMeasuredRVObject.zero_combinedWeight
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredRVObject.zero_combinedWeight
+#check @DiamondIntegral.Section3.GammaGroundMeasuredRVObject.product_combined
+#print DiamondIntegral.Section3.GammaGroundMeasuredRVObject.product_combined
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredRVObject.product_combined
+#check @DiamondIntegral.Section3.GammaGroundMeasuredVFData.product_form
+#print DiamondIntegral.Section3.GammaGroundMeasuredVFData.product_form
+#print axioms DiamondIntegral.Section3.GammaGroundMeasuredVFData.product_form
+#check @DiamondIntegral.Section3.gammaGroundZeroMeasuredRVToVF
+#print DiamondIntegral.Section3.gammaGroundZeroMeasuredRVToVF
+#print axioms DiamondIntegral.Section3.gammaGroundZeroMeasuredRVToVF
+#check @DiamondIntegral.Section3.gammaGroundZeroMeasuredRVToVF_faithful
+#print DiamondIntegral.Section3.gammaGroundZeroMeasuredRVToVF_faithful
+#print axioms DiamondIntegral.Section3.gammaGroundZeroMeasuredRVToVF_faithful
+#check @DiamondIntegral.Section3.gammaGroundZeroMeasuredRVToVF_full
+#print DiamondIntegral.Section3.gammaGroundZeroMeasuredRVToVF_full
+#print axioms DiamondIntegral.Section3.gammaGroundZeroMeasuredRVToVF_full
+#check @DiamondIntegral.Section3.gammaGroundMeasuredNativeTensor_rank_zero_absorption
+#print DiamondIntegral.Section3.gammaGroundMeasuredNativeTensor_rank_zero_absorption
+#print axioms DiamondIntegral.Section3.gammaGroundMeasuredNativeTensor_rank_zero_absorption
+#check @DiamondIntegral.Section4.RESWeightEmbedding.weightMap_injective
+#print DiamondIntegral.Section4.RESWeightEmbedding.weightMap_injective
+#print axioms DiamondIntegral.Section4.RESWeightEmbedding.weightMap_injective
+#check @DiamondIntegral.Section4.RESWeightEmbedding.reducedWeightMap_injective
+#print DiamondIntegral.Section4.RESWeightEmbedding.reducedWeightMap_injective
+#print axioms DiamondIntegral.Section4.RESWeightEmbedding.reducedWeightMap_injective
+#check @DiamondIntegral.Section4.RESWeightEmbedding.radiusWeightMap_injective
+#print DiamondIntegral.Section4.RESWeightEmbedding.radiusWeightMap_injective
+#print axioms DiamondIntegral.Section4.RESWeightEmbedding.radiusWeightMap_injective
+#check @DiamondIntegral.Section4.RVZeroWeightedCount.res_weightedUnit
+#print DiamondIntegral.Section4.RVZeroWeightedCount.res_weightedUnit
+#print axioms DiamondIntegral.Section4.RVZeroWeightedCount.res_weightedUnit
+#check @DiamondIntegral.Section4.VariableApertureMeasuredComparison.relation_formula
+#print DiamondIntegral.Section4.VariableApertureMeasuredComparison.relation_formula
+#print axioms DiamondIntegral.Section4.VariableApertureMeasuredComparison.relation_formula
+#check @DiamondIntegral.Section4.VariableApertureMeasuredComparison.functional_ideal_maps_into_p
+#print DiamondIntegral.Section4.VariableApertureMeasuredComparison.functional_ideal_maps_into_p
+#print axioms DiamondIntegral.Section4.VariableApertureMeasuredComparison.functional_ideal_maps_into_p
+#check @DiamondIntegral.Section4.RelativeAnnularQuotient.quotient_injective_on_degree_zero
+#print DiamondIntegral.Section4.RelativeAnnularQuotient.quotient_injective_on_degree_zero
+#print axioms DiamondIntegral.Section4.RelativeAnnularQuotient.quotient_injective_on_degree_zero
+#check @DiamondIntegral.Section4.RelativeAnnularQuotient.evaluation_res
+#print DiamondIntegral.Section4.RelativeAnnularQuotient.evaluation_res
+#print axioms DiamondIntegral.Section4.RelativeAnnularQuotient.evaluation_res
+#check @DiamondIntegral.Section5.completed_section5_input
+#print DiamondIntegral.Section5.completed_section5_input
+#print axioms DiamondIntegral.Section5.completed_section5_input
+#check @DiamondIntegral.Section5.completed18GroundLiftInput
+#print DiamondIntegral.Section5.completed18GroundLiftInput
+#print axioms DiamondIntegral.Section5.completed18GroundLiftInput
+#check @DiamondIntegral.Section6.proposition_6_19_vfGenerated
+#print DiamondIntegral.Section6.proposition_6_19_vfGenerated
+#print axioms DiamondIntegral.Section6.proposition_6_19_vfGenerated
+#check @DiamondIntegral.Section6.lemma_6_27
+#print DiamondIntegral.Section6.lemma_6_27
+#print axioms DiamondIntegral.Section6.lemma_6_27
+#check @DiamondIntegral.Section6.lemma_6_31_zero_arity
+#print DiamondIntegral.Section6.lemma_6_31_zero_arity
+#print axioms DiamondIntegral.Section6.lemma_6_31_zero_arity
+#check @DiamondIntegral.Section6.lemma_6_14_bounded_variable_apertures
+#print DiamondIntegral.Section6.lemma_6_14_bounded_variable_apertures
+#print axioms DiamondIntegral.Section6.lemma_6_14_bounded_variable_apertures
+#check @DiamondIntegral.Section6.lemma_6_38_bounded_variable_apertures
+#print DiamondIntegral.Section6.lemma_6_38_bounded_variable_apertures
+#print axioms DiamondIntegral.Section6.lemma_6_38_bounded_variable_apertures

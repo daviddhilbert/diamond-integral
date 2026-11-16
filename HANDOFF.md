@@ -11,14 +11,13 @@ baseline. The next active mathematical task is Section 7. The note covers
 all eight sections and the working protocol, including the Section 8
 consequences that must remain visible while Section 7 is revised.
 
-**New upstream compatibility issue, November 15:** read
-[the weighted-degree-zero audit](UPSTREAM-WEIGHTED-ZERO-AUDIT.md) before
-using corrected Integration in ACVF / Special transformations measured
-interfaces. This repository already retains Gamma weights in degree zero,
-including mixed products, zero lifts and RES/tensor coefficients. Four
-Section 3 measured lift/kernel inputs still need matching corrected
-upstream producers. Current pinned proofs do not certify a future pin
-migration. This issue is separate from the adopted aperture repair.
+**Upstream migration, November 16:** see the
+[corrected-pin compatibility record](verification/upstream-weighted-zero-upgrade/README.md)
+and its current `status.json`. Both corrected releases are published on main.
+The local weighted Gamma-zero conventions are retained. The four Section 3
+Gamma-valued lift/kernel records remain precise accepted cited inputs: the
+corrected upstream Section 7 kernel has RV-valued densities and is not a producer
+for those records. This remains separate from this paper's bounded-aperture kernel.
 
 ## Read these sources first
 
@@ -360,19 +359,20 @@ Keep the checked package revisions in [lake-manifest.json](lake-manifest.json):
 | --- | --- |
 | mathlib | 56a005855ea17e0b0958f73ec801ae140b0a1679 |
 | acvf_qe | 939346b0a99899e22a873479364e3cc5d142731c |
-| special_transformations | 9cc9760892092dd34cfad4a6dee655843c52f30c |
-| integration_in_acvf | 7d4acc730496b3bd05a22c268ffd89540ca694f9 |
+| special_transformations | 25852c85a31c67069b148bd31348128318303510 |
+| integration_in_acvf | 7675d31332f20421c803ea16af84964ed74cd51f |
 
-Dependency preparation restores the 252 recorded additional/adapter sources
-and the 39 compatibility corrections, together with the existing approved
-Special Transformations layer. Expected local modifications inside .lake
-are part of the checked build. Do not erase them as incidental dirty files
-or substitute a newer pin without a compatibility audit. The preparation
-script checks revisions/hashes and preserves unexpected edits. A cold
-build can be substantial; [the CI workflow](.github/workflows/lean.yml)
-shows the pinned setup and compiled-proof cache configuration.
+Dependency preparation checks the published 250 completed Section 5 files and
+39 proper-open-radius sources, then restores only the two recorded Section 6
+hypothesis-scope adapters. Their actual proof producer is retained. Preserve
+unexpected local modifications. The preparation script checks revisions and
+hashes; `--check` performs a read-only check. See the
+[migration record](verification/upstream-weighted-zero-upgrade/README.md) for the
+new-pin receipts and the surviving conditional mathematical boundaries.
 
-Current combined evidence is in
+Current dependency compatibility evidence is in
+[the corrected-pin receipt](verification/upstream-weighted-zero-upgrade/status.json).
+The earlier manuscript aperture-revision evidence is in
 [integrated-audits.json](<section 6/verification/aperture-revision/integrated-audits.json>),
 [the source-hash check](<section 6/verification/aperture-revision/final-source-hash-check.json>)
 and [the completion boundary](<section 6/verification/aperture-revision/completion.json>).
