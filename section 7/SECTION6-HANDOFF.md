@@ -1,5 +1,9 @@
 # Handoff from completed Section 6
 
+For continuation in another program, read the [full-paper handoff](../HANDOFF.md)
+first. It includes every section, the working protocol, source priorities,
+build instructions and the detailed Section 7 plan.
+
 Definition 6.11 is now the bounded variable-aperture definition, and 6.38
 is proved for that precise class. Section 4 defines the independent
 relative annular ideal J_var and proves its retraction and comparison
