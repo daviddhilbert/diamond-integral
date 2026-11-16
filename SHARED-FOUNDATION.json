@@ -1,0 +1,592 @@
+{
+  "provider": "daviddhilbert/hilbert-mathlib",
+  "revision": "a26c12d71f83356ad48442b782be67ff01bd3f18",
+  "public_names": "unchanged",
+  "modules": [
+    {
+      "path": "section 3/AdditiveSemiringTransport.lean",
+      "module": "\u00absection 3\u00bb.AdditiveSemiringTransport",
+      "target_module": "HilbertMathlib.Foundation.Algebra.AdditiveSemiringTransport",
+      "target_path": "HilbertMathlib/Foundation/Algebra/AdditiveSemiringTransport.lean",
+      "extracted_sha256": "920e21ee34bd379fb5518aebe5ed70b3ada6523025fda6f6d3e3d624299b7cdd",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%203/AdditiveSemiringTransport.lean",
+      "compatibility_sha256": "bb090a38cc92174224d79fd172b41326989af888228b8afc433a2f9742acbfe3"
+    },
+    {
+      "path": "section 3/BalancedTensor.lean",
+      "module": "\u00absection 3\u00bb.BalancedTensor",
+      "target_module": "HilbertMathlib.Foundation.Algebra.BalancedTensor",
+      "target_path": "HilbertMathlib/Foundation/Algebra/BalancedTensor.lean",
+      "extracted_sha256": "a0bef2e16d1a49bb293f06e08bcb16e48402d024968d1459a6dbbe7c58e4882f",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%203/BalancedTensor.lean",
+      "compatibility_sha256": "e4d64af916ee479ebc1c25f4980aace5402c6eaa07ed02888e1caddf3599eb41"
+    },
+    {
+      "path": "section 3/CoproductIsoClasses.lean",
+      "module": "\u00absection 3\u00bb.CoproductIsoClasses",
+      "target_module": "HilbertMathlib.Foundation.Algebra.CoproductIsoClasses",
+      "target_path": "HilbertMathlib/Foundation/Algebra/CoproductIsoClasses.lean",
+      "extracted_sha256": "223b4f27905bc668490bebbb3b63e318497245f50d01609f8a7ae48f33f533c0",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%203/CoproductIsoClasses.lean",
+      "compatibility_sha256": "0599a4e99fff52eff28018e625825f8a2fd433210efd70d1c507032bf75e3b96"
+    },
+    {
+      "path": "section 3/IdealPullbackKernel.lean",
+      "module": "\u00absection 3\u00bb.IdealPullbackKernel",
+      "target_module": "HilbertMathlib.Foundation.Algebra.IdealPullbackKernel",
+      "target_path": "HilbertMathlib/Foundation/Algebra/IdealPullbackKernel.lean",
+      "extracted_sha256": "e05a1b111299677cb9f20c565a9e7723e6d8877f44f4cbc0877199ca03c7e515",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%203/IdealPullbackKernel.lean",
+      "compatibility_sha256": "4eb7b7cb074b27ff74b6863cf4f4a18c0f3475fcaac54eae520df57943faad81"
+    },
+    {
+      "path": "section 3/IntegerMonomialMaps.lean",
+      "module": "\u00absection 3\u00bb.IntegerMonomialMaps",
+      "target_module": "HilbertMathlib.Foundation.FiniteCoordinates.IntegerMonomialMaps",
+      "target_path": "HilbertMathlib/Foundation/FiniteCoordinates/IntegerMonomialMaps.lean",
+      "extracted_sha256": "eb49c0ca96ced1466f15f2900ce458bd5844b98a39408fe645e8b59fe24b6da5",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%203/IntegerMonomialMaps.lean",
+      "compatibility_sha256": "cb09ba2a681fc9979fc85b2b4636111842bfa0d0210348f5c5622c96925c4daa"
+    },
+    {
+      "path": "section 3/ProductTagDistributivity.lean",
+      "module": "\u00absection 3\u00bb.ProductTagDistributivity",
+      "target_module": "HilbertMathlib.Foundation.Algebra.ProductTagDistributivity",
+      "target_path": "HilbertMathlib/Foundation/Algebra/ProductTagDistributivity.lean",
+      "extracted_sha256": "559834c82c7c0c021b5ab13a5559e533a31a03f2dc9cd8c9207ba352837990c9",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%203/ProductTagDistributivity.lean",
+      "compatibility_sha256": "0b6e1301e744a07c3c7f8808b6cc0df3e13f5142918d9e0359196a5810571619"
+    },
+    {
+      "path": "section 4/CoactionGradedMaps.lean",
+      "module": "\u00absection 4\u00bb.CoactionGradedMaps",
+      "target_module": "HilbertMathlib.Foundation.Algebra.CoactionGradedMaps",
+      "target_path": "HilbertMathlib/Foundation/Algebra/CoactionGradedMaps.lean",
+      "extracted_sha256": "93f30256f6cd913f3612fb40821ec7cd1f83b3c0220b050155f31f361e429568",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%204/CoactionGradedMaps.lean",
+      "compatibility_sha256": "fd44376d950f23e0040c889d7963ff449d8def02904dffd3b540a53a498e635c"
+    },
+    {
+      "path": "section 4/CoactionQuotientEquivalence.lean",
+      "module": "\u00absection 4\u00bb.CoactionQuotientEquivalence",
+      "target_module": "HilbertMathlib.Foundation.Coaction.CoactionQuotientEquivalence",
+      "target_path": "HilbertMathlib/Foundation/Coaction/CoactionQuotientEquivalence.lean",
+      "extracted_sha256": "f8888ee4ffa0acdba90fcba0ff9145264c4b61af1e060fece36b977017bc9fb9",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%204/CoactionQuotientEquivalence.lean",
+      "compatibility_sha256": "390dabdf855671885e460fd17ddedd5cf110ae70653555f9585070d5b3d359d2"
+    },
+    {
+      "path": "section 4/CoactionSurjectiveDescent.lean",
+      "module": "\u00absection 4\u00bb.CoactionSurjectiveDescent",
+      "target_module": "HilbertMathlib.Foundation.Coaction.CoactionSurjectiveDescent",
+      "target_path": "HilbertMathlib/Foundation/Coaction/CoactionSurjectiveDescent.lean",
+      "extracted_sha256": "eba2bf937a4774eb5439c8b240b3fa53ec6dde11f51781c25ee88f2269bd520f",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%204/CoactionSurjectiveDescent.lean",
+      "compatibility_sha256": "6e363342ba5965307fd79a7d42e368e53436b4c566cdb297c684c53bd3578ed8"
+    },
+    {
+      "path": "section 4/EulerBoundedComparison.lean",
+      "module": "\u00absection 4\u00bb.EulerBoundedComparison",
+      "target_module": "HilbertMathlib.Foundation.Euler.EulerBoundedComparison",
+      "target_path": "HilbertMathlib/Foundation/Euler/EulerBoundedComparison.lean",
+      "extracted_sha256": "d4ad986fdb6f3d1081fd70456f396e934ea98a54956d7fa41acc88591600718f",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%204/EulerBoundedComparison.lean",
+      "compatibility_sha256": "c82e01cad73c80fbea7768680acca059d8399fa19e88d280f681cc78114d8ba1"
+    },
+    {
+      "path": "section 4/EulerBoundedGenerators.lean",
+      "module": "\u00absection 4\u00bb.EulerBoundedGenerators",
+      "target_module": "HilbertMathlib.Foundation.Euler.EulerBoundedGenerators",
+      "target_path": "HilbertMathlib/Foundation/Euler/EulerBoundedGenerators.lean",
+      "extracted_sha256": "e78ff538167f8f3f508f920bab81c07a08c5ebcfc3fbe844c916086b076f8d8e",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%204/EulerBoundedGenerators.lean",
+      "compatibility_sha256": "c7c829945b210c7413c19b0c3ec99a53ad46a8448fd6b83887257eed992eabf7"
+    },
+    {
+      "path": "section 4/EulerBoundedQuotient.lean",
+      "module": "\u00absection 4\u00bb.EulerBoundedQuotient",
+      "target_module": "HilbertMathlib.Foundation.Euler.EulerBoundedQuotient",
+      "target_path": "HilbertMathlib/Foundation/Euler/EulerBoundedQuotient.lean",
+      "extracted_sha256": "1dc98a6e3f1b1989680cf8b4e43daefd99b19ad16d478589e42b954ccdddd698",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%204/EulerBoundedQuotient.lean",
+      "compatibility_sha256": "982d45699e8d9d2abfc459cbd779f91ef00fa853f1b3b785050da971ec1f3a10"
+    },
+    {
+      "path": "section 4/EulerBoundedSupport.lean",
+      "module": "\u00absection 4\u00bb.EulerBoundedSupport",
+      "target_module": "HilbertMathlib.Foundation.Euler.EulerBoundedSupport",
+      "target_path": "HilbertMathlib/Foundation/Euler/EulerBoundedSupport.lean",
+      "extracted_sha256": "890b8f283613cd95da1fc0b3d032f31009902fa64952194967bb0a4716d616e9",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%204/EulerBoundedSupport.lean",
+      "compatibility_sha256": "7b7cf20945d22e21a595086bc52ac12766f7eef7ceb81e2453d184fbaf4bb4c1"
+    },
+    {
+      "path": "section 4/EulerConvolution.lean",
+      "module": "\u00absection 4\u00bb.EulerConvolution",
+      "target_module": "HilbertMathlib.Foundation.Euler.EulerConvolution",
+      "target_path": "HilbertMathlib/Foundation/Euler/EulerConvolution.lean",
+      "extracted_sha256": "90cd41ddf749259e904819e0ab4e7c1ed225d96db948a793695318cfbed65723",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%204/EulerConvolution.lean",
+      "compatibility_sha256": "138fcc10c5acce593220191dbe31876c72f928c928faca4768b8e20dca074fc3"
+    },
+    {
+      "path": "section 4/EulerDecomposition.lean",
+      "module": "\u00absection 4\u00bb.EulerDecomposition",
+      "target_module": "HilbertMathlib.Foundation.Euler.EulerDecomposition",
+      "target_path": "HilbertMathlib/Foundation/Euler/EulerDecomposition.lean",
+      "extracted_sha256": "282af6fc8cca1e461442f60b2e1e028971bba4c526646f431b1ea330a8336ef6",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%204/EulerDecomposition.lean",
+      "compatibility_sha256": "9959c174f6e4b21bedcc3c5ae64b373fd6dd306cf9d7f73a9397e038d815a548"
+    },
+    {
+      "path": "section 4/EulerFibreIntegral.lean",
+      "module": "\u00absection 4\u00bb.EulerFibreIntegral",
+      "target_module": "HilbertMathlib.Foundation.Euler.EulerFibreIntegral",
+      "target_path": "HilbertMathlib/Foundation/Euler/EulerFibreIntegral.lean",
+      "extracted_sha256": "a7324be331d9b1470e6ef467d7a77c9523cce173cd9a9c4ee33e36a96f4bf178",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%204/EulerFibreIntegral.lean",
+      "compatibility_sha256": "bb3ad8f1134546356764c02a605caf4a1606be859999a210e3373af3ee9a37a5"
+    },
+    {
+      "path": "section 4/EulerFiniteCuts.lean",
+      "module": "\u00absection 4\u00bb.EulerFiniteCuts",
+      "target_module": "HilbertMathlib.Foundation.Euler.EulerFiniteCuts",
+      "target_path": "HilbertMathlib/Foundation/Euler/EulerFiniteCuts.lean",
+      "extracted_sha256": "fd3cb228a756350c0406b74e6b9bf3e25fadc2b718dc69857583e4a14236c304",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%204/EulerFiniteCuts.lean",
+      "compatibility_sha256": "3fcf86dc35cc46e4754e03453e775446037e7e966cd7eb5ae06df4f3ffd4acf0"
+    },
+    {
+      "path": "section 4/EulerFunctions.lean",
+      "module": "\u00absection 4\u00bb.EulerFunctions",
+      "target_module": "HilbertMathlib.Foundation.Euler.EulerFunctions",
+      "target_path": "HilbertMathlib/Foundation/Euler/EulerFunctions.lean",
+      "extracted_sha256": "7d69b5e51fe3a01d786b08ec21da5b5ad0cf2c979e521e0533351a19bfa64dfe",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%204/EulerFunctions.lean",
+      "compatibility_sha256": "6e4d8f27fa76e22cd848c0dc1748410a36a10d78dd0a5fae17c526d9c536c1ac"
+    },
+    {
+      "path": "section 4/EulerGenerators.lean",
+      "module": "\u00absection 4\u00bb.EulerGenerators",
+      "target_module": "HilbertMathlib.Foundation.Euler.EulerGenerators",
+      "target_path": "HilbertMathlib/Foundation/Euler/EulerGenerators.lean",
+      "extracted_sha256": "bcc9f96dfdb874294a985a99eb25f24d4e20885c0635d754106a61fdb7bac8ae",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%204/EulerGenerators.lean",
+      "compatibility_sha256": "662bee4ef0176989147d627065f66343536a83bfd317ba1071fe4742bd6e4a17"
+    },
+    {
+      "path": "section 4/EulerIntervals.lean",
+      "module": "\u00absection 4\u00bb.EulerIntervals",
+      "target_module": "HilbertMathlib.Foundation.Euler.EulerIntervals",
+      "target_path": "HilbertMathlib/Foundation/Euler/EulerIntervals.lean",
+      "extracted_sha256": "502267883b9f53a4a72ad5d941d5104d5a218e4558602ca6861162b3de940408",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%204/EulerIntervals.lean",
+      "compatibility_sha256": "c8b6abfe2ae8cc9d8d63f5c276fd219aab0463c258d1ebe47ec374bbbe6f6939"
+    },
+    {
+      "path": "section 4/EulerKernelFubini.lean",
+      "module": "\u00absection 4\u00bb.EulerKernelFubini",
+      "target_module": "HilbertMathlib.Foundation.Euler.EulerKernelFubini",
+      "target_path": "HilbertMathlib/Foundation/Euler/EulerKernelFubini.lean",
+      "extracted_sha256": "fb6266944036b8049f515c8db22de6e813ca75f67b195455b706631fdc2fc4a7",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%204/EulerKernelFubini.lean",
+      "compatibility_sha256": "3a60c0c8f8c8bc0e3f87a511e5d0b01e84fc077da320718bf61bd1d6aa45c810"
+    },
+    {
+      "path": "section 4/EulerOrderTransport.lean",
+      "module": "\u00absection 4\u00bb.EulerOrderTransport",
+      "target_module": "HilbertMathlib.Foundation.Euler.EulerOrderTransport",
+      "target_path": "HilbertMathlib/Foundation/Euler/EulerOrderTransport.lean",
+      "extracted_sha256": "638835ba7f7a6fd22157f7ee82637b0f61f38536abf38b1c06b7ac1a1c6a4e87",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%204/EulerOrderTransport.lean",
+      "compatibility_sha256": "af6c7e2e84f909ac6e5dee918ebcdbc8a5bf8f2768dea3ed431c0f196fe61b5d"
+    },
+    {
+      "path": "section 4/EulerPointwise.lean",
+      "module": "\u00absection 4\u00bb.EulerPointwise",
+      "target_module": "HilbertMathlib.Foundation.Euler.EulerPointwise",
+      "target_path": "HilbertMathlib/Foundation/Euler/EulerPointwise.lean",
+      "extracted_sha256": "00624e2219836fad34ee9a1a31c38c0324bf16a217b6a6ba990fa5f180b1dfed",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%204/EulerPointwise.lean",
+      "compatibility_sha256": "760fb4691ce8bdb8024b7aa66a2e00c9bd99aa95cf62bc6543bedc67bf095640"
+    },
+    {
+      "path": "section 4/EulerPowerLawFibres.lean",
+      "module": "\u00absection 4\u00bb.EulerPowerLawFibres",
+      "target_module": "HilbertMathlib.Foundation.Euler.EulerPowerLawFibres",
+      "target_path": "HilbertMathlib/Foundation/Euler/EulerPowerLawFibres.lean",
+      "extracted_sha256": "6545e943a09f87d9ac0c0d5ba176760163f40055b46b5d3475bbbca893f6bc90",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%204/EulerPowerLawFibres.lean",
+      "compatibility_sha256": "af1ce0f0cdbd7165b5aaa60c8bf2149accb0ba0fbaa9e6d999ef2ad8b12145bd"
+    },
+    {
+      "path": "section 4/EulerRationalBranches.lean",
+      "module": "\u00absection 4\u00bb.EulerRationalBranches",
+      "target_module": "HilbertMathlib.Foundation.Euler.EulerRationalBranches",
+      "target_path": "HilbertMathlib/Foundation/Euler/EulerRationalBranches.lean",
+      "extracted_sha256": "17dc390b94138e9fb02bffdb12a76ef1acee3ddd77c603d4e1e5a80b729152de",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%204/EulerRationalBranches.lean",
+      "compatibility_sha256": "ce7f251e54fe8046316c40b1ba2ff4e8acdd4b8154af2caa81dcadd7734d5a2b"
+    },
+    {
+      "path": "section 4/EulerRationalProjection.lean",
+      "module": "\u00absection 4\u00bb.EulerRationalProjection",
+      "target_module": "HilbertMathlib.Foundation.Euler.EulerRationalProjection",
+      "target_path": "HilbertMathlib/Foundation/Euler/EulerRationalProjection.lean",
+      "extracted_sha256": "558cef7c4bfdd359e3967dd98ad3d8e5e260a6f30bb3155a313c533fa97cde56",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%204/EulerRationalProjection.lean",
+      "compatibility_sha256": "d93b86061f4fa2ce9ba79855f78694bbee9bc4735f2846c3ef44376939eee3d9"
+    },
+    {
+      "path": "section 4/EulerReflection.lean",
+      "module": "\u00absection 4\u00bb.EulerReflection",
+      "target_module": "HilbertMathlib.Foundation.Euler.EulerReflection",
+      "target_path": "HilbertMathlib/Foundation/Euler/EulerReflection.lean",
+      "extracted_sha256": "2e66a4d4301e50227f4eb3a210d897a77b73f27576d96e2825e0328b7e843597",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%204/EulerReflection.lean",
+      "compatibility_sha256": "91537fb9a0b18a85c4da7edc89d086636ef94ecf844ce3719399e66b041d01c5"
+    },
+    {
+      "path": "section 4/EulerUnaryProjection.lean",
+      "module": "\u00absection 4\u00bb.EulerUnaryProjection",
+      "target_module": "HilbertMathlib.Foundation.Euler.EulerUnaryProjection",
+      "target_path": "HilbertMathlib/Foundation/Euler/EulerUnaryProjection.lean",
+      "extracted_sha256": "d6ed2e33b5bbe6dc6eff10ff552430d27d51534d28f9c17e992136396ea159f8",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%204/EulerUnaryProjection.lean",
+      "compatibility_sha256": "7ec56724492ce6212673f9c399bc1f7866dcaec91c551a179c78f513ff1e4134"
+    },
+    {
+      "path": "section 4/EulerUnaryPushforward.lean",
+      "module": "\u00absection 4\u00bb.EulerUnaryPushforward",
+      "target_module": "HilbertMathlib.Foundation.Euler.EulerUnaryPushforward",
+      "target_path": "HilbertMathlib/Foundation/Euler/EulerUnaryPushforward.lean",
+      "extracted_sha256": "fe4f820ba6a8ca75c1952d8634d3f7769313dc30450a3d7ffad57a674f87b2b8",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%204/EulerUnaryPushforward.lean",
+      "compatibility_sha256": "ce31be15e292bfb59c1c0b6f11b1e947442cc14a25574699f856d0deb818d7ec"
+    },
+    {
+      "path": "section 4/FiniteOrderComponents.lean",
+      "module": "\u00absection 4\u00bb.FiniteOrderComponents",
+      "target_module": "HilbertMathlib.Foundation.Euler.FiniteOrderComponents",
+      "target_path": "HilbertMathlib/Foundation/Euler/FiniteOrderComponents.lean",
+      "extracted_sha256": "650b878d3797edbda7c309664090be93fde6e3aae537cad3535523bcaf1a1aa7",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%204/FiniteOrderComponents.lean",
+      "compatibility_sha256": "be7d875af842564706c2ebfb7bdac26c08c65300a3411abc491ad8dd2c19ede9"
+    },
+    {
+      "path": "section 4/FiniteOrderRanks.lean",
+      "module": "\u00absection 4\u00bb.FiniteOrderRanks",
+      "target_module": "HilbertMathlib.Foundation.Euler.FiniteOrderRanks",
+      "target_path": "HilbertMathlib/Foundation/Euler/FiniteOrderRanks.lean",
+      "extracted_sha256": "775890aec5a2a34b925fd3bf81bcbfe3e9992050fa98b04ef8bed6a26268081d",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%204/FiniteOrderRanks.lean",
+      "compatibility_sha256": "bf72b928c40655080a362bdbd7c2d13139c60559966d9f73e23ba58c585b47f1"
+    },
+    {
+      "path": "section 4/FinitePermutationGeneration.lean",
+      "module": "\u00absection 4\u00bb.FinitePermutationGeneration",
+      "target_module": "HilbertMathlib.Foundation.FiniteCoordinates.FinitePermutationGeneration",
+      "target_path": "HilbertMathlib/Foundation/FiniteCoordinates/FinitePermutationGeneration.lean",
+      "extracted_sha256": "2a4d556d80c095968ac38ae59dc02ff2fdebd11c3ba8a1829ca889168ced10cf",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%204/FinitePermutationGeneration.lean",
+      "compatibility_sha256": "cdb765e11717e79e497d03a29e19e6cdee9663149a53eb51e9f325700ed81148"
+    },
+    {
+      "path": "section 4/FiniteTupleBlocks.lean",
+      "module": "\u00absection 4\u00bb.FiniteTupleBlocks",
+      "target_module": "HilbertMathlib.Foundation.FiniteCoordinates.FiniteTupleBlocks",
+      "target_path": "HilbertMathlib/Foundation/FiniteCoordinates/FiniteTupleBlocks.lean",
+      "extracted_sha256": "932cd0612708c8a46c24156eac19140b3a37ca768959379b37d1faaaf4fd5bdc",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%204/FiniteTupleBlocks.lean",
+      "compatibility_sha256": "d0fa2b59365cb5f61860659b011cfbd1f00abc12fcb15210013223acff429995"
+    },
+    {
+      "path": "section 4/FiniteTupleGraphProduct.lean",
+      "module": "\u00absection 4\u00bb.FiniteTupleGraphProduct",
+      "target_module": "HilbertMathlib.Foundation.FiniteCoordinates.FiniteTupleGraphProduct",
+      "target_path": "HilbertMathlib/Foundation/FiniteCoordinates/FiniteTupleGraphProduct.lean",
+      "extracted_sha256": "24de25d0a6876a703633c7a512f7737bfd62c3f451999746dd1d4bded8546361",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%204/FiniteTupleGraphProduct.lean",
+      "compatibility_sha256": "2bc8e23101c3a8cfe7b738f84c9719c782486779df058bf7ca997858272d075a"
+    },
+    {
+      "path": "section 4/FiniteTupleRotation.lean",
+      "module": "\u00absection 4\u00bb.FiniteTupleRotation",
+      "target_module": "HilbertMathlib.Foundation.FiniteCoordinates.FiniteTupleRotation",
+      "target_path": "HilbertMathlib/Foundation/FiniteCoordinates/FiniteTupleRotation.lean",
+      "extracted_sha256": "37a1d0fdb7074c77cf048e150b3d818b9d760897b30b339377053db1e34e9543",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%204/FiniteTupleRotation.lean",
+      "compatibility_sha256": "92817b1112b21f167231fda46a13a97211ca68ff8e91410393056e9be60373a9"
+    },
+    {
+      "path": "section 4/FiniteTupleSwap.lean",
+      "module": "\u00absection 4\u00bb.FiniteTupleSwap",
+      "target_module": "HilbertMathlib.Foundation.FiniteCoordinates.FiniteTupleSwap",
+      "target_path": "HilbertMathlib/Foundation/FiniteCoordinates/FiniteTupleSwap.lean",
+      "extracted_sha256": "02ba62b60864d70c36e0977ca51fd84ab41376c1b2b1281dd667e7f91c2c50a4",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%204/FiniteTupleSwap.lean",
+      "compatibility_sha256": "899352a222c5d073c9c23f70ad89bbb6d100bfeefc3323e8f288181ff09d0418"
+    },
+    {
+      "path": "section 4/OrderGapComponents.lean",
+      "module": "\u00absection 4\u00bb.OrderGapComponents",
+      "target_module": "HilbertMathlib.Foundation.Euler.OrderGapComponents",
+      "target_path": "HilbertMathlib/Foundation/Euler/OrderGapComponents.lean",
+      "extracted_sha256": "a76aa7e0253dd64bdc082f893ecfba285cb668970c2b1ba375021a495ae9c512",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%204/OrderGapComponents.lean",
+      "compatibility_sha256": "d4c5494904f2df32d82ef7864e13c2ce24fb798f6071105d86414a90f8bdc95a"
+    },
+    {
+      "path": "section 4/PolynomialCoactionGrading.lean",
+      "module": "\u00absection 4\u00bb.PolynomialCoactionGrading",
+      "target_module": "HilbertMathlib.Foundation.Algebra.PolynomialCoactionGrading",
+      "target_path": "HilbertMathlib/Foundation/Algebra/PolynomialCoactionGrading.lean",
+      "extracted_sha256": "4cbf81eba90c56b3f69fe03388597cc630ebf3711e85bcba09d4c662ef4b26bc",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%204/PolynomialCoactionGrading.lean",
+      "compatibility_sha256": "afa40fee3c8c57d9a9adf2767edb381f76bdad53612dd7b6229d8fe734b8caf2"
+    },
+    {
+      "path": "section 4/PolynomialCoactionQuotient.lean",
+      "module": "\u00absection 4\u00bb.PolynomialCoactionQuotient",
+      "target_module": "HilbertMathlib.Foundation.Algebra.PolynomialCoactionQuotient",
+      "target_path": "HilbertMathlib/Foundation/Algebra/PolynomialCoactionQuotient.lean",
+      "extracted_sha256": "5a7151cc746b5a28ef6295477fac8017f700cf13e5a2d0a8a9203dd23a892b89",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%204/PolynomialCoactionQuotient.lean",
+      "compatibility_sha256": "49b51ba901add99877b9442a50320a1dfe76ebab1f297e8db68ccbf6a213fdfd"
+    },
+    {
+      "path": "section 4/PolynomialDiagonal.lean",
+      "module": "\u00absection 4\u00bb.PolynomialDiagonal",
+      "target_module": "HilbertMathlib.Foundation.Algebra.PolynomialDiagonal",
+      "target_path": "HilbertMathlib/Foundation/Algebra/PolynomialDiagonal.lean",
+      "extracted_sha256": "b48d7b56e1130462dd8f1a289245bcda00030b35a3e86c6fc395e954f6dd1faf",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%204/PolynomialDiagonal.lean",
+      "compatibility_sha256": "91a3332178d83d88e2edddb9a0a02f55334811a89f374e28f16fd02e7443c873"
+    },
+    {
+      "path": "section 4/RingHomGluing.lean",
+      "module": "\u00absection 4\u00bb.RingHomGluing",
+      "target_module": "HilbertMathlib.Foundation.Algebra.RingHomGluing",
+      "target_path": "HilbertMathlib/Foundation/Algebra/RingHomGluing.lean",
+      "extracted_sha256": "9f2611199f471351a667f5ed09d147bc99740ad24ee00fd5d1cdf6280d61e4a8",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%204/RingHomGluing.lean",
+      "compatibility_sha256": "3289f335ee8bf32028714720ef206d827773c1e3d2d23d11477608080db20d20"
+    },
+    {
+      "path": "section 4/RingPresentationTransport.lean",
+      "module": "\u00absection 4\u00bb.RingPresentationTransport",
+      "target_module": "HilbertMathlib.Foundation.Algebra.RingPresentationTransport",
+      "target_path": "HilbertMathlib/Foundation/Algebra/RingPresentationTransport.lean",
+      "extracted_sha256": "9e09083f9776d6ed232f9e54599710bb8edded873739e2ca86ad53557daf5a03",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%204/RingPresentationTransport.lean",
+      "compatibility_sha256": "acd802dc27c486c57242da7e76242dce2f63331da5de610366a3a4b39786cf76"
+    },
+    {
+      "path": "section 4/RingTensorCongruence.lean",
+      "module": "\u00absection 4\u00bb.RingTensorCongruence",
+      "target_module": "HilbertMathlib.Foundation.Algebra.RingTensorCongruence",
+      "target_path": "HilbertMathlib/Foundation/Algebra/RingTensorCongruence.lean",
+      "extracted_sha256": "25bf8dd3af43698fc9c6febf4d783a6d5bd4ede14cd74a1c6246679f3f848815",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%204/RingTensorCongruence.lean",
+      "compatibility_sha256": "54bf159408e612259a492dddc4006c661151c248c2670ec24b59ccd1cee8b4ce"
+    },
+    {
+      "path": "section 4/StepFunctions.lean",
+      "module": "\u00absection 4\u00bb.StepFunctions",
+      "target_module": "HilbertMathlib.Foundation.Euler.StepFunctions",
+      "target_path": "HilbertMathlib/Foundation/Euler/StepFunctions.lean",
+      "extracted_sha256": "17eaf91fda98ea1107f0fe0ab43e184d91ace4de4cbffe7d03977acfeac1805a",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%204/StepFunctions.lean",
+      "compatibility_sha256": "53a877b1aa5180b69ffdca6958381f09218feed2a71da24912675d1c44860b5a"
+    },
+    {
+      "path": "section 4/TensorCoactionGrading.lean",
+      "module": "\u00absection 4\u00bb.TensorCoactionGrading",
+      "target_module": "HilbertMathlib.Foundation.Coaction.TensorCoactionGrading",
+      "target_path": "HilbertMathlib/Foundation/Coaction/TensorCoactionGrading.lean",
+      "extracted_sha256": "0e4db8a103dd40afee70a6ccddf30757a7d1fd3efa7f7d6b86f3cff448c702b4",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%204/TensorCoactionGrading.lean",
+      "compatibility_sha256": "bb7ede00d2068865cb24cec63294f8e4c408289353e29265a105733a7865848e"
+    },
+    {
+      "path": "section 4/TensorPolynomialCoaction.lean",
+      "module": "\u00absection 4\u00bb.TensorPolynomialCoaction",
+      "target_module": "HilbertMathlib.Foundation.Coaction.TensorPolynomialCoaction",
+      "target_path": "HilbertMathlib/Foundation/Coaction/TensorPolynomialCoaction.lean",
+      "extracted_sha256": "62e04141972c22309e68f999fe6b01908cd69ad5e6dd60bf32f734488ba012b6",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%204/TensorPolynomialCoaction.lean",
+      "compatibility_sha256": "18822682e80e0f455e88e9616515b9aead2f09049104e7325d3e2ebb17027e67"
+    },
+    {
+      "path": "section 5/CharacterIdealRelations.lean",
+      "module": "\u00absection 5\u00bb.CharacterIdealRelations",
+      "target_module": "HilbertMathlib.Foundation.Algebra.CharacterIdealRelations",
+      "target_path": "HilbertMathlib/Foundation/Algebra/CharacterIdealRelations.lean",
+      "extracted_sha256": "52377432c6a0bec1cfa82bdd8f21cd55ca1b06ca56b7426bcef61edadb272d69",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%205/CharacterIdealRelations.lean",
+      "compatibility_sha256": "7f493e0b01694e0194e4709723c5bcbfb14aea8b310aa49c7450c904925f539b"
+    },
+    {
+      "path": "section 5/CompatibleRootSystems.lean",
+      "module": "\u00absection 5\u00bb.CompatibleRootSystems",
+      "target_module": "HilbertMathlib.Foundation.Series.CompatibleRootSystems",
+      "target_path": "HilbertMathlib/Foundation/Series/CompatibleRootSystems.lean",
+      "extracted_sha256": "bff430647559cd6610c54e20139633285a8af48ddc00dcaed12926e34667b368",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%205/CompatibleRootSystems.lean",
+      "compatibility_sha256": "a7a48eba9c68a4c80031922f66683e4458bcdde8c998e2718bee4682bfb1c510"
+    },
+    {
+      "path": "section 5/FiniteKummer.lean",
+      "module": "\u00absection 5\u00bb.FiniteKummer",
+      "target_module": "HilbertMathlib.Foundation.Series.FiniteKummer",
+      "target_path": "HilbertMathlib/Foundation/Series/FiniteKummer.lean",
+      "extracted_sha256": "57564b2c2191b2456c4af3a5b9d6dd2516e1bcac8c5da855440beea36a3cfe75",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%205/FiniteKummer.lean",
+      "compatibility_sha256": "9485e4d1834d93a84510029e30fdcb8c70f5609fc99883d4833fa52dd7f71a67"
+    },
+    {
+      "path": "section 5/FiniteStabilization.lean",
+      "module": "\u00absection 5\u00bb.FiniteStabilization",
+      "target_module": "HilbertMathlib.Foundation.Algebra.FiniteStabilization",
+      "target_path": "HilbertMathlib/Foundation/Algebra/FiniteStabilization.lean",
+      "extracted_sha256": "e70d56516744d1bd456e14b7e6ab3a7c7b60ba7cc5b61fe8e88e306e4131369f",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%205/FiniteStabilization.lean",
+      "compatibility_sha256": "c82f5232bef6f4b8f86c1c73ab277fda94b3c4cb2f18955891bacb7c9d6b3471"
+    },
+    {
+      "path": "section 5/GammaFinitePerturbation.lean",
+      "module": "\u00absection 5\u00bb.GammaFinitePerturbation",
+      "target_module": "HilbertMathlib.Foundation.Euler.GammaFinitePerturbation",
+      "target_path": "HilbertMathlib/Foundation/Euler/GammaFinitePerturbation.lean",
+      "extracted_sha256": "21527b2255eb341fad031b8538d9b6093a4ef8ab624c77578e4c600a10d64fd0",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%205/GammaFinitePerturbation.lean",
+      "compatibility_sha256": "60b257b17990e56440a5dc170f7a4687a5e11eac47cd8f555cc927a3c221afa7"
+    },
+    {
+      "path": "section 5/GammaQEPositiveLaw.lean",
+      "module": "\u00absection 5\u00bb.GammaQEPositiveLaw",
+      "target_module": "HilbertMathlib.Foundation.Euler.GammaQEPositiveLaw",
+      "target_path": "HilbertMathlib/Foundation/Euler/GammaQEPositiveLaw.lean",
+      "extracted_sha256": "efc30c5237370c25789213706f8e269c6c4c339f68512021b4f0e2fa10be49dc",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%205/GammaQEPositiveLaw.lean",
+      "compatibility_sha256": "cb900e5ad77c6eacbc24f2f8e8ba779ea4154b23fb60eba0d7921cffac33fe06"
+    },
+    {
+      "path": "section 5/HahnCharacterActions.lean",
+      "module": "\u00absection 5\u00bb.HahnCharacterActions",
+      "target_module": "HilbertMathlib.Foundation.Series.HahnCharacterActions",
+      "target_path": "HilbertMathlib/Foundation/Series/HahnCharacterActions.lean",
+      "extracted_sha256": "0eb16c092a8bc5cdbb7f6e33226e31d4537897227f69e2f148b7ac2b86a9c84a",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%205/HahnCharacterActions.lean",
+      "compatibility_sha256": "85b9e64331aa39d8cd2819f8cedb4ad5cf5d95c6b07423cbe0cc72549803e116"
+    },
+    {
+      "path": "section 5/HahnEmbeddings.lean",
+      "module": "\u00absection 5\u00bb.HahnEmbeddings",
+      "target_module": "HilbertMathlib.Foundation.Series.HahnEmbeddings",
+      "target_path": "HilbertMathlib/Foundation/Series/HahnEmbeddings.lean",
+      "extracted_sha256": "8fae4f2fea552c45ceac18cce1b2953e3bb654334bcdf54ee5423acf08ac09f5",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%205/HahnEmbeddings.lean",
+      "compatibility_sha256": "c61eadf8dd168163349a8a320aeb378d5cea9e13738136103b76136ea8972fe0"
+    },
+    {
+      "path": "section 5/KummerRootCharacters.lean",
+      "module": "\u00absection 5\u00bb.KummerRootCharacters",
+      "target_module": "HilbertMathlib.Foundation.Series.KummerRootCharacters",
+      "target_path": "HilbertMathlib/Foundation/Series/KummerRootCharacters.lean",
+      "extracted_sha256": "891f568933bded24bbc5115d7487d59efba1777455bcd44dddf7084032dca9b5",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%205/KummerRootCharacters.lean",
+      "compatibility_sha256": "a3b1b19adc475c0d2408e48804aad53fcb3651ee29564d14f9b47180a7fb5d73"
+    },
+    {
+      "path": "section 5/LaurentKummerActions.lean",
+      "module": "\u00absection 5\u00bb.LaurentKummerActions",
+      "target_module": "HilbertMathlib.Foundation.Series.LaurentKummerActions",
+      "target_path": "HilbertMathlib/Foundation/Series/LaurentKummerActions.lean",
+      "extracted_sha256": "e086efb906c18954c03f4816ffb4ba2e9fb12e1d9cb08638c69160503d078a58",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%205/LaurentKummerActions.lean",
+      "compatibility_sha256": "4d1658372ecc23369e6df070356236db3a39d16a75bc3950f160404b21f93f51"
+    },
+    {
+      "path": "section 5/LaurentKummerBasis.lean",
+      "module": "\u00absection 5\u00bb.LaurentKummerBasis",
+      "target_module": "HilbertMathlib.Foundation.Series.LaurentKummerBasis",
+      "target_path": "HilbertMathlib/Foundation/Series/LaurentKummerBasis.lean",
+      "extracted_sha256": "34ec8950b67ad53ba85dab29a846892f5b6ec94c49e645793b7e70b5c125c1ef",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%205/LaurentKummerBasis.lean",
+      "compatibility_sha256": "bb1b76ed52594b92da7f8e4c256b5edad2a3b44f8cc6f314f83ac3255a613b3a"
+    },
+    {
+      "path": "section 5/NewtonPuiseuxAlgClosed.lean",
+      "module": "\u00absection 5\u00bb.NewtonPuiseuxAlgClosed",
+      "target_module": "HilbertMathlib.Foundation.Series.NewtonPuiseuxAlgClosed",
+      "target_path": "HilbertMathlib/Foundation/Series/NewtonPuiseuxAlgClosed.lean",
+      "extracted_sha256": "77b8731363417cc7034faeb98ebe85ed1d0ff4872795f578b629b738c328f27b",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%205/NewtonPuiseuxAlgClosed.lean",
+      "compatibility_sha256": "796bda1a84b58f435d0aa7c0217a3e015f190c914dbd22075bd0716172a5367f"
+    },
+    {
+      "path": "section 5/NewtonPuiseuxAlgebraic.lean",
+      "module": "\u00absection 5\u00bb.NewtonPuiseuxAlgebraic",
+      "target_module": "HilbertMathlib.Foundation.Series.NewtonPuiseuxAlgebraic",
+      "target_path": "HilbertMathlib/Foundation/Series/NewtonPuiseuxAlgebraic.lean",
+      "extracted_sha256": "466cd7dc7770745812a060dc17eae469aca77039b0f63924f67c118db541741e",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%205/NewtonPuiseuxAlgebraic.lean",
+      "compatibility_sha256": "7c71617ee9e49160f0df3cc23ac7f00262ae5b145d3bd023a1e926ff4a445378"
+    },
+    {
+      "path": "section 5/NewtonPuiseuxBasic.lean",
+      "module": "\u00absection 5\u00bb.NewtonPuiseuxBasic",
+      "target_module": "HilbertMathlib.Foundation.Series.NewtonPuiseuxBasic",
+      "target_path": "HilbertMathlib/Foundation/Series/NewtonPuiseuxBasic.lean",
+      "extracted_sha256": "38477251594889ef484f3847ccb3a9e853f9ce00e16e9016e8ea2d6d6a23b85a",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%205/NewtonPuiseuxBasic.lean",
+      "compatibility_sha256": "77a6442fbbc5eb7a913c4f4d83f1c086be117b475a28245f8ff162f90910a90b"
+    },
+    {
+      "path": "section 5/NewtonPuiseuxHenselSplitting.lean",
+      "module": "\u00absection 5\u00bb.NewtonPuiseuxHenselSplitting",
+      "target_module": "HilbertMathlib.Foundation.Series.NewtonPuiseuxHenselSplitting",
+      "target_path": "HilbertMathlib/Foundation/Series/NewtonPuiseuxHenselSplitting.lean",
+      "extracted_sha256": "53e9d5ff8e72d4f14fcff0a7d154fba6873085af18ff07b3c0d87aa0bcd19751",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%205/NewtonPuiseuxHenselSplitting.lean",
+      "compatibility_sha256": "324e4a1ef3dbcb942d7ef227e5660750d4f44cafc8e79099dc6bb7cd509a4944"
+    },
+    {
+      "path": "section 5/PuiseuxAlgebraicClosedness.lean",
+      "module": "\u00absection 5\u00bb.PuiseuxAlgebraicClosedness",
+      "target_module": "HilbertMathlib.Foundation.Series.PuiseuxAlgebraicClosedness",
+      "target_path": "HilbertMathlib/Foundation/Series/PuiseuxAlgebraicClosedness.lean",
+      "extracted_sha256": "7f5429fb2872f93fd5f9efbe43339c52c2835d60ccf19b3655b25734539852d0",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%205/PuiseuxAlgebraicClosedness.lean",
+      "compatibility_sha256": "b9e92bbdfb73b372b04e0ee6ca120837a50c7fd361cc5e8ec88e53bab28b75d1"
+    },
+    {
+      "path": "section 5/PuiseuxCharacterActions.lean",
+      "module": "\u00absection 5\u00bb.PuiseuxCharacterActions",
+      "target_module": "HilbertMathlib.Foundation.Series.PuiseuxCharacterActions",
+      "target_path": "HilbertMathlib/Foundation/Series/PuiseuxCharacterActions.lean",
+      "extracted_sha256": "1a793f1499f0c86d06b5e316ae5762a4c613738e43462f3d82b44da2b6b3f98b",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%205/PuiseuxCharacterActions.lean",
+      "compatibility_sha256": "57b3d5159e8016481583b8ae0c93126827a3f9e6616c07670c4376c91fc531b3"
+    },
+    {
+      "path": "section 5/PuiseuxField.lean",
+      "module": "\u00absection 5\u00bb.PuiseuxField",
+      "target_module": "HilbertMathlib.Foundation.Series.PuiseuxField",
+      "target_path": "HilbertMathlib/Foundation/Series/PuiseuxField.lean",
+      "extracted_sha256": "4df1c5e07c4752e074ca836d3985f970ed7bbbec59b2fd20a50819a521ea0615",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%205/PuiseuxField.lean",
+      "compatibility_sha256": "a8bbe2e86b011761cfeb4f9727d3506672b03a54d2f095158a065d786169b8bb"
+    },
+    {
+      "path": "section 5/PuiseuxGalois.lean",
+      "module": "\u00absection 5\u00bb.PuiseuxGalois",
+      "target_module": "HilbertMathlib.Foundation.Series.PuiseuxGalois",
+      "target_path": "HilbertMathlib/Foundation/Series/PuiseuxGalois.lean",
+      "extracted_sha256": "d3bebc9b6fad4050f8e4d19cfe140936a65c335931a013c8b6ad8c98a89ffe39",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/ba6249a11b39e8e71fd0130ab0087e7185b95433/section%205/PuiseuxGalois.lean",
+      "compatibility_sha256": "86b104a9762be4fd844ea51e54bd5bd79d5d4226299640f2c2936bfa1581cdc2"
+    }
+  ]
+}

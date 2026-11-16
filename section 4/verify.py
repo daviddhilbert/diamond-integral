@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Build the entry point and audit complete §4 declaration types and axioms."""
 from pathlib import Path
+import sys
 import hashlib
 import json
 import re
@@ -8,6 +9,10 @@ import subprocess
 
 SECTION = Path(__file__).resolve().parent
 ROOT = SECTION.parent
+sys.path.insert(0, str(ROOT / 'verification'))
+from proof_sources import read_source
+from check_shared_foundation import verify as verify_shared_foundation
+shared_proof_providers = verify_shared_foundation(ROOT)
 RECORD = SECTION / 'verification'
 ALLOWED = {'propext', 'Classical.choice', 'Quot.sound'}
 INPUT_DEFINITIONS = {
@@ -97,7 +102,7 @@ def main():
     run(['python3', 'section 2/prepare-reuse.py'], RECORD / 'reuse-preparation.txt')
     run(['lake', 'build', 'DiamondIntegral'], RECORD / 'build.txt')
     sources = [SECTION / (module + '.lean') for module in MODULES]
-    exports = [declaration for source in sources for declaration in declarations(source.read_text())]
+    exports = [declaration for source in sources for declaration in declarations(read_source(source))]
     names = [declaration['name'] for declaration in exports]
     if not names or len(names) != len(set(names)):
         raise SystemExit('Missing or duplicate audit exports')
@@ -176,3 +181,6 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+# Recheck exact provider identities after the source/signature audit.
+verify_shared_foundation(ROOT)

@@ -1,6 +1,6 @@
 {
   "repository": "https://github.com/daviddhilbert/integration-in-ACVF",
-  "revision": "2c29c5b848f9077274774125222bba563cdc11b4",
+  "revision": "4216f453f351576af0c27c84fa9451e9e3c7ee90",
   "consumer_compatibility_manifest": "section 3/reuse/integration-manifest.json",
   "status": "Proof export inventory; consult VERIFICATION.json source hashes for the verified checkpoint.",
   "exports": [

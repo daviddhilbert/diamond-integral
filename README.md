@@ -13,10 +13,21 @@ supplied separately by the author.
 - [Upstream weighted-degree-zero compatibility audit](UPSTREAM-WEIGHTED-ZERO-AUDIT.md)
 - [Section 7 handoff](<section 7/SECTION6-HANDOFF.md>)
 - [Section 8 handoff](<section 8/SECTION6-HANDOFF.md>)
-- [Current corrected-pin verification](verification/upstream-weighted-zero-upgrade/status.json)
+- [Shared-foundation migration verification](verification/shared-foundation.json)
+- [Weighted-degree-zero baseline verification](verification/upstream-weighted-zero-upgrade/status.json)
 - [Original aperture-revision verification](<section 6/verification/aperture-revision/integrated-audits.json>)
 
 The checked baseline includes completed Sections 2–6 in their recorded
 scopes, including revised Definition 6.11. Section 7's synchronized aperture
 and kernel assembly is the next active task; Section 8 remains downstream.
 Historical planning notes do not supersede current coverage maps and receipts.
+
+The pinned [hilbert-mathlib](https://github.com/daviddhilbert/hilbert-mathlib)
+dependency now owns 65 reusable modules formerly implemented here, within the
+approved 106-module shared extraction. Their original paths are compatibility
+imports; declaration names and mathematical statements are unchanged.
+[SHARED-FOUNDATION.json](SHARED-FOUNDATION.json) records exact providers and
+source fingerprints. Section verifiers inspect the relocated proof bodies and
+check their pinned source identities. Current full audit output is retained in
+CI artifacts; the repository's older generated snapshots remain matched
+historical checkpoints.

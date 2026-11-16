@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import sys
 import hashlib
 import importlib.util
 import json
@@ -12,14 +13,18 @@ from pathlib import Path
 
 SECTION = Path(__file__).resolve().parent
 ROOT = SECTION.parent
+sys.path.insert(0, str(ROOT / 'verification'))
+from proof_sources import read_source
+from check_shared_foundation import verify as verify_shared_foundation
+shared_proof_providers = verify_shared_foundation(ROOT)
 SCRATCH = SECTION / ".scratch"
 RECORD = SECTION / "verification"
 ALLOWED = {"propext", "Classical.choice", "Quot.sound"}
 PINS = {
-    "integration_in_acvf": "2c29c5b848f9077274774125222bba563cdc11b4",
+    "integration_in_acvf": "4216f453f351576af0c27c84fa9451e9e3c7ee90",
     "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
-    "acvf_qe": "939346b0a99899e22a873479364e3cc5d142731c",
-    "special_transformations": "25852c85a31c67069b148bd31348128318303510",
+    "acvf_qe": "a4138c3a7899330d1c77d1ec01f8f29395b5805c",
+    "special_transformations": "4b6afb7cabcb59d7ca90e883309ddc8887241d76",
 }
 REUSE = [
     "SpecialTransformations.Section4.PositiveAdditiveGrothendieck.universalEquiv",
@@ -88,7 +93,7 @@ def main() -> None:
     definitions = []
     instances = set(GROUPOID_INSTANCES)
     for path in sources:
-        source = path.read_text()
+        source = read_source(path)
         if re.search(r"\b(sorry|admit|axiom)\b", source):
             raise SystemExit(f"FAIL: placeholder or custom logical premise in {path}")
         scopes = []
@@ -213,3 +218,6 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
+# Recheck exact provider identities after the source/signature audit.
+verify_shared_foundation(ROOT)

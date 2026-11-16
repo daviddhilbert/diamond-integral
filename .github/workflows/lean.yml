@@ -18,6 +18,9 @@ jobs:
     name: Build pinned Lean project
     runs-on: ubuntu-latest
     timeout-minutes: 360
+    env:
+      LEAN_NUM_THREADS: "4"
+      PYTHONUNBUFFERED: "1"
     steps:
       - uses: actions/checkout@v5
         with:
@@ -51,14 +54,18 @@ jobs:
       - name: Prepare verified dependency sources
         run: |
           python3 'section 5/prepare-dependencies.py'
+          python3 verification/check_shared_foundation.py
 
       - name: Build the Lean project
+        id: build
         run: lake -R build
 
       # The setup action completes before our external build. Saving its cache
       # there would retain Mathlib alone and discard the expensive proof build.
+      # Completed modules remain useful after a later module fails; Lake checks
+      # every restored source/import trace before accepting those artifacts.
       - name: Save compiled Lean files
-        if: steps.lean-cache.outputs.cache-hit != 'true'
+        if: ${{ always() && steps.lean-cache.outputs.cache-hit != 'true' && (steps.build.outcome == 'success' || steps.build.outcome == 'failure' || steps.build.outcome == 'cancelled') }}
         uses: actions/cache/save@v5
         with:
           path: .lake
@@ -97,3 +104,4 @@ jobs:
             section 5/verification/declarations-and-axioms.log
             section 6/verification/types-and-axioms.txt
             verification/upstream-weighted-zero-upgrade/
+            .scratch/shared-foundation.json

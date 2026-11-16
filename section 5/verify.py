@@ -8,13 +8,17 @@ import sys
 
 SECTION = Path(__file__).resolve().parent
 ROOT = SECTION.parent
+sys.path.insert(0, str(ROOT / 'verification'))
+from proof_sources import read_source
+from check_shared_foundation import verify as verify_shared_foundation
+shared_proof_providers = verify_shared_foundation(ROOT)
 RECORD = SECTION / 'verification'
 RECORD.mkdir(exist_ok=True)
 subprocess.run([sys.executable, str(SECTION / 'prepare-dependencies.py')], cwd=ROOT, check=True)
 sources = sorted(SECTION.glob('*.lean'))
 source_snapshot = {str(p): hashlib.sha256(p.read_bytes()).hexdigest() for p in sources}
 for path in sources:
-    if re.search(r'\b(sorry|admit|axiom)\b', path.read_text()):
+    if re.search(r'\b(sorry|admit|axiom)\b', read_source(path)):
         raise SystemExit(f'Unproved declaration or proof placeholder: {path}')
 
 definitions = [
@@ -1009,7 +1013,7 @@ absolute_definitions, absolute_theorems = [], []
 for module, prefix in extra_modules.items():
     if prefix == '@root':
         namespaces = []
-        for line in lean_declaration_text((SECTION / (module + '.lean')).read_text()).splitlines():
+        for line in lean_declaration_text(read_source(SECTION / (module + '.lean'))).splitlines():
             ns = re.match(r'^namespace ([\w.]+)\s*$', line)
             end = re.match(r'^end ([\w.]+)\s*$', line)
             decl = re.match(r'^(def|abbrev|structure|inductive|theorem|lemma|instance) ([\w.]+)\b', line)
@@ -1022,7 +1026,7 @@ for module, prefix in extra_modules.items():
                 (absolute_theorems if decl[1] in ('theorem', 'lemma') else absolute_definitions).append(name)
         continue
     for kind, decl in re.findall(r'^(def|abbrev|structure|inductive|theorem) ([\w.]+)',
-                                  lean_declaration_text((SECTION / (module + '.lean')).read_text()), re.M):
+                                  lean_declaration_text(read_source(SECTION / (module + '.lean'))), re.M):
         if decl in ('complex_normalized_residue_constructible', 'descendedRESObject', 'descendedRESObject_domain'):
             decl = 'PuiseuxOriginal.' + decl
         name = prefix + decl
@@ -1351,3 +1355,6 @@ status = {
 (RECORD / 'status.json').write_text(json.dumps(status, indent=2) + '\n')
 print('PASS: Requested Section 5 scope builds, including both Fubini theorems, actual variety encodings, chart independence and the final corollary; public declarations and principles audited.')
 print('Section 5 requested scope is complete in the recorded context. Gamma-linearity and the exact Section 3 lifting/kernel inputs are proved and instantiated, including intrinsic field fibres; no HK result is assumed. See paper-target records.')
+
+# Recheck exact provider identities after the source/signature audit.
+verify_shared_foundation(ROOT)

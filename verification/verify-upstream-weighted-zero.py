@@ -13,8 +13,8 @@ import subprocess
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'verification/upstream-weighted-zero-upgrade'
 PINS = {
-    'special_transformations': '25852c85a31c67069b148bd31348128318303510',
-    'integration_in_acvf': '2c29c5b848f9077274774125222bba563cdc11b4',
+    'special_transformations': '4b6afb7cabcb59d7ca90e883309ddc8887241d76',
+    'integration_in_acvf': '4216f453f351576af0c27c84fa9451e9e3c7ee90',
 }
 ALLOWED = {'propext', 'Classical.choice', 'Quot.sound'}
 SPECIAL = 'SpecialTransformations.Section10.'

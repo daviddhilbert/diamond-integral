@@ -10,12 +10,17 @@ rev = "56a005855ea17e0b0958f73ec801ae140b0a1679"
 [[require]]
 name = "acvf_qe"
 git = "https://github.com/daviddhilbert/ACVF-QE.git"
-rev = "939346b0a99899e22a873479364e3cc5d142731c"
+rev = "a4138c3a7899330d1c77d1ec01f8f29395b5805c"
 
 [[require]]
 name = "special_transformations"
 git = "https://github.com/daviddhilbert/special-transformations.git"
-rev = "25852c85a31c67069b148bd31348128318303510"
+rev = "4b6afb7cabcb59d7ca90e883309ddc8887241d76"
+
+[[require]]
+name = "hilbert-mathlib"
+git = "https://github.com/daviddhilbert/hilbert-mathlib.git"
+rev = "a26c12d71f83356ad48442b782be67ff01bd3f18"
 
 [[lean_lib]]
 name = "DiamondIntegral"
@@ -35,7 +40,7 @@ roots = ["«section 3».AdditiveSemiringTransport", "«section 3».BalancedSquar
 [[require]]
 name = "integration_in_acvf"
 git = "https://github.com/daviddhilbert/integration-in-ACVF.git"
-rev = "2c29c5b848f9077274774125222bba563cdc11b4"
+rev = "4216f453f351576af0c27c84fa9451e9e3c7ee90"
 
 [[lean_lib]]
 name = "section 6"
