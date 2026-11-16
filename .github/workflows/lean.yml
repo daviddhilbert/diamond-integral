@@ -70,3 +70,6 @@ jobs:
 
       - name: Audit section 5 exports and discharged inputs
         run: lake env python3 'section 5/verify.py'
+
+      - name: Audit section 6 and the bounded aperture revision
+        run: lake env python3 'section 6/verify.py'

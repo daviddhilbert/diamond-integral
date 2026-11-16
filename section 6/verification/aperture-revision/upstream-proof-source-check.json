@@ -1,0 +1,6 @@
+{
+  "baseline": "cc8cc35f2a12ea23fb93c5613e24a1a4d9cf7f49",
+  "copied_lean_sources_checked": 992,
+  "differences": [],
+  "scope": "All copied approved upstream Lean sources outside generated verification/scratch outputs match their integration hashes. Separate Section5 session worktree was never written."
+}

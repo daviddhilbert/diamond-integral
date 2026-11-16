@@ -1,0 +1,307 @@
+% S6-A6. Handoff proof draft. Section6 and Section4 portions are applied.
+% Every Section7/8 assertion below remains for the receiving session to verify.
+% This is separate from a complete native formalization of Section 7.
+
+\paragraph{Applied 6.11 data and required 7.2 synchronization.}
+All definability below is over the original VF-generated base $S$.
+Keep every old RV label and the current VF leading terms among the
+retained labels $u$. Replace the scalar aperture by a definable map
+$\tau:U\to\RV^\times$ satisfying
+\[
+ 0\leq\gamma(u)=\vrv\tau(u)\leq\Delta
+\]
+for one finite $S$-named $\Delta$. On an active polydisc $p$, put
+$\gamma_p=\rad(p_j)+\gamma(u)$ and require
+$\gamma_p\geq\alpha_p$ as before. A bijective lift includes as actual
+data a definable endpoint $b(x_{\widetilde j},u)$, continuous in its
+inactive VF variables, with
+\[
+ \rv b(x_{\widetilde j},u)=\tau(u)\rv\lambda(x_{\widetilde j},u).
+\]
+Existence of such a VF endpoint is an admissibility condition, not a
+claim that every RV function has a VF section. The two VF clauses are
+$x_j-\lambda$ off the core and $x_j-\lambda+b$ on the core, with disjoint
+branch tags. Original scalar apertures embed by $b=\lambda c$.
+
+In Definition 7.2 use exactly the same class of bounded nonzero aperture
+functions on the full retained RV domain. Its shell is
+$0<\vrv(s)\leq\gamma(u)$, and its endpoint is $s=\tau(u)$, separately
+tagged. No independently chosen endpoint or discontinuous VF section
+is added to either definition. Write $\sim_{\rm var}$ for common finite
+blowup refinement and let $J_{\rm var}$ be the explicit ideal of relative
+annular differences defined in the compatibility lemma.
+
+\paragraph{Higher-dimensional primitive and generator lift.}
+On a fixed old-label fibre, the core condition is clopen: $b$ is
+continuous and its valuation is the fixed value $\gamma_p$. The inverse
+on either branch fixes $x_{\widetilde j}$ and adds $\lambda$, subtracting
+$b$ on the core branch. Thus each branch is a triangular homeomorphism.
+The source invariance and $\gamma_p\geq\alpha_p$ ensure that whenever a
+core point occurs, its whole radius-$\gamma_p$ disc belongs to the
+source. The core image is consequently the entire disc $b+\MM_{\gamma_p}$.
+The source's bounds and the bounded aperture graph bound all target VF
+values and RV labels, both above and away from infinity. Branch source
+and target fibres are clopen. The criteria of 6.7--6.9 therefore give a
+proper covariant homeomorphism, also on every proper protected subset.
+Where the focus and endpoint are totally differentiable, the derivative
+is triangular with diagonal one. Pull back their definable exceptional
+sets in the inactive variables; their cylinders have dimension less
+than the ambient dimension. This proves the approved almost-everywhere
+unit-Jacobian assertion in every arity, without finite endpoint image.
+
+For an elementary RV blowup in coordinate $j$, the full tuple
+$(u,f_j(u),\tau(u)f_j(u))$ is finite over $f_{\widetilde j}(u)$.
+Apply the continuous-branch finitary lift of 6.30 to this whole finite
+correspondence. It gives centres $b_0(a,u),b_1(a,u)$ over the full inactive
+VF tuple $a$, with the two prescribed leading terms. Keeping $u$ picks
+one output in each prescribed RV class; it does not choose an arbitrary
+root without a code. The map
+\[
+ x\mapsto\begin{cases}
+ x-b_0(a,u),&\vv(x-b_0(a,u))\leq\vv b_1(a,u),\\
+ x-b_0(a,u)+b_1(a,u),&\vv(x-b_0(a,u))>\vv b_1(a,u)
+ \end{cases}
+\]
+with branch tags maps the original whole RV disc bijectively to the
+lifted shell and endpoint. The explicit inverse and the preceding
+primitive calculation prove proper covariance and generic Jacobian
+one. Pulling back the original form proves the measured isomorphism.
+For $k=1$ the inactive domain is a point and the same finite correspondence
+has finite image. For aperture zero the shell is empty. Thus every
+relative blowup difference belongs to the actual lifting kernel.
+
+
+\paragraph{Every new special step gives a permitted blowup.}
+For a primitive on $\mathbb L(U,f)$ fix an inactive leading tuple $r$
+and an entire VF representative $a\in r^\sharp$. On the active locus
+$u\mapsto\lambda(a,u)$ is a definable RV-to-VF map. Its image is finite,
+and its leading terms are exactly the possible $f_j(u)$ over $r$.
+Thus the inactive structural projection is finite-to-one, as 7.2
+requires. The translated leading term divided by $f_j(u)$ ranges over
+the full shell and the tagged endpoint $\tau(u)$. The actual endpoint
+map has that same leading term on the whole core. Hence the contracted
+primitive image is the proposed relative elementary blowup. Off the
+active locus it is unchanged. Canonical regularization only carries
+redundant leading-term tags. Iteration and common refinements give the
+special-to-blowup comparison for every new finite word.
+
+\paragraph{Common refinements.}
+Coordinate permutations preserve the total weight, so normalize the
+changed coordinate on each side to the last coordinate. Pull the second
+aperture back through the given measured isomorphism $F$. Partition the
+base according to $\gamma_U\leq\gamma_V\circ F$ and the reverse inequality.
+On the first piece blow up the distinguished endpoint of the smaller
+annulus with the relative aperture
+\[
+ \tau_{V}(F(u))/\tau_U(u).
+\]
+It is nonnegative and bounded, and is an actual retained-label function.
+Multiply its new shell parameter by $\tau_U(u)$. The old shell followed
+by this new shell is exactly the larger shell; the distinguished
+endpoint becomes $\tau_V(F(u))$. This is a definable bijection preserving
+the complete total weights. When the two depths are equal the shells
+already agree and the endpoints are rescaled by their valuation-zero
+ratio. Use an empty-locus identity blowup for length padding.
+Apply the symmetric construction on the other piece, and add the
+parts of either locus not met by the other locus. This proves the
+one-step diamond. Induction on the two lengths gives arbitrary common
+refinements. Products pull back the same aperture functions; the
+finite-to-one inactive structural maps remain finite-to-one. Thus
+$\sim_{\rm var}$ is a graded semiring congruence.
+
+\paragraph{Complete-witness descent (the additional step in 7.14).}
+Fix a finite head start $k$. First treat one VF base coordinate $a$.
+Over $S\langle a\rangle$ a common-refinement witness is a finite list
+of formulas: choice of finite word, all loci and structural maps, all
+intermediate form graphs, all aperture graphs, and the final comparison
+bijection and its inverse. Validity includes finite-to-one bounds,
+nonzero and bounded aperture data, and the complete total-weight
+identity. For each fixed list this is a first-order condition. In
+particular encode Gamma graphs by their entire RV value fibres, so no
+Gamma or RV representative is secretly named. Compactness gives a
+finite list of valid formula/word codes covering the base; choose the
+first valid code. Tuple padding and distinct finite tags combine every
+one of these graphs into one definable RV row $D_a$.
+
+Here is why a finite covariant preparation suffices even when the
+unprepared witness rows are unbounded. Regularize a bounded product
+ambient context containing both original pure-RV fibre families. Take
+the two families as protected subsets, distinguished by side tags;
+extend their forms by zero outside the corresponding protected part.
+The bounded ambient is an RV-pullback; the protected parts and all form
+levels have a common named invariance radius. Apply complete measured
+unary data freezing to $D$, protecting those parts and levels. The
+checked theorem \texttt{measured\_frozen\_unary\_rv\_data\_preparation}
+constructs actual exceptional balls, actual definable centres, an actual
+base special preparation with an ambient lift, all required product
+domains, and constancy of the \emph{entire frozen row} on every new
+retained-label fibre. Its relation output is allowed to be unbounded.
+
+On a frozen ball replace the entire witness by the witness at its
+centre. The product-domain assertions imply equality of both original
+fibres and of every original form level between a point and the centre.
+The centre witness is therefore a witness for the original problem
+at every point of that ball. Outside the balls the witness is unchanged.
+Validity is preserved because all graphs come from the same witness;
+no independent selection of coefficients or comparison maps occurs.
+Constancy gives definable descent of every graph through the actual
+RV quotient. Totality, functionality, inverse identities and the
+weight equality descend as first-order assertions on those same graphs.
+
+At each of the finitely many descended stages the full raw RV support
+is bounded: it is finite over the bounded structural support, so its
+Gamma rows are finite and the bounded-RV row theorem bounds their union.
+The actual aperture function on that bounded support then has one named
+bound by 2.41/2.53. This proves exactly the proposed aperture condition;
+no pre-freezing uniform bound in the VF parameter is assumed. The
+descended words are therefore permitted variable blowups. The argument
+is independent of the head start. Repeating it one VF coordinate at a
+time proves full 7.14. All RV head variables remain variables over $S$.
+
+\paragraph{Same-order comparison and good base points.}
+For a relatively unary VF morphism use a common radius for both first
+contracted objects, both transported forms, and both original objects.
+The base parameters having a positive-dimensional bad unary fibre form
+a lower-dimensional VF set. Put that set in the zero set of a nonzero
+polynomial $P$. If $d=\deg P$, take a sufficiently small finite named
+translation grid with $d+1$ values per coordinate. A polynomial of degree
+at most $d$ cannot vanish on the entire translated grid. Choose the
+first good translate $b$ of $a$. It lies in the same invariance polydisc
+and belongs to $\operatorname{dcl}(S,a)$; thus the required unary witness
+is over the VF-generated base $S\langle a\rangle$, without an extra
+unnamed parameter. The two prepared fibres at $a,b$ agree on both sides.
+The complete measured unary matching theorem, with arbitrary retained
+RV labels, applies at $b$. The just-proved witness descent glues these
+comparisons, including all head starts.
+
+\paragraph{Order comparison: the precise affine requirement.}
+Gamma-affinity alone does not imply RV-affinity. For the positioning
+injection prepare the full relation
+\[
+ \{(x,r,t): B(x,\vrv r)\subseteq\operatorname{dom}\epsilon,
+ \ \rv(\epsilon(z)-\epsilon(y))=t\rv(z-y)
+ \text{ for all }y,z\in B(x,\vrv r)\}.
+\]
+Include the full disc-image relation and the ordinary cell parameters.
+On an ordinary open ball of radius $\rho$, an RV-linear subball of any
+radius $\beta>\rho$ exists: choose an atomic radius-$\beta$ subball over
+its ball code using saturation, and apply the actual RV-linearity
+Lemma 3.18. Only finitely many real codes are needed to specialize this
+argument; all temporary ball parameters disappear from the conclusion.
+
+If the displayed full rows are constant on a prepared inverse ball,
+RV-linearity on one radius-$\beta$ subball transfers to the ball of the
+same radius about every point. Any two such slopes agree by restriction
+to a smaller concentric ball and cancellation of a nonzero difference.
+Every pair of points lies in a strictly smaller concentric ball, so the
+common slope works on the entire prepared inverse ball. This proves
+RV-affinity itself, rather than merely its valuation shift. At the finite
+FMT cores freeze the positioning function to its centre value, protecting
+the whole vertical fibre and all volume levels; this leaves the actual
+set unchanged there and gives the constant-positioner cell case.
+The disc-image and paradigm rows are retained, so the usual balanced
+fibre identities are preserved. This is the required stronger bounded
+version of the cell step.
+
+Prepare the volume form first and retain its full RV parameters through
+the cell construction. The map adjoining all these parameters is the
+RV projection of an actual proper preparation and hence is locally
+constant with bounded range. Its graph map and inverse have identity
+VF derivative on every clopen fixed-label fibre, so are proper covariant
+measured morphisms. On a balanced cell put
+$\gamma=\vrv(t_2)-\vrv(t_1)$. The two triangular translations give
+$t_1^\sharp\times A_2$ and $A_1\times t_2^\sharp$. Apply unary measured
+matching to the positioning bijection with forms $0,-\gamma$.
+The resulting RV map has Gamma-Jacobian $\gamma$, and the product
+comparison has Gamma-Jacobian
+$\gamma+\vrv(t_1)-\vrv(t_2)=0$. Constant-positioner and narrow-image
+cases are products. Thus the two orders have equal output after common
+refinement.
+
+This proves the first adjacent swap. To move a swap past a common head,
+lift each leading RV value by a VF representative, apply induction over
+the VF-generated extension, and descend using 7.14 with one VF coordinate
+and the remaining head start. Arbitrary permutations are products of
+adjacent swaps. Arbitrary choices within a fixed order are covered by
+the same-order comparison.
+
+\paragraph{Revised 7.26 and its ring kernel.}
+For each relatively unary arrow $G_i:B_i\to B_{i+1}$ choose an order
+starting with its changed coordinate. Same-order comparison relates its
+two outputs. At every intermediate $B_i$, the order comparison relates
+the preceding and following choices. Transitivity connects all arrows,
+including the last one and words of lengths zero, one and two. At the
+two endpoints compare with the tautological contractions of $\mu L U$
+and $\mu L V$, which recover $U,V$. Thus equality of lifted classes
+implies $U\sim_{\rm var}V$. The reverse implication was proved by the
+explicit primitive lift. Degree zero has the identity category and no
+blowup relation.
+
+The surjectivity proof is unchanged because every old preparation is
+still permitted. Consequently
+\[
+ K_+\mu VF^\diamond[k]\simeq K_+\mu RV^{\rm db}[k]/\sim_{\rm var},
+ \qquad
+ K\mu VF^\diamond[*]\simeq B/J_{\rm var}.
+\]
+For the ring statement, groupification of the semiring congruence is
+generated by elementary differences. Each is a generator of $J_{\rm var}$;
+conversely a product of a generator with an arbitrary RV object is the
+generator on the product with the pulled-back aperture. Addition,
+subtraction and finite iteration give precisely $J_{\rm var}$. This
+is an explicit kernel description, not the definition $J=\ker\mu L$.
+
+\paragraph{Section 8 and all comparison targets.}
+Retain the full aperture graph in a bipolar refinement. Fix $m>0$.
+Functional closure of $\RV(\mathbb C((t^{1/m})))$ implies that a retained
+input point in the $m$-trace has its endpoint in the same trace.
+Consequently $M=m\gamma(u)$ is a nonnegative integer. A named upper
+bound has standard rational value in this concrete specialization,
+so only finitely many $M$ occur. Refine also by the input valuation tuple
+and the original total weight $w$, which is constant on each such residue
+piece. Let $A$ be its equivariant residue class and put $L=[\mathbb A^1]$.
+The endpoint graph projects equivariantly onto the original piece, so
+has class $A$. Each shell slice has one extra multiplicative residue
+coordinate. The affine-action relation gives $(L-1)A$, with its actual
+monodromy; no equivariant trivialization is assumed. Directly from the
+weighted trace definition, the relative relation contributes
+\[
+ A T^{-mw}\bigl((L-1)T^{-1}S_M+T^{-M}-1\bigr)
+   = A T^{-mw}(LT^{-1}-1)S_M,
+ \qquad S_M=\sum_{r=0}^{M-1}T^{-r}.
+\]
+This includes $M=0$. Hence $h_m(J_{\rm var})\subseteq(LT^{-1}-1)$ in
+the Puiseux polynomial ring. For $x\in J_{\rm var}\cap B_m^\natural$,
+write $h_m(x)=(LT^{-1}-1)Q$. Projection onto the integer-exponent
+summand commutes with multiplication by $LT^{-1}-1$. Evaluating
+$T=L$ therefore gives zero, even when the ideal coefficients are not
+in $B_m^\natural$. Use $J_{\rm var}\cap B_m^\natural$ in each natural
+quotient, and the corresponding intersection for the all-$m$ ring.
+
+The Section 4 compatibility lemma preserves both ordinary retraction
+and full measured comparison diagrams. The intrinsic Section 3 tensor
+kernel and Section 4 scalar ideal remain as statements about the old
+RV rings; they do not become the new VF kernel. The introduction,
+integral targets, comparison diagrams, post-7.26 kernel remark and
+Section 8 quotient expressions must use $J_{\rm var}$ wherever they
+refer to the bounded VF integral. Statements about the scalar ideal
+itself retain $I=(P_\Gamma)$ and its original indexing. Constant-form
+representatives remain available by the old preparation proofs, so
+final residue specializations and motivic zeta/Milnor-fibre values do
+not change. Separate pre-existing truncation and summability issues
+are not consequences of this aperture change.
+
+\paragraph{Verification status.}
+The applied Section 6 bounded-variable primitive, actual bounded
+aperture graphs, old scalar inclusion, unary inclusion and precise
+matching theorem have passed the fresh 5103-declaration audit.
+The separate Section 4 compatibility modules and actual graded
+relative quotient/retraction passed its 5069-declaration audit.
+The additional RV-affinity and frozen full-row descent inputs are
+checked. These scopes do not certify a complete native 7.26 theorem
+or the complete Section 8 geometric specialization. All downstream
+assertions in this draft are obligations for the receiving sessions.
+Definition 6.11 and its Section 6 consequences, the Section 4 relative
+ideal and compatibility lemma, and the introduction's target changes
+are applied. Definition 7.2 and the Section 7--8 assemblies remain
+unapplied, at the author's instruction to leave them to their sessions.

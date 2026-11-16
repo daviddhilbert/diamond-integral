@@ -1,0 +1,39 @@
+{
+  "scope": "Only consequences of the variable aperture in Definitions 6.11 and 7.2; Sections 7/8 preserved for their sessions",
+  "changes": [
+    {
+      "item": "6.11 bounded variable aperture and actual endpoint",
+      "old_sha256": "0ffadd0b89b6f5ccc387c9018b8c22316b0c9cf5082e634d92b2dcb0ae35cea6",
+      "new_sha256": "befa8b0ee6f06a192482d599eab3f6f1c4a61ea4c66cb8d7d312b515d6c1138d"
+    },
+    {
+      "item": "6.12 fibrewise aperture comparison"
+    },
+    {
+      "item": "zero-centered preliminary operation wording"
+    },
+    {
+      "item": "6.14 variable endpoint continuity, bounds and Jacobian"
+    },
+    {
+      "item": "6.19 retain constant-aperture existence witnesses"
+    },
+    {
+      "item": "6.38 full first-zero construction in the revised class"
+    },
+    {
+      "item": "R117 resolution aligned with actual aperture repair"
+    },
+    {
+      "item": "Section 4 independent relative ideal and proved compatibility"
+    },
+    {
+      "item": "Section 1 aperture-dependent quotient descriptions and diagrams"
+    },
+    {
+      "item": "R009 resolution aligned with the rewritten aperture-dependent introduction paragraph"
+    }
+  ],
+  "before_sha256": "8728aa2a1581ce2682381f4efbd5bac8830d8a0c12d89ac8aa3c6ccc70450c0f",
+  "after_sha256": "e208a76e0c718a5fd26f9373ee5e8a3eaca79bbb2847fab5d9cf5d7c3a2f7054"
+}

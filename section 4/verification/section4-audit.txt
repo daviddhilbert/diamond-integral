@@ -74589,6 +74589,1127 @@ theorem DiamondIntegral.Section4.Section3LinkedRetractionStatements.proposition_
 'DiamondIntegral.Section4.Section3LinkedRetractionStatements.proposition_4_15' depends on axioms: [propext,
  Classical.choice.{u},
  Quot.sound.{u}]
+def DiamondIntegral.Section4.VariableApertureRayCancellation.rayProduct : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B : SpecialTransformations.Section3.GammaParameters.Base} →
+        {k : ℕ} →
+          DiamondIntegral.Section4.RVMeasuredCharts.Chart B k →
+            DiamondIntegral.Section4.RVMeasuredCharts.Chart B (HAdd.hAdd.{0, 0, 0} 1 k) :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {B} {k} r =>
+  DiamondIntegral.Section4.RVMeasuredProduct.product r
+    (DiamondIntegral.Section4.RVSharpCharts.sharpChart (DiamondIntegral.Section4.RVMeasuredSpecialClasses.rayChart B))
+'DiamondIntegral.Section4.VariableApertureRayCancellation.rayProduct' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.VariableApertureRayCancellation.deepDomain : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B : SpecialTransformations.Section3.GammaParameters.Base} →
+        {k : ℕ} →
+          (r : DiamondIntegral.Section4.RVMeasuredCharts.Chart B k) →
+            Fin r.arity → Set.{0} (Fin (HAdd.hAdd.{0, 0, 0} 1 r.arity) → M) :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {B} {k} r j =>
+  Set.image.{0, 0} (DiamondIntegral.Section4.RVCoefficientShearGraphs.shear j)
+    (DiamondIntegral.Section4.VariableApertureRayCancellation.rayProduct r).domain
+'DiamondIntegral.Section4.VariableApertureRayCancellation.deepDomain' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.VariableApertureRayCancellation.deepDomain_definable : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {k : ℕ}
+  (r : DiamondIntegral.Section4.RVMeasuredCharts.Chart B k) (j : Fin r.arity),
+  SpecialTransformations.Section3.GammaParameters.DefinableOverBase B
+    (fun x => SpecialTransformations.Milestone0.SortTag.rv)
+    (DiamondIntegral.Section4.VariableApertureRayCancellation.deepDomain r j) :=
+⋯
+'DiamondIntegral.Section4.VariableApertureRayCancellation.deepDomain_definable' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.VariableApertureRayCancellation.shear_injective : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {k : ℕ}
+  (r : DiamondIntegral.Section4.RVMeasuredCharts.Chart B k) (j : Fin r.arity),
+  (∀ (x : Fin r.arity → M),
+      Membership.mem.{0, 0} r.domain x → SpecialTransformations.Section3.GammaParameters.NonzeroRV (x j)) →
+    Set.InjOn.{0, 0} (DiamondIntegral.Section4.RVCoefficientShearGraphs.shear j)
+      (DiamondIntegral.Section4.VariableApertureRayCancellation.rayProduct r).domain :=
+⋯
+'DiamondIntegral.Section4.VariableApertureRayCancellation.shear_injective' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.VariableApertureRayCancellation.shear_mapsTo : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {k : ℕ}
+  (r : DiamondIntegral.Section4.RVMeasuredCharts.Chart B k) (j : Fin r.arity),
+  (∀ (x : Fin r.arity → M),
+      Membership.mem.{0, 0} r.domain x → SpecialTransformations.Section3.GammaParameters.NonzeroRV (x j)) →
+    (∀ (x : Fin r.arity → M),
+        Membership.mem.{0, 0} r.domain x →
+          LE.le.{0} 1 (SpecialTransformations.Section3.GammaParameters.codeValue (x j))) →
+      Set.MapsTo.{0, 0} (DiamondIntegral.Section4.RVCoefficientShearGraphs.shear j)
+        (DiamondIntegral.Section4.VariableApertureRayCancellation.rayProduct r).domain
+        (DiamondIntegral.Section4.VariableApertureRayCancellation.rayProduct r).domain :=
+⋯
+'DiamondIntegral.Section4.VariableApertureRayCancellation.shear_mapsTo' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.VariableApertureRayCancellation.deepDomain_subset : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {k : ℕ}
+  (r : DiamondIntegral.Section4.RVMeasuredCharts.Chart B k) (j : Fin r.arity),
+  (∀ (x : Fin r.arity → M),
+      Membership.mem.{0, 0} r.domain x → SpecialTransformations.Section3.GammaParameters.NonzeroRV (x j)) →
+    (∀ (x : Fin r.arity → M),
+        Membership.mem.{0, 0} r.domain x →
+          LE.le.{0} 1 (SpecialTransformations.Section3.GammaParameters.codeValue (x j))) →
+      DiamondIntegral.Section4.VariableApertureRayCancellation.deepDomain r j ⊆
+        (DiamondIntegral.Section4.VariableApertureRayCancellation.rayProduct r).domain :=
+⋯
+'DiamondIntegral.Section4.VariableApertureRayCancellation.deepDomain_subset' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.VariableApertureRayCancellation.deepChart : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B : SpecialTransformations.Section3.GammaParameters.Base} →
+        {k : ℕ} →
+          (r : DiamondIntegral.Section4.RVMeasuredCharts.Chart B k) →
+            Fin r.arity → DiamondIntegral.Section4.RVMeasuredCharts.Chart B (HAdd.hAdd.{0, 0, 0} 1 k) :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {B} {k} r j =>
+  (DiamondIntegral.Section4.RVChartRestrictions.inside
+      (DiamondIntegral.Section4.RVChartDisjointUnion.ofChart
+        (DiamondIntegral.Section4.VariableApertureRayCancellation.rayProduct r))
+      (DiamondIntegral.Section4.VariableApertureRayCancellation.deepDomain r j) ⋯).toChart
+'DiamondIntegral.Section4.VariableApertureRayCancellation.deepChart' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.VariableApertureRayCancellation.annularChart : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B : SpecialTransformations.Section3.GammaParameters.Base} →
+        {k : ℕ} →
+          (r : DiamondIntegral.Section4.RVMeasuredCharts.Chart B k) →
+            Fin r.arity → DiamondIntegral.Section4.RVMeasuredCharts.Chart B (HAdd.hAdd.{0, 0, 0} 1 k) :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {B} {k} r j =>
+  (DiamondIntegral.Section4.RVChartRestrictions.outside
+      (DiamondIntegral.Section4.RVChartDisjointUnion.ofChart
+        (DiamondIntegral.Section4.VariableApertureRayCancellation.rayProduct r))
+      (DiamondIntegral.Section4.VariableApertureRayCancellation.deepDomain r j) ⋯).toChart
+'DiamondIntegral.Section4.VariableApertureRayCancellation.annularChart' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.VariableApertureRayCancellation.rayToDeep : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B : SpecialTransformations.Section3.GammaParameters.Base} →
+        {k : ℕ} →
+          (r : DiamondIntegral.Section4.RVMeasuredCharts.Chart B k) →
+            (j : Fin r.arity) →
+              (∀ (x : Fin r.arity → M),
+                  Membership.mem.{0, 0} r.domain x → SpecialTransformations.Section3.GammaParameters.NonzeroRV (x j)) →
+                (∀ (x : Fin r.arity → M),
+                    Membership.mem.{0, 0} r.domain x →
+                      LE.le.{0} 1 (SpecialTransformations.Section3.GammaParameters.codeValue (x j))) →
+                  DiamondIntegral.Section4.RVForgetScissors.UnderlyingIso
+                    (DiamondIntegral.Section4.VariableApertureRayCancellation.rayProduct r)
+                    (DiamondIntegral.Section4.VariableApertureRayCancellation.deepChart r j) :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {B} {k} r j hp hn =>
+  DiamondIntegral.Section4.RVForgetScissors.ofMap
+    (DiamondIntegral.Section4.VariableApertureRayCancellation.rayProduct r)
+    (DiamondIntegral.Section4.VariableApertureRayCancellation.deepChart r j)
+    (DiamondIntegral.Section4.RVCoefficientShearGraphs.shear j) ⋯ ⋯
+'DiamondIntegral.Section4.VariableApertureRayCancellation.rayToDeep' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.VariableApertureRayCancellation.annular_class_zero : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {k : ℕ}
+  (r : DiamondIntegral.Section4.RVMeasuredCharts.Chart B k) (j : Fin r.arity),
+  (∀ (x : Fin r.arity → M),
+      Membership.mem.{0, 0} r.domain x → SpecialTransformations.Section3.GammaParameters.NonzeroRV (x j)) →
+    (∀ (x : Fin r.arity → M),
+        Membership.mem.{0, 0} r.domain x →
+          LE.le.{0} 1 (SpecialTransformations.Section3.GammaParameters.codeValue (x j))) →
+      Eq.{1}
+        (DiamondIntegral.Section4.RVOrdinaryRing.objectClass
+          (DiamondIntegral.Section4.VariableApertureRayCancellation.annularChart r j))
+        0 :=
+⋯
+'DiamondIntegral.Section4.VariableApertureRayCancellation.annular_class_zero' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.VariableApertureRayCancellation.deepDomain_join_iff : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {k : ℕ}
+  (r : DiamondIntegral.Section4.RVMeasuredCharts.Chart B k) (j : Fin r.arity),
+  (∀ (x : Fin r.arity → M),
+      Membership.mem.{0, 0} r.domain x → SpecialTransformations.Section3.GammaParameters.NonzeroRV (x j)) →
+    ∀ (x : Fin r.arity → M),
+      Membership.mem.{0, 0} r.domain x →
+        ∀ (z : Fin 1 → M),
+          SpecialTransformations.Section3.GammaParameters.Proper z →
+            (Membership.mem.{0, 0} (DiamondIntegral.Section4.VariableApertureRayCancellation.deepDomain r j)
+                (DiamondIntegral.Section4.FiniteTupleBlocks.join.{0} 1 r.arity x z) ↔
+              LT.lt.{0} (SpecialTransformations.Section3.GammaParameters.codeValue (x j))
+                (SpecialTransformations.Section3.GammaParameters.codeValue (z 0))) :=
+⋯
+'DiamondIntegral.Section4.VariableApertureRayCancellation.deepDomain_join_iff' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.VariableApertureRayCancellation.annularChart_join_iff : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {k : ℕ}
+  (r : DiamondIntegral.Section4.RVMeasuredCharts.Chart B k) (j : Fin r.arity),
+  (∀ (x : Fin r.arity → M),
+      Membership.mem.{0, 0} r.domain x → SpecialTransformations.Section3.GammaParameters.NonzeroRV (x j)) →
+    ∀ (x : Fin r.arity → M) (z : Fin 1 → M),
+      Membership.mem.{0, 0} (DiamondIntegral.Section4.VariableApertureRayCancellation.annularChart r j).domain
+          (DiamondIntegral.Section4.FiniteTupleBlocks.join.{0} 1 r.arity x z) ↔
+        Membership.mem.{0, 0} r.domain x ∧
+          SpecialTransformations.Section3.GammaParameters.Proper z ∧
+            LT.lt.{0} 1 (SpecialTransformations.Section3.GammaParameters.codeValue (z 0)) ∧
+              LE.le.{0} (SpecialTransformations.Section3.GammaParameters.codeValue (z 0))
+                (SpecialTransformations.Section3.GammaParameters.codeValue (x j)) :=
+⋯
+'DiamondIntegral.Section4.VariableApertureRayCancellation.annularChart_join_iff' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.VariableApertureRayCancellation.annularChart_domain_bounded : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {k : ℕ}
+  (r : DiamondIntegral.Section4.RVMeasuredCharts.Chart B k) (j : Fin r.arity),
+  (∀ (x : Fin r.arity → M),
+      Membership.mem.{0, 0} r.domain x → SpecialTransformations.Section3.GammaParameters.NonzeroRV (x j)) →
+    DiamondIntegral.Section4.RVMeasuredBounds.DomainBounded r →
+      ∀ (Δ : SpecialTransformations.Section3.Values.Gamma),
+        (∀ (x : Fin r.arity → M),
+            Membership.mem.{0, 0} r.domain x →
+              LE.le.{0} (SpecialTransformations.Section3.GammaParameters.codeValue (x j)) Δ) →
+          DiamondIntegral.Section4.RVMeasuredBounds.DomainBounded
+            (DiamondIntegral.Section4.VariableApertureRayCancellation.annularChart r j) :=
+⋯
+'DiamondIntegral.Section4.VariableApertureRayCancellation.annularChart_domain_bounded' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.VariableApertureRayCancellation.boundedAnnularChart : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B : SpecialTransformations.Section3.GammaParameters.Base} →
+        {k : ℕ} →
+          (r : DiamondIntegral.Section4.RVBoundedCharts.BoundedChart B k) →
+            (j : Fin r.arity) →
+              (∀ (x : Fin r.arity → M),
+                  Membership.mem.{0, 0} r.domain x → SpecialTransformations.Section3.GammaParameters.NonzeroRV (x j)) →
+                (Δ : SpecialTransformations.Section3.Values.Gamma) →
+                  (∀ (x : Fin r.arity → M),
+                      Membership.mem.{0, 0} r.domain x →
+                        LE.le.{0} (SpecialTransformations.Section3.GammaParameters.codeValue (x j)) Δ) →
+                    DiamondIntegral.Section4.RVBoundedCharts.BoundedChart B (HAdd.hAdd.{0, 0, 0} 1 k) :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {B} {k} r j hp Δ hΔ =>
+  { toChart := DiamondIntegral.Section4.VariableApertureRayCancellation.annularChart r.toChart j, domain_bounded := ⋯ }
+'DiamondIntegral.Section4.VariableApertureRayCancellation.boundedAnnularChart' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+structure DiamondIntegral.Section4.VariableApertureCompatibility.Presentation {M : Type}
+  [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base) (k : ℕ) : Type
+number of parameters: 5
+fields:
+  DiamondIntegral.Section4.VariableApertureCompatibility.Presentation.base : DiamondIntegral.Section4.RVBoundedCharts.BoundedChart
+      B k
+  DiamondIntegral.Section4.VariableApertureCompatibility.Presentation.apertureIndex : Fin self.base.arity
+  DiamondIntegral.Section4.VariableApertureCompatibility.Presentation.aperture_nonzero : ∀
+      (u : Fin self.base.arity → M),
+      Membership.mem.{0, 0} self.base.domain u →
+        SpecialTransformations.Section3.GammaParameters.NonzeroRV (u self.apertureIndex)
+  DiamondIntegral.Section4.VariableApertureCompatibility.Presentation.aperture_nonnegative : ∀
+      (u : Fin self.base.arity → M),
+      Membership.mem.{0, 0} self.base.domain u →
+        LE.le.{0} 1 (SpecialTransformations.Section3.GammaParameters.codeValue (u self.apertureIndex))
+  DiamondIntegral.Section4.VariableApertureCompatibility.Presentation.upperBound : SpecialTransformations.Section3.Values.Gamma
+  DiamondIntegral.Section4.VariableApertureCompatibility.Presentation.aperture_bounded : ∀
+      (u : Fin self.base.arity → M),
+      Membership.mem.{0, 0} self.base.domain u →
+        LE.le.{0} (SpecialTransformations.Section3.GammaParameters.codeValue (u self.apertureIndex)) self.upperBound
+  DiamondIntegral.Section4.VariableApertureCompatibility.Presentation.source : DiamondIntegral.Section4.RVChartDisjointUnion.Data
+      B self.base.arity (HAdd.hAdd.{0, 0, 0} 1 k)
+  DiamondIntegral.Section4.VariableApertureCompatibility.Presentation.endpoint : DiamondIntegral.Section4.RVChartDisjointUnion.Data
+      B self.base.arity (HAdd.hAdd.{0, 0, 0} 1 k)
+  DiamondIntegral.Section4.VariableApertureCompatibility.Presentation.source_domain : Eq.{1} self.source.domain
+      self.base.domain
+  DiamondIntegral.Section4.VariableApertureCompatibility.Presentation.endpoint_domain : Eq.{1} self.endpoint.domain
+      self.base.domain
+  DiamondIntegral.Section4.VariableApertureCompatibility.Presentation.source_weight : ∀ (u : Fin self.base.arity → M),
+      Membership.mem.{0, 0} self.base.domain u →
+        Eq.{1} (self.source.toChart.correctedWeight u) (self.base.correctedWeight u)
+  DiamondIntegral.Section4.VariableApertureCompatibility.Presentation.endpoint_weight : ∀ (u : Fin self.base.arity → M),
+      Membership.mem.{0, 0} self.base.domain u →
+        Eq.{1} (self.endpoint.toChart.correctedWeight u)
+          (HMul.hMul.{0, 0, 0} (self.base.correctedWeight u)
+            (SpecialTransformations.Section3.GammaParameters.codeValue (u self.apertureIndex)))
+constructor:
+  DiamondIntegral.Section4.VariableApertureCompatibility.Presentation.mk {M : Type}
+    [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+    {B : SpecialTransformations.Section3.GammaParameters.Base} {k : ℕ}
+    (base : DiamondIntegral.Section4.RVBoundedCharts.BoundedChart B k) (apertureIndex : Fin base.arity)
+    (aperture_nonzero :
+      ∀ (u : Fin base.arity → M),
+        Membership.mem.{0, 0} base.domain u →
+          SpecialTransformations.Section3.GammaParameters.NonzeroRV (u apertureIndex))
+    (aperture_nonnegative :
+      ∀ (u : Fin base.arity → M),
+        Membership.mem.{0, 0} base.domain u →
+          LE.le.{0} 1 (SpecialTransformations.Section3.GammaParameters.codeValue (u apertureIndex)))
+    (upperBound : SpecialTransformations.Section3.Values.Gamma)
+    (aperture_bounded :
+      ∀ (u : Fin base.arity → M),
+        Membership.mem.{0, 0} base.domain u →
+          LE.le.{0} (SpecialTransformations.Section3.GammaParameters.codeValue (u apertureIndex)) upperBound)
+    (source endpoint : DiamondIntegral.Section4.RVChartDisjointUnion.Data B base.arity (HAdd.hAdd.{0, 0, 0} 1 k))
+    (source_domain : Eq.{1} source.domain base.domain) (endpoint_domain : Eq.{1} endpoint.domain base.domain)
+    (source_weight :
+      ∀ (u : Fin base.arity → M),
+        Membership.mem.{0, 0} base.domain u → Eq.{1} (source.toChart.correctedWeight u) (base.correctedWeight u))
+    (endpoint_weight :
+      ∀ (u : Fin base.arity → M),
+        Membership.mem.{0, 0} base.domain u →
+          Eq.{1} (endpoint.toChart.correctedWeight u)
+            (HMul.hMul.{0, 0, 0} (base.correctedWeight u)
+              (SpecialTransformations.Section3.GammaParameters.codeValue (u apertureIndex)))) :
+    DiamondIntegral.Section4.VariableApertureCompatibility.Presentation B k
+'DiamondIntegral.Section4.VariableApertureCompatibility.Presentation' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.VariableApertureCompatibility.Presentation.sourceBounded : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B : SpecialTransformations.Section3.GammaParameters.Base} →
+        {k : ℕ} →
+          DiamondIntegral.Section4.VariableApertureCompatibility.Presentation B k →
+            DiamondIntegral.Section4.RVBoundedCharts.BoundedChart B (HAdd.hAdd.{0, 0, 0} 1 k) :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {B} {k} P =>
+  { toChart := P.source.toChart, domain_bounded := ⋯ }
+'DiamondIntegral.Section4.VariableApertureCompatibility.Presentation.sourceBounded' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.VariableApertureCompatibility.Presentation.endpointBounded : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B : SpecialTransformations.Section3.GammaParameters.Base} →
+        {k : ℕ} →
+          DiamondIntegral.Section4.VariableApertureCompatibility.Presentation B k →
+            DiamondIntegral.Section4.RVBoundedCharts.BoundedChart B (HAdd.hAdd.{0, 0, 0} 1 k) :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {B} {k} P =>
+  { toChart := P.endpoint.toChart, domain_bounded := ⋯ }
+'DiamondIntegral.Section4.VariableApertureCompatibility.Presentation.endpointBounded' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.VariableApertureCompatibility.Presentation.shell : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B : SpecialTransformations.Section3.GammaParameters.Base} →
+        {k : ℕ} →
+          DiamondIntegral.Section4.VariableApertureCompatibility.Presentation B k →
+            DiamondIntegral.Section4.RVBoundedCharts.BoundedChart B (HAdd.hAdd.{0, 0, 0} 1 k) :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {B} {k} P =>
+  DiamondIntegral.Section4.VariableApertureRayCancellation.boundedAnnularChart P.base P.apertureIndex ⋯ P.upperBound ⋯
+'DiamondIntegral.Section4.VariableApertureCompatibility.Presentation.shell' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.VariableApertureCompatibility.Presentation.relation : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B : SpecialTransformations.Section3.GammaParameters.Base} →
+        {k : ℕ} →
+          DiamondIntegral.Section4.VariableApertureCompatibility.Presentation B k →
+            DiamondIntegral.Section4.RVBoundedRing.Ring B :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {B} {k} P =>
+  HSub.hSub.{0, 0, 0}
+    (HAdd.hAdd.{0, 0, 0} (DiamondIntegral.Section4.RVBoundedRing.objectClass P.shell)
+      (DiamondIntegral.Section4.RVBoundedRing.objectClass P.endpointBounded))
+    (DiamondIntegral.Section4.RVBoundedRing.objectClass P.sourceBounded)
+'DiamondIntegral.Section4.VariableApertureCompatibility.Presentation.relation' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.VariableApertureCompatibility.Presentation.endpointSourceIso : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B : SpecialTransformations.Section3.GammaParameters.Base} →
+        {k : ℕ} →
+          (P : DiamondIntegral.Section4.VariableApertureCompatibility.Presentation B k) →
+            DiamondIntegral.Section4.RVForgetScissors.UnderlyingIso P.endpoint.toChart P.source.toChart :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {B} {k} P =>
+  DiamondIntegral.Section4.RVForgetScissors.ofMap P.endpoint.toChart P.source.toChart id.{1} ⋯ ⋯
+'DiamondIntegral.Section4.VariableApertureCompatibility.Presentation.endpointSourceIso' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.VariableApertureCompatibility.Presentation.forget_relation : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {k : ℕ}
+  (P : DiamondIntegral.Section4.VariableApertureCompatibility.Presentation B k),
+  Eq.{1} ((DiamondIntegral.Section4.RVOrdinaryMaps.boundedForget B) P.relation) 0 :=
+⋯
+'DiamondIntegral.Section4.VariableApertureCompatibility.Presentation.forget_relation' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.VariableApertureCompatibility.ideal : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (B : SpecialTransformations.Section3.GammaParameters.Base) →
+        Ideal.{0} (DiamondIntegral.Section4.RVBoundedRing.Ring B) :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] B =>
+  Ideal.span.{0} (Set.ofPred.{0} fun x => ∃ k P, Eq.{1} x P.relation)
+'DiamondIntegral.Section4.VariableApertureCompatibility.ideal' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.VariableApertureCompatibility.ideal_le_forget_kernel : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base),
+  LE.le.{0} (DiamondIntegral.Section4.VariableApertureCompatibility.ideal B)
+    (RingHom.ker.{0, 0, 0} (DiamondIntegral.Section4.RVOrdinaryMaps.boundedForget B)) :=
+⋯
+'DiamondIntegral.Section4.VariableApertureCompatibility.ideal_le_forget_kernel' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.VariableApertureCompatibility.Presentation.relation_mem_degree : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {k : ℕ}
+  (P : DiamondIntegral.Section4.VariableApertureCompatibility.Presentation B k),
+  Membership.mem.{0, 0} (DiamondIntegral.Section4.RVBoundedGrading.gradedPiece B (HAdd.hAdd.{0, 0, 0} 1 k))
+    P.relation :=
+⋯
+'DiamondIntegral.Section4.VariableApertureCompatibility.Presentation.relation_mem_degree' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.VariableApertureCompatibility.ideal_homogeneous : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base),
+  Ideal.IsHomogeneous.{0, 0, 0} (DiamondIntegral.Section4.RVBoundedGrading.gradedPiece B)
+    (DiamondIntegral.Section4.VariableApertureCompatibility.ideal B) :=
+⋯
+'DiamondIntegral.Section4.VariableApertureCompatibility.ideal_homogeneous' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.VariableApertureCompatibility.ideal_le_zeroProjection_kernel : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base),
+  LE.le.{0} (DiamondIntegral.Section4.VariableApertureCompatibility.ideal B)
+    (RingHom.ker.{0, 0, 0}
+      (DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.zeroProjection.{0}
+        (DiamondIntegral.Section4.RVBoundedGrading.gradingCoaction B))) :=
+⋯
+'DiamondIntegral.Section4.VariableApertureCompatibility.ideal_le_zeroProjection_kernel' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.VariableApertureCompatibility.quotient_injective_on_degree_zero : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base),
+  Set.InjOn.{0, 0} ⇑(Ideal.Quotient.mk.{0} (DiamondIntegral.Section4.VariableApertureCompatibility.ideal B))
+    ↑(DiamondIntegral.Section4.RVBoundedGrading.gradedPiece B 0) :=
+⋯
+'DiamondIntegral.Section4.VariableApertureCompatibility.quotient_injective_on_degree_zero' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.VariableApertureCompatibility.section4_compatibility : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical)
+  (h00 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00)
+  (linear : DiamondIntegral.Section2.GammaPiecewiseRationalAffineInput) {κ : Cardinal.{0}}
+  (hκ : LE.le.{1} Cardinal.aleph0.{0} κ) (hs : SpecialTransformations.Section3.Saturated M κ)
+  (B : SpecialTransformations.Section3.GammaParameters.Base) (hr : LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ)
+  (hγ : LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) κ) (hΓ : DiamondIntegral.Section2.NontrivialDefinableGamma B),
+  LE.le.{0} (DiamondIntegral.Section4.VariableApertureCompatibility.ideal B)
+    (RingHom.ker.{0, 0, 0}
+      (DiamondIntegral.Section4.RVT001OrdinaryDescent.boundedEvaluation h00 linear hκ hs B hr hγ hΓ ⋯
+        DiamondIntegral.Section4.EulerKind.bounded)) :=
+⋯
+'DiamondIntegral.Section4.VariableApertureCompatibility.section4_compatibility' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+structure DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation {M : Type}
+  [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base) (k : ℕ) : Type
+number of parameters: 5
+fields:
+  DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation.base : DiamondIntegral.Section4.RVBoundedCharts.BoundedChart
+      B k
+  DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation.aperture : (Fin self.base.arity → M) → M
+  DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation.graph_definable : SpecialTransformations.Section3.GammaParameters.DefinableOverBase
+      B (fun x => SpecialTransformations.Milestone0.SortTag.rv)
+      (DiamondIntegral.Section4.RVDefinableGraphExtension.domain self.base.toChart self.aperture)
+  DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation.aperture_nonzero : ∀
+      (u : Fin self.base.arity → M),
+      Membership.mem.{0, 0} self.base.domain u →
+        SpecialTransformations.Section3.GammaParameters.NonzeroRV (self.aperture u)
+  DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation.aperture_nonnegative : ∀
+      (u : Fin self.base.arity → M),
+      Membership.mem.{0, 0} self.base.domain u →
+        LE.le.{0} 1 (SpecialTransformations.Section3.GammaParameters.codeValue (self.aperture u))
+  DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation.upperBound : SpecialTransformations.Section3.Values.Gamma
+  DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation.aperture_bounded : ∀
+      (u : Fin self.base.arity → M),
+      Membership.mem.{0, 0} self.base.domain u →
+        LE.le.{0} (SpecialTransformations.Section3.GammaParameters.codeValue (self.aperture u)) self.upperBound
+  DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation.source : DiamondIntegral.Section4.RVChartDisjointUnion.Data
+      B self.base.arity (HAdd.hAdd.{0, 0, 0} 1 k)
+  DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation.endpoint : DiamondIntegral.Section4.RVChartDisjointUnion.Data
+      B self.base.arity (HAdd.hAdd.{0, 0, 0} 1 k)
+  DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation.source_domain : Eq.{1} self.source.domain
+      self.base.domain
+  DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation.endpoint_domain : Eq.{1} self.endpoint.domain
+      self.base.domain
+  DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation.source_weight : ∀ (u : Fin self.base.arity → M),
+      Membership.mem.{0, 0} self.base.domain u →
+        Eq.{1} (self.source.toChart.correctedWeight u) (self.base.correctedWeight u)
+  DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation.endpoint_weight : ∀
+      (u : Fin self.base.arity → M),
+      Membership.mem.{0, 0} self.base.domain u →
+        Eq.{1} (self.endpoint.toChart.correctedWeight u)
+          (HMul.hMul.{0, 0, 0} (self.base.correctedWeight u)
+            (SpecialTransformations.Section3.GammaParameters.codeValue (self.aperture u)))
+constructor:
+  DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation.mk {M : Type}
+    [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+    {B : SpecialTransformations.Section3.GammaParameters.Base} {k : ℕ}
+    (base : DiamondIntegral.Section4.RVBoundedCharts.BoundedChart B k) (aperture : (Fin base.arity → M) → M)
+    (graph_definable :
+      SpecialTransformations.Section3.GammaParameters.DefinableOverBase B
+        (fun x => SpecialTransformations.Milestone0.SortTag.rv)
+        (DiamondIntegral.Section4.RVDefinableGraphExtension.domain base.toChart aperture))
+    (aperture_nonzero :
+      ∀ (u : Fin base.arity → M),
+        Membership.mem.{0, 0} base.domain u → SpecialTransformations.Section3.GammaParameters.NonzeroRV (aperture u))
+    (aperture_nonnegative :
+      ∀ (u : Fin base.arity → M),
+        Membership.mem.{0, 0} base.domain u →
+          LE.le.{0} 1 (SpecialTransformations.Section3.GammaParameters.codeValue (aperture u)))
+    (upperBound : SpecialTransformations.Section3.Values.Gamma)
+    (aperture_bounded :
+      ∀ (u : Fin base.arity → M),
+        Membership.mem.{0, 0} base.domain u →
+          LE.le.{0} (SpecialTransformations.Section3.GammaParameters.codeValue (aperture u)) upperBound)
+    (source endpoint : DiamondIntegral.Section4.RVChartDisjointUnion.Data B base.arity (HAdd.hAdd.{0, 0, 0} 1 k))
+    (source_domain : Eq.{1} source.domain base.domain) (endpoint_domain : Eq.{1} endpoint.domain base.domain)
+    (source_weight :
+      ∀ (u : Fin base.arity → M),
+        Membership.mem.{0, 0} base.domain u → Eq.{1} (source.toChart.correctedWeight u) (base.correctedWeight u))
+    (endpoint_weight :
+      ∀ (u : Fin base.arity → M),
+        Membership.mem.{0, 0} base.domain u →
+          Eq.{1} (endpoint.toChart.correctedWeight u)
+            (HMul.hMul.{0, 0, 0} (base.correctedWeight u)
+              (SpecialTransformations.Section3.GammaParameters.codeValue (aperture u)))) :
+    DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation B k
+'DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation.graphChart : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B : SpecialTransformations.Section3.GammaParameters.Base} →
+        {k : ℕ} →
+          DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation B k →
+            DiamondIntegral.Section4.RVMeasuredCharts.Chart B k :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {B} {k} P =>
+  DiamondIntegral.Section4.RVDefinableGraphExtension.chart P.base.toChart P.aperture ⋯
+'DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation.graphChart' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation.aperture_at_graph : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {k : ℕ}
+  (P : DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation B k)
+  (u : Fin (HAdd.hAdd.{0, 0, 0} 1 P.base.arity) → M),
+  Membership.mem.{0, 0} P.graphChart.domain u →
+    Eq.{1} (u (DiamondIntegral.Section4.FiniteTupleBlocks.tailIndex 1 P.base.arity 0))
+      (P.aperture (Function.comp.{1, 1, 1} u (DiamondIntegral.Section4.FiniteTupleBlocks.headIndex 1 P.base.arity))) :=
+⋯
+'DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation.aperture_at_graph' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation.graph_domain_bounded : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {k : ℕ}
+  (P : DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation B k),
+  DiamondIntegral.Section4.RVMeasuredBounds.DomainBounded P.graphChart :=
+⋯
+'DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation.graph_domain_bounded' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation.graphBase : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B : SpecialTransformations.Section3.GammaParameters.Base} →
+        {k : ℕ} →
+          DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation B k →
+            DiamondIntegral.Section4.RVBoundedCharts.BoundedChart B k :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {B} {k} P =>
+  { toChart := P.graphChart, domain_bounded := ⋯ }
+'DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation.graphBase' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation.source_graph_definable : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {k : ℕ}
+  (P : DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation B k),
+  SpecialTransformations.Section3.GammaParameters.DefinableOverBase B
+    (fun x => SpecialTransformations.Milestone0.SortTag.rv)
+    (DiamondIntegral.Section4.RVDefinableGraphExtension.domain P.source.toChart P.aperture) :=
+⋯
+'DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation.source_graph_definable' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation.endpoint_graph_definable : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {k : ℕ}
+  (P : DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation B k),
+  SpecialTransformations.Section3.GammaParameters.DefinableOverBase B
+    (fun x => SpecialTransformations.Milestone0.SortTag.rv)
+    (DiamondIntegral.Section4.RVDefinableGraphExtension.domain P.endpoint.toChart P.aperture) :=
+⋯
+'DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation.endpoint_graph_definable' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation.sourceGraph : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B : SpecialTransformations.Section3.GammaParameters.Base} →
+        {k : ℕ} →
+          DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation B k →
+            DiamondIntegral.Section4.RVMeasuredCharts.Chart B (HAdd.hAdd.{0, 0, 0} 1 k) :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {B} {k} P =>
+  DiamondIntegral.Section4.RVDefinableGraphExtension.chart P.source.toChart P.aperture ⋯
+'DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation.sourceGraph' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation.endpointGraph : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B : SpecialTransformations.Section3.GammaParameters.Base} →
+        {k : ℕ} →
+          DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation B k →
+            DiamondIntegral.Section4.RVMeasuredCharts.Chart B (HAdd.hAdd.{0, 0, 0} 1 k) :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {B} {k} P =>
+  DiamondIntegral.Section4.RVDefinableGraphExtension.chart P.endpoint.toChart P.aperture ⋯
+'DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation.endpointGraph' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation.toCoordinate : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B : SpecialTransformations.Section3.GammaParameters.Base} →
+        {k : ℕ} →
+          DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation B k →
+            DiamondIntegral.Section4.VariableApertureCompatibility.Presentation B k :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {B} {k} P =>
+  { base := P.graphBase, apertureIndex := DiamondIntegral.Section4.FiniteTupleBlocks.tailIndex 1 P.base.arity 0,
+    aperture_nonzero := ⋯, aperture_nonnegative := ⋯, upperBound := P.upperBound, aperture_bounded := ⋯,
+    source := DiamondIntegral.Section4.RVChartDisjointUnion.ofChart P.sourceGraph,
+    endpoint := DiamondIntegral.Section4.RVChartDisjointUnion.ofChart P.endpointGraph, source_domain := ⋯,
+    endpoint_domain := ⋯, source_weight := ⋯, endpoint_weight := ⋯ }
+'DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation.toCoordinate' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation.relation : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B : SpecialTransformations.Section3.GammaParameters.Base} →
+        {k : ℕ} →
+          DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation B k →
+            DiamondIntegral.Section4.RVBoundedRing.Ring B :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {B} {k} P =>
+  P.toCoordinate.relation
+'DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation.relation' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation.forget_relation : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {k : ℕ}
+  (P : DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation B k),
+  Eq.{1} ((DiamondIntegral.Section4.RVOrdinaryMaps.boundedForget B) P.relation) 0 :=
+⋯
+'DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation.forget_relation' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.FunctionalApertureCompatibility.ideal : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (B : SpecialTransformations.Section3.GammaParameters.Base) →
+        Ideal.{0} (DiamondIntegral.Section4.RVBoundedRing.Ring B) :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] B =>
+  Ideal.span.{0} (Set.ofPred.{0} fun x => ∃ k P, Eq.{1} x P.relation)
+'DiamondIntegral.Section4.FunctionalApertureCompatibility.ideal' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.FunctionalApertureCompatibility.ideal_le_coordinate_ideal : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base),
+  LE.le.{0} (DiamondIntegral.Section4.FunctionalApertureCompatibility.ideal B)
+    (DiamondIntegral.Section4.VariableApertureCompatibility.ideal B) :=
+⋯
+'DiamondIntegral.Section4.FunctionalApertureCompatibility.ideal_le_coordinate_ideal' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.FunctionalApertureCompatibility.ideal_le_forget_kernel : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base),
+  LE.le.{0} (DiamondIntegral.Section4.FunctionalApertureCompatibility.ideal B)
+    (RingHom.ker.{0, 0, 0} (DiamondIntegral.Section4.RVOrdinaryMaps.boundedForget B)) :=
+⋯
+'DiamondIntegral.Section4.FunctionalApertureCompatibility.ideal_le_forget_kernel' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.FunctionalApertureCompatibility.ideal_homogeneous : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base),
+  Ideal.IsHomogeneous.{0, 0, 0} (DiamondIntegral.Section4.RVBoundedGrading.gradedPiece B)
+    (DiamondIntegral.Section4.FunctionalApertureCompatibility.ideal B) :=
+⋯
+'DiamondIntegral.Section4.FunctionalApertureCompatibility.ideal_homogeneous' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.FunctionalApertureCompatibility.quotient_injective_on_degree_zero : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base),
+  Set.InjOn.{0, 0} ⇑(Ideal.Quotient.mk.{0} (DiamondIntegral.Section4.FunctionalApertureCompatibility.ideal B))
+    ↑(DiamondIntegral.Section4.RVBoundedGrading.gradedPiece B 0) :=
+⋯
+'DiamondIntegral.Section4.FunctionalApertureCompatibility.quotient_injective_on_degree_zero' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.FunctionalApertureCompatibility.section4_compatibility : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical)
+  (h00 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00)
+  (linear : DiamondIntegral.Section2.GammaPiecewiseRationalAffineInput) {κ : Cardinal.{0}}
+  (hκ : LE.le.{1} Cardinal.aleph0.{0} κ) (hs : SpecialTransformations.Section3.Saturated M κ)
+  (B : SpecialTransformations.Section3.GammaParameters.Base) (hr : LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ)
+  (hγ : LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) κ) (hΓ : DiamondIntegral.Section2.NontrivialDefinableGamma B),
+  LE.le.{0} (DiamondIntegral.Section4.FunctionalApertureCompatibility.ideal B)
+    (RingHom.ker.{0, 0, 0}
+      (DiamondIntegral.Section4.RVT001OrdinaryDescent.boundedEvaluation h00 linear hκ hs B hr hγ hΓ ⋯
+        DiamondIntegral.Section4.EulerKind.bounded)) :=
+⋯
+'DiamondIntegral.Section4.FunctionalApertureCompatibility.section4_compatibility' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.VariableApertureMeasuredComparison.value_equality_definable : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base),
+  SpecialTransformations.Section3.GammaParameters.DefinableOverBase B
+    (fun x => SpecialTransformations.Milestone0.SortTag.rv)
+    (Set.ofPred.{0} fun z =>
+      SpecialTransformations.Section3.GammaParameters.Proper z ∧
+        Eq.{1} (SpecialTransformations.Section3.GammaParameters.codeValue (z 0))
+          (SpecialTransformations.Section3.GammaParameters.codeValue (z 1))) :=
+⋯
+'DiamondIntegral.Section4.VariableApertureMeasuredComparison.value_equality_definable' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.VariableApertureMeasuredComparison.coefficient_volume_definable : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {k : ℕ}
+  (r : DiamondIntegral.Section4.RVMeasuredCharts.Chart B k) (j : Fin r.arity),
+  (∀ (u : Fin r.arity → M),
+      Membership.mem.{0, 0} r.domain u → SpecialTransformations.Section3.GammaParameters.NonzeroRV (u j)) →
+    DiamondIntegral.Section4.RVVolumeMaps.VolumeDefinable B r.domain fun u =>
+      SpecialTransformations.Section3.GammaParameters.codeValue (u j) :=
+⋯
+'DiamondIntegral.Section4.VariableApertureMeasuredComparison.coefficient_volume_definable' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.VariableApertureMeasuredComparison.shiftedBase : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B : SpecialTransformations.Section3.GammaParameters.Base} →
+        {k : ℕ} →
+          (r : DiamondIntegral.Section4.RVMeasuredCharts.Chart B k) →
+            (j : Fin r.arity) →
+              (∀ (u : Fin r.arity → M),
+                  Membership.mem.{0, 0} r.domain u → SpecialTransformations.Section3.GammaParameters.NonzeroRV (u j)) →
+                DiamondIntegral.Section4.RVMeasuredCharts.Chart B k :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {B} {k} r j hp =>
+  { arity := r.arity, domain := r.domain, domain_definable := ⋯, coordinate := r.coordinate, coordinate_definable := ⋯,
+    coordinate_proper := ⋯, finite_fibres := ⋯,
+    volume := fun u =>
+      HMul.hMul.{0, 0, 0} (r.volume u) (SpecialTransformations.Section3.GammaParameters.codeValue (u j)),
+    volume_definable := ⋯ }
+'DiamondIntegral.Section4.VariableApertureMeasuredComparison.shiftedBase' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.VariableApertureMeasuredComparison.shiftedBase_weight : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {k : ℕ}
+  (r : DiamondIntegral.Section4.RVMeasuredCharts.Chart B k) (j : Fin r.arity)
+  (hp :
+    ∀ (u : Fin r.arity → M),
+      Membership.mem.{0, 0} r.domain u → SpecialTransformations.Section3.GammaParameters.NonzeroRV (u j))
+  (u : Fin r.arity → M),
+  Eq.{1} ((DiamondIntegral.Section4.VariableApertureMeasuredComparison.shiftedBase r j hp).correctedWeight u)
+    (HMul.hMul.{0, 0, 0} (r.correctedWeight u) (SpecialTransformations.Section3.GammaParameters.codeValue (u j))) :=
+⋯
+'DiamondIntegral.Section4.VariableApertureMeasuredComparison.shiftedBase_weight' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.VariableApertureMeasuredComparison.ray_weight : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base) (z : Fin 1 → M),
+  Eq.{1}
+    ((DiamondIntegral.Section4.RVSharpCharts.sharpChart
+          (DiamondIntegral.Section4.RVMeasuredSpecialClasses.rayChart B)).correctedWeight
+      z)
+    (SpecialTransformations.Section3.GammaParameters.codeValue (z 0)) :=
+⋯
+'DiamondIntegral.Section4.VariableApertureMeasuredComparison.ray_weight' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.VariableApertureMeasuredComparison.shiftedRayToDeep : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B : SpecialTransformations.Section3.GammaParameters.Base} →
+        {k : ℕ} →
+          (r : DiamondIntegral.Section4.RVMeasuredCharts.Chart B k) →
+            (j : Fin r.arity) →
+              (hp :
+                  ∀ (u : Fin r.arity → M),
+                    Membership.mem.{0, 0} r.domain u →
+                      SpecialTransformations.Section3.GammaParameters.NonzeroRV (u j)) →
+                (∀ (u : Fin r.arity → M),
+                    Membership.mem.{0, 0} r.domain u →
+                      LE.le.{0} 1 (SpecialTransformations.Section3.GammaParameters.codeValue (u j))) →
+                  DiamondIntegral.Section4.RVMeasuredCharts.Iso
+                    (DiamondIntegral.Section4.VariableApertureRayCancellation.rayProduct
+                      (DiamondIntegral.Section4.VariableApertureMeasuredComparison.shiftedBase r j hp))
+                    (DiamondIntegral.Section4.VariableApertureRayCancellation.deepChart r j) :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {B} {k} r j hp hn =>
+  { equiv := (DiamondIntegral.Section4.VariableApertureRayCancellation.rayToDeep r j hp hn).equiv, graph_definable := ⋯,
+    weight_eq := ⋯ }
+'DiamondIntegral.Section4.VariableApertureMeasuredComparison.shiftedRayToDeep' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.VariableApertureMeasuredComparison.measured_partition : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {k : ℕ}
+  (r : DiamondIntegral.Section4.RVMeasuredCharts.Chart B k) (j : Fin r.arity),
+  Eq.{1}
+    (HAdd.hAdd.{0, 0, 0}
+      (DiamondIntegral.Section4.RVChartRing.objectClass
+        (DiamondIntegral.Section4.VariableApertureRayCancellation.annularChart r j))
+      (DiamondIntegral.Section4.RVChartRing.objectClass
+        (DiamondIntegral.Section4.VariableApertureRayCancellation.deepChart r j)))
+    (DiamondIntegral.Section4.RVChartRing.objectClass
+      (DiamondIntegral.Section4.VariableApertureRayCancellation.rayProduct r)) :=
+⋯
+'DiamondIntegral.Section4.VariableApertureMeasuredComparison.measured_partition' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.VariableApertureMeasuredComparison.point_weight : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base) (z : Fin 1 → M),
+  Membership.mem.{0, 0} (DiamondIntegral.Section4.RESFibreObjects.point B).domain z →
+    Eq.{1} ((DiamondIntegral.Section4.RESFibreObjects.point B).correctedWeight z) 1 :=
+⋯
+'DiamondIntegral.Section4.VariableApertureMeasuredComparison.point_weight' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.VariableApertureMeasuredComparison.unitProductIso : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B : SpecialTransformations.Section3.GammaParameters.Base} →
+        {k : ℕ} →
+          (r : DiamondIntegral.Section4.RVMeasuredCharts.Chart B k) →
+            (a : DiamondIntegral.Section4.RVChartDisjointUnion.Data B r.arity (HAdd.hAdd.{0, 0, 0} 1 k)) →
+              Eq.{1} a.domain r.domain →
+                (∀ (u : Fin r.arity → M),
+                    Membership.mem.{0, 0} r.domain u → Eq.{1} (a.toChart.correctedWeight u) (r.correctedWeight u)) →
+                  DiamondIntegral.Section4.RVMeasuredCharts.Iso
+                    (DiamondIntegral.Section4.RVMeasuredProduct.product r
+                      (DiamondIntegral.Section4.RESFibreObjects.point B).toChart)
+                    a.toChart :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {B} {k} r a hd hw =>
+  DiamondIntegral.Section4.RVCoordinateMaps.coordinateIso
+    (DiamondIntegral.Section4.RVMeasuredProduct.product r (DiamondIntegral.Section4.RESFibreObjects.point B).toChart)
+    a.toChart (DiamondIntegral.Section4.FiniteTupleBlocks.headIndex 1 r.arity) ⋯ ⋯
+'DiamondIntegral.Section4.VariableApertureMeasuredComparison.unitProductIso' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.VariableApertureMeasuredComparison.relation_formula : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {k : ℕ}
+  (P : DiamondIntegral.Section4.VariableApertureCompatibility.Presentation B k),
+  Eq.{1} ((DiamondIntegral.Section4.RVBoundedMaps.forget B) P.relation)
+    (HMul.hMul.{0, 0, 0}
+      (HSub.hSub.{0, 0, 0}
+        (DiamondIntegral.Section4.RVChartRing.objectClass
+          (DiamondIntegral.Section4.VariableApertureMeasuredComparison.shiftedBase P.base.toChart P.apertureIndex ⋯))
+        (DiamondIntegral.Section4.RVChartRing.objectClass P.base.toChart))
+      (DiamondIntegral.Section4.RVMeasuredSpecialClasses.pClass B)) :=
+⋯
+'DiamondIntegral.Section4.VariableApertureMeasuredComparison.relation_formula' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.VariableApertureMeasuredComparison.ideal_maps_into_p : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base),
+  LE.le.{0} (DiamondIntegral.Section4.VariableApertureCompatibility.ideal B)
+    (Ideal.comap.{0, 0, 0} (DiamondIntegral.Section4.RVBoundedMaps.forget B)
+      (Ideal.span.{0} (Singleton.singleton.{0, 0} (DiamondIntegral.Section4.RVMeasuredSpecialClasses.pClass B)))) :=
+⋯
+'DiamondIntegral.Section4.VariableApertureMeasuredComparison.ideal_maps_into_p' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.VariableApertureMeasuredComparison.functional_ideal_maps_into_p : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base),
+  LE.le.{0} (DiamondIntegral.Section4.FunctionalApertureCompatibility.ideal B)
+    (Ideal.comap.{0, 0, 0} (DiamondIntegral.Section4.RVBoundedMaps.forget B)
+      (Ideal.span.{0} (Singleton.singleton.{0, 0} (DiamondIntegral.Section4.RVMeasuredSpecialClasses.pClass B)))) :=
+⋯
+'DiamondIntegral.Section4.VariableApertureMeasuredComparison.functional_ideal_maps_into_p' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.RelativeAnnularQuotient.Ring : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      SpecialTransformations.Section3.GammaParameters.Base → Type :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] B =>
+  HasQuotient.Quotient.{0, 0} (DiamondIntegral.Section4.RVBoundedRing.Ring B)
+    (DiamondIntegral.Section4.FunctionalApertureCompatibility.ideal B)
+'DiamondIntegral.Section4.RelativeAnnularQuotient.Ring' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.RelativeAnnularQuotient.quotient : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (B : SpecialTransformations.Section3.GammaParameters.Base) →
+        RingHom.{0, 0} (DiamondIntegral.Section4.RVBoundedRing.Ring B)
+          (DiamondIntegral.Section4.RelativeAnnularQuotient.Ring B) :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] B =>
+  Ideal.Quotient.mk.{0} (DiamondIntegral.Section4.FunctionalApertureCompatibility.ideal B)
+'DiamondIntegral.Section4.RelativeAnnularQuotient.quotient' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RelativeAnnularQuotient.ideal_coefficients : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base) (n : ℕ)
+  (x : DiamondIntegral.Section4.RVBoundedRing.Ring B),
+  Membership.mem.{0, 0} (DiamondIntegral.Section4.FunctionalApertureCompatibility.ideal B) x →
+    Membership.mem.{0, 0} (DiamondIntegral.Section4.FunctionalApertureCompatibility.ideal B)
+      ((Polynomial.coeff.{0} ((DiamondIntegral.Section4.RVBoundedGrading.coaction B) x)) n) :=
+⋯
+'DiamondIntegral.Section4.RelativeAnnularQuotient.ideal_coefficients' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.RelativeAnnularQuotient.coaction : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (B : SpecialTransformations.Section3.GammaParameters.Base) →
+        DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.{0}
+          (DiamondIntegral.Section4.RelativeAnnularQuotient.Ring B) :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] B =>
+  DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.quotient.{0}
+    (DiamondIntegral.Section4.RVBoundedGrading.gradingCoaction B)
+    (DiamondIntegral.Section4.FunctionalApertureCompatibility.ideal B) ⋯
+'DiamondIntegral.Section4.RelativeAnnularQuotient.coaction' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.RelativeAnnularQuotient.piece : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (B : SpecialTransformations.Section3.GammaParameters.Base) →
+        ℕ → AddSubgroup.{0} (DiamondIntegral.Section4.RelativeAnnularQuotient.Ring B) :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] B n =>
+  DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.piece.{0}
+    (DiamondIntegral.Section4.RelativeAnnularQuotient.coaction B) n
+'DiamondIntegral.Section4.RelativeAnnularQuotient.piece' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@[instance_reducible] def DiamondIntegral.Section4.RelativeAnnularQuotient.gradedRing : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (B : SpecialTransformations.Section3.GammaParameters.Base) →
+        GradedRing.{0, 0, 0} (DiamondIntegral.Section4.RelativeAnnularQuotient.piece B) :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] B =>
+  DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction.grading.{0}
+    (DiamondIntegral.Section4.RelativeAnnularQuotient.coaction B)
+'DiamondIntegral.Section4.RelativeAnnularQuotient.gradedRing' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RelativeAnnularQuotient.quotient_mem : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base) {n : ℕ}
+  {x : DiamondIntegral.Section4.RVBoundedRing.Ring B},
+  Membership.mem.{0, 0} (DiamondIntegral.Section4.RVBoundedGrading.gradedPiece B n) x →
+    Membership.mem.{0, 0} (DiamondIntegral.Section4.RelativeAnnularQuotient.piece B n)
+      ((DiamondIntegral.Section4.RelativeAnnularQuotient.quotient B) x) :=
+⋯
+'DiamondIntegral.Section4.RelativeAnnularQuotient.quotient_mem' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.RelativeAnnularQuotient.forget : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (B : SpecialTransformations.Section3.GammaParameters.Base) →
+        RingHom.{0, 0} (DiamondIntegral.Section4.RelativeAnnularQuotient.Ring B)
+          (DiamondIntegral.Section4.RVOrdinaryRing.Ring B) :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] B =>
+  Ideal.Quotient.lift.{0, 0} (DiamondIntegral.Section4.FunctionalApertureCompatibility.ideal B)
+    (DiamondIntegral.Section4.RVOrdinaryMaps.boundedForget B) ⋯
+'DiamondIntegral.Section4.RelativeAnnularQuotient.forget' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@[defeq] theorem DiamondIntegral.Section4.RelativeAnnularQuotient.forget_quotient : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base) (x : DiamondIntegral.Section4.RVBoundedRing.Ring B),
+  Eq.{1}
+    ((DiamondIntegral.Section4.RelativeAnnularQuotient.forget B)
+      ((DiamondIntegral.Section4.RelativeAnnularQuotient.quotient B) x))
+    ((DiamondIntegral.Section4.RVOrdinaryMaps.boundedForget B) x) :=
+⋯
+'DiamondIntegral.Section4.RelativeAnnularQuotient.forget_quotient' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RelativeAnnularQuotient.quotient_injective_on_degree_zero : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base),
+  Set.InjOn.{0, 0} ⇑(DiamondIntegral.Section4.RelativeAnnularQuotient.quotient B)
+    ↑(DiamondIntegral.Section4.RVBoundedGrading.gradedPiece B 0) :=
+⋯
+'DiamondIntegral.Section4.RelativeAnnularQuotient.quotient_injective_on_degree_zero' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.RelativeAnnularQuotient.evaluation : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      CanonicalStructure.IsCanonical →
+        FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00 →
+          DiamondIntegral.Section2.GammaPiecewiseRationalAffineInput →
+            {κ : Cardinal.{0}} →
+              LE.le.{1} Cardinal.aleph0.{0} κ →
+                SpecialTransformations.Section3.Saturated M κ →
+                  (B : SpecialTransformations.Section3.GammaParameters.Base) →
+                    LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ →
+                      LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) κ →
+                        DiamondIntegral.Section2.NontrivialDefinableGamma B →
+                          DiamondIntegral.Section4.EulerKind →
+                            RingHom.{0, 0} (DiamondIntegral.Section4.RelativeAnnularQuotient.Ring B)
+                              (DiamondIntegral.Section4.RESOrdinaryReduction.ReducedRing B) :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] hc h00 linear {κ} hκ hs
+    B hr hγ hΓ kind =>
+  RingHom.comp.{0, 0, 0} (DiamondIntegral.Section4.RVT001OrdinaryDescent.evaluation h00 linear hκ hs B hr hγ hΓ ⋯ kind)
+    (DiamondIntegral.Section4.RelativeAnnularQuotient.forget B)
+'DiamondIntegral.Section4.RelativeAnnularQuotient.evaluation' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@[defeq] theorem DiamondIntegral.Section4.RelativeAnnularQuotient.evaluation_quotient : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical)
+  (h00 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00)
+  (linear : DiamondIntegral.Section2.GammaPiecewiseRationalAffineInput) {κ : Cardinal.{0}}
+  (hκ : LE.le.{1} Cardinal.aleph0.{0} κ) (hs : SpecialTransformations.Section3.Saturated M κ)
+  (B : SpecialTransformations.Section3.GammaParameters.Base) (hr : LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ)
+  (hγ : LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) κ) (hΓ : DiamondIntegral.Section2.NontrivialDefinableGamma B)
+  (kind : DiamondIntegral.Section4.EulerKind) (x : DiamondIntegral.Section4.RVBoundedRing.Ring B),
+  Eq.{1}
+    ((DiamondIntegral.Section4.RelativeAnnularQuotient.evaluation hc h00 linear hκ hs B hr hγ hΓ kind)
+      ((DiamondIntegral.Section4.RelativeAnnularQuotient.quotient B) x))
+    ((DiamondIntegral.Section4.RVT001OrdinaryDescent.boundedEvaluation h00 linear hκ hs B hr hγ hΓ ⋯ kind) x) :=
+⋯
+'DiamondIntegral.Section4.RelativeAnnularQuotient.evaluation_quotient' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RelativeAnnularQuotient.evaluation_res : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical)
+  (h00 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00)
+  (linear : DiamondIntegral.Section2.GammaPiecewiseRationalAffineInput) {κ : Cardinal.{0}}
+  (hκ : LE.le.{1} Cardinal.aleph0.{0} κ) (hs : SpecialTransformations.Section3.Saturated M κ)
+  (B : SpecialTransformations.Section3.GammaParameters.Base) (hr : LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ)
+  (hγ : LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) κ) (hΓ : DiamondIntegral.Section2.NontrivialDefinableGamma B)
+  (kind : DiamondIntegral.Section4.EulerKind) (x : DiamondIntegral.Section4.RESChartRing.Ring B),
+  Eq.{1}
+    ((DiamondIntegral.Section4.RelativeAnnularQuotient.evaluation hc h00 linear hκ hs B hr hγ hΓ kind)
+      ((DiamondIntegral.Section4.RelativeAnnularQuotient.quotient B)
+        ((DiamondIntegral.Section4.RVBoundedMaps.ofRES B) x)))
+    ((DiamondIntegral.Section4.RESOrdinaryReduction.forget B) x) :=
+⋯
+'DiamondIntegral.Section4.RelativeAnnularQuotient.evaluation_res' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
 def DiamondIntegral.Section2.GammaPiecewiseRationalAffineInput : {M : Type} →
   [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
     [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] → Prop :=
@@ -74621,6 +75742,6 @@ fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Mileston
       SpecialTransformations.Section3.GammaParameters.GammaDefinableClosureAtBase B δ ∧ Ne.{1} γ δ
 'DiamondIntegral.Section2.NontrivialDefinableGamma' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
 warning: integration_in_acvf: repository has local changes:
-  /workspace/diamond-integral/.lake/packages/integration_in_acvf
+  /Users/yimu/Documents/Codex-Migration-20261112/projects/diamond integral/Section6/worktree/.lake/packages/integration_in_acvf
 warning: special_transformations: repository has local changes:
-  /workspace/diamond-integral/.lake/packages/special_transformations
+  /Users/yimu/Documents/Codex-Migration-20261112/projects/diamond integral/Section6/worktree/.lake/packages/special_transformations

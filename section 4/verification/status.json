@@ -21,7 +21,7 @@
     "continuous_cell_euler_formula": "DiamondIntegral.Section4.GammaContinuousDecomposition.geometric_sum",
     "actual_affine_comparison_nonsurjectivity": "DiamondIntegral.Section4.RESAffineNonsurjective.remark_4_4"
   },
-  "lean": "Lean (version 4.35.0, x86_64-unknown-linux-gnu, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+  "lean": "Lean (version 4.35.0, arm64-apple-darwin24.6.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
   "upstream_project_dependencies": {
     "T001": {
       "status": "AUTHOR_APPROVAL_CONFIRMED",
@@ -20048,6 +20048,290 @@
     },
     {
       "name": "DiamondIntegral.Section4.Section3LinkedRetractionStatements.proposition_4_15",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.VariableApertureRayCancellation.rayProduct",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.VariableApertureRayCancellation.deepDomain",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.VariableApertureRayCancellation.deepDomain_definable",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.VariableApertureRayCancellation.shear_injective",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.VariableApertureRayCancellation.shear_mapsTo",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.VariableApertureRayCancellation.deepDomain_subset",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.VariableApertureRayCancellation.deepChart",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.VariableApertureRayCancellation.annularChart",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.VariableApertureRayCancellation.rayToDeep",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.VariableApertureRayCancellation.annular_class_zero",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.VariableApertureRayCancellation.deepDomain_join_iff",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.VariableApertureRayCancellation.annularChart_join_iff",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.VariableApertureRayCancellation.annularChart_domain_bounded",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.VariableApertureRayCancellation.boundedAnnularChart",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.VariableApertureCompatibility.Presentation",
+      "kind": "structure"
+    },
+    {
+      "name": "DiamondIntegral.Section4.VariableApertureCompatibility.Presentation.sourceBounded",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.VariableApertureCompatibility.Presentation.endpointBounded",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.VariableApertureCompatibility.Presentation.shell",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.VariableApertureCompatibility.Presentation.relation",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.VariableApertureCompatibility.Presentation.endpointSourceIso",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.VariableApertureCompatibility.Presentation.forget_relation",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.VariableApertureCompatibility.ideal",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.VariableApertureCompatibility.ideal_le_forget_kernel",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.VariableApertureCompatibility.Presentation.relation_mem_degree",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.VariableApertureCompatibility.ideal_homogeneous",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.VariableApertureCompatibility.ideal_le_zeroProjection_kernel",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.VariableApertureCompatibility.quotient_injective_on_degree_zero",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.VariableApertureCompatibility.section4_compatibility",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation",
+      "kind": "structure"
+    },
+    {
+      "name": "DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation.graphChart",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation.aperture_at_graph",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation.graph_domain_bounded",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation.graphBase",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation.source_graph_definable",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation.endpoint_graph_definable",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation.sourceGraph",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation.endpointGraph",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation.toCoordinate",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation.relation",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation.forget_relation",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.FunctionalApertureCompatibility.ideal",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.FunctionalApertureCompatibility.ideal_le_coordinate_ideal",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.FunctionalApertureCompatibility.ideal_le_forget_kernel",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.FunctionalApertureCompatibility.ideal_homogeneous",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.FunctionalApertureCompatibility.quotient_injective_on_degree_zero",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.FunctionalApertureCompatibility.section4_compatibility",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.VariableApertureMeasuredComparison.value_equality_definable",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.VariableApertureMeasuredComparison.coefficient_volume_definable",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.VariableApertureMeasuredComparison.shiftedBase",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.VariableApertureMeasuredComparison.shiftedBase_weight",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.VariableApertureMeasuredComparison.ray_weight",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.VariableApertureMeasuredComparison.shiftedRayToDeep",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.VariableApertureMeasuredComparison.measured_partition",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.VariableApertureMeasuredComparison.point_weight",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.VariableApertureMeasuredComparison.unitProductIso",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.VariableApertureMeasuredComparison.relation_formula",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.VariableApertureMeasuredComparison.ideal_maps_into_p",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.VariableApertureMeasuredComparison.functional_ideal_maps_into_p",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularQuotient.Ring",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularQuotient.quotient",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularQuotient.ideal_coefficients",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularQuotient.coaction",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularQuotient.piece",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularQuotient.gradedRing",
+      "kind": "instance"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularQuotient.quotient_mem",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularQuotient.forget",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularQuotient.forget_quotient",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularQuotient.quotient_injective_on_degree_zero",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularQuotient.evaluation",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularQuotient.evaluation_quotient",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularQuotient.evaluation_res",
       "kind": "theorem"
     }
   ],
@@ -44623,6 +44907,361 @@
       "Classical.choice",
       "Quot.sound",
       "propext"
+    ],
+    "DiamondIntegral.Section4.VariableApertureRayCancellation.rayProduct": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.VariableApertureRayCancellation.deepDomain": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.VariableApertureRayCancellation.deepDomain_definable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.VariableApertureRayCancellation.shear_injective": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.VariableApertureRayCancellation.shear_mapsTo": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.VariableApertureRayCancellation.deepDomain_subset": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.VariableApertureRayCancellation.deepChart": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.VariableApertureRayCancellation.annularChart": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.VariableApertureRayCancellation.rayToDeep": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.VariableApertureRayCancellation.annular_class_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.VariableApertureRayCancellation.deepDomain_join_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.VariableApertureRayCancellation.annularChart_join_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.VariableApertureRayCancellation.annularChart_domain_bounded": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.VariableApertureRayCancellation.boundedAnnularChart": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.VariableApertureCompatibility.Presentation": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.VariableApertureCompatibility.Presentation.sourceBounded": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.VariableApertureCompatibility.Presentation.endpointBounded": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.VariableApertureCompatibility.Presentation.shell": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.VariableApertureCompatibility.Presentation.relation": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.VariableApertureCompatibility.Presentation.endpointSourceIso": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.VariableApertureCompatibility.Presentation.forget_relation": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.VariableApertureCompatibility.ideal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.VariableApertureCompatibility.ideal_le_forget_kernel": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.VariableApertureCompatibility.Presentation.relation_mem_degree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.VariableApertureCompatibility.ideal_homogeneous": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.VariableApertureCompatibility.ideal_le_zeroProjection_kernel": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.VariableApertureCompatibility.quotient_injective_on_degree_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.VariableApertureCompatibility.section4_compatibility": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation.graphChart": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation.aperture_at_graph": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation.graph_domain_bounded": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation.graphBase": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation.source_graph_definable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation.endpoint_graph_definable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation.sourceGraph": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation.endpointGraph": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation.toCoordinate": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation.relation": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.FunctionalApertureCompatibility.Presentation.forget_relation": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.FunctionalApertureCompatibility.ideal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.FunctionalApertureCompatibility.ideal_le_coordinate_ideal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.FunctionalApertureCompatibility.ideal_le_forget_kernel": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.FunctionalApertureCompatibility.ideal_homogeneous": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.FunctionalApertureCompatibility.quotient_injective_on_degree_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.FunctionalApertureCompatibility.section4_compatibility": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.VariableApertureMeasuredComparison.value_equality_definable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.VariableApertureMeasuredComparison.coefficient_volume_definable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.VariableApertureMeasuredComparison.shiftedBase": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.VariableApertureMeasuredComparison.shiftedBase_weight": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.VariableApertureMeasuredComparison.ray_weight": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.VariableApertureMeasuredComparison.shiftedRayToDeep": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.VariableApertureMeasuredComparison.measured_partition": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.VariableApertureMeasuredComparison.point_weight": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.VariableApertureMeasuredComparison.unitProductIso": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.VariableApertureMeasuredComparison.relation_formula": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.VariableApertureMeasuredComparison.ideal_maps_into_p": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.VariableApertureMeasuredComparison.functional_ideal_maps_into_p": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularQuotient.Ring": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularQuotient.quotient": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularQuotient.ideal_coefficients": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularQuotient.coaction": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularQuotient.piece": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularQuotient.gradedRing": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularQuotient.quotient_mem": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularQuotient.forget": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularQuotient.forget_quotient": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularQuotient.quotient_injective_on_degree_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularQuotient.evaluation": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularQuotient.evaluation_quotient": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularQuotient.evaluation_res": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
     ]
   },
   "cited_input_definitions": {
@@ -45252,13 +45891,19 @@
     "section 4/Section3CoefficientPairTransport.lean": "4996e3f159225f08af6e6c96d68b7a1dae85064f2e45dd3bdb54b11e3c07076d",
     "section 4/Section3T001Integration.lean": "a0a56ffe0ae8a4109b20e0c72b6a55d6ea0fb2c9db4c6ce4478cd4b91355802f",
     "section 4/Section3LinkedRetractionStatements.lean": "d2d103e3612b18ad5c1495946dd410d4ce21e91e894070497d036bb125410019",
-    "section 4/Section.lean": "a28f9c1f14308664dd3d0ce9337445c333e9eadff15c0c98acc5110276d0d173",
-    "section 4/verify.py": "72ceb9fcac57dceac80846ce8bc808d2368294275d45616b6a308dbaa37524d5",
-    "DiamondIntegral.lean": "92a69aaeb0ba22758a35c6663409314d3b905f4af420349285d73d7ae70ceecf",
+    "section 4/VariableApertureRayCancellation.lean": "3c513bd68af3220f28db96fc1d0cf73d2e24a51322f28c5af5c476c47e2d909f",
+    "section 4/VariableApertureAnnularDomains.lean": "9d80f27240717ec09b37888e4b7c9560748d8e30afa9825809e180f9cb5fb41e",
+    "section 4/VariableApertureCompatibility.lean": "476b52d35dc469d4c11404d63cc9e38a1425594c8bcdb40a25c7a37047f76406",
+    "section 4/FunctionalApertureCompatibility.lean": "af659417070adb30f1b125d82a5fe6b54e417a4de9ef40436958fd9b306810f2",
+    "section 4/VariableApertureMeasuredComparison.lean": "b26878d716cc3511a4aecf34bfcffec959a99a7a0266061e00c53739f4553bf4",
+    "section 4/RelativeAnnularQuotient.lean": "7fca04139d5a39f4f796e7b5a113c822608f6396855845159dfcb04de5ddf559",
+    "section 4/Section.lean": "c36258df96fb2914cf5d223d992209ac57130f9ca922c24ca01c86945173c5de",
+    "section 4/verify.py": "33f8e24abb3b2f7c3ae94757741b707ba8b60467b15922879f6446118d62f91d",
+    "DiamondIntegral.lean": "786b9fde880c089c8ce1f1cc3792da83f557eec16aa67fd13eca93deed59281b",
     "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
-    "lakefile.toml": "5ea64ff68b3aae290d8b43aeddb8876903cea4fd8109314444371ede61690b4b",
+    "lakefile.toml": "ac57f9e40dbbdcc0599f7930709f572bb1f8822f15fdf76380b51724b28dc289",
     "lake-manifest.json": "ec80c4ddd3bc873989de2a4da7392222b8318c73586e538f0dde675427f92523",
-    "ACCEPTED-CITED-RESULTS.md": "e2c50e464ed4da537d9fee86293dbe134cb69699b0791e510c83d9a840e8ee83",
+    "ACCEPTED-CITED-RESULTS.md": "737926f2df742cb6f103291d9c5067c97343b3e8e95161a20190fe2b7664762f",
     "section 4/verification/CITED-INPUTS.md": "b95cb956eca58f904f26eee2184043eaf662836c1697670c2766a64f0208fa39",
     "section 4/verification/t001-upstream-review.json": "da90b3910e5d404e88a845b0f6115942b47ef2fa57f544a14d6328a7483bd519",
     "section 4/verification/T001-section4-approval.json": "81d460518673b78e427a80e38c4a7a89faf6a07f3d70a96ffd1fb1adee5f0b18",
@@ -45276,6 +45921,6 @@
     "section 2/Conventions.lean": "58809fdce18d921d45a9e90c1462624fc628fa01234cd870fd80e0c9effb2f62",
     "section 2/reuse/manifest.json": "c652f4bd9ed8ccd6950f6927712563ffbb822f8027ff961dda5fbf42c6d7cb8a",
     "section 2/reuse/open-disc-radius.patch": "1025b80e4d836f501bb09a342effbf33a6e02a2cba48d75bb01262e4027c98a7",
-    "section 2/reference/diamond_integral_revision_annotated.tex": "e6a2c4b9a20048d2993d8e78df94d4ec5ed9f09e2a7146183b72407075b91c23"
+    "section 2/reference/diamond_integral_revision_annotated.tex": "e208a76e0c718a5fd26f9373ee5e8a3eaca79bbb2847fab5d9cf5d7c3a2f7054"
   }
 }

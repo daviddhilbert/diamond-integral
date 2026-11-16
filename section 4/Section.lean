@@ -1,3 +1,9 @@
+import «section 4».RelativeAnnularQuotient
+import «section 4».VariableApertureRayCancellation
+import «section 4».VariableApertureAnnularDomains
+import «section 4».VariableApertureCompatibility
+import «section 4».FunctionalApertureCompatibility
+import «section 4».VariableApertureMeasuredComparison
 import «section 4».ReviewCalculations
 import «section 4».StepFunctions
 import «section 4».EulerGenerators

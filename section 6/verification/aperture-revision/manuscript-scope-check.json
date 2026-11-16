@@ -1,0 +1,44 @@
+{
+  "1": {
+    "changed_by_aperture_revision": true,
+    "before_sha256": "c80938be982f3cfa60344b744d7fe55a9a60d5b473d3883a46de79f2bc3649ad",
+    "after_sha256": "c3e4cb8945251f863490099b273311e815d3a08f619d8a9b5b94c1d9a8d8e3cd"
+  },
+  "2": {
+    "changed_by_aperture_revision": false,
+    "before_sha256": "c42b99a3a400bea774503f20f346d9cdee20eeb529cc879d28944b70b164e443",
+    "after_sha256": "c42b99a3a400bea774503f20f346d9cdee20eeb529cc879d28944b70b164e443"
+  },
+  "3": {
+    "changed_by_aperture_revision": false,
+    "before_sha256": "4051c3d6ce0264d47d073c262ee903a03b1ce48c1b16fe09bddd4480e488f539",
+    "after_sha256": "4051c3d6ce0264d47d073c262ee903a03b1ce48c1b16fe09bddd4480e488f539"
+  },
+  "4": {
+    "changed_by_aperture_revision": true,
+    "before_sha256": "0ed7eaa40b50ff5ef97d28e1399679b0b434e31b68d895d5c919196fb0aab383",
+    "after_sha256": "de8790ebaf11fdd9dbd94ad3ecdce8b8e8bc8ffbb90322c2fa7e0fe622fce41c"
+  },
+  "5": {
+    "changed_by_aperture_revision": false,
+    "before_sha256": "e98c483ae28fd92fd61981c9c84b7e22cb2ae120dcdf861b037301ad7c57a83c",
+    "after_sha256": "e98c483ae28fd92fd61981c9c84b7e22cb2ae120dcdf861b037301ad7c57a83c"
+  },
+  "6": {
+    "changed_by_aperture_revision": true,
+    "before_sha256": "59fd769c64f944caff860079d8eba532e664605b87c8c715e1301209e9f19e25",
+    "after_sha256": "dc7bbad1948b88d33e5df350870cc745e72dd8f0b6fac3b06fcd76cf3be2226c"
+  },
+  "7": {
+    "changed_by_aperture_revision": false,
+    "before_sha256": "3e6994924695ba87a4dbc669e2855be073cc9cd0e15c8d23d5f0bee9fed62158",
+    "after_sha256": "3e6994924695ba87a4dbc669e2855be073cc9cd0e15c8d23d5f0bee9fed62158"
+  },
+  "8": {
+    "changed_by_aperture_revision": false,
+    "before_sha256": "844115caa54183bfda9cc8b5cd8b7f72f35059bcc123bba79661f8b958b5d737",
+    "after_sha256": "844115caa54183bfda9cc8b5cd8b7f72f35059bcc123bba79661f8b958b5d737"
+  },
+  "scope": "Only sections1,4,6 differ from the approved merged baseline; Sections2,3,5,7,8 are exact byte matches within their section bodies.",
+  "current_manuscript_sha256": "e208a76e0c718a5fd26f9373ee5e8a3eaca79bbb2847fab5d9cf5d7c3a2f7054"
+}

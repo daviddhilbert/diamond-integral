@@ -1,7 +1,7 @@
 {
   "status": "PASS",
   "scope": "Project build; public section theorem types/axioms; selected reuse types/axioms. Semantic scope review: COVERAGE.md, STATUS.md and verification/DISC-GROUND-REVIEW.md.",
-  "lean": "Lean (version 4.35.0, x86_64-unknown-linux-gnu, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+  "lean": "Lean (version 4.35.0, arm64-apple-darwin24.6.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
   "pins": {
     "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
     "acvf_qe": "939346b0a99899e22a873479364e3cc5d142731c",
@@ -457,17 +457,17 @@
     "section 2/ZeroFaceRVFibres.lean": "ab991e82a9090b4fd25539d2c6f53518dc131b9ef9f35471c46b617e84e2f893",
     "section 2/ZeroFaces.lean": "13803b4a43247d6c660807a5ca036bd2ab3354204509cf1909541f13c80d2689",
     "section 2/ZeroFacesVF.lean": "86dccef9f23b6ee8ebaa973ba8ec2a18bafaa8f30bb5140b5266950817f8cb56",
-    "DiamondIntegral.lean": "92a69aaeb0ba22758a35c6663409314d3b905f4af420349285d73d7ae70ceecf",
-    "lakefile.toml": "5ea64ff68b3aae290d8b43aeddb8876903cea4fd8109314444371ede61690b4b",
+    "DiamondIntegral.lean": "786b9fde880c089c8ce1f1cc3792da83f557eec16aa67fd13eca93deed59281b",
+    "lakefile.toml": "ac57f9e40dbbdcc0599f7930709f572bb1f8822f15fdf76380b51724b28dc289",
     "lake-manifest.json": "ec80c4ddd3bc873989de2a4da7392222b8318c73586e538f0dde675427f92523",
     "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
-    "ACCEPTED-CITED-RESULTS.md": "e2c50e464ed4da537d9fee86293dbe134cb69699b0791e510c83d9a840e8ee83",
+    "ACCEPTED-CITED-RESULTS.md": "737926f2df742cb6f103291d9c5067c97343b3e8e95161a20190fe2b7664762f",
     "section 2/verify.py": "f1f9a6ab6c48c987e881cfd65b0cd6639134d79b124704bc3ba21348b408b3b3",
     "section 2/prepare-reuse.py": "fd134a0924dd57c807ed04d4f528e073a23178f69c06a3d632eaad7fcdd2ab35",
     "section 2/reuse/manifest.json": "c652f4bd9ed8ccd6950f6927712563ffbb822f8027ff961dda5fbf42c6d7cb8a",
     "section 2/reuse/headlines.json": "134352eba03803fce202ad91e5d4428e396fce0f5720d7f74ccebba77892fb04",
     "section 2/reuse/open-disc-radius.patch": "1025b80e4d836f501bb09a342effbf33a6e02a2cba48d75bb01262e4027c98a7",
-    "section 3/prepare-integration-reuse.py": "5d78c2aa312fd68771a848ee998029525d14b3c2b7002399b3b5b6c5998cc6ab",
+    "section 3/prepare-integration-reuse.py": "419bed1f376414652ed3970d74e68feac318fb1e340acb2fb1a123fbe44c1a3b",
     "section 3/reuse/integration-manifest.json": "fddd307a0a565035ef7495152a62832fdfe358a12312aed3c3424ab331e42adc",
     "section 3/reuse/integration-open-radius.patch": "4c78af253a893a12b7009e584dce0b56ac1faa12d17af92f79ec65d280ccf00b",
     "section 2/verification/CITED-INPUTS.md": "9e7ff8666254bb173f870cbb961b50fd7943d5404b5b38714d9047b12b9fed94",
@@ -475,7 +475,7 @@
     "section 2/verification/UPSTREAM-LINKS.md": "7c987b3db8027bed0d577bf154ef512480eaa68a28bf394b870096a23583aba8",
     "section 2/verification/UPSTREAM-LINKS.json": "24bf0fff01eb06c686ae54db320ed72a18d6e454a00da8232b58fa77ca79c2ee"
   },
-  "manuscript_sha256": "e6a2c4b9a20048d2993d8e78df94d4ec5ed9f09e2a7146183b72407075b91c23",
+  "manuscript_sha256": "e208a76e0c718a5fd26f9373ee5e8a3eaca79bbb2847fab5d9cf5d7c3a2f7054",
   "accepted_cited_inputs": [
     {
       "interface": "DiamondIntegral.Section2.AtomicGammaBaseChangeInput",

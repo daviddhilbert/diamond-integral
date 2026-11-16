@@ -1,0 +1,20 @@
+{
+  "master": "Scratch review master; not committed",
+  "master_pages": 113,
+  "review": "section 6/reference/review/section6-aperture-revision-applied.pdf",
+  "selected_master_pages": [
+    49,
+    74,
+    75,
+    76,
+    77,
+    79,
+    91,
+    92
+  ],
+  "review_pages": 8,
+  "status": "All8 pages rendered and visually inspected; right-panel display queued",
+  "review_sha256": "656a931af3284a728bc6042c921a71867fb976a4021f80d99b124d4e70d15409",
+  "canonical_source": "section 2/reference/diamond_integral_revision_annotated.tex",
+  "canonical_sha256": "e208a76e0c718a5fd26f9373ee5e8a3eaca79bbb2847fab5d9cf5d7c3a2f7054"
+}

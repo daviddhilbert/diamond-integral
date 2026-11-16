@@ -1,0 +1,97 @@
+{
+  "date": "2026-11-15",
+  "review_id": "S6-A6-U",
+  "trigger": "Author points out upstream compatibility, especially Section 4's scalar ideal corresponding to globally named apertures.",
+  "source_sha256": "e208a76e0c718a5fd26f9373ee5e8a3eaca79bbb2847fab5d9cf5d7c3a2f7054",
+  "status": "Applied Section6 aperture repair and all necessary Sections1\u20135 compatibility work complete in the recorded scopes; fresh Sections2\u20136 audits pass; Sections7\u20138 deferred",
+  "recommended_notation": {
+    "I": "Keep Section 4's scalar ideal (P_Gamma) and its approved RV-liftable radius indexing unchanged.",
+    "J": "Introduce a distinct homogeneous variable-blowup ideal in Section 7.",
+    "containment": "I is contained in J; do not identify them or overwrite the approved definition.",
+    "quotients": "The existing B/I remains a defined algebraic object. The proposed VF lifting target is B/J, with a canonical further quotient B/I -> B/J."
+  },
+  "upstream_sources_inspected": [
+    "Section 3 positive tensor presentation red:D:iso, including Lambda_X of family-valued RV coefficients",
+    "Section 4 Notation pgammabis and approved R069 radius restriction",
+    "Section 4 bounded tensor construction tensor:bd",
+    "Section 4 Proposition prop:eu:retr:k:db and its raw forgetful construction",
+    "RVRadiusIdeal.lean and RVRadiusTensor.lean",
+    "RVT001OrdinaryDescent.lean and RVT001RetractionStatements.lean",
+    "RVBoundedCoefficientTranslationKernel.lean",
+    "IntrinsicBalancedRadiusQuotient.lean",
+    "PositiveIdealDegreeZero.lean and RVBalancedRadiusDegreeZero.lean"
+  ],
+  "checks": [
+    {
+      "scope": "pure RV tensor presentation",
+      "result": "Its source, product map and intrinsic coefficient-translation kernel depend only on the unchanged RV categories. These statements survive literally.",
+      "caution": "Intrinsic RV coefficient-translation relations and VF lifting-kernel relations are different ideals. The former do not put new aperture relations in the old scalar ideal."
+    },
+    {
+      "scope": "quotient tensor presentations",
+      "result": "For any surjective tensor presentation q:T->B, the proposed quotient corresponds to T/q^{-1}(J), not automatically to the old scalar radius quotient of T. Its extra relations may mix RES and Gamma factors. No new bounded tensor surjectivity claim is inferred here.",
+      "caution": "No unchanged factorwise tensor formula for B/J is claimed."
+    },
+    {
+      "scope": "bounded retraction",
+      "result": "E:B->!KRES[*] is constructed by forgetting volume and applying the ordinary Euler map, before imposing the scalar radius ideal. Its construction and restriction to RES are unchanged.",
+      "new_obligation": "Discharged natively for the explicit functional annular ideal with exact normalized weights; actual Section 4 evaluation uses the constructed S3 T001 adapter."
+    },
+    {
+      "scope": "native retraction compatibility proof",
+      "result": "Full ordinary RV ray cancellation: (u,s)->(u,tau(u)*s) maps the positive ray isomorphically to the deep ray. Actual scissors kill the shell, and the endpoint is underlying-isomorphic to the source. The functional ideal lies in the bounded-forget kernel before Euler evaluation.",
+      "native_boundary": "The functional ideal is implemented through a bounded graph extension and exact normalized source/endpoint weights. No VF kernel equality is claimed."
+    },
+    {
+      "scope": "degree zero",
+      "result": "The explicit functional ideal is natively homogeneous and contained in the degree-zero projection kernel; quotient injectivity on the entire degree-zero subring is proved."
+    },
+    {
+      "scope": "full and unmeasured comparison quotients",
+      "result": "The functional ideal is natively killed by full ordinary forgetting. In the full measured RV ring, each relation equals (shifted-base-class minus base-class) times P; the whole functional ideal maps into (P)."
+    }
+  ],
+  "explicit_tensor_test": {
+    "base": "C((T)), v(T)=1",
+    "finite_cover": "U={rv(a):a^2=T}, a degree-zero measured RES coefficient with form 0",
+    "Q_gamma": "[Ann_gamma,structural s,form 0]+[point,structural 1,form gamma]-[point,structural 1,form 0] is defined for every named nonnegative Gamma value without an RV point choice.",
+    "global_radius_case": "Q_gamma=P_gamma for the globally RV-liftable radii indexed in Section 4.",
+    "family_case": "The square-root variable-aperture correction equals [U]_0*Q_(1/2). Its endpoint (U,u,0) is measured-RV-isomorphic to (U,1,1/2) by equality of total weights.",
+    "consequence": "A finite cover supplies a relative endpoint, not a globally named half-radius endpoint. No cancellation or inversion of [U] is justified, so imposing every Q_gamma as a scalar kernel relation would require additional proof.",
+    "bounded_retraction": "E(Ann_gamma)=0 and E(1,gamma)=E(1,0), independently of old scalar ideal membership."
+  },
+  "prior_claim_refinement": "Pre-quotient constructions and old existence witnesses remain unchanged. Compatibility of the enlarged VF kernel with upstream quotients is an additional argument, not a notational substitution.",
+  "main_manuscript_changed": true,
+  "lean_sources_changed": true,
+  "existing_section6_audit_count": 5103,
+  "previous_review_id": "S6-A5-U",
+  "native_modules": [
+    "section 4/VariableApertureRayCancellation.lean",
+    "section 4/VariableApertureAnnularDomains.lean",
+    "section 4/VariableApertureCompatibility.lean",
+    "section 4/FunctionalApertureCompatibility.lean",
+    "section 4/VariableApertureMeasuredComparison.lean",
+    "section 4/RelativeAnnularQuotient.lean"
+  ],
+  "audit_receipt": "section 6/verification/aperture-revision/audit-section4.log",
+  "remaining_kernel_obligations": [
+    "Section7 actual variable-blowup word and generator-lift assembly with the same aperture data as applied6.11",
+    "Section7 complete head-start and full-witness descent assembly, using the existing checked full-row support",
+    "Section7 RV-affine two-cell and contraction-order assembly, using the checked RV-affinity support",
+    "Section7 revised7.26 kernel equality for J_var and Section8 complete equivariant geometric trace bridge"
+  ],
+  "latest_audit_receipt": "section 6/verification/aperture-revision/audit-section6.log",
+  "review_pdf": "section 6/reference/review/section6-aperture-revision-applied.pdf",
+  "review_pdf_status": "8 manuscript-context pages; orange applied aperture changes; rendered and visually inspected; right-panel display queued",
+  "auxiliary_unary_primitive": "Now embedded in the precise arbitrary-arity RelativeApertureData class used by the applied Definition6.11, with actual endpoint and focus graphs, bounded RV aperture graph, exact core image, proper homeomorphism and approved AE unit total derivative.",
+  "prepared_unary_existence": "Every supplied actual definable label-constant endpoint with nonnegative relative value on an RV-pullback yields admissible auxiliary data with constructed original-base Gamma graphs and named fibrewise invariance radii. Preparedness and finite RV fibres are preserved.",
+  "matching_support": "Complete bounded-variable matching for original proper objects, actual Gamma forms and generic measure identity, with arbitrary retained RV fibres; exact finite chains and literal conjugate are constructed by lemma_6_38_bounded_variable_apertures. Applied manuscript6.38 matches this class.",
+  "integration_record": "section 6/verification/aperture-revision/upstream-s5-integration.json",
+  "applied_revision_record": "section 6/verification/aperture-revision/changes.json",
+  "completed_section6_exports": [
+    "DiamondIntegral.Section6.lemma_6_14_bounded_variable_apertures",
+    "DiamondIntegral.Section6.lemma_6_38_bounded_variable_apertures"
+  ],
+  "integrated_audits": "section 6/verification/aperture-revision/integrated-audits.json",
+  "source_hash_check": "section 6/verification/aperture-revision/final-source-hash-check.json"
+}

@@ -7,7 +7,7 @@
     "declaration_links": 119,
     "sha256": "817dbfc40394df762c340caf06e38dbe85e3f3848e22039b81bd3f22b7714f4d"
   },
-  "lean": "Lean (version 4.35.0, x86_64-unknown-linux-gnu, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
+  "lean": "Lean (version 4.35.0, arm64-apple-darwin24.6.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
   "pins": {
     "integration_in_acvf": "7d4acc730496b3bd05a22c268ffd89540ca694f9",
     "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
@@ -1021,17 +1021,17 @@
     "section 3/ValueCharacterTwistsWithZero.lean": "97c15df248205ea4b2afb8f78062b8ac85b2fe9943fb40f94d098626ab8fb90e",
     "section 3/ValueFibrePartition.lean": "1f8ae167b57f50518f0ec5374361a230fb092f8240e69ee1b9b57d3838a3d5e4",
     "section 3/verify.py": "5ce6a9a6d26319153aaa9948a4b92e2e354f2c3be55fe704cd0c93452773e04a",
-    "section 3/prepare-integration-reuse.py": "5d78c2aa312fd68771a848ee998029525d14b3c2b7002399b3b5b6c5998cc6ab",
+    "section 3/prepare-integration-reuse.py": "419bed1f376414652ed3970d74e68feac318fb1e340acb2fb1a123fbe44c1a3b",
     "section 3/reuse/integration-manifest.json": "fddd307a0a565035ef7495152a62832fdfe358a12312aed3c3424ab331e42adc",
     "section 3/reuse/integration-open-radius.patch": "4c78af253a893a12b7009e584dce0b56ac1faa12d17af92f79ec65d280ccf00b",
     "section 3/verification/integration-reuse.json": "76f71f4f2d76836665e800590afa7cda16b6b0c4d03b4954e35d42eb43b20418",
     "section 3/verification/cited-inputs.json": "fbea2f11c8e5e1db270547ebd4246a216eabb9ef4b7c089566f82967112fd642",
     "section 3/verification/paper-targets.json": "817dbfc40394df762c340caf06e38dbe85e3f3848e22039b81bd3f22b7714f4d",
-    "DiamondIntegral.lean": "92a69aaeb0ba22758a35c6663409314d3b905f4af420349285d73d7ae70ceecf",
-    "lakefile.toml": "5ea64ff68b3aae290d8b43aeddb8876903cea4fd8109314444371ede61690b4b",
+    "DiamondIntegral.lean": "786b9fde880c089c8ce1f1cc3792da83f557eec16aa67fd13eca93deed59281b",
+    "lakefile.toml": "ac57f9e40dbbdcc0599f7930709f572bb1f8822f15fdf76380b51724b28dc289",
     "lake-manifest.json": "ec80c4ddd3bc873989de2a4da7392222b8318c73586e538f0dde675427f92523",
     "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
-    "ACCEPTED-CITED-RESULTS.md": "e2c50e464ed4da537d9fee86293dbe134cb69699b0791e510c83d9a840e8ee83"
+    "ACCEPTED-CITED-RESULTS.md": "737926f2df742cb6f103291d9c5067c97343b3e8e95161a20190fe2b7664762f"
   },
   "integration_compatibility_patch": {
     "base_revision": "7d4acc730496b3bd05a22c268ffd89540ca694f9",
@@ -1099,9 +1099,9 @@
       ]
     }
   },
-  "manuscript_sha256": "e6a2c4b9a20048d2993d8e78df94d4ec5ed9f09e2a7146183b72407075b91c23",
+  "manuscript_sha256": "e208a76e0c718a5fd26f9373ee5e8a3eaca79bbb2847fab5d9cf5d7c3a2f7054",
   "audit_source_sha256": "b5e281b9ab410e509dd59be89f77be4f51602ca688d1e14b96c512ac079ddaf2",
-  "audit_log_sha256": "26771e4103040e2db171aa43a507c53fa404cbf5e320b587614ebe179665d469",
+  "audit_log_sha256": "5e81d44938c0ceaa01a16293bac3ffbe0e03ad49211ed20250bd030533af14ec",
   "public_theorems": [
     "DiamondIntegral.Section3.finite_parameters_countable_algclosed_subfield",
     "DiamondIntegral.Section3.acf_definable_countable_algclosed_coefficients",

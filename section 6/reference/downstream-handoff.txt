@@ -1,0 +1,107 @@
+Aperture revision handoff — November 15, 2026
+
+Author scope
+This workspace owns Section6 and every necessary upstream consequence in
+Sections1–5. Every edit in this revision responds to the synchronized
+aperture change in Definitions6.11 and7.2. Sections7–8 remain for their
+own sessions. No downstream source has been edited by the aperture patch.
+
+Current applied state
+Definition6.11 and Lemma6.38 ARE NOW APPLIED TOGETHER in the working
+annotated manuscript. The definition uses an actual original-base
+nonzero RV function tau on the complete retained label domain, with
+0 <= vrv(tau(u)) <= Delta for one named finite Delta. The absolute
+cutoff is rad(active disc)+vrv(tau(u)). Every bijective lift includes
+an actual continuous inactive-variable VF endpoint b with the prescribed
+RV value. An arbitrary RV function is not assumed to have a VF section.
+The old scalar operations embed with identical point maps.
+
+Section4 now has Notation4.17 (relative annular ideal J_var) and
+Lemma4.18 (compatibility), independently proved before any VF kernel
+identification. The old I=(P_Gamma), with its original RV-liftable radius
+indexing, remains distinct. Ordinary volume forgetting kills J_var;
+the existing bounded retraction descends and retains its residue
+restriction. The ideal is homogeneous, degree zero is preserved, and
+its image in the full measured RV ring is ([W_gamma]-[W])P. The pure
+RV tensor presentation remains intact; its further relative quotient
+is T/q^(-1)(J_var). The introduction now uses this relative quotient.
+
+Native Section4 payload
+VariableApertureRayCancellation, VariableApertureAnnularDomains,
+VariableApertureCompatibility, FunctionalApertureCompatibility and
+VariableApertureMeasuredComparison are owned by section4, without a
+Section4 dependency on VF Section6. RelativeAnnularQuotient constructs
+the actual graded quotient, ordinary forgetful map and both existing
+Euler evaluations, with exact quotient and residue formulas. Section6's
+five similarly named files are compatibility imports of the Section4
+modules. Exact smallness/model/Gamma-affine hypotheses are retained.
+
+Required synchronized Definition7.2 change
+Use EXACTLY the same actual bounded aperture functions on all retained
+RV labels. On a permissible positive-degree structural component, whose
+projection off j is finite-to-one, replace the fixed product annulus by
+  {(u,s): 0 < vrv(s) <= vrv(tau(u))}
+  disjoint-union {(u,tau(u)):u in U}.
+Keep separate finite tags even when shell and endpoint leading values
+coincide. The structural changed coordinate is s*f_j(u); other structural
+coordinates and the pulled-back volume form are retained. Keep the full
+graph of tau, including infinite-image functions. Define the relative
+blowup congruence and its explicit difference ideal using these objects;
+identify its ring ideal with the independently defined J_var of4.17.
+
+Remaining Section7 proof obligations
+The complete mathematical draft remains in kernel-and-preservation.tex;
+it is a draft assembly, not a completed native kernel theorem. Common
+refinements use pointwise aperture ratios and partition by their depths.
+Every VF generator lift must construct actual continuous VF endpoints.
+The full witness, not just its aperture valuation, must be frozen and
+descended in7.14. The exact RV-affinity condition, arbitrary head starts,
+same-order and coordinate-order comparisons and all finite unary chains
+must be included. Variable blowup words and the actual finite-fibre
+admissibility at every stage must be instantiated. The new7.26 kernel
+target is J_var, rather than a rebranding of the scalar ideal I. Both
+kernel inclusions and the resulting comparison diagrams need checking.
+No native Section7 theorem is certified by the Section6 declaration count.
+
+Available Section6 inputs
+lemma_6_14_bounded_variable_apertures proves the AE total-Jacobian
+homeomorphism statement for the precise revised arbitrary-arity class.
+lemma_6_38_bounded_variable_apertures in BoundedVariableUnaryMatching.lean
+starts with original proper objects, actual Gamma forms and the generic
+measure identity over the unchanged VF-generated base. It constructs
+both finite chains in that class, actual bounded aperture graphs, paired
+whole cores, the literal conjugate, the measured RV bijection and its
+volume identity at every label, allowing arbitrary retained RV fibres.
+The RV-affinity and full frozen-row descent modules provide additional
+checked inputs; they do not assemble the complete Section7 argument.
+
+Section8 boundary
+Check the full retained aperture graph in the equivariant endpoint trace.
+At fixed m, functional closure gives M=m*gamma in nonnegative integers;
+the annular trace factors by L*T^(-1)-1. The finite algebraic identity
+is checked, but the complete geometric adapter belongs to Section8.
+Natural quotients need J_var intersected with the relevant natural
+subring. Global scalar-aperture and equal-cutoff truncation arguments
+cannot be silently used for variable functions. Existing truncation and
+bounded-summability issues remain separate. Two undefined references
+(bipo:desc and shift:K:csn:def) occur in Section8 after the approved
+Section5 baseline integration; their replacement references belong to
+the Section8 session and are not aperture-proof obligations.
+
+Baseline and verification
+The completed approved Section5 snapshot cc8cc35f2a12ea23fb93c5613e24a1a4d9cf7f49
+has been carried forward without editing its separate session worktree.
+All required dependency overlays are installed with unchanged package
+pins. See section 6/verification/aperture-revision/upstream-s5-integration.json and
+section 6/verification/aperture-revision/integrated-audits.json in the repository.
+The latter is the current receipt set; historical counts are not current
+source certifications. The exact aperture-only manuscript patch is
+section 6/reference/applied-aperture-revision.patch. Scope comparison proves that
+Sections2,3,5,7,8 are unchanged by this patch.
+
+Review
+section 6/reference/review/section6-aperture-revision-applied.pdf contains eight actual
+manuscript pages with the applied aperture changes in orange. All were
+rendered and visually inspected; right-panel display returned queued.
+Earlier review PDFs contain historical unapplied proposals and are not
+the current manuscript state.

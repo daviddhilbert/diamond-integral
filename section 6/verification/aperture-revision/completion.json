@@ -1,0 +1,61 @@
+{
+  "status": "COMPLETE_WITHIN_AUTHOR_SECTION6_AND_UPSTREAM_SCOPE",
+  "verified_parent_revision": "cc8cc35f2a12ea23fb93c5613e24a1a4d9cf7f49",
+  "manuscript_sha256": "e208a76e0c718a5fd26f9373ee5e8a3eaca79bbb2847fab5d9cf5d7c3a2f7054",
+  "applied_manuscript_sections": [
+    1,
+    4,
+    6
+  ],
+  "unchanged_manuscript_section_bodies": [
+    2,
+    3,
+    5,
+    7,
+    8
+  ],
+  "native_audits": {
+    "2": {
+      "status": "PASS",
+      "source_hashes_checked": 280,
+      "source_differences": [],
+      "receipt": "section 2/verification/status.json",
+      "receipt_sha256": "0c23fdff7516ffca01dfb2e112b7a20a021747016c0838125b05f00e21ed8a25"
+    },
+    "3": {
+      "status": "PASS",
+      "source_hashes_checked": 1016,
+      "source_differences": [],
+      "receipt": "section 3/verification/VERIFICATION.json",
+      "receipt_sha256": "1cc65b6dc36ae81d675bae0d95629dbbdf876c2d5aeff6961a257a0b0e87538f"
+    },
+    "4": {
+      "status": "PASS",
+      "source_hashes_checked": 631,
+      "source_differences": [],
+      "receipt": "section 4/verification/status.json",
+      "receipt_sha256": "71ec0c93422dc2c34ada722fa77e1908d4bb967b1af6b080fdaa1cda9dc7b6e6"
+    },
+    "5": {
+      "status": "PASS",
+      "source_hashes_checked": 740,
+      "source_differences": [],
+      "receipt": "section 5/verification/status.json",
+      "receipt_sha256": "6d0f6c84f095599deed1a56c2b7e1a2c48cd89eef0ead642549848283eae1baa"
+    },
+    "6": {
+      "status": "PASS",
+      "source_hashes_checked": 1287,
+      "source_differences": [],
+      "receipt": "section 6/verification/status.json",
+      "receipt_sha256": "8fb6f974e1ef85e4bac65ca19b8bac2d369fc09d308a3c7e1b36beccc5194238"
+    }
+  },
+  "review_pdf": "section 6/reference/review/section6-aperture-revision-applied.pdf",
+  "review_status": "All8 pages rendered and visually inspected; right-panel display queued",
+  "deferred_at_author_request": [
+    "Section7 synchronized7.2 and revised7.26 kernel assembly",
+    "Section8 specialization compatibility"
+  ],
+  "publication_authorization": "The author authorized commit and push of Section6, necessary upstream changes and Section7/8 handoffs on November15,2026."
+}

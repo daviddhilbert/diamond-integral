@@ -1,0 +1,37 @@
+{
+  "2": {
+    "status": "PASS",
+    "source_hashes_checked": 280,
+    "source_differences": [],
+    "receipt": "section 2/verification/status.json",
+    "receipt_sha256": "0c23fdff7516ffca01dfb2e112b7a20a021747016c0838125b05f00e21ed8a25"
+  },
+  "3": {
+    "status": "PASS",
+    "source_hashes_checked": 1016,
+    "source_differences": [],
+    "receipt": "section 3/verification/VERIFICATION.json",
+    "receipt_sha256": "1cc65b6dc36ae81d675bae0d95629dbbdf876c2d5aeff6961a257a0b0e87538f"
+  },
+  "4": {
+    "status": "PASS",
+    "source_hashes_checked": 631,
+    "source_differences": [],
+    "receipt": "section 4/verification/status.json",
+    "receipt_sha256": "71ec0c93422dc2c34ada722fa77e1908d4bb967b1af6b080fdaa1cda9dc7b6e6"
+  },
+  "5": {
+    "status": "PASS",
+    "source_hashes_checked": 740,
+    "source_differences": [],
+    "receipt": "section 5/verification/status.json",
+    "receipt_sha256": "6d0f6c84f095599deed1a56c2b7e1a2c48cd89eef0ead642549848283eae1baa"
+  },
+  "6": {
+    "status": "PASS",
+    "source_hashes_checked": 1287,
+    "source_differences": [],
+    "receipt": "section 6/verification/status.json",
+    "receipt_sha256": "8fb6f974e1ef85e4bac65ca19b8bac2d369fc09d308a3c7e1b36beccc5194238"
+  }
+}

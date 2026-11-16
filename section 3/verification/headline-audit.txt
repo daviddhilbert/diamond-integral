@@ -1,7 +1,7 @@
 warning: integration_in_acvf: repository has local changes:
-  /workspace/diamond-integral/.lake/packages/integration_in_acvf
+  /Users/yimu/Documents/Codex-Migration-20261112/projects/diamond integral/Section6/worktree/.lake/packages/integration_in_acvf
 warning: special_transformations: repository has local changes:
-  /workspace/diamond-integral/.lake/packages/special_transformations
+  /Users/yimu/Documents/Codex-Migration-20261112/projects/diamond integral/Section6/worktree/.lake/packages/special_transformations
 def DiamondIntegral.Section3.acfDefinableDiagonalBirationalEquiv.{u_1} : {K : Type} →
   [inst : Field.{0} K] →
     [IsAlgClosed.{0} K] →
