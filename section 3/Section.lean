@@ -1001,3 +1001,811 @@ import «section 3».RingPresentationDescent
 import «section 3».TensorRingKernelPresentations
 import «section 3».TensorRingDescent
 import «section 3».IntegrationLaterExports
+import «section 3».GammaDensityCodeRows
+import «section 3».GammaDensityFiniteRVData
+import «section 3».GammaDensityPreparation
+import «section 3».GammaLiftProductGeometry
+import «section 3».GammaMeasuredArrowLift
+import «section 3».GammaMeasuredClassLift
+import «section 3».GammaMeasuredClassSurjectivity
+import «section 3».GammaMeasuredCofullRestriction
+import «section 3».GammaMeasuredHomLift
+import «section 3».GammaMeasuredLiftProducts
+import «section 3».GammaMeasuredObjectSurjectivity
+import «section 3».GammaMeasuredPullbackSurjectivity
+import «section 3».GammaOriginalLiftGraphs
+import «section 3».GammaOriginalWeightedLift
+import «section 3».GammaPreparedBaseJacobian
+import «section 3».GammaSpecialJacobian
+import «section 3».GammaSurjectiveMapDescent
+import «section 3».GammaVFIdentityJacobian
+import «section 3».GammaZeroMeasuredClassDescent
+import «section 3».GammaZeroMeasuredClassLift
+import «section 3».GammaZeroMeasuredCuts
+import «section 3».GammaZeroMeasuredObjects
+import «section 3».GammaMeasuredClosureClassLift
+import «section 3».GammaMeasuredHomLiftClosure
+import «section 3».GammaMeasuredSemiringLift
+import «section 3».GammaMeasuredZeroKernel
+import «section 3».GammaOriginalWeightedDifferentiableLift
+import «section 3».GammaWeightedLiftClosureDescent
+import «section 3».GammaChainClosureDescent
+import «section 3».GammaElementaryClosureExistence
+import «section 3».GammaElementaryDensityEquation
+import «section 3».GammaElementaryLiftJacobian
+import «section 3».GammaFiniteMapRealization
+import «section 3».GammaFullLabelDescent
+import «section 3».GammaGenericLiftDescent
+import «section 3».GammaMixedVFComparison
+import «section 3».GammaMeasuredElementaryCongruence
+import «section 3».GammaMeasuredHeadFactor
+import «section 3».GammaMeasuredHeadFiniteness
+import «section 3».GammaMeasuredLabelLiftEquivalence
+import «section 3».GammaMeasuredNormalizedPoint
+import «section 3».GammaMeasuredPointFocus
+import «section 3».GammaMeasuredPrincipalFactor
+import «section 3».GammaNativeUnitElementaryLift
+import «section 3».GammaNativeUnitLiftBridge
+import «section 3».GammaBasicConeNonzero
+import «section 3».GammaBasicUnitLiftCarriers
+import «section 3».GammaElementaryNonzeroParameter
+import «section 3».GammaElementaryRadiusProduct
+import «section 3».GammaMeasuredBasicLiftRelation
+import «section 3».GammaMeasuredElementaryDomain
+import «section 3».GammaMeasuredElementaryForm
+import «section 3».GammaMeasuredElementaryLiftClass
+import «section 3».GammaMeasuredElementaryNormalization
+import «section 3».GammaMeasuredElementaryObject
+import «section 3».GammaMeasuredElementaryValues
+import «section 3».GammaMeasuredQuotientLift
+import «section 3».GammaNativeHighLiftDomain
+import «section 3».GammaNativeMeasuredElementaryLift
+import «section 3».GammaNativeMeasuredLiftBridge
+import «section 3».GammaNativeMeasuredLifts
+import «section 3».GammaNativeMeasuredNormalization
+import «section 3».GammaNativeStructuralValues
+import «section 3».GammaChainRetainedLabels
+import «section 3».GammaNativeCombinedWeights
+import «section 3».GammaNativeHighIsomorphisms
+import «section 3».GammaNativeMeasuredIsomorphisms
+import «section 3».GammaNativePullbackForms
+import «section 3».GammaNativePullbackMeasuredLift
+import «section 3».GammaSpecialDensityTransport
+import «section 3».GammaSpecialMeasuredVFTransport
+import «section 3».GammaMeasuredPresentationIsomorphism
+import «section 3».GammaMeasuredRestrictionCarrierEq
+import «section 3».GammaNativeElementaryChart
+import «section 3».GammaNativeElementaryCongruence
+import «section 3».GammaNativeElementaryDomain
+import «section 3».GammaNativeFullWeightNormalization
+import «section 3».GammaNativeHeadFiniteness
+import «section 3».GammaNativeHighRestrictions
+import «section 3».GammaNativeMeasuredRestrictions
+import «section 3».GammaNativeMeasuredScissors
+import «section 3».GammaNativeUnaryElementaryRelation
+
+import «section 3».GammaFullFocusPreparedDensity
+import «section 3».GammaFullMeasuredBijections
+import «section 3».GammaFullMeasuredFixedMaps
+import «section 3».GammaMeasuredCanonicalPresentation
+import «section 3».GammaMeasuredComplementPresentation
+import «section 3».GammaMeasuredFullFocusIsomorphism
+import «section 3».GammaNativeChainDensity
+import «section 3».GammaNativeFullFocusCongruence
+import «section 3».GammaNativeFullLiftDomain
+import «section 3».GammaNativeGroundIsomorphisms
+import «section 3».GammaNativeMeasuredGroundIsomorphisms
+import «section 3».GammaNativeMeasuredPullbackComplements
+import «section 3».GammaNativeMeasuredPullbackCuts
+import «section 3».GammaNativeMeasuredPullbackPartitions
+import «section 3».GammaNativePresentationLabels
+import «section 3».GammaNativePullbackComplements
+import «section 3».GammaNativePullbackCuts
+import «section 3».GammaNativeUnaryPartialFocus
+import «section 3».GammaPreparedRVLabelMap
+import «section 3».GammaRetainedLabelFormSquare
+import «section 3».GammaSpecialFullMeasuredBijections
+
+import «section 3».GammaFullMeasuredRestrictions
+import «section 3».GammaGroundPointIsomorphisms
+import «section 3».GammaNativeFullLabelMeasuredDescent
+import «section 3».GammaNativePreparedConjugacy
+import «section 3».GammaNativePreparedFullMeasure
+import «section 3».GammaNativePullbackFullComparison
+import «section 3».GammaNativeSpecialJacobian
+import «section 3».GammaNativeTypedConjugacy
+import «section 3».GammaNativeTypedMeasuredBridge
+import «section 3».GammaNativeUnaryChainComparison
+import «section 3».GammaNativeUnaryFullKernel
+import «section 3».GammaNativeUnarySpecialComparison
+import «section 3».GammaNormalizedFullMeasure
+import «section 3».GammaNormalizedLiftBijections
+import «section 3».GammaNormalizedLiftInclusions
+import «section 3».GammaSpecialPreparedFullComparison
+import «section 3».GammaUnaryRVFullKeyComparison
+
+import «section 3».GammaElementaryHighPair
+import «section 3».GammaGeneralFocusPreparedDensity
+import «section 3».GammaMeasuredFiniteHeadCongruence
+import «section 3».GammaNativeChainComparison
+import «section 3».GammaNativeDeletedHeadFiniteness
+import «section 3».GammaNativeElementaryHighComparison
+import «section 3».GammaNativeElementaryHighDomain
+import «section 3».GammaNativeElementaryHighMeasure
+import «section 3».GammaNativeElementaryRelations
+import «section 3».GammaNativeFullElementaryRelations
+import «section 3».GammaNativeGeneralFullFocus
+import «section 3».GammaNativePartialFocusRelations
+import «section 3».GammaNativeSpecialComparison
+
+import «section 3».GammaConstrainedRowUniformity
+
+import «section 3».GammaIndexedConstrainedRowBijections
+
+import «section 3».GammaIndexedEssentialLabels
+
+import «section 3».GammaIndexedEssentialMeasuredRestriction
+
+import «section 3».GammaIndexedMeasuredRowComparison
+
+import «section 3».GammaIndexedOriginalLabels
+
+import «section 3».GammaMeasuredEssentialRowUniformity
+
+import «section 3».GammaParametricFormConstraints
+
+import «section 3».GammaPreparedFormConstraintRetention
+
+import «section 3».GammaPreparedFormConstraints
+
+import «section 3».GammaPreparedMeasuredFamilies
+
+import «section 3».GammaRVFormConstraints
+
+import «section 3».GammaUniversalIsomorphismMaps
+
+import «section 3».GammaWeightedFiniteRowWitnesses
+
+import «section 3».GammaFamilyKeyProjections
+
+import «section 3».GammaFixedVFRowIsomorphisms
+
+import «section 3».GammaFullMeasuredFixedWeights
+
+import «section 3».GammaGenericFiniteLabelKernel
+
+import «section 3».GammaNativeFixedVFFullKernel
+
+import «section 3».GammaNativeFixedVFPointKernel
+
+import «section 3».GammaRVProjectionChain
+
+import «section 3».GammaRVProjectionFocus
+
+import «section 3».GammaSpecialFamilyKeys
+
+import «section 3».GammaSpecialFamilyLifts
+
+import «section 3».GammaSpecialFamilyRVIsomorphisms
+
+import «section 3».GammaSpecialFamilyVolumes
+
+import «section 3».GammaSpecialIndexedFamilyComparison
+
+import «section 3».GammaMeasuredCodeProducts
+
+import «section 3».GammaMeasuredIsoRowRealization
+
+import «section 3».GammaMeasuredIsomorphismSchemata
+
+import «section 3».GammaMeasuredRVSchemata
+
+import «section 3».GammaMeasuredRVSyntax
+
+import «section 3».GammaMeasuredRowAgreements
+
+import «section 3».GammaMeasuredRowPresentations
+
+import «section 3».GammaMeasuredSchemaRowForms
+
+import «section 3».GammaQuotientFunctionRows
+
+import «section 3».GammaRVFormCodeRows
+
+import «section 3».GammaRawParameterSpecialization
+
+import «section 3».GammaVolumeCodeEquivalence
+
+import «section 3».GammaAdditiveChainComparison
+import «section 3».GammaAdditiveFocusComparison
+import «section 3».GammaAdditivePartialFocus
+import «section 3».GammaAdditiveSpecialComparison
+import «section 3».GammaAdditiveUnaryKernel
+import «section 3».GammaMeasuredGeometricRelations
+import «section 3».GammaMeasuredGeometricSchemata
+import «section 3».GammaMeasuredSchemaPromotion
+import «section 3».GammaMeasuredSchemaValidityFromForms
+import «section 3».GammaNativeAdditiveInvariants
+import «section 3».GammaNativeFullGroundIsomorphisms
+import «section 3».GammaUnaryGeometricDerivations
+
+import «section 3».GammaMeasuredActualIsomorphismWitnesses
+import «section 3».GammaMeasuredChartWeightValidity
+import «section 3».GammaMeasuredFullSchemaRows
+import «section 3».GammaMeasuredIsomorphismPromotion
+import «section 3».GammaMeasuredNativeRoundTrips
+import «section 3».GammaMeasuredSchemaOperationValidity
+import «section 3».GammaMeasuredTypedRowValidity
+import «section 3».GammaMeasuredWeightedRowValues
+
+import «section 3».GammaMeasuredElementaryFormulaWitnesses
+import «section 3».GammaMeasuredElementarySchemaRows
+import «section 3».GammaMeasuredEssentialSchemata
+import «section 3».GammaMeasuredIsomorphismRecoding
+import «section 3».GammaMeasuredObjectRowCoproducts
+import «section 3».GammaMeasuredObjectRowElementary
+import «section 3».GammaMeasuredObjectRows
+import «section 3».GammaMeasuredOperationRowAgreements
+import «section 3».GammaNativeElementaryLocalComparison
+import «section 3».GammaUnaryGeometricFormulaWitnesses
+import «section 3».GammaUnaryLocalGeometricRelations
+
+import «section 3».GammaCompleteCodeForms
+import «section 3».GammaGenericMeasuredGeometryPreparation
+import «section 3».GammaIndexedElementaryCharts
+import «section 3».GammaMeasuredChartProducts
+import «section 3».GammaMeasuredGeometricRecoding
+import «section 3».GammaMeasuredGeometricRecodingValidity
+import «section 3».GammaMeasuredGeometricVFCodes
+import «section 3».GammaMeasuredIndexedAgreements
+import «section 3».GammaMeasuredIndexedEssential
+import «section 3».GammaMeasuredIndexedForms
+import «section 3».GammaMeasuredIndexedIsomorphisms
+import «section 3».GammaMeasuredIndexedWeights
+import «section 3».GammaMeasuredUniformBounds
+import «section 3».GammaNormalizationIdentity
+import «section 3».GammaPreparedMeasuredGeometry
+import «section 3».GammaPresentationIdentityCharts
+
+import «section 3».GammaIndexedCoproductCharts
+import «section 3».GammaMeasuredCoproductCodeRows
+import «section 3».GammaMeasuredIndexedCoproducts
+import «section 3».GammaMeasuredIndexedElementaryChart
+import «section 3».GammaMeasuredIndexedElementaryRelation
+import «section 3».GammaMeasuredIndexedElementarySchemata
+import «section 3».GammaNativeCoproductForms
+import «section 3».GammaNativeCoproductNormalization
+import «section 3».GammaPresentationTransport
+
+import «section 3».GammaMeasuredIndexedGeometry
+import «section 3».GammaMeasuredIndexedPartitions
+import «section 3».GammaMeasuredIndexedRestrictions
+import «section 3».GammaMeasuredIndexedWitnessGluing
+import «section 3».GammaPreparedMeasuredGeometryComparison
+import «section 3».GammaGroundMeasuredBaseReductionOperations
+import «section 3».GammaGroundMeasuredElementaryBaseReduction
+import «section 3».GammaGroundRVBaseReduction
+import «section 3».GammaMeasuredRealBaseExtension
+import «section 3».GammaMeasuredSchemaBaseChange
+import «section 3».GammaUnaryGeometryBaseReduction
+import «section 3».GammaUnaryOriginalBaseGeometry
+import «section 3».GammaUnaryOriginalBaseKernel
+import «section 3».GammaGroundUnaryOriginalBaseKernel
+import «section 3».GammaHeadFibreGroundMaps
+import «section 3».GammaHeadMeasuredFibres
+import «section 3».GammaHeadRetainedForms
+import «section 3».GammaMeasuredSelectedSchemata
+import «section 3».GammaMixedRVFibres
+import «section 3».GammaUnaryMeasuredRowKernel
+import «section 3».GammaMeasuredSelectedBounds
+import «section 3».GammaHeadLiftForms
+import «section 3».GammaMeasuredNormalizationRows
+import «section 3».GammaMeasuredRawRowForms
+import «section 3».GammaPreparedUnaryRowLiftComparison
+import «section 3».GammaUnaryLiftRowComparisons
+import «section 3».GammaUnaryNativeRowWitnesses
+import «section 3».GammaUniformTraceFormTransport
+import «section 3».GammaUniformTraceMeasuredBijections
+import «section 3».GammaHeadRawRowLiftDomains
+import «section 3».GammaHeadRawRowMeasuredBridge
+import «section 3».GammaHeadRawRowSchemaSemantics
+import «section 3».GammaOriginalBaseHeadTraces
+import «section 3».GammaPreparedFamilyComparisons
+import «section 3».GammaRelativeHeadFormulaWitnesses
+import «section 3».GammaRelativeHeadPreparedComparison
+import «section 3».GammaRelativeHeadRowMaps
+import «section 3».GammaTracedHeadMeasuredFibres
+import «section 3».GammaTracedHeadMeasuredLifts
+import «section 3».GammaOriginalBaseContractionTraces
+
+import «section 3».GammaVFProjectionFocus
+
+import «section 3».GammaVFProjectionChains
+
+import «section 3».GammaRVParametersFromVF
+
+import «section 3».GammaNativeSpecialVFKernels
+
+import «section 3».GammaSpecialVFFamilyLifts
+
+import «section 3».GammaNativePartialBaseKernels
+
+import «section 3».GammaGroundJacobianVFTransfer
+
+import «section 3».GammaPartialBaseJacobian
+
+import «section 3».GammaPartialBaseFullMeasured
+
+import «section 3».GammaMeasuredLabelSchemata
+
+import «section 3».GammaMeasuredLabelUniformBounds
+
+import «section 3».GammaNativeMeasuredVFSlices
+
+import «section 3».GammaMeasuredIndexedBaseEssential
+
+import «section 3».GammaNativeLiftMembership
+
+import «section 3».GammaPreparedIndexAttachments
+
+import «section 3».GammaPreparedIndexedLiftDomains
+
+import «section 3».GammaPreparedIndexedLiftBijections
+
+import «section 3».GammaPreparedIndexedFullMeasured
+
+import «section 3».GammaNativePartialBaseIndexedComparison
+
+import «section 3».GammaPartialBaseNormalForm
+
+import «section 3».GammaNativeVFSliceLiftDomains
+
+import «section 3».GammaNativePreparedSliceRows
+
+import «section 3».GammaNativeVFSliceDensities
+
+import «section 3».GammaNativePreparedSliceSemantics
+
+import «section 3».GammaNativePreparedSliceComparison
+
+import «section 3».GammaRawEssentialGeometryPreparation
+
+import «section 3».GammaMeasuredIndexedNormalizedComparison
+
+import «section 3».GammaGenericRawFamilyComparison
+
+import «section 3».GammaPartialBasePresentationChange
+
+import «section 3».GammaNativeUnarySliceKernel
+
+import «section 3».GammaFrozenPrefixMaps
+
+import «section 3».GammaFrozenPrefixForms
+
+import «section 3».GammaFrozenPrefixSliceMaps
+
+import «section 3».GammaFrozenPrefixSliceBijections
+
+import «section 3».GammaFrozenPrefixIndependence
+
+import «section 3».GammaFrozenPrefixSliceJacobians
+
+import «section 3».GammaFrozenPrefixFullMeasured
+
+import «section 3».GammaNativePrefixFullKernel
+
+import «section 3».GammaNativeMeasuredVolumePermutations
+
+import «section 3».GammaNativeLiftPermutations
+
+import «section 3».GammaGroundVFPermutationJacobians
+
+import «section 3».GammaNativeFullMeasuredPermutations
+
+import «section 3».GammaNativeRelativeFullKernel
+
+import «section 3».GammaGroundJacobianValue
+
+import «section 3».GammaGroundFiniteTopForms
+
+import «section 3».GammaGroundJacobianDensityForms
+
+import «section 3».GammaGroundMeasuredFormTransport
+
+import «section 3».GammaMeasuredUnaryChains
+
+import «section 3».GammaMeasuredUnaryChainEndpoints
+
+import «section 3».GammaFullMeasuredUnaryPartition
+
+import «section 3».GammaDensityRVFactorization
+
+import «section 3».GammaMixedRVLabelAttachments
+
+import «section 3».GammaMixedRetainedDensityNormalization
+
+import «section 3».GammaRetainedRelativeMeasuredMaps
+
+import «section 3».GammaRetainedHeadComparisons
+
+import «section 3».GammaSelectedLiftCarriers
+
+import «section 3».GammaSelectedLiftMeasuredBridge
+
+import «section 3».MixedVFTailJacobians
+
+import «section 3».GammaSelectedVFTailGroundMaps
+
+import «section 3».GammaSelectedVFTailJacobians
+
+import «section 3».GammaUniformTraceJacobians
+
+import «section 3».GammaSelectedVFTailMeasuredMaps
+
+import «section 3».GammaSelectedTraceMeasuredMaps
+
+import «section 3».GammaHeadSelectedLiftCarriers
+
+import «section 3».GammaHeadSelectedNativeMeasuredBridge
+
+import «section 3».GammaTracedSelectedHeadMeasuredLifts
+
+import «section 3».GammaUnarySelectedHeadNativeBridge
+
+import «section 3».GammaPreparedUnaryMeasuredRows
+
+import «section 3».GammaPreparedUnaryIndexedMeasuredBridge
+
+import «section 3».GammaSelectedUnarySchemaSemantics
+
+import «section 3».GammaUnarySelectedPreparedComparison
+
+import «section 3».GammaAdditiveIndexedFamilyComparison
+
+import «section 3».GammaGenericFiniteLabelAdditive
+
+import «section 3».GammaNativeFixedVFPointAdditive
+
+import «section 3».GammaNativeFixedVFFullAdditive
+
+import «section 3».GammaNativeSpecialVFAdditive
+
+import «section 3».GammaNativePartialBaseAdditive
+
+import «section 3».GammaPartialBasePresentationAdditive
+
+import «section 3».GammaMeasuredIndexedAdditive
+
+import «section 3».GammaMeasuredIndexedAdditiveGluing
+
+import «section 3».GammaGenericRawFamilyAdditive
+
+import «section 3».GammaNativePartialBaseIndexedAdditive
+
+import «section 3».GammaNativePreparedSliceAdditive
+
+import «section 3».GammaNativeUnarySliceAdditive
+
+import «section 3».GammaNativePrefixFullAdditive
+
+import «section 3».GammaNativeRelativeFullAdditive
+
+import «section 3».GammaNativeRelativeGeometricRelations
+
+import «section 3».GammaUnarySelectedPreparedGeometry
+
+import «section 3».GammaNativeElementaryPermutationTransport
+
+import «section 3».GammaLastMeasuredGeometry
+
+import «section 3».GammaMeasuredGeometryFormulaWitnesses
+
+import «section 3».GammaSelectedUnaryPreparedGeometry
+
+import «section 3».GammaGenericUnarySelectedGeometry
+
+import «section 3».GammaTracedHeadFibreJacobians
+
+import «section 3».GammaSelectedHeadMeasuredBridge
+
+import «section 3».GammaFrozenHeadPreparations
+
+import «section 3».GammaFrozenHeadSelectedPresentations
+
+import «section 3».GammaFrozenSelectedHeadMeasuredBridge
+
+import «section 3».GammaFrozenSelectedHeadRows
+
+import «section 3».GammaFrozenParameterRecoding
+
+import «section 3».GammaFrozenSelectedSchemaRows
+
+import «section 3».GammaFrozenSelectedFormulaWitnesses
+
+import «section 3».GammaGenericSelectedHeadWitnesses
+
+import «section 3».GammaRetainedFormRVImages
+
+import «section 3».GammaSelectedRetainedData
+
+import «section 3».GammaGenericSelectedHeadPropagation
+
+import «section 3».GammaSelectedOrderedTraces
+
+import «section 3».GammaLabelDeterminedPullbackIsos
+
+import «section 3».GammaLabelDeterminedPullbackMeasuredDescent
+
+import «section 3».GammaJacobianOneExceptionalDescent
+
+import «section 3».GammaNativeAlmostEverywhereJacobians
+
+import «section 3».GammaPullbackMeasuredAlmostEverywhereDescent
+
+import «section 3».GammaPreparedRectangleMeasuredComparison
+
+import «section 3».GammaFrozenHeadGenericJacobians
+
+import «section 3».GammaFrozenSelectedGenericHeadBridge
+
+import «section 3».GammaGenericGeneralHeadWitnesses
+
+import «section 3».GammaSelectedMeasuredHeads
+
+import «section 3».GammaSelectedMeasuredOrderedTraces
+
+import «section 3».GammaMatchingPreparedMeasuredComparison
+
+import «section 3».GammaGenericHeadMeasuredLifts
+
+import «section 3».GammaRelativeGenericHeadRowMaps
+
+import «section 3».GammaRelativeGenericHeadFormulaWitnesses
+
+import «section 3».GammaEmptyParameterMeasuredValues
+
+import «section 3».GammaSelectedFinalMeasuredValues
+
+import «section 3».GammaRelativeFirstHeadPropagation
+
+import «section 3».GammaRelativeOrderedMeasuredValues
+
+import «section 3».GammaEmptyIndexedLabelBijections
+
+import «section 3».GammaEmptyIndexedStructuralVolumes
+
+import «section 3».GammaEmptyIndexedMeasuredComparison
+
+import «section 3».GammaEmptyParameterObjectIdentification
+
+import «section 3».GammaMeasuredLiteralNormalizationRows
+
+import «section 3».GammaPureSelectedMeasuredRows
+
+import «section 3».GammaSelectedLiteralEndpointValues
+
+import «section 3».GammaNativeSelectedMeasuredHeads
+
+import «section 3».GammaNativeOrderedMeasuredEndpoints
+
+import «section 3».GammaNativeOrderedMeasuredTraces
+
+import «section 3».GammaNativeOrderedEndpointForms
+
+import «section 3».GammaNativePositiveProgramTraces
+
+import «section 3».GammaNativeFullProgramValues
+
+import «section 3».GammaNativeSameOrderMeasuredValues
+
+import «section 3».GammaNativeRawMeasuredIsomorphisms
+
+import «section 3».GammaOrderedSelectedProducts
+
+import «section 3».GammaNativeRetainedRVIsomorphisms
+
+import «section 3».GammaGroundFormExtensionByOne
+
+import «section 3».GammaNativeFiniteCodeExtensions
+
+import «section 3».GammaRectangleRawMeasuredOrders
+
+import «section 3».GammaCanonicalMeasuredContractions
+
+import «section 3».GammaNativeGroundHighRestriction
+
+import «section 3».GammaSelectedNativeFinalComparison
+
+import «section 3».GammaNativeEndpointHeterogeneousSpecs
+
+import «section 3».GammaNativeEndpointRawClasses
+
+import «section 3».GammaNativeProgramRawValues
+
+import «section 3».GammaNativePointFullMeasuredPermutations
+
+import «section 3».GammaRectangleAllOrderMeasuredValues
+
+import «section 3».GammaStandardRelativeMeasuredValues
+
+import «section 3».GammaNativeRetainedFullMaps
+
+import «section 3».GammaCanonicalPullbackMeasuredValues
+
+import «section 3».GammaRectanglePullbackMeasuredValues
+
+import «section 3».GammaRelativeRetainedContractionValues
+
+import «section 3».GammaNativePullbackTotalForms
+
+import «section 3».GammaMatchingContractionMeasuredValues
+
+import «section 3».GammaMatchingTranslatedMeasuredValues
+
+import «section 3».GammaMatchingFamilyMeasuredValues
+
+import «section 3».GammaStandardRawLabelCutComparisons
+
+import «section 3».GammaMatchingAllOrderMeasuredValues
+
+import «section 3».GammaStandardRawRestrictionValues
+
+import «section 3».GammaStandardFiniteRestrictionValues
+
+import «section 3».GammaRVGraphRefinementMeasuredValues
+
+import «section 3».GammaStandardLabelPartitionValues
+
+import «section 3».GammaPreparedPairAllOrderMeasuredValues
+
+import «section 3».GammaBalancedGraphAllOrderMeasuredValues
+
+import «section 3».GammaSmallDimensionContractionValues
+
+import «section 3».GammaCellGraphAllOrderMeasuredValues
+
+import «section 3».GammaTwoVFAllOrderMeasuredValues
+
+import «section 3».PrincipalAdditiveContextDescent
+
+import «section 3».GammaPointConeProductGeometry
+
+import «section 3».GammaPrincipalGeometricReflection
+
+import «section 3».GammaGroundMonotoneBases
+
+import «section 3».GammaLastGeometryBaseReduction
+
+import «section 3».GammaRawContractionLiteralRows
+
+import «section 3».GammaNativeSelectedTotalRows
+
+import «section 3».GammaFrozenTwoVFMeasuredWitnesses
+
+import «section 3».GammaTwoPartialMeasuredRows
+
+import «section 3».GammaSelectedRawEndpointComparison
+
+import «section 3».GammaPositiveTailRawValues
+
+import «section 3».GammaTwoHeadTailProducts
+
+import «section 3».GammaFirstTwoStandardMeasuredExchange
+
+import «section 3».GammaRawSelectedMeasuredContractions
+
+import «section 3».GammaSelectedTailCompletionValues
+
+import «section 3».GammaMeasuredContractionOrderTransport
+
+import «section 3».GammaSelectedStandardMeasuredExchanges
+
+import «section 3».GammaNativeHeterogeneousMeasuredValues
+
+import «section 3».GammaAppendedHeadMeasuredValues
+
+import «section 3».GammaCommonHeadMeasuredOrders
+
+import «section 3».GammaArbitraryMeasuredContractionOrders
+
+import «section 3».GammaFullRawAllOrderMeasuredValues
+
+import «section 3».GammaRetainedNativeMeasuredPresentations
+
+import «section 3».GammaRelativeArbitraryMeasuredOrders
+
+import «section 3».GammaRetainedContractionValues
+
+import «section 3».GammaRetainedRelativeContractionValues
+
+import «section 3».GammaMixedContractionValues
+
+import «section 3».GammaGroundMapBinaryPieces
+
+import «section 3».GammaGroundRVBinaryClassifiers
+
+import «section 3».GammaRetainedRVAttachments
+
+import «section 3».GammaRetainedLabelRestrictions
+
+import «section 3».GammaRetainedLabelPartitionValues
+
+import «section 3».GammaGroundRVPointPredicates
+
+import «section 3».GammaMeasuredPredicateRestrictions
+
+import «section 3».GammaRetainedBinaryPartitionValues
+
+import «section 3».GammaMixedEmptyContractionValues
+
+import «section 3».GammaMixedBinaryPartitionValues
+
+import «section 3».GammaMeasuredRestrictionComposition
+
+import «section 3».GammaMixedFinitePartitionValues
+
+import «section 3».GammaMixedFullBijectionValues
+
+import «section 3».GammaRetainedNativeLiftData
+
+import «section 3».GammaNativeLiftFullKeyValues
+
+import «section 3».GammaMixedNativeLiftValues
+
+import «section 3».GammaMixedSmallContractionValues
+
+import «section 3».GammaMixedEssentialContractionValues
+
+import «section 3».GammaMeasuredMonotoneBases
+
+import «section 3».GammaPrincipalBaseReflection
+
+import «section 3».GammaMixedGroundLiftValues
+
+import «section 3».GammaMonotoneContractionDetector
+
+import «section 3».GammaGroundContractionContexts
+
+import «section 3».GammaPositiveDegreeReverseKernel
+
+import «section 3».GammaMeasuredDegreeKernel
+
+import «section 3».GammaMixedProductJacobians
+
+import «section 3».GammaEssentialVFProducts
+
+import «section 3».GammaMeasuredObjectArrowSurjectivity
+
+import «section 3».GammaEssentialMeasuredProducts
+
+import «section 3».GammaMeasuredVFProductArrows
+
+import «section 3».GammaCompletedDegreeDetectors
+
+import «section 3».GammaCompletedSemiringDetector
+
+import «section 3».GammaCompletedMeasuredInputs
+
+import «section 3».MeasuredRealGroundContext
+
+import «section 3».GammaGroundRealNamesElimination
+
+import «section 3».MeasuredRealGroundObjects
+
+import «section 3».MeasuredRealGroundVFArrows
+
+import «section 3».MeasuredRealGroundRVCompatibility
+
+import «section 3».MeasuredRealGroundRVSemirings
+
+import «section 3».MeasuredRealGroundVFCompatibility
+
+import «section 3».MeasuredRealGroundRVInputs
+
+import «section 3».MeasuredRealGroundVFDegrees
+
+import «section 3».MeasuredRealGroundVFInputs
+
+import «section 3».MeasuredRealGroundLiftCompatibility
+
+import «section 3».MeasuredCompletedOrdinaryInputs

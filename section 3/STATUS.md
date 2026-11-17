@@ -1,5 +1,12 @@
 # Section 3 status
 
+November 17 continuation: all four Gamma-valued measured lift/kernel records
+now have local proved producers, including the positive-degree reverse kernel
+over the original base. See [the completion note](verification/GAMMA-KERNEL-COMPLETION.md)
+and [verification progress](verification/GAMMA-EXTENSION-PROGRESS.json).
+The historical cited-input boundary below is superseded for these four
+records. Other accepted interfaces retain their separately documented scope.
+
 The §3 formalization is complete in the documented paper contexts,
 relative to the expressly accepted cited results. This includes both
 corrected positive tensor presentations, both ordinary horizontal

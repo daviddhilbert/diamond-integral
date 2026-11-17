@@ -1,0 +1,83 @@
+{
+  "status": "PASS",
+  "scope": "Original-base Gamma-valued measured kernel extension; all four precise measured input records constructed; full root and Sections 2\u20136 verification; corrected-pin weighted-zero compatibility. No claim about this paper's revised Section 7.26 bounded-aperture kernel or Section 8.",
+  "root_build_jobs": 16713,
+  "new_supporting_proof_modules": 515,
+  "section3_public_theorem_types": 3767,
+  "constructors": {
+    "YinMeasuredLiftInput": {
+      "producer": "DiamondIntegral.Section3.completedMeasuredLiftInput",
+      "principles": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "YinDegreeMeasuredLiftInput": {
+      "producer": "DiamondIntegral.Section3.completedDegreeMeasuredLiftInput",
+      "principles": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "YinGammaGroundMeasuredLiftInput": {
+      "producer": "DiamondIntegral.Section3.completedGammaGroundMeasuredLiftInput",
+      "principles": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "YinGammaGroundDegreeMeasuredLiftInput": {
+      "producer": "DiamondIntegral.Section3.completedGammaGroundDegreeMeasuredLiftInput",
+      "principles": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    }
+  },
+  "sections": {
+    "2": {
+      "path": "section 2/verification/status.json",
+      "sha256": "b0a96cfa2af9545b799d6914641606e2d0924b821965accb82ca03b1f77e0b6d",
+      "status": "PASS"
+    },
+    "3": {
+      "path": "section 3/verification/VERIFICATION.json",
+      "sha256": "3fcb6d079e124bf785711f0d25e0d0d820ecfd6343a285c163eb4047690e769e",
+      "status": "PASS"
+    },
+    "4": {
+      "path": "section 4/verification/status.json",
+      "sha256": "0004cfe9734a035d72c7a746d0b0c9796c6d80bf58b513fac8e103f5bc55270e",
+      "status": "PASS"
+    },
+    "5": {
+      "path": "section 5/verification/status.json",
+      "sha256": "e59637d47822d0c8a3cd151509e7e219759c23c3ceb9f97826d06b2cddbb72bf",
+      "status": "PASS_SECTION5_REQUESTED_SCOPE_IN_RECORDED_CONTEXT"
+    },
+    "6": {
+      "path": "section 6/verification/status.json",
+      "sha256": "ee60aa504b05cb78c2b79e46ddd1b27cb6aac9137feccff7800c124c8263cd8c",
+      "status": "PASS"
+    }
+  },
+  "pins": {
+    "special_transformations": "25852c85a31c67069b148bd31348128318303510",
+    "integration_in_acvf": "7675d31332f20421c803ea16af84964ed74cd51f",
+    "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+    "acvf_qe": "939346b0a99899e22a873479364e3cc5d142731c"
+  },
+  "compatibility_receipt": {
+    "path": "verification/upstream-weighted-zero-upgrade/status.json",
+    "sha256": "cfecdc048e0ed0e41706f850162a70d89de22235fc4fa0acd5641ea360f789aa",
+    "checked_interfaces": 46
+  },
+  "root_and_sections_log_sha256": "f1c7014cc05872391a970e933166ab2f8211c0acef956949e7f5cd8c2f9d4db5",
+  "completion_note_sha256": "20cd212b2bdb14382702556c0f99dfe46c766c81ca126dcde021a34b2de42da7",
+  "progress_sha256": "912b162880deea3735f26d98d2aec6317aaa73e25212f11fd3f285c4d376304f",
+  "publication": "Locally verified snapshot prepared for codex/section6-gamma-kernel, based on ba6249a. The later shared-foundation migration on main is not part of this audit; remote CI is reported separately."
+}

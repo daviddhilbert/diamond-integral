@@ -1,5 +1,11 @@
 # Numbered §3 targets
 
+November 17: the four Gamma-valued measured lift/kernel interfaces appearing
+in the historical target descriptions now have local proved producers.
+See [the exact completion scope](verification/GAMMA-KERNEL-COMPLETION.md).
+This includes both global semiring kernels and every fixed degree at the
+original base; other accepted input boundaries are unchanged.
+
 Reference: `section 2/reference/diamond_integral_revision_annotated.tex`
 at project main `82fe1a1`, with its author-approved §2 revisions. Stable
 labels below take precedence over page and printed theorem numbers.

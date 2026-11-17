@@ -48,6 +48,9 @@ The November 16 [corrected-pin migration](../verification/upstream-weighted-zero
 records new-pin Sections 2–6 verification and the exact two surviving dependency
 scope adapters. Special transformations v1.1 supplies corrected Gamma-zero
 lifts. Integration main publishes the corrected RV-valued HK kernel. The latter
-does not silently produce the four local Gamma-valued Section 3 kernel records;
-their existing conditional scope is preserved. No new Section 7 or Section 8
-completion is inferred from the dependency migration.
+does not by itself produce the four local Gamma-valued Section 3 kernel records.
+The subsequent local proof now constructs all four; see
+[the exact producers and proof route](../section%203/verification/GAMMA-KERNEL-COMPLETION.md).
+They preserve the original base and weighted zero categories. This closes that
+upstream boundary; it does not prove the revised bounded-aperture kernel 7.26
+or infer any Section 8 completion.

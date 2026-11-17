@@ -6,7 +6,7 @@
     "url": "https://arxiv.org/pdf/0809.0473",
     "version": "v2, 29 December 2010"
   },
-  "scope": "Small VF-generated real-base specializations and complete Gamma-ground interfaces for unmeasured, bounded and measured lifts. All cited inputs remain explicit and replaceable. Same-ground essential measured groupoids, pointwise cofull representatives, graded and filtered presentation comparisons and the documented VF/Gamma-generated context applications are proved locally. Independently named disc imaginaries and concrete section 4 categories lie outside this section 3 certificate.",
+  "scope": "Small VF-generated real-base specializations and complete Gamma-ground interfaces for unmeasured, bounded and measured lifts. All cited inputs remain explicit and replaceable. Same-ground essential measured groupoids, pointwise cofull representatives, graded and filtered presentation comparisons and the documented VF/Gamma-generated context applications are proved locally. Independently named disc imaginaries and concrete section 4 categories lie outside this section 3 certificate. The four measured interfaces are now discharged by local proofs; see GAMMA-KERNEL-COMPLETION.md.",
   "context": [
     "BaseContext.model00",
     "BaseContext.uncountable",
@@ -62,7 +62,11 @@
         "evaluation on every measuredObjectLift",
         "surjectivity",
         "kernel equal to measuredRVSpecialCongruence"
-      ]
+      ],
+      "status": "DISCHARGED_BY_LOCAL_PROOF",
+      "producer": "DiamondIntegral.Section3.completedMeasuredLiftInput",
+      "producer_module": "MeasuredCompletedOrdinaryInputs.lean",
+      "boundary": "Locally constructed at the original stated base under explicit model, canonical-structure, generation, saturation, smallness, nontrivial-value and compatible-valuation hypotheses. Actual Gamma densities, weighted degree zero and exact positive kernels are retained; no resolved base or Gamma-to-RV section."
     },
     {
       "declaration": "DiamondIntegral.Section3.YinDegreeMeasuredLiftInput",
@@ -75,7 +79,11 @@
         "evaluation on measuredObjectLift",
         "surjectivity in every degree",
         "kernel is the restricted actual homogeneous congruence"
-      ]
+      ],
+      "status": "DISCHARGED_BY_LOCAL_PROOF",
+      "producer": "DiamondIntegral.Section3.completedDegreeMeasuredLiftInput",
+      "producer_module": "MeasuredCompletedOrdinaryInputs.lean",
+      "boundary": "Locally constructed at the original stated base under explicit model, canonical-structure, generation, saturation, smallness, nontrivial-value and compatible-valuation hypotheses. Actual Gamma densities, weighted degree zero and exact positive kernels are retained; no resolved base or Gamma-to-RV section."
     },
     {
       "declaration": "DiamondIntegral.Section3.YinGammaAffineInput",
@@ -120,7 +128,10 @@
         "surjectivity",
         "kernel exactly the homogeneous point[1] = positive-RV[1] relation"
       ],
-      "boundary": "Explicit replaceable input, with the actual pointwise RV and essential pointwise-representative VF groupoids. The graded additive/universal-semiring comparison is proved locally."
+      "boundary": "Locally constructed at the original stated base under explicit model, canonical-structure, generation, saturation, smallness, nontrivial-value and compatible-valuation hypotheses. Actual Gamma densities, weighted degree zero and exact positive kernels are retained; no resolved base or Gamma-to-RV section.",
+      "status": "DISCHARGED_BY_LOCAL_PROOF",
+      "producer": "DiamondIntegral.Section3.completedGammaGroundMeasuredLiftInput",
+      "producer_module": "GammaCompletedMeasuredInputs.lean"
     },
     {
       "declaration": "DiamondIntegral.Section3.YinGammaGroundDegreeMeasuredLiftInput",
@@ -137,7 +148,10 @@
         "surjectivity in every degree",
         "kernel is the restriction of the concrete homogeneous global special relation"
       ],
-      "boundary": "Explicit replaceable input. Its fixed-degree source/target are actual additive scissor quotients. Identification of the source global presentation with its graded direct sum is proved locally."
+      "boundary": "Locally constructed at the original stated base under explicit model, canonical-structure, generation, saturation, smallness, nontrivial-value and compatible-valuation hypotheses. Actual Gamma densities, weighted degree zero and exact positive kernels are retained; no resolved base or Gamma-to-RV section.",
+      "status": "DISCHARGED_BY_LOCAL_PROOF",
+      "producer": "DiamondIntegral.Section3.completedGammaGroundDegreeMeasuredLiftInput",
+      "producer_module": "GammaMeasuredDegreeKernel.lean"
     },
     {
       "declaration": "DiamondIntegral.Section3.YinGammaGroundBoundedUnmeasuredLiftInput",
@@ -155,7 +169,7 @@
       "boundary": "Explicit replaceable input. Transition compatibility is proved from the object formula using additive generator extensionality, without assuming an object representative for every RV class."
     }
   ],
-  "logical_status": "Explicit replaceable inputs, not global premises or compiled proofs of the external paper. Derived comparisons are relative to the corresponding input. Latest verification receipt determines which declarations have passed the local build and audit.",
+  "logical_status": "Interfaces remain explicit for abstract reuse. The four Gamma-valued measured records have local proved producers listed in their entries; they are no longer additional mathematical assumptions in those contexts. Other interfaces retain their individually documented scope. Historical citations are preserved as source provenance.",
   "excluded": [
     "HK Proposition 10.10(2)",
     "Any silent acceptance of HK Corollary 10.3 or Proposition 10.10(1)",

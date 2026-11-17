@@ -50,7 +50,7 @@
   "checked_kummer_support": "Actual finite Laurent expansion, power basis, degree, generation and irreducibility; full finite Kummer classification and valuation preservation, including complex coefficients; concrete Puiseux field, compatible finite root systems, their faithful action, and the full Galois-group equivalence over the actual full Laurent base; every algebraic base automorphism is proved valuation-preserving; actual principal-unit RV normalization and a bundled group equivalence with quotient RV automorphisms fixing integral-value constants",
   "remaining_section_work": [],
   "lean": "Lean (version 4.35.0, arm64-apple-darwin24.6.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
-  "repository_base": "a1886894b691afbb82ab0e5a9df0952207c7bfff",
+  "repository_base": "ba6249a11b39e8e71fd0130ab0087e7185b95433",
   "mathlib_pin": "56a005855ea17e0b0958f73ec801ae140b0a1679",
   "import_scope": "Actual local Section 3 RV/Gamma definability and separation exports, retaining canonical structure, ACVF00, saturation, smallness and nontrivial-Gamma hypotheses",
   "dependency_source_state": {

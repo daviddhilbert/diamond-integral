@@ -1,6 +1,6 @@
 warning: integration_in_acvf: repository has local changes:
   /Users/yimu/Documents/Codex-Migration-20261112/projects/diamond integral/Section6/worktree/.lake/packages/integration_in_acvf
-⚠ [9047/9238] Replayed Enc
+⚠ [9047/9068] Replayed Enc
 warning: Proofs/Enc.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Proofs/Enc.lean:645:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
 
@@ -55,7 +55,7 @@ Hint: Omit it from the simp argument list.
   [apply] simp only [Axioms.ACVFpaper, Set.mem_union] at ht
 
 Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
-⚠ [9048/9238] Replayed QF2Fragment
+⚠ [9048/9068] Replayed QF2Fragment
 warning: Proofs/QF2Fragment.lean:1083:16: `dif_neg` has been deprecated: Use `dite_eq_right` instead
 
 Hint: Replace the deprecated name:
@@ -68,7 +68,7 @@ warning: Proofs/QF2Fragment.lean:1090:14: `dif_pos` has been deprecated: Use `di
 
 Hint: Replace the deprecated name:
   d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
-⚠ [9049/9238] Replayed RVCalc
+⚠ [9049/9068] Replayed RVCalc
 warning: Proofs/RVCalc.lean:238:67: Variable name `hx` is not explicitly referenced.
 
 Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
@@ -81,7 +81,7 @@ Hint: The binding can be removed (if unused) or named `_` (if used implicitly). 
   [apply] _hxy
 
 Note: This linter can be disabled with `set_option linter.unusedVariables false`
-⚠ [9050/9238] Replayed VFField
+⚠ [9050/9068] Replayed VFField
 warning: Proofs/VFField.lean:128:36: This simp argument is unused:
   realize_tv
 
@@ -122,7 +122,7 @@ Hint: Replace the deprecated name:
   d̵i̵f̵_̵n̵e̵g̵d̲i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
 warning: Proofs/VFField.lean:177:0: Definition `SpecialTransformations.Milestone0.Transfer.vfFieldOfModel` of class type is semireducible. Most type class instances should be instance-reducible, so consider marking this
 definition with `@[instance_reducible]`. If it is intentionally semireducible, this warning can be disabled with `set_option warn.classDefReducibility false`.
-⚠ [9051/9238] Replayed VFValued
+⚠ [9051/9068] Replayed VFValued
 warning: Proofs/VFValued.lean:42:0: Definition `SpecialTransformations.Milestone0.VFValued.valuativeRelOfIsValPred` of class type is semireducible. Most type class instances should be instance-reducible, so consider marking this
 definition with `@[instance_reducible]`. If it is intentionally semireducible, this warning can be disabled with `set_option warn.classDefReducibility false`.
 warning: Proofs/VFValued.lean:74:2: Try this: 
@@ -133,7 +133,7 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9052/9238] Replayed ResidueTransportCore
+⚠ [9052/9068] Replayed ResidueTransportCore
 warning: Proofs/ResidueTransportCore.lean: imports `Mathlib.RingTheory.Valuation.ValuationSubring` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Proofs/ResidueTransportCore.lean: imports `Mathlib.GroupTheory.QuotientGroup.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Proofs/ResidueTransportCore.lean: imports `Mathlib.Data.Finset.Max` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
@@ -148,7 +148,7 @@ warning: Proofs/ResidueTransportCore.lean:217:17: `dif_neg` has been deprecated:
 
 Hint: Replace the deprecated name:
   d̵i̵f̵_̵n̵e̵g̵d̲i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
-ℹ [9053/9238] Replayed RVClassEquality
+ℹ [9053/9068] Replayed RVClassEquality
 info: Proofs/RVClassEquality.lean:51:0: @RVCalc.rvUnit_kernel : ∀ {K : Type u_1} {Γ₀ : Type u_2} [inst : Field K] [inst_1 : LinearOrderedCommGroupWithZero Γ₀]
   (v : Valuation K Γ₀), (QuotientGroup.mk' (RVCalc.principalUnits v)).ker = RVCalc.principalUnits v
 info: Proofs/RVClassEquality.lean:52:0: 'RVCalc.rvUnit_kernel' depends on axioms: [propext, Classical.choice, Quot.sound]
@@ -156,7 +156,7 @@ info: Proofs/RVClassEquality.lean:53:0: @RVCalc.rv_eq_rv_one_iff : ∀ {K : Type
   [inst_1 : LinearOrderedCommGroupWithZero Γ₀] {v : Valuation K Γ₀} {x : K},
   x ≠ 0 → (RVCalc.rv v x = RVCalc.rv v 1 ↔ v (x - 1) < 1)
 info: Proofs/RVClassEquality.lean:54:0: 'RVCalc.rv_eq_rv_one_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
-⚠ [9054/9238] Replayed ResidueTranscendentalTransport
+⚠ [9054/9068] Replayed ResidueTranscendentalTransport
 warning: Proofs/ResidueTranscendentalTransport.lean:178:6: `simp` already closes the goal
 
 Hint: Use `simp` instead of `simpa`:
@@ -189,7 +189,7 @@ info: Proofs/ResidueTranscendentalTransport.lean:351:0: 'ResidueTranscendentalTr
 info: Proofs/ResidueTranscendentalTransport.lean:352:0: 'ResidueTranscendentalTransport.rv_sum_relation' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/ResidueTranscendentalTransport.lean:353:0: 'ResidueTranscendentalTransport.rv_div_relation' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/ResidueTranscendentalTransport.lean:354:0: 'ResidueTranscendentalTransport.rv_quotient_relation' depends on axioms: [propext, Classical.choice, Quot.sound]
-⚠ [9055/9238] Replayed CanonicalRV
+⚠ [9055/9068] Replayed CanonicalRV
 warning: Proofs/CanonicalRV.lean:80:4: This simp argument is unused:
   realize_tv
 
@@ -203,7 +203,7 @@ info: Proofs/CanonicalRV.lean:140:0: 'CanonicalRV.same_fibers' depends on axioms
 info: Proofs/CanonicalRV.lean:141:0: 'CanonicalRV.equiv' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/CanonicalRV.lean:142:0: 'CanonicalRV.equiv_rv' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/CanonicalRV.lean:143:0: 'CanonicalRV.equiv_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
-⚠ [9060/9238] Replayed Section3.PolynomialSyntax
+⚠ [9060/9068] Replayed Section3.PolynomialSyntax
 warning: Section3/PolynomialSyntax.lean:27:8: automatically included section variable(s) unused in theorem `_private.Section3.PolynomialSyntax.0.SpecialTransformations.Section3.PolynomialSyntax.eval_fn0`:
   hM
 consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
@@ -222,7 +222,7 @@ consider restructuring your `variable` declarations so that the variables are no
   omit hM in theorem ...
 
 Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
-ℹ [9061/9238] Replayed FragmentTransfer
+ℹ [9061/9068] Replayed FragmentTransfer
 info: Proofs/FragmentTransfer.lean:289:0: 'SpecialTransformations.Milestone0.TransferComp.nontrivialTransferWS_ACVF_of_qfStep' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
@@ -242,7 +242,7 @@ info: Proofs/FragmentTransfer.lean:294:0: 'SpecialTransformations.Milestone0.Tra
 info: Proofs/FragmentTransfer.lean:295:0: 'SpecialTransformations.Milestone0.TransferComp.junkTrueAt_of_guardTrue' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
-⚠ [9062/9238] Replayed CanonicalStructure
+⚠ [9062/9068] Replayed CanonicalStructure
 warning: Proofs/CanonicalStructure.lean:47:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
 
 Hint: Replace the deprecated name:
@@ -328,7 +328,7 @@ info: Proofs/CanonicalStructure.lean:387:0: 'CanonicalStructure.realize_normaliz
 info: Proofs/CanonicalStructure.lean:388:0: 'CanonicalStructure.normalized_model' depends on axioms: [propext, choice, Quot.sound]
 info: Proofs/CanonicalStructure.lean:389:0: 'CanonicalStructure.normalize_isCanonical' depends on axioms: [propext, choice, Quot.sound]
 info: Proofs/CanonicalStructure.lean:390:0: 'CanonicalStructure.hasQE_of_canonical' depends on axioms: [propext, choice, Quot.sound]
-⚠ [9063/9238] Replayed Section3.PolynomialSupport
+⚠ [9063/9068] Replayed Section3.PolynomialSupport
 warning: Section3/PolynomialSupport.lean:131:16: `if_neg` has been deprecated: Use `ite_eq_right` instead
 
 Hint: Replace the deprecated name:
@@ -337,7 +337,7 @@ warning: Section3/PolynomialSupport.lean:147:16: `if_pos` has been deprecated: U
 
 Hint: Replace the deprecated name:
   i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
-⚠ [9064/9238] Replayed JohnsonCriterion
+⚠ [9064/9068] Replayed JohnsonCriterion
 warning: Proofs/JohnsonCriterion.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Proofs/JohnsonCriterion.lean:131:40: Variable name `hsub` is not explicitly referenced.
 
@@ -372,7 +372,7 @@ info: Proofs/JohnsonCriterion.lean:1049:0: 'BoundedQE.isQF_lifsup' does not depe
 info: Proofs/JohnsonCriterion.lean:1050:0: 'BoundedQE.realize_liinf' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/JohnsonCriterion.lean:1088:0: 'hasQE_of_qfDet' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/JohnsonCriterion.lean:1111:0: 'HQEDerive.hasQE_of_johnson' depends on axioms: [propext, Classical.choice, Quot.sound]
-⚠ [9065/9238] Replayed JohnsonACFGeometry
+⚠ [9065/9068] Replayed JohnsonACFGeometry
 warning: Proofs/JohnsonACFGeometry.lean:88:53: Variable name `x` is not explicitly referenced.
 
 Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
@@ -448,7 +448,7 @@ Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
 info: Proofs/JohnsonACFGeometry.lean:421:0: 'ACFValidation.acfModel' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/JohnsonACFGeometry.lean:422:0: 'ACFValidation.oneEC_field_acf' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/JohnsonACFGeometry.lean:423:0: 'ACFValidation.amalgamation_field' depends on axioms: [propext, Classical.choice, Quot.sound]
-⚠ [9066/9238] Replayed JohnsonACFPrime
+⚠ [9066/9068] Replayed JohnsonACFPrime
 warning: Proofs/JohnsonACFPrime.lean:151:0: automatically included section variable(s) unused in theorem `JohnsonACFPrime.PrimeField.mk_of_funMap`:
   [IsDomain M]
 consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
@@ -466,9 +466,9 @@ info: Proofs/JohnsonACFPrime.lean:287:0: 'JohnsonACFPrime.PrimeField.primeField_
 info: Proofs/JohnsonACFPrime.lean:288:0: 'JohnsonACFPrime.PrimeField.primeEmbedding' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/JohnsonACFPrime.lean:289:0: 'JohnsonACFPrime.PrimeField.mk_of_funMap' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/JohnsonACFPrime.lean:290:0: 'JohnsonACFPrime.PrimeField.ker_lift_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
-ℹ [9067/9238] Replayed JohnsonACFMain
+ℹ [9067/9068] Replayed JohnsonACFMain
 info: Proofs/JohnsonACFMain.lean:24:0: 'JohnsonACF.hasQEb' depends on axioms: [propext, Classical.choice, Quot.sound]
-⚠ [9068/9238] Replayed JohnsonLanguagePrime
+⚠ [9068/9382] Replayed JohnsonLanguagePrime
 warning: Proofs/JohnsonLanguagePrime.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Proofs/JohnsonLanguagePrime.lean:221:2: `simp` already closes the goal
 
@@ -707,7 +707,7 @@ Hint: Omit it from the simp argument list.
 
 Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
 info: Proofs/JohnsonLanguagePrime.lean:1557:0: 'ValPM.axNontrivial_realize' depends on axioms: [propext, Classical.choice, Quot.sound]
-⚠ [9069/9238] Replayed JohnsonGeometry
+⚠ [9069/9382] Replayed JohnsonGeometry
 warning: Proofs/JohnsonGeometry.lean: imports `Mathlib.Algebra.Polynomial.Lifts` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Proofs/JohnsonGeometry.lean:333:17: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
 
@@ -1125,7 +1125,7 @@ info: Proofs/JohnsonGeometry.lean:4264:0: 'ValOneEC.atomGood_of_isAlgClosed' dep
 info: Proofs/JohnsonGeometry.lean:4266:0: 'ValOneEC.isAlgClosed_of_model' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/JohnsonGeometry.lean:4267:0: 'ValOneEC.fieldOfModelValField' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/JohnsonGeometry.lean:4269:0: 'ValOneEC.oneECIn_of_modelType' depends on axioms: [propext, Classical.choice, Quot.sound]
-⚠ [9070/9238] Replayed JohnsonAmalgamation
+⚠ [9070/9382] Replayed JohnsonAmalgamation
 warning: Proofs/JohnsonAmalgamation.lean:588:24: `TensorProduct.induction_on` has been deprecated: Use `TensorProduct.inductionOn` instead
 
 Note: The updated constant has a different type:
@@ -1167,10 +1167,10 @@ info: Proofs/JohnsonAmalgamation.lean:997:0: ValOneEC.hasAmalgamation_valField :
 info: Proofs/JohnsonAmalgamation.lean:998:0: ValOneEC.oneECIn_of_modelType : ∀ (M N : ValPM.valField.ModelType) (f : ↑M ↪[val] ↑N),
   ↑M ⊨ ValPM.ACVF_val → ValOneEC.OneECIn f
 info: Proofs/JohnsonAmalgamation.lean:999:0: ValPM.hasPrimeModels_ACVF_val : ValPM.HasPrimeModels ValPM.valField ValPM.ACVF_val
-ℹ [9071/9238] Replayed JohnsonMain
+ℹ [9071/9382] Replayed JohnsonMain
 info: Proofs/JohnsonMain.lean:40:0: 'hasQE_ACVF_val' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/JohnsonMain.lean:41:0: 'hasQEb_ACVF_val' depends on axioms: [propext, Classical.choice, Quot.sound]
-⚠ [9072/9238] Replayed ResidueTranscendentalFieldEmbedding
+⚠ [9072/9382] Replayed ResidueTranscendentalFieldEmbedding
 warning: Proofs/ResidueTranscendentalFieldEmbedding.lean: imports `Mathlib.FieldTheory.RatFunc.AsPolynomial` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Proofs/ResidueTranscendentalFieldEmbedding.lean: imports `Mathlib.Algebra.BigOperators.Field` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Proofs/ResidueTranscendentalFieldEmbedding.lean:122:2: Try this: 
@@ -1185,12 +1185,12 @@ info: Proofs/ResidueTranscendentalFieldEmbedding.lean:158:0: 'ResidueTranscenden
 info: Proofs/ResidueTranscendentalFieldEmbedding.lean:159:0: 'ResidueTranscendentalTransport.polynomial_nonvanishing' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/ResidueTranscendentalFieldEmbedding.lean:160:0: 'ResidueTranscendentalTransport.rv_polynomial_relation' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/ResidueTranscendentalFieldEmbedding.lean:161:0: 'ResidueTranscendentalTransport.exists_field_embedding' depends on axioms: [propext, Classical.choice, Quot.sound]
-ℹ [9073/9238] Replayed ResidueAlgebraicTransport
+ℹ [9073/9382] Replayed ResidueAlgebraicTransport
 info: Proofs/ResidueAlgebraicTransport.lean:165:0: 'ResidueAlgebraicTransport.residueIndependent_of_minpoly' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/ResidueAlgebraicTransport.lean:166:0: 'ResidueAlgebraicTransport.normalized_sums' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/ResidueAlgebraicTransport.lean:167:0: 'ResidueAlgebraicTransport.nonzero_sums' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/ResidueAlgebraicTransport.lean:168:0: 'ResidueAlgebraicTransport.rv_sum_relation' depends on axioms: [propext, Classical.choice, Quot.sound]
-⚠ [9074/9238] Replayed ResidueAlgebraicFieldEmbedding
+⚠ [9074/9382] Replayed ResidueAlgebraicFieldEmbedding
 warning: Proofs/ResidueAlgebraicFieldEmbedding.lean:60:2: Try this: 
   letI̵
 
@@ -1204,9 +1204,9 @@ info: Proofs/ResidueAlgebraicFieldEmbedding.lean:133:0: 'ResidueAlgebraicTranspo
 info: Proofs/ResidueAlgebraicFieldEmbedding.lean:134:0: 'ResidueAlgebraicTransport.exists_field_embedding_of_residue_minpoly' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
-⚠ [9075/9238] Replayed RVHenselLifting
+⚠ [9075/9382] Replayed RVHenselLifting
 warning: Proofs/RVHenselLifting.lean: imports `Mathlib.FieldTheory.IsAlgClosed.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [9077/9238] Replayed ResidueAlgebraicRoot
+⚠ [9077/9382] Replayed ResidueAlgebraicRoot
 warning: Proofs/ResidueAlgebraicRoot.lean:26:35: `simp` already closes the goal
 
 Hint: Use `simp` instead of `simpa`:
@@ -1223,7 +1223,7 @@ info: Proofs/ResidueAlgebraicRoot.lean:131:0: 'ResidueAlgebraicTransport.residue
 info: Proofs/ResidueAlgebraicRoot.lean:132:0: 'ResidueAlgebraicTransport.eval_lt_one' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/ResidueAlgebraicRoot.lean:133:0: 'ResidueAlgebraicTransport.exists_root_with_residue' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/ResidueAlgebraicRoot.lean:134:0: 'ResidueAlgebraicTransport.exists_field_embedding_with_root' depends on axioms: [propext, Classical.choice, Quot.sound]
-ℹ [9078/9238] Replayed ResidueAlgebraicSourceLift
+ℹ [9078/9382] Replayed ResidueAlgebraicSourceLift
 info: Proofs/ResidueAlgebraicSourceLift.lean:113:0: 'ResidueAlgebraicTransport.eval_lt_one_of_lifted_minpoly' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/ResidueAlgebraicSourceLift.lean:114:0: 'ResidueAlgebraicTransport.exists_unit_root_of_lifted_minpoly' depends on axioms: [propext,
  Classical.choice,
@@ -1231,13 +1231,13 @@ info: Proofs/ResidueAlgebraicSourceLift.lean:114:0: 'ResidueAlgebraicTransport.e
 info: Proofs/ResidueAlgebraicSourceLift.lean:115:0: 'ResidueAlgebraicTransport.exists_adjoin_embedding_of_lifted_minpoly' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
-⚠ [9079/9238] Replayed ResiduePolynomialLift
+⚠ [9079/9382] Replayed ResiduePolynomialLift
 warning: Proofs/ResiduePolynomialLift.lean: imports `Mathlib.Algebra.Polynomial.Lifts` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 info: Proofs/ResiduePolynomialLift.lean:79:0: 'ResidueAlgebraicTransport.baseResidueHom_apply' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/ResiduePolynomialLift.lean:80:0: 'ResidueAlgebraicTransport.exists_monic_integral_lift' depends on axioms: [propext, Classical.choice, Quot.sound]
-ℹ [9080/9238] Replayed ResidueAlgebraicAdjoin
+ℹ [9080/9382] Replayed ResidueAlgebraicAdjoin
 info: Proofs/ResidueAlgebraicAdjoin.lean:55:0: 'ResidueAlgebraicTransport.exists_adjoin_embedding' depends on axioms: [propext, Classical.choice, Quot.sound]
-ℹ [9081/9238] Replayed BaseResidueField
+ℹ [9081/9382] Replayed BaseResidueField
 info: Proofs/BaseResidueField.lean:106:0: 'ResidueAlgebraicTransport.baseResidueHom_range_inv' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/BaseResidueField.lean:107:0: 'ResidueAlgebraicTransport.mem_baseResidueField_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/BaseResidueField.lean:108:0: 'ResidueAlgebraicTransport.baseResidueField_contains' depends on axioms: [propext, Classical.choice, Quot.sound]
@@ -1246,23 +1246,23 @@ info: Proofs/BaseResidueField.lean:110:0: 'ResidueAlgebraicTransport.residueTran
  Classical.choice,
  Quot.sound]
 info: Proofs/BaseResidueField.lean:111:0: 'ResidueAlgebraicTransport.residue_cases' depends on axioms: [propext, Classical.choice, Quot.sound]
-ℹ [9082/9238] Replayed ResidueUnitExtension
+ℹ [9082/9382] Replayed ResidueUnitExtension
 info: Proofs/ResidueUnitExtension.lean:102:0: 'ResidueAlgebraicTransport.exists_unit_residue_extension' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/ResidueUnitExtension.lean:103:0: 'ResidueAlgebraicTransport.exists_unit_representative' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/ResidueUnitExtension.lean:104:0: 'ResidueAlgebraicTransport.exists_unit_class_field_extension' depends on axioms: [propext, Classical.choice, Quot.sound]
-⚠ [9083/9238] Replayed PartialFieldMaps
+⚠ [9083/9382] Replayed PartialFieldMaps
 warning: Proofs/PartialFieldMaps.lean: imports `Mathlib.Algebra.Field.Subfield.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Proofs/PartialFieldMaps.lean: imports `Mathlib.Order.Zorn` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 info: Proofs/PartialFieldMaps.lean:113:0: 'PartialFieldMaps.fieldMap' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/PartialFieldMaps.lean:114:0: 'PartialFieldMaps.isFieldGraph_sSup' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/PartialFieldMaps.lean:115:0: 'PartialFieldMaps.exists_maximal_extension' depends on axioms: [propext, Classical.choice, Quot.sound]
-ℹ [9084/9238] Replayed RVFrame
+ℹ [9084/9382] Replayed RVFrame
 info: Proofs/RVFrame.lean:72:0: 'RVFrame.one' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/RVFrame.lean:73:0: 'RVFrame.integral' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/RVFrame.lean:74:0: 'RVFrame.value_one' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/RVFrame.lean:75:0: 'RVFrame.small' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/RVFrame.lean:76:0: 'RVFrame.residue' depends on axioms: [propext, Classical.choice, Quot.sound]
-ℹ [9085/9238] Replayed MaximalResidueExtension
+ℹ [9085/9382] Replayed MaximalResidueExtension
 info: Proofs/MaximalResidueExtension.lean:152:0: 'MaximalResidueExtension.graph_domain_fieldMap' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/MaximalResidueExtension.lean:153:0: 'MaximalResidueExtension.graph_le_adjoin_graph' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/MaximalResidueExtension.lean:154:0: 'MaximalResidueExtension.compatible_adjoin_graph' depends on axioms: [propext, Classical.choice, Quot.sound]
@@ -1275,9 +1275,9 @@ info: Proofs/MaximalResidueExtension.lean:158:0: 'MaximalResidueExtension.maxima
  Classical.choice,
  Quot.sound]
 info: Proofs/MaximalResidueExtension.lean:159:0: 'MaximalResidueExtension.exists_maximal_with_full_residue' depends on axioms: [propext, Classical.choice, Quot.sound]
-ℹ [9086/9238] Replayed RVLeadingSums
+ℹ [9086/9382] Replayed RVLeadingSums
 info: Proofs/RVLeadingSums.lean:26:0: 'RVCalc.rv_sum_eq_of_lt' depends on axioms: [propext, Classical.choice, Quot.sound]
-⚠ [9087/9238] Replayed ValueTranscendentalTransport
+⚠ [9087/9382] Replayed ValueTranscendentalTransport
 warning: Proofs/ValueTranscendentalTransport.lean:179:2: Try this: 
   letI̵
 
@@ -1292,7 +1292,7 @@ info: Proofs/ValueTranscendentalTransport.lean:215:0: 'ValueTranscendentalTransp
 info: Proofs/ValueTranscendentalTransport.lean:216:0: 'ValueTranscendentalTransport.polynomial_nonvanishing' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/ValueTranscendentalTransport.lean:217:0: 'ValueTranscendentalTransport.rv_polynomial_relation' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/ValueTranscendentalTransport.lean:218:0: 'ValueTranscendentalTransport.exists_field_embedding' depends on axioms: [propext, Classical.choice, Quot.sound]
-ℹ [9088/9238] Replayed ValueTranscendentalInputs
+ℹ [9088/9382] Replayed ValueTranscendentalInputs
 info: Proofs/ValueTranscendentalInputs.lean:121:0: 'ValueTranscendentalTransport.monomial_value_ne_of_lt' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/ValueTranscendentalInputs.lean:122:0: 'ValueTranscendentalTransport.separated_of_valueTranscendental' depends on axioms: [propext,
  Classical.choice,
@@ -1306,9 +1306,9 @@ info: Proofs/ValueTranscendentalInputs.lean:124:0: 'ValueTranscendentalTransport
 info: Proofs/ValueTranscendentalInputs.lean:125:0: 'ValueTranscendentalTransport.exists_field_embedding_of_new_value' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
-ℹ [9089/9238] Replayed RVNthRootLifting
+ℹ [9089/9382] Replayed RVNthRootLifting
 info: Proofs/RVNthRootLifting.lean:39:0: 'RVCalc.nth_root_with_rv' depends on axioms: [propext, Classical.choice, Quot.sound]
-⚠ [9090/9238] Replayed ValueAlgebraicTransport
+⚠ [9090/9382] Replayed ValueAlgebraicTransport
 warning: Proofs/ValueAlgebraicTransport.lean: imports `Mathlib.FieldTheory.IntermediateField.Adjoin.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Proofs/ValueAlgebraicTransport.lean:183:2: Try this: 
   letI̵
@@ -1324,7 +1324,7 @@ info: Proofs/ValueAlgebraicTransport.lean:279:0: 'ValueAlgebraicTransport.minpol
 info: Proofs/ValueAlgebraicTransport.lean:280:0: 'ValueAlgebraicTransport.rv_sum_relation' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/ValueAlgebraicTransport.lean:281:0: 'ValueAlgebraicTransport.exists_field_embedding' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/ValueAlgebraicTransport.lean:282:0: 'ValueAlgebraicTransport.exists_field_embedding_of_rv_root' depends on axioms: [propext, Classical.choice, Quot.sound]
-⚠ [9091/9238] Replayed FiniteValueRepresentative
+⚠ [9091/9382] Replayed FiniteValueRepresentative
 warning: Proofs/FiniteValueRepresentative.lean: imports `Mathlib.Data.Nat.Find` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Proofs/FiniteValueRepresentative.lean:57:0: automatically included section variable(s) unused in theorem `FiniteValueRepresentative.noSmallerValuePower_of_same_rv`:
   [IsAlgClosed K]
@@ -1338,17 +1338,17 @@ info: Proofs/FiniteValueRepresentative.lean:101:0: 'FiniteValueRepresentative.ro
  Classical.choice,
  Quot.sound]
 info: Proofs/FiniteValueRepresentative.lean:102:0: 'FiniteValueRepresentative.exists_minimal_representative' depends on axioms: [propext, Classical.choice, Quot.sound]
-ℹ [9092/9238] Replayed MaximalRVExtension
+ℹ [9092/9382] Replayed MaximalRVExtension
 info: Proofs/MaximalRVExtension.lean:117:0: 'MaximalRVExtension.adjoin_generator_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/MaximalRVExtension.lean:118:0: 'MaximalRVExtension.maximal_represents' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/MaximalRVExtension.lean:119:0: 'MaximalRVExtension.exists_field_representing_graph' depends on axioms: [propext, Classical.choice, Quot.sound]
-⚠ [9093/9238] Replayed SubfieldExtension
+⚠ [9093/9382] Replayed SubfieldExtension
 warning: Proofs/SubfieldExtension.lean: imports `Mathlib.RingTheory.Localization.FractionRing` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 info: Proofs/SubfieldExtension.lean:88:0: 'SubfieldExtension.fractionEquiv_algebraMap' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/SubfieldExtension.lean:89:0: 'SubfieldExtension.extend_generator' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/SubfieldExtension.lean:90:0: 'SubfieldExtension.exists_extension' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/SubfieldExtension.lean:91:0: 'SubfieldExtension.extension_unique' depends on axioms: [propext, Classical.choice, Quot.sound]
-⚠ [9094/9238] Replayed SubstructureField
+⚠ [9094/9382] Replayed SubstructureField
 warning: Proofs/SubstructureField.lean:18:0: automatically included section variable(s) unused in theorem `SubstructureField.vfZero_mem`:
   hM
 consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
@@ -1379,7 +1379,7 @@ info: Proofs/SubstructureField.lean:153:0: 'SubstructureField.ringMap' depends o
 info: Proofs/SubstructureField.lean:154:0: 'SubstructureField.ringMap_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/SubstructureField.lean:155:0: 'SubstructureField.fieldMap' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/SubstructureField.lean:156:0: 'SubstructureField.fieldMap_agrees' depends on axioms: [propext, Classical.choice, Quot.sound]
-⚠ [9095/9238] Replayed CanonicalQF
+⚠ [9095/9382] Replayed CanonicalQF
 warning: Proofs/CanonicalQF.lean:49:12: `if_pos` has been deprecated: Use `ite_eq_left` instead
 
 Hint: Replace the deprecated name:
@@ -1395,12 +1395,12 @@ info: Proofs/CanonicalQF.lean:272:0: 'CanonicalStructure.sortedTerm_realize' dep
 info: Proofs/CanonicalQF.lean:273:0: 'CanonicalStructure.sortedQF_realize' depends on axioms: [propext, choice, Quot.sound]
 info: Proofs/CanonicalQF.lean:274:0: 'CanonicalStructure.canonicalQE_of_rawQE' depends on axioms: [propext, choice, Quot.sound]
 info: Proofs/CanonicalQF.lean:275:0: 'CanonicalStructure.hasQE_of_raw_canonical' depends on axioms: [propext, choice, Quot.sound]
-ℹ [9096/9238] Replayed SortedEmbeddings
+ℹ [9096/9382] Replayed SortedEmbeddings
 info: Proofs/SortedEmbeddings.lean:127:0: 'CanonicalStructure.SortedEmbedding.map_sortZero' depends on axioms: [propext, Quot.sound]
 info: Proofs/SortedEmbeddings.lean:128:0: 'CanonicalStructure.SortedEmbedding.toLRVEmbedding' depends on axioms: [propext, choice, Quot.sound]
 info: Proofs/SortedEmbeddings.lean:129:0: 'CanonicalStructure.SortedEmbedding.normalize' depends on axioms: [propext, choice, Quot.sound]
 info: Proofs/SortedEmbeddings.lean:130:0: 'CanonicalStructure.SortedEmbedding.toCanonicalEmbedding' depends on axioms: [propext, choice, Quot.sound]
-⚠ [9097/9238] Replayed TypedModelMap
+⚠ [9097/9382] Replayed TypedModelMap
 warning: Proofs/TypedModelMap.lean:79:25: `dif_pos` has been deprecated: Use `dite_eq_left` instead
 
 Hint: Replace the deprecated name:
@@ -1415,7 +1415,7 @@ info: Proofs/TypedModelMap.lean:297:0: 'TypedModelMap.Components.carrierMap_fun'
 info: Proofs/TypedModelMap.lean:298:0: 'TypedModelMap.Components.carrierMap_rel' depends on axioms: [propext, choice, Quot.sound]
 info: Proofs/TypedModelMap.lean:299:0: 'TypedModelMap.Components.toSortedEmbedding' depends on axioms: [propext, choice, Quot.sound]
 info: Proofs/TypedModelMap.lean:300:0: 'TypedModelMap.Components.toCanonicalEmbedding' depends on axioms: [propext, choice, Quot.sound]
-⚠ [9098/9238] Replayed ValuedModelMap
+⚠ [9098/9382] Replayed ValuedModelMap
 warning: Proofs/ValuedModelMap.lean:128:0: automatically included section variable(s) unused in theorem `ValuedModelMap.kHyps_realize`:
   hM
 consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
@@ -1442,16 +1442,16 @@ info: Proofs/ValuedModelMap.lean:386:0: 'ValuedModelMap.same_fibers' depends on 
 info: Proofs/ValuedModelMap.lean:387:0: 'ValuedModelMap.rvMap_addK' depends on axioms: [propext, choice, Quot.sound]
 info: Proofs/ValuedModelMap.lean:388:0: 'ValuedModelMap.toSortedEmbedding' depends on axioms: [propext, choice, Quot.sound]
 info: Proofs/ValuedModelMap.lean:389:0: 'ValuedModelMap.toCanonicalEmbedding' depends on axioms: [propext, choice, Quot.sound]
-ℹ [9099/9238] Replayed CanonicalTheory
+ℹ [9099/9382] Replayed CanonicalTheory
 info: Proofs/CanonicalTheory.lean:139:0: 'CanonicalTheory.functionAxiom_realize' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/CanonicalTheory.lean:140:0: 'CanonicalTheory.orderAxiom_realize' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/CanonicalTheory.lean:141:0: 'CanonicalTheory.model_CanonicalACVF_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/CanonicalTheory.lean:142:0: 'CanonicalTheory.normalized_model' depends on axioms: [propext, Classical.choice, Quot.sound]
-ℹ [9100/9238] Replayed MarkerBridge
+ℹ [9100/9382] Replayed MarkerBridge
 info: Proofs/MarkerBridge.lean:106:0: 'MarkerBridge.fullQE_of_marker_and_extension' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/MarkerBridge.lean:107:0: 'MarkerBridge.rawCanonicalQE_of_fullQE' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/MarkerBridge.lean:108:0: 'MarkerBridge.qe_of_marker_and_extension' depends on axioms: [propext, Classical.choice, Quot.sound]
-⚠ [9101/9238] Replayed ValuedReduct
+⚠ [9101/9382] Replayed ValuedReduct
 warning: Proofs/ValuedReduct.lean:105:0: automatically included section variable(s) unused in theorem `ValuedReduct.realize_rvTerm`:
   hM
 consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
@@ -1484,12 +1484,12 @@ info: Proofs/ValuedReduct.lean:261:0: 'ValuedReduct.realize_translateTerm' depen
 info: Proofs/ValuedReduct.lean:262:0: 'ValuedReduct.realize_translateFormula' depends on axioms: [propext, choice, Quot.sound]
 info: Proofs/ValuedReduct.lean:263:0: 'ValuedReduct.translatedType_finSat' depends on axioms: [propext, choice, Quot.sound]
 info: Proofs/ValuedReduct.lean:264:0: 'ValuedReduct.satAt_valuedReduct' depends on axioms: [propext, choice, Quot.sound]
-ℹ [9102/9238] Replayed VFGeneratedFinish
+ℹ [9102/9382] Replayed VFGeneratedFinish
 info: Proofs/VFGeneratedFinish.lean:138:0: 'VFGeneratedFinish.representsRV_of_VFGenerated' depends on axioms: [propext, choice, Quot.sound]
 info: Proofs/VFGeneratedFinish.lean:139:0: 'VFGeneratedFinish.sortedFinish_agrees' depends on axioms: [propext, choice, Quot.sound]
 info: Proofs/VFGeneratedFinish.lean:140:0: 'VFGeneratedFinish.normalizedFinish_agrees' depends on axioms: [propext, choice, Quot.sound]
 info: Proofs/VFGeneratedFinish.lean:141:0: 'VFGeneratedFinish.finish_VFGenerated' depends on axioms: [propext, choice, Quot.sound]
-⚠ [9103/9238] Replayed VFAlgClosed
+⚠ [9103/9382] Replayed VFAlgClosed
 warning: Proofs/VFAlgClosed.lean: imports `Mathlib.FieldTheory.IsAlgClosed.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Proofs/VFAlgClosed.lean:112:0: automatically included section variable(s) unused in theorem `VFAlgClosed.snoc_castSucc_castSucc`:
   [LRV.Structure M]
@@ -1531,7 +1531,7 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9104/9238] Replayed ValuedFieldExtension
+⚠ [9104/9382] Replayed ValuedFieldExtension
 warning: Proofs/ValuedFieldExtension.lean:117:2: Try this: 
   letI̵
 
@@ -1567,7 +1567,7 @@ Note: This linter can be disabled with `set_option linter.style.haveILetI false`
 info: Proofs/ValuedFieldExtension.lean:142:0: 'ValuedFieldExtension.exists_nontrivial_predV' depends on axioms: [propext, choice, Quot.sound]
 info: Proofs/ValuedFieldExtension.lean:143:0: 'ValuedFieldExtension.valuation_nontrivial' depends on axioms: [propext, choice, Quot.sound]
 info: Proofs/ValuedFieldExtension.lean:144:0: 'ValuedFieldExtension.valuedExtension_of_notes' depends on axioms: [propext, choice, Quot.sound]
-⚠ [9105/9238] Replayed JohnsonValuedBridge
+⚠ [9105/9382] Replayed JohnsonValuedBridge
 warning: Proofs/JohnsonValuedBridge.lean:52:10: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
 
 Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
@@ -1587,9 +1587,9 @@ Hint: Replace the deprecated name:
 info: Proofs/JohnsonValuedBridge.lean:186:0: 'JohnsonValuedBridge.satAt_johnson' depends on axioms: [propext, choice, Quot.sound]
 info: Proofs/JohnsonValuedBridge.lean:187:0: 'JohnsonValuedBridge.model_ACVF_val' depends on axioms: [propext, choice, Quot.sound]
 info: Proofs/JohnsonValuedBridge.lean:188:0: 'JohnsonValuedBridge.fullQE_ACVF_val' depends on axioms: [propext, choice, Quot.sound]
-ℹ [9106/9238] Replayed JohnsonSubfield
+ℹ [9106/9382] Replayed JohnsonSubfield
 info: Proofs/JohnsonSubfield.lean:57:0: 'JohnsonValuedExtension.subfieldEmbedding' depends on axioms: [propext, Classical.choice, Quot.sound]
-⚠ [9107/9238] Replayed QESaturatedBackAndForth
+⚠ [9107/9382] Replayed QESaturatedBackAndForth
 warning: Proofs/QESaturatedBackAndForth.lean: imports `Mathlib.ModelTheory.PartialEquiv` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Proofs/QESaturatedBackAndForth.lean: imports `Mathlib.Order.Zorn` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Proofs/QESaturatedBackAndForth.lean: imports `Mathlib.Tactic.SplitIfs` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
@@ -1612,13 +1612,13 @@ info: Proofs/QESaturatedBackAndForth.lean:378:0: 'QESaturatedBackAndForth.Realiz
 info: Proofs/QESaturatedBackAndForth.lean:379:0: 'QESaturatedBackAndForth.Realize.exists_total_embedding_of_realizesAtomic' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
-⚠ [9108/9238] Replayed QESaturatedExtension
+⚠ [9108/9382] Replayed QESaturatedExtension
 warning: Proofs/QESaturatedExtension.lean: imports `Mathlib.Data.Set.Finite.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 info: Proofs/QESaturatedExtension.lean:151:0: 'QESaturatedExtension.partial_elementary' depends on axioms: [propext, Quot.sound]
 info: Proofs/QESaturatedExtension.lean:152:0: 'QESaturatedExtension.completeType_finSat' depends on axioms: [propext, choice, Quot.sound]
 info: Proofs/QESaturatedExtension.lean:153:0: 'QESaturatedExtension.realizesAtomic_of_completeType' depends on axioms: [propext, choice, Quot.sound]
 info: Proofs/QESaturatedExtension.lean:154:0: 'QESaturatedExtension.extension_of_fullQE' depends on axioms: [propext, choice, Quot.sound]
-⚠ [9109/9238] Replayed JohnsonValuedExtension
+⚠ [9109/9382] Replayed JohnsonValuedExtension
 warning: Proofs/JohnsonValuedExtension.lean:20:2: Try this: 
   letI̵
 
@@ -1637,7 +1637,7 @@ But this is not relevant for proofs because of proof irrelevance.
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
 info: Proofs/JohnsonValuedExtension.lean:52:0: 'JohnsonValuedExtension.markerNotesProposition45' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/JohnsonValuedExtension.lean:53:0: 'JohnsonValuedExtension.valuedExtension_of_johnson' depends on axioms: [propext, Classical.choice, Quot.sound]
-⚠ [9110/9238] Replayed LocalAssembly
+⚠ [9110/9382] Replayed LocalAssembly
 warning: Proofs/LocalAssembly.lean:60:2: Try this: 
   letI̵
 
@@ -1689,10 +1689,10 @@ Note: This linter can be disabled with `set_option linter.style.haveILetI false`
 info: Proofs/LocalAssembly.lean:139:0: 'LocalAssembly.embedding_of_preparedFrame' depends on axioms: [propext, choice, Quot.sound]
 info: Proofs/LocalAssembly.lean:140:0: 'LocalAssembly.canonicalExtension_of_preparation' depends on axioms: [propext, choice, Quot.sound]
 info: Proofs/LocalAssembly.lean:141:0: 'LocalAssembly.qe_conditional_on_preparation' depends on axioms: [propext, choice, Quot.sound]
-ℹ [9111/9238] Replayed CanonicalRVOrder
+ℹ [9111/9382] Replayed CanonicalRVOrder
 info: Proofs/CanonicalRVOrder.lean:54:0: 'CanonicalRV.le_equiv_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/CanonicalRVOrder.lean:55:0: 'CanonicalRV.units_equiv_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
-⚠ [9112/9238] Replayed CanonicalResidue
+⚠ [9112/9382] Replayed CanonicalResidue
 warning: Proofs/CanonicalResidue.lean:70:19: `if_pos` has been deprecated: Use `ite_eq_left` instead
 
 Hint: Replace the deprecated name:
@@ -1740,7 +1740,7 @@ info: Proofs/CanonicalResidue.lean:161:0: 'CanonicalResidue.toRV_residue' depend
 info: Proofs/CanonicalResidue.lean:162:0: 'CanonicalResidue.toRV_injective' depends on axioms: [propext, choice, Quot.sound]
 info: Proofs/CanonicalResidue.lean:163:0: 'CanonicalResidue.encodeResidue_injective' depends on axioms: [propext, choice, Quot.sound]
 info: Proofs/CanonicalResidue.lean:164:0: 'CanonicalResidue.encodeResidue_surjective_inK' depends on axioms: [propext, choice, Quot.sound]
-⚠ [9113/9238] Replayed CanonicalResidueOperations
+⚠ [9113/9382] Replayed CanonicalResidueOperations
 warning: Proofs/CanonicalResidueOperations.lean:27:6: `if_pos` has been deprecated: Use `ite_eq_left` instead
 
 Hint: Replace the deprecated name:
@@ -1834,7 +1834,7 @@ info: Proofs/CanonicalResidueOperations.lean:178:0: 'CanonicalResidue.toRV_neg' 
 info: Proofs/CanonicalResidueOperations.lean:179:0: 'CanonicalResidue.toRV_units_iff' depends on axioms: [propext, choice, Quot.sound]
 info: Proofs/CanonicalResidueOperations.lean:180:0: 'CanonicalResidue.encodeResidue_add' depends on axioms: [propext, choice, Quot.sound]
 info: Proofs/CanonicalResidueOperations.lean:181:0: 'CanonicalResidue.encodeResidue_mul' depends on axioms: [propext, choice, Quot.sound]
-⚠ [9114/9238] Replayed SubstructureValuation
+⚠ [9114/9382] Replayed SubstructureValuation
 warning: Proofs/SubstructureValuation.lean:68:0: automatically included section variable(s) unused in theorem `SubstructureField.iLe_map`:
   hM
   hN
@@ -1846,7 +1846,7 @@ info: Proofs/SubstructureValuation.lean:109:0: 'SubfieldExtension.extend_pred_if
 info: Proofs/SubstructureValuation.lean:110:0: 'SubstructureField.ringMap_pred_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/SubstructureValuation.lean:111:0: 'SubstructureField.fieldMap_pred_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/SubstructureValuation.lean:112:0: 'SubstructureField.fieldMap_valuation_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
-⚠ [9115/9238] Replayed SubstructureRVGroup
+⚠ [9115/9382] Replayed SubstructureRVGroup
 warning: Proofs/SubstructureRVGroup.lean:84:0: automatically included section variable(s) unused in theorem `SubstructureRVGroup.rvZero_mem`:
   hM
 consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
@@ -1875,7 +1875,7 @@ info: Proofs/SubstructureRVGroup.lean:267:0: 'SubstructureRVGroup.group' depends
 info: Proofs/SubstructureRVGroup.lean:268:0: 'SubstructureRVGroup.map_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/SubstructureRVGroup.lean:269:0: 'SubstructureRVGroup.map_order' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/SubstructureRVGroup.lean:270:0: 'SubstructureRVGroup.exists_group_element' depends on axioms: [propext, Classical.choice, Quot.sound]
-⚠ [9116/9238] Replayed SubstructureResidue
+⚠ [9116/9382] Replayed SubstructureResidue
 warning: Proofs/SubstructureResidue.lean:55:0: automatically included section variable(s) unused in theorem `SubstructureResidue.units_map`:
   hM
   hN
@@ -1887,7 +1887,7 @@ info: Proofs/SubstructureResidue.lean:196:0: 'CanonicalResidue.encodeResidue_inv
 info: Proofs/SubstructureResidue.lean:197:0: 'SubstructureResidue.field' depends on axioms: [propext, choice, Quot.sound]
 info: Proofs/SubstructureResidue.lean:198:0: 'SubstructureResidue.map' depends on axioms: [propext, choice, Quot.sound]
 info: Proofs/SubstructureResidue.lean:199:0: 'SubstructureResidue.map_agrees' depends on axioms: [propext, choice, Quot.sound]
-⚠ [9117/9238] Replayed CommutativeGroupAmalgam
+⚠ [9117/9382] Replayed CommutativeGroupAmalgam
 warning: Proofs/CommutativeGroupAmalgam.lean: imports `Mathlib.Algebra.Group.Subgroup.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Proofs/CommutativeGroupAmalgam.lean: imports `Mathlib.Algebra.Group.Prod` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 info: Proofs/CommutativeGroupAmalgam.lean:106:0: 'CommutativeGroupAmalgam.glue' depends on axioms: [propext, Classical.choice, Quot.sound]
@@ -1895,7 +1895,7 @@ info: Proofs/CommutativeGroupAmalgam.lean:107:0: 'CommutativeGroupAmalgam.glue_l
 info: Proofs/CommutativeGroupAmalgam.lean:108:0: 'CommutativeGroupAmalgam.glue_right' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/CommutativeGroupAmalgam.lean:109:0: 'CommutativeGroupAmalgam.glue_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/CommutativeGroupAmalgam.lean:110:0: 'CommutativeGroupAmalgam.glue_order_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
-⚠ [9118/9238] Replayed RVGroupGraph
+⚠ [9118/9382] Replayed RVGroupGraph
 warning: Proofs/RVGroupGraph.lean:81:34: `simp` already closes the goal
 
 Hint: Use `simp` instead of `simpa`:
@@ -1910,7 +1910,7 @@ Hint: Use `simp` instead of `simpa`:
 Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
 info: Proofs/RVGroupGraph.lean:111:0: 'RVGroupGraph.functional' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/RVGroupGraph.lean:112:0: 'RVGroupGraph.frame' depends on axioms: [propext, Classical.choice, Quot.sound]
-⚠ [9119/9238] Replayed ImmediateRVTransport
+⚠ [9119/9382] Replayed ImmediateRVTransport
 warning: Proofs/ImmediateRVTransport.lean:67:4: `simp` already closes the goal
 
 Hint: Use `simp` instead of `simpa`:
@@ -1921,7 +1921,7 @@ info: Proofs/ImmediateRVTransport.lean:114:0: 'ImmediateRVTransport.exists_close
 info: Proofs/ImmediateRVTransport.lean:115:0: 'ImmediateRVTransport.rv_surjective_from_base' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/ImmediateRVTransport.lean:116:0: 'ImmediateRVTransport.rv_eq_iff_map' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/ImmediateRVTransport.lean:117:0: 'ImmediateRVTransport.relation_of_immediate' depends on axioms: [propext, Classical.choice, Quot.sound]
-⚠ [9120/9238] Replayed RVKernelResidue
+⚠ [9120/9382] Replayed RVKernelResidue
 warning: Proofs/RVKernelResidue.lean:19:34: `simp` already closes the goal
 
 Hint: Use `simp` instead of `simpa`:
@@ -1936,9 +1936,9 @@ Hint: Use `simp` instead of `simpa`:
 Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
 info: Proofs/RVKernelResidue.lean:107:0: 'RVKernelResidue.equiv' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/RVKernelResidue.lean:108:0: 'RVKernelResidue.map_unitClass_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
-ℹ [9121/9238] Replayed PreparedRVFrame
+ℹ [9121/9382] Replayed PreparedRVFrame
 info: Proofs/PreparedRVFrame.lean:67:0: 'PreparedRVFrame.exists_frame' depends on axioms: [propext, Classical.choice, Quot.sound]
-⚠ [9122/9238] Replayed ResidueReduct
+⚠ [9122/9382] Replayed ResidueReduct
 warning: Proofs/ResidueReduct.lean: imports `Mathlib.ModelTheory.Algebra.Ring.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Proofs/ResidueReduct.lean:121:0: automatically included section variable(s) unused in theorem `ResidueReduct.encode_sumElim`:
   [Ring.CompatibleRing (Residue v)]
@@ -1978,7 +1978,7 @@ info: Proofs/ResidueReduct.lean:248:0: 'ResidueReduct.realize_translateTerm' dep
 info: Proofs/ResidueReduct.lean:249:0: 'ResidueReduct.realize_translateFormula' depends on axioms: [propext, choice, Quot.sound]
 info: Proofs/ResidueReduct.lean:250:0: 'ResidueReduct.translatedType_finSat' depends on axioms: [propext, choice, Quot.sound]
 info: Proofs/ResidueReduct.lean:251:0: 'ResidueReduct.satAt_residue' depends on axioms: [propext, choice, Quot.sound]
-⚠ [9123/9238] Replayed ResidueEmbeddingExtension
+⚠ [9123/9382] Replayed ResidueEmbeddingExtension
 warning: Proofs/ResidueEmbeddingExtension.lean:65:2: Try this: 
   letI̵
 
@@ -2028,14 +2028,14 @@ But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
 info: Proofs/ResidueEmbeddingExtension.lean:86:0: 'ResidueEmbeddingExtension.exists_residue_embedding' depends on axioms: [propext, choice, Quot.sound]
-ℹ [9124/9238] Replayed SubstructureRVPreparation
+ℹ [9124/9382] Replayed SubstructureRVPreparation
 info: Proofs/SubstructureRVPreparation.lean:108:0: 'SubstructureRVPreparation.kernel_encoding' depends on axioms: [propext, choice, Quot.sound]
 info: Proofs/SubstructureRVPreparation.lean:109:0: 'SubstructureRVPreparation.intersection_agrees' depends on axioms: [propext, choice, Quot.sound]
 info: Proofs/SubstructureRVPreparation.lean:110:0: 'SubstructureRVPreparation.exists_frame' depends on axioms: [propext, choice, Quot.sound]
-ℹ [9125/9238] Replayed SubstructureRVCompatibility
+ℹ [9125/9382] Replayed SubstructureRVCompatibility
 info: Proofs/SubstructureRVCompatibility.lean:76:0: 'SubstructureRVCompatibility.ring_compat' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/SubstructureRVCompatibility.lean:77:0: 'SubstructureRVCompatibility.field_compat' depends on axioms: [propext, Classical.choice, Quot.sound]
-⚠ [9126/9238] Replayed SubstructureRVGraph
+⚠ [9126/9382] Replayed SubstructureRVGraph
 warning: Proofs/SubstructureRVGraph.lean:37:4: Unused tactic linter: `change
   R (_root_.RVCalc.rv v (0 : VFType (M := M))) (_root_.RVCalc.rv w (0 : VFType (M := N)))` does nothing.
 
@@ -2043,9 +2043,9 @@ Note: This linter can be disabled with `set_option linter.unusedTactic false`
 info: Proofs/SubstructureRVGraph.lean:67:0: 'SubstructureRVGraph.oldRV_of_contains_group' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/SubstructureRVGraph.lean:68:0: 'SubstructureRVGraph.oldRV' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/SubstructureRVGraph.lean:69:0: 'SubstructureRVGraph.field_compat' depends on axioms: [propext, Classical.choice, Quot.sound]
-ℹ [9127/9238] Replayed ProvedResidueClosure
+ℹ [9127/9382] Replayed ProvedResidueClosure
 info: Proofs/ProvedResidueClosure.lean:22:0: 'ProvedResidueClosure.provedResidueClosure' depends on axioms: [propext, Classical.choice, Quot.sound]
-⚠ [9128/9238] Replayed ProvedACFExtension
+⚠ [9128/9382] Replayed ProvedACFExtension
 warning: Proofs/ProvedACFExtension.lean:47:14: `simp` already closes the goal
 
 Hint: Use `simp` instead of `simpa`:
@@ -2061,7 +2061,7 @@ Note: This linter can be disabled with `set_option linter.unnecessarySimpa false
 info: Proofs/ProvedACFExtension.lean:95:0: 'ProvedACFExtension.fullQE' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/ProvedACFExtension.lean:96:0: 'ProvedACFExtension.subfieldEmbedding' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/ProvedACFExtension.lean:97:0: 'ProvedACFExtension.markerACFSaturatedEmbeddingExtension' depends on axioms: [propext, Classical.choice, Quot.sound]
-⚠ [9129/9238] Replayed CountableSaturatedExtension
+⚠ [9129/9382] Replayed CountableSaturatedExtension
 warning: Proofs/CountableSaturatedExtension.lean: imports `Mathlib.ModelTheory.Ultraproducts` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Proofs/CountableSaturatedExtension.lean: imports `Mathlib.ModelTheory.Encoding` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Proofs/CountableSaturatedExtension.lean: imports `Mathlib.Order.Filter.Ultrafilter.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
@@ -2086,7 +2086,7 @@ info: Proofs/CountableSaturatedExtension.lean:266:0: 'CountableSaturatedExtensio
 info: Proofs/CountableSaturatedExtension.lean:267:0: 'CountableSaturatedExtension.exists_saturated_elementary_extension' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
-⚠ [9130/9238] Replayed CountableQECriterion
+⚠ [9130/9382] Replayed CountableQECriterion
 warning: Proofs/CountableQECriterion.lean: imports `Mathlib.ModelTheory.Skolem` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Proofs/CountableQECriterion.lean:32:4: Try this: 
   letI̵
@@ -2150,7 +2150,7 @@ info: Proofs/CountableQECriterion.lean:204:0: 'CountableQECriterion.exists_count
 info: Proofs/CountableQECriterion.lean:205:0: 'CountableQECriterion.qf_type_determines_exists' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/CountableQECriterion.lean:206:0: 'CountableQECriterion.hasQEb_of_saturatedExtension' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/CountableQECriterion.lean:207:0: 'CountableQECriterion.fullQE_of_saturatedExtension' depends on axioms: [propext, Classical.choice, Quot.sound]
-⚠ [9131/9238] Replayed CanonicalCountable
+⚠ [9131/9382] Replayed CanonicalCountable
 warning: Proofs/CanonicalCountable.lean:39:2: Try this: 
   letI̵
 
@@ -2167,7 +2167,7 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-ℹ [9132/9238] Replayed Theorem23
+ℹ [9132/9382] Replayed Theorem23
 info: Proofs/Theorem23.lean:76:0: 'LocalAssembly.preparation_of_standard_results' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/Theorem23.lean:77:0: 'LocalAssembly.preparation' depends on axioms: [propext, Classical.choice, Quot.sound]
 info: Proofs/Theorem23.lean:78:0: 'LocalAssembly.fullQE' depends on axioms: [propext, Classical.choice, Quot.sound]
@@ -2175,10 +2175,10 @@ info: Proofs/Theorem23.lean:79:0: 'LocalAssembly.quantifier_elimination' depends
 info: Proofs/Theorem23.lean:80:0: 'SpecialTransformations.Milestone0.theorem_2_3_quantifier_elimination' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
-⚠ [9133/9238] Replayed TaggedCoordinates
+⚠ [9133/9382] Replayed TaggedCoordinates
 warning: Proofs/TaggedCoordinates.lean: imports `Mathlib.ModelTheory.Definability` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Proofs/TaggedCoordinates.lean: imports `Mathlib.ModelTheory.Complexity` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [9134/9238] Replayed TrivialRVQE
+⚠ [9134/9382] Replayed TrivialRVQE
 warning: Proofs/TrivialRVQE.lean:112:8: automatically included section variable(s) unused in theorem `_private.TrivialRVQE.0.SpecialTransformations.TrivialRV.inverse_graph`:
   [CompatibleRing K]
 consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
@@ -2269,7 +2269,7 @@ info: Proofs/TrivialRVQE.lean:344:0: SpecialTransformations.TrivialRV.canonical_
         ∀ (K : Type) [inst : Field K] [IsAlgClosed K] (v : α → K ⊕ K) (a : Fin n → K ⊕ K),
           (∀ (i : α), sortEval (sα i) (v i)) → (∀ (i : Fin n), sortEval (sn i) (a i)) → (φ.Realize v a ↔ ψ.Realize v a)
 info: Proofs/TrivialRVQE.lean:345:0: 'SpecialTransformations.TrivialRV.canonical_trivial_rv_qe' depends on axioms: [propext, choice, Quot.sound]
-⚠ [9135/9238] Replayed TrivialRVTheory
+⚠ [9135/9382] Replayed TrivialRVTheory
 warning: Proofs/TrivialRVTheory.lean:48:2: Try this: 
   letI̵
 
@@ -2295,7 +2295,7 @@ info: Proofs/TrivialRVTheory.lean:94:0: SpecialTransformations.TrivialRV.canonic
 info: Proofs/TrivialRVTheory.lean:95:0: 'SpecialTransformations.TrivialRV.canonical_model' depends on axioms: [propext, choice, Quot.sound]
 info: Proofs/TrivialRVTheory.lean:96:0: SpecialTransformations.TrivialRV.hasQE : HasQE SpecialTransformations.TrivialRV.theory
 info: Proofs/TrivialRVTheory.lean:97:0: 'SpecialTransformations.TrivialRV.hasQE' depends on axioms: [propext, choice, Quot.sound]
-⚠ [9136/9238] Replayed TrivialValuedQE
+⚠ [9136/9382] Replayed TrivialValuedQE
 warning: Proofs/TrivialValuedQE.lean:116:2: Try this: 
   letI̵
 
@@ -2314,7 +2314,7 @@ But this is not relevant for proofs because of proof irrelevance.
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
 info: Proofs/TrivialValuedQE.lean:129:0: ValPM.hasQEb_ACVF_trivial_val : QECriterion.HasQEb ValPM.ACVFTrivial_val
 info: Proofs/TrivialValuedQE.lean:130:0: 'ValPM.hasQEb_ACVF_trivial_val' depends on axioms: [propext, Classical.choice, Quot.sound]
-⚠ [9139/9238] Replayed Section3.ModelContext
+⚠ [9139/9382] Replayed Section3.ModelContext
 warning: Section3/ModelContext.lean:40:0: automatically included section variable(s) unused in theorem `SpecialTransformations.Section3.small_insert`:
   [LRV.Structure M]
 consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
@@ -2329,7 +2329,7 @@ The difference between `have` and `haveI` is that `haveI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9140/9238] Replayed Section3.Compactness
+⚠ [9140/9382] Replayed Section3.Compactness
 warning: Section3/Compactness.lean:30:23: `dif_pos` has been deprecated: Use `dite_eq_left` instead
 
 Hint: Replace the deprecated name:
@@ -2338,7 +2338,7 @@ warning: Section3/Compactness.lean:43:23: `dif_pos` has been deprecated: Use `di
 
 Hint: Replace the deprecated name:
   d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
-⚠ [9142/9238] Replayed Section3.Counting
+⚠ [9142/9382] Replayed Section3.Counting
 warning: Section3/Counting.lean:26:6: `simp` already closes the goal
 
 Hint: Use `simp` instead of `simpa`:
@@ -2365,12 +2365,12 @@ consider restructuring your `variable` declarations so that the variables are no
   omit [LRV.Structure M] in theorem ...
 
 Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
-⚠ [9143/9238] Replayed Section3.RawAlgebraicity
+⚠ [9143/9382] Replayed Section3.RawAlgebraicity
 warning: Section3/RawAlgebraicity.lean:31:59: `dif_neg` has been deprecated: Use `dite_eq_right` instead
 
 Hint: Replace the deprecated name:
   d̵i̵f̵_̵n̵e̵g̵d̲i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
-⚠ [9145/9238] Replayed Section3.AlgebraicityDescent
+⚠ [9145/9382] Replayed Section3.AlgebraicityDescent
 warning: Section3/AlgebraicityDescent.lean:43:2: Try this: 
   haveI̵
 
@@ -2379,12 +2379,12 @@ The difference between `have` and `haveI` is that `haveI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9146/9238] Replayed Section3.TuplePromotion
+⚠ [9146/9382] Replayed Section3.TuplePromotion
 warning: Section3/TuplePromotion.lean:37:59: `dif_neg` has been deprecated: Use `dite_eq_right` instead
 
 Hint: Replace the deprecated name:
   d̵i̵f̵_̵n̵e̵g̵d̲i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
-⚠ [9147/9238] Replayed Section3.TupleRelations
+⚠ [9147/9382] Replayed Section3.TupleRelations
 warning: Section3/TupleRelations.lean:20:6: `simp` already closes the goal
 
 Hint: Use `simp` instead of `simpa`:
@@ -2412,7 +2412,7 @@ Hint: Omit it from the simp argument list.
   [apply] simp only [HasMore, Set.mem_ofPred_eq, Set.mem_iInter, Set.mem_inter_iff, Sum.elim_inl, Sum.elim_inr]
 
 Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
-⚠ [9149/9238] Replayed Section3.TupleDescent
+⚠ [9149/9382] Replayed Section3.TupleDescent
 warning: Section3/TupleDescent.lean:21:4: This simp argument is unused:
   Sum.elim_comp_inr
 
@@ -2437,7 +2437,7 @@ The difference between `have` and `haveI` is that `haveI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9150/9238] Replayed Section3.ClosureBridge
+⚠ [9150/9382] Replayed Section3.ClosureBridge
 warning: Section3/ClosureBridge.lean:22:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
 
 Hint: Replace the deprecated name:
@@ -2446,9 +2446,9 @@ warning: Section3/ClosureBridge.lean:26:10: `if_neg` has been deprecated: Use `i
 
 Hint: Replace the deprecated name:
   i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
-⚠ [9152/9238] Replayed Section3.DefinableConstants
+⚠ [9152/9382] Replayed Section3.DefinableConstants
 warning: Section3/DefinableConstants.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [9153/9238] Replayed Section3.SortedTuples
+⚠ [9153/9382] Replayed Section3.SortedTuples
 warning: Section3/SortedTuples.lean:24:10: `if_pos` has been deprecated: Use `ite_eq_left` instead
 
 Hint: Replace the deprecated name:
@@ -2457,22 +2457,22 @@ warning: Section3/SortedTuples.lean:27:10: `if_neg` has been deprecated: Use `it
 
 Hint: Replace the deprecated name:
   i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
-⚠ [9158/9238] Replayed Section3.RingSyntax
+⚠ [9158/9382] Replayed Section3.RingSyntax
 warning: Section3/RingSyntax.lean: imports `Mathlib.ModelTheory.Algebra.Ring.FreeCommRing` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [9161/9238] Replayed Section3.PolynomialLocal
+⚠ [9161/9382] Replayed Section3.PolynomialLocal
 warning: Section3/PolynomialLocal.lean: imports `Mathlib.Topology.Algebra.Valued.ValuedField` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section3/PolynomialLocal.lean: imports `Mathlib.Topology.Algebra.Polynomial` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [9162/9238] Replayed Section3.RVTermLocal
+⚠ [9162/9382] Replayed Section3.RVTermLocal
 warning: Section3/RVTermLocal.lean:10:8: automatically included section variable(s) unused in theorem `_private.Section3.RVTermLocal.0.SpecialTransformations.Section3.eval_rvMap`:
   hM
 consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
   omit hM in theorem ...
 
 Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
-⚠ [9164/9238] Replayed Section3.ValuedNeighbourhood
+⚠ [9164/9382] Replayed Section3.ValuedNeighbourhood
 warning: Section3/ValuedNeighbourhood.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section3/ValuedNeighbourhood.lean: imports `Mathlib.Topology.Algebra.Valued.ValuedField` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [9165/9238] Replayed Section3.VFAclField
+⚠ [9165/9382] Replayed Section3.VFAclField
 warning: Section3/VFAclField.lean:41:2: Try this: 
   letI̵
 
@@ -2495,7 +2495,7 @@ Hint: The binding can be removed (if unused) or named `_` (if used implicitly). 
   [apply] _x
 
 Note: This linter can be disabled with `set_option linter.unusedVariables false`
-⚠ [9169/9238] Replayed Section3.PolynomialRVConstant
+⚠ [9169/9382] Replayed Section3.PolynomialRVConstant
 warning: Section3/PolynomialRVConstant.lean:34:2: Try this: 
   letI̵
 
@@ -2504,7 +2504,7 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9175/9238] Replayed Section3.Average
+⚠ [9175/9382] Replayed Section3.Average
 warning: Section3/Average.lean:278:2: Try this: 
   haveI̵
 
@@ -2513,14 +2513,14 @@ The difference between `have` and `haveI` is that `haveI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9178/9238] Replayed Section3.FibreEnumerations
+⚠ [9178/9382] Replayed Section3.FibreEnumerations
 warning: Section3/FibreEnumerations.lean:26:6: `simp` already closes the goal
 
 Hint: Use `simp` instead of `simpa`:
   [apply] simp [hp]
 
 Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
-⚠ [9181/9238] Replayed Section3.DefinableMeans
+⚠ [9181/9382] Replayed Section3.DefinableMeans
 warning: Section3/DefinableMeans.lean:94:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
 
 Hint: Replace the deprecated name:
@@ -2533,13 +2533,13 @@ warning: Section3/DefinableMeans.lean:109:12: `if_neg` has been deprecated: Use 
 
 Hint: Replace the deprecated name:
   i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
-⚠ [9183/9238] Replayed Section3.EncodedBallGeometry
+⚠ [9183/9382] Replayed Section3.EncodedBallGeometry
 warning: Section3/EncodedBallGeometry.lean:150:4: Unused tactic linter: `change
   (iVF x.val ∧ iLe t (iRv (iVFAdd x.val (iVFNeg a))) ∧ ¬iLe (iRv (iVFAdd x.val (iVFNeg a))) t) ↔
     v (x - a') < v b` does nothing.
 
 Note: This linter can be disabled with `set_option linter.unusedTactic false`
-⚠ [9184/9238] Replayed Section3.FiniteAlgebraicCover
+⚠ [9184/9382] Replayed Section3.FiniteAlgebraicCover
 warning: Section3/FiniteAlgebraicCover.lean:13:2: Try this: 
   letI̵
 
@@ -2548,7 +2548,7 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9186/9238] Replayed Section3.GammaDefinability
+⚠ [9186/9382] Replayed Section3.GammaDefinability
 warning: Section3/GammaDefinability.lean:65:42: This simp argument is unused:
   Sum.swap_inl
 
@@ -2571,7 +2571,7 @@ consider restructuring your `variable` declarations so that the variables are no
   omit hM in theorem ...
 
 Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
-⚠ [9187/9238] Replayed Section3.GammaCodes
+⚠ [9187/9382] Replayed Section3.GammaCodes
 warning: Section3/GammaCodes.lean:17:0: automatically included section variable(s) unused in theorem `SpecialTransformations.Section3.GammaParameters.raw_rv`:
   hM
 consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
@@ -2596,21 +2596,21 @@ consider restructuring your `variable` declarations so that the variables are no
   omit hM in theorem ...
 
 Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
-⚠ [9188/9238] Replayed Section3.GammaParameters
+⚠ [9188/9382] Replayed Section3.GammaParameters
 warning: Section3/GammaParameters.lean:37:55: Variable name `b` is not explicitly referenced.
 
 Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
   [apply] _b
 
 Note: This linter can be disabled with `set_option linter.unusedVariables false`
-⚠ [9195/9238] Replayed Section3.ClosedBallCodes
+⚠ [9195/9382] Replayed Section3.ClosedBallCodes
 warning: Section3/ClosedBallCodes.lean:107:22: Variable name `hM` is not explicitly referenced.
 
 Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
   [apply] _hM
 
 Note: This linter can be disabled with `set_option linter.unusedVariables false`
-⚠ [9201/9238] Replayed Section3.GammaRealRestriction
+⚠ [9201/9382] Replayed Section3.GammaRealRestriction
 warning: Section3/GammaRealRestriction.lean:22:4: Try this: 
   letI̵
 
@@ -2619,12 +2619,12 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9204/9238] Replayed Section3.FibrePromotion
+⚠ [9204/9382] Replayed Section3.FibrePromotion
 warning: Section3/FibrePromotion.lean:35:59: `dif_neg` has been deprecated: Use `dite_eq_right` instead
 
 Hint: Replace the deprecated name:
   d̵i̵f̵_̵n̵e̵g̵d̲i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
-⚠ [9205/9238] Replayed Section3.GammaCodeDefinability
+⚠ [9205/9382] Replayed Section3.GammaCodeDefinability
 warning: Section3/GammaCodeDefinability.lean:57:0: automatically included section variable(s) unused in theorem `SpecialTransformations.Section3.GammaParameters.nonzero_rv_normalize`:
   hM
 consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
@@ -2643,7 +2643,7 @@ consider restructuring your `variable` declarations so that the variables are no
   omit hM in theorem ...
 
 Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
-⚠ [9206/9238] Replayed Section3.GammaSupport
+⚠ [9206/9382] Replayed Section3.GammaSupport
 warning: Section3/GammaSupport.lean:20:4: Try this: 
   letI̵
 
@@ -2668,7 +2668,7 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9208/9238] Replayed Section3.GammaBaseTools
+⚠ [9208/9382] Replayed Section3.GammaBaseTools
 warning: Section3/GammaBaseTools.lean:46:56: `dif_neg` has been deprecated: Use `dite_eq_right` instead
 
 Hint: Replace the deprecated name:
@@ -2733,7 +2733,7 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9209/9238] Replayed Section3.GammaRealMap
+⚠ [9209/9382] Replayed Section3.GammaRealMap
 warning: Section3/GammaRealMap.lean:23:4: Try this: 
   letI̵
 
@@ -2742,7 +2742,7 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9211/9238] Replayed Section3.AlgebraicBaseGeometry
+⚠ [9211/9382] Replayed Section3.AlgebraicBaseGeometry
 warning: Section3/AlgebraicBaseGeometry.lean:16:2: Try this: 
   letI̵
 
@@ -2759,7 +2759,7 @@ The difference between `have` and `haveI` is that `haveI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9212/9238] Replayed Section3.RVRepresentatives
+⚠ [9212/9382] Replayed Section3.RVRepresentatives
 warning: Section3/RVRepresentatives.lean:40:15: `if_pos` has been deprecated: Use `ite_eq_left` instead
 
 Hint: Replace the deprecated name:
@@ -2812,7 +2812,7 @@ warning: Section3/RVRepresentatives.lean:69:13: `if_neg` has been deprecated: Us
 
 Hint: Replace the deprecated name:
   i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
-⚠ [9223/9238] Replayed Section3.AngularPattern
+⚠ [9223/9382] Replayed Section3.AngularPattern
 warning: Section3/AngularPattern.lean:30:8: `dif_neg` has been deprecated: Use `dite_eq_right` instead
 
 Hint: Replace the deprecated name:
@@ -2821,9 +2821,9 @@ warning: Section3/AngularPattern.lean:37:20: `dif_pos` has been deprecated: Use 
 
 Hint: Replace the deprecated name:
   d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
-⚠ [9229/9238] Replayed Section3.SubfieldTrdeg
+⚠ [9229/9382] Replayed Section3.SubfieldTrdeg
 warning: Section3/SubfieldTrdeg.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [9231/9238] Replayed Section3.AclFieldImages
+⚠ [9231/9382] Replayed Section3.AclFieldImages
 warning: Section3/AclFieldImages.lean:19:2: Try this: 
   letI̵
 
@@ -2832,7 +2832,7 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9232/9238] Replayed Section3.GammaClosureLaws
+⚠ [9232/9382] Replayed Section3.GammaClosureLaws
 warning: Section3/GammaClosureLaws.lean:26:15: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
 
 Hint: Replace the deprecated name:
@@ -2861,7 +2861,7 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9233/9238] Replayed Section3.GammaCounting
+⚠ [9233/9382] Replayed Section3.GammaCounting
 warning: Section3/GammaCounting.lean:72:6: `simp` already closes the goal
 
 Hint: Use `simp` instead of `simpa`:
@@ -2882,14 +2882,14 @@ Hint: Omit it from the simp argument list.
   [apply] simp only [HasMoreGamma, Set.mem_ofPred_eq, Set.mem_inter_iff, Set.mem_iInter, Sum.elim_comp_inl]
 
 Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
-⚠ [9234/9238] Replayed Section3.DefinableReduct
+⚠ [9234/9382] Replayed Section3.DefinableReduct
 warning: Section3/DefinableReduct.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [9236/9238] Replayed Section3.NormalizationSaturation
+⚠ [9236/9382] Replayed Section3.NormalizationSaturation
 warning: Section3/NormalizationSaturation.lean:30:8: `dif_pos` has been deprecated: Use `dite_eq_left` instead
 
 Hint: Replace the deprecated name:
   d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
-⚠ [9237/9238] Replayed Section3.GammaBaseDescent
+⚠ [9237/9382] Replayed Section3.GammaBaseDescent
 warning: Section3/GammaBaseDescent.lean:30:6: `simp` already closes the goal
 
 Hint: Use `simp` instead of `simpa`:
@@ -2947,7 +2947,7 @@ consider restructuring your `variable` declarations so that the variables are no
   omit hM in theorem ...
 
 Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
-⚠ [9238/9557] Replayed Section3.GammaGoodRelations
+⚠ [9238/9382] Replayed Section3.GammaGoodRelations
 warning: Section3/GammaGoodRelations.lean:57:45: This simp argument is unused:
   Sum.elim_inl
 
@@ -2956,7 +2956,7 @@ Hint: Omit it from the simp argument list.
     Function.comp_apply, idx, Sum.elim_inr]
 
 Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
-⚠ [9242/9557] Replayed Section3.GammaValueLaws
+⚠ [9242/9382] Replayed Section3.GammaValueLaws
 warning: Section3/GammaValueLaws.lean:59:2: Try this: 
   letI̵
 
@@ -2965,7 +2965,7 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9245/9557] Replayed Section3.RVFibreGeometry
+⚠ [9245/9382] Replayed Section3.RVFibreGeometry
 warning: Section3/RVFibreGeometry.lean:83:2: Try this: 
   letI̵
 
@@ -2997,7 +2997,7 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9247/9557] Replayed Section3.GammaRVSeparation
+⚠ [9247/9382] Replayed Section3.GammaRVSeparation
 warning: Section3/GammaRVSeparation.lean:51:23: `dif_pos` has been deprecated: Use `dite_eq_left` instead
 
 Hint: Replace the deprecated name:
@@ -3035,14 +3035,14 @@ warning: Section3/GammaRVSeparation.lean:813:30: `dif_pos` has been deprecated: 
 
 Hint: Replace the deprecated name:
   d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
-⚠ [9248/9557] Replayed Section3.RVGammaAlgebraicity
+⚠ [9248/9382] Replayed Section3.RVGammaAlgebraicity
 warning: Section3/RVGammaAlgebraicity.lean:12:0: automatically included section variable(s) unused in theorem `SpecialTransformations.Section3.GammaParameters.rawTuple_lastCases`:
   hM
 consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
   omit hM in theorem ...
 
 Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
-⚠ [9251/9557] Replayed Section3.OpenBallCodes
+⚠ [9251/9382] Replayed Section3.OpenBallCodes
 warning: Section3/OpenBallCodes.lean:88:14: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
 
 Hint: Replace the deprecated name:
@@ -3069,7 +3069,7 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9252/9557] Replayed Section3.ClosedClassCodes
+⚠ [9252/9382] Replayed Section3.ClosedClassCodes
 warning: Section3/ClosedClassCodes.lean:77:58: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
 
 Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
@@ -3082,7 +3082,7 @@ consider restructuring your `variable` declarations so that the variables are no
   omit hM in theorem ...
 
 Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
-⚠ [9253/9557] Replayed Section3.OpenBallFamilyHulls
+⚠ [9253/9382] Replayed Section3.OpenBallFamilyHulls
 warning: Section3/OpenBallFamilyHulls.lean:76:0: automatically included section variable(s) unused in theorem `SpecialTransformations.Section3.OpenBallCodes.hullCode_normalize`:
   hM
 consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
@@ -3095,7 +3095,7 @@ Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus fa
 warning: Section3/OpenBallFamilyHulls.lean:89:98: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
 
 Note: This linter can be disabled with `set_option linter.unusedTactic false`
-⚠ [9254/9557] Replayed Section3.OpenBallCenters
+⚠ [9254/9382] Replayed Section3.OpenBallCenters
 warning: Section3/OpenBallCenters.lean:42:0: automatically included section variable(s) unused in theorem `SpecialTransformations.Section3.OpenBallCodes.hullCenterCode_normalize`:
   hM
 consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
@@ -3163,7 +3163,7 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9255/9557] Replayed Section4.DefinableGeometry
+⚠ [9255/9382] Replayed Section4.DefinableGeometry
 warning: Section4/DefinableGeometry.lean: imports `Mathlib.ModelTheory.Definability` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section4/DefinableGeometry.lean: imports `Mathlib.Data.Finite.Sum` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section4/DefinableGeometry.lean:2:0: 'Mathlib.Data.Finite.Sum' has been deprecated: please replace this import by
@@ -3179,7 +3179,7 @@ warning: Section4/DefinableGeometry.lean:166:23: `Set.mem_setOf_eq` has been dep
 
 Hint: Replace the deprecated name:
   S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵S̲e̲t̲.̲m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
-⚠ [9256/9557] Replayed Section4.Products
+⚠ [9256/9382] Replayed Section4.Products
 warning: Section4/Products.lean: imports `Mathlib.Data.Finite.Prod` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section4/Products.lean:2:0: 'Mathlib.Data.Finite.Prod' has been deprecated: please replace this import by
 
@@ -3188,9 +3188,9 @@ warning: Section4/Products.lean:92:15: `Set.mem_setOf_eq` has been deprecated: U
 
 Hint: Replace the deprecated name:
   S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵S̲e̲t̲.̲m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
-⚠ [9259/9557] Replayed Section4.MultivariateSyntax
+⚠ [9259/9382] Replayed Section4.MultivariateSyntax
 warning: Section4/MultivariateSyntax.lean: imports `Mathlib.Algebra.MvPolynomial.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [9260/9557] Replayed Section4.MultivariateLocal
+⚠ [9260/9382] Replayed Section4.MultivariateLocal
 warning: Section4/MultivariateLocal.lean: imports `Mathlib.Topology.Algebra.MvPolynomial` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section4/MultivariateLocal.lean:33:8: automatically included section variable(s) unused in theorem `_private.Section4.MultivariateLocal.0.SpecialTransformations.Section4.MultivariateLocal.eval_rvMap`:
   hM
@@ -3198,21 +3198,21 @@ consider restructuring your `variable` declarations so that the variables are no
   omit hM in theorem ...
 
 Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
-⚠ [9264/9557] Replayed Section8.NeighbourhoodRelations
+⚠ [9264/9382] Replayed Section8.NeighbourhoodRelations
 warning: Section8/NeighbourhoodRelations.lean:29:47: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
 
 Hint: Replace the deprecated name:
   S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵S̲e̲t̲.̲m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
-⚠ [9265/9557] Replayed Section4.FiniteMaps
+⚠ [9265/9382] Replayed Section4.FiniteMaps
 warning: Section4/FiniteMaps.lean: imports `Mathlib.Data.Set.Finite.Lattice` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [9270/9557] Replayed Section4.FamilyCoding
+⚠ [9270/9382] Replayed Section4.FamilyCoding
 warning: Section4/FamilyCoding.lean:27:0: automatically included section variable(s) unused in theorem `SpecialTransformations.Section4.vfFibre_finite`:
   hM
 consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
   omit hM in theorem ...
 
 Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
-⚠ [9271/9557] Replayed Section4.TupleFamilies
+⚠ [9271/9382] Replayed Section4.TupleFamilies
 warning: Section4/TupleFamilies.lean:33:0: automatically included section variable(s) unused in theorem `SpecialTransformations.Section4.TupleFamilies.coordinate_definable`:
   hM
 consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
@@ -3231,7 +3231,7 @@ consider restructuring your `variable` declarations so that the variables are no
   omit hM in theorem ...
 
 Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
-⚠ [9272/9557] Replayed Section4.FiniteRefinement
+⚠ [9272/9382] Replayed Section4.FiniteRefinement
 warning: Section4/FiniteRefinement.lean:28:0: automatically included section variable(s) unused in theorem `SpecialTransformations.Section4.FiniteRefinement.values_injective`:
   hM
 consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
@@ -3262,30 +3262,30 @@ consider restructuring your `variable` declarations so that the variables are no
   omit hM in theorem ...
 
 Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
-⚠ [9273/9557] Replayed Section4.InjectionRefinement
+⚠ [9273/9382] Replayed Section4.InjectionRefinement
 warning: Section4/InjectionRefinement.lean:63:8: automatically included section variable(s) unused in theorem `SpecialTransformations.Section4.mapToRV_values`:
   hM
 consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
   omit hM in theorem ...
 
 Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
-⚠ [9274/9557] Replayed Section4.Dimension
+⚠ [9274/9382] Replayed Section4.Dimension
 warning: Section4/Dimension.lean: imports `Mathlib.Order.Lattice.Nat` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [9275/9557] Replayed Section4.VFPadding
+⚠ [9275/9382] Replayed Section4.VFPadding
 warning: Section4/VFPadding.lean:15:11: Variable name `hkl` is not explicitly referenced.
 
 Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
   [apply] _hkl
 
 Note: This linter can be disabled with `set_option linter.unusedVariables false`
-⚠ [9276/9557] Replayed Section4.VFDimension
+⚠ [9276/9382] Replayed Section4.VFDimension
 warning: Section4/VFDimension.lean:46:0: automatically included section variable(s) unused in theorem `SpecialTransformations.Section4.mixed_has_dimension_bound`:
   hM
 consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
   omit hM in theorem ...
 
 Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
-⚠ [9278/9557] Replayed Section4.Spaces
+⚠ [9278/9382] Replayed Section4.Spaces
 warning: Section4/Spaces.lean: imports `Mathlib.Data.Finite.Prod` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section4/Spaces.lean:6:0: 'Mathlib.Data.Finite.Prod' has been deprecated: please replace this import by
 
@@ -3296,14 +3296,14 @@ consider restructuring your `variable` declarations so that the variables are no
   omit hM in theorem ...
 
 Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
-⚠ [9283/9557] Replayed Section4.CoordinatePieces
+⚠ [9283/9382] Replayed Section4.CoordinatePieces
 warning: Section4/CoordinatePieces.lean:33:0: automatically included section variable(s) unused in theorem `SpecialTransformations.Section4.CoordinatePiece.codeSet_definable`:
   hM
 consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
   omit hM in theorem ...
 
 Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
-⚠ [9284/9557] Replayed Section4.FiniteCover
+⚠ [9284/9382] Replayed Section4.FiniteCover
 warning: Section4/FiniteCover.lean: imports `Mathlib.Data.Fintype.EquivFin` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section4/FiniteCover.lean:22:2: Try this: 
   letI̵
@@ -3313,7 +3313,7 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9286/9557] Replayed Section4.CoordinateDimension
+⚠ [9286/9382] Replayed Section4.CoordinateDimension
 warning: Section4/CoordinateDimension.lean:53:2: Try this: 
   letI̵
 
@@ -3322,7 +3322,7 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9290/9557] Replayed Section4.GenericPoints
+⚠ [9290/9382] Replayed Section4.GenericPoints
 warning: Section4/GenericPoints.lean: imports `Mathlib.Algebra.MvPolynomial.Funext` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section4/GenericPoints.lean:79:2: Try this: 
   letI̵
@@ -3332,24 +3332,24 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9293/9557] Replayed Section4.VFRealFibres
+⚠ [9293/9382] Replayed Section4.VFRealFibres
 warning: Section4/VFRealFibres.lean:73:62: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
 
 Hint: Replace the deprecated name:
   S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵S̲e̲t̲.̲m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
-⚠ [9295/9557] Replayed Section8.VFDefinableTopology
+⚠ [9295/9382] Replayed Section8.VFDefinableTopology
 warning: Section8/VFDefinableTopology.lean:92:8: automatically included section variable(s) unused in theorem `_private.Section8.VFDefinableTopology.0.SpecialTransformations.Section8.defSet_eq_of_carrier_eq`:
   hM
 consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
   omit hM in theorem ...
 
 Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
-⚠ [9297/9557] Replayed Section8.SeparatedSets
+⚠ [9297/9382] Replayed Section8.SeparatedSets
 warning: Section8/SeparatedSets.lean:110:39: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
 
 Hint: Replace the deprecated name:
   S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵S̲e̲t̲.̲m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
-⚠ [9304/9557] Replayed Section8.IsolationGeometry
+⚠ [9304/9382] Replayed Section8.IsolationGeometry
 warning: Section8/IsolationGeometry.lean:30:19: `if_pos` has been deprecated: Use `ite_eq_left` instead
 
 Hint: Replace the deprecated name:
@@ -3365,7 +3365,7 @@ Hint: Replace the deprecated name:
 warning: Section8/IsolationGeometry.lean:37:4: Unused tactic linter: `change Valued.v (g b j - D.centre j) < Valued.v (D.step j)` does nothing.
 
 Note: This linter can be disabled with `set_option linter.unusedTactic false`
-⚠ [9308/9557] Replayed Section4.GammaPredicates
+⚠ [9308/9382] Replayed Section4.GammaPredicates
 warning: Section4/GammaPredicates.lean:32:2: Try this: 
   letI̵
 
@@ -3420,7 +3420,7 @@ warning: Section4/GammaPredicates.lean:176:27: `dif_pos` has been deprecated: Us
 
 Hint: Replace the deprecated name:
   d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
-⚠ [9309/9557] Replayed Section4.GammaMultiplicationSyntax
+⚠ [9309/9382] Replayed Section4.GammaMultiplicationSyntax
 warning: Section4/GammaMultiplicationSyntax.lean:32:24: `dif_pos` has been deprecated: Use `dite_eq_left` instead
 
 Hint: Replace the deprecated name:
@@ -3471,7 +3471,7 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9310/9557] Replayed Section8.IsolationFamilies
+⚠ [9310/9382] Replayed Section8.IsolationFamilies
 warning: Section8/IsolationFamilies.lean:56:70: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
 
 Hint: Replace the deprecated name:
@@ -3490,7 +3490,7 @@ Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus fa
 warning: Section8/IsolationFamilies.lean:58:67: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
 
 Note: This linter can be disabled with `set_option linter.unusedTactic false`
-⚠ [9311/9557] Replayed Section4.VFFibreFiniteness
+⚠ [9311/9382] Replayed Section4.VFFibreFiniteness
 warning: Section4/VFFibreFiniteness.lean:29:2: Try this: 
   letI̵
 
@@ -3499,14 +3499,14 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9314/9557] Replayed Section4.DefinableCategory
+⚠ [9314/9382] Replayed Section4.DefinableCategory
 warning: Section4/DefinableCategory.lean: imports `Mathlib.CategoryTheory.ConcreteCategory.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section4/DefinableCategory.lean: imports `Mathlib.CategoryTheory.Types.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [9315/9557] Replayed Section4.VFCategories
+⚠ [9315/9382] Replayed Section4.VFCategories
 warning: Section4/VFCategories.lean: imports `Mathlib.CategoryTheory.ObjectProperty.FullSubcategory` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [9316/9557] Replayed Section4.RVDimension
+⚠ [9316/9382] Replayed Section4.RVDimension
 warning: Section4/RVDimension.lean: imports `Mathlib.Order.Lattice.Nat` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [9318/9557] Replayed Section4.PolynomialCover
+⚠ [9318/9382] Replayed Section4.PolynomialCover
 warning: Section4/PolynomialCover.lean:61:2: Try this: 
   letI̵
 
@@ -3515,7 +3515,7 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9319/9557] Replayed Section8.UnaryPolynomial
+⚠ [9319/9382] Replayed Section8.UnaryPolynomial
 warning: Section8/UnaryPolynomial.lean: imports `Mathlib.Algebra.Polynomial.Div` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section8/UnaryPolynomial.lean: imports `Mathlib.Algebra.Polynomial.Eval.Coeff` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section8/UnaryPolynomial.lean: imports `Mathlib.Algebra.MvPolynomial.Eval` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
@@ -3603,7 +3603,7 @@ consider restructuring your `variable` declarations so that the variables are no
   omit hM in theorem ...
 
 Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
-⚠ [9320/9557] Replayed Section8.UnaryGerm
+⚠ [9320/9382] Replayed Section8.UnaryGerm
 warning: Section8/UnaryGerm.lean: imports `Mathlib.Topology.Algebra.Valued.ValuedField` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section8/UnaryGerm.lean: imports `Mathlib.Algebra.Order.GroupWithZero.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section8/UnaryGerm.lean:91:2: Try this: 
@@ -3643,7 +3643,7 @@ open Lean.Parser.Tactic in
 macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
   `(tactic| push $cfg:optConfig Not $[$loc]?)
 ```
-⚠ [9321/9557] Replayed Section8.UnarySlope
+⚠ [9321/9382] Replayed Section8.UnarySlope
 warning: Section8/UnarySlope.lean: imports `Mathlib.Algebra.Order.Group.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section8/UnarySlope.lean:259:54: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
 
@@ -3751,7 +3751,7 @@ Note: This linter can be disabled with `set_option linter.unusedTactic false`
 warning: Section8/UnarySlope.lean:709:90: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
 
 Note: This linter can be disabled with `set_option linter.unusedTactic false`
-⚠ [9322/9557] Replayed Section8.PowerEstimateCore
+⚠ [9322/9382] Replayed Section8.PowerEstimateCore
 warning: Section8/PowerEstimateCore.lean: imports `Mathlib.Algebra.Order.Monoid.Unbundled.Pow` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section8/PowerEstimateCore.lean:144:2: Try this: 
   letI̵
@@ -3839,7 +3839,7 @@ Hint: Omit it from the simp argument list.
     Function.comp_apply, Sum.elim_inl, Sum.elim_inr, Sum.elim_comp_inl]
 
 Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
-⚠ [9323/9557] Replayed Section9.Differentiation
+⚠ [9323/9382] Replayed Section9.Differentiation
 warning: Section9/Differentiation.lean: imports `Mathlib.Tactic.Abel` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section9/Differentiation.lean:65:24: `dif_neg` has been deprecated: Use `dite_eq_right` instead
 
@@ -3857,7 +3857,7 @@ warning: Section9/Differentiation.lean:230:24: `dif_neg` has been deprecated: Us
 
 Hint: Replace the deprecated name:
   d̵i̵f̵_̵n̵e̵g̵d̲i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
-⚠ [9324/9557] Replayed Section9.VFJacobian
+⚠ [9324/9382] Replayed Section9.VFJacobian
 warning: Section9/VFJacobian.lean: imports `Mathlib.LinearAlgebra.Matrix.ToLin` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section9/VFJacobian.lean: imports `Mathlib.LinearAlgebra.Matrix.Determinant.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section9/VFJacobian.lean: imports `Mathlib.Tactic.Ring` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
@@ -3868,7 +3868,7 @@ Hint: Omit it from the simp argument list.
   [apply] simp [hk]
 
 Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
-⚠ [9327/9557] Replayed Section9.PartialDerivativeFormula
+⚠ [9327/9382] Replayed Section9.PartialDerivativeFormula
 warning: Section9/PartialDerivativeFormula.lean:142:59: `if_true` has been deprecated: Use `ite_true` instead
 
 Hint: Replace the deprecated name:
@@ -3883,7 +3883,7 @@ Note: This linter can be disabled with `set_option linter.unusedTactic false`
 warning: Section9/PartialDerivativeFormula.lean:176:87: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
 
 Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
-⚠ [9328/9557] Replayed Section9.MixedDerivativeFormula
+⚠ [9328/9382] Replayed Section9.MixedDerivativeFormula
 warning: Section9/MixedDerivativeFormula.lean:163:8: automatically included section variable(s) unused in theorem `_private.Section9.MixedDerivativeFormula.0.SpecialTransformations.Section9.mem_rawGraph_iff`:
   [M ⊨ Axioms.ACVF]
 consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
@@ -3904,7 +3904,7 @@ consider restructuring your `variable` declarations so that the variables are no
   omit [M ⊨ Axioms.ACVF] in theorem ...
 
 Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
-⚠ [9329/9557] Replayed Section9.ValuedPolynomialTaylor
+⚠ [9329/9382] Replayed Section9.ValuedPolynomialTaylor
 warning: Section9/ValuedPolynomialTaylor.lean: imports `Mathlib.Algebra.MvPolynomial.PDeriv` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section9/ValuedPolynomialTaylor.lean: imports `Mathlib.RingTheory.Valuation.ValuationSubring` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section9/ValuedPolynomialTaylor.lean: imports `Mathlib.Tactic.Ring` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
@@ -3912,9 +3912,9 @@ warning: Section9/ValuedPolynomialTaylor.lean:67:25: `if_false` has been depreca
 
 Hint: Replace the deprecated name:
   i̵f̵_̵f̵a̵l̵s̵e̵i̲t̲e̲_̲f̲a̲l̲s̲e̲
-⚠ [9330/9557] Replayed Section9.ImplicitEstimate
+⚠ [9330/9382] Replayed Section9.ImplicitEstimate
 warning: Section9/ImplicitEstimate.lean: imports `Mathlib.RingTheory.Valuation.ValuationSubring` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [9331/9557] Replayed Section9.ValuedImplicitDerivative
+⚠ [9331/9382] Replayed Section9.ValuedImplicitDerivative
 warning: Section9/ValuedImplicitDerivative.lean: imports `Mathlib.Algebra.BigOperators.Group.Finset.Sigma` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section9/ValuedImplicitDerivative.lean:94:40: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
 
@@ -3925,7 +3925,7 @@ Note: This linter can be disabled with `set_option linter.unusedTactic false`
 warning: Section9/ValuedImplicitDerivative.lean:94:44: this tactic is never executed
 
 Note: This linter can be disabled with `set_option linter.unreachableTactic false`
-⚠ [9333/9557] Replayed Section7.GammaPolynomial
+⚠ [9333/9382] Replayed Section7.GammaPolynomial
 warning: Section7/GammaPolynomial.lean: imports `Mathlib.Algebra.MvPolynomial.Eval` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section7/GammaPolynomial.lean: imports `Mathlib.Tactic.FinCases` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section7/GammaPolynomial.lean:104:12: `simp` already closes the goal
@@ -3940,7 +3940,7 @@ Hint: Use `simp` instead of `simpa`:
   [apply] simp
 
 Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
-⚠ [9334/9557] Replayed Section7.GammaPolynomialAlgebra
+⚠ [9334/9382] Replayed Section7.GammaPolynomialAlgebra
 warning: Section7/GammaPolynomialAlgebra.lean: imports `Mathlib.Algebra.MvPolynomial.PDeriv` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section7/GammaPolynomialAlgebra.lean: imports `Mathlib.Data.Fintype.EquivFin` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section7/GammaPolynomialAlgebra.lean: imports `Mathlib.Algebra.BigOperators.Group.Finset.Sigma` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
@@ -3948,12 +3948,12 @@ warning: Section7/GammaPolynomialAlgebra.lean:119:37: `MvPolynomial.monomial_mul
 
 Hint: Replace the deprecated name:
   monomial_mul_̲m̲o̲n̲o̲m̲i̲a̲l̲
-⚠ [9335/9557] Replayed Section7.PolynomialCoordinateMaps
+⚠ [9335/9382] Replayed Section7.PolynomialCoordinateMaps
 warning: Section7/PolynomialCoordinateMaps.lean: imports `Mathlib.Algebra.MvPolynomial.Rename` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [9336/9557] Replayed Section9.SimpleRootEquations
+⚠ [9336/9382] Replayed Section9.SimpleRootEquations
 warning: Section9/SimpleRootEquations.lean: imports `Mathlib.FieldTheory.Separable` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section9/SimpleRootEquations.lean: imports `Mathlib.FieldTheory.IntermediateField.Adjoin.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [9339/9557] Replayed Section8.GenericOutputBall
+⚠ [9339/9382] Replayed Section8.GenericOutputBall
 warning: Section8/GenericOutputBall.lean: imports `Mathlib.RingTheory.AlgebraicIndependent.AlgebraicClosure` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section8/GenericOutputBall.lean:25:2: Try this: 
   letI̵
@@ -3971,7 +3971,7 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9342/9557] Replayed Section9.MixedGenericDifferentiation
+⚠ [9342/9382] Replayed Section9.MixedGenericDifferentiation
 warning: Section9/MixedGenericDifferentiation.lean:74:54: `dif_pos` has been deprecated: Use `dite_eq_left` instead
 
 Hint: Replace the deprecated name:
@@ -3988,7 +3988,7 @@ warning: Section9/MixedGenericDifferentiation.lean:158:54: `dif_pos` has been de
 
 Hint: Replace the deprecated name:
   d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
-⚠ [9343/9557] Replayed Section9.MixedDifferentiationAE
+⚠ [9343/9382] Replayed Section9.MixedDifferentiationAE
 warning: Section9/MixedDifferentiationAE.lean:60:13: `Set.diff_subset` has been deprecated: Use `Set.sdiff_subset` instead
 
 Hint: Replace the deprecated name:
@@ -4005,17 +4005,17 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9344/9557] Replayed Section4.CoordinateMaps
+⚠ [9344/9382] Replayed Section4.CoordinateMaps
 warning: Section4/CoordinateMaps.lean:39:8: automatically included section variable(s) unused in theorem `SpecialTransformations.Section4.vfSelect_apply`:
   hM
 consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
   omit hM in theorem ...
 
 Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
-⚠ [9345/9557] Replayed Section4.RVCategories
+⚠ [9345/9382] Replayed Section4.RVCategories
 warning: Section4/RVCategories.lean: imports `Mathlib.CategoryTheory.ObjectProperty.FullSubcategory` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section4/RVCategories.lean: imports `Mathlib.Algebra.BigOperators.Group.Finset.Piecewise` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [9346/9557] Replayed Section4.RVPadding
+⚠ [9346/9382] Replayed Section4.RVPadding
 warning: Section4/RVPadding.lean: imports `Mathlib.Algebra.BigOperators.Fin` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section4/RVPadding.lean:97:6: `simp` already closes the goal
 
@@ -4023,17 +4023,17 @@ Hint: Use `simp` instead of `simpa`:
   [apply] simp only [rvPadObject_value, ha]
 
 Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
-⚠ [9349/9557] Replayed Section4.VFUnions
+⚠ [9349/9382] Replayed Section4.VFUnions
 warning: Section4/VFUnions.lean:35:0: automatically included section variable(s) unused in theorem `SpecialTransformations.Section4.finiteRVFibres_union`:
   hM
 consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
   omit hM in theorem ...
 
 Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
-⚠ [9354/9557] Replayed Section7.TupleCoordinates
+⚠ [9354/9382] Replayed Section7.TupleCoordinates
 warning: Section7/TupleCoordinates.lean: imports `Mathlib.Logic.Equiv.Fin.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section7/TupleCoordinates.lean: imports `Mathlib.Data.Fin.Tuple.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [9357/9557] Replayed Section7.LiftingDefinability
+⚠ [9357/9382] Replayed Section7.LiftingDefinability
 warning: Section7/LiftingDefinability.lean:92:73: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
 
 Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
@@ -4076,7 +4076,7 @@ Hint: Omit it from the simp argument list.
   [apply] simp [Function.comp_apply, f, productRight, productTuple]
 
 Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
-⚠ [9358/9557] Replayed Section9.GoodLiftGluing
+⚠ [9358/9382] Replayed Section9.GoodLiftGluing
 warning: Section9/GoodLiftGluing.lean:27:8: automatically included section variable(s) unused in theorem `_private.Section9.GoodLiftGluing.0.SpecialTransformations.Section9.restrictLiftToRV_definable`:
   [M ⊨ Axioms.ACVF]
 consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
@@ -4097,7 +4097,7 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9359/9557] Replayed Section7.WeightedLeadingTerms
+⚠ [9359/9382] Replayed Section7.WeightedLeadingTerms
 warning: Section7/WeightedLeadingTerms.lean:35:29: `if_neg` has been deprecated: Use `ite_eq_right` instead
 
 Hint: Replace the deprecated name:
@@ -4122,7 +4122,7 @@ warning: Section7/WeightedLeadingTerms.lean:43:62: `if_pos` has been deprecated:
 
 Hint: Replace the deprecated name:
   i̵f̵_̵p̵o̵s̵i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
-⚠ [9360/9557] Replayed Section7.WeightedLeadingOperations
+⚠ [9360/9382] Replayed Section7.WeightedLeadingOperations
 warning: Section7/WeightedLeadingOperations.lean:34:44: `if_true` has been deprecated: Use `ite_true` instead
 
 Hint: Replace the deprecated name:
@@ -4159,7 +4159,7 @@ warning: Section7/WeightedLeadingOperations.lean:54:82: `if_neg` has been deprec
 
 Hint: Replace the deprecated name:
   i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
-⚠ [9361/9557] Replayed Section7.WeightedPolynomialTests
+⚠ [9361/9382] Replayed Section7.WeightedPolynomialTests
 warning: Section7/WeightedPolynomialTests.lean:44:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
 
 Hint: Replace the deprecated name:
@@ -4168,7 +4168,7 @@ warning: Section7/WeightedPolynomialTests.lean:47:8: `if_neg` has been deprecate
 
 Hint: Replace the deprecated name:
   i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
-⚠ [9362/9557] Replayed Section7.PolynomialNormalization
+⚠ [9362/9382] Replayed Section7.PolynomialNormalization
 warning: Section7/PolynomialNormalization.lean:67:6: Try this: 
   haveI̵
 
@@ -4183,7 +4183,7 @@ Hint: Use `simp` instead of `simpa`:
   [apply] simp [← hz] at he
 
 Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
-⚠ [9363/9557] Replayed Section7.JacobianNormalization
+⚠ [9363/9382] Replayed Section7.JacobianNormalization
 warning: Section7/JacobianNormalization.lean: imports `Mathlib.LinearAlgebra.Matrix.Determinant.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section7/JacobianNormalization.lean:149:50: `if_neg` has been deprecated: Use `ite_eq_right` instead
 
@@ -4197,17 +4197,17 @@ warning: Section7/JacobianNormalization.lean:157:17: `if_neg` has been deprecate
 
 Hint: Replace the deprecated name:
   i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
-⚠ [9365/9557] Replayed Section7.PolynomialFibreExtraction
+⚠ [9365/9382] Replayed Section7.PolynomialFibreExtraction
 warning: Section7/PolynomialFibreExtraction.lean: imports `Mathlib.Algebra.Polynomial.FieldDivision` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section7/PolynomialFibreExtraction.lean: imports `Mathlib.Algebra.MvPolynomial.PDeriv` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section7/PolynomialFibreExtraction.lean: imports `Mathlib.Data.Set.Finite.Lattice` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [9366/9557] Replayed Section7.IntegralNormalization
+⚠ [9366/9382] Replayed Section7.IntegralNormalization
 warning: Section7/IntegralNormalization.lean: imports `Mathlib.RingTheory.Valuation.ValuationSubring` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [9368/9557] Replayed Section7.SimpleResidueExtraction
+⚠ [9368/9382] Replayed Section7.SimpleResidueExtraction
 warning: Section7/SimpleResidueExtraction.lean:70:4: Unused tactic linter: `change (α / γ i ^ k / γ i) * (γ i ^ k * γ i) = α` does nothing.
 
 Note: This linter can be disabled with `set_option linter.unusedTactic false`
-⚠ [9370/9557] Replayed Section7.IntegerAvoidance
+⚠ [9370/9382] Replayed Section7.IntegerAvoidance
 warning: Section7/IntegerAvoidance.lean: imports `Mathlib.Algebra.MvPolynomial.Funext` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section7/IntegerAvoidance.lean: imports `Mathlib.LinearAlgebra.Matrix.Determinant.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section7/IntegerAvoidance.lean: imports `Mathlib.Data.Int.Cast.Field` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
@@ -4217,9 +4217,9 @@ consider restructuring your `variable` declarations so that the variables are no
   omit [CharZero K] in theorem ...
 
 Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
-⚠ [9371/9557] Replayed Section7.Imported.JacobianEtale
+⚠ [9371/9382] Replayed Section7.Imported.JacobianEtale
 warning: Section7/Imported/JacobianEtale.lean: imports `Mathlib.RingTheory.Smooth.StandardSmoothCotangent` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [9372/9557] Replayed Section7.PolynomialSystemEtale
+⚠ [9372/9382] Replayed Section7.PolynomialSystemEtale
 warning: Section7/PolynomialSystemEtale.lean:44:2: Try this: 
   haveI̵
 
@@ -4228,10 +4228,10 @@ The difference between `have` and `haveI` is that `haveI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9373/9557] Replayed Section7.Imported.EtaleLifting
+⚠ [9373/9382] Replayed Section7.Imported.EtaleLifting
 warning: Section7/Imported/EtaleLifting.lean: imports `Mathlib.RingTheory.Henselian` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section7/Imported/EtaleLifting.lean: imports `Mathlib.RingTheory.Unramified.LocalStructure` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [9374/9557] Replayed Section7.Imported.UnramifiedUniqueness
+⚠ [9374/9382] Replayed Section7.Imported.UnramifiedUniqueness
 warning: Section7/Imported/UnramifiedUniqueness.lean: imports `Mathlib.RingTheory.Ideal.IdempotentFG` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section7/Imported/UnramifiedUniqueness.lean: imports `Mathlib.RingTheory.Jacobson.Ideal` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section7/Imported/UnramifiedUniqueness.lean: imports `Mathlib.RingTheory.Unramified.Finite` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
@@ -4246,9 +4246,9 @@ instead of
     [inst_2 : AddCommMonoid N] [inst_3 : Module R M] [inst_4 : Module R N] {motive : M ⊗[R] N → Prop} (z : M ⊗[R] N),
     motive 0 →
       (∀ (x : M) (y : N), motive (x ⊗ₜ[R] y)) → (∀ (x y : M ⊗[R] N), motive x → motive y → motive (x + y)) → motive z
-⚠ [9377/9557] Replayed Section7.ValuationHenselian
+⚠ [9377/9382] Replayed Section7.ValuationHenselian
 warning: Section7/ValuationHenselian.lean: imports `Mathlib.RingTheory.Henselian` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [9378/9557] Replayed Section7.GeneralizedHensel
+⚠ [9378/9382] Replayed Section7.GeneralizedHensel
 warning: Section7/GeneralizedHensel.lean:43:2: Try this: 
   letI̵
 
@@ -4257,7 +4257,7 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9379/9557] Replayed Section7.LiftingAlgebra
+⚠ [9379/9382] Replayed Section7.LiftingAlgebra
 warning: Section7/LiftingAlgebra.lean:181:2: Try this: intro i _ hz
 
 Note: This linter can be disabled with `set_option linter.tacticAnalysis.introMerge false`
@@ -4267,9 +4267,9 @@ consider restructuring your `variable` declarations so that the variables are no
   omit [Field K] in theorem ...
 
 Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
-⚠ [9380/9557] Replayed Section9.RVJacobianReduction
+⚠ [9380/9382] Replayed Section9.RVJacobianReduction
 warning: Section9/RVJacobianReduction.lean: imports `Mathlib.LinearAlgebra.Matrix.NonsingularInverse` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [9383/9557] Replayed Section3.GuardedRVArithmetic
+⚠ [9383/9638] Replayed Section3.GuardedRVArithmetic
 warning: Section3/GuardedRVArithmetic.lean: imports `Mathlib` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section3/GuardedRVArithmetic.lean:29:20: `if_pos` has been deprecated: Use `ite_eq_left` instead
 
@@ -4341,7 +4341,7 @@ warning: Section3/GuardedRVArithmetic.lean:1177:22: `Set.mem_setOf_eq` has been 
 
 Hint: Replace the deprecated name:
   S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵S̲e̲t̲.̲m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
-⚠ [9385/9557] Replayed Section3.GuardedRVLiterals
+⚠ [9385/9638] Replayed Section3.GuardedRVLiterals
 warning: Section3/GuardedRVLiterals.lean:115:62: `if_false` has been deprecated: Use `ite_false` instead
 
 Hint: Replace the deprecated name:
@@ -4446,7 +4446,7 @@ Hint: Omit it from the simp argument list.
     single_correct, hz, hl, hr, Monomial.eval_one, NFTest.signed]
 
 Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
-⚠ [9388/9557] Replayed Section7.GuardedResidueSums
+⚠ [9388/9638] Replayed Section7.GuardedResidueSums
 warning: Section7/GuardedResidueSums.lean:34:68: `if_true` has been deprecated: Use `ite_true` instead
 
 Hint: Replace the deprecated name:
@@ -4459,9 +4459,9 @@ warning: Section7/GuardedResidueSums.lean:54:66: `if_true` has been deprecated: 
 
 Hint: Replace the deprecated name:
   i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
-⚠ [9392/9557] Replayed Section7.FiniteRVPolynomialPattern
+⚠ [9392/9638] Replayed Section7.FiniteRVPolynomialPattern
 warning: Section7/FiniteRVPolynomialPattern.lean: imports `Mathlib.Algebra.CharZero.Infinite` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [9395/9557] Replayed Section3.GeneralBallCenters
+⚠ [9395/9638] Replayed Section3.GeneralBallCenters
 warning: Section3/GeneralBallCenters.lean:48:0: automatically included section variable(s) unused in theorem `SpecialTransformations.Section3.BallImaginaries.ofClosed_injective`:
   hM
 consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
@@ -4538,7 +4538,7 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9399/9557] Replayed Section3.GuardedRationalNormalForm
+⚠ [9399/9638] Replayed Section3.GuardedRationalNormalForm
 warning: Section3/GuardedRationalNormalForm.lean:123:0: automatically included section variable(s) unused in theorem `SpecialTransformations.Section3.GuardedRVNormalForm.SourceAssignment.rel1_realize`:
   hM
 consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
@@ -4575,7 +4575,7 @@ Hint: The binding can be removed (if unused) or named `_` (if used implicitly). 
   [apply] _hM
 
 Note: This linter can be disabled with `set_option linter.unusedVariables false`
-⚠ [9402/9557] Replayed Section7.AlgebraicResidueRoot
+⚠ [9402/9638] Replayed Section7.AlgebraicResidueRoot
 warning: Section7/AlgebraicResidueRoot.lean:95:2: Try this: 
   letI̵
 
@@ -4613,7 +4613,7 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9403/9557] Replayed Section7.EncodedHensel
+⚠ [9403/9638] Replayed Section7.EncodedHensel
 warning: Section7/EncodedHensel.lean:28:2: Try this: 
   letI̵
 
@@ -4622,7 +4622,7 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9404/9557] Replayed Section7.CorrespondenceLifting
+⚠ [9404/9638] Replayed Section7.CorrespondenceLifting
 warning: Section7/CorrespondenceLifting.lean:166:2: Try this: 
   letI̵
 
@@ -4639,10 +4639,10 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9408/9557] Replayed Section4.RVZeroDeletion
+⚠ [9408/9638] Replayed Section4.RVZeroDeletion
 warning: Section4/RVZeroDeletion.lean: imports `Mathlib.Data.Fin.Tuple.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section4/RVZeroDeletion.lean: imports `Mathlib.Data.Set.Finite.Range` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [9409/9557] Replayed Section4.FiniteGluingRelation
+⚠ [9409/9638] Replayed Section4.FiniteGluingRelation
 warning: Section4/FiniteGluingRelation.lean:24:49: `dif_pos` has been deprecated: Use `dite_eq_left` instead
 
 Hint: Replace the deprecated name:
@@ -4651,12 +4651,12 @@ warning: Section4/FiniteGluingRelation.lean:25:49: `dif_neg` has been deprecated
 
 Hint: Replace the deprecated name:
   d̵i̵f̵_̵n̵e̵g̵d̲i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
-⚠ [9410/9557] Replayed Section4.RVLabelCompression
+⚠ [9410/9638] Replayed Section4.RVLabelCompression
 warning: Section4/RVLabelCompression.lean:50:15: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
 
 Hint: Replace the deprecated name:
   S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵S̲e̲t̲.̲m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
-⚠ [9411/9557] Replayed Section7.BalancedCorrespondence
+⚠ [9411/9638] Replayed Section7.BalancedCorrespondence
 warning: Section7/BalancedCorrespondence.lean:137:0: automatically included section variable(s) unused in theorem `SpecialTransformations.Section7.rawWeight_insertZero`:
   hM
 consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
@@ -4697,7 +4697,7 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9416/9557] Replayed Section4.RVTupleFibres
+⚠ [9416/9638] Replayed Section4.RVTupleFibres
 warning: Section4/RVTupleFibres.lean:16:0: automatically included section variable(s) unused in theorem `SpecialTransformations.Section4.rvTupleFibre_raw_definable`:
   hM
 consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
@@ -4710,14 +4710,14 @@ Hint: The binding can be removed (if unused) or named `_` (if used implicitly). 
   [apply] _z
 
 Note: This linter can be disabled with `set_option linter.unusedVariables false`
-⚠ [9417/9557] Replayed Section4.LiftMorphism
+⚠ [9417/9638] Replayed Section4.LiftMorphism
 warning: Section4/LiftMorphism.lean:26:0: automatically included section variable(s) unused in theorem `SpecialTransformations.Section4.volume_relation_definable`:
   hM
 consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
   omit hM in theorem ...
 
 Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
-⚠ [9418/9557] Replayed Section4.CanonicalNormalization
+⚠ [9418/9638] Replayed Section4.CanonicalNormalization
 warning: Section4/CanonicalNormalization.lean:20:12: `if_pos` has been deprecated: Use `ite_eq_left` instead
 
 Hint: Replace the deprecated name:
@@ -4726,25 +4726,25 @@ warning: Section4/CanonicalNormalization.lean:21:10: `if_neg` has been deprecate
 
 Hint: Replace the deprecated name:
   i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
-⚠ [9422/9557] Replayed Section4.VFAppend
+⚠ [9422/9638] Replayed Section4.VFAppend
 warning: Section4/VFAppend.lean: imports `Mathlib.Data.Fin.Tuple.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [9423/9557] Replayed Section4.RVAppend
+⚠ [9423/9638] Replayed Section4.RVAppend
 warning: Section4/RVAppend.lean: imports `Mathlib.Data.Fin.Tuple.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [9424/9557] Replayed Section4.RVTagging
+⚠ [9424/9638] Replayed Section4.RVTagging
 warning: Section4/RVTagging.lean:62:0: automatically included section variable(s) unused in theorem `SpecialTransformations.Section4.rvConstantCode_definable`:
   hM
 consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
   omit hM in theorem ...
 
 Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
-⚠ [9425/9557] Replayed Section4.MixedTagging
+⚠ [9425/9638] Replayed Section4.MixedTagging
 warning: Section4/MixedTagging.lean:63:0: automatically included section variable(s) unused in theorem `SpecialTransformations.Section4.vfZeroCode_definable`:
   hM
 consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
   omit hM in theorem ...
 
 Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
-⚠ [9427/9557] Replayed Section4.VFCoproduct
+⚠ [9427/9638] Replayed Section4.VFCoproduct
 warning: Section4/VFCoproduct.lean: imports `Mathlib.CategoryTheory.Limits.Shapes.BinaryProducts` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section4/VFCoproduct.lean: imports `Mathlib.CategoryTheory.Limits.Shapes.IsTerminal` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section4/VFCoproduct.lean:4:0: 'Mathlib.CategoryTheory.Limits.Shapes.BinaryProducts' has been deprecated: please replace this import by
@@ -4756,7 +4756,7 @@ Hint: The binding can be removed (if unused) or named `_` (if used implicitly). 
   [apply] _m
 
 Note: This linter can be disabled with `set_option linter.unusedVariables false`
-⚠ [9428/9557] Replayed Section4.DefinableUnionCoproduct
+⚠ [9428/9638] Replayed Section4.DefinableUnionCoproduct
 warning: Section4/DefinableUnionCoproduct.lean: imports `Mathlib.CategoryTheory.Limits.Shapes.BinaryProducts` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section4/DefinableUnionCoproduct.lean:3:0: 'Mathlib.CategoryTheory.Limits.Shapes.BinaryProducts' has been deprecated: please replace this import by
 
@@ -4767,7 +4767,7 @@ Hint: The binding can be removed (if unused) or named `_` (if used implicitly). 
   [apply] _m
 
 Note: This linter can be disabled with `set_option linter.unusedVariables false`
-⚠ [9429/9557] Replayed Section4.VFAllIsomorphismClasses
+⚠ [9429/9638] Replayed Section4.VFAllIsomorphismClasses
 warning: Section4/VFAllIsomorphismClasses.lean: imports `Mathlib.CategoryTheory.Monoidal.OfHasFiniteProducts` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section4/VFAllIsomorphismClasses.lean: imports `Mathlib.CategoryTheory.Monoidal.Skeleton` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section4/VFAllIsomorphismClasses.lean: imports `Mathlib.Algebra.Group.TypeTags.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
@@ -4783,12 +4783,12 @@ consider restructuring your `variable` declarations so that the variables are no
   omit hM in theorem ...
 
 Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
-⚠ [9430/9557] Replayed Section4.PositiveAdditivePresentation
+⚠ [9430/9638] Replayed Section4.PositiveAdditivePresentation
 warning: Section4/PositiveAdditivePresentation.lean: imports `Mathlib.Algebra.BigOperators.Finsupp.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section4/PositiveAdditivePresentation.lean: imports `Mathlib.Algebra.Group.Nat.Hom` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section4/PositiveAdditivePresentation.lean: imports `Mathlib.Data.Finsupp.Ext` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section4/PositiveAdditivePresentation.lean: imports `Mathlib.GroupTheory.Congruence.Hom` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [9433/9557] Replayed Section4.VFAllScissors
+⚠ [9433/9638] Replayed Section4.VFAllScissors
 warning: Section4/VFAllScissors.lean: imports `Mathlib.Tactic.Tauto` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section4/VFAllScissors.lean:35:0: automatically included section variable(s) unused in theorem `SpecialTransformations.Section4.vfAllClass_iso`:
   hM
@@ -4808,7 +4808,7 @@ consider restructuring your `variable` declarations so that the variables are no
   omit hM in theorem ...
 
 Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
-⚠ [9435/9557] Replayed Section4.VFFiniteScissors
+⚠ [9435/9638] Replayed Section4.VFFiniteScissors
 warning: Section4/VFFiniteScissors.lean:44:0: automatically included section variable(s) unused in theorem `SpecialTransformations.Section4.vfFiniteClass_iso`:
   hM
 consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
@@ -4827,7 +4827,7 @@ consider restructuring your `variable` declarations so that the variables are no
   omit hM in theorem ...
 
 Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
-⚠ [9437/9557] Replayed Section4.VFListUnions
+⚠ [9437/9638] Replayed Section4.VFListUnions
 warning: Section4/VFListUnions.lean:13:0: automatically included section variable(s) unused in theorem `SpecialTransformations.Section4.vfDim_emptyObject`:
   hM
 consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
@@ -4840,20 +4840,20 @@ consider restructuring your `variable` declarations so that the variables are no
   omit hM in theorem ...
 
 Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
-⚠ [9438/9557] Replayed Section4.RVGrading
+⚠ [9438/9638] Replayed Section4.RVGrading
 warning: Section4/RVGrading.lean: imports `Mathlib.CategoryTheory.Pi.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section4/RVGrading.lean:87:57: `dif_neg` has been deprecated: Use `dite_eq_right` instead
 
 Hint: Replace the deprecated name:
   d̵i̵f̵_̵n̵e̵g̵d̲i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
-⚠ [9439/9557] Replayed Section4.GradedLifts
+⚠ [9439/9638] Replayed Section4.GradedLifts
 warning: Section4/GradedLifts.lean:27:0: automatically included section variable(s) unused in theorem `SpecialTransformations.Section4.rvGradedLiftBound_spec`:
   hM
 consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
   omit hM in theorem ...
 
 Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
-⚠ [9440/9557] Replayed Section7.LiftedIsomorphism
+⚠ [9440/9638] Replayed Section7.LiftedIsomorphism
 warning: Section7/LiftedIsomorphism.lean:69:0: automatically included section variable(s) unused in theorem `SpecialTransformations.Section7.rawVolumeCorrespondence_mem`:
   hM
 consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
@@ -4912,7 +4912,7 @@ consider restructuring your `variable` declarations so that the variables are no
   omit hM in theorem ...
 
 Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
-⚠ [9441/9557] Replayed Section9.WeightedLiftJacobian
+⚠ [9441/9638] Replayed Section9.WeightedLiftJacobian
 warning: Section9/WeightedLiftJacobian.lean:88:2: Try this: 
   letI̵
 
@@ -4921,7 +4921,7 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9443/9557] Replayed Section10.WeightedJacobianLocus
+⚠ [9443/9638] Replayed Section10.WeightedJacobianLocus
 warning: Section10/WeightedJacobianLocus.lean:53:58: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
 
 Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
@@ -4934,7 +4934,7 @@ Note: This linter can be disabled with `set_option linter.unusedTactic false`
 warning: Section10/WeightedJacobianLocus.lean:57:49: Unused tactic linter: `<;>` should be replaced with `;` or be removed.
 
 Note: This linter can be disabled with `set_option linter.unusedTactic false`
-⚠ [9445/9557] Replayed Section4.RVCoproduct
+⚠ [9445/9638] Replayed Section4.RVCoproduct
 warning: Section4/RVCoproduct.lean: imports `Mathlib.CategoryTheory.Limits.Shapes.BinaryProducts` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section4/RVCoproduct.lean: imports `Mathlib.CategoryTheory.Limits.Shapes.IsTerminal` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section4/RVCoproduct.lean:4:0: 'Mathlib.CategoryTheory.Limits.Shapes.BinaryProducts' has been deprecated: please replace this import by
@@ -4970,7 +4970,7 @@ Hint: The binding can be removed (if unused) or named `_` (if used implicitly). 
   [apply] _m
 
 Note: This linter can be disabled with `set_option linter.unusedVariables false`
-⚠ [9446/9557] Replayed Section4.RVIsomorphismClasses
+⚠ [9446/9638] Replayed Section4.RVIsomorphismClasses
 warning: Section4/RVIsomorphismClasses.lean: imports `Mathlib.CategoryTheory.Monoidal.OfHasFiniteProducts` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section4/RVIsomorphismClasses.lean: imports `Mathlib.CategoryTheory.Monoidal.Skeleton` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section4/RVIsomorphismClasses.lean: imports `Mathlib.Algebra.Group.TypeTags.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
@@ -4986,7 +4986,7 @@ consider restructuring your `variable` declarations so that the variables are no
   omit hM in theorem ...
 
 Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
-⚠ [9447/9557] Replayed Section4.RVUnionCoproduct
+⚠ [9447/9638] Replayed Section4.RVUnionCoproduct
 warning: Section4/RVUnionCoproduct.lean:15:0: Definition `rvUnionSubset` is a proposition; use `theorem` instead of `def`
 
 Note: This linter can be disabled with `set_option linter.defProp false`
@@ -4996,14 +4996,14 @@ Hint: The binding can be removed (if unused) or named `_` (if used implicitly). 
   [apply] _m
 
 Note: This linter can be disabled with `set_option linter.unusedVariables false`
-⚠ [9448/9557] Replayed Section4.RVIsoClassScissors
+⚠ [9448/9638] Replayed Section4.RVIsoClassScissors
 warning: Section4/RVIsoClassScissors.lean: imports `Mathlib.Tactic.Tauto` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [9454/9557] Replayed Section4.RVCompression
+⚠ [9454/9638] Replayed Section4.RVCompression
 warning: Section4/RVCompression.lean:31:60: `dif_pos` has been deprecated: Use `dite_eq_left` instead
 
 Hint: Replace the deprecated name:
   d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
-⚠ [9460/9557] Replayed Section9.FiniteHeadRepresentatives
+⚠ [9460/9638] Replayed Section9.FiniteHeadRepresentatives
 warning: Section9/FiniteHeadRepresentatives.lean:101:4: Try this: 
   letI̵
 
@@ -5012,7 +5012,7 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9461/9557] Replayed Section9.LiftLabelRepresentatives
+⚠ [9461/9638] Replayed Section9.LiftLabelRepresentatives
 warning: Section9/LiftLabelRepresentatives.lean:96:6: Try this: 
   letI̵
 
@@ -5021,7 +5021,7 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9462/9557] Replayed Section3.GammaFiniteOrder
+⚠ [9462/9638] Replayed Section3.GammaFiniteOrder
 warning: Section3/GammaFiniteOrder.lean: imports `Mathlib.Data.Finset.Max` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section3/GammaFiniteOrder.lean:13:0: automatically included section variable(s) unused in theorem `SpecialTransformations.Section3.GammaParameters.not_le_pair_definable`:
   hM
@@ -5039,7 +5039,7 @@ Hint: Replace the deprecated name:
 warning: Section3/GammaFiniteOrder.lean:158:2: Unused tactic linter: `all_goals try rfl` does nothing.
 
 Note: This linter can be disabled with `set_option linter.unusedTactic false`
-⚠ [9463/9557] Replayed Section8.GammaRadiusBase
+⚠ [9463/9638] Replayed Section8.GammaRadiusBase
 warning: Section8/GammaRadiusBase.lean:28:10: `if_neg` has been deprecated: Use `ite_eq_right` instead
 
 Hint: Replace the deprecated name:
@@ -5050,7 +5050,7 @@ consider restructuring your `variable` declarations so that the variables are no
   omit [M ⊨ Axioms.ACVF] in theorem ...
 
 Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
-⚠ [9465/9557] Replayed Section9.AffineTail
+⚠ [9465/9638] Replayed Section9.AffineTail
 warning: Section9/AffineTail.lean: imports `Mathlib.Algebra.BigOperators.Group.Finset.Piecewise` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section9/AffineTail.lean:40:60: `if_true` has been deprecated: Use `ite_true` instead
 
@@ -5063,7 +5063,7 @@ Hint: Omit it from the simp argument list.
   [apply] simp [affineTail, h]
 
 Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
-⚠ [9466/9557] Replayed Section9.AffineTailDefinability
+⚠ [9466/9638] Replayed Section9.AffineTailDefinability
 warning: Section9/AffineTailDefinability.lean:66:17: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
 
 Hint: Replace the deprecated name:
@@ -5074,7 +5074,7 @@ consider restructuring your `variable` declarations so that the variables are no
   omit [M ⊨ Axioms.ACVF] in theorem ...
 
 Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
-⚠ [9467/9557] Replayed Section9.AffineTailCorrection
+⚠ [9467/9638] Replayed Section9.AffineTailCorrection
 warning: Section9/AffineTailCorrection.lean:33:40: `if_pos` has been deprecated: Use `ite_eq_left` instead
 
 Hint: Replace the deprecated name:
@@ -5086,7 +5086,7 @@ Hint: Replace the deprecated name:
 warning: Section9/AffineTailCorrection.lean:40:4: Unused tactic linter: `change v (b i / a i) * v (a i) = v (b i)` does nothing.
 
 Note: This linter can be disabled with `set_option linter.unusedTactic false`
-⚠ [9468/9557] Replayed Section9.AffineTailHeadFormula
+⚠ [9468/9638] Replayed Section9.AffineTailHeadFormula
 warning: Section9/AffineTailHeadFormula.lean:142:76: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
 
 Hint: Replace the deprecated name:
@@ -5121,7 +5121,7 @@ Hint: Omit it from the simp argument list.
   [apply] simp only [affineTailSlopesForHead, h, false_and, not_false_eq_true, true_and, false_or]
 
 Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
-⚠ [9471/9557] Replayed Section4.RVCoordinatePieces
+⚠ [9471/9638] Replayed Section4.RVCoordinatePieces
 warning: Section4/RVCoordinatePieces.lean:19:23: Variable name `hdk` is not explicitly referenced.
 
 Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
@@ -5134,7 +5134,7 @@ consider restructuring your `variable` declarations so that the variables are no
   omit hM in theorem ...
 
 Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
-⚠ [9472/9557] Replayed Section4.FinitaryClosure
+⚠ [9472/9638] Replayed Section4.FinitaryClosure
 warning: Section4/FinitaryClosure.lean: imports `Mathlib.Order.Closure` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section4/FinitaryClosure.lean: imports `Mathlib.Combinatorics.Matroid.IndepAxioms` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section4/FinitaryClosure.lean: imports `Mathlib.Combinatorics.Matroid.Closure` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
@@ -5162,7 +5162,7 @@ Hint: The binding can be removed (if unused) or named `_` (if used implicitly). 
   [apply] _B
 
 Note: This linter can be disabled with `set_option linter.unusedVariables false`
-⚠ [9475/9557] Replayed Section4.RVAlgebraicMatroid
+⚠ [9475/9638] Replayed Section4.RVAlgebraicMatroid
 warning: Section4/RVAlgebraicMatroid.lean: imports `Mathlib.Combinatorics.Matroid.Rank.Finite` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section4/RVAlgebraicMatroid.lean:30:0: automatically included section variable(s) unused in theorem `SpecialTransformations.Section4.rvAlgebraicClosure_extensive`:
   hM
@@ -5176,7 +5176,7 @@ consider restructuring your `variable` declarations so that the variables are no
   omit hM in theorem ...
 
 Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
-⚠ [9476/9557] Replayed Section4.RVRank
+⚠ [9476/9638] Replayed Section4.RVRank
 warning: Section4/RVRank.lean: imports `Mathlib.Combinatorics.Matroid.Rank.ENat` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section4/RVRank.lean:24:0: automatically included section variable(s) unused in theorem `SpecialTransformations.Section4.rvParameterNames_range`:
   hM
@@ -5192,7 +5192,7 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9478/9557] Replayed Section4.RVDimensionRank
+⚠ [9478/9638] Replayed Section4.RVDimensionRank
 warning: Section4/RVDimensionRank.lean:48:2: Try this: 
   letI̵
 
@@ -5201,9 +5201,9 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9482/9557] Replayed Section9.AffineTailJacobian
+⚠ [9482/9638] Replayed Section9.AffineTailJacobian
 warning: Section9/AffineTailJacobian.lean: imports `Mathlib.LinearAlgebra.Matrix.Determinant.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [9483/9557] Replayed Section9.AffineLiftJacobian
+⚠ [9483/9638] Replayed Section9.AffineLiftJacobian
 warning: Section9/AffineLiftJacobian.lean:49:48: `dif_pos` has been deprecated: Use `dite_eq_left` instead
 
 Hint: Replace the deprecated name:
@@ -5216,7 +5216,7 @@ warning: Section9/AffineLiftJacobian.lean:68:80: `dif_pos` has been deprecated: 
 
 Hint: Replace the deprecated name:
   d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
-⚠ [9484/9557] Replayed Section9.AffineLiftPrescribedJacobian
+⚠ [9484/9638] Replayed Section9.AffineLiftPrescribedJacobian
 warning: Section9/AffineLiftPrescribedJacobian.lean:50:2: Try this: 
   letI̵
 
@@ -5225,7 +5225,7 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9486/9557] Replayed Section9.WeightedAffineLift
+⚠ [9486/9638] Replayed Section9.WeightedAffineLift
 warning: Section9/WeightedAffineLift.lean:94:4: Try this: 
   letI̵
 
@@ -5234,12 +5234,12 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9487/9557] Replayed Section9.RVJacobianException
+⚠ [9487/9638] Replayed Section9.RVJacobianException
 warning: Section9/RVJacobianException.lean:94:13: `Set.diff_subset` has been deprecated: Use `Set.sdiff_subset` instead
 
 Hint: Replace the deprecated name:
   Set.s̲diff_subset
-⚠ [9488/9557] Replayed Section9.FiniteHeadPrescribedLift
+⚠ [9488/9638] Replayed Section9.FiniteHeadPrescribedLift
 warning: Section9/FiniteHeadPrescribedLift.lean:51:2: Try this: 
   letI̵
 
@@ -5248,9 +5248,9 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9489/9557] Replayed Section4.RVSequenceIndependence
+⚠ [9489/9638] Replayed Section4.RVSequenceIndependence
 warning: Section4/RVSequenceIndependence.lean: imports `Mathlib.Data.Fin.Tuple.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [9491/9557] Replayed Section3.RVExchange
+⚠ [9491/9638] Replayed Section3.RVExchange
 warning: Section3/RVExchange.lean:22:0: automatically included section variable(s) unused in theorem `SpecialTransformations.Section3.GammaParameters.same_scalar_symm`:
   hM
 consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
@@ -5263,7 +5263,7 @@ consider restructuring your `variable` declarations so that the variables are no
   omit hM in theorem ...
 
 Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
-⚠ [9493/9557] Replayed Section9.FiniteHeadCover
+⚠ [9493/9638] Replayed Section9.FiniteHeadCover
 warning: Section9/FiniteHeadCover.lean: imports `Mathlib.Data.Fintype.EquivFin` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section9/FiniteHeadCover.lean:85:2: Try this: 
   letI̵
@@ -5273,7 +5273,7 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9498/9557] Replayed Section9.ReindexedHeadPrescribedLift
+⚠ [9498/9638] Replayed Section9.ReindexedHeadPrescribedLift
 warning: Section9/ReindexedHeadPrescribedLift.lean:138:2: Try this: 
   letI̵
 
@@ -5282,14 +5282,14 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9499/9557] Replayed Section9.SimultaneousHeadCover
+⚠ [9499/9638] Replayed Section9.SimultaneousHeadCover
 warning: Section9/SimultaneousHeadCover.lean:24:8: automatically included section variable(s) unused in theorem `_private.Section9.SimultaneousHeadCover.0.SpecialTransformations.Section9.finite_restricted_head_row`:
   [M ⊨ Axioms.ACVF]
 consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
   omit [M ⊨ Axioms.ACVF] in theorem ...
 
 Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
-⚠ [9500/9557] Replayed Section9.FiniteLabelPartition
+⚠ [9500/9638] Replayed Section9.FiniteLabelPartition
 warning: Section9/FiniteLabelPartition.lean:18:2: Try this: 
   letI̵
 
@@ -5302,14 +5302,14 @@ warning: Section9/FiniteLabelPartition.lean:26:51: `Set.mem_setOf_eq` has been d
 
 Hint: Replace the deprecated name:
   S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵S̲e̲t̲.̲m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
-⚠ [9501/9557] Replayed Section9.LiftRestriction
+⚠ [9501/9638] Replayed Section9.LiftRestriction
 warning: Section9/LiftRestriction.lean:21:0: automatically included section variable(s) unused in theorem `SpecialTransformations.Section9.rvLabelImage_subset`:
   [M ⊨ Axioms.ACVF]
 consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
   omit [M ⊨ Axioms.ACVF] in theorem ...
 
 Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
-⚠ [9507/9557] Replayed Section9.RepairLiftOnSmallLabels
+⚠ [9507/9638] Replayed Section9.RepairLiftOnSmallLabels
 warning: Section9/RepairLiftOnSmallLabels.lean:119:2: Try this: 
   letI̵
 
@@ -5318,7 +5318,7 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9508/9557] Replayed Section9.DerivationExtension
+⚠ [9508/9638] Replayed Section9.DerivationExtension
 warning: Section9/DerivationExtension.lean: imports `Mathlib.RingTheory.Etale.Field` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section9/DerivationExtension.lean: imports `Mathlib.RingTheory.Etale.Kaehler` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section9/DerivationExtension.lean:91:2: Try this: 
@@ -5329,7 +5329,7 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9509/9557] Replayed Section9.CoordinateDerivations
+⚠ [9509/9638] Replayed Section9.CoordinateDerivations
 warning: Section9/CoordinateDerivations.lean: imports `Mathlib.RingTheory.AlgebraicIndependent.Adjoin` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section9/CoordinateDerivations.lean: imports `Mathlib.Algebra.MvPolynomial.PDeriv` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section9/CoordinateDerivations.lean:27:2: Try this: 
@@ -5340,7 +5340,7 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9510/9557] Replayed Section9.AlgebraicCoordinateDerivations
+⚠ [9510/9638] Replayed Section9.AlgebraicCoordinateDerivations
 warning: Section9/AlgebraicCoordinateDerivations.lean: imports `Mathlib.FieldTheory.Perfect` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section9/AlgebraicCoordinateDerivations.lean:19:2: Try this: 
   letI̵
@@ -5358,18 +5358,18 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9511/9557] Replayed Section9.RVJacobianDerivations
+⚠ [9511/9638] Replayed Section9.RVJacobianDerivations
 warning: Section9/RVJacobianDerivations.lean:79:41: `if_true` has been deprecated: Use `ite_true` instead
 
 Hint: Replace the deprecated name:
   i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
-⚠ [9512/9557] Replayed Section9.GaussDerivative
+⚠ [9512/9638] Replayed Section9.GaussDerivative
 warning: Section9/GaussDerivative.lean: imports `Mathlib.FieldTheory.IntermediateField.Adjoin.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [9513/9557] Replayed Section9.AlgebraicValueGroup
+⚠ [9513/9638] Replayed Section9.AlgebraicValueGroup
 warning: Section9/AlgebraicValueGroup.lean: imports `Mathlib.RingTheory.Valuation.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section9/AlgebraicValueGroup.lean: imports `Mathlib.RingTheory.Algebraic.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section9/AlgebraicValueGroup.lean: imports `Mathlib.Algebra.Polynomial.Eval.Defs` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [9514/9557] Replayed Section9.EtaleDerivationBound
+⚠ [9514/9638] Replayed Section9.EtaleDerivationBound
 warning: Section9/EtaleDerivationBound.lean: imports `Mathlib.Algebra.Ring.Subring.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section9/EtaleDerivationBound.lean:32:2: Try this: 
   letI̵
@@ -5459,11 +5459,11 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9515/9557] Replayed Section9.IntegralDerivativeReduction
+⚠ [9515/9638] Replayed Section9.IntegralDerivativeReduction
 warning: Section9/IntegralDerivativeReduction.lean: imports `Mathlib.Algebra.Polynomial.Derivative` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [9517/9557] Replayed Section9.GaussEvaluation
+⚠ [9517/9638] Replayed Section9.GaussEvaluation
 warning: Section9/GaussEvaluation.lean: imports `Mathlib.RingTheory.LocalRing.ResidueField.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [9520/9557] Replayed Section9.UnramifiedGenerator
+⚠ [9520/9638] Replayed Section9.UnramifiedGenerator
 warning: Section9/UnramifiedGenerator.lean: imports `Mathlib.Algebra.Polynomial.Lifts` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section9/UnramifiedGenerator.lean: imports `Mathlib.FieldTheory.PrimitiveElement` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section9/UnramifiedGenerator.lean: imports `Mathlib.FieldTheory.Perfect` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
@@ -5500,11 +5500,11 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9521/9557] Replayed Section9.BoundedGraphDerivations
+⚠ [9521/9638] Replayed Section9.BoundedGraphDerivations
 warning: Section9/BoundedGraphDerivations.lean: imports `Mathlib.FieldTheory.IsAlgClosed.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [9522/9557] Replayed Section9.CoarsenedGauss
+⚠ [9522/9638] Replayed Section9.CoarsenedGauss
 warning: Section9/CoarsenedGauss.lean: imports `Mathlib.RingTheory.AlgebraicIndependent.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [9524/9557] Replayed Section9.GaussFieldRestriction
+⚠ [9524/9638] Replayed Section9.GaussFieldRestriction
 warning: Section9/GaussFieldRestriction.lean:15:11: Variable name `x` is not explicitly referenced.
 
 Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
@@ -5517,7 +5517,7 @@ Hint: The binding can be removed (if unused) or named `_` (if used implicitly). 
   [apply] _x
 
 Note: This linter can be disabled with `set_option linter.unusedVariables false`
-⚠ [9525/9557] Replayed Section9.HenselizedGraphData
+⚠ [9525/9638] Replayed Section9.HenselizedGraphData
 warning: Section9/HenselizedGraphData.lean:74:2: Try this: 
   letI̵
 
@@ -5574,7 +5574,7 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9529/9557] Replayed Section9.ResidueDerivation
+⚠ [9529/9638] Replayed Section9.ResidueDerivation
 warning: Section9/ResidueDerivation.lean:35:2: Try this: 
   letI̵
 
@@ -5583,7 +5583,7 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9530/9557] Replayed Section4.ResiduePureFunctions
+⚠ [9530/9638] Replayed Section4.ResiduePureFunctions
 warning: Section4/ResiduePureFunctions.lean: imports `Mathlib.ModelTheory.Algebra.Field.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section4/ResiduePureFunctions.lean: imports `Mathlib.ModelTheory.Definability` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section4/ResiduePureFunctions.lean: imports `Mathlib.Tactic.FinCases` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
@@ -5593,7 +5593,7 @@ Hint: The binding can be removed (if unused) or named `_` (if used implicitly). 
   [apply] _x
 
 Note: This linter can be disabled with `set_option linter.unusedVariables false`
-⚠ [9531/9557] Replayed Section4.ResidueScaledFunctions
+⚠ [9531/9638] Replayed Section4.ResidueScaledFunctions
 warning: Section4/ResidueScaledFunctions.lean:94:19: `dif_pos` has been deprecated: Use `dite_eq_left` instead
 
 Hint: Replace the deprecated name:
@@ -5614,12 +5614,12 @@ warning: Section4/ResidueScaledFunctions.lean:189:8: `if_neg` has been deprecate
 
 Hint: Replace the deprecated name:
   i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
-⚠ [9532/9557] Replayed Section4.ResidueParameterField
+⚠ [9532/9638] Replayed Section4.ResidueParameterField
 warning: Section4/ResidueParameterField.lean:59:21: `dif_neg` has been deprecated: Use `dite_eq_right` instead
 
 Hint: Replace the deprecated name:
   d̵i̵f̵_̵n̵e̵g̵d̲i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
-⚠ [9533/9557] Replayed Section4.ResidueFieldFunctions
+⚠ [9533/9638] Replayed Section4.ResidueFieldFunctions
 warning: Section4/ResidueFieldFunctions.lean: imports `Mathlib.Algebra.Field.Subfield.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section4/ResidueFieldFunctions.lean:84:57: Variable name `x` is not explicitly referenced.
 
@@ -5627,12 +5627,12 @@ Hint: The binding can be removed (if unused) or named `_` (if used implicitly). 
   [apply] _x
 
 Note: This linter can be disabled with `set_option linter.unusedVariables false`
-⚠ [9534/9557] Replayed Section4.ResidueCoefficientContext
+⚠ [9534/9638] Replayed Section4.ResidueCoefficientContext
 warning: Section4/ResidueCoefficientContext.lean:76:23: `dif_neg` has been deprecated: Use `dite_eq_right` instead
 
 Hint: Replace the deprecated name:
   d̵i̵f̵_̵n̵e̵g̵d̲i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
-⚠ [9535/9557] Replayed Section4.ResidueRelativeScaled
+⚠ [9535/9638] Replayed Section4.ResidueRelativeScaled
 warning: Section4/ResidueRelativeScaled.lean:76:8: `if_pos` has been deprecated: Use `ite_eq_left` instead
 
 Hint: Replace the deprecated name:
@@ -5649,7 +5649,7 @@ warning: Section4/ResidueRelativeScaled.lean:105:8: `if_neg` has been deprecated
 
 Hint: Replace the deprecated name:
   i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
-⚠ [9536/9557] Replayed Section4.ResidueScaledPredicates
+⚠ [9536/9638] Replayed Section4.ResidueScaledPredicates
 warning: Section4/ResidueScaledPredicates.lean: imports `Mathlib.Tactic.Tauto` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section4/ResidueScaledPredicates.lean:109:2: Unused tactic linter: `change
   ((ValuedModelMap.inK c ∨ p x = 0) ∧ c ≠ 0 ∧ p x ≠ 0) ↔ (ValuedModelMap.inK c ∧ c ≠ 0) ∧ p x ≠ 0` does nothing.
@@ -5663,12 +5663,12 @@ warning: Section4/ResidueScaledPredicates.lean:117:8: `if_neg` has been deprecat
 
 Hint: Replace the deprecated name:
   i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
-⚠ [9537/9557] Replayed Section4.ResidueRelativePredicates
+⚠ [9537/9638] Replayed Section4.ResidueRelativePredicates
 warning: Section4/ResidueRelativePredicates.lean:100:2: Unused tactic linter: `change
   ((ValuedModelMap.inK c ∨ p x = 0) ∧ c ≠ 0 ∧ p x ≠ 0) ↔ (ValuedModelMap.inK c ∧ c ≠ 0) ∧ p x ≠ 0` does nothing.
 
 Note: This linter can be disabled with `set_option linter.unusedTactic false`
-⚠ [9538/9557] Replayed Section4.ResidueTermInterpretation
+⚠ [9538/9638] Replayed Section4.ResidueTermInterpretation
 warning: Section4/ResidueTermInterpretation.lean:31:8: automatically included section variable(s) unused in theorem `_private.Section4.ResidueTermInterpretation.0.SpecialTransformations.Section4.ResiduePurity.eval_nullary`:
   hM
 consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
@@ -5687,7 +5687,7 @@ consider restructuring your `variable` declarations so that the variables are no
   omit hM in theorem ...
 
 Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
-⚠ [9539/9557] Replayed Section4.ResidueRelativeTerms
+⚠ [9539/9638] Replayed Section4.ResidueRelativeTerms
 warning: Section4/ResidueRelativeTerms.lean:22:23: Variable name `hi` is not explicitly referenced.
 
 Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
@@ -5712,7 +5712,7 @@ consider restructuring your `variable` declarations so that the variables are no
   omit hM in theorem ...
 
 Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
-⚠ [9541/9557] Replayed Section4.ResidueRelativeQF
+⚠ [9541/9638] Replayed Section4.ResidueRelativeQF
 warning: Section4/ResidueRelativeQF.lean:19:8: automatically included section variable(s) unused in theorem `_private.Section4.ResidueRelativeQF.0.SpecialTransformations.Section4.ResiduePurity.Scoped.rel_unary`:
   hM
 consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
@@ -5725,7 +5725,7 @@ consider restructuring your `variable` declarations so that the variables are no
   omit hM in theorem ...
 
 Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
-⚠ [9543/9557] Replayed Section9.RVJacobian
+⚠ [9543/9638] Replayed Section9.RVJacobian
 warning: Section9/RVJacobian.lean: imports `Mathlib.Algebra.MvPolynomial.PDeriv` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section9/RVJacobian.lean: imports `Mathlib.LinearAlgebra.Matrix.Determinant.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section9/RVJacobian.lean: imports `Mathlib.LinearAlgebra.Matrix.ToLin` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
@@ -5737,17 +5737,17 @@ warning: Section9/RVJacobian.lean:86:26: `if_neg` has been deprecated: Use `ite_
 
 Hint: Replace the deprecated name:
   i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
-⚠ [9544/9557] Replayed Section4.ResidueMultivariateFunctions
+⚠ [9544/9638] Replayed Section4.ResidueMultivariateFunctions
 warning: Section4/ResidueMultivariateFunctions.lean: imports `Mathlib.Algebra.MvPolynomial.Eval` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [9545/9557] Replayed Section9.ResidueTangentDescent
+⚠ [9545/9638] Replayed Section9.ResidueTangentDescent
 warning: Section9/ResidueTangentDescent.lean: imports `Mathlib.LinearAlgebra.Basis.VectorSpace` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section9/ResidueTangentDescent.lean:53:33: `if_neg` has been deprecated: Use `ite_eq_right` instead
 
 Hint: Replace the deprecated name:
   i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
-⚠ [9547/9557] Replayed Section9.ResidueJacobianGeneric
+⚠ [9547/9638] Replayed Section9.ResidueJacobianGeneric
 warning: Section9/ResidueJacobianGeneric.lean: imports `Mathlib.LinearAlgebra.Matrix.NonsingularInverse` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [9548/9557] Replayed Section9.ResidueGraphDerivative
+⚠ [9548/9638] Replayed Section9.ResidueGraphDerivative
 warning: Section9/ResidueGraphDerivative.lean:45:2: Try this: 
   letI̵
 
@@ -5796,13 +5796,13 @@ warning: Section9/ResidueGraphDerivative.lean:76:20: `if_neg` has been deprecate
 
 Hint: Replace the deprecated name:
   i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
-⚠ [9549/9557] Replayed Section9.RVDeterminantReduction
+⚠ [9549/9638] Replayed Section9.RVDeterminantReduction
 warning: Section9/RVDeterminantReduction.lean: imports `Mathlib.LinearAlgebra.Matrix.Determinant.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section9/RVDeterminantReduction.lean:36:46: `if_true` has been deprecated: Use `ite_true` instead
 
 Hint: Replace the deprecated name:
   i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
-⚠ [9550/9557] Replayed Section9.SmallValuedCoefficients
+⚠ [9550/9638] Replayed Section9.SmallValuedCoefficients
 warning: Section9/SmallValuedCoefficients.lean: imports `Mathlib.FieldTheory.Cardinality` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section9/SmallValuedCoefficients.lean: imports `Mathlib.RingTheory.Algebraic.Cardinality` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section9/SmallValuedCoefficients.lean:37:2: Try this: 
@@ -5813,7 +5813,7 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9552/9557] Replayed Section9.ResidueCoefficientBase
+⚠ [9552/9638] Replayed Section9.ResidueCoefficientBase
 warning: Section9/ResidueCoefficientBase.lean:30:2: Try this: 
   letI̵
 
@@ -5822,7 +5822,7 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9553/9557] Replayed Section9.NormalizedRVComparison
+⚠ [9553/9638] Replayed Section9.NormalizedRVComparison
 warning: Section9/NormalizedRVComparison.lean:51:2: Try this: 
   letI̵
 
@@ -5895,12 +5895,12 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9556/9557] Replayed Section9.RVGraphJacobianComparison
+⚠ [9556/9638] Replayed Section9.RVGraphJacobianComparison
 warning: Section9/RVGraphJacobianComparison.lean:32:47: `if_true` has been deprecated: Use `ite_true` instead
 
 Hint: Replace the deprecated name:
   i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
-⚠ [9561/9700] Replayed Section4.ResiduePolynomialCover
+⚠ [9560/9638] Replayed Section4.ResiduePolynomialCover
 warning: Section4/ResiduePolynomialCover.lean:60:2: Try this: 
   letI̵
 
@@ -5909,7 +5909,7 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9562/9700] Replayed Section4.PureFieldAlgebraicity
+⚠ [9561/9638] Replayed Section4.PureFieldAlgebraicity
 warning: Section4/PureFieldAlgebraicity.lean: imports `Mathlib.FieldTheory.AlgebraicClosure` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section4/PureFieldAlgebraicity.lean:39:2: Try this: 
   letI̵
@@ -5919,10 +5919,10 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9563/9700] Replayed Section9.GlobalSimpleRootEquations
+⚠ [9562/9638] Replayed Section9.GlobalSimpleRootEquations
 warning: Section9/GlobalSimpleRootEquations.lean: imports `Mathlib.FieldTheory.Perfect` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section9/GlobalSimpleRootEquations.lean: imports `Mathlib.RingTheory.Polynomial.Radical` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [9564/9700] Replayed Section9.ResidueSimpleEquations
+⚠ [9563/9638] Replayed Section9.ResidueSimpleEquations
 warning: Section9/ResidueSimpleEquations.lean:142:2: Try this: 
   letI̵
 
@@ -5939,7 +5939,7 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9566/9700] Replayed Section9.GraphCoordinateDerivations
+⚠ [9565/9638] Replayed Section9.GraphCoordinateDerivations
 warning: Section9/GraphCoordinateDerivations.lean: imports `Mathlib.FieldTheory.Perfect` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section9/GraphCoordinateDerivations.lean:25:2: Try this: 
   letI̵
@@ -5973,7 +5973,7 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9567/9700] Replayed Section9.ResidueJacobianExistence
+⚠ [9566/9638] Replayed Section9.ResidueJacobianExistence
 warning: Section9/ResidueJacobianExistence.lean:108:2: Try this: 
   letI̵
 
@@ -6022,7 +6022,7 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9568/9700] Replayed Section9.RVComparisonOnResidueFibre
+⚠ [9567/9638] Replayed Section9.RVComparisonOnResidueFibre
 warning: Section9/RVComparisonOnResidueFibre.lean:73:2: Try this: 
   letI̵
 
@@ -6063,7 +6063,7 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9569/9700] Replayed Section4.SmallGeneratedBase
+⚠ [9568/9638] Replayed Section4.SmallGeneratedBase
 warning: Section4/SmallGeneratedBase.lean: imports `Mathlib.ModelTheory.Substructures` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section4/SmallGeneratedBase.lean:18:2: Try this: 
   letI̵
@@ -6073,7 +6073,7 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9571/9700] Replayed Section4.RVValuePatternFamily
+⚠ [9570/9638] Replayed Section4.RVValuePatternFamily
 warning: Section4/RVValuePatternFamily.lean:51:4: Try this: 
   letI̵
 
@@ -6120,7 +6120,7 @@ Hint: Omit it from the simp argument list.
   [apply] simp only [RVValuePattern, Bool.false_eq_true, ite_false]
 
 Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
-⚠ [9572/9700] Replayed Section4.GammaDefinableFibres
+⚠ [9571/9638] Replayed Section4.GammaDefinableFibres
 warning: Section4/GammaDefinableFibres.lean:25:2: Try this: 
   letI̵
 
@@ -6145,7 +6145,7 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9573/9700] Replayed Section4.UniformFiniteCofinite
+⚠ [9572/9638] Replayed Section4.UniformFiniteCofinite
 warning: Section4/UniformFiniteCofinite.lean:38:2: Try this: 
   letI̵
 
@@ -6154,14 +6154,14 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9575/9700] Replayed Section4.RVInfiniteValueDefinability
+⚠ [9574/9638] Replayed Section4.RVInfiniteValueDefinability
 warning: Section4/RVInfiniteValueDefinability.lean:23:0: automatically included section variable(s) unused in theorem `SpecialTransformations.Section4.rawRVValuePart_definable`:
   hM
 consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
   omit hM in theorem ...
 
 Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
-⚠ [9576/9700] Replayed Section4.GammaRVInfiniteProjection
+⚠ [9575/9638] Replayed Section4.GammaRVInfiniteProjection
 warning: Section4/GammaRVInfiniteProjection.lean:99:47: This simp argument is unused:
   Bool.true_eq
 
@@ -6170,7 +6170,7 @@ Hint: Omit it from the simp argument list.
     Function.comp_def, Fin.append_left, Fin.append_right]
 
 Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
-⚠ [9577/9700] Replayed Section4.GammaRVLastRow
+⚠ [9576/9638] Replayed Section4.GammaRVLastRow
 warning: Section4/GammaRVLastRow.lean:28:4: Try this: 
   letI̵
 
@@ -6211,7 +6211,7 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9578/9700] Replayed Section4.GammaRVRowAvoidance
+⚠ [9577/9638] Replayed Section4.GammaRVRowAvoidance
 warning: Section4/GammaRVRowAvoidance.lean:61:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
 If you'd rather continue using `push_neg` in your project, you can implement it as follows:
 ```
@@ -6219,12 +6219,12 @@ open Lean.Parser.Tactic in
 macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
   `(tactic| push $cfg:optConfig Not $[$loc]?)
 ```
-⚠ [9579/9700] Replayed Section4.RVInfiniteIteration
+⚠ [9578/9638] Replayed Section4.RVInfiniteIteration
 warning: Section4/RVInfiniteIteration.lean:93:54: `dif_pos` has been deprecated: Use `dite_eq_left` instead
 
 Hint: Replace the deprecated name:
   d̵i̵f̵_̵p̵o̵s̵d̲i̲t̲e̲_̲e̲q̲_̲l̲e̲f̲t̲
-⚠ [9580/9700] Replayed Section4.RVSequenceBounds
+⚠ [9579/9638] Replayed Section4.RVSequenceBounds
 warning: Section4/RVSequenceBounds.lean:14:0: automatically included section variable(s) unused in theorem `SpecialTransformations.Section4.RVSequenceIndependent.mono_base`:
   hM
 consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
@@ -6251,7 +6251,7 @@ Hint: Omit it from the simp argument list.
   [apply] simp only [ENat.card_eq_coe_fintype_card, ENat.toNat_natCast]
 
 Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
-⚠ [9582/9700] Replayed Section4.FiniteOrderControllers
+⚠ [9581/9638] Replayed Section4.FiniteOrderControllers
 warning: Section4/FiniteOrderControllers.lean: imports `Mathlib.Data.Finset.Card` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section4/FiniteOrderControllers.lean: imports `Mathlib.Order.Interval.Set.Basic` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section4/FiniteOrderControllers.lean:93:0: automatically included section variable(s) unused in theorem `SpecialTransformations.Section4.FiniteOrder.erase_controls_ordered`:
@@ -6261,20 +6261,20 @@ consider restructuring your `variable` declarations so that the variables are no
   omit [NoMinOrder α] [NoMaxOrder α] in theorem ...
 
 Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
-⚠ [9583/9700] Replayed Section4.CanonicalOrderController
+⚠ [9582/9638] Replayed Section4.CanonicalOrderController
 warning: Section4/CanonicalOrderController.lean: imports `Mathlib.Data.Nat.Find` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [9584/9700] Replayed Section4.OrderControllerTuples
+⚠ [9583/9638] Replayed Section4.OrderControllerTuples
 warning: Section4/OrderControllerTuples.lean: imports `Mathlib.Data.Fintype.EquivFin` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [9587/9700] Replayed Section4.GammaFiniteDefinablePoints
+⚠ [9586/9638] Replayed Section4.GammaFiniteDefinablePoints
 warning: Section4/GammaFiniteDefinablePoints.lean: imports `Mathlib.Data.Finset.Max` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [9589/9700] Replayed Section4.FiniteOrderSamples
+⚠ [9588/9638] Replayed Section4.FiniteOrderSamples
 warning: Section4/FiniteOrderSamples.lean: imports `Mathlib.Data.Finset.Max` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [9593/9700] Replayed Section4.RVMaximumValueFibre
+⚠ [9592/9638] Replayed Section4.RVMaximumValueFibre
 warning: Section4/RVMaximumValueFibre.lean:45:19: `dif_neg` has been deprecated: Use `dite_eq_right` instead
 
 Hint: Replace the deprecated name:
   d̵i̵f̵_̵n̵e̵g̵d̲i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
-⚠ [9594/9700] Replayed Section9.FullRVValueFibre
+⚠ [9593/9638] Replayed Section9.FullRVValueFibre
 warning: Section9/FullRVValueFibre.lean:40:38: `if_false` has been deprecated: Use `ite_false` instead
 
 Hint: Replace the deprecated name:
@@ -6283,9 +6283,9 @@ warning: Section9/FullRVValueFibre.lean:42:18: `if_true` has been deprecated: Us
 
 Hint: Replace the deprecated name:
   i̵f̵_̵t̵r̵u̵e̵i̲t̲e̲_̲t̲r̲u̲e̲
-⚠ [9596/9700] Replayed Section4.ResiduePolynomialFunctions
+⚠ [9595/9638] Replayed Section4.ResiduePolynomialFunctions
 warning: Section4/ResiduePolynomialFunctions.lean: imports `Mathlib.Algebra.Polynomial.Roots` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [9597/9700] Replayed Section4.ResidueAlgebraicityForward
+⚠ [9596/9638] Replayed Section4.ResidueAlgebraicityForward
 warning: Section4/ResidueAlgebraicityForward.lean:61:2: Try this: 
   letI̵
 
@@ -6302,7 +6302,7 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9601/9700] Replayed Section4.Imported.PolynomialCoordinateBasis
+⚠ [9600/9638] Replayed Section4.Imported.PolynomialCoordinateBasis
 warning: Section4/Imported/PolynomialCoordinateBasis.lean: imports `Mathlib.RingTheory.AlgebraicIndependent.TranscendenceBasis` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section4/Imported/PolynomialCoordinateBasis.lean: imports `Mathlib.RingTheory.MvPolynomial.Ideal` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section4/Imported/PolynomialCoordinateBasis.lean: imports `Mathlib.RingTheory.Polynomial.Quotient` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
@@ -6314,13 +6314,13 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9602/9700] Replayed Section4.Imported.NoetherNormalizationTrdeg
+⚠ [9601/9638] Replayed Section4.Imported.NoetherNormalizationTrdeg
 warning: Section4/Imported/NoetherNormalizationTrdeg.lean: imports `Mathlib.RingTheory.Algebraic.Integral` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section4/Imported/NoetherNormalizationTrdeg.lean: imports `Mathlib.RingTheory.AlgebraicIndependent.TranscendenceBasis` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section4/Imported/NoetherNormalizationTrdeg.lean: imports `Mathlib.RingTheory.AlgebraicIndependent.Transcendental` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section4/Imported/NoetherNormalizationTrdeg.lean: imports `Mathlib.RingTheory.Localization.FractionRing` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section4/Imported/NoetherNormalizationTrdeg.lean: imports `Mathlib.RingTheory.NoetherNormalization` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [9603/9700] Replayed Section4.ResidueZariskiPrimeBound
+⚠ [9602/9638] Replayed Section4.ResidueZariskiPrimeBound
 warning: Section4/ResidueZariskiPrimeBound.lean: imports `Mathlib.RingTheory.Nullstellensatz` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section4/ResidueZariskiPrimeBound.lean:69:2: Try this: 
   letI̵
@@ -6330,7 +6330,7 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9604/9700] Replayed Section4.AlgebraicAutomorphisms
+⚠ [9603/9638] Replayed Section4.AlgebraicAutomorphisms
 warning: Section4/AlgebraicAutomorphisms.lean:28:18: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
 
 Hint: Replace the deprecated name:
@@ -6341,36 +6341,36 @@ consider restructuring your `variable` declarations so that the variables are no
   omit hM in theorem ...
 
 Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
-⚠ [9605/9700] Replayed Section4.NonalgebraicTypes
+⚠ [9604/9638] Replayed Section4.NonalgebraicTypes
 warning: Section4/NonalgebraicTypes.lean: imports `Mathlib.Data.Set.Finite.Lattice` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section4/NonalgebraicTypes.lean:72:17: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
 
 Hint: Replace the deprecated name:
   S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵S̲e̲t̲.̲m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
 warning: Section4/NonalgebraicTypes.lean:77:35: `Set.Infinite.diff` has been deprecated: Use `Set.Infinite.sdiff` instead
-⚠ [9606/9700] Replayed Section4.HomogeneousAvoidance
+⚠ [9605/9638] Replayed Section4.HomogeneousAvoidance
 warning: Section4/HomogeneousAvoidance.lean:27:13: `Set.mem_setOf_eq` has been deprecated: Use `Set.mem_ofPred_eq` instead
 
 Hint: Replace the deprecated name:
   S̵e̵t̵.̵m̵e̵m̵_̵s̵e̵t̵O̵f̵_̵e̵q̵S̲e̲t̲.̲m̲e̲m̲_̲o̲f̲P̲r̲e̲d̲_̲e̲q̲
-⚠ [9608/9700] Replayed Section4.RVParameterInvariance
+⚠ [9607/9638] Replayed Section4.RVParameterInvariance
 warning: Section4/RVParameterInvariance.lean:17:0: automatically included section variable(s) unused in theorem `SpecialTransformations.Section4.rvDim_extend_le`:
   hM
 consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
   omit hM in theorem ...
 
 Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
-⚠ [9609/9700] Replayed Section4.ResidueZariskiDensity
+⚠ [9608/9638] Replayed Section4.ResidueZariskiDensity
 warning: Section4/ResidueZariskiDensity.lean: imports `Mathlib.Algebra.MvPolynomial.Eval` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [9611/9700] Replayed Section4.Imported.IntegralKrullDimension
+⚠ [9610/9638] Replayed Section4.Imported.IntegralKrullDimension
 warning: Section4/Imported/IntegralKrullDimension.lean:60:20: `Ideal.IsIntegral.comap_lt_comap` has been deprecated: Use `Ideal.IsIntegral.under_lt_under` instead
 
 Hint: Replace the deprecated name:
   I̵d̵e̵a̵l̵.̵I̵s̵I̵n̵t̵e̵g̵r̵a̵l̵.̵c̵o̵m̵a̵p̵_̵l̵t̵_̵c̵o̵m̵a̵p̵I̲d̲e̲a̲l̲.̲I̲s̲I̲n̲t̲e̲g̲r̲a̲l̲.̲u̲n̲d̲e̲r̲_̲l̲t̲_̲u̲n̲d̲e̲r̲
-⚠ [9612/9700] Replayed Section4.AffineKrullDimension
+⚠ [9611/9638] Replayed Section4.AffineKrullDimension
 warning: Section4/AffineKrullDimension.lean: imports `Mathlib.RingTheory.KrullDimension.Polynomial` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section4/AffineKrullDimension.lean: imports `Mathlib.RingTheory.KrullDimension.Field` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
-⚠ [9613/9700] Replayed Section4.ZariskiPrimeBound
+⚠ [9612/9638] Replayed Section4.ZariskiPrimeBound
 warning: Section4/ZariskiPrimeBound.lean: imports `Mathlib.RingTheory.Nullstellensatz` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section4/ZariskiPrimeBound.lean:70:2: Try this: 
   letI̵
@@ -6380,7 +6380,7 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9614/9700] Replayed Section4.ZariskiDimensionUpper
+⚠ [9613/9638] Replayed Section4.ZariskiDimensionUpper
 warning: Section4/ZariskiDimensionUpper.lean: imports `Mathlib.RingTheory.KrullDimension.NonZeroDivisors` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section4/ZariskiDimensionUpper.lean:46:2: Try this: 
   letI̵
@@ -6390,7 +6390,7 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9615/9700] Replayed Section4.PolynomialSubringDimension
+⚠ [9614/9638] Replayed Section4.PolynomialSubringDimension
 warning: Section4/PolynomialSubringDimension.lean: imports `Mathlib.RingTheory.Ideal.Maximal` from package `mathlib`, which is designed for use with the module system; consider adding `module` to the start of this file
 warning: Section4/PolynomialSubringDimension.lean:29:2: Try this: 
   letI̵
@@ -6400,7 +6400,7 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9616/9700] Replayed Section4.ResidueZariskiComparison
+⚠ [9615/9638] Replayed Section4.ResidueZariskiComparison
 warning: Section4/ResidueZariskiComparison.lean:29:2: Try this: 
   letI̵
 
@@ -6409,14 +6409,14 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9621/9700] Replayed Section9.VolumePairMap
+⚠ [9620/9638] Replayed Section9.VolumePairMap
 warning: Section9/VolumePairMap.lean:20:8: automatically included section variable(s) unused in theorem `_private.Section9.VolumePairMap.0.SpecialTransformations.Section9.rvAppend_eq_productTuple`:
   [M ⊨ Axioms.ACVF]
 consider restructuring your `variable` declarations so that the variables are not in scope or explicitly omit them:
   omit [M ⊨ Axioms.ACVF] in theorem ...
 
 Note: This linter can be disabled with `set_option linter.unusedSectionVars false`
-⚠ [9623/9700] Replayed Section9.RVComparisonGenericLabels
+⚠ [9622/9638] Replayed Section9.RVComparisonGenericLabels
 warning: Section9/RVComparisonGenericLabels.lean:54:2: Try this: 
   letI̵
 
@@ -6433,12 +6433,12 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-⚠ [9624/9700] Replayed Section9.LiftJacobianDiscrepancy
+⚠ [9623/9638] Replayed Section9.LiftJacobianDiscrepancy
 warning: Section9/LiftJacobianDiscrepancy.lean:29:79: `Set.diff_subset` has been deprecated: Use `Set.sdiff_subset` instead
 
 Hint: Replace the deprecated name:
   Set.s̲diff_subset
-⚠ [9629/9700] Replayed StacksFrontier.RingTheory.Henselian.Henselization.Existence
+⚠ [9628/9638] Replayed StacksFrontier.RingTheory.Henselian.Henselization.Existence
 warning: Section9/VendoredStacks/StacksFrontier/RingTheory/Henselian/Henselization/Existence.lean:710:57: 'IsLocalRing.exists_henselization' already carries this reference; skipping duplicate.
 ⚠ [9638/9700] Replayed Section9.OrdinaryHenselization
 warning: Section9/OrdinaryHenselization.lean:17:2: Try this: 
@@ -7861,9 +7861,7 @@ The difference between `let` and `letI` is that `letI` inlines the value.
 But this is not relevant for proofs because of proof irrelevance.
 
 Note: This linter can be disabled with `set_option linter.style.haveILetI false`
-✔ [9688/9700] Built Section10.RVPreparationData (5.2s)
-✔ [9689/9700] Built Section10.WeightedZeroRepresentation (5.3s)
-⚠ [9690/9700] Built Section9.SpecialJacobian (5.4s)
+⚠ [9692/9700] Replayed Section9.SpecialJacobian
 warning: Section9/SpecialJacobian.lean:138:45: `if_pos` has been deprecated: Use `ite_eq_left` instead
 
 Hint: Replace the deprecated name:
@@ -7880,14 +7878,4 @@ warning: Section9/SpecialJacobian.lean:142:57: `if_neg` has been deprecated: Use
 
 Hint: Replace the deprecated name:
   i̵f̵_̵n̵e̵g̵i̲t̲e̲_̲e̲q̲_̲r̲i̲g̲h̲t̲
-✔ [9691/9700] Built Section10.MeasuredScissors (5.7s)
-✔ [9692/9700] Built Section9.SpecialJacobianGeneric (4.5s)
-✔ [9693/9700] Built Section10.WeightedZeroScissors (4.7s)
-✔ [9694/9700] Built Section10.WeightedZeroResults (3.0s)
-✔ [9695/9700] Built Section10.RVVolumeSurjectivity (4.9s)
-✔ [9696/9700] Built Section10.GammaVolumeSurjectivity (3.7s)
-✔ [9697/9700] Built Section10.MeasuredPositiveLift (3.8s)
-✔ [9698/9700] Built Section10.UnitVolume (3.7s)
-✔ [9699/9700] Built Section10.WeightedZeroUnit (3.7s)
-✔ [9700/9700] Built Section10.WeightedFormProducts (3.6s)
 Build completed successfully (9700 jobs).

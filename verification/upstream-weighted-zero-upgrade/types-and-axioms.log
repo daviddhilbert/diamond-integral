@@ -603,6 +603,623 @@ constructor:
 'DiamondIntegral.Section3.YinGammaGroundDegreeMeasuredLiftInput' depends on axioms: [propext,
  Classical.choice.{u},
  Quot.sound.{u}]
+@DiamondIntegral.Section3.completedMeasuredLiftInput : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      [inst_2 : CharZero.{0} (DiamondIntegral.Section2.VF M)] →
+        {G : Type} →
+          [inst_3 : LinearOrderedCommGroupWithZero.{0} G] →
+            [inst_4 : Valued.{0, 0} (DiamondIntegral.Section2.VF M) G] →
+              (C : SpecialTransformations.Section3.BaseContext M) →
+                (hc : CanonicalStructure.IsCanonical) →
+                  (B : DiamondIntegral.Section2.VFGeneratedFieldBase C.base) →
+                    (∀ (x y : DiamondIntegral.Section2.VF M),
+                        SpecialTransformations.Milestone0.VFValued.predV x y ↔
+                          LE.le.{0} (Valued.v.{0, 0} x) (Valued.v.{0, 0} y)) →
+                      DiamondIntegral.Section3.YinMeasuredLiftInput C hc B
+def DiamondIntegral.Section3.completedMeasuredLiftInput : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      [inst_2 : CharZero.{0} (DiamondIntegral.Section2.VF M)] →
+        {G : Type} →
+          [inst_3 : LinearOrderedCommGroupWithZero.{0} G] →
+            [inst_4 : Valued.{0, 0} (DiamondIntegral.Section2.VF M) G] →
+              (C : SpecialTransformations.Section3.BaseContext M) →
+                (hc : CanonicalStructure.IsCanonical) →
+                  (B : DiamondIntegral.Section2.VFGeneratedFieldBase C.base) →
+                    (∀ (x y : DiamondIntegral.Section2.VF M),
+                        SpecialTransformations.Milestone0.VFValued.predV x y ↔
+                          LE.le.{0} (Valued.v.{0, 0} x) (Valued.v.{0, 0} y)) →
+                      DiamondIntegral.Section3.YinMeasuredLiftInput C hc B :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+    [CharZero.{0} (DiamondIntegral.Section2.VF M)] {G} [LinearOrderedCommGroupWithZero.{0} G]
+    [Valued.{0, 0} (DiamondIntegral.Section2.VF M) G] C hc B hv =>
+  { lift := DiamondIntegral.Section3.completedMeasuredSemiringLift C hc B hv, lift_class := ⋯, surjective := ⋯,
+    kernel := ⋯ }
+'DiamondIntegral.Section3.completedMeasuredLiftInput' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@DiamondIntegral.Section3.completedDegreeMeasuredLiftInput : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      [inst_2 : CharZero.{0} (DiamondIntegral.Section2.VF M)] →
+        {G : Type} →
+          [inst_3 : LinearOrderedCommGroupWithZero.{0} G] →
+            [inst_4 : Valued.{0, 0} (DiamondIntegral.Section2.VF M) G] →
+              (C : SpecialTransformations.Section3.BaseContext M) →
+                (hc : CanonicalStructure.IsCanonical) →
+                  (B : DiamondIntegral.Section2.VFGeneratedFieldBase C.base) →
+                    (∀ (x y : DiamondIntegral.Section2.VF M),
+                        SpecialTransformations.Milestone0.VFValued.predV x y ↔
+                          LE.le.{0} (Valued.v.{0, 0} x) (Valued.v.{0, 0} y)) →
+                      DiamondIntegral.Section3.YinDegreeMeasuredLiftInput C hc B
+def DiamondIntegral.Section3.completedDegreeMeasuredLiftInput : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      [inst_2 : CharZero.{0} (DiamondIntegral.Section2.VF M)] →
+        {G : Type} →
+          [inst_3 : LinearOrderedCommGroupWithZero.{0} G] →
+            [inst_4 : Valued.{0, 0} (DiamondIntegral.Section2.VF M) G] →
+              (C : SpecialTransformations.Section3.BaseContext M) →
+                (hc : CanonicalStructure.IsCanonical) →
+                  (B : DiamondIntegral.Section2.VFGeneratedFieldBase C.base) →
+                    (∀ (x y : DiamondIntegral.Section2.VF M),
+                        SpecialTransformations.Milestone0.VFValued.predV x y ↔
+                          LE.le.{0} (Valued.v.{0, 0} x) (Valued.v.{0, 0} y)) →
+                      DiamondIntegral.Section3.YinDegreeMeasuredLiftInput C hc B :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+    [CharZero.{0} (DiamondIntegral.Section2.VF M)] {G} [LinearOrderedCommGroupWithZero.{0} G]
+    [Valued.{0, 0} (DiamondIntegral.Section2.VF M) G] C hc B hv =>
+  { lift := DiamondIntegral.Section3.completedMeasuredDegreeLift C hc B hv, lift_class := ⋯, surjective := ⋯,
+    kernel := ⋯ }
+'DiamondIntegral.Section3.completedDegreeMeasuredLiftInput' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section3.completedGammaGroundMeasuredLiftInput : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      [inst_2 : CharZero.{0} (DiamondIntegral.Section2.VF M)] →
+        {G : Type} →
+          [inst_3 : LinearOrderedCommGroupWithZero.{0} G] →
+            [inst_4 : Valued.{0, 0} (DiamondIntegral.Section2.VF M) G] →
+              (C : DiamondIntegral.Section3.GammaGroundContext M) →
+                (hc : CanonicalStructure.IsCanonical) →
+                  (hv :
+                      ∀ (x y : DiamondIntegral.Section2.VF M),
+                        SpecialTransformations.Milestone0.VFValued.predV x y ↔
+                          LE.le.{0} (Valued.v.{0, 0} x) (Valued.v.{0, 0} y)) →
+                    DiamondIntegral.Section3.YinGammaGroundMeasuredLiftInput C hc hv
+def DiamondIntegral.Section3.completedGammaGroundMeasuredLiftInput : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      [inst_2 : CharZero.{0} (DiamondIntegral.Section2.VF M)] →
+        {G : Type} →
+          [inst_3 : LinearOrderedCommGroupWithZero.{0} G] →
+            [inst_4 : Valued.{0, 0} (DiamondIntegral.Section2.VF M) G] →
+              (C : DiamondIntegral.Section3.GammaGroundContext M) →
+                (hc : CanonicalStructure.IsCanonical) →
+                  (hv :
+                      ∀ (x y : DiamondIntegral.Section2.VF M),
+                        SpecialTransformations.Milestone0.VFValued.predV x y ↔
+                          LE.le.{0} (Valued.v.{0, 0} x) (Valued.v.{0, 0} y)) →
+                    DiamondIntegral.Section3.YinGammaGroundMeasuredLiftInput C hc hv :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+    [CharZero.{0} (DiamondIntegral.Section2.VF M)] {G} [LinearOrderedCommGroupWithZero.{0} G]
+    [Valued.{0, 0} (DiamondIntegral.Section2.VF M) G] C hc hv =>
+  { lift := DiamondIntegral.Section3.gammaContextMeasuredSemiringLift C hc hv, lift_class := ⋯, surjective := ⋯,
+    kernel := ⋯ }
+'DiamondIntegral.Section3.completedGammaGroundMeasuredLiftInput' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section3.completedGammaGroundDegreeMeasuredLiftInput : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      [inst_2 : CharZero.{0} (DiamondIntegral.Section2.VF M)] →
+        {G : Type} →
+          [inst_3 : LinearOrderedCommGroupWithZero.{0} G] →
+            [inst_4 : Valued.{0, 0} (DiamondIntegral.Section2.VF M) G] →
+              (C : DiamondIntegral.Section3.GammaGroundContext M) →
+                (hc : CanonicalStructure.IsCanonical) →
+                  (hv :
+                      ∀ (x y : DiamondIntegral.Section2.VF M),
+                        SpecialTransformations.Milestone0.VFValued.predV x y ↔
+                          LE.le.{0} (Valued.v.{0, 0} x) (Valued.v.{0, 0} y)) →
+                    DiamondIntegral.Section3.YinGammaGroundDegreeMeasuredLiftInput C hc hv
+def DiamondIntegral.Section3.completedGammaGroundDegreeMeasuredLiftInput : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      [inst_2 : CharZero.{0} (DiamondIntegral.Section2.VF M)] →
+        {G : Type} →
+          [inst_3 : LinearOrderedCommGroupWithZero.{0} G] →
+            [inst_4 : Valued.{0, 0} (DiamondIntegral.Section2.VF M) G] →
+              (C : DiamondIntegral.Section3.GammaGroundContext M) →
+                (hc : CanonicalStructure.IsCanonical) →
+                  (hv :
+                      ∀ (x y : DiamondIntegral.Section2.VF M),
+                        SpecialTransformations.Milestone0.VFValued.predV x y ↔
+                          LE.le.{0} (Valued.v.{0, 0} x) (Valued.v.{0, 0} y)) →
+                    DiamondIntegral.Section3.YinGammaGroundDegreeMeasuredLiftInput C hc hv :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+    [CharZero.{0} (DiamondIntegral.Section2.VF M)] {G} [LinearOrderedCommGroupWithZero.{0} G]
+    [Valued.{0, 0} (DiamondIntegral.Section2.VF M) G] C hc hv =>
+  { lift := DiamondIntegral.Section3.gammaContextMeasuredDegreeLift C hc hv, lift_class := ⋯, surjective := ⋯,
+    kernel := ⋯ }
+'DiamondIntegral.Section3.completedGammaGroundDegreeMeasuredLiftInput' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section3.gammaContextMeasuredDegreeLift_positive_reverse_kernel : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  [inst_2 : CharZero.{0} (DiamondIntegral.Section2.VF M)] {G : Type} [inst_3 : LinearOrderedCommGroupWithZero.{0} G]
+  [inst_4 : Valued.{0, 0} (DiamondIntegral.Section2.VF M) G] (C : DiamondIntegral.Section3.GammaGroundContext M)
+  (hc : CanonicalStructure.IsCanonical)
+  (hv :
+    ∀ (x y : DiamondIntegral.Section2.VF M),
+      SpecialTransformations.Milestone0.VFValued.predV x y ↔ LE.le.{0} (Valued.v.{0, 0} x) (Valued.v.{0, 0} y))
+  (n : ℕ) {a b : DiamondIntegral.Section3.GammaGroundMeasuredRVKPlus hc C.base (HAdd.hAdd.{0, 0, 0} n 1)},
+  Eq.{1} ((DiamondIntegral.Section3.gammaContextMeasuredDegreeLift C hc hv (HAdd.hAdd.{0, 0, 0} n 1)) a)
+      ((DiamondIntegral.Section3.gammaContextMeasuredDegreeLift C hc hv (HAdd.hAdd.{0, 0, 0} n 1)) b) →
+    Eq.{1}
+      ((RingCon.mk'.{0} (DiamondIntegral.Section3.gammaGroundMeasuredRVSpecialCongruence hc C.base))
+        (DiamondIntegral.Section3.gammaGroundMeasuredRVKPlusToSemiring a))
+      ((RingCon.mk'.{0} (DiamondIntegral.Section3.gammaGroundMeasuredRVSpecialCongruence hc C.base))
+        (DiamondIntegral.Section3.gammaGroundMeasuredRVKPlusToSemiring b))
+theorem DiamondIntegral.Section3.gammaContextMeasuredDegreeLift_positive_reverse_kernel : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  [inst_2 : CharZero.{0} (DiamondIntegral.Section2.VF M)] {G : Type} [inst_3 : LinearOrderedCommGroupWithZero.{0} G]
+  [inst_4 : Valued.{0, 0} (DiamondIntegral.Section2.VF M) G] (C : DiamondIntegral.Section3.GammaGroundContext M)
+  (hc : CanonicalStructure.IsCanonical)
+  (hv :
+    ∀ (x y : DiamondIntegral.Section2.VF M),
+      SpecialTransformations.Milestone0.VFValued.predV x y ↔ LE.le.{0} (Valued.v.{0, 0} x) (Valued.v.{0, 0} y))
+  (n : ℕ) {a b : DiamondIntegral.Section3.GammaGroundMeasuredRVKPlus hc C.base (HAdd.hAdd.{0, 0, 0} n 1)},
+  Eq.{1} ((DiamondIntegral.Section3.gammaContextMeasuredDegreeLift C hc hv (HAdd.hAdd.{0, 0, 0} n 1)) a)
+      ((DiamondIntegral.Section3.gammaContextMeasuredDegreeLift C hc hv (HAdd.hAdd.{0, 0, 0} n 1)) b) →
+    Eq.{1}
+      ((RingCon.mk'.{0} (DiamondIntegral.Section3.gammaGroundMeasuredRVSpecialCongruence hc C.base))
+        (DiamondIntegral.Section3.gammaGroundMeasuredRVKPlusToSemiring a))
+      ((RingCon.mk'.{0} (DiamondIntegral.Section3.gammaGroundMeasuredRVSpecialCongruence hc C.base))
+        (DiamondIntegral.Section3.gammaGroundMeasuredRVKPlusToSemiring b)) :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+    [CharZero.{0} (DiamondIntegral.Section2.VF M)] {G} [LinearOrderedCommGroupWithZero.{0} G]
+    [Valued.{0, 0} (DiamondIntegral.Section2.VF M) G] C hc hv n {a b} h =>
+  Exists.casesOn.{1} (DiamondIntegral.Section3.gammaGroundMeasuredRVClass_surjective a) fun U h_1 =>
+    Eq.ndrec.{0, 1} (motive := fun {a} =>
+      Eq.{1} ((DiamondIntegral.Section3.gammaContextMeasuredDegreeLift C hc hv (HAdd.hAdd.{0, 0, 0} n 1)) a)
+          ((DiamondIntegral.Section3.gammaContextMeasuredDegreeLift C hc hv (HAdd.hAdd.{0, 0, 0} n 1)) b) →
+        Eq.{1}
+          ((RingCon.mk'.{0} (DiamondIntegral.Section3.gammaGroundMeasuredRVSpecialCongruence hc C.base))
+            (DiamondIntegral.Section3.gammaGroundMeasuredRVKPlusToSemiring a))
+          ((RingCon.mk'.{0} (DiamondIntegral.Section3.gammaGroundMeasuredRVSpecialCongruence hc C.base))
+            (DiamondIntegral.Section3.gammaGroundMeasuredRVKPlusToSemiring b)))
+      (fun h =>
+        Exists.casesOn.{1} (DiamondIntegral.Section3.gammaGroundMeasuredRVClass_surjective b) fun V h_2 =>
+          Eq.ndrec.{0, 1} (motive := fun {b} =>
+            Eq.{1}
+                ((DiamondIntegral.Section3.gammaContextMeasuredDegreeLift C hc hv (HAdd.hAdd.{0, 0, 0} n 1))
+                  (DiamondIntegral.Section3.gammaGroundMeasuredRVClass U))
+                ((DiamondIntegral.Section3.gammaContextMeasuredDegreeLift C hc hv (HAdd.hAdd.{0, 0, 0} n 1)) b) →
+              Eq.{1}
+                ((RingCon.mk'.{0} (DiamondIntegral.Section3.gammaGroundMeasuredRVSpecialCongruence hc C.base))
+                  (DiamondIntegral.Section3.gammaGroundMeasuredRVKPlusToSemiring
+                    (DiamondIntegral.Section3.gammaGroundMeasuredRVClass U)))
+                ((RingCon.mk'.{0} (DiamondIntegral.Section3.gammaGroundMeasuredRVSpecialCongruence hc C.base))
+                  (DiamondIntegral.Section3.gammaGroundMeasuredRVKPlusToSemiring b)))
+            (fun h =>
+              have hU :=
+                DiamondIntegral.Section3.gammaMeasuredClosureRVClassLift_class C.uncountable C.saturated C.model00
+                  C.small_real C.small_gamma
+                  (DiamondIntegral.Section2.VFGeneratedFieldBase.gamma_closure_generated C.fieldBase C.base.gamma) hv U;
+              have hV :=
+                DiamondIntegral.Section3.gammaMeasuredClosureRVClassLift_class C.uncountable C.saturated C.model00
+                  C.small_real C.small_gamma
+                  (DiamondIntegral.Section2.VFGeneratedFieldBase.gamma_closure_generated C.fieldBase C.base.gamma) hv V;
+              have hLift := Eq.trans.{1} (Eq.symm.{1} hU) (Eq.trans.{1} h hV);
+              let P := SpecialTransformations.Section3.GammaParameters.closureBase C.base;
+              let R := DiamondIntegral.Section3.gammaGroundContractionContext C;
+              let hReal := (SpecialTransformations.Section3.GammaParameters.subset_closureBase C.base).left;
+              let hGamma := (SpecialTransformations.Section3.GammaParameters.subset_closureBase C.base).right;
+              let hNames := DiamondIntegral.Section3.gammaGroundContractionContext_contains C;
+              have hPR := fun x hx => hNames (Or.inl hx);
+              have hgP :=
+                IntegrationInACVF.Section6.closureBase_gamma_small C.uncountable C.base C.small_real C.small_gamma;
+              let hGenerated :=
+                DiamondIntegral.Section2.VFGeneratedFieldBase.gamma_closure_generated C.fieldBase C.base.gamma;
+              Exists.casesOn.{1} (DiamondIntegral.Section3.GammaGroundContext.exists_positive_gamma C) fun δ h =>
+                And.casesOn.{0} h fun hδ hδ1 =>
+                  let χ :=
+                    DiamondIntegral.Section3.gammaMonotoneContractionDetector hReal hGamma R hPR hv hgP hNames
+                      hGenerated δ (hGamma hδ) hδ1;
+                  have hχU :=
+                    DiamondIntegral.Section3.gammaMonotoneContractionDetector_lift_class hReal hGamma R hPR hv hgP
+                      hNames hGenerated δ (hGamma hδ) hδ1 U;
+                  have hχV :=
+                    DiamondIntegral.Section3.gammaMonotoneContractionDetector_lift_class hReal hGamma R hPR hv hgP
+                      hNames hGenerated δ (hGamma hδ) hδ1 V;
+                  have hValue := Eq.trans.{1} (Eq.trans.{1} (Eq.symm.{1} hχU) (congrArg.{1, 1} (⇑χ) hLift)) hχV;
+                  have hOriginal :=
+                    DiamondIntegral.Section3.gammaPrincipal_monoBase_reflect hReal hGamma
+                      (IntegrationInACVF.Section6.closureBaseReduction C.base) (LT.lt.le.{1} C.uncountable) C.saturated
+                      C.model00
+                      (IntegrationInACVF.Section6.closureBase_real_small C.uncountable C.base C.small_real
+                        C.small_gamma)
+                      C.small_real hValue;
+                  Eq.mpr.{0}
+                    (id.{0}
+                      (congrArg.{1, 1}
+                        (fun _a =>
+                          Eq.{1}
+                            ((RingCon.mk'.{0}
+                                (DiamondIntegral.Section3.gammaGroundMeasuredRVSpecialCongruence hc C.base))
+                              _a)
+                            ((RingCon.mk'.{0}
+                                (DiamondIntegral.Section3.gammaGroundMeasuredRVSpecialCongruence hc C.base))
+                              (DiamondIntegral.Section3.gammaGroundMeasuredRVKPlusToSemiring
+                                (DiamondIntegral.Section3.gammaGroundMeasuredRVClass V))))
+                        (DiamondIntegral.Section3.gammaGroundMeasuredRVKPlusToSemiring_class U)))
+                    (Eq.mpr.{0}
+                      (id.{0}
+                        (congrArg.{1, 1}
+                          (fun _a =>
+                            Eq.{1}
+                              ((RingCon.mk'.{0}
+                                  (DiamondIntegral.Section3.gammaGroundMeasuredRVSpecialCongruence hc C.base))
+                                (DiamondIntegral.Section3.gammaGroundMeasuredRVSemiringClass U))
+                              ((RingCon.mk'.{0}
+                                  (DiamondIntegral.Section3.gammaGroundMeasuredRVSpecialCongruence hc C.base))
+                                _a))
+                          (DiamondIntegral.Section3.gammaGroundMeasuredRVKPlusToSemiring_class V)))
+                      hOriginal))
+            h_2 h)
+      h_1 h
+'DiamondIntegral.Section3.gammaContextMeasuredDegreeLift_positive_reverse_kernel' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section3.gammaContextMeasuredDegreeLift_kernel : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  [inst_2 : CharZero.{0} (DiamondIntegral.Section2.VF M)] {G : Type} [inst_3 : LinearOrderedCommGroupWithZero.{0} G]
+  [inst_4 : Valued.{0, 0} (DiamondIntegral.Section2.VF M) G] (C : DiamondIntegral.Section3.GammaGroundContext M)
+  (hc : CanonicalStructure.IsCanonical)
+  (hv :
+    ∀ (x y : DiamondIntegral.Section2.VF M),
+      SpecialTransformations.Milestone0.VFValued.predV x y ↔ LE.le.{0} (Valued.v.{0, 0} x) (Valued.v.{0, 0} y))
+  (k : ℕ),
+  Eq.{1} (DiamondIntegral.Section3.gammaGroundMeasuredRVFixedSpecialCongruence C hc k)
+    (AddCon.ker.{0, 0, 0} (DiamondIntegral.Section3.gammaContextMeasuredDegreeLift C hc hv k))
+theorem DiamondIntegral.Section3.gammaContextMeasuredDegreeLift_kernel : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  [inst_2 : CharZero.{0} (DiamondIntegral.Section2.VF M)] {G : Type} [inst_3 : LinearOrderedCommGroupWithZero.{0} G]
+  [inst_4 : Valued.{0, 0} (DiamondIntegral.Section2.VF M) G] (C : DiamondIntegral.Section3.GammaGroundContext M)
+  (hc : CanonicalStructure.IsCanonical)
+  (hv :
+    ∀ (x y : DiamondIntegral.Section2.VF M),
+      SpecialTransformations.Milestone0.VFValued.predV x y ↔ LE.le.{0} (Valued.v.{0, 0} x) (Valued.v.{0, 0} y))
+  (k : ℕ),
+  Eq.{1} (DiamondIntegral.Section3.gammaGroundMeasuredRVFixedSpecialCongruence C hc k)
+    (AddCon.ker.{0, 0, 0} (DiamondIntegral.Section3.gammaContextMeasuredDegreeLift C hc hv k)) :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+    [CharZero.{0} (DiamondIntegral.Section2.VF M)] {G} [LinearOrderedCommGroupWithZero.{0} G]
+    [Valued.{0, 0} (DiamondIntegral.Section2.VF M) G] C hc hv k =>
+  Nat.casesAuxOn.{0} (motive := fun a =>
+    Eq.{1} k a →
+      Eq.{1} (DiamondIntegral.Section3.gammaGroundMeasuredRVFixedSpecialCongruence C hc k)
+        (AddCon.ker.{0, 0, 0} (DiamondIntegral.Section3.gammaContextMeasuredDegreeLift C hc hv k)))
+    k
+    (fun h =>
+      Eq.ndrec.{0, 1} (DiamondIntegral.Section3.gammaContextMeasuredDegreeLift_zero_kernel C hc hv) (Eq.symm.{1} h))
+    (fun n h =>
+      Eq.ndrec.{0, 1}
+        (AddCon.ext.{0} fun a b =>
+          id.{0}
+            {
+              mp := fun h =>
+                Exists.casesOn.{1} (DiamondIntegral.Section3.gammaGroundMeasuredRVClass_surjective a) fun U h_1 =>
+                  Eq.ndrec.{0, 1} (motive := fun a =>
+                    Eq.{1}
+                        ((DiamondIntegral.Section3.gammaGroundMeasuredRVFixedSpecialHom C hc (HAdd.hAdd.{0, 0, 0} n 1))
+                          a)
+                        ((DiamondIntegral.Section3.gammaGroundMeasuredRVFixedSpecialHom C hc (HAdd.hAdd.{0, 0, 0} n 1))
+                          b) →
+                      Eq.{1}
+                        ((DiamondIntegral.Section3.gammaContextMeasuredDegreeLift C hc hv (HAdd.hAdd.{0, 0, 0} n 1)) a)
+                        ((DiamondIntegral.Section3.gammaContextMeasuredDegreeLift C hc hv (HAdd.hAdd.{0, 0, 0} n 1)) b))
+                    (fun h =>
+                      Exists.casesOn.{1} (DiamondIntegral.Section3.gammaGroundMeasuredRVClass_surjective b) fun V h_2 =>
+                        Eq.ndrec.{0, 1} (motive := fun b =>
+                          Eq.{1}
+                              ((DiamondIntegral.Section3.gammaGroundMeasuredRVFixedSpecialHom C hc
+                                  (HAdd.hAdd.{0, 0, 0} n 1))
+                                (DiamondIntegral.Section3.gammaGroundMeasuredRVClass U))
+                              ((DiamondIntegral.Section3.gammaGroundMeasuredRVFixedSpecialHom C hc
+                                  (HAdd.hAdd.{0, 0, 0} n 1))
+                                b) →
+                            Eq.{1}
+                              ((DiamondIntegral.Section3.gammaContextMeasuredDegreeLift C hc hv
+                                  (HAdd.hAdd.{0, 0, 0} n 1))
+                                (DiamondIntegral.Section3.gammaGroundMeasuredRVClass U))
+                              ((DiamondIntegral.Section3.gammaContextMeasuredDegreeLift C hc hv
+                                  (HAdd.hAdd.{0, 0, 0} n 1))
+                                b))
+                          (fun h =>
+                            id.{0}
+                              (fun h =>
+                                DiamondIntegral.Section3.gammaPrincipal_preserves_fixed_degree_additive.{0}
+                                  (LT.lt.le.{1} C.uncountable) C.saturated C.model00 C.small_real
+                                  (DiamondIntegral.Section3.gammaContextMeasuredDegreeLift C hc hv
+                                    (HAdd.hAdd.{0, 0, 0} n 1))
+                                  (DiamondIntegral.Section3.gammaContextMeasuredDegreeLift_elementary C hc hv n)
+                                  (Eq.mp.{0}
+                                    (congrArg.{1, 1}
+                                      (fun _a =>
+                                        Eq.{1}
+                                          ((RingCon.mk'.{0}
+                                              (DiamondIntegral.Section3.gammaGroundMeasuredRVSpecialCongruence hc
+                                                C.base))
+                                            (DiamondIntegral.Section3.gammaGroundMeasuredRVSemiringClass U))
+                                          ((RingCon.mk'.{0}
+                                              (DiamondIntegral.Section3.gammaGroundMeasuredRVSpecialCongruence hc
+                                                C.base))
+                                            _a))
+                                      (DiamondIntegral.Section3.gammaGroundMeasuredRVKPlusToSemiring_class V))
+                                    (Eq.mp.{0}
+                                      (congrArg.{1, 1}
+                                        (fun _a =>
+                                          Eq.{1}
+                                            ((RingCon.mk'.{0}
+                                                (DiamondIntegral.Section3.gammaGroundMeasuredRVSpecialCongruence hc
+                                                  C.base))
+                                              _a)
+                                            ((RingCon.mk'.{0}
+                                                (DiamondIntegral.Section3.gammaGroundMeasuredRVSpecialCongruence hc
+                                                  C.base))
+                                              (DiamondIntegral.Section3.gammaGroundMeasuredRVKPlusToSemiring
+                                                (DiamondIntegral.Section3.gammaGroundMeasuredRVClass V))))
+                                        (DiamondIntegral.Section3.gammaGroundMeasuredRVKPlusToSemiring_class U))
+                                      h)))
+                              h)
+                          h_2 h)
+                    h_1 h,
+              mpr := DiamondIntegral.Section3.gammaContextMeasuredDegreeLift_positive_reverse_kernel C hc hv n })
+        (Eq.symm.{1} h))
+    (Eq.refl.{1} k)
+'DiamondIntegral.Section3.gammaContextMeasuredDegreeLift_kernel' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section3.gammaContextMeasuredSemiringLift_kernel : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  [inst_2 : CharZero.{0} (DiamondIntegral.Section2.VF M)] {G : Type} [inst_3 : LinearOrderedCommGroupWithZero.{0} G]
+  [inst_4 : Valued.{0, 0} (DiamondIntegral.Section2.VF M) G] (C : DiamondIntegral.Section3.GammaGroundContext M)
+  (hc : CanonicalStructure.IsCanonical)
+  (hv :
+    ∀ (x y : DiamondIntegral.Section2.VF M),
+      SpecialTransformations.Milestone0.VFValued.predV x y ↔ LE.le.{0} (Valued.v.{0, 0} x) (Valued.v.{0, 0} y)),
+  Eq.{1} (DiamondIntegral.Section3.gammaGroundMeasuredRVSpecialCongruence hc C.base)
+    (RingCon.ker.{0, 0} (DiamondIntegral.Section3.gammaContextMeasuredSemiringLift C hc hv))
+theorem DiamondIntegral.Section3.gammaContextMeasuredSemiringLift_kernel : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  [inst_2 : CharZero.{0} (DiamondIntegral.Section2.VF M)] {G : Type} [inst_3 : LinearOrderedCommGroupWithZero.{0} G]
+  [inst_4 : Valued.{0, 0} (DiamondIntegral.Section2.VF M) G] (C : DiamondIntegral.Section3.GammaGroundContext M)
+  (hc : CanonicalStructure.IsCanonical)
+  (hv :
+    ∀ (x y : DiamondIntegral.Section2.VF M),
+      SpecialTransformations.Milestone0.VFValued.predV x y ↔ LE.le.{0} (Valued.v.{0, 0} x) (Valued.v.{0, 0} y)),
+  Eq.{1} (DiamondIntegral.Section3.gammaGroundMeasuredRVSpecialCongruence hc C.base)
+    (RingCon.ker.{0, 0} (DiamondIntegral.Section3.gammaContextMeasuredSemiringLift C hc hv)) :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+    [CharZero.{0} (DiamondIntegral.Section2.VF M)] {G} [LinearOrderedCommGroupWithZero.{0} G]
+    [Valued.{0, 0} (DiamondIntegral.Section2.VF M) G] C hc hv =>
+  le_antisymm.{0} (DiamondIntegral.Section3.gammaMeasuredSpecialCongruence_le_lift_kernel C hc hv) fun ⦃a b⦄ h =>
+    (RingCon.eq.{0} (DiamondIntegral.Section3.gammaGroundMeasuredRVSpecialCongruence hc C.base)).mp
+      (have hComp := DiamondIntegral.Section3.gammaCompletedSemiringDetector_lift C hc hv;
+      have hA := RingHom.congr_fun.{0, 0} hComp a;
+      have hB := RingHom.congr_fun.{0, 0} hComp b;
+      Eq.trans.{1} (Eq.symm.{1} hA)
+        (Eq.trans.{1} (congrArg.{1, 1} (⇑(DiamondIntegral.Section3.gammaCompletedSemiringDetector C hc hv)) h) hB))
+'DiamondIntegral.Section3.gammaContextMeasuredSemiringLift_kernel' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section3.completedMeasuredDegreeLift_kernel : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  [inst_2 : CharZero.{0} (DiamondIntegral.Section2.VF M)] {G : Type} [inst_3 : LinearOrderedCommGroupWithZero.{0} G]
+  [inst_4 : Valued.{0, 0} (DiamondIntegral.Section2.VF M) G] (C : SpecialTransformations.Section3.BaseContext M)
+  (hc : CanonicalStructure.IsCanonical) (B : DiamondIntegral.Section2.VFGeneratedFieldBase C.base)
+  (hv :
+    ∀ (x y : DiamondIntegral.Section2.VF M),
+      SpecialTransformations.Milestone0.VFValued.predV x y ↔ LE.le.{0} (Valued.v.{0, 0} x) (Valued.v.{0, 0} y))
+  (k : ℕ),
+  Eq.{1} (DiamondIntegral.Section3.measuredRVFixedSpecialCongruence C hc k)
+    (AddCon.ker.{0, 0, 0} (DiamondIntegral.Section3.completedMeasuredDegreeLift C hc B hv k))
+theorem DiamondIntegral.Section3.completedMeasuredDegreeLift_kernel : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  [inst_2 : CharZero.{0} (DiamondIntegral.Section2.VF M)] {G : Type} [inst_3 : LinearOrderedCommGroupWithZero.{0} G]
+  [inst_4 : Valued.{0, 0} (DiamondIntegral.Section2.VF M) G] (C : SpecialTransformations.Section3.BaseContext M)
+  (hc : CanonicalStructure.IsCanonical) (B : DiamondIntegral.Section2.VFGeneratedFieldBase C.base)
+  (hv :
+    ∀ (x y : DiamondIntegral.Section2.VF M),
+      SpecialTransformations.Milestone0.VFValued.predV x y ↔ LE.le.{0} (Valued.v.{0, 0} x) (Valued.v.{0, 0} y))
+  (k : ℕ),
+  Eq.{1} (DiamondIntegral.Section3.measuredRVFixedSpecialCongruence C hc k)
+    (AddCon.ker.{0, 0, 0} (DiamondIntegral.Section3.completedMeasuredDegreeLift C hc B hv k)) :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+    [CharZero.{0} (DiamondIntegral.Section2.VF M)] {G} [LinearOrderedCommGroupWithZero.{0} G]
+    [Valued.{0, 0} (DiamondIntegral.Section2.VF M) G] C hc B hv k =>
+  have hRel := fun a b =>
+    id.{0}
+      (id.{0}
+        (Eq.mpr.{0}
+          (id.{0}
+            (congrArg.{1, 1}
+              (fun _a =>
+                Eq.{1}
+                    ((RingCon.mk'.{0} (DiamondIntegral.Section3.measuredRVSpecialCongruence hc ↑C.base))
+                      ((DiamondIntegral.Section3.measuredRVKPlusToSemiring hc) a))
+                    ((RingCon.mk'.{0} (DiamondIntegral.Section3.measuredRVSpecialCongruence hc ↑C.base))
+                      ((DiamondIntegral.Section3.measuredRVKPlusToSemiring hc) b)) ↔
+                  Eq.{1}
+                    ((RingCon.mk'.{0}
+                        (DiamondIntegral.Section3.gammaGroundMeasuredRVSpecialCongruence hc
+                          (DiamondIntegral.Section3.measuredRealGroundContext C B).base))
+                      _a)
+                    ((RingCon.mk'.{0}
+                        (DiamondIntegral.Section3.gammaGroundMeasuredRVSpecialCongruence hc
+                          (DiamondIntegral.Section3.measuredRealGroundContext C B).base))
+                      (DiamondIntegral.Section3.gammaGroundMeasuredRVKPlusToSemiring
+                        ((DiamondIntegral.Section3.MeasuredRealGround.rvDegreeFromReal C hc B k) b))))
+              (Eq.symm.{1} (DiamondIntegral.Section3.MeasuredRealGround.rvSemiringFromReal_fixed C hc B k a))))
+          (Eq.mpr.{0}
+            (id.{0}
+              (congrArg.{1, 1}
+                (fun _a =>
+                  Eq.{1}
+                      ((RingCon.mk'.{0} (DiamondIntegral.Section3.measuredRVSpecialCongruence hc ↑C.base))
+                        ((DiamondIntegral.Section3.measuredRVKPlusToSemiring hc) a))
+                      ((RingCon.mk'.{0} (DiamondIntegral.Section3.measuredRVSpecialCongruence hc ↑C.base))
+                        ((DiamondIntegral.Section3.measuredRVKPlusToSemiring hc) b)) ↔
+                    Eq.{1}
+                      ((RingCon.mk'.{0}
+                          (DiamondIntegral.Section3.gammaGroundMeasuredRVSpecialCongruence hc
+                            (DiamondIntegral.Section3.measuredRealGroundContext C B).base))
+                        ((DiamondIntegral.Section3.MeasuredRealGround.rvSemiringFromReal C hc B)
+                          ((DiamondIntegral.Section3.measuredRVKPlusToSemiring hc) a)))
+                      ((RingCon.mk'.{0}
+                          (DiamondIntegral.Section3.gammaGroundMeasuredRVSpecialCongruence hc
+                            (DiamondIntegral.Section3.measuredRealGroundContext C B).base))
+                        _a))
+                (Eq.symm.{1} (DiamondIntegral.Section3.MeasuredRealGround.rvSemiringFromReal_fixed C hc B k b))))
+            (Iff.trans (RingCon.eq.{0} (DiamondIntegral.Section3.measuredRVSpecialCongruence hc ↑C.base))
+              (Iff.trans
+                (Iff.symm
+                  (DiamondIntegral.Section3.MeasuredRealGround.rvSpecial_fromReal_iff C hc B
+                    ((DiamondIntegral.Section3.measuredRVKPlusToSemiring hc) a)
+                    ((DiamondIntegral.Section3.measuredRVKPlusToSemiring hc) b)))
+                (Iff.symm
+                  (RingCon.eq.{0}
+                    (DiamondIntegral.Section3.gammaGroundMeasuredRVSpecialCongruence hc
+                      (DiamondIntegral.Section3.measuredRealGroundContext C B).base))))))));
+  AddCon.ext.{0} fun a b =>
+    Eq.mpr.{0}
+      (id.{0}
+        (congrArg.{1, 1}
+          (fun _a => _a ↔ (AddCon.ker.{0, 0, 0} (DiamondIntegral.Section3.completedMeasuredDegreeLift C hc B hv k)) a b)
+          (propext (hRel a b))))
+      (Eq.mpr.{0}
+        (id.{0}
+          (congrArg.{1, 1}
+            (fun _a =>
+              _a ((DiamondIntegral.Section3.MeasuredRealGround.rvDegreeFromReal C hc B k) a)
+                  ((DiamondIntegral.Section3.MeasuredRealGround.rvDegreeFromReal C hc B k) b) ↔
+                (AddCon.ker.{0, 0, 0} (DiamondIntegral.Section3.completedMeasuredDegreeLift C hc B hv k)) a b)
+            (DiamondIntegral.Section3.gammaContextMeasuredDegreeLift_kernel
+              (DiamondIntegral.Section3.measuredRealGroundContext C B) hc hv k)))
+        (id.{0}
+          { mp := congrArg.{1, 1} ⇑(DiamondIntegral.Section3.MeasuredRealGround.vfDegreeToReal C hc B hv k),
+            mpr := fun h =>
+              Eq.mp.{0}
+                (congr.{1, 1}
+                  (congrArg.{1, 1} Eq.{1}
+                    (DiamondIntegral.Section3.MeasuredRealGround.vfDegreeFromReal_toReal C hc B hv k
+                      ((DiamondIntegral.Section3.gammaContextMeasuredDegreeLift
+                          (DiamondIntegral.Section3.measuredRealGroundContext C B) hc hv k)
+                        ((DiamondIntegral.Section3.MeasuredRealGround.rvDegreeFromReal C hc B k) a))))
+                  (DiamondIntegral.Section3.MeasuredRealGround.vfDegreeFromReal_toReal C hc B hv k
+                    ((DiamondIntegral.Section3.gammaContextMeasuredDegreeLift
+                        (DiamondIntegral.Section3.measuredRealGroundContext C B) hc hv k)
+                      ((DiamondIntegral.Section3.MeasuredRealGround.rvDegreeFromReal C hc B k) b))))
+                (congrArg.{1, 1} (⇑(DiamondIntegral.Section3.MeasuredRealGround.vfDegreeFromReal C hc B hv k)) h) }))
+'DiamondIntegral.Section3.completedMeasuredDegreeLift_kernel' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section3.completedMeasuredSemiringLift_kernel : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  [inst_2 : CharZero.{0} (DiamondIntegral.Section2.VF M)] {G : Type} [inst_3 : LinearOrderedCommGroupWithZero.{0} G]
+  [inst_4 : Valued.{0, 0} (DiamondIntegral.Section2.VF M) G] (C : SpecialTransformations.Section3.BaseContext M)
+  (hc : CanonicalStructure.IsCanonical) (B : DiamondIntegral.Section2.VFGeneratedFieldBase C.base)
+  (hv :
+    ∀ (x y : DiamondIntegral.Section2.VF M),
+      SpecialTransformations.Milestone0.VFValued.predV x y ↔ LE.le.{0} (Valued.v.{0, 0} x) (Valued.v.{0, 0} y)),
+  Eq.{1} (DiamondIntegral.Section3.measuredRVSpecialCongruence hc ↑C.base)
+    (RingCon.ker.{0, 0} (DiamondIntegral.Section3.completedMeasuredSemiringLift C hc B hv))
+theorem DiamondIntegral.Section3.completedMeasuredSemiringLift_kernel : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  [inst_2 : CharZero.{0} (DiamondIntegral.Section2.VF M)] {G : Type} [inst_3 : LinearOrderedCommGroupWithZero.{0} G]
+  [inst_4 : Valued.{0, 0} (DiamondIntegral.Section2.VF M) G] (C : SpecialTransformations.Section3.BaseContext M)
+  (hc : CanonicalStructure.IsCanonical) (B : DiamondIntegral.Section2.VFGeneratedFieldBase C.base)
+  (hv :
+    ∀ (x y : DiamondIntegral.Section2.VF M),
+      SpecialTransformations.Milestone0.VFValued.predV x y ↔ LE.le.{0} (Valued.v.{0, 0} x) (Valued.v.{0, 0} y)),
+  Eq.{1} (DiamondIntegral.Section3.measuredRVSpecialCongruence hc ↑C.base)
+    (RingCon.ker.{0, 0} (DiamondIntegral.Section3.completedMeasuredSemiringLift C hc B hv)) :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+    [CharZero.{0} (DiamondIntegral.Section2.VF M)] {G} [LinearOrderedCommGroupWithZero.{0} G]
+    [Valued.{0, 0} (DiamondIntegral.Section2.VF M) G] C hc B hv =>
+  RingCon.ext.{0} fun a b =>
+    id.{0}
+      (Eq.mpr.{0}
+        (id.{0}
+          (congrArg.{1, 1}
+            (fun _a =>
+              _a ↔
+                Eq.{1}
+                  ((DiamondIntegral.Section3.MeasuredRealGround.vfSemiringToReal C hc B hv)
+                    ((DiamondIntegral.Section3.gammaContextMeasuredSemiringLift
+                        (DiamondIntegral.Section3.measuredRealGroundContext C B) hc hv)
+                      ((DiamondIntegral.Section3.MeasuredRealGround.rvSemiringFromReal C hc B) a)))
+                  ((DiamondIntegral.Section3.MeasuredRealGround.vfSemiringToReal C hc B hv)
+                    ((DiamondIntegral.Section3.gammaContextMeasuredSemiringLift
+                        (DiamondIntegral.Section3.measuredRealGroundContext C B) hc hv)
+                      ((DiamondIntegral.Section3.MeasuredRealGround.rvSemiringFromReal C hc B) b))))
+            (Eq.symm.{1} (propext (DiamondIntegral.Section3.MeasuredRealGround.rvSpecial_fromReal_iff C hc B a b)))))
+        (Eq.mpr.{0}
+          (id.{0}
+            (congrArg.{1, 1}
+              (fun _a =>
+                _a ((DiamondIntegral.Section3.MeasuredRealGround.rvSemiringFromReal C hc B) a)
+                    ((DiamondIntegral.Section3.MeasuredRealGround.rvSemiringFromReal C hc B) b) ↔
+                  Eq.{1}
+                    ((DiamondIntegral.Section3.MeasuredRealGround.vfSemiringToReal C hc B hv)
+                      ((DiamondIntegral.Section3.gammaContextMeasuredSemiringLift
+                          (DiamondIntegral.Section3.measuredRealGroundContext C B) hc hv)
+                        ((DiamondIntegral.Section3.MeasuredRealGround.rvSemiringFromReal C hc B) a)))
+                    ((DiamondIntegral.Section3.MeasuredRealGround.vfSemiringToReal C hc B hv)
+                      ((DiamondIntegral.Section3.gammaContextMeasuredSemiringLift
+                          (DiamondIntegral.Section3.measuredRealGroundContext C B) hc hv)
+                        ((DiamondIntegral.Section3.MeasuredRealGround.rvSemiringFromReal C hc B) b))))
+              (DiamondIntegral.Section3.gammaContextMeasuredSemiringLift_kernel
+                (DiamondIntegral.Section3.measuredRealGroundContext C B) hc hv)))
+          (id.{0}
+            { mp := congrArg.{1, 1} ⇑(DiamondIntegral.Section3.MeasuredRealGround.vfSemiringToReal C hc B hv),
+              mpr := fun h =>
+                Eq.mp.{0}
+                  (congr.{1, 1}
+                    (congrArg.{1, 1} Eq.{1}
+                      (DiamondIntegral.Section3.MeasuredRealGround.vfSemiringFromReal_toReal C hc B hv
+                        ((DiamondIntegral.Section3.gammaContextMeasuredSemiringLift
+                            (DiamondIntegral.Section3.measuredRealGroundContext C B) hc hv)
+                          ((DiamondIntegral.Section3.MeasuredRealGround.rvSemiringFromReal C hc B) a))))
+                    (DiamondIntegral.Section3.MeasuredRealGround.vfSemiringFromReal_toReal C hc B hv
+                      ((DiamondIntegral.Section3.gammaContextMeasuredSemiringLift
+                          (DiamondIntegral.Section3.measuredRealGroundContext C B) hc hv)
+                        ((DiamondIntegral.Section3.MeasuredRealGround.rvSemiringFromReal C hc B) b))))
+                  (congrArg.{1, 1} (⇑(DiamondIntegral.Section3.MeasuredRealGround.vfSemiringFromReal C hc B hv)) h) })))
+'DiamondIntegral.Section3.completedMeasuredSemiringLift_kernel' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
 @DiamondIntegral.Section3.MeasuredRVObject.product_combinedWeight : ∀ {M : Type}
   [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
   [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set.{0} M}

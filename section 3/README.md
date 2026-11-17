@@ -1,5 +1,10 @@
 # Section 3
 
+All four Gamma-valued measured input records now have local proved producers,
+including the original-base positive-degree reverse kernel. See
+[the completion note](verification/GAMMA-KERNEL-COMPLETION.md) and
+[verification progress](verification/GAMMA-EXTENSION-PROGRESS.json).
+
 The active manuscript is the section 2 annotated revision. The four
 reviewed §3 referee corrections and the author-initiated T001 correction
 are approved and applied. The corrected Proposition 3.18 now states both

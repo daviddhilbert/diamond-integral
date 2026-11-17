@@ -1,5 +1,14 @@
 # Full-paper handoff: continue with Section 7
 
+**November 17 local proof update:** all four Section 3 Gamma-valued measured
+lift/kernel records now have proved producers, including the positive-degree
+reverse kernel over the original base. Read
+[the completion note](<section 3/verification/GAMMA-KERNEL-COMPLETION.md>) and
+[verification progress](<section 3/verification/GAMMA-EXTENSION-PROGRESS.json>)
+before the historical input-boundary discussion below. These proofs retain
+the full weighted zero categories and do not assume a resolved base. They
+do not prove the separate revised variable-aperture kernel in Section 7.26.
+
 This note is for an agent working in another program, using only this public
 repository and the original paper PDF with referee report that the author
 will supply separately. No previous chat, Dropbox access, Codex runtime or
