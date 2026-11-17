@@ -42,3 +42,13 @@ providers for 1,786 Fubini modules and 17 whole-module upstream promotions;
 the finite-laws split is recorded as well. Section verifiers follow the
 relocated proof bodies, while the Fubini provider checks the 10,566-type
 public contract against the pre-extraction baseline.
+
+## Further shared-foundation extraction
+
+The additional extraction places 15 generic implementation files in
+hilbert-mathlib, retaining their original import paths and public types.
+`SHARED-FOUNDATION.json` now checks 80 direct shared paths. The 48 newly shared
+Fubini prerequisite paths in `EXTRACTED-FOUNDATIONS.json` resolve to their
+actual hilbert-mathlib proof bodies; the two paper-specific Grothendieck
+relations remain in Fubini. Section verifiers continue auditing the provider
+implementations and the unchanged mathematical hypotheses.
