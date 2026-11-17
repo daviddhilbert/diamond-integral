@@ -10,9 +10,9 @@ This audit corrects the earlier blanket completion claim. In particular, Section
 | --- | --- | --- |
 | **Missing proof or construction** | No compiled statement with the substantive conclusion was found. Related proofs may supply ingredients. | The category, groupoid and positive scissor lift in **6.34, 6.35 and 6.37**. The bounded **positive** tensor map in **4.10** has only a group-completed ring counterpart in the located exports. The rational-polyhedra trace and refinement in **5.16** has Gamma-side ingredients. |
 | **Missing bridge** | Compiled ingredients or a nearby result exist, with a specific identification, specialization or interface still needed. | The bounded transfer from [18] for **3.22**. Full manuscript generators versus the chart ideal in **4.17–4.18**. Relative fiber interpretation in **5.18**, exact polynomial-list entry point in **5.19**, and deriving **6.38** from the restricted category. |
-| **Narrower statement or additional premise** | The available export has a demonstrably restricted type. The restriction may be justified in a caller's context, so the bridge or scope decision must be recorded separately. | **2.14** takes `VFFieldBase S`. The bounded unmeasured exports for **3.22** take explicit records. **6.16** and **6.30** fix unary arity. **6.29** and **6.33** take positive degree. In degree zero the chain constructor requires a coordinate in `Fin 0`, leaving nonidentity permutations of finite label sets outside that conclusion. |
+| **Narrower statement or additional premise** | The available export has a demonstrably restricted type. The restriction may be justified in a caller's context, so the bridge or scope decision must be recorded separately. | **2.14** takes `VFFieldBase S`. The bounded unmeasured exports for **3.22** take explicit records. **5.17** and **5.23** have VF/RV tuple bases. **6.16** and **6.30** fix unary arity. **6.29** and **6.33** take positive degree. In degree zero the chain constructor requires a coordinate in `Fin 0`, leaving nonidentity permutations of finite label sets outside that conclusion. |
 | **Accepted dependency** | A result may be used with the recorded citation or theorem record at its checked scope. The audit records whether a local producer is available. | **3.15** uses the approved Reichstein–Youssin classification. The rational-affine Gamma input has a compiled producer in Section 5. |
-| **Partial coverage or scope to verify** | A narrower claim, an ingredient, or a formal convention was located. The matrix states which clause or scope still lacks exact evidence. | The example in **2.47**, the divisible-hull clause of **3.14**, the inflated-family displays **(5.1)–(5.4)**, and several Section 6 remarks. The conjectural sentence of **6.36** is an observation to record, while the preceding general unary-factorization claim has checked reuse. |
+| **Partial coverage or scope to verify** | A narrower claim, an ingredient, or a formal convention was located. The matrix states which clause or scope still lacks exact evidence. | The example in **2.47**, the divisible-hull clause of **3.14**, the separate evaluation formula **(5.1)** and inflated-family displays **(5.2)–(5.4)**, and several Section 6 remarks. The conjectural sentence of **6.36** is an observation to record, while the preceding general unary-factorization claim has checked reuse. |
 
 These are findings about formal coverage. A missing Lean proof by itself does not establish a flaw in the manuscript proof. The degree-zero issue in 6.29 and 6.33 is a concrete mismatch between the stated chain scope and the formal meaning of a step. The positive map in 4.10 and the map in 6.37 share a need for the appropriate bounded RV positive presentations. They are distinct assertions.
 
@@ -61,6 +61,41 @@ The [global Γ-ground producer](../../section%205/Completed18GroundLiftInput.lea
 already verifies the global kernel and transports the global lift to the
 original ground. The four measured records also have proved producers in
 their documented contexts. The bounded transfer is the outstanding bridge.
+
+## Section 5 proof coverage and scope
+
+Section 5's Lean development can use a different proof route and structure
+from the manuscript. The [Section 5 receipt](../../section%205/verification/status.json)
+identifies the checked entry points and their context.
+
+- **Missing manuscript conclusions.** No checked result was located for
+  the rational-polyhedral trace and relatively open cell or conditional cone
+  refinement in 5.16. The end-to-end inflated VF-family argument also
+  lacks checked conclusions for the finite partition with constant actual
+  VF-fiber values (5.2), the total volume identity with its torus factor
+  (5.3), and the existence of relative monomial charts fixing the parameter
+  (5.4). The separate formula (5.1) has a one-piece evaluation and a
+  checked map `Θ`, with the composite finite-sum formula still unlocated.
+- **Scope of the checked Fubini theorems.** The bounded and geometric
+  entry points for 5.17 and 5.23 prove equality of total values in
+  `GammaGroundContext` from the manuscript's positive fiber-lift witnesses
+  and equal fiber values. Their common base is a definable set of VF/RV
+  tuples. No checked extension to a base with actual Γ coordinates was
+  located. The general definable-bijection transport and the reformulation
+  in terms of intrinsic fiber integrals in 5.18 remain a separate bridge.
+  The [variety corollary](../../section%205/VarietyCorollaryDischarged.lean#L26)
+  has a checked entry point using the genuine field generated by the VF
+  chart coordinates of each point.
+- **Proof dependencies.** A focused Lean check of 5.12, the Puiseux
+  results in 5.13–5.14, both Fubini entry points, and the variety
+  corollary found only `propext`, `Classical.choice` and `Quot.sound`.
+  Their import closure loaded zero `Integration7` modules. The
+  [Fubini entry points](../../section%205/Section5DischargedInputs.lean#L22)
+  supply the proved Γ-linearity result and global Γ-ground lift. The
+  global kernel construction supplies the two-order registry through its
+  [proved scoped producer](../../section%205/Completed18Section5Input.lean#L14).
+  No unauthorized theorem input was found in these checked results.
+  The bounded input still open in 3.22 is outside their proof dependencies.
 
 ## Evidence and scope
 
