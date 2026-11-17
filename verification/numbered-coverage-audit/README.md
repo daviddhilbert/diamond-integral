@@ -9,12 +9,58 @@ This audit corrects the earlier blanket completion claim. In particular, Section
 | Finding | What the audit establishes | Examples |
 | --- | --- | --- |
 | **Missing proof or construction** | No compiled statement with the substantive conclusion was found. Related proofs may supply ingredients. | The category, groupoid and positive scissor lift in **6.34, 6.35 and 6.37**. The bounded **positive** tensor map in **4.10** has only a group-completed ring counterpart in the located exports. The rational-polyhedra trace and refinement in **5.16** has Gamma-side ingredients. |
-| **Missing bridge** | Compiled ingredients or a nearby result exist, with a specific identification, specialization or interface still needed. | Full manuscript generators versus the chart ideal in **4.17–4.18**. Relative fiber interpretation in **5.18**, exact polynomial-list entry point in **5.19**, and deriving **6.38** from the restricted category. |
-| **Narrower statement or additional premise** | The available export has a demonstrably restricted type. The restriction may be justified in a caller's context, so the bridge or scope decision must be recorded separately. | **2.14** takes `VFFieldBase S`. **6.16** and **6.30** fix unary arity. **6.29** and **6.33** take positive degree. In degree zero the chain constructor requires a coordinate in `Fin 0`, leaving nonidentity permutations of finite label sets outside that conclusion. |
-| **Accepted dependency** | A result may be used with the recorded citation or theorem record at its checked scope. The audit records whether a local producer is available. | **3.15** uses the approved Reichstein–Youssin classification. The bounded unmeasured part of **3.22** still takes a separate accepted [18] record, with no matching local producer located. The rational-affine Gamma input has a compiled producer in Section 5. |
+| **Missing bridge** | Compiled ingredients or a nearby result exist, with a specific identification, specialization or interface still needed. | The bounded transfer from [18] for **3.22**. Full manuscript generators versus the chart ideal in **4.17–4.18**. Relative fiber interpretation in **5.18**, exact polynomial-list entry point in **5.19**, and deriving **6.38** from the restricted category. |
+| **Narrower statement or additional premise** | The available export has a demonstrably restricted type. The restriction may be justified in a caller's context, so the bridge or scope decision must be recorded separately. | **2.14** takes `VFFieldBase S`. The bounded unmeasured exports for **3.22** take explicit records. **6.16** and **6.30** fix unary arity. **6.29** and **6.33** take positive degree. In degree zero the chain constructor requires a coordinate in `Fin 0`, leaving nonidentity permutations of finite label sets outside that conclusion. |
+| **Accepted dependency** | A result may be used with the recorded citation or theorem record at its checked scope. The audit records whether a local producer is available. | **3.15** uses the approved Reichstein–Youssin classification. The rational-affine Gamma input has a compiled producer in Section 5. |
 | **Partial coverage or scope to verify** | A narrower claim, an ingredient, or a formal convention was located. The matrix states which clause or scope still lacks exact evidence. | The example in **2.47**, the divisible-hull clause of **3.14**, the inflated-family displays **(5.1)–(5.4)**, and several Section 6 remarks. The conjectural sentence of **6.36** is an observation to record, while the preceding general unary-factorization claim has checked reuse. |
 
 These are findings about formal coverage. A missing Lean proof by itself does not establish a flaw in the manuscript proof. The degree-zero issue in 6.29 and 6.33 is a concrete mismatch between the stated chain scope and the formal meaning of a step. The positive map in 4.10 and the map in 6.37 share a need for the appropriate bounded RV positive presentations. They are distinct assertions.
+
+## Theorem 3.22
+
+**Theorem 3.22 remains conditional in Lean.** Its bounded unmeasured
+isomorphisms and transition comparisons take
+[`YinBoundedUnmeasuredLiftInput`](../../section%203/CitedBoundedIntegral.lean#L24)
+or [`YinGammaGroundBoundedUnmeasuredLiftInput`](../../section%203/GammaGroundCitedBoundedIntegral.lean#L23).
+The author did not approve either exact bounded input. The [November 9 authorization](../../ACCEPTED-CITED-RESULTS.md#L12)
+was temporary permission to use precise results of [18] under their own
+hypotheses. The [dependency ledger](../../section%203/verification/cited-inputs.json#L38)
+uses that general permission as the citation record for the two local interfaces.
+
+[18, Proposition 6.18 and the bounded discussion before Theorem 6.19](https://arxiv.org/pdf/0809.0473#page=22)
+give the bounded comparison over a small, nontrivially valued
+`(VF, Γ)`-generated base. At the current pin,
+[`FiniteRV.integrationThroughAt`](https://github.com/daviddhilbert/integration-in-ACVF/blob/7675d31332f20421c803ea16af84964ed74cd51f/section%206/IntegrationSection6/FiniteNonzeroIntegration.lean#L45)
+proves the equivalence between the native finite-fiber VF scissors at bound
+`k` and the native nonzero RV classes through `k` modulo the stage
+special congruence. Its parameters include saturated ACVF(0,0), small real
+and Gamma parameters, a VF field witness, `VFGammaGeneratedBase` (generation
+under definable closure), and a named positive Gamma value. The pristine
+pin also takes the all-bases `Section5TwoOrderInputAll` premise. The
+consumer proves the registry at the narrower scope of its
+[documented overlay](../../section%205/reference/integration-section6-scope-adapter.json).
+
+The missing transfer must establish the following for both local records
+and for every `k`.
+
+1. Apply the native comparison over the definable closure of the given ground
+   and transport the definable objects, bijections, and scissors back to the
+   original ordinary or Γ-ground base under its stated hypotheses.
+2. Identify the native nonzero RV classes through `k` with the local direct
+   sum of degrees `0..k` and the native VF scissors with the local
+   finite-RV-fiber scissors of VF dimension `≤ k`, using the local
+   valuation-compatibility hypothesis. Check that the transported forward map
+   takes an RV object in degree `i ≤ k` to its actual VF lift with the
+   dimension bound raised to `k`. The comparison must give surjectivity at
+   the same bound.
+3. Identify the native stage congruence with the pullback of the local
+   nonhomogeneous global special congruence along the bounded RV inclusion.
+   This is the exact kernel required by each bounded record.
+
+The [global Γ-ground producer](../../section%205/Completed18GroundLiftInput.lean#L41)
+already verifies the global kernel and transports the global lift to the
+original ground. The four measured records also have proved producers in
+their documented contexts. The bounded transfer is the outstanding bridge.
 
 ## Evidence and scope
 

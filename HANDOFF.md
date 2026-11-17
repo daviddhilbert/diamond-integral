@@ -57,7 +57,7 @@ fresh source-hash receipts take precedence over those historical notes.
 | --- | --- | --- |
 | 1. Introduction | Introductory claims are implemented in their substantive sections; there is no separate Section 1 Lean library. The aperture-dependent bounded-integral target and diagrams now use the relative ideal. | Reconcile the introduction with the final Section 7 and Section 8 results. No blanket claim is made that every introductory referee annotation has been resolved. |
 | 2. Technicalities | The tracked technical exports passed verification. The numbered coverage audit flags the 2.14 field-base premise and partial coverage of 2.47. | [Coverage](<section 2/COVERAGE.md>), [status](<section 2/STATUS.md>), [receipt](<section 2/verification/status.json>), [upstream links](<section 2/verification/UPSTREAM-LINKS.md>). Preserve the original-base and finite-disc-name hypotheses. |
-| 3. HK-style integral and categories | The four measured kernel records and the corrected tensor presentations have checked producers. The bounded unmeasured part of 3.22 retains a separate accepted input. See the audit for scope and citations. | [Status](<section 3/STATUS.md>), [targets](<section 3/TARGETS.md>), [paper-to-Lean map](<section 3/verification/paper-targets.json>), [receipt](<section 3/verification/VERIFICATION.json>). The map records 21 manuscript targets and 119 declaration links. Do not turn a retained cited interface into an unconditional theorem. |
+| 3. HK-style integral and categories | The four measured kernel records and the corrected tensor presentations have checked producers. Theorem 3.22 remains conditional in its bounded unmeasured part. The author did not approve the exact ordinary or Γ-ground bounded inputs. | [Theorem 3.22 audit](verification/numbered-coverage-audit/README.md#theorem-322), [status](<section 3/STATUS.md>), [targets](<section 3/TARGETS.md>), [paper-to-Lean map](<section 3/verification/paper-targets.json>), [receipt](<section 3/verification/VERIFICATION.json>). |
 | 4. Uniform retraction to RES | The retractions and chart-ideal compatibility are checked. The numbered audit flags the positive bounded tensor map in 4.10 and the identification of the chart ideal with the full generator family in 4.17. | [Coverage](<section 4/COVERAGE.md>), [status](<section 4/STATUS.md>), [receipt](<section 4/verification/status.json>), [Section 3 adapters](<section 4/Section3T001Integration.lean>), [linked retraction statements](<section 4/Section3LinkedRetractionStatements.lean>). Keep the old scalar ideal distinct from the new relative ideal. |
 | 5. RV decomposition and Fubini | The recorded Fubini entry points and actual-variety corollary are checked, with the Gamma-linearity and ground lift inputs discharged. The numbered audit flags 5.16 and the exact fiber and inflated-family comparisons. | [Current README header](<section 5/README.md>), [discharged entry points](<section 5/Section5DischargedInputs.lean>), [variety corollary](<section 5/VarietyCorollaryDischarged.lean>), [receipt](<section 5/verification/status.json>). Cross-section computations and the computational results cited from [19] were excluded from this requested scope. Do not silently expand that completion claim. |
 | 6. Special covariant bijections | The revised aperture construction and map-level theorem 6.38 pass the audit of existing declarations. The restricted category, groupoid and positive scissor lift remain open. The numbered audit also records arity and degree restrictions. | [README](<section 6/README.md>), [review record](<section 6/reference/REVIEW.md>), [receipt](<section 6/verification/status.json>), [applied review PDF](<section 6/reference/review/section6-aperture-revision-applied.pdf>). Reuse these checked constructions rather than reopening completed proofs without a concrete incompatibility. |
@@ -67,10 +67,22 @@ fresh source-hash receipts take precedence over those historical notes.
 Sections 2–4 retain the coverage boundaries recorded in the numbered audit. Eight
 legacy Section 2 geometric interfaces have checked Section 3 constructors.
 Section 5 now supplies the exact Gamma rational-affine producer and its
-required ground lifting/kernel producer. Use those actual constructors when
+global Γ-ground lifting/kernel producer. Use those actual constructors when
 their hypotheses match. Older inventories still describe some of these as
 pending. The approved Reichstein–Youssin consequence and any other retained
 external inputs keep their explicitly documented scopes.
+
+For Theorem 3.22, [18] supplies the native bounded equivalence in
+[`FiniteRV.integrationThroughAt`](https://github.com/daviddhilbert/integration-in-ACVF/blob/7675d31332f20421c803ea16af84964ed74cd51f/section%206/IntegrationSection6/FiniteNonzeroIntegration.lean#L45).
+The outstanding transfer must work at every `k` over the original ordinary
+and Γ-ground bases. It must transport definability back from their
+closures, identify the native RV classes through `k` and the VF
+scissors with the local presentations, preserve the actual object lift and
+surjectivity at that bound, and identify the native stage congruence with
+the restriction of the local global special congruence. The global producer
+does not supply those bounded records. The temporary permission to use [18]
+and the exact native hypotheses are recorded in the
+[Theorem 3.22 audit](verification/numbered-coverage-audit/README.md#theorem-322).
 
 The current paper's Section 7 is a different target from Section 7 of the
 upstream paper [18]. In particular, neither an ordinary [18] lift kernel
