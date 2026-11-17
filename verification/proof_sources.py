@@ -2,11 +2,15 @@
 from pathlib import Path
 import hashlib
 import json
+from relocated_sources import read_relocated
 
 
 def read_source(path):
     path = Path(path)
     root = Path(__file__).resolve().parents[1]
+    relocated = read_relocated(root, path)
+    if relocated is not None:
+        return relocated
     relative = str(path.relative_to(root))
     manifest = root / 'SHARED-FOUNDATION.json'
     if manifest.exists():

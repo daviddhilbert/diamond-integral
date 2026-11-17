@@ -1,5 +1,5 @@
 {
-  "base_revision": "4b6afb7cabcb59d7ca90e883309ddc8887241d76",
+  "base_revision": "39f369f0a15440465cbd12a4484779c034f278b7",
   "patch_sha256": "1025b80e4d836f501bb09a342effbf33a6e02a2cba48d75bb01262e4027c98a7",
   "files": {
     "Section3/AdditiveCosets.lean": {

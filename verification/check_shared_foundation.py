@@ -4,6 +4,7 @@ from pathlib import Path
 import hashlib
 import json
 import subprocess
+from relocated_sources import verify as verify_relocated
 
 
 def sha(path):
@@ -12,6 +13,7 @@ def sha(path):
 
 def verify(root):
     root = Path(root)
+    verify_relocated(root)
     record = json.loads((root / 'SHARED-FOUNDATION.json').read_text())
     manifest = json.loads((root / 'lake-manifest.json').read_text())
     dependency = next(p for p in manifest['packages']

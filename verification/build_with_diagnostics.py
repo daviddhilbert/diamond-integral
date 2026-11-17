@@ -2,6 +2,7 @@
 """Retain full compiler output while keeping CI progress and stalls observable."""
 from pathlib import Path
 import argparse
+import json
 import os
 import re
 import signal
@@ -65,6 +66,9 @@ def main():
     with (scratch / 'ci-build.log').open('w') as full, (scratch / 'ci-build-resources.log').open('w') as resources:
         process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
                                    text=True, bufsize=1, start_new_session=True)
+        (scratch / 'ci-build-process-group.json').write_text(json.dumps({
+            'process_group': process.pid, 'working_directory': str(Path.cwd().resolve()),
+        }) + '\n')
 
         def announce(message):
             with lock:

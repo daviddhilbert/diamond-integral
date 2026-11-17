@@ -31,3 +31,14 @@ source fingerprints. Section verifiers inspect the relocated proof bodies and
 check their pinned source identities. Current full audit output is retained in
 CI artifacts; the repository's older generated snapshots remain matched
 historical checkpoints.
+
+The independent [Fubini-theorems](https://github.com/daviddhilbert/Fubini-theorems)
+package owns the active Section 5 development and all its local prerequisites.
+It preserves the bounded and geometric Fubini theorems, comparison results,
+and variety corollary with their original public names and hypotheses.
+This project consumes the pinned package through its original import paths.
+[EXTRACTED-FOUNDATIONS.json](EXTRACTED-FOUNDATIONS.json) records the exact
+providers for 1,786 Fubini modules and 17 whole-module upstream promotions;
+the finite-laws split is recorded as well. Section verifiers follow the
+relocated proof bodies, while the Fubini provider checks the 10,566-type
+public contract against the pre-extraction baseline.

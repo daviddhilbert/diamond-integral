@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 360
     env:
-      LEAN_NUM_THREADS: "2"
+      LEAN_NUM_THREADS: "4"
       PYTHONUNBUFFERED: "1"
     steps:
       - uses: actions/checkout@v5
@@ -60,12 +60,18 @@ jobs:
         id: build
         run: python3 verification/build_with_diagnostics.py
 
+      # Cancelled compilers must stop writing before tar reads the cache.
+      - name: Stop remaining build processes before archival
+        id: quiesce
+        if: ${{ always() && (steps.build.outcome == 'success' || steps.build.outcome == 'failure' || steps.build.outcome == 'cancelled') }}
+        run: python3 verification/quiesce_build.py
+
       # The setup action completes before our external build. Saving its cache
       # there would retain Mathlib alone and discard the expensive proof build.
       # Completed modules remain useful after a later module fails; Lake checks
       # every restored source/import trace before accepting those artifacts.
       - name: Save compiled Lean files
-        if: ${{ always() && steps.lean-cache.outputs.cache-hit != 'true' && (steps.build.outcome == 'success' || steps.build.outcome == 'failure' || steps.build.outcome == 'cancelled') }}
+        if: ${{ always() && steps.quiesce.outcome == 'success' && steps.lean-cache.outputs.cache-hit != 'true' && (steps.build.outcome == 'success' || steps.build.outcome == 'failure' || steps.build.outcome == 'cancelled') }}
         uses: actions/cache/save@v5
         with:
           path: .lake
@@ -105,5 +111,6 @@ jobs:
             section 6/verification/types-and-axioms.txt
             verification/upstream-weighted-zero-upgrade/
             .scratch/shared-foundation.json
+            .scratch/extracted-foundations.json
             .scratch/ci-build.log
             .scratch/ci-build-resources.log

@@ -59,3 +59,12 @@
   current project's Section 3 could be taken as precise replaceable inputs
   while its proofs and presentation adapters were pending. The finalized
   Section 3 tensor adapters are now compiled in Section3T001Integration.
+
+- Implementation ownership after the approved extraction: hilbert-mathlib
+  owns the modules recorded in SHARED-FOUNDATION.json; Fubini-theorems and
+  the upstream paper packages own those in EXTRACTED-FOUNDATIONS.json.
+  The original module paths are checked compatibility imports. Make proof
+  changes in the recorded owner, verify its public contract, then update
+  this project's exact dependency pins and provenance records. Section
+  verifiers follow the actual provider sources through proof_sources.py.
+  The ongoing local Section 6 development remains in this repository.

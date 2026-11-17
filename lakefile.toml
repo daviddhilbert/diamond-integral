@@ -15,7 +15,7 @@ rev = "a4138c3a7899330d1c77d1ec01f8f29395b5805c"
 [[require]]
 name = "special_transformations"
 git = "https://github.com/daviddhilbert/special-transformations.git"
-rev = "4b6afb7cabcb59d7ca90e883309ddc8887241d76"
+rev = "39f369f0a15440465cbd12a4484779c034f278b7"
 
 [[require]]
 name = "hilbert-mathlib"
@@ -40,7 +40,7 @@ roots = ["«section 3».AdditiveSemiringTransport", "«section 3».BalancedSquar
 [[require]]
 name = "integration_in_acvf"
 git = "https://github.com/daviddhilbert/integration-in-ACVF.git"
-rev = "4216f453f351576af0c27c84fa9451e9e3c7ee90"
+rev = "a7b4779b17d8491522ff97c2a4a829546bb98683"
 
 [[lean_lib]]
 name = "section 6"
@@ -945,3 +945,8 @@ roots = ["«section 5».ValueInducedRectangles", "«section 5».ValueInducedChar
   "«section 5».Section5DischargedInputs",
   "«section 5».VarietyCorollaryDischarged",
   "«section 5».Section"]
+
+[[require]]
+name = "fubini_theorems"
+git = "https://github.com/daviddhilbert/Fubini-theorems.git"
+rev = "fea1092a0a3e0b6bcde5453c3083151f16d747f9"

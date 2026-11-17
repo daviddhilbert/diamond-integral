@@ -1,5 +1,5 @@
 {
-  "base_revision": "4216f453f351576af0c27c84fa9451e9e3c7ee90",
+  "base_revision": "a7b4779b17d8491522ff97c2a4a829546bb98683",
   "reason": "The corrected upstream release includes the nine proper-open-radius consumers. Use the published proof bodies, whose additional definitional simplifications have been reviewed, and check their hashes. The old consumer patch remains historical evidence and is not applied.",
   "supporting_signature_adaptations": [
     "IntegrationInACVF.Section4.RelativeObstaclePreparation.zero_obstacles: proper OpenRadius in the auxiliary obstacle premise",
