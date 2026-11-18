@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Restore the exact dependency sources used by the Section 5 audit.
+"""Check published dependency sources and retain the scoped Section 6 adapters.
 
 Run after Lake has fetched the pinned packages. Only a pinned upstream file
 or the already prepared file is accepted; unrelated local edits are preserved.
@@ -82,4 +82,4 @@ if __name__ == "__main__":
     parser.add_argument("--check", action="store_true", help="Check prepared sources without writing them.")
     arguments = parser.parse_args()
     count = prepare(arguments.check)
-    print(f"Verified Section 5 dependency sources: {count} overlay files and 39 compatibility corrections")
+    print(f"Verified {count} recorded Section 5/6 sources and 39 published compatibility sources")

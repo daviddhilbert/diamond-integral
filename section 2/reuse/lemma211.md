@@ -3,7 +3,7 @@
 Checked November 9, 2026 with Lean 4.35.0 and the revisions in
 `../verification/status.json`. The Special Transformations base revision is
 `9cc9760892092dd34cfad4a6dee655843c52f30c`, with the separate author-approved
-finite-open-radius patch. No new external source code was copied.
+finite-open-radius patch. No new external source code was copied. (Current pin, November 18: `25852c85a31c67069b148bd31348128318303510`; that published release already contains the radius correction, see `manifest.json`.)
 
 The completed forward implication imports
 `SpecialTransformations.Section7.valuationRing_henselian`, which proves the

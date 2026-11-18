@@ -15,12 +15,28 @@ partial forms and full proper RV preimages. No tensor injectivity is assumed.
 `Section3LinkedRetractionStatements.lean` proves Propositions 4.7 and 4.15
 without T001 interface inputs. The original modular descent theorems remain
 available with explicit interfaces, now inhabited by proved constructors.
-General rational-affine Gamma QE background remains explicit. Later accepted
-external inputs in Section 3 retain their documented scope; no HK input is
-introduced. See the [project dependency audit](../DEPENDENCY-AUDIT.md).
+The unary rational-affine Gamma input is proved
+(`Section5.GammaQE.gamma_piecewise_rational_affine`), and
+`Section4GammaLinearityDischarged.lean` gives `proposition_4_7_discharged` and
+`proposition_4_15_discharged` without it. The multivariate normal form
+`Section3GammaAffineInput.Input`, used by Remark 4.2, remains explicit (known
+open). Later accepted external inputs in Section 3 retain their documented
+scope; no HK input is introduced. See the
+[project dependency audit](../DEPENDENCY-AUDIT.md).
 
-The complete Section 4 audit passes 4998 declarations (3027 theorems)
-across 600 modules, with only `propext`, `Classical.choice` and `Quot.sound`.
+November 17–18 additions (see [GAP-REPAIRS.md](GAP-REPAIRS.md)): Notation 4.17
+and Lemma 4.18 for the manuscript ideal J_var (`RelativeAnnular*`, with the
+blowup modules moved from section 7), the positive tensor map of Remark 4.10,
+the Definition 4.9 ∞-coordinate comparison (`RVStrictBoundedComparison`),
+`Section4LinkedRemarks` (diagram (edb:eb:com), Remarks 4.4/4.16) and the
+Proposition 3.18 kernel witness (recorded under section 3).
+
+The complete Section 4 audit (November 18) passes 5493 declarations (3340
+theorems) across 621 modules plus `Section.lean`, with only `propext`,
+`Classical.choice` and `Quot.sound`. The hard-coded summary strings in
+`verify.py` (copied into `verification/status.json`) still call the
+rational-affine Gamma background accepted; for the unary input this is out
+of date.
 
 The approved T001 manuscript statement and both proofs remain verbatim.
 Other approved Section 3 manuscript changes are synchronized; the entire
@@ -52,7 +68,8 @@ colored T001 review copy is preserved separately.
 - Remark 4.2: continuous cell decomposition in every finite arity and
   equality of geometric Euler characteristic with the alternating sum
   of the ordinary recursive cell dimensions are proved. Continuity and
-  cell refinement are proved locally from rational-affine normal form.
+  cell refinement are proved locally from the multivariate rational-affine
+  normal form, which is still an explicit input.
 - Remark 4.4: the actual natural affine-localization comparison is proved
   nonsurjective. The affine line is outside its image. The proof uses
   actual RES coordinate covers, uniform finite-fibre bounds and
@@ -61,7 +78,14 @@ colored T001 review copy is preserved separately.
   separation are proved through constructed residue trace maps.
 - The unary function rings, convolution, multivariable Euler integration,
   Fubini, invariance, bounded comparison, stabilization, target rings,
-  gradings, finite-union presentations and all stated maps are constructed.
+  gradings, finite-union presentations of the graded rings and all stated
+  maps are constructed. The identification of the dimension-free RES ring
+  with the Grothendieck ring of the dimension-free category under finite
+  coproducts is not built.
+- Not pursued (author-approved triage, November 18): the explanatory items
+  listed in GAP-REPAIRS.md (Notation 4.13's unmeasured ring and inequality,
+  K μΓ[0] ≅ ℤ[Γ_def] in Remark 4.6, parts of Remark 4.4, the second
+  paragraph of Remark 4.16, Remark 4.10's first sentence).
 
 The corrected main text asserts a natural affine comparison. Formalizing
 the referee's particular counterexample varieties to the removed

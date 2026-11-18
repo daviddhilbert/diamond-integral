@@ -1,1006 +1,1006 @@
 {
-  "base_revision": "7d4acc730496b3bd05a22c268ffd89540ca694f9",
+  "base_revision": "7675d31332f20421c803ea16af84964ed74cd51f",
   "upstream_completed_section5_revision": "73aa1e6c9218bcb01dd67e03cfbe3ec9115ac240",
-  "purpose": "Reproduce the exact completed [18] Section 5 source overlay and two Section 6 hypothesis-scope adapters used by the checked local lifting/kernel integration. The 39 earlier compatibility corrections remain supplied by the existing Section 2 and Section 3 preparation scripts.",
+  "purpose": "Verify 250 completed Section 5 files already present byte-for-byte in the published upstream tree and apply only the two existing Section 6 hypothesis-scope adapters. The 39 proper-open-radius sources are now published upstream and checked by the Section 2 and Section 3 preparation scripts.",
   "files": {
     "section 5/IntegrationSection5/ActiveUnaryCanonical.lean": {
-      "before": null,
+      "before": "7e6158d0ac7751a8285ecd53d2d49082b166bbe703737098c8a541316957f08b",
       "after": "7e6158d0ac7751a8285ecd53d2d49082b166bbe703737098c8a541316957f08b"
     },
     "section 5/IntegrationSection5/ActiveUnaryProjection.lean": {
-      "before": null,
+      "before": "e91c09b2e4b6f7c37592173d5d7f566c2f750a93f5943a08d91a01c4e3b88fe2",
       "after": "e91c09b2e4b6f7c37592173d5d7f566c2f750a93f5943a08d91a01c4e3b88fe2"
     },
     "section 5/IntegrationSection5/BranchCanonicalFocus.lean": {
-      "before": null,
+      "before": "48497b07c1086eb6da60036a447c032d92c45047c0336d4118966c232d06e4c0",
       "after": "48497b07c1086eb6da60036a447c032d92c45047c0336d4118966c232d06e4c0"
     },
     "section 5/IntegrationSection5/CanonicalHeadGeometry.lean": {
-      "before": null,
+      "before": "5b9fe370c2abe487daed931eefc07e63f44ed3e3a1bfe1cbe542093a041d3b81",
       "after": "5b9fe370c2abe487daed931eefc07e63f44ed3e3a1bfe1cbe542093a041d3b81"
     },
     "section 5/IntegrationSection5/CanonicalProductBranchCompletion.lean": {
-      "before": null,
+      "before": "aec47ed95acdf04e7fc5d0d82a0d663882ac3dd1fa7d09a0d1cb22460e239e09",
       "after": "aec47ed95acdf04e7fc5d0d82a0d663882ac3dd1fa7d09a0d1cb22460e239e09"
     },
     "section 5/IntegrationSection5/CanonicalProductClassSource.lean": {
-      "before": null,
+      "before": "85b98e8b45bad70fc60c86919b43de777af7a30b2d5e83693548e33500cebafe",
       "after": "85b98e8b45bad70fc60c86919b43de777af7a30b2d5e83693548e33500cebafe"
     },
     "section 5/IntegrationSection5/CanonicalProductSource.lean": {
-      "before": null,
+      "before": "5080c58a3aef8c495b4b9349767a623c67ee9fdb23c33b26327d55bf0551a8f5",
       "after": "5080c58a3aef8c495b4b9349767a623c67ee9fdb23c33b26327d55bf0551a8f5"
     },
     "section 5/IntegrationSection5/CanonicalRVSliceGeometry.lean": {
-      "before": null,
+      "before": "edc01b9f6ee23631a4a91500a5ba5ba5c0c3baf3672f28cb326cfea57327d9fb",
       "after": "edc01b9f6ee23631a4a91500a5ba5ba5c0c3baf3672f28cb326cfea57327d9fb"
     },
     "section 5/IntegrationSection5/CanonicalTranslationPreparation.lean": {
-      "before": null,
+      "before": "6bfcdd153dae19fd67b9606e449eca0e1d95af2cd9f10f0f7daa4d05e7add62c",
       "after": "6bfcdd153dae19fd67b9606e449eca0e1d95af2cd9f10f0f7daa4d05e7add62c"
     },
     "section 5/IntegrationSection5/CanonicalUnaryBranchExtension.lean": {
-      "before": null,
+      "before": "56b2869faf2ad049c1d197438123a624ea011eb88c5885c0da4c359e6b3c273f",
       "after": "56b2869faf2ad049c1d197438123a624ea011eb88c5885c0da4c359e6b3c273f"
     },
     "section 5/IntegrationSection5/CellBalancedStandard.lean": {
-      "before": null,
+      "before": "0e82dc4cf11352f2f38d0822eca20ba4c487bc8b26331241878cf20039b9987f",
       "after": "0e82dc4cf11352f2f38d0822eca20ba4c487bc8b26331241878cf20039b9987f"
     },
     "section 5/IntegrationSection5/CellCentreGeometry.lean": {
-      "before": null,
+      "before": "26aa8dcebf9b9e54f920178df146dc677aa0dcb642df0b25e7534f51ecde0428",
       "after": "26aa8dcebf9b9e54f920178df146dc677aa0dcb642df0b25e7534f51ecde0428"
     },
     "section 5/IntegrationSection5/CellContractedBijection.lean": {
-      "before": null,
+      "before": "d101e8a6c79b65aa6eef5d2489ab9ea747ce03b1897ecae0abe574dbdde3b394",
       "after": "d101e8a6c79b65aa6eef5d2489ab9ea747ce03b1897ecae0abe574dbdde3b394"
     },
     "section 5/IntegrationSection5/CellFirstPreparations.lean": {
-      "before": null,
+      "before": "f96b71b93718cfd946d3ef557d28dfb53a2f84dea320c9d069eb63696f907187",
       "after": "f96b71b93718cfd946d3ef557d28dfb53a2f84dea320c9d069eb63696f907187"
     },
     "section 5/IntegrationSection5/CellGammaBridge.lean": {
-      "before": null,
+      "before": "441e67421c14156f136cdacbf80c5ff84c4ec66c40985f3a3f738cc4c5a5ac6b",
       "after": "441e67421c14156f136cdacbf80c5ff84c4ec66c40985f3a3f738cc4c5a5ac6b"
     },
     "section 5/IntegrationSection5/CellHeadSaturation.lean": {
-      "before": null,
+      "before": "c269de0edd27ab191021902e360ea2af6716ff0fd7b8424c667f810da6c3fed7",
       "after": "c269de0edd27ab191021902e360ea2af6716ff0fd7b8424c667f810da6c3fed7"
     },
     "section 5/IntegrationSection5/CellLabelInjection.lean": {
-      "before": null,
+      "before": "9bf8a8b591732699480cd56a369af3a5a41d320a22afd9673106d37d2a52601a",
       "after": "9bf8a8b591732699480cd56a369af3a5a41d320a22afd9673106d37d2a52601a"
     },
     "section 5/IntegrationSection5/CellRectangleStandard.lean": {
-      "before": null,
+      "before": "bba6f137ffba5c00c7bd613c56a85bfa86c622b034f619f8603ee3b2cc20eea2",
       "after": "bba6f137ffba5c00c7bd613c56a85bfa86c622b034f619f8603ee3b2cc20eea2"
     },
     "section 5/IntegrationSection5/CellStagedContractions.lean": {
-      "before": null,
+      "before": "3002481887ecaf8ddaac41fb750fd3791434b68f5b56de0e69c26a8697e65635",
       "after": "3002481887ecaf8ddaac41fb750fd3791434b68f5b56de0e69c26a8697e65635"
     },
     "section 5/IntegrationSection5/CellStandardExistence.lean": {
-      "before": null,
+      "before": "5b17a41384928bc8290a3bbbfc078387e7d05d5a15476e49c323f664c7573b8b",
       "after": "5b17a41384928bc8290a3bbbfc078387e7d05d5a15476e49c323f664c7573b8b"
     },
     "section 5/IntegrationSection5/CellStandardPresentation.lean": {
-      "before": null,
+      "before": "d786c5f2afa097d36e5dc62a2de311ddfff7e5c3f20c143d6197e9d345f6a9ab",
       "after": "d786c5f2afa097d36e5dc62a2de311ddfff7e5c3f20c143d6197e9d345f6a9ab"
     },
     "section 5/IntegrationSection5/CellStripNormalForms.lean": {
-      "before": null,
+      "before": "888d89e4880077501ec685691bb7477db7dffeb5fdb91574828a333691e58b58",
       "after": "888d89e4880077501ec685691bb7477db7dffeb5fdb91574828a333691e58b58"
     },
     "section 5/IntegrationSection5/CellTranslationGeometry.lean": {
-      "before": null,
+      "before": "a80312822a4167a5225abc5c4178a4671ad71953da7b8c579bffb505c1ff0bd1",
       "after": "a80312822a4167a5225abc5c4178a4671ad71953da7b8c579bffb505c1ff0bd1"
     },
     "section 5/IntegrationSection5/CellUnaryPreparations.lean": {
-      "before": null,
+      "before": "e08c196cfa0cb2356179f0f7f2ca10619adb8c83ed03f438e6622958b37ac5e8",
       "after": "e08c196cfa0cb2356179f0f7f2ca10619adb8c83ed03f438e6622958b37ac5e8"
     },
     "section 5/IntegrationSection5/CellUnaryProjections.lean": {
-      "before": null,
+      "before": "8abffb62b2dd3c0ac315efdee16cb7c005295fb979f04f98c17beb62fc9a8575",
       "after": "8abffb62b2dd3c0ac315efdee16cb7c005295fb979f04f98c17beb62fc9a8575"
     },
     "section 5/IntegrationSection5/CentripetalRelativeBoundary.lean": {
-      "before": null,
+      "before": "ab2bae1acd4ac66ddc6bbae7dc1668689a5bc5e2c1a116f628eb472ce8d5d127",
       "after": "ab2bae1acd4ac66ddc6bbae7dc1668689a5bc5e2c1a116f628eb472ce8d5d127"
     },
     "section 5/IntegrationSection5/CommonProductFinalN.lean": {
-      "before": null,
+      "before": "edcccbb5293c4e77d9db1f76127c5f3fd01dc103dffe0cba600a5d1edba19ddf",
       "after": "edcccbb5293c4e77d9db1f76127c5f3fd01dc103dffe0cba600a5d1edba19ddf"
     },
     "section 5/IntegrationSection5/CommonProductHeadPair.lean": {
-      "before": null,
+      "before": "ab021d99ce9c799223bbe3c8c2eec52d9e3cbd0b38b0e3beeed53ef34c67691c",
       "after": "ab021d99ce9c799223bbe3c8c2eec52d9e3cbd0b38b0e3beeed53ef34c67691c"
     },
     "section 5/IntegrationSection5/CommonProductHeadSlices.lean": {
-      "before": null,
+      "before": "a148fb5665cfc5f890529519182ad225c9db67ed4eb9b9b6a8a8586f94d1339d",
       "after": "a148fb5665cfc5f890529519182ad225c9db67ed4eb9b9b6a8a8586f94d1339d"
     },
     "section 5/IntegrationSection5/CommonProductInactive.lean": {
-      "before": null,
+      "before": "02a100c6531033f6ae375630b818f957ce759716b96609ff786d996405a46ea3",
       "after": "02a100c6531033f6ae375630b818f957ce759716b96609ff786d996405a46ea3"
     },
     "section 5/IntegrationSection5/CommonProductMatching.lean": {
-      "before": null,
+      "before": "e390a997a17e5350003e0847d70855d3c4aeb98e24f729010cd9803e2fe1f0f0",
       "after": "e390a997a17e5350003e0847d70855d3c4aeb98e24f729010cd9803e2fe1f0f0"
     },
     "section 5/IntegrationSection5/CommonProductNComparison.lean": {
-      "before": null,
+      "before": "07ee573d7187af80de7aceb0b79ae7bcda37f474c041e473fdb9fe0264dd3e07",
       "after": "07ee573d7187af80de7aceb0b79ae7bcda37f474c041e473fdb9fe0264dd3e07"
     },
     "section 5/IntegrationSection5/CommonProductNonrectangleProfiles.lean": {
-      "before": null,
+      "before": "f3a8ac7d4f22034e981b127bdd4b11f408230ca15e781a8fc0b320bb3fa67670",
       "after": "f3a8ac7d4f22034e981b127bdd4b11f408230ca15e781a8fc0b320bb3fa67670"
     },
     "section 5/IntegrationSection5/CommonProductPaddedTails.lean": {
-      "before": null,
+      "before": "c48ef9740c103c58522e7c464776a697e916bbfa6a9555713a658dbe6ec5a65e",
       "after": "c48ef9740c103c58522e7c464776a697e916bbfa6a9555713a658dbe6ec5a65e"
     },
     "section 5/IntegrationSection5/CommonProductProgramHeads.lean": {
-      "before": null,
+      "before": "25203f0886de9a4eaa164eb07dc5aabab3a9b3b521a0b7be9d43a98364d1e723",
       "after": "25203f0886de9a4eaa164eb07dc5aabab3a9b3b521a0b7be9d43a98364d1e723"
     },
     "section 5/IntegrationSection5/CommonProductPrograms.lean": {
-      "before": null,
+      "before": "6a47039a492538fd5938db0622468bf1b2a78b23b78ce606e2f8f2c2ac656f9c",
       "after": "6a47039a492538fd5938db0622468bf1b2a78b23b78ce606e2f8f2c2ac656f9c"
     },
     "section 5/IntegrationSection5/CommonRectangleComparison.lean": {
-      "before": null,
+      "before": "e1861b29905123052ca265c23acc42cadd10257c3cf2a5290781aa1648adf084",
       "after": "e1861b29905123052ca265c23acc42cadd10257c3cf2a5290781aa1648adf084"
     },
     "section 5/IntegrationSection5/CommonRectangleFactor.lean": {
-      "before": null,
+      "before": "293feaf2c65b7fead48f39654cac3d949a0bb9bd95a09a5b0ba4601c7ebf9a60",
       "after": "293feaf2c65b7fead48f39654cac3d949a0bb9bd95a09a5b0ba4601c7ebf9a60"
     },
     "section 5/IntegrationSection5/CommonRectangleFinalInputs.lean": {
-      "before": null,
+      "before": "0965b9a58f86f765afe8a1c612a75983c97c975858916c9583fa06d4d30761a0",
       "after": "0965b9a58f86f765afe8a1c612a75983c97c975858916c9583fa06d4d30761a0"
     },
     "section 5/IntegrationSection5/CommonRectangleHead.lean": {
-      "before": null,
+      "before": "4cfb73e4bbdfc0d577898b5e55a0599eb75ed66ac2949378c55c692955ed6f64",
       "after": "4cfb73e4bbdfc0d577898b5e55a0599eb75ed66ac2949378c55c692955ed6f64"
     },
     "section 5/IntegrationSection5/CommonRectangleInputs.lean": {
-      "before": null,
+      "before": "3a3f93b1420b4c3357e56975a4a36157be3939c5d92b4b6bb8c51fbbcb8c6ef8",
       "after": "3a3f93b1420b4c3357e56975a4a36157be3939c5d92b4b6bb8c51fbbcb8c6ef8"
     },
     "section 5/IntegrationSection5/CommonRectangleJoint.lean": {
-      "before": null,
+      "before": "37855f8f8393a0d190d150bc2ac1dd03982cbac5c4c2f220e8d1d1fdfe1cd082",
       "after": "37855f8f8393a0d190d150bc2ac1dd03982cbac5c4c2f220e8d1d1fdfe1cd082"
     },
     "section 5/IntegrationSection5/CommonRectangleKernels.lean": {
-      "before": null,
+      "before": "d8ec5e0b4b17414ae789005181acf62b6360f7286b806d307b7a81aa2ecc3529",
       "after": "d8ec5e0b4b17414ae789005181acf62b6360f7286b806d307b7a81aa2ecc3529"
     },
     "section 5/IntegrationSection5/CommonRectanglePadding.lean": {
-      "before": null,
+      "before": "ee4a14ced1b7adb182c454c951db88ebcd1ba3f04af91ce5edc7b5ee652d386e",
       "after": "ee4a14ced1b7adb182c454c951db88ebcd1ba3f04af91ce5edc7b5ee652d386e"
     },
     "section 5/IntegrationSection5/CommonRectangleRaw.lean": {
-      "before": null,
+      "before": "4e4f68f7d46f807b8791e18607453d4a6dd584e854e199dfb8e1b2439358e455",
       "after": "4e4f68f7d46f807b8791e18607453d4a6dd584e854e199dfb8e1b2439358e455"
     },
     "section 5/IntegrationSection5/CommonRectangleRestrictions.lean": {
-      "before": null,
+      "before": "ea1bddb6f3f7aa4e833fef75f3567292a480271c78a1a86051e71a8a182685b8",
       "after": "ea1bddb6f3f7aa4e833fef75f3567292a480271c78a1a86051e71a8a182685b8"
     },
     "section 5/IntegrationSection5/CommonRectangleSlices.lean": {
-      "before": null,
+      "before": "ac87b8e1b7bb7401835dce02eca0fee088513afd66b0cd77fb8e4e9ad2ec418e",
       "after": "ac87b8e1b7bb7401835dce02eca0fee088513afd66b0cd77fb8e4e9ad2ec418e"
     },
     "section 5/IntegrationSection5/CommonRectangleSwap.lean": {
-      "before": null,
+      "before": "c2d39277ab56d54a8c32a3cab65ebbd48c93033b7d554dc36423de9a8c1de675",
       "after": "c2d39277ab56d54a8c32a3cab65ebbd48c93033b7d554dc36423de9a8c1de675"
     },
     "section 5/IntegrationSection5/CommonRectangleTail.lean": {
-      "before": null,
+      "before": "8deb8de5887501a86455bc2766b43fc1f1019e36dc33099b2c199f32cc3a63ce",
       "after": "8deb8de5887501a86455bc2766b43fc1f1019e36dc33099b2c199f32cc3a63ce"
     },
     "section 5/IntegrationSection5/CommonRectangleVolumes.lean": {
-      "before": null,
+      "before": "63d829f6e460004dcb0ed35887c45c06488cb9c6d0804ba8bf4c2c0f1a0ea68e",
       "after": "63d829f6e460004dcb0ed35887c45c06488cb9c6d0804ba8bf4c2c0f1a0ea68e"
     },
     "section 5/IntegrationSection5/ComplementaryPaddedCompletion.lean": {
-      "before": null,
+      "before": "5480c0f9aac7c3fd124995a746db9659c681960a0a25c1055bc9e443347ba01e",
       "after": "5480c0f9aac7c3fd124995a746db9659c681960a0a25c1055bc9e443347ba01e"
     },
     "section 5/IntegrationSection5/CompletedHeadComparison.lean": {
-      "before": null,
+      "before": "958eb8538cb8cdf75713bd33da71bf298766eca8b970c5bab8d36ab26603228f",
       "after": "958eb8538cb8cdf75713bd33da71bf298766eca8b970c5bab8d36ab26603228f"
     },
     "section 5/IntegrationSection5/CompletedNonrectangleHead.lean": {
-      "before": null,
+      "before": "e40dd0926f581467ea28aaea60908f04424b1904c01019895b5ed122cc72ebd1",
       "after": "e40dd0926f581467ea28aaea60908f04424b1904c01019895b5ed122cc72ebd1"
     },
     "section 5/IntegrationSection5/CompletedNonrectangleMatching.lean": {
-      "before": null,
+      "before": "bd68c07d5c93f7c956b4d16d8014546017f65f779255d5dbc8bc32a67db7a425",
       "after": "bd68c07d5c93f7c956b4d16d8014546017f65f779255d5dbc8bc32a67db7a425"
     },
     "section 5/IntegrationSection5/CompletedNonrectangleTails.lean": {
-      "before": null,
+      "before": "ebf9dd35df96a370a3f31b23013ca5b0bc891cc9b01474b6741ccc0e3db90b7e",
       "after": "ebf9dd35df96a370a3f31b23013ca5b0bc891cc9b01474b6741ccc0e3db90b7e"
     },
     "section 5/IntegrationSection5/CoordinateCanonicalProjection.lean": {
-      "before": null,
+      "before": "463d01b8aabaf762749b584915b7b2620df985d0933869e1c4e8091022b1f8cc",
       "after": "463d01b8aabaf762749b584915b7b2620df985d0933869e1c4e8091022b1f8cc"
     },
     "section 5/IntegrationSection5/Corollary58.lean": {
-      "before": null,
+      "before": "cf3c6fbb4b4151fa3b00d75a826aafeacd43e3443a6805916871e94847eacc7c",
       "after": "cf3c6fbb4b4151fa3b00d75a826aafeacd43e3443a6805916871e94847eacc7c"
     },
     "section 5/IntegrationSection5/EmptyFocus.lean": {
-      "before": null,
+      "before": "301a770d4c665791476965d85c96b2e3fa01f52eb3de1a852de5dd67be59675b",
       "after": "301a770d4c665791476965d85c96b2e3fa01f52eb3de1a852de5dd67be59675b"
     },
     "section 5/IntegrationSection5/FibreFocusMaps.lean": {
-      "before": null,
+      "before": "45025278df45e7a14481637dd2d246b27285860831074b2a8d8ef200a6c92b6d",
       "after": "45025278df45e7a14481637dd2d246b27285860831074b2a8d8ef200a6c92b6d"
     },
     "section 5/IntegrationSection5/FibreFocusPresentation.lean": {
-      "before": null,
+      "before": "b82481407e4818daef8d8d8e7dff2606af472a601dcd2d9363b75a21bbfa6923",
       "after": "b82481407e4818daef8d8d8e7dff2606af472a601dcd2d9363b75a21bbfa6923"
     },
     "section 5/IntegrationSection5/FibreFocusProjection.lean": {
-      "before": null,
+      "before": "5934d8256471f451a8da8a4f409f8ca2d78d211dec7be15859b9a07a4f6bd2e8",
       "after": "5934d8256471f451a8da8a4f409f8ca2d78d211dec7be15859b9a07a4f6bd2e8"
     },
     "section 5/IntegrationSection5/FinalBranchCuts.lean": {
-      "before": null,
+      "before": "80d2c8a71ba0bfb2d8938fc959cfadc472ec62ee59b124bd825b2ada95ab7718",
       "after": "80d2c8a71ba0bfb2d8938fc959cfadc472ec62ee59b124bd825b2ada95ab7718"
     },
     "section 5/IntegrationSection5/FinalNComparison.lean": {
-      "before": null,
+      "before": "a8ce39bc80ccca30db0a7062ff977020ff0ec08c57b13b9390f223080e7414f2",
       "after": "a8ce39bc80ccca30db0a7062ff977020ff0ec08c57b13b9390f223080e7414f2"
     },
     "section 5/IntegrationSection5/FinalNIndices.lean": {
-      "before": null,
+      "before": "884dcffc725ca3f79f497c0a9b71d670c137acb69b6a61163e5f37e00e95ebcf",
       "after": "884dcffc725ca3f79f497c0a9b71d670c137acb69b6a61163e5f37e00e95ebcf"
     },
     "section 5/IntegrationSection5/FinalNProgramProfiles.lean": {
-      "before": null,
+      "before": "8ed8ecbccc3458803cd8ddb94251a76e6edd7a641a55925b51c65561dbdc959b",
       "after": "8ed8ecbccc3458803cd8ddb94251a76e6edd7a641a55925b51c65561dbdc959b"
     },
     "section 5/IntegrationSection5/FinalNativeComparison.lean": {
-      "before": null,
+      "before": "d412bca90361c49cc7432a4d40e5e07ec42641534df591e2ff0a2e845c60900c",
       "after": "d412bca90361c49cc7432a4d40e5e07ec42641534df591e2ff0a2e845c60900c"
     },
     "section 5/IntegrationSection5/FinalRawPartition.lean": {
-      "before": null,
+      "before": "d7faea7dd2e15a4b380cdfa1f1b2a17d9e27bf78573c7ff3bbd02458d83b1f1c",
       "after": "d7faea7dd2e15a4b380cdfa1f1b2a17d9e27bf78573c7ff3bbd02458d83b1f1c"
     },
     "section 5/IntegrationSection5/FiniteContraction.lean": {
-      "before": null,
+      "before": "0ab4421ccd3e09e4058fe5ff74b93714ad3b37c64934bf924f6677c58fce66b3",
       "after": "0ab4421ccd3e09e4058fe5ff74b93714ad3b37c64934bf924f6677c58fce66b3"
     },
     "section 5/IntegrationSection5/FiniteGeometryPreparation.lean": {
-      "before": null,
+      "before": "5d3ea94b03f88919a6e5fbf44395b77f1cd6f0353beef2e308e289e725070585",
       "after": "5d3ea94b03f88919a6e5fbf44395b77f1cd6f0353beef2e308e289e725070585"
     },
     "section 5/IntegrationSection5/FiniteMixedRVFibres.lean": {
-      "before": null,
+      "before": "ab730e438df296ae2cfa14bc5e4c392b3bcabe8ed1bdb75e0f8ed55be392e871",
       "after": "ab730e438df296ae2cfa14bc5e4c392b3bcabe8ed1bdb75e0f8ed55be392e871"
     },
     "section 5/IntegrationSection5/FiniteNormalization.lean": {
-      "before": null,
+      "before": "c4091b6260e200f762cbb10eab990b9eee6fc1ed4d48e5f80683dda06d20be30",
       "after": "c4091b6260e200f762cbb10eab990b9eee6fc1ed4d48e5f80683dda06d20be30"
     },
     "section 5/IntegrationSection5/FiniteNumbered.lean": {
-      "before": null,
+      "before": "c3ee81c3248a4695135ec0790263635d559e11ed8046e28bed3a63a33c120150",
       "after": "c3ee81c3248a4695135ec0790263635d559e11ed8046e28bed3a63a33c120150"
     },
     "section 5/IntegrationSection5/FiniteRVComparison.lean": {
-      "before": null,
+      "before": "150d066acbcda3b9295fffee2100b592e642fca2ca04e003f06df930e4592f4a",
       "after": "150d066acbcda3b9295fffee2100b592e642fca2ca04e003f06df930e4592f4a"
     },
     "section 5/IntegrationSection5/FiniteStandardContraction.lean": {
-      "before": null,
+      "before": "12b972cf1ff857c60eefd30566682249bb4081debed6decdbe042a1758f2a24a",
       "after": "12b972cf1ff857c60eefd30566682249bb4081debed6decdbe042a1758f2a24a"
     },
     "section 5/IntegrationSection5/FiniteStandardContractionData.lean": {
-      "before": null,
+      "before": "65b7fd3f526b4607d9e194ba26f5f6fb47e3546c6bbf083b9c5f3e89664ecc1d",
       "after": "65b7fd3f526b4607d9e194ba26f5f6fb47e3546c6bbf083b9c5f3e89664ecc1d"
     },
     "section 5/IntegrationSection5/FiniteUnaryPartition.lean": {
-      "before": null,
+      "before": "8b0af7a31e8d5b814cfda8024a8a395ec50048c852290bdeeed3888553bf1b43",
       "after": "8b0af7a31e8d5b814cfda8024a8a395ec50048c852290bdeeed3888553bf1b43"
     },
     "section 5/IntegrationSection5/FixedVFHeadDescent.lean": {
-      "before": null,
+      "before": "7e98805b2040b9e612cd0bfde3fbd9b65d33dea86c438fcb321fe657ab83f3f7",
       "after": "7e98805b2040b9e612cd0bfde3fbd9b65d33dea86c438fcb321fe657ab83f3f7"
     },
     "section 5/IntegrationSection5/FixedVFProjectionPadding.lean": {
-      "before": null,
+      "before": "960263e5c33ee876001c85aecc0d83abd66a22e974e433ce129ad6cf47c2a6d0",
       "after": "960263e5c33ee876001c85aecc0d83abd66a22e974e433ce129ad6cf47c2a6d0"
     },
     "section 5/IntegrationSection5/FixedVFRVIso.lean": {
-      "before": null,
+      "before": "66fee4cb5f01a406274248284692f6ae757876d8cac12a52d6043fb20247d211",
       "after": "66fee4cb5f01a406274248284692f6ae757876d8cac12a52d6043fb20247d211"
     },
     "section 5/IntegrationSection5/FocusExtension.lean": {
-      "before": null,
+      "before": "872d459d3dc9ef44210808a864b4fc949c8cea7179e567b7ecbe32509e06641d",
       "after": "872d459d3dc9ef44210808a864b4fc949c8cea7179e567b7ecbe32509e06641d"
     },
     "section 5/IntegrationSection5/FullStandardComparison.lean": {
-      "before": null,
+      "before": "7fdfeb3da03f6f9e45c8353fbf9408666611fee531206d24c58966f1a29a12a6",
       "after": "7fdfeb3da03f6f9e45c8353fbf9408666611fee531206d24c58966f1a29a12a6"
     },
     "section 5/IntegrationSection5/GammaActiveUnaryFocus.lean": {
-      "before": null,
+      "before": "7c2545f0e6d974e283f1cc575ede814e37256548b3a5baf4bd70ca3be93c6bd1",
       "after": "7c2545f0e6d974e283f1cc575ede814e37256548b3a5baf4bd70ca3be93c6bd1"
     },
     "section 5/IntegrationSection5/GammaBalancedCellComparison.lean": {
-      "before": null,
+      "before": "3d4f779d62c455a1b915acf5c1d6dff0ee4e653ba2bd66de1d64e83483883dcb",
       "after": "3d4f779d62c455a1b915acf5c1d6dff0ee4e653ba2bd66de1d64e83483883dcb"
     },
     "section 5/IntegrationSection5/GammaBranchBoundaryPrefix.lean": {
-      "before": null,
+      "before": "dde37876278036b51757fedf8e16a4df39750a079a3f7777b7af666dd97afd70",
       "after": "dde37876278036b51757fedf8e16a4df39750a079a3f7777b7af666dd97afd70"
     },
     "section 5/IntegrationSection5/GammaCellComparison.lean": {
-      "before": null,
+      "before": "4767875d181a6591ecf20266465cf3ab5565f12e78842bcb0dd1fd4f4d9f90f0",
       "after": "4767875d181a6591ecf20266465cf3ab5565f12e78842bcb0dd1fd4f4d9f90f0"
     },
     "section 5/IntegrationSection5/GammaCellStandardExistence.lean": {
-      "before": null,
+      "before": "ae60206bbe463135ea9af43585b3f592aad868cc3d74adc7577c26af9d7e193f",
       "after": "ae60206bbe463135ea9af43585b3f592aad868cc3d74adc7577c26af9d7e193f"
     },
     "section 5/IntegrationSection5/GammaCompilerFocus.lean": {
-      "before": null,
+      "before": "901516ef7c5b4dec95814933b7e1465331a4cd63618f9eeed5d03bae4f705431",
       "after": "901516ef7c5b4dec95814933b7e1465331a4cd63618f9eeed5d03bae4f705431"
     },
     "section 5/IntegrationSection5/GammaCoordinateCanonical.lean": {
-      "before": null,
+      "before": "62e4acab7ee5a3161bb189776642ac1d4d509d47a6340130f2a51ee90e4c315a",
       "after": "62e4acab7ee5a3161bb189776642ac1d4d509d47a6340130f2a51ee90e4c315a"
     },
     "section 5/IntegrationSection5/GammaFiniteCombinations.lean": {
-      "before": null,
+      "before": "471d49d4909f731d3b3eaef9f416031ff10a37f9b7127d077d9019b1ae769bde",
       "after": "471d49d4909f731d3b3eaef9f416031ff10a37f9b7127d077d9019b1ae769bde"
     },
     "section 5/IntegrationSection5/GammaFiniteCoordinates.lean": {
-      "before": null,
+      "before": "119699260cf945d314258e9111729fe6cec7f2e43f34da6bb8a7f33d4121bce9",
       "after": "119699260cf945d314258e9111729fe6cec7f2e43f34da6bb8a7f33d4121bce9"
     },
     "section 5/IntegrationSection5/GammaHeadCertifiedTrace.lean": {
-      "before": null,
+      "before": "dc26e4260c7cb9ed5e04f2e7601180ff538de8407ee0cb707cff2db930fcfa42",
       "after": "dc26e4260c7cb9ed5e04f2e7601180ff538de8407ee0cb707cff2db930fcfa42"
     },
     "section 5/IntegrationSection5/GammaHeadUnaryCompletion.lean": {
-      "before": null,
+      "before": "0f47ea19a5a8b0d5c96248e66d70904d9addfab898fe2896817521655a420eb0",
       "after": "0f47ea19a5a8b0d5c96248e66d70904d9addfab898fe2896817521655a420eb0"
     },
     "section 5/IntegrationSection5/GammaMatchedHeadRV.lean": {
-      "before": null,
+      "before": "196a6b554122c28ee4acac7aa6775cb14d32b85f52a6e9d6b75297ff4bb20f82",
       "after": "196a6b554122c28ee4acac7aa6775cb14d32b85f52a6e9d6b75297ff4bb20f82"
     },
     "section 5/IntegrationSection5/GammaPermutationIso.lean": {
-      "before": null,
+      "before": "6fd13d00cba96a04690c0754367dbf900344b22d166067d543f033bb80421bc4",
       "after": "6fd13d00cba96a04690c0754367dbf900344b22d166067d543f033bb80421bc4"
     },
     "section 5/IntegrationSection5/GammaPointSurjectiveDescent.lean": {
-      "before": null,
+      "before": "1fc2b6c3ebef8082e4cce2afa380a13264317c068df0f57384d3bd8b9e90b976",
       "after": "1fc2b6c3ebef8082e4cce2afa380a13264317c068df0f57384d3bd8b9e90b976"
     },
     "section 5/IntegrationSection5/GammaProductCellComparison.lean": {
-      "before": null,
+      "before": "a32175b60d8a636f8ce639ca8ab57536d05ffdb8d6561f130456763b6f52b30b",
       "after": "a32175b60d8a636f8ce639ca8ab57536d05ffdb8d6561f130456763b6f52b30b"
     },
     "section 5/IntegrationSection5/GammaProgramTrace.lean": {
-      "before": null,
+      "before": "a48b9c4a32fbc3d46d91511c43a1781a204580a335e6694fd246a190133cd908",
       "after": "a48b9c4a32fbc3d46d91511c43a1781a204580a335e6694fd246a190133cd908"
     },
     "section 5/IntegrationSection5/GammaProgramTraceHelper.lean": {
-      "before": null,
+      "before": "5c4e34ac4409fbcc9dcbc445973d366be1da2f316698bdeae0f6a99c876e6969",
       "after": "5c4e34ac4409fbcc9dcbc445973d366be1da2f316698bdeae0f6a99c876e6969"
     },
     "section 5/IntegrationSection5/GammaProjectedScalar.lean": {
-      "before": null,
+      "before": "745d537762c6153ee4bf8c18e9a541c1f56714fd1f8c021030d10fbab7f6146b",
       "after": "745d537762c6153ee4bf8c18e9a541c1f56714fd1f8c021030d10fbab7f6146b"
     },
     "section 5/IntegrationSection5/GammaPullbackPreparationOver.lean": {
-      "before": null,
+      "before": "2a87244a664c440927adcc5000b5fc5fd1b8bd7596b11af43af17bdcc1417237",
       "after": "2a87244a664c440927adcc5000b5fc5fd1b8bd7596b11af43af17bdcc1417237"
     },
     "section 5/IntegrationSection5/GammaRVGraphs.lean": {
-      "before": null,
+      "before": "c8db8a3e2003e5b3a43d8aa7f04ff0bbd024c2a2ea4c91947ccd7b9444da114a",
       "after": "c8db8a3e2003e5b3a43d8aa7f04ff0bbd024c2a2ea4c91947ccd7b9444da114a"
     },
     "section 5/IntegrationSection5/GammaRVIsomorphism.lean": {
-      "before": null,
+      "before": "d111437cecc60a9ca3ca6b7e9a7de749d49d5ac75f7b21fa401b64d034248f99",
       "after": "d111437cecc60a9ca3ca6b7e9a7de749d49d5ac75f7b21fa401b64d034248f99"
     },
     "section 5/IntegrationSection5/GammaRVPartition.lean": {
-      "before": null,
+      "before": "5c15187b6237d2205bb60fa33cc92e0ed6f2060969b513baa8ee5aa1e5524273",
       "after": "5c15187b6237d2205bb60fa33cc92e0ed6f2060969b513baa8ee5aa1e5524273"
     },
     "section 5/IntegrationSection5/GammaRVPredicateChain.lean": {
-      "before": null,
+      "before": "1857b57b32755b2053076a41c54b097647ea14544a5ede0a98553dcbd7d60ff6",
       "after": "1857b57b32755b2053076a41c54b097647ea14544a5ede0a98553dcbd7d60ff6"
     },
     "section 5/IntegrationSection5/GammaRVPresentations.lean": {
-      "before": null,
+      "before": "fabdd7145ce78d9aa3fa96737399a5a5c1be0b28101b06964fe8b9806d9ca88f",
       "after": "fabdd7145ce78d9aa3fa96737399a5a5c1be0b28101b06964fe8b9806d9ca88f"
     },
     "section 5/IntegrationSection5/GammaRVUnion.lean": {
-      "before": null,
+      "before": "ead44d71f3c67c1dbce9b1bd1ba05ed684dc0e2786133239ed0fff228898eae1",
       "after": "ead44d71f3c67c1dbce9b1bd1ba05ed684dc0e2786133239ed0fff228898eae1"
     },
     "section 5/IntegrationSection5/GammaRectangleFamilyComparison.lean": {
-      "before": null,
+      "before": "fcbf459e9031399c4bdf1923b9824843c611f9f911ec9b2142e5cc2d602a7362",
       "after": "fcbf459e9031399c4bdf1923b9824843c611f9f911ec9b2142e5cc2d602a7362"
     },
     "section 5/IntegrationSection5/GammaSpecialRestriction.lean": {
-      "before": null,
+      "before": "a0c581234f4b06b26e21fce2711da7a29f087c463c25cd263dd94ef6f09cac8a",
       "after": "a0c581234f4b06b26e21fce2711da7a29f087c463c25cd263dd94ef6f09cac8a"
     },
     "section 5/IntegrationSection5/GammaStandardProgramGraphs.lean": {
-      "before": null,
+      "before": "1480960f448f7299fb79aa228cf7716bcea010fe13ce44a1a10f7399d97eddb9",
       "after": "1480960f448f7299fb79aa228cf7716bcea010fe13ce44a1a10f7399d97eddb9"
     },
     "section 5/IntegrationSection5/GammaStandardTrace.lean": {
-      "before": null,
+      "before": "d86b6c2b49632bb41b95565d7988a4ff63e17f1d0de60afc147c78881a6928f8",
       "after": "d86b6c2b49632bb41b95565d7988a4ff63e17f1d0de60afc147c78881a6928f8"
     },
     "section 5/IntegrationSection5/GammaSurjectiveRVComparison.lean": {
-      "before": null,
+      "before": "2a76537fb2960629fc956b91c04353c15f76a936169027267b3a4c331647bfaa",
       "after": "2a76537fb2960629fc956b91c04353c15f76a936169027267b3a4c331647bfaa"
     },
     "section 5/IntegrationSection5/GammaTaggedTranslation.lean": {
-      "before": null,
+      "before": "b7a0fb108932154238b29f69eec56f0642c9b4067bbd0fc8fa74ac4c766166ba",
       "after": "b7a0fb108932154238b29f69eec56f0642c9b4067bbd0fc8fa74ac4c766166ba"
     },
     "section 5/IntegrationSection5/GammaTraceCompiler.lean": {
-      "before": null,
+      "before": "49be26963f68ab04a92e956ce8eec71af7733e73794857901a2c6751eb9e0274",
       "after": "49be26963f68ab04a92e956ce8eec71af7733e73794857901a2c6751eb9e0274"
     },
     "section 5/IntegrationSection5/GammaTraceCore.lean": {
-      "before": null,
+      "before": "45288525ff527128ed576a6c184234feffa7c6abe0a55b8d8ce8dbd4a276e12d",
       "after": "45288525ff527128ed576a6c184234feffa7c6abe0a55b8d8ce8dbd4a276e12d"
     },
     "section 5/IntegrationSection5/GammaTraceExtension.lean": {
-      "before": null,
+      "before": "d8b8f9f2389597d5f4f041e58c7464fb598a1a3328188138b4925eda4c5a2485",
       "after": "d8b8f9f2389597d5f4f041e58c7464fb598a1a3328188138b4925eda4c5a2485"
     },
     "section 5/IntegrationSection5/GammaTraceFlags.lean": {
-      "before": null,
+      "before": "17ac12f1a5bb16636c4b8687864d3f7eb0234c8828e1b733a1dce7c617685d79",
       "after": "17ac12f1a5bb16636c4b8687864d3f7eb0234c8828e1b733a1dce7c617685d79"
     },
     "section 5/IntegrationSection5/GammaTraceLift.lean": {
-      "before": null,
+      "before": "b080c5404c0cc22d9faadfd2464cdd6bf12b922b2e7be5f96bb92d874667c88f",
       "after": "b080c5404c0cc22d9faadfd2464cdd6bf12b922b2e7be5f96bb92d874667c88f"
     },
     "section 5/IntegrationSection5/GammaTracePresentation.lean": {
-      "before": null,
+      "before": "9ce809b5d7ea4a27ada6d96facb49d4072ae0b5dd955ee0c0245b526ab2ce188",
       "after": "9ce809b5d7ea4a27ada6d96facb49d4072ae0b5dd955ee0c0245b526ab2ce188"
     },
     "section 5/IntegrationSection5/GammaTraceProjection.lean": {
-      "before": null,
+      "before": "792f0c9ac55f4bb58a4843977c5543ca2e0ec0aa4317504fbab5659291a3d947",
       "after": "792f0c9ac55f4bb58a4843977c5543ca2e0ec0aa4317504fbab5659291a3d947"
     },
     "section 5/IntegrationSection5/GammaTraceRestriction.lean": {
-      "before": null,
+      "before": "92e49cd45e90a343b901cf4ed8613ebf4d5b96015e085eb06ec58e214cb23f2f",
       "after": "92e49cd45e90a343b901cf4ed8613ebf4d5b96015e085eb06ec58e214cb23f2f"
     },
     "section 5/IntegrationSection5/GammaUnaryCoordinateLift.lean": {
-      "before": null,
+      "before": "e188ede1205170499354f8b4ad16bdd4b18be3b5554fed8ab6b90beb35efe1aa",
       "after": "e188ede1205170499354f8b4ad16bdd4b18be3b5554fed8ab6b90beb35efe1aa"
     },
     "section 5/IntegrationSection5/GeometryLibrary.lean": {
-      "before": "021910bb8e4a79c71c48383738195f6ee6191f6d64496898981737a65775f27c",
+      "before": "864eec452acd845fa664d38998f37b69f20c7545d938df42e6506877dad10275",
       "after": "864eec452acd845fa664d38998f37b69f20c7545d938df42e6506877dad10275"
     },
     "section 5/IntegrationSection5/GlobalCompletedHeads.lean": {
-      "before": null,
+      "before": "a0a585eb1cc6d0a1eb6383b80daebc99d260e00cb4f49b3104cc9e2c4f18d136",
       "after": "a0a585eb1cc6d0a1eb6383b80daebc99d260e00cb4f49b3104cc9e2c4f18d136"
     },
     "section 5/IntegrationSection5/GlobalNonrectangleHeads.lean": {
-      "before": null,
+      "before": "a0befceaf37c65eddeee965f6046f1bbb1367bfcb61516877feaa8310c81584e",
       "after": "a0befceaf37c65eddeee965f6046f1bbb1367bfcb61516877feaa8310c81584e"
     },
     "section 5/IntegrationSection5/HeadIsoCoordinates.lean": {
-      "before": null,
+      "before": "86fbe2da1b94e6dda09956b84952a5db9bf84aaff630ebb98603839bdc9777a1",
       "after": "86fbe2da1b94e6dda09956b84952a5db9bf84aaff630ebb98603839bdc9777a1"
     },
     "section 5/IntegrationSection5/HeadIsoRVKernel.lean": {
-      "before": null,
+      "before": "b2e727690e7e004ec6a589dd106f9433fed8e19586af51ea3a32bb491a22314d",
       "after": "b2e727690e7e004ec6a589dd106f9433fed8e19586af51ea3a32bb491a22314d"
     },
     "section 5/IntegrationSection5/HeadPreparationExtension.lean": {
-      "before": null,
+      "before": "3b54757e684d1ac1c6adfbc4bf58b546a52dfa34773369ace3ca46644c68a8fb",
       "after": "3b54757e684d1ac1c6adfbc4bf58b546a52dfa34773369ace3ca46644c68a8fb"
     },
     "section 5/IntegrationSection5/HeadProjectionFromFactor.lean": {
-      "before": null,
+      "before": "9b6f2f42f8088ea499e101c9a3c1b40a2467d102eb86c1b39a23eb9881bbb454",
       "after": "9b6f2f42f8088ea499e101c9a3c1b40a2467d102eb86c1b39a23eb9881bbb454"
     },
     "section 5/IntegrationSection5/HeadProjectionPadding.lean": {
-      "before": null,
+      "before": "36ec36f90060f306ee4ea116b7f36a6420f039c7a31d399a032eab08d4be4e70",
       "after": "36ec36f90060f306ee4ea116b7f36a6420f039c7a31d399a032eab08d4be4e70"
     },
     "section 5/IntegrationSection5/HeadUnaryCompletion.lean": {
-      "before": null,
+      "before": "0cc5d4ee0532a4ce0ed8cc2b873cd2951be08647525960b1f323b3dc3ff32dbd",
       "after": "0cc5d4ee0532a4ce0ed8cc2b873cd2951be08647525960b1f323b3dc3ff32dbd"
     },
     "section 5/IntegrationSection5/HullTranslationFocus.lean": {
-      "before": null,
+      "before": "254fdbd726fb6f280b787ef54255932ac6223cb3ed7eb5a43ba0a8fad3251c22",
       "after": "254fdbd726fb6f280b787ef54255932ac6223cb3ed7eb5a43ba0a8fad3251c22"
     },
     "section 5/IntegrationSection5/InactiveBranchHeadIso.lean": {
-      "before": null,
+      "before": "c5d892a2c295d7498490971a3e22c69d497191ff09540e4a68fcf4ea881f39f7",
       "after": "c5d892a2c295d7498490971a3e22c69d497191ff09540e4a68fcf4ea881f39f7"
     },
     "section 5/IntegrationSection5/InactiveBranchPadding.lean": {
-      "before": null,
+      "before": "4f2c7c5bac668a6288878132a05870c3d9b229acb2cbc5dcce7178418028a43d",
       "after": "4f2c7c5bac668a6288878132a05870c3d9b229acb2cbc5dcce7178418028a43d"
     },
     "section 5/IntegrationSection5/InactiveHeadSaturation.lean": {
-      "before": null,
+      "before": "dfb65a34e4c848816a5b3cacc22c9f05bda28a03646ca97de85afef015b2e11f",
       "after": "dfb65a34e4c848816a5b3cacc22c9f05bda28a03646ca97de85afef015b2e11f"
     },
     "section 5/IntegrationSection5/InactiveRectangleFamily.lean": {
-      "before": null,
+      "before": "b5376116ef14c63abec0c728faaa08610afa63f03b38d2b6e1ab6c493474d91f",
       "after": "b5376116ef14c63abec0c728faaa08610afa63f03b38d2b6e1ab6c493474d91f"
     },
     "section 5/IntegrationSection5/JointUnaryKernel.lean": {
-      "before": null,
+      "before": "6ef6ae2d50ac67a04f1038ad179cd8470137c97b1e1506bcbad914753ff78b27",
       "after": "6ef6ae2d50ac67a04f1038ad179cd8470137c97b1e1506bcbad914753ff78b27"
     },
     "section 5/IntegrationSection5/LiftedHeadRVKernels.lean": {
-      "before": null,
+      "before": "d8b6f798a1b96460aa5819750a197655731718b9f6cbe9c6496eb5e22794aaa0",
       "after": "d8b6f798a1b96460aa5819750a197655731718b9f6cbe9c6496eb5e22794aaa0"
     },
     "section 5/IntegrationSection5/LiftedUnaryProductGeometry.lean": {
-      "before": null,
+      "before": "ef60279f8ab3622f63d83a7aec464d48397cdf56a33a018abe580403f484bf4e",
       "after": "ef60279f8ab3622f63d83a7aec464d48397cdf56a33a018abe580403f484bf4e"
     },
     "section 5/IntegrationSection5/MatchedHeadCompletion.lean": {
-      "before": null,
+      "before": "5b7f2d7506a244a6b0ce4c1e86ec50f2efcd26424013316f2d39a0b230a57486",
       "after": "5b7f2d7506a244a6b0ce4c1e86ec50f2efcd26424013316f2d39a0b230a57486"
     },
     "section 5/IntegrationSection5/MatchedHeadRV.lean": {
-      "before": null,
+      "before": "d7c16690f45d0f932d409a4c192f6d1c2537ad444f465a1c66fb2d8db46b8e78",
       "after": "d7c16690f45d0f932d409a4c192f6d1c2537ad444f465a1c66fb2d8db46b8e78"
     },
     "section 5/IntegrationSection5/MatchedUnaryPreparation.lean": {
-      "before": null,
+      "before": "f1d6852f3c3480b20f545220c3bcc8b323fcb68e1fcfa8d467461a6aa52f55c1",
       "after": "f1d6852f3c3480b20f545220c3bcc8b323fcb68e1fcfa8d467461a6aa52f55c1"
     },
     "section 5/IntegrationSection5/MixedCellDecomposition.lean": {
-      "before": null,
+      "before": "051ec36056fae8a77fb9734e46578974d2fe81ca390441d00a10e46b04153e08",
       "after": "051ec36056fae8a77fb9734e46578974d2fe81ca390441d00a10e46b04153e08"
     },
     "section 5/IntegrationSection5/MixedFibreDefinability.lean": {
-      "before": null,
+      "before": "f60d78779a537791212b16fa968bb45cf9fae230494f760a03018253d0a8f002",
       "after": "f60d78779a537791212b16fa968bb45cf9fae230494f760a03018253d0a8f002"
     },
     "section 5/IntegrationSection5/MixedPositionDefinability.lean": {
-      "before": null,
+      "before": "0257f02d6cb9d8d959bd6789ad5c9d1a18670ee0fdaf417024f2dfb156e9933b",
       "after": "0257f02d6cb9d8d959bd6789ad5c9d1a18670ee0fdaf417024f2dfb156e9933b"
     },
     "section 5/IntegrationSection5/MixedRVIsomorphism.lean": {
-      "before": null,
+      "before": "5a221b48cce4ec7cf9fb626356fc3e3846afcb11f5a008f26e92960029c0027c",
       "after": "5a221b48cce4ec7cf9fb626356fc3e3846afcb11f5a008f26e92960029c0027c"
     },
     "section 5/IntegrationSection5/MixedStripPreparation.lean": {
-      "before": null,
+      "before": "554af52922189a0695b8a0e46add8f7874bc0f80fb419021e7f04b4eb5b66fb5",
       "after": "554af52922189a0695b8a0e46add8f7874bc0f80fb419021e7f04b4eb5b66fb5"
     },
     "section 5/IntegrationSection5/MixedStripPresentation.lean": {
-      "before": null,
+      "before": "7f831099ca81b570335f30f9d99b85b82d84bf9346d27d581049edfb4135b203",
       "after": "7f831099ca81b570335f30f9d99b85b82d84bf9346d27d581049edfb4135b203"
     },
     "section 5/IntegrationSection5/MixedUnaryPreparationOver.lean": {
-      "before": null,
+      "before": "7e44d3f9c95012830aa6cd6156331992557ddbb2f38dee47dee0de690b4df0c1",
       "after": "7e44d3f9c95012830aa6cd6156331992557ddbb2f38dee47dee0de690b4df0c1"
     },
     "section 5/IntegrationSection5/MixedUnaryPreparationSwap.lean": {
-      "before": null,
+      "before": "3fec5f38508d6cb11f138044e981d2a1b0903d067fcd2f28b39da44169e27483",
       "after": "3fec5f38508d6cb11f138044e981d2a1b0903d067fcd2f28b39da44169e27483"
     },
     "section 5/IntegrationSection5/MixedUnaryPreparations.lean": {
-      "before": null,
+      "before": "9cce27d5204dc87de26bfb48c60f88def8a03c38bbb3ccbab4a7a4491184148f",
       "after": "9cce27d5204dc87de26bfb48c60f88def8a03c38bbb3ccbab4a7a4491184148f"
     },
     "section 5/IntegrationSection5/MixedVerticalPositionFamilies.lean": {
-      "before": null,
+      "before": "7f367e473278146f0ecd6fea9f126875374414818967293bcb074c4313b6cea0",
       "after": "7f367e473278146f0ecd6fea9f126875374414818967293bcb074c4313b6cea0"
     },
     "section 5/IntegrationSection5/MixedVerticalPresentation.lean": {
-      "before": null,
+      "before": "6fc1be306a59219c798f290fd3ec4b6b0e22f69e4f294b99448ae75b1cc4d92b",
       "after": "6fc1be306a59219c798f290fd3ec4b6b0e22f69e4f294b99448ae75b1cc4d92b"
     },
     "section 5/IntegrationSection5/MixedVerticalPullbackCells.lean": {
-      "before": null,
+      "before": "818129f859d07ebf641daa0a6c2f77baafe229048d3ddd759fe88863ef953e73",
       "after": "818129f859d07ebf641daa0a6c2f77baafe229048d3ddd759fe88863ef953e73"
     },
     "section 5/IntegrationSection5/MixedVolumeImages.lean": {
-      "before": null,
+      "before": "2eb3b6900b85b8de59e046a83e434fc8cf251fbc958937538624060c20314181",
       "after": "2eb3b6900b85b8de59e046a83e434fc8cf251fbc958937538624060c20314181"
     },
     "section 5/IntegrationSection5/NativeCellProjections.lean": {
-      "before": null,
+      "before": "c616f39a0e0bb206d94ed7d45d2c64f09499d6a473a2ead428f053c544a6c5ac",
       "after": "c616f39a0e0bb206d94ed7d45d2c64f09499d6a473a2ead428f053c544a6c5ac"
     },
     "section 5/IntegrationSection5/NonrectangleCellGeometry.lean": {
-      "before": null,
+      "before": "b1e07f30cd3500eaf3542583a3e7985741692d616a5662bc45c7693a0b6e55f5",
       "after": "b1e07f30cd3500eaf3542583a3e7985741692d616a5662bc45c7693a0b6e55f5"
     },
     "section 5/IntegrationSection5/NonrectangleFiniteProfiles.lean": {
-      "before": null,
+      "before": "453efad4dd077d0b2d427d662cfc3ac1da965bb5be2a4cd79833067d83277603",
       "after": "453efad4dd077d0b2d427d662cfc3ac1da965bb5be2a4cd79833067d83277603"
     },
     "section 5/IntegrationSection5/NonrectangleHeadPresentations.lean": {
-      "before": null,
+      "before": "b61e763aed8a7848a9db1a99ec3dd8b9269fcdb5b27d3208f66d1ff18370b005",
       "after": "b61e763aed8a7848a9db1a99ec3dd8b9269fcdb5b27d3208f66d1ff18370b005"
     },
     "section 5/IntegrationSection5/NonrectangleHeadRVClasses.lean": {
-      "before": null,
+      "before": "9ece4516fb8843ae79965b7460fe3ef0572c38049662f279e98b60cce9cb87a9",
       "after": "9ece4516fb8843ae79965b7460fe3ef0572c38049662f279e98b60cce9cb87a9"
     },
     "section 5/IntegrationSection5/NonrectangleHeadZero.lean": {
-      "before": null,
+      "before": "13d18bada573832a30c13d7f7e1e3b3e7383e996194302c13b0f411669dbf128",
       "after": "13d18bada573832a30c13d7f7e1e3b3e7383e996194302c13b0f411669dbf128"
     },
     "section 5/IntegrationSection5/NonrectangleHorizontalPreparation.lean": {
-      "before": null,
+      "before": "da9f977c56472c44cb14130ebe6b9a035a3201fd128accc86c78cbb6d293479a",
       "after": "da9f977c56472c44cb14130ebe6b9a035a3201fd128accc86c78cbb6d293479a"
     },
     "section 5/IntegrationSection5/NonrectangleInverseProfile.lean": {
-      "before": null,
+      "before": "51ce484fd0509b73623cc30b0fa5e6e8b2a5f6d9f7789fb4aa91c78aee557c48",
       "after": "51ce484fd0509b73623cc30b0fa5e6e8b2a5f6d9f7789fb4aa91c78aee557c48"
     },
     "section 5/IntegrationSection5/NonrectangleMatchedPrograms.lean": {
-      "before": null,
+      "before": "f9a13fcc45c2468e414d7f4f77cfc4852fecc70035555bee1910f2632d8cc079",
       "after": "f9a13fcc45c2468e414d7f4f77cfc4852fecc70035555bee1910f2632d8cc079"
     },
     "section 5/IntegrationSection5/NonrectanglePositionIso.lean": {
-      "before": null,
+      "before": "79b21731ae803f87af687ed32a0f092239f61c9c12ac7a3a5d141e987470fce4",
       "after": "79b21731ae803f87af687ed32a0f092239f61c9c12ac7a3a5d141e987470fce4"
     },
     "section 5/IntegrationSection5/NonrectangleProfileRepresentatives.lean": {
-      "before": null,
+      "before": "ebeac70b915929974900f4eb99364b37465f02ade800e0f575fe39ddb09d94ac",
       "after": "ebeac70b915929974900f4eb99364b37465f02ade800e0f575fe39ddb09d94ac"
     },
     "section 5/IntegrationSection5/NonrectangleProfiles.lean": {
-      "before": null,
+      "before": "7ccbff3d94327604433c30b573389af39a700953d3d6fb1cf93a128ae7f708bb",
       "after": "7ccbff3d94327604433c30b573389af39a700953d3d6fb1cf93a128ae7f708bb"
     },
     "section 5/IntegrationSection5/NonrectangleRVComparison.lean": {
-      "before": null,
+      "before": "22e0711ef1d7b5126be5abed12df53e19de9467cebcc6ed71af490e6387f0173",
       "after": "22e0711ef1d7b5126be5abed12df53e19de9467cebcc6ed71af490e6387f0173"
     },
     "section 5/IntegrationSection5/NonrectangleResidualValues.lean": {
-      "before": null,
+      "before": "ff6a15b2c997b9bf5aa185b46acfb96f2761e308fa06dbcd88c8b4b099086521",
       "after": "ff6a15b2c997b9bf5aa185b46acfb96f2761e308fa06dbcd88c8b4b099086521"
     },
     "section 5/IntegrationSection5/NonrectangleStripGeometry.lean": {
-      "before": null,
+      "before": "3da55f74884709f2a3ae39137f20efb3982c4aaedfcecb10d66eba3b0e1850f4",
       "after": "3da55f74884709f2a3ae39137f20efb3982c4aaedfcecb10d66eba3b0e1850f4"
     },
     "section 5/IntegrationSection5/NonrectangleTransverseGeometry.lean": {
-      "before": null,
+      "before": "13867a48c9c1386fd7052b5b6cbf333e3cc4702abad5f0a3973b2a69525e350d",
       "after": "13867a48c9c1386fd7052b5b6cbf333e3cc4702abad5f0a3973b2a69525e350d"
     },
     "section 5/IntegrationSection5/NonrectangleTransverseWitness.lean": {
-      "before": null,
+      "before": "eb6e9f3f9400fb946c914ba7c9eed12f8266547c9db7328a90c6a086a21f773e",
       "after": "eb6e9f3f9400fb946c914ba7c9eed12f8266547c9db7328a90c6a086a21f773e"
     },
     "section 5/IntegrationSection5/NonrectangleVerticalPreparation.lean": {
-      "before": null,
+      "before": "b80dcea47a4491c093811986eddc1c5c3df0887616eb1c7769c11a12c39e51ef",
       "after": "b80dcea47a4491c093811986eddc1c5c3df0887616eb1c7769c11a12c39e51ef"
     },
     "section 5/IntegrationSection5/NonrectangleVerticalResidual.lean": {
-      "before": null,
+      "before": "024e2518762b085259b27494955c0b90d748c587a0638e92b4aa2553da231fcf",
       "after": "024e2518762b085259b27494955c0b90d748c587a0638e92b4aa2553da231fcf"
     },
     "section 5/IntegrationSection5/NormalizedSpecialPresentation.lean": {
-      "before": null,
+      "before": "5148b0041423646e2f5a0e5e032d1aef212f141f7c62b8ee133e8561f79939a0",
       "after": "5148b0041423646e2f5a0e5e032d1aef212f141f7c62b8ee133e8561f79939a0"
     },
     "section 5/IntegrationSection5/PaddedBranchProfileIso.lean": {
-      "before": null,
+      "before": "d0ec692b6ebb3db3e797a157fff5da76faea586d3a8ace9af4ba3ce8beba0b7d",
       "after": "d0ec692b6ebb3db3e797a157fff5da76faea586d3a8ace9af4ba3ce8beba0b7d"
     },
     "section 5/IntegrationSection5/PaddedExtensionInactive.lean": {
-      "before": null,
+      "before": "69b17e50cbc14984ed426ff90d61b3fc08322fe1898550e64588de208e12dd04",
       "after": "69b17e50cbc14984ed426ff90d61b3fc08322fe1898550e64588de208e12dd04"
     },
     "section 5/IntegrationSection5/PaddedProductCompletion.lean": {
-      "before": null,
+      "before": "02427ed714d032f2f4d2cd8bc114129a0ca406228666a89b548bbed64b6ddb0e",
       "after": "02427ed714d032f2f4d2cd8bc114129a0ca406228666a89b548bbed64b6ddb0e"
     },
     "section 5/IntegrationSection5/PaddedProductInactive.lean": {
-      "before": null,
+      "before": "914d143e1f1597c87711810203def8c14e0070a75eb872dafa234780f76b1c52",
       "after": "914d143e1f1597c87711810203def8c14e0070a75eb872dafa234780f76b1c52"
     },
     "section 5/IntegrationSection5/PaddedUnaryBranchExtension.lean": {
-      "before": null,
+      "before": "b9960265d6b0c48610dee89a16e1bbc1ae1af437676cdb4b7e606d81c41ee33c",
       "after": "b9960265d6b0c48610dee89a16e1bbc1ae1af437676cdb4b7e606d81c41ee33c"
     },
     "section 5/IntegrationSection5/PaddedUnaryBranchLift.lean": {
-      "before": null,
+      "before": "48bbebb52f3983c8893494eb4a45d908dc509ee21974b76af85a3617ccc21c55",
       "after": "48bbebb52f3983c8893494eb4a45d908dc509ee21974b76af85a3617ccc21c55"
     },
     "section 5/IntegrationSection5/PaddingProfileIso.lean": {
-      "before": null,
+      "before": "17f1123788e309aaa3cd8c295035e272a32ae892fe3244680ef51b2d978797ff",
       "after": "17f1123788e309aaa3cd8c295035e272a32ae892fe3244680ef51b2d978797ff"
     },
     "section 5/IntegrationSection5/PartialCoordinateFocus.lean": {
-      "before": null,
+      "before": "fe1b69b70497081834455c6e79b982fff11e1999767030c3453f94be5a42c275",
       "after": "fe1b69b70497081834455c6e79b982fff11e1999767030c3453f94be5a42c275"
     },
     "section 5/IntegrationSection5/PositionCoordinateGraph.lean": {
-      "before": null,
+      "before": "23ae922b7bb5148a875311c5d4d4cd60e231118e8160a5f4909fb1cbb6959b19",
       "after": "23ae922b7bb5148a875311c5d4d4cd60e231118e8160a5f4909fb1cbb6959b19"
     },
     "section 5/IntegrationSection5/PositionInverseGraph.lean": {
-      "before": null,
+      "before": "71d7d1a30f3f453dc768a3379c22d5338f54bc927f4a3793fcf2704507a52363",
       "after": "71d7d1a30f3f453dc768a3379c22d5338f54bc927f4a3793fcf2704507a52363"
     },
     "section 5/IntegrationSection5/PositionedCellLabelInjection.lean": {
-      "before": null,
+      "before": "b5bbc33c7abaa9f3c7ce5f700890f7990e8461b77a2d1c8b09b0e73e7c8c11de",
       "after": "b5bbc33c7abaa9f3c7ce5f700890f7990e8461b77a2d1c8b09b0e73e7c8c11de"
     },
     "section 5/IntegrationSection5/PositionedStripPreparation.lean": {
-      "before": null,
+      "before": "8ad7c037589615d42eb29836740f84977e514880b3834802b5d6bcc532ef3a82",
       "after": "8ad7c037589615d42eb29836740f84977e514880b3834802b5d6bcc532ef3a82"
     },
     "section 5/IntegrationSection5/ProductContractionKernels.lean": {
-      "before": null,
+      "before": "0b318bcb1d94e544697532ed1f6d8c0cbda49380442fc4720ae8ef80a88548c0",
       "after": "0b318bcb1d94e544697532ed1f6d8c0cbda49380442fc4720ae8ef80a88548c0"
     },
     "section 5/IntegrationSection5/ProductContractionProgram.lean": {
-      "before": null,
+      "before": "cdabdefc26d24cde5004158f8213ee6c8aa6ad73ad0c27cca0dfd5fa000907e5",
       "after": "cdabdefc26d24cde5004158f8213ee6c8aa6ad73ad0c27cca0dfd5fa000907e5"
     },
     "section 5/IntegrationSection5/ProductContractionSource.lean": {
-      "before": null,
+      "before": "c58457b25d90e2ec6a4a964cc852318b8d4c6466c7c7ce3e012044499acdff32",
       "after": "c58457b25d90e2ec6a4a964cc852318b8d4c6466c7c7ce3e012044499acdff32"
     },
     "section 5/IntegrationSection5/ProductHeadKernels.lean": {
-      "before": null,
+      "before": "00bd5097a78cec0184e7067e1f5391e52e9715b18b6194fe0bfb71346cd54cda",
       "after": "00bd5097a78cec0184e7067e1f5391e52e9715b18b6194fe0bfb71346cd54cda"
     },
     "section 5/IntegrationSection5/ProductHeadStage.lean": {
-      "before": null,
+      "before": "da87c9a4cc3f9f58f9bb776f3ed199e3eab1fd8610c3d521d4f910df95aadb39",
       "after": "da87c9a4cc3f9f58f9bb776f3ed199e3eab1fd8610c3d521d4f910df95aadb39"
     },
     "section 5/IntegrationSection5/ProductProgramKernel.lean": {
-      "before": null,
+      "before": "651f97ef392890ee22a3dccb99727b6919a6d8a0744bfb687e0482a4b9c47322",
       "after": "651f97ef392890ee22a3dccb99727b6919a6d8a0744bfb687e0482a4b9c47322"
     },
     "section 5/IntegrationSection5/ProductProgramVolume.lean": {
-      "before": null,
+      "before": "f42d600ecb0909a2ea4bb03417e3bf101a7122775c7fadbab9848b461342e69d",
       "after": "f42d600ecb0909a2ea4bb03417e3bf101a7122775c7fadbab9848b461342e69d"
     },
     "section 5/IntegrationSection5/ProductRVBranchHead.lean": {
-      "before": null,
+      "before": "6fa11cde2925006c19cb74300c02e00a7e61481c00e5ded00deab82d3a27a1e8",
       "after": "6fa11cde2925006c19cb74300c02e00a7e61481c00e5ded00deab82d3a27a1e8"
     },
     "section 5/IntegrationSection5/ProductStandardComparison.lean": {
-      "before": null,
+      "before": "f64f4c03f98e688f209cbbcd2d65f5f8729e19c147cfe12c557240d6bbbcf292",
       "after": "f64f4c03f98e688f209cbbcd2d65f5f8729e19c147cfe12c557240d6bbbcf292"
     },
     "section 5/IntegrationSection5/ProgramStandardPresentation.lean": {
-      "before": null,
+      "before": "85656761497c18032bd5ff4f12a34feeb14d3ab62435f50dbbb627cf04d02b4e",
       "after": "85656761497c18032bd5ff4f12a34feeb14d3ab62435f50dbbb627cf04d02b4e"
     },
     "section 5/IntegrationSection5/ProjectionPaddingOperations.lean": {
-      "before": null,
+      "before": "bcd7187721d027bb866229e32c1bfbe7f62778b2d8da320444d0c96dbe165085",
       "after": "bcd7187721d027bb866229e32c1bfbe7f62778b2d8da320444d0c96dbe165085"
     },
     "section 5/IntegrationSection5/ProjectionPaddingProductRefinement.lean": {
-      "before": null,
+      "before": "bc3d1c499bbe5c36190651fe77caadf8e0784d69dac23e108e171ac475abee90",
       "after": "bc3d1c499bbe5c36190651fe77caadf8e0784d69dac23e108e171ac475abee90"
     },
     "section 5/IntegrationSection5/RVBranchProductHeadSaturation.lean": {
-      "before": null,
+      "before": "1ef12f87ab4b3b4e5a7ad804b718639c1a5b83df9ba3cf63a448a138d0248fd1",
       "after": "1ef12f87ab4b3b4e5a7ad804b718639c1a5b83df9ba3cf63a448a138d0248fd1"
     },
     "section 5/IntegrationSection5/RVKeyedFunctions.lean": {
-      "before": null,
+      "before": "0e360bfec19680ae892088d677c114a135b5ffd841b6e190fc5ee4d5f9c74036",
       "after": "0e360bfec19680ae892088d677c114a135b5ffd841b6e190fc5ee4d5f9c74036"
     },
     "section 5/IntegrationSection5/RVPredicateFocus.lean": {
-      "before": null,
+      "before": "ad2212cfccd268511466b3f97e7c393b0963970ab4cadb1b6dfaf58b3572fc82",
       "after": "ad2212cfccd268511466b3f97e7c393b0963970ab4cadb1b6dfaf58b3572fc82"
     },
     "section 5/IntegrationSection5/RVProductBranchCompletion.lean": {
-      "before": null,
+      "before": "81c984b524a4256d74ef9d5debfd4135b868f7d0e0721bcb908389585ffed43a",
       "after": "81c984b524a4256d74ef9d5debfd4135b868f7d0e0721bcb908389585ffed43a"
     },
     "section 5/IntegrationSection5/RVProjectionPadding.lean": {
-      "before": null,
+      "before": "f884310aabded052b6493eb0540c562639ee18890041e1df766751f72e4ca512",
       "after": "f884310aabded052b6493eb0540c562639ee18890041e1df766751f72e4ca512"
     },
     "section 5/IntegrationSection5/RVRecodeInjection.lean": {
-      "before": null,
+      "before": "6ce23a3ae2257ed0beffde1791918fa3a1bd0d460e8495555a65f38b5fb7dbb4",
       "after": "6ce23a3ae2257ed0beffde1791918fa3a1bd0d460e8495555a65f38b5fb7dbb4"
     },
     "section 5/IntegrationSection5/RVRectangleCases.lean": {
-      "before": null,
+      "before": "0b3c1d08ef6eee55cc2cba89900285418bb35262f1f95977084a64de35369290",
       "after": "0b3c1d08ef6eee55cc2cba89900285418bb35262f1f95977084a64de35369290"
     },
     "section 5/IntegrationSection5/RVSliceFocusExtension.lean": {
-      "before": null,
+      "before": "bbf061d495eb0e0a344249f32dd44c1460b6bdc8c82e1535ef03ac0e80ace7f3",
       "after": "bbf061d495eb0e0a344249f32dd44c1460b6bdc8c82e1535ef03ac0e80ace7f3"
     },
     "section 5/IntegrationSection5/RVSliceHeadCompletion.lean": {
-      "before": null,
+      "before": "9a00996955d2245a0153978f1686b2e964af54e2a679a84ec2a908b48d0c17bb",
       "after": "9a00996955d2245a0153978f1686b2e964af54e2a679a84ec2a908b48d0c17bb"
     },
     "section 5/IntegrationSection5/RVSliceHeadImages.lean": {
-      "before": null,
+      "before": "e5716df1b104cc1c64d5ebbf00734d48114811a8b520175cbfa9108a2b045792",
       "after": "e5716df1b104cc1c64d5ebbf00734d48114811a8b520175cbfa9108a2b045792"
     },
     "section 5/IntegrationSection5/RVSliceHeadRestriction.lean": {
-      "before": null,
+      "before": "7f5e8bd8b81255b7307ec1f50604557bd2de52aaaf517c7174a02f8362eb4938",
       "after": "7f5e8bd8b81255b7307ec1f50604557bd2de52aaaf517c7174a02f8362eb4938"
     },
     "section 5/IntegrationSection5/RVSliceMapImage.lean": {
-      "before": null,
+      "before": "aa09c7f1a81ce3b7cfbb43a0a01f3da8e15f2f6a9e8a3796e8673e9ac82fc1c6",
       "after": "aa09c7f1a81ce3b7cfbb43a0a01f3da8e15f2f6a9e8a3796e8673e9ac82fc1c6"
     },
     "section 5/IntegrationSection5/RVSliceTranslation.lean": {
-      "before": null,
+      "before": "ad3d1f529c44708d625cd0bc1d8cbc51be8c425879f2e8e8f776ec30a092b418",
       "after": "ad3d1f529c44708d625cd0bc1d8cbc51be8c425879f2e8e8f776ec30a092b418"
     },
     "section 5/IntegrationSection5/RVSliceTranslationImages.lean": {
-      "before": null,
+      "before": "0dd82982eab6b987f89ea361d09b31f7d97bff4c4c8c6ec2a44ec8d149a91f42",
       "after": "0dd82982eab6b987f89ea361d09b31f7d97bff4c4c8c6ec2a44ec8d149a91f42"
     },
     "section 5/IntegrationSection5/RVUnaryProfiles.lean": {
-      "before": null,
+      "before": "5f0afc2f5539762e1324f7cae6ce3c05699072836803362fe3c99e2cb510ef3c",
       "after": "5f0afc2f5539762e1324f7cae6ce3c05699072836803362fe3c99e2cb510ef3c"
     },
     "section 5/IntegrationSection5/RawKeyGammaSlices.lean": {
-      "before": null,
+      "before": "1f030f4fc8b5a41c12c011d8b5ed6c30abf20403c6b0b12966902ca741c43579",
       "after": "1f030f4fc8b5a41c12c011d8b5ed6c30abf20403c6b0b12966902ca741c43579"
     },
     "section 5/IntegrationSection5/RelativeGammaTrace.lean": {
-      "before": null,
+      "before": "2d9cb115782e3d9f918d3f42bfa39f4b1af1e5657e465ba111323b78982e1709",
       "after": "2d9cb115782e3d9f918d3f42bfa39f4b1af1e5657e465ba111323b78982e1709"
     },
     "section 5/IntegrationSection5/RelativePreparationTrace.lean": {
-      "before": null,
+      "before": "645474167577ca43dcfe11de4c7698e0dc8951d08db8a1d7e2246f5f3cb6974a",
       "after": "645474167577ca43dcfe11de4c7698e0dc8951d08db8a1d7e2246f5f3cb6974a"
     },
     "section 5/IntegrationSection5/ScalarCentreMaps.lean": {
-      "before": null,
+      "before": "a29de3fbbbd6ade0a56ec6c7c2fc7af6f0174f4b491e4baf5dfee2459467ae81",
       "after": "a29de3fbbbd6ade0a56ec6c7c2fc7af6f0174f4b491e4baf5dfee2459467ae81"
     },
     "section 5/IntegrationSection5/ScalarRealPresentation.lean": {
-      "before": null,
+      "before": "9c732193a1e8151c616d154869244ec991d56b8e46bfe245c181c6ccc9684ad0",
       "after": "9c732193a1e8151c616d154869244ec991d56b8e46bfe245c181c6ccc9684ad0"
     },
     "section 5/IntegrationSection5/SharedProductFirst.lean": {
-      "before": null,
+      "before": "f3cc4aa7623d74ff450dc8c8fd68b11f5235b7a7a9a0f8899a6eb873b5df1481",
       "after": "f3cc4aa7623d74ff450dc8c8fd68b11f5235b7a7a9a0f8899a6eb873b5df1481"
     },
     "section 5/IntegrationSection5/SharedRVProductComparison.lean": {
-      "before": null,
+      "before": "af5d5632cd73899cb2b06c7782fe90bc518e8acecd681cca1a6e3e48d9cf3ab3",
       "after": "af5d5632cd73899cb2b06c7782fe90bc518e8acecd681cca1a6e3e48d9cf3ab3"
     },
     "section 5/IntegrationSection5/SharedRVProductImage.lean": {
-      "before": null,
+      "before": "e081043d954d610a2fbd46581e564d514f97e7d6810b7f19332030207b4814c4",
       "after": "e081043d954d610a2fbd46581e564d514f97e7d6810b7f19332030207b4814c4"
     },
     "section 5/IntegrationSection5/SharedRVProductProgram.lean": {
-      "before": null,
+      "before": "9de7471ade7e8679fe60406edaff3bc5cd8563c49a83b450d92ce7ff12549e1c",
       "after": "9de7471ade7e8679fe60406edaff3bc5cd8563c49a83b450d92ce7ff12549e1c"
     },
     "section 5/IntegrationSection5/SharedRVProductSource.lean": {
-      "before": null,
+      "before": "9b2011347e17a55fa1567510446eb8c8755d88c8b6670f019b273caf06a6d9be",
       "after": "9b2011347e17a55fa1567510446eb8c8755d88c8b6670f019b273caf06a6d9be"
     },
     "section 5/IntegrationSection5/SharedRVUnaryHeadPreparation.lean": {
-      "before": null,
+      "before": "c59b71916111524f8471c0ea731e212a1d3a8632a0d133e2795b50a940a0e20c",
       "after": "c59b71916111524f8471c0ea731e212a1d3a8632a0d133e2795b50a940a0e20c"
     },
     "section 5/IntegrationSection5/SmallGammaPresentation.lean": {
-      "before": null,
+      "before": "13584f1362deb6395443132ac3734b88f42070e9fad823a76f6868ba6eabee46",
       "after": "13584f1362deb6395443132ac3734b88f42070e9fad823a76f6868ba6eabee46"
     },
     "section 5/IntegrationSection5/StandardProgramComparison.lean": {
-      "before": null,
+      "before": "c5be28ccdfd697b94eb1e4e81a7e71cc8d3aed40622eb666500b27272a431ad0",
       "after": "c5be28ccdfd697b94eb1e4e81a7e71cc8d3aed40622eb666500b27272a431ad0"
     },
     "section 5/IntegrationSection5/StandardSpecialPresentation.lean": {
-      "before": null,
+      "before": "21aee62b92d7ec9b2ddf0831288a7474b8815794bc8f657385e84b467cbc513d",
       "after": "21aee62b92d7ec9b2ddf0831288a7474b8815794bc8f657385e84b467cbc513d"
     },
     "section 5/IntegrationSection5/StripContractionGeometry.lean": {
-      "before": null,
+      "before": "7e97cb598a03581537e128f663489d1907f8dfd7d0c0aeca0a510d18c1f66dae",
       "after": "7e97cb598a03581537e128f663489d1907f8dfd7d0c0aeca0a510d18c1f66dae"
     },
     "section 5/IntegrationSection5/SurjectiveHeadFactorKernels.lean": {
-      "before": null,
+      "before": "11bfdc1707822a151425693dbe4c44624257c2a9456ad85ab34f63fd2c88b88d",
       "after": "11bfdc1707822a151425693dbe4c44624257c2a9456ad85ab34f63fd2c88b88d"
     },
     "section 5/IntegrationSection5/SurjectiveRVComparison.lean": {
-      "before": null,
+      "before": "dc70e075e18da89977406478da6185d829f4a9c8621e13960f12b2a37106abbc",
       "after": "dc70e075e18da89977406478da6185d829f4a9c8621e13960f12b2a37106abbc"
     },
     "section 5/IntegrationSection5/TraceFlags.lean": {
-      "before": null,
+      "before": "b5467d809d76cf005cc70af8a82fd7ae6a6e0569afe5de14018002cd07220fbf",
       "after": "b5467d809d76cf005cc70af8a82fd7ae6a6e0569afe5de14018002cd07220fbf"
     },
     "section 5/IntegrationSection5/TraceInputPresentation.lean": {
-      "before": null,
+      "before": "2cd09f83e0ba64c211a5963a8ae08df6a5d8612615f093f32841a2d5d39439c5",
       "after": "2cd09f83e0ba64c211a5963a8ae08df6a5d8612615f093f32841a2d5d39439c5"
     },
     "section 5/IntegrationSection5/TranslationExtension.lean": {
-      "before": null,
+      "before": "131609622f19faffece93efd3d104df68ffc1bb494f70c27b4c8b982211fdd2f",
       "after": "131609622f19faffece93efd3d104df68ffc1bb494f70c27b4c8b982211fdd2f"
     },
     "section 5/IntegrationSection5/TwoBranchProgram.lean": {
-      "before": null,
+      "before": "76e1ceb2ed48321b236a767b5306f846e212f22c607c74a0b6634e44d85ecb03",
       "after": "76e1ceb2ed48321b236a767b5306f846e212f22c607c74a0b6634e44d85ecb03"
     },
     "section 5/IntegrationSection5/UnaryBranchProjection.lean": {
-      "before": null,
+      "before": "b96d90ec5e5f40b4790178469148d5c40e21c8025043ae7f4a75375f09e20eb6",
       "after": "b96d90ec5e5f40b4790178469148d5c40e21c8025043ae7f4a75375f09e20eb6"
     },
     "section 5/IntegrationSection5/UnaryBranchRVProjection.lean": {
-      "before": null,
+      "before": "f8bf9d42ded7d5455017edc59436da37d7095a07be2616267557c1f94013f33a",
       "after": "f8bf9d42ded7d5455017edc59436da37d7095a07be2616267557c1f94013f33a"
     },
     "section 5/IntegrationSection5/UnaryBranchSaturation.lean": {
-      "before": null,
+      "before": "02ea48eada732b17298c2fca25d4b40d0c668fff9df9d87a859fe71e839a87db",
       "after": "02ea48eada732b17298c2fca25d4b40d0c668fff9df9d87a859fe71e839a87db"
     },
     "section 5/IntegrationSection5/UnaryChainCoordinateLift.lean": {
-      "before": null,
+      "before": "ab82f07a9c64e129d596b1f3735c105868809f7aa14d374e28bd7c87a0433bab",
       "after": "ab82f07a9c64e129d596b1f3735c105868809f7aa14d374e28bd7c87a0433bab"
     },
     "section 5/IntegrationSection5/UnaryCoordinateSourceMap.lean": {
-      "before": null,
+      "before": "68e91c3bb347a62f564c8df21f7d59508fcabaeddeaf9303915890d80526d560",
       "after": "68e91c3bb347a62f564c8df21f7d59508fcabaeddeaf9303915890d80526d560"
     },
     "section 5/IntegrationSection5/UnaryHeadRVPresentation.lean": {
-      "before": null,
+      "before": "ff2b0d00230851ff37ddca4d91645b5b50a8e457e5f259aa2949d9b520bd4e34",
       "after": "ff2b0d00230851ff37ddca4d91645b5b50a8e457e5f259aa2949d9b520bd4e34"
     },
     "section 5/IntegrationSection5/UnaryPresentationBijection.lean": {
-      "before": null,
+      "before": "29873f4fcb63cacad23766c17123f7c591bf71b12c51eaa8743045b035a614ad",
       "after": "29873f4fcb63cacad23766c17123f7c591bf71b12c51eaa8743045b035a614ad"
     },
     "section 5/IntegrationSection5/UnaryProductHeadPreparation.lean": {
-      "before": null,
+      "before": "97a92aa2b9b4e11d2317ce129722db450f1a923834707003d50eb100f254499b",
       "after": "97a92aa2b9b4e11d2317ce129722db450f1a923834707003d50eb100f254499b"
     },
     "section 5/IntegrationSection5/UnarySpecialRelative.lean": {
-      "before": null,
+      "before": "afa73adafea9d9f143a9606b6c804d0731849b2b6e82c27787baa217faaeeccc",
       "after": "afa73adafea9d9f143a9606b6c804d0731849b2b6e82c27787baa217faaeeccc"
     },
     "section 5/IntegrationSection5/UniformRelativeTrace.lean": {
-      "before": null,
+      "before": "62c53d84818f03d9140a06afa23fe17fcb95f582611d41052f32949723f40b77",
       "after": "62c53d84818f03d9140a06afa23fe17fcb95f582611d41052f32949723f40b77"
     },
     "section 5/IntegrationSection5/UniformTraceExtension.lean": {
-      "before": null,
+      "before": "74184d276aadd4712dd4f0fd85f8292a37b09de14aa956d53cd62ef67a528b83",
       "after": "74184d276aadd4712dd4f0fd85f8292a37b09de14aa956d53cd62ef67a528b83"
     },
     "section 5/IntegrationSection5/UniformTraceProjection.lean": {
-      "before": null,
+      "before": "0f1c7c4be43640d220fba855f209bb741a3399c454d331a22c624c0c27163adb",
       "after": "0f1c7c4be43640d220fba855f209bb741a3399c454d331a22c624c0c27163adb"
     },
     "section 5/IntegrationSection5/UniformTraceRestriction.lean": {
-      "before": null,
+      "before": "063f494c5eff21acf313b43519dcb1fc5c21d55238d575297766fb33d8c27f8e",
       "after": "063f494c5eff21acf313b43519dcb1fc5c21d55238d575297766fb33d8c27f8e"
     },
     "section 5/IntegrationSection5/VariableUnaryProfiles.lean": {
-      "before": null,
+      "before": "1bc6db5b3ac63aff636029a27e386355994cbad7b0c6ce5b80c59daec5826537",
       "after": "1bc6db5b3ac63aff636029a27e386355994cbad7b0c6ce5b80c59daec5826537"
     },
     "section 5/IntegrationSection5/VerticalMeanFocusData.lean": {
-      "before": null,
+      "before": "61ffff64f7d2f053570640d50513163d8b5670ab96eac5d40daa192575d82e96",
       "after": "61ffff64f7d2f053570640d50513163d8b5670ab96eac5d40daa192575d82e96"
     },
     "section 5/IntegrationSection5/VerticalMeanTrace.lean": {
-      "before": null,
+      "before": "88c8ee3825c74e89cc6a81e0b689b260c4193c89b5323b8a1b6ae1611da63b8b",
       "after": "88c8ee3825c74e89cc6a81e0b689b260c4193c89b5323b8a1b6ae1611da63b8b"
     },
     "section 6/IntegrationSection6/ArbitraryContractionOrders.lean": {
@@ -1011,5 +1011,6 @@
       "before": "901855823e52cfd31af3df91e12e981c4f8d4612f0a1c970f46c31d60d4318e6",
       "after": "3a1a345eb348a7574f97c133aaa660045b6872eecf95bcb9abf9e25381300070"
     }
-  }
+  },
+  "historical_base_revision": "7d4acc730496b3bd05a22c268ffd89540ca694f9"
 }

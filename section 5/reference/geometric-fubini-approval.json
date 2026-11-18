@@ -7,9 +7,10 @@
   "proof": "Finite denominator-clearing witnesses; affine-line padding; complete witness preparation; geometric relative RV Fubini; normalization in common total degree",
   "working_manuscript_sha256": "0ba7039dc615a12099bfc92e759ca39ef1d380db6f0d8417b1376bed4ce9f2f9",
   "formalization_status": "FULL_NATIVE_GEOMETRIC_VF_FUBINI_AND_VANISHING_AUDITED",
-  "formalization_context": "GammaGroundContext with the precise accepted Section 3 YinGammaGroundUnmeasuredLiftInput; no HK result assumed",
+  "formalization_context": "GammaGroundContext; the Section 3 YinGammaGroundUnmeasuredLiftInput, recorded as an accepted input at approval, is now constructed (DiamondIntegral.Section5.completed18GroundLiftInput) and instantiated in geometric_fubini_discharged; no HK result assumed",
   "audit": "Section5/.scratch/finite-comparison-audit-62.log",
-  "remaining_section_boundaries": [
-    "Actual variety finite-chart/global-comparison corollary specialization, including saturated ambient comparison transport"
+  "remaining_section_boundaries": [],
+  "resolved_section_boundaries": [
+    "Actual variety finite-chart/global-comparison corollary specialization, including saturated ambient comparison transport: proved (VarietyGlobalVanishing.corollary_global_vanishing, corollary_global_vanishing_discharged; ambient constructed in PuiseuxMonsterAmbient.lean, Theta an isomorphism by ambientPuiseuxComparison_bijective). The RV[*]-fibre version is geometric_weak_fubini_discharged."
   ]
 }

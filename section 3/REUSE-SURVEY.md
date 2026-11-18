@@ -9,6 +9,9 @@ ACVF-QE `939346b0a99899e22a873479364e3cc5d142731c`, and
 Special Transformations `9cc9760892092dd34cfad4a6dee655843c52f30c`.
 The latter retains the 30-file approved finite-open-radius patch recorded
 by §2. No dependency revisions were upgraded for this section.
+(Current pins, November 18: Special Transformations
+`25852c85a31c67069b148bd31348128318303510`, whose published release contains
+that patch, and integration-in-ACVF `7675d31332f20421c803ea16af84964ed74cd51f`.)
 
 Inspected local files and actual definitions before implementation:
 

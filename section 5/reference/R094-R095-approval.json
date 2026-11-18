@@ -7,5 +7,6 @@
   "working_manuscript_sha256": "a3700cc297c850df9d807fed3e8d3723c34fc7e97f67f7a3ae51dc13e54cf53d",
   "adopted_fragment": "Section5/reference/section5-approved-R094-R095.tex",
   "preserved_after": "End of the Fubini proof, remaining corollary and every later section",
-  "lean_status": "Lemma 5.12 is compiled; the new Fubini proof remains to be formalized"
+  "lean_status": "Lemma 5.12 is compiled; the new Fubini proof remains to be formalized",
+  "lean_status_current": "November 18: the Fubini proof is formalized (nativeBoundedVFFubini, nativeGeometricVFFubini; bounded_fubini_discharged, geometric_fubini_discharged, and for RV[*] fibres bounded_weak_fubini_discharged, geometric_weak_fubini_discharged). The lean_status above records the state at approval."
 }

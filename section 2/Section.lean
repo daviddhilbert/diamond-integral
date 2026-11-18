@@ -260,5 +260,12 @@ import «section 2».ClosedGraphCriterion
 import «section 2».ClosedGraph
 import «section 2».BoundedClosedGraph
 import «section 2».CorrespondenceImages
+import «section 2».ExchangeGeneral
+import «section 2».GammaCurveSelectionFailure
+import «section 2».GammaCodeSubstructure
+import «section 2».GammaCodeShift
+import «section 2».GammaTupleAutomorphisms
+import «section 2».GammaStableEmbedding
+import «section 2».FiniteSetsGammaNames
 
 /-! Entry point for §2 of Forey and Yin, beginning with §2.1. -/

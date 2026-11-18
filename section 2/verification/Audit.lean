@@ -836,6 +836,14 @@ set_option format.width 120
 #print axioms DiamondIntegral.Section2.lemma_2_14_vf
 #check @DiamondIntegral.Section2.lemma_2_14_rv
 #print axioms DiamondIntegral.Section2.lemma_2_14_rv
+#check @DiamondIntegral.Section2.ExchangeGeneral.vfParameterField_union_closure
+#print axioms DiamondIntegral.Section2.ExchangeGeneral.vfParameterField_union_closure
+#check @DiamondIntegral.Section2.ExchangeGeneral.vfParameterField_closure
+#print axioms DiamondIntegral.Section2.ExchangeGeneral.vfParameterField_closure
+#check @DiamondIntegral.Section2.ExchangeGeneral.algebraicAt_closure_iff
+#print axioms DiamondIntegral.Section2.ExchangeGeneral.algebraicAt_closure_iff
+#check @DiamondIntegral.Section2.ExchangeGeneral.lemma_2_14_vf_general
+#print axioms DiamondIntegral.Section2.ExchangeGeneral.lemma_2_14_vf_general
 #check @DiamondIntegral.Section2.vfPairValues_injective
 #print axioms DiamondIntegral.Section2.vfPairValues_injective
 #check @DiamondIntegral.Section2.vfPair_inter_definable
@@ -1024,6 +1032,8 @@ set_option format.width 120
 #print axioms DiamondIntegral.Section2.avoidFiniteVF_mem_nhds_zero
 #check @DiamondIntegral.Section2.lemma_2_15_vf
 #print axioms DiamondIntegral.Section2.lemma_2_15_vf
+#check @DiamondIntegral.Section2.lemma_2_15_vf_general
+#print axioms DiamondIntegral.Section2.lemma_2_15_vf_general
 #check @DiamondIntegral.Section2.lemma_2_15_rv
 #print axioms DiamondIntegral.Section2.lemma_2_15_rv
 #check @DiamondIntegral.Section2.finite_good_cover_partition
@@ -1066,6 +1076,24 @@ set_option format.width 120
 #print axioms DiamondIntegral.Section2.lemma_2_12
 #check @DiamondIntegral.Section2.lemma_2_13
 #print axioms DiamondIntegral.Section2.lemma_2_13
+#check @DiamondIntegral.Section2.GammaStable.normalize_eq
+#print axioms DiamondIntegral.Section2.GammaStable.normalize_eq
+#check @DiamondIntegral.Section2.GammaStable.strictMono_mapsTo_fixed
+#print axioms DiamondIntegral.Section2.GammaStable.strictMono_mapsTo_fixed
+#check @DiamondIntegral.Section2.GammaStable.aut_fixes_acl_values
+#print axioms DiamondIntegral.Section2.GammaStable.aut_fixes_acl_values
+#check @DiamondIntegral.Section2.GammaStable.tupleAssignment_formula_definable
+#print axioms DiamondIntegral.Section2.GammaStable.tupleAssignment_formula_definable
+#check @DiamondIntegral.Section2.GammaStable.exists_automorphism_of_same_tuple_type
+#print axioms DiamondIntegral.Section2.GammaStable.exists_automorphism_of_same_tuple_type
+#check @DiamondIntegral.Section2.GammaStable.finite_invariant_definable
+#print axioms DiamondIntegral.Section2.GammaStable.finite_invariant_definable
+#check @DiamondIntegral.Section2.GammaStable.aut_mem_definable_iff_any
+#print axioms DiamondIntegral.Section2.GammaStable.aut_mem_definable_iff_any
+#check @DiamondIntegral.Section2.GammaStable.finite_named_real_definable
+#print axioms DiamondIntegral.Section2.GammaStable.finite_named_real_definable
+#check @DiamondIntegral.Section2.GammaStable.lemma_2_12_gammaNames
+#print axioms DiamondIntegral.Section2.GammaStable.lemma_2_12_gammaNames
 #check @DiamondIntegral.Section2.exists_nonempty_finite_definable_vf_subset
 #print axioms DiamondIntegral.Section2.exists_nonempty_finite_definable_vf_subset
 #check @DiamondIntegral.Section2.gammaAbs_le_iff
@@ -1092,6 +1120,118 @@ set_option format.width 120
 #print axioms DiamondIntegral.Section2.rawGammaBallRelation_definable
 #check @DiamondIntegral.Section2.rawGammaBallRelation_iff
 #print axioms DiamondIntegral.Section2.rawGammaBallRelation_iff
+#check @DiamondIntegral.Section2.GammaStable.codeShift_rep
+#print axioms DiamondIntegral.Section2.GammaStable.codeShift_rep
+#check @DiamondIntegral.Section2.GammaStable.codeShift_vf
+#print axioms DiamondIntegral.Section2.GammaStable.codeShift_vf
+#check @DiamondIntegral.Section2.GammaStable.codeShift_of_mem
+#print axioms DiamondIntegral.Section2.GammaStable.codeShift_of_mem
+#check @DiamondIntegral.Section2.GammaStable.codeShift_code
+#print axioms DiamondIntegral.Section2.GammaStable.codeShift_code
+#check @DiamondIntegral.Section2.GammaStable.codeShift_mem
+#print axioms DiamondIntegral.Section2.GammaStable.codeShift_mem
+#check @DiamondIntegral.Section2.GammaStable.codeShift_codeShift
+#print axioms DiamondIntegral.Section2.GammaStable.codeShift_codeShift
+#check @DiamondIntegral.Section2.GammaStable.codeShift_rv_iff
+#print axioms DiamondIntegral.Section2.GammaStable.codeShift_rv_iff
+#check @DiamondIntegral.Section2.GammaStable.codeShift_vf_iff
+#print axioms DiamondIntegral.Section2.GammaStable.codeShift_vf_iff
+#check @DiamondIntegral.Section2.GammaStable.sortEval_codeShift
+#print axioms DiamondIntegral.Section2.GammaStable.sortEval_codeShift
+#check @DiamondIntegral.Section2.GammaStable.rep_le_iff
+#print axioms DiamondIntegral.Section2.GammaStable.rep_le_iff
+#check @DiamondIntegral.Section2.GammaStable.sortEval_eq_iVF
+#print axioms DiamondIntegral.Section2.GammaStable.sortEval_eq_iVF
+#check @DiamondIntegral.Section2.GammaStable.sortEval_eq_iRV
+#print axioms DiamondIntegral.Section2.GammaStable.sortEval_eq_iRV
+#check @DiamondIntegral.Section2.GammaStable.codeShift_funMap
+#print axioms DiamondIntegral.Section2.GammaStable.codeShift_funMap
+#check @DiamondIntegral.Section2.GammaStable.relMap_one
+#print axioms DiamondIntegral.Section2.GammaStable.relMap_one
+#check @DiamondIntegral.Section2.GammaStable.relMap_two
+#print axioms DiamondIntegral.Section2.GammaStable.relMap_two
+#check @DiamondIntegral.Section2.GammaStable.codeShift_relMap
+#print axioms DiamondIntegral.Section2.GammaStable.codeShift_relMap
+#check @DiamondIntegral.Section2.GammaStable.code_sameUnaryType
+#print axioms DiamondIntegral.Section2.GammaStable.code_sameUnaryType
+#check @DiamondIntegral.Section2.GammaStable.gamma_zpow_injective_rv
+#print axioms DiamondIntegral.Section2.GammaStable.gamma_zpow_injective_rv
+#check @DiamondIntegral.Section2.GammaStable.exists_automorphism_code
+#print axioms DiamondIntegral.Section2.GammaStable.exists_automorphism_code
+#check @DiamondIntegral.Section2.GammaStable.vrv_zpow
+#print axioms DiamondIntegral.Section2.GammaStable.vrv_zpow
+#check @DiamondIntegral.Section2.GammaStable.vrv_eq_zero_iff
+#print axioms DiamondIntegral.Section2.GammaStable.vrv_eq_zero_iff
+#check @DiamondIntegral.Section2.GammaStable.vrv_ne_zero
+#print axioms DiamondIntegral.Section2.GammaStable.vrv_ne_zero
+#check @DiamondIntegral.Section2.GammaStable.gammaTop_mul_le_mul_iff
+#print axioms DiamondIntegral.Section2.GammaStable.gammaTop_mul_le_mul_iff
+#check @DiamondIntegral.Section2.GammaStable.gammaTop_le_zero
+#print axioms DiamondIntegral.Section2.GammaStable.gammaTop_le_zero
+#check @DiamondIntegral.Section2.GammaStable.gammaTop_zero_le_iff
+#print axioms DiamondIntegral.Section2.GammaStable.gammaTop_zero_le_iff
+#check @DiamondIntegral.Section2.GammaStable.rvZero_mem
+#print axioms DiamondIntegral.Section2.GammaStable.rvZero_mem
+#check @DiamondIntegral.Section2.GammaStable.rvOne_mem
+#print axioms DiamondIntegral.Section2.GammaStable.rvOne_mem
+#check @DiamondIntegral.Section2.GammaStable.vfZero_mem
+#print axioms DiamondIntegral.Section2.GammaStable.vfZero_mem
+#check @DiamondIntegral.Section2.GammaStable.fun1_mem
+#print axioms DiamondIntegral.Section2.GammaStable.fun1_mem
+#check @DiamondIntegral.Section2.GammaStable.fun2_mem
+#print axioms DiamondIntegral.Section2.GammaStable.fun2_mem
+#check @DiamondIntegral.Section2.GammaStable.rv_zero_mem_K
+#print axioms DiamondIntegral.Section2.GammaStable.rv_zero_mem_K
+#check @DiamondIntegral.Section2.GammaStable.rv_one_mem_K
+#print axioms DiamondIntegral.Section2.GammaStable.rv_one_mem_K
+#check @DiamondIntegral.Section2.GammaStable.rv_mul_mem_K
+#print axioms DiamondIntegral.Section2.GammaStable.rv_mul_mem_K
+#check @DiamondIntegral.Section2.GammaStable.rv_inv_mem_K
+#print axioms DiamondIntegral.Section2.GammaStable.rv_inv_mem_K
+#check @DiamondIntegral.Section2.GammaStable.CodeTypeEq.ge
+#print axioms DiamondIntegral.Section2.GammaStable.CodeTypeEq.ge
+#check @DiamondIntegral.Section2.GammaStable.CodeTypeEq.eq_iff
+#print axioms DiamondIntegral.Section2.GammaStable.CodeTypeEq.eq_iff
+#check @DiamondIntegral.Section2.GammaStable.CodeTypeEq.independent
+#print axioms DiamondIntegral.Section2.GammaStable.CodeTypeEq.independent
+#check @DiamondIntegral.Section2.GammaStable.rep_unique
+#print axioms DiamondIntegral.Section2.GammaStable.rep_unique
+#check @DiamondIntegral.Section2.GammaStable.mem_codeCarrier_of_mem
+#print axioms DiamondIntegral.Section2.GammaStable.mem_codeCarrier_of_mem
+#check @DiamondIntegral.Section2.GammaStable.codeCarrier_vf
+#print axioms DiamondIntegral.Section2.GammaStable.codeCarrier_vf
+#check @DiamondIntegral.Section2.GammaStable.codeCarrier_rep
+#print axioms DiamondIntegral.Section2.GammaStable.codeCarrier_rep
+#check @DiamondIntegral.Section2.GammaStable.rep_mem
+#print axioms DiamondIntegral.Section2.GammaStable.rep_mem
+#check @DiamondIntegral.Section2.GammaStable.rep_new
+#print axioms DiamondIntegral.Section2.GammaStable.rep_new
+#check @DiamondIntegral.Section2.GammaStable.units_vrv_one
+#print axioms DiamondIntegral.Section2.GammaStable.units_vrv_one
+#check @DiamondIntegral.Section2.GammaStable.rep_not_inK
+#print axioms DiamondIntegral.Section2.GammaStable.rep_not_inK
+#check @DiamondIntegral.Section2.GammaStable.funMap_two
+#print axioms DiamondIntegral.Section2.GammaStable.funMap_two
+#check @DiamondIntegral.Section2.GammaStable.funMap_one
+#print axioms DiamondIntegral.Section2.GammaStable.funMap_one
+#check @DiamondIntegral.Section2.GammaStable.junk_mem
+#print axioms DiamondIntegral.Section2.GammaStable.junk_mem
+#check @DiamondIntegral.Section2.GammaStable.codeCarrier_fun_mem
+#print axioms DiamondIntegral.Section2.GammaStable.codeCarrier_fun_mem
+#check @DiamondIntegral.Section2.GammaStable.le_codeSubstructure
+#print axioms DiamondIntegral.Section2.GammaStable.le_codeSubstructure
+#check @DiamondIntegral.Section2.GammaStable.code_mem_codeSubstructure
+#print axioms DiamondIntegral.Section2.GammaStable.code_mem_codeSubstructure
+#check @DiamondIntegral.Section2.exists_gamma_gt_one
+#print axioms DiamondIntegral.Section2.exists_gamma_gt_one
+#check @DiamondIntegral.Section2.gamma_power_law_source_bounded
+#print axioms DiamondIntegral.Section2.gamma_power_law_source_bounded
+#check @DiamondIntegral.Section2.remark_2_47
+#print axioms DiamondIntegral.Section2.remark_2_47
+#check @DiamondIntegral.Section2.remark_2_47_no_approach
+#print axioms DiamondIntegral.Section2.remark_2_47_no_approach
+#check @DiamondIntegral.Section2.remark_2_47_diagonal
+#print axioms DiamondIntegral.Section2.remark_2_47_diagonal
 #check @DiamondIntegral.Section2.gammaDomainCodes_definable
 #print axioms DiamondIntegral.Section2.gammaDomainCodes_definable
 #check @DiamondIntegral.Section2.uniform_gamma_domain_supremum
@@ -1142,6 +1282,62 @@ set_option format.width 120
 #print axioms DiamondIntegral.Section2.gammaPowerGerm_disc_iff
 #check @DiamondIntegral.Section2.gammaRelationPreimageMap_fibre
 #print axioms DiamondIntegral.Section2.gammaRelationPreimageMap_fibre
+#check @DiamondIntegral.Section2.GammaStable.realize_rvOneTerm
+#print axioms DiamondIntegral.Section2.GammaStable.realize_rvOneTerm
+#check @DiamondIntegral.Section2.GammaStable.realize_rvMulTerm
+#print axioms DiamondIntegral.Section2.GammaStable.realize_rvMulTerm
+#check @DiamondIntegral.Section2.GammaStable.realize_rvInvTerm
+#print axioms DiamondIntegral.Section2.GammaStable.realize_rvInvTerm
+#check @DiamondIntegral.Section2.GammaStable.realize_powTerm
+#print axioms DiamondIntegral.Section2.GammaStable.realize_powTerm
+#check @DiamondIntegral.Section2.GammaStable.realize_zpowTerm
+#print axioms DiamondIntegral.Section2.GammaStable.realize_zpowTerm
+#check @DiamondIntegral.Section2.GammaStable.realize_prodTerm
+#print axioms DiamondIntegral.Section2.GammaStable.realize_prodTerm
+#check @DiamondIntegral.Section2.GammaStable.properCode_ne_zero
+#print axioms DiamondIntegral.Section2.GammaStable.properCode_ne_zero
+#check @DiamondIntegral.Section2.GammaStable.decode_val
+#print axioms DiamondIntegral.Section2.GammaStable.decode_val
+#check @DiamondIntegral.Section2.GammaStable.decode_prod_val
+#print axioms DiamondIntegral.Section2.GammaStable.decode_prod_val
+#check @DiamondIntegral.Section2.GammaStable.exists_code
+#print axioms DiamondIntegral.Section2.GammaStable.exists_code
+#check @DiamondIntegral.Section2.GammaStable.exists_code_tuple
+#print axioms DiamondIntegral.Section2.GammaStable.exists_code_tuple
+#check @DiamondIntegral.Section2.GammaStable.unaryNonzeroRV_definable
+#print axioms DiamondIntegral.Section2.GammaStable.unaryNonzeroRV_definable
+#check @DiamondIntegral.Section2.GammaStable.proper_definable_raw
+#print axioms DiamondIntegral.Section2.GammaStable.proper_definable_raw
+#check @DiamondIntegral.Section2.GammaStable.halfspaceLe_definable
+#print axioms DiamondIntegral.Section2.GammaStable.halfspaceLe_definable
+#check @DiamondIntegral.Section2.GammaStable.codeSet_halfspace_eq
+#print axioms DiamondIntegral.Section2.GammaStable.codeSet_halfspace_eq
+#check @DiamondIntegral.Section2.GammaStable.codeSet_halfspace_definable
+#print axioms DiamondIntegral.Section2.GammaStable.codeSet_halfspace_definable
+#check @DiamondIntegral.Section2.GammaStable.codeSet_compl
+#print axioms DiamondIntegral.Section2.GammaStable.codeSet_compl
+#check @DiamondIntegral.Section2.GammaStable.codeSet_inter
+#print axioms DiamondIntegral.Section2.GammaStable.codeSet_inter
+#check @DiamondIntegral.Section2.GammaStable.codeSet_univ
+#print axioms DiamondIntegral.Section2.GammaStable.codeSet_univ
+#check @DiamondIntegral.Section2.GammaStable.HalfspaceBoolean.union
+#print axioms DiamondIntegral.Section2.GammaStable.HalfspaceBoolean.union
+#check @DiamondIntegral.Section2.GammaStable.HalfspaceBoolean.empty
+#print axioms DiamondIntegral.Section2.GammaStable.HalfspaceBoolean.empty
+#check @DiamondIntegral.Section2.GammaStable.HalfspaceBoolean.biInter
+#print axioms DiamondIntegral.Section2.GammaStable.HalfspaceBoolean.biInter
+#check @DiamondIntegral.Section2.GammaStable.HalfspaceBoolean.biUnion
+#print axioms DiamondIntegral.Section2.GammaStable.HalfspaceBoolean.biUnion
+#check @DiamondIntegral.Section2.GammaStable.halfspace_val_eq
+#print axioms DiamondIntegral.Section2.GammaStable.halfspace_val_eq
+#check @DiamondIntegral.Section2.GammaStable.HalfspaceBoolean.codeSet_definable
+#print axioms DiamondIntegral.Section2.GammaStable.HalfspaceBoolean.codeSet_definable
+#check @DiamondIntegral.Section2.GammaStable.aut_mem_definable_iff
+#print axioms DiamondIntegral.Section2.GammaStable.aut_mem_definable_iff
+#check @DiamondIntegral.Section2.GammaStable.closure_small
+#print axioms DiamondIntegral.Section2.GammaStable.closure_small
+#check @DiamondIntegral.Section2.GammaStable.gamma_stably_embedded
+#print axioms DiamondIntegral.Section2.GammaStable.gamma_stably_embedded
 #check @DiamondIntegral.Section2.gamma_definable_exists_isGLB
 #print axioms DiamondIntegral.Section2.gamma_definable_exists_isGLB
 #check @DiamondIntegral.Section2.gamma_definable_exists_isLUB
@@ -1152,6 +1348,50 @@ set_option format.width 120
 #print axioms DiamondIntegral.Section2.gamma_isLUB_definable
 #check @DiamondIntegral.Section2.gamma_definable_supremum
 #print axioms DiamondIntegral.Section2.gamma_definable_supremum
+#check @DiamondIntegral.Section2.GammaStable.aut_funMap2
+#print axioms DiamondIntegral.Section2.GammaStable.aut_funMap2
+#check @DiamondIntegral.Section2.GammaStable.aut_funMap1
+#print axioms DiamondIntegral.Section2.GammaStable.aut_funMap1
+#check @DiamondIntegral.Section2.GammaStable.aut_funMap0
+#print axioms DiamondIntegral.Section2.GammaStable.aut_funMap0
+#check @DiamondIntegral.Section2.GammaStable.aut_relMap2
+#print axioms DiamondIntegral.Section2.GammaStable.aut_relMap2
+#check @DiamondIntegral.Section2.GammaStable.autRV_val
+#print axioms DiamondIntegral.Section2.GammaStable.autRV_val
+#check @DiamondIntegral.Section2.GammaStable.autRV_mul
+#print axioms DiamondIntegral.Section2.GammaStable.autRV_mul
+#check @DiamondIntegral.Section2.GammaStable.autRV_inv
+#print axioms DiamondIntegral.Section2.GammaStable.autRV_inv
+#check @DiamondIntegral.Section2.GammaStable.autRV_one
+#print axioms DiamondIntegral.Section2.GammaStable.autRV_one
+#check @DiamondIntegral.Section2.GammaStable.autRV_zero
+#print axioms DiamondIntegral.Section2.GammaStable.autRV_zero
+#check @DiamondIntegral.Section2.GammaStable.autRV_zpow
+#print axioms DiamondIntegral.Section2.GammaStable.autRV_zpow
+#check @DiamondIntegral.Section2.GammaStable.autRV_prod
+#print axioms DiamondIntegral.Section2.GammaStable.autRV_prod
+#check @DiamondIntegral.Section2.GammaStable.autRV_ne_zero
+#print axioms DiamondIntegral.Section2.GammaStable.autRV_ne_zero
+#check @DiamondIntegral.Section2.GammaStable.autRV_le_iff
+#print axioms DiamondIntegral.Section2.GammaStable.autRV_le_iff
+#check @DiamondIntegral.Section2.GammaStable.autRV_vrv_congr
+#print axioms DiamondIntegral.Section2.GammaStable.autRV_vrv_congr
+#check @DiamondIntegral.Section2.GammaStable.autRV_of_mem
+#print axioms DiamondIntegral.Section2.GammaStable.autRV_of_mem
+#check @DiamondIntegral.Section2.GammaStable.autRV_comp
+#print axioms DiamondIntegral.Section2.GammaStable.autRV_comp
+#check @DiamondIntegral.Section2.GammaStable.prod_single_zero
+#print axioms DiamondIntegral.Section2.GammaStable.prod_single_zero
+#check @DiamondIntegral.Section2.GammaStable.CodeTupleTypeEq.head
+#print axioms DiamondIntegral.Section2.GammaStable.CodeTupleTypeEq.head
+#check @DiamondIntegral.Section2.GammaStable.prod_cons
+#print axioms DiamondIntegral.Section2.GammaStable.prod_cons
+#check @DiamondIntegral.Section2.GammaStable.tail_type
+#print axioms DiamondIntegral.Section2.GammaStable.tail_type
+#check @DiamondIntegral.Section2.GammaStable.codeSubstructure_small
+#print axioms DiamondIntegral.Section2.GammaStable.codeSubstructure_small
+#check @DiamondIntegral.Section2.GammaStable.exists_automorphism_code_tuple
+#print axioms DiamondIntegral.Section2.GammaStable.exists_automorphism_code_tuple
 #check @DiamondIntegral.Section2.VFGeneratedFieldBase.definableOver_gamma_names_iff
 #print axioms DiamondIntegral.Section2.VFGeneratedFieldBase.definableOver_gamma_names_iff
 #check @DiamondIntegral.Section2.VFGeneratedFieldBase.gamma_closure_eq

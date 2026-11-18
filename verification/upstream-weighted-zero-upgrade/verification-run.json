@@ -1,0 +1,36 @@
+{
+  "started_utc": "2026-11-16T15:12:40.084500+00:00",
+  "stages": {
+    "section2": {
+      "exit_code": 0,
+      "elapsed_seconds": 17.06
+    },
+    "section3": {
+      "exit_code": 0,
+      "elapsed_seconds": 23.59
+    },
+    "section4": {
+      "exit_code": 0,
+      "elapsed_seconds": 21.09
+    },
+    "section5": {
+      "exit_code": 0,
+      "elapsed_seconds": 29.62
+    },
+    "section6": {
+      "exit_code": 0,
+      "elapsed_seconds": 52.88
+    },
+    "compatibility": {
+      "exit_code": 0,
+      "elapsed_seconds": 44.79,
+      "previous_checker_attempt": {
+        "exit_code": 1,
+        "elapsed_seconds": 0.21
+      },
+      "checker_correction": "Recognize the exact existing Section 5 requested-scope completion status; no proof or section receipt changed."
+    }
+  },
+  "completed_utc": "2026-11-16T15:16:33.395367+00:00",
+  "status": "PASS"
+}

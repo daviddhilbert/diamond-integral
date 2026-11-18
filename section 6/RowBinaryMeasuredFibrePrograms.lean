@@ -1,0 +1,115 @@
+import «section 6».RowBinaryMeasuredRootTermination
+import «section 6».RowCarriedFormRootControl
+import «section 6».RowCarriedGammaForms
+import «section 6».RowCoordinateCoreFormConstancy
+import «section 6».RowCoordinateFormRootControl
+import «section 6».RowCoordinateGammaDescent
+import «section 6».RowCoordinateGammaLevelProjection
+import «section 6».RowCoordinateGammaObstacles
+import «section 6».RowCoordinateMeasuredObstacles
+import «section 6».RowExactGammaTransport
+import «section 6».RowFiniteMeasuredCentripetalPrograms
+import «section 6».RowForms
+import «section 6».RowFrozenFormRootControl
+import «section 6».RowGammaCodeLocus
+import «section 6».RowGammaFormBounds
+import «section 6».RowGammaFormFreezing
+import «section 6».RowGammaFormUniformFibres
+import «section 6».RowGammaTransitionParameterLoci
+import «section 6».RowGammaTransitionSemantics
+import «section 6».RowHeadGammaFormMaps
+import «section 6».RowHeadGammaFormTemplates
+import «section 6».RowMeasuredCentripetalProgramTemplates
+import «section 6».RowMeasuredContinuousCoordinateRootStep
+import «section 6».RowMeasuredContinuousFocusRealization
+import «section 6».RowMeasuredCoordinatePreparationData
+import «section 6».RowMeasuredProgramSubstitution
+import «section 6».RowMeasuredProjectedFreezing
+import «section 6».RowSpecialGammaTransport
+import «section 6».RowTransportedGammaLevels
+import «section 6».RowUnaryCoreFormConstancy
+import «section 6».RowUnaryFormControlStep
+import «section 6».RowUnaryFormRootControl
+import «section 6».RowUnaryGammaObstacles
+import «section 6».RowUnaryMeasuredCompatibleExistence
+import «section 6».RowUnaryMeasuredCompatiblePreparation
+import «section 6».RowUnaryMeasuredFocusStep
+import «section 6».RowUnaryMeasuredObstacles
+import «section 6».RowUnaryMeasuredPreparationData
+import «section 6».RowUnaryMeasuredRootIteration
+import «section 6».RowUnaryMeasuredSynchronizedFocusStep
+import «section 6».RowUnaryMeasuredSynchronizedPreparation
+import «section 6».RowFiniteHeadMeasuredPrograms
+import «section 6».RowUnaryMeasuredSynchronizedExistence
+
+/-! (Row-form version for Remark 6.20, translated from `BinaryMeasuredFibrePrograms`.)
+ In two VF dimensions the measured head-fibre programs are
+constructed from the actual unary theorem, including the strengthened
+common chain. The original Gamma image may be infinite. This supplies
+finite program selection, not an assertion of general measured fusion. -/
+
+noncomputable section
+set_option backward.isDefEq.respectTransparency false
+set_option maxHeartbeats 9000000
+open Classical FirstOrder FirstOrder.Language
+open SpecialTransformations.Milestone0 SpecialTransformations.Milestone0.LRV
+open SpecialTransformations.Section3 SpecialTransformations.Section4 SpecialTransformations.Section8 SpecialTransformations.Section9
+open SpecialTransformations.DefinableGeometry DiamondIntegral.Section2
+namespace DiamondIntegral.Section6
+variable {qR : ℕ} [NeZero qR]
+variable {M : Type} [LRV.Structure M] [M ⊨ Axioms.ACVF] {S : Set M} {r k : ℕ}
+variable {G : Type} [LinearOrderedCommGroupWithZero G] [Valued (VF M) G]
+
+def UnaryMeasuredPreparationRow.coordinate
+    {A : DefSet (rawMixedSpace (M := M) 1 r) S}
+    {P : Fin k → DefSet (rawMixedSpace (M := M) 1 r) S} {hPA : ∀ i,(P i).carrier ⊆ A.carrier}
+    {ω : RowFormOn A qR}
+    (T : UnaryMeasuredPreparationRow (G := G) A P hPA ω) : MeasuredCoordinatePreparationRow (G := G) A P hPA ω := {
+  arity := T.arity
+  target := T.target
+  map := T.map
+  special := T.special
+  proper := T.proper
+  doublyBounded := T.doublyBounded
+  prepared := T.prepared
+  tagged := T.tagged
+  form := T.form
+  transportRow := T.transportRow
+  constant := T.constant
+  pieces := T.pieces }
+
+theorem exists_binary_measured_fibre_programs_row
+    (h00 : M ⊨ Axioms.ACVF00) (hc : CanonicalStructure.IsCanonical (M := M))
+    (linear : GammaPiecewiseRationalAffineInput (M := M))
+    {κ : Cardinal} (hκ : Cardinal.aleph0 < κ) (hs : Saturated M κ)
+    (hv : ∀ x y : VF M,VFValued.predV x y ↔ Valued.v x ≤ Valued.v y)
+    (V : Set M) (hsmall : Cardinal.mk S < κ)
+    (hΓ : NontrivialDefinableGamma (⟨S,∅⟩ : ParameterBase M))
+    (hV : ∀ x ∈ V,iVF x) (hVS : V ⊆ S) (hSV : S ⊆ algebraicClosureSet V)
+    (hnt : ∃ x : vfAlgebraicClosureField V,x ≠ 0 ∧ Valued.v x.val ≠ 1)
+    (A : DefSet (rawMixedSpace (M := M) 2 r) S) (hA : ProperInvariant S A.carrier)
+    (hAD : VFDoublyBounded A.carrier) (hARV : IsRVPullback A.carrier)
+    (hTag : ∀ p ∈ A.carrier,∀ q ∈ A.carrier,p.2=q.2 → tupleRV M p.1=tupleRV M q.1)
+    (P : Fin k → DefSet (rawMixedSpace (M := M) 2 r) S)
+    (hPA : ∀ i,(P i).carrier ⊆ A.carrier) (hP : ∀ i,ProperInvariant S (P i).carrier)
+    (ω : RowFormOn A qR)
+    (hLevels : ∀ u γ,IsOpen {x : Fin 2 → VF M | (x,u) ∈ A.carrier ∧ rowFormExtension ω (x,u)=γ}) :
+    ∃ l : ℕ,∃ T : Fin l → Σ s,CentripetalProgramTemplate (M := M) S 1 1 r s,
+      ∀ a : VF M,∃ i,(fun _ : Fin 1 => a.val) ∈ (T i).2.measuredGoodRow
+        (headFibreTemplate A) (fun i => headFibreTemplate (P i)) (headGammaFormTemplateRow ω) := by
+  apply exists_finite_head_measured_programs_row h00 hc linear hκ hs hv hsmall hΓ A hARV P hPA ω
+  intro a
+  let z : Fin 1 → M := fun _ => a.val
+  obtain ⟨hV',hVS',hSV',hnt',hsmall',hΓ'⟩ := vf_preparation_support_adjoin_tuple
+    hV hVS hSV hnt hκ.le hsmall hΓ z (fun _ => a.property)
+  obtain ⟨T,hT⟩ := unary_measured_synchronized_preparation_of_doublyBounded_tagged_row
+    h00 hc linear hκ hs hv (V ∪ Set.range z) hsmall' hΓ' hV' hVS' hSV' hnt'
+    ((headFibreTemplate A).fibre z) (headFibreTemplate_properInvariant A hA a)
+    (headFibreTemplate_doublyBounded A hAD a) (headFibreTemplate_rvPullback A hARV a)
+    (headFibreTemplate_tagged A hTag a) (fun i => (headFibreTemplate (P i)).fibre z)
+    (fun i => headFibreTemplate_subset (hPA i) a)
+    (fun i => headFibreTemplate_properInvariant (P i) (hP i) a)
+    (headGammaFormMapRow ω a) (headGammaFormMap_levels_open_row ω a hLevels)
+  exact ⟨T.coordinate,hT⟩
+
+end DiamondIntegral.Section6

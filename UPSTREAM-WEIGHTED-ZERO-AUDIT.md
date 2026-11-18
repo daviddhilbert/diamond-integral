@@ -1,6 +1,16 @@
 # Weighted degree zero: upstream correction and this consumer
 
-Source review, November 15, 2026. Read this with [HANDOFF.md](HANDOFF.md)
+**November 16 update:** both corrected upstream releases are published and the
+consumer pin migration is recorded in
+[the compatibility audit](verification/upstream-weighted-zero-upgrade/README.md).
+Its current receipt and the refreshed section receipts supersede the old-pin
+compatibility boundary below. The corrected Integration HK kernel has
+RV-valued densities. The subsequent local Gamma-valued proof now constructs
+all four measured records; see [the completion note](<section 3/verification/GAMMA-KERNEL-COMPLETION.md>).
+The historical conditional boundary below is superseded by those producers,
+not by identifying the RV-valued and Gamma-valued density categories.
+
+Historical source review, November 15, 2026. Read this with [HANDOFF.md](HANDOFF.md)
 before continuing Section 7 or changing dependency revisions.
 
 The author approved a migration in Integration in ACVF and Special

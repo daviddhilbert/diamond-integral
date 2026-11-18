@@ -8791,6 +8791,170 @@
       "kind": "theorem"
     },
     {
+      "name": "DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations",
+      "kind": "structure"
+    },
+    {
+      "name": "DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations.optionProduct",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations.presentation",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations.KPlus",
+      "kind": "abbrev"
+    },
+    {
+      "name": "DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations.cls",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations.none_zero",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations.cls_iso",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations.cls_unit",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations.cls_product",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations.cls_empty",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations.cls_scissor",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations.Invariant",
+      "kind": "structure"
+    },
+    {
+      "name": "DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations.Invariant.extend",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations.lift",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations.hom_ext",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations.cls_surjective_generators",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVBoundedPositiveTensor.resRelations",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVBoundedPositiveTensor.rvRelations",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVBoundedPositiveTensor.gammaRelations",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVBoundedPositiveTensor.finiteRelations",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVBoundedPositiveTensor.RESPositive",
+      "kind": "abbrev"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVBoundedPositiveTensor.RVPositive",
+      "kind": "abbrev"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVBoundedPositiveTensor.GammaPositive",
+      "kind": "abbrev"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVBoundedPositiveTensor.FinitePositive",
+      "kind": "abbrev"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVBoundedPositiveTensor.ofRES",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVBoundedPositiveTensor.sharp",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVBoundedPositiveTensor.finiteToRES",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVBoundedPositiveTensor.finiteToGamma",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVBoundedPositiveTensor.square",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVBoundedPositiveTensor.resAlgebra",
+      "kind": "instance"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVBoundedPositiveTensor.gammaAlgebra",
+      "kind": "instance"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVBoundedPositiveTensor.Source",
+      "kind": "abbrev"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVBoundedPositiveTensor.comparison",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVBoundedPositiveTensor.comparison_charts",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVBoundedPositiveTensor.comparisonNat",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVBoundedPositiveTensor.resToRing",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVBoundedPositiveTensor.rvToRing",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVBoundedPositiveTensor.gammaToRing",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVBoundedPositiveTensor.rvToRing_ofRES",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVBoundedPositiveTensor.rvToRing_sharp",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVBoundedPositiveTensor.comparison_toRing",
+      "kind": "theorem"
+    },
+    {
       "name": "DiamondIntegral.Section4.RVBalancedSpecialClasses.pPreimage",
       "kind": "def"
     },
@@ -20333,6 +20497,1538 @@
     {
       "name": "DiamondIntegral.Section4.RelativeAnnularQuotient.evaluation_res",
       "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.AnnularBlowup.rvMul_right_cancel",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.AnnularBlowup.inactive",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.AnnularBlowup.InactiveFinite",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.AnnularBlowup.Aperture",
+      "kind": "structure"
+    },
+    {
+      "name": "DiamondIntegral.Section4.AnnularBlowup.blownCoordinate",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.AnnularBlowup.shellPoints",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.AnnularBlowup.endpointPoints",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.AnnularBlowup.inactive_blownCoordinate",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.AnnularBlowup.blownCoordinate_at",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.AnnularBlowup.fst_mem_inactive_fibre",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.AnnularBlowup.shell_finite_fibres",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.AnnularBlowup.endpoint_finite_fibres",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.AnnularBlowup.shell_coordinate_bounded",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.AnnularBlowup.endpoint_coordinate_bounded",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.BlowupChart.nonzero_mul",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.BlowupChart.updateMap",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.BlowupChart.updateMap_join",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.BlowupChart.rv_universe_definable",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.BlowupChart.updateMap_graph_definable",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.BlowupChart.pairMap",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.BlowupChart.pairMap_graph_definable",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.BlowupChart.blown_graph_definable",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.BlowupChart.pieceChart",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.BlowupChart.pieceChart_weight",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.BlowupChart.graphChart",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.BlowupChart.aIdx",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.BlowupChart.graph_canonical",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.BlowupChart.graph_aperture",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.BlowupChart.graph_aperture_nonzero",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.BlowupChart.graph_aperture_bounded",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.BlowupChart.graph_domain_bounded",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.BlowupChart.endpointChart",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.BlowupChart.shellDomain",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.BlowupChart.xIdx",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.BlowupChart.sIdx",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.BlowupChart.shell_mem",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.BlowupChart.shell_points",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.BlowupChart.shell_canonical",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.BlowupChart.shellChart",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.BlowupChart.endpoint_domain_bounded",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.BlowupChart.shell_domain_bounded",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.BlowupRelation.codeValue_volume_definable",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.BlowupRelation.skip",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.BlowupRelation.skip_ne",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.BlowupRelation.exists_skip",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.BlowupRelation.prod_split",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.BlowupRelation.coordJ_definable",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.BlowupRelation.base_finite",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.BlowupRelation.baseCoord_definable",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.BlowupRelation.baseVol_definable",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.BlowupRelation.baseChart",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.BlowupRelation.baseChart_weight",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.BlowupRelation.endpointCoord",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.BlowupRelation.endpointCoord_definable",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.BlowupRelation.endpointBase",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.BlowupRelation.endpointBase_weight",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.BlowupRelation.presentation",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.BlowupRelation.coordinatePresentation",
+      "kind": "abbrev"
+    },
+    {
+      "name": "DiamondIntegral.Section4.BlowupRelation.shellBounded",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.BlowupRelation.endpointBounded",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.BlowupRelation.sourceBounded",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.BlowupRelation.idBij",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.BlowupRelation.shell_weight",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.BlowupRelation.shellIso",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.BlowupRelation.endpointIso",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.BlowupRelation.sourceIso",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.BlowupRelation.blowup_relation",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.BlowupRelation.blowup_mem_ideal",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.BlowupRelation.unitPoint",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.BlowupRelation.normalized",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.BlowupRelation.normalized_weight",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.BlowupRelation.normalizeIso",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularGenerators.AnnularDatum",
+      "kind": "structure"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularGenerators.AnnularDatum.source",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularGenerators.AnnularDatum.annularObject",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularGenerators.AnnularDatum.generator",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularGenerators.AnnularDatum.generator_eq",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularGenerators.manuscriptIdeal",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularGenerators.generator_mem_ideal",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularGenerators.manuscriptIdeal_le",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularGenerators.AnnularDatum.generator_eq_relation",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularGenerators.manuscriptIdeal_homogeneous",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularGenerators.manuscriptIdeal_le_forget_kernel",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularGenerators.manuscript_quotient_injective_on_degree_zero",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularGenerators.manuscriptIdeal_maps_into_p",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularGenerators.manuscript_section4_compatibility",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularConverse.head_ne_tail",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularConverse.unitChart",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularConverse.unitIdx",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularConverse.one",
+      "kind": "abbrev"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularConverse.mem_unitChart",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularConverse.unitChart_reconstruct",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularConverse.join_mem_unitChart",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularConverse.unitChart_weight",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularConverse.unitChart_coordinate_head",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularConverse.unitChart_finite",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularConverse.unitAperture",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularConverse.unitChart_bounded",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularConverse.datum",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularConverse.dropUnit",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularConverse.dropUnit_head",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularConverse.dropUnit_tail",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularConverse.liftPoint",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularConverse.liftPoint_drop",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularConverse.graph_bij",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularConverse.annular_mem_iff",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularConverse.annular_weight",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularConverse.Q",
+      "kind": "abbrev"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularConverse.sourceIso'",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularConverse.endpointIso'",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularConverse.dropShell",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularConverse.dropShell_head",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularConverse.dropShell_tail",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularConverse.dropUnit_aperture",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularConverse.Qgraph_nonzero",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularConverse.Pgraph_nonzero",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularConverse.shellIso'",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularConverse.relation_eq_generator",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularConverse.ideal_eq_manuscriptIdeal",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularScalar.U0",
+      "kind": "abbrev"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularScalar.point_finite",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularScalar.pair_eq",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularScalar.graph_domain_eq",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularScalar.constAperture",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularScalar.scalarDatum",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularScalar.one_eq",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularScalar.raw_iRV",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularScalar.unit_weight",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularScalar.annulus_weight",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularScalar.scalarEndpointIso",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularScalar.scalarShellIso",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularScalar.pGamma_eq_generator",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RelativeAnnularScalar.radiusIdeal_le_manuscriptIdeal",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GermJumps.RightIn",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GermJumps.LeftIn",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GermJumps.jump",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GermJumps.Tame",
+      "kind": "structure"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GermJumps.weightedJump",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GermJumps.not_rightIn_both",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GermJumps.not_leftIn_both",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GermJumps.rightIn_union_iff",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GermJumps.leftIn_union_iff",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GermJumps.ite_or_eq_add",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GermJumps.jump_union",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GermJumps.Tame.union",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GermJumps.support_weighted_subset",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GermJumps.weightedJump_union",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GermJumps.weightedJump_empty",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GermJumps.tame_empty",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GermJumps.jump_of_finite",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GermJumps.weightedJump_of_finite",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GermJumps.rightIn_image_of_strictMono",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GermJumps.leftIn_image_of_strictMono",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GermJumps.rightIn_image_of_strictAnti",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GermJumps.leftIn_image_of_strictAnti",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GermJumps.symm_image_image",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GermJumps.symm_strictMono",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GermJumps.symm_strictAnti",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GermJumps.rightIn_image_iff_of_strictMono",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GermJumps.leftIn_image_iff_of_strictMono",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GermJumps.rightIn_image_iff_of_strictAnti",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GermJumps.leftIn_image_iff_of_strictAnti",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GermJumps.image_compl",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GermJumps.jump_image_of_strictMono",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GermJumps.jump_image_of_strictAnti",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GermJumps.Tame.image_of_strictMono",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GermJumps.Tame.image_of_strictAnti",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GermJumps.weightedJump_image_of_strictMono",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GermJumps.weightedJump_image_of_strictAnti",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GermJumps.weightedJump_biUnion",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GermJumps.weightedJump_partition",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaEndpointInvariant.gamma_exists_gt",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaEndpointInvariant.gamma_exists_lt",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaEndpointInvariant.gammaNoMaxOrder",
+      "kind": "instance"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaEndpointInvariant.gammaNoMinOrder",
+      "kind": "instance"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaEndpointInvariant.line",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaEndpointInvariant.cons_elim0_eq",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaEndpointInvariant.exists_right_gap",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaEndpointInvariant.exists_left_gap",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaEndpointInvariant.tame_line",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaEndpointInvariant.tame_piece",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaEndpointInvariant.chi",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaEndpointInvariant.chi_mul",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaEndpointInvariant.chi_inv_mul",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaEndpointInvariant.chi_one",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaEndpointInvariant.chi_self",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaEndpointInvariant.rightIn_Ioi_iff",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaEndpointInvariant.leftIn_Ioi_iff",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaEndpointInvariant.jump_Ioi",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaEndpointInvariant.weightedJump_Ioi",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaEndpointInvariant.affEquiv",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaEndpointInvariant.affEquiv_apply",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaEndpointInvariant.affEquiv_tame_weight",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaEndpointInvariant.translationSubgroup",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaEndpointInvariant.objNu",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaEndpointInvariant.pieceLine",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaEndpointInvariant.mem_pieceLine",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaEndpointInvariant.objNu_def",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaEndpointInvariant.tame_pieceLine",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaEndpointInvariant.matrix_entry_unit",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaEndpointInvariant.objNu_iso",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Proposition318Witness.card_set_zero",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Proposition318Witness.finite_piece_zero",
+      "kind": "instance"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Proposition318Witness.card_carrier_zero",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Proposition318Witness.card_rvLift_zero",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Proposition318Witness.objNu_empty",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Proposition318Witness.card_empty",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Proposition318Witness.pieceLine_finite",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Proposition318Witness.append_zero_left",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Proposition318Witness.append_zero_right",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Proposition318Witness.pieceLine_product_zero_one",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Proposition318Witness.pieceLine_product_one_zero",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Proposition318Witness.product_piece",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Proposition318Witness.objNu_product_zero_one",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Proposition318Witness.objNu_product_one_zero",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Proposition318Witness.card_product",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Proposition318Witness.gradedValue",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Proposition318Witness.gradedValue_empty",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Proposition318Witness.gradedValue_zero",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Proposition318Witness.gradedValue_one",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Proposition318Witness.gradedValue_high",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Proposition318Witness.card_unit",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Proposition318Witness.scissor_card",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Proposition318Witness.scissor_nu",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Proposition318Witness.gammaInvariant",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Proposition318Witness.gammaPsi",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Proposition318Witness.gammaPsi_class",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Proposition318Witness.resCard",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Proposition318Witness.rv_domain_finite",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Proposition318Witness.resInvariant",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Proposition318Witness.cardHom",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Proposition318Witness.cardHom_class",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Proposition318Witness.resCard_product",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Proposition318Witness.cardHom_mul",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Proposition318Witness.resCard_unit",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Proposition318Witness.resPhi",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Proposition318Witness.resPhi_class",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Proposition318Witness.detector_square",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Proposition318Witness.detector",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Proposition318Witness.gammaPsi_tail",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Proposition318Witness.pairLeft",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Proposition318Witness.pairRight",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Proposition318Witness.pair_isCoefficientPair",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Proposition318Witness.proposition_3_18_unmeasured_kernel_nontrivial",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Proposition318Witness.gammaGroundUnmeasuredTensorMap_not_injective",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Proposition318Witness.coefficientCongruence_ne_bot",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Proposition318CubeRoots.value_definable",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Proposition318CubeRoots.value_mem_translation",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Proposition318CubeRoots.cubeRoots",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Proposition318CubeRoots.mem_cubeRoots",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Proposition318CubeRoots.exists_cube_root",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Proposition318CubeRoots.cube_roots_of_unity_finite",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Proposition318CubeRoots.cubeRoots_finite",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Proposition318CubeRoots.cubeRootObject",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Proposition318CubeRoots.cubeRootObject_domain",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Proposition318CubeRoots.proposition_3_18_kernel_nontrivial_of_noncube",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Section3LinkedRetractionStatements.proposition_4_7_discharged",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Section3LinkedRetractionStatements.proposition_4_15_discharged",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.InfinityFree",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.StrictChart",
+      "kind": "structure"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.Generator",
+      "kind": "abbrev"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.symbol",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.unit",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.product_infinityFree",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.product",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.Relation",
+      "kind": "inductive"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.relationIdeal",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.StrictRing",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.objectClass",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.relation_zero",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.objectClass_unit",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.objectClass_product",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.objectClass_iso",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.objectClass_empty",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.objectClass_scissor",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.Invariant",
+      "kind": "structure"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.freeMap",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.freeMap_symbol",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.invariant_relation_zero",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.invariant_ideal_zero",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.lift",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.lift_objectClass",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.hom_ext",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.lift_unique",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.toBoundedInvariant",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.toBounded",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.toBounded_objectClass",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.graph_restrict_definable",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.preimage_definable",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.image_definable",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.mapIso",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.patternSet",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.zeroLocus",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.mem_patternSet_zeroLocus",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.pattern_unique",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.patternSet_definable",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.stripArity",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.stripIndex",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.stripIndex_not_mem",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.unstrip",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.unstrip_comp",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.strip_injOn",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.stripDomain",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.stripDomain_cases",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.coordIndex",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.join_coordIndex",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.volIndex",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.comp_volIndex",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.stripDomain_definable",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.strip_coordinate_definable",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.strip_volume_definable",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.strip",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.piece",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.strip_weight",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.stripIso",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.strip_bounded",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.strip_infinityFree",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.Admissible",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.toStrict",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.sclass",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.bclass",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.sclass_eq",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.bclass_eq",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.bounded_mono",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.admissible_mono",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.admissible_strip",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.sclass_empty",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.bclass_empty",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.sclass_iso",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.bclass_iso",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.sclass_ofChart",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.bclass_ofChart",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.toBounded_sclass",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.pairs",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.packed_eq",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.sigma_image_injective",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.scissor_of_pairs",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.pairs_of_scissor",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.weight_congr",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.split_scissor",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.sclass_add",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.bclass_add",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.sum_cover",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.bclass_pieces",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.sclass_strip_split",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.rho",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.rho_empty",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.pieceEmptyIso",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.rho_strict",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.stripPair",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.stripPair_injOn",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.pairs_strip",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.strip_scissor",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.castArity",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.castArity_packed",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.castArity_bounded",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.castArity_sum",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.rho_scissor",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.rho_iso",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.headPattern",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.tailPattern",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.pattern_product",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.patternPair_bijective",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.productPiece_mem",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.productPieceIso",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.strip_product_class",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.rho_product",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.fromBoundedInvariant",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.fromBounded",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.fromBounded_objectClass",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.fromBounded_strict",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.to_from",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.from_to",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.equivalence",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.equivalence_objectClass",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedComparison.equivalence_symm_objectClass",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Section4LinkedRemarks.boundedRetraction",
+      "kind": "abbrev"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Section4LinkedRemarks.geometricRetraction",
+      "kind": "abbrev"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Section4LinkedRemarks.diagram_edb_eb_com",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Section4LinkedRemarks.boundedRetraction_res",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Section4LinkedRemarks.boundedRetraction_surjective",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Section4LinkedRemarks.geometricRetraction_range",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Section4LinkedRemarks.normalized_retractions_distinct",
+      "kind": "theorem"
     }
   ],
   "declarations": {
@@ -31045,6 +32741,197 @@
       "propext"
     ],
     "DiamondIntegral.Section4.RVBoundedBalancedTensor.evaluation_independent_kind": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations": [],
+    "DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations.optionProduct": [
+      "propext"
+    ],
+    "DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations.presentation": [
+      "propext"
+    ],
+    "DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations.KPlus": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations.cls": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations.none_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations.cls_iso": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations.cls_unit": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations.cls_product": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations.cls_empty": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations.cls_scissor": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations.Invariant": [],
+    "DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations.Invariant.extend": [
+      "propext"
+    ],
+    "DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations.lift": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations.hom_ext": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations.cls_surjective_generators": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVBoundedPositiveTensor.resRelations": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVBoundedPositiveTensor.rvRelations": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVBoundedPositiveTensor.gammaRelations": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVBoundedPositiveTensor.finiteRelations": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVBoundedPositiveTensor.RESPositive": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVBoundedPositiveTensor.RVPositive": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVBoundedPositiveTensor.GammaPositive": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVBoundedPositiveTensor.FinitePositive": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVBoundedPositiveTensor.ofRES": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVBoundedPositiveTensor.sharp": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVBoundedPositiveTensor.finiteToRES": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVBoundedPositiveTensor.finiteToGamma": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVBoundedPositiveTensor.square": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVBoundedPositiveTensor.resAlgebra": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVBoundedPositiveTensor.gammaAlgebra": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVBoundedPositiveTensor.Source": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVBoundedPositiveTensor.comparison": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVBoundedPositiveTensor.comparison_charts": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVBoundedPositiveTensor.comparisonNat": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVBoundedPositiveTensor.resToRing": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVBoundedPositiveTensor.rvToRing": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVBoundedPositiveTensor.gammaToRing": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVBoundedPositiveTensor.rvToRing_ofRES": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVBoundedPositiveTensor.rvToRing_sharp": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVBoundedPositiveTensor.comparison_toRing": [
       "Classical.choice",
       "Quot.sound",
       "propext"
@@ -45262,6 +47149,1881 @@
       "Classical.choice",
       "Quot.sound",
       "propext"
+    ],
+    "DiamondIntegral.Section4.AnnularBlowup.rvMul_right_cancel": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.AnnularBlowup.inactive": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.AnnularBlowup.InactiveFinite": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.AnnularBlowup.Aperture": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.AnnularBlowup.blownCoordinate": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.AnnularBlowup.shellPoints": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.AnnularBlowup.endpointPoints": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.AnnularBlowup.inactive_blownCoordinate": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.AnnularBlowup.blownCoordinate_at": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.AnnularBlowup.fst_mem_inactive_fibre": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.AnnularBlowup.shell_finite_fibres": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.AnnularBlowup.endpoint_finite_fibres": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.AnnularBlowup.shell_coordinate_bounded": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.AnnularBlowup.endpoint_coordinate_bounded": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.BlowupChart.nonzero_mul": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.BlowupChart.updateMap": [
+      "propext"
+    ],
+    "DiamondIntegral.Section4.BlowupChart.updateMap_join": [
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.BlowupChart.rv_universe_definable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.BlowupChart.updateMap_graph_definable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.BlowupChart.pairMap": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.BlowupChart.pairMap_graph_definable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.BlowupChart.blown_graph_definable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.BlowupChart.pieceChart": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.BlowupChart.pieceChart_weight": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.BlowupChart.graphChart": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.BlowupChart.aIdx": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.BlowupChart.graph_canonical": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.BlowupChart.graph_aperture": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.BlowupChart.graph_aperture_nonzero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.BlowupChart.graph_aperture_bounded": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.BlowupChart.graph_domain_bounded": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.BlowupChart.endpointChart": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.BlowupChart.shellDomain": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.BlowupChart.xIdx": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.BlowupChart.sIdx": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.BlowupChart.shell_mem": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.BlowupChart.shell_points": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.BlowupChart.shell_canonical": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.BlowupChart.shellChart": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.BlowupChart.endpoint_domain_bounded": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.BlowupChart.shell_domain_bounded": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.BlowupRelation.codeValue_volume_definable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.BlowupRelation.skip": [],
+    "DiamondIntegral.Section4.BlowupRelation.skip_ne": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.BlowupRelation.exists_skip": [
+      "propext"
+    ],
+    "DiamondIntegral.Section4.BlowupRelation.prod_split": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.BlowupRelation.coordJ_definable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.BlowupRelation.base_finite": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.BlowupRelation.baseCoord_definable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.BlowupRelation.baseVol_definable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.BlowupRelation.baseChart": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.BlowupRelation.baseChart_weight": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.BlowupRelation.endpointCoord": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.BlowupRelation.endpointCoord_definable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.BlowupRelation.endpointBase": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.BlowupRelation.endpointBase_weight": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.BlowupRelation.presentation": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.BlowupRelation.coordinatePresentation": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.BlowupRelation.shellBounded": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.BlowupRelation.endpointBounded": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.BlowupRelation.sourceBounded": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.BlowupRelation.idBij": [],
+    "DiamondIntegral.Section4.BlowupRelation.shell_weight": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.BlowupRelation.shellIso": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.BlowupRelation.endpointIso": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.BlowupRelation.sourceIso": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.BlowupRelation.blowup_relation": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.BlowupRelation.blowup_mem_ideal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.BlowupRelation.unitPoint": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.BlowupRelation.normalized": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.BlowupRelation.normalized_weight": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.BlowupRelation.normalizeIso": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularGenerators.AnnularDatum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularGenerators.AnnularDatum.source": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularGenerators.AnnularDatum.annularObject": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularGenerators.AnnularDatum.generator": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularGenerators.AnnularDatum.generator_eq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularGenerators.manuscriptIdeal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularGenerators.generator_mem_ideal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularGenerators.manuscriptIdeal_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularGenerators.AnnularDatum.generator_eq_relation": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularGenerators.manuscriptIdeal_homogeneous": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularGenerators.manuscriptIdeal_le_forget_kernel": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularGenerators.manuscript_quotient_injective_on_degree_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularGenerators.manuscriptIdeal_maps_into_p": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularGenerators.manuscript_section4_compatibility": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularConverse.head_ne_tail": [
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularConverse.unitChart": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularConverse.unitIdx": [
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularConverse.one": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularConverse.mem_unitChart": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularConverse.unitChart_reconstruct": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularConverse.join_mem_unitChart": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularConverse.unitChart_weight": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularConverse.unitChart_coordinate_head": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularConverse.unitChart_finite": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularConverse.unitAperture": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularConverse.unitChart_bounded": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularConverse.datum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularConverse.dropUnit": [
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularConverse.dropUnit_head": [
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularConverse.dropUnit_tail": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularConverse.liftPoint": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularConverse.liftPoint_drop": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularConverse.graph_bij": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularConverse.annular_mem_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularConverse.annular_weight": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularConverse.Q": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularConverse.sourceIso'": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularConverse.endpointIso'": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularConverse.dropShell": [
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularConverse.dropShell_head": [
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularConverse.dropShell_tail": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularConverse.dropUnit_aperture": [
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularConverse.Qgraph_nonzero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularConverse.Pgraph_nonzero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularConverse.shellIso'": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularConverse.relation_eq_generator": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularConverse.ideal_eq_manuscriptIdeal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularScalar.U0": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularScalar.point_finite": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularScalar.pair_eq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularScalar.graph_domain_eq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularScalar.constAperture": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularScalar.scalarDatum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularScalar.one_eq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularScalar.raw_iRV": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularScalar.unit_weight": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularScalar.annulus_weight": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularScalar.scalarEndpointIso": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularScalar.scalarShellIso": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularScalar.pGamma_eq_generator": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularScalar.radiusIdeal_le_manuscriptIdeal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GermJumps.RightIn": [
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GermJumps.LeftIn": [
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GermJumps.jump": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GermJumps.Tame": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GermJumps.weightedJump": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GermJumps.not_rightIn_both": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GermJumps.not_leftIn_both": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GermJumps.rightIn_union_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GermJumps.leftIn_union_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GermJumps.ite_or_eq_add": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GermJumps.jump_union": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GermJumps.Tame.union": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GermJumps.support_weighted_subset": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GermJumps.weightedJump_union": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GermJumps.weightedJump_empty": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GermJumps.tame_empty": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GermJumps.jump_of_finite": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GermJumps.weightedJump_of_finite": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GermJumps.rightIn_image_of_strictMono": [
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GermJumps.leftIn_image_of_strictMono": [
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GermJumps.rightIn_image_of_strictAnti": [
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GermJumps.leftIn_image_of_strictAnti": [
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GermJumps.symm_image_image": [
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GermJumps.symm_strictMono": [
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GermJumps.symm_strictAnti": [
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GermJumps.rightIn_image_iff_of_strictMono": [
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GermJumps.leftIn_image_iff_of_strictMono": [
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GermJumps.rightIn_image_iff_of_strictAnti": [
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GermJumps.leftIn_image_iff_of_strictAnti": [
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GermJumps.image_compl": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GermJumps.jump_image_of_strictMono": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GermJumps.jump_image_of_strictAnti": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GermJumps.Tame.image_of_strictMono": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GermJumps.Tame.image_of_strictAnti": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GermJumps.weightedJump_image_of_strictMono": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GermJumps.weightedJump_image_of_strictAnti": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GermJumps.weightedJump_biUnion": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GermJumps.weightedJump_partition": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaEndpointInvariant.gamma_exists_gt": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaEndpointInvariant.gamma_exists_lt": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaEndpointInvariant.gammaNoMaxOrder": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaEndpointInvariant.gammaNoMinOrder": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaEndpointInvariant.line": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaEndpointInvariant.cons_elim0_eq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaEndpointInvariant.exists_right_gap": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaEndpointInvariant.exists_left_gap": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaEndpointInvariant.tame_line": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaEndpointInvariant.tame_piece": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaEndpointInvariant.chi": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaEndpointInvariant.chi_mul": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaEndpointInvariant.chi_inv_mul": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaEndpointInvariant.chi_one": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaEndpointInvariant.chi_self": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaEndpointInvariant.rightIn_Ioi_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaEndpointInvariant.leftIn_Ioi_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaEndpointInvariant.jump_Ioi": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaEndpointInvariant.weightedJump_Ioi": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaEndpointInvariant.affEquiv": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaEndpointInvariant.affEquiv_apply": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaEndpointInvariant.affEquiv_tame_weight": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaEndpointInvariant.translationSubgroup": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaEndpointInvariant.objNu": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaEndpointInvariant.pieceLine": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaEndpointInvariant.mem_pieceLine": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaEndpointInvariant.objNu_def": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaEndpointInvariant.tame_pieceLine": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaEndpointInvariant.matrix_entry_unit": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaEndpointInvariant.objNu_iso": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Proposition318Witness.card_set_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Proposition318Witness.finite_piece_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Proposition318Witness.card_carrier_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Proposition318Witness.card_rvLift_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Proposition318Witness.objNu_empty": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Proposition318Witness.card_empty": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Proposition318Witness.pieceLine_finite": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Proposition318Witness.append_zero_left": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Proposition318Witness.append_zero_right": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Proposition318Witness.pieceLine_product_zero_one": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Proposition318Witness.pieceLine_product_one_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Proposition318Witness.product_piece": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Proposition318Witness.objNu_product_zero_one": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Proposition318Witness.objNu_product_one_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Proposition318Witness.card_product": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Proposition318Witness.gradedValue": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Proposition318Witness.gradedValue_empty": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Proposition318Witness.gradedValue_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Proposition318Witness.gradedValue_one": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Proposition318Witness.gradedValue_high": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Proposition318Witness.card_unit": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Proposition318Witness.scissor_card": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Proposition318Witness.scissor_nu": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Proposition318Witness.gammaInvariant": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Proposition318Witness.gammaPsi": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Proposition318Witness.gammaPsi_class": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Proposition318Witness.resCard": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Proposition318Witness.rv_domain_finite": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Proposition318Witness.resInvariant": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Proposition318Witness.cardHom": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Proposition318Witness.cardHom_class": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Proposition318Witness.resCard_product": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Proposition318Witness.cardHom_mul": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Proposition318Witness.resCard_unit": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Proposition318Witness.resPhi": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Proposition318Witness.resPhi_class": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Proposition318Witness.detector_square": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Proposition318Witness.detector": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Proposition318Witness.gammaPsi_tail": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Proposition318Witness.pairLeft": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Proposition318Witness.pairRight": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Proposition318Witness.pair_isCoefficientPair": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Proposition318Witness.proposition_3_18_unmeasured_kernel_nontrivial": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Proposition318Witness.gammaGroundUnmeasuredTensorMap_not_injective": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Proposition318Witness.coefficientCongruence_ne_bot": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Proposition318CubeRoots.value_definable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Proposition318CubeRoots.value_mem_translation": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Proposition318CubeRoots.cubeRoots": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Proposition318CubeRoots.mem_cubeRoots": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Proposition318CubeRoots.exists_cube_root": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Proposition318CubeRoots.cube_roots_of_unity_finite": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Proposition318CubeRoots.cubeRoots_finite": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Proposition318CubeRoots.cubeRootObject": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Proposition318CubeRoots.cubeRootObject_domain": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Proposition318CubeRoots.proposition_3_18_kernel_nontrivial_of_noncube": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Section3LinkedRetractionStatements.proposition_4_7_discharged": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Section3LinkedRetractionStatements.proposition_4_15_discharged": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.InfinityFree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.StrictChart": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.Generator": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.symbol": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.unit": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.product_infinityFree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.product": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.Relation": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.relationIdeal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.StrictRing": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.objectClass": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.relation_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.objectClass_unit": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.objectClass_product": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.objectClass_iso": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.objectClass_empty": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.objectClass_scissor": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.Invariant": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.freeMap": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.freeMap_symbol": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.invariant_relation_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.invariant_ideal_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.lift": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.lift_objectClass": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.hom_ext": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.lift_unique": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.toBoundedInvariant": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.toBounded": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.toBounded_objectClass": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.graph_restrict_definable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.preimage_definable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.image_definable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.mapIso": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.patternSet": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.zeroLocus": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.mem_patternSet_zeroLocus": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.pattern_unique": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.patternSet_definable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.stripArity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.stripIndex": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.stripIndex_not_mem": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.unstrip": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.unstrip_comp": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.strip_injOn": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.stripDomain": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.stripDomain_cases": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.coordIndex": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.join_coordIndex": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.volIndex": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.comp_volIndex": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.stripDomain_definable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.strip_coordinate_definable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.strip_volume_definable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.strip": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.piece": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.strip_weight": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.stripIso": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.strip_bounded": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.strip_infinityFree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.Admissible": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.toStrict": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.sclass": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.bclass": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.sclass_eq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.bclass_eq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.bounded_mono": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.admissible_mono": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.admissible_strip": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.sclass_empty": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.bclass_empty": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.sclass_iso": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.bclass_iso": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.sclass_ofChart": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.bclass_ofChart": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.toBounded_sclass": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.pairs": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.packed_eq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.sigma_image_injective": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.scissor_of_pairs": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.pairs_of_scissor": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.weight_congr": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.split_scissor": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.sclass_add": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.bclass_add": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.sum_cover": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.bclass_pieces": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.sclass_strip_split": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.rho": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.rho_empty": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.pieceEmptyIso": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.rho_strict": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.stripPair": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.stripPair_injOn": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.pairs_strip": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.strip_scissor": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.castArity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.castArity_packed": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.castArity_bounded": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.castArity_sum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.rho_scissor": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.rho_iso": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.headPattern": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.tailPattern": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.pattern_product": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.patternPair_bijective": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.productPiece_mem": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.productPieceIso": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.strip_product_class": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.rho_product": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.fromBoundedInvariant": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.fromBounded": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.fromBounded_objectClass": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.fromBounded_strict": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.to_from": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.from_to": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.equivalence": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.equivalence_objectClass": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedComparison.equivalence_symm_objectClass": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Section4LinkedRemarks.boundedRetraction": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Section4LinkedRemarks.geometricRetraction": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Section4LinkedRemarks.diagram_edb_eb_com": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Section4LinkedRemarks.boundedRetraction_res": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Section4LinkedRemarks.boundedRetraction_surjective": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Section4LinkedRemarks.geometricRetraction_range": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Section4LinkedRemarks.normalized_retractions_distinct": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
     ]
   },
   "cited_input_definitions": {
@@ -45571,6 +49333,8 @@
     "section 4/FiniteGammaAlgebras.lean": "7c2e99f7d8a0af2c1d81584ec2c92258994252bb2679daf6ecbeedc276dff8ad",
     "section 4/RVFiniteBalancedTensor.lean": "20a09b6b74ca377971ac251fdbdd47952aace571eea47fa9dd3857ec1f11a509",
     "section 4/RVBoundedBalancedTensor.lean": "ae4916109686bbd48183d7065955e4b5c0bbb6d99f96dd5823fbb7185217b8e9",
+    "section 4/PositiveChartPresentation.lean": "8ed76b0565fd004397fb1a3aa7ca575b7a2f65cd3583481970456a9cbaadd149",
+    "section 4/RVBoundedPositiveTensor.lean": "3998e636c82cba2531bcff155d8a78ec9923d8f5b37562cd54b848777b44c168",
     "section 4/RVBalancedSpecialClasses.lean": "2f36f0ad2287546e12581230fb5844ce4c29499d49e8d49d40015163d4a20c3e",
     "section 4/RVMeasuredTensor.lean": "12e1146ea3c655e5c4e2de567d8643df9f01cfe44c2d771e115c07380628adae",
     "section 4/RVMeasuredSpecialClasses.lean": "6c227ebefc69ea6f58a79ce2147e9a13f30da116bba1fcf57c66bfa5dce7353e",
@@ -45897,12 +49661,25 @@
     "section 4/FunctionalApertureCompatibility.lean": "af659417070adb30f1b125d82a5fe6b54e417a4de9ef40436958fd9b306810f2",
     "section 4/VariableApertureMeasuredComparison.lean": "b26878d716cc3511a4aecf34bfcffec959a99a7a0266061e00c53739f4553bf4",
     "section 4/RelativeAnnularQuotient.lean": "7fca04139d5a39f4f796e7b5a113c822608f6396855845159dfcb04de5ddf559",
-    "section 4/Section.lean": "c36258df96fb2914cf5d223d992209ac57130f9ca922c24ca01c86945173c5de",
-    "section 4/verify.py": "33f8e24abb3b2f7c3ae94757741b707ba8b60467b15922879f6446118d62f91d",
-    "DiamondIntegral.lean": "786b9fde880c089c8ce1f1cc3792da83f557eec16aa67fd13eca93deed59281b",
+    "section 4/AnnularBlowup.lean": "98c142c43029dde7b8a0919b4cbb3a31543c7362a1ca5d8980b65b88867af3d7",
+    "section 4/BlowupChart.lean": "24b23f812e558bac6156170d073b20d57fb2dd3a88215d9556554f2350bd7ad3",
+    "section 4/BlowupRelation.lean": "5b87fc2663c6c526e64594c9c2bc355a2f74729461e89cbb2ceecb163a4bab3e",
+    "section 4/RelativeAnnularGenerators.lean": "a0b65c9c2af8511f9807a9881e073b8c687657592981ba98b73ab918e082f9b0",
+    "section 4/RelativeAnnularConverse.lean": "6a47372752d3e23f8078646a9269b97fff599022168842f8499db78f419a5084",
+    "section 4/RelativeAnnularScalar.lean": "ec7095ecadeb5d0b297b5959c1aa21b8e7c76082c6c639badff606553c837f10",
+    "section 4/GermJumps.lean": "c7839ed590f2ac7fd779cac8382110a1b22bb1ac9a4cce159b47a03c4eeabb3d",
+    "section 4/GammaEndpointInvariant.lean": "4fc2ab0b7f2497baeec9cf47ab3e4db63302e283702ff09f53b2aa502965e814",
+    "section 4/Proposition318Witness.lean": "95d104364f228cae157968d263380e165bf5064b8e32309840c28a7233f784da",
+    "section 4/Proposition318CubeRoots.lean": "c5ef9e2050c486af03f66af473bc86c0b94cdf16f94f195084a0cb4c0d2ee822",
+    "section 4/Section4GammaLinearityDischarged.lean": "e03398946b7a944278d7b203cb2ea81945ef63548a476aa8e17d69fbfcf2179b",
+    "section 4/RVStrictBoundedComparison.lean": "d15a45f9a09c77987e3a4d0fc63a688c994b89d040d4943d8cdb2216d3011498",
+    "section 4/Section4LinkedRemarks.lean": "1b1c329a6c7411991a6ffa5b6c496fbfe740149a13e2256953eec00027270eb3",
+    "section 4/Section.lean": "c20364fbc6ef2f4555ccb7321c76511d395d2f8f9735cd4465c11867897ac907",
+    "section 4/verify.py": "c16e7413398bc280aa2b65820ec6e75dfb419d1c7b1ca57b2985320b4da1ac2a",
+    "DiamondIntegral.lean": "66d02be99d3e377f670ad569f36274aed59d735366ebb4b157993bdb166b553e",
     "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
-    "lakefile.toml": "ac57f9e40dbbdcc0599f7930709f572bb1f8822f15fdf76380b51724b28dc289",
-    "lake-manifest.json": "ec80c4ddd3bc873989de2a4da7392222b8318c73586e538f0dde675427f92523",
+    "lakefile.toml": "b963c8670bd4bb1ef3a725697bd4f0d2b8ad3cfb5c7c9260ee1c1960581e5805",
+    "lake-manifest.json": "223e4ad0f978f4190028e5caa278ac1de663b7944e22f5a08fa6d840a55ded4e",
     "ACCEPTED-CITED-RESULTS.md": "737926f2df742cb6f103291d9c5067c97343b3e8e95161a20190fe2b7664762f",
     "section 4/verification/CITED-INPUTS.md": "b95cb956eca58f904f26eee2184043eaf662836c1697670c2766a64f0208fa39",
     "section 4/verification/t001-upstream-review.json": "da90b3910e5d404e88a845b0f6115942b47ef2fa57f544a14d6328a7483bd519",
@@ -45914,13 +49691,13 @@
     "section 3/TensorRingDescent.lean": "d6308a0f6f398301b6d96b4a2d9cddec35f57badc53bfc786f821536d6deba20",
     "section 3/TensorCoefficientRelations.lean": "6552e5d339215339c66c4b9a336e3d00951d3cd4a632692b305b02b320880125",
     "section 3/MeasuredTensorCoefficientRelations.lean": "ac0f0f30d98173edcdfca48a22706103e62636daf1c23fc79da6664aecd1c0a3",
-    "section 3/reuse/integration-manifest.json": "fddd307a0a565035ef7495152a62832fdfe358a12312aed3c3424ab331e42adc",
+    "section 3/reuse/integration-manifest.json": "5452677cc8c01c77cd7adbef649d96e72738e8cfd4a8ffc4fb57be517c13bd5d",
     "section 4/reference/T001-approved-upstream.tex": "942c7536d21d7db0cecaf7dcf46c12d41ac3349a785b35d5b0716de4b3c1716e",
     "section 2/CitedGammaLinearity.lean": "f8042f363ed3e1284502840ca91837744196e2095a7d0864b3fe60b0ea6f8d31",
     "section 2/AtomicBaseChange.lean": "81562f2e69570db99fbdd3a8390e7640d88a0834e2cb6d44a74e9ed8e6950937",
     "section 2/Conventions.lean": "58809fdce18d921d45a9e90c1462624fc628fa01234cd870fd80e0c9effb2f62",
-    "section 2/reuse/manifest.json": "c652f4bd9ed8ccd6950f6927712563ffbb822f8027ff961dda5fbf42c6d7cb8a",
+    "section 2/reuse/manifest.json": "a9b05b355e1361a7f442aefde6072f3c55c539dc56e84495781c9ed9fce5e9df",
     "section 2/reuse/open-disc-radius.patch": "1025b80e4d836f501bb09a342effbf33a6e02a2cba48d75bb01262e4027c98a7",
-    "section 2/reference/diamond_integral_revision_annotated.tex": "e208a76e0c718a5fd26f9373ee5e8a3eaca79bbb2847fab5d9cf5d7c3a2f7054"
+    "section 2/reference/diamond_integral_revision_annotated.tex": "5d006b61d936dc734e38afc9e4b13eded7aba602989a46c6a863ee89c067a259"
   }
 }

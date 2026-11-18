@@ -2,9 +2,17 @@
 
 All tracked numbered §2 targets are implemented in their recorded scopes.
 The final finite-DC-ground extensions of 2.25, 2.26, 2.29 and 2.30 are checked.
-Latest project audit: **850 public section theorems / 378 selected reuse
+Latest project audit (November 18): **970 public section theorems / 378 selected reuse
 declarations**, PASS. Only `propext`, `Classical.choice` and `Quot.sound`
-occur; nine accepted cited interfaces remain explicit and replaceable.
+occur. The nine cited interfaces remain as parameters of the original
+statements, but all are now discharged. The eight numbered [18, §3] inputs
+have checked constructors, and `section 3/Section2CitedInputsDischarged.lean`
+gives input-free versions of the 20 statements that still took them. The Γ
+rational-affine input is proved (`Section5.GammaQE.gamma_piecewise_rational_affine`),
+and `section 3/Section2GammaLinearityDischarged.lean` gives input-free 2.41,
+2.47 and 2.53. November 17–18 additions are in [GAP-REPAIRS.md](GAP-REPAIRS.md):
+general-base 2.14/2.15, Remark 2.47, Γ stably embedded, 2.12 with Γ names and
+small-base 2.20.
 See [COVERAGE.md](COVERAGE.md) for the exact numbered scopes and
 [the disc-ground proof review](verification/DISC-GROUND-REVIEW.md).
 Earlier milestone counts and unfinished-work notes below are historical;
@@ -104,11 +112,13 @@ remarks are commentary, not part of the main text or independent authorization.
 ## Reuse and verification
 
 Lean is 4.35.0. Mathlib and ACVF-QE retain the revisions in the project plan.
-Special Transformations is pinned at `9cc9760892092dd34cfad4a6dee655843c52f30c`
-with the explicit `reuse/open-disc-radius.patch`. `prepare-reuse.py` checks the
+Special Transformations is pinned at `25852c85a31c67069b148bd31348128318303510`
+and Integration in ACVF at `7675d31332f20421c803ea16af84964ed74cd51f`
+(`lake-manifest.json`). The published release contains the 30 approved
+open-radius corrections, so `reuse/open-disc-radius.patch` is kept only as
+historical evidence against the former base `9cc97608…`. `prepare-reuse.py` checks the
 base revision, patch identity and effective source hashes; it refuses to
-overwrite other Lean edits. This keeps a fresh checkout reproducible before
-the library correction is published. No GitHub push is authorized by this work.
+overwrite local Lean edits. No GitHub push is authorized by this work.
 
 `verify.py` builds the project, prints the full public section theorem types,
 prints the defining interfaces and audits axioms. It also audits public
@@ -180,7 +190,9 @@ Lemma 3.3 and needs only ACVF, with no canonical-totalization restriction.
 `Exchange.lean` exports `lemma_2_14_vf` and `lemma_2_14_rv`, applying the
 checked companion scalar exchange theorems over the same base. The RV version
 retains genuine saturation and smallness and includes the absorbing element
-as a stronger version. The VF version retains the standing VF-field base.
+as a stronger version. `lemma_2_14_vf` retains the standing VF-field base;
+`ExchangeGeneral.lean` adds `lemma_2_14_vf_general`, VF exchange over every
+parameter base `S` without the `VFFieldBase S` premise (November 17).
 
 `FiniteFibres.lean` exports `lemma_2_15_vf` and `lemma_2_15_rv`. The finitary
 powerset-valued function is represented by its complete scalar relation.
@@ -190,12 +202,15 @@ bounded-fibre sets. Its finite algebraic part covers every infinite fibre;
 a final finite threshold defines exactly the desired exceptional set.
 The theorem includes finiteness, original-base definability, containment in
 the target B, and both directions of the infinite-fibre criterion.
+`lemma_2_15_vf_general` (same file, November 18) proves the VF statement over
+an arbitrary small base, without `VFFieldBase S`, using
+`lemma_2_14_vf_general`.
 
 These exports use the original real parameter set `S : Set M`, with the
 canonical encoding for 2.15. A separate genuine-Gamma-base version is not
 exported here or silently inferred from the real-base statements. Saturation,
-smallness, sort conditions, and the VF-field convention remain visible in
-the full theorem types.
+smallness, sort conditions, and (except in the `_general` versions) the
+VF-field convention remain visible in the full theorem types.
 
 ## Dimensions, disc points and complete types
 

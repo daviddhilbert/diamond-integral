@@ -1,5 +1,27 @@
 # Numbered §3 targets
 
+November 17: the four Gamma-valued measured lift/kernel interfaces appearing
+in the historical target descriptions now have local proved producers.
+See [the exact completion scope](verification/GAMMA-KERNEL-COMPLETION.md).
+This includes both global semiring kernels and every fixed degree at the
+original base.
+
+November 18: the remaining [18] lift records are also produced. The
+Gamma-ground unmeasured record is `Section5.completed18GroundLiftInput`
+(section 5, from the completed upstream [18] Sections 5–6 at pin
+7675d31332f20421c803ea16af84964ed74cd51f; the former unfinished 5.8 input is
+discharged by `Section5.completed_section5_input`). The bounded records are
+`completedGammaGroundBoundedLiftInput` (headline `theorem_3_22_bounded`,
+`_characterization`, `_transition`) and
+`MeasuredRealGround.completedOrdinaryBoundedLiftInput`. Theorem 3.22's graded
+measured isomorphism is `theorem_3_22_measured_graded` (+ `_inverse`,
+`_piece`, `_lift_class`), and Remark 3.14 is `remark_3_14` (+ `_converse`,
+`_point`). The 3.21/3.22 rows below that say "relative to accepted [18]
+inputs" describe the generic constructions, which still take the records as
+parameters; the records are no longer accepted inputs. Only the approved
+R--Y classification remains. See [GAP-REPAIRS.md](GAP-REPAIRS.md), including
+the author-approved "not pursued" items.
+
 Reference: `section 2/reference/diamond_integral_revision_annotated.tex`
 at project main `82fe1a1`, with its author-approved §2 revisions. Stable
 labels below take precedence over page and printed theorem numbers.
@@ -18,7 +40,7 @@ The approved C002 proof is on printed pages 34–35. The author-approved R050, R
 | Notation 3.11 | `mor:ftf` | The actual correspondence is a definable image, contained in the two label images, with finite fibres in both directions. Its nonempty finitary-function presentation and exact pointwise Jacobian abbreviation are proved at real bases. |
 | Definition 3.12 | `defn:RV:mu` | Pointwise Gamma-measured RV groupoid and measured RES full subcategory implemented at a real base and over the complete Gamma ground. Gamma-ground RV/RES have actual coproducts, positive representatives, exact pointwise measured class-isomorphism comparisons, genuine graded cartesian semirings and an injective positive graded RES inclusion. Measured RV is equivalent to its universal presentation at this scope. Positive classes have genuine representatives, class equality is exactly measured isomorphism, both graded/direct-sum comparisons are proved, and measured RES injects into measured RV. |
 | Definition 3.13 | `def:Ga:cat` | Finite tagged Gamma families and genuine definable RV contraction witnesses implemented at real bases and over the full Gamma ground, including the ordinary/measured groupoids and fixed-degree scissors. The full-ground coproducts, actual positive representatives and exact class-isomorphism comparison are proved, including finite Gamma and the injective positive finite-to-Gamma inclusion. Cartesian graded products and universal-presentation/direct-sum comparisons are proved at the complete Gamma ground, including finite Gamma and its injective positive graded inclusion. Actual coproducts and partitions retain full RV code witnesses; positive equality is exactly genuine isomorphism, and every positive class has an actual object representative. Actual products induce the graded semiring, equivalent to its universal presentation; finite Gamma has the corresponding comparison and injective inclusion. |
-| Remark 3.14 | unlabelled | Compare divisible-hull definability with existence of an RV representative; do not identify them. |
+| Remark 3.14 | unlabelled | Compare divisible-hull definability with existence of an RV representative; do not identify them. Proved (November 17): `remark_3_14` (a definable γ over a VF-generated base lies in the divisible hull of Γ(𝕊)), `remark_3_14_converse`, `remark_3_14_point`. Γ-named/RV-named bases not pursued (triage). |
 | Remark 3.15 | `GLZ:char` | R050 approved and applied. Arbitrary full-code contractions from Gamma^n to Gamma^m are locally proved piecewise integer-affine, including nonbijective maps, rectangular matrices and zero arities. The finite-tagged piecewise-GL morphism criterion is also proved over the complete mixed ground, with actual definable RV translations and GammaGroundContext wrappers. The only new cited premise is the approved R--Y classification. The precise [19] record remains at its stated real VF-generated scope; it is not used for lower-map well-definedness. |
 | Definition 3.16 | `def:Ga:cat:mu` | Measured Gamma groupoid and full piece forms are implemented at real bases and over the full Gamma ground. Actual coproducts, positive representatives and exact measured class-isomorphism comparison are also proved over the complete Gamma ground, including the finite measured subcategory and its injective positive inclusion. The real-base graded semiring/direct-sum equivalence is proved; the full-ground graded/presentation comparison and canonical tensor maps are proved; the corrected positive quotient comparison is now proved as well. Finite measured Gamma has the corresponding positive and graded comparisons and injective inclusion. |
 | Notation 3.17 | `comp:form` | Both RV and Gamma combined weights and their pointwise measure equations are checked. |
@@ -26,8 +48,8 @@ The approved C002 proof is on printed pages 34–35. The author-approved R050, R
 | Tensor maps / Proposition 3.18 | `bil:def`, `tensor:expre`, `bdd:to:2bdd`, `red:D:iso` | Both actual positive tensor maps are surjective. Both elementary coefficient-translation semiring congruences equal their actual kernels; both quotient maps are semiring isomorphisms with multiplicative fixed-degree direct-sum gradings and the original r+n object-degree formula. The actual groupified kernels are also exactly the ideals of these generator differences, with both quotient ring comparisons proved. These are local proofs with no HK input. TensorPresentationContext instantiates the corrected proposition at the actual VF/Gamma-generated GammaGroundContext, retaining canonical structure, ACVF00, saturation, both smallness bounds and nontrivial Gamma. General imaginary-ground presentation transport remains separate. The final T001 statement and both proofs are now author-approved and incorporated in the manuscript. |
 | Notation 3.19 | `drop:0` | Constant additive volume 0 is multiplicative weight 1 in the Lean Gamma convention. |
 | Notation 3.20 | unlabelled | Distinct elementary groupified relation identities checked. The actual unmeasured point and positive-value objects, their semiring congruence and the P−1 completion comparison are proved. Both actual measured and unmeasured generators, congruences and principal-ideal completion comparisons are now instantiated. The Gamma, measured Gamma and both finite Gamma graded comparisons and group-completion/direct-sum comparisons are proved. R051 spelling correction is approved and applied; its original referee note is gray. |
-| Notation 3.21 | `RVcat:tag` | Both object lifts, including the measured form in every degree, are implemented at real bases and over the complete original Gamma ground. Class descent and surjectivity retain precise accepted [18] inputs at the manuscript's VF/Gamma-generated context. Independent imaginary names are outside the documented default context. |
-| Theorem 3.22 | `main:prop:HK` | Actual positive and ring integral comparisons and characterizations are proved relative to precise accepted [18] inputs over a small VF-generated real base. Bounded unmeasured comparisons and transition compatibility are proved in that scope. The unmeasured VF colimit identifications in additive commutative monoids and in additive commutative groups are proved at that real-base scope. The measured VF direct-sum, product semiring and ring comparisons are also proved relative to both accepted lift records in that scope. Complete Gamma-ground positive/ring and fixed-degree measured integral consequences now have explicit accepted [18] inputs, and bounded unmeasured consequences retain actual finite direct sums and transition maps. The Gamma-ground measured VF direct-sum, product-semiring and group grading are proved relative to the accepted global/degreewise inputs. The ordinary Gamma-ground universal-semiring identification and its actual additive/group filtration colimits are proved relative to the accepted global/bounded inputs. The pure Gamma-ground RV/RES gradings are now proved. Gamma/finite-Gamma graded comparisons and the documented VF/Gamma-generated context applications are proved; geometric kernels remain precise cited inputs. R054 notation correction is approved and applied; its original referee note is gray. |
+| Notation 3.21 | `RVcat:tag` | Both object lifts, including the measured form in every degree, are implemented at real bases and over the complete original Gamma ground. Class descent and surjectivity use the [18] lift records at the manuscript's VF/Gamma-generated context; these records are now produced (November 18), not accepted. Independent imaginary names are outside the documented default context. |
+| Theorem 3.22 | `main:prop:HK` | Actual positive and ring integral comparisons and characterizations are proved relative to precise accepted [18] inputs over a small VF-generated real base. Bounded unmeasured comparisons and transition compatibility are proved in that scope. The unmeasured VF colimit identifications in additive commutative monoids and in additive commutative groups are proved at that real-base scope. The measured VF direct-sum, product semiring and ring comparisons are also proved relative to both accepted lift records in that scope. Complete Gamma-ground positive/ring and fixed-degree measured integral consequences now have explicit accepted [18] inputs, and bounded unmeasured consequences retain actual finite direct sums and transition maps. The Gamma-ground measured VF direct-sum, product-semiring and group grading are proved relative to the accepted global/degreewise inputs. The ordinary Gamma-ground universal-semiring identification and its actual additive/group filtration colimits are proved relative to the accepted global/bounded inputs. The pure Gamma-ground RV/RES gradings are now proved. Gamma/finite-Gamma graded comparisons and the documented VF/Gamma-generated context applications are proved. November 18: all Gamma-ground lift/kernel records are produced (unmeasured `Section5.completed18GroundLiftInput`, bounded `completedGammaGroundBoundedLiftInput` with headline `theorem_3_22_bounded`, measured global and per degree by local proofs); `theorem_3_22_measured_graded` gives the graded measured isomorphism onto K μRV[*]/(P). R054 notation correction is approved and applied; its original referee note is gray. |
 
 Additional Gamma-ground results now include the actual VF dimension and
 finite-RV-fibre invariance, fixed-bound scissors and transitions, and the
@@ -44,11 +66,11 @@ and fixed-degree scissors are proved. The finite sorted syntax bridge now includ
 with the proper-sort guards and every Gamma code retained. The current completion review below supersedes the historical open-item notes.
 
 All §3 manuscript targets are now covered in the documented paper
-contexts, relative to the explicitly accepted later [18] comparisons and
-approved R--Y classification. This is a semantic review of actual types,
-not an inference from export counts. The machine-readable current map is
-`verification/paper-targets.json`; it links 21 manuscript targets to 119
-audited declaration heads. The chronological entries below retain their
+contexts, relative to the approved R--Y classification (the later [18]
+comparisons, formerly accepted, are produced as of November 18). This is a
+semantic review of actual types, not an inference from export counts. The
+machine-readable current map is `verification/paper-targets.json`; it links
+21 manuscript targets to 132 audited declaration heads. The chronological entries below retain their
 original milestone scopes and are superseded by the completion review.
 No HK result is a given input. Independent disc names outside the default
 paper context and concrete §4 categories are outside this certificate.
@@ -812,3 +834,22 @@ The author explicitly skips the unary-ray refinement. CI now prepares both
 patches and audits both sections, with the same 180-minute build allowance
 as the upstream project. This record reports local verification; CI is
 reported separately after publication.
+
+
+## Current state — 2026-11-18
+
+The section 3 audit passes: 3,895 theorem types, 2,806 definitions, 172
+named instances and eight reused declarations (6,881 heads) across 1,527
+supporting modules plus Section. Section 2 passes with 970 theorem exports
+and 378 selected reuse declarations. Pins: integration-in-ACVF
+7675d31332f20421c803ea16af84964ed74cd51f, Special transformations
+25852c85a31c67069b148bd31348128318303510.
+
+The 2026-11-12 boundaries above are superseded. `Section5TwoOrderInputAll`
+is instantiated by `Section5.completed_section5_input`, and the closure and
+category transport is compiled in section 5, giving
+`Section5.completed18GroundLiftInput`. The bounded records are produced in
+`BoundedCompletedInputs.lean` and `BoundedOrdinaryInputs.lean`; the measured
+records were already produced on November 17. The updated paper-target map
+has 132 declaration links; the next verifier run records them. Only the
+approved R--Y classification remains an accepted input. No HK input is used.

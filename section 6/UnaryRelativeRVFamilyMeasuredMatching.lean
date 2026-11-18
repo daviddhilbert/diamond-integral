@@ -72,7 +72,8 @@ theorem unary_relative_measured_rv_family_prepared_matching_exists
     (H.regularized_source_leading h00 hc hκ hs hv) (H.regularized_target_leading h00 hc hκ hs hv)
     ω σ hω hσ hGeneric
   exact ⟨⟨W,_,_,H.regularized_source_leading h00 hc hκ hs hv,
-    H.regularized_target_leading h00 hc hκ hs hv,R⟩⟩
+    H.regularized_target_leading h00 hc hκ hs hv,R,
+    W.sourceForm_extension_constant h00 ω hω,W.targetForm_extension_constant h00 σ hσ⟩⟩
 
 theorem unary_relative_measured_rv_family_matching_exists
     (h00 : M ⊨ Axioms.ACVF00) (hc : CanonicalStructure.IsCanonical (M := M))

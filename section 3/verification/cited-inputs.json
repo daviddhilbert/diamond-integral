@@ -6,7 +6,7 @@
     "url": "https://arxiv.org/pdf/0809.0473",
     "version": "v2, 29 December 2010"
   },
-  "scope": "Small VF-generated real-base specializations and complete Gamma-ground interfaces for unmeasured, bounded and measured lifts. All cited inputs remain explicit and replaceable. Same-ground essential measured groupoids, pointwise cofull representatives, graded and filtered presentation comparisons and the documented VF/Gamma-generated context applications are proved locally. Independently named disc imaginaries and concrete section 4 categories lie outside this section 3 certificate.",
+  "scope": "Small VF-generated real-base specializations and complete Gamma-ground interfaces for unmeasured, bounded and measured lifts. The interfaces remain explicit and replaceable as parameters of the generic constructions. Same-ground essential measured groupoids, pointwise cofull representatives, graded and filtered presentation comparisons and the documented VF/Gamma-generated context applications are proved locally. Independently named disc imaginaries and concrete section 4 categories lie outside this section 3 certificate. The four measured interfaces are discharged by local proofs (see GAMMA-KERNEL-COMPLETION.md); as of November 18 the Gamma-ground unmeasured, Gamma-ground bounded and ordinary bounded interfaces are also produced (see their entries and GAP-REPAIRS.md). Only YinUnmeasuredLiftInput (ordinary global, unused) and the [19] YinGammaAffineInput (retained at its stated real VF-generated scope) have no producer.",
   "context": [
     "BaseContext.model00",
     "BaseContext.uncountable",
@@ -32,7 +32,9 @@
         "evaluation on every objectLiftVF",
         "surjectivity",
         "kernel equal to rvSpecialCongruence"
-      ]
+      ],
+      "status": "NOT_PRODUCED_UNUSED",
+      "note": "The ordinary global record is not produced and is not used downstream. Its Gamma-ground counterpart is produced by DiamondIntegral.Section5.completed18GroundLiftInput."
     },
     {
       "declaration": "DiamondIntegral.Section3.YinBoundedUnmeasuredLiftInput",
@@ -46,7 +48,11 @@
         "evaluation on actual objects raised to the degree bound",
         "surjectivity in every bound",
         "kernel is the restricted actual special congruence"
-      ]
+      ],
+      "status": "DISCHARGED_BY_LOCAL_PROOF",
+      "producer": "DiamondIntegral.Section3.MeasuredRealGround.completedOrdinaryBoundedLiftInput",
+      "producer_module": "BoundedOrdinaryInputs.lean",
+      "boundary": "A VF-generated base is (VF, Gamma)-generated with the Gamma names of its own values (measuredRealGroundContext); the ordinary unmeasured categories are identified with the Gamma-ground ones without forms and the Gamma-ground bounded record is transferred. Axioms: propext, Classical.choice, Quot.sound."
     },
     {
       "declaration": "DiamondIntegral.Section3.YinMeasuredLiftInput",
@@ -62,7 +68,11 @@
         "evaluation on every measuredObjectLift",
         "surjectivity",
         "kernel equal to measuredRVSpecialCongruence"
-      ]
+      ],
+      "status": "DISCHARGED_BY_LOCAL_PROOF",
+      "producer": "DiamondIntegral.Section3.completedMeasuredLiftInput",
+      "producer_module": "MeasuredCompletedOrdinaryInputs.lean",
+      "boundary": "Locally constructed at the original stated base under explicit model, canonical-structure, generation, saturation, smallness, nontrivial-value and compatible-valuation hypotheses. Actual Gamma densities, weighted degree zero and exact positive kernels are retained; no resolved base or Gamma-to-RV section."
     },
     {
       "declaration": "DiamondIntegral.Section3.YinDegreeMeasuredLiftInput",
@@ -75,7 +85,11 @@
         "evaluation on measuredObjectLift",
         "surjectivity in every degree",
         "kernel is the restricted actual homogeneous congruence"
-      ]
+      ],
+      "status": "DISCHARGED_BY_LOCAL_PROOF",
+      "producer": "DiamondIntegral.Section3.completedDegreeMeasuredLiftInput",
+      "producer_module": "MeasuredCompletedOrdinaryInputs.lean",
+      "boundary": "Locally constructed at the original stated base under explicit model, canonical-structure, generation, saturation, smallness, nontrivial-value and compatible-valuation hypotheses. Actual Gamma densities, weighted degree zero and exact positive kernels are retained; no resolved base or Gamma-to-RV section."
     },
     {
       "declaration": "DiamondIntegral.Section3.YinGammaAffineInput",
@@ -103,7 +117,10 @@
         "surjective: surjectivity of that semiring homomorphism",
         "kernel: the generated relation point[1] = positive-RV[1] + unit[0] is exactly its kernel congruence"
       ],
-      "boundary": "Explicit replaceable cited input, not a global principle or independently reproved kernel theorem. Graded RV and filtered VF presentation comparisons in this scope are proved locally."
+      "boundary": "Produced from the completed [18] Section 5 and Section 6 proofs (a relative form of [18] Corollary 5.8, completed_relative_corollary_5_8, gives Section5TwoOrderInputAll through DiamondIntegral.Section5.completed_section5_input). Actual RV and VF presentation equivalences identify the positive lift and its exact special kernel; the small generated definable closure is transported back to the original GammaGroundContext base. Graded RV and filtered VF presentation comparisons in this scope are proved locally.",
+      "status": "DISCHARGED_BY_LOCAL_PROOF",
+      "producer": "DiamondIntegral.Section5.completed18GroundLiftInput",
+      "producer_module": "section 5/Completed18GroundLiftInput.lean"
     },
     {
       "declaration": "DiamondIntegral.Section3.YinGammaGroundMeasuredLiftInput",
@@ -120,7 +137,10 @@
         "surjectivity",
         "kernel exactly the homogeneous point[1] = positive-RV[1] relation"
       ],
-      "boundary": "Explicit replaceable input, with the actual pointwise RV and essential pointwise-representative VF groupoids. The graded additive/universal-semiring comparison is proved locally."
+      "boundary": "Locally constructed at the original stated base under explicit model, canonical-structure, generation, saturation, smallness, nontrivial-value and compatible-valuation hypotheses. Actual Gamma densities, weighted degree zero and exact positive kernels are retained; no resolved base or Gamma-to-RV section.",
+      "status": "DISCHARGED_BY_LOCAL_PROOF",
+      "producer": "DiamondIntegral.Section3.completedGammaGroundMeasuredLiftInput",
+      "producer_module": "GammaCompletedMeasuredInputs.lean"
     },
     {
       "declaration": "DiamondIntegral.Section3.YinGammaGroundDegreeMeasuredLiftInput",
@@ -137,7 +157,10 @@
         "surjectivity in every degree",
         "kernel is the restriction of the concrete homogeneous global special relation"
       ],
-      "boundary": "Explicit replaceable input. Its fixed-degree source/target are actual additive scissor quotients. Identification of the source global presentation with its graded direct sum is proved locally."
+      "boundary": "Locally constructed at the original stated base under explicit model, canonical-structure, generation, saturation, smallness, nontrivial-value and compatible-valuation hypotheses. Actual Gamma densities, weighted degree zero and exact positive kernels are retained; no resolved base or Gamma-to-RV section.",
+      "status": "DISCHARGED_BY_LOCAL_PROOF",
+      "producer": "DiamondIntegral.Section3.completedGammaGroundDegreeMeasuredLiftInput",
+      "producer_module": "GammaMeasuredDegreeKernel.lean"
     },
     {
       "declaration": "DiamondIntegral.Section3.YinGammaGroundBoundedUnmeasuredLiftInput",
@@ -152,10 +175,14 @@
         "surjectivity in every bound",
         "kernel is the restriction of the concrete nonhomogeneous global special relation"
       ],
-      "boundary": "Explicit replaceable input. Transition compatibility is proved from the object formula using additive generator extensionality, without assuming an object representative for every RV class."
+      "boundary": "Produced over the definable closure, as in the global case: the manuscript K+VF[k] is identified with the native [18] stage (boundedVFNativeEquiv, BoundedNativeVFBridge.lean), the bounded RV source maps onto the native stage and the stage congruence of [18] is the restriction of the global one (BoundedNativeIntegral.lean). Transition compatibility is proved from the object formula using additive generator extensionality, without assuming an object representative for every RV class.",
+      "status": "DISCHARGED_BY_LOCAL_PROOF",
+      "producer": "DiamondIntegral.Section3.completedGammaGroundBoundedLiftInput",
+      "producer_module": "BoundedCompletedInputs.lean",
+      "headline": "DiamondIntegral.Section3.theorem_3_22_bounded (with _characterization and _transition)"
     }
   ],
-  "logical_status": "Explicit replaceable inputs, not global premises or compiled proofs of the external paper. Derived comparisons are relative to the corresponding input. Latest verification receipt determines which declarations have passed the local build and audit.",
+  "logical_status": "Interfaces remain explicit for abstract reuse. The four Gamma-valued measured records, the Gamma-ground unmeasured and bounded records and the ordinary bounded record have proved producers listed in their entries; they are no longer additional mathematical assumptions in those contexts. YinUnmeasuredLiftInput is unproduced and unused; YinGammaAffineInput keeps its documented [19] scope. Historical citations are preserved as source provenance.",
   "excluded": [
     "HK Proposition 10.10(2)",
     "Any silent acceptance of HK Corollary 10.3 or Proposition 10.10(1)",
@@ -212,10 +239,11 @@
     }
   ],
   "upstream_refresh": {
-    "revision": "7d4acc730496b3bd05a22c268ffd89540ca694f9",
+    "revision": "7675d31332f20421c803ea16af84964ed74cd51f",
     "review": "verification/integration-reuse.json#later_export_review",
     "native_export_module": "IntegrationLaterExports.lean",
-    "section6_inputs_replaced": false,
-    "reason": "Preserve the exact closure/generation and category-presentation boundaries; the imported native results remain conditional only on their explicit source hypotheses, including unfinished 5.8. Section 7 measured results are unavailable."
+    "section6_inputs_replaced": true,
+    "reason": "At the current pin the upstream contains the completed Section 5 (lemma_5_8_finite); section 5 derives completed_relative_corollary_5_8 from it, and DiamondIntegral.Section5.completed_section5_input instantiates Section5TwoOrderInputAll. The closure transport and native/consumer category comparisons are compiled in section 5 (Completed18* modules), which produce DiamondIntegral.Section5.completed18GroundLiftInput; the bounded record is produced in BoundedCompletedInputs.lean. The 5.8 input is no longer unfinished.",
+    "history": "The November 12 refresh (pin 7d4acc730496b3bd05a22c268ffd89540ca694f9) kept the legacy lift records because the imported native results then depended on the unfinished 5.8 input and the closure/category bridges were not compiled."
   }
 }

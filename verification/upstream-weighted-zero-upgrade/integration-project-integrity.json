@@ -1,0 +1,101 @@
+{
+  "checked_at_utc": "2026-11-16T14:53:08.113933+00:00",
+  "proof_commit": "862aa448b4314df673bccd928d1353af6650d7f1",
+  "proof_tree": "540d3904840bbb7dc2b852868400d01aec62872b",
+  "proof_ci": {
+    "run_id": 43851204054,
+    "conclusion": "success",
+    "url": "https://github.com/daviddhilbert/integration-in-ACVF/actions/runs/43851204054"
+  },
+  "published_blob_comparison": {
+    "remote_proof_commit": "862aa448b4314df673bccd928d1353af6650d7f1",
+    "remote_tree": "540d3904840bbb7dc2b852868400d01aec62872b",
+    "matched_files": 4209,
+    "missing_local_files": [],
+    "different_local_files": []
+  },
+  "root_build": {
+    "result": "PASS",
+    "jobs": 13548
+  },
+  "whole_project_verifier": {
+    "result": "PASS",
+    "components": [
+      "foundation",
+      "section2",
+      "section3",
+      "section4",
+      "section5",
+      "section6",
+      "section7"
+    ]
+  },
+  "sections": [
+    {
+      "section": 2,
+      "lean_sources": 39,
+      "audited_exports": 72,
+      "excluded_drafts": []
+    },
+    {
+      "section": 3,
+      "lean_sources": 364,
+      "audited_exports": 1244,
+      "excluded_drafts": []
+    },
+    {
+      "section": 4,
+      "lean_sources": 96,
+      "audited_exports": 445,
+      "excluded_drafts": []
+    },
+    {
+      "section": 5,
+      "lean_sources": 395,
+      "audited_exports": 1852,
+      "excluded_drafts": []
+    },
+    {
+      "section": 6,
+      "lean_sources": 737,
+      "audited_exports": 2273,
+      "excluded_drafts": []
+    },
+    {
+      "section": 7,
+      "lean_sources": 2089,
+      "audited_exports": 6711,
+      "excluded_drafts": []
+    }
+  ],
+  "total_audited_section_exports": 12597,
+  "declaration_bearing_section_sources": 3720,
+  "all_section_proof_sources_match_published_commit": true,
+  "admission_and_custom_axiom_scan": {
+    "result": "PASS",
+    "files": 3720,
+    "excluded_comments_and_strings": true,
+    "matches": []
+  },
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "log_sha256": {
+    "root-build.log": "c53146d647341671793f180c676a60a43f486a534467a1b50703fdb994e98b01",
+    "pins.log": "25e5b7b8c9fd6932abe2b3a3fec798dcc70eda01de94df12d5b09cf7ef113aee",
+    "project-verification.log": "9adbfff9697fd32af2ccc5cafac291c531c4bc71ea5c213ac92d3770f7684753"
+  },
+  "scope": "Accepted Sections 2\u20137 scopes; exact hypotheses and corrections are recorded in blueprint and section status files. This integrity check is not a new unrestricted-paper completion claim.",
+  "blueprint_declaration_audit": {
+    "result": "PASS",
+    "declarations": 87,
+    "full_type_and_axiom_log_sha256": "487acadddb37ed3d2e5cfe1e786f11afa47144ca0338226837e254ac92635a27",
+    "allowed_axioms": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  }
+}

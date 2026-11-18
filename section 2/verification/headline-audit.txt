@@ -1,7 +1,5 @@
 warning: integration_in_acvf: repository has local changes:
-  /Users/yimu/Documents/Codex-Migration-20261112/projects/diamond integral/Section6/worktree/.lake/packages/integration_in_acvf
-warning: special_transformations: repository has local changes:
-  /Users/yimu/Documents/Codex-Migration-20261112/projects/diamond integral/Section6/worktree/.lake/packages/special_transformations
+  /Users/yimu/Documents/Codex-Migration-20261112/projects/diamond integral/Section7/worktree/.lake/packages/integration_in_acvf
 @[reducible] def DiamondIntegral.Section2.VF : (M : Type) →
   [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] → Type :=
 fun M [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] =>
@@ -7261,6 +7259,47 @@ fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Mileston
                   SpecialTransformations.Section3.AlgebraicAt (Insert.insert.{0, 0} (↑a) S)
                     SpecialTransformations.Milestone0.SortTag.rv ↑b
 'DiamondIntegral.Section2.lemma_2_14_rv' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@DiamondIntegral.Section2.ExchangeGeneral.vfParameterField_union_closure : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] (S T : Set.{0} M),
+  Eq.{1}
+    (SpecialTransformations.Section3.vfParameterField
+      (Union.union.{0} T (DiamondIntegral.Section2.ExchangeGeneral.closureSet S)))
+    (SpecialTransformations.Section3.vfParameterField (Union.union.{0} T S))
+'DiamondIntegral.Section2.ExchangeGeneral.vfParameterField_union_closure' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section2.ExchangeGeneral.vfParameterField_closure : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] (S : Set.{0} M),
+  Eq.{1} (SpecialTransformations.Section3.vfParameterField (DiamondIntegral.Section2.ExchangeGeneral.closureSet S))
+    (SpecialTransformations.Section3.vfParameterField S)
+'DiamondIntegral.Section2.ExchangeGeneral.vfParameterField_closure' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section2.ExchangeGeneral.algebraicAt_closure_iff : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] (S T : Set.{0} M)
+  (x : DiamondIntegral.Section2.VF M),
+  SpecialTransformations.Section3.AlgebraicAt
+      (Union.union.{0} T (DiamondIntegral.Section2.ExchangeGeneral.closureSet S))
+      SpecialTransformations.Milestone0.SortTag.vf ↑x ↔
+    SpecialTransformations.Section3.AlgebraicAt (Union.union.{0} T S) SpecialTransformations.Milestone0.SortTag.vf ↑x
+'DiamondIntegral.Section2.ExchangeGeneral.algebraicAt_closure_iff' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section2.ExchangeGeneral.lemma_2_14_vf_general : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] (S : Set.{0} M)
+  (a b : DiamondIntegral.Section2.VF M),
+  SpecialTransformations.Section3.AlgebraicAt (Insert.insert.{0, 0} (↑b) S) SpecialTransformations.Milestone0.SortTag.vf
+      ↑a →
+    ¬SpecialTransformations.Section3.AlgebraicAt S SpecialTransformations.Milestone0.SortTag.vf ↑a →
+      SpecialTransformations.Section3.AlgebraicAt (Insert.insert.{0, 0} (↑a) S)
+        SpecialTransformations.Milestone0.SortTag.vf ↑b
+'DiamondIntegral.Section2.ExchangeGeneral.lemma_2_14_vf_general' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
 @DiamondIntegral.Section2.vfPairValues_injective : ∀ {M : Type}
   [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
   [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {n : ℕ},
@@ -8653,6 +8692,35 @@ fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Mileston
                                           (Set.ofPred.{0} fun a => Membership.mem.{0, 0} R (Prod.mk.{0, 0} a b)) ↔
                                         Membership.mem.{0, 0} E b)
 'DiamondIntegral.Section2.lemma_2_15_vf' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@DiamondIntegral.Section2.lemma_2_15_vf_general : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF],
+  CanonicalStructure.IsCanonical →
+    ∀ {κ : Cardinal.{0}},
+      LE.le.{1} Cardinal.aleph0.{0} κ →
+        SpecialTransformations.Section3.Saturated M κ →
+          ∀ (S : Set.{0} M),
+            LT.lt.{1} (Cardinal.mk.{0} ↑S) κ →
+              ∀ (B : Set.{0} M),
+                SpecialTransformations.Section3.DefinableAt S SpecialTransformations.Milestone0.SortTag.vf B →
+                  ∀ (R : Set.{0} (Prod.{0, 0} M M)),
+                    Set.Definable₂.{0, 0, 0} S SpecialTransformations.Milestone0.LRV R →
+                      (∀ (a b : M),
+                          Membership.mem.{0, 0} R (Prod.mk.{0, 0} a b) →
+                            SpecialTransformations.Milestone0.iVF.{0} a ∧ SpecialTransformations.Milestone0.iVF.{0} b) →
+                        (∀ (a : M),
+                            Set.Finite.{0} (Set.ofPred.{0} fun b => Membership.mem.{0, 0} R (Prod.mk.{0, 0} a b))) →
+                          ∃ E,
+                            Set.Finite.{0} E ∧
+                              SpecialTransformations.Section3.DefinableAt S SpecialTransformations.Milestone0.SortTag.vf
+                                  E ∧
+                                E ⊆ B ∧
+                                  ∀ (b : M),
+                                    Membership.mem.{0, 0} B b →
+                                      (Set.Infinite.{0}
+                                          (Set.ofPred.{0} fun a => Membership.mem.{0, 0} R (Prod.mk.{0, 0} a b)) ↔
+                                        Membership.mem.{0, 0} E b)
+'DiamondIntegral.Section2.lemma_2_15_vf_general' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
 @DiamondIntegral.Section2.lemma_2_15_rv : ∀ {M : Type}
   [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
   [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF],
@@ -9013,6 +9081,131 @@ fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Mileston
       SpecialTransformations.Section3.AlgebraicAt (Union.union.{0} S (Set.range.{0, 1} fun i => ↑(a i)))
         SpecialTransformations.Milestone0.SortTag.vf ↑(b j)
 'DiamondIntegral.Section2.lemma_2_13' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.normalize_eq : ∀ {M : Type}
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M],
+  CanonicalStructure.IsCanonical → Eq.{1} CanonicalStructure.normalize sM
+'DiamondIntegral.Section2.GammaStable.normalize_eq' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.strictMono_mapsTo_fixed.{u_1} : ∀ {α : Type u_1} [inst : LinearOrder.{u_1} α]
+  {f : α → α},
+  StrictMono.{u_1, u_1} f →
+    ∀ {V : Set.{u_1} α},
+      Set.Finite.{u_1} V → Set.MapsTo.{u_1, u_1} f V V → ∀ (v : α), Membership.mem.{u_1, u_1} V v → Eq.{u_1 + 1} (f v) v
+'DiamondIntegral.Section2.GammaStable.strictMono_mapsTo_fixed' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.aut_fixes_acl_values : ∀ {M : Type}
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (σ : FirstOrder.Language.Equiv.{0, 0, 0, 0} SpecialTransformations.Milestone0.LRV M M) (S : Set.{0} M),
+  (∀ (x : M), Membership.mem.{0, 0} S x → Eq.{1} (σ x) x) →
+    ∀ (c : DiamondIntegral.Section2.GammaStable.RVS M),
+      Membership.mem.{0, 0} (SpecialTransformations.Section3.algebraicClosureSet S) ↑c →
+        Eq.{1} (SpecialTransformations.Section3.Values.vrv (DiamondIntegral.Section2.GammaStable.autRV σ c))
+          (SpecialTransformations.Section3.Values.vrv c)
+'DiamondIntegral.Section2.GammaStable.aut_fixes_acl_values' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.tupleAssignment_formula_definable : ∀ {M : Type}
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] (S : Set.{0} M)
+  {n m : ℕ}
+  (φ : FirstOrder.Language.BoundedFormula.{0, 0, 0} SpecialTransformations.Milestone0.LRV (Sum.{0, 0} (↑S) (Fin n)) m)
+  (p : Fin m → Sum.{0, 0} (↑S) (Fin n)),
+  Set.Definable.{0, 0, 0, 0} S SpecialTransformations.Milestone0.LRV
+    (Set.ofPred.{0} fun x =>
+      FirstOrder.Language.BoundedFormula.Realize.{0, 0, 0, 0} φ (Sum.elim.{0, 0, 1} Subtype.val.{1} x)
+        (Function.comp.{1, 1, 1} (Sum.elim.{0, 0, 1} Subtype.val.{1} x) p))
+'DiamondIntegral.Section2.GammaStable.tupleAssignment_formula_definable' depends on axioms: [propext, Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.exists_automorphism_of_same_tuple_type : ∀ {M : Type}
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {κ : Cardinal.{0}},
+  LE.le.{1} Cardinal.aleph0.{0} κ →
+    SpecialTransformations.Section3.StronglyHomogeneous M κ →
+      ∀ (S : Set.{0} M),
+        LT.lt.{1} (Cardinal.mk.{0} ↑S) κ →
+          ∀ {n : ℕ} (a z : Fin n → M),
+            (∀ (D : Set.{0} (Fin n → M)),
+                Set.Definable.{0, 0, 0, 0} S SpecialTransformations.Milestone0.LRV D →
+                  (Membership.mem.{0, 0} D a ↔ Membership.mem.{0, 0} D z)) →
+              ∃ ρ, (∀ (x : M), Membership.mem.{0, 0} S x → Eq.{1} (ρ x) x) ∧ ∀ (i : Fin n), Eq.{1} (ρ (a i)) (z i)
+'DiamondIntegral.Section2.GammaStable.exists_automorphism_of_same_tuple_type' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.finite_invariant_definable : ∀ {M : Type}
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {κ : Cardinal.{0}},
+  LE.le.{1} Cardinal.aleph0.{0} κ →
+    SpecialTransformations.Section3.StronglyHomogeneous M κ →
+      ∀ (S : Set.{0} M),
+        LT.lt.{1} (Cardinal.mk.{0} ↑S) κ →
+          ∀ {n : ℕ} (A Z : Set.{0} (Fin n → M)),
+            Set.Definable.{0, 0, 0, 0} S SpecialTransformations.Milestone0.LRV Z →
+              Set.Finite.{0} Z →
+                A ⊆ Z →
+                  (∀ (ρ : FirstOrder.Language.Equiv.{0, 0, 0, 0} SpecialTransformations.Milestone0.LRV M M),
+                      (∀ (x : M), Membership.mem.{0, 0} S x → Eq.{1} (ρ x) x) →
+                        ∀ (a : Fin n → M), Membership.mem.{0, 0} A a → Membership.mem.{0, 0} A fun i => ρ (a i)) →
+                    Set.Definable.{0, 0, 0, 0} S SpecialTransformations.Milestone0.LRV A
+'DiamondIntegral.Section2.GammaStable.finite_invariant_definable' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.aut_mem_definable_iff_any : ∀ {M : Type}
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (σ : FirstOrder.Language.Equiv.{0, 0, 0, 0} SpecialTransformations.Milestone0.LRV M M) {P : Set.{0} M},
+  (∀ (x : M), Membership.mem.{0, 0} P x → Eq.{1} (σ x) x) →
+    ∀ {α : Type} {D : Set.{0} (α → M)},
+      Set.Definable.{0, 0, 0, 0} P SpecialTransformations.Milestone0.LRV D →
+        ∀ (a : α → M), (Membership.mem.{0, 0} D fun i => σ (a i)) ↔ Membership.mem.{0, 0} D a
+'DiamondIntegral.Section2.GammaStable.aut_mem_definable_iff_any' depends on axioms: [propext, Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.finite_named_real_definable : ∀ {M : Type}
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF],
+  CanonicalStructure.IsCanonical →
+    ∀ {κ : Cardinal.{0}},
+      LT.lt.{1} Cardinal.aleph0.{0} κ →
+        SpecialTransformations.Section3.StronglyHomogeneous M κ →
+          ∀ (S : Set.{0} M),
+            LT.lt.{1} (Cardinal.mk.{0} ↑S) κ →
+              ∀ (G : Set.{0} SpecialTransformations.Section3.Values.Gamma) {n : ℕ} (A : Set.{0} (Fin n → M)),
+                Set.Finite.{0} A →
+                  SpecialTransformations.Section3.GammaParameters.DefinableOverBase { real := S, gamma := G }
+                      (fun x => SpecialTransformations.Milestone0.SortTag.vf) A →
+                    SpecialTransformations.Section3.DefinableOver S
+                      (fun x => SpecialTransformations.Milestone0.SortTag.vf) A
+'DiamondIntegral.Section2.GammaStable.finite_named_real_definable' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.lemma_2_12_gammaNames : ∀ {M : Type}
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF],
+  CanonicalStructure.IsCanonical →
+    FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00 →
+      ∀ {κ : Cardinal.{0}},
+        LT.lt.{1} Cardinal.aleph0.{0} κ →
+          SpecialTransformations.Section3.StronglyHomogeneous M κ →
+            ∀ (S : Set.{0} M),
+              LT.lt.{1} (Cardinal.mk.{0} ↑S) κ →
+                ∀ (G : Set.{0} SpecialTransformations.Section3.Values.Gamma) {n : ℕ}
+                  (A : Set.{0} (Fin n → DiamondIntegral.Section2.VF M)),
+                  Set.Finite.{0} A →
+                    SpecialTransformations.Section3.GammaParameters.DefinableOverBase { real := S, gamma := G }
+                        (fun x => SpecialTransformations.Milestone0.SortTag.vf)
+                        (Set.image.{0, 0} SpecialTransformations.Section3.FiniteCoding.values A) →
+                      ∃ m U e,
+                        (∀ (t : Fin m → M),
+                            Membership.mem.{0, 0} U t →
+                              ∀ (j : Fin m),
+                                SpecialTransformations.Milestone0.iRV.{0} (t j) ∧
+                                  Ne.{1} (t j) SpecialTransformations.Milestone0.iRVZero.{0}) ∧
+                          SpecialTransformations.Section3.GammaParameters.DefinableOverBase { real := S, gamma := G }
+                              (fun x => SpecialTransformations.Milestone0.SortTag.rv) U ∧
+                            SpecialTransformations.Section3.GammaParameters.DefinableOverBase { real := S, gamma := G }
+                              SpecialTransformations.Section3.FiniteCoding.graphSort
+                              (SpecialTransformations.Section3.FiniteCoding.graph A fun a => ↑(e a))
+'DiamondIntegral.Section2.GammaStable.lemma_2_12_gammaNames' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
 @DiamondIntegral.Section2.exists_nonempty_finite_definable_vf_subset : ∀ {M : Type}
   [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
   [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {Γ : Type}
@@ -9154,6 +9347,613 @@ fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Mileston
       Membership.mem.{0, 0}
         (SpecialTransformations.Section9.vfBall a (SpecialTransformations.Section3.GammaParameters.codeValue t)) x)
 'DiamondIntegral.Section2.rawGammaBallRelation_iff' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.codeShift_rep : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {K : FirstOrder.Language.Substructure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M}
+  {T : DiamondIntegral.Section2.GammaStable.RVS M} (T' : DiamondIntegral.Section2.GammaStable.RVS M),
+  Ne.{1} T 0 →
+    DiamondIntegral.Section2.GammaStable.CodeIndependent K T →
+      ∀ {c : DiamondIntegral.Section2.GammaStable.RVS M} (m : ℤ),
+        Membership.mem.{0, 0} K ↑c →
+          Eq.{1}
+            (DiamondIntegral.Section2.GammaStable.codeShift K T T' ↑(HMul.hMul.{0, 0, 0} c (HPow.hPow.{0, 0, 0} T m)))
+            ↑(HMul.hMul.{0, 0, 0} c (HPow.hPow.{0, 0, 0} T' m))
+'DiamondIntegral.Section2.GammaStable.codeShift_rep' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.codeShift_vf : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (K : FirstOrder.Language.Substructure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M)
+  (T T' : DiamondIntegral.Section2.GammaStable.RVS M) {x : M},
+  SpecialTransformations.Milestone0.iVF.{0} x → Eq.{1} (DiamondIntegral.Section2.GammaStable.codeShift K T T' x) x
+'DiamondIntegral.Section2.GammaStable.codeShift_vf' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.codeShift_of_mem : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {K : FirstOrder.Language.Substructure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M}
+  {T : DiamondIntegral.Section2.GammaStable.RVS M} (T' : DiamondIntegral.Section2.GammaStable.RVS M),
+  Ne.{1} T 0 →
+    DiamondIntegral.Section2.GammaStable.CodeIndependent K T →
+      ∀ {y : M}, Membership.mem.{0, 0} K y → Eq.{1} (DiamondIntegral.Section2.GammaStable.codeShift K T T' y) y
+'DiamondIntegral.Section2.GammaStable.codeShift_of_mem' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.codeShift_code : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {K : FirstOrder.Language.Substructure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M}
+  {T : DiamondIntegral.Section2.GammaStable.RVS M} (T' : DiamondIntegral.Section2.GammaStable.RVS M),
+  Ne.{1} T 0 →
+    DiamondIntegral.Section2.GammaStable.CodeIndependent K T →
+      Eq.{1} (DiamondIntegral.Section2.GammaStable.codeShift K T T' ↑T) ↑T'
+'DiamondIntegral.Section2.GammaStable.codeShift_code' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.codeShift_mem : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {K : FirstOrder.Language.Substructure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M}
+  {T : DiamondIntegral.Section2.GammaStable.RVS M} (T' : DiamondIntegral.Section2.GammaStable.RVS M),
+  Ne.{1} T 0 →
+    DiamondIntegral.Section2.GammaStable.CodeIndependent K T →
+      ∀ {x : M},
+        Membership.mem.{0, 0} (DiamondIntegral.Section2.GammaStable.codeCarrier K T) x →
+          Membership.mem.{0, 0} (DiamondIntegral.Section2.GammaStable.codeCarrier K T')
+            (DiamondIntegral.Section2.GammaStable.codeShift K T T' x)
+'DiamondIntegral.Section2.GammaStable.codeShift_mem' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.codeShift_codeShift : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {K : FirstOrder.Language.Substructure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M}
+  {T T' : DiamondIntegral.Section2.GammaStable.RVS M},
+  Ne.{1} T 0 →
+    Ne.{1} T' 0 →
+      DiamondIntegral.Section2.GammaStable.CodeIndependent K T →
+        DiamondIntegral.Section2.GammaStable.CodeIndependent K T' →
+          ∀ {x : M},
+            Membership.mem.{0, 0} (DiamondIntegral.Section2.GammaStable.codeCarrier K T) x →
+              Eq.{1}
+                (DiamondIntegral.Section2.GammaStable.codeShift K T' T
+                  (DiamondIntegral.Section2.GammaStable.codeShift K T T' x))
+                x
+'DiamondIntegral.Section2.GammaStable.codeShift_codeShift' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.codeShift_rv_iff : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {K : FirstOrder.Language.Substructure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M}
+  {T : DiamondIntegral.Section2.GammaStable.RVS M} (T' : DiamondIntegral.Section2.GammaStable.RVS M),
+  Ne.{1} T 0 →
+    DiamondIntegral.Section2.GammaStable.CodeIndependent K T →
+      ∀ {x : M},
+        Membership.mem.{0, 0} (DiamondIntegral.Section2.GammaStable.codeCarrier K T) x →
+          (SpecialTransformations.Milestone0.iRV.{0} (DiamondIntegral.Section2.GammaStable.codeShift K T T' x) ↔
+            SpecialTransformations.Milestone0.iRV.{0} x)
+'DiamondIntegral.Section2.GammaStable.codeShift_rv_iff' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.codeShift_vf_iff : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {K : FirstOrder.Language.Substructure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M}
+  {T : DiamondIntegral.Section2.GammaStable.RVS M} (T' : DiamondIntegral.Section2.GammaStable.RVS M),
+  Ne.{1} T 0 →
+    DiamondIntegral.Section2.GammaStable.CodeIndependent K T →
+      ∀ {x : M},
+        Membership.mem.{0, 0} (DiamondIntegral.Section2.GammaStable.codeCarrier K T) x →
+          (SpecialTransformations.Milestone0.iVF.{0} (DiamondIntegral.Section2.GammaStable.codeShift K T T' x) ↔
+            SpecialTransformations.Milestone0.iVF.{0} x)
+'DiamondIntegral.Section2.GammaStable.codeShift_vf_iff' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.sortEval_codeShift : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {K : FirstOrder.Language.Substructure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M}
+  {T : DiamondIntegral.Section2.GammaStable.RVS M} (T' : DiamondIntegral.Section2.GammaStable.RVS M),
+  Ne.{1} T 0 →
+    DiamondIntegral.Section2.GammaStable.CodeIndependent K T →
+      ∀ {x : M},
+        Membership.mem.{0, 0} (DiamondIntegral.Section2.GammaStable.codeCarrier K T) x →
+          ∀ (s : SpecialTransformations.Milestone0.SortTag),
+            SpecialTransformations.Milestone0.sortEval.{0} s (DiamondIntegral.Section2.GammaStable.codeShift K T T' x) ↔
+              SpecialTransformations.Milestone0.sortEval.{0} s x
+'DiamondIntegral.Section2.GammaStable.sortEval_codeShift' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.rep_le_iff : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {K : FirstOrder.Language.Substructure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M}
+  {T T' : DiamondIntegral.Section2.GammaStable.RVS M},
+  Ne.{1} T 0 →
+    Ne.{1} T' 0 →
+      DiamondIntegral.Section2.GammaStable.CodeTypeEq K T T' →
+        ∀ {c c' : DiamondIntegral.Section2.GammaStable.RVS M} (m m' : ℤ),
+          Membership.mem.{0, 0} K ↑c →
+            Membership.mem.{0, 0} K ↑c' →
+              (LE.le.{0} (SpecialTransformations.Section3.Values.vrv (HMul.hMul.{0, 0, 0} c (HPow.hPow.{0, 0, 0} T m)))
+                  (SpecialTransformations.Section3.Values.vrv (HMul.hMul.{0, 0, 0} c' (HPow.hPow.{0, 0, 0} T m'))) ↔
+                LE.le.{0}
+                  (SpecialTransformations.Section3.Values.vrv (HMul.hMul.{0, 0, 0} c (HPow.hPow.{0, 0, 0} T' m)))
+                  (SpecialTransformations.Section3.Values.vrv (HMul.hMul.{0, 0, 0} c' (HPow.hPow.{0, 0, 0} T' m'))))
+'DiamondIntegral.Section2.GammaStable.rep_le_iff' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.sortEval_eq_iVF : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] (x : M),
+  Eq.{1} (SpecialTransformations.Milestone0.sortEval.{0} SpecialTransformations.Milestone0.SortTag.vf x)
+    (SpecialTransformations.Milestone0.iVF.{0} x)
+'DiamondIntegral.Section2.GammaStable.sortEval_eq_iVF' depends on axioms: [propext, Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.sortEval_eq_iRV : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] (x : M),
+  Eq.{1} (SpecialTransformations.Milestone0.sortEval.{0} SpecialTransformations.Milestone0.SortTag.rv x)
+    (SpecialTransformations.Milestone0.iRV.{0} x)
+'DiamondIntegral.Section2.GammaStable.sortEval_eq_iRV' depends on axioms: [propext, Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.codeShift_funMap : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF],
+  CanonicalStructure.IsCanonical →
+    ∀ {K : FirstOrder.Language.Substructure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M}
+      {T T' : DiamondIntegral.Section2.GammaStable.RVS M},
+      Ne.{1} T 0 →
+        Ne.{1} T' 0 →
+          DiamondIntegral.Section2.GammaStable.CodeIndependent K T →
+            DiamondIntegral.Section2.GammaStable.CodeIndependent K T' →
+              ∀ {n : ℕ} (f : FirstOrder.Language.Functions.{0, 0} SpecialTransformations.Milestone0.LRV n)
+                (ys : Fin n → M),
+                (∀ (i : Fin n), Membership.mem.{0, 0} (DiamondIntegral.Section2.GammaStable.codeCarrier K T) (ys i)) →
+                  Eq.{1}
+                    (DiamondIntegral.Section2.GammaStable.codeShift K T T'
+                      (FirstOrder.Language.Structure.funMap.{0, 0, 0} f ys))
+                    (FirstOrder.Language.Structure.funMap.{0, 0, 0} f fun i =>
+                      DiamondIntegral.Section2.GammaStable.codeShift K T T' (ys i))
+'DiamondIntegral.Section2.GammaStable.codeShift_funMap' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.relMap_one : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (r : SpecialTransformations.Milestone0.Rel 1) (xs : Fin 1 → M),
+  FirstOrder.Language.Structure.RelMap.{0, 0, 0} r xs ↔
+    FirstOrder.Language.Structure.RelMap.{0, 0, 0} r (Matrix.vecCons.{0} (xs 0) Matrix.vecEmpty.{0})
+'DiamondIntegral.Section2.GammaStable.relMap_one' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.relMap_two : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (r : SpecialTransformations.Milestone0.Rel 2) (xs : Fin 2 → M),
+  FirstOrder.Language.Structure.RelMap.{0, 0, 0} r xs ↔
+    FirstOrder.Language.Structure.RelMap.{0, 0, 0} r
+      (Matrix.vecCons.{0} (xs 0) (Matrix.vecCons.{0} (xs 1) Matrix.vecEmpty.{0}))
+'DiamondIntegral.Section2.GammaStable.relMap_two' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.codeShift_relMap : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF],
+  CanonicalStructure.IsCanonical →
+    ∀ {K : FirstOrder.Language.Substructure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M}
+      {T T' : DiamondIntegral.Section2.GammaStable.RVS M},
+      Ne.{1} T 0 →
+        Ne.{1} T' 0 →
+          DiamondIntegral.Section2.GammaStable.CodeIndependent K T →
+            DiamondIntegral.Section2.GammaStable.CodeTypeEq K T T' →
+              ∀ {n : ℕ} (r : FirstOrder.Language.Relations.{0, 0} SpecialTransformations.Milestone0.LRV n)
+                (ys : Fin n → M),
+                (∀ (i : Fin n), Membership.mem.{0, 0} (DiamondIntegral.Section2.GammaStable.codeCarrier K T) (ys i)) →
+                  ((FirstOrder.Language.Structure.RelMap.{0, 0, 0} r fun i =>
+                      DiamondIntegral.Section2.GammaStable.codeShift K T T' (ys i)) ↔
+                    FirstOrder.Language.Structure.RelMap.{0, 0, 0} r ys)
+'DiamondIntegral.Section2.GammaStable.codeShift_relMap' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.code_sameUnaryType : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF],
+  CanonicalStructure.IsCanonical →
+    ∀ (K : FirstOrder.Language.Substructure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M)
+      (T T' : DiamondIntegral.Section2.GammaStable.RVS M),
+      Ne.{1} T 0 →
+        Ne.{1} T' 0 →
+          DiamondIntegral.Section2.GammaStable.CodeIndependent K T →
+            DiamondIntegral.Section2.GammaStable.CodeTypeEq K T T' →
+              SpecialTransformations.Section4.SameUnaryType ↑K ↑T ↑T'
+'DiamondIntegral.Section2.GammaStable.code_sameUnaryType' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.gamma_zpow_injective_rv : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {T T' : DiamondIntegral.Section2.GammaStable.RVS M},
+  Ne.{1} T 0 →
+    Ne.{1} T' 0 →
+      ∀ {m : ℤ},
+        Ne.{1} m 0 →
+          Eq.{1} (SpecialTransformations.Section3.Values.vrv (HPow.hPow.{0, 0, 0} T m))
+              (SpecialTransformations.Section3.Values.vrv (HPow.hPow.{0, 0, 0} T' m)) →
+            Eq.{1} (SpecialTransformations.Section3.Values.vrv T) (SpecialTransformations.Section3.Values.vrv T')
+'DiamondIntegral.Section2.GammaStable.gamma_zpow_injective_rv' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.exists_automorphism_code : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF],
+  CanonicalStructure.IsCanonical →
+    ∀ {κ : Cardinal.{0}},
+      LE.le.{1} Cardinal.aleph0.{0} κ →
+        SpecialTransformations.Section3.StronglyHomogeneous M κ →
+          ∀ (K : FirstOrder.Language.Substructure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M),
+            LT.lt.{1} (Cardinal.mk.{0} ↑↑K) κ →
+              ∀ (T T' : DiamondIntegral.Section2.GammaStable.RVS M),
+                Ne.{1} T 0 →
+                  Ne.{1} T' 0 →
+                    DiamondIntegral.Section2.GammaStable.CodeTypeEq K T T' →
+                      ∃ σ,
+                        (∀ (x : M), Membership.mem.{0, 0} K x → Eq.{1} (σ x) x) ∧
+                          Eq.{1}
+                            (SpecialTransformations.Section3.Values.vrv
+                              (DiamondIntegral.Section2.GammaStable.autRV σ T))
+                            (SpecialTransformations.Section3.Values.vrv T')
+'DiamondIntegral.Section2.GammaStable.exists_automorphism_code' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.vrv_zpow : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (t : DiamondIntegral.Section2.GammaStable.RVS M) (m : ℤ),
+  Eq.{1} (SpecialTransformations.Section3.Values.vrv (HPow.hPow.{0, 0, 0} t m))
+    (HPow.hPow.{0, 0, 0} (SpecialTransformations.Section3.Values.vrv t) m)
+'DiamondIntegral.Section2.GammaStable.vrv_zpow' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.vrv_eq_zero_iff : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (t : DiamondIntegral.Section2.GammaStable.RVS M), Eq.{1} (SpecialTransformations.Section3.Values.vrv t) 0 ↔ Eq.{1} t 0
+'DiamondIntegral.Section2.GammaStable.vrv_eq_zero_iff' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.vrv_ne_zero : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {t : DiamondIntegral.Section2.GammaStable.RVS M}, Ne.{1} t 0 → Ne.{1} (SpecialTransformations.Section3.Values.vrv t) 0
+'DiamondIntegral.Section2.GammaStable.vrv_ne_zero' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.gammaTop_mul_le_mul_iff : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {u a b : SpecialTransformations.Section3.Values.GammaTop},
+  Ne.{1} u 0 → (LE.le.{0} (HMul.hMul.{0, 0, 0} u a) (HMul.hMul.{0, 0, 0} u b) ↔ LE.le.{0} a b)
+'DiamondIntegral.Section2.GammaStable.gammaTop_mul_le_mul_iff' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.gammaTop_le_zero : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (a : SpecialTransformations.Section3.Values.GammaTop), LE.le.{0} a 0
+'DiamondIntegral.Section2.GammaStable.gammaTop_le_zero' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.gammaTop_zero_le_iff : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (a : SpecialTransformations.Section3.Values.GammaTop), LE.le.{0} 0 a ↔ Eq.{1} a 0
+'DiamondIntegral.Section2.GammaStable.gammaTop_zero_le_iff' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.rvZero_mem : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (K : FirstOrder.Language.Substructure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M),
+  Membership.mem.{0, 0} K SpecialTransformations.Milestone0.iRVZero.{0}
+'DiamondIntegral.Section2.GammaStable.rvZero_mem' depends on axioms: [propext, Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.rvOne_mem : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (K : FirstOrder.Language.Substructure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M),
+  Membership.mem.{0, 0} K SpecialTransformations.Milestone0.iRVOne.{0}
+'DiamondIntegral.Section2.GammaStable.rvOne_mem' depends on axioms: [propext, Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.vfZero_mem : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (K : FirstOrder.Language.Substructure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M),
+  Membership.mem.{0, 0} K SpecialTransformations.Milestone0.Transfer.iVFZero
+'DiamondIntegral.Section2.GammaStable.vfZero_mem' depends on axioms: [propext, Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.fun1_mem : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (K : FirstOrder.Language.Substructure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M)
+  (f : SpecialTransformations.Milestone0.Fn 1) {x : M},
+  Membership.mem.{0, 0} K x →
+    Membership.mem.{0, 0} K
+      (FirstOrder.Language.Structure.funMap.{0, 0, 0} f (Matrix.vecCons.{0} x Matrix.vecEmpty.{0}))
+'DiamondIntegral.Section2.GammaStable.fun1_mem' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.fun2_mem : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (K : FirstOrder.Language.Substructure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M)
+  (f : SpecialTransformations.Milestone0.Fn 2) {x y : M},
+  Membership.mem.{0, 0} K x →
+    Membership.mem.{0, 0} K y →
+      Membership.mem.{0, 0} K
+        (FirstOrder.Language.Structure.funMap.{0, 0, 0} f
+          (Matrix.vecCons.{0} x (Matrix.vecCons.{0} y Matrix.vecEmpty.{0})))
+'DiamondIntegral.Section2.GammaStable.fun2_mem' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.rv_zero_mem_K : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (K : FirstOrder.Language.Substructure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M), Membership.mem.{0, 0} K ↑0
+'DiamondIntegral.Section2.GammaStable.rv_zero_mem_K' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.rv_one_mem_K : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (K : FirstOrder.Language.Substructure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M), Membership.mem.{0, 0} K ↑1
+'DiamondIntegral.Section2.GammaStable.rv_one_mem_K' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.rv_mul_mem_K : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (K : FirstOrder.Language.Substructure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M)
+  {c c' : DiamondIntegral.Section2.GammaStable.RVS M},
+  Membership.mem.{0, 0} K ↑c → Membership.mem.{0, 0} K ↑c' → Membership.mem.{0, 0} K ↑(HMul.hMul.{0, 0, 0} c c')
+'DiamondIntegral.Section2.GammaStable.rv_mul_mem_K' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.rv_inv_mem_K : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (K : FirstOrder.Language.Substructure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M)
+  {c : DiamondIntegral.Section2.GammaStable.RVS M},
+  Membership.mem.{0, 0} K ↑c → Membership.mem.{0, 0} K ↑(Inv.inv.{0} c)
+'DiamondIntegral.Section2.GammaStable.rv_inv_mem_K' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.CodeTypeEq.ge : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {K : FirstOrder.Language.Substructure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M}
+  {T T' : DiamondIntegral.Section2.GammaStable.RVS M},
+  DiamondIntegral.Section2.GammaStable.CodeTypeEq K T T' →
+    Ne.{1} T 0 →
+      Ne.{1} T' 0 →
+        ∀ (m : ℤ) (c : DiamondIntegral.Section2.GammaStable.RVS M),
+          Membership.mem.{0, 0} K ↑c →
+            Ne.{1} c 0 →
+              (LE.le.{0} (SpecialTransformations.Section3.Values.vrv c)
+                  (SpecialTransformations.Section3.Values.vrv (HPow.hPow.{0, 0, 0} T m)) ↔
+                LE.le.{0} (SpecialTransformations.Section3.Values.vrv c)
+                  (SpecialTransformations.Section3.Values.vrv (HPow.hPow.{0, 0, 0} T' m)))
+'DiamondIntegral.Section2.GammaStable.CodeTypeEq.ge' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.CodeTypeEq.eq_iff : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {K : FirstOrder.Language.Substructure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M}
+  {T T' : DiamondIntegral.Section2.GammaStable.RVS M},
+  DiamondIntegral.Section2.GammaStable.CodeTypeEq K T T' →
+    Ne.{1} T 0 →
+      Ne.{1} T' 0 →
+        ∀ (m : ℤ) (c : DiamondIntegral.Section2.GammaStable.RVS M),
+          Membership.mem.{0, 0} K ↑c →
+            Ne.{1} c 0 →
+              (Eq.{1} (SpecialTransformations.Section3.Values.vrv (HPow.hPow.{0, 0, 0} T m))
+                  (SpecialTransformations.Section3.Values.vrv c) ↔
+                Eq.{1} (SpecialTransformations.Section3.Values.vrv (HPow.hPow.{0, 0, 0} T' m))
+                  (SpecialTransformations.Section3.Values.vrv c))
+'DiamondIntegral.Section2.GammaStable.CodeTypeEq.eq_iff' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.CodeTypeEq.independent : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {K : FirstOrder.Language.Substructure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M}
+  {T T' : DiamondIntegral.Section2.GammaStable.RVS M},
+  DiamondIntegral.Section2.GammaStable.CodeTypeEq K T T' →
+    Ne.{1} T 0 →
+      Ne.{1} T' 0 →
+        DiamondIntegral.Section2.GammaStable.CodeIndependent K T →
+          DiamondIntegral.Section2.GammaStable.CodeIndependent K T'
+'DiamondIntegral.Section2.GammaStable.CodeTypeEq.independent' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.rep_unique : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {K : FirstOrder.Language.Substructure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M}
+  {T : DiamondIntegral.Section2.GammaStable.RVS M},
+  Ne.{1} T 0 →
+    DiamondIntegral.Section2.GammaStable.CodeIndependent K T →
+      ∀ {c c' : DiamondIntegral.Section2.GammaStable.RVS M} {m m' : ℤ},
+        Membership.mem.{0, 0} K ↑c →
+          Membership.mem.{0, 0} K ↑c' →
+            Eq.{1} (HMul.hMul.{0, 0, 0} c (HPow.hPow.{0, 0, 0} T m))
+                (HMul.hMul.{0, 0, 0} c' (HPow.hPow.{0, 0, 0} T m')) →
+              Eq.{1} c 0 ∧ Eq.{1} c' 0 ∨ Eq.{1} m m' ∧ Eq.{1} c c'
+'DiamondIntegral.Section2.GammaStable.rep_unique' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.mem_codeCarrier_of_mem : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {K : FirstOrder.Language.Substructure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M}
+  {T : DiamondIntegral.Section2.GammaStable.RVS M} {x : M},
+  Membership.mem.{0, 0} K x → Membership.mem.{0, 0} (DiamondIntegral.Section2.GammaStable.codeCarrier K T) x
+'DiamondIntegral.Section2.GammaStable.mem_codeCarrier_of_mem' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.codeCarrier_vf : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {K : FirstOrder.Language.Substructure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M}
+  {T : DiamondIntegral.Section2.GammaStable.RVS M} {x : M},
+  Membership.mem.{0, 0} (DiamondIntegral.Section2.GammaStable.codeCarrier K T) x →
+    SpecialTransformations.Milestone0.iVF.{0} x → Membership.mem.{0, 0} K x
+'DiamondIntegral.Section2.GammaStable.codeCarrier_vf' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.codeCarrier_rep : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {K : FirstOrder.Language.Substructure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M}
+  {T : DiamondIntegral.Section2.GammaStable.RVS M} {x : M},
+  Membership.mem.{0, 0} (DiamondIntegral.Section2.GammaStable.codeCarrier K T) x →
+    SpecialTransformations.Milestone0.iRV.{0} x →
+      ∃ c m, Membership.mem.{0, 0} K ↑c ∧ Eq.{1} x ↑(HMul.hMul.{0, 0, 0} c (HPow.hPow.{0, 0, 0} T m))
+'DiamondIntegral.Section2.GammaStable.codeCarrier_rep' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.rep_mem : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {K : FirstOrder.Language.Substructure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M}
+  {T c : DiamondIntegral.Section2.GammaStable.RVS M} (m : ℤ),
+  Membership.mem.{0, 0} K ↑c →
+    Membership.mem.{0, 0} (DiamondIntegral.Section2.GammaStable.codeCarrier K T)
+      ↑(HMul.hMul.{0, 0, 0} c (HPow.hPow.{0, 0, 0} T m))
+'DiamondIntegral.Section2.GammaStable.rep_mem' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.rep_new : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {K : FirstOrder.Language.Substructure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M}
+  {T c : DiamondIntegral.Section2.GammaStable.RVS M} {m : ℤ},
+  Membership.mem.{0, 0} K ↑c → ↑(HMul.hMul.{0, 0, 0} c (HPow.hPow.{0, 0, 0} T m)) ∉ K → Ne.{1} c 0 ∧ Ne.{1} m 0
+'DiamondIntegral.Section2.GammaStable.rep_new' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.units_vrv_one : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {z : DiamondIntegral.Section2.GammaStable.RVS M},
+  SpecialTransformations.Milestone0.iUnits.{0} ↑z → Ne.{1} z 0 ∧ Eq.{1} (SpecialTransformations.Section3.Values.vrv z) 1
+'DiamondIntegral.Section2.GammaStable.units_vrv_one' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.rep_not_inK : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {K : FirstOrder.Language.Substructure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M}
+  {T : DiamondIntegral.Section2.GammaStable.RVS M},
+  Ne.{1} T 0 →
+    DiamondIntegral.Section2.GammaStable.CodeIndependent K T →
+      ∀ {c : DiamondIntegral.Section2.GammaStable.RVS M} {m : ℤ},
+        Membership.mem.{0, 0} K ↑c →
+          Ne.{1} c 0 → Ne.{1} m 0 → ¬ValuedModelMap.inK (HMul.hMul.{0, 0, 0} c (HPow.hPow.{0, 0, 0} T m))
+'DiamondIntegral.Section2.GammaStable.rep_not_inK' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.funMap_two : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (f : SpecialTransformations.Milestone0.Fn 2) (xs : Fin 2 → M),
+  Eq.{1} (FirstOrder.Language.Structure.funMap.{0, 0, 0} f xs)
+    (FirstOrder.Language.Structure.funMap.{0, 0, 0} f
+      (Matrix.vecCons.{0} (xs 0) (Matrix.vecCons.{0} (xs 1) Matrix.vecEmpty.{0})))
+'DiamondIntegral.Section2.GammaStable.funMap_two' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.funMap_one : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (f : SpecialTransformations.Milestone0.Fn 1) (xs : Fin 1 → M),
+  Eq.{1} (FirstOrder.Language.Structure.funMap.{0, 0, 0} f xs)
+    (FirstOrder.Language.Structure.funMap.{0, 0, 0} f (Matrix.vecCons.{0} (xs 0) Matrix.vecEmpty.{0}))
+'DiamondIntegral.Section2.GammaStable.funMap_one' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.junk_mem : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF],
+  CanonicalStructure.IsCanonical →
+    ∀ (K : FirstOrder.Language.Substructure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M) {n : ℕ}
+      (f : SpecialTransformations.Milestone0.Fn n) (xs : Fin n → M),
+      (¬∀ (i : Fin n),
+            SpecialTransformations.Milestone0.sortEval.{0} (SpecialTransformations.Milestone0.LRV.Fn.argSort f i)
+              (xs i)) →
+        Membership.mem.{0, 0} K (FirstOrder.Language.Structure.funMap.{0, 0, 0} f xs)
+'DiamondIntegral.Section2.GammaStable.junk_mem' depends on axioms: [propext, Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.codeCarrier_fun_mem : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF],
+  CanonicalStructure.IsCanonical →
+    ∀ (K : FirstOrder.Language.Substructure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M)
+      {T : DiamondIntegral.Section2.GammaStable.RVS M},
+      Ne.{1} T 0 →
+        DiamondIntegral.Section2.GammaStable.CodeIndependent K T →
+          ∀ {n : ℕ} (f : FirstOrder.Language.Functions.{0, 0} SpecialTransformations.Milestone0.LRV n) (xs : Fin n → M),
+            (∀ (i : Fin n), Membership.mem.{0, 0} (DiamondIntegral.Section2.GammaStable.codeCarrier K T) (xs i)) →
+              Membership.mem.{0, 0} (DiamondIntegral.Section2.GammaStable.codeCarrier K T)
+                (FirstOrder.Language.Structure.funMap.{0, 0, 0} f xs)
+'DiamondIntegral.Section2.GammaStable.codeCarrier_fun_mem' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.le_codeSubstructure : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical)
+  (K : FirstOrder.Language.Substructure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M)
+  (T : DiamondIntegral.Section2.GammaStable.RVS M) (hT : Ne.{1} T 0)
+  (hind : DiamondIntegral.Section2.GammaStable.CodeIndependent K T),
+  LE.le.{0} K (DiamondIntegral.Section2.GammaStable.codeSubstructure hc K T hT hind)
+'DiamondIntegral.Section2.GammaStable.le_codeSubstructure' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.code_mem_codeSubstructure : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical)
+  (K : FirstOrder.Language.Substructure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M)
+  (T : DiamondIntegral.Section2.GammaStable.RVS M) (hT : Ne.{1} T 0)
+  (hind : DiamondIntegral.Section2.GammaStable.CodeIndependent K T),
+  Membership.mem.{0, 0} (DiamondIntegral.Section2.GammaStable.codeSubstructure hc K T hT hind) ↑T
+'DiamondIntegral.Section2.GammaStable.code_mem_codeSubstructure' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section2.exists_gamma_gt_one : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : DiamondIntegral.Section2.ParameterBase M},
+  DiamondIntegral.Section2.NontrivialDefinableGamma B → ∃ g, LT.lt.{0} 1 g
+'DiamondIntegral.Section2.exists_gamma_gt_one' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@DiamondIntegral.Section2.gamma_power_law_source_bounded : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (A : Set.{0} (DiamondIntegral.Section2.Gamma M)),
+  BddAbove.{0} A ∧ BddBelow.{0} A →
+    ∀ (p : ℤ),
+      Ne.{1} p 0 →
+        ∀ (q : ℕ) (c : DiamondIntegral.Section2.Gamma M),
+          BddAbove.{0}
+              (Set.ofPred.{0} fun x =>
+                ∃ y,
+                  Membership.mem.{0, 0} A y ∧
+                    Eq.{1} (HPow.hPow.{0, 0, 0} y q) (HMul.hMul.{0, 0, 0} c (HPow.hPow.{0, 0, 0} x p))) ∧
+            BddBelow.{0}
+              (Set.ofPred.{0} fun x =>
+                ∃ y,
+                  Membership.mem.{0, 0} A y ∧
+                    Eq.{1} (HPow.hPow.{0, 0, 0} y q) (HMul.hMul.{0, 0, 0} c (HPow.hPow.{0, 0, 0} x p)))
+'DiamondIntegral.Section2.gamma_power_law_source_bounded' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section2.remark_2_47 : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF],
+  FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00 →
+    DiamondIntegral.Section2.GammaPiecewiseRationalAffineInput →
+      ∀ (S : Set.{0} M),
+        DiamondIntegral.Section2.NontrivialDefinableGamma { real := S, gamma := EmptyCollection.emptyCollection.{0} } →
+          ∀ (D : Set.{0} (DiamondIntegral.Section2.Gamma M))
+            (f h : DiamondIntegral.Section2.Gamma M → DiamondIntegral.Section2.Gamma M),
+            (SpecialTransformations.Section4.GammaSyntax.Definable S fun z =>
+                Membership.mem.{0, 0} D (z 0) ∧ Eq.{1} (f (z 0)) (z 1)) →
+              (SpecialTransformations.Section4.GammaSyntax.Definable S fun z =>
+                  Membership.mem.{0, 0} D (z 0) ∧ Eq.{1} (h (z 0)) (z 1)) →
+                (∀ (t : DiamondIntegral.Section2.Gamma M), Membership.mem.{0, 0} D t → LT.lt.{0} 1 (h t)) →
+                  ∃ N ε,
+                    LT.lt.{0} 1 ε ∧
+                      ∀ (t : DiamondIntegral.Section2.Gamma M),
+                        Membership.mem.{0, 0} D t → LT.lt.{0} N (f t) → LE.le.{0} ε (h t)
+'DiamondIntegral.Section2.remark_2_47' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@DiamondIntegral.Section2.remark_2_47_no_approach : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF],
+  FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00 →
+    DiamondIntegral.Section2.GammaPiecewiseRationalAffineInput →
+      ∀ (S : Set.{0} M),
+        DiamondIntegral.Section2.NontrivialDefinableGamma { real := S, gamma := EmptyCollection.emptyCollection.{0} } →
+          ∀ (D : Set.{0} (DiamondIntegral.Section2.Gamma M))
+            (f h : DiamondIntegral.Section2.Gamma M → DiamondIntegral.Section2.Gamma M),
+            (SpecialTransformations.Section4.GammaSyntax.Definable S fun z =>
+                Membership.mem.{0, 0} D (z 0) ∧ Eq.{1} (f (z 0)) (z 1)) →
+              (SpecialTransformations.Section4.GammaSyntax.Definable S fun z =>
+                  Membership.mem.{0, 0} D (z 0) ∧ Eq.{1} (h (z 0)) (z 1)) →
+                (∀ (t : DiamondIntegral.Section2.Gamma M), Membership.mem.{0, 0} D t → LT.lt.{0} 1 (h t)) →
+                  (∀ (N ε : DiamondIntegral.Section2.Gamma M),
+                      LT.lt.{0} 1 ε → ∃ t, Membership.mem.{0, 0} D t ∧ LT.lt.{0} N (f t) ∧ LT.lt.{0} (h t) ε) →
+                    False
+'DiamondIntegral.Section2.remark_2_47_no_approach' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@DiamondIntegral.Section2.remark_2_47_diagonal : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : DiamondIntegral.Section2.ParameterBase M},
+  DiamondIntegral.Section2.NontrivialDefinableGamma B →
+    (∀ (ε : DiamondIntegral.Section2.Gamma M), LT.lt.{0} 1 ε → ∃ t, LT.lt.{0} 1 t ∧ LT.lt.{0} t ε) ∧
+      ∀ (N : DiamondIntegral.Section2.Gamma M), ∃ t, LT.lt.{0} 1 t ∧ LT.lt.{0} N t
+'DiamondIntegral.Section2.remark_2_47_diagonal' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
 @DiamondIntegral.Section2.gammaDomainCodes_definable : ∀ {M : Type}
   [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
   [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF],
@@ -9420,6 +10220,300 @@ fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Mileston
 'DiamondIntegral.Section2.gammaRelationPreimageMap_fibre' depends on axioms: [propext,
  Classical.choice.{u},
  Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.realize_rvOneTerm : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {α : Type}
+  (v : α → M),
+  Eq.{1} (FirstOrder.Language.Term.realize.{0, 0, 0, 0} v DiamondIntegral.Section2.GammaStable.rvOneTerm) ↑1
+'DiamondIntegral.Section2.GammaStable.realize_rvOneTerm' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.realize_rvMulTerm : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {α : Type}
+  (v : α → M) (t s : FirstOrder.Language.Term.{0, 0, 0} SpecialTransformations.Milestone0.LRV α),
+  Eq.{1} (FirstOrder.Language.Term.realize.{0, 0, 0, 0} v (DiamondIntegral.Section2.GammaStable.rvMulTerm t s))
+    (SpecialTransformations.Milestone0.iRVMul.{0} (FirstOrder.Language.Term.realize.{0, 0, 0, 0} v t)
+      (FirstOrder.Language.Term.realize.{0, 0, 0, 0} v s))
+'DiamondIntegral.Section2.GammaStable.realize_rvMulTerm' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.realize_rvInvTerm : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {α : Type}
+  (v : α → M) (t : FirstOrder.Language.Term.{0, 0, 0} SpecialTransformations.Milestone0.LRV α),
+  Eq.{1} (FirstOrder.Language.Term.realize.{0, 0, 0, 0} v (DiamondIntegral.Section2.GammaStable.rvInvTerm t))
+    (SpecialTransformations.Milestone0.iRVInvFn.{0} (FirstOrder.Language.Term.realize.{0, 0, 0, 0} v t))
+'DiamondIntegral.Section2.GammaStable.realize_rvInvTerm' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.realize_powTerm : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {α : Type}
+  (v : α → M) (t : FirstOrder.Language.Term.{0, 0, 0} SpecialTransformations.Milestone0.LRV α)
+  (a : DiamondIntegral.Section2.GammaStable.RVS M),
+  Eq.{1} (FirstOrder.Language.Term.realize.{0, 0, 0, 0} v t) ↑a →
+    ∀ (n : ℕ),
+      Eq.{1} (FirstOrder.Language.Term.realize.{0, 0, 0, 0} v (DiamondIntegral.Section2.GammaStable.powTerm t n))
+        ↑(HPow.hPow.{0, 0, 0} a n)
+'DiamondIntegral.Section2.GammaStable.realize_powTerm' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.realize_zpowTerm : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {α : Type}
+  (v : α → M) (t : FirstOrder.Language.Term.{0, 0, 0} SpecialTransformations.Milestone0.LRV α)
+  (a : DiamondIntegral.Section2.GammaStable.RVS M),
+  Eq.{1} (FirstOrder.Language.Term.realize.{0, 0, 0, 0} v t) ↑a →
+    ∀ (m : ℤ),
+      Eq.{1} (FirstOrder.Language.Term.realize.{0, 0, 0, 0} v (DiamondIntegral.Section2.GammaStable.zpowTerm t m))
+        ↑(HPow.hPow.{0, 0, 0} a m)
+'DiamondIntegral.Section2.GammaStable.realize_zpowTerm' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.realize_prodTerm : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {α : Type}
+  (v : α → M) (k : ℕ) (ts : Fin k → FirstOrder.Language.Term.{0, 0, 0} SpecialTransformations.Milestone0.LRV α)
+  (m : Fin k → ℤ) (A : Fin k → DiamondIntegral.Section2.GammaStable.RVS M),
+  (∀ (i : Fin k), Eq.{1} (FirstOrder.Language.Term.realize.{0, 0, 0, 0} v (ts i)) ↑(A i)) →
+    Eq.{1} (FirstOrder.Language.Term.realize.{0, 0, 0, 0} v (DiamondIntegral.Section2.GammaStable.prodTerm k ts m))
+      ↑(∏ i, HPow.hPow.{0, 0, 0} (A i) (m i))
+'DiamondIntegral.Section2.GammaStable.realize_prodTerm' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.properCode_ne_zero : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {k : ℕ}
+  {a : Fin k → M} (ha : SpecialTransformations.Section4.GammaSyntax.Proper a) (i : Fin k),
+  Ne.{1} (DiamondIntegral.Section2.GammaStable.properCode ha i) 0
+'DiamondIntegral.Section2.GammaStable.properCode_ne_zero' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.decode_val : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {k : ℕ}
+  {a : Fin k → M} (ha : SpecialTransformations.Section4.GammaSyntax.Proper a) (i : Fin k),
+  Eq.{1} (↑(SpecialTransformations.Section4.GammaSyntax.decode a i))
+    (SpecialTransformations.Section3.Values.vrv (DiamondIntegral.Section2.GammaStable.properCode ha i))
+'DiamondIntegral.Section2.GammaStable.decode_val' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.decode_prod_val : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {k : ℕ}
+  {a : Fin k → M} (ha : SpecialTransformations.Section4.GammaSyntax.Proper a) (m : Fin k → ℤ),
+  Eq.{1} (↑(∏ i, HPow.hPow.{0, 0, 0} (SpecialTransformations.Section4.GammaSyntax.decode a i) (m i)))
+    (SpecialTransformations.Section3.Values.vrv
+      (∏ i, HPow.hPow.{0, 0, 0} (DiamondIntegral.Section2.GammaStable.properCode ha i) (m i)))
+'DiamondIntegral.Section2.GammaStable.decode_prod_val' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.exists_code : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (γ : SpecialTransformations.Section3.Values.Gamma),
+  ∃ t, Ne.{1} t 0 ∧ Eq.{1} (SpecialTransformations.Section3.Values.vrv t) ↑γ
+'DiamondIntegral.Section2.GammaStable.exists_code' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.exists_code_tuple : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {k : ℕ}
+  (z : Fin k → SpecialTransformations.Section3.Values.Gamma),
+  ∃ a,
+    SpecialTransformations.Section4.GammaSyntax.Proper a ∧
+      Eq.{1} (SpecialTransformations.Section4.GammaSyntax.decode a) z
+'DiamondIntegral.Section2.GammaStable.exists_code_tuple' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.unaryNonzeroRV_definable : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] (A : Set.{0} M),
+  Set.Definable.{0, 0, 0, 0} A SpecialTransformations.Milestone0.LRV
+    (Set.ofPred.{0} fun z => SpecialTransformations.Section3.GammaParameters.NonzeroRV (z 0))
+'DiamondIntegral.Section2.GammaStable.unaryNonzeroRV_definable' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.proper_definable_raw : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] (A : Set.{0} M)
+  (k : ℕ),
+  Set.Definable.{0, 0, 0, 0} A SpecialTransformations.Milestone0.LRV
+    (Set.ofPred.{0} fun a => SpecialTransformations.Section4.GammaSyntax.Proper a)
+'DiamondIntegral.Section2.GammaStable.proper_definable_raw' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.halfspaceLe_definable : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] (A : Set.{0} M)
+  {k : ℕ} (m : Fin k → ℤ) (c : M),
+  Membership.mem.{0, 0} A c →
+    Set.Definable.{0, 0, 0, 0} A SpecialTransformations.Milestone0.LRV
+      (Set.ofPred.{0} fun a =>
+        SpecialTransformations.Milestone0.iLe.{0}
+          (FirstOrder.Language.Term.realize.{0, 0, 0, 0} (Sum.elim.{0, 0, 1} Subtype.val.{1} a)
+            (DiamondIntegral.Section2.GammaStable.prodTerm k
+              (fun i => FirstOrder.Language.Term.var.{0, 0, 0} (Sum.inr.{0, 0} i)) m))
+          c)
+'DiamondIntegral.Section2.GammaStable.halfspaceLe_definable' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.codeSet_halfspace_eq : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {k : ℕ}
+  (A : Set.{0} M) (m : Fin k → ℤ) (c : DiamondIntegral.Section2.GammaStable.RVS M),
+  Eq.{1}
+    (DiamondIntegral.Section2.GammaStable.codeSet
+      (Set.ofPred.{0} fun z =>
+        LE.le.{0} (↑(∏ i, HPow.hPow.{0, 0, 0} (z i) (m i))) (SpecialTransformations.Section3.Values.vrv c)))
+    (Inter.inter.{0} (Set.ofPred.{0} fun a => SpecialTransformations.Section4.GammaSyntax.Proper a)
+      (Set.ofPred.{0} fun a =>
+        SpecialTransformations.Milestone0.iLe.{0}
+          (FirstOrder.Language.Term.realize.{0, 0, 0, 0} (Sum.elim.{0, 0, 1} Subtype.val.{1} a)
+            (DiamondIntegral.Section2.GammaStable.prodTerm k
+              (fun i => FirstOrder.Language.Term.var.{0, 0, 0} (Sum.inr.{0, 0} i)) m))
+          ↑c))
+'DiamondIntegral.Section2.GammaStable.codeSet_halfspace_eq' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.codeSet_halfspace_definable : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {k : ℕ}
+  (A : Set.{0} M) (m : Fin k → ℤ) (c : DiamondIntegral.Section2.GammaStable.RVS M),
+  Membership.mem.{0, 0} A ↑c →
+    Set.Definable.{0, 0, 0, 0} A SpecialTransformations.Milestone0.LRV
+      (DiamondIntegral.Section2.GammaStable.codeSet
+        (Set.ofPred.{0} fun z =>
+          LE.le.{0} (↑(∏ i, HPow.hPow.{0, 0, 0} (z i) (m i))) (SpecialTransformations.Section3.Values.vrv c)))
+'DiamondIntegral.Section2.GammaStable.codeSet_halfspace_definable' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.codeSet_compl : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {k : ℕ}
+  (X : Set.{0} (Fin k → SpecialTransformations.Section3.Values.Gamma)),
+  Eq.{1} (DiamondIntegral.Section2.GammaStable.codeSet (Compl.compl.{0} X))
+    (SDiff.sdiff.{0} (Set.ofPred.{0} fun a => SpecialTransformations.Section4.GammaSyntax.Proper a)
+      (DiamondIntegral.Section2.GammaStable.codeSet X))
+'DiamondIntegral.Section2.GammaStable.codeSet_compl' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.codeSet_inter : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {k : ℕ}
+  (X Y : Set.{0} (Fin k → SpecialTransformations.Section3.Values.Gamma)),
+  Eq.{1} (DiamondIntegral.Section2.GammaStable.codeSet (Inter.inter.{0} X Y))
+    (Inter.inter.{0} (DiamondIntegral.Section2.GammaStable.codeSet X) (DiamondIntegral.Section2.GammaStable.codeSet Y))
+'DiamondIntegral.Section2.GammaStable.codeSet_inter' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.codeSet_univ : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {k : ℕ},
+  Eq.{1} (DiamondIntegral.Section2.GammaStable.codeSet Set.univ.{0})
+    (Set.ofPred.{0} fun a => SpecialTransformations.Section4.GammaSyntax.Proper a)
+'DiamondIntegral.Section2.GammaStable.codeSet_univ' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.HalfspaceBoolean.union : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {k : ℕ}
+  {Δ : Set.{0} SpecialTransformations.Section3.Values.Gamma}
+  {X Y : Set.{0} (Fin k → SpecialTransformations.Section3.Values.Gamma)},
+  DiamondIntegral.Section2.GammaStable.HalfspaceBoolean Δ X →
+    DiamondIntegral.Section2.GammaStable.HalfspaceBoolean Δ Y →
+      DiamondIntegral.Section2.GammaStable.HalfspaceBoolean Δ (Union.union.{0} X Y)
+'DiamondIntegral.Section2.GammaStable.HalfspaceBoolean.union' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.HalfspaceBoolean.empty : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {k : ℕ}
+  {Δ : Set.{0} SpecialTransformations.Section3.Values.Gamma},
+  DiamondIntegral.Section2.GammaStable.HalfspaceBoolean Δ EmptyCollection.emptyCollection.{0}
+'DiamondIntegral.Section2.GammaStable.HalfspaceBoolean.empty' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.HalfspaceBoolean.biInter.{u_1} : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {k : ℕ}
+  {Δ : Set.{0} SpecialTransformations.Section3.Values.Gamma} {ι : Type u_1} {S : Set.{u_1} ι},
+  Set.Finite.{u_1} S →
+    ∀ (f : ι → Set.{0} (Fin k → SpecialTransformations.Section3.Values.Gamma)),
+      (∀ (i : ι), Membership.mem.{u_1, u_1} S i → DiamondIntegral.Section2.GammaStable.HalfspaceBoolean Δ (f i)) →
+        DiamondIntegral.Section2.GammaStable.HalfspaceBoolean Δ (⋂ i, ⋂ (_ : Membership.mem.{u_1, u_1} S i), f i)
+'DiamondIntegral.Section2.GammaStable.HalfspaceBoolean.biInter' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.HalfspaceBoolean.biUnion.{u_1} : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {k : ℕ}
+  {Δ : Set.{0} SpecialTransformations.Section3.Values.Gamma} {ι : Type u_1} {S : Set.{u_1} ι},
+  Set.Finite.{u_1} S →
+    ∀ (f : ι → Set.{0} (Fin k → SpecialTransformations.Section3.Values.Gamma)),
+      (∀ (i : ι), Membership.mem.{u_1, u_1} S i → DiamondIntegral.Section2.GammaStable.HalfspaceBoolean Δ (f i)) →
+        DiamondIntegral.Section2.GammaStable.HalfspaceBoolean Δ (⋃ i, ⋃ (_ : Membership.mem.{u_1, u_1} S i), f i)
+'DiamondIntegral.Section2.GammaStable.HalfspaceBoolean.biUnion' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.halfspace_val_eq : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {k : ℕ}
+  (m : Fin k → ℤ) (c : DiamondIntegral.Section2.GammaStable.RVS M),
+  Ne.{1} c 0 →
+    ∃ δ,
+      Eq.{1} (↑δ) (SpecialTransformations.Section3.Values.vrv c) ∧
+        Eq.{1}
+          (Set.ofPred.{0} fun z =>
+            LE.le.{0} (↑(∏ i, HPow.hPow.{0, 0, 0} (z i) (m i))) (SpecialTransformations.Section3.Values.vrv c))
+          (Set.ofPred.{0} fun z => LE.le.{0} (∏ i, HPow.hPow.{0, 0, 0} (z i) (m i)) δ)
+'DiamondIntegral.Section2.GammaStable.halfspace_val_eq' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.HalfspaceBoolean.codeSet_definable : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {k : ℕ}
+  (K : FirstOrder.Language.Substructure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M)
+  {X : Set.{0} (Fin k → SpecialTransformations.Section3.Values.Gamma)},
+  DiamondIntegral.Section2.GammaStable.HalfspaceBoolean (DiamondIntegral.Section2.GammaStable.substructureValues K) X →
+    Set.Definable.{0, 0, 0, 0} (↑K) SpecialTransformations.Milestone0.LRV
+      (DiamondIntegral.Section2.GammaStable.codeSet X)
+'DiamondIntegral.Section2.GammaStable.HalfspaceBoolean.codeSet_definable' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.aut_mem_definable_iff : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (σ : FirstOrder.Language.Equiv.{0, 0, 0, 0} SpecialTransformations.Milestone0.LRV M M) {P : Set.{0} M},
+  (∀ (x : M), Membership.mem.{0, 0} P x → Eq.{1} (σ x) x) →
+    ∀ {k : ℕ} {D : Set.{0} (Fin k → M)},
+      Set.Definable.{0, 0, 0, 0} P SpecialTransformations.Milestone0.LRV D →
+        ∀ (a : Fin k → M), (Membership.mem.{0, 0} D fun i => σ (a i)) ↔ Membership.mem.{0, 0} D a
+'DiamondIntegral.Section2.GammaStable.aut_mem_definable_iff' depends on axioms: [propext, Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.closure_small : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {κ : Cardinal.{0}},
+  LT.lt.{1} Cardinal.aleph0.{0} κ →
+    ∀ (P : Set.{0} M),
+      LT.lt.{1} (Cardinal.mk.{0} ↑P) κ →
+        LT.lt.{1}
+          (Cardinal.mk.{0}
+            ↑↑(LowerAdjoint.toFun.{0, 0}
+                  (FirstOrder.Language.Substructure.closure.{0, 0, 0} SpecialTransformations.Milestone0.LRV) P))
+          κ
+'DiamondIntegral.Section2.GammaStable.closure_small' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.gamma_stably_embedded : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF],
+  CanonicalStructure.IsCanonical →
+    ∀ {κ : Cardinal.{0}},
+      LT.lt.{1} Cardinal.aleph0.{0} κ →
+        SpecialTransformations.Section3.Saturated M κ →
+          SpecialTransformations.Section3.StronglyHomogeneous M κ →
+            ∀ (P : Set.{0} M),
+              LT.lt.{1} (Cardinal.mk.{0} ↑P) κ →
+                ∀ {k : ℕ} (X : Set.{0} (Fin k → SpecialTransformations.Section3.Values.Gamma)),
+                  Set.Definable.{0, 0, 0, 0} P SpecialTransformations.Milestone0.LRV
+                      (DiamondIntegral.Section2.GammaStable.codeSet X) →
+                    DiamondIntegral.Section2.GammaStable.HalfspaceBoolean
+                      (DiamondIntegral.Section2.GammaStable.substructureValues
+                        (LowerAdjoint.toFun.{0, 0}
+                          (FirstOrder.Language.Substructure.closure.{0, 0, 0} SpecialTransformations.Milestone0.LRV) P))
+                      X
+'DiamondIntegral.Section2.GammaStable.gamma_stably_embedded' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
 @DiamondIntegral.Section2.gamma_definable_exists_isGLB : ∀ {M : Type}
   [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
   [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF],
@@ -9468,6 +10562,227 @@ fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Mileston
           BddAbove.{0} A →
             ∃ c, IsLUB.{0} A c ∧ SpecialTransformations.Section3.GammaParameters.GammaDefinableClosureAtBase B c
 'DiamondIntegral.Section2.gamma_definable_supremum' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.aut_funMap2 : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (σ : FirstOrder.Language.Equiv.{0, 0, 0, 0} SpecialTransformations.Milestone0.LRV M M)
+  (f : SpecialTransformations.Milestone0.Fn 2) (x y : M),
+  Eq.{1}
+    (σ
+      (FirstOrder.Language.Structure.funMap.{0, 0, 0} f
+        (Matrix.vecCons.{0} x (Matrix.vecCons.{0} y Matrix.vecEmpty.{0}))))
+    (FirstOrder.Language.Structure.funMap.{0, 0, 0} f
+      (Matrix.vecCons.{0} (σ x) (Matrix.vecCons.{0} (σ y) Matrix.vecEmpty.{0})))
+'DiamondIntegral.Section2.GammaStable.aut_funMap2' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.aut_funMap1 : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (σ : FirstOrder.Language.Equiv.{0, 0, 0, 0} SpecialTransformations.Milestone0.LRV M M)
+  (f : SpecialTransformations.Milestone0.Fn 1) (x : M),
+  Eq.{1} (σ (FirstOrder.Language.Structure.funMap.{0, 0, 0} f (Matrix.vecCons.{0} x Matrix.vecEmpty.{0})))
+    (FirstOrder.Language.Structure.funMap.{0, 0, 0} f (Matrix.vecCons.{0} (σ x) Matrix.vecEmpty.{0}))
+'DiamondIntegral.Section2.GammaStable.aut_funMap1' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.aut_funMap0 : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (σ : FirstOrder.Language.Equiv.{0, 0, 0, 0} SpecialTransformations.Milestone0.LRV M M)
+  (f : SpecialTransformations.Milestone0.Fn 0),
+  Eq.{1} (σ (FirstOrder.Language.Structure.funMap.{0, 0, 0} f fun i => Fin.elim0.{1} i))
+    (FirstOrder.Language.Structure.funMap.{0, 0, 0} f fun i => Fin.elim0.{1} i)
+'DiamondIntegral.Section2.GammaStable.aut_funMap0' depends on axioms: [propext, Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.aut_relMap2 : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (σ : FirstOrder.Language.Equiv.{0, 0, 0, 0} SpecialTransformations.Milestone0.LRV M M)
+  (r : SpecialTransformations.Milestone0.Rel 2) (x y : M),
+  FirstOrder.Language.Structure.RelMap.{0, 0, 0} r
+      (Matrix.vecCons.{0} (σ x) (Matrix.vecCons.{0} (σ y) Matrix.vecEmpty.{0})) ↔
+    FirstOrder.Language.Structure.RelMap.{0, 0, 0} r (Matrix.vecCons.{0} x (Matrix.vecCons.{0} y Matrix.vecEmpty.{0}))
+'DiamondIntegral.Section2.GammaStable.aut_relMap2' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.autRV_val : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (σ : FirstOrder.Language.Equiv.{0, 0, 0, 0} SpecialTransformations.Milestone0.LRV M M)
+  (t : DiamondIntegral.Section2.GammaStable.RVS M), Eq.{1} (↑(DiamondIntegral.Section2.GammaStable.autRV σ t)) (σ ↑t)
+'DiamondIntegral.Section2.GammaStable.autRV_val' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.autRV_mul : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (σ : FirstOrder.Language.Equiv.{0, 0, 0, 0} SpecialTransformations.Milestone0.LRV M M)
+  (a b : DiamondIntegral.Section2.GammaStable.RVS M),
+  Eq.{1} (DiamondIntegral.Section2.GammaStable.autRV σ (HMul.hMul.{0, 0, 0} a b))
+    (HMul.hMul.{0, 0, 0} (DiamondIntegral.Section2.GammaStable.autRV σ a)
+      (DiamondIntegral.Section2.GammaStable.autRV σ b))
+'DiamondIntegral.Section2.GammaStable.autRV_mul' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.autRV_inv : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (σ : FirstOrder.Language.Equiv.{0, 0, 0, 0} SpecialTransformations.Milestone0.LRV M M)
+  (a : DiamondIntegral.Section2.GammaStable.RVS M),
+  Eq.{1} (DiamondIntegral.Section2.GammaStable.autRV σ (Inv.inv.{0} a))
+    (Inv.inv.{0} (DiamondIntegral.Section2.GammaStable.autRV σ a))
+'DiamondIntegral.Section2.GammaStable.autRV_inv' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.autRV_one : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (σ : FirstOrder.Language.Equiv.{0, 0, 0, 0} SpecialTransformations.Milestone0.LRV M M),
+  Eq.{1} (DiamondIntegral.Section2.GammaStable.autRV σ 1) 1
+'DiamondIntegral.Section2.GammaStable.autRV_one' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.autRV_zero : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (σ : FirstOrder.Language.Equiv.{0, 0, 0, 0} SpecialTransformations.Milestone0.LRV M M),
+  Eq.{1} (DiamondIntegral.Section2.GammaStable.autRV σ 0) 0
+'DiamondIntegral.Section2.GammaStable.autRV_zero' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.autRV_zpow : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (σ : FirstOrder.Language.Equiv.{0, 0, 0, 0} SpecialTransformations.Milestone0.LRV M M)
+  (a : DiamondIntegral.Section2.GammaStable.RVS M) (m : ℤ),
+  Eq.{1} (DiamondIntegral.Section2.GammaStable.autRV σ (HPow.hPow.{0, 0, 0} a m))
+    (HPow.hPow.{0, 0, 0} (DiamondIntegral.Section2.GammaStable.autRV σ a) m)
+'DiamondIntegral.Section2.GammaStable.autRV_zpow' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.autRV_prod : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (σ : FirstOrder.Language.Equiv.{0, 0, 0, 0} SpecialTransformations.Milestone0.LRV M M) {k : ℕ}
+  (T : Fin k → DiamondIntegral.Section2.GammaStable.RVS M) (m : Fin k → ℤ),
+  Eq.{1} (DiamondIntegral.Section2.GammaStable.autRV σ (∏ i, HPow.hPow.{0, 0, 0} (T i) (m i)))
+    (∏ i, HPow.hPow.{0, 0, 0} (DiamondIntegral.Section2.GammaStable.autRV σ (T i)) (m i))
+'DiamondIntegral.Section2.GammaStable.autRV_prod' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.autRV_ne_zero : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (σ : FirstOrder.Language.Equiv.{0, 0, 0, 0} SpecialTransformations.Milestone0.LRV M M)
+  {a : DiamondIntegral.Section2.GammaStable.RVS M},
+  Ne.{1} a 0 → Ne.{1} (DiamondIntegral.Section2.GammaStable.autRV σ a) 0
+'DiamondIntegral.Section2.GammaStable.autRV_ne_zero' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.autRV_le_iff : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (σ : FirstOrder.Language.Equiv.{0, 0, 0, 0} SpecialTransformations.Milestone0.LRV M M)
+  (a b : DiamondIntegral.Section2.GammaStable.RVS M),
+  LE.le.{0} (SpecialTransformations.Section3.Values.vrv (DiamondIntegral.Section2.GammaStable.autRV σ a))
+      (SpecialTransformations.Section3.Values.vrv (DiamondIntegral.Section2.GammaStable.autRV σ b)) ↔
+    LE.le.{0} (SpecialTransformations.Section3.Values.vrv a) (SpecialTransformations.Section3.Values.vrv b)
+'DiamondIntegral.Section2.GammaStable.autRV_le_iff' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.autRV_vrv_congr : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (σ : FirstOrder.Language.Equiv.{0, 0, 0, 0} SpecialTransformations.Milestone0.LRV M M)
+  {a b : DiamondIntegral.Section2.GammaStable.RVS M},
+  Eq.{1} (SpecialTransformations.Section3.Values.vrv a) (SpecialTransformations.Section3.Values.vrv b) →
+    Eq.{1} (SpecialTransformations.Section3.Values.vrv (DiamondIntegral.Section2.GammaStable.autRV σ a))
+      (SpecialTransformations.Section3.Values.vrv (DiamondIntegral.Section2.GammaStable.autRV σ b))
+'DiamondIntegral.Section2.GammaStable.autRV_vrv_congr' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.autRV_of_mem : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {σ : FirstOrder.Language.Equiv.{0, 0, 0, 0} SpecialTransformations.Milestone0.LRV M M}
+  {K : FirstOrder.Language.Substructure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M},
+  (∀ (x : M), Membership.mem.{0, 0} K x → Eq.{1} (σ x) x) →
+    ∀ {c : DiamondIntegral.Section2.GammaStable.RVS M},
+      Membership.mem.{0, 0} K ↑c → Eq.{1} (DiamondIntegral.Section2.GammaStable.autRV σ c) c
+'DiamondIntegral.Section2.GammaStable.autRV_of_mem' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.autRV_comp : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (σ τ : FirstOrder.Language.Equiv.{0, 0, 0, 0} SpecialTransformations.Milestone0.LRV M M)
+  (a : DiamondIntegral.Section2.GammaStable.RVS M),
+  Eq.{1} (DiamondIntegral.Section2.GammaStable.autRV (FirstOrder.Language.Equiv.comp.{0, 0, 0, 0, 0} τ σ) a)
+    (DiamondIntegral.Section2.GammaStable.autRV τ (DiamondIntegral.Section2.GammaStable.autRV σ a))
+'DiamondIntegral.Section2.GammaStable.autRV_comp' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.prod_single_zero : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {k : ℕ}
+  (T : Fin (HAdd.hAdd.{0, 0, 0} k 1) → DiamondIntegral.Section2.GammaStable.RVS M) (m₀ : ℤ),
+  Eq.{1} (∏ i, HPow.hPow.{0, 0, 0} (T i) (Pi.single.{0, 0} 0 m₀ i)) (HPow.hPow.{0, 0, 0} (T 0) m₀)
+'DiamondIntegral.Section2.GammaStable.prod_single_zero' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.CodeTupleTypeEq.head : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {K : FirstOrder.Language.Substructure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M} {k : ℕ}
+  {T T' : Fin (HAdd.hAdd.{0, 0, 0} k 1) → DiamondIntegral.Section2.GammaStable.RVS M},
+  DiamondIntegral.Section2.GammaStable.CodeTupleTypeEq K T T' →
+    DiamondIntegral.Section2.GammaStable.CodeTypeEq K (T 0) (T' 0)
+'DiamondIntegral.Section2.GammaStable.CodeTupleTypeEq.head' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.prod_cons : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {k : ℕ}
+  (T : Fin (HAdd.hAdd.{0, 0, 0} k 1) → DiamondIntegral.Section2.GammaStable.RVS M) (j : ℤ) (m : Fin k → ℤ),
+  Eq.{1} (∏ i, HPow.hPow.{0, 0, 0} (T i) (Fin.cons.{1} j m i))
+    (HMul.hMul.{0, 0, 0} (HPow.hPow.{0, 0, 0} (T 0) j) (∏ i, HPow.hPow.{0, 0, 0} (T i.succ) (m i)))
+'DiamondIntegral.Section2.GammaStable.prod_cons' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.tail_type : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {K : FirstOrder.Language.Substructure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M} {k : ℕ}
+  {T T' : Fin (HAdd.hAdd.{0, 0, 0} k 1) → DiamondIntegral.Section2.GammaStable.RVS M},
+  Ne.{1} (T' 0) 0 →
+    DiamondIntegral.Section2.GammaStable.CodeTupleTypeEq K T T' →
+      ∀ (σ : FirstOrder.Language.Equiv.{0, 0, 0, 0} SpecialTransformations.Milestone0.LRV M M),
+        (∀ (x : M), Membership.mem.{0, 0} K x → Eq.{1} (σ x) x) →
+          Eq.{1} (SpecialTransformations.Section3.Values.vrv (DiamondIntegral.Section2.GammaStable.autRV σ (T 0)))
+              (SpecialTransformations.Section3.Values.vrv (T' 0)) →
+            Ne.{1} (T 0) 0 →
+              ∀ (m : Fin k → ℤ) (c : DiamondIntegral.Section2.GammaStable.RVS M),
+                Membership.mem.{0, 0} K ↑c →
+                  Ne.{1} c 0 →
+                    ∀ (j : ℤ),
+                      LE.le.{0}
+                          (SpecialTransformations.Section3.Values.vrv
+                            (∏ i, HPow.hPow.{0, 0, 0} (DiamondIntegral.Section2.GammaStable.autRV σ (T i.succ)) (m i)))
+                          (SpecialTransformations.Section3.Values.vrv
+                            (HMul.hMul.{0, 0, 0} c (HPow.hPow.{0, 0, 0} (T' 0) j))) ↔
+                        LE.le.{0}
+                          (SpecialTransformations.Section3.Values.vrv (∏ i, HPow.hPow.{0, 0, 0} (T' i.succ) (m i)))
+                          (SpecialTransformations.Section3.Values.vrv
+                            (HMul.hMul.{0, 0, 0} c (HPow.hPow.{0, 0, 0} (T' 0) j)))
+'DiamondIntegral.Section2.GammaStable.tail_type' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.codeSubstructure_small : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) {κ : Cardinal.{0}},
+  LT.lt.{1} Cardinal.aleph0.{0} κ →
+    ∀ (K : FirstOrder.Language.Substructure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M),
+      LT.lt.{1} (Cardinal.mk.{0} ↑↑K) κ →
+        ∀ (T : DiamondIntegral.Section2.GammaStable.RVS M) (hT : Ne.{1} T 0)
+          (hind : DiamondIntegral.Section2.GammaStable.CodeIndependent K T),
+          LT.lt.{1} (Cardinal.mk.{0} ↑↑(DiamondIntegral.Section2.GammaStable.codeSubstructure hc K T hT hind)) κ
+'DiamondIntegral.Section2.GammaStable.codeSubstructure_small' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section2.GammaStable.exists_automorphism_code_tuple : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF],
+  CanonicalStructure.IsCanonical →
+    ∀ {κ : Cardinal.{0}},
+      LT.lt.{1} Cardinal.aleph0.{0} κ →
+        SpecialTransformations.Section3.StronglyHomogeneous M κ →
+          ∀ (k : ℕ) (K : FirstOrder.Language.Substructure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M),
+            LT.lt.{1} (Cardinal.mk.{0} ↑↑K) κ →
+              ∀ (T T' : Fin k → DiamondIntegral.Section2.GammaStable.RVS M),
+                (∀ (i : Fin k), Ne.{1} (T i) 0) →
+                  (∀ (i : Fin k), Ne.{1} (T' i) 0) →
+                    DiamondIntegral.Section2.GammaStable.CodeTupleTypeEq K T T' →
+                      ∃ σ,
+                        (∀ (x : M), Membership.mem.{0, 0} K x → Eq.{1} (σ x) x) ∧
+                          ∀ (i : Fin k) (t : DiamondIntegral.Section2.GammaStable.RVS M),
+                            Eq.{1} (SpecialTransformations.Section3.Values.vrv t)
+                                (SpecialTransformations.Section3.Values.vrv (T i)) →
+                              Eq.{1}
+                                (SpecialTransformations.Section3.Values.vrv
+                                  (DiamondIntegral.Section2.GammaStable.autRV σ t))
+                                (SpecialTransformations.Section3.Values.vrv (T' i))
+'DiamondIntegral.Section2.GammaStable.exists_automorphism_code_tuple' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
 @DiamondIntegral.Section2.VFGeneratedFieldBase.definableOver_gamma_names_iff : ∀ {M : Type}
   [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
   [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]

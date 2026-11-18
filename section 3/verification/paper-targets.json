@@ -1,17 +1,18 @@
 {
   "status": "COMPLETE_IN_DOCUMENTED_PAPER_CONTEXTS_RELATIVE_TO_ACCEPTED_CITATIONS",
   "review_date": "2026-11-12",
+  "status_update": "2026-11-18: the [18] lift records used by Notation 3.21 and Theorem 3.22 are all produced (Gamma-ground unmeasured: DiamondIntegral.Section5.completed18GroundLiftInput; bounded: completedGammaGroundBoundedLiftInput; measured global and per degree: completedGammaGroundMeasuredLiftInput, completedGammaGroundDegreeMeasuredLiftInput). Remark 3.14 and the bounded and graded parts of Theorem 3.22 have headline declarations. See GAP-REPAIRS.md.",
   "scope": "Original real/RV names and complete Gamma ground, finite tuples and finite tags; actual valuation topology where VF dimension or derivatives occur.",
   "generation_hypothesis": "Arbitrary small real/RV plus Gamma grounds for the constructions and local results; the actual VF/Gamma-generated GammaGroundContext for the [18] lift/integral applications.",
   "accepted_inputs": [
-    "Later [18] global, bounded and degreewise geometric lift/kernel records, with their stated hypotheses.",
-    "Author-approved [23] Reichstein--Youssin Theorem 7.1 and Corollary 2.5, only the exact diagonal representation classification."
+    "Author-approved [23] Reichstein--Youssin Theorem 7.1 and Corollary 2.5, only the exact diagonal representation classification.",
+    "Former input, now produced (November 18): the later [18] global, bounded and degreewise geometric lift/kernel records, with their stated hypotheses. The generic constructions still take them as parameters."
   ],
-  "native_reuse": "[18] sections 1\u20133 have checked local presentation adapters. The November 12 update imports exact later section 6 proof exports with all native hypotheses, including the unfinished 5.8 input. Legacy lift inputs are retained until closure and category transport is compiled; measured section 7 is unavailable.",
+  "native_reuse": "[18] sections 1\u20133 have checked local presentation adapters. The November 12 update imported exact later section 6 proof exports, then depending on the unfinished 5.8 input. At the current pin 7675d31332f20421c803ea16af84964ed74cd51f the completed [18] Section 5 instantiates Section5TwoOrderInputAll (DiamondIntegral.Section5.completed_section5_input), and the closure and category transport is compiled in section 5, producing the Gamma-ground unmeasured lift record. The measured records are proved locally.",
   "no_HK_input": true,
   "proof_review": "Each target was compared to its manuscript statement and actual compiled declaration scope. Declaration counts alone are not the completion criterion.",
   "boundaries": [
-    "No independent proof of the accepted later [18] geometric kernels or of the approved R\u2013Y theorem is claimed.",
+    "No independent proof of the approved R\u2013Y theorem is claimed. The later [18] geometric kernels are no longer accepted: they come from the formalized [18] (pinned dependency) through checked transport.",
     "No groupified injectivity is inferred from positive coefficient monicity.",
     "Independently named disc imaginaries outside the unqualified paper ground and the concrete bounded categories of section 4 are not included in this section 3 certificate. Already definable interpreted names have checked transport.",
     "Optional wording/punctuation annotations R047, R048, R049 and R167 were not changed or marked resolved by this formalization review. The mathematical corrections R050/R051/R053/R054 and author-approved T001/C002 are adopted.",
@@ -154,12 +155,15 @@
     },
     {
       "paper_target": "Remark 3.14",
-      "status": "background_parameter_convention",
-      "scope": "Original real/RV names and complete Gamma ground, finite tuples and finite tags; actual valuation topology where VF dimension or derivatives occur. Definability of a Gamma value is not identified with existence of an original-ground definable RV representative. The representative subgroup is defined exactly; divisible hull is not substituted.",
+      "status": "proved_locally",
+      "scope": "Original real/RV names and complete Gamma ground, finite tuples and finite tags; actual valuation topology where VF dimension or derivatives occur. Definability of a Gamma value is not identified with existence of an original-ground definable RV representative. The representative subgroup is defined exactly; divisible hull is not substituted. November 18: remark_3_14 proves that over a base generated (up to algebraic closure) by VF parameters a definable gamma lies in the divisible hull of Gamma(S); remark_3_14_converse (roots of definable values are definable) and remark_3_14_point (over a VF-generated field base a definable gamma outside Gamma(S) has no definable point in gamma^sharp). The versions over Gamma-named or RV-named bases were not pursued (author-approved triage).",
       "declarations": [
         "DiamondIntegral.Section3.gammaGroundRVDefinableUnits",
         "DiamondIntegral.Section3.gammaGroundDefinableRVValues",
-        "DiamondIntegral.Section3.gammaGroundDefinableRVValues_mem_iff"
+        "DiamondIntegral.Section3.gammaGroundDefinableRVValues_mem_iff",
+        "DiamondIntegral.Section3.remark_3_14",
+        "DiamondIntegral.Section3.remark_3_14_converse",
+        "DiamondIntegral.Section3.remark_3_14_point"
       ]
     },
     {
@@ -213,7 +217,7 @@
     {
       "paper_target": "Corrected Proposition 3.18 / T001",
       "status": "proved_locally",
-      "scope": "Original real/RV names and complete Gamma ground, finite tuples and finite tags; actual valuation topology where VF dimension or derivatives occur. Both actual tensor maps are surjective; both explicit elementary congruences equal their full kernels; both graded positive quotient comparisons keep original degrees. Both actual groupified tensor kernels are the ideals of differences of precisely those pairs, with checked quotient ring equivalences in the actual context. Nontrivial Gamma(S), never nontrivial VF(S), is used.",
+      "scope": "Original real/RV names and complete Gamma ground, finite tuples and finite tags; actual valuation topology where VF dimension or derivatives occur. Both actual tensor maps are surjective; both explicit elementary congruences equal their full kernels; both graded positive quotient comparisons keep original degrees. Both actual groupified tensor kernels are the ideals of differences of precisely those pairs, with checked quotient ring equivalences in the actual context. Nontrivial Gamma(S), never nontrivial VF(S), is used. Nontriviality of the unmeasured kernel (the audit's counterexample to the original isomorphism claim) is proved in section 4 (Proposition318Witness, Proposition318CubeRoots) relative to the R\u2013Y input; the measured case is not formalized.",
       "declarations": [
         "DiamondIntegral.Section3.proposition_3_18_unmeasured",
         "DiamondIntegral.Section3.proposition_3_18_measured",
@@ -250,8 +254,8 @@
     },
     {
       "paper_target": "Notation 3.21",
-      "status": "implemented_relative_to_accepted_18",
-      "scope": "Original real/RV names and complete Gamma ground, finite tuples and finite tags; actual valuation topology where VF dimension or derivatives occur. Actual object lifts retain the original forms in every degree. Class descent uses only explicit accepted [18] lift records at the stipulated VF/Gamma-generated context.",
+      "status": "implemented",
+      "scope": "Original real/RV names and complete Gamma ground, finite tuples and finite tags; actual valuation topology where VF dimension or derivatives occur. Actual object lifts retain the original forms in every degree. Class descent uses the [18] lift records at the stipulated VF/Gamma-generated context; these records are now produced (November 18), not accepted.",
       "declarations": [
         "DiamondIntegral.Section3.gammaGroundObjectLiftFinite",
         "DiamondIntegral.Section3.gammaGroundMeasuredObjectLift",
@@ -263,8 +267,8 @@
     },
     {
       "paper_target": "Theorem 3.22",
-      "status": "proved_relative_to_accepted_18",
-      "scope": "Original real/RV names and complete Gamma ground, finite tuples and finite tags; actual valuation topology where VF dimension or derivatives occur. VF/Gamma-generation and the actual GammaGroundContext are explicit. Global and degreewise [18] geometric lift/kernel results remain precise replaceable cited inputs, not HK inputs. Actual filtered/graded presentations, ring consequences, characterizations and uniqueness are proved.",
+      "status": "proved_from_completed_18",
+      "scope": "Original real/RV names and complete Gamma ground, finite tuples and finite tags; actual valuation topology where VF dimension or derivatives occur. VF/Gamma-generation and the actual GammaGroundContext are explicit. The global and degreewise [18] lift/kernel records are parameters of the generic constructions and are all produced: unmeasured global by DiamondIntegral.Section5.completed18GroundLiftInput, bounded by completedGammaGroundBoundedLiftInput (headline theorem_3_22_bounded), measured by completedGammaGroundMeasuredLiftInput and completedGammaGroundDegreeMeasuredLiftInput. theorem_3_22_measured_graded gives the measured integral as a graded ring isomorphism onto K muRV[*]/(P); the unmeasured map is not graded, as the paper says. Actual filtered/graded presentations, ring consequences, characterizations and uniqueness are proved. Not pursued (triage): the colimit identification in the proof and the degree-at-most-k generation of the bounded I_sp.",
       "declarations": [
         "DiamondIntegral.Section3.gammaGroundUnmeasuredPositiveIntegral",
         "DiamondIntegral.Section3.gammaGroundUnmeasuredPositiveIntegral_characterization",
@@ -281,7 +285,17 @@
         "DiamondIntegral.Section3.gammaGroundDegreeMeasuredIntegral_unique",
         "DiamondIntegral.Section3.gammaGroundMeasuredGradedIntegral",
         "DiamondIntegral.Section3.gammaGroundMeasuredGradedRingIntegral",
-        "DiamondIntegral.Section3.gammaGroundUnmeasuredFilteredIntegral"
+        "DiamondIntegral.Section3.gammaGroundUnmeasuredFilteredIntegral",
+        "DiamondIntegral.Section3.completedGammaGroundBoundedLiftInput",
+        "DiamondIntegral.Section3.theorem_3_22_bounded",
+        "DiamondIntegral.Section3.theorem_3_22_bounded_characterization",
+        "DiamondIntegral.Section3.theorem_3_22_bounded_transition",
+        "DiamondIntegral.Section3.completedGammaGroundMeasuredLiftInput",
+        "DiamondIntegral.Section3.completedGammaGroundDegreeMeasuredLiftInput",
+        "DiamondIntegral.Section3.theorem_3_22_measured_graded",
+        "DiamondIntegral.Section3.theorem_3_22_measured_graded_inverse",
+        "DiamondIntegral.Section3.theorem_3_22_measured_graded_piece",
+        "DiamondIntegral.Section3.theorem_3_22_measured_graded_lift_class"
       ]
     }
   ]

@@ -1,6 +1,27 @@
 # Section 5 — Original-language monomial decomposition and Fubini
 
-Current verified status, November 15, 2026: the requested scope is complete,
+Current verified status, November 18, 2026: `verify.py` passes for the
+requested scope (1537 public definitions/structures, 2594 theorems; only
+`propext`, `Classical.choice`, `Quot.sound`). After the second audit the
+following were added (details in [GAP-REPAIRS.md](GAP-REPAIRS.md)):
+- Theorem* inflated-family Fubini (approved R083–R085):
+  `inflated_family_fubini`, `PuiseuxOriginal.inflated_family_fubini_vol`,
+  `puiseux_inflated_family_fubini_vol`, with the factor gⁿ retained;
+- Theorem 5.17 and Proposition 5.23 for RV[*] fibres (weak degree):
+  `bounded_weak_fubini_discharged`, `geometric_weak_fubini_discharged`;
+- an ambient for Notation 5.15 Vol and Corollary 5.21:
+  `PuiseuxMonsterAmbient.lean` (`exists_puiseux_ambient`,
+  `puiseux_corollary_global_vanishing`, built from a ZFC construction of
+  saturated, strongly homogeneous elementary extensions);
+- the ambient Θ is an isomorphism: `ambientPuiseuxComparison_bijective`,
+  `ambientPuiseuxComparisonEquiv` (`ElementaryRESExtension.lean`);
+- Lemma 5.19 (`Lemma519.lemma_5_19`) and Test 5.20 for tuple parameters
+  (`Test520.test_5_20_tuples`).
+Not pursued, by author-approved triage: Remark 5.16 (polyhedral base
+pieces), Remark 5.18's examples and equality reformulation, and the global
+form of the (twist:C) formula (internal to the proof of 5.14).
+
+Status of November 15, 2026: the requested scope is complete,
 and both former earlier-section inputs are discharged.
 `GammaQE.gamma_piecewise_rational_affine` proves the exact Gamma-linearity
 interface from QE. `completed18GroundLiftInput C hc` constructs the exact

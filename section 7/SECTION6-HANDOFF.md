@@ -43,3 +43,14 @@ See [the full handoff](../section%206/reference/downstream-handoff.txt)
 and [the mathematical draft](../section%206/reference/downstream-kernel-and-preservation-draft.tex).
 The draft's Section 7–8 assertions require verification; neither the
 Section 6 audit nor the draft certifies a complete native 7.26 theorem.
+
+The November 16 [corrected-pin migration](../verification/upstream-weighted-zero-upgrade/README.md)
+records new-pin Sections 2–6 verification and the exact two surviving dependency
+scope adapters. Special transformations v1.1 supplies corrected Gamma-zero
+lifts. Integration main publishes the corrected RV-valued HK kernel. The latter
+does not by itself produce the four local Gamma-valued Section 3 kernel records.
+The subsequent local proof now constructs all four; see
+[the exact producers and proof route](../section%203/verification/GAMMA-KERNEL-COMPLETION.md).
+They preserve the original base and weighted zero categories. This closes that
+upstream boundary; it does not prove the revised bounded-aperture kernel 7.26
+or infer any Section 8 completion.

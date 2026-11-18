@@ -20,6 +20,32 @@ variable {G : Type} [LinearOrderedCommGroupWithZero G] [Valued (VF M) G]
 variable {A : DefSet (rawMixedSpace (M := M) 1 r) S} {B : DefSet (rawMixedSpace (M := M) 1 s) S}
 variable {f : Map A B}
 
+/-- The transported form `ω ∘ T_A⁻¹` is constant on every final RV-label fibre
+whenever `ω` is constant on the original label fibres. -/
+theorem UnaryRelativePreparedMatching.sourceForm_extension_constant
+    (H : UnaryRelativePreparedMatching (G := G) A B f) (h00 : M ⊨ Axioms.ACVF00)
+    (ω : Map A (DefSet.univ (rawGammaPresentation (M := M)) S))
+    (hω : ∀ a b : A,a.val.2=b.val.2 → ω a=ω b) :
+    ∀ p ∈ H.source.carrier,∀ q ∈ H.source.carrier,p.2=q.2 →
+      gammaFormExtension (H.sourceForm h00 ω) p=gammaFormExtension (H.sourceForm h00 ω) q := by
+  intro p hp q hq hTags
+  rw [gammaFormExtension_at _ ⟨p,hp⟩,gammaFormExtension_at _ ⟨q,hq⟩]
+  exact congrArg (fun z : DefSet.univ (rawGammaPresentation (M := M)) S => z.val)
+    (H.sourceForm_constant h00 ω hω ⟨p,hp⟩ ⟨q,hq⟩ hTags)
+
+/-- The transported form `σ ∘ T_B⁻¹` is constant on every final RV-label fibre
+whenever `σ` is constant on the original label fibres. -/
+theorem UnaryRelativePreparedMatching.targetForm_extension_constant
+    (H : UnaryRelativePreparedMatching (G := G) A B f) (h00 : M ⊨ Axioms.ACVF00)
+    (σ : Map B (DefSet.univ (rawGammaPresentation (M := M)) S))
+    (hσ : ∀ a b : B,a.val.2=b.val.2 → σ a=σ b) :
+    ∀ p ∈ H.target.carrier,∀ q ∈ H.target.carrier,p.2=q.2 →
+      gammaFormExtension (H.targetForm h00 σ) p=gammaFormExtension (H.targetForm h00 σ) q := by
+  intro p hp q hq hTags
+  rw [gammaFormExtension_at _ ⟨p,hp⟩,gammaFormExtension_at _ ⟨q,hq⟩]
+  exact congrArg (fun z : DefSet.univ (rawGammaPresentation (M := M)) S => z.val)
+    (H.targetForm_constant h00 σ hσ ⟨p,hp⟩ ⟨q,hq⟩ hTags)
+
 theorem UnaryRelativePreparedMatching.rv_matching_exists
     (H : UnaryRelativePreparedMatching (G := G) A B f)
     (h00 : M ⊨ Axioms.ACVF00) (hc : CanonicalStructure.IsCanonical (M := M))
@@ -39,20 +65,8 @@ theorem UnaryRelativePreparedMatching.rv_matching_exists
       (gammaFormExtension (H.sourceForm h00 ω)) (gammaFormExtension (H.targetForm h00 σ)) j k) := by
   letI : CharZero (VF M) := vf_charZero_of_model00 h00
   obtain ⟨E,hEA,hDim,hMeasure⟩ := H.measure_exception h00 hc hκ.le hs hsmall hv hf ω σ hGeneric
-  have hω' : ∀ p ∈ H.source.carrier,∀ q ∈ H.source.carrier,p.2=q.2 →
-      gammaFormExtension (H.sourceForm h00 ω) p=gammaFormExtension (H.sourceForm h00 ω) q := by
-    intro p hp q hq hTags
-    rw [gammaFormExtension_at _ ⟨p,hp⟩,gammaFormExtension_at _ ⟨q,hq⟩]
-    have h := congrArg (fun z : DefSet.univ (rawGammaPresentation (M := M)) S => z.val)
-      (H.sourceForm_constant h00 ω hω ⟨p,hp⟩ ⟨q,hq⟩ hTags)
-    exact h
-  have hσ' : ∀ p ∈ H.target.carrier,∀ q ∈ H.target.carrier,p.2=q.2 →
-      gammaFormExtension (H.targetForm h00 σ) p=gammaFormExtension (H.targetForm h00 σ) q := by
-    intro p hp q hq hTags
-    rw [gammaFormExtension_at _ ⟨p,hp⟩,gammaFormExtension_at _ ⟨q,hq⟩]
-    have h := congrArg (fun z : DefSet.univ (rawGammaPresentation (M := M)) S => z.val)
-      (H.targetForm_constant h00 σ hσ ⟨p,hp⟩ ⟨q,hq⟩ hTags)
-    exact h
+  have hω' := H.sourceForm_extension_constant h00 ω hω
+  have hσ' := H.targetForm_extension_constant h00 σ hσ
   apply prepared_unary_rv_matching_exists hc hκ hs h00 hsmall hv H.source H.target H.map H.bijective H.wholeFibres
     H.sourceProper H.sourceBounded H.sourcePullback H.targetProper H.targetBounded H.targetPullback j k hLeadA hLeadB
     (gammaFormExtension (H.sourceForm h00 ω)) (gammaFormExtension (H.targetForm h00 σ))
@@ -74,6 +88,14 @@ structure UnaryRelativeMeasuredMatching
   targetLeading : ∀ p ∈ geometry.target.carrier,rv M (p.1 0)=p.2 targetIndex
   rv : PreparedUnaryRVMatching geometry.source geometry.target geometry.map
     (gammaFormExtension (geometry.sourceForm h00 ω)) (gammaFormExtension (geometry.targetForm h00 σ)) sourceIndex targetIndex
+  /-- Lemma 6.38: `ω' = ω ∘ T_A⁻¹` is `rv`-contractible, i.e. constant on every
+  final RV-label fibre of `A♭`. -/
+  sourceContractible : ∀ p ∈ geometry.source.carrier,∀ q ∈ geometry.source.carrier,p.2=q.2 →
+    gammaFormExtension (geometry.sourceForm h00 ω) p=gammaFormExtension (geometry.sourceForm h00 ω) q
+  /-- Lemma 6.38: `σ' = σ ∘ T_B⁻¹` is `rv`-contractible, i.e. constant on every
+  final RV-label fibre of `B♭`. -/
+  targetContractible : ∀ p ∈ geometry.target.carrier,∀ q ∈ geometry.target.carrier,p.2=q.2 →
+    gammaFormExtension (geometry.targetForm h00 σ) p=gammaFormExtension (geometry.targetForm h00 σ) q
 
 theorem unary_relative_measured_prepared_matching_exists
     (h00 : M ⊨ Axioms.ACVF00) (hc : CanonicalStructure.IsCanonical (M := M))
@@ -105,6 +127,7 @@ theorem unary_relative_measured_prepared_matching_exists
     (H.regularized_source_leading h00 hc hκ hs hv) (H.regularized_target_leading h00 hc hκ hs hv)
     ω σ hω hσ hGeneric
   exact ⟨⟨W,_,_,H.regularized_source_leading h00 hc hκ hs hv,
-    H.regularized_target_leading h00 hc hκ hs hv,R⟩⟩
+    H.regularized_target_leading h00 hc hκ hs hv,R,
+    W.sourceForm_extension_constant h00 ω hω,W.targetForm_extension_constant h00 σ hσ⟩⟩
 
 end DiamondIntegral.Section6

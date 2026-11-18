@@ -7,5 +7,6 @@
   "working_manuscript_sha256": "17631808632069c4af757f0268e6e905ab60ea2499b852559f9110977cf62b01",
   "adopted_fragment": "Section5/reference/section5-approved-final-corollary.tex",
   "preserved": "All preceding text and all later sections",
-  "lean_status": "Lemma 5.12 complete; later numbered results remain unfinished"
+  "lean_status": "Complete (November 18). The corollary is DiamondIntegral.Section5.PuiseuxOriginal.corollary_global_vanishing (VarietyGlobalVanishing.lean), with chart independence complexVarietyVolume_chart; corollary_global_vanishing_discharged instantiates the proved Gamma-linearity and lifting/kernel inputs, and puiseux_corollary_global_vanishing applies it on the constructed ambient (PuiseuxMonsterAmbient.lean). The other numbered results in the requested scope are complete as recorded in README.md and verification/status.json.",
+  "lean_status_history": "At approval: Lemma 5.12 complete; later numbered results remained unfinished."
 }

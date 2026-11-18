@@ -1,17 +1,37 @@
 # Section 3 status
 
+November 17 continuation: all four Gamma-valued measured lift/kernel records
+now have local proved producers, including the positive-degree reverse kernel
+over the original base. See [the completion note](verification/GAMMA-KERNEL-COMPLETION.md)
+and [verification progress](verification/GAMMA-EXTENSION-PROGRESS.json).
+The historical cited-input boundary below is superseded for these four
+records. November 18: the Gamma-ground unmeasured record
+(`Section5.completed18GroundLiftInput`, from the completed upstream [18];
+the former unfinished 5.8 input is discharged by
+`Section5.completed_section5_input`) and the bounded records
+(`completedGammaGroundBoundedLiftInput`,
+`MeasuredRealGround.completedOrdinaryBoundedLiftInput`) are produced too.
+New headline results: `theorem_3_22_bounded`, `theorem_3_22_measured_graded`,
+`remark_3_14`; the section 2 inputs are discharged in
+`Section2CitedInputsDischarged.lean` and `Section2GammaLinearityDischarged.lean`
+(the Γ rational-affine input is proved,
+`Section5.GammaQE.gamma_piecewise_rational_affine`). See
+[GAP-REPAIRS.md](GAP-REPAIRS.md) and `verification/cited-inputs.json`.
+
 The §3 formalization is complete in the documented paper contexts,
-relative to the expressly accepted cited results. This includes both
+relative to the approved R--Y classification. This includes both
 corrected positive tensor presentations, both ordinary horizontal
 positive monomorphisms, both full-ground affine-classification statements,
 the actual degree-zero equivalences, and the stated integral comparisons.
-The later [18] geometric kernels and approved R--Y classification remain
-explicit replaceable inputs. No HK result is a given input.
+The later [18] geometric kernels are no longer accepted inputs (they are
+produced as above); the approved R--Y classification remains an explicit
+replaceable input. No HK result is a given input.
 
-The latest complete integrated check passes across 1,003 supporting modules
-and 5,324 declarations. A separate semantic review links 21 manuscript
-targets to 119 actual audited declarations; the verified receipt includes
-that coverage record. See `verification/paper-targets.json`.
+The latest complete integrated check (November 18) passes across 1,527
+supporting modules: 3,895 theorem types, 2,806 definitions and 172 named
+instances. A separate semantic review links 21 manuscript targets to 132
+audited declaration heads (updated November 18; the receipt is refreshed by
+the next verifier run). See `verification/paper-targets.json`.
 The adopted manuscript is unchanged. Independent disc-name extensions and
 the concrete bounded categories of §4 are outside this §3 certificate.
 T001/C002 and the four reviewed mathematical corrections are adopted;

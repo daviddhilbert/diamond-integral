@@ -1,0 +1,634 @@
+{
+  "status": "COMPLETE_ALL_FOUR_MEASURED_INPUTS_PROVED_AND_SECTIONS2_6_VERIFIED",
+  "scope": "Gamma-valued measured lifting over the original VF/Gamma ground; no manuscript definitions changed",
+  "input_records": {
+    "YinMeasuredLiftInput": "constructed: completedMeasuredLiftInput in MeasuredCompletedOrdinaryInputs; actual lift, class formula, surjectivity and exact kernel proved",
+    "YinDegreeMeasuredLiftInput": "constructed: completedDegreeMeasuredLiftInput in MeasuredCompletedOrdinaryInputs; actual lift, class formula, surjectivity and exact kernel proved",
+    "YinGammaGroundMeasuredLiftInput": "constructed: completedGammaGroundMeasuredLiftInput in GammaCompletedMeasuredInputs; actual lift, class formula, surjectivity and exact kernel proved",
+    "YinGammaGroundDegreeMeasuredLiftInput": "constructed: completedGammaGroundDegreeMeasuredLiftInput in GammaMeasuredDegreeKernel; actual lift, class formula, surjectivity and exact kernel proved"
+  },
+  "proved": [
+    {
+      "result": "Actual original-ground measured RV arrows lift to genuine essential measured VF arrows",
+      "module": "GammaMeasuredHomLiftClosure"
+    },
+    {
+      "result": "Original Gamma density preparation using finite RV tests; no definable Gamma-to-RV section",
+      "module": "GammaDensityPreparation"
+    },
+    {
+      "result": "Surjective degreewise measured lift at the exact GammaGroundContext hypotheses",
+      "module": "GammaMeasuredClosureClassLift"
+    },
+    {
+      "result": "Surjective measured semiring lift with literal object-class and product formulas",
+      "module": "GammaMeasuredSemiringLift"
+    },
+    {
+      "result": "Exact degree-zero measured equivalence and degree-zero principal-quotient kernel",
+      "module": "GammaMeasuredZeroKernel"
+    },
+    {
+      "result": "Both directions of label-compatible Gamma lifting and pointwise numerical descent",
+      "module": "GammaMeasuredLabelLiftEquivalence"
+    },
+    {
+      "result": "Jacobian one for actual elementary focus lifts at original-base independent points",
+      "module": "GammaElementaryLiftJacobian"
+    },
+    {
+      "result": "Primitive and chain certificates descend from the internal definable-closure base",
+      "module": "GammaChainClosureDescent"
+    },
+    {
+      "result": "Elementary focus existence via closure with original-base graph certificates and Jacobian",
+      "module": "GammaElementaryClosureExistence"
+    },
+    {
+      "result": "Elementary focus retains old labels and transports arbitrary Gamma densities",
+      "module": "GammaElementaryDensityEquation"
+    },
+    {
+      "result": "Full weighted head factorization, including genuine measured degree-zero heads",
+      "module": "GammaMeasuredPrincipalFactor"
+    },
+    {
+      "result": "Native original-Gamma admissibility proves head finiteness",
+      "module": "GammaMeasuredHeadFiniteness"
+    },
+    {
+      "result": "Weighted elementary point/cone factorizations lie in the stated semiring congruence",
+      "module": "GammaMeasuredElementaryCongruence"
+    },
+    {
+      "result": "Actual native unit-form elementary VF arrows and comparison to literal local lifts",
+      "module": "GammaNativeUnitLiftBridge"
+    },
+    {
+      "result": "The actual semiring lift factors surjectively through the originally stated special congruence",
+      "module": "GammaMeasuredQuotientLift"
+    },
+    {
+      "result": "Actual native elementary VF bijections transport arbitrary original-ground Gamma forms",
+      "module": "GammaNativeMeasuredElementaryLift"
+    },
+    {
+      "result": "The concrete weighted elementary object retains precisely the original Gamma form",
+      "module": "GammaMeasuredElementaryForm"
+    },
+    {
+      "result": "Removing zero structural labels is a cofull comparison for arbitrary Gamma forms",
+      "module": "GammaNativeMeasuredNormalization"
+    },
+    {
+      "result": "The actual elementary measured VF lift agrees with the weighted principal-congruence construction",
+      "module": "GammaMeasuredElementaryLiftClass"
+    },
+    {
+      "result": "Every special chain retains all original RV labels at explicit final coordinates",
+      "module": "GammaChainRetainedLabels"
+    },
+    {
+      "result": "Whole special chains transport arbitrary Gamma forms and retain constancy on RV labels",
+      "module": "GammaSpecialDensityTransport"
+    },
+    {
+      "result": "Every original-ground special chain gives an actual measured VF arrow for its transported Gamma form",
+      "module": "GammaSpecialMeasuredVFTransport"
+    },
+    {
+      "result": "Arbitrary label-constant Gamma forms descend to the literal native full-key RV presentation",
+      "module": "GammaNativePullbackForms"
+    },
+    {
+      "result": "Native Gamma weight-preserving label isomorphisms descend to the full-weight measured RV category",
+      "module": "GammaNativeMeasuredIsomorphisms"
+    },
+    {
+      "result": "The literal full-key RV presentation transports its Gamma density by a VF-identity measured arrow",
+      "module": "GammaNativePullbackMeasuredLift"
+    },
+    {
+      "result": "Full-weight normalization respects native RV scissors with the entire original Gamma form",
+      "module": "GammaNativeMeasuredScissors"
+    },
+    {
+      "result": "The actual full-weight native elementary form lies in the original homogeneous special congruence",
+      "module": "GammaNativeElementaryCongruence"
+    },
+    {
+      "result": "Every unary native elementary relation is proved for arbitrary Gamma density without added kernel assumptions",
+      "module": "GammaNativeUnaryElementaryRelation"
+    },
+    {
+      "result": "Literal native RV-pullback presentation isomorphisms preserve arbitrary pulled-back Gamma forms",
+      "module": "GammaMeasuredPresentationIsomorphism"
+    },
+    {
+      "result": "Full unary measured native VF bijections have equal classes in the original principal Gamma quotient",
+      "module": "GammaNativeUnaryFullKernel"
+    },
+    {
+      "result": "Full-label native measured VF comparison descends to the exact measured RV category in every positive degree",
+      "module": "GammaNativeFullLabelMeasuredDescent"
+    },
+    {
+      "result": "Every coordinate of every native elementary blowup satisfies the Gamma principal relation, including zero structural rows",
+      "module": "GammaNativeElementaryRelations"
+    },
+    {
+      "result": "Every partial focus and every alternating special chain in every positive degree respects the original quotient with the exact retained-label Gamma form",
+      "module": "GammaNativeSpecialComparison"
+    },
+    {
+      "result": "Generic finite-row preparation yields actual measured indexed-family isomorphisms for arbitrary retained Gamma forms in every positive base dimension",
+      "module": "GammaPreparedMeasuredFamilies"
+    },
+    {
+      "result": "Existing special preparations extend across retained RV labels by actual alternating chains with complete original-Gamma graph certificates",
+      "module": "GammaSpecialFamilyLifts"
+    },
+    {
+      "result": "Prepared indexed families and original native lifts have equal principal classes with the exact old Gamma forms",
+      "module": "GammaSpecialIndexedFamilyComparison"
+    },
+    {
+      "result": "Generic constrained finite-label witnesses imply the original measured principal relation in every positive degree",
+      "module": "GammaGenericFiniteLabelKernel"
+    },
+    {
+      "result": "Full measured bijections fixing the VF tuple have equal principal classes in every positive degree; generic measure preservation suffices",
+      "module": "GammaNativeFixedVFFullKernel"
+    },
+    {
+      "result": "Full measured unary comparisons preserve every fixed-degree additive invariant respecting actual native elementary steps; the comparison has a finite geometric derivation using actual objects and disjoint unions.",
+      "module": "GammaMeasuredGeometricRelations"
+    },
+    {
+      "result": "Complete Gamma code graphs promote to actual measured finite-row schemata using the existing finite-object and tuple-promotion theorems.",
+      "module": "GammaMeasuredSchemaPromotion"
+    },
+    {
+      "result": "Actual original-ground measured RV object isomorphisms yield genuine finite chart witnesses for fixed promoted endpoint schemata.",
+      "module": "GammaMeasuredActualIsomorphismWitnesses"
+    },
+    {
+      "result": "Existing coproduct and elementary formulas preserve Gamma quotient density validity, using native finite structural bounds.",
+      "module": "GammaMeasuredSchemaOperationValidity"
+    },
+    {
+      "result": "Finite unary geometric proofs promote to complete Gamma formulas, including actual elementary objects and all density codes.",
+      "module": "GammaUnaryGeometricFormulaWitnesses"
+    },
+    {
+      "result": "Generic finite Gamma-measured proof schemata admit one native special preparation over the original base.",
+      "module": "GammaGenericMeasuredGeometryPreparation"
+    },
+    {
+      "result": "Uniform measured chart, agreement, elementary and coproduct schemata are sound after finite-volume indexed assembly in the original principal semiring quotient.",
+      "module": "GammaMeasuredIndexedGeometry"
+    },
+    {
+      "result": "Pointwise geometric witnesses glue over an arbitrary actual finite-volume RV index using original-base compactness and actual binary scissors.",
+      "module": "GammaMeasuredIndexedWitnessGluing"
+    },
+    {
+      "result": "Generic fibre witnesses give an actual comparison of prepared essential indexed families with their complete Gamma density graphs.",
+      "module": "GammaPreparedMeasuredGeometryComparison"
+    },
+    {
+      "result": "The full unary measured kernel comparison and its finite geometric proof hold over an arbitrary original VF/Gamma base. Definable coefficient-field extension is eliminated from actual forms, isomorphisms, algebraic centers and elementary charts; no resolved-base hypothesis is imposed.",
+      "modules": [
+        "GammaMeasuredSchemaBaseChange",
+        "GammaMeasuredRealBaseExtension",
+        "GammaGroundRVBaseReduction",
+        "GammaGroundMeasuredBaseReductionOperations",
+        "GammaGroundMeasuredElementaryBaseReduction",
+        "GammaUnaryGeometryBaseReduction",
+        "GammaUnaryOriginalBaseGeometry",
+        "GammaUnaryOriginalBaseKernel"
+      ]
+    },
+    {
+      "result": "Actual measured unary row comparisons yield finite essential-row proofs and a prepared higher-degree principal comparison. Relative trace compilation is upgraded to a full measured map over the original base and transports arbitrary compatible Gamma forms. Selected head forms and uniform finite bounds retain complete density graphs.",
+      "modules": [
+        "GammaGroundUnaryOriginalBaseKernel",
+        "GammaHeadFibreGroundMaps",
+        "GammaHeadMeasuredFibres",
+        "GammaHeadRetainedForms",
+        "GammaMeasuredSelectedSchemata",
+        "GammaMixedRVFibres",
+        "GammaUnaryMeasuredRowKernel",
+        "GammaMeasuredSelectedBounds",
+        "GammaHeadLiftForms",
+        "GammaMeasuredNormalizationRows",
+        "GammaMeasuredRawRowForms",
+        "GammaPreparedUnaryRowLiftComparison",
+        "GammaUnaryLiftRowComparisons",
+        "GammaUnaryNativeRowWitnesses",
+        "GammaUniformTraceFormTransport",
+        "GammaUniformTraceMeasuredBijections"
+      ]
+    },
+    {
+      "result": "Certified head traces and every-order contraction traces descend to an arbitrary original base. A relatively unary full measured map yields actual full unary raw RV head-row maps (including zero heads), uniform bounded measured schemata, finite geometric proof witnesses on generic tails, and a prepared total-degree comparison in the original principal quotient.",
+      "modules": [
+        "GammaHeadRawRowLiftDomains",
+        "GammaHeadRawRowMeasuredBridge",
+        "GammaHeadRawRowSchemaSemantics",
+        "GammaOriginalBaseHeadTraces",
+        "GammaPreparedFamilyComparisons",
+        "GammaRelativeHeadFormulaWitnesses",
+        "GammaRelativeHeadPreparedComparison",
+        "GammaRelativeHeadRowMaps",
+        "GammaTracedHeadMeasuredFibres",
+        "GammaTracedHeadMeasuredLifts",
+        "GammaOriginalBaseContractionTraces"
+      ]
+    },
+    {
+      "result": "An ordinary base special chain lifts across any injectively selected VF subtuple while fixing all complementary VF coordinates. Actual native partial-base preparation has original-base Jacobian one and transports arbitrary Gamma forms by a full measured bijection, including when the real presentations differ.",
+      "modules": [
+        "GammaVFProjectionFocus",
+        "GammaVFProjectionChains",
+        "GammaSpecialVFFamilyLifts",
+        "GammaGroundJacobianVFTransfer",
+        "GammaPartialBaseJacobian",
+        "GammaPartialBaseFullMeasured",
+        "GammaNativeSpecialVFKernels",
+        "GammaNativePartialBaseKernels",
+        "GammaPartialBasePresentationChange"
+      ]
+    },
+    {
+      "result": "Native RV objects give uniformly bounded actual VF-indexed volume-slice schemata with complete Gamma density graphs. Their full lift and all prepared structural and density rows are computed literally, retaining zero strata.",
+      "modules": [
+        "GammaRVParametersFromVF",
+        "GammaMeasuredLabelSchemata",
+        "GammaMeasuredLabelUniformBounds",
+        "GammaNativeMeasuredVFSlices",
+        "GammaNativeLiftMembership",
+        "GammaNativeVFSliceLiftDomains",
+        "GammaNativePreparedSliceRows",
+        "GammaNativeVFSliceDensities",
+        "GammaNativePreparedSliceSemantics",
+        "GammaPartialBaseNormalForm",
+        "GammaFrozenPrefixMaps"
+      ]
+    },
+    {
+      "result": "The prepared VF family is fully measured-isomorphic to the native lift of its indexed RV presentation. Combining this actual map with the ordinary partial-base comparison identifies the indexed principal class with the original native principal class.",
+      "modules": [
+        "GammaPreparedIndexAttachments",
+        "GammaPreparedIndexedLiftDomains",
+        "GammaPreparedIndexedLiftBijections",
+        "GammaPreparedIndexedFullMeasured",
+        "GammaNativePartialBaseIndexedComparison",
+        "GammaNativePreparedSliceComparison"
+      ]
+    },
+    {
+      "result": "Removing zero index volumes commutes with measured normalization in every fibre degree. Simultaneous preparation of raw and essential density rows turns generic finite essential-row proofs into equality of raw prepared indexed principal values. Actual generic unary slice lift comparisons consequently imply equality of the original higher-degree native principal classes.",
+      "modules": [
+        "GammaMeasuredIndexedBaseEssential",
+        "GammaMeasuredIndexedNormalizedComparison",
+        "GammaRawEssentialGeometryPreparation",
+        "GammaGenericRawFamilyComparison",
+        "GammaNativeUnarySliceKernel"
+      ]
+    },
+    {
+      "result": "Actual frozen-prefix unary maps, inverse maps, density identities and restricted Jacobians give the full positive-degree native kernel comparison for any single VF coordinate, with arbitrary original-ground Gamma forms. Coordinate permutations are actual full measured maps with value-one sign Jacobians.",
+      "modules": [
+        "GammaFrozenPrefixForms",
+        "GammaFrozenPrefixSliceMaps",
+        "GammaFrozenPrefixSliceBijections",
+        "GammaFrozenPrefixIndependence",
+        "GammaFrozenPrefixSliceJacobians",
+        "GammaFrozenPrefixFullMeasured",
+        "GammaNativePrefixFullKernel",
+        "GammaNativeMeasuredVolumePermutations",
+        "GammaNativeLiftPermutations",
+        "GammaGroundVFPermutationJacobians",
+        "GammaNativeFullMeasuredPermutations",
+        "GammaNativeRelativeFullKernel"
+      ]
+    },
+    {
+      "result": "The actual determinant graph gives original-base total Jacobian and Gamma density functions. Arbitrary mixed bijections transport genuine Gamma forms; the given finite unary factorization upgrades to full measured chains on every piece and retains both endpoint forms and the original map.",
+      "modules": [
+        "GammaGroundJacobianValue",
+        "GammaGroundFiniteTopForms",
+        "GammaGroundJacobianDensityForms",
+        "GammaGroundMeasuredFormTransport",
+        "GammaMeasuredUnaryChains",
+        "GammaMeasuredUnaryChainEndpoints",
+        "GammaFullMeasuredUnaryPartition"
+      ]
+    },
+    {
+      "result": "Every mixed Gamma form factors through actual RV data. Appending those data yields a VF-fixed full measured presentation with density on retained RV labels. Relatively unary maps remain relatively unary after conjugation, and the original-base head formula comparison applies to these mixed presentations.",
+      "modules": [
+        "GammaDensityRVFactorization",
+        "GammaMixedRVLabelAttachments",
+        "GammaMixedRetainedDensityNormalization",
+        "GammaRetainedRelativeMeasuredMaps",
+        "GammaRetainedHeadComparisons"
+      ]
+    },
+    {
+      "result": "Selected native RV lifts equal the existing VF-tail realizations, including zero strata and their full Gamma forms. Appending fixed VF tails preserves the actual Jacobian; selected-tail maps preserve the given generic Gamma measure equation. Uniform traces have original-base Jacobian one without a finite-RV-fibre assumption and lift to full measured maps when fixing the selected labels gives finite fibres.",
+      "modules": [
+        "GammaSelectedLiftCarriers",
+        "GammaSelectedLiftMeasuredBridge",
+        "MixedVFTailJacobians",
+        "GammaSelectedVFTailGroundMaps",
+        "GammaSelectedVFTailJacobians",
+        "GammaUniformTraceJacobians",
+        "GammaSelectedVFTailMeasuredMaps",
+        "GammaSelectedTraceMeasuredMaps"
+      ]
+    },
+    {
+      "result": "A traced unary head contraction on a positive selected family has the principal class of its prepared indexed family, via actual full measured native lifts fixing every selected VF tail. Includes all zero strata.",
+      "modules": [
+        "GammaHeadSelectedLiftCarriers",
+        "GammaHeadSelectedNativeMeasuredBridge",
+        "GammaTracedSelectedHeadMeasuredLifts",
+        "GammaUnarySelectedHeadNativeBridge",
+        "GammaPreparedUnaryMeasuredRows",
+        "GammaPreparedUnaryIndexedMeasuredBridge",
+        "GammaSelectedUnarySchemaSemantics",
+        "GammaUnarySelectedPreparedComparison"
+      ]
+    },
+    {
+      "result": "The existing finite-label, VF-fixed, special and partial-base proofs have been strengthened to preserve arbitrary additive elementary invariants. Indexed elementary charts, finite geometric schemata, original-base witness gluing, normalized rows and raw prepared-family comparisons retain the same stronger conclusion. The prepared native volume-slice bridge has this conclusion as well. These are targeted checked refinements for extracting finite geometric relations, not a complete higher-degree reverse kernel.",
+      "modules": [
+        "GammaAdditiveIndexedFamilyComparison",
+        "GammaGenericFiniteLabelAdditive",
+        "GammaNativeFixedVFPointAdditive",
+        "GammaNativeFixedVFFullAdditive",
+        "GammaNativeSpecialVFAdditive",
+        "GammaNativePartialBaseAdditive",
+        "GammaPartialBasePresentationAdditive",
+        "GammaMeasuredIndexedAdditive",
+        "GammaMeasuredIndexedAdditiveGluing",
+        "GammaGenericRawFamilyAdditive",
+        "GammaNativePartialBaseIndexedAdditive",
+        "GammaNativePreparedSliceAdditive"
+      ]
+    },
+    {
+      "result": "In every positive degree, a full native Gamma-measured bijection changing any one VF coordinate preserves every additive elementary invariant and yields an explicit finite measured geometric relation. The unary positive selected-family head-to-prepared comparison now yields such a finite geometric relation as well, over the original base.",
+      "modules": [
+        "GammaNativeUnarySliceAdditive",
+        "GammaNativePrefixFullAdditive",
+        "GammaNativeRelativeFullAdditive",
+        "GammaNativeRelativeGeometricRelations",
+        "GammaUnarySelectedPreparedGeometry"
+      ]
+    },
+    {
+      "result": "Finite native geometric proofs in every positive degree convert to local last-coordinate proofs and valid first-order formula witnesses using the existing measured permutations, elementary product charts and row promotion. The generic unary positive selected-family comparison is proved from those witnesses and the specified actual full measured endpoint maps. Traced heads restrict to generic frozen tails with Jacobian one without finite RV fibres; their selected finite-volume fibres have actual full measured native bridges and exact complete structural-volume and Gamma-density row semantics. All bases remain original real/Gamma plus the explicitly frozen VF tuple.",
+      "modules": [
+        "GammaNativeElementaryPermutationTransport",
+        "GammaLastMeasuredGeometry",
+        "GammaMeasuredGeometryFormulaWitnesses",
+        "GammaSelectedUnaryPreparedGeometry",
+        "GammaGenericUnarySelectedGeometry",
+        "GammaTracedHeadFibreJacobians",
+        "GammaSelectedHeadMeasuredBridge",
+        "GammaFrozenHeadPreparations",
+        "GammaFrozenHeadSelectedPresentations",
+        "GammaFrozenSelectedHeadMeasuredBridge",
+        "GammaFrozenSelectedHeadRows"
+      ]
+    },
+    {
+      "result": "Generic positive selected-family finite geometric witnesses propagate through the specified original-base traced head preparations. The proof reuses the RV-density frozen-tail/prepared-family argument with complete Gamma density graphs. The selected retained-density class is closed under head contraction, and the complete ordered head induction preserves these generic finite relations, with total degree checked. No coordinate-order exchange or full reverse kernel is claimed here.",
+      "modules": [
+        "GammaFrozenParameterRecoding",
+        "GammaFrozenSelectedSchemaRows",
+        "GammaFrozenSelectedFormulaWitnesses",
+        "GammaGenericSelectedHeadWitnesses",
+        "GammaRetainedFormRVImages",
+        "GammaSelectedRetainedData",
+        "GammaGenericSelectedHeadPropagation",
+        "GammaSelectedOrderedTraces"
+      ]
+    },
+    {
+      "result": "The actual shared-label pullback map descends arbitrary Gamma forms by the saved full-label polydisc theorem. Jacobian one outside an intrinsically small exceptional set holds at all original-ground generic points, independently of the real presentation. The specified prepared rectangle conjugate now gives a genuine measured Gamma RV arrow.",
+      "modules": [
+        "GammaLabelDeterminedPullbackIsos",
+        "GammaLabelDeterminedPullbackMeasuredDescent",
+        "GammaJacobianOneExceptionalDescent",
+        "GammaNativeAlmostEverywhereJacobians",
+        "GammaPullbackMeasuredAlmostEverywhereDescent",
+        "GammaPreparedRectangleMeasuredComparison"
+      ]
+    },
+    {
+      "result": "The saved selected-head and ordered induction proofs now apply to any specified original-Gamma head with its actual generic Jacobian-one certificate. The actual recorded-key matching-family preparation gives a measured Gamma RV arrow for every retained Gamma form, with all label-determination and nonzero-coordinate obligations discharged by the existing geometry.",
+      "modules": [
+        "GammaFrozenHeadGenericJacobians",
+        "GammaFrozenSelectedGenericHeadBridge",
+        "GammaGenericGeneralHeadWitnesses",
+        "GammaSelectedMeasuredHeads",
+        "GammaSelectedMeasuredOrderedTraces",
+        "GammaMatchingPreparedMeasuredComparison"
+      ]
+    },
+    {
+      "result": "The relatively unary full measured comparison starts the contraction induction with zero initially selected RV coordinates. The general ordered selected induction has principal-quotient RV endpoint values, obtained through the proved zero-index schema soundness theorem. Their identification with the paper's literal RV objects is still being completed; no full reverse kernel is claimed.",
+      "modules": [
+        "GammaGenericHeadMeasuredLifts",
+        "GammaRelativeGenericHeadRowMaps",
+        "GammaRelativeGenericHeadFormulaWitnesses",
+        "GammaEmptyParameterMeasuredValues",
+        "GammaSelectedFinalMeasuredValues",
+        "GammaRelativeFirstHeadPropagation",
+        "GammaRelativeOrderedMeasuredValues"
+      ]
+    },
+    {
+      "result": "The ordered induction endpoint value is now identified with the literal selected RV presentation class, including its full structural tuple and complete Gamma density graph. Full relatively unary measured maps preserve these literal endpoint values under specified aligned heads. Every native Gamma-definable head preparation has the actual measured-head certificate, obtained from its checked special Jacobian and the original-ground exceptional-set descent.",
+      "modules": [
+        "GammaEmptyIndexedLabelBijections",
+        "GammaEmptyIndexedStructuralVolumes",
+        "GammaEmptyIndexedMeasuredComparison",
+        "GammaEmptyParameterObjectIdentification",
+        "GammaMeasuredLiteralNormalizationRows",
+        "GammaPureSelectedMeasuredRows",
+        "GammaSelectedLiteralEndpointValues",
+        "GammaNativeSelectedMeasuredHeads"
+      ]
+    },
+    {
+      "result": "Specified native ordered programs now realize actual measured traces, with their literal target set, selected indices and retained original Gamma form checked. Full native relatively unary measured maps preserve their complete program values, and specified preparations in the same order give equal values. Structural selected-index products and retained-form native RV isomorphisms are checked for genuine Gamma densities.",
+      "modules": [
+        "GammaNativeOrderedMeasuredEndpoints",
+        "GammaNativeOrderedMeasuredTraces",
+        "GammaNativeOrderedEndpointForms",
+        "GammaNativePositiveProgramTraces",
+        "GammaNativeFullProgramValues",
+        "GammaNativeSameOrderMeasuredValues",
+        "GammaNativeRawMeasuredIsomorphisms",
+        "GammaOrderedSelectedProducts",
+        "GammaNativeRetainedRVIsomorphisms",
+        "GammaGroundFormExtensionByOne"
+      ]
+    },
+    {
+      "result": "The raw rectangle order isomorphism and canonical/raw contraction normalization preserve arbitrary total retained Gamma forms. Native ground label bijections preserving the full locus and complete weight give actual normalized measured RV arrows.",
+      "modules": [
+        "GammaNativeFiniteCodeExtensions",
+        "GammaRectangleRawMeasuredOrders",
+        "GammaCanonicalMeasuredContractions",
+        "GammaNativeGroundHighRestriction"
+      ]
+    },
+    {
+      "result": "Native ordered endpoint classes are identified with literal raw contractions. The full relatively unary standard-order comparison, arbitrary-order rectangle comparison, canonical pullback class and matching translated/opposite comparisons retain arbitrary original-ground Gamma forms. Finite native restriction and form identities are being assembled for the cell partitions.",
+      "modules": [
+        "GammaSelectedNativeFinalComparison",
+        "GammaNativeEndpointHeterogeneousSpecs",
+        "GammaNativeEndpointRawClasses",
+        "GammaNativePointFullMeasuredPermutations",
+        "GammaNativeProgramRawValues",
+        "GammaRectangleAllOrderMeasuredValues",
+        "GammaStandardRelativeMeasuredValues",
+        "GammaNativeRetainedFullMaps",
+        "GammaCanonicalPullbackMeasuredValues",
+        "GammaRectanglePullbackMeasuredValues",
+        "GammaNativePullbackTotalForms",
+        "GammaRelativeRetainedContractionValues",
+        "GammaMatchingContractionMeasuredValues",
+        "GammaMatchingTranslatedMeasuredValues",
+        "GammaMatchingFamilyMeasuredValues",
+        "GammaStandardRawLabelCutComparisons"
+      ]
+    },
+    {
+      "result": "The complete two-VF order comparison is compiled for arbitrary retained Gamma densities using actual cell partitions. Small-dimension sources have zero measured contraction value. Homogeneous principal equalities have finite geometric witnesses; frozen two-coordinate and two-partial-program comparisons descend to the original base.",
+      "modules": [
+        "GammaPreparedPairAllOrderMeasuredValues",
+        "GammaCellGraphAllOrderMeasuredValues",
+        "GammaTwoVFAllOrderMeasuredValues",
+        "GammaSmallDimensionContractionValues",
+        "GammaPrincipalGeometricReflection",
+        "GammaLastGeometryBaseReduction",
+        "GammaFrozenTwoVFMeasuredWitnesses",
+        "GammaTwoPartialMeasuredRows"
+      ]
+    },
+    {
+      "result": "Full first-two coordinate exchange in every VF dimension, selected-coordinate same-order and first-two comparisons, and arbitrary-order independence are compiled for arbitrary complete Gamma densities. Contraction values for retained and arbitrary mixed forms are well-defined and invariant under every full measured relatively unary map and finite such chain. The original base remains the category base; generated-base lemmas are internal and closure descent is still required in the final kernel assembly.",
+      "modules": [
+        "GammaFirstTwoStandardMeasuredExchange",
+        "GammaSelectedTailCompletionValues",
+        "GammaSelectedStandardMeasuredExchanges",
+        "GammaCommonHeadMeasuredOrders",
+        "GammaArbitraryMeasuredContractionOrders",
+        "GammaFullRawAllOrderMeasuredValues",
+        "GammaRelativeArbitraryMeasuredOrders",
+        "GammaRetainedRelativeContractionValues",
+        "GammaMixedContractionValues"
+      ]
+    },
+    {
+      "result": "Retained contraction values are additive for arbitrary binary Gamma-definable domain partitions. The proof appends an absolute finite RV tag and uses actual VF-fixed full measured restrictions and the checked label-cut scissors. Empty arbitrary mixed domains have zero contraction value.",
+      "modules": [
+        "GammaGroundRVBinaryClassifiers",
+        "GammaRetainedRVAttachments",
+        "GammaRetainedLabelPartitionValues",
+        "GammaMeasuredPredicateRestrictions",
+        "GammaRetainedBinaryPartitionValues",
+        "GammaMixedEmptyContractionValues"
+      ]
+    },
+    {
+      "result": "For arbitrary mixed Gamma forms, the constructed contraction value is additive over every finite definable partition and invariant under arbitrary full measured bijections. The proof combines the saved actual finite unary partition, actual transported Gamma forms, order independence, and finite RV predicate tags.",
+      "modules": [
+        "GammaMixedContractionValues",
+        "GammaMixedBinaryPartitionValues",
+        "GammaMixedFinitePartitionValues",
+        "GammaMixedFullBijectionValues"
+      ]
+    }
+  ],
+  "remaining": [],
+  "boundary": "An unmeasured Isp witness or the RV-valued kernel alone does not discharge the arbitrary Gamma-valued kernel. No such implication is claimed.",
+  "verification": {
+    "latest_run": "sections2-6-gamma-mixed-transport-audit",
+    "state": "PASS: full project rebuild (16713 jobs), all Sections 2\u20136 verifiers, and corrected-pin compatibility audit of 46 interfaces, including all four proved measured input constructors and their exact kernel theorems. Only permitted standard logical principles.",
+    "section3_theorem_types": 3767,
+    "new_proof_modules": 515,
+    "root_build_jobs": 16713,
+    "checks": {
+      "root": "PASS",
+      "section2": "PASS",
+      "section3": "PASS",
+      "section4": "PASS",
+      "section5": "PASS_SECTION5_REQUESTED_SCOPE_IN_RECORDED_CONTEXT",
+      "section6": "PASS",
+      "weighted_zero_compatibility": "PASS"
+    },
+    "checked_pins": {
+      "special_transformations": "25852c85a31c67069b148bd31348128318303510",
+      "integration_in_acvf": "7675d31332f20421c803ea16af84964ed74cd51f",
+      "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+      "acvf_qe": "939346b0a99899e22a873479364e3cc5d142731c"
+    },
+    "full_audit_new_proof_modules": 515,
+    "targeted_only_modules": [],
+    "policy": "Author instruction: use targeted checks during proof development; rerun the full Sections 2\u20136 audit after the remaining kernel argument is complete.",
+    "compatibility_receipt": "verification/upstream-weighted-zero-upgrade/status.json",
+    "compatibility_receipt_sha256": "cfecdc048e0ed0e41706f850162a70d89de22235fc4fa0acd5641ea360f789aa"
+  },
+  "proof_hygiene": "No sorry, admit, new custom axiom, Gamma-to-RV section, class cancellation, or congruence redefinition was used.",
+  "upstream_read_only_check": [
+    {
+      "repository": "daviddhilbert/integration-in-ACVF",
+      "main": "ab4de003b3b3b107867e680a428fe9c0c9831b05",
+      "scope": "workflow-only Palomar guidance after the previously inspected shared-foundation extraction; no new Gamma-valued kernel theorem"
+    },
+    {
+      "repository": "daviddhilbert/special-transformations",
+      "main": "4b6afb7cabcb59d7ca90e883309ddc8887241d76",
+      "scope": "shared foundation extraction; no new Gamma-valued kernel theorem"
+    }
+  ],
+  "hk_audit": "HK-GAMMA-BASE-AUDIT.md: no resolved-base assumption and no replacement of actual isomorphism by effective isomorphism. HK is used only as a proof guide.",
+  "mathematical_checkpoint": {
+    "completed": [
+      "Actual Gamma-valued lift and surjectivity; forward elementary/principal relation inclusion; degree-zero kernel.",
+      "All-positive native full measured comparisons for maps changing one VF coordinate, with finite geometric derivations over the original real/Gamma base.",
+      "Mixed-domain measured unary factorization and retained-RV density presentations; traced unary selected head-to-prepared comparison with a finite geometric derivation.",
+      "Generic positive selected head propagation and its full ordered head induction, retaining finite original-base Gamma relations and checking the total degree.",
+      "Intrinsic Jacobian-one exceptional-set descent to all original-ground generic points, independent of the internal real presentation; all specified native Gamma heads therefore supply measured-head certificates.",
+      "Actual prepared rectangle and recorded-key matching-family comparisons for arbitrary retained Gamma forms, reusing the original RV-density geometric constructions.",
+      "Literal identification of ordered endpoint values with the selected RV presentation classes, including the empty index, full structural volume and complete Gamma density; full relatively unary maps preserve those endpoint values under specified aligned heads.",
+      "Native same-order full measured contraction comparison in all positive VF degrees, starting with no selected labels. Actual program endpoint sets, orderedSelectedIndex and original retained Gamma form are all identified. Reordering selected structural coordinates preserves the full product, not only RV rank.",
+      "The all-order rectangle, canonical pullback and matching translated/opposite raw contraction comparisons are proved for arbitrary retained Gamma densities. Literal raw normalization and pure selected endpoint values agree.",
+      "Full two-VF arbitrary-order comparison with arbitrary total retained Gamma density; actual zero/rectangle/balanced cell partition assembly and small-dimension vanishing. Principal congruence reflects to finite measured geometric proofs in each positive degree. Frozen two-coordinate comparisons and two-partial-program generic relations retain the original real/Gamma base.",
+      "All-dimensional first-two exchange, arbitrary selected and full raw contraction-order independence, and order-independent contraction values for arbitrary mixed Gamma forms. Every full measured relatively unary map and finite measured unary chain preserves that value.",
+      "The arbitrary mixed contraction value is additive over every finite Gamma-definable partition and invariant under arbitrary full measured bijections, using the actual saved finite unary partition and transported forms.",
+      "The actual native and ground lift-value identities, intrinsic small-dimensional mixed vanishing, cofull restriction invariance, and invariance under essential measured germs are proved.",
+      "Both real and Gamma names extend literally, principal equalities reflect through a definable base enlargement, and a checked additive detector over the generated closure gives the full positive-degree reverse kernel at the exact original base.",
+      "GammaMeasuredDegreeKernel constructs completedGammaGroundDegreeMeasuredLiftInput with the exact degreewise kernel in every degree, including zero. This is an unconditional construction under the standing model/base hypotheses.",
+      "Actual essential measured Cartesian product arrows, genuine object-to-RV-lift arrows, degreewise detectors and the global semiring detector are proved. GammaCompletedMeasuredInputs constructs the complete Gamma-ground semiring input with its exact kernel.",
+      "The inverse ordinary/redundant-Gamma comparisons on actual RV and VF categories, fixed-degree scissor quotients and universal semirings are proved. Literal lift compatibility and principal-congruence reflection transport both exact kernels and construct the two ordinary records."
+    ],
+    "not_completed": "None for the requested four measured inputs and Sections 2\u20136 verification. This paper's revised Section 7 bounded-aperture kernel and Section 8 remain their separate handoff tasks.",
+    "reuse": "These compiled results and actual maps are saved as repository source modules and imported by Section.lean; they are not discarded by following the existing RV-density contraction proof.",
+    "base": "Original real/Gamma base throughout. No resolved-base assumption or Gamma-to-RV section."
+  },
+  "compiler_incident": {
+    "cause": "A new native-point permutation helper was assigned an already-used native-lift permutation module name, replacing its source and compiled import edges and creating an import cycle. This caused runaway memory use and the author restarted the computer.",
+    "repair": "Restored and compiled gammaNativeLiftPermutationFullMeasured; moved the new helper to GammaNativePointFullMeasuredPermutations; recompiled GammaNativeRelativeFullAdditive successfully.",
+    "prevention": "Targeted compiler wrapper rejects an unreviewed existing-source mismatch, checks the hypothetical proposed compiled import graph before compiling, uses immutable source snapshots and a per-module lock. The exact problematic proposed cycle was rejected in a regression check.",
+    "resource_preference": "Author has 64 GB physical RAM and requests speed without imposed memory caps; independent compilation is permitted after import-graph checks."
+  }
+}

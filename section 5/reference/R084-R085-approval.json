@@ -8,5 +8,6 @@
   "adopted_fragment": "Section5/reference/section5-approved-R084-R085.tex",
   "preserved_after": "Original polyhedral remark preceding R086 and all later text",
   "scope": "Inflated-family Fubini, with torus factor retained",
-  "lean_status": "No new Section 5 Lean declaration claimed"
+  "lean_status": "No new Section 5 Lean declaration claimed",
+  "lean_status_current": "November 18: the inflated-family Fubini theorem is formalized (inflated_family_fubini in InflatedFamilyFubini.lean; PuiseuxOriginal.inflated_family_fubini_vol and puiseux_inflated_family_fubini_vol in InflatedFamilyFubiniVol.lean), with the factor g^n retained. Proof-route deviation: the base-partition step uses Section 4's Gamma-Fubini instead of the closed-polyhedra argument. See GAP-REPAIRS.md."
 }

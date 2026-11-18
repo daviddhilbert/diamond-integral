@@ -1108,3 +1108,19 @@ import «section 5».Completed18GroundLiftInput
 import «section 5».Section5DischargedInputs
 
 import «section 5».VarietyCorollaryDischarged
+import «section 5».Lemma519Polynomial
+import «section 5».Test520Tuples
+import «section 5».PuiseuxMonsterAmbient
+import «section 5».InflatedIntegerBlockReduction
+import «section 5».InflatedRelativeMonomialDecomposition
+import «section 5».InflatedRelativeMonomialValues
+import «section 5».WeakDegreeFubiniDischarged
+import «section 5».InflatedGammaFamilyRows
+import «section 5».InflatedGammaCodePromotion
+import «section 5».InflatedGammaWeakLiftSchemata
+import «section 5».InflatedGammaUniformRepresentatives
+import «section 5».InflatedGammaBasePartition
+import «section 5».ElementaryRESExtensionData
+import «section 5».ElementaryRESExtension
+import «section 5».InflatedFamilyFubini
+import «section 5».InflatedFamilyFubiniVol

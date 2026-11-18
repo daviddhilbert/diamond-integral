@@ -13,7 +13,8 @@ supplied separately by the author.
 - [Upstream weighted-degree-zero compatibility audit](UPSTREAM-WEIGHTED-ZERO-AUDIT.md)
 - [Section 7 handoff](<section 7/SECTION6-HANDOFF.md>)
 - [Section 8 handoff](<section 8/SECTION6-HANDOFF.md>)
-- [Current integrated verification](<section 6/verification/aperture-revision/integrated-audits.json>)
+- [Current corrected-pin verification](verification/upstream-weighted-zero-upgrade/status.json)
+- [Original aperture-revision verification](<section 6/verification/aperture-revision/integrated-audits.json>)
 
 The checked baseline includes completed Sections 2–6 in their recorded
 scopes, including revised Definition 6.11. Section 7's synchronized aperture

@@ -117,6 +117,60 @@ import «section 6».Section
 #check @DiamondIntegral.Section6.exists_affineTailSlopesMap
 #print DiamondIntegral.Section6.exists_affineTailSlopesMap
 #print axioms DiamondIntegral.Section6.exists_affineTailSlopesMap
+#check @DiamondIntegral.Section6.AllDegreeUnaryFactorizations.RVUnaryFactorization.finiteVolume
+#print DiamondIntegral.Section6.AllDegreeUnaryFactorizations.RVUnaryFactorization.finiteVolume
+#print axioms DiamondIntegral.Section6.AllDegreeUnaryFactorizations.RVUnaryFactorization.finiteVolume
+#check @DiamondIntegral.Section6.AllDegreeUnaryFactorizations.RVUnaryFactorization.doublyBounded
+#print DiamondIntegral.Section6.AllDegreeUnaryFactorizations.RVUnaryFactorization.doublyBounded
+#print axioms DiamondIntegral.Section6.AllDegreeUnaryFactorizations.RVUnaryFactorization.doublyBounded
+#check @DiamondIntegral.Section6.AllDegreeUnaryFactorizations.MeasuredRVUnaryFactorization.doublyBounded
+#print DiamondIntegral.Section6.AllDegreeUnaryFactorizations.MeasuredRVUnaryFactorization.doublyBounded
+#print axioms DiamondIntegral.Section6.AllDegreeUnaryFactorizations.MeasuredRVUnaryFactorization.doublyBounded
+#check @DiamondIntegral.Section6.AllDegreeUnaryFactorizations.ofChain_finiteVolume
+#print DiamondIntegral.Section6.AllDegreeUnaryFactorizations.ofChain_finiteVolume
+#print axioms DiamondIntegral.Section6.AllDegreeUnaryFactorizations.ofChain_finiteVolume
+#check @DiamondIntegral.Section6.AllDegreeUnaryFactorizations.ofChain_doublyBounded
+#print DiamondIntegral.Section6.AllDegreeUnaryFactorizations.ofChain_doublyBounded
+#print axioms DiamondIntegral.Section6.AllDegreeUnaryFactorizations.ofChain_doublyBounded
+#check @DiamondIntegral.Section6.AllDegreeUnaryFactorizations.ofMeasuredChain_doublyBounded
+#print DiamondIntegral.Section6.AllDegreeUnaryFactorizations.ofMeasuredChain_doublyBounded
+#print axioms DiamondIntegral.Section6.AllDegreeUnaryFactorizations.ofMeasuredChain_doublyBounded
+#check @DiamondIntegral.Section6.AllDegreeUnaryFactorizations.lemma_6_29_measured_doublyBounded_all_degrees
+#print DiamondIntegral.Section6.AllDegreeUnaryFactorizations.lemma_6_29_measured_doublyBounded_all_degrees
+#print axioms DiamondIntegral.Section6.AllDegreeUnaryFactorizations.lemma_6_29_measured_doublyBounded_all_degrees
+#check @DiamondIntegral.Section6.AllDegreeUnaryFactorizations.lemma_6_29_doublyBounded_all_degrees
+#print DiamondIntegral.Section6.AllDegreeUnaryFactorizations.lemma_6_29_doublyBounded_all_degrees
+#print axioms DiamondIntegral.Section6.AllDegreeUnaryFactorizations.lemma_6_29_doublyBounded_all_degrees
+#check @DiamondIntegral.Section6.AllDegreeUnaryFactorizations.RVUnaryFactorization
+#print DiamondIntegral.Section6.AllDegreeUnaryFactorizations.RVUnaryFactorization
+#print axioms DiamondIntegral.Section6.AllDegreeUnaryFactorizations.RVUnaryFactorization
+#check @DiamondIntegral.Section6.AllDegreeUnaryFactorizations.RVUnaryFactorization.iso
+#print DiamondIntegral.Section6.AllDegreeUnaryFactorizations.RVUnaryFactorization.iso
+#print axioms DiamondIntegral.Section6.AllDegreeUnaryFactorizations.RVUnaryFactorization.iso
+#check @DiamondIntegral.Section6.AllDegreeUnaryFactorizations.ofChain
+#print DiamondIntegral.Section6.AllDegreeUnaryFactorizations.ofChain
+#print axioms DiamondIntegral.Section6.AllDegreeUnaryFactorizations.ofChain
+#check @DiamondIntegral.Section6.AllDegreeUnaryFactorizations.ofChain_iso
+#print DiamondIntegral.Section6.AllDegreeUnaryFactorizations.ofChain_iso
+#print axioms DiamondIntegral.Section6.AllDegreeUnaryFactorizations.ofChain_iso
+#check @DiamondIntegral.Section6.AllDegreeUnaryFactorizations.MeasuredRVUnaryFactorization
+#print DiamondIntegral.Section6.AllDegreeUnaryFactorizations.MeasuredRVUnaryFactorization
+#print axioms DiamondIntegral.Section6.AllDegreeUnaryFactorizations.MeasuredRVUnaryFactorization
+#check @DiamondIntegral.Section6.AllDegreeUnaryFactorizations.MeasuredRVUnaryFactorization.iso
+#print DiamondIntegral.Section6.AllDegreeUnaryFactorizations.MeasuredRVUnaryFactorization.iso
+#print axioms DiamondIntegral.Section6.AllDegreeUnaryFactorizations.MeasuredRVUnaryFactorization.iso
+#check @DiamondIntegral.Section6.AllDegreeUnaryFactorizations.ofMeasuredChain
+#print DiamondIntegral.Section6.AllDegreeUnaryFactorizations.ofMeasuredChain
+#print axioms DiamondIntegral.Section6.AllDegreeUnaryFactorizations.ofMeasuredChain
+#check @DiamondIntegral.Section6.AllDegreeUnaryFactorizations.ofMeasuredChain_iso
+#print DiamondIntegral.Section6.AllDegreeUnaryFactorizations.ofMeasuredChain_iso
+#print axioms DiamondIntegral.Section6.AllDegreeUnaryFactorizations.ofMeasuredChain_iso
+#check @DiamondIntegral.Section6.AllDegreeUnaryFactorizations.lemma_6_29_measured_all_degrees
+#print DiamondIntegral.Section6.AllDegreeUnaryFactorizations.lemma_6_29_measured_all_degrees
+#print axioms DiamondIntegral.Section6.AllDegreeUnaryFactorizations.lemma_6_29_measured_all_degrees
+#check @DiamondIntegral.Section6.AllDegreeUnaryFactorizations.lemma_6_29_all_degrees
+#print DiamondIntegral.Section6.AllDegreeUnaryFactorizations.lemma_6_29_all_degrees
+#print axioms DiamondIntegral.Section6.AllDegreeUnaryFactorizations.lemma_6_29_all_degrees
 #check @DiamondIntegral.Section6.measured_ordered_program_all_dimensions
 #print DiamondIntegral.Section6.measured_ordered_program_all_dimensions
 #print axioms DiamondIntegral.Section6.measured_ordered_program_all_dimensions
@@ -246,6 +300,39 @@ import «section 6».Section
 #check @DiamondIntegral.Section6.coreTranslate_image_rv_saturated
 #print DiamondIntegral.Section6.coreTranslate_image_rv_saturated
 #print axioms DiamondIntegral.Section6.coreTranslate_image_rv_saturated
+#check @DiamondIntegral.Section6.ContractedApertureData.ApertureIncrease
+#print DiamondIntegral.Section6.ContractedApertureData.ApertureIncrease
+#print axioms DiamondIntegral.Section6.ContractedApertureData.ApertureIncrease
+#check @DiamondIntegral.Section6.ContractedApertureData.ApertureIncrease.target
+#print DiamondIntegral.Section6.ContractedApertureData.ApertureIncrease.target
+#print axioms DiamondIntegral.Section6.ContractedApertureData.ApertureIncrease.target
+#check @DiamondIntegral.Section6.ContractedApertureData.ApertureIncrease.cutoff_le
+#print DiamondIntegral.Section6.ContractedApertureData.ApertureIncrease.cutoff_le
+#print axioms DiamondIntegral.Section6.ContractedApertureData.ApertureIncrease.cutoff_le
+#check @DiamondIntegral.Section6.ContractedApertureData.ApertureIncrease.core_of_target_core
+#print DiamondIntegral.Section6.ContractedApertureData.ApertureIncrease.core_of_target_core
+#print axioms DiamondIntegral.Section6.ContractedApertureData.ApertureIncrease.core_of_target_core
+#check @DiamondIntegral.Section6.ContractedApertureData.ApertureIncrease.agree_outside
+#print DiamondIntegral.Section6.ContractedApertureData.ApertureIncrease.agree_outside
+#print axioms DiamondIntegral.Section6.ContractedApertureData.ApertureIncrease.agree_outside
+#check @DiamondIntegral.Section6.ContractedApertureData.ApertureIncrease.old_core
+#print DiamondIntegral.Section6.ContractedApertureData.ApertureIncrease.old_core
+#print axioms DiamondIntegral.Section6.ContractedApertureData.ApertureIncrease.old_core
+#check @DiamondIntegral.Section6.ContractedApertureData.ApertureIncrease.cutoff_label
+#print DiamondIntegral.Section6.ContractedApertureData.ApertureIncrease.cutoff_label
+#print axioms DiamondIntegral.Section6.ContractedApertureData.ApertureIncrease.cutoff_label
+#check @DiamondIntegral.Section6.ContractedApertureData.ApertureIncrease.released_attained
+#print DiamondIntegral.Section6.ContractedApertureData.ApertureIncrease.released_attained
+#print axioms DiamondIntegral.Section6.ContractedApertureData.ApertureIncrease.released_attained
+#check @DiamondIntegral.Section6.ContractedApertureData.ApertureIncrease.coordinate_ne_zero_of_core
+#print DiamondIntegral.Section6.ContractedApertureData.ApertureIncrease.coordinate_ne_zero_of_core
+#print axioms DiamondIntegral.Section6.ContractedApertureData.ApertureIncrease.coordinate_ne_zero_of_core
+#check @DiamondIntegral.Section6.ContractedApertureData.ApertureIncrease.released_nonempty
+#print DiamondIntegral.Section6.ContractedApertureData.ApertureIncrease.released_nonempty
+#print axioms DiamondIntegral.Section6.ContractedApertureData.ApertureIncrease.released_nonempty
+#check @DiamondIntegral.Section6.ContractedApertureData.ApertureIncrease.endpoint_values
+#print DiamondIntegral.Section6.ContractedApertureData.ApertureIncrease.endpoint_values
+#print axioms DiamondIntegral.Section6.ContractedApertureData.ApertureIncrease.endpoint_values
 #check @DiamondIntegral.Section6.AlphaInvariant.coordinate_shift_iff
 #print DiamondIntegral.Section6.AlphaInvariant.coordinate_shift_iff
 #print axioms DiamondIntegral.Section6.AlphaInvariant.coordinate_shift_iff
@@ -681,9 +768,117 @@ import «section 6».Section
 #check @DiamondIntegral.Section6.RetainedUnaryHomeChain.doublyBounded_carryLast
 #print DiamondIntegral.Section6.RetainedUnaryHomeChain.doublyBounded_carryLast
 #print axioms DiamondIntegral.Section6.RetainedUnaryHomeChain.doublyBounded_carryLast
+#check @DiamondIntegral.Section6.preparedRVVolume_finiteFibres
+#print DiamondIntegral.Section6.preparedRVVolume_finiteFibres
+#print axioms DiamondIntegral.Section6.preparedRVVolume_finiteFibres
+#check @DiamondIntegral.Section6.preparedRVObject_value
+#print DiamondIntegral.Section6.preparedRVObject_value
+#print axioms DiamondIntegral.Section6.preparedRVObject_value
+#check @DiamondIntegral.Section6.preparedRVObject_nonzero_bv
+#print DiamondIntegral.Section6.preparedRVObject_nonzero_bv
+#print axioms DiamondIntegral.Section6.preparedRVObject_nonzero_bv
+#check @DiamondIntegral.Section6.contractedForm
+#print DiamondIntegral.Section6.contractedForm
+#print axioms DiamondIntegral.Section6.contractedForm
+#check @DiamondIntegral.Section6.contractedForm_at
+#print DiamondIntegral.Section6.contractedForm_at
+#print axioms DiamondIntegral.Section6.contractedForm_at
+#check @DiamondIntegral.Section6.contractedMeasuredRVObject
+#print DiamondIntegral.Section6.contractedMeasuredRVObject
+#print axioms DiamondIntegral.Section6.contractedMeasuredRVObject
+#check @DiamondIntegral.Section6.contractedMeasuredRVObject_doublyBounded
+#print DiamondIntegral.Section6.contractedMeasuredRVObject_doublyBounded
+#print axioms DiamondIntegral.Section6.contractedMeasuredRVObject_doublyBounded
+#check @DiamondIntegral.Section6.contractedMeasuredRVObject_value_unary
+#print DiamondIntegral.Section6.contractedMeasuredRVObject_value_unary
+#print axioms DiamondIntegral.Section6.contractedMeasuredRVObject_value_unary
+#check @DiamondIntegral.Section6.contractedMeasuredRVObject_form
+#print DiamondIntegral.Section6.contractedMeasuredRVObject_form
+#print axioms DiamondIntegral.Section6.contractedMeasuredRVObject_form
+#check @DiamondIntegral.Section6.contractedMeasuredRVObject_volumeGamma_unary
+#print DiamondIntegral.Section6.contractedMeasuredRVObject_volumeGamma_unary
+#print axioms DiamondIntegral.Section6.contractedMeasuredRVObject_volumeGamma_unary
+#check @DiamondIntegral.Section6.rvIsoOfFiniteFibres
+#print DiamondIntegral.Section6.rvIsoOfFiniteFibres
+#print axioms DiamondIntegral.Section6.rvIsoOfFiniteFibres
+#check @DiamondIntegral.Section6.rvIsoOfFiniteFibres_map
+#print DiamondIntegral.Section6.rvIsoOfFiniteFibres_map
+#print axioms DiamondIntegral.Section6.rvIsoOfFiniteFibres_map
+#check @DiamondIntegral.Section6.pureRVTagMatchingMap
+#print DiamondIntegral.Section6.pureRVTagMatchingMap
+#print axioms DiamondIntegral.Section6.pureRVTagMatchingMap
+#check @DiamondIntegral.Section6.pureRVTagMatchingMap_commutes
+#print DiamondIntegral.Section6.pureRVTagMatchingMap_commutes
+#print axioms DiamondIntegral.Section6.pureRVTagMatchingMap_commutes
+#check @DiamondIntegral.Section6.pureRVTagMatchingMap_bijective
+#print DiamondIntegral.Section6.pureRVTagMatchingMap_bijective
+#print axioms DiamondIntegral.Section6.pureRVTagMatchingMap_bijective
+#check @DiamondIntegral.Section6.UnaryRelativeMeasuredMatching.sourceForm_constant
+#print DiamondIntegral.Section6.UnaryRelativeMeasuredMatching.sourceForm_constant
+#print axioms DiamondIntegral.Section6.UnaryRelativeMeasuredMatching.sourceForm_constant
+#check @DiamondIntegral.Section6.UnaryRelativeMeasuredMatching.targetForm_constant
+#print DiamondIntegral.Section6.UnaryRelativeMeasuredMatching.targetForm_constant
+#print axioms DiamondIntegral.Section6.UnaryRelativeMeasuredMatching.targetForm_constant
+#check @DiamondIntegral.Section6.UnaryRelativeMeasuredMatching.sourceContracted_at
+#print DiamondIntegral.Section6.UnaryRelativeMeasuredMatching.sourceContracted_at
+#print axioms DiamondIntegral.Section6.UnaryRelativeMeasuredMatching.sourceContracted_at
+#check @DiamondIntegral.Section6.UnaryRelativeMeasuredMatching.targetContracted_at
+#print DiamondIntegral.Section6.UnaryRelativeMeasuredMatching.targetContracted_at
+#print axioms DiamondIntegral.Section6.UnaryRelativeMeasuredMatching.targetContracted_at
+#check @DiamondIntegral.Section6.UnaryRelativeMeasuredMatching.sourceRV
+#print DiamondIntegral.Section6.UnaryRelativeMeasuredMatching.sourceRV
+#print axioms DiamondIntegral.Section6.UnaryRelativeMeasuredMatching.sourceRV
+#check @DiamondIntegral.Section6.UnaryRelativeMeasuredMatching.targetRV
+#print DiamondIntegral.Section6.UnaryRelativeMeasuredMatching.targetRV
+#print axioms DiamondIntegral.Section6.UnaryRelativeMeasuredMatching.targetRV
+#check @DiamondIntegral.Section6.UnaryRelativeMeasuredMatching.sourceRV_doublyBounded
+#print DiamondIntegral.Section6.UnaryRelativeMeasuredMatching.sourceRV_doublyBounded
+#print axioms DiamondIntegral.Section6.UnaryRelativeMeasuredMatching.sourceRV_doublyBounded
+#check @DiamondIntegral.Section6.UnaryRelativeMeasuredMatching.targetRV_doublyBounded
+#print DiamondIntegral.Section6.UnaryRelativeMeasuredMatching.targetRV_doublyBounded
+#print axioms DiamondIntegral.Section6.UnaryRelativeMeasuredMatching.targetRV_doublyBounded
+#check @DiamondIntegral.Section6.UnaryRelativeMeasuredMatching.sourceRV_value
+#print DiamondIntegral.Section6.UnaryRelativeMeasuredMatching.sourceRV_value
+#print axioms DiamondIntegral.Section6.UnaryRelativeMeasuredMatching.sourceRV_value
+#check @DiamondIntegral.Section6.UnaryRelativeMeasuredMatching.targetRV_value
+#print DiamondIntegral.Section6.UnaryRelativeMeasuredMatching.targetRV_value
+#print axioms DiamondIntegral.Section6.UnaryRelativeMeasuredMatching.targetRV_value
+#check @DiamondIntegral.Section6.UnaryRelativeMeasuredMatching.sourceRV_form
+#print DiamondIntegral.Section6.UnaryRelativeMeasuredMatching.sourceRV_form
+#print axioms DiamondIntegral.Section6.UnaryRelativeMeasuredMatching.sourceRV_form
+#check @DiamondIntegral.Section6.UnaryRelativeMeasuredMatching.targetRV_form
+#print DiamondIntegral.Section6.UnaryRelativeMeasuredMatching.targetRV_form
+#print axioms DiamondIntegral.Section6.UnaryRelativeMeasuredMatching.targetRV_form
+#check @DiamondIntegral.Section6.UnaryRelativeMeasuredMatching.sourceRV_volumeGamma
+#print DiamondIntegral.Section6.UnaryRelativeMeasuredMatching.sourceRV_volumeGamma
+#print axioms DiamondIntegral.Section6.UnaryRelativeMeasuredMatching.sourceRV_volumeGamma
+#check @DiamondIntegral.Section6.UnaryRelativeMeasuredMatching.targetRV_volumeGamma
+#print DiamondIntegral.Section6.UnaryRelativeMeasuredMatching.targetRV_volumeGamma
+#print axioms DiamondIntegral.Section6.UnaryRelativeMeasuredMatching.targetRV_volumeGamma
+#check @DiamondIntegral.Section6.UnaryRelativeMeasuredMatching.contractedMap
+#print DiamondIntegral.Section6.UnaryRelativeMeasuredMatching.contractedMap
+#print axioms DiamondIntegral.Section6.UnaryRelativeMeasuredMatching.contractedMap
+#check @DiamondIntegral.Section6.UnaryRelativeMeasuredMatching.contractedMap_commutes
+#print DiamondIntegral.Section6.UnaryRelativeMeasuredMatching.contractedMap_commutes
+#print axioms DiamondIntegral.Section6.UnaryRelativeMeasuredMatching.contractedMap_commutes
+#check @DiamondIntegral.Section6.UnaryRelativeMeasuredMatching.contractedMap_bijective
+#print DiamondIntegral.Section6.UnaryRelativeMeasuredMatching.contractedMap_bijective
+#print axioms DiamondIntegral.Section6.UnaryRelativeMeasuredMatching.contractedMap_bijective
+#check @DiamondIntegral.Section6.UnaryRelativeMeasuredMatching.contractedMap_eq_rv
+#print DiamondIntegral.Section6.UnaryRelativeMeasuredMatching.contractedMap_eq_rv
+#print axioms DiamondIntegral.Section6.UnaryRelativeMeasuredMatching.contractedMap_eq_rv
+#check @DiamondIntegral.Section6.UnaryRelativeMeasuredMatching.measuredRVIso
+#print DiamondIntegral.Section6.UnaryRelativeMeasuredMatching.measuredRVIso
+#print axioms DiamondIntegral.Section6.UnaryRelativeMeasuredMatching.measuredRVIso
+#check @DiamondIntegral.Section6.UnaryRelativeMeasuredMatching.measuredRVIso_map
+#print DiamondIntegral.Section6.UnaryRelativeMeasuredMatching.measuredRVIso_map
+#print axioms DiamondIntegral.Section6.UnaryRelativeMeasuredMatching.measuredRVIso_map
 #check @DiamondIntegral.Section6.lemma_6_38_bounded_variable_apertures
 #print DiamondIntegral.Section6.lemma_6_38_bounded_variable_apertures
 #print axioms DiamondIntegral.Section6.lemma_6_38_bounded_variable_apertures
+#check @DiamondIntegral.Section6.lemma_6_38_bounded_variable_apertures_contractible
+#print DiamondIntegral.Section6.lemma_6_38_bounded_variable_apertures_contractible
+#print axioms DiamondIntegral.Section6.lemma_6_38_bounded_variable_apertures_contractible
 #check @DiamondIntegral.Section6.BranchedShearChartTemplate.uniqueGood_expanded_at
 #print DiamondIntegral.Section6.BranchedShearChartTemplate.uniqueGood_expanded_at
 #print axioms DiamondIntegral.Section6.BranchedShearChartTemplate.uniqueGood_expanded_at
@@ -1923,6 +2118,18 @@ import «section 6».Section
 #check @DiamondIntegral.Section6.lemma_6_5
 #print DiamondIntegral.Section6.lemma_6_5
 #print axioms DiamondIntegral.Section6.lemma_6_5
+#check @DiamondIntegral.Section6.vfFibre_eq_iUnion_graphFibreSource
+#print DiamondIntegral.Section6.vfFibre_eq_iUnion_graphFibreSource
+#print axioms DiamondIntegral.Section6.vfFibre_eq_iUnion_graphFibreSource
+#check @DiamondIntegral.Section6.CovariantRadii
+#print DiamondIntegral.Section6.CovariantRadii
+#print axioms DiamondIntegral.Section6.CovariantRadii
+#check @DiamondIntegral.Section6.remark_6_4
+#print DiamondIntegral.Section6.remark_6_4
+#print axioms DiamondIntegral.Section6.remark_6_4
+#check @DiamondIntegral.Section6.remark_6_4_properCovariant
+#print DiamondIntegral.Section6.remark_6_4_properCovariant
+#print axioms DiamondIntegral.Section6.remark_6_4_properCovariant
 #check @DiamondIntegral.Section6.map_values_eq_of_code_graph_eq
 #print DiamondIntegral.Section6.map_values_eq_of_code_graph_eq
 #print axioms DiamondIntegral.Section6.map_values_eq_of_code_graph_eq
@@ -2235,6 +2442,102 @@ import «section 6».Section
 #check @DiamondIntegral.Section6.exists_promoted_continuous_vf_graph_template
 #print DiamondIntegral.Section6.exists_promoted_continuous_vf_graph_template
 #print axioms DiamondIntegral.Section6.exists_promoted_continuous_vf_graph_template
+#check @DiamondIntegral.Section6.ContractedApertureData
+#print DiamondIntegral.Section6.ContractedApertureData
+#print axioms DiamondIntegral.Section6.ContractedApertureData
+#check @DiamondIntegral.Section6.ContractedApertureData.aperture
+#print DiamondIntegral.Section6.ContractedApertureData.aperture
+#print axioms DiamondIntegral.Section6.ContractedApertureData.aperture
+#check @DiamondIntegral.Section6.ContractedApertureData.cutoff
+#print DiamondIntegral.Section6.ContractedApertureData.cutoff
+#print axioms DiamondIntegral.Section6.ContractedApertureData.cutoff
+#check @DiamondIntegral.Section6.ContractedApertureData.contractedValue
+#print DiamondIntegral.Section6.ContractedApertureData.contractedValue
+#print axioms DiamondIntegral.Section6.ContractedApertureData.contractedValue
+#check @DiamondIntegral.Section6.ContractedApertureData.core
+#print DiamondIntegral.Section6.ContractedApertureData.core
+#print axioms DiamondIntegral.Section6.ContractedApertureData.core
+#check @DiamondIntegral.Section6.ContractedApertureData.contractedPoint
+#print DiamondIntegral.Section6.ContractedApertureData.contractedPoint
+#print axioms DiamondIntegral.Section6.ContractedApertureData.contractedPoint
+#check @DiamondIntegral.Section6.vfValue_mul_eq
+#print DiamondIntegral.Section6.vfValue_mul_eq
+#print axioms DiamondIntegral.Section6.vfValue_mul_eq
+#check @DiamondIntegral.Section6.codeValue_iRv_val
+#print DiamondIntegral.Section6.codeValue_iRv_val
+#print axioms DiamondIntegral.Section6.codeValue_iRv_val
+#check @DiamondIntegral.Section6.RelativeApertureData.coordinate_ne_zero
+#print DiamondIntegral.Section6.RelativeApertureData.coordinate_ne_zero
+#print axioms DiamondIntegral.Section6.RelativeApertureData.coordinate_ne_zero
+#check @DiamondIntegral.Section6.RelativeApertureData.apertureRatio
+#print DiamondIntegral.Section6.RelativeApertureData.apertureRatio
+#print axioms DiamondIntegral.Section6.RelativeApertureData.apertureRatio
+#check @DiamondIntegral.Section6.RelativeApertureData.apertureRatio_ne_zero
+#print DiamondIntegral.Section6.RelativeApertureData.apertureRatio_ne_zero
+#print axioms DiamondIntegral.Section6.RelativeApertureData.apertureRatio_ne_zero
+#check @DiamondIntegral.Section6.RelativeApertureData.apertureCode
+#print DiamondIntegral.Section6.RelativeApertureData.apertureCode
+#print axioms DiamondIntegral.Section6.RelativeApertureData.apertureCode
+#check @DiamondIntegral.Section6.RelativeApertureData.apertureCode_at
+#print DiamondIntegral.Section6.RelativeApertureData.apertureCode_at
+#print axioms DiamondIntegral.Section6.RelativeApertureData.apertureCode_at
+#check @DiamondIntegral.Section6.vfValue_inv_mul
+#print DiamondIntegral.Section6.vfValue_inv_mul
+#print axioms DiamondIntegral.Section6.vfValue_inv_mul
+#check @DiamondIntegral.Section6.rv_mul_inv
+#print DiamondIntegral.Section6.rv_mul_inv
+#print axioms DiamondIntegral.Section6.rv_mul_inv
+#check @DiamondIntegral.Section6.vfValue_eq_of_rv_eq
+#print DiamondIntegral.Section6.vfValue_eq_of_rv_eq
+#print axioms DiamondIntegral.Section6.vfValue_eq_of_rv_eq
+#check @DiamondIntegral.Section6.rv_ne_zero_of_ne
+#print DiamondIntegral.Section6.rv_ne_zero_of_ne
+#print axioms DiamondIntegral.Section6.rv_ne_zero_of_ne
+#check @DiamondIntegral.Section6.iRv_nonzero
+#print DiamondIntegral.Section6.iRv_nonzero
+#print axioms DiamondIntegral.Section6.iRv_nonzero
+#check @DiamondIntegral.Section6.RelativeApertureData.focus_value_active
+#print DiamondIntegral.Section6.RelativeApertureData.focus_value_active
+#print axioms DiamondIntegral.Section6.RelativeApertureData.focus_value_active
+#check @DiamondIntegral.Section6.RelativeApertureData.ratio_value
+#print DiamondIntegral.Section6.RelativeApertureData.ratio_value
+#print axioms DiamondIntegral.Section6.RelativeApertureData.ratio_value
+#check @DiamondIntegral.Section6.RelativeApertureData.apertureCode_value
+#print DiamondIntegral.Section6.RelativeApertureData.apertureCode_value
+#print axioms DiamondIntegral.Section6.RelativeApertureData.apertureCode_value
+#check @DiamondIntegral.Section6.RelativeApertureData.cutoff_value
+#print DiamondIntegral.Section6.RelativeApertureData.cutoff_value
+#print axioms DiamondIntegral.Section6.RelativeApertureData.cutoff_value
+#check @DiamondIntegral.Section6.RelativeApertureData.toContracted
+#print DiamondIntegral.Section6.RelativeApertureData.toContracted
+#print axioms DiamondIntegral.Section6.RelativeApertureData.toContracted
+#check @DiamondIntegral.Section6.RelativeApertureData.toContracted_cutoff
+#print DiamondIntegral.Section6.RelativeApertureData.toContracted_cutoff
+#print axioms DiamondIntegral.Section6.RelativeApertureData.toContracted_cutoff
+#check @DiamondIntegral.Section6.RelativeApertureData.toContracted_contractedValue
+#print DiamondIntegral.Section6.RelativeApertureData.toContracted_contractedValue
+#print axioms DiamondIntegral.Section6.RelativeApertureData.toContracted_contractedValue
+#check @DiamondIntegral.Section6.RelativeApertureData.point_contracts
+#print DiamondIntegral.Section6.RelativeApertureData.point_contracts
+#print axioms DiamondIntegral.Section6.RelativeApertureData.point_contracts
+#check @DiamondIntegral.Section6.ContractedApertureData.aperture_ne_zero
+#print DiamondIntegral.Section6.ContractedApertureData.aperture_ne_zero
+#print axioms DiamondIntegral.Section6.ContractedApertureData.aperture_ne_zero
+#check @DiamondIntegral.Section6.ContractedApertureData.aperture_vrv
+#print DiamondIntegral.Section6.ContractedApertureData.aperture_vrv
+#print axioms DiamondIntegral.Section6.ContractedApertureData.aperture_vrv
+#check @DiamondIntegral.Section6.ContractedApertureData.contractedValue_vrv
+#print DiamondIntegral.Section6.ContractedApertureData.contractedValue_vrv
+#print axioms DiamondIntegral.Section6.ContractedApertureData.contractedValue_vrv
+#check @DiamondIntegral.Section6.ContractedApertureData.focus_value_active
+#print DiamondIntegral.Section6.ContractedApertureData.focus_value_active
+#print axioms DiamondIntegral.Section6.ContractedApertureData.focus_value_active
+#check @DiamondIntegral.Section6.ContractedApertureData.lift
+#print DiamondIntegral.Section6.ContractedApertureData.lift
+#print axioms DiamondIntegral.Section6.ContractedApertureData.lift
+#check @DiamondIntegral.Section6.ContractedApertureData.lift_aperture
+#print DiamondIntegral.Section6.ContractedApertureData.lift_aperture
+#print axioms DiamondIntegral.Section6.ContractedApertureData.lift_aperture
 #check @DiamondIntegral.Section6.ProperCovariantHomeomorphism.changeMapTarget
 #print DiamondIntegral.Section6.ProperCovariantHomeomorphism.changeMapTarget
 #print axioms DiamondIntegral.Section6.ProperCovariantHomeomorphism.changeMapTarget
@@ -2835,6 +3138,339 @@ import «section 6».Section
 #check @DiamondIntegral.Section6.diagonalRVLift_label
 #print DiamondIntegral.Section6.diagonalRVLift_label
 #print axioms DiamondIntegral.Section6.diagonalRVLift_label
+#check @DiamondIntegral.Section6.DiamondCategory.VFObject
+#print DiamondIntegral.Section6.DiamondCategory.VFObject
+#print axioms DiamondIntegral.Section6.DiamondCategory.VFObject
+#check @DiamondIntegral.Section6.DiamondCategory.VFObject.levelSet
+#print DiamondIntegral.Section6.DiamondCategory.VFObject.levelSet
+#print axioms DiamondIntegral.Section6.DiamondCategory.VFObject.levelSet
+#check @DiamondIntegral.Section6.DiamondCategory.VFObject.levelSet_geometry
+#print DiamondIntegral.Section6.DiamondCategory.VFObject.levelSet_geometry
+#print axioms DiamondIntegral.Section6.DiamondCategory.VFObject.levelSet_geometry
+#check @DiamondIntegral.Section6.DiamondCategory.VFRelativelyUnary
+#print DiamondIntegral.Section6.DiamondCategory.VFRelativelyUnary
+#print axioms DiamondIntegral.Section6.DiamondCategory.VFRelativelyUnary
+#check @DiamondIntegral.Section6.DiamondCategory.vfRelativelyUnary_self
+#print DiamondIntegral.Section6.DiamondCategory.vfRelativelyUnary_self
+#print axioms DiamondIntegral.Section6.DiamondCategory.vfRelativelyUnary_self
+#check @DiamondIntegral.Section6.DiamondCategory.VFUnaryRelativeAt.relativelyUnary
+#print DiamondIntegral.Section6.DiamondCategory.VFUnaryRelativeAt.relativelyUnary
+#print axioms DiamondIntegral.Section6.DiamondCategory.VFUnaryRelativeAt.relativelyUnary
+#check @DiamondIntegral.Section6.DiamondCategory.cycleRange_symm_eq_iff
+#print DiamondIntegral.Section6.DiamondCategory.cycleRange_symm_eq_iff
+#print axioms DiamondIntegral.Section6.DiamondCategory.cycleRange_symm_eq_iff
+#check @DiamondIntegral.Section6.DiamondCategory.cycleRange_ne_zero
+#print DiamondIntegral.Section6.DiamondCategory.cycleRange_ne_zero
+#print axioms DiamondIntegral.Section6.DiamondCategory.cycleRange_ne_zero
+#check @DiamondIntegral.Section6.DiamondCategory.UnaryFactorization
+#print DiamondIntegral.Section6.DiamondCategory.UnaryFactorization
+#print axioms DiamondIntegral.Section6.DiamondCategory.UnaryFactorization
+#check @DiamondIntegral.Section6.DiamondCategory.Morphism
+#print DiamondIntegral.Section6.DiamondCategory.Morphism
+#print axioms DiamondIntegral.Section6.DiamondCategory.Morphism
+#check @DiamondIntegral.Section6.DiamondCategory.Isomorphic
+#print DiamondIntegral.Section6.DiamondCategory.Isomorphic
+#print axioms DiamondIntegral.Section6.DiamondCategory.Isomorphic
+#check @DiamondIntegral.Section6.DiamondCategory.Morphism.id
+#print DiamondIntegral.Section6.DiamondCategory.Morphism.id
+#print axioms DiamondIntegral.Section6.DiamondCategory.Morphism.id
+#check @DiamondIntegral.Section6.DiamondCategory.Isomorphic.refl
+#print DiamondIntegral.Section6.DiamondCategory.Isomorphic.refl
+#print axioms DiamondIntegral.Section6.DiamondCategory.Isomorphic.refl
+#check @DiamondIntegral.Section6.DiamondEmpty.properCovariant_of_empty
+#print DiamondIntegral.Section6.DiamondEmpty.properCovariant_of_empty
+#print axioms DiamondIntegral.Section6.DiamondEmpty.properCovariant_of_empty
+#check @DiamondIntegral.Section6.DiamondEmpty.continuous_of_empty
+#print DiamondIntegral.Section6.DiamondEmpty.continuous_of_empty
+#print axioms DiamondIntegral.Section6.DiamondEmpty.continuous_of_empty
+#check @DiamondIntegral.Section6.DiamondEmpty.homeo_of_empty
+#print DiamondIntegral.Section6.DiamondEmpty.homeo_of_empty
+#print axioms DiamondIntegral.Section6.DiamondEmpty.homeo_of_empty
+#check @DiamondIntegral.Section6.DiamondEmpty.emptyMorphism
+#print DiamondIntegral.Section6.DiamondEmpty.emptyMorphism
+#print axioms DiamondIntegral.Section6.DiamondEmpty.emptyMorphism
+#check @DiamondIntegral.Section6.DiamondEmpty.isomorphic_empty
+#print DiamondIntegral.Section6.DiamondEmpty.isomorphic_empty
+#print axioms DiamondIntegral.Section6.DiamondEmpty.isomorphic_empty
+#check @DiamondIntegral.Section6.DiamondEmpty.vfClass_of_empty
+#print DiamondIntegral.Section6.DiamondEmpty.vfClass_of_empty
+#print axioms DiamondIntegral.Section6.DiamondEmpty.vfClass_of_empty
+#check @DiamondIntegral.Section6.DiamondGrothendieck.properInvariant_empty
+#print DiamondIntegral.Section6.DiamondGrothendieck.properInvariant_empty
+#print axioms DiamondIntegral.Section6.DiamondGrothendieck.properInvariant_empty
+#check @DiamondIntegral.Section6.DiamondGrothendieck.emptyObject
+#print DiamondIntegral.Section6.DiamondGrothendieck.emptyObject
+#print axioms DiamondIntegral.Section6.DiamondGrothendieck.emptyObject
+#check @DiamondIntegral.Section6.DiamondGrothendieck.restrictObject
+#print DiamondIntegral.Section6.DiamondGrothendieck.restrictObject
+#print axioms DiamondIntegral.Section6.DiamondGrothendieck.restrictObject
+#check @DiamondIntegral.Section6.DiamondGrothendieck.complObject
+#print DiamondIntegral.Section6.DiamondGrothendieck.complObject
+#print axioms DiamondIntegral.Section6.DiamondGrothendieck.complObject
+#check @DiamondIntegral.Section6.DiamondGrothendieck.Scissor
+#print DiamondIntegral.Section6.DiamondGrothendieck.Scissor
+#print axioms DiamondIntegral.Section6.DiamondGrothendieck.Scissor
+#check @DiamondIntegral.Section6.DiamondGrothendieck.presentation
+#print DiamondIntegral.Section6.DiamondGrothendieck.presentation
+#print axioms DiamondIntegral.Section6.DiamondGrothendieck.presentation
+#check @DiamondIntegral.Section6.DiamondGrothendieck.KPlus
+#print DiamondIntegral.Section6.DiamondGrothendieck.KPlus
+#print axioms DiamondIntegral.Section6.DiamondGrothendieck.KPlus
+#check @DiamondIntegral.Section6.DiamondGrothendieck.KGroup
+#print DiamondIntegral.Section6.DiamondGrothendieck.KGroup
+#print axioms DiamondIntegral.Section6.DiamondGrothendieck.KGroup
+#check @DiamondIntegral.Section6.DiamondGrothendieck.vfClass
+#print DiamondIntegral.Section6.DiamondGrothendieck.vfClass
+#print axioms DiamondIntegral.Section6.DiamondGrothendieck.vfClass
+#check @DiamondIntegral.Section6.DiamondGrothendieck.vfClass_iso
+#print DiamondIntegral.Section6.DiamondGrothendieck.vfClass_iso
+#print axioms DiamondIntegral.Section6.DiamondGrothendieck.vfClass_iso
+#check @DiamondIntegral.Section6.DiamondGrothendieck.vfClass_empty
+#print DiamondIntegral.Section6.DiamondGrothendieck.vfClass_empty
+#print axioms DiamondIntegral.Section6.DiamondGrothendieck.vfClass_empty
+#check @DiamondIntegral.Section6.DiamondGrothendieck.vfClass_scissor
+#print DiamondIntegral.Section6.DiamondGrothendieck.vfClass_scissor
+#print axioms DiamondIntegral.Section6.DiamondGrothendieck.vfClass_scissor
+#check @DiamondIntegral.Section6.DiamondGroupoid.inverse_bijective
+#print DiamondIntegral.Section6.DiamondGroupoid.inverse_bijective
+#print axioms DiamondIntegral.Section6.DiamondGroupoid.inverse_bijective
+#check @DiamondIntegral.Section6.DiamondGroupoid.inverse_inverse
+#print DiamondIntegral.Section6.DiamondGroupoid.inverse_inverse
+#print axioms DiamondIntegral.Section6.DiamondGroupoid.inverse_inverse
+#check @DiamondIntegral.Section6.DiamondGroupoid.homeo_inverse
+#print DiamondIntegral.Section6.DiamondGroupoid.homeo_inverse
+#print axioms DiamondIntegral.Section6.DiamondGroupoid.homeo_inverse
+#check @DiamondIntegral.Section6.DiamondGroupoid.unary_inverse
+#print DiamondIntegral.Section6.DiamondGroupoid.unary_inverse
+#print axioms DiamondIntegral.Section6.DiamondGroupoid.unary_inverse
+#check @DiamondIntegral.Section6.DiamondGroupoid.inverse_id
+#print DiamondIntegral.Section6.DiamondGroupoid.inverse_id
+#print axioms DiamondIntegral.Section6.DiamondGroupoid.inverse_id
+#check @DiamondIntegral.Section6.DiamondGroupoid.inverse_comp
+#print DiamondIntegral.Section6.DiamondGroupoid.inverse_comp
+#print axioms DiamondIntegral.Section6.DiamondGroupoid.inverse_comp
+#check @DiamondIntegral.Section6.DiamondGroupoid.factor_bijective
+#print DiamondIntegral.Section6.DiamondGroupoid.factor_bijective
+#print axioms DiamondIntegral.Section6.DiamondGroupoid.factor_bijective
+#check @DiamondIntegral.Section6.DiamondGroupoid.factor_inverse
+#print DiamondIntegral.Section6.DiamondGroupoid.factor_inverse
+#print axioms DiamondIntegral.Section6.DiamondGroupoid.factor_inverse
+#check @DiamondIntegral.Section6.DiamondGroupoid.Morphism.generic
+#print DiamondIntegral.Section6.DiamondGroupoid.Morphism.generic
+#print axioms DiamondIntegral.Section6.DiamondGroupoid.Morphism.generic
+#check @DiamondIntegral.Section6.DiamondGroupoid.morphism_of_generic
+#print DiamondIntegral.Section6.DiamondGroupoid.morphism_of_generic
+#print axioms DiamondIntegral.Section6.DiamondGroupoid.morphism_of_generic
+#check @DiamondIntegral.Section6.DiamondGroupoid.Morphism.inverse_nonempty
+#print DiamondIntegral.Section6.DiamondGroupoid.Morphism.inverse_nonempty
+#print axioms DiamondIntegral.Section6.DiamondGroupoid.Morphism.inverse_nonempty
+#check @DiamondIntegral.Section6.DiamondGroupoid.Morphism.comp_nonempty
+#print DiamondIntegral.Section6.DiamondGroupoid.Morphism.comp_nonempty
+#print axioms DiamondIntegral.Section6.DiamondGroupoid.Morphism.comp_nonempty
+#check @DiamondIntegral.Section6.DiamondGroupoid.isomorphic_equivalence
+#print DiamondIntegral.Section6.DiamondGroupoid.isomorphic_equivalence
+#print axioms DiamondIntegral.Section6.DiamondGroupoid.isomorphic_equivalence
+#check @DiamondIntegral.Section6.DiamondGroupoid.morphism_of_generic_map
+#print DiamondIntegral.Section6.DiamondGroupoid.morphism_of_generic_map
+#print axioms DiamondIntegral.Section6.DiamondGroupoid.morphism_of_generic_map
+#check @DiamondIntegral.Section6.DiamondGroupoid.Morphism.inverse_exists
+#print DiamondIntegral.Section6.DiamondGroupoid.Morphism.inverse_exists
+#print axioms DiamondIntegral.Section6.DiamondGroupoid.Morphism.inverse_exists
+#check @DiamondIntegral.Section6.DiamondGroupoid.Morphism.comp_exists
+#print DiamondIntegral.Section6.DiamondGroupoid.Morphism.comp_exists
+#print axioms DiamondIntegral.Section6.DiamondGroupoid.Morphism.comp_exists
+#check @DiamondIntegral.Section6.DiamondGroupoid.IsMorphismMap
+#print DiamondIntegral.Section6.DiamondGroupoid.IsMorphismMap
+#print axioms DiamondIntegral.Section6.DiamondGroupoid.IsMorphismMap
+#check @DiamondIntegral.Section6.DiamondGroupoid.DiamondContext
+#print DiamondIntegral.Section6.DiamondGroupoid.DiamondContext
+#print axioms DiamondIntegral.Section6.DiamondGroupoid.DiamondContext
+#check @DiamondIntegral.Section6.DiamondGroupoid.DiamondObj
+#print DiamondIntegral.Section6.DiamondGroupoid.DiamondObj
+#print axioms DiamondIntegral.Section6.DiamondGroupoid.DiamondObj
+#check @DiamondIntegral.Section6.DiamondGroupoid.IsMorphismMap.bijective
+#print DiamondIntegral.Section6.DiamondGroupoid.IsMorphismMap.bijective
+#print axioms DiamondIntegral.Section6.DiamondGroupoid.IsMorphismMap.bijective
+#check @DiamondIntegral.Section6.DiamondGroupoid.IsMorphismMap.inverse
+#print DiamondIntegral.Section6.DiamondGroupoid.IsMorphismMap.inverse
+#print axioms DiamondIntegral.Section6.DiamondGroupoid.IsMorphismMap.inverse
+#check @DiamondIntegral.Section6.DiamondGroupoid.IsMorphismMap.comp
+#print DiamondIntegral.Section6.DiamondGroupoid.IsMorphismMap.comp
+#print axioms DiamondIntegral.Section6.DiamondGroupoid.IsMorphismMap.comp
+#check @DiamondIntegral.Section6.DiamondLift.liftForm
+#print DiamondIntegral.Section6.DiamondLift.liftForm
+#print axioms DiamondIntegral.Section6.DiamondLift.liftForm
+#check @DiamondIntegral.Section6.DiamondLift.liftLabel_val
+#print DiamondIntegral.Section6.DiamondLift.liftLabel_val
+#print axioms DiamondIntegral.Section6.DiamondLift.liftLabel_val
+#check @DiamondIntegral.Section6.DiamondLift.liftForm_value
+#print DiamondIntegral.Section6.DiamondLift.liftForm_value
+#print axioms DiamondIntegral.Section6.DiamondLift.liftForm_value
+#check @DiamondIntegral.Section6.DiamondLift.lift_fibre_finite
+#print DiamondIntegral.Section6.DiamondLift.lift_fibre_finite
+#print axioms DiamondIntegral.Section6.DiamondLift.lift_fibre_finite
+#check @DiamondIntegral.Section6.DiamondLift.liftForm_covariant
+#print DiamondIntegral.Section6.DiamondLift.liftForm_covariant
+#print axioms DiamondIntegral.Section6.DiamondLift.liftForm_covariant
+#check @DiamondIntegral.Section6.DiamondLift.liftObject
+#print DiamondIntegral.Section6.DiamondLift.liftObject
+#print axioms DiamondIntegral.Section6.DiamondLift.liftObject
+#check @DiamondIntegral.Section6.DiamondLift.vfDim_empty_lt
+#print DiamondIntegral.Section6.DiamondLift.vfDim_empty_lt
+#print axioms DiamondIntegral.Section6.DiamondLift.vfDim_empty_lt
+#check @DiamondIntegral.Section6.DiamondLift.liftChain_factor
+#print DiamondIntegral.Section6.DiamondLift.liftChain_factor
+#print axioms DiamondIntegral.Section6.DiamondLift.liftChain_factor
+#check @DiamondIntegral.Section6.DiamondLift.liftMorphism
+#print DiamondIntegral.Section6.DiamondLift.liftMorphism
+#print axioms DiamondIntegral.Section6.DiamondLift.liftMorphism
+#check @DiamondIntegral.Section6.DiamondLiftHomomorphism.homeo_zero
+#print DiamondIntegral.Section6.DiamondLiftHomomorphism.homeo_zero
+#print axioms DiamondIntegral.Section6.DiamondLiftHomomorphism.homeo_zero
+#check @DiamondIntegral.Section6.DiamondLiftHomomorphism.zeroMorphism
+#print DiamondIntegral.Section6.DiamondLiftHomomorphism.zeroMorphism
+#print axioms DiamondIntegral.Section6.DiamondLiftHomomorphism.zeroMorphism
+#check @DiamondIntegral.Section6.DiamondLiftHomomorphism.lift_isomorphic_zero
+#print DiamondIntegral.Section6.DiamondLiftHomomorphism.lift_isomorphic_zero
+#print axioms DiamondIntegral.Section6.DiamondLiftHomomorphism.lift_isomorphic_zero
+#check @DiamondIntegral.Section6.DiamondLiftHomomorphism.lift_isomorphic_pos
+#print DiamondIntegral.Section6.DiamondLiftHomomorphism.lift_isomorphic_pos
+#print axioms DiamondIntegral.Section6.DiamondLiftHomomorphism.lift_isomorphic_pos
+#check @DiamondIntegral.Section6.DiamondLiftHomomorphism.lemma_6_33_diamond
+#print DiamondIntegral.Section6.DiamondLiftHomomorphism.lemma_6_33_diamond
+#print axioms DiamondIntegral.Section6.DiamondLiftHomomorphism.lemma_6_33_diamond
+#check @DiamondIntegral.Section6.DiamondLiftHomomorphism.emptyRV
+#print DiamondIntegral.Section6.DiamondLiftHomomorphism.emptyRV
+#print axioms DiamondIntegral.Section6.DiamondLiftHomomorphism.emptyRV
+#check @DiamondIntegral.Section6.DiamondLiftHomomorphism.emptyRV_doublyBounded
+#print DiamondIntegral.Section6.DiamondLiftHomomorphism.emptyRV_doublyBounded
+#print axioms DiamondIntegral.Section6.DiamondLiftHomomorphism.emptyRV_doublyBounded
+#check @DiamondIntegral.Section6.DiamondLiftHomomorphism.DBObject
+#print DiamondIntegral.Section6.DiamondLiftHomomorphism.DBObject
+#print axioms DiamondIntegral.Section6.DiamondLiftHomomorphism.DBObject
+#check @DiamondIntegral.Section6.DiamondLiftHomomorphism.restrictCompl
+#print DiamondIntegral.Section6.DiamondLiftHomomorphism.restrictCompl
+#print axioms DiamondIntegral.Section6.DiamondLiftHomomorphism.restrictCompl
+#check @DiamondIntegral.Section6.DiamondLiftHomomorphism.RVScissor
+#print DiamondIntegral.Section6.DiamondLiftHomomorphism.RVScissor
+#print axioms DiamondIntegral.Section6.DiamondLiftHomomorphism.RVScissor
+#check @DiamondIntegral.Section6.DiamondLiftHomomorphism.rvPresentation
+#print DiamondIntegral.Section6.DiamondLiftHomomorphism.rvPresentation
+#print axioms DiamondIntegral.Section6.DiamondLiftHomomorphism.rvPresentation
+#check @DiamondIntegral.Section6.DiamondLiftHomomorphism.mem_rvLift_restrict
+#print DiamondIntegral.Section6.DiamondLiftHomomorphism.mem_rvLift_restrict
+#print axioms DiamondIntegral.Section6.DiamondLiftHomomorphism.mem_rvLift_restrict
+#check @DiamondIntegral.Section6.DiamondLiftHomomorphism.lift_restrict
+#print DiamondIntegral.Section6.DiamondLiftHomomorphism.lift_restrict
+#print axioms DiamondIntegral.Section6.DiamondLiftHomomorphism.lift_restrict
+#check @DiamondIntegral.Section6.DiamondLiftHomomorphism.restrictObject_congr
+#print DiamondIntegral.Section6.DiamondLiftHomomorphism.restrictObject_congr
+#print axioms DiamondIntegral.Section6.DiamondLiftHomomorphism.restrictObject_congr
+#check @DiamondIntegral.Section6.DiamondLiftHomomorphism.lift_restrictCompl
+#print DiamondIntegral.Section6.DiamondLiftHomomorphism.lift_restrictCompl
+#print axioms DiamondIntegral.Section6.DiamondLiftHomomorphism.lift_restrictCompl
+#check @DiamondIntegral.Section6.DiamondLiftHomomorphism.liftInvariant
+#print DiamondIntegral.Section6.DiamondLiftHomomorphism.liftInvariant
+#print axioms DiamondIntegral.Section6.DiamondLiftHomomorphism.liftInvariant
+#check @DiamondIntegral.Section6.DiamondLiftHomomorphism.liftHom
+#print DiamondIntegral.Section6.DiamondLiftHomomorphism.liftHom
+#print axioms DiamondIntegral.Section6.DiamondLiftHomomorphism.liftHom
+#check @DiamondIntegral.Section6.DiamondLiftHomomorphism.liftHom_class
+#print DiamondIntegral.Section6.DiamondLiftHomomorphism.liftHom_class
+#print axioms DiamondIntegral.Section6.DiamondLiftHomomorphism.liftHom_class
+#check @DiamondIntegral.Section6.DiamondLiftHomomorphism.liftHom_surjective
+#print DiamondIntegral.Section6.DiamondLiftHomomorphism.liftHom_surjective
+#print axioms DiamondIntegral.Section6.DiamondLiftHomomorphism.liftHom_surjective
+#check @DiamondIntegral.Section6.DiamondProduct.namedRadii_append
+#print DiamondIntegral.Section6.DiamondProduct.namedRadii_append
+#print axioms DiamondIntegral.Section6.DiamondProduct.namedRadii_append
+#check @DiamondIntegral.Section6.DiamondProduct.congruent_left
+#print DiamondIntegral.Section6.DiamondProduct.congruent_left
+#print axioms DiamondIntegral.Section6.DiamondProduct.congruent_left
+#check @DiamondIntegral.Section6.DiamondProduct.congruent_right
+#print DiamondIntegral.Section6.DiamondProduct.congruent_right
+#print axioms DiamondIntegral.Section6.DiamondProduct.congruent_right
+#check @DiamondIntegral.Section6.DiamondProduct.product_proper
+#print DiamondIntegral.Section6.DiamondProduct.product_proper
+#print axioms DiamondIntegral.Section6.DiamondProduct.product_proper
+#check @DiamondIntegral.Section6.DiamondProduct.unpack_val
+#print DiamondIntegral.Section6.DiamondProduct.unpack_val
+#print axioms DiamondIntegral.Section6.DiamondProduct.unpack_val
+#check @DiamondIntegral.Section6.DiamondProduct.productForm
+#print DiamondIntegral.Section6.DiamondProduct.productForm
+#print axioms DiamondIntegral.Section6.DiamondProduct.productForm
+#check @DiamondIntegral.Section6.DiamondProduct.productForm_value
+#print DiamondIntegral.Section6.DiamondProduct.productForm_value
+#print axioms DiamondIntegral.Section6.DiamondProduct.productForm_value
+#check @DiamondIntegral.Section6.DiamondProduct.product_covariant
+#print DiamondIntegral.Section6.DiamondProduct.product_covariant
+#print axioms DiamondIntegral.Section6.DiamondProduct.product_covariant
+#check @DiamondIntegral.Section6.DiamondProduct.product_finite
+#print DiamondIntegral.Section6.DiamondProduct.product_finite
+#print axioms DiamondIntegral.Section6.DiamondProduct.product_finite
+#check @DiamondIntegral.Section6.DiamondProduct.VFObject.product
+#print DiamondIntegral.Section6.DiamondProduct.VFObject.product
+#print axioms DiamondIntegral.Section6.DiamondProduct.VFObject.product
+#check @DiamondIntegral.Section6.DiamondSimultaneous.factor_homeo
+#print DiamondIntegral.Section6.DiamondSimultaneous.factor_homeo
+#print axioms DiamondIntegral.Section6.DiamondSimultaneous.factor_homeo
+#check @DiamondIntegral.Section6.DiamondSimultaneous.form_levels_open
+#print DiamondIntegral.Section6.DiamondSimultaneous.form_levels_open
+#print axioms DiamondIntegral.Section6.DiamondSimultaneous.form_levels_open
+#check @DiamondIntegral.Section6.DiamondSimultaneous.lemma_6_38_diamond
+#print DiamondIntegral.Section6.DiamondSimultaneous.lemma_6_38_diamond
+#print axioms DiamondIntegral.Section6.DiamondSimultaneous.lemma_6_38_diamond
+#check @DiamondIntegral.Section6.DiamondSimultaneous.lemma_6_38_diamond_contractible
+#print DiamondIntegral.Section6.DiamondSimultaneous.lemma_6_38_diamond_contractible
+#print axioms DiamondIntegral.Section6.DiamondSimultaneous.lemma_6_38_diamond_contractible
+#check @DiamondIntegral.Section6.DiamondSpecialIsomorphisms.relative_factor
+#print DiamondIntegral.Section6.DiamondSpecialIsomorphisms.relative_factor
+#print axioms DiamondIntegral.Section6.DiamondSpecialIsomorphisms.relative_factor
+#check @DiamondIntegral.Section6.DiamondSpecialIsomorphisms.remark_6_15
+#print DiamondIntegral.Section6.DiamondSpecialIsomorphisms.remark_6_15
+#print axioms DiamondIntegral.Section6.DiamondSpecialIsomorphisms.remark_6_15
+#check @DiamondIntegral.Section6.DiamondStandardContraction.headStartRadius
+#print DiamondIntegral.Section6.DiamondStandardContraction.headStartRadius
+#print axioms DiamondIntegral.Section6.DiamondStandardContraction.headStartRadius
+#check @DiamondIntegral.Section6.DiamondStandardContraction.headStartRadius_congruent
+#print DiamondIntegral.Section6.DiamondStandardContraction.headStartRadius_congruent
+#print axioms DiamondIntegral.Section6.DiamondStandardContraction.headStartRadius_congruent
+#check @DiamondIntegral.Section6.DiamondStandardContraction.headStartRadius_named
+#print DiamondIntegral.Section6.DiamondStandardContraction.headStartRadius_named
+#print axioms DiamondIntegral.Section6.DiamondStandardContraction.headStartRadius_named
+#check @DiamondIntegral.Section6.DiamondStandardContraction.object_hFin
+#print DiamondIntegral.Section6.DiamondStandardContraction.object_hFin
+#print axioms DiamondIntegral.Section6.DiamondStandardContraction.object_hFin
+#check @DiamondIntegral.Section6.DiamondStandardContraction.headStartSourceObject
+#print DiamondIntegral.Section6.DiamondStandardContraction.headStartSourceObject
+#print axioms DiamondIntegral.Section6.DiamondStandardContraction.headStartSourceObject
+#check @DiamondIntegral.Section6.DiamondStandardContraction.remark_6_28
+#print DiamondIntegral.Section6.DiamondStandardContraction.remark_6_28
+#print axioms DiamondIntegral.Section6.DiamondStandardContraction.remark_6_28
+#check @DiamondIntegral.Section6.DiamondStandardContraction.remark_6_28_exists
+#print DiamondIntegral.Section6.DiamondStandardContraction.remark_6_28_exists
+#print axioms DiamondIntegral.Section6.DiamondStandardContraction.remark_6_28_exists
+#check @DiamondIntegral.Section6.DiamondSurjectivity.retained_factor
+#print DiamondIntegral.Section6.DiamondSurjectivity.retained_factor
+#print axioms DiamondIntegral.Section6.DiamondSurjectivity.retained_factor
+#check @DiamondIntegral.Section6.DiamondSurjectivity.special_factor
+#print DiamondIntegral.Section6.DiamondSurjectivity.special_factor
+#print axioms DiamondIntegral.Section6.DiamondSurjectivity.special_factor
+#check @DiamondIntegral.Section6.DiamondSurjectivity.liftDataObject
+#print DiamondIntegral.Section6.DiamondSurjectivity.liftDataObject
+#print axioms DiamondIntegral.Section6.DiamondSurjectivity.liftDataObject
+#check @DiamondIntegral.Section6.DiamondSurjectivity.liftDataObject_doublyBounded
+#print DiamondIntegral.Section6.DiamondSurjectivity.liftDataObject_doublyBounded
+#print axioms DiamondIntegral.Section6.DiamondSurjectivity.liftDataObject_doublyBounded
+#check @DiamondIntegral.Section6.DiamondSurjectivity.isomorphic_of_liftData
+#print DiamondIntegral.Section6.DiamondSurjectivity.isomorphic_of_liftData
+#print axioms DiamondIntegral.Section6.DiamondSurjectivity.isomorphic_of_liftData
+#check @DiamondIntegral.Section6.DiamondSurjectivity.exists_isomorphic_lift
+#print DiamondIntegral.Section6.DiamondSurjectivity.exists_isomorphic_lift
+#print axioms DiamondIntegral.Section6.DiamondSurjectivity.exists_isomorphic_lift
+#check @DiamondIntegral.Section6.DiamondSurjectivity.exists_isomorphic_lift_zero
+#print DiamondIntegral.Section6.DiamondSurjectivity.exists_isomorphic_lift_zero
+#print axioms DiamondIntegral.Section6.DiamondSurjectivity.exists_isomorphic_lift_zero
 #check @DiamondIntegral.Section6.synchronized_preparation_all_dimensions
 #print DiamondIntegral.Section6.synchronized_preparation_all_dimensions
 #print axioms DiamondIntegral.Section6.synchronized_preparation_all_dimensions
@@ -8982,6 +9618,21 @@ import «section 6».Section
 #check @DiamondIntegral.Section6.exists_rv_transposition_chain
 #print DiamondIntegral.Section6.exists_rv_transposition_chain
 #print axioms DiamondIntegral.Section6.exists_rv_transposition_chain
+#check @DiamondIntegral.Section6.rvDiscSet
+#print DiamondIntegral.Section6.rvDiscSet
+#print axioms DiamondIntegral.Section6.rvDiscSet
+#check @DiamondIntegral.Section6.namedAffineMap
+#print DiamondIntegral.Section6.namedAffineMap
+#print axioms DiamondIntegral.Section6.namedAffineMap
+#check @DiamondIntegral.Section6.namedAffineMap_value
+#print DiamondIntegral.Section6.namedAffineMap_value
+#print axioms DiamondIntegral.Section6.namedAffineMap_value
+#check @DiamondIntegral.Section6.value_mul_lt_mul
+#print DiamondIntegral.Section6.value_mul_lt_mul
+#print axioms DiamondIntegral.Section6.value_mul_lt_mul
+#check @DiamondIntegral.Section6.remark_6_32
+#print DiamondIntegral.Section6.remark_6_32
+#print axioms DiamondIntegral.Section6.remark_6_32
 #check @DiamondIntegral.Section6.mapVFDisplacement
 #print DiamondIntegral.Section6.mapVFDisplacement
 #print axioms DiamondIntegral.Section6.mapVFDisplacement
@@ -11130,6 +11781,36 @@ import «section 6».Section
 #check @DiamondIntegral.Section6.CentripetalData.releasedProjection_rvPullback
 #print DiamondIntegral.Section6.CentripetalData.releasedProjection_rvPullback
 #print axioms DiamondIntegral.Section6.CentripetalData.releasedProjection_rvPullback
+#check @DiamondIntegral.Section6.rvDataRow
+#print DiamondIntegral.Section6.rvDataRow
+#print axioms DiamondIntegral.Section6.rvDataRow
+#check @DiamondIntegral.Section6.paddedRow
+#print DiamondIntegral.Section6.paddedRow
+#print axioms DiamondIntegral.Section6.paddedRow
+#check @DiamondIntegral.Section6.paddedRow_snoc_iff
+#print DiamondIntegral.Section6.paddedRow_snoc_iff
+#print axioms DiamondIntegral.Section6.paddedRow_snoc_iff
+#check @DiamondIntegral.Section6.paddedIndex
+#print DiamondIntegral.Section6.paddedIndex
+#print axioms DiamondIntegral.Section6.paddedIndex
+#check @DiamondIntegral.Section6.paddedIndex_values
+#print DiamondIntegral.Section6.paddedIndex_values
+#print axioms DiamondIntegral.Section6.paddedIndex_values
+#check @DiamondIntegral.Section6.rvOne_coordinate_definable_at
+#print DiamondIntegral.Section6.rvOne_coordinate_definable_at
+#print axioms DiamondIntegral.Section6.rvOne_coordinate_definable_at
+#check @DiamondIntegral.Section6.paddedRow_definable
+#print DiamondIntegral.Section6.paddedRow_definable
+#print axioms DiamondIntegral.Section6.paddedRow_definable
+#check @DiamondIntegral.Section6.paddedRow_bounded
+#print DiamondIntegral.Section6.paddedRow_bounded
+#print axioms DiamondIntegral.Section6.paddedRow_bounded
+#check @DiamondIntegral.Section6.paddedRow_levels_open
+#print DiamondIntegral.Section6.paddedRow_levels_open
+#print axioms DiamondIntegral.Section6.paddedRow_levels_open
+#check @DiamondIntegral.Section6.remark_6_20
+#print DiamondIntegral.Section6.remark_6_20
+#print axioms DiamondIntegral.Section6.remark_6_20
 #check @DiamondIntegral.Section6.unary_focus_tail_continuous
 #print DiamondIntegral.Section6.unary_focus_tail_continuous
 #print axioms DiamondIntegral.Section6.unary_focus_tail_continuous
@@ -11301,6 +11982,1194 @@ import «section 6».Section
 #check @DiamondIntegral.Section6.FMT.mixedFamilyFreeze_snoc
 #print DiamondIntegral.Section6.FMT.mixedFamilyFreeze_snoc
 #print axioms DiamondIntegral.Section6.FMT.mixedFamilyFreeze_snoc
+#check @DiamondIntegral.Section6.CentripetalData.coordinate_step_other_row
+#print DiamondIntegral.Section6.CentripetalData.coordinate_step_other_row
+#print axioms DiamondIntegral.Section6.CentripetalData.coordinate_step_other_row
+#check @DiamondIntegral.Section6.CentripetalData.coreGammaForm_at_row
+#print DiamondIntegral.Section6.CentripetalData.coreGammaForm_at_row
+#print axioms DiamondIntegral.Section6.CentripetalData.coreGammaForm_at_row
+#check @DiamondIntegral.Section6.CentripetalData.coreGammaForm_coordinate_constant_row
+#print DiamondIntegral.Section6.CentripetalData.coreGammaForm_coordinate_constant_row
+#print axioms DiamondIntegral.Section6.CentripetalData.coreGammaForm_coordinate_constant_row
+#check @DiamondIntegral.Section6.CentripetalData.releasedGammaForm_coordinate_constant_row
+#print DiamondIntegral.Section6.CentripetalData.releasedGammaForm_coordinate_constant_row
+#print axioms DiamondIntegral.Section6.CentripetalData.releasedGammaForm_coordinate_constant_row
+#check @DiamondIntegral.Section6.CentripetalData.coreRegularizedImage_leading_tag_row
+#print DiamondIntegral.Section6.CentripetalData.coreRegularizedImage_leading_tag_row
+#print axioms DiamondIntegral.Section6.CentripetalData.coreRegularizedImage_leading_tag_row
+#check @DiamondIntegral.Section6.CentripetalData.coreRegularizedImage_replace_row
+#print DiamondIntegral.Section6.CentripetalData.coreRegularizedImage_replace_row
+#print axioms DiamondIntegral.Section6.CentripetalData.coreRegularizedImage_replace_row
+#check @DiamondIntegral.Section6.CentripetalData.variableReleasedImage_leading_tag_row
+#print DiamondIntegral.Section6.CentripetalData.variableReleasedImage_leading_tag_row
+#print axioms DiamondIntegral.Section6.CentripetalData.variableReleasedImage_leading_tag_row
+#check @DiamondIntegral.Section6.CentripetalData.variableReleasedImage_replace_row
+#print DiamondIntegral.Section6.CentripetalData.variableReleasedImage_replace_row
+#print axioms DiamondIntegral.Section6.CentripetalData.variableReleasedImage_replace_row
+#check @DiamondIntegral.Section6.synchronized_core_in_arbitrary_coordinate_row
+#print DiamondIntegral.Section6.synchronized_core_in_arbitrary_coordinate_row
+#print axioms DiamondIntegral.Section6.synchronized_core_in_arbitrary_coordinate_row
+#check @DiamondIntegral.Section6.synchronized_variable_release_in_arbitrary_coordinate_row
+#print DiamondIntegral.Section6.synchronized_variable_release_in_arbitrary_coordinate_row
+#print axioms DiamondIntegral.Section6.synchronized_variable_release_in_arbitrary_coordinate_row
+#check @DiamondIntegral.Section6.UnaryMeasuredPreparationRow.coordinate
+#print DiamondIntegral.Section6.UnaryMeasuredPreparationRow.coordinate
+#print axioms DiamondIntegral.Section6.UnaryMeasuredPreparationRow.coordinate
+#check @DiamondIntegral.Section6.exists_binary_measured_fibre_programs_row
+#print DiamondIntegral.Section6.exists_binary_measured_fibre_programs_row
+#print axioms DiamondIntegral.Section6.exists_binary_measured_fibre_programs_row
+#check @DiamondIntegral.Section6.binary_measured_preparation_of_empty_coordinate_roots_row
+#print DiamondIntegral.Section6.binary_measured_preparation_of_empty_coordinate_roots_row
+#print axioms DiamondIntegral.Section6.binary_measured_preparation_of_empty_coordinate_roots_row
+#check @DiamondIntegral.Section6.CarriedRefinementFrame.carriedComponent_core_row
+#print DiamondIntegral.Section6.CarriedRefinementFrame.carriedComponent_core_row
+#print axioms DiamondIntegral.Section6.CarriedRefinementFrame.carriedComponent_core_row
+#check @DiamondIntegral.Section6.CarriedRefinementFrame.carriedComponent_core_form_constant_row
+#print DiamondIntegral.Section6.CarriedRefinementFrame.carriedComponent_core_form_constant_row
+#print axioms DiamondIntegral.Section6.CarriedRefinementFrame.carriedComponent_core_form_constant_row
+#check @DiamondIntegral.Section6.CarriedChainLift.pushCoordinateRoots_form_control_row
+#print DiamondIntegral.Section6.CarriedChainLift.pushCoordinateRoots_form_control_row
+#print axioms DiamondIntegral.Section6.CarriedChainLift.pushCoordinateRoots_form_control_row
+#check @DiamondIntegral.Section6.CarriedRefinementFrame.bundle_tagged_row
+#print DiamondIntegral.Section6.CarriedRefinementFrame.bundle_tagged_row
+#print axioms DiamondIntegral.Section6.CarriedRefinementFrame.bundle_tagged_row
+#check @DiamondIntegral.Section6.CarriedRefinementFrame.gamma_form_constant_row
+#print DiamondIntegral.Section6.CarriedRefinementFrame.gamma_form_constant_row
+#print axioms DiamondIntegral.Section6.CarriedRefinementFrame.gamma_form_constant_row
+#check @DiamondIntegral.Section6.CarriedChainLift.gamma_form_transport_row
+#print DiamondIntegral.Section6.CarriedChainLift.gamma_form_transport_row
+#print axioms DiamondIntegral.Section6.CarriedChainLift.gamma_form_transport_row
+#check @DiamondIntegral.Section6.centripetalStepMap_bijective_row
+#print DiamondIntegral.Section6.centripetalStepMap_bijective_row
+#print axioms DiamondIntegral.Section6.centripetalStepMap_bijective_row
+#check @DiamondIntegral.Section6.CentripetalData.coordinate_step_init_row
+#print DiamondIntegral.Section6.CentripetalData.coordinate_step_init_row
+#print axioms DiamondIntegral.Section6.CentripetalData.coordinate_step_init_row
+#check @DiamondIntegral.Section6.CentripetalData.coordinate_step_same_labels_row
+#print DiamondIntegral.Section6.CentripetalData.coordinate_step_same_labels_row
+#print axioms DiamondIntegral.Section6.CentripetalData.coordinate_step_same_labels_row
+#check @DiamondIntegral.Section6.CentripetalData.coordinate_core_congruent_row
+#print DiamondIntegral.Section6.CentripetalData.coordinate_core_congruent_row
+#print axioms DiamondIntegral.Section6.CentripetalData.coordinate_core_congruent_row
+#check @DiamondIntegral.Section6.CentripetalData.coordinate_core_form_constant_row
+#print DiamondIntegral.Section6.CentripetalData.coordinate_core_form_constant_row
+#print axioms DiamondIntegral.Section6.CentripetalData.coordinate_core_form_constant_row
+#check @DiamondIntegral.Section6.CentripetalData.coordinate_step_inverse_form_constant_on_core_row
+#print DiamondIntegral.Section6.CentripetalData.coordinate_step_inverse_form_constant_on_core_row
+#print axioms DiamondIntegral.Section6.CentripetalData.coordinate_step_inverse_form_constant_on_core_row
+#check @DiamondIntegral.Section6.CoordinateFormRootControlRow
+#print DiamondIntegral.Section6.CoordinateFormRootControlRow
+#print axioms DiamondIntegral.Section6.CoordinateFormRootControlRow
+#check @DiamondIntegral.Section6.coordinateFormRootControl_of_levels_row
+#print DiamondIntegral.Section6.coordinateFormRootControl_of_levels_row
+#print axioms DiamondIntegral.Section6.coordinateFormRootControl_of_levels_row
+#check @DiamondIntegral.Section6.CoordinateFormRootControlRow.levels
+#print DiamondIntegral.Section6.CoordinateFormRootControlRow.levels
+#print axioms DiamondIntegral.Section6.CoordinateFormRootControlRow.levels
+#check @DiamondIntegral.Section6.CoordinateFormRootControlRow.mono
+#print DiamondIntegral.Section6.CoordinateFormRootControlRow.mono
+#print axioms DiamondIntegral.Section6.CoordinateFormRootControlRow.mono
+#check @DiamondIntegral.Section6.CoordinateFormRootControlRow.empty_roots_projection_constant_row
+#print DiamondIntegral.Section6.CoordinateFormRootControlRow.empty_roots_projection_constant_row
+#print axioms DiamondIntegral.Section6.CoordinateFormRootControlRow.empty_roots_projection_constant_row
+#check @DiamondIntegral.Section6.exists_coordinate_form_controlling_roots_row
+#print DiamondIntegral.Section6.exists_coordinate_form_controlling_roots_row
+#print axioms DiamondIntegral.Section6.exists_coordinate_form_controlling_roots_row
+#check @DiamondIntegral.Section6.CoordinateGammaConstantRow
+#print DiamondIntegral.Section6.CoordinateGammaConstantRow
+#print axioms DiamondIntegral.Section6.CoordinateGammaConstantRow
+#check @DiamondIntegral.Section6.CoordinateGammaConstantRow.reindexed_projection_constant_row
+#print DiamondIntegral.Section6.CoordinateGammaConstantRow.reindexed_projection_constant_row
+#print axioms DiamondIntegral.Section6.CoordinateGammaConstantRow.reindexed_projection_constant_row
+#check @DiamondIntegral.Section6.reindexedGammaForm_levels_open_row
+#print DiamondIntegral.Section6.reindexedGammaForm_levels_open_row
+#print axioms DiamondIntegral.Section6.reindexedGammaForm_levels_open_row
+#check @DiamondIntegral.Section6.CoordinateGammaConstantRow.exists_coordinate_descent_row
+#print DiamondIntegral.Section6.CoordinateGammaConstantRow.exists_coordinate_descent_row
+#print axioms DiamondIntegral.Section6.CoordinateGammaConstantRow.exists_coordinate_descent_row
+#check @DiamondIntegral.Section6.coordinateGammaDescentRow
+#print DiamondIntegral.Section6.coordinateGammaDescentRow
+#print axioms DiamondIntegral.Section6.coordinateGammaDescentRow
+#check @DiamondIntegral.Section6.coordinateGammaDescent_at_row
+#print DiamondIntegral.Section6.coordinateGammaDescent_at_row
+#print axioms DiamondIntegral.Section6.coordinateGammaDescent_at_row
+#check @DiamondIntegral.Section6.empty_coordinate_roots_gamma_descent_row
+#print DiamondIntegral.Section6.empty_coordinate_roots_gamma_descent_row
+#print axioms DiamondIntegral.Section6.empty_coordinate_roots_gamma_descent_row
+#check @DiamondIntegral.Section6.descended_gamma_level_fibre_row
+#print DiamondIntegral.Section6.descended_gamma_level_fibre_row
+#print axioms DiamondIntegral.Section6.descended_gamma_level_fibre_row
+#check @DiamondIntegral.Section6.descended_gamma_levels_open_row
+#print DiamondIntegral.Section6.descended_gamma_levels_open_row
+#print axioms DiamondIntegral.Section6.descended_gamma_levels_open_row
+#check @DiamondIntegral.Section6.exists_coordinate_gamma_controlling_roots_row
+#print DiamondIntegral.Section6.exists_coordinate_gamma_controlling_roots_row
+#print axioms DiamondIntegral.Section6.exists_coordinate_gamma_controlling_roots_row
+#check @DiamondIntegral.Section6.exists_coordinate_measured_controlling_roots_row
+#print DiamondIntegral.Section6.exists_coordinate_measured_controlling_roots_row
+#print axioms DiamondIntegral.Section6.exists_coordinate_measured_controlling_roots_row
+#check @DiamondIntegral.Section6.CentripetalData.CoreFormConstantRow
+#print DiamondIntegral.Section6.CentripetalData.CoreFormConstantRow
+#print axioms DiamondIntegral.Section6.CentripetalData.CoreFormConstantRow
+#check @DiamondIntegral.Section6.CentripetalData.core_form_constant_of_uniform_radius_row
+#print DiamondIntegral.Section6.CentripetalData.core_form_constant_of_uniform_radius_row
+#print axioms DiamondIntegral.Section6.CentripetalData.core_form_constant_of_uniform_radius_row
+#check @DiamondIntegral.Section6.CentripetalData.CoreFormConstantRow.refine
+#print DiamondIntegral.Section6.CentripetalData.CoreFormConstantRow.refine
+#print axioms DiamondIntegral.Section6.CentripetalData.CoreFormConstantRow.refine
+#check @DiamondIntegral.Section6.ApertureRestrictionData.core_form_constant_row
+#print DiamondIntegral.Section6.ApertureRestrictionData.core_form_constant_row
+#print axioms DiamondIntegral.Section6.ApertureRestrictionData.core_form_constant_row
+#check @DiamondIntegral.Section6.CentripetalData.coreGammaFormRow
+#print DiamondIntegral.Section6.CentripetalData.coreGammaFormRow
+#print axioms DiamondIntegral.Section6.CentripetalData.coreGammaFormRow
+#check @DiamondIntegral.Section6.CentripetalData.coreGammaForm_projection_constant_row
+#print DiamondIntegral.Section6.CentripetalData.coreGammaForm_projection_constant_row
+#print axioms DiamondIntegral.Section6.CentripetalData.coreGammaForm_projection_constant_row
+#check @DiamondIntegral.Section6.CentripetalData.coreGammaForm_levels_geometry_row
+#print DiamondIntegral.Section6.CentripetalData.coreGammaForm_levels_geometry_row
+#print axioms DiamondIntegral.Section6.CentripetalData.coreGammaForm_levels_geometry_row
+#check @DiamondIntegral.Section6.CentripetalData.exists_core_gamma_descent_with_open_levels_row
+#print DiamondIntegral.Section6.CentripetalData.exists_core_gamma_descent_with_open_levels_row
+#print axioms DiamondIntegral.Section6.CentripetalData.exists_core_gamma_descent_with_open_levels_row
+#check @DiamondIntegral.Section6.exact_gamma_transport_eq_inverse_row
+#print DiamondIntegral.Section6.exact_gamma_transport_eq_inverse_row
+#print axioms DiamondIntegral.Section6.exact_gamma_transport_eq_inverse_row
+#check @DiamondIntegral.Section6.SpecialCovariantChain.exact_gamma_levels_open_row
+#print DiamondIntegral.Section6.SpecialCovariantChain.exact_gamma_levels_open_row
+#print axioms DiamondIntegral.Section6.SpecialCovariantChain.exact_gamma_levels_open_row
+#check @DiamondIntegral.Section6.exists_finite_form_compatible_programs_row
+#print DiamondIntegral.Section6.exists_finite_form_compatible_programs_row
+#print axioms DiamondIntegral.Section6.exists_finite_form_compatible_programs_row
+#check @DiamondIntegral.Section6.exists_finite_head_form_compatible_programs_row
+#print DiamondIntegral.Section6.exists_finite_head_form_compatible_programs_row
+#print axioms DiamondIntegral.Section6.exists_finite_head_form_compatible_programs_row
+#check @DiamondIntegral.Section6.exists_finite_head_measured_programs_row
+#print DiamondIntegral.Section6.exists_finite_head_measured_programs_row
+#print axioms DiamondIntegral.Section6.exists_finite_head_measured_programs_row
+#check @DiamondIntegral.Section6.exists_finite_measured_centripetal_programs_row
+#print DiamondIntegral.Section6.exists_finite_measured_centripetal_programs_row
+#print axioms DiamondIntegral.Section6.exists_finite_measured_centripetal_programs_row
+#check @DiamondIntegral.Section6.SimultaneousCarriedLift.identity_form_compatible_certificate_row
+#print DiamondIntegral.Section6.SimultaneousCarriedLift.identity_form_compatible_certificate_row
+#print axioms DiamondIntegral.Section6.SimultaneousCarriedLift.identity_form_compatible_certificate_row
+#check @DiamondIntegral.Section6.SimultaneousCarriedLift.regularize_form_compatible_certificate_row
+#print DiamondIntegral.Section6.SimultaneousCarriedLift.regularize_form_compatible_certificate_row
+#print axioms DiamondIntegral.Section6.SimultaneousCarriedLift.regularize_form_compatible_certificate_row
+#check @DiamondIntegral.Section6.SimultaneousCarriedLift.centripetal_form_compatible_certificate_row
+#print DiamondIntegral.Section6.SimultaneousCarriedLift.centripetal_form_compatible_certificate_row
+#print axioms DiamondIntegral.Section6.SimultaneousCarriedLift.centripetal_form_compatible_certificate_row
+#check @DiamondIntegral.Section6.FormCompatibleSynchronizedChainRow.carried_form_compatible_lift_exists_row
+#print DiamondIntegral.Section6.FormCompatibleSynchronizedChainRow.carried_form_compatible_lift_exists_row
+#print axioms DiamondIntegral.Section6.FormCompatibleSynchronizedChainRow.carried_form_compatible_lift_exists_row
+#check @DiamondIntegral.Section6.FormCompatibleSynchronizedChainRow.changeTarget
+#print DiamondIntegral.Section6.FormCompatibleSynchronizedChainRow.changeTarget
+#print axioms DiamondIntegral.Section6.FormCompatibleSynchronizedChainRow.changeTarget
+#check @DiamondIntegral.Section6.FormCompatibleSynchronizedChainRow.changePieces
+#print DiamondIntegral.Section6.FormCompatibleSynchronizedChainRow.changePieces
+#print axioms DiamondIntegral.Section6.FormCompatibleSynchronizedChainRow.changePieces
+#check @DiamondIntegral.Section6.FormCompatibleSynchronizedChainRow.changeSource
+#print DiamondIntegral.Section6.FormCompatibleSynchronizedChainRow.changeSource
+#print axioms DiamondIntegral.Section6.FormCompatibleSynchronizedChainRow.changeSource
+#check @DiamondIntegral.Section6.form_compatible_centripetal_step_row
+#print DiamondIntegral.Section6.form_compatible_centripetal_step_row
+#print axioms DiamondIntegral.Section6.form_compatible_centripetal_step_row
+#check @DiamondIntegral.Section6.CentripetalProgramTemplate.coreFormGoodRow
+#print DiamondIntegral.Section6.CentripetalProgramTemplate.coreFormGoodRow
+#print axioms DiamondIntegral.Section6.CentripetalProgramTemplate.coreFormGoodRow
+#check @DiamondIntegral.Section6.CentripetalProgramTemplate.coreFormGood_definable_row
+#print DiamondIntegral.Section6.CentripetalProgramTemplate.coreFormGood_definable_row
+#print axioms DiamondIntegral.Section6.CentripetalProgramTemplate.coreFormGood_definable_row
+#check @DiamondIntegral.Section6.CentripetalProgramTemplate.measuredFormGoodRow
+#print DiamondIntegral.Section6.CentripetalProgramTemplate.measuredFormGoodRow
+#print axioms DiamondIntegral.Section6.CentripetalProgramTemplate.measuredFormGoodRow
+#check @DiamondIntegral.Section6.CentripetalProgramTemplate.measuredFormGood_definable_row
+#print DiamondIntegral.Section6.CentripetalProgramTemplate.measuredFormGood_definable_row
+#print axioms DiamondIntegral.Section6.CentripetalProgramTemplate.measuredFormGood_definable_row
+#check @DiamondIntegral.Section6.gammaCoreConstantParameterLocus_substitute_row
+#print DiamondIntegral.Section6.gammaCoreConstantParameterLocus_substitute_row
+#print axioms DiamondIntegral.Section6.gammaCoreConstantParameterLocus_substitute_row
+#check @DiamondIntegral.Section6.CentripetalProgramTemplate.substitute_coreFormGood_row
+#print DiamondIntegral.Section6.CentripetalProgramTemplate.substitute_coreFormGood_row
+#print axioms DiamondIntegral.Section6.CentripetalProgramTemplate.substitute_coreFormGood_row
+#check @DiamondIntegral.Section6.FormCompatibleSynchronizedChainRow.rv_refinement_lift_exists
+#print DiamondIntegral.Section6.FormCompatibleSynchronizedChainRow.rv_refinement_lift_exists
+#print axioms DiamondIntegral.Section6.FormCompatibleSynchronizedChainRow.rv_refinement_lift_exists
+#check @DiamondIntegral.Section6.FormCompatibleSynchronizedChainRow
+#print DiamondIntegral.Section6.FormCompatibleSynchronizedChainRow
+#print axioms DiamondIntegral.Section6.FormCompatibleSynchronizedChainRow
+#check @DiamondIntegral.Section6.FormCompatibleSynchronizedChainRow.toSynchronizedRow
+#print DiamondIntegral.Section6.FormCompatibleSynchronizedChainRow.toSynchronizedRow
+#print axioms DiamondIntegral.Section6.FormCompatibleSynchronizedChainRow.toSynchronizedRow
+#check @DiamondIntegral.Section6.SynchronizedTagBranchExtension.ofMap_form_compatible_row
+#print DiamondIntegral.Section6.SynchronizedTagBranchExtension.ofMap_form_compatible_row
+#print axioms DiamondIntegral.Section6.SynchronizedTagBranchExtension.ofMap_form_compatible_row
+#check @DiamondIntegral.Section6.FormCompatibleSynchronizedChainRow.tag_branch_extension
+#print DiamondIntegral.Section6.FormCompatibleSynchronizedChainRow.tag_branch_extension
+#print axioms DiamondIntegral.Section6.FormCompatibleSynchronizedChainRow.tag_branch_extension
+#check @DiamondIntegral.Section6.CentripetalData.extendOnTags_core_form_constant_row
+#print DiamondIntegral.Section6.CentripetalData.extendOnTags_core_form_constant_row
+#print axioms DiamondIntegral.Section6.CentripetalData.extendOnTags_core_form_constant_row
+#check @DiamondIntegral.Section6.exists_form_compatible_tag_component_extension_row
+#print DiamondIntegral.Section6.exists_form_compatible_tag_component_extension_row
+#print axioms DiamondIntegral.Section6.exists_form_compatible_tag_component_extension_row
+#check @DiamondIntegral.Section6.FormCompatibleSynchronizedChainRow.vf_reindexed_lift_exists
+#print DiamondIntegral.Section6.FormCompatibleSynchronizedChainRow.vf_reindexed_lift_exists
+#print axioms DiamondIntegral.Section6.FormCompatibleSynchronizedChainRow.vf_reindexed_lift_exists
+#check @DiamondIntegral.Section6.RowValue
+#print DiamondIntegral.Section6.RowValue
+#print axioms DiamondIntegral.Section6.RowValue
+#check @DiamondIntegral.Section6.RowFormOn
+#print DiamondIntegral.Section6.RowFormOn
+#print axioms DiamondIntegral.Section6.RowFormOn
+#check @DiamondIntegral.Section6.RowFormOn.rowMarker
+#print DiamondIntegral.Section6.RowFormOn.rowMarker
+#print axioms DiamondIntegral.Section6.RowFormOn.rowMarker
+#check @DiamondIntegral.Section6.RowFormOn.graph
+#print DiamondIntegral.Section6.RowFormOn.graph
+#print axioms DiamondIntegral.Section6.RowFormOn.graph
+#check @DiamondIntegral.Section6.RowFormOn.rowMarker_definable
+#print DiamondIntegral.Section6.RowFormOn.rowMarker_definable
+#print axioms DiamondIntegral.Section6.RowFormOn.rowMarker_definable
+#check @DiamondIntegral.Section6.RowFormOn.graph_definable
+#print DiamondIntegral.Section6.RowFormOn.graph_definable
+#print axioms DiamondIntegral.Section6.RowFormOn.graph_definable
+#check @DiamondIntegral.Section6.RowFormOn.rowMarker_not_mem
+#print DiamondIntegral.Section6.RowFormOn.rowMarker_not_mem
+#print axioms DiamondIntegral.Section6.RowFormOn.rowMarker_not_mem
+#check @DiamondIntegral.Section6.RowFormOn.graph_apply_iff
+#print DiamondIntegral.Section6.RowFormOn.graph_apply_iff
+#print axioms DiamondIntegral.Section6.RowFormOn.graph_apply_iff
+#check @DiamondIntegral.Section6.RowFormOn.comp
+#print DiamondIntegral.Section6.RowFormOn.comp
+#print axioms DiamondIntegral.Section6.RowFormOn.comp
+#check @DiamondIntegral.Section6.RowFormOn.ext
+#print DiamondIntegral.Section6.RowFormOn.ext
+#print axioms DiamondIntegral.Section6.RowFormOn.ext
+#check @DiamondIntegral.Section6.RowFormOn.comp_apply
+#print DiamondIntegral.Section6.RowFormOn.comp_apply
+#print axioms DiamondIntegral.Section6.RowFormOn.comp_apply
+#check @DiamondIntegral.Section6.RowFormOn.comp_comp
+#print DiamondIntegral.Section6.RowFormOn.comp_comp
+#print axioms DiamondIntegral.Section6.RowFormOn.comp_comp
+#check @DiamondIntegral.Section6.RowFormOn.descent
+#print DiamondIntegral.Section6.RowFormOn.descent
+#print axioms DiamondIntegral.Section6.RowFormOn.descent
+#check @DiamondIntegral.Section6.RowFormOn.descent_apply
+#print DiamondIntegral.Section6.RowFormOn.descent_apply
+#print axioms DiamondIntegral.Section6.RowFormOn.descent_apply
+#check @DiamondIntegral.Section6.MixedRowGraphDefinable
+#print DiamondIntegral.Section6.MixedRowGraphDefinable
+#print axioms DiamondIntegral.Section6.MixedRowGraphDefinable
+#check @DiamondIntegral.Section6.rowFormExtension
+#print DiamondIntegral.Section6.rowFormExtension
+#print axioms DiamondIntegral.Section6.rowFormExtension
+#check @DiamondIntegral.Section6.rowFormExtension_at
+#print DiamondIntegral.Section6.rowFormExtension_at
+#print axioms DiamondIntegral.Section6.rowFormExtension_at
+#check @DiamondIntegral.Section6.rowFormExtension_graph_definable
+#print DiamondIntegral.Section6.rowFormExtension_graph_definable
+#print axioms DiamondIntegral.Section6.rowFormExtension_graph_definable
+#check @DiamondIntegral.Section6.rowFormExtension_comp_at
+#print DiamondIntegral.Section6.rowFormExtension_comp_at
+#print axioms DiamondIntegral.Section6.rowFormExtension_comp_at
+#check @DiamondIntegral.Section6.rowFormExtension_inverse_transport
+#print DiamondIntegral.Section6.rowFormExtension_inverse_transport
+#print axioms DiamondIntegral.Section6.rowFormExtension_inverse_transport
+#check @DiamondIntegral.Section6.rowFormOfRelation
+#print DiamondIntegral.Section6.rowFormOfRelation
+#print axioms DiamondIntegral.Section6.rowFormOfRelation
+#check @DiamondIntegral.Section6.rowFormOfRelation_apply
+#print DiamondIntegral.Section6.rowFormOfRelation_apply
+#print axioms DiamondIntegral.Section6.rowFormOfRelation_apply
+#check @DiamondIntegral.Section6.CoordinateRootFamily.frozen_form_control_row
+#print DiamondIntegral.Section6.CoordinateRootFamily.frozen_form_control_row
+#print axioms DiamondIntegral.Section6.CoordinateRootFamily.frozen_form_control_row
+#check @DiamondIntegral.Section6.FrozenMeasuredCoordinateProgramDataRow.selected_measured_rows_on_target_labels_row
+#print DiamondIntegral.Section6.FrozenMeasuredCoordinateProgramDataRow.selected_measured_rows_on_target_labels_row
+#print axioms DiamondIntegral.Section6.FrozenMeasuredCoordinateProgramDataRow.selected_measured_rows_on_target_labels_row
+#check @DiamondIntegral.Section6.FrozenMeasuredCoordinateProgramDataRow.uniform_named_target_measured_bound_row
+#print DiamondIntegral.Section6.FrozenMeasuredCoordinateProgramDataRow.uniform_named_target_measured_bound_row
+#print axioms DiamondIntegral.Section6.FrozenMeasuredCoordinateProgramDataRow.uniform_named_target_measured_bound_row
+#check @DiamondIntegral.Section6.FrozenMeasuredCoordinateProgramDataRow.exists_choice_uniform_measured_family_row
+#print DiamondIntegral.Section6.FrozenMeasuredCoordinateProgramDataRow.exists_choice_uniform_measured_family_row
+#print axioms DiamondIntegral.Section6.FrozenMeasuredCoordinateProgramDataRow.exists_choice_uniform_measured_family_row
+#check @DiamondIntegral.Section6.FrozenMeasuredCoordinateProgramDataRow.measured_preparation_of_frozen_coordinate_program_data_row
+#print DiamondIntegral.Section6.FrozenMeasuredCoordinateProgramDataRow.measured_preparation_of_frozen_coordinate_program_data_row
+#print axioms DiamondIntegral.Section6.FrozenMeasuredCoordinateProgramDataRow.measured_preparation_of_frozen_coordinate_program_data_row
+#check @DiamondIntegral.Section6.CentripetalProgramTemplate.substitute_measuredFormGood_row
+#print DiamondIntegral.Section6.CentripetalProgramTemplate.substitute_measuredFormGood_row
+#print axioms DiamondIntegral.Section6.CentripetalProgramTemplate.substitute_measuredFormGood_row
+#check @DiamondIntegral.Section6.FrozenMeasuredCoordinateProgramDataRow
+#print DiamondIntegral.Section6.FrozenMeasuredCoordinateProgramDataRow
+#print axioms DiamondIntegral.Section6.FrozenMeasuredCoordinateProgramDataRow
+#check @DiamondIntegral.Section6.FrozenMeasuredCoordinateProgramDataRow.substitution
+#print DiamondIntegral.Section6.FrozenMeasuredCoordinateProgramDataRow.substitution
+#print axioms DiamondIntegral.Section6.FrozenMeasuredCoordinateProgramDataRow.substitution
+#check @DiamondIntegral.Section6.FrozenMeasuredCoordinateProgramDataRow.sources_preserved
+#print DiamondIntegral.Section6.FrozenMeasuredCoordinateProgramDataRow.sources_preserved
+#print axioms DiamondIntegral.Section6.FrozenMeasuredCoordinateProgramDataRow.sources_preserved
+#check @DiamondIntegral.Section6.FrozenMeasuredCoordinateProgramDataRow.choices_constant
+#print DiamondIntegral.Section6.FrozenMeasuredCoordinateProgramDataRow.choices_constant
+#print axioms DiamondIntegral.Section6.FrozenMeasuredCoordinateProgramDataRow.choices_constant
+#check @DiamondIntegral.Section6.FrozenMeasuredCoordinateProgramDataRow.selected_rows_constant
+#print DiamondIntegral.Section6.FrozenMeasuredCoordinateProgramDataRow.selected_rows_constant
+#print axioms DiamondIntegral.Section6.FrozenMeasuredCoordinateProgramDataRow.selected_rows_constant
+#check @DiamondIntegral.Section6.FrozenMeasuredCoordinateProgramDataRow.substituted_measured_good_row
+#print DiamondIntegral.Section6.FrozenMeasuredCoordinateProgramDataRow.substituted_measured_good_row
+#print axioms DiamondIntegral.Section6.FrozenMeasuredCoordinateProgramDataRow.substituted_measured_good_row
+#check @DiamondIntegral.Section6.exists_frozen_measured_coordinate_program_data_row
+#print DiamondIntegral.Section6.exists_frozen_measured_coordinate_program_data_row
+#print axioms DiamondIntegral.Section6.exists_frozen_measured_coordinate_program_data_row
+#check @DiamondIntegral.Section6.FrozenMeasuredCoordinateProgramDataRow.forget
+#print DiamondIntegral.Section6.FrozenMeasuredCoordinateProgramDataRow.forget
+#print axioms DiamondIntegral.Section6.FrozenMeasuredCoordinateProgramDataRow.forget
+#check @DiamondIntegral.Section6.FrozenMeasuredCoordinateProgramDataRow.frozen_gamma_equal_row
+#print DiamondIntegral.Section6.FrozenMeasuredCoordinateProgramDataRow.frozen_gamma_equal_row
+#print axioms DiamondIntegral.Section6.FrozenMeasuredCoordinateProgramDataRow.frozen_gamma_equal_row
+#check @DiamondIntegral.Section6.FrozenMeasuredCoordinateProgramDataRow.uniform_named_bound
+#print DiamondIntegral.Section6.FrozenMeasuredCoordinateProgramDataRow.uniform_named_bound
+#print axioms DiamondIntegral.Section6.FrozenMeasuredCoordinateProgramDataRow.uniform_named_bound
+#check @DiamondIntegral.Section6.FrozenMeasuredCoordinateProgramDataRow.liftedGammaFormRow
+#print DiamondIntegral.Section6.FrozenMeasuredCoordinateProgramDataRow.liftedGammaFormRow
+#print axioms DiamondIntegral.Section6.FrozenMeasuredCoordinateProgramDataRow.liftedGammaFormRow
+#check @DiamondIntegral.Section6.FrozenMeasuredCoordinateProgramDataRow.liftedGammaForm_transport_row
+#print DiamondIntegral.Section6.FrozenMeasuredCoordinateProgramDataRow.liftedGammaForm_transport_row
+#print axioms DiamondIntegral.Section6.FrozenMeasuredCoordinateProgramDataRow.liftedGammaForm_transport_row
+#check @DiamondIntegral.Section6.FrozenMeasuredCoordinateProgramDataRow.initial_source_form_row
+#print DiamondIntegral.Section6.FrozenMeasuredCoordinateProgramDataRow.initial_source_form_row
+#print axioms DiamondIntegral.Section6.FrozenMeasuredCoordinateProgramDataRow.initial_source_form_row
+#check @DiamondIntegral.Section6.FrozenMeasuredCoordinateProgramDataRow.choice_source_form_row
+#print DiamondIntegral.Section6.FrozenMeasuredCoordinateProgramDataRow.choice_source_form_row
+#print axioms DiamondIntegral.Section6.FrozenMeasuredCoordinateProgramDataRow.choice_source_form_row
+#check @DiamondIntegral.Section6.SelectedProgramContext.baseMap_same_source_row
+#print DiamondIntegral.Section6.SelectedProgramContext.baseMap_same_source_row
+#print axioms DiamondIntegral.Section6.SelectedProgramContext.baseMap_same_source_row
+#check @DiamondIntegral.Section6.SelectedProgramContext.frozen_source_form_agreement_row
+#print DiamondIntegral.Section6.SelectedProgramContext.frozen_source_form_agreement_row
+#print axioms DiamondIntegral.Section6.SelectedProgramContext.frozen_source_form_agreement_row
+#check @DiamondIntegral.Section6.CentripetalFusionRepair.localSourcePointRow
+#print DiamondIntegral.Section6.CentripetalFusionRepair.localSourcePointRow
+#print axioms DiamondIntegral.Section6.CentripetalFusionRepair.localSourcePointRow
+#check @DiamondIntegral.Section6.CentripetalFusionRepair.baseMap_eq_of_complement_row
+#print DiamondIntegral.Section6.CentripetalFusionRepair.baseMap_eq_of_complement_row
+#print axioms DiamondIntegral.Section6.CentripetalFusionRepair.baseMap_eq_of_complement_row
+#check @DiamondIntegral.Section6.CentripetalFusionRepair.oldRadius_le_global_cutoff_row
+#print DiamondIntegral.Section6.CentripetalFusionRepair.oldRadius_le_global_cutoff_row
+#print axioms DiamondIntegral.Section6.CentripetalFusionRepair.oldRadius_le_global_cutoff_row
+#check @DiamondIntegral.Section6.CentripetalFusionRepair.variable_core_form_constant_of_local_forms_row
+#print DiamondIntegral.Section6.CentripetalFusionRepair.variable_core_form_constant_of_local_forms_row
+#print axioms DiamondIntegral.Section6.CentripetalFusionRepair.variable_core_form_constant_of_local_forms_row
+#check @DiamondIntegral.Section6.CentripetalData.VariableCoreFormConstantRow.core_of_cutoff_row
+#print DiamondIntegral.Section6.CentripetalData.VariableCoreFormConstantRow.core_of_cutoff_row
+#print axioms DiamondIntegral.Section6.CentripetalData.VariableCoreFormConstantRow.core_of_cutoff_row
+#check @DiamondIntegral.Section6.CentripetalFusionRepair.fusionResidualGammaMap_at_preimage_row
+#print DiamondIntegral.Section6.CentripetalFusionRepair.fusionResidualGammaMap_at_preimage_row
+#print axioms DiamondIntegral.Section6.CentripetalFusionRepair.fusionResidualGammaMap_at_preimage_row
+#check @DiamondIntegral.Section6.CentripetalFusionRepair.fusionResidualGammaMap_levels_open_row
+#print DiamondIntegral.Section6.CentripetalFusionRepair.fusionResidualGammaMap_levels_open_row
+#print axioms DiamondIntegral.Section6.CentripetalFusionRepair.fusionResidualGammaMap_levels_open_row
+#check @DiamondIntegral.Section6.gammaCodeLocusSetRow
+#print DiamondIntegral.Section6.gammaCodeLocusSetRow
+#print axioms DiamondIntegral.Section6.gammaCodeLocusSetRow
+#check @DiamondIntegral.Section6.gammaCodeLocusSetRow_definable
+#print DiamondIntegral.Section6.gammaCodeLocusSetRow_definable
+#print axioms DiamondIntegral.Section6.gammaCodeLocusSetRow_definable
+#check @DiamondIntegral.Section6.gammaCodeLocusRow
+#print DiamondIntegral.Section6.gammaCodeLocusRow
+#print axioms DiamondIntegral.Section6.gammaCodeLocusRow
+#check @DiamondIntegral.Section6.gammaCodeLocus_at_row
+#print DiamondIntegral.Section6.gammaCodeLocus_at_row
+#print axioms DiamondIntegral.Section6.gammaCodeLocus_at_row
+#check @DiamondIntegral.Section6.CentripetalData.core_form_constant_iff_output_row
+#print DiamondIntegral.Section6.CentripetalData.core_form_constant_iff_output_row
+#print axioms DiamondIntegral.Section6.CentripetalData.core_form_constant_iff_output_row
+#check @DiamondIntegral.Section6.gammaCoreConstantParameterLocus_at_component_row
+#print DiamondIntegral.Section6.gammaCoreConstantParameterLocus_at_component_row
+#print axioms DiamondIntegral.Section6.gammaCoreConstantParameterLocus_at_component_row
+#check @DiamondIntegral.Section6.gammaCoreJointGraphRow
+#print DiamondIntegral.Section6.gammaCoreJointGraphRow
+#print axioms DiamondIntegral.Section6.gammaCoreJointGraphRow
+#check @DiamondIntegral.Section6.gammaCoreJointGraph_definable_row
+#print DiamondIntegral.Section6.gammaCoreJointGraph_definable_row
+#print axioms DiamondIntegral.Section6.gammaCoreJointGraph_definable_row
+#check @DiamondIntegral.Section6.gammaCoreTransitionCodeConditionRow
+#print DiamondIntegral.Section6.gammaCoreTransitionCodeConditionRow
+#print axioms DiamondIntegral.Section6.gammaCoreTransitionCodeConditionRow
+#check @DiamondIntegral.Section6.gammaCoreTransitionCodeCondition_definable_row
+#print DiamondIntegral.Section6.gammaCoreTransitionCodeCondition_definable_row
+#print axioms DiamondIntegral.Section6.gammaCoreTransitionCodeCondition_definable_row
+#check @DiamondIntegral.Section6.gammaCoreConstantParameterLocusRow
+#print DiamondIntegral.Section6.gammaCoreConstantParameterLocusRow
+#print axioms DiamondIntegral.Section6.gammaCoreConstantParameterLocusRow
+#check @DiamondIntegral.Section6.gammaCoreConstantParameterLocus_definable_row
+#print DiamondIntegral.Section6.gammaCoreConstantParameterLocus_definable_row
+#print axioms DiamondIntegral.Section6.gammaCoreConstantParameterLocus_definable_row
+#check @DiamondIntegral.Section6.gammaCoreJointGraph_entries_row
+#print DiamondIntegral.Section6.gammaCoreJointGraph_entries_row
+#print axioms DiamondIntegral.Section6.gammaCoreJointGraph_entries_row
+#check @DiamondIntegral.Section6.gammaCoreConstantParameterLocus_iff_row
+#print DiamondIntegral.Section6.gammaCoreConstantParameterLocus_iff_row
+#print axioms DiamondIntegral.Section6.gammaCoreConstantParameterLocus_iff_row
+#check @DiamondIntegral.Section6.relationDefinable_not
+#print DiamondIntegral.Section6.relationDefinable_not
+#print axioms DiamondIntegral.Section6.relationDefinable_not
+#check @DiamondIntegral.Section6.vfBlockMap
+#print DiamondIntegral.Section6.vfBlockMap
+#print axioms DiamondIntegral.Section6.vfBlockMap
+#check @DiamondIntegral.Section6.vfBlockMap_apply
+#print DiamondIntegral.Section6.vfBlockMap_apply
+#print axioms DiamondIntegral.Section6.vfBlockMap_apply
+#check @DiamondIntegral.Section6.vfBlockMap_graph_iff
+#print DiamondIntegral.Section6.vfBlockMap_graph_iff
+#print axioms DiamondIntegral.Section6.vfBlockMap_graph_iff
+#check @DiamondIntegral.Section6.rowLevelRelation
+#print DiamondIntegral.Section6.rowLevelRelation
+#print axioms DiamondIntegral.Section6.rowLevelRelation
+#check @DiamondIntegral.Section6.rowLevelRelation_vfBounded
+#print DiamondIntegral.Section6.rowLevelRelation_vfBounded
+#print axioms DiamondIntegral.Section6.rowLevelRelation_vfBounded
+#check @DiamondIntegral.Section6.rowLevelRelation_rvBounded
+#print DiamondIntegral.Section6.rowLevelRelation_rvBounded
+#print axioms DiamondIntegral.Section6.rowLevelRelation_rvBounded
+#check @DiamondIntegral.Section6.rowLevelRelation_clopen_fibres
+#print DiamondIntegral.Section6.rowLevelRelation_clopen_fibres
+#print axioms DiamondIntegral.Section6.rowLevelRelation_clopen_fibres
+#check @DiamondIntegral.Section6.rowLevelRelation_definable
+#print DiamondIntegral.Section6.rowLevelRelation_definable
+#print axioms DiamondIntegral.Section6.rowLevelRelation_definable
+#check @DiamondIntegral.Section6.gammaFunction_uniform_named_radius_row
+#print DiamondIntegral.Section6.gammaFunction_uniform_named_radius_row
+#print axioms DiamondIntegral.Section6.gammaFunction_uniform_named_radius_row
+#check @DiamondIntegral.Section6.FMT.gammaFormExtension_freeze_row
+#print DiamondIntegral.Section6.FMT.gammaFormExtension_freeze_row
+#print axioms DiamondIntegral.Section6.FMT.gammaFormExtension_freeze_row
+#check @DiamondIntegral.Section6.FMT.frozenGammaFormRow
+#print DiamondIntegral.Section6.FMT.frozenGammaFormRow
+#print axioms DiamondIntegral.Section6.FMT.frozenGammaFormRow
+#check @DiamondIntegral.Section6.FMT.frozenGammaForm_eq_row
+#print DiamondIntegral.Section6.FMT.frozenGammaForm_eq_row
+#print axioms DiamondIntegral.Section6.FMT.frozenGammaForm_eq_row
+#check @DiamondIntegral.Section6.gammaForm_value_bounds_row
+#print DiamondIntegral.Section6.gammaForm_value_bounds_row
+#print axioms DiamondIntegral.Section6.gammaForm_value_bounds_row
+#check @DiamondIntegral.Section6.GammaFormParameterTemplateRow.rvTrace_doublyBounded_of_bounds_row
+#print DiamondIntegral.Section6.GammaFormParameterTemplateRow.rvTrace_doublyBounded_of_bounds_row
+#print axioms DiamondIntegral.Section6.GammaFormParameterTemplateRow.rvTrace_doublyBounded_of_bounds_row
+#check @DiamondIntegral.Section6.GammaFormParameterTemplateRow.rvTrace_doublyBounded_row
+#print DiamondIntegral.Section6.GammaFormParameterTemplateRow.rvTrace_doublyBounded_row
+#print axioms DiamondIntegral.Section6.GammaFormParameterTemplateRow.rvTrace_doublyBounded_row
+#check @DiamondIntegral.Section6.gammaFormRVTraceGraphRow
+#print DiamondIntegral.Section6.gammaFormRVTraceGraphRow
+#print axioms DiamondIntegral.Section6.gammaFormRVTraceGraphRow
+#check @DiamondIntegral.Section6.gammaFormRVTraceGraph_definable_row
+#print DiamondIntegral.Section6.gammaFormRVTraceGraph_definable_row
+#print axioms DiamondIntegral.Section6.gammaFormRVTraceGraph_definable_row
+#check @DiamondIntegral.Section6.GammaFormParameterTemplateRow.rvTrace
+#print DiamondIntegral.Section6.GammaFormParameterTemplateRow.rvTrace
+#print axioms DiamondIntegral.Section6.GammaFormParameterTemplateRow.rvTrace
+#check @DiamondIntegral.Section6.rowMarker_eq_iff
+#print DiamondIntegral.Section6.rowMarker_eq_iff
+#print axioms DiamondIntegral.Section6.rowMarker_eq_iff
+#check @DiamondIntegral.Section6.GammaFormParameterTemplateRow.rvTrace_entries_row
+#print DiamondIntegral.Section6.GammaFormParameterTemplateRow.rvTrace_entries_row
+#print axioms DiamondIntegral.Section6.GammaFormParameterTemplateRow.rvTrace_entries_row
+#check @DiamondIntegral.Section6.gamma_form_all_levels_uniform_invariant_row
+#print DiamondIntegral.Section6.gamma_form_all_levels_uniform_invariant_row
+#print axioms DiamondIntegral.Section6.gamma_form_all_levels_uniform_invariant_row
+#check @DiamondIntegral.Section6.GammaFormParameterTemplateRow.values_eq_of_rvTrace_eq_row
+#print DiamondIntegral.Section6.GammaFormParameterTemplateRow.values_eq_of_rvTrace_eq_row
+#print axioms DiamondIntegral.Section6.GammaFormParameterTemplateRow.values_eq_of_rvTrace_eq_row
+#check @DiamondIntegral.Section6.gammaTransitionImageRow
+#print DiamondIntegral.Section6.gammaTransitionImageRow
+#print axioms DiamondIntegral.Section6.gammaTransitionImageRow
+#check @DiamondIntegral.Section6.gammaTransitionImage_definable_row
+#print DiamondIntegral.Section6.gammaTransitionImage_definable_row
+#print axioms DiamondIntegral.Section6.gammaTransitionImage_definable_row
+#check @DiamondIntegral.Section6.gammaTransitionImage_at_row
+#print DiamondIntegral.Section6.gammaTransitionImage_at_row
+#print axioms DiamondIntegral.Section6.gammaTransitionImage_at_row
+#check @DiamondIntegral.Section6.GammaFormParameterTemplateRow.transportRow
+#print DiamondIntegral.Section6.GammaFormParameterTemplateRow.transportRow
+#print axioms DiamondIntegral.Section6.GammaFormParameterTemplateRow.transportRow
+#check @DiamondIntegral.Section6.GammaFormParameterTemplateRow.ext_graph
+#print DiamondIntegral.Section6.GammaFormParameterTemplateRow.ext_graph
+#print axioms DiamondIntegral.Section6.GammaFormParameterTemplateRow.ext_graph
+#check @DiamondIntegral.Section6.GammaFormParameterTemplateRow.transport_substitute_row
+#print DiamondIntegral.Section6.GammaFormParameterTemplateRow.transport_substitute_row
+#print axioms DiamondIntegral.Section6.GammaFormParameterTemplateRow.transport_substitute_row
+#check @DiamondIntegral.Section6.GammaTransitionEntryRow
+#print DiamondIntegral.Section6.GammaTransitionEntryRow
+#print axioms DiamondIntegral.Section6.GammaTransitionEntryRow
+#check @DiamondIntegral.Section6.gammaTransitionJointGraphRow
+#print DiamondIntegral.Section6.gammaTransitionJointGraphRow
+#print axioms DiamondIntegral.Section6.gammaTransitionJointGraphRow
+#check @DiamondIntegral.Section6.gammaTransitionJointGraph_definable_row
+#print DiamondIntegral.Section6.gammaTransitionJointGraph_definable_row
+#print axioms DiamondIntegral.Section6.gammaTransitionJointGraph_definable_row
+#check @DiamondIntegral.Section6.gammaTransitionCodeConditionRow
+#print DiamondIntegral.Section6.gammaTransitionCodeConditionRow
+#print axioms DiamondIntegral.Section6.gammaTransitionCodeConditionRow
+#check @DiamondIntegral.Section6.gammaTransitionCodeCondition_definable_row
+#print DiamondIntegral.Section6.gammaTransitionCodeCondition_definable_row
+#print axioms DiamondIntegral.Section6.gammaTransitionCodeCondition_definable_row
+#check @DiamondIntegral.Section6.gammaTransitionConstantParameterLocusRow
+#print DiamondIntegral.Section6.gammaTransitionConstantParameterLocusRow
+#print axioms DiamondIntegral.Section6.gammaTransitionConstantParameterLocusRow
+#check @DiamondIntegral.Section6.gammaTransitionConstantParameterLocus_definable_row
+#print DiamondIntegral.Section6.gammaTransitionConstantParameterLocus_definable_row
+#print axioms DiamondIntegral.Section6.gammaTransitionConstantParameterLocus_definable_row
+#check @DiamondIntegral.Section6.rowMarkerCode
+#print DiamondIntegral.Section6.rowMarkerCode
+#print axioms DiamondIntegral.Section6.rowMarkerCode
+#check @DiamondIntegral.Section6.decode_rowMarkerCode
+#print DiamondIntegral.Section6.decode_rowMarkerCode
+#print axioms DiamondIntegral.Section6.decode_rowMarkerCode
+#check @DiamondIntegral.Section6.rowCode
+#print DiamondIntegral.Section6.rowCode
+#print axioms DiamondIntegral.Section6.rowCode
+#check @DiamondIntegral.Section6.decode_rowCode
+#print DiamondIntegral.Section6.decode_rowCode
+#print axioms DiamondIntegral.Section6.decode_rowCode
+#check @DiamondIntegral.Section6.rowGraph_entry_iff
+#print DiamondIntegral.Section6.rowGraph_entry_iff
+#print axioms DiamondIntegral.Section6.rowGraph_entry_iff
+#check @DiamondIntegral.Section6.rowGraph_point_iff
+#print DiamondIntegral.Section6.rowGraph_point_iff
+#print axioms DiamondIntegral.Section6.rowGraph_point_iff
+#check @DiamondIntegral.Section6.gammaTransitionJointGraph_entries_row
+#print DiamondIntegral.Section6.gammaTransitionJointGraph_entries_row
+#print axioms DiamondIntegral.Section6.gammaTransitionJointGraph_entries_row
+#check @DiamondIntegral.Section6.gammaTransitionConstantParameterLocus_iff_row
+#print DiamondIntegral.Section6.gammaTransitionConstantParameterLocus_iff_row
+#print axioms DiamondIntegral.Section6.gammaTransitionConstantParameterLocus_iff_row
+#check @DiamondIntegral.Section6.gammaFormExtendParametersRow
+#print DiamondIntegral.Section6.gammaFormExtendParametersRow
+#print axioms DiamondIntegral.Section6.gammaFormExtendParametersRow
+#check @DiamondIntegral.Section6.headFibreEmbeddingRow
+#print DiamondIntegral.Section6.headFibreEmbeddingRow
+#print axioms DiamondIntegral.Section6.headFibreEmbeddingRow
+#check @DiamondIntegral.Section6.headFibreEmbedding_value_row
+#print DiamondIntegral.Section6.headFibreEmbedding_value_row
+#print axioms DiamondIntegral.Section6.headFibreEmbedding_value_row
+#check @DiamondIntegral.Section6.headGammaFormMapRow
+#print DiamondIntegral.Section6.headGammaFormMapRow
+#print axioms DiamondIntegral.Section6.headGammaFormMapRow
+#check @DiamondIntegral.Section6.headGammaFormMap_value_row
+#print DiamondIntegral.Section6.headGammaFormMap_value_row
+#print axioms DiamondIntegral.Section6.headGammaFormMap_value_row
+#check @DiamondIntegral.Section6.headGammaFormMap_levels_open_row
+#print DiamondIntegral.Section6.headGammaFormMap_levels_open_row
+#print axioms DiamondIntegral.Section6.headGammaFormMap_levels_open_row
+#check @DiamondIntegral.Section6.mixed_rv_relation_iff
+#print DiamondIntegral.Section6.mixed_rv_relation_iff
+#print axioms DiamondIntegral.Section6.mixed_rv_relation_iff
+#check @DiamondIntegral.Section6.headGammaFormCodeIndexRow
+#print DiamondIntegral.Section6.headGammaFormCodeIndexRow
+#print axioms DiamondIntegral.Section6.headGammaFormCodeIndexRow
+#check @DiamondIntegral.Section6.headGammaFormTemplateRow
+#print DiamondIntegral.Section6.headGammaFormTemplateRow
+#print axioms DiamondIntegral.Section6.headGammaFormTemplateRow
+#check @DiamondIntegral.Section6.headGammaFormExtension_at_row
+#print DiamondIntegral.Section6.headGammaFormExtension_at_row
+#print axioms DiamondIntegral.Section6.headGammaFormExtension_at_row
+#check @DiamondIntegral.Section6.headGammaFormTemplate_section_row
+#print DiamondIntegral.Section6.headGammaFormTemplate_section_row
+#print axioms DiamondIntegral.Section6.headGammaFormTemplate_section_row
+#check @DiamondIntegral.Section6.SynchronizedTagBranchExtension.source_form_constant_on_selected_row
+#print DiamondIntegral.Section6.SynchronizedTagBranchExtension.source_form_constant_on_selected_row
+#print axioms DiamondIntegral.Section6.SynchronizedTagBranchExtension.source_form_constant_on_selected_row
+#check @DiamondIntegral.Section6.SynchronizedTagBranchExtension.source_form_constant_row
+#print DiamondIntegral.Section6.SynchronizedTagBranchExtension.source_form_constant_row
+#print axioms DiamondIntegral.Section6.SynchronizedTagBranchExtension.source_form_constant_row
+#check @DiamondIntegral.Section6.SynchronizedTagBranchExtension.image_branch_form_constant_row
+#print DiamondIntegral.Section6.SynchronizedTagBranchExtension.image_branch_form_constant_row
+#print axioms DiamondIntegral.Section6.SynchronizedTagBranchExtension.image_branch_form_constant_row
+#check @DiamondIntegral.Section6.MeasuredCentripetalFusionRepairRow
+#print DiamondIntegral.Section6.MeasuredCentripetalFusionRepairRow
+#print axioms DiamondIntegral.Section6.MeasuredCentripetalFusionRepairRow
+#check @DiamondIntegral.Section6.exists_measured_centripetal_fusion_repair_row
+#print DiamondIntegral.Section6.exists_measured_centripetal_fusion_repair_row
+#print axioms DiamondIntegral.Section6.exists_measured_centripetal_fusion_repair_row
+#check @DiamondIntegral.Section6.CentripetalProgramRealization.transported_gamma_form_row
+#print DiamondIntegral.Section6.CentripetalProgramRealization.transported_gamma_form_row
+#print axioms DiamondIntegral.Section6.CentripetalProgramRealization.transported_gamma_form_row
+#check @DiamondIntegral.Section6.CentripetalProgramTemplate.exists_measured_realization_row
+#print DiamondIntegral.Section6.CentripetalProgramTemplate.exists_measured_realization_row
+#print axioms DiamondIntegral.Section6.CentripetalProgramTemplate.exists_measured_realization_row
+#check @DiamondIntegral.Section6.GammaFormParameterTemplateRow
+#print DiamondIntegral.Section6.GammaFormParameterTemplateRow
+#print axioms DiamondIntegral.Section6.GammaFormParameterTemplateRow
+#check @DiamondIntegral.Section6.exists_promoted_gamma_form_template_row
+#print DiamondIntegral.Section6.exists_promoted_gamma_form_template_row
+#print axioms DiamondIntegral.Section6.exists_promoted_gamma_form_template_row
+#check @DiamondIntegral.Section6.CentripetalProgramTemplate.measuredGoodRow
+#print DiamondIntegral.Section6.CentripetalProgramTemplate.measuredGoodRow
+#print axioms DiamondIntegral.Section6.CentripetalProgramTemplate.measuredGoodRow
+#check @DiamondIntegral.Section6.CentripetalProgramTemplate.measuredGood_definable_row
+#print DiamondIntegral.Section6.CentripetalProgramTemplate.measuredGood_definable_row
+#print axioms DiamondIntegral.Section6.CentripetalProgramTemplate.measuredGood_definable_row
+#check @DiamondIntegral.Section6.exists_promoted_measured_centripetal_program_row
+#print DiamondIntegral.Section6.exists_promoted_measured_centripetal_program_row
+#print axioms DiamondIntegral.Section6.exists_promoted_measured_centripetal_program_row
+#check @DiamondIntegral.Section6.CentripetalProgramTemplate.measuredRVTrace_unit_mem_row
+#print DiamondIntegral.Section6.CentripetalProgramTemplate.measuredRVTrace_unit_mem_row
+#print axioms DiamondIntegral.Section6.CentripetalProgramTemplate.measuredRVTrace_unit_mem_row
+#check @DiamondIntegral.Section6.measuredChoiceProgramRVTraceRow
+#print DiamondIntegral.Section6.measuredChoiceProgramRVTraceRow
+#print axioms DiamondIntegral.Section6.measuredChoiceProgramRVTraceRow
+#check @DiamondIntegral.Section6.measuredChoiceProgramRVTrace_entry_mem_row
+#print DiamondIntegral.Section6.measuredChoiceProgramRVTrace_entry_mem_row
+#print axioms DiamondIntegral.Section6.measuredChoiceProgramRVTrace_entry_mem_row
+#check @DiamondIntegral.Section6.measuredChoiceProgramRVTrace_bounded_row
+#print DiamondIntegral.Section6.measuredChoiceProgramRVTrace_bounded_row
+#print axioms DiamondIntegral.Section6.measuredChoiceProgramRVTrace_bounded_row
+#check @DiamondIntegral.Section6.measuredChoiceProgramRVDataRow
+#print DiamondIntegral.Section6.measuredChoiceProgramRVDataRow
+#print axioms DiamondIntegral.Section6.measuredChoiceProgramRVDataRow
+#check @DiamondIntegral.Section6.measuredChoiceProgramRVData_doublyBounded_row
+#print DiamondIntegral.Section6.measuredChoiceProgramRVData_doublyBounded_row
+#print axioms DiamondIntegral.Section6.measuredChoiceProgramRVData_doublyBounded_row
+#check @DiamondIntegral.Section6.choices_eq_of_measured_program_data_eq_row
+#print DiamondIntegral.Section6.choices_eq_of_measured_program_data_eq_row
+#print axioms DiamondIntegral.Section6.choices_eq_of_measured_program_data_eq_row
+#check @DiamondIntegral.Section6.selected_trace_rows_eq_of_measured_program_data_eq_row
+#print DiamondIntegral.Section6.selected_trace_rows_eq_of_measured_program_data_eq_row
+#print axioms DiamondIntegral.Section6.selected_trace_rows_eq_of_measured_program_data_eq_row
+#check @DiamondIntegral.Section6.measured_form_compatible_preparation_glue_complementary_tags_row
+#print DiamondIntegral.Section6.measured_form_compatible_preparation_glue_complementary_tags_row
+#print axioms DiamondIntegral.Section6.measured_form_compatible_preparation_glue_complementary_tags_row
+#check @DiamondIntegral.Section6.exists_measured_continuous_coordinate_root_step_row
+#print DiamondIntegral.Section6.exists_measured_continuous_coordinate_root_step_row
+#print axioms DiamondIntegral.Section6.exists_measured_continuous_coordinate_root_step_row
+#check @DiamondIntegral.Section6.exists_measured_continuous_focus_protected_components_row
+#print DiamondIntegral.Section6.exists_measured_continuous_focus_protected_components_row
+#print axioms DiamondIntegral.Section6.exists_measured_continuous_focus_protected_components_row
+#check @DiamondIntegral.Section6.MeasuredCoordinatePreparationRow
+#print DiamondIntegral.Section6.MeasuredCoordinatePreparationRow
+#print axioms DiamondIntegral.Section6.MeasuredCoordinatePreparationRow
+#check @DiamondIntegral.Section6.MeasuredCoordinatePreparationRow.precompose
+#print DiamondIntegral.Section6.MeasuredCoordinatePreparationRow.precompose
+#print axioms DiamondIntegral.Section6.MeasuredCoordinatePreparationRow.precompose
+#check @DiamondIntegral.Section6.FiniteMeasuredCoordinateProgramDataRow
+#print DiamondIntegral.Section6.FiniteMeasuredCoordinateProgramDataRow
+#print axioms DiamondIntegral.Section6.FiniteMeasuredCoordinateProgramDataRow
+#check @DiamondIntegral.Section6.FiniteMeasuredCoordinateProgramDataRow.completeData
+#print DiamondIntegral.Section6.FiniteMeasuredCoordinateProgramDataRow.completeData
+#print axioms DiamondIntegral.Section6.FiniteMeasuredCoordinateProgramDataRow.completeData
+#check @DiamondIntegral.Section6.FiniteMeasuredCoordinateProgramDataRow.completeData_rows_bounded
+#print DiamondIntegral.Section6.FiniteMeasuredCoordinateProgramDataRow.completeData_rows_bounded
+#print axioms DiamondIntegral.Section6.FiniteMeasuredCoordinateProgramDataRow.completeData_rows_bounded
+#check @DiamondIntegral.Section6.exists_finite_measured_coordinate_program_data_row
+#print DiamondIntegral.Section6.exists_finite_measured_coordinate_program_data_row
+#print axioms DiamondIntegral.Section6.exists_finite_measured_coordinate_program_data_row
+#check @DiamondIntegral.Section6.MeasuredFormCompatiblePreparationInDimensionRow
+#print DiamondIntegral.Section6.MeasuredFormCompatiblePreparationInDimensionRow
+#print axioms DiamondIntegral.Section6.MeasuredFormCompatiblePreparationInDimensionRow
+#check @DiamondIntegral.Section6.measured_form_compatible_core_of_dimension_induction_row
+#print DiamondIntegral.Section6.measured_form_compatible_core_of_dimension_induction_row
+#print axioms DiamondIntegral.Section6.measured_form_compatible_core_of_dimension_induction_row
+#check @DiamondIntegral.Section6.measured_form_compatible_preparation_all_dimensions_row
+#print DiamondIntegral.Section6.measured_form_compatible_preparation_all_dimensions_row
+#print axioms DiamondIntegral.Section6.measured_form_compatible_preparation_all_dimensions_row
+#check @DiamondIntegral.Section6.measured_form_compatible_preparation_of_uniform_sequence_row
+#print DiamondIntegral.Section6.measured_form_compatible_preparation_of_uniform_sequence_row
+#print axioms DiamondIntegral.Section6.measured_form_compatible_preparation_of_uniform_sequence_row
+#check @DiamondIntegral.Section6.measured_form_compatible_preparation_of_finite_tag_partition_row
+#print DiamondIntegral.Section6.measured_form_compatible_preparation_of_finite_tag_partition_row
+#print axioms DiamondIntegral.Section6.measured_form_compatible_preparation_of_finite_tag_partition_row
+#check @DiamondIntegral.Section6.measured_form_compatible_preparation_carrying_coordinate_row
+#print DiamondIntegral.Section6.measured_form_compatible_preparation_carrying_coordinate_row
+#print axioms DiamondIntegral.Section6.measured_form_compatible_preparation_carrying_coordinate_row
+#check @DiamondIntegral.Section6.PreparedSynchronizedFamily.taggedTarget_form_compatible_row
+#print DiamondIntegral.Section6.PreparedSynchronizedFamily.taggedTarget_form_compatible_row
+#print axioms DiamondIntegral.Section6.PreparedSynchronizedFamily.taggedTarget_form_compatible_row
+#check @DiamondIntegral.Section6.PreparedSynchronizedFamily.measured_form_compatible_target_row
+#print DiamondIntegral.Section6.PreparedSynchronizedFamily.measured_form_compatible_target_row
+#print axioms DiamondIntegral.Section6.PreparedSynchronizedFamily.measured_form_compatible_target_row
+#check @DiamondIntegral.Section6.measured_frozen_unary_rv_data_preparation_row
+#print DiamondIntegral.Section6.measured_frozen_unary_rv_data_preparation_row
+#print axioms DiamondIntegral.Section6.measured_frozen_unary_rv_data_preparation_row
+#check @DiamondIntegral.Section6.MeasuredUnaryRVTemplateFreezeCertificateRow
+#print DiamondIntegral.Section6.MeasuredUnaryRVTemplateFreezeCertificateRow
+#print axioms DiamondIntegral.Section6.MeasuredUnaryRVTemplateFreezeCertificateRow
+#check @DiamondIntegral.Section6.MeasuredUnaryRVTemplateFreezeCertificateRow.forget
+#print DiamondIntegral.Section6.MeasuredUnaryRVTemplateFreezeCertificateRow.forget
+#print axioms DiamondIntegral.Section6.MeasuredUnaryRVTemplateFreezeCertificateRow.forget
+#check @DiamondIntegral.Section6.measured_frozen_unary_rv_template_preparation_row
+#print DiamondIntegral.Section6.measured_frozen_unary_rv_template_preparation_row
+#print axioms DiamondIntegral.Section6.measured_frozen_unary_rv_template_preparation_row
+#check @DiamondIntegral.Section6.MeasuredCentripetalFusionRepairRow.variable_core_form_constant_row
+#print DiamondIntegral.Section6.MeasuredCentripetalFusionRepairRow.variable_core_form_constant_row
+#print axioms DiamondIntegral.Section6.MeasuredCentripetalFusionRepairRow.variable_core_form_constant_row
+#check @DiamondIntegral.Section6.MeasuredCentripetalFusionRepairRow.core_form_constant_row
+#print DiamondIntegral.Section6.MeasuredCentripetalFusionRepairRow.core_form_constant_row
+#print axioms DiamondIntegral.Section6.MeasuredCentripetalFusionRepairRow.core_form_constant_row
+#check @DiamondIntegral.Section6.CentripetalFusionRepair.residual_baseMap_at_preimage_row
+#print DiamondIntegral.Section6.CentripetalFusionRepair.residual_baseMap_at_preimage_row
+#print axioms DiamondIntegral.Section6.CentripetalFusionRepair.residual_baseMap_at_preimage_row
+#check @DiamondIntegral.Section6.CentripetalFusionRepair.residual_local_at_preimage_row
+#print DiamondIntegral.Section6.CentripetalFusionRepair.residual_local_at_preimage_row
+#print axioms DiamondIntegral.Section6.CentripetalFusionRepair.residual_local_at_preimage_row
+#check @DiamondIntegral.Section6.MeasuredCentripetalFusionRepairRow.residual_source_form_row
+#print DiamondIntegral.Section6.MeasuredCentripetalFusionRepairRow.residual_source_form_row
+#print axioms DiamondIntegral.Section6.MeasuredCentripetalFusionRepairRow.residual_source_form_row
+#check @DiamondIntegral.Section6.CentripetalFusionRepair.fusionGammaMapRow
+#print DiamondIntegral.Section6.CentripetalFusionRepair.fusionGammaMapRow
+#print axioms DiamondIntegral.Section6.CentripetalFusionRepair.fusionGammaMapRow
+#check @DiamondIntegral.Section6.CentripetalFusionRepair.fusionResidualGammaMapRow
+#print DiamondIntegral.Section6.CentripetalFusionRepair.fusionResidualGammaMapRow
+#print axioms DiamondIntegral.Section6.CentripetalFusionRepair.fusionResidualGammaMapRow
+#check @DiamondIntegral.Section6.CentripetalFusionRepair.fusionGammaMap_transport_row
+#print DiamondIntegral.Section6.CentripetalFusionRepair.fusionGammaMap_transport_row
+#print axioms DiamondIntegral.Section6.CentripetalFusionRepair.fusionGammaMap_transport_row
+#check @DiamondIntegral.Section6.CentripetalFusionRepair.assemble_measured_residual_row
+#print DiamondIntegral.Section6.CentripetalFusionRepair.assemble_measured_residual_row
+#print axioms DiamondIntegral.Section6.CentripetalFusionRepair.assemble_measured_residual_row
+#check @DiamondIntegral.Section6.MeasuredCentripetalFusionRepairRow.terminal_residual_preparation_row
+#print DiamondIntegral.Section6.MeasuredCentripetalFusionRepairRow.terminal_residual_preparation_row
+#print axioms DiamondIntegral.Section6.MeasuredCentripetalFusionRepairRow.terminal_residual_preparation_row
+#check @DiamondIntegral.Section6.measured_form_compatible_preparation_of_tagged_head_inputs_row
+#print DiamondIntegral.Section6.measured_form_compatible_preparation_of_tagged_head_inputs_row
+#print axioms DiamondIntegral.Section6.measured_form_compatible_preparation_of_tagged_head_inputs_row
+#check @DiamondIntegral.Section6.exists_measured_indexed_focus_repair_row
+#print DiamondIntegral.Section6.exists_measured_indexed_focus_repair_row
+#print axioms DiamondIntegral.Section6.exists_measured_indexed_focus_repair_row
+#check @DiamondIntegral.Section6.measured_form_compatible_coordinate_bundle_of_projected_preparation_row
+#print DiamondIntegral.Section6.measured_form_compatible_coordinate_bundle_of_projected_preparation_row
+#print axioms DiamondIntegral.Section6.measured_form_compatible_coordinate_bundle_of_projected_preparation_row
+#check @DiamondIntegral.Section6.MeasuredCoordinatePreparationRow.transport_sets_form_compatible_row
+#print DiamondIntegral.Section6.MeasuredCoordinatePreparationRow.transport_sets_form_compatible_row
+#print axioms DiamondIntegral.Section6.MeasuredCoordinatePreparationRow.transport_sets_form_compatible_row
+#check @DiamondIntegral.Section6.MeasuredCoordinatePreparationRow.toPreparedSynchronizedRow
+#print DiamondIntegral.Section6.MeasuredCoordinatePreparationRow.toPreparedSynchronizedRow
+#print axioms DiamondIntegral.Section6.MeasuredCoordinatePreparationRow.toPreparedSynchronizedRow
+#check @DiamondIntegral.Section6.MeasuredCoordinatePreparationRow.changePieces
+#print DiamondIntegral.Section6.MeasuredCoordinatePreparationRow.changePieces
+#print axioms DiamondIntegral.Section6.MeasuredCoordinatePreparationRow.changePieces
+#check @DiamondIntegral.Section6.MeasuredCoordinatePreparationRow.changeFormRow
+#print DiamondIntegral.Section6.MeasuredCoordinatePreparationRow.changeFormRow
+#print axioms DiamondIntegral.Section6.MeasuredCoordinatePreparationRow.changeFormRow
+#check @DiamondIntegral.Section6.FormCompatibleSynchronizedChainRow.changeFormRow
+#print DiamondIntegral.Section6.FormCompatibleSynchronizedChainRow.changeFormRow
+#print axioms DiamondIntegral.Section6.FormCompatibleSynchronizedChainRow.changeFormRow
+#check @DiamondIntegral.Section6.exists_disjoint_measured_program_choice_row
+#print DiamondIntegral.Section6.exists_disjoint_measured_program_choice_row
+#print axioms DiamondIntegral.Section6.exists_disjoint_measured_program_choice_row
+#check @DiamondIntegral.Section6.packedRVTrace_eq_of_rows_eq_row
+#print DiamondIntegral.Section6.packedRVTrace_eq_of_rows_eq_row
+#print axioms DiamondIntegral.Section6.packedRVTrace_eq_of_rows_eq_row
+#check @DiamondIntegral.Section6.choiceProgramRVTrace_subset_measured_row
+#print DiamondIntegral.Section6.choiceProgramRVTrace_subset_measured_row
+#print axioms DiamondIntegral.Section6.choiceProgramRVTrace_subset_measured_row
+#check @DiamondIntegral.Section6.geometric_data_eq_of_measured_data_eq_row
+#print DiamondIntegral.Section6.geometric_data_eq_of_measured_data_eq_row
+#print axioms DiamondIntegral.Section6.geometric_data_eq_of_measured_data_eq_row
+#check @DiamondIntegral.Section6.FiniteMeasuredCoordinateProgramDataRow.forget
+#print DiamondIntegral.Section6.FiniteMeasuredCoordinateProgramDataRow.forget
+#print axioms DiamondIntegral.Section6.FiniteMeasuredCoordinateProgramDataRow.forget
+#check @DiamondIntegral.Section6.gammaTransitionConstantParameterLocus_codes_iff_row
+#print DiamondIntegral.Section6.gammaTransitionConstantParameterLocus_codes_iff_row
+#print axioms DiamondIntegral.Section6.gammaTransitionConstantParameterLocus_codes_iff_row
+#check @DiamondIntegral.Section6.gammaTransitionConstantParameterLocus_comp_row
+#print DiamondIntegral.Section6.gammaTransitionConstantParameterLocus_comp_row
+#print axioms DiamondIntegral.Section6.gammaTransitionConstantParameterLocus_comp_row
+#check @DiamondIntegral.Section6.CentripetalProgramTemplate.preparedGood_comp_full_parameters_row
+#print DiamondIntegral.Section6.CentripetalProgramTemplate.preparedGood_comp_full_parameters_row
+#print axioms DiamondIntegral.Section6.CentripetalProgramTemplate.preparedGood_comp_full_parameters_row
+#check @DiamondIntegral.Section6.CentripetalProgramTemplate.measuredGood_comp_row
+#print DiamondIntegral.Section6.CentripetalProgramTemplate.measuredGood_comp_row
+#print axioms DiamondIntegral.Section6.CentripetalProgramTemplate.measuredGood_comp_row
+#check @DiamondIntegral.Section6.CentripetalProgramTemplate.measuredFormGood_comp_row
+#print DiamondIntegral.Section6.CentripetalProgramTemplate.measuredFormGood_comp_row
+#print axioms DiamondIntegral.Section6.CentripetalProgramTemplate.measuredFormGood_comp_row
+#check @DiamondIntegral.Section6.CentripetalProgramTemplate.measuredRVTrace_afterPrefix_subset_row
+#print DiamondIntegral.Section6.CentripetalProgramTemplate.measuredRVTrace_afterPrefix_subset_row
+#print axioms DiamondIntegral.Section6.CentripetalProgramTemplate.measuredRVTrace_afterPrefix_subset_row
+#check @DiamondIntegral.Section6.CentripetalProgramTemplate.gammaRVTraceRow
+#print DiamondIntegral.Section6.CentripetalProgramTemplate.gammaRVTraceRow
+#print axioms DiamondIntegral.Section6.CentripetalProgramTemplate.gammaRVTraceRow
+#check @DiamondIntegral.Section6.CentripetalProgramTemplate.measuredRVTraceRow
+#print DiamondIntegral.Section6.CentripetalProgramTemplate.measuredRVTraceRow
+#print axioms DiamondIntegral.Section6.CentripetalProgramTemplate.measuredRVTraceRow
+#check @DiamondIntegral.Section6.CentripetalProgramTemplate.gammaRVTrace_mem_row
+#print DiamondIntegral.Section6.CentripetalProgramTemplate.gammaRVTrace_mem_row
+#print axioms DiamondIntegral.Section6.CentripetalProgramTemplate.gammaRVTrace_mem_row
+#check @DiamondIntegral.Section6.CentripetalProgramTemplate.gammaRVTrace_bounded_row
+#print DiamondIntegral.Section6.CentripetalProgramTemplate.gammaRVTrace_bounded_row
+#print axioms DiamondIntegral.Section6.CentripetalProgramTemplate.gammaRVTrace_bounded_row
+#check @DiamondIntegral.Section6.CentripetalProgramTemplate.measuredRVTrace_bounded_row
+#print DiamondIntegral.Section6.CentripetalProgramTemplate.measuredRVTrace_bounded_row
+#print axioms DiamondIntegral.Section6.CentripetalProgramTemplate.measuredRVTrace_bounded_row
+#check @DiamondIntegral.Section6.GammaFormParameterTemplateRow.substitute
+#print DiamondIntegral.Section6.GammaFormParameterTemplateRow.substitute
+#print axioms DiamondIntegral.Section6.GammaFormParameterTemplateRow.substitute
+#check @DiamondIntegral.Section6.GammaFormParameterTemplateRow.substitute_section_row
+#print DiamondIntegral.Section6.GammaFormParameterTemplateRow.substitute_section_row
+#print axioms DiamondIntegral.Section6.GammaFormParameterTemplateRow.substitute_section_row
+#check @DiamondIntegral.Section6.gammaTransitionConstantParameterLocus_substitute_row
+#print DiamondIntegral.Section6.gammaTransitionConstantParameterLocus_substitute_row
+#print axioms DiamondIntegral.Section6.gammaTransitionConstantParameterLocus_substitute_row
+#check @DiamondIntegral.Section6.CentripetalProgramTemplate.substitute_measuredGood_row
+#print DiamondIntegral.Section6.CentripetalProgramTemplate.substitute_measuredGood_row
+#print axioms DiamondIntegral.Section6.CentripetalProgramTemplate.substitute_measuredGood_row
+#check @DiamondIntegral.Section6.exists_measured_projected_focus_freezing_row
+#print DiamondIntegral.Section6.exists_measured_projected_focus_freezing_row
+#print axioms DiamondIntegral.Section6.exists_measured_projected_focus_freezing_row
+#check @DiamondIntegral.Section6.exists_measured_protected_unary_data_freezing_row
+#print DiamondIntegral.Section6.exists_measured_protected_unary_data_freezing_row
+#print axioms DiamondIntegral.Section6.exists_measured_protected_unary_data_freezing_row
+#check @DiamondIntegral.Section6.MeasuredCoordinatePreparationRow.refine_rv_labels_form_compatible_row
+#print DiamondIntegral.Section6.MeasuredCoordinatePreparationRow.refine_rv_labels_form_compatible_row
+#print axioms DiamondIntegral.Section6.MeasuredCoordinatePreparationRow.refine_rv_labels_form_compatible_row
+#check @DiamondIntegral.Section6.exists_measured_selected_indexed_focus_repair_row
+#print DiamondIntegral.Section6.exists_measured_selected_indexed_focus_repair_row
+#print axioms DiamondIntegral.Section6.exists_measured_selected_indexed_focus_repair_row
+#check @DiamondIntegral.Section6.SelectedProgramContext.regularizationGammaFormRow
+#print DiamondIntegral.Section6.SelectedProgramContext.regularizationGammaFormRow
+#print axioms DiamondIntegral.Section6.SelectedProgramContext.regularizationGammaFormRow
+#check @DiamondIntegral.Section6.SelectedProgramContext.regularizationGammaForm_transport_row
+#print DiamondIntegral.Section6.SelectedProgramContext.regularizationGammaForm_transport_row
+#print axioms DiamondIntegral.Section6.SelectedProgramContext.regularizationGammaForm_transport_row
+#check @DiamondIntegral.Section6.SelectedProgramContext.afterIdentity_source_form_row
+#print DiamondIntegral.Section6.SelectedProgramContext.afterIdentity_source_form_row
+#print axioms DiamondIntegral.Section6.SelectedProgramContext.afterIdentity_source_form_row
+#check @DiamondIntegral.Section6.SelectedProgramContext.afterRegularization_source_form_row
+#print DiamondIntegral.Section6.SelectedProgramContext.afterRegularization_source_form_row
+#print axioms DiamondIntegral.Section6.SelectedProgramContext.afterRegularization_source_form_row
+#check @DiamondIntegral.Section6.SelectedProgramContext.precompose_measured_regularization_row
+#print DiamondIntegral.Section6.SelectedProgramContext.precompose_measured_regularization_row
+#print axioms DiamondIntegral.Section6.SelectedProgramContext.precompose_measured_regularization_row
+#check @DiamondIntegral.Section6.PreparedSynchronizedFamily.measured_target_row
+#print DiamondIntegral.Section6.PreparedSynchronizedFamily.measured_target_row
+#print axioms DiamondIntegral.Section6.PreparedSynchronizedFamily.measured_target_row
+#check @DiamondIntegral.Section6.TailContinuousFullFocusGraphData.exists_measured_frozen_full_graph_with_unary_base_row
+#print DiamondIntegral.Section6.TailContinuousFullFocusGraphData.exists_measured_frozen_full_graph_with_unary_base_row
+#print axioms DiamondIntegral.Section6.TailContinuousFullFocusGraphData.exists_measured_frozen_full_graph_with_unary_base_row
+#check @DiamondIntegral.Section6.RVFocusRealization.core_cutoff_above_floor_row
+#print DiamondIntegral.Section6.RVFocusRealization.core_cutoff_above_floor_row
+#print axioms DiamondIntegral.Section6.RVFocusRealization.core_cutoff_above_floor_row
+#check @DiamondIntegral.Section6.UnaryFocusData.exists_form_compatible_protected_context_step_row
+#print DiamondIntegral.Section6.UnaryFocusData.exists_form_compatible_protected_context_step_row
+#print axioms DiamondIntegral.Section6.UnaryFocusData.exists_form_compatible_protected_context_step_row
+#check @DiamondIntegral.Section6.UnaryRootFamily.exists_value_prepared_form_compatible_context_process_of_bound_row
+#print DiamondIntegral.Section6.UnaryRootFamily.exists_value_prepared_form_compatible_context_process_of_bound_row
+#print axioms DiamondIntegral.Section6.UnaryRootFamily.exists_value_prepared_form_compatible_context_process_of_bound_row
+#check @DiamondIntegral.Section6.UnaryFocusData.exists_form_compatible_protected_context_step_above_radius_row
+#print DiamondIntegral.Section6.UnaryFocusData.exists_form_compatible_protected_context_step_above_radius_row
+#print axioms DiamondIntegral.Section6.UnaryFocusData.exists_form_compatible_protected_context_step_above_radius_row
+#check @DiamondIntegral.Section6.measured_form_compatible_preparation_of_uniform_program_row
+#print DiamondIntegral.Section6.measured_form_compatible_preparation_of_uniform_program_row
+#print axioms DiamondIntegral.Section6.measured_form_compatible_preparation_of_uniform_program_row
+#check @DiamondIntegral.Section6.measured_preparation_conjugate_vf_coordinates_row
+#print DiamondIntegral.Section6.measured_preparation_conjugate_vf_coordinates_row
+#print axioms DiamondIntegral.Section6.measured_preparation_conjugate_vf_coordinates_row
+#check @DiamondIntegral.Section6.MeasuredCoordinatePreparationRow.refine_vf_coordinates_form_compatible_row
+#print DiamondIntegral.Section6.MeasuredCoordinatePreparationRow.refine_vf_coordinates_form_compatible_row
+#print axioms DiamondIntegral.Section6.MeasuredCoordinatePreparationRow.refine_vf_coordinates_form_compatible_row
+#check @DiamondIntegral.Section6.measured_form_compatible_variable_release_of_dimension_induction_row
+#print DiamondIntegral.Section6.measured_form_compatible_variable_release_of_dimension_induction_row
+#print axioms DiamondIntegral.Section6.measured_form_compatible_variable_release_of_dimension_induction_row
+#check @DiamondIntegral.Section6.SpecialCovariantChain.transported_gamma_constant_of_prepared_cover_row
+#print DiamondIntegral.Section6.SpecialCovariantChain.transported_gamma_constant_of_prepared_cover_row
+#print axioms DiamondIntegral.Section6.SpecialCovariantChain.transported_gamma_constant_of_prepared_cover_row
+#check @DiamondIntegral.Section6.measured_preparation_of_piecewise_old_labels_row
+#print DiamondIntegral.Section6.measured_preparation_of_piecewise_old_labels_row
+#print axioms DiamondIntegral.Section6.measured_preparation_of_piecewise_old_labels_row
+#check @DiamondIntegral.Section6.exists_promoted_prepared_form_compatible_program_row
+#print DiamondIntegral.Section6.exists_promoted_prepared_form_compatible_program_row
+#print axioms DiamondIntegral.Section6.exists_promoted_prepared_form_compatible_program_row
+#check @DiamondIntegral.Section6.CentripetalProgramTemplate.exists_prepared_measured_realization_row
+#print DiamondIntegral.Section6.CentripetalProgramTemplate.exists_prepared_measured_realization_row
+#print axioms DiamondIntegral.Section6.CentripetalProgramTemplate.exists_prepared_measured_realization_row
+#check @DiamondIntegral.Section6.synchronized_variable_release_of_projected_preparation_row
+#print DiamondIntegral.Section6.synchronized_variable_release_of_projected_preparation_row
+#print axioms DiamondIntegral.Section6.synchronized_variable_release_of_projected_preparation_row
+#check @DiamondIntegral.Section6.exists_promoted_form_compatible_program_row
+#print DiamondIntegral.Section6.exists_promoted_form_compatible_program_row
+#print axioms DiamondIntegral.Section6.exists_promoted_form_compatible_program_row
+#check @DiamondIntegral.Section6.RVRefinementFrame.descendedGammaFormRow
+#print DiamondIntegral.Section6.RVRefinementFrame.descendedGammaFormRow
+#print axioms DiamondIntegral.Section6.RVRefinementFrame.descendedGammaFormRow
+#check @DiamondIntegral.Section6.RVRefinementFrame.descendedGammaForm_at_row
+#print DiamondIntegral.Section6.RVRefinementFrame.descendedGammaForm_at_row
+#print axioms DiamondIntegral.Section6.RVRefinementFrame.descendedGammaForm_at_row
+#check @DiamondIntegral.Section6.RVRefinementFrame.descendedGammaForm_levels_open_row
+#print DiamondIntegral.Section6.RVRefinementFrame.descendedGammaForm_levels_open_row
+#print axioms DiamondIntegral.Section6.RVRefinementFrame.descendedGammaForm_levels_open_row
+#check @DiamondIntegral.Section6.RVRefinementFrame.gamma_form_constant_row
+#print DiamondIntegral.Section6.RVRefinementFrame.gamma_form_constant_row
+#print axioms DiamondIntegral.Section6.RVRefinementFrame.gamma_form_constant_row
+#check @DiamondIntegral.Section6.RVRefinementFrame.portComponent_core_form_constant_row
+#print DiamondIntegral.Section6.RVRefinementFrame.portComponent_core_form_constant_row
+#print axioms DiamondIntegral.Section6.RVRefinementFrame.portComponent_core_form_constant_row
+#check @DiamondIntegral.Section6.RVRefinementChainLift.gamma_form_transport_row
+#print DiamondIntegral.Section6.RVRefinementChainLift.gamma_form_transport_row
+#print axioms DiamondIntegral.Section6.RVRefinementChainLift.gamma_form_transport_row
+#check @DiamondIntegral.Section6.RVRefinementFrame.gamma_level_fibre_eq_row
+#print DiamondIntegral.Section6.RVRefinementFrame.gamma_level_fibre_eq_row
+#print axioms DiamondIntegral.Section6.RVRefinementFrame.gamma_level_fibre_eq_row
+#check @DiamondIntegral.Section6.RVRefinementFrame.gamma_level_product_row
+#print DiamondIntegral.Section6.RVRefinementFrame.gamma_level_product_row
+#print axioms DiamondIntegral.Section6.RVRefinementFrame.gamma_level_product_row
+#check @DiamondIntegral.Section6.RVRefinementFrame.gamma_value_freeze_row
+#print DiamondIntegral.Section6.RVRefinementFrame.gamma_value_freeze_row
+#print axioms DiamondIntegral.Section6.RVRefinementFrame.gamma_value_freeze_row
+#check @DiamondIntegral.Section6.CentripetalData.releasedGammaFormRow
+#print DiamondIntegral.Section6.CentripetalData.releasedGammaFormRow
+#print axioms DiamondIntegral.Section6.CentripetalData.releasedGammaFormRow
+#check @DiamondIntegral.Section6.CentripetalData.releasedGammaForm_at_row
+#print DiamondIntegral.Section6.CentripetalData.releasedGammaForm_at_row
+#print axioms DiamondIntegral.Section6.CentripetalData.releasedGammaForm_at_row
+#check @DiamondIntegral.Section6.CentripetalData.releasedGammaForm_projection_constant_row
+#print DiamondIntegral.Section6.CentripetalData.releasedGammaForm_projection_constant_row
+#print axioms DiamondIntegral.Section6.CentripetalData.releasedGammaForm_projection_constant_row
+#check @DiamondIntegral.Section6.CentripetalData.exists_released_gamma_descent_row
+#print DiamondIntegral.Section6.CentripetalData.exists_released_gamma_descent_row
+#print axioms DiamondIntegral.Section6.CentripetalData.exists_released_gamma_descent_row
+#check @DiamondIntegral.Section6.gammaFormRestriction_level_geometry_row
+#print DiamondIntegral.Section6.gammaFormRestriction_level_geometry_row
+#print axioms DiamondIntegral.Section6.gammaFormRestriction_level_geometry_row
+#check @DiamondIntegral.Section6.CentripetalData.releasedGammaForm_levels_geometry_row
+#print DiamondIntegral.Section6.CentripetalData.releasedGammaForm_levels_geometry_row
+#print axioms DiamondIntegral.Section6.CentripetalData.releasedGammaForm_levels_geometry_row
+#check @DiamondIntegral.Section6.CentripetalData.exists_released_gamma_descent_with_open_levels_row
+#print DiamondIntegral.Section6.CentripetalData.exists_released_gamma_descent_with_open_levels_row
+#print axioms DiamondIntegral.Section6.CentripetalData.exists_released_gamma_descent_with_open_levels_row
+#check @DiamondIntegral.Section6.SelectedProgramContext.baseMap_eq_of_selected_joint_eq_row
+#print DiamondIntegral.Section6.SelectedProgramContext.baseMap_eq_of_selected_joint_eq_row
+#print axioms DiamondIntegral.Section6.SelectedProgramContext.baseMap_eq_of_selected_joint_eq_row
+#check @DiamondIntegral.Section6.SelectedProgramContext.gamma_constant_on_joint_fibres_row
+#print DiamondIntegral.Section6.SelectedProgramContext.gamma_constant_on_joint_fibres_row
+#print axioms DiamondIntegral.Section6.SelectedProgramContext.gamma_constant_on_joint_fibres_row
+#check @DiamondIntegral.Section6.SelectedProgramContext.coveredGammaFormRow
+#print DiamondIntegral.Section6.SelectedProgramContext.coveredGammaFormRow
+#print axioms DiamondIntegral.Section6.SelectedProgramContext.coveredGammaFormRow
+#check @DiamondIntegral.Section6.SelectedProgramContext.coveredGammaForm_at_row
+#print DiamondIntegral.Section6.SelectedProgramContext.coveredGammaForm_at_row
+#print axioms DiamondIntegral.Section6.SelectedProgramContext.coveredGammaForm_at_row
+#check @DiamondIntegral.Section6.SelectedProgramContext.coveredGammaForm_levels_open_row
+#print DiamondIntegral.Section6.SelectedProgramContext.coveredGammaForm_levels_open_row
+#print axioms DiamondIntegral.Section6.SelectedProgramContext.coveredGammaForm_levels_open_row
+#check @DiamondIntegral.Section6.SelectedProgramContext.measured_regularization_terminal_row
+#print DiamondIntegral.Section6.SelectedProgramContext.measured_regularization_terminal_row
+#print axioms DiamondIntegral.Section6.SelectedProgramContext.measured_regularization_terminal_row
+#check @DiamondIntegral.Section6.SelectedProgramContext.localSourcePointRow
+#print DiamondIntegral.Section6.SelectedProgramContext.localSourcePointRow
+#print axioms DiamondIntegral.Section6.SelectedProgramContext.localSourcePointRow
+#check @DiamondIntegral.Section6.SelectedProgramContext.measured_identity_terminal_row
+#print DiamondIntegral.Section6.SelectedProgramContext.measured_identity_terminal_row
+#print axioms DiamondIntegral.Section6.SelectedProgramContext.measured_identity_terminal_row
+#check @DiamondIntegral.Section6.CentripetalData.CoreFormConstantRow.eq_of_init_row
+#print DiamondIntegral.Section6.CentripetalData.CoreFormConstantRow.eq_of_init_row
+#print axioms DiamondIntegral.Section6.CentripetalData.CoreFormConstantRow.eq_of_init_row
+#check @DiamondIntegral.Section6.CentripetalData.coordinate_step_inverse_form_constant_of_core_row
+#print DiamondIntegral.Section6.CentripetalData.coordinate_step_inverse_form_constant_of_core_row
+#print axioms DiamondIntegral.Section6.CentripetalData.coordinate_step_inverse_form_constant_of_core_row
+#check @DiamondIntegral.Section6.CentripetalData.coreGammaForm_projection_constant_of_core_row
+#print DiamondIntegral.Section6.CentripetalData.coreGammaForm_projection_constant_of_core_row
+#print axioms DiamondIntegral.Section6.CentripetalData.coreGammaForm_projection_constant_of_core_row
+#check @DiamondIntegral.Section6.CentripetalData.exists_core_gamma_descent_of_core_row
+#print DiamondIntegral.Section6.CentripetalData.exists_core_gamma_descent_of_core_row
+#print axioms DiamondIntegral.Section6.CentripetalData.exists_core_gamma_descent_of_core_row
+#check @DiamondIntegral.Section6.CentripetalData.releasedGammaForm_projection_constant_of_core_row
+#print DiamondIntegral.Section6.CentripetalData.releasedGammaForm_projection_constant_of_core_row
+#print axioms DiamondIntegral.Section6.CentripetalData.releasedGammaForm_projection_constant_of_core_row
+#check @DiamondIntegral.Section6.CentripetalData.exists_released_gamma_descent_of_core_row
+#print DiamondIntegral.Section6.CentripetalData.exists_released_gamma_descent_of_core_row
+#print axioms DiamondIntegral.Section6.CentripetalData.exists_released_gamma_descent_of_core_row
+#check @DiamondIntegral.Section6.gammaTransitionImage_comp_row
+#print DiamondIntegral.Section6.gammaTransitionImage_comp_row
+#print axioms DiamondIntegral.Section6.gammaTransitionImage_comp_row
+#check @DiamondIntegral.Section6.GammaFormParameterTemplateRow.transport_program_comp_row
+#print DiamondIntegral.Section6.GammaFormParameterTemplateRow.transport_program_comp_row
+#print axioms DiamondIntegral.Section6.GammaFormParameterTemplateRow.transport_program_comp_row
+#check @DiamondIntegral.Section6.CentripetalProgramTemplate.SameFormDataRow
+#print DiamondIntegral.Section6.CentripetalProgramTemplate.SameFormDataRow
+#print axioms DiamondIntegral.Section6.CentripetalProgramTemplate.SameFormDataRow
+#check @DiamondIntegral.Section6.CentripetalProgramTemplate.SameFormDataRow.refl
+#print DiamondIntegral.Section6.CentripetalProgramTemplate.SameFormDataRow.refl
+#print axioms DiamondIntegral.Section6.CentripetalProgramTemplate.SameFormDataRow.refl
+#check @DiamondIntegral.Section6.CentripetalProgramTemplate.SameFormDataRow.trans
+#print DiamondIntegral.Section6.CentripetalProgramTemplate.SameFormDataRow.trans
+#print axioms DiamondIntegral.Section6.CentripetalProgramTemplate.SameFormDataRow.trans
+#check @DiamondIntegral.Section6.CentripetalProgramTemplate.SameFormDataRow.comp
+#print DiamondIntegral.Section6.CentripetalProgramTemplate.SameFormDataRow.comp
+#print axioms DiamondIntegral.Section6.CentripetalProgramTemplate.SameFormDataRow.comp
+#check @DiamondIntegral.Section6.CentripetalProgramTemplate.SameFormDataRow.assoc
+#print DiamondIntegral.Section6.CentripetalProgramTemplate.SameFormDataRow.assoc
+#print axioms DiamondIntegral.Section6.CentripetalProgramTemplate.SameFormDataRow.assoc
+#check @DiamondIntegral.Section6.CentripetalProgramTemplate.SameFormDataRow.measuredGoodRow
+#print DiamondIntegral.Section6.CentripetalProgramTemplate.SameFormDataRow.measuredGoodRow
+#print axioms DiamondIntegral.Section6.CentripetalProgramTemplate.SameFormDataRow.measuredGoodRow
+#check @DiamondIntegral.Section6.CentripetalProgramTemplate.SameFormDataRow.measuredFormGoodRow
+#print DiamondIntegral.Section6.CentripetalProgramTemplate.SameFormDataRow.measuredFormGoodRow
+#print axioms DiamondIntegral.Section6.CentripetalProgramTemplate.SameFormDataRow.measuredFormGoodRow
+#check @DiamondIntegral.Section6.CentripetalProgramTemplate.SameFormDataRow.measuredRVTraceRow
+#print DiamondIntegral.Section6.CentripetalProgramTemplate.SameFormDataRow.measuredRVTraceRow
+#print axioms DiamondIntegral.Section6.CentripetalProgramTemplate.SameFormDataRow.measuredRVTraceRow
+#check @DiamondIntegral.Section6.CentripetalProgramSequence.append_sameFormData_row
+#print DiamondIntegral.Section6.CentripetalProgramSequence.append_sameFormData_row
+#print axioms DiamondIntegral.Section6.CentripetalProgramSequence.append_sameFormData_row
+#check @DiamondIntegral.Section6.CentripetalProgramTemplate.toSequence_sameFormData_row
+#print DiamondIntegral.Section6.CentripetalProgramTemplate.toSequence_sameFormData_row
+#print axioms DiamondIntegral.Section6.CentripetalProgramTemplate.toSequence_sameFormData_row
+#check @DiamondIntegral.Section6.SpecialCovariantChain.gamma_levels_uniform_invariant_row
+#print DiamondIntegral.Section6.SpecialCovariantChain.gamma_levels_uniform_invariant_row
+#print axioms DiamondIntegral.Section6.SpecialCovariantChain.gamma_levels_uniform_invariant_row
+#check @DiamondIntegral.Section6.SpecialCovariantChain.gamma_levels_proper_geometry_row
+#print DiamondIntegral.Section6.SpecialCovariantChain.gamma_levels_proper_geometry_row
+#print axioms DiamondIntegral.Section6.SpecialCovariantChain.gamma_levels_proper_geometry_row
+#check @DiamondIntegral.Section6.TemplateComponentFamily.component_transition_graph_row
+#print DiamondIntegral.Section6.TemplateComponentFamily.component_transition_graph_row
+#print axioms DiamondIntegral.Section6.TemplateComponentFamily.component_transition_graph_row
+#check @DiamondIntegral.Section6.TemplateComponentFamily.component_core_form_constant_row
+#print DiamondIntegral.Section6.TemplateComponentFamily.component_core_form_constant_row
+#print axioms DiamondIntegral.Section6.TemplateComponentFamily.component_core_form_constant_row
+#check @DiamondIntegral.Section6.transported_gamma_levels_open_row
+#print DiamondIntegral.Section6.transported_gamma_levels_open_row
+#print axioms DiamondIntegral.Section6.transported_gamma_levels_open_row
+#check @DiamondIntegral.Section6.CentripetalData.unary_core_congruent_row
+#print DiamondIntegral.Section6.CentripetalData.unary_core_congruent_row
+#print axioms DiamondIntegral.Section6.CentripetalData.unary_core_congruent_row
+#check @DiamondIntegral.Section6.CentripetalData.unary_core_form_constant_row
+#print DiamondIntegral.Section6.CentripetalData.unary_core_form_constant_row
+#print axioms DiamondIntegral.Section6.CentripetalData.unary_core_form_constant_row
+#check @DiamondIntegral.Section6.UnaryRootFamily.step_same_labels_row
+#print DiamondIntegral.Section6.UnaryRootFamily.step_same_labels_row
+#print axioms DiamondIntegral.Section6.UnaryRootFamily.step_same_labels_row
+#check @DiamondIntegral.Section6.UnaryRootFamily.step_inverse_form_constant_on_core_row
+#print DiamondIntegral.Section6.UnaryRootFamily.step_inverse_form_constant_on_core_row
+#print axioms DiamondIntegral.Section6.UnaryRootFamily.step_inverse_form_constant_on_core_row
+#check @DiamondIntegral.Section6.UnaryRootFamily.noncore_transported_form_value_row
+#print DiamondIntegral.Section6.UnaryRootFamily.noncore_transported_form_value_row
+#print axioms DiamondIntegral.Section6.UnaryRootFamily.noncore_transported_form_value_row
+#check @DiamondIntegral.Section6.UnaryRootFamily.noncore_form_root_control_step_row
+#print DiamondIntegral.Section6.UnaryRootFamily.noncore_form_root_control_step_row
+#print axioms DiamondIntegral.Section6.UnaryRootFamily.noncore_form_root_control_step_row
+#check @DiamondIntegral.Section6.UnaryRootFamily.form_root_control_step_row
+#print DiamondIntegral.Section6.UnaryRootFamily.form_root_control_step_row
+#print axioms DiamondIntegral.Section6.UnaryRootFamily.form_root_control_step_row
+#check @DiamondIntegral.Section6.UnaryFormRootControlRow
+#print DiamondIntegral.Section6.UnaryFormRootControlRow
+#print axioms DiamondIntegral.Section6.UnaryFormRootControlRow
+#check @DiamondIntegral.Section6.unaryFormRootControl_of_levels_row
+#print DiamondIntegral.Section6.unaryFormRootControl_of_levels_row
+#print axioms DiamondIntegral.Section6.unaryFormRootControl_of_levels_row
+#check @DiamondIntegral.Section6.UnaryFormRootControlRow.levels
+#print DiamondIntegral.Section6.UnaryFormRootControlRow.levels
+#print axioms DiamondIntegral.Section6.UnaryFormRootControlRow.levels
+#check @DiamondIntegral.Section6.UnaryFormRootControlRow.empty_roots_tag_constant
+#print DiamondIntegral.Section6.UnaryFormRootControlRow.empty_roots_tag_constant
+#print axioms DiamondIntegral.Section6.UnaryFormRootControlRow.empty_roots_tag_constant
+#check @DiamondIntegral.Section6.exists_unary_form_controlling_roots_row
+#print DiamondIntegral.Section6.exists_unary_form_controlling_roots_row
+#print axioms DiamondIntegral.Section6.exists_unary_form_controlling_roots_row
+#check @DiamondIntegral.Section6.exists_unary_gamma_obstacles_row
+#print DiamondIntegral.Section6.exists_unary_gamma_obstacles_row
+#print axioms DiamondIntegral.Section6.exists_unary_gamma_obstacles_row
+#check @DiamondIntegral.Section6.exists_unary_gamma_controlling_roots_row
+#print DiamondIntegral.Section6.exists_unary_gamma_controlling_roots_row
+#print axioms DiamondIntegral.Section6.exists_unary_gamma_controlling_roots_row
+#check @DiamondIntegral.Section6.unary_measured_compatible_preparation_of_doublyBounded_tagged_row
+#print DiamondIntegral.Section6.unary_measured_compatible_preparation_of_doublyBounded_tagged_row
+#print axioms DiamondIntegral.Section6.unary_measured_compatible_preparation_of_doublyBounded_tagged_row
+#check @DiamondIntegral.Section6.UnaryRootFamily.exists_measured_compatible_process_of_bound_row
+#print DiamondIntegral.Section6.UnaryRootFamily.exists_measured_compatible_process_of_bound_row
+#print axioms DiamondIntegral.Section6.UnaryRootFamily.exists_measured_compatible_process_of_bound_row
+#check @DiamondIntegral.Section6.UnaryFocusData.exists_measured_protected_family_step_row
+#print DiamondIntegral.Section6.UnaryFocusData.exists_measured_protected_family_step_row
+#print axioms DiamondIntegral.Section6.UnaryFocusData.exists_measured_protected_family_step_row
+#check @DiamondIntegral.Section6.unary_measured_form_compatible_preparation_of_doublyBounded_tagged_row
+#print DiamondIntegral.Section6.unary_measured_form_compatible_preparation_of_doublyBounded_tagged_row
+#print axioms DiamondIntegral.Section6.unary_measured_form_compatible_preparation_of_doublyBounded_tagged_row
+#check @DiamondIntegral.Section6.UnaryRootFamily.exists_measured_form_compatible_process_of_bound_row
+#print DiamondIntegral.Section6.UnaryRootFamily.exists_measured_form_compatible_process_of_bound_row
+#print axioms DiamondIntegral.Section6.UnaryRootFamily.exists_measured_form_compatible_process_of_bound_row
+#check @DiamondIntegral.Section6.exists_unary_measured_controlling_roots_row
+#print DiamondIntegral.Section6.exists_unary_measured_controlling_roots_row
+#print axioms DiamondIntegral.Section6.exists_unary_measured_controlling_roots_row
+#check @DiamondIntegral.Section6.unary_measured_preparation_of_doublyBounded_tagged_row
+#print DiamondIntegral.Section6.unary_measured_preparation_of_doublyBounded_tagged_row
+#print axioms DiamondIntegral.Section6.unary_measured_preparation_of_doublyBounded_tagged_row
+#check @DiamondIntegral.Section6.UnaryMeasuredPreparationRow
+#print DiamondIntegral.Section6.UnaryMeasuredPreparationRow
+#print axioms DiamondIntegral.Section6.UnaryMeasuredPreparationRow
+#check @DiamondIntegral.Section6.UnaryMeasuredPreparationRow.precompose
+#print DiamondIntegral.Section6.UnaryMeasuredPreparationRow.precompose
+#print axioms DiamondIntegral.Section6.UnaryMeasuredPreparationRow.precompose
+#check @DiamondIntegral.Section6.UnaryRootFamily.exists_measured_prepared_process_of_bound_row
+#print DiamondIntegral.Section6.UnaryRootFamily.exists_measured_prepared_process_of_bound_row
+#print axioms DiamondIntegral.Section6.UnaryRootFamily.exists_measured_prepared_process_of_bound_row
+#check @DiamondIntegral.Section6.unary_measured_synchronized_preparation_of_doublyBounded_tagged_row
+#print DiamondIntegral.Section6.unary_measured_synchronized_preparation_of_doublyBounded_tagged_row
+#print axioms DiamondIntegral.Section6.unary_measured_synchronized_preparation_of_doublyBounded_tagged_row
+#check @DiamondIntegral.Section6.UnaryFocusData.exists_measured_synchronized_family_step_row
+#print DiamondIntegral.Section6.UnaryFocusData.exists_measured_synchronized_family_step_row
+#print axioms DiamondIntegral.Section6.UnaryFocusData.exists_measured_synchronized_family_step_row
+#check @DiamondIntegral.Section6.UnaryRootFamily.exists_measured_synchronized_process_of_bound_row
+#print DiamondIntegral.Section6.UnaryRootFamily.exists_measured_synchronized_process_of_bound_row
+#print axioms DiamondIntegral.Section6.UnaryRootFamily.exists_measured_synchronized_process_of_bound_row
+#check @DiamondIntegral.Section6.UniformMeasuredProgramFamilyRow.rowForm_values_eq_of_code_graph_eq_row
+#print DiamondIntegral.Section6.UniformMeasuredProgramFamilyRow.rowForm_values_eq_of_code_graph_eq_row
+#print axioms DiamondIntegral.Section6.UniformMeasuredProgramFamilyRow.rowForm_values_eq_of_code_graph_eq_row
+#check @DiamondIntegral.Section6.UniformMeasuredProgramFamilyRow.afterPrefix_value_row
+#print DiamondIntegral.Section6.UniformMeasuredProgramFamilyRow.afterPrefix_value_row
+#print axioms DiamondIntegral.Section6.UniformMeasuredProgramFamilyRow.afterPrefix_value_row
+#check @DiamondIntegral.Section6.UniformMeasuredProgramFamilyRow
+#print DiamondIntegral.Section6.UniformMeasuredProgramFamilyRow
+#print axioms DiamondIntegral.Section6.UniformMeasuredProgramFamilyRow
+#check @DiamondIntegral.Section6.UniformMeasuredProgramFamilyRow.freeze
+#print DiamondIntegral.Section6.UniformMeasuredProgramFamilyRow.freeze
+#print axioms DiamondIntegral.Section6.UniformMeasuredProgramFamilyRow.freeze
+#check @DiamondIntegral.Section6.UniformMeasuredProgramFamilyRow.sequential
+#print DiamondIntegral.Section6.UniformMeasuredProgramFamilyRow.sequential
+#print axioms DiamondIntegral.Section6.UniformMeasuredProgramFamilyRow.sequential
+#check @DiamondIntegral.Section6.UniformMeasuredProgramFamilyRow.afterPrefix
+#print DiamondIntegral.Section6.UniformMeasuredProgramFamilyRow.afterPrefix
+#print axioms DiamondIntegral.Section6.UniformMeasuredProgramFamilyRow.afterPrefix
+#check @DiamondIntegral.Section6.UniformMeasuredProgramFamilyRow.values_eq_of_transition_labels_row
+#print DiamondIntegral.Section6.UniformMeasuredProgramFamilyRow.values_eq_of_transition_labels_row
+#print axioms DiamondIntegral.Section6.UniformMeasuredProgramFamilyRow.values_eq_of_transition_labels_row
+#check @DiamondIntegral.Section6.reindexVFInverseMapRow
+#print DiamondIntegral.Section6.reindexVFInverseMapRow
+#print axioms DiamondIntegral.Section6.reindexVFInverseMapRow
+#check @DiamondIntegral.Section6.reindexedGammaFormRow
+#print DiamondIntegral.Section6.reindexedGammaFormRow
+#print axioms DiamondIntegral.Section6.reindexedGammaFormRow
+#check @DiamondIntegral.Section6.reindexedGammaForm_constant_row
+#print DiamondIntegral.Section6.reindexedGammaForm_constant_row
+#print axioms DiamondIntegral.Section6.reindexedGammaForm_constant_row
+#check @DiamondIntegral.Section6.CentripetalData.reindexVF_core_form_constant_row
+#print DiamondIntegral.Section6.CentripetalData.reindexVF_core_form_constant_row
+#print axioms DiamondIntegral.Section6.CentripetalData.reindexVF_core_form_constant_row
+#check @DiamondIntegral.Section6.VFReindexRefinementFrame.oldMapRow
+#print DiamondIntegral.Section6.VFReindexRefinementFrame.oldMapRow
+#print axioms DiamondIntegral.Section6.VFReindexRefinementFrame.oldMapRow
+#check @DiamondIntegral.Section6.VFReindexRefinementFrame.portComponent_core_form_constant_row
+#print DiamondIntegral.Section6.VFReindexRefinementFrame.portComponent_core_form_constant_row
+#print axioms DiamondIntegral.Section6.VFReindexRefinementFrame.portComponent_core_form_constant_row
+#check @DiamondIntegral.Section6.VFReindexRefinementFrame.gamma_form_constant_row
+#print DiamondIntegral.Section6.VFReindexRefinementFrame.gamma_form_constant_row
+#print axioms DiamondIntegral.Section6.VFReindexRefinementFrame.gamma_form_constant_row
+#check @DiamondIntegral.Section6.VFReindexedChainLift.gamma_form_transport_row
+#print DiamondIntegral.Section6.VFReindexedChainLift.gamma_form_transport_row
+#print axioms DiamondIntegral.Section6.VFReindexedChainLift.gamma_form_transport_row
+#check @DiamondIntegral.Section6.CentripetalData.VariableCoreFormConstantRow
+#print DiamondIntegral.Section6.CentripetalData.VariableCoreFormConstantRow
+#print axioms DiamondIntegral.Section6.CentripetalData.VariableCoreFormConstantRow
+#check @DiamondIntegral.Section6.CentripetalData.variableReleasedGammaFormRow
+#print DiamondIntegral.Section6.CentripetalData.variableReleasedGammaFormRow
+#print axioms DiamondIntegral.Section6.CentripetalData.variableReleasedGammaFormRow
+#check @DiamondIntegral.Section6.CentripetalData.variableReleasedGammaForm_at_row
+#print DiamondIntegral.Section6.CentripetalData.variableReleasedGammaForm_at_row
+#print axioms DiamondIntegral.Section6.CentripetalData.variableReleasedGammaForm_at_row
+#check @DiamondIntegral.Section6.CentripetalData.variableReleasedGammaForm_coordinate_constant_row
+#print DiamondIntegral.Section6.CentripetalData.variableReleasedGammaForm_coordinate_constant_row
+#print axioms DiamondIntegral.Section6.CentripetalData.variableReleasedGammaForm_coordinate_constant_row
+#check @DiamondIntegral.Section6.CentripetalData.variableReleasedGammaForm_levels_geometry_row
+#print DiamondIntegral.Section6.CentripetalData.variableReleasedGammaForm_levels_geometry_row
+#print axioms DiamondIntegral.Section6.CentripetalData.variableReleasedGammaForm_levels_geometry_row
 #check @DiamondIntegral.Section6.CentripetalData.relativeData
 #print DiamondIntegral.Section6.CentripetalData.relativeData
 #print axioms DiamondIntegral.Section6.CentripetalData.relativeData
@@ -11400,6 +13269,135 @@ import «section 6».Section
 #check @DiamondIntegral.Section6.scalarRatioMulMap_value
 #print DiamondIntegral.Section6.scalarRatioMulMap_value
 #print axioms DiamondIntegral.Section6.scalarRatioMulMap_value
+#check @DiamondIntegral.Section6.lemma_6_27_doublyBounded_discharged
+#print DiamondIntegral.Section6.lemma_6_27_doublyBounded_discharged
+#print axioms DiamondIntegral.Section6.lemma_6_27_doublyBounded_discharged
+#check @DiamondIntegral.Section6.lemma_6_27_normalized_discharged
+#print DiamondIntegral.Section6.lemma_6_27_normalized_discharged
+#print axioms DiamondIntegral.Section6.lemma_6_27_normalized_discharged
+#check @DiamondIntegral.Section6.lemma_6_27_binary_normalized_discharged
+#print DiamondIntegral.Section6.lemma_6_27_binary_normalized_discharged
+#print axioms DiamondIntegral.Section6.lemma_6_27_binary_normalized_discharged
+#check @DiamondIntegral.Section6.lemma_6_19_binary_vfGenerated_discharged
+#print DiamondIntegral.Section6.lemma_6_19_binary_vfGenerated_discharged
+#print axioms DiamondIntegral.Section6.lemma_6_19_binary_vfGenerated_discharged
+#check @DiamondIntegral.Section6.lemma_6_21_binary_discharged
+#print DiamondIntegral.Section6.lemma_6_21_binary_discharged
+#print axioms DiamondIntegral.Section6.lemma_6_21_binary_discharged
+#check @DiamondIntegral.Section6.lemma_6_21_binary_vfGenerated_discharged
+#print DiamondIntegral.Section6.lemma_6_21_binary_vfGenerated_discharged
+#print axioms DiamondIntegral.Section6.lemma_6_21_binary_vfGenerated_discharged
+#check @DiamondIntegral.Section6.lemma_6_27_binary_doublyBounded_discharged
+#print DiamondIntegral.Section6.lemma_6_27_binary_doublyBounded_discharged
+#print axioms DiamondIntegral.Section6.lemma_6_27_binary_doublyBounded_discharged
+#check @DiamondIntegral.Section6.lemma_6_19_binary_discharged
+#print DiamondIntegral.Section6.lemma_6_19_binary_discharged
+#print axioms DiamondIntegral.Section6.lemma_6_19_binary_discharged
+#check @DiamondIntegral.Section6.lemma_6_27_binary_discharged
+#print DiamondIntegral.Section6.lemma_6_27_binary_discharged
+#print axioms DiamondIntegral.Section6.lemma_6_27_binary_discharged
+#check @DiamondIntegral.Section6.lemma_6_38_bounded_variable_apertures_discharged
+#print DiamondIntegral.Section6.lemma_6_38_bounded_variable_apertures_discharged
+#print axioms DiamondIntegral.Section6.lemma_6_38_bounded_variable_apertures_discharged
+#check @DiamondIntegral.Section6.lemma_6_38_bounded_variable_apertures_contractible_discharged
+#print DiamondIntegral.Section6.lemma_6_38_bounded_variable_apertures_contractible_discharged
+#print axioms DiamondIntegral.Section6.lemma_6_38_bounded_variable_apertures_contractible_discharged
+#check @DiamondIntegral.Section6.remark_6_4_discharged
+#print DiamondIntegral.Section6.remark_6_4_discharged
+#print axioms DiamondIntegral.Section6.remark_6_4_discharged
+#check @DiamondIntegral.Section6.remark_6_4_properCovariant_discharged
+#print DiamondIntegral.Section6.remark_6_4_properCovariant_discharged
+#print axioms DiamondIntegral.Section6.remark_6_4_properCovariant_discharged
+#check @DiamondIntegral.Section6.DiamondLiftHomomorphism.lemma_6_33_diamond_discharged
+#print DiamondIntegral.Section6.DiamondLiftHomomorphism.lemma_6_33_diamond_discharged
+#print axioms DiamondIntegral.Section6.DiamondLiftHomomorphism.lemma_6_33_diamond_discharged
+#check @DiamondIntegral.Section6.DiamondSimultaneous.lemma_6_38_diamond_discharged
+#print DiamondIntegral.Section6.DiamondSimultaneous.lemma_6_38_diamond_discharged
+#print axioms DiamondIntegral.Section6.DiamondSimultaneous.lemma_6_38_diamond_discharged
+#check @DiamondIntegral.Section6.DiamondSimultaneous.lemma_6_38_diamond_contractible_discharged
+#print DiamondIntegral.Section6.DiamondSimultaneous.lemma_6_38_diamond_contractible_discharged
+#print axioms DiamondIntegral.Section6.DiamondSimultaneous.lemma_6_38_diamond_contractible_discharged
+#check @DiamondIntegral.Section6.DiamondSpecialIsomorphisms.remark_6_15_discharged
+#print DiamondIntegral.Section6.DiamondSpecialIsomorphisms.remark_6_15_discharged
+#print axioms DiamondIntegral.Section6.DiamondSpecialIsomorphisms.remark_6_15_discharged
+#check @DiamondIntegral.Section6.DiamondStandardContraction.remark_6_28_discharged
+#print DiamondIntegral.Section6.DiamondStandardContraction.remark_6_28_discharged
+#print axioms DiamondIntegral.Section6.DiamondStandardContraction.remark_6_28_discharged
+#check @DiamondIntegral.Section6.DiamondStandardContraction.remark_6_28_exists_discharged
+#print DiamondIntegral.Section6.DiamondStandardContraction.remark_6_28_exists_discharged
+#print axioms DiamondIntegral.Section6.DiamondStandardContraction.remark_6_28_exists_discharged
+#check @DiamondIntegral.Section6.lemma_6_21_finite_image_discharged
+#print DiamondIntegral.Section6.lemma_6_21_finite_image_discharged
+#print axioms DiamondIntegral.Section6.lemma_6_21_finite_image_discharged
+#check @DiamondIntegral.Section6.lemma_6_21_finite_image_vfGenerated_discharged
+#print DiamondIntegral.Section6.lemma_6_21_finite_image_vfGenerated_discharged
+#print axioms DiamondIntegral.Section6.lemma_6_21_finite_image_vfGenerated_discharged
+#check @DiamondIntegral.Section6.lemma_6_33_finite_labels_vfGenerated_discharged
+#print DiamondIntegral.Section6.lemma_6_33_finite_labels_vfGenerated_discharged
+#print axioms DiamondIntegral.Section6.lemma_6_33_finite_labels_vfGenerated_discharged
+#check @DiamondIntegral.Section6.lemma_6_33_finite_labels_doublyBounded_vfGenerated_discharged
+#print DiamondIntegral.Section6.lemma_6_33_finite_labels_doublyBounded_vfGenerated_discharged
+#print axioms DiamondIntegral.Section6.lemma_6_33_finite_labels_doublyBounded_vfGenerated_discharged
+#check @DiamondIntegral.Section6.lemma_6_22_discharged
+#print DiamondIntegral.Section6.lemma_6_22_discharged
+#print axioms DiamondIntegral.Section6.lemma_6_22_discharged
+#check @DiamondIntegral.Section6.corollary_6_23_discharged
+#print DiamondIntegral.Section6.corollary_6_23_discharged
+#print axioms DiamondIntegral.Section6.corollary_6_23_discharged
+#check @DiamondIntegral.Section6.lemma_6_21_discharged
+#print DiamondIntegral.Section6.lemma_6_21_discharged
+#print axioms DiamondIntegral.Section6.lemma_6_21_discharged
+#check @DiamondIntegral.Section6.lemma_6_21_vfGenerated_discharged
+#print DiamondIntegral.Section6.lemma_6_21_vfGenerated_discharged
+#print axioms DiamondIntegral.Section6.lemma_6_21_vfGenerated_discharged
+#check @DiamondIntegral.Section6.lemma_6_33_doublyBounded_vfGenerated_discharged
+#print DiamondIntegral.Section6.lemma_6_33_doublyBounded_vfGenerated_discharged
+#print axioms DiamondIntegral.Section6.lemma_6_33_doublyBounded_vfGenerated_discharged
+#check @DiamondIntegral.Section6.proposition_6_19_vfGenerated_discharged
+#print DiamondIntegral.Section6.proposition_6_19_vfGenerated_discharged
+#print axioms DiamondIntegral.Section6.proposition_6_19_vfGenerated_discharged
+#check @DiamondIntegral.Section6.lemma_6_9_discharged
+#print DiamondIntegral.Section6.lemma_6_9_discharged
+#print axioms DiamondIntegral.Section6.lemma_6_9_discharged
+#check @DiamondIntegral.Section6.lemma_6_8_discharged
+#print DiamondIntegral.Section6.lemma_6_8_discharged
+#print axioms DiamondIntegral.Section6.lemma_6_8_discharged
+#check @DiamondIntegral.Section6.lemma_6_33_degree_one_vfGenerated_discharged
+#print DiamondIntegral.Section6.lemma_6_33_degree_one_vfGenerated_discharged
+#print axioms DiamondIntegral.Section6.lemma_6_33_degree_one_vfGenerated_discharged
+#check @DiamondIntegral.Section6.proposition_6_19_discharged
+#print DiamondIntegral.Section6.proposition_6_19_discharged
+#print axioms DiamondIntegral.Section6.proposition_6_19_discharged
+#check @DiamondIntegral.Section6.lemma_6_14_bounded_variable_apertures_discharged
+#print DiamondIntegral.Section6.lemma_6_14_bounded_variable_apertures_discharged
+#print axioms DiamondIntegral.Section6.lemma_6_14_bounded_variable_apertures_discharged
+#check @DiamondIntegral.Section6.remark_6_20_discharged
+#print DiamondIntegral.Section6.remark_6_20_discharged
+#print axioms DiamondIntegral.Section6.remark_6_20_discharged
+#check @DiamondIntegral.Section6.lemma_6_14_discharged
+#print DiamondIntegral.Section6.lemma_6_14_discharged
+#print axioms DiamondIntegral.Section6.lemma_6_14_discharged
+#check @DiamondIntegral.Section6.lemma_6_27_discharged
+#print DiamondIntegral.Section6.lemma_6_27_discharged
+#print axioms DiamondIntegral.Section6.lemma_6_27_discharged
+#check @DiamondIntegral.Section6.lemma_6_19_unary_vfGenerated_discharged
+#print DiamondIntegral.Section6.lemma_6_19_unary_vfGenerated_discharged
+#print axioms DiamondIntegral.Section6.lemma_6_19_unary_vfGenerated_discharged
+#check @DiamondIntegral.Section6.lemma_6_21_unary_discharged
+#print DiamondIntegral.Section6.lemma_6_21_unary_discharged
+#print axioms DiamondIntegral.Section6.lemma_6_21_unary_discharged
+#check @DiamondIntegral.Section6.lemma_6_21_unary_vfGenerated_discharged
+#print DiamondIntegral.Section6.lemma_6_21_unary_vfGenerated_discharged
+#print axioms DiamondIntegral.Section6.lemma_6_21_unary_vfGenerated_discharged
+#check @DiamondIntegral.Section6.lemma_6_19_unary_discharged
+#print DiamondIntegral.Section6.lemma_6_19_unary_discharged
+#print axioms DiamondIntegral.Section6.lemma_6_19_unary_discharged
+#check @DiamondIntegral.Section6.remark_6_20_unary_discharged
+#print DiamondIntegral.Section6.remark_6_20_unary_discharged
+#print axioms DiamondIntegral.Section6.remark_6_20_unary_discharged
+#check @DiamondIntegral.Section6.lemma_6_27_unary_discharged
+#print DiamondIntegral.Section6.lemma_6_27_unary_discharged
+#print axioms DiamondIntegral.Section6.lemma_6_27_unary_discharged
 #check @DiamondIntegral.Section6.namedBoundaryCoefficientMap
 #print DiamondIntegral.Section6.namedBoundaryCoefficientMap
 #print axioms DiamondIntegral.Section6.namedBoundaryCoefficientMap
@@ -12423,6 +14421,120 @@ import «section 6».Section
 #check @DiamondIntegral.Section6.vfTupleAssembleMap_value
 #print DiamondIntegral.Section6.vfTupleAssembleMap_value
 #print axioms DiamondIntegral.Section6.vfTupleAssembleMap_value
+#check @DiamondIntegral.Section6.FinitaryRVRelation
+#print DiamondIntegral.Section6.FinitaryRVRelation
+#print axioms DiamondIntegral.Section6.FinitaryRVRelation
+#check @DiamondIntegral.Section6.liftCode
+#print DiamondIntegral.Section6.liftCode
+#print axioms DiamondIntegral.Section6.liftCode
+#check @DiamondIntegral.Section6.TupleFinitaryLift
+#print DiamondIntegral.Section6.TupleFinitaryLift
+#print axioms DiamondIntegral.Section6.TupleFinitaryLift
+#check @DiamondIntegral.Section6.FinitaryRVRelation.codes_iff
+#print DiamondIntegral.Section6.FinitaryRVRelation.codes_iff
+#print axioms DiamondIntegral.Section6.FinitaryRVRelation.codes_iff
+#check @DiamondIntegral.Section6.FinitaryRVRelation.domain
+#print DiamondIntegral.Section6.FinitaryRVRelation.domain
+#print axioms DiamondIntegral.Section6.FinitaryRVRelation.domain
+#check @DiamondIntegral.Section6.pieceFamily
+#print DiamondIntegral.Section6.pieceFamily
+#print axioms DiamondIntegral.Section6.pieceFamily
+#check @DiamondIntegral.Section6.SelectedFinite
+#print DiamondIntegral.Section6.SelectedFinite
+#print axioms DiamondIntegral.Section6.SelectedFinite
+#check @DiamondIntegral.Section6.pieceFamily_finite
+#print DiamondIntegral.Section6.pieceFamily_finite
+#print axioms DiamondIntegral.Section6.pieceFamily_finite
+#check @DiamondIntegral.Section6.pieceFamily_rv
+#print DiamondIntegral.Section6.pieceFamily_rv
+#print axioms DiamondIntegral.Section6.pieceFamily_rv
+#check @DiamondIntegral.Section6.pieceFamily_definable
+#print DiamondIntegral.Section6.pieceFamily_definable
+#print axioms DiamondIntegral.Section6.pieceFamily_definable
+#check @DiamondIntegral.Section6.exists_piece_centers
+#print DiamondIntegral.Section6.exists_piece_centers
+#print axioms DiamondIntegral.Section6.exists_piece_centers
+#check @DiamondIntegral.Section6.pieceCenter
+#print DiamondIntegral.Section6.pieceCenter
+#print axioms DiamondIntegral.Section6.pieceCenter
+#check @DiamondIntegral.Section6.pieceCenter_definable
+#print DiamondIntegral.Section6.pieceCenter_definable
+#print axioms DiamondIntegral.Section6.pieceCenter_definable
+#check @DiamondIntegral.Section6.pieceCenter_prescribed
+#print DiamondIntegral.Section6.pieceCenter_prescribed
+#print axioms DiamondIntegral.Section6.pieceCenter_prescribed
+#check @DiamondIntegral.Section6.pieceCenter_branch
+#print DiamondIntegral.Section6.pieceCenter_branch
+#print axioms DiamondIntegral.Section6.pieceCenter_branch
+#check @DiamondIntegral.Section6.vfDifferentiableAt_select_comp
+#print DiamondIntegral.Section6.vfDifferentiableAt_select_comp
+#print axioms DiamondIntegral.Section6.vfDifferentiableAt_select_comp
+#check @DiamondIntegral.Section6.vfDifferentiableAt_constFun
+#print DiamondIntegral.Section6.vfDifferentiableAt_constFun
+#print axioms DiamondIntegral.Section6.vfDifferentiableAt_constFun
+#check @DiamondIntegral.Section6.labelSet
+#print DiamondIntegral.Section6.labelSet
+#print axioms DiamondIntegral.Section6.labelSet
+#check @DiamondIntegral.Section6.labelVolume
+#print DiamondIntegral.Section6.labelVolume
+#print axioms DiamondIntegral.Section6.labelVolume
+#check @DiamondIntegral.Section6.labelVolume_finite
+#print DiamondIntegral.Section6.labelVolume_finite
+#print axioms DiamondIntegral.Section6.labelVolume_finite
+#check @DiamondIntegral.Section6.labelObject
+#print DiamondIntegral.Section6.labelObject
+#print axioms DiamondIntegral.Section6.labelObject
+#check @DiamondIntegral.Section6.liftCenterMap
+#print DiamondIntegral.Section6.liftCenterMap
+#print axioms DiamondIntegral.Section6.liftCenterMap
+#check @DiamondIntegral.Section6.liftCenterMap_value
+#print DiamondIntegral.Section6.liftCenterMap_value
+#print axioms DiamondIntegral.Section6.liftCenterMap_value
+#check @DiamondIntegral.Section6.FinitaryRVRelation.restrictLabels
+#print DiamondIntegral.Section6.FinitaryRVRelation.restrictLabels
+#print axioms DiamondIntegral.Section6.FinitaryRVRelation.restrictLabels
+#check @DiamondIntegral.Section6.restrictLabels_dim
+#print DiamondIntegral.Section6.restrictLabels_dim
+#print axioms DiamondIntegral.Section6.restrictLabels_dim
+#check @DiamondIntegral.Section6.codeCondition
+#print DiamondIntegral.Section6.codeCondition
+#print axioms DiamondIntegral.Section6.codeCondition
+#check @DiamondIntegral.Section6.codeCondition_definable
+#print DiamondIntegral.Section6.codeCondition_definable
+#print axioms DiamondIntegral.Section6.codeCondition_definable
+#check @DiamondIntegral.Section6.codeCondition_liftCode
+#print DiamondIntegral.Section6.codeCondition_liftCode
+#print axioms DiamondIntegral.Section6.codeCondition_liftCode
+#check @DiamondIntegral.Section6.step_lift
+#print DiamondIntegral.Section6.step_lift
+#print axioms DiamondIntegral.Section6.step_lift
+#check @DiamondIntegral.Section6.rvValues_mem_preimage_iff
+#print DiamondIntegral.Section6.rvValues_mem_preimage_iff
+#print axioms DiamondIntegral.Section6.rvValues_mem_preimage_iff
+#check @DiamondIntegral.Section6.FinitaryRVRelation.restrictSource
+#print DiamondIntegral.Section6.FinitaryRVRelation.restrictSource
+#print axioms DiamondIntegral.Section6.FinitaryRVRelation.restrictSource
+#check @DiamondIntegral.Section6.glue_lift
+#print DiamondIntegral.Section6.glue_lift
+#print axioms DiamondIntegral.Section6.glue_lift
+#check @DiamondIntegral.Section6.empty_lift
+#print DiamondIntegral.Section6.empty_lift
+#print axioms DiamondIntegral.Section6.empty_lift
+#check @DiamondIntegral.Section6.cover_lift
+#print DiamondIntegral.Section6.cover_lift
+#print axioms DiamondIntegral.Section6.cover_lift
+#check @DiamondIntegral.Section6.lift_of_rvDim_le
+#print DiamondIntegral.Section6.lift_of_rvDim_le
+#print axioms DiamondIntegral.Section6.lift_of_rvDim_le
+#check @DiamondIntegral.Section6.lemma_6_30_tuple
+#print DiamondIntegral.Section6.lemma_6_30_tuple
+#print axioms DiamondIntegral.Section6.lemma_6_30_tuple
+#check @DiamondIntegral.Section6.TupleFinitaryLift.continuousAt
+#print DiamondIntegral.Section6.TupleFinitaryLift.continuousAt
+#print axioms DiamondIntegral.Section6.TupleFinitaryLift.continuousAt
+#check @DiamondIntegral.Section6.lemma_6_30_tuple_vfGenerated
+#print DiamondIntegral.Section6.lemma_6_30_tuple_vfGenerated
+#print axioms DiamondIntegral.Section6.lemma_6_30_tuple_vfGenerated
 #check @DiamondIntegral.Section6.CentripetalData.unaryActiveLabels
 #print DiamondIntegral.Section6.CentripetalData.unaryActiveLabels
 #print axioms DiamondIntegral.Section6.CentripetalData.unaryActiveLabels
@@ -13539,6 +15651,12 @@ import «section 6».Section
 #check @DiamondIntegral.Section6.frozenUnaryRVTemplateRelation_row
 #print DiamondIntegral.Section6.frozenUnaryRVTemplateRelation_row
 #print axioms DiamondIntegral.Section6.frozenUnaryRVTemplateRelation_row
+#check @DiamondIntegral.Section6.unaryRVDataRow_uniform_constant
+#print DiamondIntegral.Section6.unaryRVDataRow_uniform_constant
+#print axioms DiamondIntegral.Section6.unaryRVDataRow_uniform_constant
+#check @DiamondIntegral.Section6.remark_6_20_unary
+#print DiamondIntegral.Section6.remark_6_20_unary
+#print axioms DiamondIntegral.Section6.remark_6_20_unary
 #check @DiamondIntegral.Section6.UnaryRelativeApertureData.apertureGammaLabelMap
 #print DiamondIntegral.Section6.UnaryRelativeApertureData.apertureGammaLabelMap
 #print axioms DiamondIntegral.Section6.UnaryRelativeApertureData.apertureGammaLabelMap
@@ -13932,6 +16050,12 @@ import «section 6».Section
 #check @DiamondIntegral.Section6.unary_relative_measured_matching_exists
 #print DiamondIntegral.Section6.unary_relative_measured_matching_exists
 #print axioms DiamondIntegral.Section6.unary_relative_measured_matching_exists
+#check @DiamondIntegral.Section6.UnaryRelativePreparedMatching.sourceForm_extension_constant
+#print DiamondIntegral.Section6.UnaryRelativePreparedMatching.sourceForm_extension_constant
+#print axioms DiamondIntegral.Section6.UnaryRelativePreparedMatching.sourceForm_extension_constant
+#check @DiamondIntegral.Section6.UnaryRelativePreparedMatching.targetForm_extension_constant
+#print DiamondIntegral.Section6.UnaryRelativePreparedMatching.targetForm_extension_constant
+#print axioms DiamondIntegral.Section6.UnaryRelativePreparedMatching.targetForm_extension_constant
 #check @DiamondIntegral.Section6.UnaryRelativePreparedMatching.rv_matching_exists
 #print DiamondIntegral.Section6.UnaryRelativePreparedMatching.rv_matching_exists
 #print axioms DiamondIntegral.Section6.UnaryRelativePreparedMatching.rv_matching_exists

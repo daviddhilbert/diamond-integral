@@ -1,4 +1,5 @@
 import «section 2».Exchange
+import «section 2».ExchangeGeneral
 import Section3.FiniteRelations
 import Section3.AlgebraicFinite
 
@@ -143,6 +144,24 @@ theorem lemma_2_15_vf (hc : CanonicalStructure.IsCanonical (M := M))
     hB.raw_definable R hR
     (reverse_finite_of_exchange hc hκ hs S hsmall .vf R hR hsort hfin
       (fun a b ha hb hba hb0 => lemma_2_14_vf S F ⟨b, hb⟩ ⟨a, ha⟩ hba hb0))
+  exact ⟨E, hf, raw_definable_sorted hc S E .vf hd (hEB.trans hB.2), hEB, he⟩
+
+/-- Lemma 2.15 for literal VF subsets over an arbitrary parameter base, as
+printed: no field condition on the VF part of the base (exchange from
+`lemma_2_14_vf_general`). -/
+theorem lemma_2_15_vf_general (hc : CanonicalStructure.IsCanonical (M := M))
+    {κ : Cardinal} (hκ : Cardinal.aleph0 ≤ κ) (hs : Saturated M κ)
+    (S : Set M) (hsmall : Cardinal.mk S < κ)
+    (B : Set M) (hB : DefinableAt S .vf B) (R : Set (M × M))
+    (hR : S.Definable₂ LRV R) (hsort : ∀ a b, (a, b) ∈ R → iVF a ∧ iVF b)
+    (hfin : ∀ a, {b | (a, b) ∈ R}.Finite) :
+    ∃ E : Set M, E.Finite ∧ DefinableAt S .vf E ∧ E ⊆ B ∧
+      ∀ b ∈ B, {a | (a, b) ∈ R}.Infinite ↔ b ∈ E := by
+  obtain ⟨E, hf, hd, hEB, he⟩ := finite_exceptional_fibres hs S hsmall B
+    hB.raw_definable R hR
+    (reverse_finite_of_exchange hc hκ hs S hsmall .vf R hR hsort hfin
+      (fun a b ha hb hba hb0 =>
+        ExchangeGeneral.lemma_2_14_vf_general S ⟨b, hb⟩ ⟨a, ha⟩ hba hb0))
   exact ⟨E, hf, raw_definable_sorted hc S E .vf hd (hEB.trans hB.2), hEB, he⟩
 
 /-- Lemma 2.15 for literal scalar RV subsets, over the same fixed base. -/

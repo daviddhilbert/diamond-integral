@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Prepare the Integration in ACVF consumer proof compatibility patch."""
+"""Verify the published Integration in ACVF compatibility sources."""
 
 from __future__ import annotations
 
@@ -27,7 +27,10 @@ def prepare() -> dict:
     current = subprocess.check_output(
         ["git", "diff", "--no-ext-diff", "--binary", "--", *manifest["files"]], cwd=PACKAGE
     )
-    if current != patch.read_bytes():
+    if manifest.get("mode") == "published":
+        if current:
+            raise SystemExit("FAIL: published integration compatibility files have local edits; preserving them")
+    elif current != patch.read_bytes():
         if current:
             raise SystemExit("FAIL: integration dependency has other Lean edits; leaving them untouched")
         subprocess.run(["git", "apply", "--check", str(patch)], cwd=PACKAGE, check=True)

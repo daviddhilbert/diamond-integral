@@ -3,9 +3,14 @@
 Annotated manuscript, beginning on p. 10.
 
 All tracked numbered §2 targets are now implemented in the exact scopes in
-[COVERAGE.md](COVERAGE.md). Final audit: **850 public section theorems and
-378 selected reuse declarations**, PASS, with nine explicit accepted cited
-inputs and only the three standard logical principles. The final extensions
+[COVERAGE.md](COVERAGE.md). Latest audit (November 18): **970 public section theorems and
+378 selected reuse declarations**, PASS, with only the three standard logical
+principles. The nine cited inputs remain parameters of the original
+statements but are all discharged: input-free versions are in
+`section 3/Section2CitedInputsDischarged.lean` and, for the now proved Γ
+rational-affine input (`Section5.GammaQE.gamma_piecewise_rational_affine`),
+`section 3/Section2GammaLinearityDischarged.lean`. November 17–18 repairs
+are recorded in [GAP-REPAIRS.md](GAP-REPAIRS.md). The final extensions
 of 2.25–2.26, 2.29 and 2.30 retain existing finite DC ground names. See the
 [proof review](verification/DISC-GROUND-REVIEW.md) and
 [machine record](verification/status.json). No manuscript approval remains

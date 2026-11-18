@@ -1,3 +1,4 @@
+import «section 6».RowForms
 import «section 6».BoundedVariableUnaryMatching
 import «section 6».UnaryApertureInclusion
 import «section 6».RelativeApertureBoundedGraphs
@@ -1100,6 +1101,29 @@ import «section 6».ContinuousShears
 import «section 6».ScalarCodeAlgebra
 import «section 6».CentripetalData
 import «section 6».CentripetalMap
+import «section 6».DiamondCategory
+import «section 6».DiamondLift
+import «section 6».DiamondProduct
+import «section 6».DiamondGrothendieck
+import «section 6».DiamondGroupoid
+import «section 6».DiamondEmpty
+import «section 6».DiamondSurjectivity
+import «section 6».DiamondLiftHomomorphism
+import «section 6».AllDegreeUnaryFactorizations
+import «section 6».DiamondSimultaneous
+import «section 6».DiamondSpecialIsomorphisms
+
+import «section 6».ClosedSourceImageBounds
+import «section 6».RVDiscStretch
+import «section 6».DiamondStandardContraction
+import «section 6».ContractedApertures
+import «section 6».TupleFinitaryLifting
+import «section 6».ApertureIncrease
+import «section 6».UnaryRelationContraction
+import «section 6».Section6GammaLinearityDischarged
+import «section 6».AllDegreeDoublyBoundedFactorizations
+import «section 6».DiamondGroupoidMaps
+import «section 6».Remark620
 
 /-! Section 6 exports full original-base results 6.5–6.9, approved
 almost-everywhere 6.14, literal unary relation preparation 6.16, Gamma
@@ -1134,3 +1158,5 @@ maps. The unary replacement now has both finite chains in this precise
 class. Downstream kernel and specialization assembly are deferred to
 their own sessions at the author’s direction; no complete native 7.26
 theorem is claimed. Main aperture definitions have not been applied. -/
+
+

@@ -259,6 +259,22 @@ theorems = [
 # Every public declaration of these new local modules is audited, including
 # their exact hypotheses. The whitelist keeps unrelated sections unchanged.
 extra_modules = {
+    'Lemma519Polynomial': '@root',
+    'Test520Tuples': '@root',
+    'PuiseuxMonsterAmbient': '@root',
+    'WeakDegreeFubiniDischarged': '@root',
+    'ElementaryRESExtensionData': '@root',
+    'ElementaryRESExtension': '@root',
+    'InflatedGammaFamilyRows': '@root',
+    'InflatedGammaCodePromotion': '@root',
+    'InflatedGammaWeakLiftSchemata': '@root',
+    'InflatedGammaUniformRepresentatives': '@root',
+    'InflatedIntegerBlockReduction': '@root',
+    'InflatedRelativeMonomialDecomposition': '@root',
+    'InflatedRelativeMonomialValues': '@root',
+    'InflatedGammaBasePartition': '@root',
+    'InflatedFamilyFubini': '@root',
+    'InflatedFamilyFubiniVol': '@root',
     'NativeTaggedFormalValues': '',
     'VarietyCorollaryDischarged': 'PuiseuxOriginal.',
     'Section5DischargedInputs': '',
@@ -1018,7 +1034,7 @@ for module, prefix in extra_modules.items():
             elif end and namespaces and end[1] == namespaces[-1]:
                 namespaces.pop()
             elif decl:
-                name = '.'.join(namespaces + [decl[2]])
+                name = decl[2][len('_root_.'):] if decl[2].startswith('_root_.') else '.'.join(namespaces + [decl[2]])
                 (absolute_theorems if decl[1] in ('theorem', 'lemma') else absolute_definitions).append(name)
         continue
     for kind, decl in re.findall(r'^(def|abbrev|structure|inductive|theorem) ([\w.]+)',
@@ -1033,6 +1049,16 @@ theorems = ['DiamondIntegral.Section5.' + name for name in theorems] + absolute_
 names = definitions + theorems
 required_results = [
     'DiamondIntegral.Section5.GammaQE.gamma_piecewise_rational_affine',
+    'DiamondIntegral.Section5.inflated_family_fubini',
+    'DiamondIntegral.Section5.PuiseuxOriginal.inflated_family_fubini_vol',
+    'DiamondIntegral.Section5.PuiseuxOriginal.puiseux_inflated_family_fubini_vol',
+    'DiamondIntegral.Section5.PuiseuxOriginal.exists_puiseux_ambient',
+    'DiamondIntegral.Section5.PuiseuxOriginal.puiseux_corollary_global_vanishing',
+    'DiamondIntegral.Section5.PuiseuxOriginal.ambientPuiseuxComparison_bijective',
+    'DiamondIntegral.Section5.bounded_weak_fubini_discharged',
+    'DiamondIntegral.Section5.geometric_weak_fubini_discharged',
+    'DiamondIntegral.Section5.Lemma519.lemma_5_19',
+    'DiamondIntegral.Section5.RESFiniteWitness.Test520.test_5_20_tuples',
     'DiamondIntegral.Section5.completed18GroundLiftInput',
     'DiamondIntegral.Section5.completed18LocalLift_kernel',
     'DiamondIntegral.Section5.completed18LocalLift_surjective',
@@ -1242,7 +1268,7 @@ comparison_target['proved'].update({
     'Newton_Puiseux_algebraic_closedness': 'Dean Cureton Newton-Puiseux proof at commit 73e78681d7bb78ddb202e29cb92ab3c16b723126 adapted locally only at module/import wrappers. All four files compile on the pinned environment; their public declarations and named instances are included in the axiom audit. PuiseuxAlgebraicClosedness proves the identity-on-Hahn-series equivalence with the local concrete field and transfers IsAlgClosed without an input hypothesis',
     'actual_valuation_residue_and_language': 'PuiseuxConcreteResidue constructs C equivalently to the ordinary residue field of the actual Hahn valuation without ACVF assumptions; PuiseuxConcreteRVOperations proves every quotient RV operation, including residue addition/negation and order, agrees with the normal form; PuiseuxConcreteLanguage.concreteLanguageEquiv is the actual original-language isomorphism, including off-sort guards',
     'concrete_ACVF00_model': 'PuiseuxConcreteModel.canonical_model_ACVF00 and canonical_model_ACVF have no model hypothesis. Algebraic closedness, both characteristics, a nontrivial actual valuation and the entire language interpretation are proved',
-    'actual_ambient_comparison': 'ElementaryRESFibreQuotient constructs actual native reduced ungraded RES restriction along an elementary embedding over exact real parameters. All definable maps, bijections, products, cuts, degree-forgetting relations and full value-fibre relations are proved preserved. RESGroundTransfer eliminates Gamma names already real-ground definable. PuiseuxAmbientComparison composes this restriction with theta_5_14_concrete; PuiseuxAmbientVFFubiniVanishing gives actual VF fibre-vanishing in EquivariantVariety.ModifiedRing. PuiseuxFieldGeneratedVanishing proves vanishing for actual VF-tuple maps from the intrinsic genuine F(b) fibre-integral hypothesis, with exact parameter presentation and bounded-map naturality proved. The finite variety chart encoding remains.',
+    'actual_ambient_comparison': 'ElementaryRESFibreQuotient constructs actual native reduced ungraded RES restriction along an elementary embedding over exact real parameters. All definable maps, bijections, products, cuts, degree-forgetting relations and full value-fibre relations are proved preserved. RESGroundTransfer eliminates Gamma names already real-ground definable. PuiseuxAmbientComparison composes this restriction with theta_5_14_concrete; PuiseuxAmbientVFFubiniVanishing gives actual VF fibre-vanishing in EquivariantVariety.ModifiedRing. PuiseuxFieldGeneratedVanishing proves vanishing for actual VF-tuple maps from the intrinsic genuine F(b) fibre-integral hypothesis, with exact parameter presentation and bounded-map naturality proved. The finite variety chart encoding is also proved (VarietyNativeAtlas; see paper-target-5-17.json, actual_finite_variety_encoding). ElementaryRESExtension proves the ambient comparison is an isomorphism for every elementary ambient (ambientPuiseuxComparison_bijective, ambientPuiseuxComparisonEquiv), and PuiseuxMonsterAmbient constructs a saturated, strongly homogeneous ambient for the concrete model (exists_puiseux_ambient).',
     'unconditional_concrete_comparison': 'PuiseuxConcreteComparisons.theta_5_14_concrete and canonicalModelPresentation_concrete instantiate the actual native comparison and canonical presentation with the constructed model; theta_5_14_concrete_mk proves the actual class formula',
 })
 (RECORD / 'paper-target-5-14.json').write_text(json.dumps(comparison_target, indent=2) + '\n')
@@ -1287,7 +1313,7 @@ fubini_target['proved'].update({
     'arbitrary_actual_positive_lifts': 'NativeArbitraryVFPullbackPreparation proves every actual mixed VF domain is definably bijective over the unchanged original Gamma ground to an RV-pullback, by preparing its entire domain predicate with all old RV payloads. NativeArbitraryWeakRVPresentation gives an actual finite-label RV[<=k] lift for every finite-RV-fibre VF object, including all mixed dimensions. NativeWeakLiftValues computes its bounded value with all zero strata. These lifting existence results are proved, not supplied as an extra input',
     'complete_actual_fibre_lift_uniformity': 'native_vf_lift_equality_schema_at_parameter and its geometric counterpart retain actual positive representatives, complete VF bijection and label graphs, and the entire stabilized RES witness; genuine first-order validity and finite original-base catalogs are proved',
     'actual_global_VF_lift_comparison': 'NativePreparedLiftComparison and NativePreparedLiftGeometricComparison identify actual transported VF families with literal RV totals, retaining all old RV coordinates and removing zero VF coordinates by actual bijections',
-    'full_bounded_VF_Fubini': 'NativeVFFubini.nativeBoundedVFFubini for actual finite-RV-fibre VF objects and actual original-Gamma maps to arbitrary mixed bases, in GammaGroundContext with the precise accepted Section 3 YinGammaGroundUnmeasuredLiftInput',
+    'full_bounded_VF_Fubini': 'NativeVFFubini.nativeBoundedVFFubini for actual finite-RV-fibre VF objects and actual original-Gamma maps to arbitrary mixed bases, in GammaGroundContext with the Section 3 YinGammaGroundUnmeasuredLiftInput as a parameter; completed18GroundLiftInput constructs it (bounded_fubini_discharged)',
     'full_geometric_VF_Fubini': 'NativeGeometricVFFubini.nativeGeometricVFFubini with equality of actual intrinsic normalized geometric fibre values in the ungraded affine localization. Finite denominator witnesses are selected before joint preparation; weighted RV Fubini and base zero strata give common total-degree normalization. Same standing GammaGroundContext; completed18GroundLiftInput constructs the Section 3 lifting/kernel input for both theorems',
     'intrinsic_fibre_integrals': 'NativeLiftGroundTransfer transports the actual positive lifting map and its exact special kernel. VFFieldSubstructure/VFFieldGamma/VFAdjoinedParameterTransfer construct the genuine field F(b), its full RV images, actual value subgroup and all smallness/definable-parameter substitutions; RVRetractionGroundNaturality and VFBoundedGroundNaturality prove the actual retraction squares. NativeFieldGeneratedVFFubini deduces total vanishing from intrinsic genuine F(b) fibre integrals, using the proved Section 3 lifting inputs, constructed at every displayed field context. PuiseuxLaurentNontrivial proves the actual Laurent uniformizer witness, and PuiseuxFieldGeneratedVanishing proves the concrete modified-variety-ring consequence for all actual pure-VF target maps. No extra raw-fibre lifting input is assumed',
     'native_vanishing_corollaries': 'NativeVFFubiniVanishing and NativeGeometricVFFubiniVanishing prove actual intrinsic positive fibrewise vanishing implies global VF vanishing, and its preservation under every ground ring comparison',
@@ -1326,8 +1352,8 @@ if {str(p): hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(SECTION.g
     raise SystemExit('Section 5 sources changed during verification; rerun before accepting the record.')
 status = {
     'status': 'PASS_SECTION5_REQUESTED_SCOPE_IN_RECORDED_CONTEXT',
-    'scope': 'Complete requested Section 5 scope in the recorded model and original-ground context: Lemma 5.12, concrete Remark 5.13 and comparison, bounded and geometric 5.17, and the actual-variety corollary. Gamma-linearity is proved from QE and the exact Section 3 positive lifting/kernel input is constructed from completed [18] proofs. No former Gamma-linearity or lifting/kernel input remains assumed.',
-    'complete_numbered_results': ['Lemma 5.12, approved original-language monomial decomposition', 'Remark 5.13, concrete Puiseux and full induced original-language RV Galois identifications', 'Theorem 5.17, bounded VF Fubini in the recorded GammaGroundContext with the proved Section 3 lifting/kernel input', 'Approved geometric version of Theorem 5.17, same context and precise Section 3 input', 'Notation 5.14 comparison, actual native RES quotient equivalence on the constructed concrete Puiseux model', 'Final corollary, actual complex varieties and regular morphisms with intrinsic genuine F(b) fibre integrals and chart independence'],
+    'scope': 'Complete requested Section 5 scope in the recorded model and original-ground context: Lemma 5.12, concrete Remark 5.13 and comparison, the inflated-family Fubini theorem, Notation 5.15 Vol on a constructed ambient, bounded and geometric 5.17 (also for RV[*] fibres, with Proposition 5.23), Lemma 5.19, Test 5.20 for tuple parameters, and the actual-variety corollary. Gamma-linearity is proved from QE and the exact Section 3 positive lifting/kernel input is constructed from completed [18] proofs. No former Gamma-linearity or lifting/kernel input remains assumed. Not pursued by author-approved triage: Remark 5.16, the examples and equality reformulation of Remark 5.18, and the global form of the (twist:C) formula.',
+    'complete_numbered_results': ['Lemma 5.12, approved original-language monomial decomposition', 'Remark 5.13, concrete Puiseux and full induced original-language RV Galois identifications', 'Theorem 5.17, bounded VF Fubini in the recorded GammaGroundContext with the proved Section 3 lifting/kernel input', 'Approved geometric version of Theorem 5.17, same context and precise Section 3 input', 'Theorem 5.17 and Proposition 5.23 for RV[*] fibres (weak degree): bounded_weak_fubini_discharged and geometric_weak_fubini_discharged', 'Notation 5.14 comparison, actual native RES quotient equivalence on the constructed concrete Puiseux model; the ambient comparison is an isomorphism for every elementary ambient (ambientPuiseuxComparison_bijective)', 'Notation 5.15 Vol and Corollary 5.21 on a constructed saturated, strongly homogeneous Puiseux ambient (exists_puiseux_ambient, puiseux_corollary_global_vanishing)', 'Theorem* inflated-family Fubini (approved R083-R085): inflated_family_fubini, inflated_family_fubini_vol, puiseux_inflated_family_fubini_vol', 'Lemma 5.19, polynomial preparation with rv-contractible compositions (Lemma519.lemma_5_19)', 'Test 5.20 for tuple parameters (Test520.test_5_20_tuples)', 'Final corollary, actual complex varieties and regular morphisms with intrinsic genuine F(b) fibre integrals and chart independence'],
     'accepted_inputs': fubini_target['accepted_inputs'],
     'discharged_inputs': fubini_target['discharged_inputs'],
     'required_results': required_results,
@@ -1348,5 +1374,5 @@ status = {
     'source_sha256': {str(p.relative_to(ROOT)): hashlib.sha256(p.read_bytes()).hexdigest() for p in sources},
 }
 (RECORD / 'status.json').write_text(json.dumps(status, indent=2) + '\n')
-print('PASS: Requested Section 5 scope builds, including both Fubini theorems, actual variety encodings, chart independence and the final corollary; public declarations and principles audited.')
+print('PASS: Requested Section 5 scope builds, including both Fubini theorems (also for RV[*] fibres), the inflated-family Fubini theorem, actual variety encodings, chart independence, the constructed ambient and the final corollary; public declarations and principles audited.')
 print('Section 5 requested scope is complete in the recorded context. Gamma-linearity and the exact Section 3 lifting/kernel inputs are proved and instantiated, including intrinsic field fibres; no HK result is assumed. See paper-target records.')

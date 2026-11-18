@@ -8,33 +8,47 @@ independently of pagination.
 
 | Passage | Stable label | Checked implementation |
 | --- | --- | --- |
-| Definition 4.1 | `df:res` | `RVMeasuredCharts`, measured/ordinary RES rings, full gradings, finite-union presentation equivalences and dimension-free point localization. |
-| Remark 4.2 | Euler characteristics | `GammaContinuousDecomposition.exists_decomposition`, `.geometric_sum`, `.sum_independent`; actual integration, bijection invariance, Fubini and stabilization in the Gamma integration modules. |
+| Definition 4.1 | `df:res` | `RVMeasuredCharts`, measured/ordinary RES rings, full gradings, and dimension-free point localization. The graded RES[*] rings have finite-union presentation equivalences (`RESDisjointPresentation`, `RESOrdinaryDisjointPresentation`, `RESDisjointGrading`). The dimension-free ring is `RESDimensionFreeRing.Ring`: the ordinary RES ring modulo underlying-bijection relations across degrees, whose ideal is `([1] - 1)` (`degreeIdeal_eq_pointIdeal`, `normalizationEquiv`). Its identification with the Grothendieck ring of the dimension-free category under finite coproducts is not built (the module docstring records it as a separate obligation). |
+| Remark 4.2 | Euler characteristics | `GammaContinuousDecomposition.exists_decomposition`, `.geometric_sum`, `.sum_independent`; actual integration, bijection invariance, Fubini and stabilization in the Gamma integration modules. Relative to the multivariate rational-affine normal form `Section3GammaAffineInput.Input` (still an explicit input; known open). |
 | Notation 4.3 | `res:note` | Actual fibre/affine reductions, homogeneous ideals and unchanged degree-zero subrings in `RESMeasuredReduction`, `RESOrdinaryReduction`, `RESReductionGradings`, `ReductionDegreeZero`. |
 | Ordinary construction | `kill:gamma`, `eg:isp:van`, `EB` | `RVT001OrdinaryDescent`, `RVT001OrdinaryNormalization`, `RVT001OrdinaryRanges`: actual ordinary Euler descent, normalization, stated ranges and RES restrictions. |
-| Remark 4.4 | `eb:no:eg` | `RESAffineNonsurjective.remark_4_4`: affine comparison is not surjective; point localization is an isomorphism via `RESPointLocalization`; normalized maps are distinct via `RVT001NormalizedDistinct`. |
+| Remark 4.4 | `eb:no:eg` | `RESAffineNonsurjective.remark_4_4`: affine comparison is not surjective; point localization is an isomorphism via `RESPointLocalization`; normalized maps are distinct via `RVT001NormalizedDistinct`. `Section4LinkedRemarks`: `boundedRetraction_res`, `boundedRetraction_surjective`, `geometricRetraction_range`, `normalized_retractions_distinct`, instantiated with `Section3T001Integration.ordinary` and the discharged Γ-linearity input (no T001 presentation argument). The colimit description and the "[A] = 1 equalizes" part were not pursued (triage). |
 | Notation 4.5 | `gam:equ:cons` | `GammaFunctionRing`, `GammaFunctionPolynomial`, `GammaPointAlgebra`: actual function rings, convolution, restricted polynomial source and degree-zero coefficients. |
-| Remark 4.6 | `int:Gam` | Actual weighted profiles, original-base definability, multiplicativity and graded evaluations in `GammaMeasuredProfileInvariance`, `GammaProfileProducts`, `GammaEulerPolynomialMaps`. |
+| Remark 4.6 | `int:Gam` | Actual weighted profiles, original-base definability, multiplicativity and graded evaluations in `GammaMeasuredProfileInvariance`, `GammaProfileProducts`, `GammaEulerPolynomialMaps`. The isomorphism K μΓ[0] ≅ ℤ[Γ_def] was not pursued (triage). |
 | Measured psi | `Gam:ass` | `RESUnboundedPsi`, `RESAllFiniteBalancing`, `GammaUnboundedSpecialization`: assignments, entire finite-Gamma balancing and grading. |
-| Proposition 4.7 | `prop:eu:retr:k` | `Section3LinkedRetractionStatements.proposition_4_7`: all clauses, including distinctness using `RESPointNonvanishing.point_ne_zero_acvf00`. Corrected geometric h value is +[1]. |
+| Proposition 4.7 | `prop:eu:retr:k` | `Section3LinkedRetractionStatements.proposition_4_7`: all clauses, including distinctness using `RESPointNonvanishing.point_ne_zero_acvf00`. Corrected geometric h value is +[1]. `proposition_4_7_discharged` (`Section4GammaLinearityDischarged`) drops the unary Γ rational-affine argument. |
 | Remark 4.8 | `res:forget` | `RVT001AlternativeDescent`, `RESAlternativeRawQuotient`, `RESAlternativeCompatibility`: enlarged quotient, actual alternative descent, grading and forgetful compatibility. |
-| Definition 4.9 | `db:RV` | `RVMeasuredBounds`, `RVBoundedRing`, `RVBoundedDisjointPresentation`: actual doubly bounded objects, products, ring and grading. |
-| Remark 4.10 | `tensor:bd` | `RVBoundedTensorComparison` and the bounded restriction construction; no bounded comparison injectivity or bounded tensor-kernel input. |
+| Definition 4.9 | `db:RV` | `RVMeasuredBounds`, `RVBoundedRing`, `RVBoundedDisjointPresentation`: actual doubly bounded objects, products, ring and grading. Lean's bound leaves `iRVZero` (∞) coordinates unconstrained; `RVStrictBoundedComparison.equivalence : StrictRing B ≃+* RVBoundedRing.Ring B` shows the ring on ∞-free charts (the paper's doubly bounded objects) is isomorphic to it (author decision, November 18). |
+| Remark 4.10 | `tensor:bd` | Positive level: `RVBoundedPositiveTensor.comparison` (`K₊ μRES ⊗ K₊ μΓ^db → K₊ μRV^db`, also `comparisonNat` over ℕ) on the chart presentations of `PositiveChartPresentation`; ring level: `RVBoundedTensorComparison`, `RVBoundedBalancedTensor.comparison`, compatible by `comparison_toRing`. No bounded comparison injectivity or bounded tensor-kernel input. The first sentence (a restatement of Lemma 2.41) was not pursued (triage). |
 | Notation 4.11 | `db:generator` | `EulerIntervalProducts`, `GammaBoundedFunctions`: all signs and endpoints, actual convolution, original-base point/interval generation. |
 | Notation 4.12 | `db:gam:fn` | `GammaBoundedComparison`, `GammaBoundedProfileRange`, `GammaBoxStabilization`: bounded theories agree, bounded polynomial profiles and stabilization. |
-| Notation 4.13 | `pgammabis` | `GammaRVLifts`, `RVRadiusGenerators`, `RVRadiusQuotient`, `RVBalancedRadiusChoices`: admissible nonnegative radii, lift independence, separate zero-radius identity, homogeneous radius ideal and quotient. |
+| Notation 4.13 | `pgammabis` | `GammaRVLifts`, `RVRadiusGenerators`, `RVRadiusQuotient`, `RVBalancedRadiusChoices`: admissible nonnegative radii, lift independence, separate zero-radius identity, homogeneous radius ideal and quotient. The unmeasured RV^db[k] ring and the inequality were not pursued (triage). |
 | Remark 4.14 | `db:gam:res`, `Gam:ass:bd` | `GammaBoundedQuotient`, `RESBoundedPsi`, `RESAllBoundedFiniteBalancing`: exact bounded function quotient, assignments, grading, coefficient balancing and volume forgetting. |
-| Proposition 4.15 | `prop:eu:retr:k:db` | `Section3LinkedRetractionStatements.proposition_4_15`: actual bounded retraction, all radius relations, grading and RES restriction from the full ordinary compiled Section 3 presentation. |
-| Diagram (4.8) | `edb:eb:com` | Bounded commuting square in `Section3LinkedRetractionStatements.proposition_4_15`, with normalized square in `RVT001OrdinaryNormalization.bounded_radius_square`. |
-| Remark 4.16 | `eb:not:eg` | `RVT001NormalizedDistinct.normalized_maps_distinct`: the geometric point value is inverse affine class and differs from bounded value 1. |
+| Proposition 4.15 | `prop:eu:retr:k:db` | `Section3LinkedRetractionStatements.proposition_4_15`: actual bounded retraction, all radius relations, grading and RES restriction from the full ordinary compiled Section 3 presentation. `proposition_4_15_discharged` drops the unary Γ rational-affine argument. |
+| Diagram (4.8) | `edb:eb:com` | Bounded commuting square in `Section3LinkedRetractionStatements.proposition_4_15`, with normalized square in `RVT001OrdinaryNormalization.bounded_radius_square`; stated as `Section4LinkedRemarks.diagram_edb_eb_com`. |
+| Remark 4.16 | `eb:not:eg` | `RVT001NormalizedDistinct.normalized_maps_distinct`: the geometric point value is inverse affine class and differs from bounded value 1; also `Section4LinkedRemarks.normalized_retractions_distinct`. The second paragraph (an alternative the paper rejects) was not pursued (triage). |
+| Notation 4.17 | annular generators | `AnnularBlowup`, `BlowupChart`, `BlowupRelation` (moved from section 7); `RelativeAnnularGenerators`: `AnnularDatum`, `generator`, `manuscriptIdeal` (J_var). `RelativeAnnularConverse.ideal_eq_manuscriptIdeal`: the implemented `FunctionalApertureCompatibility.ideal` is exactly J_var. `RelativeAnnularScalar.pGamma_eq_generator`, `radiusIdeal_le_manuscriptIdeal`: the last sentence, (P_Γ) ⊆ J_var. |
+| Lemma 4.18 | generator identification | `RelativeAnnularGenerators`: `manuscriptIdeal_homogeneous`, `manuscriptIdeal_le_forget_kernel`, `manuscript_quotient_injective_on_degree_zero`, `manuscriptIdeal_maps_into_p`, `manuscript_section4_compatibility`, `AnnularDatum.generator_eq_relation`. |
 
 The modular `ApprovedT001Presentation.Ordinary` and `.Measured` interfaces
 are constructed by `Section3T001Integration` through actual categorical-to-chart
 factor and tensor equivalences, commuting squares and coefficient-pair ideal
-transport. `Section3GammaAffineInput.Input` and the earlier authorized unary
-rational-affine background remain explicit. They supply structural branch
-equations, not Euler or localization conclusions. Exact hypotheses and logical
-dependencies appear in the full audit.
+transport. The unary rational-affine input
+(`GammaPiecewiseRationalAffineInput`) is now proved
+(`Section5.GammaQE.gamma_piecewise_rational_affine`), and
+`Section4GammaLinearityDischarged` gives input-free 4.7 and 4.15; the original
+statements still take it as a parameter. The multivariate
+`Section3GammaAffineInput.Input` (used by Remark 4.2) remains explicit. These
+inputs supply structural branch equations, not Euler or localization
+conclusions. Exact hypotheses and logical dependencies appear in the full audit.
+
+Also hosted here (recorded under `section 3/GAP-REPAIRS.md`): the
+Proposition 3.18 kernel witness `GermJumps`, `GammaEndpointInvariant`,
+`Proposition318Witness.proposition_3_18_unmeasured_kernel_nontrivial` and
+`Proposition318CubeRoots.proposition_3_18_kernel_nontrivial_of_noncube`,
+relative to the Reichstein–Youssin input of Remark 3.15. Not pursued, by the
+author-approved triage of November 18, are the explanatory items noted in the
+table; see [GAP-REPAIRS.md](GAP-REPAIRS.md).
 
 The nonsurjectivity proof introduces no new theorem input. Coordinate
 pieces bound actual RES domains; finite-field specialization proves the

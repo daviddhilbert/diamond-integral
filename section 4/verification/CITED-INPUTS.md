@@ -6,6 +6,13 @@ The governing policy is the repository's `ACCEPTED-CITED-RESULTS.md`.
 
 ## Unary value-group linearity
 
+November 18: this input is proved, not accepted. The theorem
+`DiamondIntegral.Section5.GammaQE.gamma_piecewise_rational_affine`
+(`section 5/GammaQEFiniteLaws.lean`) derives it from RV quantifier
+elimination with no hypotheses, and `Section4GammaLinearityDischarged.lean`
+gives `proposition_4_7_discharged` and `proposition_4_15_discharged` without
+it. The modules below still take it as the parameter `linear`.
+
 - Existing input: `DiamondIntegral.Section2.GammaPiecewiseRationalAffineInput`
   in `section 2/CitedGammaLinearity.lean`.
 - Source: [18], Yimu Yin, *Integration in algebraically closed valued
@@ -414,3 +421,10 @@ background. Section 3's integral-affine contraction classification is not
 a proof of that different statement. Later external [18] lift/integral
 inputs, including unfinished measured Section 7, retain their already
 authorized scope. No HK input is introduced.
+
+Update, November 18: the unary case (`GammaPiecewiseRationalAffineInput`)
+is now proved and discharged in 4.7/4.15 (see the opening section). The
+multivariate `Section3GammaAffineInput.Input`, used for Remark 4.2's
+continuous cell decomposition, remains explicit. The later [18] lift
+records are now produced (see `section 3/verification/cited-inputs.json`),
+and the measured Section 7 inputs are no longer needed there.

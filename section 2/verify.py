@@ -388,8 +388,8 @@ def main() -> None:
     pins = {
         "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
         "acvf_qe": "939346b0a99899e22a873479364e3cc5d142731c",
-        "special_transformations": "9cc9760892092dd34cfad4a6dee655843c52f30c",
-        "integration_in_acvf": "7d4acc730496b3bd05a22c268ffd89540ca694f9",
+        "special_transformations": "25852c85a31c67069b148bd31348128318303510",
+        "integration_in_acvf": "7675d31332f20421c803ea16af84964ed74cd51f",
     }
     for package, expected in pins.items():
         actual = subprocess.check_output(

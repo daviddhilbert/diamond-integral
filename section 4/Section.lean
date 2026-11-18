@@ -1,4 +1,10 @@
 import «section 4».RelativeAnnularQuotient
+import «section 4».AnnularBlowup
+import «section 4».BlowupChart
+import «section 4».BlowupRelation
+import «section 4».RelativeAnnularGenerators
+import «section 4».RelativeAnnularConverse
+import «section 4».RelativeAnnularScalar
 import «section 4».VariableApertureRayCancellation
 import «section 4».VariableApertureAnnularDomains
 import «section 4».VariableApertureCompatibility
@@ -233,6 +239,8 @@ import «section 4».RESAllBoundedFiniteBalancing
 import «section 4».FiniteGammaAlgebras
 import «section 4».RVFiniteBalancedTensor
 import «section 4».RVBoundedBalancedTensor
+import «section 4».PositiveChartPresentation
+import «section 4».RVBoundedPositiveTensor
 import «section 4».RVBalancedSpecialClasses
 import «section 4».RVMeasuredTensor
 import «section 4».RVMeasuredSpecialClasses
@@ -957,4 +965,11 @@ import «section 4».Section3T001Integration
 
 import «section 4».Section3LinkedRetractionStatements
 
+import «section 4».GermJumps
+import «section 4».GammaEndpointInvariant
+import «section 4».Proposition318Witness
+import «section 4».Proposition318CubeRoots
+import «section 4».Section4GammaLinearityDischarged
+import «section 4».RVStrictBoundedComparison
+import «section 4».Section4LinkedRemarks
 /-! Section 4 entry point. Exact unfinished scopes are recorded in COVERAGE.md. -/

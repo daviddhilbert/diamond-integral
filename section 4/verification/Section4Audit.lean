@@ -4369,6 +4369,88 @@ set_option format.width 120
 #print axioms DiamondIntegral.Section4.RVBoundedBalancedTensor.evaluation_res
 #print DiamondIntegral.Section4.RVBoundedBalancedTensor.evaluation_independent_kind
 #print axioms DiamondIntegral.Section4.RVBoundedBalancedTensor.evaluation_independent_kind
+#print DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations
+#print axioms DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations
+#print DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations.optionProduct
+#print axioms DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations.optionProduct
+#print DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations.presentation
+#print axioms DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations.presentation
+#print DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations.KPlus
+#print axioms DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations.KPlus
+#print DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations.cls
+#print axioms DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations.cls
+#print DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations.none_zero
+#print axioms DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations.none_zero
+#print DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations.cls_iso
+#print axioms DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations.cls_iso
+#print DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations.cls_unit
+#print axioms DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations.cls_unit
+#print DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations.cls_product
+#print axioms DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations.cls_product
+#print DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations.cls_empty
+#print axioms DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations.cls_empty
+#print DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations.cls_scissor
+#print axioms DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations.cls_scissor
+#print DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations.Invariant
+#print axioms DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations.Invariant
+#print DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations.Invariant.extend
+#print axioms DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations.Invariant.extend
+#print DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations.lift
+#print axioms DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations.lift
+#print DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations.hom_ext
+#print axioms DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations.hom_ext
+#print DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations.cls_surjective_generators
+#print axioms DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations.cls_surjective_generators
+#print DiamondIntegral.Section4.RVBoundedPositiveTensor.resRelations
+#print axioms DiamondIntegral.Section4.RVBoundedPositiveTensor.resRelations
+#print DiamondIntegral.Section4.RVBoundedPositiveTensor.rvRelations
+#print axioms DiamondIntegral.Section4.RVBoundedPositiveTensor.rvRelations
+#print DiamondIntegral.Section4.RVBoundedPositiveTensor.gammaRelations
+#print axioms DiamondIntegral.Section4.RVBoundedPositiveTensor.gammaRelations
+#print DiamondIntegral.Section4.RVBoundedPositiveTensor.finiteRelations
+#print axioms DiamondIntegral.Section4.RVBoundedPositiveTensor.finiteRelations
+#print DiamondIntegral.Section4.RVBoundedPositiveTensor.RESPositive
+#print axioms DiamondIntegral.Section4.RVBoundedPositiveTensor.RESPositive
+#print DiamondIntegral.Section4.RVBoundedPositiveTensor.RVPositive
+#print axioms DiamondIntegral.Section4.RVBoundedPositiveTensor.RVPositive
+#print DiamondIntegral.Section4.RVBoundedPositiveTensor.GammaPositive
+#print axioms DiamondIntegral.Section4.RVBoundedPositiveTensor.GammaPositive
+#print DiamondIntegral.Section4.RVBoundedPositiveTensor.FinitePositive
+#print axioms DiamondIntegral.Section4.RVBoundedPositiveTensor.FinitePositive
+#print DiamondIntegral.Section4.RVBoundedPositiveTensor.ofRES
+#print axioms DiamondIntegral.Section4.RVBoundedPositiveTensor.ofRES
+#print DiamondIntegral.Section4.RVBoundedPositiveTensor.sharp
+#print axioms DiamondIntegral.Section4.RVBoundedPositiveTensor.sharp
+#print DiamondIntegral.Section4.RVBoundedPositiveTensor.finiteToRES
+#print axioms DiamondIntegral.Section4.RVBoundedPositiveTensor.finiteToRES
+#print DiamondIntegral.Section4.RVBoundedPositiveTensor.finiteToGamma
+#print axioms DiamondIntegral.Section4.RVBoundedPositiveTensor.finiteToGamma
+#print DiamondIntegral.Section4.RVBoundedPositiveTensor.square
+#print axioms DiamondIntegral.Section4.RVBoundedPositiveTensor.square
+#print DiamondIntegral.Section4.RVBoundedPositiveTensor.resAlgebra
+#print axioms DiamondIntegral.Section4.RVBoundedPositiveTensor.resAlgebra
+#print DiamondIntegral.Section4.RVBoundedPositiveTensor.gammaAlgebra
+#print axioms DiamondIntegral.Section4.RVBoundedPositiveTensor.gammaAlgebra
+#print DiamondIntegral.Section4.RVBoundedPositiveTensor.Source
+#print axioms DiamondIntegral.Section4.RVBoundedPositiveTensor.Source
+#print DiamondIntegral.Section4.RVBoundedPositiveTensor.comparison
+#print axioms DiamondIntegral.Section4.RVBoundedPositiveTensor.comparison
+#print DiamondIntegral.Section4.RVBoundedPositiveTensor.comparison_charts
+#print axioms DiamondIntegral.Section4.RVBoundedPositiveTensor.comparison_charts
+#print DiamondIntegral.Section4.RVBoundedPositiveTensor.comparisonNat
+#print axioms DiamondIntegral.Section4.RVBoundedPositiveTensor.comparisonNat
+#print DiamondIntegral.Section4.RVBoundedPositiveTensor.resToRing
+#print axioms DiamondIntegral.Section4.RVBoundedPositiveTensor.resToRing
+#print DiamondIntegral.Section4.RVBoundedPositiveTensor.rvToRing
+#print axioms DiamondIntegral.Section4.RVBoundedPositiveTensor.rvToRing
+#print DiamondIntegral.Section4.RVBoundedPositiveTensor.gammaToRing
+#print axioms DiamondIntegral.Section4.RVBoundedPositiveTensor.gammaToRing
+#print DiamondIntegral.Section4.RVBoundedPositiveTensor.rvToRing_ofRES
+#print axioms DiamondIntegral.Section4.RVBoundedPositiveTensor.rvToRing_ofRES
+#print DiamondIntegral.Section4.RVBoundedPositiveTensor.rvToRing_sharp
+#print axioms DiamondIntegral.Section4.RVBoundedPositiveTensor.rvToRing_sharp
+#print DiamondIntegral.Section4.RVBoundedPositiveTensor.comparison_toRing
+#print axioms DiamondIntegral.Section4.RVBoundedPositiveTensor.comparison_toRing
 #print DiamondIntegral.Section4.RVBalancedSpecialClasses.pPreimage
 #print axioms DiamondIntegral.Section4.RVBalancedSpecialClasses.pPreimage
 #print DiamondIntegral.Section4.RVBalancedSpecialClasses.hPreimage
@@ -10141,6 +10223,772 @@ set_option format.width 120
 #print axioms DiamondIntegral.Section4.RelativeAnnularQuotient.evaluation_quotient
 #print DiamondIntegral.Section4.RelativeAnnularQuotient.evaluation_res
 #print axioms DiamondIntegral.Section4.RelativeAnnularQuotient.evaluation_res
+#print DiamondIntegral.Section4.AnnularBlowup.rvMul_right_cancel
+#print axioms DiamondIntegral.Section4.AnnularBlowup.rvMul_right_cancel
+#print DiamondIntegral.Section4.AnnularBlowup.inactive
+#print axioms DiamondIntegral.Section4.AnnularBlowup.inactive
+#print DiamondIntegral.Section4.AnnularBlowup.InactiveFinite
+#print axioms DiamondIntegral.Section4.AnnularBlowup.InactiveFinite
+#print DiamondIntegral.Section4.AnnularBlowup.Aperture
+#print axioms DiamondIntegral.Section4.AnnularBlowup.Aperture
+#print DiamondIntegral.Section4.AnnularBlowup.blownCoordinate
+#print axioms DiamondIntegral.Section4.AnnularBlowup.blownCoordinate
+#print DiamondIntegral.Section4.AnnularBlowup.shellPoints
+#print axioms DiamondIntegral.Section4.AnnularBlowup.shellPoints
+#print DiamondIntegral.Section4.AnnularBlowup.endpointPoints
+#print axioms DiamondIntegral.Section4.AnnularBlowup.endpointPoints
+#print DiamondIntegral.Section4.AnnularBlowup.inactive_blownCoordinate
+#print axioms DiamondIntegral.Section4.AnnularBlowup.inactive_blownCoordinate
+#print DiamondIntegral.Section4.AnnularBlowup.blownCoordinate_at
+#print axioms DiamondIntegral.Section4.AnnularBlowup.blownCoordinate_at
+#print DiamondIntegral.Section4.AnnularBlowup.fst_mem_inactive_fibre
+#print axioms DiamondIntegral.Section4.AnnularBlowup.fst_mem_inactive_fibre
+#print DiamondIntegral.Section4.AnnularBlowup.shell_finite_fibres
+#print axioms DiamondIntegral.Section4.AnnularBlowup.shell_finite_fibres
+#print DiamondIntegral.Section4.AnnularBlowup.endpoint_finite_fibres
+#print axioms DiamondIntegral.Section4.AnnularBlowup.endpoint_finite_fibres
+#print DiamondIntegral.Section4.AnnularBlowup.shell_coordinate_bounded
+#print axioms DiamondIntegral.Section4.AnnularBlowup.shell_coordinate_bounded
+#print DiamondIntegral.Section4.AnnularBlowup.endpoint_coordinate_bounded
+#print axioms DiamondIntegral.Section4.AnnularBlowup.endpoint_coordinate_bounded
+#print DiamondIntegral.Section4.BlowupChart.nonzero_mul
+#print axioms DiamondIntegral.Section4.BlowupChart.nonzero_mul
+#print DiamondIntegral.Section4.BlowupChart.updateMap
+#print axioms DiamondIntegral.Section4.BlowupChart.updateMap
+#print DiamondIntegral.Section4.BlowupChart.updateMap_join
+#print axioms DiamondIntegral.Section4.BlowupChart.updateMap_join
+#print DiamondIntegral.Section4.BlowupChart.rv_universe_definable
+#print axioms DiamondIntegral.Section4.BlowupChart.rv_universe_definable
+#print DiamondIntegral.Section4.BlowupChart.updateMap_graph_definable
+#print axioms DiamondIntegral.Section4.BlowupChart.updateMap_graph_definable
+#print DiamondIntegral.Section4.BlowupChart.pairMap
+#print axioms DiamondIntegral.Section4.BlowupChart.pairMap
+#print DiamondIntegral.Section4.BlowupChart.pairMap_graph_definable
+#print axioms DiamondIntegral.Section4.BlowupChart.pairMap_graph_definable
+#print DiamondIntegral.Section4.BlowupChart.blown_graph_definable
+#print axioms DiamondIntegral.Section4.BlowupChart.blown_graph_definable
+#print DiamondIntegral.Section4.BlowupChart.pieceChart
+#print axioms DiamondIntegral.Section4.BlowupChart.pieceChart
+#print DiamondIntegral.Section4.BlowupChart.pieceChart_weight
+#print axioms DiamondIntegral.Section4.BlowupChart.pieceChart_weight
+#print DiamondIntegral.Section4.BlowupChart.graphChart
+#print axioms DiamondIntegral.Section4.BlowupChart.graphChart
+#print DiamondIntegral.Section4.BlowupChart.aIdx
+#print axioms DiamondIntegral.Section4.BlowupChart.aIdx
+#print DiamondIntegral.Section4.BlowupChart.graph_canonical
+#print axioms DiamondIntegral.Section4.BlowupChart.graph_canonical
+#print DiamondIntegral.Section4.BlowupChart.graph_aperture
+#print axioms DiamondIntegral.Section4.BlowupChart.graph_aperture
+#print DiamondIntegral.Section4.BlowupChart.graph_aperture_nonzero
+#print axioms DiamondIntegral.Section4.BlowupChart.graph_aperture_nonzero
+#print DiamondIntegral.Section4.BlowupChart.graph_aperture_bounded
+#print axioms DiamondIntegral.Section4.BlowupChart.graph_aperture_bounded
+#print DiamondIntegral.Section4.BlowupChart.graph_domain_bounded
+#print axioms DiamondIntegral.Section4.BlowupChart.graph_domain_bounded
+#print DiamondIntegral.Section4.BlowupChart.endpointChart
+#print axioms DiamondIntegral.Section4.BlowupChart.endpointChart
+#print DiamondIntegral.Section4.BlowupChart.shellDomain
+#print axioms DiamondIntegral.Section4.BlowupChart.shellDomain
+#print DiamondIntegral.Section4.BlowupChart.xIdx
+#print axioms DiamondIntegral.Section4.BlowupChart.xIdx
+#print DiamondIntegral.Section4.BlowupChart.sIdx
+#print axioms DiamondIntegral.Section4.BlowupChart.sIdx
+#print DiamondIntegral.Section4.BlowupChart.shell_mem
+#print axioms DiamondIntegral.Section4.BlowupChart.shell_mem
+#print DiamondIntegral.Section4.BlowupChart.shell_points
+#print axioms DiamondIntegral.Section4.BlowupChart.shell_points
+#print DiamondIntegral.Section4.BlowupChart.shell_canonical
+#print axioms DiamondIntegral.Section4.BlowupChart.shell_canonical
+#print DiamondIntegral.Section4.BlowupChart.shellChart
+#print axioms DiamondIntegral.Section4.BlowupChart.shellChart
+#print DiamondIntegral.Section4.BlowupChart.endpoint_domain_bounded
+#print axioms DiamondIntegral.Section4.BlowupChart.endpoint_domain_bounded
+#print DiamondIntegral.Section4.BlowupChart.shell_domain_bounded
+#print axioms DiamondIntegral.Section4.BlowupChart.shell_domain_bounded
+#print DiamondIntegral.Section4.BlowupRelation.codeValue_volume_definable
+#print axioms DiamondIntegral.Section4.BlowupRelation.codeValue_volume_definable
+#print DiamondIntegral.Section4.BlowupRelation.skip
+#print axioms DiamondIntegral.Section4.BlowupRelation.skip
+#print DiamondIntegral.Section4.BlowupRelation.skip_ne
+#print axioms DiamondIntegral.Section4.BlowupRelation.skip_ne
+#print DiamondIntegral.Section4.BlowupRelation.exists_skip
+#print axioms DiamondIntegral.Section4.BlowupRelation.exists_skip
+#print DiamondIntegral.Section4.BlowupRelation.prod_split
+#print axioms DiamondIntegral.Section4.BlowupRelation.prod_split
+#print DiamondIntegral.Section4.BlowupRelation.coordJ_definable
+#print axioms DiamondIntegral.Section4.BlowupRelation.coordJ_definable
+#print DiamondIntegral.Section4.BlowupRelation.base_finite
+#print axioms DiamondIntegral.Section4.BlowupRelation.base_finite
+#print DiamondIntegral.Section4.BlowupRelation.baseCoord_definable
+#print axioms DiamondIntegral.Section4.BlowupRelation.baseCoord_definable
+#print DiamondIntegral.Section4.BlowupRelation.baseVol_definable
+#print axioms DiamondIntegral.Section4.BlowupRelation.baseVol_definable
+#print DiamondIntegral.Section4.BlowupRelation.baseChart
+#print axioms DiamondIntegral.Section4.BlowupRelation.baseChart
+#print DiamondIntegral.Section4.BlowupRelation.baseChart_weight
+#print axioms DiamondIntegral.Section4.BlowupRelation.baseChart_weight
+#print DiamondIntegral.Section4.BlowupRelation.endpointCoord
+#print axioms DiamondIntegral.Section4.BlowupRelation.endpointCoord
+#print DiamondIntegral.Section4.BlowupRelation.endpointCoord_definable
+#print axioms DiamondIntegral.Section4.BlowupRelation.endpointCoord_definable
+#print DiamondIntegral.Section4.BlowupRelation.endpointBase
+#print axioms DiamondIntegral.Section4.BlowupRelation.endpointBase
+#print DiamondIntegral.Section4.BlowupRelation.endpointBase_weight
+#print axioms DiamondIntegral.Section4.BlowupRelation.endpointBase_weight
+#print DiamondIntegral.Section4.BlowupRelation.presentation
+#print axioms DiamondIntegral.Section4.BlowupRelation.presentation
+#print DiamondIntegral.Section4.BlowupRelation.coordinatePresentation
+#print axioms DiamondIntegral.Section4.BlowupRelation.coordinatePresentation
+#print DiamondIntegral.Section4.BlowupRelation.shellBounded
+#print axioms DiamondIntegral.Section4.BlowupRelation.shellBounded
+#print DiamondIntegral.Section4.BlowupRelation.endpointBounded
+#print axioms DiamondIntegral.Section4.BlowupRelation.endpointBounded
+#print DiamondIntegral.Section4.BlowupRelation.sourceBounded
+#print axioms DiamondIntegral.Section4.BlowupRelation.sourceBounded
+#print DiamondIntegral.Section4.BlowupRelation.idBij
+#print axioms DiamondIntegral.Section4.BlowupRelation.idBij
+#print DiamondIntegral.Section4.BlowupRelation.shell_weight
+#print axioms DiamondIntegral.Section4.BlowupRelation.shell_weight
+#print DiamondIntegral.Section4.BlowupRelation.shellIso
+#print axioms DiamondIntegral.Section4.BlowupRelation.shellIso
+#print DiamondIntegral.Section4.BlowupRelation.endpointIso
+#print axioms DiamondIntegral.Section4.BlowupRelation.endpointIso
+#print DiamondIntegral.Section4.BlowupRelation.sourceIso
+#print axioms DiamondIntegral.Section4.BlowupRelation.sourceIso
+#print DiamondIntegral.Section4.BlowupRelation.blowup_relation
+#print axioms DiamondIntegral.Section4.BlowupRelation.blowup_relation
+#print DiamondIntegral.Section4.BlowupRelation.blowup_mem_ideal
+#print axioms DiamondIntegral.Section4.BlowupRelation.blowup_mem_ideal
+#print DiamondIntegral.Section4.BlowupRelation.unitPoint
+#print axioms DiamondIntegral.Section4.BlowupRelation.unitPoint
+#print DiamondIntegral.Section4.BlowupRelation.normalized
+#print axioms DiamondIntegral.Section4.BlowupRelation.normalized
+#print DiamondIntegral.Section4.BlowupRelation.normalized_weight
+#print axioms DiamondIntegral.Section4.BlowupRelation.normalized_weight
+#print DiamondIntegral.Section4.BlowupRelation.normalizeIso
+#print axioms DiamondIntegral.Section4.BlowupRelation.normalizeIso
+#print DiamondIntegral.Section4.RelativeAnnularGenerators.AnnularDatum
+#print axioms DiamondIntegral.Section4.RelativeAnnularGenerators.AnnularDatum
+#print DiamondIntegral.Section4.RelativeAnnularGenerators.AnnularDatum.source
+#print axioms DiamondIntegral.Section4.RelativeAnnularGenerators.AnnularDatum.source
+#print DiamondIntegral.Section4.RelativeAnnularGenerators.AnnularDatum.annularObject
+#print axioms DiamondIntegral.Section4.RelativeAnnularGenerators.AnnularDatum.annularObject
+#print DiamondIntegral.Section4.RelativeAnnularGenerators.AnnularDatum.generator
+#print axioms DiamondIntegral.Section4.RelativeAnnularGenerators.AnnularDatum.generator
+#print DiamondIntegral.Section4.RelativeAnnularGenerators.AnnularDatum.generator_eq
+#print axioms DiamondIntegral.Section4.RelativeAnnularGenerators.AnnularDatum.generator_eq
+#print DiamondIntegral.Section4.RelativeAnnularGenerators.manuscriptIdeal
+#print axioms DiamondIntegral.Section4.RelativeAnnularGenerators.manuscriptIdeal
+#print DiamondIntegral.Section4.RelativeAnnularGenerators.generator_mem_ideal
+#print axioms DiamondIntegral.Section4.RelativeAnnularGenerators.generator_mem_ideal
+#print DiamondIntegral.Section4.RelativeAnnularGenerators.manuscriptIdeal_le
+#print axioms DiamondIntegral.Section4.RelativeAnnularGenerators.manuscriptIdeal_le
+#print DiamondIntegral.Section4.RelativeAnnularGenerators.AnnularDatum.generator_eq_relation
+#print axioms DiamondIntegral.Section4.RelativeAnnularGenerators.AnnularDatum.generator_eq_relation
+#print DiamondIntegral.Section4.RelativeAnnularGenerators.manuscriptIdeal_homogeneous
+#print axioms DiamondIntegral.Section4.RelativeAnnularGenerators.manuscriptIdeal_homogeneous
+#print DiamondIntegral.Section4.RelativeAnnularGenerators.manuscriptIdeal_le_forget_kernel
+#print axioms DiamondIntegral.Section4.RelativeAnnularGenerators.manuscriptIdeal_le_forget_kernel
+#print DiamondIntegral.Section4.RelativeAnnularGenerators.manuscript_quotient_injective_on_degree_zero
+#print axioms DiamondIntegral.Section4.RelativeAnnularGenerators.manuscript_quotient_injective_on_degree_zero
+#print DiamondIntegral.Section4.RelativeAnnularGenerators.manuscriptIdeal_maps_into_p
+#print axioms DiamondIntegral.Section4.RelativeAnnularGenerators.manuscriptIdeal_maps_into_p
+#print DiamondIntegral.Section4.RelativeAnnularGenerators.manuscript_section4_compatibility
+#print axioms DiamondIntegral.Section4.RelativeAnnularGenerators.manuscript_section4_compatibility
+#print DiamondIntegral.Section4.RelativeAnnularConverse.head_ne_tail
+#print axioms DiamondIntegral.Section4.RelativeAnnularConverse.head_ne_tail
+#print DiamondIntegral.Section4.RelativeAnnularConverse.unitChart
+#print axioms DiamondIntegral.Section4.RelativeAnnularConverse.unitChart
+#print DiamondIntegral.Section4.RelativeAnnularConverse.unitIdx
+#print axioms DiamondIntegral.Section4.RelativeAnnularConverse.unitIdx
+#print DiamondIntegral.Section4.RelativeAnnularConverse.one
+#print axioms DiamondIntegral.Section4.RelativeAnnularConverse.one
+#print DiamondIntegral.Section4.RelativeAnnularConverse.mem_unitChart
+#print axioms DiamondIntegral.Section4.RelativeAnnularConverse.mem_unitChart
+#print DiamondIntegral.Section4.RelativeAnnularConverse.unitChart_reconstruct
+#print axioms DiamondIntegral.Section4.RelativeAnnularConverse.unitChart_reconstruct
+#print DiamondIntegral.Section4.RelativeAnnularConverse.join_mem_unitChart
+#print axioms DiamondIntegral.Section4.RelativeAnnularConverse.join_mem_unitChart
+#print DiamondIntegral.Section4.RelativeAnnularConverse.unitChart_weight
+#print axioms DiamondIntegral.Section4.RelativeAnnularConverse.unitChart_weight
+#print DiamondIntegral.Section4.RelativeAnnularConverse.unitChart_coordinate_head
+#print axioms DiamondIntegral.Section4.RelativeAnnularConverse.unitChart_coordinate_head
+#print DiamondIntegral.Section4.RelativeAnnularConverse.unitChart_finite
+#print axioms DiamondIntegral.Section4.RelativeAnnularConverse.unitChart_finite
+#print DiamondIntegral.Section4.RelativeAnnularConverse.unitAperture
+#print axioms DiamondIntegral.Section4.RelativeAnnularConverse.unitAperture
+#print DiamondIntegral.Section4.RelativeAnnularConverse.unitChart_bounded
+#print axioms DiamondIntegral.Section4.RelativeAnnularConverse.unitChart_bounded
+#print DiamondIntegral.Section4.RelativeAnnularConverse.datum
+#print axioms DiamondIntegral.Section4.RelativeAnnularConverse.datum
+#print DiamondIntegral.Section4.RelativeAnnularConverse.dropUnit
+#print axioms DiamondIntegral.Section4.RelativeAnnularConverse.dropUnit
+#print DiamondIntegral.Section4.RelativeAnnularConverse.dropUnit_head
+#print axioms DiamondIntegral.Section4.RelativeAnnularConverse.dropUnit_head
+#print DiamondIntegral.Section4.RelativeAnnularConverse.dropUnit_tail
+#print axioms DiamondIntegral.Section4.RelativeAnnularConverse.dropUnit_tail
+#print DiamondIntegral.Section4.RelativeAnnularConverse.liftPoint
+#print axioms DiamondIntegral.Section4.RelativeAnnularConverse.liftPoint
+#print DiamondIntegral.Section4.RelativeAnnularConverse.liftPoint_drop
+#print axioms DiamondIntegral.Section4.RelativeAnnularConverse.liftPoint_drop
+#print DiamondIntegral.Section4.RelativeAnnularConverse.graph_bij
+#print axioms DiamondIntegral.Section4.RelativeAnnularConverse.graph_bij
+#print DiamondIntegral.Section4.RelativeAnnularConverse.annular_mem_iff
+#print axioms DiamondIntegral.Section4.RelativeAnnularConverse.annular_mem_iff
+#print DiamondIntegral.Section4.RelativeAnnularConverse.annular_weight
+#print axioms DiamondIntegral.Section4.RelativeAnnularConverse.annular_weight
+#print DiamondIntegral.Section4.RelativeAnnularConverse.Q
+#print axioms DiamondIntegral.Section4.RelativeAnnularConverse.Q
+#print DiamondIntegral.Section4.RelativeAnnularConverse.sourceIso'
+#print axioms DiamondIntegral.Section4.RelativeAnnularConverse.sourceIso'
+#print DiamondIntegral.Section4.RelativeAnnularConverse.endpointIso'
+#print axioms DiamondIntegral.Section4.RelativeAnnularConverse.endpointIso'
+#print DiamondIntegral.Section4.RelativeAnnularConverse.dropShell
+#print axioms DiamondIntegral.Section4.RelativeAnnularConverse.dropShell
+#print DiamondIntegral.Section4.RelativeAnnularConverse.dropShell_head
+#print axioms DiamondIntegral.Section4.RelativeAnnularConverse.dropShell_head
+#print DiamondIntegral.Section4.RelativeAnnularConverse.dropShell_tail
+#print axioms DiamondIntegral.Section4.RelativeAnnularConverse.dropShell_tail
+#print DiamondIntegral.Section4.RelativeAnnularConverse.dropUnit_aperture
+#print axioms DiamondIntegral.Section4.RelativeAnnularConverse.dropUnit_aperture
+#print DiamondIntegral.Section4.RelativeAnnularConverse.Qgraph_nonzero
+#print axioms DiamondIntegral.Section4.RelativeAnnularConverse.Qgraph_nonzero
+#print DiamondIntegral.Section4.RelativeAnnularConverse.Pgraph_nonzero
+#print axioms DiamondIntegral.Section4.RelativeAnnularConverse.Pgraph_nonzero
+#print DiamondIntegral.Section4.RelativeAnnularConverse.shellIso'
+#print axioms DiamondIntegral.Section4.RelativeAnnularConverse.shellIso'
+#print DiamondIntegral.Section4.RelativeAnnularConverse.relation_eq_generator
+#print axioms DiamondIntegral.Section4.RelativeAnnularConverse.relation_eq_generator
+#print DiamondIntegral.Section4.RelativeAnnularConverse.ideal_eq_manuscriptIdeal
+#print axioms DiamondIntegral.Section4.RelativeAnnularConverse.ideal_eq_manuscriptIdeal
+#print DiamondIntegral.Section4.RelativeAnnularScalar.U0
+#print axioms DiamondIntegral.Section4.RelativeAnnularScalar.U0
+#print DiamondIntegral.Section4.RelativeAnnularScalar.point_finite
+#print axioms DiamondIntegral.Section4.RelativeAnnularScalar.point_finite
+#print DiamondIntegral.Section4.RelativeAnnularScalar.pair_eq
+#print axioms DiamondIntegral.Section4.RelativeAnnularScalar.pair_eq
+#print DiamondIntegral.Section4.RelativeAnnularScalar.graph_domain_eq
+#print axioms DiamondIntegral.Section4.RelativeAnnularScalar.graph_domain_eq
+#print DiamondIntegral.Section4.RelativeAnnularScalar.constAperture
+#print axioms DiamondIntegral.Section4.RelativeAnnularScalar.constAperture
+#print DiamondIntegral.Section4.RelativeAnnularScalar.scalarDatum
+#print axioms DiamondIntegral.Section4.RelativeAnnularScalar.scalarDatum
+#print DiamondIntegral.Section4.RelativeAnnularScalar.one_eq
+#print axioms DiamondIntegral.Section4.RelativeAnnularScalar.one_eq
+#print DiamondIntegral.Section4.RelativeAnnularScalar.raw_iRV
+#print axioms DiamondIntegral.Section4.RelativeAnnularScalar.raw_iRV
+#print DiamondIntegral.Section4.RelativeAnnularScalar.unit_weight
+#print axioms DiamondIntegral.Section4.RelativeAnnularScalar.unit_weight
+#print DiamondIntegral.Section4.RelativeAnnularScalar.annulus_weight
+#print axioms DiamondIntegral.Section4.RelativeAnnularScalar.annulus_weight
+#print DiamondIntegral.Section4.RelativeAnnularScalar.scalarEndpointIso
+#print axioms DiamondIntegral.Section4.RelativeAnnularScalar.scalarEndpointIso
+#print DiamondIntegral.Section4.RelativeAnnularScalar.scalarShellIso
+#print axioms DiamondIntegral.Section4.RelativeAnnularScalar.scalarShellIso
+#print DiamondIntegral.Section4.RelativeAnnularScalar.pGamma_eq_generator
+#print axioms DiamondIntegral.Section4.RelativeAnnularScalar.pGamma_eq_generator
+#print DiamondIntegral.Section4.RelativeAnnularScalar.radiusIdeal_le_manuscriptIdeal
+#print axioms DiamondIntegral.Section4.RelativeAnnularScalar.radiusIdeal_le_manuscriptIdeal
+#print DiamondIntegral.Section4.GermJumps.RightIn
+#print axioms DiamondIntegral.Section4.GermJumps.RightIn
+#print DiamondIntegral.Section4.GermJumps.LeftIn
+#print axioms DiamondIntegral.Section4.GermJumps.LeftIn
+#print DiamondIntegral.Section4.GermJumps.jump
+#print axioms DiamondIntegral.Section4.GermJumps.jump
+#print DiamondIntegral.Section4.GermJumps.Tame
+#print axioms DiamondIntegral.Section4.GermJumps.Tame
+#print DiamondIntegral.Section4.GermJumps.weightedJump
+#print axioms DiamondIntegral.Section4.GermJumps.weightedJump
+#print DiamondIntegral.Section4.GermJumps.not_rightIn_both
+#print axioms DiamondIntegral.Section4.GermJumps.not_rightIn_both
+#print DiamondIntegral.Section4.GermJumps.not_leftIn_both
+#print axioms DiamondIntegral.Section4.GermJumps.not_leftIn_both
+#print DiamondIntegral.Section4.GermJumps.rightIn_union_iff
+#print axioms DiamondIntegral.Section4.GermJumps.rightIn_union_iff
+#print DiamondIntegral.Section4.GermJumps.leftIn_union_iff
+#print axioms DiamondIntegral.Section4.GermJumps.leftIn_union_iff
+#print DiamondIntegral.Section4.GermJumps.ite_or_eq_add
+#print axioms DiamondIntegral.Section4.GermJumps.ite_or_eq_add
+#print DiamondIntegral.Section4.GermJumps.jump_union
+#print axioms DiamondIntegral.Section4.GermJumps.jump_union
+#print DiamondIntegral.Section4.GermJumps.Tame.union
+#print axioms DiamondIntegral.Section4.GermJumps.Tame.union
+#print DiamondIntegral.Section4.GermJumps.support_weighted_subset
+#print axioms DiamondIntegral.Section4.GermJumps.support_weighted_subset
+#print DiamondIntegral.Section4.GermJumps.weightedJump_union
+#print axioms DiamondIntegral.Section4.GermJumps.weightedJump_union
+#print DiamondIntegral.Section4.GermJumps.weightedJump_empty
+#print axioms DiamondIntegral.Section4.GermJumps.weightedJump_empty
+#print DiamondIntegral.Section4.GermJumps.tame_empty
+#print axioms DiamondIntegral.Section4.GermJumps.tame_empty
+#print DiamondIntegral.Section4.GermJumps.jump_of_finite
+#print axioms DiamondIntegral.Section4.GermJumps.jump_of_finite
+#print DiamondIntegral.Section4.GermJumps.weightedJump_of_finite
+#print axioms DiamondIntegral.Section4.GermJumps.weightedJump_of_finite
+#print DiamondIntegral.Section4.GermJumps.rightIn_image_of_strictMono
+#print axioms DiamondIntegral.Section4.GermJumps.rightIn_image_of_strictMono
+#print DiamondIntegral.Section4.GermJumps.leftIn_image_of_strictMono
+#print axioms DiamondIntegral.Section4.GermJumps.leftIn_image_of_strictMono
+#print DiamondIntegral.Section4.GermJumps.rightIn_image_of_strictAnti
+#print axioms DiamondIntegral.Section4.GermJumps.rightIn_image_of_strictAnti
+#print DiamondIntegral.Section4.GermJumps.leftIn_image_of_strictAnti
+#print axioms DiamondIntegral.Section4.GermJumps.leftIn_image_of_strictAnti
+#print DiamondIntegral.Section4.GermJumps.symm_image_image
+#print axioms DiamondIntegral.Section4.GermJumps.symm_image_image
+#print DiamondIntegral.Section4.GermJumps.symm_strictMono
+#print axioms DiamondIntegral.Section4.GermJumps.symm_strictMono
+#print DiamondIntegral.Section4.GermJumps.symm_strictAnti
+#print axioms DiamondIntegral.Section4.GermJumps.symm_strictAnti
+#print DiamondIntegral.Section4.GermJumps.rightIn_image_iff_of_strictMono
+#print axioms DiamondIntegral.Section4.GermJumps.rightIn_image_iff_of_strictMono
+#print DiamondIntegral.Section4.GermJumps.leftIn_image_iff_of_strictMono
+#print axioms DiamondIntegral.Section4.GermJumps.leftIn_image_iff_of_strictMono
+#print DiamondIntegral.Section4.GermJumps.rightIn_image_iff_of_strictAnti
+#print axioms DiamondIntegral.Section4.GermJumps.rightIn_image_iff_of_strictAnti
+#print DiamondIntegral.Section4.GermJumps.leftIn_image_iff_of_strictAnti
+#print axioms DiamondIntegral.Section4.GermJumps.leftIn_image_iff_of_strictAnti
+#print DiamondIntegral.Section4.GermJumps.image_compl
+#print axioms DiamondIntegral.Section4.GermJumps.image_compl
+#print DiamondIntegral.Section4.GermJumps.jump_image_of_strictMono
+#print axioms DiamondIntegral.Section4.GermJumps.jump_image_of_strictMono
+#print DiamondIntegral.Section4.GermJumps.jump_image_of_strictAnti
+#print axioms DiamondIntegral.Section4.GermJumps.jump_image_of_strictAnti
+#print DiamondIntegral.Section4.GermJumps.Tame.image_of_strictMono
+#print axioms DiamondIntegral.Section4.GermJumps.Tame.image_of_strictMono
+#print DiamondIntegral.Section4.GermJumps.Tame.image_of_strictAnti
+#print axioms DiamondIntegral.Section4.GermJumps.Tame.image_of_strictAnti
+#print DiamondIntegral.Section4.GermJumps.weightedJump_image_of_strictMono
+#print axioms DiamondIntegral.Section4.GermJumps.weightedJump_image_of_strictMono
+#print DiamondIntegral.Section4.GermJumps.weightedJump_image_of_strictAnti
+#print axioms DiamondIntegral.Section4.GermJumps.weightedJump_image_of_strictAnti
+#print DiamondIntegral.Section4.GermJumps.weightedJump_biUnion
+#print axioms DiamondIntegral.Section4.GermJumps.weightedJump_biUnion
+#print DiamondIntegral.Section4.GermJumps.weightedJump_partition
+#print axioms DiamondIntegral.Section4.GermJumps.weightedJump_partition
+#print DiamondIntegral.Section4.GammaEndpointInvariant.gamma_exists_gt
+#print axioms DiamondIntegral.Section4.GammaEndpointInvariant.gamma_exists_gt
+#print DiamondIntegral.Section4.GammaEndpointInvariant.gamma_exists_lt
+#print axioms DiamondIntegral.Section4.GammaEndpointInvariant.gamma_exists_lt
+#print DiamondIntegral.Section4.GammaEndpointInvariant.gammaNoMaxOrder
+#print axioms DiamondIntegral.Section4.GammaEndpointInvariant.gammaNoMaxOrder
+#print DiamondIntegral.Section4.GammaEndpointInvariant.gammaNoMinOrder
+#print axioms DiamondIntegral.Section4.GammaEndpointInvariant.gammaNoMinOrder
+#print DiamondIntegral.Section4.GammaEndpointInvariant.line
+#print axioms DiamondIntegral.Section4.GammaEndpointInvariant.line
+#print DiamondIntegral.Section4.GammaEndpointInvariant.cons_elim0_eq
+#print axioms DiamondIntegral.Section4.GammaEndpointInvariant.cons_elim0_eq
+#print DiamondIntegral.Section4.GammaEndpointInvariant.exists_right_gap
+#print axioms DiamondIntegral.Section4.GammaEndpointInvariant.exists_right_gap
+#print DiamondIntegral.Section4.GammaEndpointInvariant.exists_left_gap
+#print axioms DiamondIntegral.Section4.GammaEndpointInvariant.exists_left_gap
+#print DiamondIntegral.Section4.GammaEndpointInvariant.tame_line
+#print axioms DiamondIntegral.Section4.GammaEndpointInvariant.tame_line
+#print DiamondIntegral.Section4.GammaEndpointInvariant.tame_piece
+#print axioms DiamondIntegral.Section4.GammaEndpointInvariant.tame_piece
+#print DiamondIntegral.Section4.GammaEndpointInvariant.chi
+#print axioms DiamondIntegral.Section4.GammaEndpointInvariant.chi
+#print DiamondIntegral.Section4.GammaEndpointInvariant.chi_mul
+#print axioms DiamondIntegral.Section4.GammaEndpointInvariant.chi_mul
+#print DiamondIntegral.Section4.GammaEndpointInvariant.chi_inv_mul
+#print axioms DiamondIntegral.Section4.GammaEndpointInvariant.chi_inv_mul
+#print DiamondIntegral.Section4.GammaEndpointInvariant.chi_one
+#print axioms DiamondIntegral.Section4.GammaEndpointInvariant.chi_one
+#print DiamondIntegral.Section4.GammaEndpointInvariant.chi_self
+#print axioms DiamondIntegral.Section4.GammaEndpointInvariant.chi_self
+#print DiamondIntegral.Section4.GammaEndpointInvariant.rightIn_Ioi_iff
+#print axioms DiamondIntegral.Section4.GammaEndpointInvariant.rightIn_Ioi_iff
+#print DiamondIntegral.Section4.GammaEndpointInvariant.leftIn_Ioi_iff
+#print axioms DiamondIntegral.Section4.GammaEndpointInvariant.leftIn_Ioi_iff
+#print DiamondIntegral.Section4.GammaEndpointInvariant.jump_Ioi
+#print axioms DiamondIntegral.Section4.GammaEndpointInvariant.jump_Ioi
+#print DiamondIntegral.Section4.GammaEndpointInvariant.weightedJump_Ioi
+#print axioms DiamondIntegral.Section4.GammaEndpointInvariant.weightedJump_Ioi
+#print DiamondIntegral.Section4.GammaEndpointInvariant.affEquiv
+#print axioms DiamondIntegral.Section4.GammaEndpointInvariant.affEquiv
+#print DiamondIntegral.Section4.GammaEndpointInvariant.affEquiv_apply
+#print axioms DiamondIntegral.Section4.GammaEndpointInvariant.affEquiv_apply
+#print DiamondIntegral.Section4.GammaEndpointInvariant.affEquiv_tame_weight
+#print axioms DiamondIntegral.Section4.GammaEndpointInvariant.affEquiv_tame_weight
+#print DiamondIntegral.Section4.GammaEndpointInvariant.translationSubgroup
+#print axioms DiamondIntegral.Section4.GammaEndpointInvariant.translationSubgroup
+#print DiamondIntegral.Section4.GammaEndpointInvariant.objNu
+#print axioms DiamondIntegral.Section4.GammaEndpointInvariant.objNu
+#print DiamondIntegral.Section4.GammaEndpointInvariant.pieceLine
+#print axioms DiamondIntegral.Section4.GammaEndpointInvariant.pieceLine
+#print DiamondIntegral.Section4.GammaEndpointInvariant.mem_pieceLine
+#print axioms DiamondIntegral.Section4.GammaEndpointInvariant.mem_pieceLine
+#print DiamondIntegral.Section4.GammaEndpointInvariant.objNu_def
+#print axioms DiamondIntegral.Section4.GammaEndpointInvariant.objNu_def
+#print DiamondIntegral.Section4.GammaEndpointInvariant.tame_pieceLine
+#print axioms DiamondIntegral.Section4.GammaEndpointInvariant.tame_pieceLine
+#print DiamondIntegral.Section4.GammaEndpointInvariant.matrix_entry_unit
+#print axioms DiamondIntegral.Section4.GammaEndpointInvariant.matrix_entry_unit
+#print DiamondIntegral.Section4.GammaEndpointInvariant.objNu_iso
+#print axioms DiamondIntegral.Section4.GammaEndpointInvariant.objNu_iso
+#print DiamondIntegral.Section4.Proposition318Witness.card_set_zero
+#print axioms DiamondIntegral.Section4.Proposition318Witness.card_set_zero
+#print DiamondIntegral.Section4.Proposition318Witness.finite_piece_zero
+#print axioms DiamondIntegral.Section4.Proposition318Witness.finite_piece_zero
+#print DiamondIntegral.Section4.Proposition318Witness.card_carrier_zero
+#print axioms DiamondIntegral.Section4.Proposition318Witness.card_carrier_zero
+#print DiamondIntegral.Section4.Proposition318Witness.card_rvLift_zero
+#print axioms DiamondIntegral.Section4.Proposition318Witness.card_rvLift_zero
+#print DiamondIntegral.Section4.Proposition318Witness.objNu_empty
+#print axioms DiamondIntegral.Section4.Proposition318Witness.objNu_empty
+#print DiamondIntegral.Section4.Proposition318Witness.card_empty
+#print axioms DiamondIntegral.Section4.Proposition318Witness.card_empty
+#print DiamondIntegral.Section4.Proposition318Witness.pieceLine_finite
+#print axioms DiamondIntegral.Section4.Proposition318Witness.pieceLine_finite
+#print DiamondIntegral.Section4.Proposition318Witness.append_zero_left
+#print axioms DiamondIntegral.Section4.Proposition318Witness.append_zero_left
+#print DiamondIntegral.Section4.Proposition318Witness.append_zero_right
+#print axioms DiamondIntegral.Section4.Proposition318Witness.append_zero_right
+#print DiamondIntegral.Section4.Proposition318Witness.pieceLine_product_zero_one
+#print axioms DiamondIntegral.Section4.Proposition318Witness.pieceLine_product_zero_one
+#print DiamondIntegral.Section4.Proposition318Witness.pieceLine_product_one_zero
+#print axioms DiamondIntegral.Section4.Proposition318Witness.pieceLine_product_one_zero
+#print DiamondIntegral.Section4.Proposition318Witness.product_piece
+#print axioms DiamondIntegral.Section4.Proposition318Witness.product_piece
+#print DiamondIntegral.Section4.Proposition318Witness.objNu_product_zero_one
+#print axioms DiamondIntegral.Section4.Proposition318Witness.objNu_product_zero_one
+#print DiamondIntegral.Section4.Proposition318Witness.objNu_product_one_zero
+#print axioms DiamondIntegral.Section4.Proposition318Witness.objNu_product_one_zero
+#print DiamondIntegral.Section4.Proposition318Witness.card_product
+#print axioms DiamondIntegral.Section4.Proposition318Witness.card_product
+#print DiamondIntegral.Section4.Proposition318Witness.gradedValue
+#print axioms DiamondIntegral.Section4.Proposition318Witness.gradedValue
+#print DiamondIntegral.Section4.Proposition318Witness.gradedValue_empty
+#print axioms DiamondIntegral.Section4.Proposition318Witness.gradedValue_empty
+#print DiamondIntegral.Section4.Proposition318Witness.gradedValue_zero
+#print axioms DiamondIntegral.Section4.Proposition318Witness.gradedValue_zero
+#print DiamondIntegral.Section4.Proposition318Witness.gradedValue_one
+#print axioms DiamondIntegral.Section4.Proposition318Witness.gradedValue_one
+#print DiamondIntegral.Section4.Proposition318Witness.gradedValue_high
+#print axioms DiamondIntegral.Section4.Proposition318Witness.gradedValue_high
+#print DiamondIntegral.Section4.Proposition318Witness.card_unit
+#print axioms DiamondIntegral.Section4.Proposition318Witness.card_unit
+#print DiamondIntegral.Section4.Proposition318Witness.scissor_card
+#print axioms DiamondIntegral.Section4.Proposition318Witness.scissor_card
+#print DiamondIntegral.Section4.Proposition318Witness.scissor_nu
+#print axioms DiamondIntegral.Section4.Proposition318Witness.scissor_nu
+#print DiamondIntegral.Section4.Proposition318Witness.gammaInvariant
+#print axioms DiamondIntegral.Section4.Proposition318Witness.gammaInvariant
+#print DiamondIntegral.Section4.Proposition318Witness.gammaPsi
+#print axioms DiamondIntegral.Section4.Proposition318Witness.gammaPsi
+#print DiamondIntegral.Section4.Proposition318Witness.gammaPsi_class
+#print axioms DiamondIntegral.Section4.Proposition318Witness.gammaPsi_class
+#print DiamondIntegral.Section4.Proposition318Witness.resCard
+#print axioms DiamondIntegral.Section4.Proposition318Witness.resCard
+#print DiamondIntegral.Section4.Proposition318Witness.rv_domain_finite
+#print axioms DiamondIntegral.Section4.Proposition318Witness.rv_domain_finite
+#print DiamondIntegral.Section4.Proposition318Witness.resInvariant
+#print axioms DiamondIntegral.Section4.Proposition318Witness.resInvariant
+#print DiamondIntegral.Section4.Proposition318Witness.cardHom
+#print axioms DiamondIntegral.Section4.Proposition318Witness.cardHom
+#print DiamondIntegral.Section4.Proposition318Witness.cardHom_class
+#print axioms DiamondIntegral.Section4.Proposition318Witness.cardHom_class
+#print DiamondIntegral.Section4.Proposition318Witness.resCard_product
+#print axioms DiamondIntegral.Section4.Proposition318Witness.resCard_product
+#print DiamondIntegral.Section4.Proposition318Witness.cardHom_mul
+#print axioms DiamondIntegral.Section4.Proposition318Witness.cardHom_mul
+#print DiamondIntegral.Section4.Proposition318Witness.resCard_unit
+#print axioms DiamondIntegral.Section4.Proposition318Witness.resCard_unit
+#print DiamondIntegral.Section4.Proposition318Witness.resPhi
+#print axioms DiamondIntegral.Section4.Proposition318Witness.resPhi
+#print DiamondIntegral.Section4.Proposition318Witness.resPhi_class
+#print axioms DiamondIntegral.Section4.Proposition318Witness.resPhi_class
+#print DiamondIntegral.Section4.Proposition318Witness.detector_square
+#print axioms DiamondIntegral.Section4.Proposition318Witness.detector_square
+#print DiamondIntegral.Section4.Proposition318Witness.detector
+#print axioms DiamondIntegral.Section4.Proposition318Witness.detector
+#print DiamondIntegral.Section4.Proposition318Witness.gammaPsi_tail
+#print axioms DiamondIntegral.Section4.Proposition318Witness.gammaPsi_tail
+#print DiamondIntegral.Section4.Proposition318Witness.pairLeft
+#print axioms DiamondIntegral.Section4.Proposition318Witness.pairLeft
+#print DiamondIntegral.Section4.Proposition318Witness.pairRight
+#print axioms DiamondIntegral.Section4.Proposition318Witness.pairRight
+#print DiamondIntegral.Section4.Proposition318Witness.pair_isCoefficientPair
+#print axioms DiamondIntegral.Section4.Proposition318Witness.pair_isCoefficientPair
+#print DiamondIntegral.Section4.Proposition318Witness.proposition_3_18_unmeasured_kernel_nontrivial
+#print axioms DiamondIntegral.Section4.Proposition318Witness.proposition_3_18_unmeasured_kernel_nontrivial
+#print DiamondIntegral.Section4.Proposition318Witness.gammaGroundUnmeasuredTensorMap_not_injective
+#print axioms DiamondIntegral.Section4.Proposition318Witness.gammaGroundUnmeasuredTensorMap_not_injective
+#print DiamondIntegral.Section4.Proposition318Witness.coefficientCongruence_ne_bot
+#print axioms DiamondIntegral.Section4.Proposition318Witness.coefficientCongruence_ne_bot
+#print DiamondIntegral.Section4.Proposition318CubeRoots.value_definable
+#print axioms DiamondIntegral.Section4.Proposition318CubeRoots.value_definable
+#print DiamondIntegral.Section4.Proposition318CubeRoots.value_mem_translation
+#print axioms DiamondIntegral.Section4.Proposition318CubeRoots.value_mem_translation
+#print DiamondIntegral.Section4.Proposition318CubeRoots.cubeRoots
+#print axioms DiamondIntegral.Section4.Proposition318CubeRoots.cubeRoots
+#print DiamondIntegral.Section4.Proposition318CubeRoots.mem_cubeRoots
+#print axioms DiamondIntegral.Section4.Proposition318CubeRoots.mem_cubeRoots
+#print DiamondIntegral.Section4.Proposition318CubeRoots.exists_cube_root
+#print axioms DiamondIntegral.Section4.Proposition318CubeRoots.exists_cube_root
+#print DiamondIntegral.Section4.Proposition318CubeRoots.cube_roots_of_unity_finite
+#print axioms DiamondIntegral.Section4.Proposition318CubeRoots.cube_roots_of_unity_finite
+#print DiamondIntegral.Section4.Proposition318CubeRoots.cubeRoots_finite
+#print axioms DiamondIntegral.Section4.Proposition318CubeRoots.cubeRoots_finite
+#print DiamondIntegral.Section4.Proposition318CubeRoots.cubeRootObject
+#print axioms DiamondIntegral.Section4.Proposition318CubeRoots.cubeRootObject
+#print DiamondIntegral.Section4.Proposition318CubeRoots.cubeRootObject_domain
+#print axioms DiamondIntegral.Section4.Proposition318CubeRoots.cubeRootObject_domain
+#print DiamondIntegral.Section4.Proposition318CubeRoots.proposition_3_18_kernel_nontrivial_of_noncube
+#print axioms DiamondIntegral.Section4.Proposition318CubeRoots.proposition_3_18_kernel_nontrivial_of_noncube
+#print DiamondIntegral.Section4.Section3LinkedRetractionStatements.proposition_4_7_discharged
+#print axioms DiamondIntegral.Section4.Section3LinkedRetractionStatements.proposition_4_7_discharged
+#print DiamondIntegral.Section4.Section3LinkedRetractionStatements.proposition_4_15_discharged
+#print axioms DiamondIntegral.Section4.Section3LinkedRetractionStatements.proposition_4_15_discharged
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.InfinityFree
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.InfinityFree
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.StrictChart
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.StrictChart
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.Generator
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.Generator
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.symbol
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.symbol
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.unit
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.unit
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.product_infinityFree
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.product_infinityFree
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.product
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.product
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.Relation
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.Relation
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.relationIdeal
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.relationIdeal
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.StrictRing
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.StrictRing
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.objectClass
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.objectClass
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.relation_zero
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.relation_zero
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.objectClass_unit
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.objectClass_unit
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.objectClass_product
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.objectClass_product
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.objectClass_iso
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.objectClass_iso
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.objectClass_empty
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.objectClass_empty
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.objectClass_scissor
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.objectClass_scissor
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.Invariant
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.Invariant
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.freeMap
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.freeMap
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.freeMap_symbol
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.freeMap_symbol
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.invariant_relation_zero
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.invariant_relation_zero
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.invariant_ideal_zero
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.invariant_ideal_zero
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.lift
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.lift
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.lift_objectClass
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.lift_objectClass
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.hom_ext
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.hom_ext
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.lift_unique
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.lift_unique
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.toBoundedInvariant
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.toBoundedInvariant
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.toBounded
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.toBounded
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.toBounded_objectClass
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.toBounded_objectClass
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.graph_restrict_definable
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.graph_restrict_definable
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.preimage_definable
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.preimage_definable
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.image_definable
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.image_definable
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.mapIso
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.mapIso
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.patternSet
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.patternSet
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.zeroLocus
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.zeroLocus
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.mem_patternSet_zeroLocus
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.mem_patternSet_zeroLocus
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.pattern_unique
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.pattern_unique
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.patternSet_definable
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.patternSet_definable
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.stripArity
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.stripArity
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.stripIndex
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.stripIndex
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.stripIndex_not_mem
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.stripIndex_not_mem
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.unstrip
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.unstrip
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.unstrip_comp
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.unstrip_comp
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.strip_injOn
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.strip_injOn
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.stripDomain
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.stripDomain
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.stripDomain_cases
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.stripDomain_cases
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.coordIndex
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.coordIndex
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.join_coordIndex
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.join_coordIndex
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.volIndex
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.volIndex
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.comp_volIndex
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.comp_volIndex
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.stripDomain_definable
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.stripDomain_definable
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.strip_coordinate_definable
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.strip_coordinate_definable
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.strip_volume_definable
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.strip_volume_definable
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.strip
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.strip
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.piece
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.piece
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.strip_weight
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.strip_weight
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.stripIso
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.stripIso
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.strip_bounded
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.strip_bounded
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.strip_infinityFree
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.strip_infinityFree
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.Admissible
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.Admissible
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.toStrict
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.toStrict
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.sclass
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.sclass
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.bclass
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.bclass
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.sclass_eq
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.sclass_eq
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.bclass_eq
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.bclass_eq
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.bounded_mono
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.bounded_mono
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.admissible_mono
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.admissible_mono
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.admissible_strip
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.admissible_strip
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.sclass_empty
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.sclass_empty
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.bclass_empty
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.bclass_empty
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.sclass_iso
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.sclass_iso
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.bclass_iso
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.bclass_iso
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.sclass_ofChart
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.sclass_ofChart
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.bclass_ofChart
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.bclass_ofChart
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.toBounded_sclass
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.toBounded_sclass
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.pairs
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.pairs
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.packed_eq
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.packed_eq
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.sigma_image_injective
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.sigma_image_injective
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.scissor_of_pairs
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.scissor_of_pairs
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.pairs_of_scissor
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.pairs_of_scissor
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.weight_congr
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.weight_congr
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.split_scissor
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.split_scissor
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.sclass_add
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.sclass_add
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.bclass_add
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.bclass_add
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.sum_cover
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.sum_cover
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.bclass_pieces
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.bclass_pieces
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.sclass_strip_split
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.sclass_strip_split
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.rho
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.rho
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.rho_empty
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.rho_empty
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.pieceEmptyIso
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.pieceEmptyIso
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.rho_strict
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.rho_strict
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.stripPair
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.stripPair
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.stripPair_injOn
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.stripPair_injOn
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.pairs_strip
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.pairs_strip
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.strip_scissor
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.strip_scissor
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.castArity
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.castArity
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.castArity_packed
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.castArity_packed
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.castArity_bounded
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.castArity_bounded
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.castArity_sum
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.castArity_sum
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.rho_scissor
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.rho_scissor
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.rho_iso
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.rho_iso
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.headPattern
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.headPattern
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.tailPattern
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.tailPattern
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.pattern_product
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.pattern_product
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.patternPair_bijective
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.patternPair_bijective
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.productPiece_mem
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.productPiece_mem
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.productPieceIso
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.productPieceIso
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.strip_product_class
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.strip_product_class
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.rho_product
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.rho_product
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.fromBoundedInvariant
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.fromBoundedInvariant
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.fromBounded
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.fromBounded
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.fromBounded_objectClass
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.fromBounded_objectClass
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.fromBounded_strict
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.fromBounded_strict
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.to_from
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.to_from
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.from_to
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.from_to
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.equivalence
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.equivalence
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.equivalence_objectClass
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.equivalence_objectClass
+#print DiamondIntegral.Section4.RVStrictBoundedComparison.equivalence_symm_objectClass
+#print axioms DiamondIntegral.Section4.RVStrictBoundedComparison.equivalence_symm_objectClass
+#print DiamondIntegral.Section4.Section4LinkedRemarks.boundedRetraction
+#print axioms DiamondIntegral.Section4.Section4LinkedRemarks.boundedRetraction
+#print DiamondIntegral.Section4.Section4LinkedRemarks.geometricRetraction
+#print axioms DiamondIntegral.Section4.Section4LinkedRemarks.geometricRetraction
+#print DiamondIntegral.Section4.Section4LinkedRemarks.diagram_edb_eb_com
+#print axioms DiamondIntegral.Section4.Section4LinkedRemarks.diagram_edb_eb_com
+#print DiamondIntegral.Section4.Section4LinkedRemarks.boundedRetraction_res
+#print axioms DiamondIntegral.Section4.Section4LinkedRemarks.boundedRetraction_res
+#print DiamondIntegral.Section4.Section4LinkedRemarks.boundedRetraction_surjective
+#print axioms DiamondIntegral.Section4.Section4LinkedRemarks.boundedRetraction_surjective
+#print DiamondIntegral.Section4.Section4LinkedRemarks.geometricRetraction_range
+#print axioms DiamondIntegral.Section4.Section4LinkedRemarks.geometricRetraction_range
+#print DiamondIntegral.Section4.Section4LinkedRemarks.normalized_retractions_distinct
+#print axioms DiamondIntegral.Section4.Section4LinkedRemarks.normalized_retractions_distinct
 #print DiamondIntegral.Section2.GammaPiecewiseRationalAffineInput
 #print axioms DiamondIntegral.Section2.GammaPiecewiseRationalAffineInput
 #print DiamondIntegral.Section2.NontrivialDefinableGamma

@@ -95,5 +95,17 @@ def UnaryRelativeMeasuredMatching.precompose (h00 : M ⊨ Axioms.ACVF00)
     rw [H.geometry.precompose_sourceForm α β hα hβ hCommutes h00 ω ω' hω,
       H.geometry.precompose_targetForm α β hα hβ hCommutes h00 σ σ' hσ]
     exact H.rv
+  sourceContractible := by
+    change ∀ p ∈ H.geometry.source.carrier,∀ q ∈ H.geometry.source.carrier,p.2=q.2 →
+      gammaFormExtension ((H.geometry.precompose α β hα hβ hCommutes).sourceForm h00 ω) p=
+        gammaFormExtension ((H.geometry.precompose α β hα hβ hCommutes).sourceForm h00 ω) q
+    rw [H.geometry.precompose_sourceForm α β hα hβ hCommutes h00 ω ω' hω]
+    exact H.sourceContractible
+  targetContractible := by
+    change ∀ p ∈ H.geometry.target.carrier,∀ q ∈ H.geometry.target.carrier,p.2=q.2 →
+      gammaFormExtension ((H.geometry.precompose α β hα hβ hCommutes).targetForm h00 σ) p=
+        gammaFormExtension ((H.geometry.precompose α β hα hβ hCommutes).targetForm h00 σ) q
+    rw [H.geometry.precompose_targetForm α β hα hβ hCommutes h00 σ σ' hσ]
+    exact H.targetContractible
 
 end DiamondIntegral.Section6

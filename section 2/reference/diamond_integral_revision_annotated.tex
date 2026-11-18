@@ -846,7 +846,7 @@ The nonarchimedean Milnor fiber $\mdl X_f$ is closely related to the analytic Mi
 
 The bounded integral $\int^\diamond$ is also used in \cite{FY:Mot-Int-Mil-Fib} to obtain similar results on real motivic Milnor fiber.
 
-In \S~\ref{csndag}, we prove an original-language monomial decomposition for definable RV sets. There we prove two Fubini theorems that are not related to the rest of the paper. The first is  a version of the  tropical motivic Fubini theorem of \cite{Nic:Pay:trop:fub}. In a  simplified form (but of central interest), the second states the following.
+In \S~\ref{csndag}, we prove an original-language monomial decomposition for definable RV sets. There we prove two Fubini theorems that are not related to the rest of the paper. The first is an inflated analogue of the tropical motivic Fubini theorem of \cite{Nic:Pay:trop:fub}. In a  simplified form (but of central interest), the second states the following.
 
 \begin{thm*}
 Let $f :A \fun B$, $f : A' \fun B$ be morphisms of varieties over $\C$. If $\Vol_b([f^{-1}(b)])=\Vol_b([f'^{-1}(b)])$ for all $b\in B$  then $\Vol([A])=\Vol([A'])$. Consequently, if $\Vol_b([f^{-1}(b)])= 0$ for all $b\in B$ then $\Vol([A]) = 0$.
@@ -5303,16 +5303,16 @@ at a generic point $a$ of the corresponding original source disc. The first equa
 Recall that we write $\RV$ to mean the $\RV$-sort without the  element $\infty$, and $\RV_\infty$ otherwise, although quite often the difference is immaterial and it does not matter which set $\RV$ stands for. In the definition below, this difference does matter, in particular, $\RV^{\ccirc}$ denotes the set $\rv(\MM \mi 0)$.
 
 \begin{nota}\label{punc:RVd}
-Recall from Notation~\ref{defn:disc} that the set $\rv(\MM_{\gamma} \mi 0)$ is denoted by $\RV^{\ccirc}_\gamma$. For $\gamma \in \Gamma^+$ and $t \in \gamma^\sharp$, write
+Recall from Notation~\ref{defn:disc} that the set $\rv(\MM_{\gamma} \mi 0)$ is denoted by $\RV^{\ccirc}_\gamma$. For a finite $\gamma \in \Gamma$ with $\gamma \geq 0$ and $t \in \gamma^\sharp$, write
 \[
-\RV^{\ccirc}(t)_\gamma = (\RV^{\ccirc} \mi \RV^{\ccirc}_\gamma) \uplus t;
+\RV^{\ccirc}(t)_\gamma = (\RV^{\ccirc} \mi \RV^{\ccirc}_\gamma) \uplus t = \set{s \in \RV \given 0 < \vrv(s) \leq \gamma} \uplus t.
 \]
-if $\gamma = \infty$ then $\RV^{\ccirc}(t)_\gamma = \RV^{\ccirc}_\infty$ and if  $\gamma = 0$ then $\RV^{\ccirc}(1)_\gamma = 1 \in \RV$.
+The first part is the \memph{shell} and the second the \memph{endpoint}. They carry distinct tags, so for $\gamma > 0$ the endpoint is not identified with the element $t$ of the shell. If $\gamma = 0$ then the shell is empty and $\RV^{\ccirc}(t)_0 = t$ for every $t \in \RV$ with $\vrv(t) = 0$. In all cases $\RV^{\ccirc}(t)_\gamma$ is doubly bounded; in particular, it does not contain $\infty$.
 
 % BEGIN REFEREE INSERTION R118
-\RefereeRemark{118}{Typo; revised}{Zero aperture not fully defined}{%
+\ResolvedRefereeRemark{118}{Typo; revised}{Zero aperture not fully defined}{%
 \textit{Original source line 2433.}\quad The next definition permits any definable $t$ with $\vrv(t)=0$, whereas the zero-aperture convention here specifies only $t=1$. Either set $\RV^{\ccirc}(t)_0=t$ for every such $t$, or require $t=1$ at aperture zero. The singleton notation itself is legitimate under Notation~\ref{indexing}.
-}
+}{Notation~\ref{punc:RVd} now covers every finite $\gamma\geq0$ by one formula, so at $\gamma=0$ the endpoint may be any $t$ with $\vrv(t)=0$. Definition~\ref{defn:blowup:coa} uses bounded aperture functions whose depth-zero endpoints $\tau(u)$ need not be $1$.}
 % END REFEREE INSERTION R118
 \end{nota}
 
@@ -5322,15 +5322,24 @@ if $\gamma = \infty$ then $\RV^{\ccirc}(t)_\gamma = \RV^{\ccirc}_\infty$ and if 
 %\]
 
 \begin{defn}\label{defn:blowup:coa}
-Let $\bm U = (U, f, \omega)$ be an object of $\mRV[k]$, where $k > 0$, such that the function $\pr_{\tilde j} \rest f(U)$ is finite-to-one for some $j \in [k]$. Write $f = (f_1, \ldots, f_k)$. Let $t \in \RV_\infty$ be a definable element with $\tau = \vrv(t)$ nonnegative.  An \memph{elementary annular blowup} of $\bm U$ in the $j$th coordinate of \memph{aperture} $(\tau, t)$ is the triple $\bm U^{\flat} = (U^{\flat}, f^{\flat}, \omega^\flat)$, where $U^{\flat} = U \times \RV^{\ccirc}(t)_{\tau}$ and for every $(u, s) \in U^{\flat}$,
+Let $\bm U = (U, f, \omega)$ be an object of $\mRV[k]$, where $k > 0$, such that the function $\pr_{\tilde j} \rest f(U)$ is finite-to-one for some $j \in [k]$. Write $f = (f_1, \ldots, f_k)$. An \memph{aperture} on $\bm U$ consists of a definable function $\tau : U \fun \RV$ and a definable bound $\Delta \in \Gamma$ such that
+\[
+0 \leq \gamma(u) \coloneqq \vrv(\tau(u)) \leq \Delta \quad \text{for every } u \in U.
+\]
+As in Definition~\ref{defn:special:bijection}, $\RV$ excludes $\infty$ and $\tau$ need not be constant; its whole graph is part of the data, also when its image is infinite. An \memph{elementary annular blowup} of $\bm U$ in the $j$th coordinate of \memph{aperture} $\tau$ is the triple $\bm U^{\flat} = (U^{\flat}, f^{\flat}, \omega^\flat)$, where
+\[
+U^{\flat} = \bigcup_{u \in U} u \times \RV^{\ccirc}(\tau(u))_{\gamma(u)} = \set{(u, s) \given u \in U,\ 0 < \vrv(s) \leq \gamma(u)} \uplus \set{(u, \tau(u)) \given u \in U},
+\]
+the shell and the endpoint graph carrying distinct tags, and for every $(u, s) \in U^{\flat}$,
 \[
 f^{\flat}_{i}(u, s) = f_{i}(u) \text{ for } i \neq j, \quad f^{\flat}_{j}(u, s) = s f_{j}(u), \quad \omega^\flat(u, s) = \omega(u).
 \]
+If $f^\flat(u, s) = r$ then $f_{\tilde j}(u) = r_{\tilde j}$. Since $\pr_{\tilde j} \rest f(U)$ and $f$ are finite-to-one, only finitely many $u$ qualify, and over each of them $f^\flat$ takes the value $r$ at most once on the shell and at most once on the endpoint graph. Thus $f^\flat : U^\flat \fun \RV^k$ is finite-to-one and $\bm U^\flat$ is an object of $\mRV[k]$. A constant aperture $\tau(u) = t$ gives $U^\flat = U \times \RV^{\ccirc}(t)_{\vrv(t)}$. If $\bm U \in \mRV^{\db}[k]$, then $\bm U^\flat$ is the relative annular object $\bm U^{\tau, j}$ of Notation~\ref{relative:annular:ideal}.
 
 % BEGIN REFEREE INSERTION R119
-\RefereeRemark{119}{Error}{Infinite aperture leaves the stated category}{%
+\ResolvedRefereeRemark{119}{Error}{Infinite aperture leaves the stated category}{%
 \textit{Original source line 2445.}\quad Restrict the annular construction used below to $t\in\RV$ and finite $\tau\geq0$. As written, $t=\infty$ is allowed, but $\RV^{\ccirc}(\infty)_\infty=\rv(\MM)$ contains $\infty$; consequently $f^\flat$ takes an $\infty$-value and is not a map into $\RV^k$, as required in Definition~\ref{defn:c:RV:cat}. Its nonzero part also has unbounded valuation, contradicting the next assertion about $\mRV^{\db}[k]$. The infinite-aperture comparison with ordinary blowups should be stated separately, with its different grading convention.
-}
+}{Apertures are now definable $\RV$-valued functions with a finite definable bound, as in Definition~\ref{defn:special:bijection}. Thus $\infty$ cannot occur, $f^\flat$ maps into $\RV^k$, and blowups of doubly bounded objects remain doubly bounded. The comparison with the ordinary blowups of \cite{Yin:int:acvf}, with their different grading, is stated separately in the following remark.}
 % END REFEREE INSERTION R119
 
 Let $\bm V = (V, g, \sigma)$ be another object of $\mRV[k]$ and $C_i \sub V$ finitely many pairwise disjoint definable sets. Each triple
@@ -5347,12 +5356,12 @@ An \memph{annular blowup of length $n$} is a composition of $n$ annular blowups.
 \end{defn}
 
 \begin{rem}
-An elementary annular blowup could be an elementary blowup (see \cite[Definition~6.1]{Yin:int:acvf}) if the aperture is allowed to be $(\infty, \infty)$. If there is an elementary annular blowup of $\bm U$ then, \textit{a posteriori}, $\dim_{\RV}(U) < k$. For any coordinate of $f(U)$, there is at most one elementary blowup of $\bm U$, whereas there could be many annular elementary blowups of $\bm U$. We should have included the coordinate that is blown up as a part of the data. However, in context, either this is
+Infinite apertures are excluded. Formally, the aperture $\infty$ would replace $\RV^{\ccirc}(t)_\gamma$ by $\RV^{\ccirc}_\infty = \rv(\MM)$, and the construction would become an elementary blowup in the sense of \cite[Definition~6.1]{Yin:int:acvf}. Then $f^\flat_j$ takes the value $\infty$ at the endpoint, so that piece lies in $\RV[{\leq}k]$ rather than in $\RV[k]$ (Notation~\ref{0coor}), and the shell has unbounded valuation. This is the different grading convention of \cite{Yin:int:acvf}; the comparison is only heuristic here. If there is an elementary annular blowup of $\bm U$ then, \textit{a posteriori}, $\dim_{\RV}(U) < k$. For any coordinate of $f(U)$, there is at most one elementary blowup of $\bm U$, whereas there could be many annular elementary blowups of $\bm U$. We should have included the coordinate that is blown up as a part of the data. However, in context, either this is
 clear or it does not need to be spelled out, and we shall suppress mention of it for ease of notation.
 \end{rem}
 
 \begin{rem}
-Clearly if $\bm U \in \mRV^{\db}[k]$  then $\bm U^{\flat} \in \mRV^{\db}[k]$ too. We shall only consider annular blowups  in $\mRV^{\db}[k]$ (then, for simplicity, they will just be referred to as blowups). This notion is dual to that of a  special covariant bijection. As a matter of fact, to make this duality precise is essentially what is left to do for the rest of our main construction.
+\label{db:blowup:bound}If $\bm U \in \mRV^{\db}[k]$ then $\bm U^{\flat} \in \mRV^{\db}[k]$ too, because the new coordinate satisfies $0 < \vrv(s) \leq \Delta$. Conversely, for such $\bm U$ the bound $\Delta$ is automatic: by Lemma~\ref{db:to:db}, every definable $\tau : U \fun \RV$ has doubly bounded image, and a bounded definable subset of $\Gamma$ has a definable upper bound. We shall only consider annular blowups  in $\mRV^{\db}[k]$ (then, for simplicity, they will just be referred to as blowups). This notion is dual to that of a  special covariant bijection. As a matter of fact, to make this duality precise is essentially what is left to do for the rest of our main construction.
 \end{rem}
 
 
@@ -5362,15 +5371,27 @@ For the next few lemmas, let $\bm U = (U, f, \omega)$ and $\bm V = (V, g, \sigma
 %and the aperture $\alpha$ of $\bm U^{\flat}$ is no greater than the aperture $\beta$ of  $\bm V^{\flat}$
 
 \begin{lem}\label{elementary:blowups:preserves:iso:vol}
-Suppose that $[\bm U] = [\bm V]$ and $\bm U^{\flat}$, $\bm V^{\flat}$ are elementary blowups of $\bm U$, $\bm V$ in the $k$th coordinate. Then there are  blowups $\bm U^{\flat\flat}$, $\bm V^{\flat\flat}$ of $\bm U^{\flat}$, $\bm V^{\flat}$ of length $1$ such that $[\bm U^{\flat\flat}] = [\bm V^{\flat\flat}]$.
+Suppose that $[\bm U] = [\bm V]$ and $\bm U^{\flat}$, $\bm V^{\flat}$ are elementary blowups of $\bm U$, $\bm V$, in possibly different coordinates. Then there are  blowups $\bm U^{\flat\flat}$, $\bm V^{\flat\flat}$ of $\bm U^{\flat}$, $\bm V^{\flat}$ of length $1$ such that $[\bm U^{\flat\flat}] = [\bm V^{\flat\flat}]$.
 \end{lem}
 \begin{proof}
-Let $(\rho, r)$, $(\tau, t)$ be the apertures of  $\bm U^{\flat}$, $\bm V^{\flat}$, respectively. If $\rho = \tau$ then clearly any morphism $\bm U \fun \bm V$ induces a morphism $\bm U^{\flat} \fun \bm V^{\flat}$. So we may assume $\rho' \coloneqq \tau - \rho > 0$. Choose a definable element $r' \in \rho'^\sharp$. Let $W = U \times r$ and $\bm W$ be the corresponding subobject of $\bm U^{\flat}$. Then it is easy to see that the blowup $\bm U^{\flat\flat}$  of $\bm U^{\flat}$ with locus $\bm W$ and aperture $(\rho', r')$ is isomorphic to $\bm V^{\flat}$.
+Fix an isomorphism $F : \bm U \fun \bm V$. Let $\tau_U$, $\tau_V$ be the apertures of $\bm U^{\flat}$, $\bm V^{\flat}$, in the $j$th and $j'$th coordinates, with depths $\gamma_U = \vrv \circ \tau_U$, $\gamma_V = \vrv \circ \tau_V$ and bounds $\Delta_U$, $\Delta_V$. By \eqref{cond:mg2}, a $\mRV[k]$-morphism is a definable bijection that preserves the \memph{total weight} $\omega + \Sigma \vrv \circ f$; which coordinate carries which factor plays no role, as in \cite[Lemma~6.3]{Yin:int:acvf}. At a point $(u, s)$ of $\bm U^{\flat}$ the total weight is $\omega(u) + \Sigma \vrv(f(u)) + \vrv(s)$, and similarly for $\bm V^{\flat}$.
+
+Put $\tau' = \tau_V \circ F$ and $\gamma' = \gamma_V \circ F$, and partition $U$ into the definable sets
+\[
+U_{\leq} = \set{u \in U \given \gamma_U(u) \leq \gamma'(u)}, \qquad U_{>} = \set{u \in U \given \gamma_U(u) > \gamma'(u)}.
+\]
+Let $\bm W$ be the subobject of $\bm U^{\flat}$ formed by the endpoints $(u, \tau_U(u))$ with $u \in U_{\leq}$. Its structural coordinates are $\tau_U(u) f_j(u)$ in position $j$ and $f_i(u)$ elsewhere. Since $f_{\tilde j}$ is finite-to-one on $U$, the projection $\pr_{\tilde j}$ is finite-to-one on the image of $\bm W$, so $\bm W$ admits elementary blowups in the $j$th coordinate. The function $\rho = \tau'/\tau_U$ on $\bm W$ is an aperture, since $0 \leq \vrv \circ \rho = \gamma' - \gamma_U \leq \Delta_V$. Let $\bm U^{\flat\flat}$ be the blowup of $\bm U^{\flat}$ with locus $\bm W$ and aperture $\rho$. Over $u \in U_{\leq}$ it consists of the old shell, the new shell of parameters $s'$ with $0 < \vrv(s') \leq \gamma'(u) - \gamma_U(u)$, and the new endpoint $\rho(u)$. The map
+\[
+(u, s) \efun (F(u), s), \quad (u, \tau_U(u), s') \efun (F(u), \tau_U(u) s'), \quad (u, \tau_U(u), \rho(u)) \efun (F(u), \tau_V(F(u)))
+\]
+is a definable bijection onto the part of $\bm V^{\flat}$ over $F(U_{\leq})$: the first two pieces fill the shell $0 < \vrv(s) \leq \gamma'(u)$, and the third goes to the endpoint. It preserves total weights, because $\vrv(\tau_U(u) s') = \gamma_U(u) + \vrv(s')$ and the new endpoint has total depth $\gamma_U(u) + \vrv(\rho(u)) = \gamma'(u)$. When $\gamma_U(u) = \gamma'(u)$ the new shell is empty and $\rho(u)$ is an endpoint of valuation $0$, possibly different from $1$; this covers equal depths with different endpoints.
+
+Symmetrically, blow up $\bm V^{\flat}$ at its endpoints over $F(U_{>})$ with the aperture $(\tau_U \circ F^{-1})/\tau_V$, whose depth lies in $(0, \Delta_U]$. This gives $\bm V^{\flat\flat}$ and an isomorphism from its part over $F(U_{>})$ onto the part of $\bm U^{\flat}$ over $U_{>}$. Elsewhere $\bm U^{\flat\flat}$ and $\bm V^{\flat\flat}$ coincide with $\bm U^{\flat}$ and $\bm V^{\flat}$. Both are blowups of length $1$; if one of the loci is empty, the corresponding blowup is the identity, which Definition~\ref{defn:blowup:coa} permits. Gluing the two isomorphisms gives $[\bm U^{\flat\flat}] = [\bm V^{\flat\flat}]$.
 
 % BEGIN REFEREE INSERTION R120
-\RefereeRemark{120}{Clarification; revised}{Explicit common refinement}{%
+\ResolvedRefereeRemark{120}{Clarification; revised}{Explicit common refinement}{%
 \textit{Original source line 2479.}\quad For completeness, the stated equal lengths can be obtained by taking an empty-locus blowup on the $\bm V^\flat$ side; the definition already permits this identity operation. If $\rho=\tau$, take it on both sides. When $\rho<\tau$, take $r'=t/r$. Multiply the second-stage annular parameter by $r$, send its distinguished endpoint to $t$, and use the original isomorphism on $U$. The total valuation in \eqref{cond:mg2} is then preserved. This makes the short common-refinement construction explicit.
-}
+}{The proof now handles variable apertures: the base is split by the pointwise order of the two depths, the endpoint on the shallower side is blown up with the ratio of the two aperture functions, and the new shell parameter is multiplied by the old endpoint. Equal depths with different endpoints give a depth-zero blowup, and an empty locus gives the identity, which provides the length padding.}
 % END REFEREE INSERTION R120
 \end{proof}
 
@@ -5378,16 +5399,16 @@ Let $(\rho, r)$, $(\tau, t)$ be the apertures of  $\bm U^{\flat}$, $\bm V^{\flat
 Let $F : \bm U \fun \bm V$ be a morphism and $\bm U^{\flat}$, $\bm V^{\flat}$ blowups of  $\bm U$, $\bm V$ of length $1$. Then there are blowups $\bm U^{\flat\flat}$, $\bm V^{\flat\flat}$ of $\bm U^{\flat}$, $\bm V^{\flat}$ of length $1$ such that $[\bm U^{\flat\flat}] = [\bm V^{\flat\flat}]$.
 \end{cor}
 \begin{proof}
-Let  $C$, $D$ be the loci of $\bm U^{\flat}$, $\bm V^{\flat}$, respectively. By Lemma~\ref{elementary:blowups:preserves:iso:vol}, we can make the claim hold by restricting the loci of $\bm U^{\flat}$, $\bm V^{\flat}$ to $C \cap F^{-1}(D)$, $F(C) \cap D$. But in the meantime we can also blow up $\bm U^{\flat}$, $\bm V^{\flat}$ at the loci $F^{-1}(D) \mi C$, $F(C) \mi D$ using the apertures induced by those on $D \mi F(C)$, $C \mi F^{-1}(D)$, respectively. Then the resulting compounded blowups of $\bm U^{\flat}$, $\bm V^{\flat}$ of length $1$ are as desired.
+Let $C$, $D$ be the loci of $\bm U^{\flat}$, $\bm V^{\flat}$, given by morphisms $F_i : \bm U_i \fun \bm C_i$, $G_l : \bm V_l \fun \bm D_l$ and elementary blowups $\bm U_i^{\flat}$, $\bm V_l^{\flat}$. Refine $C \cap F^{-1}(D)$ and $F(C) \cap D$ into the finitely many pieces $C_i \cap F^{-1}(D_l)$ and $F(C_i) \cap D_l$. On each piece both blowups restrict to elementary blowups of isomorphic objects, with the restricted apertures and possibly different coordinates. Lemma~\ref{elementary:blowups:preserves:iso:vol} gives blowups of length $1$ of the two restricted pieces with isomorphic results; since these pieces are disjoint summands of $\bm U^{\flat}$, $\bm V^{\flat}$, they are blowups of $\bm U^{\flat}$, $\bm V^{\flat}$. In the meantime, blow up $\bm U^{\flat}$ at the locus $F^{-1}(D) \mi C$, which is still a subobject of $\bm U^{\flat}$, via the morphisms $F^{-1} \circ G_l$ and the same elementary blowups $\bm V_l^{\flat}$, restricted. Symmetrically, blow up $\bm V^{\flat}$ at the locus $F(C) \mi D$ via $F \circ F_i$ and $\bm U_i^{\flat}$. These pieces then agree on the two sides, and $F$ matches the parts outside all loci. Thus the resulting compounded blowups of $\bm U^{\flat}$, $\bm V^{\flat}$ of length $1$ are as desired.
 \end{proof}
 
 
-This corollary also holds in $\RV[k]$, which is essentially the only thing that the otherwise formal proof of \cite[Lemma~6.5]{Yin:special:trans} depends on. Thus, the same proof yields the following analogue in the present context:
+This corollary also holds in $\RV[k]$, which is essentially the only thing that the otherwise formal proof of \cite[Lemma~6.5]{Yin:int:acvf} depends on. Thus, the same proof yields the following analogue in the present context:
 
 % BEGIN REFEREE INSERTION R121
-\RefereeRemark{121}{Typo}{Wrong cited paper}{%
+\ResolvedRefereeRemark{121}{Typo}{Wrong cited paper}{%
 \textit{Original source line 2490.}\quad Replace \texttt{Yin:special:trans} by \texttt{Yin:int:acvf} in this citation: the common-refinement result is Lemma~6.5 of \emph{Integration in algebraically closed valued fields} (2011). Section~6 of \emph{Special transformations} concerns elimination of field quantifiers. This issue from the supplied human report is still present.
-}
+}{The citation now refers to \cite[Lemma~6.5]{Yin:int:acvf}, the common-refinement result.}
 % END REFEREE INSERTION R121
 
 \begin{lem}\label{blowup:equi:class:coa}
@@ -5409,23 +5430,23 @@ We will just write $\mispdb$ for all these sets when there is no danger of confu
 $\mispdb[k]$ is a semigroup congruence relation and $\mispdb[*]$ is a semiring congruence relation.
 \end{lem}
 \begin{proof}
-This is an easy consequence of Lemma~\ref{blowup:equi:class:coa} (the proof of \cite[Lemma~6.8]{Yin:special:trans}, which uses \cite[Lemma~6.5]{Yin:special:trans}, contains more details).
+This is an easy consequence of Lemma~\ref{blowup:equi:class:coa} (the proof of \cite[Lemma~6.8]{Yin:int:acvf}, which uses \cite[Lemma~6.5]{Yin:int:acvf}, contains more details).
 
 % BEGIN REFEREE INSERTION R122
-\RefereeRemark{122}{Typo}{Same bibliographic correction}{%
+\ResolvedRefereeRemark{122}{Typo}{Same bibliographic correction}{%
 \textit{Original source line 2511.}\quad Both references in this sentence should again use \texttt{Yin:int:acvf}; its Lemmas~6.8 and~6.5 are the congruence and common-refinement results being used.
-}
+}{Both citations now refer to Lemmas~6.8 and~6.5 of \cite{Yin:int:acvf}.}
 % END REFEREE INSERTION R122
 \end{proof}
 
 
 
-Let  $T$ be a special covariant bijection on $\bb L (U,f)$. Denote the object $(\mathbb{L} (U,f)^\flat_{\RV})_{\leq k} \in \RV^{\db}[k]$ by $(U_{T})_{\leq k}$ and  the object $(U_{T}, \omega_T)_{\leq k} \in \mRV^{\db}[k]$ by $\bm U_{T}$, where $\omega_T : U_{T} \fun \RV$ is the volume form induced by $\omega$.
+Let  $T$ be a special covariant bijection on $\bb L (U,f)$. Denote the object $(\mathbb{L} (U,f)^\flat_{\RV})_{\leq k} \in \RV^{\db}[k]$ by $(U_{T})_{\leq k}$ and  the object $(U_{T}, \omega_T)_{\leq k} \in \mRV^{\db}[k]$ by $\bm U_{T}$, where $\omega_T : U_{T} \fun \Gamma$ is the volume form induced by $\omega$.
 
 % BEGIN REFEREE INSERTION R123
-\RefereeRemark{123}{Typo}{Wrong codomain for the volume form}{%
+\ResolvedRefereeRemark{123}{Typo}{Wrong codomain for the volume form}{%
 \textit{Original source line 2516.}\quad Replace $\omega_T:U_T\longrightarrow\RV$ by $\omega_T:U_T\longrightarrow\Gamma$. Throughout this paper the volume forms are $\Gamma$-valued; see Definition~\ref{defn:RV:mu}.
-}
+}{The induced volume form is $\Gamma$-valued, as in Definition~\ref{defn:RV:mu}.}
 % END REFEREE INSERTION R123
 
 
@@ -5433,12 +5454,16 @@ Let  $T$ be a special covariant bijection on $\bb L (U,f)$. Denote the object $(
 The object $\bm U_T$ is isomorphic to a blowup of $\bm U$ of the same length as $T$.
 \end{lem}
 \begin{proof}
-By induction on the length $\lh (T)$ of $T$ and Lemma~\ref{blowup:equi:class:coa}, this is immediately reduced to the case $\lh (T) = 1$. Without loss of generality, we may assume that the locus of $T$ is indeed $\mathbb{L} (U,f)$. Then it is clear how to construct an (elementary) blowup of $\bm U$ as desired, using the aperture provided by $T$.
+By induction on the length $\lh (T)$ of $T$ and Lemma~\ref{blowup:equi:class:coa}, this is immediately reduced to the case $\lh (T) = 1$; regularizations only add redundant leading-term labels and do not change $\bm U_T$ up to isomorphism. The locus of $T$ is an $\RV$-pullback in $\bb L(U, f)$, hence of the form $\bb L(U_C, f \rest U_C)$ for a subobject $\bm U_C$ of $\bm U$, and $T$ is the identity off it. So $\bm U_T$ is $(\bm U \mi \bm U_C) \uplus (\bm U_C)_T$, and we may assume that the locus is $\bb L(U, f)$.
+
+Let $j$ be the coordinate changed by $T$, $\lambda$ its focus and $(\tau, \Delta)$ its aperture. Since $\bb L(U, f)$ is regularized, the retained label of the polydisc $f(u)^\sharp \times u$ is $u$, so $\tau$ is a function on $U$. We first check that $\pr_{\tilde j} \rest f(U)$ is finite-to-one, as Definition~\ref{defn:blowup:coa} requires. Fix $r \in \pr_{\tilde j}(f(U))$ and a $\VF$-tuple $a \in r^\sharp$. For every $u$ with $f_{\tilde j}(u) = r$, the focus is defined at $(a, u)$ and $\rv(\lambda(a, u)) = f_j(u)$. By Lemma~\ref{dcl:to:ac}, applied to one $\RV$-coordinate of $u$ at a time, each value $\lambda(a, u)$ is algebraic over $a$. So the $a$-definable set of these values is finite, by compactness, and only finitely many values $f_j(u)$ lie over $r$.
+
+Now fix $u \in U$ and $a \in f_{\tilde j}(u)^\sharp$, and let $x$ range over $f_j(u)^\sharp$. Then $\vv(x - \lambda(a, u)) > \vrv(f_j(u))$, and the cutoff of \eqref{centri} is $\vrv(f_j(u)) + \gamma(u)$. On the first branch $\rv(x - \lambda(a, u)) = s f_j(u)$ with $0 < \vrv(s) \leq \gamma(u)$, and every such $s$ occurs; the core goes to the tagged endpoint $\tau(u) f_j(u)$. The other leading terms remain $f_{\tilde j}(u)$ and the label $u$ is retained. Hence $(u, s) \efun (u, s f_j(u))$, with the tags retained, is an isomorphism from the elementary blowup $\bm U^\flat$ of $\bm U$ in the $j$th coordinate of aperture $\tau$ onto $\bm U_T$: the structural coordinates agree, both forms are $\omega(u)$, and the bound $\Delta$ of $T$ is the bound required in Definition~\ref{defn:blowup:coa}.
 
 % BEGIN REFEREE INSERTION R171
-\RefereeRemark{171}{Clarification; new}{Why the proposed elementary blowup is allowed}{%
+\ResolvedRefereeRemark{171}{Clarification; new}{Why the proposed elementary blowup is allowed}{%
 \textit{Original source line 2523.}\quad The required finite-to-one projection condition has a short verification worth inserting. Suppose the focus is in coordinate $j$, fix $r\in f(U)_{\tilde j}$ and a representative $a\in r^\sharp$, and vary $u$ with $f_{\tilde j}(u)=r$. The focus gives a definable function $u\mapsto\lambda(a,u)$ from an $\RV$-set into $\VF$, so its image is finite. Since $\rv(\lambda(a,u))=f_j(u)$, there are only finitely many possible $f_j(u)$ over $r$. Thus $\pr_{\tilde j}\rest f(U)$ is finite-to-one, exactly as required by Definition~\ref{defn:blowup:coa}. The annular parameter is then the translated leading term divided by $f_j(u)$, with the distinguished endpoint retaining its extra tag.
-}
+}{The finite-to-one condition is verified in the proof: for a $\VF$-representative $a$ of the inactive leading terms, $u\mapsto\lambda(a,u)$ has finite image by Lemma~\ref{dcl:to:ac}, and its leading terms are the possible $f_j(u)$. The aperture of $T$, a function of the retained label $u$, is the aperture of the blowup, and the shell parameter is the translated leading term divided by $f_j(u)$.}
 % END REFEREE INSERTION R171
 \end{proof}
 
@@ -5448,12 +5473,28 @@ By induction on the length $\lh (T)$ of $T$ and Lemma~\ref{blowup:equi:class:coa
 Let $\bm U^{\flat}$ be a blowup of $\bm U$. Then $\mL \bm U^{\flat}$ is isomorphic to $\mL \bm U$ in $\mVF^{\diamond}[k]$.
 \end{lem}
 \begin{proof}
-By induction on the length $l$ of $\bm U^{\flat}$, this is immediately reduced to the case $l=1$. We may assume that $\bm U^{\flat}$ is an elementary blowup in the first coordinate. Let $(\tau, t)$ be the aperture of $\bm U^{\flat}$. Fix a definable point $c \in t^\sharp$. For $u \in U$ and $a \in  f(u)_{\tilde 1}^\sharp$, every $\RV$-disc in $f(u)_{1}^\sharp$ contains an $a$-algebraic point $b_a$; moreover, by Lemma~\ref{RVlift}, these points may be chosen uniformly via a partially differentiable finitary function. Thus, there is a continuous (fiberwise) additive translation, with respect to the points $b_a$ and $b_a - c b_a$, between the two sets in question, which is a $\mVF^{\diamond}[k]$-morphism by Lemmas~\ref{conti:covar} and \ref{conv:unif}.
+By induction on the length of $\bm U^{\flat}$, it suffices to treat a blowup of length $1$. If its locus $\bm C = \bigcup_i \bm C_i$ is given by morphisms $F_i : \bm U_i \fun \bm C_i$ and elementary blowups $\bm U_i^\flat$, then $\mL \bm U^\flat$ is the disjoint union of $\mL(\bm U \mi \bm C)$ and the $\mL \bm U_i^\flat$, while Lemma~\ref{L:measure:class:lift} lifts each $F_i$ to a $\mVF^\diamond[k]$-morphism $\mL \bm U_i \fun \mL \bm C_i$. So it suffices to treat an elementary blowup $\bm U^\flat$, say in the $j$th coordinate with aperture $\tau$.
+
+A point of $\tau(u)^\sharp$ cannot be chosen definably in $u$ alone, so the centres are chosen over the inactive $\VF$-input. The definable function
+\[
+r \efun \set{(f_j(u), \tau(u) f_j(u)) \given f_{\tilde j}(u) = r}
+\]
+on $\pr_{\tilde j}(f(U))$ is finitary, because $\pr_{\tilde j} \rest f(U)$ and $f$ are finite-to-one. By Lemma~\ref{RVlift}, in its continuous-branch form, it lifts to continuous, partially differentiable centre functions: for $u \in U$ and $a \in f_{\tilde j}(u)^\sharp$ we obtain $b_0(a, u) \in f_j(u)^\sharp$ and $b_1(a, u) \in (\tau(u) f_j(u))^\sharp$, continuous in $a$. For $x \in f_j(u)^\sharp$ put
+\[
+\Phi(x, a, u) =
+\begin{cases}
+(x - b_0(a, u), a, u, s), & \vv(x - b_0(a, u)) \leq \vv(b_1(a, u)),\\
+(x - b_0(a, u) + b_1(a, u), a, u, \tau(u)), & \vv(x - b_0(a, u)) > \vv(b_1(a, u)),
+\end{cases}
+\]
+where $s = \rv(x - b_0(a, u)) / f_j(u)$ on the first branch, and the two branches carry the tags of the shell and of the endpoint. Since $\vv(x - b_0(a, u)) > \vrv(f_j(u))$ and $\vv(b_1(a, u)) = \vrv(f_j(u)) + \gamma(u)$, the first branch maps onto the part of $\mL \bm U^\flat$ over the shell, where $0 < \vrv(s) \leq \gamma(u)$, and the second maps onto $b_1(a, u) + \MM_{\vv(b_1(a, u))} = (\tau(u) f_j(u))^\sharp$. At depth zero only the second branch occurs. The inverse adds $b_0$, and also subtracts $b_1$ on the second branch.
+
+On a fixed label the branch condition is clopen, because $\vv(b_1(a, u))$ is constant there, and each branch is a translation in the $j$th coordinate by a continuous function of $a$. Thus $\Phi$ is a relatively unary continuous bijection whose graph fibers have open domains and ranges, and Lemmas~\ref{conti:covar} and~\ref{conv:unif} show that it is a proper covariant homeomorphism. Where $b_0$ and $b_1$ are totally differentiable, its total derivative is triangular with diagonal entries $1$; as in Lemma~\ref{spec:inve}, the exceptional set has $\VF$-dimension less than $k$. Both forms are $\omega(u)$, so $\Phi$ is a $\mVF^\diamond[k]$-morphism $\mL \bm U \fun \mL \bm U^\flat$. For a constant aperture $t = \rv(c)$ one may take $b_1 = c b_0$, which recovers the original translation.
 
 % BEGIN REFEREE INSERTION R124
-\RefereeRemark{124}{Clarification; revised}{Specify the lift and its tags}{%
+\ResolvedRefereeRemark{124}{Clarification; revised}{Specify the lift and its tags}{%
 \textit{Original source line 2532.}\quad Write the chosen center as $b=b(a,u)\in f_1(u)^\sharp$; the phrase ``every $\RV$-disc in $f(u)_1^\sharp$'' should simply refer to this disc. The lift can be written explicitly: send $x$ to $x-b$ when $\vv(x-b)\leq\vv(b)+\tau$, and to $x-b+cb$ otherwise. The latter branch fills the extra copy of $(tf_1(u))^\sharp$; retain the two tags as already stipulated in Definition~\ref{defn:special:bijection}. On each branch this is a triangular translation of Jacobian $1$. To justify the asserted continuity, use the strengthened version of Lemma~\ref{RVlift} with continuous as well as partially differentiable center branches (see the remark at that lemma). This supplies the input needed for Lemmas~\ref{conti:covar} and~\ref{conv:unif}.
-}
+}{The proof now uses actual centres $b_0(a,u)$, $b_1(a,u)$ with leading terms $f_j(u)$ and $\tau(u)f_j(u)$, obtained from the continuous-branch form of Lemma~\ref{RVlift} over the full inactive $\VF$-input; no definable point of $\tau(u)^\sharp$ is chosen. The two tagged branches, the inverse, the image, the almost-everywhere unit Jacobian and the reduction from a general locus are explicit.}
 % END REFEREE INSERTION R124
 \end{proof}
 
@@ -5480,16 +5521,36 @@ Let $\hat T_{\sigma}$, $\hat R_{\sigma}$ be standard contractions of $\bm A'$, $
 Note that condition (\ref{condi:fiber}) makes sense only  over the substructure $\mathbb{S} \la a \ra$.
 
 \begin{proof}
-By induction on $n$, this is immediately reduced to the case $n=1$. So assume $A \sub \VF$. Using Proposition~\ref{simplex:with:hole:rvproduct} and FMT, we can construct a special covariant bijection $F : A \fun A^\sharp$, as in the proof of \cite[Lemma~6.14]{Yin:int:acvf}, such that for all $\RV$-polydisc $\gp \sub A^{\sharp}$ and all $a_1, a_2 \in F^{-1}(\gp)$,
+If $n = 0$ there is nothing to prove. Suppose $n > 1$ and put $i = \sigma(1)$. For $b \in \pr_{\tilde i}(A)$, the restrictions of $T_{\sigma(1)}$, $R_{\sigma(1)}$ to the fibers $\bm A'_b$, $\bm A''_b$ are standard contractions of these objects over $\mathbb S \la b \ra$, which is again $\VF$-generated, and (\ref{condi:fiber}) holds for them. So the case $n = 1$, applied over $\mathbb S \la b \ra$, gives
+\[
+([\hat T_{\sigma(1)}(\bm A')_b]_{\leq 1+k}, [\hat R_{\sigma(1)}(\bm A'')_b]_{\leq 1+k}) \in \mispdb
+\]
+for every such $b$. The remaining stages of $\hat T_\sigma$, $\hat R_\sigma$ are standard contractions of $\hat T_{\sigma(1)}(\bm A')$, $\hat R_{\sigma(1)}(\bm A'')$, which have $n-1$ $\VF$-coordinates, and the inductive hypothesis with head start $k+1$ gives the claim.
+
+So let $n = 1$ and $A \sub \VF$. We follow the proof of \cite[Lemma~6.14]{Yin:int:acvf} (the proof of \cite[Lemma~5.36]{Yin:tcon:I} is formally the same and has more details), and spell out the uniformity of the witnesses, which is the additional point in the present setting.
+
+\emph{Uniform witnesses.} For $a \in A$, a witness for (\ref{condi:fiber}) consists of two finite chains of blowups of $(A'_a, \omega')_{\leq k}$ and $(A''_a, \omega'')_{\leq k}$, with all their loci, source objects and morphisms, coordinates, aperture graphs and bounds and intermediate objects, together with a final isomorphism and its inverse; all of these are $\mathbb S \la a \ra$-definable. Fix a finite tuple of formulas with parameter $a$ and explicit bounds on the sizes of the fibers in the finite-to-one conditions. Being a witness is then a first-order condition on $a$; $\Gamma$-valued forms and bounds are encoded by their whole $\vrv$-fibers, so no representative is named. By compactness, finitely many such codes cover $A$. Let $D_a$ be the witness given by the first valid code, packed with distinct finite tags into one definable row $D \sub A \times \RV^l$, with shorter chains padded by blowups with empty locus.
+
+\emph{Freezing.} Apply the preparation in the proof of Proposition~\ref{simplex:with:hole:rvproduct} to $A$, against its $\RV$-hull, and to the complete data
+\[
+a \efun (D_a, A'_a, A''_a, \omega' \rest A'_a, \omega'' \rest A''_a).
+\]
+Lemma~\ref{special:bi:term:constant} gives a special bijection on $A$ along which the whole membership formula is $\rv$-contractible, no bound on $D$ being required, and FMT on finitely many open discs of a common invariance radius $\delta$ of $\bm A'$, $\bm A''$ and their form levels turns it into a special covariant bijection $F : A \fun A^\sharp$. On a frozen disc $\ga$ with chosen point $a_\ga$, replace the whole witness by $D_{a_\ga}$. For $a \in \ga$, $\delta$-invariance gives $A'_a = A'_{a_\ga}$, $A''_a = A''_{a_\ga}$ and the same forms, so $D_{a_\ga}$ is a witness at $a$ as well; no locus, aperture or comparison map is selected independently of the others. Consequently, for every $\RV$-polydisc $\gp \sub A^\sharp$, the complete row $D_a$, the fibers $A'_a$, $A''_a$ and the forms do not depend on $a \in F^{-1}(\gp)$. In particular, for all $a_1, a_2 \in F^{-1}(\gp)$,
 \[
 \omega' \rest A'_{a_1} = \omega' \rest A'_{a_2} \dand \omega'' \rest A''_{a_1} = \omega'' \rest A''_{a_2}.
 \]
-Therefore, using Lemma~\ref{kernel:dim:1:coa} in place of \cite[Corollary~6.11]{Yin:int:acvf}, that proof goes through here with virtually no changes, and the additional computations involving $\jcb_{\Gamma}$ are all straightforward. (Also consult the proof of \cite[Lemma~5.36]{Yin:tcon:I}, which is in a different environment but is formally the same and is  written down with more details.)
+
+\emph{Descent.} Let $\hat F'$, $\hat F''$ be the standard contractions of $\bm A'$, $\bm A''$ induced by $F$; for each $\RV$-tuple $x$, the set $F(\set{a \given x \in A'_a})$ is a union of polydiscs $\gp$ and hence an $\RV$-pullback, and similarly for $\bm A''$. The row over $\gp$ is definable from the $\RV$-code of $\gp$ and the retained tags, so the loci, aperture graphs, intermediate objects and isomorphisms glue over these codes into $\mathbb S$-definable data. Validity descends: totality, functionality, the inverse identities and the finite-to-one conditions hold fiberwise, and the added coordinate $\rv(F(a))$ is the same on both sides and adds the same weight, so the total weights still match. Every glued intermediate object is a blowup of a doubly bounded object and hence doubly bounded, so each glued aperture function has a definable bound by Remark~\ref{db:blowup:bound}; no bound uniform in the original parameter $a$ is assumed. Thus
+\[
+([\hat F'(\bm A')]_{\leq 1+k}, [\hat F''(\bm A'')]_{\leq 1+k}) \in \mispdb.
+\]
+
+\emph{Comparison.} It remains to compare $\hat T_\sigma$ with $\hat F'$, and $\hat R_\sigma$ with $\hat F''$. The bijection $F \circ T_\sigma^{-1}$ between $T_\sigma(A')$ and $F(A')$ is relatively unary in the $\VF$-coordinate and retains the head $\RV$-coordinates as labels. Lemma~\ref{simul:special:dim:1}, whose proof allows arbitrary bounded retained $\RV$-fibers, gives special covariant bijections on both sides whose contractions are matched by a $\mRV^{\db}[1+k]$-morphism. By Lemma~\ref{special:to:blowup:coa}, applied in this $\VF$-coordinate (its proof only uses the coordinate being changed), these contractions are isomorphic to blowups of $\hat T_\sigma(\bm A')_{\leq 1+k}$ and $\hat F'(\bm A')_{\leq 1+k}$. This is the argument of Lemma~\ref{kernel:dim:1:coa}, used in place of \cite[Corollary~6.11]{Yin:int:acvf}. Hence $\hat T_\sigma(\bm A')$ and $\hat F'(\bm A')$ are $\mispdb$-congruent, and similarly on the other side. The lemma follows by Lemma~\ref{isp:congruence:vol}.
 
 % BEGIN REFEREE INSERTION R125
-\RefereeRemark{125}{Gap; revised}{Verify the bounded version of witness constancy}{%
+\ResolvedRefereeRemark{125}{Gap; revised}{Verify the bounded version of witness constancy}{%
 \textit{Original source line 2562.}\quad The displayed equalities, read as equalities of functions, already imply equality of the underlying $\RV$-fibers. The cited proof of \cite[Lemma~6.14]{Yin:int:acvf} additionally makes the blowup witnesses constant on each contracted disc. Please explain how its third condition is maintained here: after FMT, the loci, finite apertures, and comparison isomorphisms must be given by data independent of $a\in F^{-1}(\gp)$. This is what lets the fiberwise congruences descend to the contracted $\RV$-parameters. The old proof supplies the strategy, but the proper-covariant, finite-aperture implementation is the point requiring verification.
-}
+}{The proof now constructs uniform witnesses: compactness gives finitely many witness codes, and the complete witness row (loci, structural maps, intermediate objects, aperture graphs and bounds, final isomorphism and inverse) is prepared and frozen as one datum, as in the proof of Proposition~\ref{simplex:with:hole:rvproduct}, with the witness at the chosen point used on each frozen disc. Validity descends to the contracted $\RV$-parameters, where the aperture bounds are supplied by Remark~\ref{db:blowup:bound}. The reduction to one $\VF$-coordinate and the comparison with arbitrary standard contractions are explicit.}
 % END REFEREE INSERTION R125
 \end{proof}
 
@@ -5501,12 +5562,18 @@ Let $\bm A', \bm A'' \in \mVF^{\diamond}[n]$ and suppose that there is a morphis
 \]
 \end{cor}
 \begin{proof}
-Note that, since $F$ is differentiable outside a definable subset of $\VF$-dimension less than $n$, it may not induce a morphism $\bm A'_a \fun \bm A''_a$ for every $a \in \pr_{\tilde i}(A)$. Nevertheless, for all sufficiently large $\delta \in \Gamma^+$, both $A'$ and $\hat T_{\sigma(1)}(A')$ are $\delta$-invariant. This means that for all $a \in \pr_{\tilde i}(A)$ there is a $b \in \pr_{\tilde i}(A)$ such that they are contained in the same open polydisc of radius $\delta$, and $F$ indeed induces a morphism $\bm A'_b \fun \bm A''_b$, and $\hat T_{\sigma(1)}(A')_a = \hat T_{\sigma(1)}(A')_b$. Thus, the claim follows immediately from Lemmas~\ref{kernel:dim:1:coa} and \ref{isp:VF:fiberwise:contract}.
+Since $F$ is relatively unary in the $i$th coordinate, $\pr_{\tilde i}(A') = \pr_{\tilde i}(A'')$; call this common base $A$, and for $a \in A$ let $F_a : A'_a \fun A''_a$ be the induced bijection. If $n = 1$ the claim is Lemma~\ref{kernel:dim:1:coa}. Let $E \sub A'$ be the definable set where $F$ is not totally differentiable or its measure identity fails; then $\dim_{\VF}(E) < n$, so $F$ need not induce a morphism $\bm A'_a \fun \bm A''_a$ for every $a \in A$. Call $a \in A$ \memph{good} if $E_a$ is finite. At a good $a$, $F_a$ is a $\mVF^\diamond[1]$-morphism over $\mathbb S \la a \ra$: it is a fiber of a relatively unary proper covariant homeomorphism, and off the finite set $E_a$ its derivative is the Jacobian of $F$. The restrictions of $\hat T_{\sigma(1)}$, $\hat R_{\sigma(1)}$ to the fibers are standard contractions of $\bm A'_a$, $\bm A''_a$, so Lemma~\ref{kernel:dim:1:coa} gives
+\[
+([\hat T_{\sigma(1)}(\bm A')_a]_{\leq 1}, [\hat R_{\sigma(1)}(\bm A'')_a]_{\leq 1}) \in \mispdb \quad \text{over } \mathbb S \la a \ra.
+\]
+The set $B$ of the remaining points of $A$ has $\VF$-dimension at most $n-2$, so it lies in the zero set of a nonzero polynomial $P$ over $\mathbb S$; let $d = \deg P$.
+
+Choose a definable $\delta \in \Gamma$ such that $A'$, $A''$ and the first-stage contractions $\hat T_{\sigma(1)}(\bm A')$, $\hat R_{\sigma(1)}(\bm A'')$, together with their volume forms, are all $\delta$-invariant; invariance of one side alone would not suffice. Since $\Gamma(\mathbb S)$ is nontrivial, there are distinct $c_0, \ldots, c_d \in \VF(\mathbb S)$ with $\vv(c_l) > \delta$. A nonzero polynomial of degree at most $d$ in $n-1$ variables cannot vanish on all of $a + \set{c_0, \ldots, c_d}^{n-1}$. So for each $a \in A$ the lexicographically first point $b$ of this grid outside the zero set of $P$ exists. It is good, lies in $A$ and in the open polydisc of radius $\delta$ about $a$, and belongs to $\dcl(\mathbb S, a)$. By $\delta$-invariance the contracted fibers of both sides at $a$ and at $b$ coincide, forms included. Hence the displayed congruence holds at every $a \in A$, over $\mathbb S \la b \ra \sub \mathbb S \la a \ra$, as condition (\ref{condi:fiber}) requires. Lemma~\ref{isp:VF:fiberwise:contract}, applied to $\hat T_{\sigma(1)}(\bm A')$ and $\hat R_{\sigma(1)}(\bm A'')$ with $n-1$ $\VF$-coordinates and head start $1$, and to the remaining stages of $\hat T_\sigma$, $\hat R_\sigma$, gives the claim.
 
 % BEGIN REFEREE INSERTION R126
-\RefereeRemark{126}{Gap; revised}{Use a common radius on both sides}{%
+\ResolvedRefereeRemark{126}{Gap; revised}{Use a common radius on both sides}{%
 \textit{Original source line 2573.}\quad Here $A$ has not been defined; use the common base $\pr_{\tilde i}(A')=\pr_{\tilde i}(A'')$. Choose $\delta$ for both first-stage contracted pairs, including their induced volume forms, and for $\bm A'$ and $\bm A''$. Let the bad set include failures of differentiability and of the measure identity. The parameters with a positive-dimensional bad unary fiber have dimension at most $n-2$, so every open base polydisc contains a good $b$. The two contracted fibers at $a$ and $b$ then agree on both sides, and the unary kernel lemma applies at $b$. These additions supply the claimed reduction; invariance of the first side alone is insufficient.
-}
+}{The common base is $\pr_{\tilde i}(A')=\pr_{\tilde i}(A'')$. One radius $\delta$ is chosen for both objects and both first-stage contractions with their forms, and the bad set includes failures of differentiability and of the measure identity, so it has dimension at most $n-2$. A good point $b$ in the same $\delta$-polydisc is chosen definably over $a$, from a finite grid that avoids a polynomial vanishing on the bad set, so that the unary witness at $b$ is over $\mathbb S\la a\ra$, as Lemma~\ref{isp:VF:fiberwise:contract} requires.}
 % END REFEREE INSERTION R126
 \end{proof}
 
@@ -5548,21 +5615,21 @@ This internal symmetry of $A$ is illustrated by the following diagram:
 \]
 Since $f$ is $\rv$-affine, we see that its slope must be $-t_2/t_1$.
 
-Let $\tor(\code {\gb_1})$, $\tor(\code {\gb_1})$ denote the sets of the maximal open subdiscs of $\gb_1$, $\gb_1$. These may be viewed as $\K$-torsors and as such  are equipped with much of the structure of $\K$. Then the set $A \cap (\gb_1 \times \gb_2)$ may be thought of as the ``line'' in $\tor(\code {\gb_1}) \times \tor(\code {\gb_2})$ given by the equation
+Let $\tor(\code {\gb_1})$, $\tor(\code {\gb_2})$ denote the sets of the maximal open subdiscs of $\gb_1$, $\gb_2$. These may be viewed as $\K$-torsors and as such  are equipped with much of the structure of $\K$. Then the set $A \cap (\gb_1 \times \gb_2)$ may be thought of as the ``line'' in $\tor(\code {\gb_1}) \times \tor(\code {\gb_2})$ given by the equation
 
 % BEGIN REFEREE INSERTION R127
-\RefereeRemark{127}{Typo}{Repeated ball index}{%
+\ResolvedRefereeRemark{127}{Typo}{Repeated ball index}{%
 \textit{Original source line 2614.}\quad In the opening sentence, the second $\tor(\code{\gb_1})$ should be $\tor(\code{\gb_2})$, and the second $\gb_1$ should likewise be $\gb_2$. The same typographical correction was requested in the supplied human report.
-}
+}{The second index is corrected to $\gb_2$.}
 % END REFEREE INSERTION R127
 \[
-x_2 = - \tfrac{t_2}{t_1}(x_1 - \code{\go_1}) + (\code{\go_2} - t_2).
+x_2 = - \tfrac{t_2}{t_1}(x_1 - \code{\go_1}) + \code{\go_2}.
 \]
 
 % BEGIN REFEREE INSERTION R128
-\RefereeRemark{128}{Error}{Incorrect intercept of the torsor line}{%
+\ResolvedRefereeRemark{128}{Error}{Incorrect intercept of the torsor line}{%
 \textit{Original source line 2617.}\quad The line describing $A$ must pass through $(\code{\go_1},\code{\go_2})$. The displayed formula instead gives $\code{\go_2}-t_2$ at $x_1=\code{\go_1}$. Remove the term $-t_2$: the required equation is $x_2=-(t_2/t_1)(x_1-\code{\go_1})+\code{\go_2}$. The printed equation describes the induced graph of $f$, before translation by $t_2$. For example, when $f=\id$ and $A=\{(x,y):\rv(y-x)=t_2\}$ on a suitable pair of discs, the required residue line is $y=x+t_2$, not the diagonal.
-}
+}{The intercept is corrected: since $A_{a_1}=\go_2$, the line passes through $(\code{\go_1},\code{\go_2})$.}
 % END REFEREE INSERTION R128
 Thus, by Lemma~\ref{simul:special:dim:1}, the obvious bijection between $A_1 \times t_2^\sharp$ and $t_1^\sharp \times A_2$ is the lift of an $\RV^{\db}[2]$-morphism modulo special covariant bijections; see Lemma~\ref{2:unit:contracted} below for details.
 \end{rem}
@@ -5589,21 +5656,27 @@ More generally, a set $A$ with exactly one $\VF$-coordinate is a \memph{$1$-cell
 Let  $A \sub \VF^2$ be a proper invariant set. Then there is a standard contraction $\hat T_\sigma$ of $A$ such that $A_s$ is a $2$-cell for every $s \in \hat T_\sigma(A)$.
 \end{lem}
 \begin{proof}
-This is a variation of  \cite[Lemma~4.8]{Yin:int:acvf}. The proof of the latter proceeds by constructing a positioning function $\epsilon_{(t,s)}$ in each $\VF$-fiber, which heavily relies on the use of standard contractions in the preceding auxiliary results, namely \cite[Lemmas~4.2, 4.4]{Yin:int:acvf}.  It still goes through here, provided that FMT is applied at suitable places to cut out finitely many exceptional open discs in the first coordinate at which the desired properties of $\epsilon_{(t,s)}$ do not hold, as we have done above, say, in the proof of Proposition~\ref{simplex:with:hole:rvproduct}.
+This is a variation of \cite[Lemma~4.8]{Yin:int:acvf}. The proof of the latter proceeds by constructing a positioning function $\epsilon_{(t,s)}$ in each $\VF$-fiber, which heavily relies on the use of standard contractions in the preceding auxiliary results, namely \cite[Lemmas~4.2, 4.4]{Yin:int:acvf}. It still goes through here, provided that FMT is applied at suitable places to cut out finitely many exceptional open discs in the first coordinate at which the desired properties of $\epsilon_{(t,s)}$ do not hold, as in the proof of Proposition~\ref{simplex:with:hole:rvproduct}. The positioning functions so obtained are $\vv$-affine. The following refinement of the final unary stage, in the first coordinate, makes them $\rv$-affine.
+
+Fix a positioning function $\epsilon$, with its labels as parameters. For $x \in \dom(\epsilon)$ and $\beta \in \Gamma$, let $R_\epsilon(x, \beta)$ be the set of $t' \in \RV$ such that $\go(x, \beta) \sub \dom(\epsilon)$ and $\rv(\epsilon(z) - \epsilon(y)) = t' \rv(z - y)$ for all $y, z \in \go(x, \beta)$. If $\epsilon$ is $\rv$-affine on a disc then it is so on every subdisc, with the same slope, and two slopes on concentric discs agree. Hence $R_\epsilon(x, \beta)$ has at most one element, and once nonempty it does not change as $\beta$ increases. Moreover, if $\go \sub \dom(\epsilon)$ is an open disc of radius $\rho$ and $\beta > \rho$, then $\go$ contains an open subdisc of radius $\beta$ on which $\epsilon$ is $\rv$-affine: by saturation, choose such a subdisc that is atomic over the parameters together with $\code \go$ and $\beta$, and apply \cite[Lemma~3.18]{Yin:int:acvf}.
+
+Prepare the relation $\set{(x, \beta, t') \given t' \in R_\epsilon(x, \beta)}$, with its $\Gamma$-coordinate encoded by $\vrv$-fibers, together with the cell data, by the method in the proof of Proposition~\ref{simplex:with:hole:rvproduct}: Lemma~\ref{special:bi:term:constant}, followed by FMT on finitely many open discs of an invariance radius $\delta$ of $A$. On a frozen disc $\ga$ with chosen point $a_\ga$, $\delta$-invariance gives $A \cap (\ga \times \VF) = \ga \times A_{a_\ga}$, a $2$-cell with constant positioning function. Let $D$ be any other prepared disc, of radius $\rho_D$. For each $\beta > \rho_D$, $D$ contains a subdisc $\go(c, \beta)$ on which $\epsilon$ is $\rv$-affine, so $R_\epsilon(c, \beta) \neq \0$. By constancy, $R_\epsilon(x, \beta) = R_\epsilon(c, \beta)$ for all $x \in D$, and the slope does not depend on $\beta$. Any two points $y, z \in D$ lie in $\go(y, \beta)$ for some $\beta$ with $\rho_D < \beta < \vv(z - y)$. So $\epsilon \rest D$ is $\rv$-affine.
+
+The fibers $A_a = t_2^\sharp + \epsilon(a)$ and the paradigms are unchanged, and cells of the first two kinds in Definition~\ref{def:units} remain of the same kind on each $D$. For a balanced cell, if $\rho_D < \vrv(t_1)$ then $a - t_1^\sharp \sub D$ for every $a \in D$, so $\epsilon \rest D$ is still balanced in $A \cap (D \times \VF)$. Otherwise $\rad(\epsilon(D)) = \rho_D + \vrv(t_2) - \vrv(t_1) \geq \vrv(t_2)$, which is the second kind. The refined unary stage is a special covariant bijection, so the result is again a standard contraction of $A$.
 
 % BEGIN REFEREE INSERTION R130
-\RefereeRemark{130}{Gap}{The cited cell lemma has a weaker affine condition}{%
+\ResolvedRefereeRemark{130}{Gap}{The cited cell lemma has a weaker affine condition}{%
 \textit{Original source line 2643.}\quad The cited proof produces a $\vv$-affine positioning function, whereas Definition~\ref{defn:balance} now requires an $\rv$-affine one. The implication is not automatic: for definable $\delta>0$, the bijection of $\MM$ given by $x\mapsto2x$ when $\vv(x)\geq\delta$ and $x\mapsto x$ otherwise preserves all valuations of differences but has no single $\RV$-slope. Please supply the refinement or replacement of the positioning functions that gives the stronger condition, and verify that the fibers, paradigms, and proper covariance are preserved. Identifying the exceptional discs and explaining the FMT modification is necessary here; the older lemma plus the phrase \emph{at suitable places} does not supply this new step. An economical alternative, if only the $\Gamma$-Jacobian computation is used, is to retain the older $\vv$-affine definition and replace the assertions about a single $\RV$-slope and a torsor line by the corresponding valuation-shift statement.
-}
+}{The stronger $\rv$-affine condition is retained and supplied. After the cited construction, the final unary stage is refined by preparing the whole $\rv$-linearity relation of the positioning functions, as in the proof of Proposition~\ref{simplex:with:hole:rvproduct}. Inside each prepared disc, an atomic subdisc of every smaller radius carries an $\rv$-affine restriction by \cite[Lemma~3.18]{Yin:int:acvf}; constancy of the relation transports this to every point, and rigidity of slopes makes the slope common. Frozen exceptional discs give the constant-positioner case, and discs below the paradigm scale give the narrow-image case. Fibers, paradigms and proper covariance are preserved.}
 % END REFEREE INSERTION R130
 \end{proof}
 
-We also remark that Lemma~\ref{decom:into:2:units} holds fiberwise for proper invariant sets $A \sub \VF^n$ with $n \geq 2$, that is, there is a standard contraction $\hat T_\sigma$ of $A$ such that for every $(a, s) \in \hat T_{\sigma(2)}(A)$, $\hat T_{\sigma(2)}^{-1}(a, s)$ is of the form $a \times C$, where $C$ is a $2$-cell. This follows from Lemma~\ref{decom:into:2:units} and the argument in the proof of  Lemma~\ref{exit:stand} (Lemma~\ref{decom:into:2:units} serves as the base case and hence, in the inductive step, we can assume that $\hat T_{\sigma(2)}$ is already as desired fiberwise).
+We also remark that Lemma~\ref{decom:into:2:units} holds fiberwise for proper invariant sets $A \sub \VF^n$ with $n \geq 2$, that is, there is a standard contraction $\hat T_\sigma$ of $A$ such that, writing $P = \hat T_{\sigma(2)} \circ \hat T_{\sigma(1)}$ for the cumulative contraction of the first two coordinates, for every $(a, s) \in P(A)$, $P^{-1}(a, s)$ is of the form $a \times C$, where $C$ is a $2$-cell. This follows from Lemma~\ref{decom:into:2:units} and the argument in the proof of  Lemma~\ref{exit:stand} (Lemma~\ref{decom:into:2:units} serves as the base case and hence, in the inductive step, we can assume that $P$ is already as desired fiberwise).
 
 % BEGIN REFEREE INSERTION R131
-\RefereeRemark{131}{Clarification; revised}{Cumulative-contraction notation}{%
+\ResolvedRefereeRemark{131}{Clarification; revised}{Cumulative-contraction notation}{%
 \textit{Original source line 2646.}\quad For clarity, specify that $\hat T_{\sigma(2)}$ here denotes the cumulative contraction of the first two coordinates. With the stage-map notation of the definition, write $P=\hat T_{\sigma(2)}\circ\hat T_{\sigma(1)}$ and use $P(A)$ and $P^{-1}(a,s)$. This is only a notation clarification.
-}
+}{The cumulative contraction $P=\hat T_{\sigma(2)}\circ\hat T_{\sigma(1)}$ of the first two coordinates is written explicitly.}
 % END REFEREE INSERTION R131
 
 
@@ -5614,12 +5687,18 @@ For the next two lemmas, let $12$, $21$ denote the permutations of $[2]$ and $\b
 Suppose that $A \sub \VF^2$ is a $2$-cell and $\omega$ is constant. Then there are standard contractions $\hat T_{12}$, $\hat R_{21}$ of $\bm A$ such that $[\hat T_{12}(\bm A)]_{\leq 2} = [\hat R_{21}(\bm A)]_{\leq 2}$.
 \end{lem}
 \begin{proof}
-All we need to do is to check that the maps constructed in the proof of  \cite[Lemma~5.7]{Yin:int:acvf} are indeed $\mRV^{\db}[2]$-morphisms. By inspection of that proof, we see that there are two cases: $A$ is a product of two open discs or the positioning function $\epsilon$ in question is balanced in $A$ with nonzero paradigms $t_1$, $t_2$. The first case is obvious since we can simply use the identity map. In the second case,  a morphism between the standard contractions can be easily constructed using  $\epsilon$  (we could also cite Lemma~\ref{simul:special:dim:1}, but the situation here is much simpler), and  the requirement on $\jcb_{\Gamma}$ is satisfied since the slope of the $\rv$-affine function $\epsilon$ is $-t_2/t_1$ (see the last paragraph of Remark~\ref{2cell:linear} for further explanation).
+We check that the maps in the proof of \cite[Lemma~5.7]{Yin:int:acvf} give morphisms in $\mRV^{\db}[2]$. By Definition~\ref{def:units}, either $A$ is a product $A_1 \times (t^\sharp + c)$, or the positioning function $\epsilon$ is balanced in $A$ with paradigms $t_1, t_2 \in \RV$. The first alternative covers a constant positioning function, and also the second kind of $2$-cell, since $\rad(\epsilon(A_1)) \geq \vrv(t)$ makes $t^\sharp + \epsilon(a)$ independent of $a$. In that case contract each factor by the same unary special covariant bijections in either order; the two results differ only by the order of the coordinates, which preserves total weights, so the identity map is the required isomorphism.
+
+In the balanced case put $\gamma = \vrv(t_2) - \vrv(t_1)$, the shift of $\epsilon$. Since $\epsilon^{-1}(A_a) = a - t_1^\sharp$, the fiber of $A$ over $y \in A_2$ in the second coordinate is $\epsilon^{-1}(y) + t_1^\sharp$. For the order $12$ use $(x, y) \efun (x - \epsilon^{-1}(y), y)$, whose image is $t_1^\sharp \times A_2$; for the order $21$ use $(x, y) \efun (x, y - \epsilon(x))$, whose image is $A_1 \times t_2^\sharp$. These are centripetal transformations whose foci lie in the $\RV$-disc of the changed coordinate. The translated coordinate has the fixed leading term $t_1$, respectively $t_2$, so for an aperture whose cutoff exceeds $\vrv(t_1)$, respectively $\vrv(t_2)$, the core clause never occurs. Off a finite set, $\epsilon$ is differentiable with $\vv(\ddx \epsilon) = \gamma$, so $\epsilon : (A_1, 0) \fun (A_2, -\gamma)$ is a $\mVF^\diamond[1]$-morphism. Lemma~\ref{simul:special:dim:1} gives special covariant bijections $T_{A_1}$, $T_{A_2}$ on $A_1$, $A_2$ and a $\mRV^{\db}[1]$-morphism $\psi : \rv(T_{A_1}(A_1)) \fun \rv(T_{A_2}(A_2))$; thus $\jcb_\Gamma \psi = \gamma$. Complete the first translation by $T_{A_2}$ in the second coordinate and the second translation by $T_{A_1}$ in the first coordinate. This gives standard contractions with
+\[
+\hat T_{12}(A) = t_1 \times \rv(T_{A_2}(A_2)), \qquad \hat R_{21}(A) = \rv(T_{A_1}(A_1)) \times t_2,
+\]
+both with the constant form. The map $(u, t_2) \efun (t_1, \psi(u))$, keeping all auxiliary tags, has $\Gamma$-Jacobian $\gamma + \vrv(t_1) - \vrv(t_2) = 0$, so it is the required isomorphism. Only the shift $\gamma$ is used; it is the valuation of the slope $-t_2/t_1$ of $\epsilon$ (see the last paragraph of Remark~\ref{2cell:linear}).
 
 % BEGIN REFEREE INSERTION R132
-\RefereeRemark{132}{Clarification; revised}{Explicit balanced-cell comparison}{%
+\ResolvedRefereeRemark{132}{Clarification; revised}{Explicit balanced-cell comparison}{%
 \textit{Original source line 2656.}\quad Here is an explicit completion of the Jacobian check. Put $\gamma=\vrv(t_2)-\vrv(t_1)$. For order $12$, first use $(x,y)\mapsto(x-\epsilon^{-1}(y),y)$, whose image is $t_1^\sharp\times A_2$; for order $21$, use $(x,y)\mapsto(x,y-\epsilon(x))$, whose image is $A_1\times t_2^\sharp$. The translated coordinates have the fixed leading terms $t_1,t_2$, so finite apertures chosen strictly beyond their radii make the exceptional CT clause unnecessary on these sets. Apply Lemma~\ref{simul:special:dim:1} to $\epsilon$ with constant volume forms $0$ on $A_1$ and $-\gamma$ on $A_2$. It gives compatible unary contractions and an $\RV$-map $\psi$ with $\jcb_\Gamma\psi=\gamma$. Keeping all auxiliary tags, the map $(u,t_2)\mapsto(t_1,\psi(u))$ between the product contractions has $\Gamma$-Jacobian $\gamma+\vrv(t_1)-\vrv(t_2)=0$. This proves the desired measure comparison, conditional on that unary lemma. The same calculation uses only the valuation-affine shift, so it also supports the weaker-definition alternative mentioned above.
-}
+}{The balanced-cell comparison is now explicit, as proposed: the triangular translations by $\epsilon^{-1}$ and $\epsilon$ give $t_1^\sharp\times A_2$ and $A_1\times t_2^\sharp$ with empty core clauses, Lemma~\ref{simul:special:dim:1} applied to $\epsilon$ with forms $0$ and $-\gamma$ gives $\psi$ with $\jcb_\Gamma\psi=\gamma$, and $(u,t_2)\mapsto(t_1,\psi(u))$ has $\Gamma$-Jacobian $0$. The product cases use the identity.}
 % END REFEREE INSERTION R132
 \end{proof}
 
@@ -5627,12 +5706,18 @@ All we need to do is to check that the maps constructed in the proof of  \cite[L
 There are a morphism $\bm A \fun \bm A^*$, relatively unary in both coordinates, and two standard contractions $\hat T_{12}$, $\hat R_{21}$ of $\bm A^*$ such that $[\hat T_{12}(\bm A^*)]_{\leq 2} = [\hat R_{21}(\bm A^*)]_{\leq 2}$.
 \end{lem}
 \begin{proof}
-This follows from  Lemmas~\ref{decom:into:2:units}, \ref{2:unit:contracted}, and compactness (see the proof of \cite[Corollary~5.8]{Yin:int:acvf} for a bit more details).
+First prepare the form. By Lemma~\ref{L:measure:surjective} and Remark~\ref{cons:extra}, there is a special covariant bijection $T$ on $A$ such that $\omega \circ T^{-1}$ is $\rv$-contractible; so $\omega = \pi \circ \theta$, where $\theta(a)$ records all the $\RV$-coordinates of $T(a)$. Apply Lemma~\ref{decom:into:2:units} to the graph of $\theta$, with these $\RV$-coordinates retained as labels; its proof is uniform in such labels. We obtain a standard contraction $\hat T_\sigma$ whose fibers are $2$-cells on which $\theta$, and hence $\omega$, is constant. Let $c(a)$ be the $\RV$-tuple consisting of $\theta(a)$ and $\hat T_\sigma(a, \theta(a))$, and put
+\[
+A^* = \set{(a, c(a)) \given a \in A}, \qquad \omega^*(a, c(a)) = \omega(a).
+\]
+The map $c$ is the $\RV$-projection of proper covariant homeomorphisms, so it is locally constant, its fibers are proper invariant and its range is doubly bounded. As for the grafting map in the proof of Lemma~\ref{exit:stand}, the map $a \efun (a, c(a))$ and its inverse projection are proper covariant homeomorphisms whose $\VF$-maps are identities on each fiber of $c$. Hence $\bm A \fun \bm A^* = (A^*, \omega^*)$ is a morphism, relatively unary in both coordinates.
+
+For each $s \in c(A)$, the fiber $A^*_s$ is a $2$-cell on which $\omega^*$ is constant. The constructions in the proof of Lemma~\ref{2:unit:contracted}, namely the translations by $\epsilon_s^{-1}$ and $\epsilon_s$ and Lemma~\ref{simul:special:dim:1} applied to the positioning functions with $s$ as a retained label, are uniform in $s$, and the kinds of cells form a definable finite partition of $c(A)$. By compactness, as in the proof of \cite[Corollary~5.8]{Yin:int:acvf}, they glue to standard contractions $\hat T_{12}$, $\hat R_{21}$ of $\bm A^*$ and an isomorphism between $\hat T_{12}(\bm A^*)_{\leq 2}$ and $\hat R_{21}(\bm A^*)_{\leq 2}$.
 
 % BEGIN REFEREE INSERTION R133
-\RefereeRemark{133}{Gap; revised}{Apply the available volume-form preparation}{%
+\ResolvedRefereeRemark{133}{Gap; revised}{Apply the available volume-form preparation}{%
 \textit{Original source line 2663.}\quad Please spell out the preparation of $\omega$ and the definition of $\bm A^*$. Lemma~\ref{2:unit:contracted} assumes a constant form on each cell. The preparation tools in Remark~\ref{cons:extra}, Lemma~\ref{L:measure:surjective}, and Remark~\ref{stand:vol} are relevant: arrange proper covariant $\RV$-data through which $\omega$ factors, and carry these data through the cell construction. Then $A^*$ is the graph of the resulting cell-parameter map, with the transported volume form. Verify that these parameters have proper invariant fibers and doubly bounded range, so the parameter-adjoining map and its inverse are proper covariant. This is the additional check needed to turn the cited ordinary cell partition into a morphism in the present category.
-}
+}{The form is prepared first through the $\RV$-data of a special covariant bijection (Lemma~\ref{L:measure:surjective}, Remark~\ref{cons:extra}); these data are retained as labels through the cell decomposition, and $A^*$ is the graph of the resulting cell-parameter map with the transported form. The parameter map is locally constant with proper invariant fibers and doubly bounded range, so adjoining it is a proper covariant morphism, as for the grafting map in Lemma~\ref{exit:stand}. Lemma~\ref{2:unit:contracted} is applied uniformly over the cell parameters.}
 % END REFEREE INSERTION R133
 \end{proof}
 
@@ -5673,46 +5758,49 @@ For $\bm U, \bm V \in \mRV^{\db}[k]$,
 \]
 \end{prop}
 \begin{proof}
-The ``if'' direction simply follows from Lemma~\ref{blowup:same:RV:coa} and
-Corollary~\ref{L:sur:c}.
+For $k = 0$ there are no blowups and $\mL$ is the identity on finite sets, so both conditions say that $\bm U \cong \bm V$.
 
-For the ``only if'' direction, we proceed by induction on $k$. The base case $k = 1$ is of course Lemma~\ref{kernel:dim:1:coa}. For the inductive step, let
+The ``if'' direction simply follows from Lemma~\ref{blowup:same:RV:coa} and Corollary~\ref{L:sur:c}.
+
+For the ``only if'' direction, we first show, by induction on $k \geq 1$, that the class of a standard contraction does not depend on the contraction or its order: if $\bm B \in \mVF^\diamond[k]$ and $\hat T_\sigma$, $\hat T_\tau$ are standard contractions of $\bm B$ for permutations $\sigma$, $\tau$ of $[k]$, then
+\begin{equation*}\tag{$\ast$}
+([\hat T_\sigma(\bm B)]_{\leq k}, [\hat T_\tau(\bm B)]_{\leq k}) \in \mispdb.
+\end{equation*}
+If $\sigma = \tau$ this is Corollary~\ref{contraction:same:perm:isp} for the identity of $\bm B$; this settles $k = 1$. Since $\mispdb$ is transitive and every permutation is a product of adjacent transpositions, it remains to treat the case where $\tau$ is $\sigma$ followed by the transposition of the positions $m$ and $m+1$. For $m = 1$ this is Lemma~\ref{contraction:perm:pair:isp}. Let $m \geq 2$ and $h = \sigma(1) = \tau(1)$. By the case $\sigma = \tau$, and Lemma~\ref{exit:stand} applied after the first stage, we may assume that $\hat T_\sigma$ and $\hat T_\tau$ have the same first stage $T_h$. Its lift $T_h(B)$ is an $\RV$-pullback in the coordinate $h$. For a $\VF$-value $a$ of that coordinate, the fiber $T_h(\bm B)_a$ is an object of $\mVF^\diamond[k-1]$ over $\mathbb S \la a \ra$, which is $\VF$-generated, and it depends only on $\rv(a)$. The remaining stages of $\hat T_\sigma$, $\hat T_\tau$ restrict to standard contractions of this fiber whose orders differ by an adjacent transposition. By the inductive hypothesis over $\mathbb S \la a \ra$, their results $U_a$, $V_a$ satisfy $([U_a]_{\leq k-1}, [V_a]_{\leq k-1}) \in \mispdb$. Now apply Lemma~\ref{isp:VF:fiberwise:contract}, with one $\VF$-coordinate and head start $k-1$, to $\bigcup_a a \times U_a$ and $\bigcup_a a \times V_a$. These are $\RV$-pullbacks in their $\VF$-coordinate, so their tautological contractions are standard contractions, and these are $\hat T_\sigma(\bm B)$ and $\hat T_\tau(\bm B)$. This proves $(\ast)$. Note that the base is never enlarged by an $\RV$-parameter.
+
+Now suppose $[\mL \bm U] = [\mL \bm V]$ and let
 \[
 \mu\bb L \bm U = \bm B_1 \to^{G_1} \bm B_2 \cdots \bm B_l \to^{G_l} \bm B_{l+1} = \mu\bb L \bm V
 \]
-be a sequence of relatively unary $\mVF^\diamond[k]$-morphisms, which exist by definition. For each $j \leq l - 2$, we can choose five standard contractions
-\[
-[\bm U_j]_{\leq k}, \quad [\bm U_{j+1}]_{\leq k}, \quad [\bm U'_{j+1}]_{\leq k}, \quad [\bm U''_{j+1}]_{\leq k}, \quad [\bm U_{j+2}]_{\leq k}
-\]
-of $\bm B_j$, $\bm B_{j+1}$, $\bm B_{j+1}$, $\bm B_{j+1}$, $\bm B_{j+2}$ with the permutations $\sigma_{j}$, $\sigma_{j+1}$, $\sigma'_{j+1}$, $\sigma''_{j+1}$, $\sigma_{j+2}$ of $[k]$, respectively, such that
-\begin{itemize}
-  \item $\sigma_{j+1}(1)$ and $\sigma_{j+1}(2)$ are the $\VF$-coordinates targeted by $G_{j}$ and $G_{j+1}$, respectively,
-  \item $\sigma''_{j+1}(1)$ and $\sigma''_{j+1}(2)$ are the $\VF$-coordinates targeted by $G_{j+1}$ and $G_{j+2}$, respectively,
-  \item $\sigma_{j} = \sigma_{j+1}$, $\sigma''_{j+1} =  \sigma_{j+2}$,  and $\sigma'_{j+1}(1) = \sigma''_{j+1}(1)$,
-  \item the relation between $\sigma_{j+1}$ and $\sigma'_{j+1}$ is as described in Lemma~\ref{contraction:perm:pair:isp}.
-\end{itemize}
+be a sequence of relatively unary $\mVF^\diamond[k]$-morphisms, which exists by definition. Since $\mL \bm U$ is an $\RV$-pullback, its tautological contraction, which recovers $\bm U$, is a standard contraction with respect to any order, and similarly for $\mL \bm V$. If $l = 0$, then $\bm U$ and $\bm V$ are standard contractions of the same object and $(\ast)$ applies. Otherwise, for each $m \leq l$, let $c_m$ be the coordinate targeted by $G_m$, and choose standard contractions $\bm U_m$ of $\bm B_m$ and $\bm U'_{m+1}$ of $\bm B_{m+1}$ with a common order starting with $c_m$. By Corollary~\ref{contraction:same:perm:isp}, $([\bm U_m]_{\leq k}, [\bm U'_{m+1}]_{\leq k}) \in \mispdb$. By $(\ast)$, $\bm U'_{m+1}$ is congruent to $\bm U_{m+1}$ for $m < l$, $\bm U$ is congruent to $\bm U_1$, and $\bm V$ is congruent to $\bm U'_{l+1}$. Transitivity of $\mispdb$ (Lemma~\ref{isp:congruence:vol}) gives $([\bm U], [\bm V]) \in \mispdb$. This treats every arrow separately, including the last one, chains of every length, and consecutive arrows in the same coordinate.
 
 % BEGIN REFEREE INSERTION R134
-\RefereeRemark{134}{Error}{Incomplete chain and impossible permutation choices}{%
+\ResolvedRefereeRemark{134}{Error}{Incomplete chain and impossible permutation choices}{%
 \textit{Original source line 2720.}\quad Two bookkeeping repairs are required. First, consecutive relatively unary maps can target the same coordinate; then the first or second bullet would assign the same value to positions $1$ and $2$ of a permutation. Compose such consecutive maps before choosing the permutations. Second, $j\leq l-2$ only connects contractions through $\bm B_l$, not through the last arrow to $\bm B_{l+1}$, and for $l=1,2$ there are no comparisons at all. Handle the short chains and the last arrow explicitly using Corollary~\ref{contraction:same:perm:isp}, and compare the endpoint contractions with the tautological contractions of $\mL\bm U$ and $\mL\bm V$. Alternatively, first prove independence of the complete contraction order and then apply that corollary successively to all $G_j$. Also record the immediate degree-zero case, since the proposition and the next theorem include $k=0$.
-}
+}{The bookkeeping is replaced, as suggested in the alternative, by first proving independence of the contraction and of its order, $(\ast)$, and then applying Corollary~\ref{contraction:same:perm:isp} to each arrow separately. This covers chains of every length, the last arrow, consecutive arrows in the same coordinate and the comparison with the tautological contractions of $\mL\bm U$ and $\mL\bm V$. The degree-zero case is recorded.}
 % END REFEREE INSERTION R134
-By Corollary~\ref{contraction:same:perm:isp} and Lemma~\ref{contraction:perm:pair:isp}, all the adjacent pairs of these standard contractions are indeed $\mispdb$-congruent, except $([\bm U'_{j+1}]_{\leq k}, [\bm U''_{j+1}]_{\leq k})$.  Since we can choose $[\bm U'_{j+1}]_{\leq k}$, $[\bm U''_{j+1}]_{\leq k}$ so that they start with the same contraction in the first targeted $\VF$-coordinate of $\bm B_{j+1}$, the resulting sets from this step are the same. Thus, applying  the inductive hypothesis in each fiber over the just contracted coordinate, we see that this last pair is also $\mispdb$-congruent. This completes the ``only if'' direction.
+
 
 % BEGIN REFEREE INSERTION R135
-\RefereeRemark{135}{Gap; revised}{Induction after an RV contraction requires descent}{%
+\ResolvedRefereeRemark{135}{Gap; revised}{Induction after an RV contraction requires descent}{%
 \textit{Original source line 2721.}\quad Make the parameter base and the final gluing explicit. The new parameter after the first contraction lies in $\RV$, and adjoining it need not leave $\mathbb S$ $\VF$-generated; the intermediate contracted object can also have positive head start. Work instead with the lifted intermediate object, fix a $\VF$-representative $a$ of its first leading term, and apply induction to the remaining fibers over $\mathbb S\langle a\rangle$. These fibers still have finite $\RV$-fibers and degree $k-1$. To descend, form the two families $\bigcup_a a\times U_{\rv(a)}$ and $\bigcup_a a\times V_{\rv(a)}$ of the final $\RV$-outputs (with the first leading coordinate omitted from each output). Lemma~\ref{isp:VF:fiberwise:contract}, with one $\VF$-coordinate and head start $k-1$, then glues their fiberwise congruences; tautologically contracting $a$ recovers the two full outputs. This repair depends on the uniform-witness step discussed at that lemma.
-}
+}{In the proof of $(\ast)$ the induction is applied to the fibers of the lifted intermediate object over a $\VF$-value $a$ of the contracted coordinate, over the $\VF$-generated base $\mathbb S\la a\ra$, and the results are glued by Lemma~\ref{isp:VF:fiberwise:contract} with one $\VF$-coordinate and head start $k-1$. No $\RV$-parameter is adjoined to the base.}
 % END REFEREE INSERTION R135
 \end{proof}
 
 \begin{rem}\label{thekernel}
-Proposition~\ref{kernel:L} shows that  the kernel  of $\mL$ in $\gsk \mRV^{\db}[*]$ is generated by the pairs $([1], [\RV^{\ccirc}(t)_\gamma])$, where $\gamma \in \Gamma$ and $t \in \gamma^\sharp$ are definable (Notation~\ref{punc:RVd}), and hence  the corresponding ideal of the graded ring $\ggk \mRV^{\db}[*]$  is $(\bm P_\Gamma)$ (Notation~\ref{pgammabis}).
+Proposition~\ref{kernel:L} shows that the congruence on $\gsk \mRV^{\db}[k]$ induced by $\mL$ is $\mispdb[k]$, which is generated by the pairs $([\bm U], [\bm U^\flat])$ with $\bm U^\flat$ an elementary blowup of $\bm U$. Consequently, the kernel of the graded ring homomorphism $\ggk \mRV^{\db}[*] \fun \ggk \mVF^\diamond[*]$ induced by $\mL$ is the relative annular ideal $J_{\mathrm{var}}$ of Notation~\ref{relative:annular:ideal}. Indeed, by Definition~\ref{defn:blowup:coa} the generators $[\bm U^{\tau, j}] - [\bm U]$ of $J_{\mathrm{var}}$ are exactly the differences $[\bm U^\flat] - [\bm U]$ for elementary blowups, and these lie in the kernel by Lemma~\ref{blowup:same:RV:coa}. Conversely, a blowup $\bm V^\flat_F$ with locus $\bm C = \bigcup_i \bm C_i$ satisfies $[\bm V^\flat_F] - [\bm V] = \sum_i ([\bm U_i^\flat] - [\bm U_i])$, so a blowup of any length differs from its source by an element of $J_{\mathrm{var}}$; also, the product of a generator with a class $[\bm W]$ is the generator for the pulled-back aperture on the product object. Now let $[\bm U] - [\bm V]$ lie in the kernel, in degree $k$. Then $[\mL \bm U] + b = [\mL \bm V] + b$ in $\gsk \mVF^\diamond[k]$ for some $b$, and $b = [\mL \bm W]$ for some $\bm W$ by Corollary~\ref{L:sur:c}. By Proposition~\ref{kernel:L}, $\bm U \uplus \bm W$ and $\bm V \uplus \bm W$ have isomorphic blowups $(\bm U \uplus \bm W)^\flat \cong (\bm V \uplus \bm W)^\flat$, and therefore
+\[
+[\bm U] - [\bm V] = ([\bm U \uplus \bm W] - [(\bm U \uplus \bm W)^\flat]) - ([\bm V \uplus \bm W] - [(\bm V \uplus \bm W)^\flat]) \in J_{\mathrm{var}}.
+\]
+No cancellation in $\gsk \mRV^{\db}[k]$ is used.
+
+For a constant aperture $t \in \gamma^\sharp$, where $\gamma \in D_{\RV}$, put $\bm W = (U, f_{\tilde j}, \omega + \vrv(f_j)) \in \mRV^{\db}[k-1]$. The measure condition gives $\bm U \cong \bm W \times (1, 0)$ and $\bm U^\flat \cong \bm W \times (\RV^{\ccirc}(t)_\gamma, 0)$, hence $[\bm U^\flat] - [\bm U] = [\bm W] \bm P_\gamma$. Thus $(\bm P_\Gamma) \sub J_{\mathrm{var}}$ (Notation~\ref{pgammabis}); equality is not asserted. For a variable aperture, Lemma~\ref{relative:annular:compatibility} gives instead the relative image $([\bm W_\gamma] - [\bm W]) \bm P$ in the full measured ring.
 
 % BEGIN REFEREE INSERTION R136
-\RefereeRemark{136}{Clarification}{Show the generator calculation and restrict the aperture}{%
+\ResolvedRefereeRemark{136}{Clarification}{Show the generator calculation and restrict the aperture}{%
 \textit{Original source line 2725.}\quad Here $\gamma$ must be nonnegative, as in Notation~\ref{punc:RVd}. The passage from arbitrary elementary blowups to these degree-one generators has a short useful verification. For a blowup in coordinate $j$, put $\bm W=(U,f_{\tilde j},\omega+\vrv(f_j))\in\mRV^{\db}[k-1]$. The measure condition gives $\bm U\simeq\bm W\times(1,0)$ and $\bm U^\flat\simeq\bm W\times(\RV^{\ccirc}(t)_\gamma,0)$. Hence $[\bm U^\flat]-[\bm U]=[\bm W]\bm P_\gamma$. This proves the claimed ideal description by additivity and iteration, once Proposition~\ref{kernel:L} is established.
-}
+}{The remark now identifies the kernel of the graded ring homomorphism with the relative annular ideal $J_{\mathrm{var}}$, proving both inclusions without cancellation in the $\RV$ semigroup, and Theorem~\ref{main:prop} uses this ideal. The generator calculation, with $\gamma\geq0$, is included as proposed for constant apertures; it gives $(\bm P_\Gamma)\sub J_{\mathrm{var}}$, and equality is not asserted.}
 % END REFEREE INSERTION R136
 \end{rem}
 
@@ -5724,11 +5812,11 @@ For each $k \geq 0$ there is a canonical isomorphism of Grothendieck semigroups
 such that $\int_{+}^{\diamond} [\bm A] = [\bm U]/  \mispdb$ if and only if $[\bm A] = [{\mL}\bm U]$. Taking the direct sum of the groupifications
 yields a canonical isomorphism of graded rings
 \[
-  \int^{\diamond} : \ggk \mVF^\diamond[*] \fun \ggk  \mRV^{\db}[*] /  (\bm P_\Gamma).
+  \int^{\diamond} : \ggk \mVF^\diamond[*] \fun \ggk \mRV^{\db}[*] / J_{\mathrm{var}}.
 \]
 \end{thm}
 \begin{proof}
-This is immediate by Corollary~\ref{L:sur:c} and Proposition~\ref{kernel:L}.
+The semigroup isomorphism is the inverse of the map induced by $\mL$, which is surjective by Corollary~\ref{L:sur:c} and injective by Proposition~\ref{kernel:L}. The groupification of a quotient of a semigroup by a congruence is the quotient of its groupification by the subgroup generated by the differences of congruent pairs; by Lemma~\ref{isp:congruence:vol} and Remark~\ref{thekernel}, in the direct sum over $k$ this subgroup is the homogeneous ideal $J_{\mathrm{var}}$.
 \end{proof}
 
 
@@ -5737,12 +5825,12 @@ The diagram (\ref{diag-diamond-interpol}) commutes.
 \end{cor}
 \begin{proof}
 Note that, in (\ref{diag-diamond-interpol}),  the first horizontal arrow  is induced by the obvious forgetful functor (it exists
-because the morphisms in $\mgVF^\diamond[*]$ are bijections instead of essential bijections, see Remark~\ref{dia:cat:well}), the second horizontal arrow is induced by the subcategory relation, and the reason that the bottom row exists is given in Notation~\ref{pgammabis}. That the upper half of the diagram commutes is then simply a consequence of the fact that image of $[\bm A]$ under any of the three integrals  can be represented by a standard contraction of $\bm A$. The rest of it is just a combination of (\ref{edb:eb:com}) and Proposition~\ref{prop:eu:retr:k}.
+because the morphisms in $\mgVF^\diamond[*]$ are bijections instead of essential bijections, see Remark~\ref{dia:cat:well}), the second horizontal arrow is induced by the subcategory relation, and the bottom row exists by Lemma~\ref{relative:annular:compatibility}. That both squares commute is then simply a consequence of the fact that the image of $[\bm A]$ under any of the three integrals can be represented by a standard contraction of $\bm A$.
 
 % BEGIN REFEREE INSERTION R137
-\RefereeRemark{137}{Typo}{Proof refers to a deleted half of the diagram}{%
+\ResolvedRefereeRemark{137}{Typo}{Proof refers to a deleted half of the diagram}{%
 \textit{Original source line 2749.}\quad The current Figure~\ref{diag-diamond-interpol} has only the two integral squares; the additional row involving retractions is commented out in the source. Replace \emph{the upper half of the diagram} by \emph{both squares} and delete the final sentence about \emph{the rest}. The standard-contraction argument already proves commutativity of the entire displayed diagram. Also insert \emph{the} in \emph{the fact that the image}. This obsolete-diagram issue from the human report remains unresolved.
-}
+}{The proof now refers to both squares of the current diagram, the obsolete sentence about the deleted retraction row is removed, and the existence of the bottom row with the relative quotient cites Lemma~\ref{relative:annular:compatibility}.}
 % END REFEREE INSERTION R137
 \end{proof}
 

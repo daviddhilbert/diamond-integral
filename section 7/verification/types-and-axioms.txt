@@ -1,0 +1,1433 @@
+warning: integration_in_acvf: repository has local changes:
+  /Users/yimu/Documents/Codex-Migration-20261112/projects/diamond integral/Section7/worktree/.lake/packages/integration_in_acvf
+@DiamondIntegral.Section7.ChartDiamondLift.chartObject : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {S : Set M} →
+        {G : Type} →
+          [inst_2 : LinearOrderedCommGroupWithZero G] →
+            [inst_3 : Valued (DiamondIntegral.Section2.VF M) G] →
+              M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF00 →
+                CanonicalStructure.IsCanonical →
+                  DiamondIntegral.Section2.GammaPiecewiseRationalAffineInput →
+                    {κ : Cardinal.{0}} →
+                      Cardinal.aleph0 < κ →
+                        SpecialTransformations.Section3.Saturated M κ →
+                          (∀ (x y : DiamondIntegral.Section2.VF M),
+                              SpecialTransformations.Milestone0.VFValued.predV x y ↔ Valued.v x ≤ Valued.v y) →
+                            Cardinal.mk ↑S < κ →
+                              DiamondIntegral.Section2.NontrivialDefinableGamma { real := S, gamma := ∅ } →
+                                {k : ℕ} →
+                                  (a : DiamondIntegral.Section4.RVMeasuredCharts.Chart { real := S, gamma := ∅ } k) →
+                                    DiamondIntegral.Section4.RVMeasuredBounds.DomainBounded a →
+                                      DiamondIntegral.Section7.MeasuredRVBounds.NoInfinity a →
+                                        DiamondIntegral.Section6.DiamondCategory.VFObject S k
+def DiamondIntegral.Section7.ChartDiamondLift.chartObject : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {S : Set M} →
+        {G : Type} →
+          [inst_2 : LinearOrderedCommGroupWithZero G] →
+            [inst_3 : Valued (DiamondIntegral.Section2.VF M) G] →
+              M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF00 →
+                CanonicalStructure.IsCanonical →
+                  DiamondIntegral.Section2.GammaPiecewiseRationalAffineInput →
+                    {κ : Cardinal.{0}} →
+                      Cardinal.aleph0 < κ →
+                        SpecialTransformations.Section3.Saturated M κ →
+                          (∀ (x y : DiamondIntegral.Section2.VF M),
+                              SpecialTransformations.Milestone0.VFValued.predV x y ↔ Valued.v x ≤ Valued.v y) →
+                            Cardinal.mk ↑S < κ →
+                              DiamondIntegral.Section2.NontrivialDefinableGamma { real := S, gamma := ∅ } →
+                                {k : ℕ} →
+                                  (a : DiamondIntegral.Section4.RVMeasuredCharts.Chart { real := S, gamma := ∅ } k) →
+                                    DiamondIntegral.Section4.RVMeasuredBounds.DomainBounded a →
+                                      DiamondIntegral.Section7.MeasuredRVBounds.NoInfinity a →
+                                        DiamondIntegral.Section6.DiamondCategory.VFObject S k :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {S} {G}
+    [LinearOrderedCommGroupWithZero G] [Valued (DiamondIntegral.Section2.VF M) G] h00 hc linear {κ} hκ hs hv hsmall hΓ
+    {k} a ha hna =>
+  DiamondIntegral.Section6.DiamondLift.liftObject (DiamondIntegral.Section7.MeasuredRVBridge.toMeasured hc a) ⋯
+'DiamondIntegral.Section7.ChartDiamondLift.chartObject' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.ChartDiamondLift.chart_isomorphic : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {G : Type} [inst_2 : LinearOrderedCommGroupWithZero G]
+  [inst_3 : Valued (DiamondIntegral.Section2.VF M) G] (h00 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF00)
+  (hc : CanonicalStructure.IsCanonical) (linear : DiamondIntegral.Section2.GammaPiecewiseRationalAffineInput)
+  {κ : Cardinal.{0}} (hκ : Cardinal.aleph0 < κ) (hs : SpecialTransformations.Section3.Saturated M κ)
+  (hv :
+    ∀ (x y : DiamondIntegral.Section2.VF M),
+      SpecialTransformations.Milestone0.VFValued.predV x y ↔ Valued.v x ≤ Valued.v y)
+  (T : SpecialTransformations.Milestone0.LRV.Substructure M) (B : DiamondIntegral.Section2.VFGeneratedFieldBase T)
+  (hsmall : Cardinal.mk ↑↑T < κ) (hΓ : DiamondIntegral.Section2.NontrivialDefinableGamma { real := ↑T, gamma := ∅ }),
+  (∃ x, x ≠ 0 ∧ Valued.v ↑x ≠ 1) →
+    ∀ {k : ℕ},
+      0 < k →
+        ∀ {a b : DiamondIntegral.Section4.RVMeasuredCharts.Chart { real := ↑T, gamma := ∅ } k}
+          (F : DiamondIntegral.Section4.RVMeasuredCharts.Iso a b)
+          (ha : DiamondIntegral.Section4.RVMeasuredBounds.DomainBounded a)
+          (hb : DiamondIntegral.Section4.RVMeasuredBounds.DomainBounded b)
+          (hna : DiamondIntegral.Section7.MeasuredRVBounds.NoInfinity a)
+          (hnb : DiamondIntegral.Section7.MeasuredRVBounds.NoInfinity b),
+          DiamondIntegral.Section6.DiamondCategory.Isomorphic G
+            (DiamondIntegral.Section7.ChartDiamondLift.chartObject h00 hc linear hκ hs hv hsmall hΓ a ha hna)
+            (DiamondIntegral.Section7.ChartDiamondLift.chartObject h00 hc linear hκ hs hv hsmall hΓ b hb hnb)
+theorem DiamondIntegral.Section7.ChartDiamondLift.chart_isomorphic : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {G : Type} [inst_2 : LinearOrderedCommGroupWithZero G]
+  [inst_3 : Valued (DiamondIntegral.Section2.VF M) G] (h00 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF00)
+  (hc : CanonicalStructure.IsCanonical) (linear : DiamondIntegral.Section2.GammaPiecewiseRationalAffineInput)
+  {κ : Cardinal.{0}} (hκ : Cardinal.aleph0 < κ) (hs : SpecialTransformations.Section3.Saturated M κ)
+  (hv :
+    ∀ (x y : DiamondIntegral.Section2.VF M),
+      SpecialTransformations.Milestone0.VFValued.predV x y ↔ Valued.v x ≤ Valued.v y)
+  (T : SpecialTransformations.Milestone0.LRV.Substructure M) (B : DiamondIntegral.Section2.VFGeneratedFieldBase T)
+  (hsmall : Cardinal.mk ↑↑T < κ) (hΓ : DiamondIntegral.Section2.NontrivialDefinableGamma { real := ↑T, gamma := ∅ }),
+  (∃ x, x ≠ 0 ∧ Valued.v ↑x ≠ 1) →
+    ∀ {k : ℕ},
+      0 < k →
+        ∀ {a b : DiamondIntegral.Section4.RVMeasuredCharts.Chart { real := ↑T, gamma := ∅ } k}
+          (F : DiamondIntegral.Section4.RVMeasuredCharts.Iso a b)
+          (ha : DiamondIntegral.Section4.RVMeasuredBounds.DomainBounded a)
+          (hb : DiamondIntegral.Section4.RVMeasuredBounds.DomainBounded b)
+          (hna : DiamondIntegral.Section7.MeasuredRVBounds.NoInfinity a)
+          (hnb : DiamondIntegral.Section7.MeasuredRVBounds.NoInfinity b),
+          DiamondIntegral.Section6.DiamondCategory.Isomorphic G
+            (DiamondIntegral.Section7.ChartDiamondLift.chartObject h00 hc linear hκ hs hv hsmall hΓ a ha hna)
+            (DiamondIntegral.Section7.ChartDiamondLift.chartObject h00 hc linear hκ hs hv hsmall hΓ b hb hnb) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {G}
+    [LinearOrderedCommGroupWithZero G] [Valued (DiamondIntegral.Section2.VF M) G] h00 hc linear {κ} hκ hs hv T B hsmall
+    hΓ hnt {k} hn {a b} F ha hb hna hnb =>
+  Exists.casesOn
+    (DiamondIntegral.Section7.ChartLifting.chart_iso_lift h00 hc linear hκ hs hv T B hsmall hΓ hnt hn F ha hb hna hnb)
+    fun L h =>
+    And.casesOn h fun left right =>
+      And.casesOn right fun left right =>
+        And.casesOn right fun hprop right =>
+          Nonempty.intro
+            (DiamondIntegral.Section6.DiamondLift.liftMorphism
+              (DiamondIntegral.Section7.ChartDiamondLift.chartObject._proof_1 h00 hc linear hκ hs hv hsmall hΓ a ha hna)
+              (DiamondIntegral.Section7.ChartDiamondLift.chartObject._proof_1 h00 hc linear hκ hs hv hsmall hΓ b hb hnb)
+              L hprop)
+'DiamondIntegral.Section7.ChartDiamondLift.chart_isomorphic' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.ChartLifting.chart_iso_lift : ∀ {M G : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] [inst_2 : LinearOrderedCommGroupWithZero G]
+  [inst_3 : Valued (DiamondIntegral.Section2.VF M) G] {k : ℕ},
+  M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF00 →
+    ∀ (hc : CanonicalStructure.IsCanonical),
+      DiamondIntegral.Section2.GammaPiecewiseRationalAffineInput →
+        ∀ {κ : Cardinal.{0}},
+          Cardinal.aleph0 < κ →
+            SpecialTransformations.Section3.Saturated M κ →
+              (∀ (x y : DiamondIntegral.Section2.VF M),
+                  SpecialTransformations.Milestone0.VFValued.predV x y ↔ Valued.v x ≤ Valued.v y) →
+                ∀ (S : SpecialTransformations.Milestone0.LRV.Substructure M)
+                  (B : DiamondIntegral.Section2.VFGeneratedFieldBase S),
+                  Cardinal.mk ↑↑S < κ →
+                    DiamondIntegral.Section2.NontrivialDefinableGamma { real := ↑S, gamma := ∅ } →
+                      (∃ x, x ≠ 0 ∧ Valued.v ↑x ≠ 1) →
+                        0 < k →
+                          ∀ {a b : DiamondIntegral.Section4.RVMeasuredCharts.Chart { real := ↑S, gamma := ∅ } k}
+                            (F : DiamondIntegral.Section4.RVMeasuredCharts.Iso a b),
+                            DiamondIntegral.Section4.RVMeasuredBounds.DomainBounded a →
+                              DiamondIntegral.Section4.RVMeasuredBounds.DomainBounded b →
+                                DiamondIntegral.Section7.MeasuredRVBounds.NoInfinity a →
+                                  DiamondIntegral.Section7.MeasuredRVBounds.NoInfinity b →
+                                    ∃ T,
+                                      T.iso.iso.hom.map =
+                                          (DiamondIntegral.Section7.MeasuredRVBridge.measuredIso hc F).iso.hom.map ∧
+                                        T.doublyBounded ∧
+                                          T.properComponents ∧
+                                            DiamondIntegral.Section6.ProperCovariantHomeomorphism T.lift.map
+theorem DiamondIntegral.Section7.ChartLifting.chart_iso_lift : ∀ {M G : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] [inst_2 : LinearOrderedCommGroupWithZero G]
+  [inst_3 : Valued (DiamondIntegral.Section2.VF M) G] {k : ℕ},
+  M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF00 →
+    ∀ (hc : CanonicalStructure.IsCanonical),
+      DiamondIntegral.Section2.GammaPiecewiseRationalAffineInput →
+        ∀ {κ : Cardinal.{0}},
+          Cardinal.aleph0 < κ →
+            SpecialTransformations.Section3.Saturated M κ →
+              (∀ (x y : DiamondIntegral.Section2.VF M),
+                  SpecialTransformations.Milestone0.VFValued.predV x y ↔ Valued.v x ≤ Valued.v y) →
+                ∀ (S : SpecialTransformations.Milestone0.LRV.Substructure M)
+                  (B : DiamondIntegral.Section2.VFGeneratedFieldBase S),
+                  Cardinal.mk ↑↑S < κ →
+                    DiamondIntegral.Section2.NontrivialDefinableGamma { real := ↑S, gamma := ∅ } →
+                      (∃ x, x ≠ 0 ∧ Valued.v ↑x ≠ 1) →
+                        0 < k →
+                          ∀ {a b : DiamondIntegral.Section4.RVMeasuredCharts.Chart { real := ↑S, gamma := ∅ } k}
+                            (F : DiamondIntegral.Section4.RVMeasuredCharts.Iso a b),
+                            DiamondIntegral.Section4.RVMeasuredBounds.DomainBounded a →
+                              DiamondIntegral.Section4.RVMeasuredBounds.DomainBounded b →
+                                DiamondIntegral.Section7.MeasuredRVBounds.NoInfinity a →
+                                  DiamondIntegral.Section7.MeasuredRVBounds.NoInfinity b →
+                                    ∃ T,
+                                      T.iso.iso.hom.map =
+                                          (DiamondIntegral.Section7.MeasuredRVBridge.measuredIso hc F).iso.hom.map ∧
+                                        T.doublyBounded ∧
+                                          T.properComponents ∧
+                                            DiamondIntegral.Section6.ProperCovariantHomeomorphism T.lift.map :=
+fun {M G} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+    [LinearOrderedCommGroupWithZero G] [Valued (DiamondIntegral.Section2.VF M) G] {k} h00 hc linear {κ} hκ hs hv S B
+    hsmall hΓ hnt hn {a b} F ha hb hna hnb =>
+  DiamondIntegral.Section6.lemma_6_33_doublyBounded_vfGenerated h00 hc linear hκ hs hv S B hsmall hΓ hnt hn
+    (DiamondIntegral.Section7.MeasuredRVBridge.measuredIso hc F)
+    (DiamondIntegral.Section7.MeasuredRVBounds.toMeasured_doublyBounded hc h00 linear (LT.lt.le hκ) hs hsmall hΓ a ha
+      hna)
+    (DiamondIntegral.Section7.MeasuredRVBounds.toMeasured_doublyBounded hc h00 linear (LT.lt.le hκ) hs hsmall hΓ b hb
+      hnb)
+'DiamondIntegral.Section7.ChartLifting.chart_iso_lift' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.MeasuredRVBounds.NoInfinity : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {S : Set M} → {k : ℕ} → DiamondIntegral.Section4.RVMeasuredCharts.Chart { real := S, gamma := ∅ } k → Prop
+def DiamondIntegral.Section7.MeasuredRVBounds.NoInfinity : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {S : Set M} → {k : ℕ} → DiamondIntegral.Section4.RVMeasuredCharts.Chart { real := S, gamma := ∅ } k → Prop :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {S} {k}
+    a =>
+  ∀ x ∈ a.domain, ∀ (i : Fin a.arity), SpecialTransformations.Section3.GammaParameters.NonzeroRV (x i)
+'DiamondIntegral.Section7.MeasuredRVBounds.NoInfinity' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.MeasuredRVBounds.domain_doublyBounded : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) {S : Set M} {k : ℕ}
+  (a : DiamondIntegral.Section4.RVMeasuredCharts.Chart { real := S, gamma := ∅ } k),
+  DiamondIntegral.Section4.RVMeasuredBounds.DomainBounded a →
+    DiamondIntegral.Section7.MeasuredRVBounds.NoInfinity a →
+      DiamondIntegral.Section2.RVValueDoublyBounded
+        (DiamondIntegral.Section7.MeasuredRVBridge.toObject hc a).domain.carrier
+theorem DiamondIntegral.Section7.MeasuredRVBounds.domain_doublyBounded : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) {S : Set M} {k : ℕ}
+  (a : DiamondIntegral.Section4.RVMeasuredCharts.Chart { real := S, gamma := ∅ } k),
+  DiamondIntegral.Section4.RVMeasuredBounds.DomainBounded a →
+    DiamondIntegral.Section7.MeasuredRVBounds.NoInfinity a →
+      DiamondIntegral.Section2.RVValueDoublyBounded
+        (DiamondIntegral.Section7.MeasuredRVBridge.toObject hc a).domain.carrier :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] hc {S}
+    {k} a hr hnz =>
+  Exists.casesOn hr fun β hβ =>
+    Exists.intro β fun u hu i =>
+      have hx := hu;
+      have hn := hnz (SpecialTransformations.Section4.rvValues u) hx i;
+      have hb := hβ (SpecialTransformations.Section4.rvValues u) hx i hn;
+      have hne := fun h => hn.right (congrArg Subtype.val h);
+      Eq.mpr
+        (id
+          (congrArg (fun _a => ↑β⁻¹ ≤ _a ∧ _a ≤ ↑β)
+            (Eq.symm (DiamondIntegral.Section2.nonzero_rv_codeValue_val (u i) hne))))
+        ⟨hb.left, hb.right⟩
+'DiamondIntegral.Section7.MeasuredRVBounds.domain_doublyBounded' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@DiamondIntegral.Section7.MeasuredRVBounds.coordinateRV : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {S : Set M} →
+        {k : ℕ} →
+          (a : DiamondIntegral.Section4.RVMeasuredCharts.Chart { real := S, gamma := ∅ } k) →
+            Fin k → (Fin a.arity → DiamondIntegral.Section2.RVInfinity M) → DiamondIntegral.Section2.RV M
+def DiamondIntegral.Section7.MeasuredRVBounds.coordinateRV : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {S : Set M} →
+        {k : ℕ} →
+          (a : DiamondIntegral.Section4.RVMeasuredCharts.Chart { real := S, gamma := ∅ } k) →
+            Fin k → (Fin a.arity → DiamondIntegral.Section2.RVInfinity M) → DiamondIntegral.Section2.RV M :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {S} {k}
+    a i u =>
+  if hu : SpecialTransformations.Section4.rvValues u ∈ a.domain then
+    ⟨⟨a.coordinate (SpecialTransformations.Section4.rvValues u) i, ⋯⟩, ⋯⟩
+  else DiamondIntegral.Section2.rvOne
+'DiamondIntegral.Section7.MeasuredRVBounds.coordinateRV' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.MeasuredRVBounds.coordinateRV_val : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {S : Set M} {k : ℕ} (a : DiamondIntegral.Section4.RVMeasuredCharts.Chart { real := S, gamma := ∅ } k) (i : Fin k)
+  (u : Fin a.arity → DiamondIntegral.Section2.RVInfinity M),
+  SpecialTransformations.Section4.rvValues u ∈ a.domain →
+    ↑↑(DiamondIntegral.Section7.MeasuredRVBounds.coordinateRV a i u) =
+      a.coordinate (SpecialTransformations.Section4.rvValues u) i
+theorem DiamondIntegral.Section7.MeasuredRVBounds.coordinateRV_val : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {S : Set M} {k : ℕ} (a : DiamondIntegral.Section4.RVMeasuredCharts.Chart { real := S, gamma := ∅ } k) (i : Fin k)
+  (u : Fin a.arity → DiamondIntegral.Section2.RVInfinity M),
+  SpecialTransformations.Section4.rvValues u ∈ a.domain →
+    ↑↑(DiamondIntegral.Section7.MeasuredRVBounds.coordinateRV a i u) =
+      a.coordinate (SpecialTransformations.Section4.rvValues u) i :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {S} {k}
+    a i u hu =>
+  of_eq_true
+    (Eq.trans
+      (congrFun' (congrArg Eq (congrArg Subtype.val (congrArg Subtype.val (dite_eq_left_of_eq_true (eq_true hu)))))
+        (a.coordinate (SpecialTransformations.Section4.rvValues u) i))
+      (eq_self (a.coordinate (SpecialTransformations.Section4.rvValues u) i)))
+'DiamondIntegral.Section7.MeasuredRVBounds.coordinateRV_val' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.MeasuredRVBounds.coordinate_scalar_definable : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {S : Set M} {k : ℕ} (a : DiamondIntegral.Section4.RVMeasuredCharts.Chart { real := S, gamma := ∅ } k) (i : Fin k),
+  SpecialTransformations.Section3.GammaParameters.DefinableOverBase { real := S, gamma := ∅ }
+    (fun x => SpecialTransformations.Milestone0.SortTag.rv)
+    (DiamondIntegral.Section4.RVMeasuredCharts.graphOn a.domain fun x => ![a.coordinate x i])
+theorem DiamondIntegral.Section7.MeasuredRVBounds.coordinate_scalar_definable : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {S : Set M} {k : ℕ} (a : DiamondIntegral.Section4.RVMeasuredCharts.Chart { real := S, gamma := ∅ } k) (i : Fin k),
+  SpecialTransformations.Section3.GammaParameters.DefinableOverBase { real := S, gamma := ∅ }
+    (fun x => SpecialTransformations.Milestone0.SortTag.rv)
+    (DiamondIntegral.Section4.RVMeasuredCharts.graphOn a.domain fun x => ![a.coordinate x i]) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {S} {k}
+    a i =>
+  have h :=
+    DiamondIntegral.Section4.RVGraphComposition.graph_compose_definable { real := S, gamma := ∅ } a.domain
+      (SpecialTransformations.Section3.GammaParameters.sortedUniverse fun x =>
+        SpecialTransformations.Milestone0.SortTag.rv)
+      a.coordinate (fun c => c ∘ fun x => i) a.coordinate_definable
+      (DiamondIntegral.Section4.RVCoordinateMaps.coordinate_graph_definable { real := S, gamma := ∅ }
+        (SpecialTransformations.Section3.GammaParameters.sortedUniverse fun x =>
+          SpecialTransformations.Milestone0.SortTag.rv)
+        (SpecialTransformations.Section3.GammaParameters.real_definableOverBase { real := S, gamma := ∅ }
+          (fun x => SpecialTransformations.Milestone0.SortTag.rv)
+          (SpecialTransformations.Section3.GammaParameters.sortedUniverse fun x =>
+            SpecialTransformations.Milestone0.SortTag.rv)
+          (SpecialTransformations.Section3.GammaParameters.sortedUniverse_definable { real := S, gamma := ∅ }.real
+            fun x => SpecialTransformations.Milestone0.SortTag.rv))
+        fun x => i)
+      fun x hx l => (a.coordinate_proper x hx l).left;
+  have he :=
+    funext fun x =>
+      funext fun l =>
+        List.Mem.casesOn (motive := fun a_1 x_1 =>
+          List.finRange 1 = a_1 →
+            Fintype.complete l ≍ x_1 → ((fun c => c ∘ fun x => i) ∘ a.coordinate) x l = ![a.coordinate x i] l)
+          (Fintype.complete l)
+          (fun as h =>
+            List.cons.noConfusion h fun head_eq =>
+              Eq.ndrec (motive := fun l =>
+                ∀ (this : l ∈ Fintype.elems),
+                  [] ≍ as →
+                    this ≍ List.Mem.head as → ((fun c => c ∘ fun x => i) ∘ a.coordinate) x l = ![a.coordinate x i] l)
+                (fun this tail_eq =>
+                  Eq.ndrec (motive := fun as =>
+                    this ≍ List.Mem.head as →
+                      ((fun c => c ∘ fun x => i) ∘ a.coordinate) x ((fun i => i) ⟨0, Nat.le_refl 1⟩) =
+                        ![a.coordinate x i] ((fun i => i) ⟨0, Nat.le_refl 1⟩))
+                    (fun h => Eq.refl (((fun c => c ∘ fun x => i) ∘ a.coordinate) x ((fun i => i) ⟨0, Nat.le_refl 1⟩)))
+                    (eq_of_heq tail_eq))
+                (eq_of_heq head_eq) (Fintype.complete l))
+          (fun b {as} a_1 h =>
+            List.cons.noConfusion h fun head_eq =>
+              Eq.ndrec (motive := fun b =>
+                [] ≍ as →
+                  Fintype.complete l ≍ List.Mem.tail b a_1 →
+                    ((fun c => c ∘ fun x => i) ∘ a.coordinate) x l = ![a.coordinate x i] l)
+                (fun tail_eq =>
+                  Eq.ndrec (motive := fun {as} =>
+                    ∀ (a_2 : List.Mem l as),
+                      Fintype.complete l ≍ List.Mem.tail ((fun i => i) ⟨0, Nat.le_refl 1⟩) a_2 →
+                        ((fun c => c ∘ fun x => i) ∘ a.coordinate) x l = ![a.coordinate x i] l)
+                    (fun a_2 h =>
+                      List.Mem.casesOn (motive := fun a_3 x_1 =>
+                        [] = a_3 → a_2 ≍ x_1 → ((fun c => c ∘ fun x => i) ∘ a.coordinate) x l = ![a.coordinate x i] l)
+                        a_2 (fun as h => False.elim (noConfusion_of_Nat List.ctorIdx h))
+                        (fun b {as} a_3 h => False.elim (noConfusion_of_Nat List.ctorIdx h)) (Eq.refl [])
+                        (HEq.refl a_2))
+                    (eq_of_heq tail_eq) a_1)
+                (eq_of_heq head_eq))
+          (Eq.refl (List.finRange 1)) (HEq.refl (Fintype.complete l));
+  Eq.mp
+    (congrArg
+      (fun _a =>
+        SpecialTransformations.Section3.GammaParameters.DefinableOverBase { real := S, gamma := ∅ }
+          (fun x => SpecialTransformations.Milestone0.SortTag.rv)
+          (DiamondIntegral.Section4.RVMeasuredCharts.graphOn a.domain _a))
+      he)
+    h
+'DiamondIntegral.Section7.MeasuredRVBounds.coordinate_scalar_definable' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@DiamondIntegral.Section7.MeasuredRVBounds.coordinateRV_graph : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) {S : Set M} {k : ℕ}
+  (a : DiamondIntegral.Section4.RVMeasuredCharts.Chart { real := S, gamma := ∅ } k) (i : Fin k),
+  S.Definable SpecialTransformations.Milestone0.LRV
+    (DiamondIntegral.Section2.rvScalarFunctionGraph
+      (DiamondIntegral.Section7.MeasuredRVBridge.toObject hc a).domain.carrier
+      (DiamondIntegral.Section7.MeasuredRVBounds.coordinateRV a i))
+theorem DiamondIntegral.Section7.MeasuredRVBounds.coordinateRV_graph : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) {S : Set M} {k : ℕ}
+  (a : DiamondIntegral.Section4.RVMeasuredCharts.Chart { real := S, gamma := ∅ } k) (i : Fin k),
+  S.Definable SpecialTransformations.Milestone0.LRV
+    (DiamondIntegral.Section2.rvScalarFunctionGraph
+      (DiamondIntegral.Section7.MeasuredRVBridge.toObject hc a).domain.carrier
+      (DiamondIntegral.Section7.MeasuredRVBounds.coordinateRV a i)) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] hc {S}
+    {k} a i =>
+  let σ := DiamondIntegral.Section4.FiniteTupleBlocks.join 1 a.arity Sum.inl ![Sum.inr 0];
+  have h :=
+    Set.Definable.preimage_comp σ
+      (DiamondIntegral.Section7.MeasuredRVBridge.base_real
+        (DiamondIntegral.Section7.MeasuredRVBounds.coordinate_scalar_definable a i));
+  have hh := fun z =>
+    funext fun l =>
+      of_eq_true
+        (Eq.trans
+          (congrFun'
+            (congrArg Eq
+              (congrArg z (DiamondIntegral.Section4.FiniteTupleBlocks.join_head 1 a.arity Sum.inl ![Sum.inr 0] l)))
+            (z (Sum.inl l)))
+          (eq_self (z (Sum.inl l))));
+  have ht := fun z =>
+    funext fun l =>
+      List.Mem.casesOn (motive := fun a_1 x =>
+        List.finRange 1 = a_1 →
+          Fintype.complete l ≍ x →
+            ((z ∘ σ) ∘ DiamondIntegral.Section4.FiniteTupleBlocks.tailIndex 1 a.arity) l = ![z (Sum.inr 0)] l)
+        (Fintype.complete l)
+        (fun as h =>
+          List.cons.noConfusion h fun head_eq =>
+            Eq.ndrec (motive := fun l =>
+              ∀ (this : l ∈ Fintype.elems),
+                [] ≍ as →
+                  this ≍ List.Mem.head as →
+                    ((z ∘ σ) ∘ DiamondIntegral.Section4.FiniteTupleBlocks.tailIndex 1 a.arity) l = ![z (Sum.inr 0)] l)
+              (fun this tail_eq =>
+                Eq.ndrec (motive := fun as =>
+                  this ≍ List.Mem.head as →
+                    ((z ∘ σ) ∘ DiamondIntegral.Section4.FiniteTupleBlocks.tailIndex 1 a.arity)
+                        ((fun i => i) ⟨0, Nat.le_refl 1⟩) =
+                      ![z (Sum.inr 0)] ((fun i => i) ⟨0, Nat.le_refl 1⟩))
+                  (fun h =>
+                    Eq.mpr
+                      (id
+                        (congrFun'
+                          (congrArg Eq
+                            (congrArg z
+                              (DiamondIntegral.Section4.FiniteTupleBlocks.join_tail 1 a.arity Sum.inl ![Sum.inr 0]
+                                ⟨0, Nat.le_refl 1⟩)))
+                          (![z (Sum.inr 0)] ⟨0, Nat.le_refl 1⟩)))
+                      (Eq.refl (z (![Sum.inr 0] ⟨0, Nat.le_refl 1⟩))))
+                  (eq_of_heq tail_eq))
+              (eq_of_heq head_eq) (Fintype.complete l))
+        (fun b {as} a_1 h =>
+          List.cons.noConfusion h fun head_eq =>
+            Eq.ndrec (motive := fun b =>
+              [] ≍ as →
+                Fintype.complete l ≍ List.Mem.tail b a_1 →
+                  ((z ∘ σ) ∘ DiamondIntegral.Section4.FiniteTupleBlocks.tailIndex 1 a.arity) l = ![z (Sum.inr 0)] l)
+              (fun tail_eq =>
+                Eq.ndrec (motive := fun {as} =>
+                  ∀ (a_2 : List.Mem l as),
+                    Fintype.complete l ≍ List.Mem.tail ((fun i => i) ⟨0, Nat.le_refl 1⟩) a_2 →
+                      ((z ∘ σ) ∘ DiamondIntegral.Section4.FiniteTupleBlocks.tailIndex 1 a.arity) l = ![z (Sum.inr 0)] l)
+                  (fun a_2 h =>
+                    List.Mem.casesOn (motive := fun a_3 x =>
+                      [] = a_3 →
+                        a_2 ≍ x →
+                          ((z ∘ σ) ∘ DiamondIntegral.Section4.FiniteTupleBlocks.tailIndex 1 a.arity) l =
+                            ![z (Sum.inr 0)] l)
+                      a_2 (fun as h => False.elim (noConfusion_of_Nat List.ctorIdx h))
+                      (fun b {as} a_3 h => False.elim (noConfusion_of_Nat List.ctorIdx h)) (Eq.refl []) (HEq.refl a_2))
+                  (eq_of_heq tail_eq) a_1)
+              (eq_of_heq head_eq))
+        (Eq.refl (List.finRange 1)) (HEq.refl (Fintype.complete l));
+  have hset :=
+    Set.ext fun z =>
+      {
+        mp := fun a_1 =>
+          Exists.casesOn a_1 fun u h =>
+            And.casesOn h fun hu right =>
+              And.casesOn right fun hzx hzy =>
+                have hx := hu;
+                id
+                  (Eq.mpr
+                    (id
+                      (congrArg
+                        (fun _a =>
+                          _a ∈ a.domain ∧
+                            ![a.coordinate _a i] =
+                              (z ∘ σ) ∘ DiamondIntegral.Section4.FiniteTupleBlocks.tailIndex 1 a.arity)
+                        (hh z)))
+                    (Eq.mpr
+                      (id (congrArg (fun _a => z ∘ Sum.inl ∈ a.domain ∧ ![a.coordinate (z ∘ Sum.inl) i] = _a) (ht z)))
+                      (have hzx' := Eq.symm hzx;
+                      Eq.mpr (id (congrArg (fun _a => _a ∈ a.domain ∧ ![a.coordinate _a i] = ![z (Sum.inr 0)]) hzx'))
+                        ⟨hx,
+                          Eq.mpr
+                            (id
+                              (congrArg
+                                (fun _a => ![a.coordinate (SpecialTransformations.Section4.rvValues u) i] = ![_a])
+                                (Eq.symm hzy)))
+                            (Eq.mpr
+                              (id
+                                (congrArg
+                                  (fun _a => ![a.coordinate (SpecialTransformations.Section4.rvValues u) i] = ![_a])
+                                  (DiamondIntegral.Section7.MeasuredRVBounds.coordinateRV_val a i u hx)))
+                              (Eq.refl ![a.coordinate (SpecialTransformations.Section4.rvValues u) i]))⟩))),
+        mpr := fun a_1 =>
+          And.casesOn a_1 fun hz1 hz2 =>
+            have hz0 :=
+              congrFun
+                (Eq.mp (congrArg (fun _a => (fun x => ![a.coordinate x i]) (z ∘ Sum.inl) = _a) (ht z))
+                  (Eq.mp
+                    (congrArg
+                      (fun _a =>
+                        (fun x => ![a.coordinate x i]) _a =
+                          (fun g => g ∘ σ) z ∘ DiamondIntegral.Section4.FiniteTupleBlocks.tailIndex 1 a.arity)
+                      (hh z))
+                    hz2))
+                0;
+            let u :=
+              DiamondIntegral.Section7.MeasuredRVBridge.rvTuple (z ∘ Sum.inl)
+                (SpecialTransformations.Section3.GammaParameters.DefinableOverBase.proper a.domain_definable
+                  (z ∘ Sum.inl) (Eq.mp (congrArg (fun _a => _a ∈ a.domain) (hh z)) hz1));
+            have hu := rfl;
+            Exists.intro u
+              ⟨have this := Eq.symm hu ▸ Eq.mp (congrArg (fun _a => _a ∈ a.domain) (hh z)) hz1;
+                this,
+                ⟨hu,
+                  Eq.mpr
+                    (id
+                      (congrArg (fun _a => _a = z (Sum.inr 0))
+                        (DiamondIntegral.Section7.MeasuredRVBounds.coordinateRV_val a i u
+                          (Eq.symm hu ▸ Eq.mp (congrArg (fun _a => _a ∈ a.domain) (hh z)) hz1))))
+                    (Eq.mpr (id (congrArg (fun _a => a.coordinate _a i = z (Sum.inr 0)) hu)) hz0)⟩⟩ };
+  Eq.mpr (id (congrArg (fun _a => S.Definable SpecialTransformations.Milestone0.LRV _a) hset)) h
+'DiamondIntegral.Section7.MeasuredRVBounds.coordinateRV_graph' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@DiamondIntegral.Section7.MeasuredRVBounds.values_doublyBounded : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) {S : Set M} {k : ℕ},
+  M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF00 →
+    DiamondIntegral.Section2.GammaPiecewiseRationalAffineInput →
+      ∀ {κ : Cardinal.{0}},
+        Cardinal.aleph0 ≤ κ →
+          SpecialTransformations.Section3.Saturated M κ →
+            Cardinal.mk ↑S < κ →
+              DiamondIntegral.Section2.NontrivialDefinableGamma { real := S, gamma := ∅ } →
+                ∀ (a : DiamondIntegral.Section4.RVMeasuredCharts.Chart { real := S, gamma := ∅ } k),
+                  DiamondIntegral.Section4.RVMeasuredBounds.DomainBounded a →
+                    DiamondIntegral.Section7.MeasuredRVBounds.NoInfinity a →
+                      DiamondIntegral.Section2.RVValueDoublyBounded
+                        (Set.range (DiamondIntegral.Section7.MeasuredRVBridge.toObject hc a).value)
+theorem DiamondIntegral.Section7.MeasuredRVBounds.values_doublyBounded : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) {S : Set M} {k : ℕ},
+  M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF00 →
+    DiamondIntegral.Section2.GammaPiecewiseRationalAffineInput →
+      ∀ {κ : Cardinal.{0}},
+        Cardinal.aleph0 ≤ κ →
+          SpecialTransformations.Section3.Saturated M κ →
+            Cardinal.mk ↑S < κ →
+              DiamondIntegral.Section2.NontrivialDefinableGamma { real := S, gamma := ∅ } →
+                ∀ (a : DiamondIntegral.Section4.RVMeasuredCharts.Chart { real := S, gamma := ∅ } k),
+                  DiamondIntegral.Section4.RVMeasuredBounds.DomainBounded a →
+                    DiamondIntegral.Section7.MeasuredRVBounds.NoInfinity a →
+                      DiamondIntegral.Section2.RVValueDoublyBounded
+                        (Set.range (DiamondIntegral.Section7.MeasuredRVBridge.toObject hc a).value) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] hc {S}
+    {k} h00 linear {κ} hκ hs hsmall hΓ a hr hnz =>
+  have hU :=
+    have h := DiamondIntegral.Section7.MeasuredRVBridge.base_real a.domain_definable;
+    have he :=
+      Set.ext fun x =>
+        { mp := fun a_1 => Exists.casesOn a_1 fun u h => And.casesOn h fun hu right => right ▸ hu,
+          mpr := fun hx =>
+            Exists.intro
+              (DiamondIntegral.Section7.MeasuredRVBridge.rvTuple x
+                (SpecialTransformations.Section3.GammaParameters.DefinableOverBase.proper a.domain_definable x hx))
+              ⟨hx, rfl⟩ };
+    Eq.mpr (id (congrArg (fun _a => S.Definable SpecialTransformations.Milestone0.LRV _a) he)) h;
+  have hb := fun i =>
+    DiamondIntegral.Section2.lemma_2_41 hc h00 linear hκ hs S hsmall hΓ
+      (DiamondIntegral.Section7.MeasuredRVBridge.toObject hc a).domain.carrier hU
+      (DiamondIntegral.Section7.MeasuredRVBounds.coordinateRV a i)
+      (DiamondIntegral.Section7.MeasuredRVBounds.coordinateRV_graph hc a i)
+      (DiamondIntegral.Section7.MeasuredRVBounds.domain_doublyBounded hc a hr hnz);
+  (fun γ hγ =>
+      Exists.casesOn (Finite.exists_le γ) fun β hβ =>
+        Exists.intro β fun t a_1 =>
+          Exists.casesOn (motive := fun x =>
+            ∀ (i : Fin k),
+              ↑β⁻¹ ≤ SpecialTransformations.Section3.Values.vrv (t i) ∧
+                SpecialTransformations.Section3.Values.vrv (t i) ≤ ↑β)
+            a_1 fun u h =>
+            Eq.ndrec (motive := fun t =>
+              ∀ (i : Fin k),
+                ↑β⁻¹ ≤ SpecialTransformations.Section3.Values.vrv (t i) ∧
+                  SpecialTransformations.Section3.Values.vrv (t i) ≤ ↑β)
+              (fun i =>
+                have hx := u.property;
+                have h := hγ i (↑u) u.property;
+                have hv :=
+                  Subtype.ext
+                    (Eq.mpr
+                      (id
+                        (congrArg
+                          (fun _a => ↑((DiamondIntegral.Section7.MeasuredRVBridge.toObject hc a).value u i) = _a)
+                          (DiamondIntegral.Section7.MeasuredRVBounds.coordinateRV_val a i (↑u) hx)))
+                      (Eq.refl ↑((DiamondIntegral.Section7.MeasuredRVBridge.toObject hc a).value u i)));
+                Eq.mpr
+                  (id
+                    (congrArg
+                      (fun _a =>
+                        ↑β⁻¹ ≤ SpecialTransformations.Section3.Values.vrv _a ∧
+                          SpecialTransformations.Section3.Values.vrv _a ≤ ↑β)
+                      hv))
+                  ⟨le_trans (inv_le_inv_iff.mpr (hβ i)) h.left, le_trans h.right (hβ i)⟩)
+              h)
+    (fun i => Classical.choose (hb i)) fun i => Classical.choose_spec (hb i)
+'DiamondIntegral.Section7.MeasuredRVBounds.values_doublyBounded' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@DiamondIntegral.Section7.MeasuredRVBounds.toMeasured_doublyBounded : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) {S : Set M} {k : ℕ},
+  M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF00 →
+    DiamondIntegral.Section2.GammaPiecewiseRationalAffineInput →
+      ∀ {κ : Cardinal.{0}},
+        Cardinal.aleph0 ≤ κ →
+          SpecialTransformations.Section3.Saturated M κ →
+            Cardinal.mk ↑S < κ →
+              DiamondIntegral.Section2.NontrivialDefinableGamma { real := S, gamma := ∅ } →
+                ∀ (a : DiamondIntegral.Section4.RVMeasuredCharts.Chart { real := S, gamma := ∅ } k),
+                  DiamondIntegral.Section4.RVMeasuredBounds.DomainBounded a →
+                    DiamondIntegral.Section7.MeasuredRVBounds.NoInfinity a →
+                      (DiamondIntegral.Section7.MeasuredRVBridge.toMeasured hc a).doublyBounded
+theorem DiamondIntegral.Section7.MeasuredRVBounds.toMeasured_doublyBounded : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical) {S : Set M} {k : ℕ},
+  M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF00 →
+    DiamondIntegral.Section2.GammaPiecewiseRationalAffineInput →
+      ∀ {κ : Cardinal.{0}},
+        Cardinal.aleph0 ≤ κ →
+          SpecialTransformations.Section3.Saturated M κ →
+            Cardinal.mk ↑S < κ →
+              DiamondIntegral.Section2.NontrivialDefinableGamma { real := S, gamma := ∅ } →
+                ∀ (a : DiamondIntegral.Section4.RVMeasuredCharts.Chart { real := S, gamma := ∅ } k),
+                  DiamondIntegral.Section4.RVMeasuredBounds.DomainBounded a →
+                    DiamondIntegral.Section7.MeasuredRVBounds.NoInfinity a →
+                      (DiamondIntegral.Section7.MeasuredRVBridge.toMeasured hc a).doublyBounded :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] hc {S}
+    {k} h00 linear {κ} hκ hs hsmall hΓ a hr hnz =>
+  ⟨DiamondIntegral.Section7.MeasuredRVBounds.domain_doublyBounded hc a hr hnz,
+    DiamondIntegral.Section7.MeasuredRVBounds.values_doublyBounded hc h00 linear hκ hs hsmall hΓ a hr hnz⟩
+'DiamondIntegral.Section7.MeasuredRVBounds.toMeasured_doublyBounded' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@DiamondIntegral.Section7.MeasuredRVBridge.noNames_real : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (hc : CanonicalStructure.IsCanonical) {S : Set M}
+  {Q : SpecialTransformations.DefinableGeometry.Space SpecialTransformations.Milestone0.LRV M} {A : Set Q.Carrier},
+  DiamondIntegral.Section3.GammaGroundDefinable hc { real := S, gamma := ∅ } Q A → Q.Definable S A
+theorem DiamondIntegral.Section7.MeasuredRVBridge.noNames_real : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (hc : CanonicalStructure.IsCanonical) {S : Set M}
+  {Q : SpecialTransformations.DefinableGeometry.Space SpecialTransformations.Milestone0.LRV M} {A : Set Q.Carrier},
+  DiamondIntegral.Section3.GammaGroundDefinable hc { real := S, gamma := ∅ } Q A → Q.Definable S A :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] hc {S}
+    {Q} {A} hA =>
+  Exists.casesOn hA fun k h =>
+    Exists.casesOn h fun γ h =>
+      And.casesOn h fun hγ hA =>
+        Nat.casesAuxOn (motive := fun a => k = a → Q.Definable S A) k
+          (fun h =>
+            Eq.ndrec (motive := fun k =>
+              ∀ (γ : Fin k → SpecialTransformations.Section3.Values.Gamma),
+                (∀ (i : Fin k), γ i ∈ { real := S, gamma := ∅ }.gamma) →
+                  DiamondIntegral.Section3.ImaginaryDefinable
+                      ((DiamondIntegral.Section3.volumeGammaSpace hc).power (Fin k)) γ Q { real := S, gamma := ∅ }.real
+                      A →
+                    Q.Definable S A)
+              (fun γ hγ hA =>
+                let c := ⟨fun x => x.1.elim0, fun i => Fin.elim0 i⟩;
+                have hp := funext fun i => Fin.elim0 i;
+                have h := DiamondIntegral.Section3.ImaginaryDefinable.over_real_code hA c hp;
+                have hS :=
+                  have he :=
+                    Set.ext fun x =>
+                      Eq.mpr
+                        (id
+                          (Eq.trans
+                            (Eq.trans
+                              (congr (congrArg Iff DiamondIntegral.Section7.MeasuredRVBridge.noNames_real._simp_1_1)
+                                (DiamondIntegral.Section7.MeasuredRVBridge.noNames_real._simp_1_2 x))
+                              (iff_false (∃ y, ↑c y = x)))
+                            DiamondIntegral.Section7.MeasuredRVBridge.noNames_real._simp_1_3))
+                        fun y => Fin.elim0 y.1;
+                  id
+                    (Eq.mpr (id (congrArg (fun _a => S ∪ _a = S) he))
+                      (Eq.mpr (id (congrArg (fun _a => _a = S) (Set.union_empty S))) (Eq.refl S)));
+                Eq.mp (congrArg (fun _a => Q.Definable _a A) hS) h)
+              (Eq.symm h) γ hγ hA)
+          (fun k_1 h =>
+            Eq.ndrec (motive := fun k =>
+              ∀ (γ : Fin k → SpecialTransformations.Section3.Values.Gamma),
+                (∀ (i : Fin k), γ i ∈ { real := S, gamma := ∅ }.gamma) →
+                  DiamondIntegral.Section3.ImaginaryDefinable
+                      ((DiamondIntegral.Section3.volumeGammaSpace hc).power (Fin k)) γ Q { real := S, gamma := ∅ }.real
+                      A →
+                    Q.Definable S A)
+              (fun γ hγ hA => False.elim (hγ 0)) (Eq.symm h) γ hγ hA)
+          (Eq.refl k)
+'DiamondIntegral.Section7.MeasuredRVBridge.noNames_real' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.MeasuredRVBridge.toDefSet : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        {S : Set M} →
+          {Q : SpecialTransformations.DefinableGeometry.Space SpecialTransformations.Milestone0.LRV M} →
+            DiamondIntegral.Section3.GammaGroundDefSet hc { real := S, gamma := ∅ } Q →
+              SpecialTransformations.DefinableGeometry.DefSet Q S
+def DiamondIntegral.Section7.MeasuredRVBridge.toDefSet : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        {S : Set M} →
+          {Q : SpecialTransformations.DefinableGeometry.Space SpecialTransformations.Milestone0.LRV M} →
+            DiamondIntegral.Section3.GammaGroundDefSet hc { real := S, gamma := ∅ } Q →
+              SpecialTransformations.DefinableGeometry.DefSet Q S :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] hc {S}
+    {Q} A =>
+  { carrier := A.carrier, definable := ⋯ }
+'DiamondIntegral.Section7.MeasuredRVBridge.toDefSet' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.MeasuredRVBridge.toMap : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        {S : Set M} →
+          {Q R : SpecialTransformations.DefinableGeometry.Space SpecialTransformations.Milestone0.LRV M} →
+            {A : DiamondIntegral.Section3.GammaGroundDefSet hc { real := S, gamma := ∅ } Q} →
+              {D : DiamondIntegral.Section3.GammaGroundDefSet hc { real := S, gamma := ∅ } R} →
+                DiamondIntegral.Section3.GammaGroundMap A D →
+                  SpecialTransformations.DefinableGeometry.Map (DiamondIntegral.Section7.MeasuredRVBridge.toDefSet hc A)
+                    (DiamondIntegral.Section7.MeasuredRVBridge.toDefSet hc D)
+def DiamondIntegral.Section7.MeasuredRVBridge.toMap : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        {S : Set M} →
+          {Q R : SpecialTransformations.DefinableGeometry.Space SpecialTransformations.Milestone0.LRV M} →
+            {A : DiamondIntegral.Section3.GammaGroundDefSet hc { real := S, gamma := ∅ } Q} →
+              {D : DiamondIntegral.Section3.GammaGroundDefSet hc { real := S, gamma := ∅ } R} →
+                DiamondIntegral.Section3.GammaGroundMap A D →
+                  SpecialTransformations.DefinableGeometry.Map (DiamondIntegral.Section7.MeasuredRVBridge.toDefSet hc A)
+                    (DiamondIntegral.Section7.MeasuredRVBridge.toDefSet hc D) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] hc {S}
+    {Q R} {A} {D} f =>
+  { toFun := fun a => ⟨↑(f.toFun ⟨↑a, ⋯⟩), ⋯⟩, graph_definable := ⋯ }
+'DiamondIntegral.Section7.MeasuredRVBridge.toMap' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.MeasuredRVBridge.toMap_val : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (hc : CanonicalStructure.IsCanonical) {S : Set M}
+  {Q R : SpecialTransformations.DefinableGeometry.Space SpecialTransformations.Milestone0.LRV M}
+  {A : DiamondIntegral.Section3.GammaGroundDefSet hc { real := S, gamma := ∅ } Q}
+  {D : DiamondIntegral.Section3.GammaGroundDefSet hc { real := S, gamma := ∅ } R}
+  (f : DiamondIntegral.Section3.GammaGroundMap A D)
+  (a : ↑(DiamondIntegral.Section7.MeasuredRVBridge.toDefSet hc A).carrier),
+  ↑((DiamondIntegral.Section7.MeasuredRVBridge.toMap hc f).toFun a) = ↑(f.toFun ⟨↑a, ⋯⟩)
+@[defeq] theorem DiamondIntegral.Section7.MeasuredRVBridge.toMap_val : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (hc : CanonicalStructure.IsCanonical) {S : Set M}
+  {Q R : SpecialTransformations.DefinableGeometry.Space SpecialTransformations.Milestone0.LRV M}
+  {A : DiamondIntegral.Section3.GammaGroundDefSet hc { real := S, gamma := ∅ } Q}
+  {D : DiamondIntegral.Section3.GammaGroundDefSet hc { real := S, gamma := ∅ } R}
+  (f : DiamondIntegral.Section3.GammaGroundMap A D)
+  (a : ↑(DiamondIntegral.Section7.MeasuredRVBridge.toDefSet hc A).carrier),
+  ↑((DiamondIntegral.Section7.MeasuredRVBridge.toMap hc f).toFun a) = ↑(f.toFun ⟨↑a, ⋯⟩) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] hc {S}
+    {Q R} {A} {D} f a =>
+  rfl
+'DiamondIntegral.Section7.MeasuredRVBridge.toMap_val' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.MeasuredRVBridge.base_real : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set M} {n : ℕ}
+  {sn : Fin n → SpecialTransformations.Milestone0.SortTag} {A : Set (Fin n → M)},
+  SpecialTransformations.Section3.GammaParameters.DefinableOverBase { real := S, gamma := ∅ } sn A →
+    S.Definable SpecialTransformations.Milestone0.LRV A
+theorem DiamondIntegral.Section7.MeasuredRVBridge.base_real : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set M} {n : ℕ}
+  {sn : Fin n → SpecialTransformations.Milestone0.SortTag} {A : Set (Fin n → M)},
+  SpecialTransformations.Section3.GammaParameters.DefinableOverBase { real := S, gamma := ∅ } sn A →
+    S.Definable SpecialTransformations.Milestone0.LRV A :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {S} {n}
+    {sn} {A} hA =>
+  Exists.casesOn hA fun k h =>
+    Exists.casesOn h fun γ h =>
+      And.casesOn h fun hγ hA =>
+        Nat.casesAuxOn (motive := fun a => k = a → S.Definable SpecialTransformations.Milestone0.LRV A) k
+          (fun h =>
+            Eq.ndrec (motive := fun k =>
+              ∀ (γ : Fin k → SpecialTransformations.Section3.Values.Gamma),
+                (∀ (i : Fin k), γ i ∈ { real := S, gamma := ∅ }.gamma) →
+                  SpecialTransformations.Section3.GammaParameters.DefinableWith { real := S, gamma := ∅ }.real γ sn A →
+                    S.Definable SpecialTransformations.Milestone0.LRV A)
+              (fun γ hγ hA =>
+                have hγ0 := funext fun i => Fin.elim0 i;
+                Eq.ndrec (motive := fun γ =>
+                  (∀ (i : Fin 0), γ i ∈ { real := S, gamma := ∅ }.gamma) →
+                    SpecialTransformations.Section3.GammaParameters.DefinableWith { real := S, gamma := ∅ }.real γ sn
+                        A →
+                      S.Definable SpecialTransformations.Milestone0.LRV A)
+                  (fun hγ hA =>
+                    SpecialTransformations.Section3.DefinableOver.raw_definable
+                      ((SpecialTransformations.Section3.GammaParameters.with_zero_iff S Fin.elim0 sn A).mp hA))
+                  (Eq.symm hγ0) hγ hA)
+              (Eq.symm h) γ hγ hA)
+          (fun k_1 h =>
+            Eq.ndrec (motive := fun k =>
+              ∀ (γ : Fin k → SpecialTransformations.Section3.Values.Gamma),
+                (∀ (i : Fin k), γ i ∈ { real := S, gamma := ∅ }.gamma) →
+                  SpecialTransformations.Section3.GammaParameters.DefinableWith { real := S, gamma := ∅ }.real γ sn A →
+                    S.Definable SpecialTransformations.Milestone0.LRV A)
+              (fun γ hγ hA => False.elim (hγ 0)) (Eq.symm h) γ hγ hA)
+          (Eq.refl k)
+'DiamondIntegral.Section7.MeasuredRVBridge.base_real' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.MeasuredRVBridge.rawDefSet : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      CanonicalStructure.IsCanonical →
+        {S : Set M} →
+          {n : ℕ} →
+            (I : Set (Fin n → M)) →
+              SpecialTransformations.Section3.GammaParameters.DefinableOverBase { real := S, gamma := ∅ }
+                  (fun x => SpecialTransformations.Milestone0.SortTag.rv) I →
+                SpecialTransformations.DefinableGeometry.DefSet (SpecialTransformations.Section4.rawRVSpace n) S
+def DiamondIntegral.Section7.MeasuredRVBridge.rawDefSet : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      CanonicalStructure.IsCanonical →
+        {S : Set M} →
+          {n : ℕ} →
+            (I : Set (Fin n → M)) →
+              SpecialTransformations.Section3.GammaParameters.DefinableOverBase { real := S, gamma := ∅ }
+                  (fun x => SpecialTransformations.Milestone0.SortTag.rv) I →
+                SpecialTransformations.DefinableGeometry.DefSet (SpecialTransformations.Section4.rawRVSpace n) S :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] hc {S}
+    {n} I hI =>
+  DiamondIntegral.Section7.MeasuredRVBridge.toDefSet hc (DiamondIntegral.Section4.Section3RVCodeBridge.ofRaw I hI)
+'DiamondIntegral.Section7.MeasuredRVBridge.rawDefSet' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.MeasuredRVBridge.mem_rawDefSet : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (hc : CanonicalStructure.IsCanonical) {S : Set M} {n : ℕ}
+  (I : Set (Fin n → M))
+  (hI :
+    SpecialTransformations.Section3.GammaParameters.DefinableOverBase { real := S, gamma := ∅ }
+      (fun x => SpecialTransformations.Milestone0.SortTag.rv) I)
+  (a : Fin n → CanonicalRV.RVSort M),
+  a ∈ (DiamondIntegral.Section7.MeasuredRVBridge.rawDefSet hc I hI).carrier ↔
+    SpecialTransformations.Section4.rvValues a ∈ I
+theorem DiamondIntegral.Section7.MeasuredRVBridge.mem_rawDefSet : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (hc : CanonicalStructure.IsCanonical) {S : Set M} {n : ℕ}
+  (I : Set (Fin n → M))
+  (hI :
+    SpecialTransformations.Section3.GammaParameters.DefinableOverBase { real := S, gamma := ∅ }
+      (fun x => SpecialTransformations.Milestone0.SortTag.rv) I)
+  (a : Fin n → CanonicalRV.RVSort M),
+  a ∈ (DiamondIntegral.Section7.MeasuredRVBridge.rawDefSet hc I hI).carrier ↔
+    SpecialTransformations.Section4.rvValues a ∈ I :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] hc {S}
+    {n} I hI a =>
+  Iff.rfl
+'DiamondIntegral.Section7.MeasuredRVBridge.mem_rawDefSet' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.MeasuredRVBridge.decode_rv : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {n : ℕ}
+  (z : ↑(SpecialTransformations.Section4.rawRVSpace n).domain),
+  SpecialTransformations.Section4.rvValues ((SpecialTransformations.Section4.rawRVSpace n).decode z) = ↑z
+theorem DiamondIntegral.Section7.MeasuredRVBridge.decode_rv : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {n : ℕ}
+  (z : ↑(SpecialTransformations.Section4.rawRVSpace n).domain),
+  SpecialTransformations.Section4.rvValues ((SpecialTransformations.Section4.rawRVSpace n).decode z) = ↑z :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {n} z =>
+  SpecialTransformations.DefinableGeometry.Space.ofEmbedding_decode SpecialTransformations.Section4.rvValues
+    SpecialTransformations.Section4.rvValues_injective
+    (SpecialTransformations.Section4.values_range_definable✝ SpecialTransformations.Milestone0.SortTag.rv) z
+'DiamondIntegral.Section7.MeasuredRVBridge.decode_rv' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.MeasuredRVBridge.rvTuple : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    {k : ℕ} →
+      (x : Fin k → M) → (∀ (i : Fin k), SpecialTransformations.Milestone0.iRV (x i)) → Fin k → CanonicalRV.RVSort M
+def DiamondIntegral.Section7.MeasuredRVBridge.rvTuple : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    {k : ℕ} →
+      (x : Fin k → M) → (∀ (i : Fin k), SpecialTransformations.Milestone0.iRV (x i)) → Fin k → CanonicalRV.RVSort M :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] {k} x hx i => ⟨x i, ⋯⟩
+'DiamondIntegral.Section7.MeasuredRVBridge.rvTuple' depends on axioms: [propext]
+@DiamondIntegral.Section7.MeasuredRVBridge.rvValues_rvTuple : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] {k : ℕ} (x : Fin k → M)
+  (hx : ∀ (i : Fin k), SpecialTransformations.Milestone0.iRV (x i)),
+  SpecialTransformations.Section4.rvValues (DiamondIntegral.Section7.MeasuredRVBridge.rvTuple x hx) = x
+@[defeq] theorem DiamondIntegral.Section7.MeasuredRVBridge.rvValues_rvTuple : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] {k : ℕ} (x : Fin k → M)
+  (hx : ∀ (i : Fin k), SpecialTransformations.Milestone0.iRV (x i)),
+  SpecialTransformations.Section4.rvValues (DiamondIntegral.Section7.MeasuredRVBridge.rvTuple x hx) = x :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] {k} x hx => rfl
+'DiamondIntegral.Section7.MeasuredRVBridge.rvValues_rvTuple' depends on axioms: [propext]
+@DiamondIntegral.Section7.MeasuredRVBridge.rawMap : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        {S : Set M} →
+          {n k : ℕ} →
+            (I : Set (Fin n → M)) →
+              (hI :
+                  SpecialTransformations.Section3.GammaParameters.DefinableOverBase { real := S, gamma := ∅ }
+                    (fun x => SpecialTransformations.Milestone0.SortTag.rv) I) →
+                (F : (Fin n → M) → Fin k → M) →
+                  SpecialTransformations.Section3.GammaParameters.DefinableOverBase { real := S, gamma := ∅ }
+                      (fun x => SpecialTransformations.Milestone0.SortTag.rv)
+                      (DiamondIntegral.Section4.RVMeasuredCharts.graphOn I F) →
+                    (∀ x ∈ I, ∀ (i : Fin k), SpecialTransformations.Milestone0.iRV (F x i)) →
+                      SpecialTransformations.DefinableGeometry.Map
+                        (DiamondIntegral.Section7.MeasuredRVBridge.rawDefSet hc I hI)
+                        (SpecialTransformations.DefinableGeometry.DefSet.univ
+                          (SpecialTransformations.Section4.rawRVSpace k) S)
+def DiamondIntegral.Section7.MeasuredRVBridge.rawMap : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        {S : Set M} →
+          {n k : ℕ} →
+            (I : Set (Fin n → M)) →
+              (hI :
+                  SpecialTransformations.Section3.GammaParameters.DefinableOverBase { real := S, gamma := ∅ }
+                    (fun x => SpecialTransformations.Milestone0.SortTag.rv) I) →
+                (F : (Fin n → M) → Fin k → M) →
+                  SpecialTransformations.Section3.GammaParameters.DefinableOverBase { real := S, gamma := ∅ }
+                      (fun x => SpecialTransformations.Milestone0.SortTag.rv)
+                      (DiamondIntegral.Section4.RVMeasuredCharts.graphOn I F) →
+                    (∀ x ∈ I, ∀ (i : Fin k), SpecialTransformations.Milestone0.iRV (F x i)) →
+                      SpecialTransformations.DefinableGeometry.Map
+                        (DiamondIntegral.Section7.MeasuredRVBridge.rawDefSet hc I hI)
+                        (SpecialTransformations.DefinableGeometry.DefSet.univ
+                          (SpecialTransformations.Section4.rawRVSpace k) S) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] hc {S}
+    {n k} I hI F hF hrv =>
+  {
+    toFun := fun a =>
+      ⟨DiamondIntegral.Section7.MeasuredRVBridge.rvTuple (F (SpecialTransformations.Section4.rvValues ↑a)) ⋯, ⋯⟩,
+    graph_definable := ⋯ }
+'DiamondIntegral.Section7.MeasuredRVBridge.rawMap' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.MeasuredRVBridge.rawForm : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        {S : Set M} →
+          {n : ℕ} →
+            (I : Set (Fin n → M)) →
+              (hI :
+                  SpecialTransformations.Section3.GammaParameters.DefinableOverBase { real := S, gamma := ∅ }
+                    (fun x => SpecialTransformations.Milestone0.SortTag.rv) I) →
+                (μ : (Fin n → M) → SpecialTransformations.Section3.Values.Gamma) →
+                  DiamondIntegral.Section4.RVVolumeMaps.VolumeDefinable { real := S, gamma := ∅ } I μ →
+                    SpecialTransformations.DefinableGeometry.Map
+                      (DiamondIntegral.Section7.MeasuredRVBridge.rawDefSet hc I hI)
+                      (SpecialTransformations.DefinableGeometry.DefSet.univ
+                        DiamondIntegral.Section6.rawGammaPresentation S)
+def DiamondIntegral.Section7.MeasuredRVBridge.rawForm : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        {S : Set M} →
+          {n : ℕ} →
+            (I : Set (Fin n → M)) →
+              (hI :
+                  SpecialTransformations.Section3.GammaParameters.DefinableOverBase { real := S, gamma := ∅ }
+                    (fun x => SpecialTransformations.Milestone0.SortTag.rv) I) →
+                (μ : (Fin n → M) → SpecialTransformations.Section3.Values.Gamma) →
+                  DiamondIntegral.Section4.RVVolumeMaps.VolumeDefinable { real := S, gamma := ∅ } I μ →
+                    SpecialTransformations.DefinableGeometry.Map
+                      (DiamondIntegral.Section7.MeasuredRVBridge.rawDefSet hc I hI)
+                      (SpecialTransformations.DefinableGeometry.DefSet.univ
+                        DiamondIntegral.Section6.rawGammaPresentation S) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] hc {S}
+    {n} I hI μ hμ =>
+  { toFun := fun a => ⟨μ (SpecialTransformations.Section4.rvValues ↑a), ⋯⟩, graph_definable := ⋯ }
+'DiamondIntegral.Section7.MeasuredRVBridge.rawForm' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.MeasuredRVBridge.toObject : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      CanonicalStructure.IsCanonical →
+        {S : Set M} →
+          {k : ℕ} →
+            DiamondIntegral.Section4.RVMeasuredCharts.Chart { real := S, gamma := ∅ } k →
+              SpecialTransformations.Section4.RVObject S k
+def DiamondIntegral.Section7.MeasuredRVBridge.toObject : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      CanonicalStructure.IsCanonical →
+        {S : Set M} →
+          {k : ℕ} →
+            DiamondIntegral.Section4.RVMeasuredCharts.Chart { real := S, gamma := ∅ } k →
+              SpecialTransformations.Section4.RVObject S k :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] hc {S}
+    {k} a =>
+  { arity := a.arity, domain := DiamondIntegral.Section7.MeasuredRVBridge.rawDefSet hc a.domain ⋯,
+    volume := DiamondIntegral.Section7.MeasuredRVBridge.rawMap hc a.domain ⋯ a.coordinate ⋯ ⋯ }
+'DiamondIntegral.Section7.MeasuredRVBridge.toObject' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.MeasuredRVBridge.toObject_value : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (hc : CanonicalStructure.IsCanonical) {S : Set M} {k : ℕ}
+  (a : DiamondIntegral.Section4.RVMeasuredCharts.Chart { real := S, gamma := ∅ } k)
+  (x : ↑(DiamondIntegral.Section7.MeasuredRVBridge.toObject hc a).domain.carrier),
+  SpecialTransformations.Section4.rvValues ((DiamondIntegral.Section7.MeasuredRVBridge.toObject hc a).value x) =
+    a.coordinate (SpecialTransformations.Section4.rvValues ↑x)
+@[defeq] theorem DiamondIntegral.Section7.MeasuredRVBridge.toObject_value : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (hc : CanonicalStructure.IsCanonical) {S : Set M} {k : ℕ}
+  (a : DiamondIntegral.Section4.RVMeasuredCharts.Chart { real := S, gamma := ∅ } k)
+  (x : ↑(DiamondIntegral.Section7.MeasuredRVBridge.toObject hc a).domain.carrier),
+  SpecialTransformations.Section4.rvValues ((DiamondIntegral.Section7.MeasuredRVBridge.toObject hc a).value x) =
+    a.coordinate (SpecialTransformations.Section4.rvValues ↑x) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] hc {S}
+    {k} a x =>
+  rfl
+'DiamondIntegral.Section7.MeasuredRVBridge.toObject_value' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.MeasuredRVBridge.toObject_finite : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (hc : CanonicalStructure.IsCanonical) {S : Set M} {k : ℕ}
+  (a : DiamondIntegral.Section4.RVMeasuredCharts.Chart { real := S, gamma := ∅ } k),
+  (DiamondIntegral.Section7.MeasuredRVBridge.toObject hc a).volume.FiniteFibres
+theorem DiamondIntegral.Section7.MeasuredRVBridge.toObject_finite : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (hc : CanonicalStructure.IsCanonical) {S : Set M} {k : ℕ}
+  (a : DiamondIntegral.Section4.RVMeasuredCharts.Chart { real := S, gamma := ∅ } k),
+  (DiamondIntegral.Section7.MeasuredRVBridge.toObject hc a).volume.FiniteFibres :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] hc {S}
+    {k} a t =>
+  Set.Finite.of_finite_image
+    (Set.Finite.subset (a.finite_fibres (SpecialTransformations.Section4.rvValues ↑t)) fun ⦃u⦄ a_1 =>
+      Exists.casesOn a_1 fun x h =>
+        And.casesOn h fun hx right =>
+          right ▸
+            ⟨x.property,
+              have this := congrArg (fun y => SpecialTransformations.Section4.rvValues ↑y) hx;
+              this⟩)
+    fun ⦃x⦄ a_1 ⦃y⦄ a_2 h => Subtype.ext (SpecialTransformations.Section4.rvValues_injective h)
+'DiamondIntegral.Section7.MeasuredRVBridge.toObject_finite' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.MeasuredRVBridge.toMeasured : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      CanonicalStructure.IsCanonical →
+        {S : Set M} →
+          {k : ℕ} →
+            DiamondIntegral.Section4.RVMeasuredCharts.Chart { real := S, gamma := ∅ } k →
+              DiamondIntegral.Section6.MeasuredRVObject S k
+def DiamondIntegral.Section7.MeasuredRVBridge.toMeasured : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      CanonicalStructure.IsCanonical →
+        {S : Set M} →
+          {k : ℕ} →
+            DiamondIntegral.Section4.RVMeasuredCharts.Chart { real := S, gamma := ∅ } k →
+              DiamondIntegral.Section6.MeasuredRVObject S k :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] hc {S}
+    {k} a =>
+  { object := DiamondIntegral.Section7.MeasuredRVBridge.toObject hc a, finiteVolume := ⋯, nonzero := ⋯,
+    form := DiamondIntegral.Section7.MeasuredRVBridge.rawForm hc a.domain ⋯ a.volume ⋯ }
+'DiamondIntegral.Section7.MeasuredRVBridge.toMeasured' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.MeasuredRVBridge.rawMapInto : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        {S : Set M} →
+          {n m : ℕ} →
+            (I : Set (Fin n → M)) →
+              (hI :
+                  SpecialTransformations.Section3.GammaParameters.DefinableOverBase { real := S, gamma := ∅ }
+                    (fun x => SpecialTransformations.Milestone0.SortTag.rv) I) →
+                (J : Set (Fin m → M)) →
+                  (hJ :
+                      SpecialTransformations.Section3.GammaParameters.DefinableOverBase { real := S, gamma := ∅ }
+                        (fun x => SpecialTransformations.Milestone0.SortTag.rv) J) →
+                    (F : (Fin n → M) → Fin m → M) →
+                      SpecialTransformations.Section3.GammaParameters.DefinableOverBase { real := S, gamma := ∅ }
+                          (fun x => SpecialTransformations.Milestone0.SortTag.rv)
+                          (DiamondIntegral.Section4.RVMeasuredCharts.graphOn I F) →
+                        (∀ x ∈ I, F x ∈ J) →
+                          SpecialTransformations.DefinableGeometry.Map
+                            (DiamondIntegral.Section7.MeasuredRVBridge.rawDefSet hc I hI)
+                            (DiamondIntegral.Section7.MeasuredRVBridge.rawDefSet hc J hJ)
+def DiamondIntegral.Section7.MeasuredRVBridge.rawMapInto : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        {S : Set M} →
+          {n m : ℕ} →
+            (I : Set (Fin n → M)) →
+              (hI :
+                  SpecialTransformations.Section3.GammaParameters.DefinableOverBase { real := S, gamma := ∅ }
+                    (fun x => SpecialTransformations.Milestone0.SortTag.rv) I) →
+                (J : Set (Fin m → M)) →
+                  (hJ :
+                      SpecialTransformations.Section3.GammaParameters.DefinableOverBase { real := S, gamma := ∅ }
+                        (fun x => SpecialTransformations.Milestone0.SortTag.rv) J) →
+                    (F : (Fin n → M) → Fin m → M) →
+                      SpecialTransformations.Section3.GammaParameters.DefinableOverBase { real := S, gamma := ∅ }
+                          (fun x => SpecialTransformations.Milestone0.SortTag.rv)
+                          (DiamondIntegral.Section4.RVMeasuredCharts.graphOn I F) →
+                        (∀ x ∈ I, F x ∈ J) →
+                          SpecialTransformations.DefinableGeometry.Map
+                            (DiamondIntegral.Section7.MeasuredRVBridge.rawDefSet hc I hI)
+                            (DiamondIntegral.Section7.MeasuredRVBridge.rawDefSet hc J hJ) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] hc {S}
+    {n m} I hI J hJ F hF hmaps =>
+  {
+    toFun := fun a =>
+      ⟨DiamondIntegral.Section7.MeasuredRVBridge.rvTuple (F (SpecialTransformations.Section4.rvValues ↑a)) ⋯, ⋯⟩,
+    graph_definable := ⋯ }
+'DiamondIntegral.Section7.MeasuredRVBridge.rawMapInto' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.MeasuredRVBridge.rawMapInto_val : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (hc : CanonicalStructure.IsCanonical) {S : Set M}
+  {n m : ℕ} (I : Set (Fin n → M))
+  (hI :
+    SpecialTransformations.Section3.GammaParameters.DefinableOverBase { real := S, gamma := ∅ }
+      (fun x => SpecialTransformations.Milestone0.SortTag.rv) I)
+  (J : Set (Fin m → M))
+  (hJ :
+    SpecialTransformations.Section3.GammaParameters.DefinableOverBase { real := S, gamma := ∅ }
+      (fun x => SpecialTransformations.Milestone0.SortTag.rv) J)
+  (F : (Fin n → M) → Fin m → M)
+  (hF :
+    SpecialTransformations.Section3.GammaParameters.DefinableOverBase { real := S, gamma := ∅ }
+      (fun x => SpecialTransformations.Milestone0.SortTag.rv) (DiamondIntegral.Section4.RVMeasuredCharts.graphOn I F))
+  (hmaps : ∀ x ∈ I, F x ∈ J) (a : ↑(DiamondIntegral.Section7.MeasuredRVBridge.rawDefSet hc I hI).carrier),
+  SpecialTransformations.Section4.rvValues
+      ↑((DiamondIntegral.Section7.MeasuredRVBridge.rawMapInto hc I hI J hJ F hF hmaps).toFun a) =
+    F (SpecialTransformations.Section4.rvValues ↑a)
+@[defeq] theorem DiamondIntegral.Section7.MeasuredRVBridge.rawMapInto_val : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (hc : CanonicalStructure.IsCanonical) {S : Set M}
+  {n m : ℕ} (I : Set (Fin n → M))
+  (hI :
+    SpecialTransformations.Section3.GammaParameters.DefinableOverBase { real := S, gamma := ∅ }
+      (fun x => SpecialTransformations.Milestone0.SortTag.rv) I)
+  (J : Set (Fin m → M))
+  (hJ :
+    SpecialTransformations.Section3.GammaParameters.DefinableOverBase { real := S, gamma := ∅ }
+      (fun x => SpecialTransformations.Milestone0.SortTag.rv) J)
+  (F : (Fin n → M) → Fin m → M)
+  (hF :
+    SpecialTransformations.Section3.GammaParameters.DefinableOverBase { real := S, gamma := ∅ }
+      (fun x => SpecialTransformations.Milestone0.SortTag.rv) (DiamondIntegral.Section4.RVMeasuredCharts.graphOn I F))
+  (hmaps : ∀ x ∈ I, F x ∈ J) (a : ↑(DiamondIntegral.Section7.MeasuredRVBridge.rawDefSet hc I hI).carrier),
+  SpecialTransformations.Section4.rvValues
+      ↑((DiamondIntegral.Section7.MeasuredRVBridge.rawMapInto hc I hI J hJ F hF hmaps).toFun a) =
+    F (SpecialTransformations.Section4.rvValues ↑a) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] hc {S}
+    {n m} I hI J hJ F hF hmaps a =>
+  rfl
+'DiamondIntegral.Section7.MeasuredRVBridge.rawMapInto_val' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.MeasuredRVBridge.isoRaw : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {S : Set M} →
+        {k : ℕ} →
+          {a b : DiamondIntegral.Section4.RVMeasuredCharts.Chart { real := S, gamma := ∅ } k} →
+            DiamondIntegral.Section4.RVMeasuredCharts.Iso a b → (Fin a.arity → M) → Fin b.arity → M
+def DiamondIntegral.Section7.MeasuredRVBridge.isoRaw : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {S : Set M} →
+        {k : ℕ} →
+          {a b : DiamondIntegral.Section4.RVMeasuredCharts.Chart { real := S, gamma := ∅ } k} →
+            DiamondIntegral.Section4.RVMeasuredCharts.Iso a b → (Fin a.arity → M) → Fin b.arity → M :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {S} {k}
+    {a b} F x =>
+  if hx : x ∈ a.domain then ↑(F.equiv ⟨x, hx⟩) else fun x => SpecialTransformations.Milestone0.iRVOne
+'DiamondIntegral.Section7.MeasuredRVBridge.isoRaw' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.MeasuredRVBridge.isoRaw_mem : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set M} {k : ℕ}
+  {a b : DiamondIntegral.Section4.RVMeasuredCharts.Chart { real := S, gamma := ∅ } k}
+  (F : DiamondIntegral.Section4.RVMeasuredCharts.Iso a b) (x : Fin a.arity → M) (hx : x ∈ a.domain),
+  DiamondIntegral.Section7.MeasuredRVBridge.isoRaw F x = ↑(F.equiv ⟨x, hx⟩)
+theorem DiamondIntegral.Section7.MeasuredRVBridge.isoRaw_mem : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set M} {k : ℕ}
+  {a b : DiamondIntegral.Section4.RVMeasuredCharts.Chart { real := S, gamma := ∅ } k}
+  (F : DiamondIntegral.Section4.RVMeasuredCharts.Iso a b) (x : Fin a.arity → M) (hx : x ∈ a.domain),
+  DiamondIntegral.Section7.MeasuredRVBridge.isoRaw F x = ↑(F.equiv ⟨x, hx⟩) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {S} {k}
+    {a b} F x hx =>
+  of_eq_true
+    (Eq.trans (congrFun' (congrArg Eq (dite_eq_left_of_eq_true (eq_true hx))) ↑(F.equiv ⟨x, hx⟩))
+      (eq_self ↑(F.equiv ⟨x, of_eq_true (eq_true hx)⟩)))
+'DiamondIntegral.Section7.MeasuredRVBridge.isoRaw_mem' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.MeasuredRVBridge.isoRaw_graph : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set M} {k : ℕ}
+  {a b : DiamondIntegral.Section4.RVMeasuredCharts.Chart { real := S, gamma := ∅ } k}
+  (F : DiamondIntegral.Section4.RVMeasuredCharts.Iso a b),
+  SpecialTransformations.Section3.GammaParameters.DefinableOverBase { real := S, gamma := ∅ }
+    (fun x => SpecialTransformations.Milestone0.SortTag.rv)
+    (DiamondIntegral.Section4.RVMeasuredCharts.graphOn a.domain (DiamondIntegral.Section7.MeasuredRVBridge.isoRaw F))
+theorem DiamondIntegral.Section7.MeasuredRVBridge.isoRaw_graph : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set M} {k : ℕ}
+  {a b : DiamondIntegral.Section4.RVMeasuredCharts.Chart { real := S, gamma := ∅ } k}
+  (F : DiamondIntegral.Section4.RVMeasuredCharts.Iso a b),
+  SpecialTransformations.Section3.GammaParameters.DefinableOverBase { real := S, gamma := ∅ }
+    (fun x => SpecialTransformations.Milestone0.SortTag.rv)
+    (DiamondIntegral.Section4.RVMeasuredCharts.graphOn a.domain (DiamondIntegral.Section7.MeasuredRVBridge.isoRaw F)) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {S} {k}
+    {a b} F =>
+  have he :=
+    Set.ext fun w =>
+      Eq.mpr
+        (id
+          (congrArg
+            (fun _a =>
+              _a ↔ w ∈ {w | ∃ u, w = DiamondIntegral.Section4.FiniteTupleBlocks.join b.arity a.arity ↑u ↑(F.equiv u)})
+            (propext
+              (DiamondIntegral.Section4.RVRealProducts.graphOn_exists a.domain
+                (DiamondIntegral.Section7.MeasuredRVBridge.isoRaw F) w))))
+        {
+          mp := fun a_1 =>
+            Exists.casesOn a_1 fun x h =>
+              And.casesOn h fun hx right =>
+                Eq.symm right ▸
+                  Exists.intro ⟨x, hx⟩
+                    (Eq.mpr
+                      (id
+                        (congrArg
+                          (fun _a =>
+                            DiamondIntegral.Section4.FiniteTupleBlocks.join b.arity a.arity x _a =
+                              DiamondIntegral.Section4.FiniteTupleBlocks.join b.arity a.arity ↑⟨x, hx⟩
+                                ↑(F.equiv ⟨x, hx⟩))
+                          (DiamondIntegral.Section7.MeasuredRVBridge.isoRaw_mem F x hx)))
+                      (Eq.refl (DiamondIntegral.Section4.FiniteTupleBlocks.join b.arity a.arity x ↑(F.equiv ⟨x, hx⟩)))),
+          mpr := fun a_1 =>
+            Exists.casesOn a_1 fun u h =>
+              Eq.symm h ▸
+                Exists.intro ↑u
+                  ⟨u.property,
+                    Eq.mpr
+                      (id
+                        (congrArg
+                          (fun _a =>
+                            DiamondIntegral.Section4.FiniteTupleBlocks.join b.arity a.arity ↑u ↑(F.equiv u) =
+                              DiamondIntegral.Section4.FiniteTupleBlocks.join b.arity a.arity (↑u) _a)
+                          (DiamondIntegral.Section7.MeasuredRVBridge.isoRaw_mem F (↑u) u.property)))
+                      (Eq.refl (DiamondIntegral.Section4.FiniteTupleBlocks.join b.arity a.arity ↑u ↑(F.equiv u)))⟩ };
+  Eq.mpr
+    (id
+      (congrArg
+        (fun _a =>
+          SpecialTransformations.Section3.GammaParameters.DefinableOverBase { real := S, gamma := ∅ }
+            (fun x => SpecialTransformations.Milestone0.SortTag.rv) _a)
+        he))
+    F.graph_definable
+'DiamondIntegral.Section7.MeasuredRVBridge.isoRaw_graph' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.MeasuredRVBridge.isoMap : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        {S : Set M} →
+          {k : ℕ} →
+            {a b : DiamondIntegral.Section4.RVMeasuredCharts.Chart { real := S, gamma := ∅ } k} →
+              DiamondIntegral.Section4.RVMeasuredCharts.Iso a b →
+                SpecialTransformations.DefinableGeometry.Map
+                  (DiamondIntegral.Section7.MeasuredRVBridge.toObject hc a).domain
+                  (DiamondIntegral.Section7.MeasuredRVBridge.toObject hc b).domain
+def DiamondIntegral.Section7.MeasuredRVBridge.isoMap : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        {S : Set M} →
+          {k : ℕ} →
+            {a b : DiamondIntegral.Section4.RVMeasuredCharts.Chart { real := S, gamma := ∅ } k} →
+              DiamondIntegral.Section4.RVMeasuredCharts.Iso a b →
+                SpecialTransformations.DefinableGeometry.Map
+                  (DiamondIntegral.Section7.MeasuredRVBridge.toObject hc a).domain
+                  (DiamondIntegral.Section7.MeasuredRVBridge.toObject hc b).domain :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] hc {S}
+    {k} {a b} F =>
+  DiamondIntegral.Section7.MeasuredRVBridge.rawMapInto hc a.domain ⋯ b.domain ⋯
+    (DiamondIntegral.Section7.MeasuredRVBridge.isoRaw F) ⋯ ⋯
+'DiamondIntegral.Section7.MeasuredRVBridge.isoMap' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.MeasuredRVBridge.rvWeight_nonzero : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] {n : ℕ} (t : Fin n → CanonicalRV.RVSort M),
+  (∀ (i : Fin n), ↑(t i) ≠ SpecialTransformations.Milestone0.iRVZero) → SpecialTransformations.Section4.rvWeight t = n
+theorem DiamondIntegral.Section7.MeasuredRVBridge.rvWeight_nonzero : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] {n : ℕ} (t : Fin n → CanonicalRV.RVSort M),
+  (∀ (i : Fin n), ↑(t i) ≠ SpecialTransformations.Milestone0.iRVZero) →
+    SpecialTransformations.Section4.rvWeight t = n :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] {n} t ht =>
+  Eq.mpr (id (congrArg (fun _a => _a = n) (SpecialTransformations.Section4.rvWeight_eq_card t)))
+    (have this := Finset.filter_true_of_mem fun i x => ht i;
+    Eq.mpr (id (congrArg (fun _a => _a.card = n) this))
+      (Eq.mpr (id (congrArg (fun _a => _a = n) Finset.card_univ))
+        (Eq.mpr (id (congrArg (fun _a => _a = n) (Fintype.card_fin n))) (Eq.refl n))))
+'DiamondIntegral.Section7.MeasuredRVBridge.rvWeight_nonzero' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.MeasuredRVBridge.isoHom : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        {S : Set M} →
+          {k : ℕ} →
+            {a b : DiamondIntegral.Section4.RVMeasuredCharts.Chart { real := S, gamma := ∅ } k} →
+              DiamondIntegral.Section4.RVMeasuredCharts.Iso a b →
+                SpecialTransformations.Section4.RVHom (DiamondIntegral.Section7.MeasuredRVBridge.toObject hc a)
+                  (DiamondIntegral.Section7.MeasuredRVBridge.toObject hc b)
+def DiamondIntegral.Section7.MeasuredRVBridge.isoHom : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        {S : Set M} →
+          {k : ℕ} →
+            {a b : DiamondIntegral.Section4.RVMeasuredCharts.Chart { real := S, gamma := ∅ } k} →
+              DiamondIntegral.Section4.RVMeasuredCharts.Iso a b →
+                SpecialTransformations.Section4.RVHom (DiamondIntegral.Section7.MeasuredRVBridge.toObject hc a)
+                  (DiamondIntegral.Section7.MeasuredRVBridge.toObject hc b) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] hc {S}
+    {k} {a b} F =>
+  { map := DiamondIntegral.Section7.MeasuredRVBridge.isoMap hc F, volumetric := ⋯, finite_volume_images := ⋯ }
+'DiamondIntegral.Section7.MeasuredRVBridge.isoHom' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.MeasuredRVBridge.isoMap_val : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (hc : CanonicalStructure.IsCanonical) {S : Set M} {k : ℕ}
+  {a b : DiamondIntegral.Section4.RVMeasuredCharts.Chart { real := S, gamma := ∅ } k}
+  (F : DiamondIntegral.Section4.RVMeasuredCharts.Iso a b)
+  (x : ↑(DiamondIntegral.Section7.MeasuredRVBridge.toObject hc a).domain.carrier),
+  SpecialTransformations.Section4.rvValues ↑((DiamondIntegral.Section7.MeasuredRVBridge.isoMap hc F).toFun x) =
+    ↑(F.equiv ⟨SpecialTransformations.Section4.rvValues ↑x, ⋯⟩)
+theorem DiamondIntegral.Section7.MeasuredRVBridge.isoMap_val : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (hc : CanonicalStructure.IsCanonical) {S : Set M} {k : ℕ}
+  {a b : DiamondIntegral.Section4.RVMeasuredCharts.Chart { real := S, gamma := ∅ } k}
+  (F : DiamondIntegral.Section4.RVMeasuredCharts.Iso a b)
+  (x : ↑(DiamondIntegral.Section7.MeasuredRVBridge.toObject hc a).domain.carrier),
+  SpecialTransformations.Section4.rvValues ↑((DiamondIntegral.Section7.MeasuredRVBridge.isoMap hc F).toFun x) =
+    ↑(F.equiv ⟨SpecialTransformations.Section4.rvValues ↑x, ⋯⟩) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] hc {S}
+    {k} {a b} F x =>
+  id
+    (Eq.mpr
+      (id
+        (congrArg (fun _a => _a = ↑(F.equiv ⟨SpecialTransformations.Section4.rvValues ↑x, x.property⟩))
+          (DiamondIntegral.Section7.MeasuredRVBridge.isoRaw_mem F (SpecialTransformations.Section4.rvValues ↑x)
+            x.property)))
+      (Eq.refl ↑(F.equiv ⟨SpecialTransformations.Section4.rvValues ↑x, x.property⟩)))
+'DiamondIntegral.Section7.MeasuredRVBridge.isoMap_val' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.MeasuredRVBridge.isoObject : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        {S : Set M} →
+          {k : ℕ} →
+            {a b : DiamondIntegral.Section4.RVMeasuredCharts.Chart { real := S, gamma := ∅ } k} →
+              DiamondIntegral.Section4.RVMeasuredCharts.Iso a b →
+                (DiamondIntegral.Section7.MeasuredRVBridge.toObject hc a ≅
+                  DiamondIntegral.Section7.MeasuredRVBridge.toObject hc b)
+def DiamondIntegral.Section7.MeasuredRVBridge.isoObject : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        {S : Set M} →
+          {k : ℕ} →
+            {a b : DiamondIntegral.Section4.RVMeasuredCharts.Chart { real := S, gamma := ∅ } k} →
+              DiamondIntegral.Section4.RVMeasuredCharts.Iso a b →
+                (DiamondIntegral.Section7.MeasuredRVBridge.toObject hc a ≅
+                  DiamondIntegral.Section7.MeasuredRVBridge.toObject hc b) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] hc {S}
+    {k} {a b} F =>
+  { hom := DiamondIntegral.Section7.MeasuredRVBridge.isoHom hc F,
+    inv := DiamondIntegral.Section7.MeasuredRVBridge.isoHom hc (DiamondIntegral.Section4.RVMeasuredIsomorphisms.symm F),
+    hom_inv_id := ⋯, inv_hom_id := ⋯ }
+'DiamondIntegral.Section7.MeasuredRVBridge.isoObject' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.MeasuredRVBridge.codeValue_gammaOf : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (t : CanonicalRV.RVSort M)
+  (h : ↑t ≠ SpecialTransformations.Milestone0.iRVZero),
+  SpecialTransformations.Section3.GammaParameters.codeValue ↑t = SpecialTransformations.Section3.Values.gammaOf t h
+theorem DiamondIntegral.Section7.MeasuredRVBridge.codeValue_gammaOf : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (t : CanonicalRV.RVSort M)
+  (h : ↑t ≠ SpecialTransformations.Milestone0.iRVZero),
+  SpecialTransformations.Section3.GammaParameters.codeValue ↑t = SpecialTransformations.Section3.Values.gammaOf t h :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] t h =>
+  have hp := ⟨t.property, h⟩;
+  Eq.mpr
+    (id
+      (congrFun'
+        (congrArg Eq
+          ((fun x_0 x_1 x_2 x_3 => (fun x_0 x_1 x_2 x_3 => dif_pos hp) x_0 x_1 x_2 x_3)
+            (Classical.propDecidable (SpecialTransformations.Section3.GammaParameters.NonzeroRV ↑t))
+            SpecialTransformations.Section3.Values.Gamma
+            (fun h =>
+              SpecialTransformations.Section3.GammaParameters.value
+                ⟨⟨↑t, SpecialTransformations.Section3.GammaParameters.codeValue._proof_1 (↑t) h⟩,
+                  SpecialTransformations.Section3.GammaParameters.codeValue._proof_2 (↑t) h⟩)
+            fun h => 1))
+        (SpecialTransformations.Section3.Values.gammaOf t h)))
+    (Eq.refl
+      (SpecialTransformations.Section3.GammaParameters.value
+        ⟨⟨↑t, SpecialTransformations.Section3.GammaParameters.codeValue._proof_1 (↑t) hp⟩,
+          SpecialTransformations.Section3.GammaParameters.codeValue._proof_2 (↑t) hp⟩))
+'DiamondIntegral.Section7.MeasuredRVBridge.codeValue_gammaOf' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.MeasuredRVBridge.totalWeight_eq : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (hc : CanonicalStructure.IsCanonical) {S : Set M} {k : ℕ}
+  (a : DiamondIntegral.Section4.RVMeasuredCharts.Chart { real := S, gamma := ∅ } k)
+  (u : ↑(DiamondIntegral.Section7.MeasuredRVBridge.toObject hc a).domain.carrier),
+  (DiamondIntegral.Section7.MeasuredRVBridge.toMeasured hc a).totalWeight u =
+    a.correctedWeight (SpecialTransformations.Section4.rvValues ↑u)
+theorem DiamondIntegral.Section7.MeasuredRVBridge.totalWeight_eq : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (hc : CanonicalStructure.IsCanonical) {S : Set M} {k : ℕ}
+  (a : DiamondIntegral.Section4.RVMeasuredCharts.Chart { real := S, gamma := ∅ } k)
+  (u : ↑(DiamondIntegral.Section7.MeasuredRVBridge.toObject hc a).domain.carrier),
+  (DiamondIntegral.Section7.MeasuredRVBridge.toMeasured hc a).totalWeight u =
+    a.correctedWeight (SpecialTransformations.Section4.rvValues ↑u) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] hc {S}
+    {k} a u =>
+  id
+    ((fun {α β γ} [HMul α β γ] a a_1 e_a =>
+        Eq.rec (motive := fun a_2 e_a => ∀ (a_3 a_4 : β), a_3 = a_4 → a * a_3 = a_2 * a_4)
+          (fun a_2 a_3 e_a => e_a ▸ Eq.refl (a * a_2)) e_a)
+      (a.volume (SpecialTransformations.Section4.rvValues ↑u)) (a.volume (SpecialTransformations.Section4.rvValues ↑u))
+      (Eq.refl (a.volume (SpecialTransformations.Section4.rvValues ↑u)))
+      (SpecialTransformations.Section9.rvVolumeGamma ((DiamondIntegral.Section7.MeasuredRVBridge.toObject hc a).value u)
+        ((DiamondIntegral.Section7.MeasuredRVBridge.toMeasured hc a).nonzero u))
+      (∏ i,
+        SpecialTransformations.Section3.GammaParameters.codeValue
+          (a.coordinate (SpecialTransformations.Section4.rvValues ↑u) i))
+      (id
+        (Finset.prod_congr rfl fun i a_1 =>
+          Eq.symm
+            (DiamondIntegral.Section7.MeasuredRVBridge.codeValue_gammaOf
+              ((DiamondIntegral.Section7.MeasuredRVBridge.toObject hc a).value u i)
+              ((DiamondIntegral.Section7.MeasuredRVBridge.toMeasured hc a).nonzero u i)))))
+'DiamondIntegral.Section7.MeasuredRVBridge.totalWeight_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.MeasuredRVBridge.measuredIso : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        {S : Set M} →
+          {k : ℕ} →
+            {a b : DiamondIntegral.Section4.RVMeasuredCharts.Chart { real := S, gamma := ∅ } k} →
+              DiamondIntegral.Section4.RVMeasuredCharts.Iso a b →
+                DiamondIntegral.Section6.MeasuredRVIso (DiamondIntegral.Section7.MeasuredRVBridge.toMeasured hc a)
+                  (DiamondIntegral.Section7.MeasuredRVBridge.toMeasured hc b)
+def DiamondIntegral.Section7.MeasuredRVBridge.measuredIso : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        {S : Set M} →
+          {k : ℕ} →
+            {a b : DiamondIntegral.Section4.RVMeasuredCharts.Chart { real := S, gamma := ∅ } k} →
+              DiamondIntegral.Section4.RVMeasuredCharts.Iso a b →
+                DiamondIntegral.Section6.MeasuredRVIso (DiamondIntegral.Section7.MeasuredRVBridge.toMeasured hc a)
+                  (DiamondIntegral.Section7.MeasuredRVBridge.toMeasured hc b) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] hc {S}
+    {k} {a b} F =>
+  { iso := DiamondIntegral.Section7.MeasuredRVBridge.isoObject hc F, balance := ⋯ }
+'DiamondIntegral.Section7.MeasuredRVBridge.measuredIso' depends on axioms: [propext, Classical.choice, Quot.sound]

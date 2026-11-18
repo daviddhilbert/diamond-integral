@@ -1,5 +1,10 @@
 # Section 3
 
+All four Gamma-valued measured input records now have local proved producers,
+including the original-base positive-degree reverse kernel. See
+[the completion note](verification/GAMMA-KERNEL-COMPLETION.md) and
+[verification progress](verification/GAMMA-EXTENSION-PROGRESS.json).
+
 The active manuscript is the section 2 annotated revision. The four
 reviewed §3 referee corrections and the author-initiated T001 correction
 are approved and applied. The corrected Proposition 3.18 now states both
@@ -19,13 +24,23 @@ pinned toolchain to build the whole project, print the actual exported
 statements and definitions, and audit their logical principles.
 
 The formalization is complete in the documented paper contexts relative
-to the accepted cited-input records. The latest full-ground build/audit
-covers 1,003 supporting modules and 5,324 declarations. The separate
+to the approved R--Y classification. The latest build/audit (November 18,
+PASS) covers 1,527 supporting modules, 3,895 public theorems and 2,806
+printed definitions. The separate
 [paper-target review](verification/paper-targets.json) checks 21 manuscript
-targets against 119 actual declarations and records all scope boundaries.
-The later [18] geometric kernels and approved R--Y classification are
-explicit inputs; no HK result is assumed. The source manuscript and its
-approved PDF remain unchanged.
+targets against 132 declaration links and records all scope boundaries.
+The later [18] lift/kernel records are now all produced: Gamma-ground
+unmeasured by `Section5.completed18GroundLiftInput`, bounded by
+`completedGammaGroundBoundedLiftInput` (headline `theorem_3_22_bounded`),
+ordinary bounded by `MeasuredRealGround.completedOrdinaryBoundedLiftInput`,
+and the measured records by local proofs. Theorem 3.22's graded measured
+isomorphism is `theorem_3_22_measured_graded`, and Remark 3.14 is
+`remark_3_14` (with `_converse`, `_point`). The section 2 inputs are
+discharged in `Section2CitedInputsDischarged.lean` and
+`Section2GammaLinearityDischarged.lean`. November 17–18 work and the
+author-approved "not pursued" items are in [GAP-REPAIRS.md](GAP-REPAIRS.md).
+The approved R--Y classification remains an explicit input; no HK result is
+assumed.
 
 See [STATUS.md](STATUS.md), [TARGETS.md](TARGETS.md), and
 [verification/TYPE-REVIEW.md](verification/TYPE-REVIEW.md) for the semantic
@@ -33,9 +48,12 @@ review, hypotheses and verification history. Concrete §4 constructions
 and independent disc-name extensions are outside this §3 certificate.
 
 
-The November 12 dependency refresh links exact section 6 exports at
-7d4acc730496b3bd05a22c268ffd89540ca694f9. Their unfinished 5.8 input and
-closure/category boundaries are explicit in `verification/integration-reuse.json`;
-legacy lift records are not silently replaced. The supplementary unary-ray
+The current pin is 7675d31332f20421c803ea16af84964ed74cd51f (Special
+transformations 25852c85a31c67069b148bd31348128318303510). The November 12
+refresh linked exact section 6 exports at 7d4acc730496b3bd05a22c268ffd89540ca694f9,
+then relative to an unfinished 5.8 input. That input is now discharged
+(`Section5.completed_section5_input`, from the completed upstream Section 5),
+and the closure/category transport is compiled in section 5; see
+`verification/integration-reuse.json`. The supplementary unary-ray
 refinement was skipped by author instruction. CI prepares both compatibility
 patches and audits both sections.

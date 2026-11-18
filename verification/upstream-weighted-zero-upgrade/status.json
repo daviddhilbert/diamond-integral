@@ -1,0 +1,312 @@
+{
+  "status": "PASS",
+  "pins": {
+    "special_transformations": "25852c85a31c67069b148bd31348128318303510",
+    "integration_in_acvf": "7675d31332f20421c803ea16af84964ed74cd51f"
+  },
+  "dependency_layers": {
+    "special_transformations": {
+      "revision": "25852c85a31c67069b148bd31348128318303510",
+      "local_files": []
+    },
+    "integration_in_acvf": {
+      "revision": "7675d31332f20421c803ea16af84964ed74cd51f",
+      "local_files": [
+        "section 6/IntegrationSection6/ArbitraryContractionOrders.lean",
+        "section 6/IntegrationSection6/ContractionOrderComparison.lean"
+      ]
+    }
+  },
+  "sections": {
+    "2": {
+      "receipt": "section 2/verification/status.json",
+      "status": "PASS",
+      "sha256": "b0a96cfa2af9545b799d6914641606e2d0924b821965accb82ca03b1f77e0b6d",
+      "checked_Lean_sources": 263
+    },
+    "3": {
+      "receipt": "section 3/verification/VERIFICATION.json",
+      "status": "PASS",
+      "sha256": "3fcb6d079e124bf785711f0d25e0d0d820ecfd6343a285c163eb4047690e769e",
+      "checked_Lean_sources": 1518
+    },
+    "4": {
+      "receipt": "section 4/verification/status.json",
+      "status": "PASS",
+      "sha256": "0004cfe9734a035d72c7a746d0b0c9796c6d80bf58b513fac8e103f5bc55270e",
+      "checked_Lean_sources": 607
+    },
+    "5": {
+      "receipt": "section 5/verification/status.json",
+      "status": "PASS_SECTION5_REQUESTED_SCOPE_IN_RECORDED_CONTEXT",
+      "sha256": "e59637d47822d0c8a3cd151509e7e219759c23c3ceb9f97826d06b2cddbb72bf",
+      "checked_Lean_sources": 740
+    },
+    "6": {
+      "receipt": "section 6/verification/status.json",
+      "status": "PASS",
+      "sha256": "ee60aa504b05cb78c2b79e46ddd1b27cb6aac9137feccff7800c124c8263cd8c",
+      "checked_Lean_sources": 1287
+    }
+  },
+  "interfaces": {
+    "SpecialTransformations.Section10.WeightedZero.iso_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "SpecialTransformations.Section10.MeasuredRVZero.lift_weight": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "SpecialTransformations.Section10.MeasuredRVZero.liftMap_labels": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "SpecialTransformations.Section10.MeasuredRVZero.liftMap_measure": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "SpecialTransformations.Section10.theorem_10_4_gamma_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "SpecialTransformations.Section10.theorem_10_5_gamma_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "SpecialTransformations.Section10.corollary_10_6_gamma_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "SpecialTransformations.Section10.ZeroForm.gammaProduct_weight": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "SpecialTransformations.Section10.gammaZeroForm_weight_eq_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section3.YinMeasuredLiftInput": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section3.YinDegreeMeasuredLiftInput": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section3.YinGammaGroundMeasuredLiftInput": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section3.YinGammaGroundDegreeMeasuredLiftInput": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section3.completedMeasuredLiftInput": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section3.completedDegreeMeasuredLiftInput": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section3.completedGammaGroundMeasuredLiftInput": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section3.completedGammaGroundDegreeMeasuredLiftInput": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section3.gammaContextMeasuredDegreeLift_positive_reverse_kernel": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section3.gammaContextMeasuredDegreeLift_kernel": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section3.gammaContextMeasuredSemiringLift_kernel": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section3.completedMeasuredDegreeLift_kernel": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section3.completedMeasuredSemiringLift_kernel": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section3.MeasuredRVObject.product_combinedWeight": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section3.MeasuredVFData.product_form": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section3.GammaGroundMeasuredRVObject.zero_combinedWeight": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section3.GammaGroundMeasuredRVObject.product_combined": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section3.GammaGroundMeasuredVFData.product_form": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section3.gammaGroundZeroMeasuredRVToVF": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section3.gammaGroundZeroMeasuredRVToVF_faithful": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section3.gammaGroundZeroMeasuredRVToVF_full": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section3.gammaGroundMeasuredNativeTensor_rank_zero_absorption": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESWeightEmbedding.weightMap_injective": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESWeightEmbedding.reducedWeightMap_injective": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESWeightEmbedding.radiusWeightMap_injective": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVZeroWeightedCount.res_weightedUnit": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.VariableApertureMeasuredComparison.relation_formula": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.VariableApertureMeasuredComparison.functional_ideal_maps_into_p": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularQuotient.quotient_injective_on_degree_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RelativeAnnularQuotient.evaluation_res": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section5.completed_section5_input": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section5.completed18GroundLiftInput": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section6.proposition_6_19_vfGenerated": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section6.lemma_6_27": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section6.lemma_6_31_zero_arity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section6.lemma_6_14_bounded_variable_apertures": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section6.lemma_6_38_bounded_variable_apertures": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "scope": "Corrected-pin source/type/axiom compatibility for Sections 2–6, weighted finite zero families, mixed products, exact zero lifts, RES/tensor coefficients and relative-aperture comparisons, plus local producers for all four Gamma-valued measured kernels. No manuscript statement or aperture definition changed in this continuation.",
+  "conditional_inputs": [],
+  "discharged_measured_inputs": {
+    "YinMeasuredLiftInput": "completedMeasuredLiftInput",
+    "YinDegreeMeasuredLiftInput": "completedDegreeMeasuredLiftInput",
+    "YinGammaGroundMeasuredLiftInput": "completedGammaGroundMeasuredLiftInput",
+    "YinGammaGroundDegreeMeasuredLiftInput": "completedGammaGroundDegreeMeasuredLiftInput"
+  },
+  "measured_kernel_scope": "All four records have local proved producers under the stated model, canonical-structure, saturation, generation, smallness, nontrivial-value and compatible-valuation hypotheses. Complete Gamma densities and weighted degree zero are retained. No resolved base, Gamma-to-RV section, class cancellation or kernel coarsening is assumed. The upstream RV-valued kernel alone was not used as their producer.",
+  "downstream": "This audit does not prove this paper's revised Section 7 kernel or Section 8 specialization.",
+  "evidence": {
+    "integration-checkpoint2041.json": "ee4416ef24408c6fb060b89ae3b1da91eed6538994c010e8e307096072774e82",
+    "integration-ci-jobs.json": "5fd8f0d9d44dade04bf20ee6973c1593b636458dc618c9084ee018e3952f84d2",
+    "special-v1.1.json": "e7e13939a7b3ecb5c41e5ee6b45de4db47247768d578e98597cb12a1fcae26a0",
+    "types-and-axioms.log": "53701a8fd7547a8154bdb94cf56dd01e7a4c4bffc77533e860f4cfac05d69f4b",
+    "section6-verifier.log": "5ca5455b3434d29f4c9ba79e91e34158c881dde06515eb7a86c0f9db6e9d4627",
+    "section3-verifier.log": "c7506d6635bff3109fe2169c87cbf979442af480bb96e21957d0cec9b1f673dc",
+    "prepared-sources.log": "1ab672e1e00cf5cd6e437aa593f3171be6ea6518e8b054496965d3bea56ae037",
+    "section4-verifier.log": "390e50567df52aae51d507dd2d7f37a7c3592f191b905ae61d5192c359d1321c",
+    "README.md": "5c43bd5eb87866a65aad5aace2cb400b724e6c44276b4c06fb46ff5c6ba5562b",
+    "integration-project-integrity.json": "d352082649a6a2ebc0ce60f4d32d6bc7ea618544afd2e7cb7a9f9cea6eb9d94f",
+    "Audit.lean": "d6c4240804c2e285a88005a6b18628d5c456ffceee785db55cc3f5bc0b1d2dd1",
+    "weighted-upstream-build.log": "0f9618b3726979284601f7d0a7a1c8a25f82d3018d3f35d62dc8037655b5ed38",
+    "section5-verifier.log": "adc8b6d96f56caa17c4a65954ec5d42d8f9b07fe6adcf03ba97b553995b99db7",
+    "section2-verifier.log": "c1cc9e17043212ff1f0975f8e940fc508d625fc5c38bbd14c9164961d2fd32bf",
+    "final-consistency.json": "f3d9299f0b882063546415ac8f208e56555aed1a9bcc3005aa1fd7a065d62f93"
+  },
+  "script_sha256": "0e28394cb9669f706fcc0bd748e51dfa9a77809660cd28fba5f24e9080e2d2f4"
+}

@@ -18,14 +18,25 @@ wrappers supply these checked constructors. Their combined printed types
 and dependencies are audited by the section 3 runner.
 `IntegrationDiscToDisc` supplies Lemma 2.32 under actual saturation at an
 infinite cardinal. The four zero cells preserve the native ordinary-disc
-convention in both directions, without naming any new parameter. The
-separate Gamma piecewise-affine background remains an explicit accepted input in
-`section 3/verification/integration-reuse.json`.
+convention in both directions, without naming any new parameter.
+`section 3/Section2CitedInputsDischarged.lean` (November 18) gives `_discharged`
+versions of the 20 statements that still took these interfaces (2.23–2.26,
+2.29, 2.35), each input supplied by its constructor; saturation is stated
+where the atomicity constructor needs it.
+
+The separate Gamma piecewise-affine background
+(`GammaPiecewiseRationalAffineInput`) is no longer an accepted input: it is
+proved as `Section5.GammaQE.gamma_piecewise_rational_affine`
+(`section 5/GammaQEFiniteLaws.lean`) from RV quantifier elimination, with no
+hypotheses. `section 3/Section2GammaLinearityDischarged.lean` gives the
+`_discharged` versions of 2.41 (RV, Γ and Γ-ground), Remark 2.47 and 2.53.
+The original §2 statements still take the interface as a parameter.
 
 Counts in the
-chronological notes below record earlier stages. The final 850/378 audit
-checks the legacy public types and standard logical dependencies; the
-section 3 receipt additionally audits all eight checked constructors. Full numbered
+chronological notes below record earlier stages. The latest 970/378 audit
+(November 18) checks the legacy public types and standard logical dependencies; the
+section 3 receipt additionally audits all eight checked constructors and the
+discharged versions. Full numbered
 results and their parameter scopes are listed in [COVERAGE.md](../COVERAGE.md).
 
 `AtomicBaseChange.lean` defines `AtomicGammaBaseChangeInput B`, the
@@ -202,7 +213,8 @@ preserves two-sided bounds, including negative slopes and the empty domain.
 explicit input. The total recorded cited-interface count is now nine.
 The uniform RV fibre-bound and supremum induction are now proved in
 `RVGammaBounds`, `RVBoundCoordinates` and `RVBoundedImages`, completing
-both conclusions of 2.41 in every finite arity.
+both conclusions of 2.41 in every finite arity. (November 18: the input
+itself is now proved; see the opening section.)
 
 ## Final finite DC-ground scope
 
