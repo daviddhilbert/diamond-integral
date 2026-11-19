@@ -11,9 +11,11 @@ The Lean formalization is in progress; see [PLAN.md](PLAN.md) (approved by the
 author on 2026-11-19), [STATUS.md](STATUS.md), [COVERAGE.md](COVERAGE.md) and
 [GAP-REPAIRS.md](GAP-REPAIRS.md). Complete so far: Definition 7.2 on isomorphism
 classes, Lemma 7.5, Corollary 7.6, Lemma 7.7, Corollary 7.8, Definition 7.9,
-the additive part of Lemma 7.10, and Lemma 7.12 on classes. Remaining: the lift
-constructions 7.11 and 7.13,
-whole-witness descent (7.14–7.15), the two-cell comparisons (7.16–7.23), the
+the additive part of Lemma 7.10, Remark 7.3 (dimension claim), Lemma 7.12 on
+classes, Definitions 7.16, 7.17, 7.19 and Remark 7.18 (approved scope), and the
+surjectivity of the lift on classes. Remaining: the lift constructions 7.11 and
+7.13,
+whole-witness descent (7.14–7.15), the two-cell comparisons (7.20–7.23), the
 kernel (7.24–7.25), Theorem 7.26 with J_var, and 7.27–7.28.
 
 The focused [Section 6 handoff](SECTION6-HANDOFF.md) links the checked native

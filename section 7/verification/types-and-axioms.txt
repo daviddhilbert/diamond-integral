@@ -22190,6 +22190,356 @@ fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransf
         SpecialTransformations.Section3.GammaParameters.DefinableOverBase.proper h⟩,
     mpr := fun h => DiamondIntegral.Section7.RealBase.real_base hc h.left h.right }
 'DiamondIntegral.Section7.RealBase.real_base_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.Remark73.domainRV : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {S : Set M} →
+        {k : ℕ} →
+          (D : DiamondIntegral.Section4.RelativeAnnularGenerators.AnnularDatum { real := S, gamma := ∅ } k) →
+            Set (Fin D.chart.arity → DiamondIntegral.Section2.RVInfinity M)
+def DiamondIntegral.Section7.Remark73.domainRV : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {S : Set M} →
+        {k : ℕ} →
+          (D : DiamondIntegral.Section4.RelativeAnnularGenerators.AnnularDatum { real := S, gamma := ∅ } k) →
+            Set (Fin D.chart.arity → DiamondIntegral.Section2.RVInfinity M) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {S} {k}
+    D =>
+  {t | DiamondIntegral.Section2.rvInputValues t ∈ D.chart.domain}
+'DiamondIntegral.Section7.Remark73.domainRV' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.Remark73.inactMap : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {S : Set M} →
+        {k : ℕ} →
+          (D : DiamondIntegral.Section4.RelativeAnnularGenerators.AnnularDatum { real := S, gamma := ∅ } k) →
+            ↑(DiamondIntegral.Section7.Remark73.domainRV D) → Fin k → DiamondIntegral.Section2.RV M
+def DiamondIntegral.Section7.Remark73.inactMap : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {S : Set M} →
+        {k : ℕ} →
+          (D : DiamondIntegral.Section4.RelativeAnnularGenerators.AnnularDatum { real := S, gamma := ∅ } k) →
+            ↑(DiamondIntegral.Section7.Remark73.domainRV D) → Fin k → DiamondIntegral.Section2.RV M :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {S} {k}
+    D u i =>
+  ⟨⟨DiamondIntegral.Section7.BlowupLiftData.inactCoord D (DiamondIntegral.Section2.rvInputValues ↑u) i, ⋯⟩, ⋯⟩
+'DiamondIntegral.Section7.Remark73.inactMap' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.Remark73.inactMap_finite : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {S : Set M} {k : ℕ} (D : DiamondIntegral.Section4.RelativeAnnularGenerators.AnnularDatum { real := S, gamma := ∅ } k)
+  (t : Fin k → DiamondIntegral.Section2.RV M), {u | DiamondIntegral.Section7.Remark73.inactMap D u = t}.Finite
+theorem DiamondIntegral.Section7.Remark73.inactMap_finite : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {S : Set M} {k : ℕ} (D : DiamondIntegral.Section4.RelativeAnnularGenerators.AnnularDatum { real := S, gamma := ∅ } k)
+  (t : Fin k → DiamondIntegral.Section2.RV M), {u | DiamondIntegral.Section7.Remark73.inactMap D u = t}.Finite :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {S} {k}
+    D t =>
+  if hne : ∃ u, DiamondIntegral.Section7.Remark73.inactMap D u = t then
+    Exists.casesOn hne fun u₀ hu₀ =>
+      have hF :=
+        D.finite
+          (DiamondIntegral.Section4.AnnularBlowup.inactive D.chart D.coordinate
+            (DiamondIntegral.Section2.rvInputValues ↑u₀));
+      Set.Finite.of_finite_image
+        (Set.Finite.subset hF fun ⦃a⦄ a_1 =>
+          Exists.casesOn a_1 fun u h =>
+            And.casesOn h fun hu right =>
+              right ▸
+                ⟨u.property,
+                  DiamondIntegral.Section7.BlowupLiftData.inactive_eq_of_inactCoord D
+                    (funext fun i =>
+                      have h := congrFun (Eq.trans hu (Eq.symm hu₀)) i;
+                      congrArg (fun r => ↑↑r) h)⟩)
+        fun ⦃u⦄ a ⦃v⦄ a_1 h => Subtype.ext (funext fun i => Subtype.ext (congrFun h i))
+  else Set.Finite.subset Set.finite_empty fun ⦃u⦄ hu => hne (Exists.intro u hu)
+'DiamondIntegral.Section7.Remark73.inactMap_finite' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.Remark73.inactCoord_tupleDef : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {S : Set M} {k : ℕ} (D : DiamondIntegral.Section4.RelativeAnnularGenerators.AnnularDatum { real := S, gamma := ∅ } k),
+  DiamondIntegral.Section7.RVMaps.TupleDef { real := S, gamma := ∅ } D.chart.domain
+    (DiamondIntegral.Section7.BlowupLiftData.inactCoord D)
+theorem DiamondIntegral.Section7.Remark73.inactCoord_tupleDef : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {S : Set M} {k : ℕ} (D : DiamondIntegral.Section4.RelativeAnnularGenerators.AnnularDatum { real := S, gamma := ∅ } k),
+  DiamondIntegral.Section7.RVMaps.TupleDef { real := S, gamma := ∅ } D.chart.domain
+    (DiamondIntegral.Section7.BlowupLiftData.inactCoord D) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {S} {k}
+    D =>
+  DiamondIntegral.Section7.RVMaps.tupleDef_comp D.chart.coordinate_definable
+    (DiamondIntegral.Section7.RVMaps.tupleDef_coord
+      (DiamondIntegral.Section7.Remark73.inactCoord_tupleDef.graph_image_definable_coord D)
+      (DiamondIntegral.Section4.BlowupRelation.skip D.coordinate))
+    fun u hu => Exists.intro u ⟨hu, rfl⟩
+'DiamondIntegral.Section7.Remark73.inactCoord_tupleDef' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.Remark73.inactMap_graph : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {S : Set M} {k : ℕ} (D : DiamondIntegral.Section4.RelativeAnnularGenerators.AnnularDatum { real := S, gamma := ∅ } k),
+  SpecialTransformations.Section3.DefinableOver S (fun x => SpecialTransformations.Milestone0.SortTag.rv)
+    (DiamondIntegral.Section2.rvMapGraph (DiamondIntegral.Section7.Remark73.domainRV D)
+      (DiamondIntegral.Section7.Remark73.inactMap D))
+theorem DiamondIntegral.Section7.Remark73.inactMap_graph : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {S : Set M} {k : ℕ} (D : DiamondIntegral.Section4.RelativeAnnularGenerators.AnnularDatum { real := S, gamma := ∅ } k),
+  SpecialTransformations.Section3.DefinableOver S (fun x => SpecialTransformations.Milestone0.SortTag.rv)
+    (DiamondIntegral.Section2.rvMapGraph (DiamondIntegral.Section7.Remark73.domainRV D)
+      (DiamondIntegral.Section7.Remark73.inactMap D)) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {S} {k}
+    D =>
+  let a := D.chart.arity;
+  let π :=
+    DiamondIntegral.Section4.FiniteTupleBlocks.join k a (fun i => finSumFinEquiv (Sum.inl i)) fun i =>
+      finSumFinEquiv (Sum.inr i);
+  have hpre :=
+    SpecialTransformations.Section3.GammaParameters.DefinableOverBase.preimage_real
+      (DiamondIntegral.Section7.Remark73.inactCoord_tupleDef D) (fun x => SpecialTransformations.Milestone0.SortTag.rv)
+      π;
+  have he :=
+    Set.ext fun z =>
+      have hh :=
+        funext fun i =>
+          Eq.mpr
+            (id
+              (congrFun'
+                (congrArg Eq
+                  (congrArg z
+                    (DiamondIntegral.Section4.FiniteTupleBlocks.join_head k a (fun i => finSumFinEquiv (Sum.inl i))
+                      (fun i => finSumFinEquiv (Sum.inr i)) i)))
+                (z (finSumFinEquiv (Sum.inl i)))))
+            (Eq.refl (z (finSumFinEquiv (Sum.inl i))));
+      have ht :=
+        funext fun i =>
+          Eq.mpr
+            (id
+              (congrFun'
+                (congrArg Eq
+                  (congrArg z
+                    (DiamondIntegral.Section4.FiniteTupleBlocks.join_tail k a (fun i => finSumFinEquiv (Sum.inl i))
+                      (fun i => finSumFinEquiv (Sum.inr i)) i)))
+                (z (finSumFinEquiv (Sum.inr i)))))
+            (Eq.refl (z (finSumFinEquiv (Sum.inr i))));
+      {
+        mp := fun a_1 =>
+          Exists.casesOn a_1 fun u h =>
+            And.casesOn h fun hx hy =>
+              ⟨⟨Eq.mpr (id (congrArg (fun _a => _a ∈ D.chart.domain) hh))
+                    (Eq.mpr (id (congrArg (fun _a => _a ∈ D.chart.domain) (Eq.symm hx))) u.property),
+                  Eq.mpr
+                    (id
+                      (congrArg
+                        (fun _a =>
+                          DiamondIntegral.Section7.BlowupLiftData.inactCoord D _a =
+                            (z ∘ π) ∘ DiamondIntegral.Section4.FiniteTupleBlocks.tailIndex k D.chart.arity)
+                        hh))
+                    (Eq.mpr
+                      (id
+                        (congrArg
+                          (fun _a =>
+                            DiamondIntegral.Section7.BlowupLiftData.inactCoord D (z ∘ ⇑finSumFinEquiv ∘ Sum.inl) = _a)
+                          ht))
+                      (Eq.mpr
+                        (id
+                          (congrArg
+                            (fun _a =>
+                              DiamondIntegral.Section7.BlowupLiftData.inactCoord D _a = z ∘ ⇑finSumFinEquiv ∘ Sum.inr)
+                            (Eq.symm hx)))
+                        (Eq.mpr
+                          (id
+                            (congrArg
+                              (fun _a =>
+                                DiamondIntegral.Section7.BlowupLiftData.inactCoord D
+                                    (DiamondIntegral.Section2.rvInputValues ↑u) =
+                                  _a)
+                              (Eq.symm hy)))
+                          (Eq.refl
+                            (DiamondIntegral.Section7.BlowupLiftData.inactCoord D
+                              (DiamondIntegral.Section2.rvInputValues ↑u))))))⟩,
+                fun i =>
+                Exists.casesOn (Equiv.surjective finSumFinEquiv i) fun j h =>
+                  h ▸
+                    Sum.casesOn j
+                      (fun j =>
+                        have this := congrFun hx j;
+                        id
+                          (fun this =>
+                            Eq.mpr
+                              (id
+                                (congrArg
+                                  (fun _a =>
+                                    SpecialTransformations.Milestone0.sortEval
+                                      ((fun x => SpecialTransformations.Milestone0.SortTag.rv)
+                                        (finSumFinEquiv (Sum.inl j)))
+                                      _a)
+                                  (Eq.symm this)))
+                              (↑u j).property)
+                          this)
+                      fun j =>
+                      have this := congrFun hy j;
+                      id
+                        (fun this =>
+                          Eq.mpr
+                            (id
+                              (congrArg
+                                (fun _a =>
+                                  SpecialTransformations.Milestone0.sortEval
+                                    ((fun x => SpecialTransformations.Milestone0.SortTag.rv)
+                                      (finSumFinEquiv (Sum.inr j)))
+                                    _a)
+                                (Eq.symm this)))
+                            (↑(DiamondIntegral.Section7.Remark73.inactMap D u j)).property)
+                        this⟩,
+        mpr := fun a_1 =>
+          And.casesOn a_1 fun left hs =>
+            And.casesOn left fun hd hv =>
+              have hsl := fun j => hs (finSumFinEquiv (Sum.inl j));
+              let u :=
+                ⟨fun j => ⟨z (finSumFinEquiv (Sum.inl j)), hsl j⟩,
+                  Eq.mp (congrArg (fun _a => _a ∈ D.chart.domain) hh) hd⟩;
+              Exists.intro u
+                ⟨rfl,
+                  Eq.mp
+                    (congrArg
+                      (fun _a =>
+                        DiamondIntegral.Section7.BlowupLiftData.inactCoord D (z ∘ ⇑finSumFinEquiv ∘ Sum.inl) = _a)
+                      ht)
+                    (Eq.mp
+                      (congrArg
+                        (fun _a =>
+                          DiamondIntegral.Section7.BlowupLiftData.inactCoord D _a =
+                            (z ∘ π) ∘ DiamondIntegral.Section4.FiniteTupleBlocks.tailIndex k D.chart.arity)
+                        hh)
+                      hv)⟩ };
+  Eq.mpr
+    (id
+      (congrArg
+        (fun _a =>
+          SpecialTransformations.Section3.DefinableOver S (fun x => SpecialTransformations.Milestone0.SortTag.rv) _a)
+        he))
+    (Exists.casesOn hpre fun n h =>
+      Exists.casesOn h fun γ h =>
+        And.casesOn h fun hγ hA =>
+          Nat.casesAuxOn (motive := fun a_1 =>
+            n = a_1 →
+              SpecialTransformations.Section3.DefinableOver S (fun x => SpecialTransformations.Milestone0.SortTag.rv)
+                {z |
+                  z ∘ π ∈
+                      DiamondIntegral.Section4.RVMeasuredCharts.graphOn D.chart.domain
+                        (DiamondIntegral.Section7.BlowupLiftData.inactCoord D) ∧
+                    z ∈
+                      SpecialTransformations.Section3.GammaParameters.sortedUniverse fun x =>
+                        SpecialTransformations.Milestone0.SortTag.rv})
+            n
+            (fun h =>
+              Eq.ndrec (motive := fun n =>
+                ∀ (γ : Fin n → SpecialTransformations.Section3.Values.Gamma),
+                  (∀ (i : Fin n), γ i ∈ { real := S, gamma := ∅ }.gamma) →
+                    SpecialTransformations.Section3.GammaParameters.DefinableWith { real := S, gamma := ∅ }.real γ
+                        (fun x => SpecialTransformations.Milestone0.SortTag.rv)
+                        {z |
+                          z ∘ π ∈
+                              DiamondIntegral.Section4.RVMeasuredCharts.graphOn D.chart.domain
+                                (DiamondIntegral.Section7.BlowupLiftData.inactCoord D) ∧
+                            z ∈
+                              SpecialTransformations.Section3.GammaParameters.sortedUniverse fun x =>
+                                SpecialTransformations.Milestone0.SortTag.rv} →
+                      SpecialTransformations.Section3.DefinableOver S
+                        (fun x => SpecialTransformations.Milestone0.SortTag.rv)
+                        {z |
+                          z ∘ π ∈
+                              DiamondIntegral.Section4.RVMeasuredCharts.graphOn D.chart.domain
+                                (DiamondIntegral.Section7.BlowupLiftData.inactCoord D) ∧
+                            z ∈
+                              SpecialTransformations.Section3.GammaParameters.sortedUniverse fun x =>
+                                SpecialTransformations.Milestone0.SortTag.rv})
+                (fun γ hγ hA =>
+                  have hγ0 := funext fun i => Fin.elim0 i;
+                  Eq.ndrec (motive := fun γ =>
+                    (∀ (i : Fin 0), γ i ∈ { real := S, gamma := ∅ }.gamma) →
+                      SpecialTransformations.Section3.GammaParameters.DefinableWith { real := S, gamma := ∅ }.real γ
+                          (fun x => SpecialTransformations.Milestone0.SortTag.rv)
+                          {z |
+                            z ∘ π ∈
+                                DiamondIntegral.Section4.RVMeasuredCharts.graphOn D.chart.domain
+                                  (DiamondIntegral.Section7.BlowupLiftData.inactCoord D) ∧
+                              z ∈
+                                SpecialTransformations.Section3.GammaParameters.sortedUniverse fun x =>
+                                  SpecialTransformations.Milestone0.SortTag.rv} →
+                        SpecialTransformations.Section3.DefinableOver S
+                          (fun x => SpecialTransformations.Milestone0.SortTag.rv)
+                          {z |
+                            z ∘ π ∈
+                                DiamondIntegral.Section4.RVMeasuredCharts.graphOn D.chart.domain
+                                  (DiamondIntegral.Section7.BlowupLiftData.inactCoord D) ∧
+                              z ∈
+                                SpecialTransformations.Section3.GammaParameters.sortedUniverse fun x =>
+                                  SpecialTransformations.Milestone0.SortTag.rv})
+                    (fun hγ hA =>
+                      (SpecialTransformations.Section3.GammaParameters.with_zero_iff S Fin.elim0
+                            (fun x => SpecialTransformations.Milestone0.SortTag.rv)
+                            {z |
+                              z ∘ π ∈
+                                  DiamondIntegral.Section4.RVMeasuredCharts.graphOn D.chart.domain
+                                    (DiamondIntegral.Section7.BlowupLiftData.inactCoord D) ∧
+                                z ∈
+                                  SpecialTransformations.Section3.GammaParameters.sortedUniverse fun x =>
+                                    SpecialTransformations.Milestone0.SortTag.rv}).mp
+                        hA)
+                    (Eq.symm hγ0) hγ hA)
+                (Eq.symm h) γ hγ hA)
+            (fun n_1 h =>
+              Eq.ndrec (motive := fun n =>
+                ∀ (γ : Fin n → SpecialTransformations.Section3.Values.Gamma),
+                  (∀ (i : Fin n), γ i ∈ { real := S, gamma := ∅ }.gamma) →
+                    SpecialTransformations.Section3.GammaParameters.DefinableWith { real := S, gamma := ∅ }.real γ
+                        (fun x => SpecialTransformations.Milestone0.SortTag.rv)
+                        {z |
+                          z ∘ π ∈
+                              DiamondIntegral.Section4.RVMeasuredCharts.graphOn D.chart.domain
+                                (DiamondIntegral.Section7.BlowupLiftData.inactCoord D) ∧
+                            z ∈
+                              SpecialTransformations.Section3.GammaParameters.sortedUniverse fun x =>
+                                SpecialTransformations.Milestone0.SortTag.rv} →
+                      SpecialTransformations.Section3.DefinableOver S
+                        (fun x => SpecialTransformations.Milestone0.SortTag.rv)
+                        {z |
+                          z ∘ π ∈
+                              DiamondIntegral.Section4.RVMeasuredCharts.graphOn D.chart.domain
+                                (DiamondIntegral.Section7.BlowupLiftData.inactCoord D) ∧
+                            z ∈
+                              SpecialTransformations.Section3.GammaParameters.sortedUniverse fun x =>
+                                SpecialTransformations.Milestone0.SortTag.rv})
+                (fun γ hγ hA => False.elim (hγ 0)) (Eq.symm h) γ hγ hA)
+            (Eq.refl n))
+'DiamondIntegral.Section7.Remark73.inactMap_graph' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.Remark73.remark_7_3 : ∀ {M : Type} [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set M} {k : ℕ}
+  (D : DiamondIntegral.Section4.RelativeAnnularGenerators.AnnularDatum { real := S, gamma := ∅ } k),
+  DiamondIntegral.Section2.rvDimension S (DiamondIntegral.Section7.Remark73.domainRV D) ≤ ↑k
+theorem DiamondIntegral.Section7.Remark73.remark_7_3 : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {S : Set M} {k : ℕ} (D : DiamondIntegral.Section4.RelativeAnnularGenerators.AnnularDatum { real := S, gamma := ∅ } k),
+  DiamondIntegral.Section2.rvDimension S (DiamondIntegral.Section7.Remark73.domainRV D) ≤ ↑k :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {S} {k}
+    D =>
+  DiamondIntegral.Section2.rvDimension_le_of_finite_map
+    (Exists.intro (DiamondIntegral.Section7.Remark73.inactMap D)
+      ⟨DiamondIntegral.Section7.Remark73.inactMap_finite D, DiamondIntegral.Section7.Remark73.inactMap_graph D⟩)
+'DiamondIntegral.Section7.Remark73.remark_7_3' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.Remark73.remark_7_3_lt : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {S : Set M} {k : ℕ} (D : DiamondIntegral.Section4.RelativeAnnularGenerators.AnnularDatum { real := S, gamma := ∅ } k),
+  DiamondIntegral.Section2.rvDimension S (DiamondIntegral.Section7.Remark73.domainRV D) < ↑(1 + k)
+theorem DiamondIntegral.Section7.Remark73.remark_7_3_lt : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {S : Set M} {k : ℕ} (D : DiamondIntegral.Section4.RelativeAnnularGenerators.AnnularDatum { real := S, gamma := ∅ } k),
+  DiamondIntegral.Section2.rvDimension S (DiamondIntegral.Section7.Remark73.domainRV D) < ↑(1 + k) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {S} {k}
+    D =>
+  LE.le.trans_lt (DiamondIntegral.Section7.Remark73.remark_7_3 D)
+    (cast (Eq.symm Nat.cast_lt._simp_1)
+      (Decidable.byContradiction fun a => DiamondIntegral.Section7.Remark73.remark_7_3_lt._proof_1_1 a))
+'DiamondIntegral.Section7.Remark73.remark_7_3_lt' depends on axioms: [propext, Classical.choice, Quot.sound]
 @DiamondIntegral.Section7.Remark74.remark_7_4_bounded : ∀ {M : Type}
   [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
   {k : ℕ} {B : SpecialTransformations.Section3.GammaParameters.Base}
@@ -24182,3 +24532,571 @@ fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransf
     (DiamondIntegral.Section7.BoundedClasses.cls_eq_of_iso
       (DiamondIntegral.Section7.StrictCharts.strictIso h00 a.toChart))
 'DiamondIntegral.Section7.StrictCharts.cls_strictObj' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.TwoCells.IsOpenDiscVF : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] → Set (DiamondIntegral.Section2.VF M) → Prop
+def DiamondIntegral.Section7.TwoCells.IsOpenDiscVF : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] → Set (DiamondIntegral.Section2.VF M) → Prop :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] D =>
+  DiamondIntegral.Section2.IsOpenDisc (Subtype.val '' D)
+'DiamondIntegral.Section7.TwoCells.IsOpenDiscVF' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.TwoCells.sharpSet : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      DiamondIntegral.Section2.RVInfinity M → Set (DiamondIntegral.Section2.VF M)
+def DiamondIntegral.Section7.TwoCells.sharpSet : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      DiamondIntegral.Section2.RVInfinity M → Set (DiamondIntegral.Section2.VF M) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] t =>
+  {x | DiamondIntegral.Section2.rv M x = t}
+'DiamondIntegral.Section7.TwoCells.sharpSet' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.TwoCells.VAffine : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      Set (DiamondIntegral.Section2.VF M) → (DiamondIntegral.Section2.VF M → DiamondIntegral.Section2.VF M) → Prop
+def DiamondIntegral.Section7.TwoCells.VAffine : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      Set (DiamondIntegral.Section2.VF M) → (DiamondIntegral.Section2.VF M → DiamondIntegral.Section2.VF M) → Prop :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] D f =>
+  DiamondIntegral.Section7.TwoCells.IsOpenDiscVF D ∧
+    Set.InjOn f D ∧
+      ∃ γ,
+        ∀ a ∈ D,
+          ∀ a' ∈ D, DiamondIntegral.Section2.vfValue (f a - f a') = ↑γ * DiamondIntegral.Section2.vfValue (a - a')
+'DiamondIntegral.Section7.TwoCells.VAffine' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.TwoCells.HasSlope : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      Set (DiamondIntegral.Section2.VF M) →
+        (DiamondIntegral.Section2.VF M → DiamondIntegral.Section2.VF M) → DiamondIntegral.Section2.RV M → Prop
+def DiamondIntegral.Section7.TwoCells.HasSlope : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      Set (DiamondIntegral.Section2.VF M) →
+        (DiamondIntegral.Section2.VF M → DiamondIntegral.Section2.VF M) → DiamondIntegral.Section2.RV M → Prop :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] D f t =>
+  ∀ a ∈ D, ∀ a' ∈ D, DiamondIntegral.Section2.rv M (f a - f a') = ↑t * DiamondIntegral.Section2.rv M (a - a')
+'DiamondIntegral.Section7.TwoCells.HasSlope' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.TwoCells.RVAffine : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      Set (DiamondIntegral.Section2.VF M) → (DiamondIntegral.Section2.VF M → DiamondIntegral.Section2.VF M) → Prop
+def DiamondIntegral.Section7.TwoCells.RVAffine : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      Set (DiamondIntegral.Section2.VF M) → (DiamondIntegral.Section2.VF M → DiamondIntegral.Section2.VF M) → Prop :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] D f =>
+  DiamondIntegral.Section7.TwoCells.IsOpenDiscVF D ∧
+    Set.InjOn f D ∧ ∃ t, DiamondIntegral.Section7.TwoCells.HasSlope D f t
+'DiamondIntegral.Section7.TwoCells.RVAffine' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.TwoCells.first : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    Set (DiamondIntegral.Section2.VF M × DiamondIntegral.Section2.VF M) → Set (DiamondIntegral.Section2.VF M)
+def DiamondIntegral.Section7.TwoCells.first : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    Set (DiamondIntegral.Section2.VF M × DiamondIntegral.Section2.VF M) → Set (DiamondIntegral.Section2.VF M) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] A => Prod.fst '' A
+'DiamondIntegral.Section7.TwoCells.first' depends on axioms: [propext]
+@DiamondIntegral.Section7.TwoCells.second : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    Set (DiamondIntegral.Section2.VF M × DiamondIntegral.Section2.VF M) → Set (DiamondIntegral.Section2.VF M)
+def DiamondIntegral.Section7.TwoCells.second : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    Set (DiamondIntegral.Section2.VF M × DiamondIntegral.Section2.VF M) → Set (DiamondIntegral.Section2.VF M) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] A => Prod.snd '' A
+'DiamondIntegral.Section7.TwoCells.second' depends on axioms: [propext]
+@DiamondIntegral.Section7.TwoCells.fibre : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    Set (DiamondIntegral.Section2.VF M × DiamondIntegral.Section2.VF M) →
+      DiamondIntegral.Section2.VF M → Set (DiamondIntegral.Section2.VF M)
+def DiamondIntegral.Section7.TwoCells.fibre : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    Set (DiamondIntegral.Section2.VF M × DiamondIntegral.Section2.VF M) →
+      DiamondIntegral.Section2.VF M → Set (DiamondIntegral.Section2.VF M) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] A a => {b | (a, b) ∈ A}
+'DiamondIntegral.Section7.TwoCells.fibre' depends on axioms: [propext]
+@DiamondIntegral.Section7.TwoCells.DiscToDisc : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      Set (DiamondIntegral.Section2.VF M) → (DiamondIntegral.Section2.VF M → DiamondIntegral.Section2.VF M) → Prop
+def DiamondIntegral.Section7.TwoCells.DiscToDisc : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      Set (DiamondIntegral.Section2.VF M) → (DiamondIntegral.Section2.VF M → DiamondIntegral.Section2.VF M) → Prop :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] D f =>
+  ∀ E ⊆ D, DiamondIntegral.Section7.TwoCells.IsOpenDiscVF E → DiamondIntegral.Section7.TwoCells.IsOpenDiscVF (f '' E)
+'DiamondIntegral.Section7.TwoCells.DiscToDisc' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.TwoCells.Balanced : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      Set (DiamondIntegral.Section2.VF M × DiamondIntegral.Section2.VF M) →
+        (DiamondIntegral.Section2.VF M → DiamondIntegral.Section2.VF M) →
+          DiamondIntegral.Section2.RVInfinity M → DiamondIntegral.Section2.RVInfinity M → Prop
+structure DiamondIntegral.Section7.TwoCells.Balanced {M : Type} [SpecialTransformations.Milestone0.LRV.Structure M]
+  [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  (A : Set (DiamondIntegral.Section2.VF M × DiamondIntegral.Section2.VF M))
+  (f : DiamondIntegral.Section2.VF M → DiamondIntegral.Section2.VF M) (t₁ t₂ : DiamondIntegral.Section2.RVInfinity M) :
+  Prop
+number of parameters: 7
+fields:
+  DiamondIntegral.Section7.TwoCells.Balanced.first_disc : DiamondIntegral.Section7.TwoCells.IsOpenDiscVF
+      (DiamondIntegral.Section7.TwoCells.first A)
+  DiamondIntegral.Section7.TwoCells.Balanced.second_disc : DiamondIntegral.Section7.TwoCells.IsOpenDiscVF
+      (DiamondIntegral.Section7.TwoCells.second A)
+  DiamondIntegral.Section7.TwoCells.Balanced.bijective : Set.BijOn f (DiamondIntegral.Section7.TwoCells.first A)
+      (DiamondIntegral.Section7.TwoCells.second A)
+  DiamondIntegral.Section7.TwoCells.Balanced.discToDisc : DiamondIntegral.Section7.TwoCells.DiscToDisc
+      (DiamondIntegral.Section7.TwoCells.first A) f
+  DiamondIntegral.Section7.TwoCells.Balanced.rvAffine : DiamondIntegral.Section7.TwoCells.RVAffine
+      (DiamondIntegral.Section7.TwoCells.first A) f
+  DiamondIntegral.Section7.TwoCells.Balanced.fibre_eq : ∀ a ∈ DiamondIntegral.Section7.TwoCells.first A,
+      DiamondIntegral.Section7.TwoCells.fibre A a = (fun x => x + f a) '' DiamondIntegral.Section7.TwoCells.sharpSet t₂
+  DiamondIntegral.Section7.TwoCells.Balanced.preimage_eq : ∀ a ∈ DiamondIntegral.Section7.TwoCells.first A,
+      f ⁻¹' DiamondIntegral.Section7.TwoCells.fibre A a ∩ DiamondIntegral.Section7.TwoCells.first A =
+        (fun x => a - x) '' DiamondIntegral.Section7.TwoCells.sharpSet t₁
+constructor:
+  DiamondIntegral.Section7.TwoCells.Balanced.mk {M : Type} [SpecialTransformations.Milestone0.LRV.Structure M]
+    [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+    {A : Set (DiamondIntegral.Section2.VF M × DiamondIntegral.Section2.VF M)}
+    {f : DiamondIntegral.Section2.VF M → DiamondIntegral.Section2.VF M} {t₁ t₂ : DiamondIntegral.Section2.RVInfinity M}
+    (first_disc : DiamondIntegral.Section7.TwoCells.IsOpenDiscVF (DiamondIntegral.Section7.TwoCells.first A))
+    (second_disc : DiamondIntegral.Section7.TwoCells.IsOpenDiscVF (DiamondIntegral.Section7.TwoCells.second A))
+    (bijective : Set.BijOn f (DiamondIntegral.Section7.TwoCells.first A) (DiamondIntegral.Section7.TwoCells.second A))
+    (discToDisc : DiamondIntegral.Section7.TwoCells.DiscToDisc (DiamondIntegral.Section7.TwoCells.first A) f)
+    (rvAffine : DiamondIntegral.Section7.TwoCells.RVAffine (DiamondIntegral.Section7.TwoCells.first A) f)
+    (fibre_eq :
+      ∀ a ∈ DiamondIntegral.Section7.TwoCells.first A,
+        DiamondIntegral.Section7.TwoCells.fibre A a =
+          (fun x => x + f a) '' DiamondIntegral.Section7.TwoCells.sharpSet t₂)
+    (preimage_eq :
+      ∀ a ∈ DiamondIntegral.Section7.TwoCells.first A,
+        f ⁻¹' DiamondIntegral.Section7.TwoCells.fibre A a ∩ DiamondIntegral.Section7.TwoCells.first A =
+          (fun x => a - x) '' DiamondIntegral.Section7.TwoCells.sharpSet t₁) :
+    DiamondIntegral.Section7.TwoCells.Balanced A f t₁ t₂
+'DiamondIntegral.Section7.TwoCells.Balanced' depends on axioms: [propext, Quot.sound]
+@DiamondIntegral.Section7.TwoCells.IsOneCell : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] → Set (DiamondIntegral.Section2.VF M) → Prop
+def DiamondIntegral.Section7.TwoCells.IsOneCell : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] → Set (DiamondIntegral.Section2.VF M) → Prop :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] D =>
+  (∃ x, D = {x}) ∨
+    DiamondIntegral.Section7.TwoCells.IsOpenDiscVF D ∧ ∃ t, D ⊆ DiamondIntegral.Section7.TwoCells.sharpSet t
+'DiamondIntegral.Section7.TwoCells.IsOneCell' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.TwoCells.PositioningCase : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      Set (DiamondIntegral.Section2.VF M × DiamondIntegral.Section2.VF M) →
+        (DiamondIntegral.Section2.VF M → DiamondIntegral.Section2.VF M) → DiamondIntegral.Section2.RV M → Prop
+def DiamondIntegral.Section7.TwoCells.PositioningCase : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      Set (DiamondIntegral.Section2.VF M × DiamondIntegral.Section2.VF M) →
+        (DiamondIntegral.Section2.VF M → DiamondIntegral.Section2.VF M) → DiamondIntegral.Section2.RV M → Prop :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] A ε t =>
+  (∀ a ∈ DiamondIntegral.Section7.TwoCells.first A, ∀ a' ∈ DiamondIntegral.Section7.TwoCells.first A, ε a = ε a') ∨
+    (Set.InjOn ε (DiamondIntegral.Section7.TwoCells.first A) ∧
+        DiamondIntegral.Section7.TwoCells.DiscToDisc (DiamondIntegral.Section7.TwoCells.first A) ε ∧
+          ∃ x γ,
+            Subtype.val '' ε '' DiamondIntegral.Section7.TwoCells.first A =
+                SpecialTransformations.Section3.BallImaginaries.underlying (DiamondIntegral.Section2.openDiscCode x γ) ∧
+              SpecialTransformations.Section3.Values.vrv ↑t ≤ ↑γ) ∨
+      ∃ t₁, DiamondIntegral.Section7.TwoCells.Balanced A ε t₁ ↑t
+'DiamondIntegral.Section7.TwoCells.PositioningCase' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.TwoCells.IsTwoCell : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      Set (DiamondIntegral.Section2.VF M × DiamondIntegral.Section2.VF M) → Prop
+def DiamondIntegral.Section7.TwoCells.IsTwoCell : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      Set (DiamondIntegral.Section2.VF M × DiamondIntegral.Section2.VF M) → Prop :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] A =>
+  (∃ t₁ t₂, ∀ p ∈ A, DiamondIntegral.Section2.rv M p.1 = t₁ ∧ DiamondIntegral.Section2.rv M p.2 = t₂) ∧
+    DiamondIntegral.Section7.TwoCells.IsOneCell (DiamondIntegral.Section7.TwoCells.first A) ∧
+      ∃ ε t,
+        (∀ a ∈ DiamondIntegral.Section7.TwoCells.first A,
+            DiamondIntegral.Section7.TwoCells.fibre A a =
+              (fun x => x + ε a) '' DiamondIntegral.Section7.TwoCells.sharpSet ↑t) ∧
+          DiamondIntegral.Section7.TwoCells.PositioningCase A ε t
+'DiamondIntegral.Section7.TwoCells.IsTwoCell' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.TwoCells.sharp_zero : ∀ {M : Type} [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF],
+  DiamondIntegral.Section7.TwoCells.sharpSet (DiamondIntegral.Section2.rvZero M) = {0}
+theorem DiamondIntegral.Section7.TwoCells.sharp_zero : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF],
+  DiamondIntegral.Section7.TwoCells.sharpSet (DiamondIntegral.Section2.rvZero M) = {0} :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] =>
+  Set.ext fun x =>
+    of_eq_true
+      (Eq.trans
+        (congr
+          (congrArg Iff
+            (Eq.trans
+              (congrFun'
+                (congrArg Membership.mem
+                  (congrArg Set.ofPred (funext fun x => DiamondIntegral.Section7.TwoCells.sharp_zero._simp_1_2 x)))
+                x)
+              Set.mem_setOf_eq))
+          DiamondIntegral.Section7.TwoCells.sharp_zero._simp_1_3)
+        (iff_self (x = 0)))
+'DiamondIntegral.Section7.TwoCells.sharp_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.TwoCells.mem_second_of_fibre : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  {A : Set (DiamondIntegral.Section2.VF M × DiamondIntegral.Section2.VF M)} {a b : DiamondIntegral.Section2.VF M},
+  b ∈ DiamondIntegral.Section7.TwoCells.fibre A a → b ∈ DiamondIntegral.Section7.TwoCells.second A
+theorem DiamondIntegral.Section7.TwoCells.mem_second_of_fibre : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  {A : Set (DiamondIntegral.Section2.VF M × DiamondIntegral.Section2.VF M)} {a b : DiamondIntegral.Section2.VF M},
+  b ∈ DiamondIntegral.Section7.TwoCells.fibre A a → b ∈ DiamondIntegral.Section7.TwoCells.second A :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] {A} {a b} hb => Exists.intro (a, b) ⟨hb, rfl⟩
+'DiamondIntegral.Section7.TwoCells.mem_second_of_fibre' depends on axioms: [propext]
+@DiamondIntegral.Section7.TwoCells.fibre_of_zero : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {A : Set (DiamondIntegral.Section2.VF M × DiamondIntegral.Section2.VF M)}
+  {f : DiamondIntegral.Section2.VF M → DiamondIntegral.Section2.VF M} {t₁ t₂ : DiamondIntegral.Section2.RVInfinity M},
+  DiamondIntegral.Section7.TwoCells.Balanced A f t₁ t₂ →
+    t₂ = DiamondIntegral.Section2.rvZero M →
+      ∀ {a : DiamondIntegral.Section2.VF M},
+        a ∈ DiamondIntegral.Section7.TwoCells.first A → DiamondIntegral.Section7.TwoCells.fibre A a = {f a}
+theorem DiamondIntegral.Section7.TwoCells.fibre_of_zero : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {A : Set (DiamondIntegral.Section2.VF M × DiamondIntegral.Section2.VF M)}
+  {f : DiamondIntegral.Section2.VF M → DiamondIntegral.Section2.VF M} {t₁ t₂ : DiamondIntegral.Section2.RVInfinity M},
+  DiamondIntegral.Section7.TwoCells.Balanced A f t₁ t₂ →
+    t₂ = DiamondIntegral.Section2.rvZero M →
+      ∀ {a : DiamondIntegral.Section2.VF M},
+        a ∈ DiamondIntegral.Section7.TwoCells.first A → DiamondIntegral.Section7.TwoCells.fibre A a = {f a} :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {A} {f}
+    {t₁ t₂} h h2 {a} ha =>
+  Eq.mpr (id (congrArg (fun _a => _a = {f a}) (h.fibre_eq a ha)))
+    (Eq.mpr (id (congrArg (fun _a => (fun x => x + f a) '' DiamondIntegral.Section7.TwoCells.sharpSet _a = {f a}) h2))
+      (Eq.mpr (id (congrArg (fun _a => (fun x => x + f a) '' _a = {f a}) DiamondIntegral.Section7.TwoCells.sharp_zero))
+        (Eq.mpr (id (congrArg (fun _a => _a = {f a}) Set.image_singleton))
+          (Eq.mpr (id (congrArg (fun _a => {_a} = {f a}) (zero_add (f a)))) (Eq.refl {f a})))))
+'DiamondIntegral.Section7.TwoCells.fibre_of_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.TwoCells.fibre_of_zero_left : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {A : Set (DiamondIntegral.Section2.VF M × DiamondIntegral.Section2.VF M)}
+  {f : DiamondIntegral.Section2.VF M → DiamondIntegral.Section2.VF M} {t₁ t₂ : DiamondIntegral.Section2.RVInfinity M},
+  DiamondIntegral.Section7.TwoCells.Balanced A f t₁ t₂ →
+    t₁ = DiamondIntegral.Section2.rvZero M →
+      ∀ {a : DiamondIntegral.Section2.VF M},
+        a ∈ DiamondIntegral.Section7.TwoCells.first A → DiamondIntegral.Section7.TwoCells.fibre A a = {f a}
+theorem DiamondIntegral.Section7.TwoCells.fibre_of_zero_left : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {A : Set (DiamondIntegral.Section2.VF M × DiamondIntegral.Section2.VF M)}
+  {f : DiamondIntegral.Section2.VF M → DiamondIntegral.Section2.VF M} {t₁ t₂ : DiamondIntegral.Section2.RVInfinity M},
+  DiamondIntegral.Section7.TwoCells.Balanced A f t₁ t₂ →
+    t₁ = DiamondIntegral.Section2.rvZero M →
+      ∀ {a : DiamondIntegral.Section2.VF M},
+        a ∈ DiamondIntegral.Section7.TwoCells.first A → DiamondIntegral.Section7.TwoCells.fibre A a = {f a} :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {A} {f}
+    {t₁ t₂} h h1 {a} ha =>
+  have hpre := h.preimage_eq a ha;
+  Set.ext fun b =>
+    {
+      mp := fun hb =>
+        Exists.casesOn (h.bijective.right.right (DiamondIntegral.Section7.TwoCells.mem_second_of_fibre hb)) fun a' h =>
+          And.casesOn h fun ha' right =>
+            Eq.ndrec (motive := fun b => b ∈ DiamondIntegral.Section7.TwoCells.fibre A a → b ∈ {f a})
+              (fun hb =>
+                have hmem := ⟨hb, ha'⟩;
+                Eq.mpr
+                  (id
+                    (congrArg (fun _a => f _a ∈ {f a})
+                      (Set.mem_singleton_iff.mp
+                        (Eq.mp
+                          (congrArg (fun _a => a' ∈ _a)
+                            (Eq.mp
+                              (congrArg
+                                (fun _a =>
+                                  f ⁻¹' DiamondIntegral.Section7.TwoCells.fibre A a ∩
+                                      DiamondIntegral.Section7.TwoCells.first A =
+                                    {_a})
+                                (sub_zero a))
+                              (Eq.mp
+                                (congrArg
+                                  (fun _a =>
+                                    f ⁻¹' DiamondIntegral.Section7.TwoCells.fibre A a ∩
+                                        DiamondIntegral.Section7.TwoCells.first A =
+                                      _a)
+                                  Set.image_singleton)
+                                (Eq.mp
+                                  (congrArg
+                                    (fun _a =>
+                                      f ⁻¹' DiamondIntegral.Section7.TwoCells.fibre A a ∩
+                                          DiamondIntegral.Section7.TwoCells.first A =
+                                        (fun x => a - x) '' _a)
+                                    DiamondIntegral.Section7.TwoCells.sharp_zero)
+                                  (Eq.mp
+                                    (congrArg
+                                      (fun _a =>
+                                        f ⁻¹' DiamondIntegral.Section7.TwoCells.fibre A a ∩
+                                            DiamondIntegral.Section7.TwoCells.first A =
+                                          (fun x => a - x) '' DiamondIntegral.Section7.TwoCells.sharpSet _a)
+                                      h1)
+                                    hpre)))))
+                          hmem))))
+                  (Eq.refl (f a)))
+              right hb,
+      mpr := fun hb =>
+        Eq.mpr
+          (id (congrArg (fun _a => _a ∈ DiamondIntegral.Section7.TwoCells.fibre A a) (Set.mem_singleton_iff.mp hb)))
+          (Exists.casesOn (DiamondIntegral.Section2.rv_surjective t₂) fun s hs =>
+            have hfib := h.fibre_eq a ha;
+            have hmem := Eq.mpr (id (congrArg (fun _a => s + f a ∈ _a) hfib)) (Exists.intro s ⟨hs, rfl⟩);
+            Exists.casesOn (h.bijective.right.right (DiamondIntegral.Section7.TwoCells.mem_second_of_fibre hmem))
+              fun a' h =>
+              And.casesOn h fun ha' he =>
+                have hm :=
+                  ⟨Eq.mpr (id (congrArg (fun _a => _a) (propext Set.mem_preimage)))
+                      (Eq.mpr (id (congrArg (fun _a => _a ∈ DiamondIntegral.Section7.TwoCells.fibre A a) he)) hmem),
+                    ha'⟩;
+                Eq.mp
+                  (congrArg (fun _a => _a ∈ DiamondIntegral.Section7.TwoCells.fibre A a)
+                    (Eq.symm
+                      (Eq.mp
+                        (congrArg (fun _a => f _a = s + f a)
+                          (Set.mem_singleton_iff.mp
+                            (Eq.mp
+                              (congrArg (fun _a => a' ∈ _a)
+                                (Eq.mp
+                                  (congrArg
+                                    (fun _a =>
+                                      f ⁻¹' DiamondIntegral.Section7.TwoCells.fibre A a ∩
+                                          DiamondIntegral.Section7.TwoCells.first A =
+                                        {_a})
+                                    (sub_zero a))
+                                  (Eq.mp
+                                    (congrArg
+                                      (fun _a =>
+                                        f ⁻¹' DiamondIntegral.Section7.TwoCells.fibre A a ∩
+                                            DiamondIntegral.Section7.TwoCells.first A =
+                                          _a)
+                                      Set.image_singleton)
+                                    (Eq.mp
+                                      (congrArg
+                                        (fun _a =>
+                                          f ⁻¹' DiamondIntegral.Section7.TwoCells.fibre A a ∩
+                                              DiamondIntegral.Section7.TwoCells.first A =
+                                            (fun x => a - x) '' _a)
+                                        DiamondIntegral.Section7.TwoCells.sharp_zero)
+                                      (Eq.mp
+                                        (congrArg
+                                          (fun _a =>
+                                            f ⁻¹' DiamondIntegral.Section7.TwoCells.fibre A a ∩
+                                                DiamondIntegral.Section7.TwoCells.first A =
+                                              (fun x => a - x) '' DiamondIntegral.Section7.TwoCells.sharpSet _a)
+                                          h1)
+                                        hpre)))))
+                              hm)))
+                        he)))
+                  hmem) }
+'DiamondIntegral.Section7.TwoCells.fibre_of_zero_left' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.TwoCells.paradigm_zero_iff : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {A : Set (DiamondIntegral.Section2.VF M × DiamondIntegral.Section2.VF M)}
+  {f : DiamondIntegral.Section2.VF M → DiamondIntegral.Section2.VF M} {t₁ t₂ : DiamondIntegral.Section2.RVInfinity M},
+  DiamondIntegral.Section7.TwoCells.Balanced A f t₁ t₂ →
+    (DiamondIntegral.Section7.TwoCells.first A).Nonempty →
+      (t₁ = DiamondIntegral.Section2.rvZero M ↔ t₂ = DiamondIntegral.Section2.rvZero M)
+theorem DiamondIntegral.Section7.TwoCells.paradigm_zero_iff : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {A : Set (DiamondIntegral.Section2.VF M × DiamondIntegral.Section2.VF M)}
+  {f : DiamondIntegral.Section2.VF M → DiamondIntegral.Section2.VF M} {t₁ t₂ : DiamondIntegral.Section2.RVInfinity M},
+  DiamondIntegral.Section7.TwoCells.Balanced A f t₁ t₂ →
+    (DiamondIntegral.Section7.TwoCells.first A).Nonempty →
+      (t₁ = DiamondIntegral.Section2.rvZero M ↔ t₂ = DiamondIntegral.Section2.rvZero M) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {A} {f}
+    {t₁ t₂} h hne =>
+  Exists.casesOn hne fun a ha =>
+    {
+      mp := fun h1 =>
+        have hfib := DiamondIntegral.Section7.TwoCells.fibre_of_zero_left h h1 ha;
+        Exists.casesOn (DiamondIntegral.Section2.rv_surjective t₂) fun s hs =>
+          have hmem := Eq.mpr (id (congrArg (fun _a => s + f a ∈ _a) (h.fibre_eq a ha))) (Exists.intro s ⟨hs, rfl⟩);
+          Eq.mpr (id (congrArg (fun _a => _a = DiamondIntegral.Section2.rvZero M) (Eq.symm hs)))
+            (Eq.mpr
+              (id
+                (congrArg (fun _a => DiamondIntegral.Section2.rv M _a = DiamondIntegral.Section2.rvZero M)
+                  (Eq.mp (congrArg (fun _a => _a) (propext add_eq_right))
+                    (Eq.mp (congrArg (fun _a => _a) (propext Set.mem_singleton_iff))
+                      (Eq.mp (congrArg (fun _a => s + f a ∈ _a) hfib) hmem)))))
+              (Eq.mpr
+                (id (congrArg (fun _a => _a = DiamondIntegral.Section2.rvZero M) DiamondIntegral.Section2.rv_zero))
+                (Eq.refl (DiamondIntegral.Section2.rvZero M)))),
+      mpr := fun h2 =>
+        have hfib := DiamondIntegral.Section7.TwoCells.fibre_of_zero h h2 ha;
+        have hpre := h.preimage_eq a ha;
+        Exists.casesOn (DiamondIntegral.Section2.rv_surjective t₁) fun s hs =>
+          have hmem :=
+            Eq.mpr
+              (id
+                (congrArg (fun _a => a - s ∈ _a)
+                  (Eq.mp
+                    (congrArg
+                      (fun _a =>
+                        f ⁻¹' _a ∩ DiamondIntegral.Section7.TwoCells.first A =
+                          (fun x => a - x) '' DiamondIntegral.Section7.TwoCells.sharpSet t₁)
+                      hfib)
+                    hpre)))
+              (Exists.intro s ⟨hs, rfl⟩);
+          have he := h.bijective.right.left hmem.right ha hmem.left;
+          Eq.mpr (id (congrArg (fun _a => _a = DiamondIntegral.Section2.rvZero M) (Eq.symm hs)))
+            (Eq.mpr
+              (id
+                (congrArg (fun _a => DiamondIntegral.Section2.rv M _a = DiamondIntegral.Section2.rvZero M)
+                  (Eq.mp (congrArg (fun _a => _a) (propext sub_eq_self)) he)))
+              (Eq.mpr
+                (id (congrArg (fun _a => _a = DiamondIntegral.Section2.rvZero M) DiamondIntegral.Section2.rv_zero))
+                (Eq.refl (DiamondIntegral.Section2.rvZero M)))) }
+'DiamondIntegral.Section7.TwoCells.paradigm_zero_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.TwoCells.graph_of_zero : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {A : Set (DiamondIntegral.Section2.VF M × DiamondIntegral.Section2.VF M)}
+  {f : DiamondIntegral.Section2.VF M → DiamondIntegral.Section2.VF M} {t₁ t₂ : DiamondIntegral.Section2.RVInfinity M},
+  DiamondIntegral.Section7.TwoCells.Balanced A f t₁ t₂ →
+    t₂ = DiamondIntegral.Section2.rvZero M → A = {p | p.1 ∈ DiamondIntegral.Section7.TwoCells.first A ∧ p.2 = f p.1}
+theorem DiamondIntegral.Section7.TwoCells.graph_of_zero : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {A : Set (DiamondIntegral.Section2.VF M × DiamondIntegral.Section2.VF M)}
+  {f : DiamondIntegral.Section2.VF M → DiamondIntegral.Section2.VF M} {t₁ t₂ : DiamondIntegral.Section2.RVInfinity M},
+  DiamondIntegral.Section7.TwoCells.Balanced A f t₁ t₂ →
+    t₂ = DiamondIntegral.Section2.rvZero M → A = {p | p.1 ∈ DiamondIntegral.Section7.TwoCells.first A ∧ p.2 = f p.1} :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {A} {f}
+    {t₁ t₂} h h2 =>
+  Set.ext fun p =>
+    {
+      mp := fun hp =>
+        have ha := Exists.intro p ⟨hp, rfl⟩;
+        have hb := hp;
+        ⟨ha, Eq.mp (congrArg (fun _a => p.2 ∈ _a) (DiamondIntegral.Section7.TwoCells.fibre_of_zero h h2 ha)) hb⟩,
+      mpr := fun a =>
+        And.casesOn a fun ha hb =>
+          id
+            (Eq.mpr (id (congrArg (fun _a => p.2 ∈ _a) (DiamondIntegral.Section7.TwoCells.fibre_of_zero h h2 ha))) hb) }
+'DiamondIntegral.Section7.TwoCells.graph_of_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.TwoCells.slope_eq : ∀ {M : Type} [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {A : Set (DiamondIntegral.Section2.VF M × DiamondIntegral.Section2.VF M)}
+  {f : DiamondIntegral.Section2.VF M → DiamondIntegral.Section2.VF M} {t₁ t₂ : DiamondIntegral.Section2.RVInfinity M},
+  DiamondIntegral.Section7.TwoCells.Balanced A f t₁ t₂ →
+    (DiamondIntegral.Section7.TwoCells.first A).Nonempty →
+      ∀ {s : DiamondIntegral.Section2.RV M},
+        DiamondIntegral.Section7.TwoCells.HasSlope (DiamondIntegral.Section7.TwoCells.first A) f s →
+          ↑s * t₁ = DiamondIntegral.Section2.rv M (-1) * t₂
+theorem DiamondIntegral.Section7.TwoCells.slope_eq : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {A : Set (DiamondIntegral.Section2.VF M × DiamondIntegral.Section2.VF M)}
+  {f : DiamondIntegral.Section2.VF M → DiamondIntegral.Section2.VF M} {t₁ t₂ : DiamondIntegral.Section2.RVInfinity M},
+  DiamondIntegral.Section7.TwoCells.Balanced A f t₁ t₂ →
+    (DiamondIntegral.Section7.TwoCells.first A).Nonempty →
+      ∀ {s : DiamondIntegral.Section2.RV M},
+        DiamondIntegral.Section7.TwoCells.HasSlope (DiamondIntegral.Section7.TwoCells.first A) f s →
+          ↑s * t₁ = DiamondIntegral.Section2.rv M (-1) * t₂ :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {A} {f}
+    {t₁ t₂} h hne {s} hs =>
+  Exists.casesOn hne fun a ha =>
+    Exists.casesOn (DiamondIntegral.Section2.rv_surjective t₂) fun s₂ hs₂ =>
+      have hmem := Eq.mpr (id (congrArg (fun _a => s₂ + f a ∈ _a) (h.fibre_eq a ha))) (Exists.intro s₂ ⟨hs₂, rfl⟩);
+      Exists.casesOn (h.bijective.right.right (DiamondIntegral.Section7.TwoCells.mem_second_of_fibre hmem))
+        fun a' h_1 =>
+        And.casesOn h_1 fun ha' he =>
+          have hpre :=
+            ⟨Eq.mpr (id (congrArg (fun _a => _a) (propext Set.mem_preimage)))
+                (Eq.mpr (id (congrArg (fun _a => _a ∈ DiamondIntegral.Section7.TwoCells.fibre A a) he)) hmem),
+              ha'⟩;
+          Exists.casesOn (Eq.mp (congrArg (fun _a => a' ∈ _a) (h.preimage_eq a ha)) hpre) fun s₁ h =>
+            And.casesOn h fun hs₁ hs₁e =>
+              have hslope := hs a' ha' a ha;
+              have hneg :=
+                id
+                  (Eq.mpr
+                    (id
+                      (congrArg (fun _a => SpecialTransformations.Section3.RVOperations.rvHom (-s₁) = _a)
+                        (Eq.symm (map_mul SpecialTransformations.Section3.RVOperations.rvHom (-1) s₁))))
+                    (Eq.mpr
+                      (id
+                        (congrArg
+                          (fun _a =>
+                            SpecialTransformations.Section3.RVOperations.rvHom (-s₁) =
+                              SpecialTransformations.Section3.RVOperations.rvHom _a)
+                          (neg_one_mul s₁)))
+                      (Eq.refl (SpecialTransformations.Section3.RVOperations.rvHom (-s₁)))));
+              have hsq :=
+                id
+                  (Eq.mpr
+                    (id
+                      (congrArg (fun _a => _a = 1)
+                        (Eq.symm (map_mul SpecialTransformations.Section3.RVOperations.rvHom (-1) (-1)))))
+                    (Eq.mpr
+                      (id
+                        (congrArg (fun _a => SpecialTransformations.Section3.RVOperations.rvHom _a = 1)
+                          (neg_one_mul (-1))))
+                      (Eq.mpr
+                        (id
+                          (congrArg (fun _a => SpecialTransformations.Section3.RVOperations.rvHom _a = 1) (neg_neg 1)))
+                        (Eq.mpr
+                          (id
+                            (congrArg (fun _a => _a = 1) (map_one SpecialTransformations.Section3.RVOperations.rvHom)))
+                          (Eq.refl 1)))));
+              Trans.trans
+                (Trans.trans
+                  (Eq.mpr (id (congrArg (fun _a => ↑s * t₁ = _a * (↑s * t₁)) hsq))
+                    (Eq.mpr (id (congrArg (fun _a => ↑s * t₁ = _a) (one_mul (↑s * t₁)))) (Eq.refl (↑s * t₁))))
+                  (Eq.mpr
+                    (id
+                      (congrArg
+                        (fun _a =>
+                          _a = DiamondIntegral.Section2.rv M (-1) * (↑s * (DiamondIntegral.Section2.rv M (-1) * t₁)))
+                        (mul_assoc (DiamondIntegral.Section2.rv M (-1)) (DiamondIntegral.Section2.rv M (-1))
+                          (↑s * t₁))))
+                    (Eq.mpr
+                      (id
+                        (congrArg
+                          (fun _a =>
+                            DiamondIntegral.Section2.rv M (-1) * _a =
+                              DiamondIntegral.Section2.rv M (-1) * (↑s * (DiamondIntegral.Section2.rv M (-1) * t₁)))
+                          (mul_left_comm (DiamondIntegral.Section2.rv M (-1)) (↑s) t₁)))
+                      (Eq.refl
+                        (DiamondIntegral.Section2.rv M (-1) * (↑s * (DiamondIntegral.Section2.rv M (-1) * t₁)))))))
+                (Eq.mpr
+                  (id
+                    (congrArg
+                      (fun _a => DiamondIntegral.Section2.rv M (-1) * _a = DiamondIntegral.Section2.rv M (-1) * t₂)
+                      (Eq.symm
+                        (Eq.mp (congrArg (fun _a => t₂ = ↑s * (DiamondIntegral.Section2.rv M (-1) * _a)) hs₁)
+                          (Eq.mp
+                            (congrArg
+                              (fun _a =>
+                                _a = ↑s * (DiamondIntegral.Section2.rv M (-1) * DiamondIntegral.Section2.rv M s₁))
+                              hs₂)
+                            (Eq.mp (congrArg (fun _a => DiamondIntegral.Section2.rv M s₂ = ↑s * _a) hneg)
+                              (Eq.mp
+                                (congrArg
+                                  (fun _a => DiamondIntegral.Section2.rv M s₂ = ↑s * DiamondIntegral.Section2.rv M _a)
+                                  (sub_sub_cancel_left a s₁))
+                                (Eq.mp
+                                  (congrArg
+                                    (fun _a =>
+                                      DiamondIntegral.Section2.rv M s₂ = ↑s * DiamondIntegral.Section2.rv M (_a - a))
+                                    (Eq.symm hs₁e))
+                                  (Eq.mp
+                                    (congrArg
+                                      (fun _a =>
+                                        DiamondIntegral.Section2.rv M _a = ↑s * DiamondIntegral.Section2.rv M (a' - a))
+                                      (add_sub_cancel_right s₂ (f a)))
+                                    (Eq.mp
+                                      (congrArg
+                                        (fun _a =>
+                                          DiamondIntegral.Section2.rv M (_a - f a) =
+                                            ↑s * DiamondIntegral.Section2.rv M (a' - a))
+                                        he)
+                                      hslope))))))))))
+                  (Eq.refl (DiamondIntegral.Section2.rv M (-1) * t₂)))
+'DiamondIntegral.Section7.TwoCells.slope_eq' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,8 +1,8 @@
 {
   "status": "PASS",
-  "scope": "Section 7 formalization in progress. Complete numbered results, on isomorphism classes of mu RV^db[1+k] over an arbitrary parameter base and with no input beyond the ACVF model: Definition 7.2 (elementary annular blowups with bounded variable apertures = Section 4 AnnularDatum/relative annular objects; restriction to definable pieces; blowups of length one and chains, on classes), Lemma 7.5 (BlowupResults.lemma_7_5), Corollary 7.6, Lemma 7.7, Corollary 7.8, Definition 7.9 (MuIsp) and the additive part of Lemma 7.10 (an AddCon); Lemma 7.12 on classes over the VF-generated base (BlowupLiftGeneral.lemma_7_12: liftCls [U^{tau,j}] = liftCls [U] for every aperture datum; step_lift, steps_lift, muIsp_lift for blowups of any length). Supporting: the commutative monoid of isomorphism classes with refinement, and the mu VF^diamond chart lifts of Definitions 6.34-6.37.",
+  "scope": "Section 7 formalization in progress. Complete numbered results, on isomorphism classes of mu RV^db[1+k] over an arbitrary parameter base and with no input beyond the ACVF model: Definition 7.2 (elementary annular blowups with bounded variable apertures = Section 4 AnnularDatum/relative annular objects; restriction to definable pieces; blowups of length one and chains, on classes), Lemma 7.5 (BlowupResults.lemma_7_5), Corollary 7.6, Lemma 7.7, Corollary 7.8, Definition 7.9 (MuIsp) and the additive part of Lemma 7.10 (an AddCon); Lemma 7.12 on classes over the VF-generated base (BlowupLiftGeneral.lemma_7_12: liftCls [U^{tau,j}] = liftCls [U] for every aperture datum; step_lift, steps_lift, muIsp_lift for blowups of any length); Remark 7.3 (dimension claim); Definitions 7.16, 7.17, 7.19 and Remark 7.18 (infinity symmetry and slope); Corollary 6.37 on Section 7 classes (ChartOfMeasured.liftCls_surjective). Supporting: the commutative monoid of isomorphism classes with refinement, and the mu VF^diamond chart lifts of Definitions 6.34-6.37.",
   "lean": "Lean (version 4.35.0, arm64-apple-darwin24.6.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
-  "repository_revision": "262169645fa0c300b6c51cfa24c7ece779db1a31",
+  "repository_revision": "3cc1711c4e5ac08962e9a0009a2bae1b44095eaa",
   "packages": {
     "fubini_theorems": "c94e50c50a950ab485277a9d94625a4417789e06",
     "integration_in_acvf": "ab4c0e8b15e1e21b0b4fce57eed764be76020e06",
@@ -474,6 +474,13 @@
     "DiamondIntegral.Section7.RVMaps.le_definable",
     "DiamondIntegral.Section7.RealBase.real_base",
     "DiamondIntegral.Section7.RealBase.real_base_iff",
+    "DiamondIntegral.Section7.Remark73.domainRV",
+    "DiamondIntegral.Section7.Remark73.inactMap",
+    "DiamondIntegral.Section7.Remark73.inactMap_finite",
+    "DiamondIntegral.Section7.Remark73.inactCoord_tupleDef",
+    "DiamondIntegral.Section7.Remark73.inactMap_graph",
+    "DiamondIntegral.Section7.Remark73.remark_7_3",
+    "DiamondIntegral.Section7.Remark73.remark_7_3_lt",
     "DiamondIntegral.Section7.Remark74.remark_7_4_bounded",
     "DiamondIntegral.Section7.Remark74.aperture_value_family_definable",
     "DiamondIntegral.Section7.Remark74.remark_7_4_named",
@@ -519,7 +526,27 @@
     "DiamondIntegral.Section7.StrictCharts.strictChart_bounded",
     "DiamondIntegral.Section7.StrictCharts.strictIso",
     "DiamondIntegral.Section7.StrictCharts.strictObj",
-    "DiamondIntegral.Section7.StrictCharts.cls_strictObj"
+    "DiamondIntegral.Section7.StrictCharts.cls_strictObj",
+    "DiamondIntegral.Section7.TwoCells.IsOpenDiscVF",
+    "DiamondIntegral.Section7.TwoCells.sharpSet",
+    "DiamondIntegral.Section7.TwoCells.VAffine",
+    "DiamondIntegral.Section7.TwoCells.HasSlope",
+    "DiamondIntegral.Section7.TwoCells.RVAffine",
+    "DiamondIntegral.Section7.TwoCells.first",
+    "DiamondIntegral.Section7.TwoCells.second",
+    "DiamondIntegral.Section7.TwoCells.fibre",
+    "DiamondIntegral.Section7.TwoCells.DiscToDisc",
+    "DiamondIntegral.Section7.TwoCells.Balanced",
+    "DiamondIntegral.Section7.TwoCells.IsOneCell",
+    "DiamondIntegral.Section7.TwoCells.PositioningCase",
+    "DiamondIntegral.Section7.TwoCells.IsTwoCell",
+    "DiamondIntegral.Section7.TwoCells.sharp_zero",
+    "DiamondIntegral.Section7.TwoCells.mem_second_of_fibre",
+    "DiamondIntegral.Section7.TwoCells.fibre_of_zero",
+    "DiamondIntegral.Section7.TwoCells.fibre_of_zero_left",
+    "DiamondIntegral.Section7.TwoCells.paradigm_zero_iff",
+    "DiamondIntegral.Section7.TwoCells.graph_of_zero",
+    "DiamondIntegral.Section7.TwoCells.slope_eq"
   ],
   "allowed_axioms": [
     "Classical.choice",
@@ -545,15 +572,17 @@
     "section 7/MeasuredRVBridge.lean": "43fecaafdf24ea62c3e304cbd688a7a266d1ed00c745614ee941bc6c13260209",
     "section 7/RVMaps.lean": "6ba0ffb657d3ed3a45523ba46e5e18a5d2917527fce58d72fbf0078cf96553d7",
     "section 7/RealBase.lean": "d5dc626eadcc279bcff32274ec66846f4ea6a33acf3088a597763f70d54cdd80",
+    "section 7/Remark73.lean": "35172b6743e820714a63845c882017838a4eec64bb1960fd8edc4f83f214821d",
     "section 7/Remark74.lean": "2d3faf226148c49a4aa24dc20b398f13fb4d85dee3dd2e8ac1e489eadc8d9f4b",
-    "section 7/Section.lean": "b8e55a1624f8806d6d351ea434b35df52c0d8d9a0be29814cf629d7734fb5dfc",
-    "section 7/StrictCharts.lean": "da9c25f231a08463d123acf8c91c48be8b167a89db2c4314f14f19fc3142ac2d"
+    "section 7/Section.lean": "9f1d4d2e0c73a01c23eef090b8a7df975108861e971f10bd9906909deb4e4682",
+    "section 7/StrictCharts.lean": "da9c25f231a08463d123acf8c91c48be8b167a89db2c4314f14f19fc3142ac2d",
+    "section 7/TwoCells.lean": "53f07ef0e8ff1d66b5bde04b5b6286a435e3f165d01f5bbfa19474c4f9e8215c"
   },
-  "verification_script_sha256": "73f26aa5ad6d9d2adaf52c0f3c96ab88f8b1bdec077f3efbb966ceb058dba0b0",
+  "verification_script_sha256": "33f6f3e625a62521e89e55a046ffb8bc95336ca684447c84c817f9c8649cb1df",
   "unfinished": [
-    "Lemma 7.10 multiplicative part (products) and Remarks 7.3/7.4 statements.",
+    "Lemma 7.10 multiplicative part (products).",
     "Object-level converse of BlowupResults: a class-level length-one blowup is realised by literal disjoint subobjects (Definition 7.2 wording).",
     "Object-level form of Lemma 7.12 (an isomorphism mu L U^flat = mu L U in mu VF^diamond rather than equality in K_+); later uses need only the class form.",
-    "Lemma 7.11, Lemma 7.13, Lemmas 7.14-7.23, Proposition 7.24, Remark 7.25, Theorem 7.26 with J_var, Corollary 7.27 and Remark 7.28 remain to be formalized."
+    "Lemma 7.11, Lemma 7.13, Lemmas 7.14, 7.15, 7.20-7.23, Proposition 7.24, Remark 7.25, Theorem 7.26 with J_var, Corollary 7.27 and Remark 7.28 remain to be formalized."
   ]
 }

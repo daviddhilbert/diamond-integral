@@ -15,7 +15,8 @@ none is a mathematical error.
 
 Lemma 7.5, Corollary 7.6, Lemma 7.7, Corollary 7.8, Definition 7.9, and the
 additive part of Lemma 7.10, together with Definition 7.2 on isomorphism classes.
-Lemma 7.12 on classes (`BlowupLiftGeneral.lemma_7_12`): for every aperture datum
+Remark 7.3 (dimension claim), Definitions 7.16, 7.17 and 7.19, and Remark 7.18
+(∞-symmetry and slope). Lemma 7.12 on classes (`BlowupLiftGeneral.lemma_7_12`): for every aperture datum
 over the VF-generated base, `μ𝕃[U^{τ,j}] = μ𝕃[U]` in K₊ μVF^◇[1+k]. Blowups of
 any length and μIsp preserve the lift (`steps_lift`, `muIsp_lift`).
 See [COVERAGE.md](COVERAGE.md) for the declaration map. They hold over an

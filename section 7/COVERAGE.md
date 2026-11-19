@@ -11,7 +11,7 @@ formalized.
 |---|---|---|---|
 | Notation 7.1 | `punc:RVd` | done (as data) | Section 4 `AnnularBlowup.shellPoints`, `endpointPoints` |
 | Definition 7.2 | `defn:blowup:coa` | done on classes | Section 4 `RelativeAnnularGenerators.AnnularDatum` (data, `annularObject` = U^{τ,j}); `ElementaryBlowups.datumRes`/`datumCres`, `cls_annular_split` (restriction); `ElementaryBlowups.ElementaryStep`, `Step` (length one); `BlowupCongruence.BlowupSteps` (length n) |
-| Remark 7.3 | — | pending | approved scope: dimension claim only |
+| Remark 7.3 | — | done (approved scope: dimension claim) | `Remark73.remark_7_3`, `remark_7_3_lt`: with Section 2's RV dimension, `dim_RV U ≤ k < 1 + k` when U has an elementary annular blowup |
 | Remark 7.4 | `db:blowup:bound` | done | `Remark74.remark_7_4_bounded`; `Remark74.remark_7_4_named` (a bound named over the base, via Section 6 `bounded_gamma_rows_named_bound`) |
 | Lemma 7.5 | `elementary:blowups:preserves:iso:vol` | done | `BlowupResults.lemma_7_5`; construction in `ElementaryComparison` (`ratioAperture`, `secondDatum`, `shallowIso`, `deepIso`, `endpointIso`, `step_of_le`, `elementaryDiamond`) |
 | Corollary 7.6 | `eblowup:same:loci:iso` | done | `BlowupResults.corollary_7_6` (`ElementaryBlowups.step_diamond`, via matrix refinement `Refinement.refine_matrix`) |
@@ -24,8 +24,8 @@ formalized.
 | Lemma 7.13 | `kernel:dim:1:coa` | pending | approved: head-start form |
 | Lemma 7.14 | `isp:VF:fiberwise:contract` | pending | |
 | Corollary 7.15 | `contraction:same:perm:isp` | pending | |
-| Definitions 7.16, 7.17, 7.19 | `rvaffine`, `defn:balance`, `def:units` | pending | |
-| Remark 7.18 | `2cell:linear` | pending | approved scope: ∞-symmetry and slope |
+| Definitions 7.16, 7.17, 7.19 | `rvaffine`, `defn:balance`, `def:units` | done (definitions) | `TwoCells.VAffine`, `RVAffine`/`HasSlope`, `Balanced`, `IsOneCell`, `PositioningCase`, `IsTwoCell` (geometric; definability imposed where used) |
+| Remark 7.18 | `2cell:linear` | done (approved scope) | `TwoCells.paradigm_zero_iff`, `graph_of_zero` (∞-symmetry; A is the graph of f), `slope_eq` (s·t₁ = −t₂) |
 | Lemmas 7.20–7.23 | `decom:into:2:units` … `contraction:perm:pair:isp` | pending | |
 | Proposition 7.24 | `kernel:L` | pending | |
 | Remark 7.25 | `thekernel` | pending | |

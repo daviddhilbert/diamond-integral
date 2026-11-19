@@ -1362,6 +1362,27 @@ import «section 7».Section
 #check @DiamondIntegral.Section7.RealBase.real_base_iff
 #print DiamondIntegral.Section7.RealBase.real_base_iff
 #print axioms DiamondIntegral.Section7.RealBase.real_base_iff
+#check @DiamondIntegral.Section7.Remark73.domainRV
+#print DiamondIntegral.Section7.Remark73.domainRV
+#print axioms DiamondIntegral.Section7.Remark73.domainRV
+#check @DiamondIntegral.Section7.Remark73.inactMap
+#print DiamondIntegral.Section7.Remark73.inactMap
+#print axioms DiamondIntegral.Section7.Remark73.inactMap
+#check @DiamondIntegral.Section7.Remark73.inactMap_finite
+#print DiamondIntegral.Section7.Remark73.inactMap_finite
+#print axioms DiamondIntegral.Section7.Remark73.inactMap_finite
+#check @DiamondIntegral.Section7.Remark73.inactCoord_tupleDef
+#print DiamondIntegral.Section7.Remark73.inactCoord_tupleDef
+#print axioms DiamondIntegral.Section7.Remark73.inactCoord_tupleDef
+#check @DiamondIntegral.Section7.Remark73.inactMap_graph
+#print DiamondIntegral.Section7.Remark73.inactMap_graph
+#print axioms DiamondIntegral.Section7.Remark73.inactMap_graph
+#check @DiamondIntegral.Section7.Remark73.remark_7_3
+#print DiamondIntegral.Section7.Remark73.remark_7_3
+#print axioms DiamondIntegral.Section7.Remark73.remark_7_3
+#check @DiamondIntegral.Section7.Remark73.remark_7_3_lt
+#print DiamondIntegral.Section7.Remark73.remark_7_3_lt
+#print axioms DiamondIntegral.Section7.Remark73.remark_7_3_lt
 #check @DiamondIntegral.Section7.Remark74.remark_7_4_bounded
 #print DiamondIntegral.Section7.Remark74.remark_7_4_bounded
 #print axioms DiamondIntegral.Section7.Remark74.remark_7_4_bounded
@@ -1500,3 +1521,63 @@ import «section 7».Section
 #check @DiamondIntegral.Section7.StrictCharts.cls_strictObj
 #print DiamondIntegral.Section7.StrictCharts.cls_strictObj
 #print axioms DiamondIntegral.Section7.StrictCharts.cls_strictObj
+#check @DiamondIntegral.Section7.TwoCells.IsOpenDiscVF
+#print DiamondIntegral.Section7.TwoCells.IsOpenDiscVF
+#print axioms DiamondIntegral.Section7.TwoCells.IsOpenDiscVF
+#check @DiamondIntegral.Section7.TwoCells.sharpSet
+#print DiamondIntegral.Section7.TwoCells.sharpSet
+#print axioms DiamondIntegral.Section7.TwoCells.sharpSet
+#check @DiamondIntegral.Section7.TwoCells.VAffine
+#print DiamondIntegral.Section7.TwoCells.VAffine
+#print axioms DiamondIntegral.Section7.TwoCells.VAffine
+#check @DiamondIntegral.Section7.TwoCells.HasSlope
+#print DiamondIntegral.Section7.TwoCells.HasSlope
+#print axioms DiamondIntegral.Section7.TwoCells.HasSlope
+#check @DiamondIntegral.Section7.TwoCells.RVAffine
+#print DiamondIntegral.Section7.TwoCells.RVAffine
+#print axioms DiamondIntegral.Section7.TwoCells.RVAffine
+#check @DiamondIntegral.Section7.TwoCells.first
+#print DiamondIntegral.Section7.TwoCells.first
+#print axioms DiamondIntegral.Section7.TwoCells.first
+#check @DiamondIntegral.Section7.TwoCells.second
+#print DiamondIntegral.Section7.TwoCells.second
+#print axioms DiamondIntegral.Section7.TwoCells.second
+#check @DiamondIntegral.Section7.TwoCells.fibre
+#print DiamondIntegral.Section7.TwoCells.fibre
+#print axioms DiamondIntegral.Section7.TwoCells.fibre
+#check @DiamondIntegral.Section7.TwoCells.DiscToDisc
+#print DiamondIntegral.Section7.TwoCells.DiscToDisc
+#print axioms DiamondIntegral.Section7.TwoCells.DiscToDisc
+#check @DiamondIntegral.Section7.TwoCells.Balanced
+#print DiamondIntegral.Section7.TwoCells.Balanced
+#print axioms DiamondIntegral.Section7.TwoCells.Balanced
+#check @DiamondIntegral.Section7.TwoCells.IsOneCell
+#print DiamondIntegral.Section7.TwoCells.IsOneCell
+#print axioms DiamondIntegral.Section7.TwoCells.IsOneCell
+#check @DiamondIntegral.Section7.TwoCells.PositioningCase
+#print DiamondIntegral.Section7.TwoCells.PositioningCase
+#print axioms DiamondIntegral.Section7.TwoCells.PositioningCase
+#check @DiamondIntegral.Section7.TwoCells.IsTwoCell
+#print DiamondIntegral.Section7.TwoCells.IsTwoCell
+#print axioms DiamondIntegral.Section7.TwoCells.IsTwoCell
+#check @DiamondIntegral.Section7.TwoCells.sharp_zero
+#print DiamondIntegral.Section7.TwoCells.sharp_zero
+#print axioms DiamondIntegral.Section7.TwoCells.sharp_zero
+#check @DiamondIntegral.Section7.TwoCells.mem_second_of_fibre
+#print DiamondIntegral.Section7.TwoCells.mem_second_of_fibre
+#print axioms DiamondIntegral.Section7.TwoCells.mem_second_of_fibre
+#check @DiamondIntegral.Section7.TwoCells.fibre_of_zero
+#print DiamondIntegral.Section7.TwoCells.fibre_of_zero
+#print axioms DiamondIntegral.Section7.TwoCells.fibre_of_zero
+#check @DiamondIntegral.Section7.TwoCells.fibre_of_zero_left
+#print DiamondIntegral.Section7.TwoCells.fibre_of_zero_left
+#print axioms DiamondIntegral.Section7.TwoCells.fibre_of_zero_left
+#check @DiamondIntegral.Section7.TwoCells.paradigm_zero_iff
+#print DiamondIntegral.Section7.TwoCells.paradigm_zero_iff
+#print axioms DiamondIntegral.Section7.TwoCells.paradigm_zero_iff
+#check @DiamondIntegral.Section7.TwoCells.graph_of_zero
+#print DiamondIntegral.Section7.TwoCells.graph_of_zero
+#print axioms DiamondIntegral.Section7.TwoCells.graph_of_zero
+#check @DiamondIntegral.Section7.TwoCells.slope_eq
+#print DiamondIntegral.Section7.TwoCells.slope_eq
+#print axioms DiamondIntegral.Section7.TwoCells.slope_eq
