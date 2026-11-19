@@ -1443,6 +1443,33 @@ import «section 7».Section
 #check @DiamondIntegral.Section7.Remark74.remark_7_4_named
 #print DiamondIntegral.Section7.Remark74.remark_7_4_named
 #print axioms DiamondIntegral.Section7.Remark74.remark_7_4_named
+#check @DiamondIntegral.Section7.SpecialChainInduction.transport
+#print DiamondIntegral.Section7.SpecialChainInduction.transport
+#print axioms DiamondIntegral.Section7.SpecialChainInduction.transport
+#check @DiamondIntegral.Section7.SpecialChainInduction.transport_form
+#print DiamondIntegral.Section7.SpecialChainInduction.transport_form
+#print axioms DiamondIntegral.Section7.SpecialChainInduction.transport_form
+#check @DiamondIntegral.Section7.SpecialChainInduction.clsG_transport
+#print DiamondIntegral.Section7.SpecialChainInduction.clsG_transport
+#print axioms DiamondIntegral.Section7.SpecialChainInduction.clsG_transport
+#check @DiamondIntegral.Section7.SpecialChainInduction.Claim
+#print DiamondIntegral.Section7.SpecialChainInduction.Claim
+#print axioms DiamondIntegral.Section7.SpecialChainInduction.Claim
+#check @DiamondIntegral.Section7.SpecialChainInduction.claim_comp
+#print DiamondIntegral.Section7.SpecialChainInduction.claim_comp
+#print axioms DiamondIntegral.Section7.SpecialChainInduction.claim_comp
+#check @DiamondIntegral.Section7.SpecialChainInduction.claim_relative
+#print DiamondIntegral.Section7.SpecialChainInduction.claim_relative
+#print axioms DiamondIntegral.Section7.SpecialChainInduction.claim_relative
+#check @DiamondIntegral.Section7.SpecialChainInduction.claim_of_point
+#print DiamondIntegral.Section7.SpecialChainInduction.claim_of_point
+#print axioms DiamondIntegral.Section7.SpecialChainInduction.claim_of_point
+#check @DiamondIntegral.Section7.SpecialChainInduction.special_chain
+#print DiamondIntegral.Section7.SpecialChainInduction.special_chain
+#print axioms DiamondIntegral.Section7.SpecialChainInduction.special_chain
+#check @DiamondIntegral.Section7.SpecialChainInduction.relative_chain
+#print DiamondIntegral.Section7.SpecialChainInduction.relative_chain
+#print axioms DiamondIntegral.Section7.SpecialChainInduction.relative_chain
 #check @DiamondIntegral.Section7.SpecialChainRel.decode_tail
 #print DiamondIntegral.Section7.SpecialChainRel.decode_tail
 #print axioms DiamondIntegral.Section7.SpecialChainRel.decode_tail
