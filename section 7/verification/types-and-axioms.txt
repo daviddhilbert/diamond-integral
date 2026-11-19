@@ -22733,6 +22733,1091 @@ fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransf
                   (Set.mem_singleton (SpecialTransformations.Section3.GammaParameters.codeValue (τ.aperture u)))).right
               (le_max_left δ 1)⟩⟩
 'DiamondIntegral.Section7.Remark74.remark_7_4_named' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.SpecialChainRel.decode_tail : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {r : ℕ} {z : Fin (1 + r) → M} (hz : z ∈ (SpecialTransformations.Section4.rawRVSpace (1 + r)).domain)
+  (hz' : (fun i => z (Fin.natAdd 1 i)) ∈ (SpecialTransformations.Section4.rawRVSpace r).domain),
+  (fun i => (SpecialTransformations.Section4.rawRVSpace (1 + r)).decode ⟨z, hz⟩ (Fin.natAdd 1 i)) =
+    (SpecialTransformations.Section4.rawRVSpace r).decode ⟨fun i => z (Fin.natAdd 1 i), hz'⟩
+theorem DiamondIntegral.Section7.SpecialChainRel.decode_tail : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {r : ℕ} {z : Fin (1 + r) → M} (hz : z ∈ (SpecialTransformations.Section4.rawRVSpace (1 + r)).domain)
+  (hz' : (fun i => z (Fin.natAdd 1 i)) ∈ (SpecialTransformations.Section4.rawRVSpace r).domain),
+  (fun i => (SpecialTransformations.Section4.rawRVSpace (1 + r)).decode ⟨z, hz⟩ (Fin.natAdd 1 i)) =
+    (SpecialTransformations.Section4.rawRVSpace r).decode ⟨fun i => z (Fin.natAdd 1 i), hz'⟩ :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {r} {z}
+    hz hz' =>
+  SpecialTransformations.Section4.rvValues_injective
+    (have h1 := DiamondIntegral.Section7.MeasuredRVBridge.decode_rv ⟨z, hz⟩;
+    have h2 := DiamondIntegral.Section7.MeasuredRVBridge.decode_rv ⟨fun i => z (Fin.natAdd 1 i), hz'⟩;
+    funext fun i =>
+      have h3 := congrFun h1 (Fin.natAdd 1 i);
+      have h4 := congrFun h2 i;
+      Eq.trans h3 (Eq.symm h4))
+'DiamondIntegral.Section7.SpecialChainRel.decode_tail' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.SpecialChainRel.tailDef_definable : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {r : ℕ} {S : Set M}
+  (J : SpecialTransformations.DefinableGeometry.DefSet (SpecialTransformations.Section4.rawRVSpace r) S),
+  (SpecialTransformations.Section4.rawRVSpace (1 + r)).Definable S {L | (fun i => L (Fin.natAdd 1 i)) ∈ J.carrier}
+theorem DiamondIntegral.Section7.SpecialChainRel.tailDef_definable : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {r : ℕ} {S : Set M}
+  (J : SpecialTransformations.DefinableGeometry.DefSet (SpecialTransformations.Section4.rawRVSpace r) S),
+  (SpecialTransformations.Section4.rawRVSpace (1 + r)).Definable S {L | (fun i => L (Fin.natAdd 1 i)) ∈ J.carrier} :=
+fun {M} [inst : SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+    {r} {S} J =>
+  have h1 := J.definable;
+  have h2 := Set.Definable.preimage_comp (Fin.natAdd 1) h1;
+  have h3 :=
+    Set.Definable.mono (SpecialTransformations.Section4.rawRVSpace (1 + r)).domain_definable (Set.empty_subset S);
+  id
+    (Eq.mpr
+      (eq_of_heq
+        ((fun M A L inst α s s' e'_6 =>
+            Eq.casesOn (motive := fun a x => s' = a → e'_6 ≍ x → A.Definable L s ≍ A.Definable L s') e'_6
+              (fun h =>
+                Eq.ndrec (motive := fun s' => ∀ (e_6 : s = s'), e_6 ≍ Eq.refl s → A.Definable L s ≍ A.Definable L s')
+                  (fun e_6 h => HEq.refl (A.Definable L s)) (Eq.symm h) e'_6)
+              (Eq.refl s') (HEq.refl e'_6))
+          M S SpecialTransformations.Milestone0.LRV inst (SpecialTransformations.Section4.rawRVSpace (1 + r)).Index
+          ((SpecialTransformations.Section4.rawRVSpace (1 + r)).preimage
+            {L | (fun i => L (Fin.natAdd 1 i)) ∈ J.carrier})
+          ((SpecialTransformations.Section4.rawRVSpace (1 + r)).domain ∩
+            (fun g => g ∘ Fin.natAdd 1) ⁻¹' (SpecialTransformations.Section4.rawRVSpace r).preimage J.carrier)
+          (Set.ext fun z =>
+            {
+              mp := fun a =>
+                Exists.casesOn a fun hz hJ =>
+                  ⟨hz,
+                    have hz' :=
+                      Exists.casesOn (motive := fun x =>
+                        (SpecialTransformations.Section4.rawRVSpace (1 + r)).decode ⟨z, x⟩ ∈
+                            {L | (fun i => L (Fin.natAdd 1 i)) ∈ J.carrier} →
+                          (fun i => z (Fin.natAdd 1 i)) ∈ (SpecialTransformations.Section4.rawRVSpace r).domain)
+                        hz
+                        (fun t ht hJ =>
+                          Exists.intro (fun i => t (Fin.natAdd 1 i)) (funext fun i => congrFun ht (Fin.natAdd 1 i)))
+                        hJ;
+                    Exists.intro hz'
+                      (have hJ1 := hJ;
+                      Eq.mp
+                        (congrArg (fun _a => _a ∈ J.carrier)
+                          (DiamondIntegral.Section7.SpecialChainRel.decode_tail hz hz'))
+                        hJ1)⟩,
+              mpr := fun a =>
+                And.casesOn a fun hz right =>
+                  Exists.casesOn right fun hz' hJ =>
+                    Exists.intro hz
+                      (id
+                        (have hJ' := hJ;
+                        Eq.mpr
+                          (id
+                            (congrArg (fun _a => _a ∈ J.carrier)
+                              (DiamondIntegral.Section7.SpecialChainRel.decode_tail hz hz')))
+                          hJ')) })))
+      (Set.Definable.inter h3 h2))
+'DiamondIntegral.Section7.SpecialChainRel.tailDef_definable' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.SpecialChainRel.tailDef : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {r : ℕ} →
+        {S : Set M} →
+          SpecialTransformations.DefinableGeometry.DefSet (SpecialTransformations.Section4.rawRVSpace r) S →
+            SpecialTransformations.DefinableGeometry.DefSet (SpecialTransformations.Section4.rawRVSpace (1 + r)) S
+def DiamondIntegral.Section7.SpecialChainRel.tailDef : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {r : ℕ} →
+        {S : Set M} →
+          SpecialTransformations.DefinableGeometry.DefSet (SpecialTransformations.Section4.rawRVSpace r) S →
+            SpecialTransformations.DefinableGeometry.DefSet (SpecialTransformations.Section4.rawRVSpace (1 + r)) S :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {r} {S}
+    J =>
+  { carrier := {L | (fun i => L (Fin.natAdd 1 i)) ∈ J.carrier}, definable := ⋯ }
+'DiamondIntegral.Section7.SpecialChainRel.tailDef' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.SpecialChainRel.mem_tailDef : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {r : ℕ} {S : Set M}
+  (J : SpecialTransformations.DefinableGeometry.DefSet (SpecialTransformations.Section4.rawRVSpace r) S)
+  (L : Fin (1 + r) → DiamondIntegral.Section2.RVInfinity M),
+  L ∈ (DiamondIntegral.Section7.SpecialChainRel.tailDef J).carrier ↔ (fun i => L (Fin.natAdd 1 i)) ∈ J.carrier
+theorem DiamondIntegral.Section7.SpecialChainRel.mem_tailDef : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {r : ℕ} {S : Set M}
+  (J : SpecialTransformations.DefinableGeometry.DefSet (SpecialTransformations.Section4.rawRVSpace r) S)
+  (L : Fin (1 + r) → DiamondIntegral.Section2.RVInfinity M),
+  L ∈ (DiamondIntegral.Section7.SpecialChainRel.tailDef J).carrier ↔ (fun i => L (Fin.natAdd 1 i)) ∈ J.carrier :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {r} {S}
+    J L =>
+  Iff.rfl
+'DiamondIntegral.Section7.SpecialChainRel.mem_tailDef' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.SpecialChainRel.mapCorestrict : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    {P Q : SpecialTransformations.DefinableGeometry.Space SpecialTransformations.Milestone0.LRV M} →
+      {S : Set M} →
+        {A : SpecialTransformations.DefinableGeometry.DefSet P S} →
+          {B C : SpecialTransformations.DefinableGeometry.DefSet Q S} →
+            (f : SpecialTransformations.DefinableGeometry.Map A B) →
+              (∀ (a : ↑A.carrier), ↑(f.toFun a) ∈ C.carrier) → SpecialTransformations.DefinableGeometry.Map A C
+def DiamondIntegral.Section7.SpecialChainRel.mapCorestrict : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    {P Q : SpecialTransformations.DefinableGeometry.Space SpecialTransformations.Milestone0.LRV M} →
+      {S : Set M} →
+        {A : SpecialTransformations.DefinableGeometry.DefSet P S} →
+          {B C : SpecialTransformations.DefinableGeometry.DefSet Q S} →
+            (f : SpecialTransformations.DefinableGeometry.Map A B) →
+              (∀ (a : ↑A.carrier), ↑(f.toFun a) ∈ C.carrier) → SpecialTransformations.DefinableGeometry.Map A C :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] {P Q} {S} {A} {B C} f h =>
+  { toFun := fun a => ⟨↑(f.toFun a), ⋯⟩, graph_definable := ⋯ }
+'DiamondIntegral.Section7.SpecialChainRel.mapCorestrict' depends on axioms: [Quot.sound]
+@DiamondIntegral.Section7.SpecialChainRel.clsG_congr : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {n r : ℕ} (hc : CanonicalStructure.IsCanonical) {T : SpecialTransformations.Milestone0.LRV.Substructure M}
+  {X X' : SpecialTransformations.DefinableGeometry.DefSet (SpecialTransformations.Section4.rawMixedSpace n r) ↑T}
+  (h : X = X') (g : DiamondIntegral.Section7.SpecialChains.Good T X)
+  (g' : DiamondIntegral.Section7.SpecialChains.Good T X'),
+  (∀ (p : ↑X.carrier), g'.form.toFun ⟨↑p, ⋯⟩ = g.form.toFun p) →
+    DiamondIntegral.Section7.SpecialChains.clsG hc g = DiamondIntegral.Section7.SpecialChains.clsG hc g'
+theorem DiamondIntegral.Section7.SpecialChainRel.clsG_congr : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {n r : ℕ} (hc : CanonicalStructure.IsCanonical) {T : SpecialTransformations.Milestone0.LRV.Substructure M}
+  {X X' : SpecialTransformations.DefinableGeometry.DefSet (SpecialTransformations.Section4.rawMixedSpace n r) ↑T}
+  (h : X = X') (g : DiamondIntegral.Section7.SpecialChains.Good T X)
+  (g' : DiamondIntegral.Section7.SpecialChains.Good T X'),
+  (∀ (p : ↑X.carrier), g'.form.toFun ⟨↑p, ⋯⟩ = g.form.toFun p) →
+    DiamondIntegral.Section7.SpecialChains.clsG hc g = DiamondIntegral.Section7.SpecialChains.clsG hc g' :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {n r} hc
+    {T} {X X'} h g g' hform =>
+  Eq.rec (motive := fun {X'} h =>
+    ∀ (g' : DiamondIntegral.Section7.SpecialChains.Good T X'),
+      (∀ (p : ↑X.carrier), g'.form.toFun ⟨↑p, h ▸ p.property⟩ = g.form.toFun p) →
+        DiamondIntegral.Section7.SpecialChains.clsG hc g = DiamondIntegral.Section7.SpecialChains.clsG hc g')
+    (fun g' hform =>
+      have he :=
+        DiamondIntegral.Section7.SpecialChains.Good.casesOn (motive := fun t => g = t → g = g') g
+          (fun pullback finite vfBounded rvBounded form form_labels h =>
+            Eq.ndrec (motive := fun g =>
+              (∀ (p : ↑X.carrier), g'.form.toFun ⟨↑p, Eq.refl X ▸ p.property⟩ = g.form.toFun p) → g = g')
+              (fun hform =>
+                DiamondIntegral.Section7.SpecialChains.Good.casesOn (motive := fun t =>
+                  g' = t →
+                    { pullback := pullback, finite := finite, vfBounded := vfBounded, rvBounded := rvBounded,
+                        form := form, form_labels := form_labels } =
+                      g')
+                  g'
+                  (fun pullback_1 finite_1 vfBounded_1 rvBounded_1 form_1 form_labels_1 h =>
+                    Eq.ndrec (motive := fun g' =>
+                      (∀ (p : ↑X.carrier),
+                          g'.form.toFun ⟨↑p, Eq.refl X ▸ p.property⟩ =
+                            { pullback := pullback, finite := finite, vfBounded := vfBounded, rvBounded := rvBounded,
+                                    form := form, form_labels := form_labels }.form.toFun
+                              p) →
+                        { pullback := pullback, finite := finite, vfBounded := vfBounded, rvBounded := rvBounded,
+                            form := form, form_labels := form_labels } =
+                          g')
+                      (fun hform =>
+                        (fun {M} [SpecialTransformations.Milestone0.LRV.Structure M]
+                              [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {n r} {T} {X} pullback finite
+                              vfBounded rvBounded form form_2 e_form =>
+                            Eq.rec (motive := fun form_3 e_form =>
+                              ∀ (form_labels : ∀ (p q : ↑X.carrier), (↑p).2 = (↑q).2 → form.toFun p = form.toFun q),
+                                { pullback := pullback, finite := finite, vfBounded := vfBounded,
+                                    rvBounded := rvBounded, form := form, form_labels := form_labels } =
+                                  { pullback := pullback, finite := finite, vfBounded := vfBounded,
+                                    rvBounded := rvBounded, form := form_3,
+                                    form_labels :=
+                                      Eq.ndrec (motive := fun form =>
+                                        ∀ (p q : ↑X.carrier), (↑p).2 = (↑q).2 → form.toFun p = form.toFun q) form_labels
+                                        e_form })
+                              (fun form_labels =>
+                                Eq.refl
+                                  { pullback := pullback, finite := finite, vfBounded := vfBounded,
+                                    rvBounded := rvBounded, form := form, form_labels := form_labels })
+                              e_form)
+                          pullback finite vfBounded rvBounded form form_1
+                          (SpecialTransformations.DefinableGeometry.Map.ext fun p => Eq.symm (hform p)) form_labels)
+                      (Eq.symm h) hform)
+                  (Eq.refl g'))
+              (Eq.symm h) hform)
+          (Eq.refl g);
+      Eq.mpr
+        (id
+          (congrArg
+            (fun _a =>
+              DiamondIntegral.Section7.SpecialChains.clsG hc _a = DiamondIntegral.Section7.SpecialChains.clsG hc g')
+            he))
+        (Eq.refl (DiamondIntegral.Section7.SpecialChains.clsG hc g')))
+    h g' hform
+'DiamondIntegral.Section7.SpecialChainRel.clsG_congr' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.SpecialChainRel.gA : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {r : ℕ} →
+        {G : Type} →
+          [inst_1 : LinearOrderedCommGroupWithZero G] →
+            [inst_2 : Valued (DiamondIntegral.Section2.VF M) G] →
+              {T : SpecialTransformations.Milestone0.LRV.Substructure M} →
+                {k : ℕ} →
+                  {X :
+                      SpecialTransformations.DefinableGeometry.DefSet
+                        (SpecialTransformations.Section4.rawMixedSpace (1 + k) r) ↑T} →
+                    DiamondIntegral.Section7.SpecialChains.Good T X →
+                      (R : DiamondIntegral.Section6.RelativeApertureData X) →
+                        DiamondIntegral.Section7.SpecialChains.Good T
+                          (DiamondIntegral.Section6.focusActive X R.activeTags)
+@[reducible] def DiamondIntegral.Section7.SpecialChainRel.gA : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {r : ℕ} →
+        {G : Type} →
+          [inst_1 : LinearOrderedCommGroupWithZero G] →
+            [inst_2 : Valued (DiamondIntegral.Section2.VF M) G] →
+              {T : SpecialTransformations.Milestone0.LRV.Substructure M} →
+                {k : ℕ} →
+                  {X :
+                      SpecialTransformations.DefinableGeometry.DefSet
+                        (SpecialTransformations.Section4.rawMixedSpace (1 + k) r) ↑T} →
+                    DiamondIntegral.Section7.SpecialChains.Good T X →
+                      (R : DiamondIntegral.Section6.RelativeApertureData X) →
+                        DiamondIntegral.Section7.SpecialChains.Good T
+                          (DiamondIntegral.Section6.focusActive X R.activeTags) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {r} {G}
+    [LinearOrderedCommGroupWithZero G] [Valued (DiamondIntegral.Section2.VF M) G] {T} {k} {X} g R =>
+  DiamondIntegral.Section7.SpecialChainSplit.goodRes g R.activeTags
+'DiamondIntegral.Section7.SpecialChainRel.gA' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.SpecialChainRel.RA : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {r : ℕ} →
+        {G : Type} →
+          [inst_1 : LinearOrderedCommGroupWithZero G] →
+            [inst_2 : Valued (DiamondIntegral.Section2.VF M) G] →
+              {T : SpecialTransformations.Milestone0.LRV.Substructure M} →
+                {k : ℕ} →
+                  {X :
+                      SpecialTransformations.DefinableGeometry.DefSet
+                        (SpecialTransformations.Section4.rawMixedSpace (1 + k) r) ↑T} →
+                    (R : DiamondIntegral.Section6.RelativeApertureData X) →
+                      DiamondIntegral.Section6.RelativeApertureData
+                        (DiamondIntegral.Section6.focusActive X R.activeTags)
+@[reducible] def DiamondIntegral.Section7.SpecialChainRel.RA : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {r : ℕ} →
+        {G : Type} →
+          [inst_1 : LinearOrderedCommGroupWithZero G] →
+            [inst_2 : Valued (DiamondIntegral.Section2.VF M) G] →
+              {T : SpecialTransformations.Milestone0.LRV.Substructure M} →
+                {k : ℕ} →
+                  {X :
+                      SpecialTransformations.DefinableGeometry.DefSet
+                        (SpecialTransformations.Section4.rawMixedSpace (1 + k) r) ↑T} →
+                    (R : DiamondIntegral.Section6.RelativeApertureData X) →
+                      DiamondIntegral.Section6.RelativeApertureData
+                        (DiamondIntegral.Section6.focusActive X R.activeTags) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {r} {G}
+    [LinearOrderedCommGroupWithZero G] [Valued (DiamondIntegral.Section2.VF M) G] {T} {k} {X} R =>
+  DiamondIntegral.Section7.RelativeRestrict.RelativeApertureData.restrictActive R
+'DiamondIntegral.Section7.SpecialChainRel.RA' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.SpecialChainRel.point_snd_tail : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {r : ℕ} {G : Type} [inst_1 : LinearOrderedCommGroupWithZero G] [inst_2 : Valued (DiamondIntegral.Section2.VF M) G]
+  {T : SpecialTransformations.Milestone0.LRV.Substructure M} {k : ℕ}
+  {X : SpecialTransformations.DefinableGeometry.DefSet (SpecialTransformations.Section4.rawMixedSpace (1 + k) r) ↑T}
+  (R : DiamondIntegral.Section6.RelativeApertureData X) (p : DiamondIntegral.Section2.Mixed M (1 + k) r),
+  (fun i => (R.point p).2 (Fin.natAdd 1 i)) = p.2
+theorem DiamondIntegral.Section7.SpecialChainRel.point_snd_tail : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {r : ℕ} {G : Type} [inst_1 : LinearOrderedCommGroupWithZero G] [inst_2 : Valued (DiamondIntegral.Section2.VF M) G]
+  {T : SpecialTransformations.Milestone0.LRV.Substructure M} {k : ℕ}
+  {X : SpecialTransformations.DefinableGeometry.DefSet (SpecialTransformations.Section4.rawMixedSpace (1 + k) r) ↑T}
+  (R : DiamondIntegral.Section6.RelativeApertureData X) (p : DiamondIntegral.Section2.Mixed M (1 + k) r),
+  (fun i => (R.point p).2 (Fin.natAdd 1 i)) = p.2 :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {r} {G}
+    [LinearOrderedCommGroupWithZero G] [Valued (DiamondIntegral.Section2.VF M) G] {T} {k} {X} R p =>
+  funext fun i =>
+    of_eq_true
+      (Eq.trans
+        (congrFun' (congrArg Eq (Fin.append_right (fun x => DiamondIntegral.Section6.branchTag (R.core p)) p.2 i))
+          (p.2 i))
+        (eq_self (p.2 i)))
+'DiamondIntegral.Section7.SpecialChainRel.point_snd_tail' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.SpecialChainRel.mem_image : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {r : ℕ} {G : Type} [inst_1 : LinearOrderedCommGroupWithZero G] [inst_2 : Valued (DiamondIntegral.Section2.VF M) G]
+  {T : SpecialTransformations.Milestone0.LRV.Substructure M} {k : ℕ}
+  {X : SpecialTransformations.DefinableGeometry.DefSet (SpecialTransformations.Section4.rawMixedSpace (1 + k) r) ↑T}
+  (R : DiamondIntegral.Section6.RelativeApertureData X) {q : DiamondIntegral.Section2.Mixed M (1 + k) (1 + r)},
+  q ∈ R.map.image.carrier ↔ ∃ p ∈ X.carrier, R.point p = q
+theorem DiamondIntegral.Section7.SpecialChainRel.mem_image : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {r : ℕ} {G : Type} [inst_1 : LinearOrderedCommGroupWithZero G] [inst_2 : Valued (DiamondIntegral.Section2.VF M) G]
+  {T : SpecialTransformations.Milestone0.LRV.Substructure M} {k : ℕ}
+  {X : SpecialTransformations.DefinableGeometry.DefSet (SpecialTransformations.Section4.rawMixedSpace (1 + k) r) ↑T}
+  (R : DiamondIntegral.Section6.RelativeApertureData X) {q : DiamondIntegral.Section2.Mixed M (1 + k) (1 + r)},
+  q ∈ R.map.image.carrier ↔ ∃ p ∈ X.carrier, R.point p = q :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {r} {G}
+    [LinearOrderedCommGroupWithZero G] [Valued (DiamondIntegral.Section2.VF M) G] {T} {k} {X} R {q} =>
+  Eq.mpr
+    (id
+      (congrArg (fun _a => q ∈ _a ↔ ∃ p ∈ X.carrier, R.point p = q)
+        (DiamondIntegral.Section6.RelativeApertureData.image_carrier R)))
+    Iff.rfl
+'DiamondIntegral.Section7.SpecialChainRel.mem_image' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.SpecialChainRel.active_image_eq : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {r : ℕ} {G : Type} [inst_1 : LinearOrderedCommGroupWithZero G] [inst_2 : Valued (DiamondIntegral.Section2.VF M) G]
+  {T : SpecialTransformations.Milestone0.LRV.Substructure M} {k : ℕ}
+  {X : SpecialTransformations.DefinableGeometry.DefSet (SpecialTransformations.Section4.rawMixedSpace (1 + k) r) ↑T}
+  (R : DiamondIntegral.Section6.RelativeApertureData X),
+  DiamondIntegral.Section6.focusActive R.map.image (DiamondIntegral.Section7.SpecialChainRel.tailDef R.activeTags) =
+    (DiamondIntegral.Section7.SpecialChainRel.RA R).map.image
+theorem DiamondIntegral.Section7.SpecialChainRel.active_image_eq : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {r : ℕ} {G : Type} [inst_1 : LinearOrderedCommGroupWithZero G] [inst_2 : Valued (DiamondIntegral.Section2.VF M) G]
+  {T : SpecialTransformations.Milestone0.LRV.Substructure M} {k : ℕ}
+  {X : SpecialTransformations.DefinableGeometry.DefSet (SpecialTransformations.Section4.rawMixedSpace (1 + k) r) ↑T}
+  (R : DiamondIntegral.Section6.RelativeApertureData X),
+  DiamondIntegral.Section6.focusActive R.map.image (DiamondIntegral.Section7.SpecialChainRel.tailDef R.activeTags) =
+    (DiamondIntegral.Section7.SpecialChainRel.RA R).map.image :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {r} {G}
+    [LinearOrderedCommGroupWithZero G] [Valued (DiamondIntegral.Section2.VF M) G] {T} {k} {X} R =>
+  SpecialTransformations.DefinableGeometry.DefSet.eq_of_carrier_eq
+    (Set.ext fun q =>
+      Eq.mpr
+        (id
+          (congrArg
+            (fun _a =>
+              q ∈
+                  (DiamondIntegral.Section6.focusActive R.map.image
+                      (DiamondIntegral.Section7.SpecialChainRel.tailDef R.activeTags)).carrier ↔
+                q ∈ _a)
+            (DiamondIntegral.Section6.RelativeApertureData.image_carrier
+              (DiamondIntegral.Section7.SpecialChainRel.RA R))))
+        {
+          mp := fun a =>
+            And.casesOn a fun hq hJ =>
+              Exists.casesOn ((DiamondIntegral.Section7.SpecialChainRel.mem_image R).mp hq) fun p h =>
+                And.casesOn h fun hp right =>
+                  Eq.ndrec (motive := fun q =>
+                    q ∈ R.map.image.carrier →
+                      q.2 ∈ (DiamondIntegral.Section7.SpecialChainRel.tailDef R.activeTags).carrier →
+                        q ∈
+                          (DiamondIntegral.Section7.SpecialChainRel.RA R).point ''
+                            (DiamondIntegral.Section6.focusActive X R.activeTags).carrier)
+                    (fun hq hJ =>
+                      have hpa :=
+                        have this := hJ;
+                        Eq.mp
+                          (congrArg (fun _a => _a ∈ R.activeTags.carrier)
+                            (DiamondIntegral.Section7.SpecialChainRel.point_snd_tail R p))
+                          (Eq.mp
+                            (congrArg (fun _a => _a)
+                              (propext
+                                (DiamondIntegral.Section7.SpecialChainRel.mem_tailDef R.activeTags (R.point p).2)))
+                            this);
+                      Exists.intro p
+                        ⟨⟨hp, hpa⟩,
+                          DiamondIntegral.Section7.RelativeRestrict.RelativeApertureData.restrictActive_point R
+                            ⟨hp, hpa⟩⟩)
+                    right hq hJ,
+          mpr := fun a =>
+            Exists.casesOn a fun p h =>
+              And.casesOn h fun hp right =>
+                right ▸
+                  Eq.mpr
+                    (id
+                      (congrArg
+                        (fun _a =>
+                          _a ∈
+                            (DiamondIntegral.Section6.focusActive R.map.image
+                                (DiamondIntegral.Section7.SpecialChainRel.tailDef R.activeTags)).carrier)
+                        (DiamondIntegral.Section7.RelativeRestrict.RelativeApertureData.restrictActive_point R hp)))
+                    ⟨(DiamondIntegral.Section7.SpecialChainRel.mem_image R).mpr (Exists.intro p ⟨hp.left, rfl⟩),
+                      Eq.mpr
+                        (id
+                          (congrArg (fun _a => _a)
+                            (propext
+                              (DiamondIntegral.Section7.SpecialChainRel.mem_tailDef R.activeTags (R.point p).2))))
+                        (Eq.mpr
+                          (id
+                            (congrArg (fun _a => _a ∈ R.activeTags.carrier)
+                              (DiamondIntegral.Section7.SpecialChainRel.point_snd_tail R p)))
+                          hp.right)⟩ })
+'DiamondIntegral.Section7.SpecialChainRel.active_image_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.SpecialChainRel.gRA : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {r : ℕ} →
+        {G : Type} →
+          [inst_1 : LinearOrderedCommGroupWithZero G] →
+            [inst_2 : Valued (DiamondIntegral.Section2.VF M) G] →
+              CanonicalStructure.IsCanonical →
+                {T : SpecialTransformations.Milestone0.LRV.Substructure M} →
+                  {k : ℕ} →
+                    {X :
+                        SpecialTransformations.DefinableGeometry.DefSet
+                          (SpecialTransformations.Section4.rawMixedSpace (1 + k) r) ↑T} →
+                      DiamondIntegral.Section7.SpecialChains.Good T X →
+                        (R : DiamondIntegral.Section6.RelativeApertureData X) →
+                          {κ : Cardinal.{0}} →
+                            Cardinal.aleph0 < κ →
+                              SpecialTransformations.Section3.Saturated M κ →
+                                Cardinal.mk ↑↑T < κ →
+                                  M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF00 →
+                                    DiamondIntegral.Section7.SpecialChains.Good T
+                                      (DiamondIntegral.Section7.SpecialChainRel.RA R).map.image
+@[reducible] def DiamondIntegral.Section7.SpecialChainRel.gRA : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {r : ℕ} →
+        {G : Type} →
+          [inst_1 : LinearOrderedCommGroupWithZero G] →
+            [inst_2 : Valued (DiamondIntegral.Section2.VF M) G] →
+              CanonicalStructure.IsCanonical →
+                {T : SpecialTransformations.Milestone0.LRV.Substructure M} →
+                  {k : ℕ} →
+                    {X :
+                        SpecialTransformations.DefinableGeometry.DefSet
+                          (SpecialTransformations.Section4.rawMixedSpace (1 + k) r) ↑T} →
+                      DiamondIntegral.Section7.SpecialChains.Good T X →
+                        (R : DiamondIntegral.Section6.RelativeApertureData X) →
+                          {κ : Cardinal.{0}} →
+                            Cardinal.aleph0 < κ →
+                              SpecialTransformations.Section3.Saturated M κ →
+                                Cardinal.mk ↑↑T < κ →
+                                  M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF00 →
+                                    DiamondIntegral.Section7.SpecialChains.Good T
+                                      (DiamondIntegral.Section7.SpecialChainRel.RA R).map.image :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {r} {G}
+    [LinearOrderedCommGroupWithZero G] [Valued (DiamondIntegral.Section2.VF M) G] hc {T} {k} {X} g R {κ} hκ hs hsmall
+    h00 =>
+  DiamondIntegral.Section7.SpecialChainStep.relGood hc (DiamondIntegral.Section7.SpecialChainRel.gA g R)
+    (DiamondIntegral.Section7.SpecialChainRel.RA R) ⋯ hκ hs hsmall h00
+'DiamondIntegral.Section7.SpecialChainRel.gRA' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.SpecialChainRel.imageGood : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {r : ℕ} →
+        {G : Type} →
+          [inst_1 : LinearOrderedCommGroupWithZero G] →
+            [inst_2 : Valued (DiamondIntegral.Section2.VF M) G] →
+              CanonicalStructure.IsCanonical →
+                {T : SpecialTransformations.Milestone0.LRV.Substructure M} →
+                  {k : ℕ} →
+                    {X :
+                        SpecialTransformations.DefinableGeometry.DefSet
+                          (SpecialTransformations.Section4.rawMixedSpace (1 + k) r) ↑T} →
+                      DiamondIntegral.Section7.SpecialChains.Good T X →
+                        (R : DiamondIntegral.Section6.RelativeApertureData X) →
+                          {κ : Cardinal.{0}} →
+                            Cardinal.aleph0 < κ →
+                              SpecialTransformations.Section3.Saturated M κ →
+                                Cardinal.mk ↑↑T < κ →
+                                  M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF00 →
+                                    DiamondIntegral.Section7.SpecialChains.Good T R.map.image
+def DiamondIntegral.Section7.SpecialChainRel.imageGood : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {r : ℕ} →
+        {G : Type} →
+          [inst_1 : LinearOrderedCommGroupWithZero G] →
+            [inst_2 : Valued (DiamondIntegral.Section2.VF M) G] →
+              CanonicalStructure.IsCanonical →
+                {T : SpecialTransformations.Milestone0.LRV.Substructure M} →
+                  {k : ℕ} →
+                    {X :
+                        SpecialTransformations.DefinableGeometry.DefSet
+                          (SpecialTransformations.Section4.rawMixedSpace (1 + k) r) ↑T} →
+                      DiamondIntegral.Section7.SpecialChains.Good T X →
+                        (R : DiamondIntegral.Section6.RelativeApertureData X) →
+                          {κ : Cardinal.{0}} →
+                            Cardinal.aleph0 < κ →
+                              SpecialTransformations.Section3.Saturated M κ →
+                                Cardinal.mk ↑↑T < κ →
+                                  M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF00 →
+                                    DiamondIntegral.Section7.SpecialChains.Good T R.map.image :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {r} {G}
+    [LinearOrderedCommGroupWithZero G] [Valued (DiamondIntegral.Section2.VF M) G] hc {T} {k} {X} g R {κ} hκ hs hsmall
+    h00 =>
+  { pullback := ⋯, finite := ⋯, vfBounded := ⋯, rvBounded := ⋯, form := g.form.comp (R.bijection.inverse ⋯),
+    form_labels := ⋯ }
+'DiamondIntegral.Section7.SpecialChainRel.imageGood' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.SpecialChainRel.imageGood_form : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {r : ℕ} {G : Type} [inst_1 : LinearOrderedCommGroupWithZero G] [inst_2 : Valued (DiamondIntegral.Section2.VF M) G]
+  (hc : CanonicalStructure.IsCanonical) {T : SpecialTransformations.Milestone0.LRV.Substructure M} {k : ℕ}
+  {X : SpecialTransformations.DefinableGeometry.DefSet (SpecialTransformations.Section4.rawMixedSpace (1 + k) r) ↑T}
+  (g : DiamondIntegral.Section7.SpecialChains.Good T X) (R : DiamondIntegral.Section6.RelativeApertureData X)
+  {κ : Cardinal.{0}} (hκ : Cardinal.aleph0 < κ) (hs : SpecialTransformations.Section3.Saturated M κ)
+  (hsmall : Cardinal.mk ↑↑T < κ) (h00 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF00) (x : ↑X.carrier),
+  (DiamondIntegral.Section7.SpecialChainRel.imageGood hc g R hκ hs hsmall h00).form.toFun (R.bijection.toFun x) =
+    g.form.toFun x
+theorem DiamondIntegral.Section7.SpecialChainRel.imageGood_form : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {r : ℕ} {G : Type} [inst_1 : LinearOrderedCommGroupWithZero G] [inst_2 : Valued (DiamondIntegral.Section2.VF M) G]
+  (hc : CanonicalStructure.IsCanonical) {T : SpecialTransformations.Milestone0.LRV.Substructure M} {k : ℕ}
+  {X : SpecialTransformations.DefinableGeometry.DefSet (SpecialTransformations.Section4.rawMixedSpace (1 + k) r) ↑T}
+  (g : DiamondIntegral.Section7.SpecialChains.Good T X) (R : DiamondIntegral.Section6.RelativeApertureData X)
+  {κ : Cardinal.{0}} (hκ : Cardinal.aleph0 < κ) (hs : SpecialTransformations.Section3.Saturated M κ)
+  (hsmall : Cardinal.mk ↑↑T < κ) (h00 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF00) (x : ↑X.carrier),
+  (DiamondIntegral.Section7.SpecialChainRel.imageGood hc g R hκ hs hsmall h00).form.toFun (R.bijection.toFun x) =
+    g.form.toFun x :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {r} {G}
+    [LinearOrderedCommGroupWithZero G] [Valued (DiamondIntegral.Section2.VF M) G] hc {T} {k} {X} g R {κ} hκ hs hsmall
+    h00 x =>
+  id
+    (Eq.mpr
+      (id
+        (congrArg (fun _a => g.form.toFun _a = g.form.toFun x)
+          (SpecialTransformations.DefinableGeometry.Map.inverse_apply R.bijection
+            (DiamondIntegral.Section7.SpecialChainRel.imageGood._proof_5 R h00) x)))
+      (Eq.refl (g.form.toFun x)))
+'DiamondIntegral.Section7.SpecialChainRel.imageGood_form' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.SpecialChainRel.tail_append_one : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {r : ℕ} (u : Fin r → DiamondIntegral.Section2.RVInfinity M),
+  (fun i => Fin.append (fun x => DiamondIntegral.Section6.branchTag false) u (Fin.natAdd 1 i)) = u
+theorem DiamondIntegral.Section7.SpecialChainRel.tail_append_one : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {r : ℕ} (u : Fin r → DiamondIntegral.Section2.RVInfinity M),
+  (fun i => Fin.append (fun x => DiamondIntegral.Section6.branchTag false) u (Fin.natAdd 1 i)) = u :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {r} u =>
+  funext fun i =>
+    of_eq_true
+      (Eq.trans
+        (congrFun' (congrArg Eq (Fin.append_right (fun x => DiamondIntegral.Section6.branchTag false) u i)) (u i))
+        (eq_self (u i)))
+'DiamondIntegral.Section7.SpecialChainRel.tail_append_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.SpecialChainRel.clsG_inactive : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {r : ℕ} {G : Type} [inst_1 : LinearOrderedCommGroupWithZero G] [inst_2 : Valued (DiamondIntegral.Section2.VF M) G]
+  (hc : CanonicalStructure.IsCanonical) {T : SpecialTransformations.Milestone0.LRV.Substructure M} {k : ℕ}
+  {X : SpecialTransformations.DefinableGeometry.DefSet (SpecialTransformations.Section4.rawMixedSpace (1 + k) r) ↑T}
+  (g : DiamondIntegral.Section7.SpecialChains.Good T X) (R : DiamondIntegral.Section6.RelativeApertureData X)
+  {κ : Cardinal.{0}} (hκ : Cardinal.aleph0 < κ) (hs : SpecialTransformations.Section3.Saturated M κ)
+  (hsmall : Cardinal.mk ↑↑T < κ) (h00 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF00),
+  DiamondIntegral.Section7.SpecialChains.clsG hc
+      (DiamondIntegral.Section7.SpecialChainSplit.goodRes
+        (DiamondIntegral.Section7.SpecialChainRel.imageGood hc g R hκ hs hsmall h00)
+        (DiamondIntegral.Section7.SpecialChainSplit.compl
+          (DiamondIntegral.Section7.SpecialChainRel.tailDef R.activeTags))) =
+    DiamondIntegral.Section7.SpecialChains.clsG hc
+      (DiamondIntegral.Section7.SpecialChainSplit.goodRes g
+        (DiamondIntegral.Section7.SpecialChainSplit.compl R.activeTags))
+theorem DiamondIntegral.Section7.SpecialChainRel.clsG_inactive : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {r : ℕ} {G : Type} [inst_1 : LinearOrderedCommGroupWithZero G] [inst_2 : Valued (DiamondIntegral.Section2.VF M) G]
+  (hc : CanonicalStructure.IsCanonical) {T : SpecialTransformations.Milestone0.LRV.Substructure M} {k : ℕ}
+  {X : SpecialTransformations.DefinableGeometry.DefSet (SpecialTransformations.Section4.rawMixedSpace (1 + k) r) ↑T}
+  (g : DiamondIntegral.Section7.SpecialChains.Good T X) (R : DiamondIntegral.Section6.RelativeApertureData X)
+  {κ : Cardinal.{0}} (hκ : Cardinal.aleph0 < κ) (hs : SpecialTransformations.Section3.Saturated M κ)
+  (hsmall : Cardinal.mk ↑↑T < κ) (h00 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF00),
+  DiamondIntegral.Section7.SpecialChains.clsG hc
+      (DiamondIntegral.Section7.SpecialChainSplit.goodRes
+        (DiamondIntegral.Section7.SpecialChainRel.imageGood hc g R hκ hs hsmall h00)
+        (DiamondIntegral.Section7.SpecialChainSplit.compl
+          (DiamondIntegral.Section7.SpecialChainRel.tailDef R.activeTags))) =
+    DiamondIntegral.Section7.SpecialChains.clsG hc
+      (DiamondIntegral.Section7.SpecialChainSplit.goodRes g
+        (DiamondIntegral.Section7.SpecialChainSplit.compl R.activeTags)) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {r} {G}
+    [LinearOrderedCommGroupWithZero G] [Valued (DiamondIntegral.Section2.VF M) G] hc {T} {k} {X} g R {κ} hκ hs hsmall
+    h00 =>
+  Eq.symm
+    (DiamondIntegral.Section7.SpecialChains.cls_objOf_eq hc
+      (DiamondIntegral.Section7.SpecialChains.regC_db
+        (DiamondIntegral.Section7.SpecialChainSplit.goodRes g
+          (DiamondIntegral.Section7.SpecialChainSplit.compl R.activeTags)))
+      (DiamondIntegral.Section7.SpecialChains.regC_db
+        (DiamondIntegral.Section7.SpecialChainSplit.goodRes
+          (DiamondIntegral.Section7.SpecialChainRel.imageGood hc g R hκ hs hsmall h00)
+          (DiamondIntegral.Section7.SpecialChainSplit.compl
+            (DiamondIntegral.Section7.SpecialChainRel.tailDef R.activeTags))))
+      (let Y := DiamondIntegral.Section6.focusActive X (DiamondIntegral.Section7.SpecialChainSplit.compl R.activeTags);
+      let Z :=
+        DiamondIntegral.Section6.focusActive R.map.image
+          (DiamondIntegral.Section7.SpecialChainSplit.compl
+            (DiamondIntegral.Section7.SpecialChainRel.tailDef R.activeTags));
+      have hYX := fun x h => h.left;
+      have hT := fun y =>
+        ⟨(R.bijection.toFun ((SpecialTransformations.DefinableGeometry.Map.inclusion hYX).toFun y)).property,
+          ⟨Set.mem_univ (↑(R.bijection.toFun ((SpecialTransformations.DefinableGeometry.Map.inclusion hYX).toFun y))).2,
+            id
+              (Eq.mpr
+                (id
+                  (congrArg (fun _a => _a ∉ R.activeTags.carrier)
+                    (DiamondIntegral.Section7.SpecialChainRel.point_snd_tail R ↑y)))
+                y.property.right.right)⟩⟩;
+      let Tm :=
+        DiamondIntegral.Section7.SpecialChainRel.mapCorestrict
+          (R.bijection.comp (SpecialTransformations.DefinableGeometry.Map.inclusion hYX)) hT;
+      have hTval := fun y =>
+        DiamondIntegral.Section7.RelativeRestrict.RelativeApertureData.point_inactive R y.property.right.right;
+      have hTbij :=
+        ⟨fun ⦃a b⦄ he =>
+          have h1 := congrArg Subtype.val he;
+          Subtype.ext
+            (have hfst :=
+              congrArg Prod.fst
+                (Eq.mp
+                  (congrArg
+                    (fun _a => ((↑a).1, Fin.append (fun x => DiamondIntegral.Section6.branchTag false) (↑a).2) = _a)
+                    (hTval b))
+                  (Eq.mp (congrArg (fun _a => _a = ↑(Tm.toFun b)) (hTval a)) h1));
+            have h2 :=
+              congrArg (fun z i => z.2 (Fin.natAdd 1 i))
+                (Eq.mp
+                  (congrArg
+                    (fun _a => ((↑a).1, Fin.append (fun x => DiamondIntegral.Section6.branchTag false) (↑a).2) = _a)
+                    (hTval b))
+                  (Eq.mp (congrArg (fun _a => _a = ↑(Tm.toFun b)) (hTval a)) h1));
+            have hsnd :=
+              Eq.mp
+                (congr (congrArg Eq (DiamondIntegral.Section7.SpecialChainRel.tail_append_one (↑a).2))
+                  (DiamondIntegral.Section7.SpecialChainRel.tail_append_one (↑b).2))
+                h2;
+            Prod.ext hfst hsnd),
+          fun z =>
+          Exists.casesOn ((DiamondIntegral.Section7.SpecialChainRel.mem_image R).mp z.property.left) fun x h =>
+            And.casesOn h fun hx he =>
+              have hxi :=
+                have h := z.property.right.right;
+                id
+                  (fun h =>
+                    Eq.mp
+                      (congrArg (fun _a => _a ∉ R.activeTags.carrier)
+                        (DiamondIntegral.Section7.SpecialChainRel.point_snd_tail R x))
+                      h)
+                  (Eq.mp
+                    (congrArg (fun _a => _a.2 ∉ (DiamondIntegral.Section7.SpecialChainRel.tailDef R.activeTags).carrier)
+                      (Eq.symm he))
+                    h);
+              Exists.intro ⟨x, ⟨hx, ⟨Set.mem_univ x.2, hxi⟩⟩⟩ (Subtype.ext he)⟩;
+      have hinv :=
+        ⟨fun a b h =>
+          have h' := congrArg (DiamondIntegral.Section6.regularization Y).toFun h;
+          Eq.mp
+            (congrArg (fun _a => a = _a)
+              (SpecialTransformations.DefinableGeometry.Map.apply_inverse (DiamondIntegral.Section6.regularization Y)
+                (DiamondIntegral.Section6.regularization_bijective Y) b))
+            (Eq.mp
+              (congrArg
+                (fun _a =>
+                  _a =
+                    (DiamondIntegral.Section6.regularization Y).toFun
+                      (((DiamondIntegral.Section6.regularization Y).inverse
+                            (DiamondIntegral.Section6.regularization_bijective Y)).toFun
+                        b))
+                (SpecialTransformations.DefinableGeometry.Map.apply_inverse (DiamondIntegral.Section6.regularization Y)
+                  (DiamondIntegral.Section6.regularization_bijective Y) a))
+              h'),
+          fun a =>
+          Exists.intro ((DiamondIntegral.Section6.regularization Y).toFun a)
+            (SpecialTransformations.DefinableGeometry.Map.inverse_apply (DiamondIntegral.Section6.regularization Y)
+              (DiamondIntegral.Section6.regularization_bijective Y) a)⟩;
+      let f :=
+        (DiamondIntegral.Section6.regularization Z).comp
+          (Tm.comp
+            ((DiamondIntegral.Section6.regularization Y).inverse
+              (DiamondIntegral.Section6.regularization_bijective Y)));
+      have hf :=
+        Function.Bijective.comp (DiamondIntegral.Section6.regularization_bijective Z)
+          (Function.Bijective.comp hTbij hinv);
+      have hfx := fun y =>
+        id
+          (Eq.mpr
+            (id
+              (congrArg
+                (fun _a =>
+                  (DiamondIntegral.Section6.regularization Z).toFun (Tm.toFun _a) =
+                    (DiamondIntegral.Section6.regularization Z).toFun (Tm.toFun y))
+                (SpecialTransformations.DefinableGeometry.Map.inverse_apply (DiamondIntegral.Section6.regularization Y)
+                  (DiamondIntegral.Section6.regularization_bijective Y) y)))
+            (Eq.refl ((DiamondIntegral.Section6.regularization Z).toFun (Tm.toFun y))));
+      have hsnd := fun y =>
+        Eq.mpr
+          (id
+            (congrArg
+              (fun _a =>
+                (↑_a).2 =
+                  Fin.append (DiamondIntegral.Section2.tupleRV M (↑y).1)
+                    (Fin.append (fun x => DiamondIntegral.Section6.branchTag false) (↑y).2))
+              (hfx y)))
+          (id
+            (Eq.mpr
+              (id
+                (congrArg
+                  (fun _a =>
+                    (DiamondIntegral.Section6.regularize _a).2 =
+                      Fin.append (DiamondIntegral.Section2.tupleRV M (↑y).1)
+                        (Fin.append (fun x => DiamondIntegral.Section6.branchTag false) (↑y).2))
+                  (hTval y)))
+              (Eq.refl
+                (DiamondIntegral.Section6.regularize
+                    ((↑y).1, Fin.append (fun x => DiamondIntegral.Section6.branchTag false) (↑y).2)).2)));
+      DiamondIntegral.Section7.SpecialChains.contractionIso DiamondIntegral.Section7.SpecialChains.regC._proof_1
+        (DiamondIntegral.Section7.SpecialChains.regC._proof_2
+          (DiamondIntegral.Section7.SpecialChainSplit.goodRes g
+            (DiamondIntegral.Section7.SpecialChainSplit.compl R.activeTags)))
+        (DiamondIntegral.Section7.SpecialChains.regC._proof_3
+          (DiamondIntegral.Section7.SpecialChainSplit.goodRes g
+            (DiamondIntegral.Section7.SpecialChainSplit.compl R.activeTags)))
+        (DiamondIntegral.Section7.SpecialChains.regC._proof_4
+          (DiamondIntegral.Section7.SpecialChainSplit.goodRes g
+            (DiamondIntegral.Section7.SpecialChainSplit.compl R.activeTags)))
+        (DiamondIntegral.Section7.SpecialChains.regForm
+          (DiamondIntegral.Section7.SpecialChainSplit.goodRes g
+            (DiamondIntegral.Section7.SpecialChainSplit.compl R.activeTags)))
+        (DiamondIntegral.Section7.SpecialChains.regForm_labels
+          (DiamondIntegral.Section7.SpecialChainSplit.goodRes g
+            (DiamondIntegral.Section7.SpecialChainSplit.compl R.activeTags)))
+        DiamondIntegral.Section7.SpecialChains.regC._proof_1
+        (DiamondIntegral.Section7.SpecialChains.regC._proof_2
+          (DiamondIntegral.Section7.SpecialChainSplit.goodRes
+            (DiamondIntegral.Section7.SpecialChainRel.imageGood hc g R hκ hs hsmall h00)
+            (DiamondIntegral.Section7.SpecialChainSplit.compl
+              (DiamondIntegral.Section7.SpecialChainRel.tailDef R.activeTags))))
+        (DiamondIntegral.Section7.SpecialChains.regC._proof_3
+          (DiamondIntegral.Section7.SpecialChainSplit.goodRes
+            (DiamondIntegral.Section7.SpecialChainRel.imageGood hc g R hκ hs hsmall h00)
+            (DiamondIntegral.Section7.SpecialChainSplit.compl
+              (DiamondIntegral.Section7.SpecialChainRel.tailDef R.activeTags))))
+        (DiamondIntegral.Section7.SpecialChains.regC._proof_4
+          (DiamondIntegral.Section7.SpecialChainSplit.goodRes
+            (DiamondIntegral.Section7.SpecialChainRel.imageGood hc g R hκ hs hsmall h00)
+            (DiamondIntegral.Section7.SpecialChainSplit.compl
+              (DiamondIntegral.Section7.SpecialChainRel.tailDef R.activeTags))))
+        (DiamondIntegral.Section7.SpecialChains.regForm
+          (DiamondIntegral.Section7.SpecialChainSplit.goodRes
+            (DiamondIntegral.Section7.SpecialChainRel.imageGood hc g R hκ hs hsmall h00)
+            (DiamondIntegral.Section7.SpecialChainSplit.compl
+              (DiamondIntegral.Section7.SpecialChainRel.tailDef R.activeTags))))
+        (DiamondIntegral.Section7.SpecialChains.regForm_labels
+          (DiamondIntegral.Section7.SpecialChainSplit.goodRes
+            (DiamondIntegral.Section7.SpecialChainRel.imageGood hc g R hκ hs hsmall h00)
+            (DiamondIntegral.Section7.SpecialChainSplit.compl
+              (DiamondIntegral.Section7.SpecialChainRel.tailDef R.activeTags))))
+        f hf
+        (fun p b =>
+          Exists.casesOn ((DiamondIntegral.Section6.regularization_bijective Y).right p) fun x h =>
+            h ▸
+              Exists.casesOn (hf.right b) fun a h =>
+                h ▸
+                  Exists.casesOn ((DiamondIntegral.Section6.regularization_bijective Y).right a) fun y h =>
+                    h ▸
+                      Eq.mpr
+                        (id
+                          (congrArg
+                            (fun _a =>
+                              _a = (↑(f.toFun ((DiamondIntegral.Section6.regularization Y).toFun x))).2 ↔
+                                ∃ a,
+                                  (↑a).2 = (↑((DiamondIntegral.Section6.regularization Y).toFun x)).2 ∧
+                                    f.toFun a = f.toFun ((DiamondIntegral.Section6.regularization Y).toFun y))
+                            (hsnd y)))
+                        (Eq.mpr
+                          (id
+                            (congrArg
+                              (fun _a =>
+                                Fin.append (DiamondIntegral.Section2.tupleRV M (↑y).1)
+                                      (Fin.append (fun x => DiamondIntegral.Section6.branchTag false) (↑y).2) =
+                                    _a ↔
+                                  ∃ a,
+                                    (↑a).2 = (↑((DiamondIntegral.Section6.regularization Y).toFun x)).2 ∧
+                                      f.toFun a = f.toFun ((DiamondIntegral.Section6.regularization Y).toFun y))
+                              (hsnd x)))
+                          {
+                            mp := fun he =>
+                              Exists.intro ((DiamondIntegral.Section6.regularization Y).toFun y)
+                                ⟨have h1 :=
+                                    funext fun i =>
+                                      Eq.mp
+                                        (congr
+                                          (congrArg Eq
+                                            (Fin.append_left (DiamondIntegral.Section2.tupleRV M (↑y).1)
+                                              (Fin.append (fun x => DiamondIntegral.Section6.branchTag false) (↑y).2)
+                                              i))
+                                          (Fin.append_left (DiamondIntegral.Section2.tupleRV M (↑x).1)
+                                            (Fin.append (fun x => DiamondIntegral.Section6.branchTag false) (↑x).2) i))
+                                        (congrFun he (Fin.castAdd (1 + r) i));
+                                  have h2 :=
+                                    have h3 := congrArg (fun L i => L (Fin.natAdd (1 + k) (Fin.natAdd 1 i))) he;
+                                    Eq.mp
+                                      (congr
+                                        (congrArg Eq
+                                          (funext fun i =>
+                                            Eq.trans
+                                              (Fin.append_right (DiamondIntegral.Section2.tupleRV M (↑y).1)
+                                                (Fin.append (fun x => DiamondIntegral.Section6.branchTag false) (↑y).2)
+                                                (Fin.natAdd 1 i))
+                                              (Fin.append_right (fun x => DiamondIntegral.Section6.branchTag false)
+                                                (↑y).2 i)))
+                                        (funext fun i =>
+                                          Eq.trans
+                                            (Fin.append_right (DiamondIntegral.Section2.tupleRV M (↑x).1)
+                                              (Fin.append (fun x => DiamondIntegral.Section6.branchTag false) (↑x).2)
+                                              (Fin.natAdd 1 i))
+                                            (Fin.append_right (fun x => DiamondIntegral.Section6.branchTag false) (↑x).2
+                                              i)))
+                                      h3;
+                                  DiamondIntegral.Section7.SpecialChains.regularize_snd_eq.mpr ⟨h1, h2⟩,
+                                  rfl⟩,
+                            mpr := fun a =>
+                              Exists.casesOn a fun a h =>
+                                And.casesOn h fun ha hfa =>
+                                  Exists.casesOn ((DiamondIntegral.Section6.regularization_bijective Y).right a)
+                                    fun z h =>
+                                    Eq.ndrec (motive := fun a =>
+                                      (↑a).2 = (↑((DiamondIntegral.Section6.regularization Y).toFun x)).2 →
+                                        f.toFun a = f.toFun ((DiamondIntegral.Section6.regularization Y).toFun y) →
+                                          Fin.append (DiamondIntegral.Section2.tupleRV M (↑y).1)
+                                              (Fin.append (fun x => DiamondIntegral.Section6.branchTag false) (↑y).2) =
+                                            Fin.append (DiamondIntegral.Section2.tupleRV M (↑x).1)
+                                              (Fin.append (fun x => DiamondIntegral.Section6.branchTag false) (↑x).2))
+                                      (fun ha hfa =>
+                                        have hzy :=
+                                          (DiamondIntegral.Section6.regularization_bijective Y).left (hf.left hfa);
+                                        Eq.ndrec (motive := fun y =>
+                                          f.toFun ((DiamondIntegral.Section6.regularization Y).toFun z) =
+                                              f.toFun ((DiamondIntegral.Section6.regularization Y).toFun y) →
+                                            Fin.append (DiamondIntegral.Section2.tupleRV M (↑y).1)
+                                                (Fin.append (fun x => DiamondIntegral.Section6.branchTag false)
+                                                  (↑y).2) =
+                                              Fin.append (DiamondIntegral.Section2.tupleRV M (↑x).1)
+                                                (Fin.append (fun x => DiamondIntegral.Section6.branchTag false) (↑x).2))
+                                          (fun hfa =>
+                                            have he := DiamondIntegral.Section7.SpecialChains.regularize_snd_eq.mp ha;
+                                            have e1 := he.left;
+                                            have e2 := he.right;
+                                            congrArg₂ Fin.append e1
+                                              (congrArg (Fin.append fun x => DiamondIntegral.Section6.branchTag false)
+                                                e2))
+                                          hzy hfa)
+                                      h ha hfa }))
+        (fun p =>
+          Exists.casesOn ((DiamondIntegral.Section6.regularization_bijective Y).right p) fun x h =>
+            h ▸
+              Eq.mpr
+                (id
+                  (congrArg
+                    (fun _a =>
+                      DiamondIntegral.Section2.tupleRV M (↑_a).1 =
+                        DiamondIntegral.Section2.tupleRV M (↑((DiamondIntegral.Section6.regularization Y).toFun x)).1)
+                    (hfx x)))
+                (id
+                  (Eq.mpr
+                    (id
+                      (congrArg
+                        (fun _a => DiamondIntegral.Section2.tupleRV M _a.1 = DiamondIntegral.Section2.tupleRV M (↑x).1)
+                        (hTval x)))
+                    (Eq.refl
+                      (DiamondIntegral.Section2.tupleRV M
+                        ((↑x).1, Fin.append (fun x => DiamondIntegral.Section6.branchTag false) (↑x).2).1)))))
+        fun p =>
+        Exists.casesOn ((DiamondIntegral.Section6.regularization_bijective Y).right p) fun x h =>
+          h ▸
+            Eq.mpr
+              (id
+                (congrArg
+                  (fun _a =>
+                    (DiamondIntegral.Section7.SpecialChains.regForm
+                            (DiamondIntegral.Section7.SpecialChainSplit.goodRes
+                              (DiamondIntegral.Section7.SpecialChainRel.imageGood hc g R hκ hs hsmall h00)
+                              (DiamondIntegral.Section7.SpecialChainSplit.compl
+                                (DiamondIntegral.Section7.SpecialChainRel.tailDef R.activeTags)))).toFun
+                        _a =
+                      (DiamondIntegral.Section7.SpecialChains.regForm
+                            (DiamondIntegral.Section7.SpecialChainSplit.goodRes g
+                              (DiamondIntegral.Section7.SpecialChainSplit.compl R.activeTags))).toFun
+                        ((DiamondIntegral.Section6.regularization Y).toFun x))
+                  (hfx x)))
+              (Eq.mpr
+                (id
+                  (congrArg
+                    (fun _a =>
+                      _a =
+                        (DiamondIntegral.Section7.SpecialChains.regForm
+                              (DiamondIntegral.Section7.SpecialChainSplit.goodRes g
+                                (DiamondIntegral.Section7.SpecialChainSplit.compl R.activeTags))).toFun
+                          ((DiamondIntegral.Section6.regularization Y).toFun x))
+                    (DiamondIntegral.Section7.SpecialChains.regForm_apply
+                      (DiamondIntegral.Section7.SpecialChainSplit.goodRes
+                        (DiamondIntegral.Section7.SpecialChainRel.imageGood hc g R hκ hs hsmall h00)
+                        (DiamondIntegral.Section7.SpecialChainSplit.compl
+                          (DiamondIntegral.Section7.SpecialChainRel.tailDef R.activeTags)))
+                      (Tm.toFun x))))
+                (Eq.mpr
+                  (id
+                    (congrArg
+                      (fun _a =>
+                        (DiamondIntegral.Section7.SpecialChainSplit.goodRes
+                                  (DiamondIntegral.Section7.SpecialChainRel.imageGood hc g R hκ hs hsmall h00)
+                                  (DiamondIntegral.Section7.SpecialChainSplit.compl
+                                    (DiamondIntegral.Section7.SpecialChainRel.tailDef R.activeTags))).form.toFun
+                            (Tm.toFun x) =
+                          _a)
+                      (DiamondIntegral.Section7.SpecialChains.regForm_apply
+                        (DiamondIntegral.Section7.SpecialChainSplit.goodRes g
+                          (DiamondIntegral.Section7.SpecialChainSplit.compl R.activeTags))
+                        x)))
+                  (id
+                    (Eq.mpr
+                      (id
+                        (congrArg
+                          (fun _a =>
+                            _a = g.form.toFun ((SpecialTransformations.DefinableGeometry.Map.inclusion hYX).toFun x))
+                          (DiamondIntegral.Section7.SpecialChainRel.imageGood_form hc g R hκ hs hsmall h00
+                            ((SpecialTransformations.DefinableGeometry.Map.inclusion hYX).toFun x))))
+                      (Eq.refl
+                        (g.form.toFun ((SpecialTransformations.DefinableGeometry.Map.inclusion hYX).toFun x)))))))))
+'DiamondIntegral.Section7.SpecialChainRel.clsG_inactive' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.SpecialChainRel.step_rel : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {r : ℕ} {G : Type} [inst_1 : LinearOrderedCommGroupWithZero G] [inst_2 : Valued (DiamondIntegral.Section2.VF M) G]
+  (hc : CanonicalStructure.IsCanonical) {T : SpecialTransformations.Milestone0.LRV.Substructure M} {k : ℕ}
+  {X : SpecialTransformations.DefinableGeometry.DefSet (SpecialTransformations.Section4.rawMixedSpace (1 + k) r) ↑T}
+  (g : DiamondIntegral.Section7.SpecialChains.Good T X) (R : DiamondIntegral.Section6.RelativeApertureData X)
+  {κ : Cardinal.{0}} (hκ : Cardinal.aleph0 < κ) (hs : SpecialTransformations.Section3.Saturated M κ)
+  (hsmall : Cardinal.mk ↑↑T < κ) (h00 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF00),
+  DiamondIntegral.Section7.ElementaryBlowups.Step (DiamondIntegral.Section7.SpecialChains.clsG hc g)
+    (DiamondIntegral.Section7.SpecialChains.clsG hc
+      (DiamondIntegral.Section7.SpecialChainRel.imageGood hc g R hκ hs hsmall h00))
+theorem DiamondIntegral.Section7.SpecialChainRel.step_rel : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {r : ℕ} {G : Type} [inst_1 : LinearOrderedCommGroupWithZero G] [inst_2 : Valued (DiamondIntegral.Section2.VF M) G]
+  (hc : CanonicalStructure.IsCanonical) {T : SpecialTransformations.Milestone0.LRV.Substructure M} {k : ℕ}
+  {X : SpecialTransformations.DefinableGeometry.DefSet (SpecialTransformations.Section4.rawMixedSpace (1 + k) r) ↑T}
+  (g : DiamondIntegral.Section7.SpecialChains.Good T X) (R : DiamondIntegral.Section6.RelativeApertureData X)
+  {κ : Cardinal.{0}} (hκ : Cardinal.aleph0 < κ) (hs : SpecialTransformations.Section3.Saturated M κ)
+  (hsmall : Cardinal.mk ↑↑T < κ) (h00 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF00),
+  DiamondIntegral.Section7.ElementaryBlowups.Step (DiamondIntegral.Section7.SpecialChains.clsG hc g)
+    (DiamondIntegral.Section7.SpecialChains.clsG hc
+      (DiamondIntegral.Section7.SpecialChainRel.imageGood hc g R hκ hs hsmall h00)) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {r} {G}
+    [LinearOrderedCommGroupWithZero G] [Valued (DiamondIntegral.Section2.VF M) G] hc {T} {k} {X} g R {κ} hκ hs hsmall
+    h00 =>
+  have h1 :=
+    DiamondIntegral.Section7.SpecialChainRel.clsG_congr hc (DiamondIntegral.Section7.SpecialChainRel.active_image_eq R)
+      (DiamondIntegral.Section7.SpecialChainSplit.goodRes
+        (DiamondIntegral.Section7.SpecialChainRel.imageGood hc g R hκ hs hsmall h00)
+        (DiamondIntegral.Section7.SpecialChainRel.tailDef R.activeTags))
+      (DiamondIntegral.Section7.SpecialChainRel.gRA hc g R hκ hs hsmall h00) fun p =>
+      Exists.casesOn
+        ((DiamondIntegral.Section6.RelativeApertureData.bijective (DiamondIntegral.Section7.SpecialChainRel.RA R)
+              h00).right
+          ⟨↑p, DiamondIntegral.Section7.SpecialChainRel.active_image_eq R ▸ p.property⟩)
+        fun x hx =>
+        Eq.mpr
+          (id
+            (congrArg
+              (fun _a =>
+                (DiamondIntegral.Section7.SpecialChainRel.gRA hc g R hκ hs hsmall h00).form.toFun _a =
+                  (DiamondIntegral.Section7.SpecialChainSplit.goodRes
+                          (DiamondIntegral.Section7.SpecialChainRel.imageGood hc g R hκ hs hsmall h00)
+                          (DiamondIntegral.Section7.SpecialChainRel.tailDef R.activeTags)).form.toFun
+                    p)
+              (Eq.symm hx)))
+          (Eq.mpr
+            (id
+              (congrArg
+                (fun _a =>
+                  _a =
+                    (DiamondIntegral.Section7.SpecialChainSplit.goodRes
+                            (DiamondIntegral.Section7.SpecialChainRel.imageGood hc g R hκ hs hsmall h00)
+                            (DiamondIntegral.Section7.SpecialChainRel.tailDef R.activeTags)).form.toFun
+                      p)
+                (DiamondIntegral.Section7.SpecialChainStep.relGood_form hc
+                  (DiamondIntegral.Section7.SpecialChainRel.gA g R) (DiamondIntegral.Section7.SpecialChainRel.RA R)
+                  (DiamondIntegral.Section7.SpecialChainRel.gRA._proof_1 R) hκ hs hsmall h00 x)))
+            (have hp :=
+              Subtype.ext
+                (have h := congrArg Subtype.val hx;
+                id
+                  (fun h =>
+                    Eq.symm
+                      (Eq.mp
+                        (congrArg (fun _a => _a = ↑p)
+                          (DiamondIntegral.Section7.RelativeRestrict.RelativeApertureData.restrictActive_point R
+                            x.property))
+                        h))
+                  h);
+            id
+              (Eq.mpr
+                (id
+                  (congrArg
+                    (fun _a =>
+                      (DiamondIntegral.Section7.SpecialChainRel.gA g R).form.toFun x =
+                        (DiamondIntegral.Section7.SpecialChainRel.imageGood hc g R hκ hs hsmall h00).form.toFun _a)
+                    hp))
+                (Eq.mpr
+                  (id
+                    (congrArg (fun _a => (DiamondIntegral.Section7.SpecialChainRel.gA g R).form.toFun x = _a)
+                      (DiamondIntegral.Section7.SpecialChainRel.imageGood_form hc g R hκ hs hsmall h00
+                        ⟨↑x, x.property.left⟩)))
+                  (Eq.refl ((DiamondIntegral.Section7.SpecialChainRel.gA g R).form.toFun x))))));
+  Eq.mpr
+    (id
+      (congrArg
+        (fun _a =>
+          DiamondIntegral.Section7.ElementaryBlowups.Step _a
+            (DiamondIntegral.Section7.SpecialChains.clsG hc
+              (DiamondIntegral.Section7.SpecialChainRel.imageGood hc g R hκ hs hsmall h00)))
+        (DiamondIntegral.Section7.SpecialChainSplit.clsG_split hc g R.activeTags)))
+    (Eq.mpr
+      (id
+        (congrArg
+          (fun _a =>
+            DiamondIntegral.Section7.ElementaryBlowups.Step
+              (DiamondIntegral.Section7.SpecialChains.clsG hc
+                  (DiamondIntegral.Section7.SpecialChainSplit.goodRes g R.activeTags) +
+                DiamondIntegral.Section7.SpecialChains.clsG hc
+                  (DiamondIntegral.Section7.SpecialChainSplit.goodRes g
+                    (DiamondIntegral.Section7.SpecialChainSplit.compl R.activeTags)))
+              _a)
+          (DiamondIntegral.Section7.SpecialChainSplit.clsG_split hc
+            (DiamondIntegral.Section7.SpecialChainRel.imageGood hc g R hκ hs hsmall h00)
+            (DiamondIntegral.Section7.SpecialChainRel.tailDef R.activeTags))))
+      (Eq.mpr
+        (id
+          (congrArg
+            (fun _a =>
+              DiamondIntegral.Section7.ElementaryBlowups.Step
+                (DiamondIntegral.Section7.SpecialChains.clsG hc
+                    (DiamondIntegral.Section7.SpecialChainSplit.goodRes g R.activeTags) +
+                  DiamondIntegral.Section7.SpecialChains.clsG hc
+                    (DiamondIntegral.Section7.SpecialChainSplit.goodRes g
+                      (DiamondIntegral.Section7.SpecialChainSplit.compl R.activeTags)))
+                (DiamondIntegral.Section7.SpecialChains.clsG hc
+                    (DiamondIntegral.Section7.SpecialChainSplit.goodRes
+                      (DiamondIntegral.Section7.SpecialChainRel.imageGood hc g R hκ hs hsmall h00)
+                      (DiamondIntegral.Section7.SpecialChainRel.tailDef R.activeTags)) +
+                  _a))
+            (DiamondIntegral.Section7.SpecialChainRel.clsG_inactive hc g R hκ hs hsmall h00)))
+        (Eq.mpr
+          (id
+            (congrArg
+              (fun _a =>
+                DiamondIntegral.Section7.ElementaryBlowups.Step
+                  (DiamondIntegral.Section7.SpecialChains.clsG hc
+                      (DiamondIntegral.Section7.SpecialChainSplit.goodRes g R.activeTags) +
+                    DiamondIntegral.Section7.SpecialChains.clsG hc
+                      (DiamondIntegral.Section7.SpecialChainSplit.goodRes g
+                        (DiamondIntegral.Section7.SpecialChainSplit.compl R.activeTags)))
+                  (_a +
+                    DiamondIntegral.Section7.SpecialChains.clsG hc
+                      (DiamondIntegral.Section7.SpecialChainSplit.goodRes g
+                        (DiamondIntegral.Section7.SpecialChainSplit.compl R.activeTags))))
+              h1))
+          (DiamondIntegral.Section7.ElementaryBlowups.step_add
+            (DiamondIntegral.Section7.SpecialChainStep.step_rel_active hc
+              (DiamondIntegral.Section7.SpecialChainRel.gA g R) (DiamondIntegral.Section7.SpecialChainRel.RA R)
+              (DiamondIntegral.Section7.RelativeRestrict.RelativeApertureData.restrictActive_all R) hκ hs hsmall h00)
+            (DiamondIntegral.Section7.ElementaryBlowups.step_refl
+              (DiamondIntegral.Section7.SpecialChains.clsG hc
+                (DiamondIntegral.Section7.SpecialChainSplit.goodRes g
+                  (DiamondIntegral.Section7.SpecialChainSplit.compl R.activeTags))))))))
+'DiamondIntegral.Section7.SpecialChainRel.step_rel' depends on axioms: [propext, Classical.choice, Quot.sound]
 @DiamondIntegral.Section7.SpecialChainSplit.goodRes : {M : Type} →
   [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
     [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →

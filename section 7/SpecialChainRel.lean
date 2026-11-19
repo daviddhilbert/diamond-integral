@@ -302,6 +302,29 @@ theorem clsG_inactive :
     change (imageGood hc g R hκ hs hsmall h00).form (R.bijection (Map.inclusion hYX x)) = g.form (Map.inclusion hYX x)
     rw [imageGood_form]
 
+/-- Lemma 7.11 for one relative step on a chain set: the class of the image is
+a blowup of length one of the class of the source. -/
+theorem step_rel : Step (clsG hc g) (clsG hc (imageGood hc g R hκ hs hsmall h00)) := by
+  have h1 : clsG hc (goodRes (imageGood hc g R hκ hs hsmall h00) (tailDef R.activeTags)) =
+      clsG hc (gRA hc g R hκ hs hsmall h00) := by
+    apply clsG_congr hc (active_image_eq R)
+    intro p
+    obtain ⟨x, hx⟩ := ((RA R).bijective h00).2 ⟨p.val, (active_image_eq R) ▸ p.property⟩
+    rw [← hx, relGood_form]
+    have hp : (⟨p.val, p.property.1⟩ : R.map.image) = R.bijection ⟨x.val, x.property.1⟩ := by
+      apply Subtype.ext
+      have h := congrArg Subtype.val hx
+      change (RA R).point x.val = p.val at h
+      rw [RelativeRestrict.RelativeApertureData.restrictActive_point R x.property] at h
+      exact h.symm
+    change _ = (imageGood hc g R hκ hs hsmall h00).form ⟨p.val, p.property.1⟩
+    rw [hp, imageGood_form]
+    rfl
+  rw [clsG_split hc g R.activeTags, clsG_split hc (imageGood hc g R hκ hs hsmall h00) (tailDef R.activeTags),
+    clsG_inactive hc g R hκ hs hsmall h00, h1]
+  exact step_add (step_rel_active hc (gA g R) (RA R) (RelativeRestrict.RelativeApertureData.restrictActive_all R)
+    hκ hs hsmall h00) (step_refl _)
+
 end RelGeneral
 
 end DiamondIntegral.Section7.SpecialChainRel

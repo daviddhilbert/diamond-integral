@@ -1443,6 +1443,57 @@ import «section 7».Section
 #check @DiamondIntegral.Section7.Remark74.remark_7_4_named
 #print DiamondIntegral.Section7.Remark74.remark_7_4_named
 #print axioms DiamondIntegral.Section7.Remark74.remark_7_4_named
+#check @DiamondIntegral.Section7.SpecialChainRel.decode_tail
+#print DiamondIntegral.Section7.SpecialChainRel.decode_tail
+#print axioms DiamondIntegral.Section7.SpecialChainRel.decode_tail
+#check @DiamondIntegral.Section7.SpecialChainRel.tailDef_definable
+#print DiamondIntegral.Section7.SpecialChainRel.tailDef_definable
+#print axioms DiamondIntegral.Section7.SpecialChainRel.tailDef_definable
+#check @DiamondIntegral.Section7.SpecialChainRel.tailDef
+#print DiamondIntegral.Section7.SpecialChainRel.tailDef
+#print axioms DiamondIntegral.Section7.SpecialChainRel.tailDef
+#check @DiamondIntegral.Section7.SpecialChainRel.mem_tailDef
+#print DiamondIntegral.Section7.SpecialChainRel.mem_tailDef
+#print axioms DiamondIntegral.Section7.SpecialChainRel.mem_tailDef
+#check @DiamondIntegral.Section7.SpecialChainRel.mapCorestrict
+#print DiamondIntegral.Section7.SpecialChainRel.mapCorestrict
+#print axioms DiamondIntegral.Section7.SpecialChainRel.mapCorestrict
+#check @DiamondIntegral.Section7.SpecialChainRel.clsG_congr
+#print DiamondIntegral.Section7.SpecialChainRel.clsG_congr
+#print axioms DiamondIntegral.Section7.SpecialChainRel.clsG_congr
+#check @DiamondIntegral.Section7.SpecialChainRel.gA
+#print DiamondIntegral.Section7.SpecialChainRel.gA
+#print axioms DiamondIntegral.Section7.SpecialChainRel.gA
+#check @DiamondIntegral.Section7.SpecialChainRel.RA
+#print DiamondIntegral.Section7.SpecialChainRel.RA
+#print axioms DiamondIntegral.Section7.SpecialChainRel.RA
+#check @DiamondIntegral.Section7.SpecialChainRel.point_snd_tail
+#print DiamondIntegral.Section7.SpecialChainRel.point_snd_tail
+#print axioms DiamondIntegral.Section7.SpecialChainRel.point_snd_tail
+#check @DiamondIntegral.Section7.SpecialChainRel.mem_image
+#print DiamondIntegral.Section7.SpecialChainRel.mem_image
+#print axioms DiamondIntegral.Section7.SpecialChainRel.mem_image
+#check @DiamondIntegral.Section7.SpecialChainRel.active_image_eq
+#print DiamondIntegral.Section7.SpecialChainRel.active_image_eq
+#print axioms DiamondIntegral.Section7.SpecialChainRel.active_image_eq
+#check @DiamondIntegral.Section7.SpecialChainRel.gRA
+#print DiamondIntegral.Section7.SpecialChainRel.gRA
+#print axioms DiamondIntegral.Section7.SpecialChainRel.gRA
+#check @DiamondIntegral.Section7.SpecialChainRel.imageGood
+#print DiamondIntegral.Section7.SpecialChainRel.imageGood
+#print axioms DiamondIntegral.Section7.SpecialChainRel.imageGood
+#check @DiamondIntegral.Section7.SpecialChainRel.imageGood_form
+#print DiamondIntegral.Section7.SpecialChainRel.imageGood_form
+#print axioms DiamondIntegral.Section7.SpecialChainRel.imageGood_form
+#check @DiamondIntegral.Section7.SpecialChainRel.tail_append_one
+#print DiamondIntegral.Section7.SpecialChainRel.tail_append_one
+#print axioms DiamondIntegral.Section7.SpecialChainRel.tail_append_one
+#check @DiamondIntegral.Section7.SpecialChainRel.clsG_inactive
+#print DiamondIntegral.Section7.SpecialChainRel.clsG_inactive
+#print axioms DiamondIntegral.Section7.SpecialChainRel.clsG_inactive
+#check @DiamondIntegral.Section7.SpecialChainRel.step_rel
+#print DiamondIntegral.Section7.SpecialChainRel.step_rel
+#print axioms DiamondIntegral.Section7.SpecialChainRel.step_rel
 #check @DiamondIntegral.Section7.SpecialChainSplit.goodRes
 #print DiamondIntegral.Section7.SpecialChainSplit.goodRes
 #print axioms DiamondIntegral.Section7.SpecialChainSplit.goodRes
