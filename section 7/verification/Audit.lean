@@ -1221,6 +1221,30 @@ import «section 7».Section
 #check @DiamondIntegral.Section7.IsoOfMeasured.cls_eq_iff_measured
 #print DiamondIntegral.Section7.IsoOfMeasured.cls_eq_iff_measured
 #print axioms DiamondIntegral.Section7.IsoOfMeasured.cls_eq_iff_measured
+#check @DiamondIntegral.Section7.KernelBaseChange.lift_iso_muIsp_of_support
+#print DiamondIntegral.Section7.KernelBaseChange.lift_iso_muIsp_of_support
+#print axioms DiamondIntegral.Section7.KernelBaseChange.lift_iso_muIsp_of_support
+#check @DiamondIntegral.Section7.KernelBaseChange.lemma_7_13_of_support
+#print DiamondIntegral.Section7.KernelBaseChange.lemma_7_13_of_support
+#print axioms DiamondIntegral.Section7.KernelBaseChange.lemma_7_13_of_support
+#check @DiamondIntegral.Section7.KernelBaseChange.adjoin
+#print DiamondIntegral.Section7.KernelBaseChange.adjoin
+#print axioms DiamondIntegral.Section7.KernelBaseChange.adjoin
+#check @DiamondIntegral.Section7.KernelBaseChange.subset_adjoin
+#print DiamondIntegral.Section7.KernelBaseChange.subset_adjoin
+#print axioms DiamondIntegral.Section7.KernelBaseChange.subset_adjoin
+#check @DiamondIntegral.Section7.KernelBaseChange.coordinate_mem_adjoin
+#print DiamondIntegral.Section7.KernelBaseChange.coordinate_mem_adjoin
+#print axioms DiamondIntegral.Section7.KernelBaseChange.coordinate_mem_adjoin
+#check @DiamondIntegral.Section7.KernelBaseChange.adjoin_small
+#print DiamondIntegral.Section7.KernelBaseChange.adjoin_small
+#print axioms DiamondIntegral.Section7.KernelBaseChange.adjoin_small
+#check @DiamondIntegral.Section7.KernelBaseChange.adjoin_gamma
+#print DiamondIntegral.Section7.KernelBaseChange.adjoin_gamma
+#print axioms DiamondIntegral.Section7.KernelBaseChange.adjoin_gamma
+#check @DiamondIntegral.Section7.KernelBaseChange.adjoin_support
+#print DiamondIntegral.Section7.KernelBaseChange.adjoin_support
+#print axioms DiamondIntegral.Section7.KernelBaseChange.adjoin_support
 #check @DiamondIntegral.Section7.KernelDimOne.clsG_source
 #print DiamondIntegral.Section7.KernelDimOne.clsG_source
 #print axioms DiamondIntegral.Section7.KernelDimOne.clsG_source
@@ -1281,6 +1305,27 @@ import «section 7».Section
 #check @DiamondIntegral.Section7.LiftClasses.liftCls_cls
 #print DiamondIntegral.Section7.LiftClasses.liftCls_cls
 #print axioms DiamondIntegral.Section7.LiftClasses.liftCls_cls
+#check @DiamondIntegral.Section7.MeasuredLift.mem_lift_iff
+#print DiamondIntegral.Section7.MeasuredLift.mem_lift_iff
+#print axioms DiamondIntegral.Section7.MeasuredLift.mem_lift_iff
+#check @DiamondIntegral.Section7.MeasuredLift.lift_tagged
+#print DiamondIntegral.Section7.MeasuredLift.lift_tagged
+#print axioms DiamondIntegral.Section7.MeasuredLift.lift_tagged
+#check @DiamondIntegral.Section7.MeasuredLift.liftGood
+#print DiamondIntegral.Section7.MeasuredLift.liftGood
+#print axioms DiamondIntegral.Section7.MeasuredLift.liftGood
+#check @DiamondIntegral.Section7.MeasuredLift.exists_lift_point
+#print DiamondIntegral.Section7.MeasuredLift.exists_lift_point
+#print axioms DiamondIntegral.Section7.MeasuredLift.exists_lift_point
+#check @DiamondIntegral.Section7.MeasuredLift.contrLiftIso
+#print DiamondIntegral.Section7.MeasuredLift.contrLiftIso
+#print axioms DiamondIntegral.Section7.MeasuredLift.contrLiftIso
+#check @DiamondIntegral.Section7.MeasuredLift.clsG_lift
+#print DiamondIntegral.Section7.MeasuredLift.clsG_lift
+#print axioms DiamondIntegral.Section7.MeasuredLift.clsG_lift
+#check @DiamondIntegral.Section7.MeasuredLift.lemma_7_11_measured
+#print DiamondIntegral.Section7.MeasuredLift.lemma_7_11_measured
+#print axioms DiamondIntegral.Section7.MeasuredLift.lemma_7_11_measured
 #check @DiamondIntegral.Section7.MeasuredRVBounds.NoInfinity
 #print DiamondIntegral.Section7.MeasuredRVBounds.NoInfinity
 #print axioms DiamondIntegral.Section7.MeasuredRVBounds.NoInfinity
@@ -1506,6 +1551,30 @@ import «section 7».Section
 #check @DiamondIntegral.Section7.Remark74.remark_7_4_named
 #print DiamondIntegral.Section7.Remark74.remark_7_4_named
 #print axioms DiamondIntegral.Section7.Remark74.remark_7_4_named
+#check @DiamondIntegral.Section7.SetBaseMatching.exists_ordinary_unary_matching_of_support
+#print DiamondIntegral.Section7.SetBaseMatching.exists_ordinary_unary_matching_of_support
+#print axioms DiamondIntegral.Section7.SetBaseMatching.exists_ordinary_unary_matching_of_support
+#check @DiamondIntegral.Section7.SetBaseMatching.original_base_ordinary_matching_exists_of_support
+#print DiamondIntegral.Section7.SetBaseMatching.original_base_ordinary_matching_exists_of_support
+#print axioms DiamondIntegral.Section7.SetBaseMatching.original_base_ordinary_matching_exists_of_support
+#check @DiamondIntegral.Section7.SetBaseMatching.unary_relative_rv_family_prepared_matching_exists_of_support
+#print DiamondIntegral.Section7.SetBaseMatching.unary_relative_rv_family_prepared_matching_exists_of_support
+#print axioms DiamondIntegral.Section7.SetBaseMatching.unary_relative_rv_family_prepared_matching_exists_of_support
+#check @DiamondIntegral.Section7.SetBaseMatching.unary_relative_measured_rv_family_prepared_matching_exists_of_support
+#print DiamondIntegral.Section7.SetBaseMatching.unary_relative_measured_rv_family_prepared_matching_exists_of_support
+#print axioms DiamondIntegral.Section7.SetBaseMatching.unary_relative_measured_rv_family_prepared_matching_exists_of_support
+#check @DiamondIntegral.Section7.SetBaseMatching.unary_relative_measured_rv_family_matching_exists_of_support
+#print DiamondIntegral.Section7.SetBaseMatching.unary_relative_measured_rv_family_matching_exists_of_support
+#print axioms DiamondIntegral.Section7.SetBaseMatching.unary_relative_measured_rv_family_matching_exists_of_support
+#check @DiamondIntegral.Section7.SetBaseMatching.lemma_6_38_bounded_variable_apertures_of_support
+#print DiamondIntegral.Section7.SetBaseMatching.lemma_6_38_bounded_variable_apertures_of_support
+#print axioms DiamondIntegral.Section7.SetBaseMatching.lemma_6_38_bounded_variable_apertures_of_support
+#check @DiamondIntegral.Section7.SetBaseMatching.lemma_6_38_bounded_variable_apertures_contractible_of_support
+#print DiamondIntegral.Section7.SetBaseMatching.lemma_6_38_bounded_variable_apertures_contractible_of_support
+#print axioms DiamondIntegral.Section7.SetBaseMatching.lemma_6_38_bounded_variable_apertures_contractible_of_support
+#check @DiamondIntegral.Section7.SetBaseMatching.lemma_6_38_diamond_contractible_of_support
+#print DiamondIntegral.Section7.SetBaseMatching.lemma_6_38_diamond_contractible_of_support
+#print axioms DiamondIntegral.Section7.SetBaseMatching.lemma_6_38_diamond_contractible_of_support
 #check @DiamondIntegral.Section7.SpecialChainInduction.transport
 #print DiamondIntegral.Section7.SpecialChainInduction.transport
 #print axioms DiamondIntegral.Section7.SpecialChainInduction.transport

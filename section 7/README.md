@@ -11,10 +11,11 @@ The Lean formalization is in progress; see [PLAN.md](PLAN.md) (approved by the
 author on 2026-11-19), [STATUS.md](STATUS.md), [COVERAGE.md](COVERAGE.md) and
 [GAP-REPAIRS.md](GAP-REPAIRS.md). Complete so far: Definition 7.2 on isomorphism
 classes, Lemma 7.5, Corollary 7.6, Lemma 7.7, Corollary 7.8, Definition 7.9,
-the additive part of Lemma 7.10, Remark 7.3 (dimension claim), Lemma 7.12 on
-classes, Definitions 7.16, 7.17, 7.19 and Remark 7.18 (approved scope), and the
-surjectivity of the lift on classes. Remaining: the lift constructions 7.11 and
-7.13,
+the additive part of Lemma 7.10, Remark 7.3 (dimension claim), Lemma 7.11 (full
+lift, on classes), Lemma 7.12 on classes, Lemma 7.13 (printed form, head start
+0; also over a base with adjoined VF parameters), Definitions 7.16, 7.17, 7.19
+and Remark 7.18 (approved scope), and the surjectivity of the lift on classes.
+Remaining: the approved partial-lift and head-start forms of 7.11 and 7.13,
 whole-witness descent (7.14–7.15), the two-cell comparisons (7.20–7.23), the
 kernel (7.24–7.25), Theorem 7.26 with J_var, and 7.27–7.28.
 
@@ -22,3 +23,11 @@ The focused [Section 6 handoff](SECTION6-HANDOFF.md) links the checked native
 inputs and the mathematical draft. The draft is not a completed kernel
 theorem. Old page ranges are historical; identify targets by LaTeX labels
 in the [working manuscript](../section%202/reference/diamond_integral_revision_annotated.tex).
+
+Upstream export used in proofs (not as a hypothesis):
+`IntegrationInACVF.Section7.lemma_5_2_gamma_presented_without_field`
+(integration-in-ACVF, pinned revision `ab4c0e8b15e1e21b0b4fce57eed764be76020e06`,
+`section 7/Integration7/UnaryCompatiblePreparationWithoutField.lean`). It is
+Yin's unary compatible preparation (Lemma 5.2 of [18]) over a small base
+without a VF field base. `SetBaseMatching` uses it in place of
+`lemma_5_2_gamma_presented`, so that Lemma 6.38 holds over support data.
