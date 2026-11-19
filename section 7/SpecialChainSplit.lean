@@ -63,4 +63,63 @@ theorem mem_reg_res {q : Mixed M n (n + r)} :
 
 end Split
 
+section ClassSplit
+open DiamondIntegral.Section7.BoundedClasses DiamondIntegral.Section7.LiftClasses
+open DiamondIntegral.Section7.IsoOfMeasured DiamondIntegral.Section7.SpecialStep
+open DiamondIntegral.Section6.DiamondLiftHomomorphism
+variable (hc : CanonicalStructure.IsCanonical (M := M))
+variable {T : LRV.Substructure M} {X : DefSet (rawMixedSpace (M := M) n r) (T : Set M)} (g : Good T X)
+variable (J : DefSet (rawRVSpace (M := M) r) (T : Set M))
+
+theorem labels_res_sub :
+    (regC (goodRes g J)).object.domain.carrier ⊆ (regC g).object.domain.carrier := by
+  intro L hL
+  obtain ⟨q, hq⟩ := pureRVTagQuotient_surjective _ (⟨L, hL⟩ : pureRVTagDomain (regularizeMap (focusActive X J)).image)
+  have hq' : q.val ∈ (regularizeMap X).image.carrier := ((mem_reg_res J).mp q.property).1
+  have he : q.val.2 = L := congrArg Subtype.val hq
+  rw [← he]
+  exact (pureRVTagQuotient (regularizeMap X).image ⟨q.val, hq'⟩).property
+
+theorem reg_point_res (p : focusActive X J) :
+    regularization (focusActive X J) p = ⟨(regularization X ⟨p.val, p.property.1⟩).val,
+      (mem_reg_res J).mpr ⟨(regularization X ⟨p.val, p.property.1⟩).property, by
+        have he : (fun i => (regularize p.val).2 (Fin.natAdd n i)) = p.val.2 :=
+          funext (fun i => regularize_snd_right p.val i)
+        change (fun i => (regularize p.val).2 (Fin.natAdd n i)) ∈ J.carrier
+        rw [he]
+        exact p.property.2⟩⟩ := rfl
+
+/-- The restriction of the contraction to the labels of the piece. -/
+def resIso : MeasuredRVIso ((regC g).restrict (regC (goodRes g J)).object.domain (labels_res_sub g J))
+    (regC (goodRes g J)) := by
+  refine ⟨rvIsoOfFiniteFibres (Map.id _) Function.bijective_id
+    ((regC g).restrict _ (labels_res_sub g J)).finiteVolume (regC (goodRes g J)).finiteVolume
+    ((regC g).restrict _ (labels_res_sub g J)).nonzero (regC (goodRes g J)).nonzero, fun a => ?_⟩
+  rw [rvIsoOfFiniteFibres_map]
+  obtain ⟨q, hq⟩ := pureRVTagQuotient_surjective _ a
+  obtain ⟨p, rfl⟩ := (regularization_bijective _).2 q
+  let p' : X := ⟨p.val, p.property.1⟩
+  have hqa : pureRVTagQuotient (regularizeMap X).image (regularization X p') =
+      ⟨a.val, labels_res_sub g J a.property⟩ := by
+    apply Subtype.ext
+    rw [← hq]
+    rfl
+  unfold MeasuredRVObject.totalWeight
+  have hv : ((regC g).restrict _ (labels_res_sub g J)).object.value a = (regC (goodRes g J)).object.value (Map.id _ a) := by
+    change (regC g).object.value ⟨a.val, labels_res_sub g J a.property⟩ = (regC (goodRes g J)).object.value a
+    rw [← hqa, ← hq]
+    change (preparedRVObject _ (regularize_tagged X)).value _ = (preparedRVObject _ (regularize_tagged _)).value _
+    rw [preparedRVObject_value, preparedRVObject_value]
+    rfl
+  rw [volumeGamma_congr hv]
+  congr 1
+  change gammaMapValue (regC g).form ⟨a.val, labels_res_sub g J a.property⟩ = gammaMapValue (regC (goodRes g J)).form a
+  rw [← hqa, ← hq]
+  change ((contractedForm _ (regForm g) (regForm_labels g)) _).val =
+    ((contractedForm _ (regForm (goodRes g J)) (regForm_labels _)) _).val
+  rw [contractedForm_at, contractedForm_at, regForm_apply, regForm_apply]
+  rfl
+
+end ClassSplit
+
 end DiamondIntegral.Section7.SpecialChainSplit
