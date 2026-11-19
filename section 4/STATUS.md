@@ -19,8 +19,11 @@ The unary rational-affine Gamma input is proved
 (`Section5.GammaQE.gamma_piecewise_rational_affine`), and
 `Section4GammaLinearityDischarged.lean` gives `proposition_4_7_discharged` and
 `proposition_4_15_discharged` without it. The multivariate normal form
-`Section3GammaAffineInput.Input`, used by Remark 4.2, remains explicit (known
-open). Later accepted external inputs in Section 3 retain their documented
+`Section3GammaAffineInput.Input`, used by Remark 4.2, is proved over every
+base (`Section3GammaAffineDischarge.input`, from RV quantifier elimination
+with ACVF only), and `Section4GammaAffineDischarged.lean` states Remark 4.2
+without it (`exists_decomposition_discharged`,
+`euler_characteristic_discharged` and companions). Later accepted external inputs in Section 3 retain their documented
 scope; no HK input is introduced. See the
 [project dependency audit](../DEPENDENCY-AUDIT.md).
 
@@ -31,12 +34,11 @@ the Definition 4.9 ∞-coordinate comparison (`RVStrictBoundedComparison`),
 `Section4LinkedRemarks` (diagram (edb:eb:com), Remarks 4.4/4.16) and the
 Proposition 3.18 kernel witness (recorded under section 3).
 
-The complete Section 4 audit (November 18) passes 5493 declarations (3340
-theorems) across 621 modules plus `Section.lean`, with only `propext`,
-`Classical.choice` and `Quot.sound`. The hard-coded summary strings in
-`verify.py` (copied into `verification/status.json`) still call the
-rational-affine Gamma background accepted; for the unary input this is out
-of date.
+The complete Section 4 audit (November 19) passes 5546 declarations (3382
+theorems) across 626 modules plus `Section.lean`, with only `propext`,
+`Classical.choice` and `Quot.sound`. The summary strings in `verify.py`
+(copied into `verification/status.json`) record both the unary and the
+multivariate rational-affine normal forms as proved.
 
 The approved T001 manuscript statement and both proofs remain verbatim.
 Other approved Section 3 manuscript changes are synchronized; the entire
@@ -69,7 +71,8 @@ colored T001 review copy is preserved separately.
   equality of geometric Euler characteristic with the alternating sum
   of the ordinary recursive cell dimensions are proved. Continuity and
   cell refinement are proved locally from the multivariate rational-affine
-  normal form, which is still an explicit input.
+  normal form, which is itself proved (`Section3GammaAffineDischarge.input`);
+  the input-free forms are in `Section4GammaAffineDischarged`.
 - Remark 4.4: the actual natural affine-localization comparison is proved
   nonsurjective. The affine line is outside its image. The proof uses
   actual RES coordinate covers, uniform finite-fibre bounds and

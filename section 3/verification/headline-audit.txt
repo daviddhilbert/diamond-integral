@@ -25168,6 +25168,16 @@ fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Mileston
     [Valued.{0, 0} (DiamondIntegral.Section2.VF M) G] C hBC hv U =>
   have H := ⋯;
   { data := Exists.choose.{1} H, map := Exists.choose.{1} ⋯, fixesVF := ⋯ }
+def DiamondIntegral.Section3.gammaMixedCodeContext : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B : SpecialTransformations.Section3.GammaParameters.Base} →
+        (C : SpecialTransformations.Section3.BaseContext M) →
+          LE.le.{0} B.real ↑C.base →
+            LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) C.κ → SpecialTransformations.Section3.BaseContext M :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {B} C hBC hg =>
+  IntegrationInACVF.Section7.gammaNamesContainingVolumeContext C B hBC hg
 def DiamondIntegral.Section3.gammaMixedContractionValue : {M : Type} →
   [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
     [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
@@ -25183,7 +25193,7 @@ def DiamondIntegral.Section3.gammaMixedContractionValue : {M : Type} →
                         (∀ (x y : DiamondIntegral.Section2.VF M),
                             Iff (SpecialTransformations.Milestone0.VFValued.predV x y)
                               (LE.le.{0} (Valued.v.{0, 0} x) (Valued.v.{0, 0} y))) →
-                          LE.le.{0} (SpecialTransformations.Section3.GammaParameters.commonRealNames B) ↑C.base →
+                          LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) C.κ →
                             SpecialTransformations.Section3.GammaParameters.VFGammaGeneratedBase B →
                               DiamondIntegral.Section3.GammaGroundMeasuredVFData hc B (HAdd.hAdd.{0, 0, 0} n 1) →
                                 RingCon.Quotient.{0}
@@ -25191,9 +25201,11 @@ def DiamondIntegral.Section3.gammaMixedContractionValue : {M : Type} →
 fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
     [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
     [CharZero.{0} (DiamondIntegral.Section2.VF M)] {hc} {B} {n} {G} [LinearOrderedCommGroupWithZero.{0} G]
-    [Valued.{0, 0} (DiamondIntegral.Section2.VF M) G] C hBC hv hNames hGenerated U =>
-  DiamondIntegral.Section3.GammaRetainedMeasuredVFData.contractionValue C hBC hNames hGenerated
-    (DiamondIntegral.Section3.gammaMixedRetainedRepresentation C hBC hv U).data
+    [Valued.{0, 0} (DiamondIntegral.Section2.VF M) G] C hBC hv hg hGenerated U =>
+  DiamondIntegral.Section3.GammaRetainedMeasuredVFData.contractionValue
+    (DiamondIntegral.Section3.gammaMixedCodeContext C hBC hg) ⋯ ⋯ hGenerated
+    (DiamondIntegral.Section3.gammaMixedRetainedRepresentation (DiamondIntegral.Section3.gammaMixedCodeContext C hBC hg)
+        ⋯ hv U).data
 def DiamondIntegral.Section3.gammaMixedPackBijection : {M : Type} →
   [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
     [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
@@ -25401,21 +25413,20 @@ def DiamondIntegral.Section3.gammaMonotoneContractionInvariant : {M : Type} →
                                   Iff (SpecialTransformations.Milestone0.VFValued.predV x y)
                                     (LE.le.{0} (Valued.v.{0, 0} x) (Valued.v.{0, 0} y))) →
                               LT.lt.{1} (Cardinal.mk.{0} ↑D.gamma) C.κ →
-                                LE.le.{0} (SpecialTransformations.Section3.GammaParameters.commonRealNames D) ↑C.base →
-                                  SpecialTransformations.Section3.GammaParameters.VFGammaGeneratedBase D →
-                                    (δ : SpecialTransformations.Section3.Values.Gamma) →
-                                      Membership.mem.{0, 0} D.gamma δ →
-                                        LT.lt.{0} 1 δ →
-                                          SpecialTransformations.Section4.PositiveAdditiveGrothendieck.Invariant.{0, 0}
-                                            (DiamondIntegral.Section3.gammaGroundMeasuredVFPresentation ⋯ ⋯ ⋯ hv
-                                              (HAdd.hAdd.{0, 0, 0} n 1)) :=
+                                SpecialTransformations.Section3.GammaParameters.VFGammaGeneratedBase D →
+                                  (δ : SpecialTransformations.Section3.Values.Gamma) →
+                                    Membership.mem.{0, 0} D.gamma δ →
+                                      LT.lt.{0} 1 δ →
+                                        SpecialTransformations.Section4.PositiveAdditiveGrothendieck.Invariant.{0, 0}
+                                          (DiamondIntegral.Section3.gammaGroundMeasuredVFPresentation ⋯ ⋯ ⋯ hv
+                                            (HAdd.hAdd.{0, 0, 0} n 1)) :=
 fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
     [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
     [CharZero.{0} (DiamondIntegral.Section2.VF M)] {hc} {B D} {n} {G} [LinearOrderedCommGroupWithZero.{0} G]
-    [Valued.{0, 0} (DiamondIntegral.Section2.VF M) G] hReal hGamma C hDC hv hg hNames hGenerated δ hδ hδ1 =>
+    [Valued.{0, 0} (DiamondIntegral.Section2.VF M) G] hReal hGamma C hDC hv hg hGenerated δ hδ hδ1 =>
   SpecialTransformations.Section4.PositiveAdditiveGrothendieck.Invariant.mk.{0, 0}
     (fun U =>
-      DiamondIntegral.Section3.gammaMixedContractionValue C hDC hv hNames hGenerated
+      DiamondIntegral.Section3.gammaMixedContractionValue C hDC hv hg hGenerated
         (DiamondIntegral.Section3.GammaGroundMeasuredVFData.monoBase hReal hGamma U))
     ⋯ ⋯ ⋯
 def DiamondIntegral.Section3.gammaMonotoneContractionDetector : {M : Type} →
@@ -25437,23 +25448,22 @@ def DiamondIntegral.Section3.gammaMonotoneContractionDetector : {M : Type} →
                                   Iff (SpecialTransformations.Milestone0.VFValued.predV x y)
                                     (LE.le.{0} (Valued.v.{0, 0} x) (Valued.v.{0, 0} y))) →
                               LT.lt.{1} (Cardinal.mk.{0} ↑D.gamma) C.κ →
-                                LE.le.{0} (SpecialTransformations.Section3.GammaParameters.commonRealNames D) ↑C.base →
-                                  SpecialTransformations.Section3.GammaParameters.VFGammaGeneratedBase D →
-                                    (δ : SpecialTransformations.Section3.Values.Gamma) →
-                                      Membership.mem.{0, 0} D.gamma δ →
-                                        LT.lt.{0} 1 δ →
-                                          AddMonoidHom.{0, 0}
-                                            (DiamondIntegral.Section3.GammaGroundMeasuredVFKPlus ⋯ ⋯ ⋯ hv
-                                              (HAdd.hAdd.{0, 0, 0} n 1))
-                                            (RingCon.Quotient.{0}
-                                              (DiamondIntegral.Section3.gammaGroundMeasuredRVSpecialCongruence hc D)) :=
+                                SpecialTransformations.Section3.GammaParameters.VFGammaGeneratedBase D →
+                                  (δ : SpecialTransformations.Section3.Values.Gamma) →
+                                    Membership.mem.{0, 0} D.gamma δ →
+                                      LT.lt.{0} 1 δ →
+                                        AddMonoidHom.{0, 0}
+                                          (DiamondIntegral.Section3.GammaGroundMeasuredVFKPlus ⋯ ⋯ ⋯ hv
+                                            (HAdd.hAdd.{0, 0, 0} n 1))
+                                          (RingCon.Quotient.{0}
+                                            (DiamondIntegral.Section3.gammaGroundMeasuredRVSpecialCongruence hc D)) :=
 fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
     [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
     [CharZero.{0} (DiamondIntegral.Section2.VF M)] {hc} {B D} {n} {G} [LinearOrderedCommGroupWithZero.{0} G]
-    [Valued.{0, 0} (DiamondIntegral.Section2.VF M) G] hReal hGamma C hDC hv hg hNames hGenerated δ hδ hδ1 =>
+    [Valued.{0, 0} (DiamondIntegral.Section2.VF M) G] hReal hGamma C hDC hv hg hGenerated δ hδ hδ1 =>
   SpecialTransformations.Section4.PositiveAdditiveGrothendieck.lift.{0, 0}
     (DiamondIntegral.Section3.gammaGroundMeasuredVFPresentation ⋯ ⋯ ⋯ hv (HAdd.hAdd.{0, 0, 0} n 1))
-    (DiamondIntegral.Section3.gammaMonotoneContractionInvariant hReal hGamma C hDC hv hg hNames hGenerated δ hδ hδ1)
+    (DiamondIntegral.Section3.gammaMonotoneContractionInvariant hReal hGamma C hDC hv hg hGenerated δ hδ hδ1)
 def DiamondIntegral.Section3.gammaNativeAdditiveValue.{u_1} : {M : Type} →
   [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
     [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
@@ -81935,24 +81945,52 @@ DiamondIntegral.Section3.torusRationalVariable_ne_zero.{u_1} : ∀ (K : Type u_1
   (C : SpecialTransformations.Section3.BaseContext M) (hBC : LE.le.{0} B.real ↑C.base)
   (hv :
     ∀ (x y : DiamondIntegral.Section2.VF M),
-      Iff (SpecialTransformations.Milestone0.VFValued.predV x y) (LE.le.{0} (Valued.v.{0, 0} x) (Valued.v.{0, 0} y))),
-  LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) C.κ →
-    ∀ (hNames : LE.le.{0} (SpecialTransformations.Section3.GammaParameters.commonRealNames B) ↑C.base)
-      (hGenerated : SpecialTransformations.Section3.GammaParameters.VFGammaGeneratedBase B)
-      (δ : SpecialTransformations.Section3.Values.Gamma),
-      Membership.mem.{0, 0} B.gamma δ →
-        LT.lt.{0} 1 δ →
-          ∀ (U : DiamondIntegral.Section3.GammaGroundMeasuredVFData hc B (HAdd.hAdd.{0, 0, 0} n 1))
-            (A :
-              DiamondIntegral.Section3.GammaGroundDefSet hc B
-                (SpecialTransformations.Section4.rawMixedSpace (HAdd.hAdd.{0, 0, 0} n 1) U.arity))
-            (hA : LE.le.{0} A.carrier U.domain.carrier),
-            Eq.{1} (DiamondIntegral.Section3.gammaMixedContractionValue C hBC hv hNames hGenerated U)
-              (HAdd.hAdd.{0, 0, 0}
-                (DiamondIntegral.Section3.gammaMixedContractionValue C hBC hv hNames hGenerated (U.restrict A hA))
-                (DiamondIntegral.Section3.gammaMixedContractionValue C hBC hv hNames hGenerated
-                  (U.restrict (U.domain.sdiff A) ⋯)))
+      Iff (SpecialTransformations.Milestone0.VFValued.predV x y) (LE.le.{0} (Valued.v.{0, 0} x) (Valued.v.{0, 0} y)))
+  (hg : LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) C.κ)
+  (hGenerated : SpecialTransformations.Section3.GammaParameters.VFGammaGeneratedBase B)
+  (δ : SpecialTransformations.Section3.Values.Gamma),
+  Membership.mem.{0, 0} B.gamma δ →
+    LT.lt.{0} 1 δ →
+      ∀ (U : DiamondIntegral.Section3.GammaGroundMeasuredVFData hc B (HAdd.hAdd.{0, 0, 0} n 1))
+        (A :
+          DiamondIntegral.Section3.GammaGroundDefSet hc B
+            (SpecialTransformations.Section4.rawMixedSpace (HAdd.hAdd.{0, 0, 0} n 1) U.arity))
+        (hA : LE.le.{0} A.carrier U.domain.carrier),
+        Eq.{1} (DiamondIntegral.Section3.gammaMixedContractionValue C hBC hv hg hGenerated U)
+          (HAdd.hAdd.{0, 0, 0}
+            (DiamondIntegral.Section3.gammaMixedContractionValue C hBC hv hg hGenerated (U.restrict A hA))
+            (DiamondIntegral.Section3.gammaMixedContractionValue C hBC hv hg hGenerated
+              (U.restrict (U.domain.sdiff A) ⋯)))
 'DiamondIntegral.Section3.gammaMixed_binary_partition_values' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section3.gammaMixedCodeContext_real : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  [CharZero.{0} (DiamondIntegral.Section2.VF M)] {B : SpecialTransformations.Section3.GammaParameters.Base}
+  (C : SpecialTransformations.Section3.BaseContext M) (hBC : LE.le.{0} B.real ↑C.base)
+  (hg : LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) C.κ),
+  LE.le.{0} B.real ↑(DiamondIntegral.Section3.gammaMixedCodeContext C hBC hg).base
+'DiamondIntegral.Section3.gammaMixedCodeContext_real' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@DiamondIntegral.Section3.gammaMixedCodeContext_names : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  [CharZero.{0} (DiamondIntegral.Section2.VF M)] {B : SpecialTransformations.Section3.GammaParameters.Base}
+  (C : SpecialTransformations.Section3.BaseContext M) (hBC : LE.le.{0} B.real ↑C.base)
+  (hg : LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) C.κ),
+  LE.le.{0} (SpecialTransformations.Section3.GammaParameters.commonRealNames B)
+    ↑(DiamondIntegral.Section3.gammaMixedCodeContext C hBC hg).base
+'DiamondIntegral.Section3.gammaMixedCodeContext_names' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section3.gammaMixedCodeContext_gamma : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  [CharZero.{0} (DiamondIntegral.Section2.VF M)] {B : SpecialTransformations.Section3.GammaParameters.Base}
+  (C : SpecialTransformations.Section3.BaseContext M) (hBC : LE.le.{0} B.real ↑C.base)
+  (hg : LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) C.κ),
+  LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) (DiamondIntegral.Section3.gammaMixedCodeContext C hBC hg).κ
+'DiamondIntegral.Section3.gammaMixedCodeContext_gamma' depends on axioms: [propext,
  Classical.choice.{u},
  Quot.sound.{u}]
 @DiamondIntegral.Section3.gammaMixed_contraction_value_of_presentation : ∀ {M : Type}
@@ -81965,18 +82003,18 @@ DiamondIntegral.Section3.torusRationalVariable_ne_zero.{u_1} : ∀ (K : Type u_1
   (hv :
     ∀ (x y : DiamondIntegral.Section2.VF M),
       Iff (SpecialTransformations.Milestone0.VFValued.predV x y) (LE.le.{0} (Valued.v.{0, 0} x) (Valued.v.{0, 0} y)))
-  (hNames : LE.le.{0} (SpecialTransformations.Section3.GammaParameters.commonRealNames B) ↑C.base)
-  (hGenerated : SpecialTransformations.Section3.GammaParameters.VFGammaGeneratedBase B),
-  LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) C.κ →
-    ∀ (δ : SpecialTransformations.Section3.Values.Gamma),
-      Membership.mem.{0, 0} B.gamma δ →
-        LT.lt.{0} 1 δ →
-          ∀ (U : DiamondIntegral.Section3.GammaGroundMeasuredVFData hc B (HAdd.hAdd.{0, 0, 0} n 1))
-            (P : DiamondIntegral.Section3.GammaRetainedMeasuredVFData hc B (HAdd.hAdd.{0, 0, 0} n 1))
-            (E : DiamondIntegral.Section3.GammaFullMeasuredBijection U P.toMeasured),
-            (∀ (p : ↑U.domain.carrier), Eq.{1} (↑(E.map.map.toFun p)).1 (↑p).1) →
-              Eq.{1} (DiamondIntegral.Section3.gammaMixedContractionValue C hBC hv hNames hGenerated U)
-                (DiamondIntegral.Section3.GammaRetainedMeasuredVFData.contractionValue C hBC hNames hGenerated P)
+  (hg : LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) C.κ)
+  (hGenerated : SpecialTransformations.Section3.GammaParameters.VFGammaGeneratedBase B)
+  (δ : SpecialTransformations.Section3.Values.Gamma),
+  Membership.mem.{0, 0} B.gamma δ →
+    LT.lt.{0} 1 δ →
+      ∀ (U : DiamondIntegral.Section3.GammaGroundMeasuredVFData hc B (HAdd.hAdd.{0, 0, 0} n 1))
+        (P : DiamondIntegral.Section3.GammaRetainedMeasuredVFData hc B (HAdd.hAdd.{0, 0, 0} n 1))
+        (E : DiamondIntegral.Section3.GammaFullMeasuredBijection U P.toMeasured),
+        (∀ (p : ↑U.domain.carrier), Eq.{1} (↑(E.map.map.toFun p)).1 (↑p).1) →
+          Eq.{1} (DiamondIntegral.Section3.gammaMixedContractionValue C hBC hv hg hGenerated U)
+            (DiamondIntegral.Section3.GammaRetainedMeasuredVFData.contractionValue
+              (DiamondIntegral.Section3.gammaMixedCodeContext C hBC hg) ⋯ ⋯ hGenerated P)
 'DiamondIntegral.Section3.gammaMixed_contraction_value_of_presentation' depends on axioms: [propext,
  Classical.choice.{u},
  Quot.sound.{u}]
@@ -81990,18 +82028,17 @@ DiamondIntegral.Section3.torusRationalVariable_ne_zero.{u_1} : ∀ (K : Type u_1
   (hv :
     ∀ (x y : DiamondIntegral.Section2.VF M),
       Iff (SpecialTransformations.Milestone0.VFValued.predV x y) (LE.le.{0} (Valued.v.{0, 0} x) (Valued.v.{0, 0} y)))
-  (hNames : LE.le.{0} (SpecialTransformations.Section3.GammaParameters.commonRealNames B) ↑C.base)
-  (hGenerated : SpecialTransformations.Section3.GammaParameters.VFGammaGeneratedBase B),
-  LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) C.κ →
-    ∀ (δ : SpecialTransformations.Section3.Values.Gamma),
-      Membership.mem.{0, 0} B.gamma δ →
-        LT.lt.{0} 1 δ →
-          ∀ {U V : DiamondIntegral.Section3.GammaGroundMeasuredVFData hc B (HAdd.hAdd.{0, 0, 0} n 1)}
-            (F : DiamondIntegral.Section3.GammaFullMeasuredBijection U V) (i : Fin (HAdd.hAdd.{0, 0, 0} n 1)),
-            (∀ (p : ↑U.domain.carrier) (j : Fin (HAdd.hAdd.{0, 0, 0} n 1)),
-                Ne.{1} j i → Eq.{1} ((↑(F.map.map.toFun p)).1 j) ((↑p).1 j)) →
-              Eq.{1} (DiamondIntegral.Section3.gammaMixedContractionValue C hBC hv hNames hGenerated U)
-                (DiamondIntegral.Section3.gammaMixedContractionValue C hBC hv hNames hGenerated V)
+  (hg : LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) C.κ)
+  (hGenerated : SpecialTransformations.Section3.GammaParameters.VFGammaGeneratedBase B)
+  (δ : SpecialTransformations.Section3.Values.Gamma),
+  Membership.mem.{0, 0} B.gamma δ →
+    LT.lt.{0} 1 δ →
+      ∀ {U V : DiamondIntegral.Section3.GammaGroundMeasuredVFData hc B (HAdd.hAdd.{0, 0, 0} n 1)}
+        (F : DiamondIntegral.Section3.GammaFullMeasuredBijection U V) (i : Fin (HAdd.hAdd.{0, 0, 0} n 1)),
+        (∀ (p : ↑U.domain.carrier) (j : Fin (HAdd.hAdd.{0, 0, 0} n 1)),
+            Ne.{1} j i → Eq.{1} ((↑(F.map.map.toFun p)).1 j) ((↑p).1 j)) →
+          Eq.{1} (DiamondIntegral.Section3.gammaMixedContractionValue C hBC hv hg hGenerated U)
+            (DiamondIntegral.Section3.gammaMixedContractionValue C hBC hv hg hGenerated V)
 'DiamondIntegral.Section3.gammaMixed_relative_contraction_values' depends on axioms: [propext,
  Classical.choice.{u},
  Quot.sound.{u}]
@@ -82015,16 +82052,15 @@ DiamondIntegral.Section3.torusRationalVariable_ne_zero.{u_1} : ∀ (K : Type u_1
   (hv :
     ∀ (x y : DiamondIntegral.Section2.VF M),
       Iff (SpecialTransformations.Milestone0.VFValued.predV x y) (LE.le.{0} (Valued.v.{0, 0} x) (Valued.v.{0, 0} y)))
-  (hNames : LE.le.{0} (SpecialTransformations.Section3.GammaParameters.commonRealNames B) ↑C.base)
-  (hGenerated : SpecialTransformations.Section3.GammaParameters.VFGammaGeneratedBase B),
-  LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) C.κ →
-    ∀ (δ : SpecialTransformations.Section3.Values.Gamma),
-      Membership.mem.{0, 0} B.gamma δ →
-        LT.lt.{0} 1 δ →
-          ∀ {U V : DiamondIntegral.Section3.GammaGroundMeasuredVFData hc B (HAdd.hAdd.{0, 0, 0} n 1)}
-            (T : DiamondIntegral.Section3.GammaMeasuredUnaryChain U V),
-            Eq.{1} (DiamondIntegral.Section3.gammaMixedContractionValue C hBC hv hNames hGenerated U)
-              (DiamondIntegral.Section3.gammaMixedContractionValue C hBC hv hNames hGenerated V)
+  (hg : LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) C.κ)
+  (hGenerated : SpecialTransformations.Section3.GammaParameters.VFGammaGeneratedBase B)
+  (δ : SpecialTransformations.Section3.Values.Gamma),
+  Membership.mem.{0, 0} B.gamma δ →
+    LT.lt.{0} 1 δ →
+      ∀ {U V : DiamondIntegral.Section3.GammaGroundMeasuredVFData hc B (HAdd.hAdd.{0, 0, 0} n 1)}
+        (T : DiamondIntegral.Section3.GammaMeasuredUnaryChain U V),
+        Eq.{1} (DiamondIntegral.Section3.gammaMixedContractionValue C hBC hv hg hGenerated U)
+          (DiamondIntegral.Section3.gammaMixedContractionValue C hBC hv hg hGenerated V)
 'DiamondIntegral.Section3.gammaMixed_unary_chain_contraction_values' depends on axioms: [propext,
  Classical.choice.{u},
  Quot.sound.{u}]
@@ -82038,11 +82074,11 @@ DiamondIntegral.Section3.torusRationalVariable_ne_zero.{u_1} : ∀ (K : Type u_1
   (hv :
     ∀ (x y : DiamondIntegral.Section2.VF M),
       Iff (SpecialTransformations.Milestone0.VFValued.predV x y) (LE.le.{0} (Valued.v.{0, 0} x) (Valued.v.{0, 0} y)))
-  (hNames : LE.le.{0} (SpecialTransformations.Section3.GammaParameters.commonRealNames B) ↑C.base)
+  (hg : LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) C.κ)
   (hGenerated : SpecialTransformations.Section3.GammaParameters.VFGammaGeneratedBase B)
   (U : DiamondIntegral.Section3.GammaGroundMeasuredVFData hc B (HAdd.hAdd.{0, 0, 0} n 1)),
   Eq.{1} U.domain.carrier EmptyCollection.emptyCollection.{0} →
-    Eq.{1} (DiamondIntegral.Section3.gammaMixedContractionValue C hBC hv hNames hGenerated U) 0
+    Eq.{1} (DiamondIntegral.Section3.gammaMixedContractionValue C hBC hv hg hGenerated U) 0
 'DiamondIntegral.Section3.gammaMixed_empty_contraction_value' depends on axioms: [propext,
  Classical.choice.{u},
  Quot.sound.{u}]
@@ -82055,21 +82091,20 @@ DiamondIntegral.Section3.torusRationalVariable_ne_zero.{u_1} : ∀ (K : Type u_1
   (C : SpecialTransformations.Section3.BaseContext M) (hBC : LE.le.{0} B.real ↑C.base)
   (hv :
     ∀ (x y : DiamondIntegral.Section2.VF M),
-      Iff (SpecialTransformations.Milestone0.VFValued.predV x y) (LE.le.{0} (Valued.v.{0, 0} x) (Valued.v.{0, 0} y))),
-  LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) C.κ →
-    ∀ (hNames : LE.le.{0} (SpecialTransformations.Section3.GammaParameters.commonRealNames B) ↑C.base)
-      (hGenerated : SpecialTransformations.Section3.GammaParameters.VFGammaGeneratedBase B)
-      (δ : SpecialTransformations.Section3.Values.Gamma),
-      Membership.mem.{0, 0} B.gamma δ →
-        LT.lt.{0} 1 δ →
-          ∀ (U : DiamondIntegral.Section3.GammaGroundMeasuredVFData hc B (HAdd.hAdd.{0, 0, 0} n 1))
-            (A :
-              DiamondIntegral.Section3.GammaGroundDefSet hc B
-                (SpecialTransformations.Section4.rawMixedSpace (HAdd.hAdd.{0, 0, 0} n 1) U.arity))
-            (hA : LE.le.{0} A.carrier U.domain.carrier),
-            LT.lt.{0} (DiamondIntegral.Section2.vfDimension (U.domain.sdiff A).carrier) ↑(HAdd.hAdd.{0, 0, 0} n 1) →
-              Eq.{1} (DiamondIntegral.Section3.gammaMixedContractionValue C hBC hv hNames hGenerated U)
-                (DiamondIntegral.Section3.gammaMixedContractionValue C hBC hv hNames hGenerated (U.restrict A hA))
+      Iff (SpecialTransformations.Milestone0.VFValued.predV x y) (LE.le.{0} (Valued.v.{0, 0} x) (Valued.v.{0, 0} y)))
+  (hg : LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) C.κ)
+  (hGenerated : SpecialTransformations.Section3.GammaParameters.VFGammaGeneratedBase B)
+  (δ : SpecialTransformations.Section3.Values.Gamma),
+  Membership.mem.{0, 0} B.gamma δ →
+    LT.lt.{0} 1 δ →
+      ∀ (U : DiamondIntegral.Section3.GammaGroundMeasuredVFData hc B (HAdd.hAdd.{0, 0, 0} n 1))
+        (A :
+          DiamondIntegral.Section3.GammaGroundDefSet hc B
+            (SpecialTransformations.Section4.rawMixedSpace (HAdd.hAdd.{0, 0, 0} n 1) U.arity))
+        (hA : LE.le.{0} A.carrier U.domain.carrier),
+        LT.lt.{0} (DiamondIntegral.Section2.vfDimension (U.domain.sdiff A).carrier) ↑(HAdd.hAdd.{0, 0, 0} n 1) →
+          Eq.{1} (DiamondIntegral.Section3.gammaMixedContractionValue C hBC hv hg hGenerated U)
+            (DiamondIntegral.Section3.gammaMixedContractionValue C hBC hv hg hGenerated (U.restrict A hA))
 'DiamondIntegral.Section3.gammaMixed_cofull_restriction_value' depends on axioms: [propext,
  Classical.choice.{u},
  Quot.sound.{u}]
@@ -82082,21 +82117,19 @@ DiamondIntegral.Section3.torusRationalVariable_ne_zero.{u_1} : ∀ (K : Type u_1
   (C : SpecialTransformations.Section3.BaseContext M) (hBC : LE.le.{0} B.real ↑C.base)
   (hv :
     ∀ (x y : DiamondIntegral.Section2.VF M),
-      Iff (SpecialTransformations.Milestone0.VFValued.predV x y) (LE.le.{0} (Valued.v.{0, 0} x) (Valued.v.{0, 0} y))),
-  LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) C.κ →
-    ∀ (hNames : LE.le.{0} (SpecialTransformations.Section3.GammaParameters.commonRealNames B) ↑C.base)
-      (hGenerated : SpecialTransformations.Section3.GammaParameters.VFGammaGeneratedBase B)
-      (δ : SpecialTransformations.Section3.Values.Gamma),
-      Membership.mem.{0, 0} B.gamma δ →
-        LT.lt.{0} 1 δ →
-          ∀ {U V : DiamondIntegral.Section3.GammaGroundMeasuredVFData hc B (HAdd.hAdd.{0, 0, 0} n 1)}
-            (f : DiamondIntegral.Section3.GammaGroundEssentialVFMap U.domain V.domain),
-            DiamondIntegral.Section3.GammaGroundEssentialVFMap.PreservesGeneric
-                SpecialTransformations.Section3.Values.vfValueHom
-                (DiamondIntegral.Section3.gammaGroundMeasuredVFWeight U)
-                (DiamondIntegral.Section3.gammaGroundMeasuredVFWeight V) f →
-              Eq.{1} (DiamondIntegral.Section3.gammaMixedContractionValue C hBC hv hNames hGenerated U)
-                (DiamondIntegral.Section3.gammaMixedContractionValue C hBC hv hNames hGenerated V)
+      Iff (SpecialTransformations.Milestone0.VFValued.predV x y) (LE.le.{0} (Valued.v.{0, 0} x) (Valued.v.{0, 0} y)))
+  (hg : LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) C.κ)
+  (hGenerated : SpecialTransformations.Section3.GammaParameters.VFGammaGeneratedBase B)
+  (δ : SpecialTransformations.Section3.Values.Gamma),
+  Membership.mem.{0, 0} B.gamma δ →
+    LT.lt.{0} 1 δ →
+      ∀ {U V : DiamondIntegral.Section3.GammaGroundMeasuredVFData hc B (HAdd.hAdd.{0, 0, 0} n 1)}
+        (f : DiamondIntegral.Section3.GammaGroundEssentialVFMap U.domain V.domain),
+        DiamondIntegral.Section3.GammaGroundEssentialVFMap.PreservesGeneric
+            SpecialTransformations.Section3.Values.vfValueHom (DiamondIntegral.Section3.gammaGroundMeasuredVFWeight U)
+            (DiamondIntegral.Section3.gammaGroundMeasuredVFWeight V) f →
+          Eq.{1} (DiamondIntegral.Section3.gammaMixedContractionValue C hBC hv hg hGenerated U)
+            (DiamondIntegral.Section3.gammaMixedContractionValue C hBC hv hg hGenerated V)
 'DiamondIntegral.Section3.gammaMixed_essential_contraction_values' depends on axioms: [propext,
  Classical.choice.{u},
  Quot.sound.{u}]
@@ -82109,17 +82142,16 @@ DiamondIntegral.Section3.torusRationalVariable_ne_zero.{u_1} : ∀ (K : Type u_1
   (C : SpecialTransformations.Section3.BaseContext M) (hBC : LE.le.{0} B.real ↑C.base)
   (hv :
     ∀ (x y : DiamondIntegral.Section2.VF M),
-      Iff (SpecialTransformations.Milestone0.VFValued.predV x y) (LE.le.{0} (Valued.v.{0, 0} x) (Valued.v.{0, 0} y))),
-  LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) C.κ →
-    ∀ (hNames : LE.le.{0} (SpecialTransformations.Section3.GammaParameters.commonRealNames B) ↑C.base)
-      (hGenerated : SpecialTransformations.Section3.GammaParameters.VFGammaGeneratedBase B)
-      (δ : SpecialTransformations.Section3.Values.Gamma),
-      Membership.mem.{0, 0} B.gamma δ →
-        LT.lt.{0} 1 δ →
-          ∀ {U V : DiamondIntegral.Section3.GammaGroundMeasuredVFData hc B (HAdd.hAdd.{0, 0, 0} n 1)}
-            (f : DiamondIntegral.Section3.GammaGroundMeasuredVFHom ⋯ ⋯ ⋯ hv U V),
-            Eq.{1} (DiamondIntegral.Section3.gammaMixedContractionValue C hBC hv hNames hGenerated U)
-              (DiamondIntegral.Section3.gammaMixedContractionValue C hBC hv hNames hGenerated V)
+      Iff (SpecialTransformations.Milestone0.VFValued.predV x y) (LE.le.{0} (Valued.v.{0, 0} x) (Valued.v.{0, 0} y)))
+  (hg : LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) C.κ)
+  (hGenerated : SpecialTransformations.Section3.GammaParameters.VFGammaGeneratedBase B)
+  (δ : SpecialTransformations.Section3.Values.Gamma),
+  Membership.mem.{0, 0} B.gamma δ →
+    LT.lt.{0} 1 δ →
+      ∀ {U V : DiamondIntegral.Section3.GammaGroundMeasuredVFData hc B (HAdd.hAdd.{0, 0, 0} n 1)}
+        (f : DiamondIntegral.Section3.GammaGroundMeasuredVFHom ⋯ ⋯ ⋯ hv U V),
+        Eq.{1} (DiamondIntegral.Section3.gammaMixedContractionValue C hBC hv hg hGenerated U)
+          (DiamondIntegral.Section3.gammaMixedContractionValue C hBC hv hg hGenerated V)
 'DiamondIntegral.Section3.gammaMixed_measured_hom_contraction_values' depends on axioms: [propext,
  Classical.choice.{u},
  Quot.sound.{u}]
@@ -82132,28 +82164,27 @@ DiamondIntegral.Section3.torusRationalVariable_ne_zero.{u_1} : ∀ (K : Type u_1
   (C : SpecialTransformations.Section3.BaseContext M) (hBC : LE.le.{0} B.real ↑C.base)
   (hv :
     ∀ (x y : DiamondIntegral.Section2.VF M),
-      Iff (SpecialTransformations.Milestone0.VFValued.predV x y) (LE.le.{0} (Valued.v.{0, 0} x) (Valued.v.{0, 0} y))),
-  LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) C.κ →
-    ∀ (hNames : LE.le.{0} (SpecialTransformations.Section3.GammaParameters.commonRealNames B) ↑C.base)
-      (hGenerated : SpecialTransformations.Section3.GammaParameters.VFGammaGeneratedBase B)
-      (δ : SpecialTransformations.Section3.Values.Gamma),
-      Membership.mem.{0, 0} B.gamma δ →
-        LT.lt.{0} 1 δ →
-          ∀ {ι : Type} [DecidableEq.{1} ι] (I : Finset.{0} ι)
-            (U : DiamondIntegral.Section3.GammaGroundMeasuredVFData hc B (HAdd.hAdd.{0, 0, 0} n 1))
-            (P :
-              ι →
-                DiamondIntegral.Section3.GammaGroundDefSet hc B
-                  (SpecialTransformations.Section4.rawMixedSpace (HAdd.hAdd.{0, 0, 0} n 1) U.arity))
-            (hP : ∀ (i : ι), LE.le.{0} (P i).carrier U.domain.carrier),
-            (∀ (i : ι),
-                Membership.mem.{0, 0} I i →
-                  ∀ (j : ι), Membership.mem.{0, 0} I j → Ne.{1} i j → Disjoint.{0} (P i).carrier (P j).carrier) →
-              (∀ (p : ↑U.domain.carrier),
-                  Exists.{1} fun i => And (Membership.mem.{0, 0} I i) (Membership.mem.{0, 0} (P i).carrier ↑p)) →
-                Eq.{1} (DiamondIntegral.Section3.gammaMixedContractionValue C hBC hv hNames hGenerated U)
-                  (Finset.sum.{0, 0} I fun i =>
-                    DiamondIntegral.Section3.gammaMixedContractionValue C hBC hv hNames hGenerated (U.restrict (P i) ⋯))
+      Iff (SpecialTransformations.Milestone0.VFValued.predV x y) (LE.le.{0} (Valued.v.{0, 0} x) (Valued.v.{0, 0} y)))
+  (hg : LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) C.κ)
+  (hGenerated : SpecialTransformations.Section3.GammaParameters.VFGammaGeneratedBase B)
+  (δ : SpecialTransformations.Section3.Values.Gamma),
+  Membership.mem.{0, 0} B.gamma δ →
+    LT.lt.{0} 1 δ →
+      ∀ {ι : Type} [DecidableEq.{1} ι] (I : Finset.{0} ι)
+        (U : DiamondIntegral.Section3.GammaGroundMeasuredVFData hc B (HAdd.hAdd.{0, 0, 0} n 1))
+        (P :
+          ι →
+            DiamondIntegral.Section3.GammaGroundDefSet hc B
+              (SpecialTransformations.Section4.rawMixedSpace (HAdd.hAdd.{0, 0, 0} n 1) U.arity))
+        (hP : ∀ (i : ι), LE.le.{0} (P i).carrier U.domain.carrier),
+        (∀ (i : ι),
+            Membership.mem.{0, 0} I i →
+              ∀ (j : ι), Membership.mem.{0, 0} I j → Ne.{1} i j → Disjoint.{0} (P i).carrier (P j).carrier) →
+          (∀ (p : ↑U.domain.carrier),
+              Exists.{1} fun i => And (Membership.mem.{0, 0} I i) (Membership.mem.{0, 0} (P i).carrier ↑p)) →
+            Eq.{1} (DiamondIntegral.Section3.gammaMixedContractionValue C hBC hv hg hGenerated U)
+              (Finset.sum.{0, 0} I fun i =>
+                DiamondIntegral.Section3.gammaMixedContractionValue C hBC hv hg hGenerated (U.restrict (P i) ⋯))
 'DiamondIntegral.Section3.gammaMixed_finite_partition_values' depends on axioms: [propext,
  Classical.choice.{u},
  Quot.sound.{u}]
@@ -82166,17 +82197,16 @@ DiamondIntegral.Section3.torusRationalVariable_ne_zero.{u_1} : ∀ (K : Type u_1
   (C : SpecialTransformations.Section3.BaseContext M) (hBC : LE.le.{0} B.real ↑C.base)
   (hv :
     ∀ (x y : DiamondIntegral.Section2.VF M),
-      Iff (SpecialTransformations.Milestone0.VFValued.predV x y) (LE.le.{0} (Valued.v.{0, 0} x) (Valued.v.{0, 0} y))),
-  LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) C.κ →
-    ∀ (hNames : LE.le.{0} (SpecialTransformations.Section3.GammaParameters.commonRealNames B) ↑C.base)
-      (hGenerated : SpecialTransformations.Section3.GammaParameters.VFGammaGeneratedBase B)
-      (δ : SpecialTransformations.Section3.Values.Gamma),
-      Membership.mem.{0, 0} B.gamma δ →
-        LT.lt.{0} 1 δ →
-          ∀ {U V : DiamondIntegral.Section3.GammaGroundMeasuredVFData hc B (HAdd.hAdd.{0, 0, 0} n 1)}
-            (F : DiamondIntegral.Section3.GammaFullMeasuredBijection U V),
-            Eq.{1} (DiamondIntegral.Section3.gammaMixedContractionValue C hBC hv hNames hGenerated U)
-              (DiamondIntegral.Section3.gammaMixedContractionValue C hBC hv hNames hGenerated V)
+      Iff (SpecialTransformations.Milestone0.VFValued.predV x y) (LE.le.{0} (Valued.v.{0, 0} x) (Valued.v.{0, 0} y)))
+  (hg : LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) C.κ)
+  (hGenerated : SpecialTransformations.Section3.GammaParameters.VFGammaGeneratedBase B)
+  (δ : SpecialTransformations.Section3.Values.Gamma),
+  Membership.mem.{0, 0} B.gamma δ →
+    LT.lt.{0} 1 δ →
+      ∀ {U V : DiamondIntegral.Section3.GammaGroundMeasuredVFData hc B (HAdd.hAdd.{0, 0, 0} n 1)}
+        (F : DiamondIntegral.Section3.GammaFullMeasuredBijection U V),
+        Eq.{1} (DiamondIntegral.Section3.gammaMixedContractionValue C hBC hv hg hGenerated U)
+          (DiamondIntegral.Section3.gammaMixedContractionValue C hBC hv hg hGenerated V)
 'DiamondIntegral.Section3.gammaMixed_full_bijection_values' depends on axioms: [propext,
  Classical.choice.{u},
  Quot.sound.{u}]
@@ -82189,18 +82219,17 @@ DiamondIntegral.Section3.torusRationalVariable_ne_zero.{u_1} : ∀ (K : Type u_1
   (C : SpecialTransformations.Section3.BaseContext M) (hBC : LE.le.{0} B.real ↑C.base)
   (hv :
     ∀ (x y : DiamondIntegral.Section2.VF M),
-      Iff (SpecialTransformations.Milestone0.VFValued.predV x y) (LE.le.{0} (Valued.v.{0, 0} x) (Valued.v.{0, 0} y))),
-  LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) C.κ →
-    ∀ (hNames : LE.le.{0} (SpecialTransformations.Section3.GammaParameters.commonRealNames B) ↑C.base)
-      (hGenerated : SpecialTransformations.Section3.GammaParameters.VFGammaGeneratedBase B)
-      (δ : SpecialTransformations.Section3.Values.Gamma),
-      Membership.mem.{0, 0} B.gamma δ →
-        LT.lt.{0} 1 δ →
-          ∀ (U : DiamondIntegral.Section3.GammaGroundMeasuredRVObject hc B (HAdd.hAdd.{0, 0, 0} n 1)),
-            Eq.{1}
-              (DiamondIntegral.Section3.gammaMixedContractionValue C hBC hv hNames hGenerated
-                (DiamondIntegral.Section3.gammaGroundMeasuredObjectLift U))
-              (DiamondIntegral.Section3.gammaMeasuredPrincipalValue U)
+      Iff (SpecialTransformations.Milestone0.VFValued.predV x y) (LE.le.{0} (Valued.v.{0, 0} x) (Valued.v.{0, 0} y)))
+  (hg : LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) C.κ)
+  (hGenerated : SpecialTransformations.Section3.GammaParameters.VFGammaGeneratedBase B)
+  (δ : SpecialTransformations.Section3.Values.Gamma),
+  Membership.mem.{0, 0} B.gamma δ →
+    LT.lt.{0} 1 δ →
+      ∀ (U : DiamondIntegral.Section3.GammaGroundMeasuredRVObject hc B (HAdd.hAdd.{0, 0, 0} n 1)),
+        Eq.{1}
+          (DiamondIntegral.Section3.gammaMixedContractionValue C hBC hv hg hGenerated
+            (DiamondIntegral.Section3.gammaGroundMeasuredObjectLift U))
+          (DiamondIntegral.Section3.gammaMeasuredPrincipalValue U)
 'DiamondIntegral.Section3.gammaMixed_ground_lift_value' depends on axioms: [propext,
  Classical.choice.{u},
  Quot.sound.{u}]
@@ -82213,20 +82242,19 @@ DiamondIntegral.Section3.torusRationalVariable_ne_zero.{u_1} : ∀ (K : Type u_1
   (C : SpecialTransformations.Section3.BaseContext M) (hBC : LE.le.{0} B.real ↑C.base)
   (hv :
     ∀ (x y : DiamondIntegral.Section2.VF M),
-      Iff (SpecialTransformations.Milestone0.VFValued.predV x y) (LE.le.{0} (Valued.v.{0, 0} x) (Valued.v.{0, 0} y))),
-  LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) C.κ →
-    ∀ (hNames : LE.le.{0} (SpecialTransformations.Section3.GammaParameters.commonRealNames B) ↑C.base)
-      (hGenerated : SpecialTransformations.Section3.GammaParameters.VFGammaGeneratedBase B)
-      (δ : SpecialTransformations.Section3.Values.Gamma),
-      Membership.mem.{0, 0} B.gamma δ →
-        LT.lt.{0} 1 δ →
-          ∀ (U : IntegrationInACVF.Section6.FiniteRV.GammaObjectAt B Set.univ.{0} (HAdd.hAdd.{0, 0, 0} n 1))
-            (ω : DiamondIntegral.Section3.GammaGroundVolumeForm hc B (DiamondIntegral.Section5.nativeRVGroundDomain U)),
-            Eq.{1}
-              (DiamondIntegral.Section3.gammaMixedContractionValue C hBC hv hNames hGenerated
-                (DiamondIntegral.Section3.gammaNativeMeasuredLift U ω))
-              (DiamondIntegral.Section3.gammaMeasuredPrincipalValue
-                (DiamondIntegral.Section3.gammaNativeMeasuredNormalization U ω))
+      Iff (SpecialTransformations.Milestone0.VFValued.predV x y) (LE.le.{0} (Valued.v.{0, 0} x) (Valued.v.{0, 0} y)))
+  (hg : LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) C.κ)
+  (hGenerated : SpecialTransformations.Section3.GammaParameters.VFGammaGeneratedBase B)
+  (δ : SpecialTransformations.Section3.Values.Gamma),
+  Membership.mem.{0, 0} B.gamma δ →
+    LT.lt.{0} 1 δ →
+      ∀ (U : IntegrationInACVF.Section6.FiniteRV.GammaObjectAt B Set.univ.{0} (HAdd.hAdd.{0, 0, 0} n 1))
+        (ω : DiamondIntegral.Section3.GammaGroundVolumeForm hc B (DiamondIntegral.Section5.nativeRVGroundDomain U)),
+        Eq.{1}
+          (DiamondIntegral.Section3.gammaMixedContractionValue C hBC hv hg hGenerated
+            (DiamondIntegral.Section3.gammaNativeMeasuredLift U ω))
+          (DiamondIntegral.Section3.gammaMeasuredPrincipalValue
+            (DiamondIntegral.Section3.gammaNativeMeasuredNormalization U ω))
 'DiamondIntegral.Section3.gammaMixed_native_lift_value' depends on axioms: [propext,
  Classical.choice.{u},
  Quot.sound.{u}]
@@ -82440,11 +82468,11 @@ DiamondIntegral.Section3.torusRationalVariable_ne_zero.{u_1} : ∀ (K : Type u_1
   (hv :
     ∀ (x y : DiamondIntegral.Section2.VF M),
       Iff (SpecialTransformations.Milestone0.VFValued.predV x y) (LE.le.{0} (Valued.v.{0, 0} x) (Valued.v.{0, 0} y)))
-  (hNames : LE.le.{0} (SpecialTransformations.Section3.GammaParameters.commonRealNames B) ↑C.base)
+  (hg : LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) C.κ)
   (hGenerated : SpecialTransformations.Section3.GammaParameters.VFGammaGeneratedBase B)
   (U : DiamondIntegral.Section3.GammaGroundMeasuredVFData hc B (HAdd.hAdd.{0, 0, 0} n 1)),
   LT.lt.{0} (DiamondIntegral.Section2.vfDimension U.domain.carrier) ↑(HAdd.hAdd.{0, 0, 0} n 1) →
-    Eq.{1} (DiamondIntegral.Section3.gammaMixedContractionValue C hBC hv hNames hGenerated U) 0
+    Eq.{1} (DiamondIntegral.Section3.gammaMixedContractionValue C hBC hv hg hGenerated U) 0
 'DiamondIntegral.Section3.gammaMixed_small_contraction_value' depends on axioms: [propext,
  Classical.choice.{u},
  Quot.sound.{u}]
@@ -82531,14 +82559,13 @@ DiamondIntegral.Section3.torusRationalVariable_ne_zero.{u_1} : ∀ (K : Type u_1
     ∀ (x y : DiamondIntegral.Section2.VF M),
       Iff (SpecialTransformations.Milestone0.VFValued.predV x y) (LE.le.{0} (Valued.v.{0, 0} x) (Valued.v.{0, 0} y)))
   (hg : LT.lt.{1} (Cardinal.mk.{0} ↑D.gamma) C.κ)
-  (hNames : LE.le.{0} (SpecialTransformations.Section3.GammaParameters.commonRealNames D) ↑C.base)
   (hGenerated : SpecialTransformations.Section3.GammaParameters.VFGammaGeneratedBase D)
   (δ : SpecialTransformations.Section3.Values.Gamma) (hδ : Membership.mem.{0, 0} D.gamma δ) (hδ1 : LT.lt.{0} 1 δ)
   (U : DiamondIntegral.Section3.GammaGroundMeasuredVFData hc B (HAdd.hAdd.{0, 0, 0} n 1)),
   Eq.{1}
-    ((DiamondIntegral.Section3.gammaMonotoneContractionDetector hReal hGamma C hDC hv hg hNames hGenerated δ hδ hδ1)
+    ((DiamondIntegral.Section3.gammaMonotoneContractionDetector hReal hGamma C hDC hv hg hGenerated δ hδ hδ1)
       (DiamondIntegral.Section3.gammaGroundMeasuredVFClass ⋯ ⋯ ⋯ hv U))
-    (DiamondIntegral.Section3.gammaMixedContractionValue C hDC hv hNames hGenerated
+    (DiamondIntegral.Section3.gammaMixedContractionValue C hDC hv hg hGenerated
       (DiamondIntegral.Section3.GammaGroundMeasuredVFData.monoBase hReal hGamma U))
 'DiamondIntegral.Section3.gammaMonotoneContractionDetector_class' depends on axioms: [propext,
  Classical.choice.{u},
@@ -82555,12 +82582,11 @@ DiamondIntegral.Section3.torusRationalVariable_ne_zero.{u_1} : ∀ (K : Type u_1
     ∀ (x y : DiamondIntegral.Section2.VF M),
       Iff (SpecialTransformations.Milestone0.VFValued.predV x y) (LE.le.{0} (Valued.v.{0, 0} x) (Valued.v.{0, 0} y)))
   (hg : LT.lt.{1} (Cardinal.mk.{0} ↑D.gamma) C.κ)
-  (hNames : LE.le.{0} (SpecialTransformations.Section3.GammaParameters.commonRealNames D) ↑C.base)
   (hGenerated : SpecialTransformations.Section3.GammaParameters.VFGammaGeneratedBase D)
   (δ : SpecialTransformations.Section3.Values.Gamma) (hδ : Membership.mem.{0, 0} D.gamma δ) (hδ1 : LT.lt.{0} 1 δ)
   (U : DiamondIntegral.Section3.GammaGroundMeasuredRVObject hc B (HAdd.hAdd.{0, 0, 0} n 1)),
   Eq.{1}
-    ((DiamondIntegral.Section3.gammaMonotoneContractionDetector hReal hGamma C hDC hv hg hNames hGenerated δ hδ hδ1)
+    ((DiamondIntegral.Section3.gammaMonotoneContractionDetector hReal hGamma C hDC hv hg hGenerated δ hδ hδ1)
       (DiamondIntegral.Section3.gammaGroundMeasuredVFClass ⋯ ⋯ ⋯ hv
         (DiamondIntegral.Section3.gammaGroundMeasuredObjectLift U)))
     (DiamondIntegral.Section3.gammaMeasuredPrincipalValue
@@ -136725,6 +136751,14 @@ DiamondIntegral.Section3.gammaDensityRowReindex : (p a : Nat) →
 'DiamondIntegral.Section3.gammaMixedRetainedRepresentation' depends on axioms: [propext,
  Classical.choice.{u},
  Quot.sound.{u}]
+@DiamondIntegral.Section3.gammaMixedCodeContext : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B : SpecialTransformations.Section3.GammaParameters.Base} →
+        (C : SpecialTransformations.Section3.BaseContext M) →
+          LE.le.{0} B.real ↑C.base →
+            LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) C.κ → SpecialTransformations.Section3.BaseContext M
+'DiamondIntegral.Section3.gammaMixedCodeContext' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
 @DiamondIntegral.Section3.gammaMixedContractionValue : {M : Type} →
   [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
     [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
@@ -136740,7 +136774,7 @@ DiamondIntegral.Section3.gammaDensityRowReindex : (p a : Nat) →
                         (∀ (x y : DiamondIntegral.Section2.VF M),
                             Iff (SpecialTransformations.Milestone0.VFValued.predV x y)
                               (LE.le.{0} (Valued.v.{0, 0} x) (Valued.v.{0, 0} y))) →
-                          LE.le.{0} (SpecialTransformations.Section3.GammaParameters.commonRealNames B) ↑C.base →
+                          LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) C.κ →
                             SpecialTransformations.Section3.GammaParameters.VFGammaGeneratedBase B →
                               DiamondIntegral.Section3.GammaGroundMeasuredVFData hc B (HAdd.hAdd.{0, 0, 0} n 1) →
                                 RingCon.Quotient.{0}
@@ -136912,14 +136946,13 @@ DiamondIntegral.Section3.gammaDensityRowReindex : (p a : Nat) →
                                   Iff (SpecialTransformations.Milestone0.VFValued.predV x y)
                                     (LE.le.{0} (Valued.v.{0, 0} x) (Valued.v.{0, 0} y))) →
                               LT.lt.{1} (Cardinal.mk.{0} ↑D.gamma) C.κ →
-                                LE.le.{0} (SpecialTransformations.Section3.GammaParameters.commonRealNames D) ↑C.base →
-                                  SpecialTransformations.Section3.GammaParameters.VFGammaGeneratedBase D →
-                                    (δ : SpecialTransformations.Section3.Values.Gamma) →
-                                      Membership.mem.{0, 0} D.gamma δ →
-                                        LT.lt.{0} 1 δ →
-                                          SpecialTransformations.Section4.PositiveAdditiveGrothendieck.Invariant.{0, 0}
-                                            (DiamondIntegral.Section3.gammaGroundMeasuredVFPresentation ⋯ ⋯ ⋯ hv
-                                              (HAdd.hAdd.{0, 0, 0} n 1))
+                                SpecialTransformations.Section3.GammaParameters.VFGammaGeneratedBase D →
+                                  (δ : SpecialTransformations.Section3.Values.Gamma) →
+                                    Membership.mem.{0, 0} D.gamma δ →
+                                      LT.lt.{0} 1 δ →
+                                        SpecialTransformations.Section4.PositiveAdditiveGrothendieck.Invariant.{0, 0}
+                                          (DiamondIntegral.Section3.gammaGroundMeasuredVFPresentation ⋯ ⋯ ⋯ hv
+                                            (HAdd.hAdd.{0, 0, 0} n 1))
 'DiamondIntegral.Section3.gammaMonotoneContractionInvariant' depends on axioms: [propext,
  Classical.choice.{u},
  Quot.sound.{u}]
@@ -136942,16 +136975,15 @@ DiamondIntegral.Section3.gammaDensityRowReindex : (p a : Nat) →
                                   Iff (SpecialTransformations.Milestone0.VFValued.predV x y)
                                     (LE.le.{0} (Valued.v.{0, 0} x) (Valued.v.{0, 0} y))) →
                               LT.lt.{1} (Cardinal.mk.{0} ↑D.gamma) C.κ →
-                                LE.le.{0} (SpecialTransformations.Section3.GammaParameters.commonRealNames D) ↑C.base →
-                                  SpecialTransformations.Section3.GammaParameters.VFGammaGeneratedBase D →
-                                    (δ : SpecialTransformations.Section3.Values.Gamma) →
-                                      Membership.mem.{0, 0} D.gamma δ →
-                                        LT.lt.{0} 1 δ →
-                                          AddMonoidHom.{0, 0}
-                                            (DiamondIntegral.Section3.GammaGroundMeasuredVFKPlus ⋯ ⋯ ⋯ hv
-                                              (HAdd.hAdd.{0, 0, 0} n 1))
-                                            (RingCon.Quotient.{0}
-                                              (DiamondIntegral.Section3.gammaGroundMeasuredRVSpecialCongruence hc D))
+                                SpecialTransformations.Section3.GammaParameters.VFGammaGeneratedBase D →
+                                  (δ : SpecialTransformations.Section3.Values.Gamma) →
+                                    Membership.mem.{0, 0} D.gamma δ →
+                                      LT.lt.{0} 1 δ →
+                                        AddMonoidHom.{0, 0}
+                                          (DiamondIntegral.Section3.GammaGroundMeasuredVFKPlus ⋯ ⋯ ⋯ hv
+                                            (HAdd.hAdd.{0, 0, 0} n 1))
+                                          (RingCon.Quotient.{0}
+                                            (DiamondIntegral.Section3.gammaGroundMeasuredRVSpecialCongruence hc D))
 'DiamondIntegral.Section3.gammaMonotoneContractionDetector' depends on axioms: [propext,
  Classical.choice.{u},
  Quot.sound.{u}]

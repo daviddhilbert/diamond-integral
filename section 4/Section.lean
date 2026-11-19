@@ -972,4 +972,9 @@ import «section 4».Proposition318CubeRoots
 import «section 4».Section4GammaLinearityDischarged
 import «section 4».RVStrictBoundedComparison
 import «section 4».Section4LinkedRemarks
+import «section 4».GammaQEOutputSlopes
+import «section 4».GammaQEFlatNormalFormArity
+import «section 4».GammaQECoefficientNames
+import «section 4».Section3GammaAffineDischarge
+import «section 4».Section4GammaAffineDischarged
 /-! Section 4 entry point. Exact unfinished scopes are recorded in COVERAGE.md. -/

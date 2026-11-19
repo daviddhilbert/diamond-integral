@@ -23,16 +23,16 @@ variable {G : Type} [LinearOrderedCommGroupWithZero G] [Valued (Section2.VF M) G
 theorem gammaMixed_ground_lift_value
     (C : BaseContext M) (hBC : B.real ⊆ (C.base : Set M))
     (hv : ∀ x y : Section2.VF M, VFValued.predV x y ↔ Valued.v x ≤ Valued.v y)
-    (hg : Cardinal.mk B.gamma < C.κ) (hNames : commonRealNames B ⊆ (C.base : Set M))
+    (hg : Cardinal.mk B.gamma < C.κ)
     (hGenerated : VFGammaGeneratedBase B)
     (δ : Values.Gamma (M := M)) (hδ : δ ∈ B.gamma) (hδ1 : 1 < δ)
     (U : GammaGroundMeasuredRVObject hc B (n+1)) :
-    gammaMixedContractionValue C hBC hv hNames hGenerated (gammaGroundMeasuredObjectLift U) =
+    gammaMixedContractionValue C hBC hv hg hGenerated (gammaGroundMeasuredObjectLift U) =
       gammaMeasuredPrincipalValue U := by
-  have hBridge := gammaMixed_full_bijection_values C hBC hv hg hNames hGenerated δ hδ hδ1
+  have hBridge := gammaMixed_full_bijection_values C hBC hv hg hGenerated δ hδ hδ1
     (gammaGroundNativeFullMeasuredLiftBridge C.uncountable.le C.saturated
       ((Cardinal.mk_le_mk_of_subset hBC).trans_lt C.small) hv U)
-  exact hBridge.symm.trans ((gammaMixed_native_lift_value C hBC hv hg hNames hGenerated δ hδ hδ1
+  exact hBridge.symm.trans ((gammaMixed_native_lift_value C hBC hv hg hGenerated δ hδ hδ1
     (Section5.groundRVAt U.underlying) (gammaGroundMeasuredNativeForm U)).trans
       (gammaMeasuredPrincipalValue_iso (gammaGroundNativeNormalizationHom U)).symm)
 

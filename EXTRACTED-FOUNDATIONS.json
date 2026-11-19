@@ -1,9 +1,9 @@
 {
   "scope": "Fubini extraction and approved upstream prerequisites; original public declarations retained.",
   "providers": {
-    "fubini_theorems": "c94e50c50a950ab485277a9d94625a4417789e06",
-    "special_transformations": "423c767a84b709487da7e798f70f0639545db1ac",
-    "integration_in_acvf": "ab4c0e8b15e1e21b0b4fce57eed764be76020e06",
+    "fubini_theorems": "f14caef6822b4600e74cefaf93905ca94c758fe6",
+    "special_transformations": "932a5075ad91a825d4b8c1bf1396b2063e44fe40",
+    "integration_in_acvf": "5a69a5e4f57045f123fdd593889a0005e7b4e16f",
     "hilbert-mathlib": "88bb3386f616779bfd87eb453d8a7c899ad63961"
   },
   "modules": [

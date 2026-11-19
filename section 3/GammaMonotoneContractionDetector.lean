@@ -22,7 +22,7 @@ variable {G : Type} [LinearOrderedCommGroupWithZero G] [Valued (Section2.VF M) G
 variable (hReal : B.real ⊆ D.real) (hGamma : B.gamma ⊆ D.gamma)
 variable (C : BaseContext M) (hDC : D.real ⊆ (C.base : Set M))
 variable (hv : ∀ x y : Section2.VF M, VFValued.predV x y ↔ Valued.v x ≤ Valued.v y)
-variable (hg : Cardinal.mk D.gamma < C.κ) (hNames : commonRealNames D ⊆ (C.base : Set M))
+variable (hg : Cardinal.mk D.gamma < C.κ)
 variable (hGenerated : VFGammaGeneratedBase D)
 variable (δ : Values.Gamma (M := M)) (hδ : δ ∈ D.gamma) (hδ1 : 1 < δ)
 
@@ -31,22 +31,22 @@ def gammaMonotoneContractionInvariant :
       (gammaGroundMeasuredVFPresentation (hc := hc) (ground := B) C.uncountable.le C.saturated
         ((Cardinal.mk_le_mk_of_subset (hReal.trans hDC)).trans_lt C.small) hv (n+1))
       (A := (gammaGroundMeasuredRVSpecialCongruence hc D).Quotient) where
-  toFun U := gammaMixedContractionValue C hDC hv hNames hGenerated (U.monoBase hReal hGamma)
+  toFun U := gammaMixedContractionValue C hDC hv hg hGenerated (U.monoBase hReal hGamma)
   iso := by
     rintro U V ⟨f⟩
     obtain ⟨g,_⟩ := f.property
-    exact gammaMixed_essential_contraction_values C hDC hv hg hNames hGenerated δ hδ hδ1
+    exact gammaMixed_essential_contraction_values C hDC hv hg hGenerated δ hδ hδ1
       (g.val.monoBase hReal hGamma) (g.val.preserves_monoBase hReal hGamma g.property).toGeneric
-  empty := gammaMixed_empty_contraction_value C hDC hv hNames hGenerated _ rfl
+  empty := gammaMixed_empty_contraction_value C hDC hv hg hGenerated _ rfl
   scissor := by
     rintro A E F H ⟨U,X,hX,hA,hE,hF,hH⟩
     subst A
     subst E
     subst F
     subst H
-    have hEmpty := gammaMixed_empty_contraction_value C hDC hv hNames hGenerated
+    have hEmpty := gammaMixed_empty_contraction_value C hDC hv hg hGenerated
       ((GammaGroundMeasuredVFData.empty hc B (n+1)).monoBase hReal hGamma) rfl
-    have hPart := gammaMixed_binary_partition_values C hDC hv hg hNames hGenerated δ hδ hδ1
+    have hPart := gammaMixed_binary_partition_values C hDC hv hg hGenerated δ hδ hδ1
       (U.monoBase hReal hGamma) (X.monoBase hReal hGamma) hX
     have hDiff : (U.domain.sdiff X).monoBase hReal hGamma =
         ((U.monoBase hReal hGamma).domain.sdiff (X.monoBase hReal hGamma)) := rfl
@@ -57,21 +57,21 @@ def gammaMonotoneContractionDetector :
       ((Cardinal.mk_le_mk_of_subset (hReal.trans hDC)).trans_lt C.small) hv (n+1) →+
         (gammaGroundMeasuredRVSpecialCongruence hc D).Quotient :=
   PositiveAdditiveGrothendieck.lift _
-    (gammaMonotoneContractionInvariant hReal hGamma C hDC hv hg hNames hGenerated δ hδ hδ1)
+    (gammaMonotoneContractionInvariant hReal hGamma C hDC hv hg hGenerated δ hδ hδ1)
 
 theorem gammaMonotoneContractionDetector_class (U : GammaGroundMeasuredVFData hc B (n+1)) :
-    gammaMonotoneContractionDetector hReal hGamma C hDC hv hg hNames hGenerated δ hδ hδ1
+    gammaMonotoneContractionDetector hReal hGamma C hDC hv hg hGenerated δ hδ hδ1
       (gammaGroundMeasuredVFClass C.uncountable.le C.saturated
         ((Cardinal.mk_le_mk_of_subset (hReal.trans hDC)).trans_lt C.small) hv U) =
-      gammaMixedContractionValue C hDC hv hNames hGenerated (U.monoBase hReal hGamma) :=
+      gammaMixedContractionValue C hDC hv hg hGenerated (U.monoBase hReal hGamma) :=
   PositiveAdditiveGrothendieck.lift_of _ _ U
 
 theorem gammaMonotoneContractionDetector_lift_class (U : GammaGroundMeasuredRVObject hc B (n+1)) :
-    gammaMonotoneContractionDetector hReal hGamma C hDC hv hg hNames hGenerated δ hδ hδ1
+    gammaMonotoneContractionDetector hReal hGamma C hDC hv hg hGenerated δ hδ hδ1
       (gammaGroundMeasuredVFClass C.uncountable.le C.saturated
         ((Cardinal.mk_le_mk_of_subset (hReal.trans hDC)).trans_lt C.small) hv (gammaGroundMeasuredObjectLift U)) =
       gammaMeasuredPrincipalValue (U.monoBase hReal hGamma) := by
   rw [gammaMonotoneContractionDetector_class]
-  exact gammaMixed_ground_lift_value C hDC hv hg hNames hGenerated δ hδ hδ1 (U.monoBase hReal hGamma)
+  exact gammaMixed_ground_lift_value C hDC hv hg hGenerated δ hδ hδ1 (U.monoBase hReal hGamma)
 
 end DiamondIntegral.Section3

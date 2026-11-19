@@ -1,5 +1,5 @@
 {
-  "base_revision": "ab4c0e8b15e1e21b0b4fce57eed764be76020e06",
+  "base_revision": "5a69a5e4f57045f123fdd593889a0005e7b4e16f",
   "upstream_completed_section5_revision": "73aa1e6c9218bcb01dd67e03cfbe3ec9115ac240",
   "purpose": "Verify the 250 completed Section 5 sources already published upstream. No dependency source is patched.",
   "files": {

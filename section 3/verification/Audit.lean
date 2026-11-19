@@ -1427,6 +1427,7 @@ set_option format.width 120
 #print DiamondIntegral.Section3.gammaMeasuredRVDegreeZeroProjection
 #print DiamondIntegral.Section3.GammaMixedRetainedRepresentation
 #print DiamondIntegral.Section3.gammaMixedRetainedRepresentation
+#print DiamondIntegral.Section3.gammaMixedCodeContext
 #print DiamondIntegral.Section3.gammaMixedContractionValue
 #print DiamondIntegral.Section3.gammaMixedPackBijection
 #print DiamondIntegral.Section3.gammaMixedProductMap
@@ -6681,6 +6682,12 @@ set_option format.width 120
 #print axioms DiamondIntegral.Section3.gammaContextMeasuredDegreeLift_zero_kernel
 #check @DiamondIntegral.Section3.gammaMixed_binary_partition_values
 #print axioms DiamondIntegral.Section3.gammaMixed_binary_partition_values
+#check @DiamondIntegral.Section3.gammaMixedCodeContext_real
+#print axioms DiamondIntegral.Section3.gammaMixedCodeContext_real
+#check @DiamondIntegral.Section3.gammaMixedCodeContext_names
+#print axioms DiamondIntegral.Section3.gammaMixedCodeContext_names
+#check @DiamondIntegral.Section3.gammaMixedCodeContext_gamma
+#print axioms DiamondIntegral.Section3.gammaMixedCodeContext_gamma
 #check @DiamondIntegral.Section3.gammaMixed_contraction_value_of_presentation
 #print axioms DiamondIntegral.Section3.gammaMixed_contraction_value_of_presentation
 #check @DiamondIntegral.Section3.gammaMixed_relative_contraction_values
@@ -13619,6 +13626,8 @@ set_option format.width 120
 #print axioms DiamondIntegral.Section3.GammaMixedRetainedRepresentation
 #check @DiamondIntegral.Section3.gammaMixedRetainedRepresentation
 #print axioms DiamondIntegral.Section3.gammaMixedRetainedRepresentation
+#check @DiamondIntegral.Section3.gammaMixedCodeContext
+#print axioms DiamondIntegral.Section3.gammaMixedCodeContext
 #check @DiamondIntegral.Section3.gammaMixedContractionValue
 #print axioms DiamondIntegral.Section3.gammaMixedContractionValue
 #check @DiamondIntegral.Section3.gammaMixedPackBijection

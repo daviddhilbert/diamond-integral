@@ -4,8 +4,8 @@
   "remaining_section4_main_text_obligations": [],
   "section3_policy": "Finalized Section 3 at 37c8361 is directly linked through Section3T001Integration; no T001 interface remains an input to the linked retraction statements.",
   "accepted_replaceable_inputs": [
-    "Section3GammaAffineInput.Input B (multivariate rational-affine normal form; used by Remark 4.2)",
-    "Earlier authorized unary GammaPiecewiseRationalAffineInput: proved on November 18 as DiamondIntegral.Section5.GammaQE.gamma_piecewise_rational_affine; Section4GammaLinearityDischarged gives input-free 4.7 and 4.15"
+    "Earlier authorized unary GammaPiecewiseRationalAffineInput: proved on November 18 as DiamondIntegral.Section5.GammaQE.gamma_piecewise_rational_affine; Section4GammaLinearityDischarged gives input-free 4.7 and 4.15",
+    "Multivariate Section3GammaAffineInput.Input B (used by Remark 4.2): proved on November 19 for every base as DiamondIntegral.Section4.Section3GammaAffineDischarge.input (ACVF only); Section4GammaAffineDischarged gives input-free Remark 4.2"
   ],
   "upstream_work_not_a_section4_blocker": "The direct Section 3 integration is complete. Already authorized external Section 3 citations and Gamma QE background retain their documented scope.",
   "manuscript_review": "All 19 referee items and T001 follow-through resolved; no new statement changes or pending proposals.",
@@ -16,7 +16,8 @@
     "Proposition 4.15 (input-free)": "DiamondIntegral.Section4.Section3LinkedRetractionStatements.proposition_4_15_discharged",
     "Notation 4.17 (J_var equals the implemented ideal)": "DiamondIntegral.Section4.RelativeAnnularConverse.ideal_eq_manuscriptIdeal",
     "Lemma 4.18 (manuscript ideal, compatibility part; other parts in COVERAGE.md)": "DiamondIntegral.Section4.RelativeAnnularGenerators.manuscript_section4_compatibility",
-    "Definition 4.9 (infinity-free comparison)": "DiamondIntegral.Section4.RVStrictBoundedComparison.equivalence"
+    "Definition 4.9 (infinity-free comparison)": "DiamondIntegral.Section4.RVStrictBoundedComparison.equivalence",
+    "Remark 4.2 (input-free continuous cell decomposition and Euler characteristic)": "DiamondIntegral.Section4.GammaContinuousDecomposition.euler_characteristic_discharged"
   },
   "independent_local_completion": {
     "actual_degree_one_point_nonvanishing": "DiamondIntegral.Section4.RESPointNonvanishing.point_ne_zero_acvf00",

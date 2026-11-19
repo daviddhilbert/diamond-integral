@@ -39,19 +39,18 @@ theorem gammaContextMeasuredDegreeLift_positive_reverse_kernel
   let R := gammaGroundContractionContext C
   let hReal := (subset_closureBase C.base).1
   let hGamma := (subset_closureBase C.base).2
-  let hNames := gammaGroundContractionContext_contains C
-  have hPR : P.real ⊆ (R.base : Set M) := fun _ hx => hNames (Or.inl hx)
+  have hPR : P.real ⊆ (R.base : Set M) := fun _ hx => gammaGroundContractionContext_contains C (Or.inl hx)
   have hgP : Cardinal.mk P.gamma < R.κ := closureBase_gamma_small C.uncountable C.base C.small_real C.small_gamma
   let hGenerated := C.fieldBase.gamma_closure_generated C.base.gamma
   obtain ⟨δ,hδ,hδ1⟩ := C.exists_positive_gamma
-  let χ := gammaMonotoneContractionDetector (hc := hc) (n := n) hReal hGamma R hPR hv hgP hNames
+  let χ := gammaMonotoneContractionDetector (hc := hc) (n := n) hReal hGamma R hPR hv hgP
     hGenerated δ (hGamma hδ) hδ1
   have hχU : χ (gammaGroundMeasuredVFClass C.uncountable.le C.saturated C.small_real hv
       (gammaGroundMeasuredObjectLift U)) = gammaMeasuredPrincipalValue (U.monoBase hReal hGamma) :=
-    gammaMonotoneContractionDetector_lift_class hReal hGamma R hPR hv hgP hNames hGenerated δ (hGamma hδ) hδ1 U
+    gammaMonotoneContractionDetector_lift_class hReal hGamma R hPR hv hgP hGenerated δ (hGamma hδ) hδ1 U
   have hχV : χ (gammaGroundMeasuredVFClass C.uncountable.le C.saturated C.small_real hv
       (gammaGroundMeasuredObjectLift V)) = gammaMeasuredPrincipalValue (V.monoBase hReal hGamma) :=
-    gammaMonotoneContractionDetector_lift_class hReal hGamma R hPR hv hgP hNames hGenerated δ (hGamma hδ) hδ1 V
+    gammaMonotoneContractionDetector_lift_class hReal hGamma R hPR hv hgP hGenerated δ (hGamma hδ) hδ1 V
   have hValue := (hχU.symm.trans (congrArg χ hLift)).trans hχV
   have hOriginal := gammaPrincipal_monoBase_reflect hReal hGamma (closureBaseReduction C.base)
     C.uncountable.le C.saturated C.model00

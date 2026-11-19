@@ -5,12 +5,14 @@ Section 3 compiled. Propositions 4.7 and 4.15 have linked statements with no
 T001 interface inputs, and `Section4GammaLinearityDischarged.lean` removes the
 unary Γ rational-affine input (now proved,
 `Section5.GammaQE.gamma_piecewise_rational_affine`). The multivariate
-rational-affine normal form used by Remark 4.2 and the already accepted
-external citations retain their documented scope. November 17–18 repairs
+rational-affine normal form used by Remark 4.2 is proved too
+(`Section3GammaAffineDischarge.input`, ACVF only), and
+`Section4GammaAffineDischarged.lean` gives Remark 4.2 without it. The already
+accepted external citations retain their documented scope. November 17–18 repairs
 (Notation 4.17/Lemma 4.18, Remark 4.10, Definition 4.9's ∞ convention, the
 linked remarks, the 3.18 kernel witness) and the author-approved "not
 pursued" items are in [GAP-REPAIRS.md](GAP-REPAIRS.md). Latest audit
-(November 18): PASS, 5493 declarations (3340 theorems). There are
+(November 19): PASS, 5546 declarations (3382 theorems). There are
 no pending author-review items. See [STATUS.md](STATUS.md) for the completion
 boundary and [COVERAGE.md](COVERAGE.md) for theorem locations.
 

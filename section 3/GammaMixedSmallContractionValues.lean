@@ -37,13 +37,17 @@ theorem gammaRetained_small_contraction_value
 theorem gammaMixed_small_contraction_value
     (C : BaseContext M) (hBC : B.real ⊆ (C.base : Set M))
     (hv : ∀ x y : Section2.VF M, VFValued.predV x y ↔ Valued.v x ≤ Valued.v y)
-    (hNames : commonRealNames B ⊆ (C.base : Set M)) (hGenerated : VFGammaGeneratedBase B)
+    (hg : Cardinal.mk B.gamma < C.κ) (hGenerated : VFGammaGeneratedBase B)
     (U : GammaGroundMeasuredVFData hc B (n+1))
     (hsmall : Section2.vfDimension U.domain.carrier < ((n+1 : ℕ) : WithBot ℕ)) :
-    gammaMixedContractionValue C hBC hv hNames hGenerated U = 0 := by
-  let P := gammaMixedRetainedRepresentation C hBC hv U
-  have hdim := gammaGroundVFDimension_eq_of_bijection P.map.map C.uncountable.le C.saturated
-    ((Cardinal.mk_le_mk_of_subset hBC).trans_lt C.small) hv
-  exact gammaRetained_small_contraction_value C hBC hv hNames hGenerated P.data (hdim ▸ hsmall)
+    gammaMixedContractionValue C hBC hv hg hGenerated U = 0 := by
+  let C' := gammaMixedCodeContext C hBC hg
+  have hBC' := gammaMixedCodeContext_real C hBC hg
+  have hNames' := gammaMixedCodeContext_names C hBC hg
+  have hg' := gammaMixedCodeContext_gamma C hBC hg
+  let P := gammaMixedRetainedRepresentation C' hBC' hv U
+  have hdim := gammaGroundVFDimension_eq_of_bijection P.map.map C'.uncountable.le C'.saturated
+    ((Cardinal.mk_le_mk_of_subset hBC').trans_lt C'.small) hv
+  exact gammaRetained_small_contraction_value C' hBC' hv hNames' hGenerated P.data (hdim ▸ hsmall)
 
 end DiamondIntegral.Section3

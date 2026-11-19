@@ -425,6 +425,14 @@ authorized scope. No HK input is introduced.
 Update, November 18: the unary case (`GammaPiecewiseRationalAffineInput`)
 is now proved and discharged in 4.7/4.15 (see the opening section). The
 multivariate `Section3GammaAffineInput.Input`, used for Remark 4.2's
-continuous cell decomposition, remains explicit. The later [18] lift
+continuous cell decomposition, was then still explicit (proved November 19;
+see below). The later [18] lift
 records are now produced (see `section 3/verification/cited-inputs.json`),
 and the measured Section 7 inputs are no longer needed there.
+
+Update, November 19: the multivariate `Section3GammaAffineInput.Input B` is
+proved for every base as `Section3GammaAffineDischarge.input B`, from RV
+quantifier elimination with only `M ⊨ ACVF`. The branch constants are named
+over the original base. `Section4GammaAffineDischarged.lean` states Remark 4.2
+(continuous cell decomposition and Euler characteristic) without the input;
+the original statements are unchanged. No HK input is introduced.

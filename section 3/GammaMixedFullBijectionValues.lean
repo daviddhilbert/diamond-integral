@@ -23,12 +23,12 @@ variable {G : Type} [LinearOrderedCommGroupWithZero G] [Valued (Section2.VF M) G
 theorem gammaMixed_full_bijection_values
     (C : BaseContext M) (hBC : B.real ⊆ (C.base : Set M))
     (hv : ∀ x y : Section2.VF M, VFValued.predV x y ↔ Valued.v x ≤ Valued.v y)
-    (hg : Cardinal.mk B.gamma < C.κ) (hNames : commonRealNames B ⊆ (C.base : Set M))
+    (hg : Cardinal.mk B.gamma < C.κ)
     (hGenerated : VFGammaGeneratedBase B)
     (δ : Values.Gamma (M := M)) (hδ : δ ∈ B.gamma) (hδ1 : 1 < δ)
     {U V : GammaGroundMeasuredVFData hc B (n+1)} (F : GammaFullMeasuredBijection U V) :
-    gammaMixedContractionValue C hBC hv hNames hGenerated U =
-      gammaMixedContractionValue C hBC hv hNames hGenerated V := by
+    gammaMixedContractionValue C hBC hv hg hGenerated U =
+      gammaMixedContractionValue C hBC hv hg hGenerated V := by
   let hr := (Cardinal.mk_le_mk_of_subset hBC).trans_lt C.small
   obtain ⟨Q,hQ⟩ := gammaFullMeasured_unary_partition C.uncountable.le C.saturated C.model00 hr hv δ hδ1 F
   let ι := ↥Q.pieces
@@ -75,14 +75,14 @@ theorem gammaMixed_full_bijection_values
     let b := ((T i).fullMap C.uncountable.le C.saturated hr hv).map.map a
     have hb : b.val = q.val := (hT i a).trans (congrArg (fun q : V.domain => q.val) hpq)
     exact ⟨i,Finset.mem_univ _,hb ▸ b.property⟩
-  have hSource := gammaMixed_finite_partition_values C hBC hv hg hNames hGenerated δ hδ hδ1
+  have hSource := gammaMixed_finite_partition_values C hBC hv hg hGenerated δ hδ hδ1
     Finset.univ U P hP hDisjP hCoverP
-  have hTarget := gammaMixed_finite_partition_values C hBC hv hg hNames hGenerated δ hδ hδ1
+  have hTarget := gammaMixed_finite_partition_values C hBC hv hg hGenerated δ hδ hδ1
     Finset.univ V R hR hDisjR hCoverR
   apply hSource.trans
   apply Eq.trans _ hTarget.symm
   apply Finset.sum_congr rfl
   intro i _
-  exact gammaMixed_unary_chain_contraction_values C hBC hv hNames hGenerated hg δ hδ hδ1 (T i)
+  exact gammaMixed_unary_chain_contraction_values C hBC hv hg hGenerated δ hδ hδ1 (T i)
 
 end DiamondIntegral.Section3
