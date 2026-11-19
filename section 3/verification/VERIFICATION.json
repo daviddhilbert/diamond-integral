@@ -9,10 +9,10 @@
   },
   "lean": "Lean (version 4.35.0, arm64-apple-darwin24.6.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
   "pins": {
-    "integration_in_acvf": "ab4c0e8b15e1e21b0b4fce57eed764be76020e06",
+    "integration_in_acvf": "5a69a5e4f57045f123fdd593889a0005e7b4e16f",
     "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
     "acvf_qe": "173708265d7959e031bf9552ee884501fc21f2cb",
-    "special_transformations": "423c767a84b709487da7e798f70f0639545db1ac"
+    "special_transformations": "932a5075ad91a825d4b8c1bf1396b2063e44fe40"
   },
   "approved_library_patch_sha256": "1025b80e4d836f501bb09a342effbf33a6e02a2cba48d75bb01262e4027c98a7",
   "source_sha256": {
@@ -1544,21 +1544,21 @@
     "section 3/ValueCharacterTwistsResidue.lean": "3cce15bc1bbd11aa5d3a29dd5cf3344c498d8fd40de5018840c9452a63909d16",
     "section 3/ValueCharacterTwistsWithZero.lean": "752caa5fe73cc7f5b33ea3ed468e81e3fc44a165a506bccc8421b02633c6b6ff",
     "section 3/ValueFibrePartition.lean": "f5e1bc3f8c564af596694198073773c0dd15d78c6ec61136ee665a565fcdccf0",
-    "section 3/verify.py": "277f6cf66c88a0e3e38ed2834e78128f060ef0ee14a88193a9d3a386818857d6",
+    "section 3/verify.py": "31e27886d47452e922cadf968d03e917f141d6e16dce510d8a1ef69c3a70a802",
     "section 3/prepare-integration-reuse.py": "5d2a47d8c6e18376211521523a3339c321384eecac5bba3308f211f0a7073b91",
-    "section 3/reuse/integration-manifest.json": "553ae7364a499730316bc871c7f25e5864f9c8639bb91fe952aa3a34a2986a55",
+    "section 3/reuse/integration-manifest.json": "8acbe049ad646ddbca83a56887bab488c70075bc94df9874993cd629ed5e0eed",
     "section 3/reuse/integration-open-radius.patch": "4c78af253a893a12b7009e584dce0b56ac1faa12d17af92f79ec65d280ccf00b",
-    "section 3/verification/integration-reuse.json": "fa4940a30a2e1caec041f057f89b83dce1bc58533c7e15f093c34c77d65f3e1a",
+    "section 3/verification/integration-reuse.json": "a767afe7dd971480728339d554af1b7497b61d30a8ee81ca7dd4a7479cca5ddd",
     "section 3/verification/cited-inputs.json": "04171ab986abc3104e870c8a36b7d7acb40af55250d5c2a3d4f87d9de3497c6f",
     "section 3/verification/paper-targets.json": "3a894f052ef26ce41f66be9d7cf5b7f6134b82b8c9380b1401f4ebba78f82e11",
     "DiamondIntegral.lean": "66d02be99d3e377f670ad569f36274aed59d735366ebb4b157993bdb166b553e",
-    "lakefile.toml": "1f1d844e66e46c4860b16a98649eb12cba81d8cb6f0bc848929bd696f3ce18ee",
-    "lake-manifest.json": "aa8e81a44b1dc85acfcad8727c04ca3be1ebd13a0a12304968bdbfbe9755f24a",
+    "lakefile.toml": "7c83ffff6f9e68e12e8fded70a0441c3c1edb2c72c8923516b30d0d3f40eecfa",
+    "lake-manifest.json": "4f0ab2b8a2144ce82d2d8910ec2beb6cf3f21fffcd610bd56cb0415b5bf88ac6",
     "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
     "ACCEPTED-CITED-RESULTS.md": "2a6f42ef5f82e18d502ec9bb71d626675f5e24eae45d44291d75b23d9ee906c9"
   },
   "integration_compatibility_patch": {
-    "base_revision": "ab4c0e8b15e1e21b0b4fce57eed764be76020e06",
+    "base_revision": "5a69a5e4f57045f123fdd593889a0005e7b4e16f",
     "reason": "The corrected upstream release includes the nine proper-open-radius consumers. Use the published proof bodies, whose additional definitional simplifications have been reviewed, and check their hashes. The old consumer patch remains historical evidence and is not applied.",
     "supporting_signature_adaptations": [
       "IntegrationInACVF.Section4.RelativeObstaclePreparation.zero_obstacles: proper OpenRadius in the auxiliary obstacle premise",
@@ -1608,7 +1608,7 @@
     "mode": "published"
   },
   "integration_proof_exports": {
-    "revision": "ab4c0e8b15e1e21b0b4fce57eed764be76020e06",
+    "revision": "5a69a5e4f57045f123fdd593889a0005e7b4e16f",
     "declarations": 36,
     "later_export_review": {
       "review_date": "2026-11-12",

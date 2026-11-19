@@ -5,11 +5,11 @@
   "pins": {
     "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
     "acvf_qe": "173708265d7959e031bf9552ee884501fc21f2cb",
-    "special_transformations": "423c767a84b709487da7e798f70f0639545db1ac",
-    "integration_in_acvf": "ab4c0e8b15e1e21b0b4fce57eed764be76020e06"
+    "special_transformations": "932a5075ad91a825d4b8c1bf1396b2063e44fe40",
+    "integration_in_acvf": "5a69a5e4f57045f123fdd593889a0005e7b4e16f"
   },
   "approved_library_patch": {
-    "base_revision": "423c767a84b709487da7e798f70f0639545db1ac",
+    "base_revision": "932a5075ad91a825d4b8c1bf1396b2063e44fe40",
     "patch_sha256": "1025b80e4d836f501bb09a342effbf33a6e02a2cba48d75bb01262e4027c98a7",
     "files": {
       "Section3/AdditiveCosets.lean": {
@@ -138,7 +138,7 @@
     "reason": "The v1.1 upstream release includes all 30 previously approved proper-open-radius corrections byte-for-byte. Check the published source hashes; retain the old patch only as historical evidence."
   },
   "integration_compatibility_patch": {
-    "base_revision": "ab4c0e8b15e1e21b0b4fce57eed764be76020e06",
+    "base_revision": "5a69a5e4f57045f123fdd593889a0005e7b4e16f",
     "reason": "The corrected upstream release includes the nine proper-open-radius consumers. Use the published proof bodies, whose additional definitional simplifications have been reviewed, and check their hashes. The old consumer patch remains historical evidence and is not applied.",
     "supporting_signature_adaptations": [
       "IntegrationInACVF.Section4.RelativeObstaclePreparation.zero_obstacles: proper OpenRadius in the auxiliary obstacle premise",
@@ -470,17 +470,17 @@
     "section 2/ZeroFaces.lean": "9ea729bcee364da066593709349c1035f0c7bc85b6a0933a9f68d3b5c95c2834",
     "section 2/ZeroFacesVF.lean": "86dccef9f23b6ee8ebaa973ba8ec2a18bafaa8f30bb5140b5266950817f8cb56",
     "DiamondIntegral.lean": "66d02be99d3e377f670ad569f36274aed59d735366ebb4b157993bdb166b553e",
-    "lakefile.toml": "8a5e89e6ba72a5969545bf15fefa9e41230630229fae3a1f113719bca1807bb6",
-    "lake-manifest.json": "aa8e81a44b1dc85acfcad8727c04ca3be1ebd13a0a12304968bdbfbe9755f24a",
+    "lakefile.toml": "7c83ffff6f9e68e12e8fded70a0441c3c1edb2c72c8923516b30d0d3f40eecfa",
+    "lake-manifest.json": "4f0ab2b8a2144ce82d2d8910ec2beb6cf3f21fffcd610bd56cb0415b5bf88ac6",
     "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
-    "ACCEPTED-CITED-RESULTS.md": "72b95c8cb0c8fa07560eb1ad688fcc507e1f1036c9911b9b7b3c40e2b71f8790",
-    "section 2/verify.py": "edd7eb442737236dd6155dd4b06616045d7b09e292ec9cb8adf26d384dedf161",
+    "ACCEPTED-CITED-RESULTS.md": "2a6f42ef5f82e18d502ec9bb71d626675f5e24eae45d44291d75b23d9ee906c9",
+    "section 2/verify.py": "e5b09d1dffb9c0195f5bb0abd43e6ce5035594fdb5ae062c8877150e227c2585",
     "section 2/prepare-reuse.py": "b9c2ec8d840012e664227016f0d2a11a7651eddb6fb8d2e6ab4a630ddfcd60e2",
-    "section 2/reuse/manifest.json": "d53ce72de58a283e9d66706cdcac842c752571a8d9a0706a74c657ba821021b2",
+    "section 2/reuse/manifest.json": "90aaef8aade66469a14b4da0c24618fc03da590eaa8ad386ad81b00d543a22f8",
     "section 2/reuse/headlines.json": "134352eba03803fce202ad91e5d4428e396fce0f5720d7f74ccebba77892fb04",
     "section 2/reuse/open-disc-radius.patch": "1025b80e4d836f501bb09a342effbf33a6e02a2cba48d75bb01262e4027c98a7",
     "section 3/prepare-integration-reuse.py": "5d2a47d8c6e18376211521523a3339c321384eecac5bba3308f211f0a7073b91",
-    "section 3/reuse/integration-manifest.json": "553ae7364a499730316bc871c7f25e5864f9c8639bb91fe952aa3a34a2986a55",
+    "section 3/reuse/integration-manifest.json": "8acbe049ad646ddbca83a56887bab488c70075bc94df9874993cd629ed5e0eed",
     "section 3/reuse/integration-open-radius.patch": "4c78af253a893a12b7009e584dce0b56ac1faa12d17af92f79ec65d280ccf00b",
     "section 2/verification/CITED-INPUTS.md": "cf7cc6cf90186806b28107f6b5cef81d588f8c96607e020e792738d58f2296aa",
     "section 2/verification/DISC-GROUND-REVIEW.md": "6cce8961bfeb7217a9f4cbca542d4cc3b813eb7210f0aa66f755d6dc6aec41af",

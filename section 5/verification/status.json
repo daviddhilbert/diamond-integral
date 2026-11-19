@@ -66,21 +66,21 @@
   "checked_kummer_support": "Actual finite Laurent expansion, power basis, degree, generation and irreducibility; full finite Kummer classification and valuation preservation, including complex coefficients; concrete Puiseux field, compatible finite root systems, their faithful action, and the full Galois-group equivalence over the actual full Laurent base; every algebraic base automorphism is proved valuation-preserving; actual principal-unit RV normalization and a bundled group equivalence with quotient RV automorphisms fixing integral-value constants",
   "remaining_section_work": [],
   "lean": "Lean (version 4.35.0, arm64-apple-darwin24.6.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
-  "repository_base": "d7117c97978deaa2488047cda395266e3a0bc39d",
+  "repository_base": "83735f896e9340cc18c6dc6775e40cc7193a0f52",
   "mathlib_pin": "56a005855ea17e0b0958f73ec801ae140b0a1679",
   "import_scope": "Actual local Section 3 RV/Gamma definability and separation exports, retaining canonical structure, ACVF00, saturation, smallness and nontrivial-Gamma hypotheses",
   "dependency_source_state": {
     "integration_in_acvf": {
-      "manifest_revision": "ab4c0e8b15e1e21b0b4fce57eed764be76020e06",
-      "actual_revision": "ab4c0e8b15e1e21b0b4fce57eed764be76020e06",
+      "manifest_revision": "5a69a5e4f57045f123fdd593889a0005e7b4e16f",
+      "actual_revision": "5a69a5e4f57045f123fdd593889a0005e7b4e16f",
       "source_patch_hashes": {},
       "patch_origins": {},
       "completed_section5_revision": "73aa1e6c9218bcb01dd67e03cfbe3ec9115ac240",
       "scope_adapter_record": "reference/integration-section6-scope-adapter.json"
     },
     "special_transformations": {
-      "manifest_revision": "423c767a84b709487da7e798f70f0639545db1ac",
-      "actual_revision": "423c767a84b709487da7e798f70f0639545db1ac",
+      "manifest_revision": "932a5075ad91a825d4b8c1bf1396b2063e44fe40",
+      "actual_revision": "932a5075ad91a825d4b8c1bf1396b2063e44fe40",
       "source_patch_hashes": {},
       "patch_origins": {}
     },
