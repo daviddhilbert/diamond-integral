@@ -9,7 +9,7 @@ independently of pagination.
 | Passage | Stable label | Checked implementation |
 | --- | --- | --- |
 | Definition 4.1 | `df:res` | `RVMeasuredCharts`, measured/ordinary RES rings, full gradings, and dimension-free point localization. The graded RES[*] rings have finite-union presentation equivalences (`RESDisjointPresentation`, `RESOrdinaryDisjointPresentation`, `RESDisjointGrading`). The dimension-free ring is `RESDimensionFreeRing.Ring`: the ordinary RES ring modulo underlying-bijection relations across degrees, whose ideal is `([1] - 1)` (`degreeIdeal_eq_pointIdeal`, `normalizationEquiv`). Its identification with the Grothendieck ring of the dimension-free category under finite coproducts is not built (the module docstring records it as a separate obligation). |
-| Remark 4.2 | Euler characteristics | `GammaContinuousDecomposition.exists_decomposition`, `.geometric_sum`, `.sum_independent`; actual integration, bijection invariance, Fubini and stabilization in the Gamma integration modules. Relative to the multivariate rational-affine normal form `Section3GammaAffineInput.Input` (still an explicit input; known open). |
+| Remark 4.2 | Euler characteristics | `GammaContinuousDecomposition.exists_decomposition`, `.geometric_sum`, `.sum_independent`; actual integration, bijection invariance, Fubini and stabilization in the Gamma integration modules. These take the multivariate rational-affine normal form `Section3GammaAffineInput.Input` as a parameter; it is proved over every base by `Section3GammaAffineDischarge.input` (RV quantifier elimination, ACVF only). `Section4GammaAffineDischarged`: `GammaContinuousDecomposition.exists_decomposition_discharged`, `.constructed_geometric_sum_discharged`, `.geometric_sum_discharged`, `.euler_characteristic_discharged` (existence, Euler sum and independence together), `.pieces_nonempty_discharged`, `.dimensions_bounded_discharged`, and `GammaContinuousPartitions.exists_partition_discharged`, `.exists_common_discharged`. `.geometric_sum` and `.sum_independent` quantify over given decompositions and never took the input. |
 | Notation 4.3 | `res:note` | Actual fibre/affine reductions, homogeneous ideals and unchanged degree-zero subrings in `RESMeasuredReduction`, `RESOrdinaryReduction`, `RESReductionGradings`, `ReductionDegreeZero`. |
 | Ordinary construction | `kill:gamma`, `eg:isp:van`, `EB` | `RVT001OrdinaryDescent`, `RVT001OrdinaryNormalization`, `RVT001OrdinaryRanges`: actual ordinary Euler descent, normalization, stated ranges and RES restrictions. |
 | Remark 4.4 | `eb:no:eg` | `RESAffineNonsurjective.remark_4_4`: affine comparison is not surjective; point localization is an isomorphism via `RESPointLocalization`; normalized maps are distinct via `RVT001NormalizedDistinct`. `Section4LinkedRemarks`: `boundedRetraction_res`, `boundedRetraction_surjective`, `geometricRetraction_range`, `normalized_retractions_distinct`, instantiated with `Section3T001Integration.ordinary` and the discharged Γ-linearity input (no T001 presentation argument). The colimit description and the "[A] = 1 equalizes" part were not pursued (triage). |
@@ -38,9 +38,15 @@ transport. The unary rational-affine input
 (`Section5.GammaQE.gamma_piecewise_rational_affine`), and
 `Section4GammaLinearityDischarged` gives input-free 4.7 and 4.15; the original
 statements still take it as a parameter. The multivariate
-`Section3GammaAffineInput.Input` (used by Remark 4.2) remains explicit. These
-inputs supply structural branch equations, not Euler or localization
-conclusions. Exact hypotheses and logical dependencies appear in the full audit.
+`Section3GammaAffineInput.Input` (used by Remark 4.2) is proved by
+`Section3GammaAffineDischarge.input`: the Γ names of the base are abstracted
+to free variables, the predicate gets a flat RV literal normal form
+(`GammaQEFlatNormalFormArity`), an output perturbation forces an equal-value
+pair of monomials with different output slopes (`GammaQEOutputSlopes`), and
+the branch constant is named over the base (`GammaQECoefficientNames`).
+`Section4GammaAffineDischarged` gives the input-free Remark 4.2 forms; the
+original statements are unchanged. These inputs supply structural branch
+equations, not Euler or localization conclusions. Exact hypotheses and logical dependencies appear in the full audit.
 
 Also hosted here (recorded under `section 3/GAP-REPAIRS.md`): the
 Proposition 3.18 kernel witness `GermJumps`, `GammaEndpointInvariant`,

@@ -153,7 +153,8 @@ from RV quantifier elimination with no hypotheses.
   reference/deferred-proposals/README.md). The summary strings hard-coded in
   `verify.py` (copied into `status.json`) still call the unary rational-affine
   input accepted background.
-- Known open: Remark 4.2 needs the multivariate rational-affine input.
+- Formerly open, resolved November 19 (see below): Remark 4.2's
+  multivariate rational-affine input.
 
 ## Third audit fixes (November 18)
 
@@ -163,5 +164,35 @@ from RV quantifier elimination with no hypotheses.
   (`RVT001AlternativeDescent.evaluation`) and the unnormalized ordinary range
   clause take the T001 presentation as a parameter; they can be instantiated
   with `Section3T001Integration` as done for the other remarks.
-- Remark 4.2 (multivariate rational-affine input) and Definition 4.1's
-  coproduct identification remain open, as recorded.
+- Definition 4.1's coproduct identification remains open, as recorded.
+  Remark 4.2's multivariate rational-affine input was resolved on
+  November 19 (next section).
+
+## Multivariate rational-affine normal form (November 19)
+
+- `Section3GammaAffineInput.Input B` is now the theorem
+  `Section3GammaAffineDischarge.input B`, for every base `B` and every arity,
+  using only `M ⊨ ACVF` (no ACVF(0,0), saturation, nontrivial Γ or HK input).
+  Proof: the finitely many Γ names of `B` in the graph are abstracted to free
+  Γ variables over the real base (`fullGamma_tuple_abstraction`); the
+  resulting predicate has a flat RV literal normal form with coefficients in
+  the real base (`GammaQEFlatNormalFormArity.gamma_flat_normal_form_arity`,
+  the binary Section 5 argument with free arity). At each graph point, if no
+  equal-value pair of active monomials had different output slopes, a small
+  output perturbation would keep a true clause true
+  (`GammaQEOutputSlopes.graph_has_critical_pair`), contradicting uniqueness
+  of the output. Solving the equal-value relation gives one of finitely many
+  branches. Its constant combines Γ values of flat coefficients, named over
+  `B` because RV multiplication, inversion and the RV map are function
+  symbols and VF polynomial values lie in the definable closure field
+  (`GammaQECoefficientNames`), with integral powers of the Γ names of `B`.
+- `Section4GammaAffineDischarged.lean`: `exists_partition_discharged`,
+  `exists_common_discharged`, `exists_decomposition_discharged`,
+  `decompositionDischarged`, `constructed_geometric_sum_discharged`,
+  `geometric_sum_discharged`, `euler_characteristic_discharged`,
+  `pieces_nonempty_discharged`, `dimensions_bounded_discharged`. The
+  original statements are unchanged. `geometric_sum` and `sum_independent`
+  never took the input.
+- No special-transformations or integration-in-ACVF source was edited; the
+  binary parser and perturbation lemmas were re-proved locally in arity-free
+  form in `section 4`.

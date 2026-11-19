@@ -9,7 +9,7 @@
     "Proposition 4.7",
     "Proposition 4.15"
   ],
-  "numbered_results_basis": "Linked directly to finalized Section 3 tensor kernel proofs at 37c8361 through actual factor/tensor/target ring equivalences, commuting comparison squares and elementary-pair ideal transport. No T001 interface is a theorem input. Original-base saturation, ACVF00, smallness, nontrivial Gamma and the accepted rational-affine Gamma background remain explicit.",
+  "numbered_results_basis": "Linked directly to finalized Section 3 tensor kernel proofs at 37c8361 through actual factor/tensor/target ring equivalences, commuting comparison squares and elementary-pair ideal transport. No T001 interface is a theorem input. Original-base saturation, ACVF00, smallness and nontrivial Gamma remain explicit. The multivariate rational-affine Gamma normal form is proved (Section3GammaAffineDischarge.input); the unary Section 2 form is discharged by Section5.GammaQE.gamma_piecewise_rational_affine.",
   "numbered_statements_linked_to_finalized_section3": {
     "Proposition 4.7": "DiamondIntegral.Section4.Section3LinkedRetractionStatements.proposition_4_7",
     "Proposition 4.15": "DiamondIntegral.Section4.Section3LinkedRetractionStatements.proposition_4_15"
@@ -19,6 +19,9 @@
     "actual_affine_point_separation": "DiamondIntegral.Section4.RESAffineSeparation.comparison_point_ne_one_acvf00",
     "continuous_cell_decomposition": "DiamondIntegral.Section4.GammaContinuousDecomposition.exists_decomposition",
     "continuous_cell_euler_formula": "DiamondIntegral.Section4.GammaContinuousDecomposition.geometric_sum",
+    "multivariate_gamma_rational_affine_normal_form": "DiamondIntegral.Section4.Section3GammaAffineDischarge.input",
+    "continuous_cell_decomposition_discharged": "DiamondIntegral.Section4.GammaContinuousDecomposition.exists_decomposition_discharged",
+    "remark_4_2_euler_characteristic_discharged": "DiamondIntegral.Section4.GammaContinuousDecomposition.euler_characteristic_discharged",
     "actual_affine_comparison_nonsurjectivity": "DiamondIntegral.Section4.RESAffineNonsurjective.remark_4_4"
   },
   "lean": "Lean (version 4.35.0, arm64-apple-darwin24.6.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
@@ -56,7 +59,7 @@
       }
     }
   },
-  "semantic_boundary": "Section 4 corrected main-text proofs are complete and linked to finalized Section 3. Section3T001Integration constructs both ordinary and measured T001 interfaces from actual upstream kernel and surjectivity proofs through proved categorical-to-chart ring equivalences, scalar/comparison squares and elementary coefficient-pair transport. Section3LinkedRetractionStatements proves all clauses of Propositions 4.7 and 4.15 without T001 inputs. General rational-affine Gamma normal form remains explicit accepted QE background; the integral-affine contraction classification is not substituted for it. The bounded construction uses the full ordinary presentation, with no bounded tensor kernel or injectivity premise. Nonnegative radius generators retain original-base definable RV lifts; arbitrary definable Gamma values are not asserted to have lifts. Original-base parameters, finite tags, object degrees, partial forms and full RV preimages are retained throughout. Continuous cell decomposition, Euler descent, actual point nonvanishing and affine-localization comparison nonsurjectivity are proved locally. No HK result is an input. The already authorized later external inputs in Section 3 remain within their documented scope; coefficient-monicity R-Y input is not needed for Section 4 Euler descent.",
+  "semantic_boundary": "Section 4 corrected main-text proofs are complete and linked to finalized Section 3. Section3T001Integration constructs both ordinary and measured T001 interfaces from actual upstream kernel and surjectivity proofs through proved categorical-to-chart ring equivalences, scalar/comparison squares and elementary coefficient-pair transport. Section3LinkedRetractionStatements proves all clauses of Propositions 4.7 and 4.15 without T001 inputs. The multivariate rational-affine Gamma normal form Section3GammaAffineInput.Input is proved over every base from RV quantifier elimination (Section3GammaAffineDischarge.input, ACVF only), and Remark 4.2 has discharged forms in Section4GammaAffineDischarged; the original statements taking the input are unchanged. The integral-affine contraction classification is not substituted for it. The bounded construction uses the full ordinary presentation, with no bounded tensor kernel or injectivity premise. Nonnegative radius generators retain original-base definable RV lifts; arbitrary definable Gamma values are not asserted to have lifts. Original-base parameters, finite tags, object degrees, partial forms and full RV preimages are retained throughout. Continuous cell decomposition, Euler descent, actual point nonvanishing and affine-localization comparison nonsurjectivity are proved locally. No HK result is an input. The already authorized later external inputs in Section 3 remain within their documented scope; coefficient-monicity R-Y input is not needed for Section 4 Euler descent.",
   "public_declarations": [
     {
       "name": "DiamondIntegral.Section4.Review.geometric_relation_vanishes",
@@ -22032,6 +22035,214 @@
     },
     {
       "name": "DiamondIntegral.Section4.Section4LinkedRemarks.manuscript_section4_compatibility_discharged",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaQEOutputSlopes.perturbAt",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaQEOutputSlopes.coefficientAt",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaQEOutputSlopes.rawEval_eq_prod",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaQEOutputSlopes.prod_perturbAt",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaQEOutputSlopes.rawEval_perturbAt",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaQEOutputSlopes.rawEval_ne_zero_iff",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaQEOutputSlopes.valueAt",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaQEOutputSlopes.gamma_val_prod",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaQEOutputSlopes.vrv_prod",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaQEOutputSlopes.rvGamma_congr",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaQEOutputSlopes.rvGamma_rawEval",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaQEOutputSlopes.SlopesSeparatedAt",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaQEOutputSlopes.residue_term_fixed",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaQEOutputSlopes.residue_polynomial_fixed",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaQEOutputSlopes.polynomial_inK",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaQEOutputSlopes.literalMonomialsAt",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaQEOutputSlopes.ValueComparisonsPreservedAt",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaQEOutputSlopes.value_equality_preserved",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaQEOutputSlopes.literal_preserved",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaQEOutputSlopes.gammaTopology",
+      "kind": "instance"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaQEOutputSlopes.gammaOrderTopology",
+      "kind": "instance"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaQEOutputSlopes.finite_perturbation",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaQEOutputSlopes.dnfMonomialsAt",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaQEOutputSlopes.rvGamma_perturbAt",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaQEOutputSlopes.graph_has_critical_pair",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaQEFlatNormalFormArity.gamma_flat_normal_form_arity",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaQECoefficientNames.rvNamed",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaQECoefficientNames.mem_rvNamed",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaQECoefficientNames.rvNamed_inv",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaQECoefficientNames.rvNamed_zpow",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaQECoefficientNames.rvNamed_rvHom",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaQECoefficientNames.vfPolynomial_named",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaQECoefficientNames.coefficientAt_named",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaQECoefficientNames.gamma_named_of_rvNamed",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaQECoefficientNames.vf_named_of_mem",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaQECoefficientNames.rv_named_of_mem",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaQECoefficientNames.gamma_inv_named",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaQECoefficientNames.gamma_mul_named",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaQECoefficientNames.gamma_character_named",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Section3GammaAffineDischarge.solve_output",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Section3GammaAffineDischarge.prod_div_zpow",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Section3GammaAffineDischarge.prod_decompose",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Section3GammaAffineDischarge.input",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaContinuousPartitions.exists_partition_discharged",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaContinuousPartitions.exists_common_discharged",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaContinuousDecomposition.exists_decomposition_discharged",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaContinuousDecomposition.decompositionDischarged",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaContinuousDecomposition.constructed_geometric_sum_discharged",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaContinuousDecomposition.geometric_sum_discharged",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaContinuousDecomposition.euler_characteristic_discharged",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaContinuousDecomposition.pieces_nonempty_discharged",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.GammaContinuousDecomposition.dimensions_bounded_discharged",
       "kind": "theorem"
     }
   ],
@@ -49033,6 +49244,265 @@
       "Classical.choice",
       "Quot.sound",
       "propext"
+    ],
+    "DiamondIntegral.Section4.GammaQEOutputSlopes.perturbAt": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaQEOutputSlopes.coefficientAt": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaQEOutputSlopes.rawEval_eq_prod": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaQEOutputSlopes.prod_perturbAt": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaQEOutputSlopes.rawEval_perturbAt": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaQEOutputSlopes.rawEval_ne_zero_iff": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaQEOutputSlopes.valueAt": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaQEOutputSlopes.gamma_val_prod": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaQEOutputSlopes.vrv_prod": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaQEOutputSlopes.rvGamma_congr": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaQEOutputSlopes.rvGamma_rawEval": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaQEOutputSlopes.SlopesSeparatedAt": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaQEOutputSlopes.residue_term_fixed": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaQEOutputSlopes.residue_polynomial_fixed": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaQEOutputSlopes.polynomial_inK": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaQEOutputSlopes.literalMonomialsAt": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaQEOutputSlopes.ValueComparisonsPreservedAt": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaQEOutputSlopes.value_equality_preserved": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaQEOutputSlopes.literal_preserved": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaQEOutputSlopes.gammaTopology": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaQEOutputSlopes.gammaOrderTopology": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaQEOutputSlopes.finite_perturbation": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaQEOutputSlopes.dnfMonomialsAt": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaQEOutputSlopes.rvGamma_perturbAt": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaQEOutputSlopes.graph_has_critical_pair": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaQEFlatNormalFormArity.gamma_flat_normal_form_arity": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaQECoefficientNames.rvNamed": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaQECoefficientNames.mem_rvNamed": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaQECoefficientNames.rvNamed_inv": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaQECoefficientNames.rvNamed_zpow": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaQECoefficientNames.rvNamed_rvHom": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaQECoefficientNames.vfPolynomial_named": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaQECoefficientNames.coefficientAt_named": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaQECoefficientNames.gamma_named_of_rvNamed": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaQECoefficientNames.vf_named_of_mem": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaQECoefficientNames.rv_named_of_mem": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaQECoefficientNames.gamma_inv_named": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaQECoefficientNames.gamma_mul_named": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaQECoefficientNames.gamma_character_named": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Section3GammaAffineDischarge.solve_output": [
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Section3GammaAffineDischarge.prod_div_zpow": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Section3GammaAffineDischarge.prod_decompose": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Section3GammaAffineDischarge.input": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaContinuousPartitions.exists_partition_discharged": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaContinuousPartitions.exists_common_discharged": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaContinuousDecomposition.exists_decomposition_discharged": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaContinuousDecomposition.decompositionDischarged": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaContinuousDecomposition.constructed_geometric_sum_discharged": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaContinuousDecomposition.geometric_sum_discharged": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaContinuousDecomposition.euler_characteristic_discharged": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaContinuousDecomposition.pieces_nonempty_discharged": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.GammaContinuousDecomposition.dimensions_bounded_discharged": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
     ]
   },
   "cited_input_definitions": {
@@ -49683,14 +50153,19 @@
     "section 4/Section4GammaLinearityDischarged.lean": "e03398946b7a944278d7b203cb2ea81945ef63548a476aa8e17d69fbfcf2179b",
     "section 4/RVStrictBoundedComparison.lean": "d15a45f9a09c77987e3a4d0fc63a688c994b89d040d4943d8cdb2216d3011498",
     "section 4/Section4LinkedRemarks.lean": "e5ac1b1f1eae30234928e667e36820c04798d72df69ef95465f201a66937c237",
-    "section 4/Section.lean": "c20364fbc6ef2f4555ccb7321c76511d395d2f8f9735cd4465c11867897ac907",
-    "section 4/verify.py": "eb84e7add8a5845b15475846201d07ddbd5e5580cf90fa800f6d16aef6217e13",
+    "section 4/GammaQEOutputSlopes.lean": "5630739b6b240d2f501fe976c8f5ee2b716778865206f1ae336b33740951bd01",
+    "section 4/GammaQEFlatNormalFormArity.lean": "e49beaadd812632b5a71b1e9162cca338b3bba75fc2f82b36903feb02d8e2316",
+    "section 4/GammaQECoefficientNames.lean": "bdbbdd08a59187bac559777a1cd530706019406f269f5de662da3286e63c1936",
+    "section 4/Section3GammaAffineDischarge.lean": "330f64a70c9254d23b8e18f45c16160b1df71cf5e8d1afe1982d8553442606b2",
+    "section 4/Section4GammaAffineDischarged.lean": "2bb42e805cb7d66c4c16cde0b682b7461b980d4edc9f0563b76efd03dfec48e1",
+    "section 4/Section.lean": "5d2547b61d8d8b2b9dace172a95c53459552d5423178222adf51d4785a91cd98",
+    "section 4/verify.py": "c8dd5b639b9a02755c4c4424bd6ce0bc39dbd545172aee98f53b9a9d6b85bc71",
     "DiamondIntegral.lean": "66d02be99d3e377f670ad569f36274aed59d735366ebb4b157993bdb166b553e",
     "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
-    "lakefile.toml": "8a5e89e6ba72a5969545bf15fefa9e41230630229fae3a1f113719bca1807bb6",
+    "lakefile.toml": "1f1d844e66e46c4860b16a98649eb12cba81d8cb6f0bc848929bd696f3ce18ee",
     "lake-manifest.json": "aa8e81a44b1dc85acfcad8727c04ca3be1ebd13a0a12304968bdbfbe9755f24a",
-    "ACCEPTED-CITED-RESULTS.md": "72b95c8cb0c8fa07560eb1ad688fcc507e1f1036c9911b9b7b3c40e2b71f8790",
-    "section 4/verification/CITED-INPUTS.md": "41c8123627b366975d5b407a1275d159c869272ccee6c460bb6b3551e960a7d9",
+    "ACCEPTED-CITED-RESULTS.md": "2a6f42ef5f82e18d502ec9bb71d626675f5e24eae45d44291d75b23d9ee906c9",
+    "section 4/verification/CITED-INPUTS.md": "854aa8b2f36a2c956fd3faf0fdcda4ee9a5c55973c266ac0322babe2c5281573",
     "section 4/verification/t001-upstream-review.json": "da90b3910e5d404e88a845b0f6115942b47ef2fa57f544a14d6328a7483bd519",
     "section 4/verification/T001-section4-approval.json": "81d460518673b78e427a80e38c4a7a89faf6a07f3d70a96ffd1fb1adee5f0b18",
     "section 4/verification/point-nonvanishing.json": "2bcb8a51b056fce2e2496a6b9d66d3da782c157744eddc68ff863c3cf1278f72",

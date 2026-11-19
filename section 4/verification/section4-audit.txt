@@ -81815,6 +81815,765 @@ theorem DiamondIntegral.Section4.Section4LinkedRemarks.manuscript_section4_compa
 'DiamondIntegral.Section4.Section4LinkedRemarks.manuscript_section4_compatibility_discharged' depends on axioms: [propext,
  Classical.choice.{u},
  Quot.sound.{u}]
+def DiamondIntegral.Section4.GammaQEOutputSlopes.perturbAt : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {V : Type} →
+        [DecidableEq.{1} V] → V → (V → CanonicalRV.RVSort M) → CanonicalRV.RVSort M → V → CanonicalRV.RVSort M :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {V} [DecidableEq.{1} V]
+    o x t =>
+  Function.update.{1, 1} x o (HMul.hMul.{0, 0, 0} (x o) t)
+'DiamondIntegral.Section4.GammaQEOutputSlopes.perturbAt' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.GammaQEOutputSlopes.coefficientAt : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {I R V : Type} →
+        SpecialTransformations.Section3.GuardedRVNormalForm.Monomial I R V →
+          (I → SpecialTransformations.Milestone0.Transfer.VFType) → (R → CanonicalRV.RVSort M) → CanonicalRV.RVSort M :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {I R V} P a r =>
+  HMul.hMul.{0, 0, 0}
+    (HDiv.hDiv.{0, 0, 0}
+      (SpecialTransformations.Section3.RVOperations.rvHom (FirstOrder.Language.Term.realize.{0, 0, 0, 0} a P.numerator))
+      (SpecialTransformations.Section3.RVOperations.rvHom
+        (FirstOrder.Language.Term.realize.{0, 0, 0, 0} a P.denominator)))
+    (Finsupp.prod.{0, 0, 0} P.coefficient fun i n => HPow.hPow.{0, 0, 0} (r i) n)
+'DiamondIntegral.Section4.GammaQEOutputSlopes.coefficientAt' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.GammaQEOutputSlopes.rawEval_eq_prod : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {I R V : Type}
+  [inst_2 : Fintype.{0} V] [DecidableEq.{1} V] (P : SpecialTransformations.Section3.GuardedRVNormalForm.Monomial I R V)
+  (a : I → SpecialTransformations.Milestone0.Transfer.VFType) (r : R → CanonicalRV.RVSort M)
+  (x : V → CanonicalRV.RVSort M),
+  Eq.{1} (P.rawEval a r x)
+    (HMul.hMul.{0, 0, 0} (DiamondIntegral.Section4.GammaQEOutputSlopes.coefficientAt P a r)
+      (∏ i, HPow.hPow.{0, 0, 0} (x i) (P.powers i))) :=
+⋯
+'DiamondIntegral.Section4.GammaQEOutputSlopes.rawEval_eq_prod' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.GammaQEOutputSlopes.prod_perturbAt : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {V : Type}
+  [inst_2 : Fintype.{0} V] [inst_3 : DecidableEq.{1} V] (o : V) (x : V → CanonicalRV.RVSort M)
+  (t : CanonicalRV.RVSort M) (p : V → ℤ),
+  Eq.{1} (∏ i, HPow.hPow.{0, 0, 0} (DiamondIntegral.Section4.GammaQEOutputSlopes.perturbAt o x t i) (p i))
+    (HMul.hMul.{0, 0, 0} (∏ i, HPow.hPow.{0, 0, 0} (x i) (p i)) (HPow.hPow.{0, 0, 0} t (p o))) :=
+⋯
+'DiamondIntegral.Section4.GammaQEOutputSlopes.prod_perturbAt' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.GammaQEOutputSlopes.rawEval_perturbAt : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {I R V : Type}
+  [Fintype.{0} V] [inst_3 : DecidableEq.{1} V] (o : V)
+  (P : SpecialTransformations.Section3.GuardedRVNormalForm.Monomial I R V)
+  (a : I → SpecialTransformations.Milestone0.Transfer.VFType) (r : R → CanonicalRV.RVSort M)
+  (x : V → CanonicalRV.RVSort M) (t : CanonicalRV.RVSort M),
+  Eq.{1} (P.rawEval a r (DiamondIntegral.Section4.GammaQEOutputSlopes.perturbAt o x t))
+    (HMul.hMul.{0, 0, 0} (P.rawEval a r x) (HPow.hPow.{0, 0, 0} t (P.powers o))) :=
+⋯
+'DiamondIntegral.Section4.GammaQEOutputSlopes.rawEval_perturbAt' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.GammaQEOutputSlopes.rawEval_ne_zero_iff : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {I R V : Type}
+  [Fintype.{0} V] [DecidableEq.{1} V] (P : SpecialTransformations.Section3.GuardedRVNormalForm.Monomial I R V)
+  (a : I → SpecialTransformations.Milestone0.Transfer.VFType) (r : R → CanonicalRV.RVSort M)
+  (x : V → CanonicalRV.RVSort M),
+  (∀ (i : V), Ne.{1} (x i) 0) →
+    (Ne.{1} (P.rawEval a r x) 0 ↔ Ne.{1} (DiamondIntegral.Section4.GammaQEOutputSlopes.coefficientAt P a r) 0) :=
+⋯
+'DiamondIntegral.Section4.GammaQEOutputSlopes.rawEval_ne_zero_iff' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.GammaQEOutputSlopes.valueAt : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {I R V : Type} →
+        [Fintype.{0} V] →
+          (P : SpecialTransformations.Section3.GuardedRVNormalForm.Monomial I R V) →
+            (a : I → SpecialTransformations.Milestone0.Transfer.VFType) →
+              (r : R → CanonicalRV.RVSort M) →
+                Ne.{1} (DiamondIntegral.Section4.GammaQEOutputSlopes.coefficientAt P a r) 0 →
+                  (V → SpecialTransformations.Section3.Values.Gamma) → SpecialTransformations.Section3.Values.Gamma :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {I R V} [Fintype.{0} V]
+    P a r hc u =>
+  HMul.hMul.{0, 0, 0}
+    (DiamondIntegral.Section5.GammaQE.rvGamma (DiamondIntegral.Section4.GammaQEOutputSlopes.coefficientAt P a r) hc)
+    (∏ i, HPow.hPow.{0, 0, 0} (u i) (P.powers i))
+'DiamondIntegral.Section4.GammaQEOutputSlopes.valueAt' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.GammaQEOutputSlopes.gamma_val_prod : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {V : Type}
+  [inst_2 : Fintype.{0} V] [DecidableEq.{1} V] (u : V → SpecialTransformations.Section3.Values.Gamma) (p : V → ℤ),
+  Eq.{1} (↑(∏ i, HPow.hPow.{0, 0, 0} (u i) (p i))) (∏ i, HPow.hPow.{0, 0, 0} (↑(u i)) (p i)) :=
+⋯
+'DiamondIntegral.Section4.GammaQEOutputSlopes.gamma_val_prod' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.GammaQEOutputSlopes.vrv_prod : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {V : Type}
+  [inst_2 : Fintype.{0} V] [DecidableEq.{1} V] (x : V → CanonicalRV.RVSort M) (p : V → ℤ),
+  Eq.{1} (SpecialTransformations.Section3.Values.vrv (∏ i, HPow.hPow.{0, 0, 0} (x i) (p i)))
+    (∏ i, HPow.hPow.{0, 0, 0} (SpecialTransformations.Section3.Values.vrv (x i)) (p i)) :=
+⋯
+'DiamondIntegral.Section4.GammaQEOutputSlopes.vrv_prod' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.GammaQEOutputSlopes.rvGamma_congr : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {s t : CanonicalRV.RVSort M} (hs : Ne.{1} s 0) (ht : Ne.{1} t 0),
+  Eq.{1} s t → Eq.{1} (DiamondIntegral.Section5.GammaQE.rvGamma s hs) (DiamondIntegral.Section5.GammaQE.rvGamma t ht) :=
+⋯
+'DiamondIntegral.Section4.GammaQEOutputSlopes.rvGamma_congr' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.GammaQEOutputSlopes.rvGamma_rawEval : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {I R V : Type}
+  [inst_2 : Fintype.{0} V] [inst_3 : DecidableEq.{1} V]
+  (P : SpecialTransformations.Section3.GuardedRVNormalForm.Monomial I R V)
+  (a : I → SpecialTransformations.Milestone0.Transfer.VFType) (r : R → CanonicalRV.RVSort M)
+  (hc : Ne.{1} (DiamondIntegral.Section4.GammaQEOutputSlopes.coefficientAt P a r) 0) (x : V → CanonicalRV.RVSort M)
+  (hx : ∀ (i : V), Ne.{1} (x i) 0),
+  Eq.{1} (DiamondIntegral.Section5.GammaQE.rvGamma (P.rawEval a r x) ⋯)
+    (DiamondIntegral.Section4.GammaQEOutputSlopes.valueAt P a r hc fun i =>
+      DiamondIntegral.Section5.GammaQE.rvGamma (x i) ⋯) :=
+⋯
+'DiamondIntegral.Section4.GammaQEOutputSlopes.rvGamma_rawEval' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.GammaQEOutputSlopes.SlopesSeparatedAt : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {I R V : Type} →
+        V →
+          List.{0} (SpecialTransformations.Section3.GuardedRVNormalForm.Monomial I R V) →
+            (I → SpecialTransformations.Milestone0.Transfer.VFType) →
+              (R → CanonicalRV.RVSort M) → (V → CanonicalRV.RVSort M) → Prop :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {I R V} o s a r x =>
+  ∀ (P : SpecialTransformations.Section3.GuardedRVNormalForm.Monomial I R V),
+    Membership.mem.{0, 0} s P →
+      ∀ (Q : SpecialTransformations.Section3.GuardedRVNormalForm.Monomial I R V),
+        Membership.mem.{0, 0} s Q →
+          Ne.{1} (P.rawEval a r x) 0 →
+            Ne.{1} (Q.rawEval a r x) 0 →
+              Eq.{1} (SpecialTransformations.Section3.Values.vrv (P.rawEval a r x))
+                  (SpecialTransformations.Section3.Values.vrv (Q.rawEval a r x)) →
+                Eq.{1} (P.powers o) (Q.powers o)
+'DiamondIntegral.Section4.GammaQEOutputSlopes.SlopesSeparatedAt' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.GammaQEOutputSlopes.residue_term_fixed : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {I R V : Type}
+  [Fintype.{0} V] [inst_3 : DecidableEq.{1} V] (o : V)
+  (s : List.{0} (SpecialTransformations.Section3.GuardedRVNormalForm.Monomial I R V))
+  (a : I → SpecialTransformations.Milestone0.Transfer.VFType) (r : R → CanonicalRV.RVSort M)
+  (x : V → CanonicalRV.RVSort M),
+  Membership.mem.{0, 0} s SpecialTransformations.Section3.GuardedRVNormalForm.Monomial.one →
+    DiamondIntegral.Section4.GammaQEOutputSlopes.SlopesSeparatedAt o s a r x →
+      ∀ (P : SpecialTransformations.Section3.GuardedRVNormalForm.Monomial I R V),
+        Membership.mem.{0, 0} s P →
+          ValuedModelMap.inK (P.rawEval a r x) →
+            ∀ (t : CanonicalRV.RVSort M),
+              Eq.{1} (P.rawEval a r (DiamondIntegral.Section4.GammaQEOutputSlopes.perturbAt o x t)) (P.rawEval a r x) :=
+⋯
+'DiamondIntegral.Section4.GammaQEOutputSlopes.residue_term_fixed' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.GammaQEOutputSlopes.residue_polynomial_fixed : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {I R V : Type}
+  [Fintype.{0} V] [inst_3 : DecidableEq.{1} V] (o : V)
+  (s : List.{0} (SpecialTransformations.Section3.GuardedRVNormalForm.Monomial I R V))
+  (a : I → SpecialTransformations.Milestone0.Transfer.VFType) (r : R → CanonicalRV.RVSort M)
+  (x : V → CanonicalRV.RVSort M),
+  Membership.mem.{0, 0} s SpecialTransformations.Section3.GuardedRVNormalForm.Monomial.one →
+    DiamondIntegral.Section4.GammaQEOutputSlopes.SlopesSeparatedAt o s a r x →
+      ∀ (P : SpecialTransformations.Section3.GuardedRVNormalForm.KPolynomial I R V),
+        (∀ (i : Fin P.size), Membership.mem.{0, 0} s (P.terms i)) →
+          P.Domain a r x →
+            ∀ (t : CanonicalRV.RVSort M),
+              P.Domain a r (DiamondIntegral.Section4.GammaQEOutputSlopes.perturbAt o x t) ∧
+                Eq.{1} (P.rawEval a r (DiamondIntegral.Section4.GammaQEOutputSlopes.perturbAt o x t))
+                  (P.rawEval a r x) :=
+⋯
+'DiamondIntegral.Section4.GammaQEOutputSlopes.residue_polynomial_fixed' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.GammaQEOutputSlopes.polynomial_inK : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {I R V : Type}
+  [Fintype.{0} V] [DecidableEq.{1} V] (P : SpecialTransformations.Section3.GuardedRVNormalForm.KPolynomial I R V)
+  (a : I → SpecialTransformations.Milestone0.Transfer.VFType) (r : R → CanonicalRV.RVSort M)
+  (x : V → CanonicalRV.RVSort M), ValuedModelMap.inK (P.rawEval a r x) :=
+⋯
+'DiamondIntegral.Section4.GammaQEOutputSlopes.polynomial_inK' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.GammaQEOutputSlopes.literalMonomialsAt : {I R V : Type} →
+  SpecialTransformations.Section3.GuardedRVNormalForm.RVLiteral I R V →
+    List.{0} (SpecialTransformations.Section3.GuardedRVNormalForm.Monomial I R V) :=
+fun {I R V} x =>
+  match x with
+  | SpecialTransformations.Section3.GuardedRVNormalForm.RVLiteral.equality E a =>
+    HAppend.hAppend.{0, 0, 0}
+      (HAppend.hAppend.{0, 0, 0} (List.cons.{0} E.left (List.cons.{0} E.right List.nil.{0}))
+        (List.ofFn.{0} E.leftK.terms))
+      (List.ofFn.{0} E.rightK.terms)
+  | SpecialTransformations.Section3.GuardedRVNormalForm.RVLiteral.order E a =>
+    List.cons.{0} E.left (List.cons.{0} E.right List.nil.{0})
+'DiamondIntegral.Section4.GammaQEOutputSlopes.literalMonomialsAt' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.GammaQEOutputSlopes.ValueComparisonsPreservedAt : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {I R V : Type} →
+        [DecidableEq.{1} V] →
+          V →
+            List.{0} (SpecialTransformations.Section3.GuardedRVNormalForm.Monomial I R V) →
+              (I → SpecialTransformations.Milestone0.Transfer.VFType) →
+                (R → CanonicalRV.RVSort M) → (V → CanonicalRV.RVSort M) → CanonicalRV.RVSort M → Prop :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {I R V}
+    [DecidableEq.{1} V] o s a r x t =>
+  ∀ (P : SpecialTransformations.Section3.GuardedRVNormalForm.Monomial I R V),
+    Membership.mem.{0, 0} s P →
+      ∀ (Q : SpecialTransformations.Section3.GuardedRVNormalForm.Monomial I R V),
+        Membership.mem.{0, 0} s Q →
+          (LE.le.{0}
+              (SpecialTransformations.Section3.Values.vrv
+                (P.rawEval a r (DiamondIntegral.Section4.GammaQEOutputSlopes.perturbAt o x t)))
+              (SpecialTransformations.Section3.Values.vrv
+                (Q.rawEval a r (DiamondIntegral.Section4.GammaQEOutputSlopes.perturbAt o x t))) ↔
+            LE.le.{0} (SpecialTransformations.Section3.Values.vrv (P.rawEval a r x))
+              (SpecialTransformations.Section3.Values.vrv (Q.rawEval a r x)))
+'DiamondIntegral.Section4.GammaQEOutputSlopes.ValueComparisonsPreservedAt' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.GammaQEOutputSlopes.value_equality_preserved : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {I R V : Type}
+  [Fintype.{0} V] [inst_3 : DecidableEq.{1} V] (o : V)
+  (s : List.{0} (SpecialTransformations.Section3.GuardedRVNormalForm.Monomial I R V))
+  (a : I → SpecialTransformations.Milestone0.Transfer.VFType) (r : R → CanonicalRV.RVSort M)
+  (x : V → CanonicalRV.RVSort M) (t : CanonicalRV.RVSort M),
+  DiamondIntegral.Section4.GammaQEOutputSlopes.ValueComparisonsPreservedAt o s a r x t →
+    ∀ (P Q : SpecialTransformations.Section3.GuardedRVNormalForm.Monomial I R V),
+      Membership.mem.{0, 0} s P →
+        Membership.mem.{0, 0} s Q →
+          Eq.{1}
+              (SpecialTransformations.Section3.Values.vrv
+                (HMul.hMul.{0, 0, 0} (P.rawEval a r x) (HPow.hPow.{0, 0, 0} t (P.powers o))))
+              (SpecialTransformations.Section3.Values.vrv
+                (HMul.hMul.{0, 0, 0} (Q.rawEval a r x) (HPow.hPow.{0, 0, 0} t (Q.powers o)))) →
+            Eq.{1} (SpecialTransformations.Section3.Values.vrv (P.rawEval a r x))
+              (SpecialTransformations.Section3.Values.vrv (Q.rawEval a r x)) :=
+⋯
+'DiamondIntegral.Section4.GammaQEOutputSlopes.value_equality_preserved' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.GammaQEOutputSlopes.literal_preserved : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {I R V : Type}
+  [Fintype.{0} V] [inst_3 : DecidableEq.{1} V] (o : V)
+  (s : List.{0} (SpecialTransformations.Section3.GuardedRVNormalForm.Monomial I R V))
+  (a : I → SpecialTransformations.Milestone0.Transfer.VFType) (r : R → CanonicalRV.RVSort M)
+  (x : V → CanonicalRV.RVSort M),
+  Membership.mem.{0, 0} s SpecialTransformations.Section3.GuardedRVNormalForm.Monomial.one →
+    DiamondIntegral.Section4.GammaQEOutputSlopes.SlopesSeparatedAt o s a r x →
+      ∀ (t : CanonicalRV.RVSort M),
+        Ne.{1} t 0 →
+          DiamondIntegral.Section4.GammaQEOutputSlopes.ValueComparisonsPreservedAt o s a r x t →
+            ∀ (L : SpecialTransformations.Section3.GuardedRVNormalForm.RVLiteral I R V),
+              (∀ (P : SpecialTransformations.Section3.GuardedRVNormalForm.Monomial I R V),
+                  Membership.mem.{0, 0} (DiamondIntegral.Section4.GammaQEOutputSlopes.literalMonomialsAt L) P →
+                    Membership.mem.{0, 0} s P) →
+                SpecialTransformations.Section3.GuardedRVNormalForm.RVLiteral.holds a r x L →
+                  SpecialTransformations.Section3.GuardedRVNormalForm.RVLiteral.holds a r
+                    (DiamondIntegral.Section4.GammaQEOutputSlopes.perturbAt o x t) L :=
+⋯
+'DiamondIntegral.Section4.GammaQEOutputSlopes.literal_preserved' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@[instance_reducible] def DiamondIntegral.Section4.GammaQEOutputSlopes.gammaTopology : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      TopologicalSpace.{0} SpecialTransformations.Section3.Values.Gamma :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] =>
+  Preorder.topology.{0} SpecialTransformations.Section3.Values.Gamma
+'DiamondIntegral.Section4.GammaQEOutputSlopes.gammaTopology' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.GammaQEOutputSlopes.gammaOrderTopology : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF],
+  OrderTopology.{0} SpecialTransformations.Section3.Values.Gamma :=
+⋯
+'DiamondIntegral.Section4.GammaQEOutputSlopes.gammaOrderTopology' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.GammaQEOutputSlopes.finite_perturbation : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {I R V : Type}
+  [Fintype.{0} V] [inst_3 : DecidableEq.{1} V] (o : V)
+  (s : List.{0} (SpecialTransformations.Section3.GuardedRVNormalForm.Monomial I R V))
+  (a : I → SpecialTransformations.Milestone0.Transfer.VFType) (r : R → CanonicalRV.RVSort M)
+  (x : V → CanonicalRV.RVSort M),
+  DiamondIntegral.Section4.GammaQEOutputSlopes.SlopesSeparatedAt o s a r x →
+    ∃ t,
+      ∃ (ht : Ne.{1} t 0),
+        LT.lt.{0} 1 (DiamondIntegral.Section5.GammaQE.rvGamma t ht) ∧
+          DiamondIntegral.Section4.GammaQEOutputSlopes.ValueComparisonsPreservedAt o s a r x t :=
+⋯
+'DiamondIntegral.Section4.GammaQEOutputSlopes.finite_perturbation' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.GammaQEOutputSlopes.dnfMonomialsAt : {I R V : Type} →
+  SpecialTransformations.Section3.GuardedRVNormalForm.LiteralDNF I R V →
+    List.{0} (SpecialTransformations.Section3.GuardedRVNormalForm.Monomial I R V) :=
+fun {I R V} D =>
+  List.cons.{0} SpecialTransformations.Section3.GuardedRVNormalForm.Monomial.one
+    (List.flatMap.{0, 0} DiamondIntegral.Section4.GammaQEOutputSlopes.literalMonomialsAt (List.flatten.{0} D))
+'DiamondIntegral.Section4.GammaQEOutputSlopes.dnfMonomialsAt' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.GammaQEOutputSlopes.rvGamma_perturbAt : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {V : Type}
+  [Fintype.{0} V] [inst_3 : DecidableEq.{1} V] (o : V) (x : V → CanonicalRV.RVSort M) (hx : ∀ (i : V), Ne.{1} (x i) 0)
+  (t : CanonicalRV.RVSort M) (ht : Ne.{1} t 0)
+  (hxt : ∀ (i : V), Ne.{1} (DiamondIntegral.Section4.GammaQEOutputSlopes.perturbAt o x t i) 0),
+  Eq.{1}
+    (fun i =>
+      DiamondIntegral.Section5.GammaQE.rvGamma (DiamondIntegral.Section4.GammaQEOutputSlopes.perturbAt o x t i) ⋯)
+    (Function.update.{1, 1} (fun i => DiamondIntegral.Section5.GammaQE.rvGamma (x i) ⋯) o
+      (HMul.hMul.{0, 0, 0} (DiamondIntegral.Section5.GammaQE.rvGamma (x o) ⋯)
+        (DiamondIntegral.Section5.GammaQE.rvGamma t ht))) :=
+⋯
+'DiamondIntegral.Section4.GammaQEOutputSlopes.rvGamma_perturbAt' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.GammaQEOutputSlopes.graph_has_critical_pair : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {I R V : Type}
+  [Fintype.{0} V] [inst_3 : DecidableEq.{1} V] (o : V) (a : I → SpecialTransformations.Milestone0.Transfer.VFType)
+  (r : R → CanonicalRV.RVSort M) (D : SpecialTransformations.Section3.GuardedRVNormalForm.LiteralDNF I R V)
+  (G : (V → SpecialTransformations.Section3.Values.Gamma) → Prop),
+  (∀ (x : V → CanonicalRV.RVSort M) (hx : ∀ (i : V), Ne.{1} (x i) 0),
+      (G fun i => DiamondIntegral.Section5.GammaQE.rvGamma (x i) ⋯) ↔
+        SpecialTransformations.Section3.PolarityDNF.holds.{0}
+          (SpecialTransformations.Section3.GuardedRVNormalForm.RVLiteral.holds a r x) D) →
+    ∀ (x : V → CanonicalRV.RVSort M) (hx : ∀ (i : V), Ne.{1} (x i) 0),
+      (G fun i => DiamondIntegral.Section5.GammaQE.rvGamma (x i) ⋯) →
+        (∀ (y : SpecialTransformations.Section3.Values.Gamma),
+            G (Function.update.{1, 1} (fun i => DiamondIntegral.Section5.GammaQE.rvGamma (x i) ⋯) o y) →
+              Eq.{1} y (DiamondIntegral.Section5.GammaQE.rvGamma (x o) ⋯)) →
+          ∃ P,
+            Membership.mem.{0, 0} (DiamondIntegral.Section4.GammaQEOutputSlopes.dnfMonomialsAt D) P ∧
+              ∃ Q,
+                Membership.mem.{0, 0} (DiamondIntegral.Section4.GammaQEOutputSlopes.dnfMonomialsAt D) Q ∧
+                  Ne.{1} (P.rawEval a r x) 0 ∧
+                    Ne.{1} (Q.rawEval a r x) 0 ∧
+                      Eq.{1} (SpecialTransformations.Section3.Values.vrv (P.rawEval a r x))
+                          (SpecialTransformations.Section3.Values.vrv (Q.rawEval a r x)) ∧
+                        Ne.{1} (P.powers o) (Q.powers o) :=
+⋯
+'DiamondIntegral.Section4.GammaQEOutputSlopes.graph_has_critical_pair' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.GammaQEFlatNormalFormArity.gamma_flat_normal_form_arity : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] (S : Set.{0} M)
+  (N : ℕ) (P : (Fin N → SpecialTransformations.Section3.Values.Gamma) → Prop),
+  SpecialTransformations.Section4.GammaSyntax.Definable S P →
+    ∃ I R a r D,
+      (∀ (i : I), Membership.mem.{0, 0} S ↑(a i)) ∧
+        (∀ (j : R), Membership.mem.{0, 0} S ↑(r j)) ∧
+          ∀ (x : Fin N → CanonicalRV.RVSort M) (hx : ∀ (i : Fin N), Ne.{1} (x i) 0),
+            (P fun i => DiamondIntegral.Section5.GammaQE.rvGamma (x i) ⋯) ↔
+              SpecialTransformations.Section3.PolarityDNF.holds.{0}
+                (SpecialTransformations.Section3.GuardedRVNormalForm.RVLiteral.holds a r x) D :=
+⋯
+'DiamondIntegral.Section4.GammaQEFlatNormalFormArity.gamma_flat_normal_form_arity' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.GammaQECoefficientNames.rvNamed : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      SpecialTransformations.Section3.GammaParameters.Base → Submonoid.{0} (CanonicalRV.RVSort M) :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] B =>
+  Submonoid.mk.{0}
+    (Subsemigroup.mk.{0}
+      (Set.ofPred.{0} fun u =>
+        SpecialTransformations.Section3.GammaParameters.DefinableClosureAtBase B
+          SpecialTransformations.Milestone0.SortTag.rv ↑u)
+      ⋯)
+    ⋯
+'DiamondIntegral.Section4.GammaQECoefficientNames.rvNamed' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.GammaQECoefficientNames.mem_rvNamed : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} (u : CanonicalRV.RVSort M),
+  Membership.mem.{0, 0} (DiamondIntegral.Section4.GammaQECoefficientNames.rvNamed B) u ↔
+    SpecialTransformations.Section3.GammaParameters.DefinableClosureAtBase B
+      SpecialTransformations.Milestone0.SortTag.rv ↑u :=
+⋯
+'DiamondIntegral.Section4.GammaQECoefficientNames.mem_rvNamed' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.GammaQECoefficientNames.rvNamed_inv : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} (x : CanonicalRV.RVSort M),
+  Membership.mem.{0, 0} (DiamondIntegral.Section4.GammaQECoefficientNames.rvNamed B) x →
+    Membership.mem.{0, 0} (DiamondIntegral.Section4.GammaQECoefficientNames.rvNamed B) (Inv.inv.{0} x) :=
+⋯
+'DiamondIntegral.Section4.GammaQECoefficientNames.rvNamed_inv' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.GammaQECoefficientNames.rvNamed_zpow : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} (x : CanonicalRV.RVSort M),
+  Membership.mem.{0, 0} (DiamondIntegral.Section4.GammaQECoefficientNames.rvNamed B) x →
+    ∀ (n : ℤ),
+      Membership.mem.{0, 0} (DiamondIntegral.Section4.GammaQECoefficientNames.rvNamed B) (HPow.hPow.{0, 0, 0} x n) :=
+⋯
+'DiamondIntegral.Section4.GammaQECoefficientNames.rvNamed_zpow' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.GammaQECoefficientNames.rvNamed_rvHom : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} (v : SpecialTransformations.Milestone0.Transfer.VFType),
+  Membership.mem.{0, 0} (SpecialTransformations.Section3.GammaParameters.vfDefinableClosureFieldBase B) v →
+    Membership.mem.{0, 0} (DiamondIntegral.Section4.GammaQECoefficientNames.rvNamed B)
+      (SpecialTransformations.Section3.RVOperations.rvHom v) :=
+⋯
+'DiamondIntegral.Section4.GammaQECoefficientNames.rvNamed_rvHom' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.GammaQECoefficientNames.vfPolynomial_named : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {I : Type}
+  (a : I → SpecialTransformations.Milestone0.Transfer.VFType),
+  (∀ (i : I),
+      Membership.mem.{0, 0} (SpecialTransformations.Section3.GammaParameters.vfDefinableClosureFieldBase B) (a i)) →
+    ∀ (t : SpecialTransformations.Section3.GuardedRVNormalForm.VFPolynomial I),
+      Membership.mem.{0, 0} (SpecialTransformations.Section3.GammaParameters.vfDefinableClosureFieldBase B)
+        (FirstOrder.Language.Term.realize.{0, 0, 0, 0} a t) :=
+⋯
+'DiamondIntegral.Section4.GammaQECoefficientNames.vfPolynomial_named' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.GammaQECoefficientNames.coefficientAt_named : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {I R V : Type}
+  (P : SpecialTransformations.Section3.GuardedRVNormalForm.Monomial I R V)
+  (a : I → SpecialTransformations.Milestone0.Transfer.VFType) (r : R → CanonicalRV.RVSort M),
+  (∀ (i : I),
+      Membership.mem.{0, 0} (SpecialTransformations.Section3.GammaParameters.vfDefinableClosureFieldBase B) (a i)) →
+    (∀ (j : R), Membership.mem.{0, 0} (DiamondIntegral.Section4.GammaQECoefficientNames.rvNamed B) (r j)) →
+      Membership.mem.{0, 0} (DiamondIntegral.Section4.GammaQECoefficientNames.rvNamed B)
+        (DiamondIntegral.Section4.GammaQEOutputSlopes.coefficientAt P a r) :=
+⋯
+'DiamondIntegral.Section4.GammaQECoefficientNames.coefficientAt_named' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.GammaQECoefficientNames.gamma_named_of_rvNamed : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base) (t : CanonicalRV.RVSort M) (ht : Ne.{1} t 0),
+  Membership.mem.{0, 0} (DiamondIntegral.Section4.GammaQECoefficientNames.rvNamed B) t →
+    SpecialTransformations.Section3.GammaParameters.GammaDefinableClosureAtBase B
+      (DiamondIntegral.Section5.GammaQE.rvGamma t ht) :=
+⋯
+'DiamondIntegral.Section4.GammaQECoefficientNames.gamma_named_of_rvNamed' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.GammaQECoefficientNames.vf_named_of_mem : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base) (v : SpecialTransformations.Milestone0.Transfer.VFType),
+  Membership.mem.{0, 0} B.real ↑v →
+    Membership.mem.{0, 0} (SpecialTransformations.Section3.GammaParameters.vfDefinableClosureFieldBase B) v :=
+⋯
+'DiamondIntegral.Section4.GammaQECoefficientNames.vf_named_of_mem' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.GammaQECoefficientNames.rv_named_of_mem : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base) (u : CanonicalRV.RVSort M),
+  Membership.mem.{0, 0} B.real ↑u →
+    Membership.mem.{0, 0} (DiamondIntegral.Section4.GammaQECoefficientNames.rvNamed B) u :=
+⋯
+'DiamondIntegral.Section4.GammaQECoefficientNames.rv_named_of_mem' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.GammaQECoefficientNames.gamma_inv_named : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base) (x : SpecialTransformations.Section3.Values.Gamma),
+  SpecialTransformations.Section3.GammaParameters.GammaDefinableClosureAtBase B x →
+    SpecialTransformations.Section3.GammaParameters.GammaDefinableClosureAtBase B (Inv.inv.{0} x) :=
+⋯
+'DiamondIntegral.Section4.GammaQECoefficientNames.gamma_inv_named' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.GammaQECoefficientNames.gamma_mul_named : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base) (x y : SpecialTransformations.Section3.Values.Gamma),
+  SpecialTransformations.Section3.GammaParameters.GammaDefinableClosureAtBase B x →
+    SpecialTransformations.Section3.GammaParameters.GammaDefinableClosureAtBase B y →
+      SpecialTransformations.Section3.GammaParameters.GammaDefinableClosureAtBase B (HMul.hMul.{0, 0, 0} x y) :=
+⋯
+'DiamondIntegral.Section4.GammaQECoefficientNames.gamma_mul_named' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.GammaQECoefficientNames.gamma_character_named : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base) {k : ℕ} (e : Fin k → ℤ)
+  (γ : Fin k → SpecialTransformations.Section3.Values.Gamma),
+  (∀ (i : Fin k), Membership.mem.{0, 0} B.gamma (γ i)) →
+    SpecialTransformations.Section3.GammaParameters.GammaDefinableClosureAtBase B
+      (∏ i, HPow.hPow.{0, 0, 0} (γ i) (e i)) :=
+⋯
+'DiamondIntegral.Section4.GammaQECoefficientNames.gamma_character_named' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.Section3GammaAffineDischarge.solve_output.{u_1} : ∀ {G : Type u_1}
+  [inst : CommGroup.{u_1} G] (cP cQ gP gQ XP XQ y : G) (a b : ℤ),
+  LT.lt.{0} b a →
+    Eq.{u_1 + 1}
+        (HMul.hMul.{u_1, u_1, u_1} cP
+          (HMul.hMul.{u_1, u_1, u_1} gP (HMul.hMul.{u_1, u_1, u_1} (HPow.hPow.{u_1, 0, u_1} y a) XP)))
+        (HMul.hMul.{u_1, u_1, u_1} cQ
+          (HMul.hMul.{u_1, u_1, u_1} gQ (HMul.hMul.{u_1, u_1, u_1} (HPow.hPow.{u_1, 0, u_1} y b) XQ))) →
+      Eq.{u_1 + 1} (HPow.hPow.{u_1, 0, u_1} y (HSub.hSub.{0, 0, 0} a b).toNat)
+        (HMul.hMul.{u_1, u_1, u_1}
+          (HMul.hMul.{u_1, u_1, u_1} (HMul.hMul.{u_1, u_1, u_1} cQ gQ)
+            (Inv.inv.{u_1} (HMul.hMul.{u_1, u_1, u_1} cP gP)))
+          (HDiv.hDiv.{u_1, u_1, u_1} XQ XP)) :=
+⋯
+'DiamondIntegral.Section4.Section3GammaAffineDischarge.solve_output' depends on axioms: [propext, Quot.sound.{u}]
+theorem DiamondIntegral.Section4.Section3GammaAffineDischarge.prod_div_zpow.{u_1, u_2} : ∀ {G : Type u_1}
+  [inst : CommGroup.{u_1} G] {ι : Type u_2} [inst_1 : Fintype.{u_2} ι] (x : ι → G) (p q : ι → ℤ),
+  Eq.{u_1 + 1}
+    (HDiv.hDiv.{u_1, u_1, u_1} (∏ i, HPow.hPow.{u_1, 0, u_1} (x i) (q i)) (∏ i, HPow.hPow.{u_1, 0, u_1} (x i) (p i)))
+    (∏ i, HPow.hPow.{u_1, 0, u_1} (x i) (HSub.hSub.{0, 0, 0} (q i) (p i))) :=
+⋯
+'DiamondIntegral.Section4.Section3GammaAffineDischarge.prod_div_zpow' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.Section3GammaAffineDischarge.prod_decompose.{u_1} : ∀ {G : Type u_1}
+  [inst : CommGroup.{u_1} G] {k n : ℕ} (γ : Fin k → G) (x : Fin n → G) (y : G)
+  (p : Fin (HAdd.hAdd.{0, 0, 0} k (HAdd.hAdd.{0, 0, 0} n 1)) → ℤ),
+  Eq.{u_1 + 1}
+    (∏ i,
+      HPow.hPow.{u_1, 0, u_1}
+        (Function.comp.{1, 1, u_1 + 1} (Sum.elim.{0, 0, u_1 + 1} γ (Fin.cons.{u_1 + 1} y x))
+          (⇑(Equiv.symm.{1, 1} finSumFinEquiv)) i)
+        (p i))
+    (HMul.hMul.{u_1, u_1, u_1} (∏ l, HPow.hPow.{u_1, 0, u_1} (γ l) (p (finSumFinEquiv (Sum.inl.{0, 0} l))))
+      (HMul.hMul.{u_1, u_1, u_1} (HPow.hPow.{u_1, 0, u_1} y (p (finSumFinEquiv (Sum.inr.{0, 0} 0))))
+        (∏ j, HPow.hPow.{u_1, 0, u_1} (x j) (p (finSumFinEquiv (Sum.inr.{0, 0} j.succ)))))) :=
+⋯
+'DiamondIntegral.Section4.Section3GammaAffineDischarge.prod_decompose' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.Section3GammaAffineDischarge.input : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base),
+  DiamondIntegral.Section4.Section3GammaAffineInput.Input B :=
+⋯
+'DiamondIntegral.Section4.Section3GammaAffineDischarge.input' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.GammaContinuousPartitions.exists_partition_discharged : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base) {n : ℕ}
+  (T : (Fin n → SpecialTransformations.Section3.Values.Gamma) → SpecialTransformations.Section3.Values.Gamma),
+  DiamondIntegral.Section4.GammaDefinableMaps.MapDefinable B T →
+    Nonempty.{1} (DiamondIntegral.Section4.GammaContinuousPartitions.Partition B n T) :=
+⋯
+'DiamondIntegral.Section4.GammaContinuousPartitions.exists_partition_discharged' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.GammaContinuousPartitions.exists_common_discharged : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base) {n N : ℕ}
+  (T : Fin N → (Fin n → SpecialTransformations.Section3.Values.Gamma) → SpecialTransformations.Section3.Values.Gamma),
+  (∀ (j : Fin N), DiamondIntegral.Section4.GammaDefinableMaps.MapDefinable B (T j)) →
+    Nonempty.{2} (DiamondIntegral.Section4.GammaContinuousPartitions.CommonCover B n N T) :=
+⋯
+'DiamondIntegral.Section4.GammaContinuousPartitions.exists_common_discharged' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.GammaContinuousDecomposition.exists_decomposition_discharged : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF],
+  FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00 →
+    ∀ {κ : Cardinal.{0}},
+      LE.le.{1} Cardinal.aleph0.{0} κ →
+        SpecialTransformations.Section3.Saturated M κ →
+          ∀ (B : SpecialTransformations.Section3.GammaParameters.Base),
+            LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ →
+              LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) κ →
+                ∀ (n : ℕ) (X : Set.{0} (Fin n → SpecialTransformations.Section3.Values.Gamma)),
+                  DiamondIntegral.Section4.GammaOrderLogic.GammaDefinable B X →
+                    Nonempty.{1} (DiamondIntegral.Section4.GammaContinuousCells.Decomposition B n X) :=
+⋯
+'DiamondIntegral.Section4.GammaContinuousDecomposition.exists_decomposition_discharged' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.GammaContinuousDecomposition.decompositionDischarged : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00 →
+        {κ : Cardinal.{0}} →
+          LE.le.{1} Cardinal.aleph0.{0} κ →
+            SpecialTransformations.Section3.Saturated M κ →
+              (B : SpecialTransformations.Section3.GammaParameters.Base) →
+                LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ →
+                  LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) κ →
+                    (n : ℕ) →
+                      (X : Set.{0} (Fin n → SpecialTransformations.Section3.Values.Gamma)) →
+                        DiamondIntegral.Section4.GammaOrderLogic.GammaDefinable B X →
+                          DiamondIntegral.Section4.GammaContinuousCells.Decomposition B n X :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] h00 {κ} hκ hs B hr hγ n
+    X hX =>
+  DiamondIntegral.Section4.GammaContinuousDecomposition.decomposition h00 hκ hs B hr hγ ⋯ n X hX
+'DiamondIntegral.Section4.GammaContinuousDecomposition.decompositionDischarged' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.GammaContinuousDecomposition.constructed_geometric_sum_discharged : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (h00 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00)
+  {κ : Cardinal.{0}} (hκ : LE.le.{1} Cardinal.aleph0.{0} κ) (hs : SpecialTransformations.Section3.Saturated M κ)
+  (B : SpecialTransformations.Section3.GammaParameters.Base) (hr : LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ)
+  (hγ : LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) κ) (n : ℕ)
+  (X : Set.{0} (Fin n → SpecialTransformations.Section3.Values.Gamma))
+  (hX : DiamondIntegral.Section4.GammaOrderLogic.GammaDefinable B X),
+  Eq.{1}
+    ((DiamondIntegral.Section4.GammaIteratedIntegral.integrateAll h00 hκ hs B hr hγ
+        DiamondIntegral.Section4.EulerKind.geometric n)
+      (DiamondIntegral.Section4.GammaIndicators.indicatorFamily B X hX))
+    (∑ i,
+      HPow.hPow.{0, 0, 0} (-1)
+        ((DiamondIntegral.Section4.GammaContinuousDecomposition.decompositionDischarged h00 hκ hs B hr hγ n X
+              hX).dimension
+          i)) :=
+⋯
+'DiamondIntegral.Section4.GammaContinuousDecomposition.constructed_geometric_sum_discharged' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.GammaContinuousDecomposition.geometric_sum_discharged : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (h00 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00)
+  {κ : Cardinal.{0}} (hκ : LE.le.{1} Cardinal.aleph0.{0} κ) (hs : SpecialTransformations.Section3.Saturated M κ)
+  (B : SpecialTransformations.Section3.GammaParameters.Base) (hr : LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ)
+  (hγ : LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) κ) (n : ℕ)
+  (X : Set.{0} (Fin n → SpecialTransformations.Section3.Values.Gamma))
+  (hX : DiamondIntegral.Section4.GammaOrderLogic.GammaDefinable B X),
+  ∃ D,
+    Eq.{1}
+      ((DiamondIntegral.Section4.GammaIteratedIntegral.integrateAll h00 hκ hs B hr hγ
+          DiamondIntegral.Section4.EulerKind.geometric n)
+        (DiamondIntegral.Section4.GammaIndicators.indicatorFamily B X hX))
+      (∑ i, HPow.hPow.{0, 0, 0} (-1) (D.dimension i)) :=
+⋯
+'DiamondIntegral.Section4.GammaContinuousDecomposition.geometric_sum_discharged' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.GammaContinuousDecomposition.euler_characteristic_discharged : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (h00 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00)
+  {κ : Cardinal.{0}} (hκ : LE.le.{1} Cardinal.aleph0.{0} κ) (hs : SpecialTransformations.Section3.Saturated M κ)
+  (B : SpecialTransformations.Section3.GammaParameters.Base) (hr : LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ)
+  (hγ : LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) κ) (n : ℕ)
+  (X : Set.{0} (Fin n → SpecialTransformations.Section3.Values.Gamma))
+  (hX : DiamondIntegral.Section4.GammaOrderLogic.GammaDefinable B X),
+  ∃ D,
+    Eq.{1}
+        ((DiamondIntegral.Section4.GammaIteratedIntegral.integrateAll h00 hκ hs B hr hγ
+            DiamondIntegral.Section4.EulerKind.geometric n)
+          (DiamondIntegral.Section4.GammaIndicators.indicatorFamily B X hX))
+        (∑ i, HPow.hPow.{0, 0, 0} (-1) (D.dimension i)) ∧
+      ∀ (E : DiamondIntegral.Section4.GammaContinuousCells.Decomposition B n X),
+        Eq.{1} (∑ j, HPow.hPow.{0, 0, 0} (-1) (E.dimension j)) (∑ i, HPow.hPow.{0, 0, 0} (-1) (D.dimension i)) :=
+⋯
+'DiamondIntegral.Section4.GammaContinuousDecomposition.euler_characteristic_discharged' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.GammaContinuousDecomposition.pieces_nonempty_discharged : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (h00 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00)
+  {κ : Cardinal.{0}} (hκ : LE.le.{1} Cardinal.aleph0.{0} κ) (hs : SpecialTransformations.Section3.Saturated M κ)
+  (B : SpecialTransformations.Section3.GammaParameters.Base) (hr : LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ)
+  (hγ : LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) κ) (n : ℕ)
+  (X : Set.{0} (Fin n → SpecialTransformations.Section3.Values.Gamma))
+  (hX : DiamondIntegral.Section4.GammaOrderLogic.GammaDefinable B X)
+  (i :
+    Fin (DiamondIntegral.Section4.GammaContinuousDecomposition.decompositionDischarged h00 hκ hs B hr hγ n X hX).size),
+  Set.Nonempty.{0}
+    ((DiamondIntegral.Section4.GammaContinuousDecomposition.decompositionDischarged h00 hκ hs B hr hγ n X hX).pieces
+      i) :=
+⋯
+'DiamondIntegral.Section4.GammaContinuousDecomposition.pieces_nonempty_discharged' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.GammaContinuousDecomposition.dimensions_bounded_discharged : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (h00 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00)
+  {κ : Cardinal.{0}} (hκ : LE.le.{1} Cardinal.aleph0.{0} κ) (hs : SpecialTransformations.Section3.Saturated M κ)
+  (B : SpecialTransformations.Section3.GammaParameters.Base) (hr : LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ)
+  (hγ : LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) κ) (n : ℕ)
+  (X : Set.{0} (Fin n → SpecialTransformations.Section3.Values.Gamma))
+  (hX : DiamondIntegral.Section4.GammaOrderLogic.GammaDefinable B X)
+  (i :
+    Fin (DiamondIntegral.Section4.GammaContinuousDecomposition.decompositionDischarged h00 hκ hs B hr hγ n X hX).size),
+  LE.le.{0}
+    ((DiamondIntegral.Section4.GammaContinuousDecomposition.decompositionDischarged h00 hκ hs B hr hγ n X hX).dimension
+      i)
+    n :=
+⋯
+'DiamondIntegral.Section4.GammaContinuousDecomposition.dimensions_bounded_discharged' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
 def DiamondIntegral.Section2.GammaPiecewiseRationalAffineInput : {M : Type} →
   [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
     [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] → Prop :=
