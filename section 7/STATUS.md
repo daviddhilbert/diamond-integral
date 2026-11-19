@@ -57,13 +57,18 @@ arbitrary parameter base and take no input beyond the ACVF model.
   bounded and ∞-free when doubly bounded), using the converse definability
   bridge `RealBase.real_base`. Hence `liftCls` is surjective
   (`liftCls_surjective`, Corollary 6.37 on Section 7's classes).
-- 7.11 in progress. The 7.12 pipeline now takes arbitrary relative aperture
-  data. `IsoOfMeasured` identifies measured RV isomorphisms of chart objects
-  with chart isomorphisms. `SpecialStep.step_of_data` proves one relative step
-  on a chart lift, with all labels active: Step (cls U) (cls U_T).
-  - Remaining for 7.11: inactive labels, original and zero-centred steps,
-    chains and partial lifts.
-  - Then 7.13 (head-start form, via 6.38).
+- 7.11 done for the full lift (`SpecialChainInduction.lemma_7_11`), on
+  classes. Along a relative aperture chain, the chain invariant `Good` (an RV
+  pullback with finite RV fibres and a label-constant form) is preserved, and
+  its class (the contraction of the regularization) changes by one blowup at
+  each relative or centripetal step:
+  - `SpecialStep.step_of_data`: one relative step with all labels active;
+  - `SpecialChainSplit`, `SpecialChainRel.step_rel`: inactive labels split off;
+  - `SpecialChains.clsG_reg`, `clsG_zc`: regularization and zero-centred steps
+    keep the class;
+  - `SpecialChainInduction.relative_chain`, `unary_chain`: the induction.
+  - Pending: the partial-lift form (approved), stated together with 7.13's
+    head start when 7.14 is set up.
 - Deferred: the product part of Lemma 7.10. It needs a graded product on
   Section 7's class monoid (products distributing over tagged coproducts, and
   products of annular data). Only the ring form of 7.26 uses it, where the
@@ -75,6 +80,6 @@ arbitrary parameter base and take no input beyond the ACVF model.
 
 ## Next
 
-7.11 and 7.13, then M4 (7.14–7.15), M5 (7.16–7.23) and M6 (7.24–7.28) as in
+7.13, then M4 (7.14–7.15), M5 (7.16–7.23) and M6 (7.24–7.28) as in
 PLAN.md. Product compatibility (7.10) and the object-level converse for
 Definition 7.2 remain open side items.

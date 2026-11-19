@@ -1,8 +1,8 @@
 {
   "status": "PASS",
-  "scope": "Section 7 formalization in progress. Complete numbered results, on isomorphism classes of mu RV^db[1+k] over an arbitrary parameter base and with no input beyond the ACVF model: Definition 7.2 (elementary annular blowups with bounded variable apertures = Section 4 AnnularDatum/relative annular objects; restriction to definable pieces; blowups of length one and chains, on classes), Lemma 7.5 (BlowupResults.lemma_7_5), Corollary 7.6, Lemma 7.7, Corollary 7.8, Definition 7.9 (MuIsp) and the additive part of Lemma 7.10 (an AddCon); Lemma 7.12 on classes over the VF-generated base (BlowupLiftGeneral.lemma_7_12: liftCls [U^{tau,j}] = liftCls [U] for every aperture datum; step_lift, steps_lift, muIsp_lift for blowups of any length); Remark 7.3 (dimension claim); Definitions 7.16, 7.17, 7.19 and Remark 7.18 (infinity symmetry and slope); Corollary 6.37 on Section 7 classes (ChartOfMeasured.liftCls_surjective); Lemma 7.11 for one relative step on a chart lift with all labels active (SpecialStep.step_of_data). Supporting: the commutative monoid of isomorphism classes with refinement, and the mu VF^diamond chart lifts of Definitions 6.34-6.37.",
+  "scope": "Section 7 formalization in progress. Complete numbered results, on isomorphism classes of mu RV^db[1+k] over an arbitrary parameter base and with no input beyond the ACVF model: Definition 7.2 (elementary annular blowups with bounded variable apertures = Section 4 AnnularDatum/relative annular objects; restriction to definable pieces; blowups of length one and chains, on classes), Lemma 7.5 (BlowupResults.lemma_7_5), Corollary 7.6, Lemma 7.7, Corollary 7.8, Definition 7.9 (MuIsp) and the additive part of Lemma 7.10 (an AddCon); Lemma 7.12 on classes over the VF-generated base (BlowupLiftGeneral.lemma_7_12: liftCls [U^{tau,j}] = liftCls [U] for every aperture datum; step_lift, steps_lift, muIsp_lift for blowups of any length); Remark 7.3 (dimension claim); Definitions 7.16, 7.17, 7.19 and Remark 7.18 (infinity symmetry and slope); Corollary 6.37 on Section 7 classes (ChartOfMeasured.liftCls_surjective); Lemma 7.11 for the full lift, on classes over a substructure base \u27e8T, \u2205\u27e9 (SpecialChainInduction.lemma_7_11: along a relative aperture chain on the lift of a doubly bounded object, the contraction U_T has a class reached by blowups; relative_chain, special_chain, unary_chain). Supporting: the commutative monoid of isomorphism classes with refinement, and the mu VF^diamond chart lifts of Definitions 6.34-6.37.",
   "lean": "Lean (version 4.35.0, arm64-apple-darwin24.6.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
-  "repository_revision": "ad80f8554639465c468410f12333b253fb7af0d9",
+  "repository_revision": "8adbd10bb1e35415b336b56a7ddba935f1f97f38",
   "packages": {
     "fubini_theorems": "c94e50c50a950ab485277a9d94625a4417789e06",
     "integration_in_acvf": "ab4c0e8b15e1e21b0b4fce57eed764be76020e06",
@@ -510,6 +510,13 @@
     "DiamondIntegral.Section7.SpecialChainInduction.claim_of_point",
     "DiamondIntegral.Section7.SpecialChainInduction.special_chain",
     "DiamondIntegral.Section7.SpecialChainInduction.relative_chain",
+    "DiamondIntegral.Section7.SpecialChainInduction.lift_tagged",
+    "DiamondIntegral.Section7.SpecialChainInduction.liftGood",
+    "DiamondIntegral.Section7.SpecialChainInduction.exists_lift_point",
+    "DiamondIntegral.Section7.SpecialChainInduction.contrLiftIso",
+    "DiamondIntegral.Section7.SpecialChainInduction.clsG_lift",
+    "DiamondIntegral.Section7.SpecialChainInduction.lemma_7_11",
+    "DiamondIntegral.Section7.SpecialChainInduction.unary_chain",
     "DiamondIntegral.Section7.SpecialChainRel.decode_tail",
     "DiamondIntegral.Section7.SpecialChainRel.tailDef_definable",
     "DiamondIntegral.Section7.SpecialChainRel.tailDef",
@@ -711,7 +718,7 @@
     "section 7/Remark73.lean": "35172b6743e820714a63845c882017838a4eec64bb1960fd8edc4f83f214821d",
     "section 7/Remark74.lean": "2d3faf226148c49a4aa24dc20b398f13fb4d85dee3dd2e8ac1e489eadc8d9f4b",
     "section 7/Section.lean": "06eb9fb498c64300314c9294c136aa7c2ea37610874458cfd8d01be5845bc910",
-    "section 7/SpecialChainInduction.lean": "6521847109f101d7c735328b36fbc9ea0be95e62ba779763d78500627b69a863",
+    "section 7/SpecialChainInduction.lean": "3cd92636ed19154448507b196bac5e2739c2a1727c71298dda099acf56b65cc2",
     "section 7/SpecialChainRel.lean": "4fddc20c2924e637c60c8acd5191e32f4edcc653564829d62124f77d22dabd2b",
     "section 7/SpecialChainSplit.lean": "5f2185ccac9434fef459ee532c9c81515ce30cb2d1ce26c692aefcba261a0c05",
     "section 7/SpecialChainStep.lean": "3869d98c69c6ac43f29df986307dc640a2235886db72a5d71af20946f772793e",
@@ -720,11 +727,11 @@
     "section 7/StrictCharts.lean": "da9c25f231a08463d123acf8c91c48be8b167a89db2c4314f14f19fc3142ac2d",
     "section 7/TwoCells.lean": "53f07ef0e8ff1d66b5bde04b5b6286a435e3f165d01f5bbfa19474c4f9e8215c"
   },
-  "verification_script_sha256": "e2cdd36f7bdc57b0079f6710bdee13d929bbb7e5819acc261a2c8231b46039dc",
+  "verification_script_sha256": "41aa8f28627d77d26a5dc2d889a09ca6c1259cf32627078fbd6c37a4505dc095",
   "unfinished": [
     "Lemma 7.10 multiplicative part (products).",
     "Object-level converse of BlowupResults: a class-level length-one blowup is realised by literal disjoint subobjects (Definition 7.2 wording).",
     "Object-level form of Lemma 7.12 (an isomorphism mu L U^flat = mu L U in mu VF^diamond rather than equality in K_+); later uses need only the class form.",
-    "Lemma 7.11 beyond one relative step (inactive labels, original and zero-centred steps, chains, partial lifts), Lemma 7.13, Lemmas 7.14, 7.15, 7.20-7.23, Proposition 7.24, Remark 7.25, Theorem 7.26 with J_var, Corollary 7.27 and Remark 7.28 remain to be formalized."
+    "Lemma 7.11 in the approved partial-lift form, Lemma 7.13, Lemmas 7.14, 7.15, 7.20-7.23, Proposition 7.24, Remark 7.25, Theorem 7.26 with J_var, Corollary 7.27 and Remark 7.28 remain to be formalized."
   ]
 }

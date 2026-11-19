@@ -1470,6 +1470,27 @@ import «section 7».Section
 #check @DiamondIntegral.Section7.SpecialChainInduction.relative_chain
 #print DiamondIntegral.Section7.SpecialChainInduction.relative_chain
 #print axioms DiamondIntegral.Section7.SpecialChainInduction.relative_chain
+#check @DiamondIntegral.Section7.SpecialChainInduction.lift_tagged
+#print DiamondIntegral.Section7.SpecialChainInduction.lift_tagged
+#print axioms DiamondIntegral.Section7.SpecialChainInduction.lift_tagged
+#check @DiamondIntegral.Section7.SpecialChainInduction.liftGood
+#print DiamondIntegral.Section7.SpecialChainInduction.liftGood
+#print axioms DiamondIntegral.Section7.SpecialChainInduction.liftGood
+#check @DiamondIntegral.Section7.SpecialChainInduction.exists_lift_point
+#print DiamondIntegral.Section7.SpecialChainInduction.exists_lift_point
+#print axioms DiamondIntegral.Section7.SpecialChainInduction.exists_lift_point
+#check @DiamondIntegral.Section7.SpecialChainInduction.contrLiftIso
+#print DiamondIntegral.Section7.SpecialChainInduction.contrLiftIso
+#print axioms DiamondIntegral.Section7.SpecialChainInduction.contrLiftIso
+#check @DiamondIntegral.Section7.SpecialChainInduction.clsG_lift
+#print DiamondIntegral.Section7.SpecialChainInduction.clsG_lift
+#print axioms DiamondIntegral.Section7.SpecialChainInduction.clsG_lift
+#check @DiamondIntegral.Section7.SpecialChainInduction.lemma_7_11
+#print DiamondIntegral.Section7.SpecialChainInduction.lemma_7_11
+#print axioms DiamondIntegral.Section7.SpecialChainInduction.lemma_7_11
+#check @DiamondIntegral.Section7.SpecialChainInduction.unary_chain
+#print DiamondIntegral.Section7.SpecialChainInduction.unary_chain
+#print axioms DiamondIntegral.Section7.SpecialChainInduction.unary_chain
 #check @DiamondIntegral.Section7.SpecialChainRel.decode_tail
 #print DiamondIntegral.Section7.SpecialChainRel.decode_tail
 #print axioms DiamondIntegral.Section7.SpecialChainRel.decode_tail
