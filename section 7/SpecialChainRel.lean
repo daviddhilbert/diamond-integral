@@ -76,4 +76,136 @@ theorem mem_tailDef (L : Fin (1 + r) → RVInfinity M) :
 
 end Tail
 
+/-! ### Auxiliary constructions -/
+
+/-- A map with values in a smaller definable set. -/
+def mapCorestrict {P Q : Space LRV M} {S : Set M} {A : DefSet P S} {B C : DefSet Q S} (f : Map A B)
+    (h : ∀ a, (f a).val ∈ C.carrier) : Map A C where
+  toFun a := ⟨(f a).val, h a⟩
+  graph_definable := f.graph_definable
+
+theorem clsG_congr (hc : CanonicalStructure.IsCanonical (M := M)) {T : LRV.Substructure M}
+    {X X' : DefSet (rawMixedSpace (M := M) n r) (T : Set M)} (h : X = X') (g : Good T X) (g' : Good T X')
+    (hform : ∀ p : X, g'.form ⟨p.val, h ▸ p.property⟩ = g.form p) : clsG hc g = clsG hc g' := by
+  subst h
+  have he : g = g' := by
+    cases g
+    cases g'
+    congr
+    apply Map.ext
+    intro p
+    exact (hform p).symm
+  rw [he]
+
+/-! ### The general relative step -/
+
+section RelGeneral
+open DiamondIntegral.Section7.BoundedClasses DiamondIntegral.Section7.LiftClasses
+open DiamondIntegral.Section7.ElementaryBlowups
+variable {G : Type} [LinearOrderedCommGroupWithZero G] [Valued (VF M) G]
+variable (hc : CanonicalStructure.IsCanonical (M := M)) {T : LRV.Substructure M} {k : ℕ}
+variable {X : DefSet (rawMixedSpace (M := M) (1 + k) r) (T : Set M)} (g : Good T X)
+variable (R : DiamondIntegral.Section6.RelativeApertureData (G := G) X)
+variable {κ : Cardinal} (hκ : Cardinal.aleph0 < κ) (hs : Saturated M κ) (hsmall : Cardinal.mk (T : Set M) < κ)
+variable (h00 : M ⊨ Axioms.ACVF00)
+
+/-- The active part, with the restricted data. -/
+abbrev gA : Good T (focusActive X R.activeTags) := goodRes g R.activeTags
+abbrev RA := RelativeRestrict.RelativeApertureData.restrictActive R
+
+theorem point_snd_tail (p : Mixed M (1 + k) r) : (fun i => (R.point p).2 (Fin.natAdd 1 i)) = p.2 := by
+  funext i
+  simp only [DiamondIntegral.Section6.RelativeApertureData.point, Fin.append_right]
+
+theorem mem_image {q : Mixed M (1 + k) (1 + r)} : q ∈ R.map.image.carrier ↔ ∃ p ∈ X.carrier, R.point p = q := by
+  rw [DiamondIntegral.Section6.RelativeApertureData.image_carrier]
+  rfl
+
+/-- The image of the active part is the active piece of the image. -/
+theorem active_image_eq :
+    focusActive R.map.image (tailDef R.activeTags) = (RA R).map.image := by
+  apply DefSet.eq_of_carrier_eq
+  ext q
+  rw [DiamondIntegral.Section6.RelativeApertureData.image_carrier]
+  constructor
+  · rintro ⟨hq, hJ⟩
+    obtain ⟨p, hp, rfl⟩ := (mem_image R).mp hq
+    have hpa : p.2 ∈ R.activeTags.carrier := by
+      have := hJ
+      rw [mem_tailDef, point_snd_tail] at this
+      exact this
+    exact ⟨p, ⟨hp, hpa⟩, RelativeRestrict.RelativeApertureData.restrictActive_point R ⟨hp, hpa⟩⟩
+  · rintro ⟨p, hp, rfl⟩
+    rw [RelativeRestrict.RelativeApertureData.restrictActive_point R hp]
+    refine ⟨(mem_image R).mpr ⟨p, hp.1, rfl⟩, ?_⟩
+    rw [mem_tailDef, point_snd_tail]
+    exact hp.2
+
+/-- The active part's image is a chain set (`SpecialChainStep.relGood`). -/
+abbrev gRA : Good T (RA R).map.image :=
+  relGood hc (gA g R) (RA R) (RelativeRestrict.RelativeApertureData.restrictActive_all R) hκ hs hsmall h00
+
+/-- The image of a relative step, with the transported form. -/
+def imageGood : Good T R.map.image where
+  pullback := by
+    show rvHull _ = _
+    apply Set.Subset.antisymm
+    · intro q hq
+      obtain ⟨p', hp', h1, h2⟩ := (mem_rvHull_iff _ q).mp hq
+      obtain ⟨x, hx, rfl⟩ := (mem_image R).mp hp'
+      by_cases ha : x.2 ∈ R.activeTags.carrier
+      · have hxa : R.point x ∈ (RA R).map.image.carrier := by
+          rw [DiamondIntegral.Section6.RelativeApertureData.image_carrier]
+          exact ⟨x, ⟨hx, ha⟩, RelativeRestrict.RelativeApertureData.restrictActive_point R ⟨hx, ha⟩⟩
+        have hqa := rvPullback_mem_of_sameRV (gRA hc g R hκ hs hsmall h00).pullback hxa h1 h2
+        rw [DiamondIntegral.Section6.RelativeApertureData.image_carrier] at hqa
+        obtain ⟨y, hy, he⟩ := hqa
+        rw [RelativeRestrict.RelativeApertureData.restrictActive_point R hy] at he
+        exact (mem_image R).mpr ⟨y, hy.1, he⟩
+      · rw [RelativeRestrict.RelativeApertureData.point_inactive R ha] at h1 h2
+        have hy : (q.1, x.2) ∈ X.carrier := rvPullback_mem_of_sameRV g.pullback hx h1 rfl
+        refine (mem_image R).mpr ⟨(q.1, x.2), hy, ?_⟩
+        rw [RelativeRestrict.RelativeApertureData.point_inactive R (p := (q.1, x.2)) ha]
+        exact Prod.ext rfl h2
+    · intro q hq
+      exact (mem_rvHull_iff _ q).mpr ⟨q, hq, rfl, rfl⟩
+  finite := by
+    intro a
+    apply (((gRA hc g R hκ hs hsmall h00).finite a).union
+      ((g.finite a).image (fun u => Fin.append (fun _ : Fin 1 => branchTag (M := M) false) u))).subset
+    intro L hL
+    obtain ⟨x, hx, he⟩ := (mem_image R).mp hL
+    by_cases ha : x.2 ∈ R.activeTags.carrier
+    · left
+      change (a, L) ∈ (RA R).map.image.carrier
+      rw [DiamondIntegral.Section6.RelativeApertureData.image_carrier]
+      exact ⟨x, ⟨hx, ha⟩, (RelativeRestrict.RelativeApertureData.restrictActive_point R ⟨hx, ha⟩).trans he⟩
+    · right
+      rw [RelativeRestrict.RelativeApertureData.point_inactive R ha] at he
+      have h1 : x.1 = a := congrArg Prod.fst he
+      refine ⟨x.2, ?_, congrArg Prod.snd he⟩
+      change (a, x.2) ∈ X.carrier
+      rw [← h1]
+      exact hx
+  vfBounded := R.image_vfDoublyBounded
+  rvBounded := R.image_rvDoublyBounded
+  form := g.form.comp (R.bijection.inverse (R.bijective h00))
+  form_labels := by
+    intro p q he
+    obtain ⟨a, rfl⟩ := (R.bijective h00).2 p
+    obtain ⟨b, rfl⟩ := (R.bijective h00).2 q
+    change g.form (R.bijection.inverse _ (R.bijection a)) = g.form (R.bijection.inverse _ (R.bijection b))
+    rw [Map.inverse_apply, Map.inverse_apply]
+    apply g.form_labels
+    have ha := point_snd_tail R a.val
+    have hb := point_snd_tail R b.val
+    have he' : (R.point a.val).2 = (R.point b.val).2 := he
+    rw [← ha, ← hb, he']
+
+theorem imageGood_form (x : X) : (imageGood hc g R hκ hs hsmall h00).form (R.bijection x) = g.form x := by
+  change g.form (R.bijection.inverse _ (R.bijection x)) = _
+  rw [Map.inverse_apply]
+
+end RelGeneral
+
 end DiamondIntegral.Section7.SpecialChainRel
