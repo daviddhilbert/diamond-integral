@@ -75,6 +75,11 @@ arbitrary parameter base and take no input beyond the ACVF model.
   - Head start: needs Lemma 6.38 for label-preserving morphisms and the
     partial-lift form of 7.11 (chains carried to head-start bundles). Set up
     with 7.14, which is its only use.
+- Prepared for later results: `GoodPoints` (polynomial and grid lemmas for
+  7.15) and `Groupification` (K(M ⧸ c) = K(M) ⧸ ⟨x − y⟩ for 7.26).
+- 7.14 scope (2026-11-19): its upstream analog for ordinary blowups is about
+  25k lines of uniformization. The author was asked whether to build it in
+  full now or to state it as an explicit replaceable input first.
 - Deferred: the product part of Lemma 7.10. It needs a graded product on
   Section 7's class monoid (products distributing over tagged coproducts, and
   products of annular data). Only the ring form of 7.26 uses it, where the

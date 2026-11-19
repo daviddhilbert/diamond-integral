@@ -18410,6 +18410,395 @@ fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransf
   DiamondIntegral.Section7.ElementaryComparison.elementaryDiamond D E
     (DiamondIntegral.Section7.BoundedClasses.cls_eq_iff.mpr h)
 'DiamondIntegral.Section7.ElementaryComparison.lemma_7_5' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.GoodPoints.exists_grid_nonzero : ∀ {σ : Type u_1} {F : Type u_2} [Finite σ] [inst : Field F]
+  (P : MvPolynomial σ F),
+  P ≠ 0 →
+    ∀ (a : σ → F) (C : Finset F), P.totalDegree < C.card → ∃ y, (∀ (i : σ), y i ∈ C) ∧ (MvPolynomial.eval (a + y)) P ≠ 0
+theorem DiamondIntegral.Section7.GoodPoints.exists_grid_nonzero.{u_1, u_2} : ∀ {σ : Type u_1} {F : Type u_2} [Finite σ]
+  [inst : Field F] (P : MvPolynomial σ F),
+  P ≠ 0 →
+    ∀ (a : σ → F) (C : Finset F),
+      P.totalDegree < C.card → ∃ y, (∀ (i : σ), y i ∈ C) ∧ (MvPolynomial.eval (a + y)) P ≠ 0 :=
+fun {σ} {F} [Finite σ] [Field F] P hP a C hC =>
+  Decidable.byContradiction fun h =>
+    hP
+      (MvPolynomial.eq_zero_of_eval_zero_at_prod_finset P (fun i => Finset.image (fun c => a i + c) C)
+        (fun i =>
+          Eq.mpr
+            (id
+              (congrArg (fun _a => MvPolynomial.degreeOf i P < _a)
+                (Finset.card_image_of_injective C (add_right_injective (a i)))))
+            (lt_of_le_of_lt (MvPolynomial.degreeOf_le_totalDegree P i) hC))
+        fun x hx =>
+        have hy := fun i =>
+          Exists.casesOn (Finset.mem_image.mp (hx i)) fun c h =>
+            And.casesOn h fun hc hce =>
+              Eq.mpr (id (congrArg (fun _a => _a - a i ∈ C) (Eq.symm hce)))
+                (Eq.mpr (id (congrArg (fun _a => _a ∈ C) (add_sub_cancel_left (a i) c))) hc);
+        have h' :=
+          Eq.mp
+            (Eq.trans
+              (Mathlib.Tactic.Push.not_exists._simp_1 fun y => (∀ (i : σ), y i ∈ C) ∧ (MvPolynomial.eval (a + y)) P ≠ 0)
+              (forall_congr fun y =>
+                Eq.trans (Mathlib.Tactic.Push.not_and_eq (∀ (i : σ), y i ∈ C) ((MvPolynomial.eval (a + y)) P ≠ 0))
+                  (implies_congr (Eq.refl (∀ (i : σ), y i ∈ C)) Classical.not_not._simp_2)))
+            h (fun i => x i - a i) hy;
+        have hxa :=
+          funext fun i =>
+            of_eq_true (Eq.trans (congrFun' (congrArg Eq (add_sub_cancel (a i) (x i))) (x i)) (eq_self (x i)));
+        Eq.mp (congrArg (fun _a => (MvPolynomial.eval _a) P = 0) hxa) h')
+'DiamondIntegral.Section7.GoodPoints.exists_grid_nonzero' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.GoodPoints.exists_grid_nonzero_subfield : ∀ {σ : Type u_1} {F : Type u_2} [Finite σ]
+  [inst : Field F] (K : Subfield F) (P : MvPolynomial σ ↥K),
+  P ≠ 0 →
+    ∀ (a : σ → F) (C : Finset F),
+      P.totalDegree < C.card → ∃ y, (∀ (i : σ), y i ∈ C) ∧ MvPolynomial.eval₂ K.subtype (a + y) P ≠ 0
+theorem DiamondIntegral.Section7.GoodPoints.exists_grid_nonzero_subfield.{u_1, u_2} : ∀ {σ : Type u_1} {F : Type u_2}
+  [Finite σ] [inst : Field F] (K : Subfield F) (P : MvPolynomial σ ↥K),
+  P ≠ 0 →
+    ∀ (a : σ → F) (C : Finset F),
+      P.totalDegree < C.card → ∃ y, (∀ (i : σ), y i ∈ C) ∧ MvPolynomial.eval₂ K.subtype (a + y) P ≠ 0 :=
+fun {σ} {F} [Finite σ] [Field F] K P hP a C hC =>
+  have hinj := MvPolynomial.map_injective K.subtype (Subfield.subtype_injective K);
+  have hP' := fun h0 =>
+    hP
+      (hinj
+        (Eq.mpr (id (congrArg (fun _a => _a = (MvPolynomial.map K.subtype) 0) h0))
+          (Eq.mpr (id (congrArg (fun _a => 0 = _a) (map_zero (MvPolynomial.map K.subtype)))) (Eq.refl 0))));
+  have hdeg :=
+    have he :=
+      id
+        (Eq.mpr
+          (id
+            (congrArg (fun _a => (_a.sup fun s => s.sum fun x e => e) = P.support.sup fun s => s.sum fun x e => e)
+              (MvPolynomial.support_map_of_injective P (Subfield.subtype_injective K))))
+          (Eq.refl (P.support.sup fun s => s.sum fun x e => e)));
+    Eq.mpr (id (congrArg (fun _a => _a < C.card) he)) hC;
+  Exists.casesOn (DiamondIntegral.Section7.GoodPoints.exists_grid_nonzero ((MvPolynomial.map K.subtype) P) hP' a C hdeg)
+    fun y h =>
+    And.casesOn h fun hy hne =>
+      Exists.intro y
+        ⟨hy, Eq.mpr (id (congrArg (fun _a => _a ≠ 0) (MvPolynomial.eval₂_eq_eval_map K.subtype (a + y) P))) hne⟩
+'DiamondIntegral.Section7.GoodPoints.exists_grid_nonzero_subfield' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@DiamondIntegral.Section7.GoodPoints.exists_polynomial_vanishing_of_dim_lt : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set M} {n r : ℕ},
+  CanonicalStructure.IsCanonical →
+    ∀ {κ : Cardinal.{0}},
+      SpecialTransformations.Section3.Saturated M κ →
+        Cardinal.mk ↑S < κ →
+          ∀ (E : SpecialTransformations.DefinableGeometry.DefSet (SpecialTransformations.Section4.rawMixedSpace n r) S),
+            SpecialTransformations.Section4.vfDim (SpecialTransformations.Section4.rawRVSpace 1) E < n →
+              ∃ p,
+                p ≠ 0 ∧
+                  ∀ (a : ↑E.carrier),
+                    MvPolynomial.eval₂ (SpecialTransformations.Section3.vfParameterField S).subtype (↑a).1 p = 0
+theorem DiamondIntegral.Section7.GoodPoints.exists_polynomial_vanishing_of_dim_lt : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set M} {n r : ℕ},
+  CanonicalStructure.IsCanonical →
+    ∀ {κ : Cardinal.{0}},
+      SpecialTransformations.Section3.Saturated M κ →
+        Cardinal.mk ↑S < κ →
+          ∀ (E : SpecialTransformations.DefinableGeometry.DefSet (SpecialTransformations.Section4.rawMixedSpace n r) S),
+            SpecialTransformations.Section4.vfDim (SpecialTransformations.Section4.rawRVSpace 1) E < n →
+              ∃ p,
+                p ≠ 0 ∧
+                  ∀ (a : ↑E.carrier),
+                    MvPolynomial.eval₂ (SpecialTransformations.Section3.vfParameterField S).subtype (↑a).1 p = 0 :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {S}
+    {n r} hc {κ} hs hsmall E hDim =>
+  SpecialTransformations.Section4.exists_polynomial_vanishing_on_selection hs hsmall E id fun a hind =>
+    DiamondIntegral.Section6.not_mem_small_set_of_independent hc E hDim (↑a) hind a.property
+'DiamondIntegral.Section7.GoodPoints.exists_polynomial_vanishing_of_dim_lt' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@DiamondIntegral.Section7.Groupification.relationSubgroup : {M : Type u_1} →
+  [inst : AddCommMonoid M] → AddCon M → AddSubgroup (Algebra.GrothendieckAddGroup M)
+def DiamondIntegral.Section7.Groupification.relationSubgroup.{u_1} : {M : Type u_1} →
+  [inst : AddCommMonoid M] → AddCon M → AddSubgroup (Algebra.GrothendieckAddGroup M) :=
+fun {M} [AddCommMonoid M] c =>
+  AddSubgroup.closure {z | ∃ x y, c x y ∧ z = Algebra.GrothendieckAddGroup.of x - Algebra.GrothendieckAddGroup.of y}
+'DiamondIntegral.Section7.Groupification.relationSubgroup' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.Groupification.sub_mem_relationSubgroup : ∀ {M : Type u_1} [inst : AddCommMonoid M]
+  (c : AddCon M) {x y : M},
+  c x y →
+    Algebra.GrothendieckAddGroup.of x - Algebra.GrothendieckAddGroup.of y ∈
+      DiamondIntegral.Section7.Groupification.relationSubgroup c
+theorem DiamondIntegral.Section7.Groupification.sub_mem_relationSubgroup.{u_1} : ∀ {M : Type u_1}
+  [inst : AddCommMonoid M] (c : AddCon M) {x y : M},
+  c x y →
+    Algebra.GrothendieckAddGroup.of x - Algebra.GrothendieckAddGroup.of y ∈
+      DiamondIntegral.Section7.Groupification.relationSubgroup c :=
+fun {M} [AddCommMonoid M] c {x y} h => AddSubgroup.subset_closure (Exists.intro x (Exists.intro y ⟨h, rfl⟩))
+'DiamondIntegral.Section7.Groupification.sub_mem_relationSubgroup' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@DiamondIntegral.Section7.Groupification.toQuotientGroup : {M : Type u_1} →
+  [inst : AddCommMonoid M] → (c : AddCon M) → Algebra.GrothendieckAddGroup M →+ Algebra.GrothendieckAddGroup c.Quotient
+def DiamondIntegral.Section7.Groupification.toQuotientGroup.{u_1} : {M : Type u_1} →
+  [inst : AddCommMonoid M] →
+    (c : AddCon M) → Algebra.GrothendieckAddGroup M →+ Algebra.GrothendieckAddGroup c.Quotient :=
+fun {M} [AddCommMonoid M] c => Algebra.GrothendieckAddGroup.lift (Algebra.GrothendieckAddGroup.of.comp c.mk')
+'DiamondIntegral.Section7.Groupification.toQuotientGroup' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.Groupification.toQuotientGroup_of : ∀ {M : Type u_1} [inst : AddCommMonoid M] (c : AddCon M)
+  (x : M),
+  (DiamondIntegral.Section7.Groupification.toQuotientGroup c) (Algebra.GrothendieckAddGroup.of x) =
+    Algebra.GrothendieckAddGroup.of (c.mk' x)
+theorem DiamondIntegral.Section7.Groupification.toQuotientGroup_of.{u_1} : ∀ {M : Type u_1} [inst : AddCommMonoid M]
+  (c : AddCon M) (x : M),
+  (DiamondIntegral.Section7.Groupification.toQuotientGroup c) (Algebra.GrothendieckAddGroup.of x) =
+    Algebra.GrothendieckAddGroup.of (c.mk' x) :=
+fun {M} [AddCommMonoid M] c x =>
+  Eq.mpr
+    (id
+      (congrArg (fun _a => _a (Algebra.GrothendieckAddGroup.of x) = Algebra.GrothendieckAddGroup.of (c.mk' x))
+        (DiamondIntegral.Section7.Groupification.toQuotientGroup.eq_1 c)))
+    (Eq.mpr
+      (id
+        (congrArg (fun _a => _a = Algebra.GrothendieckAddGroup.of (c.mk' x))
+          (Algebra.GrothendieckAddGroup.lift_apply_of (Algebra.GrothendieckAddGroup.of.comp c.mk') x)))
+      (Eq.refl ((Algebra.GrothendieckAddGroup.of.comp c.mk') x)))
+'DiamondIntegral.Section7.Groupification.toQuotientGroup_of' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.Groupification.relationSubgroup_le_ker : ∀ {M : Type u_1} [inst : AddCommMonoid M]
+  (c : AddCon M),
+  DiamondIntegral.Section7.Groupification.relationSubgroup c ≤
+    (DiamondIntegral.Section7.Groupification.toQuotientGroup c).ker
+theorem DiamondIntegral.Section7.Groupification.relationSubgroup_le_ker.{u_1} : ∀ {M : Type u_1}
+  [inst : AddCommMonoid M] (c : AddCon M),
+  DiamondIntegral.Section7.Groupification.relationSubgroup c ≤
+    (DiamondIntegral.Section7.Groupification.toQuotientGroup c).ker :=
+fun {M} [AddCommMonoid M] c =>
+  (AddSubgroup.closure_le (DiamondIntegral.Section7.Groupification.toQuotientGroup c).ker).mpr fun ⦃a⦄ a_1 =>
+    Exists.casesOn a_1 fun x h =>
+      Exists.casesOn h fun y h =>
+        And.casesOn h fun h right =>
+          Eq.symm right ▸
+            id
+              (Eq.mpr
+                (id
+                  (congrArg (fun _a => _a = 0)
+                    (map_sub (DiamondIntegral.Section7.Groupification.toQuotientGroup c)
+                      (Algebra.GrothendieckAddGroup.of x) (Algebra.GrothendieckAddGroup.of y))))
+                (Eq.mpr
+                  (id
+                    (congrArg
+                      (fun _a =>
+                        _a -
+                            (DiamondIntegral.Section7.Groupification.toQuotientGroup c)
+                              (Algebra.GrothendieckAddGroup.of y) =
+                          0)
+                      (DiamondIntegral.Section7.Groupification.toQuotientGroup_of c x)))
+                  (Eq.mpr
+                    (id
+                      (congrArg (fun _a => Algebra.GrothendieckAddGroup.of (c.mk' x) - _a = 0)
+                        (DiamondIntegral.Section7.Groupification.toQuotientGroup_of c y)))
+                    (have he := (AddCon.eq c).mpr h;
+                    Eq.mpr
+                      (id
+                        (congrArg
+                          (fun _a => Algebra.GrothendieckAddGroup.of _a - Algebra.GrothendieckAddGroup.of (c.mk' y) = 0)
+                          he))
+                      (Eq.mpr (id (congrArg (fun _a => _a = 0) (sub_self (Algebra.GrothendieckAddGroup.of (c.mk' y)))))
+                        (Eq.refl 0))))))
+'DiamondIntegral.Section7.Groupification.relationSubgroup_le_ker' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@DiamondIntegral.Section7.Groupification.descend : {M : Type u_1} →
+  [inst : AddCommMonoid M] →
+    (c : AddCon M) →
+      Algebra.GrothendieckAddGroup M ⧸ DiamondIntegral.Section7.Groupification.relationSubgroup c →+
+        Algebra.GrothendieckAddGroup c.Quotient
+def DiamondIntegral.Section7.Groupification.descend.{u_1} : {M : Type u_1} →
+  [inst : AddCommMonoid M] →
+    (c : AddCon M) →
+      Algebra.GrothendieckAddGroup M ⧸ DiamondIntegral.Section7.Groupification.relationSubgroup c →+
+        Algebra.GrothendieckAddGroup c.Quotient :=
+fun {M} [AddCommMonoid M] c =>
+  QuotientAddGroup.lift (DiamondIntegral.Section7.Groupification.relationSubgroup c)
+    (DiamondIntegral.Section7.Groupification.toQuotientGroup c) ⋯
+'DiamondIntegral.Section7.Groupification.descend' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.Groupification.ofQuotient : {M : Type u_1} →
+  [inst : AddCommMonoid M] →
+    (c : AddCon M) →
+      c.Quotient →+ Algebra.GrothendieckAddGroup M ⧸ DiamondIntegral.Section7.Groupification.relationSubgroup c
+def DiamondIntegral.Section7.Groupification.ofQuotient.{u_1} : {M : Type u_1} →
+  [inst : AddCommMonoid M] →
+    (c : AddCon M) →
+      c.Quotient →+ Algebra.GrothendieckAddGroup M ⧸ DiamondIntegral.Section7.Groupification.relationSubgroup c :=
+fun {M} [AddCommMonoid M] c =>
+  c.lift
+    ((QuotientAddGroup.mk' (DiamondIntegral.Section7.Groupification.relationSubgroup c)).comp
+      Algebra.GrothendieckAddGroup.of)
+    ⋯
+'DiamondIntegral.Section7.Groupification.ofQuotient' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.Groupification.ascend : {M : Type u_1} →
+  [inst : AddCommMonoid M] →
+    (c : AddCon M) →
+      Algebra.GrothendieckAddGroup c.Quotient →+
+        Algebra.GrothendieckAddGroup M ⧸ DiamondIntegral.Section7.Groupification.relationSubgroup c
+def DiamondIntegral.Section7.Groupification.ascend.{u_1} : {M : Type u_1} →
+  [inst : AddCommMonoid M] →
+    (c : AddCon M) →
+      Algebra.GrothendieckAddGroup c.Quotient →+
+        Algebra.GrothendieckAddGroup M ⧸ DiamondIntegral.Section7.Groupification.relationSubgroup c :=
+fun {M} [AddCommMonoid M] c => Algebra.GrothendieckAddGroup.lift (DiamondIntegral.Section7.Groupification.ofQuotient c)
+'DiamondIntegral.Section7.Groupification.ascend' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.Groupification.ascend_of_mk : ∀ {M : Type u_1} [inst : AddCommMonoid M] (c : AddCon M)
+  (x : M),
+  (DiamondIntegral.Section7.Groupification.ascend c) (Algebra.GrothendieckAddGroup.of (c.mk' x)) =
+    (QuotientAddGroup.mk' (DiamondIntegral.Section7.Groupification.relationSubgroup c))
+      (Algebra.GrothendieckAddGroup.of x)
+theorem DiamondIntegral.Section7.Groupification.ascend_of_mk.{u_1} : ∀ {M : Type u_1} [inst : AddCommMonoid M]
+  (c : AddCon M) (x : M),
+  (DiamondIntegral.Section7.Groupification.ascend c) (Algebra.GrothendieckAddGroup.of (c.mk' x)) =
+    (QuotientAddGroup.mk' (DiamondIntegral.Section7.Groupification.relationSubgroup c))
+      (Algebra.GrothendieckAddGroup.of x) :=
+fun {M} [AddCommMonoid M] c x =>
+  Eq.mpr
+    (id
+      (congrArg
+        (fun _a =>
+          _a (Algebra.GrothendieckAddGroup.of (c.mk' x)) =
+            (QuotientAddGroup.mk' (DiamondIntegral.Section7.Groupification.relationSubgroup c))
+              (Algebra.GrothendieckAddGroup.of x))
+        (DiamondIntegral.Section7.Groupification.ascend.eq_1 c)))
+    (Eq.mpr
+      (id
+        (congrArg
+          (fun _a =>
+            _a =
+              (QuotientAddGroup.mk' (DiamondIntegral.Section7.Groupification.relationSubgroup c))
+                (Algebra.GrothendieckAddGroup.of x))
+          (Algebra.GrothendieckAddGroup.lift_apply_of (DiamondIntegral.Section7.Groupification.ofQuotient c)
+            (c.mk' x))))
+      (Eq.refl ((DiamondIntegral.Section7.Groupification.ofQuotient c) (c.mk' x))))
+'DiamondIntegral.Section7.Groupification.ascend_of_mk' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.Groupification.descend_mk : ∀ {M : Type u_1} [inst : AddCommMonoid M] (c : AddCon M)
+  (z : Algebra.GrothendieckAddGroup M),
+  (DiamondIntegral.Section7.Groupification.descend c)
+      ((QuotientAddGroup.mk' (DiamondIntegral.Section7.Groupification.relationSubgroup c)) z) =
+    (DiamondIntegral.Section7.Groupification.toQuotientGroup c) z
+@[defeq] theorem DiamondIntegral.Section7.Groupification.descend_mk.{u_1} : ∀ {M : Type u_1} [inst : AddCommMonoid M]
+  (c : AddCon M) (z : Algebra.GrothendieckAddGroup M),
+  (DiamondIntegral.Section7.Groupification.descend c)
+      ((QuotientAddGroup.mk' (DiamondIntegral.Section7.Groupification.relationSubgroup c)) z) =
+    (DiamondIntegral.Section7.Groupification.toQuotientGroup c) z :=
+fun {M} [AddCommMonoid M] c z => rfl
+'DiamondIntegral.Section7.Groupification.descend_mk' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.Groupification.ascend_descend : ∀ {M : Type u_1} [inst : AddCommMonoid M] (c : AddCon M),
+  (DiamondIntegral.Section7.Groupification.ascend c).comp (DiamondIntegral.Section7.Groupification.descend c) =
+    AddMonoidHom.id (Algebra.GrothendieckAddGroup M ⧸ DiamondIntegral.Section7.Groupification.relationSubgroup c)
+theorem DiamondIntegral.Section7.Groupification.ascend_descend.{u_1} : ∀ {M : Type u_1} [inst : AddCommMonoid M]
+  (c : AddCon M),
+  (DiamondIntegral.Section7.Groupification.ascend c).comp (DiamondIntegral.Section7.Groupification.descend c) =
+    AddMonoidHom.id (Algebra.GrothendieckAddGroup M ⧸ DiamondIntegral.Section7.Groupification.relationSubgroup c) :=
+fun {M} [AddCommMonoid M] c =>
+  QuotientAddGroup.addMonoidHom_ext (DiamondIntegral.Section7.Groupification.relationSubgroup c)
+    (Algebra.GrothendieckAddGroup.addHom_ext fun x =>
+      id
+        (Eq.mpr
+          (id
+            (congrArg
+              (fun _a =>
+                (DiamondIntegral.Section7.Groupification.ascend c) _a =
+                  ((AddMonoidHom.id
+                          (Algebra.GrothendieckAddGroup M ⧸
+                            DiamondIntegral.Section7.Groupification.relationSubgroup c)).comp
+                      (QuotientAddGroup.mk' (DiamondIntegral.Section7.Groupification.relationSubgroup c)))
+                    (Algebra.GrothendieckAddGroup.of x))
+              (DiamondIntegral.Section7.Groupification.toQuotientGroup_of c x)))
+          (Eq.mpr
+            (id
+              (congrArg
+                (fun _a =>
+                  _a =
+                    ((AddMonoidHom.id
+                            (Algebra.GrothendieckAddGroup M ⧸
+                              DiamondIntegral.Section7.Groupification.relationSubgroup c)).comp
+                        (QuotientAddGroup.mk' (DiamondIntegral.Section7.Groupification.relationSubgroup c)))
+                      (Algebra.GrothendieckAddGroup.of x))
+                (DiamondIntegral.Section7.Groupification.ascend_of_mk c x)))
+            (Eq.refl
+              ((QuotientAddGroup.mk' (DiamondIntegral.Section7.Groupification.relationSubgroup c))
+                (Algebra.GrothendieckAddGroup.of x))))))
+'DiamondIntegral.Section7.Groupification.ascend_descend' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.Groupification.descend_ascend : ∀ {M : Type u_1} [inst : AddCommMonoid M] (c : AddCon M),
+  (DiamondIntegral.Section7.Groupification.descend c).comp (DiamondIntegral.Section7.Groupification.ascend c) =
+    AddMonoidHom.id (Algebra.GrothendieckAddGroup c.Quotient)
+theorem DiamondIntegral.Section7.Groupification.descend_ascend.{u_1} : ∀ {M : Type u_1} [inst : AddCommMonoid M]
+  (c : AddCon M),
+  (DiamondIntegral.Section7.Groupification.descend c).comp (DiamondIntegral.Section7.Groupification.ascend c) =
+    AddMonoidHom.id (Algebra.GrothendieckAddGroup c.Quotient) :=
+fun {M} [AddCommMonoid M] c =>
+  Algebra.GrothendieckAddGroup.addHom_ext fun q =>
+    Exists.casesOn (AddCon.mk'_surjective q) fun x hx =>
+      Eq.mpr
+        (id
+          (congrArg
+            (fun _a =>
+              ((DiamondIntegral.Section7.Groupification.descend c).comp
+                    (DiamondIntegral.Section7.Groupification.ascend c))
+                  (Algebra.GrothendieckAddGroup.of _a) =
+                (AddMonoidHom.id (Algebra.GrothendieckAddGroup c.Quotient)) (Algebra.GrothendieckAddGroup.of _a))
+            (Eq.symm hx)))
+        (id
+          (Eq.mpr
+            (id
+              (congrArg
+                (fun _a =>
+                  (DiamondIntegral.Section7.Groupification.descend c) _a =
+                    (AddMonoidHom.id (Algebra.GrothendieckAddGroup c.Quotient))
+                      (Algebra.GrothendieckAddGroup.of (c.mk' x)))
+                (DiamondIntegral.Section7.Groupification.ascend_of_mk c x)))
+            (Eq.mpr
+              (id
+                (congrArg
+                  (fun _a =>
+                    _a =
+                      (AddMonoidHom.id (Algebra.GrothendieckAddGroup c.Quotient))
+                        (Algebra.GrothendieckAddGroup.of (c.mk' x)))
+                  (DiamondIntegral.Section7.Groupification.descend_mk c (Algebra.GrothendieckAddGroup.of x))))
+              (Eq.mpr
+                (id
+                  (congrArg
+                    (fun _a =>
+                      _a =
+                        (AddMonoidHom.id (Algebra.GrothendieckAddGroup c.Quotient))
+                          (Algebra.GrothendieckAddGroup.of (c.mk' x)))
+                    (DiamondIntegral.Section7.Groupification.toQuotientGroup_of c x)))
+                (Eq.refl (Algebra.GrothendieckAddGroup.of (c.mk' x)))))))
+'DiamondIntegral.Section7.Groupification.descend_ascend' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.Groupification.groupQuotientEquiv : {M : Type u_1} →
+  [inst : AddCommMonoid M] →
+    (c : AddCon M) →
+      Algebra.GrothendieckAddGroup c.Quotient ≃+
+        Algebra.GrothendieckAddGroup M ⧸ DiamondIntegral.Section7.Groupification.relationSubgroup c
+def DiamondIntegral.Section7.Groupification.groupQuotientEquiv.{u_1} : {M : Type u_1} →
+  [inst : AddCommMonoid M] →
+    (c : AddCon M) →
+      Algebra.GrothendieckAddGroup c.Quotient ≃+
+        Algebra.GrothendieckAddGroup M ⧸ DiamondIntegral.Section7.Groupification.relationSubgroup c :=
+fun {M} [AddCommMonoid M] c =>
+  { toFun := ⇑(DiamondIntegral.Section7.Groupification.ascend c),
+    invFun := ⇑(DiamondIntegral.Section7.Groupification.descend c), left_inv := ⋯, right_inv := ⋯, map_add' := ⋯ }
+'DiamondIntegral.Section7.Groupification.groupQuotientEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.Groupification.groupQuotientEquiv_of : ∀ {M : Type u_1} [inst : AddCommMonoid M]
+  (c : AddCon M) (x : M),
+  (DiamondIntegral.Section7.Groupification.groupQuotientEquiv c) (Algebra.GrothendieckAddGroup.of (c.mk' x)) =
+    (QuotientAddGroup.mk' (DiamondIntegral.Section7.Groupification.relationSubgroup c))
+      (Algebra.GrothendieckAddGroup.of x)
+theorem DiamondIntegral.Section7.Groupification.groupQuotientEquiv_of.{u_1} : ∀ {M : Type u_1} [inst : AddCommMonoid M]
+  (c : AddCon M) (x : M),
+  (DiamondIntegral.Section7.Groupification.groupQuotientEquiv c) (Algebra.GrothendieckAddGroup.of (c.mk' x)) =
+    (QuotientAddGroup.mk' (DiamondIntegral.Section7.Groupification.relationSubgroup c))
+      (Algebra.GrothendieckAddGroup.of x) :=
+fun {M} [AddCommMonoid M] c x => DiamondIntegral.Section7.Groupification.ascend_of_mk c x
+'DiamondIntegral.Section7.Groupification.groupQuotientEquiv_of' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
 @DiamondIntegral.Section7.IsoOfMeasured.rawFun : {M : Type} →
   [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
     {S : Set M} →

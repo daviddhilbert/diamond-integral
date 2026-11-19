@@ -25,6 +25,8 @@ import «section 7».SpecialChainSplit
 import «section 7».SpecialChainRel
 import «section 7».SpecialChainInduction
 import «section 7».KernelDimOne
+import «section 7».Groupification
+import «section 7».GoodPoints
 import «section 7».MeasuredRVBridge
 import «section 7».MeasuredRVBounds
 import «section 7».ChartLifting

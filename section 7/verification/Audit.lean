@@ -1152,6 +1152,57 @@ import «section 7».Section
 #check @DiamondIntegral.Section7.ElementaryComparison.lemma_7_5
 #print DiamondIntegral.Section7.ElementaryComparison.lemma_7_5
 #print axioms DiamondIntegral.Section7.ElementaryComparison.lemma_7_5
+#check @DiamondIntegral.Section7.GoodPoints.exists_grid_nonzero
+#print DiamondIntegral.Section7.GoodPoints.exists_grid_nonzero
+#print axioms DiamondIntegral.Section7.GoodPoints.exists_grid_nonzero
+#check @DiamondIntegral.Section7.GoodPoints.exists_grid_nonzero_subfield
+#print DiamondIntegral.Section7.GoodPoints.exists_grid_nonzero_subfield
+#print axioms DiamondIntegral.Section7.GoodPoints.exists_grid_nonzero_subfield
+#check @DiamondIntegral.Section7.GoodPoints.exists_polynomial_vanishing_of_dim_lt
+#print DiamondIntegral.Section7.GoodPoints.exists_polynomial_vanishing_of_dim_lt
+#print axioms DiamondIntegral.Section7.GoodPoints.exists_polynomial_vanishing_of_dim_lt
+#check @DiamondIntegral.Section7.Groupification.relationSubgroup
+#print DiamondIntegral.Section7.Groupification.relationSubgroup
+#print axioms DiamondIntegral.Section7.Groupification.relationSubgroup
+#check @DiamondIntegral.Section7.Groupification.sub_mem_relationSubgroup
+#print DiamondIntegral.Section7.Groupification.sub_mem_relationSubgroup
+#print axioms DiamondIntegral.Section7.Groupification.sub_mem_relationSubgroup
+#check @DiamondIntegral.Section7.Groupification.toQuotientGroup
+#print DiamondIntegral.Section7.Groupification.toQuotientGroup
+#print axioms DiamondIntegral.Section7.Groupification.toQuotientGroup
+#check @DiamondIntegral.Section7.Groupification.toQuotientGroup_of
+#print DiamondIntegral.Section7.Groupification.toQuotientGroup_of
+#print axioms DiamondIntegral.Section7.Groupification.toQuotientGroup_of
+#check @DiamondIntegral.Section7.Groupification.relationSubgroup_le_ker
+#print DiamondIntegral.Section7.Groupification.relationSubgroup_le_ker
+#print axioms DiamondIntegral.Section7.Groupification.relationSubgroup_le_ker
+#check @DiamondIntegral.Section7.Groupification.descend
+#print DiamondIntegral.Section7.Groupification.descend
+#print axioms DiamondIntegral.Section7.Groupification.descend
+#check @DiamondIntegral.Section7.Groupification.ofQuotient
+#print DiamondIntegral.Section7.Groupification.ofQuotient
+#print axioms DiamondIntegral.Section7.Groupification.ofQuotient
+#check @DiamondIntegral.Section7.Groupification.ascend
+#print DiamondIntegral.Section7.Groupification.ascend
+#print axioms DiamondIntegral.Section7.Groupification.ascend
+#check @DiamondIntegral.Section7.Groupification.ascend_of_mk
+#print DiamondIntegral.Section7.Groupification.ascend_of_mk
+#print axioms DiamondIntegral.Section7.Groupification.ascend_of_mk
+#check @DiamondIntegral.Section7.Groupification.descend_mk
+#print DiamondIntegral.Section7.Groupification.descend_mk
+#print axioms DiamondIntegral.Section7.Groupification.descend_mk
+#check @DiamondIntegral.Section7.Groupification.ascend_descend
+#print DiamondIntegral.Section7.Groupification.ascend_descend
+#print axioms DiamondIntegral.Section7.Groupification.ascend_descend
+#check @DiamondIntegral.Section7.Groupification.descend_ascend
+#print DiamondIntegral.Section7.Groupification.descend_ascend
+#print axioms DiamondIntegral.Section7.Groupification.descend_ascend
+#check @DiamondIntegral.Section7.Groupification.groupQuotientEquiv
+#print DiamondIntegral.Section7.Groupification.groupQuotientEquiv
+#print axioms DiamondIntegral.Section7.Groupification.groupQuotientEquiv
+#check @DiamondIntegral.Section7.Groupification.groupQuotientEquiv_of
+#print DiamondIntegral.Section7.Groupification.groupQuotientEquiv_of
+#print axioms DiamondIntegral.Section7.Groupification.groupQuotientEquiv_of
 #check @DiamondIntegral.Section7.IsoOfMeasured.rawFun
 #print DiamondIntegral.Section7.IsoOfMeasured.rawFun
 #print axioms DiamondIntegral.Section7.IsoOfMeasured.rawFun

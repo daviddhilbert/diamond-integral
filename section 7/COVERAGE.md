@@ -42,3 +42,14 @@ commutative monoid, restriction and gluing of isomorphisms, refinement),
 `RVMaps` (definability of RV maps and valuation comparisons), and the
 Definition 6.34–6.37 chart lifts `MeasuredRVBridge`, `MeasuredRVBounds`,
 `ChartLifting`, `ChartDiamondLift`.
+
+Prepared for later results (supporting lemmas, not numbered results):
+- `GoodPoints` (for 7.15, R126): a definable set of VF dimension < n lies in
+  the zero locus of one nonzero polynomial over the base's VF parameter field
+  (`exists_polynomial_vanishing_of_dim_lt`); a nonzero polynomial is nonzero
+  at some point of a translated grid with more than its total degree points per
+  side (`exists_grid_nonzero`, `exists_grid_nonzero_subfield`, Combinatorial
+  Nullstellensatz).
+- `Groupification` (for 7.26): the Grothendieck group of M ⧸ c is K(M) modulo
+  the differences of c-related elements (`groupQuotientEquiv`); no
+  cancellation in M is assumed.
