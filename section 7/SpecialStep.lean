@@ -27,7 +27,7 @@ open RelativeAnnularGenerators
 open DiamondIntegral.Section6 DiamondIntegral.Section6.DiamondLiftHomomorphism
 open DiamondIntegral.Section7.MeasuredRVBridge DiamondIntegral.Section7.ChartOfMeasured
 open DiamondIntegral.Section7.IsoOfMeasured DiamondIntegral.Section7.BoundedClasses
-open DiamondIntegral.Section7.ElementaryBlowups
+open DiamondIntegral.Section7.ElementaryBlowups DiamondIntegral.Section7.BlowupLiftImage
 
 variable {M : Type} [LRV.Structure M] [hM : M ⊨ Axioms.ACVF]
 variable (hc : CanonicalStructure.IsCanonical (M := M)) {S : Set M} {k : ℕ}
@@ -151,5 +151,174 @@ theorem step_contraction :
   exact step_elem D
 
 end Step
+
+/-! ### The aperture of relative aperture data on the lift of a chart -/
+
+section Datum
+open DiamondIntegral.Section7.BlowupLiftData DiamondIntegral.Section7.RVMaps
+open DiamondIntegral.Section7.ElementaryComparison
+variable {G : Type} [LinearOrderedCommGroupWithZero G] [Valued (DiamondIntegral.Section2.VF M) G]
+variable (c : Chart (⟨S, ∅⟩ : GammaParameters.Base (M := M)) (1 + k))
+variable (R : RelativeApertureData (G := G) (rvLift (toMeasured hc c).object))
+variable (hall : ∀ p ∈ (rvLift (toMeasured hc c).object).carrier, p.2 ∈ R.activeTags.carrier)
+
+theorem mem_chartLift_iff (p : DiamondIntegral.Section2.Mixed M (1 + k) c.arity) :
+    p ∈ (rvLift (toMeasured hc c).object).carrier ↔
+      rvValues p.2 ∈ c.domain ∧ rvValues (DiamondIntegral.Section2.tupleRV M p.1) = c.coordinate (rvValues p.2) := by
+  constructor
+  · rintro ⟨u, hu, hv⟩
+    have hd : rvValues u.val ∈ c.domain := u.property
+    rw [hu] at hd
+    refine ⟨hd, ?_⟩
+    have h1 : rvValues (DiamondIntegral.Section2.tupleRV M p.1) = rvValues ((toMeasured hc c).object.value u) := by
+      rw [hv]
+      rfl
+    rw [h1, ← hu]
+    rfl
+  · rintro ⟨hd, hv⟩
+    refine ⟨⟨p.2, hd⟩, rfl, ?_⟩
+    apply rvValues_injective
+    change c.coordinate (rvValues p.2) = rvValues (DiamondIntegral.Section2.tupleRV M p.1)
+    exact hv.symm
+
+/-- Every label of the domain carries points of the lift. -/
+theorem exists_point {u : Fin c.arity → M} (hu : u ∈ c.domain) :
+    ∃ p ∈ (rvLift (toMeasured hc c).object).carrier, rvValues p.2 = u := by
+  have hs := c.domain_definable.proper u hu
+  obtain ⟨x, hx⟩ := DiamondIntegral.Section2.tupleRV_surjective
+    (rvTuple (c.coordinate u) (fun i => (c.coordinate_proper u hu i).1))
+  refine ⟨(x, rvTuple u hs), (mem_chartLift_iff hc c _).mpr ⟨hu, ?_⟩, rvValues_rvTuple _ _⟩
+  rw [hx, rvValues_rvTuple, rvValues_rvTuple]
+
+/-- The leading term of the endpoint, as a Section 6 map on the lift. -/
+def endpointRV : Map (rvLift (toMeasured hc c).object) (DefSet.univ (rawRVSpace (M := M) 1) S) := by
+  let P := rawMixedSpace (M := M) (1 + k) (toMeasured hc c).object.arity
+  let codes (z : Fin (1 + k) ⊕ Fin (toMeasured hc c).object.arity → M) : Fin 1 → M :=
+    fun _ => iRv (scalarCodeExtension R.endpointMap z)
+  have hCodes : S.DefinableMap LRV codes :=
+    fun _ => rv_scalarCode_definable (scalarCodeExtension_definable R.endpointMap)
+  have hCode (c' : P.domain) :
+      rvValues (fun _ : Fin 1 => DiamondIntegral.Section2.rv M (R.extendedEndpoint (P.decode c'))) = codes c'.val := by
+    funext i
+    exact congrArg (fun z => iRv (scalarCodeExtension R.endpointMap z)) (mixedValues_decode c')
+  have hDom (c' : P.domain) : codes c'.val ∈ (rawRVSpace (M := M) 1).domain := ⟨_, hCode c'⟩
+  refine Map.ofCodes _ (fun p => fun _ => DiamondIntegral.Section2.rv M (R.extendedEndpoint p)) codes hCodes hDom ?_
+  intro c'
+  apply rvValues_injective
+  exact (SpecialTransformations.Section4.rvValues_decode ⟨codes c'.val, hDom c'⟩).trans (hCode c').symm
+
+theorem endpointRV_val (p : rvLift (toMeasured hc c).object) :
+    (endpointRV hc c R p).val = fun _ => DiamondIntegral.Section2.rv M (R.extendedEndpoint p.val) := rfl
+
+include hall in
+theorem endpointRV_const (p q : rvLift (toMeasured hc c).object) (he : p.val.2 = q.val.2) :
+    endpointRV hc c R p = endpointRV hc c R q := by
+  apply Subtype.ext
+  rw [endpointRV_val, endpointRV_val]
+  funext _
+  have hp : p.val ∈ (focusActive (rvLift (toMeasured hc c).object) R.activeTags).carrier :=
+    ⟨p.property, hall _ p.property⟩
+  have hq : q.val ∈ (focusActive (rvLift (toMeasured hc c).object) R.activeTags).carrier :=
+    ⟨q.property, hall _ q.property⟩
+  rw [R.extendedEndpoint_active p.property (hall _ p.property),
+    R.extendedEndpoint_active q.property (hall _ q.property)]
+  have h := R.endpoint_RV_constant ⟨p.val, hp⟩ ⟨q.val, hq⟩ he
+  rw [R.endpointMap_eq, R.endpointMap_eq] at h
+  exact h
+
+/-- The endpoint leading term on labels. -/
+def endpointLabel : Map (pureRVTagDomain (rvLift (toMeasured hc c).object)) (DefSet.univ (rawRVSpace (M := M) 1) S) :=
+  definableSurjectiveDescent (pureRVTagQuotient _) (pureRVTagQuotient_surjective _) (endpointRV hc c R)
+    (fun p q h => endpointRV_const hc c R hall p q ((pureRVTagQuotient_eq_iff _ p q).mp h))
+
+/-- The raw endpoint leading term of a label. -/
+def gEnd (u : Fin c.arity → M) : M := rawFun (endpointLabel hc c R hall) u 0
+
+theorem labels_eq : rvValues '' (pureRVTagDomain (rvLift (toMeasured hc c).object)).carrier = c.domain := by
+  ext w
+  constructor
+  · rintro ⟨t, ht, rfl⟩
+    obtain ⟨p, hp⟩ := pureRVTagQuotient_surjective (rvLift (toMeasured hc c).object) ⟨t, ht⟩
+    have he : p.val.2 = t := congrArg Subtype.val hp
+    rw [← he]
+    exact ((mem_chartLift_iff hc c p.val).mp p.property).1
+  · intro hw
+    obtain ⟨p, hp, he⟩ := exists_point hc c hw
+    exact ⟨p.2, (pureRVTagQuotient _ ⟨p, hp⟩).property, he⟩
+
+theorem gEnd_of {p : DiamondIntegral.Section2.Mixed M (1 + k) c.arity} (hp : p ∈ (rvLift (toMeasured hc c).object).carrier) :
+    gEnd hc c R hall (rvValues p.2) = (DiamondIntegral.Section2.rv M (R.extendedEndpoint p)).val := by
+  have h := rawFun_of (endpointLabel hc c R hall) (pureRVTagQuotient _ ⟨p, hp⟩)
+  have h2 : endpointLabel hc c R hall (pureRVTagQuotient _ ⟨p, hp⟩) = endpointRV hc c R ⟨p, hp⟩ :=
+    definableSurjectiveDescent_apply _ _ _ _ _
+  rw [h2, endpointRV_val] at h
+  exact congrFun h 0
+
+theorem gEnd_scalarDef : ScalarDef (⟨S, ∅⟩ : GammaParameters.Base (M := M)) c.domain (gEnd hc c R hall) := by
+  have h := rawFun_graph hc (endpointLabel hc c R hall)
+  rw [labels_eq hc c] at h
+  exact scalarDef_of_tupleDef h 0
+
+include hall in
+theorem focus_rv_chart {p : DiamondIntegral.Section2.Mixed M (1 + k) c.arity}
+    (hp : p ∈ (rvLift (toMeasured hc c).object).carrier) :
+    (DiamondIntegral.Section2.rv M (R.extendedFocus p)).val = c.coordinate (rvValues p.2) R.coordinate := by
+  rw [R.extendedFocus_active hp (hall p hp), R.focusRV p hp (hall p hp)]
+  exact congrFun ((mem_chartLift_iff hc c p).mp hp).2 R.coordinate
+
+include hall in
+theorem endpoint_ne_zero {p : DiamondIntegral.Section2.Mixed M (1 + k) c.arity}
+    (hp : p ∈ (rvLift (toMeasured hc c).object).carrier) : R.extendedEndpoint p ≠ 0 := by
+  rw [R.extendedEndpoint_active hp (hall p hp)]
+  exact R.endpoint_nonzero ⟨p, hp, hall p hp⟩
+
+theorem coord_nonzero_chart {u : Fin c.arity → M} (hu : u ∈ c.domain) (i : Fin (1 + k)) :
+    NonzeroRV (c.coordinate u i) := ⟨(c.coordinate_proper u hu i).1, (c.coordinate_proper u hu i).2⟩
+
+theorem gEnd_nonzero {u : Fin c.arity → M} (hu : u ∈ c.domain) : NonzeroRV (gEnd hc c R hall u) := by
+  obtain ⟨p, hp, rfl⟩ := exists_point hc c hu
+  rw [gEnd_of hc c R hall hp]
+  exact DiamondIntegral.Section6.iRv_nonzero (endpoint_ne_zero hc c R hall hp)
+
+/-- The aperture `τ(u) = rv(b₁)/f_j(u)` of the data. -/
+def apertureOf : AnnularBlowup.Aperture c where
+  aperture u := rvDiv (hM := hM) (gEnd hc c R hall u) (c.coordinate u R.coordinate)
+  graph_definable := scalarDef_rvDiv c.domain_definable (gEnd_scalarDef hc c R hall)
+    (scalarDef_of_tupleDef c.coordinate_definable R.coordinate) (fun _ hu => (gEnd_nonzero hc c R hall hu).1)
+    (fun _ hu => coord_nonzero_chart c hu _)
+  nonzero := fun _ hu => rvDiv_nonzero (gEnd_nonzero hc c R hall hu) (coord_nonzero_chart c hu _)
+  nonnegative := fun u hu => by
+    obtain ⟨p, hp, rfl⟩ := exists_point hc c hu
+    rw [codeValue_rvDiv (gEnd_nonzero hc c R hall hu) (coord_nonzero_chart c hu _)]
+    have hle := R.endpoint_nonnegative ⟨p, hp, hall p hp⟩
+    rw [← R.extendedFocus_active hp (hall p hp), ← R.extendedEndpoint_active hp (hall p hp)] at hle
+    rw [vfValue_eq_codeValue (focus_rv_chart hc c R hall hp) (coord_nonzero_chart c hu _),
+      vfValue_eq_codeValue (gEnd_of hc c R hall hp).symm (gEnd_nonzero hc c R hall hu)] at hle
+    exact le_mul_inv_iff_mul_le.mpr (by rw [one_mul]; exact hle)
+  bound := R.apertureBound
+  bounded := fun u hu => by
+    obtain ⟨p, hp, rfl⟩ := exists_point hc c hu
+    rw [codeValue_rvDiv (gEnd_nonzero hc c R hall hu) (coord_nonzero_chart c hu _)]
+    have hb := R.endpoint_upper_bound ⟨p, hp, hall p hp⟩
+    rw [R.endpointMap_eq, ← R.extendedEndpoint_active hp (hall p hp)] at hb
+    have hx : (DiamondIntegral.Section2.rv M (p.1 R.coordinate)).val = c.coordinate (rvValues p.2) R.coordinate :=
+      congrFun ((mem_chartLift_iff hc c p).mp hp).2 R.coordinate
+    rw [vfValue_eq_codeValue (gEnd_of hc c R hall hp).symm (gEnd_nonzero hc c R hall hu),
+      vfValue_eq_codeValue hx (coord_nonzero_chart c hu _),
+      ← SpecialTransformations.Section3.Values.gamma_val_mul] at hb
+    exact mul_inv_le_iff_le_mul.mpr hb
+
+include hall in
+theorem apertureOf_endpoint {p : DiamondIntegral.Section2.Mixed M (1 + k) c.arity}
+    (hp : p ∈ (rvLift (toMeasured hc c).object).carrier) :
+    (DiamondIntegral.Section2.rv M (R.extendedEndpoint p)).val =
+      iRVMul ((apertureOf hc c R hall).aperture (rvValues p.2)) (c.coordinate (rvValues p.2) R.coordinate) := by
+  have hu := ((mem_chartLift_iff hc c p).mp hp).1
+  change _ = iRVMul (rvDiv (hM := hM) (gEnd hc c R hall (rvValues p.2)) _) _
+  rw [← gEnd_of hc c R hall hp]
+  exact ((mul_eq_iff_rvDiv (rvDiv_nonzero (gEnd_nonzero hc c R hall hu) (coord_nonzero_chart c hu R.coordinate)).1
+    (gEnd_nonzero hc c R hall hu).1 (coord_nonzero_chart c hu R.coordinate)).mpr rfl).symm
+
+end Datum
 
 end DiamondIntegral.Section7.SpecialStep
