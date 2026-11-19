@@ -209,6 +209,26 @@ intended Lean statement; ⚑ marks a flag that is also listed in §5.
   6. 6.38's chains end in prepared sets. Intermediate sets need
      regularization before the next relative step (`RelativeApertureData`
      requires a tagged source).
+  - **Status (2026-11-19).** Steps 1–3 are done for one relative step with all
+    labels active (`SpecialStep.step_of_data`, with `datumOf`,
+    `inactive_finite` and `cls_contraction`).
+  - **Chain induction (planned).**
+    - Invariant: the set is an RV pullback with finite RV fibres.
+    - Class of such a set A: the class of the contraction of its
+      regularization.
+    - Step types (6.38's dimension-1 chains are `UnaryRelativeApertureChain`):
+      - relative and original centripetal steps reduce to
+        `RelativeApertureData` with the same point map
+        (`CentripetalData.relativeData`, `UnaryApertureInclusion.exists_relativeData`);
+      - regularization adds redundant labels (contraction unchanged up to
+        isomorphism);
+      - a zero-centred step on an RV pullback has empty core, because
+        invariance at radius |c| on unions of RV discs forces |c| ≤ |x_i|. It
+        only adds constant tags.
+    - Still to do: inactive labels in the relative step, the isomorphisms for
+      regularization and zero-centred steps, preservation of the invariant,
+      and the induction (length = number of steps, identity steps by
+      `step_refl`).
 
 ### 7.12 Lemma `blowup:same:RV:coa`
 - **Route.**
