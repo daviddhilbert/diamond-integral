@@ -18,31 +18,31 @@
     "2": {
       "receipt": "section 2/verification/status.json",
       "status": "PASS",
-      "sha256": "f1f55eacea342b734cb718932ecb27d36041f4e2dc52dff5bf813463b16c652f",
+      "sha256": "0d78676e527af97970953d239359d8eef97fc1b23e95b56465173894bb7600ea",
       "checked_Lean_sources": 270
     },
     "3": {
       "receipt": "section 3/verification/VERIFICATION.json",
       "status": "PASS",
-      "sha256": "133a013c0332773a3e66eec5affcd731c0ffb166ffa8d2856f87367a8f6d96b1",
+      "sha256": "04b1f259499ff8408a61b45eb4bbcb8416d49a268823a503d76140fe4abfc705",
       "checked_Lean_sources": 1528
     },
     "4": {
       "receipt": "section 4/verification/status.json",
       "status": "PASS",
-      "sha256": "eee0b721cb6f31753638df801b34412858d011714b78817b44442198cc197adc",
+      "sha256": "8f3ec0178d51390f55321ac310bc33c5f16ebdd5fc644204007c05950b1cfed8",
       "checked_Lean_sources": 622
     },
     "5": {
       "receipt": "section 5/verification/status.json",
       "status": "PASS_SECTION5_REQUESTED_SCOPE_IN_RECORDED_CONTEXT",
-      "sha256": "d8e31d25194b4d03b8721e62f65d8e43420c0255c83aaea4e495323ecef2f986",
+      "sha256": "c05ea274a20d232581a67e710ff8c2ad24b9ee97f0e772b64cd72bd2d7c98014",
       "checked_Lean_sources": 756
     },
     "6": {
       "receipt": "section 6/verification/status.json",
       "status": "PASS",
-      "sha256": "597cc85f380793e370fd26d970534034feaa184a003a763e55fd501a69633418",
+      "sha256": "9f7e17fd8d1e7e0c8447c8ef7f48e91089526b9b82f0a36c6058322d09d8efc5",
       "checked_Lean_sources": 1454
     }
   },
@@ -254,7 +254,7 @@
     "README.md": "e91db6ad5656b111e5b5b69460f78bb05a3a633f187a0f644139620c4ef47a3e",
     "integration-project-integrity.json": "d352082649a6a2ebc0ce60f4d32d6bc7ea618544afd2e7cb7a9f9cea6eb9d94f",
     "Audit.lean": "f38633e9f16aa0d491939f39343dcd66040b470b4ace1adb7daac18c1ac4896c",
-    "weighted-upstream-build.log": "2640ce37408efe8c1ce6b7c0bed858ffa15037c909cfd81328010c34f2fdd572",
+    "weighted-upstream-build.log": "d82b9c9e6ccb0ee99e5e7dbc1843c90ba9e3b8a8d0d21d46a452ea0185e6c875",
     "section5-verifier.log": "adc8b6d96f56caa17c4a65954ec5d42d8f9b07fe6adcf03ba97b553995b99db7",
     "section2-verifier.log": "c1cc9e17043212ff1f0975f8e940fc508d625fc5c38bbd14c9164961d2fd32bf",
     "final-consistency.json": "f3d9299f0b882063546415ac8f208e56555aed1a9bcc3005aa1fd7a065d62f93"

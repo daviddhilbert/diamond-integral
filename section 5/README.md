@@ -535,11 +535,12 @@ Full audit 60 passed (Section5/.scratch/finite-comparison-audit-60.log): 1069 pu
 
 Full audit 62 passed (Section5/.scratch/finite-comparison-audit-62.log): 1112 public definitions/structures and 1853 theorems, with only the standard Lean principles. RESFibreOnlyCriterion proves both directions of the exact finite stabilized criterion with only fibre pairs, one common positive stabilizer and an actual tagged bijection. Degree-forgetting pairs are absorbed without positive cancellation. Dean Cureton's Apache-2.0 Newton-Puiseux proof (commit 73e78681d7bb78ddb202e29cb92ab3c16b723126) compiles locally with proof bodies unchanged. PuiseuxAlgebraicClosedness identifies its field with the actual local bounded-denominator Hahn subfield. PuiseuxConcreteResidue, PuiseuxConcreteRVOperations and PuiseuxConcreteLanguage construct the actual residue-field and whole-language bridges; PuiseuxConcreteModel proves ACVF(0,0) with no model input. PuiseuxConcreteComparisons.theta_5_14_concrete is the actual comparison with that model hypothesis discharged. Both Fubini versions remain proved with the precise accepted Section 3 lifting/kernel input. The finite-variety-chart and saturated-ambient global-comparison specialization of the final corollary remains unfinished. Audit 61 failed only declaration discovery; corrected namespace prefixes and block-comment handling are included in this successful rerun.
 
-## November 18 additions (pending extraction into Fubini-theorems)
+## November 18 additions
 
-These modules are owned by diamond-integral for now. They will be extracted
-into Fubini-theorems and replaced here by compatibility imports, as for the
-rest of Section 5. Details are in `GAP-REPAIRS.md`.
+These modules were written here and extracted into Fubini-theorems at
+`c94e50c`; their paths here are compatibility imports, as for the rest of
+Section 5. Their 18 Section 3 prerequisites moved with them. Details are in
+`GAP-REPAIRS.md`.
 
 - Inflated-family Fubini and its Vol version: `InflatedFamilyFubini`,
   `InflatedFamilyFubiniVol`, with the `InflatedGamma*`, `InflatedRelative*`,

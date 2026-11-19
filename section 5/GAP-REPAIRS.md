@@ -104,3 +104,11 @@ computations; prove Lemma 5.12 and everything after it.
   inflated-family Fubini, weak-degree 5.17/5.23, the ambient, Θ, Lemma 5.19
   and Test 5.20, and the items not pursued), and the final message. The empty
   "remaining" lists are correct and were kept.
+
+## Extraction (November 18)
+
+The sixteen modules added above, with 18 Section 3 prerequisites, were
+extracted into Fubini-theorems at `c94e50c` (source commit `d7117c9`) and
+replaced here by compatibility imports recorded in `EXTRACTED-FOUNDATIONS.json`.
+Fubini-theorems' public contract gained their 629 declarations, with full types
+and axiom lists checked.

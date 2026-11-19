@@ -54,9 +54,8 @@ Sources: [Section 2 upstream links](section%202/verification/UPSTREAM-LINKS.md),
 [Section 4 statement audit](section%204/verification/final-section3-audit.json),
 and the `GAP-REPAIRS.md` file of each section.
 
-Dependency pins (`lake-manifest.json`, after integrating `origin/main`
-a6a77c4 on November 18, 2026): `fubini_theorems` at
-`05587564f70fd0015fbb7b7dbf4a8d8c4b0b64f5`, `integration_in_acvf` at
+Dependency pins (`lake-manifest.json`, November 18, 2026): `fubini_theorems` at
+`c94e50c50a950ab485277a9d94625a4417789e06`, `integration_in_acvf` at
 `ab4c0e8b15e1e21b0b4fce57eed764be76020e06`, `hilbert-mathlib` at
 `88bb3386f616779bfd87eb453d8a7c899ad63961`, `special_transformations` at
 `423c767a84b709487da7e798f70f0639545db1ac`, `acvf_qe` at
@@ -69,9 +68,9 @@ Section 5 bodies come through the byte-checked compatibility imports listed in
 
 The sixteen Section 5 modules added on November 18 (the `Inflated*` files,
 `WeakDegreeFubiniDischarged`, `PuiseuxMonsterAmbient`,
-`ElementaryRESExtension(Data)`, `Lemma519Polynomial` and `Test520Tuples`) are
-still compiled here as real modules, not compatibility imports, until they
-are moved into Fubini-theorems.
+`ElementaryRESExtension(Data)`, `Lemma519Polynomial` and `Test520Tuples`) and
+their 18 Section 3 prerequisites now live in Fubini-theorems (`c94e50c`,
+pinned here); their paths here are byte-checked compatibility imports.
 
 Recheck the focused types and local proof-source receipts with
 `python3 verification/audit-section-boundaries.py` after activating the
