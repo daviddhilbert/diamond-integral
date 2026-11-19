@@ -49,25 +49,24 @@ section Split
 variable {G : Type} [LinearOrderedCommGroupWithZero G] [Valued (VF M) G]
 variable (hc : CanonicalStructure.IsCanonical (M := M))
 variable (D : AnnularDatum (⟨S, ∅⟩ : Base (M := M)) k)
-variable (L : TupleFinitaryLift (centreRelation D))
-variable (hv : ∀ x y : VF M, VFValued.predV x y ↔ Valued.v x ≤ Valued.v y)
-variable (hU : (toMeasured hc D.chart).doublyBounded)
-variable (hP : ProperInvariant S (liftSet hc D).carrier)
-variable (Δ : Values.Gamma (M := M))
-variable (hΔ : S.Definable LRV {z : Fin 1 → M | z 0 ∈ Values.gammaPullback {Δ}})
-variable (hΔ1 : 1 ≤ Δ) (hΔb : ∀ u ∈ D.chart.domain, codeValue (D.aperture.aperture u) ≤ Δ)
+variable (R : RelativeApertureData (G := G) (liftSet hc D))
+variable (hj : R.coordinate = D.coordinate)
+variable (hact : ∀ p ∈ (liftSet hc D).carrier, p.2 ∈ R.activeTags.carrier)
+variable (hend : ∀ p ∈ (liftSet hc D).carrier,
+  (rv M (R.extendedEndpoint p)).val = centrePair D (rvValues p.2) 1)
 variable (h00 : M ⊨ Axioms.ACVF00)
+include hj hact hend
 
-local notation "𝓥" => Vreg (G := G) hc D L hv hU hP Δ hΔ hΔ1 hΔb
-local notation "𝓦" => W (G := G) hc D L hv hU hP Δ hΔ hΔ1 hΔb h00
-local notation "𝓕" => Fmap (G := G) hc D L hv hU hP Δ hΔ hΔ1 hΔb
+local notation "𝓥" => Vreg (G := G) hc D R
+local notation "𝓦" => W (G := G) hc D R hj hact hend h00
+local notation "𝓕" => Fmap (G := G) hc D R
 
 theorem mem_W_domain (t : Fin (labN D) → RVInfinity M) :
     t ∈ (𝓦).object.domain.carrier ↔ rvValues t ∈ Icore D ∪ Ishell D := by
   constructor
   · intro ht
     obtain ⟨p, hp⟩ := pureRVTagQuotient_surjective (𝓥) (⟨t, ht⟩ : pureRVTagDomain (𝓥))
-    have h := (mem_Vreg_iff hc D L hv hU hP Δ hΔ hΔ1 hΔb p.val).mp p.property
+    have h := (mem_Vreg_iff hc D R hj hact hend p.val).mp p.property
     have he : p.val.2 = t := congrArg Subtype.val hp
     rw [← he]
     exact h.1
@@ -75,7 +74,7 @@ theorem mem_W_domain (t : Fin (labN D) → RVInfinity M) :
     obtain ⟨y, hy⟩ := SpecialTransformations.Section4.tupleRV_surjective
       (fun i => t (Fin.castAdd (1 + D.chart.arity) i))
     have hmem : (y, t) ∈ (𝓥).carrier := by
-      refine (mem_Vreg_iff hc D L hv hU hP Δ hΔ hΔ1 hΔb (y, t)).mpr ⟨ht, ?_⟩
+      refine (mem_Vreg_iff hc D R hj hact hend (y, t)).mpr ⟨ht, ?_⟩
       change rvValues (SpecialTransformations.Section4.tupleRV y) = _
       rw [hy]
       rfl
@@ -84,24 +83,24 @@ theorem mem_W_domain (t : Fin (labN D) → RVInfinity M) :
 /-- The value of the contraction at a label: its leading terms. -/
 theorem W_value (u : (𝓦).object.domain) : rvValues ((𝓦).object.value u) = hd D (rvValues u.val) := by
   obtain ⟨q, rfl⟩ := pureRVTagQuotient_surjective (𝓥) u
-  have h := preparedRVObject_value (𝓥) (vreg_tagged hc D L hv hU hP Δ hΔ hΔ1 hΔb) q
-  change rvValues ((preparedRVObject (𝓥) (vreg_tagged hc D L hv hU hP Δ hΔ hΔ1 hΔb)).value
+  have h := preparedRVObject_value (𝓥) (vreg_tagged hc D R hj hact hend) q
+  change rvValues ((preparedRVObject (𝓥) (vreg_tagged hc D R hj hact hend)).value
     (pureRVTagQuotient (𝓥) q)) = _
   rw [h]
-  exact ((mem_Vreg_iff hc D L hv hU hP Δ hΔ hΔ1 hΔb q.val).mp q.property).2
+  exact ((mem_Vreg_iff hc D R hj hact hend q.val).mp q.property).2
 
 /-- The form of the contraction at a label: the source volume at its original label. -/
 theorem W_form (u : (𝓦).object.domain) :
     gammaMapValue (𝓦).form u = D.chart.volume (lb D (rvValues u.val)) := by
   obtain ⟨q, rfl⟩ := pureRVTagQuotient_surjective (𝓥) u
   rw [show gammaMapValue (𝓦).form (pureRVTagQuotient (𝓥) q) =
-      gammaMapValue (form hc D L hv hU hP Δ hΔ hΔ1 hΔb h00) q from contractedMeasuredRVObject_form _ _ _ _ _ _ _ _]
-  have hF := Fmap_bijective hc D L hv hU hP Δ hΔ hΔ1 hΔb h00
+      gammaMapValue (form hc D R hj hact hend h00) q from contractedMeasuredRVObject_form _ _ _ _ _ _ _ _]
+  have hF := Fmap_bijective hc D R hj hact hend h00
   have hq := Map.apply_inverse (𝓕) hF q
   have hl : rvValues ((𝓕).inverse hF q).val.2 = lb D (rvValues q.val.2) := by
     funext i
     change (((𝓕).inverse hF q).val.2 i).val = (q.val.2 (Fin.natAdd (1 + k) (Fin.natAdd 1 i))).val
-    rw [← Fmap_labels hc D L hv hU hP Δ hΔ hΔ1 hΔb _ i, hq]
+    rw [← Fmap_labels hc D R hj hact hend _ i, hq]
   change D.chart.volume (rvValues ((𝓕).inverse hF q).val.2) = _
   rw [hl]
   rfl
@@ -110,11 +109,11 @@ theorem W_form (u : (𝓦).object.domain) :
 abbrev Dcore : DefSet (rawRVSpace (M := M) (labN D)) S := rawDefSet hc (Icore D) (Icore_definable D)
 
 theorem Dcore_sub : (Dcore hc D).carrier ⊆ (𝓦).object.domain.carrier :=
-  fun t ht => (mem_W_domain hc D L hv hU hP Δ hΔ hΔ1 hΔb h00 t).mpr (Or.inl ht)
+  fun t ht => (mem_W_domain hc D R hj hact hend h00 t).mpr (Or.inl ht)
 
 /-- The endpoint piece of the contraction. -/
 abbrev Wcore : MeasuredRVObject (M := M) S (1 + k) :=
-  (𝓦).restrict (Dcore hc D) (Dcore_sub hc D L hv hU hP Δ hΔ hΔ1 hΔb h00)
+  (𝓦).restrict (Dcore hc D) (Dcore_sub hc D R hj hact hend h00)
 
 /-- The shell piece of the contraction. -/
 abbrev Wshell : MeasuredRVObject (M := M) S (1 + k) := restrictCompl (𝓦) (Dcore hc D)
@@ -132,9 +131,11 @@ def mapE : Map (toMeasured hc (cE D)).object.domain (Dcore hc D) :=
   rawMapInto hc (cE D).domain (cE D).domain_definable (Icore D) (Icore_definable D) (Fe D) (Fe_tupleDef D)
     (fun w hw => ⟨w, hw, rfl⟩)
 
+omit hj hact hend in
 theorem mapE_val (a : (toMeasured hc (cE D)).object.domain) :
     rvValues (mapE hc D a).val = Fe D (rvValues a.val) := rfl
 
+omit hj hact hend in
 theorem mapE_bijective : Function.Bijective (mapE hc D) := by
   constructor
   · intro a b he
@@ -159,25 +160,25 @@ theorem mapE_bijective : Function.Bijective (mapE hc D) := by
       rw [mapE_val, rvValues_rvTuple, hFe]
 
 /-- The endpoint chart is isomorphic in `μRV^db[1+k]` to the endpoint piece. -/
-def isoE : MeasuredRVIso (toMeasured hc (cE D)) (Wcore hc D L hv hU hP Δ hΔ hΔ1 hΔb h00) where
+def isoE : MeasuredRVIso (toMeasured hc (cE D)) (Wcore hc D R hj hact hend h00) where
   iso := rvIsoOfFiniteFibres (mapE hc D) (mapE_bijective hc D) (toMeasured hc (cE D)).finiteVolume
-    (Wcore hc D L hv hU hP Δ hΔ hΔ1 hΔb h00).finiteVolume (toMeasured hc (cE D)).nonzero
-    (Wcore hc D L hv hU hP Δ hΔ hΔ1 hΔb h00).nonzero
+    (Wcore hc D R hj hact hend h00).finiteVolume (toMeasured hc (cE D)).nonzero
+    (Wcore hc D R hj hact hend h00).nonzero
   balance a := by
     rw [rvIsoOfFiniteFibres_map]
     unfold MeasuredRVObject.totalWeight
-    have hW : (Dcore hc D).carrier ⊆ (𝓦).object.domain.carrier := Dcore_sub hc D L hv hU hP Δ hΔ hΔ1 hΔb h00
+    have hW : (Dcore hc D).carrier ⊆ (𝓦).object.domain.carrier := Dcore_sub hc D R hj hact hend h00
     let b : (𝓦).object.domain := ⟨(mapE hc D a).val, hW (mapE hc D a).property⟩
-    have hform : gammaMapValue (Wcore hc D L hv hU hP Δ hΔ hΔ1 hΔb h00).form (mapE hc D a) =
+    have hform : gammaMapValue (Wcore hc D R hj hact hend h00).form (mapE hc D a) =
         gammaMapValue (𝓦).form b := rfl
-    have hval : (Wcore hc D L hv hU hP Δ hΔ hΔ1 hΔb h00).object.value (mapE hc D a) = (𝓦).object.value b := rfl
-    have he : (toMeasured hc (cE D)).object.value a = (Wcore hc D L hv hU hP Δ hΔ hΔ1 hΔb h00).object.value (mapE hc D a) := by
+    have hval : (Wcore hc D R hj hact hend h00).object.value (mapE hc D a) = (𝓦).object.value b := rfl
+    have he : (toMeasured hc (cE D)).object.value a = (Wcore hc D R hj hact hend h00).object.value (mapE hc D a) := by
       apply rvValues_injective
-      rw [hval, W_value hc D L hv hU hP Δ hΔ hΔ1 hΔb h00 b]
+      rw [hval, W_value hc D R hj hact hend h00 b]
       change (cE D).coordinate (rvValues a.val) = hd D (rvValues (mapE hc D a).val)
       rw [mapE_val, Fe, hd_mk]
       rfl
-    rw [volumeGamma_eq he, hform, W_form hc D L hv hU hP Δ hΔ hΔ1 hΔb h00 b]
+    rw [volumeGamma_eq he, hform, W_form hc D R hj hact hend h00 b]
     change (cE D).volume (rvValues a.val) * _ = D.chart.volume (lb D (rvValues (mapE hc D a).val)) * _
     rw [mapE_val, Fe, lb_mk]
     rfl
@@ -186,19 +187,19 @@ def isoE : MeasuredRVIso (toMeasured hc (cE D)) (Wcore hc D L hv hU hP Δ hΔ h�
 
 theorem Ishell_sub : (rawDefSet hc (Ishell D) (Ishell_definable D)).carrier ⊆
     ((𝓦).object.domain.sdiff (Dcore hc D)).carrier := fun t ht =>
-  ⟨(mem_W_domain hc D L hv hU hP Δ hΔ hΔ1 hΔb h00 t).mpr (Or.inr ht),
+  ⟨(mem_W_domain hc D R hj hact hend h00 t).mpr (Or.inr ht),
     fun hc' => Icore_Ishell_disjoint D h00 hc' ht⟩
 
 /-- The shell label map. -/
-def mapS : Map (toMeasured hc (cS D)).object.domain (Wshell hc D L hv hU hP Δ hΔ hΔ1 hΔb h00).object.domain :=
-  (Map.inclusion (Ishell_sub hc D L hv hU hP Δ hΔ hΔ1 hΔb h00)).comp
+def mapS : Map (toMeasured hc (cS D)).object.domain (Wshell hc D R hj hact hend h00).object.domain :=
+  (Map.inclusion (Ishell_sub hc D R hj hact hend h00)).comp
     (rawMapInto hc (cS D).domain (cS D).domain_definable (Ishell D) (Ishell_definable D) (Fs D) (Fs_tupleDef D)
       (fun w hw => ⟨w, hw, rfl⟩))
 
 theorem mapS_val (a : (toMeasured hc (cS D)).object.domain) :
-    rvValues (mapS hc D L hv hU hP Δ hΔ hΔ1 hΔb h00 a).val = Fs D (rvValues a.val) := rfl
+    rvValues (mapS hc D R hj hact hend h00 a).val = Fs D (rvValues a.val) := rfl
 
-theorem mapS_bijective : Function.Bijective (mapS hc D L hv hU hP Δ hΔ hΔ1 hΔb h00) := by
+theorem mapS_bijective : Function.Bijective (mapS hc D R hj hact hend h00) := by
   constructor
   · intro a b he
     have hFs : Fs D (rvValues a.val) = Fs D (rvValues b.val) := by
@@ -220,7 +221,7 @@ theorem mapS_bijective : Function.Bijective (mapS hc D L hv hU hP Δ hΔ hΔ1 h�
   · intro b
     have hb := b.property
     have hbI : rvValues b.val ∈ Ishell D := by
-      rcases (mem_W_domain hc D L hv hU hP Δ hΔ hΔ1 hΔb h00 b.val).mp hb.1 with h | h
+      rcases (mem_W_domain hc D R hj hact hend h00 b.val).mp hb.1 with h | h
       · exact absurd h hb.2
       · exact h
     obtain ⟨v, hv', hFs⟩ := hbI
@@ -234,30 +235,30 @@ theorem mapS_bijective : Function.Bijective (mapS hc D L hv hU hP Δ hΔ hΔ1 h�
       rw [mapS_val, rvValues_rvTuple, hFs]
 
 /-- The shell chart is isomorphic in `μRV^db[1+k]` to the shell piece. -/
-def isoS : MeasuredRVIso (toMeasured hc (cS D)) (Wshell hc D L hv hU hP Δ hΔ hΔ1 hΔb h00) where
-  iso := rvIsoOfFiniteFibres (mapS hc D L hv hU hP Δ hΔ hΔ1 hΔb h00)
-    (mapS_bijective hc D L hv hU hP Δ hΔ hΔ1 hΔb h00) (toMeasured hc (cS D)).finiteVolume
-    (Wshell hc D L hv hU hP Δ hΔ hΔ1 hΔb h00).finiteVolume (toMeasured hc (cS D)).nonzero
-    (Wshell hc D L hv hU hP Δ hΔ hΔ1 hΔb h00).nonzero
+def isoS : MeasuredRVIso (toMeasured hc (cS D)) (Wshell hc D R hj hact hend h00) where
+  iso := rvIsoOfFiniteFibres (mapS hc D R hj hact hend h00)
+    (mapS_bijective hc D R hj hact hend h00) (toMeasured hc (cS D)).finiteVolume
+    (Wshell hc D R hj hact hend h00).finiteVolume (toMeasured hc (cS D)).nonzero
+    (Wshell hc D R hj hact hend h00).nonzero
   balance a := by
     rw [rvIsoOfFiniteFibres_map]
     unfold MeasuredRVObject.totalWeight
-    let b : (𝓦).object.domain := ⟨(mapS hc D L hv hU hP Δ hΔ hΔ1 hΔb h00 a).val,
-      (mapS hc D L hv hU hP Δ hΔ hΔ1 hΔb h00 a).property.1⟩
-    have hform : gammaMapValue (Wshell hc D L hv hU hP Δ hΔ hΔ1 hΔb h00).form
-        (mapS hc D L hv hU hP Δ hΔ hΔ1 hΔb h00 a) = gammaMapValue (𝓦).form b := rfl
-    have hval : (Wshell hc D L hv hU hP Δ hΔ hΔ1 hΔb h00).object.value (mapS hc D L hv hU hP Δ hΔ hΔ1 hΔb h00 a) =
+    let b : (𝓦).object.domain := ⟨(mapS hc D R hj hact hend h00 a).val,
+      (mapS hc D R hj hact hend h00 a).property.1⟩
+    have hform : gammaMapValue (Wshell hc D R hj hact hend h00).form
+        (mapS hc D R hj hact hend h00 a) = gammaMapValue (𝓦).form b := rfl
+    have hval : (Wshell hc D R hj hact hend h00).object.value (mapS hc D R hj hact hend h00 a) =
         (𝓦).object.value b := rfl
     have he : (toMeasured hc (cS D)).object.value a =
-        (Wshell hc D L hv hU hP Δ hΔ hΔ1 hΔb h00).object.value (mapS hc D L hv hU hP Δ hΔ hΔ1 hΔb h00 a) := by
+        (Wshell hc D R hj hact hend h00).object.value (mapS hc D R hj hact hend h00 a) := by
       apply rvValues_injective
-      rw [hval, W_value hc D L hv hU hP Δ hΔ hΔ1 hΔb h00 b]
-      change (cS D).coordinate (rvValues a.val) = hd D (rvValues (mapS hc D L hv hU hP Δ hΔ hΔ1 hΔb h00 a).val)
+      rw [hval, W_value hc D R hj hact hend h00 b]
+      change (cS D).coordinate (rvValues a.val) = hd D (rvValues (mapS hc D R hj hact hend h00 a).val)
       rw [mapS_val, Fs, hd_mk]
       rfl
-    rw [volumeGamma_eq he, hform, W_form hc D L hv hU hP Δ hΔ hΔ1 hΔb h00 b]
+    rw [volumeGamma_eq he, hform, W_form hc D R hj hact hend h00 b]
     change (cS D).volume (rvValues a.val) * _ =
-      D.chart.volume (lb D (rvValues (mapS hc D L hv hU hP Δ hΔ hΔ1 hΔb h00 a).val)) * _
+      D.chart.volume (lb D (rvValues (mapS hc D R hj hact hend h00 a).val)) * _
     rw [mapS_val, Fs, lb_mk]
     rfl
 
@@ -311,15 +312,19 @@ theorem lift_blowup (D : AnnularDatum (BT T) k) (hn : MeasuredRVBounds.NoInfinit
   obtain ⟨Δ, hΔ, hΔ1, hΔb⟩ := Remark74.remark_7_4_named hc h00 D.chart D.aperture
   have hU := (dbOf hc h00 hκ hs T hsmall hΓ D.chart D.bounded hn).2
   have hP := measuredRVLift_properInvariant h00 hc hκ hs hv _ hU
-  have hiso := lift_isomorphic hc D L hv hU hP Δ hΔ hΔ1 hΔb h00 hκ hs hsmall hΓ
-  have hWdb := W_doublyBounded hc D L hv hU hP Δ hΔ hΔ1 hΔb h00
+  let R := apertureData (G := G) hc D L hv hU hP Δ hΔ hΔ1 hΔb
+  have hj : R.coordinate = D.coordinate := apertureData_coordinate hc D L hv hU hP Δ hΔ hΔ1 hΔb
+  have hact := apertureData_active hc D L hv hU hP Δ hΔ hΔ1 hΔb
+  have hend := apertureData_endpoint hc D L hv hU hP Δ hΔ hΔ1 hΔb
+  have hiso := lift_isomorphic hc D R hj hact hend hv h00 hκ hs hsmall hΓ
+  have hWdb := W_doublyBounded hc D R hj hact hend h00
   have hsc := DiamondIntegral.Section3.positiveClass_scissor (rvPresentation (T : Set M) (1 + k))
-    (a := ⟨Wcore hc D L hv hU hP Δ hΔ hΔ1 hΔb h00,
-      (W hc D L hv hU hP Δ hΔ hΔ1 hΔb h00).restrict_doublyBounded _ _ hWdb⟩)
-    (b := ⟨Wshell hc D L hv hU hP Δ hΔ hΔ1 hΔb h00,
-      (W hc D L hv hU hP Δ hΔ hΔ1 hΔb h00).restrict_doublyBounded _ _ hWdb⟩)
-    (c := ⟨W hc D L hv hU hP Δ hΔ hΔ1 hΔb h00, hWdb⟩) (d := ⟨emptyRV (T : Set M) (1 + k), emptyRV_doublyBounded⟩)
-    ⟨W hc D L hv hU hP Δ hΔ hΔ1 hΔb h00, hWdb, Dcore hc D, Dcore_sub hc D L hv hU hP Δ hΔ hΔ1 hΔb h00,
+    (a := ⟨Wcore hc D R hj hact hend h00,
+      (W hc D R hj hact hend h00).restrict_doublyBounded _ _ hWdb⟩)
+    (b := ⟨Wshell hc D R hj hact hend h00,
+      (W hc D R hj hact hend h00).restrict_doublyBounded _ _ hWdb⟩)
+    (c := ⟨W hc D R hj hact hend h00, hWdb⟩) (d := ⟨emptyRV (T : Set M) (1 + k), emptyRV_doublyBounded⟩)
+    ⟨W hc D R hj hact hend h00, hWdb, Dcore hc D, Dcore_sub hc D R hj hact hend h00,
       rfl, rfl, rfl, rfl⟩
   have he0 : DiamondIntegral.Section3.positiveClass (rvPresentation (T : Set M) (1 + k))
       ⟨emptyRV (T : Set M) (1 + k), emptyRV_doublyBounded⟩ = 0 :=
@@ -327,21 +332,21 @@ theorem lift_blowup (D : AnnularDatum (BT T) k) (hn : MeasuredRVBounds.NoInfinit
   rw [he0, add_zero] at hsc
   have hE := DiamondIntegral.Section3.positiveClass_iso (rvPresentation (T : Set M) (1 + k))
     (a := dbOf hc h00 hκ hs T hsmall hΓ (cE D) (endpoint_domain_bounded _ _ _ _ D.bounded) (endpoint_noInfinity D hn))
-    (b := ⟨Wcore hc D L hv hU hP Δ hΔ hΔ1 hΔb h00,
-      (W hc D L hv hU hP Δ hΔ hΔ1 hΔb h00).restrict_doublyBounded _ _ hWdb⟩)
-    ⟨isoE hc D L hv hU hP Δ hΔ hΔ1 hΔb h00⟩
+    (b := ⟨Wcore hc D R hj hact hend h00,
+      (W hc D R hj hact hend h00).restrict_doublyBounded _ _ hWdb⟩)
+    ⟨isoE hc D R hj hact hend h00⟩
   have hS := DiamondIntegral.Section3.positiveClass_iso (rvPresentation (T : Set M) (1 + k))
     (a := dbOf hc h00 hκ hs T hsmall hΓ (cS D) (shell_domain_bounded _ _ _ _ D.bounded) (shell_noInfinity D hn))
-    (b := ⟨Wshell hc D L hv hU hP Δ hΔ hΔ1 hΔb h00,
-      (W hc D L hv hU hP Δ hΔ hΔ1 hΔb h00).restrict_doublyBounded _ _ hWdb⟩)
-    ⟨isoS hc D L hv hU hP Δ hΔ hΔ1 hΔb h00⟩
+    (b := ⟨Wshell hc D R hj hact hend h00,
+      (W hc D R hj hact hend h00).restrict_doublyBounded _ _ hWdb⟩)
+    ⟨isoS hc D R hj hact hend h00⟩
   have h1 : liftHom (1 + k) G h00 hc lin hκ hs hv T B₀ hsmall hΓ hnt
         (DiamondIntegral.Section3.positiveClass _ (dbOf hc h00 hκ hs T hsmall hΓ D.chart D.bounded hn)) =
-      vfClass G hc (liftObject (toMeasured hc D.chart) hP) :=
+      vfClass G hc (liftObject (toMeasured hc D.chart) R.sourceProper) :=
     liftHom_class (G := G) (k := 1 + k) h00 hc lin hκ hs hv T B₀ hsmall hΓ hnt _
   have h2 : liftHom (1 + k) G h00 hc lin hκ hs hv T B₀ hsmall hΓ hnt
-        (DiamondIntegral.Section3.positiveClass _ ⟨W hc D L hv hU hP Δ hΔ hΔ1 hΔb h00, hWdb⟩) =
-      vfClass G hc (liftObject (W hc D L hv hU hP Δ hΔ hΔ1 hΔb h00)
+        (DiamondIntegral.Section3.positiveClass _ ⟨W hc D R hj hact hend h00, hWdb⟩) =
+      vfClass G hc (liftObject (W hc D R hj hact hend h00)
         (measuredRVLift_properInvariant h00 hc hκ hs hv _ hWdb)) :=
     liftHom_class (G := G) (k := 1 + k) h00 hc lin hκ hs hv T B₀ hsmall hΓ hnt _
   rw [h1, vfClass_iso hc hiso, ← h2, ← hsc, map_add, hE, hS]

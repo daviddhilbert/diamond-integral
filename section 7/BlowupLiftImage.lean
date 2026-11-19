@@ -314,51 +314,14 @@ end CentresGeneral
 
 /-! ### The regularized image -/
 
-section Image
-variable {G : Type} [LinearOrderedCommGroupWithZero G] [Valued (VF M) G]
-variable (hc : CanonicalStructure.IsCanonical (M := M))
-variable (D : AnnularDatum (⟨S, ∅⟩ : Base (M := M)) k)
-variable (L : DiamondIntegral.Section6.TupleFinitaryLift (centreRelation D))
-variable (hv : ∀ x y : VF M, VFValued.predV x y ↔ Valued.v x ≤ Valued.v y)
-variable (hU : (toMeasured hc D.chart).doublyBounded)
-variable (hP : DiamondIntegral.Section6.ProperInvariant S (liftSet hc D).carrier)
-variable (Δ : Values.Gamma (M := M))
-variable (hΔ : S.Definable LRV {z : Fin 1 → M | z 0 ∈ Values.gammaPullback {Δ}})
-variable (hΔ1 : 1 ≤ Δ) (hΔb : ∀ u ∈ D.chart.domain, codeValue (D.aperture.aperture u) ≤ Δ)
-
-theorem tag_mem {p : Mixed M (1 + k) D.chart.arity} (hp : p ∈ (liftSet hc D).carrier) :
+theorem tag_mem (hc : CanonicalStructure.IsCanonical (M := M)) (D : AnnularDatum (⟨S, ∅⟩ : Base (M := M)) k)
+    {p : Mixed M (1 + k) D.chart.arity} (hp : p ∈ (liftSet hc D).carrier) :
     p.2 ∈ (tags hc D).carrier := by
   obtain ⟨u, hu, _⟩ := hp
   exact hu ▸ u.property
 
-theorem extFocus {p : Mixed M (1 + k) D.chart.arity} (hp : p ∈ (liftSet hc D).carrier) :
-    (apertureData (G := G) hc D L hv hU hP Δ hΔ hΔ1 hΔb).extendedFocus p = centre D L 0 p.1 p.2 :=
-  ((apertureData (G := G) hc D L hv hU hP Δ hΔ hΔ1 hΔb).extendedFocus_active hp (tag_mem hc D hp)).trans
-    (centre_update D L 0 p.1 p.2 0)
-
-theorem extEndpoint {p : Mixed M (1 + k) D.chart.arity} (hp : p ∈ (liftSet hc D).carrier) :
-    (apertureData (G := G) hc D L hv hU hP Δ hΔ hΔ1 hΔb).extendedEndpoint p = centre D L 1 p.1 p.2 :=
-  ((apertureData (G := G) hc D L hv hU hP Δ hΔ hΔ1 hΔb).extendedEndpoint_active hp (tag_mem hc D hp)).trans
-    (centre_update D L 1 p.1 p.2 0)
-
-theorem core_eq {p : Mixed M (1 + k) D.chart.arity} (hp : p ∈ (liftSet hc D).carrier) :
-    (apertureData (G := G) hc D L hv hU hP Δ hΔ hΔ1 hΔb).core p =
-      decide (vfValue (centre D L 1 p.1 p.2) < vfValue (p.1 D.coordinate - centre D L 0 p.1 p.2)) := by
-  unfold DiamondIntegral.Section6.RelativeApertureData.core
-  rw [extFocus hc D L hv hU hP Δ hΔ hΔ1 hΔb hp, extEndpoint hc D L hv hU hP Δ hΔ hΔ1 hΔb hp]
-  rfl
-
-theorem point_eq {p : Mixed M (1 + k) D.chart.arity} (hp : p ∈ (liftSet hc D).carrier) :
-    (apertureData (G := G) hc D L hv hU hP Δ hΔ hΔ1 hΔb).point p =
-      (Function.update p.1 D.coordinate (p.1 D.coordinate - centre D L 0 p.1 p.2 +
-        if (apertureData (G := G) hc D L hv hU hP Δ hΔ hΔ1 hΔb).core p then centre D L 1 p.1 p.2 else 0),
-        Fin.append (fun _ : Fin 1 => DiamondIntegral.Section6.branchTag (M := M)
-          ((apertureData (G := G) hc D L hv hU hP Δ hΔ hΔ1 hΔb).core p)) p.2) := by
-  unfold DiamondIntegral.Section6.RelativeApertureData.point
-  rw [extFocus hc D L hv hU hP Δ hΔ hΔ1 hΔb hp, extEndpoint hc D L hv hU hP Δ hΔ hΔ1 hΔb hp]
-  rfl
-
-theorem rvValues_regLabels (x : Fin (1 + k) → VF M) (b : RVInfinity M) (u : Fin D.chart.arity → RVInfinity M) :
+theorem rvValues_regLabels (D : AnnularDatum (⟨S, ∅⟩ : Base (M := M)) k) (x : Fin (1 + k) → VF M)
+    (b : RVInfinity M) (u : Fin D.chart.arity → RVInfinity M) :
     rvValues (Fin.append (tupleRV M x) (Fin.append (fun _ : Fin 1 => b) u)) =
       mk D (rvValues (tupleRV M x)) b.val (rvValues u) := by
   funext i
@@ -375,21 +338,22 @@ theorem branchTag_false_val : (DiamondIntegral.Section6.branchTag (M := M) false
   change iRv (iVFOne (M := M)) = iRVOne
   exact RVCalc.rv_one hM
 
-theorem vfValue_lt_infinity {b : VF M} (hb : b ≠ 0) : ¬ Values.infinity ≤ vfValue b := fun h =>
-  hb ((vfValue_eq_infinity_iff b).mp (le_antisymm (Values.le_infinity _) h))
+section Labels2
+variable (hc : CanonicalStructure.IsCanonical (M := M))
+variable (D : AnnularDatum (⟨S, ∅⟩ : Base (M := M)) k)
 
 /-- The regularized labels of an image point lie in the endpoint or shell label set. -/
 theorem point_labels_mem {x : Fin (1 + k) → VF M} {u : Fin D.chart.arity → RVInfinity M}
-    (hx : (x, u) ∈ (liftSet hc D).carrier) (c : Bool)
-    (hcore : c = decide (vfValue (centre D L 1 x u) < vfValue (x D.coordinate - centre D L 0 x u))) :
-    mk D (rvValues (tupleRV M (Function.update x D.coordinate (x D.coordinate - centre D L 0 x u +
-      if c then centre D L 1 x u else 0)))) (DiamondIntegral.Section6.branchTag (M := M) c).val (rvValues u) ∈
+    (hx : (x, u) ∈ (liftSet hc D).carrier) {b0 b1 : VF M}
+    (hb0 : (rv M b0).val = centrePair D (rvValues u) 0) (hb1 : (rv M b1).val = centrePair D (rvValues u) 1)
+    (c : Bool)
+    (hcore : c = decide (vfValue (b1) < vfValue (x D.coordinate - b0))) :
+    mk D (rvValues (tupleRV M (Function.update x D.coordinate (x D.coordinate - b0 +
+      if c then b1 else 0)))) (DiamondIntegral.Section6.branchTag (M := M) c).val (rvValues u) ∈
         Icore D ∪ Ishell D := by
   obtain ⟨hl, hrv⟩ := (mem_liftSet_iff hc D (x, u)).mp hx
-  have hb0 := centre_rv hc D L hx 0
-  have hb1 := centre_rv hc D L hx 1
-  have hne0 := centre_ne_zero hc D L hx 0
-  have hne1 := centre_ne_zero hc D L hx 1
+  have hne0 : b0 ≠ 0 := ne_zero_of_rv hb0 (centrePair_nonzero D hl 0)
+  have hne1 : b1 ≠ 0 := ne_zero_of_rv hb1 (centrePair_nonzero D hl 1)
   have hf : NonzeroRV (D.chart.coordinate (rvValues u) D.coordinate) :=
     ⟨(D.chart.coordinate_proper _ hl _).1, (D.chart.coordinate_proper _ hl _).2⟩
   have hoff : ∀ (e : VF M), ∀ l ≠ D.coordinate,
@@ -407,9 +371,9 @@ theorem point_labels_mem {x : Fin (1 + k) → VF M} {u : Fin D.chart.arity → R
     by_cases hl' : l = D.coordinate
     · subst hl'
       rw [blownCoordinate_at]
-      have hlt : vfValue (centre D L 1 x u) < vfValue (x D.coordinate - centre D L 0 x u) :=
+      have hlt : vfValue (b1) < vfValue (x D.coordinate - b0) :=
         of_decide_eq_true hcore.symm
-      have he : rv M (x D.coordinate - centre D L 0 x u + centre D L 1 x u) = rv M (centre D L 1 x u) :=
+      have he : rv M (x D.coordinate - b0 + b1) = rv M (b1) :=
         (DiamondIntegral.Section6.rv_eq_iff_value_close hne1).mpr (by rw [add_sub_cancel_right]; exact hlt)
       change (rv M (Function.update x D.coordinate _ D.coordinate)).val = _
       rw [Function.update_self, if_pos rfl, he, hb1]
@@ -419,26 +383,26 @@ theorem point_labels_mem {x : Fin (1 + k) → VF M} {u : Fin D.chart.arity → R
   | false =>
     right
     rw [mem_Ishell_iff_lead, lb_mk, tg_mk, hd_mk]
-    have hnlt : ¬ vfValue (centre D L 1 x u) < vfValue (x D.coordinate - centre D L 0 x u) :=
+    have hnlt : ¬ vfValue (b1) < vfValue (x D.coordinate - b0) :=
       fun h => Bool.false_ne_true (hcore.trans (decide_eq_true h))
-    have hy : x D.coordinate - centre D L 0 x u ≠ 0 := by
+    have hy : x D.coordinate - b0 ≠ 0 := by
       intro h0
       rw [h0, (vfValue_eq_infinity_iff (0 : VF M)).mpr rfl] at hnlt
       exact hnlt (lt_of_le_of_ne (Values.le_infinity _)
         (fun he => hne1 ((vfValue_eq_infinity_iff _).mp he)))
-    have hj : rvValues (tupleRV M (Function.update x D.coordinate (x D.coordinate - centre D L 0 x u +
-        if false then centre D L 1 x u else 0))) D.coordinate = iRv (x D.coordinate - centre D L 0 x u).val := by
+    have hj : rvValues (tupleRV M (Function.update x D.coordinate (x D.coordinate - b0 +
+        if false then b1 else 0))) D.coordinate = iRv (x D.coordinate - b0).val := by
       change (rv M (Function.update x D.coordinate _ D.coordinate)).val = _
       rw [Function.update_self, if_neg Bool.false_ne_true, add_zero]
       rfl
     have hnz := DiamondIntegral.Section6.iRv_nonzero hy
-    have hvy : vfValue (x D.coordinate - centre D L 0 x u) = (codeValue (iRv (x D.coordinate - centre D L 0 x u).val)).val :=
+    have hvy : vfValue (x D.coordinate - b0) = (codeValue (iRv (x D.coordinate - b0).val)).val :=
       vfValue_eq_codeValue rfl hnz
     refine ⟨hl, branchTag_false_val, fun l hl' => hoff _ l hl', ?_, ?_, ?_⟩
     · rw [hj]
       exact hnz
     · rw [hj]
-      have hxr : rv M (x D.coordinate) = rv M (centre D L 0 x u) :=
+      have hxr : rv M (x D.coordinate) = rv M (b0) :=
         Subtype.ext ((congrFun hrv D.coordinate).trans hb0.symm)
       have hlt := (DiamondIntegral.Section6.rv_eq_iff_value_close hne0).mp hxr
       rw [vfValue_eq_codeValue hb0 (centrePair_nonzero D hl 0), hvy] at hlt
@@ -448,21 +412,60 @@ theorem point_labels_mem {x : Fin (1 + k) → VF M} {u : Fin D.chart.arity → R
       rw [vfValue_eq_codeValue hb1 (centrePair_nonzero D hl 1), hvy] at hle
       exact hle
 
+end Labels2
+
+section Image
+variable {G : Type} [LinearOrderedCommGroupWithZero G] [Valued (VF M) G]
+variable (hc : CanonicalStructure.IsCanonical (M := M))
+variable (D : AnnularDatum (⟨S, ∅⟩ : Base (M := M)) k)
+variable (R : DiamondIntegral.Section6.RelativeApertureData (G := G) (liftSet hc D))
+variable (hj : R.coordinate = D.coordinate)
+variable (hact : ∀ p ∈ (liftSet hc D).carrier, p.2 ∈ R.activeTags.carrier)
+variable (hend : ∀ p ∈ (liftSet hc D).carrier,
+  (rv M (R.extendedEndpoint p)).val = centrePair D (rvValues p.2) 1)
+
+include hj hact in
+theorem focus_rv {p : Mixed M (1 + k) D.chart.arity} (hp : p ∈ (liftSet hc D).carrier) :
+    (rv M (R.extendedFocus p)).val = centrePair D (rvValues p.2) 0 := by
+  rw [R.extendedFocus_active hp (hact p hp), R.focusRV p hp (hact p hp), hj]
+  exact coord_rv hc D hp D.coordinate
+
+include hj in
+theorem ext_same {p q : Mixed M (1 + k) D.chart.arity} (hp : p ∈ (liftSet hc D).carrier)
+    (hq : q ∈ (liftSet hc D).carrier) (hu : p.2 = q.2) (hother : ∀ i ≠ D.coordinate, p.1 i = q.1 i) :
+    R.extendedFocus p = R.extendedFocus q ∧ R.extendedEndpoint p = R.extendedEndpoint q := by
+  have h' : ∀ i ≠ R.coordinate, p.1 i = q.1 i := fun i hi => hother i (hj ▸ hi)
+  exact ⟨R.extendedFocus_same_other hp hq hu h', R.extendedEndpoint_same_other hp hq hu h'⟩
+
+include hj in
+theorem core_eq (p : Mixed M (1 + k) D.chart.arity) :
+    R.core p = decide (vfValue (R.extendedEndpoint p) < vfValue (p.1 D.coordinate - R.extendedFocus p)) := by
+  unfold DiamondIntegral.Section6.RelativeApertureData.core
+  rw [hj]
+
+include hj in
+theorem point_eq (p : Mixed M (1 + k) D.chart.arity) :
+    R.point p = (Function.update p.1 D.coordinate (p.1 D.coordinate - R.extendedFocus p +
+        if R.core p then R.extendedEndpoint p else 0),
+      Fin.append (fun _ : Fin 1 => DiamondIntegral.Section6.branchTag (M := M) (R.core p)) p.2) := by
+  unfold DiamondIntegral.Section6.RelativeApertureData.point
+  rw [hj]
+
 /-- The regularized image of the lift under the centripetal transformation. -/
 abbrev Vreg : DefSet (rawMixedSpace (M := M) (1 + k) (labN D)) S :=
-  (DiamondIntegral.Section6.regularizeMap (apertureData (G := G) hc D L hv hU hP Δ hΔ hΔ1 hΔb).map.image).image
+  (DiamondIntegral.Section6.regularizeMap R.map.image).image
 
 theorem mem_Vreg_of_point {a : Mixed M (1 + k) D.chart.arity} (ha : a ∈ (liftSet hc D).carrier) :
-    DiamondIntegral.Section6.regularize ((apertureData (G := G) hc D L hv hU hP Δ hΔ hΔ1 hΔb).point a) ∈
-      (Vreg hc D L hv hU hP Δ hΔ hΔ1 hΔb).carrier := by
+    DiamondIntegral.Section6.regularize (R.point a) ∈ (Vreg hc D R).carrier := by
   rw [DiamondIntegral.Section6.regularization_carrier]
   refine ⟨_, ?_, rfl⟩
   rw [DiamondIntegral.Section6.RelativeApertureData.image_carrier]
   exact ⟨a, ha, rfl⟩
 
+include hj hact hend in
 /-- The regularized image is the RV pullback of the endpoint and shell labels. -/
 theorem mem_Vreg_iff (p : Mixed M (1 + k) (labN D)) :
-    p ∈ (Vreg hc D L hv hU hP Δ hΔ hΔ1 hΔb).carrier ↔
+    p ∈ (Vreg hc D R).carrier ↔
       rvValues p.2 ∈ Icore D ∪ Ishell D ∧ rvValues (tupleRV M p.1) = hd D (rvValues p.2) := by
   constructor
   · intro hp
@@ -470,11 +473,11 @@ theorem mem_Vreg_iff (p : Mixed M (1 + k) (labN D)) :
     obtain ⟨q, hq, rfl⟩ := hp
     rw [DiamondIntegral.Section6.RelativeApertureData.image_carrier] at hq
     obtain ⟨⟨x, u⟩, ha, rfl⟩ := hq
-    rw [point_eq hc D L hv hU hP Δ hΔ hΔ1 hΔb ha]
+    rw [point_eq hc D R hj]
     change rvValues (Fin.append (tupleRV M _) (Fin.append (fun _ : Fin 1 => _) u)) ∈ _ ∧
       rvValues (tupleRV M _) = hd D (rvValues (Fin.append (tupleRV M _) (Fin.append (fun _ : Fin 1 => _) u)))
     rw [rvValues_regLabels, hd_mk]
-    exact ⟨point_labels_mem hc D L ha _ (core_eq hc D L hv hU hP Δ hΔ hΔ1 hΔb ha), rfl⟩
+    exact ⟨point_labels_mem hc D ha (focus_rv hc D R hj hact ha) (hend _ ha) _ (core_eq hc D R hj _), rfl⟩
   · rintro ⟨hw, hhd⟩
     obtain ⟨y, t⟩ := p
     let u : Fin D.chart.arity → RVInfinity M := fun i => t (Fin.natAdd (1 + k) (Fin.natAdd 1 i))
@@ -491,43 +494,56 @@ theorem mem_Vreg_iff (p : Mixed M (1 + k) (labN D)) :
       · rw [((mem_Icore_iff D _).mp h).2.2, blownCoordinate, Function.update_of_ne hl']
         rfl
       · exact ((mem_Ishell_iff_lead D _).mp h).2.2.1 l hl'
-    have hin : ∀ i, (rv M (y (BlowupRelation.skip D.coordinate i))).val =
-        D.chart.coordinate (rvValues u) (BlowupRelation.skip D.coordinate i) :=
-      fun i => hoff _ (BlowupRelation.skip_ne D.coordinate i)
-    have hb0 := centre_rv_of_inactive D L hl hin 0
-    have hb1 := centre_rv_of_inactive D L hl hin 1
-    have hne0 := centre_ne_zero_of_inactive D L hl hin 0
-    have hne1 := centre_ne_zero_of_inactive D L hl hin 1
-    have hv0 := vfValue_centre_of_inactive D L hl hin 0
-    have hv1 := vfValue_centre_of_inactive D L hl hin 1
+    have hf : NonzeroRV (D.chart.coordinate (rvValues u) D.coordinate) :=
+      ⟨(D.chart.coordinate_proper _ hl _).1, (D.chart.coordinate_proper _ hl _).2⟩
+    obtain ⟨z₀, hz₀⟩ := DiamondIntegral.Section2.rv_surjective
+      (⟨D.chart.coordinate (rvValues u) D.coordinate, hf.1⟩ : RVInfinity M)
+    -- a point of the lift with the same labels and inactive coordinates
+    have hmem : ∀ e : VF M, (rv M e).val = D.chart.coordinate (rvValues u) D.coordinate →
+        (Function.update y D.coordinate e, u) ∈ (liftSet hc D).carrier := by
+      intro e he
+      refine (mem_liftSet_iff hc D (Function.update y D.coordinate e, u)).mpr ⟨hl, funext (fun l => ?_)⟩
+      change (rv M (Function.update y D.coordinate e l)).val = _
+      by_cases hl' : l = D.coordinate
+      · subst hl'
+        rw [Function.update_self]
+        exact he
+      · rw [Function.update_of_ne hl']
+        exact hoff l hl'
+    have hy₀ := hmem z₀ (congrArg Subtype.val hz₀)
+    let b0 := R.extendedFocus (Function.update y D.coordinate z₀, u)
+    let b1 := R.extendedEndpoint (Function.update y D.coordinate z₀, u)
+    have hb0 : (rv M b0).val = centrePair D (rvValues u) 0 := focus_rv hc D R hj hact hy₀
+    have hb1 : (rv M b1).val = centrePair D (rvValues u) 1 := hend _ hy₀
+    have hne0 : b0 ≠ 0 := ne_zero_of_rv hb0 (centrePair_nonzero D hl 0)
+    have hne1 : b1 ≠ 0 := ne_zero_of_rv hb1 (centrePair_nonzero D hl 1)
+    have hv0 : vfValue b0 = (codeValue (centrePair D (rvValues u) 0)).val :=
+      vfValue_eq_codeValue hb0 (centrePair_nonzero D hl 0)
+    have hv1 : vfValue b1 = (codeValue (centrePair D (rvValues u) 1)).val :=
+      vfValue_eq_codeValue hb1 (centrePair_nonzero D hl 1)
     have hle01 := centrePair_le D hl
-    -- a candidate preimage `(x, u)` with `x` differing from `y` only at `j`
-    have key : ∀ (e : VF M) (c : Bool), (rv M e) = rv M (centre D L 0 y u) →
-        c = decide (vfValue (centre D L 1 y u) < vfValue (e - centre D L 0 y u)) →
-        e - centre D L 0 y u + (if c then centre D L 1 y u else 0) = y D.coordinate →
+    have key : ∀ (e : VF M) (c : Bool), (rv M e) = rv M b0 →
+        c = decide (vfValue b1 < vfValue (e - b0)) →
+        e - b0 + (if c then b1 else 0) = y D.coordinate →
         t = Fin.append (tupleRV M y) (Fin.append (fun _ : Fin 1 => DiamondIntegral.Section6.branchTag (M := M) c) u) →
-        (y, t) ∈ (Vreg hc D L hv hU hP Δ hΔ hΔ1 hΔb).carrier := by
+        (y, t) ∈ (Vreg hc D R).carrier := by
       intro e c he hc' hy ht
       let x := Function.update y D.coordinate e
-      have hxu : (x, u) ∈ (liftSet hc D).carrier := by
-        refine (mem_liftSet_iff hc D (x, u)).mpr ⟨hl, funext (fun l => ?_)⟩
-        change (rv M (Function.update y D.coordinate e l)).val = _
-        by_cases hl' : l = D.coordinate
-        · subst hl'
-          rw [Function.update_self, he]
-          exact hb0
-        · rw [Function.update_of_ne hl']
-          exact hoff l hl'
-      have hc0 : centre D L 0 x u = centre D L 0 y u := centre_update D L 0 y u e
-      have hc1 : centre D L 1 x u = centre D L 1 y u := centre_update D L 1 y u e
-      have hcore : (apertureData (G := G) hc D L hv hU hP Δ hΔ hΔ1 hΔb).core (x, u) = c := by
-        have hxj : x D.coordinate = e := Function.update_self _ _ _
-        rw [core_eq hc D L hv hU hP Δ hΔ hΔ1 hΔb hxu, hc', hc0, hc1]
-        simp only [hxj]
-      have h := mem_Vreg_of_point hc D L hv hU hP Δ hΔ hΔ1 hΔb hxu
-      rw [point_eq hc D L hv hU hP Δ hΔ hΔ1 hΔb hxu, hcore, hc0, hc1] at h
-      have hx : Function.update x D.coordinate (x D.coordinate - centre D L 0 y u +
-          if c then centre D L 1 y u else 0) = y := by
+      have hxu : (x, u) ∈ (liftSet hc D).carrier := hmem e ((congrArg Subtype.val he).trans hb0)
+      have hsame := ext_same hc D R hj hxu hy₀ rfl (fun i hi => by
+        change Function.update y D.coordinate e i = Function.update y D.coordinate z₀ i
+        rw [Function.update_of_ne hi, Function.update_of_ne hi])
+      have hxj : x D.coordinate = e := Function.update_self _ _ _
+      have hcore : R.core (x, u) = c := by
+        rw [core_eq hc D R hj, hc']
+        change decide (vfValue (R.extendedEndpoint (x, u)) < vfValue (x D.coordinate - R.extendedFocus (x, u))) = _
+        rw [hsame.1, hsame.2, hxj]
+      have h := mem_Vreg_of_point hc D R hxu
+      rw [point_eq hc D R hj, hcore] at h
+      change DiamondIntegral.Section6.regularize (Function.update x D.coordinate (x D.coordinate -
+        R.extendedFocus (x, u) + if c then R.extendedEndpoint (x, u) else 0), _) ∈ _ at h
+      rw [hsame.1, hsame.2] at h
+      have hx : Function.update x D.coordinate (x D.coordinate - b0 + if c then b1 else 0) = y := by
         change Function.update (Function.update y D.coordinate e) D.coordinate
           (Function.update y D.coordinate e D.coordinate - _ + _) = y
         rw [Function.update_self, hy, Function.update_idem, Function.update_eq_self]
@@ -542,12 +558,12 @@ theorem mem_Vreg_iff (p : Mixed M (1 + k) (labN D)) :
       exact (mk_recon D (rvValues t)).symm
     rcases hw with h | h
     · obtain ⟨_, htg, hhead⟩ := (mem_Icore_iff D _).mp h
-      have hyr : rv M (y D.coordinate) = rv M (centre D L 1 y u) := by
+      have hyr : rv M (y D.coordinate) = rv M b1 := by
         apply Subtype.ext
         rw [hb1, hyj, hhead, blownCoordinate_at]
         rfl
       have hlt := (DiamondIntegral.Section6.rv_eq_iff_value_close hne1).mp hyr
-      apply key (y D.coordinate - centre D L 1 y u + centre D L 0 y u) true
+      apply key (y D.coordinate - b1 + b0) true
       · apply (DiamondIntegral.Section6.rv_eq_iff_value_close hne0).mpr
         rw [add_sub_cancel_right, hv0]
         exact lt_of_le_of_lt (by rw [hv1]; exact hle01) hlt
@@ -558,7 +574,7 @@ theorem mem_Vreg_iff (p : Mixed M (1 + k) (labN D)) :
     · obtain ⟨_, htg, _, hnz, h1, h2⟩ := (mem_Ishell_iff_lead D _).mp h
       have hvy : vfValue (y D.coordinate) = (codeValue (hd D (rvValues t) D.coordinate)).val :=
         vfValue_eq_codeValue (hyj _) hnz
-      apply key (y D.coordinate + centre D L 0 y u) false
+      apply key (y D.coordinate + b0) false
       · apply (DiamondIntegral.Section6.rv_eq_iff_value_close hne0).mpr
         rw [add_sub_cancel_right, hv0, hvy]
         exact h1
@@ -570,5 +586,37 @@ theorem mem_Vreg_iff (p : Mixed M (1 + k) (labN D)) :
       · exact htag false (htg.trans branchTag_false_val.symm)
 
 end Image
+
+/-! ### The centres of `BlowupLiftData` satisfy the hypotheses -/
+
+section Instance
+variable {G : Type} [LinearOrderedCommGroupWithZero G] [Valued (VF M) G]
+variable (hc : CanonicalStructure.IsCanonical (M := M))
+variable (D : AnnularDatum (⟨S, ∅⟩ : Base (M := M)) k)
+variable (L : DiamondIntegral.Section6.TupleFinitaryLift (centreRelation D))
+variable (hv : ∀ x y : VF M, VFValued.predV x y ↔ Valued.v x ≤ Valued.v y)
+variable (hU : (toMeasured hc D.chart).doublyBounded)
+variable (hP : DiamondIntegral.Section6.ProperInvariant S (liftSet hc D).carrier)
+variable (Δ : Values.Gamma (M := M))
+variable (hΔ : S.Definable LRV {z : Fin 1 → M | z 0 ∈ Values.gammaPullback {Δ}})
+variable (hΔ1 : 1 ≤ Δ) (hΔb : ∀ u ∈ D.chart.domain, codeValue (D.aperture.aperture u) ≤ Δ)
+
+theorem apertureData_coordinate :
+    (apertureData (G := G) hc D L hv hU hP Δ hΔ hΔ1 hΔb).coordinate = D.coordinate := rfl
+
+theorem apertureData_active : ∀ p ∈ (liftSet hc D).carrier,
+    p.2 ∈ (apertureData (G := G) hc D L hv hU hP Δ hΔ hΔ1 hΔb).activeTags.carrier :=
+  fun _ hp => tag_mem hc D hp
+
+theorem apertureData_endpoint : ∀ p ∈ (liftSet hc D).carrier,
+    (rv M ((apertureData (G := G) hc D L hv hU hP Δ hΔ hΔ1 hΔb).extendedEndpoint p)).val =
+      centrePair D (rvValues p.2) 1 := by
+  intro p hp
+  rw [(apertureData (G := G) hc D L hv hU hP Δ hΔ hΔ1 hΔb).extendedEndpoint_active hp (tag_mem hc D hp)]
+  change (rv M (centre D L 1 (Function.update p.1 D.coordinate 0) p.2)).val = _
+  rw [centre_update]
+  exact centre_rv hc D L hp 1
+
+end Instance
 
 end DiamondIntegral.Section7.BlowupLiftImage

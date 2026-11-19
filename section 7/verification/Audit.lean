@@ -438,18 +438,6 @@ import «section 7».Section
 #check @DiamondIntegral.Section7.BlowupLiftImage.tag_mem
 #print DiamondIntegral.Section7.BlowupLiftImage.tag_mem
 #print axioms DiamondIntegral.Section7.BlowupLiftImage.tag_mem
-#check @DiamondIntegral.Section7.BlowupLiftImage.extFocus
-#print DiamondIntegral.Section7.BlowupLiftImage.extFocus
-#print axioms DiamondIntegral.Section7.BlowupLiftImage.extFocus
-#check @DiamondIntegral.Section7.BlowupLiftImage.extEndpoint
-#print DiamondIntegral.Section7.BlowupLiftImage.extEndpoint
-#print axioms DiamondIntegral.Section7.BlowupLiftImage.extEndpoint
-#check @DiamondIntegral.Section7.BlowupLiftImage.core_eq
-#print DiamondIntegral.Section7.BlowupLiftImage.core_eq
-#print axioms DiamondIntegral.Section7.BlowupLiftImage.core_eq
-#check @DiamondIntegral.Section7.BlowupLiftImage.point_eq
-#print DiamondIntegral.Section7.BlowupLiftImage.point_eq
-#print axioms DiamondIntegral.Section7.BlowupLiftImage.point_eq
 #check @DiamondIntegral.Section7.BlowupLiftImage.rvValues_regLabels
 #print DiamondIntegral.Section7.BlowupLiftImage.rvValues_regLabels
 #print axioms DiamondIntegral.Section7.BlowupLiftImage.rvValues_regLabels
@@ -459,12 +447,21 @@ import «section 7».Section
 #check @DiamondIntegral.Section7.BlowupLiftImage.branchTag_false_val
 #print DiamondIntegral.Section7.BlowupLiftImage.branchTag_false_val
 #print axioms DiamondIntegral.Section7.BlowupLiftImage.branchTag_false_val
-#check @DiamondIntegral.Section7.BlowupLiftImage.vfValue_lt_infinity
-#print DiamondIntegral.Section7.BlowupLiftImage.vfValue_lt_infinity
-#print axioms DiamondIntegral.Section7.BlowupLiftImage.vfValue_lt_infinity
 #check @DiamondIntegral.Section7.BlowupLiftImage.point_labels_mem
 #print DiamondIntegral.Section7.BlowupLiftImage.point_labels_mem
 #print axioms DiamondIntegral.Section7.BlowupLiftImage.point_labels_mem
+#check @DiamondIntegral.Section7.BlowupLiftImage.focus_rv
+#print DiamondIntegral.Section7.BlowupLiftImage.focus_rv
+#print axioms DiamondIntegral.Section7.BlowupLiftImage.focus_rv
+#check @DiamondIntegral.Section7.BlowupLiftImage.ext_same
+#print DiamondIntegral.Section7.BlowupLiftImage.ext_same
+#print axioms DiamondIntegral.Section7.BlowupLiftImage.ext_same
+#check @DiamondIntegral.Section7.BlowupLiftImage.core_eq
+#print DiamondIntegral.Section7.BlowupLiftImage.core_eq
+#print axioms DiamondIntegral.Section7.BlowupLiftImage.core_eq
+#check @DiamondIntegral.Section7.BlowupLiftImage.point_eq
+#print DiamondIntegral.Section7.BlowupLiftImage.point_eq
+#print axioms DiamondIntegral.Section7.BlowupLiftImage.point_eq
 #check @DiamondIntegral.Section7.BlowupLiftImage.Vreg
 #print DiamondIntegral.Section7.BlowupLiftImage.Vreg
 #print axioms DiamondIntegral.Section7.BlowupLiftImage.Vreg
@@ -474,6 +471,15 @@ import «section 7».Section
 #check @DiamondIntegral.Section7.BlowupLiftImage.mem_Vreg_iff
 #print DiamondIntegral.Section7.BlowupLiftImage.mem_Vreg_iff
 #print axioms DiamondIntegral.Section7.BlowupLiftImage.mem_Vreg_iff
+#check @DiamondIntegral.Section7.BlowupLiftImage.apertureData_coordinate
+#print DiamondIntegral.Section7.BlowupLiftImage.apertureData_coordinate
+#print axioms DiamondIntegral.Section7.BlowupLiftImage.apertureData_coordinate
+#check @DiamondIntegral.Section7.BlowupLiftImage.apertureData_active
+#print DiamondIntegral.Section7.BlowupLiftImage.apertureData_active
+#print axioms DiamondIntegral.Section7.BlowupLiftImage.apertureData_active
+#check @DiamondIntegral.Section7.BlowupLiftImage.apertureData_endpoint
+#print DiamondIntegral.Section7.BlowupLiftImage.apertureData_endpoint
+#print axioms DiamondIntegral.Section7.BlowupLiftImage.apertureData_endpoint
 #check @DiamondIntegral.Section7.BlowupResults.lemma_7_5
 #print DiamondIntegral.Section7.BlowupResults.lemma_7_5
 #print axioms DiamondIntegral.Section7.BlowupResults.lemma_7_5

@@ -44,31 +44,30 @@ section Contraction
 variable {G : Type} [LinearOrderedCommGroupWithZero G] [Valued (VF M) G]
 variable (hc : CanonicalStructure.IsCanonical (M := M))
 variable (D : AnnularDatum (⟨S, ∅⟩ : Base (M := M)) k)
-variable (L : TupleFinitaryLift (centreRelation D))
-variable (hv : ∀ x y : VF M, VFValued.predV x y ↔ Valued.v x ≤ Valued.v y)
-variable (hU : (toMeasured hc D.chart).doublyBounded)
-variable (hP : ProperInvariant S (liftSet hc D).carrier)
-variable (Δ : Values.Gamma (M := M))
-variable (hΔ : S.Definable LRV {z : Fin 1 → M | z 0 ∈ Values.gammaPullback {Δ}})
-variable (hΔ1 : 1 ≤ Δ) (hΔb : ∀ u ∈ D.chart.domain, codeValue (D.aperture.aperture u) ≤ Δ)
+variable (R : RelativeApertureData (G := G) (liftSet hc D))
+variable (hj : R.coordinate = D.coordinate)
+variable (hact : ∀ p ∈ (liftSet hc D).carrier, p.2 ∈ R.activeTags.carrier)
+variable (hend : ∀ p ∈ (liftSet hc D).carrier,
+  (rv M (R.extendedEndpoint p)).val = centrePair D (rvValues p.2) 1)
+include hj hact hend
 
-local notation "𝓡" => apertureData (G := G) hc D L hv hU hP Δ hΔ hΔ1 hΔb
-local notation "𝓥" => Vreg (G := G) hc D L hv hU hP Δ hΔ hΔ1 hΔb
+local notation "𝓡" => R
+local notation "𝓥" => Vreg (G := G) hc D R
 
 theorem vreg_tagged :
     ∀ p ∈ (𝓥).carrier, ∀ q ∈ (𝓥).carrier, p.2 = q.2 → tupleRV M p.1 = tupleRV M q.1 := by
   intro p hp q hq he
   apply rvValues_injective
-  rw [((mem_Vreg_iff hc D L hv hU hP Δ hΔ hΔ1 hΔb p).mp hp).2,
-    ((mem_Vreg_iff hc D L hv hU hP Δ hΔ hΔ1 hΔb q).mp hq).2, he]
+  rw [((mem_Vreg_iff hc D R hj hact hend p).mp hp).2,
+    ((mem_Vreg_iff hc D R hj hact hend q).mp hq).2, he]
 
 theorem vreg_pullback : IsRVPullback (𝓥).carrier := by
   show rvHull _ = _
   apply Set.Subset.antisymm
   · intro q hq
     obtain ⟨p, hp, h1, h2⟩ := (mem_rvHull_iff _ q).mp hq
-    have h := (mem_Vreg_iff hc D L hv hU hP Δ hΔ hΔ1 hΔb p).mp hp
-    apply (mem_Vreg_iff hc D L hv hU hP Δ hΔ hΔ1 hΔb q).mpr
+    have h := (mem_Vreg_iff hc D R hj hact hend p).mp hp
+    apply (mem_Vreg_iff hc D R hj hact hend q).mpr
     rw [← h1, ← h2]
     exact h
   · intro q hq
@@ -91,7 +90,7 @@ theorem vreg_finite (a : Fin (1 + k) → VF M) :
     (hF.prod (Set.toFinite _)).image _
   refine (hT.preimage rvValues_injective.injOn).subset ?_
   intro t ht
-  obtain ⟨hw, hhd⟩ := (mem_Vreg_iff hc D L hv hU hP Δ hΔ hΔ1 hΔb (a, t)).mp ht
+  obtain ⟨hw, hhd⟩ := (mem_Vreg_iff hc D R hj hact hend (a, t)).mp ht
   have hl : lb D (rvValues t) ∈ D.chart.domain := by
     rcases hw with h | h
     · exact ((mem_Icore_iff D _).mp h).1
@@ -102,7 +101,7 @@ theorem vreg_finite (a : Fin (1 + k) → VF M) :
     · subst hl'
       simp only [AnnularBlowup.inactive, Function.update_self]
     · simp only [AnnularBlowup.inactive, Function.update_of_ne hl']
-      rw [← hd_off D hw l hl']
+      rw [← hd_off hc D R hj hact hend hw l hl']
       exact (congrFun hhd l).symm
   · rcases hw with h | h
     · exact Or.inl ((mem_Icore_iff D _).mp h).2.1
@@ -144,82 +143,83 @@ theorem vreg_rvDoublyBounded : RVSupportDoublyBounded (𝓥).carrier := by
 def Fmap : Map (liftSet hc D) (𝓥) := (regularization (𝓡).map.image).comp (𝓡).bijection
 
 theorem Fmap_bijective (h00 : M ⊨ Axioms.ACVF00) :
-    Function.Bijective (Fmap (G := G) hc D L hv hU hP Δ hΔ hΔ1 hΔb) :=
+    Function.Bijective (Fmap (G := G) hc D R) :=
   (regularization_bijective _).comp ((𝓡).bijective h00)
 
 theorem Fmap_val (a : liftSet hc D) :
-    (Fmap (G := G) hc D L hv hU hP Δ hΔ hΔ1 hΔb a).val = regularize ((𝓡).point a.val) := rfl
+    (Fmap (G := G) hc D R a).val = regularize ((𝓡).point a.val) := rfl
 
 theorem Fmap_labels (a : liftSet hc D) (i : Fin D.chart.arity) :
-    (Fmap (G := G) hc D L hv hU hP Δ hΔ hΔ1 hΔb a).val.2 (Fin.natAdd (1 + k) (Fin.natAdd 1 i)) = a.val.2 i := by
-  rw [Fmap_val]
+    (Fmap (G := G) hc D R a).val.2 (Fin.natAdd (1 + k) (Fin.natAdd 1 i)) = a.val.2 i := by
+  rw [Fmap_val hc D R hj hact hend]
   simp only [regularize, RelativeApertureData.point, Fin.append_right]
 
 /-- The source form transported to the regularized image. -/
 def form (h00 : M ⊨ Axioms.ACVF00) : Map (𝓥) (DefSet.univ (rawGammaPresentation (M := M)) S) :=
   (liftForm (toMeasured hc D.chart)).comp
-    ((Fmap (G := G) hc D L hv hU hP Δ hΔ hΔ1 hΔb).inverse (Fmap_bijective hc D L hv hU hP Δ hΔ hΔ1 hΔb h00))
+    ((Fmap (G := G) hc D R).inverse (Fmap_bijective hc D R hj hact hend h00))
 
 theorem form_labels (h00 : M ⊨ Axioms.ACVF00) (p q : 𝓥) (he : p.val.2 = q.val.2) :
-    form hc D L hv hU hP Δ hΔ hΔ1 hΔb h00 p = form hc D L hv hU hP Δ hΔ hΔ1 hΔb h00 q := by
-  have hF := Fmap_bijective hc D L hv hU hP Δ hΔ hΔ1 hΔb h00
-  have hp := Map.apply_inverse (Fmap (G := G) hc D L hv hU hP Δ hΔ hΔ1 hΔb) hF p
-  have hq := Map.apply_inverse (Fmap (G := G) hc D L hv hU hP Δ hΔ hΔ1 hΔb) hF q
-  have hl : ((Fmap (G := G) hc D L hv hU hP Δ hΔ hΔ1 hΔb).inverse hF p).val.2 =
-      ((Fmap (G := G) hc D L hv hU hP Δ hΔ hΔ1 hΔb).inverse hF q).val.2 := by
+    form hc D R hj hact hend h00 p = form hc D R hj hact hend h00 q := by
+  have hF := Fmap_bijective hc D R hj hact hend h00
+  have hp := Map.apply_inverse (Fmap (G := G) hc D R) hF p
+  have hq := Map.apply_inverse (Fmap (G := G) hc D R) hF q
+  have hl : ((Fmap (G := G) hc D R).inverse hF p).val.2 =
+      ((Fmap (G := G) hc D R).inverse hF q).val.2 := by
     funext i
-    rw [← Fmap_labels hc D L hv hU hP Δ hΔ hΔ1 hΔb _ i, ← Fmap_labels hc D L hv hU hP Δ hΔ hΔ1 hΔb _ i, hp, hq, he]
-  change (toMeasured hc D.chart).form (liftLabelMap _ ((Fmap (G := G) hc D L hv hU hP Δ hΔ hΔ1 hΔb).inverse hF p)) =
-    (toMeasured hc D.chart).form (liftLabelMap _ ((Fmap (G := G) hc D L hv hU hP Δ hΔ hΔ1 hΔb).inverse hF q))
+    rw [← Fmap_labels hc D R hj hact hend _ i, ← Fmap_labels hc D R hj hact hend _ i, hp, hq, he]
+  change (toMeasured hc D.chart).form (liftLabelMap _ ((Fmap (G := G) hc D R).inverse hF p)) =
+    (toMeasured hc D.chart).form (liftLabelMap _ ((Fmap (G := G) hc D R).inverse hF q))
   congr 1
   exact Subtype.ext hl
 
 /-- The contraction `W` of the regularized image. -/
 def W (h00 : M ⊨ Axioms.ACVF00) : MeasuredRVObject (M := M) S (1 + k) :=
-  contractedMeasuredRVObject (𝓥) (vreg_tagged hc D L hv hU hP Δ hΔ hΔ1 hΔb)
-    (vreg_pullback hc D L hv hU hP Δ hΔ hΔ1 hΔb) (vreg_finite hc D L hv hU hP Δ hΔ hΔ1 hΔb)
-    (vreg_vfDoublyBounded hc D L hv hU hP Δ hΔ hΔ1 hΔb) (form hc D L hv hU hP Δ hΔ hΔ1 hΔb h00)
-    (form_labels hc D L hv hU hP Δ hΔ hΔ1 hΔb h00)
+  contractedMeasuredRVObject (𝓥) (vreg_tagged hc D R hj hact hend)
+    (vreg_pullback hc D R hj hact hend) (vreg_finite hc D R hj hact hend)
+    (vreg_vfDoublyBounded hc D R hj hact hend) (form hc D R hj hact hend h00)
+    (form_labels hc D R hj hact hend h00)
 
-theorem W_doublyBounded (h00 : M ⊨ Axioms.ACVF00) : (W hc D L hv hU hP Δ hΔ hΔ1 hΔb h00).doublyBounded :=
-  contractedMeasuredRVObject_doublyBounded _ _ _ _ _ (vreg_rvDoublyBounded hc D L hv hU hP Δ hΔ hΔ1 hΔb) _ _
+theorem W_doublyBounded (h00 : M ⊨ Axioms.ACVF00) : (W hc D R hj hact hend h00).doublyBounded :=
+  contractedMeasuredRVObject_doublyBounded _ _ _ _ _ (vreg_rvDoublyBounded hc D R hj hact hend) _ _
 
 theorem W_lift_carrier (h00 : M ⊨ Axioms.ACVF00) :
-    (rvLift (W hc D L hv hU hP Δ hΔ hΔ1 hΔb h00).object).carrier = (𝓥).carrier :=
-  preparedRVObject_lift_carrier _ (vreg_pullback hc D L hv hU hP Δ hΔ hΔ1 hΔb)
-    (vreg_tagged hc D L hv hU hP Δ hΔ hΔ1 hΔb)
+    (rvLift (W hc D R hj hact hend h00).object).carrier = (𝓥).carrier :=
+  preparedRVObject_lift_carrier _ (vreg_pullback hc D R hj hact hend)
+    (vreg_tagged hc D R hj hact hend)
 
 /-- The lift of the source chart is isomorphic in `μVF^◇[1+k]` to the lift of
 the contraction `W`. -/
-theorem lift_isomorphic (h00 : M ⊨ Axioms.ACVF00) {κ : Cardinal} (hκ : Cardinal.aleph0 < κ)
+theorem lift_isomorphic (hv : ∀ x y : VF M, VFValued.predV x y ↔ Valued.v x ≤ Valued.v y)
+    (h00 : M ⊨ Axioms.ACVF00) {κ : Cardinal} (hκ : Cardinal.aleph0 < κ)
     (hs : Saturated M κ) (hsmall : Cardinal.mk S < κ)
     (hΓ : NontrivialDefinableGamma (⟨S, ∅⟩ : ParameterBase M)) :
-    Isomorphic G (liftObject (toMeasured hc D.chart) hP)
-      (liftObject (W hc D L hv hU hP Δ hΔ hΔ1 hΔb h00)
-        (measuredRVLift_properInvariant h00 hc hκ hs hv _ (W_doublyBounded hc D L hv hU hP Δ hΔ hΔ1 hΔb h00))) := by
-  have hsub : (𝓥).carrier ⊆ (rvLift (W hc D L hv hU hP Δ hΔ hΔ1 hΔb h00).object).carrier :=
-    fun p hp => (W_lift_carrier hc D L hv hU hP Δ hΔ hΔ1 hΔb h00).symm ▸ hp
-  let F' : Map (liftSet hc D) (rvLift (W hc D L hv hU hP Δ hΔ hΔ1 hΔb h00).object) :=
-    (Map.inclusion hsub).comp (Fmap (G := G) hc D L hv hU hP Δ hΔ hΔ1 hΔb)
-  have hchain : RelativeApertureChain (G := G) (liftSet hc D) (𝓥) (Fmap (G := G) hc D L hv hU hP Δ hΔ hΔ1 hΔb) :=
+    Isomorphic G (liftObject (toMeasured hc D.chart) R.sourceProper)
+      (liftObject (W hc D R hj hact hend h00)
+        (measuredRVLift_properInvariant h00 hc hκ hs hv _ (W_doublyBounded hc D R hj hact hend h00))) := by
+  have hsub : (𝓥).carrier ⊆ (rvLift (W hc D R hj hact hend h00).object).carrier :=
+    fun p hp => (W_lift_carrier hc D R hj hact hend h00).symm ▸ hp
+  let F' : Map (liftSet hc D) (rvLift (W hc D R hj hact hend h00).object) :=
+    (Map.inclusion hsub).comp (Fmap (G := G) hc D R)
+  have hchain : RelativeApertureChain (G := G) (liftSet hc D) (𝓥) (Fmap (G := G) hc D R) :=
     RelativeApertureChain.comp (RelativeApertureChain.relative _ (𝓡))
       (RelativeApertureChain.original (SpecialCovariantChain.regularize _
         ((𝓡).image_properInvariant h00 hc hκ hs hv) (𝓡).image_vfDoublyBounded))
-  have H : RelativeApertureChain (G := G) (liftSet hc D) (rvLift (W hc D L hv hU hP Δ hΔ hΔ1 hΔb h00).object) F' :=
-    RelativeApertureChain.changeTarget (DefSet.eq_of_carrier_eq (W_lift_carrier hc D L hv hU hP Δ hΔ hΔ1 hΔb h00).symm)
+  have H : RelativeApertureChain (G := G) (liftSet hc D) (rvLift (W hc D R hj hact hend h00).object) F' :=
+    RelativeApertureChain.changeTarget (DefSet.eq_of_carrier_eq (W_lift_carrier hc D R hj hact hend h00).symm)
       (fun _ => rfl) hchain
   refine DiamondSpecialIsomorphisms.remark_6_15 h00 hc DiamondIntegral.Section7.LiftClasses.lin hκ hs hv hsmall hΓ
-    (A := liftObject (toMeasured hc D.chart) hP) F' H (DefSet.empty _ S) (Or.inr rfl) (fun p _ => ?_)
-  have hl : liftLabelMap (W hc D L hv hU hP Δ hΔ hΔ1 hΔb h00).object (F' p) =
-      pureRVTagQuotient (𝓥) (Fmap (G := G) hc D L hv hU hP Δ hΔ hΔ1 hΔb p) := Subtype.ext rfl
+    (A := liftObject (toMeasured hc D.chart) R.sourceProper) F' H (DefSet.empty _ S) (Or.inr rfl) (fun p _ => ?_)
+  have hl : liftLabelMap (W hc D R hj hact hend h00).object (F' p) =
+      pureRVTagQuotient (𝓥) (Fmap (G := G) hc D R p) := Subtype.ext rfl
   change gammaMapValue (liftForm (toMeasured hc D.chart)) p =
-    gammaMapValue (W hc D L hv hU hP Δ hΔ hΔ1 hΔb h00).form (liftLabelMap _ (F' p))
-  rw [hl, show gammaMapValue (W hc D L hv hU hP Δ hΔ hΔ1 hΔb h00).form
-      (pureRVTagQuotient (𝓥) (Fmap (G := G) hc D L hv hU hP Δ hΔ hΔ1 hΔb p)) =
-      gammaMapValue (form hc D L hv hU hP Δ hΔ hΔ1 hΔb h00) (Fmap (G := G) hc D L hv hU hP Δ hΔ hΔ1 hΔb p) from
+    gammaMapValue (W hc D R hj hact hend h00).form (liftLabelMap _ (F' p))
+  rw [hl, show gammaMapValue (W hc D R hj hact hend h00).form
+      (pureRVTagQuotient (𝓥) (Fmap (G := G) hc D R p)) =
+      gammaMapValue (form hc D R hj hact hend h00) (Fmap (G := G) hc D R p) from
     contractedMeasuredRVObject_form _ _ _ _ _ _ _ _]
   change _ = gammaMapValue (liftForm (toMeasured hc D.chart))
-    ((Fmap (G := G) hc D L hv hU hP Δ hΔ hΔ1 hΔb).inverse _ (Fmap (G := G) hc D L hv hU hP Δ hΔ hΔ1 hΔb p))
+    ((Fmap (G := G) hc D R).inverse _ (Fmap (G := G) hc D R p))
   rw [Map.inverse_apply]
 
 end Contraction
