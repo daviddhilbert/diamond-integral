@@ -206,6 +206,102 @@ theorem imageGood_form (x : X) : (imageGood hc g R hκ hs hsmall h00).form (R.bi
   change g.form (R.bijection.inverse _ (R.bijection x)) = _
   rw [Map.inverse_apply]
 
+theorem tail_append_one (u : Fin r → RVInfinity M) :
+    (fun i => Fin.append (fun _ : Fin 1 => branchTag (M := M) false) u (Fin.natAdd 1 i)) = u := by
+  funext i
+  simp only [Fin.append_right]
+
+/-- The inactive piece of the image has the class of the inactive part. -/
+theorem clsG_inactive :
+    clsG hc (goodRes (imageGood hc g R hκ hs hsmall h00) (compl (tailDef R.activeTags))) =
+      clsG hc (goodRes g (compl R.activeTags)) := by
+  symm
+  apply cls_objOf_eq hc
+  let Y := focusActive X (compl R.activeTags)
+  let Z := focusActive R.map.image (compl (tailDef R.activeTags))
+  have hYX : Y.carrier ⊆ X.carrier := fun _ h => h.1
+  have hT : ∀ y : Y, (R.bijection (Map.inclusion hYX y)).val ∈ Z.carrier := by
+    intro y
+    refine ⟨(R.bijection (Map.inclusion hYX y)).property, Set.mem_univ _, ?_⟩
+    change ¬ ((fun i => (R.point y.val).2 (Fin.natAdd 1 i)) ∈ R.activeTags.carrier)
+    rw [point_snd_tail]
+    exact y.property.2.2
+  let Tm : Map Y Z := mapCorestrict (R.bijection.comp (Map.inclusion hYX)) hT
+  have hTval : ∀ y : Y, (Tm y).val = (y.val.1, Fin.append (fun _ : Fin 1 => branchTag (M := M) false) y.val.2) :=
+    fun y => RelativeRestrict.RelativeApertureData.point_inactive R y.property.2.2
+  have hTbij : Function.Bijective Tm := by
+    constructor
+    · intro a b he
+      have h1 := congrArg Subtype.val he
+      rw [hTval, hTval] at h1
+      apply Subtype.ext
+      have hfst := congrArg Prod.fst h1
+      have h2 := congrArg (fun z : Mixed M (1 + k) (1 + r) => fun i => z.2 (Fin.natAdd 1 i)) h1
+      have hsnd : a.val.2 = b.val.2 := by simpa only [tail_append_one] using h2
+      exact Prod.ext hfst hsnd
+    · intro z
+      obtain ⟨x, hx, he⟩ := (mem_image R).mp z.property.1
+      have hxi : x.2 ∉ R.activeTags.carrier := by
+        have h := z.property.2.2
+        rw [← he] at h
+        change ¬ ((fun i => (R.point x).2 (Fin.natAdd 1 i)) ∈ R.activeTags.carrier) at h
+        rw [point_snd_tail] at h
+        exact h
+      exact ⟨⟨x, hx, Set.mem_univ _, hxi⟩, Subtype.ext he⟩
+  have hinv : Function.Bijective ((regularization Y).inverse (regularization_bijective Y)) :=
+    ⟨fun a b h => by
+      have h' := congrArg (regularization Y) h
+      rwa [Map.apply_inverse, Map.apply_inverse] at h',
+     fun a => ⟨regularization Y a, Map.inverse_apply _ _ a⟩⟩
+  let f : Map (regularizeMap Y).image (regularizeMap Z).image :=
+    (regularization Z).comp (Tm.comp ((regularization Y).inverse (regularization_bijective Y)))
+  have hf : Function.Bijective f := (regularization_bijective _).comp (hTbij.comp hinv)
+  have hfx : ∀ y : Y, f (regularization Y y) = regularization Z (Tm y) := by
+    intro y
+    change regularization Z (Tm ((regularization Y).inverse _ (regularization Y y))) = _
+    rw [Map.inverse_apply]
+  have hsnd : ∀ y : Y, (f (regularization Y y)).val.2 =
+      Fin.append (tupleRV M y.val.1) (Fin.append (fun _ : Fin 1 => branchTag (M := M) false) y.val.2) := by
+    intro y
+    rw [hfx]
+    change (regularize (Tm y).val).2 = _
+    rw [hTval]
+    rfl
+  refine contractionIso _ _ _ _ _ _ _ _ _ _ _ _ f hf ?_ ?_ ?_
+  · intro p b
+    obtain ⟨x, rfl⟩ := (regularization_bijective Y).2 p
+    obtain ⟨a, rfl⟩ := hf.2 b
+    obtain ⟨y, rfl⟩ := (regularization_bijective Y).2 a
+    rw [hsnd, hsnd]
+    constructor
+    · intro he
+      refine ⟨regularization Y y, ?_, rfl⟩
+      have h1 : tupleRV M y.val.1 = tupleRV M x.val.1 := funext (fun i => by
+        simpa only [Fin.append_left] using congrFun he (Fin.castAdd _ i))
+      have h2 : y.val.2 = x.val.2 := by
+        have h3 := congrArg (fun L : Fin ((1 + k) + (1 + r)) → RVInfinity M =>
+          fun i => L (Fin.natAdd (1 + k) (Fin.natAdd 1 i))) he
+        simpa only [Fin.append_right] using h3
+      exact regularize_snd_eq.mpr ⟨h1, h2⟩
+    · rintro ⟨a, ha, hfa⟩
+      obtain ⟨z, rfl⟩ := (regularization_bijective Y).2 a
+      have hzy : z = y := (regularization_bijective Y).1 (hf.1 hfa)
+      subst hzy
+      have he := regularize_snd_eq.mp ha
+      have e1 : tupleRV M z.val.1 = tupleRV M x.val.1 := he.1
+      have e2 : z.val.2 = x.val.2 := he.2
+      exact congrArg₂ Fin.append e1 (congrArg (Fin.append _) e2)
+  · intro p
+    obtain ⟨x, rfl⟩ := (regularization_bijective Y).2 p
+    rw [hfx]
+    change tupleRV M (Tm x).val.1 = tupleRV M x.val.1
+    rw [hTval]
+  · intro p
+    obtain ⟨x, rfl⟩ := (regularization_bijective Y).2 p
+    rw [hfx, regForm_apply, regForm_apply]
+    change (imageGood hc g R hκ hs hsmall h00).form (R.bijection (Map.inclusion hYX x)) = g.form (Map.inclusion hYX x)
+    rw [imageGood_form]
+
 end RelGeneral
 
 end DiamondIntegral.Section7.SpecialChainRel
