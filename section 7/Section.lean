@@ -16,6 +16,7 @@ import «section 7».RealBase
 import «section 7».ChartOfMeasured
 import «section 7».Remark73
 import «section 7».TwoCells
+import «section 7».IsoOfMeasured
 import «section 7».MeasuredRVBridge
 import «section 7».MeasuredRVBounds
 import «section 7».ChartLifting
