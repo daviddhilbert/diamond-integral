@@ -1,5 +1,305 @@
 import «section 7».Section
 
+#check @DiamondIntegral.Section7.BlowupCongruence.BlowupSteps
+#print DiamondIntegral.Section7.BlowupCongruence.BlowupSteps
+#print axioms DiamondIntegral.Section7.BlowupCongruence.BlowupSteps
+#check @DiamondIntegral.Section7.BlowupCongruence.MuIsp
+#print DiamondIntegral.Section7.BlowupCongruence.MuIsp
+#print axioms DiamondIntegral.Section7.BlowupCongruence.MuIsp
+#check @DiamondIntegral.Section7.BlowupCongruence.diamond
+#print DiamondIntegral.Section7.BlowupCongruence.diamond
+#print axioms DiamondIntegral.Section7.BlowupCongruence.diamond
+#check @DiamondIntegral.Section7.BlowupCongruence.lemma_7_7
+#print DiamondIntegral.Section7.BlowupCongruence.lemma_7_7
+#print axioms DiamondIntegral.Section7.BlowupCongruence.lemma_7_7
+#check @DiamondIntegral.Section7.BlowupCongruence.corollary_7_8
+#print DiamondIntegral.Section7.BlowupCongruence.corollary_7_8
+#print axioms DiamondIntegral.Section7.BlowupCongruence.corollary_7_8
+#check @DiamondIntegral.Section7.BlowupCongruence.muIsp_refl
+#print DiamondIntegral.Section7.BlowupCongruence.muIsp_refl
+#print axioms DiamondIntegral.Section7.BlowupCongruence.muIsp_refl
+#check @DiamondIntegral.Section7.BlowupCongruence.muIsp_symm
+#print DiamondIntegral.Section7.BlowupCongruence.muIsp_symm
+#print axioms DiamondIntegral.Section7.BlowupCongruence.muIsp_symm
+#check @DiamondIntegral.Section7.BlowupCongruence.muIsp_trans
+#print DiamondIntegral.Section7.BlowupCongruence.muIsp_trans
+#print axioms DiamondIntegral.Section7.BlowupCongruence.muIsp_trans
+#check @DiamondIntegral.Section7.BlowupCongruence.steps_add_left
+#print DiamondIntegral.Section7.BlowupCongruence.steps_add_left
+#print axioms DiamondIntegral.Section7.BlowupCongruence.steps_add_left
+#check @DiamondIntegral.Section7.BlowupCongruence.steps_add_right
+#print DiamondIntegral.Section7.BlowupCongruence.steps_add_right
+#print axioms DiamondIntegral.Section7.BlowupCongruence.steps_add_right
+#check @DiamondIntegral.Section7.BlowupCongruence.steps_add
+#print DiamondIntegral.Section7.BlowupCongruence.steps_add
+#print axioms DiamondIntegral.Section7.BlowupCongruence.steps_add
+#check @DiamondIntegral.Section7.BlowupCongruence.muIsp_add
+#print DiamondIntegral.Section7.BlowupCongruence.muIsp_add
+#print axioms DiamondIntegral.Section7.BlowupCongruence.muIsp_add
+#check @DiamondIntegral.Section7.BlowupCongruence.muIspAddCon
+#print DiamondIntegral.Section7.BlowupCongruence.muIspAddCon
+#print axioms DiamondIntegral.Section7.BlowupCongruence.muIspAddCon
+#check @DiamondIntegral.Section7.BlowupCongruence.muIspAddCon_iff
+#print DiamondIntegral.Section7.BlowupCongruence.muIspAddCon_iff
+#print axioms DiamondIntegral.Section7.BlowupCongruence.muIspAddCon_iff
+#check @DiamondIntegral.Section7.BlowupResults.lemma_7_5
+#print DiamondIntegral.Section7.BlowupResults.lemma_7_5
+#print axioms DiamondIntegral.Section7.BlowupResults.lemma_7_5
+#check @DiamondIntegral.Section7.BlowupResults.corollary_7_6
+#print DiamondIntegral.Section7.BlowupResults.corollary_7_6
+#print axioms DiamondIntegral.Section7.BlowupResults.corollary_7_6
+#check @DiamondIntegral.Section7.BlowupResults.lemma_7_7
+#print DiamondIntegral.Section7.BlowupResults.lemma_7_7
+#print axioms DiamondIntegral.Section7.BlowupResults.lemma_7_7
+#check @DiamondIntegral.Section7.BlowupResults.corollary_7_8
+#print DiamondIntegral.Section7.BlowupResults.corollary_7_8
+#print axioms DiamondIntegral.Section7.BlowupResults.corollary_7_8
+#check @DiamondIntegral.Section7.BlowupResults.lemma_7_10_addCon
+#print DiamondIntegral.Section7.BlowupResults.lemma_7_10_addCon
+#print axioms DiamondIntegral.Section7.BlowupResults.lemma_7_10_addCon
+#check @DiamondIntegral.Section7.BlowupResults.lemma_7_10_addCon_iff
+#print DiamondIntegral.Section7.BlowupResults.lemma_7_10_addCon_iff
+#print axioms DiamondIntegral.Section7.BlowupResults.lemma_7_10_addCon_iff
+#check @DiamondIntegral.Section7.BlowupResults.muIsp_transitive
+#print DiamondIntegral.Section7.BlowupResults.muIsp_transitive
+#print axioms DiamondIntegral.Section7.BlowupResults.muIsp_transitive
+#check @DiamondIntegral.Section7.BoundedClasses.isoOfMap
+#print DiamondIntegral.Section7.BoundedClasses.isoOfMap
+#print axioms DiamondIntegral.Section7.BoundedClasses.isoOfMap
+#check @DiamondIntegral.Section7.BoundedClasses.isoOfMap_apply
+#print DiamondIntegral.Section7.BoundedClasses.isoOfMap_apply
+#print axioms DiamondIntegral.Section7.BoundedClasses.isoOfMap_apply
+#check @DiamondIntegral.Section7.BoundedClasses.sameIso
+#print DiamondIntegral.Section7.BoundedClasses.sameIso
+#print axioms DiamondIntegral.Section7.BoundedClasses.sameIso
+#check @DiamondIntegral.Section7.BoundedClasses.isoMap
+#print DiamondIntegral.Section7.BoundedClasses.isoMap
+#print axioms DiamondIntegral.Section7.BoundedClasses.isoMap
+#check @DiamondIntegral.Section7.BoundedClasses.isoMap_on
+#print DiamondIntegral.Section7.BoundedClasses.isoMap_on
+#print axioms DiamondIntegral.Section7.BoundedClasses.isoMap_on
+#check @DiamondIntegral.Section7.BoundedClasses.isoMap_graph
+#print DiamondIntegral.Section7.BoundedClasses.isoMap_graph
+#print axioms DiamondIntegral.Section7.BoundedClasses.isoMap_graph
+#check @DiamondIntegral.Section7.BoundedClasses.isoMap_bijOn
+#print DiamondIntegral.Section7.BoundedClasses.isoMap_bijOn
+#print axioms DiamondIntegral.Section7.BoundedClasses.isoMap_bijOn
+#check @DiamondIntegral.Section7.BoundedClasses.isoMap_weight
+#print DiamondIntegral.Section7.BoundedClasses.isoMap_weight
+#print axioms DiamondIntegral.Section7.BoundedClasses.isoMap_weight
+#check @DiamondIntegral.Section7.BoundedClasses.graphOn_inter
+#print DiamondIntegral.Section7.BoundedClasses.graphOn_inter
+#print axioms DiamondIntegral.Section7.BoundedClasses.graphOn_inter
+#check @DiamondIntegral.Section7.BoundedClasses.graph_inter_definable
+#print DiamondIntegral.Section7.BoundedClasses.graph_inter_definable
+#print axioms DiamondIntegral.Section7.BoundedClasses.graph_inter_definable
+#check @DiamondIntegral.Section7.BoundedClasses.graph_image_definable
+#print DiamondIntegral.Section7.BoundedClasses.graph_image_definable
+#print axioms DiamondIntegral.Section7.BoundedClasses.graph_image_definable
+#check @DiamondIntegral.Section7.BoundedClasses.image
+#print DiamondIntegral.Section7.BoundedClasses.image
+#print axioms DiamondIntegral.Section7.BoundedClasses.image
+#check @DiamondIntegral.Section7.BoundedClasses.image_definable
+#print DiamondIntegral.Section7.BoundedClasses.image_definable
+#print axioms DiamondIntegral.Section7.BoundedClasses.image_definable
+#check @DiamondIntegral.Section7.BoundedClasses.image_subset
+#print DiamondIntegral.Section7.BoundedClasses.image_subset
+#print axioms DiamondIntegral.Section7.BoundedClasses.image_subset
+#check @DiamondIntegral.Section7.BoundedClasses.restrictIso
+#print DiamondIntegral.Section7.BoundedClasses.restrictIso
+#print axioms DiamondIntegral.Section7.BoundedClasses.restrictIso
+#check @DiamondIntegral.Section7.BoundedClasses.glue
+#print DiamondIntegral.Section7.BoundedClasses.glue
+#print axioms DiamondIntegral.Section7.BoundedClasses.glue
+#check @DiamondIntegral.Section7.BoundedClasses.union_inter_left
+#print DiamondIntegral.Section7.BoundedClasses.union_inter_left
+#print axioms DiamondIntegral.Section7.BoundedClasses.union_inter_left
+#check @DiamondIntegral.Section7.BoundedClasses.union_diff_left
+#print DiamondIntegral.Section7.BoundedClasses.union_diff_left
+#print axioms DiamondIntegral.Section7.BoundedClasses.union_diff_left
+#check @DiamondIntegral.Section7.BoundedClasses.union_inter_right
+#print DiamondIntegral.Section7.BoundedClasses.union_inter_right
+#print axioms DiamondIntegral.Section7.BoundedClasses.union_inter_right
+#check @DiamondIntegral.Section7.BoundedClasses.union_diff_right
+#print DiamondIntegral.Section7.BoundedClasses.union_diff_right
+#print axioms DiamondIntegral.Section7.BoundedClasses.union_diff_right
+#check @DiamondIntegral.Section7.BoundedClasses.insideLeft
+#print DiamondIntegral.Section7.BoundedClasses.insideLeft
+#print axioms DiamondIntegral.Section7.BoundedClasses.insideLeft
+#check @DiamondIntegral.Section7.BoundedClasses.outsideLeft
+#print DiamondIntegral.Section7.BoundedClasses.outsideLeft
+#print axioms DiamondIntegral.Section7.BoundedClasses.outsideLeft
+#check @DiamondIntegral.Section7.BoundedClasses.insideRight
+#print DiamondIntegral.Section7.BoundedClasses.insideRight
+#print axioms DiamondIntegral.Section7.BoundedClasses.insideRight
+#check @DiamondIntegral.Section7.BoundedClasses.outsideRight
+#print DiamondIntegral.Section7.BoundedClasses.outsideRight
+#print axioms DiamondIntegral.Section7.BoundedClasses.outsideRight
+#check @DiamondIntegral.Section7.BoundedClasses.L
+#print DiamondIntegral.Section7.BoundedClasses.L
+#print axioms DiamondIntegral.Section7.BoundedClasses.L
+#check @DiamondIntegral.Section7.BoundedClasses.R
+#print DiamondIntegral.Section7.BoundedClasses.R
+#print axioms DiamondIntegral.Section7.BoundedClasses.R
+#check @DiamondIntegral.Section7.BoundedClasses.coproduct_eq
+#print DiamondIntegral.Section7.BoundedClasses.coproduct_eq
+#print axioms DiamondIntegral.Section7.BoundedClasses.coproduct_eq
+#check @DiamondIntegral.Section7.BoundedClasses.coprodCongr
+#print DiamondIntegral.Section7.BoundedClasses.coprodCongr
+#print axioms DiamondIntegral.Section7.BoundedClasses.coprodCongr
+#check @DiamondIntegral.Section7.BoundedClasses.coprodInsideLeft
+#print DiamondIntegral.Section7.BoundedClasses.coprodInsideLeft
+#print axioms DiamondIntegral.Section7.BoundedClasses.coprodInsideLeft
+#check @DiamondIntegral.Section7.BoundedClasses.coprodOutsideLeft
+#print DiamondIntegral.Section7.BoundedClasses.coprodOutsideLeft
+#print axioms DiamondIntegral.Section7.BoundedClasses.coprodOutsideLeft
+#check @DiamondIntegral.Section7.BoundedClasses.coprodInsideRight
+#print DiamondIntegral.Section7.BoundedClasses.coprodInsideRight
+#print axioms DiamondIntegral.Section7.BoundedClasses.coprodInsideRight
+#check @DiamondIntegral.Section7.BoundedClasses.coprodOutsideRight
+#print DiamondIntegral.Section7.BoundedClasses.coprodOutsideRight
+#print axioms DiamondIntegral.Section7.BoundedClasses.coprodOutsideRight
+#check @DiamondIntegral.Section7.BoundedClasses.coprodComm
+#print DiamondIntegral.Section7.BoundedClasses.coprodComm
+#print axioms DiamondIntegral.Section7.BoundedClasses.coprodComm
+#check @DiamondIntegral.Section7.BoundedClasses.image_compl_piece
+#print DiamondIntegral.Section7.BoundedClasses.image_compl_piece
+#print axioms DiamondIntegral.Section7.BoundedClasses.image_compl_piece
+#check @DiamondIntegral.Section7.BoundedClasses.bcIso
+#print DiamondIntegral.Section7.BoundedClasses.bcIso
+#print axioms DiamondIntegral.Section7.BoundedClasses.bcIso
+#check @DiamondIntegral.Section7.BoundedClasses.cPart
+#print DiamondIntegral.Section7.BoundedClasses.cPart
+#print axioms DiamondIntegral.Section7.BoundedClasses.cPart
+#check @DiamondIntegral.Section7.BoundedClasses.bPart
+#print DiamondIntegral.Section7.BoundedClasses.bPart
+#print axioms DiamondIntegral.Section7.BoundedClasses.bPart
+#check @DiamondIntegral.Section7.BoundedClasses.cPart_definable
+#print DiamondIntegral.Section7.BoundedClasses.cPart_definable
+#print axioms DiamondIntegral.Section7.BoundedClasses.cPart_definable
+#check @DiamondIntegral.Section7.BoundedClasses.bPart_definable
+#print DiamondIntegral.Section7.BoundedClasses.bPart_definable
+#print axioms DiamondIntegral.Section7.BoundedClasses.bPart_definable
+#check @DiamondIntegral.Section7.BoundedClasses.cPart_sub
+#print DiamondIntegral.Section7.BoundedClasses.cPart_sub
+#print axioms DiamondIntegral.Section7.BoundedClasses.cPart_sub
+#check @DiamondIntegral.Section7.BoundedClasses.bPart_sub
+#print DiamondIntegral.Section7.BoundedClasses.bPart_sub
+#print axioms DiamondIntegral.Section7.BoundedClasses.bPart_sub
+#check @DiamondIntegral.Section7.BoundedClasses.right_diff_cPart
+#print DiamondIntegral.Section7.BoundedClasses.right_diff_cPart
+#print axioms DiamondIntegral.Section7.BoundedClasses.right_diff_cPart
+#check @DiamondIntegral.Section7.BoundedClasses.not_left_of_right
+#print DiamondIntegral.Section7.BoundedClasses.not_left_of_right
+#print axioms DiamondIntegral.Section7.BoundedClasses.not_left_of_right
+#check @DiamondIntegral.Section7.BoundedClasses.assocInsideY
+#print DiamondIntegral.Section7.BoundedClasses.assocInsideY
+#print axioms DiamondIntegral.Section7.BoundedClasses.assocInsideY
+#check @DiamondIntegral.Section7.BoundedClasses.assocOutsideY
+#print DiamondIntegral.Section7.BoundedClasses.assocOutsideY
+#print axioms DiamondIntegral.Section7.BoundedClasses.assocOutsideY
+#check @DiamondIntegral.Section7.BoundedClasses.coprodAssoc
+#print DiamondIntegral.Section7.BoundedClasses.coprodAssoc
+#print axioms DiamondIntegral.Section7.BoundedClasses.coprodAssoc
+#check @DiamondIntegral.Section7.BoundedClasses.outsideMissing
+#print DiamondIntegral.Section7.BoundedClasses.outsideMissing
+#print axioms DiamondIntegral.Section7.BoundedClasses.outsideMissing
+#check @DiamondIntegral.Section7.BoundedClasses.coprodEmpty
+#print DiamondIntegral.Section7.BoundedClasses.coprodEmpty
+#print axioms DiamondIntegral.Section7.BoundedClasses.coprodEmpty
+#check @DiamondIntegral.Section7.BoundedClasses.Obj
+#print DiamondIntegral.Section7.BoundedClasses.Obj
+#print axioms DiamondIntegral.Section7.BoundedClasses.Obj
+#check @DiamondIntegral.Section7.BoundedClasses.emptyObj
+#print DiamondIntegral.Section7.BoundedClasses.emptyObj
+#print axioms DiamondIntegral.Section7.BoundedClasses.emptyObj
+#check @DiamondIntegral.Section7.BoundedClasses.coprod
+#print DiamondIntegral.Section7.BoundedClasses.coprod
+#print axioms DiamondIntegral.Section7.BoundedClasses.coprod
+#check @DiamondIntegral.Section7.BoundedClasses.piece
+#print DiamondIntegral.Section7.BoundedClasses.piece
+#print axioms DiamondIntegral.Section7.BoundedClasses.piece
+#check @DiamondIntegral.Section7.BoundedClasses.cpiece
+#print DiamondIntegral.Section7.BoundedClasses.cpiece
+#print axioms DiamondIntegral.Section7.BoundedClasses.cpiece
+#check @DiamondIntegral.Section7.BoundedClasses.isoSetoid
+#print DiamondIntegral.Section7.BoundedClasses.isoSetoid
+#print axioms DiamondIntegral.Section7.BoundedClasses.isoSetoid
+#check @DiamondIntegral.Section7.BoundedClasses.Cls
+#print DiamondIntegral.Section7.BoundedClasses.Cls
+#print axioms DiamondIntegral.Section7.BoundedClasses.Cls
+#check @DiamondIntegral.Section7.BoundedClasses.cls
+#print DiamondIntegral.Section7.BoundedClasses.cls
+#print axioms DiamondIntegral.Section7.BoundedClasses.cls
+#check @DiamondIntegral.Section7.BoundedClasses.cls_eq_iff
+#print DiamondIntegral.Section7.BoundedClasses.cls_eq_iff
+#print axioms DiamondIntegral.Section7.BoundedClasses.cls_eq_iff
+#check @DiamondIntegral.Section7.BoundedClasses.cls_eq_of_iso
+#print DiamondIntegral.Section7.BoundedClasses.cls_eq_of_iso
+#print axioms DiamondIntegral.Section7.BoundedClasses.cls_eq_of_iso
+#check @DiamondIntegral.Section7.BoundedClasses.cls_coprod
+#print DiamondIntegral.Section7.BoundedClasses.cls_coprod
+#print axioms DiamondIntegral.Section7.BoundedClasses.cls_coprod
+#check @DiamondIntegral.Section7.BoundedClasses.cls_zero
+#print DiamondIntegral.Section7.BoundedClasses.cls_zero
+#print axioms DiamondIntegral.Section7.BoundedClasses.cls_zero
+#check @DiamondIntegral.Section7.BoundedClasses.cls_empty
+#print DiamondIntegral.Section7.BoundedClasses.cls_empty
+#print axioms DiamondIntegral.Section7.BoundedClasses.cls_empty
+#check @DiamondIntegral.Section7.BoundedClasses.cls_surjective
+#print DiamondIntegral.Section7.BoundedClasses.cls_surjective
+#print axioms DiamondIntegral.Section7.BoundedClasses.cls_surjective
+#check @DiamondIntegral.Section7.BoundedClasses.cls_partition
+#print DiamondIntegral.Section7.BoundedClasses.cls_partition
+#print axioms DiamondIntegral.Section7.BoundedClasses.cls_partition
+#check @DiamondIntegral.Section7.BoundedClasses.cls_piece_image
+#print DiamondIntegral.Section7.BoundedClasses.cls_piece_image
+#print axioms DiamondIntegral.Section7.BoundedClasses.cls_piece_image
+#check @DiamondIntegral.Section7.BoundedClasses.toRing
+#print DiamondIntegral.Section7.BoundedClasses.toRing
+#print axioms DiamondIntegral.Section7.BoundedClasses.toRing
+#check @DiamondIntegral.Section7.BoundedClasses.toRing_cls
+#print DiamondIntegral.Section7.BoundedClasses.toRing_cls
+#print axioms DiamondIntegral.Section7.BoundedClasses.toRing_cls
+#check @DiamondIntegral.Section7.BoundedClasses.nestedIso
+#print DiamondIntegral.Section7.BoundedClasses.nestedIso
+#print axioms DiamondIntegral.Section7.BoundedClasses.nestedIso
+#check @DiamondIntegral.Section7.BoundedClasses.image_compl_domain
+#print DiamondIntegral.Section7.BoundedClasses.image_compl_domain
+#print axioms DiamondIntegral.Section7.BoundedClasses.image_compl_domain
+#check @DiamondIntegral.Section7.BoundedClasses.refine_iso
+#print DiamondIntegral.Section7.BoundedClasses.refine_iso
+#print axioms DiamondIntegral.Section7.BoundedClasses.refine_iso
+#check @DiamondIntegral.Section7.BoundedClasses.refine2
+#print DiamondIntegral.Section7.BoundedClasses.refine2
+#print axioms DiamondIntegral.Section7.BoundedClasses.refine2
+#check @DiamondIntegral.Section7.BoundedClasses.eq_zero_of_add_eq_zero
+#print DiamondIntegral.Section7.BoundedClasses.eq_zero_of_add_eq_zero
+#print axioms DiamondIntegral.Section7.BoundedClasses.eq_zero_of_add_eq_zero
+#check @DiamondIntegral.Section7.BoundedClasses.cls_cpiece_image
+#print DiamondIntegral.Section7.BoundedClasses.cls_cpiece_image
+#print axioms DiamondIntegral.Section7.BoundedClasses.cls_cpiece_image
+#check @DiamondIntegral.Section7.BoundedClasses.cls_eq_zero_iff
+#print DiamondIntegral.Section7.BoundedClasses.cls_eq_zero_iff
+#print axioms DiamondIntegral.Section7.BoundedClasses.cls_eq_zero_iff
+#check @DiamondIntegral.Section7.BoundedClasses.exists_split
+#print DiamondIntegral.Section7.BoundedClasses.exists_split
+#print axioms DiamondIntegral.Section7.BoundedClasses.exists_split
+#check @DiamondIntegral.Section7.Refinement.Refine2
+#print DiamondIntegral.Section7.Refinement.Refine2
+#print axioms DiamondIntegral.Section7.Refinement.Refine2
+#check @DiamondIntegral.Section7.Refinement.ZeroSumFree
+#print DiamondIntegral.Section7.Refinement.ZeroSumFree
+#print axioms DiamondIntegral.Section7.Refinement.ZeroSumFree
+#check @DiamondIntegral.Section7.Refinement.eq_zero_of_sum_eq_zero
+#print DiamondIntegral.Section7.Refinement.eq_zero_of_sum_eq_zero
+#print axioms DiamondIntegral.Section7.Refinement.eq_zero_of_sum_eq_zero
+#check @DiamondIntegral.Section7.Refinement.refine_one_many
+#print DiamondIntegral.Section7.Refinement.refine_one_many
+#print axioms DiamondIntegral.Section7.Refinement.refine_one_many
+#check @DiamondIntegral.Section7.Refinement.refine_matrix
+#print DiamondIntegral.Section7.Refinement.refine_matrix
+#print axioms DiamondIntegral.Section7.Refinement.refine_matrix
 #check @DiamondIntegral.Section7.ChartDiamondLift.chartObject
 #print DiamondIntegral.Section7.ChartDiamondLift.chartObject
 #print axioms DiamondIntegral.Section7.ChartDiamondLift.chartObject
@@ -9,6 +309,339 @@ import «section 7».Section
 #check @DiamondIntegral.Section7.ChartLifting.chart_iso_lift
 #print DiamondIntegral.Section7.ChartLifting.chart_iso_lift
 #print axioms DiamondIntegral.Section7.ChartLifting.chart_iso_lift
+#check @DiamondIntegral.Section7.ElementaryBlowups.graphOn_diff
+#print DiamondIntegral.Section7.ElementaryBlowups.graphOn_diff
+#print axioms DiamondIntegral.Section7.ElementaryBlowups.graphOn_diff
+#check @DiamondIntegral.Section7.ElementaryBlowups.graph_diff_definable
+#print DiamondIntegral.Section7.ElementaryBlowups.graph_diff_definable
+#print axioms DiamondIntegral.Section7.ElementaryBlowups.graph_diff_definable
+#check @DiamondIntegral.Section7.ElementaryBlowups.resChart
+#print DiamondIntegral.Section7.ElementaryBlowups.resChart
+#print axioms DiamondIntegral.Section7.ElementaryBlowups.resChart
+#check @DiamondIntegral.Section7.ElementaryBlowups.cresChart
+#print DiamondIntegral.Section7.ElementaryBlowups.cresChart
+#print axioms DiamondIntegral.Section7.ElementaryBlowups.cresChart
+#check @DiamondIntegral.Section7.ElementaryBlowups.apRes
+#print DiamondIntegral.Section7.ElementaryBlowups.apRes
+#print axioms DiamondIntegral.Section7.ElementaryBlowups.apRes
+#check @DiamondIntegral.Section7.ElementaryBlowups.apCres
+#print DiamondIntegral.Section7.ElementaryBlowups.apCres
+#print axioms DiamondIntegral.Section7.ElementaryBlowups.apCres
+#check @DiamondIntegral.Section7.ElementaryBlowups.inactiveFinite_res
+#print DiamondIntegral.Section7.ElementaryBlowups.inactiveFinite_res
+#print axioms DiamondIntegral.Section7.ElementaryBlowups.inactiveFinite_res
+#check @DiamondIntegral.Section7.ElementaryBlowups.inactiveFinite_cres
+#print DiamondIntegral.Section7.ElementaryBlowups.inactiveFinite_cres
+#print axioms DiamondIntegral.Section7.ElementaryBlowups.inactiveFinite_cres
+#check @DiamondIntegral.Section7.ElementaryBlowups.datumRes
+#print DiamondIntegral.Section7.ElementaryBlowups.datumRes
+#print axioms DiamondIntegral.Section7.ElementaryBlowups.datumRes
+#check @DiamondIntegral.Section7.ElementaryBlowups.datumCres
+#print DiamondIntegral.Section7.ElementaryBlowups.datumCres
+#print axioms DiamondIntegral.Section7.ElementaryBlowups.datumCres
+#check @DiamondIntegral.Section7.ElementaryBlowups.res_source
+#print DiamondIntegral.Section7.ElementaryBlowups.res_source
+#print axioms DiamondIntegral.Section7.ElementaryBlowups.res_source
+#check @DiamondIntegral.Section7.ElementaryBlowups.cres_source
+#print DiamondIntegral.Section7.ElementaryBlowups.cres_source
+#print axioms DiamondIntegral.Section7.ElementaryBlowups.cres_source
+#check @DiamondIntegral.Section7.ElementaryBlowups.shell_iff
+#print DiamondIntegral.Section7.ElementaryBlowups.shell_iff
+#print axioms DiamondIntegral.Section7.ElementaryBlowups.shell_iff
+#check @DiamondIntegral.Section7.ElementaryBlowups.graphChart_domain
+#print DiamondIntegral.Section7.ElementaryBlowups.graphChart_domain
+#print axioms DiamondIntegral.Section7.ElementaryBlowups.graphChart_domain
+#check @DiamondIntegral.Section7.ElementaryBlowups.shellCut
+#print DiamondIntegral.Section7.ElementaryBlowups.shellCut
+#print axioms DiamondIntegral.Section7.ElementaryBlowups.shellCut
+#check @DiamondIntegral.Section7.ElementaryBlowups.shellCut_definable
+#print DiamondIntegral.Section7.ElementaryBlowups.shellCut_definable
+#print axioms DiamondIntegral.Section7.ElementaryBlowups.shellCut_definable
+#check @DiamondIntegral.Section7.ElementaryBlowups.endCut
+#print DiamondIntegral.Section7.ElementaryBlowups.endCut
+#print axioms DiamondIntegral.Section7.ElementaryBlowups.endCut
+#check @DiamondIntegral.Section7.ElementaryBlowups.endCut_definable
+#print DiamondIntegral.Section7.ElementaryBlowups.endCut_definable
+#print axioms DiamondIntegral.Section7.ElementaryBlowups.endCut_definable
+#check @DiamondIntegral.Section7.ElementaryBlowups.shell_sorted
+#print DiamondIntegral.Section7.ElementaryBlowups.shell_sorted
+#print axioms DiamondIntegral.Section7.ElementaryBlowups.shell_sorted
+#check @DiamondIntegral.Section7.ElementaryBlowups.graph_sorted
+#print DiamondIntegral.Section7.ElementaryBlowups.graph_sorted
+#print axioms DiamondIntegral.Section7.ElementaryBlowups.graph_sorted
+#check @DiamondIntegral.Section7.ElementaryBlowups.xIdx_eq
+#print DiamondIntegral.Section7.ElementaryBlowups.xIdx_eq
+#print axioms DiamondIntegral.Section7.ElementaryBlowups.xIdx_eq
+#check @DiamondIntegral.Section7.ElementaryBlowups.shellDomain_res
+#print DiamondIntegral.Section7.ElementaryBlowups.shellDomain_res
+#print axioms DiamondIntegral.Section7.ElementaryBlowups.shellDomain_res
+#check @DiamondIntegral.Section7.ElementaryBlowups.shellDomain_cres
+#print DiamondIntegral.Section7.ElementaryBlowups.shellDomain_cres
+#print axioms DiamondIntegral.Section7.ElementaryBlowups.shellDomain_cres
+#check @DiamondIntegral.Section7.ElementaryBlowups.graphDomain_res
+#print DiamondIntegral.Section7.ElementaryBlowups.graphDomain_res
+#print axioms DiamondIntegral.Section7.ElementaryBlowups.graphDomain_res
+#check @DiamondIntegral.Section7.ElementaryBlowups.graphDomain_cres
+#print DiamondIntegral.Section7.ElementaryBlowups.graphDomain_cres
+#print axioms DiamondIntegral.Section7.ElementaryBlowups.graphDomain_cres
+#check @DiamondIntegral.Section7.ElementaryBlowups.cls_shell_res
+#print DiamondIntegral.Section7.ElementaryBlowups.cls_shell_res
+#print axioms DiamondIntegral.Section7.ElementaryBlowups.cls_shell_res
+#check @DiamondIntegral.Section7.ElementaryBlowups.cls_shell_cres
+#print DiamondIntegral.Section7.ElementaryBlowups.cls_shell_cres
+#print axioms DiamondIntegral.Section7.ElementaryBlowups.cls_shell_cres
+#check @DiamondIntegral.Section7.ElementaryBlowups.cls_endpoint_res
+#print DiamondIntegral.Section7.ElementaryBlowups.cls_endpoint_res
+#print axioms DiamondIntegral.Section7.ElementaryBlowups.cls_endpoint_res
+#check @DiamondIntegral.Section7.ElementaryBlowups.cls_endpoint_cres
+#print DiamondIntegral.Section7.ElementaryBlowups.cls_endpoint_cres
+#print axioms DiamondIntegral.Section7.ElementaryBlowups.cls_endpoint_cres
+#check @DiamondIntegral.Section7.ElementaryBlowups.cls_annular
+#print DiamondIntegral.Section7.ElementaryBlowups.cls_annular
+#print axioms DiamondIntegral.Section7.ElementaryBlowups.cls_annular
+#check @DiamondIntegral.Section7.ElementaryBlowups.cls_annular_split
+#print DiamondIntegral.Section7.ElementaryBlowups.cls_annular_split
+#print axioms DiamondIntegral.Section7.ElementaryBlowups.cls_annular_split
+#check @DiamondIntegral.Section7.ElementaryBlowups.cls_annular_eq_zero
+#print DiamondIntegral.Section7.ElementaryBlowups.cls_annular_eq_zero
+#print axioms DiamondIntegral.Section7.ElementaryBlowups.cls_annular_eq_zero
+#check @DiamondIntegral.Section7.ElementaryBlowups.datum_split
+#print DiamondIntegral.Section7.ElementaryBlowups.datum_split
+#print axioms DiamondIntegral.Section7.ElementaryBlowups.datum_split
+#check @DiamondIntegral.Section7.ElementaryBlowups.datum_split_fin
+#print DiamondIntegral.Section7.ElementaryBlowups.datum_split_fin
+#print axioms DiamondIntegral.Section7.ElementaryBlowups.datum_split_fin
+#check @DiamondIntegral.Section7.ElementaryBlowups.ElementaryStep
+#print DiamondIntegral.Section7.ElementaryBlowups.ElementaryStep
+#print axioms DiamondIntegral.Section7.ElementaryBlowups.ElementaryStep
+#check @DiamondIntegral.Section7.ElementaryBlowups.Step
+#print DiamondIntegral.Section7.ElementaryBlowups.Step
+#print axioms DiamondIntegral.Section7.ElementaryBlowups.Step
+#check @DiamondIntegral.Section7.ElementaryBlowups.step_refl
+#print DiamondIntegral.Section7.ElementaryBlowups.step_refl
+#print axioms DiamondIntegral.Section7.ElementaryBlowups.step_refl
+#check @DiamondIntegral.Section7.ElementaryBlowups.step_of_elementary
+#print DiamondIntegral.Section7.ElementaryBlowups.step_of_elementary
+#print axioms DiamondIntegral.Section7.ElementaryBlowups.step_of_elementary
+#check @DiamondIntegral.Section7.ElementaryBlowups.step_elem
+#print DiamondIntegral.Section7.ElementaryBlowups.step_elem
+#print axioms DiamondIntegral.Section7.ElementaryBlowups.step_elem
+#check @DiamondIntegral.Section7.ElementaryBlowups.step_add
+#print DiamondIntegral.Section7.ElementaryBlowups.step_add
+#print axioms DiamondIntegral.Section7.ElementaryBlowups.step_add
+#check @DiamondIntegral.Section7.ElementaryBlowups.step_add_left
+#print DiamondIntegral.Section7.ElementaryBlowups.step_add_left
+#print axioms DiamondIntegral.Section7.ElementaryBlowups.step_add_left
+#check @DiamondIntegral.Section7.ElementaryBlowups.step_sum
+#print DiamondIntegral.Section7.ElementaryBlowups.step_sum
+#print axioms DiamondIntegral.Section7.ElementaryBlowups.step_sum
+#check @DiamondIntegral.Section7.ElementaryBlowups.step_of_data
+#print DiamondIntegral.Section7.ElementaryBlowups.step_of_data
+#print axioms DiamondIntegral.Section7.ElementaryBlowups.step_of_data
+#check @DiamondIntegral.Section7.ElementaryBlowups.ElementaryDiamond
+#print DiamondIntegral.Section7.ElementaryBlowups.ElementaryDiamond
+#print axioms DiamondIntegral.Section7.ElementaryBlowups.ElementaryDiamond
+#check @DiamondIntegral.Section7.ElementaryBlowups.step_congr
+#print DiamondIntegral.Section7.ElementaryBlowups.step_congr
+#print axioms DiamondIntegral.Section7.ElementaryBlowups.step_congr
+#check @DiamondIntegral.Section7.ElementaryBlowups.step_diamond
+#print DiamondIntegral.Section7.ElementaryBlowups.step_diamond
+#print axioms DiamondIntegral.Section7.ElementaryBlowups.step_diamond
+#check @DiamondIntegral.Section7.ElementaryComparison.join_mem_range
+#print DiamondIntegral.Section7.ElementaryComparison.join_mem_range
+#print axioms DiamondIntegral.Section7.ElementaryComparison.join_mem_range
+#check @DiamondIntegral.Section7.ElementaryComparison.index_cases
+#print DiamondIntegral.Section7.ElementaryComparison.index_cases
+#print axioms DiamondIntegral.Section7.ElementaryComparison.index_cases
+#check @DiamondIntegral.Section7.ElementaryComparison.scalarDef_component
+#print DiamondIntegral.Section7.ElementaryComparison.scalarDef_component
+#print axioms DiamondIntegral.Section7.ElementaryComparison.scalarDef_component
+#check @DiamondIntegral.Section7.ElementaryComparison.joinMap
+#print DiamondIntegral.Section7.ElementaryComparison.joinMap
+#print axioms DiamondIntegral.Section7.ElementaryComparison.joinMap
+#check @DiamondIntegral.Section7.ElementaryComparison.tupleDef_joinMap
+#print DiamondIntegral.Section7.ElementaryComparison.tupleDef_joinMap
+#print axioms DiamondIntegral.Section7.ElementaryComparison.tupleDef_joinMap
+#check @DiamondIntegral.Section7.ElementaryComparison.codeValue_rvOne
+#print DiamondIntegral.Section7.ElementaryComparison.codeValue_rvOne
+#print axioms DiamondIntegral.Section7.ElementaryComparison.codeValue_rvOne
+#check @DiamondIntegral.Section7.ElementaryComparison.inv_nonzero
+#print DiamondIntegral.Section7.ElementaryComparison.inv_nonzero
+#print axioms DiamondIntegral.Section7.ElementaryComparison.inv_nonzero
+#check @DiamondIntegral.Section7.ElementaryComparison.codeValue_inv
+#print DiamondIntegral.Section7.ElementaryComparison.codeValue_inv
+#print axioms DiamondIntegral.Section7.ElementaryComparison.codeValue_inv
+#check @DiamondIntegral.Section7.ElementaryComparison.rvDiv
+#print DiamondIntegral.Section7.ElementaryComparison.rvDiv
+#print axioms DiamondIntegral.Section7.ElementaryComparison.rvDiv
+#check @DiamondIntegral.Section7.ElementaryComparison.rvDiv_nonzero
+#print DiamondIntegral.Section7.ElementaryComparison.rvDiv_nonzero
+#print axioms DiamondIntegral.Section7.ElementaryComparison.rvDiv_nonzero
+#check @DiamondIntegral.Section7.ElementaryComparison.codeValue_rvDiv
+#print DiamondIntegral.Section7.ElementaryComparison.codeValue_rvDiv
+#print axioms DiamondIntegral.Section7.ElementaryComparison.codeValue_rvDiv
+#check @DiamondIntegral.Section7.ElementaryComparison.rvDiv_mul
+#print DiamondIntegral.Section7.ElementaryComparison.rvDiv_mul
+#print axioms DiamondIntegral.Section7.ElementaryComparison.rvDiv_mul
+#check @DiamondIntegral.Section7.ElementaryComparison.mul_eq_iff_rvDiv
+#print DiamondIntegral.Section7.ElementaryComparison.mul_eq_iff_rvDiv
+#print axioms DiamondIntegral.Section7.ElementaryComparison.mul_eq_iff_rvDiv
+#check @DiamondIntegral.Section7.ElementaryComparison.rvMul_comm
+#print DiamondIntegral.Section7.ElementaryComparison.rvMul_comm
+#print axioms DiamondIntegral.Section7.ElementaryComparison.rvMul_comm
+#check @DiamondIntegral.Section7.ElementaryComparison.scalarDef_rvDiv
+#print DiamondIntegral.Section7.ElementaryComparison.scalarDef_rvDiv
+#print axioms DiamondIntegral.Section7.ElementaryComparison.scalarDef_rvDiv
+#check @DiamondIntegral.Section7.ElementaryComparison.blown_weight
+#print DiamondIntegral.Section7.ElementaryComparison.blown_weight
+#print axioms DiamondIntegral.Section7.ElementaryComparison.blown_weight
+#check @DiamondIntegral.Section7.ElementaryComparison.endpoint_weight
+#print DiamondIntegral.Section7.ElementaryComparison.endpoint_weight
+#print axioms DiamondIntegral.Section7.ElementaryComparison.endpoint_weight
+#check @DiamondIntegral.Section7.ElementaryComparison.gpt
+#print DiamondIntegral.Section7.ElementaryComparison.gpt
+#print axioms DiamondIntegral.Section7.ElementaryComparison.gpt
+#check @DiamondIntegral.Section7.ElementaryComparison.gpt_head
+#print DiamondIntegral.Section7.ElementaryComparison.gpt_head
+#print axioms DiamondIntegral.Section7.ElementaryComparison.gpt_head
+#check @DiamondIntegral.Section7.ElementaryComparison.gpt_tail
+#print DiamondIntegral.Section7.ElementaryComparison.gpt_tail
+#print axioms DiamondIntegral.Section7.ElementaryComparison.gpt_tail
+#check @DiamondIntegral.Section7.ElementaryComparison.gpt_last
+#print DiamondIntegral.Section7.ElementaryComparison.gpt_last
+#print axioms DiamondIntegral.Section7.ElementaryComparison.gpt_last
+#check @DiamondIntegral.Section7.ElementaryComparison.gpt_injective
+#print DiamondIntegral.Section7.ElementaryComparison.gpt_injective
+#print axioms DiamondIntegral.Section7.ElementaryComparison.gpt_injective
+#check @DiamondIntegral.Section7.ElementaryComparison.mem_graph_iff
+#print DiamondIntegral.Section7.ElementaryComparison.mem_graph_iff
+#print axioms DiamondIntegral.Section7.ElementaryComparison.mem_graph_iff
+#check @DiamondIntegral.Section7.ElementaryComparison.graph_eq
+#print DiamondIntegral.Section7.ElementaryComparison.graph_eq
+#print axioms DiamondIntegral.Section7.ElementaryComparison.graph_eq
+#check @DiamondIntegral.Section7.ElementaryComparison.mem_shell_iff
+#print DiamondIntegral.Section7.ElementaryComparison.mem_shell_iff
+#print axioms DiamondIntegral.Section7.ElementaryComparison.mem_shell_iff
+#check @DiamondIntegral.Section7.ElementaryComparison.shell_eq
+#print DiamondIntegral.Section7.ElementaryComparison.shell_eq
+#print axioms DiamondIntegral.Section7.ElementaryComparison.shell_eq
+#check @DiamondIntegral.Section7.ElementaryComparison.isoMap_symm_isoMap
+#print DiamondIntegral.Section7.ElementaryComparison.isoMap_symm_isoMap
+#print axioms DiamondIntegral.Section7.ElementaryComparison.isoMap_symm_isoMap
+#check @DiamondIntegral.Section7.ElementaryComparison.isoMap_isoMap_symm
+#print DiamondIntegral.Section7.ElementaryComparison.isoMap_isoMap_symm
+#print axioms DiamondIntegral.Section7.ElementaryComparison.isoMap_isoMap_symm
+#check @DiamondIntegral.Section7.ElementaryComparison.isoMap_mem
+#print DiamondIntegral.Section7.ElementaryComparison.isoMap_mem
+#print axioms DiamondIntegral.Section7.ElementaryComparison.isoMap_mem
+#check @DiamondIntegral.Section7.ElementaryComparison.endpoint_inactiveFinite
+#print DiamondIntegral.Section7.ElementaryComparison.endpoint_inactiveFinite
+#print axioms DiamondIntegral.Section7.ElementaryComparison.endpoint_inactiveFinite
+#check @DiamondIntegral.Section7.ElementaryComparison.ratio
+#print DiamondIntegral.Section7.ElementaryComparison.ratio
+#print axioms DiamondIntegral.Section7.ElementaryComparison.ratio
+#check @DiamondIntegral.Section7.ElementaryComparison.baseMap_tupleDef
+#print DiamondIntegral.Section7.ElementaryComparison.baseMap_tupleDef
+#print axioms DiamondIntegral.Section7.ElementaryComparison.baseMap_tupleDef
+#check @DiamondIntegral.Section7.ElementaryComparison.ratio_scalarDef
+#print DiamondIntegral.Section7.ElementaryComparison.ratio_scalarDef
+#print axioms DiamondIntegral.Section7.ElementaryComparison.ratio_scalarDef
+#check @DiamondIntegral.Section7.ElementaryComparison.codeValue_ratio
+#print DiamondIntegral.Section7.ElementaryComparison.codeValue_ratio
+#print axioms DiamondIntegral.Section7.ElementaryComparison.codeValue_ratio
+#check @DiamondIntegral.Section7.ElementaryComparison.ratioAperture
+#print DiamondIntegral.Section7.ElementaryComparison.ratioAperture
+#print axioms DiamondIntegral.Section7.ElementaryComparison.ratioAperture
+#check @DiamondIntegral.Section7.ElementaryComparison.secondDatum
+#print DiamondIntegral.Section7.ElementaryComparison.secondDatum
+#print axioms DiamondIntegral.Section7.ElementaryComparison.secondDatum
+#check @DiamondIntegral.Section7.ElementaryComparison.cancel_gamma
+#print DiamondIntegral.Section7.ElementaryComparison.cancel_gamma
+#print axioms DiamondIntegral.Section7.ElementaryComparison.cancel_gamma
+#check @DiamondIntegral.Section7.ElementaryComparison.base2
+#print DiamondIntegral.Section7.ElementaryComparison.base2
+#print axioms DiamondIntegral.Section7.ElementaryComparison.base2
+#check @DiamondIntegral.Section7.ElementaryComparison.endpoint2_eq
+#print DiamondIntegral.Section7.ElementaryComparison.endpoint2_eq
+#print axioms DiamondIntegral.Section7.ElementaryComparison.endpoint2_eq
+#check @DiamondIntegral.Section7.ElementaryComparison.mem_endpoint2
+#print DiamondIntegral.Section7.ElementaryComparison.mem_endpoint2
+#print axioms DiamondIntegral.Section7.ElementaryComparison.mem_endpoint2
+#check @DiamondIntegral.Section7.ElementaryComparison.base2_gpt
+#print DiamondIntegral.Section7.ElementaryComparison.base2_gpt
+#print axioms DiamondIntegral.Section7.ElementaryComparison.base2_gpt
+#check @DiamondIntegral.Section7.ElementaryComparison.endpointMap
+#print DiamondIntegral.Section7.ElementaryComparison.endpointMap
+#print axioms DiamondIntegral.Section7.ElementaryComparison.endpointMap
+#check @DiamondIntegral.Section7.ElementaryComparison.endpointIso
+#print DiamondIntegral.Section7.ElementaryComparison.endpointIso
+#print axioms DiamondIntegral.Section7.ElementaryComparison.endpointIso
+#check @DiamondIntegral.Section7.ElementaryComparison.finv
+#print DiamondIntegral.Section7.ElementaryComparison.finv
+#print axioms DiamondIntegral.Section7.ElementaryComparison.finv
+#check @DiamondIntegral.Section7.ElementaryComparison.shellE_base_tupleDef
+#print DiamondIntegral.Section7.ElementaryComparison.shellE_base_tupleDef
+#print axioms DiamondIntegral.Section7.ElementaryComparison.shellE_base_tupleDef
+#check @DiamondIntegral.Section7.ElementaryComparison.shallow
+#print DiamondIntegral.Section7.ElementaryComparison.shallow
+#print axioms DiamondIntegral.Section7.ElementaryComparison.shallow
+#check @DiamondIntegral.Section7.ElementaryComparison.shallow_definable
+#print DiamondIntegral.Section7.ElementaryComparison.shallow_definable
+#print axioms DiamondIntegral.Section7.ElementaryComparison.shallow_definable
+#check @DiamondIntegral.Section7.ElementaryComparison.shellE
+#print DiamondIntegral.Section7.ElementaryComparison.shellE
+#print axioms DiamondIntegral.Section7.ElementaryComparison.shellE
+#check @DiamondIntegral.Section7.ElementaryComparison.shellDomain_tupleDef_base
+#print DiamondIntegral.Section7.ElementaryComparison.shellDomain_tupleDef_base
+#print axioms DiamondIntegral.Section7.ElementaryComparison.shellDomain_tupleDef_base
+#check @DiamondIntegral.Section7.ElementaryComparison.shallowMap
+#print DiamondIntegral.Section7.ElementaryComparison.shallowMap
+#print axioms DiamondIntegral.Section7.ElementaryComparison.shallowMap
+#check @DiamondIntegral.Section7.ElementaryComparison.gpt2_xIdx
+#print DiamondIntegral.Section7.ElementaryComparison.gpt2_xIdx
+#print axioms DiamondIntegral.Section7.ElementaryComparison.gpt2_xIdx
+#check @DiamondIntegral.Section7.ElementaryComparison.gpt2_s
+#print DiamondIntegral.Section7.ElementaryComparison.gpt2_s
+#print axioms DiamondIntegral.Section7.ElementaryComparison.gpt2_s
+#check @DiamondIntegral.Section7.ElementaryComparison.gpt2_sIdx
+#print DiamondIntegral.Section7.ElementaryComparison.gpt2_sIdx
+#print axioms DiamondIntegral.Section7.ElementaryComparison.gpt2_sIdx
+#check @DiamondIntegral.Section7.ElementaryComparison.gpt2_xIdxR
+#print DiamondIntegral.Section7.ElementaryComparison.gpt2_xIdxR
+#print axioms DiamondIntegral.Section7.ElementaryComparison.gpt2_xIdxR
+#check @DiamondIntegral.Section7.ElementaryComparison.shallowIso
+#print DiamondIntegral.Section7.ElementaryComparison.shallowIso
+#print axioms DiamondIntegral.Section7.ElementaryComparison.shallowIso
+#check @DiamondIntegral.Section7.ElementaryComparison.base3
+#print DiamondIntegral.Section7.ElementaryComparison.base3
+#print axioms DiamondIntegral.Section7.ElementaryComparison.base3
+#check @DiamondIntegral.Section7.ElementaryComparison.deepMap
+#print DiamondIntegral.Section7.ElementaryComparison.deepMap
+#print axioms DiamondIntegral.Section7.ElementaryComparison.deepMap
+#check @DiamondIntegral.Section7.ElementaryComparison.shell3_eq
+#print DiamondIntegral.Section7.ElementaryComparison.shell3_eq
+#print axioms DiamondIntegral.Section7.ElementaryComparison.shell3_eq
+#check @DiamondIntegral.Section7.ElementaryComparison.mem_shell3
+#print DiamondIntegral.Section7.ElementaryComparison.mem_shell3
+#print axioms DiamondIntegral.Section7.ElementaryComparison.mem_shell3
+#check @DiamondIntegral.Section7.ElementaryComparison.base3_gpt
+#print DiamondIntegral.Section7.ElementaryComparison.base3_gpt
+#print axioms DiamondIntegral.Section7.ElementaryComparison.base3_gpt
+#check @DiamondIntegral.Section7.ElementaryComparison.deepIso
+#print DiamondIntegral.Section7.ElementaryComparison.deepIso
+#print axioms DiamondIntegral.Section7.ElementaryComparison.deepIso
+#check @DiamondIntegral.Section7.ElementaryComparison.step_of_le
+#print DiamondIntegral.Section7.ElementaryComparison.step_of_le
+#print axioms DiamondIntegral.Section7.ElementaryComparison.step_of_le
+#check @DiamondIntegral.Section7.ElementaryComparison.complIso
+#print DiamondIntegral.Section7.ElementaryComparison.complIso
+#print axioms DiamondIntegral.Section7.ElementaryComparison.complIso
+#check @DiamondIntegral.Section7.ElementaryComparison.elementaryDiamond
+#print DiamondIntegral.Section7.ElementaryComparison.elementaryDiamond
+#print axioms DiamondIntegral.Section7.ElementaryComparison.elementaryDiamond
+#check @DiamondIntegral.Section7.ElementaryComparison.lemma_7_5
+#print DiamondIntegral.Section7.ElementaryComparison.lemma_7_5
+#print axioms DiamondIntegral.Section7.ElementaryComparison.lemma_7_5
 #check @DiamondIntegral.Section7.MeasuredRVBounds.NoInfinity
 #print DiamondIntegral.Section7.MeasuredRVBounds.NoInfinity
 #print axioms DiamondIntegral.Section7.MeasuredRVBounds.NoInfinity
@@ -120,3 +753,54 @@ import «section 7».Section
 #check @DiamondIntegral.Section7.MeasuredRVBridge.measuredIso
 #print DiamondIntegral.Section7.MeasuredRVBridge.measuredIso
 #print axioms DiamondIntegral.Section7.MeasuredRVBridge.measuredIso
+#check @DiamondIntegral.Section7.RVMaps.ScalarDef
+#print DiamondIntegral.Section7.RVMaps.ScalarDef
+#print axioms DiamondIntegral.Section7.RVMaps.ScalarDef
+#check @DiamondIntegral.Section7.RVMaps.TupleDef
+#print DiamondIntegral.Section7.RVMaps.TupleDef
+#print axioms DiamondIntegral.Section7.RVMaps.TupleDef
+#check @DiamondIntegral.Section7.RVMaps.tupleDef_of_scalar
+#print DiamondIntegral.Section7.RVMaps.tupleDef_of_scalar
+#print axioms DiamondIntegral.Section7.RVMaps.tupleDef_of_scalar
+#check @DiamondIntegral.Section7.RVMaps.scalarDef_coord
+#print DiamondIntegral.Section7.RVMaps.scalarDef_coord
+#print axioms DiamondIntegral.Section7.RVMaps.scalarDef_coord
+#check @DiamondIntegral.Section7.RVMaps.tupleDef_coord
+#print DiamondIntegral.Section7.RVMaps.tupleDef_coord
+#print axioms DiamondIntegral.Section7.RVMaps.tupleDef_coord
+#check @DiamondIntegral.Section7.RVMaps.tupleDef_comp
+#print DiamondIntegral.Section7.RVMaps.tupleDef_comp
+#print axioms DiamondIntegral.Section7.RVMaps.tupleDef_comp
+#check @DiamondIntegral.Section7.RVMaps.scalarDef_comp
+#print DiamondIntegral.Section7.RVMaps.scalarDef_comp
+#print axioms DiamondIntegral.Section7.RVMaps.scalarDef_comp
+#check @DiamondIntegral.Section7.RVMaps.scalarDef_mono
+#print DiamondIntegral.Section7.RVMaps.scalarDef_mono
+#print axioms DiamondIntegral.Section7.RVMaps.scalarDef_mono
+#check @DiamondIntegral.Section7.RVMaps.pair
+#print DiamondIntegral.Section7.RVMaps.pair
+#print axioms DiamondIntegral.Section7.RVMaps.pair
+#check @DiamondIntegral.Section7.RVMaps.tupleDef_pair
+#print DiamondIntegral.Section7.RVMaps.tupleDef_pair
+#print axioms DiamondIntegral.Section7.RVMaps.tupleDef_pair
+#check @DiamondIntegral.Section7.RVMaps.scalarDef_mul
+#print DiamondIntegral.Section7.RVMaps.scalarDef_mul
+#print axioms DiamondIntegral.Section7.RVMaps.scalarDef_mul
+#check @DiamondIntegral.Section7.RVMaps.lineChart
+#print DiamondIntegral.Section7.RVMaps.lineChart
+#print axioms DiamondIntegral.Section7.RVMaps.lineChart
+#check @DiamondIntegral.Section7.RVMaps.mem_lineChart
+#print DiamondIntegral.Section7.RVMaps.mem_lineChart
+#print axioms DiamondIntegral.Section7.RVMaps.mem_lineChart
+#check @DiamondIntegral.Section7.RVMaps.lineIdx
+#print DiamondIntegral.Section7.RVMaps.lineIdx
+#print axioms DiamondIntegral.Section7.RVMaps.lineIdx
+#check @DiamondIntegral.Section7.RVMaps.lineChart_nonzero
+#print DiamondIntegral.Section7.RVMaps.lineChart_nonzero
+#print axioms DiamondIntegral.Section7.RVMaps.lineChart_nonzero
+#check @DiamondIntegral.Section7.RVMaps.lt_definable
+#print DiamondIntegral.Section7.RVMaps.lt_definable
+#print axioms DiamondIntegral.Section7.RVMaps.lt_definable
+#check @DiamondIntegral.Section7.RVMaps.le_definable
+#print DiamondIntegral.Section7.RVMaps.le_definable
+#print axioms DiamondIntegral.Section7.RVMaps.le_definable

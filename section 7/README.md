@@ -6,11 +6,14 @@ Definition 6.11 repair, exact dependency setup and the remaining Section 7
 proof obligations. The author will supply the original PDF and referee
 report separately; use the adopted annotated TeX for approved revisions.
 
-Section 7 is not yet implemented. Synchronize Definition 7.2 with the bounded
-variable apertures of revised 6.11, prove the annular blowup/congruence and
-VF lift constructions, then whole-witness descent, the two-cell and
-contraction-order comparisons, the actual lift kernel and revised 7.26
-for the explicit relative ideal J_var.
+The §7 main text is already revised for bounded variable apertures and J_var.
+The Lean formalization is in progress; see [PLAN.md](PLAN.md) (approved by the
+author on 2026-11-19), [STATUS.md](STATUS.md), [COVERAGE.md](COVERAGE.md) and
+[GAP-REPAIRS.md](GAP-REPAIRS.md). Complete so far: Definition 7.2 on isomorphism
+classes, Lemma 7.5, Corollary 7.6, Lemma 7.7, Corollary 7.8, Definition 7.9 and
+the additive part of Lemma 7.10. Remaining: the lift constructions (7.11–7.13),
+whole-witness descent (7.14–7.15), the two-cell comparisons (7.16–7.23), the
+kernel (7.24–7.25), Theorem 7.26 with J_var, and 7.27–7.28.
 
 The focused [Section 6 handoff](SECTION6-HANDOFF.md) links the checked native
 inputs and the mathematical draft. The draft is not a completed kernel

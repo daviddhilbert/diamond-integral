@@ -63,7 +63,7 @@ for name, names in axioms:
 manifest = json.loads((ROOT/'lake-manifest.json').read_text())
 status = {
     'status': 'PASS',
-    'scope': 'Section 7 formalization in progress. Checked so far: the data of Definition 7.2 (defn:blowup:coa) with bounded variable apertures (actual original-base definable aperture graph, nonzero, 0 <= vrv <= one named bound), the inactive structural projection, the shell and separately tagged endpoint, the blown-up structural map s*f_j, and the finite-fibre property on both pieces from the finite-to-one condition, with the Remark 7.4 coordinate bounds. No numbered Section 7 result beyond these components is claimed.',
+    'scope': 'Section 7 formalization in progress. Complete numbered results, on isomorphism classes of mu RV^db[1+k] over an arbitrary parameter base and with no input beyond the ACVF model: Definition 7.2 (elementary annular blowups with bounded variable apertures = Section 4 AnnularDatum/relative annular objects; restriction to definable pieces; blowups of length one and chains, on classes), Lemma 7.5 (BlowupResults.lemma_7_5), Corollary 7.6, Lemma 7.7, Corollary 7.8, Definition 7.9 (MuIsp) and the additive part of Lemma 7.10 (an AddCon). Supporting: the commutative monoid of isomorphism classes with refinement, and the mu VF^diamond chart lifts of Definitions 6.34-6.37.',
     'lean': subprocess.check_output(['lean','--version'],cwd=ROOT,text=True).strip(),
     'repository_revision': subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),
     'packages': {p['name']:p['rev'] for p in manifest['packages']},
@@ -71,7 +71,7 @@ status = {
     'allowed_axioms': sorted(ALLOWED),
     'sources': {str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in sources},
     'verification_script_sha256': hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
-    'unfinished': ['Package the blowup as a bounded chart and identify it with the relative annular object of Notation 4.17.', 'Lemmas 7.5-7.23, Proposition 7.24, Remark 7.25 and Theorem 7.26 with J_var remain to be formalized.']
+    'unfinished': ['Lemma 7.10 multiplicative part (products) and Remarks 7.3/7.4 statements.', 'Object-level converse of BlowupResults: a class-level length-one blowup is realised by literal disjoint subobjects (Definition 7.2 wording).', 'Lemmas 7.11-7.23, Proposition 7.24, Remark 7.25, Theorem 7.26 with J_var, Corollary 7.27 and Remark 7.28 remain to be formalized.']
 }
 (RECORD/'status.json').write_text(json.dumps(status,indent=2)+'\n')
-print(f'PASS: {len(declarations)} full declaration types and axiom records; Section 7 components audited; numbered results pending.')
+print(f'PASS: {len(declarations)} full declaration types and axiom records; Section 7 results 7.5-7.10 (additive) audited; later results pending.')
