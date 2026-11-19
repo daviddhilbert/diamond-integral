@@ -1,6 +1,7 @@
 import «section 7».StrictCharts
 import «section 7».MeasuredRVBridge
 import «section 6».TupleFinitaryLifting
+import «section 6».ContinuousRVFamilyMaps
 
 /-! The centres of the VF lift of an elementary blowup (Lemma 7.12,
 `blowup:same:RV:coa`).
@@ -215,5 +216,204 @@ theorem coord_rv {p : Mixed M (1 + k) D.chart.arity} (hp : p ∈ (liftSet hc D).
   congrFun ((mem_liftSet_iff hc D p).mp hp).2 l
 
 end Centres
+
+/-! ### Section 6 maps from definable label families -/
+
+section Families
+
+omit hM in
+theorem sortEval_rv (x : M) : sortEval SortTag.rv x ↔ iRV x := Iff.rfl
+
+omit hM in
+theorem sortEval_vf (x : M) : sortEval SortTag.vf x ↔ iVF x := Iff.rfl
+
+theorem sort_coord_definable {α : Type*} (s : SortTag) (j : α) :
+    S.Definable LRV {z : α → M | sortEval s (z j)} := by
+  have h := base_real (real_definableOverBase (⟨S, ∅⟩ : Base (M := M)) (fun _ : Fin 1 => s) _
+    (sortedUniverse_definable S (fun _ : Fin 1 => s)))
+  have h' := h.preimage_comp (fun _ : Fin 1 => j)
+  convert h' using 1
+  apply Set.ext
+  intro z
+  constructor
+  · intro hz i
+    exact hz
+  · intro hz
+    exact hz 0
+
+theorem sorts_definable {α β : Type*} [Finite β] (s : SortTag) (e : β → α) :
+    S.Definable LRV {z : α → M | ∀ i, sortEval s (z (e i))} := by
+  have := Fintype.ofFinite β
+  have h := Set.definable_biInter_finset (A := S) (L := LRV) (fun i => sort_coord_definable (S := S) s (e i))
+    (Finset.univ : Finset β)
+  convert h using 1
+  apply Set.ext
+  intro z
+  simp only [Set.mem_setOf_eq, Set.mem_iInter, Finset.mem_univ, true_implies]
+
+/-- The graph of a label-indexed VF family given by a definable map of codes is
+definable. -/
+theorem rvVFGraph_definable {n r m : ℕ}
+    (f : (Fin r → RVInfinity M) → (Fin n → VF M) → Fin m → VF M)
+    (F : (Fin r ⊕ Fin n → M) → Fin m → M) (hF : S.DefinableMap LRV F)
+    (hf : ∀ u x i, (f u x i).val = F (Sum.elim (rvValues u) (vfValues x)) i) :
+    S.Definable LRV (DiamondIntegral.Section6.rvVFGraph f) := by
+  let code : (Fin r ⊕ (Fin n ⊕ Fin m) → M) → (Fin r ⊕ Fin n → M) :=
+    fun z => Sum.elim (z ∘ Sum.inl) (z ∘ Sum.inr ∘ Sum.inl)
+  have hcode : S.DefinableMap LRV code := by
+    rintro (i | i)
+    · exact Set.DefinableFun.proj LRV
+    · exact Set.DefinableFun.proj LRV
+  have hEq (i : Fin m) : S.Definable LRV {z : Fin r ⊕ (Fin n ⊕ Fin m) → M | z (.inr (.inr i)) = F (code z) i} :=
+    Set.DefinableFun.ofPred_eq (Set.DefinableFun.proj LRV) (Set.DefinableFun.comp hcode (hF i))
+  have hE := Set.definable_biInter_finset (A := S) (L := LRV) (fun i => hEq i) (Finset.univ : Finset (Fin m))
+  have h := ((sorts_definable (S := S) SortTag.rv (Sum.inl : Fin r → Fin r ⊕ (Fin n ⊕ Fin m))).inter
+    (sorts_definable (S := S) SortTag.vf (fun i : Fin n => (Sum.inr (Sum.inl i) : Fin r ⊕ (Fin n ⊕ Fin m))))).inter hE
+  convert h using 1
+  apply Set.ext
+  intro z
+  constructor
+  · rintro ⟨u, x, rfl⟩
+    refine ⟨⟨fun i => (u i).property, fun i => (x i).property⟩, ?_⟩
+    simp only [Set.mem_iInter, Finset.mem_univ, true_implies, Set.mem_setOf_eq]
+    intro i
+    change (f u x i).val = F (code (Sum.elim (rvValues u) (Sum.elim (vfValues x) (vfValues (f u x))))) i
+    rw [hf]
+    rfl
+  · rintro ⟨⟨hr, hv⟩, he⟩
+    simp only [Set.mem_iInter, Finset.mem_univ, true_implies, Set.mem_setOf_eq] at he
+    let u : Fin r → RVInfinity M := fun i => ⟨z (.inl i), hr i⟩
+    let x : Fin n → VF M := fun i => ⟨z (.inr (.inl i)), hv i⟩
+    refine ⟨u, x, ?_⟩
+    funext i
+    rcases i with i | i | i
+    · rfl
+    · rfl
+    · change (f u x i).val = z (.inr (.inr i))
+      rw [hf, he i]
+      rfl
+
+end Families
+
+/-! ### The centres as Section 6 maps -/
+
+section CentreMaps
+variable (hc : CanonicalStructure.IsCanonical (M := M))
+variable (D : AnnularDatum (⟨S, ∅⟩ : Base (M := M)) k)
+variable (L : DiamondIntegral.Section6.TupleFinitaryLift (centreRelation D))
+
+/-- The raw target leading terms of a label (zero off the domain). -/
+def vcode (y : Fin D.chart.arity → M) : Fin 2 → M :=
+  if y ∈ D.chart.domain then centrePair D y else fun _ => iRVZero
+
+theorem rvValues_vpair (l : Fin D.chart.arity → RVInfinity M) : rvValues (vpair D l) = vcode D (rvValues l) := by
+  unfold vpair vcode
+  by_cases h : rvValues l ∈ D.chart.domain
+  · rw [dif_pos h, if_pos h]
+    rfl
+  · rw [dif_neg h, if_neg h]
+    rfl
+
+theorem zero_singleton_definable :
+    S.Definable LRV {z : Fin 1 → M | z ∈ ({![iRVZero]} : Set (Fin 1 → M))} :=
+  base_real (tuple_singleton_definable_base (⟨S, ∅⟩ : Base (M := M)) (fun _ : Fin 1 => .rv) ![iRVZero]
+    (fun i => by fin_cases i; exact RVNamedTuples.zero_definable _))
+
+theorem vcode_definable (t : Fin 2) : S.DefinableFun LRV (fun y : Fin D.chart.arity → M => vcode D y t) := by
+  have hdom := base_real D.chart.domain_definable
+  have hg : ScalarDef (⟨S, ∅⟩ : Base (M := M)) D.chart.domain (fun u => centrePair D u t) :=
+    scalarDef_comp_component D.chart.domain_definable (centreMap_tupleDef D |> fun h =>
+      tupleDef_comp (G := fun w : Fin (2 + k) → M => w ∘ tailIndex 2 k) h
+        (tupleDef_coord (BoundedClasses.graph_image_definable _ _ h) _) (fun u hu => ⟨u, hu, rfl⟩)) t |>
+    fun h => by
+      unfold ScalarDef at h ⊢
+      convert h using 3
+      funext u
+      simp only [Function.comp_apply, centreMap, join_tail]
+  have h1 := (base_real hg).preimage_comp (join 1 D.chart.arity Option.some (fun _ => Option.none))
+  have h2 := (hdom.compl.preimage_comp Option.some).inter
+    ((zero_singleton_definable (S := S)).preimage_comp (fun _ : Fin 1 => (Option.none : Option (Fin D.chart.arity))))
+  unfold Set.DefinableFun
+  convert h1.union h2 using 1
+  apply Set.ext
+  intro v
+  have hh : (v ∘ join 1 D.chart.arity Option.some (fun _ => Option.none)) ∘ headIndex 1 D.chart.arity =
+      v ∘ Option.some := by
+    funext i
+    simp only [Function.comp_apply, join_head]
+  have ht : (v ∘ join 1 D.chart.arity Option.some (fun _ => Option.none)) ∘ tailIndex 1 D.chart.arity =
+      ![v Option.none] := by
+    funext i
+    fin_cases i
+    simp only [Function.comp_apply, join_tail]
+    rfl
+  change vcode D (v ∘ Option.some) t = v Option.none ↔ _
+  by_cases hd : v ∘ Option.some ∈ D.chart.domain
+  · simp only [vcode, if_pos hd]
+    constructor
+    · intro he
+      refine Or.inl ⟨by rw [hh]; exact hd, ?_⟩
+      rw [hh, ht]
+      change ![centrePair D (v ∘ Option.some) t] = ![v Option.none]
+      rw [he]
+    · rintro (⟨_, he⟩ | ⟨hn, _⟩)
+      · rw [hh, ht] at he
+        exact congrFun he 0
+      · exact absurd hd hn
+  · simp only [vcode, if_neg hd]
+    constructor
+    · intro he
+      refine Or.inr ⟨hd, ?_⟩
+      change (fun _ : Fin 1 => v Option.none) ∈ ({![iRVZero]} : Set (Fin 1 → M))
+      rw [← he]
+      funext i
+      fin_cases i
+      rfl
+    · rintro (⟨hm, _⟩ | ⟨_, he⟩)
+      · rw [hh] at hm
+        exact absurd hm hd
+      · exact (congrFun he 0).symm
+
+/-- The code of the centre input. -/
+def centreCode (w : Fin D.chart.arity ⊕ Fin (1 + k) → M) : Fin k ⊕ Fin 2 → M :=
+  Sum.elim (fun m => w (.inr (BlowupRelation.skip D.coordinate m))) (vcode D (w ∘ Sum.inl))
+
+theorem centreCode_definable : S.DefinableMap LRV (centreCode D) := by
+  rintro (m | t)
+  · exact Set.DefinableFun.proj LRV
+  · have hin : S.DefinableMap LRV (fun w : Fin D.chart.arity ⊕ Fin (1 + k) → M => w ∘ Sum.inl) :=
+      fun i => Set.DefinableFun.proj LRV
+    exact Set.DefinableFun.comp hin (vcode_definable D t)
+
+theorem centre_val (i : Fin 2) (x : Fin (1 + k) → VF M) (l : Fin D.chart.arity → RVInfinity M) :
+    (centre D L i x l).val = (L.center (centreCode D (Sum.elim (rvValues l) (vfValues x))) i).val := by
+  have h : DiamondIntegral.Section6.liftCode (inact D x) (vpair D l) =
+      centreCode D (Sum.elim (rvValues l) (vfValues x)) := by
+    funext z
+    rcases z with m | t
+    · rfl
+    · change rvValues (vpair D l) t = vcode D (rvValues l) t
+      rw [rvValues_vpair]
+  rw [centre, h]
+
+theorem centre_family_definable (i : Fin 2) :
+    S.Definable LRV (DiamondIntegral.Section6.rvVFGraph
+      (fun (l : Fin D.chart.arity → RVInfinity M) (x : Fin (1 + k) → VF M) => ![centre D L i x l])) := by
+  apply rvVFGraph_definable _ (fun w _ => (L.center (centreCode D w) i).val)
+  · intro _
+    exact Set.DefinableFun.comp (centreCode_definable D) (L.definable i)
+  · intro l x t
+    fin_cases t
+    exact centre_val D L i x l
+
+/-- The centre `b_i` as a Section 6 map on a definable piece of the lift. -/
+def centreMapOn (i : Fin 2) (A : DefSet (rawMixedSpace (M := M) (1 + k) D.chart.arity) S) :
+    Map A (DefSet.univ (rawVFSpace (M := M) 1) S) :=
+  DiamondIntegral.Section6.rvFamilyMap A _ (centre_family_definable D L i)
+
+theorem centreMapOn_apply (i : Fin 2) (A : DefSet (rawMixedSpace (M := M) (1 + k) D.chart.arity) S) (p : A) :
+    (centreMapOn D L i A p).val 0 = centre D L i p.val.1 p.val.2 := rfl
+
+end CentreMaps
 
 end DiamondIntegral.Section7.BlowupLiftData
