@@ -28,6 +28,29 @@ arbitrary parameter base and take no input beyond the ACVF model.
   RV multiplication or division, and of `vrv g < vrv h` and `vrv g ≤ vrv h`.
 - `ElementaryComparison`: the four explicit comparison isomorphisms of 7.5.
 
+## M3 progress (lift side)
+
+- `StrictCharts`: every bounded chart is isomorphic to an `∞`-free chart. The
+  labels are encoded with the tags 1 and rv(−1), which residue characteristic
+  zero separates.
+- `LiftClasses`: `rvCls : Cls → K₊ μRV^db[k]` (Section 6's
+  `rvPresentation`) is additive, and `liftCls : Cls →+ K₊ μVF^◇[k]` composes it
+  with Section 6's `liftHom`.
+- 7.12 is in progress, following the pipeline in PLAN.md. The Section 6 tools
+  are:
+  - `RelativeApertureData` and `DiamondSpecialIsomorphisms.remark_6_15` (a
+    chain gives a morphism);
+  - `lemma_6_30_tuple_vfGenerated` with `TupleFinitaryLift.continuousAt`
+    (focus b₀ and endpoint b₁);
+  - `rvFamilyMap` (Maps from definable label families);
+  - `gammaFibreValue`/`gammaFibreValue_named` and
+    `gamma_value_named_on_rv_fibre` (named radii);
+  - `RVGrafting.graft` with `graft_properHomeomorphism`;
+  - `contractedMeasuredRVObject`;
+  - `lift_isomorphic_pos`.
+- Still to do in M3: surjectivity of `liftCls` (needs a converter from
+  `MeasuredRVObject` back to charts), 7.11, and 7.13.
+
 ## Next
 
 Product compatibility (7.10), Remark 7.4's named bound, and the object-level

@@ -204,7 +204,22 @@ intended Lean statement; ⚑ marks a flag that is also listed in §5.
   `DiamondLiftHomomorphism.lemma_6_33_diamond`, `ChartDiamondLift.chartObject`
   and `chart_isomorphic`, and `DiamondLift.liftObject`.
 - **New.** `Blowup U W → Isomorphic G (chartObject U) (chartObject W)`, and
-  likewise for `IteratedBlowup`.
+  likewise for `IteratedBlowup`. On classes:
+  `liftCls (cls D.annularObject) = liftCls (cls D.source)` (`LiftClasses.liftCls`
+  is done).
+- **Lean pipeline (fixed 2026-11-19).**
+  1. A = the carrier of the lift of the strict source.
+  2. Section 6 `RelativeApertureData` on A, in coordinate j, with focus b₀ and
+     endpoint b₁ from `lemma_6_30_tuple_vfGenerated`. The covariance field
+     holds with α = vrv f_j(u) and β_i = vrv f_i(u), because the fibres are full
+     RV polydiscs and b₀ ∈ f_j(u)^♯. The named bound Δ comes from Remark 7.4.
+  3. The image object; `DiamondSpecialIsomorphisms.remark_6_15` gives the
+     μVF^◇ morphism, since the forms agree.
+  4. Graft the rv labels (`RVGrafting.graft`, a proper covariant
+     homeomorphism).
+  5. Contract (`contractedMeasuredRVObject`).
+  6. An explicit RV isomorphism from the contraction to the strict U^{τ,j},
+     lifted by `lift_isomorphic_pos`.
 - An existing Section 7 module covers only the isomorphism part
   (`ChartLifting.chart_iso_lift`).
 
