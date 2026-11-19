@@ -1,6 +1,8 @@
 import «section 7».SpecialChainRel
 import «section 6».ScalarApertureInclusion
 import «section 6».UnaryApertureInclusion
+import «section 7».BlowupCongruence
+import HilbertMathlib.Foundation.Rewriting.Iteration
 
 /-! Lemma 7.11 (`special:to:blowup:coa`) for chains.
 
@@ -76,6 +78,8 @@ theorem claim_comp {s t : ℕ} {A : DefSet (rawMixedSpace (M := M) (1 + k) r) (T
   obtain ⟨g2, hf2, m2, hs2⟩ := hg g1
   exact ⟨g2, fun p => (hf2 (f p)).trans (hf1 p), m1 + m2, hs1.trans hs2⟩
 
+include hκ hs hsmall h00
+
 /-- A relative step. -/
 theorem claim_relative {A : DefSet (rawMixedSpace (M := M) (1 + k) r) (T : Set M)}
     (D : DiamondIntegral.Section6.RelativeApertureData (G := G) A) :
@@ -118,9 +122,9 @@ theorem special_chain {s : ℕ} {A : DefSet (rawMixedSpace (M := M) (1 + k) r) (
           ext q
           constructor
           · rintro ⟨p, hp, rfl⟩
-            exact ⟨p, hp, (D.relativeData_point ⟨p, hp⟩).symm⟩
+            exact ⟨p, hp, D.relativeData_point ⟨p, hp⟩⟩
           · rintro ⟨p, hp, rfl⟩
-            exact ⟨p, hp, D.relativeData_point ⟨p, hp⟩⟩)
+            exact ⟨p, hp, (D.relativeData_point ⟨p, hp⟩).symm⟩)
       (fun p => (D.relativeData_point p).symm)
   | zeroCentered A D =>
     intro g
