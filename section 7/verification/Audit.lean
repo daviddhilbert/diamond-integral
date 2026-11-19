@@ -1152,6 +1152,24 @@ import «section 7».Section
 #check @DiamondIntegral.Section7.ElementaryComparison.lemma_7_5
 #print DiamondIntegral.Section7.ElementaryComparison.lemma_7_5
 #print axioms DiamondIntegral.Section7.ElementaryComparison.lemma_7_5
+#check @DiamondIntegral.Section7.IsoOfMeasured.rawFun
+#print DiamondIntegral.Section7.IsoOfMeasured.rawFun
+#print axioms DiamondIntegral.Section7.IsoOfMeasured.rawFun
+#check @DiamondIntegral.Section7.IsoOfMeasured.rawFun_of
+#print DiamondIntegral.Section7.IsoOfMeasured.rawFun_of
+#print axioms DiamondIntegral.Section7.IsoOfMeasured.rawFun_of
+#check @DiamondIntegral.Section7.IsoOfMeasured.rawFun_graph
+#print DiamondIntegral.Section7.IsoOfMeasured.rawFun_graph
+#print axioms DiamondIntegral.Section7.IsoOfMeasured.rawFun_graph
+#check @DiamondIntegral.Section7.IsoOfMeasured.rvValues_image_rawDefSet
+#print DiamondIntegral.Section7.IsoOfMeasured.rvValues_image_rawDefSet
+#print axioms DiamondIntegral.Section7.IsoOfMeasured.rvValues_image_rawDefSet
+#check @DiamondIntegral.Section7.IsoOfMeasured.isoOfMeasured
+#print DiamondIntegral.Section7.IsoOfMeasured.isoOfMeasured
+#print axioms DiamondIntegral.Section7.IsoOfMeasured.isoOfMeasured
+#check @DiamondIntegral.Section7.IsoOfMeasured.cls_eq_iff_measured
+#print DiamondIntegral.Section7.IsoOfMeasured.cls_eq_iff_measured
+#print axioms DiamondIntegral.Section7.IsoOfMeasured.cls_eq_iff_measured
 #check @DiamondIntegral.Section7.LiftClasses.toMeasured_res
 #print DiamondIntegral.Section7.LiftClasses.toMeasured_res
 #print axioms DiamondIntegral.Section7.LiftClasses.toMeasured_res
@@ -1398,6 +1416,87 @@ import «section 7».Section
 #check @DiamondIntegral.Section7.Remark74.remark_7_4_named
 #print DiamondIntegral.Section7.Remark74.remark_7_4_named
 #print axioms DiamondIntegral.Section7.Remark74.remark_7_4_named
+#check @DiamondIntegral.Section7.SpecialStep.mem_domain_of_rawDom
+#print DiamondIntegral.Section7.SpecialStep.mem_domain_of_rawDom
+#print axioms DiamondIntegral.Section7.SpecialStep.mem_domain_of_rawDom
+#check @DiamondIntegral.Section7.SpecialStep.pieceIso
+#print DiamondIntegral.Section7.SpecialStep.pieceIso
+#print axioms DiamondIntegral.Section7.SpecialStep.pieceIso
+#check @DiamondIntegral.Section7.SpecialStep.cpieceIso
+#print DiamondIntegral.Section7.SpecialStep.cpieceIso
+#print axioms DiamondIntegral.Section7.SpecialStep.cpieceIso
+#check @DiamondIntegral.Section7.SpecialStep.contractionObj
+#print DiamondIntegral.Section7.SpecialStep.contractionObj
+#print axioms DiamondIntegral.Section7.SpecialStep.contractionObj
+#check @DiamondIntegral.Section7.SpecialStep.cls_contraction
+#print DiamondIntegral.Section7.SpecialStep.cls_contraction
+#print axioms DiamondIntegral.Section7.SpecialStep.cls_contraction
+#check @DiamondIntegral.Section7.SpecialStep.step_contraction
+#print DiamondIntegral.Section7.SpecialStep.step_contraction
+#print axioms DiamondIntegral.Section7.SpecialStep.step_contraction
+#check @DiamondIntegral.Section7.SpecialStep.mem_chartLift_iff
+#print DiamondIntegral.Section7.SpecialStep.mem_chartLift_iff
+#print axioms DiamondIntegral.Section7.SpecialStep.mem_chartLift_iff
+#check @DiamondIntegral.Section7.SpecialStep.exists_point
+#print DiamondIntegral.Section7.SpecialStep.exists_point
+#print axioms DiamondIntegral.Section7.SpecialStep.exists_point
+#check @DiamondIntegral.Section7.SpecialStep.endpointRV
+#print DiamondIntegral.Section7.SpecialStep.endpointRV
+#print axioms DiamondIntegral.Section7.SpecialStep.endpointRV
+#check @DiamondIntegral.Section7.SpecialStep.endpointRV_val
+#print DiamondIntegral.Section7.SpecialStep.endpointRV_val
+#print axioms DiamondIntegral.Section7.SpecialStep.endpointRV_val
+#check @DiamondIntegral.Section7.SpecialStep.endpointRV_const
+#print DiamondIntegral.Section7.SpecialStep.endpointRV_const
+#print axioms DiamondIntegral.Section7.SpecialStep.endpointRV_const
+#check @DiamondIntegral.Section7.SpecialStep.endpointLabel
+#print DiamondIntegral.Section7.SpecialStep.endpointLabel
+#print axioms DiamondIntegral.Section7.SpecialStep.endpointLabel
+#check @DiamondIntegral.Section7.SpecialStep.gEnd
+#print DiamondIntegral.Section7.SpecialStep.gEnd
+#print axioms DiamondIntegral.Section7.SpecialStep.gEnd
+#check @DiamondIntegral.Section7.SpecialStep.labels_eq
+#print DiamondIntegral.Section7.SpecialStep.labels_eq
+#print axioms DiamondIntegral.Section7.SpecialStep.labels_eq
+#check @DiamondIntegral.Section7.SpecialStep.gEnd_of
+#print DiamondIntegral.Section7.SpecialStep.gEnd_of
+#print axioms DiamondIntegral.Section7.SpecialStep.gEnd_of
+#check @DiamondIntegral.Section7.SpecialStep.gEnd_scalarDef
+#print DiamondIntegral.Section7.SpecialStep.gEnd_scalarDef
+#print axioms DiamondIntegral.Section7.SpecialStep.gEnd_scalarDef
+#check @DiamondIntegral.Section7.SpecialStep.focus_rv_chart
+#print DiamondIntegral.Section7.SpecialStep.focus_rv_chart
+#print axioms DiamondIntegral.Section7.SpecialStep.focus_rv_chart
+#check @DiamondIntegral.Section7.SpecialStep.endpoint_ne_zero
+#print DiamondIntegral.Section7.SpecialStep.endpoint_ne_zero
+#print axioms DiamondIntegral.Section7.SpecialStep.endpoint_ne_zero
+#check @DiamondIntegral.Section7.SpecialStep.coord_nonzero_chart
+#print DiamondIntegral.Section7.SpecialStep.coord_nonzero_chart
+#print axioms DiamondIntegral.Section7.SpecialStep.coord_nonzero_chart
+#check @DiamondIntegral.Section7.SpecialStep.gEnd_nonzero
+#print DiamondIntegral.Section7.SpecialStep.gEnd_nonzero
+#print axioms DiamondIntegral.Section7.SpecialStep.gEnd_nonzero
+#check @DiamondIntegral.Section7.SpecialStep.apertureOf
+#print DiamondIntegral.Section7.SpecialStep.apertureOf
+#print axioms DiamondIntegral.Section7.SpecialStep.apertureOf
+#check @DiamondIntegral.Section7.SpecialStep.apertureOf_endpoint
+#print DiamondIntegral.Section7.SpecialStep.apertureOf_endpoint
+#print axioms DiamondIntegral.Section7.SpecialStep.apertureOf_endpoint
+#check @DiamondIntegral.Section7.SpecialStep.defSetMono
+#print DiamondIntegral.Section7.SpecialStep.defSetMono
+#print axioms DiamondIntegral.Section7.SpecialStep.defSetMono
+#check @DiamondIntegral.Section7.SpecialStep.mapMono
+#print DiamondIntegral.Section7.SpecialStep.mapMono
+#print axioms DiamondIntegral.Section7.SpecialStep.mapMono
+#check @DiamondIntegral.Section7.SpecialStep.inactive_finite
+#print DiamondIntegral.Section7.SpecialStep.inactive_finite
+#print axioms DiamondIntegral.Section7.SpecialStep.inactive_finite
+#check @DiamondIntegral.Section7.SpecialStep.datumOf
+#print DiamondIntegral.Section7.SpecialStep.datumOf
+#print axioms DiamondIntegral.Section7.SpecialStep.datumOf
+#check @DiamondIntegral.Section7.SpecialStep.step_of_data
+#print DiamondIntegral.Section7.SpecialStep.step_of_data
+#print axioms DiamondIntegral.Section7.SpecialStep.step_of_data
 #check @DiamondIntegral.Section7.StrictCharts.minusOne
 #print DiamondIntegral.Section7.StrictCharts.minusOne
 #print axioms DiamondIntegral.Section7.StrictCharts.minusOne

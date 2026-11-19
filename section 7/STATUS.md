@@ -57,9 +57,13 @@ arbitrary parameter base and take no input beyond the ACVF model.
   bounded and ∞-free when doubly bounded), using the converse definability
   bridge `RealBase.real_base`. Hence `liftCls` is surjective
   (`liftCls_surjective`, Corollary 6.37 on Section 7's classes).
-- Still to do in M3: 7.11 (partial-lift form) and 7.13 (head-start form). The
-  7.11 route is in PLAN.md: generalize the 7.12 pipeline to arbitrary relative
-  aperture data.
+- 7.11 in progress. The 7.12 pipeline now takes arbitrary relative aperture
+  data. `IsoOfMeasured` identifies measured RV isomorphisms of chart objects
+  with chart isomorphisms. `SpecialStep.step_of_data` proves one relative step
+  on a chart lift, with all labels active: Step (cls U) (cls U_T).
+  - Remaining for 7.11: inactive labels, original and zero-centred steps,
+    chains and partial lifts.
+  - Then 7.13 (head-start form, via 6.38).
 - Deferred: the product part of Lemma 7.10. It needs a graded product on
   Section 7's class monoid (products distributing over tagged coproducts, and
   products of annular data). Only the ring form of 7.26 uses it, where the

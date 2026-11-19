@@ -319,6 +319,158 @@ theorem apertureOf_endpoint {p : DiamondIntegral.Section2.Mixed M (1 + k) c.arit
   exact ((mul_eq_iff_rvDiv (rvDiv_nonzero (gEnd_nonzero hc c R hall hu) (coord_nonzero_chart c hu R.coordinate)).1
     (gEnd_nonzero hc c R hall hu).1 (coord_nonzero_chart c hu R.coordinate)).mpr rfl).symm
 
+/-! ### The finite-to-one condition (R171) -/
+
+/-- Base change of a definable set to a larger parameter set. -/
+def defSetMono {P : Space LRV M} {S' : Set M} (h : S ⊆ S') (A : DefSet P S) : DefSet P S' :=
+  ⟨A.carrier, Set.Definable.mono A.definable h⟩
+
+/-- Base change of a definable map. -/
+def mapMono {P Q : Space LRV M} {S' : Set M} (h : S ⊆ S') {A : DefSet P S} {B : DefSet Q S} (f : Map A B) :
+    Map (defSetMono h A) (defSetMono h B) := ⟨fun a => f a, Set.Definable.mono f.graph_definable h⟩
+
+include hall in
+/-- The finite-to-one condition of Definition 7.2 for the data: for a fixed VF
+input `a` of the inactive leading terms, the focus `u ↦ λ(a, u)` has finite
+image (Lemma 2.13 through Section 6's `scalarFocusImage_finite`, over
+`S ∪ {a}`), and the lift has finite fibres. -/
+theorem inactive_finite {κ : Cardinal} (hκ : Cardinal.aleph0 < κ) (hs : Saturated M κ)
+    (hsmall : Cardinal.mk S < κ) : AnnularBlowup.InactiveFinite c R.coordinate := by
+  intro t
+  by_cases hne : ∃ u₀, u₀ ∈ c.domain ∧ AnnularBlowup.inactive c R.coordinate u₀ = t
+  swap
+  · apply Set.Finite.subset Set.finite_empty
+    rintro u ⟨hu, htu⟩
+    exact hne ⟨u, hu, htu⟩
+  obtain ⟨u₀, hu₀, ht⟩ := hne
+  obtain ⟨p₀, hp₀, hpu₀⟩ := exists_point hc c hu₀
+  let a := p₀.1
+  let S' : Set M := S ∪ Set.range (fun i => (a i).val)
+  have hSS : S ⊆ S' := Set.subset_union_left
+  have hsmall' : Cardinal.mk S' < κ := by
+    refine (Cardinal.mk_union_le _ _).trans_lt (Cardinal.add_lt_of_lt hκ.le hsmall ?_)
+    exact ((Set.finite_range _).lt_aleph0).trans hκ
+  let FA := focusActive (rvLift (toMeasured hc c).object) R.activeTags
+  let P := rawMixedSpace (M := M) (1 + k) (toMeasured hc c).object.arity
+  let Xc : Set P.Carrier := {p | p ∈ FA.carrier ∧ ∀ i, i ≠ R.coordinate → p.1 i = a i}
+  have hX : P.Definable S' Xc := by
+    have hcoord : ∀ i : Fin (1 + k), S'.Definable LRV
+        {z : Fin (1 + k) ⊕ Fin (toMeasured hc c).object.arity → M | z (Sum.inl i) = (a i).val} := by
+      intro i
+      have h1 := Set.Definable.singleton_of_mem (L := LRV) (show (a i).val ∈ S' from Or.inr ⟨i, rfl⟩)
+      have h2 := h1.preimage_comp (fun _ : Fin 1 => (Sum.inl i : Fin (1 + k) ⊕ Fin (toMeasured hc c).object.arity))
+      convert h2 using 1
+      ext z
+      simp only [Set.mem_setOf_eq, Set.mem_preimage, Function.comp_apply, Set.mem_singleton_iff]
+    have hall' : S'.Definable LRV (⋂ i ∈ (Finset.univ.erase R.coordinate),
+        {z : Fin (1 + k) ⊕ Fin (toMeasured hc c).object.arity → M | z (Sum.inl i) = (a i).val}) :=
+      Set.definable_biInter_finset hcoord _
+    have hFA : S'.Definable LRV (P.preimage FA.carrier) := Set.Definable.mono FA.definable hSS
+    change S'.Definable LRV (P.preimage Xc)
+    convert hFA.inter hall' using 1
+    ext z
+    constructor
+    · rintro ⟨hz, hm, hoff⟩
+      refine ⟨⟨hz, hm⟩, ?_⟩
+      simp only [Set.mem_iInter, Finset.mem_erase, Finset.mem_univ, and_true]
+      intro i hi
+      have h := congrArg Subtype.val (hoff i hi)
+      have hm' := congrFun (mixedValues_decode ⟨z, hz⟩) (Sum.inl i)
+      have h3 : z (Sum.inl i) = ((P.decode ⟨z, hz⟩).1 i).val := hm'.symm
+      exact h3.trans h
+    · rintro ⟨⟨hz, hm⟩, hoff⟩
+      refine ⟨hz, hm, fun i hi => ?_⟩
+      simp only [Set.mem_iInter, Finset.mem_erase, Finset.mem_univ, and_true] at hoff
+      apply Subtype.ext
+      have hm' := congrFun (mixedValues_decode ⟨z, hz⟩) (Sum.inl i)
+      exact hm'.trans (hoff i hi)
+  let X : DefSet P S' := ⟨Xc, hX⟩
+  have hXsub : X.carrier ⊆ (defSetMono hSS FA).carrier := fun p hp => hp.1
+  let f : Map X (defSetMono hSS (DefSet.univ (rawVFSpace (M := M) 1) S)) :=
+    (mapMono hSS R.focusMap).comp (Map.inclusion hXsub)
+  have hRV : ∀ p q : X, p.val.2 = q.val.2 → (f p).val 0 = (f q).val 0 := by
+    intro p q he
+    change (R.focusMap ⟨p.val, p.property.1⟩).val 0 = (R.focusMap ⟨q.val, q.property.1⟩).val 0
+    rw [R.focusMap_eq, R.focusMap_eq]
+    have hupd : Function.update p.val.1 R.coordinate 0 = Function.update q.val.1 R.coordinate 0 := by
+      funext i
+      by_cases hi : i = R.coordinate
+      · rw [hi, Function.update_self, Function.update_self]
+      · rw [Function.update_of_ne hi, Function.update_of_ne hi, p.property.2 i hi, q.property.2 i hi]
+    change R.focus (Function.update p.val.1 R.coordinate 0) p.val.2 = R.focus (Function.update q.val.1 R.coordinate 0) q.val.2
+    rw [hupd, he]
+  have hΛ := scalarFocusImage_finite hc hs hsmall' f hRV
+  apply (hΛ.biUnion (fun y _ => c.finite_fibres
+    (rvValues (DiamondIntegral.Section2.tupleRV M (Function.update a R.coordinate y))))).subset
+  rintro u ⟨hu, htu⟩
+  have hoffu : ∀ i, i ≠ R.coordinate → c.coordinate u i = c.coordinate u₀ i := by
+    intro i hi
+    have h := congrFun (htu.trans ht.symm) i
+    simp only [AnnularBlowup.inactive] at h
+    rw [Function.update_of_ne hi, Function.update_of_ne hi] at h
+    exact h
+  have hp₀rv := ((mem_chartLift_iff hc c p₀).mp hp₀).2
+  rw [hpu₀] at hp₀rv
+  have hfj := coord_nonzero_chart c hu R.coordinate
+  obtain ⟨z, hz⟩ := DiamondIntegral.Section2.rv_surjective (⟨c.coordinate u R.coordinate, hfj.1⟩ : DiamondIntegral.Section2.RVInfinity M)
+  have hsu := c.domain_definable.proper u hu
+  let q : DiamondIntegral.Section2.Mixed M (1 + k) c.arity := (Function.update a R.coordinate z, rvTuple u hsu)
+  have hrvq : rvValues (DiamondIntegral.Section2.tupleRV M q.1) = c.coordinate u := by
+    funext i
+    change (DiamondIntegral.Section2.rv M (Function.update a R.coordinate z i)).val = _
+    by_cases hi : i = R.coordinate
+    · rw [hi, Function.update_self, hz]
+    · rw [Function.update_of_ne hi, hoffu i hi]
+      exact congrFun hp₀rv i
+  have hq : q ∈ (rvLift (toMeasured hc c).object).carrier :=
+    (mem_chartLift_iff hc c q).mpr ⟨by rw [rvValues_rvTuple]; exact hu, by rw [rvValues_rvTuple]; exact hrvq⟩
+  have hqX : q ∈ X.carrier := ⟨⟨hq, hall q hq⟩, fun i hi => Function.update_of_ne hi _ _⟩
+  let lamU := (f ⟨q, hqX⟩).val 0
+  have hlam : lamU = R.extendedFocus q := by
+    change (R.focusMap ⟨q, hq, hall q hq⟩).val 0 = _
+    rw [R.focusMap_eq, R.extendedFocus_active hq (hall q hq)]
+  have hlamrv : (DiamondIntegral.Section2.rv M lamU).val = c.coordinate u R.coordinate := by
+    rw [hlam, focus_rv_chart hc c R hall hq, rvValues_rvTuple]
+  refine Set.mem_iUnion₂.mpr ⟨lamU, ⟨⟨q, hqX⟩, rfl⟩, hu, ?_⟩
+  funext i
+  change _ = (DiamondIntegral.Section2.rv M (Function.update a R.coordinate lamU i)).val
+  by_cases hi : i = R.coordinate
+  · rw [hi, Function.update_self, hlamrv]
+  · rw [Function.update_of_ne hi, hoffu i hi]
+    exact (congrFun hp₀rv i).symm
+
 end Datum
+
+/-! ### Lemma 7.11 for one relative step on the lift of a chart -/
+
+section StepOfData
+open DiamondIntegral.Section7.BlowupLiftData DiamondIntegral.Section7.BlowupLiftClasses
+open DiamondIntegral.Section7.LiftClasses
+variable {G : Type} [LinearOrderedCommGroupWithZero G] [Valued (DiamondIntegral.Section2.VF M) G]
+variable (T : LRV.Substructure M) (c : Chart (BT T) (1 + k)) (hb : RVMeasuredBounds.DomainBounded c)
+variable (R : RelativeApertureData (G := G) (rvLift (toMeasured hc c).object))
+variable (hall : ∀ p ∈ (rvLift (toMeasured hc c).object).carrier, p.2 ∈ R.activeTags.carrier)
+variable {κ : Cardinal} (hκ : Cardinal.aleph0 < κ) (hs : Saturated M κ) (hsmall : Cardinal.mk (T : Set M) < κ)
+variable (h00 : M ⊨ Axioms.ACVF00)
+
+/-- The annular datum of relative aperture data: the coordinate of `R`, the
+aperture `rv(b₁)/f_j`, and `R`'s named bound. -/
+def datumOf : AnnularDatum (BT T) k where
+  chart := c
+  coordinate := R.coordinate
+  finite := inactive_finite hc c R hall hκ hs hsmall
+  aperture := apertureOf hc c R hall
+  bounded := hb
+
+/-- Lemma 7.11 for one relative step with all labels active: the contraction
+of the regularized image is a blowup of length one of the source. -/
+theorem step_of_data :
+    Step (cls (⟨c, hb⟩ : Obj (BT T) (1 + k)))
+      (cls (contractionObj hc T (datumOf hc T c hb R hall hκ hs hsmall) R rfl hall
+        (fun _ hp => apertureOf_endpoint hc c R hall hp) h00)) :=
+  step_contraction hc T (datumOf hc T c hb R hall hκ hs hsmall) R rfl hall
+    (fun _ hp => apertureOf_endpoint hc c R hall hp) h00
+
+end StepOfData
 
 end DiamondIntegral.Section7.SpecialStep

@@ -19,7 +19,7 @@ formalized.
 | Corollary 7.8 | `blowup:equi:class` | done | `BlowupResults.corollary_7_8` |
 | Definition 7.9 | μIsp^db | done | `BlowupCongruence.MuIsp` |
 | Lemma 7.10 | `isp:congruence:vol` | partial | additive congruence `BlowupResults.lemma_7_10_addCon`; product compatibility pending |
-| Lemma 7.11 | `special:to:blowup:coa` | pending | approved: partial-lift form |
+| Lemma 7.11 | `special:to:blowup:coa` | partial | One relative step on the lift of a chart, all labels active: `SpecialStep.step_of_data` (the datum `datumOf`: aperture `apertureOf` = rv(b₁)/f_j with R's named bound; finite-to-one condition `inactive_finite` by the R171/Lemma 2.13 argument; `cls_contraction`). Remaining: inactive labels, original and zero-centred steps, chains (induction with 7.7), partial lifts (approved form) |
 | Lemma 7.12 | `blowup:same:RV:coa` | done on classes | `BlowupLiftGeneral.lemma_7_12` (every aperture datum, `liftCls [U^{τ,j}] = liftCls [U]` in K₊ μVF^◇[1+k]); `step_lift`, `steps_lift`, `muIsp_lift` (blowups of any length, μIsp). Construction: `BlowupLiftData.apertureData` (centres b₀, b₁), `BlowupLiftImage.mem_Vreg_iff` (image), `BlowupLiftContraction.lift_isomorphic` (μVF^◇ isomorphism onto the lift of the contraction), `BlowupLiftClasses.isoE`/`isoS`/`lemma_7_12_noInfinity`, `BlowupLiftGeneral.strict_annular` (∞ labels). Over the VF-generated base of Section 6. The object-level isomorphism is not stated separately (GAP-REPAIRS 7) |
 | Lemma 7.13 | `kernel:dim:1:coa` | pending | approved: head-start form |
 | Lemma 7.14 | `isp:VF:fiberwise:contract` | pending | |
