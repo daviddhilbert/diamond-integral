@@ -682,6 +682,52 @@ theorem eq_zero_of_add_eq_zero (x y : Cls B k) (h : x + y = 0) : x = 0 := by
   have hv : v.val ∈ (coprod a b).domain := Or.inl v.property
   exact (Φ.equiv ⟨v.val, hv⟩).property
 
+/-- Isomorphic objects have isomorphic complementary pieces. -/
+theorem cls_cpiece_image {a b : Obj B k} (F : Iso a.toChart b.toChart) (I : Set (Fin a.arity → M))
+    (hI : DefinableOverBase B (fun _ : Fin a.arity => .rv) I) :
+    cls (cpiece a I hI) = cls (cpiece b (image F I) (image_definable F I hI)) := by
+  have hD := difference_definable B _ _ a.domain_definable hI
+  have h := cls_piece_image F (a.domain \ I) hD
+  refine Eq.trans ?_ (h.trans ?_)
+  · apply cls_eq_of_iso
+    refine sameIso (outside (ofChart a.toChart) I hI)
+      (inside (ofChart a.toChart) (a.domain \ I) hD) ?_ (fun _ _ => rfl) (fun _ _ => rfl)
+    change a.domain \ I = a.domain ∩ (a.domain \ I)
+    rw [Set.inter_eq_self_of_subset_right Set.sdiff_subset]
+  · apply cls_eq_of_iso
+    refine sameIso (inside (ofChart b.toChart) (image F (a.domain \ I)) (image_definable F _ hD))
+      (outside (ofChart b.toChart) (image F I) (image_definable F I hI)) ?_ (fun _ _ => rfl) (fun _ _ => rfl)
+    change b.domain ∩ image F (a.domain \ I) = b.domain \ image F I
+    rw [← image_compl_domain F I]
+    exact Set.inter_eq_self_of_subset_right Set.sdiff_subset
+
+/-- A class is zero exactly when its objects are empty. -/
+theorem cls_eq_zero_iff (a : Obj B k) : cls a = 0 ↔ a.domain = ∅ := by
+  constructor
+  · intro h
+    rw [← cls_zero, cls_eq_iff] at h
+    obtain ⟨Φ⟩ := h
+    apply Set.eq_empty_iff_forall_notMem.mpr
+    intro u hu
+    exact (Φ.equiv ⟨u, hu⟩).property
+  · exact cls_empty a
+
+/-- Decomposing an object along a class decomposition. -/
+theorem exists_split (a : Obj B k) (p q : Cls B k) (h : cls a = p + q) :
+    ∃ (I : Set (Fin a.arity → M)) (hI : DefinableOverBase B (fun _ : Fin a.arity => .rv) I),
+      cls (piece a I hI) = p ∧ cls (cpiece a I hI) = q := by
+  obtain ⟨P, rfl⟩ := cls_surjective p
+  obtain ⟨Q, rfl⟩ := cls_surjective q
+  rw [← cls_coprod, cls_eq_iff] at h
+  obtain ⟨Φ⟩ := h
+  let Ψ := RVMeasuredIsomorphisms.symm Φ
+  refine ⟨image Ψ (L P.toChart Q.toChart).domain,
+    image_definable Ψ _ (L P.toChart Q.toChart).domain_definable, ?_, ?_⟩
+  · rw [← cls_piece_image Ψ _ (L P.toChart Q.toChart).domain_definable]
+    exact cls_eq_of_iso (coprodInsideLeft P.toChart Q.toChart)
+  · rw [← cls_cpiece_image Ψ _ (L P.toChart Q.toChart).domain_definable]
+    exact cls_eq_of_iso (coprodOutsideLeft P.toChart Q.toChart)
+
 end DiamondIntegral.Section7.BoundedClasses
 
 /-! ### Matrix refinement in refinement monoids -/
