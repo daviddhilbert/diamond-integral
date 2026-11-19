@@ -196,3 +196,13 @@ from RV quantifier elimination with no hypotheses.
 - No special-transformations or integration-in-ACVF source was edited; the
   binary parser and perturbation lemmas were re-proved locally in arity-free
   form in `section 4`.
+- Literature and reuse check (author note, November 19). On paper the result
+  is van den Dries, *Tame Topology and O-minimal Structures*, Ch. 1 §7
+  (definable maps of ordered ℚ-vector spaces are piecewise affine), carried
+  to Γ inside ACVF by stable embeddedness of Γ as a pure divisible ordered
+  abelian group (Haskell–Hrushovski–Macpherson). Pinned Mathlib 56a0058 has
+  only the DLO theory (Presburger QE is listed as future work) and no
+  o-minimality or piecewise-linear result; pinned hilbert-mathlib 88bb338 has
+  only general QE criteria. Tau Ceti is not a dependency and was not added.
+  The local proof therefore uses the already pinned RV quantifier
+  elimination directly, without DOAG QE or a stable-embeddedness lemma.

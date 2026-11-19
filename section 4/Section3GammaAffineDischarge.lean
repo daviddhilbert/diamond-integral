@@ -17,7 +17,16 @@ that equality for the output gives one of finitely many rational-affine
 branches. Its constant is a product of Gamma values of named flat
 coefficients and integral powers of the abstracted Gamma names, hence it is
 named over the original base. Only ACVF is used: no characteristic,
-saturation, nontriviality or HK hypothesis enters. -/
+saturation, nontriviality or HK hypothesis enters.
+
+Literature: definable maps in an ordered vector space over ℚ are piecewise
+affine (van den Dries, *Tame Topology and O-minimal Structures*, Ch. 1 §7);
+in ACVF, Γ is stably embedded and a pure divisible ordered abelian group
+(Haskell–Hrushovski–Macpherson), which gives the statement on paper. Neither
+pinned Lean dependency (Mathlib 56a0058, hilbert-mathlib 88bb338) contains
+DOAG quantifier elimination or piecewise-linearity of definable maps, so the
+proof here goes directly through the pinned RV quantifier elimination
+instead of DOAG QE plus stable embeddedness. -/
 
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false

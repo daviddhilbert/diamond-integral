@@ -45,7 +45,11 @@ to free variables, the predicate gets a flat RV literal normal form
 pair of monomials with different output slopes (`GammaQEOutputSlopes`), and
 the branch constant is named over the base (`GammaQECoefficientNames`).
 `Section4GammaAffineDischarged` gives the input-free Remark 4.2 forms; the
-original statements are unchanged. These inputs supply structural branch
+original statements are unchanged. Literature: van den Dries, *Tame Topology
+and O-minimal Structures*, Ch. 1 §7, with stable embeddedness of Γ in ACVF
+(Haskell–Hrushovski–Macpherson); no pinned Lean dependency provides DOAG QE
+or piecewise linearity, so the proof uses the pinned RV quantifier
+elimination. These inputs supply structural branch
 equations, not Euler or localization conclusions. Exact hypotheses and logical dependencies appear in the full audit.
 
 Also hosted here (recorded under `section 3/GAP-REPAIRS.md`): the
