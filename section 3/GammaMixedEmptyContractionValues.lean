@@ -22,19 +22,23 @@ variable {G : Type} [LinearOrderedCommGroupWithZero G] [Valued (Section2.VF M) G
 theorem gammaMixed_empty_contraction_value
     (C : BaseContext M) (hBC : B.real ⊆ (C.base : Set M))
     (hv : ∀ x y : Section2.VF M, VFValued.predV x y ↔ Valued.v x ≤ Valued.v y)
-    (hNames : commonRealNames B ⊆ (C.base : Set M)) (hGenerated : VFGammaGeneratedBase B)
+    (hg : Cardinal.mk B.gamma < C.κ) (hGenerated : VFGammaGeneratedBase B)
     (U : GammaGroundMeasuredVFData hc B (n+1)) (hU : U.domain.carrier = ∅) :
-    gammaMixedContractionValue C hBC hv hNames hGenerated U = 0 := by
-  let P := gammaMixedRetainedRepresentation C hBC hv U
-  let A := P.data.nativeSet C hNames
-  let T := P.data.contraction C hBC hNames hGenerated
-  let hT := P.data.contraction_gamma C hBC hNames hGenerated
+    gammaMixedContractionValue C hBC hv hg hGenerated U = 0 := by
+  let C' := gammaMixedCodeContext C hBC hg
+  have hBC' := gammaMixedCodeContext_real C hBC hg
+  have hNames' := gammaMixedCodeContext_names C hBC hg
+  have hg' := gammaMixedCodeContext_gamma C hBC hg
+  let P := gammaMixedRetainedRepresentation C' hBC' hv U
+  let A := P.data.nativeSet C' hNames'
+  let T := P.data.contraction C' hBC' hNames' hGenerated
+  let hT := P.data.contraction_gamma C' hBC' hNames' hGenerated
   have hTarget (q : T.target) : False := by
     obtain ⟨p,_⟩ := (T.program.surjective.comp (vfPermutationBijection_bijective A (Equiv.refl _)).2) q
     obtain ⟨u,_⟩ := P.map.map.bijective.2 ⟨p.val,p.property⟩
     exact Set.notMem_empty u.val (hU ▸ u.property)
-  let hr := (Cardinal.mk_le_mk_of_subset hBC).trans_lt C.small
-  let V := gammaNativeFiniteAt (gammaRawFiniteContraction (U := A) C.uncountable.le C.saturated hr hBC
+  let hr := (Cardinal.mk_le_mk_of_subset hBC').trans_lt C'.small
+  let V := gammaNativeFiniteAt (gammaRawFiniteContraction (U := A) C'.uncountable.le C'.saturated hr hBC'
     P.data.point_definable P.data.finite T hT)
   let W := gammaNativeMeasuredNormalization V
     (gammaNativeTotalRVForm V (suffixIndex T.program.rvArity_le) P.data.form.extendByOne)
@@ -44,7 +48,7 @@ theorem gammaMixed_empty_contraction_value
     let u : W.underlying.domain := ⟨r,hr⟩
     let v := gammaNativeHighLabelInclusion V u
     exact hTarget ⟨(Fin.elim0,v.val),
-      (gammaNative_raw_contraction_mem (hc := hc) C hBC (A := A) P.data.point_definable P.data.finite T hT v.val).mp v.property⟩
+      (gammaNative_raw_contraction_mem (hc := hc) C' hBC' (A := A) P.data.point_definable P.data.finite T hT v.val).mp v.property⟩
   change (gammaGroundMeasuredRVSpecialCongruence hc B).mk' (gammaGroundMeasuredRVSemiringClass W) = 0
   rw [gammaGroundMeasuredRVSemiringClass_of_empty W hW]
   exact (gammaGroundMeasuredRVSpecialCongruence hc B).mk'.map_zero

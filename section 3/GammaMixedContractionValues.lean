@@ -1,10 +1,14 @@
 import «section 3».GammaRetainedRelativeContractionValues
 import «section 3».GammaMeasuredUnaryChains
+import Integration7.GammaNamesVolumeContexts
 
 /-! Arbitrary mixed Gamma forms receive a well-defined contraction
 value via the checked VF-fixed retained presentation. The value is
 independent of that presentation and preserved by every finite full
-measured relatively unary chain over the original base. -/
+measured relatively unary chain over the original base. The value is
+computed over the code context `gammaMixedCodeContext`, which adjoins the
+common real names of `B` to `C.base`; no names hypothesis on `C` is
+needed. -/
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false
 set_option maxHeartbeats 1200000
@@ -33,56 +37,82 @@ def gammaMixedRetainedRepresentation (U : GammaGroundMeasuredVFData hc B (n+1)) 
     ((Cardinal.mk_le_mk_of_subset hBC).trans_lt C.small) hv U
   exact ⟨H.choose,H.choose_spec.choose,H.choose_spec.choose_spec⟩
 
-variable (hNames : commonRealNames B ⊆ (C.base : Set M)) (hGenerated : VFGammaGeneratedBase B)
+variable (hg : Cardinal.mk B.gamma < C.κ)
+
+/-- The code context used for mixed contraction values: `C.base` with the
+common real names of `B` adjoined. Only a code set; the objects are
+Gamma-ground objects over `B`. -/
+def gammaMixedCodeContext : BaseContext M := gammaNamesContainingVolumeContext C B hBC hg
+
+theorem gammaMixedCodeContext_real : B.real ⊆ ((gammaMixedCodeContext C hBC hg).base : Set M) :=
+  fun _ hx => gamma_names_containing_volume_context_contains C B hBC hg (Or.inl (hBC hx))
+
+theorem gammaMixedCodeContext_names :
+    commonRealNames B ⊆ ((gammaMixedCodeContext C hBC hg).base : Set M) :=
+  fun _ hx => gamma_names_containing_volume_context_contains C B hBC hg (Or.inr hx)
+
+theorem gammaMixedCodeContext_gamma : Cardinal.mk B.gamma < (gammaMixedCodeContext C hBC hg).κ := hg
+
+variable (hGenerated : VFGammaGeneratedBase B)
 
 def gammaMixedContractionValue (U : GammaGroundMeasuredVFData hc B (n+1)) :=
-  (gammaMixedRetainedRepresentation C hBC hv U).data.contractionValue C hBC hNames hGenerated
+  (gammaMixedRetainedRepresentation (gammaMixedCodeContext C hBC hg) (gammaMixedCodeContext_real C hBC hg) hv U).data.contractionValue
+    (gammaMixedCodeContext C hBC hg) (gammaMixedCodeContext_real C hBC hg)
+    (gammaMixedCodeContext_names C hBC hg) hGenerated
 
-variable (hg : Cardinal.mk B.gamma < C.κ)
 variable (δ : Values.Gamma (M := M)) (hδ : δ ∈ B.gamma) (hδ1 : 1 < δ)
 
-include hg δ hδ hδ1 in
+include δ hδ hδ1 in
 theorem gammaMixed_contraction_value_of_presentation
     (U : GammaGroundMeasuredVFData hc B (n+1)) (P : GammaRetainedMeasuredVFData hc B (n+1))
     (E : GammaFullMeasuredBijection U P.toMeasured) (hE : ∀ p, (E.map.map p).val.1 = p.val.1) :
-    gammaMixedContractionValue C hBC hv hNames hGenerated U = P.contractionValue C hBC hNames hGenerated := by
-  let hr := (Cardinal.mk_le_mk_of_subset hBC).trans_lt C.small
-  let R := gammaMixedRetainedRepresentation C hBC hv U
-  let K := (R.map.symm C.uncountable.le C.saturated hr hv).comp C.uncountable.le C.saturated hr hv E
+    gammaMixedContractionValue C hBC hv hg hGenerated U = P.contractionValue (gammaMixedCodeContext C hBC hg) (gammaMixedCodeContext_real C hBC hg)
+      (gammaMixedCodeContext_names C hBC hg) hGenerated := by
+  let C' := gammaMixedCodeContext C hBC hg
+  have hBC' := gammaMixedCodeContext_real C hBC hg
+  have hNames' := gammaMixedCodeContext_names C hBC hg
+  have hg' := gammaMixedCodeContext_gamma C hBC hg
+  let hr := (Cardinal.mk_le_mk_of_subset hBC').trans_lt C'.small
+  let R := gammaMixedRetainedRepresentation C' hBC' hv U
+  let K := (R.map.symm C'.uncountable.le C'.saturated hr hv).comp C'.uncountable.le C'.saturated hr hv E
   have hInv (p : R.data.toMeasured.domain) : (R.map.map.symm.map p).val.1 = p.val.1 := by
     have h := R.map.map.map.apply_inverse R.map.map.bijective p
     exact (R.fixesVF (R.map.map.symm.map p)).symm.trans (congrArg (fun q => q.val.1) h)
-  apply gammaRetained_relative_contraction_values C hBC hv hg hNames hGenerated δ hδ hδ1 K 0
+  apply gammaRetained_relative_contraction_values C' hBC' hv hg' hNames' hGenerated δ hδ hδ1 K 0
   intro p j _
   exact (congrFun (hE (R.map.map.symm.map p)) j).trans (congrFun (hInv p) j)
 
-include hg δ hδ hδ1 in
+include δ hδ hδ1 in
 theorem gammaMixed_relative_contraction_values
     {U V : GammaGroundMeasuredVFData hc B (n+1)} (F : GammaFullMeasuredBijection U V)
     (i : Fin (n+1)) (hi : ∀ p, ∀ j, j ≠ i → (F.map.map p).val.1 j = p.val.1 j) :
-    gammaMixedContractionValue C hBC hv hNames hGenerated U =
-      gammaMixedContractionValue C hBC hv hNames hGenerated V := by
-  let hr := (Cardinal.mk_le_mk_of_subset hBC).trans_lt C.small
-  let P := gammaMixedRetainedRepresentation C hBC hv U
-  let Q := gammaMixedRetainedRepresentation C hBC hv V
-  let K := ((P.map.symm C.uncountable.le C.saturated hr hv).comp C.uncountable.le C.saturated hr hv F).comp
-    C.uncountable.le C.saturated hr hv Q.map
+    gammaMixedContractionValue C hBC hv hg hGenerated U =
+      gammaMixedContractionValue C hBC hv hg hGenerated V := by
+  let C' := gammaMixedCodeContext C hBC hg
+  have hBC' := gammaMixedCodeContext_real C hBC hg
+  have hNames' := gammaMixedCodeContext_names C hBC hg
+  have hg' := gammaMixedCodeContext_gamma C hBC hg
+  let hr := (Cardinal.mk_le_mk_of_subset hBC').trans_lt C'.small
+  let P := gammaMixedRetainedRepresentation C' hBC' hv U
+  let Q := gammaMixedRetainedRepresentation C' hBC' hv V
+  let K := ((P.map.symm C'.uncountable.le C'.saturated hr hv).comp C'.uncountable.le C'.saturated hr hv F).comp
+    C'.uncountable.le C'.saturated hr hv Q.map
   have hInv (p : P.data.toMeasured.domain) : (P.map.map.symm.map p).val.1 = p.val.1 := by
     have h := P.map.map.map.apply_inverse P.map.map.bijective p
     exact (P.fixesVF (P.map.map.symm.map p)).symm.trans (congrArg (fun q => q.val.1) h)
-  apply gammaRetained_relative_contraction_values C hBC hv hg hNames hGenerated δ hδ hδ1 K i
+  apply gammaRetained_relative_contraction_values C' hBC' hv hg' hNames' hGenerated δ hδ hδ1 K i
   intro p j hj
   exact (congrFun (Q.fixesVF (F.map.map (P.map.map.symm.map p))) j).trans
     ((hi (P.map.map.symm.map p) j hj).trans (congrFun (hInv p) j))
 
-include hg δ hδ hδ1 in
+include δ hδ hδ1 in
 theorem gammaMixed_unary_chain_contraction_values
     {U V : GammaGroundMeasuredVFData hc B (n+1)} (T : GammaMeasuredUnaryChain U V) :
-    gammaMixedContractionValue C hBC hv hNames hGenerated U =
-      gammaMixedContractionValue C hBC hv hNames hGenerated V := by
+    gammaMixedContractionValue C hBC hv hg hGenerated U =
+      gammaMixedContractionValue C hBC hv hg hGenerated V := by
   induction T with
   | nil U => rfl
   | cons i f hi tail ih =>
-    exact (gammaMixed_relative_contraction_values C hBC hv hNames hGenerated hg δ hδ hδ1 f i hi).trans ih
+    exact (gammaMixed_relative_contraction_values C hBC hv hg hGenerated δ hδ hδ1 f i hi).trans ih
 
 end DiamondIntegral.Section3

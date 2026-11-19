@@ -774,23 +774,23 @@
     "section 3/GammaMeasuredVFProductArrows.lean": "97314bc491b4b3eb702ac4292a251809d255af89ae345a47190ee2a3b8199bc3",
     "section 3/GammaMeasuredWeightedRowValues.lean": "4275f400cce666773f1e4a66df45ac8ec1d0846e1181336e5de1313cbb12a7c5",
     "section 3/GammaMeasuredZeroKernel.lean": "a372b6e4027a30d28f73605469a87d99d1e0da4439e3d8eda93b533f74785f38",
-    "section 3/GammaMixedBinaryPartitionValues.lean": "489af6ddb157f448104acacc65a3d9ded5b372d23d5a6a38472dabfe3321a67f",
-    "section 3/GammaMixedContractionValues.lean": "0eca1b2f57cc0c89206b218b7d49bf4fb4905124c207407fd157739b0126653c",
-    "section 3/GammaMixedEmptyContractionValues.lean": "9684eeb8a5ca8f684809052aab7041a2258b3dc61dcb8255f46aa0f1379f86b6",
-    "section 3/GammaMixedEssentialContractionValues.lean": "6596ae99f604f471a589810f00570a8564752a48337ff1b38dca06cca404d30c",
-    "section 3/GammaMixedFinitePartitionValues.lean": "853eaec0dd258ae11d0a1c4fc1700b4038ce0167b38570c7dbccd7cd24d90987",
-    "section 3/GammaMixedFullBijectionValues.lean": "5477e880a6118be3cc0bee6832c08019c1397ce1a2cee42d0a8e978ba7d0ee53",
-    "section 3/GammaMixedGroundLiftValues.lean": "dbf40bd669637741c9d0483e0ee0e62ea0fabfb5341d97fdcaa7a15b5720f4c8",
-    "section 3/GammaMixedNativeLiftValues.lean": "94d94190ad37294bfa72bdc064ef4cc1913c1e87495be1161672b7a05e61cdb9",
+    "section 3/GammaMixedBinaryPartitionValues.lean": "af947a871c045fc3aed74a04367904f8c6bb2a8d63dc736d1ed6c017fff3bd68",
+    "section 3/GammaMixedContractionValues.lean": "8d94c069167f4ff5e79c6e19b62687de56e4c0dc56a50418cdc1f555b501cfd2",
+    "section 3/GammaMixedEmptyContractionValues.lean": "5d7dd6ab4df58fc2d28c9f4c3a41cb3e94c8d9884dbd6f120c5d80c7851d7909",
+    "section 3/GammaMixedEssentialContractionValues.lean": "b3e135329bc0ca641092591527dd5dcf37ae12735ad4c8f4476c3228949d15bf",
+    "section 3/GammaMixedFinitePartitionValues.lean": "87f8d150ab59254d221f2badef79c789a23361c25061ae2d938c2382f9b4ab1e",
+    "section 3/GammaMixedFullBijectionValues.lean": "e97ef12bd54cbcbd78df48239240d2bb64973109f4fbf2cb26312e3296e53006",
+    "section 3/GammaMixedGroundLiftValues.lean": "95970a91304bbcd8b81776461cd156cfd0fedf2d4e0b7953c49119a86b86baca",
+    "section 3/GammaMixedNativeLiftValues.lean": "7ba6208130def4c12115f00ebbb63c23a06237a9fcbe189c143d33440c3b257c",
     "section 3/GammaMixedProductJacobians.lean": "e7174d44a2c98fcdf63de30cda1ba525e8ff16c06b7339a5179df36e74f950f1",
     "section 3/GammaMixedRVFibres.lean": "b87900b124df2bfd4485af65822e49d27739236d9f911deaf15d76e69b8df29e",
     "section 3/GammaMixedRVLabelAttachments.lean": "50c9816ec51a5e9a10263d6f7b177fa3a7ef2643eb375edf236cf851e90d161e",
     "section 3/GammaMixedRetainedDensityNormalization.lean": "5f777b0bfc059533cc1e722469aefbf7a4760739945608066ac0da0a51abff2c",
-    "section 3/GammaMixedSmallContractionValues.lean": "3f04403658a9f76a42bae9f76c4a9050c2069a2a6ba073500492c8de9a2692ac",
+    "section 3/GammaMixedSmallContractionValues.lean": "4c7127714a483eb0e2118d3454c8847540b1e6eb0327be0141fd362c1df0bcf1",
     "section 3/GammaMixedVFComparison.lean": "ef6a2f0cec42aea7e7d02e5229768483746a354193615d3f618a91a0055c0cef",
     "section 3/GammaMonomialArity.lean": "3c707924851dee465c38c51bf8f4eae21f78933455b05587dc488bb09631df2e",
     "section 3/GammaMonomialHyperplaneImages.lean": "eebb8d90c3be5e50175ff2a0cb9e7de8d490b5e77c60991941189e66ab4b0cda",
-    "section 3/GammaMonotoneContractionDetector.lean": "7f9857bcd663a887bdbc87a7d4bbbbfe5bb4fd424a3f685508ddedeeb7eca900",
+    "section 3/GammaMonotoneContractionDetector.lean": "2f50a3f229b747c80d3c448cc21a8f09148b78048739458e0fc841e8f6d027dc",
     "section 3/GammaNativeAdditiveInvariants.lean": "a0a363ac8cd08d70fef95ca916bed89eb483ea3546c7603d17b29aa3302e4621",
     "section 3/GammaNativeAlmostEverywhereJacobians.lean": "df2333a931d3cc0474193c212b3b589b4a6d9c09f205e47a3296014e8f93e3c5",
     "section 3/GammaNativeChainComparison.lean": "56608034678c58ded5a117da71f9761750f87ebc234ea1dc1637a8638a1596b4",
@@ -921,7 +921,7 @@
     "section 3/GammaPartitions.lean": "c0201be0787dbd3d5db593261ef909f7cb14ff89078e8f37e351a8773f6e0d73",
     "section 3/GammaPieceSums.lean": "d96a1803bcbb8c51827e9314748cfcdff7d71eaa994f8cc57cd672f785064721",
     "section 3/GammaPointConeProductGeometry.lean": "82bd2beaa645326642698ae4be1c4d9fb12222f050b6ee44151f49e491aa29a1",
-    "section 3/GammaPositiveDegreeReverseKernel.lean": "e4f72abdac381388b1977b9b8cdb7b203c0b95bc14a08d988dd13d63373a7e51",
+    "section 3/GammaPositiveDegreeReverseKernel.lean": "6c0fdb8a7b87652eab1e4dd9abd73356df5309cdc42f3d43442cb67a1213a1c4",
     "section 3/GammaPositiveTailRawValues.lean": "90fed0377a1ae58b7244c46d5021b2e1d3fa0282f82c70293ee385b3509d4868",
     "section 3/GammaPreparedBaseJacobian.lean": "684375009d8934558e2cf0d64516f9a86599baf506ed0ca7377a5f4893cad343",
     "section 3/GammaPreparedFamilyComparisons.lean": "1ec979575ed1e4b400022b5bd6be59454eb565f8d979d16a00ba539c0d9c55a5",
@@ -1626,8 +1626,8 @@
     }
   },
   "manuscript_sha256": "5d006b61d936dc734e38afc9e4b13eded7aba602989a46c6a863ee89c067a259",
-  "audit_source_sha256": "ac80c1bf0faf0392750527f8d32d3b78f1eacc6af8d1d4e949b8743d94b6de01",
-  "audit_log_sha256": "371e33e5f3dd33b649bd21239bf92321ba6c4c287b28d2d6aa119ce617979029",
+  "audit_source_sha256": "a6efddf47efc1cb67d288ff0c3b18a2e70602fef6ea90d23eaf75a7b0cea597b",
+  "audit_log_sha256": "987fa46f8b3484f6cab9df4a8880a09620690628f19a51e2a8411afc6ee51b99",
   "public_theorems": [
     "DiamondIntegral.Section3.finite_parameters_countable_algclosed_subfield",
     "DiamondIntegral.Section3.acf_definable_countable_algclosed_coefficients",
@@ -3479,6 +3479,9 @@
     "DiamondIntegral.Section3.gammaContextMeasuredDegreeLift_zero_injective",
     "DiamondIntegral.Section3.gammaContextMeasuredDegreeLift_zero_kernel",
     "DiamondIntegral.Section3.gammaMixed_binary_partition_values",
+    "DiamondIntegral.Section3.gammaMixedCodeContext_real",
+    "DiamondIntegral.Section3.gammaMixedCodeContext_names",
+    "DiamondIntegral.Section3.gammaMixedCodeContext_gamma",
     "DiamondIntegral.Section3.gammaMixed_contraction_value_of_presentation",
     "DiamondIntegral.Section3.gammaMixed_relative_contraction_values",
     "DiamondIntegral.Section3.gammaMixed_unary_chain_contraction_values",
@@ -6950,6 +6953,7 @@
     "DiamondIntegral.Section3.gammaMeasuredRVDegreeZeroProjection",
     "DiamondIntegral.Section3.GammaMixedRetainedRepresentation",
     "DiamondIntegral.Section3.gammaMixedRetainedRepresentation",
+    "DiamondIntegral.Section3.gammaMixedCodeContext",
     "DiamondIntegral.Section3.gammaMixedContractionValue",
     "DiamondIntegral.Section3.gammaMixedPackBijection",
     "DiamondIntegral.Section3.gammaMixedProductMap",
@@ -17734,6 +17738,21 @@
       "propext"
     ],
     "DiamondIntegral.Section3.gammaMixed_binary_partition_values": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section3.gammaMixedCodeContext_real": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section3.gammaMixedCodeContext_names": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section3.gammaMixedCodeContext_gamma": [
       "Classical.choice",
       "Quot.sound",
       "propext"
@@ -34949,6 +34968,11 @@
       "propext"
     ],
     "DiamondIntegral.Section3.gammaMixedRetainedRepresentation": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section3.gammaMixedCodeContext": [
       "Classical.choice",
       "Quot.sound",
       "propext"

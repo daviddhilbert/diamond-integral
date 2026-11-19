@@ -22,26 +22,30 @@ variable {G : Type} [LinearOrderedCommGroupWithZero G] [Valued (Section2.VF M) G
 theorem gammaMixed_native_lift_value
     (C : BaseContext M) (hBC : B.real ⊆ (C.base : Set M))
     (hv : ∀ x y : Section2.VF M, VFValued.predV x y ↔ Valued.v x ≤ Valued.v y)
-    (hg : Cardinal.mk B.gamma < C.κ) (hNames : commonRealNames B ⊆ (C.base : Set M))
+    (hg : Cardinal.mk B.gamma < C.κ)
     (hGenerated : VFGammaGeneratedBase B)
     (δ : Values.Gamma (M := M)) (hδ : δ ∈ B.gamma) (hδ1 : 1 < δ)
     (U : GammaObjectAt B Set.univ (n+1))
     (ω : GammaGroundVolumeForm hc B (Section5.nativeRVGroundDomain U)) :
-    gammaMixedContractionValue C hBC hv hNames hGenerated (gammaNativeMeasuredLift U ω) =
+    gammaMixedContractionValue C hBC hv hg hGenerated (gammaNativeMeasuredLift U ω) =
       gammaMeasuredPrincipalValue (gammaNativeMeasuredNormalization U ω) := by
-  let hr := (Cardinal.mk_le_mk_of_subset hBC).trans_lt C.small
+  let C' := gammaMixedCodeContext C hBC hg
+  have hBC' := gammaMixedCodeContext_real C hBC hg
+  have hNames' := gammaMixedCodeContext_names C hBC hg
+  have hg' := gammaMixedCodeContext_gamma C hBC hg
+  let hr := (Cardinal.mk_le_mk_of_subset hBC').trans_lt C'.small
   let P := gammaRetainedNativeLiftData U ω
   let E : GammaFullMeasuredBijection (gammaNativeMeasuredLift U ω) P.toMeasured :=
-    gammaFullMeasuredFixedVF C.uncountable.le C.saturated hr hv
+    gammaFullMeasuredFixedVF C'.uncountable.le C'.saturated hr hv
       (GammaGroundBijection.ofCarrierEq rfl) (fun _ => rfl) (fun _ => rfl)
-  have hP := gammaMixed_contraction_value_of_presentation C hBC hv hNames hGenerated hg δ hδ hδ1
+  have hP := gammaMixed_contraction_value_of_presentation C hBC hv hg hGenerated δ hδ hδ1
     (gammaNativeMeasuredLift U ω) P E (fun _ => rfl)
-  let A := P.nativeSet C hNames
+  let A := P.nativeSet C' hNames'
   have hPull : IsRVPullback (carrier A) := gammaNativeLift_isRVPullback (hc := hc) U
   let hAF := pullbackObject_finiteVolume A hPull P.finite
-  obtain ⟨T,hT,hVal⟩ := gammaCanonical_pullback_measured_value_exists C hBC A P.point_definable hAF
+  obtain ⟨T,hT,hVal⟩ := gammaCanonical_pullback_measured_value_exists C' hBC' A P.point_definable hAF
     ω.extendByOne P.finite hPull
-  exact hP.trans ((P.contractionValue_eq C hBC hNames hGenerated hv hg δ hδ hδ1 T hT).trans
-    (hVal.trans (gammaNativeLift_full_key_value C hBC hNames U ω hAF)))
+  exact hP.trans ((P.contractionValue_eq C' hBC' hNames' hGenerated hv hg' δ hδ hδ1 T hT).trans
+    (hVal.trans (gammaNativeLift_full_key_value C' hBC' hNames' U ω hAF)))
 
 end DiamondIntegral.Section3

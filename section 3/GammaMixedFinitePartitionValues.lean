@@ -25,7 +25,7 @@ variable {G : Type} [LinearOrderedCommGroupWithZero G] [Valued (Section2.VF M) G
 theorem gammaMixed_finite_partition_values
     (C : BaseContext M) (hBC : B.real ⊆ (C.base : Set M))
     (hv : ∀ x y : Section2.VF M, VFValued.predV x y ↔ Valued.v x ≤ Valued.v y)
-    (hg : Cardinal.mk B.gamma < C.κ) (hNames : commonRealNames B ⊆ (C.base : Set M))
+    (hg : Cardinal.mk B.gamma < C.κ)
     (hGenerated : VFGammaGeneratedBase B)
     (δ : Values.Gamma (M := M)) (hδ : δ ∈ B.gamma) (hδ1 : 1 < δ)
     {ι : Type} [DecidableEq ι] (I : Finset ι) :
@@ -34,13 +34,13 @@ theorem gammaMixed_finite_partition_values
       (hP : ∀ i, (P i).carrier ⊆ U.domain.carrier)
       (hDisj : ∀ i ∈ I, ∀ j ∈ I, i ≠ j → Disjoint (P i).carrier (P j).carrier)
       (hCover : ∀ p : U.domain, ∃ i ∈ I, p.val ∈ (P i).carrier),
-    gammaMixedContractionValue C hBC hv hNames hGenerated U =
-      ∑ i ∈ I, gammaMixedContractionValue C hBC hv hNames hGenerated (U.restrict (P i) (hP i)) := by
+    gammaMixedContractionValue C hBC hv hg hGenerated U =
+      ∑ i ∈ I, gammaMixedContractionValue C hBC hv hg hGenerated (U.restrict (P i) (hP i)) := by
   induction I using Finset.induction_on with
   | empty =>
     intro U P hP hDisj hCover
     rw [Finset.sum_empty]
-    apply gammaMixed_empty_contraction_value C hBC hv hNames hGenerated U
+    apply gammaMixed_empty_contraction_value C hBC hv hg hGenerated U
     apply Set.eq_empty_iff_forall_notMem.mpr
     intro x hx
     obtain ⟨i,hi,_⟩ := hCover ⟨x,hx⟩
@@ -69,17 +69,17 @@ theorem gammaMixed_finite_partition_values
       have hji : j ≠ i := by intro he; subst j; exact p.property.2 hp
       exact ⟨j,(Finset.mem_insert.mp hj).resolve_left hji,⟨hp,p.property⟩⟩
     have hRest := ih V Q hQ hQDisj hQCover
-    have hSum : (∑ j ∈ I, gammaMixedContractionValue C hBC hv hNames hGenerated (V.restrict (Q j) (hQ j))) =
-        ∑ j ∈ I, gammaMixedContractionValue C hBC hv hNames hGenerated (U.restrict (P j) (hP j)) := by
+    have hSum : (∑ j ∈ I, gammaMixedContractionValue C hBC hv hg hGenerated (V.restrict (Q j) (hQ j))) =
+        ∑ j ∈ I, gammaMixedContractionValue C hBC hv hg hGenerated (U.restrict (P j) (hP j)) := by
       apply Finset.sum_congr rfl
       intro j hj
-      apply congrArg (gammaMixedContractionValue C hBC hv hNames hGenerated)
+      apply congrArg (gammaMixedContractionValue C hBC hv hg hGenerated)
       apply gammaMeasuredVFRestriction_trans_eq U D hD (Q j) (hQ j) (P j) (hP j)
       ext x
       exact ⟨fun h => h.1,fun h => ⟨h,hSubset j hj h⟩⟩
     rw [Finset.sum_insert hi]
-    have hBinary := gammaMixed_binary_partition_values C hBC hv hg hNames hGenerated δ hδ hδ1 U (P i) (hP i)
-    exact hBinary.trans (congrArg (fun z => gammaMixedContractionValue C hBC hv hNames hGenerated
+    have hBinary := gammaMixed_binary_partition_values C hBC hv hg hGenerated δ hδ hδ1 U (P i) (hP i)
+    exact hBinary.trans (congrArg (fun z => gammaMixedContractionValue C hBC hv hg hGenerated
       (U.restrict (P i) (hP i)) + z) (hRest.trans hSum))
 
 end DiamondIntegral.Section3

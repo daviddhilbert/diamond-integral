@@ -1,7 +1,3 @@
-warning: integration_in_acvf: repository has local changes:
-  /workspace/diamond-integral/.lake/packages/integration_in_acvf
-warning: special_transformations: repository has local changes:
-  /workspace/diamond-integral/.lake/packages/special_transformations
 theorem DiamondIntegral.Section3.integrationAtomicGammaBaseChangeInput_complete : ∀ {M : Type}
   [sM : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF],
   M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF00 →
