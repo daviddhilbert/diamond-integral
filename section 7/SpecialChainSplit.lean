@@ -120,6 +120,100 @@ def resIso : MeasuredRVIso ((regC g).restrict (regC (goodRes g J)).object.domain
   rw [contractedForm_at, contractedForm_at, regForm_apply, regForm_apply]
   rfl
 
+/-- The complementary labels. -/
+abbrev compl : DefSet (rawRVSpace (M := M) r) (T : Set M) := (DefSet.univ (rawRVSpace (M := M) r) (T : Set M)).sdiff J
+
+theorem compl_sub : (restrictCompl (regC g) (regC (goodRes g J)).object.domain).object.domain.carrier ⊆
+    (regC (goodRes g (compl J))).object.domain.carrier := by
+  rintro L ⟨hL, hnot⟩
+  obtain ⟨q, hq⟩ := pureRVTagQuotient_surjective _ (⟨L, hL⟩ : pureRVTagDomain (regularizeMap X).image)
+  obtain ⟨x, hx⟩ := (regularization_bijective X).2 q
+  have hLx : L = (regularize x.val).2 := by
+    have h1 : q.val.2 = L := congrArg Subtype.val hq
+    rw [← h1, ← hx]
+    rfl
+  have hxJ : x.val.2 ∉ J.carrier := by
+    intro hJ
+    apply hnot
+    rw [hLx]
+    exact (pureRVTagQuotient _ (regularization (focusActive X J) ⟨x.val, x.property, hJ⟩)).property
+  rw [hLx]
+  exact (pureRVTagQuotient _ (regularization (focusActive X (compl J)) ⟨x.val, x.property, ⟨Set.mem_univ _, hxJ⟩⟩)).property
+
+/-- The complementary restriction of the contraction. -/
+def cresIso : MeasuredRVIso (restrictCompl (regC g) (regC (goodRes g J)).object.domain)
+    (regC (goodRes g (compl J))) := by
+  let F := Map.inclusion (compl_sub g J)
+  have hF : Function.Bijective F := by
+    refine ⟨fun a b he => Subtype.ext (congrArg (fun z : (regC (goodRes g (compl J))).object.domain => z.val) he),
+      fun b => ⟨⟨b.val, ?_, ?_⟩, rfl⟩⟩
+    · obtain ⟨q, hq⟩ := pureRVTagQuotient_surjective _ b
+      have hq' : q.val ∈ (regularizeMap X).image.carrier := ((mem_reg_res (compl J)).mp q.property).1
+      rw [← congrArg Subtype.val hq]
+      exact (pureRVTagQuotient (regularizeMap X).image ⟨q.val, hq'⟩).property
+    · intro hJ
+      obtain ⟨q, hq⟩ := pureRVTagQuotient_surjective _ b
+      obtain ⟨q2, hq2⟩ := pureRVTagQuotient_surjective _ (⟨b.val, hJ⟩ : pureRVTagDomain (regularizeMap (focusActive X J)).image)
+      have h1 := ((mem_reg_res (compl J)).mp q.property).2
+      have h2 := ((mem_reg_res J).mp q2.property).2
+      have he : q.val.2 = q2.val.2 := (congrArg Subtype.val hq).trans (congrArg Subtype.val hq2).symm
+      rw [he] at h1
+      exact h1.2 h2
+  refine ⟨rvIsoOfFiniteFibres F hF (restrictCompl (regC g) _).finiteVolume (regC (goodRes g (compl J))).finiteVolume
+    (restrictCompl (regC g) _).nonzero (regC (goodRes g (compl J))).nonzero, fun a => ?_⟩
+  rw [rvIsoOfFiniteFibres_map]
+  obtain ⟨q, hq⟩ := pureRVTagQuotient_surjective _ (F a)
+  obtain ⟨p, rfl⟩ := (regularization_bijective _).2 q
+  let p' : X := ⟨p.val, p.property.1⟩
+  have hqa : pureRVTagQuotient (regularizeMap X).image (regularization X p') = ⟨a.val, a.property.1⟩ := by
+    apply Subtype.ext
+    have h := congrArg Subtype.val hq
+    exact h
+  unfold MeasuredRVObject.totalWeight
+  have hv : (restrictCompl (regC g) _).object.value a = (regC (goodRes g (compl J))).object.value (F a) := by
+    change (regC g).object.value ⟨a.val, a.property.1⟩ = (regC (goodRes g (compl J))).object.value (F a)
+    rw [← hqa, ← hq]
+    change (preparedRVObject _ (regularize_tagged X)).value _ = (preparedRVObject _ (regularize_tagged _)).value _
+    rw [preparedRVObject_value, preparedRVObject_value]
+    rfl
+  rw [volumeGamma_congr hv]
+  congr 1
+  change gammaMapValue (regC g).form ⟨a.val, a.property.1⟩ = gammaMapValue (regC (goodRes g (compl J))).form (F a)
+  rw [← hqa, ← hq]
+  change ((contractedForm _ (regForm g) (regForm_labels g)) _).val =
+    ((contractedForm _ (regForm (goodRes g (compl J))) (regForm_labels _)) _).val
+  rw [contractedForm_at, contractedForm_at, regForm_apply, regForm_apply]
+  rfl
+
+/-- Splitting a chain set along a definable set of labels splits its class. -/
+theorem clsG_split : clsG hc g = clsG hc (goodRes g J) + clsG hc (goodRes g (compl J)) := by
+  let K : Set (Fin (n + r) → M) := rvValues '' (regC (goodRes g J)).object.domain.carrier
+  have hK : SpecialTransformations.Section3.GammaParameters.DefinableOverBase
+      (⟨(T : Set M), ∅⟩ : GammaParameters.Base (M := M)) (fun _ : Fin (n + r) => .rv) K := by
+    refine real_base hc ?_ ?_
+    · have h : (T : Set M).Definable LRV ((rawRVSpace (M := M) (n + r)).preimage
+          (regC (goodRes g J)).object.domain.carrier) := (regC (goodRes g J)).object.domain.definable
+      rw [rv_preimage] at h
+      exact h
+    · rintro _ ⟨t, _, rfl⟩ i
+      exact (t i).property
+  have hmem : ∀ a ∈ (regC g).object.domain.carrier, a ∈ (regC (goodRes g J)).object.domain.carrier ↔ rvValues a ∈ K := by
+    intro a _
+    constructor
+    · intro h
+      exact ⟨a, h, rfl⟩
+    · rintro ⟨b, hb, he⟩
+      rw [← rvValues_injective he]
+      exact hb
+  unfold clsG
+  rw [cls_partition (objOf hc T (regC g) (regC_db g)) K hK]
+  congr 1
+  · apply (cls_eq_iff_measured hc).mpr
+    exact ⟨(pieceIso hc (regC g) K hK _ (labels_res_sub g J) hmem).comp
+      ((resIso g J).comp (measuredIso_chartOf hc _).symm)⟩
+  · apply (cls_eq_iff_measured hc).mpr
+    exact ⟨(cpieceIso hc (regC g) K hK _ hmem).comp ((cresIso g J).comp (measuredIso_chartOf hc _).symm)⟩
+
 end ClassSplit
 
 end DiamondIntegral.Section7.SpecialChainSplit
