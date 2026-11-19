@@ -716,3 +716,46 @@ theorem DiamondIntegral.Section4.Section3LinkedRetractionStatements.proposition_
 'DiamondIntegral.Section4.Section3LinkedRetractionStatements.proposition_4_15' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
+theorem DiamondIntegral.Section4.Section3GammaAffineDischarge.input : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base),
+  DiamondIntegral.Section4.Section3GammaAffineInput.Input B :=
+⋯
+'DiamondIntegral.Section4.Section3GammaAffineDischarge.input' depends on axioms: [propext, Classical.choice, Quot.sound]
+theorem DiamondIntegral.Section4.GammaContinuousDecomposition.exists_decomposition_discharged : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF],
+  M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF00 →
+    ∀ {κ : Cardinal.{0}},
+      Cardinal.aleph0 ≤ κ →
+        SpecialTransformations.Section3.Saturated M κ →
+          ∀ (B : SpecialTransformations.Section3.GammaParameters.Base),
+            Cardinal.mk ↑B.real < κ →
+              Cardinal.mk ↑B.gamma < κ →
+                ∀ (n : ℕ) (X : Set (Fin n → SpecialTransformations.Section3.Values.Gamma)),
+                  DiamondIntegral.Section4.GammaOrderLogic.GammaDefinable B X →
+                    Nonempty (DiamondIntegral.Section4.GammaContinuousCells.Decomposition B n X) :=
+⋯
+'DiamondIntegral.Section4.GammaContinuousDecomposition.exists_decomposition_discharged' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+theorem DiamondIntegral.Section4.GammaContinuousDecomposition.euler_characteristic_discharged : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  (h00 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF00) {κ : Cardinal.{0}} (hκ : Cardinal.aleph0 ≤ κ)
+  (hs : SpecialTransformations.Section3.Saturated M κ) (B : SpecialTransformations.Section3.GammaParameters.Base)
+  (hr : Cardinal.mk ↑B.real < κ) (hγ : Cardinal.mk ↑B.gamma < κ) (n : ℕ)
+  (X : Set (Fin n → SpecialTransformations.Section3.Values.Gamma))
+  (hX : DiamondIntegral.Section4.GammaOrderLogic.GammaDefinable B X),
+  ∃ D,
+    (DiamondIntegral.Section4.GammaIteratedIntegral.integrateAll h00 hκ hs B hr hγ
+            DiamondIntegral.Section4.EulerKind.geometric n)
+          (DiamondIntegral.Section4.GammaIndicators.indicatorFamily B X hX) =
+        ∑ i, (-1) ^ D.dimension i ∧
+      ∀ (E : DiamondIntegral.Section4.GammaContinuousCells.Decomposition B n X),
+        ∑ j, (-1) ^ E.dimension j = ∑ i, (-1) ^ D.dimension i :=
+⋯
+'DiamondIntegral.Section4.GammaContinuousDecomposition.euler_characteristic_discharged' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -161,8 +161,10 @@ cell-decomposition or localization conclusion as an input.
 Both ordinary and measured tensor presentation interfaces are now
 constructed from finalized Section 3 proofs in
 `section 4/Section3T001Integration.lean`. The linked retraction propositions
-have no T001 input. General rational-affine Gamma QE background and the
-already accepted external citations retain their documented scope. See
+have no T001 input. Both the unary and the multivariate rational-affine Gamma
+normal forms are now proved (`Section5.GammaQE.gamma_piecewise_rational_affine`,
+`Section4.Section3GammaAffineDischarge.input`); the already accepted external
+citations retain their documented scope. See
 [the project dependency audit](DEPENDENCY-AUDIT.md).
 
 ## Section 5 adapter retirement — November 16, 2026

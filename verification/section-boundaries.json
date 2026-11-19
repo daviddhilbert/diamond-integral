@@ -41,12 +41,17 @@
     "manuscript_change_required": false,
     "complete_relative_to_accepted_inputs": true,
     "categorical_to_chart_transport": "PASS: fully instantiated by Section3T001Integration; linked numbered retractions take no T001 input",
-    "retained_interfaces": [
-      "Section3GammaAffineInput.Input"
-    ],
+    "retained_interfaces": [],
     "linked_retraction_declarations": [
       "DiamondIntegral.Section4.Section3LinkedRetractionStatements.proposition_4_7",
       "DiamondIntegral.Section4.Section3LinkedRetractionStatements.proposition_4_15"
+    ],
+    "discharged_interfaces": {
+      "Section3GammaAffineInput.Input": "DiamondIntegral.Section4.Section3GammaAffineDischarge.input"
+    },
+    "remark_4_2_discharged": [
+      "DiamondIntegral.Section4.GammaContinuousDecomposition.exists_decomposition_discharged",
+      "DiamondIntegral.Section4.GammaContinuousDecomposition.euler_characteristic_discharged"
     ]
   },
   "section1": "Introductory; no local Lean section library",
@@ -58,7 +63,7 @@
   },
   "focused_type_audit": {
     "status": "PASS",
-    "declarations": 32,
+    "declarations": 35,
     "logical_axioms": [
       "Classical.choice",
       "Quot.sound",
@@ -224,6 +229,21 @@
         "Classical.choice",
         "Quot.sound",
         "propext"
+      ],
+      "DiamondIntegral.Section4.Section3GammaAffineDischarge.input": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "DiamondIntegral.Section4.GammaContinuousDecomposition.exists_decomposition_discharged": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "DiamondIntegral.Section4.GammaContinuousDecomposition.euler_characteristic_discharged": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
       ]
     },
     "source": "verification/SectionBoundaryAudit.lean",
@@ -243,12 +263,12 @@
   "new_mathematical_assumptions": false,
   "manuscript_changed_by_this_audit": false,
   "sources": {
-    "verification/SectionBoundaryAudit.lean": "adca14b9ef8cde66ed4f3b08ca384b1fca588f782d8d9385d17e9a5ce3a20f0f",
-    "verification/section-boundary-types.txt": "c1c7778dc9d8c2f6d0e1321f5321d262d30e6e004fc771b8dc33fc015610d4d3",
+    "verification/SectionBoundaryAudit.lean": "63216f81fc74d161f2b0e6edd67965299d1526eb2d0c32e379c0374f6d071611",
+    "verification/section-boundary-types.txt": "249a326372cc7525c25ce8221ea9011f3c9d298e6544268e96971766cd465469",
     "section 2/verification/UPSTREAM-LINKS.json": "0f31e20f474e062988516df4a208e34f50a49a15865a86626f7afe29396e4331",
     "section 3/verification/integration-reuse.json": "fa4940a30a2e1caec041f057f89b83dce1bc58533c7e15f093c34c77d65f3e1a",
     "section 3/reuse/integration-manifest.json": "553ae7364a499730316bc871c7f25e5864f9c8639bb91fe952aa3a34a2986a55",
-    "ACCEPTED-CITED-RESULTS.md": "72b95c8cb0c8fa07560eb1ad688fcc507e1f1036c9911b9b7b3c40e2b71f8790",
+    "ACCEPTED-CITED-RESULTS.md": "2a6f42ef5f82e18d502ec9bb71d626675f5e24eae45d44291d75b23d9ee906c9",
     "verification/audit-section-boundaries.py": "61953ba95e1b4c09f691465ff41e68f521ee0aef795d32c3962657609c3d5a6f"
   },
   "publication_authorization": "Author requested commit and push after the completed section and dependency audits."

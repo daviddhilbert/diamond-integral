@@ -1552,10 +1552,10 @@
     "section 3/verification/cited-inputs.json": "04171ab986abc3104e870c8a36b7d7acb40af55250d5c2a3d4f87d9de3497c6f",
     "section 3/verification/paper-targets.json": "3a894f052ef26ce41f66be9d7cf5b7f6134b82b8c9380b1401f4ebba78f82e11",
     "DiamondIntegral.lean": "66d02be99d3e377f670ad569f36274aed59d735366ebb4b157993bdb166b553e",
-    "lakefile.toml": "8a5e89e6ba72a5969545bf15fefa9e41230630229fae3a1f113719bca1807bb6",
+    "lakefile.toml": "1f1d844e66e46c4860b16a98649eb12cba81d8cb6f0bc848929bd696f3ce18ee",
     "lake-manifest.json": "aa8e81a44b1dc85acfcad8727c04ca3be1ebd13a0a12304968bdbfbe9755f24a",
     "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
-    "ACCEPTED-CITED-RESULTS.md": "72b95c8cb0c8fa07560eb1ad688fcc507e1f1036c9911b9b7b3c40e2b71f8790"
+    "ACCEPTED-CITED-RESULTS.md": "2a6f42ef5f82e18d502ec9bb71d626675f5e24eae45d44291d75b23d9ee906c9"
   },
   "integration_compatibility_patch": {
     "base_revision": "ab4c0e8b15e1e21b0b4fce57eed764be76020e06",
