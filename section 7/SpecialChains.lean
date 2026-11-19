@@ -198,4 +198,86 @@ theorem zc_point (hD : VFDoublyBounded X.carrier) {p : Mixed M n r} (hp : p ∈ 
 
 end ZeroCentered
 
+/-! ### The invariant of a special covariant chain and its class -/
+
+section Classes
+open DiamondIntegral.Section7.BoundedClasses DiamondIntegral.Section7.LiftClasses
+open DiamondIntegral.Section7.IsoOfMeasured
+variable (hc : CanonicalStructure.IsCanonical (M := M)) (T : LRV.Substructure M)
+
+/-- The invariant of the sets in a special covariant chain starting at a lift:
+an RV pullback with finite RV fibres, doubly bounded, with a form constant on
+label fibres. -/
+structure Good (X : DefSet (rawMixedSpace (M := M) n r) (T : Set M)) where
+  pullback : IsRVPullback X.carrier
+  finite : ∀ a : Fin n → VF M, {u : Fin r → RVInfinity M | (a, u) ∈ X.carrier}.Finite
+  vfBounded : VFDoublyBounded X.carrier
+  rvBounded : RVSupportDoublyBounded X.carrier
+  form : Map X (DefSet.univ (rawGammaPresentation (M := M)) (T : Set M))
+  form_labels : ∀ p q : X, p.val.2 = q.val.2 → form p = form q
+
+variable {T} {X : DefSet (rawMixedSpace (M := M) n r) (T : Set M)}
+
+/-- The form on the regularization. -/
+def regForm (g : Good T X) : Map (regularizeMap X).image (DefSet.univ (rawGammaPresentation (M := M)) (T : Set M)) :=
+  g.form.comp ((regularization X).inverse (regularization_bijective X))
+
+theorem regForm_apply (g : Good T X) (p : X) : regForm g (regularization X p) = g.form p := by
+  change g.form ((regularization X).inverse _ (regularization X p)) = _
+  rw [Map.inverse_apply]
+
+theorem regForm_labels (g : Good T X) (p q : (regularizeMap X).image) (he : p.val.2 = q.val.2) :
+    regForm g p = regForm g q := by
+  obtain ⟨a, rfl⟩ := (regularization_bijective X).2 p
+  obtain ⟨b, rfl⟩ := (regularization_bijective X).2 q
+  rw [regForm_apply, regForm_apply]
+  exact g.form_labels a b (regularize_snd_eq.mp he).2
+
+theorem reg_rvBounded (g : Good T X) : RVSupportDoublyBounded (regularizeMap X).image.carrier := by
+  obtain ⟨γ, hγ⟩ := g.vfBounded
+  obtain ⟨δ, hδ⟩ := g.rvBounded
+  have h1 : ((max γ δ)⁻¹).val ≤ (γ⁻¹).val := show (max γ δ)⁻¹ ≤ γ⁻¹ from inv_le_inv' (le_max_left _ _)
+  have h2 : ((max γ δ)⁻¹).val ≤ (δ⁻¹).val := show (max γ δ)⁻¹ ≤ δ⁻¹ from inv_le_inv' (le_max_right _ _)
+  have h3 : γ.val ≤ (max γ δ).val := show γ ≤ max γ δ from le_max_left _ _
+  have h4 : δ.val ≤ (max γ δ).val := show δ ≤ max γ δ from le_max_right _ _
+  refine ⟨max γ δ, fun p hp i => ?_⟩
+  obtain ⟨q, hq, rfl⟩ := (mem_regularize X).mp hp
+  refine Fin.addCases (fun i => ?_) (fun i => ?_) i
+  · rw [regularize_snd_left]
+    obtain ⟨hl, hu⟩ := hγ q hq i
+    exact ⟨h1.trans hl, hu.trans h3⟩
+  · rw [regularize_snd_right]
+    obtain ⟨hl, hu⟩ := hδ q hq i
+    exact ⟨h2.trans hl, hu.trans h4⟩
+
+/-- The contraction of the regularization. -/
+def regC (g : Good T X) : MeasuredRVObject (M := M) (T : Set M) n :=
+  contractedMeasuredRVObject (regularizeMap X).image (regularize_tagged X) (regularize_pullback X g.pullback)
+    (regularize_finite X g.finite) (regularize_vfDoublyBounded X g.vfBounded) (regForm g) (regForm_labels g)
+
+theorem regC_db (g : Good T X) : (regC g).doublyBounded :=
+  contractedMeasuredRVObject_doublyBounded _ _ _ _ _ (reg_rvBounded g) _ _
+
+/-- The Section 7 class of a set of a chain. -/
+def clsG (g : Good T X) : Cls (BT T) n := cls (objOf hc T (regC g) (regC_db g))
+
+theorem cls_objOf_eq {U V : MeasuredRVObject (M := M) (T : Set M) n} (hU : U.doublyBounded) (hV : V.doublyBounded)
+    (e : MeasuredRVIso U V) : cls (objOf hc T U hU) = cls (objOf hc T V hV) :=
+  (cls_eq_iff_measured hc).mpr ⟨((measuredIso_chartOf hc U).comp e).comp (measuredIso_chartOf hc V).symm⟩
+
+/-- The regularization of a set of a chain. -/
+def regGood (g : Good T X) : Good T (regularizeMap X).image :=
+  ⟨regularize_pullback X g.pullback, regularize_finite X g.finite, regularize_vfDoublyBounded X g.vfBounded,
+    reg_rvBounded g, regForm g, regForm_labels g⟩
+
+/-- Regularization does not change the class. -/
+theorem clsG_reg (g : Good T X) : clsG hc (regGood g) = clsG hc g := by
+  symm
+  apply cls_objOf_eq hc
+  exact contractionIso _ _ _ _ _ _ _ _ _ _ _ _ (regularization (regularizeMap X).image)
+    (regularization_bijective _) (regularization_matching _ (regularize_tagged X)) (fun _ => rfl)
+    (fun p => regForm_apply (regGood g) p)
+
+end Classes
+
 end DiamondIntegral.Section7.SpecialChains
