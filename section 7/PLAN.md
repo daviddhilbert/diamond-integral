@@ -319,6 +319,28 @@ intended Lean statement; ⚑ marks a flag that is also listed in §5.
   it is reused. Otherwise the plan needs a uniform-family lemma: pointwise
   S⟨a⟩-definable witnesses give one S-definable row, by saturation.
 
+- **Formal statement (draft, 2026-11-19; needed under either option of the
+  scope question).**
+  - Objects: `A' : DefSet (rawMixedSpace n r') T` and `A''` (over r''), with
+    Γ-forms ω', ω'' and head-start labels π' : Fin k → Fin r', π''. Fibres
+    over (a, u ∘ π) are finite (as for Section 6's `headStartMeasuredObject`).
+    They are not μVF^◇ objects (the RV fibres are infinite); their head-start
+    bundles are.
+  - Fibre classes: for a ∈ VFⁿ, the RV fibre {u | (a, u) ∈ A'} with volume
+    u ↦ u ∘ π' and form ω'(a, ·) is a doubly bounded measured RV object over
+    `adjoin T a` (`KernelBaseChange.adjoin`), with class in
+    Cls (BT (adjoin T a)) k.
+  - Hypothesis: the same VF projection, and for every a in it, the fibre
+    classes are μIsp^db-related (equal when k = 0).
+  - Conclusion: for standard contractions F', F'' (Section 6
+    `NormalizedMeasuredContraction`, same order),
+    ([F'.headStartMeasuredObject k π'], [F''.headStartMeasuredObject k π'']) ∈
+    μIsp^db[n + k] over T.
+  - Supporting pieces already in place: `adjoin` and its support data,
+    `BaseExtension` (from `adjoin T b` to `adjoin T a` when b is a term in
+    T, a), Section 6's parameter templates and promotion
+    (`MixedSetParameterTemplate`, `exists_promoted_mixed_set_template`).
+
 ### 7.15 Corollary `contraction:same:perm:isp`
 - **Route.**
   - Take the common base pr_{~i}. The bad set E (non-differentiability and

@@ -1,3 +1,602 @@
+@DiamondIntegral.Section7.BaseExtension.chartExt : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B C : SpecialTransformations.Section3.GammaParameters.Base} →
+        B.real ⊆ C.real →
+          B.gamma ⊆ C.gamma →
+            {k : ℕ} →
+              DiamondIntegral.Section4.RVMeasuredCharts.Chart B k → DiamondIntegral.Section4.RVMeasuredCharts.Chart C k
+def DiamondIntegral.Section7.BaseExtension.chartExt : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B C : SpecialTransformations.Section3.GammaParameters.Base} →
+        B.real ⊆ C.real →
+          B.gamma ⊆ C.gamma →
+            {k : ℕ} →
+              DiamondIntegral.Section4.RVMeasuredCharts.Chart B k →
+                DiamondIntegral.Section4.RVMeasuredCharts.Chart C k :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {B C} hr
+    hg {k} a =>
+  { arity := a.arity, domain := a.domain, domain_definable := ⋯, coordinate := a.coordinate, coordinate_definable := ⋯,
+    coordinate_proper := ⋯, finite_fibres := ⋯, volume := a.volume, volume_definable := ⋯ }
+'DiamondIntegral.Section7.BaseExtension.chartExt' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.BaseExtension.isoExt : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B C : SpecialTransformations.Section3.GammaParameters.Base} →
+        (hr : B.real ⊆ C.real) →
+          (hg : B.gamma ⊆ C.gamma) →
+            {k : ℕ} →
+              {a b : DiamondIntegral.Section4.RVMeasuredCharts.Chart B k} →
+                DiamondIntegral.Section4.RVMeasuredCharts.Iso a b →
+                  DiamondIntegral.Section4.RVMeasuredCharts.Iso
+                    (DiamondIntegral.Section7.BaseExtension.chartExt hr hg a)
+                    (DiamondIntegral.Section7.BaseExtension.chartExt hr hg b)
+def DiamondIntegral.Section7.BaseExtension.isoExt : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B C : SpecialTransformations.Section3.GammaParameters.Base} →
+        (hr : B.real ⊆ C.real) →
+          (hg : B.gamma ⊆ C.gamma) →
+            {k : ℕ} →
+              {a b : DiamondIntegral.Section4.RVMeasuredCharts.Chart B k} →
+                DiamondIntegral.Section4.RVMeasuredCharts.Iso a b →
+                  DiamondIntegral.Section4.RVMeasuredCharts.Iso
+                    (DiamondIntegral.Section7.BaseExtension.chartExt hr hg a)
+                    (DiamondIntegral.Section7.BaseExtension.chartExt hr hg b) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {B C} hr
+    hg {k} {a b} F =>
+  { equiv := F.equiv, graph_definable := ⋯, weight_eq := ⋯ }
+'DiamondIntegral.Section7.BaseExtension.isoExt' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.BaseExtension.objExt : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B C : SpecialTransformations.Section3.GammaParameters.Base} →
+        B.real ⊆ C.real →
+          B.gamma ⊆ C.gamma →
+            {k : ℕ} → DiamondIntegral.Section7.BoundedClasses.Obj B k → DiamondIntegral.Section7.BoundedClasses.Obj C k
+def DiamondIntegral.Section7.BaseExtension.objExt : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B C : SpecialTransformations.Section3.GammaParameters.Base} →
+        B.real ⊆ C.real →
+          B.gamma ⊆ C.gamma →
+            {k : ℕ} →
+              DiamondIntegral.Section7.BoundedClasses.Obj B k → DiamondIntegral.Section7.BoundedClasses.Obj C k :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {B C} hr
+    hg {k} a =>
+  { toChart := DiamondIntegral.Section7.BaseExtension.chartExt hr hg a.toChart, domain_bounded := ⋯ }
+'DiamondIntegral.Section7.BaseExtension.objExt' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.BaseExtension.clsExtFun : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B C : SpecialTransformations.Section3.GammaParameters.Base} →
+        B.real ⊆ C.real →
+          B.gamma ⊆ C.gamma →
+            {k : ℕ} → DiamondIntegral.Section7.BoundedClasses.Cls B k → DiamondIntegral.Section7.BoundedClasses.Cls C k
+def DiamondIntegral.Section7.BaseExtension.clsExtFun : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B C : SpecialTransformations.Section3.GammaParameters.Base} →
+        B.real ⊆ C.real →
+          B.gamma ⊆ C.gamma →
+            {k : ℕ} →
+              DiamondIntegral.Section7.BoundedClasses.Cls B k → DiamondIntegral.Section7.BoundedClasses.Cls C k :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {B C} hr
+    hg {k} =>
+  Quotient.map (DiamondIntegral.Section7.BaseExtension.objExt hr hg) ⋯
+'DiamondIntegral.Section7.BaseExtension.clsExtFun' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.BaseExtension.clsExtFun_cls : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B C : SpecialTransformations.Section3.GammaParameters.Base} (hr : B.real ⊆ C.real) (hg : B.gamma ⊆ C.gamma) {k : ℕ}
+  (a : DiamondIntegral.Section7.BoundedClasses.Obj B k),
+  DiamondIntegral.Section7.BaseExtension.clsExtFun hr hg (DiamondIntegral.Section7.BoundedClasses.cls a) =
+    DiamondIntegral.Section7.BoundedClasses.cls (DiamondIntegral.Section7.BaseExtension.objExt hr hg a)
+@[defeq] theorem DiamondIntegral.Section7.BaseExtension.clsExtFun_cls : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B C : SpecialTransformations.Section3.GammaParameters.Base} (hr : B.real ⊆ C.real) (hg : B.gamma ⊆ C.gamma) {k : ℕ}
+  (a : DiamondIntegral.Section7.BoundedClasses.Obj B k),
+  DiamondIntegral.Section7.BaseExtension.clsExtFun hr hg (DiamondIntegral.Section7.BoundedClasses.cls a) =
+    DiamondIntegral.Section7.BoundedClasses.cls (DiamondIntegral.Section7.BaseExtension.objExt hr hg a) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {B C} hr
+    hg {k} a =>
+  rfl
+'DiamondIntegral.Section7.BaseExtension.clsExtFun_cls' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.BaseExtension.dataExt : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B C : SpecialTransformations.Section3.GammaParameters.Base} →
+        B.real ⊆ C.real →
+          B.gamma ⊆ C.gamma →
+            {k n : ℕ} →
+              DiamondIntegral.Section4.RVChartDisjointUnion.Data B n k →
+                DiamondIntegral.Section4.RVChartDisjointUnion.Data C n k
+def DiamondIntegral.Section7.BaseExtension.dataExt : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B C : SpecialTransformations.Section3.GammaParameters.Base} →
+        B.real ⊆ C.real →
+          B.gamma ⊆ C.gamma →
+            {k n : ℕ} →
+              DiamondIntegral.Section4.RVChartDisjointUnion.Data B n k →
+                DiamondIntegral.Section4.RVChartDisjointUnion.Data C n k :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {B C} hr
+    hg {k n} a =>
+  { domain := a.domain, domain_definable := ⋯, coordinate := a.coordinate, coordinate_definable := ⋯,
+    coordinate_proper := ⋯, finite_fibres := ⋯, volume := a.volume, volume_definable := ⋯ }
+'DiamondIntegral.Section7.BaseExtension.dataExt' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.BaseExtension.dataExt_castGrade : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B C : SpecialTransformations.Section3.GammaParameters.Base} (hr : B.real ⊆ C.real) (hg : B.gamma ⊆ C.gamma)
+  {k n l : ℕ} (h : k = l) (D : DiamondIntegral.Section4.RVChartDisjointUnion.Data B n k),
+  DiamondIntegral.Section7.BaseExtension.dataExt hr hg (DiamondIntegral.Section4.RVNamedTuples.castGrade h D) =
+    DiamondIntegral.Section4.RVNamedTuples.castGrade h (DiamondIntegral.Section7.BaseExtension.dataExt hr hg D)
+theorem DiamondIntegral.Section7.BaseExtension.dataExt_castGrade : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B C : SpecialTransformations.Section3.GammaParameters.Base} (hr : B.real ⊆ C.real) (hg : B.gamma ⊆ C.gamma)
+  {k n l : ℕ} (h : k = l) (D : DiamondIntegral.Section4.RVChartDisjointUnion.Data B n k),
+  DiamondIntegral.Section7.BaseExtension.dataExt hr hg (DiamondIntegral.Section4.RVNamedTuples.castGrade h D) =
+    DiamondIntegral.Section4.RVNamedTuples.castGrade h (DiamondIntegral.Section7.BaseExtension.dataExt hr hg D) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {B C} hr
+    hg {k n l} h D =>
+  Eq.casesOn (motive := fun a t =>
+    l = a →
+      h ≍ t →
+        DiamondIntegral.Section7.BaseExtension.dataExt hr hg (DiamondIntegral.Section4.RVNamedTuples.castGrade h D) =
+          DiamondIntegral.Section4.RVNamedTuples.castGrade h (DiamondIntegral.Section7.BaseExtension.dataExt hr hg D))
+    h
+    (fun h_1 =>
+      Eq.ndrec (motive := fun {l} =>
+        ∀ (h : k = l),
+          h ≍ Eq.refl k →
+            DiamondIntegral.Section7.BaseExtension.dataExt hr hg
+                (DiamondIntegral.Section4.RVNamedTuples.castGrade h D) =
+              DiamondIntegral.Section4.RVNamedTuples.castGrade h
+                (DiamondIntegral.Section7.BaseExtension.dataExt hr hg D))
+        (fun h h_2 =>
+          Eq.symm (eq_of_heq h_2) ▸
+            Eq.refl
+              (DiamondIntegral.Section7.BaseExtension.dataExt hr hg
+                (DiamondIntegral.Section4.RVNamedTuples.castGrade (Eq.refl k) D)))
+        (Eq.symm h_1) h)
+    (Eq.refl l) (HEq.refl h)
+'DiamondIntegral.Section7.BaseExtension.dataExt_castGrade' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.BaseExtension.disjointUnion_congr : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {C : SpecialTransformations.Section3.GammaParameters.Base} {k n : ℕ}
+  {a a' b b' : DiamondIntegral.Section4.RVChartDisjointUnion.Data C n k},
+  a = a' →
+    b = b' →
+      ∀ (hd : Disjoint a.domain b.domain) (hd' : Disjoint a'.domain b'.domain),
+        DiamondIntegral.Section4.RVChartDisjointUnion.disjointUnion a b hd =
+          DiamondIntegral.Section4.RVChartDisjointUnion.disjointUnion a' b' hd'
+theorem DiamondIntegral.Section7.BaseExtension.disjointUnion_congr : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {C : SpecialTransformations.Section3.GammaParameters.Base} {k n : ℕ}
+  {a a' b b' : DiamondIntegral.Section4.RVChartDisjointUnion.Data C n k},
+  a = a' →
+    b = b' →
+      ∀ (hd : Disjoint a.domain b.domain) (hd' : Disjoint a'.domain b'.domain),
+        DiamondIntegral.Section4.RVChartDisjointUnion.disjointUnion a b hd =
+          DiamondIntegral.Section4.RVChartDisjointUnion.disjointUnion a' b' hd' :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {C}
+    {k n} {a a' b b'} ha hb hd hd' =>
+  Eq.ndrec (motive := fun {a'} =>
+    ∀ (hd' : Disjoint a'.domain b'.domain),
+      DiamondIntegral.Section4.RVChartDisjointUnion.disjointUnion a b hd =
+        DiamondIntegral.Section4.RVChartDisjointUnion.disjointUnion a' b' hd')
+    (fun hd' =>
+      Eq.ndrec (motive := fun {b'} =>
+        ∀ (hd' : Disjoint a.domain b'.domain),
+          DiamondIntegral.Section4.RVChartDisjointUnion.disjointUnion a b hd =
+            DiamondIntegral.Section4.RVChartDisjointUnion.disjointUnion a b' hd')
+        (fun hd' => Eq.refl (DiamondIntegral.Section4.RVChartDisjointUnion.disjointUnion a b hd)) hb hd')
+    ha hd'
+'DiamondIntegral.Section7.BaseExtension.disjointUnion_congr' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.BaseExtension.dataExt_leftData : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B C : SpecialTransformations.Section3.GammaParameters.Base} (hr : B.real ⊆ C.real) (hg : B.gamma ⊆ C.gamma) {k : ℕ}
+  (a b : DiamondIntegral.Section4.RVMeasuredCharts.Chart B k),
+  DiamondIntegral.Section7.BaseExtension.dataExt hr hg (DiamondIntegral.Section4.RVTaggedCoproduct.leftData a b) =
+    DiamondIntegral.Section4.RVTaggedCoproduct.leftData (DiamondIntegral.Section7.BaseExtension.chartExt hr hg a)
+      (DiamondIntegral.Section7.BaseExtension.chartExt hr hg b)
+theorem DiamondIntegral.Section7.BaseExtension.dataExt_leftData : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B C : SpecialTransformations.Section3.GammaParameters.Base} (hr : B.real ⊆ C.real) (hg : B.gamma ⊆ C.gamma) {k : ℕ}
+  (a b : DiamondIntegral.Section4.RVMeasuredCharts.Chart B k),
+  DiamondIntegral.Section7.BaseExtension.dataExt hr hg (DiamondIntegral.Section4.RVTaggedCoproduct.leftData a b) =
+    DiamondIntegral.Section4.RVTaggedCoproduct.leftData (DiamondIntegral.Section7.BaseExtension.chartExt hr hg a)
+      (DiamondIntegral.Section7.BaseExtension.chartExt hr hg b) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {B C} hr
+    hg {k} a b =>
+  id
+    (Eq.mpr
+      (id
+        (congrArg
+          (fun _a =>
+            _a =
+              DiamondIntegral.Section4.RVNamedTuples.castGrade (Nat.zero_add k)
+                (DiamondIntegral.Section4.RVTaggedCoproduct.leftRawData
+                  (DiamondIntegral.Section7.BaseExtension.chartExt hr hg a)
+                  (DiamondIntegral.Section7.BaseExtension.chartExt hr hg b)))
+          (DiamondIntegral.Section7.BaseExtension.dataExt_castGrade hr hg (Nat.zero_add k)
+            (DiamondIntegral.Section4.RVTaggedCoproduct.leftRawData a b))))
+      (Eq.refl
+        (DiamondIntegral.Section4.RVNamedTuples.castGrade (Nat.zero_add k)
+          (DiamondIntegral.Section7.BaseExtension.dataExt hr hg
+            (DiamondIntegral.Section4.RVTaggedCoproduct.leftRawData a b)))))
+'DiamondIntegral.Section7.BaseExtension.dataExt_leftData' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.BaseExtension.chartExt_coproduct : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B C : SpecialTransformations.Section3.GammaParameters.Base} (hr : B.real ⊆ C.real) (hg : B.gamma ⊆ C.gamma) {k : ℕ}
+  (a b : DiamondIntegral.Section4.RVMeasuredCharts.Chart B k),
+  DiamondIntegral.Section7.BaseExtension.chartExt hr hg (DiamondIntegral.Section4.RVTaggedCoproduct.coproduct a b) =
+    DiamondIntegral.Section4.RVTaggedCoproduct.coproduct (DiamondIntegral.Section7.BaseExtension.chartExt hr hg a)
+      (DiamondIntegral.Section7.BaseExtension.chartExt hr hg b)
+theorem DiamondIntegral.Section7.BaseExtension.chartExt_coproduct : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B C : SpecialTransformations.Section3.GammaParameters.Base} (hr : B.real ⊆ C.real) (hg : B.gamma ⊆ C.gamma) {k : ℕ}
+  (a b : DiamondIntegral.Section4.RVMeasuredCharts.Chart B k),
+  DiamondIntegral.Section7.BaseExtension.chartExt hr hg (DiamondIntegral.Section4.RVTaggedCoproduct.coproduct a b) =
+    DiamondIntegral.Section4.RVTaggedCoproduct.coproduct (DiamondIntegral.Section7.BaseExtension.chartExt hr hg a)
+      (DiamondIntegral.Section7.BaseExtension.chartExt hr hg b) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {B C} hr
+    hg {k} a b =>
+  id
+    ((fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+          {B} {n k} a a_1 e_a =>
+        e_a ▸ Eq.refl a.toChart)
+      (DiamondIntegral.Section7.BaseExtension.dataExt hr hg
+        (DiamondIntegral.Section4.RVChartDisjointUnion.disjointUnion
+          (DiamondIntegral.Section4.RVTaggedCoproduct.leftData a b)
+          (DiamondIntegral.Section4.RVTaggedCoproduct.rightData a b)
+          (DiamondIntegral.Section4.RVTaggedCoproduct.tagged_disjoint a b)))
+      (DiamondIntegral.Section4.RVChartDisjointUnion.disjointUnion
+        (DiamondIntegral.Section4.RVTaggedCoproduct.leftData (DiamondIntegral.Section7.BaseExtension.chartExt hr hg a)
+          (DiamondIntegral.Section7.BaseExtension.chartExt hr hg b))
+        (DiamondIntegral.Section4.RVTaggedCoproduct.rightData (DiamondIntegral.Section7.BaseExtension.chartExt hr hg a)
+          (DiamondIntegral.Section7.BaseExtension.chartExt hr hg b))
+        (DiamondIntegral.Section4.RVTaggedCoproduct.tagged_disjoint
+          (DiamondIntegral.Section7.BaseExtension.chartExt hr hg a)
+          (DiamondIntegral.Section7.BaseExtension.chartExt hr hg b)))
+      (Eq.trans
+        (have this := rfl;
+        this)
+        (DiamondIntegral.Section7.BaseExtension.disjointUnion_congr
+          (DiamondIntegral.Section7.BaseExtension.dataExt_leftData hr hg a b) rfl
+          (DiamondIntegral.Section4.RVTaggedCoproduct.tagged_disjoint a b)
+          (DiamondIntegral.Section4.RVTaggedCoproduct.tagged_disjoint
+            (DiamondIntegral.Section7.BaseExtension.chartExt hr hg a)
+            (DiamondIntegral.Section7.BaseExtension.chartExt hr hg b)))))
+'DiamondIntegral.Section7.BaseExtension.chartExt_coproduct' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.BaseExtension.objExt_coprod : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B C : SpecialTransformations.Section3.GammaParameters.Base} (hr : B.real ⊆ C.real) (hg : B.gamma ⊆ C.gamma) {k : ℕ}
+  (a b : DiamondIntegral.Section7.BoundedClasses.Obj B k),
+  DiamondIntegral.Section7.BaseExtension.objExt hr hg (DiamondIntegral.Section7.BoundedClasses.coprod a b) =
+    DiamondIntegral.Section7.BoundedClasses.coprod (DiamondIntegral.Section7.BaseExtension.objExt hr hg a)
+      (DiamondIntegral.Section7.BaseExtension.objExt hr hg b)
+theorem DiamondIntegral.Section7.BaseExtension.objExt_coprod : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B C : SpecialTransformations.Section3.GammaParameters.Base} (hr : B.real ⊆ C.real) (hg : B.gamma ⊆ C.gamma) {k : ℕ}
+  (a b : DiamondIntegral.Section7.BoundedClasses.Obj B k),
+  DiamondIntegral.Section7.BaseExtension.objExt hr hg (DiamondIntegral.Section7.BoundedClasses.coprod a b) =
+    DiamondIntegral.Section7.BoundedClasses.coprod (DiamondIntegral.Section7.BaseExtension.objExt hr hg a)
+      (DiamondIntegral.Section7.BaseExtension.objExt hr hg b) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {B C} hr
+    hg {k} a b =>
+  id
+    ((fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+          {B} {k} toChart toChart_1 e_toChart =>
+        Eq.rec (motive := fun toChart_2 e_toChart =>
+          ∀ (domain_bounded : DiamondIntegral.Section4.RVMeasuredBounds.DomainBounded toChart),
+            { toChart := toChart, domain_bounded := domain_bounded } =
+              { toChart := toChart_2, domain_bounded := e_toChart ▸ domain_bounded })
+          (fun domain_bounded => Eq.refl { toChart := toChart, domain_bounded := domain_bounded }) e_toChart)
+      (DiamondIntegral.Section7.BaseExtension.chartExt hr hg
+        (DiamondIntegral.Section4.RVTaggedCoproduct.coproduct a.toChart b.toChart))
+      (DiamondIntegral.Section4.RVTaggedCoproduct.coproduct
+        (DiamondIntegral.Section7.BaseExtension.chartExt hr hg a.toChart)
+        (DiamondIntegral.Section7.BaseExtension.chartExt hr hg b.toChart))
+      (DiamondIntegral.Section7.BaseExtension.chartExt_coproduct hr hg a.toChart b.toChart)
+      (DiamondIntegral.Section7.BoundedClasses.coprod a b).domain_bounded)
+'DiamondIntegral.Section7.BaseExtension.objExt_coprod' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.BaseExtension.objExt_empty : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B C : SpecialTransformations.Section3.GammaParameters.Base} (hr : B.real ⊆ C.real) (hg : B.gamma ⊆ C.gamma) {k : ℕ},
+  DiamondIntegral.Section7.BaseExtension.objExt hr hg (DiamondIntegral.Section7.BoundedClasses.emptyObj B k) =
+    DiamondIntegral.Section7.BoundedClasses.emptyObj C k
+@[defeq] theorem DiamondIntegral.Section7.BaseExtension.objExt_empty : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B C : SpecialTransformations.Section3.GammaParameters.Base} (hr : B.real ⊆ C.real) (hg : B.gamma ⊆ C.gamma) {k : ℕ},
+  DiamondIntegral.Section7.BaseExtension.objExt hr hg (DiamondIntegral.Section7.BoundedClasses.emptyObj B k) =
+    DiamondIntegral.Section7.BoundedClasses.emptyObj C k :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {B C} hr
+    hg {k} =>
+  rfl
+'DiamondIntegral.Section7.BaseExtension.objExt_empty' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.BaseExtension.clsExt : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B C : SpecialTransformations.Section3.GammaParameters.Base} →
+        B.real ⊆ C.real →
+          B.gamma ⊆ C.gamma →
+            {k : ℕ} → DiamondIntegral.Section7.BoundedClasses.Cls B k →+ DiamondIntegral.Section7.BoundedClasses.Cls C k
+def DiamondIntegral.Section7.BaseExtension.clsExt : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B C : SpecialTransformations.Section3.GammaParameters.Base} →
+        B.real ⊆ C.real →
+          B.gamma ⊆ C.gamma →
+            {k : ℕ} →
+              DiamondIntegral.Section7.BoundedClasses.Cls B k →+ DiamondIntegral.Section7.BoundedClasses.Cls C k :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {B C} hr
+    hg {k} =>
+  { toFun := DiamondIntegral.Section7.BaseExtension.clsExtFun hr hg, map_zero' := ⋯, map_add' := ⋯ }
+'DiamondIntegral.Section7.BaseExtension.clsExt' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.BaseExtension.clsExt_cls : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B C : SpecialTransformations.Section3.GammaParameters.Base} (hr : B.real ⊆ C.real) (hg : B.gamma ⊆ C.gamma) {k : ℕ}
+  (a : DiamondIntegral.Section7.BoundedClasses.Obj B k),
+  (DiamondIntegral.Section7.BaseExtension.clsExt hr hg) (DiamondIntegral.Section7.BoundedClasses.cls a) =
+    DiamondIntegral.Section7.BoundedClasses.cls (DiamondIntegral.Section7.BaseExtension.objExt hr hg a)
+@[defeq] theorem DiamondIntegral.Section7.BaseExtension.clsExt_cls : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B C : SpecialTransformations.Section3.GammaParameters.Base} (hr : B.real ⊆ C.real) (hg : B.gamma ⊆ C.gamma) {k : ℕ}
+  (a : DiamondIntegral.Section7.BoundedClasses.Obj B k),
+  (DiamondIntegral.Section7.BaseExtension.clsExt hr hg) (DiamondIntegral.Section7.BoundedClasses.cls a) =
+    DiamondIntegral.Section7.BoundedClasses.cls (DiamondIntegral.Section7.BaseExtension.objExt hr hg a) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {B C} hr
+    hg {k} a =>
+  rfl
+'DiamondIntegral.Section7.BaseExtension.clsExt_cls' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.BaseExtension.apertureExt : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B C : SpecialTransformations.Section3.GammaParameters.Base} →
+        (hr : B.real ⊆ C.real) →
+          (hg : B.gamma ⊆ C.gamma) →
+            {k : ℕ} →
+              {r : DiamondIntegral.Section4.RVMeasuredCharts.Chart B k} →
+                DiamondIntegral.Section4.AnnularBlowup.Aperture r →
+                  DiamondIntegral.Section4.AnnularBlowup.Aperture
+                    (DiamondIntegral.Section7.BaseExtension.chartExt hr hg r)
+def DiamondIntegral.Section7.BaseExtension.apertureExt : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B C : SpecialTransformations.Section3.GammaParameters.Base} →
+        (hr : B.real ⊆ C.real) →
+          (hg : B.gamma ⊆ C.gamma) →
+            {k : ℕ} →
+              {r : DiamondIntegral.Section4.RVMeasuredCharts.Chart B k} →
+                DiamondIntegral.Section4.AnnularBlowup.Aperture r →
+                  DiamondIntegral.Section4.AnnularBlowup.Aperture
+                    (DiamondIntegral.Section7.BaseExtension.chartExt hr hg r) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {B C} hr
+    hg {k} {r} A =>
+  { aperture := A.aperture, graph_definable := ⋯, nonzero := ⋯, nonnegative := ⋯, bound := A.bound, bounded := ⋯ }
+'DiamondIntegral.Section7.BaseExtension.apertureExt' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.BaseExtension.datumExt : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B C : SpecialTransformations.Section3.GammaParameters.Base} →
+        B.real ⊆ C.real →
+          B.gamma ⊆ C.gamma →
+            {k : ℕ} →
+              DiamondIntegral.Section4.RelativeAnnularGenerators.AnnularDatum B k →
+                DiamondIntegral.Section4.RelativeAnnularGenerators.AnnularDatum C k
+def DiamondIntegral.Section7.BaseExtension.datumExt : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B C : SpecialTransformations.Section3.GammaParameters.Base} →
+        B.real ⊆ C.real →
+          B.gamma ⊆ C.gamma →
+            {k : ℕ} →
+              DiamondIntegral.Section4.RelativeAnnularGenerators.AnnularDatum B k →
+                DiamondIntegral.Section4.RelativeAnnularGenerators.AnnularDatum C k :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {B C} hr
+    hg {k} D =>
+  { chart := DiamondIntegral.Section7.BaseExtension.chartExt hr hg D.chart, coordinate := D.coordinate, finite := ⋯,
+    aperture := DiamondIntegral.Section7.BaseExtension.apertureExt hr hg D.aperture, bounded := ⋯ }
+'DiamondIntegral.Section7.BaseExtension.datumExt' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.BaseExtension.source_ext : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B C : SpecialTransformations.Section3.GammaParameters.Base} (hr : B.real ⊆ C.real) (hg : B.gamma ⊆ C.gamma) {k : ℕ}
+  (D : DiamondIntegral.Section4.RelativeAnnularGenerators.AnnularDatum B k),
+  (DiamondIntegral.Section7.BaseExtension.datumExt hr hg D).source =
+    DiamondIntegral.Section7.BaseExtension.objExt hr hg D.source
+@[defeq] theorem DiamondIntegral.Section7.BaseExtension.source_ext : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B C : SpecialTransformations.Section3.GammaParameters.Base} (hr : B.real ⊆ C.real) (hg : B.gamma ⊆ C.gamma) {k : ℕ}
+  (D : DiamondIntegral.Section4.RelativeAnnularGenerators.AnnularDatum B k),
+  (DiamondIntegral.Section7.BaseExtension.datumExt hr hg D).source =
+    DiamondIntegral.Section7.BaseExtension.objExt hr hg D.source :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {B C} hr
+    hg {k} D =>
+  rfl
+'DiamondIntegral.Section7.BaseExtension.source_ext' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.BaseExtension.annularObject_ext : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B C : SpecialTransformations.Section3.GammaParameters.Base} (hr : B.real ⊆ C.real) (hg : B.gamma ⊆ C.gamma) {k : ℕ}
+  (D : DiamondIntegral.Section4.RelativeAnnularGenerators.AnnularDatum B k),
+  (DiamondIntegral.Section7.BaseExtension.datumExt hr hg D).annularObject =
+    DiamondIntegral.Section7.BaseExtension.objExt hr hg D.annularObject
+theorem DiamondIntegral.Section7.BaseExtension.annularObject_ext : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B C : SpecialTransformations.Section3.GammaParameters.Base} (hr : B.real ⊆ C.real) (hg : B.gamma ⊆ C.gamma) {k : ℕ}
+  (D : DiamondIntegral.Section4.RelativeAnnularGenerators.AnnularDatum B k),
+  (DiamondIntegral.Section7.BaseExtension.datumExt hr hg D).annularObject =
+    DiamondIntegral.Section7.BaseExtension.objExt hr hg D.annularObject :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {B C} hr
+    hg {k} D =>
+  Eq.symm
+    (DiamondIntegral.Section7.BaseExtension.objExt_coprod hr hg
+      (DiamondIntegral.Section4.BlowupRelation.shellBounded D.chart D.coordinate D.finite D.aperture D.bounded)
+      (DiamondIntegral.Section4.BlowupRelation.endpointBounded D.chart D.coordinate D.finite D.aperture D.bounded))
+'DiamondIntegral.Section7.BaseExtension.annularObject_ext' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.BaseExtension.step_ext : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B C : SpecialTransformations.Section3.GammaParameters.Base} (hr : B.real ⊆ C.real) (hg : B.gamma ⊆ C.gamma) {k : ℕ}
+  {x y : DiamondIntegral.Section7.BoundedClasses.Cls B (1 + k)},
+  DiamondIntegral.Section7.ElementaryBlowups.Step x y →
+    DiamondIntegral.Section7.ElementaryBlowups.Step ((DiamondIntegral.Section7.BaseExtension.clsExt hr hg) x)
+      ((DiamondIntegral.Section7.BaseExtension.clsExt hr hg) y)
+theorem DiamondIntegral.Section7.BaseExtension.step_ext : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B C : SpecialTransformations.Section3.GammaParameters.Base} (hr : B.real ⊆ C.real) (hg : B.gamma ⊆ C.gamma) {k : ℕ}
+  {x y : DiamondIntegral.Section7.BoundedClasses.Cls B (1 + k)},
+  DiamondIntegral.Section7.ElementaryBlowups.Step x y →
+    DiamondIntegral.Section7.ElementaryBlowups.Step ((DiamondIntegral.Section7.BaseExtension.clsExt hr hg) x)
+      ((DiamondIntegral.Section7.BaseExtension.clsExt hr hg) y) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {B C} hr
+    hg {k} {x y} h =>
+  Exists.casesOn h fun n h =>
+    Exists.casesOn h fun D h =>
+      Exists.casesOn h fun z h =>
+        And.casesOn h fun left right =>
+          Eq.symm left ▸
+            Eq.symm right ▸
+              Exists.intro n
+                (Exists.intro (fun i => DiamondIntegral.Section7.BaseExtension.datumExt hr hg (D i))
+                  (Exists.intro ((DiamondIntegral.Section7.BaseExtension.clsExt hr hg) z)
+                    ⟨Eq.mpr
+                        (id
+                          (congrArg
+                            (fun _a =>
+                              _a =
+                                (DiamondIntegral.Section7.BaseExtension.clsExt hr hg) z +
+                                  ∑ i,
+                                    DiamondIntegral.Section7.BoundedClasses.cls
+                                      ((fun i => DiamondIntegral.Section7.BaseExtension.datumExt hr hg (D i)) i).source)
+                            (map_add (DiamondIntegral.Section7.BaseExtension.clsExt hr hg) z
+                              (∑ i, DiamondIntegral.Section7.BoundedClasses.cls (D i).source))))
+                        (Eq.mpr
+                          (id
+                            (congrArg
+                              (fun _a =>
+                                (DiamondIntegral.Section7.BaseExtension.clsExt hr hg) z + _a =
+                                  (DiamondIntegral.Section7.BaseExtension.clsExt hr hg) z +
+                                    ∑ i,
+                                      DiamondIntegral.Section7.BoundedClasses.cls
+                                        ((fun i => DiamondIntegral.Section7.BaseExtension.datumExt hr hg (D i))
+                                            i).source)
+                              (map_sum (DiamondIntegral.Section7.BaseExtension.clsExt hr hg)
+                                (fun i => DiamondIntegral.Section7.BoundedClasses.cls (D i).source) Finset.univ)))
+                          (Eq.refl
+                            ((DiamondIntegral.Section7.BaseExtension.clsExt hr hg) z +
+                              ∑ x,
+                                (DiamondIntegral.Section7.BaseExtension.clsExt hr hg)
+                                  (DiamondIntegral.Section7.BoundedClasses.cls (D x).source)))),
+                      Eq.mpr
+                        (id
+                          (congrArg
+                            (fun _a =>
+                              _a =
+                                (DiamondIntegral.Section7.BaseExtension.clsExt hr hg) z +
+                                  ∑ i,
+                                    DiamondIntegral.Section7.BoundedClasses.cls
+                                      ((fun i => DiamondIntegral.Section7.BaseExtension.datumExt hr hg (D i))
+                                          i).annularObject)
+                            (map_add (DiamondIntegral.Section7.BaseExtension.clsExt hr hg) z
+                              (∑ i, DiamondIntegral.Section7.BoundedClasses.cls (D i).annularObject))))
+                        (Eq.mpr
+                          (id
+                            (congrArg
+                              (fun _a =>
+                                (DiamondIntegral.Section7.BaseExtension.clsExt hr hg) z + _a =
+                                  (DiamondIntegral.Section7.BaseExtension.clsExt hr hg) z +
+                                    ∑ i,
+                                      DiamondIntegral.Section7.BoundedClasses.cls
+                                        ((fun i => DiamondIntegral.Section7.BaseExtension.datumExt hr hg (D i))
+                                            i).annularObject)
+                              (map_sum (DiamondIntegral.Section7.BaseExtension.clsExt hr hg)
+                                (fun i => DiamondIntegral.Section7.BoundedClasses.cls (D i).annularObject)
+                                Finset.univ)))
+                          ((fun {α β γ} [HAdd α β γ] a a_1 e_a =>
+                              Eq.rec (motive := fun a_2 e_a => ∀ (a_3 a_4 : β), a_3 = a_4 → a + a_3 = a_2 + a_4)
+                                (fun a_2 a_3 e_a => e_a ▸ Eq.refl (a + a_2)) e_a)
+                            ((DiamondIntegral.Section7.BaseExtension.clsExt hr hg) z)
+                            ((DiamondIntegral.Section7.BaseExtension.clsExt hr hg) z)
+                            (Eq.refl ((DiamondIntegral.Section7.BaseExtension.clsExt hr hg) z))
+                            (∑ x,
+                              (DiamondIntegral.Section7.BaseExtension.clsExt hr hg)
+                                (DiamondIntegral.Section7.BoundedClasses.cls (D x).annularObject))
+                            (∑ i,
+                              DiamondIntegral.Section7.BoundedClasses.cls
+                                ((fun i => DiamondIntegral.Section7.BaseExtension.datumExt hr hg (D i))
+                                    i).annularObject)
+                            (Finset.sum_congr rfl fun i x =>
+                              Eq.mpr
+                                (id
+                                  (congrArg
+                                    (fun _a =>
+                                      _a =
+                                        DiamondIntegral.Section7.BoundedClasses.cls
+                                          ((fun i => DiamondIntegral.Section7.BaseExtension.datumExt hr hg (D i))
+                                              i).annularObject)
+                                    (DiamondIntegral.Section7.BaseExtension.clsExt_cls hr hg (D i).annularObject)))
+                                (Eq.mpr
+                                  (id
+                                    (congrArg
+                                      (fun _a =>
+                                        DiamondIntegral.Section7.BoundedClasses.cls _a =
+                                          DiamondIntegral.Section7.BoundedClasses.cls
+                                            ((fun i => DiamondIntegral.Section7.BaseExtension.datumExt hr hg (D i))
+                                                i).annularObject)
+                                      (Eq.symm (DiamondIntegral.Section7.BaseExtension.annularObject_ext hr hg (D i)))))
+                                  (Eq.refl
+                                    (DiamondIntegral.Section7.BoundedClasses.cls
+                                      (DiamondIntegral.Section7.BaseExtension.datumExt hr hg
+                                          (D i)).annularObject))))))⟩))
+'DiamondIntegral.Section7.BaseExtension.step_ext' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.BaseExtension.steps_ext : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B C : SpecialTransformations.Section3.GammaParameters.Base} (hr : B.real ⊆ C.real) (hg : B.gamma ⊆ C.gamma) {k n : ℕ}
+  {x y : DiamondIntegral.Section7.BoundedClasses.Cls B (1 + k)},
+  DiamondIntegral.Section7.BlowupCongruence.BlowupSteps n x y →
+    DiamondIntegral.Section7.BlowupCongruence.BlowupSteps n ((DiamondIntegral.Section7.BaseExtension.clsExt hr hg) x)
+      ((DiamondIntegral.Section7.BaseExtension.clsExt hr hg) y)
+theorem DiamondIntegral.Section7.BaseExtension.steps_ext : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B C : SpecialTransformations.Section3.GammaParameters.Base} (hr : B.real ⊆ C.real) (hg : B.gamma ⊆ C.gamma) {k n : ℕ}
+  {x y : DiamondIntegral.Section7.BoundedClasses.Cls B (1 + k)},
+  DiamondIntegral.Section7.BlowupCongruence.BlowupSteps n x y →
+    DiamondIntegral.Section7.BlowupCongruence.BlowupSteps n ((DiamondIntegral.Section7.BaseExtension.clsExt hr hg) x)
+      ((DiamondIntegral.Section7.BaseExtension.clsExt hr hg) y) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {B C} hr
+    hg {k n} {x y} h =>
+  IntegrationInACVF.Section6.Iteration.Steps.rec
+    (fun x => IntegrationInACVF.Section6.Iteration.Steps.refl ((DiamondIntegral.Section7.BaseExtension.clsExt hr hg) x))
+    (fun {n} {a b c} h a_1 ih =>
+      IntegrationInACVF.Section6.Iteration.Steps.cons (DiamondIntegral.Section7.BaseExtension.step_ext hr hg h) ih)
+    h
+'DiamondIntegral.Section7.BaseExtension.steps_ext' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.BaseExtension.muIsp_ext : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B C : SpecialTransformations.Section3.GammaParameters.Base} (hr : B.real ⊆ C.real) (hg : B.gamma ⊆ C.gamma) {k : ℕ}
+  {x y : DiamondIntegral.Section7.BoundedClasses.Cls B (1 + k)},
+  DiamondIntegral.Section7.BlowupCongruence.MuIsp x y →
+    DiamondIntegral.Section7.BlowupCongruence.MuIsp ((DiamondIntegral.Section7.BaseExtension.clsExt hr hg) x)
+      ((DiamondIntegral.Section7.BaseExtension.clsExt hr hg) y)
+theorem DiamondIntegral.Section7.BaseExtension.muIsp_ext : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B C : SpecialTransformations.Section3.GammaParameters.Base} (hr : B.real ⊆ C.real) (hg : B.gamma ⊆ C.gamma) {k : ℕ}
+  {x y : DiamondIntegral.Section7.BoundedClasses.Cls B (1 + k)},
+  DiamondIntegral.Section7.BlowupCongruence.MuIsp x y →
+    DiamondIntegral.Section7.BlowupCongruence.MuIsp ((DiamondIntegral.Section7.BaseExtension.clsExt hr hg) x)
+      ((DiamondIntegral.Section7.BaseExtension.clsExt hr hg) y) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {B C} hr
+    hg {k} {x y} h =>
+  Exists.casesOn h fun w h =>
+    Exists.casesOn h fun m h =>
+      Exists.casesOn h fun n h =>
+        And.casesOn h fun hx hy =>
+          Exists.intro ((DiamondIntegral.Section7.BaseExtension.clsExt hr hg) w)
+            (Exists.intro m
+              (Exists.intro n
+                ⟨DiamondIntegral.Section7.BaseExtension.steps_ext hr hg hx,
+                  DiamondIntegral.Section7.BaseExtension.steps_ext hr hg hy⟩))
+'DiamondIntegral.Section7.BaseExtension.muIsp_ext' depends on axioms: [propext, Classical.choice, Quot.sound]
 @DiamondIntegral.Section7.BlowupCongruence.BlowupSteps : {M : Type} →
   [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
     [hM : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →

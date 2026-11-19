@@ -55,6 +55,10 @@ Prepared for later results (supporting lemmas, not numbered results):
   5.2); Lemma 7.11 from the lift of any doubly bounded measured RV object
   (`lemma_7_11_measured`); the adjoined base `adjoin T b` with
   `adjoin_support`, `adjoin_small`, `adjoin_gamma` (GAP-REPAIRS 9).
+- `BaseExtension` (for 7.14, 7.15): for bases B ⊆ C, charts, isomorphisms,
+  apertures and annular data over B extend to C with the same data; the
+  extension of classes `clsExt` is additive and maps blowups to blowups and
+  μIsp^db to μIsp^db (`step_ext`, `steps_ext`, `muIsp_ext`).
 - `Groupification` (for 7.26): the Grothendieck group of M ⧸ c is K(M) modulo
   the differences of c-related elements (`groupQuotientEquiv`); no
   cancellation in M is assumed.

@@ -1,5 +1,68 @@
 import «section 7».Section
 
+#check @DiamondIntegral.Section7.BaseExtension.chartExt
+#print DiamondIntegral.Section7.BaseExtension.chartExt
+#print axioms DiamondIntegral.Section7.BaseExtension.chartExt
+#check @DiamondIntegral.Section7.BaseExtension.isoExt
+#print DiamondIntegral.Section7.BaseExtension.isoExt
+#print axioms DiamondIntegral.Section7.BaseExtension.isoExt
+#check @DiamondIntegral.Section7.BaseExtension.objExt
+#print DiamondIntegral.Section7.BaseExtension.objExt
+#print axioms DiamondIntegral.Section7.BaseExtension.objExt
+#check @DiamondIntegral.Section7.BaseExtension.clsExtFun
+#print DiamondIntegral.Section7.BaseExtension.clsExtFun
+#print axioms DiamondIntegral.Section7.BaseExtension.clsExtFun
+#check @DiamondIntegral.Section7.BaseExtension.clsExtFun_cls
+#print DiamondIntegral.Section7.BaseExtension.clsExtFun_cls
+#print axioms DiamondIntegral.Section7.BaseExtension.clsExtFun_cls
+#check @DiamondIntegral.Section7.BaseExtension.dataExt
+#print DiamondIntegral.Section7.BaseExtension.dataExt
+#print axioms DiamondIntegral.Section7.BaseExtension.dataExt
+#check @DiamondIntegral.Section7.BaseExtension.dataExt_castGrade
+#print DiamondIntegral.Section7.BaseExtension.dataExt_castGrade
+#print axioms DiamondIntegral.Section7.BaseExtension.dataExt_castGrade
+#check @DiamondIntegral.Section7.BaseExtension.disjointUnion_congr
+#print DiamondIntegral.Section7.BaseExtension.disjointUnion_congr
+#print axioms DiamondIntegral.Section7.BaseExtension.disjointUnion_congr
+#check @DiamondIntegral.Section7.BaseExtension.dataExt_leftData
+#print DiamondIntegral.Section7.BaseExtension.dataExt_leftData
+#print axioms DiamondIntegral.Section7.BaseExtension.dataExt_leftData
+#check @DiamondIntegral.Section7.BaseExtension.chartExt_coproduct
+#print DiamondIntegral.Section7.BaseExtension.chartExt_coproduct
+#print axioms DiamondIntegral.Section7.BaseExtension.chartExt_coproduct
+#check @DiamondIntegral.Section7.BaseExtension.objExt_coprod
+#print DiamondIntegral.Section7.BaseExtension.objExt_coprod
+#print axioms DiamondIntegral.Section7.BaseExtension.objExt_coprod
+#check @DiamondIntegral.Section7.BaseExtension.objExt_empty
+#print DiamondIntegral.Section7.BaseExtension.objExt_empty
+#print axioms DiamondIntegral.Section7.BaseExtension.objExt_empty
+#check @DiamondIntegral.Section7.BaseExtension.clsExt
+#print DiamondIntegral.Section7.BaseExtension.clsExt
+#print axioms DiamondIntegral.Section7.BaseExtension.clsExt
+#check @DiamondIntegral.Section7.BaseExtension.clsExt_cls
+#print DiamondIntegral.Section7.BaseExtension.clsExt_cls
+#print axioms DiamondIntegral.Section7.BaseExtension.clsExt_cls
+#check @DiamondIntegral.Section7.BaseExtension.apertureExt
+#print DiamondIntegral.Section7.BaseExtension.apertureExt
+#print axioms DiamondIntegral.Section7.BaseExtension.apertureExt
+#check @DiamondIntegral.Section7.BaseExtension.datumExt
+#print DiamondIntegral.Section7.BaseExtension.datumExt
+#print axioms DiamondIntegral.Section7.BaseExtension.datumExt
+#check @DiamondIntegral.Section7.BaseExtension.source_ext
+#print DiamondIntegral.Section7.BaseExtension.source_ext
+#print axioms DiamondIntegral.Section7.BaseExtension.source_ext
+#check @DiamondIntegral.Section7.BaseExtension.annularObject_ext
+#print DiamondIntegral.Section7.BaseExtension.annularObject_ext
+#print axioms DiamondIntegral.Section7.BaseExtension.annularObject_ext
+#check @DiamondIntegral.Section7.BaseExtension.step_ext
+#print DiamondIntegral.Section7.BaseExtension.step_ext
+#print axioms DiamondIntegral.Section7.BaseExtension.step_ext
+#check @DiamondIntegral.Section7.BaseExtension.steps_ext
+#print DiamondIntegral.Section7.BaseExtension.steps_ext
+#print axioms DiamondIntegral.Section7.BaseExtension.steps_ext
+#check @DiamondIntegral.Section7.BaseExtension.muIsp_ext
+#print DiamondIntegral.Section7.BaseExtension.muIsp_ext
+#print axioms DiamondIntegral.Section7.BaseExtension.muIsp_ext
 #check @DiamondIntegral.Section7.BlowupCongruence.BlowupSteps
 #print DiamondIntegral.Section7.BlowupCongruence.BlowupSteps
 #print axioms DiamondIntegral.Section7.BlowupCongruence.BlowupSteps
