@@ -51,9 +51,16 @@ arbitrary parameter base and take no input beyond the ACVF model.
     endpoint and shell charts (∞-free case);
   - `BlowupLiftGeneral`: transport through the strict chart (∞ labels), and
     preservation under blowups of any length and μIsp.
-- Still to do in M3: surjectivity of `liftCls` (needs a converter from
-  `MeasuredRVObject` back to charts), 7.11 (partial-lift form) and 7.13
-  (head-start form).
+- `ChartOfMeasured`: every Section 6 measured RV object over `T` is the
+  measured object of a Section 4 chart (`chartOf`, `measuredIso_chartOf`;
+  bounded and ∞-free when doubly bounded), using the converse definability
+  bridge `RealBase.real_base`. Hence `liftCls` is surjective
+  (`liftCls_surjective`, Corollary 6.37 on Section 7's classes).
+- Still to do in M3: 7.11 (partial-lift form) and 7.13 (head-start form).
+- Remark 7.28: assessed; the mathematics is sound, but it needs bridges
+  between Section 3's integral (strongly homogeneous model, base ⟨T, Γ⟩),
+  Section 4's retractions and Section 6's lift, plus the bounded RV
+  decomposition. Reported to the author for a decision on 2026-11-19.
 
 ## Next
 

@@ -741,6 +741,78 @@ import «section 7».Section
 #check @DiamondIntegral.Section7.ChartLifting.chart_iso_lift
 #print DiamondIntegral.Section7.ChartLifting.chart_iso_lift
 #print axioms DiamondIntegral.Section7.ChartLifting.chart_iso_lift
+#check @DiamondIntegral.Section7.ChartOfMeasured.rv_preimage
+#print DiamondIntegral.Section7.ChartOfMeasured.rv_preimage
+#print axioms DiamondIntegral.Section7.ChartOfMeasured.rv_preimage
+#check @DiamondIntegral.Section7.ChartOfMeasured.decode_rvValues
+#print DiamondIntegral.Section7.ChartOfMeasured.decode_rvValues
+#print axioms DiamondIntegral.Section7.ChartOfMeasured.decode_rvValues
+#check @DiamondIntegral.Section7.ChartOfMeasured.volumeGamma_congr
+#print DiamondIntegral.Section7.ChartOfMeasured.volumeGamma_congr
+#print axioms DiamondIntegral.Section7.ChartOfMeasured.volumeGamma_congr
+#check @DiamondIntegral.Section7.ChartOfMeasured.rawDom
+#print DiamondIntegral.Section7.ChartOfMeasured.rawDom
+#print axioms DiamondIntegral.Section7.ChartOfMeasured.rawDom
+#check @DiamondIntegral.Section7.ChartOfMeasured.rawDom_sorted
+#print DiamondIntegral.Section7.ChartOfMeasured.rawDom_sorted
+#print axioms DiamondIntegral.Section7.ChartOfMeasured.rawDom_sorted
+#check @DiamondIntegral.Section7.ChartOfMeasured.rawDom_definable
+#print DiamondIntegral.Section7.ChartOfMeasured.rawDom_definable
+#print axioms DiamondIntegral.Section7.ChartOfMeasured.rawDom_definable
+#check @DiamondIntegral.Section7.ChartOfMeasured.pt
+#print DiamondIntegral.Section7.ChartOfMeasured.pt
+#print axioms DiamondIntegral.Section7.ChartOfMeasured.pt
+#check @DiamondIntegral.Section7.ChartOfMeasured.pt_val
+#print DiamondIntegral.Section7.ChartOfMeasured.pt_val
+#print axioms DiamondIntegral.Section7.ChartOfMeasured.pt_val
+#check @DiamondIntegral.Section7.ChartOfMeasured.pt_of
+#print DiamondIntegral.Section7.ChartOfMeasured.pt_of
+#print axioms DiamondIntegral.Section7.ChartOfMeasured.pt_of
+#check @DiamondIntegral.Section7.ChartOfMeasured.rawCoord
+#print DiamondIntegral.Section7.ChartOfMeasured.rawCoord
+#print axioms DiamondIntegral.Section7.ChartOfMeasured.rawCoord
+#check @DiamondIntegral.Section7.ChartOfMeasured.rawVol
+#print DiamondIntegral.Section7.ChartOfMeasured.rawVol
+#print axioms DiamondIntegral.Section7.ChartOfMeasured.rawVol
+#check @DiamondIntegral.Section7.ChartOfMeasured.mem_rawDom
+#print DiamondIntegral.Section7.ChartOfMeasured.mem_rawDom
+#print axioms DiamondIntegral.Section7.ChartOfMeasured.mem_rawDom
+#check @DiamondIntegral.Section7.ChartOfMeasured.rawCoord_of
+#print DiamondIntegral.Section7.ChartOfMeasured.rawCoord_of
+#print axioms DiamondIntegral.Section7.ChartOfMeasured.rawCoord_of
+#check @DiamondIntegral.Section7.ChartOfMeasured.rawVol_of
+#print DiamondIntegral.Section7.ChartOfMeasured.rawVol_of
+#print axioms DiamondIntegral.Section7.ChartOfMeasured.rawVol_of
+#check @DiamondIntegral.Section7.ChartOfMeasured.rawCoord_graph
+#print DiamondIntegral.Section7.ChartOfMeasured.rawCoord_graph
+#print axioms DiamondIntegral.Section7.ChartOfMeasured.rawCoord_graph
+#check @DiamondIntegral.Section7.ChartOfMeasured.rawVol_graph
+#print DiamondIntegral.Section7.ChartOfMeasured.rawVol_graph
+#print axioms DiamondIntegral.Section7.ChartOfMeasured.rawVol_graph
+#check @DiamondIntegral.Section7.ChartOfMeasured.chartOf
+#print DiamondIntegral.Section7.ChartOfMeasured.chartOf
+#print axioms DiamondIntegral.Section7.ChartOfMeasured.chartOf
+#check @DiamondIntegral.Section7.ChartOfMeasured.measuredIso_chartOf
+#print DiamondIntegral.Section7.ChartOfMeasured.measuredIso_chartOf
+#print axioms DiamondIntegral.Section7.ChartOfMeasured.measuredIso_chartOf
+#check @DiamondIntegral.Section7.ChartOfMeasured.chartOf_noInfinity
+#print DiamondIntegral.Section7.ChartOfMeasured.chartOf_noInfinity
+#print axioms DiamondIntegral.Section7.ChartOfMeasured.chartOf_noInfinity
+#check @DiamondIntegral.Section7.ChartOfMeasured.chartOf_bounded
+#print DiamondIntegral.Section7.ChartOfMeasured.chartOf_bounded
+#print axioms DiamondIntegral.Section7.ChartOfMeasured.chartOf_bounded
+#check @DiamondIntegral.Section7.ChartOfMeasured.objOf
+#print DiamondIntegral.Section7.ChartOfMeasured.objOf
+#print axioms DiamondIntegral.Section7.ChartOfMeasured.objOf
+#check @DiamondIntegral.Section7.ChartOfMeasured.positiveClass_objOf
+#print DiamondIntegral.Section7.ChartOfMeasured.positiveClass_objOf
+#print axioms DiamondIntegral.Section7.ChartOfMeasured.positiveClass_objOf
+#check @DiamondIntegral.Section7.ChartOfMeasured.liftCls_objOf
+#print DiamondIntegral.Section7.ChartOfMeasured.liftCls_objOf
+#print axioms DiamondIntegral.Section7.ChartOfMeasured.liftCls_objOf
+#check @DiamondIntegral.Section7.ChartOfMeasured.liftCls_surjective
+#print DiamondIntegral.Section7.ChartOfMeasured.liftCls_surjective
+#print axioms DiamondIntegral.Section7.ChartOfMeasured.liftCls_surjective
 #check @DiamondIntegral.Section7.ElementaryBlowups.graphOn_diff
 #print DiamondIntegral.Section7.ElementaryBlowups.graphOn_diff
 #print axioms DiamondIntegral.Section7.ElementaryBlowups.graphOn_diff
@@ -1284,6 +1356,12 @@ import «section 7».Section
 #check @DiamondIntegral.Section7.RVMaps.le_definable
 #print DiamondIntegral.Section7.RVMaps.le_definable
 #print axioms DiamondIntegral.Section7.RVMaps.le_definable
+#check @DiamondIntegral.Section7.RealBase.real_base
+#print DiamondIntegral.Section7.RealBase.real_base
+#print axioms DiamondIntegral.Section7.RealBase.real_base
+#check @DiamondIntegral.Section7.RealBase.real_base_iff
+#print DiamondIntegral.Section7.RealBase.real_base_iff
+#print axioms DiamondIntegral.Section7.RealBase.real_base_iff
 #check @DiamondIntegral.Section7.Remark74.remark_7_4_bounded
 #print DiamondIntegral.Section7.Remark74.remark_7_4_bounded
 #print axioms DiamondIntegral.Section7.Remark74.remark_7_4_bounded

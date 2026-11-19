@@ -12,6 +12,8 @@ import «section 7».BlowupLiftImage
 import «section 7».BlowupLiftContraction
 import «section 7».BlowupLiftClasses
 import «section 7».BlowupLiftGeneral
+import «section 7».RealBase
+import «section 7».ChartOfMeasured
 import «section 7».MeasuredRVBridge
 import «section 7».MeasuredRVBounds
 import «section 7».ChartLifting

@@ -31,7 +31,11 @@ formalized.
 | Remark 7.25 | `thekernel` | pending | |
 | Theorem 7.26 | `main:prop` | pending | |
 | Corollary 7.27 | `db:to:novol` | pending | |
-| Remark 7.28 | `eg:eb:factor` | pending | author: crucial; report if blocked |
+| Remark 7.28 | `eg:eb:factor` | pending | author: crucial. Assessed 2026-11-19 and reported: needs Section 3/4/6 bridges and the bounded RV decomposition; route awaiting author decision |
+
+Corollary 6.37 on Section 7's classes: `ChartOfMeasured.liftCls_surjective`
+(the converter `chartOf` reads a Section 6 measured RV object as a Section 4
+chart; `RealBase.real_base` is the converse definability bridge).
 
 Supporting modules: `BoundedClasses` (isomorphism classes of μRV^db[k] as a
 commutative monoid, restriction and gluing of isomorphisms, refinement),
