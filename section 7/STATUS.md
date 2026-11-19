@@ -57,7 +57,13 @@ arbitrary parameter base and take no input beyond the ACVF model.
   bounded and ∞-free when doubly bounded), using the converse definability
   bridge `RealBase.real_base`. Hence `liftCls` is surjective
   (`liftCls_surjective`, Corollary 6.37 on Section 7's classes).
-- Still to do in M3: 7.11 (partial-lift form) and 7.13 (head-start form).
+- Still to do in M3: 7.11 (partial-lift form) and 7.13 (head-start form). The
+  7.11 route is in PLAN.md: generalize the 7.12 pipeline to arbitrary relative
+  aperture data.
+- Deferred: the product part of Lemma 7.10. It needs a graded product on
+  Section 7's class monoid (products distributing over tagged coproducts, and
+  products of annular data). Only the ring form of 7.26 uses it, where the
+  J_var ideal of Section 4 already gives multiplicativity.
 - Remark 7.28: assessed; the mathematics is sound, but it needs bridges
   between Section 3's integral (strongly homogeneous model, base ⟨T, Γ⟩),
   Section 4's retractions and Section 6's lift, plus the bounded RV

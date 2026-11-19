@@ -188,6 +188,28 @@ intended Lean statement; ⚑ marks a flag that is also listed in §5.
   is the special case of the full lift. 7.14 (Comparison step) uses the
   partial-lift form, as its text says. **Question C.**
 
+- **Lean route (fixed 2026-11-19, after 7.12).** A tagged RV-pullback set A
+  with finite fibres is the lift of its contraction C(A)
+  (`preparedRVObject_lift_carrier`), and `ChartOfMeasured.chartOf` turns C(A)
+  into a Section 4 chart. So the single relative step reuses the 7.12 pipeline:
+  1. Generalize `BlowupLiftImage`/`BlowupLiftContraction`/`BlowupLiftClasses`
+     from the specific centres to arbitrary `RelativeApertureData` on the lift,
+     with hypotheses rv(focus) = f_j(u) (from `focusRV`) and
+     rv(endpoint) = τ(u) f_j(u). 7.12 is then the instance `apertureData`.
+  2. For given data R, the aperture τ(u) = rv(endpoint)/f_j(u) on the active
+     labels (definable by descent to labels and `RealBase.real_base`). The
+     named bound is R.apertureBound.
+  3. The finite-to-one condition (R171): `scalarFocusImage_finite` over
+     S ∪ {a} for a fixed inactive VF input a (Lemma 2.13 route), then finite
+     fibres of A.
+  4. Inactive labels map identically (tag rv(1)). Hence
+     Step (cls (chartOf C(A))) (cls (chartOf C(reg R(A)))).
+  5. Chains: induction, with regularization steps changing C(·) only up to
+     isomorphism, and Lemma 7.7 to transport blowups.
+  6. 6.38's chains end in prepared sets. Intermediate sets need
+     regularization before the next relative step (`RelativeApertureData`
+     requires a tagged source).
+
 ### 7.12 Lemma `blowup:same:RV:coa`
 - **Route.**
   - Reduce to an elementary blowup: lift the F_i by 6.33.
