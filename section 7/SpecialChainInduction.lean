@@ -144,4 +144,122 @@ theorem relative_chain {s : ℕ} {A : DefSet (rawMixedSpace (M := M) (1 + k) r) 
 
 end Induction
 
+/-! ### Lemma 7.11 from the lift of a chart -/
+
+section Lift
+open DiamondIntegral.Section7.MeasuredRVBridge DiamondIntegral.Section7.ChartOfMeasured
+open DiamondIntegral.Section7.SpecialChainStep DiamondIntegral.Section7.BoundedClasses
+open DiamondIntegral.Section7.LiftClasses DiamondIntegral.Section7.IsoOfMeasured
+open DiamondIntegral.Section6.DiamondLift
+variable {G : Type} [LinearOrderedCommGroupWithZero G] [Valued (VF M) G]
+variable (hc : CanonicalStructure.IsCanonical (M := M)) {T : LRV.Substructure M} {k : ℕ}
+variable (c : DiamondIntegral.Section4.RVMeasuredCharts.Chart (BT T) (1 + k))
+variable (hU : (toMeasured hc c).doublyBounded)
+
+theorem lift_tagged : ∀ p ∈ (rvLift (toMeasured hc c).object).carrier, ∀ q ∈ (rvLift (toMeasured hc c).object).carrier,
+    p.2 = q.2 → tupleRV M p.1 = tupleRV M q.1 := by
+  intro p hp q hq he
+  apply rvValues_injective
+  rw [((mem_lift_iff hc c p).mp hp).2, ((mem_lift_iff hc c q).mp hq).2, he]
+
+include hU in
+/-- The lift of a doubly bounded chart, with its form, is a chain set. -/
+def liftGood : Good T (rvLift (toMeasured hc c).object) where
+  pullback := by
+    show rvHull _ = _
+    apply Set.Subset.antisymm
+    · intro q hq
+      obtain ⟨p, hp, h1, h2⟩ := (mem_rvHull_iff _ q).mp hq
+      apply (mem_lift_iff hc c q).mpr
+      obtain ⟨hd, hv⟩ := (mem_lift_iff hc c p).mp hp
+      rw [← h1, ← h2]
+      exact ⟨hd, hv⟩
+    · intro q hq
+      exact (mem_rvHull_iff _ q).mpr ⟨q, hq, rfl, rfl⟩
+  finite := lift_fibre_finite (toMeasured hc c)
+  vfBounded := measuredRVLift_vfDoublyBounded _ hU
+  rvBounded := by
+    obtain ⟨β, hβ⟩ := hU.1
+    refine ⟨β, fun p hp i => ?_⟩
+    obtain ⟨u, hu, _⟩ := hp
+    rw [← hu]
+    exact hβ u.val u.property i
+  form := liftForm (toMeasured hc c)
+  form_labels := fun p q he => congrArg (toMeasured hc c).form (Subtype.ext he)
+
+theorem exists_lift_point {u : Fin c.arity → M} (hu : u ∈ c.domain) :
+    ∃ p ∈ (rvLift (toMeasured hc c).object).carrier, rvValues p.2 = u := by
+  have hs := c.domain_definable.proper u hu
+  obtain ⟨x, hx⟩ := DiamondIntegral.Section2.tupleRV_surjective (rvTuple (c.coordinate u) (fun i => (c.coordinate_proper u hu i).1))
+  refine ⟨(x, rvTuple u hs), (mem_lift_iff hc c _).mpr ⟨?_, ?_⟩, rvValues_rvTuple _ _⟩
+  · rw [rvValues_rvTuple]
+    exact hu
+  · rw [hx, rvValues_rvTuple, rvValues_rvTuple]
+
+/-- The contraction of the lift is the chart's measured object. -/
+def contrLiftIso : MeasuredRVIso (contr (liftGood hc c hU) (lift_tagged hc c)) (toMeasured hc c) := by
+  have hsub : (contr (liftGood hc c hU) (lift_tagged hc c)).object.domain.carrier ⊆
+      (toMeasured hc c).object.domain.carrier := by
+    intro t ht
+    obtain ⟨p, hp⟩ := pureRVTagQuotient_surjective _ (⟨t, ht⟩ : pureRVTagDomain (rvLift (toMeasured hc c).object))
+    have he : p.val.2 = t := congrArg Subtype.val hp
+    have h := ((mem_lift_iff hc c p.val).mp p.property).1
+    show rvValues t ∈ c.domain
+    rw [← he]
+    exact h
+  let F := Map.inclusion hsub
+  have hF : Function.Bijective F := by
+    refine ⟨fun a b he => Subtype.ext (congrArg (fun z : (toMeasured hc c).object.domain => z.val) he),
+      fun b => ?_⟩
+    obtain ⟨p, hp, he⟩ := exists_lift_point hc c b.property
+    have hb : p.2 = b.val := rvValues_injective he
+    exact ⟨⟨b.val, hb ▸ (pureRVTagQuotient _ ⟨p, hp⟩).property⟩, rfl⟩
+  refine ⟨rvIsoOfFiniteFibres F hF (contr (liftGood hc c hU) (lift_tagged hc c)).finiteVolume
+    (toMeasured hc c).finiteVolume (contr (liftGood hc c hU) (lift_tagged hc c)).nonzero (toMeasured hc c).nonzero,
+    fun a => ?_⟩
+  rw [rvIsoOfFiniteFibres_map]
+  obtain ⟨p, rfl⟩ := pureRVTagQuotient_surjective _ a
+  unfold MeasuredRVObject.totalWeight
+  have hv : (contr (liftGood hc c hU) (lift_tagged hc c)).object.value (pureRVTagQuotient _ p) =
+      (toMeasured hc c).object.value (F (pureRVTagQuotient _ p)) := by
+    change (preparedRVObject _ (lift_tagged hc c)).value _ = _
+    rw [preparedRVObject_value]
+    apply rvValues_injective
+    change rvValues (tupleRV M p.val.1) = c.coordinate (rvValues p.val.2)
+    exact ((mem_lift_iff hc c p.val).mp p.property).2
+  rw [volumeGamma_congr hv]
+  congr 1
+  rw [contractedMeasuredRVObject_form]
+  rfl
+
+include hU in
+theorem clsG_lift (hb : DiamondIntegral.Section4.RVMeasuredBounds.DomainBounded c) :
+    clsG hc (liftGood hc c hU) = cls (⟨c, hb⟩ : Obj (BT T) (1 + k)) := by
+  unfold clsG
+  apply (cls_eq_iff_measured hc).mpr
+  have e1 := contractionIso (lift_tagged hc c) (liftGood hc c hU).pullback (liftGood hc c hU).finite
+    (liftGood hc c hU).vfBounded (liftGood hc c hU).form (liftGood hc c hU).form_labels
+    (regularize_tagged _) (regularize_pullback _ (liftGood hc c hU).pullback)
+    (regularize_finite _ (liftGood hc c hU).finite) (regularize_vfDoublyBounded _ (liftGood hc c hU).vfBounded)
+    (regForm (liftGood hc c hU)) (regForm_labels _) (regularization _) (regularization_bijective _)
+    (regularization_matching _ (lift_tagged hc c)) (fun _ => rfl) (fun p => regForm_apply (liftGood hc c hU) p)
+  exact ⟨((measuredIso_chartOf hc _).comp e1.symm).comp (contrLiftIso hc c hU)⟩
+
+include hU in
+/-- Lemma 7.11 (`special:to:blowup:coa`): for a special covariant chain `T`
+(a relative aperture chain) on the lift of a doubly bounded object `U`, the
+contraction `U_T` of the regularized image, with the induced form, has the
+class of a blowup of `U` of length the number of centripetal steps. -/
+theorem lemma_7_11 (hb : DiamondIntegral.Section4.RVMeasuredBounds.DomainBounded c)
+    {κ : Cardinal} (hκ : Cardinal.aleph0 < κ) (hs : Saturated M κ) (hsmall : Cardinal.mk (T : Set M) < κ)
+    (h00 : M ⊨ Axioms.ACVF00) {s : ℕ} {B : DefSet (rawMixedSpace (M := M) (1 + k) s) (T : Set M)}
+    {f : Map (rvLift (toMeasured hc c).object) B} (h : RelativeApertureChain (G := G) _ B f) :
+    ∃ g' : Good T B, (∀ p, g'.form (f p) = liftForm (toMeasured hc c) p) ∧
+      ∃ m, BlowupSteps m (cls (⟨c, hb⟩ : Obj (BT T) (1 + k))) (clsG hc g') := by
+  obtain ⟨g', hf, m, hm⟩ := relative_chain hc hκ hs hsmall h00 h (liftGood hc c hU)
+  rw [clsG_lift hc c hU hb] at hm
+  exact ⟨g', hf, m, hm⟩
+
+end Lift
+
 end DiamondIntegral.Section7.SpecialChainInduction
