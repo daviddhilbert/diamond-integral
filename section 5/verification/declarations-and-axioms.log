@@ -1205,6 +1205,15 @@ fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Mileston
       (IntegrationInACVF.Section6.closureBase_field C.base) hγ δ ⋯ hδ1 hD;
   let J := DiamondIntegral.Section5.sortedTransferOriginalLiftInput ⋯ ⋯ I;
   { lift := J.lift, lift_class := ⋯, surjective := ⋯, kernel := ⋯ }
+def DiamondIntegral.Section5.completed18ClosedVFObject : {M : Type} →
+  [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B : SpecialTransformations.Section3.GammaParameters.Base} →
+        IntegrationInACVF.Section6.FiniteRV.GammaVFAllFiniteObject B →
+          IntegrationInACVF.Section7.CompletedSection6.GammaVFAllFiniteObject B :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {B} A =>
+  { arity := A.arity, domain := A.domain, definable := ⋯, finiteFibres := ⋯ }
 def DiamondIntegral.Section5.completed18NativeVFForgetInvariant : {M : Type} →
   [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
     [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
@@ -1213,22 +1222,24 @@ def DiamondIntegral.Section5.completed18NativeVFForgetInvariant : {M : Type} →
           (hκ : LT.lt.{1} Cardinal.aleph0.{0} κ) →
             (hs : SpecialTransformations.Section3.Saturated M κ) →
               (h00 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00) →
-                (hr : LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ) →
-                  (FBase : SpecialTransformations.Section3.VFFieldBase B.real) →
-                    (hγ : LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) κ) →
-                      (δ : SpecialTransformations.Section3.Values.Gamma) →
-                        (hδ : Membership.mem.{0, 0} B.gamma δ) →
-                          (hδ1 : LT.lt.{0} 1 δ) →
-                            (hB : SpecialTransformations.Section3.GammaParameters.VFGammaGeneratedBase B) →
-                              SpecialTransformations.Section4.PositiveGrothendieck.Invariant.{0, 0}
-                                (IntegrationInACVF.Section6.FiniteRV.gammaVFAllPositivePresentation B) :=
+                (hc : CanonicalStructure.IsCanonical) →
+                  (hr : LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ) →
+                    (FBase : SpecialTransformations.Section3.VFFieldBase B.real) →
+                      (hγ : LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) κ) →
+                        (δ : SpecialTransformations.Section3.Values.Gamma) →
+                          (hδ : Membership.mem.{0, 0} B.gamma δ) →
+                            (hδ1 : LT.lt.{0} 1 δ) →
+                              (hB : SpecialTransformations.Section3.GammaParameters.VFGammaGeneratedBase B) →
+                                SpecialTransformations.Section4.PositiveGrothendieck.Invariant.{0, 0}
+                                  (IntegrationInACVF.Section6.FiniteRV.gammaVFAllPositivePresentation B) :=
 fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
-    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {B} {κ} hκ hs h00 hr
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {B} {κ} hκ hs h00 hc hr
     FBase hγ δ hδ hδ1 hB =>
   SpecialTransformations.Section4.PositiveGrothendieck.Invariant.mk.{0, 0}
     (fun A =>
       SpecialTransformations.Section4.PositiveAdditiveGrothendieck.of.{0}
-        (IntegrationInACVF.Section6.FiniteRV.gammaVFAllAdditivePresentation B) A)
+        (IntegrationInACVF.Section7.CompletedSection6.gammaVFAllAdditivePresentation B)
+        (DiamondIntegral.Section5.completed18ClosedVFObject A))
     ⋯ ⋯ ⋯ ⋯ ⋯
 def DiamondIntegral.Section5.completed18NativeVFForget : {M : Type} →
   [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
@@ -1238,21 +1249,22 @@ def DiamondIntegral.Section5.completed18NativeVFForget : {M : Type} →
           (hκ : LT.lt.{1} Cardinal.aleph0.{0} κ) →
             (hs : SpecialTransformations.Section3.Saturated M κ) →
               (h00 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00) →
-                (hr : LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ) →
-                  (FBase : SpecialTransformations.Section3.VFFieldBase B.real) →
-                    (hγ : LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) κ) →
-                      (δ : SpecialTransformations.Section3.Values.Gamma) →
-                        (hδ : Membership.mem.{0, 0} B.gamma δ) →
-                          (hδ1 : LT.lt.{0} 1 δ) →
-                            (hB : SpecialTransformations.Section3.GammaParameters.VFGammaGeneratedBase B) →
-                              RingHom.{0, 0} (IntegrationInACVF.Section6.FiniteRV.GammaVFAllKPlus B)
-                                (IntegrationInACVF.Section6.FiniteRV.GammaVFAllAdditiveKPlus B) :=
+                (hc : CanonicalStructure.IsCanonical) →
+                  (hr : LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ) →
+                    (FBase : SpecialTransformations.Section3.VFFieldBase B.real) →
+                      (hγ : LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) κ) →
+                        (δ : SpecialTransformations.Section3.Values.Gamma) →
+                          (hδ : Membership.mem.{0, 0} B.gamma δ) →
+                            (hδ1 : LT.lt.{0} 1 δ) →
+                              (hB : SpecialTransformations.Section3.GammaParameters.VFGammaGeneratedBase B) →
+                                RingHom.{0, 0} (IntegrationInACVF.Section6.FiniteRV.GammaVFAllKPlus B)
+                                  (IntegrationInACVF.Section7.CompletedSection6.GammaVFAllAdditiveKPlus B) :=
 fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
-    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {B} {κ} hκ hs h00 hr
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {B} {κ} hκ hs h00 hc hr
     FBase hγ δ hδ hδ1 hB =>
   SpecialTransformations.Section4.PositiveGrothendieck.lift.{0, 0}
     (IntegrationInACVF.Section6.FiniteRV.gammaVFAllPositivePresentation B)
-    (DiamondIntegral.Section5.completed18NativeVFForgetInvariant hκ hs h00 hr FBase hγ δ hδ hδ1 hB)
+    (DiamondIntegral.Section5.completed18NativeVFForgetInvariant hκ hs h00 hc hr FBase hγ δ hδ hδ1 hB)
 def DiamondIntegral.Section5.completed18LocalLift : {M : Type} →
   [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
     [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
@@ -32830,7 +32842,7 @@ fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Mileston
               _a (DiamondIntegral.Section5.completed18RVPositiveEquiv x)
                   (DiamondIntegral.Section5.completed18RVPositiveEquiv y) ↔
                 (RingCon.ker.{0, 0} (DiamondIntegral.Section5.completed18LocalLift (LT.lt.le.{1} hκ) hs h00 hr hB)) x y)
-            (DiamondIntegral.Section5.completed18NativePositiveLift_kernel hκ hs h00 hr FBase hγ δ hδ hδ1 hB)))
+            (DiamondIntegral.Section5.completed18NativePositiveLift_kernel hκ hs h00 hc hr FBase hγ δ hδ hδ1 hB)))
         (id.{0}
           (Iff.symm
             (Function.Injective.eq_iff.{1, 1}
@@ -32842,39 +32854,40 @@ theorem DiamondIntegral.Section5.completed18NativeVFForget_class : ∀ {M : Type
   {B : SpecialTransformations.Section3.GammaParameters.Base} {κ : Cardinal.{0}} (hκ : LT.lt.{1} Cardinal.aleph0.{0} κ)
   (hs : SpecialTransformations.Section3.Saturated M κ)
   (h00 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00)
-  (hr : LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ) (FBase : SpecialTransformations.Section3.VFFieldBase B.real)
-  (hγ : LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) κ) (δ : SpecialTransformations.Section3.Values.Gamma)
-  (hδ : Membership.mem.{0, 0} B.gamma δ) (hδ1 : LT.lt.{0} 1 δ)
+  (hc : CanonicalStructure.IsCanonical) (hr : LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ)
+  (FBase : SpecialTransformations.Section3.VFFieldBase B.real) (hγ : LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) κ)
+  (δ : SpecialTransformations.Section3.Values.Gamma) (hδ : Membership.mem.{0, 0} B.gamma δ) (hδ1 : LT.lt.{0} 1 δ)
   (hB : SpecialTransformations.Section3.GammaParameters.VFGammaGeneratedBase B)
   (A : IntegrationInACVF.Section6.FiniteRV.GammaVFAllFiniteObject B),
   Eq.{1}
-    ((DiamondIntegral.Section5.completed18NativeVFForget hκ hs h00 hr FBase hγ δ hδ hδ1 hB)
+    ((DiamondIntegral.Section5.completed18NativeVFForget hκ hs h00 hc hr FBase hγ δ hδ hδ1 hB)
       (DiamondIntegral.Section5.completed18VFClass A))
     (SpecialTransformations.Section4.PositiveAdditiveGrothendieck.of.{0}
-      (IntegrationInACVF.Section6.FiniteRV.gammaVFAllAdditivePresentation B) A) :=
+      (IntegrationInACVF.Section7.CompletedSection6.gammaVFAllAdditivePresentation B)
+      (DiamondIntegral.Section5.completed18ClosedVFObject A)) :=
 fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
-    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {B} {κ} hκ hs h00 hr
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {B} {κ} hκ hs h00 hc hr
     FBase hγ δ hδ hδ1 hB A =>
   SpecialTransformations.Section4.PositiveGrothendieck.lift_of.{0, 0}
     (IntegrationInACVF.Section6.FiniteRV.gammaVFAllPositivePresentation B)
-    (DiamondIntegral.Section5.completed18NativeVFForgetInvariant hκ hs h00 hr FBase hγ δ hδ hδ1 hB) A
+    (DiamondIntegral.Section5.completed18NativeVFForgetInvariant hκ hs h00 hc hr FBase hγ δ hδ hδ1 hB) A
 theorem DiamondIntegral.Section5.completed18NativeVFForget_lift : ∀ {M : Type}
   [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
   [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
   {B : SpecialTransformations.Section3.GammaParameters.Base} {κ : Cardinal.{0}} (hκ : LT.lt.{1} Cardinal.aleph0.{0} κ)
   (hs : SpecialTransformations.Section3.Saturated M κ)
   (h00 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00)
-  (hr : LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ) (FBase : SpecialTransformations.Section3.VFFieldBase B.real)
-  (hγ : LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) κ) (δ : SpecialTransformations.Section3.Values.Gamma)
-  (hδ : Membership.mem.{0, 0} B.gamma δ) (hδ1 : LT.lt.{0} 1 δ)
+  (hc : CanonicalStructure.IsCanonical) (hr : LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ)
+  (FBase : SpecialTransformations.Section3.VFFieldBase B.real) (hγ : LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) κ)
+  (δ : SpecialTransformations.Section3.Values.Gamma) (hδ : Membership.mem.{0, 0} B.gamma δ) (hδ1 : LT.lt.{0} 1 δ)
   (hB : SpecialTransformations.Section3.GammaParameters.VFGammaGeneratedBase B)
   (x : IntegrationInACVF.Section6.FiniteRV.GammaNonzeroGradedAt),
   Eq.{1}
-    ((DiamondIntegral.Section5.completed18NativeVFForget hκ hs h00 hr FBase hγ δ hδ hδ1 hB)
+    ((DiamondIntegral.Section5.completed18NativeVFForget hκ hs h00 hc hr FBase hγ δ hδ hδ1 hB)
       ((IntegrationInACVF.Section6.FiniteRV.gammaNonzeroGlobalLiftAt ⋯ hs h00 hr hB) x))
-    ((IntegrationInACVF.Section6.FiniteRV.gammaNonzeroGlobalAdditiveLiftAt ⋯ hs h00 hr hB) x) :=
+    ((IntegrationInACVF.Section7.CompletedSection6.gammaNonzeroGlobalAdditiveLiftAt ⋯ hs h00 hr hB) x) :=
 fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
-    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {B} {κ} hκ hs h00 hr
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {B} {κ} hκ hs h00 hc hr
     FBase hγ δ hδ hδ1 hB x =>
   DirectSum.induction_on.{0, 0} x
     (of_eq_true
@@ -32882,13 +32895,15 @@ fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Mileston
         (congr.{1, 1}
           (congrArg.{1, 1} Eq.{1}
             (Eq.trans.{1}
-              (congrArg.{1, 1} (⇑(DiamondIntegral.Section5.completed18NativeVFForget hκ hs h00 hr FBase hγ δ hδ hδ1 hB))
+              (congrArg.{1, 1}
+                (⇑(DiamondIntegral.Section5.completed18NativeVFForget hκ hs h00 hc hr FBase hγ δ hδ hδ1 hB))
                 (map_zero.{0, 0, 0}
                   (IntegrationInACVF.Section6.FiniteRV.gammaNonzeroGlobalLiftAt (LT.lt.le.{1} hκ) hs h00 hr hB)))
               (map_zero.{0, 0, 0}
-                (DiamondIntegral.Section5.completed18NativeVFForget hκ hs h00 hr FBase hγ δ hδ hδ1 hB))))
+                (DiamondIntegral.Section5.completed18NativeVFForget hκ hs h00 hc hr FBase hγ δ hδ hδ1 hB))))
           (map_zero.{0, 0, 0}
-            (IntegrationInACVF.Section6.FiniteRV.gammaNonzeroGlobalAdditiveLiftAt (LT.lt.le.{1} hκ) hs h00 hr hB)))
+            (IntegrationInACVF.Section7.CompletedSection6.gammaNonzeroGlobalAdditiveLiftAt (LT.lt.le.{1} hκ) hs h00 hr
+              hB)))
         (eq_self.{1} 0)))
     (fun k a =>
       Exists.casesOn.{1} (Subtype.property.{1} a) fun U h =>
@@ -32897,10 +32912,11 @@ fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Mileston
           Eq.ndrec.{0, 1} (motive := fun a =>
             Eq.{1} (IntegrationInACVF.Section6.FiniteRV.gammaIsoClassAt U) ↑a →
               Eq.{1}
-                ((DiamondIntegral.Section5.completed18NativeVFForget hκ hs h00 hr FBase hγ δ hδ hδ1 hB)
+                ((DiamondIntegral.Section5.completed18NativeVFForget hκ hs h00 hc hr FBase hγ δ hδ hδ1 hB)
                   ((IntegrationInACVF.Section6.FiniteRV.gammaNonzeroGlobalLiftAt (LT.lt.le.{1} hκ) hs h00 hr hB)
                     ((DirectSum.of.{0, 0} IntegrationInACVF.Section6.FiniteRV.GammaNonzeroClassesAt k) a)))
-                ((IntegrationInACVF.Section6.FiniteRV.gammaNonzeroGlobalAdditiveLiftAt (LT.lt.le.{1} hκ) hs h00 hr hB)
+                ((IntegrationInACVF.Section7.CompletedSection6.gammaNonzeroGlobalAdditiveLiftAt (LT.lt.le.{1} hκ) hs h00
+                    hr hB)
                   ((DirectSum.of.{0, 0} IntegrationInACVF.Section6.FiniteRV.GammaNonzeroClassesAt k) a)))
             (fun hu =>
               id.{0}
@@ -32909,9 +32925,9 @@ fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Mileston
                     (congrArg.{1, 1}
                       (fun _a =>
                         Eq.{1}
-                          ((DiamondIntegral.Section5.completed18NativeVFForget hκ hs h00 hr FBase hγ δ hδ hδ1 hB) _a)
-                          ((IntegrationInACVF.Section6.FiniteRV.gammaNonzeroGlobalAdditiveLiftAt (LT.lt.le.{1} hκ) hs
-                              h00 hr hB)
+                          ((DiamondIntegral.Section5.completed18NativeVFForget hκ hs h00 hc hr FBase hγ δ hδ hδ1 hB) _a)
+                          ((IntegrationInACVF.Section7.CompletedSection6.gammaNonzeroGlobalAdditiveLiftAt
+                              (LT.lt.le.{1} hκ) hs h00 hr hB)
                             ((DirectSum.of.{0, 0} IntegrationInACVF.Section6.FiniteRV.GammaNonzeroClassesAt k)
                               (IntegrationInACVF.Section6.FiniteRV.gammaNonzeroClassAt U hU))))
                       (IntegrationInACVF.Section6.FiniteRV.gammaNonzeroGlobalLiftAt_class (LT.lt.le.{1} hκ) hs h00 hr hB
@@ -32922,11 +32938,11 @@ fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Mileston
                         (congrArg.{1, 1}
                           (fun _a =>
                             Eq.{1} _a
-                              ((IntegrationInACVF.Section6.FiniteRV.gammaNonzeroGlobalAdditiveLiftAt (LT.lt.le.{1} hκ)
-                                  hs h00 hr hB)
+                              ((IntegrationInACVF.Section7.CompletedSection6.gammaNonzeroGlobalAdditiveLiftAt
+                                  (LT.lt.le.{1} hκ) hs h00 hr hB)
                                 ((DirectSum.of.{0, 0} IntegrationInACVF.Section6.FiniteRV.GammaNonzeroClassesAt k)
                                   (IntegrationInACVF.Section6.FiniteRV.gammaNonzeroClassAt U hU))))
-                          (DiamondIntegral.Section5.completed18NativeVFForget_class hκ hs h00 hr FBase hγ δ hδ hδ1 hB
+                          (DiamondIntegral.Section5.completed18NativeVFForget_class hκ hs h00 hc hr FBase hγ δ hδ hδ1 hB
                             (IntegrationInACVF.Section6.FiniteRV.gammaVFAllFromBounded
                               (Subtype.mk.{1} (SpecialTransformations.Section7.gammaLiftVF U.toGamma.toGammaRVObject)
                                 (IntegrationInACVF.Section6.FiniteRV.gammaAllLiftClass._proof_1 U.toGamma))))))
@@ -32936,44 +32952,47 @@ fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Mileston
                             (fun _a =>
                               Eq.{1}
                                 (SpecialTransformations.Section4.PositiveAdditiveGrothendieck.of.{0}
-                                  (IntegrationInACVF.Section6.FiniteRV.gammaVFAllAdditivePresentation B)
-                                  (IntegrationInACVF.Section6.FiniteRV.gammaVFAllFromBounded
-                                    (Subtype.mk.{1}
-                                      (SpecialTransformations.Section7.gammaLiftVF U.toGamma.toGammaRVObject)
-                                      (IntegrationInACVF.Section6.FiniteRV.gammaAllLiftClass._proof_1 U.toGamma))))
+                                  (IntegrationInACVF.Section7.CompletedSection6.gammaVFAllAdditivePresentation B)
+                                  (DiamondIntegral.Section5.completed18ClosedVFObject
+                                    (IntegrationInACVF.Section6.FiniteRV.gammaVFAllFromBounded
+                                      (Subtype.mk.{1}
+                                        (SpecialTransformations.Section7.gammaLiftVF U.toGamma.toGammaRVObject)
+                                        (IntegrationInACVF.Section6.FiniteRV.gammaAllLiftClass._proof_1 U.toGamma)))))
                                 (_a
                                   ((DirectSum.of.{0, 0} IntegrationInACVF.Section6.FiniteRV.GammaNonzeroClassesAt k)
                                     (IntegrationInACVF.Section6.FiniteRV.gammaNonzeroClassAt U hU))))
-                            (IntegrationInACVF.Section6.FiniteRV.gammaNonzeroGlobalAdditiveLiftAt.eq_1 (LT.lt.le.{1} hκ)
-                              hs h00 hr hB)))
+                            (IntegrationInACVF.Section7.CompletedSection6.gammaNonzeroGlobalAdditiveLiftAt.eq_1
+                              (LT.lt.le.{1} hκ) hs h00 hr hB)))
                         (Eq.mpr.{0}
                           (id.{0}
                             (congrArg.{1, 1}
                               (fun _a =>
                                 Eq.{1}
                                   (SpecialTransformations.Section4.PositiveAdditiveGrothendieck.of.{0}
-                                    (IntegrationInACVF.Section6.FiniteRV.gammaVFAllAdditivePresentation B)
-                                    (IntegrationInACVF.Section6.FiniteRV.gammaVFAllFromBounded
-                                      (Subtype.mk.{1}
-                                        (SpecialTransformations.Section7.gammaLiftVF U.toGamma.toGammaRVObject)
-                                        (IntegrationInACVF.Section6.FiniteRV.gammaAllLiftClass._proof_1 U.toGamma))))
+                                    (IntegrationInACVF.Section7.CompletedSection6.gammaVFAllAdditivePresentation B)
+                                    (DiamondIntegral.Section5.completed18ClosedVFObject
+                                      (IntegrationInACVF.Section6.FiniteRV.gammaVFAllFromBounded
+                                        (Subtype.mk.{1}
+                                          (SpecialTransformations.Section7.gammaLiftVF U.toGamma.toGammaRVObject)
+                                          (IntegrationInACVF.Section6.FiniteRV.gammaAllLiftClass._proof_1 U.toGamma)))))
                                   _a)
                               (DirectSum.toAddMonoid_of.{0, 0, 0}
                                 (fun k =>
                                   AddMonoidHom.comp.{0, 0, 0}
-                                    (IntegrationInACVF.Section6.FiniteRV.gammaAllAdditiveLiftClassesAt (LT.lt.le.{1} hκ)
-                                      hs h00 hr hB)
+                                    (IntegrationInACVF.Section7.CompletedSection6.gammaAllAdditiveLiftClassesAt
+                                      (LT.lt.le.{1} hκ) hs h00 hr hB)
                                     (AddSubmonoid.subtype.{0}
                                       (IntegrationInACVF.Section6.FiniteRV.gammaNonzeroClassSubmonoidAt k)))
                                 k (IntegrationInACVF.Section6.FiniteRV.gammaNonzeroClassAt U hU))))
                           (Eq.symm.{1}
-                            (IntegrationInACVF.Section6.FiniteRV.gammaAllAdditiveLiftClassesAt_class (LT.lt.le.{1} hκ)
-                              hs h00 hr hB U))))))))
+                            (IntegrationInACVF.Section7.CompletedSection6.gammaAllAdditiveLiftClassesAt_class
+                              (LT.lt.le.{1} hκ) hs h00 hr hB U))))))))
             (Eq.symm.{1} ha) hu)
     fun x y hx hy =>
-    let F := DiamondIntegral.Section5.completed18NativeVFForget hκ hs h00 hr FBase hγ δ hδ hδ1 hB;
+    let F := DiamondIntegral.Section5.completed18NativeVFForget hκ hs h00 hc hr FBase hγ δ hδ hδ1 hB;
     let L := IntegrationInACVF.Section6.FiniteRV.gammaNonzeroGlobalLiftAt (LT.lt.le.{1} hκ) hs h00 hr hB;
-    let A := IntegrationInACVF.Section6.FiniteRV.gammaNonzeroGlobalAdditiveLiftAt (LT.lt.le.{1} hκ) hs h00 hr hB;
+    let A :=
+      IntegrationInACVF.Section7.CompletedSection6.gammaNonzeroGlobalAdditiveLiftAt (LT.lt.le.{1} hκ) hs h00 hr hB;
     Eq.trans.{1} (congrArg.{1, 1} (⇑F) (RingHom.map_add.{0, 0} L x y))
       (Eq.trans.{1} (RingHom.map_add.{0, 0} F (L x) (L y))
         (Eq.trans.{1} (congrArg₂.{1, 1, 1} (fun x1 x2 => HAdd.hAdd.{0, 0, 0} x1 x2) hx hy)
@@ -32983,24 +33002,25 @@ theorem DiamondIntegral.Section5.completed18NativePositiveLift_kernel : ∀ {M :
   [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
   {B : SpecialTransformations.Section3.GammaParameters.Base} {κ : Cardinal.{0}} (hκ : LT.lt.{1} Cardinal.aleph0.{0} κ)
   (hs : SpecialTransformations.Section3.Saturated M κ)
-  (h00 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00)
-  (hr : LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ) (FBase : SpecialTransformations.Section3.VFFieldBase B.real),
-  LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) κ →
-    ∀ (δ : SpecialTransformations.Section3.Values.Gamma),
-      Membership.mem.{0, 0} B.gamma δ →
-        LT.lt.{0} 1 δ →
-          ∀ (hB : SpecialTransformations.Section3.GammaParameters.VFGammaGeneratedBase B),
-            Eq.{1} (ringConGen.{0} IntegrationInACVF.Section6.FiniteRV.gammaNonzeroBasicRelation)
-              (RingCon.ker.{0, 0} (IntegrationInACVF.Section6.FiniteRV.gammaNonzeroGlobalLiftAt ⋯ hs h00 hr hB)) :=
+  (h00 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00),
+  CanonicalStructure.IsCanonical →
+    ∀ (hr : LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ) (FBase : SpecialTransformations.Section3.VFFieldBase B.real),
+      LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) κ →
+        ∀ (δ : SpecialTransformations.Section3.Values.Gamma),
+          Membership.mem.{0, 0} B.gamma δ →
+            LT.lt.{0} 1 δ →
+              ∀ (hB : SpecialTransformations.Section3.GammaParameters.VFGammaGeneratedBase B),
+                Eq.{1} (ringConGen.{0} IntegrationInACVF.Section6.FiniteRV.gammaNonzeroBasicRelation)
+                  (RingCon.ker.{0, 0} (IntegrationInACVF.Section6.FiniteRV.gammaNonzeroGlobalLiftAt ⋯ hs h00 hr hB)) :=
 fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
-    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {B} {κ} hκ hs h00 hr
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {B} {κ} hκ hs h00 hc hr
     FBase hγ δ hδ hδ1 hB =>
   have he :=
     Eq.trans.{1}
-      (IntegrationInACVF.Section6.FiniteRV.gammaNonzeroIspRingCon_eq_union (LT.lt.le.{1} hκ) hs h00 hr FBase hγ δ hδ hδ1
-        (DiamondIntegral.Section5.completed_section5_input (LT.lt.le.{1} hκ) hs) hB)
-      (IntegrationInACVF.Section6.FiniteRV.gammaNonzeroIsp_eq_basic (LT.lt.le.{1} hκ) hs h00 hr FBase hγ δ hδ hδ1
-        (DiamondIntegral.Section5.completed_section5_input (LT.lt.le.{1} hκ) hs) hB);
+      (IntegrationInACVF.Section7.CompletedSection6.gammaNonzeroIspRingCon_eq_union (LT.lt.le.{1} hκ) hs h00 hr FBase hγ
+        δ hδ hδ1 hc hB)
+      (IntegrationInACVF.Section7.CompletedSection6.gammaNonzeroIsp_eq_basic (LT.lt.le.{1} hκ) hs h00 hr FBase hγ δ hδ
+        hδ1 hc hB);
   le_antisymm.{0}
     (Eq.mpr.{0}
       (id.{0}
@@ -33015,37 +33035,37 @@ fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Mileston
     id.{0}
       (fun hxy =>
         have ha :=
-          congrArg.{1, 1} (⇑(DiamondIntegral.Section5.completed18NativeVFForget hκ hs h00 hr FBase hγ δ hδ hδ1 hB)) hxy;
+          congrArg.{1, 1} (⇑(DiamondIntegral.Section5.completed18NativeVFForget hκ hs h00 hc hr FBase hγ δ hδ hδ1 hB))
+            hxy;
         have hb :=
           id.{0}
             (Eq.mpr.{0}
               (id.{0}
                 (congrArg.{1, 1} (fun _a => _a x y)
-                  (IntegrationInACVF.Section6.FiniteRV.gammaNonzeroIspUnionAddCon_eq_lift_kernel (LT.lt.le.{1} hκ) hs
-                    h00 hr FBase hγ δ hδ hδ1 (DiamondIntegral.Section5.completed_section5_input (LT.lt.le.{1} hκ) hs)
-                    hB)))
+                  (IntegrationInACVF.Section7.CompletedSection6.gammaNonzeroIspUnionAddCon_eq_lift_kernel
+                    (LT.lt.le.{1} hκ) hs h00 hr FBase hγ δ hδ hδ1 hc hB)))
               (Eq.mp.{0}
                 (congrArg.{1, 1}
                   (fun _a =>
                     Eq.{1}
-                      ((IntegrationInACVF.Section6.FiniteRV.gammaNonzeroGlobalAdditiveLiftAt (LT.lt.le.{1} hκ) hs h00 hr
-                          hB)
+                      ((IntegrationInACVF.Section7.CompletedSection6.gammaNonzeroGlobalAdditiveLiftAt (LT.lt.le.{1} hκ)
+                          hs h00 hr hB)
                         x)
                       _a)
-                  (DiamondIntegral.Section5.completed18NativeVFForget_lift hκ hs h00 hr FBase hγ δ hδ hδ1 hB y))
+                  (DiamondIntegral.Section5.completed18NativeVFForget_lift hκ hs h00 hc hr FBase hγ δ hδ hδ1 hB y))
                 (Eq.mp.{0}
                   (congrArg.{1, 1}
                     (fun _a =>
                       Eq.{1} _a
-                        ((DiamondIntegral.Section5.completed18NativeVFForget hκ hs h00 hr FBase hγ δ hδ hδ1 hB)
+                        ((DiamondIntegral.Section5.completed18NativeVFForget hκ hs h00 hc hr FBase hγ δ hδ hδ1 hB)
                           ((IntegrationInACVF.Section6.FiniteRV.gammaNonzeroGlobalLiftAt (LT.lt.le.{1} hκ) hs h00 hr hB)
                             y)))
-                    (DiamondIntegral.Section5.completed18NativeVFForget_lift hκ hs h00 hr FBase hγ δ hδ hδ1 hB x))
+                    (DiamondIntegral.Section5.completed18NativeVFForget_lift hκ hs h00 hc hr FBase hγ δ hδ hδ1 hB x))
                   ha)));
         Eq.mp.{0}
           (congrArg.{1, 1} (fun _a => _a x y)
-            (IntegrationInACVF.Section6.FiniteRV.gammaNonzeroIsp_eq_basic (LT.lt.le.{1} hκ) hs h00 hr FBase hγ δ hδ hδ1
-              (DiamondIntegral.Section5.completed_section5_input (LT.lt.le.{1} hκ) hs) hB))
+            (IntegrationInACVF.Section7.CompletedSection6.gammaNonzeroIsp_eq_basic (LT.lt.le.{1} hκ) hs h00 hr FBase hγ
+              δ hδ hδ1 hc hB))
           hb)
       hxy
 theorem DiamondIntegral.Section5.completed18_tupleRV : ∀ {M : Type}
@@ -35767,8 +35787,12 @@ fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Mileston
 theorem DiamondIntegral.Section5.completed_section5_input : ∀ {M : Type}
   [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
   [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
-  {κ : Cardinal.{0}} (hκ : LE.le.{1} Cardinal.aleph0.{0} κ) (hs : SpecialTransformations.Section3.Saturated M κ),
-  IntegrationInACVF.Section6.Section5TwoOrderInputAll hκ hs :=
+  {κ : Cardinal.{0}} (hκ : LE.le.{1} Cardinal.aleph0.{0} κ) (hs : SpecialTransformations.Section3.Saturated M κ)
+  (B : SpecialTransformations.Section3.GammaParameters.Base) (hr : LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ),
+  LT.lt.{1} Cardinal.aleph0.{0} κ →
+    FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00 →
+      ∀ (δ : SpecialTransformations.Section3.Values.Gamma),
+        Membership.mem.{0, 0} B.gamma δ → LT.lt.{0} 1 δ → IntegrationInACVF.Section6.Section5TwoOrderInput B hκ hs hr :=
 fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
     [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {κ} hκ hs B hr hκ' h00
     δ hδ hδ1 {a} =>
@@ -36806,6 +36830,20 @@ fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Mileston
                         hCode)
                       h }
             fun a b he => hAL a b he
+theorem DiamondIntegral.Section5.GammaQE.gamma_piecewise_rational_affine : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF],
+  DiamondIntegral.Section2.GammaPiecewiseRationalAffineInput :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] h00 S hΓ D f hf =>
+  Exists.casesOn.{2}
+    (DiamondIntegral.Section5.GammaQE.gamma_flat_normal_form S
+      (fun z => Membership.mem.{0, 0} D (z 0) ∧ Eq.{1} (f (z 0)) (z 1)) hf)
+    fun I h =>
+    Exists.casesOn.{2} h fun R h =>
+      Exists.casesOn.{1} h fun a h =>
+        Exists.casesOn.{1} h fun r h =>
+          Exists.casesOn.{1} h fun N hN => DiamondIntegral.Section5.GammaQE.finite_laws_of_flat_graph a r N D f hN
 theorem DiamondIntegral.Section5.GammaQE.finite_laws_of_flat_graph : ∀ {M : Type}
   [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
   [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {I R : Type}
@@ -36974,20 +37012,6 @@ fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Mileston
                                       have hneq := Eq.mpr.{0} ⋯ hne;
                                       have finish := ⋯;
                                       ⋯⟩)))
-theorem DiamondIntegral.Section5.GammaQE.gamma_piecewise_rational_affine : ∀ {M : Type}
-  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
-  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF],
-  DiamondIntegral.Section2.GammaPiecewiseRationalAffineInput :=
-fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
-    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] h00 S hΓ D f hf =>
-  Exists.casesOn.{2}
-    (DiamondIntegral.Section5.GammaQE.gamma_flat_normal_form S
-      (fun z => Membership.mem.{0, 0} D (z 0) ∧ Eq.{1} (f (z 0)) (z 1)) hf)
-    fun I h =>
-    Exists.casesOn.{2} h fun R h =>
-      Exists.casesOn.{1} h fun a h =>
-        Exists.casesOn.{1} h fun r h =>
-          Exists.casesOn.{1} h fun N hN => DiamondIntegral.Section5.GammaQE.finite_laws_of_flat_graph a r N D f hN
 theorem DiamondIntegral.Section5.GammaQE.positive_power_law.{u_1} : ∀ {G : Type u_1} [inst : CommGroup.{u_1} G]
   (c d a b : G) (p q r s : ℤ),
   LT.lt.{0} s q →
@@ -192328,6 +192352,7 @@ fun K [Field.{u_1} K] s hs =>
  Classical.choice.{u},
  Quot.sound.{u}]
 'DiamondIntegral.Section5.completed18GroundLiftInput' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+'DiamondIntegral.Section5.completed18ClosedVFObject' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
 'DiamondIntegral.Section5.completed18NativeVFForgetInvariant' depends on axioms: [propext,
  Classical.choice.{u},
  Quot.sound.{u}]
@@ -195517,10 +195542,10 @@ fun K [Field.{u_1} K] s hs =>
 'DiamondIntegral.Section5.exists_coherent_positioned_cell_label_injection' depends on axioms: [propext,
  Classical.choice.{u},
  Quot.sound.{u}]
-'DiamondIntegral.Section5.GammaQE.finite_laws_of_flat_graph' depends on axioms: [propext,
+'DiamondIntegral.Section5.GammaQE.gamma_piecewise_rational_affine' depends on axioms: [propext,
  Classical.choice.{u},
  Quot.sound.{u}]
-'DiamondIntegral.Section5.GammaQE.gamma_piecewise_rational_affine' depends on axioms: [propext,
+'DiamondIntegral.Section5.GammaQE.finite_laws_of_flat_graph' depends on axioms: [propext,
  Classical.choice.{u},
  Quot.sound.{u}]
 'DiamondIntegral.Section5.GammaQE.positive_power_law' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
@@ -201493,5 +201518,3 @@ fun K [Field.{u_1} K] s hs =>
 'PuiseuxSeries.mem_subfield_iff' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
 'PuiseuxSeries.mem_subfield_iff_support' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
 'PuiseuxSeries.exists_common_index' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
-warning: integration_in_acvf: repository has local changes:
-  /Users/yimu/Documents/Codex-Migration-20261112/projects/diamond integral/Section7/worktree/.lake/packages/integration_in_acvf

@@ -8,13 +8,17 @@ import sys
 
 SECTION = Path(__file__).resolve().parent
 ROOT = SECTION.parent
+sys.path.insert(0, str(ROOT / 'verification'))
+from proof_sources import read_source
+from check_shared_foundation import verify as verify_shared_foundation
+shared_proof_providers = verify_shared_foundation(ROOT)
 RECORD = SECTION / 'verification'
 RECORD.mkdir(exist_ok=True)
 subprocess.run([sys.executable, str(SECTION / 'prepare-dependencies.py')], cwd=ROOT, check=True)
 sources = sorted(SECTION.glob('*.lean'))
 source_snapshot = {str(p): hashlib.sha256(p.read_bytes()).hexdigest() for p in sources}
 for path in sources:
-    if re.search(r'\b(sorry|admit|axiom)\b', path.read_text()):
+    if re.search(r'\b(sorry|admit|axiom)\b', read_source(path)):
         raise SystemExit(f'Unproved declaration or proof placeholder: {path}')
 
 definitions = [
@@ -1025,7 +1029,7 @@ absolute_definitions, absolute_theorems = [], []
 for module, prefix in extra_modules.items():
     if prefix == '@root':
         namespaces = []
-        for line in lean_declaration_text((SECTION / (module + '.lean')).read_text()).splitlines():
+        for line in lean_declaration_text(read_source(SECTION / (module + '.lean'))).splitlines():
             ns = re.match(r'^namespace ([\w.]+)\s*$', line)
             end = re.match(r'^end ([\w.]+)\s*$', line)
             decl = re.match(r'^(def|abbrev|structure|inductive|theorem|lemma|instance) ([\w.]+)\b', line)
@@ -1038,7 +1042,7 @@ for module, prefix in extra_modules.items():
                 (absolute_theorems if decl[1] in ('theorem', 'lemma') else absolute_definitions).append(name)
         continue
     for kind, decl in re.findall(r'^(def|abbrev|structure|inductive|theorem) ([\w.]+)',
-                                  lean_declaration_text((SECTION / (module + '.lean')).read_text()), re.M):
+                                  lean_declaration_text(read_source(SECTION / (module + '.lean'))), re.M):
         if decl in ('complex_normalized_residue_constructible', 'descendedRESObject', 'descendedRESObject_domain'):
             decl = 'PuiseuxOriginal.' + decl
         name = prefix + decl
@@ -1081,13 +1085,17 @@ required_results = [
 missing_results = sorted(set(required_results) - set(names))
 if missing_results:
     raise SystemExit(f'Missing required Section 5 result declarations: {missing_results}')
-build = subprocess.run(['lake', 'build', '«section 5».Section'], cwd=ROOT,
+local_root_modules = [m for m, prefix in extra_modules.items() if prefix == '@root']
+build = subprocess.run(['lake', 'build', '«section 5».Section']
+                       + ['«section 5».' + m for m in local_root_modules], cwd=ROOT,
                        text=True, capture_output=True)
 (RECORD / 'build.log').write_text(build.stdout + build.stderr)
 if build.returncode:
     raise SystemExit(build.stdout + build.stderr)
 audit = RECORD / 'Audit.lean'
-audit.write_text('import «section 5».Section\nset_option pp.universes true\n'
+audit.write_text('import «section 5».Section\n'
+                 + ''.join('import «section 5».' + m + '\n' for m in local_root_modules)
+                 + 'set_option pp.universes true\n'
                  + '\n'.join('#print ' + name for name in names) + '\n'
                  + '\n'.join('#print axioms ' + name for name in names) + '\n')
 checked = subprocess.run(['lake', 'env', 'lean', str(audit)], cwd=ROOT,
@@ -1337,9 +1345,10 @@ fubini_target['discharged_inputs'] = {
     'YinGammaGroundUnmeasuredLiftInput': {
         'constructor': 'DiamondIntegral.Section5.completed18GroundLiftInput',
         'source': 'section 5/Completed18GroundLiftInput.lean',
-        'proof': 'The completed [18] Section 5 producers instantiate its Section 6 two-order registry. Actual RV and VF presentation equivalences identify the positive lift and its exact special kernel. RV-pullback preparation and zero strata prove positive surjectivity. The small generated definable closure is transported back to the original GammaGroundContext base through proved definability equivalence.',
+        'proof': 'The published generated-base unmeasured Section 6 kernel closes the native lift directly, without a universal two-order registry or dependency-source patch. Actual RV and VF presentation equivalences identify the positive lift and its exact special kernel. RV-pullback preparation and zero strata prove positive surjectivity. The small generated definable closure is transported back to the original GammaGroundContext base through proved definability equivalence.',
         'intrinsic_field_family': 'DiamondIntegral.Section5.completedGroundTaggedFieldLiftInputs',
         'unfinished_integration_section7_input': False,
+    'dependency_scope_adapters': 'retired; direct proved generated-base kernel',
     },
 }
 fubini_target['proved']['discharged_bounded_entry_point'] = 'DiamondIntegral.Section5.bounded_fubini_discharged'
@@ -1376,3 +1385,6 @@ status = {
 (RECORD / 'status.json').write_text(json.dumps(status, indent=2) + '\n')
 print('PASS: Requested Section 5 scope builds, including both Fubini theorems (also for RV[*] fibres), the inflated-family Fubini theorem, actual variety encodings, chart independence, the constructed ambient and the final corollary; public declarations and principles audited.')
 print('Section 5 requested scope is complete in the recorded context. Gamma-linearity and the exact Section 3 lifting/kernel inputs are proved and instantiated, including intrinsic field fibres; no HK result is assumed. See paper-target records.')
+
+# Recheck exact provider identities after the source/signature audit.
+verify_shared_foundation(ROOT)

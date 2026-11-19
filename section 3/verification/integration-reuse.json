@@ -1,6 +1,6 @@
 {
   "repository": "https://github.com/daviddhilbert/integration-in-ACVF",
-  "revision": "7675d31332f20421c803ea16af84964ed74cd51f",
+  "revision": "ab4c0e8b15e1e21b0b4fce57eed764be76020e06",
   "consumer_compatibility_manifest": "section 3/reuse/integration-manifest.json",
   "status": "Proof export inventory; consult VERIFICATION.json source hashes for the verified checkpoint.",
   "exports": [
@@ -156,16 +156,16 @@
   "remaining_native_presentation_adapters": [],
   "boundaries": [
     "Section 1 is introductory.",
-    "The Gamma piecewise rational-affine background input is not the numbered RV-linearity theorem 3.18. It is now proved locally as DiamondIntegral.Section5.GammaQE.gamma_piecewise_rational_affine (November 18).",
+    "The Gamma piecewise rational-affine background input is not the numbered RV-linearity theorem 3.18.",
     "Ordinary-source least-radius existence 3.17 is distinguished from its conditional whole-VF statement.",
     "3.24 retains the approved ordinary closed-parent scope; its open target may be VF.",
     "RV-form descent 2.34 does not silently supply the Gamma-volume lift/kernel interfaces.",
-    "The new native section 6 proof exports retain Section5TwoOrderInputAll, actual VFGammaGeneratedBase and their native categories. They are not identified with the legacy lift/kernel records without checked closure and category transport. Measured section 7 remains unavailable; no HK input is introduced. (November 18: this transport is now compiled in section 5; see later_export_review.status_update_2026_11_18.)"
+    "The new native section 6 proof exports retain Section5TwoOrderInputAll, actual VFGammaGeneratedBase and their native categories. They are not identified with the legacy lift/kernel records without checked closure and category transport. Measured section 7 remains unavailable; no HK input is introduced."
   ],
   "native_scope_notes": [
     "integrationFiniteDiscDefinable_iff retains the full mixed-output sort guard and every old actual disc name.",
     "integrationUnaryDiscAtomicityInput uses actual saturation at an infinite cardinal, with no bound on the enlarged real base: every cut is reduced to finite real support while all old imaginaries remain fixed.",
-    "Eight legacy interfaces now have checked constructors, and Section2CitedInputsDischarged.lean gives input-free versions of the section 2 statements that took them. The separate Gamma-affine background is proved locally (DiamondIntegral.Section5.GammaQE.gamma_piecewise_rational_affine) and discharged in Section2GammaLinearityDischarged.lean.",
+    "Eight legacy interfaces now have checked constructors. The separate Gamma-affine background remains explicit.",
     "The native disc-to-disc adapter retains all source/target RV labels and the original real/Gamma base. Finite real support retains every imaginary parameter; four source/target zero cells exclude whole-VF images in both directions, using checked open-ball infinitude. Actual saturation at an infinite cardinal remains explicit."
   ],
   "later_exports": [
@@ -222,7 +222,7 @@
     "auxiliary_API_adaptations": [
       "IntegrationInACVF.Section4.RelativeObstaclePreparation.zero_obstacles: proper OpenRadius in the auxiliary obstacle premise",
       "IntegrationInACVF.Section5.relative_zero_obstacles: proper OpenRadius in the auxiliary obstacle premise"
-    ],
-    "status_update_2026_11_18": "Superseded boundaries. At this pin the upstream README records Section 5 complete in its accepted RV[k] scope (lemma_5_8_finite) and Sections 6-7 complete in their accepted scopes. DiamondIntegral.Section5.completed_section5_input instantiates Section5TwoOrderInputAll; the closure transport and native/consumer category comparisons are compiled in section 5 (Completed18* modules), producing DiamondIntegral.Section5.completed18GroundLiftInput (Gamma-ground unmeasured record). The bounded record is produced by completedGammaGroundBoundedLiftInput and the measured records by local proofs. The upstream_status, remaining_upstream_input and legacy_input_status fields above record the November 12 state."
-  }
+    ]
+  },
+  "previous_revision": "7675d31332f20421c803ea16af84964ed74cd51f"
 }

@@ -25,9 +25,9 @@ Requested by the author. Independent audit (read-only), summarized here.
 - `C ⊆ ker` verified; `ker ⊆ C` plausible (manuscript sketch, spot-checked).
 - Lean (`TensorPresentationContext.lean`): `proposition_3_18_unmeasured_kernel`,
   `proposition_3_18_measured_kernel` prove `congruence = RingCon.ker` over
-  VF/Γ-generated grounds. **Gap:** no Lean result shows the kernel is
-  nontrivial (no separating invariant, no concrete `C((t))` model facts); the
-  Lean statements are equally true if the congruence were trivial.
+  VF/Γ-generated grounds. (This gap is now closed: see the "Proposition 3.18: nontriviality witness"
+  section, which proves a nontrivial kernel under the R–Y input and the stated
+  value condition.)
 - Downstream text still saying "isomorphism": introduction (lines ~645, ~663),
   Remark `eg:eb:factor` (~5840) and Section 8 `h_m` paragraph (~5927, false as
   written over `C((t))`). None is load-bearing; rewording needed.
@@ -91,8 +91,9 @@ global record `YinUnmeasuredLiftInput` is still not produced (unused).
   (`exists_pow_value_of_isAlgebraic`).
 - `remark_3_14_converse`: roots of definable values are definable.
 - `remark_3_14_point`: over a VF-generated field base, a base point of `γ^♯`
-  forces `γ` to be a value of the base field; so a definable `γ` outside
-  `Γ(𝕊)` has no definable point in `γ^♯` (the second sentence).
+  forces `γ` to be a value of the base field; so for a definable `γ` outside
+  `Γ(𝕊)`, `γ^♯` contains no point of the base. (The paper's "no definable
+  point" for points definable over S is not proved; see the triage.)
 Axioms: propext, Classical.choice, Quot.sound.
 
 ## Proposition 3.18: nontriviality witness (repaired, November 18)

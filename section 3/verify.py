@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import sys
 import hashlib
 import importlib.util
 import json
@@ -12,14 +13,18 @@ from pathlib import Path
 
 SECTION = Path(__file__).resolve().parent
 ROOT = SECTION.parent
+sys.path.insert(0, str(ROOT / 'verification'))
+from proof_sources import read_source
+from check_shared_foundation import verify as verify_shared_foundation
+shared_proof_providers = verify_shared_foundation(ROOT)
 SCRATCH = SECTION / ".scratch"
 RECORD = SECTION / "verification"
 ALLOWED = {"propext", "Classical.choice", "Quot.sound"}
 PINS = {
-    "integration_in_acvf": "7675d31332f20421c803ea16af84964ed74cd51f",
+    "integration_in_acvf": "ab4c0e8b15e1e21b0b4fce57eed764be76020e06",
     "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
-    "acvf_qe": "939346b0a99899e22a873479364e3cc5d142731c",
-    "special_transformations": "25852c85a31c67069b148bd31348128318303510",
+    "acvf_qe": "173708265d7959e031bf9552ee884501fc21f2cb",
+    "special_transformations": "423c767a84b709487da7e798f70f0639545db1ac",
 }
 REUSE = [
     "SpecialTransformations.Section4.PositiveAdditiveGrothendieck.universalEquiv",
@@ -88,7 +93,7 @@ def main() -> None:
     definitions = []
     instances = set(GROUPOID_INSTANCES)
     for path in sources:
-        source = path.read_text()
+        source = read_source(path)
         if re.search(r"\b(sorry|admit|axiom)\b", source):
             raise SystemExit(f"FAIL: placeholder or custom logical premise in {path}")
         scopes = []
@@ -192,7 +197,7 @@ def main() -> None:
         "principles": audited,
         "conditional_scope": {
             "GammaCategoryInterpretation": "GammaHom and GammaGroundGammaHom use the intended full RV preimages, as clarified by the author. The lower map is well defined. C001's unnecessary definition correction is withdrawn; the partial-map alternative and its fifth-root example do not bear on the intended map or its monicity.",
-            "integralFromKernel": "The generic construction requires the stated surjective lift and exact kernel congruence. All four Gamma-valued measured records now have local producers: completedMeasuredLiftInput, completedDegreeMeasuredLiftInput, completedGammaGroundMeasuredLiftInput and completedGammaGroundDegreeMeasuredLiftInput. These retain the exact original bases, full Gamma forms, weighted degree zero and stated model/topology hypotheses. The positive-degree reverse kernel and both global semiring kernels are proved without a resolved base or Gamma-to-RV section. The separate tensor kernels are also proved. Other cited interfaces retain their individually documented scope.",
+            "integralFromKernel": "The generic integral construction requires the stated surjective lift and exact lift-kernel congruence. The later [18] VF integration kernels remain precise accepted inputs; the separate local tensor kernels are both proved here.",
             "no_definable_bijection_of_point_obstruction": "Requires one definable set to have a definable point and the other to have none. A particular model or base realizing the R053 example is not constructed by this lemma.",
             "VFObject": "Real-base and complete original-Gamma-ground VF objects use the actual section 2 intrinsic dimension and finite RV fibres. Applications must use the valuation topology. Independent disc names are outside this default context; already definable interpreted names eliminate without expanding the real base.",
             "positiveTensorPresentations": "Both elementary positive tensor congruences equal the actual kernels; both quotient semiring isomorphisms, direct-sum gradings and original object degrees are proved under the explicit canonical, ACVF00, saturation, small real/Gamma and nontrivial-Gamma hypotheses. TensorPresentationContext instantiates the actual VF/Gamma-generated context. No HK input or cancellation is used.",
@@ -213,3 +218,6 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
+# Recheck exact provider identities after the source/signature audit.
+verify_shared_foundation(ROOT)

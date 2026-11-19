@@ -1,0 +1,62 @@
+{
+  "kind": "Local validation before publication",
+  "status": "PASS",
+  "checked_at_utc": "2026-11-17T01:33:36.884145+00:00",
+  "build": "lake -R build (16552 jobs)",
+  "audits": {
+    "section2": "PASS",
+    "section3": "PASS",
+    "section4": "PASS",
+    "section5": "PASS",
+    "section6": "PASS",
+    "weighted": "PASS"
+  },
+  "providers": {
+    "hilbert-mathlib": "a26c12d71f83356ad48442b782be67ff01bd3f18",
+    "acvf_qe": "a4138c3a7899330d1c77d1ec01f8f29395b5805c",
+    "special_transformations": "39f369f0a15440465cbd12a4484779c034f278b7",
+    "integration_in_acvf": "a7b4779b17d8491522ff97c2a4a829546bb98683",
+    "fubini_theorems": "fea1092a0a3e0b6bcde5453c3083151f16d747f9"
+  },
+  "shared_modules": 65,
+  "all_shared_source_modules": 106,
+  "extracted_compatibility_paths": 1803,
+  "fubini_source_modules": 1786,
+  "upstream_whole_module_promotions": 17,
+  "inherited_finite_laws_owner": "special-transformations",
+  "preserved_fubini_full_types_and_axiom_inventories": 10566,
+  "provider_contract_status": "PASS",
+  "source_audit_policy": "Verifiers follow the exact provider proof bodies and verify source, shim and pin fingerprints.",
+  "historical_receipts": "Generated tracked snapshots remain matching historical checkpoints. Fresh full outputs are archived locally and uploaded by CI.",
+  "ci_evidence": "See GitHub Actions for the published commit; this receipt records local validation.",
+  "previous_shared_migration_checkpoint": {
+    "status": "PASS",
+    "build": "lake -R build (15486 jobs)",
+    "audits": {
+      "section2": "PASS",
+      "section3": "PASS",
+      "section4": "PASS",
+      "section5": "PASS",
+      "section6": "PASS",
+      "weighted": "PASS"
+    },
+    "shared_modules": 65,
+    "all_shared_source_modules": 106,
+    "shared_provider": "a26c12d71f83356ad48442b782be67ff01bd3f18",
+    "qe_provider": "a4138c3a7899330d1c77d1ec01f8f29395b5805c",
+    "special_provider": "4b6afb7cabcb59d7ca90e883309ddc8887241d76",
+    "integration_provider": "4216f453f351576af0c27c84fa9451e9e3c7ee90",
+    "fubini_public_baseline": {
+      "declarations": 10566,
+      "full_type_output_sha256": "8dfd493d60ebf29700b6a6d7da198e0ee622bf52d304abc79325de77bfef1339",
+      "private_name_type_references": 0
+    },
+    "prerequisite_promotion_baseline": 69,
+    "source_audit_policy": "Auditors follow compatibility paths to exact shared proof providers; names, full types and standing hypotheses retained.",
+    "adapter_resolution_ci": {
+      "run": 43904799373,
+      "status": "PASS"
+    },
+    "historical_receipts": "Existing generated snapshots are retained as matching historical checkpoints; fresh full local evidence is archived and CI uploads current outputs."
+  }
+}

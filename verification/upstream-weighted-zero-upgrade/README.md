@@ -41,24 +41,18 @@ The corrected Special transformations Gamma-zero exports are checked at their
 full types alongside those local interfaces. This is a compatibility check, not
 an assertion that all the different presentations are definitionally equal.
 
-Four Section 3 interfaces retain their exact types:
+Four Section 3 records remain the same precise accepted cited inputs:
 `YinMeasuredLiftInput`, `YinDegreeMeasuredLiftInput`,
 `YinGammaGroundMeasuredLiftInput`, and `YinGammaGroundDegreeMeasuredLiftInput`.
-They require Gamma-valued lifting, surjectivity and exact kernels. All four
-now have local proved producers listed in
-[the Gamma-kernel completion note](../../section%203/verification/GAMMA-KERNEL-COMPLETION.md).
-The compatibility checker audits these producers and their exact kernel
-theorems as well as the original interfaces. The new
+They require Gamma-valued lifting, surjectivity and exact kernels. The new
 Integration Section 7 HK theorem is about nonzero RV-valued forms. Names referring
 to a Gamma parameter base do not change that density codomain. Neither its name
 nor valuation of an existing RV form supplies a same-base RV lift of every Gamma
 form. No general definable Gamma-to-RV section is assumed. The new upstream
-kernel therefore does not by itself discharge these four records. Their
-discharge is the subsequent local proof over the original base.
+kernel therefore does not silently discharge these four records. Their
+conditional consequences retain exactly that status.
 
-The original pin migration changed no local mathematical proof body or manuscript statement.
-The subsequent local Gamma-kernel proof adds the producers above without
-changing a manuscript statement or a category definition.
+This migration changes no local mathematical proof body or manuscript statement.
 It preserves revised 6.11 and 6.38, and the constant-aperture witnesses for full
 6.19. It does not prove the independent bounded-aperture kernel in this paper's
 7.26, equate the old scalar ideal with the relative ideal, or complete Section 8.

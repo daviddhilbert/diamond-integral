@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Build Section 6 and audit complete public types and logical axioms."""
+import sys
 import hashlib
 import json
 import re
@@ -8,13 +9,17 @@ from pathlib import Path
 
 SECTION = Path(__file__).resolve().parent
 ROOT = SECTION.parent
+sys.path.insert(0, str(ROOT / 'verification'))
+from proof_sources import read_source
+from check_shared_foundation import verify as verify_shared_foundation
+shared_proof_providers = verify_shared_foundation(ROOT)
 RECORD = SECTION / 'verification'
 RECORD.mkdir(exist_ok=True)
 ALLOWED = {'propext', 'Classical.choice', 'Quot.sound'}
 sources = sorted(SECTION.glob('*.lean'))
 declarations = []
 for source in sources:
-    body = source.read_text()
+    body = read_source(source)
     stripped = re.sub(r'/\-.*?\-/', '', body, flags=re.S)
     stripped = re.sub(r'--[^\n]*', '', stripped)
     if re.search(r'\b(sorry|admit|axiom|opaque|unsafe)\b', stripped):
@@ -75,3 +80,6 @@ status = {
 }
 (RECORD/'status.json').write_text(json.dumps(status,indent=2)+'\n')
 print(f'PASS: {len(declarations)} full declaration types and axiom records; applied Section 6 aperture revision audited; downstream assembly deferred.')
+
+# Recheck exact provider identities after the source/signature audit.
+verify_shared_foundation(ROOT)

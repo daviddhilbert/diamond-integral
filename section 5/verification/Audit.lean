@@ -1,4 +1,25 @@
 import «section 5».Section
+import «section 5».Lemma519Polynomial
+import «section 5».Test520Tuples
+import «section 5».PuiseuxMonsterAmbient
+import «section 5».WeakDegreeFubiniDischarged
+import «section 5».ElementaryRESExtensionData
+import «section 5».ElementaryRESExtension
+import «section 5».InflatedGammaFamilyRows
+import «section 5».InflatedGammaCodePromotion
+import «section 5».InflatedGammaWeakLiftSchemata
+import «section 5».InflatedGammaUniformRepresentatives
+import «section 5».InflatedIntegerBlockReduction
+import «section 5».InflatedRelativeMonomialDecomposition
+import «section 5».InflatedRelativeMonomialValues
+import «section 5».InflatedGammaBasePartition
+import «section 5».InflatedFamilyFubini
+import «section 5».InflatedFamilyFubiniVol
+import «section 5».GroundTaggedIntrinsicFibreValues
+import «section 5».NewtonPuiseuxAlgClosed
+import «section 5».NewtonPuiseuxAlgebraic
+import «section 5».NewtonPuiseuxHenselSplitting
+import «section 5».NewtonPuiseuxBasic
 set_option pp.universes true
 #print DiamondIntegral.Section5.rectangleValueCell
 #print DiamondIntegral.Section5.rectangleResidueCell
@@ -118,6 +139,7 @@ set_option pp.universes true
 #print DiamondIntegral.Section5.completedGroundTaggedFieldLiftInputs
 #print DiamondIntegral.Section5.completed18OriginalLiftInput
 #print DiamondIntegral.Section5.completed18GroundLiftInput
+#print DiamondIntegral.Section5.completed18ClosedVFObject
 #print DiamondIntegral.Section5.completed18NativeVFForgetInvariant
 #print DiamondIntegral.Section5.completed18NativeVFForget
 #print DiamondIntegral.Section5.completed18LocalLift
@@ -1767,8 +1789,8 @@ set_option pp.universes true
 #print DiamondIntegral.Section5.cellRestriction_graph
 #print DiamondIntegral.Section5.cellRestriction_fibre
 #print DiamondIntegral.Section5.exists_coherent_positioned_cell_label_injection
-#print DiamondIntegral.Section5.GammaQE.finite_laws_of_flat_graph
 #print DiamondIntegral.Section5.GammaQE.gamma_piecewise_rational_affine
+#print DiamondIntegral.Section5.GammaQE.finite_laws_of_flat_graph
 #print DiamondIntegral.Section5.GammaQE.positive_power_law
 #print DiamondIntegral.Section5.GammaQE.positive_power_denominator
 #print DiamondIntegral.Section5.GammaQE.graph_has_critical_pair
@@ -4249,6 +4271,7 @@ set_option pp.universes true
 #print axioms DiamondIntegral.Section5.completedGroundTaggedFieldLiftInputs
 #print axioms DiamondIntegral.Section5.completed18OriginalLiftInput
 #print axioms DiamondIntegral.Section5.completed18GroundLiftInput
+#print axioms DiamondIntegral.Section5.completed18ClosedVFObject
 #print axioms DiamondIntegral.Section5.completed18NativeVFForgetInvariant
 #print axioms DiamondIntegral.Section5.completed18NativeVFForget
 #print axioms DiamondIntegral.Section5.completed18LocalLift
@@ -5898,8 +5921,8 @@ set_option pp.universes true
 #print axioms DiamondIntegral.Section5.cellRestriction_graph
 #print axioms DiamondIntegral.Section5.cellRestriction_fibre
 #print axioms DiamondIntegral.Section5.exists_coherent_positioned_cell_label_injection
-#print axioms DiamondIntegral.Section5.GammaQE.finite_laws_of_flat_graph
 #print axioms DiamondIntegral.Section5.GammaQE.gamma_piecewise_rational_affine
+#print axioms DiamondIntegral.Section5.GammaQE.finite_laws_of_flat_graph
 #print axioms DiamondIntegral.Section5.GammaQE.positive_power_law
 #print axioms DiamondIntegral.Section5.GammaQE.positive_power_denominator
 #print axioms DiamondIntegral.Section5.GammaQE.graph_has_critical_pair

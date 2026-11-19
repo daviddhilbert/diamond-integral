@@ -48,8 +48,10 @@ review, hypotheses and verification history. Concrete §4 constructions
 and independent disc-name extensions are outside this §3 certificate.
 
 
-The current pin is 7675d31332f20421c803ea16af84964ed74cd51f (Special
-transformations 25852c85a31c67069b148bd31348128318303510). The November 12
+The current pin is ab4c0e8b15e1e21b0b4fce57eed764be76020e06 (Special
+transformations 423c767a84b709487da7e798f70f0639545db1ac; November 18, after
+integrating main). The bounded native integral now uses the closed
+`IntegrationInACVF.Section7.CompletedSection6` API of that pin. The November 12
 refresh linked exact section 6 exports at 7d4acc730496b3bd05a22c268ffd89540ca694f9,
 then relative to an unfinished 5.8 input. That input is now discharged
 (`Section5.completed_section5_input`, from the completed upstream Section 5),

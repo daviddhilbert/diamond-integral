@@ -1,5 +1,3 @@
-warning: integration_in_acvf: repository has local changes:
-  /Users/yimu/Documents/Codex-Migration-20261112/projects/diamond integral/Section7/worktree/.lake/packages/integration_in_acvf
 @DiamondIntegral.Section6.CentripetalData.core_false_of_focus_absent : ∀ {M : Type}
   [inst : SpecialTransformations.Milestone0.LRV.Structure M]
   [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set M} {n r : ℕ} {G : Type}
@@ -3368,6 +3366,66 @@ fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransf
               ⟨DiamondIntegral.Section6.AllDegreeUnaryFactorizations.ofChain_finiteVolume T hTF,
                 DiamondIntegral.Section6.AllDegreeUnaryFactorizations.ofChain_doublyBounded T hTB⟩⟩
 'DiamondIntegral.Section6.AllDegreeUnaryFactorizations.lemma_6_29_doublyBounded_all_degrees' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@DiamondIntegral.Section6.AllDegreeUnaryFactorizations.lemma_6_29_finiteVolume_all_degrees : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {S : Set M} {k : ℕ},
+  CanonicalStructure.IsCanonical →
+    M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF00 →
+      ∀ {κ : Cardinal.{0}},
+        Cardinal.aleph0 ≤ κ →
+          SpecialTransformations.Section3.Saturated M κ →
+            Cardinal.mk ↑S < κ →
+              ∀ {U V : SpecialTransformations.Section4.RVObject S k} (e : U ≅ V),
+                U.volume.FiniteFibres →
+                  V.volume.FiniteFibres →
+                    (∀ (u : ↑U.domain.carrier) (i : Fin k),
+                        ↑(U.value u i) ≠ SpecialTransformations.Milestone0.iRVZero) →
+                      (∀ (v : ↑V.domain.carrier) (i : Fin k),
+                          ↑(V.value v i) ≠ SpecialTransformations.Milestone0.iRVZero) →
+                        ∃ T, T.iso.hom.map = e.hom.map ∧ T.finiteVolume
+theorem DiamondIntegral.Section6.AllDegreeUnaryFactorizations.lemma_6_29_finiteVolume_all_degrees : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {S : Set M} {k : ℕ},
+  CanonicalStructure.IsCanonical →
+    M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF00 →
+      ∀ {κ : Cardinal.{0}},
+        Cardinal.aleph0 ≤ κ →
+          SpecialTransformations.Section3.Saturated M κ →
+            Cardinal.mk ↑S < κ →
+              ∀ {U V : SpecialTransformations.Section4.RVObject S k} (e : U ≅ V),
+                U.volume.FiniteFibres →
+                  V.volume.FiniteFibres →
+                    (∀ (u : ↑U.domain.carrier) (i : Fin k),
+                        ↑(U.value u i) ≠ SpecialTransformations.Milestone0.iRVZero) →
+                      (∀ (v : ↑V.domain.carrier) (i : Fin k),
+                          ↑(V.value v i) ≠ SpecialTransformations.Milestone0.iRVZero) →
+                        ∃ T, T.iso.hom.map = e.hom.map ∧ T.finiteVolume :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {S} {k}
+    hc h00 {κ} hκ hs hsmall {U V} e hUF hVF hU hV =>
+  Or.casesOn (Nat.eq_zero_or_pos k)
+    (fun hk =>
+      Exists.intro
+        (DiamondIntegral.Section6.AllDegreeUnaryFactorizations.RVUnaryFactorization.step e (Or.inl hk)
+          (DiamondIntegral.Section6.AllDegreeUnaryFactorizations.RVUnaryFactorization.identity V))
+        ⟨SpecialTransformations.DefinableGeometry.Map.ext fun u =>
+            Eq.refl
+              ((DiamondIntegral.Section6.AllDegreeUnaryFactorizations.RVUnaryFactorization.step e (Or.inl hk)
+                          (DiamondIntegral.Section6.AllDegreeUnaryFactorizations.RVUnaryFactorization.identity
+                            V)).iso.hom.map.toFun
+                u),
+          ⟨hUF, hVF⟩⟩)
+    fun hk =>
+    Exists.casesOn (DiamondIntegral.Section6.lemma_6_29 hc h00 hκ hs hsmall hk e hUF hVF hU hV) fun T h =>
+      And.casesOn h fun hT right =>
+        And.casesOn right fun hTF right =>
+          Exists.intro (DiamondIntegral.Section6.AllDegreeUnaryFactorizations.ofChain T)
+            ⟨Eq.trans
+                (congrArg (fun E => E.hom.map) (DiamondIntegral.Section6.AllDegreeUnaryFactorizations.ofChain_iso T))
+                hT,
+              DiamondIntegral.Section6.AllDegreeUnaryFactorizations.ofChain_finiteVolume T hTF⟩
+'DiamondIntegral.Section6.AllDegreeUnaryFactorizations.lemma_6_29_finiteVolume_all_degrees' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
 @DiamondIntegral.Section6.AllDegreeUnaryFactorizations.RVUnaryFactorization : {M : Type} →
@@ -62122,6 +62180,42 @@ fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransf
         S,
     bad_subset := ⋯, bad_small := ⋯, measure := ⋯ }
 'DiamondIntegral.Section6.DiamondLift.liftMorphism' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section6.DiamondLiftHomomorphism.liftHom_surjective_discharged : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {k : ℕ} {G : Type}
+  [inst_2 : LinearOrderedCommGroupWithZero G] [inst_3 : Valued (DiamondIntegral.Section2.VF M) G]
+  (h00 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF00) (hc : CanonicalStructure.IsCanonical) {κ : Cardinal.{0}}
+  (hκ : Cardinal.aleph0 < κ) (hs : SpecialTransformations.Section3.Saturated M κ)
+  (hv :
+    ∀ (x y : DiamondIntegral.Section2.VF M),
+      SpecialTransformations.Milestone0.VFValued.predV x y ↔ Valued.v x ≤ Valued.v y)
+  (T : SpecialTransformations.Milestone0.LRV.Substructure M) (B₀ : DiamondIntegral.Section2.VFGeneratedFieldBase T)
+  (hsmall : Cardinal.mk ↑↑T < κ) (hΓ : DiamondIntegral.Section2.NontrivialDefinableGamma { real := ↑T, gamma := ∅ })
+  (hnt : ∃ x, x ≠ 0 ∧ Valued.v ↑x ≠ 1),
+  Function.Surjective
+    ⇑(DiamondIntegral.Section6.DiamondLiftHomomorphism.liftHom k G h00 hc ⋯ hκ hs hv T B₀ hsmall hΓ hnt)
+theorem DiamondIntegral.Section6.DiamondLiftHomomorphism.liftHom_surjective_discharged : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {k : ℕ} {G : Type}
+  [inst_2 : LinearOrderedCommGroupWithZero G] [inst_3 : Valued (DiamondIntegral.Section2.VF M) G]
+  (h00 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF00) (hc : CanonicalStructure.IsCanonical) {κ : Cardinal.{0}}
+  (hκ : Cardinal.aleph0 < κ) (hs : SpecialTransformations.Section3.Saturated M κ)
+  (hv :
+    ∀ (x y : DiamondIntegral.Section2.VF M),
+      SpecialTransformations.Milestone0.VFValued.predV x y ↔ Valued.v x ≤ Valued.v y)
+  (T : SpecialTransformations.Milestone0.LRV.Substructure M) (B₀ : DiamondIntegral.Section2.VFGeneratedFieldBase T)
+  (hsmall : Cardinal.mk ↑↑T < κ) (hΓ : DiamondIntegral.Section2.NontrivialDefinableGamma { real := ↑T, gamma := ∅ })
+  (hnt : ∃ x, x ≠ 0 ∧ Valued.v ↑x ≠ 1),
+  Function.Surjective
+    ⇑(DiamondIntegral.Section6.DiamondLiftHomomorphism.liftHom k G h00 hc ⋯ hκ hs hv T B₀ hsmall hΓ hnt) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {k} {G}
+    [LinearOrderedCommGroupWithZero G] [Valued (DiamondIntegral.Section2.VF M) G] h00 hc {κ} hκ hs hv T B₀ hsmall hΓ
+    hnt =>
+  DiamondIntegral.Section6.DiamondLiftHomomorphism.liftHom_surjective h00 hc
+    DiamondIntegral.Section5.GammaQE.gamma_piecewise_rational_affine hκ hs hv T B₀ hsmall hΓ hnt
+'DiamondIntegral.Section6.DiamondLiftHomomorphism.liftHom_surjective_discharged' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
 @DiamondIntegral.Section6.DiamondLiftHomomorphism.homeo_zero : ∀ {M : Type}
   [inst : SpecialTransformations.Milestone0.LRV.Structure M]
   [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set M} {G : Type}

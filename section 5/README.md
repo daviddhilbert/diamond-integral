@@ -1,27 +1,17 @@
 # Section 5 — Original-language monomial decomposition and Fubini
 
-Current verified status, November 18, 2026: `verify.py` passes for the
-requested scope (1537 public definitions/structures, 2594 theorems; only
-`propext`, `Classical.choice`, `Quot.sound`). After the second audit the
-following were added (details in [GAP-REPAIRS.md](GAP-REPAIRS.md)):
-- Theorem* inflated-family Fubini (approved R083–R085):
-  `inflated_family_fubini`, `PuiseuxOriginal.inflated_family_fubini_vol`,
-  `puiseux_inflated_family_fubini_vol`, with the factor gⁿ retained;
-- Theorem 5.17 and Proposition 5.23 for RV[*] fibres (weak degree):
-  `bounded_weak_fubini_discharged`, `geometric_weak_fubini_discharged`;
-- an ambient for Notation 5.15 Vol and Corollary 5.21:
-  `PuiseuxMonsterAmbient.lean` (`exists_puiseux_ambient`,
-  `puiseux_corollary_global_vanishing`, built from a ZFC construction of
-  saturated, strongly homogeneous elementary extensions);
-- the ambient Θ is an isomorphism: `ambientPuiseuxComparison_bijective`,
-  `ambientPuiseuxComparisonEquiv` (`ElementaryRESExtension.lean`);
-- Lemma 5.19 (`Lemma519.lemma_5_19`) and Test 5.20 for tuple parameters
-  (`Test520.test_5_20_tuples`).
-Not pursued, by author-approved triage: Remark 5.16 (polyhedral base
-pieces), Remark 5.18's examples and equality reformulation, and the global
-form of the (twist:C) formula (internal to the proof of 5.14).
+Current adapter-resolution update, November 16, 2026: the two scoped [18]
+Section 6 source adapters have been removed. `Completed18NativePositiveKernel`
+uses the published generated-base kernel in
+`IntegrationInACVF.Section7.CompletedSection6`, through an explicit map from
+original VF objects to its closed VF presentation. The exact original positive
+lift and kernel, both Fubini conclusions and the variety corollary are retained.
+No universal two-order registry is assumed and no dependency source is patched.
+The physical Section 7 location contains the completed unmeasured Section 6
+kernel interface; no open Section 7 or measured-integration result is an input.
+`prepare-dependencies.py` now checks published sources without changing them.
 
-Status of November 15, 2026: the requested scope is complete,
+Current verified status, November 15, 2026: the requested scope is complete,
 and both former earlier-section inputs are discharged.
 `GammaQE.gamma_piecewise_rational_affine` proves the exact Gamma-linearity
 interface from QE. `completed18GroundLiftInput C hc` constructs the exact
@@ -544,3 +534,22 @@ Full audit 59 passed (Section5/.scratch/finite-comparison-audit-59.log): 1057 pu
 Full audit 60 passed (Section5/.scratch/finite-comparison-audit-60.log): 1069 public definitions/structures and 1770 theorems; only standard Lean principles. NativeGeometricVFFubini.nativeGeometricVFFubini proves the full approved geometric version in the recorded GammaGroundContext with the precise accepted Section 3 YinGammaGroundUnmeasuredLiftInput, alongside the full bounded theorem. NativeGeometricVFFubiniVanishing proves intrinsic geometric fibrewise vanishing and preservation under any ground comparison. Finite denominator witnesses precede preparation; actual affine padding, retained old RV coordinates and base-zero strata give common total-degree normalization. The finite RES display simplification, actual-variety/global-comparison corollary specialization and concrete Puiseux ACVF-model proof remain. No HK result is assumed.
 
 Full audit 62 passed (Section5/.scratch/finite-comparison-audit-62.log): 1112 public definitions/structures and 1853 theorems, with only the standard Lean principles. RESFibreOnlyCriterion proves both directions of the exact finite stabilized criterion with only fibre pairs, one common positive stabilizer and an actual tagged bijection. Degree-forgetting pairs are absorbed without positive cancellation. Dean Cureton's Apache-2.0 Newton-Puiseux proof (commit 73e78681d7bb78ddb202e29cb92ab3c16b723126) compiles locally with proof bodies unchanged. PuiseuxAlgebraicClosedness identifies its field with the actual local bounded-denominator Hahn subfield. PuiseuxConcreteResidue, PuiseuxConcreteRVOperations and PuiseuxConcreteLanguage construct the actual residue-field and whole-language bridges; PuiseuxConcreteModel proves ACVF(0,0) with no model input. PuiseuxConcreteComparisons.theta_5_14_concrete is the actual comparison with that model hypothesis discharged. Both Fubini versions remain proved with the precise accepted Section 3 lifting/kernel input. The finite-variety-chart and saturated-ambient global-comparison specialization of the final corollary remains unfinished. Audit 61 failed only declaration discovery; corrected namespace prefixes and block-comment handling are included in this successful rerun.
+
+## November 18 additions (pending extraction into Fubini-theorems)
+
+These modules are owned by diamond-integral for now. They will be extracted
+into Fubini-theorems and replaced here by compatibility imports, as for the
+rest of Section 5. Details are in `GAP-REPAIRS.md`.
+
+- Inflated-family Fubini and its Vol version: `InflatedFamilyFubini`,
+  `InflatedFamilyFubiniVol`, with the `InflatedGamma*`, `InflatedRelative*`,
+  `InflatedIntegerBlockReduction` and `InflatedGammaBasePartition` modules.
+- Theorem 5.17 and Proposition 5.23 for RV[*] fibres: `WeakDegreeFubiniDischarged`.
+- The ambient model for Vol and Corollary 5.21: `PuiseuxMonsterAmbient` (with
+  κ-saturated, strongly homogeneous elementary extensions in ZFC).
+- The ambient Θ is an isomorphism: `ElementaryRESExtensionData` and
+  `ElementaryRESExtension`.
+- Lemma 5.19 in polynomial form (`Lemma519Polynomial`) and Test 5.20 for tuples
+  (`Test520Tuples`).
+- Author-approved "not pursued": Remark 5.16, Remark 5.18's examples, and the
+  global twist:C formula.

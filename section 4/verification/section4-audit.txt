@@ -81799,6 +81799,22 @@ theorem DiamondIntegral.Section4.Section4LinkedRemarks.normalized_retractions_di
 'DiamondIntegral.Section4.Section4LinkedRemarks.normalized_retractions_distinct' depends on axioms: [propext,
  Classical.choice.{u},
  Quot.sound.{u}]
+theorem DiamondIntegral.Section4.Section4LinkedRemarks.manuscript_section4_compatibility_discharged : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical)
+  (h00 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00)
+  {κ : Cardinal.{0}} (hκ : LE.le.{1} Cardinal.aleph0.{0} κ) (hs : SpecialTransformations.Section3.Saturated M κ)
+  (B : SpecialTransformations.Section3.GammaParameters.Base) (hr : LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ)
+  (hγ : LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) κ) (hΓ : DiamondIntegral.Section2.NontrivialDefinableGamma B),
+  LE.le.{0} (DiamondIntegral.Section4.RelativeAnnularGenerators.manuscriptIdeal B)
+    (RingHom.ker.{0, 0, 0}
+      (DiamondIntegral.Section4.RVT001OrdinaryDescent.boundedEvaluation h00 ⋯ hκ hs B hr hγ hΓ ⋯
+        DiamondIntegral.Section4.EulerKind.bounded)) :=
+⋯
+'DiamondIntegral.Section4.Section4LinkedRemarks.manuscript_section4_compatibility_discharged' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
 def DiamondIntegral.Section2.GammaPiecewiseRationalAffineInput : {M : Type} →
   [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
     [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] → Prop :=
@@ -81830,5 +81846,3 @@ fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Mileston
     SpecialTransformations.Section3.GammaParameters.GammaDefinableClosureAtBase B γ ∧
       SpecialTransformations.Section3.GammaParameters.GammaDefinableClosureAtBase B δ ∧ Ne.{1} γ δ
 'DiamondIntegral.Section2.NontrivialDefinableGamma' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
-warning: integration_in_acvf: repository has local changes:
-  /Users/yimu/Documents/Codex-Migration-20261112/projects/diamond integral/Section7/worktree/.lake/packages/integration_in_acvf

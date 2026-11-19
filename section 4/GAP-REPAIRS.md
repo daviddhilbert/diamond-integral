@@ -95,8 +95,12 @@ record it, and prove the comparison. The argument: split a chart by its
 coordinates. This is a definable bijection that changes neither `f` nor the
 degree, and it gives a measured isomorphism (the transported form is
 ω ∘ drop⁻¹). Each ∞-free piece is doubly bounded in the paper's sense. So
-inclusion of the paper's ring into Lean's is a ring isomorphism. It is
-compatible with the grading, products, P_γ, J_var and Ẽ_b.
+inclusion of the paper's ring into Lean's is a ring isomorphism (it sends each
+chart class to its own class). Lean proves the isomorphism and its value on
+classes (`equivalence`, `equivalence_objectClass`,
+`equivalence_symm_objectClass`). Compatibility with the grading, P_γ, J_var
+and Ẽ_b follows because these are defined by the same classes, but it is not
+stated separately.
 
 Lean: `RVStrictBoundedComparison.lean` (proved). It contains:
 - `InfinityFree` and `StrictChart`: bounded charts with no `iRVZero`
@@ -150,3 +154,14 @@ from RV quantifier elimination with no hypotheses.
   `verify.py` (copied into `status.json`) still call the unary rational-affine
   input accepted background.
 - Known open: Remark 4.2 needs the multivariate rational-affine input.
+
+## Third audit fixes (November 18)
+
+- Lemma 4.18 factorization clause with the Γ input discharged:
+  `Section4LinkedRemarks.manuscript_section4_compatibility_discharged`.
+- Still linkage-only (minor): Remark 4.8's alternative descent
+  (`RVT001AlternativeDescent.evaluation`) and the unnormalized ordinary range
+  clause take the T001 presentation as a parameter; they can be instantiated
+  with `Section3T001Integration` as done for the other remarks.
+- Remark 4.2 (multivariate rational-affine input) and Definition 4.1's
+  coproduct identification remain open, as recorded.

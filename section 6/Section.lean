@@ -1123,6 +1123,7 @@ import «section 6».UnaryRelationContraction
 import «section 6».Section6GammaLinearityDischarged
 import «section 6».AllDegreeDoublyBoundedFactorizations
 import «section 6».DiamondGroupoidMaps
+import «section 6».DiamondLiftDischarged
 import «section 6».Remark620
 
 /-! Section 6 exports full original-base results 6.5–6.9, approved

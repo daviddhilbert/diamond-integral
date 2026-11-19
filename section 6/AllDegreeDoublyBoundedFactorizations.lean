@@ -91,4 +91,22 @@ theorem lemma_6_29_doublyBounded_all_degrees (hc : CanonicalStructure.IsCanonica
     exact ⟨ofChain T, (congrArg (fun E : U ≅ V => E.hom.map) (ofChain_iso T)).trans hT,
       ofChain_finiteVolume T hTF, ofChain_doublyBounded T hTB⟩
 
+/-- Lemma 6.29 for `RV[k]` in every degree `k ≥ 0`, keeping finite volume
+fibres along the factorization (every intermediate object is in `RV[k]`). -/
+theorem lemma_6_29_finiteVolume_all_degrees (hc : CanonicalStructure.IsCanonical (M := M))
+    (h00 : M ⊨ Axioms.ACVF00) {κ : Cardinal} (hκ : Cardinal.aleph0 ≤ κ)
+    (hs : Saturated M κ) (hsmall : Cardinal.mk S < κ)
+    {U V : RVObject (M := M) S k} (e : U ≅ V)
+    (hUF : U.volume.FiniteFibres) (hVF : V.volume.FiniteFibres)
+    (hU : ∀ u i, (U.value u i).val ≠ iRVZero) (hV : ∀ v i, (V.value v i).val ≠ iRVZero) :
+    ∃ T : RVUnaryFactorization S k U V, T.iso.hom.map = e.hom.map ∧ T.finiteVolume := by
+  rcases Nat.eq_zero_or_pos k with hk | hk
+  · refine ⟨.step e (Or.inl hk) (.identity V), ?_, ⟨hUF, hVF⟩⟩
+    apply Map.ext
+    intro u
+    rfl
+  · obtain ⟨T, hT, hTF, _⟩ := lemma_6_29 hc h00 hκ hs hsmall hk e hUF hVF hU hV
+    exact ⟨ofChain T, (congrArg (fun E : U ≅ V => E.hom.map) (ofChain_iso T)).trans hT,
+      ofChain_finiteVolume T hTF⟩
+
 end DiamondIntegral.Section6.AllDegreeUnaryFactorizations

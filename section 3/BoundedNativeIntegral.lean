@@ -1,14 +1,19 @@
 import «section 3».BoundedNativeVFBridge
 import «section 5».Completed18LocalKernel
+import «section 5».Completed18Section5Input
 import «section 5».NativeLiftGroundTransfer
 import IntegrationSection6.FiniteNonzeroIntegration
 import IntegrationSection6.GammaNonzeroIspSemiring
 import IntegrationSection6.GammaNonzeroBasicRelation
 import IntegrationSection6.GammaGlobalAdditiveLift
 import IntegrationSection6.GammaNonzeroThroughEmbeddings
+import Integration7.ClosedSection6FiniteNonzeroIntegration
+import Integration7.ClosedSection6GammaNonzeroBasicRelation
+import Integration7.ClosedSection6GammaGlobalAdditiveLift
+import Integration7.ClosedSection6GammaNonzeroIspSemiring
 
 /-! Theorem 3.22, bounded part, from the fixed-degree integral of [18]
-(`integrationThroughAt`, its Proposition 6.18 in the nonzero-coordinate
+(`CompletedSection6.integrationThroughAt`, its Proposition 6.18 in the nonzero-coordinate
 filtered form). The manuscript bounded source `⊕_{i ≤ k} K₊RV[i]` maps to
 the native stage `k` through the proved global comparison of RV
 semirings; the stage congruence of [18] is the restriction of its global
@@ -26,6 +31,7 @@ open SpecialTransformations.DefinableGeometry SpecialTransformations.Section3 Sp
 open SpecialTransformations.Section3.GammaParameters SpecialTransformations.Section5
 open SpecialTransformations.Section7
 open IntegrationInACVF.Section6 IntegrationInACVF.Section6.FiniteRV
+open IntegrationInACVF.Section7
 open DiamondIntegral.Section5
 namespace DiamondIntegral.Section3
 variable {M : Type} [sM : LRV.Structure M] [hM : M ⊨ Axioms.ACVF]
@@ -38,29 +44,30 @@ local instance : Fact (B.real ⊆ (Set.univ : Set M)) := ⟨Set.subset_univ _⟩
 
 
 section NativeStage
+variable (hc)
 
 /-- The native fixed-degree lift, followed into the global VF semigroup,
 is the global lift of the stage element. -/
 theorem boundedNative_lift_through (k : ℕ) (x : GammaNonzeroThroughAt (B := B) (S := Set.univ) k) :
-    gammaVFFiniteToAllAdditive (((integrationThroughAt hκ hs h00 hr FBase hγ δ hδ hδ1 (completed_section5_input hκ hs) hB) k).symm (((gammaNonzeroThroughIspAt (B := B) hκ hs h00 hr) k).mk' x)) = (gammaNonzeroGlobalAdditiveLiftAt (B := B) (S := Set.univ) hκ hs h00 hr hB) (gammaThroughToGradedAt k x) := by
-  rw [gammaNonzeroGlobalAdditiveLiftAt_through]
+    CompletedSection6.gammaVFFiniteToAllAdditive (((CompletedSection6.integrationThroughAt hκ hs h00 hr FBase hγ δ hδ hδ1 hc hB) k).symm (((CompletedSection6.gammaNonzeroThroughIspAt (B := B) hκ hs h00 hr) k).mk' x)) = (CompletedSection6.gammaNonzeroGlobalAdditiveLiftAt (B := B) (S := Set.univ) hκ hs h00 hr hB) (gammaThroughToGradedAt k x) := by
+  rw [CompletedSection6.gammaNonzeroGlobalAdditiveLiftAt_through]
   rfl
 
-include hκ hs h00 hr FBase hγ δ hδ hδ1 hB in
+include hc hκ hs h00 hr FBase hγ δ hδ hδ1 hB in
 /-- The native `VF[k]` semigroup embeds in the native global VF semigroup. -/
 theorem boundedNative_toAll_injective (k : ℕ) :
-    Function.Injective (gammaVFFiniteToAllAdditive (B := B) (k := k)) := by
+    Function.Injective (CompletedSection6.gammaVFFiniteToAllAdditive (B := B) (k := k)) := by
   intro y₁ y₂ h
-  obtain ⟨z₁,rfl⟩ := ((integrationThroughAt hκ hs h00 hr FBase hγ δ hδ hδ1 (completed_section5_input hκ hs) hB) k).symm.surjective y₁
-  obtain ⟨z₂,rfl⟩ := ((integrationThroughAt hκ hs h00 hr FBase hγ δ hδ hδ1 (completed_section5_input hκ hs) hB) k).symm.surjective y₂
-  obtain ⟨x₁,rfl⟩ := ((gammaNonzeroThroughIspAt (B := B) hκ hs h00 hr) k).mk'_surjective z₁
-  obtain ⟨x₂,rfl⟩ := ((gammaNonzeroThroughIspAt (B := B) hκ hs h00 hr) k).mk'_surjective z₂
-  rw [boundedNative_lift_through,boundedNative_lift_through] at h
-  have hu : (gammaNonzeroIspUnionAddCon (B := B) hκ hs h00 hr FBase hγ δ hδ hδ1 (completed_section5_input hκ hs) hB) (gammaThroughToGradedAt k x₁) (gammaThroughToGradedAt k x₂) := by
-    rw [gammaNonzeroIspUnionAddCon_eq_lift_kernel]
+  obtain ⟨z₁,rfl⟩ := ((CompletedSection6.integrationThroughAt hκ hs h00 hr FBase hγ δ hδ hδ1 hc hB) k).symm.surjective y₁
+  obtain ⟨z₂,rfl⟩ := ((CompletedSection6.integrationThroughAt hκ hs h00 hr FBase hγ δ hδ hδ1 hc hB) k).symm.surjective y₂
+  obtain ⟨x₁,rfl⟩ := ((CompletedSection6.gammaNonzeroThroughIspAt (B := B) hκ hs h00 hr) k).mk'_surjective z₁
+  obtain ⟨x₂,rfl⟩ := ((CompletedSection6.gammaNonzeroThroughIspAt (B := B) hκ hs h00 hr) k).mk'_surjective z₂
+  rw [boundedNative_lift_through hc,boundedNative_lift_through hc] at h
+  have hu : (CompletedSection6.gammaNonzeroIspUnionAddCon (B := B) hκ hs h00 hr FBase hγ δ hδ hδ1 hc hB) (gammaThroughToGradedAt k x₁) (gammaThroughToGradedAt k x₂) := by
+    rw [CompletedSection6.gammaNonzeroIspUnionAddCon_eq_lift_kernel]
     exact h
-  rw [gammaNonzeroIspUnionAddCon_stage_iff] at hu
-  exact congrArg ((integrationThroughAt hκ hs h00 hr FBase hγ δ hδ hδ1 (completed_section5_input hκ hs) hB) k).symm (((gammaNonzeroThroughIspAt (B := B) hκ hs h00 hr) k).eq.mpr hu)
+  rw [CompletedSection6.gammaNonzeroIspUnionAddCon_stage_iff] at hu
+  exact congrArg ((CompletedSection6.integrationThroughAt hκ hs h00 hr FBase hγ δ hδ hδ1 hc hB) k).symm (((CompletedSection6.gammaNonzeroThroughIspAt (B := B) hκ hs h00 hr) k).eq.mpr hu)
 
 end NativeStage
 
@@ -175,11 +182,11 @@ theorem boundedTransfer_lift_carrier {i : ℕ} (U : GammaGroundRVObject hc B₀ 
 /-- The bounded lift `⊕_{i ≤ k} K₊RV[i] → K₊VF[k]` obtained from [18]. -/
 def boundedNativeLift (k : ℕ) : GammaGroundRVBoundedPositive hc B₀ k →+ GammaGroundVFKPlus hc B₀ k :=
   (boundedVFNativeEquiv (k := k) H K hdim).symm.toAddMonoidHom.comp
-    (((integrationThroughAt hκ hs h00 hr FBase hγ δ hδ hδ1 (completed_section5_input hκ hs) hB) k).symm.toAddMonoidHom.comp (((gammaNonzeroThroughIspAt (B := B) hκ hs h00 hr) k).mk'.comp (boundedRVNative H k)))
+    (((CompletedSection6.integrationThroughAt hκ hs h00 hr FBase hγ δ hδ hδ1 hc hB) k).symm.toAddMonoidHom.comp (((CompletedSection6.gammaNonzeroThroughIspAt (B := B) hκ hs h00 hr) k).mk'.comp (boundedRVNative H k)))
 
 theorem boundedNativeLift_apply {k : ℕ} (a : GammaGroundRVBoundedPositive hc B₀ k) :
     boundedVFNativeEquiv H K hdim (boundedNativeLift hκ hs h00 hr FBase hγ δ hδ hδ1 hB H K hdim k a) =
-      ((integrationThroughAt hκ hs h00 hr FBase hγ δ hδ hδ1 (completed_section5_input hκ hs) hB) k).symm (((gammaNonzeroThroughIspAt (B := B) hκ hs h00 hr) k).mk' (boundedRVNative H k a)) :=
+      ((CompletedSection6.integrationThroughAt hκ hs h00 hr FBase hγ δ hδ hδ1 hc hB) k).symm (((CompletedSection6.gammaNonzeroThroughIspAt (B := B) hκ hs h00 hr) k).mk' (boundedRVNative H k a)) :=
   (boundedVFNativeEquiv H K hdim).apply_symm_apply _
 
 theorem boundedNativeLift_class {k : ℕ} (i : Fin (k+1)) (U : GammaGroundRVObject hc B₀ i.val) :
@@ -187,17 +194,17 @@ theorem boundedNativeLift_class {k : ℕ} (i : Fin (k+1)) (U : GammaGroundRVObje
       gammaGroundVFClass ((gammaGroundObjectLiftVF U).raise (Nat.le_of_lt_succ i.isLt)) := by
   apply (boundedVFNativeEquiv H K hdim).injective
   rw [boundedNativeLift_apply,boundedVFNativeEquiv_class]
-  apply boundedNative_toAll_injective hκ hs h00 hr FBase hγ δ hδ hδ1 hB
-  rw [boundedNative_lift_through,boundedRVNative_embed,boundedRVGraded_bounded_class,
-    gammaVFFiniteToAllAdditive_class]
-  rw [gammaNonzeroGlobalAdditiveLiftAt,DirectSum.toAddMonoid_of]
-  change gammaAllAdditiveLiftClassesAt hκ hs h00 hr hB
+  apply boundedNative_toAll_injective hc hκ hs h00 hr FBase hγ δ hδ hδ1 hB
+  rw [boundedNative_lift_through hc,boundedRVNative_embed,boundedRVGraded_bounded_class,
+    CompletedSection6.gammaVFFiniteToAllAdditive_class]
+  rw [CompletedSection6.gammaNonzeroGlobalAdditiveLiftAt,DirectSum.toAddMonoid_of]
+  change CompletedSection6.gammaAllAdditiveLiftClassesAt hκ hs h00 hr hB
     (gammaIsoClassAt (groundRVAt (sortedTransferRVObject H U))) = _
-  rw [gammaAllAdditiveLiftClassesAt_class]
-  unfold gammaAllAdditiveLiftClass
+  rw [CompletedSection6.gammaAllAdditiveLiftClassesAt_class]
+  unfold CompletedSection6.gammaAllAdditiveLiftClass
   symm
   apply PositiveAdditiveGrothendieck.of_iso
-  refine ⟨(gammaIso_reflexive _ (gammaVFAllFromBounded (boundedGroundNative H hdim
+  refine ⟨(gammaIso_reflexive _ (CompletedSection6.gammaVFAllFromBounded (boundedGroundNative H hdim
     ((gammaGroundObjectLiftVF U).raise (Nat.le_of_lt_succ i.isLt)))).definable).congr rfl ?_⟩
   exact ((boundedTransfer_lift_carrier H U).symm.trans
     (groundRVAt_lift_domain (sortedTransferRVObject H U)).symm)
@@ -205,7 +212,7 @@ theorem boundedNativeLift_class {k : ℕ} (i : Fin (k+1)) (U : GammaGroundRVObje
 theorem boundedNativeLift_surjective (k : ℕ) :
     Function.Surjective (boundedNativeLift hκ hs h00 hr FBase hγ δ hδ hδ1 hB H K hdim k) :=
   (boundedVFNativeEquiv H K hdim).symm.surjective.comp
-    (((integrationThroughAt hκ hs h00 hr FBase hγ δ hδ hδ1 (completed_section5_input hκ hs) hB) k).symm.surjective.comp (((gammaNonzeroThroughIspAt (B := B) hκ hs h00 hr) k).mk'_surjective.comp (boundedRVNative_surjective H K k)))
+    (((CompletedSection6.integrationThroughAt hκ hs h00 hr FBase hγ δ hδ hδ1 hc hB) k).symm.surjective.comp (((CompletedSection6.gammaNonzeroThroughIspAt (B := B) hκ hs h00 hr) k).mk'_surjective.comp (boundedRVNative_surjective H K k)))
 
 theorem boundedNativeLift_kernel (k : ℕ) :
     gammaGroundRVBoundedSpecialCongruence (ground := B₀) (k := k) hc =
@@ -216,12 +223,14 @@ theorem boundedNativeLift_kernel (k : ℕ) :
       (gammaGroundRVSpecialCongruence hc B₀).mk' (gammaGroundRVBoundedInclude b) ↔ _
   rw [show ∀ x y, (gammaGroundRVSpecialCongruence hc B₀).mk' x = (gammaGroundRVSpecialCongruence hc B₀).mk' y ↔
       gammaGroundRVSpecialCongruence hc B₀ x y from fun x y => (gammaGroundRVSpecialCongruence hc B₀).eq]
-  rw [← sortedTransferRVPositive_special_iff (H := K) (K := H),completed18RVSpecial_iff,
-    ← gammaNonzeroIsp_eq_basic hκ hs h00 hr FBase hγ δ hδ hδ1 (completed_section5_input hκ hs) hB]
-  change gammaNonzeroIspUnionAddCon (B := B) hκ hs h00 hr FBase hγ δ hδ hδ1 (completed_section5_input hκ hs) hB (boundedRVGraded H (gammaGroundRVBoundedInclude a))
+  have hbasic : ringConGen (gammaNonzeroBasicRelation (B := B)) =
+      CompletedSection6.gammaNonzeroIspUnionRingCon hκ hs h00 hr FBase hγ δ hδ hδ1 hc hB :=
+    (CompletedSection6.gammaNonzeroIsp_eq_basic hκ hs h00 hr FBase hγ δ hδ hδ1 hc hB).symm
+  rw [← sortedTransferRVPositive_special_iff (H := K) (K := H),completed18RVSpecial_iff,hbasic]
+  change CompletedSection6.gammaNonzeroIspUnionAddCon (B := B) hκ hs h00 hr FBase hγ δ hδ hδ1 hc hB (boundedRVGraded H (gammaGroundRVBoundedInclude a))
     (boundedRVGraded H (gammaGroundRVBoundedInclude b)) ↔ _
-  rw [← boundedRVNative_embed H a,← boundedRVNative_embed H b,gammaNonzeroIspUnionAddCon_stage_iff,
-    ← show ((gammaNonzeroThroughIspAt (B := B) hκ hs h00 hr) k).mk' (boundedRVNative H k a) = ((gammaNonzeroThroughIspAt (B := B) hκ hs h00 hr) k).mk' (boundedRVNative H k b) ↔ _ from ((gammaNonzeroThroughIspAt (B := B) hκ hs h00 hr) k).eq]
+  rw [← boundedRVNative_embed H a,← boundedRVNative_embed H b,CompletedSection6.gammaNonzeroIspUnionAddCon_stage_iff,
+    ← show ((CompletedSection6.gammaNonzeroThroughIspAt (B := B) hκ hs h00 hr) k).mk' (boundedRVNative H k a) = ((CompletedSection6.gammaNonzeroThroughIspAt (B := B) hκ hs h00 hr) k).mk' (boundedRVNative H k b) ↔ _ from ((CompletedSection6.gammaNonzeroThroughIspAt (B := B) hκ hs h00 hr) k).eq]
   constructor
   · intro h
     apply (boundedVFNativeEquiv H K hdim).injective
@@ -229,7 +238,7 @@ theorem boundedNativeLift_kernel (k : ℕ) :
   · intro h
     have h' := congrArg (boundedVFNativeEquiv H K hdim) h
     rw [boundedNativeLift_apply,boundedNativeLift_apply] at h'
-    exact ((integrationThroughAt hκ hs h00 hr FBase hγ δ hδ hδ1 (completed_section5_input hκ hs) hB) k).symm.injective h'
+    exact ((CompletedSection6.integrationThroughAt hκ hs h00 hr FBase hγ δ hδ hδ1 hc hB) k).symm.injective h'
 
 end Lift
 

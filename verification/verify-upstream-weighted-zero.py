@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Audit the corrected pins, exact dependency layers and measured-zero interfaces.
 
-Run after the five section verifiers. Check the local producers for all four
-Gamma-valued lifting/kernel interfaces as well as measured-zero compatibility.
+Run after the five section verifiers. This is a compatibility audit, not a
+producer for the four conditional Gamma-valued lifting/kernel interfaces.
 """
 from pathlib import Path
 import hashlib
@@ -13,8 +13,8 @@ import subprocess
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'verification/upstream-weighted-zero-upgrade'
 PINS = {
-    'special_transformations': '25852c85a31c67069b148bd31348128318303510',
-    'integration_in_acvf': '7675d31332f20421c803ea16af84964ed74cd51f',
+    'special_transformations': '423c767a84b709487da7e798f70f0639545db1ac',
+    'integration_in_acvf': 'ab4c0e8b15e1e21b0b4fce57eed764be76020e06',
 }
 ALLOWED = {'propext', 'Classical.choice', 'Quot.sound'}
 SPECIAL = 'SpecialTransformations.Section10.'
@@ -29,15 +29,6 @@ NAMES = [SPECIAL + n for n in [
     'Section3.YinDegreeMeasuredLiftInput',
     'Section3.YinGammaGroundMeasuredLiftInput',
     'Section3.YinGammaGroundDegreeMeasuredLiftInput',
-    'Section3.completedMeasuredLiftInput',
-    'Section3.completedDegreeMeasuredLiftInput',
-    'Section3.completedGammaGroundMeasuredLiftInput',
-    'Section3.completedGammaGroundDegreeMeasuredLiftInput',
-    'Section3.gammaContextMeasuredDegreeLift_positive_reverse_kernel',
-    'Section3.gammaContextMeasuredDegreeLift_kernel',
-    'Section3.gammaContextMeasuredSemiringLift_kernel',
-    'Section3.completedMeasuredDegreeLift_kernel',
-    'Section3.completedMeasuredSemiringLift_kernel',
     'Section3.MeasuredRVObject.product_combinedWeight',
     'Section3.MeasuredVFData.product_form',
     'Section3.GammaGroundMeasuredRVObject.zero_combinedWeight',
@@ -142,21 +133,16 @@ def main():
     report = {
         'status': 'PASS', 'pins': PINS, 'dependency_layers': layers, 'sections': sections,
         'interfaces': principles,
-        'scope': 'Corrected-pin source/type/axiom compatibility for Sections 2–6, weighted finite zero families, mixed products, exact zero lifts, RES/tensor coefficients and relative-aperture comparisons, plus local producers for all four Gamma-valued measured kernels. No manuscript statement or aperture definition changed in this continuation.',
-        'conditional_inputs': [],
-        'discharged_measured_inputs': {
-            'YinMeasuredLiftInput': 'completedMeasuredLiftInput',
-            'YinDegreeMeasuredLiftInput': 'completedDegreeMeasuredLiftInput',
-            'YinGammaGroundMeasuredLiftInput': 'completedGammaGroundMeasuredLiftInput',
-            'YinGammaGroundDegreeMeasuredLiftInput': 'completedGammaGroundDegreeMeasuredLiftInput',
-        },
-        'measured_kernel_scope': 'All four records have local proved producers under the stated model, canonical-structure, saturation, generation, smallness, nontrivial-value and compatible-valuation hypotheses. Complete Gamma densities and weighted degree zero are retained. No resolved base, Gamma-to-RV section, class cancellation or kernel coarsening is assumed. The upstream RV-valued kernel alone was not used as their producer.',
+        'scope': 'New-pin source/type/axiom compatibility for Sections 2–6, weighted finite zero families, mixed products, exact zero lifts, RES/tensor coefficients and relative-aperture comparisons. No manuscript statement or proof body changed in this migration.',
+        'conditional_inputs': ['YinMeasuredLiftInput', 'YinDegreeMeasuredLiftInput',
+                               'YinGammaGroundMeasuredLiftInput', 'YinGammaGroundDegreeMeasuredLiftInput'],
+        'conditional_scope': 'These existing Gamma-valued kernel inputs remain precise accepted cited inputs. The corrected upstream Section 7 HK kernel uses RV-valued forms and is not an unconditional producer for them. No general Gamma-to-RV section or kernel coarsening is assumed.',
         'downstream': 'This audit does not prove this paper\'s revised Section 7 kernel or Section 8 specialization.',
         'evidence': {p.name: sha(p) for p in OUT.iterdir() if p.name not in {'status.json', 'verification-run.json', 'compatibility-verifier.log'} and p.is_file()},
         'script_sha256': sha(Path(__file__)),
     }
     (OUT / 'status.json').write_text(json.dumps(report, indent=2, ensure_ascii=False) + '\n')
-    print(f'PASS: corrected pins, Sections 2–6 receipts and {len(NAMES)} measured compatibility interfaces; all four Gamma kernel records have proved producers.')
+    print(f'PASS: corrected pins, Sections 2–6 receipts and {len(NAMES)} measured compatibility interfaces; cited Gamma kernel inputs remain explicit.')
 
 
 if __name__ == '__main__':

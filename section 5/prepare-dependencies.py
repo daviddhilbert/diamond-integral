@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Check published dependency sources and retain the scoped Section 6 adapters.
+"""Check published dependency sources without modifying them.
 
-Run after Lake has fetched the pinned packages. Only a pinned upstream file
-or the already prepared file is accepted; unrelated local edits are preserved.
+Run after Lake has fetched the pinned packages. Published source identities
+are checked; unrelated local edits are preserved and no source patch is applied.
 """
 
 from __future__ import annotations
@@ -55,7 +55,6 @@ def prepare(check: bool = False) -> int:
                                        text=True).strip()
     if revision != manifest["base_revision"]:
         raise SystemExit(f"Unexpected integration_in_acvf revision: {revision}")
-    pending = []
     for name, identity in manifest["files"].items():
         relative = Path(name)
         if relative.is_absolute() or ".." in relative.parts:
@@ -67,13 +66,8 @@ def prepare(check: bool = False) -> int:
         current = digest(target)
         if current == identity["after"]:
             continue
-        if check or current != identity["before"]:
-            raise SystemExit(f"Dependency source differs from the recorded state; preserving it: {name}")
-        pending.append((source, target))
+        raise SystemExit(f"Published dependency source differs from its recorded identity; preserving it: {name}")
     compatibility(check)
-    for source, target in pending:
-        target.parent.mkdir(parents=True, exist_ok=True)
-        target.write_bytes(source.read_bytes())
     return len(manifest["files"])
 
 

@@ -39,8 +39,9 @@ constructs such data. Those statements are therefore not vacuous.
   `puiseux_corollary_global_vanishing` and `puiseuxBoundedVFVolume` instantiate
   the statements.
 
-Independence of `Vol` from the chosen ambient and bijectivity of
-`elementaryRESReducedRestriction` are not proved here.
+Independence of `Vol` from the chosen ambient is not proved here (the paper
+works in one fixed ambient); bijectivity of `elementaryRESReducedRestriction`
+is proved in `ElementaryRESExtension.lean`.
 -/
 
 set_option autoImplicit false

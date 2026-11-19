@@ -164,3 +164,15 @@ constructed from finalized Section 3 proofs in
 have no T001 input. General rational-affine Gamma QE background and the
 already accepted external citations retain their documented scope. See
 [the project dependency audit](DEPENDENCY-AUDIT.md).
+
+## Section 5 adapter retirement — November 16, 2026
+
+The consumer no longer changes `Section5TwoOrderInputAll` in the dependency.
+Both scoped source adapters are retired. The published generated-base
+unmeasured kernel (`IntegrationInACVF.Section7.CompletedSection6`) supplies
+the kernel proof directly, with the already-standing canonical model and
+original-base hypotheses. `completed18ClosedVFObject` and the positive forget
+map compare the two actual VF presentations; the original local positive lift
+and its exact special kernel remain unchanged. The old local two-order proof
+is retained only with its explicit scoped statement and is not used to fill
+the unrestricted upstream registry. No dependency source is patched.

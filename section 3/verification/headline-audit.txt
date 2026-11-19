@@ -1,5 +1,3 @@
-warning: integration_in_acvf: repository has local changes:
-  /Users/yimu/Documents/Codex-Migration-20261112/projects/diamond integral/Section7/worktree/.lake/packages/integration_in_acvf
 def DiamondIntegral.Section3.acfDefinableDiagonalBirationalEquiv.{u_1} : {K : Type} →
   [inst : Field.{0} K] →
     [IsAlgClosed.{0} K] →
@@ -302,9 +300,9 @@ fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Mileston
     (AddMonoidHom.comp.{0, 0, 0}
       (AddEquiv.toAddMonoidHom.{0, 0}
         (AddEquiv.symm.{0, 0}
-          (IntegrationInACVF.Section6.FiniteRV.integrationThroughAt hκ hs h00 hr FBase hγ δ hδ hδ1 ⋯ hB k)))
+          (IntegrationInACVF.Section7.CompletedSection6.integrationThroughAt hκ hs h00 hr FBase hγ δ hδ hδ1 hc hB k)))
       (AddMonoidHom.comp.{0, 0, 0}
-        (AddCon.mk'.{0} (IntegrationInACVF.Section6.FiniteRV.gammaNonzeroThroughIspAt hκ hs h00 hr k))
+        (AddCon.mk'.{0} (IntegrationInACVF.Section7.CompletedSection6.gammaNonzeroThroughIspAt hκ hs h00 hr k))
         (DiamondIntegral.Section3.boundedRVNative ⋯ k)))
 def DiamondIntegral.Section3.boundedGroundNative : {M : Type} →
   [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
@@ -52733,8 +52731,8 @@ fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Mileston
 @DiamondIntegral.Section3.boundedNative_lift_through : ∀ {M : Type}
   [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
   [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
-  {B : SpecialTransformations.Section3.GammaParameters.Base} {κ : Cardinal.{0}} (hκ : LE.le.{1} Cardinal.aleph0.{0} κ)
-  (hs : SpecialTransformations.Section3.Saturated M κ)
+  (hc : CanonicalStructure.IsCanonical) {B : SpecialTransformations.Section3.GammaParameters.Base} {κ : Cardinal.{0}}
+  (hκ : LE.le.{1} Cardinal.aleph0.{0} κ) (hs : SpecialTransformations.Section3.Saturated M κ)
   (h00 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00)
   (hr : LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ) (FBase : SpecialTransformations.Section3.VFFieldBase B.real)
   (hγ : LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) κ) (δ : SpecialTransformations.Section3.Values.Gamma)
@@ -52742,29 +52740,31 @@ fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Mileston
   (hB : SpecialTransformations.Section3.GammaParameters.VFGammaGeneratedBase B) (k : Nat)
   (x : IntegrationInACVF.Section6.FiniteRV.GammaNonzeroThroughAt k),
   Eq.{1}
-    (IntegrationInACVF.Section6.FiniteRV.gammaVFFiniteToAllAdditive
+    (IntegrationInACVF.Section7.CompletedSection6.gammaVFFiniteToAllAdditive
       ((AddEquiv.symm.{0, 0}
-          (IntegrationInACVF.Section6.FiniteRV.integrationThroughAt hκ hs h00 hr FBase hγ δ hδ hδ1 ⋯ hB k))
-        ((AddCon.mk'.{0} (IntegrationInACVF.Section6.FiniteRV.gammaNonzeroThroughIspAt hκ hs h00 hr k)) x)))
-    ((IntegrationInACVF.Section6.FiniteRV.gammaNonzeroGlobalAdditiveLiftAt hκ hs h00 hr hB)
+          (IntegrationInACVF.Section7.CompletedSection6.integrationThroughAt hκ hs h00 hr FBase hγ δ hδ hδ1 hc hB k))
+        ((AddCon.mk'.{0} (IntegrationInACVF.Section7.CompletedSection6.gammaNonzeroThroughIspAt hκ hs h00 hr k)) x)))
+    ((IntegrationInACVF.Section7.CompletedSection6.gammaNonzeroGlobalAdditiveLiftAt hκ hs h00 hr hB)
       ((IntegrationInACVF.Section6.FiniteRV.gammaThroughToGradedAt k) x))
 'DiamondIntegral.Section3.boundedNative_lift_through' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
 @DiamondIntegral.Section3.boundedNative_toAll_injective : ∀ {M : Type}
   [sM : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
-  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
-  {B : SpecialTransformations.Section3.GammaParameters.Base} {κ : Cardinal.{0}},
-  LE.le.{1} Cardinal.aleph0.{0} κ →
-    SpecialTransformations.Section3.Saturated M κ →
-      FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00 →
-        LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ →
-          ∀ (FBase : SpecialTransformations.Section3.VFFieldBase B.real),
-            LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) κ →
-              ∀ (δ : SpecialTransformations.Section3.Values.Gamma),
-                Membership.mem.{0, 0} B.gamma δ →
-                  LT.lt.{0} 1 δ →
-                    SpecialTransformations.Section3.GammaParameters.VFGammaGeneratedBase B →
-                      ∀ (k : Nat),
-                        Function.Injective.{1, 1} ⇑IntegrationInACVF.Section6.FiniteRV.gammaVFFiniteToAllAdditive
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF],
+  CanonicalStructure.IsCanonical →
+    ∀ {B : SpecialTransformations.Section3.GammaParameters.Base} {κ : Cardinal.{0}},
+      LE.le.{1} Cardinal.aleph0.{0} κ →
+        SpecialTransformations.Section3.Saturated M κ →
+          FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00 →
+            LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ →
+              ∀ (FBase : SpecialTransformations.Section3.VFFieldBase B.real),
+                LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) κ →
+                  ∀ (δ : SpecialTransformations.Section3.Values.Gamma),
+                    Membership.mem.{0, 0} B.gamma δ →
+                      LT.lt.{0} 1 δ →
+                        SpecialTransformations.Section3.GammaParameters.VFGammaGeneratedBase B →
+                          ∀ (k : Nat),
+                            Function.Injective.{1, 1}
+                              ⇑IntegrationInACVF.Section7.CompletedSection6.gammaVFFiniteToAllAdditive
 'DiamondIntegral.Section3.boundedNative_toAll_injective' depends on axioms: [propext,
  Classical.choice.{u},
  Quot.sound.{u}]
@@ -52882,8 +52882,8 @@ fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Mileston
     ((DiamondIntegral.Section3.boundedVFNativeEquiv ⋯ ⋯ ⋯)
       ((DiamondIntegral.Section3.boundedNativeLift hκ hs h00 hr FBase hγ δ hδ hδ1 hB ⋯ ⋯ ⋯ k) a))
     ((AddEquiv.symm.{0, 0}
-        (IntegrationInACVF.Section6.FiniteRV.integrationThroughAt hκ hs h00 hr FBase hγ δ hδ hδ1 ⋯ hB k))
-      ((AddCon.mk'.{0} (IntegrationInACVF.Section6.FiniteRV.gammaNonzeroThroughIspAt hκ hs h00 hr k))
+        (IntegrationInACVF.Section7.CompletedSection6.integrationThroughAt hκ hs h00 hr FBase hγ δ hδ hδ1 hc hB k))
+      ((AddCon.mk'.{0} (IntegrationInACVF.Section7.CompletedSection6.gammaNonzeroThroughIspAt hκ hs h00 hr k))
         ((DiamondIntegral.Section3.boundedRVNative ⋯ k) a)))
 'DiamondIntegral.Section3.boundedNativeLift_apply' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
 @DiamondIntegral.Section3.boundedNativeLift_class : ∀ {M : Type}
@@ -113744,18 +113744,16 @@ DiamondIntegral.Section3.gamma_vf_two_order_cases : ∀ (σ : Equiv.Perm.{1} (Fi
     FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00 →
       ∀ (B : DiamondIntegral.Section2.ParameterBase M),
         DiamondIntegral.Section2.NontrivialDefinableGamma B →
-          (∀ (E : DiamondIntegral.Section2.ParameterBase M),
-              DiamondIntegral.Section2.UnaryOpenDiscRVBaseChangeInput E) →
-            ∀ {k n : Nat} (closed : Fin k → Bool) (a : Fin k → DiamondIntegral.Section2.VF M)
-              (δ : Fin k → DiamondIntegral.Section2.Gamma M) (D : Fin n → Set.{0} M),
-              (∀ (i : Fin n), DiamondIntegral.Section2.IsOpenDisc (D i)) →
-                DiamondIntegral.Section2.IsAtomicOverFiniteDiscNames B closed a δ
-                    (fun x => SpecialTransformations.Milestone0.SortTag.vf)
-                    (Set.ofPred.{0} fun x => ∀ (j : Fin n), Membership.mem.{0, 0} (D j) (x j)) →
-                  ∀ (t : DiamondIntegral.Section2.RVInfinity M),
-                    DiamondIntegral.Section2.IsAtomicOverFiniteDiscNames (DiamondIntegral.Section2.adjoinRV B t) closed
-                      a δ (fun x => SpecialTransformations.Milestone0.SortTag.vf)
-                      (Set.ofPred.{0} fun x => ∀ (j : Fin n), Membership.mem.{0, 0} (D j) (x j))
+          ∀ {k n : Nat} (closed : Fin k → Bool) (a : Fin k → DiamondIntegral.Section2.VF M)
+            (δ : Fin k → DiamondIntegral.Section2.Gamma M) (D : Fin n → Set.{0} M),
+            (∀ (i : Fin n), DiamondIntegral.Section2.IsOpenDisc (D i)) →
+              DiamondIntegral.Section2.IsAtomicOverFiniteDiscNames B closed a δ
+                  (fun x => SpecialTransformations.Milestone0.SortTag.vf)
+                  (Set.ofPred.{0} fun x => ∀ (j : Fin n), Membership.mem.{0, 0} (D j) (x j)) →
+                ∀ (t : DiamondIntegral.Section2.RVInfinity M),
+                  DiamondIntegral.Section2.IsAtomicOverFiniteDiscNames (DiamondIntegral.Section2.adjoinRV B t) closed a
+                    δ (fun x => SpecialTransformations.Milestone0.SortTag.vf)
+                    (Set.ofPred.{0} fun x => ∀ (j : Fin n), Membership.mem.{0, 0} (D j) (x j))
 'DiamondIntegral.Section3.lemma_2_24_disc_names_discharged' depends on axioms: [propext,
  Classical.choice.{u},
  Quot.sound.{u}]
@@ -113766,19 +113764,17 @@ DiamondIntegral.Section3.gamma_vf_two_order_cases : ∀ (σ : Equiv.Perm.{1} (Fi
     FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00 →
       ∀ (B : DiamondIntegral.Section2.ParameterBase M),
         DiamondIntegral.Section2.NontrivialDefinableGamma B →
-          (∀ (E : DiamondIntegral.Section2.ParameterBase M),
-              DiamondIntegral.Section2.UnaryOpenDiscRVBaseChangeInput E) →
-            ∀ {k n m : Nat} (closed : Fin k → Bool) (a : Fin k → DiamondIntegral.Section2.VF M)
-              (δ : Fin k → DiamondIntegral.Section2.Gamma M) (D : Fin n → Set.{0} M),
-              (∀ (i : Fin n), DiamondIntegral.Section2.IsOpenDisc (D i)) →
-                DiamondIntegral.Section2.IsAtomicOverFiniteDiscNames B closed a δ
+          ∀ {k n m : Nat} (closed : Fin k → Bool) (a : Fin k → DiamondIntegral.Section2.VF M)
+            (δ : Fin k → DiamondIntegral.Section2.Gamma M) (D : Fin n → Set.{0} M),
+            (∀ (i : Fin n), DiamondIntegral.Section2.IsOpenDisc (D i)) →
+              DiamondIntegral.Section2.IsAtomicOverFiniteDiscNames B closed a δ
+                  (fun x => SpecialTransformations.Milestone0.SortTag.vf)
+                  (Set.ofPred.{0} fun x => ∀ (j : Fin n), Membership.mem.{0, 0} (D j) (x j)) →
+                ∀ (t : Fin m → DiamondIntegral.Section2.RVInfinity M),
+                  DiamondIntegral.Section2.IsAtomicOverFiniteDiscNames
+                    { real := Union.union.{0} B.real (Set.range.{0, 1} fun j => ↑(t j)), gamma := B.gamma } closed a δ
                     (fun x => SpecialTransformations.Milestone0.SortTag.vf)
-                    (Set.ofPred.{0} fun x => ∀ (j : Fin n), Membership.mem.{0, 0} (D j) (x j)) →
-                  ∀ (t : Fin m → DiamondIntegral.Section2.RVInfinity M),
-                    DiamondIntegral.Section2.IsAtomicOverFiniteDiscNames
-                      { real := Union.union.{0} B.real (Set.range.{0, 1} fun j => ↑(t j)), gamma := B.gamma } closed a δ
-                      (fun x => SpecialTransformations.Milestone0.SortTag.vf)
-                      (Set.ofPred.{0} fun x => ∀ (j : Fin n), Membership.mem.{0, 0} (D j) (x j))
+                    (Set.ofPred.{0} fun x => ∀ (j : Fin n), Membership.mem.{0, 0} (D j) (x j))
 'DiamondIntegral.Section3.lemma_2_24_disc_names_rv_tuple_discharged' depends on axioms: [propext,
  Classical.choice.{u},
  Quot.sound.{u}]
@@ -113789,19 +113785,17 @@ DiamondIntegral.Section3.gamma_vf_two_order_cases : ∀ (σ : Equiv.Perm.{1} (Fi
     FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00 →
       ∀ (B : DiamondIntegral.Section2.ParameterBase M),
         DiamondIntegral.Section2.NontrivialDefinableGamma B →
-          (∀ (E : DiamondIntegral.Section2.ParameterBase M),
-              DiamondIntegral.Section2.UnaryOpenDiscRVBaseChangeInput E) →
-            ∀ {p k n : Nat} (points : Fin p → DiamondIntegral.Section2.VF M) (closed : Fin k → Bool)
-              (a : Fin k → DiamondIntegral.Section2.VF M) (δ : Fin k → DiamondIntegral.Section2.Gamma M)
-              (D : Fin n → Set.{0} M),
-              (∀ (i : Fin n), DiamondIntegral.Section2.IsOpenDisc (D i)) →
-                DiamondIntegral.Section2.IsAtomicOverDiscNamesNormalForm B points closed a δ
-                    (fun x => SpecialTransformations.Milestone0.SortTag.vf)
-                    (Set.ofPred.{0} fun x => ∀ (j : Fin n), Membership.mem.{0, 0} (D j) (x j)) →
-                  ∀ (t : DiamondIntegral.Section2.RVInfinity M),
-                    DiamondIntegral.Section2.IsAtomicOverDiscNamesNormalForm (DiamondIntegral.Section2.adjoinRV B t)
-                      points closed a δ (fun x => SpecialTransformations.Milestone0.SortTag.vf)
-                      (Set.ofPred.{0} fun x => ∀ (j : Fin n), Membership.mem.{0, 0} (D j) (x j))
+          ∀ {p k n : Nat} (points : Fin p → DiamondIntegral.Section2.VF M) (closed : Fin k → Bool)
+            (a : Fin k → DiamondIntegral.Section2.VF M) (δ : Fin k → DiamondIntegral.Section2.Gamma M)
+            (D : Fin n → Set.{0} M),
+            (∀ (i : Fin n), DiamondIntegral.Section2.IsOpenDisc (D i)) →
+              DiamondIntegral.Section2.IsAtomicOverDiscNamesNormalForm B points closed a δ
+                  (fun x => SpecialTransformations.Milestone0.SortTag.vf)
+                  (Set.ofPred.{0} fun x => ∀ (j : Fin n), Membership.mem.{0, 0} (D j) (x j)) →
+                ∀ (t : DiamondIntegral.Section2.RVInfinity M),
+                  DiamondIntegral.Section2.IsAtomicOverDiscNamesNormalForm (DiamondIntegral.Section2.adjoinRV B t)
+                    points closed a δ (fun x => SpecialTransformations.Milestone0.SortTag.vf)
+                    (Set.ofPred.{0} fun x => ∀ (j : Fin n), Membership.mem.{0, 0} (D j) (x j))
 'DiamondIntegral.Section3.lemma_2_24_disc_normal_form_discharged' depends on axioms: [propext,
  Classical.choice.{u},
  Quot.sound.{u}]
@@ -113817,20 +113811,14 @@ DiamondIntegral.Section3.gamma_vf_two_order_cases : ∀ (σ : Equiv.Perm.{1} (Fi
               LT.lt.{1} (Cardinal.mk.{0} ↑S) κ →
                 DiamondIntegral.Section2.NontrivialDefinableGamma
                     { real := S, gamma := EmptyCollection.emptyCollection.{0} } →
-                  (∀ (E : DiamondIntegral.Section2.ParameterBase M),
-                      DiamondIntegral.Section2.UnaryDiscAtomicityInput E) →
-                    (∀ (E : DiamondIntegral.Section2.ParameterBase M),
-                        DiamondIntegral.Section2.UnaryOpenDiscRVBaseChangeInput E) →
-                      (∀ (E : DiamondIntegral.Section2.ParameterBase M),
-                          DiamondIntegral.Section2.OpenDiscNamesImageInput E) →
-                        ∀ (A : Set.{0} (Fin n → DiamondIntegral.Section2.VF M)),
-                          Set.Definable.{0, 0, 0, 0} S SpecialTransformations.Milestone0.LRV
-                              (Set.image.{0, 0} SpecialTransformations.Section4.vfValues A) →
-                            LT.lt.{0}
-                              (DiamondIntegral.Section2.rvDimension S
-                                (Inter.inter.{0} (Set.image.{0, 0} (DiamondIntegral.Section2.tupleRV M) A)
-                                  (Set.image.{0, 0} (DiamondIntegral.Section2.tupleRV M) (Compl.compl.{0} A))))
-                              ↑n
+                  ∀ (A : Set.{0} (Fin n → DiamondIntegral.Section2.VF M)),
+                    Set.Definable.{0, 0, 0, 0} S SpecialTransformations.Milestone0.LRV
+                        (Set.image.{0, 0} SpecialTransformations.Section4.vfValues A) →
+                      LT.lt.{0}
+                        (DiamondIntegral.Section2.rvDimension S
+                          (Inter.inter.{0} (Set.image.{0, 0} (DiamondIntegral.Section2.tupleRV M) A)
+                            (Set.image.{0, 0} (DiamondIntegral.Section2.tupleRV M) (Compl.compl.{0} A))))
+                        ↑n
 'DiamondIntegral.Section3.lemma_2_35_vf_discharged' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
 @DiamondIntegral.Section3.lemma_2_35_discharged : ∀ {M : Type}
   [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
@@ -113844,17 +113832,10 @@ DiamondIntegral.Section3.gamma_vf_two_order_cases : ∀ (σ : Equiv.Perm.{1} (Fi
               LT.lt.{1} (Cardinal.mk.{0} ↑S) κ →
                 DiamondIntegral.Section2.NontrivialDefinableGamma
                     { real := S, gamma := EmptyCollection.emptyCollection.{0} } →
-                  (∀ (E : DiamondIntegral.Section2.ParameterBase M),
-                      DiamondIntegral.Section2.UnaryDiscAtomicityInput E) →
-                    (∀ (E : DiamondIntegral.Section2.ParameterBase M),
-                        DiamondIntegral.Section2.UnaryOpenDiscRVBaseChangeInput E) →
-                      (∀ (E : DiamondIntegral.Section2.ParameterBase M),
-                          DiamondIntegral.Section2.OpenDiscNamesImageInput E) →
-                        ∀ {n : Nat} (A : Set.{0} (Fin n → M)),
-                          SpecialTransformations.Section3.DefinableOver S
-                              (fun x => SpecialTransformations.Milestone0.SortTag.vf) A →
-                            LT.lt.{0}
-                              (DiamondIntegral.Section2.rvDimension S (DiamondIntegral.Section2.rawRVBoundary A)) ↑n
+                  ∀ {n : Nat} (A : Set.{0} (Fin n → M)),
+                    SpecialTransformations.Section3.DefinableOver S
+                        (fun x => SpecialTransformations.Milestone0.SortTag.vf) A →
+                      LT.lt.{0} (DiamondIntegral.Section2.rvDimension S (DiamondIntegral.Section2.rawRVBoundary A)) ↑n
 'DiamondIntegral.Section3.lemma_2_35_discharged' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
 @DiamondIntegral.Section3.lemma_2_23_disc_names_discharged : ∀ {M : Type}
   [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
@@ -113877,15 +113858,14 @@ DiamondIntegral.Section3.gamma_vf_two_order_cases : ∀ (σ : Equiv.Perm.{1} (Fi
   [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF],
   FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00 →
     ∀ (B : DiamondIntegral.Section2.ParameterBase M),
-      (∀ (E : DiamondIntegral.Section2.ParameterBase M), DiamondIntegral.Section2.AtomicDiscGammaBaseChangeInput E) →
-        DiamondIntegral.Section2.NontrivialDefinableGamma B →
-          ∀ {k m l : Nat} (closed : Fin k → Bool) (a : Fin k → DiamondIntegral.Section2.VF M)
-            (δ : Fin k → DiamondIntegral.Section2.Gamma M) (sn : Fin m → SpecialTransformations.Milestone0.SortTag)
-            (A : Set.{0} (Fin m → M)),
-            DiamondIntegral.Section2.IsAtomicOverFiniteDiscNames B closed a δ sn A →
-              ∀ (γ : Fin l → DiamondIntegral.Section2.Gamma M),
-                DiamondIntegral.Section2.IsAtomicOverFiniteDiscNames
-                  { real := B.real, gamma := Union.union.{0} B.gamma (Set.range.{0, 1} γ) } closed a δ sn A
+      DiamondIntegral.Section2.NontrivialDefinableGamma B →
+        ∀ {k m l : Nat} (closed : Fin k → Bool) (a : Fin k → DiamondIntegral.Section2.VF M)
+          (δ : Fin k → DiamondIntegral.Section2.Gamma M) (sn : Fin m → SpecialTransformations.Milestone0.SortTag)
+          (A : Set.{0} (Fin m → M)),
+          DiamondIntegral.Section2.IsAtomicOverFiniteDiscNames B closed a δ sn A →
+            ∀ (γ : Fin l → DiamondIntegral.Section2.Gamma M),
+              DiamondIntegral.Section2.IsAtomicOverFiniteDiscNames
+                { real := B.real, gamma := Union.union.{0} B.gamma (Set.range.{0, 1} γ) } closed a δ sn A
 'DiamondIntegral.Section3.lemma_2_23_disc_gamma_tuple_discharged' depends on axioms: [propext,
  Classical.choice.{u},
  Quot.sound.{u}]
@@ -113932,17 +113912,14 @@ DiamondIntegral.Section3.gamma_vf_two_order_cases : ∀ (σ : Equiv.Perm.{1} (Fi
         SpecialTransformations.Section3.Saturated M κ →
           ∀ (B : DiamondIntegral.Section2.ParameterBase M),
             DiamondIntegral.Section2.NontrivialDefinableGamma B →
-              (∀ (E : DiamondIntegral.Section2.ParameterBase M), DiamondIntegral.Section2.UnaryDiscAtomicityInput E) →
-                (∀ (E : DiamondIntegral.Section2.ParameterBase M),
-                    DiamondIntegral.Section2.AtomicDiscGammaBaseChangeInput E) →
-                  ∀ {n : Nat} (closed : Fin n → Bool) (a : Fin n → DiamondIntegral.Section2.VF M)
-                    (δ : Fin n → DiamondIntegral.Section2.Gamma M) (A : Set.{0} (Fin n → M)),
-                    DiamondIntegral.Section2.GeneratesCompleteType B
-                        (fun x => SpecialTransformations.Milestone0.SortTag.vf) A →
-                      LE.le.{0} (DiamondIntegral.Section2.namedPolydisc closed a δ) A →
-                        DiamondIntegral.Section2.IsAtomicOverFiniteDiscNames B closed a δ
-                          (fun x => SpecialTransformations.Milestone0.SortTag.vf)
-                          (DiamondIntegral.Section2.namedPolydisc closed a δ)
+              ∀ {n : Nat} (closed : Fin n → Bool) (a : Fin n → DiamondIntegral.Section2.VF M)
+                (δ : Fin n → DiamondIntegral.Section2.Gamma M) (A : Set.{0} (Fin n → M)),
+                DiamondIntegral.Section2.GeneratesCompleteType B (fun x => SpecialTransformations.Milestone0.SortTag.vf)
+                    A →
+                  LE.le.{0} (DiamondIntegral.Section2.namedPolydisc closed a δ) A →
+                    DiamondIntegral.Section2.IsAtomicOverFiniteDiscNames B closed a δ
+                      (fun x => SpecialTransformations.Milestone0.SortTag.vf)
+                      (DiamondIntegral.Section2.namedPolydisc closed a δ)
 'DiamondIntegral.Section3.lemma_2_25_finite_names_discharged' depends on axioms: [propext,
  Classical.choice.{u},
  Quot.sound.{u}]
@@ -113953,39 +113930,37 @@ DiamondIntegral.Section3.gamma_vf_two_order_cases : ∀ (σ : Equiv.Perm.{1} (Fi
     FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00 →
       ∀ (B : DiamondIntegral.Section2.ParameterBase M),
         DiamondIntegral.Section2.NontrivialDefinableGamma B →
-          (∀ (E : DiamondIntegral.Section2.ParameterBase M),
-              DiamondIntegral.Section2.UnaryOpenDiscRVBaseChangeInput E) →
-            ∀ {k n : Nat} (ground : Fin k → Bool) (d : Fin k → DiamondIntegral.Section2.VF M)
-              (τ : Fin k → DiamondIntegral.Section2.Gamma M) (D : Fin n → Set.{0} M),
-              (∀ (i : Fin n), DiamondIntegral.Section2.IsOpenDisc (D i)) →
-                DiamondIntegral.Section2.IsAtomicOverFiniteDiscNames B ground d τ
-                    (fun x => SpecialTransformations.Milestone0.SortTag.vf)
-                    (Set.ofPred.{0} fun a => ∀ (j : Fin n), Membership.mem.{0, 0} (D j) (a j)) →
-                  ∀ (F : Set.{0} (Prod.{0, 0} (Fin n → M) M)),
-                    DiamondIntegral.Section2.DefinableOverFiniteDiscNames B ground d τ
-                        (fun x => SpecialTransformations.Milestone0.SortTag.vf)
-                        (Set.ofPred.{0} fun z =>
-                          Membership.mem.{0, 0} F (Prod.mk.{0, 0} (Fin.init.{1} z) (z (Fin.last n)))) →
+          ∀ {k n : Nat} (ground : Fin k → Bool) (d : Fin k → DiamondIntegral.Section2.VF M)
+            (τ : Fin k → DiamondIntegral.Section2.Gamma M) (D : Fin n → Set.{0} M),
+            (∀ (i : Fin n), DiamondIntegral.Section2.IsOpenDisc (D i)) →
+              DiamondIntegral.Section2.IsAtomicOverFiniteDiscNames B ground d τ
+                  (fun x => SpecialTransformations.Milestone0.SortTag.vf)
+                  (Set.ofPred.{0} fun a => ∀ (j : Fin n), Membership.mem.{0, 0} (D j) (a j)) →
+                ∀ (F : Set.{0} (Prod.{0, 0} (Fin n → M) M)),
+                  DiamondIntegral.Section2.DefinableOverFiniteDiscNames B ground d τ
+                      (fun x => SpecialTransformations.Milestone0.SortTag.vf)
+                      (Set.ofPred.{0} fun z =>
+                        Membership.mem.{0, 0} F (Prod.mk.{0, 0} (Fin.init.{1} z) (z (Fin.last n)))) →
+                    (∀ (a : Fin n → M),
+                        Membership.mem.{0, 0} (Set.ofPred.{0} fun z => ∀ (j : Fin n), Membership.mem.{0, 0} (D j) (z j))
+                            a →
+                          Set.Finite.{0} (Set.ofPred.{0} fun y => Membership.mem.{0, 0} F (Prod.mk.{0, 0} a y))) →
                       (∀ (a : Fin n → M),
                           Membership.mem.{0, 0}
                               (Set.ofPred.{0} fun z => ∀ (j : Fin n), Membership.mem.{0, 0} (D j) (z j)) a →
-                            Set.Finite.{0} (Set.ofPred.{0} fun y => Membership.mem.{0, 0} F (Prod.mk.{0, 0} a y))) →
-                        (∀ (a : Fin n → M),
-                            Membership.mem.{0, 0}
-                                (Set.ofPred.{0} fun z => ∀ (j : Fin n), Membership.mem.{0, 0} (D j) (z j)) a →
-                              Set.InjOn.{0, 0} SpecialTransformations.Milestone0.iRv.{0}
-                                (Set.ofPred.{0} fun y => Membership.mem.{0, 0} F (Prod.mk.{0, 0} a y))) →
-                          ∀ (a : Fin n → M),
-                            Membership.mem.{0, 0}
-                                (Set.ofPred.{0} fun z => ∀ (j : Fin n), Membership.mem.{0, 0} (D j) (z j)) a →
-                              ∀ (b : Fin n → M),
-                                Membership.mem.{0, 0}
-                                    (Set.ofPred.{0} fun z => ∀ (j : Fin n), Membership.mem.{0, 0} (D j) (z j)) b →
-                                  Eq.{1}
-                                    (Set.image.{0, 0} SpecialTransformations.Milestone0.iRv.{0}
-                                      (Set.ofPred.{0} fun y => Membership.mem.{0, 0} F (Prod.mk.{0, 0} a y)))
-                                    (Set.image.{0, 0} SpecialTransformations.Milestone0.iRv.{0}
-                                      (Set.ofPred.{0} fun y => Membership.mem.{0, 0} F (Prod.mk.{0, 0} b y)))
+                            Set.InjOn.{0, 0} SpecialTransformations.Milestone0.iRv.{0}
+                              (Set.ofPred.{0} fun y => Membership.mem.{0, 0} F (Prod.mk.{0, 0} a y))) →
+                        ∀ (a : Fin n → M),
+                          Membership.mem.{0, 0}
+                              (Set.ofPred.{0} fun z => ∀ (j : Fin n), Membership.mem.{0, 0} (D j) (z j)) a →
+                            ∀ (b : Fin n → M),
+                              Membership.mem.{0, 0}
+                                  (Set.ofPred.{0} fun z => ∀ (j : Fin n), Membership.mem.{0, 0} (D j) (z j)) b →
+                                Eq.{1}
+                                  (Set.image.{0, 0} SpecialTransformations.Milestone0.iRv.{0}
+                                    (Set.ofPred.{0} fun y => Membership.mem.{0, 0} F (Prod.mk.{0, 0} a y)))
+                                  (Set.image.{0, 0} SpecialTransformations.Milestone0.iRv.{0}
+                                    (Set.ofPred.{0} fun y => Membership.mem.{0, 0} F (Prod.mk.{0, 0} b y)))
 'DiamondIntegral.Section3.lemma_2_26_disc_names_discharged' depends on axioms: [propext,
  Classical.choice.{u},
  Quot.sound.{u}]
@@ -113996,273 +113971,14 @@ DiamondIntegral.Section3.gamma_vf_two_order_cases : ∀ (σ : Equiv.Perm.{1} (Fi
     FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00 →
       ∀ (B : DiamondIntegral.Section2.ParameterBase M),
         DiamondIntegral.Section2.NontrivialDefinableGamma B →
-          (∀ (E : DiamondIntegral.Section2.ParameterBase M),
-              DiamondIntegral.Section2.UnaryOpenDiscRVBaseChangeInput E) →
-            (∀ (E : DiamondIntegral.Section2.ParameterBase M), DiamondIntegral.Section2.OpenDiscNamesImageInput E) →
-              ∀ {k n : Nat} (ground : Fin k → Bool) (d : Fin k → DiamondIntegral.Section2.VF M)
-                (τ : Fin k → DiamondIntegral.Section2.Gamma M) (D : Fin n → Set.{0} M),
-                (∀ (j : Fin n), DiamondIntegral.Section2.IsOpenDisc (D j)) →
-                  DiamondIntegral.Section2.IsAtomicOverFiniteDiscNames B ground d τ
-                      (fun x => SpecialTransformations.Milestone0.SortTag.vf)
-                      (Set.ofPred.{0} fun a => ∀ (j : Fin n), Membership.mem.{0, 0} (D j) (a j)) →
-                    ∀ (F : Set.{0} (Prod.{0, 0} (Fin n → M) M)),
-                      DiamondIntegral.Section2.DefinableOverFiniteDiscNames B ground d τ
-                          (fun x => SpecialTransformations.Milestone0.SortTag.vf)
-                          (Set.ofPred.{0} fun z =>
-                            Membership.mem.{0, 0} F (Prod.mk.{0, 0} (Fin.init.{1} z) (z (Fin.last n)))) →
-                        (∀ (a : Fin n → M),
-                            Membership.mem.{0, 0}
-                                (Set.ofPred.{0} fun a => ∀ (j : Fin n), Membership.mem.{0, 0} (D j) (a j)) a →
-                              Set.Finite.{0} (Set.ofPred.{0} fun y => Membership.mem.{0, 0} F (Prod.mk.{0, 0} a y))) →
-                          (∀ (a : Fin n → M),
-                              Membership.mem.{0, 0}
-                                  (Set.ofPred.{0} fun a => ∀ (j : Fin n), Membership.mem.{0, 0} (D j) (a j)) a →
-                                Set.InjOn.{0, 0} SpecialTransformations.Milestone0.iRv.{0}
-                                  (Set.ofPred.{0} fun y => Membership.mem.{0, 0} F (Prod.mk.{0, 0} a y))) →
-                            have A := Set.ofPred.{0} fun a => ∀ (j : Fin n), Membership.mem.{0, 0} (D j) (a j);
-                            Exists.{1} fun T =>
-                              And (Set.Finite.{0} T)
-                                (And
-                                  (DiamondIntegral.Section2.DefinableOverFiniteDiscNames B ground d τ
-                                    (fun x => SpecialTransformations.Milestone0.SortTag.rv)
-                                    (Set.ofPred.{0} fun z =>
-                                      Membership.mem.{0, 0} (Set.image.{0, 0} Subtype.val.{1} T) (z 0)))
-                                  (Exists.{1} fun g =>
-                                    And
-                                      (∀ (t : DiamondIntegral.Section2.RVInfinity M),
-                                        Membership.mem.{0, 0} T t →
-                                          And
-                                            (DiamondIntegral.Section2.DefinableOverFiniteDiscNames
-                                              (DiamondIntegral.Section2.adjoinRV B t) ground d τ
-                                              (fun x => SpecialTransformations.Milestone0.SortTag.vf)
-                                              (DiamondIntegral.Section2.vfFunctionGraph A (g t)))
-                                            (And
-                                              (Or
-                                                (Exists.{1} fun c =>
-                                                  ∀ (a : Fin n → M), Membership.mem.{0, 0} A a → Eq.{1} (g t a) ↑c)
-                                                (And
-                                                  (DiamondIntegral.Section2.IsAtomicOverFiniteDiscNames
-                                                    (DiamondIntegral.Section2.adjoinRV B t) ground d τ
-                                                    (fun x => SpecialTransformations.Milestone0.SortTag.vf)
-                                                    (Set.ofPred.{0} fun z =>
-                                                      Membership.mem.{0, 0} (Set.image.{0, 0} (g t) A) (z 0)))
-                                                  (DiamondIntegral.Section2.IsOpenDisc (Set.image.{0, 0} (g t) A))))
-                                              (∀ (a : Fin n → M),
-                                                Membership.mem.{0, 0} A a →
-                                                  ∀ (y : M),
-                                                    Iff
-                                                      (And (Membership.mem.{0, 0} F (Prod.mk.{0, 0} a y))
-                                                        (Eq.{1} (SpecialTransformations.Milestone0.iRv.{0} y) ↑t))
-                                                      (Eq.{1} (g t a) y))))
-                                      (∀ (a : Fin n → M),
-                                        Membership.mem.{0, 0} A a →
-                                          ∀ (y : M),
-                                            Iff (Membership.mem.{0, 0} F (Prod.mk.{0, 0} a y))
-                                              (Exists.{1} fun t =>
-                                                And (Membership.mem.{0, 0} T t) (Eq.{1} (g t a) y)))))
-'DiamondIntegral.Section3.lemma_2_29_disc_names_discharged' depends on axioms: [propext,
- Classical.choice.{u},
- Quot.sound.{u}]
-@DiamondIntegral.Section3.lemma_2_25_discharged : ∀ {M : Type}
-  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
-  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF],
-  FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00 →
-    ∀ {κ : Cardinal.{0}},
-      LE.le.{1} Cardinal.aleph0.{0} κ →
-        SpecialTransformations.Section3.Saturated M κ →
-          ∀ (B : DiamondIntegral.Section2.ParameterBase M),
-            DiamondIntegral.Section2.NontrivialDefinableGamma B →
-              (∀ (E : DiamondIntegral.Section2.ParameterBase M), DiamondIntegral.Section2.UnaryDiscAtomicityInput E) →
-                (∀ (E : DiamondIntegral.Section2.ParameterBase M),
-                    DiamondIntegral.Section2.AtomicDiscGammaBaseChangeInput E) →
-                  ∀ {d : Nat} (D : Fin d → DiamondIntegral.Section2.DC),
-                    Nonempty.{1} (DiamondIntegral.Section2.PolydiscNaming D) →
-                      ∀ (A : Set.{0} (Fin d → M)),
-                        DiamondIntegral.Section2.GeneratesCompleteType B
-                            (fun x => SpecialTransformations.Milestone0.SortTag.vf) A →
-                          LE.le.{0} (DiamondIntegral.Section2.discNameProduct D) A →
-                            DiamondIntegral.Section2.IsAtomicOverPolydiscNames B D
-                              (fun x => SpecialTransformations.Milestone0.SortTag.vf)
-                              (DiamondIntegral.Section2.discNameProduct D)
-'DiamondIntegral.Section3.lemma_2_25_discharged' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
-@DiamondIntegral.Section3.lemma_2_25_singleton_normal_form_discharged : ∀ {M : Type}
-  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
-  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF],
-  FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00 →
-    ∀ {κ : Cardinal.{0}},
-      LE.le.{1} Cardinal.aleph0.{0} κ →
-        SpecialTransformations.Section3.Saturated M κ →
-          ∀ (B : DiamondIntegral.Section2.ParameterBase M),
-            DiamondIntegral.Section2.NontrivialDefinableGamma B →
-              (∀ (E : DiamondIntegral.Section2.ParameterBase M), DiamondIntegral.Section2.UnaryDiscAtomicityInput E) →
-                (∀ (E : DiamondIntegral.Section2.ParameterBase M),
-                    DiamondIntegral.Section2.AtomicDiscGammaBaseChangeInput E) →
-                  ∀ {p n : Nat} (points : Fin p → DiamondIntegral.Section2.VF M) (closed : Fin n → Bool)
-                    (a : Fin n → DiamondIntegral.Section2.VF M) (δ : Fin n → DiamondIntegral.Section2.Gamma M)
-                    (A : Set.{0} (Fin (HAdd.hAdd.{0, 0, 0} p n) → M)),
-                    DiamondIntegral.Section2.GeneratesCompleteType B
-                        (fun x => SpecialTransformations.Milestone0.SortTag.vf) A →
-                      LE.le.{0} (DiamondIntegral.Section2.prefixedNamedPolydisc points closed a δ) A →
-                        DiamondIntegral.Section2.IsAtomicOverDiscNamesNormalForm B points closed a δ
-                          (fun x => SpecialTransformations.Milestone0.SortTag.vf)
-                          (DiamondIntegral.Section2.prefixedNamedPolydisc points closed a δ)
-'DiamondIntegral.Section3.lemma_2_25_singleton_normal_form_discharged' depends on axioms: [propext,
- Classical.choice.{u},
- Quot.sound.{u}]
-@DiamondIntegral.Section3.lemma_2_25_with_disc_ground_discharged : ∀ {M : Type}
-  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
-  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF],
-  CanonicalStructure.IsCanonical →
-    FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00 →
-      ∀ {κ : Cardinal.{0}},
-        LE.le.{1} Cardinal.aleph0.{0} κ →
-          SpecialTransformations.Section3.Saturated M κ →
-            ∀ (B : DiamondIntegral.Section2.ParameterBase M),
-              DiamondIntegral.Section2.NontrivialDefinableGamma B →
-                (∀ (E : DiamondIntegral.Section2.ParameterBase M), DiamondIntegral.Section2.UnaryDiscAtomicityInput E) →
-                  (∀ (E : DiamondIntegral.Section2.ParameterBase M),
-                      DiamondIntegral.Section2.AtomicDiscGammaBaseChangeInput E) →
-                    ∀ {k n : Nat} (ground : Fin k → Bool) (d : Fin k → DiamondIntegral.Section2.VF M)
-                      (τ : Fin k → DiamondIntegral.Section2.Gamma M) (closed : Fin n → Bool)
-                      (a : Fin n → DiamondIntegral.Section2.VF M) (δ : Fin n → DiamondIntegral.Section2.Gamma M)
-                      (A : Set.{0} (Fin n → M)),
-                      DiamondIntegral.Section2.GeneratesTypeOverFiniteDiscNames B ground d τ
-                          (fun x => SpecialTransformations.Milestone0.SortTag.vf) A →
-                        LE.le.{0} (DiamondIntegral.Section2.namedPolydisc closed a δ) A →
-                          DiamondIntegral.Section2.IsAtomicOverFiniteDiscNames B (Fin.append.{1} ground closed)
-                            (Fin.append.{1} d a) (Fin.append.{1} τ δ)
-                            (fun x => SpecialTransformations.Milestone0.SortTag.vf)
-                            (DiamondIntegral.Section2.namedPolydisc closed a δ)
-'DiamondIntegral.Section3.lemma_2_25_with_disc_ground_discharged' depends on axioms: [propext,
- Classical.choice.{u},
- Quot.sound.{u}]
-@DiamondIntegral.Section3.lemma_2_25_disc_ground_discharged : ∀ {M : Type}
-  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
-  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF],
-  CanonicalStructure.IsCanonical →
-    FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00 →
-      ∀ {κ : Cardinal.{0}},
-        LE.le.{1} Cardinal.aleph0.{0} κ →
-          SpecialTransformations.Section3.Saturated M κ →
-            ∀ (B : DiamondIntegral.Section2.ParameterBase M),
-              DiamondIntegral.Section2.NontrivialDefinableGamma B →
-                (∀ (E : DiamondIntegral.Section2.ParameterBase M), DiamondIntegral.Section2.UnaryDiscAtomicityInput E) →
-                  (∀ (E : DiamondIntegral.Section2.ParameterBase M),
-                      DiamondIntegral.Section2.AtomicDiscGammaBaseChangeInput E) →
-                    ∀ {k n : Nat} (ground : Fin k → Bool) (d : Fin k → DiamondIntegral.Section2.VF M)
-                      (τ : Fin k → DiamondIntegral.Section2.Gamma M) (D : Fin n → DiamondIntegral.Section2.DC),
-                      Nonempty.{1} (DiamondIntegral.Section2.PolydiscNaming D) →
-                        ∀ (A : Set.{0} (Fin n → M)),
-                          DiamondIntegral.Section2.GeneratesTypeOverFiniteDiscNames B ground d τ
-                              (fun x => SpecialTransformations.Milestone0.SortTag.vf) A →
-                            LE.le.{0} (DiamondIntegral.Section2.discNameProduct D) A →
-                              DiamondIntegral.Section2.IsAtomicOverDiscGroundAndPolydiscNames B ground d τ D
-                                (fun x => SpecialTransformations.Milestone0.SortTag.vf)
-                                (DiamondIntegral.Section2.discNameProduct D)
-'DiamondIntegral.Section3.lemma_2_25_disc_ground_discharged' depends on axioms: [propext,
- Classical.choice.{u},
- Quot.sound.{u}]
-@DiamondIntegral.Section3.lemma_2_25_disc_ground_closed_discharged : ∀ {M : Type}
-  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
-  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF],
-  CanonicalStructure.IsCanonical →
-    FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00 →
-      ∀ {κ : Cardinal.{0}},
-        LE.le.{1} Cardinal.aleph0.{0} κ →
-          SpecialTransformations.Section3.Saturated M κ →
-            ∀ (B : DiamondIntegral.Section2.ParameterBase M),
-              DiamondIntegral.Section2.NontrivialDefinableGamma B →
-                (∀ (E : DiamondIntegral.Section2.ParameterBase M), DiamondIntegral.Section2.UnaryDiscAtomicityInput E) →
-                  (∀ (E : DiamondIntegral.Section2.ParameterBase M),
-                      DiamondIntegral.Section2.AtomicDiscGammaBaseChangeInput E) →
-                    ∀ {k n : Nat} (ground : Fin k → Bool) (d : Fin k → DiamondIntegral.Section2.VF M)
-                      (τ : Fin k → DiamondIntegral.Section2.Gamma M) (a : Fin n → DiamondIntegral.Section2.VF M)
-                      (γ : Fin n → DiamondIntegral.Section2.GammaInfinity M) (A : Set.{0} (Fin n → M)),
-                      DiamondIntegral.Section2.GeneratesTypeOverFiniteDiscNames B ground d τ
-                          (fun x => SpecialTransformations.Milestone0.SortTag.vf) A →
-                        LE.le.{0}
-                            (DiamondIntegral.Section2.discNameProduct fun i =>
-                              DiamondIntegral.Section2.closedDiscCode (a i) (γ i))
-                            A →
-                          DiamondIntegral.Section2.IsAtomicOverDiscGroundAndPolydiscNames B ground d τ
-                            (fun i => DiamondIntegral.Section2.closedDiscCode (a i) (γ i))
-                            (fun x => SpecialTransformations.Milestone0.SortTag.vf)
-                            (DiamondIntegral.Section2.discNameProduct fun i =>
-                              DiamondIntegral.Section2.closedDiscCode (a i) (γ i))
-'DiamondIntegral.Section3.lemma_2_25_disc_ground_closed_discharged' depends on axioms: [propext,
- Classical.choice.{u},
- Quot.sound.{u}]
-@DiamondIntegral.Section3.lemma_2_25_disc_ground_open_discharged : ∀ {M : Type}
-  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
-  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF],
-  CanonicalStructure.IsCanonical →
-    FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00 →
-      ∀ {κ : Cardinal.{0}},
-        LE.le.{1} Cardinal.aleph0.{0} κ →
-          SpecialTransformations.Section3.Saturated M κ →
-            ∀ (B : DiamondIntegral.Section2.ParameterBase M),
-              DiamondIntegral.Section2.NontrivialDefinableGamma B →
-                (∀ (E : DiamondIntegral.Section2.ParameterBase M), DiamondIntegral.Section2.UnaryDiscAtomicityInput E) →
-                  (∀ (E : DiamondIntegral.Section2.ParameterBase M),
-                      DiamondIntegral.Section2.AtomicDiscGammaBaseChangeInput E) →
-                    ∀ {k n : Nat} (ground : Fin k → Bool) (d : Fin k → DiamondIntegral.Section2.VF M)
-                      (τ : Fin k → DiamondIntegral.Section2.Gamma M) (a : Fin n → DiamondIntegral.Section2.VF M)
-                      (δ : Fin n → DiamondIntegral.Section2.Gamma M) (A : Set.{0} (Fin n → M)),
-                      DiamondIntegral.Section2.GeneratesTypeOverFiniteDiscNames B ground d τ
-                          (fun x => SpecialTransformations.Milestone0.SortTag.vf) A →
-                        LE.le.{0}
-                            (DiamondIntegral.Section2.discNameProduct
-                              (DiamondIntegral.Section2.finitePolydiscNames (fun x => Bool.false) a δ))
-                            A →
-                          DiamondIntegral.Section2.IsAtomicOverDiscGroundAndPolydiscNames B ground d τ
-                            (DiamondIntegral.Section2.finitePolydiscNames (fun x => Bool.false) a δ)
-                            (fun x => SpecialTransformations.Milestone0.SortTag.vf)
-                            (DiamondIntegral.Section2.discNameProduct
-                              (DiamondIntegral.Section2.finitePolydiscNames (fun x => Bool.false) a δ))
-'DiamondIntegral.Section3.lemma_2_25_disc_ground_open_discharged' depends on axioms: [propext,
- Classical.choice.{u},
- Quot.sound.{u}]
-@DiamondIntegral.Section3.lemma_2_25_singleton_with_disc_ground_discharged : ∀ {M : Type}
-  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
-  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF],
-  CanonicalStructure.IsCanonical →
-    FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00 →
-      ∀ {κ : Cardinal.{0}},
-        LE.le.{1} Cardinal.aleph0.{0} κ →
-          SpecialTransformations.Section3.Saturated M κ →
-            ∀ (B : DiamondIntegral.Section2.ParameterBase M),
-              DiamondIntegral.Section2.NontrivialDefinableGamma B →
-                (∀ (E : DiamondIntegral.Section2.ParameterBase M), DiamondIntegral.Section2.UnaryDiscAtomicityInput E) →
-                  (∀ (E : DiamondIntegral.Section2.ParameterBase M),
-                      DiamondIntegral.Section2.AtomicDiscGammaBaseChangeInput E) →
-                    ∀ {k p n : Nat} (ground : Fin k → Bool) (d : Fin k → DiamondIntegral.Section2.VF M)
-                      (τ : Fin k → DiamondIntegral.Section2.Gamma M) (points : Fin p → DiamondIntegral.Section2.VF M)
-                      (closed : Fin n → Bool) (a : Fin n → DiamondIntegral.Section2.VF M)
-                      (δ : Fin n → DiamondIntegral.Section2.Gamma M) (A : Set.{0} (Fin (HAdd.hAdd.{0, 0, 0} p n) → M)),
-                      DiamondIntegral.Section2.GeneratesTypeOverFiniteDiscNames B ground d τ
-                          (fun x => SpecialTransformations.Milestone0.SortTag.vf) A →
-                        LE.le.{0} (DiamondIntegral.Section2.prefixedNamedPolydisc points closed a δ) A →
-                          DiamondIntegral.Section2.IsAtomicOverFiniteDiscNames
-                            (DiamondIntegral.Section2.tupleBase B (SpecialTransformations.Section4.vfValues points))
-                            (Fin.append.{1} ground closed) (Fin.append.{1} d a) (Fin.append.{1} τ δ)
-                            (fun x => SpecialTransformations.Milestone0.SortTag.vf)
-                            (DiamondIntegral.Section2.prefixedNamedPolydisc points closed a δ)
-'DiamondIntegral.Section3.lemma_2_25_singleton_with_disc_ground_discharged' depends on axioms: [propext,
- Classical.choice.{u},
- Quot.sound.{u}]
-@DiamondIntegral.Section3.lemma_2_29_discharged : ∀ {M : Type}
-  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
-  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF],
-  FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00 →
-    ∀ (B : DiamondIntegral.Section2.ParameterBase M),
-      DiamondIntegral.Section2.NontrivialDefinableGamma B →
-        (∀ (E : DiamondIntegral.Section2.ParameterBase M), DiamondIntegral.Section2.OpenDiscImageInput E) →
-          ∀ {n : Nat} (D : Fin n → Set.{0} M),
+          ∀ {k n : Nat} (ground : Fin k → Bool) (d : Fin k → DiamondIntegral.Section2.VF M)
+            (τ : Fin k → DiamondIntegral.Section2.Gamma M) (D : Fin n → Set.{0} M),
             (∀ (j : Fin n), DiamondIntegral.Section2.IsOpenDisc (D j)) →
-              DiamondIntegral.Section2.IsAtomic B (fun x => SpecialTransformations.Milestone0.SortTag.vf)
+              DiamondIntegral.Section2.IsAtomicOverFiniteDiscNames B ground d τ
+                  (fun x => SpecialTransformations.Milestone0.SortTag.vf)
                   (Set.ofPred.{0} fun a => ∀ (j : Fin n), Membership.mem.{0, 0} (D j) (a j)) →
                 ∀ (F : Set.{0} (Prod.{0, 0} (Fin n → M) M)),
-                  SpecialTransformations.Section3.GammaParameters.DefinableOverBase B
+                  DiamondIntegral.Section2.DefinableOverFiniteDiscNames B ground d τ
                       (fun x => SpecialTransformations.Milestone0.SortTag.vf)
                       (Set.ofPred.{0} fun z =>
                         Membership.mem.{0, 0} F (Prod.mk.{0, 0} (Fin.init.{1} z) (z (Fin.last n)))) →
@@ -114279,15 +113995,17 @@ DiamondIntegral.Section3.gamma_vf_two_order_cases : ∀ (σ : Equiv.Perm.{1} (Fi
                         Exists.{1} fun T =>
                           And (Set.Finite.{0} T)
                             (And
-                              (SpecialTransformations.Section3.GammaParameters.DefinableAtBase B
-                                SpecialTransformations.Milestone0.SortTag.rv (Set.image.{0, 0} Subtype.val.{1} T))
+                              (DiamondIntegral.Section2.DefinableOverFiniteDiscNames B ground d τ
+                                (fun x => SpecialTransformations.Milestone0.SortTag.rv)
+                                (Set.ofPred.{0} fun z =>
+                                  Membership.mem.{0, 0} (Set.image.{0, 0} Subtype.val.{1} T) (z 0)))
                               (Exists.{1} fun g =>
                                 And
                                   (∀ (t : DiamondIntegral.Section2.RVInfinity M),
                                     Membership.mem.{0, 0} T t →
                                       And
-                                        (SpecialTransformations.Section3.GammaParameters.DefinableOverBase
-                                          (DiamondIntegral.Section2.adjoinRV B t)
+                                        (DiamondIntegral.Section2.DefinableOverFiniteDiscNames
+                                          (DiamondIntegral.Section2.adjoinRV B t) ground d τ
                                           (fun x => SpecialTransformations.Milestone0.SortTag.vf)
                                           (DiamondIntegral.Section2.vfFunctionGraph A (g t)))
                                         (And
@@ -114295,7 +114013,8 @@ DiamondIntegral.Section3.gamma_vf_two_order_cases : ∀ (σ : Equiv.Perm.{1} (Fi
                                             (Exists.{1} fun c =>
                                               ∀ (a : Fin n → M), Membership.mem.{0, 0} A a → Eq.{1} (g t a) ↑c)
                                             (And
-                                              (DiamondIntegral.Section2.IsAtomic (DiamondIntegral.Section2.adjoinRV B t)
+                                              (DiamondIntegral.Section2.IsAtomicOverFiniteDiscNames
+                                                (DiamondIntegral.Section2.adjoinRV B t) ground d τ
                                                 (fun x => SpecialTransformations.Milestone0.SortTag.vf)
                                                 (Set.ofPred.{0} fun z =>
                                                   Membership.mem.{0, 0} (Set.image.{0, 0} (g t) A) (z 0)))
@@ -114312,6 +114031,236 @@ DiamondIntegral.Section3.gamma_vf_two_order_cases : ∀ (σ : Equiv.Perm.{1} (Fi
                                       ∀ (y : M),
                                         Iff (Membership.mem.{0, 0} F (Prod.mk.{0, 0} a y))
                                           (Exists.{1} fun t => And (Membership.mem.{0, 0} T t) (Eq.{1} (g t a) y)))))
+'DiamondIntegral.Section3.lemma_2_29_disc_names_discharged' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section3.lemma_2_25_discharged : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF],
+  FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00 →
+    ∀ {κ : Cardinal.{0}},
+      LE.le.{1} Cardinal.aleph0.{0} κ →
+        SpecialTransformations.Section3.Saturated M κ →
+          ∀ (B : DiamondIntegral.Section2.ParameterBase M),
+            DiamondIntegral.Section2.NontrivialDefinableGamma B →
+              ∀ {d : Nat} (D : Fin d → DiamondIntegral.Section2.DC),
+                Nonempty.{1} (DiamondIntegral.Section2.PolydiscNaming D) →
+                  ∀ (A : Set.{0} (Fin d → M)),
+                    DiamondIntegral.Section2.GeneratesCompleteType B
+                        (fun x => SpecialTransformations.Milestone0.SortTag.vf) A →
+                      LE.le.{0} (DiamondIntegral.Section2.discNameProduct D) A →
+                        DiamondIntegral.Section2.IsAtomicOverPolydiscNames B D
+                          (fun x => SpecialTransformations.Milestone0.SortTag.vf)
+                          (DiamondIntegral.Section2.discNameProduct D)
+'DiamondIntegral.Section3.lemma_2_25_discharged' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@DiamondIntegral.Section3.lemma_2_25_singleton_normal_form_discharged : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF],
+  FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00 →
+    ∀ {κ : Cardinal.{0}},
+      LE.le.{1} Cardinal.aleph0.{0} κ →
+        SpecialTransformations.Section3.Saturated M κ →
+          ∀ (B : DiamondIntegral.Section2.ParameterBase M),
+            DiamondIntegral.Section2.NontrivialDefinableGamma B →
+              ∀ {p n : Nat} (points : Fin p → DiamondIntegral.Section2.VF M) (closed : Fin n → Bool)
+                (a : Fin n → DiamondIntegral.Section2.VF M) (δ : Fin n → DiamondIntegral.Section2.Gamma M)
+                (A : Set.{0} (Fin (HAdd.hAdd.{0, 0, 0} p n) → M)),
+                DiamondIntegral.Section2.GeneratesCompleteType B (fun x => SpecialTransformations.Milestone0.SortTag.vf)
+                    A →
+                  LE.le.{0} (DiamondIntegral.Section2.prefixedNamedPolydisc points closed a δ) A →
+                    DiamondIntegral.Section2.IsAtomicOverDiscNamesNormalForm B points closed a δ
+                      (fun x => SpecialTransformations.Milestone0.SortTag.vf)
+                      (DiamondIntegral.Section2.prefixedNamedPolydisc points closed a δ)
+'DiamondIntegral.Section3.lemma_2_25_singleton_normal_form_discharged' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section3.lemma_2_25_with_disc_ground_discharged : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF],
+  CanonicalStructure.IsCanonical →
+    FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00 →
+      ∀ {κ : Cardinal.{0}},
+        LE.le.{1} Cardinal.aleph0.{0} κ →
+          SpecialTransformations.Section3.Saturated M κ →
+            ∀ (B : DiamondIntegral.Section2.ParameterBase M),
+              DiamondIntegral.Section2.NontrivialDefinableGamma B →
+                ∀ {k n : Nat} (ground : Fin k → Bool) (d : Fin k → DiamondIntegral.Section2.VF M)
+                  (τ : Fin k → DiamondIntegral.Section2.Gamma M) (closed : Fin n → Bool)
+                  (a : Fin n → DiamondIntegral.Section2.VF M) (δ : Fin n → DiamondIntegral.Section2.Gamma M)
+                  (A : Set.{0} (Fin n → M)),
+                  DiamondIntegral.Section2.GeneratesTypeOverFiniteDiscNames B ground d τ
+                      (fun x => SpecialTransformations.Milestone0.SortTag.vf) A →
+                    LE.le.{0} (DiamondIntegral.Section2.namedPolydisc closed a δ) A →
+                      DiamondIntegral.Section2.IsAtomicOverFiniteDiscNames B (Fin.append.{1} ground closed)
+                        (Fin.append.{1} d a) (Fin.append.{1} τ δ)
+                        (fun x => SpecialTransformations.Milestone0.SortTag.vf)
+                        (DiamondIntegral.Section2.namedPolydisc closed a δ)
+'DiamondIntegral.Section3.lemma_2_25_with_disc_ground_discharged' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section3.lemma_2_25_disc_ground_discharged : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF],
+  CanonicalStructure.IsCanonical →
+    FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00 →
+      ∀ {κ : Cardinal.{0}},
+        LE.le.{1} Cardinal.aleph0.{0} κ →
+          SpecialTransformations.Section3.Saturated M κ →
+            ∀ (B : DiamondIntegral.Section2.ParameterBase M),
+              DiamondIntegral.Section2.NontrivialDefinableGamma B →
+                ∀ {k n : Nat} (ground : Fin k → Bool) (d : Fin k → DiamondIntegral.Section2.VF M)
+                  (τ : Fin k → DiamondIntegral.Section2.Gamma M) (D : Fin n → DiamondIntegral.Section2.DC),
+                  Nonempty.{1} (DiamondIntegral.Section2.PolydiscNaming D) →
+                    ∀ (A : Set.{0} (Fin n → M)),
+                      DiamondIntegral.Section2.GeneratesTypeOverFiniteDiscNames B ground d τ
+                          (fun x => SpecialTransformations.Milestone0.SortTag.vf) A →
+                        LE.le.{0} (DiamondIntegral.Section2.discNameProduct D) A →
+                          DiamondIntegral.Section2.IsAtomicOverDiscGroundAndPolydiscNames B ground d τ D
+                            (fun x => SpecialTransformations.Milestone0.SortTag.vf)
+                            (DiamondIntegral.Section2.discNameProduct D)
+'DiamondIntegral.Section3.lemma_2_25_disc_ground_discharged' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section3.lemma_2_25_disc_ground_closed_discharged : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF],
+  CanonicalStructure.IsCanonical →
+    FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00 →
+      ∀ {κ : Cardinal.{0}},
+        LE.le.{1} Cardinal.aleph0.{0} κ →
+          SpecialTransformations.Section3.Saturated M κ →
+            ∀ (B : DiamondIntegral.Section2.ParameterBase M),
+              DiamondIntegral.Section2.NontrivialDefinableGamma B →
+                ∀ {k n : Nat} (ground : Fin k → Bool) (d : Fin k → DiamondIntegral.Section2.VF M)
+                  (τ : Fin k → DiamondIntegral.Section2.Gamma M) (a : Fin n → DiamondIntegral.Section2.VF M)
+                  (γ : Fin n → DiamondIntegral.Section2.GammaInfinity M) (A : Set.{0} (Fin n → M)),
+                  DiamondIntegral.Section2.GeneratesTypeOverFiniteDiscNames B ground d τ
+                      (fun x => SpecialTransformations.Milestone0.SortTag.vf) A →
+                    LE.le.{0}
+                        (DiamondIntegral.Section2.discNameProduct fun i =>
+                          DiamondIntegral.Section2.closedDiscCode (a i) (γ i))
+                        A →
+                      DiamondIntegral.Section2.IsAtomicOverDiscGroundAndPolydiscNames B ground d τ
+                        (fun i => DiamondIntegral.Section2.closedDiscCode (a i) (γ i))
+                        (fun x => SpecialTransformations.Milestone0.SortTag.vf)
+                        (DiamondIntegral.Section2.discNameProduct fun i =>
+                          DiamondIntegral.Section2.closedDiscCode (a i) (γ i))
+'DiamondIntegral.Section3.lemma_2_25_disc_ground_closed_discharged' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section3.lemma_2_25_disc_ground_open_discharged : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF],
+  CanonicalStructure.IsCanonical →
+    FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00 →
+      ∀ {κ : Cardinal.{0}},
+        LE.le.{1} Cardinal.aleph0.{0} κ →
+          SpecialTransformations.Section3.Saturated M κ →
+            ∀ (B : DiamondIntegral.Section2.ParameterBase M),
+              DiamondIntegral.Section2.NontrivialDefinableGamma B →
+                ∀ {k n : Nat} (ground : Fin k → Bool) (d : Fin k → DiamondIntegral.Section2.VF M)
+                  (τ : Fin k → DiamondIntegral.Section2.Gamma M) (a : Fin n → DiamondIntegral.Section2.VF M)
+                  (δ : Fin n → DiamondIntegral.Section2.Gamma M) (A : Set.{0} (Fin n → M)),
+                  DiamondIntegral.Section2.GeneratesTypeOverFiniteDiscNames B ground d τ
+                      (fun x => SpecialTransformations.Milestone0.SortTag.vf) A →
+                    LE.le.{0}
+                        (DiamondIntegral.Section2.discNameProduct
+                          (DiamondIntegral.Section2.finitePolydiscNames (fun x => Bool.false) a δ))
+                        A →
+                      DiamondIntegral.Section2.IsAtomicOverDiscGroundAndPolydiscNames B ground d τ
+                        (DiamondIntegral.Section2.finitePolydiscNames (fun x => Bool.false) a δ)
+                        (fun x => SpecialTransformations.Milestone0.SortTag.vf)
+                        (DiamondIntegral.Section2.discNameProduct
+                          (DiamondIntegral.Section2.finitePolydiscNames (fun x => Bool.false) a δ))
+'DiamondIntegral.Section3.lemma_2_25_disc_ground_open_discharged' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section3.lemma_2_25_singleton_with_disc_ground_discharged : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF],
+  CanonicalStructure.IsCanonical →
+    FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00 →
+      ∀ {κ : Cardinal.{0}},
+        LE.le.{1} Cardinal.aleph0.{0} κ →
+          SpecialTransformations.Section3.Saturated M κ →
+            ∀ (B : DiamondIntegral.Section2.ParameterBase M),
+              DiamondIntegral.Section2.NontrivialDefinableGamma B →
+                ∀ {k p n : Nat} (ground : Fin k → Bool) (d : Fin k → DiamondIntegral.Section2.VF M)
+                  (τ : Fin k → DiamondIntegral.Section2.Gamma M) (points : Fin p → DiamondIntegral.Section2.VF M)
+                  (closed : Fin n → Bool) (a : Fin n → DiamondIntegral.Section2.VF M)
+                  (δ : Fin n → DiamondIntegral.Section2.Gamma M) (A : Set.{0} (Fin (HAdd.hAdd.{0, 0, 0} p n) → M)),
+                  DiamondIntegral.Section2.GeneratesTypeOverFiniteDiscNames B ground d τ
+                      (fun x => SpecialTransformations.Milestone0.SortTag.vf) A →
+                    LE.le.{0} (DiamondIntegral.Section2.prefixedNamedPolydisc points closed a δ) A →
+                      DiamondIntegral.Section2.IsAtomicOverFiniteDiscNames
+                        (DiamondIntegral.Section2.tupleBase B (SpecialTransformations.Section4.vfValues points))
+                        (Fin.append.{1} ground closed) (Fin.append.{1} d a) (Fin.append.{1} τ δ)
+                        (fun x => SpecialTransformations.Milestone0.SortTag.vf)
+                        (DiamondIntegral.Section2.prefixedNamedPolydisc points closed a δ)
+'DiamondIntegral.Section3.lemma_2_25_singleton_with_disc_ground_discharged' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section3.lemma_2_29_discharged : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF],
+  FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00 →
+    ∀ (B : DiamondIntegral.Section2.ParameterBase M),
+      DiamondIntegral.Section2.NontrivialDefinableGamma B →
+        ∀ {n : Nat} (D : Fin n → Set.{0} M),
+          (∀ (j : Fin n), DiamondIntegral.Section2.IsOpenDisc (D j)) →
+            DiamondIntegral.Section2.IsAtomic B (fun x => SpecialTransformations.Milestone0.SortTag.vf)
+                (Set.ofPred.{0} fun a => ∀ (j : Fin n), Membership.mem.{0, 0} (D j) (a j)) →
+              ∀ (F : Set.{0} (Prod.{0, 0} (Fin n → M) M)),
+                SpecialTransformations.Section3.GammaParameters.DefinableOverBase B
+                    (fun x => SpecialTransformations.Milestone0.SortTag.vf)
+                    (Set.ofPred.{0} fun z =>
+                      Membership.mem.{0, 0} F (Prod.mk.{0, 0} (Fin.init.{1} z) (z (Fin.last n)))) →
+                  (∀ (a : Fin n → M),
+                      Membership.mem.{0, 0} (Set.ofPred.{0} fun a => ∀ (j : Fin n), Membership.mem.{0, 0} (D j) (a j))
+                          a →
+                        Set.Finite.{0} (Set.ofPred.{0} fun y => Membership.mem.{0, 0} F (Prod.mk.{0, 0} a y))) →
+                    (∀ (a : Fin n → M),
+                        Membership.mem.{0, 0} (Set.ofPred.{0} fun a => ∀ (j : Fin n), Membership.mem.{0, 0} (D j) (a j))
+                            a →
+                          Set.InjOn.{0, 0} SpecialTransformations.Milestone0.iRv.{0}
+                            (Set.ofPred.{0} fun y => Membership.mem.{0, 0} F (Prod.mk.{0, 0} a y))) →
+                      have A := Set.ofPred.{0} fun a => ∀ (j : Fin n), Membership.mem.{0, 0} (D j) (a j);
+                      Exists.{1} fun T =>
+                        And (Set.Finite.{0} T)
+                          (And
+                            (SpecialTransformations.Section3.GammaParameters.DefinableAtBase B
+                              SpecialTransformations.Milestone0.SortTag.rv (Set.image.{0, 0} Subtype.val.{1} T))
+                            (Exists.{1} fun g =>
+                              And
+                                (∀ (t : DiamondIntegral.Section2.RVInfinity M),
+                                  Membership.mem.{0, 0} T t →
+                                    And
+                                      (SpecialTransformations.Section3.GammaParameters.DefinableOverBase
+                                        (DiamondIntegral.Section2.adjoinRV B t)
+                                        (fun x => SpecialTransformations.Milestone0.SortTag.vf)
+                                        (DiamondIntegral.Section2.vfFunctionGraph A (g t)))
+                                      (And
+                                        (Or
+                                          (Exists.{1} fun c =>
+                                            ∀ (a : Fin n → M), Membership.mem.{0, 0} A a → Eq.{1} (g t a) ↑c)
+                                          (And
+                                            (DiamondIntegral.Section2.IsAtomic (DiamondIntegral.Section2.adjoinRV B t)
+                                              (fun x => SpecialTransformations.Milestone0.SortTag.vf)
+                                              (Set.ofPred.{0} fun z =>
+                                                Membership.mem.{0, 0} (Set.image.{0, 0} (g t) A) (z 0)))
+                                            (DiamondIntegral.Section2.IsOpenDisc (Set.image.{0, 0} (g t) A))))
+                                        (∀ (a : Fin n → M),
+                                          Membership.mem.{0, 0} A a →
+                                            ∀ (y : M),
+                                              Iff
+                                                (And (Membership.mem.{0, 0} F (Prod.mk.{0, 0} a y))
+                                                  (Eq.{1} (SpecialTransformations.Milestone0.iRv.{0} y) ↑t))
+                                                (Eq.{1} (g t a) y))))
+                                (∀ (a : Fin n → M),
+                                  Membership.mem.{0, 0} A a →
+                                    ∀ (y : M),
+                                      Iff (Membership.mem.{0, 0} F (Prod.mk.{0, 0} a y))
+                                        (Exists.{1} fun t => And (Membership.mem.{0, 0} T t) (Eq.{1} (g t a) y)))))
 'DiamondIntegral.Section3.lemma_2_29_discharged' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
 @DiamondIntegral.Section3.lemma_2_41_gamma_discharged : ∀ {M : Type}
   [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]

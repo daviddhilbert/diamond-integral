@@ -141,6 +141,9 @@ import «section 6».Section
 #check @DiamondIntegral.Section6.AllDegreeUnaryFactorizations.lemma_6_29_doublyBounded_all_degrees
 #print DiamondIntegral.Section6.AllDegreeUnaryFactorizations.lemma_6_29_doublyBounded_all_degrees
 #print axioms DiamondIntegral.Section6.AllDegreeUnaryFactorizations.lemma_6_29_doublyBounded_all_degrees
+#check @DiamondIntegral.Section6.AllDegreeUnaryFactorizations.lemma_6_29_finiteVolume_all_degrees
+#print DiamondIntegral.Section6.AllDegreeUnaryFactorizations.lemma_6_29_finiteVolume_all_degrees
+#print axioms DiamondIntegral.Section6.AllDegreeUnaryFactorizations.lemma_6_29_finiteVolume_all_degrees
 #check @DiamondIntegral.Section6.AllDegreeUnaryFactorizations.RVUnaryFactorization
 #print DiamondIntegral.Section6.AllDegreeUnaryFactorizations.RVUnaryFactorization
 #print axioms DiamondIntegral.Section6.AllDegreeUnaryFactorizations.RVUnaryFactorization
@@ -3324,6 +3327,9 @@ import «section 6».Section
 #check @DiamondIntegral.Section6.DiamondLift.liftMorphism
 #print DiamondIntegral.Section6.DiamondLift.liftMorphism
 #print axioms DiamondIntegral.Section6.DiamondLift.liftMorphism
+#check @DiamondIntegral.Section6.DiamondLiftHomomorphism.liftHom_surjective_discharged
+#print DiamondIntegral.Section6.DiamondLiftHomomorphism.liftHom_surjective_discharged
+#print axioms DiamondIntegral.Section6.DiamondLiftHomomorphism.liftHom_surjective_discharged
 #check @DiamondIntegral.Section6.DiamondLiftHomomorphism.homeo_zero
 #print DiamondIntegral.Section6.DiamondLiftHomomorphism.homeo_zero
 #print axioms DiamondIntegral.Section6.DiamondLiftHomomorphism.homeo_zero

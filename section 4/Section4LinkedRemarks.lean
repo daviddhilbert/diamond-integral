@@ -1,6 +1,7 @@
 import «section 4».Section3LinkedRetractionStatements
 import «section 4».RVT001NormalizedDistinct
 import «section 4».RVT001OrdinaryRanges
+import «section 4».RelativeAnnularGenerators
 import «section 5».GammaQEFiniteLaws
 
 /-! The ordinary retraction statements of Remarks 4.4 (`eb:no:eg`) and 4.16
@@ -67,5 +68,13 @@ theorem normalized_retractions_distinct :
         (Section5.GammaQE.gamma_piecewise_rational_affine (M := M)) hκ hs B hr hγ hΓ
         (Section3T001Integration.ordinary (hc := hc) hκ hs h00 hr hγ hΓ) :=
   RVT001NormalizedDistinct.normalized_maps_distinct hc h00 _ hκ hs B hr hγ hΓ _
+
+/-- Lemma 4.18 (factorization clause) with the Γ input discharged: the bounded
+retraction kills the manuscript ideal, so it factors through `B / J_var`. -/
+theorem manuscript_section4_compatibility_discharged :
+    RelativeAnnularGenerators.manuscriptIdeal B ≤ RingHom.ker
+      (RVT001OrdinaryDescent.boundedEvaluation h00 (Section5.GammaQE.gamma_piecewise_rational_affine (M := M))
+        hκ hs B hr hγ hΓ (Section3T001Integration.ordinary (hc := hc) hκ hs h00 hr hγ hΓ) EulerKind.bounded) :=
+  RelativeAnnularGenerators.manuscript_section4_compatibility hc h00 _ hκ hs B hr hγ hΓ
 
 end DiamondIntegral.Section4.Section4LinkedRemarks

@@ -13,10 +13,42 @@ supplied separately by the author.
 - [Upstream weighted-degree-zero compatibility audit](UPSTREAM-WEIGHTED-ZERO-AUDIT.md)
 - [Section 7 handoff](<section 7/SECTION6-HANDOFF.md>)
 - [Section 8 handoff](<section 8/SECTION6-HANDOFF.md>)
-- [Current corrected-pin verification](verification/upstream-weighted-zero-upgrade/status.json)
+- [Shared-foundation migration verification](verification/shared-foundation.json)
+- [Weighted-degree-zero baseline verification](verification/upstream-weighted-zero-upgrade/status.json)
 - [Original aperture-revision verification](<section 6/verification/aperture-revision/integrated-audits.json>)
 
 The checked baseline includes completed Sections 2–6 in their recorded
 scopes, including revised Definition 6.11. Section 7's synchronized aperture
 and kernel assembly is the next active task; Section 8 remains downstream.
 Historical planning notes do not supersede current coverage maps and receipts.
+
+The pinned [hilbert-mathlib](https://github.com/daviddhilbert/hilbert-mathlib)
+dependency now owns 65 reusable modules formerly implemented here, within the
+approved 106-module shared extraction. Their original paths are compatibility
+imports; declaration names and mathematical statements are unchanged.
+[SHARED-FOUNDATION.json](SHARED-FOUNDATION.json) records exact providers and
+source fingerprints. Section verifiers inspect the relocated proof bodies and
+check their pinned source identities. Current full audit output is retained in
+CI artifacts; the repository's older generated snapshots remain matched
+historical checkpoints.
+
+The independent [Fubini-theorems](https://github.com/daviddhilbert/Fubini-theorems)
+package owns the active Section 5 development and all its local prerequisites.
+It preserves the bounded and geometric Fubini theorems, comparison results,
+and variety corollary with their original public names and hypotheses.
+This project consumes the pinned package through its original import paths.
+[EXTRACTED-FOUNDATIONS.json](EXTRACTED-FOUNDATIONS.json) records the exact
+providers for 1,786 Fubini modules and 17 whole-module upstream promotions;
+the finite-laws split is recorded as well. Section verifiers follow the
+relocated proof bodies, while the Fubini provider checks the 10,566-type
+public contract against the pre-extraction baseline.
+
+## Further shared-foundation extraction
+
+The additional extraction places 15 generic implementation files in
+hilbert-mathlib, retaining their original import paths and public types.
+`SHARED-FOUNDATION.json` now checks 80 direct shared paths. The 48 newly shared
+Fubini prerequisite paths in `EXTRACTED-FOUNDATIONS.json` resolve to their
+actual hilbert-mathlib proof bodies; the two paper-specific Grothendieck
+relations remain in Fubini. Section verifiers continue auditing the provider
+implementations and the unchanged mathematical hypotheses.

@@ -367,9 +367,11 @@ Keep the checked package revisions in [lake-manifest.json](lake-manifest.json):
 | Package | Revision |
 | --- | --- |
 | mathlib | 56a005855ea17e0b0958f73ec801ae140b0a1679 |
-| acvf_qe | 939346b0a99899e22a873479364e3cc5d142731c |
-| special_transformations | 25852c85a31c67069b148bd31348128318303510 |
-| integration_in_acvf | 7675d31332f20421c803ea16af84964ed74cd51f |
+| acvf_qe | 173708265d7959e031bf9552ee884501fc21f2cb |
+| special_transformations | 423c767a84b709487da7e798f70f0639545db1ac |
+| integration_in_acvf | ab4c0e8b15e1e21b0b4fce57eed764be76020e06 |
+| hilbert-mathlib | 88bb3386f616779bfd87eb453d8a7c899ad63961 |
+| fubini_theorems | 05587564f70fd0015fbb7b7dbf4a8d8c4b0b64f5 |
 
 Dependency preparation checks the published 250 completed Section 5 files and
 39 proper-open-radius sources, then restores only the two recorded Section 6

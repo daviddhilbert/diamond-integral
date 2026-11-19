@@ -1,52 +1,49 @@
 {
   "status": "PASS",
   "pins": {
-    "special_transformations": "25852c85a31c67069b148bd31348128318303510",
-    "integration_in_acvf": "7675d31332f20421c803ea16af84964ed74cd51f"
+    "special_transformations": "423c767a84b709487da7e798f70f0639545db1ac",
+    "integration_in_acvf": "ab4c0e8b15e1e21b0b4fce57eed764be76020e06"
   },
   "dependency_layers": {
     "special_transformations": {
-      "revision": "25852c85a31c67069b148bd31348128318303510",
+      "revision": "423c767a84b709487da7e798f70f0639545db1ac",
       "local_files": []
     },
     "integration_in_acvf": {
-      "revision": "7675d31332f20421c803ea16af84964ed74cd51f",
-      "local_files": [
-        "section 6/IntegrationSection6/ArbitraryContractionOrders.lean",
-        "section 6/IntegrationSection6/ContractionOrderComparison.lean"
-      ]
+      "revision": "ab4c0e8b15e1e21b0b4fce57eed764be76020e06",
+      "local_files": []
     }
   },
   "sections": {
     "2": {
       "receipt": "section 2/verification/status.json",
       "status": "PASS",
-      "sha256": "b0a96cfa2af9545b799d6914641606e2d0924b821965accb82ca03b1f77e0b6d",
-      "checked_Lean_sources": 263
+      "sha256": "f1f55eacea342b734cb718932ecb27d36041f4e2dc52dff5bf813463b16c652f",
+      "checked_Lean_sources": 270
     },
     "3": {
       "receipt": "section 3/verification/VERIFICATION.json",
       "status": "PASS",
-      "sha256": "3fcb6d079e124bf785711f0d25e0d0d820ecfd6343a285c163eb4047690e769e",
-      "checked_Lean_sources": 1518
+      "sha256": "133a013c0332773a3e66eec5affcd731c0ffb166ffa8d2856f87367a8f6d96b1",
+      "checked_Lean_sources": 1528
     },
     "4": {
       "receipt": "section 4/verification/status.json",
       "status": "PASS",
-      "sha256": "0004cfe9734a035d72c7a746d0b0c9796c6d80bf58b513fac8e103f5bc55270e",
-      "checked_Lean_sources": 607
+      "sha256": "eee0b721cb6f31753638df801b34412858d011714b78817b44442198cc197adc",
+      "checked_Lean_sources": 622
     },
     "5": {
       "receipt": "section 5/verification/status.json",
       "status": "PASS_SECTION5_REQUESTED_SCOPE_IN_RECORDED_CONTEXT",
-      "sha256": "e59637d47822d0c8a3cd151509e7e219759c23c3ceb9f97826d06b2cddbb72bf",
-      "checked_Lean_sources": 740
+      "sha256": "d8e31d25194b4d03b8721e62f65d8e43420c0255c83aaea4e495323ecef2f986",
+      "checked_Lean_sources": 756
     },
     "6": {
       "receipt": "section 6/verification/status.json",
       "status": "PASS",
-      "sha256": "ee60aa504b05cb78c2b79e46ddd1b27cb6aac9137feccff7800c124c8263cd8c",
-      "checked_Lean_sources": 1287
+      "sha256": "597cc85f380793e370fd26d970534034feaa184a003a763e55fd501a69633418",
+      "checked_Lean_sources": 1454
     }
   },
   "interfaces": {
@@ -111,51 +108,6 @@
       "propext"
     ],
     "DiamondIntegral.Section3.YinGammaGroundDegreeMeasuredLiftInput": [
-      "Classical.choice",
-      "Quot.sound",
-      "propext"
-    ],
-    "DiamondIntegral.Section3.completedMeasuredLiftInput": [
-      "Classical.choice",
-      "Quot.sound",
-      "propext"
-    ],
-    "DiamondIntegral.Section3.completedDegreeMeasuredLiftInput": [
-      "Classical.choice",
-      "Quot.sound",
-      "propext"
-    ],
-    "DiamondIntegral.Section3.completedGammaGroundMeasuredLiftInput": [
-      "Classical.choice",
-      "Quot.sound",
-      "propext"
-    ],
-    "DiamondIntegral.Section3.completedGammaGroundDegreeMeasuredLiftInput": [
-      "Classical.choice",
-      "Quot.sound",
-      "propext"
-    ],
-    "DiamondIntegral.Section3.gammaContextMeasuredDegreeLift_positive_reverse_kernel": [
-      "Classical.choice",
-      "Quot.sound",
-      "propext"
-    ],
-    "DiamondIntegral.Section3.gammaContextMeasuredDegreeLift_kernel": [
-      "Classical.choice",
-      "Quot.sound",
-      "propext"
-    ],
-    "DiamondIntegral.Section3.gammaContextMeasuredSemiringLift_kernel": [
-      "Classical.choice",
-      "Quot.sound",
-      "propext"
-    ],
-    "DiamondIntegral.Section3.completedMeasuredDegreeLift_kernel": [
-      "Classical.choice",
-      "Quot.sound",
-      "propext"
-    ],
-    "DiamondIntegral.Section3.completedMeasuredSemiringLift_kernel": [
       "Classical.choice",
       "Quot.sound",
       "propext"
@@ -281,32 +233,31 @@
       "propext"
     ]
   },
-  "scope": "Corrected-pin source/type/axiom compatibility for Sections 2–6, weighted finite zero families, mixed products, exact zero lifts, RES/tensor coefficients and relative-aperture comparisons, plus local producers for all four Gamma-valued measured kernels. No manuscript statement or aperture definition changed in this continuation.",
-  "conditional_inputs": [],
-  "discharged_measured_inputs": {
-    "YinMeasuredLiftInput": "completedMeasuredLiftInput",
-    "YinDegreeMeasuredLiftInput": "completedDegreeMeasuredLiftInput",
-    "YinGammaGroundMeasuredLiftInput": "completedGammaGroundMeasuredLiftInput",
-    "YinGammaGroundDegreeMeasuredLiftInput": "completedGammaGroundDegreeMeasuredLiftInput"
-  },
-  "measured_kernel_scope": "All four records have local proved producers under the stated model, canonical-structure, saturation, generation, smallness, nontrivial-value and compatible-valuation hypotheses. Complete Gamma densities and weighted degree zero are retained. No resolved base, Gamma-to-RV section, class cancellation or kernel coarsening is assumed. The upstream RV-valued kernel alone was not used as their producer.",
+  "scope": "New-pin source/type/axiom compatibility for Sections 2–6, weighted finite zero families, mixed products, exact zero lifts, RES/tensor coefficients and relative-aperture comparisons. No manuscript statement or proof body changed in this migration.",
+  "conditional_inputs": [
+    "YinMeasuredLiftInput",
+    "YinDegreeMeasuredLiftInput",
+    "YinGammaGroundMeasuredLiftInput",
+    "YinGammaGroundDegreeMeasuredLiftInput"
+  ],
+  "conditional_scope": "These existing Gamma-valued kernel inputs remain precise accepted cited inputs. The corrected upstream Section 7 HK kernel uses RV-valued forms and is not an unconditional producer for them. No general Gamma-to-RV section or kernel coarsening is assumed.",
   "downstream": "This audit does not prove this paper's revised Section 7 kernel or Section 8 specialization.",
   "evidence": {
     "integration-checkpoint2041.json": "ee4416ef24408c6fb060b89ae3b1da91eed6538994c010e8e307096072774e82",
     "integration-ci-jobs.json": "5fd8f0d9d44dade04bf20ee6973c1593b636458dc618c9084ee018e3952f84d2",
     "special-v1.1.json": "e7e13939a7b3ecb5c41e5ee6b45de4db47247768d578e98597cb12a1fcae26a0",
-    "types-and-axioms.log": "53701a8fd7547a8154bdb94cf56dd01e7a4c4bffc77533e860f4cfac05d69f4b",
+    "types-and-axioms.log": "b780c1efe49eb6dddb5c7650c69dd33b9b33f2d8930da316218c7737be450d49",
     "section6-verifier.log": "5ca5455b3434d29f4c9ba79e91e34158c881dde06515eb7a86c0f9db6e9d4627",
     "section3-verifier.log": "c7506d6635bff3109fe2169c87cbf979442af480bb96e21957d0cec9b1f673dc",
-    "prepared-sources.log": "1ab672e1e00cf5cd6e437aa593f3171be6ea6518e8b054496965d3bea56ae037",
+    "prepared-sources.log": "72ed273b668f02bd491992b87b8394d08f36c1575efb8569ae652253850c2f91",
     "section4-verifier.log": "390e50567df52aae51d507dd2d7f37a7c3592f191b905ae61d5192c359d1321c",
-    "README.md": "5c43bd5eb87866a65aad5aace2cb400b724e6c44276b4c06fb46ff5c6ba5562b",
+    "README.md": "e91db6ad5656b111e5b5b69460f78bb05a3a633f187a0f644139620c4ef47a3e",
     "integration-project-integrity.json": "d352082649a6a2ebc0ce60f4d32d6bc7ea618544afd2e7cb7a9f9cea6eb9d94f",
-    "Audit.lean": "d6c4240804c2e285a88005a6b18628d5c456ffceee785db55cc3f5bc0b1d2dd1",
-    "weighted-upstream-build.log": "0f9618b3726979284601f7d0a7a1c8a25f82d3018d3f35d62dc8037655b5ed38",
+    "Audit.lean": "f38633e9f16aa0d491939f39343dcd66040b470b4ace1adb7daac18c1ac4896c",
+    "weighted-upstream-build.log": "2640ce37408efe8c1ce6b7c0bed858ffa15037c909cfd81328010c34f2fdd572",
     "section5-verifier.log": "adc8b6d96f56caa17c4a65954ec5d42d8f9b07fe6adcf03ba97b553995b99db7",
     "section2-verifier.log": "c1cc9e17043212ff1f0975f8e940fc508d625fc5c38bbd14c9164961d2fd32bf",
     "final-consistency.json": "f3d9299f0b882063546415ac8f208e56555aed1a9bcc3005aa1fd7a065d62f93"
   },
-  "script_sha256": "0e28394cb9669f706fcc0bd748e51dfa9a77809660cd28fba5f24e9080e2d2f4"
+  "script_sha256": "85a18e128261a1340b5e9600a5e38e5d9bc6ec371e3741aee469d2d74dd99b60"
 }

@@ -100,7 +100,9 @@ Author instruction: judge which remaining items are worth formalizing.
     names), 2.29, 2.29 (disc names), 2.35 and 2.35 (VF). Each input is
     supplied by its `integration…Input` constructor. Where the atomicity
     constructor needs it, saturation (`ℵ₀ ≤ κ`, `Saturated M κ`) is stated
-    instead, as a standing hypothesis;
+    instead, as a standing hypothesis. (Corrected November 18 after the third
+    audit: 17 of the 20 first kept their `∀ E, …Input E` arguments; all 20 are
+    now input-free.)
   - (done) `section 3/Lemma220SmallBase.lean`: `lemma_2_20_algebraic_small`
     and `lemma_2_20_definable_small` assume only `#S < κ` and `#G < κ` with
     `ℵ₀ < κ`. Smallness of the closure base comes from

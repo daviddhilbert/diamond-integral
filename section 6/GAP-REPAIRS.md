@@ -1,7 +1,7 @@
 # Section 6 gap repairs (from the numbered coverage audit)
 
-Source of findings: `verification/numbered-coverage-audit/COVERAGE.md` on
-`origin/codex/section6-gamma-kernel` (commit `ae379b3`, snapshot `f80d601`).
+Source of findings: `verification/numbered-coverage-audit/COVERAGE.md` (on branch
+`origin/codex/section6-gamma-kernel` only; not in this tree) (commit `ae379b3`, snapshot `f80d601`).
 Work done in this checkout (`Section7/worktree/section 6/`), November 17, 2026,
 at the author's instruction. Nothing is committed.
 
@@ -320,7 +320,7 @@ drops the Γ-linearity input.
 Method. The relation's rows are carried through the measured preparation as
 a row form (`RowForms.lean`: `RowFormOn A q`, with a definable marked
 membership graph, pullback, descent and extension). The form layer of the
-measured preparation is mirrored in the 143 `Row*.lean` modules (mechanically
+measured preparation is mirrored in the 143 `Row*.lean` modules (plus `RowForms.lean`, 144 files in all) (mechanically
 translated, then hand-repaired where the row form differs). Points to note:
 - Domain marker: the membership graph of a row form also contains a marker
   tuple (all `0`) at each point of the domain. The row bound excludes the
@@ -338,6 +338,16 @@ translated, then hand-repaired where the row form differs). Points to note:
 The top-level row result is
 `measured_form_compatible_preparation_all_dimensions_row`, mirroring
 `measured_form_compatible_preparation_all_dimensions`.
+
+## Third audit fixes (November 18)
+
+- Lemma 6.29 for RV[k] in every degree keeping finite volumes:
+  `lemma_6_29_finiteVolume_all_degrees` (`AllDegreeDoublyBoundedFactorizations.lean`).
+  `lemma_6_29_all_degrees` alone drops the finite-volume conclusion.
+- Corollary 6.37 with the Γ input discharged: `liftHom_surjective_discharged`
+  (`DiamondLiftDischarged.lean`).
+- Not done (minor packaging): the degree-0 case of 6.33's first clause for
+  non-doubly-bounded objects. The content is in `lemma_6_31_zero_arity`.
 
 ## Still open in Section 6
 

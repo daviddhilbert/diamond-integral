@@ -3,6 +3,7 @@
 
 from __future__ import annotations
 
+import sys
 import hashlib
 import json
 import re
@@ -12,6 +13,10 @@ from pathlib import Path
 
 SECTION = Path(__file__).resolve().parent
 ROOT = SECTION.parent
+sys.path.insert(0, str(ROOT / 'verification'))
+from proof_sources import read_source
+from check_shared_foundation import verify as verify_shared_foundation
+shared_proof_providers = verify_shared_foundation(ROOT)
 SCRATCH = SECTION / ".scratch"
 RECORD = SECTION / "verification"
 ALLOWED = {"propext", "Classical.choice", "Quot.sound"}
@@ -355,7 +360,7 @@ def main() -> None:
     sources = sorted(SECTION.glob("*.lean"))
     exports: list[str] = []
     for source in sources:
-        text = source.read_text()
+        text = read_source(source)
         if re.search(r"\b(sorry|admit|axiom)\b", text):
             raise SystemExit(f"FAIL: proof placeholder or custom axiom in {source}")
         # Track top-level namespaces as well as sections: new coding modules
@@ -387,9 +392,9 @@ def main() -> None:
         raise SystemExit(f"FAIL: unexpected toolchain: {version}")
     pins = {
         "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
-        "acvf_qe": "939346b0a99899e22a873479364e3cc5d142731c",
-        "special_transformations": "25852c85a31c67069b148bd31348128318303510",
-        "integration_in_acvf": "7675d31332f20421c803ea16af84964ed74cd51f",
+        "acvf_qe": "173708265d7959e031bf9552ee884501fc21f2cb",
+        "special_transformations": "423c767a84b709487da7e798f70f0639545db1ac",
+        "integration_in_acvf": "ab4c0e8b15e1e21b0b4fce57eed764be76020e06",
     }
     for package, expected in pins.items():
         actual = subprocess.check_output(
@@ -582,3 +587,6 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
+# Recheck exact provider identities after the source/signature audit.
+verify_shared_foundation(ROOT)

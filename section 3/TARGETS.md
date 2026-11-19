@@ -8,8 +8,8 @@ original base.
 
 November 18: the remaining [18] lift records are also produced. The
 Gamma-ground unmeasured record is `Section5.completed18GroundLiftInput`
-(section 5, from the completed upstream [18] Sections 5–6 at pin
-7675d31332f20421c803ea16af84964ed74cd51f; the former unfinished 5.8 input is
+(section 5, from the completed upstream [18] Sections 5–6, now at pin
+ab4c0e8b15e1e21b0b4fce57eed764be76020e06; the former unfinished 5.8 input is
 discharged by `Section5.completed_section5_input`). The bounded records are
 `completedGammaGroundBoundedLiftInput` (headline `theorem_3_22_bounded`,
 `_characterization`, `_transition`) and
@@ -842,8 +842,9 @@ The section 3 audit passes: 3,895 theorem types, 2,806 definitions, 172
 named instances and eight reused declarations (6,881 heads) across 1,527
 supporting modules plus Section. Section 2 passes with 970 theorem exports
 and 378 selected reuse declarations. Pins: integration-in-ACVF
-7675d31332f20421c803ea16af84964ed74cd51f, Special transformations
-25852c85a31c67069b148bd31348128318303510.
+ab4c0e8b15e1e21b0b4fce57eed764be76020e06, Special transformations
+423c767a84b709487da7e798f70f0639545db1ac (updated November 18 when main was
+integrated).
 
 The 2026-11-12 boundaries above are superseded. `Section5TwoOrderInputAll`
 is instantiated by `Section5.completed_section5_input`, and the closure and

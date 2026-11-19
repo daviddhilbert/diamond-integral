@@ -10989,6 +10989,8 @@ set_option format.width 120
 #print axioms DiamondIntegral.Section4.Section4LinkedRemarks.geometricRetraction_range
 #print DiamondIntegral.Section4.Section4LinkedRemarks.normalized_retractions_distinct
 #print axioms DiamondIntegral.Section4.Section4LinkedRemarks.normalized_retractions_distinct
+#print DiamondIntegral.Section4.Section4LinkedRemarks.manuscript_section4_compatibility_discharged
+#print axioms DiamondIntegral.Section4.Section4LinkedRemarks.manuscript_section4_compatibility_discharged
 #print DiamondIntegral.Section2.GammaPiecewiseRationalAffineInput
 #print axioms DiamondIntegral.Section2.GammaPiecewiseRationalAffineInput
 #print DiamondIntegral.Section2.NontrivialDefinableGamma

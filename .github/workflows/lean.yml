@@ -16,21 +16,32 @@ concurrency:
 jobs:
   build:
     name: Build pinned Lean project
-    runs-on: ubuntu-latest
+    # Pushes to main and manual runs build on the self-hosted Mac mini, which
+    # keeps .lake between runs. Pull requests (which may come from forks) stay on
+    # GitHub-hosted runners.
+    runs-on: ${{ github.event_name == 'pull_request' && 'ubuntu-latest' || fromJSON('["self-hosted","macOS","ARM64","diamond-mac-mini"]') }}
     timeout-minutes: 360
+    env:
+      LEAN_NUM_THREADS: ${{ github.event_name == 'pull_request' && '4' || '16' }}
+      PYTHONUNBUFFERED: "1"
     steps:
       - uses: actions/checkout@v5
         with:
           persist-credentials: false
+          # Keep the local .lake build on the self-hosted runner.
+          clean: ${{ github.event_name == 'pull_request' }}
 
       - name: Restore compiled Lean files
         id: lean-cache
+        if: ${{ runner.environment == 'github-hosted' }}
         uses: actions/cache/restore@v5
         with:
           path: .lake
-          key: lean-build-v2-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('lean-toolchain', 'lake-manifest.json') }}-${{ github.sha }}
+          key: lean-build-v3-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('lean-toolchain') }}-${{ hashFiles('lake-manifest.json') }}-${{ github.sha }}
           restore-keys: |
-            lean-build-v2-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('lean-toolchain', 'lake-manifest.json') }}-
+            lean-build-v3-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('lean-toolchain') }}-${{ hashFiles('lake-manifest.json') }}-
+            lean-build-v3-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('lean-toolchain') }}-
+            lean-build-v2-${{ runner.os }}-${{ runner.arch }}-
             lake-${{ runner.os }}-${{ runner.arch }}-${{ hashFiles('lean-toolchain') }}-${{ hashFiles('lake-manifest.json') }}-
 
       - name: Set up Lean and download the Mathlib cache
@@ -43,17 +54,30 @@ jobs:
           use-mathlib-cache: 'true'
           use-github-cache: 'false'
 
+      - name: Restore published sources in older proof caches
+        run: python3 'section 5/clean-retired-ci-adapters.py'
+
       - name: Prepare verified dependency sources
         run: |
           python3 'section 5/prepare-dependencies.py'
+          python3 verification/check_shared_foundation.py
 
       - name: Build the Lean project
-        run: lake -R build
+        id: build
+        run: python3 verification/build_with_diagnostics.py
+
+      # Cancelled compilers must stop writing before tar reads the cache.
+      - name: Stop remaining build processes before archival
+        id: quiesce
+        if: ${{ always() && (steps.build.outcome == 'success' || steps.build.outcome == 'failure' || steps.build.outcome == 'cancelled') }}
+        run: python3 verification/quiesce_build.py
 
       # The setup action completes before our external build. Saving its cache
       # there would retain Mathlib alone and discard the expensive proof build.
+      # Completed modules remain useful after a later module fails; Lake checks
+      # every restored source/import trace before accepting those artifacts.
       - name: Save compiled Lean files
-        if: steps.lean-cache.outputs.cache-hit != 'true'
+        if: ${{ always() && runner.environment == 'github-hosted' && steps.quiesce.outcome == 'success' && steps.lean-cache.outputs.cache-hit != 'true' && (steps.build.outcome == 'success' || steps.build.outcome == 'failure' || steps.build.outcome == 'cancelled') }}
         uses: actions/cache/save@v5
         with:
           path: .lake
@@ -76,3 +100,23 @@ jobs:
 
       - name: Audit corrected upstream weighted-zero compatibility
         run: lake env python3 verification/verify-upstream-weighted-zero.py
+
+      - name: Retain verification records
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: section-verification-records
+          include-hidden-files: true
+          path: |
+            section */verification/status.json
+            section 3/verification/VERIFICATION.json
+            section 2/.scratch/audit.log
+            section 3/.scratch/audit.log
+            section 4/verification/section4-audit.txt
+            section 5/verification/declarations-and-axioms.log
+            section 6/verification/types-and-axioms.txt
+            verification/upstream-weighted-zero-upgrade/
+            .scratch/shared-foundation.json
+            .scratch/extracted-foundations.json
+            .scratch/ci-build.log
+            .scratch/ci-build-resources.log

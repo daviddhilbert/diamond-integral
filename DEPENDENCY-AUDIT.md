@@ -54,11 +54,24 @@ Sources: [Section 2 upstream links](section%202/verification/UPSTREAM-LINKS.md),
 [Section 4 statement audit](section%204/verification/final-section3-audit.json),
 and the `GAP-REPAIRS.md` file of each section.
 
-Dependency pins (`lake-manifest.json`): `integration_in_acvf` at
-`7675d31332f20421c803ea16af84964ed74cd51f`, `special_transformations` at
-`25852c85a31c67069b148bd31348128318303510` and `acvf_qe` at
-`939346b0a99899e22a873479364e3cc5d142731c`, with the recorded compatibility
-patches.
+Dependency pins (`lake-manifest.json`, after integrating `origin/main`
+a6a77c4 on November 18, 2026): `fubini_theorems` at
+`05587564f70fd0015fbb7b7dbf4a8d8c4b0b64f5`, `integration_in_acvf` at
+`ab4c0e8b15e1e21b0b4fce57eed764be76020e06`, `hilbert-mathlib` at
+`88bb3386f616779bfd87eb453d8a7c899ad63961`, `special_transformations` at
+`423c767a84b709487da7e798f70f0639545db1ac`, `acvf_qe` at
+`173708265d7959e031bf9552ee884501fc21f2cb` and Mathlib at
+`56a005855ea17e0b0958f73ec801ae140b0a1679`. The `acvf_qe` manifest entry was
+aligned with the lakefile and verifier pin; a6a77c4 had left it at
+`a4138c3`, which made that commit's CI fail. Shared foundations and the
+Section 5 bodies come through the byte-checked compatibility imports listed in
+`verification/EXTRACTED-FOUNDATIONS.json`.
+
+The sixteen Section 5 modules added on November 18 (the `Inflated*` files,
+`WeakDegreeFubiniDischarged`, `PuiseuxMonsterAmbient`,
+`ElementaryRESExtension(Data)`, `Lemma519Polynomial` and `Test520Tuples`) are
+still compiled here as real modules, not compatibility imports, until they
+are moved into Fubini-theorems.
 
 Recheck the focused types and local proof-source receipts with
 `python3 verification/audit-section-boundaries.py` after activating the
