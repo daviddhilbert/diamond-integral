@@ -1,7 +1,13 @@
 # Section 7 formalization plan
 
-Status: **draft for the author's review** (2026-11-19). No Lean beyond the five
-existing μVF^◇ modules has been written for this plan yet.
+Status: **approved by the author on 2026-11-19**, with these answers to §5:
+
+- **A.** Yes. The base is VF-generated, as set at the beginning of Section 6.
+- **B.** Approved, except that 7.28 is crucial for applications. If 7.28
+  cannot be formalized, report back instead of marking it "not pursued".
+- **C.** Yes.
+
+Implementation follows the milestones in §3.
 
 Source: `section 2/reference/diamond_integral_revision_annotated.tex`, §7
 (`section:int`, TeX lines 5299–5845). Numbers below are computed from the
@@ -399,8 +405,10 @@ intended Lean statement; ⚑ marks a flag that is also listed in §5.
 ### 7.28 Remark `eg:eb:factor`
 - **Route.** By 6.37 every proper invariant A is 𝕃U with zero form; then
   apply μΨ and the defining conditions of E_g and E_b, inverting [A].
-- **New (optional).** The identity E_g(∫[A]) = E_b(∫[A])·[A]^{−n} in Section 4's
-  rings. ⚑ **Question B.**
+- **New (required).** The identity E_g(∫[A]) = E_b(∫[A])·[A]^{−n} in Section 4's
+  rings. The author marked this remark crucial for applications (answer to
+  Question B). If Section 4 lacks the E_g or [A]^{−1} infrastructure, report
+  back before choosing a route.
 
 ## 3. Dependency order and milestones
 
@@ -444,8 +452,8 @@ decision:
 - **B. Remarks.** Proposed Lean scope:
   - 7.3: the dimension claim only; the ordinary-blowup comparison not pursued.
   - 7.18: ∞-symmetry and slope −t₂/t₁; the torsor line not pursued.
-  - 7.28: formalized, but after M6 and only if Section 4's E_g/E_b
-    infrastructure supports [A]^{−1}; otherwise not pursued.
+  - 7.28: formalized after M6. *Answer: required, crucial for applications;
+    report back if blocked.*
 - **C. Generalized statements.** Formalize 7.11 for partial lifts and 7.13
   with a head start, deriving the printed statements as special cases. The
   paper's proof of 7.14 already uses these forms in words. I would add one
