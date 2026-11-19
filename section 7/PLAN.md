@@ -244,6 +244,17 @@ intended Lean statement; ⚑ marks a flag that is also listed in §5.
 - **New.** Hypothesis `∀ a ∈ A, MuIsp (T⟨a⟩) k (fibre A′ a) (fibre A″ a)`.
   Conclusion `MuIsp T (n+k) (T̂σ A′) (R̂σ A″)` for **any** standard contractions
   T̂σ and R̂σ with the same σ.
+- **Feasibility check (2026-11-19).** Upstream `lemma_6_14_ordered` uses exactly
+  this route: semantic witness schemata (definable sets with natural-number
+  bounds), promotion of pointwise witnesses over `B.real ∪ range x` to
+  `B`-definable schemata (`gamma_tuple_parameter_promotion`), compactness
+  (`gamma_finite_witnesses`, via `Saturated.definable_finite_subcover_tuple`),
+  freezing by Section 5 preparation (`gamma_prepare_finite_rv_families`),
+  recoding to RV keys, and Finset-induction gluing. The compactness core, tuple
+  promotion and preparation are generic over `DefinableOverBase` and reusable
+  here. The schemata, promotions and realisations are specific to their blowups
+  and must be rewritten for annular blowups. Upstream size: about 7–8k lines in
+  about 100 files.
 - ⚑ Effort and risk: expressing "is a witness" first-order, for whole blowup
   chains with finite-fibre bounds, is the largest single piece of new
   infrastructure. If the upstream selected-presentation technique transfers,

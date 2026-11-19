@@ -642,6 +642,54 @@ import «section 7».Section
 #check @DiamondIntegral.Section7.ElementaryComparison.lemma_7_5
 #print DiamondIntegral.Section7.ElementaryComparison.lemma_7_5
 #print axioms DiamondIntegral.Section7.ElementaryComparison.lemma_7_5
+#check @DiamondIntegral.Section7.LiftClasses.toMeasured_res
+#print DiamondIntegral.Section7.LiftClasses.toMeasured_res
+#print axioms DiamondIntegral.Section7.LiftClasses.toMeasured_res
+#check @DiamondIntegral.Section7.LiftClasses.restrict_congr
+#print DiamondIntegral.Section7.LiftClasses.restrict_congr
+#print axioms DiamondIntegral.Section7.LiftClasses.restrict_congr
+#check @DiamondIntegral.Section7.LiftClasses.toMeasured_cres
+#print DiamondIntegral.Section7.LiftClasses.toMeasured_cres
+#print axioms DiamondIntegral.Section7.LiftClasses.toMeasured_cres
+#check @DiamondIntegral.Section7.LiftClasses.BT
+#print DiamondIntegral.Section7.LiftClasses.BT
+#print axioms DiamondIntegral.Section7.LiftClasses.BT
+#check @DiamondIntegral.Section7.LiftClasses.lin
+#print DiamondIntegral.Section7.LiftClasses.lin
+#print axioms DiamondIntegral.Section7.LiftClasses.lin
+#check @DiamondIntegral.Section7.LiftClasses.dbOf
+#print DiamondIntegral.Section7.LiftClasses.dbOf
+#print axioms DiamondIntegral.Section7.LiftClasses.dbOf
+#check @DiamondIntegral.Section7.LiftClasses.dbObj
+#print DiamondIntegral.Section7.LiftClasses.dbObj
+#print axioms DiamondIntegral.Section7.LiftClasses.dbObj
+#check @DiamondIntegral.Section7.LiftClasses.dbOf_iso
+#print DiamondIntegral.Section7.LiftClasses.dbOf_iso
+#print axioms DiamondIntegral.Section7.LiftClasses.dbOf_iso
+#check @DiamondIntegral.Section7.LiftClasses.dbObj_iso
+#print DiamondIntegral.Section7.LiftClasses.dbObj_iso
+#print axioms DiamondIntegral.Section7.LiftClasses.dbObj_iso
+#check @DiamondIntegral.Section7.LiftClasses.rvCls
+#print DiamondIntegral.Section7.LiftClasses.rvCls
+#print axioms DiamondIntegral.Section7.LiftClasses.rvCls
+#check @DiamondIntegral.Section7.LiftClasses.rvCls_cls
+#print DiamondIntegral.Section7.LiftClasses.rvCls_cls
+#print axioms DiamondIntegral.Section7.LiftClasses.rvCls_cls
+#check @DiamondIntegral.Section7.LiftClasses.positiveClass_dbOf_eq
+#print DiamondIntegral.Section7.LiftClasses.positiveClass_dbOf_eq
+#print axioms DiamondIntegral.Section7.LiftClasses.positiveClass_dbOf_eq
+#check @DiamondIntegral.Section7.LiftClasses.positiveClass_split
+#print DiamondIntegral.Section7.LiftClasses.positiveClass_split
+#print axioms DiamondIntegral.Section7.LiftClasses.positiveClass_split
+#check @DiamondIntegral.Section7.LiftClasses.rvCls_add
+#print DiamondIntegral.Section7.LiftClasses.rvCls_add
+#print axioms DiamondIntegral.Section7.LiftClasses.rvCls_add
+#check @DiamondIntegral.Section7.LiftClasses.liftCls
+#print DiamondIntegral.Section7.LiftClasses.liftCls
+#print axioms DiamondIntegral.Section7.LiftClasses.liftCls
+#check @DiamondIntegral.Section7.LiftClasses.liftCls_cls
+#print DiamondIntegral.Section7.LiftClasses.liftCls_cls
+#print axioms DiamondIntegral.Section7.LiftClasses.liftCls_cls
 #check @DiamondIntegral.Section7.MeasuredRVBounds.NoInfinity
 #print DiamondIntegral.Section7.MeasuredRVBounds.NoInfinity
 #print axioms DiamondIntegral.Section7.MeasuredRVBounds.NoInfinity
@@ -804,3 +852,132 @@ import «section 7».Section
 #check @DiamondIntegral.Section7.RVMaps.le_definable
 #print DiamondIntegral.Section7.RVMaps.le_definable
 #print axioms DiamondIntegral.Section7.RVMaps.le_definable
+#check @DiamondIntegral.Section7.StrictCharts.minusOne
+#print DiamondIntegral.Section7.StrictCharts.minusOne
+#print axioms DiamondIntegral.Section7.StrictCharts.minusOne
+#check @DiamondIntegral.Section7.StrictCharts.minusOne_rv
+#print DiamondIntegral.Section7.StrictCharts.minusOne_rv
+#print axioms DiamondIntegral.Section7.StrictCharts.minusOne_rv
+#check @DiamondIntegral.Section7.StrictCharts.minusOne_ne_zero
+#print DiamondIntegral.Section7.StrictCharts.minusOne_ne_zero
+#print axioms DiamondIntegral.Section7.StrictCharts.minusOne_ne_zero
+#check @DiamondIntegral.Section7.StrictCharts.minusOne_nonzero
+#print DiamondIntegral.Section7.StrictCharts.minusOne_nonzero
+#print axioms DiamondIntegral.Section7.StrictCharts.minusOne_nonzero
+#check @DiamondIntegral.Section7.StrictCharts.one_nonzero
+#print DiamondIntegral.Section7.StrictCharts.one_nonzero
+#print axioms DiamondIntegral.Section7.StrictCharts.one_nonzero
+#check @DiamondIntegral.Section7.StrictCharts.minusOne_ne_one
+#print DiamondIntegral.Section7.StrictCharts.minusOne_ne_one
+#print axioms DiamondIntegral.Section7.StrictCharts.minusOne_ne_one
+#check @DiamondIntegral.Section7.StrictCharts.minusOne_definable
+#print DiamondIntegral.Section7.StrictCharts.minusOne_definable
+#print axioms DiamondIntegral.Section7.StrictCharts.minusOne_definable
+#check @DiamondIntegral.Section7.StrictCharts.join_mem_range
+#print DiamondIntegral.Section7.StrictCharts.join_mem_range
+#print axioms DiamondIntegral.Section7.StrictCharts.join_mem_range
+#check @DiamondIntegral.Section7.StrictCharts.block_cases
+#print DiamondIntegral.Section7.StrictCharts.block_cases
+#print axioms DiamondIntegral.Section7.StrictCharts.block_cases
+#check @DiamondIntegral.Section7.StrictCharts.scalarDef_const
+#print DiamondIntegral.Section7.StrictCharts.scalarDef_const
+#print axioms DiamondIntegral.Section7.StrictCharts.scalarDef_const
+#check @DiamondIntegral.Section7.StrictCharts.scalarDef_ite
+#print DiamondIntegral.Section7.StrictCharts.scalarDef_ite
+#print axioms DiamondIntegral.Section7.StrictCharts.scalarDef_ite
+#check @DiamondIntegral.Section7.StrictCharts.coordEq
+#print DiamondIntegral.Section7.StrictCharts.coordEq
+#print axioms DiamondIntegral.Section7.StrictCharts.coordEq
+#check @DiamondIntegral.Section7.StrictCharts.coordEq_definable
+#print DiamondIntegral.Section7.StrictCharts.coordEq_definable
+#print axioms DiamondIntegral.Section7.StrictCharts.coordEq_definable
+#check @DiamondIntegral.Section7.StrictCharts.mem_coordEq
+#print DiamondIntegral.Section7.StrictCharts.mem_coordEq
+#print axioms DiamondIntegral.Section7.StrictCharts.mem_coordEq
+#check @DiamondIntegral.Section7.StrictCharts.codeValue_rvOne
+#print DiamondIntegral.Section7.StrictCharts.codeValue_rvOne
+#print axioms DiamondIntegral.Section7.StrictCharts.codeValue_rvOne
+#check @DiamondIntegral.Section7.StrictCharts.eq_one_of_mul_self
+#print DiamondIntegral.Section7.StrictCharts.eq_one_of_mul_self
+#print axioms DiamondIntegral.Section7.StrictCharts.eq_one_of_mul_self
+#check @DiamondIntegral.Section7.StrictCharts.codeValue_minusOne
+#print DiamondIntegral.Section7.StrictCharts.codeValue_minusOne
+#print axioms DiamondIntegral.Section7.StrictCharts.codeValue_minusOne
+#check @DiamondIntegral.Section7.StrictCharts.yv
+#print DiamondIntegral.Section7.StrictCharts.yv
+#print axioms DiamondIntegral.Section7.StrictCharts.yv
+#check @DiamondIntegral.Section7.StrictCharts.tv
+#print DiamondIntegral.Section7.StrictCharts.tv
+#print axioms DiamondIntegral.Section7.StrictCharts.tv
+#check @DiamondIntegral.Section7.StrictCharts.dec
+#print DiamondIntegral.Section7.StrictCharts.dec
+#print axioms DiamondIntegral.Section7.StrictCharts.dec
+#check @DiamondIntegral.Section7.StrictCharts.dec_enc
+#print DiamondIntegral.Section7.StrictCharts.dec_enc
+#print axioms DiamondIntegral.Section7.StrictCharts.dec_enc
+#check @DiamondIntegral.Section7.StrictCharts.yv_nonzero
+#print DiamondIntegral.Section7.StrictCharts.yv_nonzero
+#print axioms DiamondIntegral.Section7.StrictCharts.yv_nonzero
+#check @DiamondIntegral.Section7.StrictCharts.tv_nonzero
+#print DiamondIntegral.Section7.StrictCharts.tv_nonzero
+#print axioms DiamondIntegral.Section7.StrictCharts.tv_nonzero
+#check @DiamondIntegral.Section7.StrictCharts.encode
+#print DiamondIntegral.Section7.StrictCharts.encode
+#print axioms DiamondIntegral.Section7.StrictCharts.encode
+#check @DiamondIntegral.Section7.StrictCharts.decode
+#print DiamondIntegral.Section7.StrictCharts.decode
+#print axioms DiamondIntegral.Section7.StrictCharts.decode
+#check @DiamondIntegral.Section7.StrictCharts.decode_encode
+#print DiamondIntegral.Section7.StrictCharts.decode_encode
+#print axioms DiamondIntegral.Section7.StrictCharts.decode_encode
+#check @DiamondIntegral.Section7.StrictCharts.encode_injective
+#print DiamondIntegral.Section7.StrictCharts.encode_injective
+#print axioms DiamondIntegral.Section7.StrictCharts.encode_injective
+#check @DiamondIntegral.Section7.StrictCharts.encode_nonzero
+#print DiamondIntegral.Section7.StrictCharts.encode_nonzero
+#print axioms DiamondIntegral.Section7.StrictCharts.encode_nonzero
+#check @DiamondIntegral.Section7.StrictCharts.graphOn_congr
+#print DiamondIntegral.Section7.StrictCharts.graphOn_congr
+#print axioms DiamondIntegral.Section7.StrictCharts.graphOn_congr
+#check @DiamondIntegral.Section7.StrictCharts.scalarDef_congr
+#print DiamondIntegral.Section7.StrictCharts.scalarDef_congr
+#print axioms DiamondIntegral.Section7.StrictCharts.scalarDef_congr
+#check @DiamondIntegral.Section7.StrictCharts.scalarDef_yv
+#print DiamondIntegral.Section7.StrictCharts.scalarDef_yv
+#print axioms DiamondIntegral.Section7.StrictCharts.scalarDef_yv
+#check @DiamondIntegral.Section7.StrictCharts.scalarDef_tv
+#print DiamondIntegral.Section7.StrictCharts.scalarDef_tv
+#print axioms DiamondIntegral.Section7.StrictCharts.scalarDef_tv
+#check @DiamondIntegral.Section7.StrictCharts.encode_tupleDef
+#print DiamondIntegral.Section7.StrictCharts.encode_tupleDef
+#print axioms DiamondIntegral.Section7.StrictCharts.encode_tupleDef
+#check @DiamondIntegral.Section7.StrictCharts.decode_tupleDef
+#print DiamondIntegral.Section7.StrictCharts.decode_tupleDef
+#print axioms DiamondIntegral.Section7.StrictCharts.decode_tupleDef
+#check @DiamondIntegral.Section7.StrictCharts.scalarDef_comp_component
+#print DiamondIntegral.Section7.StrictCharts.scalarDef_comp_component
+#print axioms DiamondIntegral.Section7.StrictCharts.scalarDef_comp_component
+#check @DiamondIntegral.Section7.StrictCharts.encode_image_definable
+#print DiamondIntegral.Section7.StrictCharts.encode_image_definable
+#print axioms DiamondIntegral.Section7.StrictCharts.encode_image_definable
+#check @DiamondIntegral.Section7.StrictCharts.decode_mem
+#print DiamondIntegral.Section7.StrictCharts.decode_mem
+#print axioms DiamondIntegral.Section7.StrictCharts.decode_mem
+#check @DiamondIntegral.Section7.StrictCharts.strictChart
+#print DiamondIntegral.Section7.StrictCharts.strictChart
+#print axioms DiamondIntegral.Section7.StrictCharts.strictChart
+#check @DiamondIntegral.Section7.StrictCharts.strictChart_infinityFree
+#print DiamondIntegral.Section7.StrictCharts.strictChart_infinityFree
+#print axioms DiamondIntegral.Section7.StrictCharts.strictChart_infinityFree
+#check @DiamondIntegral.Section7.StrictCharts.strictChart_bounded
+#print DiamondIntegral.Section7.StrictCharts.strictChart_bounded
+#print axioms DiamondIntegral.Section7.StrictCharts.strictChart_bounded
+#check @DiamondIntegral.Section7.StrictCharts.strictIso
+#print DiamondIntegral.Section7.StrictCharts.strictIso
+#print axioms DiamondIntegral.Section7.StrictCharts.strictIso
+#check @DiamondIntegral.Section7.StrictCharts.strictObj
+#print DiamondIntegral.Section7.StrictCharts.strictObj
+#print axioms DiamondIntegral.Section7.StrictCharts.strictObj
+#check @DiamondIntegral.Section7.StrictCharts.cls_strictObj
+#print DiamondIntegral.Section7.StrictCharts.cls_strictObj
+#print axioms DiamondIntegral.Section7.StrictCharts.cls_strictObj
