@@ -35,7 +35,7 @@ for source in sources:
             kind, name = frames.pop()
             if closed.group(1) and closed.group(1) != name:
                 raise SystemExit(f'FAIL: namespace/section mismatch in {source.name}: {closed.group(1)} / {name}')
-        declaration = re.match(r'^(?:@\[[^\n]*\]\s*)?(?:noncomputable\s+)?(?:theorem|def|abbrev|structure|inductive)\s+([\w.]+)', command)
+        declaration = re.match(r'^(?:@\[[^\n]*\]\s*)?(?:noncomputable\s+)?(?:theorem|def|abbrev|structure|inductive)\s+([\w.']+)', command)
         if declaration:
             namespace = '.'.join(name for kind, name in frames if kind == 'namespace')
             if not namespace.startswith('DiamondIntegral.Section7'):

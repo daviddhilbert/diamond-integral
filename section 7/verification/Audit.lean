@@ -873,9 +873,9 @@ import «section 7».Section
 #check @DiamondIntegral.Section7.StrictCharts.minusOne_definable
 #print DiamondIntegral.Section7.StrictCharts.minusOne_definable
 #print axioms DiamondIntegral.Section7.StrictCharts.minusOne_definable
-#check @DiamondIntegral.Section7.StrictCharts.join_mem_range
-#print DiamondIntegral.Section7.StrictCharts.join_mem_range
-#print axioms DiamondIntegral.Section7.StrictCharts.join_mem_range
+#check @DiamondIntegral.Section7.StrictCharts.join_mem_range_blocks
+#print DiamondIntegral.Section7.StrictCharts.join_mem_range_blocks
+#print axioms DiamondIntegral.Section7.StrictCharts.join_mem_range_blocks
 #check @DiamondIntegral.Section7.StrictCharts.block_cases
 #print DiamondIntegral.Section7.StrictCharts.block_cases
 #print axioms DiamondIntegral.Section7.StrictCharts.block_cases
@@ -894,9 +894,9 @@ import «section 7».Section
 #check @DiamondIntegral.Section7.StrictCharts.mem_coordEq
 #print DiamondIntegral.Section7.StrictCharts.mem_coordEq
 #print axioms DiamondIntegral.Section7.StrictCharts.mem_coordEq
-#check @DiamondIntegral.Section7.StrictCharts.codeValue_rvOne
-#print DiamondIntegral.Section7.StrictCharts.codeValue_rvOne
-#print axioms DiamondIntegral.Section7.StrictCharts.codeValue_rvOne
+#check @DiamondIntegral.Section7.StrictCharts.codeValue_rvOne_strict
+#print DiamondIntegral.Section7.StrictCharts.codeValue_rvOne_strict
+#print axioms DiamondIntegral.Section7.StrictCharts.codeValue_rvOne_strict
 #check @DiamondIntegral.Section7.StrictCharts.eq_one_of_mul_self
 #print DiamondIntegral.Section7.StrictCharts.eq_one_of_mul_self
 #print axioms DiamondIntegral.Section7.StrictCharts.eq_one_of_mul_self

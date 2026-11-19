@@ -66,7 +66,7 @@ theorem minusOne_definable : DefinableClosureAtBase B .rv (minusOne (M := M)) :=
 /-! ### Piecewise and constant scalar maps -/
 
 omit [LRV.Structure M] hM in
-theorem join_mem_range' {α : Type*} (n m : ℕ) (u : Fin m → α) (y : Fin n → α) (i : Fin (n + m)) :
+theorem join_mem_range_blocks {α : Type*} (n m : ℕ) (u : Fin m → α) (y : Fin n → α) (i : Fin (n + m)) :
     join n m u y i ∈ Set.range u ∪ Set.range y := by
   induction m with
   | zero => exact Or.inr ⟨i, rfl⟩
@@ -80,7 +80,7 @@ theorem join_mem_range' {α : Type*} (n m : ℕ) (u : Fin m → α) (y : Fin n �
 omit [LRV.Structure M] hM in
 theorem block_cases (n m : ℕ) (i : Fin (n + m)) :
     (∃ i', i = headIndex n m i') ∨ (∃ i', i = tailIndex n m i') := by
-  have h := join_mem_range' n m (headIndex n m) (tailIndex n m) i
+  have h := join_mem_range_blocks n m (headIndex n m) (tailIndex n m) i
   have hi : join n m (headIndex n m) (tailIndex n m) i = i :=
     congrFun (join_reconstruct n m (id : Fin (n + m) → Fin (n + m))) i
   rw [hi] at h
@@ -159,7 +159,7 @@ theorem mem_coordEq {n : ℕ} {i : Fin n} {c : M} {u : Fin n → M}
     fin_cases j
     exact he
 
-theorem codeValue_rvOne' : codeValue (iRVOne : M) = 1 := by
+theorem codeValue_rvOne_strict : codeValue (iRVOne : M) = 1 := by
   have h := GammaGroupNames.codeValue_mul (iRVOne : M) iRVOne one_nonzero one_nonzero
   rw [rv_mul_one_any hM one_nonzero.1] at h
   have h' : codeValue (iRVOne : M) * 1 = codeValue (iRVOne : M) * codeValue (iRVOne : M) := by
@@ -181,7 +181,7 @@ theorem codeValue_minusOne : codeValue (minusOne (M := M)) = 1 := by
     rw [← rv_mul_hom_of_model hM (vf_neg_mem hM (vf_one_mem hM)) (vf_neg_mem hM (vf_one_mem hM)),
       RVCalc.vf_neg_one_mul_neg_one hM, RVCalc.rv_one hM]
   have h := GammaGroupNames.codeValue_mul _ _ (minusOne_nonzero (M := M)) minusOne_nonzero
-  rw [hsq, codeValue_rvOne'] at h
+  rw [hsq, codeValue_rvOne_strict] at h
   exact eq_one_of_mul_self h.symm
 
 /-! ### Encoding and decoding -/
@@ -378,7 +378,7 @@ theorem strictChart_bounded (a : Chart B k) (ha : RVMeasuredBounds.DomainBounded
   rcases block_cases a.arity a.arity i with ⟨i', rfl⟩ | ⟨i', rfl⟩
   · rw [encode, join_head]
     by_cases h : u i' = iRVZero
-    · simp only [yv, if_pos h, codeValue_rvOne']
+    · simp only [yv, if_pos h, codeValue_rvOne_strict]
       exact ⟨hone, hβ1⟩
     · simp only [yv, if_neg h]
       have hb := hβ u hu i' ⟨a.domain_definable.proper u hu i', h⟩
@@ -387,7 +387,7 @@ theorem strictChart_bounded (a : Chart B k) (ha : RVMeasuredBounds.DomainBounded
     have hc : codeValue (tv (u i')) = 1 := by
       by_cases h : u i' = iRVZero
       · simp only [tv, if_pos h, codeValue_minusOne]
-      · simp only [tv, if_neg h, codeValue_rvOne']
+      · simp only [tv, if_neg h, codeValue_rvOne_strict]
     rw [hc]
     exact ⟨hone, hβ1⟩
 
