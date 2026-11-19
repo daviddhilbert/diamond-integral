@@ -262,4 +262,37 @@ theorem lemma_7_11 (hb : DiamondIntegral.Section4.RVMeasuredBounds.DomainBounded
 
 end Lift
 
+/-! ### Unary chains (dimension one) -/
+
+section Unary
+variable {G : Type} [LinearOrderedCommGroupWithZero G] [Valued (VF M) G]
+variable (hc : CanonicalStructure.IsCanonical (M := M)) {T : LRV.Substructure M}
+variable {κ : Cardinal} (hκ : Cardinal.aleph0 < κ) (hs : Saturated M κ) (hsmall : Cardinal.mk (T : Set M) < κ)
+variable (h00 : M ⊨ Axioms.ACVF00) (linear : GammaPiecewiseRationalAffineInput (M := M))
+variable (hΓ : NontrivialDefinableGamma (⟨(T : Set M), ∅⟩ : ParameterBase M))
+
+include hκ hs hsmall h00 linear hΓ in
+/-- Lemma 7.11 along Section 6's unary relative aperture chains (the chains of
+Lemma 6.38). -/
+theorem unary_chain {s : ℕ} {A : DefSet (rawMixedSpace (M := M) 1 r) (T : Set M)}
+    {B : DefSet (rawMixedSpace (M := M) 1 s) (T : Set M)} {f : Map A B}
+    (h : UnaryRelativeApertureChain (G := G) A B f) : Claim (k := 0) hc A B f := by
+  induction h with
+  | original h => exact special_chain (k := 0) hc hκ hs hsmall h00 h
+  | relative A D =>
+    obtain ⟨E, hE⟩ := D.exists_relativeData (G := G) hc h00 linear hκ.le hs hsmall hΓ
+    exact claim_of_point (k := 0) hc hκ hs hsmall h00 D.bijection rfl E
+      (by
+        rw [RelativeApertureData.image_carrier, UnaryRelativeApertureData.image_carrier]
+        ext q
+        constructor
+        · rintro ⟨p, hp, rfl⟩
+          exact ⟨p, hp, hE p⟩
+        · rintro ⟨p, hp, rfl⟩
+          exact ⟨p, hp, (hE p).symm⟩)
+      (fun p => (hE p.val).symm)
+  | comp _ _ ihf ihg => exact claim_comp (k := 0) hc ihf ihg
+
+end Unary
+
 end DiamondIntegral.Section7.SpecialChainInduction
