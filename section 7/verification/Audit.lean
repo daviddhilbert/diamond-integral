@@ -1386,6 +1386,33 @@ import «section 7».Section
 #check @DiamondIntegral.Section7.RealBase.real_base_iff
 #print DiamondIntegral.Section7.RealBase.real_base_iff
 #print axioms DiamondIntegral.Section7.RealBase.real_base_iff
+#check @DiamondIntegral.Section7.RelativeRestrict.vfFibre_focusActive
+#print DiamondIntegral.Section7.RelativeRestrict.vfFibre_focusActive
+#print axioms DiamondIntegral.Section7.RelativeRestrict.vfFibre_focusActive
+#check @DiamondIntegral.Section7.RelativeRestrict.properInvariant_focusActive
+#print DiamondIntegral.Section7.RelativeRestrict.properInvariant_focusActive
+#print axioms DiamondIntegral.Section7.RelativeRestrict.properInvariant_focusActive
+#check @DiamondIntegral.Section7.RelativeRestrict.RelativeApertureData.focusActive_sub
+#print DiamondIntegral.Section7.RelativeRestrict.RelativeApertureData.focusActive_sub
+#print axioms DiamondIntegral.Section7.RelativeRestrict.RelativeApertureData.focusActive_sub
+#check @DiamondIntegral.Section7.RelativeRestrict.RelativeApertureData.restrictActive
+#print DiamondIntegral.Section7.RelativeRestrict.RelativeApertureData.restrictActive
+#print axioms DiamondIntegral.Section7.RelativeRestrict.RelativeApertureData.restrictActive
+#check @DiamondIntegral.Section7.RelativeRestrict.RelativeApertureData.restrictActive_all
+#print DiamondIntegral.Section7.RelativeRestrict.RelativeApertureData.restrictActive_all
+#print axioms DiamondIntegral.Section7.RelativeRestrict.RelativeApertureData.restrictActive_all
+#check @DiamondIntegral.Section7.RelativeRestrict.RelativeApertureData.restrictActive_extendedFocus
+#print DiamondIntegral.Section7.RelativeRestrict.RelativeApertureData.restrictActive_extendedFocus
+#print axioms DiamondIntegral.Section7.RelativeRestrict.RelativeApertureData.restrictActive_extendedFocus
+#check @DiamondIntegral.Section7.RelativeRestrict.RelativeApertureData.restrictActive_extendedEndpoint
+#print DiamondIntegral.Section7.RelativeRestrict.RelativeApertureData.restrictActive_extendedEndpoint
+#print axioms DiamondIntegral.Section7.RelativeRestrict.RelativeApertureData.restrictActive_extendedEndpoint
+#check @DiamondIntegral.Section7.RelativeRestrict.RelativeApertureData.restrictActive_point
+#print DiamondIntegral.Section7.RelativeRestrict.RelativeApertureData.restrictActive_point
+#print axioms DiamondIntegral.Section7.RelativeRestrict.RelativeApertureData.restrictActive_point
+#check @DiamondIntegral.Section7.RelativeRestrict.RelativeApertureData.point_inactive
+#print DiamondIntegral.Section7.RelativeRestrict.RelativeApertureData.point_inactive
+#print axioms DiamondIntegral.Section7.RelativeRestrict.RelativeApertureData.point_inactive
 #check @DiamondIntegral.Section7.Remark73.domainRV
 #print DiamondIntegral.Section7.Remark73.domainRV
 #print axioms DiamondIntegral.Section7.Remark73.domainRV
@@ -1416,6 +1443,93 @@ import «section 7».Section
 #check @DiamondIntegral.Section7.Remark74.remark_7_4_named
 #print DiamondIntegral.Section7.Remark74.remark_7_4_named
 #print axioms DiamondIntegral.Section7.Remark74.remark_7_4_named
+#check @DiamondIntegral.Section7.SpecialChains.contractionIso
+#print DiamondIntegral.Section7.SpecialChains.contractionIso
+#print axioms DiamondIntegral.Section7.SpecialChains.contractionIso
+#check @DiamondIntegral.Section7.SpecialChains.regularize_fst
+#print DiamondIntegral.Section7.SpecialChains.regularize_fst
+#print axioms DiamondIntegral.Section7.SpecialChains.regularize_fst
+#check @DiamondIntegral.Section7.SpecialChains.regularize_snd_left
+#print DiamondIntegral.Section7.SpecialChains.regularize_snd_left
+#print axioms DiamondIntegral.Section7.SpecialChains.regularize_snd_left
+#check @DiamondIntegral.Section7.SpecialChains.regularize_snd_right
+#print DiamondIntegral.Section7.SpecialChains.regularize_snd_right
+#print axioms DiamondIntegral.Section7.SpecialChains.regularize_snd_right
+#check @DiamondIntegral.Section7.SpecialChains.regularize_snd_eq
+#print DiamondIntegral.Section7.SpecialChains.regularize_snd_eq
+#print axioms DiamondIntegral.Section7.SpecialChains.regularize_snd_eq
+#check @DiamondIntegral.Section7.SpecialChains.mem_regularize
+#print DiamondIntegral.Section7.SpecialChains.mem_regularize
+#print axioms DiamondIntegral.Section7.SpecialChains.mem_regularize
+#check @DiamondIntegral.Section7.SpecialChains.regularize_tagged
+#print DiamondIntegral.Section7.SpecialChains.regularize_tagged
+#print axioms DiamondIntegral.Section7.SpecialChains.regularize_tagged
+#check @DiamondIntegral.Section7.SpecialChains.regularize_pullback
+#print DiamondIntegral.Section7.SpecialChains.regularize_pullback
+#print axioms DiamondIntegral.Section7.SpecialChains.regularize_pullback
+#check @DiamondIntegral.Section7.SpecialChains.regularize_finite
+#print DiamondIntegral.Section7.SpecialChains.regularize_finite
+#print axioms DiamondIntegral.Section7.SpecialChains.regularize_finite
+#check @DiamondIntegral.Section7.SpecialChains.regularize_vfDoublyBounded
+#print DiamondIntegral.Section7.SpecialChains.regularize_vfDoublyBounded
+#print axioms DiamondIntegral.Section7.SpecialChains.regularize_vfDoublyBounded
+#check @DiamondIntegral.Section7.SpecialChains.regularization_matching
+#print DiamondIntegral.Section7.SpecialChains.regularization_matching
+#print axioms DiamondIntegral.Section7.SpecialChains.regularization_matching
+#check @DiamondIntegral.Section7.SpecialChains.zc_core_false
+#print DiamondIntegral.Section7.SpecialChains.zc_core_false
+#print axioms DiamondIntegral.Section7.SpecialChains.zc_core_false
+#check @DiamondIntegral.Section7.SpecialChains.zc_point
+#print DiamondIntegral.Section7.SpecialChains.zc_point
+#print axioms DiamondIntegral.Section7.SpecialChains.zc_point
+#check @DiamondIntegral.Section7.SpecialChains.Good
+#print DiamondIntegral.Section7.SpecialChains.Good
+#print axioms DiamondIntegral.Section7.SpecialChains.Good
+#check @DiamondIntegral.Section7.SpecialChains.regForm
+#print DiamondIntegral.Section7.SpecialChains.regForm
+#print axioms DiamondIntegral.Section7.SpecialChains.regForm
+#check @DiamondIntegral.Section7.SpecialChains.regForm_apply
+#print DiamondIntegral.Section7.SpecialChains.regForm_apply
+#print axioms DiamondIntegral.Section7.SpecialChains.regForm_apply
+#check @DiamondIntegral.Section7.SpecialChains.regForm_labels
+#print DiamondIntegral.Section7.SpecialChains.regForm_labels
+#print axioms DiamondIntegral.Section7.SpecialChains.regForm_labels
+#check @DiamondIntegral.Section7.SpecialChains.reg_rvBounded
+#print DiamondIntegral.Section7.SpecialChains.reg_rvBounded
+#print axioms DiamondIntegral.Section7.SpecialChains.reg_rvBounded
+#check @DiamondIntegral.Section7.SpecialChains.regC
+#print DiamondIntegral.Section7.SpecialChains.regC
+#print axioms DiamondIntegral.Section7.SpecialChains.regC
+#check @DiamondIntegral.Section7.SpecialChains.regC_db
+#print DiamondIntegral.Section7.SpecialChains.regC_db
+#print axioms DiamondIntegral.Section7.SpecialChains.regC_db
+#check @DiamondIntegral.Section7.SpecialChains.clsG
+#print DiamondIntegral.Section7.SpecialChains.clsG
+#print axioms DiamondIntegral.Section7.SpecialChains.clsG
+#check @DiamondIntegral.Section7.SpecialChains.cls_objOf_eq
+#print DiamondIntegral.Section7.SpecialChains.cls_objOf_eq
+#print axioms DiamondIntegral.Section7.SpecialChains.cls_objOf_eq
+#check @DiamondIntegral.Section7.SpecialChains.regGood
+#print DiamondIntegral.Section7.SpecialChains.regGood
+#print axioms DiamondIntegral.Section7.SpecialChains.regGood
+#check @DiamondIntegral.Section7.SpecialChains.clsG_reg
+#print DiamondIntegral.Section7.SpecialChains.clsG_reg
+#print axioms DiamondIntegral.Section7.SpecialChains.clsG_reg
+#check @DiamondIntegral.Section7.SpecialChains.mem_zc
+#print DiamondIntegral.Section7.SpecialChains.mem_zc
+#print axioms DiamondIntegral.Section7.SpecialChains.mem_zc
+#check @DiamondIntegral.Section7.SpecialChains.append_ones_injective
+#print DiamondIntegral.Section7.SpecialChains.append_ones_injective
+#print axioms DiamondIntegral.Section7.SpecialChains.append_ones_injective
+#check @DiamondIntegral.Section7.SpecialChains.zcGood
+#print DiamondIntegral.Section7.SpecialChains.zcGood
+#print axioms DiamondIntegral.Section7.SpecialChains.zcGood
+#check @DiamondIntegral.Section7.SpecialChains.zcGood_form
+#print DiamondIntegral.Section7.SpecialChains.zcGood_form
+#print axioms DiamondIntegral.Section7.SpecialChains.zcGood_form
+#check @DiamondIntegral.Section7.SpecialChains.clsG_zc
+#print DiamondIntegral.Section7.SpecialChains.clsG_zc
+#print axioms DiamondIntegral.Section7.SpecialChains.clsG_zc
 #check @DiamondIntegral.Section7.SpecialStep.mem_domain_of_rawDom
 #print DiamondIntegral.Section7.SpecialStep.mem_domain_of_rawDom
 #print axioms DiamondIntegral.Section7.SpecialStep.mem_domain_of_rawDom
