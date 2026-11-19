@@ -161,4 +161,41 @@ theorem regularization_matching
 
 end Regularization
 
+/-! ### Zero-centred steps are trivial on VF doubly bounded sets -/
+
+section ZeroCentered
+variable {X : DefSet (rawMixedSpace (M := M) n r) S} (Z : ZeroCenteredData X)
+
+/-- On a VF doubly bounded set the zero-centred core is empty: invariance at the
+radius of the centre would move a deeper coordinate to `0`. -/
+theorem zc_core_false (hD : VFDoublyBounded X.carrier) {p : Mixed M n r} (hp : p ∈ X.carrier) (i : Fin n) :
+    Z.core p i = false := by
+  by_contra h
+  have hlt : vfValue Z.center < vfValue (p.1 i) := of_decide_eq_true (Bool.eq_true_of_not_eq_false h)
+  let y := Function.update p.1 i 0
+  have hcong : Congruent (fun _ => finiteValue Z.center Z.center_nonzero) p.1 y := by
+    intro l
+    by_cases hl : l = i
+    · rw [hl]
+      change vfValue Z.center < vfValue (p.1 i - Function.update p.1 i 0 i)
+      rw [Function.update_self, sub_zero]
+      exact hlt
+    · change (finiteValue Z.center Z.center_nonzero).val < Values.vfValueHom (p.1 l - Function.update p.1 i 0 l)
+      rw [Function.update_of_ne hl, sub_self]
+      exact SpecialTransformations.Section9.gamma_lt_value_zero _
+  have hy : y ∈ vfFibre X.carrier p.2 := (Z.invariant p.2 p.1 y hcong).mp hp
+  exact hD.nonzero hy i (Function.update_self _ _ _)
+
+/-- On a VF doubly bounded set the zero-centred point map only adds the tags
+`rv(1)`. -/
+theorem zc_point (hD : VFDoublyBounded X.carrier) {p : Mixed M n r} (hp : p ∈ X.carrier) :
+    Z.point p = (p.1, Fin.append (fun _ : Fin n => branchTag (M := M) false) p.2) := by
+  have hcore : Z.core p = fun _ => false := funext (zc_core_false Z hD hp)
+  simp only [ZeroCenteredData.point, ZeroCenteredData.tags, hcore]
+  congr 1
+  funext i
+  simp [ZeroCenteredData.shift]
+
+end ZeroCentered
+
 end DiamondIntegral.Section7.SpecialChains
