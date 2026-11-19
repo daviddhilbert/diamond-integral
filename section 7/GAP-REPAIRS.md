@@ -47,3 +47,12 @@ formalization convention. No manuscript edit has been made for them.
    equal to ∞ are handled by the strict chart: Lemma 7.5's comparison
    isomorphisms for `strictIso` have equal depths, so the strict datum has the
    same source and blowup classes.
+8. **Lemma 7.13, hypothesis.** The proof applies Lemma 6.38 to a morphism
+   𝕃U → 𝕃V, so it uses an isomorphism A ≅ B. The Lean hypothesis is that
+   isomorphism (`KernelDimOne.lemma_7_13`). Equality in the scissor-presented
+   K₊ μVF^◇[1] gives it once item 1 is proved for μVF^◇. Alternatively, 7.24
+   can pass from K₊ to μIsp^db directly: 7.13 makes the class of a standard
+   contraction independent of the choice and invariant under isomorphism, and
+   restriction to pieces is additive. The "standard contraction" is Section 6's
+   `NormalizedMeasuredContraction` with head start 0, whose lift is
+   isomorphic to the object by Remark 6.28.

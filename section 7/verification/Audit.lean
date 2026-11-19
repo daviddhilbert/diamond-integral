@@ -1170,6 +1170,18 @@ import «section 7».Section
 #check @DiamondIntegral.Section7.IsoOfMeasured.cls_eq_iff_measured
 #print DiamondIntegral.Section7.IsoOfMeasured.cls_eq_iff_measured
 #print axioms DiamondIntegral.Section7.IsoOfMeasured.cls_eq_iff_measured
+#check @DiamondIntegral.Section7.KernelDimOne.clsG_source
+#print DiamondIntegral.Section7.KernelDimOne.clsG_source
+#print axioms DiamondIntegral.Section7.KernelDimOne.clsG_source
+#check @DiamondIntegral.Section7.KernelDimOne.clsG_target
+#print DiamondIntegral.Section7.KernelDimOne.clsG_target
+#print axioms DiamondIntegral.Section7.KernelDimOne.clsG_target
+#check @DiamondIntegral.Section7.KernelDimOne.lift_iso_muIsp
+#print DiamondIntegral.Section7.KernelDimOne.lift_iso_muIsp
+#print axioms DiamondIntegral.Section7.KernelDimOne.lift_iso_muIsp
+#check @DiamondIntegral.Section7.KernelDimOne.lemma_7_13
+#print DiamondIntegral.Section7.KernelDimOne.lemma_7_13
+#print axioms DiamondIntegral.Section7.KernelDimOne.lemma_7_13
 #check @DiamondIntegral.Section7.LiftClasses.toMeasured_res
 #print DiamondIntegral.Section7.LiftClasses.toMeasured_res
 #print axioms DiamondIntegral.Section7.LiftClasses.toMeasured_res

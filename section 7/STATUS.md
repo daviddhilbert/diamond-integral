@@ -69,6 +69,12 @@ arbitrary parameter base and take no input beyond the ACVF model.
   - `SpecialChainInduction.relative_chain`, `unary_chain`: the induction.
   - Pending: the partial-lift form (approved), stated together with 7.13's
     head start when 7.14 is set up.
+- 7.13 done in the printed form, head start 0 (`KernelDimOne.lemma_7_13`):
+  for A ≅ B in μVF^◇[1] and standard contractions U, V, ([U], [V]) ∈ μIsp^db.
+  Core: `lift_iso_muIsp` (𝕃U ≅ 𝕃V ⇒ μIsp^db), via 6.38 and 7.11.
+  - Head start: needs Lemma 6.38 for label-preserving morphisms and the
+    partial-lift form of 7.11 (chains carried to head-start bundles). Set up
+    with 7.14, which is its only use.
 - Deferred: the product part of Lemma 7.10. It needs a graded product on
   Section 7's class monoid (products distributing over tagged coproducts, and
   products of annular data). Only the ring form of 7.26 uses it, where the
@@ -80,6 +86,6 @@ arbitrary parameter base and take no input beyond the ACVF model.
 
 ## Next
 
-7.13, then M4 (7.14–7.15), M5 (7.16–7.23) and M6 (7.24–7.28) as in
+M4 (7.14–7.15), M5 (7.16–7.23) and M6 (7.24–7.28) as in
 PLAN.md. Product compatibility (7.10) and the object-level converse for
 Definition 7.2 remain open side items.

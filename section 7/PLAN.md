@@ -209,26 +209,12 @@ intended Lean statement; ⚑ marks a flag that is also listed in §5.
   6. 6.38's chains end in prepared sets. Intermediate sets need
      regularization before the next relative step (`RelativeApertureData`
      requires a tagged source).
-  - **Status (2026-11-19).** Steps 1–3 are done for one relative step with all
-    labels active (`SpecialStep.step_of_data`, with `datumOf`,
-    `inactive_finite` and `cls_contraction`).
-  - **Chain induction (planned).**
-    - Invariant: the set is an RV pullback with finite RV fibres.
-    - Class of such a set A: the class of the contraction of its
-      regularization.
-    - Step types (6.38's dimension-1 chains are `UnaryRelativeApertureChain`):
-      - relative and original centripetal steps reduce to
-        `RelativeApertureData` with the same point map
-        (`CentripetalData.relativeData`, `UnaryApertureInclusion.exists_relativeData`);
-      - regularization adds redundant labels (contraction unchanged up to
-        isomorphism);
-      - a zero-centred step on an RV pullback has empty core, because
-        invariance at radius |c| on unions of RV discs forces |c| ≤ |x_i|. It
-        only adds constant tags.
-    - Still to do: inactive labels in the relative step, the isomorphisms for
-      regularization and zero-centred steps, preservation of the invariant,
-      and the induction (length = number of steps, identity steps by
-      `step_refl`).
+  - **Status (2026-11-19).** Done for the full lift
+    (`SpecialChainInduction.lemma_7_11`, with `relative_chain`,
+    `special_chain` and `unary_chain`). The invariant `Good` is an RV pullback
+    with finite RV fibres and a label-constant form; its class is that of the
+    contraction of its regularization. The partial-lift form remains (see
+    7.13).
 
 ### 7.12 Lemma `blowup:same:RV:coa`
 - **Route.**
@@ -283,6 +269,15 @@ intended Lean statement; ⚑ marks a flag that is also listed in §5.
 - **New.** ⚑ Stated with a **head start**: one VF coordinate plus RV fibres of
   dimension k. The printed statement is k = 0. 7.14's Comparison step uses
   head start k. **Question C.**
+
+- **Status (2026-11-19).** Done with head start 0: `KernelDimOne.lemma_7_13`
+  (hypothesis A ≅ B in μVF^◇[1]; GAP-REPAIRS 8) and the core
+  `lift_iso_muIsp`.
+- **Head start (to do with 7.14).** Lemma 6.38 for a μVF^◇[1] morphism that
+  preserves the selected labels π, with chains carried to the head-start
+  bundles (Section 6 `rvHeadStartBundle`, `carryHeadStartBijection`) so that the
+  full-lift 7.11 applies in grade 1+k, and the 6.38 isomorphism of contractions
+  upgraded to the head-start objects.
 
 ### 7.14 Lemma `isp:VF:fiberwise:contract` — highest-risk item
 - **Route.**
