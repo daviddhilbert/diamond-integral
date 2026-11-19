@@ -79,7 +79,7 @@ theorem hd_off {w : Fin (labN D) → M} (hw : w ∈ Icore D ∪ Ishell D) :
   intro l hl
   rcases hw with h | h
   · rw [((mem_Icore_iff D w).mp h).2.2, blownCoordinate, Function.update_of_ne hl]
-  · exact ((mem_Ishell_iff' D w).mp h).2.2.1 l hl
+  · exact ((mem_Ishell_iff_lead D w).mp h).2.2.1 l hl
 
 theorem vreg_finite (a : Fin (1 + k) → VF M) :
     {t : Fin (labN D) → RVInfinity M | (a, t) ∈ (𝓥).carrier}.Finite := by

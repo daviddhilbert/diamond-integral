@@ -224,7 +224,7 @@ theorem mem_Ishell_iff (w : Fin (labN D) → M) :
         (sIdx D.chart) = s := join_tail _ _ _ _ 0
     rw [Fs, hx, hs', ← hh, ← ht, mk_recon]
 
-theorem mem_Ishell_iff' (w : Fin (labN D) → M) :
+theorem mem_Ishell_iff_lead (w : Fin (labN D) → M) :
     w ∈ Ishell D ↔ lb D w ∈ D.chart.domain ∧ tg D w = iRVOne ∧
       (∀ l ≠ D.coordinate, hd D w l = D.chart.coordinate (lb D w) l) ∧ NonzeroRV (hd D w D.coordinate) ∧
       codeValue (D.chart.coordinate (lb D w) D.coordinate) < codeValue (hd D w D.coordinate) ∧
@@ -287,7 +287,7 @@ theorem rel_of_inactive {x : Fin (1 + k) → VF M} {l : Fin D.chart.arity → RV
   · rw [vpair, dif_pos hl]
     rfl
 
-theorem centre_rv' {x : Fin (1 + k) → VF M} {l : Fin D.chart.arity → RVInfinity M}
+theorem centre_rv_of_inactive {x : Fin (1 + k) → VF M} {l : Fin D.chart.arity → RVInfinity M}
     (hl : rvValues l ∈ D.chart.domain)
     (hx : ∀ i, (rv M (x (BlowupRelation.skip D.coordinate i))).val =
       D.chart.coordinate (rvValues l) (BlowupRelation.skip D.coordinate i)) (i : Fin 2) :
@@ -296,19 +296,19 @@ theorem centre_rv' {x : Fin (1 + k) → VF M} {l : Fin D.chart.arity → RVInfin
   rw [centre, h, vpair, dif_pos hl]
   rfl
 
-theorem centre_ne_zero' {x : Fin (1 + k) → VF M} {l : Fin D.chart.arity → RVInfinity M}
+theorem centre_ne_zero_of_inactive {x : Fin (1 + k) → VF M} {l : Fin D.chart.arity → RVInfinity M}
     (hl : rvValues l ∈ D.chart.domain)
     (hx : ∀ i, (rv M (x (BlowupRelation.skip D.coordinate i))).val =
       D.chart.coordinate (rvValues l) (BlowupRelation.skip D.coordinate i)) (i : Fin 2) :
     centre D L i x l ≠ 0 :=
-  ne_zero_of_rv (centre_rv' D L hl hx i) (centrePair_nonzero D hl i)
+  ne_zero_of_rv (centre_rv_of_inactive D L hl hx i) (centrePair_nonzero D hl i)
 
-theorem vfValue_centre' {x : Fin (1 + k) → VF M} {l : Fin D.chart.arity → RVInfinity M}
+theorem vfValue_centre_of_inactive {x : Fin (1 + k) → VF M} {l : Fin D.chart.arity → RVInfinity M}
     (hl : rvValues l ∈ D.chart.domain)
     (hx : ∀ i, (rv M (x (BlowupRelation.skip D.coordinate i))).val =
       D.chart.coordinate (rvValues l) (BlowupRelation.skip D.coordinate i)) (i : Fin 2) :
     vfValue (centre D L i x l) = (codeValue (centrePair D (rvValues l) i)).val :=
-  vfValue_eq_codeValue (centre_rv' D L hl hx i) (centrePair_nonzero D hl i)
+  vfValue_eq_codeValue (centre_rv_of_inactive D L hl hx i) (centrePair_nonzero D hl i)
 
 end CentresGeneral
 
@@ -418,7 +418,7 @@ theorem point_labels_mem {x : Fin (1 + k) → VF M} {u : Fin D.chart.arity → R
       exact hoff _ l hl'
   | false =>
     right
-    rw [mem_Ishell_iff', lb_mk, tg_mk, hd_mk]
+    rw [mem_Ishell_iff_lead, lb_mk, tg_mk, hd_mk]
     have hnlt : ¬ vfValue (centre D L 1 x u) < vfValue (x D.coordinate - centre D L 0 x u) :=
       fun h => Bool.false_ne_true (hcore.trans (decide_eq_true h))
     have hy : x D.coordinate - centre D L 0 x u ≠ 0 := by
@@ -490,16 +490,16 @@ theorem mem_Vreg_iff (p : Mixed M (1 + k) (labN D)) :
       rcases hw with h | h
       · rw [((mem_Icore_iff D _).mp h).2.2, blownCoordinate, Function.update_of_ne hl']
         rfl
-      · exact ((mem_Ishell_iff' D _).mp h).2.2.1 l hl'
+      · exact ((mem_Ishell_iff_lead D _).mp h).2.2.1 l hl'
     have hin : ∀ i, (rv M (y (BlowupRelation.skip D.coordinate i))).val =
         D.chart.coordinate (rvValues u) (BlowupRelation.skip D.coordinate i) :=
       fun i => hoff _ (BlowupRelation.skip_ne D.coordinate i)
-    have hb0 := centre_rv' D L hl hin 0
-    have hb1 := centre_rv' D L hl hin 1
-    have hne0 := centre_ne_zero' D L hl hin 0
-    have hne1 := centre_ne_zero' D L hl hin 1
-    have hv0 := vfValue_centre' D L hl hin 0
-    have hv1 := vfValue_centre' D L hl hin 1
+    have hb0 := centre_rv_of_inactive D L hl hin 0
+    have hb1 := centre_rv_of_inactive D L hl hin 1
+    have hne0 := centre_ne_zero_of_inactive D L hl hin 0
+    have hne1 := centre_ne_zero_of_inactive D L hl hin 1
+    have hv0 := vfValue_centre_of_inactive D L hl hin 0
+    have hv1 := vfValue_centre_of_inactive D L hl hin 1
     have hle01 := centrePair_le D hl
     -- a candidate preimage `(x, u)` with `x` differing from `y` only at `j`
     have key : ∀ (e : VF M) (c : Bool), (rv M e) = rv M (centre D L 0 y u) →
@@ -555,7 +555,7 @@ theorem mem_Vreg_iff (p : Mixed M (1 + k) (labN D)) :
         exact (decide_eq_true hlt).symm
       · rw [if_pos rfl, add_sub_cancel_right, sub_add_cancel]
       · exact htag true (htg.trans branchTag_true_val.symm)
-    · obtain ⟨_, htg, _, hnz, h1, h2⟩ := (mem_Ishell_iff' D _).mp h
+    · obtain ⟨_, htg, _, hnz, h1, h2⟩ := (mem_Ishell_iff_lead D _).mp h
       have hvy : vfValue (y D.coordinate) = (codeValue (hd D (rvValues t) D.coordinate)).val :=
         vfValue_eq_codeValue (hyj _) hnz
       apply key (y D.coordinate + centre D L 0 y u) false

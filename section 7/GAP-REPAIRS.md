@@ -33,3 +33,17 @@ formalization convention. No manuscript edit has been made for them.
    definable bijections, and its multipliers are coordinates or values of
    definable functions. Equal depths with different endpoints are covered:
    the second blowup has depth zero and an endpoint of valuation zero.
+7. **Lemma 7.12, route and form.** The proof's map Φ is formalized as Section 6
+   relative aperture data on the lift (focus b₀, endpoint b₁), which already
+   carries the two branch tags. The label `s = rv(x − b₀)/f_j(u)` of the shell
+   branch is recorded by Section 6's regularization (all leading terms become
+   labels) rather than by a separate label. The regularized image is the RV
+   pullback of explicit endpoint and shell labels. Section 6's contraction and
+   Remark 6.15 give `𝕃U ≅ 𝕃W` in μVF^◇. The contraction `W` splits by tag
+   into pieces isomorphic in μRV^db to the shell and the endpoint. So the Lean
+   statement is the equality `μ𝕃[U^♭] = μ𝕃[U]` in K₊ μVF^◇ rather than an
+   isomorphism of objects. The later uses (the "if" direction of 7.24, and the
+   generators of J_var in the kernel in 7.26) need only this class form. Labels
+   equal to ∞ are handled by the strict chart: Lemma 7.5's comparison
+   isomorphisms for `strictIso` have equal depths, so the strict datum has the
+   same source and blowup classes.

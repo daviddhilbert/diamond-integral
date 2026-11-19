@@ -42,6 +42,438 @@ import «section 7».Section
 #check @DiamondIntegral.Section7.BlowupCongruence.muIspAddCon_iff
 #print DiamondIntegral.Section7.BlowupCongruence.muIspAddCon_iff
 #print axioms DiamondIntegral.Section7.BlowupCongruence.muIspAddCon_iff
+#check @DiamondIntegral.Section7.BlowupLiftClasses.volumeGamma_eq
+#print DiamondIntegral.Section7.BlowupLiftClasses.volumeGamma_eq
+#print axioms DiamondIntegral.Section7.BlowupLiftClasses.volumeGamma_eq
+#check @DiamondIntegral.Section7.BlowupLiftClasses.mem_W_domain
+#print DiamondIntegral.Section7.BlowupLiftClasses.mem_W_domain
+#print axioms DiamondIntegral.Section7.BlowupLiftClasses.mem_W_domain
+#check @DiamondIntegral.Section7.BlowupLiftClasses.W_value
+#print DiamondIntegral.Section7.BlowupLiftClasses.W_value
+#print axioms DiamondIntegral.Section7.BlowupLiftClasses.W_value
+#check @DiamondIntegral.Section7.BlowupLiftClasses.W_form
+#print DiamondIntegral.Section7.BlowupLiftClasses.W_form
+#print axioms DiamondIntegral.Section7.BlowupLiftClasses.W_form
+#check @DiamondIntegral.Section7.BlowupLiftClasses.Dcore
+#print DiamondIntegral.Section7.BlowupLiftClasses.Dcore
+#print axioms DiamondIntegral.Section7.BlowupLiftClasses.Dcore
+#check @DiamondIntegral.Section7.BlowupLiftClasses.Dcore_sub
+#print DiamondIntegral.Section7.BlowupLiftClasses.Dcore_sub
+#print axioms DiamondIntegral.Section7.BlowupLiftClasses.Dcore_sub
+#check @DiamondIntegral.Section7.BlowupLiftClasses.Wcore
+#print DiamondIntegral.Section7.BlowupLiftClasses.Wcore
+#print axioms DiamondIntegral.Section7.BlowupLiftClasses.Wcore
+#check @DiamondIntegral.Section7.BlowupLiftClasses.Wshell
+#print DiamondIntegral.Section7.BlowupLiftClasses.Wshell
+#print axioms DiamondIntegral.Section7.BlowupLiftClasses.Wshell
+#check @DiamondIntegral.Section7.BlowupLiftClasses.cE
+#print DiamondIntegral.Section7.BlowupLiftClasses.cE
+#print axioms DiamondIntegral.Section7.BlowupLiftClasses.cE
+#check @DiamondIntegral.Section7.BlowupLiftClasses.cS
+#print DiamondIntegral.Section7.BlowupLiftClasses.cS
+#print axioms DiamondIntegral.Section7.BlowupLiftClasses.cS
+#check @DiamondIntegral.Section7.BlowupLiftClasses.mapE
+#print DiamondIntegral.Section7.BlowupLiftClasses.mapE
+#print axioms DiamondIntegral.Section7.BlowupLiftClasses.mapE
+#check @DiamondIntegral.Section7.BlowupLiftClasses.mapE_val
+#print DiamondIntegral.Section7.BlowupLiftClasses.mapE_val
+#print axioms DiamondIntegral.Section7.BlowupLiftClasses.mapE_val
+#check @DiamondIntegral.Section7.BlowupLiftClasses.mapE_bijective
+#print DiamondIntegral.Section7.BlowupLiftClasses.mapE_bijective
+#print axioms DiamondIntegral.Section7.BlowupLiftClasses.mapE_bijective
+#check @DiamondIntegral.Section7.BlowupLiftClasses.isoE
+#print DiamondIntegral.Section7.BlowupLiftClasses.isoE
+#print axioms DiamondIntegral.Section7.BlowupLiftClasses.isoE
+#check @DiamondIntegral.Section7.BlowupLiftClasses.Ishell_sub
+#print DiamondIntegral.Section7.BlowupLiftClasses.Ishell_sub
+#print axioms DiamondIntegral.Section7.BlowupLiftClasses.Ishell_sub
+#check @DiamondIntegral.Section7.BlowupLiftClasses.mapS
+#print DiamondIntegral.Section7.BlowupLiftClasses.mapS
+#print axioms DiamondIntegral.Section7.BlowupLiftClasses.mapS
+#check @DiamondIntegral.Section7.BlowupLiftClasses.mapS_val
+#print DiamondIntegral.Section7.BlowupLiftClasses.mapS_val
+#print axioms DiamondIntegral.Section7.BlowupLiftClasses.mapS_val
+#check @DiamondIntegral.Section7.BlowupLiftClasses.mapS_bijective
+#print DiamondIntegral.Section7.BlowupLiftClasses.mapS_bijective
+#print axioms DiamondIntegral.Section7.BlowupLiftClasses.mapS_bijective
+#check @DiamondIntegral.Section7.BlowupLiftClasses.isoS
+#print DiamondIntegral.Section7.BlowupLiftClasses.isoS
+#print axioms DiamondIntegral.Section7.BlowupLiftClasses.isoS
+#check @DiamondIntegral.Section7.BlowupLiftClasses.endpoint_noInfinity
+#print DiamondIntegral.Section7.BlowupLiftClasses.endpoint_noInfinity
+#print axioms DiamondIntegral.Section7.BlowupLiftClasses.endpoint_noInfinity
+#check @DiamondIntegral.Section7.BlowupLiftClasses.shell_noInfinity
+#print DiamondIntegral.Section7.BlowupLiftClasses.shell_noInfinity
+#print axioms DiamondIntegral.Section7.BlowupLiftClasses.shell_noInfinity
+#check @DiamondIntegral.Section7.BlowupLiftClasses.lift_blowup
+#print DiamondIntegral.Section7.BlowupLiftClasses.lift_blowup
+#print axioms DiamondIntegral.Section7.BlowupLiftClasses.lift_blowup
+#check @DiamondIntegral.Section7.BlowupLiftClasses.lemma_7_12_noInfinity
+#print DiamondIntegral.Section7.BlowupLiftClasses.lemma_7_12_noInfinity
+#print axioms DiamondIntegral.Section7.BlowupLiftClasses.lemma_7_12_noInfinity
+#check @DiamondIntegral.Section7.BlowupLiftContraction.vreg_tagged
+#print DiamondIntegral.Section7.BlowupLiftContraction.vreg_tagged
+#print axioms DiamondIntegral.Section7.BlowupLiftContraction.vreg_tagged
+#check @DiamondIntegral.Section7.BlowupLiftContraction.vreg_pullback
+#print DiamondIntegral.Section7.BlowupLiftContraction.vreg_pullback
+#print axioms DiamondIntegral.Section7.BlowupLiftContraction.vreg_pullback
+#check @DiamondIntegral.Section7.BlowupLiftContraction.hd_off
+#print DiamondIntegral.Section7.BlowupLiftContraction.hd_off
+#print axioms DiamondIntegral.Section7.BlowupLiftContraction.hd_off
+#check @DiamondIntegral.Section7.BlowupLiftContraction.vreg_finite
+#print DiamondIntegral.Section7.BlowupLiftContraction.vreg_finite
+#print axioms DiamondIntegral.Section7.BlowupLiftContraction.vreg_finite
+#check @DiamondIntegral.Section7.BlowupLiftContraction.vreg_vfDoublyBounded
+#print DiamondIntegral.Section7.BlowupLiftContraction.vreg_vfDoublyBounded
+#print axioms DiamondIntegral.Section7.BlowupLiftContraction.vreg_vfDoublyBounded
+#check @DiamondIntegral.Section7.BlowupLiftContraction.vreg_rvDoublyBounded
+#print DiamondIntegral.Section7.BlowupLiftContraction.vreg_rvDoublyBounded
+#print axioms DiamondIntegral.Section7.BlowupLiftContraction.vreg_rvDoublyBounded
+#check @DiamondIntegral.Section7.BlowupLiftContraction.Fmap
+#print DiamondIntegral.Section7.BlowupLiftContraction.Fmap
+#print axioms DiamondIntegral.Section7.BlowupLiftContraction.Fmap
+#check @DiamondIntegral.Section7.BlowupLiftContraction.Fmap_bijective
+#print DiamondIntegral.Section7.BlowupLiftContraction.Fmap_bijective
+#print axioms DiamondIntegral.Section7.BlowupLiftContraction.Fmap_bijective
+#check @DiamondIntegral.Section7.BlowupLiftContraction.Fmap_val
+#print DiamondIntegral.Section7.BlowupLiftContraction.Fmap_val
+#print axioms DiamondIntegral.Section7.BlowupLiftContraction.Fmap_val
+#check @DiamondIntegral.Section7.BlowupLiftContraction.Fmap_labels
+#print DiamondIntegral.Section7.BlowupLiftContraction.Fmap_labels
+#print axioms DiamondIntegral.Section7.BlowupLiftContraction.Fmap_labels
+#check @DiamondIntegral.Section7.BlowupLiftContraction.form
+#print DiamondIntegral.Section7.BlowupLiftContraction.form
+#print axioms DiamondIntegral.Section7.BlowupLiftContraction.form
+#check @DiamondIntegral.Section7.BlowupLiftContraction.form_labels
+#print DiamondIntegral.Section7.BlowupLiftContraction.form_labels
+#print axioms DiamondIntegral.Section7.BlowupLiftContraction.form_labels
+#check @DiamondIntegral.Section7.BlowupLiftContraction.W
+#print DiamondIntegral.Section7.BlowupLiftContraction.W
+#print axioms DiamondIntegral.Section7.BlowupLiftContraction.W
+#check @DiamondIntegral.Section7.BlowupLiftContraction.W_doublyBounded
+#print DiamondIntegral.Section7.BlowupLiftContraction.W_doublyBounded
+#print axioms DiamondIntegral.Section7.BlowupLiftContraction.W_doublyBounded
+#check @DiamondIntegral.Section7.BlowupLiftContraction.W_lift_carrier
+#print DiamondIntegral.Section7.BlowupLiftContraction.W_lift_carrier
+#print axioms DiamondIntegral.Section7.BlowupLiftContraction.W_lift_carrier
+#check @DiamondIntegral.Section7.BlowupLiftContraction.lift_isomorphic
+#print DiamondIntegral.Section7.BlowupLiftContraction.lift_isomorphic
+#print axioms DiamondIntegral.Section7.BlowupLiftContraction.lift_isomorphic
+#check @DiamondIntegral.Section7.BlowupLiftData.inactCoord
+#print DiamondIntegral.Section7.BlowupLiftData.inactCoord
+#print axioms DiamondIntegral.Section7.BlowupLiftData.inactCoord
+#check @DiamondIntegral.Section7.BlowupLiftData.centrePair
+#print DiamondIntegral.Section7.BlowupLiftData.centrePair
+#print axioms DiamondIntegral.Section7.BlowupLiftData.centrePair
+#check @DiamondIntegral.Section7.BlowupLiftData.centrePair_nonzero
+#print DiamondIntegral.Section7.BlowupLiftData.centrePair_nonzero
+#print axioms DiamondIntegral.Section7.BlowupLiftData.centrePair_nonzero
+#check @DiamondIntegral.Section7.BlowupLiftData.inactCoord_nonzero
+#print DiamondIntegral.Section7.BlowupLiftData.inactCoord_nonzero
+#print axioms DiamondIntegral.Section7.BlowupLiftData.inactCoord_nonzero
+#check @DiamondIntegral.Section7.BlowupLiftData.centreRel
+#print DiamondIntegral.Section7.BlowupLiftData.centreRel
+#print axioms DiamondIntegral.Section7.BlowupLiftData.centreRel
+#check @DiamondIntegral.Section7.BlowupLiftData.inactive_eq_of_inactCoord
+#print DiamondIntegral.Section7.BlowupLiftData.inactive_eq_of_inactCoord
+#print axioms DiamondIntegral.Section7.BlowupLiftData.inactive_eq_of_inactCoord
+#check @DiamondIntegral.Section7.BlowupLiftData.centreMap
+#print DiamondIntegral.Section7.BlowupLiftData.centreMap
+#print axioms DiamondIntegral.Section7.BlowupLiftData.centreMap
+#check @DiamondIntegral.Section7.BlowupLiftData.centreMap_tupleDef
+#print DiamondIntegral.Section7.BlowupLiftData.centreMap_tupleDef
+#print axioms DiamondIntegral.Section7.BlowupLiftData.centreMap_tupleDef
+#check @DiamondIntegral.Section7.BlowupLiftData.centreRelation
+#print DiamondIntegral.Section7.BlowupLiftData.centreRelation
+#print axioms DiamondIntegral.Section7.BlowupLiftData.centreRelation
+#check @DiamondIntegral.Section7.BlowupLiftData.liftSet
+#print DiamondIntegral.Section7.BlowupLiftData.liftSet
+#print axioms DiamondIntegral.Section7.BlowupLiftData.liftSet
+#check @DiamondIntegral.Section7.BlowupLiftData.inact
+#print DiamondIntegral.Section7.BlowupLiftData.inact
+#print axioms DiamondIntegral.Section7.BlowupLiftData.inact
+#check @DiamondIntegral.Section7.BlowupLiftData.vpair
+#print DiamondIntegral.Section7.BlowupLiftData.vpair
+#print axioms DiamondIntegral.Section7.BlowupLiftData.vpair
+#check @DiamondIntegral.Section7.BlowupLiftData.centre
+#print DiamondIntegral.Section7.BlowupLiftData.centre
+#print axioms DiamondIntegral.Section7.BlowupLiftData.centre
+#check @DiamondIntegral.Section7.BlowupLiftData.mem_liftSet_iff
+#print DiamondIntegral.Section7.BlowupLiftData.mem_liftSet_iff
+#print axioms DiamondIntegral.Section7.BlowupLiftData.mem_liftSet_iff
+#check @DiamondIntegral.Section7.BlowupLiftData.rel_of_mem
+#print DiamondIntegral.Section7.BlowupLiftData.rel_of_mem
+#print axioms DiamondIntegral.Section7.BlowupLiftData.rel_of_mem
+#check @DiamondIntegral.Section7.BlowupLiftData.centre_rv
+#print DiamondIntegral.Section7.BlowupLiftData.centre_rv
+#print axioms DiamondIntegral.Section7.BlowupLiftData.centre_rv
+#check @DiamondIntegral.Section7.BlowupLiftData.centre_update
+#print DiamondIntegral.Section7.BlowupLiftData.centre_update
+#print axioms DiamondIntegral.Section7.BlowupLiftData.centre_update
+#check @DiamondIntegral.Section7.BlowupLiftData.coord_rv
+#print DiamondIntegral.Section7.BlowupLiftData.coord_rv
+#print axioms DiamondIntegral.Section7.BlowupLiftData.coord_rv
+#check @DiamondIntegral.Section7.BlowupLiftData.sortEval_rv
+#print DiamondIntegral.Section7.BlowupLiftData.sortEval_rv
+#print axioms DiamondIntegral.Section7.BlowupLiftData.sortEval_rv
+#check @DiamondIntegral.Section7.BlowupLiftData.sortEval_vf
+#print DiamondIntegral.Section7.BlowupLiftData.sortEval_vf
+#print axioms DiamondIntegral.Section7.BlowupLiftData.sortEval_vf
+#check @DiamondIntegral.Section7.BlowupLiftData.sort_coord_definable
+#print DiamondIntegral.Section7.BlowupLiftData.sort_coord_definable
+#print axioms DiamondIntegral.Section7.BlowupLiftData.sort_coord_definable
+#check @DiamondIntegral.Section7.BlowupLiftData.sorts_definable
+#print DiamondIntegral.Section7.BlowupLiftData.sorts_definable
+#print axioms DiamondIntegral.Section7.BlowupLiftData.sorts_definable
+#check @DiamondIntegral.Section7.BlowupLiftData.rvVFGraph_definable
+#print DiamondIntegral.Section7.BlowupLiftData.rvVFGraph_definable
+#print axioms DiamondIntegral.Section7.BlowupLiftData.rvVFGraph_definable
+#check @DiamondIntegral.Section7.BlowupLiftData.vcode
+#print DiamondIntegral.Section7.BlowupLiftData.vcode
+#print axioms DiamondIntegral.Section7.BlowupLiftData.vcode
+#check @DiamondIntegral.Section7.BlowupLiftData.rvValues_vpair
+#print DiamondIntegral.Section7.BlowupLiftData.rvValues_vpair
+#print axioms DiamondIntegral.Section7.BlowupLiftData.rvValues_vpair
+#check @DiamondIntegral.Section7.BlowupLiftData.zero_singleton_definable
+#print DiamondIntegral.Section7.BlowupLiftData.zero_singleton_definable
+#print axioms DiamondIntegral.Section7.BlowupLiftData.zero_singleton_definable
+#check @DiamondIntegral.Section7.BlowupLiftData.vcode_definable
+#print DiamondIntegral.Section7.BlowupLiftData.vcode_definable
+#print axioms DiamondIntegral.Section7.BlowupLiftData.vcode_definable
+#check @DiamondIntegral.Section7.BlowupLiftData.centreCode
+#print DiamondIntegral.Section7.BlowupLiftData.centreCode
+#print axioms DiamondIntegral.Section7.BlowupLiftData.centreCode
+#check @DiamondIntegral.Section7.BlowupLiftData.centreCode_definable
+#print DiamondIntegral.Section7.BlowupLiftData.centreCode_definable
+#print axioms DiamondIntegral.Section7.BlowupLiftData.centreCode_definable
+#check @DiamondIntegral.Section7.BlowupLiftData.centre_val
+#print DiamondIntegral.Section7.BlowupLiftData.centre_val
+#print axioms DiamondIntegral.Section7.BlowupLiftData.centre_val
+#check @DiamondIntegral.Section7.BlowupLiftData.centre_family_definable
+#print DiamondIntegral.Section7.BlowupLiftData.centre_family_definable
+#print axioms DiamondIntegral.Section7.BlowupLiftData.centre_family_definable
+#check @DiamondIntegral.Section7.BlowupLiftData.centreMapOn
+#print DiamondIntegral.Section7.BlowupLiftData.centreMapOn
+#print axioms DiamondIntegral.Section7.BlowupLiftData.centreMapOn
+#check @DiamondIntegral.Section7.BlowupLiftData.centreMapOn_apply
+#print DiamondIntegral.Section7.BlowupLiftData.centreMapOn_apply
+#print axioms DiamondIntegral.Section7.BlowupLiftData.centreMapOn_apply
+#check @DiamondIntegral.Section7.BlowupLiftData.vfValue_eq_codeValue
+#print DiamondIntegral.Section7.BlowupLiftData.vfValue_eq_codeValue
+#print axioms DiamondIntegral.Section7.BlowupLiftData.vfValue_eq_codeValue
+#check @DiamondIntegral.Section7.BlowupLiftData.ne_zero_of_rv
+#print DiamondIntegral.Section7.BlowupLiftData.ne_zero_of_rv
+#print axioms DiamondIntegral.Section7.BlowupLiftData.ne_zero_of_rv
+#check @DiamondIntegral.Section7.BlowupLiftData.coord_nonzero
+#print DiamondIntegral.Section7.BlowupLiftData.coord_nonzero
+#print axioms DiamondIntegral.Section7.BlowupLiftData.coord_nonzero
+#check @DiamondIntegral.Section7.BlowupLiftData.coordGammaMap
+#print DiamondIntegral.Section7.BlowupLiftData.coordGammaMap
+#print axioms DiamondIntegral.Section7.BlowupLiftData.coordGammaMap
+#check @DiamondIntegral.Section7.BlowupLiftData.coordGammaMap_val
+#print DiamondIntegral.Section7.BlowupLiftData.coordGammaMap_val
+#print axioms DiamondIntegral.Section7.BlowupLiftData.coordGammaMap_val
+#check @DiamondIntegral.Section7.BlowupLiftData.coord_value_named
+#print DiamondIntegral.Section7.BlowupLiftData.coord_value_named
+#print axioms DiamondIntegral.Section7.BlowupLiftData.coord_value_named
+#check @DiamondIntegral.Section7.BlowupLiftData.tags
+#print DiamondIntegral.Section7.BlowupLiftData.tags
+#print axioms DiamondIntegral.Section7.BlowupLiftData.tags
+#check @DiamondIntegral.Section7.BlowupLiftData.mem_of_focusActive
+#print DiamondIntegral.Section7.BlowupLiftData.mem_of_focusActive
+#print axioms DiamondIntegral.Section7.BlowupLiftData.mem_of_focusActive
+#check @DiamondIntegral.Section7.BlowupLiftData.vfValue_centre
+#print DiamondIntegral.Section7.BlowupLiftData.vfValue_centre
+#print axioms DiamondIntegral.Section7.BlowupLiftData.vfValue_centre
+#check @DiamondIntegral.Section7.BlowupLiftData.centre_ne_zero
+#print DiamondIntegral.Section7.BlowupLiftData.centre_ne_zero
+#print axioms DiamondIntegral.Section7.BlowupLiftData.centre_ne_zero
+#check @DiamondIntegral.Section7.BlowupLiftData.centrePair_le
+#print DiamondIntegral.Section7.BlowupLiftData.centrePair_le
+#print axioms DiamondIntegral.Section7.BlowupLiftData.centrePair_le
+#check @DiamondIntegral.Section7.BlowupLiftData.centre_continuous
+#print DiamondIntegral.Section7.BlowupLiftData.centre_continuous
+#print axioms DiamondIntegral.Section7.BlowupLiftData.centre_continuous
+#check @DiamondIntegral.Section7.BlowupLiftData.apertureData
+#print DiamondIntegral.Section7.BlowupLiftData.apertureData
+#print axioms DiamondIntegral.Section7.BlowupLiftData.apertureData
+#check @DiamondIntegral.Section7.BlowupLiftGeneral.unitEndpointIso
+#print DiamondIntegral.Section7.BlowupLiftGeneral.unitEndpointIso
+#print axioms DiamondIntegral.Section7.BlowupLiftGeneral.unitEndpointIso
+#check @DiamondIntegral.Section7.BlowupLiftGeneral.strict_isoMap
+#print DiamondIntegral.Section7.BlowupLiftGeneral.strict_isoMap
+#print axioms DiamondIntegral.Section7.BlowupLiftGeneral.strict_isoMap
+#check @DiamondIntegral.Section7.BlowupLiftGeneral.strictAperture
+#print DiamondIntegral.Section7.BlowupLiftGeneral.strictAperture
+#print axioms DiamondIntegral.Section7.BlowupLiftGeneral.strictAperture
+#check @DiamondIntegral.Section7.BlowupLiftGeneral.strict_finite
+#print DiamondIntegral.Section7.BlowupLiftGeneral.strict_finite
+#print axioms DiamondIntegral.Section7.BlowupLiftGeneral.strict_finite
+#check @DiamondIntegral.Section7.BlowupLiftGeneral.strictDatum
+#print DiamondIntegral.Section7.BlowupLiftGeneral.strictDatum
+#print axioms DiamondIntegral.Section7.BlowupLiftGeneral.strictDatum
+#check @DiamondIntegral.Section7.BlowupLiftGeneral.strict_le
+#print DiamondIntegral.Section7.BlowupLiftGeneral.strict_le
+#print axioms DiamondIntegral.Section7.BlowupLiftGeneral.strict_le
+#check @DiamondIntegral.Section7.BlowupLiftGeneral.strict_ratio_one
+#print DiamondIntegral.Section7.BlowupLiftGeneral.strict_ratio_one
+#print axioms DiamondIntegral.Section7.BlowupLiftGeneral.strict_ratio_one
+#check @DiamondIntegral.Section7.BlowupLiftGeneral.strict_second_shell_empty
+#print DiamondIntegral.Section7.BlowupLiftGeneral.strict_second_shell_empty
+#print axioms DiamondIntegral.Section7.BlowupLiftGeneral.strict_second_shell_empty
+#check @DiamondIntegral.Section7.BlowupLiftGeneral.strict_annular
+#print DiamondIntegral.Section7.BlowupLiftGeneral.strict_annular
+#print axioms DiamondIntegral.Section7.BlowupLiftGeneral.strict_annular
+#check @DiamondIntegral.Section7.BlowupLiftGeneral.strict_source
+#print DiamondIntegral.Section7.BlowupLiftGeneral.strict_source
+#print axioms DiamondIntegral.Section7.BlowupLiftGeneral.strict_source
+#check @DiamondIntegral.Section7.BlowupLiftGeneral.lemma_7_12
+#print DiamondIntegral.Section7.BlowupLiftGeneral.lemma_7_12
+#print axioms DiamondIntegral.Section7.BlowupLiftGeneral.lemma_7_12
+#check @DiamondIntegral.Section7.BlowupLiftGeneral.step_lift
+#print DiamondIntegral.Section7.BlowupLiftGeneral.step_lift
+#print axioms DiamondIntegral.Section7.BlowupLiftGeneral.step_lift
+#check @DiamondIntegral.Section7.BlowupLiftGeneral.steps_lift
+#print DiamondIntegral.Section7.BlowupLiftGeneral.steps_lift
+#print axioms DiamondIntegral.Section7.BlowupLiftGeneral.steps_lift
+#check @DiamondIntegral.Section7.BlowupLiftGeneral.muIsp_lift
+#print DiamondIntegral.Section7.BlowupLiftGeneral.muIsp_lift
+#print axioms DiamondIntegral.Section7.BlowupLiftGeneral.muIsp_lift
+#check @DiamondIntegral.Section7.BlowupLiftImage.labN
+#print DiamondIntegral.Section7.BlowupLiftImage.labN
+#print axioms DiamondIntegral.Section7.BlowupLiftImage.labN
+#check @DiamondIntegral.Section7.BlowupLiftImage.hd
+#print DiamondIntegral.Section7.BlowupLiftImage.hd
+#print axioms DiamondIntegral.Section7.BlowupLiftImage.hd
+#check @DiamondIntegral.Section7.BlowupLiftImage.tg
+#print DiamondIntegral.Section7.BlowupLiftImage.tg
+#print axioms DiamondIntegral.Section7.BlowupLiftImage.tg
+#check @DiamondIntegral.Section7.BlowupLiftImage.lb
+#print DiamondIntegral.Section7.BlowupLiftImage.lb
+#print axioms DiamondIntegral.Section7.BlowupLiftImage.lb
+#check @DiamondIntegral.Section7.BlowupLiftImage.mk
+#print DiamondIntegral.Section7.BlowupLiftImage.mk
+#print axioms DiamondIntegral.Section7.BlowupLiftImage.mk
+#check @DiamondIntegral.Section7.BlowupLiftImage.hd_mk
+#print DiamondIntegral.Section7.BlowupLiftImage.hd_mk
+#print axioms DiamondIntegral.Section7.BlowupLiftImage.hd_mk
+#check @DiamondIntegral.Section7.BlowupLiftImage.tg_mk
+#print DiamondIntegral.Section7.BlowupLiftImage.tg_mk
+#print axioms DiamondIntegral.Section7.BlowupLiftImage.tg_mk
+#check @DiamondIntegral.Section7.BlowupLiftImage.lb_mk
+#print DiamondIntegral.Section7.BlowupLiftImage.lb_mk
+#print axioms DiamondIntegral.Section7.BlowupLiftImage.lb_mk
+#check @DiamondIntegral.Section7.BlowupLiftImage.mk_recon
+#print DiamondIntegral.Section7.BlowupLiftImage.mk_recon
+#print axioms DiamondIntegral.Section7.BlowupLiftImage.mk_recon
+#check @DiamondIntegral.Section7.BlowupLiftImage.mk_injective
+#print DiamondIntegral.Section7.BlowupLiftImage.mk_injective
+#print axioms DiamondIntegral.Section7.BlowupLiftImage.mk_injective
+#check @DiamondIntegral.Section7.BlowupLiftImage.Fe
+#print DiamondIntegral.Section7.BlowupLiftImage.Fe
+#print axioms DiamondIntegral.Section7.BlowupLiftImage.Fe
+#check @DiamondIntegral.Section7.BlowupLiftImage.Fs
+#print DiamondIntegral.Section7.BlowupLiftImage.Fs
+#print axioms DiamondIntegral.Section7.BlowupLiftImage.Fs
+#check @DiamondIntegral.Section7.BlowupLiftImage.Icore
+#print DiamondIntegral.Section7.BlowupLiftImage.Icore
+#print axioms DiamondIntegral.Section7.BlowupLiftImage.Icore
+#check @DiamondIntegral.Section7.BlowupLiftImage.Ishell
+#print DiamondIntegral.Section7.BlowupLiftImage.Ishell
+#print axioms DiamondIntegral.Section7.BlowupLiftImage.Ishell
+#check @DiamondIntegral.Section7.BlowupLiftImage.scalarDef_of_tupleDef
+#print DiamondIntegral.Section7.BlowupLiftImage.scalarDef_of_tupleDef
+#print axioms DiamondIntegral.Section7.BlowupLiftImage.scalarDef_of_tupleDef
+#check @DiamondIntegral.Section7.BlowupLiftImage.tupleDef_mk
+#print DiamondIntegral.Section7.BlowupLiftImage.tupleDef_mk
+#print axioms DiamondIntegral.Section7.BlowupLiftImage.tupleDef_mk
+#check @DiamondIntegral.Section7.BlowupLiftImage.Fe_tupleDef
+#print DiamondIntegral.Section7.BlowupLiftImage.Fe_tupleDef
+#print axioms DiamondIntegral.Section7.BlowupLiftImage.Fe_tupleDef
+#check @DiamondIntegral.Section7.BlowupLiftImage.Fs_tupleDef
+#print DiamondIntegral.Section7.BlowupLiftImage.Fs_tupleDef
+#print axioms DiamondIntegral.Section7.BlowupLiftImage.Fs_tupleDef
+#check @DiamondIntegral.Section7.BlowupLiftImage.Icore_definable
+#print DiamondIntegral.Section7.BlowupLiftImage.Icore_definable
+#print axioms DiamondIntegral.Section7.BlowupLiftImage.Icore_definable
+#check @DiamondIntegral.Section7.BlowupLiftImage.Ishell_definable
+#print DiamondIntegral.Section7.BlowupLiftImage.Ishell_definable
+#print axioms DiamondIntegral.Section7.BlowupLiftImage.Ishell_definable
+#check @DiamondIntegral.Section7.BlowupLiftImage.join_comp_head
+#print DiamondIntegral.Section7.BlowupLiftImage.join_comp_head
+#print axioms DiamondIntegral.Section7.BlowupLiftImage.join_comp_head
+#check @DiamondIntegral.Section7.BlowupLiftImage.join_comp_tail
+#print DiamondIntegral.Section7.BlowupLiftImage.join_comp_tail
+#print axioms DiamondIntegral.Section7.BlowupLiftImage.join_comp_tail
+#check @DiamondIntegral.Section7.BlowupLiftImage.mem_graph_join
+#print DiamondIntegral.Section7.BlowupLiftImage.mem_graph_join
+#print axioms DiamondIntegral.Section7.BlowupLiftImage.mem_graph_join
+#check @DiamondIntegral.Section7.BlowupLiftImage.mem_Icore_iff
+#print DiamondIntegral.Section7.BlowupLiftImage.mem_Icore_iff
+#print axioms DiamondIntegral.Section7.BlowupLiftImage.mem_Icore_iff
+#check @DiamondIntegral.Section7.BlowupLiftImage.mem_shell_join
+#print DiamondIntegral.Section7.BlowupLiftImage.mem_shell_join
+#print axioms DiamondIntegral.Section7.BlowupLiftImage.mem_shell_join
+#check @DiamondIntegral.Section7.BlowupLiftImage.mem_Ishell_iff
+#print DiamondIntegral.Section7.BlowupLiftImage.mem_Ishell_iff
+#print axioms DiamondIntegral.Section7.BlowupLiftImage.mem_Ishell_iff
+#check @DiamondIntegral.Section7.BlowupLiftImage.mem_Ishell_iff_lead
+#print DiamondIntegral.Section7.BlowupLiftImage.mem_Ishell_iff_lead
+#print axioms DiamondIntegral.Section7.BlowupLiftImage.mem_Ishell_iff_lead
+#check @DiamondIntegral.Section7.BlowupLiftImage.Icore_Ishell_disjoint
+#print DiamondIntegral.Section7.BlowupLiftImage.Icore_Ishell_disjoint
+#print axioms DiamondIntegral.Section7.BlowupLiftImage.Icore_Ishell_disjoint
+#check @DiamondIntegral.Section7.BlowupLiftImage.rel_of_inactive
+#print DiamondIntegral.Section7.BlowupLiftImage.rel_of_inactive
+#print axioms DiamondIntegral.Section7.BlowupLiftImage.rel_of_inactive
+#check @DiamondIntegral.Section7.BlowupLiftImage.centre_rv_of_inactive
+#print DiamondIntegral.Section7.BlowupLiftImage.centre_rv_of_inactive
+#print axioms DiamondIntegral.Section7.BlowupLiftImage.centre_rv_of_inactive
+#check @DiamondIntegral.Section7.BlowupLiftImage.centre_ne_zero_of_inactive
+#print DiamondIntegral.Section7.BlowupLiftImage.centre_ne_zero_of_inactive
+#print axioms DiamondIntegral.Section7.BlowupLiftImage.centre_ne_zero_of_inactive
+#check @DiamondIntegral.Section7.BlowupLiftImage.vfValue_centre_of_inactive
+#print DiamondIntegral.Section7.BlowupLiftImage.vfValue_centre_of_inactive
+#print axioms DiamondIntegral.Section7.BlowupLiftImage.vfValue_centre_of_inactive
+#check @DiamondIntegral.Section7.BlowupLiftImage.tag_mem
+#print DiamondIntegral.Section7.BlowupLiftImage.tag_mem
+#print axioms DiamondIntegral.Section7.BlowupLiftImage.tag_mem
+#check @DiamondIntegral.Section7.BlowupLiftImage.extFocus
+#print DiamondIntegral.Section7.BlowupLiftImage.extFocus
+#print axioms DiamondIntegral.Section7.BlowupLiftImage.extFocus
+#check @DiamondIntegral.Section7.BlowupLiftImage.extEndpoint
+#print DiamondIntegral.Section7.BlowupLiftImage.extEndpoint
+#print axioms DiamondIntegral.Section7.BlowupLiftImage.extEndpoint
+#check @DiamondIntegral.Section7.BlowupLiftImage.core_eq
+#print DiamondIntegral.Section7.BlowupLiftImage.core_eq
+#print axioms DiamondIntegral.Section7.BlowupLiftImage.core_eq
+#check @DiamondIntegral.Section7.BlowupLiftImage.point_eq
+#print DiamondIntegral.Section7.BlowupLiftImage.point_eq
+#print axioms DiamondIntegral.Section7.BlowupLiftImage.point_eq
+#check @DiamondIntegral.Section7.BlowupLiftImage.rvValues_regLabels
+#print DiamondIntegral.Section7.BlowupLiftImage.rvValues_regLabels
+#print axioms DiamondIntegral.Section7.BlowupLiftImage.rvValues_regLabels
+#check @DiamondIntegral.Section7.BlowupLiftImage.branchTag_true_val
+#print DiamondIntegral.Section7.BlowupLiftImage.branchTag_true_val
+#print axioms DiamondIntegral.Section7.BlowupLiftImage.branchTag_true_val
+#check @DiamondIntegral.Section7.BlowupLiftImage.branchTag_false_val
+#print DiamondIntegral.Section7.BlowupLiftImage.branchTag_false_val
+#print axioms DiamondIntegral.Section7.BlowupLiftImage.branchTag_false_val
+#check @DiamondIntegral.Section7.BlowupLiftImage.vfValue_lt_infinity
+#print DiamondIntegral.Section7.BlowupLiftImage.vfValue_lt_infinity
+#print axioms DiamondIntegral.Section7.BlowupLiftImage.vfValue_lt_infinity
+#check @DiamondIntegral.Section7.BlowupLiftImage.point_labels_mem
+#print DiamondIntegral.Section7.BlowupLiftImage.point_labels_mem
+#print axioms DiamondIntegral.Section7.BlowupLiftImage.point_labels_mem
+#check @DiamondIntegral.Section7.BlowupLiftImage.Vreg
+#print DiamondIntegral.Section7.BlowupLiftImage.Vreg
+#print axioms DiamondIntegral.Section7.BlowupLiftImage.Vreg
+#check @DiamondIntegral.Section7.BlowupLiftImage.mem_Vreg_of_point
+#print DiamondIntegral.Section7.BlowupLiftImage.mem_Vreg_of_point
+#print axioms DiamondIntegral.Section7.BlowupLiftImage.mem_Vreg_of_point
+#check @DiamondIntegral.Section7.BlowupLiftImage.mem_Vreg_iff
+#print DiamondIntegral.Section7.BlowupLiftImage.mem_Vreg_iff
+#print axioms DiamondIntegral.Section7.BlowupLiftImage.mem_Vreg_iff
 #check @DiamondIntegral.Section7.BlowupResults.lemma_7_5
 #print DiamondIntegral.Section7.BlowupResults.lemma_7_5
 #print axioms DiamondIntegral.Section7.BlowupResults.lemma_7_5
