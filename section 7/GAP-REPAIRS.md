@@ -24,7 +24,7 @@ formalization convention. No manuscript edit has been made for them.
    labels and will convert there.
 4. **Named aperture bound.** Section 4's `Aperture.bound` is a Γ value without a
    definability requirement. For doubly bounded objects a named bound exists by
-   Remark 7.4; that converse is to be formalized.
+   Remark 7.4 (`Remark74.remark_7_4_named`).
 5. **Lemma 7.23.** "By compactness" is not needed: restricting the first two
    stages of a standard contraction to the fibres over `A_E` already gives the
    fibrewise standard contractions.

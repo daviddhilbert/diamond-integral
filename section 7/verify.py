@@ -74,4 +74,4 @@ status = {
     'unfinished': ['Lemma 7.10 multiplicative part (products) and Remarks 7.3/7.4 statements.', 'Object-level converse of BlowupResults: a class-level length-one blowup is realised by literal disjoint subobjects (Definition 7.2 wording).', 'Lemmas 7.11-7.23, Proposition 7.24, Remark 7.25, Theorem 7.26 with J_var, Corollary 7.27 and Remark 7.28 remain to be formalized.']
 }
 (RECORD/'status.json').write_text(json.dumps(status,indent=2)+'\n')
-print(f'PASS: {len(declarations)} full declaration types and axiom records; Section 7 results 7.5-7.10 (additive) audited; later results pending.')
+print(f'PASS: {len(declarations)} full declaration types and axiom records; Section 7 results 7.4-7.10 (7.10 additive) audited; later results pending.')

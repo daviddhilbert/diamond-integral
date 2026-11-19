@@ -852,6 +852,15 @@ import «section 7».Section
 #check @DiamondIntegral.Section7.RVMaps.le_definable
 #print DiamondIntegral.Section7.RVMaps.le_definable
 #print axioms DiamondIntegral.Section7.RVMaps.le_definable
+#check @DiamondIntegral.Section7.Remark74.remark_7_4_bounded
+#print DiamondIntegral.Section7.Remark74.remark_7_4_bounded
+#print axioms DiamondIntegral.Section7.Remark74.remark_7_4_bounded
+#check @DiamondIntegral.Section7.Remark74.aperture_value_family_definable
+#print DiamondIntegral.Section7.Remark74.aperture_value_family_definable
+#print axioms DiamondIntegral.Section7.Remark74.aperture_value_family_definable
+#check @DiamondIntegral.Section7.Remark74.remark_7_4_named
+#print DiamondIntegral.Section7.Remark74.remark_7_4_named
+#print axioms DiamondIntegral.Section7.Remark74.remark_7_4_named
 #check @DiamondIntegral.Section7.StrictCharts.minusOne
 #print DiamondIntegral.Section7.StrictCharts.minusOne
 #print axioms DiamondIntegral.Section7.StrictCharts.minusOne

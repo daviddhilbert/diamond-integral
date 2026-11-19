@@ -12,7 +12,7 @@ formalized.
 | Notation 7.1 | `punc:RVd` | done (as data) | Section 4 `AnnularBlowup.shellPoints`, `endpointPoints` |
 | Definition 7.2 | `defn:blowup:coa` | done on classes | Section 4 `RelativeAnnularGenerators.AnnularDatum` (data, `annularObject` = U^{τ,j}); `ElementaryBlowups.datumRes`/`datumCres`, `cls_annular_split` (restriction); `ElementaryBlowups.ElementaryStep`, `Step` (length one); `BlowupCongruence.BlowupSteps` (length n) |
 | Remark 7.3 | — | pending | approved scope: dimension claim only |
-| Remark 7.4 | `db:blowup:bound` | partial | first claim: Section 4 `shell_domain_bounded`, `endpoint_domain_bounded`; named-bound converse pending |
+| Remark 7.4 | `db:blowup:bound` | done | `Remark74.remark_7_4_bounded`; `Remark74.remark_7_4_named` (a bound named over the base, via Section 6 `bounded_gamma_rows_named_bound`) |
 | Lemma 7.5 | `elementary:blowups:preserves:iso:vol` | done | `BlowupResults.lemma_7_5`; construction in `ElementaryComparison` (`ratioAperture`, `secondDatum`, `shallowIso`, `deepIso`, `endpointIso`, `step_of_le`, `elementaryDiamond`) |
 | Corollary 7.6 | `eblowup:same:loci:iso` | done | `BlowupResults.corollary_7_6` (`ElementaryBlowups.step_diamond`, via matrix refinement `Refinement.refine_matrix`) |
 | Lemma 7.7 | `blowup:equi:class:coa` | done | `BlowupResults.lemma_7_7` |

@@ -2,7 +2,7 @@
   "status": "PASS",
   "scope": "Section 7 formalization in progress. Complete numbered results, on isomorphism classes of mu RV^db[1+k] over an arbitrary parameter base and with no input beyond the ACVF model: Definition 7.2 (elementary annular blowups with bounded variable apertures = Section 4 AnnularDatum/relative annular objects; restriction to definable pieces; blowups of length one and chains, on classes), Lemma 7.5 (BlowupResults.lemma_7_5), Corollary 7.6, Lemma 7.7, Corollary 7.8, Definition 7.9 (MuIsp) and the additive part of Lemma 7.10 (an AddCon). Supporting: the commutative monoid of isomorphism classes with refinement, and the mu VF^diamond chart lifts of Definitions 6.34-6.37.",
   "lean": "Lean (version 4.35.0, arm64-apple-darwin24.6.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
-  "repository_revision": "8e53143d836cf2d0d1f8d66ebf28e18e42709436",
+  "repository_revision": "7ad821d1e3c263b722e1ed2b5d035f4e69f35026",
   "packages": {
     "fubini_theorems": "c94e50c50a950ab485277a9d94625a4417789e06",
     "integration_in_acvf": "ab4c0e8b15e1e21b0b4fce57eed764be76020e06",
@@ -304,6 +304,9 @@
     "DiamondIntegral.Section7.RVMaps.lineChart_nonzero",
     "DiamondIntegral.Section7.RVMaps.lt_definable",
     "DiamondIntegral.Section7.RVMaps.le_definable",
+    "DiamondIntegral.Section7.Remark74.remark_7_4_bounded",
+    "DiamondIntegral.Section7.Remark74.aperture_value_family_definable",
+    "DiamondIntegral.Section7.Remark74.remark_7_4_named",
     "DiamondIntegral.Section7.StrictCharts.minusOne",
     "DiamondIntegral.Section7.StrictCharts.minusOne_rv",
     "DiamondIntegral.Section7.StrictCharts.minusOne_ne_zero",
@@ -365,10 +368,11 @@
     "section 7/MeasuredRVBounds.lean": "16e39925abc56d3f74585be636cf68b20f37e5cd224fd6cf7a3144f9f9ce9622",
     "section 7/MeasuredRVBridge.lean": "43fecaafdf24ea62c3e304cbd688a7a266d1ed00c745614ee941bc6c13260209",
     "section 7/RVMaps.lean": "6ba0ffb657d3ed3a45523ba46e5e18a5d2917527fce58d72fbf0078cf96553d7",
-    "section 7/Section.lean": "80f5327e08ad95df8bc4a8a3688410eff2319bd7a9dadd384dac55fdb8e6ea55",
+    "section 7/Remark74.lean": "2d3faf226148c49a4aa24dc20b398f13fb4d85dee3dd2e8ac1e489eadc8d9f4b",
+    "section 7/Section.lean": "e040b44db95e580ee05407590e4bee8d792a02cc7593806041102cc363ae0905",
     "section 7/StrictCharts.lean": "da9c25f231a08463d123acf8c91c48be8b167a89db2c4314f14f19fc3142ac2d"
   },
-  "verification_script_sha256": "268585d6b2231956b6e5054c3fbb207b40edd47925f3d8cf8529ccc053b1ed65",
+  "verification_script_sha256": "bef9419a594dedf9f5809e95cde262a5d45005685e3bdf99c9003230b789acba",
   "unfinished": [
     "Lemma 7.10 multiplicative part (products) and Remarks 7.3/7.4 statements.",
     "Object-level converse of BlowupResults: a class-level length-one blowup is realised by literal disjoint subobjects (Definition 7.2 wording).",
