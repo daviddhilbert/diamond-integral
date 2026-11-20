@@ -84,6 +84,12 @@ arbitrary parameter base and take no input beyond the ACVF model.
 - 7.14 scope (2026-11-19): its upstream analog for ordinary blowups is about
   25k lines of uniformization. The author was asked whether to build it in
   full now or to state it as an explicit replaceable input first.
+- **Temporary input: Lemma 7.14.** By the author's decision of 2026-11-19
+  ("Input + parallel build"), 7.14 is stated as the explicit replaceable input
+  `FiberwiseInput.Lemma714 M G` (fibres via `FibreObjects.fibreObject` over
+  `adjoin T a`, head-start standard contractions, `IspRel`). Results that use
+  it take `(h714 : Lemma714 M G)` as a hypothesis. A separate session proves it
+  in `section 7/Lemma714*.lean`; this file is kept stable.
 - Deferred: the product part of Lemma 7.10. It needs a graded product on
   Section 7's class monoid (products distributing over tagged coproducts, and
   products of annular data). Only the ring form of 7.26 uses it, where the

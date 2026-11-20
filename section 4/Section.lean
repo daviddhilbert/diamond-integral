@@ -798,6 +798,7 @@ import «section 4».FieldAffineLocalizationNontrivial
 import «section 4».RESAffineSeparation
 
 import «section 4».RVT001NormalizedDistinct
+import «section 4».RVT001BoundedFactor
 
 import «section 4».GammaRationalAffineContinuity
 

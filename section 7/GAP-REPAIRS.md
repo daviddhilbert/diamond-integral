@@ -67,3 +67,8 @@ formalization convention. No manuscript edit has been made for them.
    restates 6.38 over support data, and `KernelBaseChange.adjoin` with
    `adjoin_support` supplies such data for `S⟨a⟩`. No manuscript change is
    needed.
+10. **Lemma 7.14, formal reading.** `[(A'_a, ω')]_{≤k}` is read through
+    head-start labels π (degree-k volume u ↦ u ∘ π), as in Section 6's head
+    starts and Remark 6.28; the selected labels are finite-to-one and nonzero
+    on the fibres. In degree 0, μIsp^db is equality of classes (there are no
+    blowups). The base is a substructure with support data (item 9).
