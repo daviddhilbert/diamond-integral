@@ -33,6 +33,7 @@ import «section 7».KernelBaseChange
 import «section 7».BaseExtension
 import «section 7».FibreObjects
 import «section 7».FiberwiseInput
+import «section 7».FirstStage
 import «section 7».Remark728
 import «section 7».MeasuredRVBridge
 import «section 7».MeasuredRVBounds
