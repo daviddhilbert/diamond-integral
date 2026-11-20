@@ -98,9 +98,23 @@ degree, and it gives a measured isomorphism (the transported form is
 inclusion of the paper's ring into Lean's is a ring isomorphism (it sends each
 chart class to its own class). Lean proves the isomorphism and its value on
 classes (`equivalence`, `equivalence_objectClass`,
-`equivalence_symm_objectClass`). Compatibility with the grading, P_γ, J_var
-and Ẽ_b follows because these are defined by the same classes, but it is not
-stated separately.
+`equivalence_symm_objectClass`). Compatibility with the grading, P_γ and J_var
+is stated and proved in `RVStrictBoundedCompatibility.lean` (November 19):
+- grading: `strictPiece B n` (spanned by classes of ∞-free degree-n charts)
+  maps exactly onto `RVBoundedGrading.gradedPiece B n` (`map_strictPiece`,
+  `comap_gradedPiece`; the inclusion ⊇ uses the coaction's degree-n
+  coefficient and additive generation of the strict ring);
+- P_γ: the annulus and point charts have no ∞ coordinate
+  (`annulus_infinityFree`, `point_infinityFree`), and the strict P_γ built
+  from them maps to `RVRadiusIdeal.pGamma` (`equivalence_strictPGamma`); the
+  strict radius ideal maps onto `RVRadiusIdeal.radiusIdeal`
+  (`map_strictRadiusIdeal`);
+- J_var: the transported ideal `strictManuscriptIdeal` maps onto
+  `manuscriptIdeal B` (`map_strictManuscriptIdeal`), contains the strict
+  `(P_Γ)` (`strictRadiusIdeal_le`), and the quotients are isomorphic
+  compatibly with classes (`quotientEquiv`, `quotientEquiv_objectClass`).
+  The strict J_var is defined by transport, not by a separate list of ∞-free
+  annular data; Ẽ_b on the strict side is Ẽ_b composed with the isomorphism.
 
 Lean: `RVStrictBoundedComparison.lean` (proved). It contains:
 - `InfinityFree` and `StrictChart`: bounded charts with no `iRVZero`
@@ -160,10 +174,15 @@ from RV quantifier elimination with no hypotheses.
 
 - Lemma 4.18 factorization clause with the Γ input discharged:
   `Section4LinkedRemarks.manuscript_section4_compatibility_discharged`.
-- Still linkage-only (minor): Remark 4.8's alternative descent
-  (`RVT001AlternativeDescent.evaluation`) and the unnormalized ordinary range
-  clause take the T001 presentation as a parameter; they can be instantiated
-  with `Section3T001Integration` as done for the other remarks.
+- Remark 4.8's alternative descent (`RVT001AlternativeDescent.evaluation`)
+  and the unnormalized ordinary range clauses: instantiated November 19 in
+  `Section4LinkedRemarks` with `Section3T001Integration.measured` /
+  `.ordinary` and the discharged Γ input (`alternativeEvaluation`,
+  `alternativeGradedEvaluation`, `alternativeEvaluation_res`, `_p`, `_h`,
+  `ordinaryEvaluation_surjective`, `ordinaryBoundedEvaluation_surjective`,
+  `ordinaryRadiusEvaluation_surjective`, `boundedRaw_surjective`,
+  `homogeneousRaw_surjective`, `homogeneousRetraction_surjective`). They take
+  no T001 presentation.
 - Definition 4.1's coproduct identification: resolved November 19 (last
   section). Remark 4.2's multivariate rational-affine input was resolved on
   November 19 (next section).

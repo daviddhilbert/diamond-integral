@@ -81815,6 +81815,184 @@ theorem DiamondIntegral.Section4.Section4LinkedRemarks.manuscript_section4_compa
 'DiamondIntegral.Section4.Section4LinkedRemarks.manuscript_section4_compatibility_discharged' depends on axioms: [propext,
  Classical.choice.{u},
  Quot.sound.{u}]
+@[reducible] def DiamondIntegral.Section4.Section4LinkedRemarks.alternativeEvaluation : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      CanonicalStructure.IsCanonical →
+        FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00 →
+          {κ : Cardinal.{0}} →
+            LE.le.{1} Cardinal.aleph0.{0} κ →
+              SpecialTransformations.Section3.Saturated M κ →
+                (B : SpecialTransformations.Section3.GammaParameters.Base) →
+                  LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ →
+                    LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) κ →
+                      DiamondIntegral.Section2.NontrivialDefinableGamma B →
+                        RingHom.{0, 0} (DiamondIntegral.Section4.RVChartRing.Ring B)
+                          (DiamondIntegral.Section4.RESAlternativeReduction.Ring B) :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] hc h00 {κ} hκ hs B hr
+    hγ hΓ =>
+  DiamondIntegral.Section4.RVT001AlternativeDescent.evaluation h00 ⋯ hκ hs B hr hγ hΓ ⋯
+'DiamondIntegral.Section4.Section4LinkedRemarks.alternativeEvaluation' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@[reducible] def DiamondIntegral.Section4.Section4LinkedRemarks.alternativeGradedEvaluation : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      CanonicalStructure.IsCanonical →
+        FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00 →
+          {κ : Cardinal.{0}} →
+            LE.le.{1} Cardinal.aleph0.{0} κ →
+              SpecialTransformations.Section3.Saturated M κ →
+                (B : SpecialTransformations.Section3.GammaParameters.Base) →
+                  LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ →
+                    LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) κ →
+                      DiamondIntegral.Section2.NontrivialDefinableGamma B →
+                        GradedRingHom.{0, 0, 0, 0, 0} (DiamondIntegral.Section4.RVGrading.gradedPiece B)
+                          (DiamondIntegral.Section4.RESAlternativeReduction.piece B) :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] hc h00 {κ} hκ hs B hr
+    hγ hΓ =>
+  DiamondIntegral.Section4.RVT001AlternativeDescent.gradedEvaluation h00 ⋯ hκ hs B hr hγ hΓ ⋯
+'DiamondIntegral.Section4.Section4LinkedRemarks.alternativeGradedEvaluation' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.Section4LinkedRemarks.alternativeEvaluation_res : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical)
+  (h00 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00)
+  {κ : Cardinal.{0}} (hκ : LE.le.{1} Cardinal.aleph0.{0} κ) (hs : SpecialTransformations.Section3.Saturated M κ)
+  (B : SpecialTransformations.Section3.GammaParameters.Base) (hr : LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ)
+  (hγ : LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) κ) (hΓ : DiamondIntegral.Section2.NontrivialDefinableGamma B)
+  (x : DiamondIntegral.Section4.RESChartRing.Ring B),
+  Eq.{1}
+    ((DiamondIntegral.Section4.Section4LinkedRemarks.alternativeEvaluation hc h00 hκ hs B hr hγ hΓ)
+      ((DiamondIntegral.Section4.RVChartMaps.ofRES B) x))
+    ((DiamondIntegral.Section4.RESAlternativeReduction.fromMeasured B) x) :=
+⋯
+'DiamondIntegral.Section4.Section4LinkedRemarks.alternativeEvaluation_res' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.Section4LinkedRemarks.alternativeEvaluation_p : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical)
+  (h00 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00)
+  {κ : Cardinal.{0}} (hκ : LE.le.{1} Cardinal.aleph0.{0} κ) (hs : SpecialTransformations.Section3.Saturated M κ)
+  (B : SpecialTransformations.Section3.GammaParameters.Base) (hr : LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ)
+  (hγ : LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) κ) (hΓ : DiamondIntegral.Section2.NontrivialDefinableGamma B),
+  Eq.{1}
+    ((DiamondIntegral.Section4.Section4LinkedRemarks.alternativeEvaluation hc h00 hκ hs B hr hγ hΓ)
+      (DiamondIntegral.Section4.RVMeasuredSpecialClasses.pClass B))
+    0 :=
+⋯
+'DiamondIntegral.Section4.Section4LinkedRemarks.alternativeEvaluation_p' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.Section4LinkedRemarks.alternativeEvaluation_h : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical)
+  (h00 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00)
+  {κ : Cardinal.{0}} (hκ : LE.le.{1} Cardinal.aleph0.{0} κ) (hs : SpecialTransformations.Section3.Saturated M κ)
+  (B : SpecialTransformations.Section3.GammaParameters.Base) (hr : LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ)
+  (hγ : LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) κ) (hΓ : DiamondIntegral.Section2.NontrivialDefinableGamma B),
+  Eq.{1}
+    ((DiamondIntegral.Section4.Section4LinkedRemarks.alternativeEvaluation hc h00 hκ hs B hr hγ hΓ)
+      (DiamondIntegral.Section4.RVMeasuredSpecialClasses.hClass B))
+    (DiamondIntegral.Section4.RESAlternativeReduction.pointClass B) :=
+⋯
+'DiamondIntegral.Section4.Section4LinkedRemarks.alternativeEvaluation_h' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.Section4LinkedRemarks.ordinaryEvaluation_surjective : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical)
+  (h00 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00)
+  {κ : Cardinal.{0}} (hκ : LE.le.{1} Cardinal.aleph0.{0} κ) (hs : SpecialTransformations.Section3.Saturated M κ)
+  (B : SpecialTransformations.Section3.GammaParameters.Base) (hr : LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ)
+  (hγ : LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) κ) (hΓ : DiamondIntegral.Section2.NontrivialDefinableGamma B)
+  (kind : DiamondIntegral.Section4.EulerKind),
+  Function.Surjective.{1, 1}
+    ⇑(DiamondIntegral.Section4.RVT001OrdinaryDescent.evaluation h00 ⋯ hκ hs B hr hγ hΓ ⋯ kind) :=
+⋯
+'DiamondIntegral.Section4.Section4LinkedRemarks.ordinaryEvaluation_surjective' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.Section4LinkedRemarks.ordinaryBoundedEvaluation_surjective : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical)
+  (h00 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00)
+  {κ : Cardinal.{0}} (hκ : LE.le.{1} Cardinal.aleph0.{0} κ) (hs : SpecialTransformations.Section3.Saturated M κ)
+  (B : SpecialTransformations.Section3.GammaParameters.Base) (hr : LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ)
+  (hγ : LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) κ) (hΓ : DiamondIntegral.Section2.NontrivialDefinableGamma B)
+  (kind : DiamondIntegral.Section4.EulerKind),
+  Function.Surjective.{1, 1}
+    ⇑(DiamondIntegral.Section4.RVT001OrdinaryDescent.boundedEvaluation h00 ⋯ hκ hs B hr hγ hΓ ⋯ kind) :=
+⋯
+'DiamondIntegral.Section4.Section4LinkedRemarks.ordinaryBoundedEvaluation_surjective' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.Section4LinkedRemarks.ordinaryRadiusEvaluation_surjective : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical)
+  (h00 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00)
+  {κ : Cardinal.{0}} (hκ : LE.le.{1} Cardinal.aleph0.{0} κ) (hs : SpecialTransformations.Section3.Saturated M κ)
+  (B : SpecialTransformations.Section3.GammaParameters.Base) (hr : LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ)
+  (hγ : LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) κ) (hΓ : DiamondIntegral.Section2.NontrivialDefinableGamma B)
+  (kind : DiamondIntegral.Section4.EulerKind),
+  Function.Surjective.{1, 1}
+    ⇑(DiamondIntegral.Section4.RVT001OrdinaryDescent.radiusEvaluation h00 ⋯ hκ hs B hr hγ hΓ ⋯ kind) :=
+⋯
+'DiamondIntegral.Section4.Section4LinkedRemarks.ordinaryRadiusEvaluation_surjective' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.Section4LinkedRemarks.boundedRaw_surjective : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical)
+  (h00 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00)
+  {κ : Cardinal.{0}} (hκ : LE.le.{1} Cardinal.aleph0.{0} κ) (hs : SpecialTransformations.Section3.Saturated M κ)
+  (B : SpecialTransformations.Section3.GammaParameters.Base) (hr : LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ)
+  (hγ : LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) κ) (hΓ : DiamondIntegral.Section2.NontrivialDefinableGamma B),
+  Function.Surjective.{1, 1}
+    ⇑(DiamondIntegral.Section4.RVT001OrdinaryNormalization.boundedRaw h00 ⋯ hκ hs B hr hγ hΓ ⋯) :=
+⋯
+'DiamondIntegral.Section4.Section4LinkedRemarks.boundedRaw_surjective' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.Section4LinkedRemarks.homogeneousRaw_surjective : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical)
+  (h00 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00)
+  {κ : Cardinal.{0}} (hκ : LE.le.{1} Cardinal.aleph0.{0} κ) (hs : SpecialTransformations.Section3.Saturated M κ)
+  (B : SpecialTransformations.Section3.GammaParameters.Base) (hr : LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ)
+  (hγ : LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) κ) (hΓ : DiamondIntegral.Section2.NontrivialDefinableGamma B),
+  Function.Surjective.{1, 1}
+    ⇑(DiamondIntegral.Section4.RVT001OrdinaryNormalization.homogeneousRaw h00 ⋯ hκ hs B hr hγ hΓ ⋯) :=
+⋯
+'DiamondIntegral.Section4.Section4LinkedRemarks.homogeneousRaw_surjective' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.Section4LinkedRemarks.homogeneousRetraction_surjective : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical)
+  (h00 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00)
+  {κ : Cardinal.{0}} (hκ : LE.le.{1} Cardinal.aleph0.{0} κ) (hs : SpecialTransformations.Section3.Saturated M κ)
+  (B : SpecialTransformations.Section3.GammaParameters.Base) (hr : LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ)
+  (hγ : LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) κ) (hΓ : DiamondIntegral.Section2.NontrivialDefinableGamma B),
+  Function.Surjective.{1, 1}
+    ⇑(DiamondIntegral.Section4.RVT001OrdinaryNormalization.homogeneous h00 ⋯ hκ hs B hr hγ hΓ ⋯) :=
+⋯
+'DiamondIntegral.Section4.Section4LinkedRemarks.homogeneousRetraction_surjective' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
 def DiamondIntegral.Section4.GammaQEOutputSlopes.perturbAt : {M : Type} →
   [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
     [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
@@ -83663,6 +83841,337 @@ theorem DiamondIntegral.Section4.RESDimensionFreeCategory.definition_4_1_identif
             ∃ k a, Eq.{1} (DiamondIntegral.Section4.RESDimensionFreeCategory.ofRES a) U :=
 ⋯
 'DiamondIntegral.Section4.RESDimensionFreeCategory.definition_4_1_identification' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.RVStrictBoundedCompatibility.presentation : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (B : SpecialTransformations.Section3.GammaParameters.Base) →
+        DiamondIntegral.Section4.ObjectClassAdditiveGeneration.Presentation.{0, 0}
+          (DiamondIntegral.Section4.RVStrictBoundedComparison.Generator B)
+          (DiamondIntegral.Section4.RVStrictBoundedComparison.StrictRing B) :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] B =>
+  DiamondIntegral.Section4.ObjectClassAdditiveGeneration.Presentation.mk.{0, 0}
+    (fun a => DiamondIntegral.Section4.RVStrictBoundedComparison.objectClass (Sigma.snd.{0, 0} a))
+    (Sigma.mk.{0, 0} 0 (DiamondIntegral.Section4.RVStrictBoundedComparison.unit B)) ⋯
+    (fun a b =>
+      Sigma.mk.{0, 0} (HAdd.hAdd.{0, 0, 0} (Sigma.fst.{0, 0} b) (Sigma.fst.{0, 0} a))
+        (DiamondIntegral.Section4.RVStrictBoundedComparison.product (Sigma.snd.{0, 0} a) (Sigma.snd.{0, 0} b)))
+    ⋯ (Ideal.Quotient.mk.{0} (DiamondIntegral.Section4.RVStrictBoundedComparison.relationIdeal B)) ⋯ ⋯
+'DiamondIntegral.Section4.RVStrictBoundedCompatibility.presentation' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictPiece : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (B : SpecialTransformations.Section3.GammaParameters.Base) →
+        ℕ → AddSubgroup.{0} (DiamondIntegral.Section4.RVStrictBoundedComparison.StrictRing B) :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] B n =>
+  AddSubgroup.closure.{0}
+    (Set.ofPred.{0} fun x => ∃ a, Eq.{1} x (DiamondIntegral.Section4.RVStrictBoundedComparison.objectClass a))
+'DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictPiece' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RVStrictBoundedCompatibility.objectClass_mem_strictPiece : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {n : ℕ}
+  (a : DiamondIntegral.Section4.RVStrictBoundedComparison.StrictChart B n),
+  Membership.mem.{0, 0} (DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictPiece B n)
+    (DiamondIntegral.Section4.RVStrictBoundedComparison.objectClass a) :=
+⋯
+'DiamondIntegral.Section4.RVStrictBoundedCompatibility.objectClass_mem_strictPiece' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.RVStrictBoundedCompatibility.projection : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (B : SpecialTransformations.Section3.GammaParameters.Base) →
+        ℕ →
+          AddMonoidHom.{0, 0} (DiamondIntegral.Section4.RVStrictBoundedComparison.StrictRing B)
+            (DiamondIntegral.Section4.RVStrictBoundedComparison.StrictRing B) :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] B n =>
+  AddMonoidHom.mk'.{0, 0}
+    (fun x =>
+      (RingEquiv.symm.{0, 0} (DiamondIntegral.Section4.RVStrictBoundedComparison.equivalence B))
+        ((Polynomial.coeff.{0}
+            ((DiamondIntegral.Section4.RVBoundedGrading.coaction B)
+              ((DiamondIntegral.Section4.RVStrictBoundedComparison.equivalence B) x)))
+          n))
+    ⋯
+'DiamondIntegral.Section4.RVStrictBoundedCompatibility.projection' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RVStrictBoundedCompatibility.projection_objectClass : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} (n : ℕ) {k : ℕ}
+  (a : DiamondIntegral.Section4.RVStrictBoundedComparison.StrictChart B k),
+  Eq.{1}
+    ((DiamondIntegral.Section4.RVStrictBoundedCompatibility.projection B n)
+      (DiamondIntegral.Section4.RVStrictBoundedComparison.objectClass a))
+    (ite.{1} (Eq.{1} k n) (DiamondIntegral.Section4.RVStrictBoundedComparison.objectClass a) 0) :=
+⋯
+'DiamondIntegral.Section4.RVStrictBoundedCompatibility.projection_objectClass' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RVStrictBoundedCompatibility.projection_mem : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base) (n : ℕ)
+  (x : DiamondIntegral.Section4.RVStrictBoundedComparison.StrictRing B),
+  Membership.mem.{0, 0} (DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictPiece B n)
+    ((DiamondIntegral.Section4.RVStrictBoundedCompatibility.projection B n) x) :=
+⋯
+'DiamondIntegral.Section4.RVStrictBoundedCompatibility.projection_mem' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RVStrictBoundedCompatibility.map_strictPiece : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base) (n : ℕ),
+  Eq.{1}
+    (AddSubgroup.map.{0, 0}
+      (AddEquiv.toAddMonoidHom.{0, 0}
+        (RingEquiv.toAddEquiv.{0, 0} (DiamondIntegral.Section4.RVStrictBoundedComparison.equivalence B)))
+      (DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictPiece B n))
+    (DiamondIntegral.Section4.RVBoundedGrading.gradedPiece B n) :=
+⋯
+'DiamondIntegral.Section4.RVStrictBoundedCompatibility.map_strictPiece' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RVStrictBoundedCompatibility.comap_gradedPiece : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base) (n : ℕ),
+  Eq.{1}
+    (AddSubgroup.comap.{0, 0}
+      (AddEquiv.toAddMonoidHom.{0, 0}
+        (RingEquiv.toAddEquiv.{0, 0} (DiamondIntegral.Section4.RVStrictBoundedComparison.equivalence B)))
+      (DiamondIntegral.Section4.RVBoundedGrading.gradedPiece B n))
+    (DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictPiece B n) :=
+⋯
+'DiamondIntegral.Section4.RVStrictBoundedCompatibility.comap_gradedPiece' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RVStrictBoundedCompatibility.annulus_infinityFree : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base) (γ : SpecialTransformations.Section3.Values.Gamma)
+  (hγ : Membership.mem.{0, 0} (DiamondIntegral.Section4.GammaRVLifts.admissibleRadii B) γ),
+  DiamondIntegral.Section4.RVStrictBoundedComparison.InfinityFree
+    (DiamondIntegral.Section4.RVRadiusIdeal.boundedAnnulus B γ hγ).toChart :=
+⋯
+'DiamondIntegral.Section4.RVStrictBoundedCompatibility.annulus_infinityFree' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RVStrictBoundedCompatibility.point_infinityFree : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base) (t : SpecialTransformations.Section3.GammaParameters.Code)
+  (ht :
+    SpecialTransformations.Section3.GammaParameters.DefinableClosureAtBase B
+      SpecialTransformations.Milestone0.SortTag.rv (SpecialTransformations.Section3.GammaParameters.raw t)),
+  DiamondIntegral.Section4.RVStrictBoundedComparison.InfinityFree
+    (DiamondIntegral.Section4.RVRadiusIdeal.boundedPoint B t ht).toChart :=
+⋯
+'DiamondIntegral.Section4.RVStrictBoundedCompatibility.point_infinityFree' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictAnnulus : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (B : SpecialTransformations.Section3.GammaParameters.Base) →
+        (γ : SpecialTransformations.Section3.Values.Gamma) →
+          Membership.mem.{0, 0} (DiamondIntegral.Section4.GammaRVLifts.admissibleRadii B) γ →
+            DiamondIntegral.Section4.RVStrictBoundedComparison.StrictChart B 1 :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] B γ hγ =>
+  { toBoundedChart := DiamondIntegral.Section4.RVRadiusIdeal.boundedAnnulus B γ hγ, infinity_free := ⋯ }
+'DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictAnnulus' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictPoint : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (B : SpecialTransformations.Section3.GammaParameters.Base) →
+        (t : SpecialTransformations.Section3.GammaParameters.Code) →
+          SpecialTransformations.Section3.GammaParameters.DefinableClosureAtBase B
+              SpecialTransformations.Milestone0.SortTag.rv (SpecialTransformations.Section3.GammaParameters.raw t) →
+            DiamondIntegral.Section4.RVStrictBoundedComparison.StrictChart B 1 :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] B t ht =>
+  { toBoundedChart := DiamondIntegral.Section4.RVRadiusIdeal.boundedPoint B t ht, infinity_free := ⋯ }
+'DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictPoint' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictPGamma : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (B : SpecialTransformations.Section3.GammaParameters.Base) →
+        (γ : SpecialTransformations.Section3.Values.Gamma) →
+          Membership.mem.{0, 0} (DiamondIntegral.Section4.GammaRVLifts.admissibleRadii B) γ →
+            DiamondIntegral.Section4.RVRadiusGenerators.RadiusLift B γ →
+              DiamondIntegral.Section4.RVStrictBoundedComparison.StrictRing B :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] B γ hγ t =>
+  HSub.hSub.{0, 0, 0}
+    (HAdd.hAdd.{0, 0, 0}
+      (DiamondIntegral.Section4.RVStrictBoundedComparison.objectClass
+        (DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictAnnulus B γ hγ))
+      (DiamondIntegral.Section4.RVStrictBoundedComparison.objectClass
+        (DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictPoint B t.point ⋯)))
+    (DiamondIntegral.Section4.RVStrictBoundedComparison.objectClass
+      (DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictPoint B
+        DiamondIntegral.Section4.RVRadiusGenerators.oneCode ⋯))
+'DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictPGamma' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RVStrictBoundedCompatibility.equivalence_strictPGamma : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base) (γ : SpecialTransformations.Section3.Values.Gamma)
+  (hγ : Membership.mem.{0, 0} (DiamondIntegral.Section4.GammaRVLifts.admissibleRadii B) γ)
+  (t : DiamondIntegral.Section4.RVRadiusGenerators.RadiusLift B γ),
+  Eq.{1}
+    ((DiamondIntegral.Section4.RVStrictBoundedComparison.equivalence B)
+      (DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictPGamma B γ hγ t))
+    (DiamondIntegral.Section4.RVRadiusIdeal.pGamma B γ hγ) :=
+⋯
+'DiamondIntegral.Section4.RVStrictBoundedCompatibility.equivalence_strictPGamma' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictPGamma_mem_strictPiece : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base) (γ : SpecialTransformations.Section3.Values.Gamma)
+  (hγ : Membership.mem.{0, 0} (DiamondIntegral.Section4.GammaRVLifts.admissibleRadii B) γ)
+  (t : DiamondIntegral.Section4.RVRadiusGenerators.RadiusLift B γ),
+  Membership.mem.{0, 0} (DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictPiece B 1)
+    (DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictPGamma B γ hγ t) :=
+⋯
+'DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictPGamma_mem_strictPiece' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictRadiusIdeal : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (B : SpecialTransformations.Section3.GammaParameters.Base) →
+        Ideal.{0} (DiamondIntegral.Section4.RVStrictBoundedComparison.StrictRing B) :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] B =>
+  Ideal.span.{0}
+    (Set.ofPred.{0} fun x =>
+      ∃ γ,
+        ∃ (hγ : Membership.mem.{0, 0} (DiamondIntegral.Section4.GammaRVLifts.admissibleRadii B) γ),
+          ∃ t, Eq.{1} x (DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictPGamma B γ hγ t))
+'DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictRadiusIdeal' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RVStrictBoundedCompatibility.map_strictRadiusIdeal : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base),
+  Eq.{1}
+    (Ideal.map.{0, 0, 0} (DiamondIntegral.Section4.RVStrictBoundedComparison.equivalence B)
+      (DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictRadiusIdeal B))
+    (DiamondIntegral.Section4.RVRadiusIdeal.radiusIdeal B) :=
+⋯
+'DiamondIntegral.Section4.RVStrictBoundedCompatibility.map_strictRadiusIdeal' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictManuscriptIdeal : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (B : SpecialTransformations.Section3.GammaParameters.Base) →
+        Ideal.{0} (DiamondIntegral.Section4.RVStrictBoundedComparison.StrictRing B) :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] B =>
+  Ideal.comap.{0, 0, 0} (DiamondIntegral.Section4.RVStrictBoundedComparison.equivalence B)
+    (DiamondIntegral.Section4.RelativeAnnularGenerators.manuscriptIdeal B)
+'DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictManuscriptIdeal' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RVStrictBoundedCompatibility.map_strictManuscriptIdeal : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base),
+  Eq.{1}
+    (Ideal.map.{0, 0, 0} (DiamondIntegral.Section4.RVStrictBoundedComparison.equivalence B)
+      (DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictManuscriptIdeal B))
+    (DiamondIntegral.Section4.RelativeAnnularGenerators.manuscriptIdeal B) :=
+⋯
+'DiamondIntegral.Section4.RVStrictBoundedCompatibility.map_strictManuscriptIdeal' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictManuscriptIdeal_eq_map_symm : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base),
+  Eq.{1} (DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictManuscriptIdeal B)
+    (Ideal.map.{0, 0, 0} (RingEquiv.symm.{0, 0} (DiamondIntegral.Section4.RVStrictBoundedComparison.equivalence B))
+      (DiamondIntegral.Section4.RelativeAnnularGenerators.manuscriptIdeal B)) :=
+⋯
+'DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictManuscriptIdeal_eq_map_symm' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictRadiusIdeal_le : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base),
+  LE.le.{0} (DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictRadiusIdeal B)
+    (DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictManuscriptIdeal B) :=
+⋯
+'DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictRadiusIdeal_le' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.RVStrictBoundedCompatibility.quotientEquiv : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (B : SpecialTransformations.Section3.GammaParameters.Base) →
+        RingEquiv.{0, 0}
+          (HasQuotient.Quotient.{0, 0} (DiamondIntegral.Section4.RVStrictBoundedComparison.StrictRing B)
+            (DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictManuscriptIdeal B))
+          (HasQuotient.Quotient.{0, 0} (DiamondIntegral.Section4.RVBoundedRing.Ring B)
+            (DiamondIntegral.Section4.RelativeAnnularGenerators.manuscriptIdeal B)) :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] B =>
+  Ideal.quotientEquiv.{0, 0} (DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictManuscriptIdeal B)
+    (DiamondIntegral.Section4.RelativeAnnularGenerators.manuscriptIdeal B)
+    (DiamondIntegral.Section4.RVStrictBoundedComparison.equivalence B) ⋯
+'DiamondIntegral.Section4.RVStrictBoundedCompatibility.quotientEquiv' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@[defeq] theorem DiamondIntegral.Section4.RVStrictBoundedCompatibility.quotientEquiv_mk : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base)
+  (x : DiamondIntegral.Section4.RVStrictBoundedComparison.StrictRing B),
+  Eq.{1}
+    ((DiamondIntegral.Section4.RVStrictBoundedCompatibility.quotientEquiv B)
+      ((Ideal.Quotient.mk.{0} (DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictManuscriptIdeal B)) x))
+    ((Ideal.Quotient.mk.{0} (DiamondIntegral.Section4.RelativeAnnularGenerators.manuscriptIdeal B))
+      ((DiamondIntegral.Section4.RVStrictBoundedComparison.equivalence B) x)) :=
+⋯
+'DiamondIntegral.Section4.RVStrictBoundedCompatibility.quotientEquiv_mk' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RVStrictBoundedCompatibility.quotientEquiv_objectClass : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base) {k : ℕ}
+  (a : DiamondIntegral.Section4.RVStrictBoundedComparison.StrictChart B k),
+  Eq.{1}
+    ((DiamondIntegral.Section4.RVStrictBoundedCompatibility.quotientEquiv B)
+      ((Ideal.Quotient.mk.{0} (DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictManuscriptIdeal B))
+        (DiamondIntegral.Section4.RVStrictBoundedComparison.objectClass a)))
+    ((Ideal.Quotient.mk.{0} (DiamondIntegral.Section4.RelativeAnnularGenerators.manuscriptIdeal B))
+      (DiamondIntegral.Section4.RVBoundedRing.objectClass a.toBoundedChart)) :=
+⋯
+'DiamondIntegral.Section4.RVStrictBoundedCompatibility.quotientEquiv_objectClass' depends on axioms: [propext,
  Classical.choice.{u},
  Quot.sound.{u}]
 def DiamondIntegral.Section2.GammaPiecewiseRationalAffineInput : {M : Type} →

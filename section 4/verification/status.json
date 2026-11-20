@@ -22039,6 +22039,50 @@
       "kind": "theorem"
     },
     {
+      "name": "DiamondIntegral.Section4.Section4LinkedRemarks.alternativeEvaluation",
+      "kind": "abbrev"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Section4LinkedRemarks.alternativeGradedEvaluation",
+      "kind": "abbrev"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Section4LinkedRemarks.alternativeEvaluation_res",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Section4LinkedRemarks.alternativeEvaluation_p",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Section4LinkedRemarks.alternativeEvaluation_h",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Section4LinkedRemarks.ordinaryEvaluation_surjective",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Section4LinkedRemarks.ordinaryBoundedEvaluation_surjective",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Section4LinkedRemarks.ordinaryRadiusEvaluation_surjective",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Section4LinkedRemarks.boundedRaw_surjective",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Section4LinkedRemarks.homogeneousRaw_surjective",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Section4LinkedRemarks.homogeneousRetraction_surjective",
+      "kind": "theorem"
+    },
+    {
       "name": "DiamondIntegral.Section4.GammaQEOutputSlopes.perturbAt",
       "kind": "def"
     },
@@ -22536,6 +22580,102 @@
     },
     {
       "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.definition_4_1_identification",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedCompatibility.presentation",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictPiece",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedCompatibility.objectClass_mem_strictPiece",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedCompatibility.projection",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedCompatibility.projection_objectClass",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedCompatibility.projection_mem",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedCompatibility.map_strictPiece",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedCompatibility.comap_gradedPiece",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedCompatibility.annulus_infinityFree",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedCompatibility.point_infinityFree",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictAnnulus",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictPoint",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictPGamma",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedCompatibility.equivalence_strictPGamma",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictPGamma_mem_strictPiece",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictRadiusIdeal",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedCompatibility.map_strictRadiusIdeal",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictManuscriptIdeal",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedCompatibility.map_strictManuscriptIdeal",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictManuscriptIdeal_eq_map_symm",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictRadiusIdeal_le",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedCompatibility.quotientEquiv",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedCompatibility.quotientEquiv_mk",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedCompatibility.quotientEquiv_objectClass",
       "kind": "theorem"
     }
   ],
@@ -49538,6 +49678,61 @@
       "Quot.sound",
       "propext"
     ],
+    "DiamondIntegral.Section4.Section4LinkedRemarks.alternativeEvaluation": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Section4LinkedRemarks.alternativeGradedEvaluation": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Section4LinkedRemarks.alternativeEvaluation_res": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Section4LinkedRemarks.alternativeEvaluation_p": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Section4LinkedRemarks.alternativeEvaluation_h": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Section4LinkedRemarks.ordinaryEvaluation_surjective": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Section4LinkedRemarks.ordinaryBoundedEvaluation_surjective": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Section4LinkedRemarks.ordinaryRadiusEvaluation_surjective": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Section4LinkedRemarks.boundedRaw_surjective": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Section4LinkedRemarks.homogeneousRaw_surjective": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Section4LinkedRemarks.homogeneousRetraction_surjective": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
     "DiamondIntegral.Section4.GammaQEOutputSlopes.perturbAt": [
       "Classical.choice",
       "Quot.sound",
@@ -50158,6 +50353,126 @@
       "propext"
     ],
     "DiamondIntegral.Section4.RESDimensionFreeCategory.definition_4_1_identification": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedCompatibility.presentation": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictPiece": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedCompatibility.objectClass_mem_strictPiece": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedCompatibility.projection": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedCompatibility.projection_objectClass": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedCompatibility.projection_mem": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedCompatibility.map_strictPiece": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedCompatibility.comap_gradedPiece": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedCompatibility.annulus_infinityFree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedCompatibility.point_infinityFree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictAnnulus": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictPoint": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictPGamma": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedCompatibility.equivalence_strictPGamma": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictPGamma_mem_strictPiece": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictRadiusIdeal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedCompatibility.map_strictRadiusIdeal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictManuscriptIdeal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedCompatibility.map_strictManuscriptIdeal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictManuscriptIdeal_eq_map_symm": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictRadiusIdeal_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedCompatibility.quotientEquiv": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedCompatibility.quotientEquiv_mk": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedCompatibility.quotientEquiv_objectClass": [
       "Classical.choice",
       "Quot.sound",
       "propext"
@@ -50810,18 +51125,19 @@
     "section 4/Proposition318CubeRoots.lean": "c5ef9e2050c486af03f66af473bc86c0b94cdf16f94f195084a0cb4c0d2ee822",
     "section 4/Section4GammaLinearityDischarged.lean": "e03398946b7a944278d7b203cb2ea81945ef63548a476aa8e17d69fbfcf2179b",
     "section 4/RVStrictBoundedComparison.lean": "d15a45f9a09c77987e3a4d0fc63a688c994b89d040d4943d8cdb2216d3011498",
-    "section 4/Section4LinkedRemarks.lean": "e5ac1b1f1eae30234928e667e36820c04798d72df69ef95465f201a66937c237",
+    "section 4/Section4LinkedRemarks.lean": "c3115be10f37e23a29564e3e8578f0cda59faaaac22077e44d8be0238df0979c",
     "section 4/GammaQEOutputSlopes.lean": "5630739b6b240d2f501fe976c8f5ee2b716778865206f1ae336b33740951bd01",
     "section 4/GammaQEFlatNormalFormArity.lean": "e49beaadd812632b5a71b1e9162cca338b3bba75fc2f82b36903feb02d8e2316",
     "section 4/GammaQECoefficientNames.lean": "bdbbdd08a59187bac559777a1cd530706019406f269f5de662da3286e63c1936",
     "section 4/Section3GammaAffineDischarge.lean": "2898bb1cb2b972038651bc3a17e80e0916cd0bb4932b058cb9dd1d42f55740ef",
     "section 4/Section4GammaAffineDischarged.lean": "2bb42e805cb7d66c4c16cde0b682b7461b980d4edc9f0563b76efd03dfec48e1",
     "section 4/RESDimensionFreeCategory.lean": "92c7d2ba85b36f10a4234d7238e76ef3d1ad1f7d045287b937ed4ecb70314db1",
-    "section 4/Section.lean": "cbecdacdedd465ee1327c40ab3796d66176f7901428c55807b70f90d5662b759",
-    "section 4/verify.py": "737c89996d6d02ad1da3b8feac0702416daea28741109af2c272a426053b629b",
+    "section 4/RVStrictBoundedCompatibility.lean": "c81b9d77282245e9b092433574f21740cefb7c003fd10880ae08c242c59f3ad1",
+    "section 4/Section.lean": "59d2d142327f380705f3fd08cfba6dd38d3a298e7b6864c0acfd75f9807667b8",
+    "section 4/verify.py": "3c08777f50b118898b2cbacbb2b2476eb0fdcd02fbacefd1f6f3359d1c281bb4",
     "DiamondIntegral.lean": "66d02be99d3e377f670ad569f36274aed59d735366ebb4b157993bdb166b553e",
     "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
-    "lakefile.toml": "1122ae02b4654ebbbadb84164ffa8513d36d40052dcd3059fe40f4cb1870992a",
+    "lakefile.toml": "f55c6669208be44f267e04bed5b712a717c7f30f4d84496864df97b7387d30af",
     "lake-manifest.json": "4f0ab2b8a2144ce82d2d8910ec2beb6cf3f21fffcd610bd56cb0415b5bf88ac6",
     "ACCEPTED-CITED-RESULTS.md": "2a6f42ef5f82e18d502ec9bb71d626675f5e24eae45d44291d75b23d9ee906c9",
     "section 4/verification/CITED-INPUTS.md": "854aa8b2f36a2c956fd3faf0fdcda4ee9a5c55973c266ac0322babe2c5281573",
