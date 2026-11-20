@@ -498,6 +498,53 @@ def indRestrictIso :
 
 end IndRestrict
 
+/-! ### Indexed aperture data -/
+
+section IndDatum
+open AnnularBlowup
+variable {k : ℕ} {D : DatumSchema B (rvs q) k} (hD : ∀ x ∈ Q.carrier, D.Valid x)
+
+include hD in
+theorem indDatum_chart_valid : ∀ x ∈ Q.carrier, D.chart.Valid x := fun x hx => (hD x hx).chart
+
+/-- The aperture of the indexed datum. -/
+def indAp (w : Fin (q + D.chart.arity) → M) : M := D.apAt (keyOf w) (rowOf w)
+
+/-- The append-layout graph of the indexed aperture. -/
+def indApSet : Set (Fin ((q + D.chart.arity) + 1) → M) :=
+  {v | (fun i => v (Fin.castAdd 1 i)) ∈ Q.indDom D.chart ∧
+      v ∈ sortedUniverse (Fin.append (rvs (q + D.chart.arity)) (rvs 1))} ∩
+    {v | v ∈ D.aperture ∧ v ∈ sortedUniverse (Fin.append (rvs (q + D.chart.arity)) (rvs 1))}
+
+theorem indApSet_definable :
+    DefinableOverBase B (Fin.append (rvs (q + D.chart.arity)) (rvs 1)) (Q.indApSet (D := D)) := by
+  have h1 := (Q.indDom_definable D.chart).preimage_real (Fin.append (rvs (q + D.chart.arity)) (rvs 1))
+    (Fin.castAdd 1)
+  have h2 : DefinableOverBase B (Fin.append (rvs (q + D.chart.arity)) (rvs 1))
+      {v | v ∈ D.aperture ∧ v ∈ sortedUniverse (Fin.append (rvs (q + D.chart.arity)) (rvs 1))} := by
+    have h := D.aperture_definable
+    rw [rvs_append] at h
+    convert h using 1
+    ext v
+    constructor
+    · exact And.left
+    · intro hv
+      refine ⟨hv, ?_⟩
+      have := D.aperture_definable.proper v hv
+      intro i
+      refine Fin.addCases (fun l => ?_) (fun l => ?_) i
+      · have h' := this (Fin.castAdd 1 l)
+        rw [Fin.append_left, rvs_append] at h'
+        rw [Fin.append_left]
+        exact h'
+      · have h' := this (Fin.natAdd (q + D.chart.arity) l)
+        rw [Fin.append_right] at h'
+        rw [Fin.append_right]
+        exact h'
+  exact h1.inter h2
+
+end IndDatum
+
 end KeySet
 
 end DiamondIntegral.Section7.Lemma714Schema
