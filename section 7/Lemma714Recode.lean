@@ -224,4 +224,98 @@ theorem recode_valid (hW : W.Valid z) : (W.recode K).Valid x := by
 
 end ChartSchema
 
+/-! ### Recoding isomorphism schemata -/
+
+namespace IsoSchema
+variable {d : ℕ} (K : KeyRel B sq sp) {X Y : ChartSchema B sp d} (Φ : IsoSchema X Y)
+
+/-- The recoding of an isomorphism schema along `K`. -/
+def recode : IsoSchema (X.recode K) (Y.recode K) where
+  graph := K.recodeSet2 Φ.graph
+  graph_definable := K.recodeSet2_definable Φ.graph_definable
+
+variable {K Φ} {x : Fin q → M} {z : Fin p → M} (hx : ∀ i, sortEval (sq i) (x i))
+  (hz : ∀ i, sortEval (sp i) (z i)) (hK : K.R x z) (hX : X.RowConst K x) (hY : Y.RowConst K x)
+  (hΦ : K.RowConst2 Φ.graph x)
+include hx hz hK hX hY hΦ
+
+/-- **Validity of isomorphism schemata passes to the recoding.** -/
+theorem recode_valid (hV : Φ.Valid z) : (Φ.recode K).Valid x := by
+  have hXr := ChartSchema.recode_row hx hz hK hX
+  have hYr := ChartSchema.recode_row hx hz hK hY
+  have hXc := ChartSchema.recode_coordRow hx hz hK hX
+  have hYc := ChartSchema.recode_coordRow hx hz hK hY
+  have hXv := ChartSchema.recode_volRow hx hz hK hX
+  have hYv := ChartSchema.recode_volRow hx hz hK hY
+  have hg : ∀ u v, (Φ.recode K).graphRow x u v ↔ Φ.graphRow z u v :=
+    fun u v => K.recodeSet2_row Φ.graph_definable hx hz hK hΦ u v
+  obtain ⟨⟨_, hT, hD, hF⟩, hE⟩ := hV.bij
+  refine ⟨⟨⟨hx, fun u hu => ?_, fun u v h => ?_, fun v hv => ?_⟩, fun v => ?_⟩, ?_⟩
+  · obtain ⟨v, hv, huniq⟩ := hT u ((hXr u).mp hu)
+    exact ⟨v, (hg u v).mpr hv, fun v' h' => huniq v' ((hg u v').mp h')⟩
+  · exact (hXr u).mpr (hD u v ((hg u v).mp h))
+  · obtain ⟨hf, hle⟩ := hF v hv
+    have hsub : {u : Fin (X.recode K).arity → M | Fin.append (Fin.append x u) v ∈ (Φ.recode K).graph} ⊆
+        {u | Fin.append (Fin.append z u) v ∈ Φ.graph} := fun u hu => (hg u v).mp hu
+    exact ⟨hf.subset hsub, (Set.ncard_le_ncard hsub hf).trans hle⟩
+  · have := hE v
+    constructor
+    · intro hv
+      obtain ⟨u, hu⟩ := (this.mp ((hYr v).mp hv))
+      exact ⟨u, (hg u v).mpr hu⟩
+    · rintro ⟨u, hu⟩
+      exact (hYr v).mpr (this.mpr ⟨u, (hg u v).mp hu⟩)
+  · intro u v y y' c c' h1 h2 h3 h4 h5 hy hy' hc hc'
+    exact hV.weight u v y y' c c' ((hg u v).mp h1) ((hXc u y).mp h2) ((hYc v y').mp h3) ((hXv u c).mp h4)
+      ((hYv v c').mp h5) hy hy' hc hc'
+
+end IsoSchema
+
+/-! ### Recoding datum schemata -/
+
+namespace DatumSchema
+variable {k : ℕ} (K : KeyRel B sq sp) (D : DatumSchema B sp k)
+
+/-- The recoding of a datum schema along `K`. -/
+def recode : DatumSchema B sq k where
+  chart := D.chart.recode K
+  coordinate := D.coordinate
+  aperture := K.recodeSet2 D.aperture
+  aperture_definable := K.recodeSet2_definable D.aperture_definable
+  inactiveBound := D.inactiveBound
+
+/-- The rows of `D` are constant on the `K`-class of `x`. -/
+def RowConst (x : Fin q → M) : Prop := D.chart.RowConst K x ∧ K.RowConst2 D.aperture x
+
+variable {K D} {x : Fin q → M} {z : Fin p → M} (hx : ∀ i, sortEval (sq i) (x i))
+  (hz : ∀ i, sortEval (sp i) (z i)) (hK : K.R x z) (hc : D.RowConst K x)
+include hx hz hK hc
+
+theorem recode_apRow (u : Fin D.chart.arity → M) (t : M) : (D.recode K).apRow x u t ↔ D.apRow z u t :=
+  K.recodeSet2_row D.aperture_definable hx hz hK hc.2 u _
+
+theorem recode_inactRel (u : Fin D.chart.arity → M) (t : Fin (1 + k) → M) :
+    (D.recode K).inactRel x u t ↔ D.inactRel z u t := by
+  unfold inactRel
+  exact exists_congr (fun s => ChartSchema.recode_coordRow hx hz hK hc.1 u _)
+
+/-- **Validity of datum schemata passes to the recoding.** -/
+theorem recode_valid (hD : D.Valid z) : (D.recode K).Valid x := by
+  have hr := ChartSchema.recode_row hx hz hK hc.1
+  have ha := recode_apRow hx hz hK hc
+  have hi := recode_inactRel hx hz hK hc
+  refine ⟨ChartSchema.recode_valid hx hz hK hc.1 hD.chart, fun u hu => ?_, fun u t h => ?_,
+    fun u t h => hD.ap_value u t ((ha u t).mp h), ?_, fun t ht => ?_⟩
+  · obtain ⟨t, h, huniq⟩ := hD.ap_unique u ((hr u).mp hu)
+    exact ⟨t, (ha u t).mpr h, fun t' h' => huniq t' ((ha u t').mp h')⟩
+  · exact (hr u).mpr (hD.ap_dom u t ((ha u t).mp h))
+  · obtain ⟨Δ, hΔ⟩ := hD.ap_bounded
+    exact ⟨Δ, fun u t h => hΔ u t ((ha u t).mp h)⟩
+  · have he : {u : Fin (D.recode K).chart.arity → M | (D.recode K).inactRel x u t} = {u | D.inactRel z u t} :=
+      Set.ext (fun u => hi u t)
+    rw [he]
+    exact hD.inactive t ht
+
+end DatumSchema
+
 end DiamondIntegral.Section7.Lemma714Schema
