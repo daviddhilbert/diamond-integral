@@ -215,8 +215,14 @@ theorem lemma720 : Lemma720 M G := by
       exact ⟨s, x, hfirst s ▸ hx, rfl⟩
     · rintro ⟨s, x, hx, rfl⟩
       exact ⟨s, x, (hfirst s).symm ▸ hx, rfl⟩
-  · exact Final.def_t (lead := lead) (Q := Q) (T₂ := T₂) hc hv hQ hlead
-  · exact Final.def_t₁ (ε := ε) (lead := lead) (Q := Q) (T₂ := T₂) (hD₂ := hD₂) hc hv hQ hlead
+  · exact Final.def_t (lead := lead) (Q := Q) (T₂ := T₂) (hD₂ := hD₂) hc hv hQ hlead
+  · refine Final.def_t₁ (ε := ε) (lead := lead) (Q := Q) (T₂ := T₂) (hD₂ := hD₂) hc hv hQ hlead
+      (fun s hk => ?_)
+    rcases (hcells s).2 with hconst | ⟨-, -, hsl⟩
+    · exfalso
+      rw [Final.kindU, kindOf, if_pos hconst] at hk
+      exact absurd hk (by decide)
+    · exact ⟨_, hsl⟩
   · exact fun i => Final.def_kind (ε := ε) (lead := lead) (Q := Q) (T₂ := T₂) (hD₂ := hD₂) hc hv hQ hlead i
   · intro s
     obtain ⟨hceq, hcase⟩ := hcells s

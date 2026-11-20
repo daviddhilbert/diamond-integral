@@ -48,4 +48,27 @@ coordinate 1 (`y`), the second contracts coordinate 0 (`x`).
 
 ## Status
 
-See the commit log on `claude/lemma-7-20-5dfcd3`.
+**Complete (2026-11-20).** `DiamondIntegral.Section7.Lemma720.lemma720` in
+`Lemma720Main.lean` has exactly the type of the input committed in 83afb3ac:
+
+```
+lemma720 : ∀ (M : Type) [LRV.Structure M] [M ⊨ Axioms.ACVF] (G : Type)
+  [LinearOrderedCommGroupWithZero G] [Valued (VF M) G], TwoCellInput.Lemma720 M G
+```
+
+It has no `sorry`. `#print axioms` gives `[propext, Classical.choice, Quot.sound]`.
+The library `section 7 lemma 7.20` builds (`lake build "section 7 lemma 7.20"`).
+No Hrushovski–Kazhdan result is used. The base is VF-Γ-generated, with no hypothesis
+about RV points.
+
+## Swap-in
+
+1. Add `import «section 7».Lemma720Main` to any module that consumes the input. Before
+   that, move the `section 7 lemma 7.20` roots into the main Section 7 library, or make
+   that library depend on this one.
+2. In each result that takes `(h720 : Lemma720 M G)`, drop the hypothesis and use
+   `DiamondIntegral.Section7.Lemma720.lemma720 M G` in its place. Alternatively, keep the
+   hypothesised versions and add specialised corollaries that apply them to `lemma720 M G`.
+3. Move Lemma 7.20 from "temporary input" to "proved" in `verify.py`
+   (`temporary_inputs`), `COVERAGE.md`, `STATUS.md` and `README.md`.
+   `TwoCellInput.lean` can then keep the statement as the definition of the proposition.

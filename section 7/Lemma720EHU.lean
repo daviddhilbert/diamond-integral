@@ -15,6 +15,7 @@ open SpecialTransformations.Section3 SpecialTransformations.Section4
 open SpecialTransformations.DefinableGeometry
 open SpecialTransformations.Section3.GammaParameters
 open IntegrationInACVF.Section3 IntegrationInACVF.Section3ACVF IntegrationInACVF.Section4
+open IntegrationInACVF.Section3ACVF.UniformGammaBallSyntax IntegrationInACVF.Section3ACVF.RVDifferencePairs
 
 namespace DiamondIntegral.Section7.Lemma720
 open DiamondIntegral.Section6 DiamondIntegral.Section2 DiamondIntegral.Section7.TwoCells
@@ -239,6 +240,129 @@ theorem EHU_target {v : (Fin T₂.arity ⊕ Fin 1) ⊕ Fin 1 → M} (h : EHU ε 
   · have hi : i = 0 := Subsingleton.elim _ _
     subst hi
     rfl
+
+/-- `EHU` at a label code `c`, a point `x` and a value `e`. -/
+def EHU3 (c : Fin T₂.arity → M) (x e : M) : Prop :=
+  EHU ε lead Q T₂ hD₂ (Sum.elim (Sum.elim c (fun _ : Fin 1 => x)) (fun _ : Fin 1 => e))
+
+/-- Raw form of "the positioning function is constant on the disc". -/
+def K0raw (c : Fin T₂.arity → M) : Prop :=
+  ∀ w : Fin 4 → M, EHU3 ε lead Q T₂ hD₂ c (w 0) (w 2) → EHU3 ε lead Q T₂ hD₂ c (w 1) (w 3) → w 2 = w 3
+
+/-- Raw form of "all translates agree". -/
+def K1raw (c : Fin T₂.arity → M) : Prop :=
+  ∀ w : Fin 4 → M, EHU3 ε lead Q T₂ hD₂ c (w 0) (w 2) → EHU3 ε lead Q T₂ hD₂ c (w 1) (w 3) →
+    ball (c (T₂.oldLabels lead)) (w 2) (w 3)
+
+/-- Raw form of the equation for the second paradigm. -/
+def T1raw (c : Fin T₂.arity → M) (τ₁ : M) : Prop :=
+  iRV τ₁ ∧ ∀ w : Fin 4 → M, EHU3 ε lead Q T₂ hD₂ c (w 0) (w 2) → EHU3 ε lead Q T₂ hD₂ c (w 1) (w 3) →
+    w 0 ≠ w 1 → RVSlopeGraph.multiply (difference (w 2) (w 3)) τ₁ =
+      RVSlopeGraph.multiply (c (T₂.oldLabels lead)) (difference (w 1) (w 0))
+
+theorem EHU3_definable (hc : CanonicalStructure.IsCanonical (M := M))
+    (hQ : S.Definable₁ LRV (Subtype.val '' (Q : Set (VF M)))) {ι : Type} [Finite ι]
+    (fc : Fin T₂.arity → ι) (fx fe : ι) :
+    S.Definable LRV {p : ι → M | EHU3 ε lead Q T₂ hD₂ (p ∘ fc) (p fx) (p fe)} := by
+  have h := (EHU_definable ε lead Q T₂ hD₂ hc hQ).preimage_comp
+    (Sum.elim (Sum.elim fc (fun _ : Fin 1 => fx)) (fun _ : Fin 1 => fe))
+  simp only [Sum.comp_elim] at h
+  exact h
+
+theorem K0raw_definable (hc : CanonicalStructure.IsCanonical (M := M))
+    (hQ : S.Definable₁ LRV (Subtype.val '' (Q : Set (VF M)))) :
+    S.Definable LRV {c | K0raw ε lead Q T₂ hD₂ c} := by
+  let ι := Fin T₂.arity ⊕ Fin 4
+  have h0 := EHU3_definable ε lead Q T₂ hD₂ hc hQ (Sum.inl : Fin T₂.arity → ι) (Sum.inr 0) (Sum.inr 2)
+  have h1 := EHU3_definable ε lead Q T₂ hD₂ hc hQ (Sum.inl : Fin T₂.arity → ι) (Sum.inr 1) (Sum.inr 3)
+  have hEq : S.Definable LRV {p : ι → M | p (Sum.inr 2) = p (Sum.inr 3)} :=
+    (Set.DefinableFun.proj LRV).ofPred_eq (Set.DefinableFun.proj LRV)
+  have hImp : S.Definable LRV {p : ι → M | EHU3 ε lead Q T₂ hD₂ (p ∘ Sum.inl) (p (Sum.inr 0)) (p (Sum.inr 2)) →
+      EHU3 ε lead Q T₂ hD₂ (p ∘ Sum.inl) (p (Sum.inr 1)) (p (Sum.inr 3)) → p (Sum.inr 2) = p (Sum.inr 3)} := by
+    convert h0.compl.union (h1.compl.union hEq) using 1
+    ext p
+    simp only [Set.mem_setOf_eq, Set.mem_union, Set.mem_compl_iff]
+    tauto
+  have hAll := definable_of_overBase hc (FullBaseAtomicity.OverBase.forall_block (overBase_of_definable hc hImp))
+  convert hAll using 1
+  ext c
+  exact Iff.rfl
+
+theorem K1raw_definable (hc : CanonicalStructure.IsCanonical (M := M))
+    (hQ : S.Definable₁ LRV (Subtype.val '' (Q : Set (VF M)))) :
+    S.Definable LRV {c | K1raw ε lead Q T₂ hD₂ c} := by
+  let ι := Fin T₂.arity ⊕ Fin 4
+  have h0 := EHU3_definable ε lead Q T₂ hD₂ hc hQ (Sum.inl : Fin T₂.arity → ι) (Sum.inr 0) (Sum.inr 2)
+  have h1 := EHU3_definable ε lead Q T₂ hD₂ hc hQ (Sum.inl : Fin T₂.arity → ι) (Sum.inr 1) (Sum.inr 3)
+  have hB : S.Definable LRV {p : ι → M | ball (p (Sum.inl (T₂.oldLabels lead))) (p (Sum.inr 2)) (p (Sum.inr 3))} :=
+    definable_of_overBase hc (FullBaseAtomicity.OverBase.preimage_comp (ball_definable (fullBase S))
+      (![Sum.inl (T₂.oldLabels lead), Sum.inr 2, Sum.inr 3] : Fin 3 → ι))
+  have hImp : S.Definable LRV {p : ι → M | EHU3 ε lead Q T₂ hD₂ (p ∘ Sum.inl) (p (Sum.inr 0)) (p (Sum.inr 2)) →
+      EHU3 ε lead Q T₂ hD₂ (p ∘ Sum.inl) (p (Sum.inr 1)) (p (Sum.inr 3)) →
+        ball (p (Sum.inl (T₂.oldLabels lead))) (p (Sum.inr 2)) (p (Sum.inr 3))} := by
+    convert h0.compl.union (h1.compl.union hB) using 1
+    ext p
+    simp only [Set.mem_setOf_eq, Set.mem_union, Set.mem_compl_iff]
+    tauto
+  have hAll := definable_of_overBase hc (FullBaseAtomicity.OverBase.forall_block (overBase_of_definable hc hImp))
+  convert hAll using 1
+  ext c
+  exact Iff.rfl
+
+theorem T1raw_definable (hc : CanonicalStructure.IsCanonical (M := M))
+    (hQ : S.Definable₁ LRV (Subtype.val '' (Q : Set (VF M)))) :
+    S.Definable LRV {p : Fin T₂.arity ⊕ Fin 1 → M | T1raw ε lead Q T₂ hD₂ (p ∘ Sum.inl) (p (Sum.inr 0))} := by
+  let B' := fullBase S
+  let ι := (Fin T₂.arity ⊕ Fin 1) ⊕ Fin 4
+  let κ := ι ⊕ Fin 4
+  -- the equation, with witnesses
+  have hD1 := FullBaseAtomicity.OverBase.preimage_comp (difference_graph_definable B')
+    (![Sum.inl (Sum.inr 2), Sum.inl (Sum.inr 3), Sum.inr 0] : Fin 3 → κ)
+  have hM1 := FullBaseAtomicity.OverBase.preimage_comp (multiply_graph_definable B')
+    (![Sum.inr 0, Sum.inl (Sum.inl (Sum.inr 0)), Sum.inr 1] : Fin 3 → κ)
+  have hD2 := FullBaseAtomicity.OverBase.preimage_comp (difference_graph_definable B')
+    (![Sum.inl (Sum.inr 1), Sum.inl (Sum.inr 0), Sum.inr 2] : Fin 3 → κ)
+  have hM2 := FullBaseAtomicity.OverBase.preimage_comp (multiply_graph_definable B')
+    (![Sum.inl (Sum.inl (Sum.inl (T₂.oldLabels lead))), Sum.inr 2, Sum.inr 3] : Fin 3 → κ)
+  have hE : FullBaseAtomicity.OverBase B' {z : κ → M | z (Sum.inr 1) = z (Sum.inr 3)} :=
+    overBase_of_definable hc ((Set.DefinableFun.proj LRV).ofPred_eq (Set.DefinableFun.proj LRV))
+  have hEqn := FullBaseAtomicity.OverBase.exists_block
+    (FullBaseAtomicity.OverBase.inter hD1 (FullBaseAtomicity.OverBase.inter hM1
+      (FullBaseAtomicity.OverBase.inter hD2 (FullBaseAtomicity.OverBase.inter hM2 hE))))
+  have h0 := overBase_of_definable hc (EHU3_definable ε lead Q T₂ hD₂ hc hQ
+    (fun j => (Sum.inl (Sum.inl j) : ι)) (Sum.inr 0) (Sum.inr 2))
+  have h1 := overBase_of_definable hc (EHU3_definable ε lead Q T₂ hD₂ hc hQ
+    (fun j => (Sum.inl (Sum.inl j) : ι)) (Sum.inr 1) (Sum.inr 3))
+  have hNe : FullBaseAtomicity.OverBase B' {z : ι → M | z (Sum.inr 0) = z (Sum.inr 1)} :=
+    overBase_of_definable hc ((Set.DefinableFun.proj LRV).ofPred_eq (Set.DefinableFun.proj LRV))
+  have hImp := FullBaseLogic.implication B' h0 (FullBaseLogic.implication B' h1
+    (FullBaseLogic.implication B' (FullBaseAtomicity.OverBase.compl hNe) hEqn))
+  have hAll := FullBaseAtomicity.OverBase.forall_block hImp
+  have hRV := FullBaseAtomicity.OverBase.preimage_comp (FullBaseAtomicity.OverBase.of_real (B := B')
+    ((@definableAt_iff_normalized_raw M sM hM B'.real .rv _).mp (@definableAt_sort M sM B'.real .rv)).1)
+    (fun _ : Fin 1 => (Sum.inr 0 : Fin T₂.arity ⊕ Fin 1))
+  apply definable_of_overBase hc
+  apply FullBaseAtomicity.OverBase.congr (FullBaseAtomicity.OverBase.inter hRV hAll)
+  intro p
+  constructor
+  · rintro ⟨hrv, hall⟩
+    refine ⟨hrv, fun w hw0 hw1 hne => ?_⟩
+    obtain ⟨d, hd0, hd1, hd2, hd3, hd13⟩ := hall w hw0 hw1 hne
+    change d 0 = difference (w 2) (w 3) at hd0
+    change d 1 = RVSlopeGraph.multiply (d 0) (p (Sum.inr 0)) at hd1
+    change d 2 = difference (w 1) (w 0) at hd2
+    change d 3 = RVSlopeGraph.multiply (p (Sum.inl (T₂.oldLabels lead))) (d 2) at hd3
+    change d 1 = d 3 at hd13
+    change RVSlopeGraph.multiply (difference (w 2) (w 3)) (p (Sum.inr 0)) =
+      RVSlopeGraph.multiply (p (Sum.inl (T₂.oldLabels lead))) (difference (w 1) (w 0))
+    rw [← hd0, ← hd1, hd13, hd3, hd2]
+  · rintro ⟨hrv, hall⟩
+    refine ⟨hrv, fun w hw0 hw1 hne => ?_⟩
+    refine ⟨![difference (w 2) (w 3), RVSlopeGraph.multiply (difference (w 2) (w 3)) (p (Sum.inr 0)),
+      difference (w 1) (w 0),
+      RVSlopeGraph.multiply (p (Sum.inl (T₂.oldLabels lead))) (difference (w 1) (w 0))],
+      rfl, rfl, rfl, rfl, ?_⟩
+    exact hall w hw0 hw1 hne
 
 end Final
 
