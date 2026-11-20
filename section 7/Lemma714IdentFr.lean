@@ -58,6 +58,7 @@ structure Frozen (P : DefSet (rawMixedSpace (M := M) 1 0) (T : Set M)) where
   finite : ∀ y : Fin 1 → VF M, {u : Fin (1 + sk) → RVInfinity M | (y, u) ∈ (regT Bk).carrier}.Finite
   vfBounded : VFDoublyBounded (regT Bk).carrier
   homeo : ProperCovariantHomeomorphism (G := G) ((fReg f).comp Φ₀)
+  chain : SpecialCovariantChain (G := G) P (regT Bk) ((fReg f).comp Φ₀)
 
 namespace Frozen
 variable {P : DefSet (rawMixedSpace (M := M) 1 0) (T : Set M)} (Z : Frozen (G := G) P)
