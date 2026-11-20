@@ -145,6 +145,7 @@ import «section 7».TwoDimSlices
 import «section 7».OrderedProgramContractions
 import «section 7».SliceContractions
 import «section 7».Lemma723General
+import «section 7».TautologicalContractions
 
 /-! Entry point for the Section 7 formalization (integrating proper invariant
 sets), following the adopted manuscript with bounded variable apertures. -/
