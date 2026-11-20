@@ -301,6 +301,74 @@ def indChart : Chart B (1 + d) where
 
 end IndChart
 
+/-! ### Weights of indexed charts -/
+
+section IndWeight
+variable {d : ℕ} {W : ChartSchema B (rvs q) d} (hW : ∀ x ∈ Q.carrier, W.Valid x)
+
+theorem indChart_weight (w : Fin (q + W.arity) → M) :
+    (Q.indChart W hW).correctedWeight w = codeValue (w (Fin.castAdd W.arity Q.idx)) * W.weightAt (keyOf w) (rowOf w) := by
+  change W.volAt (keyOf w) (rowOf w) * ∏ i, codeValue (Q.indCoord W w i) = _
+  rw [Fin.prod_univ_add]
+  simp only [indCoord, Fin.append_left, Fin.append_right, Finset.univ_unique, Finset.prod_singleton]
+  unfold ChartSchema.weightAt
+  exact mul_left_comm _ _ _
+
+end IndWeight
+
+/-! ### Indexed isomorphisms -/
+
+section IndIso
+variable {d : ℕ} {X Y : ChartSchema B (rvs q) d} (hX : ∀ x ∈ Q.carrier, X.Valid x)
+  (hY : ∀ x ∈ Q.carrier, Y.Valid x) (Φ : IsoSchema X Y) (hΦ : ∀ x ∈ Q.carrier, Φ.Valid x)
+
+/-- The row map of an isomorphism schema at `x`, by choice. -/
+def isoRaw (x : Fin q → M) (u : Fin X.arity → M) : Fin Y.arity → M :=
+  if h : ∃ v, Φ.graphRow x u v then h.choose else fun _ => iRVZero
+
+/-- The underlying map of the indexed isomorphism. -/
+def indIsoFun (w : Fin (q + X.arity) → M) : Fin (q + Y.arity) → M :=
+  Fin.append (keyOf w) (isoRaw Φ (keyOf w) (rowOf w))
+
+variable {Φ}
+
+include hΦ in
+theorem isoRaw_graph {x : Fin q → M} (hx : x ∈ Q.carrier) {u : Fin X.arity → M} (hu : u ∈ X.row x) :
+    Φ.graphRow x u (isoRaw Φ x u) := by
+  have h : ∃ v, Φ.graphRow x u v := ((hΦ x hx).map_exists hu).exists
+  rw [isoRaw, dif_pos h]
+  exact h.choose_spec
+
+include hΦ in
+theorem isoRaw_eq {x : Fin q → M} (hx : x ∈ Q.carrier) {u : Fin X.arity → M} {v : Fin Y.arity → M}
+    (h : Φ.graphRow x u v) : isoRaw Φ x u = v :=
+  ((hΦ x hx).map_exists ((hΦ x hx).source_mem h)).unique (Q.isoRaw_graph hΦ hx ((hΦ x hx).source_mem h)) h
+
+include hΦ in
+theorem indIsoFun_bijOn : Set.BijOn (indIsoFun Φ) (Q.indDom X) (Q.indDom Y) := by
+  refine ⟨fun w hw => ?_, fun w hw w' hw' he => ?_, fun w hw => ?_⟩
+  · have hk := Q.indDom_key hw
+    rw [indIsoFun, Q.mem_indDom_iff]
+    exact ⟨hk, (hΦ _ hk).target_mem (Q.isoRaw_graph hΦ hk (Q.indDom_row hw))⟩
+  · have hk : keyOf w = keyOf w' := by
+      have := congrArg keyOf he
+      simpa [indIsoFun, keyOf_append] using this
+    have hr : isoRaw Φ (keyOf w) (rowOf w) = isoRaw Φ (keyOf w') (rowOf w') := by
+      have := congrArg rowOf he
+      simpa [indIsoFun, rowOf_append] using this
+    have h1 := Q.isoRaw_graph hΦ (Q.indDom_key hw) (Q.indDom_row hw)
+    have h2 := Q.isoRaw_graph hΦ (Q.indDom_key hw') (Q.indDom_row hw')
+    have h2' : Φ.graphRow (keyOf w) (rowOf w') (isoRaw Φ (keyOf w) (rowOf w)) := by
+      rw [hr, hk]; exact h2
+    have hrow := (hΦ _ (Q.indDom_key hw)).inj h1 h2'
+    rw [← append_keyOf_rowOf w, ← append_keyOf_rowOf w', hk, hrow]
+  · have hk := Q.indDom_key hw
+    obtain ⟨u, hu⟩ := (hΦ _ hk).surj (Q.indDom_row hw)
+    refine ⟨Fin.append (keyOf w) u, (Q.mem_indDom_iff X _ _).mpr ⟨hk, (hΦ _ hk).source_mem hu⟩, ?_⟩
+    rw [indIsoFun, keyOf_append, rowOf_append, Q.isoRaw_eq hΦ hk hu, append_keyOf_rowOf]
+
+end IndIso
+
 end KeySet
 
 end DiamondIntegral.Section7.Lemma714Schema
