@@ -647,6 +647,89 @@ def indDatum (hb : RVMeasuredBounds.DomainBounded (Q.indChart D.chart (Q.indDatu
 
 end IndDatum
 
+/-! ### Endpoint and shell at the keys -/
+
+section IndCanon
+open AnnularBlowup BlowupChart
+variable {k : ℕ} {D : DatumSchema B (rvs q) k} (hD : ∀ x ∈ Q.carrier, D.Valid x)
+  (hΔ : ∃ Δ : Values.Gamma (M := M), ∀ x ∈ Q.carrier, ∀ u t, D.apRow x u t → codeValue t ≤ Δ)
+  (hb : RVMeasuredBounds.DomainBounded (Q.indChart D.chart (Q.indDatum_chart_valid hD)))
+
+omit hM in
+theorem update_append_natAdd {n m : ℕ} (a : Fin n → M) (c : Fin m → M) (j : Fin m) (v : M) :
+    Function.update (Fin.append a c) (Fin.natAdd n j) v = Fin.append a (Function.update c j v) := by
+  funext i
+  refine Fin.addCases (fun l => ?_) (fun l => ?_) i
+  · have hne : Fin.castAdd m l ≠ Fin.natAdd n j := by
+      intro h; have := congrArg Fin.val h; simp at this; omega
+    simp [Function.update_of_ne hne]
+  · by_cases hl : l = j
+    · subst hl; simp
+    · have hne : Fin.natAdd n l ≠ Fin.natAdd n j := by
+        intro h; apply hl; apply Fin.ext; have := congrArg Fin.val h; simp at this; omega
+      simp [Function.update_of_ne hne, Function.update_of_ne hl]
+
+theorem indChart_blown_weight (w : Fin (q + D.chart.arity) → M) (s : M) :
+    (Q.indChart D.chart (Q.indDatum_chart_valid hD)).volume w *
+        ∏ l, codeValue (blownCoordinate (Q.indChart D.chart (Q.indDatum_chart_valid hD)) (Fin.natAdd 1 D.coordinate) w s l) =
+      codeValue (w (Fin.castAdd D.chart.arity Q.idx)) *
+        (D.chart.volAt (keyOf w) (rowOf w) * ∏ l, codeValue (Function.update (D.chart.coordAt (keyOf w) (rowOf w))
+          D.coordinate (iRVMul s (D.chart.coordAt (keyOf w) (rowOf w) D.coordinate)) l)) := by
+  change D.chart.volAt (keyOf w) (rowOf w) * ∏ l, codeValue (Function.update (Q.indCoord D.chart w)
+    (Fin.natAdd 1 D.coordinate) (iRVMul s (Q.indCoord D.chart w (Fin.natAdd 1 D.coordinate))) l) = _
+  have e : Q.indCoord D.chart w (Fin.natAdd 1 D.coordinate) = D.chart.coordAt (keyOf w) (rowOf w) D.coordinate := by
+    simp [indCoord]
+  rw [e, indCoord, update_append_natAdd, Fin.prod_univ_add]
+  simp only [Fin.append_left, Fin.append_right, Finset.univ_unique, Finset.prod_singleton]
+  exact mul_left_comm _ _ _
+
+include hD in
+theorem indEnd_valid : ∀ x ∈ Q.carrier, D.endSchema.Valid x := fun x hx => (hD x hx).endSchema
+
+include hD in
+theorem indShell_valid : ∀ x ∈ Q.carrier, D.shellSchema.Valid x := fun x hx => (hD x hx).shellSchema
+
+/-- **The endpoint at the keys**: the Section 4 endpoint of the indexed datum is
+the indexed endpoint schema, by `(w, τ(w)) ↦ w`. -/
+def indEndIso :
+    Iso (endpointChart (Q.indDatum hD hΔ hb).chart (Q.indDatum hD hΔ hb).coordinate (Q.indDatum hD hΔ hb).finite
+        (Q.indDatum hD hΔ hb).aperture)
+      (Q.indChart D.endSchema (Q.indEnd_valid hD)) :=
+  isoOfMap _ _ (fun w => w ∘ headIndex 1 (q + D.chart.arity))
+    (RVCoordinateMaps.coordinate_graph_definable B _
+      (endpointChart (Q.indDatum hD hΔ hb).chart (Q.indDatum hD hΔ hb).coordinate (Q.indDatum hD hΔ hb).finite
+        (Q.indDatum hD hΔ hb).aperture).domain_definable
+      (headIndex 1 (q + D.chart.arity) : Fin (q + D.chart.arity) → Fin (1 + (q + D.chart.arity))))
+    (by
+      refine ⟨fun w hw => hw.1, fun w hw w' hw' he => ?_, fun u hu => ?_⟩
+      · rw [graph_canonical _ _ hw, graph_canonical _ _ hw']
+        have he' : w ∘ headIndex 1 (Q.indDatum hD hΔ hb).chart.arity =
+            w' ∘ headIndex 1 (Q.indDatum hD hΔ hb).chart.arity := he
+        rw [he']
+      · refine ⟨join 1 (q + D.chart.arity) u ![indAp (D := D) u], ⟨?_, ?_⟩, join_comp_head _ _⟩
+        · show join 1 (q + D.chart.arity) u ![indAp (D := D) u] ∘ headIndex 1 (q + D.chart.arity) ∈ Q.indDom D.chart
+          rw [join_comp_head]; exact hu
+        · show ![indAp (D := D) (join 1 (q + D.chart.arity) u ![indAp (D := D) u] ∘ headIndex 1 (q + D.chart.arity))] =
+            join 1 (q + D.chart.arity) u ![indAp (D := D) u] ∘ tailIndex 1 (q + D.chart.arity)
+          rw [join_comp_head, join_comp_tail])
+    (by
+      intro w hw
+      have hu : w ∘ headIndex 1 (q + D.chart.arity) ∈ Q.indDom D.chart := hw.1
+      have hk := Q.indDom_key hu
+      have hr := Q.indDom_row hu
+      show (Q.indChart D.chart (Q.indDatum_chart_valid hD)).volume (w ∘ headIndex 1 (q + D.chart.arity)) *
+        ∏ l, codeValue (blownCoordinate (Q.indChart D.chart (Q.indDatum_chart_valid hD)) (Fin.natAdd 1 D.coordinate)
+          (w ∘ headIndex 1 (q + D.chart.arity)) (w (aIdx (Q.indChart D.chart (Q.indDatum_chart_valid hD)))) l) = _
+      rw [Q.indChart_blown_weight hD, indChart_weight]
+      congr 1
+      unfold ChartSchema.weightAt
+      have hap : w (aIdx (Q.indChart D.chart (Q.indDatum_chart_valid hD))) =
+          D.apAt (keyOf (w ∘ headIndex 1 (q + D.chart.arity))) (rowOf (w ∘ headIndex 1 (q + D.chart.arity))) :=
+        graph_aperture _ _ hw
+      rw [DatumSchema.endSchema_volAt, DatumSchema.endSchema_coordAt (hD _ hk) hr, hap])
+
+end IndCanon
+
 end KeySet
 
 end DiamondIntegral.Section7.Lemma714Schema
