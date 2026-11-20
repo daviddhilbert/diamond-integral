@@ -163,4 +163,65 @@ end TwoBlock
 
 end KeyRel
 
+/-! ### Recoding chart schemata -/
+
+namespace ChartSchema
+variable {d : ℕ} (K : KeyRel B sq sp) (W : ChartSchema B sp d)
+
+/-- The recoding of a chart schema along `K`. -/
+def recode : ChartSchema B sq d where
+  arity := W.arity
+  domain := K.recodeSet W.domain
+  domain_definable := K.recodeSet_definable W.domain_definable
+  coord := K.recodeSet2 W.coord
+  coord_definable := K.recodeSet2_definable W.coord_definable
+  volume := K.recodeSet2 W.volume
+  volume_definable := K.recodeSet2_definable W.volume_definable
+  bound := W.bound
+
+/-- The rows of `W` are constant on the `K`-class of `x`. -/
+def RowConst (x : Fin q → M) : Prop :=
+  K.RowConst W.domain x ∧ K.RowConst2 W.coord x ∧ K.RowConst2 W.volume x
+
+variable {K W} {x : Fin q → M} {z : Fin p → M} (hx : ∀ i, sortEval (sq i) (x i))
+  (hz : ∀ i, sortEval (sp i) (z i)) (hK : K.R x z) (hc : W.RowConst K x)
+include hx hz hK hc
+
+theorem recode_row (u : Fin W.arity → M) : u ∈ (W.recode K).row x ↔ u ∈ W.row z :=
+  K.recodeSet_row W.domain_definable hx hz hK hc.1 u
+
+theorem recode_coordRow (u : Fin W.arity → M) (y : Fin d → M) :
+    (W.recode K).coordRow x u y ↔ W.coordRow z u y :=
+  K.recodeSet2_row W.coord_definable hx hz hK hc.2.1 u y
+
+theorem recode_volRow (u : Fin W.arity → M) (c : M) :
+    (W.recode K).volRow x u c ↔ W.volRow z u c :=
+  K.recodeSet2_row W.volume_definable hx hz hK hc.2.2 u _
+
+/-- **Validity passes to the recoding** at keys with constant rows. -/
+theorem recode_valid (hW : W.Valid z) : (W.recode K).Valid x := by
+  have hr := recode_row hx hz hK hc
+  have hco := recode_coordRow hx hz hK hc
+  have hv := recode_volRow hx hz hK hc
+  refine ⟨⟨hx, fun u hu => ?_, fun u y h => ?_, fun y hy => ?_⟩, fun u y h => ?_, fun u hu => ?_,
+    fun u c h => ?_, fun u c c' h h0 h0' => ?_, ?_⟩
+  · obtain ⟨y, hy, huniq⟩ := hW.map.2.1 u ((hr u).mp hu)
+    exact ⟨y, (hco u y).mpr hy, fun y' h' => huniq y' ((hco u y').mp h')⟩
+  · exact (hr u).mpr (hW.map.2.2.1 u y ((hco u y).mp h))
+  · obtain ⟨hf, hle⟩ := hW.map.2.2.2 y hy
+    have hsub : {u : Fin (W.recode K).arity → M | Fin.append (Fin.append x u) y ∈ (W.recode K).coord} ⊆
+        {u | Fin.append (Fin.append z u) y ∈ W.coord} := fun u hu => (hco u y).mp hu
+    exact ⟨hf.subset hsub, (Set.ncard_le_ncard hsub hf).trans hle⟩
+  · exact hW.proper u y ((hco u y).mp h)
+  · obtain ⟨c, hc'⟩ := hW.vol_total u ((hr u).mp hu)
+    exact ⟨c, (hv u c).mpr hc'⟩
+  · obtain ⟨h1, h2⟩ := hW.vol_dom u c ((hv u c).mp h)
+    exact ⟨(hr u).mpr h1, h2⟩
+  · rw [hv u c']
+    exact hW.vol_same u c c' ((hv u c).mp h) h0 h0'
+  · obtain ⟨lo, hi, hb⟩ := hW.bounded
+    exact ⟨lo, hi, fun u hu => hb u ((hr u).mp hu)⟩
+
+end ChartSchema
+
 end DiamondIntegral.Section7.Lemma714Schema
