@@ -279,4 +279,77 @@ theorem famSchema_valid (hFin : ∀ t : Fin k → RVInfinity M, {u : Fin r → R
 
 end Valid
 
+/-! ### The fibre object is the extended row -/
+
+section FibreIso
+variable {T : LRV.Substructure M} (A : DefSet (rawMixedSpace (M := M) m r) (T : Set M))
+  (ω : Map A (DefSet.univ (rawGammaPresentation (M := M)) (T : Set M))) (π : Fin k → Fin r) (N : ℕ)
+  (a : Fin m → VF M)
+  (hFin : ∀ t : Fin k → RVInfinity M, {u : Fin r → RVInfinity M | (a, u) ∈ A.carrier ∧ u ∘ π = t}.Finite)
+  (hNZ : ∀ p ∈ A.carrier, ∀ i, (p.2 (π i)).val ≠ iRVZero)
+
+theorem baseAt_adjoin_real :
+    (baseAt (⟨(T : Set M), ∅⟩ : Base (M := M)) (vfValues a)).real ⊆ (KernelBaseChange.adjoin T a : Set M) := by
+  rintro x (hx | ⟨i, rfl⟩)
+  · exact KernelBaseChange.subset_adjoin a hx
+  · exact KernelBaseChange.coordinate_mem_adjoin a i
+
+theorem baseAt_adjoin_gamma :
+    (baseAt (⟨(T : Set M), ∅⟩ : Base (M := M)) (vfValues a)).gamma ⊆ (∅ : Set (Values.Gamma (M := M))) :=
+  subset_refl _
+
+theorem fibre_domain_eq :
+    (famSchema hc A ω π N).row (vfValues a) = rawDom (fibreObject T A ω a π hFin hNZ) := by
+  rw [fibre_rawDom]
+  ext u
+  exact famSchema_mem_row hc A ω π N a u
+
+theorem fibre_weight_eq (hF : (famSchema hc A ω π N).Valid (vfValues a)) (t : Fin r → RVInfinity M)
+    (ht : (a, t) ∈ A.carrier) :
+    rawVol (fibreObject T A ω a π hFin hNZ) (rvValues t) *
+        ∏ i, codeValue (rawCoord (fibreObject T A ω a π hFin hNZ) (rvValues t) i) =
+      (famSchema hc A ω π N).weightAt (vfValues a) (rvValues t) := by
+  have hrow : rvValues t ∈ (famSchema hc A ω π N).row (vfValues a) :=
+    (famSchema_mem_row hc A ω π N a _).mpr ⟨t, ht, rfl⟩
+  have hco : (famSchema hc A ω π N).coordAt (vfValues a) (rvValues t) = fun i => rvValues t (π i) :=
+    ((famSchema_coordRow hc A ω π N a _ _).mp (ChartSchema.coordRow_coordAt hF hrow)).2
+  obtain ⟨c, hcv⟩ := hF.vol_total _ hrow
+  have hv1 := ((ChartSchema.volRow_iff hF _ c).mp hcv).2.2
+  have hv2 := ((famSchema_volRow hc A ω π N a t ht c).mp hcv).2
+  unfold ChartSchema.weightAt
+  rw [fibre_rawVol A ω π a hFin hNZ t ht, fibre_rawCoord A ω π a hFin hNZ t ht, hco, ← hv1, hv2]
+
+/-- The chart of the fibre object over `S⟨a⟩` is the extended row of the family,
+by the identity map. -/
+def fibreIso (hF : (famSchema hc A ω π N).Valid (vfValues a)) :
+    Iso (chartOf hc (fibreObject T A ω a π hFin hNZ))
+      (extChart (C := ⟨(KernelBaseChange.adjoin T a : Set M), ∅⟩) (baseAt_adjoin_real a) (baseAt_adjoin_gamma a)
+        (famSchema hc A ω π N) hF) :=
+  isoOfMap (chartOf hc (fibreObject T A ω a π hFin hNZ))
+    (extChart (C := ⟨(KernelBaseChange.adjoin T a : Set M), ∅⟩) (baseAt_adjoin_real a) (baseAt_adjoin_gamma a)
+      (famSchema hc A ω π N) hF) (fun u => u)
+    (RVCoordinateMaps.coordinate_graph_definable _ _ (chartOf hc (fibreObject T A ω a π hFin hNZ)).domain_definable
+      (id : Fin r → Fin r))
+    (by
+      have he := fibre_domain_eq hc A ω π N a hFin hNZ
+      change Set.BijOn (fun u => u) (rawDom (fibreObject T A ω a π hFin hNZ)) ((famSchema hc A ω π N).row (vfValues a))
+      rw [he]
+      exact Set.bijOn_id _)
+    (by
+      intro u hu
+      have hu' : u ∈ rawDom (fibreObject T A ω a π hFin hNZ) := hu
+      rw [fibre_rawDom] at hu'
+      obtain ⟨t, ht, he⟩ := hu'
+      subst he
+      exact fibre_weight_eq hc A ω π N a hFin hNZ hF t ht)
+
+theorem cls_fibre_eq (hF : (famSchema hc A ω π N).Valid (vfValues a))
+    (hU : (fibreObject T A ω a π hFin hNZ).doublyBounded) :
+    cls (objOf hc (KernelBaseChange.adjoin T a) (fibreObject T A ω a π hFin hNZ) hU) =
+      cls (extObj (C := ⟨(KernelBaseChange.adjoin T a : Set M), ∅⟩) (baseAt_adjoin_real a) (baseAt_adjoin_gamma a)
+        (famSchema hc A ω π N) hF) :=
+  cls_eq_of_iso (fibreIso hc A ω π N a hFin hNZ hF)
+
+end FibreIso
+
 end DiamondIntegral.Section7.Lemma714Schema
