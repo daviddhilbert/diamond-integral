@@ -829,7 +829,7 @@ def sliceObject (X : DefSet (rawMixedSpace (M := M) (m + 1) r) S)
 
 /-- The slice of an object of `μVF^◇[m + 1]` over `S`, as an object of
 `μVF^◇[1]` over `S'`. -/
-def VFObject.slice (A : VFObject (M := M) S (m + 1)) (b : Fin m → VF M)
+def sliceVFObject (A : VFObject (M := M) S (m + 1)) (b : Fin m → VF M)
     (hS : S ∪ Set.range (vfValues b) ⊆ S') : VFObject (M := M) S' 1 :=
   sliceObject A.carrier A.form A.proper b hS (sliceFormCovariant_of A.form A.formCovariant b hS)
     A.finiteRV
