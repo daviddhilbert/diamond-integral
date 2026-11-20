@@ -164,6 +164,7 @@ import «section 7».TautologicalLifts
 import «section 7».Proposition724Zero
 import «section 7».Theorem726
 import «section 7».DiamondProducts
+import «section 7».LiftProducts
 
 /-! Entry point for the Section 7 formalization (integrating proper invariant
 sets), following the adopted manuscript with bounded variable apertures. -/
