@@ -470,11 +470,11 @@
     "section 2/ZeroFaces.lean": "9ea729bcee364da066593709349c1035f0c7bc85b6a0933a9f68d3b5c95c2834",
     "section 2/ZeroFacesVF.lean": "86dccef9f23b6ee8ebaa973ba8ec2a18bafaa8f30bb5140b5266950817f8cb56",
     "DiamondIntegral.lean": "66d02be99d3e377f670ad569f36274aed59d735366ebb4b157993bdb166b553e",
-    "lakefile.toml": "7c83ffff6f9e68e12e8fded70a0441c3c1edb2c72c8923516b30d0d3f40eecfa",
+    "lakefile.toml": "e8ddd7bcdbe01b692997f314c0a9cc42833e948753ef154de7b68d55d9dc7322",
     "lake-manifest.json": "4f0ab2b8a2144ce82d2d8910ec2beb6cf3f21fffcd610bd56cb0415b5bf88ac6",
     "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
     "ACCEPTED-CITED-RESULTS.md": "2a6f42ef5f82e18d502ec9bb71d626675f5e24eae45d44291d75b23d9ee906c9",
-    "section 2/verify.py": "e5b09d1dffb9c0195f5bb0abd43e6ce5035594fdb5ae062c8877150e227c2585",
+    "section 2/verify.py": "2c547ba445e7c3db326aa25ecae690e7003397b6225141e77963f844dd333d85",
     "section 2/prepare-reuse.py": "b9c2ec8d840012e664227016f0d2a11a7651eddb6fb8d2e6ab4a630ddfcd60e2",
     "section 2/reuse/manifest.json": "90aaef8aade66469a14b4da0c24618fc03da590eaa8ad386ad81b00d543a22f8",
     "section 2/reuse/headlines.json": "134352eba03803fce202ad91e5d4428e396fce0f5720d7f74ccebba77892fb04",
@@ -677,7 +677,7 @@
         "DiamondIntegral.Section2.lemma_2_41_gamma",
         "DiamondIntegral.Section2.lemma_2_41"
       ],
-      "status": "Explicit author-accepted background from the context of [18, Section 3]; full guarded Gamma-code graph, characteristic zero and nontrivial ground Gamma retained; finite power-law boundedness proved here, full RV-domain 2.41 not assumed",
+      "status": "Proved interface: GammaPiecewiseRationalAffineInput is the theorem DiamondIntegral.Section5.GammaQE.gamma_piecewise_rational_affine (from RV quantifier elimination, ACVF only), and section 3/Section2GammaLinearityDischarged.lean gives input-free _discharged versions of 2.41, 2.47 and 2.53. The original Section 2 statements still take it as a parameter; full guarded Gamma-code graph, characteristic zero and nontrivial ground Gamma retained; finite power-law boundedness proved here, full RV-domain 2.41 not assumed",
       "scope_record": "section 2/verification/CITED-INPUTS.md",
       "upstream_reference": {
         "repository": "daviddhilbert/integration-in-ACVF",

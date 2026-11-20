@@ -86,8 +86,11 @@ computations; prove Lemma 5.12 and everything after it.
     `tuple_witness_iff_fibre_only_witness`. The factor order is `Z × α^♯`
     rather than the paper's `α^♯ × Z` (a coordinate permutation).
 - Not pursued:
-  - Remark 5.16 (polyhedral base pieces; the polyhedral facts the inflated
-    Fubini proof needs will be proved there);
+  - Remark 5.16 (polyhedral base pieces). Its earlier stated reason, that the
+    polyhedral facts needed by the inflated Fubini proof would be proved
+    there, is stale (updated November 19): the inflated-family Fubini uses
+    Section 4's Γ-Fubini (`integratePrefix`, `integrateAll_factor`) for the
+    base partition instead, so the remark is not needed;
   - Remark 5.18's examples and its equality reformulation;
   - the global form of the (twist:C) formula, which is internal to the proof
     of 5.14.

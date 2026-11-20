@@ -23,10 +23,12 @@ consequences that must remain visible while Section 7 is revised.
 **Upstream migration, November 16:** see the
 [corrected-pin compatibility record](verification/upstream-weighted-zero-upgrade/README.md)
 and its current `status.json`. Both corrected releases are published on main.
-The local weighted Gamma-zero conventions are retained. The four Section 3
-Gamma-valued lift/kernel records remain precise accepted cited inputs: the
-corrected upstream Section 7 kernel has RV-valued densities and is not a producer
-for those records. This remains separate from this paper's bounded-aperture kernel.
+The local weighted Gamma-zero conventions are retained. (Superseded by the
+November 17 update at the top: the four Section 3 Gamma-valued lift/kernel
+records now have proved producers and are not accepted cited inputs.) The
+corrected upstream Section 7 kernel has RV-valued densities and is not a
+producer for those records; the producers are local. This remains separate
+from this paper's bounded-aperture kernel.
 
 ## Read these sources first
 
@@ -53,8 +55,8 @@ fresh source-hash receipts take precedence over those historical notes.
 | Section | Current status | Main records and next responsibility |
 | --- | --- | --- |
 | 1. Introduction | Introductory claims are implemented in their substantive sections; there is no separate Section 1 Lean library. The aperture-dependent bounded-integral target and diagrams now use the relative ideal. | Reconcile the introduction with the final Section 7 and Section 8 results. No blanket claim is made that every introductory referee annotation has been resolved. |
-| 2. Technicalities | All tracked numbered targets are complete in their documented parameter/model scopes. The fresh audit passes: 850 public section theorems and 378 selected reuse declarations. All 30 Section 2 annotations were resolved. | [Coverage](<section 2/COVERAGE.md>), [status](<section 2/STATUS.md>), [receipt](<section 2/verification/status.json>), [upstream links](<section 2/verification/UPSTREAM-LINKS.md>). Preserve the original-base and finite-disc-name hypotheses. |
-| 3. HK-style integral and categories | Complete in the recorded paper contexts, with explicit author-accepted citation boundaries. Corrected positive tensor presentations, coefficient monomorphisms, full-ground affine classifications, degree-zero comparisons and integral comparisons are checked. | [Status](<section 3/STATUS.md>), [targets](<section 3/TARGETS.md>), [paper-to-Lean map](<section 3/verification/paper-targets.json>), [receipt](<section 3/verification/VERIFICATION.json>). The map records 21 manuscript targets and 119 declaration links. Do not turn a retained cited interface into an unconditional theorem. |
+| 2. Technicalities | All tracked numbered targets are complete in their documented parameter/model scopes. The fresh audit passes: 970 public section theorems and 378 selected reuse declarations (receipt as of November 19). All 30 Section 2 annotations were resolved. | [Coverage](<section 2/COVERAGE.md>), [status](<section 2/STATUS.md>), [receipt](<section 2/verification/status.json>), [upstream links](<section 2/verification/UPSTREAM-LINKS.md>). Preserve the original-base and finite-disc-name hypotheses. |
+| 3. HK-style integral and categories | Complete in the recorded paper contexts, with explicit author-accepted citation boundaries. Corrected positive tensor presentations, coefficient monomorphisms, full-ground affine classifications, degree-zero comparisons and integral comparisons are checked. | [Status](<section 3/STATUS.md>), [targets](<section 3/TARGETS.md>), [paper-to-Lean map](<section 3/verification/paper-targets.json>), [receipt](<section 3/verification/VERIFICATION.json>). The map records 21 manuscript targets and 132 declaration links. Do not turn a retained cited interface into an unconditional theorem. |
 | 4. Uniform retraction to RES | Complete in its recorded contexts, including the direct connection to the finalized Section 3 proofs. The aperture revision adds the independent relative ideal, its compatibility proof and actual graded quotient/retraction. The fresh audit checks 5069 declarations. | [Coverage](<section 4/COVERAGE.md>), [status](<section 4/STATUS.md>), [receipt](<section 4/verification/status.json>), [Section 3 adapters](<section 4/Section3T001Integration.lean>), [linked retraction statements](<section 4/Section3LinkedRetractionStatements.lean>). Keep the old scalar ideal distinct from the new relative ideal. |
 | 5. RV decomposition and Fubini | The author's requested scope is complete: original-language Lemma 5.12, the concrete Puiseux/Galois work around 5.13, bounded and geometric Fubini 5.17, and the actual-variety corollary. Both former Gamma-linearity and exact ground lifting inputs are discharged. | [Current README header](<section 5/README.md>), [discharged entry points](<section 5/Section5DischargedInputs.lean>), [variety corollary](<section 5/VarietyCorollaryDischarged.lean>), [receipt](<section 5/verification/status.json>). Cross-section computations and the computational results cited from [19] were excluded from this requested scope. Do not silently expand that completion claim. |
 | 6. Special covariant bijections | Complete under revised Definition 6.11 and the standing hypotheses. The fresh audit checks 5103 complete public declaration types and transitive axiom records. Definition 6.11 and Lemma 6.38 were applied together; 6.19 and the other existence constructions remain valid constant-aperture witnesses. | [README](<section 6/README.md>), [review record](<section 6/reference/REVIEW.md>), [receipt](<section 6/verification/status.json>), [applied review PDF](<section 6/reference/review/section6-aperture-revision-applied.pdf>). Reuse these checked constructions rather than reopening completed proofs without a concrete incompatibility. |
@@ -371,7 +373,7 @@ Keep the checked package revisions in [lake-manifest.json](lake-manifest.json):
 | special_transformations | 932a5075ad91a825d4b8c1bf1396b2063e44fe40 |
 | integration_in_acvf | 5a69a5e4f57045f123fdd593889a0005e7b4e16f |
 | hilbert-mathlib | 88bb3386f616779bfd87eb453d8a7c899ad63961 |
-| fubini_theorems | 05587564f70fd0015fbb7b7dbf4a8d8c4b0b64f5 |
+| fubini_theorems | f14caef6822b4600e74cefaf93905ca94c758fe6 |
 
 Dependency preparation checks the published 250 completed Section 5 files and
 39 proper-open-radius sources, then restores only the two recorded Section 6
