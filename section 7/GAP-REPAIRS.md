@@ -196,3 +196,40 @@ formalization convention. No manuscript edit has been made for them.
       In the balanced kind the shift is automatically genuine: a balanced
       positioning function maps the first projection onto the second, which lies
       in one RV-disc (`BalancedKinds.preparedInput`).
+
+15. **Proposition 7.24, the proof of (∗) (formal route, 2026-11-20).** Omitted
+    justifications, not errors.
+    - "We may assume that the two contractions have the same first stage": for
+      orders `σ` and `σ ∘ s`, with `s` fixing the first contracted position, the
+      common first stage is the conjugate of the first stage of `σ` by `s`
+      (`StageReindexing.reindexStage`), grafted in the order `σ ∘ s`
+      (`OrderGrafts.graftOrd`). Both classes become head-start-1 classes of
+      contractions of one first-stage set, in the orders `1` and `s'`.
+    - The fibre `T_h(B)_a` is the label slice of the first-stage set at
+      `rv(a)` (`FibreContractions.mem_sliceAt`). Its form is covariant
+      (`FirstStageObjects.firstForm_covariant`), but the whole first-stage set is
+      not an object of `μVF^◇[k − 1]` (finite RV fibres only modulo the leading
+      label); the label slices are.
+    - The restriction of the remaining stages to the fibre is a base change to
+      `S⟨a⟩` (`StageBaseChange.extendContraction`) followed by restriction to a
+      label-saturated piece (`RestrictContractions.restrictContraction`).
+    - The glued sets `⋃_a a × U_a` are the RV-disc bundles over the RV targets
+      along the label carrying the leading label; their tautological
+      contractions (`TautologicalContractions.taut`) have the classes of the two
+      contractions (`cls_taut`).
+
+16. **Proposition 7.24, the arrows of an isomorphism (open, 2026-11-20).** The
+    proof applies Corollary 7.15 to "a sequence of relatively unary
+    `μVF^◇[k]`-morphisms" `μL U = B_1 → … → B_{l+1} = μL V`. In the formal
+    category (Section 6, approved R102), a morphism carries a factorization of
+    its underlying map into relatively unary proper covariant homeomorphisms
+    between definable sets, and the measure identity only for the composite;
+    the intermediate sets carry no forms (Section 6 GAP-REPAIRS, design note to
+    Definition 6.34). To apply Corollary 7.15 to each factor, the intermediate
+    sets need covariant forms for which every factor satisfies the measure
+    identity. With the forms transported from one end, this amounts to: the
+    valuation of the Jacobian of a relatively unary proper covariant
+    homeomorphism agrees, off a set of smaller VF-dimension, with a function
+    constant on boxes of a named radius (a one-variable Jacobian property on the
+    fibres). Question to the author pending: prove this lemma, or another route.
+

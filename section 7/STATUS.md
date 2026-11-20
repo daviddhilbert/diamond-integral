@@ -126,6 +126,15 @@ arbitrary parameter base and take no input beyond the ACVF model.
     coordinates in any order). Its class is the fibre class of the second-stage
     set (`SliceContractions.cls_sliceMOC`), and 7.23 for n = 2 over `S⟨b⟩` gives
     the fibre hypothesis (`SliceContractions.fibre_ispRel_at`).
+- **Proposition 7.24 (2026-11-20).**
+  - (∗) done, hypothesis-free (`OrderIndependence.star`): standard contractions of
+    an object of `μVF^◇[k]` over a VF-generated substructure base in any two orders
+    have `μIsp^db`-related classes. Tools: `StageReindexing` (conjugate stage),
+    `OrderGrafts` (graft in a permuted order), `TautologicalContractions`,
+    `FirstStageObjects`, `StageBaseChange`, `FibreContractions` (GAP-REPAIRS 15).
+  - Open: the arrows of an isomorphism `μL U ≅ μL V`. Section 6 morphisms factor
+    only their maps; applying Corollary 7.15 to each factor needs forms on the
+    intermediate sets (GAP-REPAIRS 16, question to the author).
 - Remark 7.28 done (`Remark728.remark_7_28`, `remark_7_28_zero`), with the
   bridges the author approved on 2026-11-19: strong homogeneity (from the
   Section 3 ground context), the forgetful map to Section 3's VF classes, and
@@ -137,5 +146,6 @@ arbitrary parameter base and take no input beyond the ACVF model.
 
 ## Next
 
-7.24–7.27, as in PLAN.md (7.24 can reuse the 7.15 and 7.23 modules). Product compatibility (7.10) and the object-level converse for
+The rest of 7.24 (after the author's decision on GAP-REPAIRS 16), then 7.25–7.27,
+as in PLAN.md. Product compatibility (7.10) and the object-level converse for
 Definition 7.2 remain open side items.

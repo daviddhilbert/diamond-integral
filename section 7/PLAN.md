@@ -572,6 +572,9 @@ intended Lean statement; ⚑ marks a flag that is also listed in §5.
   `lemma_6_27`, `liftHom`.
 - **New.** `Isomorphic G (chartObject U) (chartObject V) ↔ MuIsp T k U V`, for
   every k, base-polymorphic (needed for the induction).
+- **Status (2026-11-20).** (∗) done (`OrderIndependence.star`, GAP-REPAIRS 15).
+  The per-arrow step needs forms on the intermediate sets of a Section 6
+  factorization (GAP-REPAIRS 16); awaiting the author's choice of route.
 
 ### 7.25 Remark `thekernel`
 - **Route.**
