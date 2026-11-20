@@ -6,7 +6,7 @@
     "url": "https://arxiv.org/pdf/0809.0473",
     "version": "v2, 29 December 2010"
   },
-  "scope": "Small VF-generated real-base specializations and complete Gamma-ground interfaces for unmeasured, bounded and measured lifts. The interfaces remain explicit and replaceable as parameters of the generic constructions. Same-ground essential measured groupoids, pointwise cofull representatives, graded and filtered presentation comparisons and the documented VF/Gamma-generated context applications are proved locally. Independently named disc imaginaries and concrete section 4 categories lie outside this section 3 certificate. The four measured interfaces are discharged by local proofs (see GAMMA-KERNEL-COMPLETION.md); as of November 18 the Gamma-ground unmeasured, Gamma-ground bounded and ordinary bounded interfaces are also produced (see their entries and GAP-REPAIRS.md). Only YinUnmeasuredLiftInput (ordinary global, unused) and the [19] YinGammaAffineInput (retained at its stated real VF-generated scope) have no producer.",
+  "scope": "Small VF-generated real-base specializations and complete Gamma-ground interfaces for unmeasured, bounded and measured lifts. The interfaces remain explicit and replaceable as parameters of the generic constructions. Same-ground essential measured groupoids, pointwise cofull representatives, graded and filtered presentation comparisons and the documented VF/Gamma-generated context applications are proved locally. Independently named disc imaginaries and concrete section 4 categories lie outside this section 3 certificate. The four measured interfaces are discharged by local proofs (see GAMMA-KERNEL-COMPLETION.md); as of November 18 the Gamma-ground unmeasured, Gamma-ground bounded and ordinary bounded interfaces are also produced (see their entries and GAP-REPAIRS.md). The ordinary global YinUnmeasuredLiftInput is produced as of November 19 (OrdinaryGlobalLiftInput.lean). Only the [19] YinGammaAffineInput (retained at its stated real VF-generated scope) has no producer.",
   "context": [
     "BaseContext.model00",
     "BaseContext.uncountable",
@@ -33,8 +33,10 @@
         "surjectivity",
         "kernel equal to rvSpecialCongruence"
       ],
-      "status": "NOT_PRODUCED_UNUSED",
-      "note": "The ordinary global record is not produced and is not used downstream. Its Gamma-ground counterpart is produced by DiamondIntegral.Section5.completed18GroundLiftInput."
+      "status": "DISCHARGED_BY_LOCAL_PROOF",
+      "producer": "DiamondIntegral.Section3.MeasuredRealGround.completedOrdinaryLiftInput",
+      "producer_module": "OrdinaryGlobalLiftInput.lean",
+      "boundary": "Produced November 19 as the bounded transfer was: the ordinary and Gamma-ground positive VF semirings are identified (vfSemiringEquiv), and the Gamma-ground global record DiamondIntegral.Section5.completed18GroundLiftInput over measuredRealGroundContext transfers through the identified RV semirings and special congruences. Not used downstream. Axioms: propext, Classical.choice, Quot.sound."
     },
     {
       "declaration": "DiamondIntegral.Section3.YinBoundedUnmeasuredLiftInput",

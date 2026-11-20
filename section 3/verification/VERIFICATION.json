@@ -1295,6 +1295,7 @@
     "section 3/NativeTensorProductPartitions.lean": "306fbc066c97cfc689e966dd4019403dca628ed527f9df5d2448bd2367c4e949",
     "section 3/NormalizedMeasuredTensorPieces.lean": "c2930f1592b196738663eeea7ce9c15342b110fde4fd66ea87ae78cdc5e69f15",
     "section 3/OrderBoundary.lean": "9d855545e559dcbcbdae8122993afe6dae12ad0f77575e7e370cfe788d17a6ad",
+    "section 3/OrdinaryGlobalLiftInput.lean": "09a11a98bdf961e298f8cb30bf8d81e662e3bebd6e742a582a2d7f5882f598c1",
     "section 3/PatternLiteralCharacters.lean": "d7e6491401e6874976f50194730545afa339d94108ffafc252d8bdbadb0b07c9",
     "section 3/PositivePresentationSurjectivity.lean": "c996f5c223be754bd5884031dfb779369d79411aa39ee68a6c68c80cd64bc5e3",
     "section 3/PositiveTensorDescent.lean": "d502ae560ab723023e248eebee0e8ccc8d93310df558bc81f5d0b9ff0e512ee9",
@@ -1480,7 +1481,7 @@
     "section 3/ResidueScaledEquality.lean": "81663b4591da939bc692a48d2b50dc960320b5abb4087fb2b3a816a7809312df",
     "section 3/ResidueTupleGammaClosure.lean": "ce7c46762ac287cf0263d3ff639a96980f266e82f59fc68e8d17f8bafa4fe88c",
     "section 3/RingPresentationDescent.lean": "21a175d16032720e7b1718e919a8428f612ef6c800d03c4ce6422e77a0ebb493",
-    "section 3/Section.lean": "1c2ee54eb27435496aeab8215d1e69903f0601f2ffd63c14744dd4a6e1b69c5e",
+    "section 3/Section.lean": "1f6f8cc410c939035580026144c081a69f999c22f60173da64601b730533b677",
     "section 3/Section2CitedInputsDischarged.lean": "81799c15077a2bdfa59fe1b98c2001ced01269d85b386a24b8486f86c73fdd88",
     "section 3/Section2GammaLinearityDischarged.lean": "dd04a4c06c06c987f89addd0f46eea2f0b62c1b003448493deba7972e8504c27",
     "section 3/SemiringRegionCongruence.lean": "60761114a57223ca77b6d96341a007631f1942d951dfa4910482a18339fc11e1",
@@ -1549,10 +1550,10 @@
     "section 3/reuse/integration-manifest.json": "8acbe049ad646ddbca83a56887bab488c70075bc94df9874993cd629ed5e0eed",
     "section 3/reuse/integration-open-radius.patch": "4c78af253a893a12b7009e584dce0b56ac1faa12d17af92f79ec65d280ccf00b",
     "section 3/verification/integration-reuse.json": "a767afe7dd971480728339d554af1b7497b61d30a8ee81ca7dd4a7479cca5ddd",
-    "section 3/verification/cited-inputs.json": "04171ab986abc3104e870c8a36b7d7acb40af55250d5c2a3d4f87d9de3497c6f",
+    "section 3/verification/cited-inputs.json": "9bb2c36016ed441e27838c1eef11d3622c246478581b534837430f999e07cbe1",
     "section 3/verification/paper-targets.json": "3a894f052ef26ce41f66be9d7cf5b7f6134b82b8c9380b1401f4ebba78f82e11",
     "DiamondIntegral.lean": "66d02be99d3e377f670ad569f36274aed59d735366ebb4b157993bdb166b553e",
-    "lakefile.toml": "7c83ffff6f9e68e12e8fded70a0441c3c1edb2c72c8923516b30d0d3f40eecfa",
+    "lakefile.toml": "e8ddd7bcdbe01b692997f314c0a9cc42833e948753ef154de7b68d55d9dc7322",
     "lake-manifest.json": "4f0ab2b8a2144ce82d2d8910ec2beb6cf3f21fffcd610bd56cb0415b5bf88ac6",
     "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
     "ACCEPTED-CITED-RESULTS.md": "2a6f42ef5f82e18d502ec9bb71d626675f5e24eae45d44291d75b23d9ee906c9"
@@ -1626,8 +1627,8 @@
     }
   },
   "manuscript_sha256": "5d006b61d936dc734e38afc9e4b13eded7aba602989a46c6a863ee89c067a259",
-  "audit_source_sha256": "a6efddf47efc1cb67d288ff0c3b18a2e70602fef6ea90d23eaf75a7b0cea597b",
-  "audit_log_sha256": "987fa46f8b3484f6cab9df4a8880a09620690628f19a51e2a8411afc6ee51b99",
+  "audit_source_sha256": "b6a7c8ffcc1a1cf0c55e1deb678c8111dc87e15b740b18315d9eb592cad5905f",
+  "audit_log_sha256": "ec339ed96cf8d15954bfca6afac7f43ce10b147f270326f5a773937dc05c6f97",
   "public_theorems": [
     "DiamondIntegral.Section3.finite_parameters_countable_algclosed_subfield",
     "DiamondIntegral.Section3.acf_definable_countable_algclosed_coefficients",
@@ -4764,6 +4765,11 @@
     "DiamondIntegral.Section3.orderBoundary_eq_minimal_controller",
     "DiamondIntegral.Section3.orderBoundary_finite_of_controller",
     "DiamondIntegral.Section3.orderBoundary_controls",
+    "DiamondIntegral.Section3.MeasuredRealGround.rvSemiringFrom_to",
+    "DiamondIntegral.Section3.MeasuredRealGround.vfSemiringFrom_class",
+    "DiamondIntegral.Section3.MeasuredRealGround.vfSemiringTo_class",
+    "DiamondIntegral.Section3.MeasuredRealGround.vfSemiringTo_from",
+    "DiamondIntegral.Section3.MeasuredRealGround.vfSemiringFrom_to",
     "DiamondIntegral.Section3.literalPatternCell_own",
     "DiamondIntegral.Section3.literalPatternCell_unique",
     "DiamondIntegral.Section3.literalPatternCell_iff_of_values",
@@ -7878,6 +7884,14 @@
     "DiamondIntegral.Section3.GammaGroundNormalizedMeasuredTensorPiece",
     "DiamondIntegral.Section3.GammaGroundNormalizedMeasuredTensorPiece.value",
     "DiamondIntegral.Section3.orderBoundary",
+    "DiamondIntegral.Section3.MeasuredRealGround.vfFiniteFromReal",
+    "DiamondIntegral.Section3.MeasuredRealGround.vfFiniteToReal",
+    "DiamondIntegral.Section3.MeasuredRealGround.vfSemiringFromInvariant",
+    "DiamondIntegral.Section3.MeasuredRealGround.vfSemiringFrom",
+    "DiamondIntegral.Section3.MeasuredRealGround.vfSemiringToInvariant",
+    "DiamondIntegral.Section3.MeasuredRealGround.vfSemiringTo",
+    "DiamondIntegral.Section3.MeasuredRealGround.vfSemiringEquiv",
+    "DiamondIntegral.Section3.MeasuredRealGround.completedOrdinaryLiftInput",
     "DiamondIntegral.Section3.LiteralValuePattern",
     "DiamondIntegral.Section3.literalPatternCell",
     "DiamondIntegral.Section3.literalPatternCharacters",
@@ -24135,6 +24149,31 @@
       "Quot.sound",
       "propext"
     ],
+    "DiamondIntegral.Section3.MeasuredRealGround.rvSemiringFrom_to": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section3.MeasuredRealGround.vfSemiringFrom_class": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section3.MeasuredRealGround.vfSemiringTo_class": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section3.MeasuredRealGround.vfSemiringTo_from": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section3.MeasuredRealGround.vfSemiringFrom_to": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
     "DiamondIntegral.Section3.literalPatternCell_own": [
       "Classical.choice",
       "Quot.sound",
@@ -39515,6 +39554,46 @@
       "propext"
     ],
     "DiamondIntegral.Section3.orderBoundary": [
+      "propext"
+    ],
+    "DiamondIntegral.Section3.MeasuredRealGround.vfFiniteFromReal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section3.MeasuredRealGround.vfFiniteToReal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section3.MeasuredRealGround.vfSemiringFromInvariant": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section3.MeasuredRealGround.vfSemiringFrom": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section3.MeasuredRealGround.vfSemiringToInvariant": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section3.MeasuredRealGround.vfSemiringTo": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section3.MeasuredRealGround.vfSemiringEquiv": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section3.MeasuredRealGround.completedOrdinaryLiftInput": [
+      "Classical.choice",
+      "Quot.sound",
       "propext"
     ],
     "DiamondIntegral.Section3.LiteralValuePattern": [

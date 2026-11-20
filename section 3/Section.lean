@@ -1817,6 +1817,7 @@ import «section 3».BoundedNativeIntegral
 import «section 3».BoundedCompletedInputs
 
 import «section 3».BoundedOrdinaryInputs
+import «section 3».OrdinaryGlobalLiftInput
 
 import «section 3».GammaGroundRVBoundedImages
 import «section 3».GammaDivisibleHull
