@@ -148,6 +148,7 @@ import «section 7».Lemma723General
 import «section 7».TautologicalContractions
 import «section 7».FirstStageObjects
 import «section 7».StageReindexing
+import «section 7».StageBaseChange
 
 /-! Entry point for the Section 7 formalization (integrating proper invariant
 sets), following the adopted manuscript with bounded variable apertures. -/
