@@ -141,6 +141,7 @@ import «section 7».Lemma720UniformDef
 import «section 7».Lemma720Main
 import «section 7».ProvedResults
 import «section 7».ProgramContractions
+import «section 7».TwoDimSlices
 
 /-! Entry point for the Section 7 formalization (integrating proper invariant
 sets), following the adopted manuscript with bounded variable apertures. -/
