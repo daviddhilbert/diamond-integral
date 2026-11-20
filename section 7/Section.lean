@@ -161,6 +161,7 @@ import «section 7».RingClasses
 import «section 7».DiamondRing
 import «section 7».ScissorClasses
 import «section 7».TautologicalLifts
+import «section 7».Proposition724Zero
 
 /-! Entry point for the Section 7 formalization (integrating proper invariant
 sets), following the adopted manuscript with bounded variable apertures. -/
