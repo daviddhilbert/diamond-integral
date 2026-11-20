@@ -285,4 +285,272 @@ theorem RowMap.exists_isoSchema {d : ℕ} {X Y : ChartSchema B sp d} (hX : X.Val
 
 end RowMaps
 
+/-! ### Pieces of coproducts and preimages -/
+
+section Pieces
+variable {C : Base (M := M)} {k : ℕ}
+open RVChartDisjointUnion RVChartRestrictions RVTaggedCoproduct
+
+/-- The preimage of a definable piece of the target under a measured isomorphism. -/
+def prePiece {x y : Chart C k} (G : Iso x y) (J : Set (Fin y.arity → M)) : Set (Fin x.arity → M) :=
+  x.domain ∩ {u | isoMap G u ∈ J}
+
+theorem prePiece_definable {x y : Chart C k} (G : Iso x y) (J : Set (Fin y.arity → M))
+    (hJ : DefinableOverBase C (fun _ : Fin y.arity => .rv) J) :
+    DefinableOverBase C (fun _ : Fin x.arity => .rv) (prePiece G J) := by
+  have h0 := ((isoMap_graph G).inter (hJ.preimage_real (fun _ : Fin (y.arity + x.arity) => .rv)
+    (tailIndex y.arity x.arity))).image_real (headIndex y.arity x.arity)
+  have h : DefinableOverBase C (fun _ : Fin x.arity => .rv) _ := h0
+  convert h using 1
+  ext u
+  constructor
+  · rintro ⟨hu, hJu⟩
+    refine ⟨join y.arity x.arity u (isoMap G u), ⟨⟨?_, ?_⟩, ?_, ?_⟩, ?_⟩
+    · rw [join_comp_head]; exact hu
+    · rw [join_comp_head, join_comp_tail]
+    · rw [join_comp_tail]; exact hJu
+    · apply GammaBoundedProducts.all_coordinates y.arity x.arity (fun x => sortEval SortTag.rv x)
+      · intro i; rw [join_head]; exact x.domain_definable.proper u hu i
+      · intro i; rw [join_tail]; exact y.domain_definable.proper _ ((isoMap_bijOn G).1 hu) i
+    · exact join_comp_head _ _
+  · rintro ⟨w, ⟨⟨hw1, hw2⟩, hJw, -⟩, rfl⟩
+    refine ⟨hw1, ?_⟩
+    change isoMap G (w ∘ headIndex y.arity x.arity) ∈ J
+    rw [hw2]
+    exact hJw
+
+theorem prePiece_bijOn {x y : Chart C k} (G : Iso x y) (J : Set (Fin y.arity → M)) :
+    Set.BijOn (isoMap G) (prePiece G J) (y.domain ∩ J) := by
+  refine ⟨fun u hu => ⟨(isoMap_bijOn G).1 hu.1, hu.2⟩, (isoMap_bijOn G).2.1.mono (fun u hu => hu.1), ?_⟩
+  rintro v ⟨hv, hJv⟩
+  obtain ⟨u, hu, rfl⟩ := (isoMap_bijOn G).2.2 hv
+  exact ⟨u, ⟨hu, hJv⟩, rfl⟩
+
+theorem prePiece_compl_bijOn {x y : Chart C k} (G : Iso x y) (J : Set (Fin y.arity → M)) :
+    Set.BijOn (isoMap G) (x.domain \ prePiece G J) (y.domain \ J) := by
+  refine ⟨fun u hu => ⟨(isoMap_bijOn G).1 hu.1, fun h => hu.2 ⟨hu.1, h⟩⟩,
+    (isoMap_bijOn G).2.1.mono (fun u hu => hu.1), ?_⟩
+  rintro v ⟨hv, hJv⟩
+  obtain ⟨u, hu, rfl⟩ := (isoMap_bijOn G).2.2 hv
+  exact ⟨u, ⟨hu, fun h => hJv h.2⟩, rfl⟩
+
+theorem coprodInsideLeft_bijOn (a b : Chart C k) :
+    Set.BijOn (isoMap (coprodInsideLeft a b)) ((coproduct a b).domain ∩ (L a b).domain) a.domain :=
+  isoMap_bijOn (coprodInsideLeft a b)
+
+theorem coprodOutsideLeft_bijOn (a b : Chart C k) :
+    Set.BijOn (isoMap (coprodOutsideLeft a b)) ((coproduct a b).domain \ (L a b).domain) b.domain :=
+  isoMap_bijOn (coprodOutsideLeft a b)
+
+theorem coprodInsideRight_bijOn (a b : Chart C k) :
+    Set.BijOn (isoMap (coprodInsideRight a b)) ((coproduct a b).domain ∩ (R a b).domain) b.domain :=
+  isoMap_bijOn (coprodInsideRight a b)
+
+end Pieces
+
+/-! ### Facts about promoted data -/
+
+section PromoteDatumFacts
+variable {C : Base (M := M)} {z : Fin p → M} (hz : ∀ i, sortEval (sp i) (z i)) (hC : Promotable B C z)
+  {κ : Cardinal} (hκ : Cardinal.aleph0 ≤ κ) (hs : Saturated M κ) (hreal : Cardinal.mk (baseAt B z).real < κ)
+  (hgamma : Cardinal.mk (baseAt B z).gamma < κ) {k : ℕ} (D : AnnularDatum C k)
+
+theorem promoteDatum_row : (promoteDatum hz hC hκ hs hreal hgamma D).chart.row z = D.chart.domain :=
+  promoteDatum0_row hz hC hκ hs hreal hgamma D
+
+theorem promoteDatum_coordAt {u : Fin D.chart.arity → M} (hu : u ∈ D.chart.domain) :
+    (promoteDatum hz hC hκ hs hreal hgamma D).chart.coordAt z u = D.chart.coordinate u := by
+  have hv := (promoteDatum_valid hz hC hκ hs hreal hgamma D).chart
+  have hu' : u ∈ (promoteDatum hz hC hκ hs hreal hgamma D).chart.row z := by
+    rw [promoteDatum_row]; exact hu
+  exact ((promoteDatum0_coordRow hz hC hκ hs hreal hgamma D u _).mp (ChartSchema.coordRow_coordAt hv hu')).2.symm
+
+theorem promoteDatum_volAt {u : Fin D.chart.arity → M} (hu : u ∈ D.chart.domain) :
+    (promoteDatum hz hC hκ hs hreal hgamma D).chart.volAt z u = D.chart.volume u := by
+  have hv := (promoteDatum_valid hz hC hκ hs hreal hgamma D).chart
+  have hu' : u ∈ (promoteDatum hz hC hκ hs hreal hgamma D).chart.row z := by
+    rw [promoteDatum_row]; exact hu
+  obtain ⟨c, hc⟩ := hv.vol_total u hu'
+  rw [← ((ChartSchema.volRow_iff hv u c).mp hc).2.2]
+  exact ((promoteChart_volRow hz hC D.chart _ u c).mp hc).2.2
+
+theorem promoteDatum_apRow (u : Fin D.chart.arity → M) (t : M) :
+    (promoteDatum hz hC hκ hs hreal hgamma D).apRow z u t ↔ u ∈ D.chart.domain ∧ D.aperture.aperture u = t :=
+  promoteDatum0_apRow hz hC hκ hs hreal hgamma D u t
+
+end PromoteDatumFacts
+
+/-! ### Canonical row maps for the endpoint and the shell -/
+
+namespace DatumSchema
+variable {k : ℕ} {D : DatumSchema B sp k} {z : Fin p → M}
+
+theorem endSchema_coordAt (hD : D.Valid z) {u : Fin D.chart.arity → M} (hu : u ∈ D.chart.row z) :
+    D.endSchema.coordAt z u =
+      Function.update (D.chart.coordAt z u) D.coordinate (iRVMul (D.apAt z u) (D.chart.coordAt z u D.coordinate)) :=
+  ((ChartSchema.coordRow_iff hD.endSchema u _).mp ((endSchema_coordRow_iff hD u _).mpr ⟨hu, rfl⟩)).2
+
+theorem endSchema_volAt (u : Fin D.chart.arity → M) : D.endSchema.volAt z u = D.chart.volAt z u := rfl
+
+theorem shellSchema_coordAt (hD : D.Valid z) {u : Fin D.chart.arity → M} {s0 : M}
+    (hus : Fin.append u (fun _ : Fin 1 => s0) ∈ D.shellSchema.row z) :
+    D.shellSchema.coordAt z (Fin.append u (fun _ : Fin 1 => s0)) =
+      Function.update (D.chart.coordAt z u) D.coordinate (iRVMul s0 (D.chart.coordAt z u D.coordinate)) :=
+  ((ChartSchema.coordRow_iff hD.shellSchema _ _).mp ((shell_coordRow_iff hD u s0 _).mpr ⟨hus, rfl⟩)).2
+
+theorem shellSchema_volAt (hD : D.Valid z) {u : Fin D.chart.arity → M} {s0 : M}
+    (hus : Fin.append u (fun _ : Fin 1 => s0) ∈ D.shellSchema.row z) :
+    D.shellSchema.volAt z (Fin.append u (fun _ : Fin 1 => s0)) = D.chart.volAt z u := by
+  have hv := hD.shellSchema
+  obtain ⟨c, hc⟩ := hv.vol_total _ hus
+  rw [← ((ChartSchema.volRow_iff hv _ c).mp hc).2.2]
+  have h2 := ((D.shell_volRow z u s0 c).mp hc).2
+  exact ((ChartSchema.volRow_iff hD.chart u c).mp h2).2.2
+
+end DatumSchema
+
+section Canon
+variable {C : Base (M := M)} {z : Fin p → M} (hz : ∀ i, sortEval (sp i) (z i)) (hC : Promotable B C z)
+  {κ : Cardinal} (hκ : Cardinal.aleph0 ≤ κ) (hs : Saturated M κ) (hreal : Cardinal.mk (baseAt B z).real < κ)
+  (hgamma : Cardinal.mk (baseAt B z).gamma < κ) {k : ℕ} (D : AnnularDatum C k)
+
+theorem promoteDatum_apAt {u : Fin D.chart.arity → M} (hu : u ∈ D.chart.domain) :
+    (promoteDatum hz hC hκ hs hreal hgamma D).apAt z u = D.aperture.aperture u := by
+  have hv := promoteDatum_valid hz hC hκ hs hreal hgamma D
+  have hu' : u ∈ (promoteDatum hz hC hκ hs hreal hgamma D).chart.row z := by
+    rw [promoteDatum_row]; exact hu
+  exact ((promoteDatum_apRow hz hC hκ hs hreal hgamma D u _).mp (DatumSchema.apRow_apAt hv hu')).2.symm
+
+/-- The endpoint of Section 4 as rows of the endpoint schema: `(u, τ(u)) ↦ u`. -/
+def endCanon : RowMap (C := C) (endpointChart D.chart D.coordinate D.finite D.aperture).domain
+    ((promoteDatum hz hC hκ hs hreal hgamma D).endSchema.row z)
+    (endpointChart D.chart D.coordinate D.finite D.aperture).correctedWeight
+    ((promoteDatum hz hC hκ hs hreal hgamma D).endSchema.weightAt z) where
+  F := fun w => w ∘ headIndex 1 D.chart.arity
+  graph := RVCoordinateMaps.coordinate_graph_definable C _
+    (endpointChart D.chart D.coordinate D.finite D.aperture).domain_definable (headIndex 1 D.chart.arity)
+  bij := by
+    have hrow : (promoteDatum hz hC hκ hs hreal hgamma D).endSchema.row z = D.chart.domain :=
+      promoteDatum_row hz hC hκ hs hreal hgamma D
+    rw [hrow]
+    refine ⟨fun w hw => hw.1, fun w hw w' hw' he => ?_, fun u hu => ?_⟩
+    · rw [graph_canonical D.chart D.aperture hw, graph_canonical D.chart D.aperture hw']
+      simp only at he
+      rw [he]
+    · refine ⟨join 1 D.chart.arity u ![D.aperture.aperture u], ⟨?_, ?_⟩, join_comp_head _ _⟩
+      · rw [join_comp_head]; exact hu
+      · rw [join_comp_head, join_comp_tail]
+  weight := by
+    intro w hw
+    have hu : w ∘ headIndex 1 D.chart.arity ∈ D.chart.domain := hw.1
+    have hv := promoteDatum_valid hz hC hκ hs hreal hgamma D
+    have hu' : w ∘ headIndex 1 D.chart.arity ∈ (promoteDatum hz hC hκ hs hreal hgamma D).chart.row z := by
+      rw [promoteDatum_row]; exact hu
+    show D.chart.volume (w ∘ headIndex 1 D.chart.arity) * ∏ l, codeValue (blownCoordinate D.chart D.coordinate
+      (w ∘ headIndex 1 D.chart.arity) (w (aIdx D.chart)) l) = _
+    unfold ChartSchema.weightAt
+    rw [DatumSchema.endSchema_volAt, DatumSchema.endSchema_coordAt hv hu', promoteDatum_volAt hz hC hκ hs hreal hgamma D hu,
+      promoteDatum_coordAt hz hC hκ hs hreal hgamma D hu, promoteDatum_apAt hz hC hκ hs hreal hgamma D hu,
+      graph_aperture D.chart D.aperture hw]
+    rfl
+
+/-- Index map reading `(u, s)` off a Section 4 shell point. -/
+def shellIdx {k : ℕ} {C : Base (M := M)} (r : Chart C k) : Fin (r.arity + 1) → Fin (1 + (1 + r.arity)) :=
+  Fin.append (xIdx r) (fun _ => sIdx r)
+
+theorem comp_shellIdx {k : ℕ} {C : Base (M := M)} (r : Chart C k) (w : Fin (1 + (1 + r.arity)) → M) :
+    w ∘ shellIdx r = Fin.append (w ∘ xIdx r) (fun _ : Fin 1 => w (sIdx r)) := by
+  funext i
+  refine Fin.addCases (fun l => ?_) (fun l => ?_) i <;> simp [shellIdx]
+
+theorem shell_mapsTo {w : Fin (1 + (1 + D.chart.arity)) → M}
+    (hw : w ∈ (shellChart D.chart D.coordinate D.finite D.aperture).domain) :
+    Fin.append (w ∘ xIdx D.chart) (fun _ : Fin 1 => w (sIdx D.chart)) ∈
+      (promoteDatum hz hC hκ hs hreal hgamma D).shellSchema.row z := by
+  have hrowD : (promoteDatum hz hC hκ hs hreal hgamma D).chart.row z = D.chart.domain :=
+    promoteDatum_row hz hC hκ hs hreal hgamma D
+  obtain ⟨hu, hs0, h1, hle⟩ := shell_points D.chart D.aperture hw
+  change Fin.append z _ ∈ (promoteDatum hz hC hκ hs hreal hgamma D).shellDom
+  rw [DatumSchema.mem_shellDom]
+  refine ⟨?_, hs0, h1, D.aperture.aperture (w ∘ xIdx D.chart),
+    (promoteDatum_apRow hz hC hκ hs hreal hgamma D _ _).mpr ⟨hu, rfl⟩, hle⟩
+  change w ∘ xIdx D.chart ∈ (promoteDatum hz hC hκ hs hreal hgamma D).chart.row z
+  rw [hrowD]
+  exact hu
+
+/-- The shell of Section 4 as rows of the shell schema: `w ↦ (u, s)`. -/
+def shellCanon : RowMap (C := C) (shellChart D.chart D.coordinate D.finite D.aperture).domain
+    ((promoteDatum hz hC hκ hs hreal hgamma D).shellSchema.row z)
+    (shellChart D.chart D.coordinate D.finite D.aperture).correctedWeight
+    ((promoteDatum hz hC hκ hs hreal hgamma D).shellSchema.weightAt z) where
+  F := fun w => w ∘ shellIdx D.chart
+  graph := RVCoordinateMaps.coordinate_graph_definable C _
+    (shellChart D.chart D.coordinate D.finite D.aperture).domain_definable (shellIdx D.chart)
+  bij := by
+    let Ds := promoteDatum hz hC hκ hs hreal hgamma D
+    have hrowD : Ds.chart.row z = D.chart.domain := promoteDatum_row hz hC hκ hs hreal hgamma D
+    refine ⟨fun w hw => ?_, fun w hw w' hw' he => ?_, fun us hus => ?_⟩
+    · show w ∘ shellIdx D.chart ∈ _
+      rw [comp_shellIdx]
+      exact shell_mapsTo hz hC hκ hs hreal hgamma D hw
+    · have he' : w ∘ shellIdx D.chart = w' ∘ shellIdx D.chart := he
+      rw [comp_shellIdx, comp_shellIdx] at he'
+      have hx : w ∘ xIdx D.chart = w' ∘ xIdx D.chart := by
+        funext i
+        have := congrFun he' (Fin.castAdd 1 i)
+        simpa using this
+      have hsv : w (sIdx D.chart) = w' (sIdx D.chart) := by
+        have := congrFun he' (Fin.natAdd D.chart.arity 0)
+        simpa using this
+      rw [shell_canonical D.chart D.aperture hw, shell_canonical D.chart D.aperture hw', hx, hsv]
+    · have hus' : Fin.append z us ∈ Ds.shellDom := hus
+      rw [DatumSchema.append_decomp_one us] at hus'
+      obtain ⟨hu, hs0, h1, t, ht, hle⟩ := (Ds.mem_shellDom z _ _).mp hus'
+      have hu' : (fun i => us (Fin.castAdd 1 i)) ∈ D.chart.domain := by
+        rw [← hrowD]; exact hu
+      obtain ⟨-, rfl⟩ := (promoteDatum_apRow hz hC hκ hs hreal hgamma D _ t).mp ht
+      let x := join 1 D.chart.arity (fun i => us (Fin.castAdd 1 i))
+        ![D.aperture.aperture (fun i => us (Fin.castAdd 1 i))]
+      have hx : x ∈ (graphChart D.chart D.aperture).domain := by
+        refine ⟨?_, ?_⟩
+        · rw [join_comp_head]; exact hu'
+        · rw [join_comp_head, join_comp_tail]
+      refine ⟨join 1 (1 + D.chart.arity) x ![us (Fin.natAdd D.chart.arity 0)], ?_, ?_⟩
+      · apply (VariableApertureRayCancellation.annularChart_join_iff (graphChart D.chart D.aperture) (aIdx D.chart)
+          (graph_aperture_nonzero D.chart D.aperture) x _).mpr
+        refine ⟨hx, fun l => by fin_cases l; exact hs0, ?_, ?_⟩
+        · show 1 < codeValue (us (Fin.natAdd D.chart.arity 0))
+          exact h1
+        · rw [graph_aperture D.chart D.aperture hx, join_comp_head]
+          show codeValue (us (Fin.natAdd D.chart.arity 0)) ≤ _
+          exact hle
+      · show join 1 (1 + D.chart.arity) x ![us (Fin.natAdd D.chart.arity 0)] ∘ shellIdx D.chart = us
+        rw [comp_shellIdx]
+        have h1' : join 1 (1 + D.chart.arity) x ![us (Fin.natAdd D.chart.arity 0)] ∘ xIdx D.chart =
+            fun i => us (Fin.castAdd 1 i) := by
+          funext i
+          simp [xIdx, join_head, x]
+        have h2' : join 1 (1 + D.chart.arity) x ![us (Fin.natAdd D.chart.arity 0)] (sIdx D.chart) =
+            us (Fin.natAdd D.chart.arity 0) := by
+          simp [sIdx, join_tail]
+        rw [h1', h2']
+        exact (DatumSchema.append_decomp_one (n := D.chart.arity) us).symm
+  weight := by
+    intro w hw
+    let Ds := promoteDatum hz hC hκ hs hreal hgamma D
+    have hv := promoteDatum_valid hz hC hκ hs hreal hgamma D
+    obtain ⟨hu, -, -, -⟩ := shell_points D.chart D.aperture hw
+    have hrowD : Ds.chart.row z = D.chart.domain := promoteDatum_row hz hC hκ hs hreal hgamma D
+    have hus := shell_mapsTo hz hC hκ hs hreal hgamma D hw
+    show D.chart.volume (w ∘ xIdx D.chart) * ∏ l, codeValue (blownCoordinate D.chart D.coordinate
+      (w ∘ xIdx D.chart) (w (sIdx D.chart)) l) = _
+    show _ = Ds.shellSchema.weightAt z (w ∘ shellIdx D.chart)
+    rw [comp_shellIdx]
+    unfold ChartSchema.weightAt
+    rw [DatumSchema.shellSchema_volAt hv hus, DatumSchema.shellSchema_coordAt hv hus,
+      promoteDatum_volAt hz hC hκ hs hreal hgamma D hu, promoteDatum_coordAt hz hC hκ hs hreal hgamma D hu]
+    rfl
+
+end Canon
+
 end DiamondIntegral.Section7.Lemma714Schema
