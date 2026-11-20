@@ -250,4 +250,40 @@ theorem finalProj_bijective : Function.Bijective (finalProj h00 hc linear hκ hs
     change w (Fin.natAdd _ j) = z.val.2 j
     exact Fin.append_right _ _ j
 
+/-- The old labels of a point of the final target, read before and after the
+second stage. -/
+theorem finalB_old (z : (secondStageB h00 hc linear hκ hs hv hsmall hΓ H R SA).contracted) (i : Fin q) :
+    z.val.2 (Fin.castAdd SA.arity (oldPos q i)) = z.val.2 (Fin.natAdd _ (SA.oldLabels i)) :=
+  (((mem_finalB h00 hc linear hκ hs hv hsmall hΓ H R SA z.val.2).mp (mem_of_val z)).2.2 i).symm
+
+/-- The paradigm label of a point of the final target is `t(u)`, for its old
+labels `u`. -/
+theorem finalB_t (z : (secondStageB h00 hc linear hκ hs hv hsmall hΓ H R SA).contracted) :
+    z.val.2 (Fin.castAdd SA.arity (Fin.castAdd (1 + q) 1)) =
+      (t (fun i => z.val.2 (Fin.castAdd SA.arity (oldPos q i)))).val := by
+  obtain ⟨hl, -, -⟩ := (mem_finalB h00 hc linear hκ hs hv hsmall hΓ H R SA z.val.2).mp (mem_of_val z)
+  obtain ⟨x, u, y, -, hw⟩ := (mem_transLabels h00 hc linear hκ hs hv hsmall hΓ H R _).mp hl
+  have hu : (fun i => z.val.2 (Fin.castAdd SA.arity (oldPos q i))) = u := by
+    funext i
+    have e := congrFun hw (oldPos q i)
+    rw [transLab_old] at e
+    exact e
+  rw [hu]
+  have e := congrFun hw (Fin.castAdd (1 + q) 1)
+  rw [e]
+  simp only [transLab, Fin.append_left]
+  rfl
+
+theorem nonempty_cell_of_final (z : (secondStageB h00 hc linear hκ hs hv hsmall hΓ H R SA).contracted) :
+    (cell X (fun i => z.val.2 (Fin.castAdd SA.arity (oldPos q i)))).Nonempty := by
+  obtain ⟨hl, -, -⟩ := (mem_finalB h00 hc linear hκ hs hv hsmall hΓ H R SA z.val.2).mp (mem_of_val z)
+  obtain ⟨x, u, y, hxy, hw⟩ := (mem_transLabels h00 hc linear hκ hs hv hsmall hΓ H R _).mp hl
+  have hu : (fun i => z.val.2 (Fin.castAdd SA.arity (oldPos q i))) = u := by
+    funext i
+    have e := congrFun hw (oldPos q i)
+    rw [transLab_old] at e
+    exact e
+  rw [hu]
+  exact ⟨(x, y), hxy⟩
+
 end DiamondIntegral.Section7.BalancedOrders

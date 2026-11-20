@@ -282,6 +282,60 @@ theorem paradigmGraph_prepared :
     · simp only [Fin.append_right]
       exact hzu j
 
+theorem secondGraph_prepared :
+    (T : Set M).Definable LRV {z : Fin (1 + (2 + ((2 + A'.labels) + F.arity))) → M | ∃ u x,
+      (∃ y, (![x, y], u) ∈ (prepared h00 hc linear hκ hs hv hsmall hΓ A' hω F Dt D).carrier) ∧
+      z = Fin.append ![(t₁Y A' F Dt u).val] (rvValues u)} := by
+  let Y := prepared h00 hc linear hκ hs hv hsmall hΓ A' hω F Dt D
+  let q := 2 + ((2 + A'.labels) + F.arity)
+  let P := rawMixedSpace (M := M) 2 q
+  have hY : (T : Set M).Definable LRV (P.preimage Y.carrier) := Y.definable
+  let g₃ : Fin (1 + F.arity) → Fin (1 + q) := Fin.append (Fin.castAdd q) (sIdx A' F 1)
+  have h := ((hY.image_comp (Sum.inr : Fin q → Fin 2 ⊕ Fin q)).preimage_comp (Fin.natAdd 1)).inter
+    (Dt.secondGraph.preimage_comp g₃)
+  convert h using 1
+  ext z
+  constructor
+  · rintro ⟨u, x, ⟨y, hxy⟩, rfl⟩
+    obtain ⟨s, hs2, hk, -⟩ := cell_prepared h00 hc linear hκ hs hv hsmall hΓ A' hω F Dt D u ⟨(x, y), hxy⟩
+    refine ⟨⟨mixedValues ((![x, y], u) : Mixed M 2 q), ⟨mixedValues_mem_domain _, ?_⟩, ?_⟩, ⟨s, hk, ?_⟩⟩
+    · rw [decode_mixedValues]; exact hxy
+    · funext j
+      simp only [Function.comp_apply, Fin.append_right]
+      rfl
+    · funext i
+      refine Fin.addCases (fun j => ?_) (fun j => ?_) i
+      · simp only [g₃, Function.comp_apply, Fin.append_left]
+        rw [Fin.fin_one_eq_zero j, hs2]
+        rfl
+      · simp only [g₃, Function.comp_apply, Fin.append_right, sIdx]
+        rw [hs2]
+        rfl
+  · rintro ⟨⟨c, ⟨hc, hcY⟩, hcz⟩, ⟨s, -, hz⟩⟩
+    let p := P.decode ⟨c, hc⟩
+    have hpc : mixedValues p = c := mixedValues_decode ⟨c, hc⟩
+    have hzu : ∀ j, z (Fin.natAdd 1 j) = (p.2 j).val := by
+      intro j
+      have h1 := congrFun hcz j
+      simp only [Function.comp_apply] at h1
+      rw [← h1, ← hpc]
+      rfl
+    have hsu : s.val.2 = sOf A' F p.2 := by
+      funext j
+      apply Subtype.ext
+      have h1 := congrFun hz (Fin.natAdd 1 j)
+      simp only [g₃, Function.comp_apply, Fin.append_right, sIdx] at h1
+      rw [hzu] at h1
+      exact h1.symm
+    refine ⟨p.2, p.1 0, ⟨p.1 1, by rw [vec_two]; exact hcY⟩, ?_⟩
+    funext i
+    refine Fin.addCases (fun j => ?_) (fun j => ?_) i
+    · have h1 := congrFun hz (Fin.castAdd F.arity j)
+      simp only [g₃, Function.comp_apply, Fin.append_left] at h1 ⊢
+      rw [h1, hsu]
+    · simp only [Fin.append_right]
+      exact hzu j
+
 /-- **The balanced piece, prepared, is input of the balanced translation.** -/
 theorem preparedInput :
     BalancedShearInput (prepared h00 hc linear hκ hs hv hsmall hΓ A' hω F Dt D) (εY A' F Dt) (tY A' F Dt)
