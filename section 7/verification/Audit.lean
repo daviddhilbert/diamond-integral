@@ -2742,6 +2742,51 @@ import «section 7».Section
 #check @DiamondIntegral.Section7.SpecialStep.step_of_data
 #print DiamondIntegral.Section7.SpecialStep.step_of_data
 #print axioms DiamondIntegral.Section7.SpecialStep.step_of_data
+#check @DiamondIntegral.Section7.StageSlices.stage_fix
+#print DiamondIntegral.Section7.StageSlices.stage_fix
+#print axioms DiamondIntegral.Section7.StageSlices.stage_fix
+#check @DiamondIntegral.Section7.StageSlices.stageSlice
+#print DiamondIntegral.Section7.StageSlices.stageSlice
+#print axioms DiamondIntegral.Section7.StageSlices.stageSlice
+#check @DiamondIntegral.Section7.StageSlices.stageSlice_homeo
+#print DiamondIntegral.Section7.StageSlices.stageSlice_homeo
+#print axioms DiamondIntegral.Section7.StageSlices.stageSlice_homeo
+#check @DiamondIntegral.Section7.StageSlices.stageSlice_bijective
+#print DiamondIntegral.Section7.StageSlices.stageSlice_bijective
+#print axioms DiamondIntegral.Section7.StageSlices.stageSlice_bijective
+#check @DiamondIntegral.Section7.StageSlices.stageSlice_retained
+#print DiamondIntegral.Section7.StageSlices.stageSlice_retained
+#print axioms DiamondIntegral.Section7.StageSlices.stageSlice_retained
+#check @DiamondIntegral.Section7.StageSlices.mem_targetSlice
+#print DiamondIntegral.Section7.StageSlices.mem_targetSlice
+#print axioms DiamondIntegral.Section7.StageSlices.mem_targetSlice
+#check @DiamondIntegral.Section7.StageSlices.targetSlice_tagged
+#print DiamondIntegral.Section7.StageSlices.targetSlice_tagged
+#print axioms DiamondIntegral.Section7.StageSlices.targetSlice_tagged
+#check @DiamondIntegral.Section7.StageSlices.targetSlice_pullback
+#print DiamondIntegral.Section7.StageSlices.targetSlice_pullback
+#print axioms DiamondIntegral.Section7.StageSlices.targetSlice_pullback
+#check @DiamondIntegral.Section7.StageSlices.targetSlice_doublyBounded
+#print DiamondIntegral.Section7.StageSlices.targetSlice_doublyBounded
+#print axioms DiamondIntegral.Section7.StageSlices.targetSlice_doublyBounded
+#check @DiamondIntegral.Section7.StageSlices.targetSlice_proper
+#print DiamondIntegral.Section7.StageSlices.targetSlice_proper
+#print axioms DiamondIntegral.Section7.StageSlices.targetSlice_proper
+#check @DiamondIntegral.Section7.StageSlices.prepSlice_proper
+#print DiamondIntegral.Section7.StageSlices.prepSlice_proper
+#print axioms DiamondIntegral.Section7.StageSlices.prepSlice_proper
+#check @DiamondIntegral.Section7.StageSlices.stageSlice_generic_unit
+#print DiamondIntegral.Section7.StageSlices.stageSlice_generic_unit
+#print axioms DiamondIntegral.Section7.StageSlices.stageSlice_generic_unit
+#check @DiamondIntegral.Section7.StageSlices.targetForm_snoc_val
+#print DiamondIntegral.Section7.StageSlices.targetForm_snoc_val
+#print axioms DiamondIntegral.Section7.StageSlices.targetForm_snoc_val
+#check @DiamondIntegral.Section7.StageSlices.targetSlice_form_labels
+#print DiamondIntegral.Section7.StageSlices.targetSlice_form_labels
+#print axioms DiamondIntegral.Section7.StageSlices.targetSlice_form_labels
+#check @DiamondIntegral.Section7.StageSlices.targetSlice_form_transport
+#print DiamondIntegral.Section7.StageSlices.targetSlice_form_transport
+#print axioms DiamondIntegral.Section7.StageSlices.targetSlice_form_transport
 #check @DiamondIntegral.Section7.StrictCharts.minusOne
 #print DiamondIntegral.Section7.StrictCharts.minusOne
 #print axioms DiamondIntegral.Section7.StrictCharts.minusOne
@@ -2871,6 +2916,45 @@ import «section 7».Section
 #check @DiamondIntegral.Section7.StrictCharts.cls_strictObj
 #print DiamondIntegral.Section7.StrictCharts.cls_strictObj
 #print axioms DiamondIntegral.Section7.StrictCharts.cls_strictObj
+#check @DiamondIntegral.Section7.TwoCellGeometry.positionInv
+#print DiamondIntegral.Section7.TwoCellGeometry.positionInv
+#print axioms DiamondIntegral.Section7.TwoCellGeometry.positionInv
+#check @DiamondIntegral.Section7.TwoCellGeometry.positionInv_mem
+#print DiamondIntegral.Section7.TwoCellGeometry.positionInv_mem
+#print axioms DiamondIntegral.Section7.TwoCellGeometry.positionInv_mem
+#check @DiamondIntegral.Section7.TwoCellGeometry.position_positionInv
+#print DiamondIntegral.Section7.TwoCellGeometry.position_positionInv
+#print axioms DiamondIntegral.Section7.TwoCellGeometry.position_positionInv
+#check @DiamondIntegral.Section7.TwoCellGeometry.balanced_mem_right
+#print DiamondIntegral.Section7.TwoCellGeometry.balanced_mem_right
+#print axioms DiamondIntegral.Section7.TwoCellGeometry.balanced_mem_right
+#check @DiamondIntegral.Section7.TwoCellGeometry.balanced_mem_left
+#print DiamondIntegral.Section7.TwoCellGeometry.balanced_mem_left
+#print axioms DiamondIntegral.Section7.TwoCellGeometry.balanced_mem_left
+#check @DiamondIntegral.Section7.TwoCellGeometry.eq_prod_of_fibres
+#print DiamondIntegral.Section7.TwoCellGeometry.eq_prod_of_fibres
+#print axioms DiamondIntegral.Section7.TwoCellGeometry.eq_prod_of_fibres
+#check @DiamondIntegral.Section7.TwoCellGeometry.fibres_eq_of_constant
+#print DiamondIntegral.Section7.TwoCellGeometry.fibres_eq_of_constant
+#print axioms DiamondIntegral.Section7.TwoCellGeometry.fibres_eq_of_constant
+#check @DiamondIntegral.Section7.TwoCellInput.NarrowCase
+#print DiamondIntegral.Section7.TwoCellInput.NarrowCase
+#print axioms DiamondIntegral.Section7.TwoCellInput.NarrowCase
+#check @DiamondIntegral.Section7.TwoCellInput.CellWith
+#print DiamondIntegral.Section7.TwoCellInput.CellWith
+#print axioms DiamondIntegral.Section7.TwoCellInput.CellWith
+#check @DiamondIntegral.Section7.TwoCellInput.CellWith.isTwoCell
+#print DiamondIntegral.Section7.TwoCellInput.CellWith.isTwoCell
+#print axioms DiamondIntegral.Section7.TwoCellInput.CellWith.isTwoCell
+#check @DiamondIntegral.Section7.TwoCellInput.cellAt
+#print DiamondIntegral.Section7.TwoCellInput.cellAt
+#print axioms DiamondIntegral.Section7.TwoCellInput.cellAt
+#check @DiamondIntegral.Section7.TwoCellInput.UniformTwoCells
+#print DiamondIntegral.Section7.TwoCellInput.UniformTwoCells
+#print axioms DiamondIntegral.Section7.TwoCellInput.UniformTwoCells
+#check @DiamondIntegral.Section7.TwoCellInput.Lemma720
+#print DiamondIntegral.Section7.TwoCellInput.Lemma720
+#print axioms DiamondIntegral.Section7.TwoCellInput.Lemma720
 #check @DiamondIntegral.Section7.TwoCells.IsOpenDiscVF
 #print DiamondIntegral.Section7.TwoCells.IsOpenDiscVF
 #print axioms DiamondIntegral.Section7.TwoCells.IsOpenDiscVF
