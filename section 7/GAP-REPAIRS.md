@@ -130,3 +130,36 @@ formalization convention. No manuscript edit has been made for them.
       nonzero polynomial vanishing on it. Off Z(P) its slice is finite
       (`FibreRestriction.exists_good_polynomial`), and the slice maps are
       morphisms of μVF^◇[1] over S⟨b⟩ (`FibreRestriction.sliceMorphism`).
+
+13. **Lemma 7.20, formal reading of the input (2026-11-19).** The input
+    `TwoCellInput.Lemma720` states the paper's lemma as follows. These are
+    readings, not changes of statement.
+    - Retained labels: A ⊆ VF² × RVʳ. Lemma 7.22 applies 7.20 to the graph of θ
+      with its RV coordinates retained ("its proof is uniform in such labels");
+      r = 0 is the printed statement. Section 6's standard contractions retain
+      the old labels, so each fibre lies over one label value.
+    - Normalized coordinates: the fibre over s is read in the normalized
+      coordinates of the contraction, the preliminary adjustment by Remark
+      `spec:addendum` that a standard contraction may make (amended the same
+      day; found by the 7.20 session). Read in the original coordinates, the
+      statement is false: for A = 𝒪 × 𝒪 every zero-centred normalization moves 0
+      (since v(0) = ∞ > v(c)), so the fibre through (0, 0) is an open set around
+      (0, 0) and meets several RV-discs. On a fibre the core bits are tags in s,
+      so the normalized fibre is the original one translated by a constant
+      vector definable over T; for doubly bounded A the readings agree
+      (Section 6 `point_field_of_doublyBounded`).
+    - Orientation: the fibre over s is read in the order (x_{e 0}, x_{e 1}),
+      where e is the coordinate order of the contraction. Its first stage
+      contracts x_{e 1}, which therefore carries the RV-discs t^♯ + ε(a) of
+      Definition 7.19. The paper leaves σ and the orientation implicit; σ is
+      existential, as printed.
+    - Uniform cell data: the input gives the positioning function ε(s, ·), the
+      paradigm t(s), the second paradigm t₁(s) of a balanced cell and the kind of
+      each cell as functions of s, with graphs and kind pieces definable over T
+      (`UniformTwoCells`). Definition 7.17 asks the set and the positioning
+      bijection to be definable, and Lemma 7.22 relies on 7.20's proof being
+      "uniform in such labels": it applies Lemma 6.38 once to the family of
+      positioning functions with s as a retained label. A positioning function
+      is only determined up to a ball, so this uniformity cannot be recovered
+      from fibrewise data without definable choice; it is part of the statement
+      (amended the same day, before the 7.20 session began proving it).

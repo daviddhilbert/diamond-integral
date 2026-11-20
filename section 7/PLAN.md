@@ -474,6 +474,38 @@ intended Lean statement; ⚑ marks a flag that is also listed in §5.
 - **New.** As printed. The phrase "by compactness" is not needed; a note only,
   no text change.
 
+- **Lean plan for 7.21–7.23 (2026-11-19, on the 7.14 and 7.20 inputs).**
+  - Orders. Section 6's order `e` contracts `x_{e(last)}` first. The paper's
+    order 12 contracts `x₁` first (`e = swap`), and order 21 contracts `x₂`
+    first (`e = 1`). Cells are read with base `x_{e 0}` and fibre
+    coordinate `x_{e 1}` (`TwoCellInput.cellAt`).
+  - 7.21, in the uniform form 7.22 needs. Take `X : VFObject T 2` over a
+    substructure with support data, whose label fibres are 2-cells with uniform
+    data `ε(s, ·)`, `t(s)`, `t₁(s)`, `kind(s)` (`TwoCellInput.CellWith`), and
+    whose form is constant on label fibres. Then there are normalized contractions
+    of orders 12 and 21 with equal head-start-0 classes. The printed 7.21 is the
+    case of one label value. Steps:
+    1. Kind pieces (definable by the input) partition `X`; contractions and
+       classes are glued over the partition.
+    2. Kinds 0 and 1 (product cells `D_s × (t(s)^♯ + c(s))`): the same
+       translation and unary stages in either order (Section 6
+       `shear_contraction_stage_of_bundle`, unary contractions). The identity is
+       the isomorphism, because reordering the volume coordinates keeps the weight.
+    3. Kind 2 (balanced): the shear stages `(x, y − ε(s, x))` and
+       `(x − ε⁻¹(s, y), y)` (`TwoCellGeometry.balanced_mem_right/left`). Then
+       Lemma 6.38 with `s` as a retained label applied to `ε : (A₁, 0) → (A₂, −γ)`
+       gives `ψ` with `Jac_Γ ψ = γ`. The map `(u, t₂) ↦ (t₁, ψ u)` has Γ-Jacobian 0.
+  - 7.22. Prepare `ω` (Section 6 `lemma_6_21_vfGenerated`, `remark_6_20`).
+    Apply the 7.20 input to the graph of `θ` with labels retained. Graft
+    `c = (θ, T̂_σ)` to get `A → A*`, relatively unary in both coordinates (the
+    grafting maps of Section 6). Then apply 7.21 to `A*`.
+  - 7.23. For `n = 2`, apply 7.15 on both sides of `A → A*`, which is relatively
+    unary in both coordinates, and use 7.22. For `n > 2`, contract `{i, j}` first
+    (`FirstStage` twice): the fibres over `a ∈ VF^{n−2}` are 2-dimensional, the
+    case `n = 2` holds over `S⟨a⟩`, and Lemma 7.14 with head start 2 glues them.
+    Use the centre independence and good points of 7.15 (`Corollary715`,
+    `FibreInvariance`, `StageSlices`).
+
 ### 7.24 Proposition `kernel:L`
 - **Route.**
   - k = 0: both sides are isomorphism.

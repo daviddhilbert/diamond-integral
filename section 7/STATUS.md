@@ -83,6 +83,13 @@ arbitrary parameter base and take no input beyond the ACVF model.
 - 7.14 scope (2026-11-19): its upstream analog for ordinary blowups is about
   25k lines of uniformization. The author was asked whether to build it in
   full now or to state it as an explicit replaceable input first.
+- **Temporary input: Lemma 7.20.** By the author's decision of 2026-11-19
+  ("Input + parallel build", as for 7.14), 7.20 is stated as the explicit
+  replaceable input `TwoCellInput.Lemma720 M G` (standard contraction of a
+  proper invariant A ⊆ VF² × RVʳ with fibres 2-cells, cell data uniform in s and
+  definable over T;
+  GAP-REPAIRS 13). Results that use it take `(h720 : Lemma720 M G)` as a
+  hypothesis. A separate session proves it; `TwoCellInput.lean` is kept stable.
 - **Temporary input: Lemma 7.14.** By the author's decision of 2026-11-19
   ("Input + parallel build"), 7.14 is stated as the explicit replaceable input
   `FiberwiseInput.Lemma714 M G` (fibres via `FibreObjects.fibreObject` over
@@ -109,6 +116,6 @@ arbitrary parameter base and take no input beyond the ACVF model.
 
 ## Next
 
-7.20–7.23 and 7.24–7.27 on the 7.14 input, as in PLAN.md (7.23 and 7.24 can
-reuse the 7.15 modules). Product compatibility (7.10) and the object-level converse for
+7.21–7.23 on the 7.14 and 7.20 inputs, then 7.24–7.27, as in PLAN.md (7.23 and
+7.24 can reuse the 7.15 modules). Product compatibility (7.10) and the object-level converse for
 Definition 7.2 remain open side items.
