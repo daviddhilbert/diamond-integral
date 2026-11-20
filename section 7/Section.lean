@@ -36,6 +36,7 @@ import «section 7».FiberwiseInput
 import «section 7».TwoCellInput
 import «section 7».FirstStage
 import «section 7».ContractionChoice
+import «section 7».NormalizationComparison
 import «section 7».Corollary715
 import «section 7».FibreInvariance
 import «section 7».ConjugatedMaps
