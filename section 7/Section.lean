@@ -156,6 +156,7 @@ import «section 7».IntermediateFormsInput
 import «section 7».UnaryArrows
 import «section 7».MorphismClasses
 import «section 7».Proposition724
+import «section 7».Proposition724Zero
 
 /-! Entry point for the Section 7 formalization (integrating proper invariant
 sets), following the adopted manuscript with bounded variable apertures. -/
