@@ -9,6 +9,27 @@ import «section 4».Section3GammaSharpBridge
 import «section 4».Section3GammaRoundtripBridge
 import «section 4».Section3RVProductBridge
 import «section 4».Section3CoefficientChartRelations
+import «section 4».RVT001OrdinaryDescent
+import «section 4».RVOrdinaryBoundedTensorForget
+import «section 4».RVBoundedOrdinaryEvaluation
+
+/-! Remark 4.10, first sentence (`tensor:bd`): the bounded RV decomposition. The bounded
+measured tensor comparison
+`RVBoundedBalancedTensor.comparison : K(μRES[*]) ⊗_{K(μΓ^fin[*])} K(μΓ^db[*]) → K(μRV^db[*])`
+is surjective (`comparison_surjective`).
+
+The proof is at the level of objects. A doubly bounded chart is split by its `∞`-pattern into
+charts without `∞` coordinates (`RVStrictBoundedComparison.bclass_pieces`, `stripIso`). Such a
+strict chart is cut along the Section 3 measured product normal form of its native Section 3
+object (`gammaGroundRV_form_normal_form`); on each nonempty piece the witness of
+`gammaGroundMeasuredTensor_chart_preimage` (a measured RES object times the RV lift of a
+single-weight Gamma piece) is transported back to Section 4 charts (`piece_mem`). The new input
+is that the Gamma factor is doubly bounded: the piece is isomorphic to the product chart, and an
+isomorphism out of a strict doubly bounded chart has a doubly bounded target
+(`iso_domainBounded`, from Lemma 2.41).
+
+Consequence: the T001 bounded evaluations of all Euler kinds agree
+(`boundedEvaluation_independent_kind`, `boundedEvaluation_geometric_eq_bounded`). -/
 
 set_option autoImplicit false
 noncomputable section
@@ -321,6 +342,173 @@ theorem piece_mem (hc : CanonicalStructure.IsCanonical (M := M)) (h00 : M ⊨ Ax
   rw [RVBoundedBalancedTensor.comparison_tmul, RVBoundedMaps.ofRES_class, GammaBoundedRVMaps.sharp_class,
     hXY, RVBoundedRing.objectClass_product, mul_comm]
 
+open RVChartDisjointUnion RVChartRestrictions Section3RVCodeBridge in
+/-- **Strict charts.** The bounded class of every doubly bounded chart without `∞` coordinates
+lies in the image of the bounded tensor comparison. The chart is cut along the Section 3
+measured product normal form (`gammaGroundRV_form_normal_form`) of its native Section 3 object,
+and every nonempty piece is handled by `piece_mem`. -/
+theorem strict_mem (hc : CanonicalStructure.IsCanonical (M := M)) (h00 : M ⊨ Axioms.ACVF00)
+    {κ : Cardinal} (hκ : Cardinal.aleph0 ≤ κ) (hs : Saturated M κ)
+    {B : Base (M := M)} (hr : Cardinal.mk B.real < κ) (hγ : Cardinal.mk B.gamma < κ)
+    (hΓ : Section2.NontrivialDefinableGamma B) {k : ℕ} (a : RVStrictBoundedComparison.StrictChart B k) :
+    RVBoundedRing.objectClass a.toBoundedChart ∈ (RVBoundedBalancedTensor.comparison B).range := by
+  let U := native hc a.toChart
+  let w := fun x => if hx : x ∈ U.underlying.domain.carrier then U.combinedWeight ⟨x, hx⟩ else 1
+  have hw : ∀ b : U.underlying.domain, w b.val = (U.combinedWeightForm b).val := by
+    intro b
+    rw [show w b.val = U.combinedWeight b from dite_eq_left b.property]
+    exact (U.combinedWeightForm_value b).symm
+  obtain ⟨N, D, hdis, hcov⟩ := gammaGroundRV_form_normal_form hκ hs h00 hr hγ hΓ
+    U.underlying.domain U.combinedWeightForm w hw
+  have hsub : ∀ i, (D i).source.carrier ⊆ U.underlying.domain.carrier :=
+    fun i x hx => (hcov x).mpr ⟨i, hx⟩
+  have hraw : ∀ i, rawDomain (D i).source ⊆ a.domain := by
+    rintro i _ ⟨y, hy, rfl⟩
+    exact hsub i hy
+  let E : Fin N → Data B a.arity k := fun i =>
+    restrict (ofChart a.toChart) (rawDomain (D i).source) (rawDomain_definable _) (hraw i)
+  have hsum : RVStrictBoundedComparison.bclass (ofChart a.toChart) =
+      ∑ i, RVStrictBoundedComparison.bclass (E i) := by
+    refine RVStrictBoundedComparison.sum_cover RVStrictBoundedComparison.bclass
+      (fun x => DomainBounded x.toChart) (fun _ _ h hc => RVStrictBoundedComparison.bounded_mono h hc)
+      RVStrictBoundedComparison.bclass_empty RVStrictBoundedComparison.bclass_add E Finset.univ
+      (ofChart a.toChart) a.domain_bounded (fun _ _ => ⟨rfl, rfl⟩) ?_ ?_
+    · intro i _ j _ hij
+      exact (Set.disjoint_image_iff rvValues_injective).mpr (hdis i j hij)
+    · apply Set.ext
+      intro x
+      simp only [Finset.mem_univ, Set.iUnion_true, Set.mem_iUnion]
+      constructor
+      · intro hx
+        let y : Fin a.arity → CanonicalRV.RVSort M := fun i => ⟨x i, a.domain_definable.proper x hx i⟩
+        obtain ⟨i, hi⟩ := (hcov y).mp hx
+        exact ⟨i, y, hi, rfl⟩
+      · rintro ⟨i, hx⟩
+        exact hraw i hx
+  rw [← RVStrictBoundedComparison.bclass_ofChart a.toBoundedChart, hsum]
+  apply Subalgebra.sum_mem
+  intro i _
+  by_cases hne : (D i).source.carrier.Nonempty
+  · have hEb : DomainBounded (E i).toChart :=
+      RVStrictBoundedComparison.bounded_mono (D := E i) (E := ofChart a.toChart) (hraw i) a.domain_bounded
+    rw [RVStrictBoundedComparison.bclass_eq hEb]
+    let W := U.restrict (D i).source (hsub i)
+    let F0 : Iso (E i).toChart (chart W) :=
+      RVStrictBoundedComparison.mapIso (E i).toChart (chart W) id
+        (RVSharpCharts.identity_graph_definable B _ (rawDomain_definable _)) (Set.bijOn_id _) (by
+          rintro _ ⟨y, hy, rfl⟩
+          exact (native_weight a.toChart ⟨y, hsub i hy⟩).symm.trans (chart_weight W ⟨y, hy⟩).symm)
+    exact piece_mem hc h00 hκ hs hr hγ hΓ ⟨(E i).toChart, hEb⟩
+      (fun u hu => a.infinity_free u (hraw i hu)) W F0 hne (D i).residue (D i).residue_finite
+      (D i).gamma (D i).weight (D i).weight_definable (D i).bijection (fun b => by
+        have he := (D i).preserves b
+        change w b.val = _ at he
+        rw [show w b.val = W.combinedWeight b from dite_eq_left (hsub i b.property)] at he
+        exact he)
+  · rw [RVStrictBoundedComparison.bclass_empty]
+    · exact Subalgebra.zero_mem _
+    · change rvValues '' (D i).source.carrier = ∅
+      rw [Set.not_nonempty_iff_eq_empty.mp hne]
+      exact Set.image_empty _
+
 end Piece
+
+/-! ### Remark 4.10, first sentence: the bounded RV decomposition -/
+
+open RVStrictBoundedComparison RVChartDisjointUnion in
+/-- Every doubly bounded chart class lies in the image of the bounded tensor comparison: split
+the chart by its `∞`-pattern (`bclass_pieces`) and delete the `∞` coordinates (`stripIso`). -/
+theorem bounded_mem (hc : CanonicalStructure.IsCanonical (M := M)) (h00 : M ⊨ Axioms.ACVF00)
+    {κ : Cardinal} (hκ : Cardinal.aleph0 ≤ κ) (hs : Saturated M κ)
+    {B : Base (M := M)} (hr : Cardinal.mk B.real < κ) (hγ : Cardinal.mk B.gamma < κ)
+    (hΓ : Section2.NontrivialDefinableGamma B) {k : ℕ} (a : RVBoundedCharts.BoundedChart B k) :
+    RVBoundedRing.objectClass a ∈ (RVBoundedBalancedTensor.comparison B).range := by
+  rw [← bclass_ofChart a, bclass_pieces (ofChart a.toChart) a.domain_bounded]
+  apply Subalgebra.sum_mem
+  intro p _
+  have hP : DomainBounded (piece (ofChart a.toChart) p).toChart :=
+    bounded_mono (D := piece (ofChart a.toChart) p) (E := ofChart a.toChart) (fun _ hu => hu.1)
+      a.domain_bounded
+  have hA := admissible_strip (ofChart a.toChart) a.domain_bounded p
+  rw [bclass_iso hP hA.1 (stripIso _ p), bclass_eq hA.1]
+  exact strict_mem hc h00 hκ hs hr hγ hΓ (toStrict _ hA)
+
+/-- **Remark 4.10 (first sentence), the bounded RV decomposition.** The bounded measured tensor
+comparison `K(μRES[*]) ⊗_{K(μΓ^fin[*])} K(μΓ^db[*]) → K(μRV^db[*])`, `x ⊗ y ↦ x · y♯`, is
+surjective: every doubly bounded measured RV class is a sum of products of a measured RES class
+and the lift of a doubly bounded measured Gamma class. -/
+theorem comparison_surjective (hc : CanonicalStructure.IsCanonical (M := M)) (h00 : M ⊨ Axioms.ACVF00)
+    {κ : Cardinal} (hκ : Cardinal.aleph0 ≤ κ) (hs : Saturated M κ)
+    (B : Base (M := M)) (hr : Cardinal.mk B.real < κ) (hγ : Cardinal.mk B.gamma < κ)
+    (hΓ : Section2.NontrivialDefinableGamma B) :
+    Function.Surjective (RVBoundedBalancedTensor.comparison B) := by
+  have hall : ∀ x : RVBoundedRing.Ring B, x ∈ (RVBoundedBalancedTensor.comparison B).range := by
+    intro x
+    obtain ⟨r, rfl⟩ := Ideal.Quotient.mk_surjective x
+    refine FreeCommRing.induction_on r ?_ ?_ ?_ ?_
+    · rw [map_neg, map_one]
+      exact Subalgebra.neg_mem _ (Subalgebra.one_mem _)
+    · intro g
+      exact bounded_mem hc h00 hκ hs hr hγ hΓ g.2
+    · intro r s hr hs
+      rw [map_add]
+      exact Subalgebra.add_mem _ hr hs
+    · intro r s hr hs
+      rw [map_mul]
+      exact Subalgebra.mul_mem _ hr hs
+  intro x
+  obtain ⟨y, hy⟩ := hall x
+  exact ⟨y, hy⟩
+
+/-- **Remark 4.10 (first sentence), consequence.** The geometric and bounded T001 evaluations
+agree on doubly bounded classes. On the image of the bounded tensor comparison both are the
+kind-independent bounded tensor evaluation `RVBoundedOrdinaryEvaluation.evaluation`, and that
+comparison is surjective (`comparison_surjective`). -/
+theorem boundedEvaluation_comparison (h00 : M ⊨ Axioms.ACVF00)
+    (linear : Section2.GammaPiecewiseRationalAffineInput (M := M))
+    {κ : Cardinal} (hκ : Cardinal.aleph0 ≤ κ) (hs : Saturated M κ)
+    (B : Base (M := M)) (hr : Cardinal.mk B.real < κ) (hγ : Cardinal.mk B.gamma < κ)
+    (hΓ : Section2.NontrivialDefinableGamma B) (p : ApprovedT001Presentation.Ordinary B)
+    (kind : EulerKind) (x : RVBoundedBalancedTensor.Source B) :
+    RVT001OrdinaryDescent.boundedEvaluation h00 linear hκ hs B hr hγ hΓ p kind
+        (RVBoundedBalancedTensor.comparison B x) =
+      RVBoundedOrdinaryEvaluation.evaluation h00 linear hκ hs B hr hγ hΓ kind x := by
+  have h1 : RVBoundedMaps.forget B (RVBoundedBalancedTensor.comparison B x) =
+      RVFiniteBalancedTensor.comparison B (RVBoundedTensorComparison.toFull B x) :=
+    (AlgHom.congr_fun (RVBoundedTensorComparison.comparison_square B) x).symm
+  have h2 : RVOrdinaryRing.forget B (RVFiniteBalancedTensor.comparison B (RVBoundedTensorComparison.toFull B x)) =
+      RVOrdinaryBalancedTensor.comparison B
+        (RVOrdinaryTensorForget.forget B (RVBoundedTensorComparison.toFull B x)) :=
+    (RingHom.congr_fun (RVOrdinaryTensorForget.comparison_square B) _).symm
+  change RVT001OrdinaryDescent.evaluation h00 linear hκ hs B hr hγ hΓ p kind
+    (RVOrdinaryRing.forget B (RVBoundedMaps.forget B (RVBoundedBalancedTensor.comparison B x))) = _
+  rw [h1, h2, RVT001OrdinaryDescent.evaluation_comparison]
+  exact RingHom.congr_fun (RVOrdinaryBoundedTensorForget.evaluation_square h00 linear hκ hs B hr hγ hΓ kind) x
+
+/-- **Remark 4.10 (first sentence), consequence.** For every Euler kind the T001 bounded
+evaluations `E_g` and `E_b` agree on `K(μRV^db[*])`. -/
+theorem boundedEvaluation_independent_kind (hc : CanonicalStructure.IsCanonical (M := M))
+    (h00 : M ⊨ Axioms.ACVF00) (linear : Section2.GammaPiecewiseRationalAffineInput (M := M))
+    {κ : Cardinal} (hκ : Cardinal.aleph0 ≤ κ) (hs : Saturated M κ)
+    (B : Base (M := M)) (hr : Cardinal.mk B.real < κ) (hγ : Cardinal.mk B.gamma < κ)
+    (hΓ : Section2.NontrivialDefinableGamma B) (p : ApprovedT001Presentation.Ordinary B)
+    (k l : EulerKind) :
+    RVT001OrdinaryDescent.boundedEvaluation h00 linear hκ hs B hr hγ hΓ p k =
+      RVT001OrdinaryDescent.boundedEvaluation h00 linear hκ hs B hr hγ hΓ p l := by
+  apply RingHom.ext
+  intro y
+  obtain ⟨x, rfl⟩ := comparison_surjective hc h00 hκ hs B hr hγ hΓ y
+  rw [boundedEvaluation_comparison, boundedEvaluation_comparison,
+    RVBoundedOrdinaryEvaluation.evaluation_independent_kind h00 linear hκ hs B hr hγ hΓ k l]
+
+/-- The geometric and bounded T001 evaluations agree on doubly bounded classes. -/
+theorem boundedEvaluation_geometric_eq_bounded (hc : CanonicalStructure.IsCanonical (M := M))
+    (h00 : M ⊨ Axioms.ACVF00) (linear : Section2.GammaPiecewiseRationalAffineInput (M := M))
+    {κ : Cardinal} (hκ : Cardinal.aleph0 ≤ κ) (hs : Saturated M κ)
+    (B : Base (M := M)) (hr : Cardinal.mk B.real < κ) (hγ : Cardinal.mk B.gamma < κ)
+    (hΓ : Section2.NontrivialDefinableGamma B) (p : ApprovedT001Presentation.Ordinary B) :
+    RVT001OrdinaryDescent.boundedEvaluation h00 linear hκ hs B hr hγ hΓ p .geometric =
+      RVT001OrdinaryDescent.boundedEvaluation h00 linear hκ hs B hr hγ hΓ p .bounded :=
+  boundedEvaluation_independent_kind hc h00 linear hκ hs B hr hγ hΓ p .geometric .bounded
 
 end DiamondIntegral.Section4.RVBoundedDecomposition
