@@ -145,7 +145,8 @@ from RV quantifier elimination with no hypotheses.
   - the colimit description and the "[A] = 1 equalizes" part of Remark 4.4
     ("we shall not pursue this further");
   - the second paragraph of Remark 4.16 (an alternative the paper rejects);
-  - Remark 4.10's first sentence (a restatement of Lemma 2.41).
+  - Remark 4.10's first sentence (a restatement of Lemma 2.41); proved on
+    November 19, see "Remark 4.10 — bounded RV decomposition" below.
 - Records: COVERAGE claims a coproduct presentation for Definition 4.1 that
   is not built; it is missing rows for 4.17/4.18; counts and the R069 status
   are out of date. Updated November 18 (COVERAGE.md, STATUS.md, README.md,
@@ -206,3 +207,52 @@ from RV quantifier elimination with no hypotheses.
   only general QE criteria. Tau Ceti is not a dependency and was not added.
   The local proof therefore uses the already pinned RV quantifier
   elimination directly, without DOAG QE or a stable-embeddedness lemma.
+
+## Remark 4.10 — bounded RV decomposition (November 19)
+
+`RVBoundedDecomposition.lean`.
+
+- Paper check. In the revision the first sentence of `tensor:bd` says that
+  `f(U)` and `ω(U)` are doubly bounded for `(U, f, ω) ∈ μRV^db[k]`
+  (Lemma 2.41); the original upload added "for essentially the same reason,
+  μΨ restricts to an isomorphism μΨ^db", which the revision replaced by the
+  homomorphism. The surjective half of that claim is proved here; injectivity
+  is not claimed.
+- First sentence: `coordinate_image_bounded`, `volume_image_bounded`. On each
+  `∞`-free strip of the chart (`RVStrictBoundedComparison.strip`) the volume,
+  and the code value of each coordinate, is a definable Γ-valued function on a
+  doubly bounded set of nonzero RV tuples, so `Section2.lemma_2_41_gamma_raw`
+  bounds it (`volume_bounded`, `map_bounded`); its rational-affine input is
+  `Section5.GammaQE.gamma_piecewise_rational_affine`.
+- Decomposition: `comparison_surjective` (ring level,
+  `RVBoundedBalancedTensor.comparison`) and `positive_comparison_surjective`
+  (`RVBoundedPositiveTensor.comparison`). Both follow from `bounded_value`:
+  for every scissor-invariant value (`ScissorValue`: isomorphisms, empty
+  charts, scissors) the value of a doubly bounded chart is a finite sum of
+  values of products `ofRES V × g♯`. Proof: split the chart by its
+  `∞`-pattern and delete the `∞` coordinates (`stripIso`); cut the resulting
+  strict chart along the measured product normal form
+  `gammaGroundRV_form_normal_form` of its native Section 3 object; on each
+  nonempty piece rerun `gammaGroundMeasuredTensor_chart_preimage` locally
+  (`piece_value`) to get a Section 3 isomorphism with `V × J.rvLift` (V an
+  RES object, J a single-weight Γ piece on `G`), and transport it to Section
+  4 charts (`chartIso`, `measuredProductIso`, `gammaFactorIso` through
+  `Section3GammaSharpBridge.measured` and
+  `Section3GammaRoundtripBridge.measured_native_chart`). The new step is that
+  `G` is doubly bounded: the piece is isomorphic to `g♯ × V`, and a measured
+  isomorphism out of a strict doubly bounded chart has a doubly bounded
+  target (`iso_domainBounded`, by `map_bounded`); nonemptiness of `V` then
+  bounds `G`.
+- Consequence: `boundedEvaluation_independent_kind` and
+  `boundedEvaluation_geometric_eq_bounded`: on the image of the bounded
+  comparison both T001 bounded evaluations equal the kind-independent
+  `RVBoundedOrdinaryEvaluation.evaluation` (`boundedEvaluation_comparison`,
+  from `RVBoundedTensorComparison.comparison_square`,
+  `RVOrdinaryTensorForget.comparison_square`,
+  `RVT001OrdinaryDescent.evaluation_comparison` and
+  `RVOrdinaryBoundedTensorForget.evaluation_square`).
+- Hypotheses: `CanonicalStructure.IsCanonical`, ACVF(0,0), `ℵ₀ ≤ κ`,
+  κ-saturation, small real and Γ parameter sets, nontrivial definable Γ. No
+  bounded tensor-kernel or injectivity input. `RVStrictBoundedComparison.sum_cover`
+  now takes any additive monoid (it was stated for groups), so it also serves
+  positive classes. The fubini package was not edited.

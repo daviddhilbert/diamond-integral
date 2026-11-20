@@ -14,10 +14,13 @@ classes, Lemma 7.5, Corollary 7.6, Lemma 7.7, Corollary 7.8, Definition 7.9,
 the additive part of Lemma 7.10, Remark 7.3 (dimension claim), Lemma 7.11 (full
 lift, on classes), Lemma 7.12 on classes, Lemma 7.13 (printed form, head start
 0; also over a base with adjoined VF parameters), Definitions 7.16, 7.17, 7.19
-and Remark 7.18 (approved scope), and the surjectivity of the lift on classes.
+and Remark 7.18 (approved scope), the surjectivity of the lift on classes, and
+Corollary 7.15 on the 7.14 input (`Corollary715Fibres.corollary_7_15`).
 Remaining: the approved partial-lift and head-start forms of 7.11 and 7.13,
-whole-witness descent (7.14–7.15), the two-cell comparisons (7.20–7.23), the
-kernel (7.24–7.25), Theorem 7.26 with J_var, and 7.27–7.28.
+whole-witness descent (7.14), the two-cell comparisons (7.20–7.23), the
+kernel (7.24–7.25), Theorem 7.26 with J_var, and 7.27. Remark 7.28 is done
+(`Remark728`). Lemma 7.14 is an explicit temporary input
+(`FiberwiseInput.Lemma714`), being proved in a separate session.
 
 The focused [Section 6 handoff](SECTION6-HANDOFF.md) links the checked native
 inputs and the mathematical draft. The draft is not a completed kernel

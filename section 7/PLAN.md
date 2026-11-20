@@ -273,7 +273,10 @@ intended Lean statement; ⚑ marks a flag that is also listed in §5.
 - **Status (2026-11-19).** Done with head start 0: `KernelDimOne.lemma_7_13`
   (hypothesis A ≅ B in μVF^◇[1]; GAP-REPAIRS 8) and the core
   `lift_iso_muIsp`.
-- **Head start (to do with 7.14).** Lemma 6.38 for a μVF^◇[1] morphism that
+- **Head start: built by the Lemma 7.14 session** (2026-11-19), as
+  `Lemma714Compare.lift_iso_muIsp_head` in `section 7/Lemma714Compare.lean`
+  (degree 1+k, isomorphism of full lifts fixing the k lifted label
+  coordinates); only the 7.14 proof uses it. Original note: Lemma 6.38 for a μVF^◇[1] morphism that
   preserves the selected labels π, with chains carried to the head-start
   bundles (Section 6 `rvHeadStartBundle`, `carryHeadStartBijection`) so that the
   full-lift 7.11 applies in grade 1+k, and the 6.38 isomorphism of contractions
@@ -357,6 +360,52 @@ intended Lean statement; ⚑ marks a flag that is also listed in §5.
 - **New.** As printed, with `F : Morphism G A′ A″` relatively unary in i.
 - ⚑ I need a lemma "vfDim B < m ⇒ B ⊆ Z(P), P ≠ 0 over the base field". I
   have not yet found it; if absent, it is new and proved locally.
+
+- **Lean plan (2026-11-19, on the 7.14 input `FiberwiseInput.Lemma714`).**
+  - Statement: `A' A'' : VFObject T (m+1)`, `F : Morphism G A' A''` relatively
+    unary in coordinate `i` (the other VF coordinates fixed), standard
+    contractions `NormalizedMeasuredContraction A'.carrier A'.form e` and the
+    same for `A''`, with `e (Fin.last m) = i`. Section 6's stages contract the
+    last VF coordinate, so a program in order `e` contracts `e(last)` first; the
+    paper's `σ(1) = i` is `e (Fin.last m) = i`. Conclusion: `IspRel` of the two
+    head-start-0 contraction classes over T (support data for T).
+  - `m = 0`: this is 7.13 (`KernelBaseChange.lemma_7_13_of_support`).
+  - `m ≥ 1`, steps:
+    1. **First stage and tail.** A `NormalizedMeasuredContraction` is a
+       zero-centred normalization, a reindexing by `e`, and an ordered
+       program `step T tail` (`OrderedStandardContractionProgram`); the stage
+       `T` contracts the last coordinate (`StandardContractionStage`,
+       `contracted`). Show: the stage's contracted set `A'₁` (m VF coordinates,
+       with the stage's new label as head-start label, induced form) has the
+       tail as a standard contraction, and the tail's head-start-1 object has
+       the class of the full contraction's head-start-0 object. Needed again
+       in 7.23 and 7.24.
+    2. **Fibres.** For `a ∈ VFᵐ` in the common projection, the fibre of `A'₁`
+       at `a` (`FibreObjects.fibreObject`, head start 1) is the contraction of
+       the unary fibre `A'_a` over `adjoin T a` by the restricted stage; so
+       `𝕃(fibre) ≅ A'_a` in μVF^◇[1] over `adjoin T a`.
+    3. **Good points (R126).** The bad set of `F` has VF dimension `< m+1`, so
+       its bad parameters lie in a zero locus `Z(P)` (`GoodPoints`). Choose one
+       radius `δ` for `A'`, `A''` and both first-stage sets; a grid point
+       `b = a + y` (`y` from the base field, `v(y) > δ`, Combinatorial
+       Nullstellensatz) is outside `Z(P)`, in the same δ-polydisc as `a`, and
+       a term in `T, a` (so `adjoin T b ⊆ adjoin T a`).
+    4. **Fibrewise μIsp.** At `b`, `F_b : A'_b → A''_b` is a μVF^◇[1] morphism
+       over `adjoin T b`; with step 2, `lift_iso_muIsp_of_support` gives μIsp of
+       the fibre classes at `b`; δ-invariance identifies them with the fibres
+       at `a`; `BaseExtension.muIsp_ext` moves them to `adjoin T a`.
+    5. **Glue.** Apply `Lemma714` to `A'₁`, `A''₁` with head start 1 and the
+       tails (step 1), then step 1's class identification.
+  - **Done (2026-11-19)**, `Corollary715Fibres.corollary_7_15`. The
+    normalization issue (GAP-REPAIRS 11) is handled by independence of the
+    centre (7.14 with equal sets), a common centre, and grafting normalized
+    contractions of the first-stage sets after the first stage. Steps 2–4 run at
+    a good point b over S⟨b⟩: slices of the first stages and of the conjugated
+    map `N'' ∘ F ∘ N'⁻¹` are morphisms of μVF^◇[1] (`FibreRestriction`); the
+    lift of the fibre object is the target slice; Lemma 7.13 there, then the
+    transfer to S⟨a⟩ through the definable closure (GAP-REPAIRS 12).
+  - Size: comparable to upstream's `corollary_6_15_uncountable` minus its 6.14
+    core; several thousand lines.
 
 ### 7.16 Definition `rvaffine`, 7.17 Definition `defn:balance`, 7.19 Definition `def:units`
 - **New.** `VAffine`, `RVAffine` (slope t ∈ RV), `Balanced` (paradigms in

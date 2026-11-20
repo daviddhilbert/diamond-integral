@@ -33,10 +33,19 @@ import «section 7».KernelBaseChange
 import «section 7».BaseExtension
 import «section 7».FibreObjects
 import «section 7».FiberwiseInput
+import «section 7».FirstStage
+import «section 7».ContractionChoice
+import «section 7».Corollary715
+import «section 7».FibreInvariance
+import «section 7».ConjugatedMaps
+import «section 7».FibreComparison
+import «section 7».Corollary715Fibres
+import «section 7».Remark728
 import «section 7».MeasuredRVBridge
 import «section 7».MeasuredRVBounds
 import «section 7».ChartLifting
 import «section 7».ChartDiamondLift
+import «section 7».FibreRestriction
 
 /-! Entry point for the Section 7 formalization (integrating proper invariant
 sets), following the adopted manuscript with bounded variable apertures. -/

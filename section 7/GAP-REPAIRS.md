@@ -72,3 +72,57 @@ formalization convention. No manuscript edit has been made for them.
     starts and Remark 6.28; the selected labels are finite-to-one and nonzero
     on the fibres. In degree 0, μIsp^db is equality of classes (there are no
     blowups). The base is a substructure with support data (item 9).
+11. **Corollary 7.15 and the preliminary normalization (found 2026-11-19;
+    resolved for 7.15 the same day, without changing the 7.14 input).** A standard contraction first adjusts the set by Remark
+    `spec:addendum`, so that it is doubly bounded ("Adjusting T_i by way of
+    Remark spec:addendum if necessary"). In Section 6 this is the zero-centred
+    normalization of `NormalizedMeasuredContraction`: every coordinate smaller
+    than a definable center c is shifted by c. The two standard contractions in
+    7.15 may use different centers. Their first-stage sets T̂_{σ(1)}(A') and
+    R̂_{σ(1)}(A'') then have VF projections shift_c'(P) and shift_c''(P) of the
+    common base P = pr_{~i}(A') = pr_{~i}(A''). These differ, while Lemma 7.14
+    needs a common VF projection. The proof of 7.15, and R126's "common base",
+    do not address this.
+    - It is an omitted justification, not a mathematical error. The shifts are
+      coordinatewise piecewise translations by base-definable constants, and
+      `adjoin T a = adjoin T (shift a)`.
+    - A repair is needed before 7.15 can be applied to arbitrary standard
+      contractions. Options: (a) a form of 7.14 that allows the two VF
+      projections to differ by such a coordinatewise translation; (b) a lemma
+      that the class of a standard contraction does not depend on the
+      normalization; (c) normalization-free contractions in 7.14/7.15 for
+      doubly bounded objects, with (b) for the comparison.
+    - Resolution for 7.15 (`Corollary715`, `ContractionChoice`). Option (b)
+      follows from the 7.14 input itself: with A' = A'' the fibres coincide,
+      so any two standard contractions of one object in the same order are
+      μIsp^db-related (`ispRel_same_set`). It then suffices to treat
+      contractions with a common centre (`exists_common_center`,
+      `exists_contraction_with`), whose first-stage sets have the same VF
+      projection (`firstSet_vf_iff`). Normalized contractions of the
+      first-stage sets are grafted after the first stage (`graftRest`,
+      `cls_graftRest`): a first-stage set is doubly bounded, so its
+      normalization fixes the VF coordinates (Section 6
+      `point_field_of_doublyBounded`) and the program pulls back
+      (`precomposeFixedVF`).
+    - Inside the proof of 7.14, where (b) is not yet available, the 7.14
+      session uses option (a) internally. 7.23 and 7.24 can follow the 7.15
+      route.
+
+12. **Corollary 7.15: good points and invariance (formal reading,
+    2026-11-19).** Omitted justifications, not errors.
+    - The paper's grid lies in VF(S), with S closed under definable closure
+      (Convention 2.5). Here the base is a substructure, so the grid points are
+      powers of one element definable over S (`exists_good_point`), and the
+      classes over S⟨b⟩ are carried to S⟨a⟩ through the definable closure
+      (`transfer_adjoin`, `BaseExtension.Transfer.ofDcl`).
+    - "δ-invariance" is needed for the fibres and for their forms. One named
+      radius serves both (`FibreInvariance.firstSet_uniform`): Section 6's
+      uniform radius applied to the graft of the rest-lift map, whose RV labels
+      determine the form. The fibre classes at a and b then agree
+      (`FibreComparison.cls_fibreObject_eq`).
+    - "Bad parameters lie in Z(P)": for each bad set (the exceptional sets of
+      the two first stages, and the image of the bad set of F in the prepared
+      set), P is the leading coefficient in the contracted coordinate of a
+      nonzero polynomial vanishing on it. Off Z(P) its slice is finite
+      (`FibreRestriction.exists_good_polynomial`), and the slice maps are
+      morphisms of μVF^◇[1] over S⟨b⟩ (`FibreRestriction.sliceMorphism`).

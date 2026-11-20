@@ -23,7 +23,7 @@ formalized.
 | Lemma 7.12 | `blowup:same:RV:coa` | done on classes | `BlowupLiftGeneral.lemma_7_12` (every aperture datum, `liftCls [U^{τ,j}] = liftCls [U]` in K₊ μVF^◇[1+k]); `step_lift`, `steps_lift`, `muIsp_lift` (blowups of any length, μIsp). Construction: `BlowupLiftData.apertureData` (centres b₀, b₁), `BlowupLiftImage.mem_Vreg_iff` (image), `BlowupLiftContraction.lift_isomorphic` (μVF^◇ isomorphism onto the lift of the contraction), `BlowupLiftClasses.isoE`/`isoS`/`lemma_7_12_noInfinity`, `BlowupLiftGeneral.strict_annular` (∞ labels). Over the VF-generated base of Section 6. The object-level isomorphism is not stated separately (GAP-REPAIRS 7) |
 | Lemma 7.13 | `kernel:dim:1:coa` | done (printed form, head start 0) | `KernelDimOne.lemma_7_13`: for A ≅ B in μVF^◇[1] and standard contractions (Section 6 `NormalizedMeasuredContraction`, head start 0), ([U], [V]) ∈ μIsp^db. Core form `KernelDimOne.lift_iso_muIsp`: 𝕃U ≅ 𝕃V in μVF^◇[1] for doubly bounded U, V ⇒ ([U], [V]) ∈ μIsp^db (6.38 on the composite, then `lemma_7_11` on both sides; `clsG_source`/`clsG_target`). Over the VF-generated base of Section 6, and over any substructure with support data V ⊆ T ⊆ acl(V) (`KernelBaseChange.lemma_7_13_of_support`, `lift_iso_muIsp_of_support`; e.g. `adjoin T b`, the base with adjoined VF parameters used in 7.15). The hypothesis [A] = [B] is read as A ≅ B (GAP-REPAIRS 1, 8). Pending: the approved head-start form, stated with 7.14 |
 | Lemma 7.14 | `isp:VF:fiberwise:contract` | **temporary input** | Stated precisely as the explicit replaceable input `FiberwiseInput.Lemma714 M G` (author decision 2026-11-19, "Input + parallel build"); later results take it as a hypothesis. Fibre objects over S⟨a⟩: `FibreObjects.fibreObject`; μIsp^db in any degree: `FiberwiseInput.IspRel`. Being proved in a separate session (`section 7/Lemma714*.lean`) |
-| Corollary 7.15 | `contraction:same:perm:isp` | pending | |
+| Corollary 7.15 | `contraction:same:perm:isp` | **done on the 7.14 input** | `Corollary715Fibres.corollary_7_15`: for a morphism F : A' → A'' of μVF^◇[n+2] over a substructure with support data, fixing every VF coordinate except i = e(last), and any standard contractions F', F'' of A', A'' in the order e, the head-start classes are μIsp^db-related; the 7.14 input is the hypothesis `h714 : Lemma714 M G`. One VF coordinate is Lemma 7.13 (`KernelBaseChange.lemma_7_13_of_support`). Route (GAP-REPAIRS 11, 12): independence of the normalization centre from 7.14 with equal sets (`Corollary715.ispRel_same_set`); contractions with a common centre (`ContractionChoice`); first stage and rest (`FirstStage`); reduction to fibres (`Corollary715.reduction_7_15`); the fibre hypothesis at a good point b over S⟨b⟩ with Lemma 7.13, then transfer to S⟨a⟩ (`Corollary715Fibres.fibreHypothesis`) |
 | Definitions 7.16, 7.17, 7.19 | `rvaffine`, `defn:balance`, `def:units` | done (definitions) | `TwoCells.VAffine`, `RVAffine`/`HasSlope`, `Balanced`, `IsOneCell`, `PositioningCase`, `IsTwoCell` (geometric; definability imposed where used) |
 | Remark 7.18 | `2cell:linear` | done (approved scope) | `TwoCells.paradigm_zero_iff`, `graph_of_zero` (∞-symmetry; A is the graph of f), `slope_eq` (s·t₁ = −t₂) |
 | Lemmas 7.20–7.23 | `decom:into:2:units` … `contraction:perm:pair:isp` | pending | |
@@ -31,7 +31,7 @@ formalized.
 | Remark 7.25 | `thekernel` | pending | |
 | Theorem 7.26 | `main:prop` | pending | |
 | Corollary 7.27 | `db:to:novol` | pending | |
-| Remark 7.28 | `eg:eb:factor` | pending | author: crucial. Assessed 2026-11-19 and reported: needs Section 3/4/6 bridges and the bounded RV decomposition; route awaiting author decision |
+| Remark 7.28 | `eg:eb:factor` | done | `Remark728.remark_7_28` (degree n+1) and `remark_7_28_zero` (degree 0): for A ∈ μVF^◇ over the real part of a Section 3 ground context (strongly homogeneous, author decision 2026-11-19), 𝔼_g(∫[A]) = 𝔼_b(∫[A])·[𝔸]^{-n}, with ∫ = `nativeVFChartIntegral` (for any accepted lift input; its values on lifts are fixed). Route: standard contraction (`remark_6_28_exists`, `remark_6_28`), forgetful map to Section 3 (`forgetVF`, `forgetVF_iso`, `forgetVF_lift`, `forgetRV`, `labelsRV`), chart identification (`chart_ordinary_class`, `BaseExtension`), agreement of the two evaluations on doubly bounded classes (`boundedIndependence`, from Section 4's bounded RV decomposition `RVBoundedDecomposition.boundedEvaluation_geometric_eq_bounded`), normalization (Section 4 `RVT001BoundedFactor.geometric_eq_bounded_mul`). Hypotheses besides the context: the valuation compatibility, a nontrivial valuation on the context's field, nontrivial Γ over the raw base |
 
 Corollary 6.37 on Section 7's classes: `ChartOfMeasured.liftCls_surjective`
 (the converter `chartOf` reads a Section 6 measured RV object as a Section 4
@@ -55,10 +55,18 @@ Prepared for later results (supporting lemmas, not numbered results):
   5.2); Lemma 7.11 from the lift of any doubly bounded measured RV object
   (`lemma_7_11_measured`); the adjoined base `adjoin T b` with
   `adjoin_support`, `adjoin_small`, `adjoin_gamma` (GAP-REPAIRS 9).
-- `BaseExtension` (for 7.14, 7.15): for bases B ⊆ C, charts, isomorphisms,
-  apertures and annular data over B extend to C with the same data; the
-  extension of classes `clsExt` is additive and maps blowups to blowups and
-  μIsp^db to μIsp^db (`step_ext`, `steps_ext`, `muIsp_ext`).
+- `BaseExtension` (for 7.14, 7.15): when definability over B implies
+  definability over C (`Transfer`: B ⊆ C, or the names of B in the definable
+  closure of C), charts, isomorphisms, apertures and annular data over B extend
+  to C with the same data; the extension of classes `clsExt` is additive and
+  maps blowups to blowups and μIsp^db to μIsp^db (`step_ext`, `steps_ext`,
+  `muIsp_ext`).
+- Modules of the 7.15 proof, reusable for 7.14, 7.23 and 7.24: `FirstStage`
+  (head-start class of a contraction = head-start-(k+1) class of its rest;
+  shared with the 7.14 session), `ContractionChoice`, `Corollary715`,
+  `FibreInvariance`, `FibreComparison`, `ConjugatedMaps`, `FibreRestriction`
+  (restriction of a coordinate-fixing map to slices, as a morphism of
+  μVF^◇[1] at good points).
 - `Groupification` (for 7.26): the Grothendieck group of M ⧸ c is K(M) modulo
   the differences of c-related elements (`groupQuotientEquiv`); no
   cancellation in M is assumed.

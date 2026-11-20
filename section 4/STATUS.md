@@ -34,8 +34,8 @@ the Definition 4.9 ∞-coordinate comparison (`RVStrictBoundedComparison`),
 `Section4LinkedRemarks` (diagram (edb:eb:com), Remarks 4.4/4.16) and the
 Proposition 3.18 kernel witness (recorded under section 3).
 
-The complete Section 4 audit (November 19) passes 5546 declarations (3382
-theorems) across 626 modules plus `Section.lean`, with only `propext`,
+The complete Section 4 audit (November 19) passes 5584 declarations (3412
+theorems) across 628 modules plus `Section.lean`, with only `propext`,
 `Classical.choice` and `Quot.sound`. The summary strings in `verify.py`
 (copied into `verification/status.json`) record both the unary and the
 multivariate rational-affine normal forms as proved.
@@ -88,7 +88,8 @@ colored T001 review copy is preserved separately.
 - Not pursued (author-approved triage, November 18): the explanatory items
   listed in GAP-REPAIRS.md (Notation 4.13's unmeasured ring and inequality,
   K μΓ[0] ≅ ℤ[Γ_def] in Remark 4.6, parts of Remark 4.4, the second
-  paragraph of Remark 4.16, Remark 4.10's first sentence).
+  paragraph of Remark 4.16). Remark 4.10's first sentence and the
+  surjectivity of μΨ^db were proved on November 19 (`RVBoundedDecomposition`).
 
 The corrected main text asserts a natural affine comparison. Formalizing
 the referee's particular counterexample varieties to the removed
