@@ -149,6 +149,7 @@ import «section 7».TautologicalContractions
 import «section 7».FirstStageObjects
 import «section 7».StageReindexing
 import «section 7».StageBaseChange
+import «section 7».OrderGrafts
 
 /-! Entry point for the Section 7 formalization (integrating proper invariant
 sets), following the adopted manuscript with bounded variable apertures. -/
