@@ -89,7 +89,7 @@ theorem forgetVF_lift {n : ℕ} (U : DiamondIntegral.Section6.MeasuredRVObject (
 with its base extended, have the same ordinary class. -/
 theorem chart_ordinary_class {n : ℕ} (U : DiamondIntegral.Section6.MeasuredRVObject (M := M) (C.real : Set M) n) :
     DiamondIntegral.Section4.RVOrdinaryRing.objectClass (DiamondIntegral.Section4.Section3RVChartBridge.chart (forgetRV hc C U)) =
-      DiamondIntegral.Section4.RVOrdinaryRing.objectClass (chartExt (B := ⟨(C.real : Set M), ∅⟩) (C := C.base) (fun _ h => h) (Set.empty_subset _) (chartOf hc U)) := by
+      DiamondIntegral.Section4.RVOrdinaryRing.objectClass (chartExt (B := ⟨(C.real : Set M), ∅⟩) (C := C.base) (Transfer.ofSubset (B := ⟨(C.real : Set M), ∅⟩) (C := C.base) (fun _ h => h) (Set.empty_subset _)) (chartOf hc U)) := by
   apply DiamondIntegral.Section4.RVOrdinaryRing.objectClass_iso
   exact DiamondIntegral.Section4.RVForgetScissors.ofMap _ _ id
     (DiamondIntegral.Section4.RVSharpCharts.identity_graph_definable C.base _ (DiamondIntegral.Section4.Section3RVCodeBridge.rawDomain_definable _))
@@ -144,10 +144,10 @@ theorem remark_7_28_of_independence (H : YinGammaGroundUnmeasuredLiftInput C hc)
   · exact DiamondIntegral.Section4.RVOrdinaryGrading.class_mem _ _
   · have hx : DiamondIntegral.Section4.RVOrdinaryMaps.boundedForget C.base
         (DiamondIntegral.Section4.RVBoundedRing.objectClass
-          (objExt (B := ⟨(C.real : Set M), ∅⟩) (C := C.base) (fun _ h => h) (Set.empty_subset _)
+          (objExt (B := ⟨(C.real : Set M), ∅⟩) (C := C.base) (Transfer.ofSubset (B := ⟨(C.real : Set M), ∅⟩) (C := C.base) (fun _ h => h) (Set.empty_subset _))
             (objOf hc C.real _ hU))) =
         DiamondIntegral.Section4.RVOrdinaryRing.objectClass
-          (chartExt (B := ⟨(C.real : Set M), ∅⟩) (C := C.base) (fun _ h => h) (Set.empty_subset _)
+          (chartExt (B := ⟨(C.real : Set M), ∅⟩) (C := C.base) (Transfer.ofSubset (B := ⟨(C.real : Set M), ∅⟩) (C := C.base) (fun _ h => h) (Set.empty_subset _))
             (chartOf hc (F.headStartMeasuredObject C.model00 hc lin C.uncountable C.saturated hv C.small_real hΓ 0
               Fin.elim0 (object_hFin A Fin.elim0)))) :=
       DiamondIntegral.Section4.RVOrdinaryMaps.boundedForget_class C.base _
