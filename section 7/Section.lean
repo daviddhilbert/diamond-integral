@@ -38,6 +38,7 @@ import «section 7».ContractionChoice
 import «section 7».Corollary715
 import «section 7».FibreInvariance
 import «section 7».ConjugatedMaps
+import «section 7».FibreComparison
 import «section 7».Remark728
 import «section 7».MeasuredRVBridge
 import «section 7».MeasuredRVBounds
