@@ -1,5 +1,6 @@
 import «section 7».MorphismClasses
 import «section 7».BlowupLiftGeneral
+import «section 7».Corollary715Moves
 
 /-! Proposition 7.24 (`kernel:L`) in positive degree, through an invariant of
 the scissor presentation of `K₊ μVF^◇[n + 1]`.
@@ -80,6 +81,12 @@ section Hypotheses
 /-- Corollary 7.15 for `(i, j)`-relatively unary morphisms, in every dimension
 `≥ 2`. -/
 def MoveHyp : Prop := ∀ n : ℕ, MoveRel (G := G) (n := n) h00 hc hκ hs hv hsmall hΓ
+
+include V hV hVT hTV hnt in
+/-- `MoveHyp` holds: Corollary 7.15 for `(i, j)`-relatively unary morphisms
+(`Corollary715Moves.corollary_7_15_moves`). -/
+theorem moveHyp : MoveHyp (G := G) h00 hc hκ hs hv hsmall hΓ := fun _ _ _ F _ _ hF _ _ F₁ F₂ =>
+  Corollary715Moves.corollary_7_15_moves h00 hc hκ hs hv hsmall hΓ V hV hVT hTV hnt F hF F₁ F₂
 
 /-- Additivity of contraction classes over a proper invariant piece and its
 complement. -/
@@ -237,11 +244,11 @@ theorem liftCls_cast_iff {a b : ℕ} (h : a = b) (f : ∀ k, Cls (BT T) k → KP
   subst h
   rfl
 
-include hIF hMove hScissor hTaut in
+include hIF hScissor hTaut in
 /-- **Proposition 7.24 (`kernel:L`), degree `n + 1`.** For classes `x`, `y` of
 `μRV^db[n + 1]`: `μ𝕃 x = μ𝕃 y` in `K₊ μVF^◇[n + 1]` if and only if
-`(x, y) ∈ μIsp^db`. On the hypotheses `hIF` (intermediate forms), `hMove`,
-`hScissor`, `hTaut`. -/
+`(x, y) ∈ μIsp^db`. On the hypotheses `hIF` (intermediate forms), `hScissor`,
+`hTaut`. -/
 theorem proposition_7_24 (x y : Cls (BT T) (n + 1)) :
     liftCls (G := G) (k := n + 1) hc h00 hκ hs T hsmall hΓ hv B₀ hntB x =
         liftCls (G := G) (k := n + 1) hc h00 hκ hs T hsmall hΓ hv B₀ hntB y ↔ IspRel x y := by
@@ -257,6 +264,7 @@ theorem proposition_7_24 (x y : Cls (BT T) (n + 1)) :
   constructor
   · intro h
     apply (ispCon_mk_eq (BT T) n).mp
+    have hMove := moveHyp h00 hc hκ hs hv _ hV hVT' hTV' hnt hsmall hΓ
     rw [← integral_liftCls h00 hc hκ hs hv _ hV hVT' hTV' hnt hsmall hΓ B₀ hntB hIF hMove hScissor hTaut x, h,
       integral_liftCls h00 hc hκ hs hv _ hV hVT' hTV' hnt hsmall hΓ B₀ hntB hIF hMove hScissor hTaut y]
   · intro h
@@ -280,7 +288,7 @@ theorem integral_bijective :
     obtain ⟨y, rfl⟩ := ChartOfMeasured.liftCls_surjective hc (G := G) h00 hκ hs T hsmall hΓ hv B₀ hntB b
     rw [integral_liftCls h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ B₀ hntB hIF hMove hScissor hTaut,
       integral_liftCls h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ B₀ hntB hIF hMove hScissor hTaut] at hab
-    exact (proposition_7_24 h00 hc hκ hs hv hsmall hΓ B₀ hntB hIF hMove hScissor hTaut x y).mpr
+    exact (proposition_7_24 h00 hc hκ hs hv hsmall hΓ B₀ hntB hIF hScissor hTaut x y).mpr
       ((ispCon_mk_eq _ _).mp hab)
   · intro q
     obtain ⟨x, rfl⟩ := AddCon.mk'_surjective (c := ispCon (BT T) n) q
