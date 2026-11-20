@@ -470,7 +470,7 @@
     "section 2/ZeroFaces.lean": "9ea729bcee364da066593709349c1035f0c7bc85b6a0933a9f68d3b5c95c2834",
     "section 2/ZeroFacesVF.lean": "86dccef9f23b6ee8ebaa973ba8ec2a18bafaa8f30bb5140b5266950817f8cb56",
     "DiamondIntegral.lean": "66d02be99d3e377f670ad569f36274aed59d735366ebb4b157993bdb166b553e",
-    "lakefile.toml": "e8ddd7bcdbe01b692997f314c0a9cc42833e948753ef154de7b68d55d9dc7322",
+    "lakefile.toml": "62e8a1d23f8479861f213c58201c878b0a049ffe85d85bd18cac974f66cbf272",
     "lake-manifest.json": "4f0ab2b8a2144ce82d2d8910ec2beb6cf3f21fffcd610bd56cb0415b5bf88ac6",
     "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
     "ACCEPTED-CITED-RESULTS.md": "2a6f42ef5f82e18d502ec9bb71d626675f5e24eae45d44291d75b23d9ee906c9",
@@ -487,7 +487,7 @@
     "section 2/verification/UPSTREAM-LINKS.md": "cf7e8e5831a063f147ba2239830c8019859d56b78845cbbddff41a64d9c7836a",
     "section 2/verification/UPSTREAM-LINKS.json": "0f31e20f474e062988516df4a208e34f50a49a15865a86626f7afe29396e4331"
   },
-  "manuscript_sha256": "5d006b61d936dc734e38afc9e4b13eded7aba602989a46c6a863ee89c067a259",
+  "manuscript_sha256": "5f9316530d2e2b3125d398e4d0da2943a6b9973c82a69129dfe3ea3fd2639a9a",
   "accepted_cited_inputs": [
     {
       "interface": "DiamondIntegral.Section2.AtomicGammaBaseChangeInput",

@@ -132,7 +132,8 @@ arbitrary parameter base and take no input beyond the ACVF model.
     (GAP-REPAIRS 16). By the author's decision ("fix (1)") Definition 6.34 is
     repaired as in the paper: morphisms factor inside `μVF^◇` through objects
     (Section 6 `ObjectFactorization`; manuscript wording in review batch B10,
-    pending the author's reading). The input and `UnaryArrows` are deleted.
+    approved and applied to the manuscript on 2026-11-20). The input and
+    `UnaryArrows` are deleted.
   - 7.24: `Proposition724.proposition_7_24`, `proposition_7_24_muIsp`;
     degree 0 `Proposition724Zero.proposition_7_24_zero`.
   - 7.26: `Proposition724.integralEquiv`, `Proposition724Zero.integralZero_bijective`,
@@ -150,7 +151,7 @@ arbitrary parameter base and take no input beyond the ACVF model.
 
 ## Next
 
-The author's reading of review batch B10 (Definition 6.34). Corollary 7.27 is
+Review batch B10 (Definition 6.34) is approved and applied. Corollary 7.27 is
 done on the classes of objects (`Corollary727`); its ring-map form can now use
 `Theorem726.theorem_7_26`. Product compatibility (7.10) and the object-level converse
 for Definition 7.2 remain open side items.

@@ -30,7 +30,7 @@ at the author's instruction. Nothing is committed.
 - `Isomorphic`, `Morphism.id`, `Isomorphic.refl`.
 
 Design note (superseded 2026-11-20, author's decision "fix (1)"; manuscript
-wording in review batch B10, pending the author's reading). The earlier note
+wording in review batch B10, approved and applied to the manuscript on 2026-11-20). The earlier note
 read the intermediate sets as definable sets, not necessarily objects, because
 requiring objects seemed "stricter than the text and not verifiable for Section
 6's interpolation steps". Both reasons fail:

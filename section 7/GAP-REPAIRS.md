@@ -258,7 +258,7 @@ formalization convention. No manuscript edit has been made for them.
       in the paper: the composition is taken inside `μVF^◇[k]`, so every
       intermediate set is an object with its own proper covariant form and every
       factor is measure-preserving on its own (manuscript wording in review batch
-      B10, pending the author's reading; Lean: Section 6
+      B10, approved and applied to the manuscript on 2026-11-20; Lean: Section 6
       `DiamondCategory.ObjectFactorization`, `IsStep`, GAP-REPAIRS of Section 6
       under Definition 6.34). The arrows of 7.24 are then the steps of the chain
       (`MorphismClasses.factor_classes`), and the input `IntermediateForms` and
