@@ -2352,6 +2352,14 @@ set_option format.width 120
 #print DiamondIntegral.Section3.GammaGroundNormalizedMeasuredTensorPiece
 #print DiamondIntegral.Section3.GammaGroundNormalizedMeasuredTensorPiece.value
 #print DiamondIntegral.Section3.orderBoundary
+#print DiamondIntegral.Section3.MeasuredRealGround.vfFiniteFromReal
+#print DiamondIntegral.Section3.MeasuredRealGround.vfFiniteToReal
+#print DiamondIntegral.Section3.MeasuredRealGround.vfSemiringFromInvariant
+#print DiamondIntegral.Section3.MeasuredRealGround.vfSemiringFrom
+#print DiamondIntegral.Section3.MeasuredRealGround.vfSemiringToInvariant
+#print DiamondIntegral.Section3.MeasuredRealGround.vfSemiringTo
+#print DiamondIntegral.Section3.MeasuredRealGround.vfSemiringEquiv
+#print DiamondIntegral.Section3.MeasuredRealGround.completedOrdinaryLiftInput
 #print DiamondIntegral.Section3.LiteralValuePattern
 #print DiamondIntegral.Section3.literalPatternCell
 #print DiamondIntegral.Section3.literalPatternCharacters
@@ -9252,6 +9260,16 @@ set_option format.width 120
 #print axioms DiamondIntegral.Section3.orderBoundary_finite_of_controller
 #check @DiamondIntegral.Section3.orderBoundary_controls
 #print axioms DiamondIntegral.Section3.orderBoundary_controls
+#check @DiamondIntegral.Section3.MeasuredRealGround.rvSemiringFrom_to
+#print axioms DiamondIntegral.Section3.MeasuredRealGround.rvSemiringFrom_to
+#check @DiamondIntegral.Section3.MeasuredRealGround.vfSemiringFrom_class
+#print axioms DiamondIntegral.Section3.MeasuredRealGround.vfSemiringFrom_class
+#check @DiamondIntegral.Section3.MeasuredRealGround.vfSemiringTo_class
+#print axioms DiamondIntegral.Section3.MeasuredRealGround.vfSemiringTo_class
+#check @DiamondIntegral.Section3.MeasuredRealGround.vfSemiringTo_from
+#print axioms DiamondIntegral.Section3.MeasuredRealGround.vfSemiringTo_from
+#check @DiamondIntegral.Section3.MeasuredRealGround.vfSemiringFrom_to
+#print axioms DiamondIntegral.Section3.MeasuredRealGround.vfSemiringFrom_to
 #check @DiamondIntegral.Section3.literalPatternCell_own
 #print axioms DiamondIntegral.Section3.literalPatternCell_own
 #check @DiamondIntegral.Section3.literalPatternCell_unique
@@ -15476,6 +15494,22 @@ set_option format.width 120
 #print axioms DiamondIntegral.Section3.GammaGroundNormalizedMeasuredTensorPiece.value
 #check @DiamondIntegral.Section3.orderBoundary
 #print axioms DiamondIntegral.Section3.orderBoundary
+#check @DiamondIntegral.Section3.MeasuredRealGround.vfFiniteFromReal
+#print axioms DiamondIntegral.Section3.MeasuredRealGround.vfFiniteFromReal
+#check @DiamondIntegral.Section3.MeasuredRealGround.vfFiniteToReal
+#print axioms DiamondIntegral.Section3.MeasuredRealGround.vfFiniteToReal
+#check @DiamondIntegral.Section3.MeasuredRealGround.vfSemiringFromInvariant
+#print axioms DiamondIntegral.Section3.MeasuredRealGround.vfSemiringFromInvariant
+#check @DiamondIntegral.Section3.MeasuredRealGround.vfSemiringFrom
+#print axioms DiamondIntegral.Section3.MeasuredRealGround.vfSemiringFrom
+#check @DiamondIntegral.Section3.MeasuredRealGround.vfSemiringToInvariant
+#print axioms DiamondIntegral.Section3.MeasuredRealGround.vfSemiringToInvariant
+#check @DiamondIntegral.Section3.MeasuredRealGround.vfSemiringTo
+#print axioms DiamondIntegral.Section3.MeasuredRealGround.vfSemiringTo
+#check @DiamondIntegral.Section3.MeasuredRealGround.vfSemiringEquiv
+#print axioms DiamondIntegral.Section3.MeasuredRealGround.vfSemiringEquiv
+#check @DiamondIntegral.Section3.MeasuredRealGround.completedOrdinaryLiftInput
+#print axioms DiamondIntegral.Section3.MeasuredRealGround.completedOrdinaryLiftInput
 #check @DiamondIntegral.Section3.LiteralValuePattern
 #print axioms DiamondIntegral.Section3.LiteralValuePattern
 #check @DiamondIntegral.Section3.literalPatternCell

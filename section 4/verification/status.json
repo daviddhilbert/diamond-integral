@@ -22,12 +22,8 @@
     "multivariate_gamma_rational_affine_normal_form": "DiamondIntegral.Section4.Section3GammaAffineDischarge.input",
     "continuous_cell_decomposition_discharged": "DiamondIntegral.Section4.GammaContinuousDecomposition.exists_decomposition_discharged",
     "remark_4_2_euler_characteristic_discharged": "DiamondIntegral.Section4.GammaContinuousDecomposition.euler_characteristic_discharged",
-    "actual_affine_comparison_nonsurjectivity": "DiamondIntegral.Section4.RESAffineNonsurjective.remark_4_4",
-    "remark_4_10_first_sentence_labels": "DiamondIntegral.Section4.RVBoundedDecomposition.coordinate_image_bounded",
-    "remark_4_10_first_sentence_volumes": "DiamondIntegral.Section4.RVBoundedDecomposition.volume_image_bounded",
-    "remark_4_10_bounded_decomposition": "DiamondIntegral.Section4.RVBoundedDecomposition.comparison_surjective",
-    "remark_4_10_positive_bounded_decomposition": "DiamondIntegral.Section4.RVBoundedDecomposition.positive_comparison_surjective",
-    "bounded_t001_evaluations_agree": "DiamondIntegral.Section4.RVBoundedDecomposition.boundedEvaluation_geometric_eq_bounded"
+    "definition_4_1_dimension_free_grothendieck_ring": "DiamondIntegral.Section4.RESDimensionFreeCategory.definition_4_1_identification",
+    "actual_affine_comparison_nonsurjectivity": "DiamondIntegral.Section4.RESAffineNonsurjective.remark_4_4"
   },
   "lean": "Lean (version 4.35.0, arm64-apple-darwin24.6.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
   "upstream_project_dependencies": {
@@ -17951,14 +17947,6 @@
       "kind": "theorem"
     },
     {
-      "name": "DiamondIntegral.Section4.RVT001BoundedFactor.mk_pow_eq",
-      "kind": "theorem"
-    },
-    {
-      "name": "DiamondIntegral.Section4.RVT001BoundedFactor.geometric_eq_bounded_mul",
-      "kind": "theorem"
-    },
-    {
       "name": "DiamondIntegral.Section4.GammaRationalAffineContinuity.rationalAffine",
       "kind": "def"
     },
@@ -22051,6 +22039,50 @@
       "kind": "theorem"
     },
     {
+      "name": "DiamondIntegral.Section4.Section4LinkedRemarks.alternativeEvaluation",
+      "kind": "abbrev"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Section4LinkedRemarks.alternativeGradedEvaluation",
+      "kind": "abbrev"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Section4LinkedRemarks.alternativeEvaluation_res",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Section4LinkedRemarks.alternativeEvaluation_p",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Section4LinkedRemarks.alternativeEvaluation_h",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Section4LinkedRemarks.ordinaryEvaluation_surjective",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Section4LinkedRemarks.ordinaryBoundedEvaluation_surjective",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Section4LinkedRemarks.ordinaryRadiusEvaluation_surjective",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Section4LinkedRemarks.boundedRaw_surjective",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Section4LinkedRemarks.homogeneousRaw_surjective",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.Section4LinkedRemarks.homogeneousRetraction_surjective",
+      "kind": "theorem"
+    },
+    {
       "name": "DiamondIntegral.Section4.GammaQEOutputSlopes.perturbAt",
       "kind": "def"
     },
@@ -22259,147 +22291,507 @@
       "kind": "theorem"
     },
     {
-      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.mapDomain",
-      "kind": "def"
-    },
-    {
-      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.map_volume_definable",
-      "kind": "theorem"
-    },
-    {
-      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.mapDomain_definable",
-      "kind": "theorem"
-    },
-    {
-      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.volume_bounded",
-      "kind": "theorem"
-    },
-    {
-      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.common_bound",
-      "kind": "theorem"
-    },
-    {
-      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.map_bounded",
-      "kind": "theorem"
-    },
-    {
-      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.isoMap",
-      "kind": "def"
-    },
-    {
-      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.isoMap_graph",
-      "kind": "theorem"
-    },
-    {
-      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.iso_domainBounded",
-      "kind": "theorem"
-    },
-    {
-      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.mem_strip",
-      "kind": "theorem"
-    },
-    {
-      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.coordinate_image_bounded",
-      "kind": "theorem"
-    },
-    {
-      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.volume_image_bounded",
-      "kind": "theorem"
-    },
-    {
-      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue",
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.Object",
       "kind": "structure"
     },
     {
-      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue.dvalue",
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.Iso",
+      "kind": "structure"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.ofRES",
       "kind": "def"
     },
     {
-      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue.dvalue_eq",
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.eq_of_domain",
       "kind": "theorem"
     },
     {
-      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue.dvalue_ofChart",
-      "kind": "theorem"
-    },
-    {
-      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue.dvalue_empty",
-      "kind": "theorem"
-    },
-    {
-      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue.dvalue_iso",
-      "kind": "theorem"
-    },
-    {
-      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue.dvalue_add",
-      "kind": "theorem"
-    },
-    {
-      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue.products",
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.unzero",
       "kind": "def"
     },
     {
-      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.value_eq_of_bijection",
-      "kind": "theorem"
-    },
-    {
-      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.bounded_of_bijection",
-      "kind": "theorem"
-    },
-    {
-      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.gammaFactorIso",
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.label",
       "kind": "def"
     },
     {
-      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.piece_value",
-      "kind": "theorem"
-    },
-    {
-      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.strict_value",
-      "kind": "theorem"
-    },
-    {
-      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.bounded_value",
-      "kind": "theorem"
-    },
-    {
-      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.ringValue",
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.unzeroGraph",
       "kind": "def"
     },
     {
-      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.comparison_product",
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.unzero_of_ne",
       "kind": "theorem"
     },
     {
-      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.bounded_mem",
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.unzero_zero",
       "kind": "theorem"
     },
     {
-      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.comparison_surjective",
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.unzero_nonzero",
       "kind": "theorem"
     },
     {
-      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.positiveValue",
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.unzeroGraph_definable",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.label_proper",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.label_finite_fibres",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.label_graph_definable",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.chartAt",
       "kind": "def"
     },
     {
-      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.positive_comparison_product",
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.chart",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.ofRES_chartAt",
       "kind": "theorem"
     },
     {
-      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.positive_comparison_surjective",
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.ofRES_chart",
       "kind": "theorem"
     },
     {
-      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.boundedEvaluation_comparison",
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.exists_label",
       "kind": "theorem"
     },
     {
-      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.boundedEvaluation_independent_kind",
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.Iso.refl",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.Iso.symm",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.Iso.toChart",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.Iso.ofChart",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.Iso.ofEq",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.unit",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.product",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.product_domain",
       "kind": "theorem"
     },
     {
-      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.boundedEvaluation_geometric_eq_bounded",
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.taggedSet",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.coproduct_domain",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.sum",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.sum_domain",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.ofRES_coproduct",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.symbol",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.Relation",
+      "kind": "inductive"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.relationIdeal",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.Ring",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.objectClass",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.relation_zero",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.objectClass_unit",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.objectClass_product",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.objectClass_iso",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.objectClass_empty",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.objectClass_sum",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.Invariant",
+      "kind": "structure"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.freeMap",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.freeMap_symbol",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.invariant_relation_zero",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.lift",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.lift_objectClass",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.hom_ext",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.familyInvariant",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.forgetLabel",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.forgetLabel_objectClass",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.forgetMeasured",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.forgetMeasured_objectClass",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.dimensionFree_class_eq",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.dimensionFree_empty",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.dimensionFree_coproduct",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.dimensionFreeInvariant",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.toDimensionFree",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.toDimensionFree_objectClass",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.forgetLabel_degreeIdeal",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.fromDimensionFree",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.fromDimensionFree_objectClass",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.from_to",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.to_from",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.equivalence",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.equivalence_objectClass",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.equivalence_objectClass_of_eq",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.equivalence_forgetLabel",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.equivalence_forgetMeasured",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.equivalence_symm_objectClass",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.definition_4_1_identification",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedCompatibility.presentation",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictPiece",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedCompatibility.objectClass_mem_strictPiece",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedCompatibility.projection",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedCompatibility.projection_objectClass",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedCompatibility.projection_mem",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedCompatibility.map_strictPiece",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedCompatibility.comap_gradedPiece",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedCompatibility.annulus_infinityFree",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedCompatibility.point_infinityFree",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictAnnulus",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictPoint",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictPGamma",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedCompatibility.equivalence_strictPGamma",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictPGamma_mem_strictPiece",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictRadiusIdeal",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedCompatibility.map_strictRadiusIdeal",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictManuscriptIdeal",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedCompatibility.map_strictManuscriptIdeal",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictManuscriptIdeal_eq_map_symm",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictRadiusIdeal_le",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedCompatibility.quotientEquiv",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedCompatibility.quotientEquiv_mk",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictBoundedCompatibility.quotientEquiv_objectClass",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictAnnularGenerators.coordIndex_head",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictAnnularGenerators.coordIndex_tail",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictAnnularGenerators.shellIndex",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictAnnularGenerators.shellIndex_head",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictAnnularGenerators.shellIndex_tail",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictAnnularGenerators.join_shellIndex",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictAnnularGenerators.stripChart",
+      "kind": "abbrev"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictAnnularGenerators.stripChart_finite",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictAnnularGenerators.strip_graph_eq",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictAnnularGenerators.stripAperture",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictAnnularGenerators.stripDatum",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictAnnularGenerators.stripDatum_infinityFree",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictAnnularGenerators.graph_infinityFree",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictAnnularGenerators.endpoint_infinityFree",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictAnnularGenerators.shell_infinityFree",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictAnnularGenerators.strictGenerator",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictAnnularGenerators.equivalence_strictGenerator",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictAnnularGenerators.strictAnnularIdeal",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictAnnularGenerators.bclass_preimage_pieces",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictAnnularGenerators.bclass_iso'",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictAnnularGenerators.source_piece",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictAnnularGenerators.endpointPieceIso",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictAnnularGenerators.endpoint_piece",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictAnnularGenerators.shellPieceIso",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictAnnularGenerators.shell_piece",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictAnnularGenerators.generator_eq_sum_strip",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictAnnularGenerators.generator_mem_map",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictAnnularGenerators.map_strictAnnularIdeal",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictAnnularGenerators.strictAnnularIdeal_eq",
       "kind": "theorem"
     }
   ],
@@ -44354,16 +44746,6 @@
       "Quot.sound",
       "propext"
     ],
-    "DiamondIntegral.Section4.RVT001BoundedFactor.mk_pow_eq": [
-      "Classical.choice",
-      "Quot.sound",
-      "propext"
-    ],
-    "DiamondIntegral.Section4.RVT001BoundedFactor.geometric_eq_bounded_mul": [
-      "Classical.choice",
-      "Quot.sound",
-      "propext"
-    ],
     "DiamondIntegral.Section4.GammaRationalAffineContinuity.rationalAffine": [
       "Classical.choice",
       "Quot.sound",
@@ -49412,6 +49794,61 @@
       "Quot.sound",
       "propext"
     ],
+    "DiamondIntegral.Section4.Section4LinkedRemarks.alternativeEvaluation": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Section4LinkedRemarks.alternativeGradedEvaluation": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Section4LinkedRemarks.alternativeEvaluation_res": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Section4LinkedRemarks.alternativeEvaluation_p": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Section4LinkedRemarks.alternativeEvaluation_h": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Section4LinkedRemarks.ordinaryEvaluation_surjective": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Section4LinkedRemarks.ordinaryBoundedEvaluation_surjective": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Section4LinkedRemarks.ordinaryRadiusEvaluation_surjective": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Section4LinkedRemarks.boundedRaw_surjective": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Section4LinkedRemarks.homogeneousRaw_surjective": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.Section4LinkedRemarks.homogeneousRetraction_surjective": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
     "DiamondIntegral.Section4.GammaQEOutputSlopes.perturbAt": [
       "Classical.choice",
       "Quot.sound",
@@ -49671,180 +50108,632 @@
       "Quot.sound",
       "propext"
     ],
-    "DiamondIntegral.Section4.RVBoundedDecomposition.mapDomain": [
-      "propext"
-    ],
-    "DiamondIntegral.Section4.RVBoundedDecomposition.map_volume_definable": [
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.Object": [
       "Classical.choice",
       "Quot.sound",
       "propext"
     ],
-    "DiamondIntegral.Section4.RVBoundedDecomposition.mapDomain_definable": [
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.Iso": [
       "Classical.choice",
       "Quot.sound",
       "propext"
     ],
-    "DiamondIntegral.Section4.RVBoundedDecomposition.volume_bounded": [
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.ofRES": [
       "Classical.choice",
       "Quot.sound",
       "propext"
     ],
-    "DiamondIntegral.Section4.RVBoundedDecomposition.common_bound": [
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.eq_of_domain": [
       "Classical.choice",
       "Quot.sound",
       "propext"
     ],
-    "DiamondIntegral.Section4.RVBoundedDecomposition.map_bounded": [
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.unzero": [
       "Classical.choice",
       "Quot.sound",
       "propext"
     ],
-    "DiamondIntegral.Section4.RVBoundedDecomposition.isoMap": [
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.label": [
       "Classical.choice",
       "Quot.sound",
       "propext"
     ],
-    "DiamondIntegral.Section4.RVBoundedDecomposition.isoMap_graph": [
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.unzeroGraph": [
       "Classical.choice",
       "Quot.sound",
       "propext"
     ],
-    "DiamondIntegral.Section4.RVBoundedDecomposition.iso_domainBounded": [
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.unzero_of_ne": [
       "Classical.choice",
       "Quot.sound",
       "propext"
     ],
-    "DiamondIntegral.Section4.RVBoundedDecomposition.mem_strip": [
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.unzero_zero": [
       "Classical.choice",
       "Quot.sound",
       "propext"
     ],
-    "DiamondIntegral.Section4.RVBoundedDecomposition.coordinate_image_bounded": [
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.unzero_nonzero": [
       "Classical.choice",
       "Quot.sound",
       "propext"
     ],
-    "DiamondIntegral.Section4.RVBoundedDecomposition.volume_image_bounded": [
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.unzeroGraph_definable": [
       "Classical.choice",
       "Quot.sound",
       "propext"
     ],
-    "DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue": [
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.label_proper": [
       "Classical.choice",
       "Quot.sound",
       "propext"
     ],
-    "DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue.dvalue": [
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.label_finite_fibres": [
       "Classical.choice",
       "Quot.sound",
       "propext"
     ],
-    "DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue.dvalue_eq": [
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.label_graph_definable": [
       "Classical.choice",
       "Quot.sound",
       "propext"
     ],
-    "DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue.dvalue_ofChart": [
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.chartAt": [
       "Classical.choice",
       "Quot.sound",
       "propext"
     ],
-    "DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue.dvalue_empty": [
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.chart": [
       "Classical.choice",
       "Quot.sound",
       "propext"
     ],
-    "DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue.dvalue_iso": [
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.ofRES_chartAt": [
       "Classical.choice",
       "Quot.sound",
       "propext"
     ],
-    "DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue.dvalue_add": [
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.ofRES_chart": [
       "Classical.choice",
       "Quot.sound",
       "propext"
     ],
-    "DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue.products": [
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.exists_label": [
       "Classical.choice",
       "Quot.sound",
       "propext"
     ],
-    "DiamondIntegral.Section4.RVBoundedDecomposition.value_eq_of_bijection": [
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.Iso.refl": [
       "Classical.choice",
       "Quot.sound",
       "propext"
     ],
-    "DiamondIntegral.Section4.RVBoundedDecomposition.bounded_of_bijection": [
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.Iso.symm": [
       "Classical.choice",
       "Quot.sound",
       "propext"
     ],
-    "DiamondIntegral.Section4.RVBoundedDecomposition.gammaFactorIso": [
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.Iso.toChart": [
       "Classical.choice",
       "Quot.sound",
       "propext"
     ],
-    "DiamondIntegral.Section4.RVBoundedDecomposition.piece_value": [
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.Iso.ofChart": [
       "Classical.choice",
       "Quot.sound",
       "propext"
     ],
-    "DiamondIntegral.Section4.RVBoundedDecomposition.strict_value": [
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.Iso.ofEq": [
       "Classical.choice",
       "Quot.sound",
       "propext"
     ],
-    "DiamondIntegral.Section4.RVBoundedDecomposition.bounded_value": [
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.unit": [
       "Classical.choice",
       "Quot.sound",
       "propext"
     ],
-    "DiamondIntegral.Section4.RVBoundedDecomposition.ringValue": [
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.product": [
       "Classical.choice",
       "Quot.sound",
       "propext"
     ],
-    "DiamondIntegral.Section4.RVBoundedDecomposition.comparison_product": [
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.product_domain": [
       "Classical.choice",
       "Quot.sound",
       "propext"
     ],
-    "DiamondIntegral.Section4.RVBoundedDecomposition.bounded_mem": [
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.taggedSet": [
       "Classical.choice",
       "Quot.sound",
       "propext"
     ],
-    "DiamondIntegral.Section4.RVBoundedDecomposition.comparison_surjective": [
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.coproduct_domain": [
       "Classical.choice",
       "Quot.sound",
       "propext"
     ],
-    "DiamondIntegral.Section4.RVBoundedDecomposition.positiveValue": [
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.sum": [
       "Classical.choice",
       "Quot.sound",
       "propext"
     ],
-    "DiamondIntegral.Section4.RVBoundedDecomposition.positive_comparison_product": [
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.sum_domain": [
       "Classical.choice",
       "Quot.sound",
       "propext"
     ],
-    "DiamondIntegral.Section4.RVBoundedDecomposition.positive_comparison_surjective": [
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.ofRES_coproduct": [
       "Classical.choice",
       "Quot.sound",
       "propext"
     ],
-    "DiamondIntegral.Section4.RVBoundedDecomposition.boundedEvaluation_comparison": [
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.symbol": [
       "Classical.choice",
       "Quot.sound",
       "propext"
     ],
-    "DiamondIntegral.Section4.RVBoundedDecomposition.boundedEvaluation_independent_kind": [
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.Relation": [
       "Classical.choice",
       "Quot.sound",
       "propext"
     ],
-    "DiamondIntegral.Section4.RVBoundedDecomposition.boundedEvaluation_geometric_eq_bounded": [
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.relationIdeal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.Ring": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.objectClass": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.relation_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.objectClass_unit": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.objectClass_product": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.objectClass_iso": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.objectClass_empty": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.objectClass_sum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.Invariant": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.freeMap": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.freeMap_symbol": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.invariant_relation_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.lift": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.lift_objectClass": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.hom_ext": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.familyInvariant": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.forgetLabel": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.forgetLabel_objectClass": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.forgetMeasured": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.forgetMeasured_objectClass": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.dimensionFree_class_eq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.dimensionFree_empty": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.dimensionFree_coproduct": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.dimensionFreeInvariant": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.toDimensionFree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.toDimensionFree_objectClass": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.forgetLabel_degreeIdeal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.fromDimensionFree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.fromDimensionFree_objectClass": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.from_to": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.to_from": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.equivalence": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.equivalence_objectClass": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.equivalence_objectClass_of_eq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.equivalence_forgetLabel": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.equivalence_forgetMeasured": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.equivalence_symm_objectClass": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.definition_4_1_identification": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedCompatibility.presentation": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictPiece": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedCompatibility.objectClass_mem_strictPiece": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedCompatibility.projection": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedCompatibility.projection_objectClass": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedCompatibility.projection_mem": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedCompatibility.map_strictPiece": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedCompatibility.comap_gradedPiece": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedCompatibility.annulus_infinityFree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedCompatibility.point_infinityFree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictAnnulus": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictPoint": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictPGamma": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedCompatibility.equivalence_strictPGamma": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictPGamma_mem_strictPiece": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictRadiusIdeal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedCompatibility.map_strictRadiusIdeal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictManuscriptIdeal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedCompatibility.map_strictManuscriptIdeal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictManuscriptIdeal_eq_map_symm": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictRadiusIdeal_le": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedCompatibility.quotientEquiv": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedCompatibility.quotientEquiv_mk": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictBoundedCompatibility.quotientEquiv_objectClass": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictAnnularGenerators.coordIndex_head": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictAnnularGenerators.coordIndex_tail": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictAnnularGenerators.shellIndex": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictAnnularGenerators.shellIndex_head": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictAnnularGenerators.shellIndex_tail": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictAnnularGenerators.join_shellIndex": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictAnnularGenerators.stripChart": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictAnnularGenerators.stripChart_finite": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictAnnularGenerators.strip_graph_eq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictAnnularGenerators.stripAperture": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictAnnularGenerators.stripDatum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictAnnularGenerators.stripDatum_infinityFree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictAnnularGenerators.graph_infinityFree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictAnnularGenerators.endpoint_infinityFree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictAnnularGenerators.shell_infinityFree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictAnnularGenerators.strictGenerator": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictAnnularGenerators.equivalence_strictGenerator": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictAnnularGenerators.strictAnnularIdeal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictAnnularGenerators.bclass_preimage_pieces": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictAnnularGenerators.bclass_iso'": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictAnnularGenerators.source_piece": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictAnnularGenerators.endpointPieceIso": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictAnnularGenerators.endpoint_piece": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictAnnularGenerators.shellPieceIso": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictAnnularGenerators.shell_piece": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictAnnularGenerators.generator_eq_sum_strip": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictAnnularGenerators.generator_mem_map": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictAnnularGenerators.map_strictAnnularIdeal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictAnnularGenerators.strictAnnularIdeal_eq": [
       "Classical.choice",
       "Quot.sound",
       "propext"
@@ -50396,7 +51285,6 @@
     "section 4/FieldAffineLocalizationNontrivial.lean": "1e3d6223502f639ddfc5783842c9cef09bda0e2b03b0fd1945b679d804c1440a",
     "section 4/RESAffineSeparation.lean": "75b79eab123acdc22070b337181ef84cd23865edd774d818202d7cea39010371",
     "section 4/RVT001NormalizedDistinct.lean": "dd77846aa768aeff22228b0be942e7abae92f215f7e25da9f3efb1e7f3a4e8b3",
-    "section 4/RVT001BoundedFactor.lean": "36489ff0c51e9254a85167b11f024f85fb10062c790cd2a4c0861de66ddfd372",
     "section 4/GammaRationalAffineContinuity.lean": "6919a9d920ebad45ade4de45f20a481c3ebddd8133d2d825fdad3c248975fb00",
     "section 4/GammaContinuousCells.lean": "2decac32a53d86d3408a7fac437a4ffcfafb21914414ffe606277ca93469834f",
     "section 4/Section3GammaAffineInput.lean": "d730e50450968a4750946584fe0269ab56acda646faadb003001f3521cd584c5",
@@ -50497,19 +51385,21 @@
     "section 4/Proposition318Witness.lean": "95d104364f228cae157968d263380e165bf5064b8e32309840c28a7233f784da",
     "section 4/Proposition318CubeRoots.lean": "c5ef9e2050c486af03f66af473bc86c0b94cdf16f94f195084a0cb4c0d2ee822",
     "section 4/Section4GammaLinearityDischarged.lean": "e03398946b7a944278d7b203cb2ea81945ef63548a476aa8e17d69fbfcf2179b",
-    "section 4/RVStrictBoundedComparison.lean": "5d3497290bb3d0cdb5cbcac36effb50a9239afde90315aea98ccf995b4c32e27",
-    "section 4/Section4LinkedRemarks.lean": "e5ac1b1f1eae30234928e667e36820c04798d72df69ef95465f201a66937c237",
+    "section 4/RVStrictBoundedComparison.lean": "d15a45f9a09c77987e3a4d0fc63a688c994b89d040d4943d8cdb2216d3011498",
+    "section 4/Section4LinkedRemarks.lean": "c3115be10f37e23a29564e3e8578f0cda59faaaac22077e44d8be0238df0979c",
     "section 4/GammaQEOutputSlopes.lean": "5630739b6b240d2f501fe976c8f5ee2b716778865206f1ae336b33740951bd01",
     "section 4/GammaQEFlatNormalFormArity.lean": "e49beaadd812632b5a71b1e9162cca338b3bba75fc2f82b36903feb02d8e2316",
     "section 4/GammaQECoefficientNames.lean": "bdbbdd08a59187bac559777a1cd530706019406f269f5de662da3286e63c1936",
     "section 4/Section3GammaAffineDischarge.lean": "2898bb1cb2b972038651bc3a17e80e0916cd0bb4932b058cb9dd1d42f55740ef",
     "section 4/Section4GammaAffineDischarged.lean": "2bb42e805cb7d66c4c16cde0b682b7461b980d4edc9f0563b76efd03dfec48e1",
-    "section 4/RVBoundedDecomposition.lean": "1fbdba32c3caaa1c2338ca78fd6ee60d511b9ca68e55a323a85dfbcb0d3fc2fc",
-    "section 4/Section.lean": "6ae2025c5c96c34b85f6fc24f70eee16f1c3b832de8fe268677bfec42d968359",
-    "section 4/verify.py": "034fc9db46b387ba269ebd36b1f079a46c03b3b2303fb21e3ebaf11525a8ba8d",
+    "section 4/RESDimensionFreeCategory.lean": "92c7d2ba85b36f10a4234d7238e76ef3d1ad1f7d045287b937ed4ecb70314db1",
+    "section 4/RVStrictBoundedCompatibility.lean": "5eec7e763952fb7438de0047726db5dc587533f55b25a57941ce65db044fafea",
+    "section 4/RVStrictAnnularGenerators.lean": "f7e5d3fa5c93ac8fe47c97dc5b10b143cd58ff4cb2c9dc683be48c7374a92a21",
+    "section 4/Section.lean": "545aa0c54ede590838873855850b765b168e78651ac8fd4a9221836b58effbe7",
+    "section 4/verify.py": "1acb98292ee554ad764c586b7c1db6b91137181482e5270af4fb7edbd2b355a2",
     "DiamondIntegral.lean": "66d02be99d3e377f670ad569f36274aed59d735366ebb4b157993bdb166b553e",
     "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
-    "lakefile.toml": "1db3e8dcab961928e2f1ec7edd5b4386f106440c259235e8729d23e0500919ba",
+    "lakefile.toml": "810829a9d20047381e2713fbd76d46001920ecb30a460f80f1ee6a00876a607b",
     "lake-manifest.json": "4f0ab2b8a2144ce82d2d8910ec2beb6cf3f21fffcd610bd56cb0415b5bf88ac6",
     "ACCEPTED-CITED-RESULTS.md": "2a6f42ef5f82e18d502ec9bb71d626675f5e24eae45d44291d75b23d9ee906c9",
     "section 4/verification/CITED-INPUTS.md": "854aa8b2f36a2c956fd3faf0fdcda4ee9a5c55973c266ac0322babe2c5281573",

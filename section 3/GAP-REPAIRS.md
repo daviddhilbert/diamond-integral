@@ -74,8 +74,18 @@ A VF-generated base is (VF, Γ)-generated with the Γ names of its own values
 identified with the Γ-ground ones without forms (`rvDegreeEquiv`,
 `vfDegreeEquiv`, the global RV semiring maps `rvSemiringFrom/To` and
 `rvSpecial_from_iff`, the bounded sources `rvBoundedEquiv`), and the Γ-ground
-record transfers. Axioms: propext, Classical.choice, Quot.sound. The ordinary
-global record `YinUnmeasuredLiftInput` is still not produced (unused).
+record transfers. Axioms: propext, Classical.choice, Quot.sound.
+
+Ordinary global record (done, November 19): `OrdinaryGlobalLiftInput.lean`,
+`completedOrdinaryLiftInput : YinUnmeasuredLiftInput C hc hv B`, produced the
+same way. The ordinary and Γ-ground positive VF semirings are identified
+(`vfSemiringFrom`, `vfSemiringTo`, `vfSemiringEquiv`; objects transfer by
+`vfObjFromReal`/`vfObjToReal` through finite VF objects, with products,
+scissors, units and empties matched), `rvSemiringFrom_to` completes the RV
+semiring identification, and the Γ-ground global record
+`Section5.completed18GroundLiftInput (measuredRealGroundContext C B) hc`
+transfers through `rvSpecial_from_iff`. Still unused downstream. Axioms:
+propext, Classical.choice, Quot.sound.
 
 ## Remark 3.14 (divisible hull): repaired
 
@@ -133,8 +143,15 @@ example is separated by a different invariant, not formalized. Only the
 unmeasured Ψ is treated; the measured μΨ case is not formalized. Axioms:
 propext, Classical.choice, Quot.sound.
 
+## Remark 3.15 — proved relative to the approved Reichstein–Youssin input
+
+Moved out of "To do" on November 19: 3.15 is proved relative to the
+Reichstein–Youssin input approved by the author on November 12
+(`ACCEPTED-CITED-RESULTS.md`, the November 12 coefficient-monicity approval,
+around line 109). Nothing else is outstanding for it.
+
 ## To do
-- 3.15 (accepted R–Y input).
+(nothing)
 
 ## Second audit triage (November 18)
 

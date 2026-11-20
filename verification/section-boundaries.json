@@ -57,7 +57,7 @@
   "section1": "Introductory; no local Lean section library",
   "sections5_to_8": {
     "status": "Implementations present; individual boundary audits required",
-    "Lean_files": 2469,
+    "Lean_files": 2470,
     "completion_claim": false,
     "next_audit": "When implementations are available"
   },
@@ -255,7 +255,7 @@
       "mismatches": []
     },
     "section 3/verification/VERIFICATION.json": {
-      "checked_Lean_sources": 1528,
+      "checked_Lean_sources": 1529,
       "mismatches": []
     }
   },
@@ -266,8 +266,8 @@
     "verification/SectionBoundaryAudit.lean": "63216f81fc74d161f2b0e6edd67965299d1526eb2d0c32e379c0374f6d071611",
     "verification/section-boundary-types.txt": "249a326372cc7525c25ce8221ea9011f3c9d298e6544268e96971766cd465469",
     "section 2/verification/UPSTREAM-LINKS.json": "0f31e20f474e062988516df4a208e34f50a49a15865a86626f7afe29396e4331",
-    "section 3/verification/integration-reuse.json": "fa4940a30a2e1caec041f057f89b83dce1bc58533c7e15f093c34c77d65f3e1a",
-    "section 3/reuse/integration-manifest.json": "553ae7364a499730316bc871c7f25e5864f9c8639bb91fe952aa3a34a2986a55",
+    "section 3/verification/integration-reuse.json": "a767afe7dd971480728339d554af1b7497b61d30a8ee81ca7dd4a7479cca5ddd",
+    "section 3/reuse/integration-manifest.json": "8acbe049ad646ddbca83a56887bab488c70075bc94df9874993cd629ed5e0eed",
     "ACCEPTED-CITED-RESULTS.md": "2a6f42ef5f82e18d502ec9bb71d626675f5e24eae45d44291d75b23d9ee906c9",
     "verification/audit-section-boundaries.py": "61953ba95e1b4c09f691465ff41e68f521ee0aef795d32c3962657609c3d5a6f"
   },

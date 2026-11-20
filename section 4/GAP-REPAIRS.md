@@ -98,9 +98,35 @@ degree, and it gives a measured isomorphism (the transported form is
 inclusion of the paper's ring into Lean's is a ring isomorphism (it sends each
 chart class to its own class). Lean proves the isomorphism and its value on
 classes (`equivalence`, `equivalence_objectClass`,
-`equivalence_symm_objectClass`). Compatibility with the grading, P_γ, J_var
-and Ẽ_b follows because these are defined by the same classes, but it is not
-stated separately.
+`equivalence_symm_objectClass`). Compatibility with the grading, P_γ and J_var
+is stated and proved in `RVStrictBoundedCompatibility.lean` (November 19):
+- grading: `strictPiece B n` (spanned by classes of ∞-free degree-n charts)
+  maps exactly onto `RVBoundedGrading.gradedPiece B n` (`map_strictPiece`,
+  `comap_gradedPiece`; the inclusion ⊇ uses the coaction's degree-n
+  coefficient and additive generation of the strict ring);
+- P_γ: the annulus and point charts have no ∞ coordinate
+  (`annulus_infinityFree`, `point_infinityFree`), and the strict P_γ built
+  from them maps to `RVRadiusIdeal.pGamma` (`equivalence_strictPGamma`); the
+  strict radius ideal maps onto `RVRadiusIdeal.radiusIdeal`
+  (`map_strictRadiusIdeal`);
+- J_var: the transported ideal `strictManuscriptIdeal` maps onto
+  `manuscriptIdeal B` (`map_strictManuscriptIdeal`), contains the strict
+  `(P_Γ)` (`strictRadiusIdeal_le`), and the quotients are isomorphic
+  compatibly with classes (`quotientEquiv`, `quotientEquiv_objectClass`).
+  Ẽ_b on the strict side is Ẽ_b composed with the isomorphism.
+- J_var from generators (November 19, `RVStrictAnnularGenerators.lean`): a
+  Notation 4.17 datum with ∞-free source has ∞-free shell and endpoint
+  (`shell_infinityFree`, `endpoint_infinityFree`), so its generator is a
+  strict element `strictGenerator`; `strictAnnularIdeal B` is the ideal they
+  span. Every datum splits by the ∞-pattern p of its source into data on the
+  ∞-free strips (`stripDatum`: ∞ coordinates deleted, labels, forms and
+  aperture read through `unstrip`), with `generator_eq_sum_strip :
+  D.generator = ∑ p, (stripDatum D p).generator` (source, endpoint and shell
+  each split by pattern and match the strip data by coordinate deletion).
+  Hence `map_strictAnnularIdeal : Ideal.map (equivalence B) (strictAnnularIdeal B)
+  = manuscriptIdeal B` and `strictAnnularIdeal_eq : strictAnnularIdeal B =
+  strictManuscriptIdeal B`. Every generator has an ∞-free representative up to
+  this finite splitting; none had to be excluded.
 
 Lean: `RVStrictBoundedComparison.lean` (proved). It contains:
 - `InfinityFree` and `StrictChart`: bounded charts with no `iRVZero`
@@ -161,12 +187,17 @@ from RV quantifier elimination with no hypotheses.
 
 - Lemma 4.18 factorization clause with the Γ input discharged:
   `Section4LinkedRemarks.manuscript_section4_compatibility_discharged`.
-- Still linkage-only (minor): Remark 4.8's alternative descent
-  (`RVT001AlternativeDescent.evaluation`) and the unnormalized ordinary range
-  clause take the T001 presentation as a parameter; they can be instantiated
-  with `Section3T001Integration` as done for the other remarks.
-- Definition 4.1's coproduct identification remains open, as recorded.
-  Remark 4.2's multivariate rational-affine input was resolved on
+- Remark 4.8's alternative descent (`RVT001AlternativeDescent.evaluation`)
+  and the unnormalized ordinary range clauses: instantiated November 19 in
+  `Section4LinkedRemarks` with `Section3T001Integration.measured` /
+  `.ordinary` and the discharged Γ input (`alternativeEvaluation`,
+  `alternativeGradedEvaluation`, `alternativeEvaluation_res`, `_p`, `_h`,
+  `ordinaryEvaluation_surjective`, `ordinaryBoundedEvaluation_surjective`,
+  `ordinaryRadiusEvaluation_surjective`, `boundedRaw_surjective`,
+  `homogeneousRaw_surjective`, `homogeneousRetraction_surjective`). They take
+  no T001 presentation.
+- Definition 4.1's coproduct identification: resolved November 19 (last
+  section). Remark 4.2's multivariate rational-affine input was resolved on
   November 19 (next section).
 
 ## Multivariate rational-affine normal form (November 19)
@@ -256,3 +287,26 @@ from RV quantifier elimination with no hypotheses.
   bounded tensor-kernel or injectivity input. `RVStrictBoundedComparison.sum_cover`
   now takes any additive monoid (it was stated for groups), so it also serves
   positive classes. The fubini package was not edited.
+
+## Definition 4.1 — dimension-free category: resolved (November 19)
+
+- `RESDimensionFreeCategory.lean` builds the category of Definition 4.1
+  directly: `Object B` is a definable RV set over the original base with
+  finitely many value patterns (exactly a RES[*] object without its label),
+  and `Iso U V` is a definable bijection. `Ring B` is its Grothendieck ring,
+  presented by one generator per object with relations for definable
+  bijections, the empty object, the one-point unit, cartesian products
+  (`product`, domain `productSet`) and disjoint unions (`sum`, domain the
+  label-free tagged union `taggedSet`; `ofRES_coproduct` shows every
+  same-degree tagged coproduct of RES objects underlies `sum`).
+- Key facts: every object underlies a RES[k] object (`chartAt`, `chart`,
+  `exists_label`; the label replaces the RV coordinate 0 by 1 and pads with
+  1, so it is at most 2^n-to-one), and underlying bijections across degrees
+  are exactly the relations of `RESDimensionFreeRing.Ring`.
+- Headline: `RESDimensionFreeCategory.definition_4_1_identification`. The ring
+  isomorphism `equivalence B : Ring B ≃+* RESDimensionFreeRing.Ring B` sends
+  `[U]` to the class of any RES[k] object `(U, f)`
+  (`equivalence_objectClass_of_eq`) and commutes with the forgetful maps
+  `forgetLabel` (from the graded ordinary RES ring) and `forgetMeasured`
+  (from the measured one). Axioms: propext, Classical.choice, Quot.sound.
+  No Hrushovski–Kazhdan result is used; no existing statement changed.

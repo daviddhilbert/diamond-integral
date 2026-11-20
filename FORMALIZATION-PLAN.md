@@ -308,7 +308,9 @@ are compiled and audited over the original Laurent base; zero coordinates,
 finite labels, empty input and arity zero are included. The geometric
 variety bridge, actual quotient-ideal identification, relative RV/Gamma
 push and full Fubini remain unfinished. The canonical Puiseux ACVF-model
-context remains explicit; no HK theorem is accepted as input.
+context remains explicit; no HK theorem is accepted as input. (Superseded:
+Section 5 Fubini was completed on November 15, see "Section 5 completion"
+below and `section 5/GAP-REPAIRS.md`.)
 
 Section 5 quotient continuation (November 14): the actual native RES fibre
 ideal is proved to correspond exactly to the actual diagonal constructible
@@ -316,6 +318,7 @@ linear-action ideal, including arbitrary equivariant factors.
 `residueLinearActionComparison` gives the reduced-native/modified-constructible
 ring equivalence. The remaining comparison issue is the geometric variety
 bridge; the full relative push and Fubini theorem remain unfinished.
+(Superseded by the November 15 completion below.)
 
 Section 5 completion (November 15): the full requested scope and both former
 inputs are proved. `GammaQE.gamma_piecewise_rational_affine` constructs the

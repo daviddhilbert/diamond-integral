@@ -3,12 +3,16 @@ import «section 4».RVT001NormalizedDistinct
 import «section 4».RVT001OrdinaryRanges
 import «section 4».RelativeAnnularGenerators
 import «section 5».GammaQEFiniteLaws
+import «section 4».RVT001AlternativeDescent
 
 /-! The ordinary retraction statements of Remarks 4.4 (`eb:no:eg`) and 4.16
 (`eb:not:eg`) and the diagram (edb:eb:com), linked to the finalized Section 3 kernel proofs
 (`Section3T001Integration.ordinary`) and with the unary Γ rational-affine
 input discharged (`Section5.GammaQE.gamma_piecewise_rational_affine`).
-They take no T001 presentation and no Γ-linearity input. -/
+They take no T001 presentation and no Γ-linearity input. The same is done
+for Remark 4.8's alternative descent (measured kernel,
+`Section3T001Integration.measured`) and for the unnormalized ordinary range
+clauses. -/
 
 set_option autoImplicit false
 noncomputable section
@@ -76,5 +80,72 @@ theorem manuscript_section4_compatibility_discharged :
       (RVT001OrdinaryDescent.boundedEvaluation h00 (Section5.GammaQE.gamma_piecewise_rational_affine (M := M))
         hκ hs B hr hγ hΓ (Section3T001Integration.ordinary (hc := hc) hκ hs h00 hr hγ hΓ) EulerKind.bounded) :=
   RelativeAnnularGenerators.manuscript_section4_compatibility hc h00 _ hκ hs B hr hγ hΓ
+
+/-! ### Remark 4.8 (`res:forget`): the alternative descent, linked -/
+
+/-- Remark 4.8's alternative geometric descent `μRV[*] → K(RES)/(alternative)`,
+with the finalized Section 3 measured kernel and the discharged Γ input. -/
+abbrev alternativeEvaluation : RVChartRing.Ring B →+* RESAlternativeReduction.Ring B :=
+  RVT001AlternativeDescent.evaluation h00 (Section5.GammaQE.gamma_piecewise_rational_affine (M := M))
+    hκ hs B hr hγ hΓ (Section3T001Integration.measured (hc := hc) hκ hs h00 hr hγ hΓ)
+
+/-- The graded form of `alternativeEvaluation`. -/
+abbrev alternativeGradedEvaluation :=
+  RVT001AlternativeDescent.gradedEvaluation h00 (Section5.GammaQE.gamma_piecewise_rational_affine (M := M))
+    hκ hs B hr hγ hΓ (Section3T001Integration.measured (hc := hc) hκ hs h00 hr hγ hΓ)
+
+/-- On RES classes the alternative descent is the forgetful map. -/
+theorem alternativeEvaluation_res (x : RESChartRing.Ring B) :
+    alternativeEvaluation hc h00 hκ hs B hr hγ hΓ (RVChartMaps.ofRES B x) =
+      RESAlternativeReduction.fromMeasured B x :=
+  RVT001AlternativeDescent.evaluation_res h00 _ hκ hs B hr hγ hΓ _ x
+
+theorem alternativeEvaluation_p :
+    alternativeEvaluation hc h00 hκ hs B hr hγ hΓ (RVMeasuredSpecialClasses.pClass B) = 0 :=
+  RVT001AlternativeDescent.evaluation_p h00 _ hκ hs B hr hγ hΓ _
+
+theorem alternativeEvaluation_h :
+    alternativeEvaluation hc h00 hκ hs B hr hγ hΓ (RVMeasuredSpecialClasses.hClass B) =
+      RESAlternativeReduction.pointClass B :=
+  RVT001AlternativeDescent.evaluation_h h00 _ hκ hs B hr hγ hΓ _
+
+/-! ### Unnormalized ordinary range clauses, linked -/
+
+/-- The ordinary Euler evaluations after T001 descent are onto the reduced RES ring. -/
+theorem ordinaryEvaluation_surjective (kind : EulerKind) :
+    Function.Surjective (RVT001OrdinaryDescent.evaluation h00
+      (Section5.GammaQE.gamma_piecewise_rational_affine (M := M)) hκ hs B hr hγ hΓ
+      (Section3T001Integration.ordinary (hc := hc) hκ hs h00 hr hγ hΓ) kind) :=
+  RVT001OrdinaryRanges.evaluation_surjective h00 _ hκ hs B hr hγ hΓ _ kind
+
+theorem ordinaryBoundedEvaluation_surjective (kind : EulerKind) :
+    Function.Surjective (RVT001OrdinaryDescent.boundedEvaluation h00
+      (Section5.GammaQE.gamma_piecewise_rational_affine (M := M)) hκ hs B hr hγ hΓ
+      (Section3T001Integration.ordinary (hc := hc) hκ hs h00 hr hγ hΓ) kind) :=
+  RVT001OrdinaryRanges.boundedEvaluation_surjective h00 _ hκ hs B hr hγ hΓ _ kind
+
+theorem ordinaryRadiusEvaluation_surjective (kind : EulerKind) :
+    Function.Surjective (RVT001OrdinaryDescent.radiusEvaluation h00
+      (Section5.GammaQE.gamma_piecewise_rational_affine (M := M)) hκ hs B hr hγ hΓ
+      (Section3T001Integration.ordinary (hc := hc) hκ hs h00 hr hγ hΓ) kind) :=
+  RVT001OrdinaryRanges.radiusEvaluation_surjective h00 _ hκ hs B hr hγ hΓ _ kind
+
+theorem boundedRaw_surjective :
+    Function.Surjective (RVT001OrdinaryNormalization.boundedRaw h00
+      (Section5.GammaQE.gamma_piecewise_rational_affine (M := M)) hκ hs B hr hγ hΓ
+      (Section3T001Integration.ordinary (hc := hc) hκ hs h00 hr hγ hΓ)) :=
+  RVT001OrdinaryRanges.boundedRaw_surjective h00 _ hκ hs B hr hγ hΓ _
+
+theorem homogeneousRaw_surjective :
+    Function.Surjective (RVT001OrdinaryNormalization.homogeneousRaw h00
+      (Section5.GammaQE.gamma_piecewise_rational_affine (M := M)) hκ hs B hr hγ hΓ
+      (Section3T001Integration.ordinary (hc := hc) hκ hs h00 hr hγ hΓ)) :=
+  RVT001OrdinaryRanges.homogeneousRaw_surjective h00 _ hκ hs B hr hγ hΓ _
+
+theorem homogeneousRetraction_surjective :
+    Function.Surjective (RVT001OrdinaryNormalization.homogeneous h00
+      (Section5.GammaQE.gamma_piecewise_rational_affine (M := M)) hκ hs B hr hγ hΓ
+      (Section3T001Integration.ordinary (hc := hc) hκ hs h00 hr hγ hΓ)) :=
+  RVT001OrdinaryRanges.homogeneous_surjective h00 _ hκ hs B hr hγ hΓ _
 
 end DiamondIntegral.Section4.Section4LinkedRemarks

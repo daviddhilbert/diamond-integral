@@ -80,5 +80,8 @@ necessary upstream changes and the Section 7–8 handoff notes on November 15.
 The November 16 corrected upstream migration is documented in
 `verification/upstream-weighted-zero-upgrade/README.md` at the repository root.
 Current Sections 2–6 receipts record the new pins. It preserves all local
-Section 6 proof bodies, including the exact zero-degree form identity, and
-retains the four previously conditional Section 3 Gamma-valued kernel inputs.
+Section 6 proof bodies, including the exact zero-degree form identity. The
+four Section 3 Gamma-valued lift/kernel records it mentioned as retained inputs
+have had proved producers since November 17
+(`section 3/verification/GAMMA-KERNEL-COMPLETION.md`); they are not accepted
+cited inputs.

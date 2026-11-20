@@ -3428,6 +3428,104 @@ fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransf
 'DiamondIntegral.Section6.AllDegreeUnaryFactorizations.lemma_6_29_finiteVolume_all_degrees' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
+@DiamondIntegral.Section6.lemma_6_33_zero_degree : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set M}
+  {U V : DiamondIntegral.Section6.MeasuredRVObject S 0} (e : DiamondIntegral.Section6.MeasuredRVIso U V),
+  Nonempty (DiamondIntegral.Section6.EverywhereMeasuredRVLift e)
+theorem DiamondIntegral.Section6.lemma_6_33_zero_degree : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {S : Set M}
+  {U V : DiamondIntegral.Section6.MeasuredRVObject S 0} (e : DiamondIntegral.Section6.MeasuredRVIso U V),
+  Nonempty (DiamondIntegral.Section6.EverywhereMeasuredRVLift e) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {S}
+    {U V} e =>
+  Exists.casesOn (DiamondIntegral.Section6.lemma_6_31_zero_arity e) fun f h =>
+    And.casesOn h fun hf right =>
+      And.casesOn right fun hl hm => Nonempty.intro { map := f, bijective := hf, labels := hl, measure := hm }
+'DiamondIntegral.Section6.lemma_6_33_zero_degree' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section6.MeasuredVFUnaryLiftChain.liftOf : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {S : Set M} →
+        {n : ℕ} →
+          {U V : DiamondIntegral.Section6.MeasuredRVObject S n} →
+            {e : DiamondIntegral.Section6.MeasuredRVIso U V} →
+              (T : DiamondIntegral.Section6.MeasuredVFUnaryLiftChain S n U V) →
+                T.iso.iso.hom.map = e.iso.hom.map → DiamondIntegral.Section6.EverywhereMeasuredRVLift e
+def DiamondIntegral.Section6.MeasuredVFUnaryLiftChain.liftOf : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {S : Set M} →
+        {n : ℕ} →
+          {U V : DiamondIntegral.Section6.MeasuredRVObject S n} →
+            {e : DiamondIntegral.Section6.MeasuredRVIso U V} →
+              (T : DiamondIntegral.Section6.MeasuredVFUnaryLiftChain S n U V) →
+                T.iso.iso.hom.map = e.iso.hom.map → DiamondIntegral.Section6.EverywhereMeasuredRVLift e :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {S} {n}
+    {U V} {e} T h =>
+  { map := T.lift.map, bijective := ⋯, labels := ⋯, measure := ⋯ }
+'DiamondIntegral.Section6.MeasuredVFUnaryLiftChain.liftOf' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section6.lemma_6_33_all_degrees_vfGenerated : ∀ {M G : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] [inst_2 : LinearOrderedCommGroupWithZero G]
+  [inst_3 : Valued (DiamondIntegral.Section2.VF M) G],
+  M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF00 →
+    CanonicalStructure.IsCanonical →
+      ∀ {κ : Cardinal.{0}},
+        Cardinal.aleph0 < κ →
+          SpecialTransformations.Section3.Saturated M κ →
+            (∀ (x y : DiamondIntegral.Section2.VF M),
+                SpecialTransformations.Milestone0.VFValued.predV x y ↔ Valued.v x ≤ Valued.v y) →
+              ∀ (S : SpecialTransformations.Milestone0.LRV.Substructure M)
+                (B : DiamondIntegral.Section2.VFGeneratedFieldBase S),
+                Cardinal.mk ↑↑S < κ →
+                  DiamondIntegral.Section2.NontrivialDefinableGamma { real := ↑S, gamma := ∅ } →
+                    (∃ x, x ≠ 0 ∧ Valued.v ↑x ≠ 1) →
+                      ∀ {k : ℕ} {U V : DiamondIntegral.Section6.MeasuredRVObject (↑S) k}
+                        (e : DiamondIntegral.Section6.MeasuredRVIso U V),
+                        Nonempty (DiamondIntegral.Section6.EverywhereMeasuredRVLift e) ∧
+                          (0 < k →
+                            ∃ T,
+                              T.iso.iso.hom.map = e.iso.hom.map ∧ (U.doublyBounded ∧ V.doublyBounded → T.doublyBounded))
+theorem DiamondIntegral.Section6.lemma_6_33_all_degrees_vfGenerated : ∀ {M G : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] [inst_2 : LinearOrderedCommGroupWithZero G]
+  [inst_3 : Valued (DiamondIntegral.Section2.VF M) G],
+  M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF00 →
+    CanonicalStructure.IsCanonical →
+      ∀ {κ : Cardinal.{0}},
+        Cardinal.aleph0 < κ →
+          SpecialTransformations.Section3.Saturated M κ →
+            (∀ (x y : DiamondIntegral.Section2.VF M),
+                SpecialTransformations.Milestone0.VFValued.predV x y ↔ Valued.v x ≤ Valued.v y) →
+              ∀ (S : SpecialTransformations.Milestone0.LRV.Substructure M)
+                (B : DiamondIntegral.Section2.VFGeneratedFieldBase S),
+                Cardinal.mk ↑↑S < κ →
+                  DiamondIntegral.Section2.NontrivialDefinableGamma { real := ↑S, gamma := ∅ } →
+                    (∃ x, x ≠ 0 ∧ Valued.v ↑x ≠ 1) →
+                      ∀ {k : ℕ} {U V : DiamondIntegral.Section6.MeasuredRVObject (↑S) k}
+                        (e : DiamondIntegral.Section6.MeasuredRVIso U V),
+                        Nonempty (DiamondIntegral.Section6.EverywhereMeasuredRVLift e) ∧
+                          (0 < k →
+                            ∃ T,
+                              T.iso.iso.hom.map = e.iso.hom.map ∧
+                                (U.doublyBounded ∧ V.doublyBounded → T.doublyBounded)) :=
+fun {M G} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+    [LinearOrderedCommGroupWithZero G] [Valued (DiamondIntegral.Section2.VF M) G] h00 hc {κ} hκ hs hv S B hsmall hΓ hnt
+    {k} {U V} e =>
+  Or.casesOn (Nat.eq_zero_or_pos k)
+    (fun hk =>
+      Eq.ndrec (motive := fun {k} =>
+        ∀ {U V : DiamondIntegral.Section6.MeasuredRVObject (↑S) k} (e : DiamondIntegral.Section6.MeasuredRVIso U V),
+          Nonempty (DiamondIntegral.Section6.EverywhereMeasuredRVLift e) ∧
+            (0 < k → ∃ T, T.iso.iso.hom.map = e.iso.hom.map ∧ (U.doublyBounded ∧ V.doublyBounded → T.doublyBounded)))
+        (fun {U V} e => ⟨DiamondIntegral.Section6.lemma_6_33_zero_degree e, fun h => absurd h (lt_irrefl 0)⟩)
+        (Eq.symm hk) e)
+    fun hk =>
+    Exists.casesOn (DiamondIntegral.Section6.lemma_6_33_vfGenerated h00 hc hκ hs hv S B hsmall hΓ hnt hk e) fun T h =>
+      And.casesOn h fun hT hB => ⟨Nonempty.intro (T.liftOf hT), fun x => Exists.intro T ⟨hT, hB⟩⟩
+'DiamondIntegral.Section6.lemma_6_33_all_degrees_vfGenerated' depends on axioms: [propext, Classical.choice, Quot.sound]
 @DiamondIntegral.Section6.AllDegreeUnaryFactorizations.RVUnaryFactorization : {M : Type} →
   [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
     (S : Set M) →

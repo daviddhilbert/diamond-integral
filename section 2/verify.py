@@ -569,7 +569,7 @@ def main() -> None:
                         "DiamondIntegral.Section2.lemma_2_41_gamma_raw",
                         "DiamondIntegral.Section2.lemma_2_41_gamma",
                         "DiamondIntegral.Section2.lemma_2_41"],
-            "status": "Explicit author-accepted background from the context of [18, Section 3]; full guarded Gamma-code graph, characteristic zero and nontrivial ground Gamma retained; finite power-law boundedness proved here, full RV-domain 2.41 not assumed",
+            "status": "Proved interface: GammaPiecewiseRationalAffineInput is the theorem DiamondIntegral.Section5.GammaQE.gamma_piecewise_rational_affine (from RV quantifier elimination, ACVF only), and section 3/Section2GammaLinearityDischarged.lean gives input-free _discharged versions of 2.41, 2.47 and 2.53. The original Section 2 statements still take it as a parameter; full guarded Gamma-code graph, characteristic zero and nontrivial ground Gamma retained; finite power-law boundedness proved here, full RV-domain 2.41 not assumed",
             "scope_record": "section 2/verification/CITED-INPUTS.md",
         }],
         "public_theorems": exports,

@@ -43279,6 +43279,179 @@ fun {α} [LinearOrder.{0} α] D =>
           And (LT.lt.{0} l a)
             (And (LT.lt.{0} a u)
               (∀ (z : α), LT.lt.{0} l z → LT.lt.{0} z u → Iff (Membership.mem.{0, 0} D z) (Membership.mem.{0, 0} D a))))
+def DiamondIntegral.Section3.MeasuredRealGround.vfFiniteFromReal : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (C : SpecialTransformations.Section3.BaseContext M) →
+        (hc : CanonicalStructure.IsCanonical) →
+          (B : DiamondIntegral.Section2.VFGeneratedFieldBase C.base) →
+            {G : Type} →
+              [inst_2 : LinearOrderedCommGroupWithZero.{0} G] →
+                [inst_3 : Valued.{0, 0} (DiamondIntegral.Section2.VF M) G] →
+                  {k : Nat} →
+                    DiamondIntegral.Section3.VFObject (↑C.base) k →
+                      DiamondIntegral.Section3.GammaGroundFiniteVFObject hc
+                        (DiamondIntegral.Section3.measuredRealGroundContext C B).base :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] C hc B {G}
+    [LinearOrderedCommGroupWithZero.{0} G] [Valued.{0, 0} (DiamondIntegral.Section2.VF M) G] {k} U =>
+  DiamondIntegral.Section3.GammaGroundFiniteVFObject.ofBound
+    (DiamondIntegral.Section3.MeasuredRealGround.vfObjFromReal C hc B U)
+def DiamondIntegral.Section3.MeasuredRealGround.vfFiniteToReal : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (C : SpecialTransformations.Section3.BaseContext M) →
+        (hc : CanonicalStructure.IsCanonical) →
+          (B : DiamondIntegral.Section2.VFGeneratedFieldBase C.base) →
+            {G : Type} →
+              [inst_2 : LinearOrderedCommGroupWithZero.{0} G] →
+                [inst_3 : Valued.{0, 0} (DiamondIntegral.Section2.VF M) G] →
+                  (U :
+                      DiamondIntegral.Section3.GammaGroundFiniteVFObject hc
+                        (DiamondIntegral.Section3.measuredRealGroundContext C B).base) →
+                    DiamondIntegral.Section3.VFObject (↑C.base) U.vfArity :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] C hc B {G}
+    [LinearOrderedCommGroupWithZero.{0} G] [Valued.{0, 0} (DiamondIntegral.Section2.VF M) G] U =>
+  DiamondIntegral.Section3.MeasuredRealGround.vfObjToReal C hc B U.toBound
+def DiamondIntegral.Section3.MeasuredRealGround.vfSemiringFromInvariant : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (C : SpecialTransformations.Section3.BaseContext M) →
+        (hc : CanonicalStructure.IsCanonical) →
+          (B : DiamondIntegral.Section2.VFGeneratedFieldBase C.base) →
+            {G : Type} →
+              [inst_2 : LinearOrderedCommGroupWithZero.{0} G] →
+                [inst_3 : Valued.{0, 0} (DiamondIntegral.Section2.VF M) G] →
+                  (hv :
+                      ∀ (x y : DiamondIntegral.Section2.VF M),
+                        Iff (SpecialTransformations.Milestone0.VFValued.predV x y)
+                          (LE.le.{0} (Valued.v.{0, 0} x) (Valued.v.{0, 0} y))) →
+                    SpecialTransformations.Section4.PositiveGrothendieck.Invariant.{0, 0}
+                      (DiamondIntegral.Section3.vfSemiringPresentation C hc hv) :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] C hc B {G}
+    [LinearOrderedCommGroupWithZero.{0} G] [Valued.{0, 0} (DiamondIntegral.Section2.VF M) G] hv =>
+  SpecialTransformations.Section4.PositiveGrothendieck.Invariant.mk.{0, 0}
+    (fun A =>
+      DiamondIntegral.Section3.gammaGroundVFSemiringClass
+        (DiamondIntegral.Section3.MeasuredRealGround.vfFiniteFromReal C hc B (Sigma.snd.{0, 0} A)))
+    ⋯ ⋯ ⋯ ⋯ ⋯
+def DiamondIntegral.Section3.MeasuredRealGround.vfSemiringFrom : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (C : SpecialTransformations.Section3.BaseContext M) →
+        (hc : CanonicalStructure.IsCanonical) →
+          (B : DiamondIntegral.Section2.VFGeneratedFieldBase C.base) →
+            {G : Type} →
+              [inst_2 : LinearOrderedCommGroupWithZero.{0} G] →
+                [inst_3 : Valued.{0, 0} (DiamondIntegral.Section2.VF M) G] →
+                  (hv :
+                      ∀ (x y : DiamondIntegral.Section2.VF M),
+                        Iff (SpecialTransformations.Milestone0.VFValued.predV x y)
+                          (LE.le.{0} (Valued.v.{0, 0} x) (Valued.v.{0, 0} y))) →
+                    RingHom.{0, 0} (DiamondIntegral.Section3.VFPositiveSemiring C hc hv)
+                      (DiamondIntegral.Section3.GammaGroundVFPositiveSemiring hc
+                        (DiamondIntegral.Section3.measuredRealGroundContext C B).base) :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] C hc B {G}
+    [LinearOrderedCommGroupWithZero.{0} G] [Valued.{0, 0} (DiamondIntegral.Section2.VF M) G] hv =>
+  SpecialTransformations.Section4.PositiveGrothendieck.lift.{0, 0}
+    (DiamondIntegral.Section3.vfSemiringPresentation C hc hv)
+    (DiamondIntegral.Section3.MeasuredRealGround.vfSemiringFromInvariant C hc B hv)
+def DiamondIntegral.Section3.MeasuredRealGround.vfSemiringToInvariant : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (C : SpecialTransformations.Section3.BaseContext M) →
+        (hc : CanonicalStructure.IsCanonical) →
+          (B : DiamondIntegral.Section2.VFGeneratedFieldBase C.base) →
+            {G : Type} →
+              [inst_2 : LinearOrderedCommGroupWithZero.{0} G] →
+                [inst_3 : Valued.{0, 0} (DiamondIntegral.Section2.VF M) G] →
+                  (hv :
+                      ∀ (x y : DiamondIntegral.Section2.VF M),
+                        Iff (SpecialTransformations.Milestone0.VFValued.predV x y)
+                          (LE.le.{0} (Valued.v.{0, 0} x) (Valued.v.{0, 0} y))) →
+                    SpecialTransformations.Section4.PositiveGrothendieck.Invariant.{0, 0}
+                      (DiamondIntegral.Section3.gammaGroundVFSemiringPresentation hc
+                        (DiamondIntegral.Section3.measuredRealGroundContext C B).base) :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] C hc B {G}
+    [LinearOrderedCommGroupWithZero.{0} G] [Valued.{0, 0} (DiamondIntegral.Section2.VF M) G] hv =>
+  SpecialTransformations.Section4.PositiveGrothendieck.Invariant.mk.{0, 0}
+    (fun A =>
+      DiamondIntegral.Section3.vfSemiringClass C hc hv
+        (DiamondIntegral.Section3.MeasuredRealGround.vfFiniteToReal C hc B A))
+    ⋯ ⋯ ⋯ ⋯ ⋯
+def DiamondIntegral.Section3.MeasuredRealGround.vfSemiringTo : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (C : SpecialTransformations.Section3.BaseContext M) →
+        (hc : CanonicalStructure.IsCanonical) →
+          (B : DiamondIntegral.Section2.VFGeneratedFieldBase C.base) →
+            {G : Type} →
+              [inst_2 : LinearOrderedCommGroupWithZero.{0} G] →
+                [inst_3 : Valued.{0, 0} (DiamondIntegral.Section2.VF M) G] →
+                  (hv :
+                      ∀ (x y : DiamondIntegral.Section2.VF M),
+                        Iff (SpecialTransformations.Milestone0.VFValued.predV x y)
+                          (LE.le.{0} (Valued.v.{0, 0} x) (Valued.v.{0, 0} y))) →
+                    RingHom.{0, 0}
+                      (DiamondIntegral.Section3.GammaGroundVFPositiveSemiring hc
+                        (DiamondIntegral.Section3.measuredRealGroundContext C B).base)
+                      (DiamondIntegral.Section3.VFPositiveSemiring C hc hv) :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] C hc B {G}
+    [LinearOrderedCommGroupWithZero.{0} G] [Valued.{0, 0} (DiamondIntegral.Section2.VF M) G] hv =>
+  SpecialTransformations.Section4.PositiveGrothendieck.lift.{0, 0}
+    (DiamondIntegral.Section3.gammaGroundVFSemiringPresentation hc
+      (DiamondIntegral.Section3.measuredRealGroundContext C B).base)
+    (DiamondIntegral.Section3.MeasuredRealGround.vfSemiringToInvariant C hc B hv)
+def DiamondIntegral.Section3.MeasuredRealGround.vfSemiringEquiv : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (C : SpecialTransformations.Section3.BaseContext M) →
+        (hc : CanonicalStructure.IsCanonical) →
+          (B : DiamondIntegral.Section2.VFGeneratedFieldBase C.base) →
+            {G : Type} →
+              [inst_2 : LinearOrderedCommGroupWithZero.{0} G] →
+                [inst_3 : Valued.{0, 0} (DiamondIntegral.Section2.VF M) G] →
+                  (hv :
+                      ∀ (x y : DiamondIntegral.Section2.VF M),
+                        Iff (SpecialTransformations.Milestone0.VFValued.predV x y)
+                          (LE.le.{0} (Valued.v.{0, 0} x) (Valued.v.{0, 0} y))) →
+                    RingEquiv.{0, 0} (DiamondIntegral.Section3.VFPositiveSemiring C hc hv)
+                      (DiamondIntegral.Section3.GammaGroundVFPositiveSemiring hc
+                        (DiamondIntegral.Section3.measuredRealGroundContext C B).base) :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] C hc B {G}
+    [LinearOrderedCommGroupWithZero.{0} G] [Valued.{0, 0} (DiamondIntegral.Section2.VF M) G] hv =>
+  RingEquiv.ofRingHom.{0, 0} (DiamondIntegral.Section3.MeasuredRealGround.vfSemiringFrom C hc B hv)
+    (DiamondIntegral.Section3.MeasuredRealGround.vfSemiringTo C hc B hv) ⋯ ⋯
+def DiamondIntegral.Section3.MeasuredRealGround.completedOrdinaryLiftInput : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (C : SpecialTransformations.Section3.BaseContext M) →
+        (hc : CanonicalStructure.IsCanonical) →
+          (B : DiamondIntegral.Section2.VFGeneratedFieldBase C.base) →
+            {G : Type} →
+              [inst_2 : LinearOrderedCommGroupWithZero.{0} G] →
+                [inst_3 : Valued.{0, 0} (DiamondIntegral.Section2.VF M) G] →
+                  (hv :
+                      ∀ (x y : DiamondIntegral.Section2.VF M),
+                        Iff (SpecialTransformations.Milestone0.VFValued.predV x y)
+                          (LE.le.{0} (Valued.v.{0, 0} x) (Valued.v.{0, 0} y))) →
+                    DiamondIntegral.Section3.YinUnmeasuredLiftInput C hc hv B :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] C hc B {G}
+    [LinearOrderedCommGroupWithZero.{0} G] [Valued.{0, 0} (DiamondIntegral.Section2.VF M) G] hv =>
+  let H :=
+    DiamondIntegral.Section5.completed18GroundLiftInput (DiamondIntegral.Section3.measuredRealGroundContext C B) hc;
+  {
+    lift :=
+      RingHom.comp.{0, 0, 0} (DiamondIntegral.Section3.MeasuredRealGround.vfSemiringTo C hc B hv)
+        (RingHom.comp.{0, 0, 0} H.lift (DiamondIntegral.Section3.MeasuredRealGround.rvSemiringFrom C hc B)),
+    lift_class := ⋯, surjective := ⋯, kernel := ⋯ }
 def DiamondIntegral.Section3.LiteralValuePattern : {I R : Type} →
   {n : Nat} → SpecialTransformations.Section3.GuardedRVNormalForm.RVLiteral I R (Fin n) → Type :=
 fun {I R} {n} x =>
@@ -105795,6 +105968,95 @@ DiamondIntegral.Section3.gamma_vf_two_order_cases : ∀ (σ : Equiv.Perm.{1} (Fi
   (hD : Exists.{1} fun F => SpecialTransformations.Section4.FiniteOrder.Controls.{0} F D),
   SpecialTransformations.Section4.FiniteOrder.Controls.{0} (Set.Finite.toFinset.{0} ⋯) D
 'DiamondIntegral.Section3.orderBoundary_controls' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]
+@DiamondIntegral.Section3.MeasuredRealGround.rvSemiringFrom_to : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (C : SpecialTransformations.Section3.BaseContext M) (hc : CanonicalStructure.IsCanonical)
+  (B : DiamondIntegral.Section2.VFGeneratedFieldBase C.base)
+  (a :
+    DiamondIntegral.Section3.GammaGroundRVPositiveSemiring hc
+      (DiamondIntegral.Section3.measuredRealGroundContext C B).base),
+  Eq.{1}
+    ((DiamondIntegral.Section3.MeasuredRealGround.rvSemiringFrom C hc B)
+      ((DiamondIntegral.Section3.MeasuredRealGround.rvSemiringTo C hc B) a))
+    a
+'DiamondIntegral.Section3.MeasuredRealGround.rvSemiringFrom_to' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section3.MeasuredRealGround.vfSemiringFrom_class : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (C : SpecialTransformations.Section3.BaseContext M) (hc : CanonicalStructure.IsCanonical)
+  (B : DiamondIntegral.Section2.VFGeneratedFieldBase C.base) {G : Type} [inst_2 : LinearOrderedCommGroupWithZero.{0} G]
+  [inst_3 : Valued.{0, 0} (DiamondIntegral.Section2.VF M) G]
+  (hv :
+    ∀ (x y : DiamondIntegral.Section2.VF M),
+      Iff (SpecialTransformations.Milestone0.VFValued.predV x y) (LE.le.{0} (Valued.v.{0, 0} x) (Valued.v.{0, 0} y)))
+  {k : Nat} (U : DiamondIntegral.Section3.VFObject (↑C.base) k),
+  Eq.{1}
+    ((DiamondIntegral.Section3.MeasuredRealGround.vfSemiringFrom C hc B hv)
+      (DiamondIntegral.Section3.vfSemiringClass C hc hv U))
+    (DiamondIntegral.Section3.gammaGroundVFSemiringClass
+      (DiamondIntegral.Section3.MeasuredRealGround.vfFiniteFromReal C hc B U))
+'DiamondIntegral.Section3.MeasuredRealGround.vfSemiringFrom_class' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section3.MeasuredRealGround.vfSemiringTo_class : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (C : SpecialTransformations.Section3.BaseContext M) (hc : CanonicalStructure.IsCanonical)
+  (B : DiamondIntegral.Section2.VFGeneratedFieldBase C.base) {G : Type} [inst_2 : LinearOrderedCommGroupWithZero.{0} G]
+  [inst_3 : Valued.{0, 0} (DiamondIntegral.Section2.VF M) G]
+  (hv :
+    ∀ (x y : DiamondIntegral.Section2.VF M),
+      Iff (SpecialTransformations.Milestone0.VFValued.predV x y) (LE.le.{0} (Valued.v.{0, 0} x) (Valued.v.{0, 0} y)))
+  (U :
+    DiamondIntegral.Section3.GammaGroundFiniteVFObject hc
+      (DiamondIntegral.Section3.measuredRealGroundContext C B).base),
+  Eq.{1}
+    ((DiamondIntegral.Section3.MeasuredRealGround.vfSemiringTo C hc B hv)
+      (DiamondIntegral.Section3.gammaGroundVFSemiringClass U))
+    (DiamondIntegral.Section3.vfSemiringClass C hc hv
+      (DiamondIntegral.Section3.MeasuredRealGround.vfFiniteToReal C hc B U))
+'DiamondIntegral.Section3.MeasuredRealGround.vfSemiringTo_class' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section3.MeasuredRealGround.vfSemiringTo_from : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (C : SpecialTransformations.Section3.BaseContext M) (hc : CanonicalStructure.IsCanonical)
+  (B : DiamondIntegral.Section2.VFGeneratedFieldBase C.base) {G : Type} [inst_2 : LinearOrderedCommGroupWithZero.{0} G]
+  [inst_3 : Valued.{0, 0} (DiamondIntegral.Section2.VF M) G]
+  (hv :
+    ∀ (x y : DiamondIntegral.Section2.VF M),
+      Iff (SpecialTransformations.Milestone0.VFValued.predV x y) (LE.le.{0} (Valued.v.{0, 0} x) (Valued.v.{0, 0} y)))
+  (a : DiamondIntegral.Section3.VFPositiveSemiring C hc hv),
+  Eq.{1}
+    ((DiamondIntegral.Section3.MeasuredRealGround.vfSemiringTo C hc B hv)
+      ((DiamondIntegral.Section3.MeasuredRealGround.vfSemiringFrom C hc B hv) a))
+    a
+'DiamondIntegral.Section3.MeasuredRealGround.vfSemiringTo_from' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section3.MeasuredRealGround.vfSemiringFrom_to : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (C : SpecialTransformations.Section3.BaseContext M) (hc : CanonicalStructure.IsCanonical)
+  (B : DiamondIntegral.Section2.VFGeneratedFieldBase C.base) {G : Type} [inst_2 : LinearOrderedCommGroupWithZero.{0} G]
+  [inst_3 : Valued.{0, 0} (DiamondIntegral.Section2.VF M) G]
+  (hv :
+    ∀ (x y : DiamondIntegral.Section2.VF M),
+      Iff (SpecialTransformations.Milestone0.VFValued.predV x y) (LE.le.{0} (Valued.v.{0, 0} x) (Valued.v.{0, 0} y)))
+  (a :
+    DiamondIntegral.Section3.GammaGroundVFPositiveSemiring hc
+      (DiamondIntegral.Section3.measuredRealGroundContext C B).base),
+  Eq.{1}
+    ((DiamondIntegral.Section3.MeasuredRealGround.vfSemiringFrom C hc B hv)
+      ((DiamondIntegral.Section3.MeasuredRealGround.vfSemiringTo C hc B hv) a))
+    a
+'DiamondIntegral.Section3.MeasuredRealGround.vfSemiringFrom_to' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
 @DiamondIntegral.Section3.literalPatternCell_own : ∀ {M I R : Type}
   [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
   [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {n : Nat}
@@ -150732,6 +150994,150 @@ DiamondIntegral.Section3.integrationMixedVFIndex : (r : Nat) → Fin (HAdd.hAdd.
  Quot.sound.{u}]
 @DiamondIntegral.Section3.orderBoundary : {α : Type} → [LinearOrder.{0} α] → Set.{0} α → Set.{0} α
 'DiamondIntegral.Section3.orderBoundary' depends on axioms: [propext]
+@DiamondIntegral.Section3.MeasuredRealGround.vfFiniteFromReal : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (C : SpecialTransformations.Section3.BaseContext M) →
+        (hc : CanonicalStructure.IsCanonical) →
+          (B : DiamondIntegral.Section2.VFGeneratedFieldBase C.base) →
+            {G : Type} →
+              [inst_2 : LinearOrderedCommGroupWithZero.{0} G] →
+                [inst_3 : Valued.{0, 0} (DiamondIntegral.Section2.VF M) G] →
+                  {k : Nat} →
+                    DiamondIntegral.Section3.VFObject (↑C.base) k →
+                      DiamondIntegral.Section3.GammaGroundFiniteVFObject hc
+                        (DiamondIntegral.Section3.measuredRealGroundContext C B).base
+'DiamondIntegral.Section3.MeasuredRealGround.vfFiniteFromReal' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section3.MeasuredRealGround.vfFiniteToReal : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (C : SpecialTransformations.Section3.BaseContext M) →
+        (hc : CanonicalStructure.IsCanonical) →
+          (B : DiamondIntegral.Section2.VFGeneratedFieldBase C.base) →
+            {G : Type} →
+              [inst_2 : LinearOrderedCommGroupWithZero.{0} G] →
+                [inst_3 : Valued.{0, 0} (DiamondIntegral.Section2.VF M) G] →
+                  (U :
+                      DiamondIntegral.Section3.GammaGroundFiniteVFObject hc
+                        (DiamondIntegral.Section3.measuredRealGroundContext C B).base) →
+                    DiamondIntegral.Section3.VFObject (↑C.base) U.vfArity
+'DiamondIntegral.Section3.MeasuredRealGround.vfFiniteToReal' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section3.MeasuredRealGround.vfSemiringFromInvariant : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (C : SpecialTransformations.Section3.BaseContext M) →
+        (hc : CanonicalStructure.IsCanonical) →
+          (B : DiamondIntegral.Section2.VFGeneratedFieldBase C.base) →
+            {G : Type} →
+              [inst_2 : LinearOrderedCommGroupWithZero.{0} G] →
+                [inst_3 : Valued.{0, 0} (DiamondIntegral.Section2.VF M) G] →
+                  (hv :
+                      ∀ (x y : DiamondIntegral.Section2.VF M),
+                        Iff (SpecialTransformations.Milestone0.VFValued.predV x y)
+                          (LE.le.{0} (Valued.v.{0, 0} x) (Valued.v.{0, 0} y))) →
+                    SpecialTransformations.Section4.PositiveGrothendieck.Invariant.{0, 0}
+                      (DiamondIntegral.Section3.vfSemiringPresentation C hc hv)
+'DiamondIntegral.Section3.MeasuredRealGround.vfSemiringFromInvariant' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section3.MeasuredRealGround.vfSemiringFrom : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (C : SpecialTransformations.Section3.BaseContext M) →
+        (hc : CanonicalStructure.IsCanonical) →
+          (B : DiamondIntegral.Section2.VFGeneratedFieldBase C.base) →
+            {G : Type} →
+              [inst_2 : LinearOrderedCommGroupWithZero.{0} G] →
+                [inst_3 : Valued.{0, 0} (DiamondIntegral.Section2.VF M) G] →
+                  (hv :
+                      ∀ (x y : DiamondIntegral.Section2.VF M),
+                        Iff (SpecialTransformations.Milestone0.VFValued.predV x y)
+                          (LE.le.{0} (Valued.v.{0, 0} x) (Valued.v.{0, 0} y))) →
+                    RingHom.{0, 0} (DiamondIntegral.Section3.VFPositiveSemiring C hc hv)
+                      (DiamondIntegral.Section3.GammaGroundVFPositiveSemiring hc
+                        (DiamondIntegral.Section3.measuredRealGroundContext C B).base)
+'DiamondIntegral.Section3.MeasuredRealGround.vfSemiringFrom' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section3.MeasuredRealGround.vfSemiringToInvariant : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (C : SpecialTransformations.Section3.BaseContext M) →
+        (hc : CanonicalStructure.IsCanonical) →
+          (B : DiamondIntegral.Section2.VFGeneratedFieldBase C.base) →
+            {G : Type} →
+              [inst_2 : LinearOrderedCommGroupWithZero.{0} G] →
+                [inst_3 : Valued.{0, 0} (DiamondIntegral.Section2.VF M) G] →
+                  (hv :
+                      ∀ (x y : DiamondIntegral.Section2.VF M),
+                        Iff (SpecialTransformations.Milestone0.VFValued.predV x y)
+                          (LE.le.{0} (Valued.v.{0, 0} x) (Valued.v.{0, 0} y))) →
+                    SpecialTransformations.Section4.PositiveGrothendieck.Invariant.{0, 0}
+                      (DiamondIntegral.Section3.gammaGroundVFSemiringPresentation hc
+                        (DiamondIntegral.Section3.measuredRealGroundContext C B).base)
+'DiamondIntegral.Section3.MeasuredRealGround.vfSemiringToInvariant' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section3.MeasuredRealGround.vfSemiringTo : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (C : SpecialTransformations.Section3.BaseContext M) →
+        (hc : CanonicalStructure.IsCanonical) →
+          (B : DiamondIntegral.Section2.VFGeneratedFieldBase C.base) →
+            {G : Type} →
+              [inst_2 : LinearOrderedCommGroupWithZero.{0} G] →
+                [inst_3 : Valued.{0, 0} (DiamondIntegral.Section2.VF M) G] →
+                  (hv :
+                      ∀ (x y : DiamondIntegral.Section2.VF M),
+                        Iff (SpecialTransformations.Milestone0.VFValued.predV x y)
+                          (LE.le.{0} (Valued.v.{0, 0} x) (Valued.v.{0, 0} y))) →
+                    RingHom.{0, 0}
+                      (DiamondIntegral.Section3.GammaGroundVFPositiveSemiring hc
+                        (DiamondIntegral.Section3.measuredRealGroundContext C B).base)
+                      (DiamondIntegral.Section3.VFPositiveSemiring C hc hv)
+'DiamondIntegral.Section3.MeasuredRealGround.vfSemiringTo' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section3.MeasuredRealGround.vfSemiringEquiv : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (C : SpecialTransformations.Section3.BaseContext M) →
+        (hc : CanonicalStructure.IsCanonical) →
+          (B : DiamondIntegral.Section2.VFGeneratedFieldBase C.base) →
+            {G : Type} →
+              [inst_2 : LinearOrderedCommGroupWithZero.{0} G] →
+                [inst_3 : Valued.{0, 0} (DiamondIntegral.Section2.VF M) G] →
+                  (hv :
+                      ∀ (x y : DiamondIntegral.Section2.VF M),
+                        Iff (SpecialTransformations.Milestone0.VFValued.predV x y)
+                          (LE.le.{0} (Valued.v.{0, 0} x) (Valued.v.{0, 0} y))) →
+                    RingEquiv.{0, 0} (DiamondIntegral.Section3.VFPositiveSemiring C hc hv)
+                      (DiamondIntegral.Section3.GammaGroundVFPositiveSemiring hc
+                        (DiamondIntegral.Section3.measuredRealGroundContext C B).base)
+'DiamondIntegral.Section3.MeasuredRealGround.vfSemiringEquiv' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@DiamondIntegral.Section3.MeasuredRealGround.completedOrdinaryLiftInput : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (C : SpecialTransformations.Section3.BaseContext M) →
+        (hc : CanonicalStructure.IsCanonical) →
+          (B : DiamondIntegral.Section2.VFGeneratedFieldBase C.base) →
+            {G : Type} →
+              [inst_2 : LinearOrderedCommGroupWithZero.{0} G] →
+                [inst_3 : Valued.{0, 0} (DiamondIntegral.Section2.VF M) G] →
+                  (hv :
+                      ∀ (x y : DiamondIntegral.Section2.VF M),
+                        Iff (SpecialTransformations.Milestone0.VFValued.predV x y)
+                          (LE.le.{0} (Valued.v.{0, 0} x) (Valued.v.{0, 0} y))) →
+                    DiamondIntegral.Section3.YinUnmeasuredLiftInput C hc hv B
+'DiamondIntegral.Section3.MeasuredRealGround.completedOrdinaryLiftInput' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
 @DiamondIntegral.Section3.LiteralValuePattern : {I R : Type} →
   {n : Nat} → SpecialTransformations.Section3.GuardedRVNormalForm.RVLiteral I R (Fin n) → Type
 'DiamondIntegral.Section3.LiteralValuePattern' depends on axioms: [propext, Classical.choice.{u}, Quot.sound.{u}]

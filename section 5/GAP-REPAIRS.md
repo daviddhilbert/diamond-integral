@@ -86,8 +86,11 @@ computations; prove Lemma 5.12 and everything after it.
     `tuple_witness_iff_fibre_only_witness`. The factor order is `Z × α^♯`
     rather than the paper's `α^♯ × Z` (a coordinate permutation).
 - Not pursued:
-  - Remark 5.16 (polyhedral base pieces; the polyhedral facts the inflated
-    Fubini proof needs will be proved there);
+  - Remark 5.16 (polyhedral base pieces). Its earlier stated reason, that the
+    polyhedral facts needed by the inflated Fubini proof would be proved
+    there, is stale (updated November 19): the inflated-family Fubini uses
+    Section 4's Γ-Fubini (`integratePrefix`, `integrateAll_factor`) for the
+    base partition instead, so the remark is not needed;
   - Remark 5.18's examples and its equality reformulation;
   - the global form of the (twist:C) formula, which is internal to the proof
     of 5.14.
@@ -112,3 +115,13 @@ extracted into Fubini-theorems at `c94e50c` (source commit `d7117c9`) and
 replaced here by compatibility imports recorded in `EXTRACTED-FOUNDATIONS.json`.
 Fubini-theorems' public contract gained their 629 declarations, with full types
 and axiom lists checked.
+
+## Author decision: the base of Theorem 5.17 / Proposition 5.23 (November 19)
+
+- In Lean, the base of 5.17 and 5.23 is
+  `C : GammaGroundDefSet … (rawMixedSpace p q)`, so B is restricted to a
+  definable subset of VF^p × RV^q (no Γ coordinates).
+- The author ruled on 2026-11-19 that this is faithful: by the paper's
+  standing convention every definable set, the base included, contains only
+  real points unless indicated otherwise, and Γ is an imaginary sort.
+- No statement changes; this records the reading.
