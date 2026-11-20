@@ -87,7 +87,7 @@ theorem liftChain_factor {U V : MeasuredRVObject (M := M) S n} (T : MeasuredVFUn
   induction T with
   | identity U => exact UnaryFactorization.id _
   | step i F unary T ih =>
-    exact UnaryFactorization.comp (UnaryFactorization.step hp.1 (Or.inr ⟨i, i, VFUnaryRelativeAt.relativelyUnary unary⟩)) (ih hp.2)
+    exact UnaryFactorization.comp (UnaryFactorization.step hp.1 (Or.inr ⟨i, unary⟩)) (ih hp.2)
 
 /-- **A lift chain is a factorization inside `μVF^◇[n]`.** Every intermediate set
 is the lift of an intermediate measured RV object of the chain, with its lifted
@@ -109,7 +109,7 @@ theorem liftChain_objects (h00 : M ⊨ Axioms.ACVF00) (hc : CanonicalStructure.I
     have hV' : ProperInvariant S (rvLift V.object).carrier :=
       hp.1.covariant.target_properInvariant h00 hc linear hκ hs hv hsmall hΓ hp.1.bijective.surjective
     have hstep : IsStep G (liftObject U hU) (liftObject V hV') F.map :=
-      ⟨hp.1, Or.inr ⟨i, i, VFUnaryRelativeAt.relativelyUnary unary⟩,
+      ⟨hp.1, Or.inr ⟨i, unary⟩,
         ⟨DefSet.empty _ S, Set.empty_subset _, Or.inr rfl, fun p _ => F.measure p⟩⟩
     exact ObjectFactorization.comp (ObjectFactorization.step hstep) (ih hp.2 hV' hV)
 

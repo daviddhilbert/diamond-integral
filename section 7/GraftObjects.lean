@@ -114,10 +114,10 @@ theorem graftMorphism :
   let g : Map A.carrier (graftObject h00 hc hκ hs hv A τ hτ).carrier := graft hc τ
   have homeo : ProperCovariantHomeomorphism (G := G) g :=
     graft_properHomeomorphism (G := G) h00 hc linear hκ hs hv hsmall hΓ τ A.proper hτ
-  have hunary : n = 0 ∨ ∃ i j : Fin n, VFRelativelyUnary g i j := by
+  have hunary : n = 0 ∨ ∃ i : Fin n, VFUnaryRelativeAt g i := by
     rcases n with _ | n
     · exact Or.inl rfl
-    · exact Or.inr ⟨0, 0, graft_relativelyUnary hc A τ 0⟩
+    · exact Or.inr ⟨0, (vfRelativelyUnary_self _ _).mp (graft_relativelyUnary hc A τ 0)⟩
   refine morphism_of_step h00 hc hs hsmall g homeo hunary (fun p _ => ?_)
   obtain ⟨L, hL, hdet⟩ := graft_unit_derivative hc hv τ hτ p
   refine ⟨L, hL, ?_⟩

@@ -35,9 +35,11 @@ Also: isomorphic charts have isomorphic lifts (`lift_congr`, Lemma 6.33), so
 `(V ∖ C) ⊎ ⊎ U_i^♭`. Its object form would need lifts of tagged coproducts to
 be congruent in each summand, i.e. gluing `μVF^◇` morphisms along a disjoint
 union with the identity on the other summand. Section 6 has no such gluing
-(a morphism is a chain of steps through objects whose label counts vary, and
-each step is relatively unary in a single `(i, j)`), so the general form is
-stated on classes only (`BlowupLiftGeneral.step_lift`, `steps_lift`). -/
+lemma yet (a morphism is a chain of steps through objects whose label counts
+vary), so the general form is stated on classes only
+(`BlowupLiftGeneral.step_lift`, `steps_lift`). Since 2026-11-20 each step is
+relatively unary in a single coordinate (Definition 6.24), for which the
+identity is a step in every coordinate, so such a gluing lemma is possible. -/
 
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false

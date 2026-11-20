@@ -56,7 +56,7 @@ whose factorization is that single step. -/
 theorem morphism_of_step (h00 : M ⊨ Axioms.ACVF00) (hc : CanonicalStructure.IsCanonical (M := M))
     {κ : Cardinal} (hs : Saturated M κ) (hsmall : Cardinal.mk S < κ)
     {A B : VFObject (M := M) S n} (f : Map A.carrier B.carrier)
-    (homeo : ProperCovariantHomeomorphism (G := G) f) (unary : n = 0 ∨ ∃ i j : Fin n, VFRelativelyUnary f i j)
+    (homeo : ProperCovariantHomeomorphism (G := G) f) (unary : n = 0 ∨ ∃ i : Fin n, VFUnaryRelativeAt f i)
     (hgen : ∀ p : A.carrier, AlgebraicIndependent (vfParameterField S) p.val.1 →
       ∃ L, HasMixedVFDerivativeAt f p L ∧
         vfValue (LinearMap.toMatrix' L).det = (gammaMapValue A.form p / gammaMapValue B.form (f p)).val) :

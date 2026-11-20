@@ -70,11 +70,18 @@ theorem VFObject.levelSet_geometry (A : VFObject (M := M) S n) (γ : Gamma M) :
     have hx : (x, t) ∈ A.carrier.carrier := (hα x y hxyα).mpr hy
     exact ⟨hx, (hβ x y hx hy hxyβ).trans hγ⟩
 
-/-- Definition 6.24: a map is relatively unary in the `(i, j)`-coordinate if,
-after deleting the `j`-th output VF-coordinate and the `i`-th input
-VF-coordinate, the remaining coordinates agree in order. The `k`-th output
-coordinate (`k ≠ j`) is the input coordinate `c_i⁻¹ (c_j k)`, where `c_i`
-moves `i` to the front and keeps the order of the others. -/
+/-- The `(i, j)`-form of relative unarity, of an earlier version of
+Definition 6.24: after deleting the `j`-th output VF-coordinate and the `i`-th
+input VF-coordinate, the remaining coordinates agree in order. The `k`-th
+output coordinate (`k ≠ j`) is the input coordinate `c_i⁻¹ (c_j k)`, where
+`c_i` moves `i` to the front and keeps the order of the others.
+
+Definition 6.24 itself is the single-coordinate form `VFUnaryRelativeAt f i`
+(every VF-coordinate other than the `i`-th is kept), which is the case
+`i = j` here (`vfRelativelyUnary_self`). Steps of `μVF^◇[n]` use the
+single-coordinate form (author's decision of 2026-11-20); this predicate is
+kept because Corollary 7.15 and the finiteness of transported fibres are
+proved in this generality. -/
 def VFRelativelyUnary {r s : ℕ}
     {A : DefSet (rawMixedSpace (M := M) n r) S} {B : DefSet (rawMixedSpace (M := M) n s) S}
     (f : Map A B) (i j : Fin n) : Prop :=
@@ -113,14 +120,15 @@ theorem cycleRange_ne_zero {i k : Fin n} (hk : k ≠ i) : (Fin.cycleRange i k).v
 
 variable (G) in
 /-- Factorization into relatively unary proper covariant homeomorphisms between
-definable sets (Definition 6.34). In degree zero relative unarity is vacuous. -/
+definable sets (Definition 6.34). Each step keeps every VF-coordinate other
+than one (Definition 6.24). In degree zero relative unarity is vacuous. -/
 inductive UnaryFactorization : {r s : ℕ} → (A : DefSet (rawMixedSpace (M := M) n r) S) →
     (B : DefSet (rawMixedSpace (M := M) n s) S) → Map A B → Prop where
   | id {r : ℕ} (A : DefSet (rawMixedSpace (M := M) n r) S) : UnaryFactorization A A (Map.id A)
   | step {r s : ℕ} {A : DefSet (rawMixedSpace (M := M) n r) S}
       {B : DefSet (rawMixedSpace (M := M) n s) S} {f : Map A B}
       (homeo : ProperCovariantHomeomorphism (G := G) f)
-      (unary : n = 0 ∨ ∃ i j : Fin n, VFRelativelyUnary f i j) : UnaryFactorization A B f
+      (unary : n = 0 ∨ ∃ i : Fin n, VFUnaryRelativeAt f i) : UnaryFactorization A B f
   | comp {r s t : ℕ} {A : DefSet (rawMixedSpace (M := M) n r) S}
       {B : DefSet (rawMixedSpace (M := M) n s) S} {C : DefSet (rawMixedSpace (M := M) n t) S}
       {f : Map A B} {g : Map B C} :
@@ -133,7 +141,7 @@ its own, outside a definable set of smaller VF-dimension (empty in degree
 zero). -/
 structure IsStep (A B : VFObject (M := M) S n) (f : Map A.carrier B.carrier) : Prop where
   homeo : ProperCovariantHomeomorphism (G := G) f
-  unary : n = 0 ∨ ∃ i j : Fin n, VFRelativelyUnary f i j
+  unary : n = 0 ∨ ∃ i : Fin n, VFUnaryRelativeAt f i
   measure : ∃ bad : DefSet (rawMixedSpace (M := M) n A.labels) S, bad.carrier ⊆ A.carrier.carrier ∧
     (vfDim (rawRVSpace (M := M) 1) bad < n ∨ bad.carrier = ∅) ∧
     ∀ p : A.carrier, p.val ∉ bad.carrier →
@@ -176,7 +184,7 @@ structure Morphism (A B : VFObject (M := M) S n) where
 
 /-- A morphism given by a single step, with the step's own exceptional set. -/
 def Morphism.ofStep {A B : VFObject (M := M) S n} (f : Map A.carrier B.carrier)
-    (homeo : ProperCovariantHomeomorphism (G := G) f) (unary : n = 0 ∨ ∃ i j : Fin n, VFRelativelyUnary f i j)
+    (homeo : ProperCovariantHomeomorphism (G := G) f) (unary : n = 0 ∨ ∃ i : Fin n, VFUnaryRelativeAt f i)
     (bad : DefSet (rawMixedSpace (M := M) n A.labels) S) (bad_subset : bad.carrier ⊆ A.carrier.carrier)
     (bad_small : vfDim (rawRVSpace (M := M) 1) bad < n ∨ bad.carrier = ∅)
     (measure : ∀ p : A.carrier, p.val ∉ bad.carrier →

@@ -197,15 +197,32 @@ lift data with the given aperture). So Lean's lift class is exactly the
 manuscript's. The alternating grammar is `RelativeApertureChain` (whose
 `original` steps include regularizations).
 
-## Definition 6.24 — `(i, j)` relative unarity; μVF^◇ morphisms: repaired
+## Definition 6.24 — relative unarity in a single coordinate (author's decision of 2026-11-20, review batch B11)
 
-`DiamondCategory.lean`: `VFRelativelyUnary f i j` (Definition 6.24, via
-`Fin.cycleRange`), `vfRelativelyUnary_self` (the `(i, i)` case is
-`VFUnaryRelativeAt`). The factorization step of `μVF^◇` morphisms now allows
-any `(i, j)`, as Definition 6.34 does (an adjacent transposition of VF
-coordinates is `(i+1, i)`-relatively unary). Inverses of `(i, j)` steps are
-`(j, i)` steps (`unary_inverse`). All μVF^◇ constructions were updated;
-sections 6 and 7 build. "Relatively special covariant" and Example 6.25 are
+Definition 6.24 is now the single-coordinate form, in the manuscript (batch
+B11, applied) and in Lean: a bijection is relatively unary in the `i`-th
+coordinate if it keeps every VF-coordinate other than the `i`-th
+(`VFUnaryRelativeAt f i`, `ProperMeasuredRVLifts.lean`). This is Definition 5.4
+of "Integration in algebraically closed valued fields". The step of a
+factorization (`UnaryFactorization.step`, `IsStep.unary`, `Morphism.ofStep`) is
+`n = 0 ∨ ∃ i, VFUnaryRelativeAt f i`. The inverse of a step in coordinate `i`
+is a step in coordinate `i` (`unary_inverse`).
+
+Why: the printed `(i, j)` form (`pr_{j̃} ∘ G = pr_{ĩ}`) made the sentence after
+the definition false ("identity functions are relatively unary in any
+coordinate": the identity is `(i, j)`-relatively unary only for `i = j`), and
+that sentence is what glues piecewise compositions (Section 7 GAP-REPAIRS 19).
+Nothing used `i ≠ j`: every step constructed in Sections 6 and 7 was already of
+the form `(i, i)`, and the manuscript names a pair `(i, j)` only in the
+definition itself.
+
+The `(i, j)` predicate `VFRelativelyUnary f i j` (`DiamondCategory.lean`, via
+`Fin.cycleRange`; `vfRelativelyUnary_self`: the `(i, i)` case is
+`VFUnaryRelativeAt`) is kept as an auxiliary notion, because Corollary 7.15
+(`Corollary715Moves`) and the finiteness of transported fibres
+(`TransportedFormsFibres.finite_rv_fibres`) are proved in that generality; it
+is no longer part of the definition of a morphism. Sections 6 and 7 build
+after the change. "Relatively special covariant" and Example 6.25 are
 not used anywhere and are not formalized. Dropped by author decision on
 2026-11-19 ("if it is not used then drop it"): the paper never uses the term
 after Example 6.25.

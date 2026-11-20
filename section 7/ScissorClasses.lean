@@ -288,9 +288,7 @@ theorem graftPiece_morphism (Y : DefSet (rawMixedSpace (M := M) n A.labels) S) (
   refine morphism_of_step h00 hc hs hsmall f homeo ?_ (fun p _ => ?_)
   · rcases n with _ | n
     · exact Or.inl rfl
-    · refine Or.inr ⟨0, 0, fun p k _ => ?_⟩
-      simp only [Equiv.symm_apply_apply]
-      rfl
+    · exact Or.inr ⟨0, fun p k _ => rfl⟩
   · obtain ⟨L, ⟨F, hF, hL⟩, hdet⟩ := graft_unit_derivative hc hv τ hτ ⟨p.val, hY p.property⟩
     refine ⟨L, ⟨F, chart_restrict hv (graft hc τ) hY hPY p hF, hL⟩, ?_⟩
     rw [hdet]

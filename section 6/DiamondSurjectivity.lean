@@ -42,7 +42,7 @@ theorem retained_factor {r s : ℕ} {A : DefSet (rawMixedSpace (M := M) n r) S}
     (F : RetainedUnaryHomeChain (G := G) S f π) : UnaryFactorization G A B f := by
   induction F with
   | identity A _ => exact UnaryFactorization.id A
-  | unary j home relative _ _ => exact UnaryFactorization.step home (Or.inr ⟨j, j, VFUnaryRelativeAt.relativelyUnary relative⟩)
+  | unary j home relative _ _ => exact UnaryFactorization.step home (Or.inr ⟨j, relative⟩)
   | comp _ _ ihf ihs => exact UnaryFactorization.comp ihf ihs
 
 /-- Special covariant chains factor into relatively unary proper covariant
@@ -62,10 +62,10 @@ theorem special_factor (h00 : M ⊨ Axioms.ACVF00) (hc : CanonicalStructure.IsCa
       (regularization_properHomeomorphism h00 hc linear hκ hs hv hsmall hΓ A hA hVF) ?_
     rcases Nat.eq_zero_or_pos n with hn | hn
     · exact Or.inl hn
-    · exact Or.inr ⟨⟨0, hn⟩, ⟨0, hn⟩, VFUnaryRelativeAt.relativelyUnary (fun _ _ _ => rfl)⟩
+    · exact Or.inr ⟨⟨0, hn⟩, (fun _ _ _ => rfl)⟩
   | centripetal A D =>
     refine UnaryFactorization.step (D.properHomeomorphism h00 hc linear hκ hs hv hsmall hΓ)
-      (Or.inr ⟨D.coordinate, D.coordinate, VFUnaryRelativeAt.relativelyUnary (fun p j hj => ?_)⟩)
+      (Or.inr ⟨D.coordinate, (fun p j hj => ?_)⟩)
     change (D.point p.val).1 j = p.val.1 j
     exact Function.update_of_ne hj _ _
   | zeroCentered A D =>
@@ -98,10 +98,10 @@ theorem special_objects (h00 : M ⊨ Axioms.ACVF00) (hc : CanonicalStructure.IsC
   | regularize A hA hVF =>
     intro X
     have homeo := regularization_properHomeomorphism (G := G) h00 hc linear hκ hs hv hsmall hΓ A hA hVF
-    have hu : n = 0 ∨ ∃ i j : Fin n, VFRelativelyUnary (regularization A) i j := by
+    have hu : n = 0 ∨ ∃ i : Fin n, VFUnaryRelativeAt (regularization A) i := by
       rcases Nat.eq_zero_or_pos n with hn | hn
       · exact Or.inl hn
-      · exact Or.inr ⟨⟨0, hn⟩, ⟨0, hn⟩, VFUnaryRelativeAt.relativelyUnary (fun _ _ _ => rfl)⟩
+      · exact Or.inr ⟨⟨0, hn⟩, (fun _ _ _ => rfl)⟩
     have hunit := fun p hp => (SpecialCovariantChain.regularize (G := G) A hA hVF).unit_derivative_of_independent
       h00 hc hκ.le hs hsmall hv p hp
     exact ⟨transport h00 hc linear hκ hs hv hsmall hΓ X _ homeo hu,
@@ -110,8 +110,8 @@ theorem special_objects (h00 : M ⊨ Axioms.ACVF00) (hc : CanonicalStructure.IsC
   | centripetal A D =>
     intro X
     have homeo := D.properHomeomorphism (G := G) h00 hc linear hκ hs hv hsmall hΓ
-    have hu : n = 0 ∨ ∃ i j : Fin n, VFRelativelyUnary D.map i j :=
-      Or.inr ⟨D.coordinate, D.coordinate, VFUnaryRelativeAt.relativelyUnary (fun p j hj => by
+    have hu : n = 0 ∨ ∃ i : Fin n, VFUnaryRelativeAt D.map i :=
+      Or.inr ⟨D.coordinate, (fun p j hj => by
         change (D.point p.val).1 j = p.val.1 j
         exact Function.update_of_ne hj _ _)⟩
     have hunit := fun p hp => (SpecialCovariantChain.centripetal (G := G) A D).unit_derivative_of_independent
@@ -123,7 +123,7 @@ theorem special_objects (h00 : M ⊨ Axioms.ACVF00) (hc : CanonicalStructure.IsC
     intro X
     rcases Nat.eq_zero_or_pos n with hn | hn
     · have homeo := D.properHomeomorphism (G := G) h00 hc linear hκ hs hv hsmall hΓ
-      have hu : n = 0 ∨ ∃ i j : Fin n, VFRelativelyUnary D.bijection i j := Or.inl hn
+      have hu : n = 0 ∨ ∃ i : Fin n, VFUnaryRelativeAt D.bijection i := Or.inl hn
       have hunit := fun p hp => (SpecialCovariantChain.zeroCentered (G := G) A D).unit_derivative_of_independent
         h00 hc hκ.le hs hsmall hv p hp
       exact ⟨transport h00 hc linear hκ hs hv hsmall hΓ X _ homeo hu,

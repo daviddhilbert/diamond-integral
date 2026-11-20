@@ -187,7 +187,7 @@ Proposition `prop:eu:retr:k:db` (2582) still states only "such that $(\bm P_\Gam
 
 ## 3. (B): morphisms and class equalities in μVF^◇ produced in Section 8
 
-Revised definition [V]: 5140 "every $\bm A_m$ is a proper invariant object, and every $F_m$ is a relatively unary proper covariant homeomorphism"; counterexample at 5146–5150.
+Revised definition [V]: 5140 "every $\bm A_m$ is a proper invariant object, and every $F_m$ is a relatively unary proper covariant homeomorphism"; counterexample at 5146–5150. Since 2026-11-20 (batch B11) "relatively unary" means in a single coordinate: every VF-coordinate other than one is kept (Definition 6.24; Lean `VFUnaryRelativeAt`). The argument for B4 below already uses only such steps.
 
 | # | Lines | Construction | Through objects with forms? | Status |
 |---|---|---|---|---|

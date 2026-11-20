@@ -504,11 +504,11 @@ omit [M ⊨ Axioms.ACVF] in
 /-- A map fixing every VF coordinate is relatively unary (or of degree zero). -/
 theorem unary_of_vf_eq {N r s : ℕ} {A : DefSet (rawMixedSpace (M := M) N r) S}
     {B : DefSet (rawMixedSpace (M := M) N s) S} {F : Map A B} (h : ∀ p, (F p).val.1 = p.val.1) :
-    N = 0 ∨ ∃ i j : Fin N, VFRelativelyUnary F i j := by
+    N = 0 ∨ ∃ i : Fin N, VFUnaryRelativeAt F i := by
   rcases Nat.eq_zero_or_pos N with hN | hN
   · exact Or.inl hN
-  · refine Or.inr ⟨⟨0, hN⟩, ⟨0, hN⟩, fun p k _ => ?_⟩
-    rw [h p, Equiv.symm_apply_apply]
+  · refine Or.inr ⟨⟨0, hN⟩, fun p k _ => ?_⟩
+    rw [h p]
 
 variable {r s : ℕ}
 
@@ -604,9 +604,10 @@ theorem factor_productLeft {B : DefSet (rawMixedSpace (M := M) m b) S}
   | step homeo unary =>
     refine UnaryFactorization.step
       (properCovariantHomeomorphism_product homeo (properCovariantHomeomorphism_id hB)) ?_
-    rcases unary with hn | ⟨i, j, h⟩
+    rcases unary with hn | ⟨i, h⟩
     · exact unary_of_vf_eq (fun p => productLeft_vf_eq_of_zero B hn _ p)
-    · exact Or.inr ⟨_, _, relativelyUnary_productLeft B h⟩
+    · exact Or.inr ⟨_, (vfRelativelyUnary_self _ _).mp
+        (relativelyUnary_productLeft B (VFUnaryRelativeAt.relativelyUnary h))⟩
   | comp _ _ ihf ihg =>
     rw [productMap_comp_left]
     exact UnaryFactorization.comp ihf ihg
@@ -626,9 +627,10 @@ theorem factor_productRight {A : DefSet (rawMixedSpace (M := M) n a) S}
   | step homeo unary =>
     refine UnaryFactorization.step
       (properCovariantHomeomorphism_product (properCovariantHomeomorphism_id hA) homeo) ?_
-    rcases unary with hm | ⟨i, j, h⟩
+    rcases unary with hm | ⟨i, h⟩
     · exact unary_of_vf_eq (fun p => productRight_vf_eq_of_zero A hm _ p)
-    · exact Or.inr ⟨_, _, relativelyUnary_productRight A h⟩
+    · exact Or.inr ⟨_, (vfRelativelyUnary_self _ _).mp
+        (relativelyUnary_productRight A (VFUnaryRelativeAt.relativelyUnary h))⟩
   | comp _ _ ihf ihg =>
     rw [productMap_comp_right]
     exact UnaryFactorization.comp ihf ihg
@@ -735,10 +737,11 @@ theorem chain_productLeft (h00 : M ⊨ Axioms.ACVF00) {κ : Cardinal} (hκ : Car
     exact ObjectFactorization.id _
   | @step X Y f hstep =>
     have homeo := properCovariantHomeomorphism_product hstep.homeo (properCovariantHomeomorphism_id (G := G) B.proper)
-    have hu : n + m = 0 ∨ ∃ i j : Fin (n + m), VFRelativelyUnary (mixedDomainProductMap f (Map.id B.carrier)) i j := by
-      rcases hstep.unary with hn | ⟨i, j, hij⟩
+    have hu : n + m = 0 ∨ ∃ i : Fin (n + m), VFUnaryRelativeAt (mixedDomainProductMap f (Map.id B.carrier)) i := by
+      rcases hstep.unary with hn | ⟨i, hi⟩
       · exact unary_of_vf_eq (fun p => productLeft_vf_eq_of_zero B.carrier hn _ p)
-      · exact Or.inr ⟨_, _, relativelyUnary_productLeft B.carrier hij⟩
+      · exact Or.inr ⟨_, (vfRelativelyUnary_self _ _).mp
+          (relativelyUnary_productLeft B.carrier (VFUnaryRelativeAt.relativelyUnary hi))⟩
     exact ObjectFactorization.step (isStep_of_generic (A := VFObject.product hc X B) (B := VFObject.product hc Y B)
       h00 hc hs hsmall _ homeo hu
       (product_generic_maps hc h00 hκ hs hsmall hv f (Map.id B.carrier) (step_generic hc hstep)
@@ -761,10 +764,11 @@ theorem chain_productRight (h00 : M ⊨ Axioms.ACVF00) {κ : Cardinal} (hκ : Ca
     exact ObjectFactorization.id _
   | @step X Y g hstep =>
     have homeo := properCovariantHomeomorphism_product (properCovariantHomeomorphism_id (G := G) A.proper) hstep.homeo
-    have hu : n + m = 0 ∨ ∃ i j : Fin (n + m), VFRelativelyUnary (mixedDomainProductMap (Map.id A.carrier) g) i j := by
-      rcases hstep.unary with hm | ⟨i, j, hij⟩
+    have hu : n + m = 0 ∨ ∃ i : Fin (n + m), VFUnaryRelativeAt (mixedDomainProductMap (Map.id A.carrier) g) i := by
+      rcases hstep.unary with hm | ⟨i, hi⟩
       · exact unary_of_vf_eq (fun p => productRight_vf_eq_of_zero A.carrier hm _ p)
-      · exact Or.inr ⟨_, _, relativelyUnary_productRight A.carrier hij⟩
+      · exact Or.inr ⟨_, (vfRelativelyUnary_self _ _).mp
+          (relativelyUnary_productRight A.carrier (VFUnaryRelativeAt.relativelyUnary hi))⟩
     exact ObjectFactorization.step (isStep_of_generic (A := VFObject.product hc A X) (B := VFObject.product hc A Y)
       h00 hc hs hsmall _ homeo hu
       (product_generic_maps hc h00 hκ hs hsmall hv (Map.id A.carrier) g

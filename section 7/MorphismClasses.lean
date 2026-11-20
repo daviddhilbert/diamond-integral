@@ -19,9 +19,10 @@ measure-preserving on its own (`DiamondCategory.ObjectFactorization`). So every
 step is a morphism between objects (`Morphism.ofStep`), and Corollary 7.15 applies
 to it (`factor_classes`).
 
-* Dimension `≥ 2`: each step, relatively unary in some `(i, j)`, relates the
-  classes by the hypothesis `hMove` (Corollary 7.15 for `(i, j)`-relatively
-  unary morphisms, `Corollary715Moves`).
+* Dimension `≥ 2`: each step, relatively unary in some coordinate `i`
+  (Definition 6.24), relates the classes by the hypothesis `hMove`
+  (Corollary 7.15, `Corollary715Moves`, which is proved for the more general
+  `(i, j)`-relatively unary morphisms and is used here with `i = j`).
 * Dimension `1`: Lemma 7.13 applies to the whole isomorphism
   (`classRel_of_iso_one`); no factorization is needed. -/
 
@@ -118,7 +119,7 @@ variable (hMove : MoveRel (G := G) (n := n) h00 hc hκ hs hv hsmall hΓ)
 
 include hMove V hV hVT hTV hnt in
 /-- **Along a factorization inside `μVF^◇[n + 2]`.** Every step is a morphism
-between objects, relatively unary in some `(i, j)`, so its ends have related
+between objects, relatively unary in some coordinate, so its ends have related
 contraction classes; then `ClassRel` is transitive. -/
 theorem factor_classes {A B : VFObject (M := M) (T : Set M) (n + 1 + 1)} {f : Map A.carrier B.carrier}
     (hf : ObjectFactorization G A B f) : ClassRel (G := G) h00 hc hκ hs hv hsmall hΓ A B := by
@@ -126,9 +127,10 @@ theorem factor_classes {A B : VFObject (M := M) (T : Set M) (n + 1 + 1)} {f : Ma
   | id A => exact classRel_refl (G := G) h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ A
   | @step A B f h =>
     obtain ⟨bad, hsub, hsm, hmeas⟩ := h.measure
-    rcases h.unary with h0 | ⟨i, j, hij⟩
+    rcases h.unary with h0 | ⟨i, hi⟩
     · exact absurd h0 (Nat.succ_ne_zero _)
-    · exact hMove (Morphism.ofStep f h.homeo h.unary bad hsub hsm hmeas) i j hij
+    · exact hMove (Morphism.ofStep f h.homeo h.unary bad hsub hsm hmeas) i i
+        (VFUnaryRelativeAt.relativelyUnary hi)
   | comp _ _ ih₁ ih₂ => exact classRel_trans (G := G) h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ ih₁ ih₂
 
 include hMove V hV hVT hTV hnt in

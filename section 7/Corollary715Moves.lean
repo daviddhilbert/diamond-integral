@@ -5,11 +5,13 @@ import «section 7».Corollary715Fibres
 /-! Corollary 7.15 (`contraction:same:perm:isp`) for morphisms relatively unary
 in an `(i, j)`-coordinate, `i ≠ j` allowed.
 
-The factorizations of `μVF^◇` morphisms (`UnaryFactorization.step`) have steps
-relatively unary in a pair `(i, j)`: after deleting the `i`-th input and the
-`j`-th output VF coordinate, the remaining coordinates agree in order. The
-proof of Proposition 7.24 applies Corollary 7.15 to each step.
-`ProvedResults.corollary_7_15` treats `i = j`. Here `F : A' → A''` is
+A map is relatively unary in a pair `(i, j)` if, after deleting the `i`-th
+input and the `j`-th output VF coordinate, the remaining coordinates agree in
+order (`VFRelativelyUnary`). Since 2026-11-20 the steps of `μVF^◇` morphisms
+(`UnaryFactorization.step`) are relatively unary in a single coordinate
+(Definition 6.24), which is the case `i = j`; the pair form is kept here as a
+generalization. The proof of Proposition 7.24 applies Corollary 7.15 to each
+step. `ProvedResults.corollary_7_15` treats `i = j`. Here `F : A' → A''` is
 relatively unary in any `(i, j)`, and the standard contractions of `A'` and
 `A''` are in arbitrary orders (`corollary_7_15_moves`).
 
@@ -248,7 +250,7 @@ def conjMorphism {i j : Fin (n + 1 + 1)} (hF : VFRelativelyUnary F.map i j) (hj 
   map := conj2 h00 F G'₀ G''₀
   bijective := conj2_bijective h00 F G'₀ G''₀
   chain := ObjectFactorization.step ⟨conj2_homeo h00 hc hκ hs hv hsmall hΓ F G'₀ G''₀,
-    Or.inr ⟨Fin.last (n + 1), Fin.last (n + 1), conj2_unary h00 F G'₀ G''₀ hF hj he hcen⟩,
+    Or.inr ⟨Fin.last (n + 1), (vfRelativelyUnary_self _ _).mp (conj2_unary h00 F G'₀ G''₀ hF hj he hcen)⟩,
     ⟨conjBad F G'₀, conjBad_subset F G'₀, Or.inl (conjBad_small hc hs hsmall F G'₀),
       conj2_measure h00 hc hκ hs hv F G'₀ G''₀⟩⟩
   bad := conjBad F G'₀
@@ -358,14 +360,15 @@ include V hV hVT hTV hnt in
 step (`UnaryFactorization.step`); in degree `n + 2` the degree-zero case is
 void. -/
 theorem corollary_7_15_step {A' A'' : VFObject (M := M) (T : Set M) (n + 1 + 1)} (F : Morphism G A' A'')
-    (unary : n + 1 + 1 = 0 ∨ ∃ i j : Fin (n + 1 + 1), VFRelativelyUnary F.map i j)
+    (unary : n + 1 + 1 = 0 ∨ ∃ i : Fin (n + 1 + 1), VFUnaryRelativeAt F.map i)
     {σ τ : Equiv.Perm (Fin (n + 1 + 1))}
     (F₁ : NormalizedMeasuredContraction (G := G) A'.carrier A'.form σ)
     (F₂ : NormalizedMeasuredContraction (G := G) A''.carrier A''.form τ) :
     IspRel (clsOf h00 hc hκ hs hv hsmall hΓ A' F₁) (clsOf h00 hc hκ hs hv hsmall hΓ A'' F₂) := by
-  rcases unary with h | ⟨i, j, hF⟩
+  rcases unary with h | ⟨i, hF⟩
   · exact absurd h (Nat.succ_ne_zero _)
-  · exact corollary_7_15_moves h00 hc hκ hs hv hsmall hΓ V hV hVT hTV hnt F hF F₁ F₂
+  · exact corollary_7_15_moves h00 hc hκ hs hv hsmall hΓ V hV hVT hTV hnt F
+      (VFUnaryRelativeAt.relativelyUnary hF) F₁ F₂
 
 end Main
 

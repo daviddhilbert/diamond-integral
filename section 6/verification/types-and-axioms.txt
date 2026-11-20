@@ -60215,7 +60215,7 @@ DiamondIntegral.Section6.DiamondCategory.UnaryFactorization.step : ∀ {M : Type
   {B : SpecialTransformations.DefinableGeometry.DefSet (SpecialTransformations.Section4.rawMixedSpace n s) S}
   {f : SpecialTransformations.DefinableGeometry.Map A B},
   DiamondIntegral.Section6.ProperCovariantHomeomorphism f →
-    (n = 0 ∨ ∃ i j, DiamondIntegral.Section6.DiamondCategory.VFRelativelyUnary f i j) →
+    (n = 0 ∨ ∃ i, DiamondIntegral.Section6.VFUnaryRelativeAt f i) →
       DiamondIntegral.Section6.DiamondCategory.UnaryFactorization G A B f
 DiamondIntegral.Section6.DiamondCategory.UnaryFactorization.comp : ∀ {M : Type}
   [inst : SpecialTransformations.Milestone0.LRV.Structure M]
@@ -60246,8 +60246,7 @@ structure DiamondIntegral.Section6.DiamondCategory.IsStep {M : Type} [SpecialTra
 number of parameters: 11
 fields:
   DiamondIntegral.Section6.DiamondCategory.IsStep.homeo : DiamondIntegral.Section6.ProperCovariantHomeomorphism f
-  DiamondIntegral.Section6.DiamondCategory.IsStep.unary : n = 0 ∨
-      ∃ i j, DiamondIntegral.Section6.DiamondCategory.VFRelativelyUnary f i j
+  DiamondIntegral.Section6.DiamondCategory.IsStep.unary : n = 0 ∨ ∃ i, DiamondIntegral.Section6.VFUnaryRelativeAt f i
   DiamondIntegral.Section6.DiamondCategory.IsStep.measure : ∃ bad,
       bad.carrier ⊆ A.carrier.carrier ∧
         (SpecialTransformations.Section4.vfDim (SpecialTransformations.Section4.rawRVSpace 1) bad < n ∨
@@ -60266,7 +60265,7 @@ constructor:
     {A B : DiamondIntegral.Section6.DiamondCategory.VFObject S n}
     {f : SpecialTransformations.DefinableGeometry.Map A.carrier B.carrier}
     (homeo : DiamondIntegral.Section6.ProperCovariantHomeomorphism f)
-    (unary : n = 0 ∨ ∃ i j, DiamondIntegral.Section6.DiamondCategory.VFRelativelyUnary f i j)
+    (unary : n = 0 ∨ ∃ i, DiamondIntegral.Section6.VFUnaryRelativeAt f i)
     (measure :
       ∃ bad,
         bad.carrier ⊆ A.carrier.carrier ∧
@@ -60423,7 +60422,7 @@ constructor:
                 {A B : DiamondIntegral.Section6.DiamondCategory.VFObject S n} →
                   (f : SpecialTransformations.DefinableGeometry.Map A.carrier B.carrier) →
                     DiamondIntegral.Section6.ProperCovariantHomeomorphism f →
-                      (n = 0 ∨ ∃ i j, DiamondIntegral.Section6.DiamondCategory.VFRelativelyUnary f i j) →
+                      (n = 0 ∨ ∃ i, DiamondIntegral.Section6.VFUnaryRelativeAt f i) →
                         (bad :
                             SpecialTransformations.DefinableGeometry.DefSet
                               (SpecialTransformations.Section4.rawMixedSpace n A.labels) S) →
@@ -60450,7 +60449,7 @@ def DiamondIntegral.Section6.DiamondCategory.Morphism.ofStep : {M : Type} →
                 {A B : DiamondIntegral.Section6.DiamondCategory.VFObject S n} →
                   (f : SpecialTransformations.DefinableGeometry.Map A.carrier B.carrier) →
                     DiamondIntegral.Section6.ProperCovariantHomeomorphism f →
-                      (n = 0 ∨ ∃ i j, DiamondIntegral.Section6.DiamondCategory.VFRelativelyUnary f i j) →
+                      (n = 0 ∨ ∃ i, DiamondIntegral.Section6.VFUnaryRelativeAt f i) →
                         (bad :
                             SpecialTransformations.DefinableGeometry.DefSet
                               (SpecialTransformations.Section4.rawMixedSpace n A.labels) S) →
@@ -61125,61 +61124,27 @@ fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransf
   {A : SpecialTransformations.DefinableGeometry.DefSet (SpecialTransformations.Section4.rawMixedSpace n r) S}
   {B : SpecialTransformations.DefinableGeometry.DefSet (SpecialTransformations.Section4.rawMixedSpace n s) S}
   {f : SpecialTransformations.DefinableGeometry.Map A B} (hf : Function.Bijective f.toFun),
-  (n = 0 ∨ ∃ i j, DiamondIntegral.Section6.DiamondCategory.VFRelativelyUnary f i j) →
-    n = 0 ∨ ∃ i j, DiamondIntegral.Section6.DiamondCategory.VFRelativelyUnary (f.inverse hf) i j
+  (n = 0 ∨ ∃ i, DiamondIntegral.Section6.VFUnaryRelativeAt f i) →
+    n = 0 ∨ ∃ i, DiamondIntegral.Section6.VFUnaryRelativeAt (f.inverse hf) i
 theorem DiamondIntegral.Section6.DiamondGroupoid.unary_inverse : ∀ {M : Type}
   [inst : SpecialTransformations.Milestone0.LRV.Structure M] {S : Set M} {n r s : ℕ}
   {A : SpecialTransformations.DefinableGeometry.DefSet (SpecialTransformations.Section4.rawMixedSpace n r) S}
   {B : SpecialTransformations.DefinableGeometry.DefSet (SpecialTransformations.Section4.rawMixedSpace n s) S}
   {f : SpecialTransformations.DefinableGeometry.Map A B} (hf : Function.Bijective f.toFun),
-  (n = 0 ∨ ∃ i j, DiamondIntegral.Section6.DiamondCategory.VFRelativelyUnary f i j) →
-    n = 0 ∨ ∃ i j, DiamondIntegral.Section6.DiamondCategory.VFRelativelyUnary (f.inverse hf) i j :=
+  (n = 0 ∨ ∃ i, DiamondIntegral.Section6.VFUnaryRelativeAt f i) →
+    n = 0 ∨ ∃ i, DiamondIntegral.Section6.VFUnaryRelativeAt (f.inverse hf) i :=
 fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] {S} {n r s} {A} {B} {f} hf h =>
   Or.imp id
     (fun x =>
       match x with
-      | Exists.intro i (Exists.intro j hi) =>
-        Exists.intro j
-          (Exists.intro i fun q k hk =>
-            let k' := (Equiv.symm j.cycleRange) (i.cycleRange k);
-            Eq.mpr
-              (id
-                (congrArg (fun _a => (↑((f.inverse hf).toFun q)).1 k = (↑q).1 _a)
-                  (have this := rfl;
-                  this)))
-              (have hk' := rfl;
-              have hk'j := fun he =>
-                DiamondIntegral.Section6.DiamondCategory.cycleRange_ne_zero hk
-                  ((DiamondIntegral.Section6.DiamondCategory.cycleRange_symm_eq_iff j (i.cycleRange k)).mp he);
-              have hq := hi ((f.inverse hf).toFun q) k' hk'j;
-              Eq.mpr
-                (id
-                  (congrArg (fun _a => (↑((f.inverse hf).toFun q)).1 k = _a)
-                    (Eq.mp
-                      (congrArg
-                        (fun _a =>
-                          (↑_a).1 k' = (↑((f.inverse hf).toFun q)).1 ((Equiv.symm i.cycleRange) (j.cycleRange k')))
-                        (SpecialTransformations.DefinableGeometry.Map.apply_inverse f hf q))
-                      hq)))
-                (Eq.mpr
-                  (id
-                    (congrArg
-                      (fun _a =>
-                        (↑((f.inverse hf).toFun q)).1 k =
-                          (↑((f.inverse hf).toFun q)).1 ((Equiv.symm i.cycleRange) (j.cycleRange _a)))
-                      hk'))
-                  (Eq.mpr
-                    (id
-                      (congrArg
-                        (fun _a =>
-                          (↑((f.inverse hf).toFun q)).1 k =
-                            (↑((f.inverse hf).toFun q)).1 ((Equiv.symm i.cycleRange) _a))
-                        (Equiv.apply_symm_apply j.cycleRange (i.cycleRange k))))
-                    (Eq.mpr
-                      (id
-                        (congrArg (fun _a => (↑((f.inverse hf).toFun q)).1 k = (↑((f.inverse hf).toFun q)).1 _a)
-                          (Equiv.symm_apply_apply i.cycleRange k)))
-                      (Eq.refl ((↑((f.inverse hf).toFun q)).1 k))))))))
+      | Exists.intro i hi =>
+        Exists.intro i fun q k hk =>
+          have hq := hi ((f.inverse hf).toFun q) k hk;
+          Eq.symm
+            (Eq.mp
+              (congrArg (fun _a => (↑_a).1 k = (↑((f.inverse hf).toFun q)).1 k)
+                (SpecialTransformations.DefinableGeometry.Map.apply_inverse f hf q))
+              hq))
     h
 'DiamondIntegral.Section6.DiamondGroupoid.unary_inverse' depends on axioms: [propext, Classical.choice, Quot.sound]
 @DiamondIntegral.Section6.DiamondGroupoid.inverse_id : ∀ {M : Type}
@@ -61357,7 +61322,7 @@ fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransf
             ∀ {A B : DiamondIntegral.Section6.DiamondCategory.VFObject S n}
               (f : SpecialTransformations.DefinableGeometry.Map A.carrier B.carrier),
               DiamondIntegral.Section6.ProperCovariantHomeomorphism f →
-                (n = 0 ∨ ∃ i j, DiamondIntegral.Section6.DiamondCategory.VFRelativelyUnary f i j) →
+                (n = 0 ∨ ∃ i, DiamondIntegral.Section6.VFUnaryRelativeAt f i) →
                   (∀ (p : ↑A.carrier.carrier),
                       AlgebraicIndependent (↥(SpecialTransformations.Section3.vfParameterField S)) (↑p).1 →
                         ∃ L,
@@ -61378,7 +61343,7 @@ theorem DiamondIntegral.Section6.DiamondGroupoid.isStep_of_generic : ∀ {M : Ty
             ∀ {A B : DiamondIntegral.Section6.DiamondCategory.VFObject S n}
               (f : SpecialTransformations.DefinableGeometry.Map A.carrier B.carrier),
               DiamondIntegral.Section6.ProperCovariantHomeomorphism f →
-                (n = 0 ∨ ∃ i j, DiamondIntegral.Section6.DiamondCategory.VFRelativelyUnary f i j) →
+                (n = 0 ∨ ∃ i, DiamondIntegral.Section6.VFUnaryRelativeAt f i) →
                   (∀ (p : ↑A.carrier.carrier),
                       AlgebraicIndependent (↥(SpecialTransformations.Section3.vfParameterField S)) (↑p).1 →
                         ∃ L,
@@ -61398,7 +61363,7 @@ fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransf
           ∀ {A B : DiamondIntegral.Section6.DiamondCategory.VFObject S n}
             (f : SpecialTransformations.DefinableGeometry.Map A.carrier B.carrier),
             DiamondIntegral.Section6.ProperCovariantHomeomorphism f →
-              (n = 0 ∨ ∃ i j, DiamondIntegral.Section6.DiamondCategory.VFRelativelyUnary f i j) →
+              (n = 0 ∨ ∃ i, DiamondIntegral.Section6.VFUnaryRelativeAt f i) →
                 (∀ (p : ↑A.carrier.carrier),
                     AlgebraicIndependent (↥(SpecialTransformations.Section3.vfParameterField S)) (↑p).1 →
                       ∃ L,
@@ -62156,7 +62121,7 @@ fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransf
             ∀ {A B : DiamondIntegral.Section6.DiamondCategory.VFObject S n}
               (f : SpecialTransformations.DefinableGeometry.Map A.carrier B.carrier),
               DiamondIntegral.Section6.ProperCovariantHomeomorphism f →
-                (n = 0 ∨ ∃ i j, DiamondIntegral.Section6.DiamondCategory.VFRelativelyUnary f i j) →
+                (n = 0 ∨ ∃ i, DiamondIntegral.Section6.VFUnaryRelativeAt f i) →
                   (∀ (p : ↑A.carrier.carrier),
                       AlgebraicIndependent (↥(SpecialTransformations.Section3.vfParameterField S)) (↑p).1 →
                         ∃ L,
@@ -62177,7 +62142,7 @@ theorem DiamondIntegral.Section6.DiamondGroupoid.morphism_of_step : ∀ {M : Typ
             ∀ {A B : DiamondIntegral.Section6.DiamondCategory.VFObject S n}
               (f : SpecialTransformations.DefinableGeometry.Map A.carrier B.carrier),
               DiamondIntegral.Section6.ProperCovariantHomeomorphism f →
-                (n = 0 ∨ ∃ i j, DiamondIntegral.Section6.DiamondCategory.VFRelativelyUnary f i j) →
+                (n = 0 ∨ ∃ i, DiamondIntegral.Section6.VFUnaryRelativeAt f i) →
                   (∀ (p : ↑A.carrier.carrier),
                       AlgebraicIndependent (↥(SpecialTransformations.Section3.vfParameterField S)) (↑p).1 →
                         ∃ L,
@@ -62798,10 +62763,7 @@ fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransf
       DiamondIntegral.Section6.DiamondCategory.UnaryFactorization.id (SpecialTransformations.Section4.rvLift U.object))
     (fun {U V W} i {e} F unary T ih hp =>
       DiamondIntegral.Section6.DiamondCategory.UnaryFactorization.comp
-        (DiamondIntegral.Section6.DiamondCategory.UnaryFactorization.step hp.left
-          (Or.inr
-            (Exists.intro i
-              (Exists.intro i (DiamondIntegral.Section6.DiamondCategory.VFUnaryRelativeAt.relativelyUnary unary)))))
+        (DiamondIntegral.Section6.DiamondCategory.UnaryFactorization.step hp.left (Or.inr (Exists.intro i unary)))
         (ih hp.right))
     T hp
 'DiamondIntegral.Section6.DiamondLift.liftChain_factor' depends on axioms: [propext, Classical.choice, Quot.sound]
@@ -62877,11 +62839,7 @@ fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransf
         DiamondIntegral.Section6.ProperCovariant.target_properInvariant h00 hc linear hκ hs hv hsmall hΓ
           hp.left.covariant (Function.Bijective.surjective hp.left.bijective);
       have hstep :=
-        { homeo := hp.left,
-          unary :=
-            Or.inr
-              (Exists.intro i
-                (Exists.intro i (DiamondIntegral.Section6.DiamondCategory.VFUnaryRelativeAt.relativelyUnary unary))),
+        { homeo := hp.left, unary := Or.inr (Exists.intro i unary),
           measure :=
             Exists.intro
               (SpecialTransformations.DefinableGeometry.DefSet.empty
@@ -64875,13 +64833,11 @@ fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransf
       DiamondIntegral.Section6.DiamondCategory.UnaryFactorization.step
         (DiamondIntegral.Section6.RelativeApertureData.properHomeomorphism D h00 hc linear hκ hs hv hsmall hΓ)
         (Or.inr
-          (Exists.intro D.coordinate
-            (Exists.intro D.coordinate
-              (DiamondIntegral.Section6.DiamondCategory.VFUnaryRelativeAt.relativelyUnary fun p j hj =>
-                id
-                  (Function.update_of_ne hj
-                    ((↑p).1 D.coordinate - D.extendedFocus ↑p + if D.core ↑p = true then D.extendedEndpoint ↑p else 0)
-                    (↑p).1))))))
+          (Exists.intro D.coordinate fun p j hj =>
+            id
+              (Function.update_of_ne hj
+                ((↑p).1 D.coordinate - D.extendedFocus ↑p + if D.core ↑p = true then D.extendedEndpoint ↑p else 0)
+                (↑p).1))))
     (fun {r s t} {A} {B} {C} {f} {g} hf hg ihf ihg =>
       DiamondIntegral.Section6.DiamondCategory.UnaryFactorization.comp ihf ihg)
     H
@@ -64958,13 +64914,11 @@ fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransf
         DiamondIntegral.Section6.RelativeApertureData.properHomeomorphism D h00 hc linear hκ hs hv hsmall hΓ;
       have hu :=
         Or.inr
-          (Exists.intro D.coordinate
-            (Exists.intro D.coordinate
-              (DiamondIntegral.Section6.DiamondCategory.VFUnaryRelativeAt.relativelyUnary fun p j hj =>
-                id
-                  (Function.update_of_ne hj
-                    ((↑p).1 D.coordinate - D.extendedFocus ↑p + if D.core ↑p = true then D.extendedEndpoint ↑p else 0)
-                    (↑p).1))));
+          (Exists.intro D.coordinate fun p j hj =>
+            id
+              (Function.update_of_ne hj
+                ((↑p).1 D.coordinate - D.extendedFocus ↑p + if D.core ↑p = true then D.extendedEndpoint ↑p else 0)
+                (↑p).1));
       have hunit := fun p hp =>
         DiamondIntegral.Section6.RelativeApertureChain.unit_derivative_of_independent
           (DiamondIntegral.Section6.RelativeApertureChain.relative A D) h00 hc (LT.lt.le hκ) hs hsmall hv p hp;
@@ -65562,10 +65516,7 @@ fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransf
   DiamondIntegral.Section6.RetainedUnaryHomeChain.rec
     (fun {r} A hA => DiamondIntegral.Section6.DiamondCategory.UnaryFactorization.id A)
     (fun {r s} {A} {B} {f} {π} j home relative unit retained =>
-      DiamondIntegral.Section6.DiamondCategory.UnaryFactorization.step home
-        (Or.inr
-          (Exists.intro j
-            (Exists.intro j (DiamondIntegral.Section6.DiamondCategory.VFUnaryRelativeAt.relativelyUnary relative)))))
+      DiamondIntegral.Section6.DiamondCategory.UnaryFactorization.step home (Or.inr (Exists.intro j relative)))
     (fun {r s t} {A} {B} {C} {f} {g} {π} {σ} first second ihf ihs =>
       DiamondIntegral.Section6.DiamondCategory.UnaryFactorization.comp ihf ihs)
     F
@@ -65629,22 +65580,17 @@ fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransf
       DiamondIntegral.Section6.DiamondCategory.UnaryFactorization.step
         (DiamondIntegral.Section6.regularization_properHomeomorphism h00 hc linear hκ hs hv hsmall hΓ A hA hVF)
         (Or.casesOn (Nat.eq_zero_or_pos n) (fun hn => Or.inl hn) fun hn =>
-          Or.inr
-            (Exists.intro ⟨0, hn⟩
-              (Exists.intro ⟨0, hn⟩
-                (DiamondIntegral.Section6.DiamondCategory.VFUnaryRelativeAt.relativelyUnary fun x x_1 x_2 => rfl)))))
+          Or.inr (Exists.intro ⟨0, hn⟩ fun x x_1 x_2 => rfl)))
     (fun {r} A D =>
       DiamondIntegral.Section6.DiamondCategory.UnaryFactorization.step
         (DiamondIntegral.Section6.CentripetalData.properHomeomorphism D h00 hc linear hκ hs hv hsmall hΓ)
         (Or.inr
-          (Exists.intro D.coordinate
-            (Exists.intro D.coordinate
-              (DiamondIntegral.Section6.DiamondCategory.VFUnaryRelativeAt.relativelyUnary fun p j hj =>
-                id
-                  (Function.update_of_ne hj
-                    ((↑p).1 D.coordinate - D.extendedFocus ↑p +
-                      if D.core ↑p = true then D.coefficient * D.extendedFocus ↑p else 0)
-                    (↑p).1))))))
+          (Exists.intro D.coordinate fun p j hj =>
+            id
+              (Function.update_of_ne hj
+                ((↑p).1 D.coordinate - D.extendedFocus ↑p +
+                  if D.core ↑p = true then D.coefficient * D.extendedFocus ↑p else 0)
+                (↑p).1))))
     (fun {r} A D =>
       Or.casesOn (Nat.eq_zero_or_pos n)
         (fun hn =>
@@ -65729,10 +65675,7 @@ fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransf
         DiamondIntegral.Section6.regularization_properHomeomorphism h00 hc linear hκ hs hv hsmall hΓ A hA hVF;
       have hu :=
         Or.casesOn (Nat.eq_zero_or_pos n) (fun hn => Or.inl hn) fun hn =>
-          Or.inr
-            (Exists.intro ⟨0, hn⟩
-              (Exists.intro ⟨0, hn⟩
-                (DiamondIntegral.Section6.DiamondCategory.VFUnaryRelativeAt.relativelyUnary fun x x_1 x_2 => rfl)));
+          Or.inr (Exists.intro ⟨0, hn⟩ fun x x_1 x_2 => rfl);
       have hunit := fun p hp =>
         DiamondIntegral.Section6.SpecialCovariantChain.unit_derivative_of_independent
           (DiamondIntegral.Section6.SpecialCovariantChain.regularize A hA hVF) h00 hc (LT.lt.le hκ) hs hsmall hv p hp;
@@ -65748,14 +65691,12 @@ fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransf
       have homeo := DiamondIntegral.Section6.CentripetalData.properHomeomorphism D h00 hc linear hκ hs hv hsmall hΓ;
       have hu :=
         Or.inr
-          (Exists.intro D.coordinate
-            (Exists.intro D.coordinate
-              (DiamondIntegral.Section6.DiamondCategory.VFUnaryRelativeAt.relativelyUnary fun p j hj =>
-                id
-                  (Function.update_of_ne hj
-                    ((↑p).1 D.coordinate - D.extendedFocus ↑p +
-                      if D.core ↑p = true then D.coefficient * D.extendedFocus ↑p else 0)
-                    (↑p).1))));
+          (Exists.intro D.coordinate fun p j hj =>
+            id
+              (Function.update_of_ne hj
+                ((↑p).1 D.coordinate - D.extendedFocus ↑p +
+                  if D.core ↑p = true then D.coefficient * D.extendedFocus ↑p else 0)
+                (↑p).1));
       have hunit := fun p hp =>
         DiamondIntegral.Section6.SpecialCovariantChain.unit_derivative_of_independent
           (DiamondIntegral.Section6.SpecialCovariantChain.centripetal A D) h00 hc (LT.lt.le hκ) hs hsmall hv p hp;
@@ -66269,7 +66210,7 @@ fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransf
         {B : SpecialTransformations.DefinableGeometry.DefSet (SpecialTransformations.Section4.rawMixedSpace n s) S}
         (X : DiamondIntegral.Section6.DiamondTransport.ObjOn A) (f : SpecialTransformations.DefinableGeometry.Map A B),
         Function.Bijective f.toFun →
-          (n = 0 ∨ ∃ i j, DiamondIntegral.Section6.DiamondCategory.VFRelativelyUnary f i j) →
+          (n = 0 ∨ ∃ i, DiamondIntegral.Section6.VFUnaryRelativeAt f i) →
             ∀ (y : Fin n → DiamondIntegral.Section2.VF M), {t | (y, t) ∈ B.carrier}.Finite
 theorem DiamondIntegral.Section6.DiamondTransport.finite_of_unary : ∀ {M : Type}
   [inst : SpecialTransformations.Milestone0.LRV.Structure M]
@@ -66282,7 +66223,7 @@ theorem DiamondIntegral.Section6.DiamondTransport.finite_of_unary : ∀ {M : Typ
         {B : SpecialTransformations.DefinableGeometry.DefSet (SpecialTransformations.Section4.rawMixedSpace n s) S}
         (X : DiamondIntegral.Section6.DiamondTransport.ObjOn A) (f : SpecialTransformations.DefinableGeometry.Map A B),
         Function.Bijective f.toFun →
-          (n = 0 ∨ ∃ i j, DiamondIntegral.Section6.DiamondCategory.VFRelativelyUnary f i j) →
+          (n = 0 ∨ ∃ i, DiamondIntegral.Section6.VFUnaryRelativeAt f i) →
             ∀ (y : Fin n → DiamondIntegral.Section2.VF M), {t | (y, t) ∈ B.carrier}.Finite :=
 fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {S}
     {n r s} {G} [LinearOrderedCommGroupWithZero G] [Valued (DiamondIntegral.Section2.VF M) G] hc hv {A} {B} X f hb
@@ -66299,9 +66240,9 @@ fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransf
         (Eq.symm h0) X f hb)
     fun h =>
     Exists.casesOn (motive := fun x => ∀ (y : Fin n → DiamondIntegral.Section2.VF M), {t | (y, t) ∈ B.carrier}.Finite) h
-      fun i h =>
-      Exists.casesOn (motive := fun x => ∀ (y : Fin n → DiamondIntegral.Section2.VF M), {t | (y, t) ∈ B.carrier}.Finite)
-        h fun j hij => DiamondIntegral.Section6.TransportedForms.finite_rv_fibres hc hv X.obj B f hb hij
+      fun i hi =>
+      DiamondIntegral.Section6.TransportedForms.finite_rv_fibres hc hv X.obj B f hb
+        (DiamondIntegral.Section6.DiamondCategory.VFUnaryRelativeAt.relativelyUnary hi)
 'DiamondIntegral.Section6.DiamondTransport.finite_of_unary' depends on axioms: [propext, Classical.choice, Quot.sound]
 @DiamondIntegral.Section6.DiamondTransport.transport : {M : Type} →
   [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
@@ -66330,9 +66271,7 @@ fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransf
                                       DiamondIntegral.Section6.DiamondTransport.ObjOn A →
                                         (f : SpecialTransformations.DefinableGeometry.Map A B) →
                                           DiamondIntegral.Section6.ProperCovariantHomeomorphism f →
-                                            (n = 0 ∨
-                                                ∃ i j,
-                                                  DiamondIntegral.Section6.DiamondCategory.VFRelativelyUnary f i j) →
+                                            (n = 0 ∨ ∃ i, DiamondIntegral.Section6.VFUnaryRelativeAt f i) →
                                               DiamondIntegral.Section6.DiamondTransport.ObjOn B
 def DiamondIntegral.Section6.DiamondTransport.transport : {M : Type} →
   [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
@@ -66361,9 +66300,7 @@ def DiamondIntegral.Section6.DiamondTransport.transport : {M : Type} →
                                       DiamondIntegral.Section6.DiamondTransport.ObjOn A →
                                         (f : SpecialTransformations.DefinableGeometry.Map A B) →
                                           DiamondIntegral.Section6.ProperCovariantHomeomorphism f →
-                                            (n = 0 ∨
-                                                ∃ i j,
-                                                  DiamondIntegral.Section6.DiamondCategory.VFRelativelyUnary f i j) →
+                                            (n = 0 ∨ ∃ i, DiamondIntegral.Section6.VFUnaryRelativeAt f i) →
                                               DiamondIntegral.Section6.DiamondTransport.ObjOn B :=
 fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {S}
     {n r s} {G} [LinearOrderedCommGroupWithZero G] [Valued (DiamondIntegral.Section2.VF M) G] h00 hc linear {κ} hκ hs hv
@@ -66385,7 +66322,7 @@ fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransf
   {B : SpecialTransformations.DefinableGeometry.DefSet (SpecialTransformations.Section4.rawMixedSpace n s) S}
   (X : DiamondIntegral.Section6.DiamondTransport.ObjOn A) (f : SpecialTransformations.DefinableGeometry.Map A B)
   (hf : DiamondIntegral.Section6.ProperCovariantHomeomorphism f)
-  (unary : n = 0 ∨ ∃ i j, DiamondIntegral.Section6.DiamondCategory.VFRelativelyUnary f i j) (p : ↑A.carrier),
+  (unary : n = 0 ∨ ∃ i, DiamondIntegral.Section6.VFUnaryRelativeAt f i) (p : ↑A.carrier),
   DiamondIntegral.Section6.gammaMapValue
       (DiamondIntegral.Section6.DiamondTransport.transport h00 hc linear hκ hs hv hsmall hΓ X f hf unary).form
       (f.toFun p) =
@@ -66405,7 +66342,7 @@ theorem DiamondIntegral.Section6.DiamondTransport.transport_form : ∀ {M : Type
   {B : SpecialTransformations.DefinableGeometry.DefSet (SpecialTransformations.Section4.rawMixedSpace n s) S}
   (X : DiamondIntegral.Section6.DiamondTransport.ObjOn A) (f : SpecialTransformations.DefinableGeometry.Map A B)
   (hf : DiamondIntegral.Section6.ProperCovariantHomeomorphism f)
-  (unary : n = 0 ∨ ∃ i j, DiamondIntegral.Section6.DiamondCategory.VFRelativelyUnary f i j) (p : ↑A.carrier),
+  (unary : n = 0 ∨ ∃ i, DiamondIntegral.Section6.VFUnaryRelativeAt f i) (p : ↑A.carrier),
   DiamondIntegral.Section6.gammaMapValue
       (DiamondIntegral.Section6.DiamondTransport.transport h00 hc linear hκ hs hv hsmall hΓ X f hf unary).form
       (f.toFun p) =
@@ -66436,7 +66373,7 @@ fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransf
   {B : SpecialTransformations.DefinableGeometry.DefSet (SpecialTransformations.Section4.rawMixedSpace n s) S}
   (X : DiamondIntegral.Section6.DiamondTransport.ObjOn A) (f : SpecialTransformations.DefinableGeometry.Map A B)
   (hf : DiamondIntegral.Section6.ProperCovariantHomeomorphism f)
-  (unary : n = 0 ∨ ∃ i j, DiamondIntegral.Section6.DiamondCategory.VFRelativelyUnary f i j),
+  (unary : n = 0 ∨ ∃ i, DiamondIntegral.Section6.VFUnaryRelativeAt f i),
   (∀ (p : ↑A.carrier),
       AlgebraicIndependent (↥(SpecialTransformations.Section3.vfParameterField S)) (↑p).1 →
         DiamondIntegral.Section6.HasMixedUnitDerivativeAt f p) →
@@ -66457,7 +66394,7 @@ theorem DiamondIntegral.Section6.DiamondTransport.transport_step : ∀ {M : Type
   {B : SpecialTransformations.DefinableGeometry.DefSet (SpecialTransformations.Section4.rawMixedSpace n s) S}
   (X : DiamondIntegral.Section6.DiamondTransport.ObjOn A) (f : SpecialTransformations.DefinableGeometry.Map A B)
   (hf : DiamondIntegral.Section6.ProperCovariantHomeomorphism f)
-  (unary : n = 0 ∨ ∃ i j, DiamondIntegral.Section6.DiamondCategory.VFRelativelyUnary f i j),
+  (unary : n = 0 ∨ ∃ i, DiamondIntegral.Section6.VFUnaryRelativeAt f i),
   (∀ (p : ↑A.carrier),
       AlgebraicIndependent (↥(SpecialTransformations.Section3.vfParameterField S)) (↑p).1 →
         DiamondIntegral.Section6.HasMixedUnitDerivativeAt f p) →
@@ -66558,14 +66495,7 @@ fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransf
   { homeo := DiamondIntegral.Section6.identity_properHomeomorphism h00 hc linear hκ hs hv hsmall hΓ X.proper,
     unary :=
       Or.casesOn (Nat.eq_zero_or_pos n) (fun hn => Or.inl hn) fun hn =>
-        Or.inr
-          (Exists.intro ⟨0, hn⟩
-            (Exists.intro ⟨0, hn⟩ fun p k x =>
-              Eq.mpr
-                (id
-                  (congrArg (Eq ((↑((SpecialTransformations.DefinableGeometry.Map.id A).toFun p)).1 k))
-                    (congrArg (↑p).1 (Equiv.symm_apply_apply ⟨0, hn⟩.cycleRange k))))
-                (Eq.refl ((↑((SpecialTransformations.DefinableGeometry.Map.id A).toFun p)).1 k)))),
+        Or.inr (Exists.intro ⟨0, hn⟩ fun x x_1 x_2 => rfl),
     measure :=
       Exists.intro
         (SpecialTransformations.DefinableGeometry.DefSet.empty
@@ -66663,14 +66593,7 @@ fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransf
     hsmall hΓ {A} X Y h =>
   have hu :=
     Or.casesOn (Nat.eq_zero_or_pos n) (fun hn => Or.inl hn) fun hn =>
-      Or.inr
-        (Exists.intro ⟨0, hn⟩
-          (Exists.intro ⟨0, hn⟩ fun p k x =>
-            Eq.mpr
-              (id
-                (congrArg (Eq ((↑((SpecialTransformations.DefinableGeometry.Map.id A).toFun p)).1 k))
-                  (congrArg (↑p).1 (Equiv.symm_apply_apply ⟨0, hn⟩.cycleRange k))))
-              (Eq.refl ((↑((SpecialTransformations.DefinableGeometry.Map.id A).toFun p)).1 k))));
+      Or.inr (Exists.intro ⟨0, hn⟩ fun x x_1 x_2 => rfl);
   DiamondIntegral.Section6.DiamondGroupoid.isStep_of_generic h00 hc hs hsmall
     (SpecialTransformations.DefinableGeometry.Map.id A)
     (DiamondIntegral.Section6.identity_properHomeomorphism h00 hc linear hκ hs hv hsmall hΓ X.proper) hu fun q hq =>
@@ -66793,10 +66716,7 @@ fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransf
     (fun {r} A hA X =>
       Exists.intro X ⟨DiamondIntegral.Section6.DiamondCategory.ObjectFactorization.id X.obj, fun x => rfl⟩)
     (fun {r s} {A} {B} {f} {π} j home relative unit retained X =>
-      have hu :=
-        Or.inr
-          (Exists.intro j
-            (Exists.intro j (DiamondIntegral.Section6.DiamondCategory.VFUnaryRelativeAt.relativelyUnary relative)));
+      have hu := Or.inr (Exists.intro j relative);
       Exists.intro (DiamondIntegral.Section6.DiamondTransport.transport h00 hc linear hκ hs hv hsmall hΓ X f home hu)
         ⟨DiamondIntegral.Section6.DiamondCategory.ObjectFactorization.step
             (DiamondIntegral.Section6.DiamondTransport.transport_step h00 hc linear hκ hs hv hsmall hΓ X f home hu

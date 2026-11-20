@@ -56,17 +56,15 @@ theorem homeo_inverse {f : Map A B} (h : ProperCovariantHomeomorphism (G := G) f
     exact h.continuous
 
 omit [M ⊨ Axioms.ACVF] in
-/-- The inverse of an `(i, j)`-relatively unary bijection is `(j, i)`-relatively unary. -/
+/-- The inverse of a bijection relatively unary in the `i`-th coordinate is
+relatively unary in the `i`-th coordinate. -/
 theorem unary_inverse {f : Map A B} (hf : Function.Bijective f)
-    (h : n = 0 ∨ ∃ i j : Fin n, VFRelativelyUnary f i j) :
-    n = 0 ∨ ∃ i j : Fin n, VFRelativelyUnary (f.inverse hf) i j := by
-  refine h.imp id (fun ⟨i, j, hi⟩ => ⟨j, i, fun q k hk => ?_⟩)
-  set k' := (Fin.cycleRange j).symm (Fin.cycleRange i k) with hk'
-  have hk'j : k' ≠ j := fun he =>
-    cycleRange_ne_zero hk ((cycleRange_symm_eq_iff j _).mp he)
-  have hq := hi (f.inverse hf q) k' hk'j
+    (h : n = 0 ∨ ∃ i : Fin n, VFUnaryRelativeAt f i) :
+    n = 0 ∨ ∃ i : Fin n, VFUnaryRelativeAt (f.inverse hf) i := by
+  refine h.imp id (fun ⟨i, hi⟩ => ⟨i, fun q k hk => ?_⟩)
+  have hq := hi (f.inverse hf q) k hk
   rw [Map.apply_inverse] at hq
-  rw [hq, hk', Equiv.apply_symm_apply, Equiv.symm_apply_apply]
+  exact hq.symm
 
 omit [M ⊨ Axioms.ACVF] in
 theorem inverse_id (A : DefSet (rawMixedSpace (M := M) n r) S) (h : Function.Bijective (Map.id A)) :
@@ -126,7 +124,7 @@ produced definably (empty in degree zero). -/
 theorem isStep_of_generic (h00 : M ⊨ Axioms.ACVF00) (hc : CanonicalStructure.IsCanonical (M := M))
     {κ : Cardinal} (hs : Saturated M κ) (hsmall : Cardinal.mk S < κ)
     {A B : VFObject (M := M) S n} (f : Map A.carrier B.carrier)
-    (homeo : ProperCovariantHomeomorphism (G := G) f) (unary : n = 0 ∨ ∃ i j : Fin n, VFRelativelyUnary f i j)
+    (homeo : ProperCovariantHomeomorphism (G := G) f) (unary : n = 0 ∨ ∃ i : Fin n, VFUnaryRelativeAt f i)
     (hgen : ∀ p : A.carrier, AlgebraicIndependent (vfParameterField S) p.val.1 →
       ∃ L, HasMixedVFDerivativeAt f p L ∧
         vfValue (LinearMap.toMatrix' L).det = (gammaMapValue A.form p / gammaMapValue B.form (f p)).val) :

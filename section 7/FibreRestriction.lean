@@ -889,7 +889,7 @@ def sliceMorphism (b : Fin m → VF M) (hS : S ∪ Set.range (vfValues b) ⊆ S'
   map := sliceMap f hfix
   bijective := sliceMap_bijective hfix hf.bijective
   chain := ObjectFactorization.step ⟨sliceMap_homeomorphism hfix hf,
-    Or.inr ⟨0, 0, fun _ k hk => absurd (Subsingleton.elim k 0) hk⟩,
+    Or.inr ⟨0, fun _ k hk => absurd (Subsingleton.elim k 0) hk⟩,
     ⟨sliceSet Bad b hS, sliceSet_mono hBadX, hgood, fun q hq => sliceMap_measure ω ω' f hfix Bad hmeasure q hq⟩⟩
   bad := sliceSet Bad b hS
   bad_subset := sliceSet_mono hBadX

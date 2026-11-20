@@ -87,19 +87,19 @@ include hc hv in
 fibres. -/
 theorem finite_of_unary {A : DefSet (rawMixedSpace (M := M) n r) S} {B : DefSet (rawMixedSpace (M := M) n s) S}
     (X : ObjOn A) (f : Map A B) (hb : Function.Bijective f)
-    (unary : n = 0 ∨ ∃ i j : Fin n, VFRelativelyUnary f i j) :
+    (unary : n = 0 ∨ ∃ i : Fin n, VFUnaryRelativeAt f i) :
     ∀ y : Fin n → VF M, {t | (y, t) ∈ B.carrier}.Finite := by
-  rcases unary with h0 | ⟨i, j, hij⟩
+  rcases unary with h0 | ⟨i, hi⟩
   · subst h0
     exact finite_rv_fibres_zero X.obj B f hb
-  · exact finite_rv_fibres hc hv X.obj B f hb hij
+  · exact finite_rv_fibres hc hv X.obj B f hb (VFUnaryRelativeAt.relativelyUnary hi)
 
 include h00 hκ hs hsmall hΓ linear in
 /-- **The transported structure** on the target of a relatively unary proper
 covariant homeomorphism out of an object. -/
 def transport {A : DefSet (rawMixedSpace (M := M) n r) S} {B : DefSet (rawMixedSpace (M := M) n s) S}
     (X : ObjOn A) (f : Map A B) (hf : ProperCovariantHomeomorphism (G := G) f)
-    (unary : n = 0 ∨ ∃ i j : Fin n, VFRelativelyUnary f i j) : ObjOn B where
+    (unary : n = 0 ∨ ∃ i : Fin n, VFUnaryRelativeAt f i) : ObjOn B where
   form := X.form.comp (f.inverse hf.bijective)
   proper := hf.covariant.target_properInvariant h00 hc linear hκ hs hv hsmall hΓ hf.bijective.surjective
   formCovariant := by
@@ -112,7 +112,7 @@ def transport {A : DefSet (rawMixedSpace (M := M) n r) S} {B : DefSet (rawMixedS
 
 theorem transport_form {A : DefSet (rawMixedSpace (M := M) n r) S} {B : DefSet (rawMixedSpace (M := M) n s) S}
     (X : ObjOn A) (f : Map A B) (hf : ProperCovariantHomeomorphism (G := G) f)
-    (unary : n = 0 ∨ ∃ i j : Fin n, VFRelativelyUnary f i j) (p : A) :
+    (unary : n = 0 ∨ ∃ i : Fin n, VFUnaryRelativeAt f i) (p : A) :
     gammaMapValue (transport h00 hc linear hκ hs hv hsmall hΓ X f hf unary).form (f p) =
       gammaMapValue X.form p := by
   change gammaMapValue X.form ((f.inverse hf.bijective) (f p)) = _
@@ -122,7 +122,7 @@ theorem transport_form {A : DefSet (rawMixedSpace (M := M) n r) S} {B : DefSet (
 structure. -/
 theorem transport_step {A : DefSet (rawMixedSpace (M := M) n r) S} {B : DefSet (rawMixedSpace (M := M) n s) S}
     (X : ObjOn A) (f : Map A B) (hf : ProperCovariantHomeomorphism (G := G) f)
-    (unary : n = 0 ∨ ∃ i j : Fin n, VFRelativelyUnary f i j)
+    (unary : n = 0 ∨ ∃ i : Fin n, VFUnaryRelativeAt f i)
     (hunit : ∀ p : A, AlgebraicIndependent (vfParameterField S) p.val.1 → HasMixedUnitDerivativeAt f p) :
     IsStep G X.obj (transport h00 hc linear hκ hs hv hsmall hΓ X f hf unary).obj f := by
   refine isStep_of_generic (A := X.obj) (B := (transport h00 hc linear hκ hs hv hsmall hΓ X f hf unary).obj)
@@ -145,7 +145,7 @@ theorem id_step {A : DefSet (rawMixedSpace (M := M) n r) S} (X Y : ObjOn A)
     ⟨DefSet.empty _ S, Set.empty_subset _, Or.inr rfl, fun p _ => ?_⟩⟩
   · rcases Nat.eq_zero_or_pos n with hn | hn
     · exact Or.inl hn
-    · exact Or.inr ⟨⟨0, hn⟩, ⟨0, hn⟩, fun p k _ => by simp only [Equiv.symm_apply_apply]; rfl⟩
+    · exact Or.inr ⟨⟨0, hn⟩, fun _ _ _ => rfl⟩
   · obtain ⟨L, hL, hdet⟩ := identity_unit_derivative X.proper p
     refine ⟨L, hL, ?_⟩
     rw [hdet]
@@ -161,10 +161,10 @@ theorem id_step_generic {A : DefSet (rawMixedSpace (M := M) n r) S} (X Y : ObjOn
     (h : ∀ q : A, AlgebraicIndependent (vfParameterField S) q.val.1 →
       gammaMapValue X.form q = gammaMapValue Y.form q) :
     IsStep G X.obj Y.obj (Map.id A) := by
-  have hu : n = 0 ∨ ∃ i j : Fin n, VFRelativelyUnary (Map.id A) i j := by
+  have hu : n = 0 ∨ ∃ i : Fin n, VFUnaryRelativeAt (Map.id A) i := by
     rcases Nat.eq_zero_or_pos n with hn | hn
     · exact Or.inl hn
-    · exact Or.inr ⟨⟨0, hn⟩, ⟨0, hn⟩, fun p k _ => by simp only [Equiv.symm_apply_apply]; rfl⟩
+    · exact Or.inr ⟨⟨0, hn⟩, fun _ _ _ => rfl⟩
   refine isStep_of_generic (A := X.obj) (B := Y.obj) h00 hc hs hsmall (Map.id A)
     (identity_properHomeomorphism h00 hc linear hκ hs hv hsmall hΓ X.proper) hu (fun q hq => ?_)
   obtain ⟨L, hL, hdet⟩ := identity_unit_derivative X.proper q
@@ -194,8 +194,8 @@ theorem retained_objects {A : DefSet (rawMixedSpace (M := M) n r) S} {B : DefSet
   | identity A _ => exact fun X => ⟨X, ObjectFactorization.id _, fun _ => rfl⟩
   | @unary r s A B f π j home relative unit _ =>
     intro X
-    have hu : n = 0 ∨ ∃ i j : Fin n, VFRelativelyUnary f i j :=
-      Or.inr ⟨j, j, VFUnaryRelativeAt.relativelyUnary relative⟩
+    have hu : n = 0 ∨ ∃ i : Fin n, VFUnaryRelativeAt f i :=
+      Or.inr ⟨j, relative⟩
     exact ⟨transport h00 hc linear hκ hs hv hsmall hΓ X f home hu,
       ObjectFactorization.step (transport_step h00 hc linear hκ hs hv hsmall hΓ X f home hu unit),
       transport_form h00 hc linear hκ hs hv hsmall hΓ X f home hu⟩

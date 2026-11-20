@@ -42,7 +42,7 @@ theorem relative_factor (h00 : M ⊨ Axioms.ACVF00) (hc : CanonicalStructure.IsC
   | original h => exact special_factor h00 hc linear hκ hs hv hsmall hΓ h
   | relative A D =>
     refine UnaryFactorization.step (D.properHomeomorphism h00 hc linear hκ hs hv hsmall hΓ)
-      (Or.inr ⟨D.coordinate, D.coordinate, VFUnaryRelativeAt.relativelyUnary (fun p j hj => ?_)⟩)
+      (Or.inr ⟨D.coordinate, (fun p j hj => ?_)⟩)
     change (D.point p.val).1 j = p.val.1 j
     exact Function.update_of_ne hj _ _
   | comp _ _ ihf ihg => exact UnaryFactorization.comp ihf ihg
@@ -66,8 +66,8 @@ theorem relative_objects (h00 : M ⊨ Axioms.ACVF00) (hc : CanonicalStructure.Is
   | relative A D =>
     intro X
     have homeo := D.properHomeomorphism (G := G) h00 hc linear hκ hs hv hsmall hΓ
-    have hu : n = 0 ∨ ∃ i j : Fin n, VFRelativelyUnary D.bijection i j :=
-      Or.inr ⟨D.coordinate, D.coordinate, VFUnaryRelativeAt.relativelyUnary (fun p j hj => by
+    have hu : n = 0 ∨ ∃ i : Fin n, VFUnaryRelativeAt D.bijection i :=
+      Or.inr ⟨D.coordinate, (fun p j hj => by
         change (D.point p.val).1 j = p.val.1 j
         exact Function.update_of_ne hj _ _)⟩
     have hunit := fun p hp => (RelativeApertureChain.relative (G := G) A D).unit_derivative_of_independent

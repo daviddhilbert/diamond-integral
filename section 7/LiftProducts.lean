@@ -208,10 +208,11 @@ theorem relabel_isomorphic (A B : VFObject (M := M) S n) (e : Fin B.labels ≃ F
       (fun u v => (relabel_range_eq_source A B e hmemB u v).symm ▸ relabel_source_clopen hv A B e hmemB u v)
   have homeo : ProperCovariantHomeomorphism (G := G) f :=
     properHomeomorphism_of_properCovariant h00 hc linear hκ hs hv hsmall hΓ f hcov hbij hcont
-  have hunary : n = 0 ∨ ∃ i j : Fin n, VFRelativelyUnary f i j := by
+  have hunary : n = 0 ∨ ∃ i : Fin n, VFUnaryRelativeAt f i := by
     by_cases hn : n = 0
     · exact Or.inl hn
-    · exact Or.inr ⟨⟨0, Nat.pos_of_ne_zero hn⟩, _, relabel_relativelyUnary A B e hmemB _⟩
+    · exact Or.inr ⟨⟨0, Nat.pos_of_ne_zero hn⟩,
+        (vfRelativelyUnary_self _ _).mp (relabel_relativelyUnary A B e hmemB _)⟩
   obtain ⟨K, _⟩ := morphism_of_step h00 hc hs hsmall f homeo hunary (fun p _ => by
       have hchart : IsVFChartAt f p id := by
         obtain ⟨ρ, hρ⟩ := identity_vfChart A.proper p

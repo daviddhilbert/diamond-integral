@@ -158,9 +158,12 @@ arbitrary parameter base and take no input beyond the ACVF model.
     GAP-REPAIRS 20).
   - Lemma 7.12 at object level for elementary blowups
     (`Lemma712Objects.lemma_7_12_objects`). Open: blowups with a locus, which
-    need gluing of μVF^◇ isomorphisms along disjoint unions; the manuscript's
-    reason for such gluing (line ~4947) covers only steps with i = j
-    (GAP-REPAIRS 19, options for the author).
+    need gluing of μVF^◇ isomorphisms along disjoint unions. The manuscript's
+    reason for such gluing (the sentence after Definition 6.24) covered only
+    steps with i = j; by the author's decision of 2026-11-20 Definition 6.24
+    is now the single-coordinate form in the manuscript (batch B11) and in
+    Lean, so the sentence is correct as written. The gluing itself is not
+    formalized (GAP-REPAIRS 19).
   - Definition 7.2, object-level converse (`BlowupObjects.step_iff_objects`,
     `step_iff_blowup`).
 
@@ -168,5 +171,6 @@ arbitrary parameter base and take no input beyond the ACVF model.
 
 All numbered results of §7 are formalized in the stated scopes. Left open:
 the object form of Lemma 7.12 for blowups with a locus (GAP-REPAIRS 19; its
-class form is done and is all that 7.24–7.26 use). For the author: the gluing
-remark after the definition of relatively unary maps (manuscript line ~4947).
+class form is done and is all that 7.24–7.26 use). It needs a gluing lemma for
+steps along a disjoint union, which the single-coordinate Definition 6.24 now
+permits but which is not yet proved in Lean.

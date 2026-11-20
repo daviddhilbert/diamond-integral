@@ -351,6 +351,29 @@ formalization convention. No manuscript edit has been made for them.
     objects); (c) the alternative reading at line ~4945 ("take i = j … up to
     coordinate permutations") with piecewise permutations, a change of
     definition that needs the author.
+
+    **Author's decision (2026-11-20): go back to the single-coordinate
+    definition, in the paper and in Lean.** This is simpler than (c). The
+    definition of "Integration in algebraically closed valued fields"
+    (Definition 5.4 there) has one coordinate `i`: every VF-coordinate other
+    than the `i`-th is kept. For it the identity is relatively unary in every
+    coordinate, so the gluing sentence is correct as written; the `(i, j)` form
+    exists only in this paper. Review batch B11 (applied) restates
+    Definition 6.24 for one coordinate, removes the sentence offering "i = j up
+    to coordinate permutations", and removes "(up to coordinate permutations)"
+    from the description of `T_i`. In Lean the step condition of
+    `UnaryFactorization.step`, `IsStep` and `Morphism.ofStep` is now
+    `n = 0 ∨ ∃ i, VFUnaryRelativeAt f i` (Section 6 GAP-REPAIRS, Definition
+    6.24). No proof needed a new idea: every step ever constructed was already
+    `(i, i)`. Theorems 7.24–7.26 are unchanged in statement apart from this
+    definition of a morphism.
+
+    Still open after the switch: the gluing lemma itself (steps along a
+    disjoint union of objects, with the identity on the idle summand, form a
+    step) is not proved in Lean, so the object form of Lemma 7.12 for blowups
+    with a locus remains at class level. One detail the manuscript's gluing
+    sentence leaves implicit: the intermediate images of different pieces must
+    stay disjoint, which can be arranged with an additional RV-coordinate.
 20. **Lemma 7.11, partial-lift form (formal reading, 2026-11-20).** The form
     approved by the author (decision C) is stated for a doubly bounded chart U
     of degree n + k with its first n coordinates lifted and the last k kept as
