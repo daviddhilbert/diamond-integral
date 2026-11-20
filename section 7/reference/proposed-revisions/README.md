@@ -4,7 +4,9 @@ These batches use the format of `Section7/make-review.py`: `EDITS`, `RESOLUTIONS
 
 ## B10: Definition 6.34, compositions inside μVF^◇ (2026-11-20)
 
-**Status:** proposed and shown to the author as `B10-diamond-intermediate-objects/section7-B10-diamond-intermediate-objects-review.pdf`. It awaits the author's reading and has not been applied to the manuscript.
+**Status:** approved by the author on 2026-11-20, apart from one sentence that the author asked to have checked against the paper (review extract: `B10-diamond-intermediate-objects/section7-B10-diamond-intermediate-objects-review.pdf`). It has not been applied to the manuscript.
+
+**The checked sentence.** The first draft justified the transported forms by the covariance of the fibers of the inverse map and a uniform bound from Lemma 2.41 (`db:to:db`). That does not match the paper: a volume form is proper covariant when each of its fibers A_γ is proper invariant (the definition of a proper invariant pair (A, ω) in Section 6), which asks for no uniform radius, and covariance of a fiber for one pair of radii does not give the radius needed by ω. The sentence now uses the paper's own lemmas: T_i ∘ ⋯ ∘ T_1 is a proper covariant homeomorphism (Lemma 6.14, `spec:inve`), so its restriction to the proper invariant subset A_γ is one too and the image of A_γ is proper invariant (Lemma 6.8, `conv:unif`, third and first claims). The author has not yet read the replacement sentence.
 
 **The edit.**
 - Definition 6.34 states explicitly that the composition is taken inside μVF^◇[k]. Every intermediate object is proper invariant, with its own proper covariant volume form, and every factor is Γ-measure-preserving on its own.
