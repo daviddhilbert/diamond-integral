@@ -1126,6 +1126,9 @@ import «section 6».DiamondGroupoidMaps
 import «section 6».DiamondLiftDischarged
 import «section 6».Remark620
 import «section 6».AllDegreeMeasuredLifts
+import «section 6».TransportedFormsLocal
+import «section 6».TransportedFormsCov
+import «section 6».TransportedFormsFibres
 
 /-! Section 6 exports full original-base results 6.5–6.9, approved
 almost-everywhere 6.14, literal unary relation preparation 6.16, Gamma
