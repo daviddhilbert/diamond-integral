@@ -34,8 +34,8 @@ the Definition 4.9 ∞-coordinate comparison (`RVStrictBoundedComparison`),
 `Section4LinkedRemarks` (diagram (edb:eb:com), Remarks 4.4/4.16) and the
 Proposition 3.18 kernel witness (recorded under section 3).
 
-The complete Section 4 audit (November 19) passes 5546 declarations (3382
-theorems) across 626 modules plus `Section.lean`, with only `propext`,
+The complete Section 4 audit (November 19) passes 5584 declarations (3412
+theorems) across 628 modules plus `Section.lean`, with only `propext`,
 `Classical.choice` and `Quot.sound`. The summary strings in `verify.py`
 (copied into `verification/status.json`) record both the unary and the
 multivariate rational-affine normal forms as proved.
