@@ -117,8 +117,14 @@ arbitrary parameter base and take no input beyond the ACVF model.
     contractions (`TwoStageContractions`), head-start classes along relabellings
     and bijections of RV targets (`RelabelClasses`, `MapClasses`).
   - Formal reading of 7.22: GAP-REPAIRS 14.
-  - Pending: 7.23 for n > 2 (contract {i, j} first; the case n = 2 over
-    `S⟨a⟩`; Lemma 7.14 with head start 2).
+  - 7.23 for n > 2 (in progress): `Lemma723Reduction.reduction_7_23` reduces it to
+    the two-stage fibre hypothesis via the 7.14 input with head start 2 (tools:
+    `HeadStartK`, `HeadStartFinite`), and `FibreGood2.fibreHypothesis2_of_good`
+    reduces that to good points. Remaining: at a good point the first two stages
+    restrict to a measured ordered contraction of the two-dimensional slice
+    (`SliceStages`, two-dimensional slices), whose class is the fibre object
+    (`SliceClasses`); it is converted to a normalized contraction of the slice
+    object, and the case n = 2 applies over `S⟨b⟩`.
 - Remark 7.28 done (`Remark728.remark_7_28`, `remark_7_28_zero`), with the
   bridges the author approved on 2026-11-19: strong homogeneity (from the
   Section 3 ground context), the forgetful map to Section 3's VF classes, and
