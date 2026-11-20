@@ -543,6 +543,108 @@ theorem indApSet_definable :
         exact h'
   exact h1.inter h2
 
+include hD in
+theorem mem_indApSet (w : Fin (q + D.chart.arity) → M) (y : Fin 1 → M) :
+    Fin.append w y ∈ Q.indApSet (D := D) ↔ w ∈ Q.indDom D.chart ∧ ![indAp (D := D) w] = y := by
+  have e1 : (fun i => Fin.append w y (Fin.castAdd 1 i)) = w := funext fun i => Fin.append_left w y i
+  have ey : y = fun _ => y 0 := DatumSchema.fin_one_eta y
+  simp only [indApSet, Set.mem_inter_iff, Set.mem_setOf_eq, e1]
+  constructor
+  · rintro ⟨⟨hw, -⟩, ⟨hap, -⟩⟩
+    refine ⟨hw, ?_⟩
+    have hap' : D.apRow (keyOf w) (rowOf w) (y 0) := by
+      unfold DatumSchema.apRow
+      rw [append_keyOf_rowOf, ← ey]
+      exact hap
+    have := ((DatumSchema.apRow_iff (hD _ (Q.indDom_key hw)) _ _).mp hap').2
+    rw [ey]
+    funext l; fin_cases l
+    exact this
+  · rintro ⟨hw, rfl⟩
+    have hk := Q.indDom_key hw
+    have hap := DatumSchema.apRow_apAt (hD _ hk) (Q.indDom_row hw)
+    unfold DatumSchema.apRow at hap
+    rw [append_keyOf_rowOf] at hap
+    have e2 : (![indAp (D := D) w] : Fin 1 → M) = fun _ => D.apAt (keyOf w) (rowOf w) := by
+      funext l; fin_cases l; rfl
+    rw [e2]
+    have hs := D.aperture_definable.proper _ hap
+    have hs' : Fin.append w (fun _ : Fin 1 => D.apAt (keyOf w) (rowOf w)) ∈
+        sortedUniverse (Fin.append (rvs (q + D.chart.arity)) (rvs 1)) := by
+      intro i
+      refine Fin.addCases (fun l => ?_) (fun l => ?_) i
+      · have h' := hs (Fin.castAdd 1 l)
+        rw [Fin.append_left, rvs_append] at h'
+        rw [Fin.append_left]
+        exact h'
+      · have h' := hs (Fin.natAdd (q + D.chart.arity) l)
+        rw [Fin.append_right] at h'
+        rw [Fin.append_right]
+        exact h'
+    exact ⟨⟨hw, hs'⟩, ⟨hap, hs'⟩⟩
+
+variable (hΔ : ∃ Δ : Values.Gamma (M := M), ∀ x ∈ Q.carrier, ∀ u t, D.apRow x u t → codeValue t ≤ Δ)
+
+include hD hΔ in
+/-- The aperture of the indexed datum. -/
+def indAperture : Aperture (Q.indChart D.chart (Q.indDatum_chart_valid hD)) where
+  aperture := indAp (D := D)
+  graph_definable := graphOn_of_append _ _ _ (Q.indApSet_definable (D := D)) (Q.mem_indApSet hD)
+  nonzero := fun w hw => ((hD _ (Q.indDom_key hw)).ap_value _ _
+    (DatumSchema.apRow_apAt (hD _ (Q.indDom_key hw)) (Q.indDom_row hw))).1
+  nonnegative := fun w hw => ((hD _ (Q.indDom_key hw)).ap_value _ _
+    (DatumSchema.apRow_apAt (hD _ (Q.indDom_key hw)) (Q.indDom_row hw))).2
+  bound := hΔ.choose
+  bounded := fun w hw => hΔ.choose_spec _ (Q.indDom_key hw) _ _
+    (DatumSchema.apRow_apAt (hD _ (Q.indDom_key hw)) (Q.indDom_row hw))
+
+include hD in
+theorem indChart_inactiveFinite :
+    InactiveFinite (Q.indChart D.chart (Q.indDatum_chart_valid hD)) (Fin.natAdd 1 D.coordinate) := by
+  intro t
+  let tt : Fin (1 + k) → M := fun i => t (Fin.natAdd 1 i)
+  let Kt := {x | x ∈ Q.carrier ∧ x Q.idx = t (Fin.castAdd (1 + k) 0)}
+  have hR : ∀ x ∈ Kt, {u | u ∈ D.chart.row x ∧
+      Function.update (D.chart.coordAt x u) D.coordinate iRVOne = tt}.Finite :=
+    fun x hx => DatumSchema.toChart_inactiveFinite (hD x hx.1) tt
+  apply ((Q.finite _).biUnion (fun x hx => (hR x hx).image (Fin.append x))).subset
+  rintro w ⟨hw, he⟩
+  refine Set.mem_biUnion (x := keyOf w) ⟨Q.indDom_key hw, ?_⟩ ⟨rowOf w, ⟨Q.indDom_row hw, ?_⟩, append_keyOf_rowOf w⟩
+  · have := congrFun he (Fin.castAdd (1 + k) 0)
+    have hne : Fin.castAdd (1 + k) (0 : Fin 1) ≠ Fin.natAdd 1 D.coordinate := by
+      intro h
+      have := congrArg Fin.val h
+      simp at this
+      omega
+    simp only [inactive, indChart, indCoord, Function.update_of_ne hne, Fin.append_left] at this
+    exact this
+  · funext i
+    have := congrFun he (Fin.natAdd 1 i)
+    by_cases hi : i = D.coordinate
+    · subst hi
+      simpa [inactive, indChart, indCoord] using this
+    · have hne : Fin.natAdd 1 i ≠ Fin.natAdd 1 D.coordinate := by
+        intro h
+        apply hi
+        apply Fin.ext
+        have := congrArg Fin.val h
+        simp at this
+        omega
+      simp only [inactive, indChart, indCoord, Function.update_of_ne hne, Fin.append_right] at this
+      simp only [Function.update_of_ne hi]
+      exact this
+
+include hD hΔ in
+/-- **The indexed aperture datum** of a datum schema valid at every key, given
+uniform bounds for the aperture and the domain. -/
+def indDatum (hb : RVMeasuredBounds.DomainBounded (Q.indChart D.chart (Q.indDatum_chart_valid hD))) :
+    RelativeAnnularGenerators.AnnularDatum B (1 + k) where
+  chart := Q.indChart D.chart (Q.indDatum_chart_valid hD)
+  coordinate := Fin.natAdd 1 D.coordinate
+  finite := Q.indChart_inactiveFinite hD
+  aperture := Q.indAperture hD hΔ
+  bounded := hb
+
 end IndDatum
 
 end KeySet
