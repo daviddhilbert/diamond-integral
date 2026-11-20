@@ -1,4 +1,4 @@
-import «section 7».Lemma714IdentFr
+import «section 7».Lemma714UnaryContr
 
 /-! Lemma 7.14, part 30: comparison of the frozen set with the standard
 contraction.
@@ -86,51 +86,48 @@ variable {T : LRV.Substructure M} {P : DefSet (rawMixedSpace (M := M) 1 0) (T : 
   (V : Set M) (hV : ∀ x ∈ V, iVF x) (hVT : V ⊆ (T : Set M)) (hTV : (T : Set M) ⊆ algebraicClosureSet V)
   (hnt : ∃ x : vfAlgebraicClosureField V, x ≠ 0 ∧ Valued.v x.val ≠ 1)
 
-include hV hVT hTV hnt in
-/-- **The standard contraction and the frozen set have `μIsp`-related head-start
+include hΓ hV hVT hTV hnt in
+/-- **A unary contraction and the frozen set have `μIsp`-related head-start
 classes.** -/
-theorem muIsp_compare (hG : Guards Z ω hAP) (hRC : FamRowConst Z hc ω π N) {e : Equiv.Perm (Fin (0 + 1))}
-    (F' : NormalizedMeasuredContraction (G := G) A ω e) :
-    MuIsp (clsH hc (targetHGood hc h00 hκ hs hv hsmall hΓ F' π hFin))
+theorem muIsp_compare (hG : Guards Z ω hAP) (hRC : FamRowConst Z hc ω π N) (C : UnaryContr (G := G) A ω) :
+    MuIsp (clsH hc (C.hgood hc h00 hκ hs hsmall π hFin))
       (clsH hc (frHGood Z hc ω π N hAP h00 hκ hs hv hsmall hA hFin hG hRC)) := by
   letI : CharZero (VF M) := vf_charZero_of_model00 h00
   let gfr := frHGood Z hc ω π N hAP h00 hκ hs hv hsmall hA hFin hG hRC
-  have hF := F'.homeomorphism h00 hc lin hκ hs hv hsmall hΓ
-  let Finv := F'.map.inverse hF.bijective
+  have hF := C.homeo
+  let Finv := C.map.inverse hF.bijective
   have hFinv : ProperCovariantHomeomorphism (G := G) Finv := DiamondGroupoid.homeo_inverse hF
   have hPΦ := prodMap_properHomeomorphism Z.Φ hAP hv h00 hc hκ hs lin hsmall hΓ Z.homeo hA
   have hPY := prodMap_image_properInvariant Z.Φ hAP hv h00 hc hκ hs Z.homeo hA
-  have hPX : ProperInvariant (T : Set M) F'.target.carrier := F'.preparedContraction.lift.originalTarget_proper
-  refine muIsp_head hc h00 hκ hs hv V hV hVT hTV hnt hsmall hΓ (targetHGood hc h00 hκ hs hv hsmall hΓ F' π hFin) gfr
+  have hPX : ProperInvariant (T : Set M) C.target.carrier := C.proper
+  refine muIsp_head hc h00 hκ hs hv V hV hVT hTV hnt hsmall hΓ (C.hgood hc h00 hκ hs hsmall π hFin) gfr
     hPX hPY ((prodMap Z.Φ hAP).toImage.comp Finv)
     (lemma_6_9 h00 hc lin hκ hs hv hsmall hΓ hFinv hPΦ) ?_
-    (levels_open_of_proper hv hPX F'.form F'.form_same_tags)
+    (levels_open_of_proper hv hPX C.form C.form_same_tags)
     (levels_open_of_proper hv hPY gfr.form gfr.form_labels) ?_
   · intro p i
-    change (prodMap Z.Φ hAP (Finv p)).val.2 (Fin.natAdd (1 + Z.sk) (π i)) = p.val.2 (F'.oldIndex (π i))
+    change (prodMap Z.Φ hAP (Finv p)).val.2 (Fin.natAdd (1 + Z.sk) (π i)) = p.val.2 (C.oldIndex (π i))
     rw [prodMap_labels]
-    have h := F'.retained (Finv p) (π i)
+    have h := C.retained (Finv p) (π i)
     rw [Map.apply_inverse] at h
     exact h.symm
   · intro a hInd
     have hU1 : HasMixedUnitDerivativeAt Finv a :=
-      inverse_generic_unit_derivative h00 hc hκ.le hs hsmall hv F'.map hF.bijective
-        (fun p hp => F'.normalization.normalizedOrderedMap_generic_unit h00 hc hκ hs hv F'.preparedContraction.lift p hp)
-        a hInd
+      inverse_generic_unit_derivative h00 hc hκ.le hs hsmall hv C.map hF.bijective C.unit a hInd
     have hInj : Function.Injective Finv := (DiamondGroupoid.homeo_inverse hF).bijective.1
     have hInd' := independent_map_of_finiteFibres hc Finv (Map.finiteFibres_of_injective hInj) a hInd
     have hU2 : HasMixedUnitDerivativeAt (prodMap Z.Φ hAP).toImage (Finv a) :=
       prodMap_unit_derivative hv Z.Φ hAP hA (Finv a)
         (Z.chain.unit_derivative_of_independent h00 hc hκ.le hs hsmall hv (baseMap hAP (Finv a)) hInd')
     refine ⟨1, (hU2.comp hU1).partialJacobian, ?_⟩
-    have hform : gammaMapValue gfr.form ((prodMap Z.Φ hAP).toImage.comp Finv a) = gammaMapValue F'.form a := by
+    have hform : gammaMapValue gfr.form ((prodMap Z.Φ hAP).toImage.comp Finv a) = gammaMapValue C.form a := by
       change gammaMapValue (prodForm Z.Φ Z.bij hAP ω) ((prodMap Z.Φ hAP).toImage (Finv a)) = _
       unfold gammaMapValue
       rw [prodForm_apply]
-      have h := F'.form_transport (Finv a)
+      have h := C.form_transport (Finv a)
       rw [Map.apply_inverse] at h
       exact h.symm
-    have h2 : gammaMapValue (targetHGood hc h00 hκ hs hv hsmall hΓ F' π hFin).form a /
+    have h2 : gammaMapValue (C.hgood hc h00 hκ hs hsmall π hFin).form a /
         gammaMapValue gfr.form ((prodMap Z.Φ hAP).toImage.comp Finv a) = 1 := by
       rw [hform]
       exact div_self' _

@@ -13,9 +13,11 @@ the descended indexed objects (`cls_ind_eq_clsH`). The descent step itself is
 the gluing of witness schemata valid at all keys (`muIsp_ind_cover` in positive
 fibre degree, `cls_ind0_cover` in degree `0`).
 
-**The unary case of Lemma 7.14** (`unary_muIsp`): for unary `A'`, `A''` with the
-same VF projection, fibrewise `μIsp^db` of the head-start fibres gives `μIsp` of
-the head-start classes of any two unary standard contractions. -/
+**The unary case of Lemma 7.14** (`unary_pos`, `unary_zero`): for unary `A'`,
+`A''` with the same VF projection, fibrewise `μIsp^db` of the head-start fibres
+gives `μIsp` of the head-start classes of any unary contraction data
+(`UnaryContr`), in particular of any two unary normalized measured contractions
+(`UnaryContr.ofNormalized`). -/
 
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false
@@ -78,21 +80,18 @@ theorem unary_of_descent
         (hW' : ∀ x ∈ (Z.Q hc).carrier, ((famSchema hc A' ω' π' N').recode (Z.K hc)).Valid x)
         (hW'' : ∀ x ∈ (Z.Q hc).carrier, ((famSchema hc A'' ω'' π'' N'').recode (Z.K hc)).Valid x),
         MuIsp (cls ((Z.Q hc).indObj hQ.bounds _ hW')) (cls ((Z.Q hc).indObj hQ.bounds _ hW'')))
-    {e : Equiv.Perm (Fin (0 + 1))}
-    (F' : NormalizedMeasuredContraction (G := G) A' ω' e) (F'' : NormalizedMeasuredContraction (G := G) A'' ω'' e) :
-    MuIsp (clsH hc (targetHGood hc h00 hκ hs hv hsmall hΓ F' π' hFin'))
-      (clsH hc (targetHGood hc h00 hκ hs hv hsmall hΓ F'' π'' hFin'')) := by
+    (C' : UnaryContr (G := G) A' ω') (C'' : UnaryContr (G := G) A'' ω'') :
+    MuIsp (clsH hc (C'.hgood hc h00 hκ hs hsmall π' hFin'))
+      (clsH hc (C''.hgood hc h00 hκ hs hsmall π'' hFin'')) := by
   let X₀ := famSchema hc A' ω' π' N'
   let Y₀ := famSchema hc A'' ω'' π'' N''
   have hP := vfBase_properInvariant h00 hc lin hκ hs hv hsmall hΓ A' hA'
   have hAP' := hAP_left (A' := A')
   have hAP'' := hAP_right hVF
-  have hF' := F'.homeomorphism h00 hc lin hκ hs hv hsmall hΓ
-  have hF'' := F''.homeomorphism h00 hc lin hκ hs hv hsmall hΓ
-  have hω' := levels_open_of_transport hv F'.map hF'.covariant F'.form F'.form_same_tags ω'
-    (fun p => Subtype.ext (F'.form_transport p).symm)
-  have hω'' := levels_open_of_transport hv F''.map hF''.covariant F''.form F''.form_same_tags ω''
-    (fun p => Subtype.ext (F''.form_transport p).symm)
+  have hω' := levels_open_of_transport hv C'.map C'.homeo.covariant C'.form C'.form_same_tags ω'
+    (fun p => Subtype.ext (C'.form_transport p).symm)
+  have hω'' := levels_open_of_transport hv C''.map C''.homeo.covariant C''.form C''.form_same_tags ω''
+    (fun p => Subtype.ext (C''.form_transport p).symm)
   obtain ⟨Z, hG', hG'', hRC⟩ := exists_frozen (G := G) h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ hP ω' ω'' hAP' hAP''
     hA' hA'' hω' hω'' (X₀.comps ++ Y₀.comps ++ L₀)
   have hRC' : FamRowConst Z hc ω' π' N' := fun x => X₀.rowConst_of fun c hcm => hRC x c (by simp [hcm])
@@ -113,8 +112,8 @@ theorem unary_of_descent
   have hd := hdesc Z hRC hQ hW' hW''
   rw [cls_ind_eq_clsH Z hc ω' π' N' hAP' h00 hκ hs hv hsmall hA' hFin' hX0 hG' hRC' hQ hW',
     cls_ind_eq_clsH Z hc ω'' π'' N'' hAP'' h00 hκ hs hv hsmall hA'' hFin'' hY0 hG'' hRC'' hQ hW''] at hd
-  have hc' := muIsp_compare Z hc ω' π' N' hAP' h00 hκ hs hv hsmall hA' hFin' hΓ V hV hVT hTV hnt hG' hRC' F'
-  have hc'' := muIsp_compare Z hc ω'' π'' N'' hAP'' h00 hκ hs hv hsmall hA'' hFin'' hΓ V hV hVT hTV hnt hG'' hRC'' F''
+  have hc' := muIsp_compare Z hc ω' π' N' hAP' h00 hκ hs hv hsmall hA' hFin' hΓ V hV hVT hTV hnt hG' hRC' C'
+  have hc'' := muIsp_compare Z hc ω'' π'' N'' hAP'' h00 hκ hs hv hsmall hA'' hFin'' hΓ V hV hVT hTV hnt hG'' hRC'' C''
   have hE : ElementaryDiamond (BT T) k := elementaryDiamond
   exact muIsp_trans hE (muIsp_trans hE hc' hd) (muIsp_symm hc'')
 
@@ -149,10 +148,9 @@ theorem unary_pos {k₀ : ℕ} (π' : Fin (1 + k₀) → Fin r') (π'' : Fin (1 
       ∃ (hU' : (fibreObject T A' ω' a π' (hFin' a) hNZ').doublyBounded)
         (hU'' : (fibreObject T A'' ω'' a π'' (hFin'' a) hNZ'').doublyBounded),
         IspRel (cls (objOf hc (KernelBaseChange.adjoin T a) _ hU')) (cls (objOf hc (KernelBaseChange.adjoin T a) _ hU'')))
-    {e : Equiv.Perm (Fin (0 + 1))}
-    (F' : NormalizedMeasuredContraction (G := G) A' ω' e) (F'' : NormalizedMeasuredContraction (G := G) A'' ω'' e) :
-    MuIsp (clsH hc (targetHGood hc h00 hκ hs hv hsmall hΓ F' π' hFin'))
-      (clsH hc (targetHGood hc h00 hκ hs hv hsmall hΓ F'' π'' hFin'')) := by
+    (C' : UnaryContr (G := G) A' ω') (C'' : UnaryContr (G := G) A'' ω'') :
+    MuIsp (clsH hc (C'.hgood hc h00 hκ hs hsmall π' hFin'))
+      (clsH hc (C''.hgood hc h00 hκ hs hsmall π'' hFin'')) := by
   obtain ⟨N', hN'⟩ := exists_fam_bound hc A' ω' π' hκ.le hs hsmall hFin'
   obtain ⟨N'', hN''⟩ := exists_fam_bound hc A'' ω'' π'' hκ.le hs hsmall hFin''
   have hXv : ∀ a : Fin 1 → VF M, (∃ u, (a, u) ∈ A'.carrier) → (famSchema hc A' ω' π' N').Valid (vfValues a) := by
@@ -173,7 +171,7 @@ theorem unary_pos {k₀ : ℕ} (π' : Fin (1 + k₀) → Fin r') (π'' : Fin (1 
   have hY0 : ∀ b ∈ (vfBase A').carrier, (famSchema hc A'' ω'' π'' N'').Valid (vfValues b.1) :=
     fun b hb => hYv b.1 ((vfBase_mem_iff A' b.1 b.2).mp hb)
   refine unary_of_descent hc h00 hκ hs hv V hV hVT hTV hnt hsmall hΓ ω' ω'' hA' hA'' hVF π' π'' hFin' hFin'' N' N''
-    hX0 hY0 (J.toList.flatMap WitnessSchema.comps) ?_ F' F''
+    hX0 hY0 (J.toList.flatMap WitnessSchema.comps) ?_ C' C''
   intro Z hRC hQ hW' hW''
   refine KeySet.muIsp_ind_cover (J.toList.map (fun W => W.recode (Z.K hc))) (Z.Q hc) hQ hW' hW'' ?_
   rintro _ ⟨qv, hqv, rfl⟩
@@ -198,10 +196,9 @@ theorem unary_zero (π' : Fin 0 → Fin r') (π'' : Fin 0 → Fin r'')
       ∃ (hU' : (fibreObject T A' ω' a π' (hFin' a) hNZ').doublyBounded)
         (hU'' : (fibreObject T A'' ω'' a π'' (hFin'' a) hNZ'').doublyBounded),
         IspRel (cls (objOf hc (KernelBaseChange.adjoin T a) _ hU')) (cls (objOf hc (KernelBaseChange.adjoin T a) _ hU'')))
-    {e : Equiv.Perm (Fin (0 + 1))}
-    (F' : NormalizedMeasuredContraction (G := G) A' ω' e) (F'' : NormalizedMeasuredContraction (G := G) A'' ω'' e) :
-    MuIsp (clsH hc (targetHGood hc h00 hκ hs hv hsmall hΓ F' π' hFin'))
-      (clsH hc (targetHGood hc h00 hκ hs hv hsmall hΓ F'' π'' hFin'')) := by
+    (C' : UnaryContr (G := G) A' ω') (C'' : UnaryContr (G := G) A'' ω'') :
+    MuIsp (clsH hc (C'.hgood hc h00 hκ hs hsmall π' hFin'))
+      (clsH hc (C''.hgood hc h00 hκ hs hsmall π'' hFin'')) := by
   obtain ⟨N', hN'⟩ := exists_fam_bound hc A' ω' π' hκ.le hs hsmall hFin'
   obtain ⟨N'', hN''⟩ := exists_fam_bound hc A'' ω'' π'' hκ.le hs hsmall hFin''
   have hXv : ∀ a : Fin 1 → VF M, (∃ u, (a, u) ∈ A'.carrier) → (famSchema hc A' ω' π' N').Valid (vfValues a) := by
@@ -223,7 +220,7 @@ theorem unary_zero (π' : Fin 0 → Fin r') (π'' : Fin 0 → Fin r'')
   have hY0 : ∀ b ∈ (vfBase A').carrier, (famSchema hc A'' ω'' π'' N'').Valid (vfValues b.1) :=
     fun b hb => hYv b.1 ((vfBase_mem_iff A' b.1 b.2).mp hb)
   refine unary_of_descent hc h00 hκ hs hv V hV hVT hTV hnt hsmall hΓ ω' ω'' hA' hA'' hVF π' π'' hFin' hFin'' N' N''
-    hX0 hY0 (J.toList.flatMap WitnessSchema0.comps) ?_ F' F''
+    hX0 hY0 (J.toList.flatMap WitnessSchema0.comps) ?_ C' C''
   intro Z hRC hQ hW' hW''
   have heq := KeySet.cls_ind0_cover (J.toList.map (fun W => W.recode (Z.K hc))) (Z.Q hc) hQ hW' hW'' (by
     rintro _ ⟨qv, hqv, rfl⟩
