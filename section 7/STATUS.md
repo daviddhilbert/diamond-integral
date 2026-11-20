@@ -83,21 +83,17 @@ arbitrary parameter base and take no input beyond the ACVF model.
 - 7.14 scope (2026-11-19): its upstream analog for ordinary blowups is about
   25k lines of uniformization. The author was asked whether to build it in
   full now or to state it as an explicit replaceable input first.
-- **Temporary input: Lemma 7.20.** By the author's decision of 2026-11-19
-  ("Input + parallel build", as for 7.14), 7.20 is stated as the explicit
-  replaceable input `TwoCellInput.Lemma720 M G` (standard contraction of a
-  proper invariant A ⊆ VF² × RVʳ with fibres 2-cells, cell data uniform in s and
-  definable over T;
-  GAP-REPAIRS 13). Results that use it take `(h720 : Lemma720 M G)` as a
-  hypothesis. A separate session proves it; `TwoCellInput.lean` is kept stable.
-- **Temporary input: Lemma 7.14.** By the author's decision of 2026-11-19
-  ("Input + parallel build"), 7.14 is stated as the explicit replaceable input
-  `FiberwiseInput.Lemma714 M G` (fibres via `FibreObjects.fibreObject` over
-  `adjoin T a`, head-start standard contractions, `IspRel`). Results that use
-  it take `(h714 : Lemma714 M G)` as a hypothesis. A separate session proves it
-  in `section 7/Lemma714*.lean`; this file is kept stable.
-- **Corollary 7.15 done on the 7.14 input** (`Corollary715Fibres.corollary_7_15`,
-  with `h714 : Lemma714 M G` as hypothesis). GAP-REPAIRS 11 is resolved for
+- **Lemmas 7.14 and 7.20 proved (2026-11-20).** Both were stated as explicit
+  replaceable inputs by the author's decision of 2026-11-19 ("Input + parallel
+  build") and proved in separate sessions: `Lemma714Reduce.lemma714 :
+  FiberwiseInput.Lemma714 M G` (merged at e9ac1fe0) and `Lemma720.lemma720 M G :
+  TwoCellInput.Lemma720 M G` (merged at d14dcd0c). `FiberwiseInput.lean` and
+  `TwoCellInput.lean` keep the statements. Downstream results keep their forms
+  with `(h714 : Lemma714 M G)` / `(h720 : Lemma720 M G)`, used by later work; the
+  hypothesis-free forms are in `ProvedResults` (Corollary 7.15, centre
+  independence, Lemma 7.22, Lemma 7.23 for n = 2).
+- **Corollary 7.15 done** (`Corollary715Fibres.corollary_7_15` with `h714`;
+  hypothesis-free `ProvedResults.corollary_7_15`). GAP-REPAIRS 11 is resolved for
   7.15 without changing the input: independence of the normalization centre
   from 7.14 with equal sets, contractions with a common centre, grafting of
   normalized contractions of the first-stage sets (`Corollary715`,
@@ -110,7 +106,7 @@ arbitrary parameter base and take no input beyond the ACVF model.
     `ProductKinds`) and balanced cells (`BalancedShearStages`, `BalancedKinds`,
     `BalancedMatching`, `BalancedOrders`, `BalancedPiece`).
   - 7.22 on `A*` (`Lemma723Two.lemma_7_22`) and 7.23 for n = 2
-    (`Lemma723TwoFinal.lemma_7_23_n2`) are done on the 7.14 and 7.20 inputs.
+    (`Lemma723TwoFinal.lemma_7_23_n2`) are done; hypothesis-free forms in `ProvedResults`.
     Tools: grafted objects and graft morphisms (`GraftObjects`), restriction of
     contractions to label pieces with additive classes (`RestrictContractions`),
     the normalization comparison (`NormalizationComparison`), two-stage
@@ -136,6 +132,6 @@ arbitrary parameter base and take no input beyond the ACVF model.
 
 ## Next
 
-7.23 for n > 2 on the 7.14 and 7.20 inputs, then 7.24–7.27, as in PLAN.md (7.23 and
+7.23 for n > 2, then 7.24–7.27, as in PLAN.md (7.23 and
 7.24 can reuse the 7.15 modules). Product compatibility (7.10) and the object-level converse for
 Definition 7.2 remain open side items.

@@ -15,13 +15,15 @@ the additive part of Lemma 7.10, Remark 7.3 (dimension claim), Lemma 7.11 (full
 lift, on classes), Lemma 7.12 on classes, Lemma 7.13 (printed form, head start
 0; also over a base with adjoined VF parameters), Definitions 7.16, 7.17, 7.19
 and Remark 7.18 (approved scope), the surjectivity of the lift on classes, and
-Corollary 7.15 on the 7.14 input (`Corollary715Fibres.corollary_7_15`).
-Remaining: the approved partial-lift and head-start forms of 7.11 and 7.13,
-whole-witness descent (7.14), the two-cell comparisons (7.20–7.23), the
-kernel (7.24–7.25), Theorem 7.26 with J_var, and 7.27. Remark 7.28 is done
-(`Remark728`). Lemmas 7.14 and 7.20 are explicit temporary inputs
-(`FiberwiseInput.Lemma714`, `TwoCellInput.Lemma720`), each being proved in a
-separate session.
+Lemma 7.14 (`Lemma714Reduce.lemma714`), Corollary 7.15
+(`ProvedResults.corollary_7_15`), Lemma 7.20 (`Lemma720.lemma720`), Lemma 7.21
+in the uniform form used by 7.22, Lemma 7.22 (`ProvedResults.lemma_7_22`) and
+Lemma 7.23 for n = 2 (`ProvedResults.lemma_7_23_n2`). Lemmas 7.14 and 7.20 were
+temporary inputs (author decision of 2026-11-19), proved in separate sessions
+and merged; `FiberwiseInput.Lemma714` and `TwoCellInput.Lemma720` keep their
+statements. Remaining: the approved partial-lift form of 7.11, Lemma 7.23 for
+n > 2, the kernel (7.24–7.25), Theorem 7.26 with J_var, and 7.27. Remark 7.28 is
+done (`Remark728`).
 
 The focused [Section 6 handoff](SECTION6-HANDOFF.md) links the checked native
 inputs and the mathematical draft. The draft is not a completed kernel
