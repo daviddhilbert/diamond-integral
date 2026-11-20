@@ -25,8 +25,10 @@ statements. Proposition 7.24 (`Proposition724.proposition_7_24`, degree 0 in
 `Proposition724Zero`), Remark 7.25 (`Theorem726.remark_7_25`) and Theorem 7.26
 (`Proposition724.integralEquiv`, `Theorem726.integralRingEquiv`) are done on the
 temporary intermediate-forms input `IntermediateFormsInput.IntermediateForms`
-(author decision of 2026-11-20, GAP-REPAIRS 16), which a separate session
-proves. Remaining: the approved partial-lift form of 7.11 and Corollary 7.27.
+(author decision of 2026-11-20, GAP-REPAIRS 16). That input turned out to be
+false as stated for n = 2, so these positive-degree results are not
+established; degree 0 is done without it, and the route is the author's
+decision. Remaining: the approved partial-lift form of 7.11 and Corollary 7.27.
 Remark 7.28 is done (`Remark728`).
 
 The focused [Section 6 handoff](SECTION6-HANDOFF.md) links the checked native

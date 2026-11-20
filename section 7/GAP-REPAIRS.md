@@ -221,7 +221,7 @@ formalization convention. No manuscript edit has been made for them.
       contractions (`TautologicalContractions.taut`) have the classes of the two
       contractions (`cls_taut`).
 
-16. **Proposition 7.24, the arrows of an isomorphism (input, 2026-11-20).** The
+16. **Proposition 7.24, the arrows of an isomorphism (input false as stated; route open, 2026-11-20).** The
     proof applies Corollary 7.15 to "a sequence of relatively unary
     `μVF^◇[k]`-morphisms" `μL U = B_1 → … → B_{l+1} = μL V`. In the formal
     category (Section 6, approved R102), a morphism carries a factorization of
@@ -245,6 +245,18 @@ formalization convention. No manuscript edit has been made for them.
       invariance of `B` and the morphism (`morphism_of_generic_map`).
     - Only `section 7/UnaryArrows.lean` unpacks it (`stepObject`,
       `stepMorphism`); the theorems using it take `(hIF : IntermediateForms M G)`.
+    - **The input is false for n = 2** (found 2026-11-20 by the proving session,
+      checked here; counterexample in the docstring of
+      `IntermediateFormsInput.lean`): `F(x, z) = (x, x·κ(z/x))` with `κ` locally
+      affine of slopes `1, t, 1/t` is a relatively unary proper covariant
+      homeomorphism of `𝔬²` whose forced target form is not covariant at
+      `(0, 0)`. So `[F, F⁻¹]` is an R102 factorization of the identity whose middle
+      set admits no form for which both steps are morphisms, and Corollary 7.15
+      cannot be applied per arrow of an arbitrary R102 factorization. The results
+      that take `hIF` (7.24 in degree n+1, 7.26, 7.25 on the integral side) are
+      not established; the route is the author's decision (Section 6
+      Definition 6.34: forms on the intermediate sets, as in the paper, or a
+      refactorization of R102 morphisms into good steps).
 
 17. **Proposition 7.24, Remark 7.25 and Theorem 7.26 (formal route,
     2026-11-20).** Omitted justifications, not errors.

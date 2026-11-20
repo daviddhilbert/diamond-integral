@@ -572,17 +572,19 @@ intended Lean statement; ⚑ marks a flag that is also listed in §5.
   `lemma_6_27`, `liftHom`.
 - **New.** `Isomorphic G (chartObject U) (chartObject V) ↔ MuIsp T k U V`, for
   every k, base-polymorphic (needed for the induction).
-- **Status (2026-11-20).** Done on the temporary intermediate-forms input
-  (author decision: input + parallel build; GAP-REPAIRS 16, 17):
+- **Status (2026-11-20).** Proved on the temporary intermediate-forms input,
+  which turned out false as stated for n = 2 (GAP-REPAIRS 16); not established
+  in positive degree until the author chooses a route (GAP-REPAIRS 16, 17):
   `Proposition724.proposition_7_24` (degree n+1), `Proposition724Zero` (degree 0,
   hypothesis-free). The route differs from "New" above: no
   `Isomorphic ↔ MuIsp` statement is needed; the contraction class modulo μIsp^db
   is an invariant of the scissor presentation of K₊ μVF^◇.
 
 ### 7.25 Remark `thekernel`
-- **Status (2026-11-20).** Done: `Theorem726.remark_7_25` (ker of the graded
-  lift ring map = `manuscriptIdeal`), via the inverse ring map, so no grading
-  argument and no cancellation are used.
+- **Status (2026-11-20).** `Theorem726.remark_7_25` (ker of the graded lift
+  ring map = `manuscriptIdeal`), via the inverse ring map; the inclusion
+  J_var ⊆ ker is input-free, the converse uses the integral and hence the false
+  input (GAP-REPAIRS 16).
 - **Route.**
   - Generators lie in the kernel (7.12).
   - Every blowup differs from its source by J_var
@@ -600,7 +602,8 @@ intended Lean statement; ⚑ marks a flag that is also listed in §5.
   about I.
 
 ### 7.26 Theorem `main:prop`
-- **Status (2026-11-20).** Done on the intermediate-forms input:
+- **Status (2026-11-20).** Degree 0 done; otherwise proved on the
+  intermediate-forms input, false as stated (GAP-REPAIRS 16):
   `Proposition724.integralEquiv` (semigroup, degree n+1),
   `Proposition724Zero.integralZero_bijective` (degree 0),
   `Theorem726.integralRingEquiv` and `integralGraded` (ring, onto

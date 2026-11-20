@@ -3,6 +3,21 @@ import «section 6».DiamondGroupoidMaps
 /-! Intermediate forms along a relatively unary factorization, as an explicit,
 replaceable input (for Proposition 7.24).
 
+**FALSE AS STATED for `n = 2` (found 2026-11-20 by the session proving it;
+checked here).** Let `t ∈ 𝔪` be a nonzero named element, and let `κ : 𝔬 → 𝔬` be
+the locally affine homeomorphism that is the identity off `𝔪 ∪ (1 + 𝔪)` and on
+`𝔪 ∖ t𝔪`, `w ↦ tw` on `t𝔪`, `w ↦ t(w − 1)` on `(1 + 𝔪) ∖ (1 + t𝔪)`, and
+`w ↦ 1 + (w − 1)/t` on `1 + t𝔪`. Then `F(x, z) = (x, x·κ(z/x))` on
+`{x ≠ 0, vf z ≥ vf x}`, the identity elsewhere, is a relatively unary proper
+covariant homeomorphism of `𝔬²` (Lipschitz with constant `|t|⁻¹` at every
+scale). With the form `1` on the source, the forced form `vf(∂_z F₂)⁻¹` takes
+the values `1`, `vf(t)⁻¹`, `vf(t)` in every ball around `(0, 0)`, so no covariant
+form exists on the target. The sketch below fails at the last bullet: local
+constancy on each one-variable slice does not give joint local constancy at a
+singular point. The results that use this input are therefore not established;
+see GAP-REPAIRS 16. The statement is kept unchanged pending the author's
+decision on the route.
+
 **Temporary input.** By the author's decision of 2026-11-20 ("Input + parallel
 build", the arrangement used for Lemmas 7.14 and 7.20), this statement is used
 as a hypothesis `IntermediateForms M G` by the proof of Proposition 7.24, and a

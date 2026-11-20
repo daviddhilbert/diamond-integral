@@ -4,6 +4,7 @@ import «section 7».DiamondRing
 import «section 7».RingClasses
 import «section 4».RVBoundedDisjointPresentation
 import «section 7».DiamondProducts
+import «section 7».LiftProducts
 import «section 4».RelativeAnnularQuotient
 import «section 4».RelativeAnnularConverse
 
@@ -119,6 +120,10 @@ include h00 hκ hs hsmall hv in
 /-- `ProductHyp` holds (`DiamondProducts.isomorphic_product`). -/
 theorem productHyp : ProductHyp G hc T := fun _ _ _ _ _ _ hA hB =>
   DiamondProducts.isomorphic_product hc h00 hκ.le hs hsmall hv hA hB
+
+/-- `LiftProductHyp` holds (`LiftProducts.lift_product_isomorphic`). -/
+theorem liftProductHyp : LiftProductHyp G h00 hc hκ hs hv T hsmall hΓ := fun _ _ a b =>
+  LiftProducts.lift_product_isomorphic hc h00 hκ hs T hsmall hΓ hv a b
 
 variable (hProd : ProductHyp G hc T) (hLiftProd : LiftProductHyp G h00 hc hκ hs hv T hsmall hΓ)
 

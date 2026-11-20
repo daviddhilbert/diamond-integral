@@ -129,8 +129,10 @@ arbitrary parameter base and take no input beyond the ACVF model.
 - **Proposition 7.24, Remark 7.25, Theorem 7.26 (2026-11-20).**
   - Temporary input, by the author's decision ("Input + parallel build"):
     `IntermediateFormsInput.IntermediateForms M G` (GAP-REPAIRS 16). Only
-    `UnaryArrows` unpacks it; downstream theorems take `hIF` explicitly. A
-    separate session proves it.
+    `UnaryArrows` unpacks it; downstream theorems take `hIF` explicitly.
+    **It is false as stated for n = 2** (counterexample found by the proving
+    session, checked here; GAP-REPAIRS 16). Everything below that takes `hIF`
+    is therefore not established; the route is the author's decision.
   - (∗) done, hypothesis-free (`OrderIndependence.star`), GAP-REPAIRS 15.
   - 7.24 in degree n+1 on `hIF` only (`Proposition724.proposition_7_24`,
     `proposition_7_24_muIsp`); degree 0 hypothesis-free
