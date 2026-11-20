@@ -82574,6 +82574,1097 @@ theorem DiamondIntegral.Section4.GammaContinuousDecomposition.dimensions_bounded
 'DiamondIntegral.Section4.GammaContinuousDecomposition.dimensions_bounded_discharged' depends on axioms: [propext,
  Classical.choice.{u},
  Quot.sound.{u}]
+structure DiamondIntegral.Section4.RESDimensionFreeCategory.Object {M : Type}
+  [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base) : Type
+number of parameters: 4
+fields:
+  DiamondIntegral.Section4.RESDimensionFreeCategory.Object.arity : ℕ
+  DiamondIntegral.Section4.RESDimensionFreeCategory.Object.domain : Set.{0} (Fin self.arity → M)
+  DiamondIntegral.Section4.RESDimensionFreeCategory.Object.domain_definable : SpecialTransformations.Section3.GammaParameters.DefinableOverBase
+      B (fun x => SpecialTransformations.Milestone0.SortTag.rv) self.domain
+  DiamondIntegral.Section4.RESDimensionFreeCategory.Object.finite_values : Set.Finite.{0}
+      (Set.range.{0, 1} fun u i => SpecialTransformations.Section3.Values.vrv (Subtype.mk.{1} (↑u i) ⋯))
+constructor:
+  DiamondIntegral.Section4.RESDimensionFreeCategory.Object.mk {M : Type}
+    [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+    {B : SpecialTransformations.Section3.GammaParameters.Base} (arity : ℕ) (domain : Set.{0} (Fin arity → M))
+    (domain_definable :
+      SpecialTransformations.Section3.GammaParameters.DefinableOverBase B
+        (fun x => SpecialTransformations.Milestone0.SortTag.rv) domain)
+    (finite_values :
+      Set.Finite.{0}
+        (Set.range.{0, 1} fun u i => SpecialTransformations.Section3.Values.vrv (Subtype.mk.{1} (↑u i) ⋯))) :
+    DiamondIntegral.Section4.RESDimensionFreeCategory.Object B
+'DiamondIntegral.Section4.RESDimensionFreeCategory.Object' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+structure DiamondIntegral.Section4.RESDimensionFreeCategory.Iso {M : Type}
+  [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base}
+  (U V : DiamondIntegral.Section4.RESDimensionFreeCategory.Object B) : Type
+number of parameters: 6
+fields:
+  DiamondIntegral.Section4.RESDimensionFreeCategory.Iso.equiv : Equiv.{1, 1} ↑U.domain ↑V.domain
+  DiamondIntegral.Section4.RESDimensionFreeCategory.Iso.graph_definable : SpecialTransformations.Section3.GammaParameters.DefinableOverBase
+      B (fun x => SpecialTransformations.Milestone0.SortTag.rv)
+      (Set.ofPred.{0} fun w =>
+        ∃ u, Eq.{1} w (DiamondIntegral.Section4.FiniteTupleBlocks.join.{0} V.arity U.arity ↑u ↑(self.equiv u)))
+constructor:
+  DiamondIntegral.Section4.RESDimensionFreeCategory.Iso.mk {M : Type}
+    [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+    {B : SpecialTransformations.Section3.GammaParameters.Base}
+    {U V : DiamondIntegral.Section4.RESDimensionFreeCategory.Object B} (equiv : Equiv.{1, 1} ↑U.domain ↑V.domain)
+    (graph_definable :
+      SpecialTransformations.Section3.GammaParameters.DefinableOverBase B
+        (fun x => SpecialTransformations.Milestone0.SortTag.rv)
+        (Set.ofPred.{0} fun w =>
+          ∃ u, Eq.{1} w (DiamondIntegral.Section4.FiniteTupleBlocks.join.{0} V.arity U.arity ↑u ↑(equiv u)))) :
+    DiamondIntegral.Section4.RESDimensionFreeCategory.Iso U V
+'DiamondIntegral.Section4.RESDimensionFreeCategory.Iso' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.RESDimensionFreeCategory.ofRES : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B : SpecialTransformations.Section3.GammaParameters.Base} →
+        {k : ℕ} →
+          DiamondIntegral.Section4.RVMeasuredCharts.RESChart B k →
+            DiamondIntegral.Section4.RESDimensionFreeCategory.Object B :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {B} {k} a =>
+  { arity := a.arity, domain := a.domain, domain_definable := ⋯, finite_values := ⋯ }
+'DiamondIntegral.Section4.RESDimensionFreeCategory.ofRES' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RESDimensionFreeCategory.eq_of_domain : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {n : ℕ} (D D' : Set.{0} (Fin n → M)),
+  Eq.{1} D D' →
+    ∀
+      (hD :
+        SpecialTransformations.Section3.GammaParameters.DefinableOverBase B
+          (fun x => SpecialTransformations.Milestone0.SortTag.rv) D)
+      (hD' :
+        SpecialTransformations.Section3.GammaParameters.DefinableOverBase B
+          (fun x => SpecialTransformations.Milestone0.SortTag.rv) D')
+      (hf :
+        Set.Finite.{0}
+          (Set.range.{0, 1} fun u i => SpecialTransformations.Section3.Values.vrv (Subtype.mk.{1} (↑u i) ⋯)))
+      (hf' :
+        Set.Finite.{0}
+          (Set.range.{0, 1} fun u i => SpecialTransformations.Section3.Values.vrv (Subtype.mk.{1} (↑u i) ⋯))),
+      Eq.{1} { arity := n, domain := D, domain_definable := hD, finite_values := hf }
+        { arity := n, domain := D', domain_definable := hD', finite_values := hf' } :=
+⋯
+'DiamondIntegral.Section4.RESDimensionFreeCategory.eq_of_domain' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.RESDimensionFreeCategory.unzero : {M : Type} →
+  [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] → M → M :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] x =>
+  ite.{1} (Eq.{1} x SpecialTransformations.Milestone0.iRVZero.{0}) SpecialTransformations.Milestone0.iRVOne.{0} x
+'DiamondIntegral.Section4.RESDimensionFreeCategory.unzero' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.RESDimensionFreeCategory.label : {M : Type} →
+  [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    (n K : ℕ) → (Fin n → M) → Fin K → M :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] n K u i =>
+  if h : LT.lt.{0} (↑i) n then DiamondIntegral.Section4.RESDimensionFreeCategory.unzero (u ⟨↑i, h⟩)
+  else SpecialTransformations.Milestone0.iRVOne.{0}
+'DiamondIntegral.Section4.RESDimensionFreeCategory.label' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.RESDimensionFreeCategory.unzeroGraph : {M : Type} →
+  [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] → Set.{0} (Fin 2 → M) :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] =>
+  Set.ofPred.{0} fun w =>
+    SpecialTransformations.Milestone0.iRV.{0} (w 0) ∧
+      Eq.{1} (w 1) (DiamondIntegral.Section4.RESDimensionFreeCategory.unzero (w 0))
+'DiamondIntegral.Section4.RESDimensionFreeCategory.unzeroGraph' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RESDimensionFreeCategory.unzero_of_ne : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] {x : M},
+  Ne.{1} x SpecialTransformations.Milestone0.iRVZero.{0} →
+    Eq.{1} (DiamondIntegral.Section4.RESDimensionFreeCategory.unzero x) x :=
+⋯
+'DiamondIntegral.Section4.RESDimensionFreeCategory.unzero_of_ne' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RESDimensionFreeCategory.unzero_zero : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M],
+  Eq.{1} (DiamondIntegral.Section4.RESDimensionFreeCategory.unzero SpecialTransformations.Milestone0.iRVZero.{0})
+    SpecialTransformations.Milestone0.iRVOne.{0} :=
+⋯
+'DiamondIntegral.Section4.RESDimensionFreeCategory.unzero_zero' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RESDimensionFreeCategory.unzero_nonzero : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {x : M},
+  SpecialTransformations.Milestone0.iRV.{0} x →
+    SpecialTransformations.Section3.GammaParameters.NonzeroRV
+      (DiamondIntegral.Section4.RESDimensionFreeCategory.unzero x) :=
+⋯
+'DiamondIntegral.Section4.RESDimensionFreeCategory.unzero_nonzero' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RESDimensionFreeCategory.unzeroGraph_definable : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base),
+  SpecialTransformations.Section3.GammaParameters.DefinableOverBase B
+    (fun x => SpecialTransformations.Milestone0.SortTag.rv)
+    DiamondIntegral.Section4.RESDimensionFreeCategory.unzeroGraph :=
+⋯
+'DiamondIntegral.Section4.RESDimensionFreeCategory.unzeroGraph_definable' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RESDimensionFreeCategory.label_proper : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] (n K : ℕ)
+  (u : Fin n → M),
+  (∀ (i : Fin n), SpecialTransformations.Milestone0.iRV.{0} (u i)) →
+    SpecialTransformations.Section3.GammaParameters.Proper
+      (DiamondIntegral.Section4.RESDimensionFreeCategory.label n K u) :=
+⋯
+'DiamondIntegral.Section4.RESDimensionFreeCategory.label_proper' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RESDimensionFreeCategory.label_finite_fibres : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] {n K : ℕ},
+  LE.le.{0} n K →
+    ∀ (D : Set.{0} (Fin n → M)) (t : Fin K → M),
+      Set.Finite.{0}
+        (Set.ofPred.{0} fun u =>
+          Membership.mem.{0, 0} D u ∧ Eq.{1} (DiamondIntegral.Section4.RESDimensionFreeCategory.label n K u) t) :=
+⋯
+'DiamondIntegral.Section4.RESDimensionFreeCategory.label_finite_fibres' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RESDimensionFreeCategory.label_graph_definable : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base) {n : ℕ} (D : Set.{0} (Fin n → M)),
+  SpecialTransformations.Section3.GammaParameters.DefinableOverBase B
+      (fun x => SpecialTransformations.Milestone0.SortTag.rv) D →
+    ∀ (K : ℕ),
+      SpecialTransformations.Section3.GammaParameters.DefinableOverBase B
+        (fun x => SpecialTransformations.Milestone0.SortTag.rv)
+        (DiamondIntegral.Section4.RVMeasuredCharts.graphOn D
+          (DiamondIntegral.Section4.RESDimensionFreeCategory.label n K)) :=
+⋯
+'DiamondIntegral.Section4.RESDimensionFreeCategory.label_graph_definable' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.RESDimensionFreeCategory.chartAt : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B : SpecialTransformations.Section3.GammaParameters.Base} →
+        (U : DiamondIntegral.Section4.RESDimensionFreeCategory.Object B) →
+          (K : ℕ) → LE.le.{0} U.arity K → DiamondIntegral.Section4.RVMeasuredCharts.RESChart B K :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {B} U K hK =>
+  { arity := U.arity, domain := U.domain, domain_definable := ⋯,
+    coordinate := DiamondIntegral.Section4.RESDimensionFreeCategory.label U.arity K, coordinate_definable := ⋯,
+    coordinate_proper := ⋯, finite_fibres := ⋯, volume := fun x => 1, volume_definable := ⋯, finite_values := ⋯ }
+'DiamondIntegral.Section4.RESDimensionFreeCategory.chartAt' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.RESDimensionFreeCategory.chart : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B : SpecialTransformations.Section3.GammaParameters.Base} →
+        (U : DiamondIntegral.Section4.RESDimensionFreeCategory.Object B) →
+          DiamondIntegral.Section4.RVMeasuredCharts.RESChart B U.arity :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {B} U =>
+  DiamondIntegral.Section4.RESDimensionFreeCategory.chartAt U U.arity ⋯
+'DiamondIntegral.Section4.RESDimensionFreeCategory.chart' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@[defeq] theorem DiamondIntegral.Section4.RESDimensionFreeCategory.ofRES_chartAt : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base}
+  (U : DiamondIntegral.Section4.RESDimensionFreeCategory.Object B) (K : ℕ) (hK : LE.le.{0} U.arity K),
+  Eq.{1}
+    (DiamondIntegral.Section4.RESDimensionFreeCategory.ofRES
+      (DiamondIntegral.Section4.RESDimensionFreeCategory.chartAt U K hK))
+    U :=
+⋯
+'DiamondIntegral.Section4.RESDimensionFreeCategory.ofRES_chartAt' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@[defeq] theorem DiamondIntegral.Section4.RESDimensionFreeCategory.ofRES_chart : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base}
+  (U : DiamondIntegral.Section4.RESDimensionFreeCategory.Object B),
+  Eq.{1}
+    (DiamondIntegral.Section4.RESDimensionFreeCategory.ofRES
+      (DiamondIntegral.Section4.RESDimensionFreeCategory.chart U))
+    U :=
+⋯
+'DiamondIntegral.Section4.RESDimensionFreeCategory.ofRES_chart' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RESDimensionFreeCategory.exists_label : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base}
+  (U : DiamondIntegral.Section4.RESDimensionFreeCategory.Object B),
+  ∃ k a, Eq.{1} (DiamondIntegral.Section4.RESDimensionFreeCategory.ofRES a) U :=
+⋯
+'DiamondIntegral.Section4.RESDimensionFreeCategory.exists_label' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.RESDimensionFreeCategory.Iso.refl : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B : SpecialTransformations.Section3.GammaParameters.Base} →
+        (U : DiamondIntegral.Section4.RESDimensionFreeCategory.Object B) →
+          DiamondIntegral.Section4.RESDimensionFreeCategory.Iso U U :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {B} U =>
+  {
+    equiv :=
+      (DiamondIntegral.Section4.RVUnderlyingIsomorphisms.refl
+          (DiamondIntegral.Section4.RESDimensionFreeCategory.chart U).toChart).equiv,
+    graph_definable := ⋯ }
+'DiamondIntegral.Section4.RESDimensionFreeCategory.Iso.refl' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.RESDimensionFreeCategory.Iso.symm : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B : SpecialTransformations.Section3.GammaParameters.Base} →
+        {U V : DiamondIntegral.Section4.RESDimensionFreeCategory.Object B} →
+          DiamondIntegral.Section4.RESDimensionFreeCategory.Iso U V →
+            DiamondIntegral.Section4.RESDimensionFreeCategory.Iso V U :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {B} {U V} e =>
+  let F := { equiv := e.equiv, graph_definable := ⋯ };
+  { equiv := (DiamondIntegral.Section4.RVUnderlyingIsomorphisms.symm F).equiv, graph_definable := ⋯ }
+'DiamondIntegral.Section4.RESDimensionFreeCategory.Iso.symm' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.RESDimensionFreeCategory.Iso.toChart : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B : SpecialTransformations.Section3.GammaParameters.Base} →
+        {k l : ℕ} →
+          {a : DiamondIntegral.Section4.RVMeasuredCharts.RESChart B k} →
+            {b : DiamondIntegral.Section4.RVMeasuredCharts.RESChart B l} →
+              DiamondIntegral.Section4.RESDimensionFreeCategory.Iso
+                  (DiamondIntegral.Section4.RESDimensionFreeCategory.ofRES a)
+                  (DiamondIntegral.Section4.RESDimensionFreeCategory.ofRES b) →
+                DiamondIntegral.Section4.RVUnderlyingIsomorphisms.Iso a.toChart b.toChart :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {B} {k l} {a} {b} e =>
+  { equiv := e.equiv, graph_definable := ⋯ }
+'DiamondIntegral.Section4.RESDimensionFreeCategory.Iso.toChart' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.RESDimensionFreeCategory.Iso.ofChart : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B : SpecialTransformations.Section3.GammaParameters.Base} →
+        {k l : ℕ} →
+          {a : DiamondIntegral.Section4.RVMeasuredCharts.RESChart B k} →
+            {b : DiamondIntegral.Section4.RVMeasuredCharts.RESChart B l} →
+              DiamondIntegral.Section4.RVUnderlyingIsomorphisms.Iso a.toChart b.toChart →
+                DiamondIntegral.Section4.RESDimensionFreeCategory.Iso
+                  (DiamondIntegral.Section4.RESDimensionFreeCategory.ofRES a)
+                  (DiamondIntegral.Section4.RESDimensionFreeCategory.ofRES b) :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {B} {k l} {a} {b} F =>
+  { equiv := F.equiv, graph_definable := ⋯ }
+'DiamondIntegral.Section4.RESDimensionFreeCategory.Iso.ofChart' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.RESDimensionFreeCategory.Iso.ofEq : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B : SpecialTransformations.Section3.GammaParameters.Base} →
+        {U V : DiamondIntegral.Section4.RESDimensionFreeCategory.Object B} →
+          Eq.{1} U V → DiamondIntegral.Section4.RESDimensionFreeCategory.Iso U V :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {B} {U V} h =>
+  Eq.rec.{1, 1} (DiamondIntegral.Section4.RESDimensionFreeCategory.Iso.refl U) h
+'DiamondIntegral.Section4.RESDimensionFreeCategory.Iso.ofEq' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.RESDimensionFreeCategory.unit : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (B : SpecialTransformations.Section3.GammaParameters.Base) →
+        DiamondIntegral.Section4.RESDimensionFreeCategory.Object B :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] B =>
+  DiamondIntegral.Section4.RESDimensionFreeCategory.ofRES (DiamondIntegral.Section4.RESChartRing.unit B)
+'DiamondIntegral.Section4.RESDimensionFreeCategory.unit' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.RESDimensionFreeCategory.product : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B : SpecialTransformations.Section3.GammaParameters.Base} →
+        DiamondIntegral.Section4.RESDimensionFreeCategory.Object B →
+          DiamondIntegral.Section4.RESDimensionFreeCategory.Object B →
+            DiamondIntegral.Section4.RESDimensionFreeCategory.Object B :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {B} U V =>
+  DiamondIntegral.Section4.RESDimensionFreeCategory.ofRES
+    (DiamondIntegral.Section4.RVMeasuredProductProperties.resProduct
+      (DiamondIntegral.Section4.RESDimensionFreeCategory.chart U)
+      (DiamondIntegral.Section4.RESDimensionFreeCategory.chart V))
+'DiamondIntegral.Section4.RESDimensionFreeCategory.product' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@[defeq] theorem DiamondIntegral.Section4.RESDimensionFreeCategory.product_domain : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base}
+  (U V : DiamondIntegral.Section4.RESDimensionFreeCategory.Object B),
+  Eq.{1} (DiamondIntegral.Section4.RESDimensionFreeCategory.product U V).domain
+    (DiamondIntegral.Section4.RVRealProducts.productSet U.domain V.domain) :=
+⋯
+'DiamondIntegral.Section4.RESDimensionFreeCategory.product_domain' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.RESDimensionFreeCategory.taggedSet : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      SpecialTransformations.Section3.GammaParameters.Base →
+        {m n : ℕ} →
+          Set.{0} (Fin m → M) →
+            Set.{0} (Fin n → M) → Set.{0} (Fin (HAdd.hAdd.{0, 0, 0} n (HAdd.hAdd.{0, 0, 0} m 1)) → M) :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] B {m n} U V =>
+  Union.union.{0}
+    (DiamondIntegral.Section4.RVRealProducts.productSet
+      (DiamondIntegral.Section4.RVRealProducts.productSet (DiamondIntegral.Section4.RVNamedTuples.tagZero B).domain U)
+      (DiamondIntegral.Section4.RVNamedTuples.zeros B n).domain)
+    (DiamondIntegral.Section4.RVRealProducts.productSet
+      (DiamondIntegral.Section4.RVRealProducts.productSet (DiamondIntegral.Section4.RVNamedTuples.tagOne B).domain
+        (DiamondIntegral.Section4.RVNamedTuples.zeros B m).domain)
+      V)
+'DiamondIntegral.Section4.RESDimensionFreeCategory.taggedSet' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RESDimensionFreeCategory.coproduct_domain : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {k : ℕ}
+  (a b : DiamondIntegral.Section4.RVMeasuredCharts.Chart B k),
+  Eq.{1} (DiamondIntegral.Section4.RVTaggedCoproduct.coproduct a b).domain
+    (DiamondIntegral.Section4.RESDimensionFreeCategory.taggedSet B a.domain b.domain) :=
+⋯
+'DiamondIntegral.Section4.RESDimensionFreeCategory.coproduct_domain' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.RESDimensionFreeCategory.sum : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B : SpecialTransformations.Section3.GammaParameters.Base} →
+        DiamondIntegral.Section4.RESDimensionFreeCategory.Object B →
+          DiamondIntegral.Section4.RESDimensionFreeCategory.Object B →
+            DiamondIntegral.Section4.RESDimensionFreeCategory.Object B :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {B} U V =>
+  DiamondIntegral.Section4.RESDimensionFreeCategory.ofRES
+    (DiamondIntegral.Section4.RVTaggedCoproductProperties.resCoproduct
+      (DiamondIntegral.Section4.RESDimensionFreeCategory.chartAt U (HAdd.hAdd.{0, 0, 0} U.arity V.arity) ⋯)
+      (DiamondIntegral.Section4.RESDimensionFreeCategory.chartAt V (HAdd.hAdd.{0, 0, 0} U.arity V.arity) ⋯))
+'DiamondIntegral.Section4.RESDimensionFreeCategory.sum' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RESDimensionFreeCategory.sum_domain : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base}
+  (U V : DiamondIntegral.Section4.RESDimensionFreeCategory.Object B),
+  Eq.{1} (DiamondIntegral.Section4.RESDimensionFreeCategory.sum U V).domain
+    (DiamondIntegral.Section4.RESDimensionFreeCategory.taggedSet B U.domain V.domain) :=
+⋯
+'DiamondIntegral.Section4.RESDimensionFreeCategory.sum_domain' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RESDimensionFreeCategory.ofRES_coproduct : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {k : ℕ}
+  (a b : DiamondIntegral.Section4.RVMeasuredCharts.RESChart B k),
+  Eq.{1}
+    (DiamondIntegral.Section4.RESDimensionFreeCategory.ofRES
+      (DiamondIntegral.Section4.RVTaggedCoproductProperties.resCoproduct a b))
+    (DiamondIntegral.Section4.RESDimensionFreeCategory.sum (DiamondIntegral.Section4.RESDimensionFreeCategory.ofRES a)
+      (DiamondIntegral.Section4.RESDimensionFreeCategory.ofRES b)) :=
+⋯
+'DiamondIntegral.Section4.RESDimensionFreeCategory.ofRES_coproduct' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.RESDimensionFreeCategory.symbol : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B : SpecialTransformations.Section3.GammaParameters.Base} →
+        DiamondIntegral.Section4.RESDimensionFreeCategory.Object B →
+          FreeCommRing.{0} (DiamondIntegral.Section4.RESDimensionFreeCategory.Object B) :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {B} U =>
+  FreeCommRing.of.{0} U
+'DiamondIntegral.Section4.RESDimensionFreeCategory.symbol' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+inductive DiamondIntegral.Section4.RESDimensionFreeCategory.Relation : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (B : SpecialTransformations.Section3.GammaParameters.Base) →
+        FreeCommRing.{0} (DiamondIntegral.Section4.RESDimensionFreeCategory.Object B) → Prop
+number of parameters: 4
+constructors:
+DiamondIntegral.Section4.RESDimensionFreeCategory.Relation.unit : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base},
+  DiamondIntegral.Section4.RESDimensionFreeCategory.Relation B
+    (HSub.hSub.{0, 0, 0}
+      (DiamondIntegral.Section4.RESDimensionFreeCategory.symbol
+        (DiamondIntegral.Section4.RESDimensionFreeCategory.unit B))
+      1)
+DiamondIntegral.Section4.RESDimensionFreeCategory.Relation.product : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base}
+  (U V : DiamondIntegral.Section4.RESDimensionFreeCategory.Object B),
+  DiamondIntegral.Section4.RESDimensionFreeCategory.Relation B
+    (HSub.hSub.{0, 0, 0}
+      (DiamondIntegral.Section4.RESDimensionFreeCategory.symbol
+        (DiamondIntegral.Section4.RESDimensionFreeCategory.product U V))
+      (HMul.hMul.{0, 0, 0} (DiamondIntegral.Section4.RESDimensionFreeCategory.symbol U)
+        (DiamondIntegral.Section4.RESDimensionFreeCategory.symbol V)))
+DiamondIntegral.Section4.RESDimensionFreeCategory.Relation.iso : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base}
+  (U V : DiamondIntegral.Section4.RESDimensionFreeCategory.Object B)
+  (e : DiamondIntegral.Section4.RESDimensionFreeCategory.Iso U V),
+  DiamondIntegral.Section4.RESDimensionFreeCategory.Relation B
+    (HSub.hSub.{0, 0, 0} (DiamondIntegral.Section4.RESDimensionFreeCategory.symbol U)
+      (DiamondIntegral.Section4.RESDimensionFreeCategory.symbol V))
+DiamondIntegral.Section4.RESDimensionFreeCategory.Relation.empty : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base}
+  (U : DiamondIntegral.Section4.RESDimensionFreeCategory.Object B),
+  Eq.{1} U.domain EmptyCollection.emptyCollection.{0} →
+    DiamondIntegral.Section4.RESDimensionFreeCategory.Relation B
+      (DiamondIntegral.Section4.RESDimensionFreeCategory.symbol U)
+DiamondIntegral.Section4.RESDimensionFreeCategory.Relation.sum : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base}
+  (U V : DiamondIntegral.Section4.RESDimensionFreeCategory.Object B),
+  DiamondIntegral.Section4.RESDimensionFreeCategory.Relation B
+    (HSub.hSub.{0, 0, 0}
+      (HSub.hSub.{0, 0, 0}
+        (DiamondIntegral.Section4.RESDimensionFreeCategory.symbol
+          (DiamondIntegral.Section4.RESDimensionFreeCategory.sum U V))
+        (DiamondIntegral.Section4.RESDimensionFreeCategory.symbol U))
+      (DiamondIntegral.Section4.RESDimensionFreeCategory.symbol V))
+'DiamondIntegral.Section4.RESDimensionFreeCategory.Relation' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.RESDimensionFreeCategory.relationIdeal : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (B : SpecialTransformations.Section3.GammaParameters.Base) →
+        Ideal.{0} (FreeCommRing.{0} (DiamondIntegral.Section4.RESDimensionFreeCategory.Object B)) :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] B =>
+  Ideal.span.{0} (Set.ofPred.{0} fun r => DiamondIntegral.Section4.RESDimensionFreeCategory.Relation B r)
+'DiamondIntegral.Section4.RESDimensionFreeCategory.relationIdeal' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.RESDimensionFreeCategory.Ring : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      SpecialTransformations.Section3.GammaParameters.Base → Type :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] B =>
+  HasQuotient.Quotient.{0, 0} (FreeCommRing.{0} (DiamondIntegral.Section4.RESDimensionFreeCategory.Object B))
+    (DiamondIntegral.Section4.RESDimensionFreeCategory.relationIdeal B)
+'DiamondIntegral.Section4.RESDimensionFreeCategory.Ring' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.RESDimensionFreeCategory.objectClass : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B : SpecialTransformations.Section3.GammaParameters.Base} →
+        DiamondIntegral.Section4.RESDimensionFreeCategory.Object B →
+          DiamondIntegral.Section4.RESDimensionFreeCategory.Ring B :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {B} U =>
+  (Ideal.Quotient.mk.{0} (DiamondIntegral.Section4.RESDimensionFreeCategory.relationIdeal B))
+    (DiamondIntegral.Section4.RESDimensionFreeCategory.symbol U)
+'DiamondIntegral.Section4.RESDimensionFreeCategory.objectClass' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RESDimensionFreeCategory.relation_zero : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base)
+  (r : FreeCommRing.{0} (DiamondIntegral.Section4.RESDimensionFreeCategory.Object B)),
+  DiamondIntegral.Section4.RESDimensionFreeCategory.Relation B r →
+    Eq.{1} ((Ideal.Quotient.mk.{0} (DiamondIntegral.Section4.RESDimensionFreeCategory.relationIdeal B)) r) 0 :=
+⋯
+'DiamondIntegral.Section4.RESDimensionFreeCategory.relation_zero' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RESDimensionFreeCategory.objectClass_unit : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base),
+  Eq.{1}
+    (DiamondIntegral.Section4.RESDimensionFreeCategory.objectClass
+      (DiamondIntegral.Section4.RESDimensionFreeCategory.unit B))
+    1 :=
+⋯
+'DiamondIntegral.Section4.RESDimensionFreeCategory.objectClass_unit' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RESDimensionFreeCategory.objectClass_product : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base}
+  (U V : DiamondIntegral.Section4.RESDimensionFreeCategory.Object B),
+  Eq.{1}
+    (DiamondIntegral.Section4.RESDimensionFreeCategory.objectClass
+      (DiamondIntegral.Section4.RESDimensionFreeCategory.product U V))
+    (HMul.hMul.{0, 0, 0} (DiamondIntegral.Section4.RESDimensionFreeCategory.objectClass U)
+      (DiamondIntegral.Section4.RESDimensionFreeCategory.objectClass V)) :=
+⋯
+'DiamondIntegral.Section4.RESDimensionFreeCategory.objectClass_product' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RESDimensionFreeCategory.objectClass_iso : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base}
+  {U V : DiamondIntegral.Section4.RESDimensionFreeCategory.Object B}
+  (e : DiamondIntegral.Section4.RESDimensionFreeCategory.Iso U V),
+  Eq.{1} (DiamondIntegral.Section4.RESDimensionFreeCategory.objectClass U)
+    (DiamondIntegral.Section4.RESDimensionFreeCategory.objectClass V) :=
+⋯
+'DiamondIntegral.Section4.RESDimensionFreeCategory.objectClass_iso' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RESDimensionFreeCategory.objectClass_empty : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base}
+  (U : DiamondIntegral.Section4.RESDimensionFreeCategory.Object B),
+  Eq.{1} U.domain EmptyCollection.emptyCollection.{0} →
+    Eq.{1} (DiamondIntegral.Section4.RESDimensionFreeCategory.objectClass U) 0 :=
+⋯
+'DiamondIntegral.Section4.RESDimensionFreeCategory.objectClass_empty' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RESDimensionFreeCategory.objectClass_sum : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base}
+  (U V : DiamondIntegral.Section4.RESDimensionFreeCategory.Object B),
+  Eq.{1}
+    (DiamondIntegral.Section4.RESDimensionFreeCategory.objectClass
+      (DiamondIntegral.Section4.RESDimensionFreeCategory.sum U V))
+    (HAdd.hAdd.{0, 0, 0} (DiamondIntegral.Section4.RESDimensionFreeCategory.objectClass U)
+      (DiamondIntegral.Section4.RESDimensionFreeCategory.objectClass V)) :=
+⋯
+'DiamondIntegral.Section4.RESDimensionFreeCategory.objectClass_sum' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+structure DiamondIntegral.Section4.RESDimensionFreeCategory.Invariant.{u_1} {M : Type}
+  [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base) (R : Type u_1) [CommRing.{u_1} R] : Type u_1
+number of parameters: 6
+fields:
+  DiamondIntegral.Section4.RESDimensionFreeCategory.Invariant.value.{u_1} : DiamondIntegral.Section4.RESDimensionFreeCategory.Object
+        B →
+      R
+  DiamondIntegral.Section4.RESDimensionFreeCategory.Invariant.unit.{u_1} : Eq.{u_1 + 1}
+      (DiamondIntegral.Section4.RESDimensionFreeCategory.Invariant.value.{u_1} self
+        (DiamondIntegral.Section4.RESDimensionFreeCategory.unit B))
+      1
+  DiamondIntegral.Section4.RESDimensionFreeCategory.Invariant.product.{u_1} : ∀
+      (U V : DiamondIntegral.Section4.RESDimensionFreeCategory.Object B),
+      Eq.{u_1 + 1}
+        (DiamondIntegral.Section4.RESDimensionFreeCategory.Invariant.value.{u_1} self
+          (DiamondIntegral.Section4.RESDimensionFreeCategory.product U V))
+        (HMul.hMul.{u_1, u_1, u_1} (DiamondIntegral.Section4.RESDimensionFreeCategory.Invariant.value.{u_1} self U)
+          (DiamondIntegral.Section4.RESDimensionFreeCategory.Invariant.value.{u_1} self V))
+  DiamondIntegral.Section4.RESDimensionFreeCategory.Invariant.iso.{u_1} : ∀
+      (U V : DiamondIntegral.Section4.RESDimensionFreeCategory.Object B)
+      (a : DiamondIntegral.Section4.RESDimensionFreeCategory.Iso U V),
+      Eq.{u_1 + 1} (DiamondIntegral.Section4.RESDimensionFreeCategory.Invariant.value.{u_1} self U)
+        (DiamondIntegral.Section4.RESDimensionFreeCategory.Invariant.value.{u_1} self V)
+  DiamondIntegral.Section4.RESDimensionFreeCategory.Invariant.empty.{u_1} : ∀
+      (U : DiamondIntegral.Section4.RESDimensionFreeCategory.Object B),
+      Eq.{1} U.domain EmptyCollection.emptyCollection.{0} →
+        Eq.{u_1 + 1} (DiamondIntegral.Section4.RESDimensionFreeCategory.Invariant.value.{u_1} self U) 0
+  DiamondIntegral.Section4.RESDimensionFreeCategory.Invariant.sum.{u_1} : ∀
+      (U V : DiamondIntegral.Section4.RESDimensionFreeCategory.Object B),
+      Eq.{u_1 + 1}
+        (DiamondIntegral.Section4.RESDimensionFreeCategory.Invariant.value.{u_1} self
+          (DiamondIntegral.Section4.RESDimensionFreeCategory.sum U V))
+        (HAdd.hAdd.{u_1, u_1, u_1} (DiamondIntegral.Section4.RESDimensionFreeCategory.Invariant.value.{u_1} self U)
+          (DiamondIntegral.Section4.RESDimensionFreeCategory.Invariant.value.{u_1} self V))
+constructor:
+  DiamondIntegral.Section4.RESDimensionFreeCategory.Invariant.mk.{u_1} {M : Type}
+    [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+    {B : SpecialTransformations.Section3.GammaParameters.Base} {R : Type u_1} [CommRing.{u_1} R]
+    (value : DiamondIntegral.Section4.RESDimensionFreeCategory.Object B → R)
+    (unit : Eq.{u_1 + 1} (value (DiamondIntegral.Section4.RESDimensionFreeCategory.unit B)) 1)
+    (product :
+      ∀ (U V : DiamondIntegral.Section4.RESDimensionFreeCategory.Object B),
+        Eq.{u_1 + 1} (value (DiamondIntegral.Section4.RESDimensionFreeCategory.product U V))
+          (HMul.hMul.{u_1, u_1, u_1} (value U) (value V)))
+    (iso :
+      ∀ (U V : DiamondIntegral.Section4.RESDimensionFreeCategory.Object B)
+        (a : DiamondIntegral.Section4.RESDimensionFreeCategory.Iso U V), Eq.{u_1 + 1} (value U) (value V))
+    (empty :
+      ∀ (U : DiamondIntegral.Section4.RESDimensionFreeCategory.Object B),
+        Eq.{1} U.domain EmptyCollection.emptyCollection.{0} → Eq.{u_1 + 1} (value U) 0)
+    (sum :
+      ∀ (U V : DiamondIntegral.Section4.RESDimensionFreeCategory.Object B),
+        Eq.{u_1 + 1} (value (DiamondIntegral.Section4.RESDimensionFreeCategory.sum U V))
+          (HAdd.hAdd.{u_1, u_1, u_1} (value U) (value V))) :
+    DiamondIntegral.Section4.RESDimensionFreeCategory.Invariant.{u_1} B R
+'DiamondIntegral.Section4.RESDimensionFreeCategory.Invariant' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.RESDimensionFreeCategory.freeMap.{u_1} : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (B : SpecialTransformations.Section3.GammaParameters.Base) →
+        {R : Type u_1} →
+          [inst_1 : CommRing.{u_1} R] →
+            DiamondIntegral.Section4.RESDimensionFreeCategory.Invariant.{u_1} B R →
+              RingHom.{0, u_1} (FreeCommRing.{0} (DiamondIntegral.Section4.RESDimensionFreeCategory.Object B)) R :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] B {R}
+    [CommRing.{u_1} R] f =>
+  FreeCommRing.lift.{0, u_1} (DiamondIntegral.Section4.RESDimensionFreeCategory.Invariant.value.{u_1} f)
+'DiamondIntegral.Section4.RESDimensionFreeCategory.freeMap' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RESDimensionFreeCategory.freeMap_symbol.{u_1} : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base) {R : Type u_1} [inst_1 : CommRing.{u_1} R]
+  (f : DiamondIntegral.Section4.RESDimensionFreeCategory.Invariant.{u_1} B R)
+  (U : DiamondIntegral.Section4.RESDimensionFreeCategory.Object B),
+  Eq.{u_1 + 1}
+    ((DiamondIntegral.Section4.RESDimensionFreeCategory.freeMap.{u_1} B f)
+      (DiamondIntegral.Section4.RESDimensionFreeCategory.symbol U))
+    (DiamondIntegral.Section4.RESDimensionFreeCategory.Invariant.value.{u_1} f U) :=
+⋯
+'DiamondIntegral.Section4.RESDimensionFreeCategory.freeMap_symbol' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RESDimensionFreeCategory.invariant_relation_zero.{u_1} : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base) {R : Type u_1} [inst_1 : CommRing.{u_1} R]
+  (f : DiamondIntegral.Section4.RESDimensionFreeCategory.Invariant.{u_1} B R)
+  (r : FreeCommRing.{0} (DiamondIntegral.Section4.RESDimensionFreeCategory.Object B)),
+  DiamondIntegral.Section4.RESDimensionFreeCategory.Relation B r →
+    Eq.{u_1 + 1} ((DiamondIntegral.Section4.RESDimensionFreeCategory.freeMap.{u_1} B f) r) 0 :=
+⋯
+'DiamondIntegral.Section4.RESDimensionFreeCategory.invariant_relation_zero' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.RESDimensionFreeCategory.lift.{u_1} : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (B : SpecialTransformations.Section3.GammaParameters.Base) →
+        {R : Type u_1} →
+          [inst_1 : CommRing.{u_1} R] →
+            DiamondIntegral.Section4.RESDimensionFreeCategory.Invariant.{u_1} B R →
+              RingHom.{0, u_1} (DiamondIntegral.Section4.RESDimensionFreeCategory.Ring B) R :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] B {R}
+    [CommRing.{u_1} R] f =>
+  Ideal.Quotient.lift.{0, u_1} (DiamondIntegral.Section4.RESDimensionFreeCategory.relationIdeal B)
+    (DiamondIntegral.Section4.RESDimensionFreeCategory.freeMap.{u_1} B f) ⋯
+'DiamondIntegral.Section4.RESDimensionFreeCategory.lift' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RESDimensionFreeCategory.lift_objectClass.{u_1} : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base) {R : Type u_1} [inst_1 : CommRing.{u_1} R]
+  (f : DiamondIntegral.Section4.RESDimensionFreeCategory.Invariant.{u_1} B R)
+  (U : DiamondIntegral.Section4.RESDimensionFreeCategory.Object B),
+  Eq.{u_1 + 1}
+    ((DiamondIntegral.Section4.RESDimensionFreeCategory.lift.{u_1} B f)
+      (DiamondIntegral.Section4.RESDimensionFreeCategory.objectClass U))
+    (DiamondIntegral.Section4.RESDimensionFreeCategory.Invariant.value.{u_1} f U) :=
+⋯
+'DiamondIntegral.Section4.RESDimensionFreeCategory.lift_objectClass' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RESDimensionFreeCategory.hom_ext.{u_1} : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base) {R : Type u_1} [inst_1 : CommRing.{u_1} R]
+  (f g : RingHom.{0, u_1} (DiamondIntegral.Section4.RESDimensionFreeCategory.Ring B) R),
+  (∀ (U : DiamondIntegral.Section4.RESDimensionFreeCategory.Object B),
+      Eq.{u_1 + 1} (f (DiamondIntegral.Section4.RESDimensionFreeCategory.objectClass U))
+        (g (DiamondIntegral.Section4.RESDimensionFreeCategory.objectClass U))) →
+    Eq.{u_1 + 1} f g :=
+⋯
+'DiamondIntegral.Section4.RESDimensionFreeCategory.hom_ext' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.RESDimensionFreeCategory.familyInvariant : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (B : SpecialTransformations.Section3.GammaParameters.Base) →
+        DiamondIntegral.Section4.RVOrdinaryFamilyPresentation.Invariant.{0}
+          (DiamondIntegral.Section4.RESOrdinaryDisjointPresentation.family B)
+          (DiamondIntegral.Section4.RESDimensionFreeCategory.Ring B) :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] B =>
+  DiamondIntegral.Section4.RVOrdinaryFamilyPresentation.Invariant.mk.{0}
+    (DiamondIntegral.Section4.RVOrdinaryDisjointInvariants.AdditiveInvariant.mk.{0}
+      (fun k a ha =>
+        DiamondIntegral.Section4.RESDimensionFreeCategory.objectClass
+          (DiamondIntegral.Section4.RESDimensionFreeCategory.ofRES { toChart := a, finite_values := ha }))
+      ⋯ ⋯)
+    ⋯ ⋯ ⋯
+'DiamondIntegral.Section4.RESDimensionFreeCategory.familyInvariant' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.RESDimensionFreeCategory.forgetLabel : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (B : SpecialTransformations.Section3.GammaParameters.Base) →
+        RingHom.{0, 0} (DiamondIntegral.Section4.RESOrdinaryRing.Ring B)
+          (DiamondIntegral.Section4.RESDimensionFreeCategory.Ring B) :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] B =>
+  RingHom.comp.{0, 0, 0}
+    (DiamondIntegral.Section4.RVOrdinaryFamilyPresentation.lift.{0}
+      (DiamondIntegral.Section4.RESOrdinaryDisjointPresentation.family B)
+      (DiamondIntegral.Section4.RESDimensionFreeCategory.familyInvariant B))
+    (RingEquiv.toRingHom.{0, 0}
+      (RingEquiv.symm.{0, 0} (DiamondIntegral.Section4.RESOrdinaryDisjointPresentation.equivalence B)))
+'DiamondIntegral.Section4.RESDimensionFreeCategory.forgetLabel' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RESDimensionFreeCategory.forgetLabel_objectClass : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base) {k : ℕ}
+  (a : DiamondIntegral.Section4.RVMeasuredCharts.RESChart B k),
+  Eq.{1}
+    ((DiamondIntegral.Section4.RESDimensionFreeCategory.forgetLabel B)
+      (DiamondIntegral.Section4.RESOrdinaryRing.objectClass a))
+    (DiamondIntegral.Section4.RESDimensionFreeCategory.objectClass
+      (DiamondIntegral.Section4.RESDimensionFreeCategory.ofRES a)) :=
+⋯
+'DiamondIntegral.Section4.RESDimensionFreeCategory.forgetLabel_objectClass' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.RESDimensionFreeCategory.forgetMeasured : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (B : SpecialTransformations.Section3.GammaParameters.Base) →
+        RingHom.{0, 0} (DiamondIntegral.Section4.RESChartRing.Ring B)
+          (DiamondIntegral.Section4.RESDimensionFreeCategory.Ring B) :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] B =>
+  RingHom.comp.{0, 0, 0} (DiamondIntegral.Section4.RESDimensionFreeCategory.forgetLabel B)
+    (DiamondIntegral.Section4.RESOrdinaryRing.forget B)
+'DiamondIntegral.Section4.RESDimensionFreeCategory.forgetMeasured' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RESDimensionFreeCategory.forgetMeasured_objectClass : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base) {k : ℕ}
+  (a : DiamondIntegral.Section4.RVMeasuredCharts.RESChart B k),
+  Eq.{1}
+    ((DiamondIntegral.Section4.RESDimensionFreeCategory.forgetMeasured B)
+      (DiamondIntegral.Section4.RESChartRing.objectClass a))
+    (DiamondIntegral.Section4.RESDimensionFreeCategory.objectClass
+      (DiamondIntegral.Section4.RESDimensionFreeCategory.ofRES a)) :=
+⋯
+'DiamondIntegral.Section4.RESDimensionFreeCategory.forgetMeasured_objectClass' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RESDimensionFreeCategory.dimensionFree_class_eq : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {k l : ℕ}
+  (a : DiamondIntegral.Section4.RVMeasuredCharts.RESChart B k)
+  (b : DiamondIntegral.Section4.RVMeasuredCharts.RESChart B l),
+  Eq.{1} (DiamondIntegral.Section4.RESDimensionFreeCategory.ofRES a)
+      (DiamondIntegral.Section4.RESDimensionFreeCategory.ofRES b) →
+    Eq.{1} (DiamondIntegral.Section4.RESDimensionFreeRing.objectClass a)
+      (DiamondIntegral.Section4.RESDimensionFreeRing.objectClass b) :=
+⋯
+'DiamondIntegral.Section4.RESDimensionFreeCategory.dimensionFree_class_eq' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RESDimensionFreeCategory.dimensionFree_empty : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {k : ℕ}
+  (a : DiamondIntegral.Section4.RVMeasuredCharts.RESChart B k),
+  Eq.{1} a.domain EmptyCollection.emptyCollection.{0} →
+    Eq.{1} (DiamondIntegral.Section4.RESDimensionFreeRing.objectClass a) 0 :=
+⋯
+'DiamondIntegral.Section4.RESDimensionFreeCategory.dimensionFree_empty' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RESDimensionFreeCategory.dimensionFree_coproduct : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {k : ℕ}
+  (a b : DiamondIntegral.Section4.RVMeasuredCharts.RESChart B k),
+  Eq.{1}
+    (DiamondIntegral.Section4.RESDimensionFreeRing.objectClass
+      (DiamondIntegral.Section4.RVTaggedCoproductProperties.resCoproduct a b))
+    (HAdd.hAdd.{0, 0, 0} (DiamondIntegral.Section4.RESDimensionFreeRing.objectClass a)
+      (DiamondIntegral.Section4.RESDimensionFreeRing.objectClass b)) :=
+⋯
+'DiamondIntegral.Section4.RESDimensionFreeCategory.dimensionFree_coproduct' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.RESDimensionFreeCategory.dimensionFreeInvariant : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (B : SpecialTransformations.Section3.GammaParameters.Base) →
+        DiamondIntegral.Section4.RESDimensionFreeCategory.Invariant.{0} B
+          (DiamondIntegral.Section4.RESDimensionFreeRing.Ring B) :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] B =>
+  DiamondIntegral.Section4.RESDimensionFreeCategory.Invariant.mk.{0}
+    (fun U =>
+      DiamondIntegral.Section4.RESDimensionFreeRing.objectClass
+        (DiamondIntegral.Section4.RESDimensionFreeCategory.chart U))
+    ⋯ ⋯ ⋯ ⋯ ⋯
+'DiamondIntegral.Section4.RESDimensionFreeCategory.dimensionFreeInvariant' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.RESDimensionFreeCategory.toDimensionFree : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (B : SpecialTransformations.Section3.GammaParameters.Base) →
+        RingHom.{0, 0} (DiamondIntegral.Section4.RESDimensionFreeCategory.Ring B)
+          (DiamondIntegral.Section4.RESDimensionFreeRing.Ring B) :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] B =>
+  DiamondIntegral.Section4.RESDimensionFreeCategory.lift.{0} B
+    (DiamondIntegral.Section4.RESDimensionFreeCategory.dimensionFreeInvariant B)
+'DiamondIntegral.Section4.RESDimensionFreeCategory.toDimensionFree' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RESDimensionFreeCategory.toDimensionFree_objectClass : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base)
+  (U : DiamondIntegral.Section4.RESDimensionFreeCategory.Object B),
+  Eq.{1}
+    ((DiamondIntegral.Section4.RESDimensionFreeCategory.toDimensionFree B)
+      (DiamondIntegral.Section4.RESDimensionFreeCategory.objectClass U))
+    (DiamondIntegral.Section4.RESDimensionFreeRing.objectClass
+      (DiamondIntegral.Section4.RESDimensionFreeCategory.chart U)) :=
+⋯
+'DiamondIntegral.Section4.RESDimensionFreeCategory.toDimensionFree_objectClass' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RESDimensionFreeCategory.forgetLabel_degreeIdeal : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base) (x : DiamondIntegral.Section4.RESOrdinaryRing.Ring B),
+  Membership.mem.{0, 0} (DiamondIntegral.Section4.RESDimensionFreeRing.degreeIdeal B) x →
+    Eq.{1} ((DiamondIntegral.Section4.RESDimensionFreeCategory.forgetLabel B) x) 0 :=
+⋯
+'DiamondIntegral.Section4.RESDimensionFreeCategory.forgetLabel_degreeIdeal' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.RESDimensionFreeCategory.fromDimensionFree : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (B : SpecialTransformations.Section3.GammaParameters.Base) →
+        RingHom.{0, 0} (DiamondIntegral.Section4.RESDimensionFreeRing.Ring B)
+          (DiamondIntegral.Section4.RESDimensionFreeCategory.Ring B) :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] B =>
+  Ideal.Quotient.lift.{0, 0} (DiamondIntegral.Section4.RESDimensionFreeRing.degreeIdeal B)
+    (DiamondIntegral.Section4.RESDimensionFreeCategory.forgetLabel B) ⋯
+'DiamondIntegral.Section4.RESDimensionFreeCategory.fromDimensionFree' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RESDimensionFreeCategory.fromDimensionFree_objectClass : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base) {k : ℕ}
+  (a : DiamondIntegral.Section4.RVMeasuredCharts.RESChart B k),
+  Eq.{1}
+    ((DiamondIntegral.Section4.RESDimensionFreeCategory.fromDimensionFree B)
+      (DiamondIntegral.Section4.RESDimensionFreeRing.objectClass a))
+    (DiamondIntegral.Section4.RESDimensionFreeCategory.objectClass
+      (DiamondIntegral.Section4.RESDimensionFreeCategory.ofRES a)) :=
+⋯
+'DiamondIntegral.Section4.RESDimensionFreeCategory.fromDimensionFree_objectClass' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RESDimensionFreeCategory.from_to : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base),
+  Eq.{1}
+    (RingHom.comp.{0, 0, 0} (DiamondIntegral.Section4.RESDimensionFreeCategory.fromDimensionFree B)
+      (DiamondIntegral.Section4.RESDimensionFreeCategory.toDimensionFree B))
+    (RingHom.id.{0} (DiamondIntegral.Section4.RESDimensionFreeCategory.Ring B)) :=
+⋯
+'DiamondIntegral.Section4.RESDimensionFreeCategory.from_to' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RESDimensionFreeCategory.to_from : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base),
+  Eq.{1}
+    (RingHom.comp.{0, 0, 0} (DiamondIntegral.Section4.RESDimensionFreeCategory.toDimensionFree B)
+      (DiamondIntegral.Section4.RESDimensionFreeCategory.fromDimensionFree B))
+    (RingHom.id.{0} (DiamondIntegral.Section4.RESDimensionFreeRing.Ring B)) :=
+⋯
+'DiamondIntegral.Section4.RESDimensionFreeCategory.to_from' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.RESDimensionFreeCategory.equivalence : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (B : SpecialTransformations.Section3.GammaParameters.Base) →
+        RingEquiv.{0, 0} (DiamondIntegral.Section4.RESDimensionFreeCategory.Ring B)
+          (DiamondIntegral.Section4.RESDimensionFreeRing.Ring B) :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] B =>
+  RingEquiv.ofRingHom.{0, 0} (DiamondIntegral.Section4.RESDimensionFreeCategory.toDimensionFree B)
+    (DiamondIntegral.Section4.RESDimensionFreeCategory.fromDimensionFree B) ⋯ ⋯
+'DiamondIntegral.Section4.RESDimensionFreeCategory.equivalence' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RESDimensionFreeCategory.equivalence_objectClass : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base) {k : ℕ}
+  (a : DiamondIntegral.Section4.RVMeasuredCharts.RESChart B k),
+  Eq.{1}
+    ((DiamondIntegral.Section4.RESDimensionFreeCategory.equivalence B)
+      (DiamondIntegral.Section4.RESDimensionFreeCategory.objectClass
+        (DiamondIntegral.Section4.RESDimensionFreeCategory.ofRES a)))
+    (DiamondIntegral.Section4.RESDimensionFreeRing.objectClass a) :=
+⋯
+'DiamondIntegral.Section4.RESDimensionFreeCategory.equivalence_objectClass' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RESDimensionFreeCategory.equivalence_objectClass_of_eq : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base) {k : ℕ}
+  (a : DiamondIntegral.Section4.RVMeasuredCharts.RESChart B k)
+  (U : DiamondIntegral.Section4.RESDimensionFreeCategory.Object B),
+  Eq.{1} (DiamondIntegral.Section4.RESDimensionFreeCategory.ofRES a) U →
+    Eq.{1}
+      ((DiamondIntegral.Section4.RESDimensionFreeCategory.equivalence B)
+        (DiamondIntegral.Section4.RESDimensionFreeCategory.objectClass U))
+      (DiamondIntegral.Section4.RESDimensionFreeRing.objectClass a) :=
+⋯
+'DiamondIntegral.Section4.RESDimensionFreeCategory.equivalence_objectClass_of_eq' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RESDimensionFreeCategory.equivalence_forgetLabel : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base),
+  Eq.{1}
+    (RingHom.comp.{0, 0, 0}
+      (RingEquiv.toRingHom.{0, 0} (DiamondIntegral.Section4.RESDimensionFreeCategory.equivalence B))
+      (DiamondIntegral.Section4.RESDimensionFreeCategory.forgetLabel B))
+    (DiamondIntegral.Section4.RESDimensionFreeRing.quotient B) :=
+⋯
+'DiamondIntegral.Section4.RESDimensionFreeCategory.equivalence_forgetLabel' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RESDimensionFreeCategory.equivalence_forgetMeasured : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base),
+  Eq.{1}
+    (RingHom.comp.{0, 0, 0}
+      (RingEquiv.toRingHom.{0, 0} (DiamondIntegral.Section4.RESDimensionFreeCategory.equivalence B))
+      (DiamondIntegral.Section4.RESDimensionFreeCategory.forgetMeasured B))
+    (RingHom.comp.{0, 0, 0} (DiamondIntegral.Section4.RESDimensionFreeRing.quotient B)
+      (DiamondIntegral.Section4.RESOrdinaryRing.forget B)) :=
+⋯
+'DiamondIntegral.Section4.RESDimensionFreeCategory.equivalence_forgetMeasured' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RESDimensionFreeCategory.equivalence_symm_objectClass : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base) {k : ℕ}
+  (a : DiamondIntegral.Section4.RVMeasuredCharts.RESChart B k),
+  Eq.{1}
+    ((RingEquiv.symm.{0, 0} (DiamondIntegral.Section4.RESDimensionFreeCategory.equivalence B))
+      (DiamondIntegral.Section4.RESDimensionFreeRing.objectClass a))
+    (DiamondIntegral.Section4.RESDimensionFreeCategory.objectClass
+      (DiamondIntegral.Section4.RESDimensionFreeCategory.ofRES a)) :=
+⋯
+'DiamondIntegral.Section4.RESDimensionFreeCategory.equivalence_symm_objectClass' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RESDimensionFreeCategory.definition_4_1_identification : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base),
+  ∃ e,
+    (∀ (U : DiamondIntegral.Section4.RESDimensionFreeCategory.Object B) (k : ℕ)
+        (a : DiamondIntegral.Section4.RVMeasuredCharts.RESChart B k),
+        Eq.{1} (DiamondIntegral.Section4.RESDimensionFreeCategory.ofRES a) U →
+          Eq.{1} (e (DiamondIntegral.Section4.RESDimensionFreeCategory.objectClass U))
+            (DiamondIntegral.Section4.RESDimensionFreeRing.objectClass a)) ∧
+      Eq.{1}
+          (RingHom.comp.{0, 0, 0} (RingEquiv.toRingHom.{0, 0} e)
+            (DiamondIntegral.Section4.RESDimensionFreeCategory.forgetLabel B))
+          (DiamondIntegral.Section4.RESDimensionFreeRing.quotient B) ∧
+        Eq.{1}
+            (RingHom.comp.{0, 0, 0} (RingEquiv.toRingHom.{0, 0} e)
+              (DiamondIntegral.Section4.RESDimensionFreeCategory.forgetMeasured B))
+            (RingHom.comp.{0, 0, 0} (DiamondIntegral.Section4.RESDimensionFreeRing.quotient B)
+              (DiamondIntegral.Section4.RESOrdinaryRing.forget B)) ∧
+          ∀ (U : DiamondIntegral.Section4.RESDimensionFreeCategory.Object B),
+            ∃ k a, Eq.{1} (DiamondIntegral.Section4.RESDimensionFreeCategory.ofRES a) U :=
+⋯
+'DiamondIntegral.Section4.RESDimensionFreeCategory.definition_4_1_identification' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
 def DiamondIntegral.Section2.GammaPiecewiseRationalAffineInput : {M : Type} →
   [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
     [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] → Prop :=

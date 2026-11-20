@@ -82,9 +82,9 @@ colored T001 review copy is preserved separately.
 - The unary function rings, convolution, multivariable Euler integration,
   Fubini, invariance, bounded comparison, stabilization, target rings,
   gradings, finite-union presentations of the graded rings and all stated
-  maps are constructed. The identification of the dimension-free RES ring
-  with the Grothendieck ring of the dimension-free category under finite
-  coproducts is not built.
+  maps are constructed. The dimension-free RES ring is identified with the
+  Grothendieck ring of the dimension-free category of Definition 4.1
+  (`RESDimensionFreeCategory.definition_4_1_identification`, November 19).
 - Not pursued (author-approved triage, November 18): the explanatory items
   listed in GAP-REPAIRS.md (Notation 4.13's unmeasured ring and inequality,
   K μΓ[0] ≅ ℤ[Γ_def] in Remark 4.6, parts of Remark 4.4, the second

@@ -164,8 +164,8 @@ from RV quantifier elimination with no hypotheses.
   (`RVT001AlternativeDescent.evaluation`) and the unnormalized ordinary range
   clause take the T001 presentation as a parameter; they can be instantiated
   with `Section3T001Integration` as done for the other remarks.
-- Definition 4.1's coproduct identification remains open, as recorded.
-  Remark 4.2's multivariate rational-affine input was resolved on
+- Definition 4.1's coproduct identification: resolved November 19 (last
+  section). Remark 4.2's multivariate rational-affine input was resolved on
   November 19 (next section).
 
 ## Multivariate rational-affine normal form (November 19)
@@ -206,3 +206,26 @@ from RV quantifier elimination with no hypotheses.
   only general QE criteria. Tau Ceti is not a dependency and was not added.
   The local proof therefore uses the already pinned RV quantifier
   elimination directly, without DOAG QE or a stable-embeddedness lemma.
+
+## Definition 4.1 — dimension-free category: resolved (November 19)
+
+- `RESDimensionFreeCategory.lean` builds the category of Definition 4.1
+  directly: `Object B` is a definable RV set over the original base with
+  finitely many value patterns (exactly a RES[*] object without its label),
+  and `Iso U V` is a definable bijection. `Ring B` is its Grothendieck ring,
+  presented by one generator per object with relations for definable
+  bijections, the empty object, the one-point unit, cartesian products
+  (`product`, domain `productSet`) and disjoint unions (`sum`, domain the
+  label-free tagged union `taggedSet`; `ofRES_coproduct` shows every
+  same-degree tagged coproduct of RES objects underlies `sum`).
+- Key facts: every object underlies a RES[k] object (`chartAt`, `chart`,
+  `exists_label`; the label replaces the RV coordinate 0 by 1 and pads with
+  1, so it is at most 2^n-to-one), and underlying bijections across degrees
+  are exactly the relations of `RESDimensionFreeRing.Ring`.
+- Headline: `RESDimensionFreeCategory.definition_4_1_identification`. The ring
+  isomorphism `equivalence B : Ring B ≃+* RESDimensionFreeRing.Ring B` sends
+  `[U]` to the class of any RES[k] object `(U, f)`
+  (`equivalence_objectClass_of_eq`) and commutes with the forgetful maps
+  `forgetLabel` (from the graded ordinary RES ring) and `forgetMeasured`
+  (from the measured one). Axioms: propext, Classical.choice, Quot.sound.
+  No Hrushovski–Kazhdan result is used; no existing statement changed.

@@ -22,6 +22,7 @@
     "multivariate_gamma_rational_affine_normal_form": "DiamondIntegral.Section4.Section3GammaAffineDischarge.input",
     "continuous_cell_decomposition_discharged": "DiamondIntegral.Section4.GammaContinuousDecomposition.exists_decomposition_discharged",
     "remark_4_2_euler_characteristic_discharged": "DiamondIntegral.Section4.GammaContinuousDecomposition.euler_characteristic_discharged",
+    "definition_4_1_dimension_free_grothendieck_ring": "DiamondIntegral.Section4.RESDimensionFreeCategory.definition_4_1_identification",
     "actual_affine_comparison_nonsurjectivity": "DiamondIntegral.Section4.RESAffineNonsurjective.remark_4_4"
   },
   "lean": "Lean (version 4.35.0, arm64-apple-darwin24.6.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
@@ -22243,6 +22244,298 @@
     },
     {
       "name": "DiamondIntegral.Section4.GammaContinuousDecomposition.dimensions_bounded_discharged",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.Object",
+      "kind": "structure"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.Iso",
+      "kind": "structure"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.ofRES",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.eq_of_domain",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.unzero",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.label",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.unzeroGraph",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.unzero_of_ne",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.unzero_zero",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.unzero_nonzero",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.unzeroGraph_definable",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.label_proper",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.label_finite_fibres",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.label_graph_definable",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.chartAt",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.chart",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.ofRES_chartAt",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.ofRES_chart",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.exists_label",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.Iso.refl",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.Iso.symm",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.Iso.toChart",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.Iso.ofChart",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.Iso.ofEq",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.unit",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.product",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.product_domain",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.taggedSet",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.coproduct_domain",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.sum",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.sum_domain",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.ofRES_coproduct",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.symbol",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.Relation",
+      "kind": "inductive"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.relationIdeal",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.Ring",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.objectClass",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.relation_zero",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.objectClass_unit",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.objectClass_product",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.objectClass_iso",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.objectClass_empty",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.objectClass_sum",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.Invariant",
+      "kind": "structure"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.freeMap",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.freeMap_symbol",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.invariant_relation_zero",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.lift",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.lift_objectClass",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.hom_ext",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.familyInvariant",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.forgetLabel",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.forgetLabel_objectClass",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.forgetMeasured",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.forgetMeasured_objectClass",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.dimensionFree_class_eq",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.dimensionFree_empty",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.dimensionFree_coproduct",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.dimensionFreeInvariant",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.toDimensionFree",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.toDimensionFree_objectClass",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.forgetLabel_degreeIdeal",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.fromDimensionFree",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.fromDimensionFree_objectClass",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.from_to",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.to_from",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.equivalence",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.equivalence_objectClass",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.equivalence_objectClass_of_eq",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.equivalence_forgetLabel",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.equivalence_forgetMeasured",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.equivalence_symm_objectClass",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RESDimensionFreeCategory.definition_4_1_identification",
       "kind": "theorem"
     }
   ],
@@ -49503,6 +49796,371 @@
       "Classical.choice",
       "Quot.sound",
       "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.Object": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.Iso": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.ofRES": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.eq_of_domain": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.unzero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.label": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.unzeroGraph": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.unzero_of_ne": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.unzero_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.unzero_nonzero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.unzeroGraph_definable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.label_proper": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.label_finite_fibres": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.label_graph_definable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.chartAt": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.chart": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.ofRES_chartAt": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.ofRES_chart": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.exists_label": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.Iso.refl": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.Iso.symm": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.Iso.toChart": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.Iso.ofChart": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.Iso.ofEq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.unit": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.product": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.product_domain": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.taggedSet": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.coproduct_domain": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.sum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.sum_domain": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.ofRES_coproduct": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.symbol": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.Relation": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.relationIdeal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.Ring": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.objectClass": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.relation_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.objectClass_unit": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.objectClass_product": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.objectClass_iso": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.objectClass_empty": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.objectClass_sum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.Invariant": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.freeMap": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.freeMap_symbol": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.invariant_relation_zero": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.lift": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.lift_objectClass": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.hom_ext": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.familyInvariant": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.forgetLabel": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.forgetLabel_objectClass": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.forgetMeasured": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.forgetMeasured_objectClass": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.dimensionFree_class_eq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.dimensionFree_empty": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.dimensionFree_coproduct": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.dimensionFreeInvariant": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.toDimensionFree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.toDimensionFree_objectClass": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.forgetLabel_degreeIdeal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.fromDimensionFree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.fromDimensionFree_objectClass": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.from_to": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.to_from": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.equivalence": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.equivalence_objectClass": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.equivalence_objectClass_of_eq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.equivalence_forgetLabel": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.equivalence_forgetMeasured": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.equivalence_symm_objectClass": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RESDimensionFreeCategory.definition_4_1_identification": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
     ]
   },
   "cited_input_definitions": {
@@ -50158,11 +50816,12 @@
     "section 4/GammaQECoefficientNames.lean": "bdbbdd08a59187bac559777a1cd530706019406f269f5de662da3286e63c1936",
     "section 4/Section3GammaAffineDischarge.lean": "2898bb1cb2b972038651bc3a17e80e0916cd0bb4932b058cb9dd1d42f55740ef",
     "section 4/Section4GammaAffineDischarged.lean": "2bb42e805cb7d66c4c16cde0b682b7461b980d4edc9f0563b76efd03dfec48e1",
-    "section 4/Section.lean": "5d2547b61d8d8b2b9dace172a95c53459552d5423178222adf51d4785a91cd98",
-    "section 4/verify.py": "c8dd5b639b9a02755c4c4424bd6ce0bc39dbd545172aee98f53b9a9d6b85bc71",
+    "section 4/RESDimensionFreeCategory.lean": "92c7d2ba85b36f10a4234d7238e76ef3d1ad1f7d045287b937ed4ecb70314db1",
+    "section 4/Section.lean": "cbecdacdedd465ee1327c40ab3796d66176f7901428c55807b70f90d5662b759",
+    "section 4/verify.py": "737c89996d6d02ad1da3b8feac0702416daea28741109af2c272a426053b629b",
     "DiamondIntegral.lean": "66d02be99d3e377f670ad569f36274aed59d735366ebb4b157993bdb166b553e",
     "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
-    "lakefile.toml": "7c83ffff6f9e68e12e8fded70a0441c3c1edb2c72c8923516b30d0d3f40eecfa",
+    "lakefile.toml": "1122ae02b4654ebbbadb84164ffa8513d36d40052dcd3059fe40f4cb1870992a",
     "lake-manifest.json": "4f0ab2b8a2144ce82d2d8910ec2beb6cf3f21fffcd610bd56cb0415b5bf88ac6",
     "ACCEPTED-CITED-RESULTS.md": "2a6f42ef5f82e18d502ec9bb71d626675f5e24eae45d44291d75b23d9ee906c9",
     "section 4/verification/CITED-INPUTS.md": "854aa8b2f36a2c956fd3faf0fdcda4ee9a5c55973c266ac0322babe2c5281573",

@@ -977,4 +977,5 @@ import «section 4».GammaQEFlatNormalFormArity
 import «section 4».GammaQECoefficientNames
 import «section 4».Section3GammaAffineDischarge
 import «section 4».Section4GammaAffineDischarged
+import «section 4».RESDimensionFreeCategory
 /-! Section 4 entry point. Exact unfinished scopes are recorded in COVERAGE.md. -/
