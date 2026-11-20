@@ -56,6 +56,7 @@ import «section 7».BalancedOrders
 import «section 7».MapClasses
 import «section 7».BalancedPiece
 import «section 7».Lemma723TwoFinal
+import «section 7».HeadStartK
 import «section 7».RestrictContractions
 import «section 7».LabelPieces
 import «section 7».PieceCombination
