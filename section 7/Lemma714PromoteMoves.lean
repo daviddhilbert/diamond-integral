@@ -194,4 +194,95 @@ theorem promoteDatum_valid : (promoteDatum hz hC hκ hs hreal hgamma D).Valid z 
 
 end PromoteDatum
 
+/-! ### Weights of restrictions -/
+
+namespace ChartSchema
+variable {d : ℕ} {W : ChartSchema B sp d} {P : Set (Fin (p + W.arity) → M)}
+  {hP : DefinableOverBase B (Fin.append sp (rvs W.arity)) P} {z : Fin p → M}
+
+theorem restrict_weightAt (hW : W.Valid z) {u : Fin W.arity → M} (hu : u ∈ (W.restrict P hP).row z) :
+    (W.restrict P hP).weightAt z u = W.weightAt z u := by
+  have hR := hW.restrict (P := P) (hP := hP)
+  have h1 := coordRow_coordAt hR hu
+  rw [restrict_coordRow] at h1
+  have hco : (W.restrict P hP).coordAt z u = W.coordAt z u :=
+    ((coordRow_iff hW u _).mp h1.1).2.symm
+  obtain ⟨c, hc⟩ := hR.vol_total u hu
+  have hv1 := ((volRow_iff hR u c).mp hc).2.2
+  have hc' := ((restrict_volRow z u c).mp hc).1
+  have hv2 := ((volRow_iff hW u c).mp hc').2.2
+  unfold weightAt
+  rw [hco, ← hv1, hv2]
+
+end ChartSchema
+
+/-! ### Row maps -/
+
+section RowMaps
+variable {C : Base (M := M)}
+
+/-- A `C`-definable bijection between two sets of rows that preserves the
+given weights. -/
+structure RowMap {a b : ℕ} (I : Set (Fin a → M)) (J : Set (Fin b → M))
+    (wa : (Fin a → M) → Values.Gamma (M := M)) (wb : (Fin b → M) → Values.Gamma (M := M)) where
+  F : (Fin a → M) → (Fin b → M)
+  graph : DefinableOverBase C (fun _ : Fin (b + a) => .rv) (graphOn I F)
+  bij : Set.BijOn F I J
+  weight : ∀ u ∈ I, wa u = wb (F u)
+
+namespace RowMap
+variable {a b c : ℕ} {I : Set (Fin a → M)} {J : Set (Fin b → M)} {K : Set (Fin c → M)}
+  {wa : (Fin a → M) → Values.Gamma (M := M)} {wb : (Fin b → M) → Values.Gamma (M := M)}
+  {wc : (Fin c → M) → Values.Gamma (M := M)}
+
+/-- Composition of row maps. -/
+def comp (G : RowMap (C := C) J K wb wc) (F : RowMap (C := C) I J wa wb) : RowMap (C := C) I K wa wc where
+  F := G.F ∘ F.F
+  graph := RVGraphComposition.graph_compose_definable C I J F.F G.F F.graph G.graph F.bij.mapsTo
+  bij := G.bij.comp F.bij
+  weight := fun u hu => (F.weight u hu).trans (G.weight _ (F.bij.mapsTo hu))
+
+/-- Changing the weight functions on the source and target. -/
+def congrWeight (F : RowMap (C := C) I J wa wb) {wa' : (Fin a → M) → Values.Gamma (M := M)}
+    {wb' : (Fin b → M) → Values.Gamma (M := M)} (ha : ∀ u ∈ I, wa' u = wa u) (hb : ∀ v ∈ J, wb v = wb' v) :
+    RowMap (C := C) I J wa' wb' where
+  F := F.F
+  graph := F.graph
+  bij := F.bij
+  weight := fun u hu => (ha u hu).trans ((F.weight u hu).trans (hb _ (F.bij.mapsTo hu)))
+
+/-- Changing the source and target sets along equalities. -/
+def congrSets (F : RowMap (C := C) I J wa wb) {I' : Set (Fin a → M)} {J' : Set (Fin b → M)}
+    (hI : I' = I) (hJ : J' = J) : RowMap (C := C) I' J' wa wb := by
+  subst hI hJ
+  exact F
+
+end RowMap
+
+/-- A measured isomorphism over `C`, restricted to a piece mapped onto a piece. -/
+def RowMap.ofIso {k : ℕ} {x y : Chart C k} (G : Iso x y) (I : Set (Fin x.arity → M)) (J : Set (Fin y.arity → M))
+    (hI : I ⊆ x.domain) (hIdef : DefinableOverBase C (fun _ : Fin x.arity => .rv) I)
+    (hIJ : Set.BijOn (isoMap G) I J) :
+    RowMap (C := C) I J x.correctedWeight y.correctedWeight where
+  F := isoMap G
+  graph := by
+    have h := graph_inter_definable x.domain I (isoMap G) (isoMap_graph G) hIdef
+    rwa [Set.inter_eq_self_of_subset_right hI] at h
+  bij := hIJ
+  weight := fun u hu => isoMap_weight G u (hI hu)
+
+variable {z : Fin p → M} (hz : ∀ i, sortEval (sp i) (z i)) (hC : Promotable B C z)
+
+include hz hC in
+/-- A row map between the valid rows of two schemata gives a valid isomorphism
+schema. -/
+theorem RowMap.exists_isoSchema {d : ℕ} {X Y : ChartSchema B sp d} (hX : X.Valid z) (hY : Y.Valid z)
+    (F : RowMap (C := C) (X.row z) (Y.row z) (X.weightAt z) (Y.weightAt z)) :
+    ∃ Φ : IsoSchema X Y, Φ.Valid z := by
+  refine Lemma714Schema.exists_isoSchema hz hC hX hY F.F ?_ F.bij F.weight
+  exact append_graph_definable (X.row z) F.F (fun u hu i => ChartSchema.row_rv hu i)
+    (fun u hu i => ChartSchema.row_rv (F.bij.mapsTo hu) i) F.graph
+
+end RowMaps
+
 end DiamondIntegral.Section7.Lemma714Schema
