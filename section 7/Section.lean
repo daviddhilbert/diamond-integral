@@ -71,6 +71,7 @@ import «section 7».MeasuredRVBounds
 import «section 7».ChartLifting
 import «section 7».ChartDiamondLift
 import «section 7».FibreRestriction
+import «section 7».TwoDimSlices
 
 /-! Entry point for the Section 7 formalization (integrating proper invariant
 sets), following the adopted manuscript with bounded variable apertures. -/
