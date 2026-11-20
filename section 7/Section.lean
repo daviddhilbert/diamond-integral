@@ -157,6 +157,7 @@ import «section 7».UnaryArrows
 import «section 7».MorphismClasses
 import «section 7».Proposition724
 import «section 7».Corollary715Moves
+import «section 7».RingClasses
 
 /-! Entry point for the Section 7 formalization (integrating proper invariant
 sets), following the adopted manuscript with bounded variable apertures. -/
