@@ -1,4 +1,4 @@
-import «section 7».Lemma720Uniform
+import «section 7».Lemma720EHU
 
 /-! Lemma 7.20, step 14: definability of the uniform cell data over the base. -/
 
