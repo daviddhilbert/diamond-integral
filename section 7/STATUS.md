@@ -86,7 +86,8 @@ arbitrary parameter base and take no input beyond the ACVF model.
 - **Temporary input: Lemma 7.20.** By the author's decision of 2026-11-19
   ("Input + parallel build", as for 7.14), 7.20 is stated as the explicit
   replaceable input `TwoCellInput.Lemma720 M G` (standard contraction of a
-  proper invariant A ⊆ VF² × RVʳ with fibres 2-cells definable over T ∪ s;
+  proper invariant A ⊆ VF² × RVʳ with fibres 2-cells, cell data uniform in s and
+  definable over T;
   GAP-REPAIRS 13). Results that use it take `(h720 : Lemma720 M G)` as a
   hypothesis. A separate session proves it; `TwoCellInput.lean` is kept stable.
 - **Temporary input: Lemma 7.14.** By the author's decision of 2026-11-19

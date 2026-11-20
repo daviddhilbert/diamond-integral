@@ -143,8 +143,13 @@ formalization convention. No manuscript edit has been made for them.
       contracts x_{e 1}, which therefore carries the RV-discs t^♯ + ε(a) of
       Definition 7.19. The paper leaves σ and the orientation implicit; σ is
       existential, as printed.
-    - Definability: Definition 7.17 asks the set and the positioning bijection
-      to be definable. The input asks the cell, the graph of ε, the paradigm and,
-      for balanced cells, the other paradigm to be definable over T ∪ s, the
-      reading of "A_s is a 2-cell" with s as a parameter. Uniformity in s, which
-      7.22 obtains by compactness, is not part of the statement, as printed.
+    - Uniform cell data: the input gives the positioning function ε(s, ·), the
+      paradigm t(s), the second paradigm t₁(s) of a balanced cell and the kind of
+      each cell as functions of s, with graphs and kind pieces definable over T
+      (`UniformTwoCells`). Definition 7.17 asks the set and the positioning
+      bijection to be definable, and Lemma 7.22 relies on 7.20's proof being
+      "uniform in such labels": it applies Lemma 6.38 once to the family of
+      positioning functions with s as a retained label. A positioning function
+      is only determined up to a ball, so this uniformity cannot be recovered
+      from fibrewise data without definable choice; it is part of the statement
+      (amended the same day, before the 7.20 session began proving it).
