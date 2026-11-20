@@ -164,6 +164,7 @@ import «section 7».Theorem726
 import «section 7».DiamondProducts
 import «section 7».LiftProducts
 import «section 7».Corollary727
+import «section 7».Corollary727Rings
 
 /-! Entry point for the Section 7 formalization (integrating proper invariant
 sets), following the adopted manuscript with bounded variable apertures. -/
