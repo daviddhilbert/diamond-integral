@@ -677,4 +677,255 @@ theorem positionMap_home (h00 : M ⊨ Axioms.ACVF00) (hc : CanonicalStructure.Is
 
 end Homeomorphism
 
+/-! ### Volume forms depending on the labels -/
+
+section Forms
+
+variable {S : Set M} {q : ℕ}
+variable {X : DefSet (rawMixedSpace (M := M) 2 q) S}
+variable {ε : (Fin q → RVInfinity M) → VF M → VF M} {t : (Fin q → RVInfinity M) → RV M}
+variable {t₁ : (Fin q → RVInfinity M) → RVInfinity M}
+
+/-- The labels of the nonempty cells of `X`. -/
+def cellLabels (X : DefSet (rawMixedSpace (M := M) 2 q) S) : Set (Fin q → RVInfinity M) :=
+  {u | (cell X u).Nonempty}
+
+/-- The graph of an RV-valued label function, given over the labels of `X`. -/
+theorem rvScalarGraph_of_labels (f : (Fin q → RVInfinity M) → RV M)
+    (hf : S.Definable LRV {z : Fin (1 + q) → M | ∃ u x, (∃ y, (![x, y], u) ∈ X.carrier) ∧
+      z = Fin.append ![(f u).val.val] (rvValues u)}) :
+    S.Definable LRV (rvScalarFunctionGraph (cellLabels X) f) := by
+  let κ : Fin (1 + q) → Fin q ⊕ Fin 1 := Fin.append ![Sum.inr 0] Sum.inl
+  convert hf.preimage_comp κ using 1
+  ext z
+  constructor
+  · rintro ⟨u, ⟨⟨x, y⟩, hxy⟩, huz, hfz⟩
+    refine ⟨u, x, ⟨y, hxy⟩, ?_⟩
+    funext i
+    refine Fin.addCases (fun j => ?_) (fun j => ?_) i
+    · rw [Fin.fin_one_eq_zero j]
+      simp only [κ, Function.comp_apply, Fin.append_left, Matrix.cons_val_zero]
+      exact hfz.symm
+    · simp only [κ, Function.comp_apply, Fin.append_right]
+      exact (congrFun huz j).symm
+  · rintro ⟨u, x, ⟨y, hxy⟩, he⟩
+    have h0 := congrFun he (Fin.castAdd q 0)
+    simp only [κ, Function.comp_apply, Fin.append_left, Matrix.cons_val_zero] at h0
+    refine ⟨u, ⟨(x, y), hxy⟩, ?_, h0.symm⟩
+    funext j
+    have hj := congrFun he (Fin.natAdd 1 j)
+    simp only [κ, Function.comp_apply, Fin.append_right] at hj
+    exact hj.symm
+
+/-- A Gamma form depending only on the labels has a definable graph. -/
+theorem mixedGammaGraph_labels_definable {n : ℕ} (A : DefSet (rawMixedSpace (M := M) n q) S)
+    (U : Set (Fin q → RVInfinity M)) (hAU : ∀ p ∈ A.carrier, p.2 ∈ U)
+    (g : (Fin q → RVInfinity M) → Gamma M) (hg : S.Definable LRV (rvGammaFunctionGraph U g)) :
+    S.Definable LRV (mixedGammaGraph A.carrier (fun p => g p.2)) := by
+  let τ : Fin q ⊕ Fin 1 → Fin (n + q) ⊕ Fin 1 := Sum.elim (fun j => Sum.inl (Fin.natAdd n j)) Sum.inr
+  have h := ((mixed_tuple_image_definable S A.carrier A.definable).preimage_comp
+    (Sum.inl : Fin (n + q) → Fin (n + q) ⊕ Fin 1)).inter (hg.preimage_comp τ)
+  convert h using 1
+  ext z
+  constructor
+  · rintro ⟨hNZ, x, hx, hxz, hval⟩
+    refine ⟨⟨x, hx, hxz⟩, x.2, hAU x hx, ?_, hNZ, hval⟩
+    funext j
+    have h2 := congrFun hxz (Fin.natAdd n j)
+    simp only [mixedTuple, Fin.append_right] at h2
+    exact h2
+  · rintro ⟨⟨x, hx, hxz⟩, u, _, huz, hNZ, hval⟩
+    have hux : u = x.2 := by
+      funext j
+      apply Subtype.ext
+      have h1 := congrFun huz j
+      have h2 := congrFun hxz (Fin.natAdd n j)
+      simp only [mixedTuple, Fin.append_right] at h2
+      exact h1.trans h2.symm
+    subst hux
+    exact ⟨hNZ, x, hx, hxz, hval⟩
+
+/-- **A label Gamma map**: `p ↦ vrv(f(p.2))` on a family whose labels are cell
+labels of `X`, for an RV-valued `f` with definable graph over the labels of `X`. -/
+def labelGammaMap {n : ℕ} (A : DefSet (rawMixedSpace (M := M) n q) S)
+    (hAX : ∀ p ∈ A.carrier, p.2 ∈ cellLabels X) (f : (Fin q → RVInfinity M) → RV M)
+    (hf : S.Definable LRV {z : Fin (1 + q) → M | ∃ u x, (∃ y, (![x, y], u) ∈ X.carrier) ∧
+      z = Fin.append ![(f u).val.val] (rvValues u)}) : Map A (DefSet.univ (rawGammaPresentation (M := M)) S) :=
+  gammaFormMap A (fun p => GammaParameters.codeValue (f p.2).val.val)
+    (mixedGammaGraph_labels_definable A (cellLabels X) hAX _
+      (rvGammaFunctionGraph_of_rv_definable S _ f (rvScalarGraph_of_labels f hf)))
+
+theorem labelGammaMap_value {n : ℕ} (A : DefSet (rawMixedSpace (M := M) n q) S)
+    (hAX : ∀ p ∈ A.carrier, p.2 ∈ cellLabels X) (f : (Fin q → RVInfinity M) → RV M)
+    (hf : S.Definable LRV {z : Fin (1 + q) → M | ∃ u x, (∃ y, (![x, y], u) ∈ X.carrier) ∧
+      z = Fin.append ![(f u).val.val] (rvValues u)}) (p : A) :
+    gammaMapValue (labelGammaMap A hAX f hf) p = rvRadius (f p.val.2) :=
+  Subtype.ext (nonzero_rv_codeValue_val (f p.val.2).val (f p.val.2).property)
+
+theorem labelGammaMap_extension {n : ℕ} (A : DefSet (rawMixedSpace (M := M) n q) S)
+    (hAX : ∀ p ∈ A.carrier, p.2 ∈ cellLabels X) (f : (Fin q → RVInfinity M) → RV M)
+    (hf : S.Definable LRV {z : Fin (1 + q) → M | ∃ u x, (∃ y, (![x, y], u) ∈ X.carrier) ∧
+      z = Fin.append ![(f u).val.val] (rvValues u)}) {p : Mixed M n q} (hp : p ∈ A.carrier) :
+    gammaFormExtension (labelGammaMap A hAX f hf) p = rvRadius (f p.2) := by
+  rw [gammaFormExtension_at _ ⟨p, hp⟩]
+  exact labelGammaMap_value A hAX f hf ⟨p, hp⟩
+
+theorem labelGammaMap_levels_open {G : Type} [LinearOrderedCommGroupWithZero G] [Valued (VF M) G]
+    (hv : ∀ x y : VF M, VFValued.predV x y ↔ Valued.v x ≤ Valued.v y)
+    (A : DefSet (rawMixedSpace (M := M) 1 q) S) (hA : ProperInvariant S A.carrier)
+    (hAX : ∀ p ∈ A.carrier, p.2 ∈ cellLabels X) (f : (Fin q → RVInfinity M) → RV M)
+    (hf : S.Definable LRV {z : Fin (1 + q) → M | ∃ u x, (∃ y, (![x, y], u) ∈ X.carrier) ∧
+      z = Fin.append ![(f u).val.val] (rvValues u)}) (u : Fin q → RVInfinity M) (γ : Gamma M) :
+    IsOpen {a : Fin 1 → VF M | (a, u) ∈ A.carrier ∧ gammaFormExtension (labelGammaMap A hAX f hf) (a, u) = γ} := by
+  by_cases hγ : rvRadius (f u) = γ
+  · have he : {a : Fin 1 → VF M | (a, u) ∈ A.carrier ∧
+        gammaFormExtension (labelGammaMap A hAX f hf) (a, u) = γ} = vfFibre A.carrier u := by
+      ext a
+      exact ⟨fun h => h.1, fun h => ⟨h, (labelGammaMap_extension A hAX f hf h).trans hγ⟩⟩
+    rw [he]
+    exact (hA.clopen_fibres hv u).isOpen
+  · have he : {a : Fin 1 → VF M | (a, u) ∈ A.carrier ∧
+        gammaFormExtension (labelGammaMap A hAX f hf) (a, u) = γ} = ∅ := by
+      ext a
+      exact ⟨fun h => hγ ((labelGammaMap_extension A hAX f hf h.1).symm.trans h.2), False.elim⟩
+    rw [he]
+    exact isOpen_empty
+
+omit [M ⊨ Axioms.ACVF] in
+theorem firstFamily_labels : ∀ p ∈ (firstFamily X).carrier, p.2 ∈ cellLabels X :=
+  fun p hp => cell_nonempty_of_first ((mem_firstFamily p.1 p.2).mp hp)
+
+theorem secondFamily_labels : ∀ p ∈ (secondFamily X).carrier, p.2 ∈ cellLabels X := by
+  intro p hp
+  obtain ⟨q', hq', _⟩ := (mem_secondFamily p.1 p.2).mp hp
+  exact ⟨q', hq'⟩
+
+/-- The graph of the second paradigm over the labels of `X`. -/
+theorem secondParadigm_graph (H : BalancedShearInput X ε t t₁)
+    (ht₁ : S.Definable LRV {z : Fin (1 + q) → M | ∃ u x, (∃ y, (![x, y], u) ∈ X.carrier) ∧
+      z = Fin.append ![(t₁ u).val] (rvValues u)}) :
+    S.Definable LRV {z : Fin (1 + q) → M | ∃ u x, (∃ y, (![x, y], u) ∈ X.carrier) ∧
+      z = Fin.append ![(secondParadigm t₁ u).val.val] (rvValues u)} := by
+  convert ht₁ using 1
+  ext z
+  constructor
+  · rintro ⟨u, x, ⟨y, hxy⟩, rfl⟩
+    exact ⟨u, x, ⟨y, hxy⟩, by rw [secondParadigm_val H (nonempty_cell_of_mem hxy)]⟩
+  · rintro ⟨u, x, ⟨y, hxy⟩, rfl⟩
+    exact ⟨u, x, ⟨y, hxy⟩, by rw [secondParadigm_val H (nonempty_cell_of_mem hxy)]⟩
+
+/-- The form `ω(a, u) = vrv(t(u))` on `A₁`. -/
+def sourceGammaForm (H : BalancedShearInput X ε t t₁) :
+    Map (firstFamily X) (DefSet.univ (rawGammaPresentation (M := M)) S) :=
+  labelGammaMap (firstFamily X) firstFamily_labels t H.paradigmGraph
+
+/-- The form `σ(b, u) = vrv(t₁(u))` on `A₂`. -/
+def targetGammaForm (H : BalancedShearInput X ε t t₁)
+    (ht₁ : S.Definable LRV {z : Fin (1 + q) → M | ∃ u x, (∃ y, (![x, y], u) ∈ X.carrier) ∧
+      z = Fin.append ![(t₁ u).val] (rvValues u)}) :
+    Map (secondFamily X) (DefSet.univ (rawGammaPresentation (M := M)) S) :=
+  labelGammaMap (secondFamily X) secondFamily_labels (secondParadigm t₁) (secondParadigm_graph H ht₁)
+
+end Forms
+
+/-! ### The Jacobian of the positioning map -/
+
+section Jacobian
+
+variable {G : Type} [LinearOrderedCommGroupWithZero G] [Valued (VF M) G]
+variable {S : Set M} {q : ℕ}
+variable {X : DefSet (rawMixedSpace (M := M) 2 q) S}
+variable {ε : (Fin q → RVInfinity M) → VF M → VF M} {t : (Fin q → RVInfinity M) → RV M}
+variable {t₁ : (Fin q → RVInfinity M) → RVInfinity M}
+
+/-- The leading term of the Jacobian of `ε(u, ·)` is its slope. -/
+theorem jacobian_rv_eq (H : BalancedShearInput X ε t t₁) (a : firstFamily X) {J : VF M}
+    (hJ : HasMixedVFJacobianAt (positionMap H) a J) {s : RV M}
+    (hs : HasSlope (first (cell X a.val.2)) (ε a.val.2) s) : rv M J = s.val := by
+  obtain ⟨F, hF, A, hpart, hdet⟩ := hJ
+  have hJ0 : A 0 0 = J := by rw [← hdet, Matrix.det_fin_one]
+  have hp := hpart 0 0
+  rw [hJ0] at hp
+  have hcenter : F a.val.1 = (positionMap H a).val.1 := hF.center
+  obtain ⟨ρ, hρ⟩ := hF
+  let σ := rvRadius s
+  obtain ⟨δ, hδ⟩ := hp σ
+  obtain ⟨γ, hγ⟩ := exists_gt (max δ ρ)
+  obtain ⟨r, hr, hval⟩ := SpecialTransformations.Section8.gamma_has_vf_representative γ
+  have hrδ : δ.val < Values.vfValueHom r := by
+    rw [hval]
+    exact (show δ ≤ max δ ρ from le_max_left _ _).trans_lt hγ
+  let a₁ : Fin 1 → VF M := a.val.1
+  let x : Fin 1 → VF M := a₁ + Pi.single (0 : Fin 1) r
+  have hx : x ∈ vfBall a.val.1 ρ := by
+    intro i
+    rw [Fin.fin_one_eq_zero i]
+    change ρ.val < Values.vfValueHom (a.val.1 0 + (Pi.single (0 : Fin 1) r : Fin 1 → VF M) 0 - a.val.1 0)
+    rw [Pi.single_eq_same, add_sub_cancel_left, hval]
+    exact (show ρ ≤ max δ ρ from le_max_right _ _).trans_lt hγ
+  obtain ⟨hxA, hFx⟩ := hρ x hx
+  have hFx0 : F x 0 = ε a.val.2 (x 0) := (congrFun (congrArg Prod.fst hFx) 0).symm
+  have hFa0 : F a.val.1 0 = ε a.val.2 (a.val.1 0) := congrFun hcenter 0
+  have hx0 : x 0 = a.val.1 0 + r := by
+    change a.val.1 0 + (Pi.single (0 : Fin 1) r : Fin 1 → VF M) 0 = _
+    rw [Pi.single_eq_same]
+  have hxf : x 0 ∈ first (cell X a.val.2) := (mem_firstFamily _ _).mp hxA
+  have haf : a.val.1 0 ∈ first (cell X a.val.2) := (mem_firstFamily _ _).mp a.property
+  have hest := hδ r hr hrδ
+  change σ.val * Values.vfValueHom r < Values.vfValueHom (F x 0 - F a.val.1 0 - J * r) at hest
+  rw [hFx0, hFa0] at hest
+  let D := ε a.val.2 (x 0) - ε a.val.2 (a.val.1 0)
+  have hDrv : rv M D = s.val * rv M r := by
+    have h := hs _ hxf _ haf
+    rw [hx0, add_sub_cancel_left] at h
+    exact h
+  have hr0 : rv M r ≠ 0 := (RVOperations.rv_ne_zero r).mpr hr
+  have hs0 : s.val ≠ 0 := fun he => s.property (he.trans rvZero_eq_zero.symm)
+  have hD0 : D ≠ 0 := by
+    intro he
+    have h := hDrv
+    rw [he, rv_zero] at h
+    exact mul_ne_zero hs0 hr0 (h.symm.trans rvZero_eq_zero)
+  have hDval : vfValue D = σ.val * vfValue r := by
+    rw [vfValue_of_rv_eq hDrv, RVOperations.vrv_mul]
+    rfl
+  have hclose : vfValue D < vfValue (J * r - D) := by
+    rw [hDval, show J * r - D = -(D - J * r) by abel, vfValue_neg']
+    exact hest
+  have hJr : rv M (J * r) = rv M D := rv_eq_of_value_close hD0 hclose
+  have hmul : rv M (J * r) = rv M J * rv M r := RVOperations.rv_mul J r
+  rw [hmul, hDrv] at hJr
+  exact mul_right_cancel₀ hr0 hJr
+
+/-- **The Jacobian of the positioning map** at a generic point has value
+`vrv(t(u)) / vrv(t₁(u))`, the value of the slope (Remark 7.18). -/
+theorem positionMap_jacobian (h00 : M ⊨ Axioms.ACVF00) (hc : CanonicalStructure.IsCanonical (M := M))
+    {κ : Cardinal} (hκ : Cardinal.aleph0 < κ) (hs : Saturated M κ) (hsmall : Cardinal.mk S < κ)
+    (hv : ∀ x y : VF M, VFValued.predV x y ↔ Valued.v x ≤ Valued.v y)
+    (H : BalancedShearInput X ε t t₁) (a : firstFamily X)
+    (ha : AlgebraicIndependent (vfParameterField S) a.val.1) :
+    ∃ J : VF M, HasMixedVFJacobianAt (positionMap H) a J ∧
+      vfValue J * (rvRadius (secondParadigm t₁ a.val.2)).val = (rvRadius (t a.val.2)).val := by
+  have : CharZero (VF M) := vf_charZero_of_model00 h00
+  obtain ⟨L, F, hF, hD⟩ := mixedDifferentiableAt_of_independent hc hκ.le hs hsmall hv (positionMap H) a ha
+  have hJ : HasMixedVFJacobianAt (positionMap H) a (LinearMap.toMatrix' L).det := ⟨F, hF, hD.hasJacobianAt⟩
+  refine ⟨_, hJ, ?_⟩
+  have haf : a.val.1 0 ∈ first (cell X a.val.2) := (mem_firstFamily _ _).mp a.property
+  have hne := cell_nonempty_of_first haf
+  have hb := H.balanced a.val.2 hne
+  obtain ⟨_, _, s, hsl⟩ := hb.rvAffine
+  rw [vfValue_of_rv_eq (jacobian_rv_eq H a hJ hsl)]
+  have he := slope_eq hb (hne.image Prod.fst) hsl
+  have h := congrArg Values.vrv he
+  rw [RVOperations.vrv_mul, RVOperations.vrv_mul] at h
+  have h1 : Values.vrv (rv M (-1)) = 1 := by
+    change vfValue (-1 : VF M) = 1
+    rw [vfValue_neg']
+    exact Values.vf_value_one
+  rw [h1, one_mul] at h
+  rw [rvRadius_val, rvRadius_val, secondParadigm_val H hne]
+  exact h
+
+end Jacobian
+
 end DiamondIntegral.Section7.BalancedMatching
