@@ -352,4 +352,76 @@ theorem cls_fibre_eq (hF : (famSchema hc A ω π N).Valid (vfValues a))
 
 end FibreIso
 
+/-! ### A uniform fibre bound for the family -/
+
+section Bound
+variable {T : LRV.Substructure M} (A : DefSet (rawMixedSpace (M := M) m r) (T : Set M))
+  (ω : Map A (DefSet.univ (rawGammaPresentation (M := M)) (T : Set M))) (π : Fin k → Fin r)
+
+include hc ω in
+theorem famCoord_rows_finite
+    (hFin : ∀ (a : Fin m → VF M) (t : Fin k → RVInfinity M), {u : Fin r → RVInfinity M | (a, u) ∈ A.carrier ∧ u ∘ π = t}.Finite)
+    (a : Fin m → VF M) (y : Fin k → M) (hy : ∀ j, sortEval SortTag.rv (y j)) :
+    {u : Fin r → M | Fin.append (Fin.append (vfValues a) u) y ∈ famCoord A π}.Finite := by
+  let t' : Fin k → RVInfinity M := fun j => ⟨y j, hy j⟩
+  apply ((hFin a t').image rvValues).subset
+  intro u hu
+  obtain ⟨hu', rfl⟩ := (famSchema_coordRow hc A ω π 0 a u y).mp hu
+  obtain ⟨t, ht, rfl⟩ := (famSchema_mem_row hc A ω π 0 a u).mp hu'
+  exact ⟨t, ⟨ht, funext fun j => Subtype.ext rfl⟩, rfl⟩
+
+include hc ω in
+theorem exists_fam_bound {κ : Cardinal} (hκ : Cardinal.aleph0 ≤ κ) (hs : Saturated M κ)
+    (hsmall : Cardinal.mk (T : Set M) < κ)
+    (hFin : ∀ (a : Fin m → VF M) (t : Fin k → RVInfinity M), {u : Fin r → RVInfinity M | (a, u) ∈ A.carrier ∧ u ∘ π = t}.Finite) :
+    ∃ N : ℕ, ∀ (a : Fin m → VF M) (y : Fin k → M), (∀ j, sortEval SortTag.rv (y j)) →
+      {u : Fin r → M | Fin.append (Fin.append (vfValues a) u) y ∈ famCoord A π}.ncard ≤ N := by
+  let sa := Fin.append (vfs m) (rvs k)
+  let R : Set ((Fin (m + k) → M) × (Fin r → M)) :=
+    {q | Fin.append q.1 q.2 ∘ swapLastBlockCoordinates m k r ∈ famCoord A π ∧
+      Fin.append q.1 q.2 ∈ sortedUniverse (Fin.append sa (rvs r))}
+  have hR : DefinableOverBase (⟨(T : Set M), ∅⟩ : Base (M := M)) (Fin.append sa (rvs r))
+      {v | ((fun i => v (Fin.castAdd r i)), fun j => v (Fin.natAdd (m + k) j)) ∈ R} := by
+    convert (famCoord_definable hc A π).preimage_real (Fin.append sa (rvs r)) (swapLastBlockCoordinates m k r) using 1
+    ext v
+    simp only [R, Set.mem_setOf_eq, Fin.append_castAdd_natAdd]
+  have hgamma : Cardinal.mk ((⟨(T : Set M), ∅⟩ : Base (M := M)).gamma) < κ := by
+    rw [Cardinal.mk_eq_zero]
+    exact lt_of_lt_of_le Cardinal.aleph0_pos hκ
+  obtain ⟨N, hN⟩ := gamma_uniform_finite_tuple_rows hκ hs hsmall hgamma sa (rvs r) (sortedUniverse sa)
+    (real_definableOverBase _ sa _ (sortedUniverse_definable _ sa)) R hR (by
+      intro w hw
+      let a : Fin m → VF M := fun i => ⟨w (Fin.castAdd k i), by
+        have := hw (Fin.castAdd k i)
+        rw [show sa (Fin.castAdd k i) = SortTag.vf from Fin.append_left _ _ i] at this
+        exact this⟩
+      have hy : ∀ j, sortEval SortTag.rv (w (Fin.natAdd m j)) := fun j => by
+        have := hw (Fin.natAdd m j)
+        rw [show sa (Fin.natAdd m j) = SortTag.rv from Fin.append_right _ _ j] at this
+        exact this
+      apply (famCoord_rows_finite hc A ω π hFin a _ hy).subset
+      intro u hu
+      have h1 := hu.1
+      have he : Fin.append w u = Fin.append (Fin.append (vfValues a) (fun j => w (Fin.natAdd m j))) u := by
+        congr 1
+        funext i
+        refine Fin.addCases (fun l => ?_) (fun l => ?_) i <;> simp [a, vfValues]
+      rw [he, append_swapLastBlocks] at h1
+      exact h1)
+  refine ⟨N, fun a y hy => ?_⟩
+  have hw : Fin.append (vfValues a) y ∈ sortedUniverse sa := sorted_append (fun i => (a i).property) hy
+  have h := (hN _ hw).2
+  convert h using 2
+  ext u
+  simp only [R, Set.mem_setOf_eq, append_swapLastBlocks]
+  constructor
+  · intro hu
+    refine ⟨hu, sorted_append hw (fun j => ?_)⟩
+    have := (famCoord_definable hc A π).proper _ hu (Fin.castAdd k (Fin.natAdd m j))
+    rw [Fin.append_left, Fin.append_right, Fin.append_left, Fin.append_right] at this
+    exact this
+  · exact fun h => h.1
+
+end Bound
+
 end DiamondIntegral.Section7.Lemma714Schema
