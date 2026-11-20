@@ -728,6 +728,135 @@ def indEndIso :
         graph_aperture _ _ hw
       rw [DatumSchema.endSchema_volAt, DatumSchema.endSchema_coordAt (hD _ hk) hr, hap])
 
+/-- Index map reading `(x, u, s)` off a Section 4 shell point of the indexed chart. -/
+def shellKeyIdx (q a : ℕ) {C : Base (M := M)} {k : ℕ} (r : Chart C k) (h : r.arity = q + a) :
+    Fin (q + (a + 1)) → Fin (1 + (1 + r.arity)) :=
+  Fin.append (fun i => xIdx r (Fin.cast h.symm (Fin.castAdd a i)))
+    (Fin.append (fun j => xIdx r (Fin.cast h.symm (Fin.natAdd q j))) (fun _ => sIdx r))
+
+theorem comp_shellKeyIdx (w : Fin (1 + (1 + (q + D.chart.arity))) → M) :
+    w ∘ shellKeyIdx q D.chart.arity (Q.indChart D.chart (Q.indDatum_chart_valid hD)) rfl =
+      Fin.append (keyOf (w ∘ xIdx (Q.indChart D.chart (Q.indDatum_chart_valid hD))))
+        (Fin.append (rowOf (w ∘ xIdx (Q.indChart D.chart (Q.indDatum_chart_valid hD))))
+          (fun _ : Fin 1 => w (sIdx (Q.indChart D.chart (Q.indDatum_chart_valid hD))))) := by
+  funext i
+  refine Fin.addCases (fun l => ?_) (fun l => ?_) i
+  · simp [shellKeyIdx, keyOf]
+  · refine Fin.addCases (fun l' => ?_) (fun l' => ?_) l <;> simp [shellKeyIdx, rowOf]
+
+theorem indShell_mapsTo {w : Fin (1 + (1 + (q + D.chart.arity))) → M}
+    (hw : w ∈ shellDomain (Q.indChart D.chart (Q.indDatum_chart_valid hD)) (Q.indAperture hD hΔ)) :
+    w ∘ shellKeyIdx q D.chart.arity (Q.indChart D.chart (Q.indDatum_chart_valid hD)) rfl ∈
+      Q.indDom D.shellSchema := by
+  have hp := shell_points (Q.indChart D.chart (Q.indDatum_chart_valid hD)) (Q.indAperture hD hΔ) hw
+  obtain ⟨hu, hs0, h1, hle⟩ := hp
+  have hu' : w ∘ xIdx (Q.indChart D.chart (Q.indDatum_chart_valid hD)) ∈ Q.indDom D.chart := hu
+  have hk := Q.indDom_key hu'
+  have hr := Q.indDom_row hu'
+  rw [Q.comp_shellKeyIdx hD, Q.mem_indDom_iff]
+  refine ⟨hk, (D.mem_shellDom _ _ _).mpr ⟨hr, hs0, h1, _, DatumSchema.apRow_apAt (hD _ hk) hr, hle⟩⟩
+
+/-- **The shell at the keys**: the Section 4 shell of the indexed datum is the
+indexed shell schema, by `w ↦ (x, u, s)`. -/
+def indShellIso :
+    Iso (shellChart (Q.indDatum hD hΔ hb).chart (Q.indDatum hD hΔ hb).coordinate (Q.indDatum hD hΔ hb).finite
+        (Q.indDatum hD hΔ hb).aperture)
+      (Q.indChart D.shellSchema (Q.indShell_valid hD)) :=
+  isoOfMap _ _ (fun w => w ∘ shellKeyIdx q D.chart.arity (Q.indChart D.chart (Q.indDatum_chart_valid hD)) rfl)
+    (RVCoordinateMaps.coordinate_graph_definable B _
+      (shellChart (Q.indDatum hD hΔ hb).chart (Q.indDatum hD hΔ hb).coordinate (Q.indDatum hD hΔ hb).finite
+        (Q.indDatum hD hΔ hb).aperture).domain_definable
+      (shellKeyIdx q D.chart.arity (Q.indChart D.chart (Q.indDatum_chart_valid hD)) rfl))
+    (by
+      refine ⟨fun w hw => Q.indShell_mapsTo hD hΔ hw, fun w hw w' hw' he => ?_, fun v hv => ?_⟩
+      · have he' := he
+        simp only at he'
+        rw [Q.comp_shellKeyIdx hD, Q.comp_shellKeyIdx hD] at he'
+        have h1 := congrArg keyOf he'
+        have h2 := congrArg (fun v => rowOf v) he'
+        simp only [keyOf_append, rowOf_append] at h1 h2
+        have hx : ∀ i, w (xIdx (Q.indChart D.chart (Q.indDatum_chart_valid hD)) i) =
+            w' (xIdx (Q.indChart D.chart (Q.indDatum_chart_valid hD)) i) := by
+          intro i
+          refine Fin.addCases (fun l => ?_) (fun l => ?_) i
+          · exact congrFun h1 l
+          · have := congrFun h2 (Fin.castAdd 1 l)
+            simpa [rowOf] using this
+        have hsv : w (sIdx (Q.indChart D.chart (Q.indDatum_chart_valid hD))) =
+            w' (sIdx (Q.indChart D.chart (Q.indDatum_chart_valid hD))) := by
+          have h2 := congrArg (fun v => rowOf v (Fin.natAdd D.chart.arity 0)) he'
+          simpa [rowOf_append] using h2
+        have hx' : w ∘ xIdx (Q.indChart D.chart (Q.indDatum_chart_valid hD)) =
+            w' ∘ xIdx (Q.indChart D.chart (Q.indDatum_chart_valid hD)) := funext hx
+        rw [shell_canonical (Q.indChart D.chart (Q.indDatum_chart_valid hD)) (Q.indAperture hD hΔ) hw,
+          shell_canonical (Q.indChart D.chart (Q.indDatum_chart_valid hD)) (Q.indAperture hD hΔ) hw', hx', hsv]
+      · obtain ⟨x, u, s, rfl⟩ : ∃ (x : Fin q → M) (u : Fin D.chart.arity → M) (s : M),
+            v = Fin.append x (Fin.append u (fun _ : Fin 1 => s)) :=
+          ⟨keyOf v, fun i => rowOf v (Fin.castAdd 1 i), rowOf v (Fin.natAdd D.chart.arity 0),
+            (append_keyOf_rowOf v).symm.trans
+              (congrArg (Fin.append (keyOf v)) (DatumSchema.append_decomp_one (n := D.chart.arity) (rowOf v)))⟩
+        obtain ⟨hk, hv2⟩ := (Q.mem_indDom_iff D.shellSchema x _).mp hv
+        obtain ⟨hu, hs0, h1, t, ht, hle⟩ := (D.mem_shellDom x u s).mp hv2
+        have hy : Fin.append x u ∈ Q.indDom D.chart := (Q.mem_indDom_iff D.chart x u).mpr ⟨hk, hu⟩
+        have hapt : D.apAt x u = t := ((DatumSchema.apRow_iff (hD x hk) u t).mp ht).2
+        let xg := join 1 (q + D.chart.arity) (Fin.append x u) ![indAp (D := D) (Fin.append x u)]
+        have hxg : xg ∈ (graphChart (Q.indChart D.chart (Q.indDatum_chart_valid hD)) (Q.indAperture hD hΔ)).domain := by
+          refine ⟨?_, ?_⟩
+          · show xg ∘ headIndex 1 (q + D.chart.arity) ∈ Q.indDom D.chart
+            rw [join_comp_head]; exact hy
+          · show ![indAp (D := D) (xg ∘ headIndex 1 (q + D.chart.arity))] = xg ∘ tailIndex 1 (q + D.chart.arity)
+            rw [join_comp_head, join_comp_tail]
+        refine ⟨join 1 (1 + (q + D.chart.arity)) xg ![s], ?_, ?_⟩
+        · show join 1 (1 + (q + D.chart.arity)) xg ![s] ∈
+            shellDomain (Q.indChart D.chart (Q.indDatum_chart_valid hD)) (Q.indAperture hD hΔ)
+          apply (VariableApertureRayCancellation.annularChart_join_iff
+            (graphChart (Q.indChart D.chart (Q.indDatum_chart_valid hD)) (Q.indAperture hD hΔ))
+            (aIdx (Q.indChart D.chart (Q.indDatum_chart_valid hD)))
+            (graph_aperture_nonzero _ (Q.indAperture hD hΔ)) xg _).mpr
+          refine ⟨hxg, fun l => by fin_cases l; exact hs0, ?_, ?_⟩
+          · show 1 < codeValue s
+            exact h1
+          · rw [graph_aperture _ (Q.indAperture hD hΔ) hxg]
+            show codeValue s ≤ codeValue (indAp (D := D) (xg ∘ headIndex 1 (q + D.chart.arity)))
+            rw [join_comp_head]
+            show codeValue s ≤ codeValue (D.apAt (keyOf (Fin.append x u)) (rowOf (Fin.append x u)))
+            rw [keyOf_append, rowOf_append, hapt]
+            exact hle
+        · show join 1 (1 + (q + D.chart.arity)) xg ![s] ∘
+            shellKeyIdx q D.chart.arity (Q.indChart D.chart (Q.indDatum_chart_valid hD)) rfl = _
+          rw [Q.comp_shellKeyIdx hD]
+          have h1' : join 1 (1 + (q + D.chart.arity)) xg ![s] ∘ xIdx (Q.indChart D.chart (Q.indDatum_chart_valid hD)) =
+              Fin.append x u := by
+            funext i
+            show join 1 (1 + (q + D.chart.arity)) xg ![s]
+              (headIndex 1 (1 + (q + D.chart.arity)) (headIndex 1 (q + D.chart.arity) i)) = _
+            rw [join_head]
+            exact join_head _ _ _ _ i
+          have h2' : join 1 (1 + (q + D.chart.arity)) xg ![s] (sIdx (Q.indChart D.chart (Q.indDatum_chart_valid hD))) = s := by
+            show join 1 (1 + (q + D.chart.arity)) xg ![s] (tailIndex 1 (1 + (q + D.chart.arity)) 0) = s
+            rw [join_tail]
+            rfl
+          rw [h1', h2', keyOf_append, rowOf_append])
+    (by
+      intro w hw
+      have hw2 := Q.indShell_mapsTo hD hΔ hw
+      rw [Q.comp_shellKeyIdx hD, Q.mem_indDom_iff] at hw2
+      have hu : w ∘ xIdx (Q.indChart D.chart (Q.indDatum_chart_valid hD)) ∈ Q.indDom D.chart :=
+        (shell_points (Q.indChart D.chart (Q.indDatum_chart_valid hD)) (Q.indAperture hD hΔ) hw).1
+      have hk := Q.indDom_key hu
+      show (Q.indChart D.chart (Q.indDatum_chart_valid hD)).volume (w ∘ xIdx (Q.indChart D.chart (Q.indDatum_chart_valid hD))) *
+        ∏ l, codeValue (blownCoordinate (Q.indChart D.chart (Q.indDatum_chart_valid hD)) (Fin.natAdd 1 D.coordinate)
+          (w ∘ xIdx (Q.indChart D.chart (Q.indDatum_chart_valid hD)))
+          (w (sIdx (Q.indChart D.chart (Q.indDatum_chart_valid hD)))) l) =
+        (Q.indChart D.shellSchema (Q.indShell_valid hD)).correctedWeight
+          (w ∘ shellKeyIdx q D.chart.arity (Q.indChart D.chart (Q.indDatum_chart_valid hD)) rfl)
+      rw [Q.indChart_blown_weight hD, indChart_weight, Q.comp_shellKeyIdx hD, keyOf_append, rowOf_append]
+      congr 1
+      · exact congrArg codeValue
+          (Fin.append_left (keyOf (w ∘ xIdx (Q.indChart D.chart (Q.indDatum_chart_valid hD)))) _ Q.idx).symm
+      · unfold ChartSchema.weightAt
+        rw [DatumSchema.shellSchema_volAt (hD _ hk) hw2.2, DatumSchema.shellSchema_coordAt (hD _ hk) hw2.2])
+
 end IndCanon
 
 end KeySet
