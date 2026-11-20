@@ -144,6 +144,15 @@ import «section 6».Section
 #check @DiamondIntegral.Section6.AllDegreeUnaryFactorizations.lemma_6_29_finiteVolume_all_degrees
 #print DiamondIntegral.Section6.AllDegreeUnaryFactorizations.lemma_6_29_finiteVolume_all_degrees
 #print axioms DiamondIntegral.Section6.AllDegreeUnaryFactorizations.lemma_6_29_finiteVolume_all_degrees
+#check @DiamondIntegral.Section6.lemma_6_33_zero_degree
+#print DiamondIntegral.Section6.lemma_6_33_zero_degree
+#print axioms DiamondIntegral.Section6.lemma_6_33_zero_degree
+#check @DiamondIntegral.Section6.MeasuredVFUnaryLiftChain.liftOf
+#print DiamondIntegral.Section6.MeasuredVFUnaryLiftChain.liftOf
+#print axioms DiamondIntegral.Section6.MeasuredVFUnaryLiftChain.liftOf
+#check @DiamondIntegral.Section6.lemma_6_33_all_degrees_vfGenerated
+#print DiamondIntegral.Section6.lemma_6_33_all_degrees_vfGenerated
+#print axioms DiamondIntegral.Section6.lemma_6_33_all_degrees_vfGenerated
 #check @DiamondIntegral.Section6.AllDegreeUnaryFactorizations.RVUnaryFactorization
 #print DiamondIntegral.Section6.AllDegreeUnaryFactorizations.RVUnaryFactorization
 #print axioms DiamondIntegral.Section6.AllDegreeUnaryFactorizations.RVUnaryFactorization

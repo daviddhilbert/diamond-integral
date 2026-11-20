@@ -171,9 +171,11 @@ any `(i, j)`, as Definition 6.34 does (an adjacent transposition of VF
 coordinates is `(i+1, i)`-relatively unary). Inverses of `(i, j)` steps are
 `(j, i)` steps (`unary_inverse`). All μVF^◇ constructions were updated;
 sections 6 and 7 build. "Relatively special covariant" and Example 6.25 are
-not used anywhere and are not formalized.
+not used anywhere and are not formalized. Dropped by author decision on
+2026-11-19 ("if it is not used then drop it"): the paper never uses the term
+after Example 6.25.
 
-## Lemma 6.16, Remark 6.17 — multi-dimensional extension dropped by author decision
+## Lemma 6.16, Remark 6.17 — multi-dimensional extension dropped by author decision (decision recorded before 2026-11-19; date not preserved)
 
 6.16 is the cited [Yin:special:trans, Theorem 5.5] (proved upstream). Its
 statement is about a literal subset of VF, hence unary, and that statement
@@ -346,8 +348,12 @@ The top-level row result is
   `lemma_6_29_all_degrees` alone drops the finite-volume conclusion.
 - Corollary 6.37 with the Γ input discharged: `liftHom_surjective_discharged`
   (`DiamondLiftDischarged.lean`).
-- Not done (minor packaging): the degree-0 case of 6.33's first clause for
-  non-doubly-bounded objects. The content is in `lemma_6_31_zero_arity`.
+- Degree-0 case of 6.33's first clause for non-doubly-bounded objects:
+  done November 19, `AllDegreeMeasuredLifts.lean`: `lemma_6_33_zero_degree`
+  (from `lemma_6_31_zero_arity`) and `lemma_6_33_all_degrees_vfGenerated`
+  (every `k ≥ 0`, arbitrary objects: an everywhere measured lift exists; in
+  positive degree it is the composite of a relatively unary chain with the
+  given RV map, doubly bounded when both objects are).
 
 ## Still open in Section 6
 

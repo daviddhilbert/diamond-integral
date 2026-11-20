@@ -1125,39 +1125,45 @@ import «section 6».AllDegreeDoublyBoundedFactorizations
 import «section 6».DiamondGroupoidMaps
 import «section 6».DiamondLiftDischarged
 import «section 6».Remark620
+import «section 6».AllDegreeMeasuredLifts
 
 /-! Section 6 exports full original-base results 6.5–6.9, approved
 almost-everywhere 6.14, literal unary relation preparation 6.16, Gamma
 bounds 6.22–6.23, and literal unary finitary lifting 6.30. All four
-variants of 6.29 hold in every positive degree and arbitrary RV dimension.
-Measured and unmeasured 6.31 hold in every degree with full total
-derivatives and the exact Gamma identity everywhere. The actual
-VF-generated field base, its nontrivial valuation, standing definable
-Gamma assumption, smallness and genuine saturation remain explicit.
+variants of 6.29 hold in every degree including zero
+(`AllDegreeUnaryFactorizations`, `AllDegreeDoublyBoundedFactorizations`)
+and arbitrary RV dimension. Measured and unmeasured 6.31 hold in every
+degree with full total derivatives and the exact Gamma identity
+everywhere. The actual VF-generated field base, its nontrivial valuation,
+standing definable Gamma assumption, smallness and genuine saturation
+remain explicit.
 
 Lemma 6.33 has actual relatively unary measured VF chains in every
 positive degree and arbitrary RV dimension, the exact original label
 map, everywhere measured derivatives and every intermediate double
-bound. In the doubly bounded variant every component and the composite
-are proper covariant homeomorphisms. The accepted Gamma affine
-background is retained wherever used for properness.
+bound; its first clause holds in every degree including zero for
+arbitrary objects (`AllDegreeMeasuredLifts`), and its doubly bounded
+clause in every degree in the `μVF^◇` interface (`lemma_6_33_diamond`).
+In the doubly bounded variant every component and the composite are
+proper covariant homeomorphisms. The unary Gamma rational-affine input
+used for properness is a theorem (`Section5.GammaQE.gamma_piecewise_rational_affine`);
+the input-free forms are in `Section6GammaLinearityDischarged`, and the
+original statements taking it as a hypothesis are unchanged.
 
 Proposition 6.19 and measured preparation 6.21 are proved in all VF
 arities, with the separate zero-arity forms. Standard contractions 6.27
 are constructed in every VF degree and order, including the proved
-head-start variants. The original scalar-aperture 6.38 is not certified.
-A separate bounded variable-aperture class now has complete measured
+head-start variants. The manuscript's Definition 6.11 and Lemma 6.38 now
+use the bounded variable aperture: this class has complete measured
 unary matching from original proper objects and forms, allowing arbitrary
-retained RV fibres over the original VF-generated base. Its paired cores,
-finite first-zero executions, actual RV map, every-label volume identity,
+retained RV fibres over the original VF-generated base
+(`lemma_6_38_bounded_variable_apertures`). Its paired cores, finite
+first-zero executions, actual RV map, every-label volume identity,
 aperture graphs and original-base named bounds are constructed. Native
 Section 4 compatibility is also proved. The precise bounded variable
 primitive is constructed in every VF arity, including its actual aperture
 graph and named bound, exact full core image, proper homeomorphism and
 generic unit total Jacobian. Old scalar operations embed with identical
-maps. The unary replacement now has both finite chains in this precise
-class. Downstream kernel and specialization assembly are deferred to
-their own sessions at the author’s direction; no complete native 7.26
-theorem is claimed. Main aperture definitions have not been applied. -/
-
-
+maps; the original constant-aperture classes are its subclass. Downstream
+kernel and specialization assembly are deferred to their own sessions at
+the author’s direction; no complete native 7.26 theorem is claimed. -/
