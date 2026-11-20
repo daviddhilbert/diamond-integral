@@ -22677,6 +22677,122 @@
     {
       "name": "DiamondIntegral.Section4.RVStrictBoundedCompatibility.quotientEquiv_objectClass",
       "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictAnnularGenerators.coordIndex_head",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictAnnularGenerators.coordIndex_tail",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictAnnularGenerators.shellIndex",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictAnnularGenerators.shellIndex_head",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictAnnularGenerators.shellIndex_tail",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictAnnularGenerators.join_shellIndex",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictAnnularGenerators.stripChart",
+      "kind": "abbrev"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictAnnularGenerators.stripChart_finite",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictAnnularGenerators.strip_graph_eq",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictAnnularGenerators.stripAperture",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictAnnularGenerators.stripDatum",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictAnnularGenerators.stripDatum_infinityFree",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictAnnularGenerators.graph_infinityFree",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictAnnularGenerators.endpoint_infinityFree",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictAnnularGenerators.shell_infinityFree",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictAnnularGenerators.strictGenerator",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictAnnularGenerators.equivalence_strictGenerator",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictAnnularGenerators.strictAnnularIdeal",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictAnnularGenerators.bclass_preimage_pieces",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictAnnularGenerators.bclass_iso'",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictAnnularGenerators.source_piece",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictAnnularGenerators.endpointPieceIso",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictAnnularGenerators.endpoint_piece",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictAnnularGenerators.shellPieceIso",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictAnnularGenerators.shell_piece",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictAnnularGenerators.generator_eq_sum_strip",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictAnnularGenerators.generator_mem_map",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictAnnularGenerators.map_strictAnnularIdeal",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVStrictAnnularGenerators.strictAnnularIdeal_eq",
+      "kind": "theorem"
     }
   ],
   "declarations": {
@@ -50476,6 +50592,151 @@
       "Classical.choice",
       "Quot.sound",
       "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictAnnularGenerators.coordIndex_head": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictAnnularGenerators.coordIndex_tail": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictAnnularGenerators.shellIndex": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictAnnularGenerators.shellIndex_head": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictAnnularGenerators.shellIndex_tail": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictAnnularGenerators.join_shellIndex": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictAnnularGenerators.stripChart": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictAnnularGenerators.stripChart_finite": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictAnnularGenerators.strip_graph_eq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictAnnularGenerators.stripAperture": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictAnnularGenerators.stripDatum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictAnnularGenerators.stripDatum_infinityFree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictAnnularGenerators.graph_infinityFree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictAnnularGenerators.endpoint_infinityFree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictAnnularGenerators.shell_infinityFree": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictAnnularGenerators.strictGenerator": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictAnnularGenerators.equivalence_strictGenerator": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictAnnularGenerators.strictAnnularIdeal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictAnnularGenerators.bclass_preimage_pieces": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictAnnularGenerators.bclass_iso'": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictAnnularGenerators.source_piece": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictAnnularGenerators.endpointPieceIso": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictAnnularGenerators.endpoint_piece": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictAnnularGenerators.shellPieceIso": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictAnnularGenerators.shell_piece": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictAnnularGenerators.generator_eq_sum_strip": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictAnnularGenerators.generator_mem_map": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictAnnularGenerators.map_strictAnnularIdeal": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVStrictAnnularGenerators.strictAnnularIdeal_eq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
     ]
   },
   "cited_input_definitions": {
@@ -51132,12 +51393,13 @@
     "section 4/Section3GammaAffineDischarge.lean": "2898bb1cb2b972038651bc3a17e80e0916cd0bb4932b058cb9dd1d42f55740ef",
     "section 4/Section4GammaAffineDischarged.lean": "2bb42e805cb7d66c4c16cde0b682b7461b980d4edc9f0563b76efd03dfec48e1",
     "section 4/RESDimensionFreeCategory.lean": "92c7d2ba85b36f10a4234d7238e76ef3d1ad1f7d045287b937ed4ecb70314db1",
-    "section 4/RVStrictBoundedCompatibility.lean": "c81b9d77282245e9b092433574f21740cefb7c003fd10880ae08c242c59f3ad1",
-    "section 4/Section.lean": "59d2d142327f380705f3fd08cfba6dd38d3a298e7b6864c0acfd75f9807667b8",
-    "section 4/verify.py": "3c08777f50b118898b2cbacbb2b2476eb0fdcd02fbacefd1f6f3359d1c281bb4",
+    "section 4/RVStrictBoundedCompatibility.lean": "5eec7e763952fb7438de0047726db5dc587533f55b25a57941ce65db044fafea",
+    "section 4/RVStrictAnnularGenerators.lean": "f7e5d3fa5c93ac8fe47c97dc5b10b143cd58ff4cb2c9dc683be48c7374a92a21",
+    "section 4/Section.lean": "545aa0c54ede590838873855850b765b168e78651ac8fd4a9221836b58effbe7",
+    "section 4/verify.py": "1acb98292ee554ad764c586b7c1db6b91137181482e5270af4fb7edbd2b355a2",
     "DiamondIntegral.lean": "66d02be99d3e377f670ad569f36274aed59d735366ebb4b157993bdb166b553e",
     "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
-    "lakefile.toml": "f55c6669208be44f267e04bed5b712a717c7f30f4d84496864df97b7387d30af",
+    "lakefile.toml": "810829a9d20047381e2713fbd76d46001920ecb30a460f80f1ee6a00876a607b",
     "lake-manifest.json": "4f0ab2b8a2144ce82d2d8910ec2beb6cf3f21fffcd610bd56cb0415b5bf88ac6",
     "ACCEPTED-CITED-RESULTS.md": "2a6f42ef5f82e18d502ec9bb71d626675f5e24eae45d44291d75b23d9ee906c9",
     "section 4/verification/CITED-INPUTS.md": "854aa8b2f36a2c956fd3faf0fdcda4ee9a5c55973c266ac0322babe2c5281573",

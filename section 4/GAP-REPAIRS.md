@@ -113,8 +113,20 @@ is stated and proved in `RVStrictBoundedCompatibility.lean` (November 19):
   `manuscriptIdeal B` (`map_strictManuscriptIdeal`), contains the strict
   `(P_Γ)` (`strictRadiusIdeal_le`), and the quotients are isomorphic
   compatibly with classes (`quotientEquiv`, `quotientEquiv_objectClass`).
-  The strict J_var is defined by transport, not by a separate list of ∞-free
-  annular data; Ẽ_b on the strict side is Ẽ_b composed with the isomorphism.
+  Ẽ_b on the strict side is Ẽ_b composed with the isomorphism.
+- J_var from generators (November 19, `RVStrictAnnularGenerators.lean`): a
+  Notation 4.17 datum with ∞-free source has ∞-free shell and endpoint
+  (`shell_infinityFree`, `endpoint_infinityFree`), so its generator is a
+  strict element `strictGenerator`; `strictAnnularIdeal B` is the ideal they
+  span. Every datum splits by the ∞-pattern p of its source into data on the
+  ∞-free strips (`stripDatum`: ∞ coordinates deleted, labels, forms and
+  aperture read through `unstrip`), with `generator_eq_sum_strip :
+  D.generator = ∑ p, (stripDatum D p).generator` (source, endpoint and shell
+  each split by pattern and match the strip data by coordinate deletion).
+  Hence `map_strictAnnularIdeal : Ideal.map (equivalence B) (strictAnnularIdeal B)
+  = manuscriptIdeal B` and `strictAnnularIdeal_eq : strictAnnularIdeal B =
+  strictManuscriptIdeal B`. Every generator has an ∞-free representative up to
+  this finite splitting; none had to be excluded.
 
 Lean: `RVStrictBoundedComparison.lean` (proved). It contains:
 - `InfinityFree` and `StrictChart`: bounded charts with no `iRVZero`

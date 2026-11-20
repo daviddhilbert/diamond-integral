@@ -16,7 +16,10 @@ Lean bounded ring) with the structure used afterwards.
 * `J_var`: the transported ideal `strictManuscriptIdeal` maps onto
   `manuscriptIdeal B` (`map_strictManuscriptIdeal`), contains the strict
   radius ideal `(P_Γ)` (`strictRadiusIdeal_le`), and the quotients by them
-  are isomorphic, compatibly with the classes (`quotientEquiv`). -/
+  are isomorphic, compatibly with the classes (`quotientEquiv`). The
+  generator-level statement, with Notation 4.17's generators written on
+  `∞`-free representatives, is `RVStrictAnnularGenerators.map_strictAnnularIdeal`
+  and `RVStrictAnnularGenerators.strictAnnularIdeal_eq`. -/
 
 set_option autoImplicit false
 noncomputable section

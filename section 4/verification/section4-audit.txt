@@ -84174,6 +84174,505 @@ theorem DiamondIntegral.Section4.RVStrictBoundedCompatibility.quotientEquiv_obje
 'DiamondIntegral.Section4.RVStrictBoundedCompatibility.quotientEquiv_objectClass' depends on axioms: [propext,
  Classical.choice.{u},
  Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RVStrictAnnularGenerators.coordIndex_head : ∀ {n : ℕ} (c : ℕ) (p : Finset.{0} (Fin n))
+  (i : Fin (DiamondIntegral.Section4.RVStrictBoundedComparison.stripArity p)),
+  Eq.{1}
+    (DiamondIntegral.Section4.RVStrictBoundedComparison.coordIndex c p
+      (DiamondIntegral.Section4.FiniteTupleBlocks.headIndex c
+        (DiamondIntegral.Section4.RVStrictBoundedComparison.stripArity p) i))
+    (DiamondIntegral.Section4.FiniteTupleBlocks.headIndex c n
+      (DiamondIntegral.Section4.RVStrictBoundedComparison.stripIndex p i)) :=
+⋯
+'DiamondIntegral.Section4.RVStrictAnnularGenerators.coordIndex_head' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RVStrictAnnularGenerators.coordIndex_tail : ∀ {n : ℕ} (c : ℕ) (p : Finset.{0} (Fin n))
+  (l : Fin c),
+  Eq.{1}
+    (DiamondIntegral.Section4.RVStrictBoundedComparison.coordIndex c p
+      (DiamondIntegral.Section4.FiniteTupleBlocks.tailIndex c
+        (DiamondIntegral.Section4.RVStrictBoundedComparison.stripArity p) l))
+    (DiamondIntegral.Section4.FiniteTupleBlocks.tailIndex c n l) :=
+⋯
+'DiamondIntegral.Section4.RVStrictAnnularGenerators.coordIndex_tail' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.RVStrictAnnularGenerators.shellIndex : {n : ℕ} →
+  (p : Finset.{0} (Fin n)) →
+    Fin
+        (HAdd.hAdd.{0, 0, 0} 1
+          (HAdd.hAdd.{0, 0, 0} 1 (DiamondIntegral.Section4.RVStrictBoundedComparison.stripArity p))) →
+      Fin (HAdd.hAdd.{0, 0, 0} 1 (HAdd.hAdd.{0, 0, 0} 1 n)) :=
+fun {n} p =>
+  DiamondIntegral.Section4.FiniteTupleBlocks.join.{0} 1
+    (HAdd.hAdd.{0, 0, 0} 1 (DiamondIntegral.Section4.RVStrictBoundedComparison.stripArity p))
+    (fun i =>
+      DiamondIntegral.Section4.FiniteTupleBlocks.headIndex 1 (HAdd.hAdd.{0, 0, 0} 1 n)
+        (DiamondIntegral.Section4.RVStrictBoundedComparison.coordIndex 1 p i))
+    (DiamondIntegral.Section4.FiniteTupleBlocks.tailIndex 1 (HAdd.hAdd.{0, 0, 0} 1 n))
+'DiamondIntegral.Section4.RVStrictAnnularGenerators.shellIndex' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RVStrictAnnularGenerators.shellIndex_head : ∀ {n : ℕ} (p : Finset.{0} (Fin n))
+  (i : Fin (HAdd.hAdd.{0, 0, 0} 1 (DiamondIntegral.Section4.RVStrictBoundedComparison.stripArity p))),
+  Eq.{1}
+    (DiamondIntegral.Section4.RVStrictAnnularGenerators.shellIndex p
+      (DiamondIntegral.Section4.FiniteTupleBlocks.headIndex 1
+        (HAdd.hAdd.{0, 0, 0} 1 (DiamondIntegral.Section4.RVStrictBoundedComparison.stripArity p)) i))
+    (DiamondIntegral.Section4.FiniteTupleBlocks.headIndex 1 (HAdd.hAdd.{0, 0, 0} 1 n)
+      (DiamondIntegral.Section4.RVStrictBoundedComparison.coordIndex 1 p i)) :=
+⋯
+'DiamondIntegral.Section4.RVStrictAnnularGenerators.shellIndex_head' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RVStrictAnnularGenerators.shellIndex_tail : ∀ {n : ℕ} (p : Finset.{0} (Fin n))
+  (l : Fin 1),
+  Eq.{1}
+    (DiamondIntegral.Section4.RVStrictAnnularGenerators.shellIndex p
+      (DiamondIntegral.Section4.FiniteTupleBlocks.tailIndex 1
+        (HAdd.hAdd.{0, 0, 0} 1 (DiamondIntegral.Section4.RVStrictBoundedComparison.stripArity p)) l))
+    (DiamondIntegral.Section4.FiniteTupleBlocks.tailIndex 1 (HAdd.hAdd.{0, 0, 0} 1 n) l) :=
+⋯
+'DiamondIntegral.Section4.RVStrictAnnularGenerators.shellIndex_tail' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RVStrictAnnularGenerators.join_shellIndex : ∀ {M : Type} {n : ℕ}
+  (p : Finset.{0} (Fin n)) (g : Fin (HAdd.hAdd.{0, 0, 0} 1 n) → M) (z : Fin 1 → M),
+  Eq.{1}
+    (Function.comp.{1, 1, 1} (DiamondIntegral.Section4.FiniteTupleBlocks.join.{0} 1 (HAdd.hAdd.{0, 0, 0} 1 n) g z)
+      (DiamondIntegral.Section4.RVStrictAnnularGenerators.shellIndex p))
+    (DiamondIntegral.Section4.FiniteTupleBlocks.join.{0} 1
+      (HAdd.hAdd.{0, 0, 0} 1 (DiamondIntegral.Section4.RVStrictBoundedComparison.stripArity p))
+      (Function.comp.{1, 1, 1} g (DiamondIntegral.Section4.RVStrictBoundedComparison.coordIndex 1 p)) z) :=
+⋯
+'DiamondIntegral.Section4.RVStrictAnnularGenerators.join_shellIndex' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+@[reducible] def DiamondIntegral.Section4.RVStrictAnnularGenerators.stripChart : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B : SpecialTransformations.Section3.GammaParameters.Base} →
+        {k : ℕ} →
+          (D : DiamondIntegral.Section4.RelativeAnnularGenerators.AnnularDatum B k) →
+            Finset.{0} (Fin D.chart.arity) →
+              DiamondIntegral.Section4.RVMeasuredCharts.Chart B (HAdd.hAdd.{0, 0, 0} 1 k) :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {B} {k} D p =>
+  (DiamondIntegral.Section4.RVStrictBoundedComparison.strip
+      (DiamondIntegral.Section4.RVChartDisjointUnion.ofChart D.chart) p).toChart
+'DiamondIntegral.Section4.RVStrictAnnularGenerators.stripChart' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RVStrictAnnularGenerators.stripChart_finite : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {k : ℕ}
+  (D : DiamondIntegral.Section4.RelativeAnnularGenerators.AnnularDatum B k) (p : Finset.{0} (Fin D.chart.arity)),
+  DiamondIntegral.Section4.AnnularBlowup.InactiveFinite
+    (DiamondIntegral.Section4.RVStrictAnnularGenerators.stripChart D p) D.coordinate :=
+⋯
+'DiamondIntegral.Section4.RVStrictAnnularGenerators.stripChart_finite' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RVStrictAnnularGenerators.strip_graph_eq : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {k : ℕ}
+  (D : DiamondIntegral.Section4.RelativeAnnularGenerators.AnnularDatum B k) (p : Finset.{0} (Fin D.chart.arity)),
+  Eq.{1}
+    (DiamondIntegral.Section4.RVDefinableGraphExtension.domain
+      (DiamondIntegral.Section4.RVStrictAnnularGenerators.stripChart D p) fun v =>
+      D.aperture.aperture (DiamondIntegral.Section4.RVStrictBoundedComparison.unstrip p v))
+    (Set.image.{0, 0}
+      (fun w => Function.comp.{1, 1, 1} w (DiamondIntegral.Section4.RVStrictBoundedComparison.coordIndex 1 p))
+      (Inter.inter.{0} (DiamondIntegral.Section4.BlowupChart.graphChart D.chart D.aperture).domain
+        (Set.ofPred.{0} fun w =>
+          Membership.mem.{0, 0} (DiamondIntegral.Section4.RVStrictBoundedComparison.patternSet p)
+              (Function.comp.{1, 1, 1} w (DiamondIntegral.Section4.FiniteTupleBlocks.headIndex 1 D.chart.arity)) ∧
+            Membership.mem.{0, 0}
+              (SpecialTransformations.Section3.GammaParameters.sortedUniverse fun x =>
+                SpecialTransformations.Milestone0.SortTag.rv)
+              w))) :=
+⋯
+'DiamondIntegral.Section4.RVStrictAnnularGenerators.strip_graph_eq' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.RVStrictAnnularGenerators.stripAperture : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B : SpecialTransformations.Section3.GammaParameters.Base} →
+        {k : ℕ} →
+          (D : DiamondIntegral.Section4.RelativeAnnularGenerators.AnnularDatum B k) →
+            (p : Finset.{0} (Fin D.chart.arity)) →
+              DiamondIntegral.Section4.AnnularBlowup.Aperture
+                (DiamondIntegral.Section4.RVStrictAnnularGenerators.stripChart D p) :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {B} {k} D p =>
+  { aperture := fun v => D.aperture.aperture (DiamondIntegral.Section4.RVStrictBoundedComparison.unstrip p v),
+    graph_definable := ⋯, nonzero := ⋯, nonnegative := ⋯, bound := D.aperture.bound, bounded := ⋯ }
+'DiamondIntegral.Section4.RVStrictAnnularGenerators.stripAperture' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.RVStrictAnnularGenerators.stripDatum : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B : SpecialTransformations.Section3.GammaParameters.Base} →
+        {k : ℕ} →
+          (D : DiamondIntegral.Section4.RelativeAnnularGenerators.AnnularDatum B k) →
+            Finset.{0} (Fin D.chart.arity) → DiamondIntegral.Section4.RelativeAnnularGenerators.AnnularDatum B k :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {B} {k} D p =>
+  { chart := DiamondIntegral.Section4.RVStrictAnnularGenerators.stripChart D p, coordinate := D.coordinate, finite := ⋯,
+    aperture := DiamondIntegral.Section4.RVStrictAnnularGenerators.stripAperture D p, bounded := ⋯ }
+'DiamondIntegral.Section4.RVStrictAnnularGenerators.stripDatum' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RVStrictAnnularGenerators.stripDatum_infinityFree : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {k : ℕ}
+  (D : DiamondIntegral.Section4.RelativeAnnularGenerators.AnnularDatum B k) (p : Finset.{0} (Fin D.chart.arity)),
+  DiamondIntegral.Section4.RVStrictBoundedComparison.InfinityFree
+    (DiamondIntegral.Section4.RVStrictAnnularGenerators.stripDatum D p).chart :=
+⋯
+'DiamondIntegral.Section4.RVStrictAnnularGenerators.stripDatum_infinityFree' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RVStrictAnnularGenerators.graph_infinityFree : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {k : ℕ}
+  (D : DiamondIntegral.Section4.RelativeAnnularGenerators.AnnularDatum B k),
+  DiamondIntegral.Section4.RVStrictBoundedComparison.InfinityFree D.chart →
+    ∀ (w : Fin (DiamondIntegral.Section4.BlowupChart.graphChart D.chart D.aperture).arity → M),
+      Membership.mem.{0, 0} (DiamondIntegral.Section4.BlowupChart.graphChart D.chart D.aperture).domain w →
+        ∀ (i : Fin (DiamondIntegral.Section4.BlowupChart.graphChart D.chart D.aperture).arity),
+          Ne.{1} (w i) SpecialTransformations.Milestone0.iRVZero.{0} :=
+⋯
+'DiamondIntegral.Section4.RVStrictAnnularGenerators.graph_infinityFree' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RVStrictAnnularGenerators.endpoint_infinityFree : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {k : ℕ}
+  (D : DiamondIntegral.Section4.RelativeAnnularGenerators.AnnularDatum B k),
+  DiamondIntegral.Section4.RVStrictBoundedComparison.InfinityFree D.chart →
+    DiamondIntegral.Section4.RVStrictBoundedComparison.InfinityFree
+      (DiamondIntegral.Section4.BlowupChart.endpointChart D.chart D.coordinate ⋯ D.aperture) :=
+⋯
+'DiamondIntegral.Section4.RVStrictAnnularGenerators.endpoint_infinityFree' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RVStrictAnnularGenerators.shell_infinityFree : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {k : ℕ}
+  (D : DiamondIntegral.Section4.RelativeAnnularGenerators.AnnularDatum B k),
+  DiamondIntegral.Section4.RVStrictBoundedComparison.InfinityFree D.chart →
+    DiamondIntegral.Section4.RVStrictBoundedComparison.InfinityFree
+      (DiamondIntegral.Section4.BlowupChart.shellChart D.chart D.coordinate ⋯ D.aperture) :=
+⋯
+'DiamondIntegral.Section4.RVStrictAnnularGenerators.shell_infinityFree' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.RVStrictAnnularGenerators.strictGenerator : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B : SpecialTransformations.Section3.GammaParameters.Base} →
+        {k : ℕ} →
+          (D : DiamondIntegral.Section4.RelativeAnnularGenerators.AnnularDatum B k) →
+            DiamondIntegral.Section4.RVStrictBoundedComparison.InfinityFree D.chart →
+              DiamondIntegral.Section4.RVStrictBoundedComparison.StrictRing B :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {B} {k} D h =>
+  HSub.hSub.{0, 0, 0}
+    (HAdd.hAdd.{0, 0, 0}
+      (DiamondIntegral.Section4.RVStrictBoundedComparison.objectClass
+        { toBoundedChart := DiamondIntegral.Section4.BlowupRelation.shellBounded D.chart D.coordinate ⋯ D.aperture ⋯,
+          infinity_free := ⋯ })
+      (DiamondIntegral.Section4.RVStrictBoundedComparison.objectClass
+        { toBoundedChart := DiamondIntegral.Section4.BlowupRelation.endpointBounded D.chart D.coordinate ⋯ D.aperture ⋯,
+          infinity_free := ⋯ }))
+    (DiamondIntegral.Section4.RVStrictBoundedComparison.objectClass { toBoundedChart := D.source, infinity_free := h })
+'DiamondIntegral.Section4.RVStrictAnnularGenerators.strictGenerator' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RVStrictAnnularGenerators.equivalence_strictGenerator : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {k : ℕ}
+  (D : DiamondIntegral.Section4.RelativeAnnularGenerators.AnnularDatum B k)
+  (h : DiamondIntegral.Section4.RVStrictBoundedComparison.InfinityFree D.chart),
+  Eq.{1}
+    ((DiamondIntegral.Section4.RVStrictBoundedComparison.equivalence B)
+      (DiamondIntegral.Section4.RVStrictAnnularGenerators.strictGenerator D h))
+    D.generator :=
+⋯
+'DiamondIntegral.Section4.RVStrictAnnularGenerators.equivalence_strictGenerator' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.RVStrictAnnularGenerators.strictAnnularIdeal : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (B : SpecialTransformations.Section3.GammaParameters.Base) →
+        Ideal.{0} (DiamondIntegral.Section4.RVStrictBoundedComparison.StrictRing B) :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] B =>
+  Ideal.span.{0}
+    (Set.ofPred.{0} fun x =>
+      ∃ k D,
+        ∃ (h : DiamondIntegral.Section4.RVStrictBoundedComparison.InfinityFree D.chart),
+          Eq.{1} x (DiamondIntegral.Section4.RVStrictAnnularGenerators.strictGenerator D h))
+'DiamondIntegral.Section4.RVStrictAnnularGenerators.strictAnnularIdeal' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RVStrictAnnularGenerators.bclass_preimage_pieces : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {k n m : ℕ}
+  (E : DiamondIntegral.Section4.RVChartDisjointUnion.Data B n k),
+  DiamondIntegral.Section4.RVMeasuredBounds.DomainBounded E.toChart →
+    ∀ (π : Fin m → Fin n),
+      Eq.{1} (DiamondIntegral.Section4.RVStrictBoundedComparison.bclass E)
+        (∑ p,
+          DiamondIntegral.Section4.RVStrictBoundedComparison.bclass
+            (DiamondIntegral.Section4.RVChartRestrictions.inside E
+              (Set.ofPred.{0} fun w =>
+                Membership.mem.{0, 0} (DiamondIntegral.Section4.RVStrictBoundedComparison.patternSet p)
+                    (Function.comp.{1, 1, 1} w π) ∧
+                  Membership.mem.{0, 0}
+                    (SpecialTransformations.Section3.GammaParameters.sortedUniverse fun x =>
+                      SpecialTransformations.Milestone0.SortTag.rv)
+                    w)
+              ⋯)) :=
+⋯
+'DiamondIntegral.Section4.RVStrictAnnularGenerators.bclass_preimage_pieces' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RVStrictAnnularGenerators.bclass_iso' : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {k n m : ℕ}
+  {D : DiamondIntegral.Section4.RVChartDisjointUnion.Data B n (HAdd.hAdd.{0, 0, 0} 1 k)}
+  (E : DiamondIntegral.Section4.RVChartDisjointUnion.Data B m (HAdd.hAdd.{0, 0, 0} 1 k))
+  (F : DiamondIntegral.Section4.RVMeasuredCharts.Iso D.toChart E.toChart),
+  DiamondIntegral.Section4.RVMeasuredBounds.DomainBounded D.toChart →
+    DiamondIntegral.Section4.RVMeasuredBounds.DomainBounded E.toChart →
+      Eq.{1} (DiamondIntegral.Section4.RVStrictBoundedComparison.bclass D)
+        (DiamondIntegral.Section4.RVStrictBoundedComparison.bclass E) :=
+⋯
+'DiamondIntegral.Section4.RVStrictAnnularGenerators.bclass_iso'' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RVStrictAnnularGenerators.source_piece : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {k : ℕ}
+  (D : DiamondIntegral.Section4.RelativeAnnularGenerators.AnnularDatum B k) (p : Finset.{0} (Fin D.chart.arity)),
+  Eq.{1}
+    (DiamondIntegral.Section4.RVStrictBoundedComparison.bclass
+      (DiamondIntegral.Section4.RVStrictBoundedComparison.piece
+        (DiamondIntegral.Section4.RVChartDisjointUnion.ofChart D.chart) p))
+    (DiamondIntegral.Section4.RVBoundedRing.objectClass
+      (DiamondIntegral.Section4.RVStrictAnnularGenerators.stripDatum D p).source) :=
+⋯
+'DiamondIntegral.Section4.RVStrictAnnularGenerators.source_piece' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.RVStrictAnnularGenerators.endpointPieceIso : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B : SpecialTransformations.Section3.GammaParameters.Base} →
+        {k : ℕ} →
+          (D : DiamondIntegral.Section4.RelativeAnnularGenerators.AnnularDatum B k) →
+            (p : Finset.{0} (Fin D.chart.arity)) →
+              DiamondIntegral.Section4.RVMeasuredCharts.Iso
+                (DiamondIntegral.Section4.RVChartRestrictions.inside
+                    (DiamondIntegral.Section4.RVChartDisjointUnion.ofChart
+                      (DiamondIntegral.Section4.BlowupChart.endpointChart D.chart D.coordinate ⋯ D.aperture))
+                    (Set.ofPred.{0} fun w =>
+                      Membership.mem.{0, 0} (DiamondIntegral.Section4.RVStrictBoundedComparison.patternSet p)
+                          (Function.comp.{1, 1, 1} w
+                            (DiamondIntegral.Section4.FiniteTupleBlocks.headIndex 1 D.chart.arity)) ∧
+                        Membership.mem.{0, 0}
+                          (SpecialTransformations.Section3.GammaParameters.sortedUniverse fun x =>
+                            SpecialTransformations.Milestone0.SortTag.rv)
+                          w)
+                    ⋯).toChart
+                (DiamondIntegral.Section4.BlowupChart.endpointChart
+                  (DiamondIntegral.Section4.RVStrictAnnularGenerators.stripDatum D p).chart
+                  (DiamondIntegral.Section4.RVStrictAnnularGenerators.stripDatum D p).coordinate ⋯
+                  (DiamondIntegral.Section4.RVStrictAnnularGenerators.stripDatum D p).aperture) :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {B} {k} D p =>
+  DiamondIntegral.Section4.RVCoordinateMaps.coordinateIso
+    (DiamondIntegral.Section4.RVChartRestrictions.inside
+        (DiamondIntegral.Section4.RVChartDisjointUnion.ofChart
+          (DiamondIntegral.Section4.BlowupChart.endpointChart D.chart D.coordinate ⋯ D.aperture))
+        (Set.ofPred.{0} fun w =>
+          Membership.mem.{0, 0} (DiamondIntegral.Section4.RVStrictBoundedComparison.patternSet p)
+              (Function.comp.{1, 1, 1} w (DiamondIntegral.Section4.FiniteTupleBlocks.headIndex 1 D.chart.arity)) ∧
+            Membership.mem.{0, 0}
+              (SpecialTransformations.Section3.GammaParameters.sortedUniverse fun x =>
+                SpecialTransformations.Milestone0.SortTag.rv)
+              w)
+        ⋯).toChart
+    (DiamondIntegral.Section4.BlowupChart.endpointChart
+      (DiamondIntegral.Section4.RVStrictAnnularGenerators.stripDatum D p).chart
+      (DiamondIntegral.Section4.RVStrictAnnularGenerators.stripDatum D p).coordinate ⋯
+      (DiamondIntegral.Section4.RVStrictAnnularGenerators.stripDatum D p).aperture)
+    (DiamondIntegral.Section4.RVStrictBoundedComparison.coordIndex 1 p) ⋯ ⋯
+'DiamondIntegral.Section4.RVStrictAnnularGenerators.endpointPieceIso' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RVStrictAnnularGenerators.endpoint_piece : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {k : ℕ}
+  (D : DiamondIntegral.Section4.RelativeAnnularGenerators.AnnularDatum B k) (p : Finset.{0} (Fin D.chart.arity)),
+  Eq.{1}
+    (DiamondIntegral.Section4.RVStrictBoundedComparison.bclass
+      (DiamondIntegral.Section4.RVChartRestrictions.inside
+        (DiamondIntegral.Section4.RVChartDisjointUnion.ofChart
+          (DiamondIntegral.Section4.BlowupChart.endpointChart D.chart D.coordinate ⋯ D.aperture))
+        (Set.ofPred.{0} fun w =>
+          Membership.mem.{0, 0} (DiamondIntegral.Section4.RVStrictBoundedComparison.patternSet p)
+              (Function.comp.{1, 1, 1} w (DiamondIntegral.Section4.FiniteTupleBlocks.headIndex 1 D.chart.arity)) ∧
+            Membership.mem.{0, 0}
+              (SpecialTransformations.Section3.GammaParameters.sortedUniverse fun x =>
+                SpecialTransformations.Milestone0.SortTag.rv)
+              w)
+        ⋯))
+    (DiamondIntegral.Section4.RVBoundedRing.objectClass
+      (DiamondIntegral.Section4.BlowupRelation.endpointBounded
+        (DiamondIntegral.Section4.RVStrictAnnularGenerators.stripDatum D p).chart
+        (DiamondIntegral.Section4.RVStrictAnnularGenerators.stripDatum D p).coordinate ⋯
+        (DiamondIntegral.Section4.RVStrictAnnularGenerators.stripDatum D p).aperture ⋯)) :=
+⋯
+'DiamondIntegral.Section4.RVStrictAnnularGenerators.endpoint_piece' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.RVStrictAnnularGenerators.shellPieceIso : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B : SpecialTransformations.Section3.GammaParameters.Base} →
+        {k : ℕ} →
+          (D : DiamondIntegral.Section4.RelativeAnnularGenerators.AnnularDatum B k) →
+            (p : Finset.{0} (Fin D.chart.arity)) →
+              DiamondIntegral.Section4.RVMeasuredCharts.Iso
+                (DiamondIntegral.Section4.RVChartRestrictions.inside
+                    (DiamondIntegral.Section4.RVChartDisjointUnion.ofChart
+                      (DiamondIntegral.Section4.BlowupChart.shellChart D.chart D.coordinate ⋯ D.aperture))
+                    (Set.ofPred.{0} fun w =>
+                      Membership.mem.{0, 0} (DiamondIntegral.Section4.RVStrictBoundedComparison.patternSet p)
+                          (Function.comp.{1, 1, 1} w (DiamondIntegral.Section4.BlowupChart.xIdx D.chart)) ∧
+                        Membership.mem.{0, 0}
+                          (SpecialTransformations.Section3.GammaParameters.sortedUniverse fun x =>
+                            SpecialTransformations.Milestone0.SortTag.rv)
+                          w)
+                    ⋯).toChart
+                (DiamondIntegral.Section4.BlowupChart.shellChart
+                  (DiamondIntegral.Section4.RVStrictAnnularGenerators.stripDatum D p).chart
+                  (DiamondIntegral.Section4.RVStrictAnnularGenerators.stripDatum D p).coordinate ⋯
+                  (DiamondIntegral.Section4.RVStrictAnnularGenerators.stripDatum D p).aperture) :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {B} {k} D p =>
+  have hnz := ⋯;
+  have hgr := ⋯;
+  have hap := ⋯;
+  DiamondIntegral.Section4.RVCoordinateMaps.coordinateIso
+    (DiamondIntegral.Section4.RVChartRestrictions.inside
+        (DiamondIntegral.Section4.RVChartDisjointUnion.ofChart
+          (DiamondIntegral.Section4.BlowupChart.shellChart D.chart D.coordinate ⋯ D.aperture))
+        (Set.ofPred.{0} fun w =>
+          Membership.mem.{0, 0} (DiamondIntegral.Section4.RVStrictBoundedComparison.patternSet p)
+              (Function.comp.{1, 1, 1} w (DiamondIntegral.Section4.BlowupChart.xIdx D.chart)) ∧
+            Membership.mem.{0, 0}
+              (SpecialTransformations.Section3.GammaParameters.sortedUniverse fun x =>
+                SpecialTransformations.Milestone0.SortTag.rv)
+              w)
+        ⋯).toChart
+    (DiamondIntegral.Section4.BlowupChart.shellChart
+      (DiamondIntegral.Section4.RVStrictAnnularGenerators.stripDatum D p).chart
+      (DiamondIntegral.Section4.RVStrictAnnularGenerators.stripDatum D p).coordinate ⋯
+      (DiamondIntegral.Section4.RVStrictAnnularGenerators.stripDatum D p).aperture)
+    (DiamondIntegral.Section4.RVStrictAnnularGenerators.shellIndex p) ⋯ ⋯
+'DiamondIntegral.Section4.RVStrictAnnularGenerators.shellPieceIso' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RVStrictAnnularGenerators.shell_piece : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {k : ℕ}
+  (D : DiamondIntegral.Section4.RelativeAnnularGenerators.AnnularDatum B k) (p : Finset.{0} (Fin D.chart.arity)),
+  Eq.{1}
+    (DiamondIntegral.Section4.RVStrictBoundedComparison.bclass
+      (DiamondIntegral.Section4.RVChartRestrictions.inside
+        (DiamondIntegral.Section4.RVChartDisjointUnion.ofChart
+          (DiamondIntegral.Section4.BlowupChart.shellChart D.chart D.coordinate ⋯ D.aperture))
+        (Set.ofPred.{0} fun w =>
+          Membership.mem.{0, 0} (DiamondIntegral.Section4.RVStrictBoundedComparison.patternSet p)
+              (Function.comp.{1, 1, 1} w (DiamondIntegral.Section4.BlowupChart.xIdx D.chart)) ∧
+            Membership.mem.{0, 0}
+              (SpecialTransformations.Section3.GammaParameters.sortedUniverse fun x =>
+                SpecialTransformations.Milestone0.SortTag.rv)
+              w)
+        ⋯))
+    (DiamondIntegral.Section4.RVBoundedRing.objectClass
+      (DiamondIntegral.Section4.BlowupRelation.shellBounded
+        (DiamondIntegral.Section4.RVStrictAnnularGenerators.stripDatum D p).chart
+        (DiamondIntegral.Section4.RVStrictAnnularGenerators.stripDatum D p).coordinate ⋯
+        (DiamondIntegral.Section4.RVStrictAnnularGenerators.stripDatum D p).aperture ⋯)) :=
+⋯
+'DiamondIntegral.Section4.RVStrictAnnularGenerators.shell_piece' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RVStrictAnnularGenerators.generator_eq_sum_strip : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {k : ℕ}
+  (D : DiamondIntegral.Section4.RelativeAnnularGenerators.AnnularDatum B k),
+  Eq.{1} D.generator (∑ p, (DiamondIntegral.Section4.RVStrictAnnularGenerators.stripDatum D p).generator) :=
+⋯
+'DiamondIntegral.Section4.RVStrictAnnularGenerators.generator_eq_sum_strip' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RVStrictAnnularGenerators.generator_mem_map : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {k : ℕ}
+  (D : DiamondIntegral.Section4.RelativeAnnularGenerators.AnnularDatum B k),
+  Membership.mem.{0, 0}
+    (Ideal.map.{0, 0, 0} (DiamondIntegral.Section4.RVStrictBoundedComparison.equivalence B)
+      (DiamondIntegral.Section4.RVStrictAnnularGenerators.strictAnnularIdeal B))
+    D.generator :=
+⋯
+'DiamondIntegral.Section4.RVStrictAnnularGenerators.generator_mem_map' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RVStrictAnnularGenerators.map_strictAnnularIdeal : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base),
+  Eq.{1}
+    (Ideal.map.{0, 0, 0} (DiamondIntegral.Section4.RVStrictBoundedComparison.equivalence B)
+      (DiamondIntegral.Section4.RVStrictAnnularGenerators.strictAnnularIdeal B))
+    (DiamondIntegral.Section4.RelativeAnnularGenerators.manuscriptIdeal B) :=
+⋯
+'DiamondIntegral.Section4.RVStrictAnnularGenerators.map_strictAnnularIdeal' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RVStrictAnnularGenerators.strictAnnularIdeal_eq : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base),
+  Eq.{1} (DiamondIntegral.Section4.RVStrictAnnularGenerators.strictAnnularIdeal B)
+    (DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictManuscriptIdeal B) :=
+⋯
+'DiamondIntegral.Section4.RVStrictAnnularGenerators.strictAnnularIdeal_eq' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
 def DiamondIntegral.Section2.GammaPiecewiseRationalAffineInput : {M : Type} →
   [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
     [hM : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] → Prop :=
