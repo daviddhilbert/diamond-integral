@@ -506,6 +506,27 @@ intended Lean statement; ⚑ marks a flag that is also listed in §5.
     Use the centre independence and good points of 7.15 (`Corollary715`,
     `FibreInvariance`, `StageSlices`).
 
+  - **7.21 build notes (2026-11-19).**
+    - Done: `TwoCellGeometry` (both translations, at set level), `ChainStages`
+      (Lemma 6.38's chains as stages: `sourceStage`, `targetStage`). The
+      background `PullbackStages` builds the lift of a unary stage to a fibre
+      product `D ×ᵤ E` with relabelled labels; it serves the product kinds and
+      the second stages.
+    - Translation stage, order 21, balanced cells, when `v(t) > v(rv of y)`:
+      Section 6 `CentripetalData` on coordinate `y` with focus `ε(s, x)`. The
+      coefficient `c` has `v(c) ≥ δ + γ`, where δ is the invariance radius and γ
+      the VF bound, so the core clause never fires. Since fibres are δ-invariant,
+      `v(t) ≤ δ`. Follow it by `regularize`, so that `rv(y − ε)` becomes a label.
+      Then `shear_contraction_stage_of_bundle` applies: the relative condition
+      and the same-label displacement hold because the displacement is `−ε(s, x)`,
+      and the bundle holds by replacement in the last coordinate. When
+      `v(t) = v(rv of y)`, the fibre is `t^♯` itself and the cell is a product.
+    - Order 12: the same, with focus `ε⁻¹(s, y)` on coordinate `x`. The inverse
+      of an rv-affine map is rv-affine.
+    - Class comparison: `(u, t) ↦ (t₁, ψ u)` with Γ-Jacobian
+      `γ + vrv(t₁) − vrv(t) = 0`, through `FirstStage.cls_labelObject_eq` and an
+      RV relabelling.
+
 ### 7.24 Proposition `kernel:L`
 - **Route.**
   - k = 0: both sides are isomorphism.
