@@ -163,3 +163,36 @@ formalization convention. No manuscript edit has been made for them.
       is only determined up to a ball, so this uniformity cannot be recovered
       from fibrewise data without definable choice; it is part of the statement
       (amended the same day, before the 7.20 session began proving it).
+
+14. **Lemma 7.22, formal reading (2026-11-19).** Omitted justifications and a
+    formalization route, not errors.
+    - The preparation of ω (R133): Section 6's measured preparation gives
+      proper covariant RV data through which ω factors. Grafting them is a
+      morphism fixing every VF coordinate, and the grafted form depends only on
+      the labels (`Lemma722Objects.prepObject`).
+    - The cells of Lemma 7.20 live in the normalized coordinates of its
+      standard contraction (item 13). So `A*` is built on the normalized image
+      `Y = D(A')`, by grafting the RV point of the contraction
+      (`Lemma722Cells.cellObject`); its label fibres are exactly the cells
+      (`cellOf_eq`). Built on `A'` itself, the label fibres would be the cells
+      translated by the core shifts, and a zero-centred normalization of `A*`
+      with the same centre need not exist: the cells need not be invariant at
+      the radius of the centre.
+    - Hence the printed "morphism `A → A*`, relatively unary in both
+      coordinates" becomes a chain: the graft `A → A'`, the normalization
+      `A' → Y`, the graft `Y → A*`. The two grafts fix every VF coordinate, so
+      Corollary 7.15 applies to them in both orders. For the normalization, every
+      contraction of `Y` pulls back to a contraction of `A'` with normalization `D`
+      and the same class (`NormalizationComparison.cls_normalizedPullback`).
+      Lemma 7.23 uses only the classes, so its conclusion is unchanged
+      (`Lemma723Two.chain_order`).
+    - "Compactness" is a finite gluing over the cell kinds. The kind is a
+      function of the labels of `A*`, so the kinds form label pieces. Every
+      contraction of `A*` restricts to each piece, with additive classes
+      (`RestrictContractions.cls_headStart_zero_split`). On each piece any two
+      contractions in one order are related by the independence of the centre
+      (the 7.14 input) (`PieceCombination.ispRel_orders_of_pieces`).
+    - Kinds 0 and 1 are products of two open discs (`ProductKinds.product_of_kind`).
+      In the balanced kind the shift is automatically genuine: a balanced
+      positioning function maps the first projection onto the second, which lies
+      in one RV-disc (`BalancedKinds.preparedInput`).
