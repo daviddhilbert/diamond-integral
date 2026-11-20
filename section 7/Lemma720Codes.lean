@@ -82,13 +82,13 @@ variable (hc : CanonicalStructure.IsCanonical (M := M)) (h00 : M ⊨ Axioms.ACVF
   (hΓ : NontrivialDefinableGamma (⟨S,∅⟩ : ParameterBase M))
 
 /-- The default RV value used outside the domains of the codes. -/
-def codeValue {d : ℕ} (e : Fin d → M) : Fin d → RVInfinity M :=
+def rvCodeOf {d : ℕ} (e : Fin d → M) : Fin d → RVInfinity M :=
   fun i => if h : iRV (e i) then ⟨e i, h⟩ else rvZero M
 
-theorem rvValues_codeValue {d : ℕ} {e : Fin d → M} (he : ∀ i, iRV (e i)) :
-    rvValues (codeValue e) = e := by
+theorem rvValues_rvCodeOf {d : ℕ} {e : Fin d → M} (he : ∀ i, iRV (e i)) :
+    rvValues (rvCodeOf e) = e := by
   funext i
-  simp only [rvValues, codeValue, dif_pos (he i)]
+  simp only [rvValues, rvCodeOf, dif_pos (he i)]
 
 include hc h00 hκ hs hsmall hΓ in
 theorem exists_codes (B : DefSet (rawMixedSpace (M := M) 1 a) S)
@@ -130,8 +130,8 @@ theorem exists_codes (B : DefSet (rawMixedSpace (M := M) 1 a) S)
     rw [← this]
     exact q'.property
   let L : DefSet (rawMixedSpace (M := M) 1 a) S := ⟨{q | inL q}, hLdef⟩
-  let c₀ (q : Mixed M 1 a) : Fin d₀ → RVInfinity M := codeValue (e₀ (rvValues q.2) (q.1 0).val)
-  let c₁ (q : Mixed M 1 a) : Fin d₁ → RVInfinity M := codeValue (e₁ (rvValues q.2) (q.1 0).val)
+  let c₀ (q : Mixed M 1 a) : Fin d₀ → RVInfinity M := rvCodeOf (e₀ (rvValues q.2) (q.1 0).val)
+  let c₁ (q : Mixed M 1 a) : Fin d₁ → RVInfinity M := rvCodeOf (e₁ (rvValues q.2) (q.1 0).val)
   -- raw membership in the domain
   have hDom (q : B) : (q.val.1 0).val ∈ rawDom B (rvValues q.val.2) := ⟨q, rfl, rfl⟩
   have hεeq (q q' : B) (hlab : q.val.2 = q'.val.2)
@@ -145,10 +145,10 @@ theorem exists_codes (B : DefSet (rawMixedSpace (M := M) 1 a) S)
     subst hi
     exact Subtype.ext hf
   have hc0 (q : Mixed M 1 a) (hq : inL q) : rvValues (c₀ q) = e₀ (rvValues q.2) (q.1 0).val :=
-    rvValues_codeValue (fun i => h0.1 _ _ hq i)
+    rvValues_rvCodeOf (fun i => h0.1 _ _ hq i)
   have hc1 (q : Mixed M 1 a) (hq : (q.1 0).val ∈ rawDom B (rvValues q.2) \ Lraw (rvValues q.2)) :
       rvValues (c₁ q) = e₁ (rvValues q.2) (q.1 0).val :=
-    rvValues_codeValue (fun i => h1.1 _ _ hq i)
+    rvValues_rvCodeOf (fun i => h1.1 _ _ hq i)
   -- the code relations
   let left {d : ℕ} (q : Mixed M 1 (a + d)) : Mixed M 1 a := (q.1, fun i => q.2 (Fin.castAdd d i))
   let right {d : ℕ} (q : Mixed M 1 (a + d)) : Fin d → RVInfinity M := fun j => q.2 (Fin.natAdd a j)

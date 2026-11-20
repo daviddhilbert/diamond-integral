@@ -158,7 +158,7 @@ theorem gammaBall_sub_of_mem {a x y : VF M} {γ β : Gamma M}
 /-- `SlopeAt` on a subset of the domain, in terms of the raw slope row. -/
 theorem slopeAt_iff_row {n : ℕ} (A : (Fin n → M) → Set M) (f : (Fin n → M) → M → M)
     (hfVF : ∀ p x, x ∈ A p → iVF (f p x)) (p : Fin n → M) (A' : Set M) (hA' : A' ⊆ A p)
-    (x : VF M) (β : Gamma M) (b : M) (hb : NonzeroRV b) (hbβ : GammaParameters.codeValue b = β) (t : CanonicalRV.RVSort M) :
+    (x : VF M) (β : Gamma M) (b : M) (hb : NonzeroRV b) (hbβ : codeValue b = β) (t : CanonicalRV.RVSort M) :
     RVLinearRadiusClosure.SlopeAt A' (f p) (fun y hy => hfVF p y (hA' hy)) x β t ↔
       GammaRadiusAtomicity.gammaBall x β true ⊆ A' ∧ slopeRow A f (Sum.elim p ![x.val, b, t.val]) := by
   have hball (y : M) : ball b y x.val ↔ y ∈ GammaRadiusAtomicity.gammaBall x β true := by
