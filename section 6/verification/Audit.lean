@@ -3177,9 +3177,24 @@ import «section 6».Section
 #check @DiamondIntegral.Section6.DiamondCategory.UnaryFactorization
 #print DiamondIntegral.Section6.DiamondCategory.UnaryFactorization
 #print axioms DiamondIntegral.Section6.DiamondCategory.UnaryFactorization
+#check @DiamondIntegral.Section6.DiamondCategory.IsStep
+#print DiamondIntegral.Section6.DiamondCategory.IsStep
+#print axioms DiamondIntegral.Section6.DiamondCategory.IsStep
+#check @DiamondIntegral.Section6.DiamondCategory.ObjectFactorization
+#print DiamondIntegral.Section6.DiamondCategory.ObjectFactorization
+#print axioms DiamondIntegral.Section6.DiamondCategory.ObjectFactorization
+#check @DiamondIntegral.Section6.DiamondCategory.ObjectFactorization.toUnary
+#print DiamondIntegral.Section6.DiamondCategory.ObjectFactorization.toUnary
+#print axioms DiamondIntegral.Section6.DiamondCategory.ObjectFactorization.toUnary
 #check @DiamondIntegral.Section6.DiamondCategory.Morphism
 #print DiamondIntegral.Section6.DiamondCategory.Morphism
 #print axioms DiamondIntegral.Section6.DiamondCategory.Morphism
+#check @DiamondIntegral.Section6.DiamondCategory.Morphism.ofStep
+#print DiamondIntegral.Section6.DiamondCategory.Morphism.ofStep
+#print axioms DiamondIntegral.Section6.DiamondCategory.Morphism.ofStep
+#check @DiamondIntegral.Section6.DiamondCategory.Morphism.factor
+#print DiamondIntegral.Section6.DiamondCategory.Morphism.factor
+#print axioms DiamondIntegral.Section6.DiamondCategory.Morphism.factor
 #check @DiamondIntegral.Section6.DiamondCategory.Isomorphic
 #print DiamondIntegral.Section6.DiamondCategory.Isomorphic
 #print axioms DiamondIntegral.Section6.DiamondCategory.Isomorphic
@@ -3267,6 +3282,21 @@ import «section 6».Section
 #check @DiamondIntegral.Section6.DiamondGroupoid.factor_inverse
 #print DiamondIntegral.Section6.DiamondGroupoid.factor_inverse
 #print axioms DiamondIntegral.Section6.DiamondGroupoid.factor_inverse
+#check @DiamondIntegral.Section6.DiamondGroupoid.step_generic
+#print DiamondIntegral.Section6.DiamondGroupoid.step_generic
+#print axioms DiamondIntegral.Section6.DiamondGroupoid.step_generic
+#check @DiamondIntegral.Section6.DiamondGroupoid.isStep_of_generic
+#print DiamondIntegral.Section6.DiamondGroupoid.isStep_of_generic
+#print axioms DiamondIntegral.Section6.DiamondGroupoid.isStep_of_generic
+#check @DiamondIntegral.Section6.DiamondGroupoid.chain_bijective
+#print DiamondIntegral.Section6.DiamondGroupoid.chain_bijective
+#print axioms DiamondIntegral.Section6.DiamondGroupoid.chain_bijective
+#check @DiamondIntegral.Section6.DiamondGroupoid.step_inverse
+#print DiamondIntegral.Section6.DiamondGroupoid.step_inverse
+#print axioms DiamondIntegral.Section6.DiamondGroupoid.step_inverse
+#check @DiamondIntegral.Section6.DiamondGroupoid.chain_inverse
+#print DiamondIntegral.Section6.DiamondGroupoid.chain_inverse
+#print axioms DiamondIntegral.Section6.DiamondGroupoid.chain_inverse
 #check @DiamondIntegral.Section6.DiamondGroupoid.Morphism.generic
 #print DiamondIntegral.Section6.DiamondGroupoid.Morphism.generic
 #print axioms DiamondIntegral.Section6.DiamondGroupoid.Morphism.generic
@@ -3285,6 +3315,9 @@ import «section 6».Section
 #check @DiamondIntegral.Section6.DiamondGroupoid.morphism_of_generic_map
 #print DiamondIntegral.Section6.DiamondGroupoid.morphism_of_generic_map
 #print axioms DiamondIntegral.Section6.DiamondGroupoid.morphism_of_generic_map
+#check @DiamondIntegral.Section6.DiamondGroupoid.morphism_of_step
+#print DiamondIntegral.Section6.DiamondGroupoid.morphism_of_step
+#print axioms DiamondIntegral.Section6.DiamondGroupoid.morphism_of_step
 #check @DiamondIntegral.Section6.DiamondGroupoid.Morphism.inverse_exists
 #print DiamondIntegral.Section6.DiamondGroupoid.Morphism.inverse_exists
 #print axioms DiamondIntegral.Section6.DiamondGroupoid.Morphism.inverse_exists
@@ -3333,6 +3366,9 @@ import «section 6».Section
 #check @DiamondIntegral.Section6.DiamondLift.liftChain_factor
 #print DiamondIntegral.Section6.DiamondLift.liftChain_factor
 #print axioms DiamondIntegral.Section6.DiamondLift.liftChain_factor
+#check @DiamondIntegral.Section6.DiamondLift.liftChain_objects
+#print DiamondIntegral.Section6.DiamondLift.liftChain_objects
+#print axioms DiamondIntegral.Section6.DiamondLift.liftChain_objects
 #check @DiamondIntegral.Section6.DiamondLift.liftMorphism
 #print DiamondIntegral.Section6.DiamondLift.liftMorphism
 #print axioms DiamondIntegral.Section6.DiamondLift.liftMorphism
@@ -3342,6 +3378,9 @@ import «section 6».Section
 #check @DiamondIntegral.Section6.DiamondLiftHomomorphism.homeo_zero
 #print DiamondIntegral.Section6.DiamondLiftHomomorphism.homeo_zero
 #print axioms DiamondIntegral.Section6.DiamondLiftHomomorphism.homeo_zero
+#check @DiamondIntegral.Section6.DiamondLiftHomomorphism.zeroMorphism_measure
+#print DiamondIntegral.Section6.DiamondLiftHomomorphism.zeroMorphism_measure
+#print axioms DiamondIntegral.Section6.DiamondLiftHomomorphism.zeroMorphism_measure
 #check @DiamondIntegral.Section6.DiamondLiftHomomorphism.zeroMorphism
 #print DiamondIntegral.Section6.DiamondLiftHomomorphism.zeroMorphism
 #print axioms DiamondIntegral.Section6.DiamondLiftHomomorphism.zeroMorphism
@@ -3441,6 +3480,9 @@ import «section 6».Section
 #check @DiamondIntegral.Section6.DiamondSpecialIsomorphisms.relative_factor
 #print DiamondIntegral.Section6.DiamondSpecialIsomorphisms.relative_factor
 #print axioms DiamondIntegral.Section6.DiamondSpecialIsomorphisms.relative_factor
+#check @DiamondIntegral.Section6.DiamondSpecialIsomorphisms.relative_objects
+#print DiamondIntegral.Section6.DiamondSpecialIsomorphisms.relative_objects
+#print axioms DiamondIntegral.Section6.DiamondSpecialIsomorphisms.relative_objects
 #check @DiamondIntegral.Section6.DiamondSpecialIsomorphisms.remark_6_15
 #print DiamondIntegral.Section6.DiamondSpecialIsomorphisms.remark_6_15
 #print axioms DiamondIntegral.Section6.DiamondSpecialIsomorphisms.remark_6_15
@@ -3471,6 +3513,9 @@ import «section 6».Section
 #check @DiamondIntegral.Section6.DiamondSurjectivity.special_factor
 #print DiamondIntegral.Section6.DiamondSurjectivity.special_factor
 #print axioms DiamondIntegral.Section6.DiamondSurjectivity.special_factor
+#check @DiamondIntegral.Section6.DiamondSurjectivity.special_objects
+#print DiamondIntegral.Section6.DiamondSurjectivity.special_objects
+#print axioms DiamondIntegral.Section6.DiamondSurjectivity.special_objects
 #check @DiamondIntegral.Section6.DiamondSurjectivity.liftDataObject
 #print DiamondIntegral.Section6.DiamondSurjectivity.liftDataObject
 #print axioms DiamondIntegral.Section6.DiamondSurjectivity.liftDataObject
@@ -3486,6 +3531,45 @@ import «section 6».Section
 #check @DiamondIntegral.Section6.DiamondSurjectivity.exists_isomorphic_lift_zero
 #print DiamondIntegral.Section6.DiamondSurjectivity.exists_isomorphic_lift_zero
 #print axioms DiamondIntegral.Section6.DiamondSurjectivity.exists_isomorphic_lift_zero
+#check @DiamondIntegral.Section6.DiamondTransport.ObjOn
+#print DiamondIntegral.Section6.DiamondTransport.ObjOn
+#print axioms DiamondIntegral.Section6.DiamondTransport.ObjOn
+#check @DiamondIntegral.Section6.DiamondTransport.ObjOn.obj
+#print DiamondIntegral.Section6.DiamondTransport.ObjOn.obj
+#print axioms DiamondIntegral.Section6.DiamondTransport.ObjOn.obj
+#check @DiamondIntegral.Section6.DiamondTransport.ofObject
+#print DiamondIntegral.Section6.DiamondTransport.ofObject
+#print axioms DiamondIntegral.Section6.DiamondTransport.ofObject
+#check @DiamondIntegral.Section6.DiamondTransport.ofObject_obj
+#print DiamondIntegral.Section6.DiamondTransport.ofObject_obj
+#print axioms DiamondIntegral.Section6.DiamondTransport.ofObject_obj
+#check @DiamondIntegral.Section6.DiamondTransport.locallyConstant
+#print DiamondIntegral.Section6.DiamondTransport.locallyConstant
+#print axioms DiamondIntegral.Section6.DiamondTransport.locallyConstant
+#check @DiamondIntegral.Section6.DiamondTransport.finite_of_unary
+#print DiamondIntegral.Section6.DiamondTransport.finite_of_unary
+#print axioms DiamondIntegral.Section6.DiamondTransport.finite_of_unary
+#check @DiamondIntegral.Section6.DiamondTransport.transport
+#print DiamondIntegral.Section6.DiamondTransport.transport
+#print axioms DiamondIntegral.Section6.DiamondTransport.transport
+#check @DiamondIntegral.Section6.DiamondTransport.transport_form
+#print DiamondIntegral.Section6.DiamondTransport.transport_form
+#print axioms DiamondIntegral.Section6.DiamondTransport.transport_form
+#check @DiamondIntegral.Section6.DiamondTransport.transport_step
+#print DiamondIntegral.Section6.DiamondTransport.transport_step
+#print axioms DiamondIntegral.Section6.DiamondTransport.transport_step
+#check @DiamondIntegral.Section6.DiamondTransport.id_step
+#print DiamondIntegral.Section6.DiamondTransport.id_step
+#print axioms DiamondIntegral.Section6.DiamondTransport.id_step
+#check @DiamondIntegral.Section6.DiamondTransport.id_step_generic
+#print DiamondIntegral.Section6.DiamondTransport.id_step_generic
+#print axioms DiamondIntegral.Section6.DiamondTransport.id_step_generic
+#check @DiamondIntegral.Section6.DiamondTransport.id_comp_map
+#print DiamondIntegral.Section6.DiamondTransport.id_comp_map
+#print axioms DiamondIntegral.Section6.DiamondTransport.id_comp_map
+#check @DiamondIntegral.Section6.DiamondTransport.retained_objects
+#print DiamondIntegral.Section6.DiamondTransport.retained_objects
+#print axioms DiamondIntegral.Section6.DiamondTransport.retained_objects
 #check @DiamondIntegral.Section6.synchronized_preparation_all_dimensions
 #print DiamondIntegral.Section6.synchronized_preparation_all_dimensions
 #print axioms DiamondIntegral.Section6.synchronized_preparation_all_dimensions
@@ -14358,6 +14442,75 @@ import «section 6».Section
 #check @DiamondIntegral.Section6.FrozenCoordinateProgramData.ambientRefinementFrame
 #print DiamondIntegral.Section6.FrozenCoordinateProgramData.ambientRefinementFrame
 #print axioms DiamondIntegral.Section6.FrozenCoordinateProgramData.ambientRefinementFrame
+#check @DiamondIntegral.Section6.TransportedForms.vfSelectMap
+#print DiamondIntegral.Section6.TransportedForms.vfSelectMap
+#print axioms DiamondIntegral.Section6.TransportedForms.vfSelectMap
+#check @DiamondIntegral.Section6.TransportedForms.vfSelectMap_value
+#print DiamondIntegral.Section6.TransportedForms.vfSelectMap_value
+#print axioms DiamondIntegral.Section6.TransportedForms.vfSelectMap_value
+#check @DiamondIntegral.Section6.TransportedForms.agreementPairs_definable
+#print DiamondIntegral.Section6.TransportedForms.agreementPairs_definable
+#print axioms DiamondIntegral.Section6.TransportedForms.agreementPairs_definable
+#check @DiamondIntegral.Section6.TransportedForms.isClopen_of_locallyInvariant
+#print DiamondIntegral.Section6.TransportedForms.isClopen_of_locallyInvariant
+#print axioms DiamondIntegral.Section6.TransportedForms.isClopen_of_locallyInvariant
+#check @DiamondIntegral.Section6.TransportedForms.gammaMapValue_congr_vf
+#print DiamondIntegral.Section6.TransportedForms.gammaMapValue_congr_vf
+#print axioms DiamondIntegral.Section6.TransportedForms.gammaMapValue_congr_vf
+#check @DiamondIntegral.Section6.TransportedForms.covariant_of_locallyConstant
+#print DiamondIntegral.Section6.TransportedForms.covariant_of_locallyConstant
+#print axioms DiamondIntegral.Section6.TransportedForms.covariant_of_locallyConstant
+#check @DiamondIntegral.Section6.TransportedForms.fibres_mixed_definable_of_codes
+#print DiamondIntegral.Section6.TransportedForms.fibres_mixed_definable_of_codes
+#print axioms DiamondIntegral.Section6.TransportedForms.fibres_mixed_definable_of_codes
+#check @DiamondIntegral.Section6.TransportedForms.outIdx
+#print DiamondIntegral.Section6.TransportedForms.outIdx
+#print axioms DiamondIntegral.Section6.TransportedForms.outIdx
+#check @DiamondIntegral.Section6.TransportedForms.outIdx_ne
+#print DiamondIntegral.Section6.TransportedForms.outIdx_ne
+#print axioms DiamondIntegral.Section6.TransportedForms.outIdx_ne
+#check @DiamondIntegral.Section6.TransportedForms.outIdx_back
+#print DiamondIntegral.Section6.TransportedForms.outIdx_back
+#print axioms DiamondIntegral.Section6.TransportedForms.outIdx_back
+#check @DiamondIntegral.Section6.TransportedForms.fillPoint
+#print DiamondIntegral.Section6.TransportedForms.fillPoint
+#print axioms DiamondIntegral.Section6.TransportedForms.fillPoint
+#check @DiamondIntegral.Section6.TransportedForms.fillPoint_self
+#print DiamondIntegral.Section6.TransportedForms.fillPoint_self
+#print axioms DiamondIntegral.Section6.TransportedForms.fillPoint_self
+#check @DiamondIntegral.Section6.TransportedForms.eq_fillPoint
+#print DiamondIntegral.Section6.TransportedForms.eq_fillPoint
+#print axioms DiamondIntegral.Section6.TransportedForms.eq_fillPoint
+#check @DiamondIntegral.Section6.TransportedForms.fibreSet
+#print DiamondIntegral.Section6.TransportedForms.fibreSet
+#print axioms DiamondIntegral.Section6.TransportedForms.fibreSet
+#check @DiamondIntegral.Section6.TransportedForms.fibreSet_definable
+#print DiamondIntegral.Section6.TransportedForms.fibreSet_definable
+#print axioms DiamondIntegral.Section6.TransportedForms.fibreSet_definable
+#check @DiamondIntegral.Section6.TransportedForms.exists_small_nonzero
+#print DiamondIntegral.Section6.TransportedForms.exists_small_nonzero
+#print axioms DiamondIntegral.Section6.TransportedForms.exists_small_nonzero
+#check @DiamondIntegral.Section6.TransportedForms.finite_rv_fibres
+#print DiamondIntegral.Section6.TransportedForms.finite_rv_fibres
+#print axioms DiamondIntegral.Section6.TransportedForms.finite_rv_fibres
+#check @DiamondIntegral.Section6.TransportedForms.finite_rv_fibres_zero
+#print DiamondIntegral.Section6.TransportedForms.finite_rv_fibres_zero
+#print axioms DiamondIntegral.Section6.TransportedForms.finite_rv_fibres_zero
+#check @DiamondIntegral.Section6.TransportedForms.LocallyConstantOnFibres
+#print DiamondIntegral.Section6.TransportedForms.LocallyConstantOnFibres
+#print axioms DiamondIntegral.Section6.TransportedForms.LocallyConstantOnFibres
+#check @DiamondIntegral.Section6.TransportedForms.congruent_of_mem_vfBall
+#print DiamondIntegral.Section6.TransportedForms.congruent_of_mem_vfBall
+#print axioms DiamondIntegral.Section6.TransportedForms.congruent_of_mem_vfBall
+#check @DiamondIntegral.Section6.TransportedForms.mem_vfBall_of_congruent
+#print DiamondIntegral.Section6.TransportedForms.mem_vfBall_of_congruent
+#print axioms DiamondIntegral.Section6.TransportedForms.mem_vfBall_of_congruent
+#check @DiamondIntegral.Section6.TransportedForms.exists_scalar_above
+#print DiamondIntegral.Section6.TransportedForms.exists_scalar_above
+#print axioms DiamondIntegral.Section6.TransportedForms.exists_scalar_above
+#check @DiamondIntegral.Section6.TransportedForms.locallyConstant_comp_inverse
+#print DiamondIntegral.Section6.TransportedForms.locallyConstant_comp_inverse
+#print axioms DiamondIntegral.Section6.TransportedForms.locallyConstant_comp_inverse
 #check @DiamondIntegral.Section6.transported_gamma_levels_open
 #print DiamondIntegral.Section6.transported_gamma_levels_open
 #print axioms DiamondIntegral.Section6.transported_gamma_levels_open

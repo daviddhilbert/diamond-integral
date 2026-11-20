@@ -1995,9 +1995,21 @@ import «section 7».Section
 #check @DiamondIntegral.Section7.DiamondProducts.productForm_at
 #print DiamondIntegral.Section7.DiamondProducts.productForm_at
 #print axioms DiamondIntegral.Section7.DiamondProducts.productForm_at
+#check @DiamondIntegral.Section7.DiamondProducts.product_generic_maps
+#print DiamondIntegral.Section7.DiamondProducts.product_generic_maps
+#print axioms DiamondIntegral.Section7.DiamondProducts.product_generic_maps
 #check @DiamondIntegral.Section7.DiamondProducts.product_generic
 #print DiamondIntegral.Section7.DiamondProducts.product_generic
 #print axioms DiamondIntegral.Section7.DiamondProducts.product_generic
+#check @DiamondIntegral.Section7.DiamondProducts.chain_productLeft
+#print DiamondIntegral.Section7.DiamondProducts.chain_productLeft
+#print axioms DiamondIntegral.Section7.DiamondProducts.chain_productLeft
+#check @DiamondIntegral.Section7.DiamondProducts.chain_productRight
+#print DiamondIntegral.Section7.DiamondProducts.chain_productRight
+#print axioms DiamondIntegral.Section7.DiamondProducts.chain_productRight
+#check @DiamondIntegral.Section7.DiamondProducts.chain_product
+#print DiamondIntegral.Section7.DiamondProducts.chain_product
+#print axioms DiamondIntegral.Section7.DiamondProducts.chain_product
 #check @DiamondIntegral.Section7.DiamondProducts.Morphism.product_exists
 #print DiamondIntegral.Section7.DiamondProducts.Morphism.product_exists
 #print axioms DiamondIntegral.Section7.DiamondProducts.Morphism.product_exists
@@ -3042,12 +3054,6 @@ import «section 7».Section
 #check @DiamondIntegral.Section7.HeadStartK.cls_graftRest_k
 #print DiamondIntegral.Section7.HeadStartK.cls_graftRest_k
 #print axioms DiamondIntegral.Section7.HeadStartK.cls_graftRest_k
-#check @DiamondIntegral.Section7.IntermediateFormsInput.StepForms
-#print DiamondIntegral.Section7.IntermediateFormsInput.StepForms
-#print axioms DiamondIntegral.Section7.IntermediateFormsInput.StepForms
-#check @DiamondIntegral.Section7.IntermediateFormsInput.IntermediateForms
-#print DiamondIntegral.Section7.IntermediateFormsInput.IntermediateForms
-#print axioms DiamondIntegral.Section7.IntermediateFormsInput.IntermediateForms
 #check @DiamondIntegral.Section7.IsoOfMeasured.rawFun
 #print DiamondIntegral.Section7.IsoOfMeasured.rawFun
 #print axioms DiamondIntegral.Section7.IsoOfMeasured.rawFun
@@ -6720,12 +6726,6 @@ import «section 7».Section
 #check @DiamondIntegral.Section7.MorphismClasses.classRel_of_iso_one
 #print DiamondIntegral.Section7.MorphismClasses.classRel_of_iso_one
 #print axioms DiamondIntegral.Section7.MorphismClasses.classRel_of_iso_one
-#check @DiamondIntegral.Section7.MorphismClasses.FormCov
-#print DiamondIntegral.Section7.MorphismClasses.FormCov
-#print axioms DiamondIntegral.Section7.MorphismClasses.FormCov
-#check @DiamondIntegral.Section7.MorphismClasses.objMk
-#print DiamondIntegral.Section7.MorphismClasses.objMk
-#print axioms DiamondIntegral.Section7.MorphismClasses.objMk
 #check @DiamondIntegral.Section7.MorphismClasses.MoveRel
 #print DiamondIntegral.Section7.MorphismClasses.MoveRel
 #print axioms DiamondIntegral.Section7.MorphismClasses.MoveRel
@@ -9441,6 +9441,18 @@ import «section 7».Section
 #check @DiamondIntegral.Section7.Theorem726.remark_7_25
 #print DiamondIntegral.Section7.Theorem726.remark_7_25
 #print axioms DiamondIntegral.Section7.Theorem726.remark_7_25
+#check @DiamondIntegral.Section7.Theorem726.theorem_7_26
+#print DiamondIntegral.Section7.Theorem726.theorem_7_26
+#print axioms DiamondIntegral.Section7.Theorem726.theorem_7_26
+#check @DiamondIntegral.Section7.Theorem726.theorem_7_26_graded
+#print DiamondIntegral.Section7.Theorem726.theorem_7_26_graded
+#print axioms DiamondIntegral.Section7.Theorem726.theorem_7_26_graded
+#check @DiamondIntegral.Section7.Theorem726.theorem_7_26_graded_mem
+#print DiamondIntegral.Section7.Theorem726.theorem_7_26_graded_mem
+#print axioms DiamondIntegral.Section7.Theorem726.theorem_7_26_graded_mem
+#check @DiamondIntegral.Section7.Theorem726.remark_7_25_kernel
+#print DiamondIntegral.Section7.Theorem726.remark_7_25_kernel
+#print axioms DiamondIntegral.Section7.Theorem726.remark_7_25_kernel
 #check @DiamondIntegral.Section7.TwoCellGeometry.positionInv
 #print DiamondIntegral.Section7.TwoCellGeometry.positionInv
 #print axioms DiamondIntegral.Section7.TwoCellGeometry.positionInv
@@ -9855,18 +9867,3 @@ import «section 7».Section
 #check @DiamondIntegral.Section7.TwoStageContractions.twoStage_volumeIndex
 #print DiamondIntegral.Section7.TwoStageContractions.twoStage_volumeIndex
 #print axioms DiamondIntegral.Section7.TwoStageContractions.twoStage_volumeIndex
-#check @DiamondIntegral.Section7.UnaryArrows.step_spec
-#print DiamondIntegral.Section7.UnaryArrows.step_spec
-#print axioms DiamondIntegral.Section7.UnaryArrows.step_spec
-#check @DiamondIntegral.Section7.UnaryArrows.stepForm
-#print DiamondIntegral.Section7.UnaryArrows.stepForm
-#print axioms DiamondIntegral.Section7.UnaryArrows.stepForm
-#check @DiamondIntegral.Section7.UnaryArrows.stepObject
-#print DiamondIntegral.Section7.UnaryArrows.stepObject
-#print axioms DiamondIntegral.Section7.UnaryArrows.stepObject
-#check @DiamondIntegral.Section7.UnaryArrows.stepObject_carrier
-#print DiamondIntegral.Section7.UnaryArrows.stepObject_carrier
-#print axioms DiamondIntegral.Section7.UnaryArrows.stepObject_carrier
-#check @DiamondIntegral.Section7.UnaryArrows.stepMorphism
-#print DiamondIntegral.Section7.UnaryArrows.stepMorphism
-#print axioms DiamondIntegral.Section7.UnaryArrows.stepMorphism
