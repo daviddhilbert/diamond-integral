@@ -957,4 +957,4 @@ roots = ["«section 7».BoundedClasses", "«section 7».BlowupLiftData", "«sect
 
 [[lean_lib]]
 name = "section 7 lemma 7.14"
-roots = ["«section 7».Lemma714Witness", "«section 7».Lemma714Schema"]
+roots = ["«section 7».Lemma714Witness", "«section 7».Lemma714Schema", "«section 7».Lemma714Moves"]
