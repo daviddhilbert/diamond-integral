@@ -3,6 +3,7 @@ import «section 7».Proposition724Zero
 import «section 7».DiamondRing
 import «section 7».RingClasses
 import «section 4».RVBoundedDisjointPresentation
+import «section 7».DiamondProducts
 
 /-! Theorem 7.26 (`main:prop`), the graded ring isomorphism
 `∫^◇ : K μVF^◇[*] ≅ K μRV^db[*] / J_var`, and Remark 7.25 (`thekernel`):
@@ -111,6 +112,11 @@ theorem isomorphic_cast {k l : ℕ} (h : k = l) {A B : VFObject (M := M) (T : Se
     (hAB : Isomorphic G A B) : Isomorphic G (h ▸ A) (h ▸ B) := by
   subst h
   exact hAB
+
+include h00 hκ hs hsmall hv in
+/-- `ProductHyp` holds (`DiamondProducts.isomorphic_product`). -/
+theorem productHyp : ProductHyp G hc T := fun _ _ _ _ _ _ hA hB =>
+  DiamondProducts.isomorphic_product hc h00 hκ.le hs hsmall hv hA hB
 
 variable (hProd : ProductHyp G hc T) (hLiftProd : LiftProductHyp G h00 hc hκ hs hv T hsmall hΓ)
 
