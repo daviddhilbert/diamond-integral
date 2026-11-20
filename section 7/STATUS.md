@@ -126,26 +126,19 @@ arbitrary parameter base and take no input beyond the ACVF model.
     coordinates in any order). Its class is the fibre class of the second-stage
     set (`SliceContractions.cls_sliceMOC`), and 7.23 for n = 2 over `S⟨b⟩` gives
     the fibre hypothesis (`SliceContractions.fibre_ispRel_at`).
-- **Proposition 7.24, Remark 7.25, Theorem 7.26 (2026-11-20).**
-  - Temporary input, by the author's decision ("Input + parallel build"):
-    `IntermediateFormsInput.IntermediateForms M G` (GAP-REPAIRS 16). Only
-    `UnaryArrows` unpacks it; downstream theorems take `hIF` explicitly.
-    **It is false as stated for n = 2** (counterexample found by the proving
-    session, checked here; GAP-REPAIRS 16). Everything below that takes `hIF`
-    is therefore not established; the route is the author's decision.
-  - (∗) done, hypothesis-free (`OrderIndependence.star`), GAP-REPAIRS 15.
-  - 7.24 in degree n+1 on `hIF` only (`Proposition724.proposition_7_24`,
-    `proposition_7_24_muIsp`); degree 0 hypothesis-free
-    (`Proposition724Zero.proposition_7_24_zero`). Route in GAP-REPAIRS 17:
-    arrows (`MorphismClasses`, `Corollary715Moves`), scissor additivity
-    (`ScissorClasses`), tautological contraction (`TautologicalLifts`), and the
-    contraction class as an invariant of the scissor presentation.
-  - 7.26 semigroup part: `Proposition724.integralEquiv` (degree n+1) and
-    `Proposition724Zero.integralZero_bijective` (degree 0), with the stated
-    characterization.
-  - 7.26 ring part and 7.25: `Theorem726.integralRingEquiv` and
-    `Theorem726.remark_7_25`, with K μVF^◇[*] the ring presentation
-    `DiamondRing.Ring` and products of morphisms from `DiamondProducts`.
+- **Proposition 7.24, Remark 7.25, Theorem 7.26 (2026-11-20): done, no
+  hypothesis beyond the standing base.**
+  - The temporary intermediate-forms input turned out false for n = 2
+    (GAP-REPAIRS 16). By the author's decision ("fix (1)") Definition 6.34 is
+    repaired as in the paper: morphisms factor inside `μVF^◇` through objects
+    (Section 6 `ObjectFactorization`; manuscript wording in review batch B10,
+    pending the author's reading). The input and `UnaryArrows` are deleted.
+  - 7.24: `Proposition724.proposition_7_24`, `proposition_7_24_muIsp`;
+    degree 0 `Proposition724Zero.proposition_7_24_zero`.
+  - 7.26: `Proposition724.integralEquiv`, `Proposition724Zero.integralZero_bijective`,
+    `Theorem726.theorem_7_26`, `theorem_7_26_graded`.
+  - 7.25: `Theorem726.remark_7_25_kernel`.
+  - Route in GAP-REPAIRS 15–17.
 - Remark 7.28 done (`Remark728.remark_7_28`, `remark_7_28_zero`), with the
   bridges the author approved on 2026-11-19: strong homogeneity (from the
   Section 3 ground context), the forgetful map to Section 3's VF classes, and
@@ -157,8 +150,7 @@ arbitrary parameter base and take no input beyond the ACVF model.
 
 ## Next
 
-The author's decision on the route for the arrows of 7.24 (GAP-REPAIRS 16:
-the intermediate-forms input is false as stated). Corollary 7.27 is done on the
-classes of objects (`Corollary727`, input-free); its ring-map form waits on
-∫^◇ as a ring map. Product compatibility (7.10) and the object-level converse
+The author's reading of review batch B10 (Definition 6.34). Corollary 7.27 is
+done on the classes of objects (`Corollary727`); its ring-map form can now use
+`Theorem726.theorem_7_26`. Product compatibility (7.10) and the object-level converse
 for Definition 7.2 remain open side items.

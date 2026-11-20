@@ -22,15 +22,12 @@ Lemma 7.23 in every dimension (`Lemma723General.lemma_7_23`). Lemmas 7.14 and 7.
 temporary inputs (author decision of 2026-11-19), proved in separate sessions
 and merged; `FiberwiseInput.Lemma714` and `TwoCellInput.Lemma720` keep their
 statements. Proposition 7.24 (`Proposition724.proposition_7_24`, degree 0 in
-`Proposition724Zero`), Remark 7.25 (`Theorem726.remark_7_25`) and Theorem 7.26
-(`Proposition724.integralEquiv`, `Theorem726.integralRingEquiv`) are done on the
-temporary intermediate-forms input `IntermediateFormsInput.IntermediateForms`
-(author decision of 2026-11-20, GAP-REPAIRS 16). That input turned out to be
-false as stated for n = 2, so these positive-degree results are not
-established; degree 0 is done without it, and the route is the author's
-decision. Corollary 7.27 is done on the classes of objects (`Corollary727`,
-input-free). Remaining: the approved partial-lift form of 7.11 and the route
-for the arrows of 7.24.
+`Proposition724Zero`), Remark 7.25 (`Theorem726.remark_7_25_kernel`) and
+Theorem 7.26 (`Proposition724.integralEquiv`, `Theorem726.theorem_7_26`) are
+done with no hypothesis beyond the standing base, on the repaired Definition
+6.34 (morphisms factor through objects; review batch B10, author's decision of
+2026-11-20). Corollary 7.27 is done on the classes of objects (`Corollary727`).
+Remaining: the approved partial-lift form of 7.11.
 Remark 7.28 is done (`Remark728`).
 
 The focused [Section 6 handoff](SECTION6-HANDOFF.md) links the checked native

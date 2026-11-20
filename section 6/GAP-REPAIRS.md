@@ -15,21 +15,56 @@ at the author's instruction. Nothing is committed.
   balls of a `t`-definable radius (`formCovariant`).
   `VFObject.levelSet_geometry` recovers the manuscript's equivalent
   formulation (every level set is proper invariant).
-- `UnaryFactorization`: factorization into relatively unary proper covariant
-  homeomorphisms between definable sets (relative unarity is vacuous in
-  degree zero).
-- `Morphism`: a bijection with such a factorization whose derivative satisfies
-  the measure identity outside a definable set of VF-dimension `< n` (approved
-  R102); in degree zero the exceptional set is empty, so morphisms preserve the
-  form pointwise (empty Jacobian `1`).
+- `IsStep`, `ObjectFactorization` (repaired 2026-11-20): a factorization
+  inside `μVF^◇[n]`, i.e. a chain of steps between objects, each a relatively
+  unary proper covariant homeomorphism that satisfies the measure identity on
+  its own outside a definable set of VF-dimension `< n` (relative unarity is
+  vacuous in degree zero). `UnaryFactorization` (homeomorphisms between
+  definable sets) remains, as the forgetful image (`ObjectFactorization.toUnary`,
+  `Morphism.factor`).
+- `Morphism`: a bijection with a factorization inside `μVF^◇[n]` (`chain`) whose
+  derivative satisfies the measure identity outside a definable set of
+  VF-dimension `< n` (approved R102); in degree zero the exceptional set is
+  empty, so morphisms preserve the form pointwise (empty Jacobian `1`).
+  `Morphism.ofStep` builds a one-step morphism.
 - `Isomorphic`, `Morphism.id`, `Isomorphic.refl`.
 
-Design note. Definition 6.34 says morphisms are compositions of relatively
-unary proper covariant homeomorphisms inside `μVF[n]`; the intermediate sets
-are definable sets, not necessarily objects. An earlier draft required every
-intermediate set to be an object (with its own form and finite RV fibres); that
-is stricter than the text and not verifiable for Section 6's interpolation
-steps, so the literal definition is used.
+Design note (superseded 2026-11-20, author's decision "fix (1)"; manuscript
+wording in review batch B10, pending the author's reading). The earlier note
+read the intermediate sets as definable sets, not necessarily objects, because
+requiring objects seemed "stricter than the text and not verifiable for Section
+6's interpolation steps". Both reasons fail:
+- The proof of Proposition 7.24 needs objects: it applies Corollary 7.15 to each
+  factor ("a sequence of relatively unary μVF^◇[k]-morphisms, which exists by
+  definition"), and 7.15 compares standard contractions of both ends. Without
+  intermediate forms this breaks: `F(x, z) = (x, x·κ(z/x))`, with `κ` locally
+  affine of slopes `1, t, 1/t`, is a relatively unary proper covariant
+  homeomorphism of `𝔬²` whose target admits no covariant form making it
+  measure-preserving, while `F⁻¹ ∘ F` is the identity (Section 7 GAP-REPAIRS 16).
+- Every multi-step producer has unit derivative at VF-generic points on each
+  step (checked by the parent session and here): special covariant chains
+  (`SpecialCovariantChain.unit_derivative_of_independent`, per constructor),
+  relative aperture chains, the retained unary chains with their `unit` field
+  (the interpolation chains `vfInterpolation_unary_chain`,
+  `ZeroCenteredData.relatively_unary_chain`, `headStartLift_unary_chain`), and
+  Lemma 6.33's lift chains, whose steps are everywhere measured lifts between
+  lifts of RV objects. So each intermediate set carries the transported form.
+- `DiamondTransport` makes this precise: the transported form is proper
+  covariant (`TransportedFormsLocal.locallyConstant_comp_inverse`,
+  `TransportedFormsCov.covariant_of_locallyConstant`), the target has finite RV
+  fibres (`TransportedFormsFibres.finite_rv_fibres`), and each step is
+  measure-preserving (`transport_step`). These three files were proved by the
+  session for the intermediate-forms input (branch `claude/intermediate-forms-proof`,
+  commit 7b2b7ed2) and moved here.
+- Rebuilt producers: `DiamondLift.liftChain_objects` (lift chains; `liftMorphism`
+  now takes the standing hypotheses, for the proper invariance of the
+  intermediate lifts), `DiamondSurjectivity.special_objects`,
+  `DiamondSpecialIsomorphisms.relative_objects`, `DiamondTransport.retained_objects`,
+  Remark 6.28 (`DiamondStandardContraction.remark_6_28`), `DiamondEmpty`,
+  `DiamondLiftHomomorphism.zeroMorphism`, and the groupoid operations
+  (`DiamondGroupoid.chain_inverse`, `step_inverse`, `ObjectFactorization.comp`).
+  The final transported form is identified with the target's own form by an
+  identity step (`id_step`, `id_step_generic`).
 
 ## Remark 6.35 (`dia:cat:well`) — missing groupoid proof: proved
 

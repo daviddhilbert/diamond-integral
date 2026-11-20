@@ -221,7 +221,7 @@ formalization convention. No manuscript edit has been made for them.
       contractions (`TautologicalContractions.taut`) have the classes of the two
       contractions (`cls_taut`).
 
-16. **Proposition 7.24, the arrows of an isomorphism (input false as stated; route open, 2026-11-20).** The
+16. **Proposition 7.24, the arrows of an isomorphism (resolved by repairing Definition 6.34, 2026-11-20).** The
     proof applies Corollary 7.15 to "a sequence of relatively unary
     `μVF^◇[k]`-morphisms" `μL U = B_1 → … → B_{l+1} = μL V`. In the formal
     category (Section 6, approved R102), a morphism carries a factorization of
@@ -253,10 +253,17 @@ formalization convention. No manuscript edit has been made for them.
       `(0, 0)`. So `[F, F⁻¹]` is an R102 factorization of the identity whose middle
       set admits no form for which both steps are morphisms, and Corollary 7.15
       cannot be applied per arrow of an arbitrary R102 factorization. The results
-      that take `hIF` (7.24 in degree n+1, 7.26, 7.25 on the integral side) are
-      not established; the route is the author's decision (Section 6
-      Definition 6.34: forms on the intermediate sets, as in the paper, or a
-      refactorization of R102 morphisms into good steps).
+      that took `hIF` were not established.
+    - **Resolution (author's decision, "fix (1)").** Definition 6.34 is read as
+      in the paper: the composition is taken inside `μVF^◇[k]`, so every
+      intermediate set is an object with its own proper covariant form and every
+      factor is measure-preserving on its own (manuscript wording in review batch
+      B10, pending the author's reading; Lean: Section 6
+      `DiamondCategory.ObjectFactorization`, `IsStep`, GAP-REPAIRS of Section 6
+      under Definition 6.34). The arrows of 7.24 are then the steps of the chain
+      (`MorphismClasses.factor_classes`), and the input `IntermediateForms` and
+      `UnaryArrows` are deleted. 7.24–7.26 have no hypothesis beyond the standing
+      base.
 
 17. **Proposition 7.24, Remark 7.25 and Theorem 7.26 (formal route,
     2026-11-20).** Omitted justifications, not errors.
@@ -271,9 +278,9 @@ formalization convention. No manuscript edit has been made for them.
       contraction (`TautologicalLifts`: the regularization followed by identity
       stages, with class equal to [U]). So [μ𝕃U] = [μ𝕃V] gives
       ([U], [V]) ∈ μIsp^db with no cancellation.
-    - The arrows: along a factorization of a morphism, the intermediate forms
-      (item 16) make each step a morphism of objects (`UnaryArrows`), and
-      Corollary 7.15 applies to each step. Steps relatively unary in (i, j) with
+    - The arrows: a morphism factors inside `μVF^◇` (repaired Definition 6.34,
+      item 16), so each step is a morphism between objects (`Morphism.ofStep`),
+      and Corollary 7.15 applies to each step (`MorphismClasses.factor_classes`). Steps relatively unary in (i, j) with
       i ≠ j are covered by conjugating to the prepared sets in two matched orders
       (`Corollary715Moves.corollary_7_15_moves`). The form reached on the final
       set differs from the given one only off a small set, and the identity is
