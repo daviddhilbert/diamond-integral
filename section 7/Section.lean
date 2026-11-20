@@ -169,6 +169,9 @@ import «section 7».Lemma712Objects
 import «section 7».Lemma711PartialClass
 import «section 7».Lemma711PartialSteps
 import «section 7».Lemma711Partial
+import «section 7».BlowupObjects
+import «section 7».ProductClasses
+import «section 7».ProductBlowups
 
 /-! Entry point for the Section 7 formalization (integrating proper invariant
 sets), following the adopted manuscript with bounded variable apertures. -/

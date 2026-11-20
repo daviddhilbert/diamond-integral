@@ -17,8 +17,8 @@ A blowup of length one of `V` via morphisms `F_i : U_i → C_i` onto disjoint
 subobjects is `(V ∖ C) ⊎ ⊎ U_i^♭`. By the paper's own remark after
 Corollary 7.8 these are relations on isomorphism classes; on classes, a length-one
 blowup replaces summands `[U_i]` of `[V]` by `[U_i^♭]` (`Step`). The object-level
-definition with literal disjoint subobjects is `Blowup`, and `Blowup.step` shows
-it gives `Step`.
+definition with literal disjoint subobjects is `BlowupObjects.Blowup`;
+`BlowupObjects.step_iff_blowup` shows that it is equivalent to `Step`.
 
 The main technical result here is restriction (`AnnularDatum.res`): an aperture
 datum restricts to every definable piece of its source, and the blowup splits
