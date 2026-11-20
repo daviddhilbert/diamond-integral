@@ -4937,12 +4937,10 @@ We have seen this many times above: as a consequence of Lemma~\ref{vol:par:bound
 \subsection{Standard contractions}
 
 \begin{defn}\label{rela:unary}
-Let $A \sub \VF^{n} \times \RV^{m}$, $B \sub \VF^{n} \times \RV^{m'}$ be definable sets. A definable bijection $G : A \fun B$ is \memph{relatively unary}, or more precisely, \memph{relatively unary in the $(i, j)$-coordinate}, where $i, j \in [n]$, if $(\pr_{\tilde{j}} \circ G)(x) = \pr_{\tilde{i}}(x)$ for all $x \in A$. If, in addition, $G \rest A_a$ is also a special covariant bijection for every $a \in \pr_{\tilde{i}} (A)$ then $G$ is \memph{relatively special covariant} in the $(i, j)$-coordinate.
+Let $A \sub \VF^{n} \times \RV^{m}$, $B \sub \VF^{n} \times \RV^{m'}$ be definable sets. A definable bijection $G : A \fun B$ is \memph{relatively unary}, or more precisely, \memph{relatively unary in the $i$th coordinate}, where $i \in [n]$, if $(\pr_{\tilde{i}} \circ G)(x) = \pr_{\tilde{i}}(x)$ for all $x \in A$. If, in addition, $G \rest A_a$ is also a special covariant bijection for every $a \in \pr_{\tilde{i}} (A)$ then $G$ is \memph{relatively special covariant} in the $i$th coordinate.
 
-Let $\bm U = (U, f)$, $\bm V = (V, g)$ be objects of $\RV[k]$. A morphism $F : \bm U \fun \bm V$ is \memph{relatively unary in the $(i, j)$-coordinate}, where $i,j \in [k]$, if $(\pr_{\tilde{j}} \circ g \circ F)(u) = (\pr_{\tilde{i}} \circ f)(u)$ for all $u \in U$.
+Let $\bm U = (U, f)$, $\bm V = (V, g)$ be objects of $\RV[k]$. A morphism $F : \bm U \fun \bm V$ is \memph{relatively unary in the $i$th coordinate}, where $i \in [k]$, if $(\pr_{\tilde{i}} \circ g \circ F)(u) = (\pr_{\tilde{i}} \circ f)(u)$ for all $u \in U$.
 \end{defn}
-
-Alternatively, for simplicity, we may take $i = j$ in this definition and stipulate that the condition in question holds up to coordinate permutations.
 
 Since identity functions are relatively unary in any coordinate, if a  bijection  is piecewise (over a definable finite partition) a composition of relatively unary bijections then it is indeed a composition of relatively unary bijections.
 
@@ -4952,7 +4950,7 @@ Every  special covariant bijection $T$ of length $1$ is relatively special covar
 
 Let $A \sub \VF^{n} \times \RV^{m}$ be a proper invariant set. Let $i\in[n]$ and let $T_i:A\fun A^\flat$ be a continuous proper covariant bijection that is
 \begin{itemize}
-  \item relatively unary in the $(i, i)$-coordinate (up to coordinate permutations),
+  \item relatively unary in the $i$th coordinate,
   \item totally differentiable with Jacobian $1$ outside a definable subset of $\VF$-dimension less than $n$.
 \end{itemize}
 Moreover, the $\RV$-coordinates of $A$ are passed on to $A^\flat$ via $T_i$ in the obvious way (the simplest example is that $T_i$ is the regularization of $A$). Adjusting $T_i$ by way of Remark~\ref{spec:addendum} if necessary, we take $A$ and $A^\flat$ to be both doubly bounded. By Lemma~\ref{conv:unif}, $A^\flat$ is proper invariant as well, and $T_i$ is a proper covariant homeomorphism. Suppose that, for all $a \in A_{\tilde i}$ and all $t \in (A_{a})_{\RV}$, the image $T_i(A_{a, t}) \sub A_{a, t}^\flat$ of the fiber $A_{a, t} \sub A$ is an $\RV$-pullback.  Let

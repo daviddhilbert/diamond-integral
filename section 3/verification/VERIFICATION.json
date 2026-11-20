@@ -1553,7 +1553,7 @@
     "section 3/verification/cited-inputs.json": "9bb2c36016ed441e27838c1eef11d3622c246478581b534837430f999e07cbe1",
     "section 3/verification/paper-targets.json": "3a894f052ef26ce41f66be9d7cf5b7f6134b82b8c9380b1401f4ebba78f82e11",
     "DiamondIntegral.lean": "66d02be99d3e377f670ad569f36274aed59d735366ebb4b157993bdb166b553e",
-    "lakefile.toml": "62e8a1d23f8479861f213c58201c878b0a049ffe85d85bd18cac974f66cbf272",
+    "lakefile.toml": "f5463bd4c8f7faf713dd337bfba58b96837b0e4d293f981bc7f9266f9b3dc8ca",
     "lake-manifest.json": "4f0ab2b8a2144ce82d2d8910ec2beb6cf3f21fffcd610bd56cb0415b5bf88ac6",
     "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
     "ACCEPTED-CITED-RESULTS.md": "2a6f42ef5f82e18d502ec9bb71d626675f5e24eae45d44291d75b23d9ee906c9"
@@ -1626,7 +1626,7 @@
       ]
     }
   },
-  "manuscript_sha256": "5f9316530d2e2b3125d398e4d0da2943a6b9973c82a69129dfe3ea3fd2639a9a",
+  "manuscript_sha256": "6808d5b93f10e71fd60b2fa5775c0bdd7f6913cb9c5c9d68aa24b0e1e467d30d",
   "audit_source_sha256": "b6a7c8ffcc1a1cf0c55e1deb678c8111dc87e15b740b18315d9eb592cad5905f",
   "audit_log_sha256": "ec339ed96cf8d15954bfca6afac7f43ce10b147f270326f5a773937dc05c6f97",
   "public_theorems": [

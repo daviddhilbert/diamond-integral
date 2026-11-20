@@ -1,0 +1,7 @@
+{
+  "batch": "B11-relatively-unary-single-coordinate",
+  "before_sha256": "5f9316530d2e2b3125d398e4d0da2943a6b9973c82a69129dfe3ea3fd2639a9a",
+  "after_sha256": "6808d5b93f10e71fd60b2fa5775c0bdd7f6913cb9c5c9d68aa24b0e1e467d30d",
+  "resolved_referee_items": [],
+  "approved": "author, 2026-11-20 (decision to go back to the single-coordinate definition in the paper and in Lean; the edit is the one described to the author: single coordinate in Definition 6.24, the sentence offering \"i = j up to coordinate permutations\" removed, \"(up to coordinate permutations)\" removed from the description of T_i; the gluing sentence is unchanged)"
+}

@@ -2,6 +2,22 @@
 
 These batches use the format of `Section7/make-review.py`: `EDITS`, `RESOLUTIONS`, `ANCHORS` and `TITLE`. They are built here by `build-review.py`, which reads this repository's manuscript and writes the review extract into the batch folder.
 
+## B11: Definition 6.24, relatively unary in a single coordinate (2026-11-20)
+
+**Status:** applied to the manuscript on 2026-11-20 on the author's decision to go back to the single-coordinate definition in the paper and in Lean (`B11-relatively-unary-single-coordinate/approval.json`; review extract: `B11-relatively-unary-single-coordinate/section7-B11-relatively-unary-single-coordinate-review.pdf`). The author decided the change from a description of the edit; the wording of the extract was not separately reviewed before it was applied.
+
+**The edit.**
+- Definition 6.24: a definable bijection G : A → B is relatively unary in the i-th coordinate if pr_ĩ ∘ G = pr_ĩ. The same for morphisms of RV[k]. The pair (i, j) is gone.
+- The sentence "Alternatively, for simplicity, we may take i = j in this definition and stipulate that the condition in question holds up to coordinate permutations" is removed.
+- In the description of the transformations T_i before Definition 6.26, "relatively unary in the (i, i)-coordinate (up to coordinate permutations)" becomes "relatively unary in the i-th coordinate".
+- The gluing sentence ("Since identity functions are relatively unary in any coordinate, …") is unchanged; it is now correct as written.
+
+**Why.** With the pair (i, j), the identity is relatively unary only for i = j, so the gluing sentence did not cover steps with i ≠ j. The single-coordinate form is Definition 5.4 of "Integration in algebraically closed valued fields". Outside the definition the manuscript names no pair with i ≠ j, and every step constructed in the formalization keeps all VF-coordinates other than one.
+
+**Lean.** Section 6 `UnaryFactorization.step`, `IsStep.unary`: `n = 0 ∨ ∃ i, VFUnaryRelativeAt f i`; see the Section 6 GAP-REPAIRS entry under Definition 6.24 and Section 7 GAP-REPAIRS 19.
+
+**Not in this batch.** The gluing sentence leaves one detail implicit: the intermediate images of different pieces must stay disjoint (an additional RV-coordinate does it). No text was proposed for this.
+
 ## B10: Definition 6.34, compositions inside μVF^◇ (2026-11-20)
 
 **Status:** approved by the author and applied to the manuscript on 2026-11-20 (`B10-diamond-intermediate-objects/approval.json`; review extract: `B10-diamond-intermediate-objects/section7-B10-diamond-intermediate-objects-review.pdf`). Before approval of the last sentence, the author asked to have it checked against the paper; it was replaced as described next, and the author then gave the instruction to apply the batch.
