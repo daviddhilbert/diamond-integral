@@ -374,6 +374,10 @@ formalization convention. No manuscript edit has been made for them.
     with a locus remains at class level. One detail the manuscript's gluing
     sentence leaves implicit: the intermediate images of different pieces must
     stay disjoint, which can be arranged with an additional RV-coordinate.
+
+    **Author's decision (2026-11-20): leave Lemma 7.12 for blowups with a
+    locus at class level and move on to Section 8.** The gluing lemma is not
+    to be formalized now; nothing in 7.24–7.27 or in Section 8 uses it.
 20. **Lemma 7.11, partial-lift form (formal reading, 2026-11-20).** The form
     approved by the author (decision C) is stated for a doubly bounded chart U
     of degree n + k with its first n coordinates lifted and the last k kept as

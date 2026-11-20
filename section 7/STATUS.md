@@ -173,4 +173,5 @@ All numbered results of §7 are formalized in the stated scopes. Left open:
 the object form of Lemma 7.12 for blowups with a locus (GAP-REPAIRS 19; its
 class form is done and is all that 7.24–7.26 use). It needs a gluing lemma for
 steps along a disjoint union, which the single-coordinate Definition 6.24 now
-permits but which is not yet proved in Lean.
+permits but which is not yet proved in Lean. By the author's decision of
+2026-11-20 it stays at class level; the work moves on to Section 8.
