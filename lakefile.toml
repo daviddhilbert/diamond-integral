@@ -957,4 +957,4 @@ roots = ["«section 7».BoundedClasses", "«section 7».BlowupLiftData", "«sect
 
 [[lean_lib]]
 name = "section 7 lemma 7.20"
-roots = ["«section 7».Lemma720Stage1", "«section 7».Lemma720Program", "«section 7».Lemma720Second", "«section 7».Lemma720Raw", "«section 7».Lemma720Codes", "«section 7».Lemma720Val", "«section 7».Lemma720CellGeom", "«section 7».Lemma720Slope", "«section 7».Lemma720D2D", "«section 7».Lemma720Good", "«section 7».Lemma720Protect", "«section 7».Lemma720ProtectDef", "«section 7».Lemma720Loc", "«section 7».Lemma720Cells"]
+roots = ["«section 7».Lemma720Stage1", "«section 7».Lemma720Program", "«section 7».Lemma720Second", "«section 7».Lemma720Raw", "«section 7».Lemma720Codes", "«section 7».Lemma720Val", "«section 7».Lemma720CellGeom", "«section 7».Lemma720Slope", "«section 7».Lemma720D2D", "«section 7».Lemma720Good", "«section 7».Lemma720Protect", "«section 7».Lemma720ProtectDef", "«section 7».Lemma720Loc", "«section 7».Lemma720Cells", "«section 7».Lemma720Uniform", "«section 7».Lemma720UniformDef", "«section 7».Lemma720Main"]
