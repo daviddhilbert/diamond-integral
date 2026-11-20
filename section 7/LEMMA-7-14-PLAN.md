@@ -234,3 +234,30 @@ The audit checks `#print axioms` of the final theorem (only `propext`,
   data applied to the composite map, as in `lift_iso_muIsp_of_support`.
 - **Reduction step:** fibres of normalized contractions over `adjoin T b`.
   This may need a Section 6 fibre lemma that does not yet exist.
+
+## 7. Status (2026-11-19, evening)
+
+Proved, no `sorry`, axioms only `propext`, `Classical.choice`, `Quot.sound`:
+
+- **The one-coordinate case of the input**, word for word with `n = 0`:
+  `Lemma714Frozen.lemma714_one` (`Lemma714OneVar`).
+- Behind it, the unary case for abstract unary contraction data
+  (`Lemma714Unary.unary_pos`, `unary_zero`; `Lemma714UnaryContr.UnaryContr`):
+  witness cover, freezing (`Lemma714FrozenExists.exists_frozen`), keys and row
+  constancy (`Lemma714Keys`), descent (`Lemma714Descent`), identification of the
+  descended objects with head-start classes of the frozen sets
+  (`Lemma714IdentFr.cls_ind_eq_clsH`), and comparison with the contractions by the
+  head-start Lemma 7.13 (`Lemma714CompareFr.muIsp_compare`).
+
+Remaining: the reduction `n + 1 → 1`.
+
+- First stage and rest: the Section 7 session's `FirstStage` (branch
+  `claude/section-7-64d3f7`).
+- Fibre hypothesis for the first-stage sets: at good points, slices of the first
+  stages are unary contraction data over `S⟨b⟩` (`FibreRestriction`), and the
+  unary case applies; at other points, nearby good points with the same fibre
+  classes (`FibreInvariance`, `FibreComparison`), transferred through `dcl`
+  (`BaseExtension.Transfer.ofDcl`).
+- GAP-REPAIRS 11 inside the proof: the induction is stated for contraction data
+  "shift by base-definable centres, then a normalized contraction", so that the
+  first-stage sets of `F'`, `F''` can be pulled back to the common VF projection.
