@@ -154,6 +154,7 @@ import «section 7».FibreContractions
 import «section 7».OrderIndependence
 import «section 7».IntermediateFormsInput
 import «section 7».UnaryArrows
+import «section 7».Corollary715Moves
 
 /-! Entry point for the Section 7 formalization (integrating proper invariant
 sets), following the adopted manuscript with bounded variable apertures. -/
