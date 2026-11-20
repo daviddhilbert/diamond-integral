@@ -17,7 +17,9 @@ lift, on classes), Lemma 7.12 on classes, Lemma 7.13 (printed form, head start
 and Remark 7.18 (approved scope), and the surjectivity of the lift on classes.
 Remaining: the approved partial-lift and head-start forms of 7.11 and 7.13,
 whole-witness descent (7.14–7.15), the two-cell comparisons (7.20–7.23), the
-kernel (7.24–7.25), Theorem 7.26 with J_var, and 7.27–7.28.
+kernel (7.24–7.25), Theorem 7.26 with J_var, and 7.27. Remark 7.28 is done
+(`Remark728`). Lemma 7.14 is an explicit temporary input
+(`FiberwiseInput.Lemma714`), being proved in a separate session.
 
 The focused [Section 6 handoff](SECTION6-HANDOFF.md) links the checked native
 inputs and the mathematical draft. The draft is not a completed kernel

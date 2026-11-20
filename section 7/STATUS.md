@@ -89,23 +89,17 @@ arbitrary parameter base and take no input beyond the ACVF model.
   `adjoin T a`, head-start standard contractions, `IspRel`). Results that use
   it take `(h714 : Lemma714 M G)` as a hypothesis. A separate session proves it
   in `section 7/Lemma714*.lean`; this file is kept stable.
-- Remark 7.28 (author decision 2026-11-19: strong homogeneity allowed, bridges
-  and bounded decomposition to be built): proof assembled in `Remark728`
-  (`remark_7_28_of_independence` in degree ≥ 1, `remark_7_28_zero_of_independence` in degree 0). It uses one remaining fact,
-  `BoundedIndependence`, which follows from the bounded RV decomposition being
-  proved in Section 4. The P-element match and ∫ in Section 4's ring come from
-  Fubini's `nativePrincipal_chart_class` and `nativeVFChartIntegral`.
+- Remark 7.28 done (`Remark728.remark_7_28`, `remark_7_28_zero`), with the
+  bridges the author approved on 2026-11-19: strong homogeneity (from the
+  Section 3 ground context), the forgetful map to Section 3's VF classes, and
+  Section 4's bounded RV decomposition (`RVBoundedDecomposition`, Remark 4.10).
 - Deferred: the product part of Lemma 7.10. It needs a graded product on
   Section 7's class monoid (products distributing over tagged coproducts, and
   products of annular data). Only the ring form of 7.26 uses it, where the
   J_var ideal of Section 4 already gives multiplicativity.
-- Remark 7.28: assessed; the mathematics is sound, but it needs bridges
-  between Section 3's integral (strongly homogeneous model, base ⟨T, Γ⟩),
-  Section 4's retractions and Section 6's lift, plus the bounded RV
-  decomposition. Reported to the author for a decision on 2026-11-19.
 
 ## Next
 
-M4 (7.14–7.15), M5 (7.16–7.23) and M6 (7.24–7.28) as in
-PLAN.md. Product compatibility (7.10) and the object-level converse for
+7.15 (after GAP-REPAIRS 11 is resolved with the 7.14 session), 7.20–7.23 and
+7.24–7.27 on the 7.14 input, as in PLAN.md. Product compatibility (7.10) and the object-level converse for
 Definition 7.2 remain open side items.

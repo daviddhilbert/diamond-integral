@@ -1,6 +1,7 @@
 import «section 7».KernelDimOne
 import «section 7».BaseExtension
 import «section 4».RVT001BoundedFactor
+import «section 4».RVBoundedDecomposition
 import FubiniTheorems.Fubini.NativeVFIntegral
 
 /-! Remark 7.28 (`eg:eb:factor`): for proper invariant objects, `𝔼_g` and
@@ -230,5 +231,37 @@ theorem remark_7_28_zero_of_independence (H : YinGammaGroundUnmeasuredLiftInput 
     exact RingHom.congr_fun hind _
 
 end DegreeZero
+
+/-! ### Remark 7.28, unconditional -/
+
+section Final
+
+/-- The geometric and bounded evaluations agree on doubly bounded classes:
+Section 4's bounded RV decomposition (Remark 4.10). -/
+theorem boundedIndependence : BoundedIndependence hc C :=
+  DiamondIntegral.Section4.RVBoundedDecomposition.boundedEvaluation_geometric_eq_bounded hc C.model00 lin
+    C.uncountable.le C.saturated C.base C.small_real C.small_gamma C.nontrivial_definable_gamma (presentation hc C)
+
+/-- **Remark 7.28 (`eg:eb:factor`).** For an object `A` of `μVF^◇[n+1]` over the
+real part of a Section 3 ground context, `𝔼_g(∫[A]) = 𝔼_b(∫[A])·[𝔸]^{-(n+1)}`. -/
+theorem remark_7_28 (hv : ∀ x y : VF M, VFValued.predV x y ↔ Valued.v x ≤ Valued.v y)
+    (hnt : ∃ x : C.fieldBase.field, x ≠ 0 ∧ Valued.v x.val ≠ 1)
+    (hΓ : NontrivialDefinableGamma (⟨(C.real : Set M), ∅⟩ : ParameterBase M))
+    (H : YinGammaGroundUnmeasuredLiftInput C hc) {n : ℕ}
+    (A : DiamondCategory.VFObject (M := M) (C.real : Set M) (n + 1)) :
+    geometric hc C (nativeVFChartIntegral H (Algebra.GrothendieckAddGroup.of (gammaGroundVFSemiringClass (forgetVF hc C A)))) =
+      bounded hc C (nativeVFChartIntegral H (Algebra.GrothendieckAddGroup.of (gammaGroundVFSemiringClass (forgetVF hc C A)))) *
+        IsLocalization.Away.invSelf (DiamondIntegral.Section4.RESAffineLocalization.dimensionFreeAffine C.base) ^ (n + 1) :=
+  remark_7_28_of_independence (G := G) hc C hv hnt hΓ H (boundedIndependence hc C) A
+
+/-- **Remark 7.28 in degree 0.** -/
+theorem remark_7_28_zero (H : YinGammaGroundUnmeasuredLiftInput C hc)
+    (A : DiamondCategory.VFObject (M := M) (C.real : Set M) 0) :
+    geometric hc C (nativeVFChartIntegral H (Algebra.GrothendieckAddGroup.of (gammaGroundVFSemiringClass (forgetVF hc C A)))) =
+      bounded hc C (nativeVFChartIntegral H (Algebra.GrothendieckAddGroup.of (gammaGroundVFSemiringClass (forgetVF hc C A)))) *
+        IsLocalization.Away.invSelf (DiamondIntegral.Section4.RESAffineLocalization.dimensionFreeAffine C.base) ^ 0 :=
+  remark_7_28_zero_of_independence hc C H (boundedIndependence hc C) A
+
+end Final
 
 end DiamondIntegral.Section7.Remark728
