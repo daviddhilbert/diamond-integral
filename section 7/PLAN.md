@@ -393,6 +393,12 @@ intended Lean statement; ⚑ marks a flag that is also listed in §5.
        at `a`; `BaseExtension.muIsp_ext` moves them to `adjoin T a`.
     5. **Glue.** Apply `Lemma714` to `A'₁`, `A''₁` with head start 1 and the
        tails (step 1), then step 1's class identification.
+  - **Open issue (GAP-REPAIRS 11).** The preliminary zero-centred
+    normalization shifts the other coordinates, so with different centers the
+    first-stage sets need not share a VF projection, which `Lemma714` requires.
+    Step 1 must either undo the normalization on the remaining coordinates
+    (and then provide the tail as a normalized contraction of the un-normalized
+    set) or go through a normalization-independence lemma.
   - Size: comparable to upstream's `corollary_6_15_uncountable` minus its 6.14
     core; several thousand lines.
 

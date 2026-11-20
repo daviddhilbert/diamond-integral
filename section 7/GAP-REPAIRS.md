@@ -72,3 +72,24 @@ formalization convention. No manuscript edit has been made for them.
     starts and Remark 6.28; the selected labels are finite-to-one and nonzero
     on the fibres. In degree 0, μIsp^db is equality of classes (there are no
     blowups). The base is a substructure with support data (item 9).
+11. **Corollary 7.15 and the preliminary normalization (open, found
+    2026-11-19).** A standard contraction first adjusts the set by Remark
+    `spec:addendum`, so that it is doubly bounded ("Adjusting T_i by way of
+    Remark spec:addendum if necessary"). In Section 6 this is the zero-centred
+    normalization of `NormalizedMeasuredContraction`: every coordinate smaller
+    than a definable center c is shifted by c. The two standard contractions in
+    7.15 may use different centers. Their first-stage sets T̂_{σ(1)}(A') and
+    R̂_{σ(1)}(A'') then have VF projections shift_c'(P) and shift_c''(P) of the
+    common base P = pr_{~i}(A') = pr_{~i}(A''). These differ, while Lemma 7.14
+    needs a common VF projection. The proof of 7.15, and R126's "common base",
+    do not address this.
+    - It is an omitted justification, not a mathematical error. The shifts are
+      coordinatewise piecewise translations by base-definable constants, and
+      `adjoin T a = adjoin T (shift a)`.
+    - A repair is needed before 7.15 can be applied to arbitrary standard
+      contractions. Options: (a) a form of 7.14 that allows the two VF
+      projections to differ by such a coordinatewise translation; (b) a lemma
+      that the class of a standard contraction does not depend on the
+      normalization; (c) normalization-free contractions in 7.14/7.15 for
+      doubly bounded objects, with (b) for the comparison.
+    - Not yet resolved; it determines how 7.15, 7.23 and 7.24 are stated.
