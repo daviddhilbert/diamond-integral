@@ -92,7 +92,7 @@ arbitrary parameter base and take no input beyond the ACVF model.
   in `section 7/Lemma714*.lean`; this file is kept stable.
 - Remark 7.28 (author decision 2026-11-19: strong homogeneity allowed, bridges
   and bounded decomposition to be built): proof assembled in `Remark728`
-  (`remark_7_28_of_independence`, degree ≥ 1). It uses one remaining fact,
+  (`remark_7_28_of_independence` in degree ≥ 1, `remark_7_28_zero_of_independence` in degree 0). It uses one remaining fact,
   `BoundedIndependence`, which follows from the bounded RV decomposition being
   proved in Section 4. The P-element match and ∫ in Section 4's ring come from
   Fubini's `nativePrincipal_chart_class` and `nativeVFChartIntegral`.

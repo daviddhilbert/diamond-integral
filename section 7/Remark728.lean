@@ -155,4 +155,80 @@ theorem remark_7_28_of_independence (H : YinGammaGroundUnmeasuredLiftInput C hc)
 
 end Main
 
+/-! ### Degree zero -/
+
+section DegreeZero
+
+omit [Valued (VF M) G] in
+theorem labels_finite (A : DiamondCategory.VFObject (M := M) (C.real : Set M) 0) :
+    (rvTailMap A.carrier).image.carrier.Finite := by
+  apply ((A.finiteRV Fin.elim0)).subset
+  rintro _ ⟨p, rfl⟩
+  have he : p.val = (Fin.elim0, p.val.2) := Prod.ext (funext (fun i => i.elim0)) rfl
+  change (Fin.elim0, p.val.2) ∈ A.carrier.carrier
+  rw [← he]
+  exact p.property
+
+omit [Valued (VF M) G] in
+/-- The labels of an object of `μVF^◇[0]`, as an RV object of degree 0. -/
+def labelsRV (A : DiamondCategory.VFObject (M := M) (C.real : Set M) 0) : GammaGroundRVObject hc C.base 0 where
+  arity := A.labels
+  domain := GammaGroundDefSet.ofReal (rvTailMap A.carrier).image
+  volume := GammaGroundMap.ofReal (hc := hc) (ground := C.base)
+    ((rvTupleSelectMap _ (Fin.elim0 : Fin 0 → Fin A.labels)).comp (Map.inclusion (fun _ _ => Set.mem_univ _)))
+  finite := by
+    intro t
+    exact ((labels_finite C A).preimage (f := fun u : (rvTailMap A.carrier).image => u.val)
+      (fun x _ y _ he => Subtype.ext he)).subset (fun x _ => x.property)
+  nonzero := fun _ i => i.elim0
+
+omit [Valued (VF M) G] in
+/-- An object of `μVF^◇[0]` forgets to Section 3's lift of its labels. -/
+theorem forgetVF_zero (A : DiamondCategory.VFObject (M := M) (C.real : Set M) 0) :
+    forgetVF hc C A = gammaGroundObjectLiftFinite (labelsRV hc C A) := by
+  have hcarrier : (GammaGroundDefSet.ofReal (hc := hc) (ground := C.base) A.carrier).carrier =
+      (gammaGroundObjectLift (labelsRV hc C A)).carrier := by
+    ext q
+    constructor
+    · intro hq
+      refine ⟨⟨q.2, ⟨⟨q, hq⟩, rfl⟩⟩, rfl, ?_⟩
+      funext i
+      exact i.elim0
+    · rintro ⟨u, hu, -⟩
+      obtain ⟨p, hp⟩ := u.property
+      have he : q = p.val := Prod.ext (funext (fun i => i.elim0)) (hu.symm.trans hp.symm)
+      rw [he]
+      exact p.property
+  unfold forgetVF gammaGroundObjectLiftFinite
+  congr 1
+  cases h : GammaGroundDefSet.ofReal (hc := hc) (ground := C.base) A.carrier
+  cases h' : gammaGroundObjectLift (labelsRV hc C A)
+  rw [h, h'] at hcarrier
+  simp only [GammaGroundDefSet.mk.injEq]
+  exact hcarrier
+
+/-- Remark 7.28 in degree 0: `𝔼_g(∫[A]) = 𝔼_b(∫[A])`. -/
+theorem remark_7_28_zero_of_independence (H : YinGammaGroundUnmeasuredLiftInput C hc)
+    (hind : BoundedIndependence hc C) (A : DiamondCategory.VFObject (M := M) (C.real : Set M) 0) :
+    geometric hc C (nativeVFChartIntegral H (Algebra.GrothendieckAddGroup.of (gammaGroundVFSemiringClass (forgetVF hc C A)))) =
+      bounded hc C (nativeVFChartIntegral H (Algebra.GrothendieckAddGroup.of (gammaGroundVFSemiringClass (forgetVF hc C A)))) *
+        IsLocalization.Away.invSelf (DiamondIntegral.Section4.RESAffineLocalization.dimensionFreeAffine C.base) ^ 0 := by
+  rw [forgetVF_zero, nativeVFChartIntegral_lift_class]
+  let c := DiamondIntegral.Section4.Section3RVChartBridge.chart (labelsRV hc C A)
+  have hfin : c.domain.Finite := (labels_finite C A).image _
+  have hb : DiamondIntegral.Section4.RVMeasuredBounds.DomainBounded c := by
+    apply DiamondIntegral.Section4.RVMeasuredBounds.finite_patterns_bounded
+    have : Finite c.domain := hfin.to_subtype
+    exact Set.finite_range _
+  apply DiamondIntegral.Section4.RVT001BoundedFactor.geometric_eq_bounded_mul
+  · exact DiamondIntegral.Section4.RVOrdinaryGrading.class_mem _ _
+  · have hx : DiamondIntegral.Section4.RVOrdinaryMaps.boundedForget C.base
+        (DiamondIntegral.Section4.RVBoundedRing.objectClass (⟨c, hb⟩ : DiamondIntegral.Section4.RVBoundedCharts.BoundedChart C.base 0)) =
+        DiamondIntegral.Section4.RVOrdinaryRing.objectClass c :=
+      DiamondIntegral.Section4.RVOrdinaryMaps.boundedForget_class C.base _
+    rw [← hx]
+    exact RingHom.congr_fun hind _
+
+end DegreeZero
+
 end DiamondIntegral.Section7.Remark728
