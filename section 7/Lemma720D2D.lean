@@ -222,4 +222,162 @@ theorem image_definable_of_raw (hc : CanonicalStructure.IsCanonical (M := M)) {n
     obtain ⟨hx, rfl⟩ := (hRiff x y).mp hR'
     exact ⟨f x, ⟨x, hx, rfl⟩, rfl⟩
 
+section Pieces
+variable {a : ℕ}
+
+/-- The value of `ε` at a point of `B`, extended by `0`. -/
+def εfun (B : DefSet (rawMixedSpace (M := M) 1 a) S) (ε : Map B (DefSet.univ (rawVFSpace (M := M) 1) S))
+    (q : Mixed M 1 a) : VF M :=
+  if h : q ∈ B.carrier then (ε ⟨q, h⟩).val 0 else 0
+
+theorem εfun_of_mem (B : DefSet (rawMixedSpace (M := M) 1 a) S) (ε : Map B (DefSet.univ (rawVFSpace (M := M) 1) S))
+    (q : B) : εfun B ε q.val = (ε q).val 0 := by
+  rw [εfun, dif_pos q.property]
+
+/-- The injective map off the locus. -/
+def d2dMap {B : DefSet (rawMixedSpace (M := M) 1 a) S} {ε : Map B (DefSet.univ (rawVFSpace (M := M) 1) S)}
+    (C : Codes B ε) (q : Mixed M 1 a) : Mixed M 1 (a + C.d₁) :=
+  ((fun _ => εfun B ε q), Fin.append q.2 (C.c₁ q))
+
+theorem fin_append_split {d : ℕ} (v : Fin (a + d) → RVInfinity M) :
+    Fin.append (fun i => v (Fin.castAdd d i)) (fun j => v (Fin.natAdd a j)) = v := by
+  funext i
+  refine Fin.addCases (fun j => ?_) (fun j => ?_) i
+  · rw [Fin.append_left]
+  · rw [Fin.append_right]
+
+theorem exists_d2d_pieces (hc : CanonicalStructure.IsCanonical (M := M)) (h00 : M ⊨ Axioms.ACVF00)
+    {κ : Cardinal} (hκ : Cardinal.aleph0 < κ) (hs : Saturated M κ)
+    (hΓ : NontrivialDefinableGamma (⟨S,∅⟩ : ParameterBase M))
+    (B : DefSet (rawMixedSpace (M := M) 1 a) S) (ε : Map B (DefSet.univ (rawVFSpace (M := M) 1) S))
+    (C : Codes B ε) :
+    ∃ k : ℕ, ∃ P : Fin k → DefSet (rawMixedSpace (M := M) 1 a) S,
+      (∀ q, q ∈ B.carrier → q ∉ C.L.carrier → ∃ i, q ∈ (P i).carrier) ∧
+      (∀ i q, q ∈ (P i).carrier → q ∈ B.carrier ∧ q ∉ C.L.carrier) ∧
+      ∀ i (w : Fin a → RVInfinity M) (u : Fin C.d₁ → RVInfinity M) (E : Set (VF M)), IsOpenDiscVF E →
+        (∀ x ∈ E, mkPoint x w ∈ (P i).carrier ∧ C.c₁ (mkPoint x w) = u) →
+        IsOpenDiscVF ((fun x => εfun B ε (mkPoint x w)) '' E) := by
+  let A' : Set (Mixed M 1 a) := B.carrier \ C.L.carrier
+  have hA' : MixedDefinable (⟨S, ∅⟩ : ParameterBase M) A' :=
+    (mixedDefinable_iff hc A').mpr (B.sdiff C.L).definable
+  -- the raw relation of the map
+  let R : Set ((Fin 1 ⊕ Fin a) ⊕ (Fin 1 ⊕ Fin (a + C.d₁)) → M) :=
+    {Z | Sum.elim (fun _ : Fin 1 => Z (.inl (.inl 0))) (fun j => Z (.inr (.inr j))) ∈ mixedValues '' C.rel₁.carrier ∧
+      Sum.elim (Z ∘ Sum.inl) (fun _ : Fin 1 => Z (.inr (.inl 0))) ∈ rawGraph B ε ∧
+      ∀ i : Fin a, Z (.inr (.inr (Fin.castAdd C.d₁ i))) = Z (.inl (.inr i))}
+  have hR : S.Definable LRV R := by
+    have h1 : S.Definable LRV (mixedValues '' C.rel₁.carrier) := by
+      rw [← preimage_eq_image]; exact C.rel₁.definable
+    have h1' := h1.preimage_comp
+      (Sum.elim (fun _ : Fin 1 => (Sum.inl (Sum.inl 0) : (Fin 1 ⊕ Fin a) ⊕ (Fin 1 ⊕ Fin (a + C.d₁))))
+        (fun j => Sum.inr (Sum.inr j)))
+    have h2 := (rawGraph_definable B ε).preimage_comp
+      (Sum.elim Sum.inl (fun _ : Fin 1 => (Sum.inr (Sum.inl 0) : (Fin 1 ⊕ Fin a) ⊕ (Fin 1 ⊕ Fin (a + C.d₁)))))
+    have h3 : S.Definable LRV {Z : (Fin 1 ⊕ Fin a) ⊕ (Fin 1 ⊕ Fin (a + C.d₁)) → M |
+        ∀ i : Fin a, Z (.inr (.inr (Fin.castAdd C.d₁ i))) = Z (.inl (.inr i))} := by
+      rw [Set.ofPred_forall]
+      exact Set.definable_iInter_of_finite fun i =>
+        (Set.DefinableFun.proj LRV).ofPred_eq (Set.DefinableFun.proj LRV)
+    simp only [Sum.comp_elim] at h1' h2
+    exact h1'.inter (h2.inter h3)
+  have hRiff : ∀ x y, Sum.elim (mixedValues x) (mixedValues y) ∈ R ↔ x ∈ A' ∧ y = d2dMap C x := by
+    intro x y
+    have e1 : (Sum.elim (fun _ : Fin 1 => (Sum.elim (mixedValues x) (mixedValues y) : _ → M) (.inl (.inl 0)))
+        (fun j => (Sum.elim (mixedValues x) (mixedValues y) : _ → M) (.inr (.inr j))) : Fin 1 ⊕ Fin (a + C.d₁) → M) =
+        mixedValues ((x.1, y.2) : Mixed M 1 (a + C.d₁)) := by
+      funext i
+      rcases i with i | i
+      · have hi : i = 0 := Subsingleton.elim _ _
+        subst hi
+        rfl
+      · rfl
+    have e2 : (Sum.elim ((Sum.elim (mixedValues x) (mixedValues y) : _ → M) ∘ Sum.inl)
+        (fun _ : Fin 1 => (Sum.elim (mixedValues x) (mixedValues y) : _ → M) (.inr (.inl 0))) :
+          (Fin 1 ⊕ Fin a) ⊕ Fin 1 → M) = Sum.elim (mixedValues x) (vfValues y.1) := by
+      funext i
+      rcases i with i | i
+      · rfl
+      · have hi : i = 0 := Subsingleton.elim _ _
+        subst hi
+        rfl
+    change (_ ∈ mixedValues '' C.rel₁.carrier ∧ _ ∈ rawGraph B ε ∧ ∀ i : Fin a,
+      (mixedValues y) (.inr (Fin.castAdd C.d₁ i)) = (mixedValues x) (.inr i)) ↔ _
+    rw [e1, e2, mixedValues_injective.mem_set_image, mem_rawGraph_iff]
+    have hsplit := fin_append_split y.2
+    constructor
+    · rintro ⟨h1, ⟨q, hq⟩, h3⟩
+      have hq1 : mixedValues q.val = mixedValues x := congrArg (fun g => g ∘ Sum.inl) hq
+      have hq2 : vfValues (ε q).val = vfValues y.1 := congrArg (fun g => g ∘ Sum.inr) hq
+      have hqx : q.val = x := mixedValues_injective hq1
+      have hw : (fun i => y.2 (Fin.castAdd C.d₁ i)) = x.2 := funext fun i => Subtype.ext (h3 i)
+      rw [← hsplit, hw] at h1
+      have h1' := (C.rel₁_iff x.1 x.2 (fun j => y.2 (Fin.natAdd a j))).mp h1
+      have hxB : x ∈ B.carrier := h1'.1
+      refine ⟨⟨hxB, h1'.2.1⟩, ?_⟩
+      refine Prod.ext ?_ ?_
+      · funext i
+        have hi : i = 0 := Subsingleton.elim _ _
+        subst hi
+        change y.1 0 = εfun B ε x
+        rw [εfun, dif_pos hxB]
+        have hq' : q = ⟨x, hxB⟩ := Subtype.ext hqx
+        rw [hq'] at hq2
+        exact (congrFun (vfValues_injective hq2) 0).symm
+      · change y.2 = Fin.append x.2 (C.c₁ x)
+        rw [← hsplit, hw]
+        congr 1
+        exact h1'.2.2
+    · rintro ⟨hx, rfl⟩
+      refine ⟨?_, ⟨⟨x, hx.1⟩, ?_⟩, ?_⟩
+      · exact (C.rel₁_iff x.1 x.2 (C.c₁ x)).mpr ⟨hx.1, hx.2, rfl⟩
+      · funext i
+        rcases i with i | i
+        · rfl
+        · have hi : i = 0 := Subsingleton.elim _ _
+          subst hi
+          change ((ε ⟨x, hx.1⟩).val 0).val = (εfun B ε x).val
+          rw [εfun, dif_pos hx.1]
+      · intro i
+        change (Fin.append x.2 (C.c₁ x) (Fin.castAdd C.d₁ i)).val = (x.2 i).val
+        rw [Fin.append_left]
+  have hf : MixedMapDefinable (⟨S, ∅⟩ : ParameterBase M) A' (d2dMap C) :=
+    mixedMapDefinable_of_raw hc A' _ R hR hRiff
+  have hB' : MixedDefinable (⟨S, ∅⟩ : ParameterBase M) (d2dMap C '' A') :=
+    (mixedDefinable_iff hc _).mpr (image_definable_of_raw hc A' _ R hR hRiff)
+  have hinj : Set.InjOn (d2dMap C) A' := by
+    intro q hq q' hq' he
+    have hlab : q.2 = q'.2 := funext fun i => by
+      have := congrFun (congrArg Prod.snd he) (Fin.castAdd C.d₁ i)
+      simpa only [d2dMap, Fin.append_left] using this
+    have hcode : C.c₁ q = C.c₁ q' := funext fun j => by
+      have := congrFun (congrArg Prod.snd he) (Fin.natAdd a j)
+      simpa only [d2dMap, Fin.append_right] using this
+    have hε : ε ⟨q, hq.1⟩ = ε ⟨q', hq'.1⟩ := by
+      have h0 := congrFun (congrArg Prod.fst he) 0
+      change εfun B ε q = εfun B ε q' at h0
+      rw [εfun, dif_pos hq.1, εfun, dif_pos hq'.1] at h0
+      apply Subtype.ext
+      funext i
+      have hi : i = 0 := Subsingleton.elim _ _
+      subst hi
+      exact h0
+    have := C.inj ⟨q, hq.1⟩ ⟨q', hq'.1⟩ hq.2 hq'.2 hlab hcode hε
+    exact congrArg Subtype.val this
+  obtain ⟨k, P, hcov, -, hP⟩ := DiamondIntegral.Section3.integration_lemma_2_32 hκ.le hs h00
+    (⟨S, ∅⟩ : ParameterBase M) hΓ A' _ (d2dMap C) hA' hB' hf hinj.bijOn_image
+  refine ⟨k, fun i => ⟨P i, (mixedDefinable_iff hc _).mp (hP i).1⟩, ?_, ?_, ?_⟩
+  · intro q hqB hqL
+    have : q ∈ ⋃ i, P i := by rw [hcov]; exact ⟨hqB, hqL⟩
+    exact Set.mem_iUnion.mp this
+  · intro i q hq
+    have : q ∈ A' := by rw [← hcov]; exact Set.mem_iUnion.mpr ⟨i, hq⟩
+    exact this
+  · intro i w u E hE hEP
+    have hconc := (hP i).2.2.1
+    refine hconc w (Fin.append w u) E hE (fun x hx => ⟨(hEP x hx).1, ?_⟩)
+    change Fin.append w (C.c₁ (mkPoint x w)) = Fin.append w u
+    rw [(hEP x hx).2]
+
+end Pieces
+
 end DiamondIntegral.Section7.Lemma720
