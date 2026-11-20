@@ -268,4 +268,123 @@ theorem exists_isoSchema {X Y : ChartSchema B sp d} (hX : X.Valid z) (hY : Y.Val
 
 end PromoteIso
 
+/-! ### Graph layouts and uniform bounds -/
+
+section Generic
+variable {C : Base (M := M)}
+
+/-- Section 4's graph layout `(F u, u)` to the append layout `(u, F u)`. -/
+theorem append_graph_definable {a d : ℕ} (I : Set (Fin a → M)) (F : (Fin a → M) → (Fin d → M))
+    (hI : ∀ u ∈ I, ∀ i, sortEval SortTag.rv (u i)) (hF : ∀ u ∈ I, ∀ i, sortEval SortTag.rv (F u i))
+    (hG : DefinableOverBase C (fun _ : Fin (d + a) => .rv) (graphOn I F)) :
+    DefinableOverBase C (Fin.append (rvs a) (rvs d))
+      {w | (fun i => w (Fin.castAdd d i)) ∈ I ∧ F (fun i => w (Fin.castAdd d i)) = fun j => w (Fin.natAdd a j)} := by
+  have h := hG.preimage_real (Fin.append (rvs a) (rvs d)) (graphIndexInv a d)
+  convert h using 1
+  ext w
+  simp only [Set.mem_setOf_eq, graphOn, graphIndexInv, comp_join, join_comp_head, join_comp_tail]
+  constructor
+  · rintro ⟨hu, he⟩
+    refine ⟨⟨hu, he⟩, ?_⟩
+    intro i
+    refine Fin.addCases (fun l => ?_) (fun l => ?_) i
+    · rw [Fin.append_left]
+      exact hI _ hu l
+    · have := hF _ hu l
+      rw [he] at this
+      rw [Fin.append_right]
+      exact this
+  · rintro ⟨⟨hu, he⟩, -⟩
+    exact ⟨hu, he⟩
+
+variable {B : Base (M := M)} {z : Fin p → M} (hC : Promotable B C z) {κ : Cardinal}
+  (hκ : Cardinal.aleph0 ≤ κ) (hs : Saturated M κ) (hreal : Cardinal.mk (baseAt B z).real < κ)
+  (hgamma : Cardinal.mk (baseAt B z).gamma < κ)
+include hC hκ hs hreal hgamma
+
+/-- **Uniform bounds by saturation.** A `C`-definable family of finite sets has
+a uniform natural-number bound, `C` being promotable to the small base `B ∪ z`. -/
+theorem exists_uniform_bound {n m : ℕ} (sx : Fin n → SortTag) (sy : Fin m → SortTag) (S : Set (Fin (n + m) → M))
+    (hS : DefinableOverBase C (Fin.append sx sy) S) (hfin : ∀ x, {y : Fin m → M | Fin.append x y ∈ S}.Finite) :
+    ∃ N : ℕ, ∀ x, (∀ i, sortEval (sx i) (x i)) → {y : Fin m → M | Fin.append x y ∈ S}.ncard ≤ N := by
+  let R : Set ((Fin n → M) × (Fin m → M)) := {q | Fin.append q.1 q.2 ∈ S}
+  have hR : DefinableOverBase (baseAt B z) (Fin.append sx sy)
+      {w | ((fun i => w (Fin.castAdd m i)), fun j => w (Fin.natAdd n j)) ∈ R} := by
+    convert hC _ S hS using 1
+    ext w
+    change Fin.append _ _ ∈ S ↔ w ∈ S
+    rw [Fin.append_castAdd_natAdd]
+  obtain ⟨N, hN⟩ := gamma_uniform_finite_tuple_rows hκ hs hreal hgamma sx sy (sortedUniverse sx)
+    (real_definableOverBase _ sx _ (sortedUniverse_definable _ sx)) R hR (fun x _ => hfin x)
+  exact ⟨N, fun x hx => (hN x hx).2⟩
+
+end Generic
+
+/-! ### Promoting bounded objects -/
+
+section PromoteObj
+variable {C : Base (M := M)} {d : ℕ} {z : Fin p → M} (hz : ∀ i, sortEval (sp i) (z i)) (hC : Promotable B C z)
+  {κ : Cardinal} (hκ : Cardinal.aleph0 ≤ κ) (hs : Saturated M κ) (hreal : Cardinal.mk (baseAt B z).real < κ)
+  (hgamma : Cardinal.mk (baseAt B z).gamma < κ)
+
+include hC hκ hs hreal hgamma in
+theorem exists_chart_bound (c : Chart C d) :
+    ∃ N : ℕ, ∀ t, {u | u ∈ c.domain ∧ c.coordinate u = t}.ncard ≤ N := by
+  let σ : Fin (c.arity + d) → Fin (d + c.arity) := Fin.append (Fin.natAdd d) (Fin.castAdd c.arity)
+  have hS := (coordSet_definable c).preimage_real (Fin.append (rvs d) (rvs c.arity)) σ
+  have hrow : ∀ (t : Fin d → M) (u : Fin c.arity → M),
+      Fin.append t u ∘ σ = Fin.append u t := by
+    intro t u
+    funext i
+    refine Fin.addCases (fun l => ?_) (fun l => ?_) i <;> simp [σ]
+  have hset : ∀ t : Fin d → M, (∀ i, sortEval (rvs d i) (t i)) →
+      {u : Fin c.arity → M | Fin.append t u ∈ {w | w ∘ σ ∈ coordSet c ∧
+        w ∈ sortedUniverse (Fin.append (rvs d) (rvs c.arity))}} = {u | u ∈ c.domain ∧ c.coordinate u = t} := by
+    intro t ht
+    ext u
+    simp only [Set.mem_setOf_eq, hrow, coordSet, Fin.append_left, Fin.append_right]
+    constructor
+    · exact fun h => h.1
+    · intro h
+      refine ⟨h, sorted_append ht (fun i => ?_)⟩
+      exact c.domain_definable.proper _ h.1 i
+  obtain ⟨N, hN⟩ := exists_uniform_bound hC hκ hs hreal hgamma (rvs d) (rvs c.arity) _ hS (by
+    intro t
+    apply (c.finite_fibres t).subset
+    intro u hu
+    exact (by simpa [hrow, coordSet] using hu.1 : u ∈ c.domain ∧ c.coordinate u = t))
+  refine ⟨N, fun t => ?_⟩
+  by_cases ht : ∀ i, sortEval (rvs d i) (t i)
+  · rw [← hset t ht]
+    exact hN t ht
+  · have he : {u | u ∈ c.domain ∧ c.coordinate u = t} = ∅ := by
+      ext u
+      simp only [Set.mem_setOf_eq, Set.mem_empty_iff_false, iff_false, not_and]
+      rintro hu rfl
+      exact ht (fun i => (c.coordinate_proper u hu i).1)
+    rw [he, Set.ncard_empty]
+    exact Nat.zero_le N
+
+/-- The promotion of a bounded object, with a fibre bound chosen by saturation. -/
+def promoteObj (X : RVBoundedCharts.BoundedChart C d) : ChartSchema B sp d :=
+  promoteChart hz hC X.toChart (exists_chart_bound hC hκ hs hreal hgamma X.toChart).choose
+
+theorem promoteObj_valid (X : RVBoundedCharts.BoundedChart C d) :
+    (promoteObj hz hC hκ hs hreal hgamma X).Valid z :=
+  promoteChart_valid hz hC X.toChart _ (exists_chart_bound hC hκ hs hreal hgamma X.toChart).choose_spec
+    X.domain_bounded
+
+theorem promoteChart_weightAt (c : Chart C d) (N : ℕ) (hW : (promoteChart hz hC c N).Valid z)
+    (u : Fin c.arity → M) (hu : u ∈ c.domain) :
+    (promoteChart hz hC c N).weightAt z u = c.correctedWeight u := by
+  have hu' : u ∈ (promoteChart hz hC c N).row z := by rw [promoteChart_row]; exact hu
+  have hco := ((promoteChart_coordRow hz hC c N u _).mp (ChartSchema.coordRow_coordAt hW hu')).2
+  obtain ⟨c', hc'⟩ := hW.vol_total u hu'
+  have hv1 := ((ChartSchema.volRow_iff hW u c').mp hc').2.2
+  have hv2 := ((promoteChart_volRow hz hC c N u c').mp hc').2.2
+  unfold ChartSchema.weightAt Chart.correctedWeight
+  rw [← hv1, hv2, hco]
+
+end PromoteObj
+
 end DiamondIntegral.Section7.Lemma714Schema
