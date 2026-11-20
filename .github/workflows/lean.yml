@@ -98,6 +98,9 @@ jobs:
       - name: Audit section 6 and the bounded aperture revision
         run: lake env python3 'section 6/verify.py'
 
+      - name: Audit section 7 exports
+        run: lake env python3 'section 7/verify.py'
+
       - name: Audit corrected upstream weighted-zero compatibility
         run: lake env python3 verification/verify-upstream-weighted-zero.py
 
@@ -115,6 +118,7 @@ jobs:
             section 4/verification/section4-audit.txt
             section 5/verification/declarations-and-axioms.log
             section 6/verification/types-and-axioms.txt
+            section 7/verification/types-and-axioms.txt
             verification/upstream-weighted-zero-upgrade/
             .scratch/shared-foundation.json
             .scratch/extracted-foundations.json
