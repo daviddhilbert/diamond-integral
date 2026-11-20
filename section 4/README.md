@@ -12,7 +12,7 @@ accepted external citations retain their documented scope. November 17–18 repa
 (Notation 4.17/Lemma 4.18, Remark 4.10, Definition 4.9's ∞ convention, the
 linked remarks, the 3.18 kernel witness) and the author-approved "not
 pursued" items are in [GAP-REPAIRS.md](GAP-REPAIRS.md). Latest audit
-(November 19): PASS, 5546 declarations (3382 theorems). There are
+(November 19): PASS, 5584 declarations (3412 theorems). There are
 no pending author-review items. See [STATUS.md](STATUS.md) for the completion
 boundary and [COVERAGE.md](COVERAGE.md) for theorem locations.
 

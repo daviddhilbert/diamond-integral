@@ -681,8 +681,9 @@ theorem bclass_add {B : Base (M := M)} {n k : ℕ} (a b c : Data B n k) (hc : Do
   rw [bclass_eq hc, bclass_eq ha, bclass_eq hb]
   exact hs
 
-/-- Finite additivity over a finite definable partition with common coordinates and volume. -/
-theorem sum_cover {B : Base (M := M)} {A : Type*} [AddCommGroup A] {n k : ℕ}
+/-- Finite additivity over a finite definable partition with common coordinates and volume
+(for any additive monoid of values, so it also applies to positive classes). -/
+theorem sum_cover {B : Base (M := M)} {A : Type*} [AddCommMonoid A] {n k : ℕ}
     (f : Data B n k → A) (Adm : Data B n k → Prop)
     (hAdm : ∀ a c : Data B n k, a.domain ⊆ c.domain → Adm c → Adm a)
     (hempty : ∀ a : Data B n k, a.domain = ∅ → f a = 0)
