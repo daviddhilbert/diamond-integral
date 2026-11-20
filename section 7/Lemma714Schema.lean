@@ -120,6 +120,29 @@ theorem row2_forall_definable (sp : Fin p → SortTag) (sx : Fin a → SortTag) 
     rw [e] at h2
     exact h2.1
 
+omit hM in
+theorem sorted_append {n m : ℕ} {sa : Fin n → SortTag} {sb : Fin m → SortTag} {x : Fin n → M} {y : Fin m → M}
+    (hx : ∀ i, sortEval (sa i) (x i)) (hy : ∀ j, sortEval (sb j) (y j)) :
+    Fin.append x y ∈ sortedUniverse (Fin.append sa sb) := by
+  intro j
+  refine Fin.addCases (fun i => ?_) (fun i => ?_) j
+  · rw [Fin.append_left, Fin.append_left]
+    exact hx i
+  · rw [Fin.append_right, Fin.append_right]
+    exact hy i
+
+theorem mem_rows_sorted (sp : Fin p → SortTag) (sx : Fin a → SortTag) (sy : Fin d → SortTag)
+    {D : Set (Fin ((p + a) + d) → M)} (hD : DefinableOverBase B (Fin.append (Fin.append sp sx) sy) D)
+    {z : Fin p → M} {x : Fin a → M} {y : Fin d → M} (h : Fin.append (Fin.append z x) y ∈ D) :
+    (∀ i, sortEval (sx i) (x i)) ∧ ∀ j, sortEval (sy j) (y j) := by
+  constructor
+  · intro i
+    have := hD.proper _ h (Fin.castAdd d (Fin.natAdd p i))
+    rwa [Fin.append_left, Fin.append_right, Fin.append_left, Fin.append_right] at this
+  · intro j
+    have := hD.proper _ h (Fin.natAdd (p + a) j)
+    rwa [Fin.append_right, Fin.append_right] at this
+
 end Rows
 
 /-! ### Chart schemata -/
@@ -650,4 +673,364 @@ end ValidDefinable
 
 end ChartSchema
 
+end DiamondIntegral.Section7.Lemma714Schema
+
+/-! ### Isomorphism schemata -/
+
+namespace DiamondIntegral.Section7.Lemma714Schema
+open DiamondIntegral.Section4
+open RVMeasuredCharts FiniteTupleBlocks
+open IntegrationInACVF.Section6
+
+variable {M : Type} [LRV.Structure M] [hM : M ⊨ Axioms.ACVF]
+variable {B : Base (M := M)} {p : ℕ} {sp : Fin p → SortTag} {d : ℕ}
+
+/-- A uniform family of graphs of isomorphisms between the rows of two chart
+schemata. -/
+structure IsoSchema (X Y : ChartSchema B sp d) where
+  graph : Set (Fin ((p + X.arity) + Y.arity) → M)
+  graph_definable : DefinableOverBase B (Fin.append (Fin.append sp (rvs X.arity)) (rvs Y.arity)) graph
+
+namespace IsoSchema
+variable {X Y : ChartSchema B sp d} (Φ : IsoSchema X Y)
+
+/-- The graph row at `z`. -/
+def graphRow (z : Fin p → M) (u : Fin X.arity → M) (v : Fin Y.arity → M) : Prop :=
+  Fin.append (Fin.append z u) v ∈ Φ.graph
+
+/-- Corrected weights are preserved along the graph row. -/
+def WeightCond (z : Fin p → M) : Prop :=
+  ∀ (u : Fin X.arity → M) (v : Fin Y.arity → M) (y y' : Fin d → M) (c c' : M),
+    Φ.graphRow z u v → X.coordRow z u y → Y.coordRow z v y' → X.volRow z u c → Y.volRow z v c' →
+    Proper y → Proper y' → NonzeroRV c → NonzeroRV c' →
+    codeValue c * ∏ i, codeValue (y i) = codeValue c' * ∏ i, codeValue (y' i)
+
+/-- The graph row at `z` is a measured isomorphism of the rows. -/
+structure Valid (z : Fin p → M) : Prop where
+  bij : bijectiveMapRowValid sp (rvs Y.arity) X.domain Y.domain Φ.graph z
+  weight : Φ.WeightCond z
+
+/-! #### The flat row layout `(u, v, y, y', c, c')` -/
+
+/-- Length of the flat row. -/
+abbrev flatLen (a b d : ℕ) : ℕ := a + (b + (d + (d + 2)))
+
+/-- The flat row. -/
+def flatRow {a b : ℕ} (u : Fin a → M) (v : Fin b → M) (y y' : Fin d → M) (c c' : M) :
+    Fin (flatLen a b d) → M :=
+  Fin.append u (Fin.append v (Fin.append y (Fin.append y' ![c, c'])))
+
+section Index
+variable (p a b d : ℕ)
+def iz : Fin p → Fin (p + flatLen a b d) := Fin.castAdd _
+def iu : Fin a → Fin (p + flatLen a b d) := fun i => Fin.natAdd p (Fin.castAdd _ i)
+def iv : Fin b → Fin (p + flatLen a b d) := fun j => Fin.natAdd p (Fin.natAdd a (Fin.castAdd _ j))
+def iy : Fin d → Fin (p + flatLen a b d) :=
+  fun j => Fin.natAdd p (Fin.natAdd a (Fin.natAdd b (Fin.castAdd _ j)))
+def iy' : Fin d → Fin (p + flatLen a b d) :=
+  fun j => Fin.natAdd p (Fin.natAdd a (Fin.natAdd b (Fin.natAdd d (Fin.castAdd 2 j))))
+def ic : Fin (p + flatLen a b d) := Fin.natAdd p (Fin.natAdd a (Fin.natAdd b (Fin.natAdd d (Fin.natAdd d 0))))
+def ic' : Fin (p + flatLen a b d) := Fin.natAdd p (Fin.natAdd a (Fin.natAdd b (Fin.natAdd d (Fin.natAdd d 1))))
+def iG : Fin ((p + a) + b) → Fin (p + flatLen a b d) := Fin.append (Fin.append (iz p a b d) (iu p a b d)) (iv p a b d)
+def iXC : Fin ((p + a) + d) → Fin (p + flatLen a b d) := Fin.append (Fin.append (iz p a b d) (iu p a b d)) (iy p a b d)
+def iYC : Fin ((p + b) + d) → Fin (p + flatLen a b d) := Fin.append (Fin.append (iz p a b d) (iv p a b d)) (iy' p a b d)
+def iXV : Fin ((p + a) + 1) → Fin (p + flatLen a b d) :=
+  Fin.append (Fin.append (iz p a b d) (iu p a b d)) (fun _ => ic p a b d)
+def iYV : Fin ((p + b) + 1) → Fin (p + flatLen a b d) :=
+  Fin.append (Fin.append (iz p a b d) (iv p a b d)) (fun _ => ic' p a b d)
+def iW : Fin ((d + d) + 2) → Fin (p + flatLen a b d) :=
+  Fin.append (Fin.append (iy p a b d) (iy' p a b d)) ![ic p a b d, ic' p a b d]
+end Index
+
+section FlatValues
+variable {a b : ℕ} (z : Fin p → M) (u : Fin a → M) (v : Fin b → M) (y y' : Fin d → M) (c c' : M)
+
+omit hM in
+theorem flat_iG : Fin.append z (flatRow u v y y' c c') ∘ iG p a b d = Fin.append (Fin.append z u) v := by
+  funext j
+  refine Fin.addCases (fun l => ?_) (fun l => ?_) j
+  · refine Fin.addCases (fun i => ?_) (fun i => ?_) l <;> simp [iG, iz, iu, flatRow]
+  · simp [iG, iv, flatRow]
+
+omit hM in
+theorem flat_iXC : Fin.append z (flatRow u v y y' c c') ∘ iXC p a b d = Fin.append (Fin.append z u) y := by
+  funext j
+  refine Fin.addCases (fun l => ?_) (fun l => ?_) j
+  · refine Fin.addCases (fun i => ?_) (fun i => ?_) l <;> simp [iXC, iz, iu, flatRow]
+  · simp [iXC, iy, flatRow]
+
+omit hM in
+theorem flat_iYC : Fin.append z (flatRow u v y y' c c') ∘ iYC p a b d = Fin.append (Fin.append z v) y' := by
+  funext j
+  refine Fin.addCases (fun l => ?_) (fun l => ?_) j
+  · refine Fin.addCases (fun i => ?_) (fun i => ?_) l <;> simp [iYC, iz, iv, flatRow]
+  · simp [iYC, iy', flatRow]
+
+omit hM in
+theorem flat_iXV : Fin.append z (flatRow u v y y' c c') ∘ iXV p a b d =
+    Fin.append (Fin.append z u) (fun _ : Fin 1 => c) := by
+  funext j
+  refine Fin.addCases (fun l => ?_) (fun l => ?_) j
+  · refine Fin.addCases (fun i => ?_) (fun i => ?_) l <;> simp [iXV, iz, iu, flatRow]
+  · simp [iXV, ic, flatRow]
+
+omit hM in
+theorem flat_iYV : Fin.append z (flatRow u v y y' c c') ∘ iYV p a b d =
+    Fin.append (Fin.append z v) (fun _ : Fin 1 => c') := by
+  funext j
+  refine Fin.addCases (fun l => ?_) (fun l => ?_) j
+  · refine Fin.addCases (fun i => ?_) (fun i => ?_) l <;> simp [iYV, iz, iv, flatRow]
+  · simp [iYV, ic', flatRow]
+
+omit hM in
+theorem flat_iW : Fin.append z (flatRow u v y y' c c') ∘ iW p a b d = Fin.append (Fin.append y y') ![c, c'] := by
+  funext j
+  refine Fin.addCases (fun l => ?_) (fun l => ?_) j
+  · refine Fin.addCases (fun i => ?_) (fun i => ?_) l
+    · simp only [iW, iy, Function.comp_apply, Fin.append_left, Fin.append_right, flatRow]
+    · simp only [iW, iy', Function.comp_apply, Fin.append_left, Fin.append_right, flatRow]
+  · fin_cases l <;> simp [iW, ic, ic', flatRow]
+
+end FlatValues
+
+omit hM in
+theorem flatRow_decomp {a b : ℕ} (r : Fin (flatLen a b d) → M) :
+    r = flatRow (fun i => r (Fin.castAdd _ i)) (fun j => r (Fin.natAdd a (Fin.castAdd _ j)))
+      (fun j => r (Fin.natAdd a (Fin.natAdd b (Fin.castAdd _ j))))
+      (fun j => r (Fin.natAdd a (Fin.natAdd b (Fin.natAdd d (Fin.castAdd 2 j)))))
+      (r (Fin.natAdd a (Fin.natAdd b (Fin.natAdd d (Fin.natAdd d 0)))))
+      (r (Fin.natAdd a (Fin.natAdd b (Fin.natAdd d (Fin.natAdd d 1))))) := by
+  funext j
+  refine Fin.addCases (fun i => ?_) (fun j => ?_) j
+  · simp [flatRow]
+  refine Fin.addCases (fun i => ?_) (fun j => ?_) j
+  · simp [flatRow]
+  refine Fin.addCases (fun i => ?_) (fun j => ?_) j
+  · simp [flatRow]
+  refine Fin.addCases (fun i => ?_) (fun j => ?_) j
+  · simp [flatRow]
+  fin_cases j <;> simp [flatRow]
+
+omit hM in
+theorem flatRow_rv {a b : ℕ} {u : Fin a → M} {v : Fin b → M} {y y' : Fin d → M} {c c' : M}
+    (hu : ∀ i, sortEval SortTag.rv (u i)) (hv : ∀ i, sortEval SortTag.rv (v i))
+    (hy : ∀ i, sortEval SortTag.rv (y i)) (hy' : ∀ i, sortEval SortTag.rv (y' i))
+    (hc : sortEval SortTag.rv c) (hc' : sortEval SortTag.rv c') :
+    ∀ j, sortEval SortTag.rv (flatRow u v y y' c c' j) := by
+  intro j
+  refine Fin.addCases (fun i => ?_) (fun j => ?_) j
+  · rw [flatRow, Fin.append_left]; exact hu i
+  refine Fin.addCases (fun i => ?_) (fun j => ?_) j
+  · rw [flatRow, Fin.append_right, Fin.append_left]; exact hv i
+  refine Fin.addCases (fun i => ?_) (fun j => ?_) j
+  · rw [flatRow, Fin.append_right, Fin.append_right, Fin.append_left]; exact hy i
+  refine Fin.addCases (fun i => ?_) (fun j => ?_) j
+  · rw [flatRow, Fin.append_right, Fin.append_right, Fin.append_right, Fin.append_left]; exact hy' i
+  rw [flatRow, Fin.append_right, Fin.append_right, Fin.append_right, Fin.append_right]
+  fin_cases j
+  · exact hc
+  · exact hc'
+
+/-- The set of code tuples `(y, y', c, c')` with equal corrected weights. -/
+def weightEqSet (d : ℕ) : Set (Fin ((d + d) + 2) → M) :=
+  {g | Proper g ∧ codeValue (g (Fin.natAdd (d + d) 0)) * ∏ i, codeValue (g (Fin.castAdd 2 (Fin.castAdd d i))) =
+    codeValue (g (Fin.natAdd (d + d) 1)) * ∏ i, codeValue (g (Fin.castAdd 2 (Fin.natAdd d i)))}
+
+theorem weightEqSet_definable (d : ℕ) :
+    DefinableOverBase B (fun _ : Fin ((d + d) + 2) => .rv) (weightEqSet (M := M) d) := by
+  open GammaDefinableMaps GammaWeightProfiles in
+  have h1 : MapDefinable B (fun x : Fin ((d + d) + 2) → Values.Gamma (M := M) =>
+      x (Fin.natAdd (d + d) 0) * ∏ i, x (Fin.castAdd 2 (Fin.castAdd d i))) :=
+    mul_definable B _ _ (projection_definable B _)
+      (finset_prod_definable B Finset.univ _ (fun i _ => projection_definable B _))
+  open GammaDefinableMaps GammaWeightProfiles in
+  have h2 : MapDefinable B (fun x : Fin ((d + d) + 2) → Values.Gamma (M := M) =>
+      x (Fin.natAdd (d + d) 1) * ∏ i, x (Fin.castAdd 2 (Fin.natAdd d i))) :=
+    mul_definable B _ _ (projection_definable B _)
+      (finset_prod_definable B Finset.univ _ (fun i _ => projection_definable B _))
+  exact GammaDefinableMaps.equal_maps_definable B _ _ h1 h2
+
+theorem weightEqSet_iff (y y' : Fin d → M) (c c' : M) :
+    Fin.append (Fin.append y y') ![c, c'] ∈ weightEqSet d ↔
+      Proper (Fin.append (Fin.append y y') ![c, c']) ∧
+        codeValue c * ∏ i, codeValue (y i) = codeValue c' * ∏ i, codeValue (y' i) := by
+  simp only [weightEqSet, Set.mem_setOf_eq, Fin.append_left, Fin.append_right]
+  rfl
+
+theorem proper_flat_iff (y y' : Fin d → M) (c c' : M) :
+    Proper (Fin.append (Fin.append y y') ![c, c']) ↔ Proper y ∧ Proper y' ∧ NonzeroRV c ∧ NonzeroRV c' := by
+  constructor
+  · intro h
+    refine ⟨fun i => ?_, fun i => ?_, ?_, ?_⟩
+    · have := h (Fin.castAdd 2 (Fin.castAdd d i))
+      rwa [Fin.append_left, Fin.append_left] at this
+    · have := h (Fin.castAdd 2 (Fin.natAdd d i))
+      rwa [Fin.append_left, Fin.append_right] at this
+    · have := h (Fin.natAdd (d + d) 0)
+      rw [Fin.append_right] at this
+      exact this
+    · have := h (Fin.natAdd (d + d) 1)
+      rw [Fin.append_right] at this
+      exact this
+  · rintro ⟨hy, hy', hc, hc'⟩ j
+    refine Fin.addCases (fun l => ?_) (fun l => ?_) j
+    · refine Fin.addCases (fun i => ?_) (fun i => ?_) l
+      · rw [Fin.append_left, Fin.append_left]
+        exact hy i
+      · rw [Fin.append_left, Fin.append_right]
+        exact hy' i
+    · rw [Fin.append_right]
+      fin_cases l
+      · exact hc
+      · exact hc'
+
+theorem weightCond_definable :
+    DefinableOverBase B sp {z | (∀ i, sortEval (sp i) (z i)) ∧ Φ.WeightCond z} := by
+  let a := X.arity
+  let b := Y.arity
+  let st := Fin.append sp (rvs (flatLen a b d))
+  have hG := Φ.graph_definable.preimage_real st (iG p a b d)
+  have hXC := X.coord_definable.preimage_real st (iXC p a b d)
+  have hYC := Y.coord_definable.preimage_real st (iYC p a b d)
+  have hXV := X.volume_definable.preimage_real st (iXV p a b d)
+  have hYV := Y.volume_definable.preimage_real st (iYV p a b d)
+  have hP := (GammaOrderLogic.proper_definable_base B ((d + d) + 2)).preimage_real st (iW p a b d)
+  have hW := (weightEqSet_definable (M := M) (B := B) d).preimage_real st (iW p a b d)
+  have h := gamma_family_row_subset_definable sp (rvs (flatLen a b d))
+    (hG.inter (hXC.inter (hYC.inter (hXV.inter (hYV.inter hP))))) hW
+  convert h using 1
+  ext z
+  simp only [Set.mem_setOf_eq, Set.mem_inter_iff]
+  constructor
+  · rintro ⟨hz, hw⟩
+    refine ⟨hz, fun r hr => ?_⟩
+    obtain ⟨⟨h1, hs⟩, ⟨h2, -⟩, ⟨h3, -⟩, ⟨h4, -⟩, ⟨h5, -⟩, ⟨h6, -⟩⟩ := hr
+    refine ⟨?_, hs⟩
+    rw [flatRow_decomp r] at h1 h2 h3 h4 h5 h6 ⊢
+    rw [flat_iG] at h1
+    rw [flat_iXC] at h2
+    rw [flat_iYC] at h3
+    rw [flat_iXV] at h4
+    rw [flat_iYV] at h5
+    rw [flat_iW, proper_flat_iff] at h6
+    rw [flat_iW, weightEqSet_iff, proper_flat_iff]
+    exact ⟨h6, hw _ _ _ _ _ _ h1 h2 h3 h4 h5 h6.1 h6.2.1 h6.2.2.1 h6.2.2.2⟩
+  · rintro ⟨hz, hw⟩
+    refine ⟨hz, fun u v y y' c c' h1 h2 h3 h4 h5 hy hy' hc hc' => ?_⟩
+    have hu := (mem_rows_sorted sp (rvs a) (rvs b) Φ.graph_definable h1).1
+    have hv := (mem_rows_sorted sp (rvs a) (rvs b) Φ.graph_definable h1).2
+    have hsr : Fin.append z (flatRow u v y y' c c') ∈ sortedUniverse st :=
+      sorted_append hz (flatRow_rv hu hv (fun j => (hy j).1) (fun j => (hy' j).1) hc.1 hc'.1)
+    have g1 : Fin.append z (flatRow u v y y' c c') ∘ iG p a b d ∈ Φ.graph := by rw [flat_iG]; exact h1
+    have g2 : Fin.append z (flatRow u v y y' c c') ∘ iXC p a b d ∈ X.coord := by rw [flat_iXC]; exact h2
+    have g3 : Fin.append z (flatRow u v y y' c c') ∘ iYC p a b d ∈ Y.coord := by rw [flat_iYC]; exact h3
+    have g4 : Fin.append z (flatRow u v y y' c c') ∘ iXV p a b d ∈ X.volume := by rw [flat_iXV]; exact h4
+    have g5 : Fin.append z (flatRow u v y y' c c') ∘ iYV p a b d ∈ Y.volume := by rw [flat_iYV]; exact h5
+    have g6 : Proper (Fin.append z (flatRow u v y y' c c') ∘ iW p a b d) := by
+      rw [flat_iW, proper_flat_iff]
+      exact ⟨hy, hy', hc, hc'⟩
+    have hC := (hw _ ⟨⟨g1, hsr⟩, ⟨g2, hsr⟩, ⟨g3, hsr⟩, ⟨g4, hsr⟩, ⟨g5, hsr⟩, g6, hsr⟩).1
+    rw [flat_iW, weightEqSet_iff] at hC
+    exact hC.2
+
+/-- The validity locus of an isomorphism schema is definable. -/
+theorem valid_definable : DefinableOverBase B sp {z | Φ.Valid z} := by
+  have h1 := gamma_bijection_validity_definable sp (rvs X.arity) (rvs Y.arity)
+    X.domain_definable Y.domain_definable Φ.graph_definable
+  convert h1.inter Φ.weightCond_definable using 1
+  ext z
+  simp only [Set.mem_setOf_eq, Set.mem_inter_iff]
+  exact ⟨fun h => ⟨h.bij, h.bij.1.1, h.weight⟩, fun h => ⟨h.1, h.2.2⟩⟩
+
+/-! #### The isomorphism of a valid row -/
+
+section Realize
+variable {Φ} {z : Fin p → M}
+
+theorem Valid.map_exists (hΦ : Φ.Valid z) {u : Fin X.arity → M} (hu : u ∈ X.row z) :
+    ∃! v, Φ.graphRow z u v := hΦ.bij.1.2.1 u hu
+
+theorem Valid.source_mem (hΦ : Φ.Valid z) {u : Fin X.arity → M} {v : Fin Y.arity → M}
+    (h : Φ.graphRow z u v) : u ∈ X.row z := hΦ.bij.1.2.2.1 u v h
+
+theorem Valid.target_mem (hΦ : Φ.Valid z) {u : Fin X.arity → M} {v : Fin Y.arity → M}
+    (h : Φ.graphRow z u v) : v ∈ Y.row z := (hΦ.bij.2 v).mpr ⟨u, h⟩
+
+theorem Valid.surj (hΦ : Φ.Valid z) {v : Fin Y.arity → M} (hv : v ∈ Y.row z) :
+    ∃ u, Φ.graphRow z u v := (hΦ.bij.2 v).mp hv
+
+theorem Valid.inj (hΦ : Φ.Valid z) {u u' : Fin X.arity → M} {v : Fin Y.arity → M}
+    (h : Φ.graphRow z u v) (h' : Φ.graphRow z u' v) : u = u' := by
+  have hv := (mem_rows_sorted sp (rvs X.arity) (rvs Y.arity) Φ.graph_definable h).2
+  obtain ⟨hfin, hle⟩ := hΦ.bij.1.2.2.2 v hv
+  exact (Set.ncard_le_one_iff hfin).mp hle h h'
+
+/-- The underlying function of the isomorphism of a valid row. -/
+def isoFun (hΦ : Φ.Valid z) (u : X.row z) : Y.row z :=
+  ⟨(hΦ.map_exists u.2).exists.choose, hΦ.target_mem (hΦ.map_exists u.2).exists.choose_spec⟩
+
+theorem isoFun_graph (hΦ : Φ.Valid z) (u : X.row z) : Φ.graphRow z u.val (isoFun hΦ u).val :=
+  (hΦ.map_exists u.2).exists.choose_spec
+
+theorem isoFun_eq (hΦ : Φ.Valid z) (u : X.row z) {v : Fin Y.arity → M} (h : Φ.graphRow z u.val v) :
+    (isoFun hΦ u).val = v :=
+  (hΦ.map_exists u.2).unique (isoFun_graph hΦ u) h
+
+theorem isoFun_bijective (hΦ : Φ.Valid z) : Function.Bijective (isoFun hΦ) := by
+  constructor
+  · intro u u' he
+    apply Subtype.ext
+    have h := isoFun_graph hΦ u
+    rw [he] at h
+    exact hΦ.inj h (isoFun_graph hΦ u')
+  · intro v
+    obtain ⟨u, hu⟩ := hΦ.surj v.2
+    exact ⟨⟨u, hΦ.source_mem hu⟩, Subtype.ext (isoFun_eq hΦ _ hu)⟩
+
+theorem graph_join_definable (hΦ : Φ.Valid z) :
+    DefinableOverBase (baseAt B z) (fun _ : Fin (Y.arity + X.arity) => .rv)
+      {w | ∃ u : X.row z, w = join Y.arity X.arity u.val (isoFun hΦ u).val} := by
+  have h := (row2_definable sp (rvs X.arity) (rvs Y.arity) Φ.graph_definable z).preimage_real
+    (fun _ : Fin (Y.arity + X.arity) => .rv) (ChartSchema.graphIndex X.arity Y.arity)
+  convert h using 1
+  ext w
+  simp only [Set.mem_setOf_eq, ChartSchema.graphIndex, Function.comp_def, Fin.append_left, Fin.append_right]
+  constructor
+  · rintro ⟨u, rfl⟩
+    have hg := isoFun_graph hΦ u
+    refine ⟨?_, ?_⟩
+    · simp only [join_head, join_tail]
+      exact hg
+    · have hs := mem_rows_sorted sp (rvs X.arity) (rvs Y.arity) Φ.graph_definable hg
+      apply GammaBoundedProducts.all_coordinates Y.arity X.arity (fun x => sortEval SortTag.rv x)
+      · intro i; rw [join_head]; exact hs.1 i
+      · intro i; rw [join_tail]; exact hs.2 i
+  · rintro ⟨hg, -⟩
+    have hu := hΦ.source_mem hg
+    refine ⟨⟨_, hu⟩, ?_⟩
+    rw [isoFun_eq hΦ ⟨_, hu⟩ hg]
+    exact (join_reconstruct Y.arity X.arity w).symm
+
+theorem weight_eq_of_valid (hX : X.Valid z) (hY : Y.Valid z) (hΦ : Φ.Valid z) (u : X.row z) :
+    (X.toChart z hX).correctedWeight u.val = (Y.toChart z hY).correctedWeight (isoFun hΦ u).val := by
+  obtain ⟨c, hc⟩ := hX.vol_total u.val u.2
+  obtain ⟨c', hc'⟩ := hY.vol_total _ (isoFun hΦ u).2
+  have hcv := (ChartSchema.volRow_iff hX _ c).mp hc
+  have hcv' := (ChartSchema.volRow_iff hY _ c').mp hc'
+  have h := hΦ.weight u.val (isoFun hΦ u).val (X.coordAt z u.val) (Y.coordAt z (isoFun hΦ u).val) c c'
+    (isoFun_graph hΦ u) (ChartSchema.coordRow_coordAt hX u.2) (ChartSchema.coordRow_coordAt hY (isoFun hΦ u).2)
+    hc hc' (ChartSchema.coordAt_proper hX u.2) (ChartSchema.coordAt_proper hY (isoFun hΦ u).2) hcv.2.1 hcv'.2.1
+  change X.volAt z u.val * _ = Y.volAt z (isoFun hΦ u).val * _
+  rw [← hcv.2.2, ← hcv'.2.2]
+  exact h
+
+/-- **The measured isomorphism of a valid row**, over `B ∪ z`. -/
+def toIso (hX : X.Valid z) (hY : Y.Valid z) (hΦ : Φ.Valid z) : Iso (X.toChart z hX) (Y.toChart z hY) where
+  equiv := Equiv.ofBijective (isoFun hΦ) (isoFun_bijective hΦ)
+  graph_definable := graph_join_definable hΦ
+  weight_eq := weight_eq_of_valid hX hY hΦ
+
+end Realize
+
+end IsoSchema
 end DiamondIntegral.Section7.Lemma714Schema
