@@ -52,6 +52,8 @@ import «section 7».ProductCells
 import «section 7».GraftObjects
 import «section 7».BalancedShearStages
 import «section 7».RestrictContractions
+import «section 7».LabelPieces
+import «section 7».PieceCombination
 import «section 7».Remark728
 import «section 7».MeasuredRVBridge
 import «section 7».MeasuredRVBounds
