@@ -4,6 +4,8 @@ import «section 7».DiamondRing
 import «section 7».RingClasses
 import «section 4».RVBoundedDisjointPresentation
 import «section 7».DiamondProducts
+import «section 4».RelativeAnnularQuotient
+import «section 4».RelativeAnnularConverse
 
 /-! Theorem 7.26 (`main:prop`), the graded ring isomorphism
 `∫^◇ : K μVF^◇[*] ≅ K μRV^db[*] / J_var`, and Remark 7.25 (`thekernel`):
@@ -296,6 +298,26 @@ def integralRingEquiv : KVF G h00 hc hκ hs hv T hsmall hΓ ≃+* QRV T :=
     (liftQuot G h00 hc hκ hs hv T hsmall hΓ B₀ hntB hLiftProd)
     (integral_comp_lift G h00 hc hκ hs hv T hsmall hΓ B₀ hntB hProd hLiftProd hIF)
     (lift_comp_integral G h00 hc hκ hs hv T hsmall hΓ B₀ hntB hProd hLiftProd hIF)
+
+/-- **Theorem 7.26, graded form.** The integral as a ring isomorphism onto
+Section 4's relative annular quotient `K μRV^db[*] / J_var`
+(`RelativeAnnularQuotient.Ring`, whose ideal is `J_var` by
+`RelativeAnnularConverse.ideal_eq_manuscriptIdeal`). -/
+def integralGraded : KVF G h00 hc hκ hs hv T hsmall hΓ ≃+* RelativeAnnularQuotient.Ring (BT T) :=
+  (integralRingEquiv G h00 hc hκ hs hv T hsmall hΓ B₀ hntB hProd hLiftProd hIF).trans
+    (Ideal.quotEquivOfEq (RelativeAnnularConverse.ideal_eq_manuscriptIdeal (B := BT T)).symm)
+
+include hProd hLiftProd in
+/-- The integral of an object of `μVF^◇[k]` is homogeneous of degree `k` (the
+grading of `RelativeAnnularQuotient.Ring` by its polynomial coaction). -/
+theorem integralGraded_mem {k : ℕ} (A : VFObject (M := M) (T : Set M) k) :
+    integralGraded G h00 hc hκ hs hv T hsmall hΓ B₀ hntB hProd hLiftProd hIF
+        (ringClass G hc (unitObj G h00 hc hκ hs hv T hsmall hΓ) A) ∈ RelativeAnnularQuotient.piece (BT T) k := by
+  obtain ⟨a, ha⟩ := exists_chart_lift G h00 hc hκ hs hv T hsmall hΓ B₀ hntB A
+  change Ideal.quotEquivOfEq (RelativeAnnularConverse.ideal_eq_manuscriptIdeal (B := BT T)).symm
+    (integralRing G h00 hc hκ hs hv T hsmall hΓ B₀ hntB hProd hLiftProd hIF (ringClass G hc _ A)) ∈ _
+  rw [integralRing_ringClass, vfClass_iso hc ha, intQ_lift, Ideal.quotEquivOfEq_mk]
+  exact RelativeAnnularQuotient.quotient_mem (BT T) (RVBoundedGrading.class_mem (BT T) a)
 
 include hProd hIF in
 /-- **Remark 7.25 (`thekernel`).** The kernel of the ring map
