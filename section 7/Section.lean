@@ -49,6 +49,7 @@ import «section 7».PullbackStages
 import «section 7».TwoStageContractions
 import «section 7».RelabelClasses
 import «section 7».ProductCells
+import «section 7».GraftObjects
 import «section 7».Remark728
 import «section 7».MeasuredRVBridge
 import «section 7».MeasuredRVBounds
