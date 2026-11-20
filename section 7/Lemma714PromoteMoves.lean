@@ -721,4 +721,63 @@ theorem promoteMove (W : ChartSchema B sp (1 + k)) (hW : W.Valid z)
 
 end PromoteMove
 
+/-! ### Promoting chains and witnesses -/
+
+section PromoteChain
+variable {C : Base (M := M)} {z : Fin p → M} (hr : (baseAt B z).real ⊆ C.real) (hg : (baseAt B z).gamma ⊆ C.gamma)
+  (hz : ∀ i, sortEval (sp i) (z i)) (hC : Promotable B C z)
+  {κ : Cardinal} (hκ : Cardinal.aleph0 ≤ κ) (hs : Saturated M κ) (hreal : Cardinal.mk (baseAt B z).real < κ)
+  (hgamma : Cardinal.mk (baseAt B z).gamma < κ) {k : ℕ}
+open Lemma714Witness
+
+include hz hC hκ hs hreal hgamma in
+/-- **Promotion of an explicit move chain.** -/
+theorem promoteChain {m : ℕ} {X Y : Obj C (1 + k)} (w : Moves m X Y) :
+    ∀ (W : ChartSchema B sp (1 + k)) (hW : W.Valid z), Iso X.toChart (extChart hr hg W hW) →
+      ∃ c : ChainSchema W m, c.Valid z ∧ ∃ hl : c.last.Valid z, Nonempty (Iso Y.toChart (extChart hr hg c.last hl)) := by
+  induction w with
+  | refl X =>
+    intro W hW e
+    exact ⟨.nil W, trivial, hW, ⟨e⟩⟩
+  | cons μ tail ih =>
+    intro W hW e
+    let μ' : Move (extObj hr hg W hW) := ⟨μ.rest, μ.datum, RVMeasuredIsomorphisms.trans (RVMeasuredIsomorphisms.symm e) μ.iso⟩
+    obtain ⟨ms, hms, hres, ⟨r⟩⟩ := promoteMove hr hg hz hC hκ hs hreal hgamma W hW μ'
+    obtain ⟨c, hc, hl, ⟨e'⟩⟩ := ih ms.result hres r
+    exact ⟨.cons ms c, ⟨hms, hc⟩, hl, ⟨e'⟩⟩
+
+include hz hC in
+/-- An isomorphism between the charts of two valid rows gives a valid
+isomorphism schema. -/
+theorem exists_isoSchema_of_iso {d : ℕ} {X Y : ChartSchema B sp d} (hX : X.Valid z) (hY : Y.Valid z)
+    (G : Iso (extChart hr hg X hX) (extChart hr hg Y hY)) : ∃ Φ : IsoSchema X Y, Φ.Valid z :=
+  RowMap.exists_isoSchema hz hC hX hY
+    (RowMap.ofIso G _ _ (subset_refl _) (extChart hr hg X hX).domain_definable (isoMap_bijOn G))
+
+include hz hC hκ hs hreal hgamma in
+/-- **Promotion of a witness for `μIsp^db`** between the rows at `z` of two
+valid chart schemata. -/
+theorem promoteWitness {X₀ Y₀ : ChartSchema B sp (1 + k)} (hX : X₀.Valid z) (hY : Y₀.Valid z)
+    (h : FiberwiseInput.IspRel (cls (extObj hr hg X₀ hX)) (cls (extObj hr hg Y₀ hY))) :
+    ∃ W : WitnessSchema X₀ Y₀, W.Valid z := by
+  obtain ⟨m, n, X', Y', ⟨wX⟩, ⟨wY⟩, ⟨F⟩⟩ := (ispRel_iff_witness _ _).mp h
+  obtain ⟨cX, hcX, hlX, ⟨eX⟩⟩ := promoteChain hr hg hz hC hκ hs hreal hgamma wX X₀ hX
+    (RVMeasuredIsomorphisms.refl _)
+  obtain ⟨cY, hcY, hlY, ⟨eY⟩⟩ := promoteChain hr hg hz hC hκ hs hreal hgamma wY Y₀ hY
+    (RVMeasuredIsomorphisms.refl _)
+  obtain ⟨Φ, hΦ⟩ := exists_isoSchema_of_iso hr hg hz hC hlX hlY
+    (RVMeasuredIsomorphisms.trans (RVMeasuredIsomorphisms.symm eX) (RVMeasuredIsomorphisms.trans F eY))
+  exact ⟨⟨m, n, cX, cY, Φ⟩, ⟨hX, hY, hcX, hcY, hΦ⟩⟩
+
+include hz hC in
+/-- The same in degree `0`. -/
+theorem promoteWitness0 {X₀ Y₀ : ChartSchema B sp 0} (hX : X₀.Valid z) (hY : Y₀.Valid z)
+    (h : cls (extObj hr hg X₀ hX) = cls (extObj hr hg Y₀ hY)) :
+    ∃ W : WitnessSchema0 X₀ Y₀, W.Valid z := by
+  obtain ⟨F⟩ := cls_eq_iff.mp h
+  obtain ⟨Φ, hΦ⟩ := exists_isoSchema_of_iso hr hg hz hC hX hY F
+  exact ⟨⟨Φ⟩, ⟨hX, hY, hΦ⟩⟩
+
+end PromoteChain
+
 end DiamondIntegral.Section7.Lemma714Schema
