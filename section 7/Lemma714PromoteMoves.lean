@@ -31,7 +31,7 @@ variable {d : ℕ}
 
 /-- The chart of a valid row, over the larger base `C`. -/
 def extChart (W : ChartSchema B sp d) (hW : W.Valid z) : Chart C d :=
-  BaseExtension.chartExt hr hg (W.toChart z hW)
+  BaseExtension.chartExt (BaseExtension.Transfer.ofSubset hr hg) (W.toChart z hW)
 
 /-- The bounded object of a valid row, over `C`. -/
 def extObj (W : ChartSchema B sp d) (hW : W.Valid z) : Obj C d :=
