@@ -90,6 +90,12 @@ arbitrary parameter base and take no input beyond the ACVF model.
   `adjoin T a`, head-start standard contractions, `IspRel`). Results that use
   it take `(h714 : Lemma714 M G)` as a hypothesis. A separate session proves it
   in `section 7/Lemma714*.lean`; this file is kept stable.
+- Remark 7.28 (author decision 2026-11-19: strong homogeneity allowed, bridges
+  and bounded decomposition to be built): proof assembled in `Remark728`
+  (`remark_7_28_of_independence`, degree ≥ 1). It uses one remaining fact,
+  `BoundedIndependence`, which follows from the bounded RV decomposition being
+  proved in Section 4. The P-element match and ∫ in Section 4's ring come from
+  Fubini's `nativePrincipal_chart_class` and `nativeVFChartIntegral`.
 - Deferred: the product part of Lemma 7.10. It needs a graded product on
   Section 7's class monoid (products distributing over tagged coproducts, and
   products of annular data). Only the ring form of 7.26 uses it, where the
