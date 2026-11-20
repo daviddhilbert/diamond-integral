@@ -18,7 +18,7 @@ open SpecialTransformations.Section3.GammaParameters
 
 namespace DiamondIntegral.Section7.Lemma714Schema
 open DiamondIntegral.Section4
-open RVMeasuredCharts FiniteTupleBlocks AnnularBlowup BlowupChart RelativeAnnularGenerators
+open RVMeasuredCharts FiniteTupleBlocks AnnularBlowup BlowupChart RelativeAnnularGenerators BlowupRelation
 open IntegrationInACVF.Section6
 open DiamondIntegral.Section7.BoundedClasses
 
@@ -552,5 +552,173 @@ def shellCanon : RowMap (C := C) (shellChart D.chart D.coordinate D.finite D.ape
     rfl
 
 end Canon
+
+/-! ### Promoting a move -/
+
+section PromoteMove
+variable {C : Base (M := M)} {z : Fin p → M} (hr : (baseAt B z).real ⊆ C.real) (hg : (baseAt B z).gamma ⊆ C.gamma)
+  (hz : ∀ i, sortEval (sp i) (z i)) (hC : Promotable B C z)
+  {κ : Cardinal} (hκ : Cardinal.aleph0 ≤ κ) (hs : Saturated M κ) (hreal : Cardinal.mk (baseAt B z).real < κ)
+  (hgamma : Cardinal.mk (baseAt B z).gamma < κ) {k : ℕ}
+open RVChartDisjointUnion RVChartRestrictions RVTaggedCoproduct
+
+theorem restrict_row_eq {d : ℕ} (W : ChartSchema B sp d) {P : Set (Fin (p + W.arity) → M)}
+    (hP : DefinableOverBase B (Fin.append sp (rvs W.arity)) P) (S : Set (Fin W.arity → M))
+    (hS : ∀ u, Fin.append z u ∈ P ↔ u ∈ S) : (W.restrict P hP).row z = W.row z ∩ S := by
+  ext u
+  rw [ChartSchema.restrict_row]
+  simp only [Set.mem_inter_iff, Set.mem_setOf_eq, hS]
+  exact Iff.rfl
+
+theorem restrict_compl_row_eq {d : ℕ} (W : ChartSchema B sp d) {P : Set (Fin (p + W.arity) → M)}
+    (hP : DefinableOverBase B (Fin.append sp (rvs W.arity)) P) (S : Set (Fin W.arity → M))
+    (hS : ∀ u, Fin.append z u ∈ P ↔ u ∈ S) :
+    (W.restrict (compl _ P) hP.compl).row z = W.row z \ S := by
+  ext u
+  rw [ChartSchema.restrict_row]
+  simp only [Set.mem_inter_iff, Set.mem_setOf_eq, Set.mem_diff, compl, hS]
+  constructor
+  · rintro ⟨hu, -, h⟩
+    exact ⟨hu, h⟩
+  · rintro ⟨hu, h⟩
+    exact ⟨hu, W.domain_definable.proper _ hu, h⟩
+
+include hz hC hκ hs hreal hgamma in
+/-- **Promotion of one explicit move.** An explicit single-datum blowup over `C`
+of the chart of a valid row `W` is the row at `z` of a valid move schema on
+`W`; its result is identified with the result of the move. -/
+theorem promoteMove (W : ChartSchema B sp (1 + k)) (hW : W.Valid z)
+    (μ : Lemma714Witness.Move (extObj hr hg W hW)) :
+    ∃ ms : MoveSchema W, ms.Valid z ∧ ∃ hres : ms.result.Valid z,
+      Nonempty (Iso μ.result.toChart (extChart hr hg ms.result hres)) := by
+  -- the source side
+  let Rt := μ.rest
+  let Dd := μ.datum
+  let Φ := μ.iso
+  let Lsrc := (L Rt.toChart Dd.source.toChart).domain
+  have hPdef := prePiece_definable Φ Lsrc (L Rt.toChart Dd.source.toChart).domain_definable
+  obtain ⟨Pp, hPp, hPpS⟩ := promoteSet hz hC (rvs W.arity) (prePiece Φ Lsrc) hPdef
+  let Rs := promoteObj (sp := sp) hz hC hκ hs hreal hgamma Rt
+  have hRs : Rs.Valid z := promoteObj_valid hz hC hκ hs hreal hgamma Rt
+  let Ds := promoteDatum (sp := sp) hz hC hκ hs hreal hgamma Dd
+  have hDs : Ds.Valid z := promoteDatum_valid hz hC hκ hs hreal hgamma Dd
+  have hPsub : prePiece Φ Lsrc ⊆ W.row z := fun u hu => hu.1
+  -- the rest isomorphism
+  have rm1 := (RowMap.ofIso (coprodInsideLeft Rt.toChart Dd.source.toChart) _ Rt.toChart.domain (subset_refl _)
+    (inside (disjointUnion (L Rt.toChart Dd.source.toChart) (R Rt.toChart Dd.source.toChart)
+      (tagged_disjoint _ _)) _ (L Rt.toChart Dd.source.toChart).domain_definable).domain_definable
+    (coprodInsideLeft_bijOn _ _)).comp (RowMap.ofIso Φ (prePiece Φ Lsrc) _ (fun u hu => hu.1) hPdef
+      (prePiece_bijOn Φ Lsrc))
+  have rm1' := (rm1.congrWeight (wa' := (W.restrict Pp hPp).weightAt z) (wb' := Rs.weightAt z)
+    (fun u hu => ChartSchema.restrict_weightAt hW (by rw [restrict_row_eq W hPp _ hPpS]; exact ⟨hPsub hu, hu⟩))
+    (fun v hv => (promoteChart_weightAt hz hC Rt.toChart _ hRs v hv).symm)).congrSets
+    (I' := (W.restrict Pp hPp).row z) (J' := Rs.row z)
+    (by rw [restrict_row_eq W hPp _ hPpS]; exact Set.inter_eq_right.mpr hPsub)
+    (promoteChart_row hz hC Rt.toChart _)
+  obtain ⟨Φ1, hΦ1⟩ := RowMap.exists_isoSchema hz hC (hW.restrict (P := Pp) (hP := hPp)) hRs rm1'
+  -- the source isomorphism
+  have hcompl : W.row z \ prePiece Φ Lsrc = (extObj hr hg W hW).toChart.domain \ prePiece Φ Lsrc := rfl
+  have rm2 := (RowMap.ofIso (coprodOutsideLeft Rt.toChart Dd.source.toChart) _ Dd.source.toChart.domain
+    (subset_refl _)
+    (outside (disjointUnion (L Rt.toChart Dd.source.toChart) (R Rt.toChart Dd.source.toChart)
+      (tagged_disjoint _ _)) _ (L Rt.toChart Dd.source.toChart).domain_definable).domain_definable
+    (coprodOutsideLeft_bijOn _ _)).comp (RowMap.ofIso Φ ((extObj hr hg W hW).toChart.domain \ prePiece Φ Lsrc) _
+      Set.diff_subset ((extObj hr hg W hW).toChart.domain_definable.sdiff hPdef) (prePiece_compl_bijOn Φ Lsrc))
+  have rm2' := (rm2.congrWeight (wa' := (W.restrict (compl _ Pp) hPp.compl).weightAt z) (wb' := Ds.chart.weightAt z)
+    (fun u hu => ChartSchema.restrict_weightAt hW (by
+      rw [restrict_compl_row_eq W hPp _ hPpS]; exact hu))
+    (fun v hv => (promoteChart_weightAt hz hC Dd.chart _ hDs.chart v hv).symm)).congrSets
+    (I' := (W.restrict (compl _ Pp) hPp.compl).row z) (J' := Ds.chart.row z)
+    (by rw [restrict_compl_row_eq W hPp _ hPpS]; rfl)
+    (promoteChart_row hz hC Dd.chart _)
+  obtain ⟨Φ2, hΦ2⟩ := RowMap.exists_isoSchema hz hC (hW.restrict (P := compl _ Pp) (hP := hPp.compl)) hDs.chart rm2'
+  -- the result side
+  let ann := Dd.annularObject
+  let shellC := (shellBounded Dd.chart Dd.coordinate Dd.finite Dd.aperture Dd.bounded).toChart
+  let endC := (endpointBounded Dd.chart Dd.coordinate Dd.finite Dd.aperture Dd.bounded).toChart
+  let Res := μ.result.toChart
+  let Xs' := promoteObj (sp := sp) hz hC hκ hs hreal hgamma μ.result
+  have hXs' : Xs'.Valid z := promoteObj_valid hz hC hκ hs hreal hgamma μ.result
+  let Lres := (L Rt.toChart ann.toChart).domain
+  let Rres := (R Rt.toChart ann.toChart).domain
+  let G2 := coprodInsideRight Rt.toChart ann.toChart
+  let Lsh := (L shellC endC).domain
+  let Q2 := prePiece G2 Lsh
+  have hQ2def : DefinableOverBase C _ Q2 := prePiece_definable G2 Lsh (L shellC endC).domain_definable
+  obtain ⟨q1, hq1, hq1S⟩ := promoteSet hz hC (rvs Res.arity) Lres (L Rt.toChart ann.toChart).domain_definable
+  obtain ⟨q2, hq2, hq2S⟩ := promoteSet hz hC (rvs Res.arity) _ hQ2def
+  have hXrow : Xs'.row z = Res.domain := promoteChart_row hz hC Res _
+  have hQ2sub : Q2 ⊆ Res.domain ∩ Rres := fun u hu => hu.1
+  have hdisj : Disjoint Lres Rres := tagged_disjoint Rt.toChart ann.toChart
+  -- rest'
+  have rm3 := (RowMap.ofIso (coprodInsideLeft Rt.toChart ann.toChart) _ Rt.toChart.domain (subset_refl _)
+    (inside (disjointUnion (L Rt.toChart ann.toChart) (R Rt.toChart ann.toChart)
+      (tagged_disjoint _ _)) _ (L Rt.toChart ann.toChart).domain_definable).domain_definable
+    (coprodInsideLeft_bijOn _ _))
+  have hrow3 : (Xs'.restrict q1 hq1).row z = Res.domain ∩ Lres := by
+    rw [restrict_row_eq Xs' hq1 _ hq1S, hXrow]
+  have rm3' := (rm3.congrWeight (wa' := (Xs'.restrict q1 hq1).weightAt z) (wb' := Rs.weightAt z)
+    (fun u hu => (ChartSchema.restrict_weightAt hXs' (by rw [hrow3]; exact hu)).trans
+      (promoteChart_weightAt hz hC Res _ hXs' u hu.1))
+    (fun v hv => (promoteChart_weightAt hz hC Rt.toChart _ hRs v hv).symm)).congrSets
+    (I' := (Xs'.restrict q1 hq1).row z) (J' := Rs.row z) hrow3 (promoteChart_row hz hC Rt.toChart _)
+  obtain ⟨Φ3, hΦ3⟩ := RowMap.exists_isoSchema hz hC (hXs'.restrict (P := q1) (hP := hq1)) hRs rm3'
+  -- shell
+  have rm4 := (shellCanon hz hC hκ hs hreal hgamma Dd).comp ((RowMap.ofIso (coprodInsideLeft shellC endC) _
+    shellC.domain (subset_refl _)
+    (inside (disjointUnion (L shellC endC) (R shellC endC) (tagged_disjoint _ _)) _
+      (L shellC endC).domain_definable).domain_definable (coprodInsideLeft_bijOn _ _)).comp
+    (RowMap.ofIso G2 Q2 _ (fun u hu => hu.1) hQ2def (prePiece_bijOn G2 Lsh)))
+  have hrow4 : (Xs'.restrict (q2 \ q1) (hq2.sdiff hq1)).row z = Q2 := by
+    rw [restrict_row_eq Xs' (hq2.sdiff hq1) (Q2 \ Lres)
+      (fun u => by simp only [Set.mem_diff, hq2S, hq1S]), hXrow]
+    ext u
+    constructor
+    · rintro ⟨-, hu, -⟩
+      exact hu
+    · intro hu
+      exact ⟨(hQ2sub hu).1, hu, fun hL => Set.disjoint_left.mp hdisj hL (hQ2sub hu).2⟩
+  have rm4' := (rm4.congrWeight (wa' := (Xs'.restrict (q2 \ q1) (hq2.sdiff hq1)).weightAt z)
+    (wb' := Ds.shellSchema.weightAt z)
+    (fun u hu => (ChartSchema.restrict_weightAt hXs' (by rw [hrow4]; exact hu)).trans
+      (promoteChart_weightAt hz hC Res _ hXs' u (hQ2sub hu).1))
+    (fun v _ => rfl)).congrSets
+    (I' := (Xs'.restrict (q2 \ q1) (hq2.sdiff hq1)).row z) (J' := Ds.shellSchema.row z) hrow4 rfl
+  obtain ⟨Φ4, hΦ4⟩ := RowMap.exists_isoSchema hz hC (hXs'.restrict (P := q2 \ q1) (hP := hq2.sdiff hq1))
+    hDs.shellSchema rm4'
+  -- endpoint
+  have hInsDef := (inside (disjointUnion (L Rt.toChart ann.toChart) (R Rt.toChart ann.toChart)
+      (tagged_disjoint _ _)) _ (R Rt.toChart ann.toChart).domain_definable).domain_definable
+  have rm5 := (endCanon hz hC hκ hs hreal hgamma Dd).comp ((RowMap.ofIso (coprodOutsideLeft shellC endC) _
+    endC.domain (subset_refl _)
+    (outside (disjointUnion (L shellC endC) (R shellC endC) (tagged_disjoint _ _)) _
+      (L shellC endC).domain_definable).domain_definable (coprodOutsideLeft_bijOn _ _)).comp
+    (RowMap.ofIso G2 _ _ Set.diff_subset (hInsDef.sdiff hQ2def) (prePiece_compl_bijOn G2 Lsh)))
+  have hrow5 : (Xs'.restrict (compl (Fin.append sp (rvs Xs'.arity)) (q1 ∪ q2)) (hq1.union hq2).compl).row z =
+      (Res.domain ∩ Rres) \ Q2 := by
+    rw [restrict_compl_row_eq Xs' (hq1.union hq2) (Lres ∪ Q2)
+      (fun u => by simp only [Set.mem_union, hq1S, hq2S]), hXrow]
+    ext u
+    simp only [Set.mem_diff, Set.mem_union, Set.mem_inter_iff, not_or]
+    constructor
+    · rintro ⟨hu, hL, hQ⟩
+      refine ⟨⟨hu, ?_⟩, hQ⟩
+      rcases (hu : u ∈ Lres ∪ Rres) with h | h
+      · exact absurd h hL
+      · exact h
+    · rintro ⟨⟨hu, hR⟩, hQ⟩
+      exact ⟨hu, fun hL => Set.disjoint_left.mp hdisj hL hR, hQ⟩
+  have rm5' := (rm5.congrWeight (wa' := (Xs'.restrict (compl (Fin.append sp (rvs Xs'.arity)) (q1 ∪ q2)) (hq1.union hq2).compl).weightAt z)
+    (wb' := Ds.endSchema.weightAt z)
+    (fun u hu => (ChartSchema.restrict_weightAt hXs' (by rw [hrow5]; exact hu)).trans
+      (promoteChart_weightAt hz hC Res _ hXs' u hu.1.1))
+    (fun v _ => rfl)).congrSets
+    (I' := (Xs'.restrict (compl (Fin.append sp (rvs Xs'.arity)) (q1 ∪ q2)) (hq1.union hq2).compl).row z) (J' := Ds.endSchema.row z) hrow5 rfl
+  obtain ⟨Φ5, hΦ5⟩ := RowMap.exists_isoSchema hz hC
+    (hXs'.restrict (P := compl (Fin.append sp (rvs Xs'.arity)) (q1 ∪ q2)) (hP := (hq1.union hq2).compl)) hDs.endSchema rm5'
+  exact ⟨⟨Rs, Ds, Xs', Pp, hPp, q1, hq1, q2, hq2, Φ1, Φ2, Φ3, Φ4, Φ5⟩,
+    ⟨hRs, hDs, hXs', hΦ1, hΦ2, hΦ3, hΦ4, hΦ5⟩, hXs', ⟨promoteChart_iso hr hg hz hC Res _ hXs'⟩⟩
+
+end PromoteMove
 
 end DiamondIntegral.Section7.Lemma714Schema
