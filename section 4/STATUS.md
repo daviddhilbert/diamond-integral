@@ -88,7 +88,8 @@ colored T001 review copy is preserved separately.
 - Not pursued (author-approved triage, November 18): the explanatory items
   listed in GAP-REPAIRS.md (Notation 4.13's unmeasured ring and inequality,
   K μΓ[0] ≅ ℤ[Γ_def] in Remark 4.6, parts of Remark 4.4, the second
-  paragraph of Remark 4.16, Remark 4.10's first sentence).
+  paragraph of Remark 4.16). Remark 4.10's first sentence and the
+  surjectivity of μΨ^db were proved on November 19 (`RVBoundedDecomposition`).
 
 The corrected main text asserts a natural affine comparison. Formalizing
 the referee's particular counterexample varieties to the removed
