@@ -43,6 +43,7 @@ import «section 7».FibreComparison
 import «section 7».Corollary715Fibres
 import «section 7».TwoCellGeometry
 import «section 7».StageSlices
+import «section 7».PullbackStages
 import «section 7».Remark728
 import «section 7».MeasuredRVBridge
 import «section 7».MeasuredRVBounds
