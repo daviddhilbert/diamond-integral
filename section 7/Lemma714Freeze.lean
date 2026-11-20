@@ -1,6 +1,8 @@
 import «section 7».Lemma714ProdTop
 import «section 7».Lemma714Comps
 import «section 6».MeasuredFrozenUnaryRVDataPreparation
+import «section 6».UnarySynchronizedPreparation
+import «section 6».GammaConstantMaps
 
 /-! Lemma 7.14, part 23: freezing with two protected measured ambients.
 
@@ -137,5 +139,115 @@ theorem freezing_two
     apply hFrozen a ρ ?_ x hx y hy u
     intro z hz hzd
     exact hAvoid z ((UnaryRootFamily.mem_fibre _ u z).mpr ⟨hAmbient z hzd,hz⟩) hzd
+
+/-- **Frozen preparation of finitely many data relations**, with two protected
+measured ambients. The frozen rows of every data relation are constant on the
+label classes of the prepared target. -/
+theorem frozen_prep_two
+    (h00 : M ⊨ Axioms.ACVF00) (hc : CanonicalStructure.IsCanonical (M := M))
+    (linear : GammaPiecewiseRationalAffineInput (M := M))
+    {κ : Cardinal} (hκ : Cardinal.aleph0 < κ) (hs : Saturated M κ)
+    (hv : ∀ x y : VF M,VFValued.predV x y ↔ Valued.v x ≤ Valued.v y)
+    (V : Set M) (hsmall : Cardinal.mk S < κ)
+    (hΓ : NontrivialDefinableGamma (⟨S,∅⟩ : ParameterBase M))
+    (hV : ∀ a ∈ V,iVF a) (hVS : V ⊆ S) (hSV : S ⊆ algebraicClosureSet V)
+    (hnt : ∃ x : vfAlgebraicClosureField V,x ≠ 0 ∧ Valued.v x.val ≠ 1)
+    (A : DefSet (rawMixedSpace (M := M) 1 r) S)
+    (hA : ProperInvariant S A.carrier) (hAD : VFDoublyBounded A.carrier) (hARV : IsRVPullback A.carrier)
+    (hTag : ∀ p ∈ A.carrier,∀ z ∈ A.carrier,p.2=z.2 → tupleRV M p.1=tupleRV M z.1)
+    (B₁ : DefSet (rawMixedSpace (M := M) 1 t₁) S) (hB₁ : ProperInvariant S B₁.carrier)
+    (θ₁ : Map B₁ (DefSet.univ (rawGammaPresentation (M := M)) S))
+    (hL₁ : ∀ u γ,IsOpen {x : Fin 1 → VF M | (x,u) ∈ B₁.carrier ∧ gammaFormExtension θ₁ (x,u)=γ})
+    (B₂ : DefSet (rawMixedSpace (M := M) 1 t₂) S) (hB₂ : ProperInvariant S B₂.carrier)
+    (θ₂ : Map B₂ (DefSet.univ (rawGammaPresentation (M := M)) S))
+    (hL₂ : ∀ u γ,IsOpen {x : Fin 1 → VF M | (x,u) ∈ B₂.carrier ∧ gammaFormExtension θ₂ (x,u)=γ})
+    {N : ℕ} (q : Fin N → ℕ) (D : (i : Fin N) → DefSet (rawMixedSpace (M := M) 1 (r + q i)) S) :
+    ∃ F : FMT.FocusFreezingData A,∃ s : ℕ,∃ Bk : DefSet (rawMixedSpace (M := M) 1 s) S,∃ f : Map A Bk,
+      SpecialCovariantChain (G := G) A Bk f ∧ ProperInvariant S Bk.carrier ∧ VFDoublyBounded Bk.carrier ∧
+      IsRVPullback Bk.carrier ∧ (∀ p ∈ Bk.carrier,∀ z ∈ Bk.carrier,p.2=z.2 → tupleRV M p.1=tupleRV M z.1) ∧
+      (∀ D : F.balls,FMT.CoordinateProductDomain B₁.carrier (FMT.vfOpenBall D.val) (F.centers D) 0) ∧
+      (∀ γ,∀ D : F.balls,FMT.CoordinateProductDomain
+        {p | p ∈ B₁.carrier ∧ gammaFormExtension θ₁ p=γ} (FMT.vfOpenBall D.val) (F.centers D) 0) ∧
+      (∀ D : F.balls,FMT.CoordinateProductDomain B₂.carrier (FMT.vfOpenBall D.val) (F.centers D) 0) ∧
+      (∀ γ,∀ D : F.balls,FMT.CoordinateProductDomain
+        {p | p ∈ B₂.carrier ∧ gammaFormExtension θ₂ p=γ} (FMT.vfOpenBall D.val) (F.centers D) 0) ∧
+      ∀ p z : A,(f p).val.2=(f z).val.2 → ∀ i,
+        unaryRVDataRow (D i) ((fun _ : Fin 1 => FMT.vfFamilyFreeze F.balls F.centers (p.val.1 0)),p.val.2)=
+          unaryRVDataRow (D i) ((fun _ : Fin 1 => FMT.vfFamilyFreeze F.balls F.centers (z.val.1 0)),z.val.2) := by
+  have hobs : ∀ i,∃ Qi : Finset (VF M),S.Definable₁ LRV (Subtype.val '' (Qi : Set (VF M))) ∧
+      UnaryObstacleControl (G := G) Qi (D i).carrier := fun i => exists_unary_obstacles hc hv (D i)
+  choose Qs hQs hCtl using hobs
+  let Q : Finset (VF M) := Finset.univ.biUnion Qs
+  have hQ : S.Definable₁ LRV (Subtype.val '' (Q : Set (VF M))) := by
+    have he : {x : Fin 1 → M | x 0 ∈ Subtype.val '' (Q : Set (VF M))} =
+        ⋃ i ∈ (Finset.univ : Finset (Fin N)), {x : Fin 1 → M | x 0 ∈ Subtype.val '' (Qs i : Set (VF M))} := by
+      have hmem : ∀ y, y ∈ Q ↔ ∃ i, y ∈ Qs i := by
+        intro y
+        simp [Q]
+      ext x
+      constructor
+      · rintro ⟨y, hy, he⟩
+        obtain ⟨i, hi⟩ := (hmem y).mp (Finset.mem_coe.mp hy)
+        exact Set.mem_iUnion₂.mpr ⟨i, Finset.mem_univ _, y, Finset.mem_coe.mpr hi, he⟩
+      · intro h
+        obtain ⟨i, -, y, hi, he⟩ := Set.mem_iUnion₂.mp h
+        exact ⟨y, Finset.mem_coe.mpr ((hmem y).mpr ⟨i, Finset.mem_coe.mp hi⟩), he⟩
+    change S.Definable LRV {x : Fin 1 → M | x 0 ∈ Subtype.val '' (Q : Set (VF M))}
+    rw [he]
+    exact Set.definable_biUnion_finset (fun i => hQs i) Finset.univ
+  let ω : Mixed M 1 r → (i : Fin N) → Set (Fin (q i) → RVInfinity M) := fun p i => unaryRVDataRow (D i) p
+  have hControl : ∀ a ρ,(∀ z ∈ Q,z ∉ Balls.openDisc Valued.v a ρ) →
+      ∀ x ∈ Balls.openDisc Valued.v a ρ,∀ y ∈ Balls.openDisc Valued.v a ρ,
+      ∀ u,ω ((fun _ : Fin 1 => x),u)=ω ((fun _ : Fin 1 => y),u) := by
+    intro a ρ hAvoid x hx y hy u
+    funext i
+    apply Set.ext
+    intro t
+    have hmem : ∀ y, y ∈ Q ↔ ∃ i, y ∈ Qs i := by
+      intro y
+      simp [Q]
+    exact hCtl i a ρ (fun z hz => hAvoid z ((hmem z).mpr ⟨i, hz⟩)) x hx y hy (Fin.append u t)
+  obtain ⟨F,ρ,hρ,hP1,hLv1,hP2,hLv2,hConst,hCV⟩ := freezing_two (G := G) h00 hc linear hκ hs hv V hsmall hΓ
+    hV hVS hSV hnt A hA B₁ hB₁ θ₁ hL₁ B₂ hB₂ θ₂ hL₂ Q hQ ω hControl
+  let roots := UnaryRootFamily.fromObstacles A Q hQ
+  have hBound (u) : (roots.fibre u).card ≤ Q.card := by
+    apply Finset.card_le_card
+    intro x hx
+    exact ((roots.mem_fibre u x).mp hx).2
+  have hLevelsOne : ∀ u γ,IsOpen {x : Fin 1 → VF M | (x,u) ∈ A.carrier ∧
+      gammaFormExtension (gammaOneMap hc A) (x,u)=γ} := by
+    intro u γ
+    by_cases hγ : γ = 1
+    · have he : {x : Fin 1 → VF M | (x,u) ∈ A.carrier ∧ gammaFormExtension (gammaOneMap hc A) (x,u)=γ} =
+          vfFibre A.carrier u := by
+        ext x
+        constructor
+        · rintro ⟨h, -⟩
+          exact h
+        · intro h
+          refine ⟨h, ?_⟩
+          rw [gammaFormExtension_at (gammaOneMap hc A) ⟨(x,u),h⟩, hγ]
+          rfl
+      rw [he]
+      exact (hA.clopen_fibres hv u).isOpen
+    · have he : {x : Fin 1 → VF M | (x,u) ∈ A.carrier ∧ gammaFormExtension (gammaOneMap hc A) (x,u)=γ} = ∅ := by
+        ext x
+        simp only [Set.mem_setOf_eq, Set.mem_empty_iff_false, iff_false, not_and]
+        intro h he
+        rw [gammaFormExtension_at (gammaOneMap hc A) ⟨(x,u),h⟩] at he
+        exact hγ he.symm
+      rw [he]
+      exact isOpen_empty
+  obtain ⟨s,Bk,f,η,hChain,hB,hBD,hBRV,hBTag,-,U,-,hη,hηc⟩ :=
+    UnaryRootFamily.exists_value_prepared_form_compatible_context_process_of_bound (G := G)
+      h00 hc linear hκ hs hv V hsmall hΓ hV hVS hSV hnt Q.card A roots hA hAD hARV hTag hBound
+      ρ hρ (FMT.frozenUnaryValue F.balls F.centers ω) (fun _ => ∅) hConst hCV
+      (Fin.elim0 : Fin 0 → DefSet (rawMixedSpace (M := M) 1 r) S) (fun i => i.elim0) (fun i => i.elim0)
+      (fun i => i.elim0) (unarySelfPreparationContext A hA hAD hARV hTag)
+      (Fin.elim0 : Fin 0 → DefSet (rawMixedSpace (M := M) 1 r) S) (fun i => i.elim0) (fun i => i.elim0)
+      (gammaOneMap hc A) hLevelsOne
+  refine ⟨F,s,Bk,f,hChain.toChain.toSpecial,hB,hBD,hBRV,hBTag,hP1,hLv1,hP2,hLv2,fun p z he i => ?_⟩
+  have := (hη p).symm.trans ((hηc _ (f p).property _ (f z).property he).trans (hη z))
+  exact congrFun this i
 
 end DiamondIntegral.Section6
