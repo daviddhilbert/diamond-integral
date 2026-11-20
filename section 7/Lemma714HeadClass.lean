@@ -4,7 +4,7 @@ import «section 7».SpecialChainInduction
 /-! Lemma 7.14, part 14: head-start chain sets and their classes.
 
 For the head-start form of Lemma 7.13, a *head-start chain set* (`HGood`) is a
-unary tagged RV-pullback `X ⊆ VF × RV^r` with labels `λ : Fin k → Fin r` such
+unary RV-pullback `X ⊆ VF × RV^r` with labels `λ : Fin k → Fin r` such
 that the fibres over `(a, u ∘ λ)` are finite, together with a label-constant
 Γ-form. Its RV fibres over a VF point may be infinite. Its head-start bundle
 (Section 6 `rvHeadStartBundle`, the labels lifted to VF coordinates) is a
@@ -106,7 +106,6 @@ variable {T : LRV.Substructure M} {r k : ℕ}
 /-- A unary chain set with head-start labels `λ`. -/
 structure HGood (X : DefSet (rawMixedSpace (M := M) 1 r) (T : Set M)) (lab : Fin k → Fin r) where
   pullback : IsRVPullback X.carrier
-  tagged : ∀ p ∈ X.carrier, ∀ q ∈ X.carrier, p.2 = q.2 → tupleRV M p.1 = tupleRV M q.1
   finite : ∀ (a : Fin 1 → VF M) (t : Fin k → RVInfinity M),
     {u : Fin r → RVInfinity M | (a, u) ∈ X.carrier ∧ u ∘ lab = t}.Finite
   vfBounded : VFDoublyBounded X.carrier
@@ -137,12 +136,14 @@ variable (hc : CanonicalStructure.IsCanonical (M := M))
 def clsH (g : HGood X lab) : Cls (BT T) (1 + k) := clsG hc (bundleGood g)
 
 /-- The head-start object of `X`: the contraction of the bundle. -/
-def hsObj (g : HGood X lab) : MeasuredRVObject (M := M) (T : Set M) (1 + k) :=
-  contractedMeasuredRVObject (rvHeadStartBundle X k lab) (rvHeadStartBundle_tagged X k lab g.tagged)
+def hsObj (g : HGood X lab) (hT : ∀ p ∈ X.carrier, ∀ q ∈ X.carrier, p.2 = q.2 → tupleRV M p.1 = tupleRV M q.1) :
+    MeasuredRVObject (M := M) (T : Set M) (1 + k) :=
+  contractedMeasuredRVObject (rvHeadStartBundle X k lab) (rvHeadStartBundle_tagged X k lab hT)
     (bundleGood g).pullback (bundleGood g).finite (bundleGood g).vfBounded (bundleGood g).form
     (bundleGood g).form_labels
 
-theorem hsObj_db (g : HGood X lab) : (hsObj g).doublyBounded :=
+theorem hsObj_db (g : HGood X lab) (hT : ∀ p ∈ X.carrier, ∀ q ∈ X.carrier, p.2 = q.2 → tupleRV M p.1 = tupleRV M q.1) :
+    (hsObj g hT).doublyBounded :=
   contractedMeasuredRVObject_doublyBounded _ _ _ _ _ (bundleGood g).rvBounded _ _
 
 end HGoodDef
@@ -162,12 +163,74 @@ theorem clsG_eq_contr (hc : CanonicalStructure.IsCanonical (M := M)) {T : LRV.Su
     (regularization X) (regularization_bijective X) (regularization_matching X hT) (fun _ => rfl)
     (fun p => regForm_apply g p)).symm
 
+/-- **A VF-preserving bijection mapping whole label fibres keeps the class**
+of a chain set, through the regularizations. -/
+theorem clsG_eq_of_wholeFibres (hc : CanonicalStructure.IsCanonical (M := M)) {T : LRV.Substructure M} {n r s : ℕ}
+    {X : DefSet (rawMixedSpace (M := M) n r) (T : Set M)} {Y : DefSet (rawMixedSpace (M := M) n s) (T : Set M)}
+    (g : Good T X) (g' : Good T Y) (F : Map X Y) (hF : Function.Bijective F) (hm : MapsWholeTagFibres F)
+    (hvf : ∀ p : X, (F p).val.1 = p.val.1) (hform : ∀ p : X, g'.form (F p) = g.form p) :
+    clsG hc g = clsG hc g' := by
+  unfold clsG
+  apply cls_objOf_eq hc
+  let RX := regularization X
+  let RY := regularization Y
+  have hRX := regularization_bijective X
+  have hRY := regularization_bijective Y
+  let Fr : Map (regularizeMap X).image (regularizeMap Y).image := RY.comp (F.comp (RX.inverse hRX))
+  have hFr : ∀ x : X, Fr (RX x) = RY (F x) := by
+    intro x
+    change RY (F (RX.inverse hRX (RX x))) = _
+    rw [Map.inverse_apply]
+  have hbij : Function.Bijective Fr := by
+    refine hRY.comp (hF.comp ⟨fun a b h => ?_, fun x => ⟨RX x, by rw [Map.inverse_apply]⟩⟩)
+    obtain ⟨x, rfl⟩ := hRX.2 a
+    obtain ⟨y, rfl⟩ := hRX.2 b
+    rw [Map.inverse_apply, Map.inverse_apply] at h
+    rw [h]
+  refine contractionIso _ _ _ _ _ _ _ _ _ _ _ _ Fr hbij ?_ ?_ ?_
+  · intro a b
+    obtain ⟨x, rfl⟩ := hRX.2 a
+    obtain ⟨y, rfl⟩ := hRY.2 b
+    rw [hFr]
+    change (regularize y.val).2 = (regularize (F x).val).2 ↔ _
+    rw [regularize_snd_eq]
+    constructor
+    · rintro ⟨h1, h2⟩
+      obtain ⟨x', hx', hFx'⟩ := (hm x y).mp h2
+      refine ⟨RX x', ?_, ?_⟩
+      · change (regularize x'.val).2 = (regularize x.val).2
+        rw [regularize_snd_eq]
+        refine ⟨?_, hx'⟩
+        rw [← hvf x', hFx', h1, hvf x]
+      · rw [hFr, hFx']
+    · rintro ⟨a', ha', he⟩
+      obtain ⟨x', rfl⟩ := hRX.2 a'
+      rw [hFr] at he
+      have hy : y = F x' := hRY.1 he.symm
+      subst hy
+      change (regularize x'.val).2 = (regularize x.val).2 at ha'
+      rw [regularize_snd_eq] at ha'
+      refine ⟨?_, MapsWholeTagFibres.labels F hm x' x ha'.2⟩
+      rw [hvf x', hvf x, ha'.1]
+  · intro a
+    obtain ⟨x, rfl⟩ := hRX.2 a
+    rw [hFr]
+    change tupleRV M (regularize (F x).val).1 = tupleRV M (regularize x.val).1
+    rw [regularize_fst, regularize_fst, hvf]
+  · intro a
+    obtain ⟨x, rfl⟩ := hRX.2 a
+    rw [hFr]
+    change regForm g' (RY (F x)) = regForm g (RX x)
+    rw [regForm_apply, regForm_apply, hform]
+
 section Retag
 variable (hc : CanonicalStructure.IsCanonical (M := M)) {T : LRV.Substructure M} {r s k : ℕ}
 variable {X : DefSet (rawMixedSpace (M := M) 1 r) (T : Set M)} {Y : DefSet (rawMixedSpace (M := M) 1 s) (T : Set M)}
   {lab : Fin k → Fin r} {lab' : Fin k → Fin s}
 
-theorem clsH_eq_hsObj (g : HGood X lab) : clsH hc g = cls (objOf hc T (hsObj g) (hsObj_db g)) :=
+theorem clsH_eq_hsObj (g : HGood X lab)
+    (hT : ∀ p ∈ X.carrier, ∀ q ∈ X.carrier, p.2 = q.2 → tupleRV M p.1 = tupleRV M q.1) :
+    clsH hc g = cls (objOf hc T (hsObj g hT) (hsObj_db g hT)) :=
   clsG_eq_contr hc (bundleGood g) _
 
 /-- A carried bijection of head-start bundles maps whole label fibres. -/
@@ -221,8 +284,6 @@ theorem clsH_eq_of_retag (g : HGood X lab) (g' : HGood Y lab') (f : Map X Y) (hf
     (hm : MapsWholeTagFibres f) (hvf : ∀ p : X, (f p).val.1 = p.val.1)
     (hL : ∀ p : X, ∀ i, (f p).val.2 (lab' i) = p.val.2 (lab i)) (hform : ∀ p : X, g'.form (f p) = g.form p) :
     clsH hc g = clsH hc g' := by
-  rw [clsH_eq_hsObj, clsH_eq_hsObj]
-  apply cls_objOf_eq hc
   let H := carryHeadStartBijection f hf k lab lab' hL
   have hfst : ∀ p : rvHeadStartBundle X k lab, (H.map p).val.1 = p.val.1 := by
     intro p
@@ -233,8 +294,8 @@ theorem clsH_eq_of_retag (g : HGood X lab) (g' : HGood Y lab') (f : Map X Y) (hf
         congrArg (fun z : Mixed M 1 s => z.1) hbase
       rw [h1, hvf, headStartBaseProjection_value]
     · exact H.fixed p
-  exact contractionIso _ _ _ _ _ _ _ _ _ _ _ _ H.map H.bijective (carried_wholeFibres f hf hm hL)
-    (fun p => by rw [hfst p])
+  exact clsG_eq_of_wholeFibres hc (bundleGood g) (bundleGood g') H.map H.bijective
+    (carried_wholeFibres f hf hm hL) hfst
     (fun p => by
       change g'.form (headStartBaseProjection Y k lab' (H.map p)) = g.form (headStartBaseProjection X k lab p)
       rw [H.base p, hform])
