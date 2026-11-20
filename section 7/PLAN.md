@@ -396,12 +396,14 @@ intended Lean statement; ⚑ marks a flag that is also listed in §5.
        at `a`; `BaseExtension.muIsp_ext` moves them to `adjoin T a`.
     5. **Glue.** Apply `Lemma714` to `A'₁`, `A''₁` with head start 1 and the
        tails (step 1), then step 1's class identification.
-  - **Open issue (GAP-REPAIRS 11).** The preliminary zero-centred
-    normalization shifts the other coordinates, so with different centers the
-    first-stage sets need not share a VF projection, which `Lemma714` requires.
-    Step 1 must either undo the normalization on the remaining coordinates
-    (and then provide the tail as a normalized contraction of the un-normalized
-    set) or go through a normalization-independence lemma.
+  - **Done (2026-11-19)**, `Corollary715Fibres.corollary_7_15`. The
+    normalization issue (GAP-REPAIRS 11) is handled by independence of the
+    centre (7.14 with equal sets), a common centre, and grafting normalized
+    contractions of the first-stage sets after the first stage. Steps 2–4 run at
+    a good point b over S⟨b⟩: slices of the first stages and of the conjugated
+    map `N'' ∘ F ∘ N'⁻¹` are morphisms of μVF^◇[1] (`FibreRestriction`); the
+    lift of the fibre object is the target slice; Lemma 7.13 there, then the
+    transfer to S⟨a⟩ through the definable closure (GAP-REPAIRS 12).
   - Size: comparable to upstream's `corollary_6_15_uncountable` minus its 6.14
     core; several thousand lines.
 

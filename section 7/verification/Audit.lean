@@ -1,5 +1,14 @@
 import «section 7».Section
 
+#check @DiamondIntegral.Section7.BaseExtension.Transfer
+#print DiamondIntegral.Section7.BaseExtension.Transfer
+#print axioms DiamondIntegral.Section7.BaseExtension.Transfer
+#check @DiamondIntegral.Section7.BaseExtension.Transfer.ofSubset
+#print DiamondIntegral.Section7.BaseExtension.Transfer.ofSubset
+#print axioms DiamondIntegral.Section7.BaseExtension.Transfer.ofSubset
+#check @DiamondIntegral.Section7.BaseExtension.Transfer.ofDcl
+#print DiamondIntegral.Section7.BaseExtension.Transfer.ofDcl
+#print axioms DiamondIntegral.Section7.BaseExtension.Transfer.ofDcl
 #check @DiamondIntegral.Section7.BaseExtension.chartExt
 #print DiamondIntegral.Section7.BaseExtension.chartExt
 #print axioms DiamondIntegral.Section7.BaseExtension.chartExt
@@ -882,6 +891,255 @@ import «section 7».Section
 #check @DiamondIntegral.Section7.ChartOfMeasured.liftCls_surjective
 #print DiamondIntegral.Section7.ChartOfMeasured.liftCls_surjective
 #print axioms DiamondIntegral.Section7.ChartOfMeasured.liftCls_surjective
+#check @DiamondIntegral.Section7.ConjugatedMaps.prep
+#print DiamondIntegral.Section7.ConjugatedMaps.prep
+#print axioms DiamondIntegral.Section7.ConjugatedMaps.prep
+#check @DiamondIntegral.Section7.ConjugatedMaps.prep_value
+#print DiamondIntegral.Section7.ConjugatedMaps.prep_value
+#print axioms DiamondIntegral.Section7.ConjugatedMaps.prep_value
+#check @DiamondIntegral.Section7.ConjugatedMaps.prep_bijective
+#print DiamondIntegral.Section7.ConjugatedMaps.prep_bijective
+#print axioms DiamondIntegral.Section7.ConjugatedMaps.prep_bijective
+#check @DiamondIntegral.Section7.ConjugatedMaps.prep_homeo
+#print DiamondIntegral.Section7.ConjugatedMaps.prep_homeo
+#print axioms DiamondIntegral.Section7.ConjugatedMaps.prep_homeo
+#check @DiamondIntegral.Section7.ConjugatedMaps.prep_form
+#print DiamondIntegral.Section7.ConjugatedMaps.prep_form
+#print axioms DiamondIntegral.Section7.ConjugatedMaps.prep_form
+#check @DiamondIntegral.Section7.ConjugatedMaps.prep_inverse_chart
+#print DiamondIntegral.Section7.ConjugatedMaps.prep_inverse_chart
+#print axioms DiamondIntegral.Section7.ConjugatedMaps.prep_inverse_chart
+#check @DiamondIntegral.Section7.ConjugatedMaps.prep_inverse_derivative
+#print DiamondIntegral.Section7.ConjugatedMaps.prep_inverse_derivative
+#print axioms DiamondIntegral.Section7.ConjugatedMaps.prep_inverse_derivative
+#check @DiamondIntegral.Section7.ConjugatedMaps.prep_derivative
+#print DiamondIntegral.Section7.ConjugatedMaps.prep_derivative
+#print axioms DiamondIntegral.Section7.ConjugatedMaps.prep_derivative
+#check @DiamondIntegral.Section7.ConjugatedMaps.conj
+#print DiamondIntegral.Section7.ConjugatedMaps.conj
+#print axioms DiamondIntegral.Section7.ConjugatedMaps.conj
+#check @DiamondIntegral.Section7.ConjugatedMaps.conj_prep
+#print DiamondIntegral.Section7.ConjugatedMaps.conj_prep
+#print axioms DiamondIntegral.Section7.ConjugatedMaps.conj_prep
+#check @DiamondIntegral.Section7.ConjugatedMaps.conj_fix
+#print DiamondIntegral.Section7.ConjugatedMaps.conj_fix
+#print axioms DiamondIntegral.Section7.ConjugatedMaps.conj_fix
+#check @DiamondIntegral.Section7.ConjugatedMaps.conj_homeo
+#print DiamondIntegral.Section7.ConjugatedMaps.conj_homeo
+#print axioms DiamondIntegral.Section7.ConjugatedMaps.conj_homeo
+#check @DiamondIntegral.Section7.ConjugatedMaps.conjBad
+#print DiamondIntegral.Section7.ConjugatedMaps.conjBad
+#print axioms DiamondIntegral.Section7.ConjugatedMaps.conjBad
+#check @DiamondIntegral.Section7.ConjugatedMaps.conjBad_subset
+#print DiamondIntegral.Section7.ConjugatedMaps.conjBad_subset
+#print axioms DiamondIntegral.Section7.ConjugatedMaps.conjBad_subset
+#check @DiamondIntegral.Section7.ConjugatedMaps.conjBad_small
+#print DiamondIntegral.Section7.ConjugatedMaps.conjBad_small
+#print axioms DiamondIntegral.Section7.ConjugatedMaps.conjBad_small
+#check @DiamondIntegral.Section7.ConjugatedMaps.conj_measure
+#print DiamondIntegral.Section7.ConjugatedMaps.conj_measure
+#print axioms DiamondIntegral.Section7.ConjugatedMaps.conj_measure
+#check @DiamondIntegral.Section7.ConjugatedMaps.prepared_slice_covariant
+#print DiamondIntegral.Section7.ConjugatedMaps.prepared_slice_covariant
+#print axioms DiamondIntegral.Section7.ConjugatedMaps.prepared_slice_covariant
+#check @DiamondIntegral.Section7.ConjugatedMaps.targetForm
+#print DiamondIntegral.Section7.ConjugatedMaps.targetForm
+#print axioms DiamondIntegral.Section7.ConjugatedMaps.targetForm
+#check @DiamondIntegral.Section7.ConjugatedMaps.targetForm_lift
+#print DiamondIntegral.Section7.ConjugatedMaps.targetForm_lift
+#print axioms DiamondIntegral.Section7.ConjugatedMaps.targetForm_lift
+#check @DiamondIntegral.Section7.ConjugatedMaps.stage_measure
+#print DiamondIntegral.Section7.ConjugatedMaps.stage_measure
+#print axioms DiamondIntegral.Section7.ConjugatedMaps.stage_measure
+#check @DiamondIntegral.Section7.ConjugatedMaps.target_slice_covariant
+#print DiamondIntegral.Section7.ConjugatedMaps.target_slice_covariant
+#print axioms DiamondIntegral.Section7.ConjugatedMaps.target_slice_covariant
+#check @DiamondIntegral.Section7.ContractionChoice.exists_common_center
+#print DiamondIntegral.Section7.ContractionChoice.exists_common_center
+#print axioms DiamondIntegral.Section7.ContractionChoice.exists_common_center
+#check @DiamondIntegral.Section7.ContractionChoice.exists_contraction_with
+#print DiamondIntegral.Section7.ContractionChoice.exists_contraction_with
+#print axioms DiamondIntegral.Section7.ContractionChoice.exists_contraction_with
+#check @DiamondIntegral.Section7.ContractionChoice.firstStage_finite
+#print DiamondIntegral.Section7.ContractionChoice.firstStage_finite
+#print axioms DiamondIntegral.Section7.ContractionChoice.firstStage_finite
+#check @DiamondIntegral.Section7.ContractionChoice.firstStage_nonzero
+#print DiamondIntegral.Section7.ContractionChoice.firstStage_nonzero
+#print axioms DiamondIntegral.Section7.ContractionChoice.firstStage_nonzero
+#check @DiamondIntegral.Section7.ContractionChoice.isOpenMap_init
+#print DiamondIntegral.Section7.ContractionChoice.isOpenMap_init
+#print axioms DiamondIntegral.Section7.ContractionChoice.isOpenMap_init
+#check @DiamondIntegral.Section7.ContractionChoice.restForm_levels
+#print DiamondIntegral.Section7.ContractionChoice.restForm_levels
+#print axioms DiamondIntegral.Section7.ContractionChoice.restForm_levels
+#check @DiamondIntegral.Section7.ContractionChoice.precomposeFixedVF_volumeIndex
+#print DiamondIntegral.Section7.ContractionChoice.precomposeFixedVF_volumeIndex
+#print axioms DiamondIntegral.Section7.ContractionChoice.precomposeFixedVF_volumeIndex
+#check @DiamondIntegral.Section7.ContractionChoice.precomposeFixedVF_oldLabels
+#print DiamondIntegral.Section7.ContractionChoice.precomposeFixedVF_oldLabels
+#print axioms DiamondIntegral.Section7.ContractionChoice.precomposeFixedVF_oldLabels
+#check @DiamondIntegral.Section7.ContractionChoice.stage
+#print DiamondIntegral.Section7.ContractionChoice.stage
+#print axioms DiamondIntegral.Section7.ContractionChoice.stage
+#check @DiamondIntegral.Section7.ContractionChoice.firstSet
+#print DiamondIntegral.Section7.ContractionChoice.firstSet
+#print axioms DiamondIntegral.Section7.ContractionChoice.firstSet
+#check @DiamondIntegral.Section7.ContractionChoice.firstForm
+#print DiamondIntegral.Section7.ContractionChoice.firstForm
+#print axioms DiamondIntegral.Section7.ContractionChoice.firstForm
+#check @DiamondIntegral.Section7.ContractionChoice.relabel_one_unit
+#print DiamondIntegral.Section7.ContractionChoice.relabel_one_unit
+#print axioms DiamondIntegral.Section7.ContractionChoice.relabel_one_unit
+#check @DiamondIntegral.Section7.ContractionChoice.pad
+#print DiamondIntegral.Section7.ContractionChoice.pad
+#print axioms DiamondIntegral.Section7.ContractionChoice.pad
+#check @DiamondIntegral.Section7.ContractionChoice.pad_vf
+#print DiamondIntegral.Section7.ContractionChoice.pad_vf
+#print axioms DiamondIntegral.Section7.ContractionChoice.pad_vf
+#check @DiamondIntegral.Section7.ContractionChoice.pad_retain
+#print DiamondIntegral.Section7.ContractionChoice.pad_retain
+#print axioms DiamondIntegral.Section7.ContractionChoice.pad_retain
+#check @DiamondIntegral.Section7.ContractionChoice.pad_labels_injective
+#print DiamondIntegral.Section7.ContractionChoice.pad_labels_injective
+#print axioms DiamondIntegral.Section7.ContractionChoice.pad_labels_injective
+#check @DiamondIntegral.Section7.ContractionChoice.pad_home
+#print DiamondIntegral.Section7.ContractionChoice.pad_home
+#print axioms DiamondIntegral.Section7.ContractionChoice.pad_home
+#check @DiamondIntegral.Section7.ContractionChoice.pad_unit
+#print DiamondIntegral.Section7.ContractionChoice.pad_unit
+#print axioms DiamondIntegral.Section7.ContractionChoice.pad_unit
+#check @DiamondIntegral.Section7.ContractionChoice.pulledProgram
+#print DiamondIntegral.Section7.ContractionChoice.pulledProgram
+#print axioms DiamondIntegral.Section7.ContractionChoice.pulledProgram
+#check @DiamondIntegral.Section7.ContractionChoice.graftData
+#print DiamondIntegral.Section7.ContractionChoice.graftData
+#print axioms DiamondIntegral.Section7.ContractionChoice.graftData
+#check @DiamondIntegral.Section7.ContractionChoice.graftRest
+#print DiamondIntegral.Section7.ContractionChoice.graftRest
+#print axioms DiamondIntegral.Section7.ContractionChoice.graftRest
+#check @DiamondIntegral.Section7.ContractionChoice.graftRest_restProgram
+#print DiamondIntegral.Section7.ContractionChoice.graftRest_restProgram
+#print axioms DiamondIntegral.Section7.ContractionChoice.graftRest_restProgram
+#check @DiamondIntegral.Section7.ContractionChoice.cls_graftRest
+#print DiamondIntegral.Section7.ContractionChoice.cls_graftRest
+#print axioms DiamondIntegral.Section7.ContractionChoice.cls_graftRest
+#check @DiamondIntegral.Section7.Corollary715.ispRel_refl
+#print DiamondIntegral.Section7.Corollary715.ispRel_refl
+#print axioms DiamondIntegral.Section7.Corollary715.ispRel_refl
+#check @DiamondIntegral.Section7.Corollary715.ispRel_symm
+#print DiamondIntegral.Section7.Corollary715.ispRel_symm
+#print axioms DiamondIntegral.Section7.Corollary715.ispRel_symm
+#check @DiamondIntegral.Section7.Corollary715.ispRel_trans
+#print DiamondIntegral.Section7.Corollary715.ispRel_trans
+#print axioms DiamondIntegral.Section7.Corollary715.ispRel_trans
+#check @DiamondIntegral.Section7.Corollary715.ispRel_of_eq
+#print DiamondIntegral.Section7.Corollary715.ispRel_of_eq
+#print axioms DiamondIntegral.Section7.Corollary715.ispRel_of_eq
+#check @DiamondIntegral.Section7.Corollary715.object_levels
+#print DiamondIntegral.Section7.Corollary715.object_levels
+#print axioms DiamondIntegral.Section7.Corollary715.object_levels
+#check @DiamondIntegral.Section7.Corollary715.preparedForm_levels
+#print DiamondIntegral.Section7.Corollary715.preparedForm_levels
+#print axioms DiamondIntegral.Section7.Corollary715.preparedForm_levels
+#check @DiamondIntegral.Section7.Corollary715.prepared_finite
+#print DiamondIntegral.Section7.Corollary715.prepared_finite
+#print axioms DiamondIntegral.Section7.Corollary715.prepared_finite
+#check @DiamondIntegral.Section7.Corollary715.tau
+#print DiamondIntegral.Section7.Corollary715.tau
+#print axioms DiamondIntegral.Section7.Corollary715.tau
+#check @DiamondIntegral.Section7.Corollary715.point_fst
+#print DiamondIntegral.Section7.Corollary715.point_fst
+#print axioms DiamondIntegral.Section7.Corollary715.point_fst
+#check @DiamondIntegral.Section7.Corollary715.stage_relative
+#print DiamondIntegral.Section7.Corollary715.stage_relative
+#print axioms DiamondIntegral.Section7.Corollary715.stage_relative
+#check @DiamondIntegral.Section7.Corollary715.firstSet_vf
+#print DiamondIntegral.Section7.Corollary715.firstSet_vf
+#print axioms DiamondIntegral.Section7.Corollary715.firstSet_vf
+#check @DiamondIntegral.Section7.Corollary715.firstSet_vf_iff
+#print DiamondIntegral.Section7.Corollary715.firstSet_vf_iff
+#print axioms DiamondIntegral.Section7.Corollary715.firstSet_vf_iff
+#check @DiamondIntegral.Section7.Corollary715.proj_of_relativelyUnary
+#print DiamondIntegral.Section7.Corollary715.proj_of_relativelyUnary
+#print axioms DiamondIntegral.Section7.Corollary715.proj_of_relativelyUnary
+#check @DiamondIntegral.Section7.Corollary715.fibreObject_zero_doublyBounded
+#print DiamondIntegral.Section7.Corollary715.fibreObject_zero_doublyBounded
+#print axioms DiamondIntegral.Section7.Corollary715.fibreObject_zero_doublyBounded
+#check @DiamondIntegral.Section7.Corollary715.ispRel_same_set
+#print DiamondIntegral.Section7.Corollary715.ispRel_same_set
+#print axioms DiamondIntegral.Section7.Corollary715.ispRel_same_set
+#check @DiamondIntegral.Section7.Corollary715.firstFin
+#print DiamondIntegral.Section7.Corollary715.firstFin
+#print axioms DiamondIntegral.Section7.Corollary715.firstFin
+#check @DiamondIntegral.Section7.Corollary715.FibreHypothesis
+#print DiamondIntegral.Section7.Corollary715.FibreHypothesis
+#print axioms DiamondIntegral.Section7.Corollary715.FibreHypothesis
+#check @DiamondIntegral.Section7.Corollary715.reduction_7_15
+#print DiamondIntegral.Section7.Corollary715.reduction_7_15
+#print axioms DiamondIntegral.Section7.Corollary715.reduction_7_15
+#check @DiamondIntegral.Section7.Corollary715Fibres.idMorphism
+#print DiamondIntegral.Section7.Corollary715Fibres.idMorphism
+#print axioms DiamondIntegral.Section7.Corollary715Fibres.idMorphism
+#check @DiamondIntegral.Section7.Corollary715Fibres.hSb
+#print DiamondIntegral.Section7.Corollary715Fibres.hSb
+#print axioms DiamondIntegral.Section7.Corollary715Fibres.hSb
+#check @DiamondIntegral.Section7.Corollary715Fibres.prepProper
+#print DiamondIntegral.Section7.Corollary715Fibres.prepProper
+#print axioms DiamondIntegral.Section7.Corollary715Fibres.prepProper
+#check @DiamondIntegral.Section7.Corollary715Fibres.prepCov
+#print DiamondIntegral.Section7.Corollary715Fibres.prepCov
+#print axioms DiamondIntegral.Section7.Corollary715Fibres.prepCov
+#check @DiamondIntegral.Section7.Corollary715Fibres.targetCov
+#print DiamondIntegral.Section7.Corollary715Fibres.targetCov
+#print axioms DiamondIntegral.Section7.Corollary715Fibres.targetCov
+#check @DiamondIntegral.Section7.Corollary715Fibres.prepFin
+#print DiamondIntegral.Section7.Corollary715Fibres.prepFin
+#print axioms DiamondIntegral.Section7.Corollary715Fibres.prepFin
+#check @DiamondIntegral.Section7.Corollary715Fibres.targetFin
+#print DiamondIntegral.Section7.Corollary715Fibres.targetFin
+#print axioms DiamondIntegral.Section7.Corollary715Fibres.targetFin
+#check @DiamondIntegral.Section7.Corollary715Fibres.prepSlice
+#print DiamondIntegral.Section7.Corollary715Fibres.prepSlice
+#print axioms DiamondIntegral.Section7.Corollary715Fibres.prepSlice
+#check @DiamondIntegral.Section7.Corollary715Fibres.targetSlice
+#print DiamondIntegral.Section7.Corollary715Fibres.targetSlice
+#print axioms DiamondIntegral.Section7.Corollary715Fibres.targetSlice
+#check @DiamondIntegral.Section7.Corollary715Fibres.stage_fix
+#print DiamondIntegral.Section7.Corollary715Fibres.stage_fix
+#print axioms DiamondIntegral.Section7.Corollary715Fibres.stage_fix
+#check @DiamondIntegral.Section7.Corollary715Fibres.stageMorph
+#print DiamondIntegral.Section7.Corollary715Fibres.stageMorph
+#print axioms DiamondIntegral.Section7.Corollary715Fibres.stageMorph
+#check @DiamondIntegral.Section7.Corollary715Fibres.fibreAt
+#print DiamondIntegral.Section7.Corollary715Fibres.fibreAt
+#print axioms DiamondIntegral.Section7.Corollary715Fibres.fibreAt
+#check @DiamondIntegral.Section7.Corollary715Fibres.liftCarrier
+#print DiamondIntegral.Section7.Corollary715Fibres.liftCarrier
+#print axioms DiamondIntegral.Section7.Corollary715Fibres.liftCarrier
+#check @DiamondIntegral.Section7.Corollary715Fibres.targetForm_snoc
+#print DiamondIntegral.Section7.Corollary715Fibres.targetForm_snoc
+#print axioms DiamondIntegral.Section7.Corollary715Fibres.targetForm_snoc
+#check @DiamondIntegral.Section7.Corollary715Fibres.liftSet_eq
+#print DiamondIntegral.Section7.Corollary715Fibres.liftSet_eq
+#print axioms DiamondIntegral.Section7.Corollary715Fibres.liftSet_eq
+#check @DiamondIntegral.Section7.Corollary715Fibres.liftProper
+#print DiamondIntegral.Section7.Corollary715Fibres.liftProper
+#print axioms DiamondIntegral.Section7.Corollary715Fibres.liftProper
+#check @DiamondIntegral.Section7.Corollary715Fibres.liftIso
+#print DiamondIntegral.Section7.Corollary715Fibres.liftIso
+#print axioms DiamondIntegral.Section7.Corollary715Fibres.liftIso
+#check @DiamondIntegral.Section7.Corollary715Fibres.fibre_doublyBounded
+#print DiamondIntegral.Section7.Corollary715Fibres.fibre_doublyBounded
+#print axioms DiamondIntegral.Section7.Corollary715Fibres.fibre_doublyBounded
+#check @DiamondIntegral.Section7.Corollary715Fibres.conjMorph
+#print DiamondIntegral.Section7.Corollary715Fibres.conjMorph
+#print axioms DiamondIntegral.Section7.Corollary715Fibres.conjMorph
+#check @DiamondIntegral.Section7.Corollary715Fibres.fibreHypothesis
+#print DiamondIntegral.Section7.Corollary715Fibres.fibreHypothesis
+#print axioms DiamondIntegral.Section7.Corollary715Fibres.fibreHypothesis
+#check @DiamondIntegral.Section7.Corollary715Fibres.corollary_7_15
+#print DiamondIntegral.Section7.Corollary715Fibres.corollary_7_15
+#print axioms DiamondIntegral.Section7.Corollary715Fibres.corollary_7_15
 #check @DiamondIntegral.Section7.ElementaryBlowups.graphOn_diff
 #print DiamondIntegral.Section7.ElementaryBlowups.graphOn_diff
 #print axioms DiamondIntegral.Section7.ElementaryBlowups.graphOn_diff
@@ -1230,6 +1488,60 @@ import «section 7».Section
 #check @DiamondIntegral.Section7.FiberwiseInput.Lemma714
 #print DiamondIntegral.Section7.FiberwiseInput.Lemma714
 #print axioms DiamondIntegral.Section7.FiberwiseInput.Lemma714
+#check @DiamondIntegral.Section7.FibreComparison.adjoin_subset_acl
+#print DiamondIntegral.Section7.FibreComparison.adjoin_subset_acl
+#print axioms DiamondIntegral.Section7.FibreComparison.adjoin_subset_acl
+#check @DiamondIntegral.Section7.FibreComparison.acl_field_mono
+#print DiamondIntegral.Section7.FibreComparison.acl_field_mono
+#print axioms DiamondIntegral.Section7.FibreComparison.acl_field_mono
+#check @DiamondIntegral.Section7.FibreComparison.support_names
+#print DiamondIntegral.Section7.FibreComparison.support_names
+#print axioms DiamondIntegral.Section7.FibreComparison.support_names
+#check @DiamondIntegral.Section7.FibreComparison.support_subset
+#print DiamondIntegral.Section7.FibreComparison.support_subset
+#print axioms DiamondIntegral.Section7.FibreComparison.support_subset
+#check @DiamondIntegral.Section7.FibreComparison.fibreObject_domain
+#print DiamondIntegral.Section7.FibreComparison.fibreObject_domain
+#print axioms DiamondIntegral.Section7.FibreComparison.fibreObject_domain
+#check @DiamondIntegral.Section7.FibreComparison.fibreObject_value
+#print DiamondIntegral.Section7.FibreComparison.fibreObject_value
+#print axioms DiamondIntegral.Section7.FibreComparison.fibreObject_value
+#check @DiamondIntegral.Section7.FibreComparison.fibreObject_form
+#print DiamondIntegral.Section7.FibreComparison.fibreObject_form
+#print axioms DiamondIntegral.Section7.FibreComparison.fibreObject_form
+#check @DiamondIntegral.Section7.FibreComparison.cls_fibreObject_eq
+#print DiamondIntegral.Section7.FibreComparison.cls_fibreObject_eq
+#print axioms DiamondIntegral.Section7.FibreComparison.cls_fibreObject_eq
+#check @DiamondIntegral.Section7.FibreComparison.ispRel_one_iff
+#print DiamondIntegral.Section7.FibreComparison.ispRel_one_iff
+#print axioms DiamondIntegral.Section7.FibreComparison.ispRel_one_iff
+#check @DiamondIntegral.Section7.FibreInvariance.vfValue_pow
+#print DiamondIntegral.Section7.FibreInvariance.vfValue_pow
+#print axioms DiamondIntegral.Section7.FibreInvariance.vfValue_pow
+#check @DiamondIntegral.Section7.FibreInvariance.one_lt_vfValue
+#print DiamondIntegral.Section7.FibreInvariance.one_lt_vfValue
+#print axioms DiamondIntegral.Section7.FibreInvariance.one_lt_vfValue
+#check @DiamondIntegral.Section7.FibreInvariance.pow_injective_of_one_lt
+#print DiamondIntegral.Section7.FibreInvariance.pow_injective_of_one_lt
+#print axioms DiamondIntegral.Section7.FibreInvariance.pow_injective_of_one_lt
+#check @DiamondIntegral.Section7.FibreInvariance.exists_good_point
+#print DiamondIntegral.Section7.FibreInvariance.exists_good_point
+#print axioms DiamondIntegral.Section7.FibreInvariance.exists_good_point
+#check @DiamondIntegral.Section7.FibreInvariance.adjoin_subset_dcl
+#print DiamondIntegral.Section7.FibreInvariance.adjoin_subset_dcl
+#print axioms DiamondIntegral.Section7.FibreInvariance.adjoin_subset_dcl
+#check @DiamondIntegral.Section7.FibreInvariance.transfer_adjoin
+#print DiamondIntegral.Section7.FibreInvariance.transfer_adjoin
+#print axioms DiamondIntegral.Section7.FibreInvariance.transfer_adjoin
+#check @DiamondIntegral.Section7.FibreInvariance.coordinate_mem_dcl
+#print DiamondIntegral.Section7.FibreInvariance.coordinate_mem_dcl
+#print axioms DiamondIntegral.Section7.FibreInvariance.coordinate_mem_dcl
+#check @DiamondIntegral.Section7.FibreInvariance.dcl_mono_adjoin
+#print DiamondIntegral.Section7.FibreInvariance.dcl_mono_adjoin
+#print axioms DiamondIntegral.Section7.FibreInvariance.dcl_mono_adjoin
+#check @DiamondIntegral.Section7.FibreInvariance.firstSet_uniform
+#print DiamondIntegral.Section7.FibreInvariance.firstSet_uniform
+#print axioms DiamondIntegral.Section7.FibreInvariance.firstSet_uniform
 #check @DiamondIntegral.Section7.FibreObjects.slice
 #print DiamondIntegral.Section7.FibreObjects.slice
 #print axioms DiamondIntegral.Section7.FibreObjects.slice
@@ -1272,6 +1584,318 @@ import «section 7».Section
 #check @DiamondIntegral.Section7.FibreObjects.fibreObject
 #print DiamondIntegral.Section7.FibreObjects.fibreObject
 #print axioms DiamondIntegral.Section7.FibreObjects.fibreObject
+#check @DiamondIntegral.Section7.FibreRestriction.liftCodes
+#print DiamondIntegral.Section7.FibreRestriction.liftCodes
+#print axioms DiamondIntegral.Section7.FibreRestriction.liftCodes
+#check @DiamondIntegral.Section7.FibreRestriction.liftCodes_definable
+#print DiamondIntegral.Section7.FibreRestriction.liftCodes_definable
+#print axioms DiamondIntegral.Section7.FibreRestriction.liftCodes_definable
+#check @DiamondIntegral.Section7.FibreRestriction.liftCodes_mixedValues
+#print DiamondIntegral.Section7.FibreRestriction.liftCodes_mixedValues
+#print axioms DiamondIntegral.Section7.FibreRestriction.liftCodes_mixedValues
+#check @DiamondIntegral.Section7.FibreRestriction.liftCodes_decode
+#print DiamondIntegral.Section7.FibreRestriction.liftCodes_decode
+#print axioms DiamondIntegral.Section7.FibreRestriction.liftCodes_decode
+#check @DiamondIntegral.Section7.FibreRestriction.liftMap
+#print DiamondIntegral.Section7.FibreRestriction.liftMap
+#print axioms DiamondIntegral.Section7.FibreRestriction.liftMap
+#check @DiamondIntegral.Section7.FibreRestriction.sliceSet
+#print DiamondIntegral.Section7.FibreRestriction.sliceSet
+#print axioms DiamondIntegral.Section7.FibreRestriction.sliceSet
+#check @DiamondIntegral.Section7.FibreRestriction.mem_sliceSet
+#print DiamondIntegral.Section7.FibreRestriction.mem_sliceSet
+#print axioms DiamondIntegral.Section7.FibreRestriction.mem_sliceSet
+#check @DiamondIntegral.Section7.FibreRestriction.sliceSet_mono
+#print DiamondIntegral.Section7.FibreRestriction.sliceSet_mono
+#print axioms DiamondIntegral.Section7.FibreRestriction.sliceSet_mono
+#check @DiamondIntegral.Section7.FibreRestriction.liftElem
+#print DiamondIntegral.Section7.FibreRestriction.liftElem
+#print axioms DiamondIntegral.Section7.FibreRestriction.liftElem
+#check @DiamondIntegral.Section7.FibreRestriction.liftElem_val
+#print DiamondIntegral.Section7.FibreRestriction.liftElem_val
+#print axioms DiamondIntegral.Section7.FibreRestriction.liftElem_val
+#check @DiamondIntegral.Section7.FibreRestriction.liftElemMap
+#print DiamondIntegral.Section7.FibreRestriction.liftElemMap
+#print axioms DiamondIntegral.Section7.FibreRestriction.liftElemMap
+#check @DiamondIntegral.Section7.FibreRestriction.liftElemMap_val
+#print DiamondIntegral.Section7.FibreRestriction.liftElemMap_val
+#print axioms DiamondIntegral.Section7.FibreRestriction.liftElemMap_val
+#check @DiamondIntegral.Section7.FibreRestriction.fin_one_ext
+#print DiamondIntegral.Section7.FibreRestriction.fin_one_ext
+#print axioms DiamondIntegral.Section7.FibreRestriction.fin_one_ext
+#check @DiamondIntegral.Section7.FibreRestriction.snoc_last_eq_iff
+#print DiamondIntegral.Section7.FibreRestriction.snoc_last_eq_iff
+#print axioms DiamondIntegral.Section7.FibreRestriction.snoc_last_eq_iff
+#check @DiamondIntegral.Section7.FibreRestriction.eq_snoc_of_init
+#print DiamondIntegral.Section7.FibreRestriction.eq_snoc_of_init
+#print axioms DiamondIntegral.Section7.FibreRestriction.eq_snoc_of_init
+#check @DiamondIntegral.Section7.FibreRestriction.congruent_snoc
+#print DiamondIntegral.Section7.FibreRestriction.congruent_snoc
+#print axioms DiamondIntegral.Section7.FibreRestriction.congruent_snoc
+#check @DiamondIntegral.Section7.FibreRestriction.congruent_of_snoc
+#print DiamondIntegral.Section7.FibreRestriction.congruent_of_snoc
+#print axioms DiamondIntegral.Section7.FibreRestriction.congruent_of_snoc
+#check @DiamondIntegral.Section7.FibreRestriction.namedRadii_mono
+#print DiamondIntegral.Section7.FibreRestriction.namedRadii_mono
+#print axioms DiamondIntegral.Section7.FibreRestriction.namedRadii_mono
+#check @DiamondIntegral.Section7.FibreRestriction.sliceSet_vfBounded
+#print DiamondIntegral.Section7.FibreRestriction.sliceSet_vfBounded
+#print axioms DiamondIntegral.Section7.FibreRestriction.sliceSet_vfBounded
+#check @DiamondIntegral.Section7.FibreRestriction.sliceSet_rvBounded
+#print DiamondIntegral.Section7.FibreRestriction.sliceSet_rvBounded
+#print axioms DiamondIntegral.Section7.FibreRestriction.sliceSet_rvBounded
+#check @DiamondIntegral.Section7.FibreRestriction.sliceSet_properInvariant
+#print DiamondIntegral.Section7.FibreRestriction.sliceSet_properInvariant
+#print axioms DiamondIntegral.Section7.FibreRestriction.sliceSet_properInvariant
+#check @DiamondIntegral.Section7.FibreRestriction.continuous_snoc_const
+#print DiamondIntegral.Section7.FibreRestriction.continuous_snoc_const
+#print axioms DiamondIntegral.Section7.FibreRestriction.continuous_snoc_const
+#check @DiamondIntegral.Section7.FibreRestriction.lastCodes
+#print DiamondIntegral.Section7.FibreRestriction.lastCodes
+#print axioms DiamondIntegral.Section7.FibreRestriction.lastCodes
+#check @DiamondIntegral.Section7.FibreRestriction.lastCodes_mixedValues
+#print DiamondIntegral.Section7.FibreRestriction.lastCodes_mixedValues
+#print axioms DiamondIntegral.Section7.FibreRestriction.lastCodes_mixedValues
+#check @DiamondIntegral.Section7.FibreRestriction.lastCodes_decode
+#print DiamondIntegral.Section7.FibreRestriction.lastCodes_decode
+#print axioms DiamondIntegral.Section7.FibreRestriction.lastCodes_decode
+#check @DiamondIntegral.Section7.FibreRestriction.lastMap
+#print DiamondIntegral.Section7.FibreRestriction.lastMap
+#print axioms DiamondIntegral.Section7.FibreRestriction.lastMap
+#check @DiamondIntegral.Section7.FibreRestriction.fix_init
+#print DiamondIntegral.Section7.FibreRestriction.fix_init
+#print axioms DiamondIntegral.Section7.FibreRestriction.fix_init
+#check @DiamondIntegral.Section7.FibreRestriction.fix_snoc
+#print DiamondIntegral.Section7.FibreRestriction.fix_snoc
+#print axioms DiamondIntegral.Section7.FibreRestriction.fix_snoc
+#check @DiamondIntegral.Section7.FibreRestriction.sliceMap_mem
+#print DiamondIntegral.Section7.FibreRestriction.sliceMap_mem
+#print axioms DiamondIntegral.Section7.FibreRestriction.sliceMap_mem
+#check @DiamondIntegral.Section7.FibreRestriction.sliceMap
+#print DiamondIntegral.Section7.FibreRestriction.sliceMap
+#print axioms DiamondIntegral.Section7.FibreRestriction.sliceMap
+#check @DiamondIntegral.Section7.FibreRestriction.sliceMap_val
+#print DiamondIntegral.Section7.FibreRestriction.sliceMap_val
+#print axioms DiamondIntegral.Section7.FibreRestriction.sliceMap_val
+#check @DiamondIntegral.Section7.FibreRestriction.liftElem_sliceMap
+#print DiamondIntegral.Section7.FibreRestriction.liftElem_sliceMap
+#print axioms DiamondIntegral.Section7.FibreRestriction.liftElem_sliceMap
+#check @DiamondIntegral.Section7.FibreRestriction.sliceMap_injective
+#print DiamondIntegral.Section7.FibreRestriction.sliceMap_injective
+#print axioms DiamondIntegral.Section7.FibreRestriction.sliceMap_injective
+#check @DiamondIntegral.Section7.FibreRestriction.sliceMap_surjective
+#print DiamondIntegral.Section7.FibreRestriction.sliceMap_surjective
+#print axioms DiamondIntegral.Section7.FibreRestriction.sliceMap_surjective
+#check @DiamondIntegral.Section7.FibreRestriction.sliceMap_bijective
+#print DiamondIntegral.Section7.FibreRestriction.sliceMap_bijective
+#print axioms DiamondIntegral.Section7.FibreRestriction.sliceMap_bijective
+#check @DiamondIntegral.Section7.FibreRestriction.graphFibre_init
+#print DiamondIntegral.Section7.FibreRestriction.graphFibre_init
+#print axioms DiamondIntegral.Section7.FibreRestriction.graphFibre_init
+#check @DiamondIntegral.Section7.FibreRestriction.sliceMap_graphFibre_iff
+#print DiamondIntegral.Section7.FibreRestriction.sliceMap_graphFibre_iff
+#print axioms DiamondIntegral.Section7.FibreRestriction.sliceMap_graphFibre_iff
+#check @DiamondIntegral.Section7.FibreRestriction.sliceMap_graphFibreSource
+#print DiamondIntegral.Section7.FibreRestriction.sliceMap_graphFibreSource
+#print axioms DiamondIntegral.Section7.FibreRestriction.sliceMap_graphFibreSource
+#check @DiamondIntegral.Section7.FibreRestriction.sliceMap_graphFibreRange
+#print DiamondIntegral.Section7.FibreRestriction.sliceMap_graphFibreRange
+#print axioms DiamondIntegral.Section7.FibreRestriction.sliceMap_graphFibreRange
+#check @DiamondIntegral.Section7.FibreRestriction.sliceMap_graphFibreMap
+#print DiamondIntegral.Section7.FibreRestriction.sliceMap_graphFibreMap
+#print axioms DiamondIntegral.Section7.FibreRestriction.sliceMap_graphFibreMap
+#check @DiamondIntegral.Section7.FibreRestriction.sliceMap_properCovariant
+#print DiamondIntegral.Section7.FibreRestriction.sliceMap_properCovariant
+#print axioms DiamondIntegral.Section7.FibreRestriction.sliceMap_properCovariant
+#check @DiamondIntegral.Section7.FibreRestriction.sliceMap_continuous
+#print DiamondIntegral.Section7.FibreRestriction.sliceMap_continuous
+#print axioms DiamondIntegral.Section7.FibreRestriction.sliceMap_continuous
+#check @DiamondIntegral.Section7.FibreRestriction.fix_inverse
+#print DiamondIntegral.Section7.FibreRestriction.fix_inverse
+#print axioms DiamondIntegral.Section7.FibreRestriction.fix_inverse
+#check @DiamondIntegral.Section7.FibreRestriction.sliceMap_inverse
+#print DiamondIntegral.Section7.FibreRestriction.sliceMap_inverse
+#print axioms DiamondIntegral.Section7.FibreRestriction.sliceMap_inverse
+#check @DiamondIntegral.Section7.FibreRestriction.sliceMap_homeomorphism
+#print DiamondIntegral.Section7.FibreRestriction.sliceMap_homeomorphism
+#print axioms DiamondIntegral.Section7.FibreRestriction.sliceMap_homeomorphism
+#check @DiamondIntegral.Section7.FibreRestriction.lastEmbedding
+#print DiamondIntegral.Section7.FibreRestriction.lastEmbedding
+#print axioms DiamondIntegral.Section7.FibreRestriction.lastEmbedding
+#check @DiamondIntegral.Section7.FibreRestriction.coordProj
+#print DiamondIntegral.Section7.FibreRestriction.coordProj
+#print axioms DiamondIntegral.Section7.FibreRestriction.coordProj
+#check @DiamondIntegral.Section7.FibreRestriction.lastEmbedding_apply
+#print DiamondIntegral.Section7.FibreRestriction.lastEmbedding_apply
+#print axioms DiamondIntegral.Section7.FibreRestriction.lastEmbedding_apply
+#check @DiamondIntegral.Section7.FibreRestriction.coordProj_apply
+#print DiamondIntegral.Section7.FibreRestriction.coordProj_apply
+#print axioms DiamondIntegral.Section7.FibreRestriction.coordProj_apply
+#check @DiamondIntegral.Section7.FibreRestriction.snoc_eq_affine
+#print DiamondIntegral.Section7.FibreRestriction.snoc_eq_affine
+#print axioms DiamondIntegral.Section7.FibreRestriction.snoc_eq_affine
+#check @DiamondIntegral.Section7.FibreRestriction.hasVFDerivativeAt_coordProj
+#print DiamondIntegral.Section7.FibreRestriction.hasVFDerivativeAt_coordProj
+#print axioms DiamondIntegral.Section7.FibreRestriction.hasVFDerivativeAt_coordProj
+#check @DiamondIntegral.Section7.FibreRestriction.hasVFDerivativeAt_snoc
+#print DiamondIntegral.Section7.FibreRestriction.hasVFDerivativeAt_snoc
+#print axioms DiamondIntegral.Section7.FibreRestriction.hasVFDerivativeAt_snoc
+#check @DiamondIntegral.Section7.FibreRestriction.snoc_mem_vfBall
+#print DiamondIntegral.Section7.FibreRestriction.snoc_mem_vfBall
+#print axioms DiamondIntegral.Section7.FibreRestriction.snoc_mem_vfBall
+#check @DiamondIntegral.Section7.FibreRestriction.sliceMap_derivative
+#print DiamondIntegral.Section7.FibreRestriction.sliceMap_derivative
+#print axioms DiamondIntegral.Section7.FibreRestriction.sliceMap_derivative
+#check @DiamondIntegral.Section7.FibreRestriction.eval₂_cons_eq_eval₂_finSuccEquiv
+#print DiamondIntegral.Section7.FibreRestriction.eval₂_cons_eq_eval₂_finSuccEquiv
+#print axioms DiamondIntegral.Section7.FibreRestriction.eval₂_cons_eq_eval₂_finSuccEquiv
+#check @DiamondIntegral.Section7.FibreRestriction.isAlgebraic_of_finSucc_root
+#print DiamondIntegral.Section7.FibreRestriction.isAlgebraic_of_finSucc_root
+#print axioms DiamondIntegral.Section7.FibreRestriction.isAlgebraic_of_finSucc_root
+#check @DiamondIntegral.Section7.FibreRestriction.exists_good_polynomial
+#print DiamondIntegral.Section7.FibreRestriction.exists_good_polynomial
+#print axioms DiamondIntegral.Section7.FibreRestriction.exists_good_polynomial
+#check @DiamondIntegral.Section7.FibreRestriction.sliceSet_carrier_eq_empty
+#print DiamondIntegral.Section7.FibreRestriction.sliceSet_carrier_eq_empty
+#print axioms DiamondIntegral.Section7.FibreRestriction.sliceSet_carrier_eq_empty
+#check @DiamondIntegral.Section7.FibreRestriction.exists_good_polynomial_or_empty
+#print DiamondIntegral.Section7.FibreRestriction.exists_good_polynomial_or_empty
+#print axioms DiamondIntegral.Section7.FibreRestriction.exists_good_polynomial_or_empty
+#check @DiamondIntegral.Section7.FibreRestriction.sliceForm
+#print DiamondIntegral.Section7.FibreRestriction.sliceForm
+#print axioms DiamondIntegral.Section7.FibreRestriction.sliceForm
+#check @DiamondIntegral.Section7.FibreRestriction.sliceForm_apply
+#print DiamondIntegral.Section7.FibreRestriction.sliceForm_apply
+#print axioms DiamondIntegral.Section7.FibreRestriction.sliceForm_apply
+#check @DiamondIntegral.Section7.FibreRestriction.sliceFormCovariant_of
+#print DiamondIntegral.Section7.FibreRestriction.sliceFormCovariant_of
+#print axioms DiamondIntegral.Section7.FibreRestriction.sliceFormCovariant_of
+#check @DiamondIntegral.Section7.FibreRestriction.sliceObject
+#print DiamondIntegral.Section7.FibreRestriction.sliceObject
+#print axioms DiamondIntegral.Section7.FibreRestriction.sliceObject
+#check @DiamondIntegral.Section7.FibreRestriction.sliceVFObject
+#print DiamondIntegral.Section7.FibreRestriction.sliceVFObject
+#print axioms DiamondIntegral.Section7.FibreRestriction.sliceVFObject
+#check @DiamondIntegral.Section7.FibreRestriction.sliceMap_measure
+#print DiamondIntegral.Section7.FibreRestriction.sliceMap_measure
+#print axioms DiamondIntegral.Section7.FibreRestriction.sliceMap_measure
+#check @DiamondIntegral.Section7.FibreRestriction.sliceMorphism
+#print DiamondIntegral.Section7.FibreRestriction.sliceMorphism
+#print axioms DiamondIntegral.Section7.FibreRestriction.sliceMorphism
+#check @DiamondIntegral.Section7.FirstStage.headStage
+#print DiamondIntegral.Section7.FirstStage.headStage
+#print axioms DiamondIntegral.Section7.FirstStage.headStage
+#check @DiamondIntegral.Section7.FirstStage.restProgram
+#print DiamondIntegral.Section7.FirstStage.restProgram
+#print axioms DiamondIntegral.Section7.FirstStage.restProgram
+#check @DiamondIntegral.Section7.FirstStage.volumeIndex_last
+#print DiamondIntegral.Section7.FirstStage.volumeIndex_last
+#print axioms DiamondIntegral.Section7.FirstStage.volumeIndex_last
+#check @DiamondIntegral.Section7.FirstStage.volumeIndex_castSucc
+#print DiamondIntegral.Section7.FirstStage.volumeIndex_castSucc
+#print axioms DiamondIntegral.Section7.FirstStage.volumeIndex_castSucc
+#check @DiamondIntegral.Section7.FirstStage.oldLabels_eq
+#print DiamondIntegral.Section7.FirstStage.oldLabels_eq
+#print axioms DiamondIntegral.Section7.FirstStage.oldLabels_eq
+#check @DiamondIntegral.Section7.FirstStage.toMap_eq
+#print DiamondIntegral.Section7.FirstStage.toMap_eq
+#print axioms DiamondIntegral.Section7.FirstStage.toMap_eq
+#check @DiamondIntegral.Section7.FirstStage.restForm
+#print DiamondIntegral.Section7.FirstStage.restForm
+#print axioms DiamondIntegral.Section7.FirstStage.restForm
+#check @DiamondIntegral.Section7.FirstStage.restForm_contraction
+#print DiamondIntegral.Section7.FirstStage.restForm_contraction
+#print axioms DiamondIntegral.Section7.FirstStage.restForm_contraction
+#check @DiamondIntegral.Section7.FirstStage.restData
+#print DiamondIntegral.Section7.FirstStage.restData
+#print axioms DiamondIntegral.Section7.FirstStage.restData
+#check @DiamondIntegral.Section7.FirstStage.restLift
+#print DiamondIntegral.Section7.FirstStage.restLift
+#print axioms DiamondIntegral.Section7.FirstStage.restLift
+#check @DiamondIntegral.Section7.FirstStage.restContraction
+#print DiamondIntegral.Section7.FirstStage.restContraction
+#print axioms DiamondIntegral.Section7.FirstStage.restContraction
+#check @DiamondIntegral.Section7.FirstStage.headStartBaseVF_eq
+#print DiamondIntegral.Section7.FirstStage.headStartBaseVF_eq
+#print axioms DiamondIntegral.Section7.FirstStage.headStartBaseVF_eq
+#check @DiamondIntegral.Section7.FirstStage.headStartExtraVF_eq
+#print DiamondIntegral.Section7.FirstStage.headStartExtraVF_eq
+#print axioms DiamondIntegral.Section7.FirstStage.headStartExtraVF_eq
+#check @DiamondIntegral.Section7.FirstStage.mem_bundle_labels
+#print DiamondIntegral.Section7.FirstStage.mem_bundle_labels
+#print axioms DiamondIntegral.Section7.FirstStage.mem_bundle_labels
+#check @DiamondIntegral.Section7.FirstStage.mem_domain_labels
+#print DiamondIntegral.Section7.FirstStage.mem_domain_labels
+#print axioms DiamondIntegral.Section7.FirstStage.mem_domain_labels
+#check @DiamondIntegral.Section7.FirstStage.value_labels
+#print DiamondIntegral.Section7.FirstStage.value_labels
+#print axioms DiamondIntegral.Section7.FirstStage.value_labels
+#check @DiamondIntegral.Section7.FirstStage.labelObject
+#print DiamondIntegral.Section7.FirstStage.labelObject
+#print axioms DiamondIntegral.Section7.FirstStage.labelObject
+#check @DiamondIntegral.Section7.FirstStage.gam
+#print DiamondIntegral.Section7.FirstStage.gam
+#print axioms DiamondIntegral.Section7.FirstStage.gam
+#check @DiamondIntegral.Section7.FirstStage.volumeGamma_eq
+#print DiamondIntegral.Section7.FirstStage.volumeGamma_eq
+#print axioms DiamondIntegral.Section7.FirstStage.volumeGamma_eq
+#check @DiamondIntegral.Section7.FirstStage.cls_eq_of_volume
+#print DiamondIntegral.Section7.FirstStage.cls_eq_of_volume
+#print axioms DiamondIntegral.Section7.FirstStage.cls_eq_of_volume
+#check @DiamondIntegral.Section7.FirstStage.finiteFibres_labels
+#print DiamondIntegral.Section7.FirstStage.finiteFibres_labels
+#print axioms DiamondIntegral.Section7.FirstStage.finiteFibres_labels
+#check @DiamondIntegral.Section7.FirstStage.cls_labelObject_eq
+#print DiamondIntegral.Section7.FirstStage.cls_labelObject_eq
+#print axioms DiamondIntegral.Section7.FirstStage.cls_labelObject_eq
+#check @DiamondIntegral.Section7.FirstStage.rvForm_read
+#print DiamondIntegral.Section7.FirstStage.rvForm_read
+#print axioms DiamondIntegral.Section7.FirstStage.rvForm_read
+#check @DiamondIntegral.Section7.FirstStage.restLabels
+#print DiamondIntegral.Section7.FirstStage.restLabels
+#print axioms DiamondIntegral.Section7.FirstStage.restLabels
+#check @DiamondIntegral.Section7.FirstStage.restLabels_prod
+#print DiamondIntegral.Section7.FirstStage.restLabels_prod
+#print axioms DiamondIntegral.Section7.FirstStage.restLabels_prod
+#check @DiamondIntegral.Section7.FirstStage.restLabels_range
+#print DiamondIntegral.Section7.FirstStage.restLabels_range
+#print axioms DiamondIntegral.Section7.FirstStage.restLabels_range
+#check @DiamondIntegral.Section7.FirstStage.restObject
+#print DiamondIntegral.Section7.FirstStage.restObject
+#print axioms DiamondIntegral.Section7.FirstStage.restObject
+#check @DiamondIntegral.Section7.FirstStage.restObject_doublyBounded
+#print DiamondIntegral.Section7.FirstStage.restObject_doublyBounded
+#print axioms DiamondIntegral.Section7.FirstStage.restObject_doublyBounded
+#check @DiamondIntegral.Section7.FirstStage.restObject_eq
+#print DiamondIntegral.Section7.FirstStage.restObject_eq
+#print axioms DiamondIntegral.Section7.FirstStage.restObject_eq
+#check @DiamondIntegral.Section7.FirstStage.cls_headStart_rest
+#print DiamondIntegral.Section7.FirstStage.cls_headStart_rest
+#print axioms DiamondIntegral.Section7.FirstStage.cls_headStart_rest
+#check @DiamondIntegral.Section7.FirstStage.restLabelsOrdered
+#print DiamondIntegral.Section7.FirstStage.restLabelsOrdered
+#print axioms DiamondIntegral.Section7.FirstStage.restLabelsOrdered
+#check @DiamondIntegral.Section7.FirstStage.restLabelsOrdered_prod
+#print DiamondIntegral.Section7.FirstStage.restLabelsOrdered_prod
+#print axioms DiamondIntegral.Section7.FirstStage.restLabelsOrdered_prod
+#check @DiamondIntegral.Section7.FirstStage.restLabelsOrdered_range
+#print DiamondIntegral.Section7.FirstStage.restLabelsOrdered_range
+#print axioms DiamondIntegral.Section7.FirstStage.restLabelsOrdered_range
+#check @DiamondIntegral.Section7.FirstStage.restObjectOrdered
+#print DiamondIntegral.Section7.FirstStage.restObjectOrdered
+#print axioms DiamondIntegral.Section7.FirstStage.restObjectOrdered
+#check @DiamondIntegral.Section7.FirstStage.restObjectOrdered_doublyBounded
+#print DiamondIntegral.Section7.FirstStage.restObjectOrdered_doublyBounded
+#print axioms DiamondIntegral.Section7.FirstStage.restObjectOrdered_doublyBounded
+#check @DiamondIntegral.Section7.FirstStage.headStartObject_doublyBounded
+#print DiamondIntegral.Section7.FirstStage.headStartObject_doublyBounded
+#print axioms DiamondIntegral.Section7.FirstStage.headStartObject_doublyBounded
+#check @DiamondIntegral.Section7.FirstStage.restObjectOrdered_eq
+#print DiamondIntegral.Section7.FirstStage.restObjectOrdered_eq
+#print axioms DiamondIntegral.Section7.FirstStage.restObjectOrdered_eq
+#check @DiamondIntegral.Section7.FirstStage.cls_headStart_rest_ordered
+#print DiamondIntegral.Section7.FirstStage.cls_headStart_rest_ordered
+#print axioms DiamondIntegral.Section7.FirstStage.cls_headStart_rest_ordered
 #check @DiamondIntegral.Section7.GoodPoints.exists_grid_nonzero
 #print DiamondIntegral.Section7.GoodPoints.exists_grid_nonzero
 #print axioms DiamondIntegral.Section7.GoodPoints.exists_grid_nonzero

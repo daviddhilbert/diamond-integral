@@ -89,6 +89,15 @@ arbitrary parameter base and take no input beyond the ACVF model.
   `adjoin T a`, head-start standard contractions, `IspRel`). Results that use
   it take `(h714 : Lemma714 M G)` as a hypothesis. A separate session proves it
   in `section 7/Lemma714*.lean`; this file is kept stable.
+- **Corollary 7.15 done on the 7.14 input** (`Corollary715Fibres.corollary_7_15`,
+  with `h714 : Lemma714 M G` as hypothesis). GAP-REPAIRS 11 is resolved for
+  7.15 without changing the input: independence of the normalization centre
+  from 7.14 with equal sets, contractions with a common centre, grafting of
+  normalized contractions of the first-stage sets (`Corollary715`,
+  `ContractionChoice`, `FirstStage`). The fibre hypothesis is proved at a good
+  point b over S⟨b⟩ with Lemma 7.13, then carried to S⟨a⟩ (`FibreInvariance`,
+  `FibreComparison`, `ConjugatedMaps`, `FibreRestriction`,
+  `Corollary715Fibres`; GAP-REPAIRS 12).
 - Remark 7.28 done (`Remark728.remark_7_28`, `remark_7_28_zero`), with the
   bridges the author approved on 2026-11-19: strong homogeneity (from the
   Section 3 ground context), the forgetful map to Section 3's VF classes, and
@@ -100,6 +109,6 @@ arbitrary parameter base and take no input beyond the ACVF model.
 
 ## Next
 
-7.15 (after GAP-REPAIRS 11 is resolved with the 7.14 session), 7.20–7.23 and
-7.24–7.27 on the 7.14 input, as in PLAN.md. Product compatibility (7.10) and the object-level converse for
+7.20–7.23 and 7.24–7.27 on the 7.14 input, as in PLAN.md (7.23 and 7.24 can
+reuse the 7.15 modules). Product compatibility (7.10) and the object-level converse for
 Definition 7.2 remain open side items.

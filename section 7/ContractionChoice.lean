@@ -303,7 +303,7 @@ theorem pad_retain (p : firstSet F) (i : Fin (stage F).arity) :
   change Fin.append (fun j => branchTag (M := M) (H.normalization.core p.val j)) p.val.2 (Fin.natAdd (n + 1) i) = _
   rw [Fin.append_right]
 
-theorem natAdd_injective' : Function.Injective (Fin.natAdd (n + 1) : Fin (stage F).arity → Fin (n + 1 + (stage F).arity)) :=
+theorem pad_labels_injective : Function.Injective (Fin.natAdd (n + 1) : Fin (stage F).arity → Fin (n + 1 + (stage F).arity)) :=
   fun a b h => Fin.ext (by have := congrArg Fin.val h; simp only [Fin.val_natAdd] at this; omega)
 
 include h00 hc linear hκ hs hv hsmall hΓ in
@@ -321,7 +321,7 @@ theorem pad_unit (p : firstSet F) : HasMixedUnitDerivativeAt (pad F H) p :=
 /-- `H`'s program, pulled back to the first-stage set. -/
 def pulledProgram :=
   H.preparedContraction.data.program.precomposeFixedVF h00 hc linear hκ hs hv hsmall hΓ (pad F H)
-    (pad_home h00 hc linear hκ hs hv hsmall hΓ F H) (pad_vf F H) (Fin.natAdd (n + 1)) (natAdd_injective' F)
+    (pad_home h00 hc linear hκ hs hv hsmall hΓ F H) (pad_vf F H) (Fin.natAdd (n + 1)) (pad_labels_injective F)
     (pad_retain F H) (pad_unit h00 hc hκ hs hv F H)
 
 /-- The measured program: the first stage of `F`, then `H`'s program. -/
