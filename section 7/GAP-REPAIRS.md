@@ -9,7 +9,10 @@ formalization convention. No manuscript edit has been made for them.
    come from isomorphic objects. For μRV^db[k] the Lean class monoid
    `BoundedClasses.Cls` *is* the set of isomorphism classes under ⊎. The
    scissor relation holds there (`cls_partition`), so the two presentations
-   agree. The same fact for K₊ μVF^◇[k] is still to be proved (needed in 7.24).
+   agree. The same fact for K₊ μVF^◇[k] is not needed: 7.24 and 7.25 instead
+   use the class of a standard contraction modulo μIsp^db as an invariant of
+   the scissor presentation of K₊ μVF^◇[k] (item 17), so equal classes in K₊
+   never have to be realised by isomorphic objects.
 2. **Blowups on classes.** The paper remarks after Corollary 7.8 that the blowup
    relations may be regarded on isomorphism classes. The Lean definitions
    (`ElementaryStep`, `Step`, `BlowupSteps`, `MuIsp`) are stated on classes. A
@@ -243,3 +246,35 @@ formalization convention. No manuscript edit has been made for them.
     - Only `section 7/UnaryArrows.lean` unpacks it (`stepObject`,
       `stepMorphism`); the theorems using it take `(hIF : IntermediateForms M G)`.
 
+17. **Proposition 7.24, Remark 7.25 and Theorem 7.26 (formal route,
+    2026-11-20).** Omitted justifications, not errors.
+    - "Now suppose [μ𝕃U] = [μ𝕃V]": in the scissor-presented K₊ μVF^◇[k] this is
+      equality of classes, not one isomorphism. The class of a standard
+      contraction modulo μIsp^db is an invariant of the presentation
+      (`Proposition724.contractionInvariant`): it respects isomorphisms (the
+      arrows below), kills the empty object (`clsOf_empty`, via Remark 6.28),
+      and is additive over scissors (`ScissorClasses.scissor_classes`: graft the
+      indicator of the piece as a label, then split over label-saturated
+      pieces). The induced map ∫⁺ sends μ𝕃[U] to [U] by the tautological
+      contraction (`TautologicalLifts`: the regularization followed by identity
+      stages, with class equal to [U]). So [μ𝕃U] = [μ𝕃V] gives
+      ([U], [V]) ∈ μIsp^db with no cancellation.
+    - The arrows: along a factorization of a morphism, the intermediate forms
+      (item 16) make each step a morphism of objects (`UnaryArrows`), and
+      Corollary 7.15 applies to each step. Steps relatively unary in (i, j) with
+      i ≠ j are covered by conjugating to the prepared sets in two matched orders
+      (`Corollary715Moves.corollary_7_15_moves`). The form reached on the final
+      set differs from the given one only off a small set, and the identity is
+      a morphism between them (`MorphismClasses.morphism_classRel`). In
+      dimension 1, Lemma 7.13 applies to the whole isomorphism.
+    - Degree 0: a morphism of μVF^◇[0] is a form-preserving bijection of finite
+      sets (`Proposition724Zero`).
+    - K μVF^◇[*] as a ring: the ring of the presentation with generators all
+      objects of all degrees and the product of Section 6 `DiamondProduct`
+      (`DiamondRing`). Products of morphisms are morphisms (`DiamondProducts`),
+      and the lift of a product chart is the product of the lifts, up to the
+      degree cast k + l = l + k (`LiftProducts`). The integral is a ring map
+      because every object is isomorphic to the lift of a chart object
+      (Corollary 6.37 with Lemma 6.33, `Theorem726.exists_chart_lift`). The
+      lift kills J_var by Lemma 7.12, and the integral inverts it
+      (`integralRingEquiv`); hence ker μ𝕃 = J_var (`remark_7_25`).

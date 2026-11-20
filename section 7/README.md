@@ -21,10 +21,13 @@ in the uniform form used by 7.22, Lemma 7.22 (`ProvedResults.lemma_7_22`) and
 Lemma 7.23 in every dimension (`Lemma723General.lemma_7_23`). Lemmas 7.14 and 7.20 were
 temporary inputs (author decision of 2026-11-19), proved in separate sessions
 and merged; `FiberwiseInput.Lemma714` and `TwoCellInput.Lemma720` keep their
-statements. Part (∗) of Proposition 7.24 is done (`OrderIndependence.star`).
-Remaining: the approved partial-lift form of 7.11, the rest of the kernel
-(7.24, GAP-REPAIRS 16; 7.25), Theorem 7.26 with J_var, and 7.27. Remark 7.28 is
-done (`Remark728`).
+statements. Proposition 7.24 (`Proposition724.proposition_7_24`, degree 0 in
+`Proposition724Zero`), Remark 7.25 (`Theorem726.remark_7_25`) and Theorem 7.26
+(`Proposition724.integralEquiv`, `Theorem726.integralRingEquiv`) are done on the
+temporary intermediate-forms input `IntermediateFormsInput.IntermediateForms`
+(author decision of 2026-11-20, GAP-REPAIRS 16), which a separate session
+proves. Remaining: the approved partial-lift form of 7.11 and Corollary 7.27.
+Remark 7.28 is done (`Remark728`).
 
 The focused [Section 6 handoff](SECTION6-HANDOFF.md) links the checked native
 inputs and the mathematical draft. The draft is not a completed kernel

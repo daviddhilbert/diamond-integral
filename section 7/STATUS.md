@@ -126,15 +126,24 @@ arbitrary parameter base and take no input beyond the ACVF model.
     coordinates in any order). Its class is the fibre class of the second-stage
     set (`SliceContractions.cls_sliceMOC`), and 7.23 for n = 2 over `S⟨b⟩` gives
     the fibre hypothesis (`SliceContractions.fibre_ispRel_at`).
-- **Proposition 7.24 (2026-11-20).**
-  - (∗) done, hypothesis-free (`OrderIndependence.star`): standard contractions of
-    an object of `μVF^◇[k]` over a VF-generated substructure base in any two orders
-    have `μIsp^db`-related classes. Tools: `StageReindexing` (conjugate stage),
-    `OrderGrafts` (graft in a permuted order), `TautologicalContractions`,
-    `FirstStageObjects`, `StageBaseChange`, `FibreContractions` (GAP-REPAIRS 15).
-  - Open: the arrows of an isomorphism `μL U ≅ μL V`. Section 6 morphisms factor
-    only their maps; applying Corollary 7.15 to each factor needs forms on the
-    intermediate sets (GAP-REPAIRS 16, question to the author).
+- **Proposition 7.24, Remark 7.25, Theorem 7.26 (2026-11-20).**
+  - Temporary input, by the author's decision ("Input + parallel build"):
+    `IntermediateFormsInput.IntermediateForms M G` (GAP-REPAIRS 16). Only
+    `UnaryArrows` unpacks it; downstream theorems take `hIF` explicitly. A
+    separate session proves it.
+  - (∗) done, hypothesis-free (`OrderIndependence.star`), GAP-REPAIRS 15.
+  - 7.24 in degree n+1 on `hIF` only (`Proposition724.proposition_7_24`,
+    `proposition_7_24_muIsp`); degree 0 hypothesis-free
+    (`Proposition724Zero.proposition_7_24_zero`). Route in GAP-REPAIRS 17:
+    arrows (`MorphismClasses`, `Corollary715Moves`), scissor additivity
+    (`ScissorClasses`), tautological contraction (`TautologicalLifts`), and the
+    contraction class as an invariant of the scissor presentation.
+  - 7.26 semigroup part: `Proposition724.integralEquiv` (degree n+1) and
+    `Proposition724Zero.integralZero_bijective` (degree 0), with the stated
+    characterization.
+  - 7.26 ring part and 7.25: `Theorem726.integralRingEquiv` and
+    `Theorem726.remark_7_25`, with K μVF^◇[*] the ring presentation
+    `DiamondRing.Ring` and products of morphisms from `DiamondProducts`.
 - Remark 7.28 done (`Remark728.remark_7_28`, `remark_7_28_zero`), with the
   bridges the author approved on 2026-11-19: strong homogeneity (from the
   Section 3 ground context), the forgetful map to Section 3's VF classes, and
@@ -146,6 +155,6 @@ arbitrary parameter base and take no input beyond the ACVF model.
 
 ## Next
 
-The rest of 7.24 (after the author's decision on GAP-REPAIRS 16), then 7.25–7.27,
-as in PLAN.md. Product compatibility (7.10) and the object-level converse for
-Definition 7.2 remain open side items.
+Corollary 7.27 (the diagram with ∫ and ∫^μ; it needs the Section 3 context
+bridge, part of which Remark 7.28 already built). Product compatibility (7.10)
+and the object-level converse for Definition 7.2 remain open side items.
