@@ -157,6 +157,8 @@ arbitrary parameter base and take no input beyond the ACVF model.
 
 ## Next
 
-Corollary 7.27 (the diagram with ∫ and ∫^μ; it needs the Section 3 context
-bridge, part of which Remark 7.28 already built). Product compatibility (7.10)
-and the object-level converse for Definition 7.2 remain open side items.
+The author's decision on the route for the arrows of 7.24 (GAP-REPAIRS 16:
+the intermediate-forms input is false as stated). Corollary 7.27 is done on the
+classes of objects (`Corollary727`, input-free); its ring-map form waits on
+∫^◇ as a ring map. Product compatibility (7.10) and the object-level converse
+for Definition 7.2 remain open side items.

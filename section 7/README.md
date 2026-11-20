@@ -28,7 +28,9 @@ temporary intermediate-forms input `IntermediateFormsInput.IntermediateForms`
 (author decision of 2026-11-20, GAP-REPAIRS 16). That input turned out to be
 false as stated for n = 2, so these positive-degree results are not
 established; degree 0 is done without it, and the route is the author's
-decision. Remaining: the approved partial-lift form of 7.11 and Corollary 7.27.
+decision. Corollary 7.27 is done on the classes of objects (`Corollary727`,
+input-free). Remaining: the approved partial-lift form of 7.11 and the route
+for the arrows of 7.24.
 Remark 7.28 is done (`Remark728`).
 
 The focused [Section 6 handoff](SECTION6-HANDOFF.md) links the checked native
