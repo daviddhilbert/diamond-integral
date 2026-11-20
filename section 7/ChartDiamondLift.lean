@@ -56,6 +56,6 @@ theorem chart_isomorphic
       (chartObject h00 hc linear hκ hs hv hsmall hΓ b hb hnb) := by
   obtain ⟨L, _, _, hprop, _⟩ := ChartLifting.chart_iso_lift (G := G) h00 hc linear hκ hs hv T B
     hsmall hΓ hnt hn F ha hb hna hnb
-  exact ⟨liftMorphism _ _ L hprop⟩
+  exact ⟨liftMorphism h00 hc linear hκ hs hv hsmall hΓ _ _ L hprop⟩
 
 end DiamondIntegral.Section7.ChartDiamondLift

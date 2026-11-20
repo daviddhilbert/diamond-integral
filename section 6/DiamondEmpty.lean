@@ -57,10 +57,11 @@ def emptyMorphism (hc : CanonicalStructure.IsCanonical (M := M)) {A B : VFObject
     (hA : A.carrier.carrier = ∅) (hB : B.carrier.carrier = ∅) : Morphism G A B where
   map := Map.fromEmpty hA B.carrier
   bijective := Map.bijective_of_empty _ hA hB
-  factor := UnaryFactorization.step (homeo_of_empty hc _ hA hB) (by
+  chain := ObjectFactorization.step ⟨homeo_of_empty hc _ hA hB, (by
     rcases Nat.eq_zero_or_pos n with h | h
     · exact Or.inl h
-    · exact Or.inr ⟨⟨0, h⟩, ⟨0, h⟩, fun p => False.elim (hA.le p.property)⟩)
+    · exact Or.inr ⟨⟨0, h⟩, ⟨0, h⟩, fun p => False.elim (hA.le p.property)⟩),
+    ⟨DefSet.empty _ S, Set.empty_subset _, Or.inr rfl, fun p _ => False.elim (hA.le p.property)⟩⟩
   bad := DefSet.empty _ S
   bad_subset := Set.empty_subset _
   bad_small := Or.inr rfl

@@ -9,10 +9,21 @@ almost-everywhere measure identity (R102).
 Objects are proper invariant measured VF sets with finite RV fibres and a
 proper covariant Gamma form (Definition prop:pseu: on each VF-fibre the form is
 invariant under balls of a `t`-definable radius; then every level set is
-proper invariant, `levelSet_geometry`). A morphism is a bijection that is a
-composition of relatively unary proper covariant homeomorphisms between
-definable sets, with the measure identity outside a definable set of smaller
-VF-dimension. Composition and inverses (Remark 6.35) are in `DiamondGroupoid`. -/
+proper invariant, `levelSet_geometry`).
+
+A morphism is a composition, inside `μVF^◇[n]`, of relatively unary proper
+covariant homeomorphisms (Definition 6.34 as repaired on 2026-11-20, author's
+decision "fix (1)", review batch B10): `ObjectFactorization` is a chain of steps
+`IsStep` between objects, each a relatively unary proper covariant
+homeomorphism satisfying the measure identity on its own outside a definable
+set of smaller VF-dimension. So every intermediate set carries its own proper
+covariant form and finite RV fibres. A composition of such homeomorphisms
+between mere definable sets is not enough: a relatively unary proper covariant
+homeomorphism `F` of `𝔬²` can have no covariant form on its target making it
+measure-preserving (Section 7 GAP-REPAIRS 16), while `F⁻¹ ∘ F` is the identity.
+The underlying factorization into homeomorphisms between definable sets is
+still available (`Morphism.factor`, `ObjectFactorization.toUnary`). Composition
+and inverses (Remark 6.35) are in `DiamondGroupoid`. -/
 
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false
@@ -116,20 +127,58 @@ inductive UnaryFactorization : {r s : ℕ} → (A : DefSet (rawMixedSpace (M := 
       UnaryFactorization A B f → UnaryFactorization B C g → UnaryFactorization A C (g.comp f)
 
 variable (G) in
-/-- A morphism of `μVF^◇[n]` (Definition 6.34 with the approved R102): a
-bijection factoring into relatively unary proper covariant homeomorphisms, whose
+/-- One step of Definition 6.34: a relatively unary proper covariant
+homeomorphism between objects of `μVF^◇[n]` that is `Γ`-measure-preserving on
+its own, outside a definable set of smaller VF-dimension (empty in degree
+zero). -/
+structure IsStep (A B : VFObject (M := M) S n) (f : Map A.carrier B.carrier) : Prop where
+  homeo : ProperCovariantHomeomorphism (G := G) f
+  unary : n = 0 ∨ ∃ i j : Fin n, VFRelativelyUnary f i j
+  measure : ∃ bad : DefSet (rawMixedSpace (M := M) n A.labels) S, bad.carrier ⊆ A.carrier.carrier ∧
+    (vfDim (rawRVSpace (M := M) 1) bad < n ∨ bad.carrier = ∅) ∧
+    ∀ p : A.carrier, p.val ∉ bad.carrier →
+      ∃ L, HasMixedVFDerivativeAt f p L ∧
+        vfValue (LinearMap.toMatrix' L).det = (gammaMapValue A.form p / gammaMapValue B.form (f p)).val
+
+variable (G) in
+/-- **Factorization inside `μVF^◇[n]`** (Definition 6.34, repaired): a chain of
+steps `IsStep` through objects. -/
+inductive ObjectFactorization : (A B : VFObject (M := M) S n) → Map A.carrier B.carrier → Prop where
+  | id (A : VFObject (M := M) S n) : ObjectFactorization A A (Map.id A.carrier)
+  | step {A B : VFObject (M := M) S n} {f : Map A.carrier B.carrier} (h : IsStep G A B f) :
+      ObjectFactorization A B f
+  | comp {A B C : VFObject (M := M) S n} {f : Map A.carrier B.carrier} {g : Map B.carrier C.carrier} :
+      ObjectFactorization A B f → ObjectFactorization B C g → ObjectFactorization A C (g.comp f)
+
+/-- Forgetting the intermediate objects. -/
+theorem ObjectFactorization.toUnary {A B : VFObject (M := M) S n} {f : Map A.carrier B.carrier}
+    (h : ObjectFactorization G A B f) : UnaryFactorization G A.carrier B.carrier f := by
+  induction h with
+  | id A => exact UnaryFactorization.id _
+  | step h => exact UnaryFactorization.step h.homeo h.unary
+  | comp _ _ ihf ihg => exact UnaryFactorization.comp ihf ihg
+
+variable (G) in
+/-- A morphism of `μVF^◇[n]` (Definition 6.34, repaired, with the approved
+R102): a bijection with a factorization inside `μVF^◇[n]` (`chain`), whose
 derivative satisfies the measure identity outside a definable set of smaller
 VF-dimension (empty in degree zero, where the empty Jacobian is `1`). -/
 structure Morphism (A B : VFObject (M := M) S n) where
   map : Map A.carrier B.carrier
   bijective : Function.Bijective map
-  factor : UnaryFactorization G A.carrier B.carrier map
+  chain : ObjectFactorization G A B map
   bad : DefSet (rawMixedSpace (M := M) n A.labels) S
   bad_subset : bad.carrier ⊆ A.carrier.carrier
   bad_small : vfDim (rawRVSpace (M := M) 1) bad < n ∨ bad.carrier = ∅
   measure : ∀ p : A.carrier, p.val ∉ bad.carrier →
     ∃ L, HasMixedVFDerivativeAt map p L ∧
       vfValue (LinearMap.toMatrix' L).det = (gammaMapValue A.form p / gammaMapValue B.form (map p)).val
+
+/-- The underlying factorization into relatively unary proper covariant
+homeomorphisms between definable sets. -/
+theorem Morphism.factor {A B : VFObject (M := M) S n} (F : Morphism G A B) :
+    UnaryFactorization G A.carrier B.carrier F.map :=
+  F.chain.toUnary
 
 variable (G) in
 /-- Isomorphism in `μVF^◇[n]`. -/
@@ -140,7 +189,7 @@ a proper invariant set. -/
 def Morphism.id (A : VFObject (M := M) S n) : Morphism G A A where
   map := Map.id A.carrier
   bijective := ⟨fun _ _ h => h, fun b => ⟨b, rfl⟩⟩
-  factor := UnaryFactorization.id A.carrier
+  chain := ObjectFactorization.id A
   bad := DefSet.empty _ S
   bad_subset := Set.empty_subset _
   bad_small := Or.inr rfl

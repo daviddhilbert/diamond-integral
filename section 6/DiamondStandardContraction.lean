@@ -4,6 +4,7 @@ import «section 6».MeasuredHeadStartMeasureIdentity
 import «section 6».NormalizedMeasuredHeadStartLifts
 import «section 6».RVHeadStartGeometry
 import «section 6».FiniteInvariantRadii
+import «section 6».DiamondTransport
 
 /-! Remark 6.28 (`stand:vol`) in the category `μVF^◇`. For an object
 `(A, ω)` of `μVF^◇[n+1]` and a standard contraction `T̂_σ` of it (which exists
@@ -106,10 +107,29 @@ theorem remark_6_28
   obtain ⟨H,_⟩ := F.headStartLift_unary_chain h00 hc linear hκ hs hv hsmall hΓ k π
   obtain ⟨E,hEA,hDim,hUnit⟩ := F.headStartLift_unit_derivative_ae h00 hc linear hκ hs hv hsmall hΓ k π
   let f := F.headStartLift h00 hc linear hκ hs hv hsmall hΓ k π
+  have hformAll : ∀ p, gammaMapValue (liftForm U) (f p) =
+      gammaMapValue (A.form.comp (headStartBaseProjection A.carrier k π)) p := by
+    intro p
+    have hlabel : liftLabelMap U.object (f p) = F.headStartLabelMap h00 hc linear hκ hs hv hsmall hΓ k π p :=
+      Subtype.ext (F.headStartLabelMap_value h00 hc linear hκ hs hv hsmall hΓ k π p).symm
+    rw [liftForm_value,hlabel]
+    exact congrArg Subtype.val (F.headStart_form_transport h00 hc linear hκ hs hv hsmall hΓ k π p)
+  obtain ⟨Y,hXY,hY⟩ := DiamondTransport.retained_objects h00 hc linear hκ hs hv hsmall hΓ H
+    (DiamondTransport.ofObject (headStartSourceObject h00 hc hκ hs hv A k π))
+  have hYZ : ∀ q, gammaMapValue Y.form q =
+      gammaMapValue (DiamondTransport.ofObject (liftObject U hP)).form q := by
+    intro q
+    obtain ⟨p,rfl⟩ := (F.headStartLift_homeomorphism h00 hc linear hκ hs hv hsmall hΓ k π).bijective.surjective q
+    exact (hY p).trans (hformAll p).symm
+  have hchain : ObjectFactorization G (headStartSourceObject h00 hc hκ hs hv A k π) (liftObject U hP) f := by
+    have h := ObjectFactorization.comp hXY (ObjectFactorization.step
+      (DiamondTransport.id_step h00 hc linear hκ hs hv hsmall hΓ Y _ hYZ))
+    have e : (Map.id (rvLift U.object)).comp f = f := DiamondTransport.id_comp_map f
+    exact e ▸ h
   refine ⟨{
     map := f
     bijective := (F.headStartLift_homeomorphism h00 hc linear hκ hs hv hsmall hΓ k π).bijective
-    factor := retained_factor H
+    chain := hchain
     bad := E
     bad_subset := hEA
     bad_small := Or.inl hDim

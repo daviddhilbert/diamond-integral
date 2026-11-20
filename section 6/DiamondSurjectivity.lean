@@ -5,6 +5,7 @@ import «section 6».NormalizedOrderedUnaryChains
 import «section 6».MeasuredExistenceFieldBase
 import «section 6».ZeroArityMeasuredPreparation
 import «section 6».GammaFormMaps
+import «section 6».DiamondTransport
 
 /-! Corollary 6.37 (`L:sur:c`), surjectivity: every object of `μVF^◇[n]` over a
 VF-generated base is isomorphic in `μVF^◇[n]` to the lift `μL(U, π)` of a
@@ -29,7 +30,7 @@ open SpecialTransformations.DefinableGeometry DiamondIntegral.Section2
 namespace DiamondIntegral.Section6.DiamondSurjectivity
 open DiamondIntegral.Section6 DiamondIntegral.Section6.DiamondCategory
 open DiamondIntegral.Section6.DiamondGroupoid DiamondIntegral.Section6.DiamondLift
-open DiamondIntegral.Section6.DiamondGrothendieck
+open DiamondIntegral.Section6.DiamondGrothendieck DiamondIntegral.Section6.DiamondTransport
 
 variable {M : Type} [LRV.Structure M] [M ⊨ Axioms.ACVF] {S : Set M} {n : ℕ}
 variable {G : Type} [LinearOrderedCommGroupWithZero G] [Valued (VF M) G]
@@ -74,6 +75,68 @@ theorem special_factor (h00 : M ⊨ Axioms.ACVF00) (hc : CanonicalStructure.IsCa
       exact retained_factor F
   | comp _ _ ihf ihg => exact UnaryFactorization.comp ihf ihg
 
+/-- **Special covariant chains through objects** (Definition 6.34, repaired):
+for every object structure on the source, the transported structures on the
+intermediate sets make the chain a factorization inside `μVF^◇[n]`, and the final
+transported form is the source form read through the chain. Each constructor
+has unit derivative at VF-generic points (the chain lemma applied to the
+one-step chain), and the zero-centred normalization goes through its retained
+unary chain. -/
+theorem special_objects (h00 : M ⊨ Axioms.ACVF00) (hc : CanonicalStructure.IsCanonical (M := M))
+    (linear : GammaPiecewiseRationalAffineInput (M := M))
+    {κ : Cardinal} (hκ : Cardinal.aleph0 < κ) (hs : Saturated M κ)
+    (hv : ∀ x y : VF M, VFValued.predV x y ↔ Valued.v x ≤ Valued.v y)
+    (hsmall : Cardinal.mk S < κ) (hΓ : NontrivialDefinableGamma (⟨S, ∅⟩ : ParameterBase M))
+    {r s : ℕ} {A : DefSet (rawMixedSpace (M := M) n r) S}
+    {B : DefSet (rawMixedSpace (M := M) n s) S} {f : Map A B}
+    (H : SpecialCovariantChain (G := G) A B f) :
+    ∀ X : ObjOn A, ∃ Y : ObjOn B, ObjectFactorization G X.obj Y.obj f ∧
+      ∀ p, gammaMapValue Y.form (f p) = gammaMapValue X.form p := by
+  have : CharZero (VF M) := vf_charZero_of_model00 h00
+  induction H with
+  | identity A _ => exact fun X => ⟨X, ObjectFactorization.id _, fun _ => rfl⟩
+  | regularize A hA hVF =>
+    intro X
+    have homeo := regularization_properHomeomorphism (G := G) h00 hc linear hκ hs hv hsmall hΓ A hA hVF
+    have hu : n = 0 ∨ ∃ i j : Fin n, VFRelativelyUnary (regularization A) i j := by
+      rcases Nat.eq_zero_or_pos n with hn | hn
+      · exact Or.inl hn
+      · exact Or.inr ⟨⟨0, hn⟩, ⟨0, hn⟩, VFUnaryRelativeAt.relativelyUnary (fun _ _ _ => rfl)⟩
+    have hunit := fun p hp => (SpecialCovariantChain.regularize (G := G) A hA hVF).unit_derivative_of_independent
+      h00 hc hκ.le hs hsmall hv p hp
+    exact ⟨transport h00 hc linear hκ hs hv hsmall hΓ X _ homeo hu,
+      ObjectFactorization.step (transport_step h00 hc linear hκ hs hv hsmall hΓ X _ homeo hu hunit),
+      transport_form h00 hc linear hκ hs hv hsmall hΓ X _ homeo hu⟩
+  | centripetal A D =>
+    intro X
+    have homeo := D.properHomeomorphism (G := G) h00 hc linear hκ hs hv hsmall hΓ
+    have hu : n = 0 ∨ ∃ i j : Fin n, VFRelativelyUnary D.map i j :=
+      Or.inr ⟨D.coordinate, D.coordinate, VFUnaryRelativeAt.relativelyUnary (fun p j hj => by
+        change (D.point p.val).1 j = p.val.1 j
+        exact Function.update_of_ne hj _ _)⟩
+    have hunit := fun p hp => (SpecialCovariantChain.centripetal (G := G) A D).unit_derivative_of_independent
+      h00 hc hκ.le hs hsmall hv p hp
+    exact ⟨transport h00 hc linear hκ hs hv hsmall hΓ X _ homeo hu,
+      ObjectFactorization.step (transport_step h00 hc linear hκ hs hv hsmall hΓ X _ homeo hu hunit),
+      transport_form h00 hc linear hκ hs hv hsmall hΓ X _ homeo hu⟩
+  | zeroCentered A D =>
+    intro X
+    rcases Nat.eq_zero_or_pos n with hn | hn
+    · have homeo := D.properHomeomorphism (G := G) h00 hc linear hκ hs hv hsmall hΓ
+      have hu : n = 0 ∨ ∃ i j : Fin n, VFRelativelyUnary D.bijection i j := Or.inl hn
+      have hunit := fun p hp => (SpecialCovariantChain.zeroCentered (G := G) A D).unit_derivative_of_independent
+        h00 hc hκ.le hs hsmall hv p hp
+      exact ⟨transport h00 hc linear hκ hs hv hsmall hΓ X _ homeo hu,
+        ObjectFactorization.step (transport_step h00 hc linear hκ hs hv hsmall hΓ X _ homeo hu hunit),
+        transport_form h00 hc linear hκ hs hv hsmall hΓ X _ homeo hu⟩
+    · obtain ⟨F, _⟩ := D.relatively_unary_chain (G := G) h00 hc linear hκ hs hv hsmall hΓ hn
+      exact retained_objects h00 hc linear hκ hs hv hsmall hΓ F X
+  | comp _ _ ihf ihg =>
+    intro X
+    obtain ⟨Y, hXY, hY⟩ := ihf X
+    obtain ⟨Z, hYZ, hZ⟩ := ihg Y
+    exact ⟨Z, ObjectFactorization.comp hXY hYZ, fun p => (hZ _).trans (hY p)⟩
+
 /-- The measured RV object carried by Lemma 6.21's lift data. -/
 def liftDataObject {r : ℕ} {A : DefSet (rawMixedSpace (M := M) n r) S}
     {ω : Map A (DefSet.univ (rawGammaPresentation (M := M)) S)}
@@ -100,18 +163,29 @@ theorem isomorphic_of_liftData (h00 : M ⊨ Axioms.ACVF00) (hc : CanonicalStruct
     (hP : ProperInvariant S (rvLift (liftDataObject L).object).carrier) :
     Isomorphic G A (liftObject (liftDataObject L) hP) := by
   have : CharZero (VF M) := vf_charZero_of_model00 h00
-  refine morphism_of_generic h00 hc hs hsmall L.map (L.special.bijective h00)
-    (special_factor h00 hc linear hκ hs hv hsmall hΓ L.special) (fun p hp => ?_)
-  obtain ⟨D, hD, hdet⟩ := L.special.unit_derivative_of_independent h00 hc hκ.le hs hsmall hv p hp
-  refine ⟨D, hD, ?_⟩
-  have hlabel : liftLabelMap (liftDataObject L).object (L.map p) = L.labelMap p :=
-    Subtype.ext (L.label_eq p).symm
-  have hform : gammaMapValue (liftForm (liftDataObject L)) (L.map p) = gammaMapValue A.form p := by
+  have hform : ∀ p, gammaMapValue (liftForm (liftDataObject L)) (L.map p) = gammaMapValue A.form p := by
+    intro p
+    have hlabel : liftLabelMap (liftDataObject L).object (L.map p) = L.labelMap p :=
+      Subtype.ext (L.label_eq p).symm
     rw [liftForm_value, hlabel]
     exact (L.form_preserves p).trans (hω p)
+  obtain ⟨Y, hXY, hY⟩ := special_objects h00 hc linear hκ hs hv hsmall hΓ L.special (ofObject A)
+  let Z := ofObject (liftObject (liftDataObject L) hP)
+  have hYZ : ∀ q, gammaMapValue Y.form q = gammaMapValue Z.form q := by
+    intro q
+    obtain ⟨p, rfl⟩ := (L.special.bijective h00).surjective q
+    exact (hY p).trans (hform p).symm
+  have hchain : ObjectFactorization G A (liftObject (liftDataObject L) hP) L.map := by
+    have h := ObjectFactorization.comp hXY
+      (ObjectFactorization.step (id_step h00 hc linear hκ hs hv hsmall hΓ Y Z hYZ))
+    have e : (Map.id (rvLift L.object)).comp L.map = L.map := id_comp_map L.map
+    exact e ▸ h
+  refine morphism_of_generic h00 hc hs hsmall L.map (L.special.bijective h00) hchain (fun p hp => ?_)
+  obtain ⟨D, hD, hdet⟩ := L.special.unit_derivative_of_independent h00 hc hκ.le hs hsmall hv p hp
+  refine ⟨D, hD, ?_⟩
   rw [hdet]
   change vfValue 1 = (gammaMapValue A.form p / gammaMapValue (liftForm (liftDataObject L)) (L.map p)).val
-  rw [hform, div_self']
+  rw [hform p, div_self']
   change Values.vfValueHom 1 = Values.gammaValHom 1
   rw [map_one, map_one]
 

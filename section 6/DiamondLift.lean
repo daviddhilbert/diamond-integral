@@ -1,3 +1,4 @@
+import «section 6».InvariantOfCovariance
 import «section 6».DiamondCategory
 import «section 6».MeasuredMorphismsLiftChains
 import «section 6».MeasuredRVLiftGeometry
@@ -88,10 +89,39 @@ theorem liftChain_factor {U V : MeasuredRVObject (M := M) S n} (T : MeasuredVFUn
   | step i F unary T ih =>
     exact UnaryFactorization.comp (UnaryFactorization.step hp.1 (Or.inr ⟨i, i, VFUnaryRelativeAt.relativelyUnary unary⟩)) (ih hp.2)
 
+/-- **A lift chain is a factorization inside `μVF^◇[n]`.** Every intermediate set
+is the lift of an intermediate measured RV object of the chain, with its lifted
+form; each step is an everywhere measured lift between two such lifts, so it is a
+step of Definition 6.34 with empty exceptional set. The proper invariance of each
+intermediate lift comes from the proper covariance of the step into it. -/
+theorem liftChain_objects (h00 : M ⊨ Axioms.ACVF00) (hc : CanonicalStructure.IsCanonical (M := M))
+    (linear : GammaPiecewiseRationalAffineInput (M := M))
+    {κ : Cardinal} (hκ : Cardinal.aleph0 < κ) (hs : Saturated M κ)
+    (hv : ∀ x y : VF M, VFValued.predV x y ↔ Valued.v x ≤ Valued.v y)
+    (hsmall : Cardinal.mk S < κ) (hΓ : NontrivialDefinableGamma (⟨S, ∅⟩ : ParameterBase M))
+    {U V : MeasuredRVObject (M := M) S n} (T : MeasuredVFUnaryLiftChain S n U V)
+    (hp : MeasuredVFUnaryLiftChain.properComponents (G := G) T)
+    (hU : ProperInvariant S (rvLift U.object).carrier) (hV : ProperInvariant S (rvLift V.object).carrier) :
+    ObjectFactorization G (liftObject U hU) (liftObject V hV) T.lift.map := by
+  induction T with
+  | identity U => exact ObjectFactorization.id _
+  | @step U V W i e F unary T ih =>
+    have hV' : ProperInvariant S (rvLift V.object).carrier :=
+      hp.1.covariant.target_properInvariant h00 hc linear hκ hs hv hsmall hΓ hp.1.bijective.surjective
+    have hstep : IsStep G (liftObject U hU) (liftObject V hV') F.map :=
+      ⟨hp.1, Or.inr ⟨i, i, VFUnaryRelativeAt.relativelyUnary unary⟩,
+        ⟨DefSet.empty _ S, Set.empty_subset _, Or.inr rfl, fun p _ => F.measure p⟩⟩
+    exact ObjectFactorization.comp (ObjectFactorization.step hstep) (ih hp.2 hV' hV)
+
 /-- A Section 6 lift chain with proper components gives a morphism of
 `μVF^◇[n]` between the lifted objects, with empty exceptional set (the measure
 identity holds everywhere). -/
-def liftMorphism {U V : MeasuredRVObject (M := M) S n}
+def liftMorphism (h00 : M ⊨ Axioms.ACVF00) (hc : CanonicalStructure.IsCanonical (M := M))
+    (linear : GammaPiecewiseRationalAffineInput (M := M))
+    {κ : Cardinal} (hκ : Cardinal.aleph0 < κ) (hs : Saturated M κ)
+    (hv : ∀ x y : VF M, VFValued.predV x y ↔ Valued.v x ≤ Valued.v y)
+    (hsmall : Cardinal.mk S < κ) (hΓ : NontrivialDefinableGamma (⟨S, ∅⟩ : ParameterBase M))
+    {U V : MeasuredRVObject (M := M) S n}
     (hU : ProperInvariant S (rvLift U.object).carrier)
     (hV : ProperInvariant S (rvLift V.object).carrier)
     (T : MeasuredVFUnaryLiftChain S n U V)
@@ -99,7 +129,7 @@ def liftMorphism {U V : MeasuredRVObject (M := M) S n}
     Morphism G (liftObject U hU) (liftObject V hV) where
   map := T.lift.map
   bijective := T.lift.bijective
-  factor := liftChain_factor T hp
+  chain := liftChain_objects h00 hc linear hκ hs hv hsmall hΓ T hp hU hV
   bad := DefSet.empty _ S
   bad_subset := Set.empty_subset _
   bad_small := Or.inr rfl

@@ -50,19 +50,13 @@ theorem homeo_zero {r s : ℕ} {A : DefSet (rawMixedSpace (M := M) 0 r) S}
     fun g u v => Set.subsingleton_of_subsingleton.continuousOn _
   exact ⟨hf, cov f hA hB, cont f, cov _ hB hA, cont _⟩
 
-/-- Degree zero: the lift of a measured RV isomorphism, a morphism of `μVF^◇[0]`
-(the Lemma 6.31 zero-arity relabelling). -/
-def zeroMorphism {U V : MeasuredRVObject (M := M) S 0} (e : MeasuredRVIso U V)
-    (hU : ProperInvariant S (rvLift U.object).carrier) (hV : ProperInvariant S (rvLift V.object).carrier) :
-    Morphism G (liftObject U hU) (liftObject V hV) where
-  map := zeroArityRVLift e.iso
-  bijective := zeroArityRVLift_bijective e.iso
-  factor := UnaryFactorization.step
-    (homeo_zero _ (zeroArityRVLift_bijective e.iso) hU.rvBounded hV.rvBounded) (Or.inl rfl)
-  bad := DefSet.empty _ S
-  bad_subset := Set.empty_subset _
-  bad_small := Or.inr rfl
-  measure p _ := by
+/-- The measure identity of the zero-arity relabelling. -/
+theorem zeroMorphism_measure {U V : MeasuredRVObject (M := M) S 0} (e : MeasuredRVIso U V)
+    (hU : ProperInvariant S (rvLift U.object).carrier) (hV : ProperInvariant S (rvLift V.object).carrier)
+    (p : (liftObject U hU).carrier) :
+    ∃ L, HasMixedVFDerivativeAt (zeroArityRVLift e.iso) p L ∧
+      vfValue (LinearMap.toMatrix' L).det = (gammaMapValue (liftObject U hU).form p /
+        gammaMapValue (liftObject V hV).form (zeroArityRVLift e.iso p)).val := by
     refine ⟨_, mixedDerivative_zero_arity _ p, ?_⟩
     change vfValue (LinearMap.toMatrix' LinearMap.id).det =
       (gammaMapValue U.form (liftLabelMap U.object p) /
@@ -71,6 +65,21 @@ def zeroMorphism {U V : MeasuredRVObject (M := M) S 0} (e : MeasuredRVIso U V)
     simp only [rvGammaJacobian, rvVolumeGamma, Finset.prod_empty, Finset.univ_eq_empty, div_self']
     change Values.vfValueHom 1 = Values.gammaValHom 1
     rw [map_one, map_one]
+
+/-- Degree zero: the lift of a measured RV isomorphism, a morphism of `μVF^◇[0]`
+(the Lemma 6.31 zero-arity relabelling), a single step between the two lifts. -/
+def zeroMorphism {U V : MeasuredRVObject (M := M) S 0} (e : MeasuredRVIso U V)
+    (hU : ProperInvariant S (rvLift U.object).carrier) (hV : ProperInvariant S (rvLift V.object).carrier) :
+    Morphism G (liftObject U hU) (liftObject V hV) where
+  map := zeroArityRVLift e.iso
+  bijective := zeroArityRVLift_bijective e.iso
+  chain := ObjectFactorization.step
+    ⟨homeo_zero _ (zeroArityRVLift_bijective e.iso) hU.rvBounded hV.rvBounded, Or.inl rfl,
+      ⟨DefSet.empty _ S, Set.empty_subset _, Or.inr rfl, fun p _ => zeroMorphism_measure e hU hV p⟩⟩
+  bad := DefSet.empty _ S
+  bad_subset := Set.empty_subset _
+  bad_small := Or.inr rfl
+  measure p _ := zeroMorphism_measure e hU hV p
 
 /-- Degree zero: measured RV isomorphisms lift to isomorphisms of `μVF^◇[0]`. -/
 theorem lift_isomorphic_zero {U V : MeasuredRVObject (M := M) S 0} (e : MeasuredRVIso U V)
@@ -94,7 +103,7 @@ theorem lift_isomorphic_pos (h00 : M ⊨ Axioms.ACVF00) (hc : CanonicalStructure
     Isomorphic G (liftObject U hU) (liftObject V hV) := by
   obtain ⟨L, _, _, hprop, _⟩ := lemma_6_33_doublyBounded_vfGenerated (G := G) h00 hc linear hκ hs hv
     T B₀ hsmall hΓ hnt hk e hUd hVd
-  exact ⟨liftMorphism hU hV L hprop⟩
+  exact ⟨liftMorphism h00 hc linear hκ hs hv hsmall hΓ hU hV L hprop⟩
 
 /-- Lemma 6.33 in every degree, in the `μVF^◇` interface: a measured RV
 isomorphism of doubly bounded objects over a VF-generated base lifts to a
@@ -119,7 +128,7 @@ theorem lemma_6_33_diamond (h00 : M ⊨ Axioms.ACVF00) (hc : CanonicalStructure.
     exact ⟨zeroMorphism e hU hV, fun p => ⟨liftLabelMap U.object p, rfl, rfl⟩⟩
   · obtain ⟨L, hL, _, hprop, _⟩ := lemma_6_33_doublyBounded_vfGenerated (G := G) h00 hc linear hκ hs hv
       T B₀ hsmall hΓ hnt hk e hUd hVd
-    refine ⟨liftMorphism hU hV L hprop, fun p => ?_⟩
+    refine ⟨liftMorphism h00 hc linear hκ hs hv hsmall hΓ hU hV L hprop, fun p => ?_⟩
     have h := L.lift.labels p
     rw [hL] at h
     exact h

@@ -107,6 +107,93 @@ theorem factor_inverse {f : Map A B} (hF : UnaryFactorization G A B f) :
     rw [inverse_comp _ _ (factor_bijective hF) (factor_bijective hG) hfg]
     exact UnaryFactorization.comp (ihg (factor_bijective hG)) (ihf (factor_bijective hF))
 
+/-- A step satisfies the measure identity at every VF-generic point. -/
+theorem step_generic (hc : CanonicalStructure.IsCanonical (M := M))
+    {A B : VFObject (M := M) S n} {f : Map A.carrier B.carrier} (h : IsStep G A B f) (p : A.carrier)
+    (hp : AlgebraicIndependent (vfParameterField S) p.val.1) :
+    ∃ L, HasMixedVFDerivativeAt f p L ∧
+      vfValue (LinearMap.toMatrix' L).det = (gammaMapValue A.form p / gammaMapValue B.form (f p)).val := by
+  obtain ⟨bad, -, hsmall, hmeas⟩ := h.measure
+  apply hmeas p
+  rcases hsmall with h | h
+  · exact not_mem_small_set_of_independent hc bad h p.val hp
+  · rw [h]
+    exact Set.notMem_empty _
+
+/-- A relatively unary proper covariant homeomorphism between objects with the
+measure identity at VF-generic points is a step: the exceptional set is
+produced definably (empty in degree zero). -/
+theorem isStep_of_generic (h00 : M ⊨ Axioms.ACVF00) (hc : CanonicalStructure.IsCanonical (M := M))
+    {κ : Cardinal} (hs : Saturated M κ) (hsmall : Cardinal.mk S < κ)
+    {A B : VFObject (M := M) S n} (f : Map A.carrier B.carrier)
+    (homeo : ProperCovariantHomeomorphism (G := G) f) (unary : n = 0 ∨ ∃ i j : Fin n, VFRelativelyUnary f i j)
+    (hgen : ∀ p : A.carrier, AlgebraicIndependent (vfParameterField S) p.val.1 →
+      ∃ L, HasMixedVFDerivativeAt f p L ∧
+        vfValue (LinearMap.toMatrix' L).det = (gammaMapValue A.form p / gammaMapValue B.form (f p)).val) :
+    IsStep G A B f := by
+  have : CharZero (VF M) := vf_charZero_of_model00 h00
+  refine ⟨homeo, unary, ?_⟩
+  by_cases hn : n = 0
+  · subst hn
+    exact ⟨DefSet.empty _ S, Set.empty_subset _, Or.inr rfl,
+      fun p _ => hgen p algebraicIndependent_empty_type⟩
+  · obtain ⟨E, hEsub, hEdim, hE⟩ := exists_mixedGammaJacobian_exception hc hs hsmall
+      (Nat.pos_of_ne_zero hn) f (gammaMapDiv hc A.form (B.form.comp f)) hgen
+    exact ⟨E, hEsub, Or.inl hEdim, fun p hp => hE p hp⟩
+
+theorem chain_bijective {A B : VFObject (M := M) S n} {f : Map A.carrier B.carrier}
+    (h : ObjectFactorization G A B f) : Function.Bijective f :=
+  factor_bijective h.toUnary
+
+/-- The inverse of a step is a step. -/
+theorem step_inverse (h00 : M ⊨ Axioms.ACVF00) (hc : CanonicalStructure.IsCanonical (M := M))
+    {κ : Cardinal} (hκ : Cardinal.aleph0 ≤ κ) (hs : Saturated M κ) (hsmall : Cardinal.mk S < κ)
+    (hv : ∀ x y : VF M, VFValued.predV x y ↔ Valued.v x ≤ Valued.v y)
+    {A B : VFObject (M := M) S n} {f : Map A.carrier B.carrier} (h : IsStep G A B f) :
+    IsStep G B A (f.inverse h.homeo.bijective) := by
+  have : CharZero (VF M) := vf_charZero_of_model00 h00
+  let g := f.inverse h.homeo.bijective
+  have hg : Function.Bijective g := inverse_bijective f h.homeo.bijective
+  refine isStep_of_generic h00 hc hs hsmall g (homeo_inverse h.homeo)
+    (unary_inverse h.homeo.bijective h.unary) (fun q hq => ?_)
+  have hp := independent_map_of_finiteFibres hc g (Map.finiteFibres_of_injective hg.1) q hq
+  obtain ⟨L, hL, hdet⟩ := step_generic hc h (g q) hp
+  obtain ⟨D, hD⟩ := mixedDifferentiableAt_of_independent hc hκ hs hsmall hv g q hq
+  have hfq : f (g q) = q := Map.apply_inverse f h.homeo.bijective q
+  have hD' : HasMixedVFDerivativeAt g (f (g q)) D := by
+    rw [hfq]
+    exact hD
+  have hprod := mixedVFJacobian_inverse_product f g (Map.inverse_apply f h.homeo.bijective) (g q) L D hL hD'
+  refine ⟨D, hD, ?_⟩
+  have h1 : vfValue (LinearMap.toMatrix' D).det * vfValue (LinearMap.toMatrix' L).det = 1 := by
+    have h := congrArg Values.vfValueHom hprod
+    rw [map_mul, map_one] at h
+    exact h
+  rw [hdet, hfq] at h1
+  rw [eq_inv_of_mul_eq_one_left h1, ← Values.gamma_val_inv]
+  change ((gammaMapValue A.form (g q) / gammaMapValue B.form q)⁻¹).val =
+    (gammaMapValue B.form q / gammaMapValue A.form (g q)).val
+  rw [inv_div]
+
+/-- The inverse of a factorization inside `μVF^◇[n]` is one. -/
+theorem chain_inverse (h00 : M ⊨ Axioms.ACVF00) (hc : CanonicalStructure.IsCanonical (M := M))
+    {κ : Cardinal} (hκ : Cardinal.aleph0 ≤ κ) (hs : Saturated M κ) (hsmall : Cardinal.mk S < κ)
+    (hv : ∀ x y : VF M, VFValued.predV x y ↔ Valued.v x ≤ Valued.v y)
+    {A B : VFObject (M := M) S n} {f : Map A.carrier B.carrier} (h : ObjectFactorization G A B f) :
+    ∀ hf : Function.Bijective f, ObjectFactorization G B A (f.inverse hf) := by
+  induction h with
+  | id A =>
+    intro hf
+    rw [inverse_id A.carrier hf]
+    exact ObjectFactorization.id A
+  | step h =>
+    intro hf
+    exact ObjectFactorization.step (step_inverse h00 hc hκ hs hsmall hv h)
+  | comp hF hG ihf ihg =>
+    intro hfg
+    rw [inverse_comp _ _ (chain_bijective hF) (chain_bijective hG) hfg]
+    exact ObjectFactorization.comp (ihg (chain_bijective hG)) (ihf (chain_bijective hF))
+
 /-- A morphism satisfies the measure identity at every VF-generic point. -/
 theorem Morphism.generic (hc : CanonicalStructure.IsCanonical (M := M))
     {A B : VFObject (M := M) S n} (F : Morphism G A B) (p : A.carrier)
@@ -124,7 +211,7 @@ morphism: the exceptional set is produced definably (empty in degree zero). -/
 theorem morphism_of_generic (h00 : M ⊨ Axioms.ACVF00) (hc : CanonicalStructure.IsCanonical (M := M))
     {κ : Cardinal} (hs : Saturated M κ) (hsmall : Cardinal.mk S < κ)
     {A B : VFObject (M := M) S n} (f : Map A.carrier B.carrier) (hb : Function.Bijective f)
-    (hF : UnaryFactorization G A.carrier B.carrier f)
+    (hF : ObjectFactorization G A B f)
     (hgen : ∀ p : A.carrier, AlgebraicIndependent (vfParameterField S) p.val.1 →
       ∃ L, HasMixedVFDerivativeAt f p L ∧
         vfValue (LinearMap.toMatrix' L).det = (gammaMapValue A.form p / gammaMapValue B.form (f p)).val) :
@@ -135,7 +222,7 @@ theorem morphism_of_generic (h00 : M ⊨ Axioms.ACVF00) (hc : CanonicalStructure
     let st : Morphism G A B :=
       { map := f
         bijective := hb
-        factor := hF
+        chain := hF
         bad := DefSet.empty _ S
         bad_subset := Set.empty_subset _
         bad_small := Or.inr rfl
@@ -146,7 +233,7 @@ theorem morphism_of_generic (h00 : M ⊨ Axioms.ACVF00) (hc : CanonicalStructure
     let st : Morphism G A B :=
       { map := f
         bijective := hb
-        factor := hF
+        chain := hF
         bad := E
         bad_subset := hEsub
         bad_small := Or.inl hEdim
@@ -161,7 +248,8 @@ theorem Morphism.inverse_nonempty (h00 : M ⊨ Axioms.ACVF00) (hc : CanonicalStr
   have : CharZero (VF M) := vf_charZero_of_model00 h00
   let g := F.map.inverse F.bijective
   have hg : Function.Bijective g := inverse_bijective F.map F.bijective
-  refine morphism_of_generic h00 hc hs hsmall g hg (factor_inverse F.factor F.bijective) (fun q hq => ?_)
+  refine morphism_of_generic h00 hc hs hsmall g hg (chain_inverse h00 hc hκ hs hsmall hv F.chain F.bijective)
+    (fun q hq => ?_)
   have hp := independent_map_of_finiteFibres hc g (Map.finiteFibres_of_injective hg.1) q hq
   obtain ⟨L, hL, hdet⟩ := Morphism.generic hc F (g q) hp
   obtain ⟨D, hD⟩ := mixedDifferentiableAt_of_independent hc hκ hs hsmall hv g q hq
@@ -188,7 +276,7 @@ theorem Morphism.comp_nonempty (h00 : M ⊨ Axioms.ACVF00) (hc : CanonicalStruct
     {A B C : VFObject (M := M) S n} (F : Morphism G A B) (H : Morphism G B C) :
     Nonempty (Morphism G A C) := by
   refine morphism_of_generic h00 hc hs hsmall (H.map.comp F.map) (H.bijective.comp F.bijective)
-    (UnaryFactorization.comp F.factor H.factor) (fun p hp => ?_)
+    (ObjectFactorization.comp F.chain H.chain) (fun p hp => ?_)
   obtain ⟨L, hL, hJ⟩ := Morphism.generic hc F p hp
   have hq := independent_map_of_finiteFibres hc F.map (Map.finiteFibres_of_injective F.bijective.1) p hp
   obtain ⟨D, hD, hK⟩ := Morphism.generic hc H (F.map p) hq
