@@ -23,7 +23,12 @@
     "continuous_cell_decomposition_discharged": "DiamondIntegral.Section4.GammaContinuousDecomposition.exists_decomposition_discharged",
     "remark_4_2_euler_characteristic_discharged": "DiamondIntegral.Section4.GammaContinuousDecomposition.euler_characteristic_discharged",
     "definition_4_1_dimension_free_grothendieck_ring": "DiamondIntegral.Section4.RESDimensionFreeCategory.definition_4_1_identification",
-    "actual_affine_comparison_nonsurjectivity": "DiamondIntegral.Section4.RESAffineNonsurjective.remark_4_4"
+    "actual_affine_comparison_nonsurjectivity": "DiamondIntegral.Section4.RESAffineNonsurjective.remark_4_4",
+    "remark_4_10_first_sentence_labels": "DiamondIntegral.Section4.RVBoundedDecomposition.coordinate_image_bounded",
+    "remark_4_10_first_sentence_volumes": "DiamondIntegral.Section4.RVBoundedDecomposition.volume_image_bounded",
+    "remark_4_10_bounded_decomposition": "DiamondIntegral.Section4.RVBoundedDecomposition.comparison_surjective",
+    "remark_4_10_positive_bounded_decomposition": "DiamondIntegral.Section4.RVBoundedDecomposition.positive_comparison_surjective",
+    "bounded_t001_evaluations_agree": "DiamondIntegral.Section4.RVBoundedDecomposition.boundedEvaluation_geometric_eq_bounded"
   },
   "lean": "Lean (version 4.35.0, arm64-apple-darwin24.6.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
   "upstream_project_dependencies": {
@@ -22792,6 +22797,158 @@
     },
     {
       "name": "DiamondIntegral.Section4.RVStrictAnnularGenerators.strictAnnularIdeal_eq",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVT001BoundedFactor.mk_pow_eq",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVT001BoundedFactor.geometric_eq_bounded_mul",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.mapDomain",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.map_volume_definable",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.mapDomain_definable",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.volume_bounded",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.common_bound",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.map_bounded",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.isoMap",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.isoMap_graph",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.iso_domainBounded",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.mem_strip",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.coordinate_image_bounded",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.volume_image_bounded",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue",
+      "kind": "structure"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue.dvalue",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue.dvalue_eq",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue.dvalue_ofChart",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue.dvalue_empty",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue.dvalue_iso",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue.dvalue_add",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue.products",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.value_eq_of_bijection",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.bounded_of_bijection",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.gammaFactorIso",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.piece_value",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.strict_value",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.bounded_value",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.ringValue",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.comparison_product",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.bounded_mem",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.comparison_surjective",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.positiveValue",
+      "kind": "def"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.positive_comparison_product",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.positive_comparison_surjective",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.boundedEvaluation_comparison",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.boundedEvaluation_independent_kind",
+      "kind": "theorem"
+    },
+    {
+      "name": "DiamondIntegral.Section4.RVBoundedDecomposition.boundedEvaluation_geometric_eq_bounded",
       "kind": "theorem"
     }
   ],
@@ -50737,6 +50894,194 @@
       "Classical.choice",
       "Quot.sound",
       "propext"
+    ],
+    "DiamondIntegral.Section4.RVT001BoundedFactor.mk_pow_eq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVT001BoundedFactor.geometric_eq_bounded_mul": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVBoundedDecomposition.mapDomain": [
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVBoundedDecomposition.map_volume_definable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVBoundedDecomposition.mapDomain_definable": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVBoundedDecomposition.volume_bounded": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVBoundedDecomposition.common_bound": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVBoundedDecomposition.map_bounded": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVBoundedDecomposition.isoMap": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVBoundedDecomposition.isoMap_graph": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVBoundedDecomposition.iso_domainBounded": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVBoundedDecomposition.mem_strip": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVBoundedDecomposition.coordinate_image_bounded": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVBoundedDecomposition.volume_image_bounded": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue.dvalue": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue.dvalue_eq": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue.dvalue_ofChart": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue.dvalue_empty": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue.dvalue_iso": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue.dvalue_add": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue.products": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVBoundedDecomposition.value_eq_of_bijection": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVBoundedDecomposition.bounded_of_bijection": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVBoundedDecomposition.gammaFactorIso": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVBoundedDecomposition.piece_value": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVBoundedDecomposition.strict_value": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVBoundedDecomposition.bounded_value": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVBoundedDecomposition.ringValue": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVBoundedDecomposition.comparison_product": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVBoundedDecomposition.bounded_mem": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVBoundedDecomposition.comparison_surjective": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVBoundedDecomposition.positiveValue": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVBoundedDecomposition.positive_comparison_product": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVBoundedDecomposition.positive_comparison_surjective": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVBoundedDecomposition.boundedEvaluation_comparison": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVBoundedDecomposition.boundedEvaluation_independent_kind": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "DiamondIntegral.Section4.RVBoundedDecomposition.boundedEvaluation_geometric_eq_bounded": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
     ]
   },
   "cited_input_definitions": {
@@ -51385,7 +51730,7 @@
     "section 4/Proposition318Witness.lean": "95d104364f228cae157968d263380e165bf5064b8e32309840c28a7233f784da",
     "section 4/Proposition318CubeRoots.lean": "c5ef9e2050c486af03f66af473bc86c0b94cdf16f94f195084a0cb4c0d2ee822",
     "section 4/Section4GammaLinearityDischarged.lean": "e03398946b7a944278d7b203cb2ea81945ef63548a476aa8e17d69fbfcf2179b",
-    "section 4/RVStrictBoundedComparison.lean": "d15a45f9a09c77987e3a4d0fc63a688c994b89d040d4943d8cdb2216d3011498",
+    "section 4/RVStrictBoundedComparison.lean": "5d3497290bb3d0cdb5cbcac36effb50a9239afde90315aea98ccf995b4c32e27",
     "section 4/Section4LinkedRemarks.lean": "c3115be10f37e23a29564e3e8578f0cda59faaaac22077e44d8be0238df0979c",
     "section 4/GammaQEOutputSlopes.lean": "5630739b6b240d2f501fe976c8f5ee2b716778865206f1ae336b33740951bd01",
     "section 4/GammaQEFlatNormalFormArity.lean": "e49beaadd812632b5a71b1e9162cca338b3bba75fc2f82b36903feb02d8e2316",
@@ -51395,11 +51740,13 @@
     "section 4/RESDimensionFreeCategory.lean": "92c7d2ba85b36f10a4234d7238e76ef3d1ad1f7d045287b937ed4ecb70314db1",
     "section 4/RVStrictBoundedCompatibility.lean": "5eec7e763952fb7438de0047726db5dc587533f55b25a57941ce65db044fafea",
     "section 4/RVStrictAnnularGenerators.lean": "f7e5d3fa5c93ac8fe47c97dc5b10b143cd58ff4cb2c9dc683be48c7374a92a21",
-    "section 4/Section.lean": "545aa0c54ede590838873855850b765b168e78651ac8fd4a9221836b58effbe7",
-    "section 4/verify.py": "1acb98292ee554ad764c586b7c1db6b91137181482e5270af4fb7edbd2b355a2",
+    "section 4/RVT001BoundedFactor.lean": "36489ff0c51e9254a85167b11f024f85fb10062c790cd2a4c0861de66ddfd372",
+    "section 4/RVBoundedDecomposition.lean": "1fbdba32c3caaa1c2338ca78fd6ee60d511b9ca68e55a323a85dfbcb0d3fc2fc",
+    "section 4/Section.lean": "c420f2cba521b9a22611c56997682e18294e3df0ff6fabdbcdc7079b637f3cd1",
+    "section 4/verify.py": "c27f1b13b983cacf031d299c789fb5fe71d4a21f23c988c1df258abf1bc3e0e7",
     "DiamondIntegral.lean": "66d02be99d3e377f670ad569f36274aed59d735366ebb4b157993bdb166b553e",
     "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
-    "lakefile.toml": "810829a9d20047381e2713fbd76d46001920ecb30a460f80f1ee6a00876a607b",
+    "lakefile.toml": "62e8a1d23f8479861f213c58201c878b0a049ffe85d85bd18cac974f66cbf272",
     "lake-manifest.json": "4f0ab2b8a2144ce82d2d8910ec2beb6cf3f21fffcd610bd56cb0415b5bf88ac6",
     "ACCEPTED-CITED-RESULTS.md": "2a6f42ef5f82e18d502ec9bb71d626675f5e24eae45d44291d75b23d9ee906c9",
     "section 4/verification/CITED-INPUTS.md": "854aa8b2f36a2c956fd3faf0fdcda4ee9a5c55973c266ac0322babe2c5281573",

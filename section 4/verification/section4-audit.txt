@@ -81149,7 +81149,7 @@ theorem DiamondIntegral.Section4.RVStrictBoundedComparison.bclass_add : ∀ {M :
 theorem DiamondIntegral.Section4.RVStrictBoundedComparison.sum_cover.{u_1} : ∀ {M : Type}
   [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
   [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
-  {B : SpecialTransformations.Section3.GammaParameters.Base} {A : Type u_1} [inst_2 : AddCommGroup.{u_1} A] {n k : ℕ}
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {A : Type u_1} [inst_2 : AddCommMonoid.{u_1} A] {n k : ℕ}
   (f : DiamondIntegral.Section4.RVChartDisjointUnion.Data B n k → A)
   (Adm : DiamondIntegral.Section4.RVChartDisjointUnion.Data B n k → Prop),
   (∀ (a c : DiamondIntegral.Section4.RVChartDisjointUnion.Data B n k), a.domain ⊆ c.domain → Adm c → Adm a) →
@@ -84671,6 +84671,794 @@ theorem DiamondIntegral.Section4.RVStrictAnnularGenerators.strictAnnularIdeal_eq
     (DiamondIntegral.Section4.RVStrictBoundedCompatibility.strictManuscriptIdeal B) :=
 ⋯
 'DiamondIntegral.Section4.RVStrictAnnularGenerators.strictAnnularIdeal_eq' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RVT001BoundedFactor.mk_pow_eq : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base)
+  (y : DiamondIntegral.Section4.RESDimensionFreeReduction.Ring B) (n : ℕ),
+  Eq.{1}
+    (Localization.mk.{0} y
+      (Subtype.mk.{1} (HPow.hPow.{0, 0, 0} (DiamondIntegral.Section4.RESAffineLocalization.dimensionFreeAffine B) n) ⋯))
+    (HMul.hMul.{0, 0, 0}
+      ((Algebra.algebraMap.{0, 0} (DiamondIntegral.Section4.RESDimensionFreeReduction.Ring B)
+          (DiamondIntegral.Section4.RESAffineLocalization.Target B))
+        y)
+      (HPow.hPow.{0, 0, 0}
+        (IsLocalization.Away.invSelf.{0, 0} (DiamondIntegral.Section4.RESAffineLocalization.dimensionFreeAffine B))
+        n)) :=
+⋯
+'DiamondIntegral.Section4.RVT001BoundedFactor.mk_pow_eq' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RVT001BoundedFactor.geometric_eq_bounded_mul : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (h00 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00)
+  (linear : DiamondIntegral.Section2.GammaPiecewiseRationalAffineInput) {κ : Cardinal.{0}}
+  (hκ : LE.le.{1} Cardinal.aleph0.{0} κ) (hs : SpecialTransformations.Section3.Saturated M κ)
+  (B : SpecialTransformations.Section3.GammaParameters.Base) (hr : LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ)
+  (hγ : LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) κ) (hΓ : DiamondIntegral.Section2.NontrivialDefinableGamma B)
+  (p : DiamondIntegral.Section4.ApprovedT001Presentation.Ordinary B) (n : ℕ)
+  (x : DiamondIntegral.Section4.RVOrdinaryRing.Ring B),
+  Membership.mem.{0, 0} (DiamondIntegral.Section4.RVOrdinaryGrading.gradedPiece B n) x →
+    Eq.{1}
+        ((DiamondIntegral.Section4.RVT001OrdinaryDescent.evaluation h00 linear hκ hs B hr hγ hΓ p
+            DiamondIntegral.Section4.EulerKind.geometric)
+          x)
+        ((DiamondIntegral.Section4.RVT001OrdinaryDescent.evaluation h00 linear hκ hs B hr hγ hΓ p
+            DiamondIntegral.Section4.EulerKind.bounded)
+          x) →
+      Eq.{1}
+        ((DiamondIntegral.Section4.RVT001OrdinaryNormalization.geometric h00 linear hκ hs B hr hγ hΓ p)
+          ((DiamondIntegral.Section4.RVOrdinaryPNormalization.quotient B) x))
+        (HMul.hMul.{0, 0, 0}
+          ((DiamondIntegral.Section4.RVT001NormalizedDistinct.boundedInAffine h00 linear hκ hs B hr hγ hΓ p)
+            ((DiamondIntegral.Section4.RVOrdinaryPNormalization.quotient B) x))
+          (HPow.hPow.{0, 0, 0}
+            (IsLocalization.Away.invSelf.{0, 0} (DiamondIntegral.Section4.RESAffineLocalization.dimensionFreeAffine B))
+            n)) :=
+⋯
+'DiamondIntegral.Section4.RVT001BoundedFactor.geometric_eq_bounded_mul' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.RVBoundedDecomposition.mapDomain : {M : Type} →
+  [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    {n m : ℕ} → Set.{0} (Fin n → M) → ((Fin n → M) → Fin m → M) → Fin m → Set.{0} (Fin n → M) :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] {n m} D φ j =>
+  Set.ofPred.{0} fun x => Membership.mem.{0, 0} D x ∧ SpecialTransformations.Section3.GammaParameters.NonzeroRV (φ x j)
+'DiamondIntegral.Section4.RVBoundedDecomposition.mapDomain' depends on axioms: [propext]
+theorem DiamondIntegral.Section4.RVBoundedDecomposition.map_volume_definable : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {n m : ℕ} (D : Set.{0} (Fin n → M))
+  (φ : (Fin n → M) → Fin m → M),
+  SpecialTransformations.Section3.GammaParameters.DefinableOverBase B
+      (fun x => SpecialTransformations.Milestone0.SortTag.rv) (DiamondIntegral.Section4.RVMeasuredCharts.graphOn D φ) →
+    ∀ (j : Fin m),
+      SpecialTransformations.Section3.GammaParameters.DefinableOverBase B
+        (fun x => SpecialTransformations.Milestone0.SortTag.rv)
+        (Set.ofPred.{0} fun w =>
+          Membership.mem.{0, 0} (DiamondIntegral.Section4.RVBoundedDecomposition.mapDomain D φ j) (Fin.tail.{1} w) ∧
+            SpecialTransformations.Section3.GammaParameters.NonzeroRV (w 0) ∧
+              Eq.{1} (SpecialTransformations.Section3.GammaParameters.codeValue (w 0))
+                (SpecialTransformations.Section3.GammaParameters.codeValue (φ (Fin.tail.{1} w) j))) :=
+⋯
+'DiamondIntegral.Section4.RVBoundedDecomposition.map_volume_definable' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RVBoundedDecomposition.mapDomain_definable : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {n m : ℕ} (D : Set.{0} (Fin n → M))
+  (φ : (Fin n → M) → Fin m → M),
+  SpecialTransformations.Section3.GammaParameters.DefinableOverBase B
+      (fun x => SpecialTransformations.Milestone0.SortTag.rv) (DiamondIntegral.Section4.RVMeasuredCharts.graphOn D φ) →
+    ∀ (j : Fin m),
+      SpecialTransformations.Section3.GammaParameters.DefinableOverBase B
+        (fun x => SpecialTransformations.Milestone0.SortTag.rv)
+        (DiamondIntegral.Section4.RVBoundedDecomposition.mapDomain D φ j) :=
+⋯
+'DiamondIntegral.Section4.RVBoundedDecomposition.mapDomain_definable' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RVBoundedDecomposition.volume_bounded : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF],
+  CanonicalStructure.IsCanonical →
+    FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00 →
+      ∀ {κ : Cardinal.{0}},
+        LE.le.{1} Cardinal.aleph0.{0} κ →
+          SpecialTransformations.Section3.Saturated M κ →
+            ∀ {B : SpecialTransformations.Section3.GammaParameters.Base},
+              LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ →
+                LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) κ →
+                  DiamondIntegral.Section2.NontrivialDefinableGamma B →
+                    ∀ {n : ℕ} (D : Set.{0} (Fin n → M)),
+                      SpecialTransformations.Section3.GammaParameters.DefinableOverBase B
+                          (fun x => SpecialTransformations.Milestone0.SortTag.rv) D →
+                        (∀ (x : Fin n → M),
+                            Membership.mem.{0, 0} D x →
+                              ∀ (i : Fin n), SpecialTransformations.Section3.GammaParameters.NonzeroRV (x i)) →
+                          (∃ β,
+                              ∀ (x : Fin n → M),
+                                Membership.mem.{0, 0} D x →
+                                  ∀ (i : Fin n),
+                                    LE.le.{0} (Inv.inv.{0} β)
+                                        (SpecialTransformations.Section3.GammaParameters.codeValue (x i)) ∧
+                                      LE.le.{0} (SpecialTransformations.Section3.GammaParameters.codeValue (x i)) β) →
+                            ∀ (μ : (Fin n → M) → SpecialTransformations.Section3.Values.Gamma),
+                              SpecialTransformations.Section3.GammaParameters.DefinableOverBase B
+                                  (fun x => SpecialTransformations.Milestone0.SortTag.rv)
+                                  (Set.ofPred.{0} fun w =>
+                                    Membership.mem.{0, 0} D (Fin.tail.{1} w) ∧
+                                      SpecialTransformations.Section3.GammaParameters.NonzeroRV (w 0) ∧
+                                        Eq.{1} (SpecialTransformations.Section3.GammaParameters.codeValue (w 0))
+                                          (μ (Fin.tail.{1} w))) →
+                                ∃ γ,
+                                  ∀ (x : Fin n → M),
+                                    Membership.mem.{0, 0} D x → LE.le.{0} (Inv.inv.{0} γ) (μ x) ∧ LE.le.{0} (μ x) γ :=
+⋯
+'DiamondIntegral.Section4.RVBoundedDecomposition.volume_bounded' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RVBoundedDecomposition.common_bound.{u_1} : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {ι : Type u_1}
+  [inst_2 : Fintype.{u_1} ι] (γ : ι → SpecialTransformations.Section3.Values.Gamma) (i : ι),
+  LE.le.{0} (Inv.inv.{0} (∏ j, Max.max.{0} (γ j) 1)) (Inv.inv.{0} (γ i)) ∧ LE.le.{0} (γ i) (∏ j, Max.max.{0} (γ j) 1) :=
+⋯
+'DiamondIntegral.Section4.RVBoundedDecomposition.common_bound' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RVBoundedDecomposition.map_bounded : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF],
+  CanonicalStructure.IsCanonical →
+    FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00 →
+      ∀ {κ : Cardinal.{0}},
+        LE.le.{1} Cardinal.aleph0.{0} κ →
+          SpecialTransformations.Section3.Saturated M κ →
+            ∀ {B : SpecialTransformations.Section3.GammaParameters.Base},
+              LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ →
+                LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) κ →
+                  DiamondIntegral.Section2.NontrivialDefinableGamma B →
+                    ∀ {n m : ℕ} (D : Set.{0} (Fin n → M)),
+                      (∀ (x : Fin n → M),
+                          Membership.mem.{0, 0} D x →
+                            ∀ (i : Fin n), SpecialTransformations.Section3.GammaParameters.NonzeroRV (x i)) →
+                        (∃ β,
+                            ∀ (x : Fin n → M),
+                              Membership.mem.{0, 0} D x →
+                                ∀ (i : Fin n),
+                                  LE.le.{0} (Inv.inv.{0} β)
+                                      (SpecialTransformations.Section3.GammaParameters.codeValue (x i)) ∧
+                                    LE.le.{0} (SpecialTransformations.Section3.GammaParameters.codeValue (x i)) β) →
+                          ∀ (φ : (Fin n → M) → Fin m → M),
+                            SpecialTransformations.Section3.GammaParameters.DefinableOverBase B
+                                (fun x => SpecialTransformations.Milestone0.SortTag.rv)
+                                (DiamondIntegral.Section4.RVMeasuredCharts.graphOn D φ) →
+                              ∃ β,
+                                ∀ (x : Fin n → M),
+                                  Membership.mem.{0, 0} D x →
+                                    ∀ (j : Fin m),
+                                      SpecialTransformations.Section3.GammaParameters.NonzeroRV (φ x j) →
+                                        LE.le.{0} (Inv.inv.{0} β)
+                                            (SpecialTransformations.Section3.GammaParameters.codeValue (φ x j)) ∧
+                                          LE.le.{0} (SpecialTransformations.Section3.GammaParameters.codeValue (φ x j))
+                                            β :=
+⋯
+'DiamondIntegral.Section4.RVBoundedDecomposition.map_bounded' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.RVBoundedDecomposition.isoMap : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B : SpecialTransformations.Section3.GammaParameters.Base} →
+        {k : ℕ} →
+          {X Y : DiamondIntegral.Section4.RVMeasuredCharts.Chart B k} →
+            DiamondIntegral.Section4.RVMeasuredCharts.Iso X Y → (Fin X.arity → M) → Fin Y.arity → M :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {B} {k} {X Y} F x =>
+  if hx : Membership.mem.{0, 0} X.domain x then ↑(F.equiv (Subtype.mk.{1} x hx))
+  else fun x => SpecialTransformations.Milestone0.iRVZero.{0}
+'DiamondIntegral.Section4.RVBoundedDecomposition.isoMap' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RVBoundedDecomposition.isoMap_graph : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {k : ℕ}
+  {X Y : DiamondIntegral.Section4.RVMeasuredCharts.Chart B k} (F : DiamondIntegral.Section4.RVMeasuredCharts.Iso X Y),
+  Eq.{1}
+    (DiamondIntegral.Section4.RVMeasuredCharts.graphOn X.domain
+      (DiamondIntegral.Section4.RVBoundedDecomposition.isoMap F))
+    (Set.ofPred.{0} fun w =>
+      ∃ u, Eq.{1} w (DiamondIntegral.Section4.FiniteTupleBlocks.join.{0} Y.arity X.arity ↑u ↑(F.equiv u))) :=
+⋯
+'DiamondIntegral.Section4.RVBoundedDecomposition.isoMap_graph' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RVBoundedDecomposition.iso_domainBounded : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF],
+  CanonicalStructure.IsCanonical →
+    FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00 →
+      ∀ {κ : Cardinal.{0}},
+        LE.le.{1} Cardinal.aleph0.{0} κ →
+          SpecialTransformations.Section3.Saturated M κ →
+            ∀ {B : SpecialTransformations.Section3.GammaParameters.Base},
+              LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ →
+                LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) κ →
+                  DiamondIntegral.Section2.NontrivialDefinableGamma B →
+                    ∀ {k : ℕ} {X Y : DiamondIntegral.Section4.RVMeasuredCharts.Chart B k}
+                      (F : DiamondIntegral.Section4.RVMeasuredCharts.Iso X Y),
+                      DiamondIntegral.Section4.RVMeasuredBounds.DomainBounded X →
+                        DiamondIntegral.Section4.RVStrictBoundedComparison.InfinityFree X →
+                          DiamondIntegral.Section4.RVMeasuredBounds.DomainBounded Y :=
+⋯
+'DiamondIntegral.Section4.RVBoundedDecomposition.iso_domainBounded' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RVBoundedDecomposition.mem_strip : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {k : ℕ}
+  (a : DiamondIntegral.Section4.RVMeasuredCharts.Chart B k) {u : Fin a.arity → M},
+  Membership.mem.{0, 0} a.domain u →
+    Membership.mem.{0, 0}
+        (DiamondIntegral.Section4.RVStrictBoundedComparison.strip
+            (DiamondIntegral.Section4.RVChartDisjointUnion.ofChart a)
+            (DiamondIntegral.Section4.RVStrictBoundedComparison.zeroLocus u)).domain
+        (Function.comp.{1, 1, 1} u
+          (DiamondIntegral.Section4.RVStrictBoundedComparison.stripIndex
+            (DiamondIntegral.Section4.RVStrictBoundedComparison.zeroLocus u))) ∧
+      Eq.{1}
+        (DiamondIntegral.Section4.RVStrictBoundedComparison.unstrip
+          (DiamondIntegral.Section4.RVStrictBoundedComparison.zeroLocus u)
+          (Function.comp.{1, 1, 1} u
+            (DiamondIntegral.Section4.RVStrictBoundedComparison.stripIndex
+              (DiamondIntegral.Section4.RVStrictBoundedComparison.zeroLocus u))))
+        u :=
+⋯
+'DiamondIntegral.Section4.RVBoundedDecomposition.mem_strip' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RVBoundedDecomposition.coordinate_image_bounded : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF],
+  CanonicalStructure.IsCanonical →
+    FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00 →
+      ∀ {κ : Cardinal.{0}},
+        LE.le.{1} Cardinal.aleph0.{0} κ →
+          SpecialTransformations.Section3.Saturated M κ →
+            ∀ {B : SpecialTransformations.Section3.GammaParameters.Base},
+              LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ →
+                LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) κ →
+                  DiamondIntegral.Section2.NontrivialDefinableGamma B →
+                    ∀ {k : ℕ} (a : DiamondIntegral.Section4.RVBoundedCharts.BoundedChart B k),
+                      ∃ β,
+                        ∀ (u : Fin a.arity → M),
+                          Membership.mem.{0, 0} a.domain u →
+                            ∀ (i : Fin k),
+                              LE.le.{0} (Inv.inv.{0} β)
+                                  (SpecialTransformations.Section3.GammaParameters.codeValue (a.coordinate u i)) ∧
+                                LE.le.{0} (SpecialTransformations.Section3.GammaParameters.codeValue (a.coordinate u i))
+                                  β :=
+⋯
+'DiamondIntegral.Section4.RVBoundedDecomposition.coordinate_image_bounded' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RVBoundedDecomposition.volume_image_bounded : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF],
+  CanonicalStructure.IsCanonical →
+    FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00 →
+      ∀ {κ : Cardinal.{0}},
+        LE.le.{1} Cardinal.aleph0.{0} κ →
+          SpecialTransformations.Section3.Saturated M κ →
+            ∀ {B : SpecialTransformations.Section3.GammaParameters.Base},
+              LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ →
+                LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) κ →
+                  DiamondIntegral.Section2.NontrivialDefinableGamma B →
+                    ∀ {k : ℕ} (a : DiamondIntegral.Section4.RVBoundedCharts.BoundedChart B k),
+                      ∃ β,
+                        ∀ (u : Fin a.arity → M),
+                          Membership.mem.{0, 0} a.domain u →
+                            LE.le.{0} (Inv.inv.{0} β) (a.volume u) ∧ LE.le.{0} (a.volume u) β :=
+⋯
+'DiamondIntegral.Section4.RVBoundedDecomposition.volume_image_bounded' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+structure DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue {M : Type}
+  [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base) (A : Type) [AddCommMonoid.{0} A] : Type
+number of parameters: 6
+fields:
+  DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue.value : (k : ℕ) →
+      DiamondIntegral.Section4.RVBoundedCharts.BoundedChart B k → A
+  DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue.iso : ∀ (k : ℕ)
+      (a b : DiamondIntegral.Section4.RVBoundedCharts.BoundedChart B k)
+      (a_1 : DiamondIntegral.Section4.RVMeasuredCharts.Iso a.toChart b.toChart),
+      Eq.{1} (self.value k a) (self.value k b)
+  DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue.empty : ∀ (k : ℕ)
+      (a : DiamondIntegral.Section4.RVBoundedCharts.BoundedChart B k),
+      Eq.{1} a.domain EmptyCollection.emptyCollection.{0} → Eq.{1} (self.value k a) 0
+  DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue.scissor : ∀ (k : ℕ)
+      (a b c d : DiamondIntegral.Section4.RVBoundedCharts.BoundedChart B k),
+      DiamondIntegral.Section4.RVMeasuredGroup.Scissor a.toChart b.toChart c.toChart d.toChart →
+        Eq.{1} (HAdd.hAdd.{0, 0, 0} (self.value k c) (self.value k d))
+          (HAdd.hAdd.{0, 0, 0} (self.value k a) (self.value k b))
+constructor:
+  DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue.mk {M : Type}
+    [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+    {B : SpecialTransformations.Section3.GammaParameters.Base} {A : Type} [AddCommMonoid.{0} A]
+    (value : (k : ℕ) → DiamondIntegral.Section4.RVBoundedCharts.BoundedChart B k → A)
+    (iso :
+      ∀ (k : ℕ) (a b : DiamondIntegral.Section4.RVBoundedCharts.BoundedChart B k)
+        (a_1 : DiamondIntegral.Section4.RVMeasuredCharts.Iso a.toChart b.toChart), Eq.{1} (value k a) (value k b))
+    (empty :
+      ∀ (k : ℕ) (a : DiamondIntegral.Section4.RVBoundedCharts.BoundedChart B k),
+        Eq.{1} a.domain EmptyCollection.emptyCollection.{0} → Eq.{1} (value k a) 0)
+    (scissor :
+      ∀ (k : ℕ) (a b c d : DiamondIntegral.Section4.RVBoundedCharts.BoundedChart B k),
+        DiamondIntegral.Section4.RVMeasuredGroup.Scissor a.toChart b.toChart c.toChart d.toChart →
+          Eq.{1} (HAdd.hAdd.{0, 0, 0} (value k c) (value k d)) (HAdd.hAdd.{0, 0, 0} (value k a) (value k b))) :
+    DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue B A
+'DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue.dvalue : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B : SpecialTransformations.Section3.GammaParameters.Base} →
+        {A : Type} →
+          [inst_2 : AddCommMonoid.{0} A] →
+            DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue B A →
+              {n k : ℕ} → DiamondIntegral.Section4.RVChartDisjointUnion.Data B n k → A :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {B} {A}
+    [AddCommMonoid.{0} A] f {n k} D =>
+  if h : DiamondIntegral.Section4.RVMeasuredBounds.DomainBounded D.toChart then
+    f.value k { toChart := D.toChart, domain_bounded := h }
+  else 0
+'DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue.dvalue' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue.dvalue_eq : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {A : Type} [inst_2 : AddCommMonoid.{0} A]
+  (f : DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue B A) {n k : ℕ}
+  {D : DiamondIntegral.Section4.RVChartDisjointUnion.Data B n k}
+  (h : DiamondIntegral.Section4.RVMeasuredBounds.DomainBounded D.toChart),
+  Eq.{1} (f.dvalue D) (f.value k { toChart := D.toChart, domain_bounded := h }) :=
+⋯
+'DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue.dvalue_eq' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue.dvalue_ofChart : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {A : Type} [inst_2 : AddCommMonoid.{0} A]
+  (f : DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue B A) {k : ℕ}
+  (a : DiamondIntegral.Section4.RVBoundedCharts.BoundedChart B k),
+  Eq.{1} (f.dvalue (DiamondIntegral.Section4.RVChartDisjointUnion.ofChart a.toChart)) (f.value k a) :=
+⋯
+'DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue.dvalue_ofChart' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue.dvalue_empty : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {A : Type} [inst_2 : AddCommMonoid.{0} A]
+  (f : DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue B A) {n k : ℕ}
+  (D : DiamondIntegral.Section4.RVChartDisjointUnion.Data B n k),
+  Eq.{1} D.domain EmptyCollection.emptyCollection.{0} → Eq.{1} (f.dvalue D) 0 :=
+⋯
+'DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue.dvalue_empty' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue.dvalue_iso : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {A : Type} [inst_2 : AddCommMonoid.{0} A]
+  (f : DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue B A) {n m k : ℕ}
+  {D : DiamondIntegral.Section4.RVChartDisjointUnion.Data B n k}
+  {E : DiamondIntegral.Section4.RVChartDisjointUnion.Data B m k},
+  DiamondIntegral.Section4.RVMeasuredBounds.DomainBounded D.toChart →
+    DiamondIntegral.Section4.RVMeasuredBounds.DomainBounded E.toChart →
+      ∀ (F : DiamondIntegral.Section4.RVMeasuredCharts.Iso D.toChart E.toChart), Eq.{1} (f.dvalue D) (f.dvalue E) :=
+⋯
+'DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue.dvalue_iso' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue.dvalue_add : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B : SpecialTransformations.Section3.GammaParameters.Base} {A : Type} [inst_2 : AddCommMonoid.{0} A]
+  (f : DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue B A) {n k : ℕ}
+  (a b c : DiamondIntegral.Section4.RVChartDisjointUnion.Data B n k),
+  DiamondIntegral.Section4.RVMeasuredBounds.DomainBounded c.toChart →
+    Eq.{1} a.coordinate c.coordinate →
+      Eq.{1} a.volume c.volume →
+        Eq.{1} b.coordinate c.coordinate →
+          Eq.{1} b.volume c.volume →
+            Eq.{1} c.domain (Union.union.{0} a.domain b.domain) →
+              Disjoint.{0} a.domain b.domain → Eq.{1} (f.dvalue c) (HAdd.hAdd.{0, 0, 0} (f.dvalue a) (f.dvalue b)) :=
+⋯
+'DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue.dvalue_add' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue.products : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B : SpecialTransformations.Section3.GammaParameters.Base} →
+        {A : Type} →
+          [inst_2 : AddCommMonoid.{0} A] →
+            DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue B A → Set.{0} A :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] {B} {A}
+    [AddCommMonoid.{0} A] f =>
+  Set.ofPred.{0} fun x =>
+    ∃ r m V g,
+      Eq.{1} x
+        (f.value (HAdd.hAdd.{0, 0, 0} r m)
+          (DiamondIntegral.Section4.RVBoundedCharts.product (DiamondIntegral.Section4.GammaBoundedRVCharts.sharp g)
+            (DiamondIntegral.Section4.RVBoundedCharts.ofRES V)))
+'DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue.products' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RVBoundedDecomposition.value_eq_of_bijection : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  {hc : CanonicalStructure.IsCanonical} {B : SpecialTransformations.Section3.GammaParameters.Base} {A : Type}
+  [inst_2 : AddCommMonoid.{0} A] (v : DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue B A) {k l : ℕ},
+  Eq.{1} k l →
+    ∀ (X : DiamondIntegral.Section4.RVBoundedCharts.BoundedChart B k)
+      (W : DiamondIntegral.Section3.GammaGroundMeasuredRVObject hc B k)
+      (F0 :
+        DiamondIntegral.Section4.RVMeasuredCharts.Iso X.toChart
+          (DiamondIntegral.Section4.Section3MeasuredRVChartBridge.chart W))
+      (P : DiamondIntegral.Section3.GammaGroundMeasuredRVObject hc B l)
+      (e : DiamondIntegral.Section3.GammaGroundBijection W.underlying.domain P.underlying.domain),
+      (∀ (a : ↑W.underlying.domain.carrier), Eq.{1} (W.combinedWeight a) (P.combinedWeight (e.map.toFun a))) →
+        ∀ (Y : DiamondIntegral.Section4.RVBoundedCharts.BoundedChart B l)
+          (FP :
+            DiamondIntegral.Section4.RVMeasuredCharts.Iso
+              (DiamondIntegral.Section4.Section3MeasuredRVChartBridge.chart P) Y.toChart),
+          Eq.{1} (v.value k X) (v.value l Y) :=
+⋯
+'DiamondIntegral.Section4.RVBoundedDecomposition.value_eq_of_bijection' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RVBoundedDecomposition.bounded_of_bijection : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical),
+  FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00 →
+    ∀ {κ : Cardinal.{0}},
+      LE.le.{1} Cardinal.aleph0.{0} κ →
+        SpecialTransformations.Section3.Saturated M κ →
+          ∀ {B : SpecialTransformations.Section3.GammaParameters.Base},
+            LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ →
+              LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) κ →
+                DiamondIntegral.Section2.NontrivialDefinableGamma B →
+                  ∀ {k l : ℕ},
+                    Eq.{1} k l →
+                      ∀ (X : DiamondIntegral.Section4.RVMeasuredCharts.Chart B k),
+                        DiamondIntegral.Section4.RVMeasuredBounds.DomainBounded X →
+                          DiamondIntegral.Section4.RVStrictBoundedComparison.InfinityFree X →
+                            ∀ (W : DiamondIntegral.Section3.GammaGroundMeasuredRVObject hc B k)
+                              (F0 :
+                                DiamondIntegral.Section4.RVMeasuredCharts.Iso X
+                                  (DiamondIntegral.Section4.Section3MeasuredRVChartBridge.chart W))
+                              (P : DiamondIntegral.Section3.GammaGroundMeasuredRVObject hc B l)
+                              (e :
+                                DiamondIntegral.Section3.GammaGroundBijection W.underlying.domain P.underlying.domain),
+                              (∀ (a : ↑W.underlying.domain.carrier),
+                                  Eq.{1} (W.combinedWeight a) (P.combinedWeight (e.map.toFun a))) →
+                                ∀ (Z : DiamondIntegral.Section4.RVMeasuredCharts.Chart B l)
+                                  (FP :
+                                    DiamondIntegral.Section4.RVMeasuredCharts.Iso
+                                      (DiamondIntegral.Section4.Section3MeasuredRVChartBridge.chart P) Z),
+                                  DiamondIntegral.Section4.RVMeasuredBounds.DomainBounded Z :=
+⋯
+'DiamondIntegral.Section4.RVBoundedDecomposition.bounded_of_bijection' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.RVBoundedDecomposition.gammaFactorIso : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        {B : SpecialTransformations.Section3.GammaParameters.Base} →
+          {m : ℕ} →
+            (G : DiamondIntegral.Section3.GammaGroundGammaPiece hc B m) →
+              (f :
+                  (Fin m → SpecialTransformations.Section3.Values.Gamma) →
+                    SpecialTransformations.Section3.Values.Gamma) →
+                (hf : DiamondIntegral.Section3.FullGammaFunction (DiamondIntegral.Section3.integrationGammaBase B) f) →
+                  DiamondIntegral.Section4.RVMeasuredCharts.Iso
+                    (DiamondIntegral.Section4.Section3MeasuredRVChartBridge.chart
+                      (DiamondIntegral.Section3.gammaGroundMeasuredGammaSingleWeight G f hf).rvLift)
+                    (DiamondIntegral.Section4.RVSharpCharts.sharpChart
+                      (DiamondIntegral.Section4.Section3CoefficientChartRelations.weightChart G f hf)) :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] hc {B} {m} G f hf =>
+  let wc := DiamondIntegral.Section4.Section3CoefficientChartRelations.weightChart G f hf;
+  have e1 := DiamondIntegral.Section4.Section3GammaSharpBridge.measured wc;
+  have e2 :=
+    DiamondIntegral.Section3.gammaGroundMeasuredGammaRVHom
+      (DiamondIntegral.Section4.Section3GammaRoundtripBridge.measured_native_chart G
+        ((DiamondIntegral.Section3.gammaGroundMeasuredGammaSingleWeight G f hf).form 0));
+  DiamondIntegral.Section4.RVMeasuredIsomorphisms.trans
+    (DiamondIntegral.Section4.RVMeasuredIsomorphisms.symm
+      (DiamondIntegral.Section4.Section3MeasuredRVChartBridge.chartIso (e2.comp e1)))
+    (DiamondIntegral.Section4.Section3RVRoundtripBridge.chart_native_measured
+      (DiamondIntegral.Section4.RVSharpCharts.sharpChart wc))
+'DiamondIntegral.Section4.RVBoundedDecomposition.gammaFactorIso' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RVBoundedDecomposition.piece_value : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (hc : CanonicalStructure.IsCanonical),
+  FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00 →
+    ∀ {κ : Cardinal.{0}},
+      LE.le.{1} Cardinal.aleph0.{0} κ →
+        SpecialTransformations.Section3.Saturated M κ →
+          ∀ {B : SpecialTransformations.Section3.GammaParameters.Base},
+            LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ →
+              LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) κ →
+                DiamondIntegral.Section2.NontrivialDefinableGamma B →
+                  ∀ {A : Type} [inst_2 : AddCommMonoid.{0} A]
+                    (v : DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue B A) {k : ℕ}
+                    (X : DiamondIntegral.Section4.RVBoundedCharts.BoundedChart B k),
+                    DiamondIntegral.Section4.RVStrictBoundedComparison.InfinityFree X.toChart →
+                      ∀ (W : DiamondIntegral.Section3.GammaGroundMeasuredRVObject hc B k)
+                        (F0 :
+                          DiamondIntegral.Section4.RVMeasuredCharts.Iso X.toChart
+                            (DiamondIntegral.Section4.Section3MeasuredRVChartBridge.chart W)),
+                        Set.Nonempty.{0} W.underlying.domain.carrier →
+                          ∀ {n m : ℕ}
+                            (R :
+                              DiamondIntegral.Section3.GammaGroundDefSet hc B
+                                (DiamondIntegral.Section3.rawRVUnitSpace n)),
+                            Set.Finite.{0} (Set.image.{0, 0} DiamondIntegral.Section3.rvUnitTupleValues R.carrier) →
+                              ∀ (G : DiamondIntegral.Section3.GammaGroundGammaPiece hc B m)
+                                (f :
+                                  (Fin m → SpecialTransformations.Section3.Values.Gamma) →
+                                    SpecialTransformations.Section3.Values.Gamma),
+                                DiamondIntegral.Section3.FullGammaFunction
+                                    (DiamondIntegral.Section3.integrationGammaBase B) f →
+                                  ∀
+                                    (F :
+                                      DiamondIntegral.Section3.GammaGroundBijection W.underlying.domain
+                                        (R.prod (DiamondIntegral.Section3.gammaGroundRVUnitGammaPreimage G))),
+                                    (∀ (a : ↑W.underlying.domain.carrier),
+                                        Eq.{1} (W.combinedWeight a)
+                                          (f (DiamondIntegral.Section3.rvUnitTupleValues (↑(F.map.toFun a)).2))) →
+                                      Membership.mem.{0, 0} v.products (v.value k X) :=
+⋯
+'DiamondIntegral.Section4.RVBoundedDecomposition.piece_value' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RVBoundedDecomposition.strict_value : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF],
+  CanonicalStructure.IsCanonical →
+    FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00 →
+      ∀ {κ : Cardinal.{0}},
+        LE.le.{1} Cardinal.aleph0.{0} κ →
+          SpecialTransformations.Section3.Saturated M κ →
+            ∀ {B : SpecialTransformations.Section3.GammaParameters.Base},
+              LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ →
+                LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) κ →
+                  DiamondIntegral.Section2.NontrivialDefinableGamma B →
+                    ∀ {A : Type} [inst_2 : AddCommMonoid.{0} A]
+                      (v : DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue B A) {k : ℕ}
+                      (a : DiamondIntegral.Section4.RVStrictBoundedComparison.StrictChart B k),
+                      Membership.mem.{0, 0} (AddSubmonoid.closure.{0} v.products) (v.value k a.toBoundedChart) :=
+⋯
+'DiamondIntegral.Section4.RVBoundedDecomposition.strict_value' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RVBoundedDecomposition.bounded_value : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF],
+  CanonicalStructure.IsCanonical →
+    FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00 →
+      ∀ {κ : Cardinal.{0}},
+        LE.le.{1} Cardinal.aleph0.{0} κ →
+          SpecialTransformations.Section3.Saturated M κ →
+            ∀ {B : SpecialTransformations.Section3.GammaParameters.Base},
+              LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ →
+                LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) κ →
+                  DiamondIntegral.Section2.NontrivialDefinableGamma B →
+                    ∀ {A : Type} [inst_2 : AddCommMonoid.{0} A]
+                      (v : DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue B A) {k : ℕ}
+                      (a : DiamondIntegral.Section4.RVBoundedCharts.BoundedChart B k),
+                      Membership.mem.{0, 0} (AddSubmonoid.closure.{0} v.products) (v.value k a) :=
+⋯
+'DiamondIntegral.Section4.RVBoundedDecomposition.bounded_value' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.RVBoundedDecomposition.ringValue : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (B : SpecialTransformations.Section3.GammaParameters.Base) →
+        DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue B
+          (DiamondIntegral.Section4.RVBoundedRing.Ring B) :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] B =>
+  { value := fun x a => DiamondIntegral.Section4.RVBoundedRing.objectClass a, iso := ⋯, empty := ⋯, scissor := ⋯ }
+'DiamondIntegral.Section4.RVBoundedDecomposition.ringValue' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RVBoundedDecomposition.comparison_product : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base) {r m : ℕ}
+  (V : DiamondIntegral.Section4.RVMeasuredCharts.RESChart B r)
+  (g : DiamondIntegral.Section4.GammaBoundedRVCharts.BoundedChart B m),
+  Eq.{1}
+    ((DiamondIntegral.Section4.RVBoundedBalancedTensor.comparison B)
+      (TensorProduct.tmul.{0, 0, 0} (DiamondIntegral.Section4.GammaFiniteRVPresentation.ChartRing B)
+        (DiamondIntegral.Section4.RESChartRing.objectClass V)
+        (DiamondIntegral.Section4.GammaBoundedRVPresentation.objectClass g)))
+    (DiamondIntegral.Section4.RVBoundedRing.objectClass
+      (DiamondIntegral.Section4.RVBoundedCharts.product (DiamondIntegral.Section4.GammaBoundedRVCharts.sharp g)
+        (DiamondIntegral.Section4.RVBoundedCharts.ofRES V))) :=
+⋯
+'DiamondIntegral.Section4.RVBoundedDecomposition.comparison_product' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RVBoundedDecomposition.bounded_mem : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF],
+  CanonicalStructure.IsCanonical →
+    FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00 →
+      ∀ {κ : Cardinal.{0}},
+        LE.le.{1} Cardinal.aleph0.{0} κ →
+          SpecialTransformations.Section3.Saturated M κ →
+            ∀ {B : SpecialTransformations.Section3.GammaParameters.Base},
+              LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ →
+                LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) κ →
+                  DiamondIntegral.Section2.NontrivialDefinableGamma B →
+                    ∀ {k : ℕ} (a : DiamondIntegral.Section4.RVBoundedCharts.BoundedChart B k),
+                      Membership.mem.{0, 0}
+                        (AlgHom.range.{0, 0, 0} (DiamondIntegral.Section4.RVBoundedBalancedTensor.comparison B))
+                        (DiamondIntegral.Section4.RVBoundedRing.objectClass a) :=
+⋯
+'DiamondIntegral.Section4.RVBoundedDecomposition.bounded_mem' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RVBoundedDecomposition.comparison_surjective : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF],
+  CanonicalStructure.IsCanonical →
+    FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00 →
+      ∀ {κ : Cardinal.{0}},
+        LE.le.{1} Cardinal.aleph0.{0} κ →
+          SpecialTransformations.Section3.Saturated M κ →
+            ∀ (B : SpecialTransformations.Section3.GammaParameters.Base),
+              LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ →
+                LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) κ →
+                  DiamondIntegral.Section2.NontrivialDefinableGamma B →
+                    Function.Surjective.{1, 1} ⇑(DiamondIntegral.Section4.RVBoundedBalancedTensor.comparison B) :=
+⋯
+'DiamondIntegral.Section4.RVBoundedDecomposition.comparison_surjective' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+def DiamondIntegral.Section4.RVBoundedDecomposition.positiveValue : {M : Type} →
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M] →
+    [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (B : SpecialTransformations.Section3.GammaParameters.Base) →
+        DiamondIntegral.Section4.RVBoundedDecomposition.ScissorValue B
+          (DiamondIntegral.Section4.RVBoundedPositiveTensor.RVPositive B) :=
+fun {M} [FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+    [FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF] B =>
+  {
+    value := fun k a =>
+      DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations.cls.{0}
+        (DiamondIntegral.Section4.RVBoundedPositiveTensor.rvRelations B) (Sigma.mk.{0, 0} k a),
+    iso := ⋯, empty := ⋯, scissor := ⋯ }
+'DiamondIntegral.Section4.RVBoundedDecomposition.positiveValue' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RVBoundedDecomposition.positive_comparison_product : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (B : SpecialTransformations.Section3.GammaParameters.Base) {r m : ℕ}
+  (V : DiamondIntegral.Section4.RVMeasuredCharts.RESChart B r)
+  (g : DiamondIntegral.Section4.GammaBoundedRVCharts.BoundedChart B m),
+  Eq.{1}
+    ((DiamondIntegral.Section4.RVBoundedPositiveTensor.comparison B)
+      (TensorProduct.tmul.{0, 0, 0} (DiamondIntegral.Section4.RVBoundedPositiveTensor.FinitePositive B)
+        (DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations.cls.{0}
+          (DiamondIntegral.Section4.RVBoundedPositiveTensor.resRelations B) (Sigma.mk.{0, 0} r V))
+        (DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations.cls.{0}
+          (DiamondIntegral.Section4.RVBoundedPositiveTensor.gammaRelations B) (Sigma.mk.{0, 0} m g))))
+    (DiamondIntegral.Section4.PositiveChartPresentation.ChartRelations.cls.{0}
+      (DiamondIntegral.Section4.RVBoundedPositiveTensor.rvRelations B)
+      (Sigma.mk.{0, 0} (HAdd.hAdd.{0, 0, 0} r m)
+        (DiamondIntegral.Section4.RVBoundedCharts.product (DiamondIntegral.Section4.GammaBoundedRVCharts.sharp g)
+          (DiamondIntegral.Section4.RVBoundedCharts.ofRES V)))) :=
+⋯
+'DiamondIntegral.Section4.RVBoundedDecomposition.positive_comparison_product' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RVBoundedDecomposition.positive_comparison_surjective : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF],
+  CanonicalStructure.IsCanonical →
+    FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00 →
+      ∀ {κ : Cardinal.{0}},
+        LE.le.{1} Cardinal.aleph0.{0} κ →
+          SpecialTransformations.Section3.Saturated M κ →
+            ∀ (B : SpecialTransformations.Section3.GammaParameters.Base),
+              LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ →
+                LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) κ →
+                  DiamondIntegral.Section2.NontrivialDefinableGamma B →
+                    Function.Surjective.{1, 1} ⇑(DiamondIntegral.Section4.RVBoundedPositiveTensor.comparison B) :=
+⋯
+'DiamondIntegral.Section4.RVBoundedDecomposition.positive_comparison_surjective' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RVBoundedDecomposition.boundedEvaluation_comparison : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF]
+  (h00 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00)
+  (linear : DiamondIntegral.Section2.GammaPiecewiseRationalAffineInput) {κ : Cardinal.{0}}
+  (hκ : LE.le.{1} Cardinal.aleph0.{0} κ) (hs : SpecialTransformations.Section3.Saturated M κ)
+  (B : SpecialTransformations.Section3.GammaParameters.Base) (hr : LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ)
+  (hγ : LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) κ) (hΓ : DiamondIntegral.Section2.NontrivialDefinableGamma B)
+  (p : DiamondIntegral.Section4.ApprovedT001Presentation.Ordinary B) (kind : DiamondIntegral.Section4.EulerKind)
+  (x : DiamondIntegral.Section4.RVBoundedBalancedTensor.Source B),
+  Eq.{1}
+    ((DiamondIntegral.Section4.RVT001OrdinaryDescent.boundedEvaluation h00 linear hκ hs B hr hγ hΓ p kind)
+      ((DiamondIntegral.Section4.RVBoundedBalancedTensor.comparison B) x))
+    ((DiamondIntegral.Section4.RVBoundedOrdinaryEvaluation.evaluation h00 linear hκ hs B hr hγ hΓ kind) x) :=
+⋯
+'DiamondIntegral.Section4.RVBoundedDecomposition.boundedEvaluation_comparison' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RVBoundedDecomposition.boundedEvaluation_independent_kind : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF],
+  CanonicalStructure.IsCanonical →
+    ∀ (h00 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00)
+      (linear : DiamondIntegral.Section2.GammaPiecewiseRationalAffineInput) {κ : Cardinal.{0}}
+      (hκ : LE.le.{1} Cardinal.aleph0.{0} κ) (hs : SpecialTransformations.Section3.Saturated M κ)
+      (B : SpecialTransformations.Section3.GammaParameters.Base) (hr : LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ)
+      (hγ : LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) κ) (hΓ : DiamondIntegral.Section2.NontrivialDefinableGamma B)
+      (p : DiamondIntegral.Section4.ApprovedT001Presentation.Ordinary B) (k l : DiamondIntegral.Section4.EulerKind),
+      Eq.{1} (DiamondIntegral.Section4.RVT001OrdinaryDescent.boundedEvaluation h00 linear hκ hs B hr hγ hΓ p k)
+        (DiamondIntegral.Section4.RVT001OrdinaryDescent.boundedEvaluation h00 linear hκ hs B hr hγ hΓ p l) :=
+⋯
+'DiamondIntegral.Section4.RVBoundedDecomposition.boundedEvaluation_independent_kind' depends on axioms: [propext,
+ Classical.choice.{u},
+ Quot.sound.{u}]
+theorem DiamondIntegral.Section4.RVBoundedDecomposition.boundedEvaluation_geometric_eq_bounded : ∀ {M : Type}
+  [inst : FirstOrder.Language.Structure.{0, 0, 0} SpecialTransformations.Milestone0.LRV M]
+  [inst_1 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF],
+  CanonicalStructure.IsCanonical →
+    ∀ (h00 : FirstOrder.Language.Theory.Model.{0, 0, 0} M SpecialTransformations.Milestone0.Axioms.ACVF00)
+      (linear : DiamondIntegral.Section2.GammaPiecewiseRationalAffineInput) {κ : Cardinal.{0}}
+      (hκ : LE.le.{1} Cardinal.aleph0.{0} κ) (hs : SpecialTransformations.Section3.Saturated M κ)
+      (B : SpecialTransformations.Section3.GammaParameters.Base) (hr : LT.lt.{1} (Cardinal.mk.{0} ↑B.real) κ)
+      (hγ : LT.lt.{1} (Cardinal.mk.{0} ↑B.gamma) κ) (hΓ : DiamondIntegral.Section2.NontrivialDefinableGamma B)
+      (p : DiamondIntegral.Section4.ApprovedT001Presentation.Ordinary B),
+      Eq.{1}
+        (DiamondIntegral.Section4.RVT001OrdinaryDescent.boundedEvaluation h00 linear hκ hs B hr hγ hΓ p
+          DiamondIntegral.Section4.EulerKind.geometric)
+        (DiamondIntegral.Section4.RVT001OrdinaryDescent.boundedEvaluation h00 linear hκ hs B hr hγ hΓ p
+          DiamondIntegral.Section4.EulerKind.bounded) :=
+⋯
+'DiamondIntegral.Section4.RVBoundedDecomposition.boundedEvaluation_geometric_eq_bounded' depends on axioms: [propext,
  Classical.choice.{u},
  Quot.sound.{u}]
 def DiamondIntegral.Section2.GammaPiecewiseRationalAffineInput : {M : Type} →
