@@ -166,6 +166,9 @@ import «section 7».LiftProducts
 import «section 7».Corollary727
 import «section 7».Corollary727Rings
 import «section 7».Lemma712Objects
+import «section 7».Lemma711PartialClass
+import «section 7».Lemma711PartialSteps
+import «section 7».Lemma711Partial
 
 /-! Entry point for the Section 7 formalization (integrating proper invariant
 sets), following the adopted manuscript with bounded variable apertures. -/
