@@ -366,4 +366,315 @@ theorem swapInput (H : BalancedShearInput X ε t t₁)
 
 end Swap
 
+/-! ### The label families of first and second projections -/
+
+section Families
+
+variable {S : Set M} {q : ℕ}
+variable {X : DefSet (rawMixedSpace (M := M) 2 q) S}
+variable {ε : (Fin q → RVInfinity M) → VF M → VF M} {t : (Fin q → RVInfinity M) → RV M}
+variable {t₁ : (Fin q → RVInfinity M) → RVInfinity M}
+
+/-- The family `A₁ = {(a, u) : a ∈ first(X_u)}` of first projections. -/
+def firstFamily (X : DefSet (rawMixedSpace (M := M) 2 q) S) : DefSet (rawMixedSpace (M := M) 1 q) S :=
+  (vfDropLast X).image
+
+/-- The family `A₂ = {(b, u) : b ∈ second(X_u)}` of second projections. -/
+def secondFamily (X : DefSet (rawMixedSpace (M := M) 2 q) S) : DefSet (rawMixedSpace (M := M) 1 q) S :=
+  (vfDropLast (reindexedVFSet X (Equiv.swap 0 1))).image
+
+omit [M ⊨ Axioms.ACVF] in
+theorem fin_one_fun_eq {α : Type} (a : Fin 1 → α) : (fun _ : Fin 1 => a 0) = a := by
+  funext i
+  rw [Fin.fin_one_eq_zero i]
+
+omit [M ⊨ Axioms.ACVF] in
+theorem mem_firstFamily (a : Fin 1 → VF M) (u : Fin q → RVInfinity M) :
+    (a, u) ∈ (firstFamily X).carrier ↔ a 0 ∈ first (cell X u) := by
+  constructor
+  · rintro ⟨p, hp⟩
+    have h1 : Fin.init p.val.1 = a := congrArg Prod.fst hp
+    have h2 : p.val.2 = u := congrArg Prod.snd hp
+    have hp' : (p.val.1, u) ∈ X.carrier := h2 ▸ p.property
+    rw [← h1]
+    exact BalancedShearInput.base_mem_first hp'
+  · rintro ⟨⟨x, y⟩, hxy, hx⟩
+    refine ⟨⟨(![x, y], u), hxy⟩, ?_⟩
+    change (Fin.init ![x, y], u) = (a, u)
+    refine Prod.ext ?_ rfl
+    funext i
+    rw [Fin.fin_one_eq_zero i]
+    exact hx
+
+theorem mem_secondFamily (b : Fin 1 → VF M) (u : Fin q → RVInfinity M) :
+    (b, u) ∈ (secondFamily X).carrier ↔ b 0 ∈ second (cell X u) := by
+  constructor
+  · rintro ⟨p, hp⟩
+    have h1 : Fin.init p.val.1 = b := congrArg Prod.fst hp
+    have h2 : p.val.2 = u := congrArg Prod.snd hp
+    have hp' : (![p.val.1 0, p.val.1 1], u) ∈ (reindexedVFSet X (Equiv.swap 0 1)).carrier := by
+      rw [vec_two, ← h2]
+      exact p.property
+    rw [mem_reindexed_swap] at hp'
+    rw [← h1]
+    exact ⟨(p.val.1 1, p.val.1 0), hp', rfl⟩
+  · rintro ⟨⟨x, y⟩, hxy, hy⟩
+    refine ⟨⟨(![y, x], u), (mem_reindexed_swap y x u).mpr hxy⟩, ?_⟩
+    change (Fin.init ![y, x], u) = (b, u)
+    refine Prod.ext ?_ rfl
+    funext i
+    rw [Fin.fin_one_eq_zero i]
+    exact hy
+
+theorem firstFamily_properInvariant (H : BalancedShearInput X ε t t₁) :
+    ProperInvariant S (firstFamily X).carrier :=
+  vfDropLast_image_properInvariant H.proper
+
+theorem secondFamily_properInvariant (H : BalancedShearInput X ε t t₁) :
+    ProperInvariant S (secondFamily X).carrier :=
+  vfDropLast_image_properInvariant (reindexedVFSet_properInvariant X _ H.proper)
+
+omit [M ⊨ Axioms.ACVF] in
+theorem cell_nonempty_of_first {u : Fin q → RVInfinity M} {a : VF M} (ha : a ∈ first (cell X u)) :
+    (cell X u).Nonempty := by
+  obtain ⟨p, hp, _⟩ := ha
+  exact ⟨p, hp⟩
+
+theorem focus_mem_second (H : BalancedShearInput X ε t t₁) {u : Fin q → RVInfinity M} {a : VF M}
+    (ha : a ∈ first (cell X u)) : ε u a ∈ second (cell X u) :=
+  (H.balanced u (cell_nonempty_of_first ha)).bijective.mapsTo ha
+
+/-- **The positioning map of the family**, `(a, u) ↦ (ε(u, a), u)`. -/
+def positionMap (H : BalancedShearInput X ε t t₁) : Map (firstFamily X) (secondFamily X) where
+  toFun p := ⟨(fun _ => ε p.val.2 (p.val.1 0), p.val.2),
+    (mem_secondFamily _ _).mpr (focus_mem_second H ((mem_firstFamily _ _).mp p.property))⟩
+  graph_definable := by
+    let P := rawMixedSpace (M := M) 1 q
+    let ρ : Fin (2 + q) → P.Index ⊕ P.Index :=
+      Fin.append ![Sum.inl (Sum.inl (0 : Fin 1)), Sum.inr (Sum.inl (0 : Fin 1))] (fun j => Sum.inl (Sum.inr j))
+    have hA : S.Definable LRV (P.preimage (firstFamily X).carrier) := (firstFamily X).definable
+    have hL : S.Definable LRV {z : P.Index ⊕ P.Index → M |
+        ∀ j : Fin q, z (Sum.inr (Sum.inr j)) = z (Sum.inl (Sum.inr j))} := by
+      have h := Set.definable_iInter_of_finite (fun j : Fin q =>
+        (Set.DefinableFun.proj LRV (A := S) (i := (Sum.inr (Sum.inr j) : P.Index ⊕ P.Index))).ofPred_eq
+          (Set.DefinableFun.proj LRV (i := (Sum.inl (Sum.inr j) : P.Index ⊕ P.Index))))
+      convert h using 1
+      ext z
+      simp only [Set.mem_iInter, Set.mem_ofPred_eq]
+    have h := ((hA.preimage_comp (Sum.inl : P.Index → P.Index ⊕ P.Index)).inter
+      (H.focusGraph.preimage_comp ρ)).inter hL
+    change S.Definable LRV (P.relation P _)
+    convert h using 1
+    ext z
+    constructor
+    · rintro ⟨hx, hy, a, ha, hay⟩
+      have hcx : mixedValues (P.decode ⟨z ∘ Sum.inl, hx⟩) = z ∘ Sum.inl := mixedValues_decode ⟨_, hx⟩
+      have hcy : mixedValues (P.decode ⟨z ∘ Sum.inr, hy⟩) = z ∘ Sum.inr := mixedValues_decode ⟨_, hy⟩
+      have hxA : P.decode ⟨z ∘ Sum.inl, hx⟩ ∈ (firstFamily X).carrier := ha ▸ a.property
+      have hay' : ((fun _ : Fin 1 => ε (P.decode ⟨z ∘ Sum.inl, hx⟩).2 ((P.decode ⟨z ∘ Sum.inl, hx⟩).1 0)),
+          (P.decode ⟨z ∘ Sum.inl, hx⟩).2) = P.decode ⟨z ∘ Sum.inr, hy⟩ := by
+        rw [← ha]
+        exact hay
+      rw [← hay'] at hcy
+      obtain ⟨⟨x₀, y₀⟩, hxy, hx₀⟩ := (mem_firstFamily _ _).mp hxA
+      refine ⟨⟨⟨hx, hxA⟩, (P.decode ⟨z ∘ Sum.inl, hx⟩).2, (P.decode ⟨z ∘ Sum.inl, hx⟩).1 0,
+        ⟨y₀, ?_⟩, ?_⟩, ?_⟩
+      · have hx₀' : x₀ = (P.decode ⟨z ∘ Sum.inl, hx⟩).1 0 := hx₀
+        have hxy' : (![x₀, y₀], (P.decode ⟨z ∘ Sum.inl, hx⟩).2) ∈ X.carrier := hxy
+        subst hx₀'
+        exact hxy'
+      · funext i
+        refine Fin.addCases (fun j => ?_) (fun j => ?_) i
+        · fin_cases j
+          · simp only [ρ, Function.comp_apply, Fin.append_left]
+            exact (congrFun hcx (Sum.inl 0)).symm
+          · simp only [ρ, Function.comp_apply, Fin.append_left]
+            exact (congrFun hcy (Sum.inl 0)).symm
+        · simp only [ρ, Function.comp_apply, Fin.append_right]
+          exact (congrFun hcx (Sum.inr j)).symm
+      · intro j
+        exact (congrFun hcy (Sum.inr j)).symm.trans (congrFun hcx (Sum.inr j))
+    · rintro ⟨⟨⟨hx, hxA⟩, u, a₀, ⟨y₀, _⟩, hz⟩, hlab⟩
+      have hcx : mixedValues (P.decode ⟨z ∘ Sum.inl, hx⟩) = z ∘ Sum.inl := mixedValues_decode ⟨_, hx⟩
+      have hz0 := congrFun hz (Fin.castAdd q 0)
+      have hz1 := congrFun hz (Fin.castAdd q 1)
+      simp only [ρ, Function.comp_apply, Fin.append_left, Matrix.cons_val_zero, Matrix.cons_val_one] at hz0 hz1
+      have hb0 : (P.decode ⟨z ∘ Sum.inl, hx⟩).1 0 = a₀ :=
+        Subtype.ext ((congrFun hcx (Sum.inl 0)).trans hz0)
+      have hbu : (P.decode ⟨z ∘ Sum.inl, hx⟩).2 = u := by
+        funext j
+        apply Subtype.ext
+        have hzj := congrFun hz (Fin.natAdd 2 j)
+        simp only [ρ, Function.comp_apply, Fin.append_right] at hzj
+        exact (congrFun hcx (Sum.inr j)).trans hzj
+      have hy : z ∘ Sum.inr ∈ P.domain := by
+        refine ⟨⟨fun _ => ε u a₀, ?_⟩, ⟨u, ?_⟩⟩
+        · funext i
+          rw [Fin.fin_one_eq_zero i]
+          exact hz1.symm
+        · funext j
+          change (u j).val = z (Sum.inr (Sum.inr j))
+          rw [hlab j, ← hbu]
+          exact congrFun hcx (Sum.inr j)
+      have hcy : mixedValues (P.decode ⟨z ∘ Sum.inr, hy⟩) = z ∘ Sum.inr := mixedValues_decode ⟨_, hy⟩
+      refine ⟨hx, hy, ⟨P.decode ⟨z ∘ Sum.inl, hx⟩, hxA⟩, rfl, ?_⟩
+      apply mixedValues_injective
+      rw [hcy]
+      funext i
+      rcases i with i | j
+      · rw [Fin.fin_one_eq_zero i]
+        change (ε (P.decode ⟨z ∘ Sum.inl, hx⟩).2 ((P.decode ⟨z ∘ Sum.inl, hx⟩).1 0)).val = z (Sum.inr (Sum.inl (0 : Fin 1)))
+        rw [hb0, hbu]
+        exact hz1.symm
+      · change ((P.decode ⟨z ∘ Sum.inl, hx⟩).2 j).val = z (Sum.inr (Sum.inr j))
+        rw [hlab j]
+        exact congrFun hcx (Sum.inr j)
+
+theorem positionMap_apply (H : BalancedShearInput X ε t t₁) (p : firstFamily X) :
+    (positionMap H p).val = (fun _ => ε p.val.2 (p.val.1 0), p.val.2) := rfl
+
+theorem positionMap_bijective (H : BalancedShearInput X ε t t₁) : Function.Bijective (positionMap H) := by
+  constructor
+  · intro p p' he
+    have hval := congrArg Subtype.val he
+    rw [positionMap_apply, positionMap_apply] at hval
+    have hu : p.val.2 = p'.val.2 := (Prod.mk.inj hval).2
+    have hε : ε p.val.2 (p.val.1 0) = ε p'.val.2 (p'.val.1 0) := congrFun (Prod.mk.inj hval).1 0
+    have hp : p.val.1 0 ∈ first (cell X p.val.2) := (mem_firstFamily _ _).mp p.property
+    have hp' : p'.val.1 0 ∈ first (cell X p.val.2) := hu ▸ (mem_firstFamily _ _).mp p'.property
+    rw [← hu] at hε
+    have h0 := (H.balanced p.val.2 (cell_nonempty_of_first hp)).bijective.injOn hp hp' hε
+    apply Subtype.ext
+    apply Prod.ext _ hu
+    rw [← fin_one_fun_eq p.val.1, ← fin_one_fun_eq p'.val.1, h0]
+  · rintro ⟨⟨b, u⟩, hb⟩
+    have hb0 : b 0 ∈ second (cell X u) := (mem_secondFamily _ _).mp hb
+    have hne : (cell X u).Nonempty := by
+      obtain ⟨p, hp, _⟩ := hb0
+      exact ⟨p, hp⟩
+    obtain ⟨a, ha, hab⟩ := (H.balanced u hne).bijective.surjOn hb0
+    refine ⟨⟨(fun _ => a, u), (mem_firstFamily _ _).mpr ha⟩, ?_⟩
+    apply Subtype.ext
+    rw [positionMap_apply]
+    change ((fun _ => ε u a), u) = (b, u)
+    rw [hab, fin_one_fun_eq b]
+
+end Families
+
+/-! ### The positioning map is a proper covariant homeomorphism -/
+
+section Homeomorphism
+
+variable {G : Type} [LinearOrderedCommGroupWithZero G] [Valued (VF M) G]
+variable {S : Set M} {q : ℕ}
+variable {X : DefSet (rawMixedSpace (M := M) 2 q) S}
+variable {ε : (Fin q → RVInfinity M) → VF M → VF M} {t : (Fin q → RVInfinity M) → RV M}
+variable {t₁ : (Fin q → RVInfinity M) → RVInfinity M}
+
+theorem positionMap_graphFibre_iff (H : BalancedShearInput X ε t t₁) (u v : Fin q → RVInfinity M)
+    (a b : Fin 1 → VF M) :
+    graphFibre (positionMap H) u v a b ↔
+      (a, u) ∈ (firstFamily X).carrier ∧ v = u ∧ b = fun _ => ε u (a 0) := by
+  constructor
+  · rintro ⟨p, he, hfp⟩
+    have hfp' : ((fun _ => ε p.val.2 (p.val.1 0)), p.val.2) = (b, v) := hfp
+    rw [he] at hfp'
+    exact ⟨he ▸ p.property, (Prod.mk.inj hfp').2.symm, (Prod.mk.inj hfp').1.symm⟩
+  · rintro ⟨h, hvu, hb⟩
+    exact ⟨⟨(a, u), h⟩, rfl, by rw [hvu, hb]; rfl⟩
+
+/-- The positioning map is continuous on each label fibre: `ε(u, ·)` is
+`rv`-affine on the first projection of the cell. -/
+theorem focus_pair_continuousOn (hv : ∀ x y : VF M, VFValued.predV x y ↔ Valued.v x ≤ Valued.v y)
+    (H : BalancedShearInput X ε t t₁) (u : Fin q → RVInfinity M) :
+    ContinuousOn (fun a : Fin 1 → VF M => fun _ : Fin 1 => ε u (a 0))
+      (vfFibre (firstFamily X).carrier u) := by
+  by_cases hne : (vfFibre (firstFamily X).carrier u).Nonempty
+  · obtain ⟨a₀, ha₀⟩ := hne
+    have hcell : (cell X u).Nonempty := cell_nonempty_of_first ((mem_firstFamily _ _).mp ha₀)
+    obtain ⟨_, _, s, hs⟩ := (H.balanced u hcell).rvAffine
+    let σ := rvRadius s
+    have hσ : σ.val ≠ 0 := fun h => σ.property (h.trans Values.infinity_eq_zero.symm)
+    intro a ha
+    apply (continuousWithinAt_iff_vfBalls hv _ _ a).mpr
+    intro η
+    refine ⟨η * σ⁻¹, fun x hx hxa _ => ?_⟩
+    have h0 : (η * σ⁻¹).val < vfValue (x 0 - a 0) := hxa 0
+    change η.val < vfValue (ε u (x 0) - ε u (a 0))
+    rw [slope_value hs ((mem_firstFamily _ _).mp hx) ((mem_firstFamily _ _).mp ha)]
+    exact gammaTop_lt_mul_iff.mpr h0
+  · rw [Set.not_nonempty_iff_eq_empty.mp hne]
+    exact continuousOn_empty _
+
+theorem positionMap_source_subset (H : BalancedShearInput X ε t t₁) (u v : Fin q → RVInfinity M) :
+    graphFibreSource (positionMap H) u v ⊆ vfFibre (firstFamily X).carrier u := by
+  rintro a ⟨b, hab⟩
+  exact ((positionMap_graphFibre_iff H u v a b).mp hab).1
+
+theorem positionMap_source_eq (H : BalancedShearInput X ε t t₁) (u : Fin q → RVInfinity M) :
+    graphFibreSource (positionMap H) u u = vfFibre (firstFamily X).carrier u := by
+  refine Set.Subset.antisymm (positionMap_source_subset H u u) (fun a ha => ?_)
+  exact ⟨_, (positionMap_graphFibre_iff H u u a _).mpr ⟨ha, rfl, rfl⟩⟩
+
+theorem positionMap_source_empty (H : BalancedShearInput X ε t t₁) {u v : Fin q → RVInfinity M}
+    (huv : v ≠ u) : graphFibreSource (positionMap H) u v = ∅ := by
+  ext a
+  refine ⟨fun ⟨b, hab⟩ => (huv ((positionMap_graphFibre_iff H u v a b).mp hab).2.1).elim, False.elim⟩
+
+theorem positionMap_range_eq (H : BalancedShearInput X ε t t₁) (u : Fin q → RVInfinity M) :
+    graphFibreRange (positionMap H) u u = vfFibre (secondFamily X).carrier u := by
+  ext b
+  constructor
+  · rintro ⟨a, hab⟩
+    obtain ⟨ha, -, rfl⟩ := (positionMap_graphFibre_iff H u u a b).mp hab
+    exact (mem_secondFamily _ _).mpr (focus_mem_second H ((mem_firstFamily _ _).mp ha))
+  · intro hb
+    have hb0 : b 0 ∈ second (cell X u) := (mem_secondFamily _ _).mp hb
+    obtain ⟨p, hp, _⟩ := hb0
+    obtain ⟨a, ha, hab⟩ := (H.balanced u ⟨p, hp⟩).bijective.surjOn ((mem_secondFamily _ _).mp hb)
+    refine ⟨fun _ => a, (positionMap_graphFibre_iff H u u _ b).mpr ⟨(mem_firstFamily _ _).mpr ha, rfl, ?_⟩⟩
+    change b = fun _ => ε u a
+    rw [hab, fin_one_fun_eq b]
+
+theorem positionMap_range_empty (H : BalancedShearInput X ε t t₁) {u v : Fin q → RVInfinity M}
+    (huv : v ≠ u) : graphFibreRange (positionMap H) u v = ∅ := by
+  ext b
+  refine ⟨fun ⟨a, hab⟩ => (huv ((positionMap_graphFibre_iff H u v a b).mp hab).2.1).elim, False.elim⟩
+
+theorem positionMap_continuous (hv : ∀ x y : VF M, VFValued.predV x y ↔ Valued.v x ≤ Valued.v y)
+    (H : BalancedShearInput X ε t t₁) : ContinuousOnGraphFibres (positionMap H) := by
+  intro u v
+  refine ((focus_pair_continuousOn hv H u).mono (positionMap_source_subset H u v)).congr ?_
+  intro a ha
+  exact ((positionMap_graphFibre_iff H u v a _).mp (graphFibreMap_graph _ u v ha)).2.2
+
+/-- **The positioning map `(a, u) ↦ (ε(u, a), u)` is a proper covariant
+homeomorphism** `A₁ → A₂`. -/
+theorem positionMap_home (h00 : M ⊨ Axioms.ACVF00) (hc : CanonicalStructure.IsCanonical (M := M))
+    (linear : GammaPiecewiseRationalAffineInput (M := M))
+    {κ : Cardinal} (hκ : Cardinal.aleph0 < κ) (hs : Saturated M κ)
+    (hv : ∀ x y : VF M, VFValued.predV x y ↔ Valued.v x ≤ Valued.v y)
+    (hsmall : Cardinal.mk S < κ) (hΓ : NontrivialDefinableGamma (⟨S, ∅⟩ : ParameterBase M))
+    (H : BalancedShearInput X ε t t₁) : ProperCovariantHomeomorphism (G := G) (positionMap H) := by
+  have hcont := positionMap_continuous (G := G) hv H
+  refine properHomeomorphism_of_properCovariant h00 hc linear hκ hs hv hsmall hΓ _
+    (properCovariant_of_clopen_ranges h00 hc hκ hs hv _ (firstFamily_properInvariant H)
+      (secondFamily_properInvariant H) hcont ?_ ?_) (positionMap_bijective H) hcont
+  · intro u v
+    by_cases huv : v = u
+    · subst huv
+      rw [positionMap_source_eq]
+      exact ((firstFamily_properInvariant H).clopen_fibres hv v).isOpen
+    · rw [positionMap_source_empty H huv]
+      exact isOpen_empty
+  · intro u v
+    by_cases huv : v = u
+    · subst huv
+      rw [positionMap_range_eq]
+      exact (secondFamily_properInvariant H).clopen_fibres hv v
+    · rw [positionMap_range_empty H huv]
+      exact isClopen_empty
+
+end Homeomorphism
+
 end DiamondIntegral.Section7.BalancedMatching
