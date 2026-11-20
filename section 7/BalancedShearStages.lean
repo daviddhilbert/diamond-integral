@@ -442,7 +442,7 @@ variable {X : DefSet (rawMixedSpace (M := M) 2 q) S}
 variable {ε : (Fin q → RVInfinity M) → VF M → VF M} {t : (Fin q → RVInfinity M) → RV M}
 variable {t₁ : (Fin q → RVInfinity M) → RVInfinity M}
 
-theorem vfValue_sub_comm' (a b : VF M) : vfValue (a - b) = vfValue (b - a) := vfValue_sub_comm a b
+theorem vfValue_sub_comm_rev (a b : VF M) : vfValue (a - b) = vfValue (b - a) := vfValue_sub_comm a b
 
 /-- The focus is continuous on each label fibre: `ε(u, ·)` is `rv`-affine on
 the first projection of the cell (Definition 7.17), so it multiplies
@@ -504,7 +504,7 @@ theorem covariance_at (H : BalancedShearInput X ε t t₁) (R : TranslationRadii
       have hnew : rv M (x - ε u (a 0)) = (t u).val := by
         rw [← hrv]
         apply rv_eq_of_value_close hb0
-        rw [hval, show x - ε u (a 0) - (a 1 - ε u (a 0)) = x - a 1 by abel, vfValue_sub_comm']
+        rw [hval, show x - ε u (a 0) - (a 1 - ε u (a 0)) = x - a 1 by abel, vfValue_sub_comm_rev]
         exact hx
       apply (H.mem_iff ha (Function.update a 1 x)).mpr
       rw [Function.update_self, update_one_zero]

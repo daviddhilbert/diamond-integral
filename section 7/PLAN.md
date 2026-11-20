@@ -527,6 +527,31 @@ intended Lean statement; ⚑ marks a flag that is also listed in §5.
       `γ + vrv(t₁) − vrv(t) = 0`, through `FirstStage.cls_labelObject_eq` and an
       RV relabelling.
 
+  - **Status (2026-11-20).** 7.21 (uniform form), 7.22 and 7.23 for n = 2 are
+    done on the 7.14 and 7.20 inputs (`Lemma723TwoFinal.lemma_7_23_n2`).
+  - **Lean plan for 7.23, n > 2.** The plan mirrors the reduction for 7.15, with
+    head start 2 instead of 1. Orders `σ₂ = σ₁ ∘ τ`, where `τ` swaps the last two
+    positions, so that both contract `{i, j}` first.
+    1. Common normalization: by the independence of the centre, take `F₁`, `F₂`
+       with a common zero-centred normalization `D` (`exists_contraction_with`).
+    2. Two graft steps: `cls F = cls(H, head start 1)` for `H` a contraction of
+       the first-stage set (`cls_graftRest`). Then generalize `cls_graftRest` to
+       head start `k`, and use the centre independence with head start `k`
+       (7.14 with `A' = A''`, labels `π`), to reach `cls(K, head start 2)` for
+       `K` a contraction of the second contracted set `B`.
+    3. The two sets `B₁`, `B₂` have the same VF projection (the E-coordinates of
+       `D(A)` in the common order).
+    4. Lemma 7.14 with head start 2 on `B₁`, `B₂`. Its fibre hypothesis is
+       proved at good points `b`, as in 7.15. There the two stages restrict to the
+       slice (a standard contraction of the 2-dimensional fibre `A_b` over
+       `S⟨b⟩` in each order); apply 7.23 for n = 2 over `S⟨b⟩` (support data via
+       `KernelBaseChange.adjoin_support`). Carry the result to `a` by invariance
+       of the fibre objects and `BaseExtension.Transfer.ofDcl`. This is the
+       analog of `FibreInvariance`, `StageSlices`, `ConjugatedMaps` and
+       `Corollary715Fibres` for two stages.
+    The same fibrewise machinery, for general head start `k`, serves the adjacent
+    swaps with `m ≥ 2` in 7.24.
+
 ### 7.24 Proposition `kernel:L`
 - **Route.**
   - k = 0: both sides are isomorphism.

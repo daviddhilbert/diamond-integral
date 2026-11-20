@@ -105,19 +105,20 @@ arbitrary parameter base and take no input beyond the ACVF model.
   point b over S⟨b⟩ with Lemma 7.13, then carried to S⟨a⟩ (`FibreInvariance`,
   `FibreComparison`, `ConjugatedMaps`, `FibreRestriction`,
   `Corollary715Fibres`; GAP-REPAIRS 12).
-- **Lemmas 7.21–7.23 (2026-11-19, in progress).**
-  - 7.21 for product cells done (`ProductCells`, `ProductKinds`); for balanced
-    cells the translation stage (`BalancedShearStages`) and its input on the
-    balanced piece (`BalancedKinds`) are done, the 6.38 matching and the class
-    comparison through ψ are being built.
+- **Lemmas 7.21–7.23 (2026-11-19).**
+  - 7.21 done in the uniform form 7.22 needs: product cells (`ProductCells`,
+    `ProductKinds`) and balanced cells (`BalancedShearStages`, `BalancedKinds`,
+    `BalancedMatching`, `BalancedOrders`, `BalancedPiece`).
   - 7.22 on `A*` (`Lemma723Two.lemma_7_22`) and 7.23 for n = 2
-    (`Lemma723Two.lemma_7_23_two`) are assembled on the 7.14 and 7.20 inputs,
-    with the balanced case of 7.21 as a named hypothesis. Tools: grafted objects
-    and graft morphisms (`GraftObjects`), restriction of contractions to label
-    pieces with additive classes (`RestrictContractions`), the normalization
-    comparison (`NormalizationComparison`), two-stage contractions
-    (`TwoStageContractions`), relabelled head-start classes (`RelabelClasses`).
+    (`Lemma723TwoFinal.lemma_7_23_n2`) are done on the 7.14 and 7.20 inputs.
+    Tools: grafted objects and graft morphisms (`GraftObjects`), restriction of
+    contractions to label pieces with additive classes (`RestrictContractions`),
+    the normalization comparison (`NormalizationComparison`), two-stage
+    contractions (`TwoStageContractions`), head-start classes along relabellings
+    and bijections of RV targets (`RelabelClasses`, `MapClasses`).
   - Formal reading of 7.22: GAP-REPAIRS 14.
+  - Pending: 7.23 for n > 2 (contract {i, j} first; the case n = 2 over
+    `S⟨a⟩`; Lemma 7.14 with head start 2).
 - Remark 7.28 done (`Remark728.remark_7_28`, `remark_7_28_zero`), with the
   bridges the author approved on 2026-11-19: strong homogeneity (from the
   Section 3 ground context), the forgetful map to Section 3's VF classes, and
@@ -129,6 +130,6 @@ arbitrary parameter base and take no input beyond the ACVF model.
 
 ## Next
 
-7.21–7.23 on the 7.14 and 7.20 inputs, then 7.24–7.27, as in PLAN.md (7.23 and
+7.23 for n > 2 on the 7.14 and 7.20 inputs, then 7.24–7.27, as in PLAN.md (7.23 and
 7.24 can reuse the 7.15 modules). Product compatibility (7.10) and the object-level converse for
 Definition 7.2 remain open side items.
