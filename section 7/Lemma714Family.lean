@@ -184,4 +184,99 @@ theorem famSchema_volRow (a : Fin m → VF M) (t : Fin r → RVInfinity M) (ht :
 
 end Rows
 
+/-! ### The fibre objects -/
+
+section Fibres
+variable {T : LRV.Substructure M} (A : DefSet (rawMixedSpace (M := M) m r) (T : Set M))
+  (ω : Map A (DefSet.univ (rawGammaPresentation (M := M)) (T : Set M))) (π : Fin k → Fin r) (a : Fin m → VF M)
+  (hFin : ∀ t : Fin k → RVInfinity M, {u : Fin r → RVInfinity M | (a, u) ∈ A.carrier ∧ u ∘ π = t}.Finite)
+  (hNZ : ∀ p ∈ A.carrier, ∀ i, (p.2 (π i)).val ≠ iRVZero)
+
+theorem fibre_mem_domain (t : Fin r → RVInfinity M) :
+    t ∈ (fibreObject T A ω a π hFin hNZ).object.domain.carrier ↔ (a, t) ∈ A.carrier :=
+  mem_fibreDomain A a t
+
+theorem fibre_rawDom :
+    rawDom (fibreObject T A ω a π hFin hNZ) = {u | ∃ t, (a, t) ∈ A.carrier ∧ rvValues t = u} := by
+  ext u
+  constructor
+  · rintro ⟨t, ht, rfl⟩
+    exact ⟨t, (fibre_mem_domain A ω π a hFin hNZ t).mp ht, rfl⟩
+  · rintro ⟨t, ht, rfl⟩
+    exact ⟨t, (fibre_mem_domain A ω π a hFin hNZ t).mpr ht, rfl⟩
+
+theorem fibre_rawCoord (t : Fin r → RVInfinity M) (ht : (a, t) ∈ A.carrier) :
+    rawCoord (fibreObject T A ω a π hFin hNZ) (rvValues t) = fun i => rvValues t (π i) := by
+  have h := rawCoord_of (fibreObject T A ω a π hFin hNZ) ⟨t, (fibre_mem_domain A ω π a hFin hNZ t).mpr ht⟩
+  rw [h]
+  rfl
+
+theorem fibre_rawVol (t : Fin r → RVInfinity M) (ht : (a, t) ∈ A.carrier) :
+    rawVol (fibreObject T A ω a π hFin hNZ) (rvValues t) = (ω ⟨(a, t), ht⟩).val := by
+  have h := rawVol_of (fibreObject T A ω a π hFin hNZ) ⟨t, (fibre_mem_domain A ω π a hFin hNZ t).mpr ht⟩
+  rw [h]
+  exact fibreForm_apply A ω a t ht
+
+end Fibres
+
+/-! ### Validity of the family -/
+
+section Valid
+variable {T : LRV.Substructure M} (A : DefSet (rawMixedSpace (M := M) m r) (T : Set M))
+  (ω : Map A (DefSet.univ (rawGammaPresentation (M := M)) (T : Set M))) (π : Fin k → Fin r) (N : ℕ)
+  (a : Fin m → VF M)
+
+theorem famSchema_volRow_row {u : Fin r → M} {c : M} (h : (famSchema hc A ω π N).volRow (vfValues a) u c) :
+    u ∈ (famSchema hc A ω π N).row (vfValues a) := by
+  change Fin.append (Fin.append (vfValues a) u) (fun _ : Fin 1 => c) ∘ famVolIdx m r ∈
+    mixedGammaGraph A.carrier (gammaFormExtension ω) at h
+  obtain ⟨-, x, hx, he, -⟩ := h
+  have h1 : (Fin.append (Fin.append (vfValues a) u) (fun _ : Fin 1 => c) ∘ famVolIdx m r) ∘ Sum.inl =
+      Fin.append (vfValues a) u := by
+    funext i; simp [famVolIdx]
+  rw [h1] at he
+  exact ⟨x, hx, he⟩
+
+theorem famSchema_valid (hFin : ∀ t : Fin k → RVInfinity M, {u : Fin r → RVInfinity M | (a, u) ∈ A.carrier ∧ u ∘ π = t}.Finite)
+    (hNZ : ∀ p ∈ A.carrier, ∀ i, (p.2 (π i)).val ≠ iRVZero)
+    (hN : ∀ y : Fin k → M, (∀ j, sortEval SortTag.rv (y j)) →
+      {u | (famSchema hc A ω π N).coordRow (vfValues a) u y}.ncard ≤ N)
+    (hU : (fibreObject T A ω a π hFin hNZ).doublyBounded) :
+    (famSchema hc A ω π N).Valid (vfValues a) := by
+  let W := famSchema hc A ω π N
+  refine ⟨⟨fun i => (a i).property, fun u hu => ?_, fun u y h => ?_, fun y hy => ?_⟩, fun u y h => ?_,
+    fun u hu => ?_, fun u c h => ⟨famSchema_volRow_row hc A ω π N a h, ?_⟩, fun u c c' h _ hc' => ?_, ?_⟩
+  · exact ⟨fun i => u (π i), (famSchema_coordRow hc A ω π N a u _).mpr ⟨hu, rfl⟩,
+      fun y h => ((famSchema_coordRow hc A ω π N a u y).mp h).2⟩
+  · exact ((famSchema_coordRow hc A ω π N a u y).mp h).1
+  · refine ⟨?_, hN y hy⟩
+    let t' : Fin k → RVInfinity M := fun j => ⟨y j, hy j⟩
+    apply ((hFin t').image rvValues).subset
+    intro u hu
+    obtain ⟨hu', rfl⟩ := (famSchema_coordRow hc A ω π N a u y).mp hu
+    obtain ⟨t, ht, rfl⟩ := (famSchema_mem_row hc A ω π N a u).mp hu'
+    exact ⟨t, ⟨ht, funext fun j => Subtype.ext rfl⟩, rfl⟩
+  · obtain ⟨hu, rfl⟩ := (famSchema_coordRow hc A ω π N a u y).mp h
+    obtain ⟨t, ht, rfl⟩ := (famSchema_mem_row hc A ω π N a u).mp hu
+    intro i
+    exact ⟨(t (π i)).property, hNZ _ ht i⟩
+  · obtain ⟨t, ht, rfl⟩ := (famSchema_mem_row hc A ω π N a u).mp hu
+    exact ⟨_, (famSchema_volRow hc A ω π N a t ht _).mpr ⟨ChartSchema.nonzero_raw _,
+      ChartSchema.codeValue_raw_representative _⟩⟩
+  · obtain ⟨t, ht, rfl⟩ := (famSchema_mem_row hc A ω π N a u).mp (famSchema_volRow_row hc A ω π N a h)
+    exact ((famSchema_volRow hc A ω π N a t ht c).mp h).1
+  · obtain ⟨t, ht, rfl⟩ := (famSchema_mem_row hc A ω π N a u).mp (famSchema_volRow_row hc A ω π N a h)
+    have h1 := ((famSchema_volRow hc A ω π N a t ht c).mp h).2
+    rw [famSchema_volRow hc A ω π N a t ht c', h1]
+    exact ⟨fun h2 => h2.2, fun h2 => ⟨hc', h2⟩⟩
+  · obtain ⟨β, hβ⟩ := chartOf_bounded hc (fibreObject T A ω a π hFin hNZ) hU
+    refine ⟨β⁻¹, β, fun u hu i hi => hβ u ?_ i hi⟩
+    have h := (famSchema_mem_row hc A ω π N a u).mp hu
+    have e := fibre_rawDom A ω π a hFin hNZ
+    show u ∈ rawDom (fibreObject T A ω a π hFin hNZ)
+    rw [e]
+    exact h
+
+end Valid
+
 end DiamondIntegral.Section7.Lemma714Schema
