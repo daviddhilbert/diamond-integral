@@ -461,6 +461,43 @@ def indIso : Iso (Q.indChart X hX) (Q.indChart Y hY) :=
 
 end IndIsoGraph
 
+/-! ### Indexed restrictions are pieces -/
+
+section IndRestrict
+open RVChartDisjointUnion RVChartRestrictions
+variable {d : ℕ} {X : ChartSchema B (rvs q) d} (hX : ∀ x ∈ Q.carrier, X.Valid x)
+  {P : Set (Fin (q + X.arity) → M)} (hP : DefinableOverBase B (Fin.append (rvs q) (rvs X.arity)) P)
+
+include hX in
+theorem indRestrict_valid : ∀ x ∈ Q.carrier, (X.restrict P hP).Valid x := fun x hx => (hX x hx).restrict
+
+theorem indDom_restrict : Q.indDom (X.restrict P hP) = Q.indDom X ∩ P := by
+  ext w
+  simp only [indDom, ChartSchema.restrict, Set.mem_setOf_eq, Set.mem_inter_iff]
+  tauto
+
+/-- The indexed chart of a restriction is the corresponding piece of the
+indexed chart, by the identity map. -/
+def indRestrictIso :
+    Iso (Q.indChart (X.restrict P hP) (Q.indRestrict_valid hX hP))
+      (inside (ofChart (Q.indChart X hX)) P (definable_rvs_of_append hP)).toChart :=
+  isoOfMap _ _ (fun w => w)
+    (RVCoordinateMaps.coordinate_graph_definable B _ (Q.indDom_definable (X.restrict P hP))
+      (id : Fin (q + X.arity) → Fin (q + X.arity)))
+    (by
+      change Set.BijOn (fun w => w) (Q.indDom (X.restrict P hP)) (Q.indDom X ∩ P)
+      rw [indDom_restrict]
+      exact Set.bijOn_id _)
+    (by
+      intro w hw
+      change (Q.indChart (X.restrict P hP) _).correctedWeight w = (Q.indChart X hX).correctedWeight w
+      rw [indChart_weight, indChart_weight]
+      congr 1
+      apply ChartSchema.restrict_weightAt (hX _ (Q.indDom_key hw))
+      exact Q.indDom_row hw)
+
+end IndRestrict
+
 end KeySet
 
 end DiamondIntegral.Section7.Lemma714Schema
