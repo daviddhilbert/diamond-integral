@@ -2,6 +2,7 @@ import «section 7».MorphismClasses
 import «section 7».BlowupLiftGeneral
 import «section 7».Corollary715Moves
 import «section 7».ScissorClasses
+import «section 7».TautologicalLifts
 
 /-! Proposition 7.24 (`kernel:L`) in positive degree, through an invariant of
 the scissor presentation of `K₊ μVF^◇[n + 1]`.
@@ -44,6 +45,7 @@ open DiamondIntegral.Section7.IntermediateFormsInput DiamondIntegral.Section7.Mo
 open DiamondIntegral.Section7.LiftClasses DiamondIntegral.Section7.PieceCombination
 open DiamondIntegral.Section7.Corollary715 DiamondIntegral.Section7.FiberwiseInput
 open DiamondIntegral.Section7.BoundedClasses DiamondIntegral.Section7.ChartOfMeasured
+open DiamondIntegral.Section7.BlowupCongruence
 
 variable {M : Type} [LRV.Structure M] [M ⊨ Axioms.ACVF]
 
@@ -117,6 +119,11 @@ def TautHyp : Prop :=
       (liftObject (dbObj hc h00 hκ hs T hsmall hΓ a).1
         (measuredRVLift_properInvariant h00 hc hκ hs hv _ (dbObj hc h00 hκ hs T hsmall hΓ a).2)).form e),
     IspRel (clsOf h00 hc hκ hs hv hsmall hΓ _ F) (cls a)
+
+include V hV hVT hTV hnt in
+/-- `TautHyp` holds (`TautologicalLifts.ispRel_chart`). -/
+theorem tautHyp : TautHyp (G := G) h00 hc hκ hs hv hsmall hΓ := fun _ a _ F =>
+  TautologicalLifts.ispRel_chart h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ a _ F
 
 end Hypotheses
 
@@ -228,86 +235,107 @@ end Invariant
 
 section Proposition
 variable (B₀ : VFGeneratedFieldBase T) (hntB : ∃ x : B₀.field, x ≠ 0 ∧ Valued.v x.val ≠ 1)
-variable (hIF : IntermediateForms M G) (hMove : MoveHyp (G := G) h00 hc hκ hs hv hsmall hΓ)
-variable (hScissor : ScissorHyp (G := G) h00 hc hκ hs hv hsmall hΓ)
-variable (hTaut : TautHyp (G := G) h00 hc hκ hs hv hsmall hΓ)
+variable (hIF : IntermediateForms M G)
 variable {n : ℕ}
 
-include hTaut in
+/-- **The bounded integral** `∫⁺ : K₊ μVF^◇[n + 1] → K₊ μRV^db[n + 1] / μIsp^db`, on the
+intermediate-forms input only. -/
+abbrev integralOf : KPlus (T : Set M) G hc (n + 1) →+ IspQuot (BT T) n :=
+  integral h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ hIF (moveHyp h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ)
+    (scissorHyp h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ)
+
 /-- **`∫⁺ μ𝕃 = id`**: the integral of the lift of a class is the class, modulo
 `μIsp^db` (the tautological contraction). -/
 theorem integral_liftCls (x : Cls (BT T) (n + 1)) :
-    integral h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ hIF hMove hScissor
+    integralOf h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ hIF
         (liftCls (G := G) (k := n + 1) hc h00 hκ hs T hsmall hΓ hv B₀ hntB x) =
       (ispCon (BT T) n).mk' x := by
   obtain ⟨a, rfl⟩ := cls_surjective x
   rw [liftCls_cls, integral_vfClass]
   unfold contractionClass
-  exact (ispCon_mk_eq _ _).mpr (hTaut n a 1 _)
+  exact (ispCon_mk_eq _ _).mpr (tautHyp h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ n a 1 _)
 
 theorem liftCls_cast_iff {a b : ℕ} (h : a = b) (f : ∀ k, Cls (BT T) k → KPlus (T : Set M) G hc k)
     (x y : Cls (BT T) a) : f a x = f a y ↔ f b (castCls h x) = f b (castCls h y) := by
   subst h
   rfl
 
-include hIF hTaut in
+include hntB in
+/-- Support data for `T` from its VF-generated field base. -/
+theorem support_of_base :
+    (∀ x ∈ vfFieldNames B₀.field ∪ Set.range (vfValues (Fin.elim0 : Fin 0 → VF M)), iVF x) ∧
+      vfFieldNames B₀.field ∪ Set.range (vfValues (Fin.elim0 : Fin 0 → VF M)) ⊆ (T : Set M) ∧
+      (T : Set M) ⊆ algebraicClosureSet (vfFieldNames B₀.field ∪ Set.range (vfValues (Fin.elim0 : Fin 0 → VF M))) ∧
+      ∃ x : vfAlgebraicClosureField (vfFieldNames B₀.field ∪ Set.range (vfValues (Fin.elim0 : Fin 0 → VF M))),
+        x ≠ 0 ∧ Valued.v x.val ≠ 1 := by
+  obtain ⟨hV, hVT, hTV, hnt⟩ := VFGeneratedFieldBase.parameter_core Valued.v T B₀ hntB (Fin.elim0 : Fin 0 → VF M)
+  refine ⟨hV, fun z hz => ?_, fun z hz => hTV (Or.inl hz), hnt⟩
+  rcases hVT hz with h | ⟨i, -⟩
+  · exact h
+  · exact i.elim0
+
+include hIF in
 /-- **Proposition 7.24 (`kernel:L`), degree `n + 1`.** For classes `x`, `y` of
 `μRV^db[n + 1]`: `μ𝕃 x = μ𝕃 y` in `K₊ μVF^◇[n + 1]` if and only if
-`(x, y) ∈ μIsp^db`. On the hypotheses `hIF` (intermediate forms) and `hTaut`. -/
+`(x, y) ∈ μIsp^db`. On the intermediate-forms input `hIF` only. -/
 theorem proposition_7_24 (x y : Cls (BT T) (n + 1)) :
     liftCls (G := G) (k := n + 1) hc h00 hκ hs T hsmall hΓ hv B₀ hntB x =
         liftCls (G := G) (k := n + 1) hc h00 hκ hs T hsmall hΓ hv B₀ hntB y ↔ IspRel x y := by
-  obtain ⟨hV, hVT, hTV, hnt⟩ := VFGeneratedFieldBase.parameter_core Valued.v T B₀ hntB (Fin.elim0 : Fin 0 → VF M)
-  have hVT' : vfFieldNames B₀.field ∪ Set.range (vfValues (Fin.elim0 : Fin 0 → VF M)) ⊆ (T : Set M) := by
-    intro z hz
-    rcases hVT hz with h | ⟨i, -⟩
-    · exact h
-    · exact i.elim0
-  have hTV' : (T : Set M) ⊆ algebraicClosureSet
-      (vfFieldNames B₀.field ∪ Set.range (vfValues (Fin.elim0 : Fin 0 → VF M))) :=
-    fun z hz => hTV (Or.inl hz)
+  obtain ⟨hV, hVT, hTV, hnt⟩ := support_of_base B₀ hntB
   constructor
   · intro h
     apply (ispCon_mk_eq (BT T) n).mp
-    have hMove := moveHyp h00 hc hκ hs hv _ hV hVT' hTV' hnt hsmall hΓ
-    have hScissor := scissorHyp h00 hc hκ hs hv _ hV hVT' hTV' hnt hsmall hΓ
-    rw [← integral_liftCls h00 hc hκ hs hv _ hV hVT' hTV' hnt hsmall hΓ B₀ hntB hIF hMove hScissor hTaut x, h,
-      integral_liftCls h00 hc hκ hs hv _ hV hVT' hTV' hnt hsmall hΓ B₀ hntB hIF hMove hScissor hTaut y]
+    rw [← integral_liftCls h00 hc hκ hs hv _ hV hVT hTV hnt hsmall hΓ B₀ hntB hIF x, h,
+      integral_liftCls h00 hc hκ hs hv _ hV hVT hTV hnt hsmall hΓ B₀ hntB hIF y]
   · intro h
     rw [ispRel_iff (show n + 1 = 1 + n by omega)] at h
     exact (liftCls_cast_iff hc (show n + 1 = 1 + n by omega)
       (fun k => liftCls (G := G) (k := k) hc h00 hκ hs T hsmall hΓ hv B₀ hntB) x y).mpr
       (BlowupLiftGeneral.muIsp_lift hc h00 hκ hs T hsmall hΓ hv B₀ hntB h)
 
+include hIF in
+/-- Proposition 7.24 in the notation of the "if" direction: degree `1 + k`, with
+`μIsp^db` as `MuIsp`. -/
+theorem proposition_7_24_muIsp {k : ℕ} (x y : Cls (BT T) (1 + k)) :
+    liftCls (G := G) (k := 1 + k) hc h00 hκ hs T hsmall hΓ hv B₀ hntB x =
+        liftCls (G := G) (k := 1 + k) hc h00 hκ hs T hsmall hΓ hv B₀ hntB y ↔ MuIsp x y := by
+  have e := liftCls_cast_iff hc (show 1 + k = k + 1 by omega)
+    (fun k => liftCls (G := G) (k := k) hc h00 hκ hs T hsmall hΓ hv B₀ hntB) x y
+  rw [e, proposition_7_24 h00 hc hκ hs hv hsmall hΓ B₀ hntB hIF, ispRel_iff (show k + 1 = 1 + k by omega),
+    castCls_castCls, castCls_castCls]
+
 /-! ### Theorem 7.26, the semigroup isomorphism in positive degree -/
 
-include hIF hMove hScissor hTaut B₀ hntB in
+include hIF B₀ hntB in
 /-- **Theorem 7.26 (`main:prop`), semigroup part, degree `n + 1`.** The
 integral `∫⁺ : K₊ μVF^◇[n + 1] → K₊ μRV^db[n + 1] / μIsp^db` is bijective: it is
 the inverse of the map induced by `μ𝕃`, which is surjective (Corollary 6.37)
 and injective (Proposition 7.24). -/
 theorem integral_bijective :
-    Function.Bijective (integral h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ hIF hMove hScissor (n := n)) := by
+    Function.Bijective (integralOf h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ hIF (n := n)) := by
   constructor
   · intro a b hab
     obtain ⟨x, rfl⟩ := ChartOfMeasured.liftCls_surjective hc (G := G) h00 hκ hs T hsmall hΓ hv B₀ hntB a
     obtain ⟨y, rfl⟩ := ChartOfMeasured.liftCls_surjective hc (G := G) h00 hκ hs T hsmall hΓ hv B₀ hntB b
-    rw [integral_liftCls h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ B₀ hntB hIF hMove hScissor hTaut,
-      integral_liftCls h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ B₀ hntB hIF hMove hScissor hTaut] at hab
-    exact (proposition_7_24 h00 hc hκ hs hv hsmall hΓ B₀ hntB hIF hTaut x y).mpr
-      ((ispCon_mk_eq _ _).mp hab)
+    rw [integral_liftCls h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ B₀ hntB hIF,
+      integral_liftCls h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ B₀ hntB hIF] at hab
+    exact (proposition_7_24 h00 hc hκ hs hv hsmall hΓ B₀ hntB hIF x y).mpr ((ispCon_mk_eq _ _).mp hab)
   · intro q
     obtain ⟨x, rfl⟩ := AddCon.mk'_surjective (c := ispCon (BT T) n) q
-    exact ⟨_, integral_liftCls h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ B₀ hntB hIF hMove hScissor hTaut x⟩
+    exact ⟨_, integral_liftCls h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ B₀ hntB hIF x⟩
 
-include hIF hMove hScissor hTaut in
+/-- **Theorem 7.26, semigroup isomorphism**: `K₊ μVF^◇[n + 1] ≃+ K₊ μRV^db[n + 1] / μIsp^db`. -/
+noncomputable def integralEquiv : KPlus (T : Set M) G hc (n + 1) ≃+ IspQuot (BT T) n :=
+  AddEquiv.ofBijective (integralOf h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ hIF)
+    (integral_bijective h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ B₀ hntB hIF)
+
 /-- The characterization in Theorem 7.26: `∫⁺ [A] = [U] / μIsp^db` if and only
 if `[A] = [μ𝕃 U]`. -/
 theorem integral_eq_iff (a : KPlus (T : Set M) G hc (n + 1)) (x : Cls (BT T) (n + 1)) :
-    integral h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ hIF hMove hScissor a = (ispCon (BT T) n).mk' x ↔
+    integralOf h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ hIF a = (ispCon (BT T) n).mk' x ↔
       a = liftCls (G := G) (k := n + 1) hc h00 hκ hs T hsmall hΓ hv B₀ hntB x := by
-  rw [← integral_liftCls h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ B₀ hntB hIF hMove hScissor hTaut x]
-  exact (integral_bijective h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ B₀ hntB hIF hMove hScissor hTaut).1.eq_iff
+  rw [← integral_liftCls h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ B₀ hntB hIF x]
+  exact (integral_bijective h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ B₀ hntB hIF).1.eq_iff
 
 end Proposition
 
