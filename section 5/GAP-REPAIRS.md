@@ -112,3 +112,13 @@ extracted into Fubini-theorems at `c94e50c` (source commit `d7117c9`) and
 replaced here by compatibility imports recorded in `EXTRACTED-FOUNDATIONS.json`.
 Fubini-theorems' public contract gained their 629 declarations, with full types
 and axiom lists checked.
+
+## Author decision: the base of Theorem 5.17 / Proposition 5.23 (November 19)
+
+- In Lean, the base of 5.17 and 5.23 is
+  `C : GammaGroundDefSet … (rawMixedSpace p q)`, so B is restricted to a
+  definable subset of VF^p × RV^q (no Γ coordinates).
+- The author ruled on 2026-11-19 that this is faithful: by the paper's
+  standing convention every definable set, the base included, contains only
+  real points unless indicated otherwise, and Γ is an imaginary sort.
+- No statement changes; this records the reading.
