@@ -151,6 +151,7 @@ import «section 7».StageReindexing
 import «section 7».StageBaseChange
 import «section 7».OrderGrafts
 import «section 7».FibreContractions
+import «section 7».OrderIndependence
 
 /-! Entry point for the Section 7 formalization (integrating proper invariant
 sets), following the adopted manuscript with bounded variable apertures. -/
