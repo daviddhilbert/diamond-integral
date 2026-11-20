@@ -218,7 +218,7 @@ formalization convention. No manuscript edit has been made for them.
       contractions (`TautologicalContractions.taut`) have the classes of the two
       contractions (`cls_taut`).
 
-16. **Proposition 7.24, the arrows of an isomorphism (open, 2026-11-20).** The
+16. **Proposition 7.24, the arrows of an isomorphism (input, 2026-11-20).** The
     proof applies Corollary 7.15 to "a sequence of relatively unary
     `μVF^◇[k]`-morphisms" `μL U = B_1 → … → B_{l+1} = μL V`. In the formal
     category (Section 6, approved R102), a morphism carries a factorization of
@@ -231,5 +231,15 @@ formalization convention. No manuscript edit has been made for them.
     valuation of the Jacobian of a relatively unary proper covariant
     homeomorphism agrees, off a set of smaller VF-dimension, with a function
     constant on boxes of a named radius (a one-variable Jacobian property on the
-    fibres). Question to the author pending: prove this lemma, or another route.
+    fibres).
+    - Author's decision (2026-11-20): "Input + parallel build", as for 7.20. The
+      input is `IntermediateFormsInput.IntermediateForms M G`
+      (`section 7/IntermediateFormsInput.lean`), stated for exactly the data of
+      one `UnaryFactorization.step`: for an object `A` and a relatively unary
+      proper covariant homeomorphism `f : A → B` onto a definable set, `B` has
+      finite RV fibres and a covariant form for which `f` has the measure
+      identity at VF-generic points (`StepForms`). Section 6 supplies proper
+      invariance of `B` and the morphism (`morphism_of_generic_map`).
+    - Only `section 7/UnaryArrows.lean` unpacks it (`stepObject`,
+      `stepMorphism`); the theorems using it take `(hIF : IntermediateForms M G)`.
 

@@ -152,6 +152,8 @@ import «section 7».StageBaseChange
 import «section 7».OrderGrafts
 import «section 7».FibreContractions
 import «section 7».OrderIndependence
+import «section 7».IntermediateFormsInput
+import «section 7».UnaryArrows
 
 /-! Entry point for the Section 7 formalization (integrating proper invariant
 sets), following the adopted manuscript with bounded variable apertures. -/
