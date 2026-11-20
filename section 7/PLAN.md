@@ -572,11 +572,17 @@ intended Lean statement; ⚑ marks a flag that is also listed in §5.
   `lemma_6_27`, `liftHom`.
 - **New.** `Isomorphic G (chartObject U) (chartObject V) ↔ MuIsp T k U V`, for
   every k, base-polymorphic (needed for the induction).
-- **Status (2026-11-20).** (∗) done (`OrderIndependence.star`, GAP-REPAIRS 15).
-  The per-arrow step needs forms on the intermediate sets of a Section 6
-  factorization (GAP-REPAIRS 16); awaiting the author's choice of route.
+- **Status (2026-11-20).** Done on the temporary intermediate-forms input
+  (author decision: input + parallel build; GAP-REPAIRS 16, 17):
+  `Proposition724.proposition_7_24` (degree n+1), `Proposition724Zero` (degree 0,
+  hypothesis-free). The route differs from "New" above: no
+  `Isomorphic ↔ MuIsp` statement is needed; the contraction class modulo μIsp^db
+  is an invariant of the scissor presentation of K₊ μVF^◇.
 
 ### 7.25 Remark `thekernel`
+- **Status (2026-11-20).** Done: `Theorem726.remark_7_25` (ker of the graded
+  lift ring map = `manuscriptIdeal`), via the inverse ring map, so no grading
+  argument and no cancellation are used.
 - **Route.**
   - Generators lie in the kernel (7.12).
   - Every blowup differs from its source by J_var
@@ -594,6 +600,12 @@ intended Lean statement; ⚑ marks a flag that is also listed in §5.
   about I.
 
 ### 7.26 Theorem `main:prop`
+- **Status (2026-11-20).** Done on the intermediate-forms input:
+  `Proposition724.integralEquiv` (semigroup, degree n+1),
+  `Proposition724Zero.integralZero_bijective` (degree 0),
+  `Theorem726.integralRingEquiv` and `integralGraded` (ring, onto
+  `RelativeAnnularQuotient.Ring`, homogeneous). K μVF^◇[*] is the ring
+  presentation `DiamondRing.Ring`; products of morphisms in `DiamondProducts`.
 - **Route.**
   - The semigroup isomorphism is the inverse of the map induced by 𝕃 (6.37
     surjective, 7.24 injective).
