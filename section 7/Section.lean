@@ -33,6 +33,7 @@ import «section 7».KernelBaseChange
 import «section 7».BaseExtension
 import «section 7».FibreObjects
 import «section 7».FiberwiseInput
+import «section 7».TwoCellInput
 import «section 7».FirstStage
 import «section 7».ContractionChoice
 import «section 7».Corollary715

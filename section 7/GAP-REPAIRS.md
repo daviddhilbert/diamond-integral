@@ -130,3 +130,21 @@ formalization convention. No manuscript edit has been made for them.
       nonzero polynomial vanishing on it. Off Z(P) its slice is finite
       (`FibreRestriction.exists_good_polynomial`), and the slice maps are
       morphisms of μVF^◇[1] over S⟨b⟩ (`FibreRestriction.sliceMorphism`).
+
+13. **Lemma 7.20, formal reading of the input (2026-11-19).** The input
+    `TwoCellInput.Lemma720` states the paper's lemma as follows. These are
+    readings, not changes of statement.
+    - Retained labels: A ⊆ VF² × RVʳ. Lemma 7.22 applies 7.20 to the graph of θ
+      with its RV coordinates retained ("its proof is uniform in such labels");
+      r = 0 is the printed statement. Section 6's standard contractions retain
+      the old labels, so each fibre lies over one label value.
+    - Orientation: the fibre over s is read in the order (x_{e 0}, x_{e 1}),
+      where e is the coordinate order of the contraction. Its first stage
+      contracts x_{e 1}, which therefore carries the RV-discs t^♯ + ε(a) of
+      Definition 7.19. The paper leaves σ and the orientation implicit; σ is
+      existential, as printed.
+    - Definability: Definition 7.17 asks the set and the positioning bijection
+      to be definable. The input asks the cell, the graph of ε, the paradigm and,
+      for balanced cells, the other paradigm to be definable over T ∪ s, the
+      reading of "A_s is a 2-cell" with s as a parameter. Uniformity in s, which
+      7.22 obtains by compactness, is not part of the statement, as printed.
