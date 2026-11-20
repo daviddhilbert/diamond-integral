@@ -196,6 +196,149 @@ theorem slopeAt_iff_row {n : ℕ} (A : (Fin n → M) → Set M) (f : (Fin n → 
     rw [h1, h2] at heq
     exact heq.trans (RVSlopeGraph.multiply_rv t (rv M (y' - y)))
 
+theorem vf_sort_definable (hc : CanonicalStructure.IsCanonical (M := M)) (S : Set M) :
+    S.Definable₁ LRV {x : M | iVF x} := by
+  have h := ((@definableAt_iff_normalized_raw M sM hM S .vf _).mp (@definableAt_sort M sM S .vf)).1
+  rw [SpecialTransformations.Section4.canonical_normalize_eq hc] at h
+  exact h
+
+/-- The raw codes of the translated disc `c + τ^♯` are definable over `{c, τ}`. -/
+theorem tdisc_raw_definable (hc : CanonicalStructure.IsCanonical (M := M)) (S : Set M) (c : VF M)
+    (τ : RVInfinity M) (hcS : c.val ∈ S) (hτS : τ.val ∈ S) :
+    S.Definable LRV {w : Fin 1 → M | ∃ x ∈ tdisc c τ, x.val = w 0} := by
+  have hsort := (vf_sort_definable hc S).preimage_comp (fun _ : Fin 1 => (0 : Fin 1))
+  have hneg : S.DefinableFun LRV (fun _ : Fin 1 → M => iVFNeg c.val) :=
+    (Set.DefinableFun.of_empty (Set.DefinableFun.fun_symbol (M := M) (L := LRV) Fn.vfNeg)).comp
+      (show S.DefinableMap LRV (fun _ : Fin 1 → M => ![c.val]) from by
+        intro k
+        fin_cases k
+        exact LRV.definableFun_const _ hcS)
+  have hadd : S.DefinableFun LRV (fun w : Fin 1 → M => iVFAdd (w 0) (iVFNeg c.val)) :=
+    (Set.DefinableFun.of_empty (Set.DefinableFun.fun_symbol (M := M) (L := LRV) Fn.vfAdd)).comp
+      (show S.DefinableMap LRV (fun w : Fin 1 → M => ![w 0, iVFNeg c.val]) from by
+        intro k
+        fin_cases k
+        · exact Set.DefinableFun.proj LRV
+        · exact hneg)
+  have hrv : S.DefinableFun LRV (fun w : Fin 1 → M => iRv (iVFAdd (w 0) (iVFNeg c.val))) :=
+    (Set.DefinableFun.of_empty (Set.DefinableFun.fun_symbol (M := M) (L := LRV) Fn.rvMap)).comp
+      (show S.DefinableMap LRV (fun w : Fin 1 → M => ![iVFAdd (w 0) (iVFNeg c.val)]) from by
+        intro k
+        fin_cases k
+        exact hadd)
+  have heq := hrv.ofPred_eq (LRV.definableFun_const _ hτS)
+  convert hsort.inter heq using 1
+  ext w
+  constructor
+  · rintro ⟨x, hx, hxw⟩
+    refine ⟨show iVF (w 0) from hxw ▸ x.property, ?_⟩
+    change iRv (iVFAdd (w 0) (iVFNeg c.val)) = τ.val
+    rw [← hxw]
+    exact congrArg Subtype.val hx
+  · rintro ⟨hw, hτ⟩
+    refine ⟨⟨w 0, hw⟩, Subtype.ext hτ, rfl⟩
+
+theorem card_union_finite_lt {κ : Cardinal} (hκ : Cardinal.aleph0 < κ) {S F : Set M}
+    (hS : Cardinal.mk S < κ) (hF : F.Finite) : Cardinal.mk (S ∪ F : Set M) < κ := by
+  refine lt_of_le_of_lt (Cardinal.mk_union_le S F) ?_
+  have hF' : Cardinal.mk F < κ := lt_trans (Cardinal.lt_aleph0_iff_set_finite.mpr hF) hκ
+  exact Cardinal.add_lt_of_lt hκ.le hS hF'
+
+include hv in
+/-- **RV-affinity from frozen slope rows.** On a translated disc `D = c + τ^♯` inside the
+domain of `f p`, where `f p` is injective and the slope rows are the same at all points
+of `D`, the function is RV-linear with a nonzero slope. -/
+theorem hasSlope_of_rows (hc : CanonicalStructure.IsCanonical (M := M)) (h00 : M ⊨ Axioms.ACVF00)
+    {κ : Cardinal} (hκ : Cardinal.aleph0 < κ) (hs : Saturated M κ) {S : Set M} (hsmall : Cardinal.mk S < κ)
+    {n : ℕ} (A : (Fin n → M) → Set M) (f : (Fin n → M) → M → M)
+    (hf : FiniteScalarFamilies.Graph (fullBase S) A f) (hfVF : ∀ p x, x ∈ A p → iVF (f p x))
+    (p : Fin n → M) (c z : VF M) (hz : z ≠ 0) (g : VF M → VF M)
+    (hDA : ∀ x ∈ tdisc c (rv M z), x.val ∈ A p) (hg : ∀ x ∈ tdisc c (rv M z), (g x).val = f p x.val)
+    (hinj : Set.InjOn g (tdisc c (rv M z)))
+    (hrows : ∀ x ∈ tdisc c (rv M z), ∀ y ∈ tdisc c (rv M z), ∀ b t : M,
+      slopeRow A f (Sum.elim p ![x.val, b, t]) ↔ slopeRow A f (Sum.elim p ![y.val, b, t])) :
+    ∃ σ : RV M, HasSlope (tdisc c (rv M z)) g σ := by
+  let D := tdisc c (rv M z)
+  let S' : Set M := S ∪ (Set.range p ∪ {c.val, (rv M z).val})
+  have hsmall' : Cardinal.mk S' < κ :=
+    card_union_finite_lt hκ hsmall ((Set.finite_range p).union (Set.toFinite _))
+  let A' : Set M := Subtype.val '' D
+  let ρ := gval z hz
+  have hA'eq : A' = GammaRadiusAtomicity.gammaBall (c + z) ρ true := by
+    ext m
+    constructor
+    · rintro ⟨x, hx, rfl⟩
+      exact (mem_gammaBall_iff (c + z) x ρ).mpr ((tdisc_mem_iff hv c z hz x).mp hx)
+    · intro hm
+      let x : VF M := ⟨m, hm.1⟩
+      exact ⟨x, (tdisc_mem_iff hv c z hz x).mpr ((mem_gammaBall_iff (c + z) x ρ).mp hm), rfl⟩
+  have hA'A : A' ⊆ A p := by
+    rintro m ⟨x, hx, rfl⟩
+    exact hDA x hx
+  have hfVF' : ∀ m ∈ A', iVF (f p m) := fun m hm => hfVF p m (hA'A hm)
+  -- the graph over the enlarged base
+  have hGraph : FullBaseAtomicity.OverBase (fullBase S') (ImaginaryBaseImages.graphOn A' (f p)) := by
+    apply overBase_of_definable hc
+    have hfam := (definable_of_overBase hc hf).mono (Set.subset_union_left : S ⊆ S')
+    let ψ (w : Fin 2 → M) : (Fin n ⊕ Fin 1) ⊕ Fin 1 → M :=
+      Sum.elim (Sum.elim p (fun _ => w 0)) (fun _ => w 1)
+    have hψ : S'.DefinableMap LRV ψ := by
+      rintro ((i | i) | i)
+      · exact LRV.definableFun_const _ (Or.inr (Or.inl (Set.mem_range_self i)))
+      · exact Set.DefinableFun.proj LRV
+      · exact Set.DefinableFun.proj LRV
+    have hdisc := (tdisc_raw_definable hc S' c (rv M z) (Or.inr (Or.inr (Or.inl rfl)))
+      (Or.inr (Or.inr (Or.inr rfl)))).preimage_comp (fun _ : Fin 1 => (0 : Fin 2))
+    convert hdisc.inter (hfam.preimage_map hψ) using 1
+    ext w
+    constructor
+    · rintro ⟨hw0, hw1⟩
+      obtain ⟨x, hx, hxw⟩ := hw0
+      refine ⟨⟨x, hx, hxw⟩, ?_, ?_⟩
+      · change w 0 ∈ A p
+        rw [← hxw]
+        exact hDA x hx
+      · exact hw1
+    · rintro ⟨⟨x, hx, hxw⟩, -, hw1⟩
+      exact ⟨⟨x, hx, hxw⟩, hw1⟩
+  have hInj : Set.InjOn (f p) A' := by
+    rintro _ ⟨x, hx, rfl⟩ _ ⟨y, hy, rfl⟩ he
+    have : g x = g y := Subtype.ext ((hg x hx).trans (he.trans (hg y hy).symm))
+    rw [hinj hx hy this]
+  have hEA : GammaRadiusAtomicity.gammaBall (c + z) ρ true ⊆ A' := hA'eq.symm.subset
+  have hmemD (x : VF M) (hx : x.val ∈ GammaRadiusAtomicity.gammaBall (c + z) ρ true) : x ∈ D := by
+    rw [← hA'eq] at hx
+    obtain ⟨x', hx', he⟩ := hx
+    rw [← Subtype.ext he]
+    exact hx'
+  have hRows : ∀ x y : VFType (M := M), x.val ∈ GammaRadiusAtomicity.gammaBall (c + z) ρ true →
+      y.val ∈ GammaRadiusAtomicity.gammaBall (c + z) ρ true → ∀ β t,
+        RVLinearRadiusClosure.SlopeAt A' (f p) hfVF' x β t ↔ RVLinearRadiusClosure.SlopeAt A' (f p) hfVF' y β t := by
+    intro x y hx hy β t
+    obtain ⟨b, hb, hbβ⟩ := GammaParameters.EndpointLogic.codeValue_surjective β
+    have hx' := (mem_gammaBall_iff (c + z) x ρ).mp hx
+    have hy' := (mem_gammaBall_iff (c + z) y ρ).mp hy
+    rw [slopeAt_iff_row A f hfVF p A' hA'A x β b hb hbβ t, slopeAt_iff_row A f hfVF p A' hA'A y β b hb hbβ t,
+      hA'eq]
+    constructor
+    · rintro ⟨hsub, hrow⟩
+      exact ⟨gammaBall_sub_of_mem hv hx' hy' hsub, (hrows x (hmemD x hx) y (hmemD y hy) b t.val).mp hrow⟩
+    · rintro ⟨hsub, hrow⟩
+      exact ⟨gammaBall_sub_of_mem hv hy' hx' hsub, (hrows x (hmemD x hx) y (hmemD y hy) b t.val).mpr hrow⟩
+  obtain ⟨t, ht, hLin⟩ := RVLinearRadiusClosure.on_ordinary_ball hκ.le hs (fullBase S') hsmall' h00
+    A' (f p) hGraph hfVF' hInj (c + z) ρ hEA hRows
+  have htz : t ≠ rvZero M := fun h => ht (congrArg Subtype.val h)
+  refine ⟨⟨t, htz⟩, fun a ha a' ha' => ?_⟩
+  have haB : a.val ∈ GammaRadiusAtomicity.gammaBall (c + z) ρ true := by rw [← hA'eq]; exact ⟨a, ha, rfl⟩
+  have ha'B : a'.val ∈ GammaRadiusAtomicity.gammaBall (c + z) ρ true := by rw [← hA'eq]; exact ⟨a', ha', rfl⟩
+  have hL := hLin a' a ha'B haB
+  apply Subtype.ext
+  rw [RVOperations.mul_val]
+  have hga : g a = ⟨f p a.val, hfVF' a.val (hEA haB)⟩ := Subtype.ext (hg a ha)
+  have hga' : g a' = ⟨f p a'.val, hfVF' a'.val (hEA ha'B)⟩ := Subtype.ext (hg a' ha')
+  rw [hga, hga']
+  exact hL
+
 end RVAffine
 
 end DiamondIntegral.Section7.Lemma720
