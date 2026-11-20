@@ -1,4 +1,4 @@
-import «section 7».UnaryArrows
+import «section 7».LiftClasses
 import «section 7».OrderIndependence
 import «section 7».KernelBaseChange
 
@@ -12,18 +12,16 @@ contraction in every order), by `(∗)` (`OrderIndependence.star`).
 
 The paper: "let `μ𝕃U = B₁ → ⋯ → B_{l+1} = μ𝕃V` be a sequence of relatively
 unary `μVF^◇[k]`-morphisms, which exists by definition", then Corollary 7.15
-for each arrow and `(∗)`. Formally a morphism carries a factorization into
-relatively unary proper covariant homeomorphisms between definable sets
-(`UnaryFactorization`). Along it, the intermediate-forms input
-(`UnaryArrows.stepObject`, `stepMorphism`) makes every intermediate set an
-object and every step a morphism between objects (`factor_classes`). The form
-reached on the final set need not be the given one. The identity of that set
-is still a morphism to the given object: it is the composite of the inverse of
-the constructed chain with the given morphism (`morphism_classRel`).
+for each arrow and `(∗)`. By Definition 6.34 (repaired, review batch B10) a
+morphism carries a factorization inside `μVF^◇[k]`: a chain of steps between
+objects, each a relatively unary proper covariant homeomorphism that is
+measure-preserving on its own (`DiamondCategory.ObjectFactorization`). So every
+step is a morphism between objects (`Morphism.ofStep`), and Corollary 7.15 applies
+to it (`factor_classes`).
 
-* Dimension `≥ 2`: each arrow, relatively unary in some `(i, j)`, relates the
+* Dimension `≥ 2`: each step, relatively unary in some `(i, j)`, relates the
   classes by the hypothesis `hMove` (Corollary 7.15 for `(i, j)`-relatively
-  unary morphisms, built separately).
+  unary morphisms, `Corollary715Moves`).
 * Dimension `1`: Lemma 7.13 applies to the whole isomorphism
   (`classRel_of_iso_one`); no factorization is needed. -/
 
@@ -38,8 +36,7 @@ open SpecialTransformations.Section4 SpecialTransformations.DefinableGeometry
 
 namespace DiamondIntegral.Section7.MorphismClasses
 open DiamondIntegral.Section6 DiamondIntegral.Section2 DiamondIntegral.Section6.DiamondCategory
-open DiamondIntegral.Section6.DiamondGroupoid DiamondIntegral.Section7.IntermediateFormsInput
-open DiamondIntegral.Section7.UnaryArrows DiamondIntegral.Section7.LiftClasses
+open DiamondIntegral.Section6.DiamondGroupoid DiamondIntegral.Section7.LiftClasses
 open DiamondIntegral.Section7.PieceCombination DiamondIntegral.Section7.Corollary715
 open DiamondIntegral.Section7.FiberwiseInput DiamondIntegral.Section7.ContractionChoice
 open DiamondIntegral.Section7.BoundedClasses DiamondIntegral.Section7.ChartOfMeasured
@@ -109,23 +106,7 @@ end One
 /-! ### Along a factorization -/
 
 section Factor
-variable (hIF : IntermediateForms M G)
 variable {n : ℕ}
-
-/-- The covariance condition on a form. -/
-def FormCov {s : ℕ} (B : DefSet (rawMixedSpace (M := M) (n + 1 + 1) s) (T : Set M))
-    (ω : Map B (DefSet.univ (rawGammaPresentation (M := M)) (T : Set M))) : Prop :=
-  ∀ t : Fin s → RVInfinity M, ∃ α : Fin (n + 1 + 1) → Gamma M, NamedRadii (T : Set M) t α ∧
-    ∀ x y (hx : (x, t) ∈ B.carrier) (hy : (y, t) ∈ B.carrier), Congruent α x y →
-      gammaMapValue ω ⟨(x, t), hx⟩ = gammaMapValue ω ⟨(y, t), hy⟩
-
-/-- The object with given components. -/
-def objMk {s : ℕ} (B : DefSet (rawMixedSpace (M := M) (n + 1 + 1) s) (T : Set M))
-    (ω : Map B (DefSet.univ (rawGammaPresentation (M := M)) (T : Set M)))
-    (hB : ProperInvariant (T : Set M) B.carrier) (hω : FormCov B ω)
-    (hfin : ∀ x : Fin (n + 1 + 1) → VF M, {t | (x, t) ∈ B.carrier}.Finite) :
-    VFObject (M := M) (T : Set M) (n + 1 + 1) :=
-  ⟨s, B, ω, hB, hω, hfin⟩
 
 /-- Corollary 7.15 for arrows relatively unary in any `(i, j)`-coordinate, in
 dimension `n + 2`, as a hypothesis of this file. -/
@@ -135,64 +116,27 @@ def MoveRel : Prop :=
 
 variable (hMove : MoveRel (G := G) (n := n) h00 hc hκ hs hv hsmall hΓ)
 
-include hIF hMove V hV hVT hTV hnt in
-/-- **Along a factorization.** For a factored map `f : A → B` and any object
-structure on `A`, the set `B` carries an object structure such that `f` is a
-morphism, and the two objects have related contraction classes. -/
-theorem factor_classes {r s : ℕ} {A : DefSet (rawMixedSpace (M := M) (n + 1 + 1) r) (T : Set M)}
-    {B : DefSet (rawMixedSpace (M := M) (n + 1 + 1) s) (T : Set M)} {f : Map A B}
-    (hf : UnaryFactorization G A B f) :
-    ∀ (ω : Map A (DefSet.univ (rawGammaPresentation (M := M)) (T : Set M)))
-      (hA : ProperInvariant (T : Set M) A.carrier) (hω : FormCov A ω)
-      (hfin : ∀ x : Fin (n + 1 + 1) → VF M, {t | (x, t) ∈ A.carrier}.Finite),
-      ∃ (ω' : Map B (DefSet.univ (rawGammaPresentation (M := M)) (T : Set M)))
-        (hB : ProperInvariant (T : Set M) B.carrier) (hω' : FormCov B ω')
-        (hfin' : ∀ x : Fin (n + 1 + 1) → VF M, {t | (x, t) ∈ B.carrier}.Finite),
-        (∃ K : Morphism G (objMk A ω hA hω hfin) (objMk B ω' hB hω' hfin'), K.map = f) ∧
-        ClassRel (G := G) h00 hc hκ hs hv hsmall hΓ (objMk A ω hA hω hfin) (objMk B ω' hB hω' hfin') := by
+include hMove V hV hVT hTV hnt in
+/-- **Along a factorization inside `μVF^◇[n + 2]`.** Every step is a morphism
+between objects, relatively unary in some `(i, j)`, so its ends have related
+contraction classes; then `ClassRel` is transitive. -/
+theorem factor_classes {A B : VFObject (M := M) (T : Set M) (n + 1 + 1)} {f : Map A.carrier B.carrier}
+    (hf : ObjectFactorization G A B f) : ClassRel (G := G) h00 hc hκ hs hv hsmall hΓ A B := by
   induction hf with
-  | id A =>
-    intro ω hA hω hfin
-    exact ⟨ω, hA, hω, hfin, ⟨Morphism.id _, rfl⟩,
-      classRel_refl (G := G) h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ _⟩
-  | @step r s A B f homeo unary =>
-    intro ω hA hω hfin
-    let X := objMk A ω hA hω hfin
-    let Y := stepObject hIF h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ X B f homeo unary
-    obtain ⟨K, hK⟩ := stepMorphism hIF h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ X B f homeo unary
-    refine ⟨Y.form, Y.proper, Y.formCovariant, Y.finiteRV, ⟨K, hK⟩, ?_⟩
-    rcases unary with h0 | ⟨i, j, hij⟩
+  | id A => exact classRel_refl (G := G) h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ A
+  | @step A B f h =>
+    obtain ⟨bad, hsub, hsm, hmeas⟩ := h.measure
+    rcases h.unary with h0 | ⟨i, j, hij⟩
     · exact absurd h0 (Nat.succ_ne_zero _)
-    · exact hMove K i j (hK ▸ hij)
-  | @comp r s t A B C f g hF hG ihf ihg =>
-    intro ω hA hω hfin
-    obtain ⟨ωB, hB, hωB, hfinB, ⟨K₁, hK₁⟩, h₁⟩ := ihf ω hA hω hfin
-    obtain ⟨ωC, hC, hωC, hfinC, ⟨K₂, hK₂⟩, h₂⟩ := ihg ωB hB hωB hfinB
-    obtain ⟨K, hK⟩ := Morphism.comp_exists h00 hc hs hsmall K₁ K₂
-    refine ⟨ωC, hC, hωC, hfinC, ⟨K, by rw [hK, hK₁, hK₂]⟩,
-      classRel_trans (G := G) h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ h₁ h₂⟩
+    · exact hMove (Morphism.ofStep f h.homeo h.unary bad hsub hsm hmeas) i j hij
+  | comp _ _ ih₁ ih₂ => exact classRel_trans (G := G) h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ ih₁ ih₂
 
-include hIF hMove V hV hVT hTV hnt in
+include hMove V hV hVT hTV hnt in
 /-- **Isomorphic objects of `μVF^◇[n + 2]` have related contraction classes**
 (the arrows of the proof of Proposition 7.24). -/
 theorem morphism_classRel {A B : VFObject (M := M) (T : Set M) (n + 1 + 1)} (F : Morphism G A B) :
-    ClassRel (G := G) h00 hc hκ hs hv hsmall hΓ A B := by
-  obtain ⟨ω', hB, hω', hfin', ⟨K, hK⟩, hrel⟩ :=
-    factor_classes h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ hIF hMove F.factor A.form A.proper
-      A.formCovariant A.finiteRV
-  obtain ⟨Ki, hKi⟩ := Morphism.inverse_exists h00 hc hκ.le hs hsmall hv K
-  obtain ⟨J, hJ⟩ := Morphism.comp_exists h00 hc hs hsmall Ki F
-  have hid : ∀ p, (J.map p).val = p.val := by
-    intro p
-    rw [hJ, hKi]
-    change (F.map (K.map.inverse K.bijective p)).val = p.val
-    have hKF : ∀ q, K.map q = F.map q := fun q => by rw [hK]
-    rw [← hKF, Map.apply_inverse]
-  have hJu : VFRelativelyUnary J.map 0 0 := by
-    intro p k _
-    rw [hid p]
-    simp only [Equiv.symm_apply_apply]
-  exact classRel_trans (G := G) h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ hrel (hMove J 0 0 hJu)
+    ClassRel (G := G) h00 hc hκ hs hv hsmall hΓ A B :=
+  factor_classes h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ hMove F.chain
 
 end Factor
 

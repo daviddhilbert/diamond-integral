@@ -247,8 +247,10 @@ def conjMorphism {i j : Fin (n + 1 + 1)} (hF : VFRelativelyUnary F.map i j) (hj 
     Morphism G (prepObject h00 hc hκ hs hv hsmall G'₀) (prepObject h00 hc hκ hs hv hsmall G''₀) where
   map := conj2 h00 F G'₀ G''₀
   bijective := conj2_bijective h00 F G'₀ G''₀
-  factor := UnaryFactorization.step (conj2_homeo h00 hc hκ hs hv hsmall hΓ F G'₀ G''₀)
-    (Or.inr ⟨Fin.last (n + 1), Fin.last (n + 1), conj2_unary h00 F G'₀ G''₀ hF hj he hcen⟩)
+  chain := ObjectFactorization.step ⟨conj2_homeo h00 hc hκ hs hv hsmall hΓ F G'₀ G''₀,
+    Or.inr ⟨Fin.last (n + 1), Fin.last (n + 1), conj2_unary h00 F G'₀ G''₀ hF hj he hcen⟩,
+    ⟨conjBad F G'₀, conjBad_subset F G'₀, Or.inl (conjBad_small hc hs hsmall F G'₀),
+      conj2_measure h00 hc hκ hs hv F G'₀ G''₀⟩⟩
   bad := conjBad F G'₀
   bad_subset := conjBad_subset F G'₀
   bad_small := Or.inl (conjBad_small hc hs hsmall F G'₀)

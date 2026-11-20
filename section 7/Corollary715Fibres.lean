@@ -76,24 +76,17 @@ def idMorphism (h00 : M ⊨ Axioms.ACVF00) (hc : CanonicalStructure.IsCanonical 
     (hX : ProperInvariant S X.carrier) (hY : ProperInvariant S Y.carrier) (cX cY fX fY)
     (hXY : X = Y)
     (hω : ∀ p : X, gammaMapValue ωX p = gammaMapValue ωY (changeMapTarget (Map.id X) hXY p)) :
-    Morphism G (⟨r, X, ωX, hX, cX, fX⟩ : VFObject (M := M) S 1) ⟨r, Y, ωY, hY, cY, fY⟩ where
-  map := changeMapTarget (Map.id X) hXY
-  bijective := by
-    subst hXY
-    exact Function.bijective_id
-  factor := UnaryFactorization.step
+    Morphism G (⟨r, X, ωX, hX, cX, fX⟩ : VFObject (M := M) S 1) ⟨r, Y, ωY, hY, cY, fY⟩ :=
+  Morphism.ofStep (changeMapTarget (Map.id X) hXY)
     ((identity_properHomeomorphism h00 hc lin hκ hs hv hsmall hΓ hX).changeMapTarget hXY)
     (Or.inr ⟨0, 0, fun _ k hk => absurd (Subsingleton.elim k 0) hk⟩)
-  bad := DefSet.empty _ S
-  bad_subset := Set.empty_subset _
-  bad_small := Or.inr rfl
-  measure p _ := by
-    obtain ⟨L, hL, hdet⟩ := (identity_unit_derivative hX p).changeMapTarget hXY
-    refine ⟨L, hL, ?_⟩
-    rw [hdet, ← hω p]
-    unfold gammaMapValue
-    rw [div_self']
-    exact (valueHom_eq_value (1 : VF M)).symm.trans ((map_one Values.vfValueHom).trans Values.gamma_val_one.symm)
+    (DefSet.empty _ S) (Set.empty_subset _) (Or.inr rfl) (fun p _ => by
+      obtain ⟨L, hL, hdet⟩ := (identity_unit_derivative hX p).changeMapTarget hXY
+      refine ⟨L, hL, ?_⟩
+      rw [hdet, ← hω p]
+      unfold gammaMapValue
+      rw [div_self']
+      exact (valueHom_eq_value (1 : VF M)).symm.trans ((map_one Values.vfValueHom).trans Values.gamma_val_one.symm))
 
 end Identity
 

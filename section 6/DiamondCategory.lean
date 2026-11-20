@@ -174,6 +174,23 @@ structure Morphism (A B : VFObject (M := M) S n) where
     ∃ L, HasMixedVFDerivativeAt map p L ∧
       vfValue (LinearMap.toMatrix' L).det = (gammaMapValue A.form p / gammaMapValue B.form (map p)).val
 
+/-- A morphism given by a single step, with the step's own exceptional set. -/
+def Morphism.ofStep {A B : VFObject (M := M) S n} (f : Map A.carrier B.carrier)
+    (homeo : ProperCovariantHomeomorphism (G := G) f) (unary : n = 0 ∨ ∃ i j : Fin n, VFRelativelyUnary f i j)
+    (bad : DefSet (rawMixedSpace (M := M) n A.labels) S) (bad_subset : bad.carrier ⊆ A.carrier.carrier)
+    (bad_small : vfDim (rawRVSpace (M := M) 1) bad < n ∨ bad.carrier = ∅)
+    (measure : ∀ p : A.carrier, p.val ∉ bad.carrier →
+      ∃ L, HasMixedVFDerivativeAt f p L ∧
+        vfValue (LinearMap.toMatrix' L).det = (gammaMapValue A.form p / gammaMapValue B.form (f p)).val) :
+    Morphism G A B where
+  map := f
+  bijective := homeo.bijective
+  chain := ObjectFactorization.step ⟨homeo, unary, ⟨bad, bad_subset, bad_small, measure⟩⟩
+  bad := bad
+  bad_subset := bad_subset
+  bad_small := bad_small
+  measure := measure
+
 /-- The underlying factorization into relatively unary proper covariant
 homeomorphisms between definable sets. -/
 theorem Morphism.factor {A B : VFObject (M := M) S n} (F : Morphism G A B) :

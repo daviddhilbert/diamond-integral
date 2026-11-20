@@ -663,16 +663,23 @@ theorem productForm_at (A : VFObject (M := M) S n) (B : VFObject (M := M) S m)
 /-- The measure identity for a product of morphisms at VF-generic points: the
 Jacobian of the product is the product of the Jacobians, and the product forms
 divide factorwise. -/
-theorem product_generic (h00 : M ⊨ Axioms.ACVF00) {κ : Cardinal} (hκ : Cardinal.aleph0 ≤ κ)
+theorem product_generic_maps (h00 : M ⊨ Axioms.ACVF00) {κ : Cardinal} (hκ : Cardinal.aleph0 ≤ κ)
     (hs : Saturated M κ) (hsmall : Cardinal.mk S < κ)
     (hv : ∀ x y : VF M, VFValued.predV x y ↔ Valued.v x ≤ Valued.v y)
     {A A' : VFObject (M := M) S n} {B B' : VFObject (M := M) S m}
-    (F : Morphism G A A') (H : Morphism G B B') (p : (VFObject.product hc A B).carrier)
+    (f : Map A.carrier A'.carrier) (g : Map B.carrier B'.carrier)
+    (hf : ∀ u : A.carrier, AlgebraicIndependent (vfParameterField S) u.val.1 →
+      ∃ L, HasMixedVFDerivativeAt f u L ∧
+        vfValue (LinearMap.toMatrix' L).det = (gammaMapValue A.form u / gammaMapValue A'.form (f u)).val)
+    (hg : ∀ w : B.carrier, AlgebraicIndependent (vfParameterField S) w.val.1 →
+      ∃ L, HasMixedVFDerivativeAt g w L ∧
+        vfValue (LinearMap.toMatrix' L).det = (gammaMapValue B.form w / gammaMapValue B'.form (g w)).val)
+    (p : (VFObject.product hc A B).carrier)
     (hp : AlgebraicIndependent (vfParameterField S) p.val.1) :
-    ∃ L, HasMixedVFDerivativeAt (mixedDomainProductMap F.map H.map) p L ∧
+    ∃ L, HasMixedVFDerivativeAt (mixedDomainProductMap f g) p L ∧
       vfValue (LinearMap.toMatrix' L).det =
         (gammaMapValue (VFObject.product hc A B).form p /
-          gammaMapValue (VFObject.product hc A' B').form (mixedDomainProductMap F.map H.map p)).val := by
+          gammaMapValue (VFObject.product hc A' B').form (mixedDomainProductMap f g p)).val := by
   have : CharZero (VF M) := vf_charZero_of_model00 h00
   let u : A.carrier := leftPart (U := A.carrier) (V := B.carrier) p
   let w : B.carrier := rightPart (U := A.carrier) (V := B.carrier) p
@@ -680,11 +687,11 @@ theorem product_generic (h00 : M ⊨ Axioms.ACVF00) {κ : Cardinal} (hκ : Cardi
     hp.comp _ (Fin.castAdd_injective _ _)
   have hw : AlgebraicIndependent (vfParameterField S) w.val.1 :=
     hp.comp _ (Fin.natAdd_injective _ _)
-  obtain ⟨L, ⟨Fl, hFl, hL⟩, hdetL⟩ := Morphism.generic hc F u hu
-  obtain ⟨K, ⟨Hl, hHl, hK⟩, hdetK⟩ := Morphism.generic hc H w hw
+  obtain ⟨L, ⟨Fl, hFl, hL⟩, hdetL⟩ := hf u hu
+  obtain ⟨K, ⟨Hl, hHl, hK⟩, hdetK⟩ := hg w hw
   obtain ⟨D, Dl, hDl, hD⟩ := mixedDifferentiableAt_of_independent hc hκ hs hsmall hv
-    (mixedDomainProductMap F.map H.map) p hp
-  have hJ := has_mixed_vf_jacobian_domain_product F.map H.map u w _ _
+    (mixedDomainProductMap f g) p hp
+  have hJ := has_mixed_vf_jacobian_domain_product f g u w _ _
     ⟨Fl, hFl, hL.hasJacobianAt⟩ ⟨Hl, hHl, hK.hasJacobianAt⟩
   rw [pack_parts p] at hJ
   have hdet : (LinearMap.toMatrix' D).det =
@@ -697,9 +704,86 @@ theorem product_generic (h00 : M ⊨ Axioms.ACVF00) {κ : Cardinal} (hκ : Cardi
   change vfValue (LinearMap.toMatrix' L).det * vfValue (LinearMap.toMatrix' K).det = _
   rw [hdetL, hdetK, ← Values.gamma_val_mul]
   apply congrArg (fun z : Gamma M => z.val)
-  rw [productForm_at hc A B p, productForm_at hc A' B' (mixedDomainProductMap F.map H.map p),
+  rw [productForm_at hc A B p, productForm_at hc A' B' (mixedDomainProductMap f g p),
     leftPart_productMap, rightPart_productMap]
   exact (mul_div_mul_comm _ _ _ _).symm
+
+theorem product_generic (h00 : M ⊨ Axioms.ACVF00) {κ : Cardinal} (hκ : Cardinal.aleph0 ≤ κ)
+    (hs : Saturated M κ) (hsmall : Cardinal.mk S < κ)
+    (hv : ∀ x y : VF M, VFValued.predV x y ↔ Valued.v x ≤ Valued.v y)
+    {A A' : VFObject (M := M) S n} {B B' : VFObject (M := M) S m}
+    (F : Morphism G A A') (H : Morphism G B B') (p : (VFObject.product hc A B).carrier)
+    (hp : AlgebraicIndependent (vfParameterField S) p.val.1) :
+    ∃ L, HasMixedVFDerivativeAt (mixedDomainProductMap F.map H.map) p L ∧
+      vfValue (LinearMap.toMatrix' L).det =
+        (gammaMapValue (VFObject.product hc A B).form p /
+          gammaMapValue (VFObject.product hc A' B').form (mixedDomainProductMap F.map H.map p)).val :=
+  product_generic_maps hc h00 hκ hs hsmall hv F.map H.map (Morphism.generic hc F) (Morphism.generic hc H) p hp
+
+/-- A factorization inside `μVF^◇[n]` times an object: each step `f` becomes the
+step `f × id` between the product objects. -/
+theorem chain_productLeft (h00 : M ⊨ Axioms.ACVF00) {κ : Cardinal} (hκ : Cardinal.aleph0 ≤ κ)
+    (hs : Saturated M κ) (hsmall : Cardinal.mk S < κ)
+    (hv : ∀ x y : VF M, VFValued.predV x y ↔ Valued.v x ≤ Valued.v y)
+    (B : VFObject (M := M) S m) {X Y : VFObject (M := M) S n} {f : Map X.carrier Y.carrier}
+    (h : ObjectFactorization G X Y f) :
+    ObjectFactorization G (VFObject.product hc X B) (VFObject.product hc Y B)
+      (mixedDomainProductMap f (Map.id B.carrier)) := by
+  induction h with
+  | id X =>
+    rw [productMap_id]
+    exact ObjectFactorization.id _
+  | @step X Y f hstep =>
+    have homeo := properCovariantHomeomorphism_product hstep.homeo (properCovariantHomeomorphism_id (G := G) B.proper)
+    have hu : n + m = 0 ∨ ∃ i j : Fin (n + m), VFRelativelyUnary (mixedDomainProductMap f (Map.id B.carrier)) i j := by
+      rcases hstep.unary with hn | ⟨i, j, hij⟩
+      · exact unary_of_vf_eq (fun p => productLeft_vf_eq_of_zero B.carrier hn _ p)
+      · exact Or.inr ⟨_, _, relativelyUnary_productLeft B.carrier hij⟩
+    exact ObjectFactorization.step (isStep_of_generic (A := VFObject.product hc X B) (B := VFObject.product hc Y B)
+      h00 hc hs hsmall _ homeo hu
+      (product_generic_maps hc h00 hκ hs hsmall hv f (Map.id B.carrier) (step_generic hc hstep)
+        (Morphism.generic hc (Morphism.id (G := G) B))))
+  | comp _ _ ihf ihg =>
+    rw [productMap_comp_left]
+    exact ObjectFactorization.comp ihf ihg
+
+/-- An object times a factorization inside `μVF^◇[m]`. -/
+theorem chain_productRight (h00 : M ⊨ Axioms.ACVF00) {κ : Cardinal} (hκ : Cardinal.aleph0 ≤ κ)
+    (hs : Saturated M κ) (hsmall : Cardinal.mk S < κ)
+    (hv : ∀ x y : VF M, VFValued.predV x y ↔ Valued.v x ≤ Valued.v y)
+    (A : VFObject (M := M) S n) {X Y : VFObject (M := M) S m} {g : Map X.carrier Y.carrier}
+    (h : ObjectFactorization G X Y g) :
+    ObjectFactorization G (VFObject.product hc A X) (VFObject.product hc A Y)
+      (mixedDomainProductMap (Map.id A.carrier) g) := by
+  induction h with
+  | id X =>
+    rw [productMap_id]
+    exact ObjectFactorization.id _
+  | @step X Y g hstep =>
+    have homeo := properCovariantHomeomorphism_product (properCovariantHomeomorphism_id (G := G) A.proper) hstep.homeo
+    have hu : n + m = 0 ∨ ∃ i j : Fin (n + m), VFRelativelyUnary (mixedDomainProductMap (Map.id A.carrier) g) i j := by
+      rcases hstep.unary with hm | ⟨i, j, hij⟩
+      · exact unary_of_vf_eq (fun p => productRight_vf_eq_of_zero A.carrier hm _ p)
+      · exact Or.inr ⟨_, _, relativelyUnary_productRight A.carrier hij⟩
+    exact ObjectFactorization.step (isStep_of_generic (A := VFObject.product hc A X) (B := VFObject.product hc A Y)
+      h00 hc hs hsmall _ homeo hu
+      (product_generic_maps hc h00 hκ hs hsmall hv (Map.id A.carrier) g
+        (Morphism.generic hc (Morphism.id (G := G) A)) (step_generic hc hstep)))
+  | comp _ _ ihf ihg =>
+    rw [productMap_comp_right]
+    exact ObjectFactorization.comp ihf ihg
+
+/-- The product of two factorizations inside `μVF^◇`, as `(f × id) ∘ (id × g)`. -/
+theorem chain_product (h00 : M ⊨ Axioms.ACVF00) {κ : Cardinal} (hκ : Cardinal.aleph0 ≤ κ)
+    (hs : Saturated M κ) (hsmall : Cardinal.mk S < κ)
+    (hv : ∀ x y : VF M, VFValued.predV x y ↔ Valued.v x ≤ Valued.v y)
+    {A A' : VFObject (M := M) S n} {B B' : VFObject (M := M) S m}
+    {f : Map A.carrier A'.carrier} {g : Map B.carrier B'.carrier}
+    (hf : ObjectFactorization G A A' f) (hg : ObjectFactorization G B B' g) :
+    ObjectFactorization G (VFObject.product hc A B) (VFObject.product hc A' B') (mixedDomainProductMap f g) := by
+  rw [productMap_eq_comp]
+  exact ObjectFactorization.comp (chain_productRight hc h00 hκ hs hsmall hv A hg)
+    (chain_productLeft hc h00 hκ hs hsmall hv B' hf)
 
 /-- The product of two morphisms underlies a morphism of the products, with the
 product map named. -/
@@ -713,7 +797,7 @@ theorem Morphism.product_exists (h00 : M ⊨ Axioms.ACVF00) {κ : Cardinal}
   morphism_of_generic_map (A := VFObject.product hc A B) (B := VFObject.product hc A' B')
     h00 hc hs hsmall (mixedDomainProductMap F.map H.map)
     (mixed_domain_product_map_bijective _ _ F.bijective H.bijective)
-    (factor_product A.proper B'.proper F.factor H.factor)
+    (chain_product hc h00 hκ hs hsmall hv F.chain H.chain)
     (product_generic hc h00 hκ hs hsmall hv F H)
 
 /-- (1) A morphism times an identity: the map is `F × id_B`. -/
@@ -726,7 +810,7 @@ theorem Morphism.productLeft_exists (h00 : M ⊨ Axioms.ACVF00) {κ : Cardinal}
   morphism_of_generic_map (A := VFObject.product hc A B) (B := VFObject.product hc A' B)
     h00 hc hs hsmall (mixedDomainProductMap F.map (Map.id B.carrier))
     (mixed_domain_product_map_bijective _ _ F.bijective (Morphism.id (G := G) B).bijective)
-    (factor_productLeft B.proper F.factor)
+    (chain_productLeft hc h00 hκ hs hsmall hv B F.chain)
     (product_generic hc h00 hκ hs hsmall hv F (Morphism.id B))
 
 /-- (2) An identity times a morphism: the map is `id_A × G'`. -/
@@ -739,7 +823,7 @@ theorem Morphism.productRight_exists (h00 : M ⊨ Axioms.ACVF00) {κ : Cardinal}
   morphism_of_generic_map (A := VFObject.product hc A B) (B := VFObject.product hc A B')
     h00 hc hs hsmall (mixedDomainProductMap (Map.id A.carrier) H.map)
     (mixed_domain_product_map_bijective _ _ (Morphism.id (G := G) A).bijective H.bijective)
-    (factor_productRight A.proper H.factor)
+    (chain_productRight hc h00 hκ hs hsmall hv A H.chain)
     (product_generic hc h00 hκ hs hsmall hv (Morphism.id A) H)
 
 /-- (1) `A ≅ A'` in `μVF^◇[n]` via `F` gives `A × B ≅ A' × B`. -/

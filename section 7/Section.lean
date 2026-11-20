@@ -152,8 +152,6 @@ import «section 7».StageBaseChange
 import «section 7».OrderGrafts
 import «section 7».FibreContractions
 import «section 7».OrderIndependence
-import «section 7».IntermediateFormsInput
-import «section 7».UnaryArrows
 import «section 7».MorphismClasses
 import «section 7».Proposition724
 import «section 7».Corollary715Moves

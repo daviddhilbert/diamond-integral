@@ -46,7 +46,7 @@ open DiamondIntegral.Section6 DiamondIntegral.Section2 DiamondIntegral.Section6.
 open DiamondIntegral.Section6.DiamondGrothendieck DiamondIntegral.Section6.DiamondLift
 open DiamondIntegral.Section6.DiamondProduct DiamondIntegral.Section6.DiamondLiftHomomorphism
 open DiamondIntegral.Section4 DiamondIntegral.Section4.RelativeAnnularGenerators
-open DiamondIntegral.Section7.IntermediateFormsInput DiamondIntegral.Section7.LiftClasses
+open DiamondIntegral.Section7.LiftClasses
 open DiamondIntegral.Section7.BoundedClasses DiamondIntegral.Section7.ChartOfMeasured
 open DiamondIntegral.Section7.FiberwiseInput DiamondIntegral.Section7.RingClasses
 open DiamondIntegral.Section7.Proposition724 DiamondIntegral.Section7.DiamondRing
@@ -197,7 +197,6 @@ theorem liftQuot_mk {k : ℕ} (a : Obj (BT T) k) :
 /-! ### The integral as a ring map -/
 
 section Integral
-variable (hIF : IntermediateForms M G)
 
 /-- Support data for `T` from its field base. -/
 abbrev Vb : Set M := vfFieldNames B₀.field ∪ Set.range (vfValues (Fin.elim0 : Fin 0 → VF M))
@@ -217,26 +216,26 @@ def intQ : ∀ k : ℕ, KPlus (T : Set M) G hc k →+ QRV T
   | 0 => (rvToQ T 0).comp (Proposition724Zero.integralZero G h00 hc)
   | n + 1 => (ispToQ T n).comp (integralOf h00 hc hκ hs hv (Vb T B₀) (support_of_base B₀ hntB).1
       (support_of_base B₀ hntB).2.1 (support_of_base B₀ hntB).2.2.1 (support_of_base B₀ hntB).2.2.2
-      hsmall hΓ hIF)
+      hsmall hΓ)
 
 theorem intQ_liftCls {k : ℕ} (x : Cls (BT T) k) :
-    intQ G h00 hc hκ hs hv T hsmall hΓ B₀ hntB hIF k
+    intQ G h00 hc hκ hs hv T hsmall hΓ B₀ hntB k
         (liftCls (G := G) (k := k) hc h00 hκ hs T hsmall hΓ hv B₀ hntB x) = rvToQ T k x := by
   rcases k with _ | n
   · change rvToQ T 0 (Proposition724Zero.integralZero G h00 hc _) = _
     rw [Proposition724Zero.integralZero_liftCls h00 hc hκ hs hv hsmall hΓ B₀ hntB x]
-  · change ispToQ T n (integralOf h00 hc hκ hs hv _ _ _ _ _ hsmall hΓ hIF _) = _
-    rw [integral_liftCls h00 hc hκ hs hv _ _ _ _ _ hsmall hΓ B₀ hntB hIF x]
+  · change ispToQ T n (integralOf h00 hc hκ hs hv _ _ _ _ _ hsmall hΓ _) = _
+    rw [integral_liftCls h00 hc hκ hs hv _ _ _ _ _ hsmall hΓ B₀ hntB x]
     rfl
 
 theorem intQ_cast {k l : ℕ} (h : k = l) (X : VFObject (M := M) (T : Set M) k) :
-    intQ G h00 hc hκ hs hv T hsmall hΓ B₀ hntB hIF l (vfClass G hc (h ▸ X)) =
-      intQ G h00 hc hκ hs hv T hsmall hΓ B₀ hntB hIF k (vfClass G hc X) := by
+    intQ G h00 hc hκ hs hv T hsmall hΓ B₀ hntB l (vfClass G hc (h ▸ X)) =
+      intQ G h00 hc hκ hs hv T hsmall hΓ B₀ hntB k (vfClass G hc X) := by
   subst h
   rfl
 
 theorem intQ_lift {k : ℕ} (a : Obj (BT T) k) :
-    intQ G h00 hc hκ hs hv T hsmall hΓ B₀ hntB hIF k (vfClass G hc (liftOf G h00 hc hκ hs hv T hsmall hΓ a)) =
+    intQ G h00 hc hκ hs hv T hsmall hΓ B₀ hntB k (vfClass G hc (liftOf G h00 hc hκ hs hv T hsmall hΓ a)) =
       Ideal.Quotient.mk _ (RVBoundedRing.objectClass a) := by
   rw [← liftCls_cls (G := G) hc h00 hκ hs T hsmall hΓ hv B₀ hntB a, intQ_liftCls]
   rfl
@@ -245,7 +244,7 @@ include hProd hLiftProd in
 /-- The integral, as an invariant of the ring presentation of `K μVF^◇[*]`. -/
 def integralInvariant :
     RingInvariant G hc (unitObj G h00 hc hκ hs hv T hsmall hΓ) (QRV T) where
-  value k A := intQ G h00 hc hκ hs hv T hsmall hΓ B₀ hntB hIF k (vfClass G hc A)
+  value k A := intQ G h00 hc hκ hs hv T hsmall hΓ B₀ hntB k (vfClass G hc A)
   unit := by
     rw [intQ_lift, RVBoundedRing.objectClass_unit, map_one]
   product k l A B := by
@@ -255,7 +254,7 @@ def integralInvariant :
       hsmall hv
     have h2 := hE.trans (isomorphic_cast G T (Nat.add_comm k l) (hProd k l _ _ _ _ ha hb))
       (hE.symm (hLiftProd k l a b))
-    rw [← intQ_cast G h00 hc hκ hs hv T hsmall hΓ B₀ hntB hIF (Nat.add_comm k l), vfClass_iso hc h2,
+    rw [← intQ_cast G h00 hc hκ hs hv T hsmall hΓ B₀ hntB (Nat.add_comm k l), vfClass_iso hc h2,
       intQ_lift, vfClass_iso hc ha, vfClass_iso hc hb, intQ_lift, intQ_lift,
       RVBoundedRing.objectClass_product, map_mul]
   iso k A B h := by rw [vfClass_iso hc h]
@@ -264,34 +263,34 @@ def integralInvariant :
 
 /-- **The integral `∫^◇ : K μVF^◇[*] → K μRV^db[*] / J_var` as a ring map.** -/
 def integralRing : KVF G h00 hc hκ hs hv T hsmall hΓ →+* QRV T :=
-  DiamondRing.lift (integralInvariant G h00 hc hκ hs hv T hsmall hΓ B₀ hntB hProd hLiftProd hIF)
+  DiamondRing.lift (integralInvariant G h00 hc hκ hs hv T hsmall hΓ B₀ hntB hProd hLiftProd)
 
 theorem integralRing_ringClass {k : ℕ} (A : VFObject (M := M) (T : Set M) k) :
-    integralRing G h00 hc hκ hs hv T hsmall hΓ B₀ hntB hProd hLiftProd hIF
+    integralRing G h00 hc hκ hs hv T hsmall hΓ B₀ hntB hProd hLiftProd
         (ringClass G hc (unitObj G h00 hc hκ hs hv T hsmall hΓ) A) =
-      intQ G h00 hc hκ hs hv T hsmall hΓ B₀ hntB hIF k (vfClass G hc A) :=
+      intQ G h00 hc hκ hs hv T hsmall hΓ B₀ hntB k (vfClass G hc A) :=
   lift_ringClass _ A
 
 theorem integral_comp_lift :
-    (integralRing G h00 hc hκ hs hv T hsmall hΓ B₀ hntB hProd hLiftProd hIF).comp
+    (integralRing G h00 hc hκ hs hv T hsmall hΓ B₀ hntB hProd hLiftProd).comp
       (liftQuot G h00 hc hκ hs hv T hsmall hΓ B₀ hntB hLiftProd) = RingHom.id (QRV T) := by
   apply Ideal.Quotient.ringHom_ext
   apply RVBoundedGrading.hom_ext (BT T)
   intro k a
-  change integralRing G h00 hc hκ hs hv T hsmall hΓ B₀ hntB hProd hLiftProd hIF
+  change integralRing G h00 hc hκ hs hv T hsmall hΓ B₀ hntB hProd hLiftProd
     (liftQuot G h00 hc hκ hs hv T hsmall hΓ B₀ hntB hLiftProd (Ideal.Quotient.mk _ (RVBoundedRing.objectClass a))) =
       Ideal.Quotient.mk _ (RVBoundedRing.objectClass a)
   rw [liftQuot_mk, integralRing_ringClass, intQ_lift]
 
 theorem lift_comp_integral :
     (liftQuot G h00 hc hκ hs hv T hsmall hΓ B₀ hntB hLiftProd).comp
-      (integralRing G h00 hc hκ hs hv T hsmall hΓ B₀ hntB hProd hLiftProd hIF) =
+      (integralRing G h00 hc hκ hs hv T hsmall hΓ B₀ hntB hProd hLiftProd) =
       RingHom.id (KVF G h00 hc hκ hs hv T hsmall hΓ) := by
   apply DiamondRing.hom_ext
   intro k A
   obtain ⟨a, ha⟩ := exists_chart_lift G h00 hc hκ hs hv T hsmall hΓ B₀ hntB A
   change liftQuot G h00 hc hκ hs hv T hsmall hΓ B₀ hntB hLiftProd
-    (integralRing G h00 hc hκ hs hv T hsmall hΓ B₀ hntB hProd hLiftProd hIF _) = _
+    (integralRing G h00 hc hκ hs hv T hsmall hΓ B₀ hntB hProd hLiftProd _) = _
   rw [integralRing_ringClass, vfClass_iso hc ha, intQ_lift, liftQuot_mk]
   exact (ringClass_iso G hc _ ha).symm
 
@@ -299,43 +298,76 @@ theorem lift_comp_integral :
 isomorphism `K μVF^◇[*] ≅ K μRV^db[*] / J_var`, inverse to the map induced by
 `μ𝕃`. -/
 def integralRingEquiv : KVF G h00 hc hκ hs hv T hsmall hΓ ≃+* QRV T :=
-  RingEquiv.ofRingHom (integralRing G h00 hc hκ hs hv T hsmall hΓ B₀ hntB hProd hLiftProd hIF)
+  RingEquiv.ofRingHom (integralRing G h00 hc hκ hs hv T hsmall hΓ B₀ hntB hProd hLiftProd)
     (liftQuot G h00 hc hκ hs hv T hsmall hΓ B₀ hntB hLiftProd)
-    (integral_comp_lift G h00 hc hκ hs hv T hsmall hΓ B₀ hntB hProd hLiftProd hIF)
-    (lift_comp_integral G h00 hc hκ hs hv T hsmall hΓ B₀ hntB hProd hLiftProd hIF)
+    (integral_comp_lift G h00 hc hκ hs hv T hsmall hΓ B₀ hntB hProd hLiftProd)
+    (lift_comp_integral G h00 hc hκ hs hv T hsmall hΓ B₀ hntB hProd hLiftProd)
 
 /-- **Theorem 7.26, graded form.** The integral as a ring isomorphism onto
 Section 4's relative annular quotient `K μRV^db[*] / J_var`
 (`RelativeAnnularQuotient.Ring`, whose ideal is `J_var` by
 `RelativeAnnularConverse.ideal_eq_manuscriptIdeal`). -/
 def integralGraded : KVF G h00 hc hκ hs hv T hsmall hΓ ≃+* RelativeAnnularQuotient.Ring (BT T) :=
-  (integralRingEquiv G h00 hc hκ hs hv T hsmall hΓ B₀ hntB hProd hLiftProd hIF).trans
+  (integralRingEquiv G h00 hc hκ hs hv T hsmall hΓ B₀ hntB hProd hLiftProd).trans
     (Ideal.quotEquivOfEq (RelativeAnnularConverse.ideal_eq_manuscriptIdeal (B := BT T)).symm)
 
 include hProd hLiftProd in
 /-- The integral of an object of `μVF^◇[k]` is homogeneous of degree `k` (the
 grading of `RelativeAnnularQuotient.Ring` by its polynomial coaction). -/
 theorem integralGraded_mem {k : ℕ} (A : VFObject (M := M) (T : Set M) k) :
-    integralGraded G h00 hc hκ hs hv T hsmall hΓ B₀ hntB hProd hLiftProd hIF
+    integralGraded G h00 hc hκ hs hv T hsmall hΓ B₀ hntB hProd hLiftProd
         (ringClass G hc (unitObj G h00 hc hκ hs hv T hsmall hΓ) A) ∈ RelativeAnnularQuotient.piece (BT T) k := by
   obtain ⟨a, ha⟩ := exists_chart_lift G h00 hc hκ hs hv T hsmall hΓ B₀ hntB A
   change Ideal.quotEquivOfEq (RelativeAnnularConverse.ideal_eq_manuscriptIdeal (B := BT T)).symm
-    (integralRing G h00 hc hκ hs hv T hsmall hΓ B₀ hntB hProd hLiftProd hIF (ringClass G hc _ A)) ∈ _
+    (integralRing G h00 hc hκ hs hv T hsmall hΓ B₀ hntB hProd hLiftProd (ringClass G hc _ A)) ∈ _
   rw [integralRing_ringClass, vfClass_iso hc ha, intQ_lift, Ideal.quotEquivOfEq_mk]
   exact RelativeAnnularQuotient.quotient_mem (BT T) (RVBoundedGrading.class_mem (BT T) a)
 
-include hProd hIF in
+include hProd in
 /-- **Remark 7.25 (`thekernel`).** The kernel of the ring map
 `μ𝕃 : K μRV^db[*] → K μVF^◇[*]` is the relative annular ideal `J_var`. -/
 theorem remark_7_25 :
     RingHom.ker (liftRing G h00 hc hκ hs hv T hsmall hΓ B₀ hntB hLiftProd) = manuscriptIdeal (BT T) := by
   refine le_antisymm (fun x hx => ?_) (ideal_le_ker G h00 hc hκ hs hv T hsmall hΓ B₀ hntB hLiftProd)
   have h0 : liftQuot G h00 hc hκ hs hv T hsmall hΓ B₀ hntB hLiftProd (Ideal.Quotient.mk _ x) = 0 := hx
-  have h1 := RingHom.congr_fun (integral_comp_lift G h00 hc hκ hs hv T hsmall hΓ B₀ hntB hProd hLiftProd hIF)
+  have h1 := RingHom.congr_fun (integral_comp_lift G h00 hc hκ hs hv T hsmall hΓ B₀ hntB hProd hLiftProd)
     (Ideal.Quotient.mk _ x)
   rw [RingHom.comp_apply, h0, map_zero, RingHom.id_apply] at h1
   exact Ideal.Quotient.eq_zero_iff_mem.mp h1.symm
 
 end Integral
+
+/-! ### The final statements, with no hypothesis beyond the standing base -/
+
+section Final
+
+/-- **Theorem 7.26 (`main:prop`), ring part**: `K μVF^◇[*] ≅ K μRV^db[*] / J_var`,
+inverse to the map induced by `μ𝕃`. The two product facts are proved
+(`productHyp`, `liftProductHyp`). -/
+def theorem_7_26 : KVF G h00 hc hκ hs hv T hsmall hΓ ≃+* QRV T :=
+  integralRingEquiv G h00 hc hκ hs hv T hsmall hΓ B₀ hntB (productHyp G h00 hc hκ hs hv T hsmall)
+    (liftProductHyp G h00 hc hκ hs hv T hsmall hΓ)
+
+/-- **Theorem 7.26, graded form**: onto Section 4's relative annular quotient,
+with integrals of degree-`k` objects homogeneous of degree `k`. -/
+def theorem_7_26_graded : KVF G h00 hc hκ hs hv T hsmall hΓ ≃+* RelativeAnnularQuotient.Ring (BT T) :=
+  integralGraded G h00 hc hκ hs hv T hsmall hΓ B₀ hntB (productHyp G h00 hc hκ hs hv T hsmall)
+    (liftProductHyp G h00 hc hκ hs hv T hsmall hΓ)
+
+theorem theorem_7_26_graded_mem {k : ℕ} (A : VFObject (M := M) (T : Set M) k) :
+    theorem_7_26_graded G h00 hc hκ hs hv T hsmall hΓ B₀ hntB
+        (ringClass G hc (unitObj G h00 hc hκ hs hv T hsmall hΓ) A) ∈ RelativeAnnularQuotient.piece (BT T) k :=
+  integralGraded_mem G h00 hc hκ hs hv T hsmall hΓ B₀ hntB (productHyp G h00 hc hκ hs hv T hsmall)
+    (liftProductHyp G h00 hc hκ hs hv T hsmall hΓ) A
+
+/-- **Remark 7.25 (`thekernel`)**: the kernel of the ring map
+`μ𝕃 : K μRV^db[*] → K μVF^◇[*]` is `J_var`. -/
+theorem remark_7_25_kernel :
+    RingHom.ker (liftRing G h00 hc hκ hs hv T hsmall hΓ B₀ hntB (liftProductHyp G h00 hc hκ hs hv T hsmall hΓ)) =
+      manuscriptIdeal (BT T) :=
+  remark_7_25 G h00 hc hκ hs hv T hsmall hΓ B₀ hntB (productHyp G h00 hc hκ hs hv T hsmall)
+    (liftProductHyp G h00 hc hκ hs hv T hsmall hΓ)
+
+end Final
 
 end DiamondIntegral.Section7.Theorem726

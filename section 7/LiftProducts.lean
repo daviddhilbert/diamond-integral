@@ -212,8 +212,7 @@ theorem relabel_isomorphic (A B : VFObject (M := M) S n) (e : Fin B.labels ≃ F
     by_cases hn : n = 0
     · exact Or.inl hn
     · exact Or.inr ⟨⟨0, Nat.pos_of_ne_zero hn⟩, _, relabel_relativelyUnary A B e hmemB _⟩
-  obtain ⟨K, _⟩ := morphism_of_generic_map h00 hc hs hsmall f hbij
-    (UnaryFactorization.step homeo hunary) (fun p _ => by
+  obtain ⟨K, _⟩ := morphism_of_step h00 hc hs hsmall f homeo hunary (fun p _ => by
       have hchart : IsVFChartAt f p id := by
         obtain ⟨ρ, hρ⟩ := identity_vfChart A.proper p
         refine ⟨ρ, fun x hx => ?_⟩

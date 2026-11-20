@@ -118,8 +118,7 @@ theorem graftMorphism :
     rcases n with _ | n
     · exact Or.inl rfl
     · exact Or.inr ⟨0, 0, graft_relativelyUnary hc A τ 0⟩
-  refine morphism_of_generic_map h00 hc hs hsmall g (graft_bijective hc τ)
-    (UnaryFactorization.step homeo hunary) (fun p _ => ?_)
+  refine morphism_of_step h00 hc hs hsmall g homeo hunary (fun p _ => ?_)
   obtain ⟨L, hL, hdet⟩ := graft_unit_derivative hc hv τ hτ p
   refine ⟨L, hL, ?_⟩
   rw [hdet]

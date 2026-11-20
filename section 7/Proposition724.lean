@@ -13,7 +13,7 @@ contraction, modulo `μIsp^db`, is an invariant of this presentation
 (`contractionInvariant`):
 
 * isomorphic objects: `MorphismClasses.morphism_classRel` (arrows, from the
-  intermediate-forms input and Corollary 7.15 for `(i, j)`-relatively unary
+  factorizations inside `μVF^◇` of Definition 6.34 and Corollary 7.15 for `(i, j)`-relatively unary
   morphisms), and Lemma 7.13 in dimension `1`;
 * the empty object: its contractions have class `0`;
 * scissors: the class is additive over a proper invariant piece and its
@@ -41,7 +41,7 @@ namespace DiamondIntegral.Section7.Proposition724
 open DiamondIntegral.Section6 DiamondIntegral.Section2 DiamondIntegral.Section6.DiamondCategory
 open DiamondIntegral.Section6.DiamondGrothendieck DiamondIntegral.Section6.DiamondLift
 open DiamondIntegral.Section6.DiamondStandardContraction
-open DiamondIntegral.Section7.IntermediateFormsInput DiamondIntegral.Section7.MorphismClasses
+open DiamondIntegral.Section7.MorphismClasses
 open DiamondIntegral.Section7.LiftClasses DiamondIntegral.Section7.PieceCombination
 open DiamondIntegral.Section7.Corollary715 DiamondIntegral.Section7.FiberwiseInput
 open DiamondIntegral.Section7.BoundedClasses DiamondIntegral.Section7.ChartOfMeasured
@@ -130,7 +130,7 @@ end Hypotheses
 /-! ### The invariant -/
 
 section Invariant
-variable (hIF : IntermediateForms M G) (hMove : MoveHyp (G := G) h00 hc hκ hs hv hsmall hΓ)
+variable (hMove : MoveHyp (G := G) h00 hc hκ hs hv hsmall hΓ)
 variable (hScissor : ScissorHyp (G := G) h00 hc hκ hs hv hsmall hΓ)
 variable {n : ℕ}
 
@@ -151,7 +151,7 @@ theorem contractionClass_eq (A : VFObject (M := M) (T : Set M) (n + 1)) {e : Equ
       (ispCon (BT T) n).mk' (clsOf h00 hc hκ hs hv hsmall hΓ A F) :=
   (ispCon_mk_eq _ _).mpr (classRel_refl (G := G) h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ A 1 e _ F)
 
-include hIF hMove in
+include hMove in
 /-- Isomorphic objects have the same contraction class. -/
 theorem contractionClass_iso {A B : VFObject (M := M) (T : Set M) (n + 1)} (h : Isomorphic G A B) :
     contractionClass h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ A =
@@ -160,7 +160,7 @@ theorem contractionClass_iso {A B : VFObject (M := M) (T : Set M) (n + 1)} (h : 
   rcases n with _ | m
   · exact classRel_of_iso_one (G := G) h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ h 1 1 _ _
   · obtain ⟨F⟩ := h
-    exact morphism_classRel h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ hIF (hMove m) F 1 1 _ _
+    exact morphism_classRel h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ (hMove m) F 1 1 _ _
 
 include hScissor in
 /-- The contraction class is additive over scissors. -/
@@ -205,13 +205,13 @@ theorem contractionClass_empty :
   unfold contractionClass
   rw [clsOf_empty h00 hc hκ hs hv hsmall hΓ, map_zero]
 
-include hIF hMove hScissor in
+include hMove hScissor in
 /-- **The contraction class is an invariant of the scissor presentation** of
 `K₊ μVF^◇[n + 1]`. -/
 def contractionInvariant :
     PositiveAdditiveGrothendieck.Invariant (presentation (S := (T : Set M)) G hc (n + 1)) (A := IspQuot (BT T) n) where
   toFun := contractionClass h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ
-  iso h := contractionClass_iso h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ hIF hMove h
+  iso h := contractionClass_iso h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ hMove h
   empty := contractionClass_empty h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ
   scissor := by
     rintro a b c d ⟨U, X, hX, hP, rfl, rfl, hcU, rfl⟩
@@ -222,10 +222,10 @@ def contractionInvariant :
 /-- **The bounded integral** `∫⁺ : K₊ μVF^◇[n + 1] → K₊ μRV^db[n + 1] / μIsp^db`: the
 class of a standard contraction. -/
 def integral : KPlus (T : Set M) G hc (n + 1) →+ IspQuot (BT T) n :=
-  PositiveAdditiveGrothendieck.lift _ (contractionInvariant h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ hIF hMove hScissor)
+  PositiveAdditiveGrothendieck.lift _ (contractionInvariant h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ hMove hScissor)
 
 theorem integral_vfClass (A : VFObject (M := M) (T : Set M) (n + 1)) :
-    integral h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ hIF hMove hScissor (vfClass G hc A) =
+    integral h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ hMove hScissor (vfClass G hc A) =
       contractionClass h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ A :=
   PositiveAdditiveGrothendieck.lift_of _ _ A
 
@@ -235,19 +235,17 @@ end Invariant
 
 section Proposition
 variable (B₀ : VFGeneratedFieldBase T) (hntB : ∃ x : B₀.field, x ≠ 0 ∧ Valued.v x.val ≠ 1)
-variable (hIF : IntermediateForms M G)
 variable {n : ℕ}
 
-/-- **The bounded integral** `∫⁺ : K₊ μVF^◇[n + 1] → K₊ μRV^db[n + 1] / μIsp^db`, on the
-intermediate-forms input only. -/
+/-- **The bounded integral** `∫⁺ : K₊ μVF^◇[n + 1] → K₊ μRV^db[n + 1] / μIsp^db`. -/
 abbrev integralOf : KPlus (T : Set M) G hc (n + 1) →+ IspQuot (BT T) n :=
-  integral h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ hIF (moveHyp h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ)
+  integral h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ (moveHyp h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ)
     (scissorHyp h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ)
 
 /-- **`∫⁺ μ𝕃 = id`**: the integral of the lift of a class is the class, modulo
 `μIsp^db` (the tautological contraction). -/
 theorem integral_liftCls (x : Cls (BT T) (n + 1)) :
-    integralOf h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ hIF
+    integralOf h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ
         (liftCls (G := G) (k := n + 1) hc h00 hκ hs T hsmall hΓ hv B₀ hntB x) =
       (ispCon (BT T) n).mk' x := by
   obtain ⟨a, rfl⟩ := cls_surjective x
@@ -274,10 +272,9 @@ theorem support_of_base :
   · exact h
   · exact i.elim0
 
-include hIF in
 /-- **Proposition 7.24 (`kernel:L`), degree `n + 1`.** For classes `x`, `y` of
 `μRV^db[n + 1]`: `μ𝕃 x = μ𝕃 y` in `K₊ μVF^◇[n + 1]` if and only if
-`(x, y) ∈ μIsp^db`. On the intermediate-forms input `hIF` only. -/
+`(x, y) ∈ μIsp^db`. No hypothesis beyond the standing base. -/
 theorem proposition_7_24 (x y : Cls (BT T) (n + 1)) :
     liftCls (G := G) (k := n + 1) hc h00 hκ hs T hsmall hΓ hv B₀ hntB x =
         liftCls (G := G) (k := n + 1) hc h00 hκ hs T hsmall hΓ hv B₀ hntB y ↔ IspRel x y := by
@@ -285,15 +282,14 @@ theorem proposition_7_24 (x y : Cls (BT T) (n + 1)) :
   constructor
   · intro h
     apply (ispCon_mk_eq (BT T) n).mp
-    rw [← integral_liftCls h00 hc hκ hs hv _ hV hVT hTV hnt hsmall hΓ B₀ hntB hIF x, h,
-      integral_liftCls h00 hc hκ hs hv _ hV hVT hTV hnt hsmall hΓ B₀ hntB hIF y]
+    rw [← integral_liftCls h00 hc hκ hs hv _ hV hVT hTV hnt hsmall hΓ B₀ hntB x, h,
+      integral_liftCls h00 hc hκ hs hv _ hV hVT hTV hnt hsmall hΓ B₀ hntB y]
   · intro h
     rw [ispRel_iff (show n + 1 = 1 + n by omega)] at h
     exact (liftCls_cast_iff hc (show n + 1 = 1 + n by omega)
       (fun k => liftCls (G := G) (k := k) hc h00 hκ hs T hsmall hΓ hv B₀ hntB) x y).mpr
       (BlowupLiftGeneral.muIsp_lift hc h00 hκ hs T hsmall hΓ hv B₀ hntB h)
 
-include hIF in
 /-- Proposition 7.24 in the notation of the "if" direction: degree `1 + k`, with
 `μIsp^db` as `MuIsp`. -/
 theorem proposition_7_24_muIsp {k : ℕ} (x y : Cls (BT T) (1 + k)) :
@@ -301,41 +297,41 @@ theorem proposition_7_24_muIsp {k : ℕ} (x y : Cls (BT T) (1 + k)) :
         liftCls (G := G) (k := 1 + k) hc h00 hκ hs T hsmall hΓ hv B₀ hntB y ↔ MuIsp x y := by
   have e := liftCls_cast_iff hc (show 1 + k = k + 1 by omega)
     (fun k => liftCls (G := G) (k := k) hc h00 hκ hs T hsmall hΓ hv B₀ hntB) x y
-  rw [e, proposition_7_24 h00 hc hκ hs hv hsmall hΓ B₀ hntB hIF, ispRel_iff (show k + 1 = 1 + k by omega),
+  rw [e, proposition_7_24 h00 hc hκ hs hv hsmall hΓ B₀ hntB, ispRel_iff (show k + 1 = 1 + k by omega),
     castCls_castCls, castCls_castCls]
 
 /-! ### Theorem 7.26, the semigroup isomorphism in positive degree -/
 
-include hIF B₀ hntB in
+include B₀ hntB in
 /-- **Theorem 7.26 (`main:prop`), semigroup part, degree `n + 1`.** The
 integral `∫⁺ : K₊ μVF^◇[n + 1] → K₊ μRV^db[n + 1] / μIsp^db` is bijective: it is
 the inverse of the map induced by `μ𝕃`, which is surjective (Corollary 6.37)
 and injective (Proposition 7.24). -/
 theorem integral_bijective :
-    Function.Bijective (integralOf h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ hIF (n := n)) := by
+    Function.Bijective (integralOf h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ (n := n)) := by
   constructor
   · intro a b hab
     obtain ⟨x, rfl⟩ := ChartOfMeasured.liftCls_surjective hc (G := G) h00 hκ hs T hsmall hΓ hv B₀ hntB a
     obtain ⟨y, rfl⟩ := ChartOfMeasured.liftCls_surjective hc (G := G) h00 hκ hs T hsmall hΓ hv B₀ hntB b
-    rw [integral_liftCls h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ B₀ hntB hIF,
-      integral_liftCls h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ B₀ hntB hIF] at hab
-    exact (proposition_7_24 h00 hc hκ hs hv hsmall hΓ B₀ hntB hIF x y).mpr ((ispCon_mk_eq _ _).mp hab)
+    rw [integral_liftCls h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ B₀ hntB,
+      integral_liftCls h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ B₀ hntB] at hab
+    exact (proposition_7_24 h00 hc hκ hs hv hsmall hΓ B₀ hntB x y).mpr ((ispCon_mk_eq _ _).mp hab)
   · intro q
     obtain ⟨x, rfl⟩ := AddCon.mk'_surjective (c := ispCon (BT T) n) q
-    exact ⟨_, integral_liftCls h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ B₀ hntB hIF x⟩
+    exact ⟨_, integral_liftCls h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ B₀ hntB x⟩
 
 /-- **Theorem 7.26, semigroup isomorphism**: `K₊ μVF^◇[n + 1] ≃+ K₊ μRV^db[n + 1] / μIsp^db`. -/
 noncomputable def integralEquiv : KPlus (T : Set M) G hc (n + 1) ≃+ IspQuot (BT T) n :=
-  AddEquiv.ofBijective (integralOf h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ hIF)
-    (integral_bijective h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ B₀ hntB hIF)
+  AddEquiv.ofBijective (integralOf h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ)
+    (integral_bijective h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ B₀ hntB)
 
 /-- The characterization in Theorem 7.26: `∫⁺ [A] = [U] / μIsp^db` if and only
 if `[A] = [μ𝕃 U]`. -/
 theorem integral_eq_iff (a : KPlus (T : Set M) G hc (n + 1)) (x : Cls (BT T) (n + 1)) :
-    integralOf h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ hIF a = (ispCon (BT T) n).mk' x ↔
+    integralOf h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ a = (ispCon (BT T) n).mk' x ↔
       a = liftCls (G := G) (k := n + 1) hc h00 hκ hs T hsmall hΓ hv B₀ hntB x := by
-  rw [← integral_liftCls h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ B₀ hntB hIF x]
-  exact (integral_bijective h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ B₀ hntB hIF).1.eq_iff
+  rw [← integral_liftCls h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ B₀ hntB x]
+  exact (integral_bijective h00 hc hκ hs hv V hV hVT hTV hnt hsmall hΓ B₀ hntB).1.eq_iff
 
 end Proposition
 

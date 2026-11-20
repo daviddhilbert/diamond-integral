@@ -285,8 +285,7 @@ theorem graftPiece_morphism (Y : DefSet (rawMixedSpace (M := M) n A.labels) S) (
     ((graft hc τ).restrict hY).toImage
   have homeo : ProperCovariantHomeomorphism (G := G) f :=
     graftPiece_home (G := G) h00 hc hκ hs hv hsmall hΓ A τ hτ Y hY hPY
-  refine morphism_of_generic_map h00 hc hs hsmall f homeo.bijective
-    (UnaryFactorization.step homeo ?_) (fun p _ => ?_)
+  refine morphism_of_step h00 hc hs hsmall f homeo ?_ (fun p _ => ?_)
   · rcases n with _ | n
     · exact Or.inl rfl
     · refine Or.inr ⟨0, 0, fun p k _ => ?_⟩
