@@ -24,8 +24,15 @@ Formal reading:
 * a standard contraction is Section 6's `StandardContraction A e` in some
   coordinate order `e` (the normalization, the ordered program and its lift),
   and `T̂_σ(A)` is its RV target, onto which `contraction` maps `A`;
-* `A_s` is the fibre of the contraction over `s`, read in the order
-  `(x_{e 0}, x_{e 1})` (`cellAt`). The first stage contracts `x_{e 1}`, so the
+* `A_s` is the fibre of the contraction over `s`, in the normalized
+  coordinates of the contraction (the preliminary adjustment by Remark
+  `spec:addendum` that every standard contraction may make), read in the order
+  `(x_{e 0}, x_{e 1})` (`cellAt`). In the original coordinates the statement
+  fails as soon as `A` has a point with a zero coordinate: the normalization
+  moves `0`, and the fibre through such a point meets several RV-discs. On a
+  fibre the core bits of the normalization are constant (they are tags in `s`),
+  so the normalized fibre is the original one translated by a constant vector
+  definable over `T`; for doubly bounded `A` the two readings agree. The first stage contracts `x_{e 1}`, so the
   second coordinate carries the RV-discs `t^♯ + ε(a)`, as in Definition 7.19.
   The retained labels of `A` are part of `s`, so `A_s` lies over one label value;
 * "`2`-cell" is Definition 7.19 (`TwoCells.IsTwoCell`). The cell data are given
@@ -85,12 +92,13 @@ end Cells
 variable (M : Type) [LRV.Structure M] [M ⊨ Axioms.ACVF]
 variable (G : Type) [LinearOrderedCommGroupWithZero G] [Valued (VF M) G]
 
-/-- The fibre `A_s` of a standard contraction over `s`, read in the order
-`(x_{e 0}, x_{e 1})`. -/
+/-- The fibre `A_s` of a standard contraction over `s`, in the normalized
+coordinates of the contraction, read in the order `(x_{e 0}, x_{e 1})`. -/
 def cellAt {M : Type} [LRV.Structure M] [M ⊨ Axioms.ACVF] {G : Type} [LinearOrderedCommGroupWithZero G]
     [Valued (VF M) G] {S : Set M} {r : ℕ} {A : DefSet (rawMixedSpace (M := M) 2 r) S} {e : Equiv.Perm (Fin 2)}
     (F : StandardContraction (G := G) A e) (s : F.rvTarget) : Set (VF M × VF M) :=
-  {q | ∃ p : A, F.contraction p = s ∧ q = (p.val.1 (e 0), p.val.1 (e 1))}
+  {q | ∃ p : A, F.contraction p = s ∧
+    q = ((F.normalization.point p.val).1 (e 0), (F.normalization.point p.val).1 (e 1))}
 
 /-- **Uniform cell data** for the fibres of a standard contraction: functions of
 the RV point `s` of the target, with graphs and kind pieces definable over the

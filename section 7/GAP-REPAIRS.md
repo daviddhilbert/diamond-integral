@@ -138,6 +138,16 @@ formalization convention. No manuscript edit has been made for them.
       with its RV coordinates retained ("its proof is uniform in such labels");
       r = 0 is the printed statement. Section 6's standard contractions retain
       the old labels, so each fibre lies over one label value.
+    - Normalized coordinates: the fibre over s is read in the normalized
+      coordinates of the contraction, the preliminary adjustment by Remark
+      `spec:addendum` that a standard contraction may make (amended the same
+      day; found by the 7.20 session). Read in the original coordinates, the
+      statement is false: for A = 𝒪 × 𝒪 every zero-centred normalization moves 0
+      (since v(0) = ∞ > v(c)), so the fibre through (0, 0) is an open set around
+      (0, 0) and meets several RV-discs. On a fibre the core bits are tags in s,
+      so the normalized fibre is the original one translated by a constant
+      vector definable over T; for doubly bounded A the readings agree
+      (Section 6 `point_field_of_doublyBounded`).
     - Orientation: the fibre over s is read in the order (x_{e 0}, x_{e 1}),
       where e is the coordinate order of the contraction. Its first stage
       contracts x_{e 1}, which therefore carries the RV-discs t^♯ + ε(a) of
