@@ -273,7 +273,10 @@ intended Lean statement; ⚑ marks a flag that is also listed in §5.
 - **Status (2026-11-19).** Done with head start 0: `KernelDimOne.lemma_7_13`
   (hypothesis A ≅ B in μVF^◇[1]; GAP-REPAIRS 8) and the core
   `lift_iso_muIsp`.
-- **Head start (to do with 7.14).** Lemma 6.38 for a μVF^◇[1] morphism that
+- **Head start: built by the Lemma 7.14 session** (2026-11-19), as
+  `Lemma714Compare.lift_iso_muIsp_head` in `section 7/Lemma714Compare.lean`
+  (degree 1+k, isomorphism of full lifts fixing the k lifted label
+  coordinates); only the 7.14 proof uses it. Original note: Lemma 6.38 for a μVF^◇[1] morphism that
   preserves the selected labels π, with chains carried to the head-start
   bundles (Section 6 `rvHeadStartBundle`, `carryHeadStartBijection`) so that the
   full-lift 7.11 applies in grade 1+k, and the 6.38 isomorphism of contractions
