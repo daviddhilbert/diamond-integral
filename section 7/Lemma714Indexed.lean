@@ -224,6 +224,81 @@ theorem mem_indCoordSet (u : Fin (q + W.arity) → M) (y : Fin (1 + d) → M) :
       rw [hfe]
       exact ChartSchema.coordRow_coordAt hv hr
 
+include hW in
+theorem indCoord_finite_fibres (t : Fin (1 + d) → M) :
+    {w | w ∈ Q.indDom W ∧ Q.indCoord W w = t}.Finite := by
+  let tt : Fin d → M := fun i => t (Fin.natAdd 1 i)
+  let Kt := {x | x ∈ Q.carrier ∧ x Q.idx = t (Fin.castAdd d 0)}
+  have hR : ∀ x ∈ Kt, {u : Fin W.arity → M | W.coordRow x u tt}.Finite := by
+    intro x hx
+    by_cases hs : ∀ j, sortEval (rvs d j) (tt j)
+    · exact ((hW x hx.1).map.2.2.2 tt hs).1
+    · refine Set.Finite.subset Set.finite_empty ?_
+      intro u hu
+      exact hs (mem_rows_sorted (rvs q) (rvs W.arity) (rvs d) W.coord_definable hu).2
+  apply ((Q.finite _).biUnion (fun x hx => (hR x hx).image (Fin.append x))).subset
+  rintro w ⟨hw, he⟩
+  refine Set.mem_biUnion (x := keyOf w) ⟨Q.indDom_key hw, ?_⟩ ⟨rowOf w, ?_, append_keyOf_rowOf w⟩
+  · have := congrFun he (Fin.castAdd d 0)
+    simpa [indCoord, keyOf] using this
+  · have hco : W.coordAt (keyOf w) (rowOf w) = tt := by
+      funext i
+      have := congrFun he (Fin.natAdd 1 i)
+      simpa [indCoord] using this
+    have := ChartSchema.coordRow_coordAt (hW _ (Q.indDom_key hw)) (Q.indDom_row hw)
+    rw [hco] at this
+    exact this
+
+include hW in
+theorem indVol_definable :
+    DefinableOverBase B (fun _ : Fin ((q + W.arity) + 1) => .rv)
+      {w | Fin.tail w ∈ Q.indDom W ∧ NonzeroRV (w 0) ∧ codeValue (w 0) = indVol W (Fin.tail w)} := by
+  have h1 := (Q.indDom_definable W).preimage_real (fun _ : Fin ((q + W.arity) + 1) => .rv) Fin.succ
+  have h2 := W.volume_definable.preimage_real (fun _ : Fin ((q + W.arity) + 1) => .rv) (ChartSchema.volIndex (q + W.arity))
+  convert h1.inter h2 using 1
+  ext w
+  have e : w ∘ ChartSchema.volIndex (q + W.arity) =
+      Fin.append (Fin.append (keyOf (Fin.tail w)) (rowOf (Fin.tail w))) (fun _ : Fin 1 => w 0) := by
+    rw [append_keyOf_rowOf]
+    funext i
+    refine Fin.addCases (fun l => ?_) (fun l => ?_) i <;> simp [ChartSchema.volIndex, Fin.tail]
+  have et : w ∘ Fin.succ = Fin.tail w := rfl
+  simp only [Set.mem_setOf_eq, Set.mem_inter_iff, e, et]
+  constructor
+  · rintro ⟨hw, hn, hv⟩
+    have hrow := Q.indDom_row hw
+    have hvr := (ChartSchema.volRow_iff (hW _ (Q.indDom_key hw)) _ (w 0)).mpr ⟨hrow, hn, hv⟩
+    have hs : w ∈ sortedUniverse (fun _ : Fin ((q + W.arity) + 1) => SortTag.rv) := by
+      intro i
+      refine Fin.cases hn.1 (fun j => ?_) i
+      exact (Q.indDom_definable W).proper _ hw j
+    exact ⟨⟨hw, hs⟩, hvr, hs⟩
+  · rintro ⟨⟨hw, -⟩, hvr, -⟩
+    obtain ⟨-, hn, hv⟩ := (ChartSchema.volRow_iff (hW _ (Q.indDom_key hw)) _ (w 0)).mp hvr
+    exact ⟨hw, hn, hv⟩
+
+include hW in
+theorem indCoord_proper {w : Fin (q + W.arity) → M} (hw : w ∈ Q.indDom W) : Proper (Q.indCoord W w) := by
+  intro i
+  refine Fin.addCases (fun l => ?_) (fun l => ?_) i
+  · simp only [indCoord, Fin.append_left]
+    exact Q.nonzero _ (Q.indDom_key hw)
+  · simp only [indCoord, Fin.append_right]
+    exact ChartSchema.coordAt_proper (hW _ (Q.indDom_key hw)) (Q.indDom_row hw) l
+
+variable (W) in
+/-- **The indexed chart** of a schema valid at every key, over `B`, of degree `1 + d`. -/
+def indChart : Chart B (1 + d) where
+  arity := q + W.arity
+  domain := Q.indDom W
+  domain_definable := Q.indDom_definable W
+  coordinate := Q.indCoord W
+  coordinate_definable := graphOn_of_append _ _ _ (Q.indCoordSet_definable W) (Q.mem_indCoordSet hW)
+  coordinate_proper := fun _ hw => Q.indCoord_proper hW hw
+  finite_fibres := Q.indCoord_finite_fibres hW
+  volume := indVol W
+  volume_definable := Q.indVol_definable hW
+
 end IndChart
 
 end KeySet
