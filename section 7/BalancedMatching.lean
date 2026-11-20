@@ -3,6 +3,47 @@ import «section 7».ChainStages
 import «section 7».SetBaseMatching
 import «section 7».FirstStage
 
+/-! Lemma 6.38 in the balanced case of Lemma 7.21 (referee R132), and the
+opposite orientation of a balanced family.
+
+Let `X ⊆ VF² × RV^q` satisfy the input of the balanced translation
+(`BalancedShearStages.BalancedShearInput`): its nonempty cells `X_u` are
+balanced with positioning function `ε(u, ·)` and paradigms `t₁(u)`, `t(u)`
+(Definition 7.17), the graphs of `ε` and `t` are definable, and `X` is proper
+invariant, VF-doubly bounded and tagged. Suppose also that the graph of `t₁` is
+definable.
+
+* **Transpose.** If `ε` is balanced in `A` with paradigms `t₁`, `t₂`, then
+  `ε⁻¹` is balanced in the transpose `Aᵀ` with paradigms `t₂`, `t₁`
+  (`balanced_transpose`): the fibre of `Aᵀ` over `y` is `t₁^♯ + ε⁻¹(y)`, and
+  `ε(Aᵀ_y) = y - t₂^♯`. The inverse of an `rv`-affine bijection with slope `s`
+  is `rv`-affine with slope `s⁻¹`, and the preimage of an open subdisc is the
+  intersection of two open discs about a common point, hence an open disc. The
+  membership arguments use that an open disc containing `a` and a point at
+  distance `ρ` from `a` contains every point at distance `≥ ρ` from `a`.
+* **Opposite orientation.** The transposed cells of `X` give the input of the
+  translation stage for `X ∘ swap`, with positioning function `ε(u, ·)⁻¹` and
+  paradigms `t₁(u)`, `t(u)` (`swapInput`). The genuine shift for the transpose
+  follows from taggedness: `ε⁻¹(y)` lies in the first projection of `X_u`, on
+  which the leading term is constant.
+* **Label families.** `A₁ = {(a, u) : a ∈ first(X_u)}` and
+  `A₂ = {(b, u) : b ∈ second(X_u)}` (`firstFamily`, `secondFamily`,
+  `mem_firstFamily`, `mem_secondFamily`). The map `(a, u) ↦ (ε(u, a), u)` is a
+  proper covariant homeomorphism `A₁ → A₂` (`positionMap`, `positionMap_home`):
+  it is bijective since each `ε(u, ·)` is, its graph fibres are label fibres of
+  `A₁` and `A₂`, and it is continuous since `ε(u, ·)` is `rv`-affine.
+* **Jacobian.** At a generic point the Jacobian `J` of `ε(u, ·)` has leading
+  term the slope `s` (difference quotients all have leading term `s`), so
+  `vrv(J) = vrv(s) = vrv(t(u)) / vrv(t₁(u))` by Remark 7.18
+  (`positionMap_jacobian`).
+* **Lemma 6.38.** With the label forms `vrv(t(u))` on `A₁` and `vrv(t₁(u))` on
+  `A₂` (the paper's constant forms `0` and `-γ` up to the common shift
+  `vrv(t(u))`), Lemma 6.38 over the support data gives the two chains, which are
+  contraction stages `S₁`, `S₂` (`ChainStages`), and a bijection `ψ` of their
+  contracted sets that keeps the old labels `u` and satisfies
+  `vrv(lead ψ(z)) · vrv(t₁(u)) = vrv(lead z) · vrv(t(u))`
+  (`exists_balanced_matching`). -/
+
 set_option autoImplicit false
 set_option backward.isDefEq.respectTransparency false
 set_option maxHeartbeats 4000000
@@ -38,6 +79,8 @@ theorem isOpenDiscVF_iff {D : Set (VF M)} :
       have hz' : iVF z := disc_underlying_subset_vf _ hz
       exact ⟨⟨z, hz'⟩, (h _).mpr ((openDiscCode_mem_iff_value a ⟨z, hz'⟩ γ).mp hz), rfl⟩
 
+theorem vfValue_sub_swap (a b : VF M) : vfValue (a - b) = vfValue (b - a) := vfValue_sub_comm a b
+
 /-- Every point of an open disc is a centre. -/
 theorem openDisc_recentre {D : Set (VF M)} (hD : IsOpenDiscVF D) {a' : VF M} (ha' : a' ∈ D) :
     ∃ γ : Gamma M, ∀ x, x ∈ D ↔ γ.val < vfValue (x - a') := by
@@ -50,7 +93,7 @@ theorem openDisc_recentre {D : Set (VF M)} (hD : IsOpenDiscVF D) {a' : VF M} (ha
   · apply (h x).mpr
     have h2 := vfValue_min_le_sub (x - a') (a - a')
     rw [show x - a' - (a - a') = x - a by abel] at h2
-    have h1' : γ.val < vfValue (a - a') := by rw [vfValue_sub_comm']; exact h1
+    have h1' : γ.val < vfValue (a - a') := by rw [vfValue_sub_swap]; exact h1
     exact (lt_min hx h1').trans_le h2
 
 /-- An open disc containing `a'` and `b` contains every `c` at least as close to
@@ -64,7 +107,7 @@ theorem vfValue_sharp {t : RVInfinity M} {s s' : VF M} (hs : s ∈ sharpSet t) (
     vfValue s = vfValue s' := by
   rw [vfValue_of_rv_eq hs, vfValue_of_rv_eq hs']
 
-theorem vfValue_neg' (x : VF M) : vfValue (-x) = vfValue x := vfValue_neg x
+theorem vfValue_neg_eq (x : VF M) : vfValue (-x) = vfValue x := vfValue_neg x
 
 theorem rvZero_eq_zero : rvZero M = (0 : RVInfinity M) := Subtype.ext RVOperations.zero_val.symm
 
@@ -204,7 +247,7 @@ theorem balanced_transpose (h : Balanced A ε t₁ t₂) :
         exact hmem.2
       apply openDisc_mem_of_le hA₁ ha' hb
       rw [show positionInv A ε y - s₀ - positionInv A ε y = -s₀ by abel, add_sub_cancel_right,
-        vfValue_neg']
+        vfValue_neg_eq]
       exact (vfValue_sharp hs₀ hs₁).le
   · -- the preimages of the transposed fibres
     intro y hy
@@ -228,7 +271,7 @@ theorem balanced_transpose (h : Balanced A ε t₁ t₂) :
         exact mem_second_of_fibre hmem
       have hbA : y - s₂ ∈ second A := by
         apply openDisc_mem_of_le h.second_disc hyA hfibmem
-        rw [add_sub_cancel_right, show y - s₂ - y = -s₂ by abel, vfValue_neg']
+        rw [add_sub_cancel_right, show y - s₂ - y = -s₂ by abel, vfValue_neg_eq]
         exact (vfValue_sharp hs₀ hs₂).le
       refine ⟨?_, hbA⟩
       change (positionInv A ε (y - s₂)) ∈ fibre (Prod.swap '' A) y
@@ -382,6 +425,16 @@ def firstFamily (X : DefSet (rawMixedSpace (M := M) 2 q) S) : DefSet (rawMixedSp
 /-- The family `A₂ = {(b, u) : b ∈ second(X_u)}` of second projections. -/
 def secondFamily (X : DefSet (rawMixedSpace (M := M) 2 q) S) : DefSet (rawMixedSpace (M := M) 1 q) S :=
   (vfDropLast (reindexedVFSet X (Equiv.swap 0 1))).image
+
+omit [M ⊨ Axioms.ACVF] in
+/-- `A₁` is literally the contracted base `vfDropLast X` of the order-`21` translation. -/
+theorem firstFamily_eq (X : DefSet (rawMixedSpace (M := M) 2 q) S) :
+    firstFamily X = (vfDropLast X).image := rfl
+
+omit [M ⊨ Axioms.ACVF] in
+/-- `A₂` is literally the contracted base of the swapped orientation. -/
+theorem secondFamily_eq (X : DefSet (rawMixedSpace (M := M) 2 q) S) :
+    secondFamily X = (vfDropLast (reindexedVFSet X (Equiv.swap 0 1))).image := rfl
 
 omit [M ⊨ Axioms.ACVF] in
 theorem fin_one_fun_eq {α : Type} (a : Fin 1 → α) : (fun _ : Fin 1 => a 0) = a := by
@@ -890,7 +943,7 @@ theorem jacobian_rv_eq (H : BalancedShearInput X ε t t₁) (a : firstFamily X) 
     rw [vfValue_of_rv_eq hDrv, RVOperations.vrv_mul]
     rfl
   have hclose : vfValue D < vfValue (J * r - D) := by
-    rw [hDval, show J * r - D = -(D - J * r) by abel, vfValue_neg']
+    rw [hDval, show J * r - D = -(D - J * r) by abel, vfValue_neg_eq]
     exact hest
   have hJr : rv M (J * r) = rv M D := rv_eq_of_value_close hD0 hclose
   have hmul : rv M (J * r) = rv M J * rv M r := RVOperations.rv_mul J r
@@ -920,12 +973,209 @@ theorem positionMap_jacobian (h00 : M ⊨ Axioms.ACVF00) (hc : CanonicalStructur
   rw [RVOperations.vrv_mul, RVOperations.vrv_mul] at h
   have h1 : Values.vrv (rv M (-1)) = 1 := by
     change vfValue (-1 : VF M) = 1
-    rw [vfValue_neg']
+    rw [vfValue_neg_eq]
     exact Values.vf_value_one
   rw [h1, one_mul] at h
   rw [rvRadius_val, rvRadius_val, secondParadigm_val H hne]
   exact h
 
 end Jacobian
+
+/-! ### Lemma 6.38 for the positioning map -/
+
+section Matching
+
+variable {G : Type} [LinearOrderedCommGroupWithZero G] [Valued (VF M) G]
+variable {S : Set M} {q : ℕ}
+variable {X : DefSet (rawMixedSpace (M := M) 2 q) S}
+variable {ε : (Fin q → RVInfinity M) → VF M → VF M} {t : (Fin q → RVInfinity M) → RV M}
+variable {t₁ : (Fin q → RVInfinity M) → RVInfinity M}
+
+omit [M ⊨ Axioms.ACVF] in
+/-- The identity map between definable sets with the same carrier. -/
+def castMap {P : Space LRV M} {A B : DefSet P S} (h : A.carrier = B.carrier) : Map A B where
+  toFun p := ⟨p.val, h ▸ p.property⟩
+  graph_definable := (Map.id A).graph_definable
+
+omit [M ⊨ Axioms.ACVF] in
+theorem castMap_val {P : Space LRV M} {A B : DefSet P S} (h : A.carrier = B.carrier) (p : A) :
+    (castMap h p).val = p.val := rfl
+
+omit [M ⊨ Axioms.ACVF] in
+/-- For unary sets, dropping the VF coordinate and the RV-tag quotient have
+the same image. -/
+theorem contracted_carrier_eq {s : ℕ} (B : DefSet (rawMixedSpace (M := M) 1 s) S) :
+    (vfDropLast B).image.carrier = (rvTagQuotient B).carrier := by
+  ext z
+  constructor
+  · rintro ⟨p, hp⟩
+    refine ⟨p, Prod.ext (funext fun i => i.elim0) ?_⟩
+    have h2 : p.val.2 = z.2 := congrArg Prod.snd hp
+    exact h2
+  · rintro ⟨p, hp⟩
+    refine ⟨p, Prod.ext (funext fun i => i.elim0) ?_⟩
+    have h2 : p.val.2 = z.2 := congrArg Prod.snd hp
+    exact h2
+
+theorem codeValue_eq_gam (x : RVInfinity M) : GammaParameters.codeValue x.val = FirstStage.gam x := by
+  by_cases h : x.val = iRVZero
+  · have hNZ : ¬ GammaParameters.NonzeroRV x.val := fun h' => h'.2 h
+    have e1 : GammaParameters.codeValue x.val = 1 := by simp [GammaParameters.codeValue, hNZ]
+    have e2 : FirstStage.gam x = 1 := by simp [FirstStage.gam, h]
+    rw [e1, e2]
+  · apply Subtype.ext
+    rw [nonzero_rv_codeValue_val x (fun he => h (congrArg Subtype.val he))]
+    simp only [FirstStage.gam, dite_eq_left h]
+    rfl
+
+theorem gam_rvRadius (w : RV M) : FirstStage.gam w.val = rvRadius w := by
+  rw [← codeValue_eq_gam]
+  exact Subtype.ext (nonzero_rv_codeValue_val w.val w.property)
+
+/-- **Lemma 6.38 for the positioning map of a balanced family** (referee R132).
+Apply Lemma 6.38 over the support data to `(a, u) ↦ (ε(u, a), u)` from `A₁` to
+`A₂`, with the label forms `vrv(t(u))` on `A₁` and `vrv(t₁(u))` on `A₂` (the
+paper's constant forms `0` and `-γ`, shifted by `vrv(t(u))`). Its two chains are
+contraction stages `S₁`, `S₂` (`ChainStages`), and the RV map `ψ` between their
+contracted sets is a bijection keeping the old labels `u`, with
+`vrv(lead ψ(z)) · vrv(t₁(u)) = vrv(lead z) · vrv(t(u))`; additively,
+`vrv(lead ψ z) = vrv(lead z) + γ(u)` with `γ = vrv(t) - vrv(t₁)` the shift of
+`ε(u, ·)`. -/
+theorem exists_balanced_matching (h00 : M ⊨ Axioms.ACVF00) (hc : CanonicalStructure.IsCanonical (M := M))
+    (linear : GammaPiecewiseRationalAffineInput (M := M))
+    {κ : Cardinal} (hκ : Cardinal.aleph0 < κ) (hs : Saturated M κ)
+    (hv : ∀ x y : VF M, VFValued.predV x y ↔ Valued.v x ≤ Valued.v y)
+    (V : Set M) (hV : ∀ x ∈ V, iVF x) (hVS : V ⊆ S) (hSV : S ⊆ algebraicClosureSet V)
+    (hnt : ∃ x : vfAlgebraicClosureField V, x ≠ 0 ∧ Valued.v x.val ≠ 1)
+    (hsmall : Cardinal.mk S < κ) (hΓ : NontrivialDefinableGamma (⟨S, ∅⟩ : ParameterBase M))
+    (H : BalancedShearInput X ε t t₁)
+    (ht₁ : S.Definable LRV {z : Fin (1 + q) → M | ∃ u x, (∃ y, (![x, y], u) ∈ X.carrier) ∧
+      z = Fin.append ![(t₁ u).val] (rvValues u)}) :
+    ∃ (S₁ : StandardContractionStage (G := G) (firstFamily X))
+      (S₂ : StandardContractionStage (G := G) (secondFamily X))
+      (ψ : Map S₁.contracted S₂.contracted), Function.Bijective ψ ∧
+      (∀ z i, (ψ z).val.2 (S₂.oldLabels i) = z.val.2 (S₁.oldLabels i)) ∧
+      ∀ z : S₁.contracted,
+        FirstStage.gam ((ψ z).val.2 S₂.leading) * FirstStage.gam (t₁ (fun i => z.val.2 (S₁.oldLabels i))) =
+          FirstStage.gam (z.val.2 S₁.leading) * FirstStage.gam (t (fun i => z.val.2 (S₁.oldLabels i))).val := by
+  obtain ⟨Hm⟩ := SetBaseMatching.unary_relative_measured_rv_family_matching_exists_of_support (G := G)
+    h00 hc linear hκ hs hv S V hV hVS hSV hnt hsmall hΓ (firstFamily X) (secondFamily X) (positionMap H)
+    (positionMap_home h00 hc linear hκ hs hv hsmall hΓ H)
+    (firstFamily_properInvariant H) (secondFamily_properInvariant H) (sourceGammaForm H) (targetGammaForm H ht₁)
+    (labelGammaMap_levels_open (G := G) hv _ (firstFamily_properInvariant H) _ _ _)
+    (labelGammaMap_levels_open (G := G) hv _ (secondFamily_properInvariant H) _ _ _)
+    (fun a ha => by
+      obtain ⟨J, hJ, hval⟩ := positionMap_jacobian h00 hc hκ hs hsmall hv H a ha
+      refine ⟨J, hJ, ?_⟩
+      have h1 : gammaMapValue (sourceGammaForm H) a = rvRadius (t a.val.2) :=
+        labelGammaMap_value _ _ _ _ a
+      have h2 : gammaMapValue (targetGammaForm H ht₁) (positionMap H a) =
+          rvRadius (secondParadigm t₁ a.val.2) := labelGammaMap_value _ _ _ _ _
+      rw [h1, h2, div_eq_mul_inv]
+      have hne : (rvRadius (secondParadigm t₁ a.val.2)).val ≠ 0 := fun h =>
+        (rvRadius (secondParadigm t₁ a.val.2)).property (h.trans Values.infinity_eq_zero.symm)
+      change vfValue J = (rvRadius (t a.val.2)).val * (rvRadius (secondParadigm t₁ a.val.2)).val⁻¹
+      exact (eq_mul_inv_iff_mul_eq₀ hne).mpr hval)
+  let S₁ := ChainStages.sourceStage h00 hc linear hκ hs hv hsmall hΓ Hm
+  let S₂ := ChainStages.targetStage h00 hc linear hκ hs hv hsmall hΓ Hm
+  have h₁ : S₁.contracted.carrier = (rvTagQuotient Hm.geometry.source).carrier :=
+    contracted_carrier_eq Hm.geometry.source
+  have h₂ : S₂.contracted.carrier = (rvTagQuotient Hm.geometry.target).carrier :=
+    contracted_carrier_eq Hm.geometry.target
+  let ψ : Map S₁.contracted S₂.contracted := (castMap h₂.symm).comp (Hm.rv.map.comp (castMap h₁))
+  have hψ : ∀ z : S₁.contracted, (ψ z).val = (Hm.rv.map (castMap h₁ z)).val := fun _ => rfl
+  -- every contracted point comes from a point of `A₁`
+  have hz : ∀ z : S₁.contracted, ∃ a : firstFamily X,
+      castMap h₁ z = rvTagQuotientMap Hm.geometry.source (Hm.geometry.sourceMap a) := by
+    intro z
+    obtain ⟨p, hp⟩ := z.property
+    obtain ⟨a, ha⟩ := (Hm.geometry.sourceChain.bijective h00).2 p
+    refine ⟨a, Subtype.ext (Prod.ext (funext fun i => i.elim0) ?_)⟩
+    change z.val.2 = (Hm.geometry.sourceMap a).val.2
+    rw [ha]
+    exact (congrArg Prod.snd hp).symm
+  have hψa : ∀ (z : S₁.contracted) (a : firstFamily X),
+      castMap h₁ z = rvTagQuotientMap Hm.geometry.source (Hm.geometry.sourceMap a) →
+        (ψ z).val.2 = (Hm.geometry.targetMap (positionMap H a)).val.2 := by
+    intro z a ha
+    rw [hψ, ha, Hm.rv.commutes, Hm.geometry.commutes]
+    rfl
+  have hza : ∀ (z : S₁.contracted) (a : firstFamily X),
+      castMap h₁ z = rvTagQuotientMap Hm.geometry.source (Hm.geometry.sourceMap a) →
+        z.val.2 = (Hm.geometry.sourceMap a).val.2 := by
+    intro z a ha
+    exact congrArg (fun w : rvTagQuotient Hm.geometry.source => w.val.2) ha
+  have hold₁ : ∀ (a : firstFamily X) (i : Fin q),
+      (Hm.geometry.sourceMap a).val.2 (S₁.oldLabels i) = a.val.2 i := fun a i => S₁.retained a i
+  have hold₂ : ∀ (b : secondFamily X) (i : Fin q),
+      (Hm.geometry.targetMap b).val.2 (S₂.oldLabels i) = b.val.2 i := fun b i => S₂.retained b i
+  refine ⟨S₁, S₂, ψ, ?_, ?_, ?_⟩
+  · -- bijectivity
+    constructor
+    · intro z z' he
+      apply Subtype.ext
+      have h := Hm.rv.bijective.1 (Subtype.ext (by
+        have := congrArg Subtype.val he
+        rw [hψ, hψ] at this
+        exact this) : Hm.rv.map (castMap h₁ z) = Hm.rv.map (castMap h₁ z'))
+      have h' := congrArg Subtype.val h
+      exact h'
+    · intro w
+      obtain ⟨v, hv'⟩ := Hm.rv.bijective.2 (castMap h₂ w)
+      refine ⟨castMap h₁.symm v, Subtype.ext ?_⟩
+      rw [hψ]
+      have hcast : castMap h₁ (castMap h₁.symm v) = v := Subtype.ext rfl
+      rw [hcast, hv']
+      rfl
+  · -- the old labels are kept
+    intro z i
+    obtain ⟨a, ha⟩ := hz z
+    rw [hψa z a ha, hza z a ha, hold₂, hold₁]
+    rfl
+  · -- the Gamma identity
+    intro z
+    obtain ⟨a, ha⟩ := hz z
+    have hu : (fun i => z.val.2 (S₁.oldLabels i)) = a.val.2 := by
+      funext i
+      rw [hza z a ha, hold₁]
+    rw [hu]
+    have hvol := Hm.rv.volume (castMap h₁ z)
+    rw [ha, Hm.rv.commutes, Hm.geometry.commutes] at hvol
+    have hω' : ∀ p ∈ Hm.geometry.source.carrier, ∀ p' ∈ Hm.geometry.source.carrier, p.2 = p'.2 →
+        gammaFormExtension (Hm.geometry.sourceForm h00 (sourceGammaForm H)) p =
+          gammaFormExtension (Hm.geometry.sourceForm h00 (sourceGammaForm H)) p' := Hm.sourceContractible
+    have hσ' : ∀ p ∈ Hm.geometry.target.carrier, ∀ p' ∈ Hm.geometry.target.carrier, p.2 = p'.2 →
+        gammaFormExtension (Hm.geometry.targetForm h00 (targetGammaForm H ht₁)) p =
+          gammaFormExtension (Hm.geometry.targetForm h00 (targetGammaForm H ht₁)) p' := Hm.targetContractible
+    have hA : rvContractedGamma Hm.geometry.source.carrier
+        (gammaFormExtension (Hm.geometry.sourceForm h00 (sourceGammaForm H)))
+        (rvInputValues (Hm.geometry.sourceMap a).val.2) = rvRadius (t a.val.2) := by
+      rw [rvContractedGamma_at _ _ hω' _ (Hm.geometry.sourceMap a).property, gammaFormExtension_at,
+        Hm.geometry.sourceForm_transport]
+      exact labelGammaMap_value _ _ _ _ a
+    have hB : rvContractedGamma Hm.geometry.target.carrier
+        (gammaFormExtension (Hm.geometry.targetForm h00 (targetGammaForm H ht₁)))
+        (rvInputValues (Hm.geometry.targetMap (positionMap H a)).val.2) =
+          rvRadius (secondParadigm t₁ a.val.2) := by
+      rw [rvContractedGamma_at _ _ hσ' _ (Hm.geometry.targetMap (positionMap H a)).property,
+        gammaFormExtension_at, Hm.geometry.targetForm_transport]
+      exact labelGammaMap_value _ _ _ _ (positionMap H a)
+    change rvContractedGamma Hm.geometry.source.carrier
+        (gammaFormExtension (Hm.geometry.sourceForm h00 (sourceGammaForm H)))
+        (rvInputValues (Hm.geometry.sourceMap a).val.2) *
+          GammaParameters.codeValue ((Hm.geometry.sourceMap a).val.2 Hm.sourceIndex).val =
+        rvContractedGamma Hm.geometry.target.carrier
+          (gammaFormExtension (Hm.geometry.targetForm h00 (targetGammaForm H ht₁)))
+          (rvInputValues (Hm.geometry.targetMap (positionMap H a)).val.2) *
+            GammaParameters.codeValue ((Hm.geometry.targetMap (positionMap H a)).val.2 Hm.targetIndex).val at hvol
+    rw [hA, hB, codeValue_eq_gam, codeValue_eq_gam] at hvol
+    have hne : (cell X a.val.2).Nonempty := cell_nonempty_of_first ((mem_firstFamily _ _).mp a.property)
+    rw [gam_rvRadius, ← secondParadigm_val H hne, gam_rvRadius, hψa z a ha, hza z a ha]
+    change FirstStage.gam ((Hm.geometry.targetMap (positionMap H a)).val.2 Hm.targetIndex) *
+        rvRadius (secondParadigm t₁ a.val.2) =
+      FirstStage.gam ((Hm.geometry.sourceMap a).val.2 Hm.sourceIndex) * rvRadius (t a.val.2)
+    rw [mul_comm, ← hvol, mul_comm]
+
+end Matching
 
 end DiamondIntegral.Section7.BalancedMatching
