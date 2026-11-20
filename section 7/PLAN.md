@@ -213,8 +213,8 @@ intended Lean statement; ⚑ marks a flag that is also listed in §5.
     (`SpecialChainInduction.lemma_7_11`, with `relative_chain`,
     `special_chain` and `unary_chain`). The invariant `Good` is an RV pullback
     with finite RV fibres and a label-constant form; its class is that of the
-    contraction of its regularization. The partial-lift form remains (see
-    7.13).
+    contraction of its regularization. The partial-lift form is done
+    (2026-11-20, `Lemma711Partial.lemma_7_11_partial`; GAP-REPAIRS 20).
 
 ### 7.12 Lemma `blowup:same:RV:coa`
 - **Route.**

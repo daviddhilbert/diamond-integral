@@ -17,9 +17,9 @@ formalization convention. No manuscript edit has been made for them.
    relations may be regarded on isomorphism classes. The Lean definitions
    (`ElementaryStep`, `Step`, `BlowupSteps`, `MuIsp`) are stated on classes. A
    length-one blowup replaces summands `[U_i]` by `[U_i^♭]`, which is the class
-   form of `(V ∖ C) ⊎ ⊎ U_i^♭` via `F_i : U_i ≅ C_i`. Still to do: the
-   object-level converse, that a class-level blowup is realised by literal
-   disjoint subobjects of a given `V`.
+   form of `(V ∖ C) ⊎ ⊎ U_i^♭` via `F_i : U_i ≅ C_i`. The object-level
+   converse, that a class-level blowup is realised by literal disjoint
+   subobjects of a given `V`, is `BlowupObjects.step_iff_blowup` (2026-11-20).
 3. **∞ as a tag.** As in Section 4, objects are bounded charts whose label
    coordinates may equal ∞, and the coproduct tags with ∞. Section 4's
    `RVStrictBoundedComparison` shows this presentation and the paper's ∞-free
@@ -297,3 +297,68 @@ formalization convention. No manuscript edit has been made for them.
       (Corollary 6.37 with Lemma 6.33, `Theorem726.exists_chart_lift`). The
       lift kills J_var by Lemma 7.12, and the integral inverts it
       (`integralRingEquiv`); hence ker μ𝕃 = J_var (`remark_7_25`).
+18. **Corollary 7.27, the top arrows as ring maps (formal route, 2026-11-20).**
+    The proof says the top arrows are induced by the forgetful functor and by
+    the subcategory relation, and that both squares commute because every
+    integral of `[A]` is represented by a standard contraction of `A`. Omitted
+    justifications, supplied in `Corollary727Rings`:
+    - The top-left arrow `K μVF^◇[*] → K VF_*` is a ring map: the domain of the
+      product `A × B` of Section 6 is the same set as Section 3's product
+      domain (`forgetVF_product`); the forgetful image of a scissor is a
+      Section 3 scissor (`forgetVF_compl`); the empty object goes to `0`; the
+      unit object of `K μVF^◇[*]` (the lift of the unit chart) is a single
+      point with no labels (`one_carrier`), hence goes to `1`.
+    - The top-right arrow `K μVF^◇[*] → K μVF[*]` is a ring map. Here products
+      and restrictions also carry forms, and Section 3's measured classes are
+      taken up to measured essential bijections. Rather than build these
+      comparisons, the formalization reads the arrow through `∫^μ`, which is
+      injective (Theorem 3.22 gives its inverse): the object form of the right
+      square and the ring isomorphism `∫^◇` give the ring laws. The value of the
+      arrow on an object is its measured class, as in the paper.
+    - Both squares are equalities of ring maps out of the presentation
+      `DiamondRing.Ring` (`DiamondRing.hom_ext`); on an object `A` they follow
+      from `A ≅ μ𝕃 a` for a chart object `a` (Corollary 6.37 with Lemma 6.33),
+      the integrals of lifts, and `chart(strict lift of a) ≅ a` (`chartIso`).
+19. **Lemma 7.12 at object level, and the gluing remark of Section 6
+    (2026-11-20, independently found; for the author).** The object form for
+    an elementary blowup is proved (`Lemma712Objects.lemma_7_12_objects`:
+    `μ𝕃 U^{τ,j} ≅ μ𝕃 U` in `μVF^◇[1+k]`; the contraction `W` of the
+    regularized image is glued from its endpoint and shell pieces into a
+    chart isomorphism `U^{τ,j} ≅ W`, which Lemma 6.33 lifts). The proof's
+    first sentence reduces a blowup with locus `C = ⋃ C_i` to elementary ones
+    because `μ𝕃 U^♭` is the disjoint union of `μ𝕃(U ∖ C)` and the `μ𝕃 U_i^♭`.
+    This needs `μVF^◇` isomorphisms to glue along a disjoint union with the
+    identity on the other summand. The manuscript justifies such gluing after
+    the definition of relatively unary maps (line ~4947: "Since identity
+    functions are relatively unary in any coordinate, if a bijection is
+    piecewise ... a composition of relatively unary bijections then it is
+    indeed a composition of relatively unary bijections"). With the printed
+    definition (`pr_{j̃} ∘ G = pr_{ĩ}`), the identity is relatively unary in the
+    `(i, j)`-coordinate only for `i = j`, so the stated reason covers only steps
+    with `i = j`. The conclusion still looks right: on one piece a coordinate
+    transposition is, up to sign, a composite of three unary shears
+    `(x, y) ↦ (x + y, y)`, … (multiplicative shears on RV coordinates), each of
+    Jacobian `±1`, while the other pieces take the identity, which is unary in
+    any `(c, c)`; so the permutations `P_{ij}` that the idle pieces must
+    undergo in the steps with `i ≠ j` can be undone piece by piece. This is an
+    omitted justification, not a counterexample. In Lean the definition is
+    global in `(i, j)` (Section 6 `VFRelativelyUnary`), and no such gluing is
+    available, so the general object form (length one with a locus, and
+    length `n`) is left open. Its class form is `BlowupLiftGeneral.step_lift`,
+    `steps_lift`, which is all that 7.24–7.26 use. Options: (a) keep the class
+    form for blowups with a locus; (b) prove the shear gluing in Section 6 (a
+    substantial addition: shears as proper covariant homeomorphisms between
+    objects); (c) the alternative reading at line ~4945 ("take i = j … up to
+    coordinate permutations") with piecewise permutations, a change of
+    definition that needs the author.
+20. **Lemma 7.11, partial-lift form (formal reading, 2026-11-20).** The form
+    approved by the author (decision C) is stated for a doubly bounded chart U
+    of degree n + k with its first n coordinates lifted and the last k kept as
+    RV coordinates (`Lemma711Partial.lemma_7_11_partial`). Two conventions:
+    the k kept coordinates `f_{>n}(u)` are carried as extra RV coordinates next
+    to the label `u`, because a head-start label must be a coordinate of the RV
+    tuple (the set is definably isomorphic to the manuscript's `{(x, u)}`); and
+    since blowups are defined in grade `1 + d`, a class of grade `n + k` is
+    compared through `Reached`, which for grade `1 + d` is
+    `∃ m, BlowupSteps m` (`reached_iff`). For k = 0 this is the printed
+    Lemma 7.11, and for n = 1 the head-start form used in 7.14.

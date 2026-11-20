@@ -1,6 +1,6 @@
 # Section 7 status
 
-Updated 2026-11-19. Audit: `lake env python3 'section 7/verify.py'`
+Updated 2026-11-20. Audit: `lake env python3 'section 7/verify.py'`
 (receipt `verification/status.json`; complete public types and transitive
 axioms; only `propext`, `Classical.choice`, `Quot.sound`).
 
@@ -13,8 +13,11 @@ none is a mathematical error.
 
 ## Complete numbered results
 
-Lemma 7.5, Corollary 7.6, Lemma 7.7, Corollary 7.8, Definition 7.9, and the
-additive part of Lemma 7.10, together with Definition 7.2 on isomorphism classes.
+Lemma 7.5, Corollary 7.6, Lemma 7.7, Corollary 7.8, Definition 7.9, and
+Lemma 7.10 (additive congruence and compatibility with products,
+`ProductBlowups.lemma_7_10`, `lemma_7_10_graded`), together with Definition 7.2
+on isomorphism classes and with literal disjoint subobjects
+(`BlowupObjects.step_iff_blowup`).
 Remark 7.3 (dimension claim), Definitions 7.16, 7.17 and 7.19, and Remark 7.18
 (∞-symmetry and slope). Lemma 7.12 on classes (`BlowupLiftGeneral.lemma_7_12`): for every aperture datum
 over the VF-generated base, `μ𝕃[U^{τ,j}] = μ𝕃[U]` in K₊ μVF^◇[1+k]. Blowups of
@@ -144,14 +147,26 @@ arbitrary parameter base and take no input beyond the ACVF model.
   bridges the author approved on 2026-11-19: strong homogeneity (from the
   Section 3 ground context), the forgetful map to Section 3's VF classes, and
   Section 4's bounded RV decomposition (`RVBoundedDecomposition`, Remark 4.10).
-- Deferred: the product part of Lemma 7.10. It needs a graded product on
-  Section 7's class monoid (products distributing over tagged coproducts, and
-  products of annular data). Only the ring form of 7.26 uses it, where the
-  J_var ideal of Section 4 already gives multiplicativity.
+- **Open items of 2026-11-20 (author: "do all of the items you listed").**
+  - Corollary 7.27 as equalities of ring maps (`Corollary727Rings`:
+    `corollary_7_27_left_ring`, `corollary_7_27_right_ring`,
+    `corollary_7_27_rings`; top arrows `topLeft`, `topRight`; GAP-REPAIRS 18).
+  - Lemma 7.10, products: class product (`ProductClasses`), products of
+    annular data and μIsp compatibility (`ProductBlowups.lemma_7_10`,
+    `lemma_7_10_graded`).
+  - Lemma 7.11, partial-lift form (`Lemma711Partial.lemma_7_11_partial`;
+    GAP-REPAIRS 20).
+  - Lemma 7.12 at object level for elementary blowups
+    (`Lemma712Objects.lemma_7_12_objects`). Open: blowups with a locus, which
+    need gluing of μVF^◇ isomorphisms along disjoint unions; the manuscript's
+    reason for such gluing (line ~4947) covers only steps with i = j
+    (GAP-REPAIRS 19, options for the author).
+  - Definition 7.2, object-level converse (`BlowupObjects.step_iff_objects`,
+    `step_iff_blowup`).
 
 ## Next
 
-Review batch B10 (Definition 6.34) is approved and applied. Corollary 7.27 is
-done on the classes of objects (`Corollary727`); its ring-map form can now use
-`Theorem726.theorem_7_26`. Product compatibility (7.10) and the object-level converse
-for Definition 7.2 remain open side items.
+All numbered results of §7 are formalized in the stated scopes. Left open:
+the object form of Lemma 7.12 for blowups with a locus (GAP-REPAIRS 19; its
+class form is done and is all that 7.24–7.26 use). For the author: the gluing
+remark after the definition of relatively unary maps (manuscript line ~4947).

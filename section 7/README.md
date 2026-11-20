@@ -10,9 +10,11 @@ The §7 main text is already revised for bounded variable apertures and J_var.
 The Lean formalization is in progress; see [PLAN.md](PLAN.md) (approved by the
 author on 2026-11-19), [STATUS.md](STATUS.md), [COVERAGE.md](COVERAGE.md) and
 [GAP-REPAIRS.md](GAP-REPAIRS.md). Complete so far: Definition 7.2 on isomorphism
-classes, Lemma 7.5, Corollary 7.6, Lemma 7.7, Corollary 7.8, Definition 7.9,
-the additive part of Lemma 7.10, Remark 7.3 (dimension claim), Lemma 7.11 (full
-lift, on classes), Lemma 7.12 on classes, Lemma 7.13 (printed form, head start
+classes and with literal disjoint subobjects, Lemma 7.5, Corollary 7.6, Lemma 7.7,
+Corollary 7.8, Definition 7.9, Lemma 7.10 (sums and products), Remark 7.3
+(dimension claim), Lemma 7.11 (full lift and the approved partial-lift form, on
+classes), Lemma 7.12 on classes and, for elementary blowups, at object level,
+Lemma 7.13 (printed form, head start
 0; also over a base with adjoined VF parameters), Definitions 7.16, 7.17, 7.19
 and Remark 7.18 (approved scope), the surjectivity of the lift on classes, and
 Lemma 7.14 (`Lemma714Reduce.lemma714`), Corollary 7.15
@@ -26,8 +28,9 @@ statements. Proposition 7.24 (`Proposition724.proposition_7_24`, degree 0 in
 Theorem 7.26 (`Proposition724.integralEquiv`, `Theorem726.theorem_7_26`) are
 done with no hypothesis beyond the standing base, on the repaired Definition
 6.34 (morphisms factor through objects; review batch B10, author's decision of
-2026-11-20). Corollary 7.27 is done on the classes of objects (`Corollary727`).
-Remaining: the approved partial-lift form of 7.11.
+2026-11-20). Corollary 7.27 is done as equalities of ring maps
+(`Corollary727Rings.corollary_7_27_rings`). Open: the object form of Lemma 7.12
+for blowups with a locus (GAP-REPAIRS 19; the class form is done).
 Remark 7.28 is done (`Remark728`).
 
 The focused [Section 6 handoff](SECTION6-HANDOFF.md) links the checked native
