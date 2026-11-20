@@ -369,6 +369,98 @@ theorem indIsoFun_bijOn : Set.BijOn (indIsoFun Φ) (Q.indDom X) (Q.indDom Y) := 
 
 end IndIso
 
+section IndIsoGraph
+variable {d : ℕ} {X Y : ChartSchema B (rvs q) d} (hX : ∀ x ∈ Q.carrier, X.Valid x)
+  (hY : ∀ x ∈ Q.carrier, Y.Valid x) {Φ : IsoSchema X Y} (hΦ : ∀ x ∈ Q.carrier, Φ.Valid x)
+
+/-- Index of `(x, u, v)` in the layout `(x, u, x', v)`. -/
+def isoIdx (q a b : ℕ) : Fin ((q + a) + b) → Fin ((q + a) + (q + b)) :=
+  Fin.append (Fin.castAdd (q + b)) (fun j => Fin.natAdd (q + a) (Fin.natAdd q j))
+
+variable (Φ) in
+/-- The append-layout graph of the indexed isomorphism. -/
+def indIsoSet : Set (Fin ((q + X.arity) + (q + Y.arity)) → M) :=
+  {v | (fun i => v (Fin.castAdd (q + Y.arity) i)) ∈ Q.indDom X ∧
+      v ∈ sortedUniverse (Fin.append (rvs (q + X.arity)) (rvs (q + Y.arity)))} ∩
+    ({v | v ∈ sortedUniverse (Fin.append (rvs (q + X.arity)) (rvs (q + Y.arity))) ∧
+      ∀ i ∈ (Finset.univ : Finset (Fin q)), v ∈ {v : Fin ((q + X.arity) + (q + Y.arity)) → M |
+        v (Fin.natAdd (q + X.arity) (Fin.castAdd Y.arity i)) = v (Fin.castAdd (q + Y.arity) (Fin.castAdd X.arity i)) ∧
+        v ∈ sortedUniverse (Fin.append (rvs (q + X.arity)) (rvs (q + Y.arity)))}} ∩
+     {v | v ∘ isoIdx q X.arity Y.arity ∈ Φ.graph ∧
+      v ∈ sortedUniverse (Fin.append (rvs (q + X.arity)) (rvs (q + Y.arity)))})
+
+variable (Φ) in
+theorem indIsoSet_definable :
+    DefinableOverBase B (Fin.append (rvs (q + X.arity)) (rvs (q + Y.arity))) (Q.indIsoSet Φ) := by
+  have h1 := (Q.indDom_definable X).preimage_real (Fin.append (rvs (q + X.arity)) (rvs (q + Y.arity)))
+    (Fin.castAdd (q + Y.arity))
+  have h2 := DefinableOverBase.finite_iInter (B := B) (sn := Fin.append (rvs (q + X.arity)) (rvs (q + Y.arity)))
+    Finset.univ (fun i : Fin q => {v : Fin ((q + X.arity) + (q + Y.arity)) → M |
+        v (Fin.natAdd (q + X.arity) (Fin.castAdd Y.arity i)) = v (Fin.castAdd (q + Y.arity) (Fin.castAdd X.arity i)) ∧
+        v ∈ sortedUniverse (Fin.append (rvs (q + X.arity)) (rvs (q + Y.arity)))}) (fun i _ => by
+      have h := eq_coords_definable (B := B) (M := M) (Fin.natAdd (q + X.arity) (Fin.castAdd Y.arity i))
+        (Fin.castAdd (q + Y.arity) (Fin.castAdd X.arity i))
+      rw [← rvs_append] at h
+      exact h)
+  have h3 := Φ.graph_definable.preimage_real (Fin.append (rvs (q + X.arity)) (rvs (q + Y.arity)))
+    (isoIdx q X.arity Y.arity)
+  exact h1.inter (h2.inter h3)
+
+include hΦ in
+theorem mem_indIsoSet (w : Fin (q + X.arity) → M) (y : Fin (q + Y.arity) → M) :
+    Fin.append w y ∈ Q.indIsoSet Φ ↔ w ∈ Q.indDom X ∧ indIsoFun Φ w = y := by
+  have e1 : (fun i => Fin.append w y (Fin.castAdd (q + Y.arity) i)) = w := funext fun i => Fin.append_left w y i
+  have e3 : Fin.append w y ∘ isoIdx q X.arity Y.arity = Fin.append (Fin.append (keyOf w) (rowOf w)) (rowOf y) := by
+    rw [append_keyOf_rowOf]
+    funext i
+    refine Fin.addCases (fun l => ?_) (fun l => ?_) i <;> simp [isoIdx, rowOf]
+  have e2 : (∀ i : Fin q, Fin.append w y (Fin.natAdd (q + X.arity) (Fin.castAdd Y.arity i)) =
+      Fin.append w y (Fin.castAdd (q + Y.arity) (Fin.castAdd X.arity i))) ↔ keyOf y = keyOf w := by
+    simp only [Fin.append_left, Fin.append_right]
+    exact ⟨fun h => funext h, fun h i => congrFun h i⟩
+  simp only [indIsoSet, Set.mem_inter_iff, Set.mem_setOf_eq, e1, e3]
+  constructor
+  · rintro ⟨⟨hw, -⟩, ⟨-, heq⟩, ⟨hg, -⟩⟩
+    have hk : keyOf y = keyOf w := e2.mp (fun i => (heq i (Finset.mem_univ i)).1)
+    refine ⟨hw, ?_⟩
+    rw [indIsoFun, Q.isoRaw_eq hΦ (Q.indDom_key hw) hg, ← hk, append_keyOf_rowOf]
+  · rintro ⟨hw, rfl⟩
+    have hk := Q.indDom_key hw
+    have hg := Q.isoRaw_graph hΦ hk (Q.indDom_row hw)
+    have hy := (Q.indIsoFun_bijOn hΦ).mapsTo hw
+    have hs : Fin.append w (indIsoFun Φ w) ∈ sortedUniverse (Fin.append (rvs (q + X.arity)) (rvs (q + Y.arity))) :=
+      sorted_append (fun i => (Q.indDom_definable X).proper w hw i) (fun i => (Q.indDom_definable Y).proper _ hy i)
+    refine ⟨⟨hw, hs⟩, ⟨hs, fun i _ => ⟨?_, hs⟩⟩, ⟨?_, hs⟩⟩
+    · simp [indIsoFun, keyOf]
+    · simp only [indIsoFun, rowOf_append]
+      exact hg
+
+include hX hY hΦ in
+theorem indIso_weight (w : Fin (q + X.arity) → M) (hw : w ∈ Q.indDom X) :
+    (Q.indChart X hX).correctedWeight w = (Q.indChart Y hY).correctedWeight (indIsoFun Φ w) := by
+  rw [indChart_weight, indChart_weight]
+  have hk := Q.indDom_key hw
+  have hr := Q.indDom_row hw
+  have e1 : indIsoFun Φ w (Fin.castAdd Y.arity Q.idx) = w (Fin.castAdd X.arity Q.idx) := by
+    simp [indIsoFun, keyOf]
+  have e2 : keyOf (indIsoFun Φ w) = keyOf w := by simp [indIsoFun, keyOf_append]
+  have e3 : rowOf (indIsoFun Φ w) = isoRaw Φ (keyOf w) (rowOf w) := by simp [indIsoFun, rowOf_append]
+  rw [e1, e2, e3]
+  congr 1
+  have h := IsoSchema.weight_eq_of_valid (hX _ hk) (hY _ hk) (hΦ _ hk) ⟨rowOf w, hr⟩
+  have hf : (IsoSchema.isoFun (hΦ _ hk) ⟨rowOf w, hr⟩).val = isoRaw Φ (keyOf w) (rowOf w) :=
+    (Q.isoRaw_eq hΦ hk (IsoSchema.isoFun_graph (hΦ _ hk) ⟨rowOf w, hr⟩)).symm
+  rw [hf] at h
+  exact h
+
+variable (Φ) in
+/-- **The indexed isomorphism** of an isomorphism schema valid at every key. -/
+def indIso : Iso (Q.indChart X hX) (Q.indChart Y hY) :=
+  isoOfMap _ _ (indIsoFun Φ) (graphOn_of_append _ _ _ (Q.indIsoSet_definable Φ) (Q.mem_indIsoSet hΦ))
+    (Q.indIsoFun_bijOn hΦ) (Q.indIso_weight hX hY hΦ)
+
+end IndIsoGraph
+
 end KeySet
 
 end DiamondIntegral.Section7.Lemma714Schema
