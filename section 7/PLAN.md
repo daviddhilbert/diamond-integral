@@ -551,6 +551,13 @@ intended Lean statement; ⚑ marks a flag that is also listed in §5.
        `Corollary715Fibres` for two stages.
     The same fibrewise machinery, for general head start `k`, serves the adjacent
     swaps with `m ≥ 2` in 7.24.
+  - **Status (2026-11-20, later).** 7.23 is done in every dimension,
+    hypothesis-free (`Lemma723General.lemma_7_23`). Step 4 is
+    `SliceContractions.fibre_ispRel_at`: at a good point the slice program is a
+    normalized contraction of the prepared slice `Y'_b` in the order 1, and the
+    slice program of the swapped order one in the order `swap 0 1`
+    (`OrderedProgramContractions.ofContractionOrd`; the prepared set has no zero
+    coordinate, so its normalization is trivial).
 
 ### 7.24 Proposition `kernel:L`
 - **Route.**

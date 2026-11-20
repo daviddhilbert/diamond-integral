@@ -113,14 +113,19 @@ arbitrary parameter base and take no input beyond the ACVF model.
     contractions (`TwoStageContractions`), head-start classes along relabellings
     and bijections of RV targets (`RelabelClasses`, `MapClasses`).
   - Formal reading of 7.22: GAP-REPAIRS 14.
-  - 7.23 for n > 2 (in progress): `Lemma723Reduction.reduction_7_23` reduces it to
-    the two-stage fibre hypothesis via the 7.14 input with head start 2 (tools:
-    `HeadStartK`, `HeadStartFinite`), and `FibreGood2.fibreHypothesis2_of_good`
-    reduces that to good points. Remaining: at a good point the first two stages
-    restrict to a measured ordered contraction of the two-dimensional slice
-    (`SliceStages`, two-dimensional slices), whose class is the fibre object
-    (`SliceClasses`); it is converted to a normalized contraction of the slice
-    object, and the case n = 2 applies over `S⟨b⟩`.
+  - 7.23 for n > 2 done (2026-11-20); all dimensions in `Lemma723General.lemma_7_23`.
+    `Lemma723Reduction.reduction_7_23` reduces it to the two-stage fibre hypothesis
+    via the 7.14 input with head start 2 (tools: `HeadStartK`, `HeadStartFinite`),
+    and `FibreGood2.fibreHypothesis2_of_good` reduces that to good points. At a
+    good point b, the first stage of `G₀` restricts to the two-dimensional slice of
+    the prepared set (`TwoDimSlices.stageSlice2`) and the first stage of `H` to the
+    slice of its prepared set, moved to the untagged slice (`SliceContractions`).
+    The two-stage slice program is a normalized contraction of the slice object in
+    the order 1, resp. `swap 0 1` for the swapped order
+    (`OrderedProgramContractions.ofContractionOrd`, for sets without zero VF
+    coordinates in any order). Its class is the fibre class of the second-stage
+    set (`SliceContractions.cls_sliceMOC`), and 7.23 for n = 2 over `S⟨b⟩` gives
+    the fibre hypothesis (`SliceContractions.fibre_ispRel_at`).
 - Remark 7.28 done (`Remark728.remark_7_28`, `remark_7_28_zero`), with the
   bridges the author approved on 2026-11-19: strong homogeneity (from the
   Section 3 ground context), the forgetful map to Section 3's VF classes, and
@@ -132,6 +137,5 @@ arbitrary parameter base and take no input beyond the ACVF model.
 
 ## Next
 
-7.23 for n > 2, then 7.24–7.27, as in PLAN.md (7.23 and
-7.24 can reuse the 7.15 modules). Product compatibility (7.10) and the object-level converse for
+7.24–7.27, as in PLAN.md (7.24 can reuse the 7.15 and 7.23 modules). Product compatibility (7.10) and the object-level converse for
 Definition 7.2 remain open side items.
