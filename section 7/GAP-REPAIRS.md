@@ -84,8 +84,12 @@ formalization convention. No manuscript edit has been made for them.
     needs a common VF projection. The proof of 7.15, and R126's "common base",
     do not address this.
     - It is an omitted justification, not a mathematical error. The shifts are
-      coordinatewise piecewise translations by base-definable constants, and
-      `adjoin T a = adjoin T (shift a)`.
+      coordinatewise piecewise translations by base-definable constants. The
+      centre is only definable over the base (`ZeroCenteredData.center_definable`)
+      and need not lie in the substructure `T`, so `adjoin T a` and
+      `adjoin T (shift a)` need not be equal. They have the same definable
+      closure, so classes pass between them by `BaseExtension.Transfer.ofDcl`
+      (correction of 2026-11-19, pointed out by the 7.14 session).
     - A repair is needed before 7.15 can be applied to arbitrary standard
       contractions. Options: (a) a form of 7.14 that allows the two VF
       projections to differ by such a coordinatewise translation; (b) a lemma
