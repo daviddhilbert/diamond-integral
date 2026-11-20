@@ -209,4 +209,63 @@ theorem promoteChart_valid (hN : ∀ t, {u | u ∈ c.domain ∧ c.coordinate u =
 
 end PromoteChart
 
+/-! ### Corrected weights of rows -/
+
+namespace ChartSchema
+variable {d : ℕ} (W : ChartSchema B sp d)
+
+/-- The corrected weight of the row at `z`. -/
+def weightAt (z : Fin p → M) (u : Fin W.arity → M) : Values.Gamma (M := M) :=
+  W.volAt z u * ∏ i, codeValue (W.coordAt z u i)
+
+end ChartSchema
+
+/-! ### Isomorphism schemata from row bijections -/
+
+section PromoteIso
+variable {C : Base (M := M)} {d : ℕ} {z : Fin p → M} (hz : ∀ i, sortEval (sp i) (z i)) (hC : Promotable B C z)
+include hz hC
+
+/-- A bijection of valid rows with a `C`-definable graph that preserves the
+corrected weights is the row at `z` of a valid isomorphism schema. -/
+theorem exists_isoSchema {X Y : ChartSchema B sp d} (hX : X.Valid z) (hY : Y.Valid z)
+    (F : (Fin X.arity → M) → (Fin Y.arity → M))
+    (hF : DefinableOverBase C (Fin.append (rvs X.arity) (rvs Y.arity))
+      {w | (fun i => w (Fin.castAdd Y.arity i)) ∈ X.row z ∧
+        F (fun i => w (Fin.castAdd Y.arity i)) = fun j => w (Fin.natAdd X.arity j)})
+    (hbij : Set.BijOn F (X.row z) (Y.row z))
+    (hw : ∀ u ∈ X.row z, X.weightAt z u = Y.weightAt z (F u)) :
+    ∃ Φ : IsoSchema X Y, Φ.Valid z := by
+  obtain ⟨P, hP, hPS⟩ := promoteSet2 hz hC (rvs X.arity) (rvs Y.arity) _ hF
+  have hrow : ∀ u v, Fin.append (Fin.append z u) v ∈ P ↔ u ∈ X.row z ∧ F u = v := by
+    intro u v
+    rw [hPS]
+    simp only [Set.mem_setOf_eq, Fin.append_left, Fin.append_right]
+  refine ⟨⟨P, hP⟩, ⟨⟨⟨hz, fun u hu => ?_, fun u v h => ((hrow u v).mp h).1, fun v hv => ?_⟩, fun v => ?_⟩, ?_⟩⟩
+  · exact ⟨F u, (hrow u _).mpr ⟨hu, rfl⟩, fun v h => ((hrow u v).mp h).2.symm⟩
+  · have hsub : {x : Fin X.arity → M | Fin.append (Fin.append z x) v ∈ P} ⊆ {x | x ∈ X.row z ∧ F x = v} :=
+      fun x hx => (hrow x v).mp hx
+    have hss : {x | x ∈ X.row z ∧ F x = v}.Subsingleton := by
+      rintro x ⟨hx, rfl⟩ x' ⟨hx', he⟩
+      exact hbij.injOn hx hx' he.symm
+    exact ⟨hss.finite.subset hsub, (Set.ncard_le_ncard hsub hss.finite).trans ((Set.ncard_le_one hss.finite).mpr (fun a ha b hb => hss ha hb))⟩
+  · constructor
+    · intro hv
+      obtain ⟨u, hu, rfl⟩ := hbij.surjOn hv
+      exact ⟨u, (hrow u _).mpr ⟨hu, rfl⟩⟩
+    · rintro ⟨u, h⟩
+      obtain ⟨hu, rfl⟩ := (hrow u v).mp h
+      exact hbij.mapsTo hu
+  · intro u v y y' c c' h1 h2 h3 h4 h5 _ _ _ _
+    obtain ⟨hu, rfl⟩ := (hrow u v).mp h1
+    have hv := hbij.mapsTo hu
+    obtain ⟨-, rfl⟩ := (ChartSchema.coordRow_iff hX u y).mp h2
+    obtain ⟨-, rfl⟩ := (ChartSchema.coordRow_iff hY (F u) y').mp h3
+    obtain ⟨-, -, hc⟩ := (ChartSchema.volRow_iff hX u c).mp h4
+    obtain ⟨-, -, hc'⟩ := (ChartSchema.volRow_iff hY (F u) c').mp h5
+    rw [hc, hc']
+    exact hw u hu
+
+end PromoteIso
+
 end DiamondIntegral.Section7.Lemma714Schema
