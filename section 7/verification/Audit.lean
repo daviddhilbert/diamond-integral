@@ -1716,6 +1716,144 @@ import «section 7».Section
 #check @DiamondIntegral.Section7.Corollary715Moves.corollary_7_15_step
 #print DiamondIntegral.Section7.Corollary715Moves.corollary_7_15_step
 #print axioms DiamondIntegral.Section7.Corollary715Moves.corollary_7_15_step
+#check @DiamondIntegral.Section7.Corollary727.ordinaryExtInvariant
+#print DiamondIntegral.Section7.Corollary727.ordinaryExtInvariant
+#print axioms DiamondIntegral.Section7.Corollary727.ordinaryExtInvariant
+#check @DiamondIntegral.Section7.Corollary727.ordinaryExt
+#print DiamondIntegral.Section7.Corollary727.ordinaryExt
+#print axioms DiamondIntegral.Section7.Corollary727.ordinaryExt
+#check @DiamondIntegral.Section7.Corollary727.ordinaryExt_class
+#print DiamondIntegral.Section7.Corollary727.ordinaryExt_class
+#print axioms DiamondIntegral.Section7.Corollary727.ordinaryExt_class
+#check @DiamondIntegral.Section7.Corollary727.QRV
+#print DiamondIntegral.Section7.Corollary727.QRV
+#print axioms DiamondIntegral.Section7.Corollary727.QRV
+#check @DiamondIntegral.Section7.Corollary727.toQ
+#print DiamondIntegral.Section7.Corollary727.toQ
+#print axioms DiamondIntegral.Section7.Corollary727.toQ
+#check @DiamondIntegral.Section7.Corollary727.measuredExtInvariant
+#print DiamondIntegral.Section7.Corollary727.measuredExtInvariant
+#print axioms DiamondIntegral.Section7.Corollary727.measuredExtInvariant
+#check @DiamondIntegral.Section7.Corollary727.measuredExt
+#print DiamondIntegral.Section7.Corollary727.measuredExt
+#print axioms DiamondIntegral.Section7.Corollary727.measuredExt
+#check @DiamondIntegral.Section7.Corollary727.measuredExt_class
+#print DiamondIntegral.Section7.Corollary727.measuredExt_class
+#print axioms DiamondIntegral.Section7.Corollary727.measuredExt_class
+#check @DiamondIntegral.Section7.Corollary727.measuredExt_pClass
+#print DiamondIntegral.Section7.Corollary727.measuredExt_pClass
+#print axioms DiamondIntegral.Section7.Corollary727.measuredExt_pClass
+#check @DiamondIntegral.Section7.Corollary727.measuredExt_pIdeal
+#print DiamondIntegral.Section7.Corollary727.measuredExt_pIdeal
+#print axioms DiamondIntegral.Section7.Corollary727.measuredExt_pIdeal
+#check @DiamondIntegral.Section7.Corollary727.measuredPointIso
+#print DiamondIntegral.Section7.Corollary727.measuredPointIso
+#print axioms DiamondIntegral.Section7.Corollary727.measuredPointIso
+#check @DiamondIntegral.Section7.Corollary727.measuredPositiveIso
+#print DiamondIntegral.Section7.Corollary727.measuredPositiveIso
+#print axioms DiamondIntegral.Section7.Corollary727.measuredPositiveIso
+#check @DiamondIntegral.Section7.Corollary727.measured_pClass
+#print DiamondIntegral.Section7.Corollary727.measured_pClass
+#print axioms DiamondIntegral.Section7.Corollary727.measured_pClass
+#check @DiamondIntegral.Section7.Corollary727.pQuotientEquiv
+#print DiamondIntegral.Section7.Corollary727.pQuotientEquiv
+#print axioms DiamondIntegral.Section7.Corollary727.pQuotientEquiv
+#check @DiamondIntegral.Section7.Corollary727.pQuotientEquiv_quotient
+#print DiamondIntegral.Section7.Corollary727.pQuotientEquiv_quotient
+#print axioms DiamondIntegral.Section7.Corollary727.pQuotientEquiv_quotient
+#check @DiamondIntegral.Section7.Corollary727.gamma_decode
+#print DiamondIntegral.Section7.Corollary727.gamma_decode
+#print axioms DiamondIntegral.Section7.Corollary727.gamma_decode
+#check @DiamondIntegral.Section7.Corollary727.toGroundForm
+#print DiamondIntegral.Section7.Corollary727.toGroundForm
+#print axioms DiamondIntegral.Section7.Corollary727.toGroundForm
+#check @DiamondIntegral.Section7.Corollary727.toGroundForm_value
+#print DiamondIntegral.Section7.Corollary727.toGroundForm_value
+#print axioms DiamondIntegral.Section7.Corollary727.toGroundForm_value
+#check @DiamondIntegral.Section7.Corollary727.transfer
+#print DiamondIntegral.Section7.Corollary727.transfer
+#print axioms DiamondIntegral.Section7.Corollary727.transfer
+#check @DiamondIntegral.Section7.Corollary727.forgetNormalized
+#print DiamondIntegral.Section7.Corollary727.forgetNormalized
+#print axioms DiamondIntegral.Section7.Corollary727.forgetNormalized
+#check @DiamondIntegral.Section7.Corollary727.manuscriptIdeal_le_ker
+#print DiamondIntegral.Section7.Corollary727.manuscriptIdeal_le_ker
+#print axioms DiamondIntegral.Section7.Corollary727.manuscriptIdeal_le_ker
+#check @DiamondIntegral.Section7.Corollary727.bottomLeft
+#print DiamondIntegral.Section7.Corollary727.bottomLeft
+#print axioms DiamondIntegral.Section7.Corollary727.bottomLeft
+#check @DiamondIntegral.Section7.Corollary727.bottomLeft_mk
+#print DiamondIntegral.Section7.Corollary727.bottomLeft_mk
+#print axioms DiamondIntegral.Section7.Corollary727.bottomLeft_mk
+#check @DiamondIntegral.Section7.Corollary727.measuredForget
+#print DiamondIntegral.Section7.Corollary727.measuredForget
+#print axioms DiamondIntegral.Section7.Corollary727.measuredForget
+#check @DiamondIntegral.Section7.Corollary727.manuscriptIdeal_le_measured_ker
+#print DiamondIntegral.Section7.Corollary727.manuscriptIdeal_le_measured_ker
+#print axioms DiamondIntegral.Section7.Corollary727.manuscriptIdeal_le_measured_ker
+#check @DiamondIntegral.Section7.Corollary727.bottomRightChart
+#print DiamondIntegral.Section7.Corollary727.bottomRightChart
+#print axioms DiamondIntegral.Section7.Corollary727.bottomRightChart
+#check @DiamondIntegral.Section7.Corollary727.bottomRightChart_mk
+#print DiamondIntegral.Section7.Corollary727.bottomRightChart_mk
+#print axioms DiamondIntegral.Section7.Corollary727.bottomRightChart_mk
+#check @DiamondIntegral.Section7.Corollary727.bottomRight
+#print DiamondIntegral.Section7.Corollary727.bottomRight
+#print axioms DiamondIntegral.Section7.Corollary727.bottomRight
+#check @DiamondIntegral.Section7.Corollary727.bottomRight_mk
+#print DiamondIntegral.Section7.Corollary727.bottomRight_mk
+#print axioms DiamondIntegral.Section7.Corollary727.bottomRight_mk
+#check @DiamondIntegral.Section7.Corollary727.integral_forgetVF_lift
+#print DiamondIntegral.Section7.Corollary727.integral_forgetVF_lift
+#print axioms DiamondIntegral.Section7.Corollary727.integral_forgetVF_lift
+#check @DiamondIntegral.Section7.Corollary727.corollary_7_27_left
+#print DiamondIntegral.Section7.Corollary727.corollary_7_27_left
+#print axioms DiamondIntegral.Section7.Corollary727.corollary_7_27_left
+#check @DiamondIntegral.Section7.Corollary727.corollary_7_27_left_zero
+#print DiamondIntegral.Section7.Corollary727.corollary_7_27_left_zero
+#print axioms DiamondIntegral.Section7.Corollary727.corollary_7_27_left_zero
+#check @DiamondIntegral.Section7.Corollary727.corollary_7_27_left_completed
+#print DiamondIntegral.Section7.Corollary727.corollary_7_27_left_completed
+#print axioms DiamondIntegral.Section7.Corollary727.corollary_7_27_left_completed
+#check @DiamondIntegral.Section7.Corollary727.corollary_7_27_left_zero_completed
+#print DiamondIntegral.Section7.Corollary727.corollary_7_27_left_zero_completed
+#print axioms DiamondIntegral.Section7.Corollary727.corollary_7_27_left_zero_completed
+#check @DiamondIntegral.Section7.Corollary727.forgetMVF
+#print DiamondIntegral.Section7.Corollary727.forgetMVF
+#print axioms DiamondIntegral.Section7.Corollary727.forgetMVF
+#check @DiamondIntegral.Section7.Corollary727.forgetMRV
+#print DiamondIntegral.Section7.Corollary727.forgetMRV
+#print axioms DiamondIntegral.Section7.Corollary727.forgetMRV
+#check @DiamondIntegral.Section7.Corollary727.forgetMVF_lift
+#print DiamondIntegral.Section7.Corollary727.forgetMVF_lift
+#print axioms DiamondIntegral.Section7.Corollary727.forgetMVF_lift
+#check @DiamondIntegral.Section7.Corollary727.chart_measured_class
+#print DiamondIntegral.Section7.Corollary727.chart_measured_class
+#print axioms DiamondIntegral.Section7.Corollary727.chart_measured_class
+#check @DiamondIntegral.Section7.Corollary727.measuredClass_forgetMRV
+#print DiamondIntegral.Section7.Corollary727.measuredClass_forgetMRV
+#print axioms DiamondIntegral.Section7.Corollary727.measuredClass_forgetMRV
+#check @DiamondIntegral.Section7.Corollary727.not_mem_bad
+#print DiamondIntegral.Section7.Corollary727.not_mem_bad
+#print axioms DiamondIntegral.Section7.Corollary727.not_mem_bad
+#check @DiamondIntegral.Section7.Corollary727.essentialOf
+#print DiamondIntegral.Section7.Corollary727.essentialOf
+#print axioms DiamondIntegral.Section7.Corollary727.essentialOf
+#check @DiamondIntegral.Section7.Corollary727.essentialOf_preserves
+#print DiamondIntegral.Section7.Corollary727.essentialOf_preserves
+#print axioms DiamondIntegral.Section7.Corollary727.essentialOf_preserves
+#check @DiamondIntegral.Section7.Corollary727.forgetMVF_class_iso
+#print DiamondIntegral.Section7.Corollary727.forgetMVF_class_iso
+#print axioms DiamondIntegral.Section7.Corollary727.forgetMVF_class_iso
+#check @DiamondIntegral.Section7.Corollary727.measuredIntegral_forgetMVF_lift
+#print DiamondIntegral.Section7.Corollary727.measuredIntegral_forgetMVF_lift
+#print axioms DiamondIntegral.Section7.Corollary727.measuredIntegral_forgetMVF_lift
+#check @DiamondIntegral.Section7.Corollary727.corollary_7_27_right
+#print DiamondIntegral.Section7.Corollary727.corollary_7_27_right
+#print axioms DiamondIntegral.Section7.Corollary727.corollary_7_27_right
+#check @DiamondIntegral.Section7.Corollary727.corollary_7_27_right_zero
+#print DiamondIntegral.Section7.Corollary727.corollary_7_27_right_zero
+#print axioms DiamondIntegral.Section7.Corollary727.corollary_7_27_right_zero
 #check @DiamondIntegral.Section7.DiamondProducts.append_comp_castAdd
 #print DiamondIntegral.Section7.DiamondProducts.append_comp_castAdd
 #print axioms DiamondIntegral.Section7.DiamondProducts.append_comp_castAdd

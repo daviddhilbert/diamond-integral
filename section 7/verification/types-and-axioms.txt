@@ -33576,6 +33576,1969 @@ fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransf
 'DiamondIntegral.Section7.Corollary715Moves.corollary_7_15_step' depends on axioms: [propext,
  Classical.choice,
  Quot.sound]
+@DiamondIntegral.Section7.Corollary727.ordinaryExtInvariant : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B D : SpecialTransformations.Section3.GammaParameters.Base} →
+        DiamondIntegral.Section7.BaseExtension.Transfer B D →
+          DiamondIntegral.Section4.RVOrdinaryRing.Invariant B (DiamondIntegral.Section4.RVOrdinaryRing.Ring D)
+def DiamondIntegral.Section7.Corollary727.ordinaryExtInvariant : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B D : SpecialTransformations.Section3.GammaParameters.Base} →
+        DiamondIntegral.Section7.BaseExtension.Transfer B D →
+          DiamondIntegral.Section4.RVOrdinaryRing.Invariant B (DiamondIntegral.Section4.RVOrdinaryRing.Ring D) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {B D}
+    ht =>
+  {
+    value := fun x a =>
+      DiamondIntegral.Section4.RVOrdinaryRing.objectClass (DiamondIntegral.Section7.BaseExtension.chartExt ⋯ a),
+    unit := ⋯, product := ⋯, iso := ⋯, empty := ⋯, scissor := ⋯ }
+'DiamondIntegral.Section7.Corollary727.ordinaryExtInvariant' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.Corollary727.ordinaryExt : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B D : SpecialTransformations.Section3.GammaParameters.Base} →
+        DiamondIntegral.Section7.BaseExtension.Transfer B D →
+          DiamondIntegral.Section4.RVOrdinaryRing.Ring B →+* DiamondIntegral.Section4.RVOrdinaryRing.Ring D
+def DiamondIntegral.Section7.Corollary727.ordinaryExt : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B D : SpecialTransformations.Section3.GammaParameters.Base} →
+        DiamondIntegral.Section7.BaseExtension.Transfer B D →
+          DiamondIntegral.Section4.RVOrdinaryRing.Ring B →+* DiamondIntegral.Section4.RVOrdinaryRing.Ring D :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {B D}
+    ht =>
+  DiamondIntegral.Section4.RVOrdinaryRing.lift B (DiamondIntegral.Section7.Corollary727.ordinaryExtInvariant ⋯)
+'DiamondIntegral.Section7.Corollary727.ordinaryExt' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.Corollary727.ordinaryExt_class : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B D : SpecialTransformations.Section3.GammaParameters.Base}
+  (ht : DiamondIntegral.Section7.BaseExtension.Transfer B D) {k : ℕ}
+  (a : DiamondIntegral.Section4.RVMeasuredCharts.Chart B k),
+  (DiamondIntegral.Section7.Corollary727.ordinaryExt ⋯) (DiamondIntegral.Section4.RVOrdinaryRing.objectClass a) =
+    DiamondIntegral.Section4.RVOrdinaryRing.objectClass (DiamondIntegral.Section7.BaseExtension.chartExt ⋯ a)
+theorem DiamondIntegral.Section7.Corollary727.ordinaryExt_class : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B D : SpecialTransformations.Section3.GammaParameters.Base}
+  (ht : DiamondIntegral.Section7.BaseExtension.Transfer B D) {k : ℕ}
+  (a : DiamondIntegral.Section4.RVMeasuredCharts.Chart B k),
+  (DiamondIntegral.Section7.Corollary727.ordinaryExt ⋯) (DiamondIntegral.Section4.RVOrdinaryRing.objectClass a) =
+    DiamondIntegral.Section4.RVOrdinaryRing.objectClass (DiamondIntegral.Section7.BaseExtension.chartExt ⋯ a) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {B D} ht
+    {k} a =>
+  DiamondIntegral.Section4.RVOrdinaryRing.lift_objectClass B
+    (DiamondIntegral.Section7.Corollary727.ordinaryExtInvariant fun {n} {sn} {U} {n} {sn} {U} => ht) a
+'DiamondIntegral.Section7.Corollary727.ordinaryExt_class' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.Corollary727.QRV : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] → SpecialTransformations.Milestone0.LRV.Substructure M → Type
+@[reducible] def DiamondIntegral.Section7.Corollary727.QRV : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] → SpecialTransformations.Milestone0.LRV.Substructure M → Type :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] T =>
+  DiamondIntegral.Section4.RVBoundedRing.Ring (DiamondIntegral.Section7.LiftClasses.BT T) ⧸
+    DiamondIntegral.Section4.RelativeAnnularGenerators.manuscriptIdeal (DiamondIntegral.Section7.LiftClasses.BT T)
+'DiamondIntegral.Section7.Corollary727.QRV' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.Corollary727.toQ : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {T : SpecialTransformations.Milestone0.LRV.Substructure M} →
+        {k : ℕ} →
+          DiamondIntegral.Section7.BoundedClasses.Cls (DiamondIntegral.Section7.LiftClasses.BT T) k →
+            DiamondIntegral.Section7.Corollary727.QRV T
+@[reducible] def DiamondIntegral.Section7.Corollary727.toQ : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {T : SpecialTransformations.Milestone0.LRV.Substructure M} →
+        {k : ℕ} →
+          DiamondIntegral.Section7.BoundedClasses.Cls (DiamondIntegral.Section7.LiftClasses.BT T) k →
+            DiamondIntegral.Section7.Corollary727.QRV T :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {T} {k}
+    x =>
+  (Ideal.Quotient.mk
+      (DiamondIntegral.Section4.RelativeAnnularGenerators.manuscriptIdeal (DiamondIntegral.Section7.LiftClasses.BT T)))
+    (DiamondIntegral.Section7.RingClasses.clsRing x)
+'DiamondIntegral.Section7.Corollary727.toQ' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.Corollary727.measuredExtInvariant : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B D : SpecialTransformations.Section3.GammaParameters.Base} →
+        DiamondIntegral.Section7.BaseExtension.Transfer B D →
+          DiamondIntegral.Section4.RVChartRing.Invariant B (DiamondIntegral.Section4.RVChartRing.Ring D)
+def DiamondIntegral.Section7.Corollary727.measuredExtInvariant : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B D : SpecialTransformations.Section3.GammaParameters.Base} →
+        DiamondIntegral.Section7.BaseExtension.Transfer B D →
+          DiamondIntegral.Section4.RVChartRing.Invariant B (DiamondIntegral.Section4.RVChartRing.Ring D) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {B D}
+    ht =>
+  {
+    value := fun x a =>
+      DiamondIntegral.Section4.RVChartRing.objectClass (DiamondIntegral.Section7.BaseExtension.chartExt ⋯ a),
+    unit := ⋯, product := ⋯, iso := ⋯, empty := ⋯, scissor := ⋯ }
+'DiamondIntegral.Section7.Corollary727.measuredExtInvariant' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.Corollary727.measuredExt : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B D : SpecialTransformations.Section3.GammaParameters.Base} →
+        DiamondIntegral.Section7.BaseExtension.Transfer B D →
+          DiamondIntegral.Section4.RVChartRing.Ring B →+* DiamondIntegral.Section4.RVChartRing.Ring D
+def DiamondIntegral.Section7.Corollary727.measuredExt : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      {B D : SpecialTransformations.Section3.GammaParameters.Base} →
+        DiamondIntegral.Section7.BaseExtension.Transfer B D →
+          DiamondIntegral.Section4.RVChartRing.Ring B →+* DiamondIntegral.Section4.RVChartRing.Ring D :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {B D}
+    ht =>
+  DiamondIntegral.Section4.RVChartRing.lift B (DiamondIntegral.Section7.Corollary727.measuredExtInvariant ⋯)
+'DiamondIntegral.Section7.Corollary727.measuredExt' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.Corollary727.measuredExt_class : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B D : SpecialTransformations.Section3.GammaParameters.Base}
+  (ht : DiamondIntegral.Section7.BaseExtension.Transfer B D) {k : ℕ}
+  (a : DiamondIntegral.Section4.RVMeasuredCharts.Chart B k),
+  (DiamondIntegral.Section7.Corollary727.measuredExt ⋯) (DiamondIntegral.Section4.RVChartRing.objectClass a) =
+    DiamondIntegral.Section4.RVChartRing.objectClass (DiamondIntegral.Section7.BaseExtension.chartExt ⋯ a)
+theorem DiamondIntegral.Section7.Corollary727.measuredExt_class : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B D : SpecialTransformations.Section3.GammaParameters.Base}
+  (ht : DiamondIntegral.Section7.BaseExtension.Transfer B D) {k : ℕ}
+  (a : DiamondIntegral.Section4.RVMeasuredCharts.Chart B k),
+  (DiamondIntegral.Section7.Corollary727.measuredExt ⋯) (DiamondIntegral.Section4.RVChartRing.objectClass a) =
+    DiamondIntegral.Section4.RVChartRing.objectClass (DiamondIntegral.Section7.BaseExtension.chartExt ⋯ a) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {B D} ht
+    {k} a =>
+  DiamondIntegral.Section4.RVChartRing.lift_objectClass B
+    (DiamondIntegral.Section7.Corollary727.measuredExtInvariant fun {n} {sn} {U} {n} {sn} {U} => ht) a
+'DiamondIntegral.Section7.Corollary727.measuredExt_class' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.Corollary727.measuredExt_pClass : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B D : SpecialTransformations.Section3.GammaParameters.Base}
+  (ht : DiamondIntegral.Section7.BaseExtension.Transfer B D),
+  (DiamondIntegral.Section7.Corollary727.measuredExt ⋯) (DiamondIntegral.Section4.RVMeasuredSpecialClasses.pClass B) =
+    DiamondIntegral.Section4.RVMeasuredSpecialClasses.pClass D
+theorem DiamondIntegral.Section7.Corollary727.measuredExt_pClass : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B D : SpecialTransformations.Section3.GammaParameters.Base}
+  (ht : DiamondIntegral.Section7.BaseExtension.Transfer B D),
+  (DiamondIntegral.Section7.Corollary727.measuredExt ⋯) (DiamondIntegral.Section4.RVMeasuredSpecialClasses.pClass B) =
+    DiamondIntegral.Section4.RVMeasuredSpecialClasses.pClass D :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {B D}
+    ht =>
+  id
+    (Eq.mpr
+      (id
+        (congrArg
+          (fun _a =>
+            _a =
+              DiamondIntegral.Section4.RVChartRing.objectClass
+                  (DiamondIntegral.Section4.RESFibreObjects.point D).toChart -
+                DiamondIntegral.Section4.RVChartRing.objectClass
+                  (DiamondIntegral.Section4.RVSharpCharts.sharpChart
+                    (DiamondIntegral.Section4.RVMeasuredSpecialClasses.rayChart D)))
+          (map_sub (DiamondIntegral.Section7.Corollary727.measuredExt fun {n} {sn} {U} => ht)
+            (DiamondIntegral.Section4.RVChartRing.objectClass
+              (DiamondIntegral.Section4.RESFibreObjects.point B).toChart)
+            (DiamondIntegral.Section4.RVChartRing.objectClass
+              (DiamondIntegral.Section4.RVSharpCharts.sharpChart
+                (DiamondIntegral.Section4.RVMeasuredSpecialClasses.rayChart B))))))
+      (Eq.mpr
+        (id
+          (congrArg
+            (fun _a =>
+              _a -
+                  (DiamondIntegral.Section7.Corollary727.measuredExt fun {n} {sn} {U} => ht)
+                    (DiamondIntegral.Section4.RVChartRing.objectClass
+                      (DiamondIntegral.Section4.RVSharpCharts.sharpChart
+                        (DiamondIntegral.Section4.RVMeasuredSpecialClasses.rayChart B))) =
+                DiamondIntegral.Section4.RVChartRing.objectClass
+                    (DiamondIntegral.Section4.RESFibreObjects.point D).toChart -
+                  DiamondIntegral.Section4.RVChartRing.objectClass
+                    (DiamondIntegral.Section4.RVSharpCharts.sharpChart
+                      (DiamondIntegral.Section4.RVMeasuredSpecialClasses.rayChart D)))
+            (DiamondIntegral.Section7.Corollary727.measuredExt_class ht
+              (DiamondIntegral.Section4.RESFibreObjects.point B).toChart)))
+        (Eq.mpr
+          (id
+            (congrArg
+              (fun _a =>
+                DiamondIntegral.Section4.RVChartRing.objectClass
+                      (DiamondIntegral.Section7.BaseExtension.chartExt (fun {n} {sn} {U} => ht)
+                        (DiamondIntegral.Section4.RESFibreObjects.point B).toChart) -
+                    _a =
+                  DiamondIntegral.Section4.RVChartRing.objectClass
+                      (DiamondIntegral.Section4.RESFibreObjects.point D).toChart -
+                    DiamondIntegral.Section4.RVChartRing.objectClass
+                      (DiamondIntegral.Section4.RVSharpCharts.sharpChart
+                        (DiamondIntegral.Section4.RVMeasuredSpecialClasses.rayChart D)))
+              (DiamondIntegral.Section7.Corollary727.measuredExt_class ht
+                (DiamondIntegral.Section4.RVSharpCharts.sharpChart
+                  (DiamondIntegral.Section4.RVMeasuredSpecialClasses.rayChart B)))))
+          (Eq.refl
+            (DiamondIntegral.Section4.RVChartRing.objectClass
+                (DiamondIntegral.Section7.BaseExtension.chartExt (fun {n} {sn} {U} => ht)
+                  (DiamondIntegral.Section4.RESFibreObjects.point B).toChart) -
+              DiamondIntegral.Section4.RVChartRing.objectClass
+                (DiamondIntegral.Section7.BaseExtension.chartExt (fun {n} {sn} {U} => ht)
+                  (DiamondIntegral.Section4.RVSharpCharts.sharpChart
+                    (DiamondIntegral.Section4.RVMeasuredSpecialClasses.rayChart B))))))))
+'DiamondIntegral.Section7.Corollary727.measuredExt_pClass' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.Corollary727.measuredExt_pIdeal : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B D : SpecialTransformations.Section3.GammaParameters.Base}
+  (ht : DiamondIntegral.Section7.BaseExtension.Transfer B D),
+  Ideal.map (DiamondIntegral.Section7.Corollary727.measuredExt ⋯)
+      (Ideal.span {DiamondIntegral.Section4.RVMeasuredSpecialClasses.pClass B}) ≤
+    DiamondIntegral.Section4.RVMeasuredPQuotient.pIdeal D
+theorem DiamondIntegral.Section7.Corollary727.measuredExt_pIdeal : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF]
+  {B D : SpecialTransformations.Section3.GammaParameters.Base}
+  (ht : DiamondIntegral.Section7.BaseExtension.Transfer B D),
+  Ideal.map (DiamondIntegral.Section7.Corollary727.measuredExt ⋯)
+      (Ideal.span {DiamondIntegral.Section4.RVMeasuredSpecialClasses.pClass B}) ≤
+    DiamondIntegral.Section4.RVMeasuredPQuotient.pIdeal D :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] {B D}
+    ht =>
+  Eq.mpr
+    (id
+      (congrArg (fun _a => _a ≤ DiamondIntegral.Section4.RVMeasuredPQuotient.pIdeal D)
+        (Ideal.map_span (DiamondIntegral.Section7.Corollary727.measuredExt fun {n} {sn} {U} => ht)
+          {DiamondIntegral.Section4.RVMeasuredSpecialClasses.pClass B})))
+    (Eq.mpr
+      (id
+        (congrArg (fun _a => Ideal.span _a ≤ DiamondIntegral.Section4.RVMeasuredPQuotient.pIdeal D)
+          Set.image_singleton))
+      (Eq.mpr
+        (id
+          (congrArg (fun _a => Ideal.span {_a} ≤ DiamondIntegral.Section4.RVMeasuredPQuotient.pIdeal D)
+            (DiamondIntegral.Section7.Corollary727.measuredExt_pClass ht)))
+        (le_refl (Ideal.span {DiamondIntegral.Section4.RVMeasuredSpecialClasses.pClass D}))))
+'DiamondIntegral.Section7.Corollary727.measuredExt_pIdeal' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.Corollary727.measuredPointIso : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        (B : SpecialTransformations.Section3.GammaParameters.Base) →
+          DiamondIntegral.Section4.RVMeasuredCharts.Iso
+            (DiamondIntegral.Section4.Section3MeasuredRVChartBridge.chart
+              (DiamondIntegral.Section3.gammaGroundMeasuredRVOne hc B))
+            (DiamondIntegral.Section4.RESFibreObjects.point B).toChart
+def DiamondIntegral.Section7.Corollary727.measuredPointIso : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        (B : SpecialTransformations.Section3.GammaParameters.Base) →
+          DiamondIntegral.Section4.RVMeasuredCharts.Iso
+            (DiamondIntegral.Section4.Section3MeasuredRVChartBridge.chart
+              (DiamondIntegral.Section3.gammaGroundMeasuredRVOne hc B))
+            (DiamondIntegral.Section4.RESFibreObjects.point B).toChart :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] hc B =>
+  { equiv := (DiamondIntegral.Section5.nativePointChartIso hc B).equiv, graph_definable := ⋯, weight_eq := ⋯ }
+'DiamondIntegral.Section7.Corollary727.measuredPointIso' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.Corollary727.measuredPositiveIso : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        (B : SpecialTransformations.Section3.GammaParameters.Base) →
+          DiamondIntegral.Section4.RVMeasuredCharts.Iso
+            (DiamondIntegral.Section4.Section3MeasuredRVChartBridge.chart
+              (DiamondIntegral.Section3.gammaGroundMeasuredRVPositive hc B))
+            (DiamondIntegral.Section4.RVSharpCharts.sharpChart
+              (DiamondIntegral.Section4.RVMeasuredSpecialClasses.rayChart B))
+def DiamondIntegral.Section7.Corollary727.measuredPositiveIso : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        (B : SpecialTransformations.Section3.GammaParameters.Base) →
+          DiamondIntegral.Section4.RVMeasuredCharts.Iso
+            (DiamondIntegral.Section4.Section3MeasuredRVChartBridge.chart
+              (DiamondIntegral.Section3.gammaGroundMeasuredRVPositive hc B))
+            (DiamondIntegral.Section4.RVSharpCharts.sharpChart
+              (DiamondIntegral.Section4.RVMeasuredSpecialClasses.rayChart B)) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] hc B =>
+  { equiv := (DiamondIntegral.Section5.nativePositiveChartIso hc B).equiv, graph_definable := ⋯, weight_eq := ⋯ }
+'DiamondIntegral.Section7.Corollary727.measuredPositiveIso' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.Corollary727.measured_pClass : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (hc : CanonicalStructure.IsCanonical)
+  (B : SpecialTransformations.Section3.GammaParameters.Base),
+  (DiamondIntegral.Section4.Section3RVRingEquivalences.measured hc B)
+      (DiamondIntegral.Section4.RVMeasuredSpecialClasses.pClass B) =
+    DiamondIntegral.Section3.gammaGroundMeasuredRVPrincipalElement hc B
+theorem DiamondIntegral.Section7.Corollary727.measured_pClass : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (hc : CanonicalStructure.IsCanonical)
+  (B : SpecialTransformations.Section3.GammaParameters.Base),
+  (DiamondIntegral.Section4.Section3RVRingEquivalences.measured hc B)
+      (DiamondIntegral.Section4.RVMeasuredSpecialClasses.pClass B) =
+    DiamondIntegral.Section3.gammaGroundMeasuredRVPrincipalElement hc B :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] hc B =>
+  RingEquiv.injective (DiamondIntegral.Section4.Section3RVRingEquivalences.measured hc B).symm
+    (Eq.mpr
+      (id
+        (congrArg
+          (fun _a =>
+            _a =
+              (DiamondIntegral.Section4.Section3RVRingEquivalences.measured hc B).symm
+                (DiamondIntegral.Section3.gammaGroundMeasuredRVPrincipalElement hc B))
+          (RingEquiv.symm_apply_apply (DiamondIntegral.Section4.Section3RVRingEquivalences.measured hc B)
+            (DiamondIntegral.Section4.RVMeasuredSpecialClasses.pClass B))))
+      (id
+        (Eq.mpr
+          (id
+            (congrArg (fun _a => DiamondIntegral.Section4.RVMeasuredSpecialClasses.pClass B = _a)
+              (map_sub (DiamondIntegral.Section4.Section3RVRingEquivalences.measured hc B).symm
+                (DiamondIntegral.Section4.Section3RVClassCuts.measuredClass
+                  (DiamondIntegral.Section3.gammaGroundMeasuredRVOne hc B))
+                (DiamondIntegral.Section4.Section3RVClassCuts.measuredClass
+                  (DiamondIntegral.Section3.gammaGroundMeasuredRVPositive hc B)))))
+          (Eq.mpr
+            (id
+              (congrArg
+                (fun _a =>
+                  DiamondIntegral.Section4.RVMeasuredSpecialClasses.pClass B =
+                    _a -
+                      (DiamondIntegral.Section4.Section3RVRingEquivalences.measured hc B).symm
+                        (DiamondIntegral.Section4.Section3RVClassCuts.measuredClass
+                          (DiamondIntegral.Section3.gammaGroundMeasuredRVPositive hc B)))
+                (DiamondIntegral.Section4.Section3RVRingEquivalences.measured_symm_class hc B
+                  (DiamondIntegral.Section3.gammaGroundMeasuredRVOne hc B))))
+            (Eq.mpr
+              (id
+                (congrArg
+                  (fun _a =>
+                    DiamondIntegral.Section4.RVMeasuredSpecialClasses.pClass B =
+                      DiamondIntegral.Section4.RVChartRing.objectClass
+                          (DiamondIntegral.Section4.Section3MeasuredRVChartBridge.chart
+                            (DiamondIntegral.Section3.gammaGroundMeasuredRVOne hc B)) -
+                        _a)
+                  (DiamondIntegral.Section4.Section3RVRingEquivalences.measured_symm_class hc B
+                    (DiamondIntegral.Section3.gammaGroundMeasuredRVPositive hc B))))
+              (Eq.mpr
+                (id
+                  (congrArg
+                    (fun _a =>
+                      DiamondIntegral.Section4.RVMeasuredSpecialClasses.pClass B =
+                        _a -
+                          DiamondIntegral.Section4.RVChartRing.objectClass
+                            (DiamondIntegral.Section4.Section3MeasuredRVChartBridge.chart
+                              (DiamondIntegral.Section3.gammaGroundMeasuredRVPositive hc B)))
+                    (DiamondIntegral.Section4.RVChartRing.objectClass_iso
+                      (DiamondIntegral.Section7.Corollary727.measuredPointIso hc B))))
+                (Eq.mpr
+                  (id
+                    (congrArg
+                      (fun _a =>
+                        DiamondIntegral.Section4.RVMeasuredSpecialClasses.pClass B =
+                          DiamondIntegral.Section4.RVChartRing.objectClass
+                              (DiamondIntegral.Section4.RESFibreObjects.point B).toChart -
+                            _a)
+                      (DiamondIntegral.Section4.RVChartRing.objectClass_iso
+                        (DiamondIntegral.Section7.Corollary727.measuredPositiveIso hc B))))
+                  (Eq.refl (DiamondIntegral.Section4.RVMeasuredSpecialClasses.pClass B)))))))))
+'DiamondIntegral.Section7.Corollary727.measured_pClass' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.Corollary727.pQuotientEquiv : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        (B : SpecialTransformations.Section3.GammaParameters.Base) →
+          DiamondIntegral.Section4.RVMeasuredPQuotient.Ring B ≃+*
+            DiamondIntegral.Section3.GammaGroundMeasuredRVGrothendieckRing hc B ⧸
+              Ideal.span {DiamondIntegral.Section3.gammaGroundMeasuredRVPrincipalElement hc B}
+def DiamondIntegral.Section7.Corollary727.pQuotientEquiv : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        (B : SpecialTransformations.Section3.GammaParameters.Base) →
+          DiamondIntegral.Section4.RVMeasuredPQuotient.Ring B ≃+*
+            DiamondIntegral.Section3.GammaGroundMeasuredRVGrothendieckRing hc B ⧸
+              Ideal.span {DiamondIntegral.Section3.gammaGroundMeasuredRVPrincipalElement hc B} :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] hc B =>
+  (DiamondIntegral.Section4.RVMeasuredPQuotient.pIdeal B).quotientEquiv
+    (Ideal.span {DiamondIntegral.Section3.gammaGroundMeasuredRVPrincipalElement hc B})
+    (DiamondIntegral.Section4.Section3RVRingEquivalences.measured hc B) ⋯
+'DiamondIntegral.Section7.Corollary727.pQuotientEquiv' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.Corollary727.pQuotientEquiv_quotient : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (hc : CanonicalStructure.IsCanonical)
+  (B : SpecialTransformations.Section3.GammaParameters.Base) (x : DiamondIntegral.Section4.RVChartRing.Ring B),
+  (DiamondIntegral.Section7.Corollary727.pQuotientEquiv hc B)
+      ((DiamondIntegral.Section4.RVMeasuredPQuotient.quotient B) x) =
+    (Ideal.Quotient.mk (Ideal.span {DiamondIntegral.Section3.gammaGroundMeasuredRVPrincipalElement hc B}))
+      ((DiamondIntegral.Section4.Section3RVRingEquivalences.measured hc B) x)
+@[defeq] theorem DiamondIntegral.Section7.Corollary727.pQuotientEquiv_quotient : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (hc : CanonicalStructure.IsCanonical)
+  (B : SpecialTransformations.Section3.GammaParameters.Base) (x : DiamondIntegral.Section4.RVChartRing.Ring B),
+  (DiamondIntegral.Section7.Corollary727.pQuotientEquiv hc B)
+      ((DiamondIntegral.Section4.RVMeasuredPQuotient.quotient B) x) =
+    (Ideal.Quotient.mk (Ideal.span {DiamondIntegral.Section3.gammaGroundMeasuredRVPrincipalElement hc B}))
+      ((DiamondIntegral.Section4.Section3RVRingEquivalences.measured hc B) x) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] hc B
+    x =>
+  rfl
+'DiamondIntegral.Section7.Corollary727.pQuotientEquiv_quotient' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@DiamondIntegral.Section7.Corollary727.gamma_decode : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (hc : CanonicalStructure.IsCanonical) (z : Fin 1 → M)
+  (hz : SpecialTransformations.Section3.GammaParameters.NonzeroRV (z 0)),
+  (DiamondIntegral.Section3.volumeGammaSpace hc).decode ⟨z, hz⟩ =
+    DiamondIntegral.Section6.rawGammaPresentation.decode ⟨z, hz⟩
+theorem DiamondIntegral.Section7.Corollary727.gamma_decode : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (hc : CanonicalStructure.IsCanonical) (z : Fin 1 → M)
+  (hz : SpecialTransformations.Section3.GammaParameters.NonzeroRV (z 0)),
+  (DiamondIntegral.Section3.volumeGammaSpace hc).decode ⟨z, hz⟩ =
+    DiamondIntegral.Section6.rawGammaPresentation.decode ⟨z, hz⟩ :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] hc z
+    hz =>
+  id (Eq.symm (DiamondIntegral.Section7.MeasuredRVBridge.codeValue_gammaOf ⟨z 0, hz.left⟩ hz.right))
+'DiamondIntegral.Section7.Corollary727.gamma_decode' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.Corollary727.toGroundForm : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        {B : SpecialTransformations.Section3.GammaParameters.Base} →
+          {Q : SpecialTransformations.DefinableGeometry.Space SpecialTransformations.Milestone0.LRV M} →
+            {A : SpecialTransformations.DefinableGeometry.DefSet Q B.real} →
+              SpecialTransformations.DefinableGeometry.Map A
+                  (SpecialTransformations.DefinableGeometry.DefSet.univ DiamondIntegral.Section6.rawGammaPresentation
+                    B.real) →
+                DiamondIntegral.Section3.GammaGroundVolumeForm hc B
+                  (DiamondIntegral.Section3.GammaGroundDefSet.ofReal A)
+def DiamondIntegral.Section7.Corollary727.toGroundForm : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (hc : CanonicalStructure.IsCanonical) →
+        {B : SpecialTransformations.Section3.GammaParameters.Base} →
+          {Q : SpecialTransformations.DefinableGeometry.Space SpecialTransformations.Milestone0.LRV M} →
+            {A : SpecialTransformations.DefinableGeometry.DefSet Q B.real} →
+              SpecialTransformations.DefinableGeometry.Map A
+                  (SpecialTransformations.DefinableGeometry.DefSet.univ DiamondIntegral.Section6.rawGammaPresentation
+                    B.real) →
+                DiamondIntegral.Section3.GammaGroundVolumeForm hc B
+                  (DiamondIntegral.Section3.GammaGroundDefSet.ofReal A) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] hc {B}
+    {Q} {A} ω =>
+  { toFun := fun a => ⟨↑(ω.toFun a), ⋯⟩, graph_definable := ⋯ }
+'DiamondIntegral.Section7.Corollary727.toGroundForm' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.Corollary727.toGroundForm_value : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (hc : CanonicalStructure.IsCanonical)
+  {B : SpecialTransformations.Section3.GammaParameters.Base}
+  {Q : SpecialTransformations.DefinableGeometry.Space SpecialTransformations.Milestone0.LRV M}
+  {A : SpecialTransformations.DefinableGeometry.DefSet Q B.real}
+  (ω :
+    SpecialTransformations.DefinableGeometry.Map A
+      (SpecialTransformations.DefinableGeometry.DefSet.univ DiamondIntegral.Section6.rawGammaPresentation B.real))
+  (a : ↑A.carrier),
+  DiamondIntegral.Section3.gammaGroundFormValue (DiamondIntegral.Section7.Corollary727.toGroundForm hc ω) a =
+    DiamondIntegral.Section6.gammaMapValue ω a
+@[defeq] theorem DiamondIntegral.Section7.Corollary727.toGroundForm_value : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (hc : CanonicalStructure.IsCanonical)
+  {B : SpecialTransformations.Section3.GammaParameters.Base}
+  {Q : SpecialTransformations.DefinableGeometry.Space SpecialTransformations.Milestone0.LRV M}
+  {A : SpecialTransformations.DefinableGeometry.DefSet Q B.real}
+  (ω :
+    SpecialTransformations.DefinableGeometry.Map A
+      (SpecialTransformations.DefinableGeometry.DefSet.univ DiamondIntegral.Section6.rawGammaPresentation B.real))
+  (a : ↑A.carrier),
+  DiamondIntegral.Section3.gammaGroundFormValue (DiamondIntegral.Section7.Corollary727.toGroundForm hc ω) a =
+    DiamondIntegral.Section6.gammaMapValue ω a :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] hc {B}
+    {Q} {A} ω a =>
+  rfl
+'DiamondIntegral.Section7.Corollary727.toGroundForm_value' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.Corollary727.transfer : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (C : DiamondIntegral.Section3.GammaGroundContext M),
+  DiamondIntegral.Section7.BaseExtension.Transfer (DiamondIntegral.Section7.LiftClasses.BT C.real) C.base
+theorem DiamondIntegral.Section7.Corollary727.transfer : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (C : DiamondIntegral.Section3.GammaGroundContext M),
+  DiamondIntegral.Section7.BaseExtension.Transfer (DiamondIntegral.Section7.LiftClasses.BT C.real) C.base :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] C {n}
+    {sn} {U} =>
+  DiamondIntegral.Section7.BaseExtension.Transfer.ofSubset (fun x h => h) (Set.empty_subset C.base.gamma)
+'DiamondIntegral.Section7.Corollary727.transfer' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.Corollary727.forgetNormalized : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (C : DiamondIntegral.Section3.GammaGroundContext M) →
+        DiamondIntegral.Section4.RVBoundedRing.Ring (DiamondIntegral.Section7.LiftClasses.BT C.real) →+*
+          DiamondIntegral.Section4.RVOrdinaryPNormalization.Ring C.base
+def DiamondIntegral.Section7.Corollary727.forgetNormalized : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (C : DiamondIntegral.Section3.GammaGroundContext M) →
+        DiamondIntegral.Section4.RVBoundedRing.Ring (DiamondIntegral.Section7.LiftClasses.BT C.real) →+*
+          DiamondIntegral.Section4.RVOrdinaryPNormalization.Ring C.base :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] C =>
+  (DiamondIntegral.Section4.RVOrdinaryPNormalization.quotient C.base).comp
+    ((DiamondIntegral.Section7.Corollary727.ordinaryExt ⋯).comp
+      (DiamondIntegral.Section4.RVOrdinaryMaps.boundedForget (DiamondIntegral.Section7.LiftClasses.BT C.real)))
+'DiamondIntegral.Section7.Corollary727.forgetNormalized' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.Corollary727.manuscriptIdeal_le_ker : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (C : DiamondIntegral.Section3.GammaGroundContext M),
+  DiamondIntegral.Section4.RelativeAnnularGenerators.manuscriptIdeal (DiamondIntegral.Section7.LiftClasses.BT C.real) ≤
+    RingHom.ker (DiamondIntegral.Section7.Corollary727.forgetNormalized C)
+theorem DiamondIntegral.Section7.Corollary727.manuscriptIdeal_le_ker : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (C : DiamondIntegral.Section3.GammaGroundContext M),
+  DiamondIntegral.Section4.RelativeAnnularGenerators.manuscriptIdeal (DiamondIntegral.Section7.LiftClasses.BT C.real) ≤
+    RingHom.ker (DiamondIntegral.Section7.Corollary727.forgetNormalized C) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] C ⦃x⦄
+    hx =>
+  have h := DiamondIntegral.Section4.RelativeAnnularGenerators.manuscriptIdeal_le_forget_kernel hx;
+  Eq.mpr (id (congrArg (fun _a => _a) (propext RingHom.mem_ker)))
+    (id
+      (Eq.mpr
+        (id
+          (congrArg
+            (fun _a =>
+              (DiamondIntegral.Section4.RVOrdinaryPNormalization.quotient C.base)
+                  ((DiamondIntegral.Section7.Corollary727.ordinaryExt fun {n} {sn} {U} =>
+                      DiamondIntegral.Section7.Corollary727.transfer C)
+                    _a) =
+                0)
+            (Eq.mp (congrArg (fun _a => _a) (propext RingHom.mem_ker)) h)))
+        (Eq.mpr
+          (id
+            (congrArg (fun _a => (DiamondIntegral.Section4.RVOrdinaryPNormalization.quotient C.base) _a = 0)
+              (map_zero
+                (DiamondIntegral.Section7.Corollary727.ordinaryExt fun {n} {sn} {U} =>
+                  DiamondIntegral.Section7.Corollary727.transfer C))))
+          (Eq.mpr
+            (id
+              (congrArg (fun _a => _a = 0)
+                (map_zero (DiamondIntegral.Section4.RVOrdinaryPNormalization.quotient C.base))))
+            (Eq.refl 0)))))
+'DiamondIntegral.Section7.Corollary727.manuscriptIdeal_le_ker' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@DiamondIntegral.Section7.Corollary727.bottomLeft : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (C : DiamondIntegral.Section3.GammaGroundContext M) →
+        DiamondIntegral.Section7.Corollary727.QRV C.real →+*
+          DiamondIntegral.Section4.RVOrdinaryPNormalization.Ring C.base
+def DiamondIntegral.Section7.Corollary727.bottomLeft : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (C : DiamondIntegral.Section3.GammaGroundContext M) →
+        DiamondIntegral.Section7.Corollary727.QRV C.real →+*
+          DiamondIntegral.Section4.RVOrdinaryPNormalization.Ring C.base :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] C =>
+  Ideal.Quotient.lift
+    (DiamondIntegral.Section4.RelativeAnnularGenerators.manuscriptIdeal
+      (DiamondIntegral.Section7.LiftClasses.BT C.real))
+    (DiamondIntegral.Section7.Corollary727.forgetNormalized C) ⋯
+'DiamondIntegral.Section7.Corollary727.bottomLeft' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.Corollary727.bottomLeft_mk : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (C : DiamondIntegral.Section3.GammaGroundContext M)
+  {k : ℕ} (a : DiamondIntegral.Section7.BoundedClasses.Obj (DiamondIntegral.Section7.LiftClasses.BT C.real) k),
+  (DiamondIntegral.Section7.Corollary727.bottomLeft C)
+      ((Ideal.Quotient.mk
+          (DiamondIntegral.Section4.RelativeAnnularGenerators.manuscriptIdeal
+            (DiamondIntegral.Section7.LiftClasses.BT C.real)))
+        (DiamondIntegral.Section4.RVBoundedRing.objectClass a)) =
+    (DiamondIntegral.Section4.RVOrdinaryPNormalization.quotient C.base)
+      (DiamondIntegral.Section4.RVOrdinaryRing.objectClass
+        (DiamondIntegral.Section7.BaseExtension.chartExt ⋯ a.toChart))
+theorem DiamondIntegral.Section7.Corollary727.bottomLeft_mk : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (C : DiamondIntegral.Section3.GammaGroundContext M)
+  {k : ℕ} (a : DiamondIntegral.Section7.BoundedClasses.Obj (DiamondIntegral.Section7.LiftClasses.BT C.real) k),
+  (DiamondIntegral.Section7.Corollary727.bottomLeft C)
+      ((Ideal.Quotient.mk
+          (DiamondIntegral.Section4.RelativeAnnularGenerators.manuscriptIdeal
+            (DiamondIntegral.Section7.LiftClasses.BT C.real)))
+        (DiamondIntegral.Section4.RVBoundedRing.objectClass a)) =
+    (DiamondIntegral.Section4.RVOrdinaryPNormalization.quotient C.base)
+      (DiamondIntegral.Section4.RVOrdinaryRing.objectClass
+        (DiamondIntegral.Section7.BaseExtension.chartExt ⋯ a.toChart)) :=
+fun {M} [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] C {k} a =>
+  id
+    (Eq.mpr
+      (id
+        (congrArg
+          (fun _a =>
+            (DiamondIntegral.Section4.RVOrdinaryPNormalization.quotient C.base)
+                ((DiamondIntegral.Section7.Corollary727.ordinaryExt fun {n} {sn} {U} =>
+                    DiamondIntegral.Section7.Corollary727.transfer C)
+                  _a) =
+              (DiamondIntegral.Section4.RVOrdinaryPNormalization.quotient C.base)
+                (DiamondIntegral.Section4.RVOrdinaryRing.objectClass
+                  (DiamondIntegral.Section7.BaseExtension.chartExt
+                    (fun {n} {sn} {U} => DiamondIntegral.Section7.Corollary727.transfer C) a.toChart)))
+          (DiamondIntegral.Section4.RVOrdinaryMaps.boundedForget_class (DiamondIntegral.Section7.LiftClasses.BT C.real)
+            a)))
+      (Eq.mpr
+        (id
+          (congrArg
+            (fun _a =>
+              (DiamondIntegral.Section4.RVOrdinaryPNormalization.quotient C.base) _a =
+                (DiamondIntegral.Section4.RVOrdinaryPNormalization.quotient C.base)
+                  (DiamondIntegral.Section4.RVOrdinaryRing.objectClass
+                    (DiamondIntegral.Section7.BaseExtension.chartExt
+                      (fun {n} {sn} {U} => DiamondIntegral.Section7.Corollary727.transfer C) a.toChart)))
+            (DiamondIntegral.Section7.Corollary727.ordinaryExt_class
+              (@DiamondIntegral.Section7.Corollary727.transfer M inst inst_1 C) a.toChart)))
+        (Eq.refl
+          ((DiamondIntegral.Section4.RVOrdinaryPNormalization.quotient C.base)
+            (DiamondIntegral.Section4.RVOrdinaryRing.objectClass
+              (DiamondIntegral.Section7.BaseExtension.chartExt
+                (fun {n} {sn} {U} => DiamondIntegral.Section7.Corollary727.transfer C) a.toChart))))))
+'DiamondIntegral.Section7.Corollary727.bottomLeft_mk' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.Corollary727.measuredForget : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (C : DiamondIntegral.Section3.GammaGroundContext M) →
+        DiamondIntegral.Section4.RVBoundedRing.Ring (DiamondIntegral.Section7.LiftClasses.BT C.real) →+*
+          DiamondIntegral.Section4.RVMeasuredPQuotient.Ring C.base
+def DiamondIntegral.Section7.Corollary727.measuredForget : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (C : DiamondIntegral.Section3.GammaGroundContext M) →
+        DiamondIntegral.Section4.RVBoundedRing.Ring (DiamondIntegral.Section7.LiftClasses.BT C.real) →+*
+          DiamondIntegral.Section4.RVMeasuredPQuotient.Ring C.base :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] C =>
+  (DiamondIntegral.Section4.RVMeasuredPQuotient.quotient C.base).comp
+    ((DiamondIntegral.Section7.Corollary727.measuredExt ⋯).comp
+      (DiamondIntegral.Section4.RVBoundedMaps.forget (DiamondIntegral.Section7.LiftClasses.BT C.real)))
+'DiamondIntegral.Section7.Corollary727.measuredForget' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.Corollary727.manuscriptIdeal_le_measured_ker : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (C : DiamondIntegral.Section3.GammaGroundContext M),
+  DiamondIntegral.Section4.RelativeAnnularGenerators.manuscriptIdeal (DiamondIntegral.Section7.LiftClasses.BT C.real) ≤
+    RingHom.ker (DiamondIntegral.Section7.Corollary727.measuredForget C)
+theorem DiamondIntegral.Section7.Corollary727.manuscriptIdeal_le_measured_ker : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (C : DiamondIntegral.Section3.GammaGroundContext M),
+  DiamondIntegral.Section4.RelativeAnnularGenerators.manuscriptIdeal (DiamondIntegral.Section7.LiftClasses.BT C.real) ≤
+    RingHom.ker (DiamondIntegral.Section7.Corollary727.measuredForget C) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] C ⦃x⦄
+    hx =>
+  have h := DiamondIntegral.Section4.RelativeAnnularGenerators.manuscriptIdeal_maps_into_p hx;
+  Eq.mpr (id (congrArg (fun _a => _a) (propext RingHom.mem_ker)))
+    (Ideal.Quotient.eq_zero_iff_mem.mpr
+      (DiamondIntegral.Section7.Corollary727.measuredExt_pIdeal
+        (fun {n} {sn} {U} => DiamondIntegral.Section7.Corollary727.transfer C)
+        (Ideal.mem_map_of_mem
+          (DiamondIntegral.Section7.Corollary727.measuredExt fun {n} {sn} {U} =>
+            DiamondIntegral.Section7.Corollary727.transfer C)
+          h)))
+'DiamondIntegral.Section7.Corollary727.manuscriptIdeal_le_measured_ker' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@DiamondIntegral.Section7.Corollary727.bottomRightChart : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (C : DiamondIntegral.Section3.GammaGroundContext M) →
+        DiamondIntegral.Section7.Corollary727.QRV C.real →+* DiamondIntegral.Section4.RVMeasuredPQuotient.Ring C.base
+def DiamondIntegral.Section7.Corollary727.bottomRightChart : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (C : DiamondIntegral.Section3.GammaGroundContext M) →
+        DiamondIntegral.Section7.Corollary727.QRV C.real →+* DiamondIntegral.Section4.RVMeasuredPQuotient.Ring C.base :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] C =>
+  Ideal.Quotient.lift
+    (DiamondIntegral.Section4.RelativeAnnularGenerators.manuscriptIdeal
+      (DiamondIntegral.Section7.LiftClasses.BT C.real))
+    (DiamondIntegral.Section7.Corollary727.measuredForget C) ⋯
+'DiamondIntegral.Section7.Corollary727.bottomRightChart' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.Corollary727.bottomRightChart_mk : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (C : DiamondIntegral.Section3.GammaGroundContext M)
+  {k : ℕ} (a : DiamondIntegral.Section7.BoundedClasses.Obj (DiamondIntegral.Section7.LiftClasses.BT C.real) k),
+  (DiamondIntegral.Section7.Corollary727.bottomRightChart C)
+      ((Ideal.Quotient.mk
+          (DiamondIntegral.Section4.RelativeAnnularGenerators.manuscriptIdeal
+            (DiamondIntegral.Section7.LiftClasses.BT C.real)))
+        (DiamondIntegral.Section4.RVBoundedRing.objectClass a)) =
+    (DiamondIntegral.Section4.RVMeasuredPQuotient.quotient C.base)
+      (DiamondIntegral.Section4.RVChartRing.objectClass (DiamondIntegral.Section7.BaseExtension.chartExt ⋯ a.toChart))
+theorem DiamondIntegral.Section7.Corollary727.bottomRightChart_mk : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (C : DiamondIntegral.Section3.GammaGroundContext M)
+  {k : ℕ} (a : DiamondIntegral.Section7.BoundedClasses.Obj (DiamondIntegral.Section7.LiftClasses.BT C.real) k),
+  (DiamondIntegral.Section7.Corollary727.bottomRightChart C)
+      ((Ideal.Quotient.mk
+          (DiamondIntegral.Section4.RelativeAnnularGenerators.manuscriptIdeal
+            (DiamondIntegral.Section7.LiftClasses.BT C.real)))
+        (DiamondIntegral.Section4.RVBoundedRing.objectClass a)) =
+    (DiamondIntegral.Section4.RVMeasuredPQuotient.quotient C.base)
+      (DiamondIntegral.Section4.RVChartRing.objectClass
+        (DiamondIntegral.Section7.BaseExtension.chartExt ⋯ a.toChart)) :=
+fun {M} [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] C {k} a =>
+  id
+    (Eq.mpr
+      (id
+        (congrArg
+          (fun _a =>
+            (DiamondIntegral.Section4.RVMeasuredPQuotient.quotient C.base)
+                ((DiamondIntegral.Section7.Corollary727.measuredExt fun {n} {sn} {U} =>
+                    DiamondIntegral.Section7.Corollary727.transfer C)
+                  _a) =
+              (DiamondIntegral.Section4.RVMeasuredPQuotient.quotient C.base)
+                (DiamondIntegral.Section4.RVChartRing.objectClass
+                  (DiamondIntegral.Section7.BaseExtension.chartExt
+                    (fun {n} {sn} {U} => DiamondIntegral.Section7.Corollary727.transfer C) a.toChart)))
+          (DiamondIntegral.Section4.RVBoundedMaps.forget_class (DiamondIntegral.Section7.LiftClasses.BT C.real) a)))
+      (Eq.mpr
+        (id
+          (congrArg
+            (fun _a =>
+              (DiamondIntegral.Section4.RVMeasuredPQuotient.quotient C.base) _a =
+                (DiamondIntegral.Section4.RVMeasuredPQuotient.quotient C.base)
+                  (DiamondIntegral.Section4.RVChartRing.objectClass
+                    (DiamondIntegral.Section7.BaseExtension.chartExt
+                      (fun {n} {sn} {U} => DiamondIntegral.Section7.Corollary727.transfer C) a.toChart)))
+            (DiamondIntegral.Section7.Corollary727.measuredExt_class
+              (@DiamondIntegral.Section7.Corollary727.transfer M inst inst_1 C) a.toChart)))
+        (Eq.refl
+          ((DiamondIntegral.Section4.RVMeasuredPQuotient.quotient C.base)
+            (DiamondIntegral.Section4.RVChartRing.objectClass
+              (DiamondIntegral.Section7.BaseExtension.chartExt
+                (fun {n} {sn} {U} => DiamondIntegral.Section7.Corollary727.transfer C) a.toChart))))))
+'DiamondIntegral.Section7.Corollary727.bottomRightChart_mk' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.Corollary727.bottomRight : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (C : DiamondIntegral.Section3.GammaGroundContext M) →
+        (hc : CanonicalStructure.IsCanonical) →
+          DiamondIntegral.Section7.Corollary727.QRV C.real →+*
+            DiamondIntegral.Section3.GammaGroundMeasuredRVGrothendieckRing hc C.base ⧸
+              Ideal.span {DiamondIntegral.Section3.gammaGroundMeasuredRVPrincipalElement hc C.base}
+def DiamondIntegral.Section7.Corollary727.bottomRight : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (C : DiamondIntegral.Section3.GammaGroundContext M) →
+        (hc : CanonicalStructure.IsCanonical) →
+          DiamondIntegral.Section7.Corollary727.QRV C.real →+*
+            DiamondIntegral.Section3.GammaGroundMeasuredRVGrothendieckRing hc C.base ⧸
+              Ideal.span {DiamondIntegral.Section3.gammaGroundMeasuredRVPrincipalElement hc C.base} :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] C hc =>
+  (DiamondIntegral.Section7.Corollary727.pQuotientEquiv hc C.base).toRingHom.comp
+    (DiamondIntegral.Section7.Corollary727.bottomRightChart C)
+'DiamondIntegral.Section7.Corollary727.bottomRight' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.Corollary727.bottomRight_mk : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (C : DiamondIntegral.Section3.GammaGroundContext M)
+  (hc : CanonicalStructure.IsCanonical) {k : ℕ}
+  (a : DiamondIntegral.Section7.BoundedClasses.Obj (DiamondIntegral.Section7.LiftClasses.BT C.real) k),
+  (DiamondIntegral.Section7.Corollary727.bottomRight C hc)
+      ((Ideal.Quotient.mk
+          (DiamondIntegral.Section4.RelativeAnnularGenerators.manuscriptIdeal
+            (DiamondIntegral.Section7.LiftClasses.BT C.real)))
+        (DiamondIntegral.Section4.RVBoundedRing.objectClass a)) =
+    (Ideal.Quotient.mk (Ideal.span {DiamondIntegral.Section3.gammaGroundMeasuredRVPrincipalElement hc C.base}))
+      (DiamondIntegral.Section4.Section3RVClassCuts.measuredClass
+        (DiamondIntegral.Section4.Section3MeasuredRVChartBridge.native hc
+          (DiamondIntegral.Section7.BaseExtension.chartExt ⋯ a.toChart)))
+theorem DiamondIntegral.Section7.Corollary727.bottomRight_mk : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (C : DiamondIntegral.Section3.GammaGroundContext M)
+  (hc : CanonicalStructure.IsCanonical) {k : ℕ}
+  (a : DiamondIntegral.Section7.BoundedClasses.Obj (DiamondIntegral.Section7.LiftClasses.BT C.real) k),
+  (DiamondIntegral.Section7.Corollary727.bottomRight C hc)
+      ((Ideal.Quotient.mk
+          (DiamondIntegral.Section4.RelativeAnnularGenerators.manuscriptIdeal
+            (DiamondIntegral.Section7.LiftClasses.BT C.real)))
+        (DiamondIntegral.Section4.RVBoundedRing.objectClass a)) =
+    (Ideal.Quotient.mk (Ideal.span {DiamondIntegral.Section3.gammaGroundMeasuredRVPrincipalElement hc C.base}))
+      (DiamondIntegral.Section4.Section3RVClassCuts.measuredClass
+        (DiamondIntegral.Section4.Section3MeasuredRVChartBridge.native hc
+          (DiamondIntegral.Section7.BaseExtension.chartExt ⋯ a.toChart))) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] C hc {k}
+    a =>
+  Eq.mpr
+    (id
+      (congrArg
+        (fun _a =>
+          _a
+              ((Ideal.Quotient.mk
+                  (DiamondIntegral.Section4.RelativeAnnularGenerators.manuscriptIdeal
+                    (DiamondIntegral.Section7.LiftClasses.BT C.real)))
+                (DiamondIntegral.Section4.RVBoundedRing.objectClass a)) =
+            (Ideal.Quotient.mk (Ideal.span {DiamondIntegral.Section3.gammaGroundMeasuredRVPrincipalElement hc C.base}))
+              (DiamondIntegral.Section4.Section3RVClassCuts.measuredClass
+                (DiamondIntegral.Section4.Section3MeasuredRVChartBridge.native hc
+                  (DiamondIntegral.Section7.BaseExtension.chartExt
+                    (fun {n} {sn} {U} => DiamondIntegral.Section7.Corollary727.transfer C) a.toChart))))
+        (DiamondIntegral.Section7.Corollary727.bottomRight.eq_1 C hc)))
+    (Eq.mpr
+      (id
+        (congrArg
+          (fun _a =>
+            _a =
+              (Ideal.Quotient.mk
+                  (Ideal.span {DiamondIntegral.Section3.gammaGroundMeasuredRVPrincipalElement hc C.base}))
+                (DiamondIntegral.Section4.Section3RVClassCuts.measuredClass
+                  (DiamondIntegral.Section4.Section3MeasuredRVChartBridge.native hc
+                    (DiamondIntegral.Section7.BaseExtension.chartExt
+                      (fun {n} {sn} {U} => DiamondIntegral.Section7.Corollary727.transfer C) a.toChart))))
+          (RingHom.comp_apply (DiamondIntegral.Section7.Corollary727.pQuotientEquiv hc C.base).toRingHom
+            (DiamondIntegral.Section7.Corollary727.bottomRightChart C)
+            ((Ideal.Quotient.mk
+                (DiamondIntegral.Section4.RelativeAnnularGenerators.manuscriptIdeal
+                  (DiamondIntegral.Section7.LiftClasses.BT C.real)))
+              (DiamondIntegral.Section4.RVBoundedRing.objectClass a)))))
+      (Eq.trans
+        (congrArg (⇑(DiamondIntegral.Section7.Corollary727.pQuotientEquiv hc C.base))
+          (DiamondIntegral.Section7.Corollary727.bottomRightChart_mk C a))
+        (Eq.mpr
+          (id
+            (congrArg
+              (fun _a =>
+                _a =
+                  (Ideal.Quotient.mk
+                      (Ideal.span {DiamondIntegral.Section3.gammaGroundMeasuredRVPrincipalElement hc C.base}))
+                    (DiamondIntegral.Section4.Section3RVClassCuts.measuredClass
+                      (DiamondIntegral.Section4.Section3MeasuredRVChartBridge.native hc
+                        (DiamondIntegral.Section7.BaseExtension.chartExt
+                          (fun {n} {sn} {U} => DiamondIntegral.Section7.Corollary727.transfer C) a.toChart))))
+              (DiamondIntegral.Section7.Corollary727.pQuotientEquiv_quotient hc C.base
+                (DiamondIntegral.Section4.RVChartRing.objectClass
+                  (DiamondIntegral.Section7.BaseExtension.chartExt
+                    (fun {n} {sn} {U} => DiamondIntegral.Section7.Corollary727.transfer C) a.toChart)))))
+          (Eq.mpr
+            (id
+              (congrArg
+                (fun _a =>
+                  (Ideal.Quotient.mk
+                        (Ideal.span {DiamondIntegral.Section3.gammaGroundMeasuredRVPrincipalElement hc C.base}))
+                      _a =
+                    (Ideal.Quotient.mk
+                        (Ideal.span {DiamondIntegral.Section3.gammaGroundMeasuredRVPrincipalElement hc C.base}))
+                      (DiamondIntegral.Section4.Section3RVClassCuts.measuredClass
+                        (DiamondIntegral.Section4.Section3MeasuredRVChartBridge.native hc
+                          (DiamondIntegral.Section7.BaseExtension.chartExt
+                            (fun {n} {sn} {U} => DiamondIntegral.Section7.Corollary727.transfer C) a.toChart))))
+                (DiamondIntegral.Section4.Section3RVRingEquivalences.measured_class hc C.base
+                  (DiamondIntegral.Section7.BaseExtension.chartExt
+                    (fun {n} {sn} {U} => DiamondIntegral.Section7.Corollary727.transfer C) a.toChart))))
+            (Eq.refl
+              ((Ideal.Quotient.mk
+                  (Ideal.span {DiamondIntegral.Section3.gammaGroundMeasuredRVPrincipalElement hc C.base}))
+                (DiamondIntegral.Section4.Section3RVClassCuts.measuredClass
+                  (DiamondIntegral.Section4.Section3MeasuredRVChartBridge.native hc
+                    (DiamondIntegral.Section7.BaseExtension.chartExt
+                      (fun {n} {sn} {U} => DiamondIntegral.Section7.Corollary727.transfer C) a.toChart)))))))))
+'DiamondIntegral.Section7.Corollary727.bottomRight_mk' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.Corollary727.integral_forgetVF_lift : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (C : DiamondIntegral.Section3.GammaGroundContext M)
+  {G : Type} [inst_2 : LinearOrderedCommGroupWithZero G] [inst_3 : Valued (DiamondIntegral.Section2.VF M) G]
+  (hc : CanonicalStructure.IsCanonical) (H : DiamondIntegral.Section3.YinGammaGroundUnmeasuredLiftInput C hc) {k : ℕ}
+  (A : DiamondIntegral.Section6.DiamondCategory.VFObject (↑C.real) k)
+  (U : DiamondIntegral.Section6.MeasuredRVObject (↑C.real) k)
+  (hP : DiamondIntegral.Section6.ProperInvariant (↑C.real) (SpecialTransformations.Section4.rvLift U.object).carrier),
+  DiamondIntegral.Section6.DiamondCategory.Isomorphic G A (DiamondIntegral.Section6.DiamondLift.liftObject U hP) →
+    (DiamondIntegral.Section5.nativeVFChartIntegral H)
+        (Algebra.GrothendieckAddGroup.of
+          (DiamondIntegral.Section3.gammaGroundVFSemiringClass (DiamondIntegral.Section7.Remark728.forgetVF hc C A))) =
+      (DiamondIntegral.Section4.RVOrdinaryPNormalization.quotient C.base)
+        (DiamondIntegral.Section4.RVOrdinaryRing.objectClass
+          (DiamondIntegral.Section7.BaseExtension.chartExt ⋯ (DiamondIntegral.Section7.ChartOfMeasured.chartOf hc U)))
+theorem DiamondIntegral.Section7.Corollary727.integral_forgetVF_lift : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (C : DiamondIntegral.Section3.GammaGroundContext M)
+  {G : Type} [inst_2 : LinearOrderedCommGroupWithZero G] [inst_3 : Valued (DiamondIntegral.Section2.VF M) G]
+  (hc : CanonicalStructure.IsCanonical) (H : DiamondIntegral.Section3.YinGammaGroundUnmeasuredLiftInput C hc) {k : ℕ}
+  (A : DiamondIntegral.Section6.DiamondCategory.VFObject (↑C.real) k)
+  (U : DiamondIntegral.Section6.MeasuredRVObject (↑C.real) k)
+  (hP : DiamondIntegral.Section6.ProperInvariant (↑C.real) (SpecialTransformations.Section4.rvLift U.object).carrier),
+  DiamondIntegral.Section6.DiamondCategory.Isomorphic G A (DiamondIntegral.Section6.DiamondLift.liftObject U hP) →
+    (DiamondIntegral.Section5.nativeVFChartIntegral H)
+        (Algebra.GrothendieckAddGroup.of
+          (DiamondIntegral.Section3.gammaGroundVFSemiringClass (DiamondIntegral.Section7.Remark728.forgetVF hc C A))) =
+      (DiamondIntegral.Section4.RVOrdinaryPNormalization.quotient C.base)
+        (DiamondIntegral.Section4.RVOrdinaryRing.objectClass
+          (DiamondIntegral.Section7.BaseExtension.chartExt ⋯
+            (DiamondIntegral.Section7.ChartOfMeasured.chartOf hc U))) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] C {G}
+    [LinearOrderedCommGroupWithZero G] [Valued (DiamondIntegral.Section2.VF M) G] hc H {k} A U hP hiso =>
+  Eq.mpr
+    (id
+      (congrArg
+        (fun _a =>
+          (DiamondIntegral.Section5.nativeVFChartIntegral H) (Algebra.GrothendieckAddGroup.of _a) =
+            (DiamondIntegral.Section4.RVOrdinaryPNormalization.quotient C.base)
+              (DiamondIntegral.Section4.RVOrdinaryRing.objectClass
+                (DiamondIntegral.Section7.BaseExtension.chartExt
+                  (fun {n} {sn} {U} => DiamondIntegral.Section7.Corollary727.transfer C)
+                  (DiamondIntegral.Section7.ChartOfMeasured.chartOf hc U))))
+        (DiamondIntegral.Section7.Remark728.forgetVF_iso hc C hiso)))
+    (Eq.mpr
+      (id
+        (congrArg
+          (fun _a =>
+            (DiamondIntegral.Section5.nativeVFChartIntegral H) (Algebra.GrothendieckAddGroup.of _a) =
+              (DiamondIntegral.Section4.RVOrdinaryPNormalization.quotient C.base)
+                (DiamondIntegral.Section4.RVOrdinaryRing.objectClass
+                  (DiamondIntegral.Section7.BaseExtension.chartExt
+                    (fun {n} {sn} {U} => DiamondIntegral.Section7.Corollary727.transfer C)
+                    (DiamondIntegral.Section7.ChartOfMeasured.chartOf hc U))))
+          (DiamondIntegral.Section7.Remark728.forgetVF_lift hc C U hP)))
+      (Eq.mpr
+        (id
+          (congrArg
+            (fun _a =>
+              _a =
+                (DiamondIntegral.Section4.RVOrdinaryPNormalization.quotient C.base)
+                  (DiamondIntegral.Section4.RVOrdinaryRing.objectClass
+                    (DiamondIntegral.Section7.BaseExtension.chartExt
+                      (fun {n} {sn} {U} => DiamondIntegral.Section7.Corollary727.transfer C)
+                      (DiamondIntegral.Section7.ChartOfMeasured.chartOf hc U))))
+            (DiamondIntegral.Section5.nativeVFChartIntegral_lift_class H
+              (DiamondIntegral.Section7.Remark728.forgetRV hc C U))))
+        (Eq.mpr
+          (id
+            (congrArg
+              (fun _a =>
+                (DiamondIntegral.Section4.RVOrdinaryPNormalization.quotient C.base) _a =
+                  (DiamondIntegral.Section4.RVOrdinaryPNormalization.quotient C.base)
+                    (DiamondIntegral.Section4.RVOrdinaryRing.objectClass
+                      (DiamondIntegral.Section7.BaseExtension.chartExt
+                        (fun {n} {sn} {U} => DiamondIntegral.Section7.Corollary727.transfer C)
+                        (DiamondIntegral.Section7.ChartOfMeasured.chartOf hc U))))
+              (DiamondIntegral.Section7.Remark728.chart_ordinary_class hc C U)))
+          (Eq.refl
+            ((DiamondIntegral.Section4.RVOrdinaryPNormalization.quotient C.base)
+              (DiamondIntegral.Section4.RVOrdinaryRing.objectClass
+                (DiamondIntegral.Section7.BaseExtension.chartExt
+                  (fun {n} {sn} {U} =>
+                    DiamondIntegral.Section7.BaseExtension.Transfer.ofSubset (fun x h => h)
+                      (Set.empty_subset C.base.gamma))
+                  (DiamondIntegral.Section7.ChartOfMeasured.chartOf hc U))))))))
+'DiamondIntegral.Section7.Corollary727.integral_forgetVF_lift' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@DiamondIntegral.Section7.Corollary727.corollary_7_27_left : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (C : DiamondIntegral.Section3.GammaGroundContext M)
+  {G : Type} [inst_2 : LinearOrderedCommGroupWithZero G] [inst_3 : Valued (DiamondIntegral.Section2.VF M) G]
+  (hc : CanonicalStructure.IsCanonical)
+  (hv :
+    ∀ (x y : DiamondIntegral.Section2.VF M),
+      SpecialTransformations.Milestone0.VFValued.predV x y ↔ Valued.v x ≤ Valued.v y)
+  (hΓ : DiamondIntegral.Section2.NontrivialDefinableGamma { real := ↑C.real, gamma := ∅ })
+  (H : DiamondIntegral.Section3.YinGammaGroundUnmeasuredLiftInput C hc) {n : ℕ}
+  (A : DiamondIntegral.Section6.DiamondCategory.VFObject (↑C.real) (n + 1)) {e : Equiv.Perm (Fin (n + 1))}
+  (F : DiamondIntegral.Section6.NormalizedMeasuredContraction A.carrier A.form e),
+  (DiamondIntegral.Section5.nativeVFChartIntegral H)
+      (Algebra.GrothendieckAddGroup.of
+        (DiamondIntegral.Section3.gammaGroundVFSemiringClass (DiamondIntegral.Section7.Remark728.forgetVF hc C A))) =
+    (DiamondIntegral.Section7.Corollary727.bottomLeft C)
+      (DiamondIntegral.Section7.Corollary727.toQ (DiamondIntegral.Section7.PieceCombination.clsOf ⋯ hc ⋯ ⋯ hv ⋯ hΓ A F))
+theorem DiamondIntegral.Section7.Corollary727.corollary_7_27_left : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (C : DiamondIntegral.Section3.GammaGroundContext M)
+  {G : Type} [inst_2 : LinearOrderedCommGroupWithZero G] [inst_3 : Valued (DiamondIntegral.Section2.VF M) G]
+  (hc : CanonicalStructure.IsCanonical)
+  (hv :
+    ∀ (x y : DiamondIntegral.Section2.VF M),
+      SpecialTransformations.Milestone0.VFValued.predV x y ↔ Valued.v x ≤ Valued.v y)
+  (hΓ : DiamondIntegral.Section2.NontrivialDefinableGamma { real := ↑C.real, gamma := ∅ })
+  (H : DiamondIntegral.Section3.YinGammaGroundUnmeasuredLiftInput C hc) {n : ℕ}
+  (A : DiamondIntegral.Section6.DiamondCategory.VFObject (↑C.real) (n + 1)) {e : Equiv.Perm (Fin (n + 1))}
+  (F : DiamondIntegral.Section6.NormalizedMeasuredContraction A.carrier A.form e),
+  (DiamondIntegral.Section5.nativeVFChartIntegral H)
+      (Algebra.GrothendieckAddGroup.of
+        (DiamondIntegral.Section3.gammaGroundVFSemiringClass (DiamondIntegral.Section7.Remark728.forgetVF hc C A))) =
+    (DiamondIntegral.Section7.Corollary727.bottomLeft C)
+      (DiamondIntegral.Section7.Corollary727.toQ
+        (DiamondIntegral.Section7.PieceCombination.clsOf ⋯ hc ⋯ ⋯ hv ⋯ hΓ A F)) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] C {G}
+    [LinearOrderedCommGroupWithZero G] [Valued (DiamondIntegral.Section2.VF M) G] hc hv hΓ H {n} A {e} F =>
+  Exists.casesOn
+    (DiamondIntegral.Section6.DiamondStandardContraction.remark_6_28 C.model00 hc
+      DiamondIntegral.Section7.LiftClasses.lin C.uncountable C.saturated hv C.small_real hΓ A F 0 Fin.elim0)
+    fun hP iA =>
+    Eq.mpr
+      (id
+        (congrArg
+          (fun _a =>
+            _a =
+              (DiamondIntegral.Section7.Corollary727.bottomLeft C)
+                (DiamondIntegral.Section7.Corollary727.toQ
+                  (DiamondIntegral.Section7.PieceCombination.clsOf C.model00 hc C.uncountable C.saturated hv
+                    C.small_real hΓ A F)))
+          (DiamondIntegral.Section7.Corollary727.integral_forgetVF_lift C hc H A
+            (DiamondIntegral.Section6.NormalizedMeasuredContraction.headStartMeasuredObject C.model00 hc
+              DiamondIntegral.Section7.LiftClasses.lin C.uncountable C.saturated hv C.small_real hΓ F 0 Fin.elim0
+              (DiamondIntegral.Section6.DiamondStandardContraction.object_hFin A Fin.elim0))
+            hP iA)))
+      (Eq.symm
+        (DiamondIntegral.Section7.Corollary727.bottomLeft_mk C
+          (DiamondIntegral.Section7.ChartOfMeasured.objOf hc C.real
+            (DiamondIntegral.Section6.NormalizedMeasuredContraction.headStartMeasuredObject C.model00 hc
+              DiamondIntegral.Section7.LiftClasses.lin C.uncountable C.saturated hv C.small_real hΓ F 0 Fin.elim0
+              (DiamondIntegral.Section6.DiamondStandardContraction.object_hFin A Fin.elim0))
+            (DiamondIntegral.Section6.NormalizedMeasuredContraction.headStartObject_doublyBounded F 0 Fin.elim0))))
+'DiamondIntegral.Section7.Corollary727.corollary_7_27_left' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.Corollary727.corollary_7_27_left_zero : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (C : DiamondIntegral.Section3.GammaGroundContext M)
+  {G : Type} [inst_2 : LinearOrderedCommGroupWithZero G] [inst_3 : Valued (DiamondIntegral.Section2.VF M) G]
+  (hc : CanonicalStructure.IsCanonical),
+  (∀ (x y : DiamondIntegral.Section2.VF M),
+      SpecialTransformations.Milestone0.VFValued.predV x y ↔ Valued.v x ≤ Valued.v y) →
+    DiamondIntegral.Section2.NontrivialDefinableGamma { real := ↑C.real, gamma := ∅ } →
+      ∀ (H : DiamondIntegral.Section3.YinGammaGroundUnmeasuredLiftInput C hc)
+        (A : DiamondIntegral.Section6.DiamondCategory.VFObject (↑C.real) 0),
+        (DiamondIntegral.Section5.nativeVFChartIntegral H)
+            (Algebra.GrothendieckAddGroup.of
+              (DiamondIntegral.Section3.gammaGroundVFSemiringClass
+                (DiamondIntegral.Section7.Remark728.forgetVF hc C A))) =
+          (DiamondIntegral.Section7.Corollary727.bottomLeft C)
+            (DiamondIntegral.Section7.Corollary727.toQ
+              ((DiamondIntegral.Section7.Proposition724Zero.integralZero G ⋯ hc)
+                (DiamondIntegral.Section6.DiamondGrothendieck.vfClass G hc A)))
+theorem DiamondIntegral.Section7.Corollary727.corollary_7_27_left_zero : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (C : DiamondIntegral.Section3.GammaGroundContext M)
+  {G : Type} [inst_2 : LinearOrderedCommGroupWithZero G] [inst_3 : Valued (DiamondIntegral.Section2.VF M) G]
+  (hc : CanonicalStructure.IsCanonical),
+  (∀ (x y : DiamondIntegral.Section2.VF M),
+      SpecialTransformations.Milestone0.VFValued.predV x y ↔ Valued.v x ≤ Valued.v y) →
+    DiamondIntegral.Section2.NontrivialDefinableGamma { real := ↑C.real, gamma := ∅ } →
+      ∀ (H : DiamondIntegral.Section3.YinGammaGroundUnmeasuredLiftInput C hc)
+        (A : DiamondIntegral.Section6.DiamondCategory.VFObject (↑C.real) 0),
+        (DiamondIntegral.Section5.nativeVFChartIntegral H)
+            (Algebra.GrothendieckAddGroup.of
+              (DiamondIntegral.Section3.gammaGroundVFSemiringClass
+                (DiamondIntegral.Section7.Remark728.forgetVF hc C A))) =
+          (DiamondIntegral.Section7.Corollary727.bottomLeft C)
+            (DiamondIntegral.Section7.Corollary727.toQ
+              ((DiamondIntegral.Section7.Proposition724Zero.integralZero G ⋯ hc)
+                (DiamondIntegral.Section6.DiamondGrothendieck.vfClass G hc A))) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] C {G}
+    [LinearOrderedCommGroupWithZero G] [Valued (DiamondIntegral.Section2.VF M) G] hc hv hΓ H A =>
+  Exists.casesOn
+    (DiamondIntegral.Section6.DiamondSurjectivity.exists_isomorphic_lift_zero C.model00 hc
+      DiamondIntegral.Section7.LiftClasses.lin C.uncountable C.saturated hv C.small_real hΓ A)
+    fun U h =>
+    Exists.casesOn h fun hU hiso =>
+      Eq.mpr
+        (id
+          (congrArg
+            (fun _a =>
+              _a =
+                (DiamondIntegral.Section7.Corollary727.bottomLeft C)
+                  (DiamondIntegral.Section7.Corollary727.toQ
+                    ((DiamondIntegral.Section7.Proposition724Zero.integralZero G C.model00 hc)
+                      (DiamondIntegral.Section6.DiamondGrothendieck.vfClass G hc A))))
+            (DiamondIntegral.Section7.Corollary727.integral_forgetVF_lift C hc H A U
+              (DiamondIntegral.Section6.measuredRVLift_properInvariant C.model00 hc C.uncountable C.saturated hv U hU)
+              hiso)))
+        (Eq.mpr
+          (id
+            (congrArg
+              (fun _a =>
+                (DiamondIntegral.Section4.RVOrdinaryPNormalization.quotient C.base)
+                    (DiamondIntegral.Section4.RVOrdinaryRing.objectClass
+                      (DiamondIntegral.Section7.BaseExtension.chartExt
+                        (fun {n} {sn} {U} => DiamondIntegral.Section7.Corollary727.transfer C)
+                        (DiamondIntegral.Section7.ChartOfMeasured.chartOf hc U))) =
+                  (DiamondIntegral.Section7.Corollary727.bottomLeft C) (DiamondIntegral.Section7.Corollary727.toQ _a))
+              (DiamondIntegral.Section7.Proposition724Zero.integralZero_vfClass C.model00 hc A)))
+          (Eq.mpr
+            (id
+              (congrArg
+                (fun _a =>
+                  (DiamondIntegral.Section4.RVOrdinaryPNormalization.quotient C.base)
+                      (DiamondIntegral.Section4.RVOrdinaryRing.objectClass
+                        (DiamondIntegral.Section7.BaseExtension.chartExt
+                          (fun {n} {sn} {U} => DiamondIntegral.Section7.Corollary727.transfer C)
+                          (DiamondIntegral.Section7.ChartOfMeasured.chartOf hc U))) =
+                    (DiamondIntegral.Section7.Corollary727.bottomLeft C) (DiamondIntegral.Section7.Corollary727.toQ _a))
+                (DiamondIntegral.Section7.Proposition724Zero.zeroClass_iso C.model00 hc hiso)))
+            (Eq.mpr
+              (id
+                (congrArg
+                  (fun _a =>
+                    (DiamondIntegral.Section4.RVOrdinaryPNormalization.quotient C.base)
+                        (DiamondIntegral.Section4.RVOrdinaryRing.objectClass
+                          (DiamondIntegral.Section7.BaseExtension.chartExt
+                            (fun {n} {sn} {U} => DiamondIntegral.Section7.Corollary727.transfer C)
+                            (DiamondIntegral.Section7.ChartOfMeasured.chartOf hc U))) =
+                      (DiamondIntegral.Section7.Corollary727.bottomLeft C)
+                        (DiamondIntegral.Section7.Corollary727.toQ _a))
+                  (DiamondIntegral.Section7.Proposition724Zero.zeroClass_lift C.model00 hc U hU
+                    (DiamondIntegral.Section6.measuredRVLift_properInvariant C.model00 hc C.uncountable C.saturated hv U
+                      hU))))
+              (Eq.symm
+                (DiamondIntegral.Section7.Corollary727.bottomLeft_mk C
+                  (DiamondIntegral.Section7.ChartOfMeasured.objOf hc C.real U hU))))))
+'DiamondIntegral.Section7.Corollary727.corollary_7_27_left_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@DiamondIntegral.Section7.Corollary727.corollary_7_27_left_completed : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (C : DiamondIntegral.Section3.GammaGroundContext M)
+  {G : Type} [inst_2 : LinearOrderedCommGroupWithZero G] [inst_3 : Valued (DiamondIntegral.Section2.VF M) G]
+  (hc : CanonicalStructure.IsCanonical)
+  (hv :
+    ∀ (x y : DiamondIntegral.Section2.VF M),
+      SpecialTransformations.Milestone0.VFValued.predV x y ↔ Valued.v x ≤ Valued.v y)
+  (hΓ : DiamondIntegral.Section2.NontrivialDefinableGamma { real := ↑C.real, gamma := ∅ }) {n : ℕ}
+  (A : DiamondIntegral.Section6.DiamondCategory.VFObject (↑C.real) (n + 1)) {e : Equiv.Perm (Fin (n + 1))}
+  (F : DiamondIntegral.Section6.NormalizedMeasuredContraction A.carrier A.form e),
+  (DiamondIntegral.Section5.nativeVFChartIntegral (DiamondIntegral.Section5.completed18GroundLiftInput C hc))
+      (Algebra.GrothendieckAddGroup.of
+        (DiamondIntegral.Section3.gammaGroundVFSemiringClass (DiamondIntegral.Section7.Remark728.forgetVF hc C A))) =
+    (DiamondIntegral.Section7.Corollary727.bottomLeft C)
+      (DiamondIntegral.Section7.Corollary727.toQ (DiamondIntegral.Section7.PieceCombination.clsOf ⋯ hc ⋯ ⋯ hv ⋯ hΓ A F))
+theorem DiamondIntegral.Section7.Corollary727.corollary_7_27_left_completed : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (C : DiamondIntegral.Section3.GammaGroundContext M)
+  {G : Type} [inst_2 : LinearOrderedCommGroupWithZero G] [inst_3 : Valued (DiamondIntegral.Section2.VF M) G]
+  (hc : CanonicalStructure.IsCanonical)
+  (hv :
+    ∀ (x y : DiamondIntegral.Section2.VF M),
+      SpecialTransformations.Milestone0.VFValued.predV x y ↔ Valued.v x ≤ Valued.v y)
+  (hΓ : DiamondIntegral.Section2.NontrivialDefinableGamma { real := ↑C.real, gamma := ∅ }) {n : ℕ}
+  (A : DiamondIntegral.Section6.DiamondCategory.VFObject (↑C.real) (n + 1)) {e : Equiv.Perm (Fin (n + 1))}
+  (F : DiamondIntegral.Section6.NormalizedMeasuredContraction A.carrier A.form e),
+  (DiamondIntegral.Section5.nativeVFChartIntegral (DiamondIntegral.Section5.completed18GroundLiftInput C hc))
+      (Algebra.GrothendieckAddGroup.of
+        (DiamondIntegral.Section3.gammaGroundVFSemiringClass (DiamondIntegral.Section7.Remark728.forgetVF hc C A))) =
+    (DiamondIntegral.Section7.Corollary727.bottomLeft C)
+      (DiamondIntegral.Section7.Corollary727.toQ
+        (DiamondIntegral.Section7.PieceCombination.clsOf ⋯ hc ⋯ ⋯ hv ⋯ hΓ A F)) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] C {G}
+    [LinearOrderedCommGroupWithZero G] [Valued (DiamondIntegral.Section2.VF M) G] hc hv hΓ {n} A {e} F =>
+  DiamondIntegral.Section7.Corollary727.corollary_7_27_left C hc hv hΓ
+    (DiamondIntegral.Section5.completed18GroundLiftInput C hc) A F
+'DiamondIntegral.Section7.Corollary727.corollary_7_27_left_completed' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@DiamondIntegral.Section7.Corollary727.corollary_7_27_left_zero_completed : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (C : DiamondIntegral.Section3.GammaGroundContext M)
+  {G : Type} [inst_2 : LinearOrderedCommGroupWithZero G] [inst_3 : Valued (DiamondIntegral.Section2.VF M) G]
+  (hc : CanonicalStructure.IsCanonical),
+  (∀ (x y : DiamondIntegral.Section2.VF M),
+      SpecialTransformations.Milestone0.VFValued.predV x y ↔ Valued.v x ≤ Valued.v y) →
+    DiamondIntegral.Section2.NontrivialDefinableGamma { real := ↑C.real, gamma := ∅ } →
+      ∀ (A : DiamondIntegral.Section6.DiamondCategory.VFObject (↑C.real) 0),
+        (DiamondIntegral.Section5.nativeVFChartIntegral (DiamondIntegral.Section5.completed18GroundLiftInput C hc))
+            (Algebra.GrothendieckAddGroup.of
+              (DiamondIntegral.Section3.gammaGroundVFSemiringClass
+                (DiamondIntegral.Section7.Remark728.forgetVF hc C A))) =
+          (DiamondIntegral.Section7.Corollary727.bottomLeft C)
+            (DiamondIntegral.Section7.Corollary727.toQ
+              ((DiamondIntegral.Section7.Proposition724Zero.integralZero G ⋯ hc)
+                (DiamondIntegral.Section6.DiamondGrothendieck.vfClass G hc A)))
+theorem DiamondIntegral.Section7.Corollary727.corollary_7_27_left_zero_completed : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (C : DiamondIntegral.Section3.GammaGroundContext M)
+  {G : Type} [inst_2 : LinearOrderedCommGroupWithZero G] [inst_3 : Valued (DiamondIntegral.Section2.VF M) G]
+  (hc : CanonicalStructure.IsCanonical),
+  (∀ (x y : DiamondIntegral.Section2.VF M),
+      SpecialTransformations.Milestone0.VFValued.predV x y ↔ Valued.v x ≤ Valued.v y) →
+    DiamondIntegral.Section2.NontrivialDefinableGamma { real := ↑C.real, gamma := ∅ } →
+      ∀ (A : DiamondIntegral.Section6.DiamondCategory.VFObject (↑C.real) 0),
+        (DiamondIntegral.Section5.nativeVFChartIntegral (DiamondIntegral.Section5.completed18GroundLiftInput C hc))
+            (Algebra.GrothendieckAddGroup.of
+              (DiamondIntegral.Section3.gammaGroundVFSemiringClass
+                (DiamondIntegral.Section7.Remark728.forgetVF hc C A))) =
+          (DiamondIntegral.Section7.Corollary727.bottomLeft C)
+            (DiamondIntegral.Section7.Corollary727.toQ
+              ((DiamondIntegral.Section7.Proposition724Zero.integralZero G ⋯ hc)
+                (DiamondIntegral.Section6.DiamondGrothendieck.vfClass G hc A))) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] C {G}
+    [LinearOrderedCommGroupWithZero G] [Valued (DiamondIntegral.Section2.VF M) G] hc hv hΓ A =>
+  DiamondIntegral.Section7.Corollary727.corollary_7_27_left_zero C hc hv hΓ
+    (DiamondIntegral.Section5.completed18GroundLiftInput C hc) A
+'DiamondIntegral.Section7.Corollary727.corollary_7_27_left_zero_completed' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@DiamondIntegral.Section7.Corollary727.forgetMVF : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (C : DiamondIntegral.Section3.GammaGroundContext M) →
+        (hc : CanonicalStructure.IsCanonical) →
+          {n : ℕ} →
+            DiamondIntegral.Section6.DiamondCategory.VFObject (↑C.real) n →
+              DiamondIntegral.Section3.GammaGroundMeasuredVFData hc C.base n
+def DiamondIntegral.Section7.Corollary727.forgetMVF : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (C : DiamondIntegral.Section3.GammaGroundContext M) →
+        (hc : CanonicalStructure.IsCanonical) →
+          {n : ℕ} →
+            DiamondIntegral.Section6.DiamondCategory.VFObject (↑C.real) n →
+              DiamondIntegral.Section3.GammaGroundMeasuredVFData hc C.base n :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] C hc {n}
+    A =>
+  { arity := A.labels, domain := DiamondIntegral.Section3.GammaGroundDefSet.ofReal A.carrier, finite := ⋯,
+    form := DiamondIntegral.Section7.Corollary727.toGroundForm hc A.form }
+'DiamondIntegral.Section7.Corollary727.forgetMVF' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.Corollary727.forgetMRV : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (C : DiamondIntegral.Section3.GammaGroundContext M) →
+        (hc : CanonicalStructure.IsCanonical) →
+          {n : ℕ} →
+            DiamondIntegral.Section6.MeasuredRVObject (↑C.real) n →
+              DiamondIntegral.Section3.GammaGroundMeasuredRVObject hc C.base n
+def DiamondIntegral.Section7.Corollary727.forgetMRV : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (C : DiamondIntegral.Section3.GammaGroundContext M) →
+        (hc : CanonicalStructure.IsCanonical) →
+          {n : ℕ} →
+            DiamondIntegral.Section6.MeasuredRVObject (↑C.real) n →
+              DiamondIntegral.Section3.GammaGroundMeasuredRVObject hc C.base n :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] C hc {n}
+    U =>
+  { underlying := DiamondIntegral.Section7.Remark728.forgetRV hc C U,
+    form := DiamondIntegral.Section7.Corollary727.toGroundForm hc U.form }
+'DiamondIntegral.Section7.Corollary727.forgetMRV' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.Corollary727.forgetMVF_lift : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (C : DiamondIntegral.Section3.GammaGroundContext M)
+  (hc : CanonicalStructure.IsCanonical) {n : ℕ} (U : DiamondIntegral.Section6.MeasuredRVObject (↑C.real) n)
+  (hP : DiamondIntegral.Section6.ProperInvariant (↑C.real) (SpecialTransformations.Section4.rvLift U.object).carrier),
+  DiamondIntegral.Section7.Corollary727.forgetMVF C hc (DiamondIntegral.Section6.DiamondLift.liftObject U hP) =
+    DiamondIntegral.Section3.gammaGroundMeasuredObjectLift (DiamondIntegral.Section7.Corollary727.forgetMRV C hc U)
+@[defeq] theorem DiamondIntegral.Section7.Corollary727.forgetMVF_lift : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (C : DiamondIntegral.Section3.GammaGroundContext M)
+  (hc : CanonicalStructure.IsCanonical) {n : ℕ} (U : DiamondIntegral.Section6.MeasuredRVObject (↑C.real) n)
+  (hP : DiamondIntegral.Section6.ProperInvariant (↑C.real) (SpecialTransformations.Section4.rvLift U.object).carrier),
+  DiamondIntegral.Section7.Corollary727.forgetMVF C hc (DiamondIntegral.Section6.DiamondLift.liftObject U hP) =
+    DiamondIntegral.Section3.gammaGroundMeasuredObjectLift (DiamondIntegral.Section7.Corollary727.forgetMRV C hc U) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] C hc {n}
+    U hP =>
+  rfl
+'DiamondIntegral.Section7.Corollary727.forgetMVF_lift' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.Corollary727.chart_measured_class : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (C : DiamondIntegral.Section3.GammaGroundContext M)
+  (hc : CanonicalStructure.IsCanonical) {n : ℕ} (U : DiamondIntegral.Section6.MeasuredRVObject (↑C.real) n),
+  DiamondIntegral.Section4.RVChartRing.objectClass
+      (DiamondIntegral.Section4.Section3MeasuredRVChartBridge.chart
+        (DiamondIntegral.Section7.Corollary727.forgetMRV C hc U)) =
+    DiamondIntegral.Section4.RVChartRing.objectClass
+      (DiamondIntegral.Section7.BaseExtension.chartExt ⋯ (DiamondIntegral.Section7.ChartOfMeasured.chartOf hc U))
+theorem DiamondIntegral.Section7.Corollary727.chart_measured_class : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (C : DiamondIntegral.Section3.GammaGroundContext M)
+  (hc : CanonicalStructure.IsCanonical) {n : ℕ} (U : DiamondIntegral.Section6.MeasuredRVObject (↑C.real) n),
+  DiamondIntegral.Section4.RVChartRing.objectClass
+      (DiamondIntegral.Section4.Section3MeasuredRVChartBridge.chart
+        (DiamondIntegral.Section7.Corollary727.forgetMRV C hc U)) =
+    DiamondIntegral.Section4.RVChartRing.objectClass
+      (DiamondIntegral.Section7.BaseExtension.chartExt ⋯ (DiamondIntegral.Section7.ChartOfMeasured.chartOf hc U)) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] C hc {n}
+    U =>
+  DiamondIntegral.Section4.RVChartRing.objectClass_iso
+    (let F :=
+      DiamondIntegral.Section4.RVForgetScissors.ofMap
+        (DiamondIntegral.Section4.Section3MeasuredRVChartBridge.chart
+          (DiamondIntegral.Section7.Corollary727.forgetMRV C hc U))
+        (DiamondIntegral.Section7.BaseExtension.chartExt
+          (fun {n} {sn} {U} => DiamondIntegral.Section7.Corollary727.transfer C)
+          (DiamondIntegral.Section7.ChartOfMeasured.chartOf hc U))
+        id
+        (DiamondIntegral.Section4.RVSharpCharts.identity_graph_definable C.base
+          (DiamondIntegral.Section4.Section3MeasuredRVChartBridge.chart
+              (DiamondIntegral.Section7.Corollary727.forgetMRV C hc U)).domain
+          (DiamondIntegral.Section4.Section3RVCodeBridge.rawDomain_definable
+            (DiamondIntegral.Section7.Corollary727.forgetMRV C hc U).underlying.domain))
+        (Set.bijOn_id
+          (DiamondIntegral.Section4.Section3MeasuredRVChartBridge.chart
+              (DiamondIntegral.Section7.Corollary727.forgetMRV C hc U)).domain);
+    { equiv := F.equiv, graph_definable := F.graph_definable,
+      weight_eq := fun u =>
+        Exists.casesOn u.property fun t h =>
+          And.casesOn h fun ht hu =>
+            id
+              (Eq.mpr
+                (id
+                  (congrArg
+                    (fun _a =>
+                      DiamondIntegral.Section4.Section3RVFormBridge.rawForm
+                            (DiamondIntegral.Section7.Corollary727.forgetMRV C hc U).form _a *
+                          ∏ i,
+                            SpecialTransformations.Section3.GammaParameters.codeValue
+                              (DiamondIntegral.Section4.Section3RVCodeBridge.rawMap
+                                (DiamondIntegral.Section7.Corollary727.forgetMRV C hc U).underlying.volume _a i) =
+                        DiamondIntegral.Section7.ChartOfMeasured.rawVol U _a *
+                          ∏ i,
+                            SpecialTransformations.Section3.GammaParameters.codeValue
+                              (DiamondIntegral.Section7.ChartOfMeasured.rawCoord U _a i))
+                    (Eq.symm hu)))
+                (Eq.mpr
+                  (id
+                    (congrArg
+                      (fun _a =>
+                        _a *
+                            ∏ i,
+                              SpecialTransformations.Section3.GammaParameters.codeValue
+                                (DiamondIntegral.Section4.Section3RVCodeBridge.rawMap
+                                  (DiamondIntegral.Section7.Corollary727.forgetMRV C hc U).underlying.volume
+                                  (SpecialTransformations.Section4.rvValues t) i) =
+                          DiamondIntegral.Section7.ChartOfMeasured.rawVol U
+                              (SpecialTransformations.Section4.rvValues t) *
+                            ∏ i,
+                              SpecialTransformations.Section3.GammaParameters.codeValue
+                                (DiamondIntegral.Section7.ChartOfMeasured.rawCoord U
+                                  (SpecialTransformations.Section4.rvValues t) i))
+                      (DiamondIntegral.Section4.Section3RVFormBridge.rawForm_apply
+                        (DiamondIntegral.Section7.Corollary727.forgetMRV C hc U).form ⟨t, ht⟩)))
+                  (Eq.mpr
+                    (id
+                      (congrArg
+                        (fun _a =>
+                          ↑((DiamondIntegral.Section7.Corollary727.forgetMRV C hc U).form.toFun ⟨t, ht⟩) *
+                              ∏ i, SpecialTransformations.Section3.GammaParameters.codeValue (_a i) =
+                            DiamondIntegral.Section7.ChartOfMeasured.rawVol U
+                                (SpecialTransformations.Section4.rvValues t) *
+                              ∏ i,
+                                SpecialTransformations.Section3.GammaParameters.codeValue
+                                  (DiamondIntegral.Section7.ChartOfMeasured.rawCoord U
+                                    (SpecialTransformations.Section4.rvValues t) i))
+                        (DiamondIntegral.Section4.Section3RVCodeBridge.rawMap_apply
+                          (DiamondIntegral.Section7.Corollary727.forgetMRV C hc U).underlying.volume ⟨t, ht⟩)))
+                    (Eq.mpr
+                      (id
+                        (congrArg
+                          (fun _a =>
+                            ↑((DiamondIntegral.Section7.Corollary727.forgetMRV C hc U).form.toFun ⟨t, ht⟩) *
+                                ∏ i,
+                                  SpecialTransformations.Section3.GammaParameters.codeValue
+                                    (SpecialTransformations.Section4.rvValues
+                                      (↑((DiamondIntegral.Section7.Corollary727.forgetMRV C hc
+                                                  U).underlying.volume.toFun
+                                          ⟨t, ht⟩))
+                                      i) =
+                              _a *
+                                ∏ i,
+                                  SpecialTransformations.Section3.GammaParameters.codeValue
+                                    (DiamondIntegral.Section7.ChartOfMeasured.rawCoord U
+                                      (SpecialTransformations.Section4.rvValues t) i))
+                          (DiamondIntegral.Section7.ChartOfMeasured.rawVol_of U ⟨t, ht⟩)))
+                      (Eq.mpr
+                        (id
+                          (congrArg
+                            (fun _a =>
+                              ↑((DiamondIntegral.Section7.Corollary727.forgetMRV C hc U).form.toFun ⟨t, ht⟩) *
+                                  ∏ i,
+                                    SpecialTransformations.Section3.GammaParameters.codeValue
+                                      (SpecialTransformations.Section4.rvValues
+                                        (↑((DiamondIntegral.Section7.Corollary727.forgetMRV C hc
+                                                    U).underlying.volume.toFun
+                                            ⟨t, ht⟩))
+                                        i) =
+                                DiamondIntegral.Section6.gammaMapValue U.form ⟨t, ht⟩ *
+                                  ∏ i, SpecialTransformations.Section3.GammaParameters.codeValue (_a i))
+                            (DiamondIntegral.Section7.ChartOfMeasured.rawCoord_of U ⟨t, ht⟩)))
+                        (Eq.refl
+                          (↑((DiamondIntegral.Section7.Corollary727.forgetMRV C hc U).form.toFun ⟨t, ht⟩) *
+                            ∏ i,
+                              SpecialTransformations.Section3.GammaParameters.codeValue
+                                (SpecialTransformations.Section4.rvValues
+                                  (↑((DiamondIntegral.Section7.Corollary727.forgetMRV C hc U).underlying.volume.toFun
+                                      ⟨t, ht⟩))
+                                  i)))))))) })
+'DiamondIntegral.Section7.Corollary727.chart_measured_class' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.Corollary727.measuredClass_forgetMRV : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (C : DiamondIntegral.Section3.GammaGroundContext M)
+  (hc : CanonicalStructure.IsCanonical) {n : ℕ} (U : DiamondIntegral.Section6.MeasuredRVObject (↑C.real) n),
+  DiamondIntegral.Section4.Section3RVClassCuts.measuredClass (DiamondIntegral.Section7.Corollary727.forgetMRV C hc U) =
+    DiamondIntegral.Section4.Section3RVClassCuts.measuredClass
+      (DiamondIntegral.Section4.Section3MeasuredRVChartBridge.native hc
+        (DiamondIntegral.Section7.BaseExtension.chartExt ⋯ (DiamondIntegral.Section7.ChartOfMeasured.chartOf hc U)))
+theorem DiamondIntegral.Section7.Corollary727.measuredClass_forgetMRV : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (C : DiamondIntegral.Section3.GammaGroundContext M)
+  (hc : CanonicalStructure.IsCanonical) {n : ℕ} (U : DiamondIntegral.Section6.MeasuredRVObject (↑C.real) n),
+  DiamondIntegral.Section4.Section3RVClassCuts.measuredClass (DiamondIntegral.Section7.Corollary727.forgetMRV C hc U) =
+    DiamondIntegral.Section4.Section3RVClassCuts.measuredClass
+      (DiamondIntegral.Section4.Section3MeasuredRVChartBridge.native hc
+        (DiamondIntegral.Section7.BaseExtension.chartExt ⋯ (DiamondIntegral.Section7.ChartOfMeasured.chartOf hc U))) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] C hc {n}
+    U =>
+  Eq.mpr
+    (id
+      (congrArg
+        (fun _a =>
+          DiamondIntegral.Section4.Section3RVClassCuts.measuredClass
+              (DiamondIntegral.Section7.Corollary727.forgetMRV C hc U) =
+            _a)
+        (Eq.symm
+          (DiamondIntegral.Section4.Section3RVRingEquivalences.measured_class hc C.base
+            (DiamondIntegral.Section7.BaseExtension.chartExt
+              (fun {n} {sn} {U} => DiamondIntegral.Section7.Corollary727.transfer C)
+              (DiamondIntegral.Section7.ChartOfMeasured.chartOf hc U))))))
+    (Eq.mpr
+      (id
+        (congrArg
+          (fun _a =>
+            DiamondIntegral.Section4.Section3RVClassCuts.measuredClass
+                (DiamondIntegral.Section7.Corollary727.forgetMRV C hc U) =
+              (DiamondIntegral.Section4.Section3RVRingEquivalences.measured hc C.base) _a)
+          (Eq.symm (DiamondIntegral.Section7.Corollary727.chart_measured_class C hc U))))
+      (Eq.mpr
+        (id
+          (congrArg
+            (fun _a =>
+              DiamondIntegral.Section4.Section3RVClassCuts.measuredClass
+                  (DiamondIntegral.Section7.Corollary727.forgetMRV C hc U) =
+                (DiamondIntegral.Section4.Section3RVRingEquivalences.measured hc C.base) _a)
+            (Eq.symm
+              (DiamondIntegral.Section4.Section3RVRingEquivalences.measured_symm_class hc C.base
+                (DiamondIntegral.Section7.Corollary727.forgetMRV C hc U)))))
+        (Eq.mpr
+          (id
+            (congrArg
+              (fun _a =>
+                DiamondIntegral.Section4.Section3RVClassCuts.measuredClass
+                    (DiamondIntegral.Section7.Corollary727.forgetMRV C hc U) =
+                  _a)
+              (RingEquiv.apply_symm_apply (DiamondIntegral.Section4.Section3RVRingEquivalences.measured hc C.base)
+                (DiamondIntegral.Section4.Section3RVClassCuts.measuredClass
+                  (DiamondIntegral.Section7.Corollary727.forgetMRV C hc U)))))
+          (Eq.refl
+            (DiamondIntegral.Section4.Section3RVClassCuts.measuredClass
+              (DiamondIntegral.Section7.Corollary727.forgetMRV C hc U))))))
+'DiamondIntegral.Section7.Corollary727.measuredClass_forgetMRV' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@DiamondIntegral.Section7.Corollary727.not_mem_bad : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (C : DiamondIntegral.Section3.GammaGroundContext M)
+  {G : Type} [inst_2 : LinearOrderedCommGroupWithZero G] [inst_3 : Valued (DiamondIntegral.Section2.VF M) G],
+  CanonicalStructure.IsCanonical →
+    ∀ {n : ℕ} {A B : DiamondIntegral.Section6.DiamondCategory.VFObject (↑C.real) n}
+      (Φ : DiamondIntegral.Section6.DiamondCategory.Morphism G A B) (p : ↑A.carrier.carrier),
+      AlgebraicIndependent (↥(SpecialTransformations.Section3.vfParameterField ↑C.real)) (↑p).1 → ↑p ∉ Φ.bad.carrier
+theorem DiamondIntegral.Section7.Corollary727.not_mem_bad : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (C : DiamondIntegral.Section3.GammaGroundContext M)
+  {G : Type} [inst_2 : LinearOrderedCommGroupWithZero G] [inst_3 : Valued (DiamondIntegral.Section2.VF M) G],
+  CanonicalStructure.IsCanonical →
+    ∀ {n : ℕ} {A B : DiamondIntegral.Section6.DiamondCategory.VFObject (↑C.real) n}
+      (Φ : DiamondIntegral.Section6.DiamondCategory.Morphism G A B) (p : ↑A.carrier.carrier),
+      AlgebraicIndependent (↥(SpecialTransformations.Section3.vfParameterField ↑C.real)) (↑p).1 → ↑p ∉ Φ.bad.carrier :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] C {G}
+    [LinearOrderedCommGroupWithZero G] [Valued (DiamondIntegral.Section2.VF M) G] hc {n} {A B} Φ p hp hb =>
+  Or.casesOn Φ.bad_small
+    (fun h =>
+      let q := ⟨↑p, hb⟩;
+      have hle :=
+        SpecialTransformations.Section4.vfTupleTrdeg_le_vfDim hc (SpecialTransformations.Section4.rawRVSpace 1)
+          (SpecialTransformations.Section4.rawRVSpace_rvCoded 1) Φ.bad q;
+      have hqd :=
+        (SpecialTransformations.Section4.tupleField_trdeg_eq_arity_iff
+              (SpecialTransformations.Section3.vfParameterField ↑C.real) (↑q).1).mpr
+          hp;
+      not_le_of_gt h
+        (cast Nat.cast_le._simp_1
+          (Eq.mp
+            (congrArg
+              (fun _a =>
+                _a ≤ ↑(SpecialTransformations.Section4.vfDim (SpecialTransformations.Section4.rawRVSpace 1) Φ.bad))
+              hqd)
+            hle)))
+    fun h => Eq.mp (congrArg (fun _a => ↑p ∈ _a) h) hb
+'DiamondIntegral.Section7.Corollary727.not_mem_bad' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.Corollary727.essentialOf : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (C : DiamondIntegral.Section3.GammaGroundContext M) →
+        {G : Type} →
+          [inst_2 : LinearOrderedCommGroupWithZero G] →
+            [inst_3 : Valued (DiamondIntegral.Section2.VF M) G] →
+              (hc : CanonicalStructure.IsCanonical) →
+                {n : ℕ} →
+                  {A B : DiamondIntegral.Section6.DiamondCategory.VFObject (↑C.real) n} →
+                    DiamondIntegral.Section6.DiamondCategory.Morphism G A B →
+                      DiamondIntegral.Section3.GammaGroundEssentialVFMap
+                        (DiamondIntegral.Section3.GammaGroundDefSet.ofReal A.carrier)
+                        (DiamondIntegral.Section3.GammaGroundDefSet.ofReal B.carrier)
+def DiamondIntegral.Section7.Corollary727.essentialOf : {M : Type} →
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M] →
+    [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] →
+      (C : DiamondIntegral.Section3.GammaGroundContext M) →
+        {G : Type} →
+          [inst_2 : LinearOrderedCommGroupWithZero G] →
+            [inst_3 : Valued (DiamondIntegral.Section2.VF M) G] →
+              (hc : CanonicalStructure.IsCanonical) →
+                {n : ℕ} →
+                  {A B : DiamondIntegral.Section6.DiamondCategory.VFObject (↑C.real) n} →
+                    DiamondIntegral.Section6.DiamondCategory.Morphism G A B →
+                      DiamondIntegral.Section3.GammaGroundEssentialVFMap
+                        (DiamondIntegral.Section3.GammaGroundDefSet.ofReal A.carrier)
+                        (DiamondIntegral.Section3.GammaGroundDefSet.ofReal B.carrier) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] C {G}
+    [LinearOrderedCommGroupWithZero G] [Valued (DiamondIntegral.Section2.VF M) G] hc {n} {A B} Φ =>
+  have hA := ⋯;
+  have hB := ⋯;
+  { source := DiamondIntegral.Section3.GammaGroundDefSet.ofReal A.carrier,
+    target := DiamondIntegral.Section3.GammaGroundDefSet.ofReal B.carrier, source_subset := ⋯, target_subset := ⋯,
+    source_small := hA, target_small := hB, map := DiamondIntegral.Section3.GammaGroundMap.ofReal Φ.map,
+    bijective := ⋯ }
+'DiamondIntegral.Section7.Corollary727.essentialOf' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.Corollary727.essentialOf_preserves : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (C : DiamondIntegral.Section3.GammaGroundContext M)
+  {G : Type} [inst_2 : LinearOrderedCommGroupWithZero G] [inst_3 : Valued (DiamondIntegral.Section2.VF M) G]
+  (hc : CanonicalStructure.IsCanonical) {n : ℕ} {A B : DiamondIntegral.Section6.DiamondCategory.VFObject (↑C.real) n}
+  (Φ : DiamondIntegral.Section6.DiamondCategory.Morphism G A B),
+  DiamondIntegral.Section3.GammaGroundEssentialVFMap.PreservesGeneric SpecialTransformations.Section3.Values.vfValueHom
+    (DiamondIntegral.Section3.gammaGroundMeasuredVFWeight (DiamondIntegral.Section7.Corollary727.forgetMVF C hc A))
+    (DiamondIntegral.Section3.gammaGroundMeasuredVFWeight (DiamondIntegral.Section7.Corollary727.forgetMVF C hc B))
+    (DiamondIntegral.Section7.Corollary727.essentialOf C hc Φ)
+theorem DiamondIntegral.Section7.Corollary727.essentialOf_preserves : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (C : DiamondIntegral.Section3.GammaGroundContext M)
+  {G : Type} [inst_2 : LinearOrderedCommGroupWithZero G] [inst_3 : Valued (DiamondIntegral.Section2.VF M) G]
+  (hc : CanonicalStructure.IsCanonical) {n : ℕ} {A B : DiamondIntegral.Section6.DiamondCategory.VFObject (↑C.real) n}
+  (Φ : DiamondIntegral.Section6.DiamondCategory.Morphism G A B),
+  DiamondIntegral.Section3.GammaGroundEssentialVFMap.PreservesGeneric SpecialTransformations.Section3.Values.vfValueHom
+    (DiamondIntegral.Section3.gammaGroundMeasuredVFWeight (DiamondIntegral.Section7.Corollary727.forgetMVF C hc A))
+    (DiamondIntegral.Section3.gammaGroundMeasuredVFWeight (DiamondIntegral.Section7.Corollary727.forgetMVF C hc B))
+    (DiamondIntegral.Section7.Corollary727.essentialOf C hc Φ) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] C {G}
+    [LinearOrderedCommGroupWithZero G] [Valued (DiamondIntegral.Section2.VF M) G] hc {n} {A B} Φ p hp =>
+  have hbad := DiamondIntegral.Section7.Corollary727.not_mem_bad C hc Φ p hp;
+  Exists.casesOn (Φ.measure p hbad) fun L h =>
+    And.casesOn h fun left hdet =>
+      Exists.casesOn left fun F h =>
+        And.casesOn h fun hF hd =>
+          Exists.intro (LinearMap.toMatrix' L).det
+            ⟨Exists.intro F ⟨hF, SpecialTransformations.Section9.HasVFDerivativeAt.hasJacobianAt hd⟩,
+              have h1 :=
+                Eq.symm
+                  (mul_div_cancel (DiamondIntegral.Section6.gammaMapValue B.form (Φ.map.toFun p))
+                    (DiamondIntegral.Section6.gammaMapValue A.form p));
+              id
+                (Eq.mpr
+                  (id
+                    ((fun a a_1 e_a =>
+                        Eq.rec (motive := fun a_2 e_a =>
+                          ∀ (a_3 : SpecialTransformations.Section3.Values.GammaTop), (a = a_3) = (a_2 = a_3))
+                          (fun a_2 => Eq.refl (a = a_2)) e_a)
+                      (↑(DiamondIntegral.Section6.gammaMapValue A.form p))
+                      (↑(DiamondIntegral.Section6.gammaMapValue B.form (Φ.map.toFun p) *
+                          (DiamondIntegral.Section6.gammaMapValue A.form p /
+                            DiamondIntegral.Section6.gammaMapValue B.form (Φ.map.toFun p))))
+                      (Eq.trans (congrArg (fun _a => ↑_a) h1)
+                        (Eq.refl
+                          ↑(DiamondIntegral.Section6.gammaMapValue B.form (Φ.map.toFun p) *
+                              (DiamondIntegral.Section6.gammaMapValue A.form p /
+                                DiamondIntegral.Section6.gammaMapValue B.form (Φ.map.toFun p)))))
+                      (↑(DiamondIntegral.Section6.gammaMapValue B.form (Φ.map.toFun p)) *
+                        DiamondIntegral.Section2.vfValue (LinearMap.toMatrix' L).det)))
+                  (Eq.mpr
+                    (id
+                      (congrArg
+                        (fun _a =>
+                          ↑(DiamondIntegral.Section6.gammaMapValue B.form (Φ.map.toFun p) *
+                                (DiamondIntegral.Section6.gammaMapValue A.form p /
+                                  DiamondIntegral.Section6.gammaMapValue B.form (Φ.map.toFun p))) =
+                            ↑(DiamondIntegral.Section6.gammaMapValue B.form (Φ.map.toFun p)) * _a)
+                        hdet))
+                    (MonoidHom.map_mul SpecialTransformations.Section3.Values.gammaValHom
+                      (DiamondIntegral.Section6.gammaMapValue B.form (Φ.map.toFun p))
+                      (DiamondIntegral.Section6.gammaMapValue A.form p /
+                        DiamondIntegral.Section6.gammaMapValue B.form (Φ.map.toFun p)))))⟩
+'DiamondIntegral.Section7.Corollary727.essentialOf_preserves' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.Corollary727.forgetMVF_class_iso : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (C : DiamondIntegral.Section3.GammaGroundContext M)
+  {G : Type} [inst_2 : LinearOrderedCommGroupWithZero G] [inst_3 : Valued (DiamondIntegral.Section2.VF M) G]
+  (hc : CanonicalStructure.IsCanonical) [inst_4 : CharZero (DiamondIntegral.Section2.VF M)]
+  (hv :
+    ∀ (x y : DiamondIntegral.Section2.VF M),
+      SpecialTransformations.Milestone0.VFValued.predV x y ↔ Valued.v x ≤ Valued.v y)
+  {n : ℕ} {A B : DiamondIntegral.Section6.DiamondCategory.VFObject (↑C.real) n},
+  DiamondIntegral.Section6.DiamondCategory.Isomorphic G A B →
+    DiamondIntegral.Section3.gammaGroundMeasuredVFClass ⋯ ⋯ ⋯ hv
+        (DiamondIntegral.Section7.Corollary727.forgetMVF C hc A) =
+      DiamondIntegral.Section3.gammaGroundMeasuredVFClass ⋯ ⋯ ⋯ hv
+        (DiamondIntegral.Section7.Corollary727.forgetMVF C hc B)
+theorem DiamondIntegral.Section7.Corollary727.forgetMVF_class_iso : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (C : DiamondIntegral.Section3.GammaGroundContext M)
+  {G : Type} [inst_2 : LinearOrderedCommGroupWithZero G] [inst_3 : Valued (DiamondIntegral.Section2.VF M) G]
+  (hc : CanonicalStructure.IsCanonical) [inst_4 : CharZero (DiamondIntegral.Section2.VF M)]
+  (hv :
+    ∀ (x y : DiamondIntegral.Section2.VF M),
+      SpecialTransformations.Milestone0.VFValued.predV x y ↔ Valued.v x ≤ Valued.v y)
+  {n : ℕ} {A B : DiamondIntegral.Section6.DiamondCategory.VFObject (↑C.real) n},
+  DiamondIntegral.Section6.DiamondCategory.Isomorphic G A B →
+    DiamondIntegral.Section3.gammaGroundMeasuredVFClass ⋯ ⋯ ⋯ hv
+        (DiamondIntegral.Section7.Corollary727.forgetMVF C hc A) =
+      DiamondIntegral.Section3.gammaGroundMeasuredVFClass ⋯ ⋯ ⋯ hv
+        (DiamondIntegral.Section7.Corollary727.forgetMVF C hc B) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] C {G}
+    [LinearOrderedCommGroupWithZero G] [Valued (DiamondIntegral.Section2.VF M) G] hc
+    [CharZero (DiamondIntegral.Section2.VF M)] hv {n} {A B} h =>
+  Nonempty.casesOn h fun Φ =>
+    Nat.casesAuxOn (motive := fun x =>
+      ∀ {A B : DiamondIntegral.Section6.DiamondCategory.VFObject (↑C.real) x}
+        (Φ : DiamondIntegral.Section6.DiamondCategory.Morphism G A B),
+        DiamondIntegral.Section3.gammaGroundMeasuredVFClass (LT.lt.le C.uncountable) C.saturated C.small_real hv
+            (DiamondIntegral.Section7.Corollary727.forgetMVF C hc A) =
+          DiamondIntegral.Section3.gammaGroundMeasuredVFClass (LT.lt.le C.uncountable) C.saturated C.small_real hv
+            (DiamondIntegral.Section7.Corollary727.forgetMVF C hc B))
+      n
+      (fun {A B} Φ =>
+        DiamondIntegral.Section3.gammaGroundMeasuredVFClass_iso (LT.lt.le C.uncountable) C.saturated C.small_real hv
+          { bijection := { map := DiamondIntegral.Section3.GammaGroundMap.ofReal Φ.map, bijective := Φ.bijective },
+            preserves := fun a => DiamondIntegral.Section7.Proposition724Zero.morphism_form Φ a })
+      (fun k {A B} Φ =>
+        have hn := Nat.zero_lt_succ k;
+        Exists.casesOn
+          (DiamondIntegral.Section3.GammaGroundEssentialVFMap.exists_pointwise_preserving (LT.lt.le C.uncountable)
+            C.saturated C.small_real hv hn (DiamondIntegral.Section7.Corollary727.essentialOf C hc Φ)
+            (DiamondIntegral.Section7.Corollary727.forgetMVF C hc A).form
+            (DiamondIntegral.Section7.Corollary727.forgetMVF C hc B).form
+            (DiamondIntegral.Section7.Corollary727.essentialOf_preserves C hc Φ))
+          fun g h =>
+          And.casesOn h fun hg right =>
+            DiamondIntegral.Section3.gammaGroundMeasuredVFClass_iso (LT.lt.le C.uncountable) C.saturated C.small_real hv
+              (DiamondIntegral.Section3.gammaGroundMeasuredOfRepresentative (LT.lt.le C.uncountable) C.saturated
+                C.small_real hv hn ⟨g, hg⟩))
+      Φ
+'DiamondIntegral.Section7.Corollary727.forgetMVF_class_iso' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.Corollary727.measuredIntegral_forgetMVF_lift : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (C : DiamondIntegral.Section3.GammaGroundContext M)
+  {G : Type} [inst_2 : LinearOrderedCommGroupWithZero G] [inst_3 : Valued (DiamondIntegral.Section2.VF M) G]
+  (hc : CanonicalStructure.IsCanonical) [inst_4 : CharZero (DiamondIntegral.Section2.VF M)]
+  (hv :
+    ∀ (x y : DiamondIntegral.Section2.VF M),
+      SpecialTransformations.Milestone0.VFValued.predV x y ↔ Valued.v x ≤ Valued.v y)
+  {n : ℕ} (A : DiamondIntegral.Section6.DiamondCategory.VFObject (↑C.real) n)
+  (U : DiamondIntegral.Section6.MeasuredRVObject (↑C.real) n)
+  (hP : DiamondIntegral.Section6.ProperInvariant (↑C.real) (SpecialTransformations.Section4.rvLift U.object).carrier),
+  DiamondIntegral.Section6.DiamondCategory.Isomorphic G A (DiamondIntegral.Section6.DiamondLift.liftObject U hP) →
+    (DiamondIntegral.Section3.theorem_3_22_measured_graded C hc hv)
+        (Algebra.GrothendieckAddGroup.of
+          (DiamondIntegral.Section3.gammaGroundMeasuredVFDirectSumClass
+            (DiamondIntegral.Section7.Corollary727.forgetMVF C hc A))) =
+      (Ideal.Quotient.mk (Ideal.span {DiamondIntegral.Section3.gammaGroundMeasuredRVPrincipalElement hc C.base}))
+        (DiamondIntegral.Section4.Section3RVClassCuts.measuredClass
+          (DiamondIntegral.Section4.Section3MeasuredRVChartBridge.native hc
+            (DiamondIntegral.Section7.BaseExtension.chartExt ⋯
+              (DiamondIntegral.Section7.ChartOfMeasured.chartOf hc U))))
+theorem DiamondIntegral.Section7.Corollary727.measuredIntegral_forgetMVF_lift : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (C : DiamondIntegral.Section3.GammaGroundContext M)
+  {G : Type} [inst_2 : LinearOrderedCommGroupWithZero G] [inst_3 : Valued (DiamondIntegral.Section2.VF M) G]
+  (hc : CanonicalStructure.IsCanonical) [inst_4 : CharZero (DiamondIntegral.Section2.VF M)]
+  (hv :
+    ∀ (x y : DiamondIntegral.Section2.VF M),
+      SpecialTransformations.Milestone0.VFValued.predV x y ↔ Valued.v x ≤ Valued.v y)
+  {n : ℕ} (A : DiamondIntegral.Section6.DiamondCategory.VFObject (↑C.real) n)
+  (U : DiamondIntegral.Section6.MeasuredRVObject (↑C.real) n)
+  (hP : DiamondIntegral.Section6.ProperInvariant (↑C.real) (SpecialTransformations.Section4.rvLift U.object).carrier),
+  DiamondIntegral.Section6.DiamondCategory.Isomorphic G A (DiamondIntegral.Section6.DiamondLift.liftObject U hP) →
+    (DiamondIntegral.Section3.theorem_3_22_measured_graded C hc hv)
+        (Algebra.GrothendieckAddGroup.of
+          (DiamondIntegral.Section3.gammaGroundMeasuredVFDirectSumClass
+            (DiamondIntegral.Section7.Corollary727.forgetMVF C hc A))) =
+      (Ideal.Quotient.mk (Ideal.span {DiamondIntegral.Section3.gammaGroundMeasuredRVPrincipalElement hc C.base}))
+        (DiamondIntegral.Section4.Section3RVClassCuts.measuredClass
+          (DiamondIntegral.Section4.Section3MeasuredRVChartBridge.native hc
+            (DiamondIntegral.Section7.BaseExtension.chartExt ⋯
+              (DiamondIntegral.Section7.ChartOfMeasured.chartOf hc U)))) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] C {G}
+    [LinearOrderedCommGroupWithZero G] [Valued (DiamondIntegral.Section2.VF M) G] hc
+    [CharZero (DiamondIntegral.Section2.VF M)] hv {n} A U hP hiso =>
+  have hcls :=
+    id
+      (Eq.mpr
+        (id
+          (congrArg
+            (fun _a =>
+              (DirectSum.of
+                    (DiamondIntegral.Section3.GammaGroundMeasuredVFKPlus
+                      DiamondIntegral.Section3.gammaGroundMeasuredVFDirectSumClass._proof_1 C.saturated C.small_real hv)
+                    n)
+                  _a =
+                (DirectSum.of
+                    (DiamondIntegral.Section3.GammaGroundMeasuredVFKPlus
+                      DiamondIntegral.Section3.gammaGroundMeasuredVFDirectSumClass._proof_1 C.saturated C.small_real hv)
+                    n)
+                  (DiamondIntegral.Section3.gammaGroundMeasuredVFClass
+                    DiamondIntegral.Section3.gammaGroundMeasuredVFDirectSumClass._proof_1 C.saturated C.small_real hv
+                    (DiamondIntegral.Section3.gammaGroundMeasuredObjectLift
+                      (DiamondIntegral.Section7.Corollary727.forgetMRV C hc U))))
+            (DiamondIntegral.Section7.Corollary727.forgetMVF_class_iso C hc hv hiso)))
+        (Eq.mpr
+          (id
+            (congrArg
+              (fun _a =>
+                (DirectSum.of
+                      (DiamondIntegral.Section3.GammaGroundMeasuredVFKPlus
+                        DiamondIntegral.Section3.gammaGroundMeasuredVFDirectSumClass._proof_1 C.saturated C.small_real
+                        hv)
+                      n)
+                    (DiamondIntegral.Section3.gammaGroundMeasuredVFClass (LT.lt.le C.uncountable) C.saturated
+                      C.small_real hv _a) =
+                  (DirectSum.of
+                      (DiamondIntegral.Section3.GammaGroundMeasuredVFKPlus
+                        DiamondIntegral.Section3.gammaGroundMeasuredVFDirectSumClass._proof_1 C.saturated C.small_real
+                        hv)
+                      n)
+                    (DiamondIntegral.Section3.gammaGroundMeasuredVFClass
+                      DiamondIntegral.Section3.gammaGroundMeasuredVFDirectSumClass._proof_1 C.saturated C.small_real hv
+                      (DiamondIntegral.Section3.gammaGroundMeasuredObjectLift
+                        (DiamondIntegral.Section7.Corollary727.forgetMRV C hc U))))
+              (DiamondIntegral.Section7.Corollary727.forgetMVF_lift C hc U hP)))
+          (Eq.refl
+            ((DirectSum.of
+                (DiamondIntegral.Section3.GammaGroundMeasuredVFKPlus
+                  DiamondIntegral.Section3.gammaGroundMeasuredVFDirectSumClass._proof_1 C.saturated C.small_real hv)
+                n)
+              (DiamondIntegral.Section3.gammaGroundMeasuredVFClass (LT.lt.le C.uncountable) C.saturated C.small_real hv
+                (DiamondIntegral.Section3.gammaGroundMeasuredObjectLift
+                  (DiamondIntegral.Section7.Corollary727.forgetMRV C hc U)))))));
+  Eq.mpr
+    (id
+      (congrArg
+        (fun _a =>
+          (DiamondIntegral.Section3.theorem_3_22_measured_graded C hc hv) (Algebra.GrothendieckAddGroup.of _a) =
+            (Ideal.Quotient.mk (Ideal.span {DiamondIntegral.Section3.gammaGroundMeasuredRVPrincipalElement hc C.base}))
+              (DiamondIntegral.Section4.Section3RVClassCuts.measuredClass
+                (DiamondIntegral.Section4.Section3MeasuredRVChartBridge.native hc
+                  (DiamondIntegral.Section7.BaseExtension.chartExt
+                    (fun {n} {sn} {U} => DiamondIntegral.Section7.Corollary727.transfer C)
+                    (DiamondIntegral.Section7.ChartOfMeasured.chartOf hc U)))))
+        hcls))
+    (Eq.mpr
+      (id
+        (congrArg
+          (fun _a =>
+            _a =
+              (Ideal.Quotient.mk
+                  (Ideal.span {DiamondIntegral.Section3.gammaGroundMeasuredRVPrincipalElement hc C.base}))
+                (DiamondIntegral.Section4.Section3RVClassCuts.measuredClass
+                  (DiamondIntegral.Section4.Section3MeasuredRVChartBridge.native hc
+                    (DiamondIntegral.Section7.BaseExtension.chartExt
+                      (fun {n} {sn} {U} => DiamondIntegral.Section7.Corollary727.transfer C)
+                      (DiamondIntegral.Section7.ChartOfMeasured.chartOf hc U)))))
+          (DiamondIntegral.Section3.theorem_3_22_measured_graded_lift_class C hc hv
+            (DiamondIntegral.Section7.Corollary727.forgetMRV C hc U))))
+      (Eq.mpr
+        (id
+          (congrArg
+            (fun _a =>
+              (Ideal.Quotient.mk
+                    (Ideal.span {DiamondIntegral.Section3.gammaGroundMeasuredRVPrincipalElement hc C.base}))
+                  (Algebra.GrothendieckAddGroup.of
+                    (DiamondIntegral.Section3.gammaGroundMeasuredRVSemiringClass
+                      (DiamondIntegral.Section7.Corollary727.forgetMRV C hc U))) =
+                (Ideal.Quotient.mk
+                    (Ideal.span {DiamondIntegral.Section3.gammaGroundMeasuredRVPrincipalElement hc C.base}))
+                  _a)
+            (Eq.symm (DiamondIntegral.Section7.Corollary727.measuredClass_forgetMRV C hc U))))
+        (Eq.refl
+          ((Ideal.Quotient.mk (Ideal.span {DiamondIntegral.Section3.gammaGroundMeasuredRVPrincipalElement hc C.base}))
+            (Algebra.GrothendieckAddGroup.of
+              (DiamondIntegral.Section3.gammaGroundMeasuredRVSemiringClass
+                (DiamondIntegral.Section7.Corollary727.forgetMRV C hc U)))))))
+'DiamondIntegral.Section7.Corollary727.measuredIntegral_forgetMVF_lift' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@DiamondIntegral.Section7.Corollary727.corollary_7_27_right : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (C : DiamondIntegral.Section3.GammaGroundContext M)
+  {G : Type} [inst_2 : LinearOrderedCommGroupWithZero G] [inst_3 : Valued (DiamondIntegral.Section2.VF M) G]
+  (hc : CanonicalStructure.IsCanonical) [inst_4 : CharZero (DiamondIntegral.Section2.VF M)]
+  (hv :
+    ∀ (x y : DiamondIntegral.Section2.VF M),
+      SpecialTransformations.Milestone0.VFValued.predV x y ↔ Valued.v x ≤ Valued.v y)
+  (hΓ : DiamondIntegral.Section2.NontrivialDefinableGamma { real := ↑C.real, gamma := ∅ }) {n : ℕ}
+  (A : DiamondIntegral.Section6.DiamondCategory.VFObject (↑C.real) (n + 1)) {e : Equiv.Perm (Fin (n + 1))}
+  (F : DiamondIntegral.Section6.NormalizedMeasuredContraction A.carrier A.form e),
+  (DiamondIntegral.Section3.theorem_3_22_measured_graded C hc hv)
+      (Algebra.GrothendieckAddGroup.of
+        (DiamondIntegral.Section3.gammaGroundMeasuredVFDirectSumClass
+          (DiamondIntegral.Section7.Corollary727.forgetMVF C hc A))) =
+    (DiamondIntegral.Section7.Corollary727.bottomRight C hc)
+      (DiamondIntegral.Section7.Corollary727.toQ (DiamondIntegral.Section7.PieceCombination.clsOf ⋯ hc ⋯ ⋯ hv ⋯ hΓ A F))
+theorem DiamondIntegral.Section7.Corollary727.corollary_7_27_right : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (C : DiamondIntegral.Section3.GammaGroundContext M)
+  {G : Type} [inst_2 : LinearOrderedCommGroupWithZero G] [inst_3 : Valued (DiamondIntegral.Section2.VF M) G]
+  (hc : CanonicalStructure.IsCanonical) [inst_4 : CharZero (DiamondIntegral.Section2.VF M)]
+  (hv :
+    ∀ (x y : DiamondIntegral.Section2.VF M),
+      SpecialTransformations.Milestone0.VFValued.predV x y ↔ Valued.v x ≤ Valued.v y)
+  (hΓ : DiamondIntegral.Section2.NontrivialDefinableGamma { real := ↑C.real, gamma := ∅ }) {n : ℕ}
+  (A : DiamondIntegral.Section6.DiamondCategory.VFObject (↑C.real) (n + 1)) {e : Equiv.Perm (Fin (n + 1))}
+  (F : DiamondIntegral.Section6.NormalizedMeasuredContraction A.carrier A.form e),
+  (DiamondIntegral.Section3.theorem_3_22_measured_graded C hc hv)
+      (Algebra.GrothendieckAddGroup.of
+        (DiamondIntegral.Section3.gammaGroundMeasuredVFDirectSumClass
+          (DiamondIntegral.Section7.Corollary727.forgetMVF C hc A))) =
+    (DiamondIntegral.Section7.Corollary727.bottomRight C hc)
+      (DiamondIntegral.Section7.Corollary727.toQ
+        (DiamondIntegral.Section7.PieceCombination.clsOf ⋯ hc ⋯ ⋯ hv ⋯ hΓ A F)) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] C {G}
+    [LinearOrderedCommGroupWithZero G] [Valued (DiamondIntegral.Section2.VF M) G] hc
+    [CharZero (DiamondIntegral.Section2.VF M)] hv hΓ {n} A {e} F =>
+  Exists.casesOn
+    (DiamondIntegral.Section6.DiamondStandardContraction.remark_6_28 C.model00 hc
+      DiamondIntegral.Section7.LiftClasses.lin C.uncountable C.saturated hv C.small_real hΓ A F 0 Fin.elim0)
+    fun hP iA =>
+    Eq.mpr
+      (id
+        (congrArg
+          (fun _a =>
+            _a =
+              (DiamondIntegral.Section7.Corollary727.bottomRight C hc)
+                (DiamondIntegral.Section7.Corollary727.toQ
+                  (DiamondIntegral.Section7.PieceCombination.clsOf C.model00 hc C.uncountable C.saturated hv
+                    C.small_real hΓ A F)))
+          (DiamondIntegral.Section7.Corollary727.measuredIntegral_forgetMVF_lift C hc hv A
+            (DiamondIntegral.Section6.NormalizedMeasuredContraction.headStartMeasuredObject C.model00 hc
+              DiamondIntegral.Section7.LiftClasses.lin C.uncountable C.saturated hv C.small_real hΓ F 0 Fin.elim0
+              (DiamondIntegral.Section6.DiamondStandardContraction.object_hFin A Fin.elim0))
+            hP iA)))
+      (Eq.symm
+        (DiamondIntegral.Section7.Corollary727.bottomRight_mk C hc
+          (DiamondIntegral.Section7.ChartOfMeasured.objOf hc C.real
+            (DiamondIntegral.Section6.NormalizedMeasuredContraction.headStartMeasuredObject C.model00 hc
+              DiamondIntegral.Section7.LiftClasses.lin C.uncountable C.saturated hv C.small_real hΓ F 0 Fin.elim0
+              (DiamondIntegral.Section6.DiamondStandardContraction.object_hFin A Fin.elim0))
+            (DiamondIntegral.Section6.NormalizedMeasuredContraction.headStartObject_doublyBounded F 0 Fin.elim0))))
+'DiamondIntegral.Section7.Corollary727.corollary_7_27_right' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DiamondIntegral.Section7.Corollary727.corollary_7_27_right_zero : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (C : DiamondIntegral.Section3.GammaGroundContext M)
+  {G : Type} [inst_2 : LinearOrderedCommGroupWithZero G] [inst_3 : Valued (DiamondIntegral.Section2.VF M) G]
+  (hc : CanonicalStructure.IsCanonical) [inst_4 : CharZero (DiamondIntegral.Section2.VF M)]
+  (hv :
+    ∀ (x y : DiamondIntegral.Section2.VF M),
+      SpecialTransformations.Milestone0.VFValued.predV x y ↔ Valued.v x ≤ Valued.v y),
+  DiamondIntegral.Section2.NontrivialDefinableGamma { real := ↑C.real, gamma := ∅ } →
+    ∀ (A : DiamondIntegral.Section6.DiamondCategory.VFObject (↑C.real) 0),
+      (DiamondIntegral.Section3.theorem_3_22_measured_graded C hc hv)
+          (Algebra.GrothendieckAddGroup.of
+            (DiamondIntegral.Section3.gammaGroundMeasuredVFDirectSumClass
+              (DiamondIntegral.Section7.Corollary727.forgetMVF C hc A))) =
+        (DiamondIntegral.Section7.Corollary727.bottomRight C hc)
+          (DiamondIntegral.Section7.Corollary727.toQ
+            ((DiamondIntegral.Section7.Proposition724Zero.integralZero G ⋯ hc)
+              (DiamondIntegral.Section6.DiamondGrothendieck.vfClass G hc A)))
+theorem DiamondIntegral.Section7.Corollary727.corollary_7_27_right_zero : ∀ {M : Type}
+  [inst : SpecialTransformations.Milestone0.LRV.Structure M]
+  [inst_1 : M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] (C : DiamondIntegral.Section3.GammaGroundContext M)
+  {G : Type} [inst_2 : LinearOrderedCommGroupWithZero G] [inst_3 : Valued (DiamondIntegral.Section2.VF M) G]
+  (hc : CanonicalStructure.IsCanonical) [inst_4 : CharZero (DiamondIntegral.Section2.VF M)]
+  (hv :
+    ∀ (x y : DiamondIntegral.Section2.VF M),
+      SpecialTransformations.Milestone0.VFValued.predV x y ↔ Valued.v x ≤ Valued.v y),
+  DiamondIntegral.Section2.NontrivialDefinableGamma { real := ↑C.real, gamma := ∅ } →
+    ∀ (A : DiamondIntegral.Section6.DiamondCategory.VFObject (↑C.real) 0),
+      (DiamondIntegral.Section3.theorem_3_22_measured_graded C hc hv)
+          (Algebra.GrothendieckAddGroup.of
+            (DiamondIntegral.Section3.gammaGroundMeasuredVFDirectSumClass
+              (DiamondIntegral.Section7.Corollary727.forgetMVF C hc A))) =
+        (DiamondIntegral.Section7.Corollary727.bottomRight C hc)
+          (DiamondIntegral.Section7.Corollary727.toQ
+            ((DiamondIntegral.Section7.Proposition724Zero.integralZero G ⋯ hc)
+              (DiamondIntegral.Section6.DiamondGrothendieck.vfClass G hc A))) :=
+fun {M} [SpecialTransformations.Milestone0.LRV.Structure M] [M ⊨ SpecialTransformations.Milestone0.Axioms.ACVF] C {G}
+    [LinearOrderedCommGroupWithZero G] [Valued (DiamondIntegral.Section2.VF M) G] hc
+    [CharZero (DiamondIntegral.Section2.VF M)] hv hΓ A =>
+  Exists.casesOn
+    (DiamondIntegral.Section6.DiamondSurjectivity.exists_isomorphic_lift_zero C.model00 hc
+      DiamondIntegral.Section7.LiftClasses.lin C.uncountable C.saturated hv C.small_real hΓ A)
+    fun U h =>
+    Exists.casesOn h fun hU hiso =>
+      Eq.mpr
+        (id
+          (congrArg
+            (fun _a =>
+              _a =
+                (DiamondIntegral.Section7.Corollary727.bottomRight C hc)
+                  (DiamondIntegral.Section7.Corollary727.toQ
+                    ((DiamondIntegral.Section7.Proposition724Zero.integralZero G C.model00 hc)
+                      (DiamondIntegral.Section6.DiamondGrothendieck.vfClass G hc A))))
+            (DiamondIntegral.Section7.Corollary727.measuredIntegral_forgetMVF_lift C hc hv A U
+              (DiamondIntegral.Section6.measuredRVLift_properInvariant C.model00 hc C.uncountable C.saturated hv U hU)
+              hiso)))
+        (Eq.mpr
+          (id
+            (congrArg
+              (fun _a =>
+                (Ideal.Quotient.mk
+                      (Ideal.span {DiamondIntegral.Section3.gammaGroundMeasuredRVPrincipalElement hc C.base}))
+                    (DiamondIntegral.Section4.Section3RVClassCuts.measuredClass
+                      (DiamondIntegral.Section4.Section3MeasuredRVChartBridge.native hc
+                        (DiamondIntegral.Section7.BaseExtension.chartExt
+                          (fun {n} {sn} {U} => DiamondIntegral.Section7.Corollary727.transfer C)
+                          (DiamondIntegral.Section7.ChartOfMeasured.chartOf hc U)))) =
+                  (DiamondIntegral.Section7.Corollary727.bottomRight C hc)
+                    (DiamondIntegral.Section7.Corollary727.toQ _a))
+              (DiamondIntegral.Section7.Proposition724Zero.integralZero_vfClass C.model00 hc A)))
+          (Eq.mpr
+            (id
+              (congrArg
+                (fun _a =>
+                  (Ideal.Quotient.mk
+                        (Ideal.span {DiamondIntegral.Section3.gammaGroundMeasuredRVPrincipalElement hc C.base}))
+                      (DiamondIntegral.Section4.Section3RVClassCuts.measuredClass
+                        (DiamondIntegral.Section4.Section3MeasuredRVChartBridge.native hc
+                          (DiamondIntegral.Section7.BaseExtension.chartExt
+                            (fun {n} {sn} {U} => DiamondIntegral.Section7.Corollary727.transfer C)
+                            (DiamondIntegral.Section7.ChartOfMeasured.chartOf hc U)))) =
+                    (DiamondIntegral.Section7.Corollary727.bottomRight C hc)
+                      (DiamondIntegral.Section7.Corollary727.toQ _a))
+                (DiamondIntegral.Section7.Proposition724Zero.zeroClass_iso C.model00 hc hiso)))
+            (Eq.mpr
+              (id
+                (congrArg
+                  (fun _a =>
+                    (Ideal.Quotient.mk
+                          (Ideal.span {DiamondIntegral.Section3.gammaGroundMeasuredRVPrincipalElement hc C.base}))
+                        (DiamondIntegral.Section4.Section3RVClassCuts.measuredClass
+                          (DiamondIntegral.Section4.Section3MeasuredRVChartBridge.native hc
+                            (DiamondIntegral.Section7.BaseExtension.chartExt
+                              (fun {n} {sn} {U} => DiamondIntegral.Section7.Corollary727.transfer C)
+                              (DiamondIntegral.Section7.ChartOfMeasured.chartOf hc U)))) =
+                      (DiamondIntegral.Section7.Corollary727.bottomRight C hc)
+                        (DiamondIntegral.Section7.Corollary727.toQ _a))
+                  (DiamondIntegral.Section7.Proposition724Zero.zeroClass_lift C.model00 hc U hU
+                    (DiamondIntegral.Section6.measuredRVLift_properInvariant C.model00 hc C.uncountable C.saturated hv U
+                      hU))))
+              (Eq.symm
+                (DiamondIntegral.Section7.Corollary727.bottomRight_mk C hc
+                  (DiamondIntegral.Section7.ChartOfMeasured.objOf hc C.real U hU))))))
+'DiamondIntegral.Section7.Corollary727.corollary_7_27_right_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
 @DiamondIntegral.Section7.DiamondProducts.append_comp_castAdd : ∀ {n m : ℕ} {X : Type} (x : Fin n → X) (y : Fin m → X),
   Fin.append x y ∘ Fin.castAdd m = x
 theorem DiamondIntegral.Section7.DiamondProducts.append_comp_castAdd : ∀ {n m : ℕ} {X : Type} (x : Fin n → X)
