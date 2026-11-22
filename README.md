@@ -52,3 +52,14 @@ Fubini prerequisite paths in `EXTRACTED-FOUNDATIONS.json` resolve to their
 actual hilbert-mathlib proof bodies; the two paper-specific Grothendieck
 relations remain in Fubini. Section verifiers continue auditing the provider
 implementations and the unchanged mathematical hypotheses.
+
+## License
+
+This repository is licensed under the [Apache License, Version 2.0](LICENSE).
+
+The licence does not cover the paper, which is joint work of Forey and Yin, or
+material reproduced from it: the annotated manuscript
+`section 2/reference/diamond_integral_revision_annotated.tex` and its PDF,
+`section 2/reference/original-upload/`, and the PDF and TeX files in the
+sections' `reference/` folders. Files from third parties keep their own notices
+and licences.
