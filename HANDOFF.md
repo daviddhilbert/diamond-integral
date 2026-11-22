@@ -1,4 +1,23 @@
-# Full-paper handoff: continue with Section 7
+# Full-paper handoff
+
+**Current status, November 21, 2026 (supersedes the older notes below):**
+every numbered result of Sections 2–8 is formalized in its recorded scope,
+and each section has a passing receipt that checks the complete types and
+transitive axioms (`propext`, `Classical.choice`, `Quot.sound` only) of its
+public declarations. Section 7 is complete (Theorem 7.26 with the relative
+ideal `J_var`, Corollary 7.27 as ring maps); Section 8 is complete for
+`X = 𝔸^d` and for smooth affine `X` (Theorem 8.11, (z:coeff:change),
+Remarks 8.14–8.15). Every result of [18]–[22] that the manuscript uses in a
+statement or proof is formalized, either here or in the pinned
+[integration-in-ACVF](https://github.com/daviddhilbert/integration-in-ACVF)
+package; see [ACCEPTED-CITED-RESULTS.md](ACCEPTED-CITED-RESULTS.md). The
+remaining explicit inputs are the approved Reichstein–Youssin consequence
+(Section 3) and the étale chart for smooth `X` (Section 8, Hensel's lemma).
+The object form of Lemma 7.12 for blowups with a locus stays at class level
+by the author's decision; later results use only the class form. Open
+outside Sections 2–8: the introduction. Open in the manuscript: the optional
+clarification R047 (Section 3).
+
 
 **November 17 local proof update:** all four Section 3 Gamma-valued measured
 lift/kernel records now have proved producers, including the positive-degree
@@ -60,8 +79,8 @@ fresh source-hash receipts take precedence over those historical notes.
 | 4. Uniform retraction to RES | Complete in its recorded contexts, including the direct connection to the finalized Section 3 proofs. The aperture revision adds the independent relative ideal, its compatibility proof and actual graded quotient/retraction. The fresh audit checks 5069 declarations. | [Coverage](<section 4/COVERAGE.md>), [status](<section 4/STATUS.md>), [receipt](<section 4/verification/status.json>), [Section 3 adapters](<section 4/Section3T001Integration.lean>), [linked retraction statements](<section 4/Section3LinkedRetractionStatements.lean>). Keep the old scalar ideal distinct from the new relative ideal. |
 | 5. RV decomposition and Fubini | The author's requested scope is complete: original-language Lemma 5.12, the concrete Puiseux/Galois work around 5.13, bounded and geometric Fubini 5.17, and the actual-variety corollary. Both former Gamma-linearity and exact ground lifting inputs are discharged. | [Current README header](<section 5/README.md>), [discharged entry points](<section 5/Section5DischargedInputs.lean>), [variety corollary](<section 5/VarietyCorollaryDischarged.lean>), [receipt](<section 5/verification/status.json>). Cross-section computations and the computational results cited from [19] were excluded from this requested scope. Do not silently expand that completion claim. |
 | 6. Special covariant bijections | Complete under revised Definition 6.11 and the standing hypotheses. The fresh audit checks 5103 complete public declaration types and transitive axiom records. Definition 6.11 and Lemma 6.38 were applied together; 6.19 and the other existence constructions remain valid constant-aperture witnesses. | [README](<section 6/README.md>), [review record](<section 6/reference/REVIEW.md>), [receipt](<section 6/verification/status.json>), [applied review PDF](<section 6/reference/review/section6-aperture-revision-applied.pdf>). Reuse these checked constructions rather than reopening completed proofs without a concrete incompatibility. |
-| 7. Integrating proper invariant sets | Next active work. Its main text still has the old scalar Definition 7.2 and old scalar kernel conclusion in 7.26. No Section 7 Lean library or complete kernel theorem has been implemented here. | Synchronize 7.2, construct variable blowups and their VF lifts, prove the full congruence/kernel chain, and revise 7.26 and its comparisons. The detailed plan is below. |
-| 8. Motivic Milnor fiber | Not completed here. Its main text was deliberately left unchanged. Some algebraic specialization and geometric support lemmas exist in Section 6, but the full equivariant geometric trace and specialization assembly remain open. | [Section 8 handoff](<section 8/SECTION6-HANDOFF.md>). Check fixed-order coefficient comparison, rationality/limit and Theorem 8.11 against the enlarged relative ideal. Do not infer preservation of the final values merely from Section 4 compatibility. |
+| 7. Integrating proper invariant sets | Complete: all numbered results are formalized, including Definition 7.2 with bounded variable apertures, Lemmas 7.10–7.23, Proposition 7.24, Theorem 7.26 with `J_var` and Corollary 7.27 as ring maps. The object form of Lemma 7.12 for blowups with a locus stays at class level (author's decision of November 20); later results use only the class form. | [Status](<section 7/STATUS.md>), [coverage](<section 7/COVERAGE.md>), [receipt](<section 7/verification/status.json>). |
+| 8. Motivic Milnor fiber | Complete: Lemmas 8.3, 8.5, 8.6 and 8.9, Theorem 8.11, (z:coeff:change), Remarks 8.14 and 8.15, for `X = 𝔸^d` and for smooth affine `X` with the étale chart as an explicit hypothesis. Review batches B01–B10 are applied; §8.1.1, Lemma 8.7 and the general claims of Remark 8.13 were deleted by the author (B06). | [Plan](<section 8/PLAN.md>), [Lean interfaces](<section 8/LEAN-INTERFACE.md>), [cited inputs](<section 8/CITED-INPUTS.md>), [receipt](<section 8/verification/status.json>). |
 
 Sections 2–4 being complete in documented contexts does not mean that every
 legacy interface or every cited external theorem has been eliminated. Eight

@@ -3,24 +3,24 @@
 Lean formalization and annotated manuscript for Forey and Yin's paper.
 
 **Start with [HANDOFF.md](HANDOFF.md)** for the current status of Sections
-1–8, the author-approved workflow, exact build instructions and the next
-Section 7 proof tasks. It is written for an agent continuing in another
-program from this public repository and the original PDF/referee report
-supplied separately by the author.
+1–8, the author-approved workflow and exact build instructions. It is written
+for an agent continuing in another program from this public repository and
+the original PDF/referee report supplied separately by the author.
 
 - [Working manuscript](<section 2/reference/diamond_integral_revision_annotated.tex>)
 - [Project instructions](AGENTS.md)
 - [Upstream weighted-degree-zero compatibility audit](UPSTREAM-WEIGHTED-ZERO-AUDIT.md)
-- [Section 7 handoff](<section 7/SECTION6-HANDOFF.md>)
-- [Section 8 handoff](<section 8/SECTION6-HANDOFF.md>)
+- [Section 7 status](<section 7/STATUS.md>) and [receipt](<section 7/verification/status.json>)
+- [Section 8 plan](<section 8/PLAN.md>) and [receipt](<section 8/verification/status.json>)
 - [Shared-foundation migration verification](verification/shared-foundation.json)
 - [Weighted-degree-zero baseline verification](verification/upstream-weighted-zero-upgrade/status.json)
 - [Original aperture-revision verification](<section 6/verification/aperture-revision/integrated-audits.json>)
 
-The checked baseline includes completed Sections 2–6 in their recorded
-scopes, including revised Definition 6.11. Section 7's synchronized aperture
-and kernel assembly is the next active task; Section 8 remains downstream.
-Historical planning notes do not supersede current coverage maps and receipts.
+The checked baseline includes completed Sections 2–8 in their recorded
+scopes, including revised Definition 6.11, the synchronized Section 7
+aperture and kernel assembly (Theorem 7.26 with `J_var`), and Section 8 for
+`X = 𝔸^d` and smooth affine `X`. Historical planning notes do not supersede
+current coverage maps and receipts.
 
 The pinned [hilbert-mathlib](https://github.com/daviddhilbert/hilbert-mathlib)
 dependency now owns 65 reusable modules formerly implemented here, within the

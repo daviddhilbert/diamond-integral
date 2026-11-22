@@ -89,7 +89,10 @@ in `reference/proposed-revisions/R054-approved.patch` and `R054-approval.json`.
 
 The four reviewed §3 items R050, R051, R053 and R054 are now resolved by
 author approval. R052 was withdrawn in the supplied report. No manuscript
-approval is pending. The original proposal PDFs remain as review history.
+approval is pending. November 21: the clear typos R048 ("denotes") and R049
+(missing full stop) are corrected under the standing authorization for
+typos; R047, an optional clarification of the Grothendieck-construction
+convention, is left open for the author. The original proposal PDFs remain as review history.
 The author now requests sustained work on the actual formalization.
 
 The §3 main statements were checked independently before the referee

@@ -67,10 +67,11 @@ public declaration's complete type and transitive axioms. The allowed
 logical principles are `propext`, `Classical.choice` and `Quot.sound`.
 The fresh receipt records the exact source hashes and package pins.
 
-Section 7 must apply the corresponding 7.2 change and prove its revised
-kernel theorem for the explicit relative ideal. Section 8 must check its
-geometric specialization. Those tasks are deferred to their own sessions;
-proof support here does not certify their completed assemblies. See `reference/REVIEW.md`, `reference/downstream-handoff.txt`, and the
+Section 7 has since applied the corresponding 7.2 change and proved its
+revised kernel theorem for the explicit relative ideal (Theorem 7.26), and
+Section 8 has checked its geometric specialization (Lemma 8.3, Theorem 8.11);
+see their receipts. The `unfinished` list in this section's receipt predates
+that work. See `reference/REVIEW.md`, `reference/downstream-handoff.txt`, and the
 Section 7–8 `SECTION6-HANDOFF.md` notes.
 The earlier chronological record is retained in
 `verification/history/section6-README-before-aperture-adoption.md`.

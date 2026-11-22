@@ -1556,7 +1556,7 @@
     "lakefile.toml": "d6ac38f758ae2fe6abed689a5d4c7d07166027a813d5235cab78c22681ff5518",
     "lake-manifest.json": "4f0ab2b8a2144ce82d2d8910ec2beb6cf3f21fffcd610bd56cb0415b5bf88ac6",
     "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
-    "ACCEPTED-CITED-RESULTS.md": "2a6f42ef5f82e18d502ec9bb71d626675f5e24eae45d44291d75b23d9ee906c9"
+    "ACCEPTED-CITED-RESULTS.md": "74518acec216017b35e8154724881b9fd61ce137050381da4a74f8f282b8e946"
   },
   "integration_compatibility_patch": {
     "base_revision": "5a69a5e4f57045f123fdd593889a0005e7b4e16f",
@@ -1626,7 +1626,7 @@
       ]
     }
   },
-  "manuscript_sha256": "36d4c11a33ecfa44b517a0ac41cae903083d164efb9ead18d695bcd5d82eee58",
+  "manuscript_sha256": "e4b1186c65f40f4261b8c5560b86a0f3e5786a2588bc44a947331f7d776c5538",
   "audit_source_sha256": "b6a7c8ffcc1a1cf0c55e1deb678c8111dc87e15b740b18315d9eb592cad5905f",
   "audit_log_sha256": "ec339ed96cf8d15954bfca6afac7f43ce10b147f270326f5a773937dc05c6f97",
   "public_theorems": [

@@ -89,6 +89,9 @@ the integer part kills all of `J_var`.
 
 ## Stages D–E: truncations, Lemma 8.6, jets, Remark 8.15 — done (2026-11-21)
 
+Audit: `section 8/verify.py` builds the section and checks the complete type and transitive axioms of
+all 1500 public declarations; receipt `section 8/verification/status.json` (PASS, 2026-11-21).
+
 - D1 Points rational over ℂ((t^{1/m})) of a proper invariant set; truncations `A[m;β]` as RES
   objects (coefficient lines `L_γ`); Lemma 8.5.
 - D2 One centripetal step induces a bijection of truncations for compatible cutoffs; Lemma 8.6. **Done 2026-11-21** (see the D2 progress list; `chain_teq`, `lift_class`, `milnor_zeta_coeff`).

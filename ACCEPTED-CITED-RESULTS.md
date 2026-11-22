@@ -1,5 +1,34 @@
 # Accepted cited results
 
+**Current status, November 21, 2026.** Every result of [18]–[22] that the
+manuscript uses in a statement or proof is formalized; none remains an
+unproved input of a result in Sections 2–8.
+- [18, Lemmas 3.3, 3.4, 3.8, 3.9, 3.13, Proposition 3.19], used in §2: proved
+  in integration-in-ACVF. The eight Section 2 interfaces have constructors
+  from those proofs (`integration…Input`; for Lemma 3.3
+  `integrationAtomicGammaBaseChangeInput_complete`), and
+  `section 3/Section2CitedInputsDischarged.lean` restates the dependent
+  statements without them. The Γ piecewise rational-affine background is
+  proved (`Section5.GammaQE.gamma_piecewise_rational_affine`).
+- The [18] lift and kernel records of §3 (Proposition 6.18, Theorem 6.19 and
+  the measured variants): all eight have proved producers
+  (`section 3/verification/cited-inputs.json`, `DISCHARGED_BY_LOCAL_PROOF`).
+- [19, Remark 2.28, Lemma 2.29], used in Remark 3.15 (`GLZ:char`): both
+  statements are proved over the full ground
+  (`gammaGround_code_contraction_piecewiseIntegralAffine`,
+  `gammaGroundContext_GammaHom_iff_piecewiseGLZ`), relative only to the
+  approved Reichstein–Youssin input. The old record `YinGammaAffineInput` is
+  used by no result.
+- [18, Lemmas 5.2, 5.6] (§6), [18, Lemmas 3.18, 4.2, 4.4, 4.8, 5.7, 6.3, 6.5,
+  6.8, 6.14, Corollaries 5.8, 6.11] and [21, Lemma 5.36] (§7): Sections 6–8
+  declare no cited-input structures. Their proofs use local proofs or the
+  proved exports of the pinned integration-in-ACVF package, and the
+  Section 6–8 receipts check all transitive axioms.
+- [20], [22, Lemma 2.38], [18, §1] and [18, Definition 6.1] are cited for
+  discussion only.
+
+The authorization and progress notes below are retained as history.
+
 Current author update: [18, Sections 1–3] is now formalized in
 [`daviddhilbert/integration-in-ACVF`](https://github.com/daviddhilbert/integration-in-ACVF).
 [Exact upstream declarations and scope checks](section%202/verification/UPSTREAM-LINKS.md) link the eight
