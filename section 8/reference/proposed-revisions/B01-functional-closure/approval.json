@@ -1,0 +1,8 @@
+{
+  "batch": "B01-functional-closure",
+  "before_sha256": "230fdaa5b117db3c7cd265af122f6cc868fc5c27676047b13dc8a08a3d8e0f3d",
+  "after_sha256": "0f1626e57c7b945702da2a5b8f368cb5ac838eb8c6dd184c0cca5346ee8f6092",
+  "resolved_referee_items": [
+    "R138"
+  ]
+}

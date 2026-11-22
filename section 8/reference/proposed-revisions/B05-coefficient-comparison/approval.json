@@ -1,0 +1,10 @@
+{
+  "batch": "B05-coefficient-comparison",
+  "before_sha256": "7b0b55f02d058dcb4f806a6cb57dada272d9f6d6c663f0a75668d02a8e1ca2b6",
+  "after_sha256": "ad3eab7d12caf2a658f4a7e3a43f42f14484fca6e2f46fdc59b1619ac6494418",
+  "resolved_referee_items": [
+    "R145",
+    "R146",
+    "R173"
+  ]
+}

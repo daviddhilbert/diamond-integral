@@ -1,0 +1,9 @@
+{
+  "batch": "B06-bounded-version",
+  "before_sha256": "ad3eab7d12caf2a658f4a7e3a43f42f14484fca6e2f46fdc59b1619ac6494418",
+  "after_sha256": "0046f9d925ab7e1f2931a984935d3862eed8c899043db8f62f274e51bd73567d",
+  "resolved_referee_items": [
+    "R148",
+    "R155"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "source": "section 2/reference/diamond_integral_revision_annotated.tex",
+  "before_sha256": "6808d5b93f10e71fd60b2fa5775c0bdd7f6913cb9c5c9d68aa24b0e1e467d30d",
+  "after_sha256": "230fdaa5b117db3c7cd265af122f6cc868fc5c27676047b13dc8a08a3d8e0f3d",
+  "resolutions": {
+    "012": "The exponent is corrected to $-md$, as in \\eqref{z:coeff:change}.",
+    "147": "The duplicated article is removed.",
+    "149": "Corrected to ``so as to recover''. The subsection title is left as it is.",
+    "151": "The condition $\\varphi(0)=0$ is added, in agreement with the truncated arcs at $0$ of the introduction and with \\cite[(8.3.3)]{hru:loe:lef}.",
+    "158": "Corrected to ``machinery''."
+  },
+  "unnumbered": [
+    "Opening of 8.1: the phrase \"(with an implicit reduced cross-section)\" removed; Section 5 now adds no cross-section to the language.",
+    "Proof of Theorem 8.11: \"Proposition 8.5.2\" of Hrushovski-Loeser corrected to \"Lemma 8.5.2\" (R154 stays open for its remaining points).",
+    "Remark rem-comp-milnor-fib: \"does involve\" corrected to \"do involve\" (R156 stays open for the citation)."
+  ]
+}

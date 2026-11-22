@@ -1,0 +1,10 @@
+{
+  "batch": "B07-milnor-object",
+  "before_sha256": "0046f9d925ab7e1f2931a984935d3862eed8c899043db8f62f274e51bd73567d",
+  "after_sha256": "256e1775fd3394f2687063bd384e93851bf4b3de5ec31d5aa66caf91ded599c0",
+  "resolved_referee_items": [
+    "R150",
+    "R152",
+    "R153"
+  ]
+}

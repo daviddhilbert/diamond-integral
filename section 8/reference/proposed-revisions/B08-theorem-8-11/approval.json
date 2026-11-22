@@ -1,0 +1,8 @@
+{
+  "batch": "B08-theorem-8-11",
+  "before_sha256": "055996bf332d47b2939cb3c1df540562c8aa5080838f1ab88cd73cad6d84caba",
+  "after_sha256": "25934de0745da8879bd4df39d6bc7ab5fbbeadf96e60b1bc26517602a6286c1d",
+  "resolved_referee_items": [
+    "R154"
+  ]
+}

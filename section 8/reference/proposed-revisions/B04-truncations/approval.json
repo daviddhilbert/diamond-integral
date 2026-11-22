@@ -1,0 +1,9 @@
+{
+  "batch": "B04-truncations",
+  "before_sha256": "2dcbc083e729281cf767a411461c0ae7d94003f73fc5fa7675a15c460aa333fb",
+  "after_sha256": "7b0b55f02d058dcb4f806a6cb57dada272d9f6d6c663f0a75668d02a8e1ca2b6",
+  "resolved_referee_items": [
+    "R143",
+    "R144"
+  ]
+}

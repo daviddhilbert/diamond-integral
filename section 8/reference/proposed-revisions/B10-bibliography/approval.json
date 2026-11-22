@@ -1,0 +1,10 @@
+{
+  "batch": "B10-bibliography",
+  "before_sha256": "5ba676a5fba100987d333349b530ba337a8951ac9d1feafe25286911af943765",
+  "after_sha256": "dbe43cdc216bdc192ebdade203a895908efb3a782d16c446c79121e7e220c96d",
+  "resolved_referee_items": [
+    "R159",
+    "R160",
+    "R161"
+  ]
+}

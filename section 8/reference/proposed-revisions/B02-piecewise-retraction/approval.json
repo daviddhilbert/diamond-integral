@@ -1,0 +1,10 @@
+{
+  "batch": "B02-piecewise-retraction",
+  "before_sha256": "0f1626e57c7b945702da2a5b8f368cb5ac838eb8c6dd184c0cca5346ee8f6092",
+  "after_sha256": "16642f601248e2e55955ff5e78bb59c1a9fb3a4f1977bf3b60ee07847769ced5",
+  "resolved_referee_items": [
+    "R139",
+    "R140",
+    "R141"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "batch": "B03-annular-ideal",
+  "before_sha256": "16642f601248e2e55955ff5e78bb59c1a9fb3a4f1977bf3b60ee07847769ced5",
+  "after_sha256": "2dcbc083e729281cf767a411461c0ae7d94003f73fc5fa7675a15c460aa333fb",
+  "resolved_referee_items": [
+    "R142",
+    "R172"
+  ]
+}
