@@ -179,6 +179,8 @@ wording and gained a dated header or a sentence citing the current receipts.
 - Unnumbered running text was compared only where it carries a construction used later.
 - The Lean build was not rerun from scratch. Sections 2–7 rest on the CI run of `7528a649`;
   Section 8 on its compiled state and the audit rerun described in section 2.
+  Since November 23 the CI workflow builds the whole default target and audits Sections 2–8 on
+  every push to `main`; the migration build of `562edec` rebuilt nearly every module.
 - The numbers cited from the Fubini paper (Lemma 2.1, Notation 7.3, equation (7.1), Notation 7.4)
   were read from its source on the main branch of the Fubini-theorems repository (`d8552cc`). At
   the time of the check that was newer than the pinned commit; the pin is now `5b547c1`, which
