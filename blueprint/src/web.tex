@@ -1,0 +1,17 @@
+\documentclass[11pt]{article}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{hyperref}
+\usepackage[thms=definition+lemma+proposition+theorem+corollary+remark+imported+assumption+formula]{blueprint}
+\usepackage{source_links}
+\usepackage{dependency_graph}
+\input{common}
+\github{https://github.com/daviddhilbert/diamond-integral}
+\begin{document}
+\maketitle
+\noindent\href{dependency-graph.svg}{\textbf{Open the theorem dependency graph}}\par
+The graph records the dependencies between the numbered results of the paper, as the paper's
+proofs use them. Each node links to its statement and to the checked Lean source. This
+documentation build reads the sources; it is not a Lean build or audit.
+\tableofcontents
+\input{content}
+\end{document}

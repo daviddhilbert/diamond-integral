@@ -1,0 +1,15 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[hidelinks]{hyperref}
+\input{common}
+% In print, list the Lean declarations of each node under its heading.
+\newcommand{\lean}[1]{{\raggedright\textit{Lean:} \texttt{\detokenize{#1}}\par}}
+\newcommand{\leanok}{}
+\newcommand{\uses}[1]{}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\input{content}
+\end{document}

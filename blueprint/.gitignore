@@ -1,0 +1,8 @@
+/web/
+/print/
+/lean_decls
+/src/*.paux
+/src/*.log
+/src/dependency-graph.dot
+/src/dependency-graph.svg
+__pycache__/

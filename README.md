@@ -14,6 +14,9 @@ the original PDF/referee report supplied separately by the author.
   referee items and their resolutions (the record of the review)
 - [Final check of November 22](FINAL-CHECK.md): the clean paper, the build and receipts, and the
   paper compared with the Lean statements, section by section
+- [Blueprint](blueprint/README.md): the numbered results of the clean paper with their Lean
+  declarations, formalization status and dependency graph (rendered by
+  `.github/workflows/blueprint.yml`)
 - [Project instructions](AGENTS.md)
 - [Upstream weighted-degree-zero compatibility audit](UPSTREAM-WEIGHTED-ZERO-AUDIT.md)
 - [Section 7 status](<section 7/STATUS.md>) and [receipt](<section 7/verification/status.json>)
@@ -70,6 +73,8 @@ The licence does not cover the paper, which is joint work of Forey and Yin, or
 material reproduced from it: the clean paper
 `paper/bounded-integral-motivic-milnor-fiber.tex` and its PDF, the annotated manuscript
 `section 2/reference/diamond_integral_revision_annotated.tex` and its PDF,
-`section 2/reference/original-upload/`, and the PDF and TeX files in the
-sections' `reference/` folders. Files from third parties keep their own notices
+`section 2/reference/original-upload/`, the PDF and TeX files in the
+sections' `reference/` folders, and the statements and proof outlines of the
+blueprint (`blueprint/nodes.json`, `blueprint/sections.json` and the generated
+`blueprint/src/content.tex`). Files from third parties keep their own notices
 and licences.

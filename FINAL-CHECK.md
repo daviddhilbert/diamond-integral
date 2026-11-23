@@ -38,6 +38,9 @@ formalization. It records what was checked, how, and what was not.
 - No `sorry`, `admit` or `axiom` in the Lean sources; the receipts list only `propext`,
   `Classical.choice` and `Quot.sound`.
 - The five pinned dependency commits exist in public repositories.
+- Later change (November 23): commit `562edec` replaced 48 modules of Sections 3, 4, 7 and 8 by
+  compatibility imports of hilbert-mathlib `3f3efa8` and moved every dependency pin. This check
+  describes the state before that commit; the migration was checked by its own build and audits.
 
 ## 3. Paper against Lean
 
@@ -162,5 +165,6 @@ remark now reads "if A is closed and ∞ does not occur in the RV-coordinates of
 - The Lean build was not rerun from scratch. Sections 2–7 rest on the CI run of `7528a649`;
   Section 8 on its compiled state and the audit rerun described in section 2.
 - The numbers cited from the Fubini paper (Lemma 2.1, Notation 7.3, equation (7.1), Notation 7.4)
-  were read from its source on the main branch of the Fubini-theorems repository, which is newer
-  than the commit pinned in `lake-manifest.json`.
+  were read from its source on the main branch of the Fubini-theorems repository (`d8552cc`). At
+  the time of the check that was newer than the pinned commit; the pin is now `5b547c1`, which
+  contains `d8552cc` and leaves `paper/fubini-theorems.tex` unchanged.
