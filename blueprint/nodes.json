@@ -5756,7 +5756,7 @@
       "thekernel"
     ],
     "lean_status": "formalized",
-    "scope_note": "The source ring is a presentation by objects and relations; that it is the direct sum of the groupifications, and a grading on it, are not Lean statements, and gradedness is stated as: the integral of a degree-$k$ object lies in the degree-$k$ piece (FINAL-CHECK.md, Notes on Section 7).",
+    "scope_note": "The source ring is a presentation by objects and relations; that it is the direct sum of the groupifications, and a grading on it, are not Lean statements, and gradedness is stated as: the integral of a degree-$k$ object lies in the degree-$k$ piece (FINAL-CHECK.md, Notes on Section 7). \\texttt{Closed.theorem\\_7\\_26} is the instance in the Puiseux ambient of Section 5, with every hypothesis supplied.",
     "declarations": [
       {
         "name": "DiamondIntegral.Section7.Theorem726.theorem_7_26",
@@ -5777,10 +5777,10 @@
         "line": 324
       },
       {
-        "name": "DiamondIntegral.Section7.Proposition724Zero.integralZero_bijective",
+        "name": "DiamondIntegral.Section8.Closed.theorem_7_26",
         "provider": null,
-        "file": "section 7/Proposition724Zero.lean",
-        "line": 414
+        "file": "section 8/ClosedStatements.lean",
+        "line": 70
       }
     ]
   },
@@ -6282,7 +6282,7 @@
     "kind": "remark",
     "title": "Hrushovski--Kazhdan, Proposition 10.10(2), fails",
     "statement": "The tensor decomposition of $\\ggk\\,\\mathrm{vol}\\RV[*]$ claimed in Hrushovski--Kazhdan, Proposition 10.10(2), and the surjectivity of the morphisms (8.1.4), (8.1.6) and (8.1.7) of Hrushovski--Loeser do not hold. Let $X = \\{u \\in \\RV : 0 < \\vrv(u) < 1\\}$ and $f(u) = u^2$. Then $(X, f)$ is an object of $\\mathrm{vol}\\RV[1]$ whose class is not the class of a finite disjoint union of products $W \\times \\Delta^\\sharp$ with $W$ in $\\mathrm{vol}\\RES$ and $\\Delta \\sub \\Gamma^l$ definable. In $\\mRV[1]$, by contrast, the identity of $X$ is an isomorphism from $(X, f, 0)$ onto $(X, \\mathrm{id}, \\vrv)$, which lies in the image of $\\mu\\Psi$.",
-    "proof": "Choose $m$ so that the points of the finite sets $W$ are rational over $\\C((t^{1/m}))$ and $2/m$ is below every positive endpoint and weight of the products. Functional closedness of $\\C((t^{1/m}))$ gives a weight-preserving bijection of rational points. The rational point $\\rv(t^{1/m})$ of $X$ has weight $2/m$, which forces a rational point of weight $1/m$ in the union, while no rational point of $X$ has weight $1/m$.",
+    "proof": "Choose $m$ so that the coordinates of the points of the finite sets $W$ have values in $(1/m)\\Z$, $2/m$ is not a weight of a product of the first kind, and $2/m$ lies below the point after which each $\\Delta$ is constant (a definable subset of $\\Gamma$ is a finite union of points and intervals with rational endpoints). A point of $X$ of value $1/m$ has weight $2/m$, so its image lies in a product $W \\times \\Delta^\\sharp$ of the second kind with $2/m \\in \\Delta$, hence $1/m \\in \\Delta$, and the point $(p, \\rv(t^{1/m}))$ of $Y$ has weight $1/m$ and all coordinates with values in $(1/m)\\Z$. Definable maps preserve this lattice of values (functional closedness of $\\C((t^{1/m}))$), so its preimage in $X$ has value in $(1/m)\\Z$ and weight in $(2/m)\\Z$, which does not contain $1/m$.",
     "uses": [
       "jcbG-op",
       "red-D-iso",
@@ -6291,9 +6291,28 @@
     "proof_uses": [
       "cut-to-hensel-substru"
     ],
-    "lean_status": "not formalized",
-    "scope_note": "The explicit object is new mathematics in the final text and has no Lean counterpart (FINAL-CHECK.md, \"Not formalized, and who decided\"); nothing later depends on it.",
-    "declarations": []
+    "lean_status": "formalized",
+    "scope_note": "Lean proves it for any target covered by a part on which the weight takes finitely many values and by products $W \\times \\Delta^\\sharp$ with $W$ finite and $\\Delta$ definable, contained in it, which is more general than the paper's disjoint unions; the proof replaces rational points by their values. The closing comparison with $\\mRV[1]$ is not stated (FINAL-CHECK.md).",
+    "declarations": [
+      {
+        "name": "DiamondIntegral.Section8.Remark87.remark_8_7",
+        "provider": null,
+        "file": "section 8/Remark87.lean",
+        "line": 165
+      },
+      {
+        "name": "DiamondIntegral.Section8.Remark87.germ",
+        "provider": null,
+        "file": "section 8/Remark87.lean",
+        "line": 104
+      },
+      {
+        "name": "DiamondIntegral.Section8.Hm.map_lattice",
+        "provider": null,
+        "file": "section 8/MapLattice.lean",
+        "line": 171
+      }
+    ]
   },
   {
     "id": "dag-loc",
@@ -6440,8 +6459,14 @@
       "lat-zeta"
     ],
     "lean_status": "formalized",
-    "scope_note": "Lean proves it for $X = \\A^d$ with any polynomial $f$ (\\texttt{theorem\\_8\\_11\\_milnor}, checked in FINAL-CHECK.md, section 3) and, under the \\'etale chart hypothesis taken by the author's instruction of 2026-11-21 (section 8/CITED-INPUTS.md), for smooth $X$ given near $0$ by polynomial equations in $\\A^N$ (\\texttt{theorem\\_8\\_11\\_smooth}); the RV-side form \\texttt{theorem\\_8\\_11\\_rv\\_ring} holds for every element of $\\ggk \\mRV^{\\db}[*]$, its zeta series using the integer-exponent part of $h_m$. As in most Lean statements of the project, the encoding hypotheses (a valuation compatible with the language and nontrivial on the base) are variables (FINAL-CHECK.md, section 3).",
+    "scope_note": "Lean proves it for $X = \\A^d$ with any polynomial $f$ (\\texttt{theorem\\_8\\_11\\_milnor}, checked in FINAL-CHECK.md, section 3) and, under the \\'etale chart hypothesis taken by the author's instruction of 2026-11-21 (section 8/CITED-INPUTS.md), for smooth $X$ given near $0$ by polynomial equations in $\\A^N$ (\\texttt{theorem\\_8\\_11\\_smooth}); the RV-side form \\texttt{theorem\\_8\\_11\\_rv\\_ring} holds for every element of $\\ggk \\mRV^{\\db}[*]$, its zeta series using the integer-exponent part of $h_m$. In these theorems the encoding hypotheses (a valuation compatible with the language and nontrivial on the base) are variables; \\texttt{Closed.theorem\\_8\\_11} supplies them, with the Puiseux ambient of Section 5, so it holds for every complex polynomial with no hypothesis.",
     "declarations": [
+      {
+        "name": "DiamondIntegral.Section8.Closed.theorem_8_11",
+        "provider": null,
+        "file": "section 8/ClosedStatements.lean",
+        "line": 87
+      },
       {
         "name": "DiamondIntegral.Section8.Milnor.theorem_8_11_milnor",
         "provider": null,
@@ -6453,12 +6478,6 @@
         "provider": null,
         "file": "section 8/MilnorSmooth.lean",
         "line": 291
-      },
-      {
-        "name": "DiamondIntegral.Section8.Hm.theorem_8_11_vf",
-        "provider": null,
-        "file": "section 8/Theorem811.lean",
-        "line": 169
       },
       {
         "name": "DiamondIntegral.Section8.Hm.theorem_8_11_rv_ring",
@@ -6507,19 +6526,13 @@
       "db-to-novol"
     ],
     "lean_status": "formalized",
-    "scope_note": "Lean proves $\\Theta \\circ \\mathbb E^\\diamond \\circ \\int^\\diamond = \\Vol$ on every object of $\\mVF^\\diamond[k]$ (\\texttt{remark\\_8\\_14}), hence $\\mathcal S_f = \\Vol([\\mathcal X_f])$ for $X = \\A^d$ (\\texttt{remark\\_8\\_14\\_milnor}, \\texttt{milnor\\_fiber\\_vol}) and, under the \\'etale chart hypothesis of 2026-11-21 (section 8/CITED-INPUTS.md), for smooth $X$ (\\texttt{milnor\\_fiber\\_vol\\_smooth}). The commentary of the first paragraph (Borisov's zero divisor, $\\mathcal X_t$ not proper invariant) has no Lean statement.",
+    "scope_note": "Lean proves $\\Theta \\circ \\mathbb E^\\diamond \\circ \\int^\\diamond = \\Vol$ on every object of $\\mVF^\\diamond[k]$ (\\texttt{remark\\_8\\_14}), hence $\\mathcal S_f = \\Vol([\\mathcal X_f])$ for $X = \\A^d$ (\\texttt{remark\\_8\\_14\\_milnor}, \\texttt{milnor\\_fiber\\_vol}) and, under the \\'etale chart hypothesis of 2026-11-21 (section 8/CITED-INPUTS.md), for smooth $X$ (\\texttt{milnor\\_fiber\\_vol\\_smooth}). The commentary of the first paragraph (Borisov's zero divisor, $\\mathcal X_t$ not proper invariant) has no Lean statement. \\texttt{Closed.remark\\_8\\_14} states it for $X = \\A^d$ with every hypothesis supplied.",
     "declarations": [
       {
         "name": "DiamondIntegral.Section8.VolComparison.remark_8_14",
         "provider": null,
         "file": "section 8/VolComparison.lean",
         "line": 233
-      },
-      {
-        "name": "DiamondIntegral.Section8.VolComparison.remark_8_14_milnor",
-        "provider": null,
-        "file": "section 8/VolComparison.lean",
-        "line": 258
       },
       {
         "name": "DiamondIntegral.Section8.VolComparison.milnor_fiber_vol",
@@ -6532,6 +6545,12 @@
         "provider": null,
         "file": "section 8/MilnorSmooth.lean",
         "line": 298
+      },
+      {
+        "name": "DiamondIntegral.Section8.Closed.remark_8_14",
+        "provider": null,
+        "file": "section 8/ClosedStatements.lean",
+        "line": 95
       }
     ]
   },
@@ -6556,7 +6575,7 @@
       "rem-comp-milnor-fib"
     ],
     "lean_status": "formalized",
-    "scope_note": "Lean proves the integral and volume identities for $X(\\mathcal M)$ cut out by any polynomial equations (\\texttt{remark\\_8\\_15\\_integral}, \\texttt{remark\\_8\\_15}) and links them to $\\mathcal S_f$ for $X = \\A^d$ (\\texttt{remark\\_8\\_15\\_milnor}) and, under the \\'etale chart hypothesis of 2026-11-21 (section 8/CITED-INPUTS.md), for smooth $X$ (\\texttt{remark\\_8\\_15\\_milnor\\_smooth}). The closing paragraph on earlier proofs in the literature is commentary.",
+    "scope_note": "Lean proves the integral and volume identities for $X(\\mathcal M)$ cut out by any polynomial equations (\\texttt{remark\\_8\\_15\\_integral}, \\texttt{remark\\_8\\_15}) and links them to $\\mathcal S_f$ for $X = \\A^d$ (\\texttt{remark\\_8\\_15\\_milnor}) and, under the \\'etale chart hypothesis of 2026-11-21 (section 8/CITED-INPUTS.md), for smooth $X$ (\\texttt{remark\\_8\\_15\\_milnor\\_smooth}). The closing paragraph on earlier proofs in the literature is commentary. \\texttt{Closed.remark\\_8\\_15} states the identity with $\\mathcal S_f$ for $X = \\A^d$ with every hypothesis supplied.",
     "declarations": [
       {
         "name": "DiamondIntegral.Section8.Remark815.remark_8_15_integral",
@@ -6571,16 +6590,16 @@
         "line": 856
       },
       {
-        "name": "DiamondIntegral.Section8.Remark815.remark_8_15_milnor",
-        "provider": null,
-        "file": "section 8/Remark815.lean",
-        "line": 925
-      },
-      {
         "name": "DiamondIntegral.Section8.Remark815.remark_8_15_milnor_smooth",
         "provider": null,
         "file": "section 8/Remark815.lean",
         "line": 932
+      },
+      {
+        "name": "DiamondIntegral.Section8.Closed.remark_8_15",
+        "provider": null,
+        "file": "section 8/ClosedStatements.lean",
+        "line": 103
       }
     ]
   }

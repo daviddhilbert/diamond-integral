@@ -1,5 +1,5 @@
 {
-  "proof_revision": "562edec1e604838a97c6a0d3fa2a1bdf43d10d27",
+  "proof_revision": "096087793e83d3f177527327109b23dddf3620bf",
   "evidence": "The Lean build workflow (.github/workflows/lean.yml) builds the default target, which imports Sections 2-8, and runs the audit of each section. Each section receipt (section N/verification) lists the audited declarations with their printed types and axioms; only propext, Classical.choice and Quot.sound occur. The blueprint links a declaration only if a receipt lists it, or, for results recalled from the Fubini paper, if the public contract of the pinned Fubini-theorems package lists it. This documentation build reads the sources; it does not run Lean.",
   "pins": {
     "acvf_qe": "1018f7a36f0c2435e9146915ef7a0f60ba19dbd4",
@@ -11,15 +11,15 @@
   "sha256": {
     "paper/bounded-integral-motivic-milnor-fiber.tex": "dc23cb83fc1f5a202d9e1bbc814eaf44c42ad94524ca94525ba316ab5e0ba2e3",
     "lake-manifest.json": "adb89d87c6207291c8f275cd0b3359794a6300fd6012cdf3e4f923a0714ea567",
-    "lakefile.toml": "10ecda852e1b7d3c538d267becafc0cffdcfa70cfb1a10bdd5e581d5835c9d5d",
+    "lakefile.toml": "9ab227befc1ea81aacd333aacc28be66b9538d8d692a980bbf0a22a9e6842402",
     "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
     "SHARED-FOUNDATION.json": "4762307e03d3e3db99c0eef7214a3c02c77096c97f6abc93f025fae05c85f3c7",
     "EXTRACTED-FOUNDATIONS.json": "d19b871bbe019ca51b250d868a83a04c4f74528f34ece91178cac5f18804ec45",
-    "section 2/verification/status.json": "021bbba601c35e35c96b619a6b8448102d50b2fbf3203c7c1c0871f83696648a",
-    "section 3/verification/VERIFICATION.json": "e6ec58de30e38d2578a7d7d375a0d36927b4352cd748b8d94d48be55a3871101",
-    "section 4/verification/status.json": "fa06474c628d4484a453495deaac158a3bf3f5b25ebb64799edb5599d9bde18d",
-    "section 6/verification/status.json": "69e91e95bfaca06913e025603b7f15d38cf87bf3c30c2e2e24dfe1fe1f482376",
+    "section 2/verification/status.json": "8b30c0a03c1b94984b2ff65dda1d3fd8bdceee0f52b009bf80ad1d6436ae8038",
+    "section 3/verification/VERIFICATION.json": "92d17ac734227c717ad526c2969014fe4dac7e75d1ea4d9041ad7140838c7d2a",
+    "section 4/verification/status.json": "24c7432be10d9dd7da55fce763e506a874e9dd9c6d96d6463deb4c1dc1afae3b",
+    "section 6/verification/status.json": "3727e356de6a16fa26e111bb2ec00ff3509d8e26cb345bbdb8a7329eb07cc17b",
     "section 7/verification/status.json": "48eaa898cf79dfbf665618a6c68774c9df163fd30713ead30cde76d3262c7724",
-    "section 8/verification/status.json": "a693f22c18af4dfcfadcb254c3e6223df153e79a206d98d48618d207b5942c31"
+    "section 8/verification/status.json": "1c2a8704c62b1e1c1c4e9136e3ae25c811644be590ffb684931ec8d5b6bbb5f0"
   }
 }
