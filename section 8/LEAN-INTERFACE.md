@@ -83,7 +83,7 @@ Standing variables: `{M : Type} [LRV.Structure M] [M ⊨ Axioms.ACVF]`. One-sort
   Finite levels on RV: `HasFrameSupport N a A`, `original_finite_frame_partition`,
   `rational_tuple_common_level`.
 - Roots in Γ: `gammaDefinableClosure_nonzero_power_root d hd a δ hδ (ha : a ^ d = δ)`.
-- Lemma 5.12: `monomial_decomposition_5_12`, `GroundMonomialPiece`.
+- Lemma 5.1 (numbered 5.12 until November 23): `monomial_decomposition_5_12`, `GroundMonomialPiece`.
 
 ## Built in Section 8 (formerly missing)
 

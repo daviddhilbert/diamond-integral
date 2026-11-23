@@ -7,7 +7,13 @@ Lean formalization and annotated manuscript for Forey and Yin's paper.
 for an agent continuing in another program from this public repository and
 the original PDF/referee report supplied separately by the author.
 
-- [Working manuscript](<section 2/reference/diamond_integral_revision_annotated.tex>)
+- [Clean paper](paper/bounded-integral-motivic-milnor-fiber.pdf) ([TeX](paper/bounded-integral-motivic-milnor-fiber.tex)):
+  the manuscript without the referee items and resolution notes, generated from the
+  working manuscript by `paper/make_clean.py`; every theorem and equation number is the same
+- [Working manuscript](<section 2/reference/diamond_integral_revision_annotated.tex>), with the
+  referee items and their resolutions (the record of the review)
+- [Final check of November 22](FINAL-CHECK.md): the clean paper, the build and receipts, and the
+  paper compared with the Lean statements, section by section
 - [Project instructions](AGENTS.md)
 - [Upstream weighted-degree-zero compatibility audit](UPSTREAM-WEIGHTED-ZERO-AUDIT.md)
 - [Section 7 status](<section 7/STATUS.md>) and [receipt](<section 7/verification/status.json>)
@@ -61,7 +67,8 @@ implementations and the unchanged mathematical hypotheses.
 This repository is licensed under the [Apache License, Version 2.0](LICENSE).
 
 The licence does not cover the paper, which is joint work of Forey and Yin, or
-material reproduced from it: the annotated manuscript
+material reproduced from it: the clean paper
+`paper/bounded-integral-motivic-milnor-fiber.tex` and its PDF, the annotated manuscript
 `section 2/reference/diamond_integral_revision_annotated.tex` and its PDF,
 `section 2/reference/original-upload/`, and the PDF and TeX files in the
 sections' `reference/` folders. Files from third parties keep their own notices

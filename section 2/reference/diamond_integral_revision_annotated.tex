@@ -1088,7 +1088,7 @@ Suppose that $\Gamma(\mathbb S)$ is nontrivial. Let $A$ be an atomic set. Then $
 Let $\ga \sub \VF^n$ be an atomic open polydisc. Then $\ga$ is $t$-atomic for all $t \in \RV$.
 \end{lem}
 \begin{proof}
-{\color{ResolutionGreen}If disc parameters have previously been named, the unary assertion follows directly from \cite[Lemma~3.9]{Yin:int:acvf}, in its stated $\bb U^{\bullet}$ context: for any formula $\varphi(x,t)$ over this base, the definable map $x\mapsto\{s\in\RV:\varphi(x,s)\}$ is constant on the atomic open disc. Thus naming $t$ does not split its type. For a real/$\Gamma$ ground base the following argument also applies.} For the case $n=1$, if $\ga$ were not $t$-atomic then, by Corollary~\ref{open:disc:def:point} and Lemma~\ref{dcl:to:ac}, it would contain a point algebraic over the fixed ground base. This point belongs to a finite ground-definable set. Atomicity would then force the whole infinite open disc $\ga$ to lie in that finite set, a contradiction. For the case $n>1$, by induction on $n$, $\ga_1$ is $t$-atomic and for every $a \in \ga_1$, $\ga_{>1}$ is $(a, t)$-atomic. So $\ga$ cannot have a nonempty proper $t$-definable subset.
+{\color{ResolutionGreen}If disc parameters have previously been named, the unary assertion follows directly from \cite[Lemma~3.9]{Yin:int:acvf}, in its stated $\bb U^{\bullet}$ context: for any formula $\varphi(x,t)$ over this base, the definable map $x\mapsto\{s\in\RV:\varphi(x,s)\}$ is constant on the atomic open disc. Thus naming $t$ does not split its type. Without disc parameters, the following argument applies.} For the case $n=1$, if $\ga$ were not $t$-atomic then, by Corollary~\ref{open:disc:def:point} and Lemma~\ref{dcl:to:ac}, it would contain a point algebraic over $\mathbb S$. This point belongs to a finite definable set. Atomicity would then force the whole infinite open disc $\ga$ to lie in that finite set, a contradiction. For the case $n>1$, by induction on $n$, $\ga_1$ is $t$-atomic and for every $a \in \ga_1$, $\ga_{>1}$ is $(a, t)$-atomic. So $\ga$ cannot have a nonempty proper $t$-definable subset.
 \end{proof}
 
 % BEGIN REFEREE INSERTION R029
@@ -1154,7 +1154,7 @@ Let $A \sub \VF^n$ be a definable set and $f : A \fun \mdl P(\VF)$ a definable f
 \begin{proof}
 By compactness, there is a uniform finite bound $N$ on the cardinalities of the fibers $f(a)$. For an open-polydisc code $d$, write $\ga_d$ for its polydisc and let $P(d)$ say that $\rv\circ(f\rest\ga_d)$ is constant and that the image of each of its single-valued $\rv$-tagged branches is a point or an open disc. This is a first-order condition: use the finite disjunction over the possible numbers $0\leq k\leq N$ of distinct tags, and express a point or an open disc by its usual uniform codes. Injectivity of $\rv$ on each fiber gives uniqueness of each tagged branch.
 
-For $a\in A$, let $D_a\sub A$ be the complete type-definable set containing $a$. By Lemma~\ref{atom:self}, every open polydisc $\ga_d\sub D_a$ is $\code\ga_d$-atomic. Lemma~\ref{atomic:open:multidisc}, over the ground base together with this disc parameter, therefore gives $P(d)$. If no finite part of the type of $a$ had this property for every polydisc contained in it, compactness would produce an open-polydisc code $d$ with $\ga_d\sub D_a$ and $\neg P(d)$, a contradiction. Thus there is a ground-definable set $A_a\sub A$ containing $a$ such that $P(d)$ holds whenever $\ga_d\sub A_a$. A second application of compactness gives finitely many such sets covering $A$; take the partition they generate.
+For $a\in A$, let $D_a\sub A$ be the complete type-definable set containing $a$. By Lemma~\ref{atom:self}, every open polydisc $\ga_d\sub D_a$ is $\code\ga_d$-atomic. Lemma~\ref{atomic:open:multidisc}, over $\mathbb S$ together with this disc parameter, therefore gives $P(d)$. If no finite part of the type of $a$ had this property for every polydisc contained in it, compactness would produce an open-polydisc code $d$ with $\ga_d\sub D_a$ and $\neg P(d)$, a contradiction. Thus there is a definable set $A_a\sub A$ containing $a$ such that $P(d)$ holds whenever $\ga_d\sub A_a$. A second application of compactness gives finitely many such sets covering $A$; take the partition they generate.
 
 For a polydisc $\ga$ in a partition piece, choose its finitely many distinct tags $t_{\ga j}\in\RV_\infty$. The full graph of its $j$th branch is
 \[
@@ -1452,7 +1452,7 @@ Although the $\Gamma$-sort is essentially an \omin-minimal group, curve selectio
 Let $A\subseteq\VF^n$ be definable, closed and bounded, and let $f:A\fun\VF^m$ be definable and continuous. Then $f(A)$ is also closed and bounded.
 \end{lem}
 \begin{proof}
-The conclusion is geometric, so we may temporarily enlarge the parameter base to a small $\VF$-generated base over which all the data are definable. The standing nontriviality of the ground valuation is preserved. Over this base, and after naming any additional finite $\VF$ tuple, algebraic closure is a model of $\ACVF(0,0)$. Elementarity and compactness therefore give finite nonempty definable choices in the nonempty families below. No choice over the original parameter base is asserted.
+The conclusion is geometric, so we may temporarily enlarge the parameter base to a small $\VF$-generated base over which all the data are definable. The standing nontriviality of the ground valuation is preserved. Over this base, and after naming any additional finite $\VF$ tuple, algebraic closure is a model of $\ACVF(0,0)$. Elementarity and compactness therefore give finite nonempty definable choices in the nonempty families below. No choice over $\mathbb S$ itself is asserted.
 
 First let $b\in\overline{f(A)}\setminus f(A)$, where this closure is affine, and name $b$. For every $c\in\MM\setminus\{0\}$ the set
 \[
@@ -1566,7 +1566,7 @@ For the general case, each nonempty fiber image $p(A_t)$ is bounded above and be
 \[
 \alpha_t=\inf p(A_t),\qquad \beta_t=\sup p(A_t).
 \]
-Their defining greatest-lower-bound and least-upper-bound formulas make these functions definable over the original parameter base. Thus
+Their defining greatest-lower-bound and least-upper-bound formulas make these functions definable. Thus
 \[
 t\efun\gamma_t=\max\{|\alpha_t|,|\beta_t|,0\}
 \]
@@ -1668,7 +1668,7 @@ Consequently, the graph of the restricted function is closed relative to
 \[
 \bigl(A\cap((I\setminus I')\times\VF^{n-1})\bigr)\times\mathbb P^1(\VF).
 \]
-The closed-graph criterion (Lemma~\ref{closed:gra}) proves the asserted continuity. This spells out the relative-closure step in the original implication.
+The closed-graph criterion (Lemma~\ref{closed:gra}) proves the asserted continuity.
 \end{proof}
 
 % BEGIN REFEREE INSERTION R046
@@ -1871,8 +1871,8 @@ group over $\K$ with character group $L$. Its two diagonal
 representations have weights $\bar\alpha_i$ and $\bar\beta_i$.
 Every character $\chi:L\fun\K^\times$ extends to $\Gamma/\Delta$,
 since $\K^\times$ is divisible. The resulting RV twist
-$u\efun\chi(\vrv(u))u$ fixes the residue field, every Gamma value,
-and every old-ground RV point. It preserves the RV group operations
+$u\efun\chi(\vrv(u))u$ fixes the residue field, every $\Gamma$ value,
+and every definable RV point. It preserves the RV group operations
 and residue addition, so relative RV quantifier elimination makes
 it preserve every $\mathbb S$-definable RV relation, including the
 graph of $F$. The birational map of the two residue tori is thus
@@ -1926,7 +1926,7 @@ We shall abbreviate $\otimes_{\gsk \Gamma^{\fin}[*]}$, $\otimes_{\gsk \mG^{\fin}
 
 \begin{prop}[Positive tensor presentation]\label{red:D:iso}
 Let $T_+$ and $T_{\mu,+}$ be the sources of $\Psi$ and ${\mu}\Psi$,
-respectively. All definitions below use the original ground $\mathbb S$.
+respectively. All definitions below use the ground structure $\mathbb S$.
 For a $\RES$ object with underlying set $X$, put
 \[
  \Lambda_X=\{\delta\in\Gamma\cap\dcl^{\mathrm{eq}}(\mathbb S):
@@ -1956,33 +1956,33 @@ isomorphisms of graded semirings
 \]
 \end{prop}
 \begin{proof}
-The finite product normal form over the original ground partitions
+The finite product normal form over the ground structure $\mathbb S$ partitions
 every $\RV[k]$ object into pieces isomorphic to
-$X\times U^\sharp$, where $X$ has finite Gamma support and has a
+$X\times U^\sharp$, where $X$ has finite $\Gamma$ support and has a
 finite label of degree $k-m$, and $U\in\Gamma[m]$. For a measured
-object the combined weight on a RES factor has finite original-ground
-Gamma image. Partition by these values and use the shared finite
-measured Gamma factor in degree zero to transfer each constant weight
-to the Gamma factor. We may therefore normalize every RES combined
+object the combined weight on a RES factor has finite
+$\Gamma$-image. Partition by these values and use the shared finite
+measured $\Gamma$ factor in degree zero to transfer each constant weight
+to the $\Gamma$ factor. We may therefore normalize every RES combined
 weight to $0$ and retain the whole weight as a definable function
-$\lambda$ on its Gamma factor. This gives surjectivity of both positive
+$\lambda$ on its $\Gamma$ factor. This gives surjectivity of both positive
 tensor maps, including finite and degree-zero factors.
 
 For an admissible $\delta$, choose a witness $c:X\to\delta^\sharp$.
 Multiplication of the $i$th free RV coordinate by $c(x)$ gives an
-original-ground definable bijection between the two product lifts;
-division by $c(x)$ is its inverse. Its Gamma-Jacobian is $\delta$,
+definable bijection between the two product lifts;
+division by $c(x)$ is its inverse. Its $\Gamma$-Jacobian is $\delta$,
 so the prescribed target form $\sigma_\delta$ makes the map measured.
 Thus the displayed generating pairs lie in the respective kernels.
 The pair depends on $\delta$, not on the choice of witness.
 
 For the converse, work in one total degree $k$ and represent the two
 positive tensors by finite disjoint unions of product objects.
-Let $m$ be the largest Gamma arity on either side of a definable
+Let $m$ be the largest $\Gamma$ arity on either side of a definable
 RV bijection $F$ between the product unions. In total degree $k$, all
 maximal-arity factors have RES degree $k-m$. We induct on $m$.
 
-At a full-rank Gamma type in a source product and a residue type in
+At a full-rank $\Gamma$ type in a source product and a residue type in
 its RES factor, the angular normal form of the graph gives, on a
 product neighbourhood,
 \[
@@ -1990,42 +1990,42 @@ product neighbourhood,
  M\in\operatorname{GL}_m(\mathbb Z),\qquad
  \vrv(c(x))=\boldsymbol\delta\text{ constant}.
 \]
-Here the Gamma rank and the total degree force the target free arity
+Here the $\Gamma$ rank and the total degree force the target free arity
 and the RES degree to agree with those of the source. The residue
 output depends only on $x$. After fixing $x$, the generic full-fibre
 monomial calculation gives coefficients over $\mathbb S(x)$, which
 are retained as definable functions of $x$. Injectivity forces the
-square exponent matrix to be unimodular. Finite Gamma support makes
+square exponent matrix to be unimodular. Finite $\Gamma$ support makes
 the values of those coefficients constant after a residue partition,
-and their values are definable over the original ground. Whole-fibre
+and their values are definable. Whole-fibre
 surjectivity then forces $h$ to be injective; shrinking and taking its
 image makes it a RES bijection. Product completeness and compactness
 extend these formulas to definable product neighbourhoods. No
-original-ground RV representative of $\boldsymbol\delta$ is chosen.
+definable RV representative of $\boldsymbol\delta$ is chosen.
 
 Compactness supplies finitely many such product neighbourhoods, with
-exceptions in finitely many proper original-ground integral-character
-hyperplanes. A branch with smaller target Gamma arity lies entirely
+exceptions in finitely many proper definable integral-character
+hyperplanes. A branch with smaller target $\Gamma$ arity lies entirely
 over such hyperplanes. Apply the same construction to $F^{-1}$ and
 reverse those matches too. A common finite Boolean partition of the
-source RES and Gamma factors selects disjoint product cells. The
+source RES and $\Gamma$ factors selects disjoint product cells. The
 two-sided cut property gives product images and retains every original
 patch image, including the inverse cover. On each matched cell, the
-integral monomial part is already a Gamma morphism and the elementary
+integral monomial part is already a $\Gamma$ morphism and the elementary
 pairs handle the coefficient translations one coordinate at a time.
 
 Keep the matched target boxes whole and partition their complements by
 a finite product grid. These are positive tensor identities on both
 sides. Restricting $F$ to the actual two complements supplies the
 residual comparison directly. Every nonempty residual maximal-arity
-Gamma factor is covered by the finite exceptional hyperplanes.
+$\Gamma$ factor is covered by the finite exceptional hyperplanes.
 Partition by the first applicable hyperplane. A primitive integral
 equation and a unimodular coordinate change put one coordinate at a
-fixed original-ground value. Finite-Gamma balancing transfers that
-coordinate into RES, lowering Gamma arity by one and preserving total
+fixed definable value. Finite-$\Gamma$ balancing transfers that
+coordinate into RES, lowering $\Gamma$ arity by one and preserving total
 degree. The old lower-arity factors already satisfy the smaller bound.
 Apply induction to the residual tensors and add the matched congruences.
-For $m=0$, all Gamma factors are finite and are absorbed into RES, where
+For $m=0$, all $\Gamma$ factors are finite and are absorbed into RES, where
 the positive RES embedding into RV gives equality. Finally reassemble
 the finitely many total degrees. This proves the unmeasured kernel
 assertion without cancelling matched summands.
@@ -2035,22 +2035,22 @@ sides. A matched rectangle then satisfies
 \[
  \lambda(\gamma)=\nu(M\gamma+\boldsymbol\delta).
 \]
-The unimodular Gamma morphism and the elementary translated pairs
-respect these complete combined weights. Retain each parent's Gamma
+The unimodular $\Gamma$ morphism and the elementary translated pairs
+respect these complete combined weights. Retain each parent's $\Gamma$
 weight on every cell of the finite product grid. On the disjoint union
-of native charts, the forms glue to an original-ground definable form;
+of native charts, the forms glue to a definable form;
 the complement inherits this form, and the restricted map $F$ preserves
 it. The two residual positive sums therefore present actual measured RV
-objects. In the hyperplane reduction, give the fixed finite Gamma
+objects. In the hyperplane reduction, give the fixed finite $\Gamma$
 prefix combined weight $0$ and substitute its value into the remaining
-Gamma weight function. Balancing transfers its degree into RES while
+$\Gamma$ weight function. Balancing transfers its degree into RES while
 retaining the full remaining weight. At rank zero absorb the actual
-finite measured Gamma object with its entire form into measured RES.
+finite measured $\Gamma$ object with its entire form into measured RES.
 The same positive induction and finite-degree reassembly prove the
 measured kernel assertion.
 
 Every step uses actual bijections, finite partitions, and positive
-semiring operations. Arithmetic in the Gamma-valued forms changes
+semiring operations. Arithmetic in the $\Gamma$-valued forms changes
 object data; it does not subtract semiring classes. The quotient
 isomorphisms follow from surjectivity and the kernel-congruence
 equalities, without additive cancellation or groupification.
@@ -2211,7 +2211,7 @@ given by
 \begin{equation}\label{kill:gamma}
 x \otimes y \efun \chi_g(y) x [\G_m]^l.
 \end{equation}
-The component maps are first defined on tensor products over $\Z$. Their sum respects the homogeneous balancing relations over $\ggk\Gamma^{\fin}[*]$ after passing to $\sggk\RES[*]$: a finite definable Gamma set is a disjoint union of its definable singleton values, and moving such a singleton between the two factors changes its contribution from $[\gamma^\sharp]$ to $[\G_m]$, whose difference vanishes in the target. \label{review:section4:T001:start}
+The component maps are first defined on tensor products over $\Z$. Their sum respects the homogeneous balancing relations over $\ggk\Gamma^{\fin}[*]$ after passing to $\sggk\RES[*]$: a finite definable $\Gamma$ set is a disjoint union of its definable singleton values, and moving such a singleton between the two factors changes its contribution from $[\gamma^\sharp]$ to $[\G_m]$, whose difference vanishes in the target. \label{review:section4:T001:start}
 The resulting tensor assignment also identifies the coefficient-translation pairs of Proposition~\ref{red:D:iso}. Indeed, if a $\RES$ coefficient $R$ admits a definable map $R\fun\delta^\sharp$, the corresponding pair translates a single coordinate of the $\Gamma$ factor by $\delta$. Both $\chi_g$ and $\chi_b$ are invariant under that definable translation. Thus the degree-$n$ sum descends through the kernel congruence of the surjection $\Psi$, giving a homomorphism
 
 % BEGIN REFEREE INSERTION R058
@@ -2529,7 +2529,7 @@ where $t_\gamma \in \gamma^\sharp$ is any definable point.  It also stands for t
 }{The author approved the restriction to nonnegative radii admitting an RV lift definable over the original parameter base. The set $D_{\RV}$ now indexes both the generators and the generated ideal.}
 % END REFEREE INSERTION R069
 
-Clearly  $\bm P_\gamma$ does not depend on the choice of $t_\gamma \in \gamma^\sharp$. The ideal of $\ggk \mRV^{\db}[*]$   generated by the elements $\bm P_\gamma$ with $\gamma\in D_{\RV}$ is denoted by $(\bm P_\Gamma)$. A definable Gamma value need not have a definable RV lift, as already noted after Definition~\ref{def:Ga:cat}. All choices are made over the original parameter base. The images of $(\bm P_\Gamma)$ under the obvious forgetful homomorphisms
+Clearly  $\bm P_\gamma$ does not depend on the choice of $t_\gamma \in \gamma^\sharp$. The ideal of $\ggk \mRV^{\db}[*]$   generated by the elements $\bm P_\gamma$ with $\gamma\in D_{\RV}$ is denoted by $(\bm P_\Gamma)$. A definable $\Gamma$ value need not have a definable RV lift, as already noted after Definition~\ref{def:Ga:cat}. All choices are made over the ground structure $\mathbb S$. The images of $(\bm P_\Gamma)$ under the obvious forgetful homomorphisms
 \[
 \ggk  \mgRV^{\db}[*] \fun \ggk \RV[*], \quad \ggk  \mgRV^{\db}[*] \fun \ggk  \mgRV[*]
 \]
@@ -2622,8 +2622,8 @@ We can certainly redefine $\bb E^{\diamond}$ as the composition of $\mgE^{\db}$ 
 
 \begin{nota}[Relative annular ideal]\label{relative:annular:ideal}
 Put $B=\ggk\mgRV^{\db}[*]$ and retain the scalar ideal
-$I=(\bm P_\Gamma)$ of Notation~\ref{pgammabis}, with exactly its
-original RV-liftable radius indexing. For
+$I=(\bm P_\Gamma)$ of Notation~\ref{pgammabis}, with the same set
+$D_{\RV}$ of radii. For
 $\bm U=(U,f,\omega)\in\mRV^{\db}[k]$, $k>0$, suppose that
 $\pr_{\widetilde j}\rest f(U)$ is finite-to-one. Let
 $\tau:U\to\RV$ be definable with
@@ -2645,7 +2645,7 @@ give $I\subseteq J_{\mathrm{var}}$, but no equality is asserted.
 \begin{lem}[Compatibility with the relative annular ideal]\label{relative:annular:compatibility}
 The volume-forgetting map $F:B\to\ggk\RV[*]$ kills
 $J_{\mathrm{var}}$. Hence the bounded retractions of this section
-factor through $B/J_{\mathrm{var}}$, with their original restrictions
+factor through $B/J_{\mathrm{var}}$, with the same restrictions
 to the residue rings. The ideal is homogeneous and meets the entire
 degree-zero subring trivially. Its image in the full measured RV ring
 lies in $(\bm P)$.
@@ -2706,7 +2706,6 @@ For an integer matrix $M=(m_{ab})\in\GL_n(\Z)$, write
 \]
 Thus $h_M^{-1}=h_{M^{-1}}$ and $\vrv(h_M(u))=M\vrv(u)$. For $I\subseteq\Gamma^\ell$, the notation $I^\sharp$ means its full inverse image in $(\RV^\times)^\ell$ under $\vrv$.
 
-\setcounter{thm}{11}
 \begin{lem}[Monomial decomposition {\cite[Lemma~2.1]{FY:Fubini}}]\label{coh:decom}
 Let $U\subseteq(\RV^\times)^n$ be definable. There is a finite definable partition $(D_i)_i$ of $\vrv(U)$ such that, writing $U_i=U\cap\vrv^{-1}(D_i)$, there are $M_i\in\GL_n(\Z)$, $0\leq m_i\leq n$, a nonempty definable set $V_i\subseteq(\RV^\times)^{m_i}$, and a nonempty definable set $I_i\subseteq\Gamma^{n-m_i}$ with
 \[
@@ -2716,7 +2715,6 @@ Let $U\subseteq(\RV^\times)^n$ be definable. There is a finite definable partiti
 All sets and maps are definable over the parameter base $\mathbb S$.
 \end{lem}
 
-\setcounter{thm}{13}
 \begin{nota}[Equivariant residue realization]\label{bipo:gdv}
 In this notation we work in the field $\puC$ of complex Puiseux series and take $\mathbb S = \C\dpar t$; the value group is identified with $\Q$. Write $\ggk^{\widehat\mu,\mathrm{raw}}\var_{\C}$ for the Grothendieck ring of complex varieties with good $\widehat\mu$-actions, where \emph{good} means that the action factors through some $\mu_N$ and every orbit is contained in an affine open subset. Write $\gmv$ for its quotient by the ideal generated by
 \[
@@ -2747,7 +2745,7 @@ Here $\bb E_b$ is applied after the quotient by $(\bm P-1)$, on which it is defi
 \section{Special covariant bijections}\label{sec-pscb}
 
 
-From here on, we also assume that the substructure $\mathbb{S}$ of parameters is $\VF$-generated. So every definable disc contains a definable point (Lemma~\ref{algebraic:balls:definable:centers}). Another simple fact we shall occasionally use is that if $\gamma \in \Gamma$ is definable then there is a $\gamma' \geq \gamma$ such that $\gamma'^\sharp$ contains a definable point. Indeed, after replacing $\gamma$ by $\max\{\gamma,0\}$, the punctured ball $\{x\ne0:\vv(x)>\gamma\}$ contains a finite nonempty definable set $E$: elementarity of $\acl(\mathbb S)$ gives an algebraic point, and its finite definable cover may be intersected with this ball. The unordered product $c=\prod_{x\in E}x$ is definable over the original base, is nonzero, and has $\vv(c)>\gamma$. Take $\gamma'=\vv(c)$ and the definable point $\rv(c)\in\gamma'^\sharp$.
+From here on, we also assume that the substructure $\mathbb{S}$ of parameters is $\VF$-generated. So every definable disc contains a definable point (Lemma~\ref{algebraic:balls:definable:centers}). Another simple fact we shall occasionally use is that if $\gamma \in \Gamma$ is definable then there is a $\gamma' \geq \gamma$ such that $\gamma'^\sharp$ contains a definable point. Indeed, after replacing $\gamma$ by $\max\{\gamma,0\}$, the punctured ball $\{x\ne0:\vv(x)>\gamma\}$ contains a finite nonempty definable set $E$: elementarity of $\acl(\mathbb S)$ gives an algebraic point, and its finite definable cover may be intersected with this ball. The unordered product $c=\prod_{x\in E}x$ is definable, is nonzero, and has $\vv(c)>\gamma$. Take $\gamma'=\vv(c)$ and the definable point $\rv(c)\in\gamma'^\sharp$.
 
 \subsection{Invariance and covariance}\label{sec:inv:cov}
 
@@ -2786,7 +2784,7 @@ A proper invariant set  is not required to be doubly bounded. However, if $\bm U
 \end{exam}
 
 \begin{rem}
-In defining proper covariance above, if  $A$ is closed then  there is no need to demand that $f(A)_{\RV}$ be doubly bounded, because it is implied by the other conditions, as follows. There is an $\go$-partition $p: A \fun \Gamma$ such that, for each open polydisc $\gb$ in question, that is, for each open polydisc $\gb \sub A$ of the form $\go(a, p(a))$, $f(\gb)$ lies in the range of some $\VF$-fiber of $f$. By Lemma~\ref{vol:par:bounded}, $p(A)$ is doubly bounded. So the definable surjection $A \fun \vrv(f(A)_{\RV})$ induced by $f$ satisfies the assumption of Lemma~\ref{invar:db} below. So  $f(A)_{\RV}$ is doubly bounded.
+In defining proper covariance above, if  $A$ is closed and $\infty$ does not occur in the $\RV$-coordinates of $f(A)$ then  there is no need to demand that $f(A)_{\RV}$ be doubly bounded, because it is implied by the other conditions, as follows. There is an $\go$-partition $p: A \fun \Gamma$ such that, for each open polydisc $\gb$ in question, that is, for each open polydisc $\gb \sub A$ of the form $\go(a, p(a))$, $f(\gb)$ lies in the range of some $\VF$-fiber of $f$. By Lemma~\ref{vol:par:bounded}, $p(A)$ is doubly bounded. So the definable surjection $A \fun \vrv(f(A)_{\RV})$ induced by $f$ satisfies the assumption of Lemma~\ref{invar:db} below. So  $f(A)_{\RV}$ is doubly bounded.
 \end{rem}
 
 \begin{lem}\label{inv:crit}
@@ -2797,7 +2795,7 @@ The ``only if'' direction follows since each invariant fiber and its complement 
 \[
 p(a,t)=\min\{\gamma\in\Gamma:0\leq\gamma,\ \go(a,\gamma)\sub A_t\}.
 \]
-Openness makes this a nonempty upper ray. It contains its finite endpoint: every point of $\go(a,\gamma)$ belongs to $\go(a,\delta)$ for some $\delta>\gamma$, by density of $\Gamma$ and finiteness of the VF-tuple. Definable completeness therefore gives the stated minimum. Ultrametricity shows that it is constant on its own polydiscs, so it is an $\go$-partition. The lower cutoff also handles full fibers and zero VF-arity. Since the fiber is closed and bounded, Lemma~\ref{vol:par:bounded} bounds the partition radii above. Their supremum is definable over the original base together with $t$, and is an invariance radius for the fiber. Empty fibers may use radius $0$. Thus all the required radii have the specified parameter base, and $A$ is proper invariant.
+Openness makes this a nonempty upper ray. It contains its finite endpoint: every point of $\go(a,\gamma)$ belongs to $\go(a,\delta)$ for some $\delta>\gamma$, by density of $\Gamma$ and finiteness of the VF-tuple. Definable completeness therefore gives the stated minimum. Ultrametricity shows that it is constant on its own polydiscs, so it is an $\go$-partition. The lower cutoff also handles full fibers and zero VF-arity. Since the fiber is closed and bounded, Lemma~\ref{vol:par:bounded} bounds the partition radii above. Their supremum is $t$-definable, and is an invariance radius for the fiber. Empty fibers may use radius $0$. Thus all the required radii have the specified parameter base, and $A$ is proper invariant.
 \end{proof}
 
 
@@ -2883,8 +2881,8 @@ be a definable continuous focus whose graph lies in $C$. Thus on each
 RV-polydisc $\gp\subseteq C$, the value of $\lambda_\gp$ lies in
 $\pr_1(\gp)$. Suppose that $\gp\cap A$ is
 $(\alpha_\gp,\beta_\gp)$-invariant and $\lambda_\gp$ is
-$(\beta_\gp,\alpha_\gp)$-covariant, with the radius tuple definable
-over the original base together with $\rv(\gp)$.
+$(\beta_\gp,\alpha_\gp)$-covariant, with the radius tuple
+$\rv(\gp)$-definable.
 
 Write $U$ for the full retained RV-label domain on the active source;
 regularization makes these labels determine its VF leading terms.
@@ -2901,7 +2899,7 @@ $\gp$, put
  t_\gp=\tau(u_\gp)\rv(\pr_1\gp),
  \qquad \gamma_\gp\geq\alpha_\gp.
 \]
-All these maps and bounds are over the original base. In particular the
+All these maps and bounds are definable. In particular the
 relative coefficient may depend on the whole retained label, whereas
 the absolute cutoff still depends on the polydisc as displayed.
 The \memph{centripetal transformation} is
@@ -2948,7 +2946,7 @@ bijection}; its image is denoted by $A^\flat$.
 The constant-aperture subclass is included literally. If
 $\tau(u)=t=\rv(c)$ is constant with $c$ a definable nonzero VF point,
 take $b(x)=c\lambda(x)$; both lifted clauses and all branch tags are
-the original scalar ones. The existing bounds and VF-generation give
+the scalar ones. The existing bounds and VF-generation give
 such sufficiently small named coefficients whenever the constant
 subclass is used in the existence constructions below. Larger apertures
 are permitted when their bounded RV graph and continuous VF endpoint
@@ -3121,7 +3119,7 @@ Therefore, we may assume that $R$ is a special covariant bijection whose compone
 
 The finite formula-choice partition was included among the sets prepared by $R$. After freezing the finitely many radius-$\delta$ discs split by this partition, its transported pieces are RV-pullbacks. On each such piece use its prescribed focus formula, with the identity padding already chosen. At each stage the union of the selected loci is an RV-pullback, since it is a union of whole RV-polydiscs, and each constituent focus has its graph in that locus. The pieces are clopen; hence the piecewise focus is continuous when the constituent foci are continuous. This supplies one global definition at each stage, with an allowed locus. Taking $R$ to be trivial means replacing $H$, its partition, and the complete fiberwise data by their transported versions along $R$.
 
-We may now establish the postponed uniform bound. On the unexceptional pieces the complete row $V_a$ depends only on $\rv(R(a))$ and the existing RV-tags. On each frozen disc it is the single row chosen at its center, with its finite disc tag carried along. Thus the data are indexed by a doubly bounded RV-base. For each such parameter the row is doubly bounded, as above. The set of its symmetric Gamma bounds is a nonempty definable upper ray. Definable completeness, followed by increasing an endpoint by a fixed positive definable value if needed, gives a definable bound as a function of that RV-parameter. Lemma~\ref{db:to:db} bounds this function uniformly. In particular the recomputed, frozen family of data is doubly bounded. No bound for the initial arbitrary family $V$ is used.
+We may now establish the postponed uniform bound. On the unexceptional pieces the complete row $V_a$ depends only on $\rv(R(a))$ and the existing RV-tags. On each frozen disc it is the single row chosen at its center, with its finite disc tag carried along. Thus the data are indexed by a doubly bounded RV-base. For each such parameter the row is doubly bounded, as above. The set of its symmetric $\Gamma$ bounds is a nonempty definable upper ray. Definable completeness, followed by increasing an endpoint by a fixed positive definable value if needed, gives a definable bound as a function of that RV-parameter. Lemma~\ref{db:to:db} bounds this function uniformly. In particular the recomputed, frozen family of data is doubly bounded. No bound for the initial arbitrary family $V$ is used.
 
 % BEGIN REFEREE INSERTION R107
 \ResolvedRefereeRemark{107}{Clarification; revised}{Explain uniformization after FMT}{%
@@ -3467,7 +3465,7 @@ original labels and the actual transported forms. Thus we may work
 with doubly bounded, regularized RV-pullbacks whose forms are constant
 on each retained-label fibre. Take the ordinary unary matching
 preparations $H_A,H_B$ from \cite[Lemma~5.2]{Yin:int:acvf}. All their
-RV labels remain variables over the original VF-generated base.
+RV labels remain variables over $\mathbb S$.
 
 An ordinary zero is absorbing. Therefore its exceptional centre family
 is exactly the inverse image of the terminal zero coordinate, and the
@@ -3476,7 +3474,7 @@ are finite; in the stated category their mixed centre sets are also
 finite. The same construction below works for arbitrary bounded
 retained RV fibres, using their finite VF projections.
 
-For paired centres $p,q=f(p)$ choose original-base definable offsets
+For paired centres $p,q=f(p)$ choose definable offsets
 $d_p,e_q$ and whole discs
 \[
  D_p=\go(p,\delta_p),\qquad D_q=\go(q,\epsilon_q),\qquad
@@ -3491,8 +3489,8 @@ orbits. These choices are simultaneous and definable; no single
 algebraic centre is named. More explicitly, form the definable
 relation of bad positive boundary coefficients. Each centre row is
 bounded by the local paired-disc assertion. The uniform bound for a
-finite VF projection with a bounded RV tail gives one original-base
-named coefficient beyond every bad row. The finite source and target
+finite VF projection with a bounded RV tail gives one
+definable coefficient beyond every bad row. The finite source and target
 VF images give a common separation bound. This constructs the actual
 offset maps and paired, disjoint whole discs.
 
@@ -3775,7 +3773,7 @@ on $\pr_{\tilde j}(f(U))$ is finitary, because $\pr_{\tilde j} \rest f(U)$ and $
 \]
 where $s = \rv(x - b_0(a, u)) / f_j(u)$ on the first branch, and the two branches carry the tags of the shell and of the endpoint. Since $\vv(x - b_0(a, u)) > \vrv(f_j(u))$ and $\vv(b_1(a, u)) = \vrv(f_j(u)) + \gamma(u)$, the first branch maps onto the part of $\mL \bm U^\flat$ over the shell, where $0 < \vrv(s) \leq \gamma(u)$, and the second maps onto $b_1(a, u) + \MM_{\vv(b_1(a, u))} = (\tau(u) f_j(u))^\sharp$. At depth zero only the second branch occurs. The inverse adds $b_0$, and also subtracts $b_1$ on the second branch.
 
-On a fixed label the branch condition is clopen, because $\vv(b_1(a, u))$ is constant there, and each branch is a translation in the $j$th coordinate by a continuous function of $a$. Thus $\Phi$ is a relatively unary continuous bijection whose graph fibers have open domains and ranges, and Lemmas~\ref{conti:covar} and~\ref{conv:unif} show that it is a proper covariant homeomorphism. Where $b_0$ and $b_1$ are totally differentiable, its total derivative is triangular with diagonal entries $1$; as in Lemma~\ref{spec:inve}, the exceptional set has $\VF$-dimension less than $k$. Both forms are $\omega(u)$, so $\Phi$ is a $\mVF^\diamond[k]$-morphism $\mL \bm U \fun \mL \bm U^\flat$. For a constant aperture $t = \rv(c)$ one may take $b_1 = c b_0$, which recovers the original translation.
+On a fixed label the branch condition is clopen, because $\vv(b_1(a, u))$ is constant there, and each branch is a translation in the $j$th coordinate by a continuous function of $a$. Thus $\Phi$ is a relatively unary continuous bijection whose graph fibers have open domains and ranges, and Lemmas~\ref{conti:covar} and~\ref{conv:unif} show that it is a proper covariant homeomorphism. Where $b_0$ and $b_1$ are totally differentiable, its total derivative is triangular with diagonal entries $1$; as in Lemma~\ref{spec:inve}, the exceptional set has $\VF$-dimension less than $k$. Both forms are $\omega(u)$, so $\Phi$ is a $\mVF^\diamond[k]$-morphism $\mL \bm U \fun \mL \bm U^\flat$. For a constant aperture $t = \rv(c)$ one may take $b_1 = c b_0$.
 
 % BEGIN REFEREE INSERTION R124
 \ResolvedRefereeRemark{124}{Clarification; revised}{Specify the lift and its tags}{%
@@ -3826,7 +3824,7 @@ Lemma~\ref{special:bi:term:constant} gives a special bijection on $A$ along whic
 \omega' \rest A'_{a_1} = \omega' \rest A'_{a_2} \dand \omega'' \rest A''_{a_1} = \omega'' \rest A''_{a_2}.
 \]
 
-\emph{Descent.} Let $\hat F'$, $\hat F''$ be the standard contractions of $\bm A'$, $\bm A''$ induced by $F$; for each $\RV$-tuple $x$, the set $F(\set{a \given x \in A'_a})$ is a union of polydiscs $\gp$ and hence an $\RV$-pullback, and similarly for $\bm A''$. The row over $\gp$ is definable from the $\RV$-code of $\gp$ and the retained tags, so the loci, aperture graphs, intermediate objects and isomorphisms glue over these codes into $\mathbb S$-definable data. Validity descends: totality, functionality, the inverse identities and the finite-to-one conditions hold fiberwise, and the added coordinate $\rv(F(a))$ is the same on both sides and adds the same weight, so the total weights still match. Every glued intermediate object is a blowup of a doubly bounded object and hence doubly bounded, so each glued aperture function has a definable bound by Remark~\ref{db:blowup:bound}; no bound uniform in the original parameter $a$ is assumed. Thus
+\emph{Descent.} Let $\hat F'$, $\hat F''$ be the standard contractions of $\bm A'$, $\bm A''$ induced by $F$; for each $\RV$-tuple $x$, the set $F(\set{a \given x \in A'_a})$ is a union of polydiscs $\gp$ and hence an $\RV$-pullback, and similarly for $\bm A''$. The row over $\gp$ is definable from the $\RV$-code of $\gp$ and the retained tags, so the loci, aperture graphs, intermediate objects and isomorphisms glue over these codes into $\mathbb S$-definable data. Validity descends: totality, functionality, the inverse identities and the finite-to-one conditions hold fiberwise, and the added coordinate $\rv(F(a))$ is the same on both sides and adds the same weight, so the total weights still match. Every glued intermediate object is a blowup of a doubly bounded object and hence doubly bounded, so each glued aperture function has a definable bound by Remark~\ref{db:blowup:bound}; no bound uniform in the parameter $a$ is assumed. Thus
 \[
 ([\hat F'(\bm A')]_{\leq 1+k}, [\hat F''(\bm A'')]_{\leq 1+k}) \in \mispdb.
 \]

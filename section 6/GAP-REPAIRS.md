@@ -168,6 +168,10 @@ the printed statement: `A = 𝒪 × {1}`, `f(a,1) = (a,0)`; all other conditions
 hold (each VF-fibre is the identity of 𝒪) but `f(A)_RV = {0}`. The Lean
 statement carries the nonzero hypothesis.
 
+Applied to the manuscript on November 22 (final check): the remark now reads
+"if A is closed and ∞ does not occur in the RV-coordinates of f(A)". Until then
+the printed remark was unchanged.
+
 ## Remark 6.32 (`rvdisc:stre`) — missing specialization: repaired
 
 `RVDiscStretch.lean`: `remark_6_32`. For definable `a ∈ t^♯`, `b ∈ s^♯` and

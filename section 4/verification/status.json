@@ -51744,9 +51744,9 @@
     "section 4/RVBoundedDecomposition.lean": "1fbdba32c3caaa1c2338ca78fd6ee60d511b9ca68e55a323a85dfbcb0d3fc2fc",
     "section 4/Section.lean": "c420f2cba521b9a22611c56997682e18294e3df0ff6fabdbcdc7079b637f3cd1",
     "section 4/verify.py": "c27f1b13b983cacf031d299c789fb5fe71d4a21f23c988c1df258abf1bc3e0e7",
-    "DiamondIntegral.lean": "66d02be99d3e377f670ad569f36274aed59d735366ebb4b157993bdb166b553e",
+    "DiamondIntegral.lean": "e2efdddaf2f6067edcb0e9f90892f1d092325f84daaf18d6406ce59503217f0a",
     "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
-    "lakefile.toml": "62e8a1d23f8479861f213c58201c878b0a049ffe85d85bd18cac974f66cbf272",
+    "lakefile.toml": "085206987fde9cf34f1ba54266859a78509de943ae8a6a8e056490918958ba77",
     "lake-manifest.json": "4f0ab2b8a2144ce82d2d8910ec2beb6cf3f21fffcd610bd56cb0415b5bf88ac6",
     "ACCEPTED-CITED-RESULTS.md": "2a6f42ef5f82e18d502ec9bb71d626675f5e24eae45d44291d75b23d9ee906c9",
     "section 4/verification/CITED-INPUTS.md": "854aa8b2f36a2c956fd3faf0fdcda4ee9a5c55973c266ac0322babe2c5281573",
@@ -51766,6 +51766,6 @@
     "section 2/Conventions.lean": "e2c0625ccfcab4280c9f41e3a0bd5ad88622da6c7b39bdc4ad22628e6806665b",
     "section 2/reuse/manifest.json": "90aaef8aade66469a14b4da0c24618fc03da590eaa8ad386ad81b00d543a22f8",
     "section 2/reuse/open-disc-radius.patch": "1025b80e4d836f501bb09a342effbf33a6e02a2cba48d75bb01262e4027c98a7",
-    "section 2/reference/diamond_integral_revision_annotated.tex": "5d006b61d936dc734e38afc9e4b13eded7aba602989a46c6a863ee89c067a259"
+    "section 2/reference/diamond_integral_revision_annotated.tex": "7dd78fee5b0ab29d881a4801ed26c8adf404f846dd336cacbf1bc407c3ffd7b2"
   }
 }

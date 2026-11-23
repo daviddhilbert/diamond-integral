@@ -1,0 +1,12 @@
+{
+  "batch": "B10-wording",
+  "before_sha256": "76cf3c856bb4a10473c3d0f51e00b7590eb4e25bac53c1ed4a4e68540af02259",
+  "after_sha256": "7dd78fee5b0ab29d881a4801ed26c8adf404f846dd336cacbf1bc407c3ffd7b2",
+  "author_instruction": [
+    "Remove the base-related \"original\" introduced during the formalization; the author writes \"ground structure S\", not \"ground S\".",
+    "Typeset every \"Gamma\" written as a word as the Greek letter.",
+    "Renumber Section 5."
+  ],
+  "applied_on": "2026-11-23",
+  "changes": "32 listed replacements in edits.py and 23 further plain-word Gamma; review copy section1-B10-wording-review.pdf (changes in orange)"
+}

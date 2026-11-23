@@ -42,6 +42,7 @@ import «section 8».RationalWeights
 import «section 8».Remark815
 import «section 8».RingDefinable
 import «section 8».SameType
+import «section 8».Section
 import «section 8».SimplexSeries
 import «section 8».Theorem811
 import «section 8».Theorem811RV

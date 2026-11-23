@@ -65,7 +65,7 @@ target `PuiseuxPolynomial EquivariantVariety.ModifiedRing`.
 
 ## Stage C: Theorem 8.11 on the RV side — done
 
-The monomial route (C1 via Lemma 5.12) was replaced by the library's bounded decomposition
+The monomial route (C1 via Lemma 5.12, now Lemma 5.1) was replaced by the library's bounded decomposition
 `RVBoundedDecomposition.bounded_value`: every doubly bounded class is a sum of products `[g♯ × V]`.
 
 - `GraphSeries.lean`: the zeta series of the graph of a definable `E : Γ^ℓ → Γ^{k+1}` over a bounded

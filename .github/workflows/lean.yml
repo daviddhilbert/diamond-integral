@@ -101,6 +101,9 @@ jobs:
       - name: Audit section 7 exports
         run: lake env python3 'section 7/verify.py'
 
+      - name: Audit section 8 exports
+        run: lake env python3 'section 8/verify.py'
+
       - name: Audit corrected upstream weighted-zero compatibility
         run: lake env python3 verification/verify-upstream-weighted-zero.py
 
@@ -119,6 +122,8 @@ jobs:
             section 5/verification/declarations-and-axioms.log
             section 6/verification/types-and-axioms.txt
             section 7/verification/types-and-axioms.txt
+            section 8/verification/types-and-axioms.txt
+            section 8/verification/build.log
             verification/upstream-weighted-zero-upgrade/
             .scratch/shared-foundation.json
             .scratch/extracted-foundations.json
