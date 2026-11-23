@@ -470,7 +470,7 @@
     "section 2/ZeroFaces.lean": "9ea729bcee364da066593709349c1035f0c7bc85b6a0933a9f68d3b5c95c2834",
     "section 2/ZeroFacesVF.lean": "86dccef9f23b6ee8ebaa973ba8ec2a18bafaa8f30bb5140b5266950817f8cb56",
     "DiamondIntegral.lean": "e2efdddaf2f6067edcb0e9f90892f1d092325f84daaf18d6406ce59503217f0a",
-    "lakefile.toml": "10ecda852e1b7d3c538d267becafc0cffdcfa70cfb1a10bdd5e581d5835c9d5d",
+    "lakefile.toml": "9ab227befc1ea81aacd333aacc28be66b9538d8d692a980bbf0a22a9e6842402",
     "lake-manifest.json": "adb89d87c6207291c8f275cd0b3359794a6300fd6012cdf3e4f923a0714ea567",
     "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
     "ACCEPTED-CITED-RESULTS.md": "74518acec216017b35e8154724881b9fd61ce137050381da4a74f8f282b8e946",
@@ -484,8 +484,8 @@
     "section 3/reuse/integration-open-radius.patch": "4c78af253a893a12b7009e584dce0b56ac1faa12d17af92f79ec65d280ccf00b",
     "section 2/verification/CITED-INPUTS.md": "cf7cc6cf90186806b28107f6b5cef81d588f8c96607e020e792738d58f2296aa",
     "section 2/verification/DISC-GROUND-REVIEW.md": "6cce8961bfeb7217a9f4cbca542d4cc3b813eb7210f0aa66f755d6dc6aec41af",
-    "section 2/verification/UPSTREAM-LINKS.md": "cf7e8e5831a063f147ba2239830c8019859d56b78845cbbddff41a64d9c7836a",
-    "section 2/verification/UPSTREAM-LINKS.json": "0f31e20f474e062988516df4a208e34f50a49a15865a86626f7afe29396e4331"
+    "section 2/verification/UPSTREAM-LINKS.md": "398379fdde2f417b965c519e7f31e0e090556da1e737796037bdd61e8f5a49f3",
+    "section 2/verification/UPSTREAM-LINKS.json": "b5edb513170a0eccd9501718da4062fd6d97c0ae8b24a6371d769c4733bb2ca1"
   },
   "manuscript_sha256": "7dd78fee5b0ab29d881a4801ed26c8adf404f846dd336cacbf1bc407c3ffd7b2",
   "accepted_cited_inputs": [
@@ -500,9 +500,9 @@
       "upstream_reference": {
         "paper_result": "3.3",
         "repository": "daviddhilbert/integration-in-ACVF",
-        "revision": "7675d31332f20421c803ea16af84964ed74cd51f",
+        "revision": "7238c3863ef7ea65ab3c21bcb0982be4cac9728f",
         "declaration": "IntegrationInACVF.Section3ACVF.FullGammaAtomicity.lemma_3_3",
-        "source_url": "https://github.com/daviddhilbert/integration-in-ACVF/blob/7675d31332f20421c803ea16af84964ed74cd51f/section%203/IntegrationSection3ACVF/FullGammaAtomicity.lean#L127",
+        "source_url": "https://github.com/daviddhilbert/integration-in-ACVF/blob/7238c3863ef7ea65ab3c21bcb0982be4cac9728f/section%203/IntegrationSection3ACVF/FullGammaAtomicity.lean#L127",
         "integration_status": "Checked constructor compiled and included in the section 3 type/principle audit; the legacy interface remains available for compatibility.",
         "checked_constructor": "DiamondIntegral.Section3.integrationAtomicGammaBaseChangeInput_complete"
       }
@@ -518,9 +518,9 @@
       "upstream_reference": {
         "paper_result": "3.8",
         "repository": "daviddhilbert/integration-in-ACVF",
-        "revision": "7675d31332f20421c803ea16af84964ed74cd51f",
+        "revision": "7238c3863ef7ea65ab3c21bcb0982be4cac9728f",
         "declaration": "IntegrationInACVF.Section3ACVF.PrimitiveImages.lemma_3_8",
-        "source_url": "https://github.com/daviddhilbert/integration-in-ACVF/blob/7675d31332f20421c803ea16af84964ed74cd51f/section%203/IntegrationSection3ACVF/PrimitiveImages.lean#L34",
+        "source_url": "https://github.com/daviddhilbert/integration-in-ACVF/blob/7238c3863ef7ea65ab3c21bcb0982be4cac9728f/section%203/IntegrationSection3ACVF/PrimitiveImages.lean#L34",
         "integration_status": "Checked constructor compiled and included in the section 3 type/principle audit; the legacy interface remains available for compatibility.",
         "checked_constructor": "DiamondIntegral.Section3.integrationPrimitiveImageInput"
       }
@@ -538,9 +538,9 @@
       "upstream_reference": {
         "paper_result": "3.13",
         "repository": "daviddhilbert/integration-in-ACVF",
-        "revision": "7675d31332f20421c803ea16af84964ed74cd51f",
+        "revision": "7238c3863ef7ea65ab3c21bcb0982be4cac9728f",
         "declaration": "IntegrationInACVF.Section3ACVF.OpenImages.lemma_3_13",
-        "source_url": "https://github.com/daviddhilbert/integration-in-ACVF/blob/7675d31332f20421c803ea16af84964ed74cd51f/section%203/IntegrationSection3ACVF/OpenImages.lean#L43",
+        "source_url": "https://github.com/daviddhilbert/integration-in-ACVF/blob/7238c3863ef7ea65ab3c21bcb0982be4cac9728f/section%203/IntegrationSection3ACVF/OpenImages.lean#L43",
         "integration_status": "Checked constructor compiled and included in the section 3 type/principle audit; the legacy interface remains available for compatibility.",
         "checked_constructor": "DiamondIntegral.Section3.integrationOpenDiscImageInput"
       }
@@ -566,9 +566,9 @@
       "upstream_reference": {
         "paper_result": "3.4",
         "repository": "daviddhilbert/integration-in-ACVF",
-        "revision": "7675d31332f20421c803ea16af84964ed74cd51f",
+        "revision": "7238c3863ef7ea65ab3c21bcb0982be4cac9728f",
         "declaration": "IntegrationInACVF.Section3ACVF.CompleteTypeBallAtomicity.lemma_3_4",
-        "source_url": "https://github.com/daviddhilbert/integration-in-ACVF/blob/7675d31332f20421c803ea16af84964ed74cd51f/section%203/IntegrationSection3ACVF/CompleteTypeBallAtomicity.lean#L60",
+        "source_url": "https://github.com/daviddhilbert/integration-in-ACVF/blob/7238c3863ef7ea65ab3c21bcb0982be4cac9728f/section%203/IntegrationSection3ACVF/CompleteTypeBallAtomicity.lean#L60",
         "integration_status": "Checked constructor compiled and included in the section 3 type/principle audit; the legacy interface remains available for compatibility.",
         "checked_constructor": "DiamondIntegral.Section3.integrationUnaryDiscAtomicityInput"
       }
@@ -594,9 +594,9 @@
       "upstream_reference": {
         "paper_result": "3.3",
         "repository": "daviddhilbert/integration-in-ACVF",
-        "revision": "7675d31332f20421c803ea16af84964ed74cd51f",
+        "revision": "7238c3863ef7ea65ab3c21bcb0982be4cac9728f",
         "declaration": "IntegrationInACVF.Section3ACVF.FullGammaAtomicity.lemma_3_3_one_unary",
-        "source_url": "https://github.com/daviddhilbert/integration-in-ACVF/blob/7675d31332f20421c803ea16af84964ed74cd51f/section%203/IntegrationSection3ACVF/FullGammaAtomicity.lean#L134",
+        "source_url": "https://github.com/daviddhilbert/integration-in-ACVF/blob/7238c3863ef7ea65ab3c21bcb0982be4cac9728f/section%203/IntegrationSection3ACVF/FullGammaAtomicity.lean#L134",
         "integration_status": "Checked constructor compiled and included in the section 3 type/principle audit; the legacy interface remains available for compatibility.",
         "checked_constructor": "DiamondIntegral.Section3.integrationAtomicDiscGammaBaseChangeInput"
       }
@@ -612,9 +612,9 @@
       "upstream_reference": {
         "paper_result": "3.19/3.21",
         "repository": "daviddhilbert/integration-in-ACVF",
-        "revision": "7675d31332f20421c803ea16af84964ed74cd51f",
+        "revision": "7238c3863ef7ea65ab3c21bcb0982be4cac9728f",
         "declaration": "IntegrationInACVF.Section3ACVF.CoordinatePartitions.proposition_3_21",
-        "source_url": "https://github.com/daviddhilbert/integration-in-ACVF/blob/7675d31332f20421c803ea16af84964ed74cd51f/section%203/IntegrationSection3ACVF/CoordinatePartitions.lean#L20",
+        "source_url": "https://github.com/daviddhilbert/integration-in-ACVF/blob/7238c3863ef7ea65ab3c21bcb0982be4cac9728f/section%203/IntegrationSection3ACVF/CoordinatePartitions.lean#L20",
         "integration_status": "Checked constructor compiled and included in the section 3 type/principle audit; the legacy interface remains available for compatibility.",
         "additional_source_url": "https://github.com/daviddhilbert/integration-in-ACVF/blob/a2dd3066c992ed2d84a2ccad4298ae3b9061bd40/section%203/IntegrationSection3ACVF/FullOpenToOpenPartition.lean#L93",
         "checked_constructor": "DiamondIntegral.Section3.integrationDiscToDiscPartitionInput"
@@ -638,9 +638,9 @@
       "upstream_reference": {
         "paper_result": "3.9",
         "repository": "daviddhilbert/integration-in-ACVF",
-        "revision": "7675d31332f20421c803ea16af84964ed74cd51f",
+        "revision": "7238c3863ef7ea65ab3c21bcb0982be4cac9728f",
         "declaration": "IntegrationInACVF.Section3ACVF.OpenBallConstancy.lemma_3_9_open",
-        "source_url": "https://github.com/daviddhilbert/integration-in-ACVF/blob/7675d31332f20421c803ea16af84964ed74cd51f/section%203/IntegrationSection3ACVF/OpenBallConstancy.lean#L182",
+        "source_url": "https://github.com/daviddhilbert/integration-in-ACVF/blob/7238c3863ef7ea65ab3c21bcb0982be4cac9728f/section%203/IntegrationSection3ACVF/OpenBallConstancy.lean#L182",
         "integration_status": "Checked constructor compiled and included in the section 3 type/principle audit; the legacy interface remains available for compatibility.",
         "checked_constructor": "DiamondIntegral.Section3.integrationUnaryOpenDiscRVBaseChangeInput"
       }
@@ -660,9 +660,9 @@
       "upstream_reference": {
         "paper_result": "3.13",
         "repository": "daviddhilbert/integration-in-ACVF",
-        "revision": "7675d31332f20421c803ea16af84964ed74cd51f",
+        "revision": "7238c3863ef7ea65ab3c21bcb0982be4cac9728f",
         "declaration": "IntegrationInACVF.Section3ACVF.OpenImages.lemma_3_13",
-        "source_url": "https://github.com/daviddhilbert/integration-in-ACVF/blob/7675d31332f20421c803ea16af84964ed74cd51f/section%203/IntegrationSection3ACVF/OpenImages.lean#L43",
+        "source_url": "https://github.com/daviddhilbert/integration-in-ACVF/blob/7238c3863ef7ea65ab3c21bcb0982be4cac9728f/section%203/IntegrationSection3ACVF/OpenImages.lean#L43",
         "integration_status": "Checked constructor compiled and included in the section 3 type/principle audit; the legacy interface remains available for compatibility.",
         "checked_constructor": "DiamondIntegral.Section3.integrationOpenDiscNamesImageInput"
       }
@@ -681,7 +681,7 @@
       "scope_record": "section 2/verification/CITED-INPUTS.md",
       "upstream_reference": {
         "repository": "daviddhilbert/integration-in-ACVF",
-        "revision": "7675d31332f20421c803ea16af84964ed74cd51f",
+        "revision": "7238c3863ef7ea65ab3c21bcb0982be4cac9728f",
         "integration_status": "Retained accepted QE/value-group background. The numbered RV-linearity result 3.18 and Gamma piecewise monotonicity are not the exact rational-affine power-law interface; no matching producer identified in this inspection."
       }
     }

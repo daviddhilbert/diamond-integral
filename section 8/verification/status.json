@@ -1,8 +1,8 @@
 {
   "status": "PASS",
-  "scope": "Section 8 (Motivic Milnor fiber), every numbered result of the revised manuscript, with no input beyond the ACVF model and the Puiseux ambient of Section 5, except the etale chart hypotheses for smooth X listed under accepted_inputs. Lemma 8.2 as the definition of h_m (Hm.hm, hm_objectClass; localization Rloc and etaHm). Lemma 8.3 (Hm.lemma_8_3: eta h_m kills the natural part of J_var; hm_generator). Lemma 8.5 in set form (Truncation.lemma_8_5_sets) and for classes (fullClass, fullClass_cutoff, fullClass_scale; truncations are diagonal constructible, truncObject, definable_agree). Lemma 8.6 (chain_teq: special covariant chains preserve normalized truncation classes, with anisotropic cutoffs for centripetal steps; lift_class; integral_lift). Lemma 8.9 (PuiseuxValues.lemma_8_9, lemma_8_9_rat; Hrushovski-Loeser Lemma 8.5.2 proved directly, Prism.hasLimit_latticeSeries). Theorem 8.11 (theorem_8_11_rv_ring, theorem_8_11_quotient, theorem_8_11_vf; Milnor.theorem_8_11_milnor for X = A^d; theorem_8_11_smooth). (z:coeff:change) (Lemma86.milnor_zeta_coeff, z_coeff_change for X = A^d; zeta_coeff_of_form_one; MilnorSmoothJets.z_coeff_change_smooth for smooth affine X). Remark 8.14 (VolComparison.remark_8_14, milnor_fiber_vol, milnor_fiber_vol_smooth). Remark 8.15 (Remark815.remark_8_15_integral, remark_8_15, remark_8_15_affine, remark_8_15_smooth, remark_8_15_milnor, remark_8_15_milnor_smooth; SameType.same_type by quantifier elimination). Section 8.1.1, Lemma 8.7 and the general claims of Remark 8.13 were deleted from the manuscript by the author (review batch B06).",
+  "scope": "Section 8 (Motivic Milnor fiber), every numbered result of the revised manuscript, with no input beyond the ACVF model and the Puiseux ambient of Section 5, except the etale chart hypotheses for smooth X listed under accepted_inputs. Lemma 8.2 as the definition of h_m (Hm.hm, hm_objectClass; localization Rloc and etaHm). Lemma 8.3 (Hm.lemma_8_3: eta h_m kills the natural part of J_var; hm_generator). Lemma 8.5 in set form (Truncation.lemma_8_5_sets) and for classes (fullClass, fullClass_cutoff, fullClass_scale; truncations are diagonal constructible, truncObject, definable_agree). Lemma 8.6 (chain_teq: special covariant chains preserve normalized truncation classes, with anisotropic cutoffs for centripetal steps; lift_class; integral_lift). Lemma 8.9 (PuiseuxValues.lemma_8_9, lemma_8_9_rat; Hrushovski-Loeser Lemma 8.5.2 proved directly, Prism.hasLimit_latticeSeries). Theorem 8.11 (theorem_8_11_rv_ring, theorem_8_11_quotient, theorem_8_11_vf; Milnor.theorem_8_11_milnor for X = A^d; theorem_8_11_smooth). (z:coeff:change) (Lemma86.milnor_zeta_coeff, z_coeff_change for X = A^d; zeta_coeff_of_form_one; MilnorSmoothJets.z_coeff_change_smooth for smooth affine X). Remark 8.14 (VolComparison.remark_8_14, milnor_fiber_vol, milnor_fiber_vol_smooth). Remark 8.15 (Remark815.remark_8_15_integral, remark_8_15, remark_8_15_affine, remark_8_15_smooth, remark_8_15_milnor, remark_8_15_milnor_smooth; SameType.same_type by quantifier elimination). Remark 8.7 (Remark87.remark_8_7: the object X = {0 < vrv < 1} with f(u) = u^2 is not isomorphic, by a weight-preserving bijection with definable inverse, to any set covered by a part with finitely many weights and products W x Delta-sharp with W finite; germ, finite_level). Statements with every hypothesis supplied (Closed.theorem_7_26, theorem_7_26_graded, theorem_8_11, remark_8_14, remark_8_15): the Puiseux ambient chosen from puiseuxAmbient_nonempty, a valuation compatible with the language, and the base element t of nontrivial value. Section 8.1.1, the old Lemma 8.7 and the general claims of Remark 8.13 were deleted from the manuscript by the author in the final review.",
   "lean": "Lean (version 4.35.0, arm64-apple-darwin24.6.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
-  "repository_revision": "ecc13ca31a23c322df688966a40c4d58913ec1e9",
+  "repository_revision": "49332894431cfcc956691210f84c16a9e228d308",
   "packages": {
     "fubini_theorems": "5b547c1ab198c59ca380993afb3a779579696a80",
     "integration_in_acvf": "7238c3863ef7ea65ab3c21bcb0982be4cac9728f",
@@ -20,6 +20,15 @@
     "Cli": "c24fe6078c630e89b489bffe59b3e20ac30d12c8"
   },
   "declarations": [
+    "DiamondIntegral.Section8.Closed.ambient",
+    "DiamondIntegral.Section8.Closed.ValueGroup",
+    "DiamondIntegral.Section8.Closed.compatible",
+    "DiamondIntegral.Section8.Closed.base_nontrivial_value",
+    "DiamondIntegral.Section8.Closed.theorem_7_26",
+    "DiamondIntegral.Section8.Closed.theorem_7_26_graded",
+    "DiamondIntegral.Section8.Closed.theorem_8_11",
+    "DiamondIntegral.Section8.Closed.remark_8_14",
+    "DiamondIntegral.Section8.Closed.remark_8_15",
     "DiamondIntegral.Section8.Truncation.dcClass_eq_comparison",
     "DiamondIntegral.Section8.Truncation.dcClass_product",
     "DiamondIntegral.Section8.Truncation.dcClass_iso",
@@ -851,6 +860,15 @@
     "DiamondIntegral.Section8.Remark815.remark_8_15_smooth",
     "DiamondIntegral.Section8.Remark815.remark_8_15_milnor",
     "DiamondIntegral.Section8.Remark815.remark_8_15_milnor_smooth",
+    "DiamondIntegral.Section8.Remark87.X",
+    "DiamondIntegral.Section8.Remark87.secondKind",
+    "DiamondIntegral.Section8.Remark87.sign_add_of_abs_lt",
+    "DiamondIntegral.Section8.Remark87.sign_smul_pos",
+    "DiamondIntegral.Section8.Remark87.sign_small",
+    "DiamondIntegral.Section8.Remark87.germ",
+    "DiamondIntegral.Section8.Remark87.finite_level",
+    "DiamondIntegral.Section8.Remark87.exists_rv_of_value",
+    "DiamondIntegral.Section8.Remark87.remark_8_7",
     "DiamondIntegral.Section8.RingDefinable.RDef",
     "DiamondIntegral.Section8.RingDefinable.rdef_zero",
     "DiamondIntegral.Section8.RingDefinable.rdef_ne",
@@ -1527,6 +1545,7 @@
     "propext"
   ],
   "sources": {
+    "section 8/ClosedStatements.lean": "b6d03a468d53de1de1853c00d09d50e0990bdb74b8876fa3ac3f455f1db425fd",
     "section 8/DiagonalClasses.lean": "56f5b22c9b841a4bf71dd4e48d4a3f778c31ed2fe8da804fd8d3152717f0e072",
     "section 8/GaloisLattice.lean": "4e7e8375c25cb5451603c77c919586482258e269e7aa052f54c5ef8ce723ae55",
     "section 8/GammaBounds.lean": "8d22274c75d4dce44d86ad704d02aa4d0cd4dd279550a176dc88af0117b7be5d",
@@ -1569,9 +1588,10 @@
     "section 8/RationalValues.lean": "bd4031394790db9033e3a0774abc092aa5102eb5874be1143fc55114f81ed918",
     "section 8/RationalWeights.lean": "74300080342a0810b3e73c447b23fabfc2eaba8023f8e31196b11a3705ebc2a8",
     "section 8/Remark815.lean": "c18740573f59b3dbc917926a98a70adfc5bee2778eff7c4046db9e2104ec83ef",
+    "section 8/Remark87.lean": "ca4d98811b832525e92400eab23f5768db510c3f307d996a575db06c8b8e88f0",
     "section 8/RingDefinable.lean": "8f73a1036732c22d65c3f751a2cdc4a317749b48e08d6b2dc763662074aec155",
     "section 8/SameType.lean": "01cf750e79aa39ad01d839f69790f8e5c9669da667e62d3918b192b68ab621dc",
-    "section 8/Section.lean": "9fa708b0762c85b2c6c99de89d8c8bf843d2a5bbd5a76555c374383ded27c772",
+    "section 8/Section.lean": "7673c837bdede35bc594f2f9069ee148d1998be55cba930164a0684677193dc0",
     "section 8/SimplexSeries.lean": "9d3d5b5f0a3bd51cfbf3b6f5cb3673e693d0e8c43280a67455e19ed36427cc8d",
     "section 8/Theorem811.lean": "b8db33398f27e71596d6f8419b4177a88da7f073e70eeb504b70f42ce2b7015d",
     "section 8/Theorem811RV.lean": "4536a3530590b4fc0b9115d8f0250c1dde7357644476837088a38f52217b59f6",
@@ -1606,7 +1626,7 @@
     "section 8/ZetaPieces.lean": "07cb0bc185c458d0febebb832f74a6fe9fedc38da62b45d06a0d5a85c7ec153c",
     "section 8/ZetaRES.lean": "bdcdaeac33a6fe11057952124e443e22ae06937b8e0b95a3efcaf0153cbb8bf3"
   },
-  "verification_script_sha256": "4bb7e3a97a9601232e4253a57da9f74a784aef4c9343b3a21d529e70beaa363b",
+  "verification_script_sha256": "91ca45d20fa1eb01904af210c580ff3874e577bfa283816f9ee8b94c2bb3e685",
   "temporary_inputs": [],
   "accepted_inputs": [
     "DiamondIntegral.Section8.Milnor.EtaleChart: etale chart of a smooth affine X at the origin (Hensel's lemma), an explicit hypothesis of the smooth-X results only (author instruction of 2026-11-21); proved for X = A^d (etaleChart_affine).",

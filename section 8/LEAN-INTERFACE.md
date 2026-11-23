@@ -141,6 +141,24 @@ Standing variables: `{M : Type} [LRV.Structure M] [M ⊨ Axioms.ACVF]`. One-sort
   `emptyGamma_sorted_definable_iff`, `RVRadiusGenerators.oneCode_definable`,
   `nativeRVEvaluation_point`; Section 8: `Truncation.chartCo`, `chartCo_bijective`, `sourceCodes`.
 
-## Does not exist yet
+## Added November 23
 
-- Nothing in Section 8.
+- `ClosedStatements`: Theorem 7.26 (`Closed.theorem_7_26`, `theorem_7_26_graded`), Theorem 8.11
+  (`Closed.theorem_8_11`) and Remarks 8.14–8.15 (`Closed.remark_8_14`, `remark_8_15`) with every
+  hypothesis supplied: the Puiseux ambient `Closed.ambient` (chosen from `puiseuxAmbient_nonempty`),
+  the compatible valuation `Closed.valued` (`Values.presentationValuation`) and the base element of
+  nontrivial value (`Closed.base_nontrivial_value`, the uniformizer `t`). The smooth-X forms keep
+  the étale chart hypothesis.
+- `Remark87`: Remark 8.7 (`remark_8_7`). The object `X = {0 < vrv < 1}`, `f(u) = u²`, admits no
+  weight-preserving bijection with definable inverse onto a set covered by a part with finitely
+  many weights and products `W × Δ♯` (`secondKind`) with `W` finite. The proof uses values instead
+  of rational points: definable subsets of Γ are constant just above `1` (`germ`, from
+  `saturated_of_halfspaceBoolean` and `gamma_stably_embedded`), and definable maps preserve the
+  lattice (`map_lattice`).
+
+## Not formalized
+
+- Remark 8.12 (commentary) and the example kept in Remark 8.13 (its general claims were deleted
+  from the paper by the author).
+- The closing sentence of Remark 8.7 (in `μRV[1]` the identity is an isomorphism
+  `(X, f, 0) ≅ (X, id, vrv)`), a remark on the contrast with this paper's category.

@@ -1,3 +1,4 @@
+import «section 8».ClosedStatements
 import «section 8».DiagonalClasses
 import «section 8».GaloisLattice
 import «section 8».GammaBounds
@@ -40,6 +41,7 @@ import «section 8».RationalSeries
 import «section 8».RationalValues
 import «section 8».RationalWeights
 import «section 8».Remark815
+import «section 8».Remark87
 import «section 8».RingDefinable
 import «section 8».SameType
 import «section 8».Section
@@ -77,6 +79,33 @@ import «section 8».VolComparison
 import «section 8».ZetaPieces
 import «section 8».ZetaRES
 
+#check @DiamondIntegral.Section8.Closed.ambient
+#print DiamondIntegral.Section8.Closed.ambient
+#print axioms DiamondIntegral.Section8.Closed.ambient
+#check @DiamondIntegral.Section8.Closed.ValueGroup
+#print DiamondIntegral.Section8.Closed.ValueGroup
+#print axioms DiamondIntegral.Section8.Closed.ValueGroup
+#check @DiamondIntegral.Section8.Closed.compatible
+#print DiamondIntegral.Section8.Closed.compatible
+#print axioms DiamondIntegral.Section8.Closed.compatible
+#check @DiamondIntegral.Section8.Closed.base_nontrivial_value
+#print DiamondIntegral.Section8.Closed.base_nontrivial_value
+#print axioms DiamondIntegral.Section8.Closed.base_nontrivial_value
+#check @DiamondIntegral.Section8.Closed.theorem_7_26
+#print DiamondIntegral.Section8.Closed.theorem_7_26
+#print axioms DiamondIntegral.Section8.Closed.theorem_7_26
+#check @DiamondIntegral.Section8.Closed.theorem_7_26_graded
+#print DiamondIntegral.Section8.Closed.theorem_7_26_graded
+#print axioms DiamondIntegral.Section8.Closed.theorem_7_26_graded
+#check @DiamondIntegral.Section8.Closed.theorem_8_11
+#print DiamondIntegral.Section8.Closed.theorem_8_11
+#print axioms DiamondIntegral.Section8.Closed.theorem_8_11
+#check @DiamondIntegral.Section8.Closed.remark_8_14
+#print DiamondIntegral.Section8.Closed.remark_8_14
+#print axioms DiamondIntegral.Section8.Closed.remark_8_14
+#check @DiamondIntegral.Section8.Closed.remark_8_15
+#print DiamondIntegral.Section8.Closed.remark_8_15
+#print axioms DiamondIntegral.Section8.Closed.remark_8_15
 #check @DiamondIntegral.Section8.Truncation.dcClass_eq_comparison
 #print DiamondIntegral.Section8.Truncation.dcClass_eq_comparison
 #print axioms DiamondIntegral.Section8.Truncation.dcClass_eq_comparison
@@ -2570,6 +2599,33 @@ import «section 8».ZetaRES
 #check @DiamondIntegral.Section8.Remark815.remark_8_15_milnor_smooth
 #print DiamondIntegral.Section8.Remark815.remark_8_15_milnor_smooth
 #print axioms DiamondIntegral.Section8.Remark815.remark_8_15_milnor_smooth
+#check @DiamondIntegral.Section8.Remark87.X
+#print DiamondIntegral.Section8.Remark87.X
+#print axioms DiamondIntegral.Section8.Remark87.X
+#check @DiamondIntegral.Section8.Remark87.secondKind
+#print DiamondIntegral.Section8.Remark87.secondKind
+#print axioms DiamondIntegral.Section8.Remark87.secondKind
+#check @DiamondIntegral.Section8.Remark87.sign_add_of_abs_lt
+#print DiamondIntegral.Section8.Remark87.sign_add_of_abs_lt
+#print axioms DiamondIntegral.Section8.Remark87.sign_add_of_abs_lt
+#check @DiamondIntegral.Section8.Remark87.sign_smul_pos
+#print DiamondIntegral.Section8.Remark87.sign_smul_pos
+#print axioms DiamondIntegral.Section8.Remark87.sign_smul_pos
+#check @DiamondIntegral.Section8.Remark87.sign_small
+#print DiamondIntegral.Section8.Remark87.sign_small
+#print axioms DiamondIntegral.Section8.Remark87.sign_small
+#check @DiamondIntegral.Section8.Remark87.germ
+#print DiamondIntegral.Section8.Remark87.germ
+#print axioms DiamondIntegral.Section8.Remark87.germ
+#check @DiamondIntegral.Section8.Remark87.finite_level
+#print DiamondIntegral.Section8.Remark87.finite_level
+#print axioms DiamondIntegral.Section8.Remark87.finite_level
+#check @DiamondIntegral.Section8.Remark87.exists_rv_of_value
+#print DiamondIntegral.Section8.Remark87.exists_rv_of_value
+#print axioms DiamondIntegral.Section8.Remark87.exists_rv_of_value
+#check @DiamondIntegral.Section8.Remark87.remark_8_7
+#print DiamondIntegral.Section8.Remark87.remark_8_7
+#print axioms DiamondIntegral.Section8.Remark87.remark_8_7
 #check @DiamondIntegral.Section8.RingDefinable.RDef
 #print DiamondIntegral.Section8.RingDefinable.RDef
 #print axioms DiamondIntegral.Section8.RingDefinable.RDef

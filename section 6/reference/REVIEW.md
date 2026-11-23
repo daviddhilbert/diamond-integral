@@ -39,9 +39,10 @@ The root build and GitHub Actions now include Section 6.
 
 ## Verification
 
-The fresh integrated Sections 2–6 audits pass. Section 4 checks 5069
-public declarations and Section 6 checks 5103 complete public declaration
-types and transitive axiom records. Only `propext`, `Classical.choice` and
+The fresh integrated Sections 2–6 audits passed. At the time of this review
+Section 4 checked 5069 public declarations and Section 6 checked 5103
+complete public declaration types and transitive axiom records (the current
+receipts list 5721 and 5867). Only `propext`, `Classical.choice` and
 `Quot.sound` occur. Receipts retain exact source hashes and package pins.
 See `../verification/aperture-revision/integrated-audits.json` and each
 section's own verification receipt. A declaration count is not a proof of

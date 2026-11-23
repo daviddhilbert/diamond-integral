@@ -154,7 +154,7 @@ def main():
         'finalized_section3_statement_audit': 'PASS',
         'end_to_end_section3_presentation_transport': 'PASS_INSTANTIATED',
         'remaining_section4_main_text_obligations': [],
-        'numbered_results_complete': ['Proposition 4.7', 'Proposition 4.15'],
+        'numbered_results_complete': ['Proposition 4.7', 'Proposition 4.15', 'Lemma 4.18'],
         'numbered_results_basis': 'Linked directly to finalized Section 3 tensor kernel proofs at 37c8361 through actual factor/tensor/target ring equivalences, commuting comparison squares and elementary-pair ideal transport. No T001 interface is a theorem input. Original-base saturation, ACVF00, smallness and nontrivial Gamma remain explicit. The multivariate rational-affine Gamma normal form is proved (Section3GammaAffineDischarge.input); the unary Section 2 form is discharged by Section5.GammaQE.gamma_piecewise_rational_affine.',
         'numbered_statements_linked_to_finalized_section3': {
             'Proposition 4.7': 'DiamondIntegral.Section4.Section3LinkedRetractionStatements.proposition_4_7',

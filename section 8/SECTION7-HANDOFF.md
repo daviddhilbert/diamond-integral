@@ -1,5 +1,13 @@
 # Section 8 checked against Section 7's results (handoff from the Section 7 side)
 
+> **Note of 2026-11-23.** This is a record of November 20; everything it proposes has since been
+> done (Section 8 receipt, `section 8/verification/status.json`). Its numbers and line references
+> are those of the manuscript of that date. In the final paper the old Lemma 8.7
+> (`lem:hm:bounded`) and §8.1.1 are deleted, the remark after (`z:coeff:change`) is Remark 8.7
+> (`rem:HK:fail`), `dag:loc` is Notation 8.8, the direct proof of Hrushovski–Loeser Lemma 8.5.2 is
+> the new Lemma 8.9 (`lat:zeta`), and the numbers from 8.10 on are unchanged. Line numbers refer
+> to the annotated manuscript of November 20, not to the current one.
+
 Date 2026-11-20. Written for the dedicated Section 8 session, at the author's request ("you can do the
 checking and make note here"). It complements [SECTION6-HANDOFF.md](SECTION6-HANDOFF.md) and discharges the
 *checking* part of the obligation recorded in `section 6/verification/status.json` ("Section8 must check the

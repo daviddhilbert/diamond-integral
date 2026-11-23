@@ -7354,9 +7354,6 @@
     "section 6/ZeroExtendedScalarGraphTemplates.lean": "d98862fca7d3f72ab887380200e3928578ab7064ba003d3a4809024743d16742",
     "section 6/ZeroTailSections.lean": "0fe22e498586c1449b5be55d486b3e433d1ffe7c129296c849aa189fab7c77a4"
   },
-  "verification_script_sha256": "88e7ea435b2ba8f42ac104463e76060fd8a588332c1945099f450274bc010698",
-  "unfinished": [
-    "Section7 must synchronize Definition7.2 with the applied bounded variable Definition6.11, instantiate actual variable blowup words and continuous VF generator lifts, assemble head starts, full witness descent and contraction-order comparisons, and prove the revised 7.26 kernel for the explicitly defined relative ideal. These are deferred to its own session at the author's request; no complete native 7.26 theorem is claimed.",
-    "Section8 must check the equivariant endpoint-graph trace and specialization against the new relative ideal. Algebraic factor identities and RV-affinity/full-row descent support are available, but they do not certify complete downstream preservation. The old scalar Section4 ideal and its pure RV presentation remain distinct and unchanged."
-  ]
+  "verification_script_sha256": "71e9c971caaafe3ee785d411a50a6c2698002288dbce93c01213f168872f16df",
+  "unfinished": []
 }

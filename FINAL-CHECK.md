@@ -58,7 +58,7 @@ reading of statements, not a second proof; its limits are in section 5.
 | 5 | 3 | Recalled from the Fubini paper. Lemma 5.1 and the isomorphism Θ match their Lean statements in the Fubini package. Formula (5.1) is proved piece by piece (`nativeRVEvaluation_monomial`); there is no global statement. |
 | 6 | 38 | 28 match, including Corollary 6.37 and Lemma 6.38. Narrower: Remarks 6.15 and 6.28 (stated for objects of μVF^◇). Not formalized: Remarks 6.17 and 6.36, Example 6.25, the second sentence of Definition 6.24, the counterexample in Remark 6.35. Lemma 6.16 is unary, which is the paper's reading of "a set in VF". |
 | 7 | 28 | Theorem 7.26: the semigroup isomorphisms with their characterization, the ring isomorphism onto K μRV^db[*]/J_var with J_var literally the ideal of Notation 4.17, and kernel = J_var (Remark 7.25) all match (checked). Proposition 7.24 and Corollary 7.27 match. See the notes below for 7.11–7.13, 7.19–7.22 and the grading. |
-| 8 | 15 | Theorem 8.11 and equation (8.6) match for X = 𝔸^d (checked); for smooth X they take the étale chart as a hypothesis. Lemmas 8.3 and 8.9 match. Lemma 8.2 is the definition of h_m in Lean; Lemma 8.5 is stated after Θ, in the localization; Lemma 8.6 for n ≥ 1. Remarks 8.7, 8.12 and 8.13 are not formalized. The K^ℤ paragraph of Remark 8.4 is notation; the statement it serves is covered by a stronger Lean theorem (see below). |
+| 8 | 15 | Theorem 8.11 and equation (8.6) match for X = 𝔸^d (checked); for smooth X they take the étale chart as a hypothesis. Lemmas 8.3 and 8.9 match. Lemma 8.2 is the definition of h_m in Lean; Lemma 8.5 is stated after Θ, in the localization; Lemma 8.6 for n ≥ 1. Remarks 8.12 and 8.13 are not formalized; Remark 8.7 was formalized on November 23 (below). The K^ℤ paragraph of Remark 8.4 is notation; the statement it serves is covered by a stronger Lean theorem (see below). |
 
 ### One mismatch that was an error in the paper (now corrected)
 
@@ -83,7 +83,11 @@ remark now reads "if A is closed and ∞ does not occur in the RV-coordinates of
   (`Values.presentationValuation`, `presentation_compatible`), and the Puiseux ambient with its
   base is constructed (`puiseuxAmbient_nonempty`), but no declaration states Theorem 7.26 or
   Theorem 8.11 with these arguments filled in (checked for Theorem 8.11: `Gv`, `hv`, `hntB` are
-  variables of `theorem_8_11_milnor`).
+  variables of `theorem_8_11_milnor`). **Update, November 23:** `section 8/ClosedStatements.lean`
+  supplies them once: the Puiseux ambient chosen from `puiseuxAmbient_nonempty`, the compatible
+  valuation `Values.presentationValuation`, and the uniformizer `t` as the base element of
+  nontrivial value. `Closed.theorem_8_11`, `Closed.theorem_7_26` and `Closed.remark_8_14`/`_8_15`
+  have no hypotheses (only the three standard axioms); the smooth-X forms keep the étale chart.
 
 ### Notes on Section 7
 
@@ -123,11 +127,17 @@ remark now reads "if A is closed and ∞ does not occur in the RV-coordinates of
   (`integral_lift`, `lift_form_one`). Lean's Theorem 8.11 is stated for every element of
   K μRV^db[*] (`theorem_8_11_rv_ring`; its zeta series uses the integer-exponent part, which is
   η∘h_m on the natural subring), so Lean does not need the restriction to K^ℤ. The explicit object
-  of Remark 8.7 is new mathematics and has no Lean counterpart.
+  of Remark 8.7 is new mathematics; it was formalized on November 23 (`Remark87.remark_8_7`, for a
+  target covered by a part with finitely many weights and products `W × Δ♯` with `W` finite, which
+  is more general than the paper's claim). Its closing comparison with `μRV[1]` is not stated.
 - The introduction (Section 1) has no Lean library; its claims are those of the later sections.
 - The Fubini theorems are in their own paper and package.
 
-## 4. Records found out of date (not changed)
+## 4. Records found out of date
+
+All of these were brought up to date on November 23, except that the historical notes keep their
+wording and gained a dated header or a sentence citing the current receipts.
+
 
 - `section 6/verification/status.json`, field `unfinished`: both entries (Section 7 "must
   synchronize", Section 8 "must check") describe work that is done; the strings come from

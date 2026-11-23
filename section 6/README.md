@@ -26,8 +26,8 @@ relatively unary chain lifting 6.33. Precise model, saturation, smallness,
 Gamma-affine background, original-base and volume-form hypotheses are
 explicit in their public types.
 
-November 17–18 additions (see [GAP-REPAIRS.md](GAP-REPAIRS.md); latest audit
-PASS, 5811 declarations):
+November 17–18 additions (see [GAP-REPAIRS.md](GAP-REPAIRS.md); audit of that
+date PASS, 5811 declarations; the current receipt lists 5867):
 - the category μVF^◇ of Definition 6.34 (`DiamondCategory.lean`), Remark 6.35
   (isomorphism is an equivalence; `DiamondGroupoidMaps.lean` gives a
   `CategoryTheory.Groupoid` instance whose morphisms are the underlying maps)

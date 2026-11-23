@@ -1,5 +1,8 @@
 # Blueprint
 
+Published at <https://daviddhilbert.github.io/diamond-integral/>
+([dependency graph](https://daviddhilbert.github.io/diamond-integral/dependency-graph.svg)).
+
 This blueprint follows Forey–Yin, *Bounded integral and motivic Milnor fiber*, in its final form
 in this repository ([`paper/bounded-integral-motivic-milnor-fiber.pdf`](../paper/bounded-integral-motivic-milnor-fiber.pdf)),
 and links its numbered results to the Lean formalization. Sections and numbers are the paper's.
@@ -50,7 +53,7 @@ check fails when a declaration has moved, is in no section receipt, or when the 
 from the linked revision.
 
 The workflow `.github/workflows/blueprint.yml` runs these steps on GitHub and publishes the site
-with GitHub Pages once Pages is enabled for the repository (source: GitHub Actions).
+with GitHub Pages (source: GitHub Actions) on every push to `main` that touches its inputs.
 
 ## Reuse and attribution
 

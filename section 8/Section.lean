@@ -1,3 +1,4 @@
+import «section 8».ClosedStatements
 import «section 8».DiagonalClasses
 import «section 8».GaloisLattice
 import «section 8».GammaBounds
@@ -40,6 +41,7 @@ import «section 8».RationalSeries
 import «section 8».RationalValues
 import «section 8».RationalWeights
 import «section 8».Remark815
+import «section 8».Remark87
 import «section 8».RingDefinable
 import «section 8».SameType
 import «section 8».SimplexSeries

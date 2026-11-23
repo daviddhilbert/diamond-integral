@@ -76,10 +76,12 @@ status = {
     'allowed_axioms': sorted(ALLOWED),
     'sources': {str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in sources},
     'verification_script_sha256': hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
-    'unfinished': ["Section7 must synchronize Definition7.2 with the applied bounded variable Definition6.11, instantiate actual variable blowup words and continuous VF generator lifts, assemble head starts, full witness descent and contraction-order comparisons, and prove the revised 7.26 kernel for the explicitly defined relative ideal. These are deferred to its own session at the author's request; no complete native 7.26 theorem is claimed.", 'Section8 must check the equivariant endpoint-graph trace and specialization against the new relative ideal. Algebraic factor identities and RV-affinity/full-row descent support are available, but they do not certify complete downstream preservation. The old scalar Section4 ideal and its pure RV presentation remain distinct and unchanged.']
+    # Section 7 (Theorem 7.26 with the relative ideal) and Section 8 (Theorem 8.11 against it) are
+    # complete and audited in their own receipts.
+    'unfinished': [],
 }
 (RECORD/'status.json').write_text(json.dumps(status,indent=2)+'\n')
-print(f'PASS: {len(declarations)} full declaration types and axiom records; applied Section 6 aperture revision audited; downstream assembly deferred.')
+print(f'PASS: {len(declarations)} full declaration types and axiom records; applied Section 6 aperture revision audited; downstream assembly audited in Sections 7 and 8.')
 
 # Recheck exact provider identities after the source/signature audit.
 verify_shared_foundation(ROOT)

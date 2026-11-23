@@ -1553,7 +1553,7 @@
     "section 3/verification/cited-inputs.json": "9bb2c36016ed441e27838c1eef11d3622c246478581b534837430f999e07cbe1",
     "section 3/verification/paper-targets.json": "3a894f052ef26ce41f66be9d7cf5b7f6134b82b8c9380b1401f4ebba78f82e11",
     "DiamondIntegral.lean": "e2efdddaf2f6067edcb0e9f90892f1d092325f84daaf18d6406ce59503217f0a",
-    "lakefile.toml": "10ecda852e1b7d3c538d267becafc0cffdcfa70cfb1a10bdd5e581d5835c9d5d",
+    "lakefile.toml": "9ab227befc1ea81aacd333aacc28be66b9538d8d692a980bbf0a22a9e6842402",
     "lake-manifest.json": "adb89d87c6207291c8f275cd0b3359794a6300fd6012cdf3e4f923a0714ea567",
     "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
     "ACCEPTED-CITED-RESULTS.md": "74518acec216017b35e8154724881b9fd61ce137050381da4a74f8f282b8e946"

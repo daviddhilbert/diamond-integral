@@ -7,7 +7,8 @@
   "remaining_section4_main_text_obligations": [],
   "numbered_results_complete": [
     "Proposition 4.7",
-    "Proposition 4.15"
+    "Proposition 4.15",
+    "Lemma 4.18"
   ],
   "numbered_results_basis": "Linked directly to finalized Section 3 tensor kernel proofs at 37c8361 through actual factor/tensor/target ring equivalences, commuting comparison squares and elementary-pair ideal transport. No T001 interface is a theorem input. Original-base saturation, ACVF00, smallness and nontrivial Gamma remain explicit. The multivariate rational-affine Gamma normal form is proved (Section3GammaAffineDischarge.input); the unary Section 2 form is discharged by Section5.GammaQE.gamma_piecewise_rational_affine.",
   "numbered_statements_linked_to_finalized_section3": {
@@ -51743,10 +51744,10 @@
     "section 4/RVT001BoundedFactor.lean": "36489ff0c51e9254a85167b11f024f85fb10062c790cd2a4c0861de66ddfd372",
     "section 4/RVBoundedDecomposition.lean": "1fbdba32c3caaa1c2338ca78fd6ee60d511b9ca68e55a323a85dfbcb0d3fc2fc",
     "section 4/Section.lean": "c420f2cba521b9a22611c56997682e18294e3df0ff6fabdbcdc7079b637f3cd1",
-    "section 4/verify.py": "c27f1b13b983cacf031d299c789fb5fe71d4a21f23c988c1df258abf1bc3e0e7",
+    "section 4/verify.py": "b57ce180e4aa4efcf88555814b723f57cfbfa9f0f3534722c353499f0b39ddb8",
     "DiamondIntegral.lean": "e2efdddaf2f6067edcb0e9f90892f1d092325f84daaf18d6406ce59503217f0a",
     "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
-    "lakefile.toml": "10ecda852e1b7d3c538d267becafc0cffdcfa70cfb1a10bdd5e581d5835c9d5d",
+    "lakefile.toml": "9ab227befc1ea81aacd333aacc28be66b9538d8d692a980bbf0a22a9e6842402",
     "lake-manifest.json": "adb89d87c6207291c8f275cd0b3359794a6300fd6012cdf3e4f923a0714ea567",
     "ACCEPTED-CITED-RESULTS.md": "74518acec216017b35e8154724881b9fd61ce137050381da4a74f8f282b8e946",
     "section 4/verification/CITED-INPUTS.md": "854aa8b2f36a2c956fd3faf0fdcda4ee9a5c55973c266ac0322babe2c5281573",
