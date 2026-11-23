@@ -5836,7 +5836,7 @@
     "kind": "remark",
     "title": "Geometric versus bounded retraction",
     "statement": "The motivic volume operator of Notation 5.3 may be defined with $\\mathbb{E}_g$ instead of $\\mathbb{E}_b$, inverting $[\\A]$ (Remark 4.4); for proper invariant objects this only changes the image by a factor. Namely, every proper invariant $A \\in \\VF_*$ with $\\dim_{\\VF}(A) = n$ is isomorphic to some $\\mathbb{L} \\boldsymbol{U}$ with $(\\boldsymbol{U}, 0) \\in \\mRV^{\\db}[n]$, and\\[ \\mathbb{E}_g\\Big(\\int [A]\\Big) = \\mathbb{E}_b\\Big(\\int [A]\\Big) [\\A]^{-n}. \\]",
-    "proof": "Theorem 7.26, or rather Corollary 6.37, gives $A \\cong \\mathbb{L} \\boldsymbol{U}$ with $\\boldsymbol{U}$ doubly bounded; the identity then follows from the isomorphism $\\mu\\Psi$ of Section 3 and the defining conditions of $\\mathbb{E}_g$, $\\mathbb{E}_b$ (Proposition 4.7).",
+    "proof": "Theorem 7.26, or rather Corollary 6.37, gives $A \\cong \\mathbb{L} \\boldsymbol{U}$ with $\\boldsymbol{U}$ doubly bounded; the identity then follows from the surjectivity of $\\mu\\Psi$ (Proposition 3.18) and the defining conditions of $\\mathbb{E}_g$, $\\mathbb{E}_b$ (Proposition 4.7).",
     "uses": [
       "mov-vol",
       "eb-no-eg",

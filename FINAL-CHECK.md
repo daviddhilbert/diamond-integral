@@ -68,6 +68,11 @@ nonzero, and `section 6/GAP-REPAIRS.md` records a counterexample to the printed 
 author's approval of the correction on November 17; the manuscript had not been changed. The
 remark now reads "if A is closed and ∞ does not occur in the RV-coordinates of f(A)".
 
+A second, smaller one was found on November 23 while the review record was assembled: Remark
+7.28 argued "in light of the isomorphism μΨ", although Proposition 3.18 gives μΨ as surjective
+with a nontrivial kernel (the correction of T001). Only surjectivity is used; the wording now says
+so (author resolution C003). The introduction and Section 8 had been reworded earlier.
+
 ### Hypotheses that stay explicit in Lean
 
 - **Reichstein–Youssin** (author-approved input): used by Remark 3.15 (first sentence, and the

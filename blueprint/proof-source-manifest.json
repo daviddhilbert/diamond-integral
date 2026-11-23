@@ -9,15 +9,15 @@
     "special_transformations": "37e4dfacb293f38db28b2d8eca46a285eead3127"
   },
   "sha256": {
-    "paper/bounded-integral-motivic-milnor-fiber.tex": "dc23cb83fc1f5a202d9e1bbc814eaf44c42ad94524ca94525ba316ab5e0ba2e3",
+    "paper/bounded-integral-motivic-milnor-fiber.tex": "84f8cd8598b767b27716fc146606c7f41ba00e2871de51b25780b1016bf7ec58",
     "lake-manifest.json": "adb89d87c6207291c8f275cd0b3359794a6300fd6012cdf3e4f923a0714ea567",
     "lakefile.toml": "9ab227befc1ea81aacd333aacc28be66b9538d8d692a980bbf0a22a9e6842402",
     "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
     "SHARED-FOUNDATION.json": "4762307e03d3e3db99c0eef7214a3c02c77096c97f6abc93f025fae05c85f3c7",
     "EXTRACTED-FOUNDATIONS.json": "d19b871bbe019ca51b250d868a83a04c4f74528f34ece91178cac5f18804ec45",
-    "section 2/verification/status.json": "8b30c0a03c1b94984b2ff65dda1d3fd8bdceee0f52b009bf80ad1d6436ae8038",
-    "section 3/verification/VERIFICATION.json": "92d17ac734227c717ad526c2969014fe4dac7e75d1ea4d9041ad7140838c7d2a",
-    "section 4/verification/status.json": "24c7432be10d9dd7da55fce763e506a874e9dd9c6d96d6463deb4c1dc1afae3b",
+    "section 2/verification/status.json": "f020c6f08f3815e1809354eaf15c6ec24ac0fbc77f044b940e154a009f409832",
+    "section 3/verification/VERIFICATION.json": "d61b5f04de898dbb36bc31bca0b7b346f5a235e05544e8fdff2bd9039db4c265",
+    "section 4/verification/status.json": "baaaec034702916e5f0cddedb3a43a6e0a8401e3cb34b7c8af528277c8c9c523",
     "section 6/verification/status.json": "3727e356de6a16fa26e111bb2ec00ff3509d8e26cb345bbdb8a7329eb07cc17b",
     "section 7/verification/status.json": "48eaa898cf79dfbf665618a6c68774c9df163fd30713ead30cde76d3262c7724",
     "section 8/verification/status.json": "1c2a8704c62b1e1c1c4e9136e3ae25c811644be590ffb684931ec8d5b6bbb5f0"

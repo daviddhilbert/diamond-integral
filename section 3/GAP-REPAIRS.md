@@ -30,7 +30,10 @@ Requested by the author. Independent audit (read-only), summarized here.
   value condition.)
 - Downstream text still saying "isomorphism": introduction (lines ~645, ~663),
   Remark `eg:eb:factor` (~5840) and Section 8 `h_m` paragraph (~5927, false as
-  written over `C((t))`). None is load-bearing; rewording needed.
+  written over `C((t))`). None is load-bearing; rewording needed. The introduction and the
+  Section 8 paragraph were reworded in the introduction and Section 8 reviews; Remark
+  `eg:eb:factor` (Remark 7.28) was missed and corrected on November 23 ("in light of the
+  surjectivity of μΨ (Proposition 3.18)"; author resolution C003 in the annotated manuscript).
 
 ## Theorem 3.22 — status and the bounded part (proved November 17)
 
