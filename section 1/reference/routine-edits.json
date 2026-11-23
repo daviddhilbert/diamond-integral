@@ -1,0 +1,41 @@
+{
+  "description": "Routine corrections in the front matter and introduction, applied under the author's standing authorization for clear typos and independently established corrections.",
+  "before_sha256": "e4b1186c65f40f4261b8c5560b86a0f3e5786a2588bc44a947331f7d776c5538",
+  "after_sha256": "e8a19c67f63c8634d6e68a09f958a6baf02769686c98a250d567a888d0130010",
+  "resolved_referee_items": [
+    "R001",
+    "R002",
+    "R003",
+    "R004",
+    "R005",
+    "R006",
+    "R010",
+    "R018",
+    "R020"
+  ],
+  "resolutions": {
+    "R001": "Corrected to ``We also thank'', ``for their encouragement'', ``so-called'' and ``construct the motivic Milnor fiber''.",
+    "R002": "Corrected to ``so-called''; the infinitive ``rectify'' is kept.",
+    "R003": "The convention $\\vv(0)=\\infty$ is stated, $\\OO$ and $\\MM$ are described through $\\vv$, and the leading term is defined for nonzero series.",
+    "R004": "Written $\\tilde\\C^{\\times}/(1+\\MM)$.",
+    "R005": "The inclusion is corrected to $B \\sub A$, as in Definition~\\ref{def:Kgroup}, and the product is cartesian product.",
+    "R006": "Corrected to ``homogeneous'' at both occurrences.",
+    "R010": "Corrected to $\\beta\\in\\Gamma^m$, and the boundedness of $A$ and $B$ required by Definition~\\ref{prop:pseu} is now part of the description.",
+    "R018": "The second morphism is now $f' : A' \\fun B$.",
+    "R020": "Corrected to ``The short Section~3 introduces notation and results'' and ``the construction of the motivic zeta function and the motivic Milnor fiber''."
+  },
+  "unnumbered": [
+    "Introduction: \"cohomological groups\" corrected to \"cohomology groups\"."
+  ],
+  "later": [
+    {
+      "item": "R047",
+      "section": 3,
+      "date": "2026-11-22",
+      "author_decision": "no need to change the wording, mark it as resolved",
+      "resolution": "The authors keep the wording. With $B = A$ the scissor relation gives $[\\varnothing] + [A] = [A]$, so the class of the empty object is the zero, and every Grothendieck ring used in the paper is formed in the presence of a product; no later construction depends on this convention.",
+      "before_sha256": "d31ffc3157d9d035618f3c9385acc9536410befef4216326f070d9bf0ef7157a",
+      "after_sha256": "d2d304914c73e25c0de71dff1b3b92795481b012d172253c5f556da6b014960d"
+    }
+  ]
+}

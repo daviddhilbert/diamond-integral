@@ -1,0 +1,11 @@
+{
+  "batch": "B07-unlocalized-lift",
+  "before_sha256": "bc7901c4ccfbe772a7bbc75a9eb1cb880ee09282da088fa00505d87d8eb77e54",
+  "after_sha256": "9035081d34b48a4badaac8a25527ec38019e39d3dba73e3140fa1e9a82c6aeba",
+  "resolved_referee_items": [
+    "R016"
+  ],
+  "approval_user_message": "Approve B07",
+  "approved_on": "2026-11-22",
+  "also_changed": "The sentence on the analytic Milnor fiber now identifies its volume with the same lift."
+}

@@ -1,0 +1,11 @@
+{
+  "batch": "B04-good-actions",
+  "before_sha256": "90098e3700e55470a3a4f48a6de9fd1670641515e808dddba0821375bfff587a",
+  "after_sha256": "e781c9d652fabb415f337bcf6256d328879389d535db29f28f6125d4c562c7d7",
+  "resolved_referee_items": [
+    "R011"
+  ],
+  "approval_user_message": "Approve B04",
+  "approved_on": "2026-11-22",
+  "also_changed": "The sentence on Theta now refers plainly to Notation bipo:gdv (no referee item)."
+}

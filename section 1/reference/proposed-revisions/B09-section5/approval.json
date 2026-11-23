@@ -1,0 +1,9 @@
+{
+  "batch": "B09-section5",
+  "before_sha256": "d2d304914c73e25c0de71dff1b3b92795481b012d172253c5f556da6b014960d",
+  "after_sha256": "fae3fe83079b66776d719685db8fd7abea1d02e225b110647ba4fee3ebbf78e8",
+  "resolved_referee_items": [],
+  "approval_user_message": "B09 is approved",
+  "approved_on": "2026-11-22",
+  "also_changed": "Section 5 replaced by a short section recalling Lemma 5.12, Notation 5.14 (with (twist:C)) and Notation 5.15 from the Fubini paper; outline updated; loeser2019motivic deleted; R080-R095, THETA and geometric-Fubini notes removed with the old text."
+}

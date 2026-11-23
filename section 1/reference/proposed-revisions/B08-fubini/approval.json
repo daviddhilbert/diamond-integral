@@ -1,0 +1,11 @@
+{
+  "batch": "B08-fubini",
+  "before_sha256": "9035081d34b48a4badaac8a25527ec38019e39d3dba73e3140fa1e9a82c6aeba",
+  "after_sha256": "d31ffc3157d9d035618f3c9385acc9536410befef4216326f070d9bf0ef7157a",
+  "resolved_referee_items": [
+    "R019"
+  ],
+  "approval_user_message": "Acknowledgement: remove. (Author's reply to the revised B08; the Fubini theorems are in their own paper in the Fubini repository.)",
+  "approved_on": "2026-11-22",
+  "also_changed": "Acknowledgement to J. Nicaise for the Fubini theorem removed."
+}

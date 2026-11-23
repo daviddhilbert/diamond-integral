@@ -1,0 +1,11 @@
+{
+  "batch": "B01-rv-categories",
+  "before_sha256": "e8a19c67f63c8634d6e68a09f958a6baf02769686c98a250d567a888d0130010",
+  "after_sha256": "caaf1b90043132f0cd5bc251e07c3789e640443da316dc64817831820f60669d",
+  "resolved_referee_items": [
+    "R162"
+  ],
+  "approval_user_message": "Approve B01",
+  "approved_on": "2026-11-22",
+  "also_changed": "The tensor-product sentences of the introduction now state the quotient presentation of Proposition red:D:iso (no referee item)."
+}

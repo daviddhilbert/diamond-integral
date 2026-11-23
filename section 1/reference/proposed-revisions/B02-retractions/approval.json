@@ -1,0 +1,11 @@
+{
+  "batch": "B02-retractions",
+  "before_sha256": "caaf1b90043132f0cd5bc251e07c3789e640443da316dc64817831820f60669d",
+  "after_sha256": "14769a408deac013f182c02edd5cba16600299901e6f9a1e170b455aff71f97a",
+  "resolved_referee_items": [
+    "R007",
+    "R008"
+  ],
+  "approval_user_message": "Approve B02",
+  "approved_on": "2026-11-22"
+}

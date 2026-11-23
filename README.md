@@ -20,7 +20,10 @@ The checked baseline includes completed Sections 2–8 in their recorded
 scopes, including revised Definition 6.11, the synchronized Section 7
 aperture and kernel assembly (Theorem 7.26 with `J_var`), and Section 8 for
 `X = 𝔸^d` and smooth affine `X`. Historical planning notes do not supersede
-current coverage maps and receipts.
+current coverage maps and receipts. The introduction was reconciled with these
+sections on November 22; the Fubini theorems of the former Section 5 are now in
+their own paper in the Fubini-theorems repository, and Section 5 of the
+manuscript recalls only what Section 8 uses.
 
 The pinned [hilbert-mathlib](https://github.com/daviddhilbert/hilbert-mathlib)
 dependency now owns 65 reusable modules formerly implemented here, within the

@@ -1,0 +1,11 @@
+{
+  "batch": "B05-failed-surjectivity",
+  "before_sha256": "e781c9d652fabb415f337bcf6256d328879389d535db29f28f6125d4c562c7d7",
+  "after_sha256": "0b4553417d92ddb29c632b43b61fdf62fcf16e749904ee0fbec027ac850fc465",
+  "resolved_referee_items": [
+    "R013"
+  ],
+  "approval_user_message": "Approve B05",
+  "approved_on": "2026-11-22",
+  "also_changed": "The Section 8 remark citing HK 10.10(2) (now labelled rem:HK:fail) contains the example; the note after Proposition red:D:iso refers to it."
+}

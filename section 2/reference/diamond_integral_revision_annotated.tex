@@ -516,7 +516,7 @@
 \address[Y. Yin]{Pasadena, California}
 \email{yimu.yin@hotmail.com}
 
-\thanks{Many thanks to Ehud Hrushovski and Fran\c cois Loeser for encouragements and enlightening discussions during the preparation of this manuscript. We also thanks Johannes Nicaise for suggesting to work on the Fubini theorem. Thanks also to Raf Cluckers and Martin Hils for inspiring discussions and comments. A.F.\ is supported by a DFG-SNF lead agency program grant
+\thanks{Many thanks to Ehud Hrushovski and Fran\c cois Loeser for their encouragement and enlightening discussions during the preparation of this manuscript. Thanks also to Raf Cluckers and Martin Hils for inspiring discussions and comments. A.F.\ is supported by a DFG-SNF lead agency program grant
   (grant 200020L\_175755). }
 
 %\keywords{Motivic integration}
@@ -525,7 +525,7 @@
 
 
 \begin{abstract}
-We construct a new Hrushovski-Kazhdan style motivic integral, the so-call bounded integral, that interpolates the integral with volume forms and that without volume forms. This is done within the framework of model theory of algebraically closed valued fields of equicharacteristic zero. As the main application, we rectify and refine some results of Hrushovski and Loeser on how to construct motivic Milnor fiber without resolution of singularities.
+We construct a new Hrushovski-Kazhdan style motivic integral, the so-called bounded integral, that interpolates the integral with volume forms and that without volume forms. This is done within the framework of model theory of algebraically closed valued fields of equicharacteristic zero. As the main application, we rectify and refine some results of Hrushovski and Loeser on how to construct the motivic Milnor fiber without resolution of singularities.
 \end{abstract}
 
 
@@ -547,9 +547,9 @@ The principal counterexamples concerning Jacobians, continuity, residue-field de
 % END REFEREE INSERTION OVERVIEW
 
 % BEGIN REFEREE INSERTION R001
-\RefereeRemark{001}{Typo}{Acknowledgements and abstract}{%
+\ResolvedRefereeRemark{001}{Typo}{Acknowledgements and abstract}{%
 \textit{Original source line 507.}\quad In the acknowledgements, replace ``We also thanks'' by ``We also thank'' and preferably ``for encouragements'' by ``for their encouragement''. In the abstract, ``so-call'' should be ``so-called'', and ``construct motivic Milnor fiber'' should read ``construct the motivic Milnor fiber''. These are corrections to source lines 493 and 502.
-}
+}{Corrected to ``We also thank'', ``for their encouragement'', ``so-called'' and ``construct the motivic Milnor fiber''.}
 % END REFEREE INSERTION R001
 
 
@@ -575,13 +575,13 @@ The principal counterexamples concerning Jacobians, continuity, residue-field de
 \pagebreak
 
 \section{Introduction}
-Recent years have seen significant development in applying the Hrushovski-Kazhdan integration theory to the  study of a variety of topics in geometry and topology, especially those around Denef-Loeser's motivic Milnor fiber. Such an approach  was first articulated in  \cite{hru:loe:lef} for the purpose of  finding a more conceptual (read ``resolution-free'') construction of the complex  motivic Milnor fiber, among other things; unfortunately, it contains a substantial technical oversight. The main goal of this paper is to present a new Hrushovski-Kazhdan style integral,  the so-call \memph{bounded integral}, that interpolates (or refines) the integral with volume forms and that without volume forms, and thereby fully rectify the results in  \cite{hru:loe:lef}.
+Recent years have seen significant development in applying the Hrushovski-Kazhdan integration theory to the  study of a variety of topics in geometry and topology, especially those around Denef-Loeser's motivic Milnor fiber. Such an approach  was first articulated in  \cite{hru:loe:lef} for the purpose of  finding a more conceptual (read ``resolution-free'') construction of the complex  motivic Milnor fiber, among other things; unfortunately, it contains a substantial technical oversight. The main goal of this paper is to present a new Hrushovski-Kazhdan style integral,  the so-called \memph{bounded integral}, that interpolates (or refines) the integral with volume forms and that without volume forms, and thereby fully rectify the results in  \cite{hru:loe:lef}.
 The overhaul taken up here constitutes a comprehensive expansion of the theoretical framework of the Hrushovski-Kazhdan style integration that should prove amenable to new applications in the future.
 
 % BEGIN REFEREE INSERTION R002
-\RefereeRemark{002}{Typo; revised}{Wording}{%
+\ResolvedRefereeRemark{002}{Typo; revised}{Wording}{%
 \textit{Original source line 529.}\quad Replace ``so-call'' by ``so-called''. The first report's additional request to replace ``rectify'' by ``rectifies'' is withdrawn: ``to present ... and thereby rectify ...'' is a valid coordination of infinitives. Recasting the long sentence may improve readability, but no correction of that verb is required.
-}
+}{Corrected to ``so-called''; the infinitive ``rectify'' is kept.}
 % END REFEREE INSERTION R002
 
 
@@ -589,69 +589,69 @@ We now explain our construction in more detail.
 %The Grothendieck semigroup $\gsk \mdl C$ of a category $\mdl C$ endowed with a binary operation ``$\mi$'' and a binary relation ``$\subseteq$'' (subobject) is the free semigroup generated by the isomorphism classes of $\mdl C$, subject to the usual scissor relation
 %$[A \mi B] + [B] = [A]$, when $B\subseteq A$,
 %where $[A]$, $[B]$ denote the isomorphism classes of the objects $A$, $B$, and ``$\mi$'' and ``$\subseteq$'' are compatible with isomorphisms between objects, usually they are just set subtraction and set inclusion. Sometimes $\mdl C$ is also equipped with a binary operation (for example, cartesian product) that induces multiplication in $\gsk \mdl C$, in which case $\gsk \mdl C$ becomes a (commutative) semiring. The formal groupification of  $\gsk \mdl C$, which is then a ring, is denoted by $\ggk \mdl C$. If a group $G$ acts on the objects of $\mdl C$ and the morphisms of $\mdl C$ are $G$-equivariant, that is, they commute with $G$-actions, then the corresponding $G$-equivariant Grothendieck ring is denoted by $\ggk^G \mdl C$. If $G = \lim_n G_n$ is profinite then we shall always impose the condition that a $G$-action factor through some $G_n$-action.
-In this introduction, for concreteness, we work in  the field $\puC = \bigcup_{m \in \Z^+} \C \dpar{ t^{1 / m} }$ of complex Puiseux series. This field is the algebraic closure of the field $\C \dpar t$ of complex Laurent series. A typical element  takes the form $x = \sum_{n \in \Z} a_n t^{n/m}$ for some $m \in \Z^+$ such that its support $\supp(x) = \set{n/m \in \Q \given a_n \neq 0 }$ is well-ordered, in other words, there is a $q \in \Q$ such that $a_n = 0$ for all $n/m < q$. We think of $\bfk \coloneqq \C$ as a subfield of $\puC$ via the embedding $a \efun at^0$. The map $\vv: \tilde \C^\times \fun \Q$ given by $x \efun \min\supp(x)$ is indeed a valuation, and its valuation ring $\OO$ consists of those series $x$ with $\min\supp(x) \geq 0$ and its maximal ideal $\MM$ of those series $x$ with $\min\supp(x) > 0$. Its residue field $\K$ admits a section onto $\bfk$ and hence is isomorphic to $\C$. For a series $x = \sum_{n \in \Z} a_n t^{n/m} \in \puC$ with $\vv(x) = p/m$, let $\rv(x) = a_p t^{p/m}$, which is called the \memph{leading term} of $x$.
+In this introduction, for concreteness, we work in  the field $\puC = \bigcup_{m \in \Z^+} \C \dpar{ t^{1 / m} }$ of complex Puiseux series. This field is the algebraic closure of the field $\C \dpar t$ of complex Laurent series. A typical element  takes the form $x = \sum_{n \in \Z} a_n t^{n/m}$ for some $m \in \Z^+$ such that its support $\supp(x) = \set{n/m \in \Q \given a_n \neq 0 }$ is well-ordered, in other words, there is a $q \in \Q$ such that $a_n = 0$ for all $n/m < q$. We think of $\bfk \coloneqq \C$ as a subfield of $\puC$ via the embedding $a \efun at^0$. The map $\vv: \tilde \C^\times \fun \Q$ given by $x \efun \min\supp(x)$ is indeed a valuation. With the convention $\vv(0) = \infty$, its valuation ring $\OO$ consists of those series $x$ with $\vv(x) \geq 0$ and its maximal ideal $\MM$ of those series $x$ with $\vv(x) > 0$. Its residue field $\K$ admits a section onto $\bfk$ and hence is isomorphic to $\C$. For a nonzero series $x = \sum_{n \in \Z} a_n t^{n/m} \in \puC$ with $\vv(x) = p/m$, let $\rv(x) = a_p t^{p/m}$, which is called the \memph{leading term} of $x$.
 
 % BEGIN REFEREE INSERTION R003
-\RefereeRemark{003}{Clarification}{Zero series convention}{%
+\ResolvedRefereeRemark{003}{Clarification}{Zero series convention}{%
 \textit{Original source line 536.}\quad Set $\vv(0)=\infty$ explicitly, or add $0$ separately to the displayed descriptions of $\OO$ and $\MM$: $\min\supp(0)$ is undefined unless this convention is imposed. The leading-term formula here applies to nonzero series.
-}
+}{The convention $\vv(0)=\infty$ is stated, $\OO$ and $\MM$ are described through $\vv$, and the leading term is defined for nonzero series.}
 % END REFEREE INSERTION R003
 
-It is well-known that $(\puC, \OO)$ is an algebraically closed valued field of equicharacteristic zero. Thus, we may  think of it as an $\lan{}{RV}{}$-model of the first-order theory $\ACVF(0,0)$ of such fields, with the parameter space (the ``ground field'') $\bb S = \C \dpar t$.  Here  the two sorts $\VF$, $\RV$ of the language $\lan{}{RV}{}$ are  interpreted, respectively, as $\puC$, $\tilde \C^\times / 1 + \MM$ (or, equivalently, the set of leading terms) and the cross-sort function $\rv : \VF^\times \fun \RV$ as the quotient map (or the leading term map described above). The obvious epimorphism from $\RV$ onto the value group $\Gamma = \Q$, also referred to as the $\Gamma$-sort, with the kernel $\K^\times$, is denoted by $\vrv$. See \cite[\S~2]{Yin:special:trans} for the precise definitions. The Galois group $\gal(\puC / \C \dpar t)$, which  is also the group of automorphisms over $\C \dpar t$ of $\puC$ as a model of $\ACVF(0,0)$, may be identified with the procyclic group $\hat \mu$ of roots of unity (the limit of the inverse system of groups $\mu_n$ of $n$th roots of unity).
+It is well-known that $(\puC, \OO)$ is an algebraically closed valued field of equicharacteristic zero. Thus, we may  think of it as an $\lan{}{RV}{}$-model of the first-order theory $\ACVF(0,0)$ of such fields, with the parameter space (the ``ground field'') $\bb S = \C \dpar t$.  Here  the two sorts $\VF$, $\RV$ of the language $\lan{}{RV}{}$ are  interpreted, respectively, as $\puC$, $\tilde \C^\times / (1 + \MM)$ (or, equivalently, the set of leading terms) and the cross-sort function $\rv : \VF^\times \fun \RV$ as the quotient map (or the leading term map described above). The obvious epimorphism from $\RV$ onto the value group $\Gamma = \Q$, also referred to as the $\Gamma$-sort, with the kernel $\K^\times$, is denoted by $\vrv$. See \cite[\S~2]{Yin:special:trans} for the precise definitions. The Galois group $\gal(\puC / \C \dpar t)$, which  is also the group of automorphisms over $\C \dpar t$ of $\puC$ as a model of $\ACVF(0,0)$, may be identified with the procyclic group $\hat \mu$ of roots of unity (the limit of the inverse system of groups $\mu_n$ of $n$th roots of unity).
 
 % BEGIN REFEREE INSERTION R004
-\RefereeRemark{004}{Typo}{Quotient parentheses}{%
+\ResolvedRefereeRemark{004}{Typo}{Quotient parentheses}{%
 \textit{Original source line 538.}\quad Write $\tilde\C^{\times}/(1+\MM)$: without parentheses, the displayed quotient is ambiguous.
-}
+}{Written $\tilde\C^{\times}/(1+\MM)$.}
 % END REFEREE INSERTION R004
 
 
 
-The category $\VF_*$ essentially consists of the definable subsets of $\VF^n$, $n \geq 0$, as objects and the definable bijections between them as morphisms. The category $\RV[k]$ essentially consists of the definable subsets of $\RV^k$ as objects and the definable bijections between them as morphisms. The category  $\RV[*]$  is the coproduct of $\RV[k]$, $k \geq 0$, and hence is equipped with a gradation by ambient dimensions. The actual definitions will be recalled in \S~\ref{sec:HK:main}.
+The category $\VF_*$ essentially consists of the definable subsets of $\VF^n$, $n \geq 0$, as objects and the definable bijections between them as morphisms. The objects of the category $\RV[k]$ are the pairs $(U, f)$, where $U$ is a definable set in a finite power of $\RV$ and $f : U \fun \RV^k$ is a definable finite-to-one function, and a morphism $(U, f) \fun (V, g)$ is a definable bijection $U \fun V$. The category  $\RV[*]$  is the coproduct of $\RV[k]$, $k \geq 0$, and hence is graded by $k$, the rank of the target of $f$ (not by the ambient dimension of $U$). The actual definitions will be recalled in \S~\ref{sec:HK:main}.
 
 % BEGIN REFEREE INSERTION R162
-\RefereeRemark{162}{Clarification; new}{The introductory description excludes finite covers}{%
+\ResolvedRefereeRemark{162}{Clarification; new}{The introductory description excludes finite covers}{%
 \textit{Original source line 542.}\quad The phrase ``essentially consists of the definable subsets of $\RV^k$'' is too restrictive, even up to definable bijection. For example,
 \[
 U=\{(x,y)\in(\K^\times)^2:y^2=x^3-x\}
 \]
 is an affine open of a genus-one curve, and its projection to $x$ makes it an object of $\RES[1]\subseteq\RV[1]$. It is not definably bijective to a subset of $\RV$: orthogonality forces such an image to have finitely many value-group fibers; after naming lifts of their values, those fibers are constructible subsets of $\K^\times$. In characteristic zero, a definable bijection would then give a birational parametrization of a dense open of the genus-one curve by a subset of the affine line, which is impossible. Use the description in Definition~\ref{defn:c:RV:cat}: an object is a pair $(U,f)$, with $U$ in an arbitrary finite RV power and $f:U\to\RV^k$ finite-to-one. The grading is the chosen target rank $k$, not the ambient dimension of $U$.
-}
+}{The introduction now describes an object of $\RV[k]$ as in Definition~\ref{defn:c:RV:cat}: a pair $(U,f)$ with $U$ in a finite power of $\RV$ and $f : U \fun \RV^k$ finite-to-one, with all definable bijections $U \fun V$ as morphisms, and the grading is by $k$. No claim is made about subsets of $\RV^k$.}
 % END REFEREE INSERTION R162
 
-To such categories one associates Grothendieck rings $\ggk\VF_*$ and $\ggk\RV[*]$, roughly constructed as the free group generated by isomorphism classes of objects, subject to the usual scissor relation $[A \mi B] + [B] = [A]$ for any objects $A \sub B$, and the product being given by fiber product. See  Definition~\ref{def:Kgroup} for details.
+To such categories one associates Grothendieck rings $\ggk\VF_*$ and $\ggk\RV[*]$, roughly constructed as the free group generated by isomorphism classes of objects, subject to the usual scissor relation $[A \mi B] + [B] = [A]$ for any objects $B \sub A$, and the product being given by cartesian product. See  Definition~\ref{def:Kgroup} for details.
 
 % BEGIN REFEREE INSERTION R005
-\RefereeRemark{005}{Error; revised}{Scissor relation}{%
+\ResolvedRefereeRemark{005}{Error; revised}{Scissor relation}{%
 \textit{Original source line 544.}\quad The inclusion is reversed: the relation $[A\mi B]+[B]=[A]$ requires $B\subseteq A$. With the displayed $A\subseteq B$, taking $A=\varnothing$ would force every $[B]$ to be zero. The multiplication intended here is Cartesian product. The first report's parenthetical description using a terminal object is withdrawn: the categories here admit only bijections, so that categorical description was inappropriate.
-}
+}{The inclusion is corrected to $B \sub A$, as in Definition~\ref{def:Kgroup}, and the product is cartesian product.}
 % END REFEREE INSERTION R005
 
 Pulling back from $\RV$ to $\VF$ along the map $\rv: \VF^\times \fun \RV$ yields a ring homomorphism between the   Grothendieck rings
 \begin{equation}\label{lifting:hom}
 \bb L : \ggk\RV[*] \fun \ggk\VF_*
 \end{equation}
-One of the  main results of \cite{hrushovski:kazhdan:integration:vf} states that $\bb L$ is surjective with the kernel $(\bm P-1)$, where $\bm P$ stands for the element $[\{1\}] - [\rv(\MM \mi 0)]$  in $\ggk \RV[1]$ (so the principal ideal $(\bm P - 1)$ is not homogenous), and hence, inverting, we get a canonical isomorphism
+One of the  main results of \cite{hrushovski:kazhdan:integration:vf} states that $\bb L$ is surjective with the kernel $(\bm P-1)$, where $\bm P$ stands for the element $[\{1\}] - [\rv(\MM \mi 0)]$  in $\ggk \RV[1]$ (so the principal ideal $(\bm P - 1)$ is not homogeneous), and hence, inverting, we get a canonical isomorphism
 
 % BEGIN REFEREE INSERTION R006
-\RefereeRemark{006}{Typo}{Spelling}{%
+\ResolvedRefereeRemark{006}{Typo}{Spelling}{%
 \textit{Original source line 550.}\quad Replace ``homogenous'' by ``homogeneous'' here and at its subsequent occurrences in this introduction.
-}
+}{Corrected to ``homogeneous'' at both occurrences.}
 % END REFEREE INSERTION R006
 \[
 \int : \ggk\VF_* \fun \ggk\RV[*]/(\bm P-1).
 \]
 
-The structure of $\ggk \RV[*]$ can be significantly elucidated. To wit, it is isomorphic to a tensor product of two other Grothendieck rings $\ggk \RES[*]$ and $\ggk \Gamma[*]$, where  $\RES[*]$ is  the category of twisted constructible sets in the residue field $\K$  and $\Gamma[*]$ is the category of definable sets in the value group $\Gamma$ (as an \omin-minimal group), both are graded by ambient dimensions. The objects of $\RES[*]$ are twisted because the short exact sequence
+The structure of $\ggk \RV[*]$ can be significantly elucidated. To wit, it is a quotient of a tensor product of two other Grothendieck rings $\ggk \RES[*]$ and $\ggk \Gamma[*]$ by explicit coefficient-translation relations (Proposition~\ref{red:D:iso}), where  $\RES[*]$ is the full subcategory of $\RV[*]$ of twisted constructible sets in the residue field $\K$, with the same grading, and $\Gamma[*]$ is the category of definable sets in the value group $\Gamma$ (as an \omin-minimal group), graded by ambient dimension. The objects of $\RES[*]$ are twisted because the short exact sequence
 \[
 1 \fun \K^\times \fun \RV \fun \Gamma \fun 0
 \]
-does not admit a natural splitting, and $\ggk \Gamma[*]$ is not the Grothendieck ring of \omin-minimal groups because not all definable bijections are admitted as morphisms. Anyway, we have two retractions from $\ggk \RV[*]$ onto a quotient $\sggk \RES$ of $\ggk \RES$ (the gradation is forgotten) that vanish on $(\bm P-1)$, reflecting the fact that there are two Euler characteristics in the $\Gamma$-sort; these are denoted by $\bb E_{b}$, $\bb E_{g}$.
+does not admit a natural splitting, and $\ggk \Gamma[*]$ is not the Grothendieck ring of \omin-minimal groups because not all definable bijections are admitted as morphisms. Anyway, we have two homomorphisms $\bb E_{b}$, $\bb E_{g}$ on $\ggk \RV[*]$ that vanish on $(\bm P-1)$, reflecting the fact that there are two Euler characteristics in the $\Gamma$-sort, the bounded one and the geometric one (\S~\ref{subs:uni:retr:novol}). The first is a retraction onto the quotient $\sggk \RES$ of $\ggk \RES$ of Notation~\ref{res:note} (the gradation is forgotten). The second requires inverting the class $[\A]$ of the affine line and takes values in the degree-zero part of $\sggk \RES[*][[\A]^{-1}]$; for instance, after forgetting the gradation, $\bb E_{b}([1]) = 1$ whereas $\bb E_{g}([1]) = [\A]^{-1}$ (Remark~\ref{eb:no:eg}).
 
 % BEGIN REFEREE INSERTION R007
-\RefereeRemark{007}{Error}{Different targets for the two retractions}{%
+\ResolvedRefereeRemark{007}{Error}{Different targets for the two retractions}{%
 \textit{Original source line 559.}\quad The two targets should be distinguished already here. The bounded Euler-characteristic construction $\bb E_b$ lands in $\sggk\RES$, but the geometric one $\bb E_g$ requires affine-line localization: its dimension-free image lies in $\sggk\RES[[\A]^{-1}]$. For example, $\bb E_g([1])=[\A]^{-1}$ after forgetting the grading, as computed in Remark~\ref{eb:no:eg}. Thus both maps cannot be described here as retractions onto the same unlocalized ring.
-}
+}{The two homomorphisms are now described separately: $\bb E_b$ is a retraction onto $\sggk \RES$, while $\bb E_g$ requires inverting $[\A]$ and takes values in the degree-zero part of $\sggk\RES[*][[\A]^{-1}]$. The example $\bb E_b([1]) = 1$, $\bb E_g([1]) = [\A]^{-1}$ of Remark~\ref{eb:no:eg} is quoted.}
 % END REFEREE INSERTION R007
 %We shall only need $\bb E_{b}$; see the left column of the diagram (\ref{diag-diamond-interpol}).
 
@@ -660,12 +660,12 @@ The objects of $\VF_*$, $\RV[*]$ may be equipped with $\Gamma$-volume forms, and
 \[
 \int^\mu : \ggk\mgVF[*] \fun \ggk\mgRV[*]/(\bm P),
 \]
-where the principal ideal $(\bm P)$ is now homogenous. The ring $\ggk\mgRV[*]$ can  be expressed as a tensor product of  $\ggk \mgRES[*]$ and $\ggk \mG[*]$, which induces two retractions $\mgE_ {b}$, $\mgE_{g}$ from $\ggk\mgRV[*]$ onto $\sggk \RES[*]$ that vanish on $(\bm P)$; see the right column of the diagram (\ref{diag-diamond-interpol}).
+where the principal ideal $(\bm P)$ is now homogeneous. The ring $\ggk\mgRV[*]$ is likewise a quotient of a tensor product of  $\ggk \mgRES[*]$ and $\ggk \mG[*]$, which induces two graded homomorphisms $\mgE_ {b}$, $\mgE_{g}$ from $\ggk\mgRV[*]$ to $\sggk \mgRES[*]/([\A])$ that vanish on $(\bm P)$ and restrict to the quotient map on $\ggk \mgRES[*]$ (Proposition~\ref{prop:eu:retr:k}). The construction forces $[\A] = 0$, which is detrimental to our purpose; this is avoided by the doubly bounded categories below.
 
 % BEGIN REFEREE INSERTION R008
-\RefereeRemark{008}{Error}{Measured retraction target}{%
+\ResolvedRefereeRemark{008}{Error}{Measured retraction target}{%
 \textit{Original source line 567.}\quad The target stated here omits both the volume forms and the quotient. Proposition~\ref{prop:eu:retr:k} gives $\sggk\mgRES[*]/([\A])$. Also, the current diagram~\eqref{diag-diamond-interpol} does not display either retraction: its former bottom row has been commented out. Correct the target and remove or update the reference to its ``right column''. 
-}
+}{The target is now $\sggk\mgRES[*]/([\A])$, as in Proposition~\ref{prop:eu:retr:k}, and the sentence says that the doubly bounded categories avoid the quotient by $[\A]$. The reference to a column of diagram~\eqref{diag-diamond-interpol}, which no longer shows the retractions, is removed.}
 % END REFEREE INSERTION R008
 
 We think of $\int$ as the universal additive invariant (or generalized Euler characteristic) of definable sets and $\int^\mu$ as a motivic integral. They are not directly related, though: in  $\ggk\VF_*$, two objects are identified if there is a definable bijection between them, whereas in $\ggk\mgVF[*]$, two objects are identified if there is a measure-preserving bijection between two dense subobjects.
@@ -675,17 +675,7 @@ The main result of this paper is  that the two isomorphisms $\int$, $\int^\mu$ c
 \[
 \int^\diamond : \ggk \mgVF^\diamond[*] \fun \ggk  \mgRV^{\db}[*] / J_{\mathrm{var}}.
 \]
-The category $\mgVF^\diamond[*]$ consists of those \memph{proper invariant} objects of $\mgVF[*]$, which roughly means a bounded definable set that is a union of open boxes of valuative radius $\gamma$, $\gamma \in \Gamma$. The category $\mgRV^{\db}[*]$ consists of those \memph{doubly bounded} objects of $\mgRV[*]$, in the sense that its image in the value group is doubly bounded. See \S~\ref{sec:inv:cov} for the precise definitions. Note that $\mgVF^{\diamond}[*]$  is also graded since, as in classical measure theory, gradation by ambient dimensions is a necessity in the presence of volume forms (a curve has no volume if considered as a subset of a surface). The homogeneous ideal $J_{\mathrm{var}}$ is generated by the
-bounded relative annular relations of
-Notation~\ref{relative:annular:ideal}. The relative aperture is a
-nonzero definable RV function on the retained labels, with one bound
-on its nonnegative valuation. The scalar ideal $(\bm P_\Gamma)$ from
-Section~\ref{sec:retract} remains a subideal, with its original
-RV-liftable radius indexing; these ideals are not identified.
-The intrinsic RES/Gamma tensor description of
-$\ggk\mgRV^{\db}[*]$ is unchanged. Lemma~\ref{relative:annular:compatibility}
-shows that the bounded Euler retraction $\bb E^\diamond$ descends to
-the relative quotient and retains its original residue restriction.
+The category $\mgVF^\diamond[*]$ consists of those \memph{proper invariant} objects of $\mgVF[*]$, which roughly means a bounded definable set that is a union of open boxes of valuative radius $\gamma$, $\gamma \in \Gamma$. The category $\mgRV^{\db}[*]$ consists of those \memph{doubly bounded} objects of $\mgRV[*]$, in the sense that its image in the value group is doubly bounded. See \S~\ref{sec:inv:cov} for the precise definitions. Note that $\mgVF^{\diamond}[*]$  is also graded since, as in classical measure theory, gradation by ambient dimensions is a necessity in the presence of volume forms (a curve has no volume if considered as a subset of a surface). The homogeneous ideal $J_{\mathrm{var}}$ is generated by the relative annular relations of Notation~\ref{relative:annular:ideal}, that is, by the differences $[\bm U^{\tau, j}] - [\bm U]$ between an object $\bm U$ of $\mgRV^{\db}[*]$ and its elementary annular blowups $\bm U^{\tau, j}$ in a coordinate $j$ (Definition~\ref{defn:blowup:coa}), whose aperture $\tau$ is a definable function on $\bm U$ with values in $\RV$ and with nonnegative bounded valuation. Constant apertures give the ideal $(\bm P_\Gamma)$ of \S~\ref{sec:retract}, which is therefore contained in $J_{\mathrm{var}}$. By Lemma~\ref{relative:annular:compatibility}, the bounded retraction $\bb E^\diamond : \ggk \mgRV^{\db}[*] \fun \sggk \RES$ of \S~\ref{sec:retract} vanishes on $J_{\mathrm{var}}$; unlike $\mgE_{b}$ and $\mgE_{g}$, it does not require $[\A] = 0$.
 
 % BEGIN REFEREE INSERTION R009
 \ResolvedRefereeRemark{009}{Clarification}{Uniqueness claim}{%
@@ -740,23 +730,23 @@ The situation is summarized in the  commutative diagram (\ref{diag-diamond-inter
 
 
 The general strategy for the construction of the bounded integral $\int^\diamond$ follows roughly that of the original Hrushovski-Kazhdan integral. One first defines a lifting homomorphism from $\ggk  \mgRV^{\db}[*]$ to $\ggk \mgVF^\diamond[*]$,  shows that it is surjective, then studies its kernel.
-On the technical side, in order to stay within the realm of proper invariant sets at each step of the construction, one is led to the notion of a \memph{proper covariant} bijection, first formulated in \cite{hru:loe:lef}. It goes as follows (see Definition~\ref{prop:pseu} for more details). For $\alpha \in \Gamma$, let $\pi_\alpha : \VF\fun \VF/\MM_\alpha$ be the projection map;  if $\alpha\in \Gamma^n$ then $\pi_{\alpha}$ denotes the product of the maps $\pi_{\alpha_i}$. A definable bijection $f$ from $A\sub \VF^n$ onto  $B \sub \VF^m$ is said to be proper covariant if there are $\alpha \in \Gamma^n$, $\beta \in \Gamma^n$, and a function $f_\downarrow : \pi_{\alpha}(A) \fun \pi_{\beta}(B)$ such that $A$ is $\alpha$-invariant, $B$ is $\beta$-invariant, and  $\pi_\beta \circ f = f_\downarrow \circ \pi_\alpha$. In order to show the existence of such proper covariant bijections of a very special kind, we establish in \S~\ref{sec:cont:fib:prop} some general properties of definable continuous functions, reminiscent of those of definable continuous functions in \omin-minimal theories (see, for instance,  \cite[Chapter~6]{dries:1998}).
+On the technical side, in order to stay within the realm of proper invariant sets at each step of the construction, one is led to the notion of a \memph{proper covariant} bijection, first formulated in \cite{hru:loe:lef}. It goes as follows (see Definition~\ref{prop:pseu} for more details). For $\alpha \in \Gamma$, let $\pi_\alpha : \VF\fun \VF/\MM_\alpha$ be the projection map;  if $\alpha\in \Gamma^n$ then $\pi_{\alpha}$ denotes the product of the maps $\pi_{\alpha_i}$. A definable bijection $f$ from $A\sub \VF^n$ onto  $B \sub \VF^m$ is said to be proper covariant if $A$ and $B$ are bounded and there are $\alpha \in \Gamma^n$, $\beta \in \Gamma^m$, and a function $f_\downarrow : \pi_{\alpha}(A) \fun \pi_{\beta}(B)$ such that $A$ is $\alpha$-invariant, $B$ is $\beta$-invariant, and  $\pi_\beta \circ f = f_\downarrow \circ \pi_\alpha$. In order to show the existence of such proper covariant bijections of a very special kind, we establish in \S~\ref{sec:cont:fib:prop} some general properties of definable continuous functions, reminiscent of those of definable continuous functions in \omin-minimal theories (see, for instance,  \cite[Chapter~6]{dries:1998}).
 
 % BEGIN REFEREE INSERTION R010
-\RefereeRemark{010}{Error}{Proper covariance in the introduction}{%
+\ResolvedRefereeRemark{010}{Error}{Proper covariance in the introduction}{%
 \textit{Original source line 629.}\quad Change $\beta\in\Gamma^n$ to $\beta\in\Gamma^m$. More substantially, include boundedness of $A$ and $B$ to match Definition~\ref{prop:pseu}; the displayed quotient condition alone is satisfied by the identity on the whole valued field, which is not proper covariant under that definition.
-}
+}{Corrected to $\beta\in\Gamma^m$, and the boundedness of $A$ and $B$ required by Definition~\ref{prop:pseu} is now part of the description.}
 % END REFEREE INSERTION R010
 
 Next, we turn to the construction of the motivic Milnor fiber attached to a nonconstant polynomial function $f : (\C^d, 0) \fun (\C, 0)$,  where $0$ is assumed to be a singular point, that is, $\nabla f (0) = 0$.
 
 By an (algebraic) variety over a field $\bfk$, we mean a reduced separated $\bfk$-scheme of finite type. We denote by $\Var_{\bfk}$ the category of  varieties over $\bfk$.
-Let $\ggk \var_{\C}$ be the Grothendieck ring of complex algebraic varieties and $\ggk^{\hat \mu} \var_{\C}$ the corresponding Grothendieck ring with good $\hat \mu$-actions. Here, in addition to the factorization requirement for the $\hat \mu$-actions, the qualifier ``good'' also means that a $\C$-vector space endowed with a linear $\hat \mu$-action is identified with the same  $\C$-vector space but endowed with the trivial $\hat \mu$-action.
+Let $\ggk \var_{\C}$ be the Grothendieck ring of complex algebraic varieties. An action of $\hat \mu$ on a variety is \memph{good} if it factors through some $\mu_n$ and every orbit is contained in an affine open subset. Let $\ggk^{\hat \mu} \var_{\C}$ be the Grothendieck ring of varieties with good $\hat \mu$-actions modulo the additional relation $[X \times (\A^r, \rho)] = [X \times \A^r]$, for every variety $X$ with a good $\hat \mu$-action and every linear action $\rho$ of some $\mu_n$ on $\A^r$, where the action on the factor $\A^r$ on the right is trivial (see Notation~\ref{bipo:gdv} and \cite[\S~2.4]{denefloeser:arc}).
 
 % BEGIN REFEREE INSERTION R011
-\RefereeRemark{011}{Error}{Good actions and the affine-action relation}{%
+\ResolvedRefereeRemark{011}{Error}{Good actions and the affine-action relation}{%
 \textit{Original source line 634.}\quad Two different notions are conflated. A good finite-group action means that every orbit is contained in an affine open subset; for $\hat\mu$ one additionally requires factorization through some $\mu_n$. Identifying different linear actions on affine space is a separate defining relation in the modified equivariant Grothendieck ring. State the goodness condition and the affine-action relation separately, including compatibility with products with an arbitrary equivariant variety. See \href{https://arxiv.org/pdf/math/0006050}{Denef--Loeser, Geometry on arc spaces, Section 2.4}.
-}
+}{Goodness (factorization through some $\mu_n$ and orbits in affine open subsets) and the additional relation $[X \times (\A^r,\rho)] = [X \times \A^r]$, with an arbitrary equivariant factor $X$, are now stated separately, as in Notation~\ref{bipo:gdv} and Denef--Loeser, Section~2.4.}
 % END REFEREE INSERTION R011
 
 Let $\mathscr L$ be the space of formal arcs on $\C^d$ at $0$. So each element in $\mathscr L$ is of the form $\gamma(t) = (\gamma_1(t), \ldots, \gamma_d(t))$, where $\gamma_i(t)$ is a complex formal power series and $\gamma_i(0) = 0$. For each $m \in \Z^+$, let $\mathscr L_m$ be the space of such arcs modulo $t^{m+1}$ (also referred to as ``truncated arcs''). Consider the following locally closed subset of $\mathscr L_m$:
@@ -787,25 +777,25 @@ where the coefficients $H_m([\mdl X_f])$ are certain integrals of definable sets
 \[
 \mdl X_f = \set{x \in \MM^d \given \rv(f(x)) = \rv(t) }.
 \]
-Formulated in this way, the rationality of $Z_{f}(T)$ essentially follows from  certain computation rules of (convergent) geometric series. That the Euler characteristics of $\mathscr S_{f}$ and $F_{f}$ coincide follows from the fact that we can express both the Euler characteristic of each coefficient of $Z_{f}(T)$ and that of $F_{f}$ in terms of traces of the monodromy action on the cohomological groups of $F_{f}$, where the first expression relies on  the resolution-free proofs of the A'Campo-Denef-Loeser formula (this is the main point of \cite{hru:loe:lef}) and quasi-unipotence of local monodromy (see \cite[Remark~8.5.5]{hru:loe:lef}). However, technical difficulties, arising from the fact that none of the morphisms (8.1.4), (8.1.6), and (8.1.7) in \cite{hru:loe:lef} is surjective, contrary to what is claimed in \cite[Proposition~10.10(2)]{hrushovski:kazhdan:integration:vf}, make their construction of the integral $H_m$ incomplete.
+Formulated in this way, the rationality of $Z_{f}(T)$ essentially follows from  certain computation rules of (convergent) geometric series. That the Euler characteristics of $\mathscr S_{f}$ and $F_{f}$ coincide follows from the fact that we can express both the Euler characteristic of each coefficient of $Z_{f}(T)$ and that of $F_{f}$ in terms of traces of the monodromy action on the cohomology groups of $F_{f}$, where the first expression relies on  the resolution-free proofs of the A'Campo-Denef-Loeser formula (this is the main point of \cite{hru:loe:lef}) and quasi-unipotence of local monodromy (see \cite[Remark~8.5.5]{hru:loe:lef}). However, technical difficulties, arising from the fact that none of the morphisms (8.1.4), (8.1.6), and (8.1.7) in \cite{hru:loe:lef} is surjective, contrary to what is claimed in \cite[Proposition~10.10(2)]{hrushovski:kazhdan:integration:vf} (see Remark~\ref{rem:HK:fail} for an explicit object outside their images), make their construction of the integral $H_m$ incomplete.
 
 % BEGIN REFEREE INSERTION R013
-\RefereeRemark{013}{Clarification}{Identify the failed surjectivity explicitly}{%
+\ResolvedRefereeRemark{013}{Clarification}{Identify the failed surjectivity explicitly}{%
 \textit{Original source line 658.}\quad Since this failure motivates the paper, give an explicit object outside the image of the cited tensor morphism, or a precise cross-reference to such an example with its obstruction explained. Merely listing the incorrect surjectivity claims does not let the reader verify why the replacement is necessary. This request in the human report remains relevant.
-}
+}{Remark~\ref{rem:HK:fail} now gives an explicit object, $X = \set{u \in \RV \given 0<\vrv(u)<1}$ with $f(u) = u^2$, of $\mathrm{vol}\RV[1]$ outside the images of (8.1.4), (8.1.6) and (8.1.7) of Hrushovski--Loeser and of the map in Hrushovski--Kazhdan, Proposition~10.10(2), with a proof by the weights of the points rational over $\C\dpar{t^{1/m}}$. The introduction and the comment after Proposition~\ref{red:D:iso} refer to it; no result is renumbered.}
 % END REFEREE INSERTION R013
 
 To remedy this, as an application of our main result, we complete their construction by recasting it in the formalism of the bounded integral $\int^\diamond$. More specifically, recall from \cite[\S~4.3]{hru:loe:lef} the canonical isomorphism
 \[
 \Theta : \sggk \RES \fun \gmv,
 \]
-whose finite-level Kummer construction is proved in Notation~\ref{bipo:gdv}.  Let $\ggk^{\hat \mu} \var_{\C}[[\A]^{-1}][T]_{\dag}$ be the localization of $\gmv[[\A]^{-1}][T]$ by the multiplicative family generated by the elements $1 - [\A]^{a}T^b$, where $a \in \Z$ and $b \in \Z^+$; it may be regarded as a subring of  $\ggk^{\hat \mu} \var_{\C}[[\A]^{-1}] \dbra T$. Then we have a  commutative diagram (\ref{diag-diamond-zeta-function}).
+which is constructed in Notation~\ref{bipo:gdv}.  Let $\ggk^{\hat \mu} \var_{\C}[[\A]^{-1}][T]_{\dag}$ be the localization of $\gmv[[\A]^{-1}][T]$ by the multiplicative family generated by the elements $1 - [\A]^{a}T^b$, where $a \in \Z$ and $b \in \Z^+$; it may be regarded as a subring of  $\ggk^{\hat \mu} \var_{\C}[[\A]^{-1}] \dbra T$. Then we have a  commutative diagram (\ref{diag-diamond-zeta-function}).
 \begin{figure}[htb]
 \begin{equation}\label{diag-diamond-zeta-function}
 \bfig
-  \square(0,800)/<-`->`->`<-/<1500,400>[{\ggk \VF_*}`{\ggk^\natural \mgVF^\diamond[*]}`{\ggk \RV[*] / (\bm P - 1)}`{\ggk^\natural \mgRV^{\db}[*] / J_{\mathrm{var}}}; `\int`\int^{\diamond}`]
-  \square(0,400)/`->`->`/<1500,400>[{\ggk \RV[*] / (\bm P - 1)}`{\ggk^\natural \mgRV^{\db}[*] / J_{\mathrm{var}}}`\gmv`\gmv{[[\A]^{-1}][T]_{\dag}}; `\Theta \circ \bb E_b`Z`]
-  \square(0,0)|aamb|/`->`->`=/<1500,400>[\gmv`\gmv{[[\A]^{-1}][T]_{\dag}}`\gmv{[[\A]^{-1}]}`\gmv{[[\A]^{-1}]};
+  \square(0,800)/<-`->`->`<-/<1500,400>[{\ggk \VF_*}`{\ggk^{\Z} \mgVF^\diamond[*]}`{\ggk \RV[*] / (\bm P - 1)}`{\ggk^{\Z} \mgRV^{\db}[*] / J_{\mathrm{var}}}; `\int`\int^{\diamond}`]
+  \square(0,400)/`->`->`/<1500,400>[{\ggk \RV[*] / (\bm P - 1)}`{\ggk^{\Z} \mgRV^{\db}[*] / J_{\mathrm{var}}}`\gmv`\gmv{[[\A]^{-1}][T]_{\dag}^{\leq 0}}; `\Theta \circ \bb E_b`Z`]
+  \square(0,0)|aamb|/`->`->`=/<1500,400>[\gmv`\gmv{[[\A]^{-1}][T]_{\dag}^{\leq 0}}`\gmv{[[\A]^{-1}]}`\gmv{[[\A]^{-1}]};
   ``-\lim`]
 %  \hSquares(0,400)/<-`->`->`->`->`<-`->/<400>[{\ggk \VF_*}`{\ggk^\natural \mgVF^\diamond[*]}`{\ggk^\natural \mgVF[*]}`{\ggk \RV[*] / (\bm P - 1)}`{\ggk^\natural \mgRV^{\db}[*] / J_{\mathrm{var}}}`{\ggk^\natural \mgRV^{\bdd}[*] / (\bm P)}; ``\int`\int^{\diamond}`\int^\mu``]
 %  \hSquares(0,0)/<-`->`->`->`->``->/<400>[{\ggk \RV[*] / (\bm P - 1)}`{\ggk^\natural \mgRV^{\db}[*] / J_{\mathrm{var}}}`{\ggk^\natural \mgRV^{\bdd}[*] / (\bm P)}`\gmv{[[\A]^{-1}]}`\gmv{[[\A]^{-1}][T]_{\dag}}`\gmv{[[\A]^{-1}]_{\loc}[T]_{\dag}}; ``\Theta \circ \bb E_b``Z``]
@@ -815,67 +805,62 @@ whose finite-level Kummer construction is proved in Notation~\ref{bipo:gdv}.  Le
 \end{figure}
 
 % BEGIN REFEREE INSERTION R014
-\RefereeRemark{014}{Error}{Domain of the limit arrow}{%
+\ResolvedRefereeRemark{014}{Error}{Domain of the limit arrow}{%
 \textit{Original source line 678.}\quad The arrows labeled $-\lim$ are not defined on all of $R[T]_{\dag}$, where $R$ denotes the relevant coefficient ring: the polynomial $T$ belongs to this localization and has no finite value at infinity. Use the subring of rational functions regular at infinity and with zero constant coefficient in their expansion at $T=0$, equipped with Hadamard multiplication; equivalently specify the actual image of $Z$ and prove it has these properties. On this domain $-\lim$ is compatible with Hadamard product. See \href{https://arxiv.org/pdf/1111.1954}{Hrushovski--Loeser, Section 8.4 and Lemma 8.4.1}. The domain issue for $Z$ itself is addressed immediately below.
-}
+}{The arrow $-\lim$ now starts from the subgroup $\gmv[[\A]^{-1}][T]_{\dag}^{\leq 0}$ of the elements of degree at most $0$, on which the limit is defined and additive (Section~\ref{sec:milnor}); by the proof of Theorem~\ref{direct:mil}, the zeta functions of the classes in the diagram lie in it. Compatibility of the limit with the Hadamard product is not used.}
 % END REFEREE INSERTION R014
-The superscript ``$\natural$'' means that the integral is restricted to the subring of a sort of ``integrable'' sets. The map $Z$ assigns, to each object $[\bm U] \in \ggk^\natural \mgRV^{\db}[*]$,  a power series \yimu{this is not quite right: the power series can indeed be assigned to every $[\bm U] \in \ggk^\natural \mgRV^{\db}[*]$, this is how $\ggk^\natural$ is defined, but to show that it belongs to  $\gmv[[\A]^{-1}][T]_{\dag}$ we need to further restrict to objects of the form $[\bm U] = [(U, f, l)]$ with $l \in \Z$}
+The superscript ``$\Z$'' indicates the subrings generated by the classes of the objects whose volume form is a constant integer (Remark~\ref{dia:to:db:dag}); in the middle row it stands for the image of that subring in the quotient by $J_{\mathrm{var}}$. The integral $\int^\diamond$ maps $\ggk^{\Z} \mgVF^\diamond[*]$ into $\ggk^{\Z} \mgRV^{\db}[*] / J_{\mathrm{var}}$. The map $Z$ assigns, to each class $[\bm U] \in \ggk^{\Z} \mgRV^{\db}[*]$, a power series
 \[
 Z([\bm U])(T) = \sum_{m \in \Z^+} \bm H_m([\bm U]) T^m \in \ggk^{\hat \mu} \var_{\C}[[\A]^{-1}] \dbra T,
 \]
-that is, the motivic zeta function of $\bm U$, where $\bm H_m$ is the rectified version of $H_m$. Note that $Z$ is a ring homomorphism with respect to the Hadamard product in the target. It turns out that $Z([\bm U])(T)$ is rational and belongs to $\gmv[[\A]^{-1}][T]_{\dag}$. The formal process $T \limplies \infty$ mentioned above then lands us in $\gmv[[\A]^{-1}]$; this is the map $-\lim$. If we take $[\bm U] / J_{\mathrm{var}} = \int^{\diamond}([\mdl X_f])$ then the end result is the motivic Milnor fiber $\mathscr S_{f}$.
+that is, the motivic zeta function of $\bm U$, where $\bm H_m = \bm \eta \circ \bm h_m$ is the rectified version of $H_m$ (\S~\ref{piece:res}). Since $\bm H_m$ vanishes on the elements of $J_{\mathrm{var}}$ in its domain (Lemma~\ref{PG:van}), $Z$ is defined on the quotient. Note that $Z$ is a ring homomorphism with respect to the Hadamard product in the target. It turns out that $Z([\bm U])(T)$ is rational: it belongs to $\gmv[[\A]^{-1}][T]_{\dag}$ and is a quotient $P/Q$ with $\deg P \leq \deg Q$ (see the proof of Theorem~\ref{direct:mil}). The superscript ``$\leq 0$'' denotes the subgroup of these elements of degree at most $0$. On it, the formal process $T \limplies \infty$ mentioned above is defined and additive, and lands us in $\gmv[[\A]^{-1}]$ (\S~\ref{sec:milnor}); this is the map $-\lim$. The lower part of the diagram commutes by (the proof of) Theorem~\ref{direct:mil}: for every $x \in \ggk^{\Z} \mgRV^{\db}[*]/J_{\mathrm{var}}$, $-\lim Z(x)$ is the image of $(\Theta \circ \bb E^\diamond)(x)$, and $\bb E^{\diamond}$ is $\bb E_b$ composed with the forgetful map, by (\ref{edb:eb:com}). If we take $[\bm U] / J_{\mathrm{var}} = \int^{\diamond}([\mdl X_f])$, which is possible since $\mdl X_f$ carries the constant volume form $0$, then the end result is the motivic Milnor fiber $\mathscr S_{f}$.
 
 % BEGIN REFEREE INSERTION R015
-\RefereeRemark{015}{Gap; revised}{Incorporate the blue restriction into the statement}{%
+\ResolvedRefereeRemark{015}{Gap; revised}{Incorporate the blue restriction into the statement}{%
 \textit{Original source line 683.}\quad Yimu's blue note is mathematically substantive and is still contradicted by the following unrestricted rationality claim and diagram. The definition of $\ggk^{\natural}$ in Remark~\ref{dia:to:db:dag} ensures integral exponents for each $m$; it does not itself establish rationality as $m$ varies. The proof of Theorem~\ref{direct:mil} establishes rationality for integer constant volume forms and finite sums of those classes. Restrict the general claim and diagram to the corresponding precisely specified image subring, checking the arrows on that subring, or prove the broader assertion. Also revise the unrestricted bounded-category claim near the end of Section~\ref{sec:spec:pui}. For the theorem about $\mdl X_f$ itself, the needed constant-zero representative is supplied by Lemma~\ref{L:measure:surjective} and Remark~\ref{dia:to:db:dag}, subject to the preparation repairs below; it is not an additional missing hypothesis of that theorem.
-}
+}{The right column of the diagram is restricted to the subrings $\ggk^{\Z}$ generated by the classes with a constant integral volume form, now defined in Remark~\ref{dia:to:db:dag}; this is the generality in which the proof of Theorem~\ref{direct:mil} establishes rationality and the limit. The rationality claim is stated for these classes, the commutativity of the diagram is justified, and Yimu's blue note, now incorporated, is deleted. The general bounded-category claim at the end of Section~\ref{sec:spec:pui} was removed in the Section~8 review.}
 % END REFEREE INSERTION R015
 
-Since $\mdl X_f$ also lives in $\VF_*$, we can recover   $\mathscr S_{f}$ directly as $(\Theta \circ \bb E_b \circ \int)([\mdl X_f])$ in $\gmv$, without even inverting $[\A]$. This is indeed a salient point. However, for comparison with the Denef-Loeser construction, we have to go down to  $\gmv[[\A]^{-1}]$, since that is where the coefficients of the motivic zeta function live.
+Since $\mdl X_f$ also lives in $\VF_*$, the class $(\Theta \circ \bb E_b \circ \int)([\mdl X_f])$ is defined in $\gmv$, without even inverting $[\A]$, and its image in $\gmv[[\A]^{-1}]$ is $\mathscr S_{f}$ (Theorem~\ref{direct:mil} and Remark~\ref{rem-comp-milnor-fib}). This is indeed a salient point: it is a canonical lift of $\mathscr S_{f}$ to $\gmv$. The lift is not determined by $\mathscr S_f$ alone, since the natural homomorphism $\gmv \fun \gmv[[\A]^{-1}]$ is not injective (Remark~\ref{rem-comp-milnor-fib}). However, for comparison with the Denef-Loeser construction, we have to go down to  $\gmv[[\A]^{-1}]$, since that is where the coefficients of the motivic zeta function live.
 
 % BEGIN REFEREE INSERTION R016
-\RefereeRemark{016}{Clarification}{Class before and after localization}{%
+\ResolvedRefereeRemark{016}{Clarification}{Class before and after localization}{%
 \textit{Original source line 685.}\quad The formula defines a canonical class in the unlocalized ring whose image is the Denef--Loeser motivic Milnor fiber. Equality after localization does not uniquely determine an unlocalized class, since localization at $[\A]$ need not be injective (as acknowledged in Remark~\ref{rem-comp-milnor-fib}). Say ``a canonical unlocalized lift of $\mathscr S_f$'' here, or explicitly adopt a separate notation for that lift.
-}
+}{The sentence now says that $(\Theta \circ \bb E_b \circ \int)([\mdl X_f])$ is a class in the unlocalized ring whose image after inverting $[\A]$ is $\mathscr S_f$, a canonical lift of $\mathscr S_f$, and that it is not determined by $\mathscr S_f$ because the localization map is not injective (Remark~\ref{rem-comp-milnor-fib}). The sentence on the analytic Milnor fiber now says that its volume is the same lift (Remark~\ref{rem-comp-milnor-fib-bis}).}
 % END REFEREE INSERTION R016
 
 The composite  $\Theta \circ \bb E_b \circ \int$ is referred to as the \memph{motivic volume operator}, usually denoted by $\Vol$, and is already used implicitly in \cite{hrushovski:kazhdan:integration:vf}. Since its reemergence in \cite{hru:loe:lef}, it has been featured in a growing list of applications, see \cite{thuong-int-conj, nicaise_ps_tropical, Nic:Pay:trop:fub, forey_virtual_2017, NS-deg-stab-rat}.
 
-The nonarchimedean Milnor fiber $\mdl X_f$ is closely related to the analytic Milnor fiber $\mathcal{F}^{\mathrm{an}}_{f}$ introduced in \cite{nicaise:sebag:motivic:serre}. The $\puC$-rational points of $\mathcal{F}^{\mathrm{an}}_{f}$ may be understood as an object of  $\VF_*$ (but not $\mgVF^\diamond[*]$) and hence, as such, admits a motivic volume $\Vol(\mathcal{F}^{\mathrm{an}}_{f})$. This is indeed the motivic Milnor fiber $\mathscr S_{f}$. This fact is already proven  in \cite{nicaise_ps_tropical}, but without taking the $\hat \mu$-actions into account, and also in \cite{Nic:Pay:trop:fub, forey_virtual_2017}. The arguments there all rely on resolution of singularities.
+The nonarchimedean Milnor fiber $\mdl X_f$ is closely related to the analytic Milnor fiber $\mathcal{F}^{\mathrm{an}}_{f}$ introduced in \cite{nicaise:sebag:motivic:serre}. The $\puC$-rational points of $\mathcal{F}^{\mathrm{an}}_{f}$ may be understood as an object of  $\VF_*$ (but not $\mgVF^\diamond[*]$) and hence, as such, admits a motivic volume $\Vol(\mathcal{F}^{\mathrm{an}}_{f})$. By Remark~\ref{rem-comp-milnor-fib-bis}, $\Vol(\mathcal{F}^{\mathrm{an}}_{f}) = \Vol([\mdl X_f])$; this is the same canonical lift, so its image in $\gmv[[\A]^{-1}]$ is the motivic Milnor fiber $\mathscr S_{f}$. This fact is already proven  in \cite{nicaise_ps_tropical}, but without taking the $\hat \mu$-actions into account, and also in \cite{Nic:Pay:trop:fub, forey_virtual_2017}. The arguments there all rely on resolution of singularities.
 
 The bounded integral $\int^\diamond$ is also used in \cite{FY:Mot-Int-Mil-Fib} to obtain similar results on real motivic Milnor fiber.
 
-In \S~\ref{csndag}, we prove an original-language monomial decomposition for definable RV sets. There we prove two Fubini theorems that are not related to the rest of the paper. The first is an inflated analogue of the tropical motivic Fubini theorem of \cite{Nic:Pay:trop:fub}. In a  simplified form (but of central interest), the second states the following.
 
-\begin{thm*}
-Let $f :A \fun B$, $f : A' \fun B$ be morphisms of varieties over $\C$. If $\Vol_b([f^{-1}(b)])=\Vol_b([f'^{-1}(b)])$ for all $b\in B$  then $\Vol([A])=\Vol([A'])$. Consequently, if $\Vol_b([f^{-1}(b)])= 0$ for all $b\in B$ then $\Vol([A]) = 0$.
-\end{thm*}
 
 % BEGIN REFEREE INSERTION R018
-\RefereeRemark{018}{Typo}{Second morphism}{%
+\ResolvedRefereeRemark{018}{Typo}{Second morphism}{%
 \textit{Original source line 697.}\quad The second morphism must be $f':A'\longrightarrow B$, not a second $f$.
-}
+}{The second morphism is now $f' : A' \fun B$. The theorem was later removed together with the Fubini theorems; see R019.}
 % END REFEREE INSERTION R018
 
-Here the operator $\Vol_b$ is similar to $\Vol$, but over the parameter space $\C\dpar t (b)$. It is essential to consider $b$ in a sufficiently saturated model $\bb U$ of $\ACVF(0,0)$ instead of $\puC$, allowing the hypothesis to be tested at generic points.  A more general version, with $A$, $B$ possibly arbitrary definable sets, appears as Theorem \ref{fubini}, but one needs to be more careful about the definition of $\Vol_b$.
+
 
 % BEGIN REFEREE INSERTION R019
-\RefereeRemark{019}{Gap}{Meaning of the relative volume}{%
-\textit{Original source line 699.}\quad The saturated-point requirement is appropriate, but the promised construction of $\Vol_b$ in Remark~\ref{rem:volb} needs correction for residue-field descent; see the detailed remark there. Until that is supplied, state this introductory theorem using the equality in the parameter-relative $\sggk\RES$ ring appearing in Theorem~\ref{fubini}, rather than using an unestablished isomorphism $\Theta_b$.
-}
+\ResolvedRefereeRemark{019}{Gap}{Meaning of the relative volume}{%
+\textit{Original source line 699.}\quad The saturated-point requirement is appropriate, but the promised construction of $\Vol_b$ in Remark~5.18 needs correction for residue-field descent; see the detailed remark there. Until that is supplied, state this introductory theorem using the equality in the parameter-relative $\sggk\RES$ ring appearing in Theorem~5.17, rather than using an unestablished isomorphism $\Theta_b$.
+}{By the authors' decision, the Fubini theorems are not part of this paper. The introductory Fubini theorem, the paragraph on $\Vol_b$ and the paragraph on applications of these theorems are removed, so no relative volume is needed.}
 % END REFEREE INSERTION R019
 
-Some property of this form is needed in \cite{loeser2019motivic}.
-We expect to find more applications of these results in motivic Donaldson-Thomas theory, along the line of \cite{Nic:Pay:trop:fub}.
 
 
 
-The paper is organized as follows. In \S~\ref{sec-tech} we recall and extend certain facts on definable sets in $\ACVF(0,0)$ that are needed later on. In particular,  some new results about continuous definable functions in this environment are obtained, which could be of independent interest, such as fusion of continuous fibers (Proposition~\ref{prop:continuity:fiberwise}) and curve selection (Lemma~\ref{curve:select}), which closely resemble their counterparts in the \omin-minimal setting. In the short \S~\ref{sec:HK:main} is introduced notations and results from the original Hrushovski-Kazhdan paper \cite{hrushovski:kazhdan:integration:vf}. In \S~\ref{sec:retract} we show how to replace classes of polytopes with numbers  and thereby construct a retraction map from the Grothendieck ring in $\RV$ to that of varieties. Invariance and covariance are defined and investigated  in \S~\ref{sec-pscb}, where the surjectivity of the lifting homomorphism (\ref{lifting:hom}) is also established. Then in \S~\ref{section:int} we study its kernel and finish the construction of the bounded integral $\int^\diamond$. Finally, \S~\ref{sec:spec:pui} is devoted to the construction of motivic zeta function and motivic Milnor fiber, rectifying the result in \cite{hru:loe:lef}.
+
+The paper is organized as follows. In \S~\ref{sec-tech} we recall and extend certain facts on definable sets in $\ACVF(0,0)$ that are needed later on. In particular,  some new results about continuous definable functions in this environment are obtained, which could be of independent interest, such as fusion of continuous fibers (Proposition~\ref{prop:continuity:fiberwise}) and curve selection (Lemma~\ref{curve:select}), which closely resemble their counterparts in the \omin-minimal setting. The short \S~\ref{sec:HK:main} introduces notation and results from the original Hrushovski-Kazhdan paper \cite{hrushovski:kazhdan:integration:vf}. In \S~\ref{sec:retract} we show how to replace classes of polytopes with numbers  and thereby construct a retraction map from the Grothendieck ring in $\RV$ to that of varieties. In \S~\ref{csndag} we recall from \cite{FY:Fubini} the monomial decomposition of definable sets in $\RV$ and the isomorphism $\Theta$, which are used in \S~\ref{sec:spec:pui}. Invariance and covariance are defined and investigated  in \S~\ref{sec-pscb}, where the surjectivity of the lifting homomorphism from $\ggk \mgRV^{\db}[*]$ to $\ggk \mgVF^\diamond[*]$ is also established (Corollary~\ref{L:sur:c}). Then in \S~\ref{section:int} we study its kernel and finish the construction of the bounded integral $\int^\diamond$. Finally, \S~\ref{sec:spec:pui} is devoted to the construction of the motivic zeta function and the motivic Milnor fiber, rectifying the result in \cite{hru:loe:lef}.
 
 % BEGIN REFEREE INSERTION R020
-\RefereeRemark{020}{Typo}{Grammar}{%
+\ResolvedRefereeRemark{020}{Typo}{Grammar}{%
 \textit{Original source line 706.}\quad Replace ``In the short Section ... is introduced notations and results'' by ``The short Section ... introduces notation and results''. Also write ``the construction of the motivic zeta function and the motivic Milnor fiber''. 
-}
+}{Corrected to ``The short Section~3 introduces notation and results'' and ``the construction of the motivic zeta function and the motivic Milnor fiber''.}
 % END REFEREE INSERTION R020
 
 
@@ -1708,9 +1693,9 @@ $[A \mi B] + [B] = [A]$, when $B\subseteq A$,
 where $[A]$, $[B]$ denote the isomorphism classes of the objects $A$, $B$, and ``$\mi$'' and ``$\subseteq$'' are compatible with isomorphisms between objects, usually they are just set subtraction and set inclusion. Sometimes $\mdl C$ is also equipped with a binary operation (for example, cartesian product) that induces multiplication in $\gsk \mdl C$, in which case $\gsk \mdl C$ becomes a (commutative) semiring. The formal groupification of  $\gsk \mdl C$, which is then a ring, is denoted by $\ggk \mdl C$. %If a group $G$ acts on the objects of $\mdl C$ and the morphisms of $\mdl C$ are $G$-equivariant, that is, they commute with $G$-actions, then the corresponding $G$-equivariant Grothendieck ring is denoted by $\ggk^G \mdl C$. If $G = \lim_n G_n$ is profinite then we shall always impose the condition that a $G$-action factor through some $G_n$-action.
 
 % BEGIN REFEREE INSERTION R047
-\RefereeRemark{047}{Clarification; revised}{Commutative Grothendieck construction}{%
+\ResolvedRefereeRemark{047}{Clarification; revised}{Commutative Grothendieck construction}{%
 \textit{Original source line 1199.}\quad Optional precision: call this the free \emph{commutative monoid} on the isomorphism classes, subject to the scissor relations, with the empty object representing $0$. The final phrase ``which is then a ring'' can be read as referring to the preceding case where multiplication has been supplied; one can make that qualification explicit. This is a convention clarification, not a defect in the subsequent Grothendieck constructions.
-}
+}{The authors keep the wording. With $B = A$ the scissor relation gives $[\varnothing] + [A] = [A]$, so the class of the empty object is the zero, and every Grothendieck ring used in the paper is formed in the presence of a product; no later construction depends on this convention.}
 % END REFEREE INSERTION R047
 \end{defn}
 
@@ -2079,7 +2064,7 @@ equalities, without additive cancellation or groupification.
  No corresponding referee item is attached to this author-initiated correction.\par}
 % END AUTHOR RESOLUTION T001
 
-Note that, however, \cite[Proposition~10.10(2)]{hrushovski:kazhdan:integration:vf} does not hold. One of the main motivations of this paper is to construct an alternative to be used in applications.
+Note that, however, \cite[Proposition~10.10(2)]{hrushovski:kazhdan:integration:vf} does not hold; see Remark~\ref{rem:HK:fail}. One of the main motivations of this paper is to construct an alternative to be used in applications.
 
 \begin{nota}\label{drop:0}
 For simplicity, we often drop the constant volume form $0$ from the notation. For instance, if $\bm U$ is an object of $\RV[*]$ then it may also denote the  object $(\bm U, 0)$ of $\mgRV[*]$ with the constant volume form $0$.
@@ -2711,404 +2696,43 @@ the relative annular quotient is $T/q^{-1}(J_{\mathrm{var}})$, and
 $B/I\to B/J_{\mathrm{var}}$ is the canonical further quotient.
 No factorwise scalar-radius presentation of this new quotient is used.
 
-\section{Interlude: RV decomposition and Fubini theorems}\label{csndag}
-
-We continue to work in the original language $\lan{}{RV}{}$, over the
-standing parameter base $\mathbb S$. In particular, no cross-section is
-added to the language. We use the decomposition below and the
-retraction $\mathbb E_b$ of Section~4 to prove the Fubini statements.
+\section{Interlude: RV decomposition and the realization in varieties}\label{csndag}
+The results recalled in this section are proved in \cite{FY:Fubini}, together with Fubini theorems for the motivic volume that are not used in this paper. They are used in Section~\ref{sec:spec:pui}.
 
 For an integer matrix $M=(m_{ab})\in\GL_n(\Z)$, write
 \[
  h_M:(\RV^\times)^n\longrightarrow(\RV^\times)^n,\qquad
  (h_M(u))_a=\prod_b u_b^{m_{ab}}.
 \]
-Thus $h_M^{-1}=h_{M^{-1}}$ and
-$\vrv(h_M(u))=M\vrv(u)$. For $I\subseteq\Gamma^\ell$, the notation
-$I^\sharp$ in the following lemma means its full inverse image in
-$(\RV^\times)^\ell$ under $\vrv$. The singleton zero/infinity element
-of $\RV_\infty$ is treated separately by fixing its coordinate positions.
+Thus $h_M^{-1}=h_{M^{-1}}$ and $\vrv(h_M(u))=M\vrv(u)$. For $I\subseteq\Gamma^\ell$, the notation $I^\sharp$ means its full inverse image in $(\RV^\times)^\ell$ under $\vrv$.
 
 \setcounter{thm}{11}
-\begin{lem}[Monomial decomposition]\label{coh:decom}
-Let $U\subseteq(\RV^\times)^n$ be definable. There is a finite definable
-partition $(D_i)_i$ of $\vrv(U)$ such that, writing
-$U_i=U\cap\vrv^{-1}(D_i)$, there are $M_i\in\GL_n(\Z)$,
-$0\leq m_i\leq n$, a nonempty definable set
-$V_i\subseteq(\RV^\times)^{m_i}$, and a nonempty definable set
-$I_i\subseteq\Gamma^{n-m_i}$ with
+\begin{lem}[Monomial decomposition {\cite[Lemma~2.1]{FY:Fubini}}]\label{coh:decom}
+Let $U\subseteq(\RV^\times)^n$ be definable. There is a finite definable partition $(D_i)_i$ of $\vrv(U)$ such that, writing $U_i=U\cap\vrv^{-1}(D_i)$, there are $M_i\in\GL_n(\Z)$, $0\leq m_i\leq n$, a nonempty definable set $V_i\subseteq(\RV^\times)^{m_i}$, and a nonempty definable set $I_i\subseteq\Gamma^{n-m_i}$ with
 \[
  \vrv(V_i)=\{\beta_i\},\qquad
  h_{M_i}(U_i)=V_i\times I_i^\sharp .
 \]
-All sets and maps are definable over the original base $\mathbb S$.
-In particular, the partition of $U$ is induced by a partition of
-its value support.
+All sets and maps are definable over the parameter base $\mathbb S$.
 \end{lem}
 
-\begin{proof}
-We give the normal-form step as well as the integer reduction.
-
-\emph{Finite angular data.}
-For $e\in\Z^n$, put $u^e=\prod_j u_j^{e_j}$.
-The guarded RV normal form obtained from quantifier elimination has
-the following consequence. There is a finite definable partition
-$(P_a)_a$ of $\Gamma^n$ and, for each $a$, a finite set
-$E_a\subseteq\Z^n$ such that, for $X_a=U\cap\vrv^{-1}(P_a)$:
-\begin{enumerate}
-\item for every $e\in E_a$, the set
-$\{\vrv(u^e):u\in X_a\}$ is finite;
-\item if $u\in X_a$, $\vrv(u)=\vrv(u')$, and
-$u^e=(u')^e$ for every $e\in E_a$, then $u'\in X_a$.
-\end{enumerate}
-Here is the finite syntactic argument for this consequence.
-In the guarded normal form, a monomial is $c u^e$ and a residue
-polynomial is a finite sum of such monomials on their residue
-domains. Partition the value space according to the residue-domain
-status of every summand and the equality of the values of the two
-outer monomials in every equality. Retain all nonzero and domain
-guards and both signs of every literal; this partitions the entire
-Boolean formula, rather than just covering it by true clauses.
-A nonzero summand contributing to a residue polynomial forces
-\[
- e\cdot\vrv(u)=-\vrv(c).
-\]
-Include its exponent $e$ among the active characters. A zero
-coefficient contributes nothing and needs no character.
-In an equality whose two nonzero outer coefficients have the same
-value, include the difference of their exponent vectors: its value
-is fixed by the quotient of those coefficients. If their values are
-different, the equality is possible precisely when both residue
-factors vanish. Thus every remaining angular test depends only on
-these finitely many characters. Order tests depend only on the
-coordinate values. This proves (1) and (2), including negated
-literals.
-
-The value partition is defined over $\mathbb S$. To check this if RV
-representatives of named value-group parameters are used while
-obtaining the normal form, the values of nonzero coefficients
-descend by the original-base Gamma parameter-control theorem:
-the value of a nonzero coefficient definable from these names
-lies in $\dcl^{\mathrm{eq}}(\mathbb S)\cap\Gamma$.
-The partition uses only those coefficient values. No chosen
-RV representative is retained as a new parameter.
-
-\emph{Integer coordinates.}
-Fix $a$ and let $N$ have rows the characters in $E_a$.
-Column Hermite reduction supplies $A\in\GL_n(\Z)$ with
-\[
- NA=(C\ \ 0),\qquad \operatorname{rank}_{\mathbb Q}C=m,
-\]
-where $C$ has $m$ columns. This is an integer change of basis:
-column additions, interchanges and sign changes suffice.
-Set $z=h_{A^{-1}}(u)=(v,w)$ with $v\in(\RV^\times)^m$.
-By (1), $C\vrv(v)$ has finite image on $h_{A^{-1}}(X_a)$.
-The map $\beta\mapsto C\beta$ on $\Gamma^m$ is injective, since
-$C$ has full column rank and the ordered group $\Gamma$ is
-torsion-free. Consequently $\vrv(v)$ has finite image as well.
-These finitely many tuples are individually $\mathbb S$-definable:
-a finite definable subset of the ordered set $\Gamma^m$ can be
-enumerated lexicographically. Refine $P_a$ by these value tuples
-and fix one, denoted by $\beta$.
-
-On this piece, membership of $(v,w)$ depends only on $v$ and
-$\vrv(w)$. Indeed, changing $w$ within its value fiber keeps all
-coordinate values of $u=h_A(v,w)$ unchanged, while $NA=(C\ 0)$
-keeps every active character unchanged. Property (2) applies in
-both directions. Therefore this piece is the full inverse image
-of a definable relation
-\[
- T\subseteq\beta^\sharp\times\Gamma^{n-m}
-\]
-under $(v,w)\mapsto(v,\vrv(w))$.
-
-\emph{Separate the residue and value data over the original base.}
-Temporarily choose a point of $\beta^\sharp$ to identify this
-fiber with a residue-field torus. Residue-field/Gamma
-orthogonality then implies that only finitely many distinct sets
-\[
- T_\eta=\{v\in\beta^\sharp:(v,\eta)\in T\},
- \qquad \eta\in\Gamma^{n-m},
-\]
-occur. This finiteness does not retain the chosen point as a
-parameter.
-
-We spell out descent to $\mathbb S$. Put
-$\Gamma_0=\dcl^{\mathrm{eq}}(\mathbb S)\cap\Gamma$.
-The equivalence relation
-\[
- \eta\sim\eta' \quad\Longleftrightarrow\quad
- \forall v\in\beta^\sharp\
- \big((v,\eta)\in T\ \longleftrightarrow\ (v,\eta')\in T\big)
-\]
-is $\mathbb S$-definable. By the original-base Gamma
-parameter-control consequence of quantifier elimination, it is
-definable in the pure ordered divisible group over $\Gamma_0$.
-The standing nontriviality assumption makes $\Gamma_0$ a
-nontrivial divisible ordered subgroup, so
-$\Gamma_0\preceq\Gamma$. If there are $q$ equivalence classes,
-the assertion that $q$ pairwise inequivalent representatives
-exist is a first-order assertion over $\Gamma_0$. Hence we may
-take representatives $\eta_1,\ldots,\eta_q\in\Gamma_0^{n-m}$.
-Set
-\[
- I_j=\{\eta:\eta\sim\eta_j\},\qquad V_j=T_{\eta_j}.
-\]
-These sets are definable over $\mathbb S$, the $I_j$ form a
-partition, and
-$T\cap(\beta^\sharp\times I_j)=V_j\times I_j$.
-Discard the empty residue fibers. Each remaining piece has
-full RV preimage $V_j\times I_j^\sharp$ and
-$\vrv(V_j)=\{\beta\}$.
-
-The corresponding original value piece is
-$D_j=A(\{\beta\}\times I_j)$. It lies in the chosen $P_a$:
-choose any $v\in V_j$ and lift each $\eta\in I_j$ to see this.
-The $D_j$ partition the value support of the fixed-beta piece
-of $X_a$.
-Doing this for each $a$ proves the assertion with
-$M_i=A^{-1}$. The cases $m=0$, $m=n$ and $U=\varnothing$
-are covered by the usual empty-tuple conventions.
-\end{proof}
-
-% BEGIN REFEREE INSERTION R080
-\ResolvedRefereeRemark{080}{Error}{Integer column operations}{%
-\textit{Original source line 1789.}\quad The parenthetical assertion about $\mathbb Z$ is incorrect: every matrix in $\mathrm{GL}_n(\mathbb Z)$ is a product of elementary integer column additions, column interchanges, and sign changes. One may simply invoke column Hermite reduction to obtain $N_iM_i=(C_i\;0)$ with $C_i$ of full column rank. Then $C_i\vrv(v)=\alpha_i$ determines the first coordinates uniquely, which supplies the asserted product decomposition. Also, the cited item 3.25 of \cite{hrushovski:kazhdan:integration:vf} is a corollary, and ``Lemmas~3.21'' should be ``Lemma~3.21''.
-}{The author approved the replacement on November 13, 2026. Lemma~\ref{coh:decom} now has an explicit original-base monomial decomposition and a proof from guarded RV normal form, integer reduction, and residue/Gamma separation. The incorrect parenthetical and the assumed HK 3.21/3.25 input are removed.}
-% END REFEREE INSERTION R080
-
-
-\subsection{Tropical motivic Fubini theorem}\label{jp:fubini}
-In this subsection we work in the field $\widetilde{\C}$ of complex
-Puiseux series, considered as an elementary substructure of
-$\mathbb U$. Put $F=\C((t))$ and take the parameter base to be
-$\mathbb S=F$. Normalize the valuation by $v(t)=1$, so that the
-value group of $\widetilde{\C}$ is identified with $\Q$.
-All definability and all categories are interpreted in the original
-language $\lan{}{RV}{}$ over $\mathbb S$. In particular, each
-$a/N\in\Q$ is definable over $\mathbb S$ as the unique solution of
-$N\gamma=a\,v(t)$.
-
-\begin{rem}[The finite Kummer actions]\label{puiseux:kummer:action}
-There are natural identifications
-\[
- \gal(\widetilde{\C}/F)\ \cong\ \widehat{\mu}
- \ \cong\ \aut\bigl(\RV(\widetilde{\C})/\RV(F)\bigr),
- \qquad
- \widehat{\mu}=\varprojlim_N\mu_N,
-\]
-where the transition map $\mu_M\to\mu_N$ for $N\mid M$
-is $\zeta\mapsto\zeta^{M/N}$, and the last automorphism group
-uses the induced original-language structure on $\RV$.
-
-For the proof, fix $N\geq1$, choose any root $\tau_N$ of
-$X^N-t$ in $\widetilde{\C}$, and put
-$F_N=\C((\tau_N))$. Grouping exponents modulo $N$ writes each
-element of $F_N$ uniquely as
-\[
- \sum_{j=0}^{N-1}\tau_N^j f_j(t),\qquad f_j(t)\in F.
-\]
-Uniqueness also follows from the pairwise distinct valuations
-modulo $\Z$ of the nonzero summands. Thus $[F_N:F]=N$.
-Its $F$-automorphisms are precisely
-$\tau_N\mapsto\zeta\tau_N$ for $\zeta\in\mu_N$.
-Replacing $\tau_N$ by another root multiplies it by an element
-of $\mu_N\subseteq F$, so both $F_N$ and the ratio
-$\sigma(\tau_N)/\tau_N$ are independent of that choice.
-For $N\mid M$ these ratios satisfy
-\[
- \frac{\sigma(\tau_N)}{\tau_N}
- =
- \left(\frac{\sigma(\tau_M)}{\tau_M}\right)^{M/N},
-\]
-since $\tau_M^{M/N}/\tau_N\in\mu_N\subseteq F$.
-The fields $F_N$ have union $\widetilde{\C}$.
-Their finite automorphisms therefore give exactly the compatible
-systems $(\zeta_N)_N\in\widehat{\mu}$, proving the first
-identification. Each such automorphism preserves the valuation:
-in the displayed expansion it multiplies the $j$th summand by
-$\zeta_N^j$, preserving its valuation and the unique least
-valuation of a nonzero sum.
-
-Write $r_N=\rv(\tau_N)$ and identify $\C^\times$ with the
-value-zero subgroup of $\RV(\widetilde{\C})$.
-For any $u$ of value $a/N$ there is a unique $c\in\C^\times$
-such that $u=c\,r_N^a$. The induced action is
-\[
- \sigma_{(\zeta_N)}(c\,r_N^a)
-   =c\,\zeta_N^a r_N^a .
-\]
-In particular, a nonidentity system moves $r_N$ for some $N$.
-The action on $\RV$ is faithful.
-
-Finally, $\RV(F)$ is the subgroup generated by
-$\C^\times$ and $\rv(t)$, by taking the leading term of a
-Laurent series. An automorphism of the induced RV structure
-fixing $\RV(F)$ must send $r_N$ to
-$\zeta_Nr_N$ for some $\zeta_N\in\mu_N$: these are precisely
-the $N$ roots of $\rv(t)$ in $\RV$.
-The same relations as above force compatibility of the
-$\zeta_N$. The displayed action then determines the
-automorphism on every RV element. It agrees with the unique
-valued-field automorphism constructed from that system.
-This proves the second identification.
-The parameter base for all these definability assertions is
-still $\mathbb S=F$.
-\end{rem}
-
-% BEGIN REFEREE INSERTION R081
-\ResolvedRefereeRemark{081}{Clarification; revised}{Normalization and language in the Puiseux setting}{%
-\textit{Original source line 1796.}\quad For the Puiseux computation, explicitly normalize $\rcsn(1)=\rv(t)$ and choose compatible roots. Retain the distinction already introduced above: unadorned categories use the original language over $\mathbb C((t))$, while daggered categories use the expansion. A normalized reduced section makes the compatible roots of $t$ definable in the expanded language, so this distinction is necessary to retain monodromy.
-}{The author approved the replacement on November 13, 2026. The Puiseux convention now uses only the original RV language over $\mathbb S=\C((t))$. The finite Kummer proof retains monodromy and leaves the auxiliary roots outside the definability base.}
-% END REFEREE INSERTION R081
-
-% BEGIN REFEREE INSERTION R082
-\ResolvedRefereeRemark{082}{Typo}{Formula for a reduced section}{%
-\textit{Original source line 1799.}\quad The assignment should be $1/n\mapsto\rv(\xi_n t^{1/n})$; the present $n\mapsto\xi_nt^{1/n}$ has the wrong input and takes values in $\VF$, rather than $\RV$. Equivalently, write $\rcsn_\xi(a/n)=\rv(\xi_n^a t^{a/n})$ and mention the compatibility that makes this independent of the fraction.
-}{The author approved deletion of the reduced-section parametrization. Remark~\ref{puiseux:kummer:action} gives the correctly typed finite-stage RV action, its root-choice independence, and its compatibility under divisibility.}
-% END REFEREE INSERTION R082
-
+\setcounter{thm}{13}
 \begin{nota}[Equivariant residue realization]\label{bipo:gdv}
-Write $\ggk^{\widehat\mu,\mathrm{raw}}\var_{\C}$ for the ring with good finite
-$\widehat\mu$-actions and the equivariant scissor relations.
-Here \emph{good} means that the action factors through some $\mu_N$
-and every orbit is contained in an affine open subset.
-Write $\gmv$ for its quotient by the ideal generated by
+In this notation we work in the field $\puC$ of complex Puiseux series and take $\mathbb S = \C\dpar t$; the value group is identified with $\Q$. Write $\ggk^{\widehat\mu,\mathrm{raw}}\var_{\C}$ for the Grothendieck ring of complex varieties with good $\widehat\mu$-actions, where \emph{good} means that the action factors through some $\mu_N$ and every orbit is contained in an affine open subset. Write $\gmv$ for its quotient by the ideal generated by
 \[
  [X\times(\A^r,\rho)]-[X\times\A^r],
 \]
-for every good equivariant $X$ and every finite linear action
-$\rho$; the action on the second affine factor on the right is
-trivial. Goodness and this additional relation are separate
-conditions.
-
-There is a canonical isomorphism
+for every variety $X$ with a good $\widehat\mu$-action and every linear action $\rho$ of some $\mu_N$ on $\A^r$, where the action on the second affine factor on the right is trivial. For $q\in\Q$, let $L_q=q^\sharp\sqcup\{0_q\}$ be the one-dimensional residue vector space whose nonzero part is $q^\sharp$; its class in $\sggk\RES$ is $[\G_m]+1=[\A]$. By \cite[Notation~7.3]{FY:Fubini}, there is a canonical isomorphism
 \[
- \Theta:\sggk\RES\xrightarrow{\ \sim\ }\gmv .
+ \Theta:\sggk\RES\xrightarrow{\ \sim\ }\gmv,
 \]
-We construct it at a finite Kummer level and prove both
-directions of the comparison below.
-\end{nota}
-
-\begin{proof}
-\emph{Finite-level coordinates and the raw comparison.}
-For $q\in\Q$, let $L_q=q^\sharp\sqcup\{0_q\}$ be the
-one-dimensional residue vector space whose nonzero part is
-$q^\sharp=\vrv^{-1}(q)$. The notation $0_q$ records its zero
-in that fixed vector space, encoded using the existing RV
-zero/infinity element. It introduces no second RV zero.
-
-For $U\in\RES$, split its finite value support and its zero
-coordinate positions. Each piece can be regarded as a definable
-subset of $\prod_{j=1}^r L_{a_j/N}$ for a common $N>0$ and
-integers $a_j$. Choose one root $\tau_N^N=t$ and put
-$r_N=\rv(\tau_N)$. The coordinate map
-\[
- g_{r_N}(u_1,\ldots,u_r)
-   =(u_1/r_N^{a_1},\ldots,u_r/r_N^{a_r})
-\]
-takes this product to $\C^r$, with $0_q$ mapped to $0$.
-Residue-field purity makes $X_U=g_{r_N}(U)$ constructible.
-The action of $\mu_N$ on its coordinates is
-\[
- (x_j)_j\longmapsto(\zeta^{a_j}x_j)_j .
-\]
-The set $X_U$ is invariant because $U$ is defined over $F$.
-Replacing $r_N$ by $\eta r_N$ multiplies the $j$th coordinate
-by $\eta^{-a_j}$, an equivariant algebraic isomorphism.
-Enlarging $N$ only inflates the action along
-$\mu_M\to\mu_N$ and changes coordinates by such constants.
-Thus the resulting equivariant constructible class is independent
-of both choices. Products use a common Kummer level, so the
-assignment respects products as well as scissors.
-
-We now prove that every equivariant constructible set and
-bijection is obtained in this way. A good finite action admits a
-finite invariant affine stratification: intersect the translates
-of an affine neighborhood of each orbit, take a finite such
-cover, and successively remove the preceding opens. These
-intersections are affine because the varieties are separated.
-For an affine $\mu_N$-variety $X$, take algebra generators of
-$\C[X]$, span their finite orbits, and diagonalize that finite
-dimensional cyclic representation. Its eigenvectors still
-generate the algebra. They give an equivariant closed embedding
-\[
- X\hookrightarrow\A^r,\qquad
- \zeta\cdot(x_j)_j=(\zeta^{a_j}x_j)_j
-\]
-for suitable integers $a_j$.
-
-Let
-\[
- T_N=\{r\in\RV:r^N=\rv(t)\}.
-\]
-For any invariant constructible
-$X\subseteq\A^r$ with these coordinate weights, define
-\[
- U_X=\left\{u\in\prod_jL_{a_j/N}:
-       \exists r\in T_N\quad g_r(u)\in X\right\}.
-\]
-This is an original-language $F$-definable RES set.
-Every two elements of $T_N$ differ by an element of $\mu_N$.
-Invariance of $X$ therefore implies
-$g_r(U_X)=X$ for every $r\in T_N$.
-This proves surjectivity without adding a root to the base.
-
-The same construction applies to the graph of an equivariant
-constructible bijection $f:X\to Y$, using one common level:
-\[
- G_f=\{(u,v):\exists r\in T_N,\
-              (g_r(u),g_r(v))\in\operatorname{Graph}(f)\}.
-\]
-Equivariance makes the condition independent of $r$, so $G_f$
-is the graph of an $F$-definable bijection.
-Conversely, framing the graph of an $F$-definable RES bijection
-gives an equivariant constructible bijection.
-In characteristic zero such a bijection is piecewise an
-algebraic isomorphism: its generic graph over each irreducible
-piece has degree one, hence a rational inverse on a dense open;
-remove those opens and induct on dimension. Intersecting the
-finitely many translates makes the partition invariant.
-Consequently these graph constructions also respect the usual
-equivariant scissor presentation. They show independence of the
-chosen affine embeddings and stratifications and give inverse
-maps on classes. We have proved an isomorphism
-\[
- \Theta_{\mathrm{raw}}:\ggk\RES\xrightarrow{\ \sim\ }\ggk^{\widehat\mu,\mathrm{raw}}\var_{\C} .
-\]
-
-\emph{The quotient.}
-For $q=a/N$, the space $L_q$ is sent to the affine line with
-character $\rho_a(\zeta)x=\zeta^a x$. Its zero is a fixed point.
-Hence
-\[
- \Theta_{\mathrm{raw}}
- \bigl([q^\sharp]-[\G_m]\bigr)
- =
- [\A^1,\rho_a]-[\A^1,\mathrm{triv}].
-\]
-Every finite character of $\widehat\mu$ has this form.
-Every finite linear cyclic action is a sum of characters, so its
-class is a product of these line classes. By expanding the
-difference of two such products, all the linear-action relations,
-also after multiplication by an arbitrary $[X]$, are generated
-by the displayed line differences. The two quotient ideals
-therefore correspond exactly. This proves the asserted
-isomorphism $\Theta$.
-
-For later computations, let
-$h_{M_i}(U_i)=V_i\times I_i^\sharp$ be a monomial decomposition
-as in Lemma~5.12, with $\ell_i$ free RV coordinates.
-The original-language construction of $\bb E_b$ in Section~4 gives
+constructed with the finite Kummer actions of $\widehat\mu$ on the points of $\RES$ objects that are rational over the fields $\C\dpar{t^{1/N}}$. If $h_{M_i}(U_i)=V_i\times I_i^\sharp$ is a monomial decomposition of an object $\bm U$ of $\RV[*]$ as in Lemma~\ref{coh:decom}, with $\ell_i$ free $\RV$ coordinates, then \cite[(7.1)]{FY:Fubini}
 \begin{equation}\label{twist:C}
  (\Theta\circ\bb E_b)([\bm U])
    =\sum_i\chi_b(I_i)\,\Theta([V_i])[\G_m]^{\ell_i}.
 \end{equation}
-The finite-to-one label and its degree are retained as in the
-product construction of Section~3; the displayed target forgets
-that grading. The formula is an evaluation of the already defined
-retraction, so it is independent of the decomposition.
-\end{proof}
+This is an evaluation of the retraction $\bb E_b$ of Section~\ref{sec:retract}, so it does not depend on the decomposition.
+\end{nota}
 
 \begin{nota}\label{mov:vol}
 The motivic volume operator is
@@ -3116,1350 +2740,9 @@ The motivic volume operator is
  \Vol=\Theta\circ\bb E_b\circ\int:
  \ggk\VF_*\longrightarrow\gmv .
 \]
-Here $\bb E_b$ is applied after the quotient by $(\bm P-1)$,
-on which it is already defined by Section~4.
+Here $\bb E_b$ is applied after the quotient by $(\bm P-1)$, on which it is defined by Section~\ref{sec:retract}.
 \end{nota}
 
-Let $\mathcal A\subseteq\Gamma^n\times\VF^m\times\RV_\infty^s$
-be an $F$-definable family whose fibers $A_\gamma$ are objects
-of $\VF_*$. All families below are first interpreted in a
-sufficiently saturated elementary extension $\mathbb U$.
-They are restricted to $\widetilde{\C}$ only after uniform
-representatives and their witnesses have been obtained.
-
-For every $\gamma\in\Gamma(\mathbb U)^n$,
-the base generated by $F$ and $\gamma$ is
-$(\VF,\Gamma)$-generated. Apply Theorem~\ref{main:prop:HK}{} over that
-base to choose RV representatives $\bm U_\gamma$ and actual
-definable bijections
-\[
- H_\gamma:A_\gamma\xrightarrow{\ \sim\ }\mathbb L\bm U_\gamma.
-\]
-These are equalities of positive classes, before groupification.
-We retain the grading, the finite-to-one structure maps and
-their finite-fiber bounds in the representative data.
-
-Here is the precise compactness argument. Fix formulas for one
-such representative and its bijection, with only the indicated
-parameter $\gamma$ in addition to parameters from $F$.
-For these formulas, being valid representative data is a
-first-order condition on $\gamma$: it asserts the chosen sort
-domains, totality of the structure maps, the specified finite-fiber
-bounds, and that the graph of $H_\gamma$ defines a bijection with
-the indicated domain and codomain.
-The conditions from all choices cover the entire parameter
-space in the saturated extension. Compactness gives a finite
-subcover. Its finite Boolean refinement is an $F$-definable
-partition on each piece of which the RV arities, label degrees,
-representatives and bijection witnesses are given by fixed
-formulas. Empty fibers are included with empty representatives.
-
-Using tags for the finitely many pieces and degrees, write
-$\mathcal U=\{(\gamma,u):u\in U_\gamma\}$ for the resulting
-definable RV family; the structure maps remain part of its data.
-In the inflated families, distinguish
-\[
- A^{\mathrm{inf}}
-   =\{(x,a):(\vv(x),a)\in\mathcal A\},
- \qquad
- U^{\mathrm{inf}}
-   =\{(z,u):(\vrv(z),u)\in\mathcal U\},
-\]
-where $x\in(\VF^\times)^n$ and $z\in(\RV^\times)^n$.
-Thus the first construction uses the VF value fibers and the
-second uses the RV value fibers. The uniform bijections
-$H_\gamma$ justify replacement of the inflated total VF space
-by the corresponding family of lifts. Restricting all this
-data to the Puiseux field yields the required representatives
-at rational parameters.
-
-
-% BEGIN AUTHOR RESOLUTION THETA
-{\normalfont\small\color{ResolutionGreen}
-\noindent\textbf{Author resolution (finite-level comparison).}
-The author approved the original-language construction of $\Theta$ and its proof on November 13, 2026. The inverse uses finite Kummer root sets and equivariant graphs, and the proof identifies the exact quotient ideals. The comparison is proved here rather than assumed from the cited source.\par}
-% END AUTHOR RESOLUTION THETA
-
-% BEGIN REFEREE INSERTION R083
-\ResolvedRefereeRemark{083}{Clarification; revised}{Uniform representatives and compactness}{%
-\textit{Original source line 1825.}\quad Make this compactness step precise by first interpreting the family in a saturated elementary extension. Apply Theorem~\ref{main:prop:HK} over $\mathbb S\cup\{\gamma\}$ there, uniformize the representatives together with their finite bijection witnesses, and then restrict to the Puiseux model. Compactness cannot be applied just to an arbitrary list of representatives chosen at rational points. Also distinguish the valued-field fibers $\vv^{-1}(\gamma)$ used in $A$ from the leading-term fibers $\vrv^{-1}(\gamma)$ used in $U$.
-}{The author approved the replacement on November 13, 2026. Representatives, grading and structure maps, finite-fiber bounds, and actual lift bijections are uniformized together in a saturated elementary extension over the generated $(\VF,\Gamma)$ base. Only after the finite definable partition is obtained is the data restricted to Puiseux rational parameters. VF and RV value fibers are distinguished explicitly.}
-% END REFEREE INSERTION R083
-
-Put $R=\sggk\RES$ and $g=[\G_m]\in R$.
-
-\begin{thm*}[Inflated-family Fubini]
-There is a finite $F$-definable partition $(E_a)_a$ of $\Q^n$
-and classes $v_a\in R$ such that
-\begin{equation}\label{trop:fub:cons}
- \nu(\gamma):=\bb E_b\!\left(\int[A_\gamma]\right)=v_a
- \quad\text{for }\gamma\in E_a.
-\end{equation}
-The partition includes the parameters with empty fibers, where
-the value is $0$. Moreover,
-\begin{equation}\label{fubini:inflated:RES}
- \bb E_b\!\left(\int[A^{\mathrm{inf}}]\right)
-   =g^n\sum_a\chi_b(E_a)v_a\quad\text{in }R.
-\end{equation}
-Applying the approved comparison $\Theta$ gives
-\[
- \Vol([A^{\mathrm{inf}}])
-   =[\G_m]^n\sum_a\chi_b(E_a)\Theta(v_a).
-\]
-\end{thm*}
-
-\begin{proof}
-\emph{A relative monomial decomposition.}
-Work first on a fixed zero-coordinate stratum of one tagged
-component, and write
-$\mathcal U\subseteq\Gamma^n\times(\RV^\times)^r$.
-We claim that it has a finite definable partition
-$(\mathcal U_i)_i$, integer matrices $N_i\in\GL_r(\Z)$,
-fixed nonempty RES sets $W_i$ with singleton value support,
-and definable sets
-$J_i\subseteq\Gamma^n\times\Gamma^{\ell_i}$, such that
-\begin{equation}\label{relative:monomial:chart}
- h_{N_i}(U_{i,\gamma})
-       =W_i\times(J_{i,\gamma})^\sharp,\qquad
- J_{i,\gamma}=\{\eta:(\gamma,\eta)\in J_i\}.
-\end{equation}
-All these data are over $F$, and the coordinate changes act on
-$u$ alone, leaving the parameter $\gamma$ unchanged.
-The finite labels are transported with the charts as in
-Section~3. Combine the finitely many tag and zero strata at
-the end.
-
-Here is a proof of the claim from Lemma~5.12.
-Apply that lemma to $X=U^{\mathrm{inf}}$, in coordinates
-$(z,u)$, to get value-induced pieces
-\[
- X_i=X\cap\vrv^{-1}(D_i),\qquad
- h_M(X_i)=V\times I^\sharp,\qquad \vrv(V)=\{\beta\}.
-\]
-Fix one such piece and let $m$ be the number of coordinates of
-$V$. Each $X_i$ is invariant under multiplication of $z$ by
-$(\K^\times)^n$: both the family condition and $D_i$
-depend on $z$ only through its values.
-
-Let $B$ be the block of $M$ in its first $m$ rows and first
-$n$ columns, and put $p=\operatorname{rank}_{\Q}B$,
-$h=m-p$. The induced action on $V$ has exponent matrix $B$.
-Smith reduction gives $Q\in\GL_m(\Z)$ such that, after this
-change of active coordinates, its image is
-\[
- \{1\}^h\times(\K^\times)^p.
-\]
-Indeed the nonzero diagonal powers in Smith form are
-surjective on the units of the algebraically closed residue
-field. Since the remaining factor $I^\sharp$ already contains
-every angular coordinate, invariance of $X_i$ implies
-invariance of $V$ under this image. It follows that
-\[
- h_Q(V)=W_i\times(\beta_{\mathrm{free}})^\sharp
-\]
-for a definable $W_i$ in the first $h$ fixed-value
-coordinates.
-
-The first $h$ rows of $\operatorname{diag}(Q,1)M$ vanish in
-the $z$ columns. Their restrictions to the $u$ columns form
-a primitive sublattice of $\Z^r$: their span is primitive
-already in $\Z^{n+r}$, since these rows belong to an integer
-basis. Extend these rows to a basis of $\Z^r$, obtaining
-$N_i\in\GL_r(\Z)$. Write
-\[
- h_{N_i}(u)=(w,y),\qquad
- \vrv(W_i)=\{\beta_i^0\},\qquad \ell_i=r-h.
-\]
-On a fixed joint value tuple, membership in $X_i$ is now
-equivalent to $w\in W_i$. All other angular coordinates
-are free by the preceding invariance argument.
-Consequently the required value set is
-\[
- J_i=\{(\gamma,\eta):
-       (\gamma,N_i^{-1}(\beta_i^0,\eta))\in D_i\}.
-\]
-This proves (\ref{relative:monomial:chart}).
-It also proves original-base definability: $W_i$ is a
-definable projection, its value tuple is fixed over $F$,
-and all coordinate matrices are integral. No angular
-representative is retained as a parameter.
-
-\emph{A separate base partition.}
-The projections of the value pieces to the parameter space
-may overlap. For example, in the constant family
-$U_\gamma=\{1,2\rv(t),3\rv(t)\}$, the natural pieces at
-internal values $0$ and $1$ both project onto the whole base.
-We therefore index the source pieces by $i$ and construct
-the base pieces independently.
-
-For each $i$, put $e_i(\gamma)=\chi_b(J_{i,\gamma})$.
-These are finite-range constructible integer functions.
-For completeness, quantifier elimination and
-inclusion--exclusion express the indicator of a definable
-subset of $\Q^{n+\ell}$ as a finite integer combination of
-indicators of closed rational polyhedra.
-Every nonempty closed polyhedron has bounded Euler
-characteristic $1$: its sufficiently large box cuts are
-nonempty closed bounded polyhedra, with geometric Euler
-characteristic $1$. A projection and a nonempty fiber of
-a closed polyhedron are closed polyhedra again.
-Thus for its indicator the fiber integral is the indicator
-of the projection. Linearity proves finite-range
-constructibility and the projection identity
-\begin{equation}\label{gamma:projection:formula}
- \chi_b(J_i)=\int_{\Q^n} e_i(\gamma)\,d\chi_b.
-\end{equation}
-
-Take the common finite Boolean refinement of all the supports
-$\operatorname{pr}_{\Gamma^n}(J_i)$ and the level sets of
-all $e_i$. This is the partition $(E_a)_a$.
-It includes the complement of the union of those supports.
-Write $e_{ia}$ for the value of $e_i$ on $E_a$, and set
-\[
- c_i=[W_i]g^{\ell_i},\qquad v_a=\sum_i e_{ia}c_i\quad\text{in }R.
-\]
-For every rational $\gamma$, all its coordinates are
-$F$-definable. The fiber representatives and
-(\ref{relative:monomial:chart}), evaluated by the retraction
-of Section~4, give
-\[
- \bb E_b\!\left(\int[A_\gamma]\right)
-       =\sum_i\chi_b(J_{i,\gamma})[W_i]g^{\ell_i}.
-\]
-This proves (\ref{trop:fub:cons}), including empty fibers.
-Every contribution indexed by $i$ is constant on each $E_a$;
-their projections themselves are not required to be a partition.
-
-\emph{The total inflated space.}
-Give $U^{\mathrm{inf}}$ the label
-$(z,f_{\vrv(z)}(u))$, where $f_\gamma$ is the retained
-label of $\bm U_\gamma$; keep the finite tags and degrees.
-Its lift is definably bijective to $A^{\mathrm{inf}}$:
-use $H_{\vv(x)}$ on the second factor and retain $x$.
-The base RV tag is then $z=\rv(x)$. Thus this replacement
-is justified by an actual uniform bijection.
-
-The relative coordinate changes send the corresponding pieces
-of $U^{\mathrm{inf}}$ to
-\[
- W_i\times J_i^\sharp,
-\]
-after a coordinate permutation. Here $J_i^\sharp$ is the
-full RV lift in $n+\ell_i$ coordinates.
-The Section~4 product formula therefore gives directly
-\[
- \bb E_b\!\left(\int[A^{\mathrm{inf}}]\right)
-   =\sum_i\chi_b(J_i)[W_i]g^{n+\ell_i}
-   =g^n\sum_i\chi_b(J_i)c_i.
-\]
-Using (\ref{gamma:projection:formula}) and the base partition,
-\[
- \sum_i\chi_b(J_i)c_i
-     =\sum_a\chi_b(E_a)\sum_i e_{ia}c_i
-     =\sum_a\chi_b(E_a)v_a.
-\]
-This proves (\ref{fubini:inflated:RES}). Applying $\Theta$
-proves the displayed motivic-volume identity.
-\end{proof}
-
-The factor $[\G_m]^n$ comes from the additional $n$ VF value
-coordinates in $A^{\mathrm{inf}}$.
-For $A_\gamma=B\cap\vv^{-1}(\gamma)$, the formula above still
-concerns this inflated total space.
-An identity for the original $B$ requires a decomposition
-compatible with its own tropicalization; it does not follow by
-cancelling $[\G_m]^n$ in the Grothendieck ring.
-
-% BEGIN REFEREE INSERTION R084
-\ResolvedRefereeRemark{084}{Error}{Projected pieces need not form a partition}{%
-\textit{Original source line 1830.}\quad The second bullet cannot in general hold together with the first. For example, use the constant family $U_\gamma=\{1,2\rv(t),3\rv(t)\}$. In $U=\bigcup_\gamma\gamma^\sharp\times U_\gamma$, the twistbacks at internal values $0$ and $1$ have respectively one and two points in the last coordinate. Thus they must lie in different twistoid pieces, whose projections to the base overlap at every $\gamma$. Use a separately indexed base partition $(E_a)_a$, subordinate to the projections of all $D_i$, such that every contribution indexed by $i$ is constant on each $E_a$. Then define $v_a$ by summing all those contributions. Include a base piece for empty fibers when necessary.
-}{The author approved the replacement on November 13, 2026. The relative monomial charts leave the Gamma parameter unchanged and supply fixed original-base RES factors. A separately indexed base partition refines all supports and fiber Euler-function level sets, and every indexed contribution is summed on each base piece, including the empty-fiber region.}
-% END REFEREE INSERTION R084
-
-% BEGIN REFEREE INSERTION R085
-\ResolvedRefereeRemark{085}{Clarification; revised}{The extra torus factor}{%
-\textit{Original source line 1839.}\quad This correctly formulated target is an inflated-family identity: $A=\bigcup_\gamma\vv^{-1}(\gamma)\times A_\gamma$. It has an additional factor $[\mathbb G_m]^n$ compared with the usual tropical Fubini identity for a set $B$ and its tropical fibers. State this scope explicitly. To deduce $\operatorname{Vol}(B)=\int\operatorname{Vol}(B\cap\vv^{-1}(\gamma))\,d\chi_b$, a compatible relative decomposition is still needed; cancellation of $[\mathbb G_m]^n$ in the Grothendieck ring is not justified. Compare \cite[Theorem~3.1.3]{Nic:Pay:trop:fub}.
-}{The author approved the explicit inflated-family statement and proof. The identity is proved first in the original RES target using the actual uniform lift bijections and relative charts, then transported by $\Theta$. The factor $[\G_m]^n$ is retained. No cancellation or claim of the ordinary uninflated identity is used.}
-% END REFEREE INSERTION R085
-
-\begin{rem}[The polyhedral base pieces]
-Each $E_a\subseteq\Q^n$ is the intersection with $\Q^n$ of
-a finite Boolean combination of closed rational polyhedra in
-$\R^n$. Here a closed rational polyhedron is specified by
-finitely many affine inequalities
-\[
- a_j\cdot x\geq c_j,\qquad a_j\in\Q^n,\quad c_j\in\Q.
-\]
-In particular, the $E_a$ need not themselves be closed
-polyhedra; $(0,1)\cap\Q$ is a simple example.
-The finite arrangement of the bounding hyperplanes refines
-them into relatively open rational polyhedral cells, including
-cells of lower dimension. Such a refinement preserves the
-preceding formula by additivity of $\chi_b$ and constancy of
-the coefficients on each original base piece.
-
-The constants $c_j$ may be nonzero. If the chosen defining
-conditions are homogeneous, the resulting pieces can instead
-be refined into relatively open rational polyhedral cones.
-This conditional observation about the value-group formulas
-does not change the standing assumption that
-$\Gamma(\mathbb S)$ is nontrivial.
-\end{rem}
-
-% BEGIN REFEREE INSERTION R086
-\ResolvedRefereeRemark{086}{Error}{Polyhedra versus constructible polyhedral sets}{%
-\textit{Original source line 1844.}\quad A definable set in $\Gamma^n$ need not be an intersection of closed half-spaces; $(0,1)$ is already a counterexample. Replace this by ``finite Boolean combinations of rational polyhedra'', or refine to relatively open rational polyhedral cells. Also say inequalities, rather than equations, when defining half-spaces. Over the trivially valued base the defining linear conditions are homogeneous, but the resulting pieces can be relatively open cones or Boolean combinations of cones. This is the convention used in \cite[\S~2.2]{Nic:Pay:trop:fub}.
-}{The author approved the replacement on November 13, 2026. The base pieces are traces of finite Boolean combinations of closed rational polyhedra and admit relatively open cell refinements. The conic observation is conditional on homogeneous defining conditions and does not change the standing nontrivial-value-group hypothesis.}
-% END REFEREE INSERTION R086
-
-
-\subsection{Fubini theorem}
-In this subsection, return to an arbitrary
-$(\VF,\Gamma)$-generated ground substructure $\mathbb S$,
-with the standing nontriviality of $\Gamma(\mathbb S)$.
-All definability remains in the original RV language.
-Let $A,A'\in\VF_*$ and let
-$f:A\to B$, $f':A'\to B$ be definable maps.
-Write $A_b=f^{-1}(b)$, $A'_b=(f')^{-1}(b)$ and
-$\mathbb S_b=\mathbb S\langle b\rangle$.
-For a parameter base $\mathbb T$, write
-\[
- R(\mathbb T)=\sggk(\RES_{\mathbb T})
-\]
-for the ungraded RES quotient computed with
-$\mathbb T$-definable sets, maps and value-fiber relations.
-The subscript $\mathrm b$ in $\mathbb E_{\mathrm b}$ denotes
-the bounded retraction; the parameter base is specified
-separately.
-
-\begin{thm}\label{fubini}
-Suppose that for every $b\in B$ there are
-$\mathbb S_b$-definable objects
-$\bm U_b,\bm U'_b\in\RV[*]$ and
-$\mathbb S_b$-definable bijections
-\[
- H_b:A_b\xrightarrow{\ \sim\ }\mathbb L\bm U_b,
- \qquad
- H'_b:A'_b\xrightarrow{\ \sim\ }\mathbb L\bm U'_b
-\]
-such that
-\[
- \mathbb E_{\mathrm b}^{\mathbb S_b}([\bm U_b])
- =
- \mathbb E_{\mathrm b}^{\mathbb S_b}([\bm U'_b])
- \quad\text{in }R(\mathbb S_b).
-\]
-Then, over the original ground $\mathbb S$,
-\[
- \mathbb E_{\mathrm b}^{\mathbb S}\!\left(\int[A]\right)
- =
- \mathbb E_{\mathrm b}^{\mathbb S}\!\left(\int[A']\right)
- \quad\text{in }R(\mathbb S).
-\]
-As usual, $B$ and its points are interpreted in the sufficiently
-saturated ambient model.
-\end{thm}
-
-The lifting hypotheses mean
-\[
- [A_b]_+=[\mathbb L\bm U_b]_+,\qquad
- [A'_b]_+=[\mathbb L\bm U'_b]_+
-\]
-in the positive Grothendieck semiring over $\mathbb S_b$.
-For these categories of definable sets, finite scissor
-decompositions assemble into actual definable bijections;
-the displayed maps specify the required witnesses explicitly.
-The ground-generation assumption supplies the domain of
-the global integral from Section~3.
-No generation assumption is imposed on every $\mathbb S_b$
-merely to evaluate the displayed RV retractions.
-
-% BEGIN REFEREE INSERTION R087
-\ResolvedRefereeRemark{087}{Clarification; revised}{Witnesses for the lifting equalities}{%
-\textit{Original source line 1852.}\quad Specify that $[A_b]=[\mathbb L\bm U_b]$ and its primed analogue hold at the semiring level, equivalently through $b$-definable bijections, as required by the replacement of total spaces in the proof. If ring equalities are intended instead, include and uniformize their stabilization objects before cancelling them at the end. The saturated interpretation of $b$ is already covered by the standing convention, and the coefficient base is clarified in Remark~\ref{rem:volb}. Also make explicit that the ground base satisfies the $(\VF,\Gamma)$-generation hypothesis of Theorem~\ref{main:prop:HK}, which is needed for the displayed conclusion involving $\int$.
-}{The author approved the explicit positive lift bijections and the separation of the ground and fiber coefficient bases. Both bijection graphs, the representatives, their structure maps and finite-fiber bounds are uniformized together. The global integral uses the ground-generation hypothesis; arbitrary fiber bases retain their own RES quotient.}
-% END REFEREE INSERTION R087
-
-\begin{rem}\label{rem:volb}
-Whenever $\mathbb S_b$ is $(\VF,\Gamma)$-generated, the fiber
-integral of Section~3 is available and the hypothesis can
-equivalently be written
-\[
- \mathbb E_{\mathrm b}^{\mathbb S_b}
-       \!\left(\int[A_b]\right)
- =
- \mathbb E_{\mathrm b}^{\mathbb S_b}
-       \!\left(\int[A'_b]\right).
-\]
-This applies, for example, to a base parameter $b$ consisting
-of VF and Gamma coordinates.
-If $B$ is definably bijective over $\mathbb S$ to a set of such
-tuples, transport the parameter along that bijection:
-the two parameter bases have the same definable closure,
-so their definable categories and the stated equalities agree.
-This does not assert equality of their generated substructures.
-
-For $F=\C((t))$, the conclusion over the ground base may be
-transported by the already constructed comparison $\Theta$:
-it becomes $\Vol([A])=\Vol([A'])$.
-The hypothesis still concerns every $b\in B$ in the
-saturated ambient model, with its own coefficient base
-$F\langle b\rangle$.
-It is not enough to test only the points of $B$ in the
-Puiseux field.
-
-For arbitrary $b$, retain the intrinsic ring
-$R(F\langle b\rangle)$.
-An algebraically closed ambient valued field does not enlarge
-the definability base.
-In particular, adjoining an algebraic closure of the residue
-field to the coefficient field of a realization can lose
-arithmetic descent; an action recording only tame inertia
-does not restore it.
-
-Here is a concrete instance.
-Choose a unit $b$ with residue $s$ transcendental over $\C$
-and put $K=F(b)$ with its Gauss valuation.
-For a polynomial $\sum_i a_i b^i$, its terms of least
-$t$-valuation have nonzero residual polynomial in $s$.
-Consequently
-\[
- k(K)=k=\C(s),\qquad \Gamma(K)=\Z.
-\]
-The residue set
-\[
- L=\{z:z^2=s\}
-\]
-is defined over $K$.
-It is a nonsplit quadratic residue cover: $s$ is not a square
-in $\C(s)$, since its order at $s=0$ is odd.
-Over $\overline{k}$ it becomes two points, each with trivial
-tame-inertia action, just as the constant two-point set does.
-
-The distinction survives in the RES quotient.
-Indeed, at this Gauss base the same finite framing argument
-used for $\Theta$ normalizes every finite rational value
-support by roots of $t$.
-RV quantifier elimination gives constructible sets and graphs
-over $k$, with a finite cyclic inertia action and with their
-$k$-descent retained.
-Changing a framing root multiplies coordinates by roots of
-unity in $\C$, so it gives a $k$-defined isomorphism after
-forgetting inertia.
-Applying compactly supported \'etale Euler realization then
-gives an additive and multiplicative invariant
-\[
- \rho:R(K)\longrightarrow
- K_0\bigl(\operatorname{Rep}_{\Q_\ell}(G_k)\bigr),
- \qquad G_k=\operatorname{Gal}(\overline{k}/k).
-\]
-Here the realization is
-$\sum_j(-1)^j[H_c^j(-_{\overline{k}},\Q_\ell)]$;
-its additivity and multiplicativity follow from the
-localization sequence and K\"unneth formula.\footnote{For
-the standard realization on $K_0(\var_k)$, see
-J.~Nicaise, \emph{A trace formula for varieties over a
-discretely valued field}, Section~2.1(2),
-\href{https://arxiv.org/pdf/0805.1323}{arXiv:0805.1323}.
-Only this standard cohomological realization is used in this
-diagnostic; no comparison theorem for RES is assumed.}
-The quotient relations are killed because both
-$q^\sharp$ and $\G_m$ normalize to $\G_m$ after inertia is
-forgotten. Thus this argument constructs the required
-invariant without asserting a new comparison isomorphism.
-If $\varepsilon$ is the quadratic character attached to
-$k(\sqrt{s})/k$, then
-\[
- \rho([L])=[1]+[\varepsilon]\ne 2[1].
-\]
-For $g\in G_k$ with $\varepsilon(g)=-1$, the two traces
-are $0$ and $2$. Residue base change gives two inertia-fixed
-points in both cases, so the proposed comparison is not
-injective.
-
-There is also no restriction of the theorem's test to points
-generating unramified extensions of $F$.
-For example, take
-\[
- B=\{b:b^2=t\},\qquad A=B,\qquad f=\mathrm{id}_B,
- \qquad A'=\varnothing.
-\]
-Every $b\in B$ has value $1/2$, so $F(b)/F$ is ramified
-quadratic. The unramified-point test has no points to check.
-On the other hand, $\rv$ identifies $B$ with the finite
-RES object
-\[
- T=\{u:u^2=\rv(t)\}\in\RES[0].
-\]
-The two roots have distinct RV classes; conversely these are
-all the roots of $u^2=\rv(t)$.
-The degree-zero lifting comparison therefore gives
-\[
- \Vol([B])=\Theta([T])
-   =[\{x:x^2=1\},\ \zeta\cdot x=\zeta x].
-\]
-The action factors through $\mu_2$ and interchanges the two
-points. Forgetting the action and taking compactly supported
-Euler characteristic sends this class to $2$, so it is
-nonzero. This Euler characteristic respects the linear-action
-relations, since every affine space of a fixed dimension has
-Euler characteristic $1$.
-Thus the asserted unramified-only criterion would give a
-false conclusion. The theorem retains the test at all
-ambient parameters in their original RES coefficient rings.
-
-% BEGIN REFEREE INSERTION R088
-\ResolvedRefereeRemark{088}{Error; revised}{Arithmetic residue descent is missing}{%
-\textit{Original source line 1862.}\quad The proposed twistback/base-change comparison does not retain residue-field descent for arbitrary $b$. Take a unit $b$ with residue $s$ transcendental over $\mathbb C$, endowed with the Gauss valuation. Then $k(\mathbb C((t))(b))=\mathbb C(s)$ and its value group is $\mathbb Z$. The residue object $\{z:z^2=s\}$ has a nontrivial arithmetic Galois action over $\mathbb C(s)$, but its base change to $\mathbb C_b$ is two points with trivial tame-inertia action. Their classes are distinguished before base change by the arithmetic Galois representation on cohomology. Thus the proposed comparison with only $\hat\mu^{r_b}$-action is not an isomorphism. Keep $\sggk\RES$ over $\mathbb S\langle b\rangle$, or construct a target retaining residue-field descent as well as inertia. Taking an algebraic closure as the ambient model does not enlarge the definability base.
-}{The author approved the intrinsic fiber RES target and the replacement on November 13, 2026. The Gauss-base quadratic residue cover retains arithmetic descent in the RES quotient, as its Galois realization shows. The unsupported general residue-base-change comparison and local Vol notation are removed; the global comparison over C((t)) is retained.}
-% END REFEREE INSERTION R088
-
-% BEGIN REFEREE INSERTION R089
-\ResolvedRefereeRemark{089}{Error}{The unramified-only test is false as stated}{%
-\textit{Original source line 1863.}\quad The last assertion has a simple counterexample in the general definable setting of the theorem. Put $B=\{b:b^2=t\}$, $A=B$, $f=\mathrm{id}_B$, and $A'=\varnothing$. Every point of $B$ generates a ramified quadratic extension of $\mathbb C((t))$, so the proposed test only at unramified points is vacuous. Nevertheless $\operatorname{Vol}(A)$ is the nonzero class of the two-element monodromy set, whose ordinary Euler characteristic is $2$. Delete this assertion, or state and prove a different test on a specifically constructed auxiliary residue base. It cannot be imposed directly on the original points $b\in B$.
-}{The author approved deletion of the unramified-only test. The ramified quadratic parameter example has nonzero degree-zero monodromy volume while the restricted test is vacuous. The hypothesis continues to be tested at every ambient parameter over its original coefficient base.}
-% END REFEREE INSERTION R089
-\end{rem}
-
-
-
-The following fact shall be needed:
-
-\begin{lem}\label{special:term:constant:disc}
-Let $F_i(x) = F_i(x_1, \ldots, x_n)$ be a finite list of polynomials with coefficients in $\VF(\bb S)$. Let $A \sub \VF^n$ be a definable set.  Then there is a definable bijection $T : A \fun A^\flat$ such that $A^\flat$ is an $\RV$-pullback and  every composite function $F_i \circ T^{-1}$ is $\rv$-contractible, that is, for each $i$ there is a commutative diagram
-\[
-\bfig
-  \square(0,0)/`->`->`->/<1000,400>[A^\flat`\VF`\rv(A^\flat)`\RV_\infty;
-  `\rv`\rv`(F_i \circ  T^{-1})_{\downarrow}]
-  \morphism(0,400)<500,0>[A^\flat`A; T^{-1}]
-  \morphism(500,400)<500,0>[A`\VF; F_i]
- \efig
-\]
-\end{lem}
-This lemma follows from \cite[Theorem~5.5]{Yin:special:trans}, cited as Lemma~\ref{special:bi:term:constant} below, where $T$ may be taken to be a so-called special bijection, as in Definition~\ref{defn:special:bijection} but much simpler (we shall not need this here, though, because no volume forms are involved).
-
-\begin{proof}[Proof of Theorem~\ref{fubini}]
-By partitioning $B$ if necessary, it is enough to prove the claim either when $f$, $f'$ are both surjective or when $f$ is surjective and $A'$ is empty. We will  deal with the first case, the second being similar but simpler (just skip all the steps that involve $A'$ in the argument below).
-
-%Write  $\int [A_b] = [\bm U_{b}] /  (\bm P - 1)$ and $\int [A'_b] = [\bm U'_{b}] /  (\bm P - 1)$.
-
-After the initial partition by the images of $f$ and $f'$,
-compactness gives a finite definable partition $(B_i)_i$
-such that the two RV representatives, their structure maps
-and finite-fiber bounds, and both bijection graphs
-$H_b,H'_b$ are all given by fixed formulas on each $B_i$.
-Indeed validity of each fixed finite package is a first-order
-condition, and these conditions cover the parameter space
-in the saturated model. Choose quantifier-free formulas
-$\xi_i(x,y)$, $\xi'_i(x,y')$ for the two representative objects.
-
-For the graph families over $B_i$, the replacements are the
-explicit definable bijections
-\[
- (b,a)\longmapsto(b,H_b(a)),\qquad
- (b,a')\longmapsto(b,H'_b(a')).
-\]
-The base coordinate and all finite RV labels are retained.
-The further preparation and descent of the RES equality
-witnesses belong to the subsequent argument.
-
-\medskip
-\noindent\emph{Preparation with the RV coordinates retained.}
-By the standing convention, write
-$B\subseteq\VF^{d_0}\times\RV_\infty^{q_0}$.
-First replace $A,A'$ by the graphs of $f,f'$.
-Their projections back to $A,A'$ are definable bijections,
-and the graphs still belong to $\VF_*$.
-On each compactness piece, write
-$\bm U_b=(U_b,p_b)$ and $\bm U'_b=(U'_b,p'_b)$,
-with fixed label degrees $k,k'$.
-All the RV coordinates of $u\in U_b$, including the finite
-tags, remain part of the representative.
-
-Apply the preceding preparation lemma to the finite list of
-VF polynomials appearing in the defining formulas for $B$,
-the representative sets and their structure-map graphs.
-These polynomials involve the VF base variables and ground
-coefficients; the RV parameters remain free variables.
-Thus preparation can be performed on the VF projection of
-the base. Carry along the original RV coordinates and every
-new RV coordinate introduced by the preparation.
-RV contractibility of the prepared polynomials makes all
-these RV-sorted data depend on the prepared VF base only
-through its RV tuple.
-
-After reparametrizing, and partitioning the zero-coordinate
-strata, write the base as
-\[
- B^\flat=\{(c,t):\tau=(\rv(c),t)\in S\},\qquad
- S\subseteq(\RV^\times)^d\times\RV_\infty^q.
-\]
-Here $c$ has $d$ nonzero VF coordinates and $t$ contains
-all the retained RV coordinates; the finite stratum tags
-are retained as well.
-The inverse preparation recovers the original parameter
-$b=b(c,t)$.
-The representatives and label maps are now denoted by
-\[
- \bm U_\tau=(U_\tau,p_\tau),\qquad
- p_\tau:U_\tau\longrightarrow(\RV^\times)^k,
-\]
-and similarly for the primed family.
-Using the transported lift bijections, the first total space
-is definably bijective to
-\[
- Y=\{(c,t,x,u):
-       \tau=(\rv(c),t)\in S,\ u\in U_\tau,\
-       \rv(x)=p_\tau(u)\}.
-\]
-The primed construction is identical.
-These total spaces belong to $\VF_*$: they are obtained by
-the displayed bijections from the original graph families,
-and RV-fiber dimension is invariant under definable
-bijections.
-
-Put $\tau=(s,t)$ and form the RV object
-\[
- W=\{(\tau,u):\tau\in S,\ u\in U_\tau\},\qquad
- q(\tau,u)=(s,p_\tau(u)).
-\]
-Its structure map $q$ is finite-to-one.
-Indeed, fix $(s,w)$ and choose any
-$c\in\rv^{-1}(s)$ and $x\in\rv^{-1}(w)$.
-Then $q^{-1}(s,w)$ identifies, by keeping $(t,u)$, with the
-RV fiber of $Y$ at the fixed VF tuple $(c,x)$.
-That fiber is finite because $Y\in\VF_*$.
-The choices of $c,x$ are used only to prove finiteness and
-are not parameters in the definition of $W$ or $q$.
-Thus $\bm W=(W,q)\in\RV[d+k]$.
-
-There is an explicit definable bijection
-\[
- \mathbb L\bm W\longrightarrow Y,\qquad
- ((c,x),((s,t),u))\longmapsto(c,t,x,u).
-\]
-Its inverse restores the forced coordinate $s=\rv(c)$.
-Define $\bm W'$ in the same way, of degree $d+k'$.
-Consequently the two global integrals are represented by
-$\bm W,\bm W'$ modulo the lifting congruence.
-The coordinates $t$ remain RV coordinates; they are not
-replaced by VF coordinates or given additional lifts.
-
-This preparation does not descend the fiber RES equality
-from $\mathbb S\langle b(c,t)\rangle$ to
-$\mathbb S\langle\tau\rangle$.
-That equality is still interpreted over the former base.
-Its descent requires the finite RES-relation witnesses in
-the later argument; once those witnesses have been
-uniformized, their formulas can be included in the same
-finite preparation package.
-
-\medskip
-\noindent\emph{Controlling the value parameters.}
-For the subsequent RV calculations set $U=W$, $U'=W'$,
-\[
- D=\vrv(U),\qquad D'=\vrv(U'),\qquad E=\vrv(S).
-\]
-Work componentwise on fixed zero-coordinate strata,
-retaining their finite tags.
-For $\tau\in S$, let $D_\tau=\vrv(U_\tau)$,
-where the value map is taken on all remaining nonzero
-coordinates of the underlying representative.
-The label maps are retained separately.
-
-We claim that a finite ground-definable partition
-$S=\coprod_a S_a$ makes $D_\tau$ depend only on
-$\gamma=\vrv(\tau)$ on each $S_a$.
-More precisely, there are ground-definable DOAG sets
-$\mathcal D_a\subseteq\vrv(S_a)\times\Gamma^r$ with
-\[
- D_\tau=(\mathcal D_a)_{\vrv(\tau)}
-       \qquad(\tau\in S_a).
-\]
-The same partition can be chosen for the primed family.
-
-Here are the parameter details.
-Stable embeddedness of $\Gamma$, followed by compactness,
-first gives finitely many fixed DOAG formulas
-$\Phi_\ell(\delta,z)$ such that every $D_\tau$ has the form
-$\Phi_\ell(\Gamma^r,c)$ for some tuple $c$ in $\Gamma$.
-Partition $S$ according to the first applicable formula.
-For a fixed formula the set
-\[
- P_\tau=\{c:\ \forall\delta,\
-       (\delta\in D_\tau\ \Longleftrightarrow\
-                    \Phi_\ell(\delta,c))\}
-\]
-is a nonempty definable set in a power of $\Gamma$.
-
-Fix a ground-definable $\epsilon>0$ in $\Gamma$.
-There is a definable selection $c(\tau)\in P_\tau$ using
-only $\tau$ and $\epsilon$.
-For completeness, in one ordered coordinate choose $0$
-when available. Otherwise use the first positive component,
-if one exists, reflecting the negative part if necessary.
-Choose its left endpoint if included, the midpoint for an
-open bounded interval, or its left endpoint plus $\epsilon$
-for an open ray. The component endpoints are definable
-from the set. Apply this rule successively to projections
-and fibers for tuples. O-minimality makes these choices
-uniformly definable. Hence the selection does not retain
-any externally chosen Gamma parameter.
-
-For a nonzero RV tuple $\tau$, RV quantifier elimination
-gives the parameter-control identity
-\[
- \dcl(\mathbb S,\tau)\cap\Gamma
- =
- \operatorname{span}_{\Q}
- \bigl(\dcl(\mathbb S)\cap\Gamma,\ \vrv(\tau)\bigr).
-\]
-To see the point, on each leading-term guard the value
-conditions are rational linear conditions in the value
-variables, with constants from the ground and the values
-of RV monomials in $\tau$.
-A uniquely defined Gamma element is a boundary value of
-these conditions, and therefore has the displayed rational
-affine form.
-Apply this to every coordinate of $c(\tau)$.
-
-These rational-affine descriptions cover every ambient
-$\tau$; compactness makes the list finite.
-Refine $S$ by their equality loci and by the earlier formula
-choices. On each resulting piece,
-\[
- c(\tau)=L_a\vrv(\tau)+\alpha_a,
- \qquad L_a\text{ a rational matrix},\quad
- \alpha_a\in(\dcl(\mathbb S)\cap\Gamma)^{\dim c}.
-\]
-Consequently one may take
-\[
- \mathcal D_a=
- \{(\gamma,\delta):\gamma\in\vrv(S_a),\
-             \Phi_{\ell(a)}(\delta,L_a\gamma+\alpha_a)\}.
-\]
-This is defined over the original ground.
-Intersect the two finite partitions to handle the primed
-family simultaneously.
-On a selected base piece the notation
-$D_{\vrv(\tau)}$, $D'_{\vrv(\tau)}$ is therefore justified.
-The first partition may depend on angular data in $\tau$;
-only after that partition do the value fibers depend on
-$\vrv(\tau)$ alone.
-
-% BEGIN REFEREE INSERTION R090
-\ResolvedRefereeRemark{090}{Gap}{RV coordinates cannot simply be discarded}{%
-\textit{Original source line 1894.}\quad The fiberwise argument retains the $\RV$-parameter $t$; compactness makes the resulting maps uniform but does not remove that coordinate. In particular an infinite $\RV$-set does not admit a definable injection into a power of $\VF$ (see \cite[Lemma~3.41]{hrushovski:kazhdan:integration:vf}). Thus the asserted reduction to $A,A',B$ all lying in $\VF$ needs a separate argument. A possible repair is to carry the $\RV$-coordinates and the finite-to-one structure maps throughout the proof, checking that all total spaces remain objects of the relevant categories; otherwise restrict the theorem to a $\VF$ base and prove the extra coding needed for its total spaces.
-}{The author approved the mixed-base preparation on November 13, 2026. All original and newly introduced RV coordinates, finite tags and structure maps are retained. The combined RV structure map has finite fibers by its identification with actual RV fibers of the total mixed lift. No injection of an RV base into VF or extra lifting of its RV coordinates is used.}
-% END REFEREE INSERTION R090
-
-% BEGIN REFEREE INSERTION R091
-\ResolvedRefereeRemark{091}{Clarification; revised}{Justification of the value-parameter dependence}{%
-\textit{Original source line 1896.}\quad The finite partition asserted here is compatible with the usual parameter-control argument, but stable embeddedness alone is not its justification. Use $\dcl(\mathbb S,t)\cap\Gamma=\operatorname{span}_{\mathbb Q}(\dcl(\mathbb S)\cap\Gamma,\vrv(t))$, together with the piecewise rational-affine description of definable value-group data. After finitely partitioning $S$, this gives the required dependence only on $\vrv(t)$. This is the precise replacement for the justification requested in the human report; it does not contradict the assertion after partitioning.
-}{The author approved the parameter-control proof. Stable embeddedness supplies finitely many DOAG templates; definable ordered selection uses a ground positive Gamma element. RV quantifier elimination and compactness give finitely many rational-affine descriptions. After their common finite partition the value supports depend only on the values of the RV parameters. RES-equality witness descent remains a separate later step.}
-% END REFEREE INSERTION R091
-
-\medskip
-\noindent\emph{Support notation and further refinements.}
-For a definable family of value supports put
-\[
- D_{\gamma,i}=\{\delta:(\gamma,\delta)\in D_i\},\qquad
- D_i=\{(\gamma,\delta):\gamma\in E,\ \delta\in D_{\gamma,i}\}.
-\]
-For the primed family the corresponding notation is
-$D'_{\gamma,i'}$ and $(D'_{i'})_{i'}$.
-Each function $\gamma\mapsto\chi_b(D_{\gamma,i})$ has
-finite range and definable level sets.
-A common finite partition of $E$ makes all these functions,
-and their primed counterparts, constant. On one such piece,
-write the constants as $e_i,e'_{i'}$; Gamma Fubini gives
-\[
- \chi_b(D_i)=e_i\chi_b(E),\qquad
- \chi_b(D'_{i'})=e'_{i'}\chi_b(E).
-\]
-Whenever the source or the base is restricted further,
-we refine again by the level sets of the resulting fiber
-Euler functions.
-
-\medskip
-\noindent\emph{A relative Gamma-push calculation.}
-We use the following calculation over the original ground
-in place of choosing a common fixed-value residue fiber
-of the base.
-Let $\bm X=(X,p)\in\RV[k]$, let
-$J\subseteq X\times\Gamma^r$ be definable, and put
-\[
- J_x=\{\xi:(x,\xi)\in J\},\qquad
- Y=\{(x,z):x\in X,\ \vrv(z)\in J_x\}.
-\]
-Give $Y$ the finite-to-one label $(p(x),z)$, of degree
-$k+r$. Set $g=[\G_m]$ in $R(\mathbb S)$.
-The integer function $c(x)=\chi_b(J_x)$ has finite range
-and definable level sets $X_e=\{x:c(x)=e\}$, and
-\begin{equation}\label{relative:Gamma:push}
- \mathbb E_{\mathrm b}^{\mathbb S}([Y])
-       =g^r\sum_e e\,
-               \mathbb E_{\mathrm b}^{\mathbb S}([X_e]).
-\end{equation}
-The sum is finite. All classes in this formula use the
-ungraded bounded retraction; the specified RV labels are
-retained before that evaluation.
-Two finite-to-one labels on the same RV set give the same
-bounded value: pad them with constant-one coordinates to
-a common degree. The underlying identity is then an RV
-isomorphism. Each padding multiplies by the degree-one
-point class, whose bounded value is $1$.
-
-Here is a proof. First work on fixed zero-coordinate
-strata, retaining the finite tags.
-Apply the preceding parameter-control argument to the
-Gamma fibers $J_x$, treating $x$ as the RV parameter.
-After a finite partition of $X$, the set $J_x$ depends only
-on $\vrv(x)$ through a fixed ground-definable Gamma
-family. Ordinary Gamma fiber integration now proves
-finite-range constructibility of $c$.
-Intersect this partition with its level sets.
-
-Apply Lemma 5.12 on each resulting part and write one chart
-as
-\[
- h_M(X_0)=V\times I^\sharp,\qquad
- \vrv(V)=\{\beta\},\qquad I\subseteq\Gamma^\ell.
-\]
-Here $\ell$ denotes the number of free RV coordinates,
-rather than the dimension of the Gamma set $I$.
-Because $M$ is integral unimodular, the original values
-are $M^{-1}(\beta,\eta)$ when $\eta=\vrv(w)$.
-The corresponding part of $Y$ therefore has the chart
-\[
- V\times K^\sharp,\qquad
- K=\{(\eta,\xi):\eta\in I,\
-            \xi\in J_{M^{-1}(\beta,\eta)}\}.
-\]
-The subscript on $J$ here denotes the value-parametrized
-Gamma family on this selected part.
-If $c=e$ there, Gamma Fubini gives
-$\chi_b(K)=e\chi_b(I)$.
-The monomial evaluation of the bounded retraction is
-\[
- \mathbb E_{\mathrm b}([Y_0])
-      =[V]\,g^{\ell+r}\chi_b(K)
-      =g^r e\,[V]\,g^\ell\chi_b(I)
-      =g^r e\,\mathbb E_{\mathrm b}([X_0]).
-\]
-The coordinate change on $Y_0$ is $h_M$ on $x$ and the
-identity on $z$, so it preserves the finite labels by
-transport. Summing the finitely many parts proves
-(\ref{relative:Gamma:push}), entirely over the original
-ground.
-
-\medskip
-\noindent\emph{Keep the residue families over their RV base.}
-Once the finite monomial witness packages have been
-descended and prepared over $S$, write the resulting
-fiber charts as
-\[
- h_{M_i}(U_{\tau,i})
-      =V_{i,\tau}\times I_{i,\tau}^{\sharp},
- \qquad \tau\in S.
-\]
-The matrices, arities, finite tags, label maps and graphs
-are part of these packages.
-After the preceding parameter control and a finite common
-partition of $S$, the numbers
-$\chi_b(I_{i,\tau})=e_i$ are constant on a selected base
-piece; do the same for the primed family.
-The affine map
-$\eta\mapsto M_i^{-1}(\beta_{i,\tau},\eta)$ identifies
-this free support with the original value piece, so their
-bounded Euler characteristics agree.
-Retain every source chart on that piece. A chart may have
-empty fibers, and its projection need not equal the
-projections of other charts.
-
-Put
-\[
- \mathcal V_i=\{(\tau,v):\tau\in S,\ v\in V_{i,\tau}\}.
-\]
-This is an RV object with a chosen finite-to-one label;
-it need not be a RES object over the ground.
-Apply (\ref{relative:Gamma:push}) with
-$X=\mathcal V_i$ and Gamma fiber $I_{i,\tau}$.
-The maps $(\tau,u)\mapsto(\tau,h_{M_i}(u))$
-retain the RV base coordinate. Thus
-\begin{equation}\label{fubini:family:coefficients}
- \mathbb E_{\mathrm b}([\bm W])
-   =\sum_i e_i g^{\ell_i}
-               \mathbb E_{\mathrm b}([\mathcal V_i]),
- \qquad
- \mathbb E_{\mathrm b}([\bm W'])
-   =\sum_{i'} e'_{i'}g^{\ell'_{i'}}
-               \mathbb E_{\mathrm b}([\mathcal V'_{i'}]).
-\end{equation}
-The product labels in the calculation can be replaced by
-the transported labels of $\bm W,\bm W'$: the monomial
-evaluation in the ungraded bounded target is independent
-of that label choice, as in the earlier evaluation formula.
-
-There is a useful special case for the later RES relations.
-For any definable RV family
-$\mathcal Z=\{(\tau,z):z\in Z_\tau\}$ and definable
-$\alpha:S\to\Gamma^n$, set
-\[
- T_{\alpha,\mathcal Z}
-  =\{(\tau,z,u):(\tau,z)\in\mathcal Z,\
-                        \vrv(u)=\alpha(\tau)\}.
-\]
-Its Gamma fibers are singletons, of bounded Euler
-characteristic $1$. Hence
-\begin{equation}\label{fubini:relative:torsor}
- \mathbb E_{\mathrm b}([T_{\alpha,\mathcal Z}])
-      =g^n\mathbb E_{\mathrm b}([\mathcal Z])
-      =\mathbb E_{\mathrm b}([(\G_m)^n\times\mathcal Z]).
-\end{equation}
-This treats a varying value-torsor relation directly over
-the RV base.
-
-The remaining task is to obtain the finite monomial and
-RES-relation witness packages over this RV base from the
-hypothesis over $\mathbb S\langle b\rangle$.
-The calculations above do not assert that descent.
-They show how to use the descended packages: combine
-(\ref{fubini:family:coefficients}) with
-(\ref{fubini:relative:torsor}), additivity and the actual
-bijections in the finite relation witnesses.
-A single finite Boolean partition of the base handles
-both families and all their supports. No selected chart
-is required to project surjectively, and every torus
-factor in these formulas is retained.
-
-% BEGIN REFEREE INSERTION R092
-\ResolvedRefereeRemark{092}{Typo; revised}{Order of the subscripts}{%
-\textit{Original source line 1898.}\quad Use $D_{\gamma,i}$ consistently: the definition of $D_i$ changes it to $D_{i,\gamma}$, and the primed paragraph makes the same switch. In the final refinement paragraph below, replace $(D'_{i'})_i'$ by $(D'_{i'})_{i'}$.
-}{The author approved the replacement on November 13, 2026. The support fibers and joint supports consistently use the gamma,i order, and the primed family is indexed by i-prime. Fiber Euler constants are re-established after further restrictions.}
-% END REFEREE INSERTION R092
-
-% BEGIN REFEREE INSERTION R093
-\ResolvedRefereeRemark{093}{Clarification; revised}{Explain the common refinement}{%
-\textit{Original source line 1902.}\quad The common refinement can be justified more explicitly. First refine the value-group base so that the relevant projections of the $U_i$ to $S$ have the same value support. Their common Boolean refinement then consists of twistoids. Restrict each $U_i$ to a selected base piece; it remains a twistoid, with a fixed twistback projecting onto that base twistback. Apply Lemma~\ref{coh:decom} to these restrictions using $\Gamma$-cohesive refinements. Their projections to the selected base are now $\Gamma$-cohesive, so a final value-group refinement makes each surviving projection surjective. On that final refinement, also re-establish constancy of the fiber Euler characteristics $\chi_b(D_{\gamma,i})$. This supplies the compatibility used in the next paragraph; the earlier objection should not be read as an obstruction to the existence of the refinement.
-}{The author approved the original-language familywise Gamma-push route. It retains residue families over the existing RV base and replaces the common twistback, dotted-fiber and weighted fixed-fiber reduction. The proof keeps all torus factors, allows empty fibers and overlapping projections, and handles varying value torsors. The finite witness construction and VF-to-RV descent remain for R094--R095.}
-% END REFEREE INSERTION R093
-
-\medskip
-\noindent\emph{Finite witnesses for the RES quotient.}
-The following object-level criterion supplies the finite
-data needed for compactness.
-
-\begin{test}\label{test}
-Let $\mathbb T$ be a parameter base and
-$P,Q\in\RES_{\mathbb T}$.
-The equality $[P]=[Q]$ in $R(\mathbb T)$ holds if and only if
-there are $C\in\RES_{\mathbb T}$, finitely many ordered pairs
-$(L_j,R_j)$, and an actual $\mathbb T$-definable bijection
-\begin{equation}\label{finite:RES:witness}
- P\sqcup C\sqcup\bigsqcup_j R_j
-       \ \xrightarrow{\ \sim\ }\
- Q\sqcup C\sqcup\bigsqcup_j L_j .
-\end{equation}
-For each $j$, the pair $(L_j,R_j)$ is either
-\[
- \bigl(\alpha_j^\sharp\times Z_j,\
-              (\G_m)^{n_j}\times Z_j\bigr)
-\]
-or its reverse, where
-$Z_j\in\RES_{\mathbb T}$ and
-$\alpha_j\in\Gamma^{n_j}$ is $\mathbb T$-definable.
-All unions and copies are tagged disjoint unions.
-\end{test}
-
-To prove the criterion, an element of the ideal defining
-$R(\mathbb T)$ is a finite sum of its generators times
-elements of $K_0(\RES_{\mathbb T})$.
-Write each coefficient as a difference of two positive
-object classes. Absorb those objects into $Z_j$, reversing
-a pair for a negative coefficient.
-The one-coordinate generators already suffice; tuple
-generators give the same ideal by expanding a difference
-of products.
-Thus $[P]-[Q]=\sum_j([L_j]-[R_j])$ in the group completion.
-Equality there means that adding one common positive class
-$[C]$ makes the two positive sums equal.
-Positive scissor equalities assemble into an actual
-definable bijection, giving
-(\ref{finite:RES:witness}).
-Conversely that bijection and the defining ideal relations
-imply $[P]=[Q]$ in $R(\mathbb T)$.
-This gives finite object witnesses directly.
-
-\medskip
-\noindent\emph{Choose the full packages before preparing the base.}
-Return temporarily to $b\in B$ in the original parameter
-coordinates, and put $\mathbb S_b=\mathbb S\langle b\rangle$.
-Apply Lemma 5.12 to the two RV representatives over
-$\mathbb S_b$, with their zero strata and finite tags retained.
-The standing nontriviality of the ground Gamma group
-also holds over $\mathbb S_b$.
-Only RV decomposition and the RV retraction are used here;
-no fiber VF-integration hypothesis is added.
-
-For one such finite package the charts have matrices $M_i$,
-free arities $\ell_i$, residue factors $V_{i,b}$,
-Gamma supports $I_{i,b}$ and integers
-$e_i=\chi_b(I_{i,b})$, and similarly for the primed family.
-Set
-\[
- C_{i,b}=V_{i,b}\times(\G_m)^{\ell_i},
- \qquad C'_{i',b}=V'_{i',b}\times(\G_m)^{\ell'_{i'}}.
-\]
-Writing $a^+=\max(a,0)$ and $a^-=\max(-a,0)$, form the
-positive RES objects
-\[
- P_b=\bigsqcup_i e_i^+ C_{i,b}
-       \ \sqcup\ \bigsqcup_{i'}(e'_{i'})^- C'_{i',b},
-\]
-\[
- Q_b=\bigsqcup_i e_i^- C_{i,b}
-       \ \sqcup\ \bigsqcup_{i'}(e'_{i'})^+ C'_{i',b}.
-\]
-Here $mC$ means $m$ tagged copies of $C$.
-The monomial evaluation and the hypothesis imply
-$[P_b]=[Q_b]$ in $R(\mathbb S_b)$.
-Choose the full finite witness of Test~\ref{test} over
-$\mathbb S_b$: the stabilizer $C_b$, the factors $Z_{j,b}$,
-the value tuples $\alpha_j(b)$, the orientations of the
-pairs, and the graph of the displayed bijection.
-
-Include in the package the representative and label
-formulas, their finite-fiber bounds, the monomial source
-pieces and coordinate maps, the residue and Gamma factors,
-and finite bounds for every RES value support.
-Include formulas defining all Gamma-valued parameter
-functions and the complete stabilization bijection graph.
-
-The Euler integers also have finite first-order certificates.
-After DOAG quantifier elimination, the indicator of each
-$I_{i,b}$ is a finite integer combination of indicators
-of closed rational polyhedra with $b$-definable Gamma
-parameters. Its bounded Euler characteristic is the
-same combination of their nonemptiness indicators,
-since a nonempty closed polyhedron has bounded Euler
-characteristic $1$.
-Record those parameter formulas, the indicator identity
-and the nonemptiness flags.
-Validity of a fixed such certificate is first order.
-
-Validity of the entire fixed finite package is now a
-first-order condition on $b$: all arities and bounds are
-fixed, and the required set identities, maps and actual
-bijections are given by formulas.
-These conditions cover every ambient $b\in B$.
-Saturation and compactness therefore give a finite
-definable partition of $B$ with one package on each piece.
-In particular, the matrices, copy numbers, Euler integers,
-arity lists and pair orientations are fixed on a piece.
-
-\medskip
-\noindent\emph{Prepare the witness formulas themselves.}
-Repeat the earlier mixed-base preparation with this larger
-finite package.
-First eliminate valued-field quantifiers in the formulas
-for all RV/Gamma sets and maps in it.
-Their only free VF variables are the VF coordinates of
-the base parameter $b$. Apply the preparation lemma to
-every VF polynomial occurring in these formulas, including
-those for the stabilization bijection, the Gamma-valued
-functions and the Euler certificates.
-Carry every original and newly introduced RV coordinate.
-
-As before, write the resulting base as
-\[
- B^\flat=\{(c,t):\tau=(\rv(c),t)\in S\}.
-\]
-Every formula in the RV/Gamma witness package now depends
-on $(c,t)$ only through $\tau$.
-It therefore defines the representative sets, their label
-maps, the monomial data, all auxiliary RES objects,
-the Gamma functions $\alpha_j(\tau)$ and the actual
-stabilization bijection over $\mathbb S\langle\tau\rangle$.
-The finite support bounds and the Euler certificates remain
-valid there: their defining first-order assertions involve
-only $\tau$ after preparation.
-
-This constructs the equality witness over the RV parameter
-base. It does not deduce that equality from injectivity of
-a base-extension map.
-The lift bijections $H_b,H'_b$ are kept as transported
-bijections of total mixed VF families; they need not
-descend to RV maps.
-Using them gives the total RV objects
-$\bm W,\bm W'$ exactly as in the earlier mixed-coordinate
-construction.
-The Gamma functions and support sets may vary with
-$\tau$; their constancy is not required.
-
-\medskip
-\noindent\emph{Apply the finite witnesses to the total families.}
-For every object family $F_\tau$ use the tagged total
-\[
- \mathcal F=\{(\tau,u):\tau\in S,\ u\in F_\tau\}.
-\]
-Give each total a finite-to-one RV label, for example its
-full coordinate tuple when necessary.
-These totals are RV objects; no assertion that they are
-ground RES objects is needed.
-The uniform bijection (\ref{finite:RES:witness}) yields
-an actual definable bijection
-\[
- \mathcal P\sqcup\mathcal C\sqcup\bigsqcup_j\mathcal R_j
-       \ \cong\
- \mathcal Q\sqcup\mathcal C\sqcup\bigsqcup_j\mathcal L_j .
-\]
-For each $j$, the relative torsor identity gives
-\[
- \mathbb E_{\mathrm b}([\mathcal L_j])
-       =\mathbb E_{\mathrm b}([\mathcal R_j]),
-\]
-with either orientation, even for varying
-$\alpha_j(\tau)$.
-Apply the ungraded bounded retraction to the total
-bijection and cancel the common summands additively:
-\[
- \mathbb E_{\mathrm b}([\mathcal P])
-       =\mathbb E_{\mathrm b}([\mathcal Q]).
-\]
-The definitions of $P_\tau,Q_\tau$ turn their difference
-into
-\[
- \sum_i e_i g^{\ell_i}\mathbb E_{\mathrm b}([\mathcal V_i])
-   -\sum_{i'}e'_{i'}g^{\ell'_{i'}}
-                   \mathbb E_{\mathrm b}([\mathcal V'_{i'}]).
-\]
-By the preceding family-coefficient formula this is
-$\mathbb E_{\mathrm b}([\bm W])
- -\mathbb E_{\mathrm b}([\bm W'])$.
-Consequently the two global bounded values agree.
-Since $\bm W,\bm W'$ represent the original total
-VF objects under the lifting comparison, this proves
-the conclusion of Theorem 5.17.
-Sum over the finitely many base pieces.
-All cancellations above take place in the additive
-group of $R(\mathbb S)$; no torus class is inverted.
-
-% BEGIN REFEREE INSERTION R094
-\ResolvedRefereeRemark{094}{Typo; revised}{Height convention}{%
-\textit{Original source line 1955.}\quad Define height as the maximum level number, equivalently the number of levels minus one, to agree with the induction and the indices $\rho-1$ below. The product-free construction argument is otherwise valid. At the start of the remark, replace ``There are in general more than one way'' by ``There is in general more than one way''. 
-}{The author approved the finite stabilized object-bijection criterion on November 13, 2026. It replaces construction graphs and their height induction. The old graph convention would require height equal to the maximum level number; that convention is no longer used in this proof.}
-% END REFEREE INSERTION R094
-
-% BEGIN REFEREE INSERTION R095
-\ResolvedRefereeRemark{095}{Gap; revised}{Descent from VF parameters to RV parameters}{%
-\textit{Original source line 1966.}\quad The earlier application of Lemma~\ref{special:term:constant:disc} makes the objects depend only on $t=\rv(b)$, but it does not yet make the equality witnesses $t$-definable. One way to repair this is to uniformize the full finite witness data over $b$ before choosing $T$: include the fiberwise bipolar decompositions, their sampled value fibers, and the product-free congruence graphs constructed above. Apply the lemma to every valued-field top term occurring in those formulas, not just the object formulas. Then the witnesses themselves depend on $\rv(b)$, and the required relation over $t$ follows. Finally, refine the base finitely so that all the auxiliary $\Gamma$-data are constant on each piece. In the list of such data, $\dot U'_t$ and $V_t$ have not been defined; use the actual indexed objects, for example $V_{j,t}$.
-}{The author approved selecting and uniformizing the complete finite witness package over the original parameter before preparation. The package includes monomial data, Euler certificates, all Gamma functions and support bounds, stabilization objects and actual bijection graphs. Preparing every VF polynomial makes these witnesses RV-parameter-definable. Tagged totals and the relative torsor identity finish the proof using only additive cancellation. The original graph method could also be repaired by this full-witness preparation; the finite criterion is a shorter presentation.}
-% END REFEREE INSERTION R095
-\end{proof}
-
-
-
-\begin{cor}\label{cor:global:vanishing}
-Let $F=\C((t))$ and let $f:A\to B$ be a morphism of
-varieties over $\C$.
-Interpret these varieties in a sufficiently saturated
-ambient model $\mathbb U$ of $\mathrm{ACVF}(0,0)$, using
-finite affine charts.
-For $b\in B(\mathbb U)$ put $A_b=f^{-1}(b)$ and
-$\mathbb S_b=F\langle b\rangle$, with $b$ represented by its
-VF chart coordinates.
-If, for every $b\in B(\mathbb U)$,
-\[
- \mathbb E_{\mathrm b}^{\mathbb S_b}\!
-       \left(\int[A_b]\right)=0
-       \quad\text{in }R(\mathbb S_b),
-\]
-then $\Vol([A])=0$ in $\gmv$.
-\end{cor}
-
-\begin{proof}
-Choose finite disjoint constructible pieces subordinate to
-affine covers of $A$ and $B$ and encode their finite tags
-by distinct elements of $\C$.
-This realizes $f$ as a definable map between VF tuples.
-Changing charts gives definably equivalent parameter
-bases and transports the fiber equality.
-
-Both $F$ and each $\mathbb S_b$ in these coordinates are
-VF-generated. Thus the integrals of Section~3 are
-available over these bases.
-The lifting theorem supplies positive RV representatives
-of $A_b$ with actual $\mathbb S_b$-definable lift bijections.
-Apply Theorem~5.17 to $A\to B$ and the empty family
-$\varnothing\to B$.
-The displayed hypothesis is precisely the required
-equality of their fiber retractions, so
-\[
- \mathbb E_{\mathrm b}^{F}\!
-       \left(\int[A]\right)=0
-       \quad\text{in }R(F).
-\]
-Applying the global comparison $\Theta$ gives
-$\Vol([A])=0$.
-\end{proof}
-
-% BEGIN APPROVED GEOMETRIC FUBINI
-\begin{nota}\label{nota:geometric:fubini:target}
-For a parameter base $\mathbb T$, put
-\[
- R(\mathbb T)=\sggk\RES_{\mathbb T},\qquad
- R_g(\mathbb T)=R(\mathbb T)[L^{-1}],\qquad L=[\A].
-\]
-We use $\bb E_g^{\mathbb T}$ for the geometric retraction of Section~\ref{sec:retract}
-followed by the natural homomorphism to $R_g(\mathbb T)$.
-The RES grading is thus forgotten in the target. Write $\widetilde{\bb E}_g^{\mathbb T}$
-for the unnormalized geometric Euler homomorphism followed by forgetting
-the RES grading. If $\bm U\in\RV[k]$, then
-\begin{equation}\label{geometric:fubini:normalization}
- \bb E_g^{\mathbb T}([\bm U])=L^{-k}\widetilde{\bb E}_g^{\mathbb T}([\bm U]).
-\end{equation}
-The class $L$ need not be a non-zero-divisor in $R(\mathbb T)$.
-
-\end{nota}
-
-\begin{prop}[Geometric version of Theorem~\ref{fubini}]\label{prop:geometric:fubini}
-Let $\mathbb S$ be a $(\VF,\Gamma)$-generated ground substructure,
-with $\Gamma(\mathbb S)$ nontrivial. Let $A,A'\in\VF_*$ and let
-$f:A\to B$, $f':A'\to B$ be definable maps. Put
-$A_b=f^{-1}(b)$, $A'_b=(f')^{-1}(b)$ and
-$\mathbb S_b=\mathbb S\langle b\rangle$.
-Suppose that for every $b\in B$ there are
-$\mathbb S_b$-definable objects $\bm U_b,\bm U'_b\in\RV[*]$ and
-$\mathbb S_b$-definable bijections
-\[
- A_b\xrightarrow{\ \sim\ }\bb L\bm U_b,
- \qquad A'_b\xrightarrow{\ \sim\ }\bb L\bm U'_b
-\]
-such that
-\[
- \bb E_g^{\mathbb S_b}([\bm U_b])
- =\bb E_g^{\mathbb S_b}([\bm U'_b])
- \quad\text{in }R_g(\mathbb S_b).
-\]
-Then
-\[
- \bb E_g^{\mathbb S}\!\left(\int[A]\right)
- =\bb E_g^{\mathbb S}\!\left(\int[A']\right)
- \quad\text{in }R_g(\mathbb S).
-\]
-As in Theorem~\ref{fubini}, the hypothesis concerns all points of $B$ in the
-sufficiently saturated ambient model.
-\end{prop}
-
-\begin{proof}
-We explain the changes to the proof of Theorem~\ref{fubini}, retaining its
-positive lifting witnesses and intrinsic parameter-relative RES quotients.
-
-Fix $b$ temporarily, and let $k,k'$ be the degrees of its two RV
-representatives. Write
-\[
- a=\widetilde{\bb E}_g^{\mathbb S_b}([\bm U_b]),\qquad
- a'=\widetilde{\bb E}_g^{\mathbb S_b}([\bm U'_b]).
-\]
-By the definition of localization, the equality $L^{-k}a=L^{-k'}a'$
-is equivalent to the existence of an integer $N\geq k,k'$ such that
-\begin{equation}\label{geometric:fubini:clearing}
- L^{N-k}a=L^{N-k'}a'\quad\text{in }R(\mathbb S_b).
-\end{equation}
-Indeed, after a common denominator has been chosen, some further power
-of $L$ annihilates the difference of the two numerators. This step does
-not cancel $L$ in the unlocalized ring.
-
-Let $\bm{\mathbb A}_{\RES}\in\RES[1]$ be the disjoint union of
-$\G_m$ and the degree-one point. Its ungraded class is $L$.
-Its lift is $\mathcal O^\times\sqcup(1+\mathcal M)$, which is definably
-bijective to the closed unit ball $\mathcal O$, by translating the second
-summand to $\mathcal M$. Consequently
-\[
- \bb E_g([\bm{\mathbb A}_{\RES}])=L^{-1}L=1.
-\]
-Replace the two representatives by
-\[
- \widehat{\bm U}_b=\bm U_b\times\bm{\mathbb A}_{\RES}^{\,N-k},
- \qquad
- \widehat{\bm U}'_b=\bm U'_b\times\bm{\mathbb A}_{\RES}^{\,N-k'}.
-\]
-Both have degree $N$, and \eqref{geometric:fubini:clearing} says that their $\widetilde{\bb E}_g$-values
-are equal. Their VF lifts are definably bijective to
-$A_b\times\mathcal O^{N-k}$ and $A'_b\times\mathcal O^{N-k'}$.
-
-The integer $N$ is part of the finite witness package. More precisely,
-express \eqref{geometric:fubini:clearing} by the finite stabilized RES-bijection criterion
-used in Theorem~\ref{fubini}, and include the padding exponents, all its objects,
-bounds and graphs, and both positive lifting bijections. The validity of
-each fixed package is first order over the original ground. These
-conditions cover every ambient parameter $b$. Compactness supplies
-finitely many packages; a finite definable partition fixes $k,k',N$ and
-the witness formulas on each part. No uniform bound on the
-denominator-clearing exponents is assumed before this argument.
-
-Work on one such part. The relative RV calculation in the proof of
-Theorem~\ref{fubini} applies to $\widetilde{\bb E}_g$ with $\chi_g$ in place of $\chi_b$.
-For clarity, if $X$ is a definable RV set,
-$J\subseteq X\times\Gamma^r$ is definable, and
-\[
- Y=\{(x,z)\in X\times(\RV^\times)^r:\vrv(z)\in J_x\},
-\]
-then its unnormalized form is
-\begin{equation}\label{geometric:fubini:push}
- \widetilde{\bb E}_g([Y])=g^r\sum_e e\,\widetilde{\bb E}_g([X_e]),\qquad
- g=[\G_m],\quad X_e=\{x:\chi_g(J_x)=e\}.
-\end{equation}
-This follows from the same monomial decomposition and Fubini formula
-for $\chi_g$ on the $\Gamma$-sort. The sum is finite, and its level sets are definable over the
-original ground. For the first-order Euler certificates, use finite
-decompositions into relatively open rational polyhedra: a nonempty
-cell of dimension $j$ has geometric Euler characteristic $(-1)^j$.
-The cell formulas, dimensions and nonemptiness flags are included in
-the finite package. The varying value-torsor identity also remains valid,
-since $\chi_g$ of a singleton is $1$. Thus the actual total-bijection
-relations and the value-fiber relations in the finite stabilized
-witnesses are preserved by $\widetilde{\bb E}_g$. Their common stabilization is
-cancelled additively, as in the proof of Theorem~\ref{fubini}.
-
-Include all these formulas in the same preparation package. On a
-prepared base piece, let $d$ be the number of nonzero VF base coordinates
-and write $\tau=(s,t)$ as in that proof. The padded total RV objects have
-structure maps
-\[
- q(\tau,u)=(s,p_\tau(u)),\qquad
- q'(\tau,u')=(s,p'_\tau(u')),
-\]
-and both belong to $\RV[d+N]$. Finiteness of these maps follows from the
-actual RV fibers of the total VF lifts, as before. In particular, the
-retained coordinates $t$ receive no additional VF lifts. The relative
-calculation and complete stabilized witnesses give equality of the
-$\widetilde{\bb E}_g$-values of the two total objects. Multiplication by the common
-factor $L^{-(d+N)}$ and \eqref{geometric:fubini:normalization} give equality of their
-geometric values.
-
-On the chosen part the padded total VF spaces are
-$A|_{B_i}\times\mathcal O^{N-k}$ and $A'|_{B_i}\times\mathcal O^{N-k'}$.
-Since $\bb E_g(\int[\mathcal O])=1$, their geometric values agree with those of
-$A|_{B_i}$ and $A'|_{B_i}$, respectively. Finite additivity over the base
-partition proves the assertion.
-\end{proof}
-
-\begin{rem}
-Taking $A'=\varnothing$ gives the corresponding vanishing statement.
-The proposition is stated in the ungraded localized target
-$R_g(\mathbb S)$. It uses no injectivity of the natural homomorphism
-from the homogeneous degree-zero affine localization to that target.
-\end{rem}
-
-{\normalfont\small\color{ResolutionGreen}
-\noindent\textbf{Author resolution (geometric Fubini).}
-The author approved this geometric version on November 14, 2026,
-including its ungraded affine-localized target, denominator-clearing
-witnesses before preparation, affine-line padding and common total-degree
-normalization. It is added to the Section 5 formalization scope.\par}
-% END APPROVED GEOMETRIC FUBINI
 
 \section{Special covariant bijections}\label{sec-pscb}
 
@@ -5898,7 +4181,7 @@ If $\mathbb{M}$ is definably closed and $\Gamma(\mathbb{M})$ is nontrivial, or e
 
 \subsection{Piecewise retraction to $\RES$}\label{piece:res}
 
-As in \S~\ref{jp:fubini}, from here on, we work in the field $\puC$ of complex Puiseux series and take  $\mathbb{S} = \C \dpar{ t }$. The value group $\Gamma$ is identified with $\Q$. We also consider the family of henselian subfields $\C \dpar{ t^{1/m} }$,  $m \in \Z^+$, regarded as substructures. The value group $\Gamma(\C \dpar{ t^{1/m} })$ is identified with $m^{-1} \Z$.
+From here on, we work in the field $\puC$ of complex Puiseux series and take  $\mathbb{S} = \C \dpar{ t }$. The value group $\Gamma$ is identified with $\Q$. We also consider the family of henselian subfields $\C \dpar{ t^{1/m} }$,  $m \in \Z^+$, regarded as substructures. The value group $\Gamma(\C \dpar{ t^{1/m} })$ is identified with $m^{-1} \Z$.
 
 
 
@@ -6036,12 +4319,13 @@ If $\bm U = (U, f, l) \in \mgRV^{\db}[*]$ with $l \in m^{-1}\Z$ (constant volume
 The ring $\bigcap_{m \in \Z^+} \ggk^\natural_m \mgRV^{\db}[*]$ is denoted by $\ggk^\natural \mgRV^{\db}[*]$.
 
 If $\bm A = (A, l) \in \mgVF^\diamond[*]$ with $l$  constant then $\int^\diamond [\bm A]$ may be expressed as $[(U, f, l)]/ J_{\mathrm{var}}$, and hence if $l \in \Z$ then $\int^\diamond [\bm A]$ belongs to the image of $\ggk^\natural \mgRV^{\db}[*]$ in $\ggk \mgRV^{\db}[*] / J_{\mathrm{var}}$, which we write as $\ggk^\natural \mgRV^{\db}[*]/ J_{\mathrm{var}}$. Two elements of $\ggk^\natural_m \mgRV^{\db}[*]$ that represent $\int^\diamond [\bm A]$ differ by an element of $J_{\mathrm{var}} \cap \ggk^\natural_m \mgRV^{\db}[*]$. So, by Lemma~\ref{PG:van}, for every $m \in \Z^+$, the expression $(\bm \eta \circ \bm h_m \circ \int^\diamond)([\bm A])$ designates a unique element  in $\gmv[[\A]^{-1}]$.
+Let $\ggk^{\Z} \mgRV^{\db}[*]$ be the subring of $\ggk \mgRV^{\db}[*]$ generated by the classes $[(U, f, l)]$ with $l \in \Z$, and $\ggk^{\Z} \mgVF^\diamond[*]$ the subring of $\ggk \mgVF^\diamond[*]$ generated by the classes $[(A, l)]$ with $l \in \Z$. Since a product of two such classes is again of this form, their elements are the finite sums of such classes and their negatives. The first ring is contained in $\ggk^\natural \mgRV^{\db}[*]$, and, by the above, $\int^\diamond$ maps the second into the image of the first in $\ggk \mgRV^{\db}[*]/J_{\mathrm{var}}$, which we write as $\ggk^{\Z} \mgRV^{\db}[*]/J_{\mathrm{var}}$.
 \end{rem}
 
 
 Denote by $\RES_{m}$ the full subcategory of $\RES$ such that $U \in \RES_{m}$ if and only if every coordinate of every element of $U$ is either $\infty$ or has value in $m^{-1} \Z$, or equivalently, $U \in \RES_{m}$ if and only if the action on $U$ of the kernel of the canonical projection $\hat \mu \fun \mu_m$ is trivial.
 
-For $\gamma \in \Q$, let $L_\gamma = \gamma^\sharp \cup \{0_\gamma\}$ be the one-dimensional residue vector space introduced in the proof of Notation~\ref{bipo:gdv}. Its class in $\sggk \RES$ is $[\G_m] + 1 = [\A]$.
+For $\gamma \in \Q$, let $L_\gamma = \gamma^\sharp \cup \{0_\gamma\}$ be the one-dimensional residue vector space of Notation~\ref{bipo:gdv}. Its class in $\sggk \RES$ is $[\G_m] + 1 = [\A]$.
 
 Let $\beta = (\beta_1, \ldots, \beta_n) \in (m^{-1} \Z)^n$ with $\beta_i \geq 0$ and $A \sub \OO^n \times \RV^l$ be a proper $\beta$-invariant definable set such that $\pvf \rest A$ is finite-to-one. Then there is a set
 \[
@@ -6216,8 +4500,16 @@ where the second equality follows if  we change the variable $t$ to $t^{1/m}$ in
 }{The comparison is now written out: $s=t^{1/m}$, $\beta=(1,\ldots,1)$, truncation modulo $s^{m+1}$, the identification of the truncated arcs at $0$ through the chart, the action of $\mu_m$, and the factor $[\A]^{-md}$.}
 % END REFEREE INSERTION R153
 
-\begin{rem}
-One of the key steps of the main construction in \cite[\S~8]{hru:loe:lef} is to show (\ref{z:coeff:change}), see \cite[Proposition~8.3.1]{hru:loe:lef}, but with $\int^\diamond$  replaced by $\int$. This, and a few other statements in \cite[\S~8]{hru:loe:lef}, rely on a tensor decomposition of the ring $\ggk \mathrm{vol}\RV[*]$, as claimed in \cite[Proposition~10.10(2)]{hrushovski:kazhdan:integration:vf}. We have pointed out above that, unfortunately, this result does not hold.
+\begin{rem}\label{rem:HK:fail}
+One of the key steps of the main construction in \cite[\S~8]{hru:loe:lef} is to show (\ref{z:coeff:change}), see \cite[Proposition~8.3.1]{hru:loe:lef}, but with $\int^\diamond$  replaced by $\int$. This, and a few other statements in \cite[\S~8]{hru:loe:lef}, rely on a tensor decomposition of the ring $\ggk \mathrm{vol}\RV[*]$, as claimed in \cite[Proposition~10.10(2)]{hrushovski:kazhdan:integration:vf}. Unfortunately, this result does not hold, and neither do the surjectivity claims for the morphisms (8.1.4), (8.1.6) and (8.1.7) of \cite{hru:loe:lef}. Here is an explicit object outside their images.
+
+Recall from \cite[\S~8.1]{hru:loe:lef} that the objects of $\mathrm{vol}\RV[n]$ are the objects $(X, f)$ of $\RV[n]$, and that a morphism $(X, f) \fun (X', f')$ is a definable bijection $h : X \fun X'$ such that $w(f(x)) = w(f'(h(x)))$ for all $x \in X$, where $w(y_1, \ldots, y_n) = \vrv(y_1) + \cdots + \vrv(y_n)$. By Notation~\ref{jcbG:op}, these are exactly the morphisms of $\mgRV[n]$ between objects with the constant volume form $0$. The category $\mathrm{vol}\RES[n]$ is the full subcategory of the objects in $\RES[n]$, and the morphisms in question are induced by $((W, g), \Delta) \efun (W \times \Delta^\sharp, g \times \id)$, where $\Delta \sub \Gamma^l$ is definable. So every class in their images is the class of a finite disjoint union $Y$ of such products. The categories in \cite[Proposition~10.10(2)]{hrushovski:kazhdan:integration:vf} have the same morphisms \cite[Definition~5.21]{hrushovski:kazhdan:integration:vf}.
+
+Let $X = \set{u \in \RV \given 0 < \vrv(u) < 1}$ and $f(u) = u^2$, so that $(X, f)$ is an object of $\mathrm{vol}\RV[1]$ whose image in $\Gamma$ is doubly bounded. Suppose that $h : (X, f) \fun Y$ is an isomorphism in $\mathrm{vol}\RV[1]$, with $Y$ as above. Since the degree is $1$, every product in $Y$ is of one of two kinds: either $W \in \RES[1]$ and $l = 0$, and then the weight $w \circ (g \times \id)$ takes only finitely many values on it, all in $\Q$; or $W \in \RES[0]$, that is, $W$ is finite, and $\Delta \sub \Gamma$, and then the point $(p, y)$ has weight $\vrv(y)$. The points of the finite sets $W$ lie in the model $\puC$ of $\ACVF(0,0)$, so they all lie in $\RV(\C\dpar{t^{1/N}})$ for some $N \in \Z^+$. Each $\Delta$ is a finite union of points and intervals with endpoints in $\Q \cup \{\pm\infty\}$. Choose a multiple $m$ of $N$ such that $2/m$ is smaller than every positive endpoint of the sets $\Delta$ and every positive weight on the products of the first kind.
+
+Since $\C\dpar{t^{1/m}}$ is functionally closed, $h$ restricts to a weight-preserving bijection between the points of $X$ and of $Y$ that are rational over $\C\dpar{t^{1/m}}$. The weights of the rational points of $X$ are the numbers $2i/m$ with $0 < i < m$; in particular, no rational point of $X$ has weight $1/m$. The rational point $\rv(t^{1/m})$ of $X$ has weight $2/m$, so its image lies in a product $W \times \Delta^\sharp$ of the second kind with $2/m \in \Delta$. By the choice of $m$, $(0, 2/m] \sub \Delta$, hence $1/m \in \Delta$, and for any $p \in W$ the point $(p, \rv(t^{1/m}))$ of $Y$ is rational over $\C\dpar{t^{1/m}}$ and has weight $1/m$. This is a contradiction. Therefore $[(X, f)]$ is not in the image of (8.1.4), (8.1.6) or (8.1.7) of \cite{hru:loe:lef}, nor in the image of the map in \cite[Proposition~10.10(2)]{hrushovski:kazhdan:integration:vf}.
+
+In the category $\mgRV[1]$ of this paper, by contrast, the identity of $X$ is an isomorphism from $(X, f, 0)$ onto $(X, \id, \vrv)$, which lies in the image of ${\mu}\Psi$ (Proposition~\ref{red:D:iso}): the volume form absorbs the difference of the weights, whereas in $\mathrm{vol}\RV[1]$ the weight is tied to the structural map.
 \end{rem}
 
 \begin{nota}\label{dag:loc}
@@ -6436,6 +4728,9 @@ Goulwen Fichou and Yimu Yin, {Motivic integration and Milnor fiber}, {\em Journa
 Arthur Forey, {Virtual rigid motives of semi-algebraic sets}, {\em Selecta Mathematica (New Series)}, \textbf{25} (2019),  no.~1, Art. 6.
 
 
+\bibitem{FY:Fubini}
+Arthur Forey and Yimu Yin, {Fubini theorems for motivic volume}, manuscript in the repository \url{https://github.com/daviddhilbert/Fubini-theorems}, file \texttt{paper/fubini-theorems.tex}.
+
 \bibitem{hrushovski:kazhdan:integration:vf}
 Ehud Hrushovski and David Kazhdan, {Integration in valued fields}, in
   {\em Algebraic geometry and number theory}, Progr. Math., vol. 253, Birkh\"{a}user,
@@ -6451,13 +4746,10 @@ Ehud Hrushovski and Fran{\c{c}}ois Loeser, {Monodromy and the {L}efschetz
   fixed point formula}, {\em Annales Scientifiques de l'\'Ecole Normale Sup\'erieure} (4) \textbf{48} (2015),
   no.~2, 313--349.
 
-\bibitem{loeser2019motivic}
-Fran{\c{c}}ois Loeser and Dimitri Wyss, {Motivic integration on the Hitchin fibration}, {\em Algebraic Geometry} \textbf{8} (2021), no.~2, 196--230.
-
 % BEGIN REFEREE INSERTION R160
 \ResolvedRefereeRemark{160}{Clarification}{Update the published Loeser--Wyss reference}{%
 \textit{Original source line 3101.}\quad Replace the preprint-only entry by F. Loeser and D. Wyss, \emph{Motivic integration on the Hitchin fibration}, Algebraic Geometry \textbf{8} (2021), 196--230, DOI \href{https://doi.org/10.14231/AG-2021-004}{10.14231/AG-2021-004}. The current entry also lacks its final full stop.
-}{The entry now gives the published version, Algebraic Geometry \textbf{8} (2021), no.~2, 196--230, with its final full stop.}
+}{The entry now gives the published version, Algebraic Geometry \textbf{8} (2021), no.~2, 196--230, with its final full stop. The entry was later deleted: after the removal of the Fubini theorems it is no longer cited.}
 % END REFEREE INSERTION R160
 
 

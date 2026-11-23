@@ -1,0 +1,9 @@
+{
+  "batch": "B03-bounded-integral",
+  "before_sha256": "14769a408deac013f182c02edd5cba16600299901e6f9a1e170b455aff71f97a",
+  "after_sha256": "90098e3700e55470a3a4f48a6de9fd1670641515e808dddba0821375bfff587a",
+  "resolved_referee_items": [],
+  "approval_user_message": "Approve B03",
+  "approved_on": "2026-11-22",
+  "also_changed": "Rewrite of the J_var paragraph of the introduction (no referee item)."
+}

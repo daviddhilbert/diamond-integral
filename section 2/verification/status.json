@@ -487,7 +487,7 @@
     "section 2/verification/UPSTREAM-LINKS.md": "cf7e8e5831a063f147ba2239830c8019859d56b78845cbbddff41a64d9c7836a",
     "section 2/verification/UPSTREAM-LINKS.json": "0f31e20f474e062988516df4a208e34f50a49a15865a86626f7afe29396e4331"
   },
-  "manuscript_sha256": "e4b1186c65f40f4261b8c5560b86a0f3e5786a2588bc44a947331f7d776c5538",
+  "manuscript_sha256": "fae3fe83079b66776d719685db8fd7abea1d02e225b110647ba4fee3ebbf78e8",
   "accepted_cited_inputs": [
     {
       "interface": "DiamondIntegral.Section2.AtomicGammaBaseChangeInput",
