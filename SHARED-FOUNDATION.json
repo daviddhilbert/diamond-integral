@@ -1,6 +1,6 @@
 {
   "provider": "daviddhilbert/hilbert-mathlib",
-  "revision": "88bb3386f616779bfd87eb453d8a7c899ad63961",
+  "revision": "3f3efa86f6dd85c00db1cb9a7ad242b1e0a49ecf",
   "public_names": "unchanged",
   "modules": [
     {
@@ -737,6 +737,440 @@
       "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/0377037f60d15168d707d0220805296dc5542929/section%204/FiniteRelationSeparation.lean",
       "compatibility_sha256": "f72297e64509945a4b7a01775171beb9831bdd7e81232bbff39ac304a0001cc9",
       "split_generic_core": false
+    },
+    {
+      "path": "section 3/OrderBoundary.lean",
+      "module": "section 3.OrderBoundary",
+      "target_module": "HilbertMathlib.Foundation.Order.OrderBoundary",
+      "target_path": "HilbertMathlib/Foundation/Order/OrderBoundary.lean",
+      "extracted_sha256": "568595b49e8a88457e2e998d88076e77d8d4e672d38ba5a43da56677cb4017d1",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/7528a649aea2b52ab729dadb64cbd03bb20f714c/section%203/OrderBoundary.lean",
+      "compatibility_sha256": "1d161670e5d292c36a3f900f78c471499cfa86b01ca1254267387f2ed69a1498"
+    },
+    {
+      "path": "section 3/FiniteControlledColumns.lean",
+      "module": "section 3.FiniteControlledColumns",
+      "target_module": "HilbertMathlib.Foundation.Order.FiniteControlledColumns",
+      "target_path": "HilbertMathlib/Foundation/Order/FiniteControlledColumns.lean",
+      "extracted_sha256": "f6ea5862825a1cc6af1702b0d7807d314d2beb064a590de5b56a1dc4e350f4d9",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/7528a649aea2b52ab729dadb64cbd03bb20f714c/section%203/FiniteControlledColumns.lean",
+      "compatibility_sha256": "ced8f215157a50935dbcda83f5a8df5bc466d1bc0bcbc57ddcf8f2f1b86caca6"
+    },
+    {
+      "path": "section 3/FiniteColumnProjections.lean",
+      "module": "section 3.FiniteColumnProjections",
+      "target_module": "HilbertMathlib.Foundation.Order.FiniteColumnProjections",
+      "target_path": "HilbertMathlib/Foundation/Order/FiniteColumnProjections.lean",
+      "extracted_sha256": "c00a673d06060865120e4994f01415b9ceaa734ab8d1af2ef4ba611835caad33",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/7528a649aea2b52ab729dadb64cbd03bb20f714c/section%203/FiniteColumnProjections.lean",
+      "compatibility_sha256": "658169be4bfe0b991c2d12566bab65aa62ed24c18ec5cde705438391c9e2ee99"
+    },
+    {
+      "path": "section 7/Groupification.lean",
+      "module": "section 7.Groupification",
+      "target_module": "HilbertMathlib.Foundation.Grothendieck.Groupification",
+      "target_path": "HilbertMathlib/Foundation/Grothendieck/Groupification.lean",
+      "extracted_sha256": "7a078b13f689a9eb9300ed754a612e3c5228febac1e588f96e4bf03950f26043",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/7528a649aea2b52ab729dadb64cbd03bb20f714c/section%207/Groupification.lean",
+      "compatibility_sha256": "728db710cf57852dedee992c790da446ed1c76e1d9c658ebd409085b92e98e67"
+    },
+    {
+      "path": "section 3/PrincipalAdditiveContextDescent.lean",
+      "module": "section 3.PrincipalAdditiveContextDescent",
+      "target_module": "HilbertMathlib.Foundation.Grothendieck.PrincipalAdditiveContextDescent",
+      "target_path": "HilbertMathlib/Foundation/Grothendieck/PrincipalAdditiveContextDescent.lean",
+      "extracted_sha256": "f2b61831a518bc1bf38d75852548d3329675bded45ccf065035a342df6195770",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/7528a649aea2b52ab729dadb64cbd03bb20f714c/section%203/PrincipalAdditiveContextDescent.lean",
+      "compatibility_sha256": "2046d99789d20134282b9dd99c524820481b3b17458aa8eed48df81833ea8b1b"
+    },
+    {
+      "path": "section 4/GermJumps.lean",
+      "module": "section 4.GermJumps",
+      "target_module": "HilbertMathlib.Foundation.Euler.GermJumps",
+      "target_path": "HilbertMathlib/Foundation/Euler/GermJumps.lean",
+      "extracted_sha256": "fbfa6a0db08271686a05a1b2a4c49332526d62c135d6d2e6bfbee195fc7e40a8",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/7528a649aea2b52ab729dadb64cbd03bb20f714c/section%204/GermJumps.lean",
+      "compatibility_sha256": "fef806100276dbf67704af33d88294b2a65759be82386ee0d2c40b494649c323"
+    },
+    {
+      "path": "section 4/EulerCylindricalStrips.lean",
+      "module": "section 4.EulerCylindricalStrips",
+      "target_module": "HilbertMathlib.Foundation.Euler.EulerCylindricalStrips",
+      "target_path": "HilbertMathlib/Foundation/Euler/EulerCylindricalStrips.lean",
+      "extracted_sha256": "7014ef6ae51267edbe51dba6aaf97b9469aa14535e7fcfcf5bff494f9fa3f14e",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/7528a649aea2b52ab729dadb64cbd03bb20f714c/section%204/EulerCylindricalStrips.lean",
+      "compatibility_sha256": "eb91fb3654dab761119ad403ac1b636ec684828002d38ded92bee0fa5d832184"
+    },
+    {
+      "path": "section 8/RationalSeries.lean",
+      "module": "section 8.RationalSeries",
+      "target_module": "HilbertMathlib.Foundation.Polyhedra.RationalSeries",
+      "target_path": "HilbertMathlib/Foundation/Polyhedra/RationalSeries.lean",
+      "extracted_sha256": "0b56bc7972370ebf7d8e5b4f85423d68e3ba43a4294aab1587a89350e4239d56",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/7528a649aea2b52ab729dadb64cbd03bb20f714c/section%208/RationalSeries.lean",
+      "compatibility_sha256": "10ec3325681d6dbe6a7018873cc6162f19ed7d5e38d45970ea36f01bb643b0b8"
+    },
+    {
+      "path": "section 8/LatticeCone.lean",
+      "module": "section 8.LatticeCone",
+      "target_module": "HilbertMathlib.Foundation.Polyhedra.LatticeCone",
+      "target_path": "HilbertMathlib/Foundation/Polyhedra/LatticeCone.lean",
+      "extracted_sha256": "a12ad6b3f3ab47aef1622820be825ace56c7585ab9b0b0fb97708475bd9a10a7",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/7528a649aea2b52ab729dadb64cbd03bb20f714c/section%208/LatticeCone.lean",
+      "compatibility_sha256": "9c573cbbebe71a9d5bf7c0fb778972c327c69a657f3ae08ebe1a6e99c9340261"
+    },
+    {
+      "path": "section 8/SimplexSeries.lean",
+      "module": "section 8.SimplexSeries",
+      "target_module": "HilbertMathlib.Foundation.Polyhedra.SimplexSeries",
+      "target_path": "HilbertMathlib/Foundation/Polyhedra/SimplexSeries.lean",
+      "extracted_sha256": "827da7d17d7f73991edf6b18a96e354023057fd70fb43f3a35274996b8eb1bc8",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/7528a649aea2b52ab729dadb64cbd03bb20f714c/section%208/SimplexSeries.lean",
+      "compatibility_sha256": "9d3d5b5f0a3bd51cfbf3b6f5cb3673e693d0e8c43280a67455e19ed36427cc8d"
+    },
+    {
+      "path": "section 8/HeightChains.lean",
+      "module": "section 8.HeightChains",
+      "target_module": "HilbertMathlib.Foundation.Polyhedra.HeightChains",
+      "target_path": "HilbertMathlib/Foundation/Polyhedra/HeightChains.lean",
+      "extracted_sha256": "5fda9cd3fb82d3d55329e5fa0ea31d3182317289cb282d188d8e444065591817",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/7528a649aea2b52ab729dadb64cbd03bb20f714c/section%208/HeightChains.lean",
+      "compatibility_sha256": "8cf623ee1a067162045ede33d2e36b7325a4afab64ab8c2e29c93d66d34075cd"
+    },
+    {
+      "path": "section 8/PrismSimplices.lean",
+      "module": "section 8.PrismSimplices",
+      "target_module": "HilbertMathlib.Foundation.Polyhedra.PrismSimplices",
+      "target_path": "HilbertMathlib/Foundation/Polyhedra/PrismSimplices.lean",
+      "extracted_sha256": "f7b2ba8d8e6d5bc19fdce860eb3552dee8458fdd058053546ed9d3a9b908cb7d",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/7528a649aea2b52ab729dadb64cbd03bb20f714c/section%208/PrismSimplices.lean",
+      "compatibility_sha256": "9ff570e9921a42bc781bcd1697edab4c40c939bfee6b37c8d435fac0bc08a46e"
+    },
+    {
+      "path": "section 8/PrismTriangulation.lean",
+      "module": "section 8.PrismTriangulation",
+      "target_module": "HilbertMathlib.Foundation.Polyhedra.PrismTriangulation",
+      "target_path": "HilbertMathlib/Foundation/Polyhedra/PrismTriangulation.lean",
+      "extracted_sha256": "a61da0797ad33d597892d23aeb4423a454e1db0fad32ee7c7c0de40036e7e0ef",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/7528a649aea2b52ab729dadb64cbd03bb20f714c/section%208/PrismTriangulation.lean",
+      "compatibility_sha256": "9ef1efce35f99335f23e6bdda4053322a5e415b008b710383c7efb0b4fed1ce4"
+    },
+    {
+      "path": "section 8/Triangulation.lean",
+      "module": "section 8.Triangulation",
+      "target_module": "HilbertMathlib.Foundation.Polyhedra.Triangulation",
+      "target_path": "HilbertMathlib/Foundation/Polyhedra/Triangulation.lean",
+      "extracted_sha256": "25609b0219d12ad6a524ec35c4d3416da9555982f5aa0e71b041bd9342a98ccf",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/7528a649aea2b52ab729dadb64cbd03bb20f714c/section%208/Triangulation.lean",
+      "compatibility_sha256": "94da0d2c021e894805752c034cfe2fb94584b43078795a752210c3c8c041fc36"
+    },
+    {
+      "path": "section 8/LinearTransfer.lean",
+      "module": "section 8.LinearTransfer",
+      "target_module": "HilbertMathlib.Foundation.Polyhedra.LinearTransfer",
+      "target_path": "HilbertMathlib/Foundation/Polyhedra/LinearTransfer.lean",
+      "extracted_sha256": "5d84f857b590b0f3acb19524b09861129869a5a05a7377d2a5a45f41af16fc84",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/7528a649aea2b52ab729dadb64cbd03bb20f714c/section%208/LinearTransfer.lean",
+      "compatibility_sha256": "c73daebe5bcb956e476fadc480475769df8ee714154097d42fdb8d7df7af3ef6"
+    },
+    {
+      "path": "section 4/DefinableBiUniqueRelation.lean",
+      "module": "section 4.DefinableBiUniqueRelation",
+      "target_module": "HilbertMathlib.Foundation.ModelTheory.DefinableBiUniqueRelation",
+      "target_path": "HilbertMathlib/Foundation/ModelTheory/DefinableBiUniqueRelation.lean",
+      "extracted_sha256": "f9df5fc14431195cee63fd9fa0289c6b86c6a8ca4207bb2f1ac6a5b6d8c3518f",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/7528a649aea2b52ab729dadb64cbd03bb20f714c/section%204/DefinableBiUniqueRelation.lean",
+      "compatibility_sha256": "e8863a5f528d6c1d00868dea9d4bacf51749350055ff9faa08a416e8d89259cc"
+    },
+    {
+      "path": "section 4/BiUniqueFormula.lean",
+      "module": "section 4.BiUniqueFormula",
+      "target_module": "HilbertMathlib.Foundation.ModelTheory.BiUniqueFormula",
+      "target_path": "HilbertMathlib/Foundation/ModelTheory/BiUniqueFormula.lean",
+      "extracted_sha256": "662138a12ebea99fbac014327180d742bb1d85449b39479a461b940e0034dbfb",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/7528a649aea2b52ab729dadb64cbd03bb20f714c/section%204/BiUniqueFormula.lean",
+      "compatibility_sha256": "17841f687530a787addce39d56ae279766eb29abe23006f976c0badaec9756a4"
+    },
+    {
+      "path": "section 4/BiUniqueTransport.lean",
+      "module": "section 4.BiUniqueTransport",
+      "target_module": "HilbertMathlib.Foundation.ModelTheory.BiUniqueTransport",
+      "target_path": "HilbertMathlib/Foundation/ModelTheory/BiUniqueTransport.lean",
+      "extracted_sha256": "fc40a2da09e3a2e035adce727e8bc8b25ea1bc9b372134f35cc1810c80fa617d",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/7528a649aea2b52ab729dadb64cbd03bb20f714c/section%204/BiUniqueTransport.lean",
+      "compatibility_sha256": "67a0df9bd65a18695afd98bbb877448b629f616e7c282b4754360535b84c0357"
+    },
+    {
+      "path": "section 4/GaloisPointCounts.lean",
+      "module": "section 4.GaloisPointCounts",
+      "target_module": "HilbertMathlib.Foundation.ModelTheory.GaloisPointCounts",
+      "target_path": "HilbertMathlib/Foundation/ModelTheory/GaloisPointCounts.lean",
+      "extracted_sha256": "f1db03866b7ffccca19c7bf8d798eeba45a1dd0ad60f2649da2620542524d6d8",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/7528a649aea2b52ab729dadb64cbd03bb20f714c/section%204/GaloisPointCounts.lean",
+      "compatibility_sha256": "ded05194c7676af2c0f0a72e0faee146165cb4b688b83b65e4083c3801b8b375"
+    },
+    {
+      "path": "section 4/GaloisTaggedSum.lean",
+      "module": "section 4.GaloisTaggedSum",
+      "target_module": "HilbertMathlib.Foundation.ModelTheory.GaloisTaggedSum",
+      "target_path": "HilbertMathlib/Foundation/ModelTheory/GaloisTaggedSum.lean",
+      "extracted_sha256": "70b1c5e343fbecf35c3f724d877355e10399bdbc1d842db6ea213ba905bf5b7e",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/7528a649aea2b52ab729dadb64cbd03bb20f714c/section%204/GaloisTaggedSum.lean",
+      "compatibility_sha256": "76f40af0df74725bcca2173be7d8f6785a8c7cd342a98b31584acd1c062aa862"
+    },
+    {
+      "path": "section 4/FieldDefinableRing.lean",
+      "module": "section 4.FieldDefinableRing",
+      "target_module": "HilbertMathlib.Foundation.ModelTheory.FieldDefinableRing",
+      "target_path": "HilbertMathlib/Foundation/ModelTheory/FieldDefinableRing.lean",
+      "extracted_sha256": "934f125b735edc1e879e6ebd3e7094e5571a91e7f983b70178f11859503f7b6d",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/7528a649aea2b52ab729dadb64cbd03bb20f714c/section%204/FieldDefinableRing.lean",
+      "compatibility_sha256": "cac2d605217ec91be8115019f9afd3376d3ce96fb425b845db67d06a175a7eea"
+    },
+    {
+      "path": "section 4/FiniteFieldBoundedDiagram.lean",
+      "module": "section 4.FiniteFieldBoundedDiagram",
+      "target_module": "HilbertMathlib.Foundation.ModelTheory.FiniteFieldBoundedDiagram",
+      "target_path": "HilbertMathlib/Foundation/ModelTheory/FiniteFieldBoundedDiagram.lean",
+      "extracted_sha256": "902fbdf769ea55c7c50611abd0daf3210e7c986a94626a0f1e2e670fbbd3fde2",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/7528a649aea2b52ab729dadb64cbd03bb20f714c/section%204/FiniteFieldBoundedDiagram.lean",
+      "compatibility_sha256": "7fedc49bef6b874bba49b8e89b14d23b04800091f050e6991a9633e4a32d3d52"
+    },
+    {
+      "path": "section 4/FiniteFieldPointDiagram.lean",
+      "module": "section 4.FiniteFieldPointDiagram",
+      "target_module": "HilbertMathlib.Foundation.ModelTheory.FiniteFieldPointDiagram",
+      "target_path": "HilbertMathlib/Foundation/ModelTheory/FiniteFieldPointDiagram.lean",
+      "extracted_sha256": "5ee4f9d3b974d748127bd1451ceeb5b33d0c5a01564a8b675a6350cfa9ddfb47",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/7528a649aea2b52ab729dadb64cbd03bb20f714c/section%204/FiniteFieldPointDiagram.lean",
+      "compatibility_sha256": "a04a28ac81da2c0d3173ac970e91bec62869e9fd9ece15633511f4592b369e7b"
+    },
+    {
+      "path": "section 4/ACFFormulaSpecialization.lean",
+      "module": "section 4.ACFFormulaSpecialization",
+      "target_module": "HilbertMathlib.Foundation.ModelTheory.ACFFormulaSpecialization",
+      "target_path": "HilbertMathlib/Foundation/ModelTheory/ACFFormulaSpecialization.lean",
+      "extracted_sha256": "b7989681f0dd1920fad7c9591cb9955856d1b71374a449dc1210c4d9c94c0b8d",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/7528a649aea2b52ab729dadb64cbd03bb20f714c/section%204/ACFFormulaSpecialization.lean",
+      "compatibility_sha256": "51c10628d57c7cab16673d4883b943cec46f1ce9023a84134bac3fa483a835bc"
+    },
+    {
+      "path": "section 4/ACFLargeFiniteParameterField.lean",
+      "module": "section 4.ACFLargeFiniteParameterField",
+      "target_module": "HilbertMathlib.Foundation.ModelTheory.ACFLargeFiniteParameterField",
+      "target_path": "HilbertMathlib/Foundation/ModelTheory/ACFLargeFiniteParameterField.lean",
+      "extracted_sha256": "a93ea215108181da8351423b8aa1d7292d8ae54426eb074b81e919f0216984c7",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/7528a649aea2b52ab729dadb64cbd03bb20f714c/section%204/ACFLargeFiniteParameterField.lean",
+      "compatibility_sha256": "18f1b1ac61bffbfd344a8114f02815db365a0f97dd3ea776e1ad4e487a7232e7"
+    },
+    {
+      "path": "section 4/TupleProductBijections.lean",
+      "module": "section 4.TupleProductBijections",
+      "target_module": "HilbertMathlib.Foundation.ModelTheory.TupleProductBijections",
+      "target_path": "HilbertMathlib/Foundation/ModelTheory/TupleProductBijections.lean",
+      "extracted_sha256": "bc34c88c0078ebf229ceadf9f777459b01d272ec79382d06f85f1fd40ee40ffb",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/7528a649aea2b52ab729dadb64cbd03bb20f714c/section%204/TupleProductBijections.lean",
+      "compatibility_sha256": "34815e3d3936393ab975dd72a6908b08bcb8f0df6ba9a64ddf1e21e0e501d697"
+    },
+    {
+      "path": "section 4/FieldAffineDecomposition.lean",
+      "module": "section 4.FieldAffineDecomposition",
+      "target_module": "HilbertMathlib.Foundation.ModelTheory.FieldAffineDecomposition",
+      "target_path": "HilbertMathlib/Foundation/ModelTheory/FieldAffineDecomposition.lean",
+      "extracted_sha256": "5bbf104d6f309177461b0156eecf0062648527a95340d0458e524100834b56b7",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/7528a649aea2b52ab729dadb64cbd03bb20f714c/section%204/FieldAffineDecomposition.lean",
+      "compatibility_sha256": "005e41ab9711700162253fa8c2b49b4d195be3f8cbcb575185881cc520fe15f4"
+    },
+    {
+      "path": "section 4/FieldAffineLocalizationNontrivial.lean",
+      "module": "section 4.FieldAffineLocalizationNontrivial",
+      "target_module": "HilbertMathlib.Foundation.ModelTheory.FieldAffineLocalizationNontrivial",
+      "target_path": "HilbertMathlib/Foundation/ModelTheory/FieldAffineLocalizationNontrivial.lean",
+      "extracted_sha256": "3d7ac168d4d50a823bcf207876bb9526cbbe1ed84b1115f90a2baa77b2f62c44",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/7528a649aea2b52ab729dadb64cbd03bb20f714c/section%204/FieldAffineLocalizationNontrivial.lean",
+      "compatibility_sha256": "0d78ab63ceb009863677465d4f066ee649daae51993782ad878034b8b38b5bb3"
+    },
+    {
+      "path": "section 4/FieldAffineNontrivial.lean",
+      "module": "section 4.FieldAffineNontrivial",
+      "target_module": "HilbertMathlib.Foundation.ModelTheory.FieldAffineNontrivial",
+      "target_path": "HilbertMathlib/Foundation/ModelTheory/FieldAffineNontrivial.lean",
+      "extracted_sha256": "73a1ae56c562b1ff94510af90e11c5f23385ebca2bf7c2016efeeb441faeaa67",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/7528a649aea2b52ab729dadb64cbd03bb20f714c/section%204/FieldAffineNontrivial.lean",
+      "compatibility_sha256": "bca3a22ddcdc75917096c49ae22c11f10580afec55671044a09979edb55e7025"
+    },
+    {
+      "path": "section 4/FieldAffineQuotientMap.lean",
+      "module": "section 4.FieldAffineQuotientMap",
+      "target_module": "HilbertMathlib.Foundation.ModelTheory.FieldAffineQuotientMap",
+      "target_path": "HilbertMathlib/Foundation/ModelTheory/FieldAffineQuotientMap.lean",
+      "extracted_sha256": "4256101c01f5c9c98a0acbac661e477001605682ae8fcf79f7957e04fd148d54",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/7528a649aea2b52ab729dadb64cbd03bb20f714c/section%204/FieldAffineQuotientMap.lean",
+      "compatibility_sha256": "1190b92fc5932f380ea1e2e05b8904bd996ff68948614f54c7c858602c1d2224"
+    },
+    {
+      "path": "section 4/FieldAffineTranscendence.lean",
+      "module": "section 4.FieldAffineTranscendence",
+      "target_module": "HilbertMathlib.Foundation.ModelTheory.FieldAffineTranscendence",
+      "target_path": "HilbertMathlib/Foundation/ModelTheory/FieldAffineTranscendence.lean",
+      "extracted_sha256": "334b6953ac826f684f2336abc02315cb703e0ad32d0bf1327d76c798807323e6",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/7528a649aea2b52ab729dadb64cbd03bb20f714c/section%204/FieldAffineTranscendence.lean",
+      "compatibility_sha256": "6df32859c05814bf5506ccc148c7a9a0ad7ed93d576aad84234e5218b716a786"
+    },
+    {
+      "path": "section 4/FieldBoundedCharacters.lean",
+      "module": "section 4.FieldBoundedCharacters",
+      "target_module": "HilbertMathlib.Foundation.ModelTheory.FieldBoundedCharacters",
+      "target_path": "HilbertMathlib/Foundation/ModelTheory/FieldBoundedCharacters.lean",
+      "extracted_sha256": "bbc5199aae2c77689ad489f457605185abe60209ac9b301e0e9fbfc4472d8895",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/7528a649aea2b52ab729dadb64cbd03bb20f714c/section%204/FieldBoundedCharacters.lean",
+      "compatibility_sha256": "4a011964e5f728920d9dc53c847883c08fd0b2fc1d1d84c44d6eb86a8c312396"
+    },
+    {
+      "path": "section 4/FieldBoundedProjection.lean",
+      "module": "section 4.FieldBoundedProjection",
+      "target_module": "HilbertMathlib.Foundation.ModelTheory.FieldBoundedProjection",
+      "target_path": "HilbertMathlib/Foundation/ModelTheory/FieldBoundedProjection.lean",
+      "extracted_sha256": "efc01b2b89ab9399654fcdbf73f15acf40a9436b27972f19ccf70367c023538b",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/7528a649aea2b52ab729dadb64cbd03bb20f714c/section%204/FieldBoundedProjection.lean",
+      "compatibility_sha256": "bbf85b275ba94c6507e3929fc90f34e22cb12158182929000888cfe563a9493a"
+    },
+    {
+      "path": "section 4/FieldCartesianCharts.lean",
+      "module": "section 4.FieldCartesianCharts",
+      "target_module": "HilbertMathlib.Foundation.ModelTheory.FieldCartesianCharts",
+      "target_path": "HilbertMathlib/Foundation/ModelTheory/FieldCartesianCharts.lean",
+      "extracted_sha256": "0352370722235431d1653180661f9b8546c6cc94622eff6e1256f8968fec51fc",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/7528a649aea2b52ab729dadb64cbd03bb20f714c/section%204/FieldCartesianCharts.lean",
+      "compatibility_sha256": "46fdcd86a6afc22c70619944c54901cce75bcf17714befd9f9d6cc65ae9abcb9"
+    },
+    {
+      "path": "section 4/FieldExpressionCongruence.lean",
+      "module": "section 4.FieldExpressionCongruence",
+      "target_module": "HilbertMathlib.Foundation.ModelTheory.FieldExpressionCongruence",
+      "target_path": "HilbertMathlib/Foundation/ModelTheory/FieldExpressionCongruence.lean",
+      "extracted_sha256": "40aaeaa457fbae00645d3e3eb21c5f4db57a89d50d12d0ebf8637d93e02de73d",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/7528a649aea2b52ab729dadb64cbd03bb20f714c/section%204/FieldExpressionCongruence.lean",
+      "compatibility_sha256": "58e1643451a0b0e3ef7bdf1a1bc038be33a005aadaae595ce16b1d83515a60fa"
+    },
+    {
+      "path": "section 4/FieldExpressionCounts.lean",
+      "module": "section 4.FieldExpressionCounts",
+      "target_module": "HilbertMathlib.Foundation.ModelTheory.FieldExpressionCounts",
+      "target_path": "HilbertMathlib/Foundation/ModelTheory/FieldExpressionCounts.lean",
+      "extracted_sha256": "366fea5949e5e001f76f283531920ebede0b22b2d66727256536b5ceb07bd76e",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/7528a649aea2b52ab729dadb64cbd03bb20f714c/section%204/FieldExpressionCounts.lean",
+      "compatibility_sha256": "8e4d795af54d7abde43b6918da257feffcc2e4b21ff41cf88f32b4b1595c16af"
+    },
+    {
+      "path": "section 4/FieldFiniteCharacters.lean",
+      "module": "section 4.FieldFiniteCharacters",
+      "target_module": "HilbertMathlib.Foundation.ModelTheory.FieldFiniteCharacters",
+      "target_path": "HilbertMathlib/Foundation/ModelTheory/FieldFiniteCharacters.lean",
+      "extracted_sha256": "44ac16c5a64b2d4b2bf0a58730a7310c75dc4f27da92c0b7bf5fad3c50fca446",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/7528a649aea2b52ab729dadb64cbd03bb20f714c/section%204/FieldFiniteCharacters.lean",
+      "compatibility_sha256": "f1c3653b5492d89d403c78f385ab8e98622b6e5a6670d4d0c7855d7c00787ba5"
+    },
+    {
+      "path": "section 4/FieldGrowthFiltration.lean",
+      "module": "section 4.FieldGrowthFiltration",
+      "target_module": "HilbertMathlib.Foundation.ModelTheory.FieldGrowthFiltration",
+      "target_path": "HilbertMathlib/Foundation/ModelTheory/FieldGrowthFiltration.lean",
+      "extracted_sha256": "3ca55c59e2397422eb30e170a565eed295656a7004fbbab5eec93b012cf8d214",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/7528a649aea2b52ab729dadb64cbd03bb20f714c/section%204/FieldGrowthFiltration.lean",
+      "compatibility_sha256": "e6c7fcc1d594dabb05e610aedca65c8a138f1b93055c89e74e0fb2d387b4a6a2"
+    },
+    {
+      "path": "section 4/FieldGrowthSeparation.lean",
+      "module": "section 4.FieldGrowthSeparation",
+      "target_module": "HilbertMathlib.Foundation.ModelTheory.FieldGrowthSeparation",
+      "target_path": "HilbertMathlib/Foundation/ModelTheory/FieldGrowthSeparation.lean",
+      "extracted_sha256": "6a06ad00cbdb552318936f44168e572c18c481e762a0f0fae78e1c4dec52b496",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/7528a649aea2b52ab729dadb64cbd03bb20f714c/section%204/FieldGrowthSeparation.lean",
+      "compatibility_sha256": "b1d64ef889914ffdfc1de8b3fa8683584a55ca18503a391ba617b5db55435fb9"
+    },
+    {
+      "path": "section 4/FieldPointCharts.lean",
+      "module": "section 4.FieldPointCharts",
+      "target_module": "HilbertMathlib.Foundation.ModelTheory.FieldPointCharts",
+      "target_path": "HilbertMathlib/Foundation/ModelTheory/FieldPointCharts.lean",
+      "extracted_sha256": "b630c62ba9ba85f3960169e4135d3afc577dfd90879aadf8b4206079a24c0c3b",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/7528a649aea2b52ab729dadb64cbd03bb20f714c/section%204/FieldPointCharts.lean",
+      "compatibility_sha256": "b8c17fdf727b25fabf76dd0db2f729412da1a9f781a74e610daa67f9700f3790"
+    },
+    {
+      "path": "section 4/FieldScissorBijection.lean",
+      "module": "section 4.FieldScissorBijection",
+      "target_module": "HilbertMathlib.Foundation.ModelTheory.FieldScissorBijection",
+      "target_path": "HilbertMathlib/Foundation/ModelTheory/FieldScissorBijection.lean",
+      "extracted_sha256": "c7b13578cb422a4b9e15141cbb4f71e28fa410f856d500ab77100bff4f2eb34b",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/7528a649aea2b52ab729dadb64cbd03bb20f714c/section%204/FieldScissorBijection.lean",
+      "compatibility_sha256": "a2387ed05f309d7b7b12eb37060501894ce2915ccd3731a39792d11f80c8c446"
+    },
+    {
+      "path": "section 4/FieldScissorClasses.lean",
+      "module": "section 4.FieldScissorClasses",
+      "target_module": "HilbertMathlib.Foundation.ModelTheory.FieldScissorClasses",
+      "target_path": "HilbertMathlib/Foundation/ModelTheory/FieldScissorClasses.lean",
+      "extracted_sha256": "29ad5eac7d3b588914ec3e8f7a47c0580fbc93212984b5801f81de2c9a50ed77",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/7528a649aea2b52ab729dadb64cbd03bb20f714c/section%204/FieldScissorClasses.lean",
+      "compatibility_sha256": "006bc3308686fe23be072223dc9db2f150253c215cdaad5a766d1814dc5c130c"
+    },
+    {
+      "path": "section 4/FieldTaggedFamilies.lean",
+      "module": "section 4.FieldTaggedFamilies",
+      "target_module": "HilbertMathlib.Foundation.ModelTheory.FieldTaggedFamilies",
+      "target_path": "HilbertMathlib/Foundation/ModelTheory/FieldTaggedFamilies.lean",
+      "extracted_sha256": "82a7d34f3dd143193edf72b7fbebee7e33cc79b3470fb716e41436f80bf20695",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/7528a649aea2b52ab729dadb64cbd03bb20f714c/section%204/FieldTaggedFamilies.lean",
+      "compatibility_sha256": "7d560c952b7977316d904f231f70b76fe3ca184637745a93af2ccad512ac488e"
+    },
+    {
+      "path": "section 4/RVZeroDegreeRES.lean",
+      "module": "section 4.RVZeroDegreeRES",
+      "target_module": "HilbertMathlib.Foundation.Coaction.ZeroProjection",
+      "target_path": "HilbertMathlib/Foundation/Coaction/ZeroProjection.lean",
+      "extracted_sha256": "56285d2f549dfff7eac5b9638d570995de4305b3c239cb0ddb02386fea2585e9",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/7528a649aea2b52ab729dadb64cbd03bb20f714c/section%204/RVZeroDegreeRES.lean",
+      "compatibility_sha256": "dc8720c985a7a1e4fca0b43fff09ad1092752835199cd9c2e22bdb013ffd0641",
+      "split": true
+    },
+    {
+      "path": "section 4/RVZeroDegreeEquivalences.lean",
+      "module": "section 4.RVZeroDegreeEquivalences",
+      "target_module": "HilbertMathlib.Foundation.Coaction.ZeroSubring",
+      "target_path": "HilbertMathlib/Foundation/Coaction/ZeroSubring.lean",
+      "extracted_sha256": "4110cd9c576c6edc8639a52ac6144816a11543308e9c0baa6acc9f27d3f3fe61",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/7528a649aea2b52ab729dadb64cbd03bb20f714c/section%204/RVZeroDegreeEquivalences.lean",
+      "compatibility_sha256": "8213a45421b7e50a45e0bfddd252599b3b47080284dcb578f36063f200bdc56c",
+      "split": true
+    },
+    {
+      "path": "section 4/CoactionKernel.lean",
+      "module": "section 4.CoactionKernel",
+      "target_module": "HilbertMathlib.Foundation.Coaction.CoactionKernel",
+      "target_path": "HilbertMathlib/Foundation/Coaction/CoactionKernel.lean",
+      "extracted_sha256": "f0cb3e40d8318659f085af5b30cebaab0d1f200a92f5d04c1f9fb12a06550aab",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/7528a649aea2b52ab729dadb64cbd03bb20f714c/section%204/CoactionKernel.lean",
+      "compatibility_sha256": "7444be27865aa19c985c9211d741fe05b73332e8554f27848367876967be0c4d"
+    },
+    {
+      "path": "section 4/TensorZeroDegree.lean",
+      "module": "section 4.TensorZeroDegree",
+      "target_module": "HilbertMathlib.Foundation.Coaction.TensorZeroDegree",
+      "target_path": "HilbertMathlib/Foundation/Coaction/TensorZeroDegree.lean",
+      "extracted_sha256": "44d1506164598a60eb1deb40299ecb785c407cc72016018f3d338d8b7c5ad095",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/7528a649aea2b52ab729dadb64cbd03bb20f714c/section%204/TensorZeroDegree.lean",
+      "compatibility_sha256": "55091ae392504c4ef0632ee0e3a1db7497c8d5b2778a0080cba32017b4662be6"
+    },
+    {
+      "path": "section 4/PositiveIdealDegreeZero.lean",
+      "module": "section 4.PositiveIdealDegreeZero",
+      "target_module": "HilbertMathlib.Foundation.Coaction.PositiveIdealDegreeZero",
+      "target_path": "HilbertMathlib/Foundation/Coaction/PositiveIdealDegreeZero.lean",
+      "extracted_sha256": "0db04eff0af58256aff591c1f13ca0cb993aafc77a3ff22d62d38ff3626b97b4",
+      "source_url": "https://github.com/daviddhilbert/diamond-integral/blob/7528a649aea2b52ab729dadb64cbd03bb20f714c/section%204/PositiveIdealDegreeZero.lean",
+      "compatibility_sha256": "8d9f1a31d7bfa41211ac9a193d6d0cfa6ec5df2b693cd69222decb712e0d0e91"
     }
   ]
 }

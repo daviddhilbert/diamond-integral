@@ -9,10 +9,10 @@
   },
   "lean": "Lean (version 4.35.0, arm64-apple-darwin24.6.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
   "pins": {
-    "integration_in_acvf": "5a69a5e4f57045f123fdd593889a0005e7b4e16f",
+    "integration_in_acvf": "7238c3863ef7ea65ab3c21bcb0982be4cac9728f",
     "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
-    "acvf_qe": "173708265d7959e031bf9552ee884501fc21f2cb",
-    "special_transformations": "932a5075ad91a825d4b8c1bf1396b2063e44fe40"
+    "acvf_qe": "1018f7a36f0c2435e9146915ef7a0f60ba19dbd4",
+    "special_transformations": "37e4dfacb293f38db28b2d8eca46a285eead3127"
   },
   "approved_library_patch_sha256": "1025b80e4d836f501bb09a342effbf33a6e02a2cba48d75bb01262e4027c98a7",
   "source_sha256": {
@@ -81,8 +81,8 @@
     "section 3/FamilyTagMaps.lean": "ee4dba842f5f388f9f1f964589eca311636521847aebee207744a85ef6dd0f90",
     "section 3/FieldUnitPowerKernels.lean": "86acb50bd79a961ef6798e5fe7715a1bbe2c249abc1cc6dfd10ed9652b8f6119",
     "section 3/FiniteColumnPartition.lean": "aedb4447998367aa6179ebda51a70bca2cd6a89ef594297932d3959180765c89",
-    "section 3/FiniteColumnProjections.lean": "6843c1f3796d862c2388926e1a925f707efbcf114a0d336a94fc4b3532d8a36d",
-    "section 3/FiniteControlledColumns.lean": "961c107e9825f1bf7a0a9b40d84a7bdfad62e1a5a0d8d2f47cc31219fd736f50",
+    "section 3/FiniteColumnProjections.lean": "658169be4bfe0b991c2d12566bab65aa62ed24c18ec5cde705438391c9e2ee99",
+    "section 3/FiniteControlledColumns.lean": "ced8f215157a50935dbcda83f5a8df5bc466d1bc0bcbc57ddcf8f2f1b86caca6",
     "section 3/FiniteDefinableColumns.lean": "631a66227ded54aebc4ed89a04b830b4d3c29a1f45a25572f0fb47b0ed57cf62",
     "section 3/FiniteFamilies.lean": "e76ae91d18416896e0d281c7354d5e4c64eb1f80f670a23c2058ec455fc82260",
     "section 3/FiniteGammaGradedComparison.lean": "43b24525bcc8669dff6c8a550b9e9f066b9cce353358b16af9de90cd72a822e2",
@@ -1294,7 +1294,7 @@
     "section 3/NativeTensorListSubindices.lean": "0dacb27805cf6b179d1810982293d150656ad5ddb7a5c9baadaf55a8c3d36db6",
     "section 3/NativeTensorProductPartitions.lean": "306fbc066c97cfc689e966dd4019403dca628ed527f9df5d2448bd2367c4e949",
     "section 3/NormalizedMeasuredTensorPieces.lean": "c2930f1592b196738663eeea7ce9c15342b110fde4fd66ea87ae78cdc5e69f15",
-    "section 3/OrderBoundary.lean": "9d855545e559dcbcbdae8122993afe6dae12ad0f77575e7e370cfe788d17a6ad",
+    "section 3/OrderBoundary.lean": "1d161670e5d292c36a3f900f78c471499cfa86b01ca1254267387f2ed69a1498",
     "section 3/OrdinaryGlobalLiftInput.lean": "09a11a98bdf961e298f8cb30bf8d81e662e3bebd6e742a582a2d7f5882f598c1",
     "section 3/PatternLiteralCharacters.lean": "d7e6491401e6874976f50194730545afa339d94108ffafc252d8bdbadb0b07c9",
     "section 3/PositivePresentationSurjectivity.lean": "c996f5c223be754bd5884031dfb779369d79411aa39ee68a6c68c80cd64bc5e3",
@@ -1303,7 +1303,7 @@
     "section 3/PresentationAdditiveNormalForm.lean": "e190cd638611d6f8eb422135e2b55f8afa8529d4456c4ff26c0bf6014a0ab5b5",
     "section 3/PresentationHomExt.lean": "7cb65e34cdbb1effa0be3f05f93dc584321eccab872e839466b7da4648711b21",
     "section 3/PresentedPredicateLogic.lean": "f53608a1f5a0eedc38053beb90fa6b294a9c7cb9cce5257bac15cdd8102b4138",
-    "section 3/PrincipalAdditiveContextDescent.lean": "5153fa27348d141572892a4cf15f429690caf4008837a3cf95e37b37c3fcf1bc",
+    "section 3/PrincipalAdditiveContextDescent.lean": "2046d99789d20134282b9dd99c524820481b3b17458aa8eed48df81833ea8b1b",
     "section 3/ProductTagDistributivity.lean": "0b6e1301e744a07c3c7f8808b6cc0df3e13f5142918d9e0359196a5810571619",
     "section 3/QuotientIntegral.lean": "7a83c8a05b3beedc1f71b958863633244bfce19353264376cd4bfa75065befcd",
     "section 3/RESCoefficientNeighborhoods.lean": "d703a669d4c5832f5badc51dae5dc56f257f9e511970838826a36e967f88aa02",
@@ -1545,21 +1545,21 @@
     "section 3/ValueCharacterTwistsResidue.lean": "3cce15bc1bbd11aa5d3a29dd5cf3344c498d8fd40de5018840c9452a63909d16",
     "section 3/ValueCharacterTwistsWithZero.lean": "752caa5fe73cc7f5b33ea3ed468e81e3fc44a165a506bccc8421b02633c6b6ff",
     "section 3/ValueFibrePartition.lean": "f5e1bc3f8c564af596694198073773c0dd15d78c6ec61136ee665a565fcdccf0",
-    "section 3/verify.py": "31e27886d47452e922cadf968d03e917f141d6e16dce510d8a1ef69c3a70a802",
+    "section 3/verify.py": "c7d8e9940b23a0e4f953245cd3fcbd42fd6e22658d5b064b9c7616d515324679",
     "section 3/prepare-integration-reuse.py": "5d2a47d8c6e18376211521523a3339c321384eecac5bba3308f211f0a7073b91",
-    "section 3/reuse/integration-manifest.json": "8acbe049ad646ddbca83a56887bab488c70075bc94df9874993cd629ed5e0eed",
+    "section 3/reuse/integration-manifest.json": "c9e63e26900abb74c84f6e9452dba4cc6aaed232a7e2587d0064fecb72849819",
     "section 3/reuse/integration-open-radius.patch": "4c78af253a893a12b7009e584dce0b56ac1faa12d17af92f79ec65d280ccf00b",
-    "section 3/verification/integration-reuse.json": "a767afe7dd971480728339d554af1b7497b61d30a8ee81ca7dd4a7479cca5ddd",
+    "section 3/verification/integration-reuse.json": "d0641100a491921bb31aa6e8f6e91cf5d847da3f4a2c98ee4cc2c3cfeb27828f",
     "section 3/verification/cited-inputs.json": "9bb2c36016ed441e27838c1eef11d3622c246478581b534837430f999e07cbe1",
     "section 3/verification/paper-targets.json": "3a894f052ef26ce41f66be9d7cf5b7f6134b82b8c9380b1401f4ebba78f82e11",
     "DiamondIntegral.lean": "e2efdddaf2f6067edcb0e9f90892f1d092325f84daaf18d6406ce59503217f0a",
-    "lakefile.toml": "085206987fde9cf34f1ba54266859a78509de943ae8a6a8e056490918958ba77",
-    "lake-manifest.json": "4f0ab2b8a2144ce82d2d8910ec2beb6cf3f21fffcd610bd56cb0415b5bf88ac6",
+    "lakefile.toml": "10ecda852e1b7d3c538d267becafc0cffdcfa70cfb1a10bdd5e581d5835c9d5d",
+    "lake-manifest.json": "adb89d87c6207291c8f275cd0b3359794a6300fd6012cdf3e4f923a0714ea567",
     "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
     "ACCEPTED-CITED-RESULTS.md": "74518acec216017b35e8154724881b9fd61ce137050381da4a74f8f282b8e946"
   },
   "integration_compatibility_patch": {
-    "base_revision": "5a69a5e4f57045f123fdd593889a0005e7b4e16f",
+    "base_revision": "7238c3863ef7ea65ab3c21bcb0982be4cac9728f",
     "reason": "The corrected upstream release includes the nine proper-open-radius consumers. Use the published proof bodies, whose additional definitional simplifications have been reviewed, and check their hashes. The old consumer patch remains historical evidence and is not applied.",
     "supporting_signature_adaptations": [
       "IntegrationInACVF.Section4.RelativeObstaclePreparation.zero_obstacles: proper OpenRadius in the auxiliary obstacle premise",
@@ -1609,7 +1609,7 @@
     "mode": "published"
   },
   "integration_proof_exports": {
-    "revision": "5a69a5e4f57045f123fdd593889a0005e7b4e16f",
+    "revision": "7238c3863ef7ea65ab3c21bcb0982be4cac9728f",
     "declarations": 36,
     "later_export_review": {
       "review_date": "2026-11-12",

@@ -1,6 +1,7 @@
 import «section 4».PositiveIdealDegreeZero
 import «section 4».RESReductionGradings
 import «section 4».RVRadiusQuotient
+import «section 4».RVZeroDegreeEquivalences
 
 /-! The measured RES reduction, ordinary RES fibre reduction and accepted
 RV radius quotient preserve their entire degree-zero coefficient rings.

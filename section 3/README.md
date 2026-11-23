@@ -48,9 +48,9 @@ review, hypotheses and verification history. Concrete §4 constructions
 and independent disc-name extensions are outside this §3 certificate.
 
 
-The current pin is 5a69a5e4f57045f123fdd593889a0005e7b4e16f (Special
-transformations 932a5075ad91a825d4b8c1bf1396b2063e44fe40; November 19, after the
-additive Gamma-named Section 7 update without hNames). The bounded native integral now uses the closed
+The current pin is 7238c3863ef7ea65ab3c21bcb0982be4cac9728f (Special
+transformations 37e4dfacb293f38db28b2d8eca46a285eead3127; November 23, after the
+shared foundations moved to hilbert-mathlib; no public declaration changed). The bounded native integral now uses the closed
 `IntegrationInACVF.Section7.CompletedSection6` API of that pin. The November 12
 refresh linked exact section 6 exports at 7d4acc730496b3bd05a22c268ffd89540ca694f9,
 then relative to an unfinished 5.8 input. That input is now discharged

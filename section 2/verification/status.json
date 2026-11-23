@@ -4,12 +4,12 @@
   "lean": "Lean (version 4.35.0, arm64-apple-darwin24.6.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
   "pins": {
     "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
-    "acvf_qe": "173708265d7959e031bf9552ee884501fc21f2cb",
-    "special_transformations": "932a5075ad91a825d4b8c1bf1396b2063e44fe40",
-    "integration_in_acvf": "5a69a5e4f57045f123fdd593889a0005e7b4e16f"
+    "acvf_qe": "1018f7a36f0c2435e9146915ef7a0f60ba19dbd4",
+    "special_transformations": "37e4dfacb293f38db28b2d8eca46a285eead3127",
+    "integration_in_acvf": "7238c3863ef7ea65ab3c21bcb0982be4cac9728f"
   },
   "approved_library_patch": {
-    "base_revision": "932a5075ad91a825d4b8c1bf1396b2063e44fe40",
+    "base_revision": "37e4dfacb293f38db28b2d8eca46a285eead3127",
     "patch_sha256": "1025b80e4d836f501bb09a342effbf33a6e02a2cba48d75bb01262e4027c98a7",
     "files": {
       "Section3/AdditiveCosets.lean": {
@@ -138,7 +138,7 @@
     "reason": "The v1.1 upstream release includes all 30 previously approved proper-open-radius corrections byte-for-byte. Check the published source hashes; retain the old patch only as historical evidence."
   },
   "integration_compatibility_patch": {
-    "base_revision": "5a69a5e4f57045f123fdd593889a0005e7b4e16f",
+    "base_revision": "7238c3863ef7ea65ab3c21bcb0982be4cac9728f",
     "reason": "The corrected upstream release includes the nine proper-open-radius consumers. Use the published proof bodies, whose additional definitional simplifications have been reviewed, and check their hashes. The old consumer patch remains historical evidence and is not applied.",
     "supporting_signature_adaptations": [
       "IntegrationInACVF.Section4.RelativeObstaclePreparation.zero_obstacles: proper OpenRadius in the auxiliary obstacle premise",
@@ -470,17 +470,17 @@
     "section 2/ZeroFaces.lean": "9ea729bcee364da066593709349c1035f0c7bc85b6a0933a9f68d3b5c95c2834",
     "section 2/ZeroFacesVF.lean": "86dccef9f23b6ee8ebaa973ba8ec2a18bafaa8f30bb5140b5266950817f8cb56",
     "DiamondIntegral.lean": "e2efdddaf2f6067edcb0e9f90892f1d092325f84daaf18d6406ce59503217f0a",
-    "lakefile.toml": "085206987fde9cf34f1ba54266859a78509de943ae8a6a8e056490918958ba77",
-    "lake-manifest.json": "4f0ab2b8a2144ce82d2d8910ec2beb6cf3f21fffcd610bd56cb0415b5bf88ac6",
+    "lakefile.toml": "10ecda852e1b7d3c538d267becafc0cffdcfa70cfb1a10bdd5e581d5835c9d5d",
+    "lake-manifest.json": "adb89d87c6207291c8f275cd0b3359794a6300fd6012cdf3e4f923a0714ea567",
     "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
     "ACCEPTED-CITED-RESULTS.md": "74518acec216017b35e8154724881b9fd61ce137050381da4a74f8f282b8e946",
-    "section 2/verify.py": "2c547ba445e7c3db326aa25ecae690e7003397b6225141e77963f844dd333d85",
+    "section 2/verify.py": "b9ff9c211031fa1646b183bab8d6c7e3085fa4e2b67b0e0deea0c406e913e85e",
     "section 2/prepare-reuse.py": "b9c2ec8d840012e664227016f0d2a11a7651eddb6fb8d2e6ab4a630ddfcd60e2",
-    "section 2/reuse/manifest.json": "90aaef8aade66469a14b4da0c24618fc03da590eaa8ad386ad81b00d543a22f8",
+    "section 2/reuse/manifest.json": "6b8b079cbbe0e0a33c19d1a45fce9beb08522d10c75044bdbfd7a14a7ce7e189",
     "section 2/reuse/headlines.json": "134352eba03803fce202ad91e5d4428e396fce0f5720d7f74ccebba77892fb04",
     "section 2/reuse/open-disc-radius.patch": "1025b80e4d836f501bb09a342effbf33a6e02a2cba48d75bb01262e4027c98a7",
     "section 3/prepare-integration-reuse.py": "5d2a47d8c6e18376211521523a3339c321384eecac5bba3308f211f0a7073b91",
-    "section 3/reuse/integration-manifest.json": "8acbe049ad646ddbca83a56887bab488c70075bc94df9874993cd629ed5e0eed",
+    "section 3/reuse/integration-manifest.json": "c9e63e26900abb74c84f6e9452dba4cc6aaed232a7e2587d0064fecb72849819",
     "section 3/reuse/integration-open-radius.patch": "4c78af253a893a12b7009e584dce0b56ac1faa12d17af92f79ec65d280ccf00b",
     "section 2/verification/CITED-INPUTS.md": "cf7cc6cf90186806b28107f6b5cef81d588f8c96607e020e792738d58f2296aa",
     "section 2/verification/DISC-GROUND-REVIEW.md": "6cce8961bfeb7217a9f4cbca542d4cc3b813eb7210f0aa66f755d6dc6aec41af",

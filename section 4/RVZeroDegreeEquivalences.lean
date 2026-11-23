@@ -1,4 +1,5 @@
 import «section 4».RVZeroDegreeRetraction
+import HilbertMathlib.Foundation.Coaction.ZeroSubring
 
 /-! The actual measured RES inclusion is a ring equivalence in degree
 zero, for both the full and bounded RV chart presentations. -/
@@ -10,20 +11,6 @@ open SpecialTransformations.Milestone0 SpecialTransformations.Milestone0.LRV
 open SpecialTransformations.Section3
 open SpecialTransformations.Section3.GammaParameters
 
-namespace DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction
-variable {R : Type*} [CommRing R]
-
-def zeroSubring (c : Coaction R) : Subring R := by
-  letI := c.grading
-  exact {
-    carrier := c.piece 0
-    zero_mem' := (c.piece 0).zero_mem
-    add_mem' := (c.piece 0).add_mem
-    neg_mem' := (c.piece 0).neg_mem
-    one_mem' := SetLike.one_mem_graded c.piece
-    mul_mem' := fun hx hy => SetLike.mul_mem_graded hx hy }
-
-end DiamondIntegral.Section4.PolynomialCoactionGrading.Coaction
 
 namespace DiamondIntegral.Section4.RVZeroDegreeEquivalences
 variable {M : Type} [LRV.Structure M] [M ⊨ Axioms.ACVF]

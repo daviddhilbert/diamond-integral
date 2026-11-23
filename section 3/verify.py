@@ -21,10 +21,10 @@ SCRATCH = SECTION / ".scratch"
 RECORD = SECTION / "verification"
 ALLOWED = {"propext", "Classical.choice", "Quot.sound"}
 PINS = {
-    "integration_in_acvf": "5a69a5e4f57045f123fdd593889a0005e7b4e16f",
+    "integration_in_acvf": "7238c3863ef7ea65ab3c21bcb0982be4cac9728f",
     "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
-    "acvf_qe": "173708265d7959e031bf9552ee884501fc21f2cb",
-    "special_transformations": "932a5075ad91a825d4b8c1bf1396b2063e44fe40",
+    "acvf_qe": "1018f7a36f0c2435e9146915ef7a0f60ba19dbd4",
+    "special_transformations": "37e4dfacb293f38db28b2d8eca46a285eead3127",
 }
 REUSE = [
     "SpecialTransformations.Section4.PositiveAdditiveGrothendieck.universalEquiv",

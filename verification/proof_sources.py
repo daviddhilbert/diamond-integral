@@ -22,5 +22,8 @@ def read_source(path):
                     raise RuntimeError('Relocated proof source changed: ' + str(provider))
                 if hashlib.sha256(path.read_bytes()).hexdigest() != item['compatibility_sha256']:
                     raise RuntimeError('Compatibility import changed: ' + str(path))
+                if item.get('split'):
+                    # the file keeps its non-extracted declarations next to the import
+                    return provider.read_text() + '\n' + path.read_text()
                 return provider.read_text()
     return path.read_text()

@@ -392,9 +392,9 @@ def main() -> None:
         raise SystemExit(f"FAIL: unexpected toolchain: {version}")
     pins = {
         "mathlib": "56a005855ea17e0b0958f73ec801ae140b0a1679",
-        "acvf_qe": "173708265d7959e031bf9552ee884501fc21f2cb",
-        "special_transformations": "932a5075ad91a825d4b8c1bf1396b2063e44fe40",
-        "integration_in_acvf": "5a69a5e4f57045f123fdd593889a0005e7b4e16f",
+        "acvf_qe": "1018f7a36f0c2435e9146915ef7a0f60ba19dbd4",
+        "special_transformations": "37e4dfacb293f38db28b2d8eca46a285eead3127",
+        "integration_in_acvf": "7238c3863ef7ea65ab3c21bcb0982be4cac9728f",
     }
     for package, expected in pins.items():
         actual = subprocess.check_output(

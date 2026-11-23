@@ -54,7 +54,7 @@ polynomial preparation target can be compared directly with Yin's
 - Use the existing two-sorted ACVF language. This project pins Lean `v4.35.0`,
   Mathlib `56a005855ea17e0b0958f73ec801ae140b0a1679`, and
   [ACVF-QE](https://github.com/daviddhilbert/ACVF-QE) at
-  `173708265d7959e031bf9552ee884501fc21f2cb`. Check companion developments
+  `1018f7a36f0c2435e9146915ef7a0f60ba19dbd4`. Check companion developments
   against these versions before importing their modules.
 - In [*Special Transformations*](https://github.com/daviddhilbert/special-transformations),
   inspect the section libraries and their verification records. Start with

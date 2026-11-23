@@ -4,17 +4,20 @@ import hashlib
 import json
 import re
 import subprocess
+import sys
 from pathlib import Path
 
 SECTION = Path(__file__).resolve().parent
 ROOT = SECTION.parent
+sys.path.insert(0, str(ROOT / 'verification'))
+from proof_sources import read_source
 RECORD = SECTION / 'verification'
 RECORD.mkdir(exist_ok=True)
 ALLOWED = {'propext', 'Classical.choice', 'Quot.sound'}
 sources = sorted(SECTION.glob('*.lean'))
 declarations = []
 for source in sources:
-    body = source.read_text()
+    body = read_source(source)
     stripped = re.sub(r'/\-.*?\-/', '', body, flags=re.S)
     stripped = re.sub(r'--[^\n]*', '', stripped)
     if re.search(r'\b(sorry|admit|axiom|opaque|unsafe)\b', stripped):
